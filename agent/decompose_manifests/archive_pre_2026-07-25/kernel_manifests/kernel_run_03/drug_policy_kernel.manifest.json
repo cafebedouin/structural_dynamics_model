@@ -1,0 +1,193 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Policy / Criminal Justice / Political Economy",
+  "family_id": "drug_policy_kernel_2026",
+  "topic_summary": "Analysis of drug policy frameworks examining prohibition (criminalization of use/possession), harm reduction (public health interventions accepting continued use), and legalization (removal of criminal penalties). Each framework instantiates different victim sets, causal models, and definitions of harm from a shared substance-control kernel.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 6,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Federal/State Law Enforcement (prohibition enforcement apparatus)",
+      "Public Health Agencies (harm reduction implementers, ONDCP)",
+      "People Who Use Drugs (PWUD) (primary affected population across all frameworks)",
+      "Black Market Networks (systemic violence generators under prohibition)",
+      "Treatment/Harm Reduction Providers (needle exchanges, supervised consumption sites)",
+      "International Organizations (WHO, UNAIDS, UNODC endorsing harm reduction)",
+      "Marginalized Communities (disproportionate enforcement targets)",
+      "Youth/Society (claimed beneficiaries of prohibition)"
+    ],
+    "key_tensions": [
+      "Victim set definition: users as perpetrators (prohibition) vs users as victims (harm reduction) vs third parties as victims (legalization)",
+      "Criminalization vs health approach: enforcement vs treatment as primary intervention",
+      "Violence causation: psychopharmacological (drug effects) vs systemic (black market structure)",
+      "Evidence interpretation: harm reduction crime increases vs disease reduction vs no-increase-in-use post-decriminalization",
+      "Racialized enforcement: similar usage rates, 2.5x arrest disparity for Black adults",
+      "Institutional gridlock: supply-side vs demand-side vs harm reduction operating simultaneously"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The state's authority to regulate psychoactive substances and define legitimate vs illegitimate use",
+    "authority_description": "Legislative bodies, public health agencies, and law enforcement claim interpretive authority grounded in competing frameworks (moral/legal prohibition, medical/public health harm reduction, libertarian/economic legalization)",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "substance_control_authority",
+    "readings": [
+      {
+        "reading_id": "prohibition_reading",
+        "commitment": "Drug use itself constitutes harm; state authority derives from preventing use and protecting society from psychopharmacological effects",
+        "authority_grounding": "Moral/legal framework treating use as criminal deviance; deterrence theory",
+        "sibling_readings": [
+          "harm_reduction_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users enter victim set as perpetrators; enforcement apparatus as primary mechanism; high ε from criminalization costs (1.25M arrests/year, 51% federal prisoners); black market violence treated as secondary to use prevention"
+      },
+      {
+        "reading_id": "harm_reduction_reading",
+        "commitment": "Unsafe drug use practices constitute harm; state authority derives from reducing disease/overdose while accepting continued use",
+        "authority_grounding": "Public health framework treating use as health condition; evidence-based intervention",
+        "sibling_readings": [
+          "prohibition_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Active users enter victim set as harm-bearers; health services as primary mechanism; moderate ε from service provision costs; criminalization treated as barrier to health access; 90% HIV reduction (Taiwan) demonstrates distinct causal model"
+      },
+      {
+        "reading_id": "legalization_reading",
+        "commitment": "Prohibition enforcement constitutes harm; state authority derives from protecting third parties and marginalized communities from black market violence and racialized enforcement",
+        "authority_grounding": "Libertarian/economic framework treating prohibition as policy failure; market regulation theory",
+        "sibling_readings": [
+          "prohibition_reading",
+          "harm_reduction_reading"
+        ],
+        "expected_structural_delta": "Marginalized communities and third parties enter victim set; black market elimination as primary mechanism; high ε from enforcement costs ($40B/year to criminal underworld, systemic violence); drug use itself treated as individual choice not requiring state intervention"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "prohibition_reading",
+        "reading_b": "harm_reduction_reading",
+        "basis": "Prohibition axiom: drug use itself is the harm to be prevented. Harm reduction axiom: unsafe use practices are the harm; use itself is accepted. No framework can simultaneously hold 'use must be prevented' and 'use is acceptable if made safer.'"
+      },
+      {
+        "reading_a": "prohibition_reading",
+        "reading_b": "legalization_reading",
+        "basis": "Prohibition axiom: state has duty to criminalize use to protect society. Legalization axiom: state criminalization causes greater harm than use itself. No framework can simultaneously hold 'criminalization protects' and 'criminalization harms.'"
+      },
+      {
+        "reading_a": "harm_reduction_reading",
+        "reading_b": "legalization_reading",
+        "basis": "Harm reduction axiom: continued criminalization is compatible with health interventions (decriminalization of possession, not supply). Legalization axiom: only full market legalization eliminates systemic violence and enforcement harms. These can coexist in hybrid frameworks (Portugal model), so NOT axiom-contradictory despite different scopes."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "prohibition_reading",
+      "human_readable": "Prohibition Reading: Use Prevention as Primary Harm Reduction",
+      "structural_delta": "Drug use itself defined as harm; criminalization of users as deterrence mechanism; society and youth as primary beneficiaries",
+      "primary_observable": "Arrest rates for possession (1.25M/year); incarceration rates (51% federal prisoners); self-reported deterrence effects; youth usage rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "law_enforcement_apparatus",
+      "victim": "people_who_use_drugs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest ε from criminalization apparatus; distinct victim set (users as perpetrators)"
+    },
+    {
+      "claim_id": "harm_reduction_reading",
+      "human_readable": "Harm Reduction Reading: Disease/Overdose Prevention While Accepting Use",
+      "structural_delta": "Unsafe use practices defined as harm; health interventions as primary mechanism; active users as primary beneficiaries",
+      "primary_observable": "HIV/Hepatitis C transmission rates among PWUD; overdose mortality rates; naloxone distribution; needle exchange coverage; medication-assisted therapy enrollment",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "people_who_use_drugs",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; moderate ε from health service provision; distinct causal model (90% HIV reduction Taiwan, 94% Portugal) incompatible with prohibition reading"
+    },
+    {
+      "claim_id": "legalization_reading",
+      "human_readable": "Legalization Reading: Black Market Elimination as Harm Reduction",
+      "structural_delta": "Prohibition enforcement defined as harm; market legalization as violence-reduction mechanism; marginalized communities and third parties as primary beneficiaries",
+      "primary_observable": "Systemic violence rates (vs psychopharmacological); black market revenue ($40B/year); racialized arrest disparities (2.5x for Black adults); property/violent crime rates post-decriminalization",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "marginalized_communities",
+      "victim": "third_parties_harmed_by_black_markets",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; high ε from enforcement costs and systemic violence; distinct victim set (third parties, not users); completes three-reading topology"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "prohibition_reading",
+      "kernel_id": "substance_control_authority",
+      "reading_id": "prohibition_reading"
+    },
+    {
+      "claim_id": "harm_reduction_reading",
+      "kernel_id": "substance_control_authority",
+      "reading_id": "harm_reduction_reading"
+    },
+    {
+      "claim_id": "legalization_reading",
+      "kernel_id": "substance_control_authority",
+      "reading_id": "legalization_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_hybrid_frameworks",
+      "description": "Portugal model combines decriminalization (harm reduction) with continued supply-side prohibition. Does this instantiate a fourth reading, or is it harm_reduction_reading with incomplete legalization? The axiom_contradictions analysis found harm reduction and legalization NOT mutually exclusive, suggesting hybrid viability. Bounded uncertainty: can a coherent framework hold 'use is health issue' (HR) AND 'supply must remain criminal' (partial prohibition)?",
+      "source": "Axiom contradiction analysis; Portugal empirical case"
+    },
+    {
+      "id": "omega_portland_anomaly",
+      "description": "Portland decriminalization associated with increased overdose deaths and homicides, contradicting Portugal/European evidence. Is this a measurement artifact (confounded by fentanyl crisis timing), implementation failure (decriminalization without adequate harm reduction infrastructure), or genuine evidence that legalization_reading's causal model fails in some contexts? Bounded uncertainty: under what conditions does decriminalization increase vs decrease overdose mortality?",
+      "source": "Research context tension 4; contradictory evidence on harm reduction outcomes"
+    },
+    {
+      "id": "omega_needle_exchange_crime",
+      "description": "One study found needle exchanges associated with 16% crime increase, 13-15% overdose increase, contradicting Taiwan/European evidence. Is this a local implementation effect, selection bias (programs placed in high-crime areas), or genuine tradeoff where harm reduction increases crime? If real, does it invalidate harm_reduction_reading's constraint structure or merely shift the ε calculation? Bounded uncertainty: are crime increases causal or correlational?",
+      "source": "Research context tension 4; contested evidence on harm reduction"
+    },
+    {
+      "id": "omega_psychopharmacological_violence",
+      "description": "Legalization_reading treats violence as primarily systemic (black market structure), but prohibition_reading treats it as psychopharmacological (drug effects on behavior). Research states 'majority of drug-related violence is systemic,' but does not quantify the psychopharmacological component. If 20% of violence is psychopharmacological and legalization increases use, does total violence increase even as systemic violence decreases? Bounded uncertainty: what is the psychopharmacological violence baseline and its elasticity to prevalence?",
+      "source": "Research context tension 3; competing causal models"
+    },
+    {
+      "id": "omega_institutional_gridlock",
+      "description": "Research identifies three simultaneous policy debates (supply vs demand, prohibition vs decriminalization vs legalization, use reduction vs harm reduction) creating institutional gridlock. Is this gridlock itself a fourth constraint (a scaffold preventing any reading from full implementation), or is it an emergent property of the three readings coexisting in licensed plurality? If gridlock is a constraint, what is its ε and who benefits from perpetuating it?",
+      "source": "Research context tension 6; institutional structure analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied correctly: three readings with distinct victim sets (users as perpetrators vs users as victims vs third parties as victims), distinct causal models (deterrence vs disease reduction vs black market elimination), and mutually exclusive axioms (prohibition vs harm reduction, prohibition vs legalization). Harm reduction and legalization found NOT axiom-contradictory, consistent with Portugal hybrid model. All three readings selected for generation due to structural distinctiveness and empirical grounding."
+  },
+  "_seed_id": "drug_policy_kernel"
+}

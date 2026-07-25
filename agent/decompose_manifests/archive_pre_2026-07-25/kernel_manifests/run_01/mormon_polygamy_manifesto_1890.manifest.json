@@ -1,0 +1,218 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Authority / Commitment Systems / Political Theology",
+  "family_id": "mormon_polygamy_reversal_1890",
+  "topic_summary": "Analysis of the 1890 Manifesto reversing Mormon polygamy practice under US federal coercion. The kernel is the divine-command substrate grounding marriage legitimacy. Two readings emerge: continuationist (polygamy remains doctrinally valid, suspended for prudential reasons) vs substitutionist (monogamy now doctrinally required, polygamy rescinded). The reversal occurred via exogenous federal pressure rather than endogenous theological revision, creating an M-set gap where the authority structure absorbed coercion without surfacing it as legitimate grounds for doctrinal change.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "LDS Church leadership (prophetic authority claiming direct divine revelation)",
+      "US Federal Government (territorial sovereignty enforcer via Edmunds-Tucker Act)",
+      "Wilford Woodruff (Church President issuing 1890 Manifesto)",
+      "Polygamous families (practitioners under pre-Manifesto doctrine)",
+      "Post-Manifesto monogamist members (compliance cohort)",
+      "Fundamentalist splinter groups (continuationist reading adherents)"
+    ],
+    "key_tensions": [
+      "Divine command vs federal law (theological authority vs territorial sovereignty)",
+      "Doctrinal immutability vs institutional survival (kernel fixity vs pragmatic adaptation)",
+      "Prophetic authority vs coercion visibility (revelation claim vs exogenous pressure acknowledgment)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Divine command substrate grounding marriage legitimacy — the claim that valid marriage derives from prophetic revelation of God's will",
+    "authority_description": "Prophetic succession (President of the Church receives continuing revelation binding on membership)",
+    "drift_status": "partial",
+    "candidate_pattern": "exogenous_override",
+    "is_contested_kernel": true,
+    "kernel_id": "divine_marriage_command",
+    "readings": [
+      {
+        "reading_id": "continuationist_reading",
+        "commitment": "Polygamy remains doctrinally valid; Manifesto is prudential suspension under duress, not doctrinal rescission",
+        "authority_grounding": "Prophetic revelation is immutable; federal coercion cannot alter divine law, only compliance timing",
+        "sibling_readings": [
+          "substitutionist_reading",
+          "coercion_visibility_reading"
+        ],
+        "expected_structural_delta": "Polygamy practitioners remain theologically legitimate; federal law is external constraint, not internal revision; fundamentalist splinters claim continuity with original revelation"
+      },
+      {
+        "reading_id": "substitutionist_reading",
+        "commitment": "Monogamy is now doctrinally required; Manifesto represents new revelation superseding prior command",
+        "authority_grounding": "Prophetic authority includes power to receive new revelation that replaces old; God's will changed",
+        "sibling_readings": [
+          "continuationist_reading",
+          "coercion_visibility_reading"
+        ],
+        "expected_structural_delta": "Post-Manifesto polygamy becomes apostasy; institutional legitimacy requires framing shift as revelation rather than coercion; excommunication of fundamentalists"
+      },
+      {
+        "reading_id": "coercion_visibility_reading",
+        "commitment": "Manifesto is acknowledged response to federal coercion; theological legitimacy derives from institutional survival necessity",
+        "authority_grounding": "Prophetic authority includes prudential judgment to preserve institution; coercion is surfaced as legitimate input to doctrinal change",
+        "sibling_readings": [
+          "continuationist_reading",
+          "substitutionist_reading"
+        ],
+        "expected_structural_delta": "M-set gap closed; exogenous pressure acknowledged; authority structure admits non-revelatory grounds for doctrinal shift; potential legitimacy crisis if coercion is valid input"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuationist_reading",
+      "human_readable": "Continuationist Reading (Polygamy Suspended, Not Rescinded)",
+      "structural_delta": "Polygamy remains theologically valid; Manifesto is prudential suspension under federal duress, not doctrinal change",
+      "primary_observable": "Fundamentalist splinter group theology; post-Manifesto underground polygamy continuation; doctrinal texts treating polygamy as eternal principle",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "fundamentalist_splinters",
+      "victim": "institutional_lds_legitimacy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest epsilon; captures fundamentalist position and underground continuation"
+    },
+    {
+      "claim_id": "substitutionist_reading",
+      "human_readable": "Substitutionist Reading (Monogamy Now Doctrinally Required)",
+      "structural_delta": "Monogamy is now doctrinally required; Manifesto represents new revelation superseding prior polygamy command",
+      "primary_observable": "Official LDS doctrine post-1890; excommunication of polygamists; temple recommend requirements; missionary teaching materials",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_lds_leadership",
+      "victim": "continuationist_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; institutional orthodoxy position; captures excommunication mechanism"
+    },
+    {
+      "claim_id": "coercion_visibility_reading",
+      "human_readable": "Coercion Visibility Reading (Exogenous Pressure Acknowledged)",
+      "structural_delta": "Manifesto acknowledged as response to federal coercion; theological legitimacy derives from institutional survival necessity rather than pure revelation",
+      "primary_observable": "Historical scholarship on Manifesto context; internal church documents acknowledging federal pressure; absence of revelation-language in Manifesto text itself",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; closes M-set gap by surfacing exogenous override; mountain of historical record vs institutional framing"
+    },
+    {
+      "claim_id": "federal_coercion_mechanism",
+      "human_readable": "Federal Coercion Mechanism (Edmunds-Tucker Act Enforcement)",
+      "structural_delta": "US federal government used property seizure, disenfranchisement, and imprisonment to force doctrinal change",
+      "primary_observable": "Edmunds-Tucker Act provisions; church property confiscation; polygamist imprisonment rates 1882-1890",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "continuationist_reading",
+        "substitutionist_reading",
+        "coercion_visibility_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain feeding all three readings; captured implicitly in each reading's constraint story"
+    },
+    {
+      "claim_id": "prophetic_succession_authority",
+      "human_readable": "Prophetic Succession Authority (Continuing Revelation Claim)",
+      "structural_delta": "LDS authority structure grounds legitimacy in prophetic succession with power to receive binding revelation",
+      "primary_observable": "Doctrine and Covenants canonization; sustaining votes; prophetic succession mechanism",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "continuationist_reading",
+        "substitutionist_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream rope; authority structure is background to kernel contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuationist_reading",
+      "kernel_id": "divine_marriage_command",
+      "reading_id": "continuationist_reading"
+    },
+    {
+      "claim_id": "substitutionist_reading",
+      "kernel_id": "divine_marriage_command",
+      "reading_id": "substitutionist_reading"
+    },
+    {
+      "claim_id": "coercion_visibility_reading",
+      "kernel_id": "divine_marriage_command",
+      "reading_id": "coercion_visibility_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "federal_coercion_mechanism",
+      "structural_delta": "Federal enforcement via Edmunds-Tucker Act",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain feeding all three readings; captured implicitly in each reading's constraint story as exogenous pressure"
+    },
+    {
+      "claim_id": "prophetic_succession_authority",
+      "structural_delta": "Prophetic succession as authority grounding",
+      "hypothesis": "rope",
+      "deferral_reason": "Background authority structure; relevant to readings but not independently generative"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m_set_gap_closure",
+      "description": "Does coercion_visibility_reading close the M-set gap, or does acknowledging exogenous override create a new legitimacy crisis? If coercion is valid input to doctrinal change, what constrains future coercion-driven shifts?",
+      "source": "Kernel contest analysis + commitment system drift status (partial)"
+    },
+    {
+      "id": "omega_fundamentalist_legitimacy",
+      "description": "Do fundamentalist splinter groups instantiate the continuationist reading as a separate commitment system, or are they parasitic on institutional LDS authority while rejecting its current interpretation?",
+      "source": "Beneficiary scan + reading independence test"
+    },
+    {
+      "id": "omega_revelation_vs_prudence",
+      "description": "Is the substitutionist reading internally coherent? If the Manifesto is framed as new revelation, why does the text itself lack revelation-language and explicitly reference federal pressure?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — revelation-language absent from Manifesto text"
+    },
+    {
+      "id": "omega_temporal_authority_boundary",
+      "description": "Where is the boundary between temporal institutional survival decisions and theological doctrinal authority? The kernel contest may be unresolvable because the authority structure does not distinguish these domains.",
+      "source": "Commitment system authority structure analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest is genuine: three readings emit structurally different constraints (different victim sets, different beneficiary structures, different epsilon values). Continuationist reading treats polygamy as suspended but valid (high epsilon suppression of alternatives). Substitutionist reading treats polygamy as rescinded (moderate epsilon via excommunication). Coercion visibility reading surfaces exogenous override as mountain (very low epsilon — historical record). All three readings share the divine_marriage_command kernel but instantiate different constraints from it."
+  },
+  "_seed_id": "mormon_polygamy_manifesto_1890"
+}

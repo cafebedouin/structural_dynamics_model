@@ -1,0 +1,175 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Political Economy / Blockchain Governance Design",
+  "family_id": "ergo_verification_cost_paper_003",
+  "topic_summary": "A project-foundation document establishing the third re-founding of an academic paper arguing that ledger verification cost is a constitutional variable, that the money/governance relation has exactly three settings (fused, exiled, constitutionalized adjacency), and that proof-of-stake cannot serve constitutional substrates. The document adopts a no-self-citation rule, specifies a reference institutional design, and sets binding drafting discipline, an outline, open items, and a folder-reset procedure.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 9,
+    "tension_count": 5,
+    "mechanism_count": 6,
+    "absence_count": 3,
+    "key_entities": [
+      "The member (accountable author/adopter of the document)",
+      "Claude (drafting agent, non-accountable until member signs)",
+      "ERGO-PAPER-MECH-001 (mechanisms digest, genericized bridge to corpus)",
+      "The unpublished corpus (eleven documents, archived externally upon adoption)",
+      "The reference institutional design (PAO: polycentric autonomous organisation)",
+      "Ergo (the named chain instance, appears once late in the paper)",
+      "The exchange-rate school (Lalley-Weyl, Buterin-Hitzig-Weyl, Posner-Weyl — an audience answered, not merely cited)"
+    ],
+    "key_tensions": [
+      "Verification cost as constitutional precondition vs. verification cost as mere engineering/operations metric (§2.4 disciplined claim)",
+      "No-self-citation rule vs. the paper's dependence on covenant machinery that only exists in the unpublished corpus (resolved via MECH-001 genericization)",
+      "Composition-not-components novelty claim vs. every individual mechanism having prior art (§8A ally doctrine)",
+      "Fusion vs. exile vs. constitutionalized adjacency as the coupling theorem's three settings for money-governance relation",
+      "Claude-drafted authority vs. member-accountable adoption ('the adoption is the act')"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The paper's own foundational legitimacy claim rests on a fixed procedural commitment: 'the paper cites no unpublished corpus and none of the member's own writing,' operationalized as a quarantine rule binding on every draft, with adoption-by-signature as the act that makes the document authoritative.",
+    "authority_description": "The member is the sole accountable adopter; the document is otherwise Claude-drafted and non-binding. Legitimacy of any given draft state is grounded not in argumentative quality but in conformance to the discipline rules (§3) and the quarantine list (MECH-001 §8), verified procedurally rather than substantively.",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "money_governance_coupling",
+    "readings": [
+      {
+        "reading_id": "fusion_reading",
+        "commitment": "Money and governance are structurally unified: wealth held on the chain converts directly into voting weight or law-making power (e.g., stake-weighted consensus, token-voting DAOs).",
+        "authority_grounding": "Market/shareholder legitimacy — the system treats capital contribution as the natural and sufficient basis for authority over the system's rules.",
+        "sibling_readings": [
+          "exile_reading",
+          "adjacency_reading"
+        ],
+        "expected_structural_delta": "Founding allocation compounds into a permanent electorate; wealth accumulation IS political accumulation; the constraint's victim set includes non-wealth-holding participants whose voice is structurally priced out. High suppression of alternative governance forms once fusion is adopted (per the paper's own categorical treatment of PoS)."
+      },
+      {
+        "reading_id": "exile_reading",
+        "commitment": "Money and governance are structurally severed: monetary authority is delegated to a discretionary institution (e.g., central bank) held apart from constitutional constraint, trusted to exercise judgment case-by-case.",
+        "authority_grounding": "Technocratic/discretionary legitimacy — expertise and situational judgment justify authority, with time-inconsistency (Kydland-Prescott) as the diagnosed failure mode.",
+        "sibling_readings": [
+          "fusion_reading",
+          "adjacency_reading"
+        ],
+        "expected_structural_delta": "Discretion held becomes discretion captured from outside; the victim set is diffuse (currency holders, future rule-takers bound by present discretionary choices) rather than the fusion reading's concentrated stakeholder class. The exile reading's failure mode is capture-by-discretion, not capture-by-capital — a structurally distinct extraction path even though both are labeled 'capture' by the paper."
+      },
+      {
+        "reading_id": "adjacency_reading",
+        "commitment": "Money and governance are held in constitutionalized adjacency: wealth held on the chain confers no weight over the chain; monetary/economic mechanisms (surety, clearing, treasury) touch governance only at enumerated, capped, audited crossings.",
+        "authority_grounding": "Constitutional/structural legitimacy — authority derives from a designed non-convertibility guarantee (no delegation primitive to accumulate; receipt-freeness; capped bonds), verified architecturally rather than trusted procedurally or through expertise.",
+        "sibling_readings": [
+          "fusion_reading",
+          "exile_reading"
+        ],
+        "expected_structural_delta": "No stakeholder class or discretionary office accumulates permanent structural advantage; the design's own objection 8/9 concede residual wealth advantages (attendance, organization, proposals) while claiming the ballot itself remains unbought. This is the paper's own preferred/argued setting — its 'victim set' is claimed to be empty by construction, which is itself the contested claim a skeptical reader would probe."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "fusion_reading",
+        "reading_b": "adjacency_reading",
+        "basis": "Fusion's founding axiom (capital contribution is a legitimate and sufficient basis for governance weight) is directly negated by adjacency's founding axiom (wealth held on the chain must confer zero weight over the chain). No single coherent constitutional design can simultaneously let stake buy voice and structurally forbid stake from buying voice."
+      },
+      {
+        "reading_a": "exile_reading",
+        "reading_b": "adjacency_reading",
+        "basis": "Exile's axiom holds that necessary monetary judgment (crisis response, lender-of-last-resort action) requires an office with discretion unconstrained by pre-written rules. Adjacency's axiom holds that all governance-relevant monetary contact must be enumerated and capped in advance, with no standing discretionary office. A framework cannot both require an unconstrained discretionary monetary authority and forbid the existence of unconstrained discretionary authority over money-governance contact points."
+      },
+      {
+        "reading_a": "fusion_reading",
+        "reading_b": "exile_reading",
+        "basis": "Fusion's axiom locates ultimate authority over monetary/governance rules IN the same body that holds the money (stake = law). Exile's axiom locates that authority OUTSIDE the body accountable to the governed, in a separated discretionary institution. A single framework cannot ground legitimacy simultaneously in capital-holder self-rule and in externalized technocratic separation from capital-holder rule — they answer 'who decides' with mutually exclusive bodies."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "verification_cost_as_constitutional_precondition",
+      "human_readable": "Verification Cost as Constitutional Precondition (vs. Engineering Metric)",
+      "structural_delta": "Hardware cost of independent ledger verification determines whether self-verification or delegated intermediation is the system's stable equilibrium — reframed by the paper from engineering metric to constitutional variable",
+      "primary_observable": "Node hardware/bandwidth requirements vs. member-affordable hardware baseline; measurable gap between 'verifiable by anyone' and 'verifiable only by well-resourced intermediaries'",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "intermediating_infrastructure_operators",
+      "victim": "members_priced_off_self_verification",
+      "downstream_of": [],
+      "feeds_into": [
+        "money_governance_coupling"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Structurally distinct upstream constraint — its own observable (hardware cost curve), its own beneficiary/victim structure (intermediary capture via cost, not via monetary weight), independent of how the money-governance coupling kernel resolves. Passes §3: different observable, causally feeds the kernel (verification-cost delegation is the precondition the coupling theorem generalizes from) but is not collapsible into any single reading."
+    }
+  ],
+  "generation_sequence": [
+    "verification_cost_as_constitutional_precondition",
+    {
+      "claim_id": "fusion_reading",
+      "kernel_id": "money_governance_coupling",
+      "reading_id": "fusion_reading"
+    },
+    {
+      "claim_id": "exile_reading",
+      "kernel_id": "money_governance_coupling",
+      "reading_id": "exile_reading"
+    },
+    {
+      "claim_id": "adjacency_reading",
+      "kernel_id": "money_governance_coupling",
+      "reading_id": "adjacency_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "no_self_citation_procedural_kernel",
+      "structural_delta": "The document's own legitimacy-grounding mechanism (adoption-by-signature; quarantine of corpus references) considered as a candidate second kernel",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Tested against §1.3-K's three-part kernel test: while there is a shared commitment (no-self-citation) and different possible 'readings' of how strictly to apply it, the readings do not emit structurally different constraints — they differ only in strictness/degree along one axis (how much corpus-adjacent material leaks through), not in beneficiary/victim structure or type. Collapses to a single ordinary axis at most, and even that axis is process/meta-level relative to the paper's substantive content — better treated as omega material than a generation axis."
+    },
+    {
+      "claim_id": "design_tax_multi_stage_protocol_cost",
+      "structural_delta": "Non-Turing-complete contract languages force upfront multi-stage protocol design effort, trading drafting cost now for avoided hardware cost forever",
+      "hypothesis": "piton",
+      "deferral_reason": "Causally downstream of verification_cost_as_constitutional_precondition (§3 Type B coupling: the design tax exists because verification cost is the binding constraint being defended against). Insufficient independent centrality — no separate beneficiary/victim structure of its own; folds into the selected verification-cost axis's constraint story as a corollary rather than a distinct ε."
+    },
+    {
+      "claim_id": "novelty_as_composition_not_components",
+      "structural_delta": "Whether the reference design's contribution is judged mechanism-by-mechanism (where every piece has prior art per §8A) or at the level of composition (refusing every trusted-component purchase simultaneously)",
+      "hypothesis": "rope",
+      "deferral_reason": "This is a rhetorical/argumentative posture the paper adopts about itself, not a structural feature of the money-governance-verification domain. It does not have its own ε independent of how the coupling kernel and verification-cost axis are argued — it is the paper's meta-strategy for presenting those axes, not a fourth constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_axiom_contradiction_symmetry",
+      "description": "All three pairwise reading combinations (fusion/adjacency, exile/adjacency, fusion/exile) were declared axiom-contradictory, meaning the coupling theorem's three settings are mutually exclusive in every pairing — no hybrid framework holds two simultaneously. This symmetry is itself notable: the paper's own claim ('exactly three settings') is consistent with a kernel that fully partitions the space, but the paper does not test whether a fourth, unnamed setting could evade all three axiom pairs. Bounded uncertainty: is the trichotomy exhaustive, or merely the three the paper chose to name?",
+      "source": "§1.3-K Axiom Contradiction Declaration"
+    },
+    {
+      "id": "omega_adjacency_reading_self_privileging",
+      "description": "The adjacency_reading is the paper's own preferred/argued position, not a neutral third alternative — its 'expected_structural_delta' asserts an empty victim set 'by construction,' which is precisely the claim objections 8 and 9 (§10) exist to pressure-test. Treating adjacency as one reading among three formally-equal readings may understate that the paper is not neutrally surveying three settings but arguing for one against two rejected alternatives. Downstream generation should register this asymmetry rather than treating all three readings as equally 'live' positions in the source material.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_no_self_citation_kernel_collapse",
+      "description": "The no-self-citation rule was evaluated as a candidate second kernel and found to collapse to an ordinary scaffold axis — different strictness readings do not emit structurally different constraints, only different degrees of one constraint. Recorded per §1.3-K's coherence-is-a-signal-not-a-gate instruction.",
+      "source": "§3.2 Overlap Classification, Type A test applied to candidate kernel"
+    },
+    {
+      "id": "omega_domain_reflexivity",
+      "description": "The input is a meta-document about writing a paper, not the paper's argument itself. The extracted kernel (money-governance coupling) is the paper's *subject matter*, reconstructed from the outline rather than from a finished argument. There is residual risk that the outline's structure (Part III, §9-12) imposes an artificial clarity on readings that the actual drafted paper might blend, hedge, or subordinate differently.",
+      "source": "F01 (Premise Drift) check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": true,
+    "notes": "F34: The domain spans blockchain cryptoeconomics, constitutional political economy, and mechanism design at a technical depth (reorg economics, threshold signatures, eUTXO formalisms) exceeding confident generalist competence; classification of fusion/exile/adjacency as genuinely axiom-contradictory rests on the paper's own framing rather than independent verification of the cited economic literature (Buchanan, Kydland-Prescott). F01: the input is a project-planning document ABOUT a paper, not the paper's argument; the kernel decomposition treats the coupling theorem as the input's core content on the reasonable but not certain premise that the meta-document's most-elaborated theoretical claim (Part III, §5 items 1-2, §10 objections 7-9) is the intended object of analysis rather than the document's own drafting-process machinery (adoption, discipline rules, folder reset), which was correctly triaged to deferred/omega status instead."
+  }
+}

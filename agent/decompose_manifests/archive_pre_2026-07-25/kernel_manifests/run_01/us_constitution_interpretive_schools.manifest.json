@@ -1,0 +1,222 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Theory / Political Philosophy",
+  "family_id": "us_constitution_interpretive_schools",
+  "topic_summary": "Analysis of competing interpretive frameworks for the U.S. Constitution, examining how originalist, living constitutionalist, and textualist/positivist readings generate structurally different constraints from the same founding document. The kernel is the Constitution itself; the contest is over which interpretive authority grounds legitimate adjudication of constitutional meaning.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "U.S. Constitution (founding text, ratified 1788, amended 27 times)",
+      "Originalist school (Scalia, Thomas, Bork tradition)",
+      "Living constitutionalist school (Brennan, Marshall tradition)",
+      "Textualist/positivist school (focuses on plain meaning at ratification)",
+      "Supreme Court (interpretive authority)",
+      "Article V amendment process (formal revision mechanism)",
+      "Federalist Society / American Constitution Society (institutional carriers of interpretive traditions)"
+    ],
+    "key_tensions": [
+      "Fixed meaning vs evolving meaning (originalist vs living constitutionalist)",
+      "Framers' intent vs contemporary values (temporal authority grounding)",
+      "Formal amendment vs interpretive drift (revision pathway contest)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The U.S. Constitution as ratified text plus amendments, claimed as fixed reference for legitimate government action",
+    "authority_description": "Supreme Court holds interpretive monopoly; legitimacy grounded in claimed fidelity to kernel, but schools contest what fidelity means",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "us_constitution_text",
+    "readings": [
+      {
+        "reading_id": "originalist_reading",
+        "commitment": "Constitutional meaning fixed at ratification; legitimate interpretation recovers original public meaning",
+        "authority_grounding": "Framers' intent and ratification-era linguistic conventions as binding",
+        "sibling_readings": [
+          "living_constitutionalist_reading",
+          "textualist_reading"
+        ],
+        "expected_structural_delta": "Narrow constraint set; high resistance to unenumerated rights; beneficiary is status quo power distribution at founding; victim is groups excluded from founding settlement (women, non-property holders, enslaved persons)"
+      },
+      {
+        "reading_id": "living_constitutionalist_reading",
+        "commitment": "Constitutional meaning evolves with societal values; legitimate interpretation adapts text to contemporary needs",
+        "authority_grounding": "Democratic legitimacy and moral progress as interpretive guides",
+        "sibling_readings": [
+          "originalist_reading",
+          "textualist_reading"
+        ],
+        "expected_structural_delta": "Expansive constraint set; high recognition of unenumerated rights; beneficiary is marginalized groups seeking constitutional protection; victim is originalist coalition and states' rights advocates"
+      },
+      {
+        "reading_id": "textualist_reading",
+        "commitment": "Constitutional meaning derives from plain text at ratification, independent of framers' subjective intent",
+        "authority_grounding": "Linguistic objectivity and rule-of-law predictability",
+        "sibling_readings": [
+          "originalist_reading",
+          "living_constitutionalist_reading"
+        ],
+        "expected_structural_delta": "Moderate constraint set; resists both originalist intent-mining and living constitutionalist value-projection; beneficiary is legal profession claiming neutral expertise; victim is both populist originalists and progressive activists"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "originalist_reading",
+      "human_readable": "Originalist Reading (Fixed Meaning at Ratification)",
+      "structural_delta": "Constitutional constraints derive from original public meaning at ratification; interpretive authority grounded in fidelity to founding settlement",
+      "primary_observable": "Supreme Court citation patterns to Federalist Papers, ratification debates, founding-era dictionaries; frequency of 'original public meaning' in opinions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "founding_era_power_distribution",
+      "victim": "groups_excluded_from_founding",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct authority grounding and structural delta; highest citation frequency in current Court"
+    },
+    {
+      "claim_id": "living_constitutionalist_reading",
+      "human_readable": "Living Constitutionalist Reading (Evolving Meaning)",
+      "structural_delta": "Constitutional constraints adapt to contemporary values; interpretive authority grounded in democratic legitimacy and moral progress",
+      "primary_observable": "Supreme Court citation to evolving standards of decency, contemporary consensus, international human rights norms",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "marginalized_groups_seeking_protection",
+      "victim": "states_rights_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposite authority grounding from originalism; distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "textualist_reading",
+      "human_readable": "Textualist Reading (Plain Meaning at Ratification)",
+      "structural_delta": "Constitutional constraints derive from objective linguistic meaning at ratification, independent of framers' subjective intent or contemporary values",
+      "primary_observable": "Supreme Court rejection of legislative history; focus on dictionaries and linguistic conventions over Federalist Papers or moral philosophy",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "legal_profession_claiming_neutrality",
+      "victim": "both_originalist_and_progressive_coalitions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position; claims neutrality between the other two; distinct observable (linguistic objectivity vs intent or values)"
+    },
+    {
+      "claim_id": "popular_constitutionalism",
+      "human_readable": "Popular Constitutionalism (Extra-Judicial Interpretation)",
+      "structural_delta": "Constitutional meaning contested in political sphere, not monopolized by courts; interpretive authority distributed across branches and popular movements",
+      "primary_observable": "Frequency of constitutional arguments in legislative debate, executive signing statements, social movements",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: challenges judicial supremacy rather than offering distinct reading of text; lower structural centrality"
+    },
+    {
+      "claim_id": "common_law_constitutionalism",
+      "human_readable": "Common Law Constitutionalism (Precedent-Driven Evolution)",
+      "structural_delta": "Constitutional meaning evolves through stare decisis and incremental doctrinal development, not text or values",
+      "primary_observable": "Supreme Court reliance on precedent over text; frequency of 'settled law' rhetoric",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: describes judicial practice more than interpretive school; overlaps with living constitutionalism in effect"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "originalist_reading",
+      "kernel_id": "us_constitution_text",
+      "reading_id": "originalist_reading"
+    },
+    {
+      "claim_id": "living_constitutionalist_reading",
+      "kernel_id": "us_constitution_text",
+      "reading_id": "living_constitutionalist_reading"
+    },
+    {
+      "claim_id": "textualist_reading",
+      "kernel_id": "us_constitution_text",
+      "reading_id": "textualist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "popular_constitutionalism",
+      "structural_delta": "Constitutional meaning contested in political sphere, not monopolized by courts",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Challenges judicial supremacy rather than offering distinct reading; lower centrality; omega material on interpretive authority distribution"
+    },
+    {
+      "claim_id": "common_law_constitutionalism",
+      "structural_delta": "Constitutional meaning evolves through precedent and incremental doctrinal development",
+      "hypothesis": "piton",
+      "deferral_reason": "Describes judicial practice more than interpretive school; overlaps with living constitutionalism; captured indirectly"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_amendment_bypass",
+      "description": "Does living constitutionalism function as Article V bypass, absorbing drift that would otherwise require formal amendment? If so, the rope of formal revision becomes a piton.",
+      "source": "Commitment system drift_status analysis"
+    },
+    {
+      "id": "omega_originalism_selectivity",
+      "description": "Do originalists selectively invoke founding-era meaning when it supports preferred outcomes, reverting to living constitutionalism otherwise? If so, originalism is a snare masquerading as a mountain.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_textualism_collapse",
+      "description": "Does textualism collapse into originalism in practice, given that 'plain meaning' requires founding-era linguistic conventions? If so, it is not a distinct reading.",
+      "source": "Independence testing between originalist_reading and textualist_reading"
+    },
+    {
+      "id": "omega_judicial_supremacy",
+      "description": "Is Supreme Court interpretive monopoly itself a constraint (mountain of institutional design) or a contested claim (rope of political settlement)? Popular constitutionalism challenges this.",
+      "source": "Deferred axis popular_constitutionalism"
+    },
+    {
+      "id": "omega_reconstruction_amendments",
+      "description": "Do the Reconstruction Amendments (13th, 14th, 15th) constitute a second founding that originalists must account for? Temporal kernel problem: which ratification era is authoritative?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_international_law",
+      "description": "Does living constitutionalism's citation of international norms import external constraints, making the Constitution a node in a transnational legal order rather than a sovereign kernel?",
+      "source": "Extraction tension: domestic vs transnational authority grounding"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings emit structurally distinct constraints from same text. Textualism may collapse into originalism (omega_textualism_collapse), but independence testing shows distinct observables (linguistic objectivity vs framers' intent). Deferred axes document alternative authority-grounding claims."
+  },
+  "_seed_id": "us_constitution_interpretive_schools"
+}

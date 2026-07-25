@@ -1,0 +1,259 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Legal Theory / Commitment Systems",
+  "family_id": "sunni_madhahib_jurisprudential_method",
+  "topic_summary": "Analysis of the four Sunni schools of jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali) as a contested kernel system. Each school offers a distinct reading of the shared jurisprudential-method kernel (usul al-fiqh), grounding interpretive authority differently while maintaining mutual recognition. The system exhibits stable pluralism across 1200+ years without displacement or convergence.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Hanafi school (founded Abu Hanifa, 8th century; emphasizes qiyas/analogical reasoning, ra'y/opinion)",
+      "Maliki school (founded Malik ibn Anas; emphasizes Medinan practice, maslaha/public interest)",
+      "Shafi'i school (founded al-Shafi'i; systematized usul al-fiqh, hierarchical source methodology)",
+      "Hanbali school (founded Ahmad ibn Hanbal; textualist, restricts qiyas, emphasizes hadith)",
+      "Usul al-fiqh (shared jurisprudential-method kernel: Quran, Sunnah, ijma, qiyas as source hierarchy)",
+      "Taqlid (following established school authority vs independent reasoning)",
+      "Ikhtilaf (jurisprudential disagreement; recognized as legitimate diversity)",
+      "Mufti/Qadi (interpretive authorities within each school)"
+    ],
+    "key_tensions": [
+      "Textualist restriction (Hanbali) vs expansive analogical reasoning (Hanafi)",
+      "Medinan practice as binding precedent (Maliki) vs systematic hadith hierarchy (Shafi'i)",
+      "School loyalty (taqlid) vs cross-school eclecticism (talfiq)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Usul al-fiqh: the shared jurisprudential-method framework identifying Quran, Sunnah, ijma (consensus), and qiyas (analogy) as legitimate sources of legal derivation",
+    "authority_description": "Each school grounds interpretive legitimacy in its founder's methodological commitments and transmitted chain of scholarly authority (isnad), not in institutional hierarchy or democratic mandate",
+    "drift_status": "functioning",
+    "candidate_pattern": "D2_authority_axis",
+    "is_contested_kernel": true,
+    "kernel_id": "usul_al_fiqh_method",
+    "readings": [
+      {
+        "reading_id": "hanafi_reading",
+        "commitment": "Expansive qiyas and ra'y (juristic preference) as necessary tools for legal derivation when texts are silent or ambiguous",
+        "authority_grounding": "Abu Hanifa's rationalist methodology; transmitted through Iraqi scholarly lineage; institutional dominance in Ottoman/Mughal empires",
+        "sibling_readings": [
+          "maliki_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Lowest textual constraint (high epsilon for analogical extension); beneficiary: jurists with discretion; victim: textualist certainty"
+      },
+      {
+        "reading_id": "maliki_reading",
+        "commitment": "Medinan practice ('amal ahl al-Madina) as authoritative interpretive layer over hadith; maslaha (public interest) as legitimate source",
+        "authority_grounding": "Malik's proximity to Prophetic community; transmitted through North African/Andalusian scholarly networks",
+        "sibling_readings": [
+          "hanafi_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Practice-norm constraint over textual hierarchy; beneficiary: local custom preservation; victim: universal textualist uniformity"
+      },
+      {
+        "reading_id": "shafii_reading",
+        "commitment": "Systematic hierarchical source methodology: Quran > Sunnah > ijma > qiyas, with strict conditions on each level",
+        "authority_grounding": "Al-Shafi'i's Risala as founding text of usul al-fiqh; transmitted through Egyptian/Levantine scholarly institutions",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Moderate constraint via procedural hierarchy; beneficiary: methodological systematizers; victim: both expansive qiyas and pure textualism"
+      },
+      {
+        "reading_id": "hanbali_reading",
+        "commitment": "Textualist restriction: minimize qiyas, prioritize hadith over juristic reasoning, reject speculative methods",
+        "authority_grounding": "Ahmad ibn Hanbal's hadith-centered methodology; transmitted through Syrian/Najdi scholarly networks; Salafi revival movements",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "shafii_reading"
+        ],
+        "expected_structural_delta": "Highest textual constraint (low epsilon for extension); beneficiary: hadith scholars; victim: contextual adaptation capacity"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "hanafi_reading",
+      "human_readable": "Hanafi Reading (Expansive Analogical Reasoning)",
+      "structural_delta": "Qiyas and ra'y as necessary juristic tools when texts are silent or ambiguous",
+      "primary_observable": "Frequency of qiyas deployment in fatawa; acceptance of juristic preference (istihsan) in rulings",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "jurists_with_discretion",
+      "victim": "textualist_certainty",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest epsilon reading; represents one pole of the textualist-rationalist spectrum"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "human_readable": "Maliki Reading (Medinan Practice as Authoritative Layer)",
+      "structural_delta": "Local practice-norm ('amal) as interpretive constraint over textual hierarchy",
+      "primary_observable": "Invocation of Medinan practice in fatawa; maslaha-based rulings vs strict hadith application",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "local_custom_preservation",
+      "victim": "universal_textualist_uniformity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from Hanafi (practice vs reason) and Hanbali (custom vs text); moderate epsilon"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "human_readable": "Hanbali Reading (Textualist Restriction)",
+      "structural_delta": "Minimize qiyas, prioritize hadith, reject speculative juristic methods",
+      "primary_observable": "Restriction of qiyas deployment; hadith citation density in fatawa vs juristic reasoning",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "hadith_scholars",
+      "victim": "contextual_adaptation_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Opposite pole from Hanafi; lowest epsilon reading; completes the structural spectrum"
+    },
+    {
+      "claim_id": "shafii_reading",
+      "human_readable": "Shafi'i Reading (Systematic Hierarchical Methodology)",
+      "structural_delta": "Procedural hierarchy (Quran > Sunnah > ijma > qiyas) with strict conditions at each level",
+      "primary_observable": "Adherence to four-source hierarchy in fatawa; rejection of both expansive qiyas and pure textualism",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "methodological_systematizers",
+      "victim": "both_expansive_qiyas_and_pure_textualism",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally intermediate between Hanafi and Hanbali; lower distinctiveness within three-axis budget"
+    },
+    {
+      "claim_id": "taqlid_constraint",
+      "human_readable": "Taqlid Constraint (School Loyalty vs Eclecticism)",
+      "structural_delta": "Obligation to follow one school's rulings vs freedom to select across schools (talfiq)",
+      "primary_observable": "Institutional enforcement of school loyalty; prevalence of cross-school fatwa shopping",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "school_institutional_authority",
+      "victim": "individual_juristic_autonomy",
+      "downstream_of": [
+        "hanafi_reading",
+        "maliki_reading",
+        "shafii_reading",
+        "hanbali_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream enforcement mechanism rather than kernel reading; captured in omega_taqlid_enforcement"
+    },
+    {
+      "claim_id": "ikhtilaf_legitimacy",
+      "human_readable": "Ikhtilaf Legitimacy (Disagreement as Mercy)",
+      "structural_delta": "Jurisprudential disagreement recognized as legitimate diversity (rahma) rather than error requiring correction",
+      "primary_observable": "Cross-school mutual recognition; absence of displacement attempts; ikhtilaf literature",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hanafi_reading",
+        "maliki_reading",
+        "shafii_reading",
+        "hanbali_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream enabling condition rather than kernel reading; captured in omega_pluralism_stability"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hanafi_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "hanafi_reading"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "maliki_reading"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "hanbali_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "shafii_reading",
+      "structural_delta": "Systematic hierarchical source methodology",
+      "hypothesis": "rope",
+      "deferral_reason": "Structurally intermediate between Hanafi and Hanbali poles; lower distinctiveness within three-reading budget"
+    },
+    {
+      "claim_id": "taqlid_constraint",
+      "structural_delta": "School loyalty obligation vs cross-school eclecticism",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream enforcement mechanism rather than kernel reading; enforcement structure warrants separate analysis"
+    },
+    {
+      "claim_id": "ikhtilaf_legitimacy",
+      "structural_delta": "Disagreement recognized as legitimate diversity rather than error",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream enabling condition for pluralism stability; not a kernel reading itself"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_pluralism_stability",
+      "description": "Why does this system exhibit 1200+ years of stable pluralism without displacement or convergence? Is ikhtilaf_legitimacy a true Mountain (theological necessity) or a Rope (coordination equilibrium that could collapse)? Salafi movements test this boundary.",
+      "source": "Deferred axis ikhtilaf_legitimacy + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_taqlid_enforcement",
+      "description": "Does taqlid (school loyalty) function as a Rope (voluntary coordination) or Snare (institutional extraction via monopoly on interpretation)? Modern fatwa-shopping and online eclecticism test enforcement capacity.",
+      "source": "Deferred axis taqlid_constraint + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_state_madhab_collapse",
+      "description": "Does state adoption of one school (Ottoman Hanafi, Saudi Hanbali) convert that reading from Tangled Rope to Snare via enforcement apparatus? Post-colonial legal pluralism may reveal extraction structure.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis conducted within assumption of non-state enforcement"
+    },
+    {
+      "id": "omega_shafii_centrality",
+      "description": "Is Shafi'i reading's procedural systematization the hidden structural center (highest actual centrality) that enables the other three to coexist? Deferral may have excluded the load-bearing axis.",
+      "source": "Selection algorithm + L6 (Selection Loss)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel recognition confirmed: four readings emit structurally different constraints (different epsilon bins, different beneficiary/victim pairs, different authority-grounding). Shafi'i deferral is structural budget constraint, not analytical error. Omega_shafii_centrality bounds the selection uncertainty."
+  },
+  "_seed_id": "four_sunni_madhhabs"
+}

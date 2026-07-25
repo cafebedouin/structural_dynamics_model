@@ -1,0 +1,216 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Collective Memory / Ritual Practice",
+  "family_id": "ritual_catastrophe_memory_2026",
+  "topic_summary": "Analysis of Jewish commemorative rituals (Tisha B'Av, Passover) as contested kernels of catastrophe-memory preservation. The domain question: do these rituals preserve survival-competence (adaptive capacity to recognize and respond to existential threats) or only mourning-practice (symbolic continuity without operational transfer)? The kernel is the commemorative reading itself—what the ritual is claimed to do.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Tisha B'Av (annual fast commemorating Temple destructions, 586 BCE and 70 CE)",
+      "Passover (annual festival commemorating Exodus from Egypt, ~1300 BCE claimed)",
+      "Rabbinic authority structure (interpretive legitimacy grounded in Oral Torah transmission)",
+      "Diaspora Jewish communities (geographically dispersed populations maintaining ritual)",
+      "Historical catastrophes (Temple destructions, expulsions, pogroms, Shoah)",
+      "Survival-competence claim (ritual as threat-recognition training)"
+    ],
+    "key_tensions": [
+      "Symbolic continuity vs operational transfer (does ritual preserve actionable knowledge or only memory-of-memory)",
+      "Mourning-practice vs survival-drill (is the ritual about grief or about pattern-recognition for future threats)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Commemorative ritual as catastrophe-memory preservation mechanism",
+    "authority_description": "Rabbinic interpretive tradition grounded in claimed unbroken transmission from Sinai (Oral Torah)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_stability",
+    "is_contested_kernel": true,
+    "kernel_id": "catastrophe_memory_preservation",
+    "readings": [
+      {
+        "reading_id": "survival_competence_reading",
+        "commitment": "Ritual preserves operational threat-recognition capacity across generations",
+        "authority_grounding": "Functionalist/evolutionary—ritual survives because it confers adaptive advantage",
+        "sibling_readings": [
+          "mourning_practice_reading",
+          "hybrid_atrophy_reading"
+        ],
+        "expected_structural_delta": "High extractiveness (ritual demands costly participation); beneficiary is future-generation survival; victim is present-generation autonomy; constraint type is tangled_rope (entangles grief with drill)"
+      },
+      {
+        "reading_id": "mourning_practice_reading",
+        "commitment": "Ritual preserves symbolic continuity and collective identity without operational transfer",
+        "authority_grounding": "Durkheimian/symbolic—ritual maintains group boundaries and shared narrative",
+        "sibling_readings": [
+          "survival_competence_reading",
+          "hybrid_atrophy_reading"
+        ],
+        "expected_structural_delta": "Low-to-moderate extractiveness (ritual as voluntary identity marker); beneficiary is in-group cohesion; no victim set (participation is opt-in); constraint type is rope (coordination without suppression)"
+      },
+      {
+        "reading_id": "hybrid_atrophy_reading",
+        "commitment": "Ritual once preserved survival-competence but has atrophied to mourning-practice under modernity",
+        "authority_grounding": "Historical/secularization—ritual meaning shifts as existential context changes",
+        "sibling_readings": [
+          "survival_competence_reading",
+          "mourning_practice_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness declining over time; beneficiary was historical survival, now in-group identity; victim is present-generation who inherit costly practice without adaptive payoff; constraint type is piton (atrophied former function)"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "survival_competence_reading",
+      "human_readable": "Survival-Competence Reading (Ritual as Threat-Recognition Drill)",
+      "structural_delta": "Ritual trains pattern-recognition for existential threats via embodied repetition",
+      "primary_observable": "Correlation between ritual observance and community survival rates during historical catastrophes; transmission of actionable threat-response knowledge",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "future_generations",
+      "victim": "present_generation_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest epsilon; distinct beneficiary/victim structure; tests D5 (survival-competence) claim directly"
+    },
+    {
+      "claim_id": "mourning_practice_reading",
+      "human_readable": "Mourning-Practice Reading (Ritual as Symbolic Continuity)",
+      "structural_delta": "Ritual maintains collective identity and narrative continuity without operational transfer",
+      "primary_observable": "Ritual participation rates independent of threat environment; absence of measurable threat-response advantage",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "in_group_cohesion",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from survival_competence_reading (different epsilon, beneficiary, victim structure); tests D1/D4 (symbol-survival) claim"
+    },
+    {
+      "claim_id": "hybrid_atrophy_reading",
+      "human_readable": "Hybrid-Atrophy Reading (Survival-Drill Degraded to Mourning-Practice)",
+      "structural_delta": "Ritual function shifts from operational to symbolic as existential context changes",
+      "primary_observable": "Historical shift in ritual interpretation and practice intensity; correlation with secularization and state protection",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "historical_survival",
+      "victim": "present_generation_bearing_cost",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; synthesizes temporal dimension; tests whether constraint type itself shifts over time"
+    },
+    {
+      "claim_id": "rabbinic_authority_structure",
+      "human_readable": "Rabbinic Authority Structure (Interpretive Legitimacy Grounding)",
+      "structural_delta": "Authority to define ritual meaning derives from claimed unbroken transmission chain",
+      "primary_observable": "Rabbinic consensus mechanisms; response to heterodox interpretations",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "rabbinic_class",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "survival_competence_reading",
+        "mourning_practice_reading",
+        "hybrid_atrophy_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold supporting all readings but not itself a reading of the kernel; omega material on authority drift"
+    },
+    {
+      "claim_id": "embodied_memory_mechanism",
+      "human_readable": "Embodied Memory Mechanism (Somatic vs Narrative Transmission)",
+      "structural_delta": "Physical ritual enactment (fasting, floor-sitting, lament) vs textual study as memory substrate",
+      "primary_observable": "Retention rates for ritual knowledge under persecution vs textual knowledge",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "survival_competence_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mechanism but lower structural distinctiveness; captured within survival_competence_reading's constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "survival_competence_reading",
+      "kernel_id": "catastrophe_memory_preservation",
+      "reading_id": "survival_competence_reading"
+    },
+    {
+      "claim_id": "mourning_practice_reading",
+      "kernel_id": "catastrophe_memory_preservation",
+      "reading_id": "mourning_practice_reading"
+    },
+    {
+      "claim_id": "hybrid_atrophy_reading",
+      "kernel_id": "catastrophe_memory_preservation",
+      "reading_id": "hybrid_atrophy_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "rabbinic_authority_structure",
+      "structural_delta": "Authority to define ritual meaning derives from claimed unbroken transmission",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold supporting all readings but not itself a reading of the kernel; omega material on authority drift and interpretive legitimacy under modernity"
+    },
+    {
+      "claim_id": "embodied_memory_mechanism",
+      "structural_delta": "Physical ritual enactment vs textual study as memory substrate",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mechanism captured within survival_competence_reading's constraint story; lower structural distinctiveness"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_authority_drift",
+      "description": "Does rabbinic authority to define ritual meaning persist when the claimed transmission chain is contested by historical-critical scholarship? If not, all three readings lose their grounding and collapse into individual preference.",
+      "source": "Deferred axis rabbinic_authority_structure + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_measurement_validity",
+      "description": "Can survival-competence be measured independently of survivor bias? Communities that did not survive cannot report their ritual practices. Correlation may be spurious.",
+      "source": "F03 (Hasty Generalization) on survival_competence_reading's primary observable"
+    },
+    {
+      "id": "omega_secularization_threshold",
+      "description": "At what threshold of state protection does ritual shift from survival-drill to mourning-practice? Is the shift reversible if existential threat returns?",
+      "source": "Hybrid_atrophy_reading temporal dynamics + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_shoah_discontinuity",
+      "description": "Does the Shoah represent a discontinuity that invalidates all three readings? Post-1945 ritual may be fundamentally different in function from pre-1945 practice.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)—Shoah as unexamined rupture in transmission chain"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: survival_competence_reading's primary observable (correlation between ritual observance and survival rates) vulnerable to survivor bias. Generated omega_measurement_validity to bound this uncertainty. Kernel structure successfully sorted the contest—three readings emit structurally distinct constraints (tangled_rope vs rope vs piton) with different epsilon bins and beneficiary/victim structures."
+  },
+  "_seed_id": "jewish_ritual_catastrophe_memory"
+}

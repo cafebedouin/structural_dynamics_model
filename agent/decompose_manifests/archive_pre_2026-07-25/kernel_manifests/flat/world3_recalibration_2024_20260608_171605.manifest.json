@@ -1,0 +1,214 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "System Dynamics / Ecological Economics / Computational Modeling",
+  "family_id": "world3_recalibration_2024",
+  "topic_summary": "Analysis of the 2024 Nebel et al. recalibration of the World3 model from the 1972 Limits to Growth study. The research uses iterative optimization to fit 50 years of empirical data, producing a scenario (Recalibration23) that projects overshoot and collapse in 2024-2030 driven by resource depletion. The study updates 35 parameters using modern computing power and comprehensive datasets, achieving 18% improvement in model-data fit while preserving the core collapse dynamics of the original BAU scenario.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "World3 model (system dynamics simulation of global material systems, 5 interconnected sectors)",
+      "Nebel et al. research team (Cologne Institute, 2024 recalibration authors)",
+      "Original LtG authors (Meadows et al., MIT 1972)",
+      "PyWorld3-03 (Python implementation updated to 2005 World3 version)",
+      "Empirical datasets (8 proxies: population, IIP, food, CO2, fossil fuels, education index, HDI, ecological footprint)",
+      "NRMSD optimization algorithm (iterative parameter fitting, 35 parameters, weighted sectors)",
+      "BAU scenario (original 1972 business-as-usual projection)",
+      "Recalibration23 scenario (optimized parameter set, 2024-2030 collapse window)"
+    ],
+    "key_tensions": [
+      "Proxy validity vs. model accuracy (CO2 for pollution, IIP for industrial output, education for services)",
+      "Resource depletion vs. pollution as collapse mechanism (model shows resource-driven collapse despite climate data)",
+      "Empirical fit vs. predictive validity (HWI paradox: better overall NRMSD but worse HWI fit than BAU)",
+      "Physical limits vs. socio-economic artifacts (model relationships valid only on rising edge, not post-collapse)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "proxy_measurement_validity",
+      "human_readable": "Proxy Measurement Validity (Empirical Data Representation Fidelity)",
+      "structural_delta": "Structural gap between what the model measures (pollution units, resource units, dollar-equivalent output) and what empirical proxies capture (CO2 concentration, fossil fuel consumption, industrial production index)",
+      "primary_observable": "Divergence between proxy behavior and target variable behavior; sector-specific NRMSD values; change-rate conversion artifacts",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "model_validation_researchers",
+      "victim": "predictive_accuracy",
+      "downstream_of": [],
+      "feeds_into": [
+        "collapse_mechanism_ambiguity",
+        "optimization_artifact_risk"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream to both mechanism ambiguity and optimization artifacts; tangled_rope with clear beneficiary structure"
+    },
+    {
+      "claim_id": "optimization_artifact_risk",
+      "human_readable": "Optimization Artifact Risk (Local Minima vs. Global System Dynamics)",
+      "structural_delta": "Risk that the 35-parameter optimization finds local minima that fit imperfect proxies rather than capturing genuine system dynamics",
+      "primary_observable": "Sensitivity analysis results showing different optimal parameter sets for different initial conditions; convergence behavior; parameter change magnitudes (e.g., 662% increase in industrial capital lifetime)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "model_interpretability",
+      "downstream_of": [
+        "proxy_measurement_validity"
+      ],
+      "feeds_into": [
+        "collapse_mechanism_ambiguity"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Snare with high epsilon; downstream of proxy validity; feeds into mechanism ambiguity; captures overfitting risk"
+    },
+    {
+      "claim_id": "collapse_mechanism_ambiguity",
+      "human_readable": "Collapse Mechanism Ambiguity (Resource Depletion vs. Climate-Driven Decline)",
+      "structural_delta": "Inability to distinguish whether projected collapse is driven by physical resource limits, climate change impacts on productivity, or socio-economic system dysfunction",
+      "primary_observable": "Pollution sector NRMSD (0.3371, poorest fit); resource sector NRMSD (0.7571); empirical climate impact data vs. model pollution trajectory; death rate and HDI decline timing",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "proxy_measurement_validity",
+        "optimization_artifact_risk"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Mountain representing irreducible uncertainty; downstream synthesis of proxy and optimization issues; no beneficiary structure"
+    },
+    {
+      "claim_id": "socioeconomic_relationship_breakdown",
+      "human_readable": "Socio-Economic Relationship Breakdown (Post-Collapse Model Invalidity)",
+      "structural_delta": "Model relationships are socio-economic constructs valid only during growth phase; post-collapse trajectories unreliable because relationships will be rearranged",
+      "primary_observable": "Authors' explicit statement that model unreliable beyond tipping points; GDP-dependent variable circularity; HWI calculation structure",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collapse_mechanism_ambiguity"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton with lower centrality; captured indirectly via collapse_mechanism_ambiguity mountain; omega material on model scope limits"
+    },
+    {
+      "claim_id": "technological_parameter_interpretation",
+      "human_readable": "Technological Parameter Interpretation (Industrial Capital Lifetime as Progress Indicator)",
+      "structural_delta": "662% increase in industrial capital lifetime parameter could represent genuine technological improvement or parameter fitting artifact",
+      "primary_observable": "alic1 parameter change (2.0 to 15.24 years); other technology-related parameter shifts; industrial output NRMSD improvement (0.8062 to 0.4740)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "optimization_artifact_risk"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: rope with minimal centrality; captured by optimization_artifact_risk snare; speculative interpretation"
+    },
+    {
+      "claim_id": "empirical_decline_signals",
+      "human_readable": "Empirical Decline Signals (2019-2021 Turning Points)",
+      "structural_delta": "Real-world data showing HWI decline (2019), education index decline (2021), death rate increase (2020) as potential early collapse indicators",
+      "primary_observable": "HDI time series inflection; education index time series inflection; death rate time series; IIP growth rate deceleration",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collapse_mechanism_ambiguity"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton documenting observed inflections; feeds into mechanism ambiguity but lacks independent constraint structure; omega material on signal interpretation"
+    }
+  ],
+  "generation_sequence": [
+    "proxy_measurement_validity",
+    "optimization_artifact_risk",
+    "collapse_mechanism_ambiguity"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "socioeconomic_relationship_breakdown",
+      "structural_delta": "Model relationships valid only during growth phase; post-collapse invalidity",
+      "hypothesis": "piton",
+      "deferral_reason": "Lower centrality; captured indirectly via collapse_mechanism_ambiguity mountain; omega material on model scope limits"
+    },
+    {
+      "claim_id": "technological_parameter_interpretation",
+      "structural_delta": "Industrial capital lifetime increase as technological progress vs. fitting artifact",
+      "hypothesis": "rope",
+      "deferral_reason": "Minimal centrality; captured by optimization_artifact_risk snare; speculative interpretation without independent observable"
+    },
+    {
+      "claim_id": "empirical_decline_signals",
+      "structural_delta": "2019-2021 inflection points in HDI, education, death rate as collapse indicators",
+      "hypothesis": "piton",
+      "deferral_reason": "Documents observed inflections but lacks independent constraint structure; feeds into mechanism ambiguity; omega material on signal interpretation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_proxy_collapse",
+      "description": "If CO2 concentration is a poor proxy for comprehensive pollution (air quality, toxics, plastics), the 50-year pollution peak shift may be artifact rather than genuine system dynamics. The model may be fitting the proxy's delayed climate signal rather than capturing pollution's immediate industrial impacts.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + proxy_measurement_validity axis"
+    },
+    {
+      "id": "omega_local_minima_validity",
+      "description": "Sensitivity analysis shows different initial conditions produce different optimal parameter sets. The 35-parameter optimization with 8 empirical variables creates high degrees of freedom. Is Recalibration23 a global minimum capturing system dynamics, or a local minimum overfitting imperfect proxies?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + optimization_artifact_risk axis"
+    },
+    {
+      "id": "omega_mechanism_underdetermination",
+      "description": "The model cannot distinguish resource depletion from climate-driven productivity decline. Both produce similar collapse trajectories. Pollution sector has poorest empirical fit (NRMSD 0.3371), yet climate impacts are already measurable. Is the resource-depletion mechanism genuine or an artifact of proxy selection?",
+      "source": "collapse_mechanism_ambiguity axis + deferred empirical_decline_signals"
+    },
+    {
+      "id": "omega_post_collapse_invalidity",
+      "description": "Authors explicitly state model relationships are socio-economic constructs that will be rearranged post-collapse. The model's predictive power extends only to the tipping point. What happens after 2030 is structurally unknowable within this framework—yet that's where policy implications matter most.",
+      "source": "Deferred axis socioeconomic_relationship_breakdown"
+    },
+    {
+      "id": "omega_hwi_paradox",
+      "description": "Recalibration23 achieves best overall NRMSD but worse HWI fit than original BAU. HWI calculation depends on GDP-based indices, creating circularity: model predicts collapse because GDP is declining, but GDP decline may reflect measurement artifacts or structural economic shifts rather than physical limits. Is HWI a valid collapse indicator or a tautological construct?",
+      "source": "Dark Matter Probe 1 (Operational Medium) + proxy_measurement_validity axis"
+    },
+    {
+      "id": "omega_technological_ambiguity",
+      "description": "Industrial capital lifetime increased 662% (2 to 15.24 years). Does this represent genuine technological progress (more durable infrastructure), parameter fitting artifact, or measurement shift in what counts as 'industrial capital'? The model still predicts collapse despite this improvement—why?",
+      "source": "Deferred axis technological_parameter_interpretation"
+    },
+    {
+      "id": "omega_regional_aggregation",
+      "description": "World3 aggregates globally, masking regional heterogeneity. The newer Earth4All model introduces regional resolution and social inequality measures. Does global aggregation hide stabilization in some regions offset by collapse in others? The 'collapse' may be a global average of divergent regional trajectories.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: collapse_mechanism_ambiguity classified as mountain (irreducible uncertainty) but the classification depends on accepting that the model's resource-depletion mechanism is physically grounded rather than artifact of proxy selection and optimization. Generated omega_mechanism_underdetermination to bound this uncertainty. The mountain classification is provisional—if better pollution proxies or regional disaggregation resolve the ambiguity, it may reclassify as tangled_rope."
+  }
+}

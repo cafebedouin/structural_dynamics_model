@@ -1,0 +1,289 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Institutional Design",
+  "family_id": "basic_law_supremacy_2026",
+  "topic_summary": "Analysis of Basic Law interpretive authority as a contested kernel. Two readings compete: judicial supremacy (courts as ultimate arbiter of constitutional meaning) versus parliamentary sovereignty (elected legislature retains final interpretive authority). The contest centers on who legitimately adjudicates constitutional boundaries and who bears the cost of institutional deadlock when interpretations conflict.",
+  "extraction_summary": {
+    "entity_count": 4,
+    "claim_count": 3,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Basic Law (constitutional kernel; codified foundational text)",
+      "Judiciary (interpretive authority claimant; judicial review mechanism)",
+      "Legislature (elected body; parliamentary sovereignty claimant)",
+      "Constitutional Court / Supreme Court (terminal appellate authority in judicial supremacy reading)"
+    ],
+    "key_tensions": [
+      "Judicial finality vs legislative override (who has last word on constitutional meaning)",
+      "Counter-majoritarian difficulty vs democratic accountability (unelected judges vs electoral mandate)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Basic Law as codified constitutional text whose interpretive authority grounds legitimacy of governmental action",
+    "authority_description": "Contested between judicial bodies claiming interpretive monopoly through legal expertise and legislatures claiming democratic mandate",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "basic_law_interpretive_authority",
+    "readings": [
+      {
+        "reading_id": "judicial_supremacy_reading",
+        "commitment": "Courts hold final interpretive authority over constitutional meaning through specialized legal expertise and independence from political pressure",
+        "authority_grounding": "Legal formalism / counter-majoritarian review / separation of powers",
+        "sibling_readings": [
+          "parliamentary_sovereignty_reading",
+          "popular_constitutionalism_reading"
+        ],
+        "expected_structural_delta": "Judiciary enters beneficiary set for institutional authority; legislature and electoral majorities enter victim set when judicial review blocks legislation; gridlock costs borne by legislative process"
+      },
+      {
+        "reading_id": "parliamentary_sovereignty_reading",
+        "commitment": "Elected legislature retains final interpretive authority through democratic mandate and representative accountability",
+        "authority_grounding": "Democratic legitimacy / political constitutionalism / Westminster tradition",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "popular_constitutionalism_reading"
+        ],
+        "expected_structural_delta": "Legislature enters beneficiary set for institutional authority; judicial independence and rights-minorities enter victim set when legislative override occurs; gridlock costs borne by judicial process"
+      },
+      {
+        "reading_id": "popular_constitutionalism_reading",
+        "commitment": "Constitutional meaning emerges from ongoing democratic contestation rather than terminal institutional adjudication",
+        "authority_grounding": "Popular sovereignty / constitutional culture / departmentalism",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "parliamentary_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Neither judiciary nor legislature holds terminal authority; constitutional meaning remains perpetually contestable; gridlock costs distributed across multiple institutional sites"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "judicial_supremacy_reading",
+        "reading_b": "parliamentary_sovereignty_reading",
+        "basis": "Cannot simultaneously hold that unelected courts possess final constitutional authority (judicial supremacy axiom) and that democratic electoral mandate grants legislature ultimate interpretive power (parliamentary sovereignty axiom). Each axiom negates the other's foundational claim about where constitutional finality resides."
+      },
+      {
+        "reading_a": "judicial_supremacy_reading",
+        "reading_b": "popular_constitutionalism_reading",
+        "basis": "Judicial supremacy requires terminal interpretive authority vested in courts; popular constitutionalism denies any institution holds terminal authority. No framework can hold both that courts conclusively settle constitutional meaning and that constitutional meaning remains perpetually open to democratic revision."
+      },
+      {
+        "reading_a": "parliamentary_sovereignty_reading",
+        "reading_b": "popular_constitutionalism_reading",
+        "basis": "Parliamentary sovereignty locates final authority in the legislature; popular constitutionalism rejects locating final authority anywhere. The axioms are contradictory regarding whether any institution may claim terminal interpretive power."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "human_readable": "Judicial Supremacy Reading (Courts as Constitutional Oracle)",
+      "structural_delta": "Courts possess final interpretive authority over constitutional meaning through legal expertise and institutional independence",
+      "primary_observable": "Presence and enforcement of judicial review doctrine; frequency of legislative override being unavailable or requiring supermajority",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "judiciary_institutional_authority",
+      "victim": "legislative_majorities_blocked_by_review",
+      "downstream_of": [
+        "counter_majoritarian_legitimation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core contested reading; high epsilon; distinct beneficiary/victim structure from parliamentary sovereignty"
+    },
+    {
+      "claim_id": "parliamentary_sovereignty_reading",
+      "human_readable": "Parliamentary Sovereignty Reading (Legislature as Democratic Voice)",
+      "structural_delta": "Elected legislature retains final interpretive authority through democratic mandate and accountability mechanisms",
+      "primary_observable": "Availability of legislative override mechanisms (e.g., notwithstanding clauses, constitutional amendments by simple majority); frequency of exercise",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "legislative_majorities_electoral_mandate",
+      "victim": "rights_minorities_judicial_protection",
+      "downstream_of": [
+        "democratic_legitimation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Core contested reading; axiom-contradictory to judicial supremacy; different victim set"
+    },
+    {
+      "claim_id": "popular_constitutionalism_reading",
+      "human_readable": "Popular Constitutionalism Reading (Perpetual Democratic Contestation)",
+      "structural_delta": "Constitutional meaning emerges from ongoing democratic debate rather than terminal institutional settlement",
+      "primary_observable": "Frequency of extra-judicial constitutional discourse; social movements successfully contesting judicial/legislative interpretations",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "popular_sovereignty_legitimation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Third reading providing structural alternative to terminal authority claims; moderate epsilon; completes triadic contest"
+    },
+    {
+      "claim_id": "counter_majoritarian_legitimation",
+      "human_readable": "Counter-Majoritarian Legitimation (Expertise vs Electoral Mandate)",
+      "structural_delta": "Justification structure for unelected judicial authority to override democratic majorities",
+      "primary_observable": "Constitutional doctrine emphasizing judicial independence, legal formalism, rights protection from majority tyranny",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "judicial_supremacy_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream scaffold to judicial supremacy reading; captured within that reading's constraint story"
+    },
+    {
+      "claim_id": "democratic_legitimation",
+      "human_readable": "Democratic Legitimation (Electoral Accountability as Authority Source)",
+      "structural_delta": "Justification structure grounding legislative authority in electoral mandate and periodic accountability",
+      "primary_observable": "Constitutional doctrine emphasizing responsible government, parliamentary supremacy, electoral renewal",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "parliamentary_sovereignty_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream scaffold to parliamentary sovereignty reading; captured within that reading's constraint story"
+    },
+    {
+      "claim_id": "popular_sovereignty_legitimation",
+      "human_readable": "Popular Sovereignty Legitimation (Constituent Power as Ultimate Authority)",
+      "structural_delta": "Justification structure locating constitutional authority in the people themselves rather than constituted institutions",
+      "primary_observable": "Constitutional theory emphasizing constituent assemblies, referenda, social movements as constitutional moments",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "popular_constitutionalism_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream scaffold to popular constitutionalism reading; captured within that reading's constraint story"
+    },
+    {
+      "claim_id": "institutional_deadlock_allocation",
+      "human_readable": "Institutional Deadlock Allocation (Who Bears Gridlock Costs)",
+      "structural_delta": "Distribution of costs when judicial and legislative interpretations conflict and neither defers",
+      "primary_observable": "Frequency and resolution patterns of inter-branch constitutional crises; public opinion shifts during deadlock",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "public_awaiting_resolution",
+      "downstream_of": [
+        "judicial_supremacy_reading",
+        "parliamentary_sovereignty_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream synthesis of judicial/parliamentary contest; addressable in final essay omega rather than separate axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "kernel_id": "basic_law_interpretive_authority",
+      "reading_id": "judicial_supremacy_reading"
+    },
+    {
+      "claim_id": "parliamentary_sovereignty_reading",
+      "kernel_id": "basic_law_interpretive_authority",
+      "reading_id": "parliamentary_sovereignty_reading"
+    },
+    {
+      "claim_id": "popular_constitutionalism_reading",
+      "kernel_id": "basic_law_interpretive_authority",
+      "reading_id": "popular_constitutionalism_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "counter_majoritarian_legitimation",
+      "structural_delta": "Justification for unelected judicial authority overriding majorities",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Upstream legitimation structure captured within judicial_supremacy_reading constraint story"
+    },
+    {
+      "claim_id": "democratic_legitimation",
+      "structural_delta": "Justification grounding legislative authority in electoral mandate",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Upstream legitimation structure captured within parliamentary_sovereignty_reading constraint story"
+    },
+    {
+      "claim_id": "popular_sovereignty_legitimation",
+      "structural_delta": "Justification locating authority in the people rather than institutions",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Upstream legitimation structure captured within popular_constitutionalism_reading constraint story"
+    },
+    {
+      "claim_id": "institutional_deadlock_allocation",
+      "structural_delta": "Who bears costs when judicial/legislative interpretations conflict",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream synthesis of reading contest; addressable in final essay omega analysis rather than separate generation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_hybrid_models",
+      "description": "Do hybrid models (e.g., weak-form judicial review, dialogue theory) constitute a fourth reading, or are they institutional compromises that still instantiate one of the three foundational readings? The Canadian notwithstanding clause appears as parliamentary sovereignty with judicial consultation, not a distinct axiom.",
+      "source": "Kernel/reading decomposition; boundary case for reading independence"
+    },
+    {
+      "id": "omega_enforcement_mechanism",
+      "description": "What enforcement mechanism resolves conflicts when readings produce contradictory institutional commands? If the judiciary cannot compel legislative compliance (no enforcement power), does judicial supremacy collapse into aspirational doctrine? If the legislature cannot override entrenched judicial precedent, does parliamentary sovereignty exist only nominally?",
+      "source": "Dark Matter Probe 2 (Absence Inventory); missing enforcement substrate"
+    },
+    {
+      "id": "omega_beneficiary_stability",
+      "description": "Do beneficiary/victim sets remain stable across contexts, or does judicial supremacy become parliamentary sovereignty's victim set when courts block progressive legislation, and vice versa when courts protect minority rights? The victim may be structural position (whoever lacks final interpretive power) rather than political faction.",
+      "source": "Beneficiary/victim classification instability across political contexts"
+    },
+    {
+      "id": "omega_popular_constitutionalism_measurement",
+      "description": "Is popular constitutionalism a genuine institutional reading with measurable epsilon, or a theoretical critique of the judicial/parliamentary binary? Observable frequency of extra-judicial constitutional discourse may measure dissatisfaction with terminal authority claims rather than an alternative authority structure.",
+      "source": "Primary observable ambiguity; F03 (Hasty Generalization) risk for popular_constitutionalism_reading"
+    },
+    {
+      "id": "omega_basic_law_specificity",
+      "description": "Analysis assumes a generic 'Basic Law' kernel. Real constitutional systems vary in textual specificity, amendment difficulty, and historical entrenchment. A highly specific, rigid constitution may foreclose popular constitutionalism readings; a flexible constitution may make judicial/parliamentary contest less acute. Structural delta depends on kernel properties not specified in the prompt.",
+      "source": "F01 (Premise Drift); prompt abstraction vs concrete constitutional systems"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F03 detected: popular_constitutionalism_reading may misclassify theoretical critique as institutional reading with measurable epsilon. Generated omega_popular_constitutionalism_measurement to bound uncertainty. F01 detected: prompt specifies abstract 'Basic Law' without concrete constitutional context; actual structural delta varies by specific constitutional design. Generated omega_basic_law_specificity to flag abstraction risk."
+  },
+  "_seed_id": "basic_law_supremacy"
+}

@@ -1,0 +1,222 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Humanitarian Law / Law of Armed Conflict",
+  "family_id": "geneva_common_article_3_2026",
+  "topic_summary": "Analysis of Common Article 3 of the 1949 Geneva Conventions, which establishes minimum humanitarian standards for non-international armed conflicts. The kernel is contested between state-centric readings limiting application to traditional wars and expansive readings applying humanitarian constraints broadly to any organized violence, fundamentally disagreeing on the scope of protected persons and constrained actors.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Common Article 3 (treaty text establishing minimum humanitarian rules)",
+      "State parties (signatories with sovereignty interests)",
+      "Non-state armed groups (insurgents, militias, organized opposition)",
+      "International tribunals (ICTY, ICTR, ICC interpreting CA3 scope)",
+      "Detainees/combatants (protection beneficiaries or security threats)",
+      "NGO monitoring bodies (ICRC, HRW interpreting compliance)"
+    ],
+    "key_tensions": [
+      "State sovereignty vs humanitarian constraint (governments vs international law)",
+      "Security operations vs due process (counterinsurgency vs detainee rights)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "state_centric_reading",
+      "human_readable": "State-Centric Reading (Sovereignty-Protective Interpretation)",
+      "structural_delta": "CA3 applies only to conflicts meeting intensity and organization thresholds, excluding routine law enforcement and low-level insurgency",
+      "primary_observable": "Judicial/treaty body determinations of 'armed conflict not of an international character'; state invocation of domestic law vs IHL",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "sovereign_governments",
+      "victim": "irregular_combatants_below_threshold",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates narrow constraint scope with high suppression"
+    },
+    {
+      "claim_id": "expansive_human_rights_reading",
+      "human_readable": "Expansive Human Rights Reading (Maximum Protection Interpretation)",
+      "structural_delta": "CA3 applies to any organized armed violence, extending minimum humanitarian standards to detention, interrogation, and military operations regardless of conflict classification",
+      "primary_observable": "NGO reports treating CA3 as floor for all security operations; tribunal rulings applying CA3 below traditional armed conflict threshold",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "international_tribunals_and_ngos",
+      "victim": "state_security_operations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates broad constraint scope, structurally distinct victim/beneficiary set"
+    },
+    {
+      "claim_id": "icrc_customary_reading",
+      "human_readable": "ICRC Customary Law Reading (Practice-Based Middle Ground)",
+      "structural_delta": "CA3 scope determined by state practice and opinio juris rather than textual interpretation, tracking evolving customary international law",
+      "primary_observable": "ICRC Customary IHL Study citations; frequency of state acceptance of CA3 obligations in sub-threshold conflicts",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading instantiating coordination mechanism between first two readings; structurally distinct as procedural rather than substantive constraint"
+    },
+    {
+      "claim_id": "non_state_actor_agency",
+      "human_readable": "Non-State Actor Agency (Rebel Groups as Rights-Holders)",
+      "structural_delta": "Whether armed groups can invoke CA3 protections without state recognition, or whether protections flow only from state obligations",
+      "primary_observable": "Judicial decisions on armed group standing; rebel manifestos citing CA3",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "expansive_human_rights_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream of expansive reading, lower centrality, scaffolding role rather than core interpretive constraint"
+    },
+    {
+      "claim_id": "detention_authority_gap",
+      "human_readable": "Detention Authority Gap (CA3 Rights Without Corresponding Powers)",
+      "structural_delta": "CA3 prohibits inhumane treatment but does not explicitly authorize detention, creating legal vacuum for non-international conflicts",
+      "primary_observable": "Litigation over detention authority in NIAC contexts; state invocation of inherent authority vs treaty silence",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "detainees_and_detaining_states",
+      "downstream_of": [
+        "state_centric_reading",
+        "expansive_human_rights_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high epsilon but downstream entanglement of both readings rather than independent axis; captured via reading-level analysis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "state_centric_reading",
+      "kernel_id": "common_article_3_scope",
+      "reading_id": "state_centric_reading"
+    },
+    {
+      "claim_id": "expansive_human_rights_reading",
+      "kernel_id": "common_article_3_scope",
+      "reading_id": "expansive_human_rights_reading"
+    },
+    {
+      "claim_id": "icrc_customary_reading",
+      "kernel_id": "common_article_3_scope",
+      "reading_id": "icrc_customary_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "non_state_actor_agency",
+      "structural_delta": "Whether armed groups can invoke CA3 protections without state recognition",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream of expansive reading; scaffolding role rather than core interpretive constraint; lower centrality"
+    },
+    {
+      "claim_id": "detention_authority_gap",
+      "structural_delta": "CA3 prohibits inhumane treatment but does not authorize detention, creating legal vacuum",
+      "hypothesis": "snare",
+      "deferral_reason": "High epsilon but downstream entanglement of both readings rather than independent axis; captured via reading-level constraint analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_treaty_amendment_impossibility",
+      "description": "Is CA3 scope fixed by 1949 treaty text (mountain) or evolving through interpretation (rope)? If fixed but contested, the kernel is stable but interpretive authority itself becomes the constraint.",
+      "source": "Commitment system drift analysis"
+    },
+    {
+      "id": "omega_prosecution_asymmetry",
+      "description": "State-centric reading shields government actions from international prosecution while exposing rebel groups. Does this asymmetry reveal tangled_rope beneficiary structure in supposedly neutral treaty language?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_temporal_threshold",
+      "description": "At what duration/intensity does violence trigger CA3? State-centric requires protracted conflict; expansive applies immediately. This threshold determination is itself a concealed high-epsilon axis.",
+      "source": "Absence Inventory (threshold mechanics not explicit in either reading)"
+    },
+    {
+      "id": "omega_occupation_law_interaction",
+      "description": "How does CA3 interact with occupation law (Geneva Convention IV)? Deferred axis detention_authority_gap suggests this interface may warrant independent generation.",
+      "source": "Deferred axis detention_authority_gap"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings instantiate genuinely different constraints (narrow vs broad scope vs procedural coordination). Axiom contradictions declared for state_centric vs expansive pair."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Common Article 3 of 1949 Geneva Conventions: treaty text establishing minimum humanitarian standards for 'armed conflict not of an international character'",
+    "authority_description": "International tribunals, ICRC, state parties, and domestic courts claiming interpretive authority via treaty law, customary IHL, or sovereignty",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "common_article_3_scope",
+    "readings": [
+      {
+        "reading_id": "state_centric_reading",
+        "commitment": "CA3 applies only when conflict meets intensity and organization thresholds, excluding low-level violence and law enforcement",
+        "authority_grounding": "State sovereignty; treaty interpretation favoring narrow construction of obligations",
+        "sibling_readings": [
+          "expansive_human_rights_reading",
+          "icrc_customary_reading"
+        ],
+        "expected_structural_delta": "High suppression of constraint application; irregular combatants below threshold excluded from victim set; governments retain maximum operational discretion"
+      },
+      {
+        "reading_id": "expansive_human_rights_reading",
+        "commitment": "CA3 applies to any organized armed violence as floor of minimum humanitarian standards regardless of classification",
+        "authority_grounding": "International human rights law; evolutionary treaty interpretation; tribunal jurisprudence",
+        "sibling_readings": [
+          "state_centric_reading",
+          "icrc_customary_reading"
+        ],
+        "expected_structural_delta": "Broad constraint application; all detainees and affected populations enter victim set; state security operations face external monitoring and potential prosecution"
+      },
+      {
+        "reading_id": "icrc_customary_reading",
+        "commitment": "CA3 scope determined by evolving state practice and opinio juris tracked through customary international law",
+        "authority_grounding": "ICRC as guardian of IHL; state practice evidence; multilateral acceptance",
+        "sibling_readings": [
+          "state_centric_reading",
+          "expansive_human_rights_reading"
+        ],
+        "expected_structural_delta": "Procedural constraint on interpretation rather than substantive scope; coordination mechanism allowing gradual expansion without formal treaty amendment"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "state_centric_reading",
+        "reading_b": "expansive_human_rights_reading",
+        "basis": "State-centric grounds authority in sovereign discretion to classify conflicts and limits external constraint; expansive grounds authority in universal human dignity requiring external constraint regardless of state classification. No single framework can hold both sovereignty-as-interpretive-authority and universal-rights-as-interpretive-authority simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "geneva_conventions_combatant"
+}

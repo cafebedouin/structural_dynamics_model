@@ -1,0 +1,271 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Policy / Criminal Justice / Political Economy",
+  "family_id": "drug_policy_substance_control_2024",
+  "topic_summary": "Analysis of drug policy frameworks examining prohibition, harm-reduction, and legalization as competing readings of the substance-control kernel. Each reading instantiates fundamentally different constraints with distinct victim sets: users as criminals (prohibition), users as public health cases (harm-reduction), or third parties bearing externality costs (legalization).",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Substance users (individuals consuming controlled substances)",
+      "State enforcement apparatus (police, courts, prisons)",
+      "Public health system (treatment providers, harm reduction services)",
+      "Criminal organizations (black market suppliers)",
+      "Third-party victims (impaired driving victims, secondhand harm)",
+      "Pharmaceutical industry (legal production and distribution)",
+      "Communities affected by enforcement (disproportionately marginalized populations)",
+      "Tax revenue recipients (state budgets under legalization models)"
+    ],
+    "key_tensions": [
+      "Individual autonomy vs paternalistic state protection",
+      "Public health frame vs criminal justice frame for substance use",
+      "Black market violence vs legal market externalities"
+    ],
+    "key_mechanisms": [
+      "Criminal prohibition enforcement (arrests, incarceration, asset forfeiture)",
+      "Harm reduction service provision (needle exchange, supervised consumption, naloxone distribution)",
+      "Regulatory taxation and licensing (legal market controls)",
+      "Price signaling via illegality premium vs taxation"
+    ],
+    "key_absences": [
+      "Supply-side dynamics beyond simple 'criminal organization' framing—structural economic incentives, global production chains",
+      "Enforcement selectivity mechanisms—who actually faces criminalization within the 'users as criminals' frame"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "prohibition_reading",
+      "human_readable": "Prohibition Reading: Users as Criminals, State as Moral Enforcer",
+      "structural_delta": "Substance use defined as moral transgression warranting criminal sanction; state authority grounded in protecting moral order and deterring harm through punishment",
+      "primary_observable": "Incarceration rates for possession offenses; enforcement spending relative to treatment spending; sentencing severity for drug crimes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "enforcement_apparatus",
+      "victim": "substance_users",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating criminalization constraint; highest extractiveness; distinct victim set from other readings",
+      "reading_metadata": {
+        "kernel_id": "substance_control_kernel",
+        "commitment": "Substance use is moral transgression requiring state punishment to protect social order",
+        "authority_grounding": "Moral majoritarian mandate; state as guardian of public virtue",
+        "sibling_readings": [
+          "harm_reduction_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users enter criminal victim set; enforcement becomes primary state response; black market emerges as secondary constraint"
+      }
+    },
+    {
+      "claim_id": "harm_reduction_reading",
+      "human_readable": "Harm Reduction Reading: Users as Public Health Cases, State as Service Provider",
+      "structural_delta": "Substance use defined as health condition requiring medical intervention; state authority grounded in minimizing morbidity and mortality through service provision without requiring abstinence",
+      "primary_observable": "Overdose death rates; infectious disease transmission rates among users; service accessibility metrics (needle exchange coverage, supervised consumption site availability)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Intermediate reading reframing constraint from criminal to medical; coordination mechanism without full legalization; distinct observable from prohibition and legalization",
+      "reading_metadata": {
+        "kernel_id": "substance_control_kernel",
+        "commitment": "Substance use is health condition requiring pragmatic intervention to reduce harm, independent of use cessation",
+        "authority_grounding": "Public health expertise; epidemiological evidence base",
+        "sibling_readings": [
+          "prohibition_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users exit criminal victim set but remain subject to paternalistic health intervention; enforcement recedes but does not disappear; supply chain remains criminalized"
+      }
+    },
+    {
+      "claim_id": "legalization_reading",
+      "human_readable": "Legalization Reading: Users as Autonomous Consumers, Third Parties as Victims",
+      "structural_delta": "Substance use defined as individual choice with externality costs; state authority grounded in regulating market to internalize harms to third parties while respecting user autonomy",
+      "primary_observable": "Legal market tax revenue; DUI and impairment-related harm rates; regulatory compliance costs; price elasticity effects on consumption",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "legal_industry",
+      "victim": "third_party_harm_recipients",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Opposing reading shifting victim set from users to third parties; introduces market mechanisms and tax extraction; highest structural distinctiveness from prohibition",
+      "reading_metadata": {
+        "kernel_id": "substance_control_kernel",
+        "commitment": "Substance use is individual liberty issue; state intervenes only to prevent third-party harm and capture externality costs via taxation",
+        "authority_grounding": "Liberal autonomy principles; market efficiency; fiscal pragmatism",
+        "sibling_readings": [
+          "prohibition_reading",
+          "harm_reduction_reading"
+        ],
+        "expected_structural_delta": "Users exit victim set entirely; third parties enter victim set via externalities; black market collapses; state becomes revenue beneficiary via taxation; legal industry emerges as new beneficiary"
+      }
+    },
+    {
+      "claim_id": "enforcement_selectivity",
+      "human_readable": "Enforcement Selectivity (Prohibition's Actual Victim Targeting)",
+      "structural_delta": "Within prohibition framework, enforcement concentrates on marginalized populations despite use patterns across demographics",
+      "primary_observable": "Arrest rates by race, income, geography relative to survey-reported use rates; stop-and-frisk patterns; sentencing disparities",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "dominant_social_groups",
+      "victim": "marginalized_populations",
+      "downstream_of": [
+        "prohibition_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural consequence of prohibition reading rather than independent reading of kernel; important omega dimension"
+    },
+    {
+      "claim_id": "supply_chain_constraint_persistence",
+      "human_readable": "Supply Chain Constraint Persistence Across Readings",
+      "structural_delta": "Production and distribution constraints persist across all three readings but with different enforcement targets and violence levels",
+      "primary_observable": "Cartel violence rates; corruption indices; legal pharmaceutical capture; agricultural source country impacts",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "prohibition_reading",
+        "harm_reduction_reading",
+        "legalization_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain affecting all readings but not itself a reading of the substance-control kernel; supply-side rather than demand-side frame"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "prohibition_reading",
+      "kernel_id": "substance_control_kernel",
+      "reading_id": "prohibition_reading"
+    },
+    {
+      "claim_id": "harm_reduction_reading",
+      "kernel_id": "substance_control_kernel",
+      "reading_id": "harm_reduction_reading"
+    },
+    {
+      "claim_id": "legalization_reading",
+      "kernel_id": "substance_control_kernel",
+      "reading_id": "legalization_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_selectivity",
+      "structural_delta": "Enforcement concentrates on marginalized populations despite use pattern uniformity",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural consequence of prohibition reading rather than independent kernel reading; captured implicitly in prohibition's victim specification but warrants omega treatment for enforcement targeting mechanism"
+    },
+    {
+      "claim_id": "supply_chain_constraint_persistence",
+      "structural_delta": "Production and distribution constraints persist with different violence/corruption levels across readings",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream constraint affecting all readings but not itself a reading of substance-control kernel; supply-side dimension orthogonal to demand-side user-status question"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_selectivity",
+      "description": "Prohibition reading's victim set is theoretically 'all users' but enforcement concentrates on marginalized populations. Is this a separate Snare or intrinsic to prohibition's ε? Enforcement selectivity mechanism may warrant independent axis treatment.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis enforcement_selectivity"
+    },
+    {
+      "id": "omega_hybrid_regime_stability",
+      "description": "Many jurisdictions operate hybrid regimes (decriminalized possession + criminalized supply). Does this represent stable intermediate reading or incoherent overlay of prohibition + harm-reduction? Structural stability unclear.",
+      "source": "§2.1 Multi-Lens Scan (governance stability analysis)"
+    },
+    {
+      "id": "omega_reading_transition_path",
+      "description": "Can societies transition directly prohibition→legalization or must they pass through harm-reduction? Path dependency may constrain reading adoption sequence. Historical evidence mixed (Portugal vs Uruguay vs Canada).",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_supply_chain_reclassification",
+      "description": "Is supply_chain_constraint_persistence a true Mountain (agricultural/chemical production constraints) or Piton of policy choice? Legalization suggests Piton—production feasibility demonstrated—but international treaty architecture may create Mountain-like rigidity.",
+      "source": "F03 (Hasty Generalization) + deferred axis supply_chain_constraint_persistence"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: supply_chain_constraint_persistence classified as mountain but legalization evidence suggests production feasibility (Piton of prohibition rather than Mountain of chemistry/agriculture). Generated omega_supply_chain_reclassification to bound this uncertainty. No F34 despite complex policy domain—readings are well-documented in comparative policy literature."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The substance-control kernel: what grounds state authority to regulate individual substance use and how should that authority be exercised",
+    "authority_description": "Contested across three incompatible grounds: moral majority mandate (prohibition), public health expertise (harm-reduction), liberal autonomy principles (legalization)",
+    "drift_status": "functioning",
+    "candidate_pattern": "Constitutional Succession (competing legitimate interpretive frameworks without shared meta-rule for adjudication)",
+    "is_contested_kernel": true,
+    "kernel_id": "substance_control_kernel",
+    "readings": [
+      {
+        "reading_id": "prohibition_reading",
+        "commitment": "Substance use is moral transgression requiring state punishment to protect social order",
+        "authority_grounding": "Moral majoritarian mandate; state as guardian of public virtue",
+        "sibling_readings": [
+          "harm_reduction_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users enter criminal victim set (ε_high); enforcement apparatus becomes primary beneficiary; black market violence emerges as secondary externality; state exercises coercive rather than service-provision authority"
+      },
+      {
+        "reading_id": "harm_reduction_reading",
+        "commitment": "Substance use is health condition requiring pragmatic intervention to reduce harm, independent of use cessation",
+        "authority_grounding": "Public health expertise; epidemiological evidence base",
+        "sibling_readings": [
+          "prohibition_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users exit criminal victim set but remain subject to paternalistic health intervention (ε_mod); enforcement recedes but supply chain remains criminalized; overdose and disease transmission become primary observables; state shifts to service provider role"
+      },
+      {
+        "reading_id": "legalization_reading",
+        "commitment": "Substance use is individual liberty issue; state intervenes only to prevent third-party harm and capture externality costs",
+        "authority_grounding": "Liberal autonomy principles; market efficiency; fiscal pragmatism",
+        "sibling_readings": [
+          "prohibition_reading",
+          "harm_reduction_reading"
+        ],
+        "expected_structural_delta": "Users exit victim set entirely; third parties enter victim set via externalities (DUI, secondhand exposure) (ε_mod); legal industry emerges as new beneficiary; state becomes revenue collector via taxation; black market collapses or persists in gray areas"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "prohibition_reading",
+        "reading_b": "legalization_reading",
+        "basis": "Prohibition axiom (state authority derives from duty to enforce moral order against individual vice) directly contradicts legalization axiom (state authority limited to third-party harm prevention, individual autonomy supreme). No coherent framework holds both: either the state has moral enforcement authority or it does not."
+      },
+      {
+        "reading_a": "prohibition_reading",
+        "reading_b": "harm_reduction_reading",
+        "basis": "Prohibition axiom (use is moral transgression warranting punishment) contradicts harm-reduction axiom (use is health condition warranting medical support without moral judgment). A framework cannot simultaneously classify the same behavior as crime requiring punishment and illness requiring care."
+      }
+    ]
+  },
+  "_seed_id": "drug_policy_kernel"
+}

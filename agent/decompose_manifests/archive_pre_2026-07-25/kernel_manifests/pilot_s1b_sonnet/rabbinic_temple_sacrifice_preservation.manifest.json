@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Law / Halakhic Tradition / Commitment System Theory",
+  "family_id": "rabbinic_kodashim_preservation",
+  "topic_summary": "Analysis of the rabbinic preservation of Temple sacrifice law (Kodashim) through continuous study for ~1,900 years without performance. The kernel contest centers on whether study-without-performance constitutes genuine occupation of the commitment (study-as-exercise reading) or merely archival preservation of a defunct practice (performance-only reading). This is a D1/D4 boundary case testing whether exercising a commitment requires material instantiation or whether intellectual engagement suffices.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Kodashim (Talmudic order on Temple sacrifice law)",
+      "Second Temple (destroyed 70 CE, ending sacrifice performance)",
+      "Rabbinic study tradition (continuous intellectual engagement 70 CE–present)",
+      "Messianic restoration expectation (theological framework for future performance)",
+      "Material sacrifice apparatus (animals, altar, priesthood — absent since 70 CE)"
+    ],
+    "key_tensions": [
+      "Study continuity vs performance cessation (1,900 years of intellectual engagement without material instantiation)",
+      "Commitment occupation vs symbolic archiving (whether study alone sustains the commitment or merely preserves its memory)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Temple sacrifice law as divinely commanded practice requiring specific material conditions (Temple, priesthood, ritual purity) for performance",
+    "authority_description": "Rabbinic interpretive tradition grounded in Sinaitic revelation and chain of transmission (mesorah); legitimacy derives from fidelity to received text and precedent",
+    "drift_status": "partial",
+    "candidate_pattern": "D1/D4 boundary — study-as-exercise reading treats it as D1 (functioning drift via interpretive elaboration); performance-only reading treats it as D4 (absent drift, commitment defunct)",
+    "is_contested_kernel": true,
+    "kernel_id": "temple_sacrifice_commitment",
+    "readings": [
+      {
+        "reading_id": "study_as_exercise",
+        "commitment": "Study of sacrifice law is itself performance of the divine command; intellectual engagement occupies the commitment in absence of material conditions",
+        "authority_grounding": "Talmudic principle 'study equals performance' (Menachot 110a); messianic expectation frames current study as preparation for future restoration",
+        "sibling_readings": [
+          "performance_only",
+          "hybrid_preparatory"
+        ],
+        "expected_structural_delta": "Zero extractiveness — study is intrinsically valuable exercise of commitment; no victim set; beneficiary is the studying community maintaining covenant fidelity"
+      },
+      {
+        "reading_id": "performance_only",
+        "commitment": "Sacrifice law requires material instantiation; study without performance is archival preservation of a defunct practice, not occupation of the commitment",
+        "authority_grounding": "Literalist reading of biblical commandments as requiring physical performance; study is memorial activity pending restoration conditions",
+        "sibling_readings": [
+          "study_as_exercise",
+          "hybrid_preparatory"
+        ],
+        "expected_structural_delta": "Commitment is dormant husk; study is low-epsilon rope (coordination mechanism for potential future performance); no current victim set but potential future victims if restoration attempted without ethical evolution"
+      },
+      {
+        "reading_id": "hybrid_preparatory",
+        "commitment": "Study maintains commitment in suspended state — neither full occupation nor mere archiving; preparatory exercise for messianic restoration",
+        "authority_grounding": "Maimonidean synthesis: study preserves knowledge for future performance while having independent value as Torah engagement",
+        "sibling_readings": [
+          "study_as_exercise",
+          "performance_only"
+        ],
+        "expected_structural_delta": "Moderate extractiveness — study extracts cognitive resources for uncertain future benefit; potential victim set includes those whose resources fund study of non-performable law"
+      },
+      {
+        "reading_id": "symbolic_transformation",
+        "commitment": "Sacrifice commitment has undergone authorized transformation — prayer and study are the new instantiation, not substitutes for a suspended practice",
+        "authority_grounding": "Post-Temple rabbinic innovation claiming interpretive authority to transform material commandments into spiritual equivalents (Hosea 14:3 'bulls of our lips')",
+        "sibling_readings": [
+          "study_as_exercise",
+          "performance_only",
+          "hybrid_preparatory"
+        ],
+        "expected_structural_delta": "High extractiveness if transformation is unauthorized drift — authority structure claims power to redefine divine command; victim set includes those who hold original material performance as non-negotiable"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "study_as_exercise",
+        "reading_b": "performance_only",
+        "basis": "Study-as-exercise holds that intellectual engagement alone can occupy a divine command; performance-only holds that material instantiation is definitional to the command. No single framework can hold both: either study suffices or it does not."
+      },
+      {
+        "reading_a": "symbolic_transformation",
+        "reading_b": "performance_only",
+        "basis": "Symbolic transformation claims rabbinic authority to redefine the content of divine commands; performance-only denies such authority exists. These are mutually exclusive claims about interpretive legitimacy."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_exercise",
+      "human_readable": "Study-as-Exercise Reading (Intellectual Engagement as Performance)",
+      "structural_delta": "Study of sacrifice law constitutes occupation of the commitment without material instantiation",
+      "primary_observable": "Yeshiva curriculum allocation to Kodashim; rabbinic rulings treating study as fulfillment",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": "rabbinic_study_community",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel reading 1 of 4"
+    },
+    {
+      "claim_id": "performance_only",
+      "human_readable": "Performance-Only Reading (Material Instantiation Required)",
+      "structural_delta": "Sacrifice commitment requires physical performance; study is archival preservation of defunct practice",
+      "primary_observable": "Absence of sacrifice performance 70 CE–present; study framed as memorial/preparatory",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Kernel reading 2 of 4"
+    },
+    {
+      "claim_id": "hybrid_preparatory",
+      "human_readable": "Hybrid Preparatory Reading (Suspended Commitment)",
+      "structural_delta": "Study maintains commitment in suspended state pending messianic restoration",
+      "primary_observable": "Maimonidean legal codification of sacrifice law as future-operative; study intensity as preparation metric",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "messianic_restoration_framework",
+      "victim": "resource_contributors_to_non_performable_study",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Kernel reading 3 of 4"
+    },
+    {
+      "claim_id": "symbolic_transformation",
+      "human_readable": "Symbolic Transformation Reading (Authorized Redefinition)",
+      "structural_delta": "Rabbinic authority transformed material sacrifice into spiritual equivalents (prayer/study)",
+      "primary_observable": "Post-Temple liturgical substitutions; rabbinic claims of transformative interpretive power",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "rabbinic_interpretive_authority",
+      "victim": "material_performance_adherents",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Kernel reading 4 of 4"
+    },
+    {
+      "claim_id": "institutional_resource_extraction",
+      "human_readable": "Institutional Resource Extraction (Yeshiva Funding for Non-Performable Law)",
+      "structural_delta": "Community resources allocated to study of law with no material application pathway",
+      "primary_observable": "Yeshiva budget allocation to Kodashim study; opportunity cost vs other Talmudic orders",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "yeshiva_institutional_structure",
+      "victim": "community_resource_contributors",
+      "downstream_of": [],
+      "feeds_into": [
+        "hybrid_preparatory",
+        "symbolic_transformation"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within hybrid_preparatory and symbolic_transformation readings; not structurally independent from kernel contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "study_as_exercise",
+      "kernel_id": "temple_sacrifice_commitment",
+      "reading_id": "study_as_exercise"
+    },
+    {
+      "claim_id": "performance_only",
+      "kernel_id": "temple_sacrifice_commitment",
+      "reading_id": "performance_only"
+    },
+    {
+      "claim_id": "hybrid_preparatory",
+      "kernel_id": "temple_sacrifice_commitment",
+      "reading_id": "hybrid_preparatory"
+    },
+    {
+      "claim_id": "symbolic_transformation",
+      "kernel_id": "temple_sacrifice_commitment",
+      "reading_id": "symbolic_transformation"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_resource_extraction",
+      "structural_delta": "Community resources allocated to study of non-performable law",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Not structurally independent from kernel readings — resource extraction question is internal to hybrid_preparatory and symbolic_transformation readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_karaite_rejection",
+      "description": "Karaite Judaism rejected rabbinic authority entirely, including study-as-performance doctrine. Does their 1,000-year parallel tradition constitute a fifth reading (rejection-as-fidelity) or confirm performance_only reading?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — non-rabbinic Jewish traditions"
+    },
+    {
+      "id": "omega_third_temple_movement",
+      "description": "Contemporary Third Temple movement attempts material restoration. If successful, does this validate performance_only reading or expose symbolic_transformation as unauthorized drift? Ethical evolution question: can animal sacrifice be restored without becoming a snare?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from restoration vs continuation of study-only status"
+    },
+    {
+      "id": "omega_christian_supersessionism",
+      "description": "Christian tradition claims sacrifice commitment was fulfilled and superseded by Christ. Is this a fifth reading of the same kernel or a different kernel entirely (Christological vs Sinaitic authority)?",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis operates within rabbinic framework; Christian reading may be structurally distinct kernel"
+    },
+    {
+      "id": "omega_d1_d4_classification",
+      "description": "Is this genuinely a D1/D4 boundary case or does the 1,900-year study tradition definitively resolve it as D1 (functioning drift via study-as-performance innovation)? Classification instability may reflect genuine structural ambiguity.",
+      "source": "F03 (Hasty Generalization) — commitment system pattern assignment uncertain"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: D1/D4 pattern classification uncertain — the 1,900-year duration of study-without-performance may itself resolve the boundary case (if study tradition is stable, it is functioning D1 drift), but model lacks domain expertise to adjudicate between readings. Generated omega_d1_d4_classification to bound this uncertainty. Four readings identified as genuinely distinct and individually holdable; axiom contradictions declared for study_as_exercise/performance_only and symbolic_transformation/performance_only pairs."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

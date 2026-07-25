@@ -1,0 +1,265 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Ancient History / Religious Studies / Political Economy of Belief Systems",
+  "family_id": "akhenaten_atenist_revision",
+  "topic_summary": "Analysis of Pharaoh Akhenaten's attempted replacement of Egyptian polytheistic tradition (Amun-Ra cult) with monotheistic Atenism circa 1353-1336 BCE. Examines the collision between established priestly authority structures and top-down religious revision, the mechanisms of enforcement during the Amarna period, and the rapid reversion after Akhenaten's death.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Akhenaten (Pharaoh, 1353-1336 BCE, sponsor of Atenist revision)",
+      "Amun priesthood (established religious authority, beneficiaries of polytheistic tradition)",
+      "Aten (solar disk deity, sole legitimate god under Atenism)",
+      "Amun-Ra (chief deity of traditional Egyptian polytheism)",
+      "Tutankhamun (successor pharaoh who restored traditional cult)",
+      "Egyptian population (subjects of religious mandate, practitioners of folk religion)"
+    ],
+    "key_tensions": [
+      "Pharaonic authority vs priestly interpretive authority (who legitimates religious practice)",
+      "Monotheistic exclusivity vs polytheistic accommodation (structural incompatibility of cosmologies)",
+      "Capital city relocation (Akhetaten/Amarna) vs Memphis/Thebes temple economies"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The substrate of divine legitimacy and cosmological order (ma'at) through which political authority is grounded and ritual practice is validated",
+    "authority_description": "Traditionally grounded in priestly interpretation of textual/ritual tradition and pharaonic performance of cult obligations; Atenism attempted to ground authority solely in pharaonic revelation",
+    "drift_status": "absent",
+    "candidate_pattern": "Dynastic Succession (traditional) contested by Revelatory Override (Atenist)",
+    "is_contested_kernel": true,
+    "kernel_id": "divine_legitimacy_substrate",
+    "readings": [
+      {
+        "reading_id": "amun_polytheistic_reading",
+        "commitment": "Divine legitimacy flows through established priestly interpretation of multi-deity cosmology with Amun-Ra as chief patron",
+        "authority_grounding": "Priestly caste holding textual/ritual tradition; pharaoh as high priest within system",
+        "sibling_readings": [
+          "atenist_monotheistic_reading",
+          "folk_syncretistic_reading"
+        ],
+        "expected_structural_delta": "Distributed interpretive authority; temple economies as beneficiaries; accommodates regional variation; pharaoh constrained by priestly validation"
+      },
+      {
+        "reading_id": "atenist_monotheistic_reading",
+        "commitment": "Divine legitimacy flows solely through pharaonic revelation of Aten as exclusive deity; all other gods are false",
+        "authority_grounding": "Pharaonic charisma and coercive apparatus; rejection of priestly intermediation",
+        "sibling_readings": [
+          "amun_polytheistic_reading",
+          "folk_syncretistic_reading"
+        ],
+        "expected_structural_delta": "Centralized interpretive monopoly in pharaoh; temple economies dismantled; suppression of alternative practice; pharaoh as sole legitimate interpreter"
+      },
+      {
+        "reading_id": "folk_syncretistic_reading",
+        "commitment": "Divine legitimacy flows through household/village ritual practice incorporating multiple deities pragmatically",
+        "authority_grounding": "Local tradition and practical efficacy; minimal dependence on institutional validation",
+        "sibling_readings": [
+          "amun_polytheistic_reading",
+          "atenist_monotheistic_reading"
+        ],
+        "expected_structural_delta": "Diffuse authority; resistant to top-down revision; pharaoh and priesthood both treated as distant elites; beneficiary structure unclear"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "amun_polytheistic_reading",
+        "reading_b": "atenist_monotheistic_reading",
+        "basis": "Polytheistic accommodation (multiple legitimate paths to divine) cannot coexist with monotheistic exclusivity (all other gods categorically false) in a single coherent cosmology"
+      },
+      {
+        "reading_a": "atenist_monotheistic_reading",
+        "reading_b": "folk_syncretistic_reading",
+        "basis": "Centralized revelatory monopoly (truth flows from pharaoh alone) cannot coexist with diffuse practical authority (legitimacy from local efficacy) in a single framework"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "amun_polytheistic_reading",
+      "human_readable": "Amun Polytheistic Reading (Distributed Priestly Authority)",
+      "structural_delta": "Interpretive authority distributed across priestly caste; pharaoh validated by priests; accommodates regional deity variation",
+      "primary_observable": "Temple endowment records; priestly appointment patterns; regional cult continuity across dynasties",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "amun_priesthood",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "restoration_reversion_mechanism"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Baseline reading; upstream to restoration dynamics; establishes pre-revision constraint structure"
+    },
+    {
+      "claim_id": "atenist_monotheistic_reading",
+      "human_readable": "Atenist Monotheistic Reading (Pharaonic Revelatory Monopoly)",
+      "structural_delta": "Interpretive authority centralized in pharaoh via charismatic revelation; priestly intermediation eliminated; exclusive cult",
+      "primary_observable": "Amarna archaeological evidence (temple closures, iconoclasm); royal hymn texts; administrative papyri showing cult suppression",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "pharaonic_apparatus",
+      "victim": "amun_priesthood",
+      "downstream_of": [],
+      "feeds_into": [
+        "enforcement_collapse_mechanism"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core contested reading; highest epsilon (active suppression); feeds into collapse analysis"
+    },
+    {
+      "claim_id": "folk_syncretistic_reading",
+      "human_readable": "Folk Syncretistic Reading (Household Pragmatic Authority)",
+      "structural_delta": "Authority grounded in local tradition and ritual efficacy; minimal elite institutional dependence",
+      "primary_observable": "Household shrine archaeology; amulet/votive distributions; continuity of folk deity worship through Amarna period",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "enforcement_collapse_mechanism"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Lower centrality; structural resistance captured via mountain classification but limited direct interaction with elite contest"
+    },
+    {
+      "claim_id": "enforcement_collapse_mechanism",
+      "human_readable": "Enforcement Collapse (Charisma Dependency)",
+      "structural_delta": "Atenist enforcement dependent on pharaonic charisma and coercive apparatus; collapses immediately upon sponsor's death",
+      "primary_observable": "Timeline of restoration edicts under Tutankhamun; speed of temple reopening; iconoclasm reversal",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "restoration_coalition",
+      "victim": "atenist_adherents",
+      "downstream_of": [
+        "atenist_monotheistic_reading",
+        "folk_syncretistic_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis of reading contest; captures collapse dynamics"
+    },
+    {
+      "claim_id": "restoration_reversion_mechanism",
+      "human_readable": "Restoration Reversion (Institutional Memory Reassertion)",
+      "structural_delta": "Priestly caste reasserts interpretive authority via institutional memory and economic infrastructure",
+      "primary_observable": "Post-Amarna temple reconstruction patterns; priestly lineage continuity; Amun cult economic recovery",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "amun_priesthood",
+      "victim": null,
+      "downstream_of": [
+        "amun_polytheistic_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Captured implicitly in amun_polytheistic_reading baseline + enforcement_collapse dynamics"
+    },
+    {
+      "claim_id": "capital_relocation_extraction",
+      "human_readable": "Capital Relocation as Economic Extraction (Akhetaten/Amarna)",
+      "structural_delta": "New capital (Akhetaten) extracts labor/resources while dismantling Memphis/Thebes temple economies",
+      "primary_observable": "Amarna construction records; labor conscription data; Memphis/Thebes economic decline during Amarna period",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "pharaonic_apparatus",
+      "victim": "theban_economy",
+      "downstream_of": [
+        "atenist_monotheistic_reading"
+      ],
+      "feeds_into": [
+        "enforcement_collapse_mechanism"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Mechanism of Atenist reading enforcement; adds detail but not structural novelty beyond atenist_monotheistic_reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "amun_polytheistic_reading",
+      "kernel_id": "divine_legitimacy_substrate",
+      "reading_id": "amun_polytheistic_reading"
+    },
+    {
+      "claim_id": "atenist_monotheistic_reading",
+      "kernel_id": "divine_legitimacy_substrate",
+      "reading_id": "atenist_monotheistic_reading"
+    },
+    {
+      "claim_id": "enforcement_collapse_mechanism",
+      "kernel_id": "divine_legitimacy_substrate",
+      "reading_id": "enforcement_collapse_mechanism"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "folk_syncretistic_reading",
+      "structural_delta": "Household pragmatic authority resistant to elite revision",
+      "hypothesis": "mountain",
+      "deferral_reason": "Lower centrality; structural resistance captured but limited direct interaction with elite contest over divine legitimacy"
+    },
+    {
+      "claim_id": "restoration_reversion_mechanism",
+      "structural_delta": "Priestly institutional memory reassertion post-Akhenaten",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured implicitly via amun_polytheistic_reading baseline and enforcement_collapse dynamics"
+    },
+    {
+      "claim_id": "capital_relocation_extraction",
+      "structural_delta": "Akhetaten construction as extraction from Memphis/Thebes economies",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism of Atenist enforcement; detail level rather than structural novelty beyond atenist_monotheistic_reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_folk_resistance_magnitude",
+      "description": "Did folk syncretistic practice constitute passive resistance or genuine structural barrier to Atenist consolidation? Archaeological evidence ambiguous on household compliance levels.",
+      "source": "Deferred axis folk_syncretistic_reading + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_charisma_vs_apparatus",
+      "description": "Was enforcement dependent on Akhenaten's personal charisma or on an apparatus that could have survived succession? Rapid collapse suggests charisma, but alternative: apparatus dismantled by restoration coalition.",
+      "source": "Axis enforcement_collapse_mechanism structural ambiguity"
+    },
+    {
+      "id": "omega_economic_extraction_necessity",
+      "description": "Was temple economy dismantling necessary for Atenist ideological coherence, or opportunistic extraction enabled by religious revision? Capital relocation suggests extraction motive but evidence underdetermines.",
+      "source": "Deferred axis capital_relocation_extraction"
+    },
+    {
+      "id": "omega_succession_counterfactual",
+      "description": "If Akhenaten's successor had been an adult Atenist loyalist rather than child-pharaoh Tutankhamun under priestly regency, would enforcement apparatus have survived? Kernel contest outcome may be contingent on succession accident.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + historical contingency"
+    },
+    {
+      "id": "omega_reading_collapse_test",
+      "description": "Do amun_polytheistic and atenist_monotheistic readings genuinely instantiate different constraints, or are they merely different labels for the same elite control mechanism? Folk reading suggests genuine structural difference (distributed vs centralized), but elite contest may be beneficiary rotation rather than constraint transformation.",
+      "source": "§1.3-K coherence gate + F34 domain competence limit"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model confidence in distinguishing genuine structural constraint differences vs elite legitimation theater in Ancient Egyptian religion is limited by training data gaps in Egyptology. Omega_reading_collapse_test bounds this uncertainty. Archaeological evidence (temple closures, iconoclasm, rapid restoration) supports genuine constraint difference claim, but interpretive layer remains underdetermined."
+  },
+  "_seed_id": "akhenaten_kernel_revision_failure"
+}

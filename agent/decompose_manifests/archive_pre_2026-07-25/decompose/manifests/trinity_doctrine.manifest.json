@@ -1,0 +1,213 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Theology / Religious Authority / Doctrinal History",
+  "family_id": "christian_trinity_doctrine",
+  "topic_summary": "Analysis of the Christian Trinity doctrine as a contested kernel where biblical texts on God's nature are read through incompatible interpretive frameworks. Trinitarian reading (three persons, one essence) vs Unitarian reading (singular divine person) produce structurally different constraints on orthodoxy, church authority, and exclusion boundaries.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Biblical texts on divine nature (kernel substrate: John 1:1, Genesis 1:26, Shema, Matthew 28:19)",
+      "Ecumenical councils (Nicaea 325, Constantinople 381 - interpretive authority bodies)",
+      "Institutional churches (Catholic, Orthodox, mainline Protestant - authority structures)",
+      "Non-Trinitarian Christians (Arians, Unitarians, Oneness Pentecostals - excluded groups)",
+      "Creeds (Nicene, Athanasian - authority enforcement mechanisms)",
+      "Biblical literalists (hermeneutical community favoring textual surface reading)"
+    ],
+    "key_tensions": [
+      "Monotheism preservation vs Christological elevation (how to affirm Christ's divinity without abandoning monotheism)",
+      "Scriptural sufficiency vs conciliar authority (whether post-apostolic councils can bind interpretation)",
+      "Institutional orthodoxy vs textual simplicity (complex formulation vs accessible reading)"
+    ],
+    "key_mechanisms": [
+      "Anathema declarations (Nicene Creed 'anathematizes' Arian views - creates victim set through exclusion)",
+      "Credal gate-keeping (baptismal formulas, liturgical recitation requirements - enforces reading A uniformly)"
+    ],
+    "key_absences": [
+      "Pneumatological implications (Holy Spirit's procession debates largely absent from prompt framing)",
+      "Economic vs immanent Trinity distinction (whether constraint applies to God's being or merely God's revelation)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "trinitarian_reading",
+      "human_readable": "Trinitarian Reading (Three Persons, One Essence)",
+      "structural_delta": "Interprets biblical texts as requiring three hypostases (persons) sharing one ousia (essence), producing hierarchical institutional authority and high exclusion boundary",
+      "primary_observable": "Credal subscription rates; anathema enforcement; excommunication frequency for non-Trinitarian views",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_church_hierarchy",
+      "victim": "non_trinitarian_christians",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading instantiating high-extractiveness constraint with clear victim set",
+      "kernel_id": "biblical_divine_nature",
+      "reading_id": "trinitarian_reading",
+      "interpretive_commitment": "Monotheism preserved through essence-unity despite person-plurality",
+      "authority_grounding": "Conciliar (Ecumenical councils as binding interpretive authority)",
+      "sibling_readings": [
+        "unitarian_reading",
+        "modalist_reading"
+      ],
+      "expected_structural_delta": "High institutional enforcement; anathema mechanisms; excludes Arians, Unitarians, Oneness groups from orthodoxy"
+    },
+    {
+      "claim_id": "unitarian_reading",
+      "human_readable": "Unitarian Reading (Singular Divine Person)",
+      "structural_delta": "Interprets biblical texts as affirming strict numerical singularity of God, rejecting person-plurality, producing low institutional authority and biblical literalist emphasis",
+      "primary_observable": "Rejection of credal formulas; scriptural sufficiency claims; flat church governance structures",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "biblical_literalist_communities",
+      "victim": "institutional_authority_structures",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct reading with inverted beneficiary/victim structure",
+      "kernel_id": "biblical_divine_nature",
+      "reading_id": "unitarian_reading",
+      "interpretive_commitment": "Monotheism requires numerical singularity; Christology subordinates Son to Father",
+      "authority_grounding": "Sola Scriptura (post-apostolic councils lack binding authority)",
+      "sibling_readings": [
+        "trinitarian_reading",
+        "modalist_reading"
+      ],
+      "expected_structural_delta": "No anathema enforcement; flat ecclesiology; excludes Trinitarians from 'true monotheism' claim"
+    },
+    {
+      "claim_id": "modalist_reading",
+      "human_readable": "Modalist Reading (Sequential Manifestations)",
+      "structural_delta": "Interprets Father/Son/Spirit as sequential modes or roles of one person rather than simultaneous persons, producing low institutional complexity but vulnerable to both Trinitarian and Unitarian critique",
+      "primary_observable": "Oneness Pentecostal baptismal formulas (Jesus-only vs Trinitarian); modal language in theology",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "charismatic_renewal_movements",
+      "victim": "ecumenical_dialogue_participants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading occupying middle position between A/B",
+      "kernel_id": "biblical_divine_nature",
+      "reading_id": "modalist_reading",
+      "interpretive_commitment": "Monotheism preserved through temporal succession rather than essence/person distinction",
+      "authority_grounding": "Experiential/charismatic (Holy Spirit experience over conciliar formulation)",
+      "sibling_readings": [
+        "trinitarian_reading",
+        "unitarian_reading"
+      ],
+      "expected_structural_delta": "Rejected by both Trinitarians (heresy) and Unitarians (insufficient monotheism); enables Jesus-centered piety without philosophical complexity"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "trinitarian_reading",
+      "kernel_id": "biblical_divine_nature",
+      "reading_id": "trinitarian_reading"
+    },
+    {
+      "claim_id": "unitarian_reading",
+      "kernel_id": "biblical_divine_nature",
+      "reading_id": "unitarian_reading"
+    },
+    {
+      "claim_id": "modalist_reading",
+      "kernel_id": "biblical_divine_nature",
+      "reading_id": "modalist_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_economic_immanent_distinction",
+      "description": "Do Trinitarian constraints apply to God's eternal being (immanent Trinity) or only to God's self-revelation (economic Trinity)? The former is ontological mountain; the latter may be interpretive rope.",
+      "source": "Absence Inventory (Dark Matter Probe 2)"
+    },
+    {
+      "id": "omega_pneumatology_gap",
+      "description": "Analysis centers Christology (Son's status) but Holy Spirit's procession debates (filioque controversy) may constitute fourth reading with distinct Eastern Orthodox vs Western Catholic constraint structure.",
+      "source": "Absence Inventory (key_absences field)"
+    },
+    {
+      "id": "omega_social_trinity_reading",
+      "description": "Social Trinitarianism (three centers of consciousness, perichoretic unity) vs psychological Trinitarianism (one consciousness, three relations) may split the Trinitarian reading into two structurally distinct sub-readings with different authority implications.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_scriptural_sufficiency",
+      "description": "Is the kernel itself (biblical texts on divine nature) sufficiently determinate to ground any reading, or does interpretive underdetermination make conciliar authority necessary? If the latter, all three readings may collapse into institutional-authority scaffold.",
+      "source": "Beneficiary Scan (Dark Matter Probe 3)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings pass kernel test: shared substrate (biblical texts on divine nature), genuinely different interpretive commitments (essence/person distinction vs numerical singularity vs sequential modes), structurally different constraint outputs (high vs low vs moderate ε, inverted beneficiary/victim structures)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Biblical texts regarding God's nature (John 1:1-14, Genesis 1:26, Deuteronomy 6:4, Matthew 28:19, 2 Corinthians 13:14) serve as fixed substrate for competing interpretive frameworks on divine unity and plurality.",
+    "authority_description": "Trinitarian reading: Ecumenical councils (Nicaea, Constantinople) hold binding interpretive authority. Unitarian reading: Scripture alone binds; post-apostolic councils lack authority. Modalist reading: Charismatic experience and Jesus-centered devotion ground interpretation.",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "biblical_divine_nature",
+    "readings": [
+      {
+        "reading_id": "trinitarian_reading",
+        "commitment": "Three hypostases (persons) share one ousia (essence); monotheism preserved through essence-unity",
+        "authority_grounding": "Conciliar (Ecumenical councils as binding)",
+        "sibling_readings": [
+          "unitarian_reading",
+          "modalist_reading"
+        ],
+        "expected_structural_delta": "High institutional authority; anathema enforcement; victim set = non-Trinitarians (Arians, Unitarians, Oneness Pentecostals)"
+      },
+      {
+        "reading_id": "unitarian_reading",
+        "commitment": "Numerical singularity of God; Father alone is God; Son/Spirit subordinate or created",
+        "authority_grounding": "Sola Scriptura (post-apostolic councils lack authority)",
+        "sibling_readings": [
+          "trinitarian_reading",
+          "modalist_reading"
+        ],
+        "expected_structural_delta": "Low institutional authority; flat ecclesiology; victim set = institutional hierarchy and credal orthodoxy"
+      },
+      {
+        "reading_id": "modalist_reading",
+        "commitment": "Father/Son/Spirit are sequential modes or roles of one person, not simultaneous persons",
+        "authority_grounding": "Experiential/charismatic (Holy Spirit experience over formulation)",
+        "sibling_readings": [
+          "trinitarian_reading",
+          "unitarian_reading"
+        ],
+        "expected_structural_delta": "Moderate institutional complexity; rejected by both Trinitarians (Sabellian heresy) and Unitarians (insufficient monotheism); enables Jesus-centered piety without philosophical apparatus"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "trinitarian_reading",
+        "reading_b": "unitarian_reading",
+        "basis": "Trinitarian axiom (essence-unity permits person-plurality) contradicts Unitarian axiom (monotheism requires numerical singularity). No coherent framework holds both: accepting numerical singularity requires rejecting person-plurality and vice versa."
+      },
+      {
+        "reading_a": "trinitarian_reading",
+        "reading_b": "modalist_reading",
+        "basis": "Trinitarian axiom (three hypostases exist simultaneously) contradicts Modalist axiom (one person manifests sequentially). No coherent framework holds both: simultaneous hypostatic distinction requires rejecting modal succession."
+      }
+    ]
+  },
+  "_seed_id": "trinity_doctrine"
+}

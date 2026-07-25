@@ -1,0 +1,228 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "System Dynamics / Environmental Modeling / Sustainability Science",
+  "family_id": "world3_recalibration_2024",
+  "topic_summary": "Analysis of the 2024 Nebel et al. recalibration of the World3 model from the 1972 Limits to Growth study. The recalibration uses 50 years of empirical data and modern computational methods to optimize 35 model parameters, finding that the original business-as-usual scenario remains the best fit to observed global development. The recalibrated model projects system collapse between 2024-2030 driven by resource depletion, with peaks in population, industrial output, and other variables shifted slightly into the future.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "World3 model (system dynamics simulation of global material flows, 1972-2024)",
+      "Nebel et al. research team (TH Köln, 2024 recalibration authors)",
+      "Club of Rome / MIT original LtG authors (Meadows et al., 1972)",
+      "PyWorld3-03 (Python implementation of 2005 World3 version)",
+      "Empirical validation studies (Turner 2008/2012, Herrington 2021)",
+      "Neo-liberal economist critics (Nordhaus, Lomborg, market-mechanism advocates)",
+      "Earth4all model (2022 successor with regional resolution and inequality metrics)",
+      "NRMSD optimization algorithm (iterative parameter fitting method)"
+    ],
+    "key_tensions": [
+      "Model validation vs prediction interpretation (authors emphasize illustrative dynamics vs public/critic treatment as exact forecasts)",
+      "Technological optimism vs structural limits (critics claim human ingenuity will solve scarcity vs model shows technology has not altered overshoot dynamics)",
+      "Parameter sensitivity vs robustness (different initial values yield different parameter sets vs overshoot-collapse pattern remains across variations)",
+      "Aggregation necessity vs regional heterogeneity (global variables enable tractable modeling vs mask critical regional differences)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "model_validation_epistemic_status",
+      "human_readable": "Model Validation Epistemic Status (Prediction vs Structural Illustration)",
+      "structural_delta": "Whether World3 scenarios constitute falsifiable predictions or non-falsifiable structural illustrations",
+      "primary_observable": "Degree to which model outputs are treated as testable hypotheses vs heuristic demonstrations; frequency of validation studies vs interpretive applications",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "model_defenders",
+      "victim": "empirical_validation_standards",
+      "downstream_of": [],
+      "feeds_into": [
+        "recalibration_methodology_legitimacy",
+        "collapse_timing_credibility"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; foundational epistemic question determining how all other findings are interpreted"
+    },
+    {
+      "claim_id": "parameter_sensitivity_structural_robustness",
+      "human_readable": "Parameter Sensitivity vs Structural Robustness (Local Optima Problem)",
+      "structural_delta": "Extent to which different parameter sets yield different trajectories vs preservation of overshoot-collapse pattern across parameter space",
+      "primary_observable": "NRMSD variance across sensitivity analyses; consistency of collapse timing and mechanism across parameter variations",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "model_validation_epistemic_status",
+        "recalibration_methodology_legitimacy"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (parameter variance) from axis 1; upstream to multiple synthesis nodes"
+    },
+    {
+      "claim_id": "recalibration_methodology_legitimacy",
+      "human_readable": "Recalibration Methodology Legitimacy (Optimization vs Overfitting)",
+      "structural_delta": "Whether iterative NRMSD minimization produces genuine model improvement or curve-fitting to historical noise",
+      "primary_observable": "Out-of-sample predictive accuracy; degree to which recalibrated parameters have physical/theoretical justification vs purely statistical fit",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "recalibration_authors",
+      "victim": "model_parsimony",
+      "downstream_of": [
+        "model_validation_epistemic_status",
+        "parameter_sensitivity_structural_robustness"
+      ],
+      "feeds_into": [
+        "collapse_timing_credibility"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node with highest centrality; integrates epistemic and methodological questions"
+    },
+    {
+      "claim_id": "collapse_timing_credibility",
+      "human_readable": "Collapse Timing Credibility (2024-2030 Window)",
+      "structural_delta": "Confidence in the recalibrated model's projection of system collapse within 2024-2030 vs treating this as illustrative rather than predictive",
+      "primary_observable": "Alignment of 2024-2030 projections with emerging empirical indicators (HDI decline 2019, education index decline 2021, death rate increase 2020)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "policy_planning_horizons",
+      "downstream_of": [
+        "model_validation_epistemic_status",
+        "recalibration_methodology_legitimacy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Downstream application node; highest epsilon (policy-relevant urgency claim)"
+    },
+    {
+      "claim_id": "technology_decoupling_failure",
+      "human_readable": "Technology Decoupling Failure (50-Year Stasis)",
+      "structural_delta": "Whether 50 years of technological advancement has decoupled growth from resource consumption or merely shifted collapse timing",
+      "primary_observable": "Resource intensity of GDP over time; comparison of 1972 BAU trajectory to 2024 recalibrated trajectory structural similarity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "model_validation_epistemic_status"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via model_validation_epistemic_status (if model remains valid after 50 years, technology has not fundamentally altered dynamics)"
+    },
+    {
+      "claim_id": "data_proxy_adequacy",
+      "human_readable": "Data Proxy Adequacy (CO2 for Pollution, IIP for Industrial Output)",
+      "structural_delta": "Validity of using single-indicator proxies (CO2 concentration, education index, fossil fuel consumption) to represent complex multi-dimensional sectors",
+      "primary_observable": "Correlation between proxy indicators and comprehensive sector measurements where available; sensitivity of NRMSD to proxy choice",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "recalibration_methodology_legitimacy"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technical measurement issue; authors acknowledge limitation extensively; does not alter structural dynamics"
+    },
+    {
+      "claim_id": "regional_aggregation_loss",
+      "human_readable": "Regional Aggregation Loss (Global Variables vs Heterogeneity)",
+      "structural_delta": "Information loss from representing globally heterogeneous processes (demographics, resource consumption, pollution) as single aggregated variables",
+      "primary_observable": "Variance in regional trajectories relative to global mean; predictive accuracy of global model for regional outcomes",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Earth4all model addresses this; zero centrality in current analysis; omega material on model evolution"
+    }
+  ],
+  "generation_sequence": [
+    "model_validation_epistemic_status",
+    "parameter_sensitivity_structural_robustness",
+    "recalibration_methodology_legitimacy",
+    "collapse_timing_credibility"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "technology_decoupling_failure",
+      "structural_delta": "Whether technology has decoupled growth from resource consumption",
+      "hypothesis": "mountain",
+      "deferral_reason": "Captured indirectly via model_validation_epistemic_status; if BAU remains best fit after 50 years, technology has not altered fundamental dynamics"
+    },
+    {
+      "claim_id": "data_proxy_adequacy",
+      "structural_delta": "Validity of single-indicator proxies for complex sectors",
+      "hypothesis": "piton",
+      "deferral_reason": "Technical measurement issue extensively acknowledged by authors; does not alter structural dynamics or collapse pattern"
+    },
+    {
+      "claim_id": "regional_aggregation_loss",
+      "structural_delta": "Information loss from global aggregation vs regional heterogeneity",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero graph centrality; addressed by successor Earth4all model; omega material on model evolution trajectory"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_post_collapse_dynamics",
+      "description": "Model becomes structurally invalid after tipping points because socio-economic relationships will be 'rearranged and reconnected' in ways the model cannot represent. The collapse trajectory after 2030 is highly uncertain and should not be interpreted as prediction.",
+      "source": "Authors' explicit limitation statement + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_crisis_event_representation",
+      "description": "Model cannot reproduce short-term crisis events (2008 financial crisis, COVID-19 pandemic) that appear in empirical data. Are these exogenous shocks or endogenous system stress manifestations? If endogenous, model may be missing feedback mechanisms.",
+      "source": "Authors' limitation statement + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_pollution_mechanism_shift",
+      "description": "Recalibration shifts pollution peak ~50 years into future and lowers maximum value. Is this because CO2 proxy inadequately captures pollution's systemic impact, or because pollution transmission delay genuinely increased 482% (20→116 years)? Physical justification for delay parameter change unclear.",
+      "source": "Table 2 parameter changes + authors' proxy limitation discussion"
+    },
+    {
+      "id": "omega_collapse_mechanism_ambiguity",
+      "description": "Authors state collapse is 'caused by resource depletion' but acknowledge 'resource and pollution sectors are the most difficult to compare with empirical data' and 'it is not entirely clear whether the collapse is caused by climate change resulting from pollution or by resource depletion.' High-epsilon claim rests on weakest empirical foundation.",
+      "source": "Section 4.1 Discussion + F03 (Hasty Generalization) potential"
+    },
+    {
+      "id": "omega_earth4all_paradigm_shift",
+      "description": "Earth4all (2022) introduces regional resolution, inequality metrics, and climate focus—suggesting World3 framework may be reaching limits of its aggregation approach. Is recalibration extending a dying paradigm or validating a still-useful one?",
+      "source": "Deferred axis regional_aggregation_loss + Section 4.3 Future Trends"
+    },
+    {
+      "id": "omega_belief_system_change_mechanism",
+      "description": "Authors conclude 'change needed will also require a change in belief systems, mindsets, and the way we organize our society' but World3 has no mechanism to model belief system change or societal reorganization. How would such change be represented? Is this an admission the model cannot address its own prescription?",
+      "source": "Section 4.3 + Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: collapse_timing_credibility axis makes high-confidence claim (2024-2030 window, resource depletion mechanism) but rests on weakest empirical foundation (authors acknowledge resource and pollution sectors have poorest data quality and proxy adequacy). Generated omega_collapse_mechanism_ambiguity and omega_pollution_mechanism_shift to bound this uncertainty. The 2024-2030 timing may be illustrative rather than predictive, but the recalibration methodology treats it as optimized fit to data."
+  }
+}

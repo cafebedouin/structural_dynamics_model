@@ -1,0 +1,279 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Democratic Theory / Institutional Analysis",
+  "family_id": "vote_market_democracy_2026",
+  "topic_summary": "Analysis of democratic responsiveness as a market system where votes are tradable commodities with variable acquisition costs. The input synthesizes 40 years of empirical work showing near-zero policy responsiveness to low/middle-income preferences when diverging from the affluent, while simultaneously explaining elite control losses (Brexit, 2016, Dobbs). The framework proposes democracy operates as a constrained exchange system with an organization floor, veto asymmetry, scale ceiling, and information-regime price suppression.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Gilens/Page (responsiveness researchers documenting flat-line relationship)",
+      "Moral Majority/Religious Right (organized bloc achieving 40-year policy extraction)",
+      "Thomas Ferguson (investment theory of party competition)",
+      "Branham/Soroka/Wlezien (negative-power asymmetry researchers)",
+      "Labor unions (historical seller-side cartel, post-1998 decay)",
+      "Affluent Americans (consistent policy-preference winners)",
+      "Low/middle-income Americans (near-zero responsiveness when diverging)",
+      "Political parties (firms assembling minimum-cost winning coalitions)",
+      "Donors/investor blocs (capital suppliers)",
+      "Event-driven journalism (information regime omitting structural context)",
+      "Madison/Federalist 10 (extended republic as vote-price suppression by design)",
+      "European social democracies (pre-1998 left-government responsiveness, post-1998 convergence)"
+    ],
+    "key_tensions": [
+      "Flat-line responsiveness to median voter vs periodic elite control losses (the core empirical puzzle)",
+      "Organized bloc success (Dobbs, pre-1998 European labor) vs unorganized preference failure (diffuse moral majorities worst-performing)",
+      "90% rich-middle preference agreement vs documented blocking asymmetry and agenda control",
+      "Democracy-as-popular-sovereignty ideal vs democracy-as-constrained-exchange-system empirical reality"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "organization_floor",
+      "human_readable": "Organization Floor (Tradability Threshold)",
+      "structural_delta": "Mass preferences become tradable only when coupled to organized blocs with warrantable leadership, punishment capability, and delivery infrastructure; below this floor preferences are non-transactable regardless of size",
+      "primary_observable": "Policy responsiveness gradient by organizational status (union density, bloc infrastructure metrics) controlling for preference intensity and population size",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "veto_asymmetry",
+        "scale_ceiling",
+        "information_suppression"
+      ],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; explains both Gilens domain variance (social welfare partial exception via organized interest groups) and Dobbs case (unorganized evangelical preferences worst-performing until organized); mountain providing structural base for all downstream mechanisms"
+    },
+    {
+      "claim_id": "veto_asymmetry",
+      "human_readable": "Veto Asymmetry (Blocking Cheaper Than Enacting)",
+      "structural_delta": "Inequality in policy influence operates primarily through negative power (blocking) rather than positive enactment, because blocking requires capturing one chokepoint while enactment requires buying the entire legislative chain",
+      "primary_observable": "Distribution of policy wins/losses by action type (block vs enact) and income quintile; chokepoint capture costs vs full-chain costs",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "organization_floor"
+      ],
+      "feeds_into": [
+        "agenda_conditioning"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Explains Branham et al. finding (rich win disagreements 53%, inequality concentrates in blocking); structurally distinct from organization_floor (different observable: action-type distribution vs tradability threshold); feeds agenda-conditioning mechanism"
+    },
+    {
+      "claim_id": "scale_ceiling",
+      "human_readable": "Scale Ceiling (Polity Size Bounds Economy-Wide Cartels)",
+      "structural_delta": "Coordination cost as function of polity size, regulatory fragmentation, and capital mobility bounds economy-wide seller cartels while leaving organized blocs viable at any scale",
+      "primary_observable": "Cross-national responsiveness gradient regressed on union density × polity scale × capital account openness; sectoral vs economy-wide bargaining coverage",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "organization_floor"
+      ],
+      "feeds_into": [
+        "post_1998_convergence"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Explains why Denmark organizes 6M under one regime while US cannot organize 330M; scoped to economy-wide cartels (India caste-party machines and Solid South regional cartels remain consistent); mountain of coordination physics feeding historical convergence"
+    },
+    {
+      "claim_id": "information_suppression",
+      "human_readable": "Information Regime Price Suppression (Event-Only Journalism)",
+      "structural_delta": "Event-driven journalism systematically omits structural context required for voters to estimate policy stakes, creating information asymmetry as necessary condition for persistently cheap votes",
+      "primary_observable": "Content analysis of structural-context density in news coverage; natural experiments on information-environment change (platform migrations, Fox News rollout effects); stake-mispricing by information-environment type",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "incumbent_elites",
+      "victim": "unorganized_voters",
+      "downstream_of": [
+        "organization_floor"
+      ],
+      "feeds_into": [
+        "elite_feedback_degradation"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Explains persistent vote underpricing and QAnon limit case; tangled_rope with documented beneficiary (incumbents consuming own narrative); DellaVigna provides independent causal anchor; necessary-condition framing avoids unfalsifiability"
+    },
+    {
+      "claim_id": "post_1998_convergence",
+      "human_readable": "Post-1998 Convergence (Seller Cartel Decay Under Capital Mobility)",
+      "structural_delta": "Cross-national synchronized disappearance of left-government responsiveness to lower incomes in economic/welfare domain tracks post-Cold War capital account opening and competitor regime collapse",
+      "primary_observable": "Lupu-Pontusson four-country time series; union density decline trajectory vs capital liberalization timeline; responsiveness gradient pre/post 1998",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "scale_ceiling",
+        "organization_floor"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Explains New Deal/Bretton Woods repricing and reversal; rope of capital exit option; structurally distinct from scale_ceiling (temporal mechanism vs spatial constraint); documented synchronized shift with dose-like timing"
+    },
+    {
+      "claim_id": "agenda_conditioning",
+      "human_readable": "Agenda Conditioning (Non-Decisions Outside Denominator)",
+      "structural_delta": "Measured rich-middle preference agreement is conditioned on proposed policies; veto operates partly upstream of proposal, excluding non-decisions from responsiveness datasets",
+      "primary_observable": "Comparison of survey-question policy space vs full feasible policy space; historical policy proposals that disappeared from agenda vs those that remained live",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "veto_holders",
+      "victim": "excluded_policy_beneficiaries",
+      "downstream_of": [
+        "veto_asymmetry"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Explains why 90% agreement does not refute structured inequality; snare of second-face power (Bachrach-Baratz); structurally distinct from veto_asymmetry (agenda-stage vs action-stage); Schattschneider's 'definition of alternatives' claim"
+    },
+    {
+      "claim_id": "elite_feedback_degradation",
+      "human_readable": "Elite Feedback Degradation (Incumbents Consume Own Narrative)",
+      "structural_delta": "Information regime that suppresses vote prices degrades incumbents' own price discovery; mispriced grievance accumulates longest where elite narrative monoculture is densest, predicting takeover ruptures",
+      "primary_observable": "Elite information-source diversity metrics vs rupture incidence (Brexit, 2016); incumbent elite surprise/miscalibration measures pre-rupture",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "counter_elites",
+      "victim": "incumbent_elites",
+      "downstream_of": [
+        "information_suppression"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: explains takeover ruptures as hostile-takeover arbitrage of undervalued grievance; tangled_rope with counter-elite beneficiary; structurally downstream of information_suppression with limited independent yield beyond parent mechanism; Tier 3 prediction lacks operationalization of 'monoculture'; candidate for future generation if rupture-clustering evidence strengthens"
+    },
+    {
+      "claim_id": "brokerage_endgame",
+      "human_readable": "Brokerage Endgame (Post-Delivery Leverage Decay)",
+      "structural_delta": "Organized bloc leverage decays materially after full policy delivery because paid sellers have nothing left to withhold and brokers who delivered have nothing left to warrant",
+      "primary_observable": "Evangelical bloc leverage across candidate selection, agenda-setting, judicial pipeline, and turnout bargaining 2022-2032; abortion-referendum outcomes; suburban realignment metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "organization_floor"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: forward prediction with 2028/2032 clock; piton of atrophied leverage post-delivery; structurally distinct but time-gated (data not yet available); essay's cleanest kill condition but requires waiting for evidence; candidate for future generation post-2028 when leverage metrics are measurable"
+    },
+    {
+      "claim_id": "elections_as_insurance",
+      "human_readable": "Elections as Elite Insurance (Bounded Rotation vs Catastrophic Tail)",
+      "structural_delta": "Elections convert catastrophic tail risk of succession into continuous premium payment; maintained (not originated) because losing factions survive to compete again",
+      "primary_observable": "Variance of succession outcomes (electoral vs non-electoral regimes); asset/network/access retention by losing factions; premium payment (campaign costs) vs tail-risk costs (coup, collapse)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold of regime-maintenance logic; explains why fractured elites keep paying for elections (variance reduction) but does not explain responsiveness patterns or price schedule; zero centrality; Popperian minimalist defense restated as risk profile; maintenance-not-origin scope prevents functionalist circularity but also limits analytical yield for core market mechanisms; omega material on regime legitimacy formula"
+    }
+  ],
+  "generation_sequence": [
+    "organization_floor",
+    "veto_asymmetry",
+    "scale_ceiling",
+    "information_suppression",
+    "post_1998_convergence",
+    "agenda_conditioning"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "elite_feedback_degradation",
+      "structural_delta": "Information regime degrading incumbents' own price discovery predicts takeover ruptures in narrative monocultures",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Structurally downstream of information_suppression with limited independent yield; Tier 3 prediction lacks operationalization of 'monoculture'; explains ruptures but adds limited constraint structure beyond parent mechanism; candidate for future generation if rupture-clustering evidence strengthens"
+    },
+    {
+      "claim_id": "brokerage_endgame",
+      "structural_delta": "Bloc leverage decays materially post-delivery when sellers have nothing left to withhold",
+      "hypothesis": "piton",
+      "deferral_reason": "Forward prediction with 2028/2032 clock; data not yet available to measure evangelical leverage across four channels post-Dobbs; essay's cleanest kill condition but time-gated; candidate for future generation post-2028 when leverage metrics become measurable"
+    },
+    {
+      "claim_id": "elections_as_insurance",
+      "structural_delta": "Elections as bounded rotation mechanism converting succession tail risk into continuous premium",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero centrality; explains regime maintenance but not responsiveness patterns or price schedule; Popperian variance-reduction logic is regime-level rather than market-mechanism level; maintenance-not-origin scope prevents circularity but limits analytical yield for core question (whose preferences policy tracks); omega material on legitimacy formula"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_preference_agreement_endogeneity",
+      "description": "Is the 90% rich-middle preference agreement exogenous, or partly produced by the information regime and proposal agenda jointly? The essay uses the agenda half (documented method limitation) but declines the information half as unfalsifiable. However, preference movement following documented environment shifts is measurable in principle—nobody has measured it well. If agreement is endogenous, the coincidence reading collapses further; if exogenous, it constrains the information-suppression mechanism.",
+      "source": "Unresolved Questions section; §3 independence testing (agenda_conditioning + information_suppression interaction)"
+    },
+    {
+      "id": "omega_continental_cartel_feasibility",
+      "description": "Can economy-wide seller cartels form at continental scale under open capital accounts, or is the post-1998 convergence an equilibrium rather than a trough? The answer determines whether the organizational program in 'What This Changes' is a strategy or a eulogy. Cross-national regression of responsiveness on union density × scale × capital openness would up-tier this from hypothesis to finding.",
+      "source": "Unresolved Questions section; scale_ceiling Tier 3 status"
+    },
+    {
+      "id": "omega_brokerage_payment_divergence",
+      "description": "When bloc leadership is paid in access and members are paid in policy, on what schedule do the two payment streams diverge, and what does member defection look like when they do? The evangelical case will generate the data either way, but the general mechanism of intra-bloc agency conflict under brokerage (not sale) remains underspecified. This is the failure mode the organization_floor mechanism imports but does not yet model.",
+      "source": "Unresolved Questions section; brokerage vs sale distinction in organization_floor"
+    },
+    {
+      "id": "omega_responsiveness_audit_absence",
+      "description": "Why does no democratic state maintain a standing, public audit of policy responsiveness by income, organization, and issue domain? The essay frames this as the smallest possible demand (requires no new theory, no constitutional change) and the refusal as itself a finding. Under the market model, the omission is legible: the audit would publish the price schedule. But that is precisely why the demand is the right one—refusing it requires explaining why a democracy is better off not knowing.",
+      "source": "The Measurement section; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_dobbs_leverage_decay_timeline",
+      "description": "The essay predicts evangelical bloc leverage across candidate selection, agenda-setting, judicial pipeline, and turnout bargaining should decay materially within two presidential cycles of Dobbs (2022-2032). Early post-delivery data (abortion-referendum losses, suburban realignment) runs the predicted direction, but comprehensive measurement across all four channels is not yet available. If leverage is undiminished through 2028/2032, the prediction fails and the model loses its dynamic component.",
+      "source": "brokerage_endgame deferred axis; The Forty-Year Purchase section forward prediction"
+    },
+    {
+      "id": "omega_elite_monoculture_operationalization",
+      "description": "The elite-error prediction (takeover ruptures cluster where elite narrative environments are most closed) is stated without an operationalization of 'monocultures.' Comparative measures of elite information-source diversity against rupture incidence would up-tier this from Tier 3 hypothesis to testable claim. Acceptable at current tier with up-tier path named, but watch in review.",
+      "source": "elite_feedback_degradation deferred axis; Metadata adversarial review note"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan drew from political economy (Ferguson investment theory), institutional analysis (Federalist 10, chokepoint structure), behavioral economics (information asymmetry, stake-mispricing), comparative politics (four-country European data), and labor history (union density trajectories). Dark matter probes surfaced agenda_conditioning (absence of non-decisions in responsiveness datasets) and elite_feedback_degradation (incumbents consuming own narrative). All six selected axes passed §3 pairwise independence testing with distinct observables and non-collapsing ε values. The essay's own metadata documents adversarial review and brittleness testing, indicating internal fracture-awareness."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Not a commitment system. The topic analyzes democracy as a market mechanism rather than a fixed interpretive tradition. While the essay references constitutional structure (Federalist 10, chokepoint architecture) and judicial appointments (Dobbs), these are analyzed as institutional constraints within a market system, not as kernels requiring interpretive fidelity. The 'democracy' label itself is contested (democracy vs oligarchy vs constrained exchange system), but this is a taxonomic dispute about what label fits the observed mechanism, not a dispute about how to read a shared commitment that grounds authority. No stabilized kernel, no interpretive authority structure claiming fidelity to a fixed reference.",
+    "authority_description": null,
+    "drift_status": null,
+    "candidate_pattern": null
+  }
+}

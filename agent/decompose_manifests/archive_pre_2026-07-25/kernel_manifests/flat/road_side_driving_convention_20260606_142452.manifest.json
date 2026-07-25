@@ -1,0 +1,123 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Transportation Engineering / Institutional Coordination / Path Dependency",
+  "family_id": "road_side_driving_convention",
+  "topic_summary": "Analysis of which side of the road vehicles should drive on. This appears to be a coordination problem with strong network effects and path dependency, not a contested kernel with multiple legitimate readings of a shared commitment. The question is fundamentally about coordination equilibria, not interpretive disagreement about a fixed reference point.",
+  "extraction_summary": {
+    "entity_count": 3,
+    "claim_count": 2,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Left-hand traffic (LHT) countries (35% of world population, including UK, Japan, India, Australia)",
+      "Right-hand traffic (RHT) countries (65% of world population, including US, China, most of Europe)",
+      "Border-crossing infrastructure (bridges, tunnels requiring side-switching)"
+    ],
+    "key_tensions": [
+      "Network coordination vs switching costs (countries locked into historical choice vs efficiency gains from standardization)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Not a commitment system. No fixed reference point grounds legitimacy of either choice.",
+    "authority_description": "National traffic law; no interpretive authority claiming kernel fidelity",
+    "drift_status": "not_applicable",
+    "candidate_pattern": "not_applicable",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "The topic lacks a shared commitment that parties read differently. LHT and RHT are not competing interpretations of one kernel — they are two arbitrary-but-stable coordination equilibria. No authority claims legitimacy by pointing to a fixed text or immutable practice-norm. The 'disagreement' is not about what a kernel means but about which equilibrium a jurisdiction locked into historically. This is pure coordination theory, not commitment system structure."
+  },
+  "axes": [
+    {
+      "claim_id": "network_coordination_lock_in",
+      "human_readable": "Network Coordination Lock-In (Path-Dependent Equilibrium Selection)",
+      "structural_delta": "Once a jurisdiction adopts LHT or RHT, switching costs (vehicle fleet, road infrastructure, driver training) create self-reinforcing lock-in",
+      "primary_observable": "Switching cost estimates (Sweden 1967: ~$120M in 1967 dollars for 8M population); border infrastructure complexity (Lotus Bridge HK-Macau)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "standardization_pressure"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical constraint base; captures the core coordination problem"
+    },
+    {
+      "claim_id": "standardization_pressure",
+      "human_readable": "Standardization Pressure (Global Trade & Tourism Efficiency)",
+      "structural_delta": "Economic pressure toward global standardization (vehicle manufacturing, cross-border logistics, tourism) vs sovereignty over traffic law",
+      "primary_observable": "Vehicle export market segmentation (RHD vs LHD production lines); cross-border traffic volume",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "network_coordination_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Downstream coordination mechanism; structurally distinct from lock-in (different observable: trade efficiency vs switching cost)"
+    },
+    {
+      "claim_id": "colonial_legacy_persistence",
+      "human_readable": "Colonial Legacy Persistence (Imperial Diffusion Pattern)",
+      "structural_delta": "LHT/RHT distribution maps onto former British Empire vs Continental European colonial influence",
+      "primary_observable": "Correlation between colonial history and current traffic side (former British colonies predominantly LHT)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "network_coordination_lock_in"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical explanation for initial equilibrium selection, but structurally redundant with network_coordination_lock_in mountain (the lock-in captures the persistence mechanism regardless of origin)"
+    }
+  ],
+  "generation_sequence": [
+    "network_coordination_lock_in",
+    "standardization_pressure"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "colonial_legacy_persistence",
+      "structural_delta": "LHT/RHT distribution maps colonial influence patterns",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical origin story for equilibrium selection; structurally captured by network_coordination_lock_in mountain (lock-in mechanism operates identically regardless of whether initial choice was colonial inheritance, papal decree, or random selection)"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_safety_differential",
+      "description": "Is there a measurable safety difference between LHT and RHT? If yes, the mountain becomes a snare (locked into suboptimal equilibrium). Current evidence suggests no significant difference after controlling for road quality and enforcement.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — safety claims absent from extraction"
+    },
+    {
+      "id": "omega_autonomous_vehicle_disruption",
+      "description": "Do autonomous vehicles eliminate the switching cost mountain? If AVs can switch sides programmatically, network_coordination_lock_in may collapse to a rope (software update coordination problem).",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — AV manufacturers benefit from standardization but technology may eliminate the physical constraint"
+    },
+    {
+      "id": "omega_kernel_misidentification",
+      "description": "Could this be reframed as a contested kernel if we identify a hidden shared commitment (e.g., 'traffic flow should minimize collision risk')? Current analysis finds no such kernel — LHT and RHT are functionally equivalent solutions to the same coordination problem, not competing interpretations of a fixed principle.",
+      "source": "§1.3-K kernel/not-kernel decision — tested and rejected"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel hypothesis was tested and correctly rejected. The topic decomposes cleanly into two coordination axes (lock-in mountain + standardization rope) with one deferred historical axis."
+  }
+}

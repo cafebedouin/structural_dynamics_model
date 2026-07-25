@@ -1,0 +1,262 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / Cultural Anthropology / Legal History",
+  "family_id": "dueling_decline_honor_settlement",
+  "topic_summary": "Analysis of dueling's disappearance as an honor-settlement mechanism in the 18th-19th centuries, examining whether this represents a simple decline (practice fell to fringe status), a cultural contraction (became unthinkable as honor codes transformed), or an overdetermined composite. The research context flags this as a candidate contested kernel with a contraction edge.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Aristocratic officer class (traditional dueling practitioners)",
+      "Emerging middle class (aspirational duelists seeking gentleman status)",
+      "Evangelical reformers / Clapham Sect (anti-dueling activists)",
+      "Utilitarian philosophers (Bentham et al., welfare-maximization framework)",
+      "Prince Albert / British military establishment (institutional reform advocates)",
+      "American North vs South (regional variation in persistence)",
+      "Civil War veterans (post-1865 cohort rejecting dueling)",
+      "Print media / libel courts (alternative dispute resolution mechanisms)"
+    ],
+    "key_tensions": [
+      "Honor-as-willingness-to-die vs honor-as-public-reputation (definitional shift)",
+      "Aristocratic exclusivity vs middle-class aspiration (class transmission vector)",
+      "Private satisfaction vs public spectacle (changing social function)",
+      "Regional persistence (South/West) vs Northern abandonment (institutional development gradient)",
+      "Pre-Civil War romantic violence vs post-Civil War mass-casualty revulsion"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The honor code as adjudicative substrate: a shared commitment that personal honor requires satisfaction through ritualized violence when publicly challenged, grounding the legitimacy of dueling as dispute resolution",
+    "authority_description": "Peer recognition within the gentleman class; no formal adjudicator but social enforcement through ostracism for refusal and for excessive/improper challenges",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Petrification (honor code claimed as immutable natural law of masculine virtue, but interpretive drift—what constitutes insult, who qualifies as gentleman—accumulated covertly until system collapse)",
+    "is_contested_kernel": true,
+    "kernel_id": "honor_satisfaction_substrate",
+    "readings": [
+      {
+        "reading_id": "practice_decline_reading",
+        "commitment": "Honor code persists as normative substrate; dueling declined due to exogenous enforcement (legal prohibition, institutional barriers, opportunity cost)",
+        "authority_grounding": "Continuity of honor-as-willingness-to-risk framework; decline is suppression not delegitimation",
+        "sibling_readings": [
+          "cultural_contraction_reading",
+          "composite_overdetermined_reading"
+        ],
+        "expected_structural_delta": "Dueling remains thinkable but impractical; honor code survives in attenuated forms (military codes, Southern 'culture of honor'); constraint is rope (coordination failure under legal pressure) not mountain erosion"
+      },
+      {
+        "reading_id": "cultural_contraction_reading",
+        "commitment": "Honor code itself underwent foundational transformation; dueling became unthinkable as 'cultures of honor' gave way to 'cultures of dignity'",
+        "authority_grounding": "Enlightenment redefinition of honor as internal virtue vs external reputation; Evangelical conscience vs aristocratic display",
+        "sibling_readings": [
+          "practice_decline_reading",
+          "composite_overdetermined_reading"
+        ],
+        "expected_structural_delta": "Dueling exits the thinkable action-set; honor code collapses as interpretive substrate; constraint is mountain erosion (the physical/social substrate supporting the practice disintegrates) not mere suppression"
+      },
+      {
+        "reading_id": "composite_overdetermined_reading",
+        "commitment": "Decline was overdetermined: exogenous suppression (legal/institutional) AND endogenous delegitimation (honor code transformation) operated simultaneously with non-independent causal pathways",
+        "authority_grounding": "Historical contingency; multiple sufficient causes with feedback loops (e.g., legal prohibition enabled by shifting honor norms, which further accelerated norm shift)",
+        "sibling_readings": [
+          "practice_decline_reading",
+          "cultural_contraction_reading"
+        ],
+        "expected_structural_delta": "Dueling's disappearance exhibits both rope-breaking (coordination collapse under legal pressure) AND mountain erosion (honor substrate transformation); the two mechanisms are causally entangled, not additive"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "practice_decline_reading",
+        "reading_b": "cultural_contraction_reading",
+        "basis": "Practice decline assumes honor-as-willingness-to-risk remains a coherent normative framework (dueling is suppressed but not delegitimated). Cultural contraction assumes that framework itself collapsed (dueling became incoherent as honor redefined). No single account can hold both: either the substrate persists or it doesn't."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "practice_decline_reading",
+      "human_readable": "Practice Decline (Exogenous Suppression)",
+      "structural_delta": "Dueling declined due to legal prohibition, institutional barriers, and opportunity costs, while honor-as-willingness-to-risk framework persisted",
+      "primary_observable": "Legal penalties for dueling; military court-of-honor adoption rates; regional persistence in less-institutionalized South/West; post-decline honor-code survivals (military academies, Southern 'culture of honor')",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "state_legal_monopoly",
+      "victim": "aristocratic_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: tests whether decline is coordination failure under exogenous pressure with honor substrate intact"
+    },
+    {
+      "claim_id": "cultural_contraction_reading",
+      "human_readable": "Cultural Contraction (Honor Code Transformation)",
+      "structural_delta": "Honor code itself underwent foundational redefinition from external-reputation-via-violence to internal-virtue-via-civility, rendering dueling unthinkable",
+      "primary_observable": "Enlightenment/Evangelical discourse on honor; shift from satisfaction-seeking to libel-court usage; post-Civil War 'change in heart' testimony; middle-class adoption of print-media reputation defense",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: tests whether decline is substrate erosion (mountain collapse) not suppression"
+    },
+    {
+      "claim_id": "composite_overdetermined_reading",
+      "human_readable": "Composite Overdetermined (Entangled Causation)",
+      "structural_delta": "Decline was overdetermined by simultaneous exogenous suppression AND endogenous delegitimation with non-independent causal pathways",
+      "primary_observable": "Temporal correlation of legal reform and honor-norm shift; feedback loops (e.g., Prince Albert's court-of-honor proposal enabled by and accelerating norm change); Civil War as simultaneous exogenous shock (mass casualties) and endogenous catalyst (honor-code delegitimation)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_state_capacity",
+      "victim": "aristocratic_dispute_resolution_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: tests whether the two mechanisms are causally entangled rather than independent or sequential"
+    },
+    {
+      "claim_id": "class_transmission_vector",
+      "human_readable": "Class Transmission Vector (Middle-Class Aspiration)",
+      "structural_delta": "Dueling spread from aristocracy to middle class via military officer corps and aspirational gentleman status-seeking",
+      "primary_observable": "Middle-class dueling frequency; 'petticoat duel' incidence; civil servant participation rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "middle_class_status_seekers",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "practice_decline_reading",
+        "cultural_contraction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: class dynamics are upstream context for all three readings but do not constitute independent reading of honor kernel"
+    },
+    {
+      "claim_id": "regional_persistence_gradient",
+      "human_readable": "Regional Persistence Gradient (North vs South Institutional Development)",
+      "structural_delta": "Dueling persisted in South/West due to lower institutional development (weaker courts, slower market formalization) vs Northern abandonment",
+      "primary_observable": "Regional dueling frequency post-1800; court accessibility metrics; Hamilton-Burr as Northern watershed vs Southern continuity",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "practice_decline_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: regional variation is evidence FOR practice-decline reading (exogenous institutional pressure) but not independent axis"
+    },
+    {
+      "claim_id": "civil_war_watershed",
+      "human_readable": "Civil War as Watershed (Mass Casualty Revulsion)",
+      "structural_delta": "Civil War mass casualties (94,000+ Confederate dead) delegitimated romantic violence and rendered dueling absurd",
+      "primary_observable": "Post-1865 dueling frequency collapse; veteran testimony ('little to attract them to the duel'); public opinion shift",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "cultural_contraction_reading",
+        "composite_overdetermined_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Civil War is critical evidence for contraction/composite readings but is temporal catalyst not independent structural axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "practice_decline_reading",
+      "kernel_id": "honor_satisfaction_substrate",
+      "reading_id": "practice_decline_reading"
+    },
+    {
+      "claim_id": "cultural_contraction_reading",
+      "kernel_id": "honor_satisfaction_substrate",
+      "reading_id": "cultural_contraction_reading"
+    },
+    {
+      "claim_id": "composite_overdetermined_reading",
+      "kernel_id": "honor_satisfaction_substrate",
+      "reading_id": "composite_overdetermined_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "class_transmission_vector",
+      "structural_delta": "Dueling spread from aristocracy to middle class via military and aspirational status-seeking",
+      "hypothesis": "rope",
+      "deferral_reason": "Upstream context for all readings but not independent reading of honor kernel; class dynamics shape WHO dueled but not WHY dueling declined"
+    },
+    {
+      "claim_id": "regional_persistence_gradient",
+      "structural_delta": "Southern/Western persistence vs Northern abandonment due to institutional development gradient",
+      "hypothesis": "rope",
+      "deferral_reason": "Evidence FOR practice-decline reading (institutional pressure hypothesis) but not structurally independent axis"
+    },
+    {
+      "claim_id": "civil_war_watershed",
+      "structural_delta": "Mass casualties delegitimated romantic violence and rendered dueling absurd",
+      "hypothesis": "mountain",
+      "deferral_reason": "Critical temporal catalyst for contraction/composite readings but not independent structural axis; operates as exogenous shock within those readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_honor_code_survival",
+      "description": "If practice-decline reading is correct (honor substrate persists), where did the honor-as-willingness-to-risk framework go? Military academies and Southern 'culture of honor' are cited but not quantified. Does survival in attenuated form validate practice-decline or does attenuation itself constitute contraction?",
+      "source": "Practice-decline reading internal tension"
+    },
+    {
+      "id": "omega_libel_court_substitution",
+      "description": "Cultural-contraction reading cites middle-class shift to libel courts and print media as evidence of honor redefinition. But does legal substitution prove substrate transformation or merely mechanism substitution (same honor framework, different enforcement)? Requires operationalization of 'honor-as-internal-virtue' vs 'honor-as-external-reputation'.",
+      "source": "Cultural-contraction reading measurement ambiguity"
+    },
+    {
+      "id": "omega_causal_entanglement_test",
+      "description": "Composite-overdetermined reading claims non-independent causal pathways (legal reform enabled by norm shift, which accelerated norm shift). How would we distinguish true causal entanglement from sequential causation or mere correlation? Prince Albert's court-of-honor proposal is cited but adoption rate and effectiveness are not documented.",
+      "source": "Composite reading operationalization gap"
+    },
+    {
+      "id": "omega_civil_war_mechanism",
+      "description": "Civil War is cited as watershed but mechanism is ambiguous: was it mass casualties delegitimating violence (exogenous shock supporting contraction), or was it opportunity cost (veterans too busy rebuilding to duel, supporting practice-decline), or both? 'Change in heart' testimony is qualitative; quantitative veteran dueling rates pre/post-war not provided.",
+      "source": "Deferred axis civil_war_watershed + reading ambiguity"
+    },
+    {
+      "id": "omega_gender_dynamics",
+      "description": "Research mentions 'petticoat duels' as 'uncommon but a thing' but provides no structural analysis. If dueling was aspirational for middle-class women seeking gentleman-equivalent status, does this support practice-decline (honor framework persists, just suppressed) or contraction (honor framework was always gendered, women's participation was parody not adoption)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory): gender axis not decomposed"
+    },
+    {
+      "id": "omega_evangelical_utilitarian_coalition",
+      "description": "Evangelical 'Christian conscience' and Benthamite utilitarianism are cited as anti-dueling forces but their coalition is not explained. These are philosophically incompatible frameworks (deontological vs consequentialist). Did they operate independently, or was there a shared structural interest (e.g., both threatened by aristocratic autonomy)? Beneficiary scan suggests institutional state capacity as shared beneficiary.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): coalition structure unexplained"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Cultural-contraction reading classifies honor-code transformation as mountain (substrate erosion) but evidence is primarily qualitative discourse analysis (Enlightenment/Evangelical texts) and post-hoc testimony ('change in heart'). Quantitative measures of honor-framework persistence (e.g., military academy codes, Southern honor-culture metrics) are not provided. Mountain classification may be premature; could be rope (norm shift) or piton (policy-driven atrophy). Generated omega_honor_code_survival and omega_libel_court_substitution to bound this uncertainty."
+  },
+  "_seed_id": "dueling_decline"
+}

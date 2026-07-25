@@ -1,0 +1,203 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Institutional Design / International Relations / Political Economy",
+  "family_id": "eu_council_unanimity_2026",
+  "topic_summary": "Analysis of the EU Council's unanimity voting requirement for foreign policy decisions as a contested institutional kernel. The same rule is read as either a sovereignty-preserving coordination mechanism or as a structural veto-trap enabling minoritarian extraction. Each reading instantiates fundamentally different constraint structures with different beneficiary/victim sets.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "EU Council unanimity rule (Article 31 TEU - foreign policy voting requirement)",
+      "Member states (27 sovereign entities with veto power)",
+      "European External Action Service (EEAS - foreign policy coordination body)",
+      "Blocking minorities (states using veto for extraction)",
+      "Coalition of the willing (subset proposing policy shift)"
+    ],
+    "key_tensions": [
+      "Sovereignty preservation vs collective action capacity (unanimity as protection vs paralysis)",
+      "Majoritarian preference vs minoritarian veto (policy preferred by 26 states blocked by 1)"
+    ],
+    "key_mechanisms": [
+      "Unanimity requirement enforcement (formal veto power at Council vote)",
+      "Opt-out extraction (threatening veto to extract concessions/side-payments)",
+      "Constructive abstention (allows policy to proceed without blocking while opting out)"
+    ],
+    "key_absences": [
+      "Formal accountability mechanism for veto use (no requirement to justify blocking)",
+      "Graduated escalation pathway (no institutional mechanism to override persistent blocking)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_guarantor_reading",
+      "human_readable": "Unanimity as Sovereignty Guarantor (Essential Protection Against Coercion)",
+      "structural_delta": "Unanimity requirement interpreted as foundational safeguard preventing larger states from imposing foreign policy on smaller members",
+      "primary_observable": "Veto invocations framed as legitimate sovereignty defense; public discourse treating unanimity as non-negotiable principle",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "small_member_states",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel - instantiates unanimity as coordination mechanism protecting against majoritarian extraction"
+    },
+    {
+      "claim_id": "veto_trap_reading",
+      "human_readable": "Unanimity as Veto-Trap (Minoritarian Extraction Mechanism)",
+      "structural_delta": "Unanimity requirement interpreted as structural vulnerability enabling single states to extract concessions by threatening to block collective preference",
+      "primary_observable": "Frequency of policy blockage by minority; correlation between veto threats and side-payment extraction; foreign policy paralysis metrics",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "blocking_state",
+      "victim": "coalition_majority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel - instantiates unanimity as extraction mechanism with inverted beneficiary structure"
+    },
+    {
+      "claim_id": "diplomatic_capital_reading",
+      "human_readable": "Unanimity as Diplomatic Capital Allocation (Consensus-Building Norm)",
+      "structural_delta": "Unanimity requirement interpreted as forcing iterative consensus-building that strengthens legitimacy and commitment to adopted policies",
+      "primary_observable": "Policy implementation compliance rates; diplomatic negotiation duration before votes; post-adoption defection frequency",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel - captures consensus-building interpretation distinct from sovereignty/extraction binary"
+    },
+    {
+      "claim_id": "geopolitical_impotence_reading",
+      "human_readable": "Unanimity as Geopolitical Impotence (External Actor Exploitation)",
+      "structural_delta": "Unanimity requirement interpreted as making EU systematically vulnerable to external actors who can block collective response by capturing single member state",
+      "primary_observable": "Frequency of third-party influence over individual member vetos; correlation between external pressure and policy blockage; geopolitical response latency",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "external_powers",
+      "victim": "eu_collective_interest",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: fourth reading exceeds three-axis budget; captured indirectly through veto_trap_reading's extraction mechanics plus omega on external capture"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_guarantor_reading",
+      "kernel_id": "eu_council_unanimity",
+      "reading_id": "sovereignty_guarantor_reading"
+    },
+    {
+      "claim_id": "veto_trap_reading",
+      "kernel_id": "eu_council_unanimity",
+      "reading_id": "veto_trap_reading"
+    },
+    {
+      "claim_id": "diplomatic_capital_reading",
+      "kernel_id": "eu_council_unanimity",
+      "reading_id": "diplomatic_capital_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "geopolitical_impotence_reading",
+      "structural_delta": "Unanimity as external actor exploitation pathway via single-state capture",
+      "hypothesis": "snare",
+      "deferral_reason": "Fourth reading exceeds three-axis budget; external capture dimension partially covered by veto_trap_reading mechanics; omega generated for external influence pathway"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_external_capture_pathway",
+      "description": "Does external actor influence over individual member states constitute a distinct reading of unanimity, or is it a downstream consequence of the veto-trap reading? If Russia/China can reliably block EU sanctions through captured proxies, unanimity becomes snare with non-member beneficiary.",
+      "source": "Deferred axis geopolitical_impotence_reading + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_constructive_abstention_loophole",
+      "description": "Constructive abstention (Article 31 TEU) allows policy to proceed despite objection. Does this mechanism's existence invalidate the 'pure veto-trap' reading, or does its limited use confirm the sovereignty_guarantor reading's dominance in practice?",
+      "source": "Extraction mechanism inventory - escape valve not fully explored in any reading"
+    },
+    {
+      "id": "omega_reading_stability_under_crisis",
+      "description": "Do readings converge or diverge under acute crisis? Ukraine invasion context: did unanimity enable rapid sanctions coordination (sovereignty_guarantor wins) or did Hungary's blocking behavior vindicate veto_trap reading? Observational data post-2022 may adjudicate.",
+      "source": "F15 Premature Closure check - temporal variation in reading dominance not captured"
+    },
+    {
+      "id": "omega_qmv_expansion_trajectory",
+      "description": "If Treaty reform expands qualified majority voting to foreign policy domains, which reading predicted the reform's necessity? The push for QMV expansion is itself evidence for veto_trap reading's validity, but sovereignty_guarantor reading frames it as illegitimate sovereignty erosion.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - reform debate is meta-evidence about which reading holds in practice"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: temporal dimension underexplored - reading dominance may shift with geopolitical context (pre/post Ukraine invasion, enlargement dynamics). Generated omega_reading_stability_under_crisis to bound this uncertainty. All three readings remain structurally valid as interpretive commitments."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article 31 TEU unanimity requirement for Common Foreign and Security Policy decisions - the stabilized procedural rule that all parties must adjudicate their claims through",
+    "authority_description": "Treaty text as interpreted through Council practice and ECJ jurisprudence; member states claim authority to read unanimity principle through national sovereignty lens vs supranational effectiveness lens",
+    "drift_status": "partial",
+    "candidate_pattern": "Consensus Trap (Type 5) - authority is diffused across all member states equally; revision requires unanimity to change unanimity",
+    "is_contested_kernel": true,
+    "kernel_id": "eu_council_unanimity",
+    "readings": [
+      {
+        "reading_id": "sovereignty_guarantor_reading",
+        "commitment": "Unanimity as foundational protection against majoritarian coercion - each state must consent to collective action that implicates sovereignty",
+        "authority_grounding": "Westphalian sovereignty norm; Treaty founders' intent to preserve member state autonomy; constitutional traditions of smaller states",
+        "sibling_readings": [
+          "veto_trap_reading",
+          "diplomatic_capital_reading"
+        ],
+        "expected_structural_delta": "Veto use is legitimate sovereignty defense; beneficiary set = all small states; no extraction - blocking is rights-exercise. ε moderate because coordination costs exist but no systematic extraction occurs."
+      },
+      {
+        "reading_id": "veto_trap_reading",
+        "commitment": "Unanimity as structural vulnerability enabling minoritarian extraction through credible blocking threats",
+        "authority_grounding": "Collective action theory; observed patterns of side-payment extraction; supranational efficiency norm",
+        "sibling_readings": [
+          "sovereignty_guarantor_reading",
+          "diplomatic_capital_reading"
+        ],
+        "expected_structural_delta": "Veto use is extraction mechanism; beneficiary = blocking state; victim = coalition majority. High ε because blocking systematically transfers value from majority preference to minority position through concessions/opt-outs."
+      },
+      {
+        "reading_id": "diplomatic_capital_reading",
+        "commitment": "Unanimity as consensus-building requirement that forces iterative negotiation and strengthens policy legitimacy",
+        "authority_grounding": "Deliberative democracy theory; EU's historical consensus culture; diplomatic practice norms",
+        "sibling_readings": [
+          "sovereignty_guarantor_reading",
+          "veto_trap_reading"
+        ],
+        "expected_structural_delta": "Unanimity is coordination cost with legitimacy payoff; no fixed beneficiary/victim structure. Low ε because while negotiation is costly, it produces buy-in that reduces downstream defection. Unanimous decisions more durable than QMV impositions."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereignty_guarantor_reading",
+        "reading_b": "veto_trap_reading",
+        "basis": "Sovereignty_guarantor treats veto as legitimate rights-exercise (no extraction occurs); veto_trap treats identical veto as extraction mechanism (value transfer from majority to minority). No single framework can hold both: either blocking is rights-protection OR it is extraction, not both simultaneously. The empirical act is the same; the normative classification is mutually exclusive."
+      }
+    ]
+  },
+  "_seed_id": "eu_unanimity_rule_foreign_policy"
+}

@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Social Ontology / Identity Politics / Legal Classification",
+  "family_id": "sex_gender_category_kernel_2026",
+  "topic_summary": "Analysis of the contested category kernel governing membership in sex/gender classes. Two primary readings instantiate structurally different constraints: sex-as-biology grounds membership in immutable reproductive anatomy, while gender-as-identity grounds membership in subjective self-identification. Each reading produces different victim sets, different authority structures for adjudication, and different extractiveness profiles.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Biological sex classification system (chromosomal/anatomical/reproductive)",
+      "Gender identity framework (subjective self-identification)",
+      "Trans women (individuals assigned male at birth identifying as women)",
+      "Cis women (individuals assigned female at birth identifying as women)",
+      "Medical/legal gatekeepers (authority structures for category adjudication)",
+      "Single-sex spaces (prisons, sports, shelters, bathrooms)"
+    ],
+    "key_tensions": [
+      "Immutable biological criteria vs mutable identity criteria for category membership",
+      "Trans inclusion vs cis women's safety/fairness claims in single-sex spaces",
+      "Self-ID authority vs institutional gatekeeping authority"
+    ],
+    "key_mechanisms": [
+      "Legal recognition systems (birth certificate amendment, gender marker change)",
+      "Institutional access control (who adjudicates entry to sex-segregated spaces)"
+    ],
+    "key_absences": [
+      "Intersex individuals (neither reading cleanly accommodates non-binary biology)",
+      "Non-Western gender systems (two-spirit, hijra, fa'afafine traditions absent from both readings)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is that humans can be categorized into sex/gender classes with differential rights, protections, and access to spaces. Both readings accept this substrate but disagree on what grounds membership.",
+    "authority_description": "Biology reading: medical/scientific authority via chromosomal/anatomical observation. Identity reading: individual autonomy via self-declaration, sometimes mediated by psychological diagnosis.",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence",
+    "is_contested_kernel": true,
+    "kernel_id": "sex_gender_category",
+    "readings": [
+      {
+        "reading_id": "biology_reading",
+        "commitment": "Category membership determined by immutable reproductive biology (chromosomes, anatomy at birth)",
+        "authority_grounding": "Medical/scientific observation; chromosomal testing as final arbiter",
+        "sibling_readings": [
+          "identity_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Trans women excluded from 'woman' category; cis women are sole victim set for sex-based harms; high boundary enforcement costs; intersex individuals forced into binary"
+      },
+      {
+        "reading_id": "identity_reading",
+        "commitment": "Category membership determined by subjective gender identity (self-identification)",
+        "authority_grounding": "Individual autonomy; psychological self-knowledge as primary evidence",
+        "sibling_readings": [
+          "biology_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Trans women included in 'woman' category; victim set expands to include trans women experiencing misogyny; cis women lose exclusive claim to sex-based protections; low boundary enforcement costs but high conflict over space access"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Category membership determined by combination of biology and social transition (medical gatekeeping model)",
+        "authority_grounding": "Medical/psychiatric authority via diagnosis and treatment protocols",
+        "sibling_readings": [
+          "biology_reading",
+          "identity_reading"
+        ],
+        "expected_structural_delta": "Trans women conditionally included after medical transition; victim set partially overlaps; high gatekeeping costs; authority concentrated in medical institutions; excludes non-transitioning trans individuals"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "biology_reading",
+      "human_readable": "Sex-as-Biology Reading (Immutable Reproductive Anatomy)",
+      "structural_delta": "Category membership grounded in chromosomal/anatomical sex assigned at birth; immutable boundary",
+      "primary_observable": "Chromosomal karyotype (XX/XY); primary/secondary sex characteristics at birth; legal birth certificate sex marker under biology-reading jurisdictions",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "cis_women_exclusionary_feminists",
+      "victim": "trans_women",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest extractiveness; clearest victim set"
+    },
+    {
+      "claim_id": "identity_reading",
+      "human_readable": "Gender-as-Identity Reading (Subjective Self-Identification)",
+      "structural_delta": "Category membership grounded in individual's subjective gender identity; mutable boundary via self-declaration",
+      "primary_observable": "Self-reported gender identity; legal gender marker in self-ID jurisdictions; institutional policies allowing self-declaration",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "trans_rights_advocates",
+      "victim": "cis_women_in_contested_spaces",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structurally opposite victim set from biology_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Medical Gatekeeping Reading (Transition-Conditional Membership)",
+      "structural_delta": "Category membership grounded in medical diagnosis and treatment; conditional boundary via institutional authority",
+      "primary_observable": "Gender dysphoria diagnosis rates; hormone therapy/surgery completion; legal systems requiring medical evidence for gender marker change",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "medical_psychiatric_gatekeepers",
+      "victim": "non_transitioning_trans_individuals",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; reveals authority structure as independent constraint; highest institutional extraction"
+    },
+    {
+      "claim_id": "single_sex_space_access",
+      "human_readable": "Single-Sex Space Access Control (Institutional Boundary Enforcement)",
+      "structural_delta": "Mechanism for adjudicating entry to sex-segregated spaces (prisons, sports, shelters); enforcement varies by which reading institutions adopt",
+      "primary_observable": "Institutional policies on trans inclusion in single-sex spaces; litigation rates over access disputes; violence/safety incident rates in contested spaces",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "biology_reading",
+        "identity_reading",
+        "hybrid_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream application of kernel readings; captured by reading-level analysis"
+    },
+    {
+      "claim_id": "intersex_exclusion",
+      "human_readable": "Intersex Exclusion (Binary Enforcement on Non-Binary Biology)",
+      "structural_delta": "Neither biology nor identity reading accommodates individuals with DSDs (differences of sex development); forced binary assignment",
+      "primary_observable": "Intersex infant surgery rates; legal recognition of non-binary sex markers; intersex advocacy group positions on sex/gender frameworks",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "intersex_individuals",
+      "downstream_of": [],
+      "feeds_into": [
+        "biology_reading",
+        "identity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important absence but structurally upstream; omega material for kernel coherence boundary"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "biology_reading",
+      "kernel_id": "sex_gender_category",
+      "reading_id": "biology_reading"
+    },
+    {
+      "claim_id": "identity_reading",
+      "kernel_id": "sex_gender_category",
+      "reading_id": "identity_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "sex_gender_category",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "single_sex_space_access",
+      "structural_delta": "Institutional boundary enforcement for sex-segregated spaces",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream application mechanism; captured by reading-level constraint stories"
+    },
+    {
+      "claim_id": "intersex_exclusion",
+      "structural_delta": "Binary enforcement on non-binary biology",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structurally upstream absence; omega material for kernel coherence test"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_intersex_coherence",
+      "description": "Does the existence of intersex individuals (1.7% of population with DSDs) falsify the kernel itself? If biology is not cleanly binary, the biology_reading collapses. If identity is self-determined but intersex individuals are surgically assigned, the identity_reading's autonomy claim is undermined. The kernel may be a false binary imposed on non-binary substrate.",
+      "source": "Deferred axis intersex_exclusion + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_non_western_systems",
+      "description": "Two-spirit, hijra, fa'afafine, and other non-Western gender systems are absent from both readings. Are these third categories (falsifying the binary kernel) or cultural variations on the same binary (preserving the kernel)? If third categories, the kernel is Western-specific, not universal.",
+      "source": "Extraction absence + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_victim_set_symmetry",
+      "description": "Each reading claims a victim set: biology_reading claims cis women are victimized by trans inclusion; identity_reading claims trans women are victimized by exclusion. Are these symmetrical (both readings equally extractive) or asymmetrical (one reading's victims face greater harm)? Observable: comparative harm metrics (violence rates, suicide rates, discrimination measures) across victim sets.",
+      "source": "Structural analysis of beneficiary/victim pairs"
+    },
+    {
+      "id": "omega_authority_collapse",
+      "description": "The hybrid_reading concentrates authority in medical gatekeepers, but if gender dysphoria is depathologized (as homosexuality was), the medical authority grounding collapses. Is hybrid_reading a stable reading or a transitional state between biology and identity readings?",
+      "source": "Hybrid_reading authority structure analysis"
+    },
+    {
+      "id": "omega_sports_fairness",
+      "description": "Sports competition is the highest-salience single-sex space dispute. Does biology_reading preserve fairness (via testosterone/muscle mass differences) or does identity_reading preserve inclusion (via anti-discrimination norms)? Observable: performance data for trans athletes vs cis athletes in same category. This may be the empirical test case for which reading better satisfies the kernel's purpose.",
+      "source": "Deferred axis single_sex_space_access + domain-specific application"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings emit structurally distinct constraints with non-overlapping victim sets. Intersex exclusion and non-Western systems are genuine absences that test kernel coherence but do not invalidate the reading decomposition. Victim set symmetry (omega_victim_set_symmetry) is the primary empirical uncertainty."
+  },
+  "_seed_id": "sex_gender_kernel"
+}

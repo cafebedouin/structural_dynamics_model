@@ -1,0 +1,271 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Technology / Religious History / Media Studies",
+  "family_id": "printing_press_reformation_causality",
+  "topic_summary": "Analysis of the relationship between Gutenberg's printing press (1450s) and the Protestant Reformation (1517+), examining whether vernacular scripture spread was technologically inevitable or strategically deployed by reformers and printers as beneficiaries. The kernel contest centers on whether the press was an autonomous enabling force or a weaponized tool.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Gutenberg printing press (technology; invented 1450s; spread post-1462)",
+      "Martin Luther (reformer; 1517-1546; strategic user of print)",
+      "Hans Lufft (printer; Wittenberg; economic actor seeking profit)",
+      "Catholic Church (institutional authority; delayed print response)",
+      "Vernacular Bible translations (artifact; pre-existed press but accelerated post-1450)",
+      "Wittenberg publishers (print economy hub; 2,721 works 1517-1546)",
+      "Protestant territories (political units; censorship-resistant)",
+      "Catholic territories (political units; centralized censorship)"
+    ],
+    "key_tensions": [
+      "Technological determinism vs human agency (press as autonomous force vs strategic tool)",
+      "Economic incentive vs religious mission (printers profit-seeking vs reformers doctrine-spreading)",
+      "Centralized control vs distributed resistance (Catholic censorship vs Protestant fragmentation)",
+      "Intended scholarly debate vs unintended mass mobilization (Luther's Latin theses vs vernacular pamphlet war)"
+    ],
+    "key_mechanisms": [
+      "Print economy feedback loop: controversy drives sales, sales fund more printing, more printing amplifies controversy",
+      "Vernacularization cascade: once one territory translates, competitive pressure forces others to follow",
+      "Censorship arbitrage: forbidden works printed in Protestant territories, smuggled into Catholic ones"
+    ],
+    "key_absences": [
+      "Literacy rates: source does not quantify what percentage of population could read vernacular texts",
+      "Counter-Reformation print strategy: Catholic response mentioned as 'delayed' but not structurally analyzed"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The causal relationship between printing press technology and Protestant Reformation success",
+    "authority_description": "Historians, technology theorists, and religious scholars claiming interpretive authority over what 'caused' the Reformation",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "press_reformation_causality",
+    "readings": [
+      {
+        "reading_id": "technological_determinism",
+        "commitment": "The printing press as autonomous enabling technology made vernacular scripture spread and Reformation success inevitable",
+        "authority_grounding": "Technological history / media theory (McLuhan tradition)",
+        "sibling_readings": [
+          "strategic_deployment",
+          "co_constitution"
+        ],
+        "expected_structural_delta": "Technology classified as mountain (physical constraint); human actors as downstream responders; beneficiary structure obscured"
+      },
+      {
+        "reading_id": "strategic_deployment",
+        "commitment": "Reformers and printers strategically weaponized printing technology to achieve religious and economic goals",
+        "authority_grounding": "Agency-centered history / political economy",
+        "sibling_readings": [
+          "technological_determinism",
+          "co_constitution"
+        ],
+        "expected_structural_delta": "Technology classified as rope (coordination tool); reformers/printers as beneficiaries; press as snare deployed against Church authority"
+      },
+      {
+        "reading_id": "co_constitution",
+        "commitment": "Technology and human agency co-constituted the Reformation through feedback loops between print economy and religious controversy",
+        "authority_grounding": "Science and Technology Studies / historical sociology",
+        "sibling_readings": [
+          "technological_determinism",
+          "strategic_deployment"
+        ],
+        "expected_structural_delta": "Technology classified as scaffold (enabling infrastructure); multiple tangled_rope dynamics between printers, reformers, Church; no single beneficiary but distributed extraction patterns"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "technological_determinism",
+        "reading_b": "strategic_deployment",
+        "basis": "Determinism requires technology as autonomous causal force (mountain); strategic deployment requires technology as neutral tool awaiting human direction (rope). No framework can hold both: either the press made the Reformation inevitable regardless of human choices, or human choices made the Reformation by deploying the press."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "technological_determinism",
+      "human_readable": "Technological Determinism (Press as Autonomous Enabling Force)",
+      "structural_delta": "Printing press technology as autonomous causal agent making vernacular scripture spread inevitable",
+      "primary_observable": "Correlation between press adoption (cities with press by 1500) and Reformation acceptance rates (52.1% higher by 1530)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents technological determinism frame"
+    },
+    {
+      "claim_id": "strategic_deployment",
+      "human_readable": "Strategic Deployment (Press as Weaponized Tool)",
+      "structural_delta": "Reformers and printers strategically deploying printing technology for doctrinal change and profit",
+      "primary_observable": "Wittenberg output (2,721 works 1517-1546, avg 91/year); Luther's deliberate vernacular strategy; Lufft's profit-seeking",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reformers_and_printers",
+      "victim": "catholic_church_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents agency-centered frame with clear beneficiary structure"
+    },
+    {
+      "claim_id": "co_constitution",
+      "human_readable": "Co-Constitution (Technology-Agency Feedback Loop)",
+      "structural_delta": "Print economy and religious controversy mutually reinforcing through feedback loops",
+      "primary_observable": "Print economy feedback mechanism (controversy drives sales, sales fund printing, printing amplifies controversy); censorship arbitrage patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; represents synthesis frame capturing feedback dynamics"
+    },
+    {
+      "claim_id": "literacy_constraint",
+      "human_readable": "Literacy Constraint (Vernacular Access Ceiling)",
+      "structural_delta": "Actual literacy rates limiting who could access vernacular texts regardless of availability",
+      "primary_observable": "Literacy rate data (absent from source); oral transmission mechanisms",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "technological_determinism",
+        "strategic_deployment"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: critical upstream constraint but data absent; would affect all three readings equally"
+    },
+    {
+      "claim_id": "censorship_resistance",
+      "human_readable": "Censorship Resistance (Protestant Fragmentation Advantage)",
+      "structural_delta": "Protestant territorial fragmentation making censorship less effective than Catholic centralization",
+      "primary_observable": "Censorship success rates Catholic vs Protestant territories; cross-border smuggling patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strategic_deployment",
+        "co_constitution"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within strategic_deployment reading as mechanism; independent axis would duplicate"
+    },
+    {
+      "claim_id": "economic_incentive_alignment",
+      "human_readable": "Economic Incentive Alignment (Printer Profit Motive)",
+      "structural_delta": "Printers' profit-seeking aligning with reformers' distribution needs",
+      "primary_observable": "Lufft's Bible production volume (1534-1574); competitive printing market structure",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "printers",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strategic_deployment",
+        "co_constitution"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: subsumed within strategic_deployment and co_constitution readings as beneficiary mechanism"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "technological_determinism",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "technological_determinism"
+    },
+    {
+      "claim_id": "strategic_deployment",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "strategic_deployment"
+    },
+    {
+      "claim_id": "co_constitution",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "co_constitution"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "literacy_constraint",
+      "structural_delta": "Literacy rates limiting vernacular text access",
+      "hypothesis": "mountain",
+      "deferral_reason": "Critical upstream constraint but empirical data absent from source; would affect all three readings equally without changing their structural relationship"
+    },
+    {
+      "claim_id": "censorship_resistance",
+      "structural_delta": "Protestant fragmentation enabling censorship arbitrage",
+      "hypothesis": "rope",
+      "deferral_reason": "Mechanism captured within strategic_deployment reading; independent axis would duplicate without adding structural novelty"
+    },
+    {
+      "claim_id": "economic_incentive_alignment",
+      "structural_delta": "Printer profit motive aligning with reformer distribution needs",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Beneficiary structure subsumed within strategic_deployment and co_constitution readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_literacy_rates",
+      "description": "Source does not quantify literacy rates. If vernacular literacy was <10%, the 'inevitability' claim collapses—press enables but does not determine. If >30%, technological determinism gains strength. Oral transmission mechanisms (sermons, public readings) may bypass literacy constraint entirely.",
+      "source": "Absence Inventory (§1.1) + deferred axis literacy_constraint"
+    },
+    {
+      "id": "omega_counterfactual_catholic_response",
+      "description": "What if Catholic Church had matched Protestant print output 1517-1530? Source notes 'delayed response' but does not analyze structural barriers. If delay was strategic choice (relying on 'old authority'), that supports strategic_deployment reading. If delay was institutional incapacity, that supports technological_determinism (Church couldn't adapt fast enough).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction entity 'Catholic Church delayed print response'"
+    },
+    {
+      "id": "omega_pre_reformation_translations",
+      "description": "Source notes vernacular translations pre-existed the press (English, Italian, Spanish). If pre-press translations had comparable circulation via manuscript, press becomes acceleration not enablement. If pre-press translations were elite-only, press becomes qualitative shift. Empirical data on pre-1450 vernacular Bible circulation would resolve.",
+      "source": "Extraction claim 'translations had already been produced' + technological_determinism reading validity"
+    },
+    {
+      "id": "omega_correlation_causation_decay",
+      "description": "Press correlation with Reformation acceptance weakens over time (52.1% by 1530 → 28.7% by 1600). Source attributes to 'other factors (politics, greater penetration of printing)'. This decay pattern challenges technological_determinism (if press was causal, effect should strengthen as penetration increases). Supports co_constitution reading (early adopter cities had other structural features making them receptive).",
+      "source": "Extraction claim 'weakening effect of press over 16th century' + primary observable for technological_determinism"
+    },
+    {
+      "id": "omega_women_reformers_visibility",
+      "description": "Source lists four women reformers who published (von Grumbach, Zell, Dentière, Morata). Were they beneficiaries of print enabling female voices, or exceptions proving the rule of male-dominated print economy? If print lowered barriers to female authorship, that supports technological_determinism (technology as democratizing force). If women remained marginal despite print, that supports strategic_deployment (male reformers controlled the tool).",
+      "source": "Extraction entity 'Women Reformers' + beneficiary structure analysis"
+    },
+    {
+      "id": "omega_kernel_validity",
+      "description": "Is this a genuine contested kernel or a false dichotomy? The three readings may not be mutually exclusive interpretive commitments but complementary analytical lenses. A historian could hold: (1) press was necessary condition (technological_determinism), (2) reformers strategically deployed it (strategic_deployment), (3) feedback loops amplified both (co_constitution). If all three can coexist in a single framework, the kernel collapses into a non-contested multi-causal explanation.",
+      "source": "§1.3-K kernel/reading decomposition + axiom_contradictions validity check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: technological_determinism reading classifies press as mountain (physical constraint) but correlation decay pattern (52.1% → 28.7%) and pre-existing vernacular translations challenge mountain status. May be rope or scaffold misclassified as mountain due to availability bias (technology history literature privileges technological agency). Generated omega_correlation_causation_decay and omega_pre_reformation_translations to bound uncertainty. Also generated omega_kernel_validity: the three readings may be complementary lenses rather than mutually exclusive commitments, which would collapse the kernel structure."
+  },
+  "_seed_id": "printing_press_reformation"
+}

@@ -1,0 +1,206 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Jewish Law / Commitment Systems",
+  "family_id": "rabbinic_kodashim_preservation",
+  "topic_summary": "Analysis of the 1,900-year continuous study of Temple sacrifice laws (Kodashim) without practical performance since 70 CE. The study-as-exercise reading treats ongoing study as legitimate occupation of the commitment kernel. The performance-only reading treats non-performable law as ceremonial husk. This contest collapses the distinction between exercising a commitment and archiving its symbolic form, positioning at the D1/D4 boundary between functioning and absent drift mechanisms.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Mishnah Kodashim (codified sacrifice law, ~200 CE, fourth of six Mishnaic orders)",
+      "Second Temple (destroyed 70 CE, material prerequisite for sacrifice performance)",
+      "Rabbinic authority structure (claims interpretive legitimacy via unbroken study chain)",
+      "Performance practitioners (hypothetical: those who would execute if Temple rebuilt)",
+      "Study practitioners (actual: scholars transmitting knowledge without performance)"
+    ],
+    "key_tensions": [
+      "Study continuity vs performance absence (1,900 years of transmission with zero enactment)",
+      "Commitment occupation vs symbolic preservation (is continuous study maintenance or memorial?)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Temple sacrifice law (Kodashim) as divine command requiring specific ritual performance at specific location",
+    "authority_description": "Rabbinic interpretive authority grounded in claimed unbroken transmission chain (Oral Torah) from Sinai revelation",
+    "drift_status": "absent",
+    "candidate_pattern": "D1 (Revision Denial) collapsing into D4 (Ceremonial Husk)",
+    "is_contested_kernel": true,
+    "kernel_id": "kodashim_obligation",
+    "readings": [
+      {
+        "reading_id": "study_as_occupation",
+        "commitment": "Continuous study of sacrifice law constitutes legitimate occupation of the divine command kernel even without performance",
+        "authority_grounding": "Talmudic principle 'studying the laws of sacrifice is equivalent to offering sacrifice' (b. Menachot 110a); study preserves the chain of transmission",
+        "sibling_readings": [
+          "performance_prerequisite",
+          "memorial_archival"
+        ],
+        "expected_structural_delta": "Study itself becomes the constraint's victim set (scholars must maintain competence); beneficiary is rabbinic authority structure claiming legitimacy through unbroken knowledge chain; zero extractiveness from non-performance"
+      },
+      {
+        "reading_id": "performance_prerequisite",
+        "commitment": "The divine command kernel requires material performance; study without enactment is preparatory holding pattern awaiting Temple reconstruction",
+        "authority_grounding": "Biblical text specifies physical altar, specific location (Temple Mount), priestly lineage performing actual sacrifice; non-metaphorical reading of Torah law",
+        "sibling_readings": [
+          "study_as_occupation",
+          "memorial_archival"
+        ],
+        "expected_structural_delta": "Constraint remains unoccupied during Temple absence; current study is scaffold for future performance; victims are those obligated to sacrifice who cannot; extractiveness undefined until performance resumes"
+      },
+      {
+        "reading_id": "memorial_archival",
+        "commitment": "Post-70 CE study preserves cultural memory of extinct practice; the commitment kernel is acknowledged as historically binding but presently inactive",
+        "authority_grounding": "Sociological/historical reading; rabbinic authority as cultural custodianship rather than active legal jurisdiction over unperformable law",
+        "sibling_readings": [
+          "study_as_occupation",
+          "performance_prerequisite"
+        ],
+        "expected_structural_delta": "No active constraint; study is archival labor; beneficiary is collective Jewish memory; victim set empty; constraint type collapses to ceremonial husk (D4)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "study_as_occupation",
+        "reading_b": "performance_prerequisite",
+        "basis": "Study-as-occupation holds that continuous study itself satisfies the divine command kernel; performance-prerequisite holds that only material sacrifice satisfies the kernel and study is preparatory. No single coherent framework can hold both: either study occupies the commitment or it does not."
+      },
+      {
+        "reading_a": "study_as_occupation",
+        "reading_b": "memorial_archival",
+        "basis": "Study-as-occupation claims the kernel remains actively binding via study; memorial-archival claims the kernel is historically binding but presently inactive. A framework cannot simultaneously hold a commitment as active and inactive."
+      },
+      {
+        "reading_a": "performance_prerequisite",
+        "reading_b": "memorial_archival",
+        "basis": "Performance-prerequisite treats the kernel as dormant but still binding (awaiting conditions); memorial-archival treats it as extinct (binding only in historical sense). These are mutually exclusive temporal claims about the commitment's current normative force."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_occupation",
+      "human_readable": "Study as Occupation (Continuous Transmission as Kernel Fulfillment)",
+      "structural_delta": "Study itself constitutes legitimate occupation of divine command; knowledge transmission is the commitment's current form",
+      "primary_observable": "Institutional investment in Kodashim study (yeshiva curricula, commentary production, examination standards); rabbinic discourse treating study as obligation-fulfilling rather than preparatory",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinic_authority_structure",
+      "victim": "scholars_obligated_to_maintain_competence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest institutional instantiation; reading that rabbinic authority explicitly endorses; captures the D1 revision-denial mechanism"
+    },
+    {
+      "claim_id": "performance_prerequisite",
+      "human_readable": "Performance Prerequisite (Material Enactment as Kernel Requirement)",
+      "structural_delta": "Divine command requires physical sacrifice at specific location; study is holding pattern until Temple reconstruction enables performance",
+      "primary_observable": "Temple Mount activism, Third Temple movement institutional activity, halachic rulings treating sacrifice as obligatory-if-possible rather than symbolically fulfilled",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "those_obligated_to_sacrifice_but_unable",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct observable (performance-readiness vs study-maintenance); minority reading with political implications; captures scaffold constraint awaiting material precondition"
+    },
+    {
+      "claim_id": "memorial_archival",
+      "human_readable": "Memorial Archival (Cultural Preservation of Extinct Practice)",
+      "structural_delta": "Study preserves historical memory of binding-but-inactive commitment; kernel acknowledged as extinct rather than occupied or dormant",
+      "primary_observable": "Scholarly discourse framing Kodashim as historical rather than halachic (contrast with actively practiced law codes); museum-style educational framing",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": "collective_jewish_memory",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Captures D4 ceremonial husk endpoint; provides sociological lens distinct from religious-normative readings; completes the D1→D4 trajectory analysis"
+    },
+    {
+      "claim_id": "authority_legitimation_mechanism",
+      "human_readable": "Authority Legitimation Through Unbroken Chain (Study as Credential)",
+      "structural_delta": "Continuous Kodashim study functions as proof of rabbinic authority's unbroken transmission claim regardless of performance viability",
+      "primary_observable": "Frequency of transmission-chain appeals in rabbinic discourse; institutional prestige allocation to Kodashim scholars despite non-performance",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rabbinic_establishment",
+      "victim": "alternative_authority_claimants",
+      "downstream_of": [
+        "study_as_occupation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: beneficiary structure overlaps study_as_occupation reading; captured implicitly in that reading's constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "study_as_occupation",
+      "kernel_id": "kodashim_obligation",
+      "reading_id": "study_as_occupation"
+    },
+    {
+      "claim_id": "performance_prerequisite",
+      "kernel_id": "kodashim_obligation",
+      "reading_id": "performance_prerequisite"
+    },
+    {
+      "claim_id": "memorial_archival",
+      "kernel_id": "kodashim_obligation",
+      "reading_id": "memorial_archival"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "authority_legitimation_mechanism",
+      "structural_delta": "Continuous study as proof of unbroken rabbinic transmission chain",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Beneficiary structure overlaps study_as_occupation; authority-legitimation dynamic captured in that reading's constraint analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_messiah_conditionality",
+      "description": "Does the performance_prerequisite reading treat Temple reconstruction as humanly achievable (political/engineering project) or messianically gated (divine intervention required)? If messianically gated, the constraint collapses to D4 despite performative framing.",
+      "source": "Independence testing between performance_prerequisite and memorial_archival readings"
+    },
+    {
+      "id": "omega_karaite_rejection",
+      "description": "Karaite Judaism rejected rabbinic authority and Oral Torah legitimacy. Did Karaite treatment of Kodashim post-70 CE differ structurally? If so, control case for whether study-as-occupation is rabbinic innovation or necessity given Temple absence.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — rabbinic authority benefits from study-as-occupation reading"
+    },
+    {
+      "id": "omega_drift_status_boundary",
+      "description": "Is this D1 (revision denial with covert drift accumulation) or already-collapsed D4 (ceremonial husk with revision-denial rhetoric)? The 1,900-year duration without drift-surfacing mechanism suggests D4, but rabbinic discourse maintains D1 framing. Boundary case.",
+      "source": "Commitment system classification; candidate_pattern uncertainty"
+    },
+    {
+      "id": "omega_digital_analogue",
+      "description": "Software preservation communities maintain 'digital archaeology' of obsolete platforms/languages with zero deployment. Structural analogue to Kodashim study? If parallel, suggests memorial_archival reading captures broader pattern of knowledge-preservation-as-legitimation.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model operating within assumption that religious law is categorically different from technical knowledge"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings satisfy independence test (distinct observables, distinct authority groundings, mutually exclusive axioms). Kernel contest is genuine: study-as-occupation and performance-prerequisite cannot coexist in single coherent framework."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

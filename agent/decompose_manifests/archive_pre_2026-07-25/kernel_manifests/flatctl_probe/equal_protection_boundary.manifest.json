@@ -1,0 +1,146 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Education Policy / Civil Rights",
+  "family_id": "affirmative_action_admissions_2026",
+  "topic_summary": "Analysis of affirmative action in university admissions as a contested kernel: the Equal Protection Clause generates structurally different constraints depending on whether it is read through a remedial lens (race-consciousness permitted to correct historical exclusion), a colorblind lens (any racial classification categorically forbidden), or an antisubordination lens (targeting caste-like hierarchy rather than classification per se). The contest is not about policy preferences but about which constraint the constitutional text actually instantiates.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Equal Protection Clause (Fourteenth Amendment kernel text)",
+      "University admissions offices (implementing authorities)",
+      "Supreme Court (interpretive authority post-Bakke through SFFA)",
+      "Historically excluded racial groups (beneficiaries under remedial reading)",
+      "Applicants claiming reverse discrimination (victims under colorblind reading)",
+      "Caste-like subordination structures (target under antisubordination reading)"
+    ],
+    "key_tensions": [
+      "Remedial vs colorblind interpretive commitments (mutually exclusive axioms about clause purpose)",
+      "Individual rights vs group-based remediation (unit of constitutional protection)",
+      "Formal equality vs substantive equality (what the clause protects)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "equal_protection_kernel",
+      "human_readable": "Equal Protection Clause as Contested Kernel",
+      "structural_delta": "The clause generates different constraints (different victim sets, different permissible state actions) depending on which reading is held",
+      "primary_observable": "Supreme Court doctrine shifts (Bakke diversity rationale vs SFFA colorblindness vs never-adopted antisubordination); state action permitted/forbidden under each reading",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel axis: all three readings proceed to generation as expansion of this single axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "remedial_reading",
+      "kernel_id": "equal_protection_kernel",
+      "reading_id": "remedial_reading"
+    },
+    {
+      "claim_id": "colorblind_reading",
+      "kernel_id": "equal_protection_kernel",
+      "reading_id": "colorblind_reading"
+    },
+    {
+      "claim_id": "antisubordination_reading",
+      "kernel_id": "equal_protection_kernel",
+      "reading_id": "antisubordination_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_class_based_alternative",
+      "description": "Is class-based affirmative action (socioeconomic status rather than race) a fourth reading, or does it collapse into colorblind (race-neutral) with different selection criteria? If distinct, it would require separate generation.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_international_comparison",
+      "description": "Do civil law or non-Western constitutional traditions hold structurally distinct readings of equality clauses that would not collapse into the three identified? E.g., Indian reservation system, South African transformative constitutionalism.",
+      "source": "§1.3-K lens diversity requirement"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "SFFA (2023) appears to constitutionalize colorblind reading, but does stare decisis make this a mountain (fixed constraint) or does it remain a contested kernel with suppressed alternatives?",
+      "source": "Commitment system drift status assessment"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings pass individually-holdable test and emit structurally different constraints. Lens diversity check: all three readings drawn from U.S. constitutional tradition; omega_international_comparison flags potential gap."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Equal Protection Clause of the Fourteenth Amendment as the stabilized constitutional text governing state use of racial classifications",
+    "authority_description": "Supreme Court interpretive supremacy via judicial review; legitimacy grounded in constitutional fidelity claim",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "equal_protection_kernel",
+    "readings": [
+      {
+        "reading_id": "remedial_reading",
+        "commitment": "The clause permits race-conscious state action when narrowly tailored to remedy documented historical exclusion or achieve compelling diversity interest",
+        "authority_grounding": "Bakke (1978) through Grutter (2003) precedent; remedial justice tradition",
+        "sibling_readings": [
+          "colorblind_reading",
+          "antisubordination_reading"
+        ],
+        "expected_structural_delta": "Universities may consider race as plus factor; historically excluded groups enter beneficiary set; rejected applicants who would have been admitted under race-blind process enter victim set; state has affirmative obligation to document remedial purpose"
+      },
+      {
+        "reading_id": "colorblind_reading",
+        "commitment": "The clause categorically forbids state use of racial classifications regardless of purpose; Constitution is color-blind",
+        "authority_grounding": "Harlan dissent (Plessy), originalist textualism, SFFA majority (2023)",
+        "sibling_readings": [
+          "remedial_reading",
+          "antisubordination_reading"
+        ],
+        "expected_structural_delta": "Any race-conscious admissions policy is per se unconstitutional; all applicants treated identically under formal equality; historically excluded groups lose remedial pathway; no state obligation to address effects of past discrimination"
+      },
+      {
+        "reading_id": "antisubordination_reading",
+        "commitment": "The clause targets caste-like subordination of historically oppressed groups, not classification per se; state action that entrenches hierarchy is forbidden, action that dismantles it is permitted",
+        "authority_grounding": "Critical race theory scholarship (Fiss, Balkin, Siegel); never adopted by Court majority but argued in briefs",
+        "sibling_readings": [
+          "remedial_reading",
+          "colorblind_reading"
+        ],
+        "expected_structural_delta": "State may use race-conscious measures to dismantle subordination; dominant groups cannot claim equal protection against remedial measures; victim set limited to those suffering subordination (not mere classification); beneficiary set is subordinated castes"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "remedial_reading",
+        "reading_b": "colorblind_reading",
+        "basis": "Remedial reading holds that the clause's purpose permits race-consciousness to correct exclusion; colorblind reading holds that any race-consciousness violates the clause's categorical prohibition. No framework can simultaneously hold both 'race-consciousness is constitutionally permitted for remedial purposes' and 'race-consciousness is categorically forbidden.'"
+      },
+      {
+        "reading_a": "colorblind_reading",
+        "reading_b": "antisubordination_reading",
+        "basis": "Colorblind reading treats all racial classifications as equally suspect regardless of direction; antisubordination reading holds that classifications entrenching hierarchy are forbidden while those dismantling it are permitted. No framework can simultaneously hold 'all racial classifications are equally forbidden' and 'classifications have different constitutional status based on subordination effects.'"
+      },
+      {
+        "reading_a": "remedial_reading",
+        "reading_b": "antisubordination_reading",
+        "basis": "Remedial reading requires narrow tailoring and compelling interest (strict scrutiny framework); antisubordination reading rejects strict scrutiny for anti-caste measures. While both permit race-consciousness, they rest on incompatible axioms about whether remedial measures must satisfy the same standard as discriminatory ones."
+      }
+    ]
+  },
+  "_seed_id": "equal_protection_boundary"
+}

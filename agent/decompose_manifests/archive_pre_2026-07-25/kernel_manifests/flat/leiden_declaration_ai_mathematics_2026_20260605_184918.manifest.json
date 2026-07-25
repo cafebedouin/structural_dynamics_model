@@ -1,0 +1,220 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Science Policy / Professional Ethics / Technology Governance",
+  "family_id": "leiden_declaration_ai_mathematics_2026",
+  "topic_summary": "The Leiden Declaration on Artificial Intelligence and Mathematics (June 2026) is a policy statement by 16 mathematicians from 15 universities, endorsed by the International Mathematical Union and 130+ signatories. It articulates five core values of mathematical practice (proof certainty, attribution, transparency, shared standards, autonomy) and identifies five structural threats from AI integration: unreliable proof generation, attribution erosion, incentive distortion, premature dissemination bypassing peer review, and loss of research autonomy. The declaration provides recommendations for individuals, organizations, policymakers, and industry, explicitly rejecting an AI ban while demanding safeguards to preserve disciplinary integrity.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Leiden Declaration Working Group (16 mathematicians convened by Jim Portegies, developed statement over 8 months)",
+      "International Mathematical Union (IMU) (endorsing organization; Ilka Agricola chairs Committee on Publishing)",
+      "Commercial AI developers (Google DeepMind, unspecified LLM providers; training on mathematical corpus without attribution)",
+      "Mathematical community (130+ signatories; peer reviewers; journal editors facing AI-proof influx)",
+      "AlphaProof/AlphaGeometry (neuro-symbolic systems; IMO medal-level performance; 9/353 Erdős problems solved)",
+      "Peter Scholze (Fields Medal laureate; personal statement avoiding AI-generated text)",
+      "arXiv and formal proof libraries (training data sources scraped without proper citation)",
+      "Lorentz Center workshop participants (60 researchers from 10 countries, September 2025)"
+    ],
+    "key_tensions": [
+      "AI capability vs verification burden (LLMs produce plausible but unreliable proofs; human reviewers cannot distinguish correct from subtly flawed arguments at scale)",
+      "Commercial incentives vs academic autonomy (tech companies prioritize showcase problems over mathematical significance; asymmetric collaboration terms; underfunded universities face pressure to align with industry)",
+      "Training data extraction vs author rights (AI models trained on arXiv/published corpus without consent or attribution; existing licenses not designed for AI use)",
+      "Speed of dissemination vs peer review integrity (DeepMind AlphaProof announcement 2024, peer-reviewed publication 1+ year later; press releases bypass community scrutiny)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "proof_verification_asymmetry",
+      "human_readable": "Proof Verification Asymmetry (Generation Outpaces Validation)",
+      "structural_delta": "AI systems generate mathematical arguments faster than human reviewers can verify correctness, creating a structural imbalance between production and validation capacity",
+      "primary_observable": "Ratio of AI-generated proof submissions to reviewer capacity; error detection rate in AI-generated vs human-generated proofs; time-to-verification for AI proofs",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ai_developers_claiming_capability",
+      "victim": "peer_review_system_integrity",
+      "downstream_of": [],
+      "feeds_into": [
+        "attribution_erosion_mechanism",
+        "premature_dissemination_bypass"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream to multiple downstream axes; core structural imbalance driving other threats"
+    },
+    {
+      "claim_id": "attribution_erosion_mechanism",
+      "human_readable": "Attribution Erosion Mechanism (Training Data Extraction Without Credit)",
+      "structural_delta": "AI models trained on published mathematical corpus return outputs that synthesize human work without proper citation, severing the link between contribution and credit",
+      "primary_observable": "Frequency of proper citation in AI-generated outputs; license violation rates; author consent for training data use",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "ai_developers_extracting_commons",
+      "victim": "individual_mathematicians_authorship_rights",
+      "downstream_of": [
+        "proof_verification_asymmetry"
+      ],
+      "feeds_into": [
+        "research_autonomy_capture"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (citation/licensing) from verification; feeds autonomy capture; snare extracting from commons"
+    },
+    {
+      "claim_id": "incentive_distortion_field",
+      "human_readable": "Incentive Distortion Field (Showcase Problems vs Mathematical Significance)",
+      "structural_delta": "Commercial AI development prioritizes problems that demonstrate model capability over problems of deep mathematical significance, distorting hiring, funding, and recognition mechanisms",
+      "primary_observable": "Correlation between AI-amenability and funding allocation; hiring criteria weighting AI tool use; problem selection in AI-mathematics collaborations",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "researchers_with_ai_access",
+      "victim": "researchers_pursuing_ai_resistant_deep_problems",
+      "downstream_of": [],
+      "feeds_into": [
+        "research_autonomy_capture"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent observable (funding/hiring criteria) from verification and attribution; distinct beneficiary structure"
+    },
+    {
+      "claim_id": "premature_dissemination_bypass",
+      "human_readable": "Premature Dissemination Bypass (Press Release vs Peer Review Timeline)",
+      "structural_delta": "AI results announced via press releases on commercial timelines (months to year+ before peer review), bypassing community evaluation and creating public perception before verification",
+      "primary_observable": "Time gap between public announcement and peer-reviewed publication; frequency of press-release-first dissemination; correction rate post-announcement",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "ai_companies_seeking_publicity",
+      "victim": "peer_review_gatekeeping_function",
+      "downstream_of": [
+        "proof_verification_asymmetry"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct temporal observable (announcement-to-review gap); different mechanism from attribution; downstream of verification asymmetry"
+    },
+    {
+      "claim_id": "research_autonomy_capture",
+      "human_readable": "Research Autonomy Capture (Industry Agenda-Setting via Resource Asymmetry)",
+      "structural_delta": "Technology companies' control of computational resources and asymmetric collaboration terms shift research question prioritization from expert judgment to AI-amenability and commercial interest",
+      "primary_observable": "Proportion of AI-mathematics research funded by industry vs public sources; collaboration contract terms (IP rights, publication restrictions); research question selection criteria",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "technology_companies_shaping_research_agenda",
+      "victim": "autonomous_mathematical_research_tradition",
+      "downstream_of": [
+        "attribution_erosion_mechanism",
+        "incentive_distortion_field"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Highest centrality; downstream synthesis node; captures cumulative effect of attribution erosion and incentive distortion on disciplinary autonomy"
+    },
+    {
+      "claim_id": "computational_resource_inequality",
+      "human_readable": "Computational Resource Inequality (Access Asymmetry as Competitive Distortion)",
+      "structural_delta": "Disparities in access to large-scale computational infrastructure create competitive advantage unrelated to mathematical insight, distorting merit-based evaluation",
+      "primary_observable": "Correlation between institutional computational budget and research output in AI-mathematics; cost per problem solved (hundreds of dollars per Erdős problem); energy consumption per proof",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "research_autonomy_capture"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Distinct observable (resource access) from other axes; feeds autonomy capture; rope coordination problem rather than extraction"
+    },
+    {
+      "claim_id": "cumulative_error_propagation",
+      "human_readable": "Cumulative Error Propagation (Flawed Results as Compounding Substrate)",
+      "structural_delta": "Mathematics' cumulative nature means undetected errors in AI-generated proofs propagate through dependent work, compounding detection difficulty over time",
+      "primary_observable": "Citation chains from AI-generated results; error discovery lag time; retraction cascades",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "proof_verification_asymmetry"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Distinct from verification asymmetry (temporal propagation vs immediate validation); mountain of mathematical structure rather than social mechanism"
+    }
+  ],
+  "generation_sequence": [
+    "proof_verification_asymmetry",
+    "attribution_erosion_mechanism",
+    "incentive_distortion_field",
+    "premature_dissemination_bypass",
+    "research_autonomy_capture",
+    "computational_resource_inequality",
+    "cumulative_error_propagation"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "environmental_cost_externality",
+      "structural_delta": "Energy demands of AI systems impose environmental costs not reflected in problem-solving cost metrics",
+      "hypothesis": "snare",
+      "deferral_reason": "Mentioned in source but not structurally developed; would require environmental impact data not present in declaration; captured indirectly via computational_resource_inequality"
+    },
+    {
+      "claim_id": "dual_use_ethical_entanglement",
+      "structural_delta": "Mathematical work incorporated into general-purpose AI systems used for warfare, surveillance, and democracy undermining",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Declared concern but structurally external to mathematics-specific mechanisms; belongs to broader AI ethics domain; declaration acknowledges but does not decompose"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_formalization_gap",
+      "description": "Declaration states 'difficulty lies in translation between computer-encoded and human presentations of concepts' but does not specify whether this gap is narrowing, stable, or widening. If narrowing, verification asymmetry may be temporary rope; if widening, permanent mountain.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — formalization difficulty mentioned but not characterized"
+    },
+    {
+      "id": "omega_scholze_position",
+      "description": "Peter Scholze's personal statement ('avoid AI-generated text as best I can') represents one position on a spectrum from full rejection to conditional adoption. Declaration does not map this spectrum or identify what makes a position coherent vs contradictory.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — prominent endorser's position treated as data point rather than analyzed position"
+    },
+    {
+      "id": "omega_imu_enforcement",
+      "description": "IMU endorsement provides legitimacy but declaration does not specify enforcement mechanisms. Are recommendations binding on IMU-affiliated journals? What happens to non-compliant signatories?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — governance structure absent"
+    },
+    {
+      "id": "omega_130_signatory_composition",
+      "description": "130+ signatories mentioned but demographic composition (career stage, subfield, geography, prior AI engagement) not disclosed. Composition would reveal whether declaration represents consensus or particular faction.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model assumes representative sample without data"
+    },
+    {
+      "id": "omega_proof_assistant_boundary",
+      "description": "Declaration lumps 'proof assistants' with LLMs under 'automated tools' but these have radically different verification properties (Coq/Lean proofs are machine-checkable; LLM outputs are not). Boundary between acceptable and problematic automation unclear.",
+      "source": "F03 (Hasty Generalization) — 'automated tools' category may conflate mountains and snares"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: cumulative_error_propagation classified as mountain (mathematical structure) but may be piton (social practice of citation without re-verification). If mathematicians historically trusted cited results without checking, the 'cumulative' property is practice-dependent, not structural. Generated omega_proof_assistant_boundary to flag conflation of verification-capable tools (proof assistants) with non-verifiable tools (LLMs) under single 'automated' category."
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Social Policy / Labor Economics",
+  "family_id": "ubi_freedom_dependency_2026",
+  "topic_summary": "Analysis of Universal Basic Income as a contested kernel where unconditional income support is read either as a freedom-floor (liberating workers from coercive labor markets) or a dependency-trap (undermining work incentives and self-reliance). The kernel contest generates incompatible constraint structures with different beneficiary/victim sets and extractiveness profiles. No true universal UBI has been implemented at scale in high-income countries; empirical evidence from pilots remains contested.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Universal Basic Income (unconditional cash payment to all residents regardless of employment)",
+      "Welfare State Apparatus (means-tested programs, SNAP, EITC, Section 8)",
+      "Labor Market (employment relationships, wage-setting mechanisms)",
+      "Pilot Programs (Finland, Kenya, Stockton CA, etc. - varied designs, no true universal implementation)",
+      "Cross-Ideological Coalition (Milton Friedman, Martin Luther King Jr., Andy Stern, tech entrepreneurs)",
+      "Low-Income Workers (primary beneficiaries under freedom-floor reading; victims under dependency-trap reading)",
+      "Employers (lose coercive power under freedom-floor; benefit from wage subsidy under dependency-trap)",
+      "Taxpayers (fund the program; distribution of burden contested)"
+    ],
+    "key_tensions": [
+      "Freedom-floor vs dependency-trap interpretive divide (same policy mechanism read as liberation vs coercion)",
+      "Work incentives ambiguity (theory supports both increased and decreased labor supply; empirical evidence contradictory)",
+      "Universality vs targeting (UBI gives same amount to all; current safety net concentrates on neediest)",
+      "Cost feasibility (adequate UBI requires 5-35% GDP; affordable UBI inadequate to refuse coercive work)",
+      "Cross-ideological ambiguity (left and right support UBI for opposite reasons; Trojan horse potential)"
+    ],
+    "key_mechanisms": [
+      "Strike fund effect (UBI provides exit option from labor market, reducing employer firing power)",
+      "Wage subsidy effect (employers can pay less because workers have guaranteed income floor)",
+      "Means-testing elimination (replaces bureaucratic welfare apparatus with universal cash transfer)",
+      "Human capital investment (recipients use time for education, entrepreneurship, or care work vs idle consumption)"
+    ],
+    "key_absences": [
+      "Inflation dynamics (no discussion of how universal cash transfers affect price levels, rent extraction)",
+      "Monopsony power measurement (labor market concentration as structural precondition for strike-fund effect)",
+      "Care work valuation (UBI's effect on unpaid domestic/community labor treated as secondary to formal employment)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Unconditional income support as a policy mechanism stabilizing the relationship between subsistence security and labor market participation",
+    "authority_description": "Contested between market-fundamentalist authority (labor supply theory, incentive compatibility) and autonomy-based authority (positive freedom, decommodification of labor)",
+    "drift_status": "absent",
+    "candidate_pattern": "interpretive_drift_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "income_support_conditionality",
+    "readings": [
+      {
+        "reading_id": "freedom_floor_reading",
+        "commitment": "Unconditional income support decommodifies labor power, creating positive freedom to refuse coercive work",
+        "authority_grounding": "Autonomy-based / labor-left tradition (wage slavery abolition, strike fund logic)",
+        "sibling_readings": [
+          "dependency_trap_reading",
+          "wage_subsidy_reading"
+        ],
+        "expected_structural_delta": "Employers enter victim set (lose coercive firing power); low-wage workers exit victim set; constraint type shifts from snare (coercive labor market) to rope (coordination on exit option)"
+      },
+      {
+        "reading_id": "dependency_trap_reading",
+        "commitment": "Unconditional income support undermines work incentives, creating long-term dependency and skill atrophy",
+        "authority_grounding": "Market-fundamentalist / incentive-compatibility theory (labor supply elasticity, human capital investment)",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "wage_subsidy_reading"
+        ],
+        "expected_structural_delta": "UBI recipients enter victim set (trapped in idleness, skill degradation); taxpayers enter victim set (fund non-productive transfers); constraint type is snare (welfare trap with high exit cost)"
+      },
+      {
+        "reading_id": "wage_subsidy_reading",
+        "commitment": "Unconditional income support functions as employer subsidy, allowing wage suppression while maintaining worker subsistence",
+        "authority_grounding": "Structural political economy / labor market power analysis",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "dependency_trap_reading"
+        ],
+        "expected_structural_delta": "Employers enter beneficiary set (can pay below-subsistence wages); low-wage workers remain in victim set (subsidy captured by employers via wage adjustment); constraint type is tangled_rope (UBI institutionalizes low-wage labor rather than enabling exit)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "freedom_floor_reading",
+        "reading_b": "dependency_trap_reading",
+        "basis": "Freedom-floor axiom holds that exit from labor market is liberation (positive freedom); dependency-trap axiom holds that exit from labor market is harm (skill atrophy, dependency). No single framework can hold both labor-market exit as simultaneously liberatory and harmful to the same population."
+      },
+      {
+        "reading_a": "freedom_floor_reading",
+        "reading_b": "wage_subsidy_reading",
+        "basis": "Freedom-floor axiom holds that UBI shifts power to workers (strike fund effect); wage-subsidy axiom holds that UBI shifts power to employers (wage suppression). No single framework can hold both that the same mechanism simultaneously empowers workers and employers in zero-sum labor market power."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "labor_market_monopsony_structure",
+      "human_readable": "Labor Market Monopsony Structure (Employer Concentration & Exit Costs)",
+      "structural_delta": "Degree of employer market power and worker exit costs in local labor markets",
+      "primary_observable": "Herfindahl-Hirschman Index for local labor markets; job-switching rates; geographic mobility costs",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "freedom_floor_reading",
+        "wage_subsidy_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing structural precondition for both freedom-floor and wage-subsidy readings; determines whether UBI functions as strike fund or employer subsidy"
+    },
+    {
+      "claim_id": "freedom_floor_reading",
+      "human_readable": "Freedom-Floor Reading (UBI as Labor Decommodification)",
+      "structural_delta": "UBI creates exit option from coercive labor markets, shifting power to workers",
+      "primary_observable": "Wage growth in low-wage sectors post-UBI; quit rates; employer complaints about labor shortage",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "low_wage_workers",
+      "victim": "employers_with_coercive_power",
+      "downstream_of": [
+        "labor_market_monopsony_structure"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "First kernel reading; highest empirical support from health/wellbeing outcomes; structurally distinct beneficiary set"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "human_readable": "Dependency-Trap Reading (UBI as Work Disincentive)",
+      "structural_delta": "UBI undermines work incentives, creating skill atrophy and long-term dependency",
+      "primary_observable": "Labor force participation rates; human capital investment (education enrollment); longitudinal employment trajectories",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "ubi_recipients",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Second kernel reading; axiom-contradictory to freedom-floor; captures conservative critique and labor-supply theory"
+    },
+    {
+      "claim_id": "wage_subsidy_reading",
+      "human_readable": "Wage-Subsidy Reading (UBI as Employer Subsidy)",
+      "structural_delta": "UBI allows employers to suppress wages below subsistence, with state covering shortfall",
+      "primary_observable": "Wage levels in UBI-receiving populations; employer profit margins; incidence analysis of UBI benefits",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "employers",
+      "victim": "low_wage_workers",
+      "downstream_of": [
+        "labor_market_monopsony_structure"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: third kernel reading with highest epsilon but lower empirical grounding than selected pair; structural critique not yet tested in pilots"
+    },
+    {
+      "claim_id": "inflation_rent_extraction",
+      "human_readable": "Inflation & Rent Extraction (Price-Level Response to Universal Transfers)",
+      "structural_delta": "Universal cash transfers bid up prices in inelastic markets (housing, healthcare), transferring UBI value to landlords/providers",
+      "primary_observable": "Rent inflation in UBI pilot areas; healthcare cost growth; price elasticity in necessity goods",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "landlords_healthcare_providers",
+      "victim": "ubi_recipients",
+      "downstream_of": [],
+      "feeds_into": [
+        "wage_subsidy_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: identified absence with high structural importance but no empirical grounding in research context; omega variable"
+    },
+    {
+      "claim_id": "care_work_revaluation",
+      "human_readable": "Care Work Revaluation (UBI's Effect on Unpaid Domestic/Community Labor)",
+      "structural_delta": "UBI enables exit from formal labor market into unpaid care work, shifting gender and family dynamics",
+      "primary_observable": "Time-use surveys; gender distribution of UBI-enabled labor market exit; care work quality metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "care_recipients",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "freedom_floor_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: identified absence; empirical evidence shows women with young children most likely to reduce formal employment, but care work outcomes not measured in pilots"
+    },
+    {
+      "claim_id": "universality_targeting_tradeoff",
+      "human_readable": "Universality vs Targeting Tradeoff (Efficiency Loss from Non-Targeted Transfers)",
+      "structural_delta": "Universal transfers give same amount to all, reducing concentration on neediest relative to means-tested programs",
+      "primary_observable": "Poverty reduction per dollar spent; Gini coefficient change; benefit incidence analysis",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "middle_upper_income_recipients",
+      "victim": "low_income_families_losing_targeted_benefits",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: administrative efficiency question rather than structural constraint; captured in cost-feasibility omega"
+    }
+  ],
+  "generation_sequence": [
+    "labor_market_monopsony_structure",
+    {
+      "claim_id": "freedom_floor_reading",
+      "kernel_id": "income_support_conditionality",
+      "reading_id": "freedom_floor_reading"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "kernel_id": "income_support_conditionality",
+      "reading_id": "dependency_trap_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "wage_subsidy_reading",
+      "structural_delta": "UBI allows employers to suppress wages below subsistence",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Third kernel reading with highest epsilon but no empirical grounding in pilot data; structural critique not tested; would require wage-level analysis in monopsony markets"
+    },
+    {
+      "claim_id": "inflation_rent_extraction",
+      "structural_delta": "Universal cash transfers bid up prices in inelastic markets",
+      "hypothesis": "snare",
+      "deferral_reason": "Identified absence with high structural importance but zero coverage in research context; no pilot measured price-level effects; omega variable"
+    },
+    {
+      "claim_id": "care_work_revaluation",
+      "structural_delta": "UBI enables exit into unpaid care work",
+      "hypothesis": "rope",
+      "deferral_reason": "Identified absence; empirical evidence shows gendered labor market exit but care work outcomes not measured; feminist critique not represented in research context"
+    },
+    {
+      "claim_id": "universality_targeting_tradeoff",
+      "structural_delta": "Universal transfers reduce concentration on neediest",
+      "hypothesis": "rope",
+      "deferral_reason": "Administrative efficiency question rather than structural constraint; captured in cost-feasibility omega"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_substrate_contested",
+      "description": "Employment effects show contradictory patterns: meta-analysis finds +0.8% net effect across 30 pilots, but -3.2% in 4 large-scale programs (500+ participants). Scale-dependent effects suggest different constraint regimes activate at different implementation levels. Freedom-floor and dependency-trap readings both claim empirical support from same pilot data.",
+      "source": "Research context tension 1 + §1.1 extraction"
+    },
+    {
+      "id": "omega_no_true_universal_implementation",
+      "description": "No high-income country has implemented true universal UBI. All pilots are partial (targeted populations, limited duration, non-universal). Theoretical UBI conceptualizations do not align with empirical implementations. Extrapolation from pilots to universal policy may miss emergent properties (general equilibrium effects, norm shifts, political sustainability).",
+      "source": "Research context + §1.1 extraction"
+    },
+    {
+      "id": "omega_cost_feasibility_binding",
+      "description": "Adequate UBI ($1000/month enabling labor market exit) costs 5-35% GDP. Affordable UBI inadequate to refuse coercive work. If cost constraint binds, UBI collapses to wage-subsidy reading (employers capture benefit via wage suppression) rather than freedom-floor. Cost feasibility is not administrative question but structural gate determining which reading instantiates.",
+      "source": "Research context tension 3 + Dark Matter Probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_inflation_dark_matter",
+      "description": "Research context contains zero discussion of price-level effects. If UBI bids up rents/healthcare costs in inelastic markets, benefit transfers to landlords/providers rather than recipients. Inflation dynamics are structural absence that could reclassify freedom-floor as snare (recipients trapped by rent extraction). Requires general equilibrium analysis not present in pilot data.",
+      "source": "Dark Matter Probe 2 (absence inventory) + §1.1 absences"
+    },
+    {
+      "id": "omega_monopsony_precondition",
+      "description": "Strike-fund effect (freedom-floor reading) requires employer monopsony power. If labor markets are competitive, UBI cannot shift power to workers because workers already have exit options. Monopsony structure is upstream mountain determining whether freedom-floor or wage-subsidy reading instantiates, but research context does not measure labor market concentration. Classification of labor_market_monopsony_structure as mountain is hypothesis pending empirical grounding.",
+      "source": "Dark Matter Probe 1 (operational medium) + §2.1 multi-lens scan"
+    },
+    {
+      "id": "omega_care_work_feminist_absence",
+      "description": "Research context shows women with young children most likely to reduce formal employment under UBI, but care work outcomes not measured. Feminist critique (UBI enables care work vs reinforces gendered care burden) entirely absent from research context. Care work revaluation is deferred axis with potential to reclassify freedom-floor reading (exit into care work as liberation vs gendered trap).",
+      "source": "Dark Matter Probe 2 (absence inventory) + §1.1 absences"
+    },
+    {
+      "id": "omega_cross_ideological_trojan_horse",
+      "description": "Left and right support UBI for opposite reasons (welfare state dissolution vs labor decommodification). Cross-ideological coalition is structurally unstable: implementation details (level, funding source, interaction with existing programs) determine which reading instantiates. Political ambiguity is not feature but bug—UBI as Trojan horse for either left or right depending on implementation path.",
+      "source": "Research context tension 4 + §1.1 tensions"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: labor_market_monopsony_structure classified as mountain (structural precondition) but research context provides no empirical grounding for monopsony claim. Classification is hypothesis derived from strike-fund logic, not observed in pilot data. Generated omega_monopsony_precondition to bound this uncertainty. Kernel decomposition validated: freedom-floor and dependency-trap readings hold axiom-contradictory commitments (labor market exit as liberation vs harm) and would emit structurally different constraints (different victim sets, different epsilon bins). Wage-subsidy reading deferred due to lack of empirical grounding but documented as high-epsilon structural critique."
+  },
+  "_seed_id": "ubi_kernel"
+}

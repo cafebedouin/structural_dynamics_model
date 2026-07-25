@@ -1,0 +1,218 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Anthropology / Institutional Memory / Land-Use Governance",
+  "family_id": "aneyoshi_tsunami_stone_2011",
+  "topic_summary": "Analysis of the Aneyoshi tsunami stone's function as a land-use commitment system across 78 years (1933-2011). The stone inscription 'Do not build below this point' survived three generations without catastrophic testing, successfully protecting all 11 households in 2011 when surrounding communities were devastated. The kernel contest examines whether the stone retained live behavioral commitment or decayed to commemorative symbol.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aneyoshi village (11 households, fishing community, survived 2011 tsunami)",
+      "Tsunami stone (erected 1933, inscription warning against low-elevation building)",
+      "Village leadership (Tamishige Kimura, enforced ancestral rule)",
+      "Broader Sanriku coast communities (rebuilt at waterfront, ignored stones, devastated 2011)",
+      "Japanese government (built seawalls, alternative protection mechanism)",
+      "Intergenerational transmission system (school curriculum, oral tradition, spatial practice)"
+    ],
+    "key_tensions": [
+      "Economic convenience (proximity to fishing livelihood) vs safety compliance (steep hill climb daily)",
+      "Aneyoshi's sustained commitment vs broader coastal forgetting (stones became scenery)",
+      "Stone permanence vs three-generation memory decay (Imamura's catastrophe-theorem)"
+    ],
+    "key_mechanisms": [
+      "Spatial enforcement: stone placement on hillside creates daily visual reminder during transit",
+      "Educational transmission: stone studied in school curriculum (Yuto Kimura testimony)",
+      "Social enforcement: village leader describes rule 'no one dares break' (normative pressure)"
+    ],
+    "key_absences": [
+      "No documentation of enforcement mechanism when economic pressure to build lower emerged",
+      "No record of dissent or attempted violations during 78-year non-catastrophe period"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1933 inscription 'Do not build any homes below this point' as binding land-use constraint",
+    "authority_description": "Ancestral authority grounded in catastrophic experience (1896, 1933 tsunamis); enforced through village leadership and social norm",
+    "drift_status": "functioning",
+    "candidate_pattern": "catastrophe_theorem_break",
+    "is_contested_kernel": true,
+    "kernel_id": "stone_land_use_rule",
+    "readings": [
+      {
+        "reading_id": "commemorative_husk",
+        "commitment": "Stone as memorial artifact; warning decayed to symbolic gesture without behavioral force",
+        "authority_grounding": "Historical reverence without enforcement; stone as scenery",
+        "sibling_readings": [
+          "behavioral_competence"
+        ],
+        "expected_structural_delta": "Zero land-use constraint; building decisions independent of stone location; high epsilon (extractive drift toward waterfront convenience)"
+      },
+      {
+        "reading_id": "behavioral_competence",
+        "commitment": "Stone as live land-use prohibition; daily spatial practice enforces compliance",
+        "authority_grounding": "Ancestral authority operationalized through village leadership and educational transmission",
+        "expected_structural_delta": "Binding land-use constraint; economic costs accepted (steep hill climb); low epsilon (sustained compliance across 78 years)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "commemorative_husk",
+        "reading_b": "behavioral_competence",
+        "basis": "Commemorative-husk reading requires accepting that symbolic reverence can coexist with behavioral non-compliance (stone honored but ignored). Behavioral-competence reading requires accepting that ancestral authority retains binding force across generations. No framework can hold both: either the stone constrains building or it does not."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "commemorative_husk",
+      "human_readable": "Commemorative Husk (Stone as Dead Symbol)",
+      "structural_delta": "Stone functions as memorial without behavioral constraint; land-use decisions independent of inscription",
+      "primary_observable": "Building locations relative to stone line; economic optimization toward waterfront",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "economic_convenience_seekers",
+      "victim": "future_tsunami_victims",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents null hypothesis (catastrophe-theorem default)"
+    },
+    {
+      "claim_id": "behavioral_competence",
+      "human_readable": "Behavioral Competence (Stone as Live Land-Use Constraint)",
+      "structural_delta": "Stone inscription retains binding force; spatial practice enforces daily compliance despite economic cost",
+      "primary_observable": "Zero buildings below stone line across 78 years; daily hill-climb behavior; educational transmission",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; empirically validated by 2011 outcome (decisive library verdict)"
+    },
+    {
+      "claim_id": "spatial_enforcement_mechanism",
+      "human_readable": "Spatial Enforcement Mechanism (Stone Placement as Daily Reminder)",
+      "structural_delta": "Physical stone location on hillside transit path creates unavoidable visual encounter; spatial design enforces memory",
+      "primary_observable": "Stone visibility from village paths; frequency of visual encounters during daily fishing transit",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "behavioral_competence"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Mechanism explaining how behavioral_competence reading sustained across 78 years; breaks Imamura's three-generation decay"
+    },
+    {
+      "claim_id": "educational_transmission",
+      "human_readable": "Educational Transmission (School Curriculum Integration)",
+      "structural_delta": "Stone warning embedded in school curriculum; intergenerational knowledge transfer institutionalized",
+      "primary_observable": "Yuto Kimura testimony ('We studied them in school'); curriculum documentation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "behavioral_competence"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: secondary transmission mechanism; spatial_enforcement_mechanism captures primary novelty"
+    },
+    {
+      "claim_id": "seawall_alternative",
+      "human_readable": "Seawall Alternative (Government Infrastructure vs Ancestral Rule)",
+      "structural_delta": "Government seawalls offered alternative protection mechanism; faith in engineering vs ancestral warning",
+      "primary_observable": "Seawall construction timeline; coastal rebuilding patterns post-1933",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "coastal_development_interests",
+      "victim": "communities_trusting_seawalls",
+      "downstream_of": [],
+      "feeds_into": [
+        "commemorative_husk"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: explains broader Sanriku coast forgetting; captured in commemorative_husk reading context"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "commemorative_husk",
+      "kernel_id": "stone_land_use_rule",
+      "reading_id": "commemorative_husk"
+    },
+    {
+      "claim_id": "behavioral_competence",
+      "kernel_id": "stone_land_use_rule",
+      "reading_id": "behavioral_competence"
+    },
+    {
+      "claim_id": "spatial_enforcement_mechanism",
+      "kernel_id": "stone_land_use_rule",
+      "reading_id": "spatial_enforcement_mechanism"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "educational_transmission",
+      "structural_delta": "School curriculum integration as transmission mechanism",
+      "hypothesis": "rope",
+      "deferral_reason": "Secondary mechanism; spatial_enforcement_mechanism captures primary structural novelty"
+    },
+    {
+      "claim_id": "seawall_alternative",
+      "structural_delta": "Government seawalls as alternative protection; faith in engineering vs ancestral rule",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Broader Sanriku coast context; captured in commemorative_husk reading as counterfactual"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_gap",
+      "description": "No documentation of enforcement mechanism when economic pressure to build lower emerged. Was compliance voluntary or coerced? If voluntary, what sustained it across three generations?",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_dissent_absence",
+      "description": "No record of attempted violations during 78-year period. Kimura claims 'no one dares break' the rule, but absence of dissent documentation may reflect survivor bias or incomplete historical record.",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_replication_conditions",
+      "description": "Aneyoshi is exceptional. What conditions enabled sustained commitment when broader Sanriku coast forgot? Village size (11 households), fishing monoculture, leadership continuity, or stone placement specifics?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_temporal_boundary",
+      "description": "78 years without catastrophic testing is one data point. Would commitment have survived 150 years? 200? At what temporal distance does even spatial enforcement decay?",
+      "source": "F15 (Premature Closure)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: Analysis stops at 2011 outcome without examining temporal boundary conditions. Generated omega_temporal_boundary to bound uncertainty about commitment durability beyond 78-year window. Library verdict (D5 catastrophe-theorem break) is decisive for 1933-2011 period but does not establish upper temporal limit."
+  },
+  "_seed_id": "aneyoshi_tsunami_memory"
+}

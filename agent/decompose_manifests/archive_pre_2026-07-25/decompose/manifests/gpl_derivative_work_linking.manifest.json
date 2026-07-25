@@ -1,0 +1,238 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Software Licensing / Copyright Law / Open Source Governance",
+  "family_id": "gpl_derivative_work_2026",
+  "topic_summary": "Analysis of the GNU General Public License's 'derivative work' trigger clause, focusing on the unresolved interpretive contest over whether linking (static or dynamic) creates a derivative work requiring source disclosure. The FSF broad copyleft reading grounds authority in license intent to propagate freedom; the narrow linking-permissive reading grounds authority in statutory copyright's idea/expression distinction.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Free Software Foundation (FSF) — license author, interpretive authority claimant",
+      "GNU General Public License v2/v3 — kernel text with 'work based on the Program' trigger",
+      "Linking operation — technical act of combining program modules (static/dynamic/header)",
+      "Statutory copyright law — U.S. Copyright Act §106 derivative work doctrine",
+      "Proprietary software vendors — entities seeking to avoid copyleft propagation",
+      "Downstream users — beneficiaries of source availability under broad reading, victims of unavailability under narrow"
+    ],
+    "key_tensions": [
+      "License intent (FSF's propagation goal) vs statutory text (copyright's idea/expression line)",
+      "Technical coupling (linking as mere aggregation vs derivative creation)"
+    ],
+    "key_claims": [
+      "FSF: Dynamic linking creates a derivative work triggering GPL obligations (grounded in license intent)",
+      "Narrow reading: Linking is aggregation not derivation (grounded in copyright statute)",
+      "No binding U.S. appellate precedent directly resolves GPL linking scope",
+      "LGPL exists as FSF's own accommodation of narrow-reading concerns (library exception)"
+    ],
+    "key_mechanisms": [
+      "Copyleft propagation — GPL §2(b) obligation to disclose source for derivative works",
+      "Linking operation — technical coupling via symbol resolution at compile or runtime",
+      "Authority vacuum — absence of binding precedent leaves interpretive contest open"
+    ],
+    "key_absences": [
+      "Judicial resolution — Oracle v. Google addressed API copyrightability but not GPL linking",
+      "AGPL network-trigger clause — not present in base GPL, separate axis for SaaS loophole"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The GPL's 'work based on the Program' clause as the shared commitment all parties argue about — FSF reads it as triggered by linking (broad), statutory-copyright readers limit it to modifications (narrow)",
+    "authority_description": "FSF claims interpretive authority via authorship and intent; narrow readers ground authority in statutory copyright as the controlling legal framework",
+    "drift_status": "absent",
+    "candidate_pattern": "licensing_kernel_absent_revision",
+    "is_contested_kernel": true,
+    "kernel_id": "gpl_derivative_work_trigger",
+    "readings": [
+      {
+        "reading_id": "broad_copyleft_reading",
+        "commitment": "Linking (even dynamic) creates a derivative work under GPL, triggering source disclosure obligation",
+        "authority_grounding": "License author intent (FSF); propagation of software freedom as telos",
+        "sibling_readings": [
+          "narrow_linking_permissive_reading",
+          "interface_boundary_reading"
+        ],
+        "expected_structural_delta": "Rope pulling dependent code into commons; downstream users gain source access; proprietary vendors face compliance cost or avoidance"
+      },
+      {
+        "reading_id": "narrow_linking_permissive_reading",
+        "commitment": "Linking is aggregation not derivation; only modifications to GPL code trigger obligations",
+        "authority_grounding": "Statutory copyright (17 USC §106); idea/expression distinction; derivative work requires expression copying",
+        "sibling_readings": [
+          "broad_copyleft_reading",
+          "interface_boundary_reading"
+        ],
+        "expected_structural_delta": "Wall protecting proprietary modules; users of those modules lose source-availability guarantee; FSF's propagation goal frustrated"
+      },
+      {
+        "reading_id": "interface_boundary_reading",
+        "commitment": "Clean API boundaries constitute non-derivative aggregation even with tight coupling",
+        "authority_grounding": "Technical pragmatism; Oracle v. Google fair use precedent (APIs non-copyrightable); plugin architecture norms",
+        "sibling_readings": [
+          "broad_copyleft_reading",
+          "narrow_linking_permissive_reading"
+        ],
+        "expected_structural_delta": "Scaffold allowing modular architecture with mixed licensing; beneficiaries are ecosystem integrators; victims are users expecting full-stack source under broad reading"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "broad_copyleft_reading",
+        "reading_b": "narrow_linking_permissive_reading",
+        "basis": "No single coherent framework can hold both that linking creates a derivative work (broad) and that linking is mere aggregation (narrow) — accepting statutory copyright's idea/expression line as controlling requires rejecting FSF's intent-based authority over derivative-work scope"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "broad_copyleft_reading",
+      "human_readable": "Broad Copyleft Reading (Linking as Derivative Creation)",
+      "structural_delta": "FSF interpretation: dynamic/static linking creates derivative work, triggering GPL source disclosure",
+      "primary_observable": "FSF's official guidance documents; compliance demands in GPL enforcement actions; SFLC/Conservancy legal positions",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "downstream_users_gaining_source_access",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading grounding FSF's enforcement regime; distinct authority basis (license intent) from sibling readings"
+    },
+    {
+      "claim_id": "narrow_linking_permissive_reading",
+      "human_readable": "Narrow Linking-Permissive Reading (Statutory Copyright Limit)",
+      "structural_delta": "Linking is aggregation not derivation under statutory copyright; only code modifications trigger GPL",
+      "primary_observable": "Legal memoranda from proprietary vendors; LGPL's existence as FSF accommodation; absence of successful FSF enforcement on pure linking",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "proprietary_vendors_avoiding_disclosure",
+      "victim": "users_losing_source_availability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally entangled with broad reading; different beneficiary/victim set; grounded in competing authority (statute vs intent)"
+    },
+    {
+      "claim_id": "interface_boundary_reading",
+      "human_readable": "Interface Boundary Reading (Plugin Architecture Exception)",
+      "structural_delta": "Clean API boundaries constitute non-derivative aggregation even with runtime coupling",
+      "primary_observable": "Plugin architectures in GPL ecosystems (Linux kernel modules, browser extensions); Oracle v. Google API precedent",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "ecosystem_integrators",
+      "victim": "users_expecting_full_stack_source",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Pragmatic middle position; distinct technical grounding (API boundaries); used in practice by GPL projects"
+    },
+    {
+      "claim_id": "precedent_vacuum",
+      "human_readable": "Precedent Vacuum (Authority Structure Instability)",
+      "structural_delta": "Absence of binding appellate precedent leaves interpretive contest unresolved",
+      "primary_observable": "Case law search results (no GPL linking case reaching circuit court); settlement patterns in FSF enforcement",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "broad_copyleft_reading",
+        "narrow_linking_permissive_reading",
+        "interface_boundary_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural precondition for all readings but lower independent analytical yield than the readings themselves"
+    },
+    {
+      "claim_id": "lgpl_accommodation",
+      "human_readable": "LGPL as FSF's Accommodation (Revealed Preference)",
+      "structural_delta": "FSF created LGPL specifically to permit linking without copyleft trigger, revealing awareness of narrow reading's force",
+      "primary_observable": "LGPL license text; FSF's official guidance on when to use LGPL vs GPL",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "narrow_linking_permissive_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: evidences FSF's pragmatic retreat but captured within narrow_reading's structural delta"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "broad_copyleft_reading",
+      "kernel_id": "gpl_derivative_work_trigger",
+      "reading_id": "broad_copyleft_reading"
+    },
+    {
+      "claim_id": "narrow_linking_permissive_reading",
+      "kernel_id": "gpl_derivative_work_trigger",
+      "reading_id": "narrow_linking_permissive_reading"
+    },
+    {
+      "claim_id": "interface_boundary_reading",
+      "kernel_id": "gpl_derivative_work_trigger",
+      "reading_id": "interface_boundary_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "precedent_vacuum",
+      "structural_delta": "Absence of binding appellate precedent leaves contest unresolved",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural precondition for all readings; lower independent yield than readings themselves; documented as omega_precedent_vacuum"
+    },
+    {
+      "claim_id": "lgpl_accommodation",
+      "structural_delta": "LGPL's existence reveals FSF's pragmatic accommodation of narrow reading",
+      "hypothesis": "piton",
+      "deferral_reason": "Evidential for narrow_reading's force but captured within that reading's structural analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_precedent_vacuum",
+      "description": "Is the absence of binding precedent a Mountain (inherent to licensing's contractual nature) or a Piton (FSF deliberately avoiding test case for fear of adverse ruling)? Settlement patterns suggest strategic avoidance.",
+      "source": "Deferred axis: precedent_vacuum; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_agpl_network_trigger",
+      "description": "AGPL (Affero GPL) adds network-use trigger for SaaS loophole — separate kernel from linking contest, but structurally coupled. Is AGPL's existence evidence that base GPL linking scope is intentionally narrow (FSF adding explicit trigger where implicit failed)?",
+      "source": "Absence Inventory: AGPL not present in base GPL"
+    },
+    {
+      "id": "omega_oracle_precedent_scope",
+      "description": "Does Oracle v. Google (API copyrightability rejected, fair use for reimplementation) collapse interface_boundary_reading into narrow_linking_permissive_reading, or does it scaffold a distinct third position? Post-2021 enforcement patterns unclear.",
+      "source": "Interface_boundary_reading classification uncertainty"
+    },
+    {
+      "id": "omega_linux_kernel_carve_out",
+      "description": "Linux kernel explicitly permits proprietary modules via MODULE_LICENSE tag and Torvalds' public statements — is this a fourth reading (authority-by-benevolent-dictator) or a piton eroding broad_copyleft_reading's force in the most prominent GPL ecosystem?",
+      "source": "Dark Matter Probe 2 (Absence Inventory); entity not extracted but structurally relevant"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings with mutually exclusive axioms, distinct authority groundings, and different beneficiary/victim sets. Precedent vacuum and LGPL deferred as lower-yield supporting evidence. AGPL and Linux kernel MODULE_LICENSE identified as omega-level coupling points for future analysis."
+  },
+  "_seed_id": "gpl_derivative_work_linking"
+}

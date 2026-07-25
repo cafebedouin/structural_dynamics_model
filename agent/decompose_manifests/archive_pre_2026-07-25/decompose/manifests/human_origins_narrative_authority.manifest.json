@@ -1,0 +1,263 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Epistemology / Philosophy of Science / Anthropology",
+  "family_id": "anthropological_record_authority_2026",
+  "topic_summary": "Analysis of competing claims to interpretive authority over the archaeological and genomic record of human origins. The physical substrate (fossils, DNA, stratigraphy) is shared, but distinct frameworks claim legitimate authority to adjudicate what that record means: credentialed scientific consensus versus religious/alternative historiographical readings. This is a contest over who possesses epistemic warrant to declare human origins truths.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Archaeological/genomic record (fossils, DNA sequences, radiometric dates, stratigraphic layers)",
+      "Scientific consensus institutions (peer review, credentialing bodies, research universities)",
+      "Religious authority structures (scriptural interpretation traditions, theological institutions)",
+      "Alternative historiography movements (Ancient Aliens, Indigenous oral traditions, Afrocentrism)",
+      "Public education systems (curriculum standards, textbook approval processes)"
+    ],
+    "key_tensions": [
+      "Methodological naturalism vs supernatural causation (scientific framework excludes divine intervention; religious frameworks require it)",
+      "Credential-based authority vs revealed/traditional authority (who gets to adjudicate validity)"
+    ],
+    "key_mechanisms": [
+      "Peer review (gates access to legitimacy via credentialed evaluation)",
+      "Scriptural inerrancy doctrine (religious reading treats text as epistemic bedrock)",
+      "Museum/curriculum control (authority enforced via institutional display and education mandates)"
+    ],
+    "key_absences": [
+      "Indigenous epistemologies as distinct from 'alternative' frameworks (conflated in public discourse but structurally different authority claims)",
+      "Explicit discussion of what makes evidence 'evidence' (the prior interpretive framework that sorts signal from noise)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "naturalist_reading",
+      "human_readable": "Naturalist-Materialist Reading (Scientific Consensus)",
+      "structural_delta": "Authority grounded in methodological naturalism, peer review, and replicability. Evidence must fit within materialist causation; supernatural explanations excluded by design.",
+      "primary_observable": "Peer-reviewed publication rates; institutional credentialing mechanisms; curriculum adoption rates",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "scientific_institutions",
+      "victim": "non_credentialed_interpreters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant institutional reading; high extractiveness via credentialing gatekeeping",
+      "kernel_id": "anthropological_record",
+      "reading_commitment": "The record reveals human origins through materialist processes (evolution, migration, adaptation) knowable via scientific method",
+      "authority_grounding": "Credential-based peer review and replicability standards",
+      "sibling_readings": [
+        "creationist_reading",
+        "indigenous_epistemology_reading"
+      ],
+      "expected_structural_delta": "Non-credentialed interpreters excluded from legitimate discourse; high suppression of alternative causal frameworks"
+    },
+    {
+      "claim_id": "creationist_reading",
+      "human_readable": "Creationist-Scriptural Reading (Young Earth / Intelligent Design)",
+      "structural_delta": "Authority grounded in scriptural inerrancy or designed-universe axioms. Evidence must fit within divine causation framework; materialist timeline rejected or reinterpreted.",
+      "primary_observable": "Scriptural authority invocations; museum/curriculum challenges; Creation Museum attendance",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "religious_authority_structures",
+      "victim": "evolutionary_biology_researchers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Largest alternative reading by institutional presence; structurally distinct authority grounding from naturalist reading",
+      "kernel_id": "anthropological_record",
+      "reading_commitment": "The record reveals human origins as divinely created event(s), with apparent age/fossil evidence as compatible with scriptural timeline or designed complexity",
+      "authority_grounding": "Scriptural inerrancy or theological inference from design arguments",
+      "sibling_readings": [
+        "naturalist_reading",
+        "indigenous_epistemology_reading"
+      ],
+      "expected_structural_delta": "Materialist timeline suppressed; divine causation required; credentialed science loses adjudicative monopoly in religious communities"
+    },
+    {
+      "claim_id": "indigenous_epistemology_reading",
+      "human_readable": "Indigenous Epistemology Reading (Oral Tradition & Relational Knowledge)",
+      "structural_delta": "Authority grounded in sustained oral tradition, place-based knowledge, and relational epistemology. Evidence includes non-material sources (ancestral knowledge, landscape memory) excluded by both scientific and scriptural frameworks.",
+      "primary_observable": "Repatriation claims; consultation requirements in archaeology; recognition of Traditional Ecological Knowledge in policy",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "indigenous_communities",
+      "victim": "extractive_archaeology_researchers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structurally distinct from both naturalist and creationist readings; addresses absence identified in extraction; growing institutional recognition",
+      "kernel_id": "anthropological_record",
+      "reading_commitment": "The record reveals human origins through relational continuity with ancestors and place, knowable via sustained oral tradition and ceremonial practice",
+      "authority_grounding": "Intergenerational transmission and community validation of oral histories",
+      "sibling_readings": [
+        "naturalist_reading",
+        "creationist_reading"
+      ],
+      "expected_structural_delta": "Material evidence insufficient without oral tradition; credentialed and scriptural frameworks both subordinated to community authority over ancestral remains"
+    },
+    {
+      "claim_id": "alternative_historiography_reading",
+      "human_readable": "Alternative Historiography Reading (Ancient Aliens / Lost Civilizations)",
+      "structural_delta": "Authority grounded in pattern recognition outside institutional consensus, often via media platforms. Existing evidence reinterpreted as suppressed or misread by mainstream frameworks.",
+      "primary_observable": "Documentary viewership; online community size; Museum of Lost Civilizations proposal activity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "alternative_media_producers",
+      "victim": "institutional_archaeology",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower institutional presence than creationist reading; structurally similar to creationist (rejects naturalist authority) but less coherent internal authority structure",
+      "kernel_id": "anthropological_record",
+      "reading_commitment": "The record reveals human origins as influenced by advanced ancient or extraterrestrial civilizations, suppressed by mainstream archaeology",
+      "authority_grounding": "Anti-institutional pattern recognition and popular media validation",
+      "sibling_readings": [
+        "naturalist_reading"
+      ],
+      "expected_structural_delta": "Institutional archaeology framed as conspiracy; credentialing dismissed as gatekeeping"
+    },
+    {
+      "claim_id": "museum_curriculum_enforcement",
+      "human_readable": "Museum and Curriculum Enforcement Mechanisms",
+      "structural_delta": "Institutional authority enforced via public display standards and mandatory education curricula, not just peer review",
+      "primary_observable": "Textbook adoption battles; museum exhibit content lawsuits; state education standards",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_gatekeepers",
+      "victim": "non_naturalist_frameworks",
+      "downstream_of": [
+        "naturalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism downstream of naturalist reading, not independent axis; captured in naturalist reading's beneficiary structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "naturalist_reading",
+      "kernel_id": "anthropological_record",
+      "reading_id": "naturalist_reading"
+    },
+    {
+      "claim_id": "creationist_reading",
+      "kernel_id": "anthropological_record",
+      "reading_id": "creationist_reading"
+    },
+    {
+      "claim_id": "indigenous_epistemology_reading",
+      "kernel_id": "anthropological_record",
+      "reading_id": "indigenous_epistemology_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "alternative_historiography_reading",
+      "structural_delta": "Ancient Aliens/Lost Civilizations reading via anti-institutional pattern recognition",
+      "hypothesis": "contested_kernel_reading",
+      "deferral_reason": "Lower institutional presence and less coherent internal authority structure than selected readings; structurally overlaps with creationist reading's rejection of naturalist authority"
+    },
+    {
+      "claim_id": "museum_curriculum_enforcement",
+      "structural_delta": "Public display and education mandates as enforcement layer",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Downstream enforcement mechanism of naturalist reading; not independent axis; captured in naturalist reading's beneficiary structure and extractiveness"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_repatriation_tension",
+      "description": "NAGPRA and similar repatriation laws grant indigenous communities veto power over research on ancestral remains. Does this make indigenous_epistemology_reading a Rope (coordination) or Snare (legal coercion)? The epsilon depends on whether consultation requirements suppress or enable research.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_evidence_prior",
+      "description": "All three readings share the same physical substrate but sort it differently. What makes something 'evidence'? The interpretive framework precedes observation. Is this a deeper Mountain (human cognitive architecture) or itself another contested kernel?",
+      "source": "Absence Inventory (what makes evidence evidence)"
+    },
+    {
+      "id": "omega_intelligent_design_classification",
+      "description": "Intelligent Design claims methodological compatibility with science (infers design from irreducible complexity) while rejecting naturalism. Does this make it a hybrid reading or a covert creationist_reading? Classification affects epsilon estimation.",
+      "source": "§2 Decomposition ambiguity"
+    },
+    {
+      "id": "omega_afrocentrism_placement",
+      "description": "Afrocentric historiography claims both anti-colonial epistemology (like indigenous_epistemology_reading) and revisionist materialism (unlike indigenous_epistemology_reading). Does it belong in alternative_historiography_reading or warrant its own axis? Structurally ambiguous.",
+      "source": "Extraction absence (Indigenous epistemologies conflated with alternatives)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four readings identified; three selected based on institutional presence and structural distinctiveness. Deferred alternative_historiography_reading due to overlap with creationist authority rejection structure."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The archaeological and genomic record of human origins — fossils, DNA, stratigraphy, radiometric dates — treated as fixed physical substrate requiring interpretation",
+    "authority_description": "Contested. Scientific consensus claims authority via methodological naturalism and peer review; religious frameworks via scriptural inerrancy or divine revelation; indigenous communities via sustained oral tradition and ancestral continuity.",
+    "drift_status": "absent",
+    "candidate_pattern": "interpretive_layer_suppression",
+    "is_contested_kernel": true,
+    "kernel_id": "anthropological_record",
+    "readings": [
+      {
+        "reading_id": "naturalist_reading",
+        "commitment": "The record reveals materialist human origins (evolution, migration) knowable via scientific method",
+        "authority_grounding": "Credential-based peer review and replicability standards",
+        "sibling_readings": [
+          "creationist_reading",
+          "indigenous_epistemology_reading"
+        ],
+        "expected_structural_delta": "High extractiveness via credentialing gatekeeping; supernatural causation excluded; non-credentialed interpreters suppressed"
+      },
+      {
+        "reading_id": "creationist_reading",
+        "commitment": "The record reveals divine creation event(s) compatible with scriptural timeline or designed complexity",
+        "authority_grounding": "Scriptural inerrancy or theological inference from design arguments",
+        "sibling_readings": [
+          "naturalist_reading",
+          "indigenous_epistemology_reading"
+        ],
+        "expected_structural_delta": "Materialist timeline suppressed; divine causation required; credentialed science loses adjudicative monopoly in religious communities"
+      },
+      {
+        "reading_id": "indigenous_epistemology_reading",
+        "commitment": "The record reveals relational continuity with ancestors and place, knowable via sustained oral tradition",
+        "authority_grounding": "Intergenerational transmission and community validation of oral histories",
+        "sibling_readings": [
+          "naturalist_reading",
+          "creationist_reading"
+        ],
+        "expected_structural_delta": "Material evidence insufficient without oral tradition; both credentialed and scriptural frameworks subordinated to community authority over ancestral remains"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "naturalist_reading",
+        "reading_b": "creationist_reading",
+        "basis": "Methodological naturalism (supernatural causation excluded by design) cannot coexist with scriptural inerrancy (divine intervention as historical fact) in a single coherent framework. Accepting one as epistemically valid requires rejecting the other's foundational axiom."
+      },
+      {
+        "reading_a": "naturalist_reading",
+        "reading_b": "indigenous_epistemology_reading",
+        "basis": "Material evidence sufficiency (naturalist: observable phenomena alone ground truth claims) cannot coexist with relational epistemology (indigenous: truth emerges from sustained intergenerational practice and non-material sources) as equally valid warrant. One must be subordinated to the other in any single adjudicative framework."
+      }
+    ]
+  },
+  "_seed_id": "human_origins_narrative_authority"
+}

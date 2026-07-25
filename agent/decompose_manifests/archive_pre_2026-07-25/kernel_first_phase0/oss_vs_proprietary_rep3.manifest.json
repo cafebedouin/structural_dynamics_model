@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Software Engineering / Political Economy of Technology / Intellectual Property",
+  "family_id": "foss_vs_proprietary_2024",
+  "topic_summary": "Analysis of the free/open-source software versus proprietary software debate. The topic is framed by advocates as a foundational question of user freedom versus a pragmatic choice of development and business models. The debate centers on whether software source code should be publicly available with freedoms to use, study, modify, and share, or whether it should remain closed and licensed under proprietary terms.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Free Software Foundation (advocacy organization promoting software freedom as ethical imperative)",
+      "Open Source Initiative (advocacy organization promoting open development as pragmatic methodology)",
+      "Proprietary software vendors (commercial entities distributing closed-source software under restrictive licenses)",
+      "End users (individuals and organizations consuming software)",
+      "Developers (individuals and organizations creating software)",
+      "Source code (the human-readable instructions that define software behavior)"
+    ],
+    "key_tensions": [
+      "User freedom vs vendor control (FSF framing vs proprietary model)",
+      "Collaborative development vs competitive advantage (open source methodology vs trade secret protection)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The moral and legal status of software source code access and modification rights",
+    "authority_description": "Competing interpretive traditions: ethical/freedom-based (FSF), pragmatic/methodological (OSI), property-rights-based (proprietary), and hybrid utilitarian frameworks",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "software_source_status",
+    "readings": [
+      {
+        "reading_id": "freedom_imperative_reading",
+        "commitment": "Software freedom is a fundamental ethical requirement; proprietary software is an injustice",
+        "authority_grounding": "Deontological ethics / natural rights tradition (FSF lineage)",
+        "sibling_readings": [
+          "pragmatic_development_reading",
+          "property_rights_reading",
+          "utilitarian_hybrid_reading"
+        ],
+        "expected_structural_delta": "All proprietary software enters victim set; users have inalienable rights to source access; licensing restrictions are categorically illegitimate constraints"
+      },
+      {
+        "reading_id": "pragmatic_development_reading",
+        "commitment": "Open source is a superior development methodology; freedom is instrumental to quality",
+        "authority_grounding": "Engineering pragmatism / empirical performance (OSI lineage)",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "property_rights_reading",
+          "utilitarian_hybrid_reading"
+        ],
+        "expected_structural_delta": "Proprietary software not inherently illegitimate; open development valued for peer review, bug detection, innovation velocity; permissive licensing acceptable"
+      },
+      {
+        "reading_id": "property_rights_reading",
+        "commitment": "Software is intellectual property; creators have legitimate right to restrict access and modification",
+        "authority_grounding": "Property rights tradition / labor theory of value / commercial law",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "pragmatic_development_reading",
+          "utilitarian_hybrid_reading"
+        ],
+        "expected_structural_delta": "Source code is proprietary asset; licensing restrictions are legitimate exercises of ownership; users are consumers with contractual rights only"
+      },
+      {
+        "reading_id": "utilitarian_hybrid_reading",
+        "commitment": "Software licensing should maximize aggregate welfare; both models serve different contexts",
+        "authority_grounding": "Consequentialist ethics / economic efficiency / pluralist frameworks",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "pragmatic_development_reading",
+          "property_rights_reading"
+        ],
+        "expected_structural_delta": "No categorical victim set; context-dependent optimization; infrastructure favors open, specialized tools may justify proprietary; mixed ecosystems acceptable"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "freedom_imperative_reading",
+        "reading_b": "property_rights_reading",
+        "basis": "Freedom imperative holds that users have inalienable rights to source access that cannot be legitimately restricted; property rights reading holds that creators have legitimate authority to impose such restrictions. No single framework can hold both axioms simultaneously."
+      },
+      {
+        "reading_a": "freedom_imperative_reading",
+        "reading_b": "utilitarian_hybrid_reading",
+        "basis": "Freedom imperative treats proprietary software as categorically unjust regardless of consequences; utilitarian hybrid treats justice as context-dependent and outcome-based. A deontological framework cannot simultaneously hold that an action is categorically wrong and that its permissibility depends on aggregate welfare calculations."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "software_source_status_kernel",
+      "human_readable": "Software Source Status (Contested Kernel)",
+      "structural_delta": "Competing readings of the moral and legal status of software source code access rights",
+      "primary_observable": "Licensing regime adoption rates; legal precedents; community discourse framing",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "network_effects_lock_in",
+        "commons_sustainability"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel; all four readings proceed to generation as expansion of this single axis"
+    },
+    {
+      "claim_id": "network_effects_lock_in",
+      "human_readable": "Network Effects Lock-In (Proprietary Ecosystem Capture)",
+      "structural_delta": "Proprietary platforms achieve market dominance through user base network effects and switching costs",
+      "primary_observable": "Market concentration metrics; file format compatibility barriers; migration cost studies",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dominant_proprietary_vendors",
+      "victim": "users_locked_into_ecosystems",
+      "downstream_of": [
+        "software_source_status_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent structural mechanism; distinct observable from kernel; passes pairwise test"
+    },
+    {
+      "claim_id": "commons_sustainability",
+      "human_readable": "Commons Sustainability (Free-Rider Problem in FOSS)",
+      "structural_delta": "Open-source projects face chronic under-investment as commercial users extract value without contributing maintenance resources",
+      "primary_observable": "Maintainer burnout rates; corporate contribution ratios; critical infrastructure funding gaps",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "commercial_foss_consumers",
+      "victim": "volunteer_maintainers",
+      "downstream_of": [
+        "software_source_status_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent structural mechanism; distinct observable from kernel and network effects; passes pairwise test"
+    },
+    {
+      "claim_id": "security_through_obscurity",
+      "human_readable": "Security Through Obscurity (Closed Source as Attack Surface Reduction)",
+      "structural_delta": "Proprietary software claims security advantage through source code secrecy; open source claims advantage through peer review",
+      "primary_observable": "Vulnerability disclosure rates; time-to-patch metrics; exploit frequency by licensing model",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "software_source_status_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical question downstream of kernel; captured by pragmatic_development_reading's quality claims"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "freedom_imperative_reading",
+      "kernel_id": "software_source_status",
+      "reading_id": "freedom_imperative_reading"
+    },
+    {
+      "claim_id": "pragmatic_development_reading",
+      "kernel_id": "software_source_status",
+      "reading_id": "pragmatic_development_reading"
+    },
+    {
+      "claim_id": "property_rights_reading",
+      "kernel_id": "software_source_status",
+      "reading_id": "property_rights_reading"
+    },
+    {
+      "claim_id": "utilitarian_hybrid_reading",
+      "kernel_id": "software_source_status",
+      "reading_id": "utilitarian_hybrid_reading"
+    },
+    "network_effects_lock_in",
+    "commons_sustainability"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "security_through_obscurity",
+      "structural_delta": "Competing security claims based on source code visibility",
+      "hypothesis": "rope",
+      "deferral_reason": "Empirical question captured by pragmatic_development_reading's quality/methodology claims; does not add independent structural dimension"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_ai_training_data",
+      "description": "Does AI training on open-source code constitute a new extraction mechanism not contemplated by original FOSS licenses? Copilot/LLM code generation may reclassify open source from commons to training corpus.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_state_sovereignty",
+      "description": "Do nation-states have legitimate authority to mandate source code access for security/sovereignty reasons, overriding both FOSS and proprietary frameworks? China's source code review requirements and EU digital sovereignty initiatives suggest a fifth reading.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "The four readings are stable within current discourse, but the freedom_imperative vs pragmatic_development split (FSF vs OSI) may be a historical artifact rather than a structural necessity. A unified freedom-and-pragmatism reading may emerge.",
+      "source": "§1.3-K coherence check"
+    },
+    {
+      "id": "omega_commons_reclassification",
+      "description": "Is commons_sustainability a true Snare (structural extraction) or a Piton (atrophied governance)? If FOSS communities could coordinate to impose contribution requirements, the constraint type changes.",
+      "source": "§2.3 classification uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four readings identified through multi-tradition lens scan (deontological, pragmatic, property-rights, consequentialist). Network effects and commons sustainability pass pairwise independence test as distinct structural mechanisms with different observables and beneficiary structures."
+  }
+}

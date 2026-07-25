@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / Legal Anthropology / Commitment Systems",
+  "family_id": "dueling_decline_honor_settlement",
+  "topic_summary": "Analysis of dueling's disappearance as a legitimate honor-settlement mechanism in Western societies (roughly 1600-1900). The topic is flagged as a contested kernel: whether dueling's decline represents a drop (practice fell to fringe but remained thinkable), a contraction (became structurally unthinkable), or an overdetermined composite where both mechanisms operated simultaneously.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Dueling practice (formalized violence for honor restoration)",
+      "State monopoly on violence (Weberian legitimacy claim)",
+      "Honor codes (aristocratic/military status systems)",
+      "Legal prosecution apparatus (anti-dueling statutes)",
+      "Bourgeois respectability norms (alternative status framework)",
+      "Insurance/liability regimes (economic substitution mechanisms)"
+    ],
+    "key_tensions": [
+      "Private violence vs state monopoly (duelists vs legal authority)",
+      "Aristocratic honor vs bourgeois respectability (competing status systems)",
+      "Formal prohibition vs informal tolerance (law vs enforcement practice)"
+    ],
+    "mechanisms": [
+      "Legal prosecution: anti-dueling statutes with variable enforcement",
+      "Status substitution: alternative honor frameworks (professional reputation, wealth display)",
+      "Economic liability: insurance exclusions, inheritance complications for duelists"
+    ],
+    "absences": [
+      "Absence of systematic data on enforcement rates vs statute passage dates",
+      "Absence of cross-class comparison (aristocratic vs merchant dueling decline trajectories)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Honor as requiring violent defense when publicly challenged",
+    "authority_description": "Peer recognition within status group; no formal adjudicator",
+    "drift_status": "absent",
+    "candidate_pattern": "Type 2 (Interpretive Drift) transitioning to Type 4 (Covert Revision)",
+    "is_contested_kernel": true,
+    "kernel_id": "honor_violence_legitimacy",
+    "readings": [
+      {
+        "reading_id": "drop_reading",
+        "commitment": "Dueling remained structurally legitimate but became practically rare due to external costs",
+        "authority_grounding": "Honor code persisted; state prosecution raised costs without delegitimizing the practice itself",
+        "sibling_readings": [
+          "contraction_reading",
+          "composite_reading"
+        ],
+        "expected_structural_delta": "Practice frequency drops but conceptual availability remains; dueling remains thinkable as honor mechanism"
+      },
+      {
+        "reading_id": "contraction_reading",
+        "commitment": "Dueling became structurally unthinkable as honor itself was redefined to exclude violence",
+        "authority_grounding": "Bourgeois respectability norms replaced aristocratic honor; violence became incompatible with status",
+        "sibling_readings": [
+          "drop_reading",
+          "composite_reading"
+        ],
+        "expected_structural_delta": "Conceptual space contracts; dueling exits the set of legitimate honor responses"
+      },
+      {
+        "reading_id": "composite_reading",
+        "commitment": "Overdetermined decline: external costs (drop) and conceptual redefinition (contraction) operated simultaneously",
+        "authority_grounding": "Both state prosecution AND status-system transformation; non-break composite with contraction edge",
+        "sibling_readings": [
+          "drop_reading",
+          "contraction_reading"
+        ],
+        "expected_structural_delta": "Two mechanisms with different victim sets and extractiveness profiles; contraction edge makes drop mechanism insufficient alone"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "drop_reading",
+      "human_readable": "Drop Reading (External Cost Increase)",
+      "structural_delta": "State prosecution and economic liability raised costs of dueling without delegitimizing the honor framework itself",
+      "primary_observable": "Anti-dueling statute passage dates vs prosecution rates; insurance policy exclusions; inheritance complications",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "state_authority",
+      "victim": "aristocratic_duelists",
+      "downstream_of": [],
+      "feeds_into": [
+        "composite_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: isolates external cost mechanism; tests whether drop alone is sufficient"
+    },
+    {
+      "claim_id": "contraction_reading",
+      "human_readable": "Contraction Reading (Honor Redefinition)",
+      "structural_delta": "Bourgeois respectability norms replaced aristocratic honor codes; violence became incompatible with status recognition",
+      "primary_observable": "Shift in status markers (wealth/profession vs martial prowess); conduct manuals redefining honor; class-differentiated decline rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "bourgeois_class",
+      "victim": "aristocratic_status_system",
+      "downstream_of": [],
+      "feeds_into": [
+        "composite_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: isolates conceptual contraction mechanism; different victim set and epsilon from drop"
+    },
+    {
+      "claim_id": "composite_reading",
+      "human_readable": "Composite Reading (Overdetermined Decline)",
+      "structural_delta": "Both external costs and honor redefinition operated; contraction edge makes drop insufficient; non-break composite",
+      "primary_observable": "Temporal sequencing of legal enforcement vs status-norm shift; cross-class variation in decline trajectories",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "modern_state_bourgeois_alliance",
+      "victim": "aristocratic_autonomy",
+      "downstream_of": [
+        "drop_reading",
+        "contraction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: synthesis node testing whether mechanisms are genuinely independent or collapse into single constraint"
+    },
+    {
+      "claim_id": "state_violence_monopoly",
+      "human_readable": "State Violence Monopoly (Weberian Legitimacy Claim)",
+      "structural_delta": "State's claim to exclusive legitimate violence as upstream structural condition",
+      "primary_observable": "Legal codification of state violence monopoly; enforcement apparatus development",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "drop_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but captured via drop_reading's cost mechanism"
+    },
+    {
+      "claim_id": "insurance_liability_substitution",
+      "human_readable": "Insurance/Liability Substitution (Economic Honor Mechanisms)",
+      "structural_delta": "Economic liability regimes as alternative honor-enforcement mechanisms",
+      "primary_observable": "Insurance policy exclusions for dueling deaths; inheritance law complications; liability tort development",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "insurance_industry",
+      "victim": null,
+      "downstream_of": [
+        "drop_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream scaffold; economic substitution mechanism but lower structural centrality than core readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "drop_reading",
+      "kernel_id": "honor_violence_legitimacy",
+      "reading_id": "drop_reading"
+    },
+    {
+      "claim_id": "contraction_reading",
+      "kernel_id": "honor_violence_legitimacy",
+      "reading_id": "contraction_reading"
+    },
+    {
+      "claim_id": "composite_reading",
+      "kernel_id": "honor_violence_legitimacy",
+      "reading_id": "composite_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "state_violence_monopoly",
+      "structural_delta": "State's claim to exclusive legitimate violence",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain captured via drop_reading's cost mechanism; Weberian legitimacy claim is structural precondition but not independent reading"
+    },
+    {
+      "claim_id": "insurance_liability_substitution",
+      "structural_delta": "Economic liability regimes as alternative honor mechanisms",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream economic substitution mechanism; lower centrality than core kernel readings; omega material for composite analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_data_gap",
+      "description": "Systematic data on enforcement rates vs statute passage dates is absent. If enforcement lagged statutes by decades, drop mechanism weakens; if enforcement was immediate, drop mechanism strengthens. Contraction reading less sensitive to this gap.",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_cross_class_trajectories",
+      "description": "Absence of cross-class comparison data. If merchant/bourgeois dueling declined earlier than aristocratic dueling, contraction reading strengthens (status-norm shift precedes legal enforcement). If decline was synchronous across classes, drop reading strengthens (external costs dominated).",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_composite_coherence",
+      "description": "Does composite_reading collapse into one of its components, or do drop and contraction have genuinely different victim sets and epsilon profiles? If contraction edge is load-bearing (drop alone insufficient), composite is real. If contraction merely accelerates drop, readings collapse.",
+      "source": "Kernel coherence test (§1.3-K)"
+    },
+    {
+      "id": "omega_non_western_dueling",
+      "description": "Analysis restricted to Western European/North American contexts. Non-Western honor-violence systems (e.g., Japanese samurai dueling, Ottoman honor codes) may exhibit different drop/contraction dynamics. Generalization beyond Western bourgeois state formation is omega variable.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + domain boundary recognition"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition is structurally valid: three readings emit different constraints (different victim sets, different epsilon bins, different beneficiaries). Composite reading tests whether mechanisms are genuinely independent or collapse. Enforcement data gap and cross-class trajectory absence are bounded as omegas rather than fractures."
+  },
+  "_seed_id": "dueling_decline"
+}

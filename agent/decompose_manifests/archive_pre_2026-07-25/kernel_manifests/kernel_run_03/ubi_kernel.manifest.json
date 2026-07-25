@@ -1,0 +1,237 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Social Policy / Welfare State Theory",
+  "family_id": "ubi_kernel_contest_2026",
+  "topic_summary": "Analysis of Universal Basic Income as a contested kernel where the same income-support commitment is read as either a freedom-floor (enabling autonomy, reducing stigma, protecting against market shocks) or a dependency-trap (reducing work incentives, creating moral hazard, inefficiently redistributing upward). The empirical substrate is genuinely contested—pilot results vary dramatically by scale, duration, and context. Cross-ideological appeal masks fundamental disagreement about the role of work, legitimacy of redistribution, and whether universality eliminates targeting errors or wastes resources.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Universal Basic Income (unconditional cash transfer to all citizens)",
+      "Alaska Permanent Fund Dividend (existing partial UBI funded by oil revenues)",
+      "Kenya 12-year pilot (5,000 recipients, $22/day, largest current experiment)",
+      "Welfare state programs (targeted conditional transfers UBI would replace/supplement)",
+      "Labor market (employment effects contested empirically)",
+      "Proponents (Yang, Stern, Hughes, King, Friedman—cross-ideological coalition)",
+      "Critics (AEI, California Policy Center, targeted-welfare advocates)",
+      "Pilot program participants (37% average attrition rate across 26 studies)"
+    ],
+    "key_tensions": [
+      "Universality vs targeting (eliminate stigma/errors vs waste resources on non-needy)",
+      "Autonomy vs dependency (freedom to refuse bad work vs reduced work incentives)",
+      "Empirical evidence interpretation (Alaska/Kenya show minimal labor reduction vs AEI meta-analysis shows -3.2% in large pilots)"
+    ],
+    "key_mechanisms": [
+      "Taxing back at higher incomes (UBI as gross payment, clawed back via progressive taxation)",
+      "Replacement of targeted programs (offset cost by eliminating means-tested welfare)",
+      "Labor supply response (income effect vs substitution effect on work hours)",
+      "Attrition in pilots (37% average dropout rate distorts reported outcomes)"
+    ],
+    "key_absences": [
+      "Inflation effects (no discussion of how universal cash transfers affect price levels)",
+      "Political economy of implementation (how cross-ideological coalition would fracture during design)",
+      "Interaction with housing markets (cash transfers capitalized into rents in supply-constrained markets)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Unconditional income support as a stabilized policy commitment—all citizens receive regular cash transfers without means-testing or work requirements",
+    "authority_description": "Legitimacy grounded in competing normative frameworks: autonomy/dignity (freedom-floor) vs responsibility/reciprocity (dependency-trap). No single interpretive authority—contested across ideological traditions.",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "unconditional_income_support",
+    "readings": [
+      {
+        "reading_id": "freedom_floor_reading",
+        "commitment": "Unconditional income support as autonomy-enabling floor—removes coercion from labor market, eliminates welfare stigma, protects against market shocks",
+        "authority_grounding": "Autonomy/dignity framework—legitimacy derives from enabling individual choice and eliminating degrading conditionality",
+        "sibling_readings": [
+          "dependency_trap_reading",
+          "universality_paradox_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: precarious workers, caregivers, artists, abuse victims (those constrained by bad labor market options). Victims: none claimed (Pareto improvement via autonomy). Epsilon: moderate (labor supply effects minimal per Alaska/Kenya data). Type: rope (coordination mechanism enabling voluntary sector participation)."
+      },
+      {
+        "reading_id": "dependency_trap_reading",
+        "commitment": "Unconditional income support as incentive-distorting subsidy—rewards idleness, crowds out targeted aid, redistributes upward to non-needy",
+        "authority_grounding": "Responsibility/reciprocity framework—legitimacy requires contribution; unearned transfers violate fairness and harm recipients via skill atrophy",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "universality_paradox_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: middle/upper class (receive transfers despite not needing them), UBI advocates (political capital from universality). Victims: working poor (lose targeted programs worth more than UBI amount), taxpayers (net cost $1.4 trillion after offsets). Epsilon: high (AEI meta-analysis shows -3.2% employment in large pilots). Type: snare (extracts from poor via program replacement, transfers to non-needy)."
+      },
+      {
+        "reading_id": "universality_paradox_reading",
+        "commitment": "Unconditional income support as politically ambiguous Trojan horse—cross-ideological appeal masks incompatible implementation paths that converge on similar fiscal outcomes",
+        "authority_grounding": "Structural/institutional analysis—legitimacy contested because universality serves opposite political projects (welfare state dissolution vs capitalist road to communism)",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "dependency_trap_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: political entrepreneurs (exploit ambiguity to build coalitions), policy designers (taxing-back mechanisms allow rhetorical flexibility). Victims: ideological clarity (ambiguity prevents coherent evaluation), targeted program recipients (universality used to justify cuts). Epsilon: low (fiscal/distributional outcomes similar across designs per taxing-back research). Type: tangled_rope (political ambiguity entangles incompatible normative commitments in same policy vehicle)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "freedom_floor_reading",
+        "reading_b": "dependency_trap_reading",
+        "basis": "Freedom-floor axiom: autonomy is intrinsically valuable and unconditional support enables it without moral hazard. Dependency-trap axiom: reciprocity is morally required and unconditional support violates it, creating dependency. No single framework holds both—accepting autonomy as sufficient grounds for transfers requires rejecting reciprocity as necessary, and vice versa."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "freedom_floor_reading",
+      "human_readable": "Freedom-Floor Reading (Autonomy-Enabling Income Support)",
+      "structural_delta": "UBI as mechanism removing labor market coercion and welfare stigma, enabling voluntary sector participation",
+      "primary_observable": "Labor supply elasticity in Alaska/Kenya pilots; exit from abusive relationships; voluntary sector hours",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "precarious_workers_caregivers_artists",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; distinct beneficiary structure and empirical grounding from dependency-trap reading"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "human_readable": "Dependency-Trap Reading (Incentive-Distorting Subsidy)",
+      "structural_delta": "UBI as upward redistribution mechanism that crowds out targeted aid and reduces work incentives",
+      "primary_observable": "Employment effects in large-scale pilots (AEI -3.2%); fiscal cost net of program replacement ($1.4T); benefit incidence analysis",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "middle_upper_class_non_needy",
+      "victim": "working_poor_taxpayers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; axiom-contradictory to freedom-floor; highest epsilon bin"
+    },
+    {
+      "claim_id": "universality_paradox_reading",
+      "human_readable": "Universality Paradox (Political Ambiguity as Trojan Horse)",
+      "structural_delta": "Cross-ideological appeal masks incompatible implementation paths; taxing-back mechanisms converge fiscal outcomes despite opposed normative framings",
+      "primary_observable": "Coalition composition (left/right advocates); policy design variance (gross UBI + clawback vs net targeted); fiscal incidence similarity",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "political_entrepreneurs_policy_designers",
+      "victim": "ideological_clarity_targeted_recipients",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; captures structural ambiguity enabling opposed readings to coexist politically"
+    },
+    {
+      "claim_id": "empirical_substrate_fragility",
+      "human_readable": "Empirical Substrate Fragility (Pilot Heterogeneity and Attrition)",
+      "structural_delta": "Pilot evidence varies by scale, duration, payment size, and context; 37% average attrition distorts outcomes",
+      "primary_observable": "Attrition rates across 26 pilots; employment effect variance by participant count; payment size heterogeneity ($7,177 mean, 39.5% income boost)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "freedom_floor_reading",
+        "dependency_trap_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological substrate underlying both readings; captured in omega_empirical_fragility rather than separate axis"
+    },
+    {
+      "claim_id": "inflation_housing_capitalization",
+      "human_readable": "Inflation and Housing Capitalization (Cash Transfer Price Effects)",
+      "structural_delta": "Universal cash transfers capitalized into rents in supply-constrained housing markets; general price level effects",
+      "primary_observable": "Rent inflation in pilot regions; CPI response to transfer programs; housing supply elasticity",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "landlords_asset_owners",
+      "victim": "transfer_recipients_non_recipients",
+      "downstream_of": [],
+      "feeds_into": [
+        "freedom_floor_reading",
+        "dependency_trap_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence in source material; high-epsilon piton but requires domain expertise beyond pilot data"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "freedom_floor_reading",
+      "kernel_id": "unconditional_income_support",
+      "reading_id": "freedom_floor_reading"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "kernel_id": "unconditional_income_support",
+      "reading_id": "dependency_trap_reading"
+    },
+    {
+      "claim_id": "universality_paradox_reading",
+      "kernel_id": "unconditional_income_support",
+      "reading_id": "universality_paradox_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "empirical_substrate_fragility",
+      "structural_delta": "Pilot evidence heterogeneity and attrition bias",
+      "hypothesis": "mountain",
+      "deferral_reason": "Methodological substrate underlying both readings; captured in omega_empirical_fragility rather than requiring separate constraint story"
+    },
+    {
+      "claim_id": "inflation_housing_capitalization",
+      "structural_delta": "Cash transfer price effects in constrained markets",
+      "hypothesis": "piton",
+      "deferral_reason": "Conspicuous absence in source material; high-epsilon mechanism requiring domain expertise beyond available pilot data"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_fragility",
+      "description": "Is the contested empirical substrate (Alaska/Kenya vs AEI meta-analysis) a genuine mountain (different scales/contexts measure different phenomena) or a piton of methodological choice (attrition bias and heterogeneity distort all measurements)? 37% average attrition rate is a giant warning sign—if dropouts are systematically different from completers, reported labor supply effects are unreliable regardless of reading.",
+      "source": "Deferred axis empirical_substrate_fragility + source material methodological critique"
+    },
+    {
+      "id": "omega_inflation_capitalization",
+      "description": "Does universal cash transfer get capitalized into rents in supply-constrained housing markets, converting the freedom-floor into a landlord subsidy? Source material contains zero discussion of price effects—this absence is conspicuous given that housing is typically 30-40% of low-income budgets. If capitalization is substantial, both readings underestimate epsilon (freedom-floor loses real purchasing power, dependency-trap's fiscal cost understates true extraction).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis inflation_housing_capitalization"
+    },
+    {
+      "id": "omega_political_implementation",
+      "description": "Does the cross-ideological coalition fracture during implementation design (gross UBI + clawback vs net targeted transfer), or does taxing-back convergence allow opposed readings to coexist indefinitely? Universality-paradox reading claims ambiguity is structural feature, but source provides no evidence of actual coalition behavior during policy design. If coalition fractures, one reading captures the implemented system; if it persists, the paradox itself becomes the constraint.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + universality_paradox_reading structural claim"
+    },
+    {
+      "id": "omega_kernel_validity",
+      "description": "Is unconditional_income_support a genuine kernel or a rhetorical package? The three readings share a commitment to 'unconditional cash transfers to all citizens' but disagree on everything else—beneficiaries, victims, epsilon, even the sign of the labor supply effect. If taxing-back mechanisms make gross-UBI and targeted-transfers fiscally equivalent (as source claims), the kernel may dissolve into implementation details rather than a stable shared commitment. Axiom contradiction between freedom-floor and dependency-trap is real, but universality-paradox suggests the kernel itself is politically constructed rather than structurally prior.",
+      "source": "§1.3-K kernel recognition + universality_paradox_reading structural ambiguity claim"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied as specified. Three readings selected capture axiom contradiction (freedom-floor vs dependency-trap) and structural ambiguity (universality-paradox). Empirical fragility and inflation capitalization deferred as omegas rather than separate axes. F34 not triggered despite inflation absence—housing capitalization is standard price theory, not domain trespass, but source material provides no data to ground the analysis."
+  },
+  "_seed_id": "ubi_kernel"
+}

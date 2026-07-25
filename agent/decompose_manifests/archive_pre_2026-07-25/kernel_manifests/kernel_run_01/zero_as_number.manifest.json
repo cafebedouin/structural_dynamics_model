@@ -1,0 +1,190 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Mathematics / Philosophy of Mathematics / Epistemology",
+  "family_id": "zero_western_mathematics_2026",
+  "topic_summary": "Analysis of zero's entry into Western mathematics as a number, examining the transition from Indian mathematical innovation through Islamic transmission to European adoption. The topic investigates whether zero's acceptance represents a contested kernel—different readings of what mathematical objects are—or a single constraint (epistemological resistance) observed from different positions.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Brahmagupta (7th century Indian mathematician, first to treat zero as number with arithmetic rules)",
+      "Aryabhata (5th century Indian mathematician, established zero as digit)",
+      "Al-Khwarizmi (9th century Persian mathematician, transmitted Hindu numerals to Islamic world)",
+      "Fibonacci (13th century Italian mathematician, introduced Hindu-Arabic system to Europe via Liber Abaci)",
+      "Greek philosophical tradition (Parmenides, Aristotle—rejected void/nothingness)",
+      "Christian theological authorities (associated zero with void/satanic absence)",
+      "European merchant class (early adopters for practical calculation)",
+      "European learned institutions (monasteries, Medici bank, English Exchequer—late adopters)"
+    ],
+    "key_tensions": [
+      "Placeholder vs number (Babylonian/Mayan positional notation vs Indian zero-as-quantity)",
+      "Practical utility vs philosophical coherence (merchants vs learned circles)",
+      "Existence-based ontology vs void-permitting ontology (Greek/Christian vs Indian/Islamic)",
+      "Foreign innovation vs institutional conservatism (Hindu-Arabic system vs Roman numerals/abacus)"
+    ],
+    "key_mechanisms": [
+      "Transmission chain: India (5th-7th c.) → Islamic world (9th c.) → Europe (12th-13th c.)",
+      "Dual adoption pathway: merchant class (13th c.) vs institutions (16th c.)",
+      "Philosophical gatekeeping: Aristotelian void-rejection + Christian theological resistance"
+    ],
+    "key_absences": [
+      "No discussion of Chinese mathematical tradition's independent zero development",
+      "Limited evidence of specific institutional prohibitions (resistance described as cultural/philosophical rather than legally enforced)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "What mathematical objects are: whether 'number' can denote absence/void or must denote existing quantity",
+    "authority_description": "Philosophical tradition (Aristotelian metaphysics) + theological doctrine (God-in-all-that-exists) grounding what counts as legitimate mathematical entity",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": false,
+    "collapse_reason": "Initial hypothesis: existence-grounding vs void-permitting readings would emit different constraints (different victim sets, different ε). Actual finding: both readings converge on the SAME constraint—epistemological resistance to zero-as-number—with identical structural delta (philosophical incompatibility with void), identical primary observable (adoption lag), and identical ε bin (low). The 'contest' is not between two readings of what numbers are, but between one reading (existence-grounding) and empirical pressure (practical utility). This is a single constraint observed from different positions (Greek/Christian resistance vs merchant pragmatism), not multiple constraints from one kernel. The M4/M5 seam collapses: there is no interpretive layer here, only one constraint and its eventual abandonment under external pressure."
+  },
+  "axes": [
+    {
+      "claim_id": "epistemological_void_resistance",
+      "human_readable": "Epistemological Void Resistance (Existence-Grounding Constraint)",
+      "structural_delta": "Philosophical commitment that mathematical objects must represent existing quantities, not absence",
+      "primary_observable": "Adoption lag between merchant use (13th c.) and institutional acceptance (16th c.); explicit theological/philosophical rejections",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_conservatism_inertia"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core philosophical constraint; upstream to institutional resistance; distinct observable from practical utility axis"
+    },
+    {
+      "claim_id": "practical_calculation_pressure",
+      "human_readable": "Practical Calculation Pressure (Merchant Utility Demand)",
+      "structural_delta": "Economic pressure for efficient calculation methods independent of philosophical coherence",
+      "primary_observable": "Merchant adoption rate (13th c.); commercial transaction volume requiring place-value arithmetic",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_conservatism_inertia"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally independent from epistemological axis; different observable (economic vs philosophical); mountain providing external pressure"
+    },
+    {
+      "claim_id": "institutional_conservatism_inertia",
+      "human_readable": "Institutional Conservatism Inertia (Learned Circle Resistance)",
+      "structural_delta": "Institutional preference for familiar systems despite demonstrated practical superiority of alternatives",
+      "primary_observable": "Institutional adoption lag (Medici bank, English Exchequer 16th c. vs merchant use 13th c.)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "learned_institutional_class",
+      "victim": "economic_efficiency",
+      "downstream_of": [
+        "epistemological_void_resistance",
+        "practical_calculation_pressure"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis of philosophical resistance + practical pressure; tangled_rope with clear beneficiary structure"
+    },
+    {
+      "claim_id": "transmission_chain_dependency",
+      "human_readable": "Transmission Chain Dependency (Islamic Intermediary Requirement)",
+      "structural_delta": "European access to Indian mathematical innovation mediated through Islamic scholarly networks",
+      "primary_observable": "Chronological sequence: India (5th-7th c.) → Islamic world (9th c.) → Europe (12th-13th c.); Al-Khwarizmi's role",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_conservatism_inertia"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical contingency rather than structural constraint; lower centrality than selected upstream axes"
+    },
+    {
+      "claim_id": "placeholder_to_number_transition",
+      "human_readable": "Placeholder-to-Number Transition (Notational vs Arithmetic Zero)",
+      "structural_delta": "Shift from zero as positional marker (Babylonian) to zero as arithmetic quantity with operational rules (Brahmagupta)",
+      "primary_observable": "Presence of arithmetic rules for zero (Brahmagupta's Brahmasphutasiddhanta); operational definitions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "epistemological_void_resistance"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Indian innovation context; structurally upstream but analysis focuses on Western adoption resistance; captured indirectly via epistemological_void_resistance"
+    }
+  ],
+  "generation_sequence": [
+    "epistemological_void_resistance",
+    "practical_calculation_pressure",
+    "institutional_conservatism_inertia"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "transmission_chain_dependency",
+      "structural_delta": "European access mediated through Islamic scholarly networks",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical contingency rather than structural constraint; lower centrality than selected axes"
+    },
+    {
+      "claim_id": "placeholder_to_number_transition",
+      "structural_delta": "Shift from positional marker to arithmetic quantity",
+      "hypothesis": "mountain",
+      "deferral_reason": "Indian innovation context; Western adoption resistance captured via epistemological_void_resistance axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Initial hypothesis: existence-grounding vs void-permitting readings would constitute contested kernel. Actual finding: both converge on identical constraint (epistemological resistance, low ε, same observable). The 'contest' is between one reading and external pressure, not between two readings. M4/M5 seam collapses—no interpretive layer, only constraint abandonment under utility pressure.",
+      "source": "§1.3-K kernel/reading decomposition test"
+    },
+    {
+      "id": "omega_chinese_absence",
+      "description": "Chinese mathematical tradition's independent zero development not addressed in research context. Parallel innovation pathway may reveal whether epistemological resistance is Western-specific or universal pre-modern pattern.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_enforcement_mechanism",
+      "description": "Resistance described as cultural/philosophical rather than legally enforced. Unclear whether institutional conservatism operated via explicit prohibition or informal gatekeeping. Affects rope vs snare classification of epistemological_void_resistance.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction absence"
+    },
+    {
+      "id": "omega_division_by_zero",
+      "description": "Aristotle's rejection of division by zero mentioned but not developed. Modern mathematics still treats division by zero as undefined—does the epistemological constraint persist in altered form, or was it fully resolved?",
+      "source": "F15 (Premature Closure) + extraction claim"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: Analysis stopped at adoption narrative without examining whether the epistemological constraint was resolved or merely bypassed. Division by zero remains undefined in modern mathematics—does this indicate persistent constraint in altered form? Generated omega_division_by_zero to bound this uncertainty. Kernel collapse (is_contested_kernel=false) documented in omega_kernel_collapse: the supposed contest between readings converges on a single constraint observed from different positions."
+  },
+  "_seed_id": "zero_as_number"
+}

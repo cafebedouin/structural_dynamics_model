@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Legal Philosophy / Commitment Systems",
+  "family_id": "sunni_madhahib_jurisprudential_method",
+  "topic_summary": "Analysis of the Four Sunni Schools of Jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali) as a contested kernel case. Each school offers a live reading of the shared jurisprudential-method kernel (Qur'an, Hadith, Ijma, Qiyas) that grounds interpretive authority differently while maintaining mutual recognition. The schools emerged 9th-10th century CE, consolidated by 12th century, and persist across geographic regions without displacement.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Hanafi School (founded Abu Hanifa, 8th century; emphasizes qiyas and istihsan; dominant Ottoman Empire, South/Central Asia)",
+      "Maliki School (founded Malik ibn Anas, d.795; emphasizes Medinan practice/urf; dominant North/West Africa)",
+      "Shafi'i School (founded al-Shafi'i, d.820; standardized hierarchy Qur'an>Hadith>Ijma>Qiyas; dominant East Africa/Southeast Asia)",
+      "Hanbali School (founded Ahmad ibn Hanbal, d.855; literalist, minimal qiyas; dominant Arabia; asymmetric recognition)",
+      "Qur'an (primary textual source, universally accepted)",
+      "Hadith (Prophetic tradition, universally accepted but weighted differently)",
+      "Ijma (scholarly consensus, defined differently across schools)",
+      "Qiyas (analogical reasoning, accepted but applied with varying scope)"
+    ],
+    "key_tensions": [
+      "Istihsan validity: Hanafi accepts juristic preference as secondary source; Shafi'i rejects entirely",
+      "Urf (local custom): Maliki accepts Medinan practice as law source; other three reject",
+      "Consensus standards: Hanbali requires unanimous ijma; Hanafi follows Kufa consensus; Maliki follows Medina consensus",
+      "Hanbali asymmetric recognition: older three schools recognize Hanbali as legitimate; Hanbali refuses reciprocal recognition, views others as bid'ah"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Shared jurisprudential framework: Qur'an and Hadith as ultimate sources, supplemented by Ijma (consensus) and Qiyas (analogy) where primary sources are silent",
+    "authority_description": "Each school grounds interpretive legitimacy through different methodological hierarchies and source-weighting, but all claim fidelity to the same four-source framework",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "jurisprudential_method_kernel",
+    "readings": [
+      {
+        "reading_id": "hanafi_reading",
+        "commitment": "Reason and analogy (qiyas) as primary interpretive tools; istihsan (juristic preference) as valid secondary source; flexibility prioritized over strict textualism",
+        "authority_grounding": "Iraqi scholarly tradition; state patronage (Ottoman Empire); emphasis on rational coherence and practical adaptability",
+        "sibling_readings": [
+          "maliki_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Lower suppression of local variation; higher tolerance for juristic discretion; beneficiary: state administrators needing flexible rulings; victim: textualist purists"
+      },
+      {
+        "reading_id": "maliki_reading",
+        "commitment": "Medinan practice (amal ahl al-Madina) as authoritative embodiment of Sunnah; local custom (urf) as valid law source; living tradition over isolated texts",
+        "authority_grounding": "Geographic proximity to Prophet's city; continuity of practice as interpretive guide; Malik's judicial authority in Medina",
+        "sibling_readings": [
+          "hanafi_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Geographic constraint on authority (Medina privileged); beneficiary: Medinan scholarly lineage; victim: non-Medinan jurists claiming equal interpretive standing"
+      },
+      {
+        "reading_id": "shafii_reading",
+        "commitment": "Strict hierarchy of sources (Qur'an > Hadith > Ijma > Qiyas); standardized methodology; rejection of istihsan and urf; text over practice",
+        "authority_grounding": "Systematization of legal theory (usul al-fiqh); intellectual synthesis of Medinan and Iraqi traditions; explicit methodological rules",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Methodological uniformity constraint; suppression of regional variation; beneficiary: scholars seeking universal framework; victim: practitioners relying on local custom or juristic preference"
+      },
+      {
+        "reading_id": "hanbali_reading",
+        "commitment": "Literalist textualism; minimal qiyas; rejection of bid'ah (innovation); Hadith primacy over rational elaboration; unanimous ijma required",
+        "authority_grounding": "Traditionalist reaction to perceived innovation; direct textual fidelity as sole legitimacy source; refusal to recognize other schools' innovations as valid",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "shafii_reading"
+        ],
+        "expected_structural_delta": "Maximum suppression of interpretive flexibility; asymmetric recognition (accepts no other school as fully legitimate); beneficiary: textualist purists; victim: rationalist jurists and practitioners needing adaptive rulings"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hanafi_reading",
+        "reading_b": "hanbali_reading",
+        "basis": "Hanafi grounds legitimacy in rational coherence and juristic discretion (istihsan); Hanbali grounds legitimacy in strict textual literalism and rejection of rational elaboration as bid'ah. No single framework can hold both 'reason is a valid independent source' and 'reason beyond text is illegitimate innovation' simultaneously."
+      },
+      {
+        "reading_a": "maliki_reading",
+        "reading_b": "shafii_reading",
+        "basis": "Maliki grounds authority in living Medinan practice (urf) as embodiment of Sunnah; Shafi'i explicitly rejects urf and local practice as valid sources, requiring direct textual evidence. No framework can hold both 'continuous practice is authoritative' and 'only explicit text is authoritative' as foundational axioms."
+      },
+      {
+        "reading_a": "shafii_reading",
+        "reading_b": "hanbali_reading",
+        "basis": "Shafi'i accepts analogical reasoning (qiyas) as fourth-tier source after Qur'an/Hadith/Ijma; Hanbali minimizes qiyas to near-rejection, viewing it as rational innovation. While both are textualist, Shafi'i's systematic inclusion of qiyas contradicts Hanbali's axiom that interpretive tools beyond text are suspect."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "hanafi_reading",
+      "human_readable": "Hanafi Reading: Reason and Juristic Preference",
+      "structural_delta": "Grounds interpretive authority in rational coherence, qiyas, and istihsan; prioritizes flexibility and practical adaptability over strict textualism",
+      "primary_observable": "Frequency of istihsan invocation in fatwas; acceptance of juristic discretion in novel cases; geographic spread via Ottoman state patronage",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_administrators_needing_flexible_rulings",
+      "victim": "textualist_purists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Represents rationalist pole of the kernel contest; highest geographic spread; state-patronage mechanism distinct from other readings"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "human_readable": "Maliki Reading: Medinan Practice as Living Tradition",
+      "structural_delta": "Grounds interpretive authority in continuous Medinan practice (amal) and local custom (urf) as embodiment of Sunnah; geographic constraint on authority",
+      "primary_observable": "Invocation of Medinan consensus in legal rulings; acceptance of urf as valid source; North/West African institutional dominance",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "medinan_scholarly_lineage",
+      "victim": "non_medinan_jurists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Unique geographic authority-grounding; practice-over-text axis orthogonal to Hanafi rationalism and Shafi'i systematization"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "human_readable": "Hanbali Reading: Literalist Textualism and Asymmetric Recognition",
+      "structural_delta": "Grounds interpretive authority in strict textual literalism, minimal qiyas, rejection of bid'ah; refuses to recognize other schools' innovations as legitimate despite receiving recognition from them",
+      "primary_observable": "Rejection rate of istihsan/urf in fatwas; asymmetric recognition pattern (accepted by others, does not reciprocate); unanimous ijma requirement",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "textualist_purists",
+      "victim": "rationalist_jurists_and_adaptive_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest epsilon (maximum suppression); asymmetric recognition creates unique structural tension; represents textualist pole opposite Hanafi rationalism"
+    },
+    {
+      "claim_id": "shafii_reading",
+      "human_readable": "Shafi'i Reading: Methodological Standardization",
+      "structural_delta": "Grounds interpretive authority in explicit hierarchy (Qur'an > Hadith > Ijma > Qiyas) and rejection of istihsan/urf; systematization of usul al-fiqh",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "scholars_seeking_universal_framework",
+      "victim": "practitioners_relying_on_local_custom",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological middle position between Hanafi flexibility and Hanbali literalism; lower structural distinctiveness than selected three; captured as synthesis attempt in omega"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hanafi_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "hanafi_reading"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "maliki_reading"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "hanbali_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "shafii_reading",
+      "structural_delta": "Methodological standardization via explicit source hierarchy and rejection of istihsan/urf",
+      "hypothesis": "rope",
+      "deferral_reason": "Middle position between Hanafi rationalism and Hanbali literalism; lower structural distinctiveness; represents synthesis attempt rather than pole of kernel contest; captured in omega as methodological bridge"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_shafii_synthesis",
+      "description": "Shafi'i reading represents attempted methodological synthesis (standardization of usul al-fiqh) rather than a pole of the kernel contest. Does this synthesis function as a Rope (successful coordination) or reveal that the kernel contest is fundamentally between rationalism (Hanafi) and textualism (Hanbali), with Maliki as geographic particularism? Shafi'i's institutional success (East Africa/Southeast Asia) suggests synthesis viability, but its rejection of both istihsan and urf indicates it is not a true middle ground.",
+      "source": "Deferred axis shafii_reading + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_mutual_recognition_mechanism",
+      "description": "By 12th century, classical scholars established consensus that 'the truth does not lie outside of them' — a meta-level agreement that all four readings are legitimate despite contradictory axioms. What is the structural mechanism that permits this licensed plurality? Is it a Scaffold (institutional coordination without resolution) or does it reveal that the kernel itself is ambiguous enough to absorb contradictory readings without fracturing? Hanbali asymmetric recognition (refuses to reciprocate legitimacy) tests this mechanism's limits.",
+      "source": "Extraction summary (mutual recognition claim) + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_state_patronage_selection",
+      "description": "Geographic distribution correlates with state patronage (Hanafi/Ottoman, Maliki/North Africa, Shafi'i/Southeast Asia, Hanbali/Arabia). Is this a Piton (state power atrophying independent jurisprudential development) or a Mountain (geographic/political constraints that would persist regardless of jurisprudential content)? If Hanafi flexibility attracted Ottoman patronage because it served administrative needs, then state selection is downstream of methodological properties, not upstream.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction entity geographic distribution"
+    },
+    {
+      "id": "omega_drift_absorption",
+      "description": "Drift status marked 'functioning' because all four schools permit ijtihad (independent reasoning) within their methodological frameworks. But does the licensed plurality structure itself absorb drift by channeling it into school-specific interpretive traditions rather than surfacing as kernel revision? If so, the four-school system may be a Partial drift case (interpretive layer absorbs change without challenging the Qur'an/Hadith/Ijma/Qiyas kernel), not Functioning.",
+      "source": "Commitment system recognition (drift_status field) + F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_hanbali_bid_ah_boundary",
+      "description": "Hanbali reading treats other schools' methodological innovations (istihsan, urf, flexible qiyas) as bid'ah (illegitimate innovation). This creates asymmetric recognition: Hanbali is accepted by others but refuses reciprocal legitimacy. Is this a Snare (Hanbali textualism suppresses adaptive jurisprudence) or does it reveal that the kernel contest is actually about the bid'ah boundary itself — what counts as fidelity vs. innovation? If the latter, then the kernel is not 'Qur'an/Hadith/Ijma/Qiyas' but 'the permissible scope of interpretive elaboration.'",
+      "source": "Hanbali asymmetric recognition tension + Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Drift status marked 'functioning' but licensed plurality structure may absorb drift into school-specific traditions without surfacing kernel revision (Partial drift case). Generated omega_drift_absorption. Also: Shafi'i deferred as synthesis attempt, but this may underweight its role as methodological standardization that enabled mutual recognition — potential premature closure on three-pole structure (rationalism/textualism/particularism) when four-pole structure (add systematization) may be more accurate."
+  },
+  "_seed_id": "four_sunni_madhhabs"
+}

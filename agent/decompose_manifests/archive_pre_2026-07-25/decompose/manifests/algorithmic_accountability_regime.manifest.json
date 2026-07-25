@@ -1,0 +1,263 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology Governance / Legal Theory / Regulatory Design",
+  "family_id": "algorithmic_accountability_liability_2026",
+  "topic_summary": "Analysis of emerging AI regulatory frameworks examining the contested kernel of liability attribution: whether algorithmic harm accountability should rest primarily with developers (who create the systems) or deployers/users (who apply them in specific contexts). This kernel choice restructures the victim/beneficiary topology of algorithmic opacity as a constraint.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "AI/ML developers (foundation model creators, algorithm designers)",
+      "Deployers (organizations implementing AI systems in operational contexts)",
+      "End users (individuals subject to algorithmic decisions)",
+      "Regulatory authorities (EU AI Act, proposed US frameworks, sectoral regulators)",
+      "Opacity as structural property (inscrutability of model internals and training corpus)",
+      "Liability as enforcement mechanism (tort law, regulatory penalties, insurance markets)"
+    ],
+    "key_tensions": [
+      "Generality of capability vs specificity of harm (foundation models vs deployed applications)",
+      "Ex ante control authority vs ex post harm realization (who can prevent vs who experiences)",
+      "Inscrutability location (model weights vs deployment configuration vs interaction context)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Liability attribution for algorithmic harm — the foundational question of which party bears legal/financial responsibility when AI systems cause injury",
+    "authority_description": "Legislative and judicial authority to define liable parties; grounded in tort tradition and statutory interpretation",
+    "drift_status": "absent",
+    "candidate_pattern": "anticipatory_ambiguity",
+    "is_contested_kernel": true,
+    "kernel_id": "liability_attribution",
+    "readings": [
+      {
+        "reading_id": "developer_liability",
+        "commitment": "Developers bear primary liability as creators of the underlying capability",
+        "authority_grounding": "Product liability doctrine extended to software; strict liability for defective products",
+        "sibling_readings": [
+          "deployer_liability",
+          "shared_liability"
+        ],
+        "expected_structural_delta": "Developers enter victim set under regulatory/tort pressure; deployers become beneficiaries of externalized risk; opacity becomes developer's burden to manage or disclose"
+      },
+      {
+        "reading_id": "deployer_liability",
+        "commitment": "Deployers bear primary liability as parties with deployment context control and decision authority",
+        "authority_grounding": "Agency doctrine and operational control; deployer chooses application domain and can monitor outcomes",
+        "sibling_readings": [
+          "developer_liability",
+          "shared_liability"
+        ],
+        "expected_structural_delta": "Deployers enter victim set; developers externalize deployment risk; opacity becomes deployer's due diligence burden; foundation model providers shielded from downstream harm"
+      },
+      {
+        "reading_id": "shared_liability",
+        "commitment": "Joint liability distributed along value chain based on causal contribution and control",
+        "authority_grounding": "Comparative negligence and joint tortfeasor doctrine; multiple party liability apportionment",
+        "sibling_readings": [
+          "developer_liability",
+          "deployer_liability"
+        ],
+        "expected_structural_delta": "Both developers and deployers in victim set; coordination costs increase; insurance/indemnification markets emerge; opacity burden distributed via contractual allocation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "developer_liability",
+        "reading_b": "deployer_liability",
+        "basis": "Developer liability grounds accountability in artifact creation (control precedes deployment); deployer liability grounds it in operational authority (control at harm point). No single framework simultaneously holds that primary accountability rests with the party who lacks control at harm point AND with the party who has it."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "developer_liability",
+      "human_readable": "Developer Liability Reading (Artifact Creator as Primary Responsible Party)",
+      "structural_delta": "Liability kernel read as: developers bear primary responsibility because they create the capability and control model architecture/training",
+      "primary_observable": "Regulatory text allocation of liability (EU AI Act provider obligations, US proposed developer requirements); tort case law applying product liability to AI",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "deployers (risk externalized to developers); end users (recourse against well-capitalized developers)",
+      "victim": "developers (regulatory compliance costs, litigation risk, insurance burden)",
+      "downstream_of": [],
+      "feeds_into": [
+        "opacity_as_developer_burden"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First kernel reading; highest structural impact on regulatory design; reshapes entire accountability topology"
+    },
+    {
+      "claim_id": "deployer_liability",
+      "human_readable": "Deployer Liability Reading (Operational Controller as Primary Responsible Party)",
+      "structural_delta": "Liability kernel read as: deployers bear primary responsibility because they control deployment context, application choice, and monitoring",
+      "primary_observable": "Regulatory frameworks emphasizing deployer due diligence (financial services AI use rules, employment discrimination liability for HR algorithms); case law holding operators liable",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "developers (foundation model providers shielded from downstream liability); innovation velocity (developers face lower risk barrier)",
+      "victim": "deployers (especially under-resourced organizations lacking AI expertise); end users (if deployers cannot bear costs)",
+      "downstream_of": [],
+      "feeds_into": [
+        "opacity_as_deployer_burden"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second kernel reading; structurally opposite to developer reading; same kernel domain but different constraint instantiation"
+    },
+    {
+      "claim_id": "shared_liability",
+      "human_readable": "Shared Liability Reading (Distributed Accountability)",
+      "structural_delta": "Liability kernel read as: joint responsibility distributed via causal contribution and control tests",
+      "primary_observable": "Frameworks with split obligations (EU AI Act provider/deployer dual requirements); comparative fault insurance structures",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "insurance industry (new market for AI liability products); legal profession (litigation complexity)",
+      "victim": "both developers and deployers (coordination costs, contractual negotiation burden); small actors (cannot afford complex indemnification)",
+      "downstream_of": [],
+      "feeds_into": [
+        "opacity_burden_negotiation"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third kernel reading; captures hybrid/compromise position; demonstrates kernel contestation structure"
+    },
+    {
+      "claim_id": "opacity_as_mountain",
+      "human_readable": "Algorithmic Opacity as Irreducible Mountain",
+      "structural_delta": "Model inscrutability as physical constraint of high-dimensional systems",
+      "primary_observable": "Mechanistic interpretability research failure rates; provable limits on explanation (computational complexity classes)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "developer_liability",
+        "deployer_liability",
+        "shared_liability"
+      ],
+      "centrality_score": 9,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream constraint feeding all readings but not itself a kernel reading; true mountain status uncertain (may be piton of research investment choices)"
+    },
+    {
+      "claim_id": "end_user_standing",
+      "human_readable": "End User Legal Standing (Access to Remedy)",
+      "structural_delta": "Whether harmed individuals can bring claims vs must rely on regulatory enforcement",
+      "primary_observable": "Private right of action provisions in AI legislation; standing requirements in algorithmic discrimination cases",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "regulated entities (if standing denied, enforcement limited to under-resourced agencies)",
+      "victim": "end users (especially marginalized groups facing algorithmic discrimination)",
+      "downstream_of": [
+        "developer_liability",
+        "deployer_liability",
+        "shared_liability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream of liability kernel; critical for enforcement but structurally dependent on which kernel reading prevails"
+    },
+    {
+      "claim_id": "insurance_market_emergence",
+      "human_readable": "AI Liability Insurance Market Structure",
+      "structural_delta": "Whether actuarial risk assessment for algorithmic harm is feasible and at what cost",
+      "primary_observable": "AI insurance product availability, premium structures, coverage gaps",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "insurance industry; well-capitalized developers/deployers who can afford coverage",
+      "victim": "small organizations priced out of compliance; innovation (if insurance unavailable)",
+      "downstream_of": [
+        "developer_liability",
+        "deployer_liability",
+        "shared_liability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold dependent on liability regime crystallization; speculative market structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "developer_liability",
+      "kernel_id": "liability_attribution",
+      "reading_id": "developer_liability"
+    },
+    {
+      "claim_id": "deployer_liability",
+      "kernel_id": "liability_attribution",
+      "reading_id": "deployer_liability"
+    },
+    {
+      "claim_id": "shared_liability",
+      "kernel_id": "liability_attribution",
+      "reading_id": "shared_liability"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "opacity_as_mountain",
+      "structural_delta": "Model inscrutability as physical constraint",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream to all readings but not itself a kernel reading; structural role as constraint substrate rather than liability interpretation; mountain status itself contested (omega_opacity_nature)"
+    },
+    {
+      "claim_id": "end_user_standing",
+      "structural_delta": "Whether harmed individuals can bring claims",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of liability kernel; enforcement mechanism dependent on which kernel reading becomes statutory; high-epsilon snare but structurally subordinate to readings"
+    },
+    {
+      "claim_id": "insurance_market_emergence",
+      "structural_delta": "Whether actuarial risk assessment for algorithmic harm is feasible",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold dependent on regime crystallization; speculative market dynamics; captured in omega_insurance_availability"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_opacity_nature",
+      "description": "Is algorithmic opacity a true Mountain (irreducible inscrutability) or a Piton (research investment choice)? If mechanistic interpretability succeeds, opacity shifts from physical constraint to policy choice, potentially reclassifying all liability readings.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis opacity_as_mountain"
+    },
+    {
+      "id": "omega_small_deployer_extinction",
+      "description": "If developer_liability prevails, do foundation model providers withdraw general-purpose API access to avoid liability exposure? If deployer_liability prevails, do under-resourced organizations (nonprofits, municipalities, small businesses) abandon AI adoption? Both readings may suppress deployment in opposite directions.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + victim structure analysis"
+    },
+    {
+      "id": "omega_insurance_availability",
+      "description": "Does AI liability insurance market emerge at all? If actuarial assessment fails (harm distributions unknown, adversarial examples undermine risk modeling), insurance unavailability could make ANY liability regime unworkable. Deferred axis insurance_market_emergence becomes structural gate.",
+      "source": "Deferred axis insurance_market_emergence + F03 mountain validity concern"
+    },
+    {
+      "id": "omega_jurisdiction_fragmentation",
+      "description": "Do different jurisdictions crystallize different kernel readings (EU developer-weighted, US deployer-weighted, China state-liability)? If so, global AI deployment faces reading-incompatibility: same harm, multiple liability structures, race-to-bottom forum shopping.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — protocol assumes single jurisdiction; cross-border deployment may fracture kernel itself"
+    },
+    {
+      "id": "omega_standing_gate",
+      "description": "If end_user_standing is denied (deferred axis), does liability regime become unenforceable? Regulatory agencies lack resources for algorithmic harm monitoring at scale. Private enforcement may be structural necessity regardless of kernel reading.",
+      "source": "Deferred high-epsilon axis end_user_standing + enforcement mechanism gap"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: opacity_as_mountain classified as deferred mountain but true physical status uncertain — mechanistic interpretability research trajectory may reclassify as piton. Generated omega_opacity_nature. Also: kernel recognition itself depends on assumption of single-jurisdiction regulatory coherence; cross-border fragmentation (omega_jurisdiction_fragmentation) may invalidate kernel structure entirely if readings become jurisdiction-specific rather than interpretive alternatives."
+  },
+  "_seed_id": "algorithmic_accountability_regime"
+}

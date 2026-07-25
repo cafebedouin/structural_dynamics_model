@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology Governance / Data Protection Law / Competition Policy",
+  "family_id": "gdpr_article17_interpretive_boundaries",
+  "topic_summary": "Analysis of GDPR Article 17 ('Right to Erasure') as a contested kernel where the same legal text is read as either an individual privacy fundamental right or as an incumbent competitive moat and censorship mechanism. The readings emit structurally different constraints with distinct beneficiary/victim structures despite originating from identical codified language.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "GDPR Article 17 (codified legal kernel defining erasure rights)",
+      "Individual data subjects (rights-holders under privacy reading)",
+      "Incumbent platforms (Google, Meta, etc. - potential beneficiaries under moat reading)",
+      "Smaller competitors (challengers disadvantaged by compliance asymmetry)",
+      "National Data Protection Authorities (enforcement bodies with interpretive discretion)",
+      "EU Court of Justice (ultimate interpretive authority for GDPR)"
+    ],
+    "key_tensions": [
+      "Individual privacy sovereignty vs. platform operational prerogative (rights expansion vs. business model preservation)",
+      "Compliance cost distribution asymmetry (incumbents absorb, challengers cannot scale)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "GDPR Article 17 text establishing conditions under which data subjects may demand erasure of personal data",
+    "authority_description": "EU legislative codification interpreted by national DPAs and ultimately CJEU, grounded in Charter of Fundamental Rights Article 8",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "article17_erasure_right",
+    "readings": [
+      {
+        "reading_id": "privacy_fundamental_reading",
+        "commitment": "Article 17 instantiates individual data sovereignty as fundamental right limiting corporate data retention",
+        "authority_grounding": "Charter Article 8 primacy; CJEU privacy maximalism; DPA enforcement prioritizing individual autonomy",
+        "sibling_readings": [
+          "competitive_moat_reading",
+          "censorship_mechanism_reading"
+        ],
+        "expected_structural_delta": "Individual as primary beneficiary; platforms as constrained parties; broad erasure interpretation; low epistemic friction for requests"
+      },
+      {
+        "reading_id": "competitive_moat_reading",
+        "commitment": "Article 17 functions as incumbent protection via compliance cost asymmetry and technical infrastructure requirements",
+        "authority_grounding": "Competition economics analysis; observed enforcement patterns favoring large platforms with legal/technical capacity",
+        "sibling_readings": [
+          "privacy_fundamental_reading",
+          "censorship_mechanism_reading"
+        ],
+        "expected_structural_delta": "Incumbents as beneficiaries via barrier-to-entry amplification; challengers as victims; erasure compliance as competitive filter; high capital requirements"
+      },
+      {
+        "reading_id": "censorship_mechanism_reading",
+        "commitment": "Article 17 enables content suppression via strategic erasure requests weaponizing privacy rights against speech",
+        "authority_grounding": "Free expression concerns; observed abuse patterns; journalistic exception inadequacy; notice-and-takedown parallel",
+        "sibling_readings": [
+          "privacy_fundamental_reading",
+          "competitive_moat_reading"
+        ],
+        "expected_structural_delta": "Bad-faith requesters as beneficiaries; journalists/archivists as victims; speech suppression as emergent function; erasure as prior restraint substitute"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "privacy_fundamental_reading",
+        "reading_b": "competitive_moat_reading",
+        "basis": "Privacy reading axiom: individual rights categorically trump corporate operational interests. Moat reading axiom: regulatory structures serve incumbent preservation regardless of stated intent. No framework simultaneously holds both as true without one subordinating the other."
+      },
+      {
+        "reading_a": "privacy_fundamental_reading",
+        "reading_b": "censorship_mechanism_reading",
+        "basis": "Privacy reading axiom: erasure requests express legitimate autonomy claims. Censorship reading axiom: erasure requests are strategic suppression vectors. A single coherent framework cannot hold both that erasure is categorically legitimate expression of autonomy AND that it is structurally a censorship tool."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "privacy_fundamental_reading",
+      "human_readable": "Privacy as Fundamental Right (Maximalist Individual Sovereignty)",
+      "structural_delta": "Individual data sovereignty as primary constraint on platform data retention practices",
+      "primary_observable": "DPA enforcement rates favoring individuals; CJEU precedent breadth interpreting Article 17 scope; percentage of erasure requests honored",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_data_subjects",
+      "victim": "platform_operational_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: establishes baseline individual-rights frame from which other readings diverge"
+    },
+    {
+      "claim_id": "competitive_moat_reading",
+      "human_readable": "Competitive Moat via Compliance Asymmetry",
+      "structural_delta": "Regulatory compliance costs function as incumbent protection barrier against market entry",
+      "primary_observable": "Compliance cost scaling curves by firm size; market concentration trends post-GDPR; startup mortality rates in affected sectors",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_platforms",
+      "victim": "market_challengers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: structurally distinct beneficiary (incumbents vs individuals); different extractiveness bin; competitive structure rather than rights structure"
+    },
+    {
+      "claim_id": "censorship_mechanism_reading",
+      "human_readable": "Censorship Mechanism via Strategic Requests",
+      "structural_delta": "Privacy rights weaponized as content suppression infrastructure via bad-faith erasure requests",
+      "primary_observable": "Rate of erasure requests targeting journalistic content; documented abuse cases; erosion of public-interest exception application",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "strategic_censors",
+      "victim": "journalists_archivists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: distinct victim class (speech vs competition); speech/autonomy tension rather than economic structure; completes triadic coverage"
+    },
+    {
+      "claim_id": "dpa_interpretive_discretion",
+      "human_readable": "National DPA Interpretive Variance",
+      "structural_delta": "Enforcement heterogeneity across member states produces regulatory arbitrage and forum shopping",
+      "primary_observable": "Cross-border consistency metrics; lead-authority determination patterns; variance in erasure request approval rates by jurisdiction",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "privacy_fundamental_reading",
+        "competitive_moat_reading",
+        "censorship_mechanism_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects all three readings but lacks independent constraint; coordination mechanism rather than distinct reading"
+    },
+    {
+      "claim_id": "technical_feasibility_gap",
+      "human_readable": "Technical Erasure Feasibility Gap (Architectural vs Legal)",
+      "structural_delta": "Distributed systems architecture makes complete erasure technically infeasible despite legal mandate",
+      "primary_observable": "Backup retention periods; blockchain immutability conflicts; cache propagation delays; third-party data copy persistence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "privacy_fundamental_reading",
+        "competitive_moat_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technical constraint underlying all readings but not itself a reading of Article 17; mountain providing physical substrate"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "privacy_fundamental_reading",
+      "kernel_id": "article17_erasure_right",
+      "reading_id": "privacy_fundamental_reading"
+    },
+    {
+      "claim_id": "competitive_moat_reading",
+      "kernel_id": "article17_erasure_right",
+      "reading_id": "competitive_moat_reading"
+    },
+    {
+      "claim_id": "censorship_mechanism_reading",
+      "kernel_id": "article17_erasure_right",
+      "reading_id": "censorship_mechanism_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "dpa_interpretive_discretion",
+      "structural_delta": "National DPA enforcement heterogeneity produces regulatory arbitrage",
+      "hypothesis": "rope",
+      "deferral_reason": "Coordination mechanism affecting all readings but not itself a distinct reading; lower structural independence"
+    },
+    {
+      "claim_id": "technical_feasibility_gap",
+      "structural_delta": "Distributed systems make complete erasure technically infeasible",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical substrate constraint underlying enforcement of all readings but not interpretive reading itself"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_cjeu_consolidation",
+      "description": "Will CJEU jurisprudence converge toward one dominant reading or maintain doctrinal plurality? Convergence would reclassify from contested kernel to settled interpretation; plurality sustains licensed contradiction.",
+      "source": "Commitment system drift_status assessment"
+    },
+    {
+      "id": "omega_extraterritorial_enforcement",
+      "description": "Does Brussels Effect extend Article 17 readings to non-EU platforms? If yes, competitive moat reading amplifies globally; if no, regulatory arbitrage emerges as fifth axis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - extraterritorial scope not addressed in kernel contest framing"
+    },
+    {
+      "id": "omega_ai_training_collision",
+      "description": "Do erasure rights extend to training data in foundation models? If yes, censorship mechanism reading gains new victim class (AI researchers); if no, privacy fundamental reading weakens.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - LLM context itself highlights emergent collision not present in 2018 codification"
+    },
+    {
+      "id": "omega_blockchain_incompatibility",
+      "description": "Is technical_feasibility_gap a true Mountain (physics of distributed systems) or Piton (architectural choice)? Immutable ledgers may force reclassification of Article 17 as unenforceable aspirational text.",
+      "source": "Deferred axis technical_feasibility_gap + F03 mountain validity concern"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings emit genuinely distinct constraints with different beneficiary/victim structures from identical kernel text. Axiom contradictions confirmed for privacy/moat and privacy/censorship pairs. Kernel decomposition is structurally valid."
+  },
+  "_seed_id": "gdpr_right_to_be_forgotten"
+}

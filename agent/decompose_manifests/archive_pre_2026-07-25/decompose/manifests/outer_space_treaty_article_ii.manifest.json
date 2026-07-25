@@ -1,0 +1,202 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Space Law / Treaty Interpretation / Commons Governance",
+  "family_id": "outer_space_treaty_article_ii_2026",
+  "topic_summary": "Analysis of Article II of the Outer Space Treaty (1967), which prohibits national appropriation of outer space and celestial bodies. The treaty text creates interpretive ambiguity: does 'non-appropriation' bar only sovereign territorial claims, or does it extend to private resource extraction? Two institutionalized readings have emerged with divergent constraint structures.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Outer Space Treaty Article II (1967 treaty kernel; ambiguous on private extraction)",
+      "U.S. Commercial Space Launch Competitiveness Act (2015 domestic statute; extraction-permissive reading)",
+      "Luxembourg Space Resources Law (2017 domestic statute; extraction-permissive reading)",
+      "UN Committee on Peaceful Uses of Outer Space (COPUOS) (interpretive forum; no binding authority)",
+      "First-mover mining firms (SpaceX, Planetary Resources, etc.; beneficiaries of extraction-permissive reading)",
+      "Non-spacefaring states (Global South majority; excluded from capability-driven distribution)"
+    ],
+    "key_tensions": [
+      "Sovereign appropriation prohibition vs private extraction legality (extraction-permissive vs commons-conservation readings)",
+      "Freedom of use (Article I) vs province of all mankind (Article I preamble) as interpretive anchor"
+    ],
+    "key_claims": [
+      "Extraction-permissive: Article II bars states from claiming sovereignty but does not bar private actors from owning extracted resources",
+      "Commons-conservation: Article II's 'use or occupation' language bars de facto appropriation via resource extraction",
+      "Extraction-permissive: U.S./Luxembourg statutes provide legal certainty for investment; codification = legitimate interpretation",
+      "Commons-conservation: Unilateral domestic legislation cannot override multilateral treaty obligations; statutes are treaty violations"
+    ],
+    "key_mechanisms": [
+      "Domestic statute codification (U.S. 2015, Luxembourg 2017): converts ambiguous treaty text into extraction rights",
+      "First-mover advantage: capability-driven access to high-value asteroids/lunar sites creates de facto enclosure",
+      "COPUOS consensus paralysis: interpretive forum lacks enforcement; divergent readings coexist without adjudication"
+    ],
+    "key_absences": [
+      "Binding dispute resolution mechanism for treaty interpretation (no ICJ jurisdiction clause; no OST Article IX enforcement procedure)",
+      "Distribution mechanism for resource benefits (Article I's 'province of all mankind' unspecified; no common-heritage royalty regime)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article II prohibition on national appropriation of outer space and celestial bodies, stabilized in 1967 treaty text with deliberate ambiguity on private extraction",
+    "authority_description": "Treaty signatories hold interpretive authority; no binding adjudication mechanism; domestic courts enforce flag-state readings; COPUOS provides non-binding forum",
+    "drift_status": "partial",
+    "candidate_pattern": "ledger_wall_hybrid",
+    "is_contested_kernel": true,
+    "kernel_id": "ost_article_ii_non_appropriation",
+    "readings": [
+      {
+        "reading_id": "extraction_permissive",
+        "commitment": "Article II bars sovereign territorial claims but not private ownership of extracted resources",
+        "authority_grounding": "Freedom-of-use clause (Article I) as interpretive priority; domestic statutory codification (U.S. 2015, Luxembourg 2017) as legitimate gap-filling",
+        "constraint_type": "ledger",
+        "beneficiary": "first_mover_mining_firms",
+        "victim": "non_spacefaring_states",
+        "structural_delta": "Converts orbital commons into severable private title; first-mover firms gain excludable property rights in extracted resources; non-spacefaring states excluded from distribution by capability threshold",
+        "sibling_readings": [
+          "commons_conservation",
+          "international_regime"
+        ],
+        "expected_epsilon": "mod",
+        "expected_structural_delta": "High-extractiveness Ledger: resource access gated by technological capability and flag-state legal recognition; no compensation mechanism for excluded states; enclosure via fait accompli rather than formal annexation"
+      },
+      {
+        "reading_id": "commons_conservation",
+        "commitment": "Article II's 'use or occupation' language prohibits de facto appropriation via resource extraction; non-appropriation principle covers both states and private actors",
+        "authority_grounding": "Province-of-all-mankind preamble (Article I) as interpretive priority; common-heritage norm from UNCLOS deep seabed regime as analogical authority; treaty text supremacy over unilateral domestic statutes",
+        "constraint_type": "wall",
+        "beneficiary": "non_spacefaring_states",
+        "victim": "first_mover_mining_firms",
+        "structural_delta": "Prohibits enclosure of orbital commons; blocks conversion to private title; preserves commons status pending international regime negotiation; non-spacefaring states retain formal equality of access",
+        "sibling_readings": [
+          "extraction_permissive",
+          "international_regime"
+        ],
+        "expected_epsilon": "mod",
+        "expected_structural_delta": "Wall constraint: extraction prohibited absent multilateral authorization; first-mover mining investments stranded; non-spacefaring states preserve veto over enclosure; benefits distributed by negotiation rather than capability"
+      },
+      {
+        "reading_id": "international_regime",
+        "commitment": "Article II defers appropriation question to future international regime (Article XI analogue); neither extraction-permissive nor conservation reading is authoritative absent multilateral framework",
+        "authority_grounding": "Treaty silence as deliberate deferral; Moon Agreement Article 11 (international regime mandate) as intended parallel structure; COPUOS as negotiation forum",
+        "constraint_type": "scaffold",
+        "beneficiary": null,
+        "victim": null,
+        "structural_delta": "Treaty creates institutional placeholder for future regime; current readings are competing bids for regime design rather than treaty interpretations; extraction remains legally ambiguous pending multilateral agreement",
+        "sibling_readings": [
+          "extraction_permissive",
+          "commons_conservation"
+        ],
+        "expected_epsilon": "low",
+        "expected_structural_delta": "Scaffold constraint: neither extraction nor prohibition has treaty authority; legal uncertainty persists; first-mover firms operate in regulatory grey zone; regime negotiation stalled by zero-sum distributional conflict"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "extraction_permissive",
+        "reading_b": "commons_conservation",
+        "basis": "Extraction-permissive holds that freedom-of-use (Article I) authorizes conversion of commons to private title; commons-conservation holds that province-of-all-mankind (Article I preamble) prohibits enclosure. No single framework can simultaneously authorize private enclosure and prohibit appropriation via use—the axioms are mutually exclusive regarding whether use generates property rights."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "extraction_permissive",
+      "human_readable": "Extraction-Permissive Reading (Freedom-of-Use Priority)",
+      "structural_delta": "Article II bars sovereign claims but not private ownership of extracted resources",
+      "primary_observable": "Domestic statute codification (U.S. 2015, Luxembourg 2017); flag-state court enforcement of extraction rights; first-mover mining firm investment patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "ledger",
+      "beneficiary": "first_mover_mining_firms",
+      "victim": "non_spacefaring_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Institutionalized reading with statutory codification; Ledger constraint converting commons to private title; distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "commons_conservation",
+      "human_readable": "Commons-Conservation Reading (Province-of-All-Mankind Priority)",
+      "structural_delta": "Article II prohibits appropriation via use or occupation; extraction = de facto enclosure",
+      "primary_observable": "Non-spacefaring state protests in COPUOS; common-heritage advocacy by Global South coalitions; legal scholarship invoking UNCLOS analogy",
+      "epsilon_bin": "mod",
+      "hypothesis": "wall",
+      "beneficiary": "non_spacefaring_states",
+      "victim": "first_mover_mining_firms",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing institutionalized reading; Wall constraint blocking enclosure; inverted beneficiary/victim structure relative to extraction-permissive; axiom-contradictory (§1.3-K)"
+    },
+    {
+      "claim_id": "international_regime",
+      "human_readable": "International Regime Deferral (Institutional Placeholder)",
+      "structural_delta": "Treaty silence is deliberate deferral; extraction legality depends on future multilateral regime",
+      "primary_observable": "COPUOS negotiation stalemate; Moon Agreement Article 11 ratification failure; absence of binding dispute resolution",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural possibility; Scaffold documenting institutional gap; explains why extraction-permissive/commons-conservation coexist without adjudication"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "extraction_permissive",
+      "kernel_id": "ost_article_ii_non_appropriation",
+      "reading_id": "extraction_permissive"
+    },
+    {
+      "claim_id": "commons_conservation",
+      "kernel_id": "ost_article_ii_non_appropriation",
+      "reading_id": "commons_conservation"
+    },
+    {
+      "claim_id": "international_regime",
+      "kernel_id": "ost_article_ii_non_appropriation",
+      "reading_id": "international_regime"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_enforcement_mechanism",
+      "description": "Absence of binding dispute resolution: no ICJ jurisdiction clause, no Article IX enforcement procedure. Extraction-permissive reading advances via fait accompli rather than adjudication. If the first asteroid mining operation succeeds, does treaty interpretation crystallize via acquiescence?",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 3"
+    },
+    {
+      "id": "omega_moon_agreement_failure",
+      "description": "Moon Agreement (1979) Article 11 attempted to codify international regime requirement; only 18 ratifications, no major spacefaring powers. Does MA failure demonstrate that international regime reading is structurally non-viable, or that it was abandoned prematurely?",
+      "source": "Dark Matter Probe 2 (historical trajectory)"
+    },
+    {
+      "id": "omega_benefit_distribution",
+      "description": "Article I 'province of all mankind' unspecified: no royalty mechanism, no common-heritage fund, no technology transfer requirement. If commons-conservation reading prevails, what institutional form does equitable benefit-sharing take?",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_private_vs_flag_state",
+      "description": "Extraction-permissive reading treats private firms as distinct from states, but firms operate under flag-state jurisdiction (Article VI). Is the private/sovereign distinction structurally coherent when flag-state courts enforce extraction rights and provide military protection for orbital assets?",
+      "source": "Dark Matter Probe 1 (operational medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic is genuinely a contested kernel with institutionalized readings, documented statutory codification, and axiom contradiction. Three readings selected: two axiom-contradictory substantive readings plus one scaffold documenting the institutional gap that allows both to coexist."
+  },
+  "_seed_id": "outer_space_treaty_article_ii"
+}

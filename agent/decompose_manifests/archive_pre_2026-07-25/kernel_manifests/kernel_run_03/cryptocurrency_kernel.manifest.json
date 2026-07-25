@@ -1,0 +1,215 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Theory / Financial Markets / Distributed Systems Governance",
+  "family_id": "cryptocurrency_kernel_contest_2026",
+  "topic_summary": "Analysis of cryptocurrency through three competing interpretive frameworks: sound money (fixed supply as inflation hedge), speculative asset (narrative-driven price volatility), and decentralization ideology (disintermediation of financial intermediaries). The research reveals fundamental tensions between these readings, particularly the incompatibility between sound money's requirement for price stability and speculation's dependence on volatility, and between decentralization ideology and practical reliance on centralized exchanges.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 9,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Bitcoin/Satoshi Nakamoto whitepaper (founding document establishing peer-to-peer electronic cash vision)",
+      "21 million supply cap (technical constraint claimed as sound money foundation)",
+      "Centralized exchanges (Coinbase, Binance - practical infrastructure contradicting decentralization)",
+      "Wall Street institutional actors (ETF providers, hedge funds driving financialization)",
+      "Cypherpunk/libertarian ideological community (original decentralization advocates)",
+      "Central banks (traditional monetary authorities cryptocurrency claims to replace)",
+      "Retail speculative traders (behavioral driver of volatility)",
+      "Mining/node operator infrastructure (technical decentralization layer)"
+    ],
+    "key_tensions": [
+      "Sound money requirement (price stability) vs empirical volatility (speculative asset behavior)",
+      "Decentralization ideology (eliminate intermediaries) vs practical centralization (exchange custody, institutional adoption)",
+      "Utility value (transaction medium) vs speculative value (narrative-driven appreciation)",
+      "Fixed supply scarcity (deflationary pressure) vs transaction fee sustainability (miner incentive structure)"
+    ],
+    "key_mechanisms": [
+      "Supply cap enforcement (21M Bitcoin limit via protocol consensus)",
+      "Speculative bubble formation (media attention → retail FOMO → price acceleration → collapse)",
+      "Centralization drift (user experience barriers → reliance on custodial platforms)"
+    ],
+    "key_absences": [
+      "Quantum computing threat to cryptographic security (mentioned in research but not structurally analyzed)",
+      "Energy consumption externality (proof-of-work mining environmental cost absent from all three readings)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Bitcoin/cryptocurrency as legitimate alternative to state-issued fiat currency",
+    "authority_description": "Contested between protocol developers (code-is-law), market participants (price-is-truth), and ideological community (cypherpunk principles)",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_analysis": "Initial hypothesis: three readings of one kernel. Coherence test reveals these are NOT readings of a shared commitment but THREE DISTINCT KERNELS sharing the label 'cryptocurrency'. Sound money reading commits to 'legitimate money requires supply scarcity and inflation resistance'. Speculative asset reading commits to 'cryptocurrency value derives from narrative momentum and trading dynamics'. Decentralization reading commits to 'legitimate finance requires elimination of trusted intermediaries'. No single coherent normative framework can hold all three simultaneously: sound money requires price stability (contradicts speculation's volatility dependence), decentralization requires rejection of intermediaries (contradicts institutional adoption's custodial infrastructure), utility requires transaction volume (contradicts speculative hoarding). These are not interpretive disagreements about one substrate but ontologically distinct projects using the same technical infrastructure. The 21M supply cap appears in all three but serves different structural functions: scarcity anchor (sound money), narrative hook (speculation), protocol immutability proof (decentralization). Recommendation: decompose into three INDEPENDENT constraint axes rather than kernel readings, with high coupling documented via affects_constraint edges."
+  },
+  "axes": [
+    {
+      "claim_id": "supply_cap_scarcity",
+      "human_readable": "Supply Cap Scarcity (21M Bitcoin Limit as Deflationary Anchor)",
+      "structural_delta": "Fixed maximum supply enforced by protocol consensus, creating absolute scarcity independent of demand",
+      "primary_observable": "Total Bitcoin supply approaching 21M asymptotic limit; inflation rate declining toward zero",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sound_money_stability_paradox",
+        "speculative_narrative_volatility"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical constraint base; feeds into both sound money and speculation axes; highest structural independence"
+    },
+    {
+      "claim_id": "sound_money_stability_paradox",
+      "human_readable": "Sound Money Stability Paradox (Scarcity Claim vs Volatility Reality)",
+      "structural_delta": "Claimed monetary legitimacy via fixed supply contradicted by empirical price volatility preventing currency adoption",
+      "primary_observable": "Bitcoin price volatility (standard deviation of returns) vs fiat currency stability; merchant adoption rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "sound_money_advocates",
+      "victim": "transaction_users",
+      "downstream_of": [
+        "supply_cap_scarcity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality tangled_rope; captures core incoherence between monetary theory claim and market reality; distinct beneficiary/victim structure from speculation axis"
+    },
+    {
+      "claim_id": "speculative_narrative_volatility",
+      "human_readable": "Speculative Narrative Volatility (Price Dynamics Divorced from Utility)",
+      "structural_delta": "Asset valuation driven by media attention, retail FOMO, and narrative momentum rather than transaction utility or cash flow fundamentals",
+      "primary_observable": "Correlation between Google Trends volume and price movements; ratio of speculative trading volume to merchant transaction volume",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "early_adopters_exchanges",
+      "victim": "late_entrant_retail_traders",
+      "downstream_of": [
+        "supply_cap_scarcity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (narrative/attention metrics vs price stability); different victim set (retail vs transaction users); captures speculative mechanism independent of sound money claim"
+    },
+    {
+      "claim_id": "decentralization_centralization_drift",
+      "human_readable": "Decentralization-Centralization Drift (Ideology vs Infrastructure Reality)",
+      "structural_delta": "Ideological commitment to disintermediation contradicted by practical reliance on centralized exchanges, custodians, and institutional infrastructure",
+      "primary_observable": "Percentage of Bitcoin held in exchange custody vs self-custody; concentration of mining hash rate; institutional vs peer-to-peer transaction volume",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "centralized_platforms",
+      "victim": "decentralization_ideology",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: third tangled_rope with similar ε to sound_money_stability_paradox; captures distinct tension but lower graph centrality; decentralization reading already represented via supply_cap_scarcity mountain (protocol immutability)"
+    },
+    {
+      "claim_id": "transaction_fee_sustainability",
+      "human_readable": "Transaction Fee Sustainability (Miner Incentive Post-Subsidy)",
+      "structural_delta": "Long-term security model depends on transaction fees replacing block subsidy, but speculative hoarding reduces transaction volume",
+      "primary_observable": "Transaction fee revenue as percentage of miner income; block subsidy halving schedule vs fee market development",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "supply_cap_scarcity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton with low centrality; technical sustainability concern but not structurally central to kernel contest; omega material for long-term viability"
+    },
+    {
+      "claim_id": "quantum_cryptographic_threat",
+      "human_readable": "Quantum Cryptographic Threat (Future Security Vulnerability)",
+      "structural_delta": "Cryptographic security assumptions vulnerable to quantum computing advances, threatening protocol integrity",
+      "primary_observable": "Quantum computing capability benchmarks vs Bitcoin's elliptic curve cryptography resistance; protocol upgrade feasibility",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: speculative scaffold with zero centrality; mentioned in research but not structurally developed; omega variable for future threat modeling"
+    }
+  ],
+  "generation_sequence": [
+    "supply_cap_scarcity",
+    "sound_money_stability_paradox",
+    "speculative_narrative_volatility"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "decentralization_centralization_drift",
+      "structural_delta": "Ideological decentralization commitment vs practical centralized infrastructure reliance",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Third tangled_rope with high ε but lower graph centrality; decentralization dimension already captured via supply_cap_scarcity mountain (protocol immutability as decentralization proof); practical centralization tension documented but not selected for generation within three-axis budget"
+    },
+    {
+      "claim_id": "transaction_fee_sustainability",
+      "structural_delta": "Miner incentive structure post-subsidy depends on transaction fee market development",
+      "hypothesis": "piton",
+      "deferral_reason": "Low centrality piton; technical sustainability concern for long-term security model but not structurally central to sound money vs speculation vs decentralization kernel contest"
+    },
+    {
+      "claim_id": "quantum_cryptographic_threat",
+      "structural_delta": "Quantum computing vulnerability to cryptographic security assumptions",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Speculative scaffold with zero graph centrality; future threat mentioned in research but not structurally developed in current analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Are sound money, speculation, and decentralization three readings of one kernel or three distinct kernels sharing a name? Coherence test reveals ontological incoherence: no single normative framework holds all three simultaneously. Sound money requires price stability (contradicts speculation's volatility), decentralization requires intermediary elimination (contradicts institutional custody), utility requires transaction volume (contradicts speculative hoarding). Recommendation: treat as three independent constraint axes with documented coupling, not kernel readings.",
+      "source": "§1.3-K kernel/reading decomposition coherence test"
+    },
+    {
+      "id": "omega_decentralization_measurement",
+      "description": "Is decentralization_centralization_drift a tangled_rope (ideology vs reality) or a piton (atrophied original vision)? Research shows 'increased centralization trend' in Bitcoin/Ethereum but unclear whether this represents drift absorption (partial drift_status) or fundamental abandonment (absent drift_status). Deferred axis may warrant generation if user requests decentralization-focused analysis.",
+      "source": "Deferred axis decentralization_centralization_drift + Dark Matter Probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_energy_externality",
+      "description": "Proof-of-work mining energy consumption absent from all three readings (sound money, speculation, decentralization). Environmental cost is a structural externality not captured in current axis decomposition. Potential fourth axis: energy_extraction_externality (high ε snare with victim=global_climate_commons). Flagged for expansion if user requests environmental dimension.",
+      "source": "Dark Matter Probe 2 (absence inventory)"
+    },
+    {
+      "id": "omega_institutional_adoption_reclassification",
+      "description": "Wall Street ETF adoption and institutional custody may reclassify supply_cap_scarcity from mountain (protocol-enforced physical constraint) to rope (coordination game among institutional actors). If majority of Bitcoin held in custodial platforms, the 21M cap becomes a social convention enforced by exchange cooperation rather than cryptographic inevitability. Monitor for mountain→rope drift.",
+      "source": "F03 (hasty generalization) + decentralization_centralization_drift coupling"
+    },
+    {
+      "id": "omega_transaction_fee_death_spiral",
+      "description": "Deferred axis transaction_fee_sustainability may become structurally central post-2140 (final block subsidy). If speculative hoarding persists and transaction volume remains low, miner revenue collapses, hash rate declines, security degrades. This would reclassify supply_cap_scarcity mountain as piton (security assumption failure). Long-term viability omega.",
+      "source": "Deferred axis transaction_fee_sustainability"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: supply_cap_scarcity classified as mountain (protocol-enforced physical constraint) but institutional custody concentration may reclassify it as rope (social coordination). Generated omega_institutional_adoption_reclassification to bound this uncertainty. No tunnel vision: axes drawn from monetary theory, market behavior, and governance ideology lenses. No epistemic trespass: analysis remains within documented research on cryptocurrency market dynamics and protocol mechanics."
+  },
+  "_seed_id": "cryptocurrency_kernel"
+}

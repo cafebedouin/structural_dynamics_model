@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Software Licensing / Intellectual Property / Technology Governance",
+  "family_id": "permissive_oss_licensing_2024",
+  "topic_summary": "Analysis of permissive open-source licenses (MIT, Apache) as a contested kernel where the same copyright relaxation text is read by commons advocates as a coordination mechanism maximizing universal freedom versus read by corporate actors as an uncompensated extraction substrate enabling proprietary derivative moats.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "MIT License text (17-clause standard form copyright waiver)",
+      "Apache 2.0 License (patent grant + attribution requirements)",
+      "Open-source software commons (developers contributing under permissive terms)",
+      "Enterprise technology corporations (AWS, Google, Meta deploying OSS in proprietary services)",
+      "Copyleft alternative (GPL family licenses requiring derivative openness)",
+      "Individual maintainers (authors bearing maintenance burden without compensation)"
+    ],
+    "key_tensions": [
+      "Universal freedom of implementation vs extraction enabling (same license text, opposite normative frames)",
+      "Contributor autonomy vs maintainer burnout (freedom to relicense vs obligation to support corporate dependents)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "commons_coordination_reading",
+      "human_readable": "Commons Coordination Reading (Permissive License as Universal Freedom Floor)",
+      "structural_delta": "License text read as mechanism maximizing universal implementation freedom by minimizing legal friction",
+      "primary_observable": "Adoption rate across diverse contexts; absence of license compliance litigation; frequency of permissive-to-permissive forks",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "universal_implementer_pool",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "corporate_moat_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes coordination baseline"
+    },
+    {
+      "claim_id": "corporate_moat_reading",
+      "human_readable": "Corporate Moat Reading (Permissive License as Uncompensated Extraction Substrate)",
+      "structural_delta": "Same license text read as enabling proprietary derivative products without compensation obligation or reciprocal openness",
+      "primary_observable": "Revenue delta between OSS maintainers and corporate derivative products; frequency of cloud vendor forks without upstream contribution; maintainer burnout rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "enterprise_technology_corporations",
+      "victim": "individual_maintainers",
+      "downstream_of": [
+        "commons_coordination_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; downstream snare structure feeds from coordination rope"
+    },
+    {
+      "claim_id": "copyleft_counterfactual_reading",
+      "human_readable": "Copyleft Counterfactual (GPL as Reciprocity Enforcement Alternative)",
+      "structural_delta": "Viral reciprocity requirement (derivative works must open-source) as structural alternative to permissive extraction enabling",
+      "primary_observable": "GPL vs MIT/Apache adoption trends; corporate resistance to GPL dependencies; FSF vs OSI philosophical split",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "copyleft_commons_advocates",
+      "victim": "proprietary_derivative_builders",
+      "downstream_of": [],
+      "feeds_into": [
+        "commons_coordination_reading",
+        "corporate_moat_reading"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading representing structural alternative; highest centrality as upstream reference point for both primary readings"
+    },
+    {
+      "claim_id": "maintainer_burnout_dynamic",
+      "human_readable": "Maintainer Burnout Dynamic (Uncompensated Labor Subsidy)",
+      "structural_delta": "Individual maintainers bear ongoing support costs for corporate dependents without revenue capture mechanism",
+      "primary_observable": "Maintainer dropout rates; frequency of 'pay me or fork' ultimatums; corporate sponsorship vs maintainer hours worked",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "individual_maintainers",
+      "downstream_of": [
+        "corporate_moat_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured by corporate_moat_reading's victim structure; distinct observable but lower centrality"
+    },
+    {
+      "claim_id": "patent_trolling_surface",
+      "human_readable": "Patent Trolling Attack Surface (Apache vs MIT Patent Grant Delta)",
+      "structural_delta": "Apache 2.0 explicit patent grant vs MIT silence creates different litigation exposure profiles",
+      "primary_observable": "Patent litigation frequency against MIT vs Apache projects; corporate counsel license preference surveys",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "commons_coordination_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technical legal detail subsumed by broader coordination reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "commons_coordination_reading",
+      "kernel_id": "permissive_license_text",
+      "reading_id": "commons_coordination_reading"
+    },
+    {
+      "claim_id": "corporate_moat_reading",
+      "kernel_id": "permissive_license_text",
+      "reading_id": "corporate_moat_reading"
+    },
+    {
+      "claim_id": "copyleft_counterfactual_reading",
+      "kernel_id": "permissive_license_text",
+      "reading_id": "copyleft_counterfactual_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "maintainer_burnout_dynamic",
+      "structural_delta": "Uncompensated labor subsidy from individual maintainers to corporate dependents",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured by corporate_moat_reading's victim structure; distinct observable but redundant structural role"
+    },
+    {
+      "claim_id": "patent_trolling_surface",
+      "structural_delta": "Apache patent grant vs MIT silence creates different litigation profiles",
+      "hypothesis": "rope",
+      "deferral_reason": "Technical legal detail subsumed by commons_coordination_reading; low centrality"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_validity",
+      "description": "Is this genuinely one kernel or two distinct artifacts? MIT and Apache 2.0 differ structurally (patent grant). If patent clause changes constraint topology, they are separate kernels, not one contested text.",
+      "source": "§1.3-K coherence check"
+    },
+    {
+      "id": "omega_copyleft_collapse",
+      "description": "Does copyleft reading truly contest the same kernel, or is GPL a different commitment system entirely? If GPL doesn't read MIT/Apache but rejects it, copyleft_counterfactual_reading may be misclassified as a reading rather than an external alternative.",
+      "source": "§1.3-K kernel boundary test"
+    },
+    {
+      "id": "omega_corporate_beneficiary_homogeneity",
+      "description": "Corporate moat reading treats all enterprises as uniform extractors. Do some corporations contribute upstream at rates that disqualify them from victim set? AWS vs Meta vs Cloudflare contribution profiles may fracture beneficiary structure.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_temporal_stability",
+      "description": "Is the kernel contest stable or historically contingent? Pre-2010 OSS culture may have held different shared commitment than post-cloud-vendor dominance era. If commitment shifted, not a single kernel.",
+      "source": "§2.3 Mountain Check (persistence test)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest structure appears valid with three structurally distinct readings. Omegas flag kernel boundary and beneficiary homogeneity uncertainties for downstream essay."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Permissive open-source license text (MIT/Apache) as stabilized copyright relaxation commitment",
+    "authority_description": "License author (original copyright holder) grants interpretive freedom; no central authority adjudicates legitimate use",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "permissive_license_text",
+    "readings": [
+      {
+        "reading_id": "commons_coordination_reading",
+        "commitment": "Copyright relaxation maximizes universal implementation freedom by minimizing legal friction",
+        "authority_grounding": "FSF-lineage free software philosophy; Open Source Initiative definitional criteria",
+        "sibling_readings": [
+          "corporate_moat_reading",
+          "copyleft_counterfactual_reading"
+        ],
+        "expected_structural_delta": "Low epsilon coordination rope; universal implementer pool benefits; no victim set"
+      },
+      {
+        "reading_id": "corporate_moat_reading",
+        "commitment": "Copyright relaxation enables uncompensated extraction for proprietary derivative products",
+        "authority_grounding": "Corporate legal counsel interpretation; shareholder value maximization framework",
+        "sibling_readings": [
+          "commons_coordination_reading",
+          "copyleft_counterfactual_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon snare; enterprise corporations benefit; individual maintainers victimized"
+      },
+      {
+        "reading_id": "copyleft_counterfactual_reading",
+        "commitment": "Copyright relaxation without reciprocity requirement structurally enables exploitation; viral reciprocity (GPL) is necessary alternative",
+        "authority_grounding": "Copyleft advocacy (FSF); reciprocity-enforcement philosophy",
+        "sibling_readings": [
+          "commons_coordination_reading",
+          "corporate_moat_reading"
+        ],
+        "expected_structural_delta": "High epsilon tangled_rope; copyleft advocates benefit; proprietary builders victimized"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "commons_coordination_reading",
+        "reading_b": "corporate_moat_reading",
+        "basis": "No single coherent framework can hold both 'maximum freedom is the goal' (coordination) and 'freedom enables exploitation that should be prevented' (extraction critique) as simultaneously true normative axioms"
+      },
+      {
+        "reading_a": "commons_coordination_reading",
+        "reading_b": "copyleft_counterfactual_reading",
+        "basis": "No single coherent framework can hold both 'permissionless reuse maximizes value' and 'reciprocity constraints are structurally necessary' as compatible design principles"
+      }
+    ]
+  },
+  "_seed_id": "permissive_software_licensing"
+}

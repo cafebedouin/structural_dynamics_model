@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Network Protocol Engineering / Internet Standards / Distributed Systems Coordination",
+  "family_id": "rfc9293_tcp_invariance_2026",
+  "topic_summary": "Analysis of RFC 9293 (TCP specification) as a contested kernel where the same protocol document is read as either a strict invariant state machine required for global coordination (pure Rope interpretation by standard clients) or as an optimization/exploitation target by middleboxes and specialized architectures seeking speed or surveillance extraction. The kernel is the codified IETF specification; readings instantiate different constraints on what constitutes legitimate protocol behavior.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "RFC 9293 (IETF TCP specification; protocol kernel)",
+      "Standard network clients (endpoints implementing strict RFC compliance)",
+      "Middleboxes (NATs, firewalls, TCP proxies performing in-path modification)",
+      "IETF (Internet Engineering Task Force; specification authority)",
+      "Optimization-centric architectures (BBR congestion control, data center TCP variants)"
+    ],
+    "key_tensions": [
+      "Strict specification compliance vs performance optimization latitude",
+      "End-to-end principle (transparent network) vs middlebox intervention for policy/speed"
+    ],
+    "key_mechanisms": [
+      "RFC conformance testing (TAHI, Packetdrill test suites)",
+      "Middlebox behavior normalization (path-dependent protocol divergence)",
+      "IETF standards process (rough consensus model for specification revision)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for RFC compliance (no central authority policing implementations)",
+      "Specification for handling middlebox-modified packets (implicit tolerance vs explicit prohibition)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "RFC 9293 TCP specification stabilizes a state machine definition, packet format, and congestion control semantics as the authoritative reference for legitimate TCP behavior worldwide",
+    "authority_description": "IETF rough consensus process grounds interpretive legitimacy; individual implementers and middlebox vendors claim interpretive authority through deployed behavior becoming de facto standard",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_covert",
+    "is_contested_kernel": true,
+    "kernel_id": "rfc9293_tcp_specification",
+    "readings": [
+      {
+        "reading_id": "strict_invariance_reading",
+        "commitment": "RFC 9293 specifies an invariant state machine that implementations must replicate exactly to preserve global interoperability",
+        "authority_grounding": "IETF specification process; end-to-end principle; standards-compliant client implementations",
+        "sibling_readings": [
+          "optimization_latitude_reading",
+          "middlebox_realism_reading"
+        ],
+        "expected_structural_delta": "Zero tolerance for protocol deviation; middlebox modification is violation; constraint type is pure Rope (coordination requirement with no extractiveness); victim set includes any implementation relying on strict specification guarantees"
+      },
+      {
+        "reading_id": "optimization_latitude_reading",
+        "commitment": "RFC 9293 specifies behavioral outcomes (reliable byte stream) but permits implementation latitude for performance optimization within semantic bounds",
+        "authority_grounding": "Performance engineering community; data center operators; BBR and other congestion control research recognizing specification as performance floor not ceiling",
+        "sibling_readings": [
+          "strict_invariance_reading",
+          "middlebox_realism_reading"
+        ],
+        "expected_structural_delta": "Specification defines semantic contract but not implementation path; constraint is Rope with low extractiveness (coordination on outcomes, flexibility on means); enables high-performance variants (BBR, DCTCP) without breaking interoperability"
+      },
+      {
+        "reading_id": "middlebox_realism_reading",
+        "commitment": "RFC 9293 describes ideal endpoint behavior but real TCP is path-dependent protocol shaped by deployed middlebox population; specification authority is subordinate to what the network actually does",
+        "authority_grounding": "Network operators deploying NATs/firewalls/proxies; ossification research documenting middlebox-induced protocol constraints; deployed-code-as-specification principle",
+        "sibling_readings": [
+          "strict_invariance_reading",
+          "optimization_latitude_reading"
+        ],
+        "expected_structural_delta": "Constraint is Tangled Rope or Snare: middleboxes modify packets for surveillance/policy enforcement, extracting control from endpoints; specification becomes aspiration rather than enforceable standard; victim set is endpoint autonomy; beneficiary is middlebox operators (ISPs, enterprises, state surveillance)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_invariance_reading",
+        "reading_b": "middlebox_realism_reading",
+        "basis": "Strict invariance requires that specification authority overrides deployed behavior (non-compliant implementations are violations); middlebox realism requires that deployed behavior defines legitimate protocol (specification is documentation of aspiration, not enforceable standard). No single framework can hold both: either the specification is authoritative over deployment, or deployment is authoritative over specification."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_invariance_reading",
+      "human_readable": "Strict Invariance Reading (RFC as Inviolable State Machine)",
+      "structural_delta": "RFC 9293 specifies an invariant state machine that all implementations must replicate exactly",
+      "primary_observable": "RFC conformance test suite results; deviation rate in endpoint implementations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: purest expression of specification-as-authority; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "optimization_latitude_reading",
+      "human_readable": "Optimization Latitude Reading (RFC as Semantic Contract)",
+      "structural_delta": "RFC 9293 specifies behavioral outcomes but permits implementation latitude for performance",
+      "primary_observable": "Performance delta between strict-compliant vs optimized implementations; interoperability failure rate",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "performance_engineering_community",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: structurally distinct from strict invariance (permits latitude vs zero tolerance); represents engineering pragmatism pole"
+    },
+    {
+      "claim_id": "middlebox_realism_reading",
+      "human_readable": "Middlebox Realism Reading (Deployed Code as De Facto Specification)",
+      "structural_delta": "Real TCP is path-dependent protocol shaped by deployed middlebox population; specification subordinate to network reality",
+      "primary_observable": "Middlebox modification rate; ossification metrics (new TCP options blocked by middleboxes); surveillance capability extraction",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "middlebox_operators",
+      "victim": "endpoint_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: highest centrality; introduces extraction dimension (surveillance/control); tangled_rope hypothesis represents adversarial interpretation"
+    },
+    {
+      "claim_id": "ietf_legitimacy_erosion",
+      "human_readable": "IETF Legitimacy Erosion (Authority Collapse Under Deployment Pressure)",
+      "structural_delta": "IETF's rough consensus authority erodes when deployed middlebox population contradicts specification intent",
+      "primary_observable": "IETF working group participation by middlebox vendors; rate of specification updates acknowledging middlebox reality",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "ietf_specification_authority",
+      "downstream_of": [
+        "middlebox_realism_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of middlebox reading; authority structure question is omega material rather than independent constraint axis"
+    },
+    {
+      "claim_id": "ossification_acceleration",
+      "human_readable": "Protocol Ossification Acceleration (Innovation Blockage by Middlebox Population)",
+      "structural_delta": "Deployed middlebox population blocks new TCP features (options, ECN) creating protocol stagnation",
+      "primary_observable": "Deployment rate of new TCP extensions; QUIC adoption as ossification workaround",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_middlebox_vendors",
+      "victim": "protocol_evolution",
+      "downstream_of": [
+        "middlebox_realism_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of middlebox reading; captured by middlebox_realism constraint story without requiring separate axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strict_invariance_reading",
+      "kernel_id": "rfc9293_tcp_specification",
+      "reading_id": "strict_invariance_reading"
+    },
+    {
+      "claim_id": "optimization_latitude_reading",
+      "kernel_id": "rfc9293_tcp_specification",
+      "reading_id": "optimization_latitude_reading"
+    },
+    {
+      "claim_id": "middlebox_realism_reading",
+      "kernel_id": "rfc9293_tcp_specification",
+      "reading_id": "middlebox_realism_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "ietf_legitimacy_erosion",
+      "structural_delta": "IETF authority erodes when deployed behavior contradicts specification",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence of middlebox_realism_reading; authority structure question is meta-level analysis suitable for omega rather than independent constraint axis"
+    },
+    {
+      "claim_id": "ossification_acceleration",
+      "structural_delta": "Middlebox population blocks new TCP features creating protocol stagnation",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream manifestation of middlebox_realism_reading; ossification is symptom rather than independent structural axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_absence",
+      "description": "RFC 9293 has no enforcement mechanism. Is the specification a true constraint (Rope) or aspirational documentation (Scaffold)? The kernel's authority depends entirely on voluntary compliance and interoperability pressure, not institutional enforcement.",
+      "source": "Absence Inventory (§1.1) — no policing mechanism for RFC compliance"
+    },
+    {
+      "id": "omega_quic_escape",
+      "description": "QUIC's UDP encapsulation bypasses middlebox TCP inspection. Does this resolve the kernel contest by abandoning TCP entirely, or merely shift the battleground to user-space protocol stacks? If QUIC adoption reaches threshold, RFC 9293 becomes historical artifact rather than living constraint.",
+      "source": "Deferred axis ossification_acceleration + domain context on protocol evolution"
+    },
+    {
+      "id": "omega_bbr_legitimacy",
+      "description": "BBR congestion control violates RFC 9293's AIMD semantics but improves performance. Is BBR an optimization_latitude_reading exemplar or a middlebox_realism_reading precursor? If high-performance variants diverge sufficiently, TCP fragments into family of incompatible dialects.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — BBR benefits high-bandwidth users but undermines fairness assumptions"
+    },
+    {
+      "id": "omega_state_surveillance_extraction",
+      "description": "Middlebox_realism_reading does not distinguish commercial optimization (CDN proxies) from state surveillance (DPI, packet injection). Both modify protocol behavior, but extraction beneficiaries and victim sets differ. Does the constraint decomposition conflate distinct threat models?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — extraction beneficiary unclear in middlebox_realism framing"
+    },
+    {
+      "id": "omega_specification_versioning",
+      "description": "RFC 9293 supersedes RFC 793 but maintains backward compatibility. Does kernel stability require immutability (strict reading) or controlled evolution (IETF process as revision mechanism)? If kernel can be revised through rough consensus, is it still a commitment system or merely a coordination protocol?",
+      "source": "Commitment system recognition — drift_status:partial implies revision is possible but contested"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest confirmed: three readings produce structurally distinct constraints (pure Rope vs Rope-with-latitude vs Tangled Rope/Snare). Axiom contradiction declared between strict_invariance and middlebox_realism (specification authority vs deployment authority). Deferred axes are genuine downstream consequences rather than independent dimensions."
+  },
+  "_seed_id": "rfc9293_state_machine"
+}

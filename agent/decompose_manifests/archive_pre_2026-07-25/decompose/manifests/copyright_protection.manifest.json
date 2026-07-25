@@ -1,0 +1,195 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Intellectual Property Law / Constitutional Law / Political Economy",
+  "family_id": "copyright_mandate_kernel_2026",
+  "topic_summary": "Analysis of the constitutional copyright mandate as a contested kernel. The U.S. Constitution grants Congress power 'to promote the progress of science and useful arts, by securing for limited times to authors and inventors the exclusive right to their respective writings and discoveries.' Two fundamentally incompatible readings exist: one treating copyright as a temporary scaffold designed to enrich the public domain (public progress mandate), the other treating it as a perpetual property right requiring maximal protection (corporate enclosure mandate). These readings emit different constraint types, beneficiary structures, and victims.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "U.S. Constitution Article I Section 8 Clause 8 (the constitutional text itself)",
+      "Copyright holders (authors, creators, corporate assignees)",
+      "Public domain (accumulated cultural commons)",
+      "Congress (interpretive authority via statutory revision)",
+      "Corporate incumbents (Disney, record labels, film studios as beneficiaries of term extension)",
+      "Derivative creators (remix artists, educators, archivists as victims of enclosure)"
+    ],
+    "key_tensions": [
+      "Limited times vs. perpetual extension (1790: 14+14 years → 2023: life+70 years)",
+      "Progress mandate vs. property maximization (constitutional purpose vs. corporate lobbying outcomes)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "public_scaffold_reading",
+      "human_readable": "Public Scaffold Reading (Temporary Monopoly for Public Enrichment)",
+      "structural_delta": "Copyright as temporary monopoly granted to incentivize creation, designed to expire and enrich the public domain",
+      "primary_observable": "Term length trends; statutory construction prioritizing expiration and fair use breadth",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "public_domain",
+      "victim": "none",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three readings selected; instantiates coordination-regime constraint with public as beneficiary"
+    },
+    {
+      "claim_id": "corporate_enclosure_reading",
+      "human_readable": "Corporate Enclosure Reading (Property Right Requiring Maximal Protection)",
+      "structural_delta": "Copyright as perpetual quasi-property right; 'limited times' interpreted as maximal extension consistent with avoiding explicit perpetuity",
+      "primary_observable": "Lobbying expenditure for term extension; statutory construction prioritizing enforcement and criminalization",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "corporate_incumbents",
+      "victim": "derivative_creators",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second of three readings selected; instantiates extraction constraint with clear victim class"
+    },
+    {
+      "claim_id": "judicial_ambiguity_reading",
+      "human_readable": "Judicial Ambiguity Reading (Rational Basis Deference)",
+      "structural_delta": "Copyright as zone of legislative discretion; courts defer to Congress on 'limited times' definition, enabling drift without constitutional constraint",
+      "primary_observable": "Eldred v. Ashcroft (2003) rational basis standard; absence of judicial term-length invalidation",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "congress_legislative_authority",
+      "victim": "constitutional_fixity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected; captures authority structure enabling drift from scaffold to enclosure"
+    },
+    {
+      "claim_id": "moral_rights_reading",
+      "human_readable": "Moral Rights Reading (Creator-Centric Perpetual Connection)",
+      "structural_delta": "Copyright as extension of creator's personality; emphasis on attribution and integrity rights over economic exploitation",
+      "primary_observable": "Visual Artists Rights Act provisions; international moral rights regimes (Berne Convention Article 6bis)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": "individual_creators",
+      "victim": "none",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: U.S. system minimally incorporates moral rights; peripheral to constitutional mandate contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "public_scaffold_reading",
+      "kernel_id": "copyright_constitutional_mandate",
+      "reading_id": "public_scaffold_reading"
+    },
+    {
+      "claim_id": "corporate_enclosure_reading",
+      "kernel_id": "copyright_constitutional_mandate",
+      "reading_id": "corporate_enclosure_reading"
+    },
+    {
+      "claim_id": "judicial_ambiguity_reading",
+      "kernel_id": "copyright_constitutional_mandate",
+      "reading_id": "judicial_ambiguity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "moral_rights_reading",
+      "structural_delta": "Copyright as extension of creator's personality",
+      "hypothesis": "mountain",
+      "deferral_reason": "Peripheral to U.S. constitutional mandate structure; moral rights minimally incorporated in U.S. law"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_sonny_bono_act_counterfactual",
+      "description": "Would the 1998 Copyright Term Extension Act have passed without Disney's lobbying expenditure? If not, is the 'limited times' constraint a Rope (coordination norm) or Piton (atrophied constitutional check)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_eldred_rational_basis",
+      "description": "Does Eldred v. Ashcroft's rational basis standard represent judicial deference (legitimate interpretive humility) or institutional capture (abdication of constitutional constraint enforcement)?",
+      "source": "Judicial ambiguity reading + F34 epistemic trespass concern"
+    },
+    {
+      "id": "omega_international_harmonization",
+      "description": "Is copyright term extension driven by domestic enclosure logic or by international treaty harmonization requirements (Berne Convention, TRIPS)? External coordination may reclassify beneficiary structure.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_digital_enforcement_regime",
+      "description": "Does the DMCA anti-circumvention regime (17 U.S.C. § 1201) represent a separate constraint axis or an enforcement mechanism downstream of the corporate enclosure reading? Criminalization of access shifts epsilon upward.",
+      "source": "Mechanism inventory + granularity judgment uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Judicial deference analysis (Eldred rational basis standard) approaches constitutional law domain boundary. Omega generated to bound interpretive uncertainty. Moral rights reading deferred as peripheral to U.S. constitutional structure despite relevance in civil law jurisdictions."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The U.S. Constitution Article I Section 8 Clause 8 grants Congress power to secure exclusive rights 'for limited times' to 'promote the progress of science and useful arts.' This clause is the stabilized kernel—its text is fixed, but its meaning is contested.",
+    "authority_description": "Congress holds statutory revision authority; federal courts hold interpretive authority via constitutional review. Legitimacy grounds: textualism (what 'limited times' means), originalism (what 1787 framers intended), and rational basis deference (legislative discretion within constitutional bounds).",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "copyright_constitutional_mandate",
+    "readings": [
+      {
+        "reading_id": "public_scaffold_reading",
+        "commitment": "Copyright exists to enrich the public domain; monopoly is temporary means to public-good end",
+        "authority_grounding": "Textualist-purposivist: 'promote the progress' clause as primary; 'limited times' as genuine constraint",
+        "sibling_readings": [
+          "corporate_enclosure_reading",
+          "judicial_ambiguity_reading"
+        ],
+        "expected_structural_delta": "Beneficiary: public domain. Victim: none (coordination regime). Low-to-moderate epsilon. Fair use expansion, shorter terms, anti-enclosure norms."
+      },
+      {
+        "reading_id": "corporate_enclosure_reading",
+        "commitment": "Copyright is a property right requiring maximal protection; 'limited times' means maximal extension short of explicit perpetuity",
+        "authority_grounding": "Property-maximalist: Lockean labor theory + corporate lobbying capture of legislative process",
+        "sibling_readings": [
+          "public_scaffold_reading",
+          "judicial_ambiguity_reading"
+        ],
+        "expected_structural_delta": "Beneficiary: corporate incumbents (Disney, RIAA, MPAA). Victim: derivative creators, educators, archivists. High epsilon. Term extension, criminalized circumvention, fair use restriction."
+      },
+      {
+        "reading_id": "judicial_ambiguity_reading",
+        "commitment": "Copyright term length is a zone of legislative discretion; courts defer to Congress via rational basis review",
+        "authority_grounding": "Institutional-proceduralist: separation of powers + rational basis standard (Eldred v. Ashcroft 2003)",
+        "sibling_readings": [
+          "public_scaffold_reading",
+          "corporate_enclosure_reading"
+        ],
+        "expected_structural_delta": "Beneficiary: congressional authority. Victim: constitutional fixity as constraint on drift. Low-to-moderate epsilon. Judicial deference enables scaffold-to-enclosure transition without constitutional invalidation."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "public_scaffold_reading",
+        "reading_b": "corporate_enclosure_reading",
+        "basis": "Public scaffold treats copyright expiration as constitutionally required (public domain enrichment is the mandate's purpose). Corporate enclosure treats maximal term extension as constitutionally permissible (property protection is the mandate's purpose). No single coherent framework holds both: either the public domain is the constitutional beneficiary or the rights-holder is."
+      }
+    ]
+  },
+  "_seed_id": "copyright_protection"
+}

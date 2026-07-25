@@ -1,0 +1,173 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Preparedness / Institutional Memory / Commitment Systems",
+  "family_id": "dutch_flood_preparedness_generational",
+  "topic_summary": "Analysis of Dutch flood-control preparedness maintenance across non-catastrophe generations following the 1953 North Sea flood. The topic examines whether post-1953 drills and dike-inspection routines constitute retained competence or memorial husk, with implications for D5 (drift-to-failure) risk at national infrastructure scale.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "1953 North Sea Flood (catastrophic event; 1,836 deaths; foundational trauma)",
+      "Deltawerken/Delta Works (post-1953 infrastructure program; completed 1997)",
+      "Rijkswaterstaat (national water authority; inspection/drill administrator)",
+      "Non-catastrophe generations (cohorts without lived flood experience)",
+      "Drill and inspection routines (recurring practices claimed as preparedness maintenance)"
+    ],
+    "key_tensions": [
+      "Memorial performance vs operational competence (form vs function in preparedness)",
+      "Generational knowledge transfer vs experiential atrophy (transmission across non-event cohorts)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Post-1953 flood preparedness as institutionalized practice — the shared commitment that recurring drills and inspections maintain readiness across generations without catastrophe",
+    "authority_description": "Rijkswaterstaat's technical-administrative authority grounded in 1953 trauma memory and engineering expertise",
+    "drift_status": "partial",
+    "candidate_pattern": "Dynastic Succession (generational transfer without performance test) or Interpretive Drift (preparedness-as-ritual absorbing competence decay)",
+    "is_contested_kernel": true,
+    "kernel_id": "preparedness_persistence",
+    "readings": [
+      {
+        "reading_id": "husk_reading",
+        "commitment": "Drills and inspections are memorial performance — form persists while operational competence atrophies",
+        "authority_grounding": "Sociological (ritual theory) / organizational decay literature",
+        "sibling_readings": [
+          "competence_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High D5 risk; preparedness is Piton (atrophied capacity mistaken for Mountain); beneficiary is institutional legitimacy; victim is population at flood risk"
+      },
+      {
+        "reading_id": "competence_reading",
+        "commitment": "Drills and inspections are live exercised knowledge — practice maintains operational readiness",
+        "authority_grounding": "Engineering / high-reliability organization theory",
+        "sibling_readings": [
+          "husk_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Low D5 risk; preparedness is Mountain (physical infrastructure) + Rope (coordination); no extraction structure"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Preparedness is stratified — some components remain competent (engineering inspection), others ritualized (evacuation drills)",
+        "authority_grounding": "Organizational sociology / disaster studies",
+        "sibling_readings": [
+          "husk_reading",
+          "competence_reading"
+        ],
+        "expected_structural_delta": "Moderate D5 risk; preparedness is mixed Mountain/Piton; extraction localized to specific subsystems"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "husk_reading",
+        "reading_b": "competence_reading",
+        "basis": "Husk reading holds that form-without-function is the structural reality (preparedness has decayed); competence reading holds that function persists through practice. No single framework can hold both: either the drills maintain readiness or they do not."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "preparedness_persistence_kernel",
+      "human_readable": "Preparedness Persistence (Contested Kernel: Husk vs Competence vs Hybrid)",
+      "structural_delta": "Whether post-1953 preparedness routines maintain operational competence or ritualize into memorial performance",
+      "primary_observable": "Drill performance metrics; inspection finding-to-remediation lag; generational competence assessment",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "institutional_legitimacy (husk); null (competence); mixed (hybrid)",
+      "victim": "population_at_risk (husk); null (competence); subsystem_dependent (hybrid)",
+      "downstream_of": [],
+      "feeds_into": [
+        "infrastructure_maintenance_regime"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel; all three readings proceed to generation as expansion of this single axis"
+    },
+    {
+      "claim_id": "infrastructure_maintenance_regime",
+      "human_readable": "Infrastructure Maintenance Regime (Dike Inspection as Reliability Signal)",
+      "structural_delta": "Physical infrastructure inspection frequency and remediation response time as distinct from drill-based preparedness",
+      "primary_observable": "Dike inspection cycle adherence; structural defect remediation lag; budget allocation to physical vs procedural preparedness",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "preparedness_persistence_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (physical infrastructure state vs drill performance); survives pairwise test; downstream of kernel but structurally distinct"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "husk_reading",
+      "kernel_id": "preparedness_persistence",
+      "reading_id": "husk_reading"
+    },
+    {
+      "claim_id": "competence_reading",
+      "kernel_id": "preparedness_persistence",
+      "reading_id": "competence_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "preparedness_persistence",
+      "reading_id": "hybrid_reading"
+    },
+    "infrastructure_maintenance_regime"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "climate_adaptation_pressure",
+      "structural_delta": "Sea-level rise and storm intensity increase as external forcing on preparedness adequacy",
+      "hypothesis": "mountain",
+      "deferral_reason": "Failed pairwise independence test with infrastructure_maintenance_regime (same observable: physical system adequacy under changing conditions); would be captured as affects_constraint edge rather than separate axis"
+    },
+    {
+      "claim_id": "eu_disaster_coordination",
+      "structural_delta": "Supranational coordination mechanisms for cross-border flood response",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero centrality; speculative; no evidence in extraction that EU-level coordination affects Dutch internal preparedness structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_measurement_validity",
+      "description": "Can drill performance metrics distinguish husk from competence? If drills are themselves ritualized, high scores may indicate form-fidelity rather than operational readiness. Measurement instrument may be captured by the phenomenon it purports to measure.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_1953_proximity",
+      "description": "Does preparedness decay correlate with generational distance from 1953? If husk reading is correct, we expect monotonic competence decline; if competence reading is correct, institutional mechanisms should stabilize performance. Longitudinal data required.",
+      "source": "Kernel decomposition (husk vs competence readings predict opposite trajectories)"
+    },
+    {
+      "id": "omega_subsystem_stratification",
+      "description": "Hybrid reading predicts differential decay across subsystems (e.g., engineering inspection remains competent while evacuation drills ritualize). Which subsystems are most vulnerable to husk transformation? Absence: no subsystem-level analysis in extraction.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + hybrid_reading structural prediction"
+    },
+    {
+      "id": "omega_comparative_validation",
+      "description": "How do other non-catastrophe-tested disaster preparedness regimes (Japan earthquake drills, California wildfire evacuation) distinguish husk from competence? Cross-national comparison required to validate measurement approach.",
+      "source": "F34 (Epistemic Trespass) — model lacks domain-specific disaster preparedness literature"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks deep expertise in disaster preparedness literature and high-reliability organization theory. Husk vs competence distinction requires domain-specific measurement validation that exceeds training data. Generated omega_comparative_validation and omega_measurement_validity to bound uncertainty. Kernel decomposition proceeds but readings are hypotheses requiring empirical validation."
+  },
+  "_seed_id": "dutch_flood_control_culture"
+}

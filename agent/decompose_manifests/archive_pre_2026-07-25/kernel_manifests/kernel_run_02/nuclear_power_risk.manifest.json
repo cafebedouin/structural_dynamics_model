@@ -1,0 +1,270 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Risk Assessment / Energy Policy / Public Safety Governance",
+  "family_id": "nuclear_acceptable_risk_2026",
+  "topic_summary": "Analysis of the nuclear energy risk debate as a contested kernel where different parties read the acceptable-risk-for-energy commitment differently. The catastrophic-tail-dominant reading (anti-nuclear) weights low-probability high-consequence events heavily, emphasizing irreversibility and intergenerational burden. The expected-value-dominant reading (pro-nuclear) weights average annual costs and climate benefits, treating nuclear as quantifiable trade-off among energy alternatives.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 6,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Nuclear Regulatory Bodies (IAEA, national regulators; authority grounded in probabilistic safety assessment)",
+      "Anti-Nuclear Movement (environmental advocacy; authority grounded in precautionary principle)",
+      "Nuclear Industry (operators, vendors; authority grounded in engineering expertise)",
+      "Probabilistic Safety Assessment/PSA (risk quantification methodology)",
+      "Historical Accidents (Chernobyl, Fukushima, TMI; empirical anchors for risk perception)",
+      "Radioactive Waste (multi-generational hazard; temporal scope beyond institutional lifespans)",
+      "Climate Change Mitigation Framework (competing existential risk; temporal urgency)",
+      "Affluent Educated White Males (demographic overrepresented in pro-nuclear position)"
+    ],
+    "key_tensions": [
+      "Asymmetric burden of proof: one accident proves danger, decades of safety prove nothing",
+      "Uncertainty quantification (PSA confidence intervals) vs uncertainty acknowledgment (irreducible unknowns)",
+      "Temporal framing: annual expected values vs multi-generational timescales",
+      "Competing risk comparisons: nuclear accidents vs coal emissions vs climate catastrophe",
+      "Institutional trust: industry/regulatory underestimation vs public skepticism",
+      "Intergenerational justice: waste disposal burden on future generations"
+    ],
+    "key_mechanisms": [
+      "Probabilistic Safety Assessment (PSA/PRA): quantifies failure probabilities and consequence severity; systematically underestimates cascade effects per historical record",
+      "Signal value amplification: any nuclear incident anywhere globally erodes trust in all nuclear programs",
+      "Heavy-tailed cost distribution: most years zero cost, rare years extreme cost driving total up",
+      "Defense-in-depth safety margin: compensates for PSA uncertainty by imposing strict redundancy"
+    ],
+    "key_absences": [
+      "Explicit framework for weighting intergenerational vs present-generation harm",
+      "Mechanism for adjudicating between competing existential risks (nuclear accident vs climate catastrophe)",
+      "Demographic analysis of who bears nuclear risk vs who benefits from energy production"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Acceptable risk for energy production: the threshold at which catastrophic potential justifies or prohibits a technology despite benefits",
+    "authority_description": "Contested between technocratic authority (regulators, industry grounded in PSA methodology) and democratic/precautionary authority (public, advocacy grounded in irreversibility principle)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_pluralism",
+    "is_contested_kernel": true,
+    "kernel_id": "acceptable_risk_for_energy",
+    "readings": [
+      {
+        "reading_id": "catastrophic_tail_dominant",
+        "commitment": "Low-probability high-consequence events dominate risk calculus; irreversibility and intergenerational burden outweigh expected-value optimization",
+        "authority_grounding": "Precautionary principle; democratic legitimacy; intergenerational justice",
+        "sibling_readings": [
+          "expected_value_dominant",
+          "comparative_risk_dominant"
+        ],
+        "expected_structural_delta": "Nuclear enters victim set via tail-risk weighting; high suppression of probabilistic trade-off framing; waste disposal becomes constraint rather than engineering problem"
+      },
+      {
+        "reading_id": "expected_value_dominant",
+        "commitment": "Annual expected costs and climate benefits determine acceptability; rare events weighted by probability × consequence product",
+        "authority_grounding": "Technocratic expertise; PSA methodology; utilitarian optimization",
+        "sibling_readings": [
+          "catastrophic_tail_dominant",
+          "comparative_risk_dominant"
+        ],
+        "expected_structural_delta": "Nuclear exits victim set when expected value favorable vs alternatives; low suppression of tail-risk framing; waste disposal becomes solvable engineering challenge"
+      },
+      {
+        "reading_id": "comparative_risk_dominant",
+        "commitment": "Nuclear risk acceptable only relative to competing energy risks (coal emissions, climate catastrophe); no absolute threshold",
+        "authority_grounding": "Climate science consensus; comparative harm reduction",
+        "sibling_readings": [
+          "catastrophic_tail_dominant",
+          "expected_value_dominant"
+        ],
+        "expected_structural_delta": "Nuclear acceptability contingent on fossil fuel alternative; victim set includes climate-vulnerable populations; temporal urgency overrides intergenerational waste concern"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "catastrophic_tail_dominant",
+        "reading_b": "expected_value_dominant",
+        "basis": "Catastrophic-tail reading holds that irreversibility categorically dominates probability-weighted optimization; expected-value reading holds that all risks reduce to probability × consequence products. No single coherent framework weights both irreversibility as categorical constraint AND treats it as one factor in expected-value calculation."
+      },
+      {
+        "reading_a": "catastrophic_tail_dominant",
+        "reading_b": "comparative_risk_dominant",
+        "basis": "Catastrophic-tail reading holds that intergenerational burden from waste creates absolute prohibition regardless of alternatives; comparative-risk reading holds that no energy risk is evaluable in isolation from competing risks. No single framework treats waste as absolute constraint AND as relative to climate catastrophe."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "catastrophic_tail_dominant",
+      "human_readable": "Catastrophic-Tail-Dominant Reading (Irreversibility Primacy)",
+      "structural_delta": "Low-probability high-consequence events dominate risk calculus via irreversibility weighting",
+      "primary_observable": "Policy outcomes: waste disposal veto power, liability caps, evacuation zone permanence",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "future_generations",
+      "victim": "present_energy_consumers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest ε; captures anti-nuclear structural position"
+    },
+    {
+      "claim_id": "expected_value_dominant",
+      "human_readable": "Expected-Value-Dominant Reading (Probabilistic Optimization)",
+      "structural_delta": "Annual expected costs and climate benefits determine acceptability via probability × consequence weighting",
+      "primary_observable": "PSA methodology adoption, cost-benefit analysis in regulatory decisions, climate urgency framing",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "climate_mitigation_advocates",
+      "victim": "tail_risk_bearers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; pro-nuclear structural position; different beneficiary/victim structure"
+    },
+    {
+      "claim_id": "comparative_risk_dominant",
+      "human_readable": "Comparative-Risk-Dominant Reading (Relative Harm Reduction)",
+      "structural_delta": "Nuclear risk acceptable only relative to competing energy risks; no absolute threshold",
+      "primary_observable": "Climate policy integration, fossil fuel phase-out timelines, energy portfolio optimization",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "climate_vulnerable_populations",
+      "victim": "nuclear_accident_risk_bearers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; captures climate-nuclear trade-off structure; different temporal framing"
+    },
+    {
+      "claim_id": "psa_underestimation_mountain",
+      "human_readable": "PSA Systematic Underestimation (Cascade Blindness)",
+      "structural_delta": "Probabilistic Safety Assessment systematically underestimates cascade effects and rare events",
+      "primary_observable": "Historical accident rate vs PSA predictions; Fukushima/Chernobyl as PSA failures",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "expected_value_dominant"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream to expected-value reading but captured within that reading's constraint story as methodological limitation"
+    },
+    {
+      "claim_id": "asymmetric_proof_burden",
+      "human_readable": "Asymmetric Burden of Proof (One Accident Proves Danger)",
+      "structural_delta": "One accident demonstrates riskiness; decades of safety prove nothing due to low-probability nature",
+      "primary_observable": "Public opinion shifts post-accident; regulatory stringency ratchet effect",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophic_tail_dominant"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural feature of low-probability events; captured within catastrophic-tail reading as epistemic asymmetry"
+    },
+    {
+      "claim_id": "demographic_risk_tolerance_gap",
+      "human_readable": "Demographic Risk Tolerance Gap (Affluent White Male Overrepresentation)",
+      "structural_delta": "Pro-nuclear position disproportionately held by affluent educated white males; risk-bearing vs risk-benefit asymmetry",
+      "primary_observable": "Survey data on nuclear support by demographic; spatial distribution of plants vs beneficiaries",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "affluent_white_males",
+      "victim": "proximate_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important distributional axis but lower centrality than three selected readings; omega material on who bears risk vs who decides"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "catastrophic_tail_dominant",
+      "kernel_id": "acceptable_risk_for_energy",
+      "reading_id": "catastrophic_tail_dominant"
+    },
+    {
+      "claim_id": "expected_value_dominant",
+      "kernel_id": "acceptable_risk_for_energy",
+      "reading_id": "expected_value_dominant"
+    },
+    {
+      "claim_id": "comparative_risk_dominant",
+      "kernel_id": "acceptable_risk_for_energy",
+      "reading_id": "comparative_risk_dominant"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "psa_underestimation_mountain",
+      "structural_delta": "PSA systematically underestimates cascade effects and rare events",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream to expected-value reading but captured within that reading's constraint story as methodological limitation; would be redundant as separate axis"
+    },
+    {
+      "claim_id": "asymmetric_proof_burden",
+      "structural_delta": "One accident demonstrates riskiness; decades of safety prove nothing",
+      "hypothesis": "rope",
+      "deferral_reason": "Structural feature of low-probability events; captured within catastrophic-tail reading as epistemic asymmetry rather than independent axis"
+    },
+    {
+      "claim_id": "demographic_risk_tolerance_gap",
+      "structural_delta": "Pro-nuclear position disproportionately held by affluent educated white males",
+      "hypothesis": "snare",
+      "deferral_reason": "Important distributional question but lower centrality than three selected readings; omega material on who bears risk vs who decides acceptability"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_axiom_coexistence",
+      "description": "Can catastrophic-tail and expected-value readings coexist in policy (licensed plurality) or does one reading's adoption require suppressing the other? Current regulatory frameworks attempt hybrid (PSA + precautionary margins) but axiom contradiction suggests this is unstable.",
+      "source": "Axiom contradiction declaration between readings"
+    },
+    {
+      "id": "omega_demographic_extraction",
+      "description": "Is the affluent-white-male overrepresentation in pro-nuclear position evidence of a Snare (those who decide bear less risk than those affected)? Deferred axis demographic_risk_tolerance_gap warrants independent analysis if spatial/demographic risk distribution is structurally central.",
+      "source": "Deferred axis demographic_risk_tolerance_gap + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_intergenerational_discount",
+      "description": "How do the three readings weight present vs future generations? Catastrophic-tail privileges future (waste burden), expected-value discounts future (climate urgency), comparative-risk treats as competing futures. No reading explicitly addresses intergenerational discount rate as independent variable.",
+      "source": "Absence Inventory: explicit framework for weighting intergenerational vs present-generation harm"
+    },
+    {
+      "id": "omega_psa_mountain_validity",
+      "description": "Is PSA underestimation a true Mountain (epistemic limits of modeling complex systems) or a Piton (correctable methodological choice)? If Mountain, expected-value reading's authority grounding collapses. If Piton, regulatory capture becomes the axis.",
+      "source": "Deferred axis psa_underestimation_mountain + F03 (Hasty Generalization) concern"
+    },
+    {
+      "id": "omega_competing_existential_risks",
+      "description": "Comparative-risk reading assumes climate catastrophe and nuclear accident are commensurable risks. Are they? Different temporal profiles (gradual warming vs sudden meltdown), different reversibility (emissions cuts vs contamination), different victim sets. Absence of adjudication mechanism between existential risks.",
+      "source": "Absence Inventory: mechanism for adjudicating between competing existential risks"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: psa_underestimation_mountain classified as mountain (epistemic limits of complex system modeling) but could be piton (correctable methodological choice or regulatory capture). Generated omega_psa_mountain_validity to bound this uncertainty. If piton, expected-value reading's authority grounding shifts from technocratic expertise to institutional capture."
+  },
+  "_seed_id": "nuclear_power_risk"
+}

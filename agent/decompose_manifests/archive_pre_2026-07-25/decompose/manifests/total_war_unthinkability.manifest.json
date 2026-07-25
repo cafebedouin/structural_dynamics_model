@@ -1,0 +1,242 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Relations Theory / Strategic Studies / Commitment System Analysis",
+  "family_id": "total_war_disappearance_post1945",
+  "topic_summary": "Analysis of the post-1945 disappearance of 'winnable great-power total war' from the space of thinkable strategic options. The kernel contest asks whether this reading merely dropped in accessibility (still reachable but fringe) or underwent contraction (removed from the reachable space entirely). Tests whether commitment system kernel structure can represent a reading becoming unreachable.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Great powers (U.S., USSR/Russia, China, nuclear-armed states)",
+      "Total war (Clausewitzian unlimited mobilization for decisive victory)",
+      "Nuclear weapons (strategic arsenals with assured destruction capacity)",
+      "International system post-1945 (UN Charter, Geneva Conventions, bipolar/multipolar structure)",
+      "Strategic planning communities (defense intellectuals, war colleges, policy elites)",
+      "Historical precedent (WWI, WWII as templates for total mobilization)"
+    ],
+    "key_tensions": [
+      "Strategic winnability vs existential risk (any total war scenario terminates in mutual annihilation)",
+      "Reachability as social fact vs structural constraint (is unthinkability a social consensus or a physical impossibility)"
+    ],
+    "key_claims": [
+      "Total war among great powers was thinkable and pursued 1914-1945",
+      "Post-1945, 'winnable total war' disappeared from strategic discourse and planning",
+      "Nuclear weapons created structural barrier to decisive victory",
+      "Disappearance represents either reading-drop (still possible but socially abandoned) or contraction (structurally unreachable)"
+    ],
+    "key_mechanisms": [
+      "Nuclear deterrence (mutual assured destruction eliminates victory condition)",
+      "Norm cascade (total war stigmatization through UN Charter Article 2(4), Geneva Protocol III)",
+      "Strategic culture shift (war colleges teach limited war, not total war doctrine)"
+    ],
+    "key_absences": [
+      "No examination of whether non-nuclear great powers (pre-2000 China, contemporary India) retained total war optionality",
+      "No account of how hypersonic delivery systems or cyberwarfare might reopen total war possibility space"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The strategic winnability of great-power total war — the shared substrate about which contending positions read the post-1945 transformation differently",
+    "authority_description": "Strategic studies community, defense policy elites, international law interpreters; legitimacy grounded in technical expertise and institutional position",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "total_war_winnability_post1945",
+    "readings": [
+      {
+        "reading_id": "structural_contraction_reading",
+        "commitment": "Nuclear weapons physically removed total war from the reachable space — not socially abandoned but structurally impossible",
+        "authority_grounding": "Nuclear physics, game theory (Schelling, Kahn), strategic studies orthodoxy",
+        "sibling_readings": [
+          "normative_reading_drop",
+          "strategic_culture_drift"
+        ],
+        "expected_structural_delta": "Mountain-class constraint (physical impossibility); no beneficiary extraction structure; victim set is hypothetical (populations in counterfactual nuclear exchange)"
+      },
+      {
+        "reading_id": "normative_reading_drop",
+        "commitment": "Total war remains physically possible but became normatively illegitimate through Article 2(4) and humanitarian law development",
+        "authority_grounding": "International law, just war tradition, UN Charter interpretation",
+        "sibling_readings": [
+          "structural_contraction_reading",
+          "strategic_culture_drift"
+        ],
+        "expected_structural_delta": "Rope-class constraint (coordination problem solved via treaty); beneficiary = global civilian populations; victim = revisionist powers constrained by norms"
+      },
+      {
+        "reading_id": "strategic_culture_drift",
+        "commitment": "Total war remains reachable but dropped from elite discourse via ideational shift in strategic culture",
+        "authority_grounding": "Constructivist IR theory, sociology of military institutions, discourse analysis",
+        "sibling_readings": [
+          "structural_contraction_reading",
+          "normative_reading_drop"
+        ],
+        "expected_structural_delta": "Piton-class constraint (atrophied capacity via institutional forgetting); beneficiary = defense intellectuals invested in limited war frameworks; victim = strategic flexibility"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "structural_contraction_reading",
+        "reading_b": "normative_reading_drop",
+        "basis": "Structural contraction asserts physical impossibility (no coherent victory condition exists); normative drop asserts physical possibility but moral prohibition. A framework cannot hold both 'X is physically impossible' and 'X is possible but prohibited' simultaneously for the same X."
+      },
+      {
+        "reading_a": "structural_contraction_reading",
+        "reading_b": "strategic_culture_drift",
+        "basis": "Structural contraction asserts the constraint is external (nuclear physics removes winnability); strategic culture drift asserts the constraint is internal (elite choice to stop thinking about it). A framework cannot hold both 'unreachable due to external structure' and 'unreachable due to internal forgetting' simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "structural_contraction_reading",
+      "human_readable": "Structural Contraction (Nuclear Physics Closes Possibility Space)",
+      "structural_delta": "Nuclear weapons physically eliminate the victory condition in great-power total war via mutual assured destruction",
+      "primary_observable": "Nuclear arsenal parity metrics; game-theoretic models showing no Nash equilibrium with positive-sum outcome",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with highest structural distinctiveness; mountain-class hypothesis grounds physical constraint claim"
+    },
+    {
+      "claim_id": "normative_reading_drop",
+      "human_readable": "Normative Reading Drop (UN Charter & Humanitarian Law Stigmatization)",
+      "structural_delta": "Total war remains physically possible but became normatively illegitimate through post-1945 international legal architecture",
+      "primary_observable": "Article 2(4) compliance patterns; war crimes tribunals; Geneva Convention ratification; just war discourse shift",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "global_civilian_populations",
+      "victim": "revisionist_state_actors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Fundamentally different constraint type (coordination vs physics); distinct observable and beneficiary structure"
+    },
+    {
+      "claim_id": "strategic_culture_drift",
+      "human_readable": "Strategic Culture Drift (Institutional Forgetting & Discourse Shift)",
+      "structural_delta": "Total war dropped from elite strategic discourse via ideational shift in defense intellectual communities",
+      "primary_observable": "War college curriculum analysis; defense journal article coding (1945-present); doctrinal manual content",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "defense_intellectual_class",
+      "victim": "strategic_flexibility",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third distinct constraint type (atrophied capacity); surfaces beneficiary extraction structure absent from other readings"
+    },
+    {
+      "claim_id": "economic_interdependence_lock",
+      "human_readable": "Economic Interdependence Lock (Trade Networks as Total War Barrier)",
+      "structural_delta": "Globalized supply chains and financial integration make total mobilization economically suicidal independent of nuclear weapons",
+      "primary_observable": "Cross-border trade as % GDP for great powers; financial market integration indices; supply chain fragility metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "multinational_capital",
+      "victim": "autarkic_industrialization",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Liberal IR hypothesis distinct from kernel readings but lower structural priority than selected three; omega material for essay"
+    },
+    {
+      "claim_id": "hypersonic_reopening",
+      "human_readable": "Hypersonic Reopening (Delivery Systems Restore First-Strike Viability)",
+      "structural_delta": "Hypersonic weapons with sub-10-minute response windows may reopen total war possibility by defeating second-strike capability",
+      "primary_observable": "Hypersonic weapon deployment timelines; C3I response time studies; strategic stability analyses",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Speculative scaffold dependent on technologies not yet operationalized; directly challenges structural_contraction_reading but insufficient grounding for generation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "structural_contraction_reading",
+      "kernel_id": "total_war_winnability_post1945",
+      "reading_id": "structural_contraction_reading"
+    },
+    {
+      "claim_id": "normative_reading_drop",
+      "kernel_id": "total_war_winnability_post1945",
+      "reading_id": "normative_reading_drop"
+    },
+    {
+      "claim_id": "strategic_culture_drift",
+      "kernel_id": "total_war_winnability_post1945",
+      "reading_id": "strategic_culture_drift"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "economic_interdependence_lock",
+      "structural_delta": "Globalized trade/finance makes total mobilization economically suicidal",
+      "hypothesis": "rope",
+      "deferral_reason": "Liberal IR complement to kernel readings but lower structural centrality; captured in omega_liberal_addition"
+    },
+    {
+      "claim_id": "hypersonic_reopening",
+      "structural_delta": "Hypersonic weapons may restore first-strike viability and reopen total war space",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Speculative; directly challenges structural_contraction_reading but technologies not operationalized; omega_contraction_reversal"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_non_nuclear_powers",
+      "description": "Does total war remain reachable for non-nuclear dyads (India-Pakistan pre-nuclearization, China pre-2000)? If so, 'contraction' is great-power-specific, not universal, and the kernel must be scoped to nuclear-armed states only.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_contraction_reversal",
+      "description": "If hypersonic weapons or cyberwarfare restore first-strike viability, does structural contraction reverse? Tests whether 'contraction' is permanent or conditional on technology state. Deferred axis hypersonic_reopening.",
+      "source": "Deferred axis hypersonic_reopening"
+    },
+    {
+      "id": "omega_liberal_addition",
+      "description": "Does economic interdependence add an independent barrier (liberal IR hypothesis) or merely reinforce normative_reading_drop? If independent, total war became triply blocked (physics, norms, economics). Deferred axis economic_interdependence_lock.",
+      "source": "Deferred axis economic_interdependence_lock"
+    },
+    {
+      "id": "omega_library_test",
+      "description": "Library verdict context states M-set has site-expansion but no contraction cell. If structural_contraction_reading is validated, this would be the first kernel contraction case in the commitment system library. If invalidated, 'contraction' is not a real phenomenon and all disappearances reduce to reading-drop.",
+      "source": "User kernel contest framing + §1.3 commitment system recognition"
+    },
+    {
+      "id": "omega_beneficiary_structure",
+      "description": "Strategic_culture_drift identifies defense intellectuals as beneficiaries of total war's disappearance (via limited war doctrine monopoly). If validated, total war's unthinkability is partially a Snare, not merely a Mountain or Rope. Tests whether 'unthinkability' serves extraction.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: structural_contraction_reading classified as Mountain but hypersonic weapons development may reclassify it as historically contingent Piton (technology-dependent barrier, not permanent physics). Generated omega_contraction_reversal to bound this uncertainty. Additionally, all three readings rest on contested authority groundings (nuclear strategy orthodoxy, international law, constructivist IR) — no single framework commands universal assent."
+  },
+  "_seed_id": "total_war_unthinkability"
+}

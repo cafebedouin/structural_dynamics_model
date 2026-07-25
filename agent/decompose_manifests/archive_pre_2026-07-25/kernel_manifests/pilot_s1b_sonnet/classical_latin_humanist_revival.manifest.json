@@ -1,0 +1,217 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Philology / Intellectual History",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist reconstruction of Classical Latin, examining the collision between medieval Latin as a living drifted vernacular and the humanist project to recover Classical forms from texts. The central question is whether the reconstructed Classical form was reachable through continuous evolution from medieval Latin or constituted a separate kernel reoccupied from symbolic sources.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin (living drifted vernacular, 500-1400 CE)",
+      "Classical Latin (Ciceronian/Augustan standard, 1st c. BCE - 1st c. CE)",
+      "Humanist philologists (Petrarch, Valla, Erasmus - textual reconstructors)",
+      "Medieval scholastics (users of living Latin tradition)",
+      "Printed texts (Aldine editions, standardization mechanism)"
+    ],
+    "key_tensions": [
+      "Living practice vs textual authority (medieval users vs humanist reconstructors)",
+      "Continuity vs rupture (evolutionary drift vs archaeological recovery)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuity_reading",
+      "human_readable": "Continuity Reading (Recoverable Evolution)",
+      "structural_delta": "Classical Latin reachable through guided correction of medieval drift",
+      "primary_observable": "Grammatical/lexical distance between medieval and Classical forms; success rate of medieval scholars adopting Classical norms",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; rope hypothesis (coordination toward shared standard)"
+    },
+    {
+      "claim_id": "rupture_reading",
+      "human_readable": "Rupture Reading (Archaeological Reoccupation)",
+      "structural_delta": "Classical Latin unreachable from medieval drift; humanists reoccupied a dead kernel from textual symbols",
+      "primary_observable": "Presence of Classical features absent from any medieval chain; reliance on textual authority vs living usage",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "humanist_philologists",
+      "victim": "medieval_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; tangled_rope hypothesis (authority shift via textual control)"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading (Selective Reconstruction)",
+      "structural_delta": "Humanists reconstructed some features archaeologically while retaining medieval substrate for others",
+      "primary_observable": "Stratification analysis of humanist Latin texts (Classical vs medieval features by domain)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; scaffold hypothesis (pragmatic synthesis)"
+    },
+    {
+      "claim_id": "print_standardization",
+      "human_readable": "Print Standardization (Technological Lock-In)",
+      "structural_delta": "Printing technology fixed one Latin form as authoritative regardless of continuity question",
+      "primary_observable": "Aldine edition circulation; adoption rates of printed vs manuscript norms",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "continuity_reading",
+        "rupture_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent axis; mountain providing technological constraint affecting all readings"
+    },
+    {
+      "claim_id": "pedagogical_authority_shift",
+      "human_readable": "Pedagogical Authority Shift (Textual vs Oral Transmission)",
+      "structural_delta": "Shift from oral/scholastic transmission to textual/philological authority as legitimacy source",
+      "primary_observable": "Curriculum changes in universities; citation patterns (living masters vs ancient texts)",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "humanist_philologists",
+      "victim": "scholastic_masters",
+      "downstream_of": [],
+      "feeds_into": [
+        "rupture_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within rupture_reading's authority structure; not independently measurable"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "rupture_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "rupture_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "hybrid_reading"
+    },
+    "print_standardization"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pedagogical_authority_shift",
+      "structural_delta": "Shift from oral/scholastic to textual/philological authority",
+      "hypothesis": "snare",
+      "deferral_reason": "Authority structure already captured in rupture_reading; not independently measurable from textual vs living usage observable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_vernacular_feedback",
+      "description": "Did humanist Latin reconstruction influence Romance vernacular standardization (Italian, French)? If so, the rupture reading may have created a feedback loop where 'dead' Latin shaped living languages.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_greek_parallel",
+      "description": "Does the Byzantine Greek preservation model (continuous living tradition) vs Renaissance Greek recovery (from manuscripts) provide a control case? Different outcomes would validate or challenge the continuity/rupture distinction.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_pronunciation_divergence",
+      "description": "Humanists reconstructed grammar/lexicon but retained medieval pronunciation (no living speakers to correct against). Is this a hybrid reading artifact or evidence that rupture was incomplete?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do continuity and hybrid readings collapse into one? If humanists always retained some medieval substrate, 'pure' continuity may be a null set, leaving only rupture vs hybrid as live positions.",
+      "source": "§3 Pairwise Independence Testing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings pass independence test (different observables: evolutionary distance vs textual authority reliance vs domain stratification). Print standardization is genuinely independent (technological constraint orthogonal to continuity question). Pedagogical authority shift deferred as redundant with rupture_reading's authority structure."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment to 'correct Latin' as a normative standard for learned discourse",
+    "authority_description": "Medieval: living scholastic tradition and magisterial teaching. Humanist: textual fidelity to Classical authors (Cicero, Virgil) as recovered through philology",
+    "drift_status": "absent",
+    "candidate_pattern": "D1 (Kernel Break)",
+    "is_contested_kernel": true,
+    "kernel_id": "correct_latin",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Correct Latin is the Classical form reachable through guided correction of medieval drift",
+        "authority_grounding": "Evolutionary linguistics; medieval Latin as degraded but recoverable Classical",
+        "sibling_readings": [
+          "rupture_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Low epsilon (rope): coordination problem. Medieval users could adopt Classical norms through education. No victim set (mutual benefit from shared standard). Beneficiary: scholarly community as a whole."
+      },
+      {
+        "reading_id": "rupture_reading",
+        "commitment": "Correct Latin is the Classical form unreachable from medieval drift; humanists reoccupied a dead kernel from textual symbols",
+        "authority_grounding": "Philological archaeology; textual authority supersedes living practice",
+        "sibling_readings": [
+          "continuity_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon (tangled_rope): authority capture. Humanists delegitimized medieval practitioners by claiming exclusive access to 'true' Latin via texts. Beneficiary: humanist philologists. Victim: scholastic masters whose living tradition was declared corrupt."
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Correct Latin is selectively reconstructed: Classical for prestige domains (rhetoric, poetry), medieval substrate retained for technical/administrative use",
+        "authority_grounding": "Pragmatic synthesis; domain-specific authority (textual for eloquence, traditional for function)",
+        "sibling_readings": [
+          "continuity_reading",
+          "rupture_reading"
+        ],
+        "expected_structural_delta": "Low epsilon (scaffold): pragmatic accommodation. Humanists reconstructed what was symbolically valuable while retaining functional medieval forms. No clear victim (coexistence of standards by domain)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "rupture_reading",
+        "basis": "Continuity assumes medieval Latin is a degraded but continuous evolution of Classical (same kernel, drifted). Rupture assumes medieval Latin is a separate linguistic system (different kernel). No single framework can hold both: either the medieval form is reachable from Classical through correction (continuity) or it is not (rupture). These are mutually exclusive claims about linguistic identity."
+      }
+    ]
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

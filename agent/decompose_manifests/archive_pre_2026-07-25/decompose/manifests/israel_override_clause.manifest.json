@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Comparative Constitutionalism / Judicial Review Theory",
+  "family_id": "basic_law_interpretive_authority_2026",
+  "topic_summary": "Analysis of the Israeli constitutional framework's contested interpretive authority: whether the Supreme Court holds ultimate authority to invalidate Knesset legislation (judicial supremacy reading) or whether the Knesset retains sovereign power to override judicial review via simple majority (parliamentary sovereignty reading). The disagreement is foundational—not about a single constraint's desirability, but about which constraint exists to adjudicate legitimate state action.",
+  "extraction_summary": {
+    "entity_count": 4,
+    "claim_count": 3,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Israeli Supreme Court (judicial body claiming constitutional review authority)",
+      "Knesset (unicameral legislature; 120 members)",
+      "Basic Laws (quasi-constitutional framework; no formal constitution)",
+      "Override Clause mechanism (proposed/enacted legislative power to nullify judicial review)"
+    ],
+    "key_tensions": [
+      "Judicial interpretive finality vs legislative sovereign revision (Supreme Court vs Knesset)"
+    ],
+    "key_mechanisms": [
+      "Judicial review power (Supreme Court invalidates legislation via Basic Law interpretation)",
+      "Override mechanism (Knesset simple-majority reversal of judicial invalidation)"
+    ],
+    "key_absences": [
+      "Formal constitutional amendment procedure (Basic Laws amendable by simple majority)",
+      "External ratification body or supermajority requirement for constitutional change"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Basic Laws as the shared substrate defining legitimate state action, but contested as to which institution holds ultimate interpretive authority over their meaning and application",
+    "authority_description": "Disputed between judicial body (Supreme Court claiming Marbury-style finality) and legislative body (Knesset claiming Westminster-style sovereignty)",
+    "drift_status": "absent",
+    "candidate_pattern": "Competing Monopolies (Pattern 2)",
+    "is_contested_kernel": true,
+    "kernel_id": "basic_law_interpretive_boundary",
+    "readings": [
+      {
+        "reading_id": "judicial_supremacy_reading",
+        "commitment": "The Basic Laws constitute a higher-order legal framework that the Supreme Court must interpret and enforce, with judicial invalidation of contradictory legislation binding on the Knesset",
+        "authority_grounding": "Judicial expertise in constitutional interpretation; separation of powers doctrine; individual rights protection against majoritarian override",
+        "sibling_readings": [
+          "parliamentary_sovereignty_reading",
+          "balanced_contestation_reading"
+        ],
+        "expected_structural_delta": "Supreme Court enters system as constraint-enforcer; Knesset legislation subject to judicial nullification; rights-claimants gain veto via litigation; high ε for legislation threatening court-protected liberties"
+      },
+      {
+        "reading_id": "parliamentary_sovereignty_reading",
+        "commitment": "The Knesset as elected sovereign holds ultimate authority to interpret and amend Basic Laws via simple majority, including power to override judicial review",
+        "authority_grounding": "Democratic mandate; Westminster parliamentary tradition; absence of formal constitutional entrenchment",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "balanced_contestation_reading"
+        ],
+        "expected_structural_delta": "Knesset remains unconstrained sovereign; judiciary advisory only; no external veto on legislative will; near-zero ε for majoritarian policy except international treaty obligations"
+      },
+      {
+        "reading_id": "balanced_contestation_reading",
+        "commitment": "Both institutions hold legitimate but bounded authority: courts interpret within their jurisdictional domain, legislature retains ultimate sovereign power but constrained by international obligations and norms of judicial independence",
+        "authority_grounding": "Institutional equilibrium; comparative constitutional practice; recognition of both democratic and rights-protective values",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "parliamentary_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Contested boundary produces institutional dialogue; neither institution fully dominant; ε varies by policy domain; court-executive-legislature triadic negotiation over constraint enforcement"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "judicial_supremacy_reading",
+        "reading_b": "parliamentary_sovereignty_reading",
+        "basis": "Judicial supremacy requires that court interpretation is binding and cannot be legislatively overridden—accepting this axiom requires rejecting that the Knesset holds ultimate sovereign authority. No single coherent framework can hold both 'courts have final say' and 'legislature has final say' as simultaneously true foundational principles."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "human_readable": "Judicial Supremacy Reading (Court as Constitutional Guardian)",
+      "structural_delta": "Supreme Court holds binding authority to interpret Basic Laws and invalidate contradictory legislation, with judicial review as final institutional checkpoint",
+      "primary_observable": "Frequency and durability of judicial invalidations; legislative compliance rate with court rulings; presence/absence of override mechanism usage",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rights_claimants_civil_society_judicial_institution",
+      "victim": "legislative_majority_executive_discretion",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three kernel readings; highest institutional specificity; establishes court-as-enforcer structural baseline"
+    },
+    {
+      "claim_id": "parliamentary_sovereignty_reading",
+      "human_readable": "Parliamentary Sovereignty Reading (Knesset as Unconstrained Sovereign)",
+      "structural_delta": "Knesset retains ultimate authority to interpret, amend, or override Basic Law constraints via simple majority, with judiciary in advisory role only",
+      "primary_observable": "Override clause enactment and usage rates; legislative reversal of judicial rulings; formal constitutional amendment frequency",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "legislative_majority_executive_coalition",
+      "victim": "judicial_independence_minority_rights_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiomatically contradictory to reading 1; different ε structure (v_low vs mod); captures Westminster sovereignty tradition"
+    },
+    {
+      "claim_id": "balanced_contestation_reading",
+      "human_readable": "Balanced Contestation Reading (Institutional Dialogue Model)",
+      "structural_delta": "Neither court nor legislature holds absolute finality; constraint authority contested and negotiated across institutional boundaries with both formal and informal equilibrium mechanisms",
+      "primary_observable": "Frequency of court-legislature negotiated settlements; existence of self-restraint norms; international treaty constraint invocation rates",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "institutional_stability_international_reputation",
+      "victim": "clarity_of_legal_hierarchy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; scaffold rather than rope/tangled_rope; represents institutional equilibrium framing; captures comparative constitutional practice"
+    },
+    {
+      "claim_id": "international_treaty_constraint",
+      "human_readable": "International Treaty Obligation Constraint",
+      "structural_delta": "External treaty commitments (ICCPR, ECHR equivalent, ICJ jurisdiction) function as floor constraint on both domestic institutions",
+      "primary_observable": "Treaty violation allegations; international court rulings; diplomatic consequences of domestic constitutional shifts",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "judicial_supremacy_reading",
+        "balanced_contestation_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: external constraint mountain; feeds into readings but not itself a reading of the kernel; lower priority than three core readings"
+    },
+    {
+      "claim_id": "executive_discretion_extraction",
+      "human_readable": "Executive Discretion Extraction (Security-State Bypass)",
+      "structural_delta": "Security/emergency powers enable executive to bypass both judicial review and legislative constraint during defined crisis periods",
+      "primary_observable": "Emergency power invocation frequency; judicial deference rates during security operations; legislative override of executive emergency actions",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "executive_security_apparatus",
+      "victim": "judicial_review_legislative_oversight_individual_liberty",
+      "downstream_of": [
+        "parliamentary_sovereignty_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream snare; structurally subordinate to parliamentary sovereignty reading; tangential to kernel contest itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "kernel_id": "basic_law_interpretive_boundary",
+      "reading_id": "judicial_supremacy_reading"
+    },
+    {
+      "claim_id": "parliamentary_sovereignty_reading",
+      "kernel_id": "basic_law_interpretive_boundary",
+      "reading_id": "parliamentary_sovereignty_reading"
+    },
+    {
+      "claim_id": "balanced_contestation_reading",
+      "kernel_id": "basic_law_interpretive_boundary",
+      "reading_id": "balanced_contestation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "international_treaty_constraint",
+      "structural_delta": "External treaty obligations as floor constraint on both institutions",
+      "hypothesis": "mountain",
+      "deferral_reason": "External constraint feeds into readings but not itself a kernel reading; lower structural priority than three core interpretive frameworks"
+    },
+    {
+      "claim_id": "executive_discretion_extraction",
+      "structural_delta": "Security/emergency powers bypass both judicial and legislative constraint",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream snare subordinate to parliamentary sovereignty reading; tangential to core kernel contest; captured indirectly via reading 2's ε structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_entrenchment_mechanism",
+      "description": "Does absence of formal entrenchment (supermajority amendment requirement) mean Basic Laws are ordinary legislation, collapsing the kernel contest? Or does judicial practice create informal entrenchment?",
+      "source": "Absence Inventory (§1.1); critical to whether readings 1 and 2 genuinely instantiate different constraints"
+    },
+    {
+      "id": "omega_override_usage_threshold",
+      "description": "At what frequency of override clause usage does parliamentary sovereignty reading become empirically dominant, collapsing judicial supremacy reading into fiction? Is there a tipping point?",
+      "source": "Primary observable ambiguity; reading 2 selection"
+    },
+    {
+      "id": "omega_international_enforcement",
+      "description": "Do international treaty obligations (deferred mountain) constrain both readings equally, or does one reading face higher external ε due to ICJ/diplomatic pressure?",
+      "source": "Deferred axis international_treaty_constraint; feeds into readings 1 and 3 but measurement unclear"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do readings 1 and 2 remain distinct if override mechanism exists but is never used? Formal vs functional constraint distinction may collapse readings into one.",
+      "source": "Kernel/reading independence test (§1.3-K); potential Type A overlap"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings pass axiom contradiction test (readings 1 and 2 mutually exclusive; reading 3 attempts synthesis). Entrenchment mechanism absence flagged as omega rather than blocking concern. Override usage threshold creates measurement ambiguity (omega_override_usage_threshold) but does not invalidate readings as structurally distinct."
+  },
+  "_seed_id": "israel_override_clause"
+}

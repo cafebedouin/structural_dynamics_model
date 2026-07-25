@@ -1,0 +1,232 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Historical Ethics / Commitment Systems",
+  "family_id": "spartan_exposure_personhood_2026",
+  "topic_summary": "Analysis of Spartan infant exposure as a historical instantiation of a personhood-boundary kernel, examining whether the ancient practice represents a reading now structurally unreachable from modern moral frameworks or a reading that has been suppressed/abandoned. Tests whether moral possibility-space contraction is path-dependent naturalization or genuine constraint discovery.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Spartan state (authority claiming right to determine infant viability)",
+      "Gerousia (council of elders administering exposure decisions)",
+      "Exposed infants (subjects of moral-standing determination)",
+      "Modern human rights framework (contemporary authority claiming universal infant personhood)",
+      "Hillside exposure site (Apothetae, physical mechanism of exclusion)"
+    ],
+    "key_tensions": [
+      "State eugenic authority vs parental autonomy (Spartan practice vs modern family rights)",
+      "Conditional personhood vs inherent personhood (exposure-permitting vs exposure-prohibiting readings)",
+      "Historical moral diversity vs moral progress narrative (relativist vs universalist interpretations)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The personhood-boundary kernel: the threshold at which a human organism acquires moral standing sufficient to prohibit deliberate killing",
+    "authority_description": "Competing interpretive authorities: ancient civic-eugenic frameworks grounded in polis survival vs modern rights frameworks grounded in inherent human dignity",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Capture (modern framework denies legitimacy of alternative readings)",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "civic_eugenic_reading",
+        "commitment": "Personhood contingent on civic viability assessment; state authority to exclude defective infants from moral community",
+        "authority_grounding": "Polis survival necessity; collective welfare trumps individual infant claims",
+        "sibling_readings": [
+          "birth_threshold_reading",
+          "inherent_dignity_reading"
+        ],
+        "expected_structural_delta": "Infants enter victim set only after passing state viability test; high beneficiary concentration in warrior class; exposure mechanism institutionalized as legitimate state function"
+      },
+      {
+        "reading_id": "birth_threshold_reading",
+        "commitment": "Personhood begins at live birth; parental authority over infant fate but not state eugenic authority",
+        "authority_grounding": "Roman patria potestas tradition; family sovereignty over household members",
+        "sibling_readings": [
+          "civic_eugenic_reading",
+          "inherent_dignity_reading"
+        ],
+        "expected_structural_delta": "Infants enter victim set at birth but parents retain exposure authority; moderate beneficiary concentration in paterfamilias; exposure privatized rather than state-administered"
+      },
+      {
+        "reading_id": "inherent_dignity_reading",
+        "commitment": "Personhood inherent at biological humanity threshold (conception/viability/birth); no legitimate authority to exclude",
+        "authority_grounding": "Universal human rights framework; Kantian dignity; religious imago dei traditions",
+        "sibling_readings": [
+          "civic_eugenic_reading",
+          "birth_threshold_reading"
+        ],
+        "expected_structural_delta": "All live-born infants in victim set; zero legitimate exposure authority; exposure reclassified as murder; beneficiary diffusion across rights-holders"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "civic_eugenic_reading",
+        "reading_b": "inherent_dignity_reading",
+        "basis": "Civic-eugenic reading holds personhood is contingent on state assessment of civic viability; inherent-dignity reading holds personhood is non-contingent property of human organisms. No framework can simultaneously hold both that personhood is contingent on external assessment AND that it is inherent/non-contingent."
+      },
+      {
+        "reading_a": "birth_threshold_reading",
+        "reading_b": "inherent_dignity_reading",
+        "basis": "Birth-threshold reading grants parental authority to exclude post-birth infants from personhood; inherent-dignity reading denies any legitimate authority to exclude. No framework can simultaneously hold both that parents have legitimate exclusion authority AND that no such authority exists."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "civic_eugenic_reading",
+      "human_readable": "Civic-Eugenic Personhood (State Viability Assessment)",
+      "structural_delta": "Personhood contingent on passing state-administered viability test; exposure institutionalized as legitimate civic function",
+      "primary_observable": "Legal codification of exposure authority; institutional mechanisms (Gerousia inspection, Apothetae site); absence of infanticide prosecution",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "spartan_warrior_class",
+      "victim": "exposed_infants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel reading: represents the historically instantiated Spartan framework; highest structural distinctiveness from modern baseline"
+    },
+    {
+      "claim_id": "birth_threshold_reading",
+      "human_readable": "Birth-Threshold Personhood (Parental Discretion)",
+      "structural_delta": "Personhood begins at birth but parental authority permits exposure; privatized rather than state-administered exclusion",
+      "primary_observable": "Roman patria potestas legal framework; absence of state inspection mechanisms; family-level exposure decisions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "paterfamilias",
+      "victim": "exposed_infants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Kernel reading: intermediate position between civic-eugenic and inherent-dignity; tests whether authority-location (state vs family) is independent axis"
+    },
+    {
+      "claim_id": "inherent_dignity_reading",
+      "human_readable": "Inherent-Dignity Personhood (Universal Rights)",
+      "structural_delta": "Personhood inherent at biological threshold; no legitimate exclusion authority; exposure reclassified as murder",
+      "primary_observable": "Universal Declaration of Human Rights Article 3; infanticide criminalization; absence of legal exposure mechanisms",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Kernel reading: modern baseline framework; necessary for testing path-naturalization vs constraint-discovery question"
+    },
+    {
+      "claim_id": "possibility_space_contraction",
+      "human_readable": "Moral Possibility-Space Contraction (Path-Naturalization vs Discovery)",
+      "structural_delta": "Whether civic-eugenic reading is now structurally unreachable (genuine constraint discovered) or merely suppressed (path-dependent naturalization)",
+      "primary_observable": "Philosophical arguments for/against moral progress; historical contingency of rights expansion; reversibility thought experiments",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "civic_eugenic_reading",
+        "inherent_dignity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-level axis about relationship between readings rather than independent reading; captured in essay synthesis"
+    },
+    {
+      "claim_id": "demographic_necessity_mountain",
+      "human_readable": "Demographic Necessity (Resource Scarcity Constraint)",
+      "structural_delta": "Physical resource constraints making infant survival selective rather than universal",
+      "primary_observable": "Spartan population size; agricultural carrying capacity; infant mortality rates; resource allocation to agoge system",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "civic_eugenic_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: potential upstream mountain but insufficient evidence that resource scarcity necessitated exposure vs merely enabled it; omega material"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "civic_eugenic_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "civic_eugenic_reading"
+    },
+    {
+      "claim_id": "birth_threshold_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "birth_threshold_reading"
+    },
+    {
+      "claim_id": "inherent_dignity_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "inherent_dignity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "possibility_space_contraction",
+      "structural_delta": "Whether civic-eugenic reading is unreachable (discovery) or suppressed (naturalization)",
+      "hypothesis": "rope",
+      "deferral_reason": "Meta-level axis about reading relationships; synthesis question rather than independent constraint; essay-level analysis"
+    },
+    {
+      "claim_id": "demographic_necessity_mountain",
+      "structural_delta": "Resource scarcity as physical constraint on universal infant survival",
+      "hypothesis": "mountain",
+      "deferral_reason": "Insufficient evidence that scarcity necessitated exposure vs enabled it; potential upstream but requires historical demographic data beyond scope; omega variable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_historical_accuracy",
+      "description": "Extent of actual Spartan exposure practice contested among historians. Plutarch's account may be idealized/exaggerated. If practice was rare/mythologized, civic-eugenic reading may be theoretical rather than institutionally realized.",
+      "source": "Extraction phase: absence of primary Spartan sources; reliance on later Greek/Roman accounts"
+    },
+    {
+      "id": "omega_necessity_vs_enablement",
+      "description": "Whether resource scarcity made exposure necessary (mountain) or merely removed constraint against it (removed rope). If mountain, civic-eugenic reading may be contingent on material conditions rather than pure moral framework choice.",
+      "source": "Deferred axis: demographic_necessity_mountain"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Birth-threshold and civic-eugenic readings may collapse if parental discretion and state authority are merely different enforcement mechanisms for same underlying personhood threshold. Independence depends on whether authority-location is structural or incidental.",
+      "source": "§3 Independence Testing: potential Type A overlap between readings"
+    },
+    {
+      "id": "omega_path_naturalization",
+      "description": "Core question: Is inherent-dignity reading a discovered constraint (civic-eugenic reading was always wrong) or path-dependent naturalization (we cannot now reach civic-eugenic reading but it was once genuinely available)? Answer determines whether moral progress is discovery or drift.",
+      "source": "Deferred axis: possibility_space_contraction; founding motivation of analysis"
+    },
+    {
+      "id": "omega_modern_analogues",
+      "description": "Selective abortion, neonatal euthanasia for severe defects, and allocation of neonatal intensive care may instantiate civic-eugenic logic under different framings. If so, reading may not be unreachable but merely re-routed through medical rather than civic authority.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): modern practices not addressed in extraction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: inherent_dignity_reading classified as mountain but may be rope or tangled_rope if rights frameworks are contingent rather than discovered constraints. F34 detected: historical claims about Spartan practice require classical scholarship expertise beyond training data; Plutarch's reliability contested. Generated omegas for both."
+  },
+  "_seed_id": "spartan_infant_exposure"
+}

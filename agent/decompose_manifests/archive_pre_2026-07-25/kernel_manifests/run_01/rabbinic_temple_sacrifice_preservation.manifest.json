@@ -1,0 +1,216 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Halakhic Authority / Commitment Systems",
+  "family_id": "kodashim_preservation_2026",
+  "topic_summary": "Analysis of rabbinic preservation of Temple sacrifice law (Kodashim) through continuous study for ~1,900 years without performance. The kernel is the commitment to Temple sacrifice as a binding obligation. Two readings contest whether study-without-performance constitutes genuine occupation of the commitment or merely symbolic archiving. This is a D1/D4 boundary case: is the commitment functioning (study as legitimate substitute) or absent (study as memorial for a dead practice)?",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Kodashim (Talmudic order on Temple sacrifice law)",
+      "Rabbinic authority structure (post-70 CE interpretive tradition)",
+      "Temple (destroyed 70 CE, physical site of sacrifice performance)",
+      "Study practice (continuous textual engagement without performance)",
+      "Messianic restoration expectation (future performance horizon)"
+    ],
+    "key_tensions": [
+      "Study as occupation vs study as archiving (is the commitment alive or symbolically preserved?)",
+      "Halakhic continuity vs performance impossibility (binding law with no execution pathway)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Temple sacrifice as divinely mandated obligation binding on the Jewish people",
+    "authority_description": "Rabbinic interpretive tradition claiming continuity from Sinaitic revelation through oral law transmission",
+    "drift_status": "partial",
+    "candidate_pattern": "D1_functioning_revision_absent",
+    "is_contested_kernel": true,
+    "kernel_id": "temple_sacrifice_obligation",
+    "readings": [
+      {
+        "reading_id": "study_as_occupation",
+        "commitment": "Study of sacrifice law constitutes legitimate occupation of the obligation in Temple's absence",
+        "authority_grounding": "Rabbinic doctrine that study equals performance when performance is impossible (talmud torah k'neged kulam)",
+        "sibling_readings": [
+          "study_as_archiving",
+          "messianic_suspension"
+        ],
+        "expected_structural_delta": "Low extractiveness — study is the constraint's current form; no victim set (obligation fulfilled through study); authority structure absorbs impossibility of performance without surfacing revision need"
+      },
+      {
+        "reading_id": "study_as_archiving",
+        "commitment": "Study preserves knowledge for future restoration but does not fulfill the obligation",
+        "authority_grounding": "Performance-only interpretation — obligation remains unfulfilled, study is memorial/preparation",
+        "sibling_readings": [
+          "study_as_occupation",
+          "messianic_suspension"
+        ],
+        "expected_structural_delta": "Moderate extractiveness — entire post-Temple period is non-compliance; victim set is the unfulfilled divine command; authority structure maintains binding status of unperformable law"
+      },
+      {
+        "reading_id": "messianic_suspension",
+        "commitment": "Obligation is suspended (not fulfilled, not violated) pending messianic restoration",
+        "authority_grounding": "Eschatological reading — current era is interregnum where obligation neither binds nor lapses",
+        "sibling_readings": [
+          "study_as_occupation",
+          "study_as_archiving"
+        ],
+        "expected_structural_delta": "Very low extractiveness — no current obligation, no victim set; authority structure defers adjudication to future restoration event; study is neither compliance nor preparation but maintenance of knowledge-in-waiting"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_occupation",
+      "human_readable": "Study as Occupation (Study Fulfills Obligation)",
+      "structural_delta": "Study of sacrifice law constitutes legitimate fulfillment of the obligation when performance is impossible",
+      "primary_observable": "Rabbinic texts equating study with performance; halakhic rulings treating Kodashim study as obligatory practice",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinic_authority",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes low-extractiveness baseline where study is the constraint's legitimate current form"
+    },
+    {
+      "claim_id": "study_as_archiving",
+      "human_readable": "Study as Archiving (Study Preserves but Does Not Fulfill)",
+      "structural_delta": "Study preserves knowledge for future restoration but does not fulfill the sacrifice obligation",
+      "primary_observable": "Texts treating Temple restoration as necessary for obligation fulfillment; study framed as preparation rather than performance",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rabbinic_authority",
+      "victim": "unfulfilled_divine_command",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: moderate extractiveness — entire post-Temple period is non-compliance; victim set is the unfulfilled obligation itself"
+    },
+    {
+      "claim_id": "messianic_suspension",
+      "human_readable": "Messianic Suspension (Obligation Deferred to Restoration)",
+      "structural_delta": "Obligation is suspended pending messianic restoration; study maintains knowledge without fulfilling or violating",
+      "primary_observable": "Eschatological texts deferring obligation to future era; study framed as neither compliance nor preparation but maintenance",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: very low extractiveness — no current obligation, no victim set; authority defers adjudication to future event"
+    },
+    {
+      "claim_id": "authority_structure_stability",
+      "human_readable": "Authority Structure Stability (Rabbinic Legitimacy via Continuity)",
+      "structural_delta": "Rabbinic authority derives legitimacy from maintaining unbroken interpretive chain despite performance impossibility",
+      "primary_observable": "Institutional continuity of yeshivot studying Kodashim; ordination chains claiming Sinaitic transmission",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinic_institutions",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "study_as_occupation",
+        "study_as_archiving"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: authority structure is upstream to all readings but lower structural distinctiveness than the readings themselves"
+    },
+    {
+      "claim_id": "performance_impossibility_mountain",
+      "human_readable": "Performance Impossibility (Physical Constraint of Temple Destruction)",
+      "structural_delta": "Physical destruction of Temple and absence of priesthood make sacrifice performance structurally impossible",
+      "primary_observable": "Archaeological fact of Temple destruction 70 CE; absence of functioning priesthood and ritual purity system",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "study_as_occupation",
+        "study_as_archiving",
+        "messianic_suspension"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing physical constraint base but all readings already incorporate this impossibility"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "study_as_occupation",
+      "kernel_id": "temple_sacrifice_obligation",
+      "reading_id": "study_as_occupation"
+    },
+    {
+      "claim_id": "study_as_archiving",
+      "kernel_id": "temple_sacrifice_obligation",
+      "reading_id": "study_as_archiving"
+    },
+    {
+      "claim_id": "messianic_suspension",
+      "kernel_id": "temple_sacrifice_obligation",
+      "reading_id": "messianic_suspension"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "authority_structure_stability",
+      "structural_delta": "Rabbinic authority derives legitimacy from maintaining unbroken interpretive chain",
+      "hypothesis": "rope",
+      "deferral_reason": "Upstream to all readings but lower structural distinctiveness; authority structure is implicit in each reading's grounding"
+    },
+    {
+      "claim_id": "performance_impossibility_mountain",
+      "structural_delta": "Physical destruction makes sacrifice performance structurally impossible",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint base already incorporated into all three readings; no independent analytical yield"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d1_d4_boundary",
+      "description": "Is this D1 (functioning — study is legitimate revision-substitute) or D4 (absent — study is memorial for dead practice)? The study-as-occupation reading treats it as D1; study-as-archiving treats it as D4. The boundary collapses if 'study equals performance' is itself a revision that the authority structure cannot acknowledge as revision.",
+      "source": "Kernel contest structure + commitment system recognition"
+    },
+    {
+      "id": "omega_revision_invisibility",
+      "description": "If study-as-occupation is correct, when did the revision occur? No formal halakhic moment declared 'study now fulfills sacrifice.' The doctrine emerged gradually, suggesting the authority structure absorbed a functional revision without surfacing it as revision — classic D1 partial drift.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — no formal revision event"
+    },
+    {
+      "id": "omega_third_temple_scenario",
+      "description": "If Temple were rebuilt tomorrow, which reading would the authority structure enforce? Study-as-occupation implies no urgency to resume performance; study-as-archiving implies immediate obligation. Messianic-suspension implies waiting for messianic figure to authorize. The readings predict different responses to the same counterfactual.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — authority structure benefits from ambiguity"
+    },
+    {
+      "id": "omega_non_orthodox_readings",
+      "description": "Reform/Reconstructionist readings (sacrifice is obsolete, not suspended) would constitute a fourth reading with explicit revision. Excluded from analysis because they operate outside the rabbinic authority structure that grounds the kernel. But their existence suggests the kernel itself may be contested at a higher level.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis assumes Orthodox halakhic framework"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure is genuine: three readings share the substrate (Temple sacrifice as binding obligation) but instantiate structurally different constraints (study-as-fulfillment vs study-as-preparation vs study-as-maintenance). The D1/D4 boundary case is documented in omega_d1_d4_boundary."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

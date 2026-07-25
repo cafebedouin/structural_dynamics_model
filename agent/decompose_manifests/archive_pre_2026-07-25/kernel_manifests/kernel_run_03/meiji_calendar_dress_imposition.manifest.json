@@ -1,0 +1,232 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political History / State Formation / Cultural Imposition",
+  "family_id": "meiji_top_down_imposition_1872",
+  "topic_summary": "Analysis of Meiji Japan's calendar reform (1872-1873) and dress code imposition (1871-1886) as test cases for top-down cultural override. The calendar switch from lunisolar to Gregorian occurred with 20 days notice, while Western dress mandates proceeded through elite modeling and coercive regulation. Both reforms test whether imposed commitments can displace prior practices exogenously (decree-driven override) versus endogenously (fringe climb via adoption).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Meiji Oligarchy (Genro: Itō Hirobumi, Yamagata Aritomo, et al. — policy architects with unrestricted Emperor access)",
+      "Emperor Meiji (symbolic authority; personal adoption of Western dress as exemplar)",
+      "Rural populations (continued lunar calendar observance for decades despite legal abolition)",
+      "Urban elites (early adopters of Western dress; hybrid public/private practice)",
+      "Fukuzawa Yukichi (intellectual advocate for Westernization)",
+      "Meiji Misdemeanor Law 1872 (enforcement mechanism: fines and force for bodily practice compliance)"
+    ],
+    "key_tensions": [
+      "Legal abolition vs practical continuity (calendar legally replaced but lunar observance persisted in rural areas)",
+      "Public compliance vs private retention (Western dress worn in public/business contexts, traditional clothing at home)",
+      "Temporal compression vs adoption capacity (20-day implementation window vs societal adjustment requirements)"
+    ],
+    "key_mechanisms": [
+      "Decree-driven override (calendar reform announced Dec 9, 1872, implemented Dec 3/Jan 1, 1873)",
+      "Elite modeling (Emperor's personal adoption of Western dress as normative signal)",
+      "Coercive enforcement (Misdemeanor Law fines and force for dress/bodily practice violations)",
+      "Ideological scaffolding (Westernization framed as modernization necessity; cultural messaging via consumer goods)"
+    ],
+    "key_absences": [
+      "Consultation mechanisms (no bottom-up input pathway; Genro insulation from Diet/cabinet)",
+      "Transition infrastructure (no calendrical conversion tools, educational campaigns, or grace periods for calendar reform)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy of temporal/bodily practice norms — whether authority to define 'correct' calendar observance and dress derives from state decree (exogenous imposition) or from community adoption and internalization (endogenous climb)",
+    "authority_description": "Meiji oligarchy claims interpretive authority via unrestricted Emperor access and legal decree power, bypassing parliamentary or consultative structures",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "legitimacy_of_imposed_practice",
+    "readings": [
+      {
+        "reading_id": "exogenous_override_reading",
+        "commitment": "State decree authority is sufficient to displace prior practice; compliance follows from legal mandate regardless of internalization",
+        "authority_grounding": "Oligarchic decree power; Genro unrestricted access to Emperor; legal enforcement via Misdemeanor Law",
+        "sibling_readings": [
+          "endogenous_climb_reading",
+          "hybrid_scaffolding_reading"
+        ],
+        "expected_structural_delta": "Calendar: pure override (legal abolition, rural non-compliance, practical workarounds). Dress: partial override (coercive enforcement, but incomplete displacement). Beneficiary: state modernization agenda. Victim: rural populations bearing adjustment costs without consultation."
+      },
+      {
+        "reading_id": "endogenous_climb_reading",
+        "commitment": "Practice displacement requires internalization; imposed commitments fail without bottom-up adoption pathways",
+        "authority_grounding": "Community practice norms; cultural continuity; seasonal/ritual embeddedness of prior practices",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "hybrid_scaffolding_reading"
+        ],
+        "expected_structural_delta": "Calendar: failed displacement (lunar observance persisted decades). Dress: partial adoption via urban diffusion but private retention signals incomplete internalization. Beneficiary: communities preserving autonomy. Victim: state modernization timeline."
+      },
+      {
+        "reading_id": "hybrid_scaffolding_reading",
+        "commitment": "Top-down mandate succeeds when reinforced by ideological messaging that generates quasi-endogenous pull; pure decree fails, pure climb is slow, scaffolded imposition achieves partial displacement",
+        "authority_grounding": "State decree + cultural messaging (Fukuzawa's advocacy, Emperor's personal modeling, consumer goods as modernization signals)",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "endogenous_climb_reading"
+        ],
+        "expected_structural_delta": "Calendar: no scaffolding (pure decree, failed). Dress: scaffolded (elite modeling + ideological framing, partial success with hybrid practices). Beneficiary: urban elites adopting Western identity markers. Victim: rural populations excluded from scaffolding infrastructure."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "exogenous_override_reading",
+        "reading_b": "endogenous_climb_reading",
+        "basis": "Exogenous reading holds that state decree authority is sufficient for practice displacement regardless of internalization; endogenous reading holds that displacement requires bottom-up adoption and internalization. No single framework can hold both: either decree suffices (exogenous) or it does not (endogenous)."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "exogenous_override_reading",
+      "human_readable": "Exogenous Override (State Decree as Sufficient Authority)",
+      "structural_delta": "State decree displaces prior practice via legal mandate and coercive enforcement, independent of internalization",
+      "primary_observable": "Legal abolition dates vs compliance rates; enforcement mechanism deployment (fines, force); temporal compression (decree-to-implementation window)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "meiji_oligarchy",
+      "victim": "rural_populations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel reading with highest extractiveness; captures calendar reform's pure override mechanism and dress reform's coercive enforcement layer"
+    },
+    {
+      "claim_id": "endogenous_climb_reading",
+      "human_readable": "Endogenous Climb (Internalization as Displacement Requirement)",
+      "structural_delta": "Practice displacement requires bottom-up adoption and internalization; imposed commitments fail without community uptake",
+      "primary_observable": "Persistence of prior practices post-decree (lunar calendar observance duration, private traditional dress retention); geographic stratification of adoption (urban vs rural)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Kernel reading capturing resistance mechanisms; structurally distinct from override reading (different observable: persistence vs enforcement)"
+    },
+    {
+      "claim_id": "hybrid_scaffolding_reading",
+      "human_readable": "Hybrid Scaffolding (Mandate + Ideological Messaging)",
+      "structural_delta": "Top-down mandate succeeds when reinforced by ideological messaging generating quasi-endogenous pull; pure decree fails, scaffolded imposition achieves partial displacement",
+      "primary_observable": "Presence/absence of ideological infrastructure (elite modeling, intellectual advocacy, consumer goods messaging); differential success rates (calendar vs dress)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "urban_elites",
+      "victim": "rural_populations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Kernel reading with highest centrality; synthesizes exogenous/endogenous mechanisms; explains differential outcomes (calendar failure vs dress partial success)"
+    },
+    {
+      "claim_id": "temporal_compression_constraint",
+      "human_readable": "Temporal Compression (Implementation Window vs Adjustment Capacity)",
+      "structural_delta": "20-day decree-to-implementation window precludes endogenous adoption pathways regardless of ideological scaffolding",
+      "primary_observable": "Announcement-to-implementation duration; presence/absence of transition infrastructure (conversion tools, educational campaigns)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "exogenous_override_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within exogenous_override_reading's enforcement mechanism analysis; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "genro_insulation_mechanism",
+      "human_readable": "Genro Insulation (Oligarchic Bypass of Consultative Structures)",
+      "structural_delta": "Unrestricted Emperor access enables policy imposition without Diet/cabinet/public consultation",
+      "primary_observable": "Presence/absence of consultation mechanisms; Genro privilege structure (private audiences, PM nomination veto)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "exogenous_override_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional precondition for exogenous override but not independent constraint axis; omega material on authority structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "exogenous_override_reading",
+      "kernel_id": "legitimacy_of_imposed_practice",
+      "reading_id": "exogenous_override_reading"
+    },
+    {
+      "claim_id": "endogenous_climb_reading",
+      "kernel_id": "legitimacy_of_imposed_practice",
+      "reading_id": "endogenous_climb_reading"
+    },
+    {
+      "claim_id": "hybrid_scaffolding_reading",
+      "kernel_id": "legitimacy_of_imposed_practice",
+      "reading_id": "hybrid_scaffolding_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "temporal_compression_constraint",
+      "structural_delta": "20-day implementation window precludes endogenous adoption",
+      "hypothesis": "mountain",
+      "deferral_reason": "Captured within exogenous_override_reading's enforcement mechanism analysis; lower structural distinctiveness than selected readings"
+    },
+    {
+      "claim_id": "genro_insulation_mechanism",
+      "structural_delta": "Oligarchic bypass of consultative structures via unrestricted Emperor access",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Institutional precondition for exogenous override but not independent constraint axis; omega material on authority structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m_set_gap",
+      "description": "M-set non-exhaustiveness confirmed: calendar reform is pure top-down imposition without endogenous climb pathway (no fringe to climb from). The kernel vocabulary of 'top-down imposition' captures this but the M-set lacks a cell for it. Dress reform partially fills the gap via hybrid_scaffolding_reading (mandated-with-ideological-scaffolding), suggesting M-set needs cell for 'scaffolded imposition' distinct from both pure decree and pure climb.",
+      "source": "User's kernel contest framing + research evidence of calendar failure vs dress partial success"
+    },
+    {
+      "id": "omega_genro_authority_structure",
+      "description": "Genro insulation mechanism (unrestricted Emperor access, PM nomination veto, Diet/cabinet bypass) is institutional precondition for exogenous override but not independent constraint. If Genro structure is itself a Snare (oligarchic capture of interpretive authority), then exogenous_override_reading's extractiveness may be understated. Deferred axis genro_insulation_mechanism warrants future generation if authority structure itself becomes analytical focus.",
+      "source": "Deferred axis genro_insulation_mechanism + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_geographic_stratification",
+      "description": "Urban/rural stratification appears in both calendar (rural lunar persistence) and dress (urban adoption, rural lag) but is not modeled as independent axis. If geographic access to ideological scaffolding is itself a constraint (urban elites receive messaging, rural populations excluded), then hybrid_scaffolding_reading may conflate two mechanisms: scaffolding presence and scaffolding access. Future decomposition may split these.",
+      "source": "Research evidence of geographic stratification + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_fiscal_motivation",
+      "description": "Research notes calendar reform avoided extra month's salaries/taxes in leap year. If fiscal extraction was primary driver (not modernization ideology), then exogenous_override_reading's beneficiary may be understated (oligarchy captures fiscal savings, not just modernization agenda). Absence of fiscal analysis in current decomposition may obscure material extraction mechanism.",
+      "source": "Research context fiscal motivation note + Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three kernel readings selected cover exogenous override (calendar pure case), endogenous climb (resistance mechanisms), and hybrid scaffolding (dress partial success). Deferred axes (temporal_compression, genro_insulation) are institutional preconditions rather than independent constraints. Omegas document M-set gap (user's kernel contest confirmed), authority structure uncertainty, geographic stratification, and fiscal motivation absence."
+  },
+  "_seed_id": "meiji_calendar_dress_imposition"
+}

@@ -1,0 +1,268 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Administrative Law / Labor Economics / Immigration Policy",
+  "family_id": "aewr_instrument_substitution_2026",
+  "topic_summary": "An essay arguing that the discontinuation of USDA's Farm Labor Survey and its replacement by BLS's OEWS (a survey that does not sample farms) for computing the H-2A Adverse Effect Wage Rate, occurring alongside a massive interior immigration enforcement expansion, together suspend a statutory wage-protection guarantee without repealing it or requiring any coordinated actor. The essay's central kernel-level claim is that the same sequence of events supports genuinely different readings of what happened and what kind of failure it is — reasonable-agency-composition vs. regulatory-capture vs. legally-cognizable-arbitrary-and-capricious-defect vs. ordinary-instrument-transition — and these readings are not merely different opinions about one mechanism but assign different actors, different victim sets, and different remedies.",
+  "extraction_summary": {
+    "entity_count": 9,
+    "claim_count": 14,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 6,
+    "key_entities": [
+      "USDA NASS (discontinued the Farm Labor Survey, OMB-approved)",
+      "DOL (issued October 2025 IFR replacing AEWR methodology with OEWS)",
+      "BLS OEWS program (replacement instrument; does not sample NAICS 111/112)",
+      "H-2A guest-workers (comparison population and bound beneficiaries of the visa's wage floor)",
+      "Agricultural employers / Farm Bureau (lobbied for AEWR relief; beneficiaries of the transfer)",
+      "ICE/DHS (interior enforcement expansion, $45bn appropriation, 92,600-bed target)",
+      "United Farm Workers (litigant, Eastern District of California, filed Nov 21 2025)",
+      "Farm labor contractors (NAICS 115 — the population OEWS actually samples)",
+      "Unauthorized farmworkers (displaced population; retains informal exit-based bargaining power)"
+    ],
+    "key_tensions": [
+      "Statutory adverse-effect guarantee (INA) intact in text vs. unprovable in practice absent a sector-sampling instrument",
+      "Reasonable-agency-action-in-isolation vs. compositional outcome no single agency chose or could be held accountable for",
+      "Employer-tied status as legitimate hold-up-problem solution vs. as monopsony-enabling exit suppression",
+      "Enforcement-as-supply-reduction vs. enforcement-as-channel-conversion (same observable wage/employment data, two mechanisms)",
+      "Textualist reading (statute stands independent of instrument) vs. functionalist reading (a right without a measurable comparison is not a right)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The stabilized shared commitment is the INA's adverse-effect bar itself: the statutory text stating that H-2A admission may not occur on terms that adversely affect wages of similarly employed U.S. workers. All parties — DOL, agricultural employers, UFW, courts — agree this text is unrepealed and still in force. What they read differently is what counts as satisfying or defeating that commitment once its measuring instrument changes.",
+    "authority_description": "Interpretive authority is distributed and contested: DOL claims interpretive authority via rulemaking discretion (methodology is not itself the statutory guarantee); courts claim authority via APA arbitrary-and-capricious review (State Farm); Congress holds latent authority via appropriations and oversight; no single body has yet settled which reading controls, and the case is pending on the merits.",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "adverse_effect_guarantee_kernel",
+    "readings": [
+      {
+        "reading_id": "instrument_dependent_reading",
+        "commitment": "The adverse-effect guarantee is only as real as the instrument that measures it; discontinuing the measurement functionally suspends the protection regardless of statutory text, because a comparison test without a comparison population is unenforceable.",
+        "authority_grounding": "Functionalist/legal-realist — administrative law grounded in reviewability and evidentiary provability (State Farm arbitrary-and-capricious doctrine)",
+        "sibling_readings": [
+          "textualist_severability_reading",
+          "coverage_neutral_reading",
+          "capture_reading",
+          "channel_conversion_reading"
+        ],
+        "expected_structural_delta": "Victim set includes H-2A workers AND the class of all future litigants who cannot prove adverse effect in either direction; beneficiary is whichever party benefits from unprovability (here, employers, by default rather than by design); classified as piton (atrophied enforcement via inertia) under low-intent framing."
+      },
+      {
+        "reading_id": "textualist_severability_reading",
+        "commitment": "The statutory guarantee stands independent of any particular measuring instrument; instrument adequacy is a severable administrative-law question that does not touch the underlying right, which remains provable by other evidentiary means if a court requires it.",
+        "authority_grounding": "Textualist/positivist — statute is the fixed point; regulatory methodology is downstream implementation, not the kernel itself",
+        "sibling_readings": [
+          "instrument_dependent_reading",
+          "coverage_neutral_reading",
+          "capture_reading",
+          "channel_conversion_reading"
+        ],
+        "expected_structural_delta": "No victim set is generated at the statutory level at all — if the guarantee is severable from its instrument, the observed wage effects are a policy-quality problem, not a rights-violation; this reading would reclassify the entire phenomenon as scaffold (weak, replaceable infrastructure) rather than piton or snare."
+      },
+      {
+        "reading_id": "coverage_neutral_reading",
+        "commitment": "OEWS's exclusion of direct farm employers is a real gap but does not necessarily bias the wage floor downward, or the IFR's commitment to phase in farm employers will close the gap on schedule; this reading treats the substitution as an ordinary, correctable regulatory transition rather than a structural extraction mechanism.",
+        "authority_grounding": "Technocratic/administrative — the same DOL/BLS methodological-competence frame that grounds routine instrument updates across federal statistics generally",
+        "sibling_readings": [
+          "instrument_dependent_reading",
+          "textualist_severability_reading",
+          "capture_reading",
+          "channel_conversion_reading"
+        ],
+        "expected_structural_delta": "If true, no beneficiary/victim structure survives at all in the instrument section; the $24bn transfer estimate would need to be reattributed to the discretionary parameter choices (entry-level tier, housing deduction) rather than to the coverage gap itself — a mountain/rope hybrid rather than any extractive type."
+      },
+      {
+        "reading_id": "capture_reading",
+        "commitment": "The instrument substitution and its discretionary downward parameters (entry-level tier, housing deduction) were the product of sustained agricultural-employer lobbying pressure exploiting a genuine but convenient data gap; agency reasonableness at each step does not preclude the aggregate outcome being the intended target of organized advocacy.",
+        "authority_grounding": "Political-economy/regulatory-capture tradition — legitimacy of the outcome is judged by whose interests systematically prevail across formally independent decision points",
+        "sibling_readings": [
+          "instrument_dependent_reading",
+          "textualist_severability_reading",
+          "coverage_neutral_reading",
+          "channel_conversion_reading"
+        ],
+        "expected_structural_delta": "Beneficiary (agricultural employers) is the same as under instrument_dependent_reading, but this reading assigns intent/foreseeability to the composition rather than treating it as emergent; classification would be snare (deliberately maintained extraction) rather than piton (inertial drift) — this is precisely the distinction Ruling 1 in the source essay explicitly argues against, making it a genuine rival reading rather than a restatement."
+      },
+      {
+        "reading_id": "channel_conversion_reading",
+        "commitment": "The operative kernel is not really the wage-measurement guarantee at all but the exit/mobility structure of the visa; interior enforcement plus a cheapened legal channel jointly convert an unauthorized workforce (which retains informal exit power) into a formally admitted workforce (which does not), and the wage-floor collapse is a downstream symptom of that conversion, not the primary mechanism.",
+        "authority_grounding": "Structural/labor-economics (monopsony, search-friction) tradition — locates the rights-violation in mobility constraint rather than in measurement adequacy",
+        "sibling_readings": [
+          "instrument_dependent_reading",
+          "textualist_severability_reading",
+          "coverage_neutral_reading",
+          "capture_reading"
+        ],
+        "expected_structural_delta": "Victim set centers on the displaced unauthorized workforce and the newly bound H-2A workforce jointly, rather than on litigants-in-general; beneficiary is the same employer class but through a different causal channel (monopsony rent from immobility, not evidentiary unprovability); this reading would classify the exit-constraint itself as tangled_rope (entangled with the visa's legitimate hold-up-solving function) rather than classifying the instrument substitution as the load-bearing mechanism."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "instrument_dependent_reading",
+        "reading_b": "textualist_severability_reading",
+        "basis": "Instrument-dependent holds that a right's practical unenforceability constitutes its functional suspension; textualist-severability holds that the right's validity is wholly independent of any instrument's adequacy. A single framework cannot simultaneously treat evidentiary provability as constitutive of the right and as merely incidental to it — accepting one axiom requires rejecting the other."
+      },
+      {
+        "reading_a": "coverage_neutral_reading",
+        "reading_b": "capture_reading",
+        "basis": "Coverage-neutral holds that the outcome is best explained by good-faith, correctable methodological choices with no systematic directional bias attributable to interest-group pressure. Capture holds that the same sequence of choices is explained by, and reflects, organized advocacy successfully steering outcomes. These are not complementary weightings of one cause — one framework denies what the other asserts about whether interest-group pressure was the operative selection mechanism behind the discretionary parameters."
+      },
+      {
+        "reading_a": "instrument_dependent_reading",
+        "reading_b": "channel_conversion_reading",
+        "basis": "Instrument-dependent locates the rights-defeating mechanism in the measurement gap itself (the guarantee becomes unprovable). Channel-conversion locates it in the mobility/exit structure of the visa, treating the measurement gap as a secondary symptom. A framework that holds the wage-measurement gap as THE constitutive failure cannot simultaneously hold that the wage-measurement gap is merely downstream of a separate, more fundamental mobility failure — one claim subordinates the other's primary mechanism to secondary status, which is mutually exclusive as a claim about where the causal weight sits."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "adverse_effect_guarantee_kernel",
+      "human_readable": "The Adverse-Effect Guarantee Kernel (Contested Readings)",
+      "structural_delta": "Same statutory text, same factual sequence (FLS discontinuation → OEWS substitution → IFR → enforcement surge) sustains five structurally distinct readings assigning different mechanisms, victim sets, and remedies.",
+      "primary_observable": "Divergent legal/causal attribution each reading would produce if forced to state: (a) what broke, (b) who is harmed, (c) what would fix it, (d) what type of failure this is (piton/snare/scaffold/tangled_rope)",
+      "epsilon_bin": "mod",
+      "hypothesis": "kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "h2a_exit_mobility_axis"
+      ],
+      "centrality_score": 9,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Passes all three kernel gates (§1.3-K): shared commitment (INA adverse-effect bar) all parties argue about; readings genuinely diverge on what counts as satisfying it; readings emit structurally different constraints (different beneficiary/victim sets, different remedy paths, different classification types). Counts as exactly one axis per budget rules; all five readings proceed to generation."
+    },
+    {
+      "claim_id": "h2a_exit_mobility_axis",
+      "human_readable": "Employer-Tied Status as Independent Mobility Constraint",
+      "structural_delta": "Regardless of which kernel reading is correct about the wage-measurement failure, the H-2A visa's employer-tied legal structure is an independently specifiable constraint on worker exit, with its own observable (separation rates, portability rules) distinct from the instrument-substitution question.",
+      "primary_observable": "H-2A worker separation/transfer rates before contract end (currently unpublished — named as the essay's central unresolved fulcrum); existence and design of portability provisions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "certified_h2a_employers",
+      "victim": "h2a_workers",
+      "downstream_of": [
+        "adverse_effect_guarantee_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Passes independence test: different primary observable (separation rates vs. wage-measurement adequacy) than any single kernel reading; survives even if the instrument-substitution kernel resolves toward coverage_neutral_reading, since the hold-up/mobility structure predates and is severable from the 2025 rule change. Retained as the sole additional non-kernel axis because it has its own ε and its own falsification path (F9/F10, separation-rate publication) independent of which kernel reading prevails."
+    },
+    {
+      "claim_id": "detention_enforcement_scale_axis",
+      "human_readable": "ICE Detention Build-Out as Independent Capacity/Financing Question",
+      "structural_delta": "The scale and financing structure of the 2025-2026 detention expansion (owned vs. leased capacity, $45bn appropriation, bed targets) is a distinct empirical question from both the wage-instrument kernel and the exit-mobility axis.",
+      "primary_observable": "Facility ownership/contract-term composition; ICE ERO detention population trends",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: passes independence test in principle (different observable, different agency, different falsifier — H4/F7/F8) but is documented in the source primarily as contextual counterpoint ('the two policies point opposite ways') rather than as load-bearing structure for the kernel; lower centrality than the exit-mobility axis; adding it would not change any kernel reading's classification. Retained as omega material."
+    },
+    {
+      "claim_id": "care_work_generalization_axis",
+      "human_readable": "Baumol/Non-Offshorable Sector Generalization (Care Work as Next Case)",
+      "structural_delta": "Whether the exit-suppression mechanism generalizes to other non-tradable-task sectors (direct care) is a distinct, forward-looking structural hypothesis (H3) rather than a claim about the present agricultural case.",
+      "primary_observable": "Emergence of employer-tied visa proposals for direct-care occupations (F5/F6)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "h2a_exit_mobility_axis"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: explicitly framed in the source as 'interpretive model, not measurement' and as untested conjecture (H3); it is a projection of the exit-mobility axis onto a different sector rather than an independently observable structure in the current record. Lower centrality; no independent evidence yet exists to generate a constraint story against."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "instrument_dependent_reading",
+      "kernel_id": "adverse_effect_guarantee_kernel",
+      "reading_id": "instrument_dependent_reading"
+    },
+    {
+      "claim_id": "textualist_severability_reading",
+      "kernel_id": "adverse_effect_guarantee_kernel",
+      "reading_id": "textualist_severability_reading"
+    },
+    {
+      "claim_id": "coverage_neutral_reading",
+      "kernel_id": "adverse_effect_guarantee_kernel",
+      "reading_id": "coverage_neutral_reading"
+    },
+    {
+      "claim_id": "capture_reading",
+      "kernel_id": "adverse_effect_guarantee_kernel",
+      "reading_id": "capture_reading"
+    },
+    {
+      "claim_id": "channel_conversion_reading",
+      "kernel_id": "adverse_effect_guarantee_kernel",
+      "reading_id": "channel_conversion_reading"
+    },
+    "h2a_exit_mobility_axis"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "detention_enforcement_scale_axis",
+      "structural_delta": "Detention build-out financing/capacity structure as independent question",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Contextual counterpoint in source material, not load-bearing for kernel readings; lower centrality; own falsifier (H4) already tracked but does not require separate generation"
+    },
+    {
+      "claim_id": "care_work_generalization_axis",
+      "structural_delta": "Forward-looking generalization of exit-suppression mechanism to care work",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Explicitly labeled untested conjecture/interpretive model in source; no current observable, purely projective"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_bias_direction_unresolved",
+      "description": "The essay's central instrument-dependent reading assumes OEWS's coverage gap biases the AEWR downward (farm labor contractors are the low-wage segment), but this is explicitly stated as an unestablished assumption. If the FLS/OEWS trajectory comparison shows neutral or upward bias, coverage_neutral_reading strengthens sharply and instrument_dependent_reading weakens. This is the single highest-value open research item per the source's own OPEN VERIFICATION list (#8).",
+      "source": "§1.1 Absence Inventory + source's own Unresolved Questions section"
+    },
+    {
+      "id": "omega_separation_rate_fulcrum",
+      "description": "No published data exists on H-2A separation rates before contract end. The h2a_exit_mobility_axis's entire classification as tangled_rope (vs. a weaker rope or scaffold) depends on this unpublished number. The source explicitly names this as 'the fulcrum.'",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_pending_litigation_outcome",
+      "description": "UFW v. DOL (E.D. Cal., filed Nov 21 2025) is pending; a May 14 2026 order denied preliminary injunction but the merits are unresolved. Whether a court eventually adopts instrument_dependent_reading or textualist_severability_reading in its holding (per F11) will retroactively validate one kernel reading over the others in the only forum with authority to settle it.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — the essay operates within a legal-prediction medium whose outcome is not yet knowable"
+    },
+    {
+      "id": "omega_capture_vs_emergent_reading_tension",
+      "description": "The source document's own metadata (Ruling 1) explicitly argues AGAINST the capture_reading in favor of instrument_dependent_reading's emergent/low-intent framing, and treats this as a resolved editorial decision. This SCOPE analysis restores capture_reading as a live rival because the source's argument for rejecting it (MaxEnt classification stability under lowered ε) is an artifact of the source's own engine, not an independent adjudication of which reading is correct. Flagged per F03/F34 caution.",
+      "source": "F03 (Hasty Generalization) — the source may have prematurely foreclosed a genuinely live reading via its own internal metric rather than external evidence"
+    },
+    {
+      "id": "omega_no_farmworker_voice",
+      "description": "As the source's own metadata concedes: no farmworker voice and no farm labor contractor voice appear anywhere in the institutional-record analysis. This absence limits confidence in any reading's account of the lived exit-constraint experience and cannot be resolved by further document research; it requires reporting.",
+      "source": "§1.1 Absence Inventory, corroborated by source metadata's own adversarial review"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03: The source document's Ruling 1 forecloses the capture_reading in favor of an emergent/low-intent frame, justifying this via its own internal MaxEnt engine's classification stability rather than independent legal or economic adjudication. This SCOPE analysis restores capture_reading as a genuine sibling reading (omega_capture_vs_emergent_reading_tension) since the source's own metadata acknowledges the engine 'contributed structure only' and is not evidence. F34: The kernel readings include legal-doctrinal claims (State Farm arbitrary-and-capricious standard, APA merits reasoning) that require administrative-law expertise beyond generic domain competence; the source itself flags this as its most likely point of hostile expert review. Both flags are surfaced for orchestrator attention; neither blocks generation."
+  }
+}

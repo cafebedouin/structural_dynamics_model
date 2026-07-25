@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Firearms Policy",
+  "family_id": "second_amendment_interpretive_divide",
+  "topic_summary": "Analysis of the Second Amendment interpretive divide between individual-rights and collective-rights readings. The substrate is the constitutional text itself ('A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed'). Each reading instantiates a structurally different constraint framework affecting gun ownership, regulation, and systemic risk distribution.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Second Amendment text (constitutional kernel)",
+      "Individual gun owners (rights-claimants under Reading A)",
+      "State regulatory apparatus (authority under Reading B)",
+      "Gun industry (commercial beneficiary)",
+      "Vulnerable populations (systemic risk bearers)",
+      "Supreme Court (interpretive authority)"
+    ],
+    "key_tensions": [
+      "Individual autonomy vs collective security (core normative divide)",
+      "Originalist textualism vs living constitutionalism (interpretive methodology)"
+    ],
+    "key_mechanisms": [
+      "Judicial review (Supreme Court adjudication of readings)",
+      "Scrutiny levels (strict vs intermediate vs rational basis review)",
+      "Commerce Clause interaction (federal/state regulatory boundaries)"
+    ],
+    "key_absences": [
+      "Technological delta (muskets vs modern firearms not addressed in constitutional text)",
+      "Statistical evidence framework (empirical constraint effects not anchored in text)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Second Amendment text as constitutional commitment to arms-bearing rights, with contested linkage between militia clause and individual ownership",
+    "authority_description": "Supreme Court interpretive supremacy; originalist vs purposivist methodology grounds competing legitimacy claims",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_ambiguity_CS",
+    "is_contested_kernel": true,
+    "kernel_id": "second_amendment_text",
+    "readings": [
+      {
+        "reading_id": "individual_rights_reading",
+        "commitment": "Second Amendment guarantees individual right to firearm ownership independent of militia service",
+        "authority_grounding": "originalist textualism (Heller majority); natural rights tradition",
+        "sibling_readings": [
+          "collective_rights_reading",
+          "hybrid_civic_reading"
+        ],
+        "expected_structural_delta": "Individual owners enter beneficiary set; regulatory constraints face strict scrutiny; gun markets receive constitutional protection; vulnerable populations (domestic violence victims, urban communities) enter victim set via elevated systemic risk exposure"
+      },
+      {
+        "reading_id": "collective_rights_reading",
+        "commitment": "Second Amendment protects state militia authority, not individual ownership claims",
+        "authority_grounding": "purposivist constitutional interpretation; collective security framework",
+        "sibling_readings": [
+          "individual_rights_reading",
+          "hybrid_civic_reading"
+        ],
+        "expected_structural_delta": "State regulatory apparatus enters beneficiary set; private gun industry constrained; public safety structures privileged; individual owners enter victim set via ownership restrictions"
+      },
+      {
+        "reading_id": "hybrid_civic_reading",
+        "commitment": "Second Amendment protects individual ownership conditional on civic participation and regulatory compliance",
+        "authority_grounding": "civic republican tradition; Swiss militia model",
+        "sibling_readings": [
+          "individual_rights_reading",
+          "collective_rights_reading"
+        ],
+        "expected_structural_delta": "Conditional beneficiaries (trained, registered owners); regulatory frameworks coexist with ownership rights; bifurcated victim set (excluded individuals + communities without robust enforcement)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "individual_rights_reading",
+        "reading_b": "collective_rights_reading",
+        "basis": "Individual-rights reading treats firearm ownership as pre-political natural right constraining state authority; collective-rights reading treats it as state-delegated authority serving collective security. No single framework can hold both 'ownership as natural right immune from state regulation' and 'ownership as state-granted privilege serving militia function' simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "individual_rights_reading",
+      "human_readable": "Individual Rights Reading (Personal Ownership as Constitutional Floor)",
+      "structural_delta": "Constitutional text interpreted to guarantee individual firearm ownership independent of militia service, creating constraints that privilege personal autonomy and gun markets",
+      "primary_observable": "Scope of permissible regulations under strict scrutiny; individual ownership rates; gun market capitalization",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_gun_owners",
+      "victim": "vulnerable_populations_systemic_risk",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested reading with highest extractiveness; establishes beneficiary/victim topology for comparative analysis"
+    },
+    {
+      "claim_id": "collective_rights_reading",
+      "human_readable": "Collective Rights Reading (Militia-Linked Regulatory Authority)",
+      "structural_delta": "Constitutional text interpreted to protect state militia authority, enabling broad regulatory regimes that privilege public safety over individual ownership claims",
+      "primary_observable": "Scope of permissible regulations under rational basis review; state regulatory framework density; firearm mortality rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "public_safety_apparatus",
+      "victim": "gun_industry_and_owners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposed reading with inverted beneficiary/victim structure; axiom-contradictory with Reading A"
+    },
+    {
+      "claim_id": "hybrid_civic_reading",
+      "human_readable": "Hybrid Civic Reading (Conditional Rights via Civic Participation)",
+      "structural_delta": "Constitutional text interpreted to protect individual ownership conditional on regulatory compliance and civic training, creating bifurcated constraint framework",
+      "primary_observable": "Training/licensing requirement penetration; registered vs unregistered ownership rates; enforcement disparities",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "compliant_trained_owners",
+      "victim": "excluded_individuals_and_underenforced_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Middle-path reading demonstrating licensed plurality possibility; lower epsilon but structural novelty in bifurcated victim set"
+    },
+    {
+      "claim_id": "technological_delta_mountain",
+      "human_readable": "Technological Delta (Muskets to AR-15s)",
+      "structural_delta": "Physical capability gap between 18th-century firearms and modern weapons systems unaddressed in constitutional text",
+      "primary_observable": "Lethality metrics (rounds per minute, magazine capacity); casualty rates in mass shootings",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "individual_rights_reading",
+        "collective_rights_reading",
+        "hybrid_civic_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: physical mountain feeding all readings but lower structural priority than direct interpretive contest; captured in omega"
+    },
+    {
+      "claim_id": "scrutiny_level_mechanism",
+      "human_readable": "Scrutiny Level as Extraction Mechanism",
+      "structural_delta": "Choice of judicial review standard (strict/intermediate/rational) determines regulatory constraint severity",
+      "primary_observable": "Proportion of regulations surviving judicial challenge under each standard",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "reading_with_favorable_scrutiny",
+      "victim": "reading_facing_hostile_scrutiny",
+      "downstream_of": [
+        "individual_rights_reading",
+        "collective_rights_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism downstream of interpretive contest; captured implicitly in reading constraints"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "individual_rights_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "individual_rights_reading"
+    },
+    {
+      "claim_id": "collective_rights_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "collective_rights_reading"
+    },
+    {
+      "claim_id": "hybrid_civic_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "hybrid_civic_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "technological_delta_mountain",
+      "structural_delta": "Physical capability gap between founding-era and modern firearms",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint feeding all readings but structurally subordinate to interpretive contest itself; addressed in omega_technological_originalism"
+    },
+    {
+      "claim_id": "scrutiny_level_mechanism",
+      "structural_delta": "Judicial review standard determines regulatory constraint severity",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism downstream of readings; implicitly captured in each reading's constraint structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_technological_originalism",
+      "description": "Does originalist methodology applied to individual-rights reading require limiting protected arms to founding-era technology? If yes, the reading's extractiveness drops dramatically. If no, the physical Mountain (technological_delta_mountain) becomes a Piton of interpretive choice rather than physics.",
+      "source": "Deferred axis technological_delta_mountain + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_hybrid_enforcement_gap",
+      "description": "Hybrid civic reading creates bifurcated victim set if enforcement is uneven. Communities with weak regulatory infrastructure may experience both ownership restrictions AND elevated systemic risk, converting the reading from licensed plurality to compound extraction.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + hybrid_civic_reading victim structure"
+    },
+    {
+      "id": "omega_collective_rights_viability",
+      "description": "Post-Heller, collective-rights reading has near-zero judicial authority despite scholarly support. Is this a functioning CS with drift absorbed through dissent, or a dead reading maintained only as academic counterfactual? Affects whether reading B is live constraint or historical artifact.",
+      "source": "Commitment system drift_status assessment + F34 epistemic boundary"
+    },
+    {
+      "id": "omega_statistical_substrate",
+      "description": "Empirical firearm violence data exists outside constitutional text. Do readings incorporate statistical evidence, or do they operate purely within textual/philosophical substrate? If the latter, constraint stories may be empirically uncalibrated.",
+      "source": "Absence Inventory (statistical evidence framework not anchored in text)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Constitutional law doctrine requires specialized expertise beyond general training data. Collective-rights reading post-Heller may be empirically dead despite scholarly arguments. Generated omega_collective_rights_viability to bound judicial-vs-academic authority distinction. Technological_delta_mountain classification as mountain vs piton depends on originalist methodology application not fully within model competence."
+  },
+  "_seed_id": "us_second_amendment"
+}

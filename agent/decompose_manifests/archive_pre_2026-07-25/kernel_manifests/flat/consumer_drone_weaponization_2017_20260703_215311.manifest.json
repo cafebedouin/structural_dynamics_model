@@ -1,0 +1,209 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Security Studies / Technology Governance / Asymmetric Warfare",
+  "family_id": "consumer_drone_weaponization_2017",
+  "topic_summary": "Analysis of consumer drone weaponization threat as articulated by Brett Velicovich, a former U.S. Army special operations intelligence analyst. The article argues that readily available consumer drones can be trivially modified into precision strike weapons, that terrorist organizations have already operationalized this capability, and that U.S. government regulation and military procurement have failed to keep pace with the convergence of commercial and military drone technology.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Brett Velicovich (former Army intelligence soldier, drone business owner, author)",
+      "DJI (Chinese consumer drone manufacturer, 70% global market share)",
+      "ISIS/ISIL (terrorist organization weaponizing consumer drones since 2013)",
+      "U.S. Federal Aviation Administration (regulatory body, issued Part 107 in 2016)",
+      "Pentagon/DoD (military procurement authority buying expensive military drones)",
+      "Consumer drone purchasers (2.5M U.S. sales in 2016, majority benign users)",
+      "Hezbollah (first terrorist group to deploy military-grade drones, Iranian-supplied)",
+      "FCC (added DJI to Covered List in 2025, blocking new authorizations)"
+    ],
+    "key_tensions": [
+      "Commercial technology advancement vs regulatory response lag (consumer drones evolving faster than FAA Part 107 framework)",
+      "Military procurement cost vs commercial capability parity (Pentagon buying $100K+ Scan Eagles vs $1K consumer equivalents)",
+      "Benign majority use vs malicious outlier threat (2.5M consumer sales, tiny fraction weaponized)",
+      "Domestic market access vs national security (DJI market dominance vs FCC Covered List ban)"
+    ],
+    "key_mechanisms": [
+      "Modification pathway: consumer drone + range extender + payload release mechanism + GPS/flight controller tweaks = weaponized platform",
+      "Terrorist operational cycle: surveillance → precision strike → propaganda documentation (ISIS 60-100 drone attacks/month in 2017)",
+      "Regulatory lag mechanism: technology advancement outpaces rulemaking (Part 107 focused on commercial safety, not weaponization prevention)"
+    ],
+    "key_absences": [
+      "Counter-drone technology deployment status (article mentions threat but not defensive capabilities)",
+      "International regulatory coordination (focus on U.S. FAA, no mention of global frameworks)",
+      "Supply chain interdiction mechanisms (no discussion of restricting component sales to high-risk actors)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "technology_diffusion_asymmetry",
+      "human_readable": "Technology Diffusion Asymmetry (Commercial-Military Capability Convergence)",
+      "structural_delta": "Rate at which consumer drone capabilities approach military-grade performance, measured by payload capacity, range, autonomy, and cost differential",
+      "primary_observable": "Capability parity index: consumer drone specs (range, payload, autonomy) vs military equivalents; cost ratio (DJI Phantom vs Boeing Scan Eagle)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "weaponization_accessibility",
+        "procurement_inertia"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical/technological constraint base; feeds two downstream axes"
+    },
+    {
+      "claim_id": "weaponization_accessibility",
+      "human_readable": "Weaponization Accessibility (Modification Barrier Height)",
+      "structural_delta": "Technical skill and resource threshold required to convert consumer drone into strike platform",
+      "primary_observable": "Modification complexity (steps, tools, expertise required); component availability (payload release mechanisms, range extenders); online tutorial proliferation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "technology_diffusion_asymmetry"
+      ],
+      "feeds_into": [
+        "regulatory_lag_extraction"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (modification barrier vs capability parity); coordination problem structure"
+    },
+    {
+      "claim_id": "regulatory_lag_extraction",
+      "human_readable": "Regulatory Lag Extraction (Governance Response Deficit)",
+      "structural_delta": "Time delta between threat emergence and effective regulatory/defensive response",
+      "primary_observable": "FAA Part 107 scope (commercial safety vs weaponization prevention); counter-drone deployment rate; interdiction mechanisms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "malicious_actors",
+      "victim": "civilian_populations",
+      "downstream_of": [
+        "weaponization_accessibility",
+        "procurement_inertia"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Highest centrality; downstream synthesis node; entanglement between regulatory inertia and threat actor adaptation"
+    },
+    {
+      "claim_id": "procurement_inertia",
+      "human_readable": "Procurement Inertia (Institutional Lock-In to Legacy Systems)",
+      "structural_delta": "Pentagon preference for expensive military-grade systems over cheaper commercial equivalents with comparable capability",
+      "primary_observable": "DoD procurement budget allocation (Scan Eagle vs consumer drone purchases); special ops adoption rate of commercial platforms",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "defense_contractors",
+      "victim": "taxpayers",
+      "downstream_of": [
+        "technology_diffusion_asymmetry"
+      ],
+      "feeds_into": [
+        "regulatory_lag_extraction"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct from weaponization_accessibility (different beneficiary, different observable); institutional rather than technical barrier"
+    },
+    {
+      "claim_id": "threat_actor_adaptation_rate",
+      "human_readable": "Threat Actor Adaptation Rate (ISIS/Hezbollah Operational Learning)",
+      "structural_delta": "Speed at which terrorist organizations operationalize consumer drone modifications",
+      "primary_observable": "ISIS drone attack frequency (60-100/month in 2017); modification sophistication trajectory; casualty effectiveness",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "coalition_forces",
+      "downstream_of": [
+        "weaponization_accessibility"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via weaponization_accessibility rope + regulatory_lag_extraction tangled_rope; adding as separate axis would duplicate observable (modification barrier height)"
+    },
+    {
+      "claim_id": "market_concentration_risk",
+      "human_readable": "Market Concentration Risk (DJI Dominance & Supply Chain Vulnerability)",
+      "structural_delta": "Single foreign manufacturer controlling 70% of global consumer drone market",
+      "primary_observable": "DJI market share; FCC Covered List restrictions; alternative supplier availability",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: zero centrality; speculative scaffold; FCC 2025 action suggests regulatory response but unclear if effective interdiction mechanism"
+    }
+  ],
+  "generation_sequence": [
+    "technology_diffusion_asymmetry",
+    "weaponization_accessibility",
+    "procurement_inertia",
+    "regulatory_lag_extraction"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "threat_actor_adaptation_rate",
+      "structural_delta": "Speed at which terrorist organizations operationalize consumer drone modifications",
+      "hypothesis": "snare",
+      "deferral_reason": "Observable (modification barrier height) already captured by weaponization_accessibility; ISIS attack frequency is downstream effect rather than independent structural dimension"
+    },
+    {
+      "claim_id": "market_concentration_risk",
+      "structural_delta": "Single foreign manufacturer controlling 70% of global consumer drone market",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero graph centrality; speculative scaffold; FCC Covered List action (2025) postdates article (2017) and effectiveness as interdiction mechanism unclear"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_counter_drone_gap",
+      "description": "Article identifies threat but omits defensive capability status. Are counter-drone systems (RF jamming, kinetic interdiction, geofencing) deployed at scale? If not, regulatory_lag_extraction may understate victim set size.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_international_coordination",
+      "description": "Analysis focuses on U.S. FAA/DoD response. Do international regulatory frameworks (ICAO, EU Aviation Safety Agency) exhibit same lag? If not, U.S.-specific governance failure rather than structural technology-regulation asymmetry.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_supply_chain_interdiction",
+      "description": "No discussion of restricting component sales (payload release mechanisms, range extenders) to high-risk actors. Is this technically feasible? If yes, weaponization_accessibility rope may be artificially high due to policy choice rather than technical inevitability.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_mountain_validity",
+      "description": "Is technology_diffusion_asymmetry a true Mountain (physics of miniaturization, Moore's Law) or a Piton of policy choice? If export controls/supply chain restrictions could maintain military-commercial gap, reclassify as rope or piton.",
+      "source": "F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_velicovich_framing",
+      "description": "Author owns consumer drone business selling 'tens of thousands' annually. Does commercial interest bias threat assessment? Regulatory crackdown could harm his business; threat inflation could justify military procurement of commercial platforms he sells.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: technology_diffusion_asymmetry classified as mountain (inevitable convergence due to physics/economics) but may be piton of policy choice if export controls or supply chain restrictions could maintain military-commercial capability gap. Generated omega_mountain_validity to bound this uncertainty. Additionally, author's commercial interest (drone business owner) may bias threat framing; generated omega_velicovich_framing."
+  }
+}

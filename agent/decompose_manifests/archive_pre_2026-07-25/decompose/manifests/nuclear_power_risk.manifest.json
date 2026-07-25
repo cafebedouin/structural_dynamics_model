@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Risk Assessment / Energy Policy / Public Safety Governance",
+  "family_id": "acceptable_risk_energy_nuclear",
+  "topic_summary": "Analysis of the contested acceptable-risk-for-energy kernel in nuclear power debates. Anti-nuclear and pro-nuclear positions read the same risk substrate differently: catastrophic-tail-dominant framing (weight low-probability-high-consequence events heavily) versus expected-value-dominant framing (aggregate expected harm across probability distribution). Each reading instantiates a structurally different constraint on energy policy.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear power generation infrastructure (reactors, fuel cycle, waste storage)",
+      "Anti-nuclear movement (Greenpeace, local opposition groups, post-Fukushima mobilization)",
+      "Pro-nuclear advocates (industry, climate-focused technocrats, French/Swedish energy ministries)",
+      "Regulatory bodies (NRC, IAEA, national safety authorities)",
+      "Alternative energy systems (renewables + storage, fossil fuels as implicit comparison class)",
+      "Affected populations (proximate communities, future generations for waste, global climate-affected populations)"
+    ],
+    "key_tensions": [
+      "Catastrophic-tail-dominant vs expected-value-dominant risk framings (structurally incompatible weighting of low-probability-high-consequence events)",
+      "Temporal discounting conflict (immediate operational risk vs long-term waste custody vs climate harm from alternatives)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is that energy systems must not impose unacceptable risk on populations; disagreement centers on how to weight low-probability catastrophic outcomes versus aggregate expected harm.",
+    "authority_description": "Regulatory legitimacy derives from claimed ability to quantify and bound risk; interpretive authority contested between technocratic expected-value frameworks (regulators, industry) and precautionary/catastrophic-focused frameworks (environmental movements, post-accident publics).",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Flexibility (Pattern 3): regulatory layer absorbs drift through evolving safety standards without surfacing that the underlying risk-weighting kernel remains contested; accidents temporarily destabilize interpretive consensus.",
+    "is_contested_kernel": true,
+    "kernel_id": "acceptable_risk_energy",
+    "readings": [
+      {
+        "reading_id": "catastrophic_tail_reading",
+        "commitment": "Low-probability catastrophic events dominate risk calculus; tail outcomes weighted categorically above expected-value aggregation.",
+        "authority_grounding": "Precautionary principle, Taleb-style fat-tail reasoning, post-Chernobyl/Fukushima empirical update on regulatory failure modes.",
+        "sibling_readings": [
+          "expected_value_reading",
+          "comparative_harm_reading"
+        ],
+        "expected_structural_delta": "Nuclear becomes high-ε snare (catastrophic downside creates asymmetric constraint even at low probability); alternatives preferred even with higher aggregate expected harm; victim set includes hypothetical catastrophe-affected populations with infinitesimal discount."
+      },
+      {
+        "reading_id": "expected_value_reading",
+        "commitment": "Risk assessed via expected value across full probability distribution; deaths-per-TWh aggregated without categorical weighting of accident scenarios.",
+        "authority_grounding": "Technocratic cost-benefit analysis, actuarial frameworks, regulatory safety engineering standards (defense-in-depth, probabilistic risk assessment).",
+        "sibling_readings": [
+          "catastrophic_tail_reading",
+          "comparative_harm_reading"
+        ],
+        "expected_structural_delta": "Nuclear becomes low-ε rope or mountain (operational deaths lower than coal/gas per TWh generated); constraint on deployment is coordination/capital, not safety; victim set limited to measurable operational and waste-exposure populations."
+      },
+      {
+        "reading_id": "comparative_harm_reading",
+        "commitment": "Risk assessed relative to alternatives in portfolio context; climate harm from fossil displacement and intermittency costs of renewables enter denominator.",
+        "authority_grounding": "Climate science, systems-level energy modeling (IPCC, IEA), comparative mortality studies (Markandya & Wilkinson 2007, Sovacool et al. 2016).",
+        "sibling_readings": [
+          "catastrophic_tail_reading",
+          "expected_value_reading"
+        ],
+        "expected_structural_delta": "Nuclear becomes actively beneficial constraint (prevents higher-harm alternatives); climate-affected populations enter victim set of non-deployment; beneficiary structure inverts (nuclear opponents now impose extraction on climate-vulnerable populations)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "catastrophic_tail_reading",
+        "reading_b": "expected_value_reading",
+        "basis": "Catastrophic-tail dominance axiom holds that certain classes of low-probability events cannot be aggregated into expected value due to non-linearities in harm (existential risk, irreversible contamination). Expected-value axiom holds that all probabilistic outcomes sum linearly. No single coherent framework can hold both: accepting tail dominance requires rejecting expected-value sufficiency for policy; accepting expected-value sufficiency requires rejecting categorical weighting of tail events."
+      },
+      {
+        "reading_a": "catastrophic_tail_reading",
+        "reading_b": "comparative_harm_reading",
+        "basis": "Tail-dominance axiom treats nuclear catastrophe as categorically unacceptable regardless of alternative harms. Comparative-harm axiom treats all energy-system harms as commensurable within a portfolio optimization. No single framework can hold both: comparative reasoning requires rejecting categorical inadmissibility; categorical inadmissibility requires rejecting harm-commensurability across energy sources."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "catastrophic_tail_reading",
+      "human_readable": "Catastrophic Tail Dominance Reading",
+      "structural_delta": "Low-probability catastrophic events categorically dominate risk calculus",
+      "primary_observable": "Policy decisions weighted by worst-case scenarios (reactor siting denials, phase-out mandates post-accident); rhetorical framing in anti-nuclear discourse (e.g., 'one Chernobyl is too many')",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "fossil_fuel_incumbents (accidental beneficiary via reduced nuclear competition); anti-nuclear movement organizations",
+      "victim": "climate-affected populations (higher emissions from alternative energy sources); future energy-poor populations (constrained low-carbon baseload)",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest ε bin; instantiates snare structure where catastrophic possibility blocks deployment regardless of aggregate benefit"
+    },
+    {
+      "claim_id": "expected_value_reading",
+      "human_readable": "Expected Value Dominance Reading",
+      "structural_delta": "Risk assessed via probability-weighted harm aggregation without categorical tail weighting",
+      "primary_observable": "Regulatory frameworks using probabilistic risk assessment (NRC Regulatory Guide 1.174); comparative mortality studies (deaths per TWh); technocratic policy discourse emphasizing aggregate outcomes",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "nuclear industry; climate mitigation actors requiring low-carbon baseload",
+      "victim": "populations proximate to nuclear facilities (bear localized risk for diffuse benefit); future generations (waste custody)",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structurally opposite ε and beneficiary/victim structure from catastrophic_tail_reading; instantiates coordination constraint rather than prohibition"
+    },
+    {
+      "claim_id": "comparative_harm_reading",
+      "human_readable": "Comparative Harm Portfolio Reading",
+      "structural_delta": "Risk assessed relative to alternative energy pathways including climate externalities and system-level effects",
+      "primary_observable": "Energy system models incorporating climate harm (IPCC scenarios); comparative LCA studies; policy discourse framing nuclear as climate solution (e.g., EU Taxonomy inclusion debates)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "climate-vulnerable populations (reduced emissions from portfolio optimization); nuclear industry (legitimacy via climate framing)",
+      "victim": "anti-nuclear movement (loss of moral high ground when climate harm of alternatives enters calculus); fossil fuel incumbents (nuclear becomes competitive on climate grounds)",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality (inverts beneficiary/victim structure of other readings); tangled_rope captures entanglement between nuclear risk, climate risk, and energy system constraints"
+    },
+    {
+      "claim_id": "regulatory_capture_opacity",
+      "human_readable": "Regulatory Capture Opacity (Authority Legitimacy Deficit)",
+      "structural_delta": "Industry influence on safety standards creates perceived/actual gap between technocratic risk assessment and public risk tolerance",
+      "primary_observable": "Revolving door employment patterns (NRC/industry); regulatory forbearance incidents (e.g., Fukushima TEPCO warnings ignored); public trust metrics in regulatory bodies",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "nuclear industry (reduced compliance costs from lax standards)",
+      "victim": "proximate populations (bear elevated risk from captured regulation); public (epistemic authority of regulatory frameworks undermined)",
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophic_tail_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-axis about authority legitimacy rather than kernel reading; feeds into catastrophic_tail_reading as justification but not structurally independent risk assessment"
+    },
+    {
+      "claim_id": "waste_temporal_discount",
+      "human_readable": "Long-Term Waste Custody (Temporal Discounting Conflict)",
+      "structural_delta": "High-level waste requires institutional custody over 10^4-10^5 year timescales; discount rate choice determines present constraint severity",
+      "primary_observable": "Repository licensing debates (Yucca Mountain, Onkalo); intergenerational equity discourse; discount rates in regulatory cost-benefit analysis",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "future generations (inherit waste custody burden with no benefit)",
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophic_tail_reading",
+        "expected_value_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal dimension affects all readings but does not instantiate independent constraint; captured within each reading's victim-set definition and ε assessment"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "catastrophic_tail_reading",
+      "kernel_id": "acceptable_risk_energy",
+      "reading_id": "catastrophic_tail_reading"
+    },
+    {
+      "claim_id": "expected_value_reading",
+      "kernel_id": "acceptable_risk_energy",
+      "reading_id": "expected_value_reading"
+    },
+    {
+      "claim_id": "comparative_harm_reading",
+      "kernel_id": "acceptable_risk_energy",
+      "reading_id": "comparative_harm_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "regulatory_capture_opacity",
+      "structural_delta": "Industry influence on safety standards creates authority legitimacy deficit",
+      "hypothesis": "snare",
+      "deferral_reason": "Meta-axis about regulatory authority rather than independent risk assessment; justifies catastrophic_tail_reading skepticism but not structurally independent constraint"
+    },
+    {
+      "claim_id": "waste_temporal_discount",
+      "structural_delta": "10^4-10^5 year waste custody timescales create intergenerational equity conflict",
+      "hypothesis": "mountain",
+      "deferral_reason": "Temporal dimension affects all readings' victim sets but does not instantiate independent constraint; discount rate choice embedded in each reading's ε assessment"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_stability",
+      "description": "Are these three readings stable under empirical update? Fukushima shifted German public from expected_value to catastrophic_tail reading overnight. Does accident frequency determine reading selection (empirical) or do readings pre-exist and select confirming evidence (interpretive commitment)?",
+      "source": "Commitment system drift status analysis"
+    },
+    {
+      "id": "omega_counterfactual_harm",
+      "description": "Does comparative_harm_reading's victim inversion (climate-affected populations as victims of non-deployment) hold if renewables + storage achieve full substitution? If so, the reading's extractiveness depends on technological trajectory not captured in current ε assessment.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to comparative_harm_reading"
+    },
+    {
+      "id": "omega_tail_definition",
+      "description": "Where is the threshold between tail-dominant and expected-value-aggregable events? Is 10^-5 per reactor-year (current core damage frequency) below the tail threshold or within it? The readings provide no principle for distinguishing.",
+      "source": "Independence testing between catastrophic_tail_reading and expected_value_reading"
+    },
+    {
+      "id": "omega_licensing_as_fourth_reading",
+      "description": "Possible fourth reading omitted: licensing_process_reading (risk assessed via procedural rigor of approval rather than outcome metrics). Would instantiate scaffold constraint (bureaucratic process as legitimacy source independent of risk quantification). Deferred due to 3-axis budget but may be structurally central in regulatory-state contexts.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition proceeded as specified: three readings identified, all structurally distinct (different observables, different ε bins, different beneficiary/victim structures), two axiom-contradiction pairs declared. Regulatory_capture_opacity and waste_temporal_discount correctly deferred as non-independent meta-axes."
+  },
+  "_seed_id": "nuclear_power_risk"
+}

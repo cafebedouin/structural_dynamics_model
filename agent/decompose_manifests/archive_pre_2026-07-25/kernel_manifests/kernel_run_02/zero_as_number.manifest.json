@@ -1,0 +1,244 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Mathematics / Philosophy of Mathematics / Conceptual History",
+  "family_id": "zero_western_mathematics_2026",
+  "topic_summary": "Analysis of zero's entry into Western mathematics as a number, examining the transition from Indian/Arabic numeral systems through Fibonacci's Liber Abaci (1202) to gradual European adoption. The core tension is philosophical: Parmenidean resistance to 'nothing' as existent versus practical utility in commerce and calculation. This is flagged as a contested kernel case—the seam between zero-as-placeholder and zero-as-number.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Brahmagupta (7th century Indian mathematician, established zero arithmetic rules)",
+      "Fibonacci/Leonardo of Pisa (1202 Liber Abaci author, Western transmitter)",
+      "Al-Khwārizmī (Arabic mathematician, transmission bridge)",
+      "Gerbert of Aurillac/Pope Sylvester II (980s early European transmitter)",
+      "Parmenides (5th century BC Greek philosopher, 'nothing cannot exist' doctrine)",
+      "Hindu-Arabic numeral system (positional notation with zero)"
+    ],
+    "key_tensions": [
+      "Parmenidean ontology (nothing cannot exist) vs zero-as-number (nothing as mathematical entity)",
+      "Greek geometric mathematics (magnitudes only) vs Indian arithmetic (operations on absence)",
+      "Roman numeral incumbency vs Arabic numeral efficiency (14th-15th century Italy)",
+      "Placeholder utility vs number status (notational convenience vs ontological commitment)"
+    ],
+    "key_mechanisms": [
+      "Translation transmission: al-Khwārizmī's Algoritmo de Numero Indorum (12th century Latin) as conduit",
+      "Commercial adoption: Italian merchant bookkeeping driving gradual acceptance despite resistance",
+      "Printing press diffusion: 15th century technology enabling spread beyond Northern Italy"
+    ],
+    "key_absences": [
+      "No discussion of negative numbers (which faced similar ontological resistance)",
+      "Limited treatment of zero's role in calculus/limits (17th century mathematical revolution)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Zero as a mathematical entity—the shared substrate all parties argue about, whether as placeholder, number, or ontological impossibility",
+    "authority_description": "Mathematical practice grounds interpretive legitimacy: what operations are valid, what entities are 'real', what counts as rigorous proof",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_drift_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "zero_mathematical_status",
+    "readings": [
+      {
+        "reading_id": "parmenidean_rejection",
+        "commitment": "Nothing cannot exist; zero is ontologically incoherent as a number",
+        "authority_grounding": "Greek philosophical ontology (Parmenides) + geometric mathematics (magnitudes must be positive)",
+        "sibling_readings": [
+          "placeholder_reading",
+          "number_reading"
+        ],
+        "expected_structural_delta": "Zero excluded from number domain; arithmetic operations undefined; victim set includes all who need positional notation efficiency"
+      },
+      {
+        "reading_id": "placeholder_reading",
+        "commitment": "Zero is a notational device for positional systems, not a number with arithmetic properties",
+        "authority_grounding": "Practical utility in calculation; minimalist ontological commitment",
+        "sibling_readings": [
+          "parmenidean_rejection",
+          "number_reading"
+        ],
+        "expected_structural_delta": "Zero permitted in notation but not in operations; intermediate extractiveness—gains efficiency, loses full arithmetic closure"
+      },
+      {
+        "reading_id": "number_reading",
+        "commitment": "Zero is a number with defined arithmetic operations (Brahmagupta's rules: a+0=a, a×0=0, etc.)",
+        "authority_grounding": "Indian mathematical practice; operational closure; algebraic necessity",
+        "sibling_readings": [
+          "parmenidean_rejection",
+          "placeholder_reading"
+        ],
+        "expected_structural_delta": "Zero fully integrated into number system; enables algebra, calculus; beneficiary set includes all mathematical practitioners"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "parmenidean_rejection",
+        "reading_b": "number_reading",
+        "basis": "Parmenidean axiom (nothing cannot exist as entity) and number-reading axiom (zero exists as mathematical object with properties) are mutually exclusive—no single coherent framework can hold both that zero is ontologically impossible and that zero is a legitimate number"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "parmenidean_rejection",
+      "human_readable": "Parmenidean Rejection (Ontological Impossibility of Nothing)",
+      "structural_delta": "Philosophical commitment that nothing cannot exist precludes zero from number domain",
+      "primary_observable": "Absence of zero in Greek mathematical texts; explicit philosophical arguments against void/nothing",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "mathematical_practitioners_needing_positional_notation",
+      "downstream_of": [],
+      "feeds_into": [
+        "placeholder_reading",
+        "number_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream philosophical constraint; highest structural distinctiveness; mountain providing ontological base"
+    },
+    {
+      "claim_id": "placeholder_reading",
+      "human_readable": "Placeholder Reading (Zero as Notational Device)",
+      "structural_delta": "Zero permitted in positional notation but not granted full number status with arithmetic operations",
+      "primary_observable": "Usage patterns in medieval European texts: zero in place-value but not in equations",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "commercial_calculators",
+      "victim": "algebraic_completeness",
+      "downstream_of": [
+        "parmenidean_rejection"
+      ],
+      "feeds_into": [
+        "number_reading"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Intermediate reading; tangled_rope capturing partial adoption; bridges rejection and full acceptance"
+    },
+    {
+      "claim_id": "number_reading",
+      "human_readable": "Number Reading (Zero as Arithmetic Entity)",
+      "structural_delta": "Zero fully integrated with defined operations (Brahmagupta's rules), enabling algebraic closure",
+      "primary_observable": "Presence of zero in arithmetic rules (a+0=a, a×0=0); use in equations and proofs",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "mathematical_practitioners",
+      "victim": null,
+      "downstream_of": [
+        "parmenidean_rejection",
+        "placeholder_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis; highest centrality; rope representing coordination achievement"
+    },
+    {
+      "claim_id": "commercial_utility_pressure",
+      "human_readable": "Commercial Utility Pressure (Merchant Bookkeeping Driving Adoption)",
+      "structural_delta": "Economic incentives for efficient calculation override philosophical resistance",
+      "primary_observable": "Adoption rates in Italian merchant records 14th-15th century; printing press diffusion",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "merchant_class",
+      "victim": "roman_numeral_incumbents",
+      "downstream_of": [],
+      "feeds_into": [
+        "placeholder_reading",
+        "number_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic mechanism captured indirectly via placeholder_reading adoption dynamics"
+    },
+    {
+      "claim_id": "transmission_pathway",
+      "human_readable": "Transmission Pathway (India→Arabic→Latin Translation Chain)",
+      "structural_delta": "Geographic and linguistic transmission route from Brahmagupta through al-Khwārizmī to Fibonacci",
+      "primary_observable": "Translation dates and manuscript evidence; Fibonacci's North Africa exposure",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "placeholder_reading",
+        "number_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical mechanism, not structural constraint; omega material on contingency"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "parmenidean_rejection",
+      "kernel_id": "zero_mathematical_status",
+      "reading_id": "parmenidean_rejection"
+    },
+    {
+      "claim_id": "placeholder_reading",
+      "kernel_id": "zero_mathematical_status",
+      "reading_id": "placeholder_reading"
+    },
+    {
+      "claim_id": "number_reading",
+      "kernel_id": "zero_mathematical_status",
+      "reading_id": "number_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "commercial_utility_pressure",
+      "structural_delta": "Economic incentives override philosophical resistance",
+      "hypothesis": "piton",
+      "deferral_reason": "Economic mechanism captured indirectly via placeholder_reading adoption dynamics; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "transmission_pathway",
+      "structural_delta": "India→Arabic→Latin translation chain",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Historical contingency rather than structural constraint; omega material on path dependency"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_negative_numbers",
+      "description": "Negative numbers faced parallel ontological resistance (debts vs magnitudes). Does the same kernel structure apply? If so, zero's acceptance may have scaffolded negative number adoption.",
+      "source": "Absence Inventory (Dark Matter Probe 2)"
+    },
+    {
+      "id": "omega_calculus_necessity",
+      "description": "Did calculus/limits (17th century) require zero-as-number, or could it function with placeholder reading? If necessity, then number_reading may be piton of later mathematical development rather than rope.",
+      "source": "Absence Inventory + Type Classification Uncertainty"
+    },
+    {
+      "id": "omega_transmission_contingency",
+      "description": "Was Fibonacci's transmission path contingent (could have failed), or was commercial pressure sufficient to guarantee eventual adoption via alternate routes? Affects whether transmission_pathway is scaffold or piton.",
+      "source": "Deferred axis transmission_pathway + Dark Matter Probe 3"
+    },
+    {
+      "id": "omega_placeholder_stability",
+      "description": "Could placeholder_reading have persisted indefinitely as stable equilibrium, or was drift to number_reading inevitable once positional notation adopted? Affects tangled_rope vs piton classification.",
+      "source": "Type Classification Uncertainty + Commitment System Drift Status"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied successfully. Three readings selected represent genuine structural alternatives with axiom contradiction between parmenidean_rejection and number_reading. Placeholder_reading serves as intermediate tangled_rope capturing partial adoption dynamics."
+  },
+  "_seed_id": "zero_as_number"
+}

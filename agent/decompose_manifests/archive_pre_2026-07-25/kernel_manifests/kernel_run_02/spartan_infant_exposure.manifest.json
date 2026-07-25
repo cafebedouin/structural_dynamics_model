@@ -1,0 +1,217 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Historical Ethics / Commitment Systems",
+  "family_id": "spartan_exposure_personhood_2026",
+  "topic_summary": "Analysis of Spartan infant exposure (apothetis) as a historical instantiation of a personhood-boundary kernel that admitted a hillside-exposure reading no longer accessible from modern moral frameworks. Tests whether moral possibility-space contraction represents reading-dropout (the reading became structurally unavailable) or window-shift (the reading persists but observers cannot reach it).",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Spartan gerousia (council of elders; adjudicators of infant fitness)",
+      "Apothetis (hillside exposure practice; operational mechanism of personhood-boundary enforcement)",
+      "Modern human rights framework (post-1948 universal personhood commitment)",
+      "Plutarch (primary source; Life of Lycurgus describes exposure practice)",
+      "Taygetus hillside (physical site of exposure; material substrate of the practice)"
+    ],
+    "key_tensions": [
+      "State eugenic authority vs parental autonomy (gerousia inspection vs family decision rights)",
+      "Collective fitness maximization vs individual infant moral status (polis survival vs infant life)",
+      "Historical moral pluralism vs modern universalism (exposure as legitimate reading vs categorical impermissibility)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "exposure_reading",
+      "human_readable": "Exposure Reading (Personhood Contingent on Fitness)",
+      "structural_delta": "Moral status contingent on demonstrated fitness; state authority to adjudicate personhood boundary at birth",
+      "primary_observable": "Gerousia inspection outcomes; exposure frequency; survival-to-agoge rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "spartan_military_state",
+      "victim": "exposed_infants",
+      "downstream_of": [
+        "polis_survival_constraint"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading instantiating the kernel; highest centrality as downstream synthesis of polis constraint"
+    },
+    {
+      "claim_id": "universal_personhood_reading",
+      "human_readable": "Universal Personhood Reading (Personhood at Birth)",
+      "structural_delta": "Moral status begins at birth regardless of fitness; state categorically prohibited from adjudicating personhood",
+      "primary_observable": "UDHR Article 3 enforcement; infanticide prosecution rates; neonatal care access",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rights_bearing_infants",
+      "victim": "state_eugenic_programs",
+      "downstream_of": [
+        "enlightenment_autonomy_commitment"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Axiomatically contradictory reading; modern window position; necessary for path-naturalization test"
+    },
+    {
+      "claim_id": "polis_survival_constraint",
+      "human_readable": "Polis Survival Constraint (Resource Scarcity + Military Threat)",
+      "structural_delta": "Structural resource scarcity combined with existential military threat requiring maximum warrior fitness",
+      "primary_observable": "Helot population ratio; Messenia revolt frequency; Spartan land-to-population ratio",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "exposure_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing material constraint base for exposure reading"
+    },
+    {
+      "claim_id": "enlightenment_autonomy_commitment",
+      "human_readable": "Enlightenment Autonomy Commitment (Individual as Rights-Bearer)",
+      "structural_delta": "Foundational commitment to individual as locus of moral status independent of collective utility",
+      "primary_observable": "Kantian categorical imperative adoption; liberal rights discourse prevalence",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "universal_personhood_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream to universal_personhood_reading but lower structural distinctiveness than polis_survival_constraint; captured via reading's authority grounding"
+    },
+    {
+      "claim_id": "path_naturalization_mechanism",
+      "human_readable": "Path Naturalization (Window-Shift vs Reading-Dropout)",
+      "structural_delta": "Whether exposure reading became structurally unavailable (dropout) or merely unreachable from modern observer position (window-shift)",
+      "primary_observable": "Coherence of exposure reading when reconstructed; availability of intermediate readings bridging Sparta to modernity",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "exposure_reading",
+        "universal_personhood_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-analytical scaffold; the generation of both readings will surface this question as emergent property rather than requiring separate axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "exposure_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "exposure_reading"
+    },
+    {
+      "claim_id": "universal_personhood_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "universal_personhood_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "polis_survival_constraint",
+      "structural_delta": "Resource scarcity + military threat requiring maximum warrior fitness",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain providing material base; will be referenced in exposure_reading's affects_constraint declarations rather than generated as separate story"
+    },
+    {
+      "claim_id": "enlightenment_autonomy_commitment",
+      "structural_delta": "Individual as locus of moral status independent of collective utility",
+      "hypothesis": "rope",
+      "deferral_reason": "Upstream to universal_personhood_reading; captured via reading's authority grounding field"
+    },
+    {
+      "claim_id": "path_naturalization_mechanism",
+      "structural_delta": "Window-shift vs reading-dropout distinction",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Meta-analytical question; emerges from comparing the two generated readings rather than requiring separate constraint story"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_plutarch_reliability",
+      "description": "Plutarch wrote 500+ years after Lycurgus. Is the exposure practice historical fact or ideological projection? If projection, the 'reading' may never have been instantiated.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F34 epistemic trespass concern"
+    },
+    {
+      "id": "omega_intermediate_readings",
+      "description": "Are there intermediate readings between exposure and universal personhood (e.g., Christian baptism-contingent personhood, Enlightenment rationality-contingent personhood) that would demonstrate gradual path rather than discontinuous jump?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + path_naturalization_mechanism deferral"
+    },
+    {
+      "id": "omega_reading_vs_practice",
+      "description": "Does the exposure reading require actual exposure practice, or can it persist as coherent moral framework without implementation? Distinction between normative commitment and enforcement mechanism.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis operates in normative-framework medium but kernel may be practice-dependent"
+    },
+    {
+      "id": "omega_helot_personhood",
+      "description": "Did Spartan framework assign different personhood boundaries to Spartan infants vs helot infants? If so, exposure reading may be ethnicity-contingent rather than fitness-contingent.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — helots absent from extraction despite being majority population"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model has limited training on ancient Spartan social practices beyond Plutarch's account. Polis_survival_constraint classified as mountain based on secondary literature consensus, but primary source base is thin. Generated omega_plutarch_reliability to bound this uncertainty. Research context indicates user awareness of this limitation."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The personhood-boundary kernel: the threshold at which a human organism acquires moral status requiring protection from state-sanctioned killing",
+    "authority_description": "In exposure reading: gerousia (council of elders) adjudicates fitness; authority grounded in polis survival mandate. In universal reading: no adjudication permitted; authority grounded in inherent human dignity (post-Enlightenment natural rights)",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Petrification (exposure reading) vs Founding Ambiguity Collapse (universal reading locked via UDHR)",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "exposure_reading",
+        "commitment": "Moral status contingent on demonstrated fitness; state authority to adjudicate personhood at birth",
+        "authority_grounding": "Polis survival mandate; gerousia as fitness adjudicators; collective utility maximization",
+        "sibling_readings": [
+          "universal_personhood_reading"
+        ],
+        "expected_structural_delta": "Infants enter victim set only after passing inspection; state holds legitimate authority to expose; high ε from beneficiary (military state) extracting from victim (unfit infants)"
+      },
+      {
+        "reading_id": "universal_personhood_reading",
+        "commitment": "Moral status begins at birth regardless of fitness; state categorically prohibited from adjudicating personhood",
+        "authority_grounding": "Enlightenment autonomy commitment; Kantian categorical imperative; UDHR Article 3 (right to life)",
+        "sibling_readings": [
+          "exposure_reading"
+        ],
+        "expected_structural_delta": "All infants enter victim set at birth; state exposure categorically impermissible; high ε from rights-bearing infants constraining state eugenic programs"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "exposure_reading",
+        "reading_b": "universal_personhood_reading",
+        "basis": "Exposure reading holds that personhood is contingent (fitness-dependent) and state-adjudicated; universal reading holds that personhood is inherent (birth-dependent) and non-adjudicable. No single coherent framework can hold both 'personhood is contingent on X' and 'personhood is categorically non-contingent' simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "spartan_infant_exposure"
+}

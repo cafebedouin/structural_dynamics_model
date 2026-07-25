@@ -1,0 +1,222 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Applied Ethics / Legal Philosophy / Political Economy",
+  "family_id": "animal_status_kernel_2026",
+  "topic_summary": "Analysis of three competing readings of the animal-status kernel: welfare-regulated-use (animals as sentient property requiring humane treatment), abolitionist (animals as rights-holders excluded from property status), and property (animals as pure economic resources without inherent moral consideration). The disagreement centers on whether animals enter the victim set at all, and if so, under what conditions.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Animals (contested moral/legal status)",
+      "Welfare regulatory frameworks (USDA, EU animal welfare directives)",
+      "Abolitionist movement (rights-based advocacy, e.g., Nonhuman Rights Project)",
+      "Industrial animal agriculture (economic beneficiary of property status)",
+      "Legal personhood doctrine (boundary mechanism for rights attribution)",
+      "Consumer demand structures (economic enforcement of status quo)"
+    ],
+    "key_tensions": [
+      "Sentience recognition vs property classification (welfare vs property readings)",
+      "Rights attribution vs use permission (abolitionist vs welfare readings)",
+      "Moral consideration vs economic utility (all three readings in conflict)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that animal status must be adjudicated through some fixed reference point determining moral/legal standing",
+    "authority_description": "Legal systems claim interpretive legitimacy through constitutional personhood boundaries, property law traditions, and legislative welfare standards",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "animal_moral_status",
+    "readings": [
+      {
+        "reading_id": "welfare_regulated_use",
+        "commitment": "Animals are sentient beings requiring humane treatment within permissible use frameworks",
+        "authority_grounding": "Legislative welfare standards + veterinary expertise + utilitarian harm-minimization",
+        "sibling_readings": [
+          "abolitionist_rights",
+          "pure_property"
+        ],
+        "expected_structural_delta": "Animals enter victim set conditionally (suffering matters, death does not); high ε from enforcement gaps; beneficiary = regulated industries retaining use rights"
+      },
+      {
+        "reading_id": "abolitionist_rights",
+        "commitment": "Animals are rights-holders with inherent interests incompatible with property status",
+        "authority_grounding": "Rights-based moral philosophy + expanding personhood precedents + sentience science",
+        "sibling_readings": [
+          "welfare_regulated_use",
+          "pure_property"
+        ],
+        "expected_structural_delta": "Animals fully in victim set (use itself is violation); very high ε from legal/economic resistance; victim = all animals in human systems"
+      },
+      {
+        "reading_id": "pure_property",
+        "commitment": "Animals are economic resources without independent moral standing",
+        "authority_grounding": "Property law tradition + agricultural/research industry authority + anthropocentric utility",
+        "sibling_readings": [
+          "welfare_regulated_use",
+          "abolitionist_rights"
+        ],
+        "expected_structural_delta": "Animals outside victim set entirely; low ε (status quo enforcement); beneficiary = industries maximizing animal utility extraction"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "welfare_regulated_use",
+      "human_readable": "Welfare-Regulated Use (Sentient Property Framework)",
+      "structural_delta": "Animals classified as sentient property requiring humane treatment standards within permissible use",
+      "primary_observable": "Welfare legislation coverage; enforcement rates; permitted vs prohibited practices",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "regulated_animal_industries",
+      "victim": "animals_experiencing_substandard_conditions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant institutional reading; moderate ε from enforcement gaps; tangled_rope structure where welfare claims legitimize continued use"
+    },
+    {
+      "claim_id": "abolitionist_rights",
+      "human_readable": "Abolitionist Rights (Personhood Extension Framework)",
+      "structural_delta": "Animals as rights-holders whose interests are incompatible with property status or instrumental use",
+      "primary_observable": "Legal personhood cases; abolitionist movement growth; use-prohibition advocacy success",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "all_animals_in_human_systems",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct victim set (all animals vs conditional); high ε from legal/economic resistance; snare where rights claims face systemic blocking"
+    },
+    {
+      "claim_id": "pure_property",
+      "human_readable": "Pure Property (Anthropocentric Utility Framework)",
+      "structural_delta": "Animals as economic resources without independent moral consideration beyond human utility",
+      "primary_observable": "Property law application; industry self-regulation dominance; absence of welfare constraints",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "unregulated_animal_industries",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Baseline reading making other two visible by contrast; low ε (status quo default); rope structure of pure coordination around property norms"
+    },
+    {
+      "claim_id": "sentience_science_drift",
+      "human_readable": "Sentience Science Drift (Expanding Cognitive Evidence)",
+      "structural_delta": "Accumulating evidence of animal cognition/sentience creating pressure on property classification",
+      "primary_observable": "Peer-reviewed sentience studies; Cambridge Declaration on Consciousness citations; legal brief usage",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "welfare_regulated_use",
+        "abolitionist_rights"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain feeding both welfare and abolitionist readings but lower structural distinctiveness than the readings themselves"
+    },
+    {
+      "claim_id": "economic_lock_in",
+      "human_readable": "Economic Lock-In (Industrial Agriculture Dependence)",
+      "structural_delta": "Structural dependence on animal agriculture for employment, food supply, and GDP",
+      "primary_observable": "Animal agriculture GDP share; employment figures; supply chain integration depth",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "welfare_regulated_use",
+        "pure_property"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain constraining both welfare and property readings but captured indirectly through beneficiary analysis in selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "welfare_regulated_use",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "welfare_regulated_use"
+    },
+    {
+      "claim_id": "abolitionist_rights",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "abolitionist_rights"
+    },
+    {
+      "claim_id": "pure_property",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "pure_property"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "sentience_science_drift",
+      "structural_delta": "Accumulating cognitive/sentience evidence pressuring property classification",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain feeding multiple readings but lower structural distinctiveness than the readings themselves; captured as authority-grounding element in abolitionist and welfare readings"
+    },
+    {
+      "claim_id": "economic_lock_in",
+      "structural_delta": "Structural dependence on animal agriculture for employment and GDP",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain constraining welfare and property readings but captured indirectly through beneficiary analysis in selected readings; omega material for economic transition costs"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_personhood_boundary_instability",
+      "description": "If sentience becomes the personhood criterion (abolitionist reading), does the boundary stabilize at mammals, or cascade to cephalopods, insects, AI? Boundary-drawing authority becomes contested.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + abolitionist reading authority grounding"
+    },
+    {
+      "id": "omega_welfare_enforcement_gap",
+      "description": "Welfare reading claims moderate ε from enforcement gaps, but is the gap structural (under-resourced agencies) or intentional (regulatory capture)? If intentional, reclassify as snare rather than tangled_rope.",
+      "source": "F03 (Hasty Generalization) + welfare reading beneficiary analysis"
+    },
+    {
+      "id": "omega_property_reading_coherence",
+      "description": "Pure property reading may be analytically useful baseline but empirically rare in explicit form—most jurisdictions adopt welfare reading. Is pure property a real reading or a theoretical limit case?",
+      "source": "Dark Matter Probe 1 (Operational Medium) + property reading selection"
+    },
+    {
+      "id": "omega_transition_path_dependency",
+      "description": "Economic lock-in (deferred mountain) may determine which reading is institutionally viable regardless of moral arguments. If transition costs exceed political capacity, welfare reading becomes permanent equilibrium.",
+      "source": "Deferred axis economic_lock_in + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_victim_set_measurement",
+      "description": "Abolitionist reading places all animals in victim set, but 'all animals in human systems' is observationally ambiguous (wild animals in human-altered ecosystems? Insects in agricultural monocultures?). Boundary specification required.",
+      "source": "Primary observable specification for abolitionist_rights reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: welfare_regulated_use classified as tangled_rope but enforcement gap may be intentional regulatory capture (snare) rather than structural under-resourcing. Generated omega_welfare_enforcement_gap to bound this uncertainty. Also: pure_property reading may be theoretical limit case rather than empirically instantiated reading (omega_property_reading_coherence)."
+  },
+  "_seed_id": "animal_rights_kernel"
+}

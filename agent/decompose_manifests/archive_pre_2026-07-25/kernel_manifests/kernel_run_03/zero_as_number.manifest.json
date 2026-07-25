@@ -1,0 +1,199 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Mathematics / Philosophy of Mathematics / Epistemology",
+  "family_id": "zero_western_mathematics_2026",
+  "topic_summary": "Analysis of zero's entry into Western mathematics as a number (5th-13th centuries), examining the transformation from zero-as-placeholder to zero-as-mathematical-entity. The case centers on whether this represents a contested kernel (different readings of what zero IS) or a single constraint observed from different positions (resistance to accepting what zero already was).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aryabhata (5th c. Indian mathematician, formalized zero as mathematical entity)",
+      "Brahmagupta (7th c., developed operational rules for zero)",
+      "Al-Khwārizmī (9th c. Persian mathematician, transmitted Hindu zero to Islamic world)",
+      "Fibonacci/Leonardo of Pisa (c.1170-1250, introduced Hindu-Arabic system to Europe)",
+      "Parmenides/Aristotelian tradition (Greek philosophical framework rejecting nothingness)",
+      "European Christian institutions (monasteries, Exchequer, resistant to adoption)"
+    ],
+    "key_claims": [
+      "Indian shift: zero from placeholder to number with mathematical properties (5th-7th c.)",
+      "Parmenidean principle: 'nothing cannot exist' blocked Western formalization",
+      "Christian resistance: zero as satanic because God is in all that exists",
+      "Institutional lag: merchants adopted 13th c., monasteries/banks resisted until 16th c.",
+      "Conceptual rupture: required abandoning 2000-year Aristotelian foundation"
+    ],
+    "key_tensions": [
+      "Placeholder vs number (notational convenience vs mathematical quantity)",
+      "Greek ontology vs Indian ontology (being-only vs nothingness-as-entity)",
+      "Merchant pragmatism vs institutional conservatism (abacus users vs Roman numeral adherents)",
+      "Foreign origin vs familiar systems (Hindu-Arabic distrust vs Roman numeral comfort)"
+    ],
+    "key_mechanisms": [
+      "Transmission chain: India → Islamic world (9th c.) → Europe (12th c.)",
+      "Dual adoption pattern: merchants early (13th c.), institutions late (16th c.)",
+      "Philosophical gatekeeping: Aristotelian framework as barrier to formalization"
+    ],
+    "key_absences": [
+      "No discussion of what mathematical operations became possible with zero-as-number that were impossible with zero-as-placeholder (division, algebra)",
+      "No examination of whether Indian ontology had a different conception of nothingness that enabled the shift"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The ontological status of zero: what kind of thing zero IS in mathematical practice",
+    "authority_description": "Mathematical practice grounded in philosophical commitments about being/nothingness; institutional authority (Church, universities) interpreting legitimacy of mathematical entities",
+    "drift_status": "absent",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": false,
+    "collapse_analysis": "Initial hypothesis: zero-as-placeholder vs zero-as-number as two readings of the zero kernel. Upon decomposition, these collapse into a SINGLE constraint (the ontological barrier to formalizing nothingness) observed from different temporal/cultural positions. The 'resistance' is not to different interpretations of what zero means—it is resistance to accepting zero's mathematical properties at all. Indian mathematicians did not hold a different READING of zero; they held a different ontological framework that made zero-as-number thinkable. European resistance was not 'we interpret zero differently'; it was 'zero violates our ontology of being.' This is observer-position variance on one constraint (the Parmenidean barrier), not multiple readings of a shared kernel. The seam is between what-was-not-yet-thinkable and what-became-thinkable, not between competing interpretations of a shared commitment.",
+    "structural_implication": "Decompose into three flat axes: (1) the ontological barrier itself (mountain), (2) the transmission mechanism that bypassed it (rope), (3) the institutional lag as extraction (tangled_rope). No readings array needed."
+  },
+  "axes": [
+    {
+      "claim_id": "parmenidean_ontological_barrier",
+      "human_readable": "Parmenidean Ontological Barrier (Nothingness Cannot Exist)",
+      "structural_delta": "Philosophical commitment that 'nothing cannot exist' blocks formalization of zero as mathematical entity with properties",
+      "primary_observable": "Presence/absence of zero in formal mathematical systems; explicit philosophical rejections (Aristotle on void, Christian 'satanic' framing)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_adoption_lag",
+        "transmission_bypass"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain; the foundational constraint that all other dynamics respond to"
+    },
+    {
+      "claim_id": "transmission_bypass",
+      "human_readable": "Transmission Bypass (Merchant Pragmatism vs Philosophical Gatekeeping)",
+      "structural_delta": "Practical adoption by merchants (abacus users, trade calculators) bypassed philosophical gatekeeping by monasteries/universities",
+      "primary_observable": "Adoption timeline divergence: merchants 13th c. vs institutions 16th c.; Fibonacci's Liber Abaci as merchant-facing text",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "parmenidean_ontological_barrier"
+      ],
+      "feeds_into": [
+        "institutional_adoption_lag"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Coordination mechanism that routed around the mountain; distinct observable from barrier and lag"
+    },
+    {
+      "claim_id": "institutional_adoption_lag",
+      "human_readable": "Institutional Adoption Lag (Conservatism as Extraction)",
+      "structural_delta": "Monasteries, universities, Exchequer delayed adoption 3+ centuries despite merchant proof-of-concept, extracting cognitive/computational costs from society",
+      "primary_observable": "Institutional adoption dates (Medici bank, English Exchequer 16th c.) vs merchant adoption (13th c.); continued use of Roman numerals in official records",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_scribes",
+      "victim": "merchants_requiring_institutional_interface",
+      "downstream_of": [
+        "parmenidean_ontological_barrier",
+        "transmission_bypass"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node; extraction structure visible"
+    },
+    {
+      "claim_id": "operational_expansion",
+      "human_readable": "Operational Expansion (Zero Enables New Mathematics)",
+      "structural_delta": "Zero-as-number unlocked algebraic operations (subtraction yielding negative results, division by non-zero, polynomial roots) impossible with placeholder-only zero",
+      "primary_observable": "Emergence of algebra, negative numbers, polynomial solutions in post-zero mathematics vs pre-zero limitations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "parmenidean_ontological_barrier"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold with low centrality; consequence rather than driver of adoption dynamics"
+    },
+    {
+      "claim_id": "indian_ontological_framework",
+      "human_readable": "Indian Ontological Framework (Śūnyatā and Mathematical Nothingness)",
+      "structural_delta": "Buddhist/Hindu concept of śūnyatā (emptiness) as positive philosophical category enabled treating nothingness as entity with properties",
+      "primary_observable": "Presence of śūnyatā in Indian philosophical texts; Brahmagupta's rules treating zero as number vs Greek absence of parallel concept",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "parmenidean_ontological_barrier"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but outside Western mathematics scope; relevant as omega for ontological comparison"
+    }
+  ],
+  "generation_sequence": [
+    "parmenidean_ontological_barrier",
+    "transmission_bypass",
+    "institutional_adoption_lag"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "operational_expansion",
+      "structural_delta": "Zero-as-number unlocked algebraic operations impossible with placeholder-only zero",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Low centrality; consequence of adoption rather than driver; captured implicitly in barrier-bypass-lag sequence"
+    },
+    {
+      "claim_id": "indian_ontological_framework",
+      "structural_delta": "Śūnyatā concept enabled treating nothingness as entity with properties",
+      "hypothesis": "mountain",
+      "deferral_reason": "Outside Western mathematics scope; relevant as omega for cross-cultural ontological comparison"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Is this a contested kernel (different readings of zero) or observer variance on one constraint? Analysis: collapses to single constraint. Indian vs European positions are not competing interpretations of shared commitment—they are different ontological frameworks (one makes zero thinkable, one blocks it). The 'seam' is temporal/cultural, not interpretive. No readings array needed.",
+      "source": "§1.3-K kernel/reading decomposition test"
+    },
+    {
+      "id": "omega_sunyata_causality",
+      "description": "Did śūnyatā (Buddhist emptiness concept) causally enable Indian formalization of zero-as-number, or is the correlation coincidental? If causal, the Parmenidean barrier is not a universal cognitive constraint but a culture-specific one, downgrading it from mountain to rope.",
+      "source": "Deferred axis indian_ontological_framework + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_operational_necessity",
+      "description": "Was zero-as-number adopted because it enabled new mathematics (algebra, negatives), or did new mathematics emerge because zero was available? Causal direction unclear. If necessity-driven, institutional lag is higher-epsilon extraction than currently classified.",
+      "source": "Deferred axis operational_expansion + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_christian_resistance_depth",
+      "description": "Was Christian 'satanic' framing of zero genuine theological opposition or post-hoc rationalization of Aristotelian conservatism? If rationalization, religious resistance is downstream of philosophical barrier, not independent tension.",
+      "source": "Extraction claim 'Christian resistance: zero as satanic' + independence testing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: parmenidean_ontological_barrier classified as mountain (universal cognitive constraint) but may be culture-specific rope if śūnyatā causality holds. Generated omega_sunyata_causality to bound this uncertainty. Also: user flagged topic as 'cleanest non-political instance of the seam' but kernel/reading test shows collapse—the seam is between thinkable/unthinkable, not between competing readings. Noted in omega_kernel_collapse."
+  },
+  "_seed_id": "zero_as_number"
+}

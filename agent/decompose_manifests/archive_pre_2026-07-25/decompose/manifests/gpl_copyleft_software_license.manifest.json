@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Software Licensing / Intellectual Property / Open Source Governance",
+  "family_id": "gpl_copyleft_obligations_2026",
+  "topic_summary": "Analysis of the GNU General Public License (GPL) as a contested kernel where different parties read the same license text to instantiate structurally different constraints. The strong-copyleft reading treats any combined or dynamically linked work as requiring GPL licensing, grounding authority in free-software ideology and strict textualism. The narrow-scope reading constrains only direct derivative works, not aggregation or certain linking forms, grounding authority in pragmatic industry practice. These readings emit different beneficiary/victim structures and constraint types.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "GNU General Public License text (fixed kernel, GPL v2/v3 text as stabilized commitment)",
+      "Free Software Foundation (FSF) (interpretive authority for strong-copyleft reading)",
+      "Software Freedom Law Center / industry legal practice (interpretive authority for narrow-scope reading)",
+      "Free-software communities and end users (beneficiaries under strong reading)",
+      "Proprietary software vendors and platform providers (beneficiaries under narrow reading)",
+      "Copyleft advocates and downstream users expecting universal code-sharing (victims under narrow reading)"
+    ],
+    "key_tensions": [
+      "Viral copyleft enforcement vs commercial integration flexibility (strong vs narrow readings)",
+      "Ideological commitment to software freedom vs pragmatic industry adoption (FSF vs industry practice)"
+    ],
+    "key_mechanisms": [
+      "GPL Section 2(b) derivative work clause (kernel clause subject to competing interpretations)",
+      "Dynamic linking boundary determination (technical mechanism where readings diverge structurally)",
+      "License compatibility doctrine (mechanism affected by which reading is instantiated)"
+    ],
+    "key_absences": [
+      "Enforcement case law establishing precedent (GPL rarely litigated to final judgment; readings persist without authoritative judicial resolution)",
+      "Technical specification of 'combined work' (kernel deliberately ambiguous on linking boundaries)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strong_copyleft_reading",
+      "human_readable": "Strong-Copyleft / Viral Reading",
+      "structural_delta": "Any combined or dynamically linked work must be GPL; maximizes structural guarantee of source-code access",
+      "primary_observable": "FSF FAQ interpretations; GPL violation claims against dynamic linking without source release",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "free_software_communities",
+      "victim": "proprietary_vendors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates high-epsilon snare constraint with distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "narrow_scope_reading",
+      "human_readable": "Narrow-Scope / Aggregation Reading",
+      "structural_delta": "GPL constrains only direct derivative works, not mere aggregation or certain linking forms; preserves proprietary layer flexibility",
+      "primary_observable": "Industry practice allowing GPL component integration with proprietary code; absence of enforcement against dynamic linking patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "commercial_software_firms",
+      "victim": "copyleft_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates moderate-epsilon rope with inverted beneficiary/victim structure"
+    },
+    {
+      "claim_id": "enforcement_vacuum_reading",
+      "human_readable": "Enforcement Vacuum / Pluralistic Coexistence Reading",
+      "structural_delta": "Absence of definitive case law allows both readings to persist simultaneously as licensed plurality; constraint depends on which interpretive community has enforcement capacity in specific contexts",
+      "primary_observable": "Settlement patterns in GPL disputes; geographic/industry variation in which reading dominates",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "pragmatic_adopters",
+      "victim": "clarity_seeking_adopters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Meta-reading capturing the structural consequence of kernel contestation; documents how licensed plurality operates in practice"
+    },
+    {
+      "claim_id": "tivoization_boundary",
+      "human_readable": "Tivoization Boundary (GPLv3 Hardware Restriction Clause)",
+      "structural_delta": "GPLv3 extends copyleft to require user-modifiable binaries on locked hardware; GPLv2 does not",
+      "primary_observable": "GPLv2 vs GPLv3 adoption rates in embedded systems; hardware vendor license choices",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "end_users",
+      "victim": "hardware_vendors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: orthogonal kernel dimension (v2 vs v3 text difference) rather than competing reading of same kernel clause"
+    },
+    {
+      "claim_id": "patent_retaliation_clause",
+      "human_readable": "Patent Retaliation Clause (GPLv3 Patent Grant)",
+      "structural_delta": "GPLv3 includes explicit patent grant and retaliation provisions; GPLv2 relies on implicit patent exhaustion",
+      "primary_observable": "Patent litigation patterns against GPL software; GPLv3 adoption in patent-sensitive industries",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "patent_defensive_users",
+      "victim": "patent_aggressive_firms",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: secondary feature of v3 revision, not central to copyleft scope contestation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strong_copyleft_reading",
+      "kernel_id": "gpl_copyleft_scope",
+      "reading_id": "strong_copyleft_reading"
+    },
+    {
+      "claim_id": "narrow_scope_reading",
+      "kernel_id": "gpl_copyleft_scope",
+      "reading_id": "narrow_scope_reading"
+    },
+    {
+      "claim_id": "enforcement_vacuum_reading",
+      "kernel_id": "gpl_copyleft_scope",
+      "reading_id": "enforcement_vacuum_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "tivoization_boundary",
+      "structural_delta": "GPLv3 extends copyleft to require user-modifiable binaries on locked hardware",
+      "hypothesis": "rope",
+      "deferral_reason": "Orthogonal kernel dimension (v2 vs v3 text difference) rather than competing reading of same copyleft scope clause; secondary to primary contestation"
+    },
+    {
+      "claim_id": "patent_retaliation_clause",
+      "structural_delta": "GPLv3 includes explicit patent grant and retaliation provisions",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Secondary v3 feature; lower centrality; not core to copyleft obligation scope contestation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_judicial_resolution",
+      "description": "Would a definitive court ruling on dynamic linking collapse the kernel? Or would losing party reframe around new ambiguity (e.g., plugin architectures, microservices boundaries)? Enforcement vacuum may be structural feature preserving dual-reading coexistence.",
+      "source": "Absence Inventory (key_absences: enforcement case law)"
+    },
+    {
+      "id": "omega_technical_determinism",
+      "description": "Do technical architectures (microkernel vs monolithic, RPC vs shared memory) map deterministically to legal derivative-work boundaries? Or is technical structure post-hoc rationalization of prior interpretive commitment? If former, readings may converge with architecture standardization.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_lgpl_escape_valve",
+      "description": "Does LGPL (Lesser GPL allowing proprietary dynamic linking) function as institutionalized narrow-scope reading, draining pressure from GPL scope contestation? If so, GPL contestation may be vestigial, with real conflict displaced to LGPL adoption decisions.",
+      "source": "Beneficiary Scan (Probe 3) + Absence Inventory"
+    },
+    {
+      "id": "omega_proprietary_relicensing",
+      "description": "Do dual-licensing models (GPL for community, proprietary for commercial) bypass the kernel entirely? If copyright holder can unilaterally relicense, contestation becomes economic negotiation rather than interpretive struggle. Kernel may be weakly binding on actual software production.",
+      "source": "Dark Matter Probe 2 (Absence as Figure)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic is genuine contested kernel with structurally distinct readings. Three readings selected capture upstream/downstream topology: two competing interpretations plus meta-reading of their coexistence. Deferred axes (tivoization, patent) are orthogonal GPLv3 features rather than competing GPL scope readings."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The GNU General Public License text (GPL v2/v3) as fixed software license defining copyleft obligations, particularly Section 2(b) derivative work clause and dynamic linking boundaries",
+    "authority_description": "Interpretive legitimacy contested between FSF (ideological/textualist authority grounded in free-software movement authorship) and industry legal practice (pragmatic authority grounded in settlement patterns and adoption incentives)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_ossification",
+    "is_contested_kernel": true,
+    "kernel_id": "gpl_copyleft_scope",
+    "readings": [
+      {
+        "reading_id": "strong_copyleft_reading",
+        "commitment": "GPL Section 2(b) requires any combined or dynamically linked work to be GPL-licensed; derivative work boundary extends to all forms of code coupling",
+        "authority_grounding": "FSF as license author; free-software ideology prioritizing maximum user freedom; strict textualist interpretation",
+        "sibling_readings": [
+          "narrow_scope_reading",
+          "enforcement_vacuum_reading"
+        ],
+        "expected_structural_delta": "High-epsilon snare: proprietary vendors structurally excluded from GPL component integration without full source release; free-software communities gain structural guarantee of code availability; enforcement threats credible against dynamic linking patterns"
+      },
+      {
+        "reading_id": "narrow_scope_reading",
+        "commitment": "GPL Section 2(b) constrains only direct derivative works, not mere aggregation, plugin architectures, or certain dynamic linking forms; derivative work boundary follows traditional copyright doctrine",
+        "authority_grounding": "Industry legal practice; pragmatic adoption incentives; permissive interpretation enabling commercial GPL component use",
+        "sibling_readings": [
+          "strong_copyleft_reading",
+          "enforcement_vacuum_reading"
+        ],
+        "expected_structural_delta": "Moderate-epsilon rope: commercial firms retain flexibility to integrate GPL components with proprietary layers; coordination mechanism for mixed codebases; copyleft advocates' expectations of universal code-sharing structurally weakened; enforcement against dynamic linking patterns rare"
+      },
+      {
+        "reading_id": "enforcement_vacuum_reading",
+        "commitment": "Absence of definitive judicial precedent allows both readings to coexist as licensed plurality; actual constraint depends on which interpretive community has enforcement capacity in specific context (FSF-aligned projects vs industry-dominated ecosystems)",
+        "authority_grounding": "Settlement-driven dispute resolution; geographic and industry variation in enforcement norms; structural ambiguity preservation",
+        "sibling_readings": [
+          "strong_copyleft_reading",
+          "narrow_scope_reading"
+        ],
+        "expected_structural_delta": "Low-epsilon tangled_rope: constraint uncertainty itself becomes structural feature; adopters navigate interpretive pluralism through risk assessment and community alignment; clarity-seeking adopters face elevated transaction costs; pragmatic adopters exploit ambiguity for flexibility"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strong_copyleft_reading",
+        "reading_b": "narrow_scope_reading",
+        "basis": "No single coherent framework can hold both 'dynamic linking creates derivative work requiring GPL' and 'dynamic linking is mere aggregation not requiring GPL' as simultaneously true for the same technical configuration. One axiom's truth requires the other's falsity."
+      }
+    ]
+  },
+  "_seed_id": "gpl_copyleft_software_license"
+}

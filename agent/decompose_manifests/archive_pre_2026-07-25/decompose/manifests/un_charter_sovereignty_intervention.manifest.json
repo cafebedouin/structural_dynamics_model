@@ -1,0 +1,207 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Political Philosophy / Security Studies",
+  "family_id": "un_charter_sovereignty_intervention",
+  "topic_summary": "Analysis of the contested interpretation of UN Charter provisions governing state sovereignty versus humanitarian intervention. The Charter's Article 2(7) non-intervention principle and Chapter VII enforcement powers create a structural tension between sovereignty-as-shield and human-rights-as-override, manifesting in divergent readings that produce incompatible constraints on legitimate use of force.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "UN Charter Article 2(7) (non-intervention in domestic jurisdiction)",
+      "UN Charter Chapter VII (Security Council enforcement powers)",
+      "Post-colonial states (sovereignty-first beneficiaries)",
+      "Populations under atrocity (R2P beneficiaries)",
+      "P5 Security Council members (veto-wielding gatekeepers)",
+      "International Criminal Court (accountability mechanism)"
+    ],
+    "key_tensions": [
+      "State sovereignty as inviolable vs humanitarian obligations as override",
+      "Territorial integrity norm vs mass atrocity prevention imperative"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_first_reading",
+      "human_readable": "Sovereignty-First Reading (Non-Intervention as Primary)",
+      "structural_delta": "State sovereignty treated as foundational; intervention requires explicit consent or Chapter VII authorization only for inter-state aggression",
+      "primary_observable": "Security Council voting patterns on intervention resolutions; state invocations of Article 2(7)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "post_colonial_states_authoritarian_regimes",
+      "victim": "populations_under_domestic_atrocity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates distinct constraint structure grounding intervention illegitimacy"
+    },
+    {
+      "claim_id": "r2p_reading",
+      "human_readable": "Responsibility to Protect Reading (Human Rights as Override)",
+      "structural_delta": "State sovereignty conditional on protecting populations; systematic atrocity triggers international intervention authority",
+      "primary_observable": "R2P doctrine invocations; humanitarian intervention precedents (Libya 2011, Kosovo 1999)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "persecuted_populations_humanitarian_coalitions",
+      "victim": "targeted_states_sovereignty_norm",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates incompatible constraint legitimizing intervention"
+    },
+    {
+      "claim_id": "p5_veto_gatekeeper",
+      "human_readable": "P5 Veto as Gatekeeper Structure",
+      "structural_delta": "Security Council veto concentrates intervention authorization in five permanent members",
+      "primary_observable": "Veto frequency on humanitarian intervention resolutions; P5 vs non-P5 intervention patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "p5_strategic_interests",
+      "victim": "non_p5_intervention_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Authority structure axis; mediates kernel contest through institutional chokepoint"
+    },
+    {
+      "claim_id": "unilateral_bypass_scaffold",
+      "human_readable": "Unilateral Intervention as Bypass Scaffold",
+      "structural_delta": "States invoke humanitarian justification to bypass Security Council when P5 veto blocks authorization",
+      "primary_observable": "Frequency of unilateral humanitarian interventions; NATO Kosovo precedent invocations",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "powerful_states_with_intervention_capacity",
+      "victim": "weaker_states_lacking_veto_protection",
+      "downstream_of": [
+        "p5_veto_gatekeeper"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream bypass mechanism with lower structural centrality than authority gatekeeper"
+    },
+    {
+      "claim_id": "icc_accountability_piton",
+      "human_readable": "ICC Accountability as Atrophied Piton",
+      "structural_delta": "International Criminal Court jurisdiction depends on state consent or Security Council referral",
+      "primary_observable": "ICC case referral sources; jurisdictional challenges by non-signatories",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "atrocity_victims_in_non_signatory_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: accountability mechanism with limited structural independence from kernel contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_first_reading",
+      "kernel_id": "article_2_7_chapter_vii_tension",
+      "reading_id": "sovereignty_first_reading"
+    },
+    {
+      "claim_id": "r2p_reading",
+      "kernel_id": "article_2_7_chapter_vii_tension",
+      "reading_id": "r2p_reading"
+    },
+    {
+      "claim_id": "p5_veto_gatekeeper",
+      "kernel_id": "article_2_7_chapter_vii_tension",
+      "reading_id": "p5_veto_gatekeeper"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "unilateral_bypass_scaffold",
+      "structural_delta": "Unilateral humanitarian intervention as Security Council bypass",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream mechanism with lower centrality than P5 veto gatekeeper; captured via authority structure analysis"
+    },
+    {
+      "claim_id": "icc_accountability_piton",
+      "structural_delta": "ICC jurisdiction depends on state consent or UNSC referral",
+      "hypothesis": "piton",
+      "deferral_reason": "Accountability mechanism with limited structural independence; omega material on enforcement gap"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kosovo_precedent_status",
+      "description": "Is NATO's 1999 Kosovo intervention a legitimate R2P precedent or illegal aggression? Classification depends on which reading controls. If sovereignty-first, it's a rule violation. If R2P, it's emergent custom.",
+      "source": "Kernel contest boundary case; deferred axis unilateral_bypass_scaffold"
+    },
+    {
+      "id": "omega_regional_organization_authority",
+      "description": "Can regional organizations (AU, ECOWAS) authorize intervention without UNSC approval? African Union practice suggests emerging norm, but Charter text unclear. Potential third reading.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); not extracted as entity"
+    },
+    {
+      "id": "omega_atrocity_threshold",
+      "description": "What atrocity scale triggers R2P? Genocide clearly qualifies, but systematic repression boundary contested. Threshold ambiguity serves both readings strategically.",
+      "source": "Primary observable measurement gap in r2p_reading"
+    },
+    {
+      "id": "omega_veto_reform_counterfactual",
+      "description": "Would removing P5 veto on humanitarian resolutions resolve kernel contest or merely shift authority bottleneck? May reveal whether veto is constitutional structure or contingent design.",
+      "source": "Counterfactual probe on p5_veto_gatekeeper snare"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: sovereignty-first and R2P readings produce genuinely incompatible constraints (intervention illegitimate vs legitimate under atrocity conditions). P5 veto structure selected as third axis because it mediates kernel contest institutionally. Readings meet independence test: different beneficiary/victim structures, different epsilon sources (sovereignty-shield vs human-rights-override), different observables."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "UN Charter Article 2(7) non-intervention principle + Chapter VII enforcement powers create structural ambiguity about conditions legitimizing coercive intervention in sovereign states",
+    "authority_description": "Security Council holds formal interpretive authority through Chapter VII resolutions; P5 veto concentrates authorization power; competing doctrinal schools (sovereignty-first vs R2P) claim authoritative interpretation",
+    "drift_status": "partial",
+    "candidate_pattern": "Contested_Legitimacy_Kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "article_2_7_chapter_vii_tension",
+    "readings": [
+      {
+        "reading_id": "sovereignty_first_reading",
+        "commitment": "State sovereignty as foundational; intervention requires explicit consent or Chapter VII authorization limited to inter-state aggression",
+        "authority_grounding": "Westphalian state system; post-colonial sovereignty protection; UN Charter Article 2(7) plain text",
+        "sibling_readings": [
+          "r2p_reading"
+        ],
+        "expected_structural_delta": "High epsilon blocking intervention; beneficiaries are post-colonial/authoritarian states; victims are populations under domestic atrocity"
+      },
+      {
+        "reading_id": "r2p_reading",
+        "commitment": "Sovereignty conditional on protecting populations; systematic atrocity triggers international responsibility to intervene",
+        "authority_grounding": "Universal human rights obligations; Genocide Convention; emerging customary international law",
+        "sibling_readings": [
+          "sovereignty_first_reading"
+        ],
+        "expected_structural_delta": "High epsilon legitimizing intervention; beneficiaries are persecuted populations; victims are targeted states and sovereignty norm itself"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereignty_first_reading",
+        "reading_b": "r2p_reading",
+        "basis": "Sovereignty-first holds state consent as necessary condition for intervention legitimacy; R2P holds mass atrocity as sufficient condition overriding consent requirement. No single coherent framework can simultaneously require state consent and permit intervention over state objection in atrocity scenarios."
+      }
+    ]
+  },
+  "_seed_id": "un_charter_sovereignty_intervention"
+}

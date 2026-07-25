@@ -1,0 +1,242 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Gun Policy",
+  "family_id": "second_amendment_interpretive_contest",
+  "topic_summary": "Analysis of the Second Amendment to the U.S. Constitution as a contested kernel where different interpretive commitments produce structurally incompatible constraint regimes. The ratified text stabilizes a shared constitutional commitment, but Individualist and Collectivist readings emit constraints with opposite victim/beneficiary structures and radically different regulatory tolerances.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Second Amendment text (constitutional kernel: 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.')",
+      "Supreme Court (interpretive authority for constitutional meaning)",
+      "Armed citizenry (beneficiary under Individualist reading)",
+      "State/Federal regulatory apparatus (beneficiary under Collectivist reading)",
+      "Militia tradition (historical practice referenced in amendment text)",
+      "Self-defense right claimants (individuals asserting natural-law basis for armament)"
+    ],
+    "key_tensions": [
+      "Individual liberty vs collective security (competing goods in gun regulation)",
+      "Originalist vs living constitutionalist interpretive methodology (meta-level tension about how to read the kernel)"
+    ],
+    "key_mechanisms": [
+      "Judicial review (Supreme Court precedent as constraint-instantiation mechanism)",
+      "Licensing and permitting regimes (state-level regulatory implementation)",
+      "Background check systems (federal regulatory layer attempting compatibility with both readings)"
+    ],
+    "key_absences": [
+      "Technology drift (framers could not anticipate AR-15s, 3D-printed guns, smart weapons)",
+      "Statistical evidence on defensive gun use vs harm (empirical grounding often absent from doctrinal debate)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "individualist_reading",
+      "human_readable": "Individualist Reading (Natural Right to Armed Self-Defense)",
+      "structural_delta": "Treats Second Amendment as protecting individual natural right to firearms for self-defense and tyranny resistance, independent of militia service",
+      "primary_observable": "Judicial doctrine permitting armed carry; low tolerance for prohibitions on common firearms",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "armed_citizens",
+      "victim": "state_regulatory_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating high-epsilon constraint regime with minimal regulatory tolerance"
+    },
+    {
+      "claim_id": "collectivist_reading",
+      "human_readable": "Collectivist Reading (Militia-Tied State Defense Right)",
+      "structural_delta": "Treats Second Amendment as protecting collective right tied to organized state militias, permitting broad civilian disarmament",
+      "primary_observable": "Judicial doctrine permitting assault weapon bans, licensing requirements, and categorical prohibitions",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "state_regulatory_authority",
+      "victim": "unregulated_armed_citizens",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural opposite of Reading 1; victim/beneficiary inversion; fundamentally incompatible constraint"
+    },
+    {
+      "claim_id": "hybrid_scope_limitation_reading",
+      "human_readable": "Hybrid Scope-Limitation Reading (Right Exists But Bounded)",
+      "structural_delta": "Acknowledges individual right but permits substantial regulation for public safety (post-Heller compromise position)",
+      "primary_observable": "Tiered scrutiny tests allowing bans on sensitive places, dangerous persons, unusual weapons",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "regulatory_pragmatists",
+      "victim": "both_extremes",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Institutionally live position attempting to stabilize licensed plurality; distinct epsilon and victim structure from pure readings"
+    },
+    {
+      "claim_id": "technology_drift_axis",
+      "human_readable": "Technology Drift (Framers' Assumption Collapse)",
+      "structural_delta": "Gap between 18th-century firearms (muskets) and 21st-century weapons (semi-auto, high-capacity, 3D-printed)",
+      "primary_observable": "Lethality metrics: rounds per minute, magazine capacity, ease of acquisition",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "individualist_reading",
+        "collectivist_reading",
+        "hybrid_scope_limitation_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Mountain feeding into all readings but structurally simpler; captured in omega_technology_drift"
+    },
+    {
+      "claim_id": "empirical_evidence_vacuum",
+      "human_readable": "Empirical Evidence Vacuum (Defensive Use vs Harm Data Gap)",
+      "structural_delta": "Doctrinal debate proceeds without settled data on net public safety effects of different regulatory regimes",
+      "primary_observable": "Scholarly dispute over defensive gun use frequency; mass shooting vs deterrence trade-offs",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hybrid_scope_limitation_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Affects only hybrid reading; insufficient centrality for three-axis budget"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "individualist_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "individualist_reading"
+    },
+    {
+      "claim_id": "collectivist_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "collectivist_reading"
+    },
+    {
+      "claim_id": "hybrid_scope_limitation_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "hybrid_scope_limitation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "technology_drift_axis",
+      "structural_delta": "Gap between framers' weapons and modern firearms",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural upstream Mountain feeding all readings; token budget prioritizes contested readings over shared physical constraint"
+    },
+    {
+      "claim_id": "empirical_evidence_vacuum",
+      "structural_delta": "Doctrinal debate lacking settled public safety data",
+      "hypothesis": "rope",
+      "deferral_reason": "Low centrality; affects only hybrid reading; captured in omega_evidence_gap"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_technology_drift",
+      "description": "Does the Mountain of technology change (muskets → AR-15s) invalidate originalist interpretation? If framers' assumptions about weapon lethality were load-bearing, the kernel itself may be unstable.",
+      "source": "Deferred axis technology_drift_axis + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_evidence_gap",
+      "description": "Empirical vacuum on defensive gun use vs public safety harm. Hybrid reading claims pragmatic balancing but lacks settled data. Is the compromise institutionally stable or epistemically hollow?",
+      "source": "Deferred axis empirical_evidence_vacuum"
+    },
+    {
+      "id": "omega_living_constitution_recursion",
+      "description": "If the kernel is contested, does interpretive authority (Supreme Court composition) become the true constraint? Readings may be downstream of meta-level commitment to originalism vs living constitutionalism.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from framing as textual interpretation vs evolving doctrine"
+    },
+    {
+      "id": "omega_state_capacity_asymmetry",
+      "description": "Individualist reading assumes armed citizenry as check on tyranny, but modern state has tanks, drones, surveillance. Is the tyranny-resistance rationale a Piton (atrophied justification) rather than Mountain?",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model operates in discourse assuming 18th-century power symmetry"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Domain falls within constitutional law and political philosophy training. Multi-lens scan (legal formalism, originalism, pragmatism, natural rights theory, collective security theory) produced structurally distinct readings. Dark matter probes surfaced technology drift and state capacity asymmetry as deferred/omega material."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The ratified text of the Second Amendment: 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.' This text is constitutionally entrenched and cannot be altered without Article V amendment process.",
+    "authority_description": "Supreme Court of the United States holds interpretive authority via judicial review (Marbury v. Madison). Legitimacy grounded in Article III constitutional role plus stare decisis norm. Originalist and living constitutionalist schools contest the method of interpretation but not the Court's institutional authority.",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "second_amendment_text",
+    "readings": [
+      {
+        "reading_id": "individualist_reading",
+        "commitment": "Second Amendment protects individual natural right to armed self-defense independent of militia service",
+        "authority_grounding": "Originalist interpretation (Heller 2008) + natural rights theory + anti-tyranny tradition",
+        "sibling_readings": [
+          "collectivist_reading",
+          "hybrid_scope_limitation_reading"
+        ],
+        "expected_structural_delta": "High epsilon (minimal regulatory tolerance); armed citizens in beneficiary set; state regulatory authority in victim set; permits widespread civilian gun ownership including semi-automatic rifles"
+      },
+      {
+        "reading_id": "collectivist_reading",
+        "commitment": "Second Amendment protects collective right tied to organized state militias, not individual armament",
+        "authority_grounding": "Pre-Heller precedent (Miller 1939) + collective security theory + textualist focus on 'well regulated Militia' clause",
+        "sibling_readings": [
+          "individualist_reading",
+          "hybrid_scope_limitation_reading"
+        ],
+        "expected_structural_delta": "Low epsilon (broad regulatory tolerance); state regulatory authority in beneficiary set; unregulated armed citizens in victim set; permits assault weapon bans, licensing, and categorical prohibitions"
+      },
+      {
+        "reading_id": "hybrid_scope_limitation_reading",
+        "commitment": "Individual right exists but is not unlimited; substantial regulation permissible for public safety",
+        "authority_grounding": "Post-Heller doctrine (Heller dicta on presumptively lawful regulations) + tiered scrutiny framework + pragmatic balancing",
+        "sibling_readings": [
+          "individualist_reading",
+          "collectivist_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon (selective regulatory tolerance); permits bans on sensitive places, dangerous persons, unusual weapons; attempts to stabilize licensed plurality between extremes"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "individualist_reading",
+        "reading_b": "collectivist_reading",
+        "basis": "Individualist reading treats the right as pre-political (natural law) while collectivist reading treats it as state-granted for collective defense purposes. No single coherent framework can simultaneously hold that a right is both beyond state authority to regulate (natural law) and contingent on state militia needs (positive law)."
+      },
+      {
+        "reading_a": "individualist_reading",
+        "reading_b": "hybrid_scope_limitation_reading",
+        "basis": "Individualist reading holds that infringement requires strict scrutiny or is categorically impermissible, while hybrid reading permits intermediate scrutiny and substantial regulation. These are not axiom-contradictory in the strong sense (both can coexist in a pluralist framework that treats rights as real but bounded), so this pair does NOT meet the mutual exclusivity test."
+      },
+      {
+        "reading_a": "collectivist_reading",
+        "reading_b": "hybrid_scope_limitation_reading",
+        "basis": "Collectivist reading denies individual right exists at all, while hybrid reading acknowledges individual right but permits regulation. These are not axiom-contradictory (hybrid is compatible with weak collective security concerns), so this pair does NOT meet the test."
+      }
+    ]
+  },
+  "_seed_id": "us_constitution_second_amendment"
+}

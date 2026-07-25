@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Epistemology / Religious History / Political Economy",
+  "family_id": "reformation_composite_event_2026",
+  "topic_summary": "Analysis of the Protestant Reformation (1517-1648) as a composite event exhibiting multiple simultaneous causal processes: theological reformation, institutional fragmentation, political realignment, technological revolution, and social upheaval. The research context frames this as a test case for whether the kernel structure can absorb overdetermined composites or must force a single reading.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Martin Luther (theological reformer, precipitated Reformation with critiques of Catholic practice/theology)",
+      "John Calvin (second-generation reformer, Calvinist theological framework)",
+      "Catholic Church (institutional authority, target of reform, Counter-Reformation actor)",
+      "Printing Press (technological enabler, Gutenberg's movable type)",
+      "Holy Roman Empire (political framework, site of Thirty Years' War)",
+      "Nation-states (emerging political units asserting independence from Rome)",
+      "Anabaptists (radical reformers, marginal but persistent)",
+      "Council of Trent (Counter-Reformation institutional response, 1563)"
+    ],
+    "key_tensions": [
+      "Theological unity vs doctrinal fragmentation (multiple Protestant denominations with incompatible positions on Eucharist, baptism, ecclesiology)",
+      "Religious reform vs political opportunism (genuine theological conviction vs rulers using cuius regio eius religio for territorial control)",
+      "Centralized Catholic authority vs decentralized Protestant movements (Rome vs national churches)",
+      "Spiritual purity vs institutional corruption (reformers' critique of indulgences, simony, clerical wealth)",
+      "Textual authority vs interpretive plurality (sola scriptura principle vs proliferation of competing readings)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "theological_fragmentation_reading",
+      "human_readable": "Theological Fragmentation Reading (Doctrinal Pluralism as Structural Outcome)",
+      "structural_delta": "The Reformation as irreducible theological pluralism where competing soteriological and ecclesiological commitments generate structurally incompatible denominations",
+      "primary_observable": "Confessional documents (Book of Concord 1580, Synod of Dort 1619, Westminster Confession 1646) codifying mutually exclusive positions on real presence, predestination, church governance",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "denominational_leadership",
+      "victim": "ecumenical_unity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Captures the doctrinal dimension as a reading of the Reformation kernel; structurally distinct from political and technological readings"
+    },
+    {
+      "claim_id": "political_realignment_reading",
+      "human_readable": "Political Realignment Reading (State-Building via Religious Independence)",
+      "structural_delta": "The Reformation as mechanism for emerging nation-states to assert sovereignty against imperial/papal authority through religious differentiation",
+      "primary_observable": "Cuius regio eius religio principle (Peace of Augsburg 1555, Treaty of Westphalia 1648); establishment of national churches (Church of England, Lutheran state churches)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "territorial_rulers",
+      "victim": "imperial_papal_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Captures the political dimension as a reading of the Reformation kernel; different beneficiary/victim structure and observable from theological reading"
+    },
+    {
+      "claim_id": "technological_mediation_reading",
+      "human_readable": "Technological Mediation Reading (Print Revolution as Causal Substrate)",
+      "structural_delta": "The Reformation as technologically enabled mass movement where printing press transforms theological dissent from local to continental phenomenon",
+      "primary_observable": "Publication rates of vernacular Bibles, Protestant pamphlets, broadsheets 1517-1560; literacy rates in Protestant vs Catholic regions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "theological_fragmentation_reading",
+        "political_realignment_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Captures the technological substrate as a reading of the Reformation kernel; mountain providing physical constraint base distinct from doctrinal and political readings"
+    },
+    {
+      "claim_id": "social_upheaval_reading",
+      "human_readable": "Social Upheaval Reading (Class Conflict via Religious Legitimation)",
+      "structural_delta": "The Reformation as vehicle for challenging feudal structures and clerical privilege through theological critique of hierarchy",
+      "primary_observable": "Peasants' War 1524-1525 casualty counts; Anabaptist communal experiments; dissolution of monasteries and redistribution of church lands",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "emerging_merchant_class",
+      "victim": "feudal_clerical_elite",
+      "downstream_of": [
+        "technological_mediation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via political_realignment_reading's state-building dimension; lower centrality than selected readings"
+    },
+    {
+      "claim_id": "military_conflict_reading",
+      "human_readable": "Military Conflict Reading (Religious Wars as Composite Outcome)",
+      "structural_delta": "The Reformation as generator of sustained military conflict (Thirty Years' War 1618-1648, 8 million deaths) where theological difference becomes casus belli",
+      "primary_observable": "Battle casualty records, treaty provisions (Peace of Augsburg, Treaty of Westphalia), territorial religious settlement maps",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "military_contractors",
+      "victim": "civilian_populations",
+      "downstream_of": [
+        "theological_fragmentation_reading",
+        "political_realignment_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream composite outcome rather than independent reading of the kernel; captured as consequence of theological and political readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "theological_fragmentation_reading",
+      "kernel_id": "reformation_composite",
+      "reading_id": "theological_fragmentation_reading"
+    },
+    {
+      "claim_id": "political_realignment_reading",
+      "kernel_id": "reformation_composite",
+      "reading_id": "political_realignment_reading"
+    },
+    {
+      "claim_id": "technological_mediation_reading",
+      "kernel_id": "reformation_composite",
+      "reading_id": "technological_mediation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "social_upheaval_reading",
+      "structural_delta": "Reformation as vehicle for challenging feudal structures via theological critique",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Captured indirectly via political_realignment_reading's state-building dimension; lower graph centrality"
+    },
+    {
+      "claim_id": "military_conflict_reading",
+      "structural_delta": "Reformation as generator of sustained military conflict (Thirty Years' War)",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream composite outcome rather than independent reading; emerges from interaction of theological and political readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_composite_coherence",
+      "description": "Do the three selected readings constitute genuinely independent interpretations of a single kernel, or are they orthogonal dimensions of an overdetermined composite event? If the latter, the kernel structure may be forcing analytical unity onto what is actually several distinct historical processes.",
+      "source": "§1.3-K kernel/reading decomposition decision"
+    },
+    {
+      "id": "omega_counter_reformation",
+      "description": "The Counter-Reformation (Council of Trent, Jesuit order, Inquisition) is absent from the reading decomposition. Does this constitute a fifth reading (Catholic institutional response) or a reactive mechanism downstream of Protestant fragmentation?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_temporal_boundaries",
+      "description": "The research context notes temporal ambiguity (1400-1750 vs 1517-1685 vs 1517-1648). Do different periodizations select for different readings? A longer timeframe (1400-1750) might privilege social upheaval; a shorter one (1517-1648) privileges theological/political dimensions.",
+      "source": "Extraction anchors (temporal ambiguity claim)"
+    },
+    {
+      "id": "omega_technological_determinism",
+      "description": "Is technological_mediation_reading a true mountain (printing press as physical constraint) or a piton (contingent adoption of available technology)? Earlier reform movements (Lollards, Hussites) lacked printing but achieved regional success.",
+      "source": "F03 (Hasty Generalization) + mountain classification check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: technological_mediation_reading classified as mountain but earlier reform movements (Lollards, Hussites) achieved regional success without printing press, suggesting technology may be piton (contingent enabler) rather than mountain (necessary substrate). Generated omega_technological_determinism to bound this uncertainty."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Protestant Reformation as a composite historical event (1517-1648) involving theological reformation, institutional fragmentation, political realignment, technological revolution, and social upheaval",
+    "authority_description": "Historical interpretive authority grounded in disciplinary consensus (religious historians, political historians, social historians, historians of technology) with competing frameworks for causal primacy",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "reformation_composite",
+    "readings": [
+      {
+        "reading_id": "theological_fragmentation_reading",
+        "commitment": "The Reformation is fundamentally a theological event: competing soteriological and ecclesiological commitments generate structurally incompatible denominations",
+        "authority_grounding": "Religious history / church history disciplinary tradition",
+        "sibling_readings": [
+          "political_realignment_reading",
+          "technological_mediation_reading"
+        ],
+        "expected_structural_delta": "Doctrinal pluralism as primary observable; confessional documents as constraint artifacts; denominational leadership as beneficiary of fragmentation"
+      },
+      {
+        "reading_id": "political_realignment_reading",
+        "commitment": "The Reformation is fundamentally a political event: emerging nation-states use religious differentiation to assert sovereignty against imperial/papal authority",
+        "authority_grounding": "Political history / state-building historiography",
+        "sibling_readings": [
+          "theological_fragmentation_reading",
+          "technological_mediation_reading"
+        ],
+        "expected_structural_delta": "Cuius regio eius religio as primary observable; territorial rulers as beneficiaries; imperial/papal authority as victims"
+      },
+      {
+        "reading_id": "technological_mediation_reading",
+        "commitment": "The Reformation is fundamentally a technological event: the printing press transforms local theological dissent into a continental mass movement",
+        "authority_grounding": "History of technology / media history",
+        "sibling_readings": [
+          "theological_fragmentation_reading",
+          "political_realignment_reading"
+        ],
+        "expected_structural_delta": "Publication rates and literacy as primary observables; printing press as physical constraint (mountain) enabling all other dimensions"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "theological_fragmentation_reading",
+        "reading_b": "political_realignment_reading",
+        "basis": "Theological reading holds doctrinal conviction as causally primary (rulers adopt Protestantism because they are convinced); political reading holds state interest as causally primary (rulers adopt Protestantism to assert sovereignty). No single framework can hold both axioms simultaneously as the causal driver."
+      },
+      {
+        "reading_a": "theological_fragmentation_reading",
+        "reading_b": "technological_mediation_reading",
+        "basis": "Theological reading holds ideas as autonomous causal agents (doctrinal differences generate fragmentation); technological reading holds material substrate as causally primary (printing press enables idea transmission). No single framework can hold both axioms simultaneously as the fundamental cause."
+      },
+      {
+        "reading_a": "political_realignment_reading",
+        "reading_b": "technological_mediation_reading",
+        "basis": "Political reading holds state agency as causally primary (rulers instrumentalize religion); technological reading holds material infrastructure as causally primary (printing press enables political instrumentalization). No single framework can hold both axioms simultaneously as the root cause."
+      }
+    ]
+  },
+  "_seed_id": "protestant_reformation_composite"
+}

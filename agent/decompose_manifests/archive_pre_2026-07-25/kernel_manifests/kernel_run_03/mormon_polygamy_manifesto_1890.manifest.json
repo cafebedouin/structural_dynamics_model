@@ -1,0 +1,195 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Institutional History / Commitment Systems / Political Theology",
+  "family_id": "mormon_polygamy_reversal_1890",
+  "topic_summary": "Analysis of the LDS Church's 1890 Manifesto reversing plural marriage practice under federal coercion. The case examines whether this represents exogenous override of a doctrinal commitment versus endogenous reinterpretation, the M-set gap between unchanged doctrine and suspended practice, and the institutional survival calculus that produced a reversal framed as divine revelation rather than capitulation.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "LDS Church (commitment system authority claiming divine mandate for plural marriage 1852-1890)",
+      "U.S. Federal Government (exogenous coercive authority via Morrill Act 1862, Edmunds Act 1882, Edmunds-Tucker Act 1887)",
+      "Wilford Woodruff (Church President who issued Manifesto, claimed revelation September 23-24, 1890)",
+      "Joseph F. Smith (successor who issued Second Manifesto 1904, ended secret continuations)",
+      "Mormon Fundamentalists (rejected Manifesto, maintained original plural marriage reading)",
+      "U.S. Supreme Court (upheld Edmunds-Tucker provisions in Late Corporation case, May 1890)"
+    ],
+    "key_tensions": [
+      "Doctrinal centrality vs institutional survival (plural marriage as salvific requirement vs church dissolution threat)",
+      "Divine mandate framing vs coercion reality (revelation narrative vs federal property seizure)",
+      "Doctrine-practice gap (canonical polygamy doctrine retained vs practice suspended)",
+      "Internal legitimacy vs external compliance (fundamentalist rejection vs federal accommodation)"
+    ],
+    "key_mechanisms": [
+      "Federal legislative escalation (Morrill 1862 → Edmunds 1882 → Edmunds-Tucker 1887: progressive criminalization, disenfranchisement, property confiscation)",
+      "Revelation-as-legitimation (Woodruff's September 23 vision reframes capitulation as divine command)",
+      "Plausible deniability structure (Woodruff refers marriage recommends to counselor George Q. Cannon, maintains institutional distance from 200+ secret marriages 1890-1904)"
+    ],
+    "key_absences": [
+      "No formal doctrinal renunciation (LDS scriptures retain polygamy as eternal principle; only practice suspended)",
+      "No mechanism for member consent or deliberation (top-down reversal without congregational ratification process)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Plural marriage as salvific requirement for celestial exaltation, grounded in Joseph Smith's 1843 revelation (D&C 132) claiming divine mandate for righteous men to seal multiple women for eternity",
+    "authority_description": "Church President holds prophetic authority to receive continuing revelation; interpretive legitimacy derives from apostolic succession and claimed direct divine communication",
+    "drift_status": "partial",
+    "candidate_pattern": "Prophetic Override (Pattern 4: authority claims new revelation supersedes prior revelation, but doctrine-practice gap indicates incomplete drift absorption)",
+    "is_contested_kernel": true,
+    "kernel_id": "plural_marriage_mandate",
+    "readings": [
+      {
+        "reading_id": "exogenous_override_reading",
+        "commitment": "The 1890 Manifesto represents federal coercion forcing abandonment of a divine requirement, not legitimate doctrinal reinterpretation",
+        "authority_grounding": "Original prophetic revelation (Joseph Smith 1843) retains primacy; Woodruff's capitulation lacks genuine revelatory authority because it responds to external threat rather than divine initiative",
+        "sibling_readings": [
+          "endogenous_reinterpretation_reading",
+          "institutional_pragmatism_reading"
+        ],
+        "expected_structural_delta": "High suppression cost (federal imprisonment, property seizure) creates victim set of practicing polygamists; beneficiary set is federal government achieving territorial conformity; constraint type is snare (coercive extraction masked as voluntary compliance)"
+      },
+      {
+        "reading_id": "endogenous_reinterpretation_reading",
+        "commitment": "The 1890 Manifesto represents legitimate prophetic reinterpretation where God revealed the temporal suspension of plural marriage to preserve the church's salvific mission",
+        "authority_grounding": "Continuing revelation doctrine grants Church President authority to receive new divine direction superseding prior commandments when circumstances change; Woodruff's September 23 vision constitutes valid prophetic authority",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "institutional_pragmatism_reading"
+        ],
+        "expected_structural_delta": "Moderate constraint shift (practice suspended but doctrine retained) creates beneficiary set of church institution (survival, temple access, missionary work) and victim set of fundamentalists (excommunicated for maintaining original reading); constraint type is rope (coordination around new prophetic directive)"
+      },
+      {
+        "reading_id": "institutional_pragmatism_reading",
+        "commitment": "The 1890 Manifesto represents strategic institutional adaptation where doctrinal claims (revelation narrative) serve to legitimate survival-driven capitulation to superior coercive power",
+        "authority_grounding": "Authority derives from institutional preservation calculus rather than either original revelation or genuine new revelation; legitimacy is performative (maintaining member loyalty through revelation framing) rather than substantive",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "endogenous_reinterpretation_reading"
+        ],
+        "expected_structural_delta": "M-set gap becomes primary observable (doctrine unchanged, practice suspended, secret continuations 1890-1904); beneficiary set is church leadership (institutional survival, restored political rights); victim set includes both coerced polygamists and deceived monogamists; constraint type is tangled_rope (institutional survival mechanism entangled with doctrinal legitimation claims)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "exogenous_override_reading",
+        "reading_b": "endogenous_reinterpretation_reading",
+        "basis": "No single framework can hold both 'federal coercion invalidates prophetic authority' (exogenous) and 'prophetic authority legitimately responds to circumstances via new revelation' (endogenous). The first denies the second's core claim that Woodruff's revelation was genuine rather than coerced."
+      },
+      {
+        "reading_a": "institutional_pragmatism_reading",
+        "reading_b": "endogenous_reinterpretation_reading",
+        "basis": "No single framework can hold both 'revelation narrative is strategic legitimation of survival calculus' (pragmatism) and 'revelation represents genuine divine communication' (endogenous). The first treats the second's foundational claim as instrumental fiction rather than theological reality."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "exogenous_override_reading",
+      "human_readable": "Exogenous Override Reading (Federal Coercion Invalidates Prophetic Reversal)",
+      "structural_delta": "Federal legislative escalation (1862-1887) and Supreme Court validation (1890) created existential threat forcing abandonment of divine requirement without legitimate doctrinal authority",
+      "primary_observable": "Temporal sequence of federal acts (Morrill, Edmunds, Edmunds-Tucker) and church capitulation timeline; fundamentalist rejection rate; continued secret marriages 1890-1904 as revealed preference",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "federal_government",
+      "victim": "practicing_polygamists",
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_pragmatism_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Captures coercive mechanism and victim structure; upstream to pragmatism reading; highest epsilon among readings"
+    },
+    {
+      "claim_id": "endogenous_reinterpretation_reading",
+      "human_readable": "Endogenous Reinterpretation Reading (Legitimate Prophetic Adaptation)",
+      "structural_delta": "Continuing revelation doctrine permits prophetic authority to suspend prior commandments when divine direction changes; Woodruff's September 23 vision constitutes valid reinterpretation",
+      "primary_observable": "Canonization as Official Declaration 1; member acceptance rate vs fundamentalist schism rate; institutional framing in church histories",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "church_institution",
+      "victim": "fundamentalists",
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_pragmatism_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from exogenous reading (different beneficiary, different constraint type); captures institutional legitimation mechanism"
+    },
+    {
+      "claim_id": "institutional_pragmatism_reading",
+      "human_readable": "Institutional Pragmatism Reading (Strategic Adaptation with Doctrinal Cover)",
+      "structural_delta": "M-set gap between unchanged doctrine and suspended practice reveals survival calculus masked by revelation narrative; plausible deniability structure (secret marriages 1890-1904) indicates strategic rather than theological reversal",
+      "primary_observable": "Doctrine-practice gap (D&C 132 retention vs Manifesto); secret marriage count 1890-1904; Woodruff's referral pattern to George Q. Cannon; Second Manifesto necessity (1904)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "church_leadership",
+      "victim": "coerced_polygamists_and_deceived_monogamists",
+      "downstream_of": [
+        "exogenous_override_reading",
+        "endogenous_reinterpretation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality (downstream synthesis of both other readings); captures entanglement between survival mechanism and legitimation claims; M-set gap as primary structural feature"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "exogenous_override_reading",
+      "kernel_id": "plural_marriage_mandate",
+      "reading_id": "exogenous_override_reading"
+    },
+    {
+      "claim_id": "endogenous_reinterpretation_reading",
+      "kernel_id": "plural_marriage_mandate",
+      "reading_id": "endogenous_reinterpretation_reading"
+    },
+    {
+      "claim_id": "institutional_pragmatism_reading",
+      "kernel_id": "plural_marriage_mandate",
+      "reading_id": "institutional_pragmatism_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_second_manifesto_necessity",
+      "description": "Why did the 1890 Manifesto require a Second Manifesto in 1904? The 14-year gap with 200+ secret marriages suggests either incomplete institutional compliance or deliberate dual-track strategy. If the latter, does this reclassify the 1890 event from 'reversal' to 'public performance' with private continuation?",
+      "source": "Extraction: Joseph F. Smith's 1904 excommunication threat indicates 1890 Manifesto was insufficient to halt practice"
+    },
+    {
+      "id": "omega_fundamentalist_legitimacy_claim",
+      "description": "Mormon Fundamentalists claim the 1890 Manifesto was illegitimate capitulation and they maintain the 'true' reading. By what structural mechanism does a commitment system adjudicate between competing prophetic claims when both cite the same founding revelation (D&C 132)? The FLDS/LDS split suggests no resolution mechanism exists beyond institutional power.",
+      "source": "Extraction: FLDS Church and other fundamentalists reject Manifesto, claim LDS wrongfully abandoned practice"
+    },
+    {
+      "id": "omega_doctrine_practice_stability",
+      "description": "The LDS Church retains polygamy as eternal doctrine (D&C 132, temple sealings permit multiple wives) while prohibiting earthly practice. Is this M-set gap stable long-term, or does it create pressure for either doctrinal renunciation or practice resumption? Current temple sealing policy suggests gap persists 134 years later.",
+      "source": "Extraction: Church never renounced polygamy as doctrine, continues to permit men to be sealed to multiple wives for eternity"
+    },
+    {
+      "id": "omega_coercion_threshold",
+      "description": "At what suppression cost does exogenous pressure invalidate endogenous reinterpretation claims? The federal government imposed property seizure, imprisonment, disenfranchisement, and temple confiscation threats. If Woodruff's revelation was genuine, would it have occurred absent these threats? Counterfactual is unobservable but structurally central.",
+      "source": "Dark Matter Probe 3: Beneficiary of 'revelation' framing is church leadership avoiding explicit capitulation narrative"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings capture the kernel contest structure: exogenous override (coercion invalidates authority), endogenous reinterpretation (legitimate prophetic adaptation), and institutional pragmatism (strategic survival with doctrinal cover). M-set gap (doctrine retained, practice suspended) is primary structural observable across all readings."
+  },
+  "_seed_id": "mormon_polygamy_manifesto_1890"
+}

@@ -1,0 +1,235 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Ecclesiology / Institutional History / Hermeneutics",
+  "family_id": "vatican_ii_composite_2026",
+  "topic_summary": "Analysis of Vatican II (1962-1965) as a composite doctrinal shift rather than a single coherent reinterpretation. The Council produced 16 documents enacting modernizing changes (liturgical reform, religious freedom, ecumenism) while claiming continuity with tradition. The research context frames this as a 'non-break composite test'—examining whether Vatican II represents one contested kernel with multiple readings or an overdetermined convergence of distinct structural tensions.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Pope John XXIII (convener; aggiornamento vision)",
+      "Pope Paul VI (successor; guided Council to conclusion)",
+      "Progressive theologians (de Lubac, Congar, Bea; suppressed under Pius XII, ascendant at Council)",
+      "Conservative opposition (Ottaviani, Siri, Ruffini; Coetus Internationalis Patrum)",
+      "Periti (expert theologians advising bishops)",
+      "Roman Curia (institutional bureaucracy; resisted reform)",
+      "Council Fathers (2,000+ bishops voting on documents)",
+      "Post-conciliar implementation bodies (liturgical commissions, national conferences)"
+    ],
+    "key_tensions": [
+      "Aggiornamento (updating) vs doctrinal continuity (John XXIII's dual mandate)",
+      "Progressive reform vs conservative preservation (factional voting blocs)",
+      "Conciliar intent vs post-conciliar implementation (Latin preservation mandate vs actual elimination)",
+      "Hermeneutic of continuity vs hermeneutic of rupture (Benedict XVI vs progressive/traditionalist wings)",
+      "Compromise-induced textual ambiguity vs interpretive clarity (10-12% rejection rates on key documents)"
+    ],
+    "key_mechanisms": [
+      "Voting threshold requirements (producing compromise documents to achieve supermajorities)",
+      "Periti influence (expert theologians drafting and revising texts)",
+      "Post-conciliar implementation commissions (translating documents into practice, often exceeding textual mandates)"
+    ],
+    "key_absences": [
+      "No new dogmas defined; no heresies condemned (departure from prior ecumenical council pattern)",
+      "Minimal discussion of enforcement mechanisms for continuity claims (how to prevent interpretive drift)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Vatican II's 16 documents as authoritative conciliar teaching requiring assent, claiming continuity with tradition while enacting substantive change",
+    "authority_description": "Magisterial authority grounded in ecumenical council status (bishops in communion with Pope); interpretive legitimacy contested between papal magisterium (Benedict XVI's continuity hermeneutic) and progressive/traditionalist readings",
+    "drift_status": "partial",
+    "candidate_pattern": "Ambiguity Reservoir (compromise documents enable competing interpretations) / Interpretive Capture (post-conciliar implementation exceeded textual mandates)",
+    "is_contested_kernel": true,
+    "kernel_id": "vatican_ii_doctrinal_authority",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Vatican II represents organic development within unchanging tradition; apparent novelties are explications of implicit prior teaching",
+        "authority_grounding": "Papal magisterium (Benedict XVI); ressourcement theologians (return to patristic sources as continuity mechanism)",
+        "sibling_readings": [
+          "rupture_progressive_reading",
+          "rupture_traditionalist_reading"
+        ],
+        "expected_structural_delta": "Low ε on doctrinal change; high ε on liturgical/pastoral practice; ambiguities read as prudential adaptations not doctrinal shifts; post-conciliar excesses treated as implementation errors not conciliar intent"
+      },
+      {
+        "reading_id": "rupture_progressive_reading",
+        "commitment": "Vatican II represents necessary break with pre-conciliar rigidity; 'spirit of the Council' authorizes ongoing reform beyond textual limits",
+        "authority_grounding": "Conciliar majority will (progressive bishops/periti); lived experience of post-conciliar Church as validating interpretation",
+        "sibling_readings": [
+          "continuity_reading",
+          "rupture_traditionalist_reading"
+        ],
+        "expected_structural_delta": "High ε on doctrinal change (religious freedom as reversal of Syllabus of Errors); textual ambiguities read as intentional openings for further development; post-conciliar implementation treated as authentic realization of conciliar intent"
+      },
+      {
+        "reading_id": "rupture_traditionalist_reading",
+        "commitment": "Vatican II represents rupture with tradition; documents contain ambiguities and errors enabling heterodox implementation",
+        "authority_grounding": "Pre-conciliar magisterial teaching (Pius IX, Pius X); claim that ecumenical councils can err in non-dogmatic teaching",
+        "sibling_readings": [
+          "continuity_reading",
+          "rupture_progressive_reading"
+        ],
+        "expected_structural_delta": "High ε on doctrinal change (same as progressive but negatively valued); ambiguities read as compromise-induced errors; post-conciliar implementation treated as predictable consequence of flawed conciliar texts; victim set includes traditional liturgy, doctrinal clarity, missionary zeal"
+      },
+      {
+        "reading_id": "composite_overdetermination_reading",
+        "commitment": "Vatican II is not one shift but convergence of multiple distinct structural changes (liturgical, ecumenical, ecclesiological, political) packaged as unified reform",
+        "authority_grounding": "Historical-sociological analysis; treats conciliar documents as political compromises rather than coherent theological synthesis",
+        "sibling_readings": [
+          "continuity_reading",
+          "rupture_progressive_reading",
+          "rupture_traditionalist_reading"
+        ],
+        "expected_structural_delta": "Rejects single ε measurement; each component (liturgy, religious freedom, ecumenism) has independent extractiveness; continuity/rupture debate is category error—different components exhibit different degrees of change; ambiguities are structural feature not bug"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "rupture_progressive_reading",
+        "basis": "Continuity reading holds that magisterial teaching cannot reverse itself on matters of faith and morals; progressive rupture reading holds that Dignitatis Humanae reversed prior teaching on religious freedom. No single framework can hold both 'the Church cannot reverse teaching X' and 'the Church did reverse teaching X' as simultaneously true."
+      },
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "rupture_traditionalist_reading",
+        "basis": "Continuity reading holds that Vatican II documents are authoritative magisterial teaching requiring assent; traditionalist rupture reading holds that Vatican II documents contain errors and may be resisted. No single framework can hold both 'these documents bind conscience' and 'these documents may be rejected' as simultaneously true."
+      },
+      {
+        "reading_a": "rupture_progressive_reading",
+        "reading_b": "rupture_traditionalist_reading",
+        "basis": "Progressive rupture reading holds that the break with tradition is legitimate and Spirit-guided; traditionalist rupture reading holds that the break with tradition is illegitimate and heterodox. Both agree on rupture but assign opposite normative valence. A single framework cannot hold both 'this rupture is divinely authorized' and 'this rupture is heterodox' as simultaneously true."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuity_reading",
+      "human_readable": "Continuity Reading (Organic Development Within Tradition)",
+      "structural_delta": "Vatican II as organic development; apparent novelties are explications of implicit prior teaching",
+      "primary_observable": "Papal magisterial statements (Benedict XVI's 2005 address); ressourcement theological arguments; continuity claims in conciliar documents themselves",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "papal_magisterium",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading in kernel decomposition; establishes baseline constraint structure for comparison"
+    },
+    {
+      "claim_id": "rupture_progressive_reading",
+      "human_readable": "Rupture Reading (Progressive) — Spirit of the Council",
+      "structural_delta": "Vatican II as necessary break with pre-conciliar rigidity; 'spirit of the Council' authorizes ongoing reform",
+      "primary_observable": "Post-conciliar liturgical changes exceeding textual mandates; progressive theological literature; national episcopal conference policies",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "progressive_reform_movement",
+      "victim": "traditional_liturgical_practice",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading; highest ε contrast with continuity reading; captures post-conciliar implementation dynamic"
+    },
+    {
+      "claim_id": "rupture_traditionalist_reading",
+      "human_readable": "Rupture Reading (Traditionalist) — Ambiguity as Error",
+      "structural_delta": "Vatican II as rupture with tradition; documents contain ambiguities enabling heterodox implementation",
+      "primary_observable": "Traditionalist theological critiques (SSPX, sedevacantist literature); pre-conciliar vs post-conciliar doctrinal comparison",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "doctrinal_clarity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; completes triadic structure; shares rupture claim with progressive but opposite normative valence"
+    },
+    {
+      "claim_id": "composite_overdetermination_reading",
+      "human_readable": "Composite Overdetermination (Multiple Independent Shifts)",
+      "structural_delta": "Vatican II as convergence of multiple distinct structural changes, not one coherent shift",
+      "primary_observable": "Independent variation in liturgical, ecumenical, ecclesiological, and political dimensions; voting pattern divergence across documents",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "historical_sociological_analysis",
+      "victim": "unified_theological_narrative",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-analytical reading; would require decomposing into sub-axes (liturgy, ecumenism, religious freedom as separate constraints); exceeds 3-axis budget; captured in omega"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "vatican_ii_doctrinal_authority",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "rupture_progressive_reading",
+      "kernel_id": "vatican_ii_doctrinal_authority",
+      "reading_id": "rupture_progressive_reading"
+    },
+    {
+      "claim_id": "rupture_traditionalist_reading",
+      "kernel_id": "vatican_ii_doctrinal_authority",
+      "reading_id": "rupture_traditionalist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "composite_overdetermination_reading",
+      "structural_delta": "Vatican II as convergence of multiple independent structural changes",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Meta-analytical reading requiring decomposition into sub-axes (liturgical reform, ecumenism, religious freedom as separate constraints); exceeds 3-axis budget; structural insight preserved in omega_composite_collapse"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_composite_collapse",
+      "description": "Does the kernel/reading framework collapse under composite overdetermination? If Vatican II is genuinely multiple independent shifts (liturgical, ecumenical, political) rather than one contested interpretation, then continuity/rupture debate is a category error—different components exhibit different degrees of change. The 10-12% rejection rates varying by document suggest independent ε values per component. Composite_overdetermination_reading deferred but may be the structurally correct frame.",
+      "source": "Deferred axis composite_overdetermination_reading + research context 'non-break composite test'"
+    },
+    {
+      "id": "omega_implementation_authority",
+      "description": "Who has authority to interpret ambiguous conciliar texts? Post-conciliar implementation (Latin elimination despite §36 mandate) suggests implementation bodies exceeded textual authority. Is this a Rope (coordination problem) or Snare (intentional ambiguity enabling capture)? Progressive reading treats it as legitimate development; traditionalist as heterodox drift. No mechanism in conciliar documents to adjudicate.",
+      "source": "Tension between conciliar intent and post-conciliar implementation + absence of enforcement mechanisms"
+    },
+    {
+      "id": "omega_no_dogma_significance",
+      "description": "Vatican II defined no new dogmas and condemned no heresies—departure from prior ecumenical council pattern. Does this lower the binding force of conciliar teaching, enabling competing interpretations? Continuity reading says no (pastoral councils still authoritative); rupture readings (both progressive and traditionalist) implicitly say yes (treating documents as revisable). Absence of dogmatic definitions may be structural cause of interpretive instability.",
+      "source": "Absence inventory: no new dogmas defined"
+    },
+    {
+      "id": "omega_voting_threshold_effects",
+      "description": "Supermajority requirements produced compromise documents satisfying neither faction. 10-12% rejection rates on religious freedom, ecumenism, and modern world suggest structural minorities. Did voting thresholds create ambiguities as Snares (enabling post-conciliar capture) or as Ropes (necessary coordination cost)? Traditionalist reading treats as Snare; continuity reading as Rope. Mechanism itself may determine interpretive instability.",
+      "source": "Voting patterns + compromise-induced ambiguity mechanism"
+    },
+    {
+      "id": "omega_ressourcement_paradox",
+      "description": "Continuity reading grounds authority in ressourcement (return to patristic sources). But if patristic sources authorize novelty (e.g., religious freedom via Lactantius), is this continuity or rupture? The mechanism (return to sources) may generate the very discontinuity it claims to avoid. Paradox unresolved in continuity reading's constraint structure.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): papal magisterium benefits from continuity claim, but ressourcement mechanism may undermine it"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Three readings selected capture continuity/rupture spectrum. Composite_overdetermination_reading deferred as meta-analytical frame requiring sub-axis decomposition. All readings traceable to research context and have independent structural deltas."
+  },
+  "_seed_id": "vatican_ii_composite"
+}

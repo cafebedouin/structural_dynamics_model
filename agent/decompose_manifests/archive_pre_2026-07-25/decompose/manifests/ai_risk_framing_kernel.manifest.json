@@ -1,0 +1,213 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "AI Safety / Technology Governance / Risk Assessment",
+  "family_id": "ai_risk_kernel_2026",
+  "topic_summary": "Analysis of the contested AI-risk kernel: whether AI safety discourse should prioritize existential risks (AGI alignment, humanity-level extinction) or near-term harms (algorithmic bias, labor displacement, surveillance). Each reading interprets the same substrate—'AI poses serious risks requiring governance'—but emits structurally different constraints with distinct victim sets, timescales, and resource allocations.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Existential Risk Community (x-risk; focused on AGI catastrophe, alignment research)",
+      "Near-Term Harms Community (algorithmic justice; focused on deployed systems, marginalized populations)",
+      "AI Safety Research Institutions (OpenAI, Anthropic, DeepMind safety teams)",
+      "AI Ethics/Fairness Research Community (ACM FAccT, Data & Society)",
+      "Regulatory Bodies (EU AI Act, U.S. NTIA, proposed governance frameworks)",
+      "Affected Populations (algorithmic subjects, workers, humanity-as-whole)"
+    ],
+    "key_tensions": [
+      "Resource Allocation: x-risk research funding vs algorithmic justice intervention funding",
+      "Epistemic Authority: who defines 'serious AI risk'—technical AI researchers or social scientists/affected communities"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "existential_risk_reading",
+      "human_readable": "Existential Risk Reading (X-Risk Dominant Frame)",
+      "structural_delta": "AI risk kernel read as 'superintelligent systems pose extinction-level threat; alignment is paramount'",
+      "primary_observable": "Resource allocation to AGI alignment research vs near-term safety; policy focus on capability controls vs bias audits",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "x_risk_research_institutions",
+      "victim": "marginalized_populations_harmed_by_deployed_systems",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; structures victim set as future humanity, deprioritizes present algorithmic harms"
+    },
+    {
+      "claim_id": "near_term_harms_reading",
+      "human_readable": "Near-Term Harms Reading (Deployed Systems Frame)",
+      "structural_delta": "AI risk kernel read as 'deployed systems cause measurable harm now; justice interventions are paramount'",
+      "primary_observable": "Resource allocation to bias mitigation, worker protection, surveillance regulation vs speculative AGI research",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "marginalized_populations",
+      "victim": "future_potential_victims_of_misaligned_agi",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structures victim set as present marginalized populations, deprioritizes speculative future risks"
+    },
+    {
+      "claim_id": "resource_lock_in_mechanism",
+      "human_readable": "Resource Lock-In Mechanism (Winner-Take-Most Dynamics)",
+      "structural_delta": "AI safety funding and policy attention exhibit winner-take-most dynamics; dominant frame captures institutional resources",
+      "primary_observable": "Distribution of AI safety grants, regulatory focus, conference programs across x-risk vs fairness/accountability",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "dominant_frame_institutions",
+      "victim": "subordinated_frame_researchers_and_affected_populations",
+      "downstream_of": [
+        "existential_risk_reading",
+        "near_term_harms_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node; captures how kernel-reading contest becomes resource extraction via institutional capture"
+    },
+    {
+      "claim_id": "timescale_discount_mechanism",
+      "human_readable": "Timescale Discount Mechanism (Present vs Future Harm Weighting)",
+      "structural_delta": "Institutional and cognitive discount rates applied to present harms vs future catastrophic risks",
+      "primary_observable": "Policy response speed to algorithmic discrimination cases vs AGI preparedness funding growth",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "existential_risk_reading",
+        "near_term_harms_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: coordination mechanism upstream of both readings but lower structural distinctiveness than resource_lock_in downstream synthesis"
+    },
+    {
+      "claim_id": "epistemic_authority_contest",
+      "human_readable": "Epistemic Authority Contest (Who Defines Risk)",
+      "structural_delta": "Contest over who has legitimate authority to define AI risk—technical AI researchers, social scientists, or affected communities",
+      "primary_observable": "Composition of AI governance bodies, whose evidence is cited in policy documents, funding review boards",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "technical_ai_researchers",
+      "victim": "social_scientists_and_affected_communities",
+      "downstream_of": [],
+      "feeds_into": [
+        "resource_lock_in_mechanism"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: epistemic dimension feeds resource lock-in but captured implicitly via beneficiary/victim structure in selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "existential_risk_reading",
+      "kernel_id": "ai_risk_prioritization",
+      "reading_id": "existential_risk_reading"
+    },
+    {
+      "claim_id": "near_term_harms_reading",
+      "kernel_id": "ai_risk_prioritization",
+      "reading_id": "near_term_harms_reading"
+    },
+    {
+      "claim_id": "resource_lock_in_mechanism",
+      "kernel_id": "ai_risk_prioritization",
+      "reading_id": null
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "timescale_discount_mechanism",
+      "structural_delta": "Institutional discount rates for present vs future harm",
+      "hypothesis": "rope",
+      "deferral_reason": "Coordination mechanism upstream of both readings; lower structural distinctiveness than downstream resource lock-in synthesis node"
+    },
+    {
+      "claim_id": "epistemic_authority_contest",
+      "structural_delta": "Contest over legitimate authority to define AI risk",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Epistemic dimension feeds resource lock-in; captured implicitly via beneficiary/victim structure in selected kernel readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Do the two readings share a common substrate, or are they two distinct kernels? X-risk reading treats AI as potential agentic catastrophe (alignment problem); near-term reading treats AI as instantiation of existing power structures (fairness problem). They may share the word 'AI risk' but reference structurally different phenomena. If so, 'AI risk' is a homonym covering two kernels, not one contested kernel.",
+      "source": "§1.3-K kernel coherence test"
+    },
+    {
+      "id": "omega_hybrid_framework_possibility",
+      "description": "Can a single coherent framework hold both 'AGI alignment is paramount' AND 'deployed-system justice is paramount'? If yes, they are complementary rather than axiom-contradictory. If no (zero-sum resource allocation, mutually exclusive victim prioritization), they are axiom-contradictory. Current evidence suggests resource zero-sum but not necessarily axiom contradiction—may be licensed plurality rather than mutual exclusion.",
+      "source": "§1.3-K axiom contradiction test"
+    },
+    {
+      "id": "omega_capability_progress_dependence",
+      "description": "Is the kernel contest itself downstream of ML capability progress rate? If capabilities plateau below AGI, x-risk reading collapses; if capabilities accelerate to superintelligence, near-term reading appears retrospectively negligent. The readings may be time-indexed rather than axiom-contradictory.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_third_reading_capital_accumulation",
+      "description": "Both selected readings treat AI as risk object. A third reading: 'AI risk discourse is itself a capital accumulation mechanism—both x-risk and fairness frames serve to legitimize AI deployment while capturing regulatory/funding resources.' This reading would treat the kernel as snare rather than mountain. Deferred for token budget but may be the structurally central reading.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identifies two structurally distinct readings with different victim sets and resource allocations. Omega_kernel_coherence flags uncertainty about whether this is one contested kernel or two distinct kernels sharing a label. Omega_third_reading_capital_accumulation identifies a potential third reading (capital accumulation frame) deferred for structural budget."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment 'AI poses serious risks requiring governance and resource allocation'",
+    "authority_description": "Contested between technical AI researchers (citing capability projections, alignment theory) and social scientists/affected communities (citing empirical harm evidence, justice frameworks). Neither has uncontested interpretive authority; the contest IS the system's current state.",
+    "drift_status": "absent",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "ai_risk_prioritization",
+    "readings": [
+      {
+        "reading_id": "existential_risk_reading",
+        "commitment": "AI risk is primarily existential—misaligned AGI poses extinction-level threat; alignment research is paramount",
+        "authority_grounding": "technical AI researchers, capability extrapolation models, EA/longtermist philosophy",
+        "sibling_readings": [
+          "near_term_harms_reading"
+        ],
+        "expected_structural_delta": "Victim set: future humanity (including nonexistent persons). Resource allocation: AGI alignment research, capability controls. Timescale: 10-100 years. Beneficiary: x-risk research institutions, longtermist funders. Suppression: near-term algorithmic justice framed as distraction from existential priority."
+      },
+      {
+        "reading_id": "near_term_harms_reading",
+        "commitment": "AI risk is primarily near-term harms—deployed systems cause measurable discrimination, displacement, surveillance now; justice interventions are paramount",
+        "authority_grounding": "social scientists, affected communities, empirical harm documentation, justice/fairness frameworks",
+        "sibling_readings": [
+          "existential_risk_reading"
+        ],
+        "expected_structural_delta": "Victim set: present marginalized populations (racialized, low-wage, surveilled). Resource allocation: bias audits, worker protections, surveillance regulation. Timescale: 0-5 years. Beneficiary: marginalized communities, fairness/accountability researchers. Suppression: x-risk framed as speculative distraction from urgent present harms."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "existential_risk_reading",
+        "reading_b": "near_term_harms_reading",
+        "basis": "Uncertain axiom contradiction status (flagged in omega_hybrid_framework_possibility). The readings hold mutually exclusive VICTIM PRIORITIZATION (future humanity vs present marginalized populations) and compete for zero-sum resources, but it is unclear whether a single coherent framework could hold both as complementary considerations at different timescales. May be licensed plurality (both readings socially live, no single framework required) rather than axiom contradiction (mutual logical exclusion). Requires generation to determine whether the conflict is resource-political or axiom-logical."
+      }
+    ]
+  },
+  "_seed_id": "ai_risk_framing_kernel"
+}

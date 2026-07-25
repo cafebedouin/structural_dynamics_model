@@ -1,0 +1,221 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology History / Political Economy / Institutional Analysis",
+  "family_id": "qwerty_naturalization_2026",
+  "topic_summary": "Analysis of QWERTY keyboard layout persistence from 1874 typewriters through digital era, examining contested narratives of path dependency versus strategic manufacturer lock-in. The topic presents as a kernel contest between accident-naturalization and beneficiary-extraction readings of the same historical substrate.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Christopher Latham Sholes (inventor, 1868 patent holder)",
+      "Remington & Sons (manufacturer adopting QWERTY 1874, cartel member 1893)",
+      "1893 Typewriter Trust (Remington, Smith Premier, Densmore, Yost, Caligraph cartel)",
+      "August Dvorak (alternative layout designer, 1930s)",
+      "Telegraph operators (early adopter user base shaping layout)",
+      "Typing schools (Wyckoff 1878, Longley, partnership with Remington)"
+    ],
+    "key_tensions": [
+      "Mechanical jamming narrative (disputed by Kyoto research) vs telegraph operator transcription priority",
+      "Path dependency lock-in (David) vs market efficiency (Liebowitz & Margolis)",
+      "Accident-naturalization reading vs strategic manufacturer beneficiary reading"
+    ],
+    "key_mechanisms": [
+      "Training school partnerships (Wyckoff-Remington 1878+, creating skilled labor pool dependency)",
+      "1893 cartel standardization (five manufacturers agreeing on Remington QWERTY as standard)",
+      "Network effects (employer demand for QWERTY-trained typists reinforcing manufacturer production)",
+      "Switching cost accumulation (as adoption scaled, retraining cost became prohibitive)"
+    ],
+    "key_absences": [
+      "Ergonomic injury data from QWERTY vs alternatives (repetitive strain, carpal tunnel prevalence)",
+      "Counterfactual analysis of Dvorak adoption in non-English markets (did linguistic difference break lock-in?)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "QWERTY layout persistence is natural/inevitable outcome of technological evolution",
+    "authority_description": "Historical narrative consensus; technology adoption scholarship",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "qwerty_persistence_inevitability",
+    "readings": [
+      {
+        "reading_id": "path_dependency_reading",
+        "commitment": "QWERTY persistence is accident-driven path dependency without strategic beneficiaries",
+        "authority_grounding": "Paul David's market failure analysis; network effects theory",
+        "sibling_readings": [
+          "strategic_lock_in_reading"
+        ],
+        "expected_structural_delta": "No victim set (efficiency loss is diffuse externality); no beneficiary extraction (manufacturers respond to demand); constraint type is mountain (technological inevitability given initial conditions)"
+      },
+      {
+        "reading_id": "strategic_lock_in_reading",
+        "commitment": "QWERTY persistence is manufacturer-engineered lock-in via training partnerships and cartel standardization",
+        "authority_grounding": "Remington training school partnerships 1878+; 1893 cartel formation; Liebowitz-Margolis historiographic critique",
+        "sibling_readings": [
+          "path_dependency_reading"
+        ],
+        "expected_structural_delta": "Victim set includes all typists bearing ergonomic costs and retraining barriers; beneficiary set is 1893 cartel members extracting rents via standardization control; constraint type is tangled_rope (manufactured inevitability)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "path_dependency_reading",
+        "reading_b": "strategic_lock_in_reading",
+        "basis": "Path dependency reading holds that no agent could have prevented lock-in (technological determinism); strategic lock-in reading holds that specific agents (Remington, cartel) actively constructed lock-in for rent extraction. No single framework can hold both 'lock-in was unavoidable' and 'lock-in was strategically manufactured' as simultaneously true."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "path_dependency_reading",
+      "human_readable": "Path Dependency Reading (Accident-Driven Network Effects)",
+      "structural_delta": "QWERTY persistence emerges from self-reinforcing network effects without strategic beneficiaries",
+      "primary_observable": "Adoption curve shape (S-curve vs linear); employer demand for QWERTY-trained labor as percentage of total typing labor demand",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline constraint structure for comparison"
+    },
+    {
+      "claim_id": "strategic_lock_in_reading",
+      "human_readable": "Strategic Lock-In Reading (Manufacturer-Engineered Standardization)",
+      "structural_delta": "QWERTY persistence is product of Remington training partnerships and 1893 cartel standardization decision",
+      "primary_observable": "Cartel formation timing (1893); training school partnership contracts; market share concentration pre/post cartel",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "typewriter_cartel_members",
+      "victim": "typists_bearing_ergonomic_costs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; beneficiary-victim structure provides structural contrast to path_dependency_reading"
+    },
+    {
+      "claim_id": "ergonomic_externality_mountain",
+      "human_readable": "Ergonomic Externality Mountain (Physical Cost of Suboptimal Layout)",
+      "structural_delta": "QWERTY imposes measurable physical costs (finger travel distance, repetitive strain) regardless of adoption narrative",
+      "primary_observable": "Dvorak vs QWERTY finger travel distance per 1000 words; carpal tunnel syndrome prevalence in QWERTY vs alternative layout users",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "path_dependency_reading",
+        "strategic_lock_in_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Upstream mountain providing physical constraint base independent of kernel readings; feeds into both readings as the substrate they interpret differently"
+    },
+    {
+      "claim_id": "switching_cost_accumulation",
+      "human_readable": "Switching Cost Accumulation (Retraining Barrier Escalation)",
+      "structural_delta": "As QWERTY user base grows, aggregate retraining cost rises faster than linear with user count",
+      "primary_observable": "Retraining cost per typist * installed base size; employer willingness-to-pay for Dvorak transition",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "path_dependency_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism already captured within path_dependency_reading constraint story; adding separate axis would duplicate causal pathway"
+    },
+    {
+      "claim_id": "non_english_counterfactual",
+      "human_readable": "Non-English Counterfactual (Linguistic Difference as Lock-In Breaker)",
+      "structural_delta": "Languages with different letter frequency distributions faced lower switching costs to non-QWERTY layouts",
+      "primary_observable": "Keyboard layout diversity in non-English markets (e.g., AZERTY in French, QWERTZ in German); Dvorak adoption rates in non-English contexts",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence in research context (no data on non-English Dvorak adoption); speculative counterfactual; omega material"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "path_dependency_reading",
+      "kernel_id": "qwerty_persistence_inevitability",
+      "reading_id": "path_dependency_reading"
+    },
+    {
+      "claim_id": "strategic_lock_in_reading",
+      "kernel_id": "qwerty_persistence_inevitability",
+      "reading_id": "strategic_lock_in_reading"
+    },
+    {
+      "claim_id": "ergonomic_externality_mountain",
+      "kernel_id": null,
+      "reading_id": null
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "switching_cost_accumulation",
+      "structural_delta": "Retraining cost rises faster than linear with user base",
+      "hypothesis": "rope",
+      "deferral_reason": "Mechanism already captured within path_dependency_reading; separate axis would duplicate causal pathway without adding structural novelty"
+    },
+    {
+      "claim_id": "non_english_counterfactual",
+      "structural_delta": "Non-English markets faced lower switching costs due to linguistic difference",
+      "hypothesis": "piton",
+      "deferral_reason": "Absence in research context; no data on non-English Dvorak adoption; speculative counterfactual requiring additional research"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d3_artifact_test",
+      "description": "Does the strategic_lock_in_reading reproduce the D3 artifact (beneficiary-hunting finds beneficiaries by construction)? The 1893 cartel formation is historically documented, but does framing it as 'strategic lock-in' impose a beneficiary structure that the path_dependency_reading would classify as emergent coordination? The kernel structure itself may be testing whether beneficiary identification is observer-dependent.",
+      "source": "User's explicit D3 artifact flag in topic description"
+    },
+    {
+      "id": "omega_ergonomic_injury_data_gap",
+      "description": "Absence of comparative ergonomic injury data (carpal tunnel, repetitive strain) between QWERTY and Dvorak users. If QWERTY imposes measurable physical costs, the victim set in strategic_lock_in_reading expands beyond retraining barriers to include ongoing health externalities. If no measurable difference, ergonomic_externality_mountain may collapse to piton.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_liebowitz_margolis_historiographic_validity",
+      "description": "Liebowitz & Margolis dismiss David's QWERTY story as 'insufficiently rigorous examination of historical record.' If their critique is valid, path_dependency_reading may be historiographically unsound, collapsing the kernel to a single reading (strategic_lock_in). If invalid, the kernel persists. Requires domain expertise in economic history to adjudicate.",
+      "source": "F34 (Epistemic Trespass) + research context scholarly debate"
+    },
+    {
+      "id": "omega_telegraph_operator_primacy",
+      "description": "Kyoto research claims telegraph operators (not jamming prevention) shaped QWERTY. If true, the layout optimized for Morse code transcription speed, not general typing efficiency. This would add a third reading (telegraph_optimization_reading) where the beneficiary is Western Union/telegraph companies, not typewriter manufacturers. Deferred pending additional research on telegraph operator adoption timeline.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + research context Kyoto findings"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Adjudicating between David's path dependency thesis and Liebowitz-Margolis critique requires domain expertise in economic history and historiographic method beyond model's training. Generated omega_liebowitz_margolis_historiographic_validity to bound this uncertainty. Kernel structure preserved because both readings are live positions in scholarly literature, but model cannot determine which historiography is more rigorous."
+  },
+  "_seed_id": "qwerty_path_naturalization"
+}

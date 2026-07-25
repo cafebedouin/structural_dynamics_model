@@ -1,0 +1,288 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Economics / Political Economy / International Finance",
+  "family_id": "gold_fiat_transition_1971",
+  "topic_summary": "Analysis of the 1971 transition from gold-backed currency (Bretton Woods system) to fiat currency, examining whether this represents a discrete policy choice (single swap) or an overdetermined structural collapse driven by multiple reinforcing contradictions. The Nixon Shock of August 15, 1971 ended dollar-gold convertibility, but the research reveals accumulated tensions including the Triffin Dilemma, political economy constraints, fiscal overextension, and international runs on U.S. gold reserves.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Bretton Woods System (1945-1971 fixed exchange rate regime with dollar-gold peg)",
+      "U.S. Federal Reserve / Treasury (monetary authority managing gold convertibility)",
+      "International Monetary Fund (multilateral institution created at Bretton Woods)",
+      "Nixon Administration (political authority executing suspension decision)",
+      "France / UK / other gold-demanding nations (foreign governments converting dollars to gold)",
+      "Robert Triffin (economist identifying structural contradiction)",
+      "U.S. gold reserves at Fort Knox (physical constraint on convertibility)",
+      "Domestic labor unions / mass political parties (political constraint on adjustment mechanisms)"
+    ],
+    "key_tensions": [
+      "Reserve currency provision vs. gold backing sustainability (Triffin Dilemma core)",
+      "Fixed exchange rates vs. domestic policy autonomy (Mundell-Fleming trilemma instance)",
+      "International liquidity needs vs. U.S. balance of payments deficits",
+      "Classical gold standard adjustment (wage deflation) vs. postwar labor power",
+      "Vietnam War / Cold War fiscal demands vs. gold reserve adequacy"
+    ],
+    "key_mechanisms": [
+      "Gold convertibility at $35/oz (enforcement mechanism for dollar value)",
+      "Balance of payments adjustment under fixed rates (deflationary pressure on deficit countries)",
+      "Foreign central bank dollar-to-gold conversion (run mechanism)",
+      "London Gold Pool collapse 1968 (failed multilateral gold price defense)"
+    ],
+    "key_absences": [
+      "Counterfactual viability: could Bretton Woods have survived with different U.S. fiscal policy?",
+      "Distributional consequences: who benefited from fiat transition vs. who bore costs?"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The monetary regime transition as either contingent policy choice or overdetermined structural necessity",
+    "authority_description": "Competing interpretive frameworks in economic history and monetary theory ground different causal attributions",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "transition_causality",
+    "readings": [
+      {
+        "reading_id": "contingent_choice_reading",
+        "commitment": "The transition was a policy decision that could have been avoided with different choices",
+        "authority_grounding": "Voluntarist political economy; agency-centered historical analysis",
+        "sibling_readings": [
+          "overdetermined_collapse_reading",
+          "hybrid_trigger_reading"
+        ],
+        "expected_structural_delta": "Nixon decision as primary causal node; counterfactual viability high; beneficiary structure centered on U.S. policy autonomy gain"
+      },
+      {
+        "reading_id": "overdetermined_collapse_reading",
+        "commitment": "The transition was structurally inevitable due to multiple reinforcing contradictions",
+        "authority_grounding": "Structural political economy; Triffin Dilemma analysis; historical materialism",
+        "sibling_readings": [
+          "contingent_choice_reading",
+          "hybrid_trigger_reading"
+        ],
+        "expected_structural_delta": "Triffin Dilemma as mountain constraint; multiple causal pathways converging; counterfactual viability near-zero; victim structure includes all actors constrained by fixed-rate regime"
+      },
+      {
+        "reading_id": "hybrid_trigger_reading",
+        "commitment": "Structural contradictions accumulated but required contingent trigger events to actualize collapse",
+        "authority_grounding": "Critical juncture theory; path dependence with agency moments",
+        "sibling_readings": [
+          "contingent_choice_reading",
+          "overdetermined_collapse_reading"
+        ],
+        "expected_structural_delta": "Triffin Dilemma as slow-burning constraint; Vietnam War fiscal shock and French gold runs as necessary triggers; medium counterfactual viability with different trigger timing"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "contingent_choice_reading",
+        "reading_b": "overdetermined_collapse_reading",
+        "basis": "Contingent choice reading requires that alternative policy paths were structurally viable (counterfactual possibility); overdetermined collapse reading requires that all paths led to the same outcome (counterfactual impossibility). No single framework can hold both that the outcome was avoidable and that it was inevitable."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "contingent_choice_reading",
+      "human_readable": "Contingent Choice Reading: Policy Decision Framework",
+      "structural_delta": "Transition framed as discretionary policy choice by Nixon administration, with viable alternatives foreclosed by political will rather than structural necessity",
+      "primary_observable": "Counterfactual analysis of alternative policy paths (e.g., dollar devaluation within Bretton Woods, capital controls, fiscal austerity); archival evidence of decision-making process showing range of considered options",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "u_s_monetary_policy_autonomy",
+      "victim": "international_monetary_stability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading in kernel decomposition; establishes agency-centered baseline for comparison with structural readings"
+    },
+    {
+      "claim_id": "overdetermined_collapse_reading",
+      "human_readable": "Overdetermined Collapse Reading: Structural Necessity Framework",
+      "structural_delta": "Transition as inevitable outcome of Triffin Dilemma plus reinforcing contradictions (labor power blocking adjustment, fiscal overextension, internationalization pressures)",
+      "primary_observable": "Triffin Dilemma mathematics (reserve growth requirements vs. gold stock constraints); historical evidence of multiple failed stabilization attempts (London Gold Pool 1968, Kennedy/Johnson measures); cross-national comparison of gold standard exits",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading in kernel decomposition; mountain hypothesis captures structural constraint interpretation; highest centrality due to Triffin Dilemma as upstream constraint"
+    },
+    {
+      "claim_id": "hybrid_trigger_reading",
+      "human_readable": "Hybrid Trigger Reading: Accumulated Contradictions + Contingent Catalysts",
+      "structural_delta": "Structural contradictions created fragility but required specific trigger events (Vietnam War spending, French/British gold runs) to actualize collapse",
+      "primary_observable": "Timing analysis of gold reserve depletion vs. trigger events; comparison of Bretton Woods stress periods that did not collapse (1960 gold pool formation) vs. 1971; critical juncture identification in historical record",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading in kernel decomposition; rope hypothesis captures coordination failure interpretation; provides synthesis position between pure agency and pure structure"
+    },
+    {
+      "claim_id": "triffin_dilemma_mountain",
+      "human_readable": "Triffin Dilemma as Physical Constraint",
+      "structural_delta": "Mathematical impossibility of simultaneously providing global liquidity and maintaining gold convertibility at fixed rate",
+      "primary_observable": "Ratio of global dollar reserves to U.S. gold stock over time; reserve growth rate vs. gold production rate; convertibility coverage percentage",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "overdetermined_collapse_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within overdetermined_collapse_reading as core structural element; would be redundant as separate axis"
+    },
+    {
+      "claim_id": "labor_power_adjustment_blockage",
+      "human_readable": "Labor Power Blocking Classical Adjustment Mechanism",
+      "structural_delta": "Postwar labor unions and mass parties prevented wage deflation that classical gold standard used to correct imbalances",
+      "primary_observable": "Union density and political party strength in deficit countries; wage rigidity measures; comparison of 1920s vs. 1960s adjustment attempts",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "organized_labor",
+      "victim": "fixed_exchange_rate_regime",
+      "downstream_of": [],
+      "feeds_into": [
+        "overdetermined_collapse_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: reinforcing element within overdetermined reading; lower structural distinctiveness than selected readings"
+    },
+    {
+      "claim_id": "fiscal_overextension_snare",
+      "human_readable": "Vietnam War / Cold War Fiscal Overextension",
+      "structural_delta": "U.S. military spending abroad created balance of payments deficits that drained gold reserves",
+      "primary_observable": "Military spending as % of GDP; overseas military expenditure flows; correlation between Vietnam War escalation and gold outflows",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "military_industrial_complex",
+      "victim": "bretton_woods_sustainability",
+      "downstream_of": [],
+      "feeds_into": [
+        "contingent_choice_reading",
+        "hybrid_trigger_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: trigger mechanism captured in hybrid_trigger_reading; would add detail but not structural distinctiveness"
+    },
+    {
+      "claim_id": "distributional_consequences_absence",
+      "human_readable": "Distributional Winners and Losers from Fiat Transition",
+      "structural_delta": "Who benefited from inflation tax capability vs. who lost from gold standard discipline removal",
+      "primary_observable": "Inflation rates post-1971; real wage trends; creditor/debtor wealth transfers; developing country debt burdens",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "sovereign_debtors",
+      "victim": "fixed_income_savers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: identified as key absence but orthogonal to kernel contest; high epsilon warrants omega flag for future analysis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "contingent_choice_reading",
+      "kernel_id": "transition_causality",
+      "reading_id": "contingent_choice_reading"
+    },
+    {
+      "claim_id": "overdetermined_collapse_reading",
+      "kernel_id": "transition_causality",
+      "reading_id": "overdetermined_collapse_reading"
+    },
+    {
+      "claim_id": "hybrid_trigger_reading",
+      "kernel_id": "transition_causality",
+      "reading_id": "hybrid_trigger_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "triffin_dilemma_mountain",
+      "structural_delta": "Mathematical impossibility of dual dollar role",
+      "hypothesis": "mountain",
+      "deferral_reason": "Core element of overdetermined_collapse_reading; would be redundant as separate axis"
+    },
+    {
+      "claim_id": "labor_power_adjustment_blockage",
+      "structural_delta": "Postwar labor power preventing wage deflation adjustment",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Reinforcing element within overdetermined reading; lower structural distinctiveness than selected readings"
+    },
+    {
+      "claim_id": "fiscal_overextension_snare",
+      "structural_delta": "Vietnam/Cold War spending draining gold reserves",
+      "hypothesis": "snare",
+      "deferral_reason": "Trigger mechanism captured in hybrid_trigger_reading; detail without structural distinctiveness"
+    },
+    {
+      "claim_id": "distributional_consequences_absence",
+      "structural_delta": "Winners and losers from fiat transition",
+      "hypothesis": "snare",
+      "deferral_reason": "Orthogonal to kernel contest; high epsilon warrants separate future analysis (see omega_distributional_consequences)"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_counterfactual_viability",
+      "description": "Could Bretton Woods have survived with different U.S. fiscal policy (no Vietnam War) or earlier dollar devaluation? Contingent choice reading requires yes; overdetermined reading requires no. Empirical test: compare stress periods that did not collapse (1960 gold pool formation) vs. 1971 triggers.",
+      "source": "Kernel contest core; absence inventory from extraction"
+    },
+    {
+      "id": "omega_distributional_consequences",
+      "description": "Who benefited from fiat transition (sovereign debtors via inflation tax) vs. who lost (fixed-income savers, developing countries with dollar debts)? High epsilon deferred axis. Post-1971 inflation and debt crisis patterns suggest snare structure with creditor-debtor wealth transfer.",
+      "source": "Deferred axis distributional_consequences_absence; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_triffin_resolution_alternatives",
+      "description": "Were there structural alternatives to fiat transition that resolved Triffin Dilemma? Keynes's bancor proposal (international reserve currency) vs. White's dollar-centric plan. If bancor was viable, strengthens contingent choice reading; if structurally blocked by U.S. hegemony, strengthens overdetermined reading.",
+      "source": "Extraction of Keynes vs. White competing plans; Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reading_collapse_test",
+      "description": "Do the three readings genuinely emit different constraints or collapse into one? Test: contingent choice reading should identify specific decision points where alternatives were viable; overdetermined reading should show all paths converging; hybrid reading should identify necessary but not sufficient triggers. If all three reduce to 'it happened because of Triffin Dilemma,' kernel is false and readings collapse.",
+      "source": "§1.3-K coherence check; kernel/not-kernel decision gate"
+    },
+    {
+      "id": "omega_london_gold_pool_1968",
+      "description": "Was the 1968 London Gold Pool collapse a failed stabilization attempt (evidence for overdetermined reading) or a missed opportunity for coordinated defense (evidence for contingent choice reading)? Timing suggests structural fragility but coordination failure as proximate cause.",
+      "source": "Extraction of mechanism failures; hybrid_trigger_reading upstream context"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied per §1.3-K. Three readings selected represent genuinely distinct interpretive frameworks with different causal attributions and counterfactual implications. Axiom contradiction declared between contingent_choice_reading and overdetermined_collapse_reading (avoidability vs. inevitability). Deferred axes capture reinforcing elements without redundancy. Omegas flag empirical tests for reading validity and distributional consequences orthogonal to kernel contest."
+  },
+  "_seed_id": "gold_to_fiat_transition"
+}

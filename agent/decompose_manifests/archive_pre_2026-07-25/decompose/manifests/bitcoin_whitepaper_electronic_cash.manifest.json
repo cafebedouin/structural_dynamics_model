@@ -1,0 +1,222 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Distributed Systems / Monetary Theory / Technology Governance",
+  "family_id": "bitcoin_whitepaper_kernel_2025",
+  "topic_summary": "Analysis of the 2008 Bitcoin whitepaper's title claim 'A Peer-to-Peer Electronic Cash System' as a contested kernel. Two incompatible readings emerged from the same founding text: Reading A (small-block/store-of-value) treats decentralization and full-node verifiability as the binding constraint, requiring limited on-chain capacity; Reading B (big-block/electronic cash) treats the 'cash' telos as binding, requiring high throughput for everyday payments. The structural incompatibility materialized in the 2017 Bitcoin Cash fork.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Bitcoin whitepaper (founding text, single 9-page document published 2008)",
+      "Small-block coalition (Core developers, node operators, institutional custodians)",
+      "Big-block coalition (miners, payment processors, merchant adopters)",
+      "Block size limit (technical parameter governing on-chain capacity)",
+      "Full node operators (entities running complete blockchain verification)",
+      "Low-value transactors (users priced off base layer under Reading A)"
+    ],
+    "key_tensions": [
+      "Decentralization maximalism vs transactional accessibility (which constraint the system exists to observe)",
+      "Title literalism vs emergent consensus (whether 'cash' in title binds future interpretation)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "store_of_value_reading",
+      "human_readable": "Store-of-Value Reading (Decentralization as Binding Constraint)",
+      "structural_delta": "Full-node verifiability and decentralization treated as primary constraint; on-chain capacity subordinated to these goals",
+      "primary_observable": "Block size limit enforcement; Lightning Network adoption rates; node count stability",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "long_term_holders_and_node_operators",
+      "victim": "low_value_transactors_priced_off_base_layer",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes one pole of the axiom contradiction"
+    },
+    {
+      "claim_id": "electronic_cash_reading",
+      "human_readable": "Electronic Cash Reading (Transactional Throughput as Binding Constraint)",
+      "structural_delta": "Title's 'cash' telos treated as binding; on-chain capacity maximized for everyday payment accessibility",
+      "primary_observable": "Block size limit expansion; on-chain transaction fee levels; merchant payment adoption",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "merchants_payment_processors_low_value_users",
+      "victim": "full_node_operators_facing_storage_bandwidth_costs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; establishes opposite pole of axiom contradiction"
+    },
+    {
+      "claim_id": "nakamoto_oracle_opacity",
+      "human_readable": "Nakamoto Oracle Opacity (Founder Absence as Interpretive Vacuum)",
+      "structural_delta": "Satoshi Nakamoto's 2011 disappearance eliminated authoritative kernel interpretation, leaving the text as contested substrate",
+      "primary_observable": "Historical record of Nakamoto statements; lack of post-2011 clarifications; fork frequency after 2011",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "store_of_value_reading",
+        "electronic_cash_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Upstream mountain explaining why kernel contestation was structurally inevitable; distinct observable from the two readings"
+    },
+    {
+      "claim_id": "mining_centralization_ratchet",
+      "human_readable": "Mining Centralization Ratchet (Hashpower Concentration as Emergent Drift)",
+      "structural_delta": "Proof-of-work economies of scale drive mining pool concentration regardless of block size",
+      "primary_observable": "Mining pool market share (Herfindahl index); geographic distribution of hashpower",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "store_of_value_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mining centralization affects both readings similarly; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "layer_two_extraction_vector",
+      "human_readable": "Layer-Two as Extraction Vector (Lightning Network Custody Centralization)",
+      "structural_delta": "Off-chain payment layers reintroduce custodial intermediaries, reversing the peer-to-peer claim",
+      "primary_observable": "Lightning channel custody concentration; routing node fee extraction; wallet custodianship rates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "lightning_hub_operators",
+      "victim": "users_unable_to_run_own_channels",
+      "downstream_of": [
+        "store_of_value_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of Reading A but not independent axis; captured in store_of_value_reading constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "store_of_value_reading",
+      "kernel_id": "bitcoin_whitepaper_purpose",
+      "reading_id": "store_of_value_reading"
+    },
+    {
+      "claim_id": "electronic_cash_reading",
+      "kernel_id": "bitcoin_whitepaper_purpose",
+      "reading_id": "electronic_cash_reading"
+    },
+    {
+      "claim_id": "nakamoto_oracle_opacity",
+      "kernel_id": "bitcoin_whitepaper_purpose",
+      "reading_id": "nakamoto_oracle_opacity"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "mining_centralization_ratchet",
+      "structural_delta": "Proof-of-work economies of scale drive mining concentration",
+      "hypothesis": "piton",
+      "deferral_reason": "Affects both readings similarly; emergent drift orthogonal to kernel contestation"
+    },
+    {
+      "claim_id": "layer_two_extraction_vector",
+      "structural_delta": "Off-chain layers reintroduce custodial intermediaries",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of Reading A; captured within store_of_value_reading constraint analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_scalability_trilemma_collapse",
+      "description": "Does the blockchain trilemma (decentralization/security/scalability) force a true trade-off, or is it a Piton of 2008-era design choices that alternative architectures (sharding, DAGs, validity proofs) invalidate? If the trilemma is contingent, both readings may be solving a problem that need not exist.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — the trilemma itself may be an unexamined axis"
+    },
+    {
+      "id": "omega_title_binding_force",
+      "description": "Is a whitepaper title legally or socially binding on a decentralized protocol's future development? If not, Reading B's literalism lacks enforcement mechanism. If yes, what authority adjudicates title interpretation after founder disappearance?",
+      "source": "Commitment system drift analysis — authority structure ambiguity"
+    },
+    {
+      "id": "omega_fork_legitimacy_cascade",
+      "description": "Bitcoin Cash forked in 2017 claiming title fidelity. Does the existence of BCH resolve the kernel contest (two coins, two readings), or does it demonstrate kernel instability (inability to converge on single interpretation)? The 'winning' chain (by market cap) may not be the 'legitimate' reading under title literalism.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — market cap as implicit authority mechanism"
+    },
+    {
+      "id": "omega_proof_of_work_externality",
+      "description": "Is Bitcoin's energy consumption a Mountain (physics of hash function security) or a Snare (externalized environmental cost)? Both readings inherit this structure, but neither addresses whether the trilemma's security leg requires this specific mechanism.",
+      "source": "Absence Inventory — environmental externality absent from whitepaper, not addressed by either reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean kernel decomposition. Nakamoto_oracle_opacity classified as mountain (founder absence is irreversible structural fact). Both readings are live positions with institutional backing. Axiom contradiction confirmed: no framework holds both 'decentralization-first' and 'cash-utility-first' as simultaneously binding when they demand opposite block size policies."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 2008 Bitcoin whitepaper's title claim 'A Peer-to-Peer Electronic Cash System' as binding specification of system purpose",
+    "authority_description": "No living interpretive authority post-2011; competing claims ground legitimacy in (1) developer consensus + node operator enforcement (Reading A) vs (2) title literalism + miner/merchant coordination (Reading B)",
+    "drift_status": "absent",
+    "candidate_pattern": "dual_mandate_scissors",
+    "is_contested_kernel": true,
+    "kernel_id": "bitcoin_whitepaper_purpose",
+    "readings": [
+      {
+        "reading_id": "store_of_value_reading",
+        "commitment": "Decentralization and full-node verifiability are the binding constraints; on-chain capacity is subordinated to these goals",
+        "authority_grounding": "Developer consensus (Bitcoin Core) + node operator enforcement of block size limit",
+        "sibling_readings": [
+          "electronic_cash_reading"
+        ],
+        "expected_structural_delta": "Limited on-chain capacity (1MB blocks retained); low-value users priced off base layer; Lightning Network as off-chain scaling; beneficiaries are long-term holders and node operators; victims are users requiring low-fee on-chain transactions"
+      },
+      {
+        "reading_id": "electronic_cash_reading",
+        "commitment": "The whitepaper title's 'cash' telos is binding; system must support everyday transactional use with low fees",
+        "authority_grounding": "Title literalism + miner/merchant coordination (Bitcoin Cash fork 2017)",
+        "sibling_readings": [
+          "store_of_value_reading"
+        ],
+        "expected_structural_delta": "Expanded on-chain capacity (8MB+ blocks); lower per-transaction fees; merchant payment adoption prioritized; beneficiaries are payment processors and low-value transactors; victims are node operators facing storage/bandwidth costs"
+      },
+      {
+        "reading_id": "nakamoto_oracle_opacity",
+        "commitment": "Satoshi Nakamoto's 2011 disappearance eliminated authoritative interpretation, leaving the kernel text as contested substrate",
+        "authority_grounding": "Historical fact — no living founder to adjudicate between readings",
+        "sibling_readings": [
+          "store_of_value_reading",
+          "electronic_cash_reading"
+        ],
+        "expected_structural_delta": "Interpretive vacuum enables fork proliferation; both readings claim whitepaper fidelity; no mechanism for convergence without founder clarification"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "store_of_value_reading",
+        "reading_b": "electronic_cash_reading",
+        "basis": "Reading A's axiom (decentralization-first requires limited on-chain capacity) and Reading B's axiom (cash utility requires unlimited on-chain capacity) cannot coexist in a single coherent framework when block size is the contested parameter. One reading's constraint is the other reading's violation."
+      }
+    ]
+  },
+  "_seed_id": "bitcoin_whitepaper_electronic_cash"
+}

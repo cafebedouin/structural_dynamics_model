@@ -1,0 +1,268 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Development Planning / State Capitalism",
+  "family_id": "china_15fyp_2026",
+  "topic_summary": "Analysis of China's 15th Five-Year Plan (2026-2030) as presented at the March 6, 2026 NPC press conference, examining the transition from high-growth to 'high-quality development' amid structural challenges including weak domestic demand, deflationary pressures, demographic contraction, and geopolitical uncertainty. The plan sets a 4.5-5% growth target (lowest since 1991) while emphasizing emerging industries, infrastructure investment, and livelihood improvements.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 5,
+    "mechanism_count": 6,
+    "absence_count": 4,
+    "key_entities": [
+      "National Development and Reform Commission (NDRC) — central planning authority; Zheng Shanjie as primary spokesperson",
+      "15th Five-Year Plan (2026-2030) — 109 major projects across six categories; 20 main indicators with 7 livelihood-focused",
+      "National venture-capital guidance fund — established 2025; national M&A fund announced 2026; combined leverage target >1 trillion yuan",
+      "Six emerging pillar industries — integrated circuits, aerospace, biopharmaceuticals, low-altitude economy, new-type energy storage, intelligent robots; ~6 trillion yuan 2025 output, target >10 trillion by 2030",
+      "Six future industries — quantum, biomanufacturing, green hydrogen/fusion, brain-computer interfaces, embodied intelligence, 6G",
+      "Property sector — 17.2% investment decline 2025; described as 'deeper-than-expected downturn' by IMF",
+      "Population dynamics — contractionary development; school-age peaks: junior high 2026, senior high 2029, higher ed 2032",
+      "Export-industrial complex — 6.1% export growth 2025 vs 3.7% retail sales growth; production overcapacity forcing external sales"
+    ],
+    "key_tensions": [
+      "Export-led growth vs domestic consumption weakness (6.1% export growth vs 3.7% retail; industrial output 5.9% vs services 5.4%)",
+      "High-tech manufacturing momentum vs deflationary pressures (9.4% high-tech growth vs -2.6% PPI, 0.0% CPI)",
+      "Central planning ambition vs market allocation signals (109 major projects, >7 trillion yuan directed investment vs persistent demand weakness)",
+      "Demographic contraction vs resource allocation (wave-like school-age peaks requiring differentiated education investment amid overall population decline)",
+      "Innovation-driven development vs property sector drag (venture capital/M&A fund establishment vs 17.2% property investment decline)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy of the Chinese Communist Party's governance authority grounded in its capacity to deliver sustained economic development and rising living standards — the 'performance legitimacy' kernel",
+    "authority_description": "CCP Central Committee interprets what constitutes successful development; NDRC operationalizes through five-year plans; legitimacy derives from claimed fidelity to 'socialism with Chinese characteristics' and demonstrated delivery of growth/stability",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "performance_legitimacy",
+    "readings": [
+      {
+        "reading_id": "quantitative_growth_reading",
+        "commitment": "Legitimacy grounded in maintaining GDP growth rates that demonstrate continued economic expansion and job creation",
+        "authority_grounding": "Historical CCP practice 1978-2020; 'development is the absolute principle'; growth targets as primary performance metric",
+        "sibling_readings": [
+          "qualitative_development_reading",
+          "techno_nationalist_reading",
+          "livelihood_security_reading"
+        ],
+        "expected_structural_delta": "Growth rate becomes primary constraint; investment-driven model persists; export dependency and overcapacity tolerated as necessary costs; beneficiary: industrial-export complex and local government officials measured on GDP"
+      },
+      {
+        "reading_id": "qualitative_development_reading",
+        "commitment": "Legitimacy grounded in structural transformation toward 'high-quality development' — innovation, sustainability, and efficiency gains over raw growth",
+        "authority_grounding": "Xi Jinping era formulation (2017-present); 'new development philosophy'; total factor productivity and industrial upgrading as metrics",
+        "sibling_readings": [
+          "quantitative_growth_reading",
+          "techno_nationalist_reading",
+          "livelihood_security_reading"
+        ],
+        "expected_structural_delta": "Innovation and industrial upgrading become primary constraints; tolerance for lower growth rates; venture capital/M&A infrastructure prioritized; beneficiary: high-tech sectors and state-backed innovation ecosystem; victim: traditional manufacturing and property-dependent local governments"
+      },
+      {
+        "reading_id": "techno_nationalist_reading",
+        "commitment": "Legitimacy grounded in achieving technological self-sufficiency and global leadership in strategic industries to ensure national security and great-power status",
+        "authority_grounding": "Dual-circulation strategy; 'Made in China 2025' successor frameworks; semiconductor/AI/quantum as existential priorities",
+        "sibling_readings": [
+          "quantitative_growth_reading",
+          "qualitative_development_reading",
+          "livelihood_security_reading"
+        ],
+        "expected_structural_delta": "Strategic industry dominance becomes primary constraint; massive directed investment regardless of market signals; export controls and supply chain resilience prioritized; beneficiary: defense-adjacent tech sectors and national champions; victim: consumer sectors and market-driven allocation"
+      },
+      {
+        "reading_id": "livelihood_security_reading",
+        "commitment": "Legitimacy grounded in delivering tangible improvements in daily life — employment, healthcare, education, elderly care — that citizens directly experience",
+        "authority_grounding": "Common prosperity framework; 'people-centered development'; livelihood indicators (7 of 20 in 15FYP) as accountability metrics",
+        "sibling_readings": [
+          "quantitative_growth_reading",
+          "qualitative_development_reading",
+          "techno_nationalist_reading"
+        ],
+        "expected_structural_delta": "Service delivery and social safety net become primary constraints; consumption support prioritized over investment; redistribution mechanisms strengthened; beneficiary: service sectors and household consumption; victim: capital-intensive industrial expansion and local government infrastructure spending"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "quantitative_growth_reading",
+        "reading_b": "qualitative_development_reading",
+        "basis": "Quantitative reading treats growth rate as non-negotiable floor (legitimacy fails below threshold); qualitative reading treats growth rate as negotiable outcome of structural optimization (legitimacy survives lower growth if quality improves). No single framework can hold both 'growth rate is legitimacy floor' and 'growth rate is subordinate to quality' simultaneously."
+      },
+      {
+        "reading_a": "techno_nationalist_reading",
+        "reading_b": "livelihood_security_reading",
+        "basis": "Techno-nationalist reading subordinates consumption and welfare spending to strategic industrial investment (legitimacy through geopolitical capability); livelihood reading subordinates industrial investment to immediate service delivery (legitimacy through daily experience). No single framework can hold both 'strategic industries are legitimacy foundation' and 'daily welfare is legitimacy foundation' as primary simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "performance_legitimacy_kernel",
+      "human_readable": "Performance Legitimacy Kernel (Contested Readings of Development Success)",
+      "structural_delta": "The kernel itself: what constitutes successful development that grounds CCP governance legitimacy — contested across four readings with different constraint structures",
+      "primary_observable": "Policy priority allocation in 15FYP (investment distribution, indicator weighting, rhetoric emphasis); growth target formulation (range vs point, qualitative vs quantitative framing)",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "demographic_resource_allocation",
+        "property_sector_overhang"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with four distinct readings; each reading instantiates different constraint on resource allocation and policy priority; kernel itself counts as one axis"
+    },
+    {
+      "claim_id": "demographic_resource_allocation",
+      "human_readable": "Demographic Resource Allocation (Contractionary Population Dynamics)",
+      "structural_delta": "Shift from incremental to contractionary population development requiring reallocation of education/healthcare/pension resources across wave-like age cohort peaks",
+      "primary_observable": "School-age population peaks (junior high 2026, senior high 2029, higher ed 2032); dependency ratio trends; regional population divergence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "performance_legitimacy_kernel"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Mountain providing physical constraint base; independent observable (demographic structure) from performance legitimacy readings; affects resource allocation regardless of which reading dominates"
+    },
+    {
+      "claim_id": "property_sector_overhang",
+      "human_readable": "Property Sector Overhang (Structural Debt and Investment Collapse)",
+      "structural_delta": "Persistent property investment decline (-17.2% 2025) creating fiscal stress for local governments and deflationary pressure despite policy stimulus",
+      "primary_observable": "Property investment growth rate; local government land-sale revenue; property-related debt exposure",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "central_government_fiscal_control",
+      "victim": "local_government_revenue_base",
+      "downstream_of": [],
+      "feeds_into": [
+        "performance_legitimacy_kernel"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Tangled rope with distinct observable (property sector metrics) independent of demographic mountain and performance kernel; entanglement between central deleveraging goals and local fiscal capacity"
+    },
+    {
+      "claim_id": "export_dependency_trap",
+      "human_readable": "Export Dependency Trap (Overcapacity and External Demand Reliance)",
+      "structural_delta": "Industrial output growth (5.9%) outpacing domestic consumption (3.7%) creating structural overcapacity requiring export markets despite geopolitical risk",
+      "primary_observable": "Export growth vs retail sales growth differential; capacity utilization rates; trade surplus as % of GDP",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "industrial_export_complex",
+      "victim": "domestic_consumer_sectors",
+      "downstream_of": [
+        "performance_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of quantitative_growth_reading dominance rather than independent structural axis; captured by performance kernel readings' differential treatment of export-led vs consumption-driven models"
+    },
+    {
+      "claim_id": "venture_capital_infrastructure",
+      "human_readable": "Venture Capital Infrastructure (State-Directed Innovation Financing)",
+      "structural_delta": "National VC guidance fund (2025) and M&A fund (2026) creating state-backed early-stage and exit infrastructure for strategic industries",
+      "primary_observable": "Fund deployment rates; portfolio composition (strategic vs market-driven); exit channel utilization",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "state_backed_innovation_ecosystem",
+      "victim": null,
+      "downstream_of": [
+        "performance_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold implementing techno_nationalist_reading and qualitative_development_reading; mechanism rather than independent constraint; omega material on whether scaffold becomes piton"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "quantitative_growth_reading",
+      "kernel_id": "performance_legitimacy",
+      "reading_id": "quantitative_growth_reading"
+    },
+    {
+      "claim_id": "qualitative_development_reading",
+      "kernel_id": "performance_legitimacy",
+      "reading_id": "qualitative_development_reading"
+    },
+    {
+      "claim_id": "techno_nationalist_reading",
+      "kernel_id": "performance_legitimacy",
+      "reading_id": "techno_nationalist_reading"
+    },
+    {
+      "claim_id": "livelihood_security_reading",
+      "kernel_id": "performance_legitimacy",
+      "reading_id": "livelihood_security_reading"
+    },
+    "demographic_resource_allocation",
+    "property_sector_overhang"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "export_dependency_trap",
+      "structural_delta": "Industrial overcapacity requiring external markets despite geopolitical risk",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of performance legitimacy kernel readings rather than independent axis; export-led vs consumption-driven growth captured by quantitative_growth_reading vs livelihood_security_reading differential"
+    },
+    {
+      "claim_id": "venture_capital_infrastructure",
+      "structural_delta": "State-directed innovation financing through national VC/M&A funds",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Implementation mechanism for techno_nationalist_reading and qualitative_development_reading rather than independent constraint; omega material on scaffold-to-piton transition risk"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_coexistence",
+      "description": "Can the four performance legitimacy readings coexist as complementary policy streams, or does resource scarcity force exclusive selection? 15FYP rhetoric suggests synthesis ('high-quality development' + growth target range + emerging industries + livelihood indicators), but fiscal constraints and demographic pressures may force prioritization. If readings are mutually exclusive in practice, which reading's failure triggers legitimacy crisis?",
+      "source": "Kernel decomposition; axiom contradictions between quantitative/qualitative and techno-nationalist/livelihood pairs"
+    },
+    {
+      "id": "omega_growth_floor",
+      "description": "Is 4.5% the true legitimacy floor, or can qualitative_development_reading sustain legitimacy below this threshold if innovation/livelihood metrics improve? Historical precedent (no target below 5% since 1991) suggests quantitative floor, but 'striving for better result in practice' language may signal qualitative reading ascendance. Deflationary environment tests this boundary.",
+      "source": "F03 (Hasty Generalization) — mountain classification of growth-rate floor uncertain"
+    },
+    {
+      "id": "omega_local_government_extraction",
+      "description": "Property sector collapse eliminates primary local government revenue source (land sales). Does central government absorb fiscal gap (strengthening central control), or do local governments develop new extraction mechanisms (fees, fines, SOE dividends)? 15FYP infrastructure spending (>7 trillion yuan) suggests central absorption, but implementation capacity uncertain.",
+      "source": "Property sector overhang tangled_rope; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_vc_scaffold_transition",
+      "description": "Do national VC/M&A funds remain scaffolds (temporary support for market development) or become pitons (permanent state allocation replacing market signals)? Fund scale (>1 trillion yuan leverage) and strategic industry focus suggest piton risk. If funds capture allocation permanently, innovation ecosystem becomes state-dependent rather than market-driven.",
+      "source": "Deferred axis venture_capital_infrastructure; scaffold hypothesis uncertainty"
+    },
+    {
+      "id": "omega_demographic_irreversibility",
+      "description": "Transcript treats demographic contraction as mountain (physical constraint requiring adaptation). But is fertility decline reversible through policy (making it rope/piton), or is cultural/economic shift irreversible (true mountain)? 15FYP childcare expansion (0-3 enrollment +6 points) tests reversibility. If mountain, resource reallocation is permanent structural shift; if rope, current allocation is temporary.",
+      "source": "Demographic resource allocation mountain classification; F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_geopolitical_constraint",
+      "description": "External demand for Chinese exports and access to advanced semiconductor/AI technology are treated as background conditions, not explicit axes. But trade tensions and technology export controls may be mountains (physical limits on market access and technology acquisition) rather than ropes (negotiable frictions). If mountains, techno_nationalist_reading and quantitative_growth_reading face hard ceilings not addressed in 15FYP.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — geopolitical constraints not decomposed as axes"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected on two classifications: (1) demographic_resource_allocation as mountain assumes fertility decline is irreversible physical constraint, but policy interventions may make it rope/piton; (2) growth-rate floor (4.5%) as legitimacy threshold assumes quantitative_growth_reading dominance, but qualitative_development_reading may sustain legitimacy below this level. Generated omega_demographic_irreversibility and omega_growth_floor to bound these uncertainties. No F34 despite China-specific domain because research context provides sufficient grounding for structural analysis; no F01 because kernel decomposition captures the contested nature of 'development success' that the transcript itself presents through multiple framings."
+  }
+}

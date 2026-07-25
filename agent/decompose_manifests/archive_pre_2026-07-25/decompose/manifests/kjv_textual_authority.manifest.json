@@ -1,0 +1,235 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Textual Criticism / Theology",
+  "family_id": "kjv_textual_authority_2026",
+  "topic_summary": "Analysis of the King James Version (KJV) Bible as a contested kernel where different interpretive traditions read the same fixed text as either exclusively divinely inspired (KJV-Only movement) or as a historically situated, revisable translation (mainline/academic traditions). The readings instantiate fundamentally different constraints on biblical authority, translation validity, and who holds legitimate power to adjudicate religious practice.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "King James Version 1611 text (the stabilized kernel)",
+      "KJV-Only movement (interpretive authority claiming exclusive inspiration)",
+      "Mainline Protestant denominations (interpretive authority grounded in scholarly revision)",
+      "Academic biblical scholarship (textual criticism tradition)",
+      "Earlier manuscript traditions (Textus Receptus, Masoretic Text, Dead Sea Scrolls)"
+    ],
+    "key_tensions": [
+      "Divine inspiration vs human translation (ontological status of KJV text)",
+      "Fixity as fidelity vs fixity as fossilization (interpretive legitimacy grounding)"
+    ],
+    "key_mechanisms": [
+      "Doctrine of verbal plenary inspiration (mechanism grounding KJV-Only authority)",
+      "Manuscript comparison/eclectic text method (mechanism grounding academic authority)"
+    ],
+    "key_absences": [
+      "Economic incentives (KJV public domain vs modern translations under copyright)",
+      "Demographic distribution (KJV-Only concentrated in independent fundamentalist churches)",
+      "Translation history (KJV itself revised earlier English translations; historical revisability obscured)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The King James Version (1611) as a fixed, codified English biblical text claimed as the authoritative transmission of divine revelation",
+    "authority_description": "Contested between KJV-Only movement (authority derived from claimed divine preservation of this specific translation) and mainline/academic traditions (authority derived from scholarly consensus and manuscript evidence)",
+    "drift_status": "absent",
+    "candidate_pattern": "doctrinal_immutability",
+    "is_contested_kernel": true,
+    "kernel_id": "kjv_text_1611",
+    "readings": [
+      {
+        "reading_id": "exclusive_inspiration_reading",
+        "commitment": "The KJV is the exclusively inspired, inerrant English Bible; all other translations are corrupted or inferior",
+        "authority_grounding": "Divine preservation doctrine — God supernaturally preserved the Textus Receptus lineage and the KJV translation process",
+        "sibling_readings": [
+          "revisable_translation_reading",
+          "functional_equivalence_reading"
+        ],
+        "expected_structural_delta": "Modern translations enter victim set (suppressed as illegitimate); KJV-Only leadership becomes sole arbiter of textual authority; high extractiveness via gate-keeping of 'true' scripture"
+      },
+      {
+        "reading_id": "revisable_translation_reading",
+        "commitment": "The KJV is a historically important but improvable translation; better manuscripts and linguistic knowledge justify revision",
+        "authority_grounding": "Scholarly consensus via textual criticism — authority derived from manuscript evidence and academic peer review",
+        "sibling_readings": [
+          "exclusive_inspiration_reading",
+          "functional_equivalence_reading"
+        ],
+        "expected_structural_delta": "Translation selection becomes consumer choice (low suppression); academic scholars become arbiters; extractiveness shifts to publishing industry control of modern translations"
+      },
+      {
+        "reading_id": "functional_equivalence_reading",
+        "commitment": "Multiple translations serve complementary purposes; KJV valuable for literary/historical reasons, modern versions for clarity",
+        "authority_grounding": "Pragmatic pluralism — authority distributed across translation committees and denominational endorsement",
+        "sibling_readings": [
+          "exclusive_inspiration_reading",
+          "revisable_translation_reading"
+        ],
+        "expected_structural_delta": "No single text holds gate-keeping power; extractiveness reduced but coordination costs increase; authority decentralized"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "exclusive_inspiration_reading",
+        "reading_b": "revisable_translation_reading",
+        "basis": "Exclusive inspiration requires that translation process itself was divinely guided and thus unrevisable; revisable translation requires that all translations (including KJV) are human products subject to error and improvement. No coherent framework holds both: accepting divine preservation of KJV translation requires rejecting the claim that better manuscripts justify revision."
+      },
+      {
+        "reading_a": "exclusive_inspiration_reading",
+        "reading_b": "functional_equivalence_reading",
+        "basis": "Exclusive inspiration requires one uniquely authoritative text; functional equivalence requires that authority can be distributed across multiple valid translations. No coherent framework holds both: accepting KJV as exclusively inspired requires rejecting the legitimacy of treating modern translations as equally valid for any purpose."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "exclusive_inspiration_reading",
+      "human_readable": "Exclusive Inspiration Reading (KJV as Uniquely Divinely Preserved)",
+      "structural_delta": "Reading the KJV kernel through divine preservation doctrine — the translation process itself was supernaturally guided, making the text unrevisable",
+      "primary_observable": "Doctrinal statements requiring KJV-only for preaching/teaching; suppression of alternative translations in church practice",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "kjv_only_leadership",
+      "victim": "users_of_modern_translations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest extractiveness reading; instantiates gate-keeping authority structure with clear beneficiary/victim topology"
+    },
+    {
+      "claim_id": "revisable_translation_reading",
+      "human_readable": "Revisable Translation Reading (KJV as Historically Situated Artifact)",
+      "structural_delta": "Reading the KJV kernel through textual criticism — all translations are human products improvable via better manuscripts and linguistic scholarship",
+      "primary_observable": "Frequency of translation updates; manuscript discovery integration; academic consensus metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "academic_biblical_scholars",
+      "victim": "lay_readers_facing_proliferation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Alternative institutional authority structure; different extractiveness mechanism (publishing control vs gate-keeping); axiom-contradictory with reading 1"
+    },
+    {
+      "claim_id": "functional_equivalence_reading",
+      "human_readable": "Functional Equivalence Reading (Pragmatic Pluralism Across Translations)",
+      "structural_delta": "Reading the KJV kernel as one of many legitimate translations serving complementary purposes",
+      "primary_observable": "Denominational translation policies; multi-translation usage rates in churches",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structurally distinct from readings 1-2; decentralized authority model; low extractiveness provides contrast to snare/tangled_rope pair"
+    },
+    {
+      "claim_id": "manuscript_tradition_dependency",
+      "human_readable": "Manuscript Tradition Dependency (Textus Receptus vs Critical Text)",
+      "structural_delta": "The underlying Greek/Hebrew manuscript tradition chosen determines translation possibilities",
+      "primary_observable": "Textus Receptus variants vs Nestle-Aland critical text variants; manuscript age and provenance",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "exclusive_inspiration_reading",
+        "revisable_translation_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: physical constraint upstream of readings but lower analytical priority than direct reading comparison; material for omega discussion"
+    },
+    {
+      "claim_id": "copyright_economic_lock_in",
+      "human_readable": "Copyright Economic Lock-In (Public Domain vs Proprietary Translations)",
+      "structural_delta": "KJV public domain status vs modern translations under copyright creates economic incentive structure",
+      "primary_observable": "Translation licensing costs; free distribution availability; publisher revenue streams",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "modern_translation_publishers",
+      "victim": "ministries_with_limited_budgets",
+      "downstream_of": [],
+      "feeds_into": [
+        "revisable_translation_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic structure affecting revisable_translation_reading but tangential to core authority contest; surfaced in absence inventory"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "exclusive_inspiration_reading",
+      "kernel_id": "kjv_text_1611",
+      "reading_id": "exclusive_inspiration_reading"
+    },
+    {
+      "claim_id": "revisable_translation_reading",
+      "kernel_id": "kjv_text_1611",
+      "reading_id": "revisable_translation_reading"
+    },
+    {
+      "claim_id": "functional_equivalence_reading",
+      "kernel_id": "kjv_text_1611",
+      "reading_id": "functional_equivalence_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "manuscript_tradition_dependency",
+      "structural_delta": "Underlying manuscript tradition choices determine translation space",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint upstream but lower priority than direct reading comparison; critical for omega contextualization"
+    },
+    {
+      "claim_id": "copyright_economic_lock_in",
+      "structural_delta": "Public domain vs proprietary copyright creates economic incentive asymmetry",
+      "hypothesis": "piton",
+      "deferral_reason": "Economic structure tangential to core epistemic authority contest; surfaced via absence inventory but not central to kernel topology"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_manuscript_foundation",
+      "description": "Is manuscript_tradition_dependency a true Mountain (physical constraint of available texts) or does the choice of Textus Receptus vs Critical Text already encode theological commitment? If the latter, the 'mountain' is a Piton masking prior interpretive authority.",
+      "source": "Deferred axis manuscript_tradition_dependency + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_translation_revision_history",
+      "description": "KJV itself revised earlier English translations (Tyndale, Geneva). If KJV-Only reading acknowledges this history, does it collapse into functional_equivalence? If it denies/obscures this history, extractiveness via historical amnesia warrants separate axis.",
+      "source": "Absence Inventory (translation history) + §2.2 Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_economic_entanglement",
+      "description": "Does copyright_economic_lock_in alter the constraint type of revisable_translation_reading? If modern translation proliferation is driven by publisher profit rather than scholarly improvement, the Tangled_Rope may be misclassified Snare.",
+      "source": "Deferred axis copyright_economic_lock_in + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_demographic_clustering",
+      "description": "KJV-Only concentrated in independent fundamentalist churches (no denominational oversight). Does this institutional structure amplify extractiveness via reduced accountability, or is it independent variable?",
+      "source": "Absence Inventory (demographic distribution)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings maintains structural independence: each reading instantiates genuinely different constraint (different authority structure, different victim set, different extractiveness mechanism). Axiom contradictions confirmed between exclusive_inspiration and both alternative readings."
+  },
+  "_seed_id": "kjv_textual_authority"
+}

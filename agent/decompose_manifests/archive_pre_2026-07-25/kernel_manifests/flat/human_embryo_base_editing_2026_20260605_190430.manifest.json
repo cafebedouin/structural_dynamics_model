@@ -1,0 +1,245 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Biomedical Research / Genome Editing / Reproductive Medicine",
+  "family_id": "human_embryo_base_editing_2026",
+  "topic_summary": "Analysis of a preprint reporting efficient base editing in human embryos using adenine base editors (ABE), demonstrating absence of chromosomal alterations and large deletions that plague CRISPR/Cas9 approaches, while revealing RNA-mediated embryo arrest and persistent challenges with mosaicism and off-target editing. The research advances understanding of DNA repair in early human development but remains far from clinical application.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Adenine Base Editors (ABE) - genome editing tool using Cas9 nickase to create single-strand breaks rather than double-strand breaks",
+      "CRISPR/Cas9 - conventional genome editing creating double-strand breaks, causing frequent aneuploidy in human embryos",
+      "Human embryos (donated 2PN zygotes and MII oocytes) - experimental substrate with deficient DSB repair",
+      "Columbia University / Seoul National University / Genomic Prediction - research consortium",
+      "PCSK9 and HBG1/2 genes - editing targets chosen for technical validation rather than therapeutic relevance",
+      "Derived hESC lines (ESbe1, ESbe2, ESbe3) - stem cell lines from base-edited embryos",
+      "National Academies of Sciences - regulatory authority recommending only naturally occurring variants for germline editing",
+      "Preprint server (bioRxiv) - publication venue bypassing peer review"
+    ],
+    "key_tensions": [
+      "Technical precision vs clinical readiness (base editing avoids chromosomal damage but mosaicism and off-target effects remain unsolved)",
+      "Protein delivery (RNP) vs mRNA delivery (RNP enables development; mRNA causes invariable arrest via unknown mechanism)",
+      "Basic research legitimacy vs therapeutic application (authors frame as DNA repair investigation; field interprets as germline editing advancement)",
+      "Safety improvement vs safety sufficiency (base editing safer than Cas9 but still below clinical threshold)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "dna_repair_substrate_difference",
+      "human_readable": "DNA Repair Substrate Difference (Single-Strand Breaks vs Double-Strand Breaks)",
+      "structural_delta": "Human embryos efficiently repair single-strand breaks and mismatches (ABE-induced) but catastrophically fail to repair double-strand breaks (Cas9-induced), revealing substrate-specific repair competence",
+      "primary_observable": "Chromosomal integrity via SNP array; large deletion frequency via long-range PCR; segmental aneuploidy rate",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "delivery_modality_toxicity",
+        "clinical_translation_gap"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Most structurally distinct upstream constraint; physical substrate difference driving all downstream outcomes"
+    },
+    {
+      "claim_id": "delivery_modality_toxicity",
+      "human_readable": "Delivery Modality Toxicity (Protein vs mRNA)",
+      "structural_delta": "ABE delivered as ribonucleoprotein enables normal development (32-33% blastocyst rate); identical editor delivered as mRNA causes invariable early arrest (0/19 embryos) via unknown RNA-sensing mechanism",
+      "primary_observable": "Embryo developmental stage reached; blastocyst formation rate; cell count at day 3",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "clinical_translation_gap"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (developmental viability vs genomic integrity); different ε from axis 1"
+    },
+    {
+      "claim_id": "guide_rna_off_target_variance",
+      "human_readable": "Guide RNA Off-Target Variance",
+      "structural_delta": "Off-target editing frequency is guide RNA-dependent rather than platform-dependent: HBG1/2 sgRNA shows 37% editing at most active off-target site; PCSK9 sgRNA shows <1% at only one site despite identical ABE platform",
+      "primary_observable": "Off-target editing frequency via targeted deep sequencing; number of active off-target sites per guide",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "guide_rna_design_services",
+      "victim": "patients_receiving_high_off_target_guides",
+      "downstream_of": [],
+      "feeds_into": [
+        "clinical_translation_gap"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable from axes 1-2; entanglement between sequence design and safety profile"
+    },
+    {
+      "claim_id": "genetic_mosaicism_timing",
+      "human_readable": "Genetic Mosaicism from Replication Timing",
+      "structural_delta": "Injection at 2PN stage (post-replication) creates 4 target copies, yielding 78% mosaic embryos; injection timing relative to S-phase determines uniformity of editing",
+      "primary_observable": "Mosaicism rate via single-cell Sanger sequencing; editing uniformity in multicell samples via NGS",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "clinical_translation_gap"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent timing-based constraint; different mechanism from substrate repair (axis 1)"
+    },
+    {
+      "claim_id": "clinical_translation_gap",
+      "human_readable": "Clinical Translation Gap (Technical vs Regulatory Readiness)",
+      "structural_delta": "Base editing eliminates most severe genotoxic consequences (chromosomal breaks, large deletions) but remains clinically unsuitable due to unsolved mosaicism, off-target variance, unknown long-term effects, and regulatory constraints requiring naturally occurring variants",
+      "primary_observable": "Regulatory approval status; expert consensus statements; clinical trial initiation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "preimplantation_genetic_testing_industry",
+      "victim": "couples_with_monogenic_disease_risk",
+      "downstream_of": [
+        "dna_repair_substrate_difference",
+        "delivery_modality_toxicity",
+        "guide_rna_off_target_variance",
+        "genetic_mosaicism_timing"
+      ],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Highest centrality; downstream synthesis node integrating all upstream constraints"
+    },
+    {
+      "claim_id": "preprint_epistemic_status",
+      "human_readable": "Preprint Epistemic Status (Unreviewed Claims)",
+      "structural_delta": "Findings disseminated via preprint server bypass peer review, creating public availability of unvalidated safety claims that may shape field perception and policy before expert scrutiny",
+      "primary_observable": "Peer review completion status; citation in policy documents; media coverage pre- vs post-review",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold with zero centrality; publication venue does not change underlying technical constraints"
+    },
+    {
+      "claim_id": "target_gene_therapeutic_irrelevance",
+      "human_readable": "Target Gene Therapeutic Irrelevance",
+      "structural_delta": "PCSK9 and HBG1/2 chosen for technical validation rather than therapeutic need; PCSK9 edit is non-naturally-occurring and HBG1/2 edit fails National Academies criteria for germline editing",
+      "primary_observable": "Alignment with regulatory guidelines; natural occurrence of introduced variants",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "clinical_translation_gap"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured by clinical_translation_gap regulatory constraint; target choice is methodological rather than structural"
+    },
+    {
+      "claim_id": "rna_sensing_mechanism_unknown",
+      "human_readable": "RNA Sensing Mechanism (Unknown Embryo Arrest Pathway)",
+      "structural_delta": "Human embryos possess unknown quality control mechanism that detects exogenous mRNA (despite cap, pseudouridine modification, poly-A tail) and triggers invariable arrest, distinct from protein toxicity",
+      "primary_observable": "Arrest stage; transcriptional response signatures; interferon pathway activation",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "delivery_modality_toxicity"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanistic detail of delivery_modality_toxicity; observable (arrest) already captured by axis 2"
+    }
+  ],
+  "generation_sequence": [
+    "dna_repair_substrate_difference",
+    "delivery_modality_toxicity",
+    "guide_rna_off_target_variance",
+    "genetic_mosaicism_timing",
+    "clinical_translation_gap"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "preprint_epistemic_status",
+      "structural_delta": "Unreviewed findings disseminated via preprint bypass peer scrutiny",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero centrality; publication venue does not alter underlying technical constraints"
+    },
+    {
+      "claim_id": "target_gene_therapeutic_irrelevance",
+      "structural_delta": "Genes chosen for validation rather than therapeutic need",
+      "hypothesis": "piton",
+      "deferral_reason": "Regulatory constraint already captured by clinical_translation_gap; target choice is methodological"
+    },
+    {
+      "claim_id": "rna_sensing_mechanism_unknown",
+      "structural_delta": "Unknown embryo quality control mechanism detects exogenous mRNA",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mechanistic detail of delivery_modality_toxicity; arrest observable already captured"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_long_term_developmental_outcomes",
+      "description": "Do base-edited embryos that develop to blastocyst and derive normal hESC lines exhibit developmental abnormalities in later stages (organogenesis, fetal development, postnatal life)? No data beyond blastocyst stage and in vitro hESC culture.",
+      "source": "Absence Inventory (§1.1) - developmental trajectory beyond day 6 not addressed"
+    },
+    {
+      "id": "omega_rna_arrest_mechanism",
+      "description": "What molecular pathway detects exogenous mRNA in human embryos despite eukaryotic modifications? Is this interferon-mediated, ribosome-mediated, or a novel embryo-specific surveillance system? Mechanism completely unknown.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - authors note mechanism unknown; recent studies suggest interferon response in HSPCs but embryos lack transcription"
+    },
+    {
+      "id": "omega_off_target_prediction_failure",
+      "description": "Chromosome breakage analysis revealed off-targets with 4 mismatches, exceeding standard 3-mismatch prediction cutoff. Are current in silico tools systematically underestimating off-target risk in embryos vs somatic cells?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - prediction tool vendors benefit from conservative cutoffs that miss real off-targets"
+    },
+    {
+      "id": "omega_s_phase_timing_window",
+      "description": "Authors state editing must occur 'before S-phase at ~5-12 hours post fertilization' to avoid mosaicism. Is this 7-hour window technically achievable given fertilization timing variability and editor kinetics?",
+      "source": "genetic_mosaicism_timing axis - critical timing constraint with no demonstration of feasibility"
+    },
+    {
+      "id": "omega_natural_variant_restriction",
+      "description": "National Academies guidelines restrict germline editing to naturally occurring variants. Does this exclude most therapeutic targets (e.g., PCSK9 knockout for CHD prevention) and limit technology to rare cases where natural protective variants exist?",
+      "source": "clinical_translation_gap axis - regulatory constraint may render technology therapeutically irrelevant"
+    },
+    {
+      "id": "omega_mountain_reclassification",
+      "description": "Is dna_repair_substrate_difference a true Mountain (intrinsic embryo biology) or a Piton of current editor design? Could future editors that create different lesion types (e.g., prime editors) reveal different repair competencies?",
+      "source": "F03 (Hasty Generalization) - mountain classification based on two substrate types; repair landscape may be more complex"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: dna_repair_substrate_difference classified as mountain based on SSB vs DSB comparison, but human embryo DNA repair landscape may be more complex (e.g., prime editors create different lesion types). Generated omega_mountain_reclassification to bound this uncertainty. No other fractures detected: multi-lens scan included molecular biology, developmental biology, clinical translation, regulatory frameworks; dark matter probes surfaced RNA toxicity mechanism and off-target prediction failures; no domain competence concerns (biomedical research within model training)."
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Anthropology / Material Culture / Evolutionary Linguistics",
+  "family_id": "fork_adoption_overbite_2026",
+  "topic_summary": "Analysis of the historical shift from edge-to-edge bite configuration to overbite/overjet preservation in human populations, driven by adoption of knife-and-fork eating technology circa 1700s-1800s. The shift enabled labiodental phoneme innovation (f/v sounds) and represents a case of anatomical drift through tool-mediated behavioral change with no deliberate architect.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Fork-and-knife eating technology (material culture innovation, Europe 1600s-1800s)",
+      "Edge-to-edge bite configuration (ancestral human/ape dental occlusion pattern)",
+      "Overbite/overjet configuration (adolescent dental pattern preserved into adulthood)",
+      "Labiodental phonemes (f/v sounds, post-Neolithic linguistic innovation)",
+      "C. Loring Brace (anthropologist, bite-configuration researcher)"
+    ],
+    "key_tensions": [
+      "Biological constraint (ancestral bite pattern) vs cultural practice (cutlery-mediated food processing)"
+    ],
+    "key_mechanisms": [
+      "Mechanical feedback loop: fork pre-cuts food → reduced masticatory force → adolescent overbite persists into adulthood",
+      "Phonetic enablement: overbite configuration makes labiodental sounds (f/v) articulatorily easier → linguistic drift"
+    ],
+    "key_absences": [
+      "No institutional authority enforcing bite configuration change",
+      "No identifiable beneficiary class from the anatomical shift",
+      "No deliberate selection pressure or eugenic program"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Human bite configuration as anatomical substrate shaped by eating technology",
+    "authority_description": "No interpretive authority; drift occurs through distributed behavioral adoption without adjudication",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "Topic presents one historical transition (edge-to-edge → overbite) with one causal pathway (fork adoption → reduced masticatory force). No competing readings of a shared commitment exist. The 'contest' framing in the prompt appears to test whether beneficiary-less drift qualifies as a kernel, but absence of interpretive disagreement disqualifies it. This is a single constraint (tool-mediated anatomical drift) observed from different analytical lenses, not multiple readings of one kernel."
+  },
+  "axes": [
+    {
+      "claim_id": "cutlery_mediated_occlusion_drift",
+      "human_readable": "Cutlery-Mediated Occlusion Drift (Fork as Masticatory Bypass)",
+      "structural_delta": "Adoption of fork-and-knife technology reduces masticatory force requirements, allowing adolescent overbite to persist into adulthood rather than wearing down to edge-to-edge configuration",
+      "primary_observable": "Historical prevalence of overbite/overjet in skeletal remains; correlation with cutlery adoption timelines across populations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "labiodental_phoneme_enablement",
+        "capacity_by_disuse_naturalization"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical constraint base; highest structural independence"
+    },
+    {
+      "claim_id": "labiodental_phoneme_enablement",
+      "human_readable": "Labiodental Phoneme Enablement (Overbite as Articulatory Substrate)",
+      "structural_delta": "Overbite configuration makes labiodental sounds (f/v) articulatorily easier to produce, enabling post-Neolithic linguistic innovation in populations with persistent overbite",
+      "primary_observable": "Correlation between overbite prevalence and labiodental phoneme frequency in language families; articulatory biomechanics studies",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "cutlery_mediated_occlusion_drift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (linguistic vs anatomical); demonstrates downstream cascade from anatomical drift"
+    },
+    {
+      "claim_id": "capacity_by_disuse_naturalization",
+      "human_readable": "Capacity by Disuse Naturalization (Beneficiary-Less Path Dependency)",
+      "structural_delta": "Alternative bite configuration (edge-to-edge) becomes structurally unavailable not through suppression but through disuse; no actor benefits from the foreclosure, yet the path naturalizes as 'normal human anatomy'",
+      "primary_observable": "Absence of edge-to-edge bite in post-industrial populations; cultural perception of overbite as default rather than derived",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "edge_to_edge_configuration_as_option",
+      "downstream_of": [
+        "cutlery_mediated_occlusion_drift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality among downstream nodes; captures the core analytical claim (beneficiary-less naturalization); distinct from phoneme axis in focusing on path-dependency rather than enablement"
+    },
+    {
+      "claim_id": "masticatory_force_atrophy",
+      "human_readable": "Masticatory Force Atrophy (Jaw Muscle Developmental Cascade)",
+      "structural_delta": "Reduced chewing force requirements during development lead to weaker jaw musculature and smaller mandibular dimensions in fork-using populations",
+      "primary_observable": "Comparative jaw muscle cross-sectional area; mandibular robusticity in skeletal remains",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "cutlery_mediated_occlusion_drift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: parallel mountain to cutlery_mediated_occlusion_drift with overlapping observable (both measure anatomical consequences of reduced masticatory force); lower structural distinctiveness"
+    },
+    {
+      "claim_id": "dental_malocclusion_increase",
+      "human_readable": "Dental Malocclusion Increase (Orthodontic Pathology Emergence)",
+      "structural_delta": "Softer diet and persistent overbite correlate with increased prevalence of dental crowding and malocclusion requiring orthodontic intervention",
+      "primary_observable": "Historical orthodontic treatment rates; prevalence of impacted third molars",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "orthodontic_profession",
+      "victim": "populations_with_malocclusion",
+      "downstream_of": [
+        "cutlery_mediated_occlusion_drift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: introduces beneficiary (orthodontic profession) which shifts analytical focus away from beneficiary-less naturalization claim; lower priority for core thesis"
+    }
+  ],
+  "generation_sequence": [
+    "cutlery_mediated_occlusion_drift",
+    "labiodental_phoneme_enablement",
+    "capacity_by_disuse_naturalization"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "masticatory_force_atrophy",
+      "structural_delta": "Reduced chewing force leads to weaker jaw musculature and smaller mandibles",
+      "hypothesis": "mountain",
+      "deferral_reason": "Parallel mountain to cutlery_mediated_occlusion_drift; overlapping observable (both anatomical consequences of reduced masticatory force)"
+    },
+    {
+      "claim_id": "dental_malocclusion_increase",
+      "structural_delta": "Softer diet correlates with increased malocclusion requiring orthodontic intervention",
+      "hypothesis": "snare",
+      "deferral_reason": "Introduces beneficiary (orthodontic profession) which dilutes focus on beneficiary-less naturalization thesis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_geographic_variance",
+      "description": "Does fork adoption timing correlate cleanly with overbite prevalence across all populations, or do genetic/dietary confounds exist? East Asian populations adopted chopsticks (different masticatory profile) — does overbite pattern differ?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — geographic variation not addressed in extraction"
+    },
+    {
+      "id": "omega_reversibility",
+      "description": "Is the overbite shift reversible if masticatory force increases (e.g., raw food diet movements)? If irreversible within individual lifespan, is it a true Mountain or a Piton of developmental window closure?",
+      "source": "Mountain validity check (F03 gate)"
+    },
+    {
+      "id": "omega_kernel_test_failure",
+      "description": "Prompt framed this as 'cleanest no-beneficiary candidate' for kernel contest, but no interpretive disagreement exists. The absence of beneficiary does not create contested readings — it creates a single reading (drift-by-disuse) with no rival. This tests whether beneficiary-less change can be a kernel; answer is no unless multiple interpretive communities read the drift differently.",
+      "source": "§1.3-K kernel/not-kernel decision — collapse detected"
+    },
+    {
+      "id": "omega_victim_identification",
+      "description": "Is 'edge-to-edge configuration as option' a coherent victim, or is this anthropomorphizing a biological state? No human alive experienced the foreclosure as a loss. Victim framing may be analytical overreach.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — victim category ambiguity"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: cutlery_mediated_occlusion_drift classified as mountain but reversibility within individual lifespan unclear. If developmental window closure is the true constraint (not ongoing masticatory force), may be piton rather than mountain. Generated omega_reversibility to bound this uncertainty. Also: prompt's kernel framing collapsed — no contested readings exist, only one causal pathway. Generated omega_kernel_test_failure to document."
+  },
+  "_seed_id": "fork_overbite_disuse"
+}

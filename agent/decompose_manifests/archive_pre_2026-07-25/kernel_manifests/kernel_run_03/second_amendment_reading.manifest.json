@@ -1,0 +1,267 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Federalism",
+  "family_id": "second_amendment_kernel_2026",
+  "topic_summary": "Analysis of the Second Amendment as a contested constitutional kernel where identical text ('A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed') generates fundamentally different constraint structures depending on whether the prefatory clause limits or merely announces purpose for the operative clause. The Heller decision (2008) resolved this in favor of individual right interpretation, but the structural contest persists.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Second Amendment text (constitutional kernel stabilized 1791)",
+      "Supreme Court (interpretive authority post-Marbury)",
+      "State militias (collective beneficiary under militia reading)",
+      "Individual citizens (individual beneficiary under personal right reading)",
+      "Standing army (structural threat the Amendment addresses)",
+      "Heller majority (Scalia, Roberts, Kennedy, Thomas, Alito - individual right coalition)"
+    ],
+    "key_tensions": [
+      "Prefatory clause function: limiting vs announcing purpose",
+      "Beneficiary structure: state militias vs individual citizens",
+      "Historical context: anti-standing-army compromise vs evolving self-defense norm",
+      "Grammatical interpretation: subordinate clause constrains main clause vs announces condition for non-infringement"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Second Amendment text as constitutional commitment stabilized 1791, claiming to protect 'the right of the people to keep and bear Arms' with contested relationship to prefatory militia clause",
+    "authority_description": "Supreme Court interpretive supremacy post-Marbury v. Madison; originalist vs living constitutionalist methodologies compete for legitimacy",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Pluralism (pre-Heller) → Contested Precedent (post-Heller)",
+    "is_contested_kernel": true,
+    "kernel_id": "second_amendment_text",
+    "readings": [
+      {
+        "reading_id": "collective_militia_reading",
+        "commitment": "Right to bear arms exists only in connection with service in well-regulated state militia; prefatory clause limits operative clause scope",
+        "authority_grounding": "Textualist (grammatical subordination) + Functionalist (anti-standing-army purpose)",
+        "sibling_readings": [
+          "individual_right_reading",
+          "sophisticated_collective_reading"
+        ],
+        "expected_structural_delta": "Beneficiary set: organized state militias and their active members; victim set: individual gun owners outside militia context; federal government empowered to regulate non-militia firearms; state sovereignty over militia composition becomes constraint boundary"
+      },
+      {
+        "reading_id": "individual_right_reading",
+        "commitment": "Right to bear arms is individual right independent of militia service; prefatory clause announces purpose but does not limit operative clause",
+        "authority_grounding": "Originalist (18th-century usage) + Structural (individual rights enumeration pattern)",
+        "sibling_readings": [
+          "collective_militia_reading",
+          "sophisticated_collective_reading"
+        ],
+        "expected_structural_delta": "Beneficiary set: all individual citizens (Heller: 'law-abiding, responsible citizens'); victim set: federal/state governments constrained in firearm regulation; self-defense becomes constitutional value; 'common use' weapons protected; sensitive places exception preserves some regulatory space"
+      },
+      {
+        "reading_id": "sophisticated_collective_reading",
+        "commitment": "Individual right exists but only exercisable through participation in organized militia; hybrid interpretation treating militia membership as gateway to individual protection",
+        "authority_grounding": "Compromise position: textualist respect for prefatory clause + recognition of individual rights language",
+        "sibling_readings": [
+          "collective_militia_reading",
+          "individual_right_reading"
+        ],
+        "expected_structural_delta": "Beneficiary set: individuals actively participating in state-organized militia; victim set: non-participating individuals (no protection) + federal government (constrained from disarming militia members); creates two-tier citizenship based on militia participation; National Guard becomes constitutional gatekeeper"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "collective_militia_reading",
+        "reading_b": "individual_right_reading",
+        "basis": "Collective reading holds that constitutional protection runs to the state as institutional entity (state's right to maintain armed militia); individual reading holds protection runs to persons as rights-bearers. No single framework can simultaneously treat the Amendment as protecting state institutional capacity AND individual personal liberty—these are categorically different constitutional subjects."
+      },
+      {
+        "reading_a": "sophisticated_collective_reading",
+        "reading_b": "individual_right_reading",
+        "basis": "Sophisticated collective requires militia participation as constitutional prerequisite for arms possession; individual right treats arms possession as inherent to personhood independent of institutional membership. No framework can hold both that a right is conditional on state-organized participation AND that it is an individual liberty independent of such participation."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "collective_militia_reading",
+      "human_readable": "Collective Militia Right (State-Centered Interpretation)",
+      "structural_delta": "Constitutional protection runs to state militias as institutional entities; individual possession protected only in militia service context",
+      "primary_observable": "Scope of permissible federal firearms regulation; state militia composition authority; individual standing to challenge gun laws outside militia context",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_governments_militia_authority",
+      "victim": "individual_gun_owners_outside_militia",
+      "downstream_of": [
+        "standing_army_structural_threat"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading with distinct beneficiary structure; high epsilon due to broad federal regulatory authority under this interpretation"
+    },
+    {
+      "claim_id": "individual_right_reading",
+      "human_readable": "Individual Right (Person-Centered Interpretation)",
+      "structural_delta": "Constitutional protection runs to individual persons independent of militia service; self-defense becomes constitutional value",
+      "primary_observable": "Scope of prohibited federal/state firearms regulation; individual standing to challenge gun laws; 'common use' weapon classification",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_citizens_gun_owners",
+      "victim": "federal_state_regulatory_authority",
+      "downstream_of": [
+        "standing_army_structural_threat"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Heller-endorsed reading; highest centrality as current doctrinal framework; distinct victim set from collective reading"
+    },
+    {
+      "claim_id": "sophisticated_collective_reading",
+      "human_readable": "Sophisticated Collective Right (Militia-Mediated Individual Right)",
+      "structural_delta": "Individual right exists but only through gateway of militia participation; creates two-tier citizenship",
+      "primary_observable": "National Guard membership as constitutional prerequisite; state authority over militia composition as rights-gatekeeper",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "militia_participating_individuals",
+      "victim": "non_participating_citizens",
+      "downstream_of": [
+        "standing_army_structural_threat"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: hybrid position with lower doctrinal salience post-Heller; structural features captured in tension between collective and individual readings"
+    },
+    {
+      "claim_id": "standing_army_structural_threat",
+      "human_readable": "Standing Army as Structural Threat (Founding-Era Constraint)",
+      "structural_delta": "Framers' fear of permanent military force as tyranny mechanism; militia as structural counterweight",
+      "primary_observable": "Constitutional authorization of standing army (Article I Section 8) vs Second Amendment militia guarantee; historical anti-army rhetoric in ratification debates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collective_militia_reading",
+        "individual_right_reading",
+        "sophisticated_collective_reading"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing historical-structural context for all readings; explains why the Amendment exists at all"
+    },
+    {
+      "claim_id": "originalist_vs_living_constitution_method",
+      "human_readable": "Originalist vs Living Constitution Methodology",
+      "structural_delta": "Interpretive authority grounded in 18th-century meaning vs evolving contemporary values",
+      "primary_observable": "Judicial citation patterns (Founding-era sources vs contemporary policy); methodological commitments in opinions",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collective_militia_reading",
+        "individual_right_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological meta-axis; relevant to authority grounding but not itself a reading of the kernel"
+    },
+    {
+      "claim_id": "common_use_doctrine",
+      "human_readable": "Common Use Doctrine (Heller's Weapon Classification Test)",
+      "structural_delta": "Weapons in common use for lawful purposes receive constitutional protection; dangerous and unusual weapons do not",
+      "primary_observable": "Weapon prevalence statistics; lower court application of common use test to specific firearm types",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "individual_right_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: doctrinal implementation detail downstream of individual right reading; not a kernel reading itself"
+    }
+  ],
+  "generation_sequence": [
+    "standing_army_structural_threat",
+    {
+      "claim_id": "collective_militia_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "collective_militia_reading"
+    },
+    {
+      "claim_id": "individual_right_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "individual_right_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "sophisticated_collective_reading",
+      "structural_delta": "Militia-mediated individual right creating two-tier citizenship",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Hybrid position with lower doctrinal salience post-Heller; structural tension between collective and individual readings captures the key beneficiary/victim distinctions without requiring third reading"
+    },
+    {
+      "claim_id": "originalist_vs_living_constitution_method",
+      "structural_delta": "Interpretive methodology grounding authority in 18th-century meaning vs contemporary values",
+      "hypothesis": "rope",
+      "deferral_reason": "Methodological meta-axis relevant to authority grounding but not itself a substantive reading of the Second Amendment kernel; omega material for interpretive pluralism discussion"
+    },
+    {
+      "claim_id": "common_use_doctrine",
+      "structural_delta": "Heller's weapon classification test based on prevalence for lawful purposes",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Doctrinal implementation detail downstream of individual right reading; not a kernel reading; relevant to post-Heller regulatory landscape but not to core kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_incorporation_doctrine",
+      "description": "Does the Second Amendment bind states via Fourteenth Amendment incorporation (McDonald v. Chicago 2010)? If not, individual right reading applies only to federal action, leaving state-level collective interpretations viable. Incorporation doctrine itself is contested kernel.",
+      "source": "Absence Inventory (§1.1) - state vs federal constraint scope not addressed in extraction"
+    },
+    {
+      "id": "omega_sensitive_places_exception",
+      "description": "Heller preserves 'longstanding prohibitions' including sensitive places restrictions. Is this exception a Rope (coordination on public safety) or Snare (arbitrary authority to designate entire jurisdictions as sensitive)? Post-Bruen (2022) litigation tests this boundary.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - who benefits from expansive sensitive places designation"
+    },
+    {
+      "id": "omega_national_guard_substitution",
+      "description": "Does modern National Guard satisfy the 'well regulated Militia' the Amendment presupposes? If National Guard = militia, does collective reading collapse into federal control (Guard is federalized under Title 10)? If not, where is the constitutionally-required militia?",
+      "source": "Mechanism extraction (§1.1) - militia as structural counterweight may no longer exist in intended form"
+    },
+    {
+      "id": "omega_sophisticated_collective_viability",
+      "description": "Sophisticated collective reading deferred but may be structurally unstable: if militia participation is constitutional prerequisite, who defines militia membership? State authority over militia composition becomes rights-gatekeeper, potentially converting Mountain (constitutional text) into Snare (state discretion over who gets rights).",
+      "source": "Deferred axis sophisticated_collective_reading - hybrid position may contain internal contradiction"
+    },
+    {
+      "id": "omega_standing_army_reversal",
+      "description": "Is standing_army_structural_threat still a Mountain (persistent founding-era constraint) or now a Piton (atrophied concern in modern security state)? If framers' fear of standing armies no longer operates as constraint, does the Amendment's purpose-clause lose its grounding?",
+      "source": "F03 (Hasty Generalization) - mountain classification assumes founding-era constraint persists unchanged"
+    },
+    {
+      "id": "omega_text_history_tradition_test",
+      "description": "Bruen (2022) replaces intermediate scrutiny with 'text, history, and tradition' test. Does this methodological shift create new kernel contest over which historical traditions count as analogous? Originalist method itself may be contested kernel.",
+      "source": "Deferred axis originalist_vs_living_constitution_method - methodological pluralism as meta-kernel"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: standing_army_structural_threat classified as mountain (v_low epsilon) but founding-era constraint may have atrophied in modern security state context. Generated omega_standing_army_reversal to bound this uncertainty. Mountain classification assumes persistent structural fear of permanent military that may no longer operate as constraint on contemporary actors."
+  },
+  "_seed_id": "second_amendment_reading"
+}

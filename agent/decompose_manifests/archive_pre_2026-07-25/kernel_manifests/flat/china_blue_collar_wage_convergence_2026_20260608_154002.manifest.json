@@ -1,0 +1,250 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Labor Economics / Platform Economy / Social Policy",
+  "family_id": "china_blue_collar_wage_convergence_2026",
+  "topic_summary": "Analysis of China's six-year trend of blue-collar wage growth outpacing white-collar compensation, driven by a flexible workforce exceeding 300 million workers. The wage gap has narrowed 32.7% since 2013, with food delivery riders, maternity caregivers, and truck drivers earning CNY8,000+ monthly. Despite income gains, flexible workers face employment instability and limited long-term social security, revealing tensions between gig economy growth and worker protection.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 4,
+    "key_entities": [
+      "China New Employment Forms Research Center (think tank producing the 2025 report)",
+      "Flexible workforce (300+ million workers, 40%+ of urban employment)",
+      "Platform companies (Meituan, Ele.me - algorithmic labor allocation)",
+      "State Council / CCP Central Committee (policy authority issuing 12-point labor protection plan)",
+      "Blue-collar workers (427 million total, 50% aged 40+)",
+      "White-collar workers (experiencing wage stagnation)",
+      "Post-1990 cohort (less willing to take blue-collar jobs)",
+      "Capital University of Economics and Business / China Association for Employment Promotion (research institutions)"
+    ],
+    "key_tensions": [
+      "Income growth vs employment stability (flexible workers gain wages but lack long-term security)",
+      "Platform efficiency vs worker protection (algorithmic time constraints vs safety/fair compensation)",
+      "Generational labor supply (aging blue-collar workforce vs post-1990 cohort unwillingness)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy of flexible employment as a labor arrangement - whether gig work represents genuine economic opportunity or disguised extraction",
+    "authority_description": "State authority to define employment categories and enforce labor protections; platform companies' algorithmic control over work allocation",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "flexible_employment_legitimacy",
+    "readings": [
+      {
+        "reading_id": "market_efficiency_reading",
+        "commitment": "Flexible employment is legitimate market-clearing mechanism matching labor supply to demand",
+        "authority_grounding": "neoclassical economics / platform optimization",
+        "sibling_readings": [
+          "precarity_extraction_reading",
+          "developmental_state_reading"
+        ],
+        "expected_structural_delta": "Wage convergence treated as market signal of blue-collar scarcity; platform algorithms as neutral coordination; worker autonomy maximized"
+      },
+      {
+        "reading_id": "precarity_extraction_reading",
+        "commitment": "Flexible employment is structural precarity enabling platform extraction of surplus value",
+        "authority_grounding": "labor economics / critical political economy",
+        "sibling_readings": [
+          "market_efficiency_reading",
+          "developmental_state_reading"
+        ],
+        "expected_structural_delta": "Wage gains offset by risk externalization; algorithmic control as labor discipline; social security gaps as cost-shifting to workers"
+      },
+      {
+        "reading_id": "developmental_state_reading",
+        "commitment": "Flexible employment is transitional form requiring state management toward formalization",
+        "authority_grounding": "Chinese developmental state tradition / social stability mandate",
+        "sibling_readings": [
+          "market_efficiency_reading",
+          "precarity_extraction_reading"
+        ],
+        "expected_structural_delta": "2027 standardization target as kernel stabilization; 12-point plan as authority reassertion; wage growth as managed transition not market outcome"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "market_efficiency_reading",
+        "reading_b": "precarity_extraction_reading",
+        "basis": "Market efficiency reading treats platform algorithms as neutral coordination mechanisms maximizing worker autonomy; precarity reading treats same algorithms as labor discipline extracting surplus. No single framework holds both algorithmic neutrality and algorithmic extraction simultaneously."
+      },
+      {
+        "reading_a": "market_efficiency_reading",
+        "reading_b": "developmental_state_reading",
+        "basis": "Market efficiency reading grounds legitimacy in spontaneous market clearing; developmental state reading grounds legitimacy in state management toward formalization. No framework simultaneously holds that flexible employment is legitimate because markets clear it AND because the state will phase it out."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "market_efficiency_reading",
+      "human_readable": "Market Efficiency Reading (Flexible Employment as Market Clearing)",
+      "structural_delta": "Wage convergence as market signal of blue-collar labor scarcity; platform algorithms as neutral coordination",
+      "primary_observable": "Wage growth rates; job opening growth (800% delivery, 200+ skilled); platform worker autonomy metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel flexible_employment_legitimacy"
+    },
+    {
+      "claim_id": "precarity_extraction_reading",
+      "human_readable": "Precarity Extraction Reading (Flexible Employment as Structural Extraction)",
+      "structural_delta": "Wage gains offset by risk externalization; algorithmic control as labor discipline; social security gaps as cost-shifting",
+      "primary_observable": "Retirement confidence (42.3%); career advancement belief (54.8%); occupational injury rates; algorithmic time constraints",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "platform_companies",
+      "victim": "flexible_workers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel flexible_employment_legitimacy"
+    },
+    {
+      "claim_id": "developmental_state_reading",
+      "human_readable": "Developmental State Reading (Flexible Employment as Managed Transition)",
+      "structural_delta": "2027 standardization target as kernel stabilization; state authority reassertion over platform algorithms",
+      "primary_observable": "12-point plan implementation metrics; 2027 standardization compliance; state enforcement actions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_authority",
+      "victim": "platform_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel flexible_employment_legitimacy"
+    },
+    {
+      "claim_id": "demographic_labor_supply_constraint",
+      "human_readable": "Demographic Labor Supply Constraint (Aging Blue-Collar Workforce)",
+      "structural_delta": "50% of blue-collar workers aged 40+; post-1990 cohort unwillingness to enter blue-collar work",
+      "primary_observable": "Age distribution of blue-collar workforce; cohort entry rates; labor force participation by age",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "market_efficiency_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent mountain providing demographic constraint base; affects wage dynamics but structurally distinct from kernel"
+    },
+    {
+      "claim_id": "white_collar_wage_stagnation",
+      "human_readable": "White-Collar Wage Stagnation (Skill-Specific Compensation Divergence)",
+      "structural_delta": "White-collar compensation shaped by role specificity and skill scarcity rather than market momentum; AI displacement anxiety",
+      "primary_observable": "White-collar wage growth rates (below 4.1% frontline growth); skill premium trends; AI adoption rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: wage convergence is relative measure; white-collar stagnation is mirror of blue-collar growth rather than independent axis"
+    },
+    {
+      "claim_id": "algorithmic_labor_discipline",
+      "human_readable": "Algorithmic Labor Discipline (Platform Control Mechanisms)",
+      "structural_delta": "Platform algorithms allocate orders, price fees, set time limits; workers fight traffic to avoid salary deductions",
+      "primary_observable": "Algorithm transparency metrics; time constraint parameters; salary deduction rates; accident rates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "platform_companies",
+      "victim": "delivery_workers",
+      "downstream_of": [],
+      "feeds_into": [
+        "precarity_extraction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within precarity_extraction_reading as mechanism; not structurally independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "market_efficiency_reading",
+      "kernel_id": "flexible_employment_legitimacy",
+      "reading_id": "market_efficiency_reading"
+    },
+    {
+      "claim_id": "precarity_extraction_reading",
+      "kernel_id": "flexible_employment_legitimacy",
+      "reading_id": "precarity_extraction_reading"
+    },
+    {
+      "claim_id": "developmental_state_reading",
+      "kernel_id": "flexible_employment_legitimacy",
+      "reading_id": "developmental_state_reading"
+    },
+    "demographic_labor_supply_constraint"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "white_collar_wage_stagnation",
+      "structural_delta": "White-collar compensation shaped by role specificity rather than market momentum",
+      "hypothesis": "rope",
+      "deferral_reason": "Wage convergence is relative measure; white-collar stagnation is mirror of blue-collar growth rather than independent axis with distinct observable"
+    },
+    {
+      "claim_id": "algorithmic_labor_discipline",
+      "structural_delta": "Platform algorithms control work allocation and time constraints",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured within precarity_extraction_reading as enforcement mechanism; not structurally independent from kernel reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_hukou_system_absence",
+      "description": "Hukou (household registration) system not mentioned in source material but structurally relevant to flexible worker social security access. Urban vs rural hukou status affects medical insurance and pension eligibility. Absence suggests either universal coverage achieved or systematic exclusion not surfaced in report.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_platform_profit_margins",
+      "description": "Platform company financial data absent from analysis. Cannot determine whether wage growth represents genuine labor scarcity premium or strategic loss-leader pricing to maintain market dominance. Meituan/Ele.me profitability metrics would distinguish market_efficiency from precarity_extraction readings.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_sectoral_heterogeneity",
+      "description": "Report aggregates 'blue-collar' across manufacturing, construction, logistics, domestic service. Structural differences between industrial wage-labor and platform gig work collapsed into single category. Manufacturing blue-collar may face different constraint structure than delivery riders.",
+      "source": "F15 (Premature Closure)"
+    },
+    {
+      "id": "omega_2027_enforcement_credibility",
+      "description": "Developmental_state_reading depends on 2027 standardization target being enforced. Chinese regulatory announcements do not always translate to implementation. State capacity to regulate platform algorithms vs platform regulatory capture is unresolved.",
+      "source": "Deferred axis algorithmic_labor_discipline + developmental_state_reading uncertainty"
+    },
+    {
+      "id": "omega_generational_preference_vs_constraint",
+      "description": "Post-1990 cohort 'unwillingness' to take blue-collar jobs may be preference (cultural status hierarchy) or constraint (education credential inflation requiring white-collar entry). Distinction affects whether demographic_labor_supply_constraint is mountain or piton.",
+      "source": "F03 (Hasty Generalization) + demographic_labor_supply_constraint classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: Report aggregates heterogeneous blue-collar categories (manufacturing, construction, platform gig work) into single wage trend. Structural differences between industrial wage-labor and algorithmic gig work may warrant separate analysis. Generated omega_sectoral_heterogeneity. F03 detected: demographic_labor_supply_constraint classified as mountain but post-1990 cohort unwillingness may be cultural preference (piton of education policy) rather than demographic physics. Generated omega_generational_preference_vs_constraint."
+  }
+}

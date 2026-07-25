@@ -1,0 +1,228 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Law / Textual Interpretation / Normative Authority",
+  "family_id": "dharmasastra_interpretive_pluralism",
+  "topic_summary": "Analysis of competing interpretations of the Dharmasastra corpus as a commitment system. The orthodox reading treats caste prescriptions as immutable divine law requiring strict observance, while reformist readings contextualize these texts historically or reinterpret them through universalist principles. Each reading instantiates fundamentally different constraints regarding legitimate social hierarchy, ritual authority, and inter-caste interaction.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Dharmasastra corpus (Manusmriti, Yajnavalkya Smriti, etc. - codified texts claiming to transmit eternal dharma)",
+      "Orthodox Brahminical authorities (claim interpretive monopoly grounded in birth-based purity)",
+      "Reformist interpreters (Ambedkar, modern progressive Hindu movements - claim reinterpretive authority grounded in ethical universalism)",
+      "Caste communities (beneficiaries/victims vary by reading)",
+      "Indian state (secular constitutional authority competing with religious interpretive authority)",
+      "Colonial scholarship (historical-critical method introduced external interpretive framework)"
+    ],
+    "key_tensions": [
+      "Immutability vs historical contingency (orthodox treats varna prescriptions as eternal vs reformist treats as time-bound social constructs)",
+      "Birth-based vs merit-based authority (who holds legitimate interpretive power)",
+      "Textual literalism vs ethical reinterpretation (how to read prescriptions modern conscience rejects)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Dharmasastra corpus as shared textual substrate claiming to codify eternal dharma (cosmic/social order)",
+    "authority_description": "Contested between birth-based Brahminical interpretive monopoly and reformist claims to reinterpret via universalist ethics or reject authority entirely",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_oligarchy",
+    "is_contested_kernel": true,
+    "kernel_id": "dharmasastra_corpus",
+    "readings": [
+      {
+        "reading_id": "orthodox_literalist",
+        "commitment": "Dharmasastra prescriptions (especially varna/jati hierarchy) are eternal, revealed truth requiring literal observance",
+        "authority_grounding": "Birth-based purity; Brahmin monopoly on Vedic knowledge transmission; textual inerrancy",
+        "sibling_readings": [
+          "reformist_contextual",
+          "abolitionist_rejection"
+        ],
+        "expected_structural_delta": "Expansive victim set (Dalits, Shudras, women excluded from ritual/education); high extraction via enforced hierarchy; beneficiary concentration in upper castes"
+      },
+      {
+        "reading_id": "reformist_contextual",
+        "commitment": "Dharmasastra reflects historical social conditions; ethical core (dharma as righteous conduct) separable from time-bound caste prescriptions",
+        "authority_grounding": "Reinterpretive authority grounded in ethical universalism, rational critique, or neo-Vedantic inclusive frameworks (Vivekananda, Gandhi models)",
+        "sibling_readings": [
+          "orthodox_literalist",
+          "abolitionist_rejection"
+        ],
+        "expected_structural_delta": "Reduced victim set (caste hierarchy softened or reinterpreted as spiritual stages); medium extraction (hierarchy persists symbolically but not in strict enforcement); attempt to preserve textual authority while discarding oppressive elements"
+      },
+      {
+        "reading_id": "abolitionist_rejection",
+        "commitment": "Dharmasastra is fundamentally oppressive; no legitimate authority remains; caste system and textual framework must be wholly abandoned",
+        "authority_grounding": "Secular constitutionalism, Ambedkarite Buddhism, rationalist/atheist frameworks that reject religious authority entirely",
+        "sibling_readings": [
+          "orthodox_literalist",
+          "reformist_contextual"
+        ],
+        "expected_structural_delta": "Zero textual authority; victim set eliminated by dismantling hierarchy itself; beneficiary shift to formerly oppressed groups; extractive structure recognized and rejected rather than reinterpreted"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "orthodox_literalist",
+        "reading_b": "abolitionist_rejection",
+        "basis": "Orthodox axiom (textual authority is eternal and binding) cannot coexist with abolitionist axiom (textual authority is illegitimate and must be rejected). Accepting abolition as true requires rejecting orthodox authority as false."
+      },
+      {
+        "reading_a": "orthodox_literalist",
+        "reading_b": "reformist_contextual",
+        "basis": "Orthodox axiom (caste prescriptions are immutable divine law) cannot coexist with reformist axiom (prescriptions are historically contingent and ethically revisable). Accepting reformist contextuality requires rejecting orthodox immutability."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "orthodox_literalist",
+      "human_readable": "Orthodox Literalist Reading (Immutable Hierarchy as Eternal Law)",
+      "structural_delta": "Caste hierarchy and ritual exclusions treated as eternal, divinely ordained, requiring strict observance",
+      "primary_observable": "Enforcement of varna/jati distinctions in ritual access, marriage, occupation; textual commentary production claiming inerrancy",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "upper_caste_males",
+      "victim": "dalits_shudras_women",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading representing maximum extractive structure; highest victim concentration"
+    },
+    {
+      "claim_id": "reformist_contextual",
+      "human_readable": "Reformist Contextual Reading (Ethical Core vs Historical Shell)",
+      "structural_delta": "Dharmasastra's ethical core (righteous conduct) separated from time-bound social prescriptions; caste reinterpreted or minimized",
+      "primary_observable": "Reinterpretive textual production (commentaries, neo-Vedantic writings); organizations claiming Hindu identity while rejecting caste hierarchy",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reformist_movements",
+      "victim": "orthodox_authority_structures",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Middle position attempting to preserve textual authority while dismantling extraction; structural tension with both orthodox and abolitionist readings"
+    },
+    {
+      "claim_id": "abolitionist_rejection",
+      "human_readable": "Abolitionist Rejection Reading (Textual Authority as Illegitimate)",
+      "structural_delta": "Dharmasastra framework wholly rejected; caste system recognized as oppressive structure requiring complete dismantling",
+      "primary_observable": "Ambedkarite movements, constitutional secularism enforcement, Dalit self-organization outside Hindu framework",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": "formerly_oppressed_castes",
+      "victim": "brahminical_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Radical structural alternative; eliminates victim set by rejecting hierarchy; constitutionally grounded mountain opposing orthodox snare"
+    },
+    {
+      "claim_id": "colonial_scholarship_lens",
+      "human_readable": "Colonial Historical-Critical Scholarship",
+      "structural_delta": "Dharmasastra studied as historical artifact via philological/anthropological methods; authority claim externalized",
+      "primary_observable": "Academic production treating texts as data rather than binding norms; genealogical accounts of caste formation",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "academic_study",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "reformist_contextual",
+        "abolitionist_rejection"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: external scholarly framework that enables but does not itself constitute a normative reading; feeds into reformist/abolitionist but lacks own victim/beneficiary structure within the commitment system"
+    },
+    {
+      "claim_id": "state_secular_authority",
+      "human_readable": "Indian State Secular Constitutionalism",
+      "structural_delta": "Indian Constitution's Article 15 (anti-discrimination) and Article 17 (untouchability abolition) as competing authority structure",
+      "primary_observable": "Legal enforcement of constitutional rights vs religious practice; caste-based reservation policies",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": "constitutional_order",
+      "victim": "orthodox_enforcement_mechanisms",
+      "downstream_of": [],
+      "feeds_into": [
+        "abolitionist_rejection"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important structural context but operates as external legal constraint rather than interpretive reading of the Dharmasastra kernel itself; captured implicitly in abolitionist_rejection's constitutional grounding"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "orthodox_literalist",
+      "kernel_id": "dharmasastra_corpus",
+      "reading_id": "orthodox_literalist"
+    },
+    {
+      "claim_id": "reformist_contextual",
+      "kernel_id": "dharmasastra_corpus",
+      "reading_id": "reformist_contextual"
+    },
+    {
+      "claim_id": "abolitionist_rejection",
+      "kernel_id": "dharmasastra_corpus",
+      "reading_id": "abolitionist_rejection"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "colonial_scholarship_lens",
+      "structural_delta": "Historical-critical method externalizing textual authority",
+      "hypothesis": "scaffold",
+      "deferral_reason": "External scholarly framework enabling but not constituting normative reading; lacks victim/beneficiary structure within commitment system"
+    },
+    {
+      "claim_id": "state_secular_authority",
+      "structural_delta": "Constitutional anti-discrimination as competing authority",
+      "hypothesis": "mountain",
+      "deferral_reason": "Legal constraint external to interpretive contest; implicitly captured in abolitionist_rejection's constitutional grounding"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reformist_stability",
+      "description": "Can reformist_contextual reading stabilize, or does partial retention of textual authority inevitably collapse toward either orthodox literalism (authority requires immutability) or abolitionist rejection (ethical universalism requires full dismantling)? Middle readings may be structurally unstable.",
+      "source": "Centrality analysis + tangled_rope classification of reformist_contextual"
+    },
+    {
+      "id": "omega_practice_divergence",
+      "description": "To what extent do observed caste practices reflect textual authority vs independent social reproduction? If Dharmasastra is post-hoc rationalization of pre-existing hierarchy, the kernel itself may be epiphenomenal—a piton rather than a mountain.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): anthropological evidence of caste practice independent of textual knowledge"
+    },
+    {
+      "id": "omega_gender_intersection",
+      "description": "All three readings focus on caste hierarchy but leave gender-based restrictions (stridharma, ritual exclusions) under-analyzed. Women may occupy different victim sets across readings than the caste-focused analysis suggests.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): extraction summary notes women as entity but gender-specific constraints not decomposed"
+    },
+    {
+      "id": "omega_regional_variation",
+      "description": "Dharmasastra authority varies regionally (Kerala vs Tamil Nadu vs North India). Is this one commitment system with geographic drift, or multiple overlapping systems? Regional analysis deferred.",
+      "source": "F15 (Premature Closure): geographic axis not explored"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: Gender-specific constraints (stridharma) and regional variation axes identified but not decomposed. Gender intersection and regional variation documented as omega_gender_intersection and omega_regional_variation. Kernel decomposition prioritized caste hierarchy as primary structural axis per research context framing."
+  },
+  "_seed_id": "dharmasastra_competing_interpretive_frames"
+}

@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Medieval Political Economy / Legal History / Institutional Analysis",
+  "family_id": "feudal_obligation_codification",
+  "topic_summary": "Analysis of the codification of feudal obligations in medieval Europe, focusing on the structural contest between lords and vassals over the interpretation of reciprocal oaths. The shared commitment to codified feudal relationships instantiated radically different constraints depending on whether the kernel was read as authorizing maximal extraction or as establishing bounded, conditional coordination.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Lords (feudal superiors claiming extraction rights)",
+      "Vassals (subordinates claiming protection of bounded obligations)",
+      "Church (third-party adjudicator and codifier)",
+      "Royal Courts (emerging state authority claiming interpretation monopoly)",
+      "Customary Law (unwritten practice-norms predating codification)",
+      "Written Charters (codification artifacts with contested interpretation)"
+    ],
+    "key_tensions": [
+      "Extraction maximization vs obligation boundedness (lords vs vassals on same kernel)",
+      "Written codification vs customary flexibility (formalization creates new interpretive authority)"
+    ],
+    "key_mechanisms": [
+      "Oath ceremonies (ritual binding creating shared commitment substrate)",
+      "Charter drafting (codification process where ambiguity is strategically preserved or eliminated)",
+      "Ecclesiastical adjudication (Church courts interpreting feudal disputes pre-royal court monopoly)"
+    ],
+    "key_absences": [
+      "Peasant interpretation (third reading of same kernel from below feudal contract)",
+      "Transition mechanism from customary to codified (how codification process itself altered the constraint)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "lord_extraction_reading",
+      "human_readable": "Lord's Extraction Reading (Maximal Rights Interpretation)",
+      "structural_delta": "Feudal oath read as authorizing maximal economic extraction bounded only by vassal's continued service capacity",
+      "primary_observable": "Charter language on labor services, tax rates, arbitrary exactions; frequency of vassal default/rebellion",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "feudal_lords",
+      "victim": "vassals_and_peasants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; high extractiveness; lord as interpretive authority"
+    },
+    {
+      "claim_id": "vassal_coordination_reading",
+      "human_readable": "Vassal's Coordination Reading (Bounded Reciprocal Obligation)",
+      "structural_delta": "Feudal oath read as strictly bounded reciprocal contract: military service for protection, with fixed limits on taxation and labor",
+      "primary_observable": "Vassal resistance patterns; charter clauses limiting lordly exactions; frequency of appeal to external adjudicators",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structurally opposed victim set and ε to lord reading"
+    },
+    {
+      "claim_id": "ecclesiastical_mediation_reading",
+      "human_readable": "Ecclesiastical Mediation Reading (Divine Law Constraint on Secular Extraction)",
+      "structural_delta": "Feudal oath read through canon law lens: extraction limited by Christian charity obligations and sacramental oath-binding",
+      "primary_observable": "Church court rulings on feudal disputes; theological treatises on just lordship; excommunication frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "church_institutional_authority",
+      "victim": "lords_claiming_absolute_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading from external interpretive authority; captures inter-institutional contest dimension"
+    },
+    {
+      "claim_id": "peasant_subsistence_reading",
+      "human_readable": "Peasant Subsistence Reading (Below-Contract Extraction Limit)",
+      "structural_delta": "Feudal oath read from below: lords and vassals both extract, peasant survival sets hard floor on total extraction capacity",
+      "primary_observable": "Peasant revolt frequency; subsistence crisis mortality; flight to towns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "lord_extraction_reading",
+        "vassal_coordination_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: fourth reading; structural mountain providing extraction ceiling but less central to lord-vassal contest"
+    },
+    {
+      "claim_id": "codification_ratchet",
+      "human_readable": "Codification Ratchet (Writing as Interpretive Power Shift)",
+      "structural_delta": "Transition from customary to written law transfers interpretive authority from community memory to literate elites",
+      "primary_observable": "Chronology of charter production; literacy rates among lords vs vassals; customary law citation decline",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "literate_elites",
+      "victim": "illiterate_vassals",
+      "downstream_of": [],
+      "feeds_into": [
+        "lord_extraction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-constraint on kernel interpretation rather than a reading of the kernel itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "lord_extraction_reading",
+      "kernel_id": "feudal_oath_reciprocity",
+      "reading_id": "lord_extraction_reading"
+    },
+    {
+      "claim_id": "vassal_coordination_reading",
+      "kernel_id": "feudal_oath_reciprocity",
+      "reading_id": "vassal_coordination_reading"
+    },
+    {
+      "claim_id": "ecclesiastical_mediation_reading",
+      "kernel_id": "feudal_oath_reciprocity",
+      "reading_id": "ecclesiastical_mediation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "peasant_subsistence_reading",
+      "structural_delta": "Feudal oath read from below: peasant survival sets extraction ceiling",
+      "hypothesis": "mountain",
+      "deferral_reason": "Fourth reading; structural mountain providing hard extraction limit but less central to lord-vassal interpretive contest"
+    },
+    {
+      "claim_id": "codification_ratchet",
+      "structural_delta": "Writing transfers interpretive authority from community to literate elites",
+      "hypothesis": "piton",
+      "deferral_reason": "Meta-constraint on interpretation mechanism rather than a kernel reading; affects all readings but is not itself a reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do lord and vassal readings genuinely emit different constraints, or do both collapse into 'extraction bounded only by rebellion risk'? If collapse: kernel illusion, actual constraint is power-projection mountain.",
+      "source": "§1.3-K coherence signal"
+    },
+    {
+      "id": "omega_peasant_visibility",
+      "description": "Peasant reading deferred but may be the true extraction ceiling. If so, lord-vassal contest is distributive fight over a fixed surplus, not a kernel contest over constraint structure.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis peasant_subsistence_reading"
+    },
+    {
+      "id": "omega_codification_beneficiary",
+      "description": "Does codification itself (independent of content) benefit lords by shifting interpretive authority to literate elites? If so, codification_ratchet is not a deferred axis but an upstream snare warping all readings.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis codification_ratchet"
+    },
+    {
+      "id": "omega_church_neutrality",
+      "description": "Is ecclesiastical reading a genuine third interpretation or a strategic alliance with vassals against lordly extraction? Church beneficiary structure unclear.",
+      "source": "§2.1 beneficiary scan on ecclesiastical_mediation_reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three-reading structure captures lord-vassal-church triangle. Deferred peasant reading and codification mechanism documented as omegas."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Reciprocal feudal oath: lord provides military protection and land tenure, vassal provides military service and loyalty. Codified in charters with deliberately ambiguous extraction limits.",
+    "authority_description": "Interpretive legitimacy contested: lords claim customary right to define obligations, vassals claim charter text limits extraction, church claims canon law supremacy over secular oaths.",
+    "drift_status": "partial",
+    "candidate_pattern": "Deferred Maintenance (drift absorbed through charter reinterpretation without formal revision)",
+    "is_contested_kernel": true,
+    "kernel_id": "feudal_oath_reciprocity",
+    "readings": [
+      {
+        "reading_id": "lord_extraction_reading",
+        "commitment": "Feudal oath authorizes maximal extraction bounded only by vassal service capacity",
+        "authority_grounding": "Customary lordly prerogative / military dominance",
+        "sibling_readings": [
+          "vassal_coordination_reading",
+          "ecclesiastical_mediation_reading"
+        ],
+        "expected_structural_delta": "High ε snare: vassals in victim set, extraction limited only by rebellion threshold"
+      },
+      {
+        "reading_id": "vassal_coordination_reading",
+        "commitment": "Feudal oath establishes fixed, bounded reciprocal obligations enforced by charter text",
+        "authority_grounding": "Written charter / appeal to external adjudicators",
+        "sibling_readings": [
+          "lord_extraction_reading",
+          "ecclesiastical_mediation_reading"
+        ],
+        "expected_structural_delta": "Low ε rope: coordination mechanism with mutual enforceability, no structural victim"
+      },
+      {
+        "reading_id": "ecclesiastical_mediation_reading",
+        "commitment": "Feudal oath bound by Christian charity and sacramental oath obligations, limiting secular extraction",
+        "authority_grounding": "Canon law / church courts / threat of excommunication",
+        "sibling_readings": [
+          "lord_extraction_reading",
+          "vassal_coordination_reading"
+        ],
+        "expected_structural_delta": "Moderate ε tangled_rope: church gains interpretive authority, lords constrained by theological limits"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "lord_extraction_reading",
+        "reading_b": "vassal_coordination_reading",
+        "basis": "Lord reading treats oath as unilateral授权 (authorization) for extraction; vassal reading treats oath as bilateral contract with enforceable limits. No single framework holds both 'lord has unilateral right to define obligations' and 'obligations are fixed by mutual agreement.' These are axiomatically incompatible accounts of contractual authority."
+      },
+      {
+        "reading_a": "lord_extraction_reading",
+        "reading_b": "ecclesiastical_mediation_reading",
+        "basis": "Lord reading grounds authority in secular customary prerogative; church reading subordinates secular authority to divine law enforced by ecclesiastical courts. No single framework holds both 'secular lord is final authority on oath interpretation' and 'divine law constrains secular authority through church adjudication.' These are incompatible sovereignty claims."
+      }
+    ]
+  },
+  "_seed_id": "feudal_obligation_codification"
+}

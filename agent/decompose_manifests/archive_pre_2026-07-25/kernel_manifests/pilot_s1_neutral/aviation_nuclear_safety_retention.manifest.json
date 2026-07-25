@@ -1,0 +1,262 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Safety Engineering / Organizational Learning / High-Reliability Organizations",
+  "family_id": "catastrophe_avoidance_competence_retention",
+  "topic_summary": "Analysis of how aviation and nuclear industries retain catastrophe-avoidance competence across decades without recurring real catastrophes, focusing on the contested question of whether simulation exercises constitute genuine competence-sustaining practice or whether only actual catastrophic events can maintain the operational kernel.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Flight simulators (training technology for stall recovery, engine failure scenarios)",
+      "Nuclear reactor simulators (training technology for meltdown-avoidance protocols)",
+      "Aviation crew resource management doctrine (coordination protocols under catastrophic stress)",
+      "Nuclear safety culture frameworks (organizational protocols for catastrophe prevention)",
+      "Regulatory certification bodies (FAA, NRC - mandate simulation requirements)",
+      "Operational crews (pilots, reactor operators - holders of catastrophe-avoidance competence)"
+    ],
+    "key_tensions": [
+      "Simulation fidelity vs actual catastrophe (can drills substitute for real events in competence retention)",
+      "Generational knowledge transfer vs experiential learning (can second-generation operators maintain competence without direct catastrophe exposure)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "simulation_as_proxy_catastrophe_reading",
+      "human_readable": "Simulation as Proxy-Catastrophe (Drills Sustain Competence)",
+      "structural_delta": "Simulation exercises constitute genuine catastrophe-equivalent practice that maintains operational competence",
+      "primary_observable": "Competence retention metrics: simulator performance scores, real-incident response quality, certification pass rates over generational cohorts",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "regulatory_bodies",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel: simulation-sufficiency position"
+    },
+    {
+      "claim_id": "catastrophe_necessity_reading",
+      "human_readable": "Catastrophe-Necessity (Only Real Events Sustain Competence)",
+      "structural_delta": "Only actual catastrophic events provide the irreducible stress/uncertainty that maintains genuine competence; simulation is insufficient proxy",
+      "primary_observable": "Competence decay indicators: near-miss incident rates in long-catastrophe-free periods, simulator-to-reality performance gaps, novel-failure response quality",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "operational_safety_margins",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel: catastrophe-necessity position"
+    },
+    {
+      "claim_id": "hybrid_degradation_reading",
+      "human_readable": "Hybrid Degradation (Simulation Delays but Cannot Prevent Decay)",
+      "structural_delta": "Simulation maintains procedural competence but allows tacit knowledge and stress-response capacity to degrade over generational timescales",
+      "primary_observable": "Differential decay rates: procedural vs tacit knowledge retention, first-generation vs third-generation operator performance under novel failures",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "certification_industry",
+      "victim": "long_term_safety_margins",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel: partial-sufficiency position with structural decay mechanism"
+    },
+    {
+      "claim_id": "simulation_fidelity_threshold",
+      "human_readable": "Simulation Fidelity Threshold (Technology-Dependent Sufficiency)",
+      "structural_delta": "Competence retention depends on crossing a fidelity threshold where simulation stress/uncertainty matches real catastrophe; pre-threshold simulation is insufficient",
+      "primary_observable": "Fidelity metrics: physiological stress markers in simulation vs real events, decision-time distributions, novel-cue recognition rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "simulation_technology_vendors",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Fourth reading of contested kernel: threshold-conditional position"
+    },
+    {
+      "claim_id": "institutional_memory_substrate",
+      "human_readable": "Institutional Memory Substrate (Organizational vs Individual Competence)",
+      "structural_delta": "Competence resides in organizational protocols/culture rather than individual operators; simulation maintains institutional substrate independent of catastrophe recurrence",
+      "primary_observable": "Organizational learning metrics: protocol evolution rates, safety culture survey scores, cross-generational knowledge transfer effectiveness",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: different structural level (organizational vs operational); fails independence test against kernel readings (measures different substrate)"
+    },
+    {
+      "claim_id": "regulatory_capture_mechanism",
+      "human_readable": "Regulatory Capture Mechanism (Simulation Requirements as Industry Protection)",
+      "structural_delta": "Simulation-sufficiency doctrine protects incumbent operators from liability/disruption that real catastrophes would impose",
+      "primary_observable": "Regulatory evolution: simulation requirement stringency over time, post-catastrophe vs baseline regulation changes, industry lobbying patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_operators",
+      "victim": "public_safety_margins",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: different beneficiary structure; measures regulatory dynamics rather than competence retention mechanism"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "simulation_as_proxy_catastrophe_reading",
+      "kernel_id": "catastrophe_proxy_sufficiency",
+      "reading_id": "simulation_as_proxy_catastrophe_reading"
+    },
+    {
+      "claim_id": "catastrophe_necessity_reading",
+      "kernel_id": "catastrophe_proxy_sufficiency",
+      "reading_id": "catastrophe_necessity_reading"
+    },
+    {
+      "claim_id": "hybrid_degradation_reading",
+      "kernel_id": "catastrophe_proxy_sufficiency",
+      "reading_id": "hybrid_degradation_reading"
+    },
+    {
+      "claim_id": "simulation_fidelity_threshold",
+      "kernel_id": "catastrophe_proxy_sufficiency",
+      "reading_id": "simulation_fidelity_threshold"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_memory_substrate",
+      "structural_delta": "Competence resides in organizational protocols rather than individual operators",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Different structural level (organizational vs operational); measures institutional substrate rather than individual competence retention mechanism"
+    },
+    {
+      "claim_id": "regulatory_capture_mechanism",
+      "structural_delta": "Simulation-sufficiency doctrine as industry protection from catastrophe liability",
+      "hypothesis": "snare",
+      "deferral_reason": "Different beneficiary structure; measures regulatory dynamics rather than competence retention mechanism; potential omega variable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_fidelity_collapse",
+      "description": "If simulation fidelity crosses threshold where stress/uncertainty matches real catastrophe, does the simulation_fidelity_threshold reading collapse into simulation_as_proxy_catastrophe reading? Or does irreducible difference persist (e.g., knowledge that death is not actually possible)?",
+      "source": "§1.3-K coherence check between readings 1 and 4"
+    },
+    {
+      "id": "omega_generational_boundary",
+      "description": "At what generational distance from last real catastrophe does competence decay become measurable? Aviation: 3 generations post-controlled-flight-into-terrain epidemic. Nuclear: 2 generations post-Three Mile Island. Is decay detectable yet?",
+      "source": "Primary observable measurement challenge for catastrophe_necessity_reading"
+    },
+    {
+      "id": "omega_tacit_knowledge_substrate",
+      "description": "What fraction of catastrophe-avoidance competence is tacit (stress response, pattern recognition under uncertainty) vs procedural (checklist execution)? If >50% tacit, simulation_as_proxy_catastrophe reading weakens; if <20%, strengthens.",
+      "source": "Structural delta distinction between hybrid_degradation_reading and simulation_as_proxy_catastrophe_reading"
+    },
+    {
+      "id": "omega_novel_failure_modes",
+      "description": "Do novel failure modes (e.g., 737 MAX MCAS, Fukushima tsunami-flood coupling) constitute evidence for catastrophe_necessity_reading, or do they measure simulation scenario coverage rather than competence retention?",
+      "source": "Dark Matter Probe 2 (Absence Inventory): novel failures as test cases"
+    },
+    {
+      "id": "omega_regulatory_feedback_loop",
+      "description": "Does regulatory_capture_mechanism (deferred axis) create feedback loop where simulation requirements prevent catastrophes that would otherwise reveal competence decay, making decay unmeasurable?",
+      "source": "Deferred axis regulatory_capture_mechanism + measurement challenge"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition produced 4 distinct readings with non-collapsing structural deltas. Independence testing separated kernel readings from organizational-level and regulatory-level axes (deferred). Generational measurement challenge noted in omega_generational_boundary."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that catastrophe-avoidance competence must be actively maintained rather than assumed stable; contested question is what constitutes sufficient maintenance exercise",
+    "authority_description": "Regulatory bodies (FAA, NRC) ground interpretive legitimacy in certification requirements; operational doctrine grounds legitimacy in demonstrated incident response; safety engineering research grounds legitimacy in empirical competence metrics",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_stability_with_licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "catastrophe_proxy_sufficiency",
+    "readings": [
+      {
+        "reading_id": "simulation_as_proxy_catastrophe_reading",
+        "commitment": "Simulation exercises constitute catastrophe-equivalent practice sufficient to maintain operational competence indefinitely",
+        "authority_grounding": "Regulatory certification doctrine (FAA/NRC simulation requirements as sufficient for licensure); training industry standards",
+        "sibling_readings": [
+          "catastrophe_necessity_reading",
+          "hybrid_degradation_reading",
+          "simulation_fidelity_threshold"
+        ],
+        "expected_structural_delta": "Low extractiveness (simulation is coordination mechanism); beneficiary is regulatory bodies (liability protection); no victim set (competence maintained)"
+      },
+      {
+        "reading_id": "catastrophe_necessity_reading",
+        "commitment": "Only actual catastrophic events provide irreducible stress/uncertainty necessary to maintain genuine competence; simulation is insufficient",
+        "authority_grounding": "Naturalist/empiricist position grounded in tacit knowledge theory and stress physiology research; minority position in safety engineering",
+        "sibling_readings": [
+          "simulation_as_proxy_catastrophe_reading",
+          "hybrid_degradation_reading",
+          "simulation_fidelity_threshold"
+        ],
+        "expected_structural_delta": "Mountain constraint (physical/psychological limits of simulation); victim is operational safety margins (competence decays in catastrophe-free periods)"
+      },
+      {
+        "reading_id": "hybrid_degradation_reading",
+        "commitment": "Simulation maintains procedural competence but tacit knowledge and stress-response capacity degrade over generational timescales without real catastrophes",
+        "authority_grounding": "Organizational learning theory; generational knowledge transfer research; partial empirical support from long-interval incident analysis",
+        "sibling_readings": [
+          "simulation_as_proxy_catastrophe_reading",
+          "catastrophe_necessity_reading",
+          "simulation_fidelity_threshold"
+        ],
+        "expected_structural_delta": "Tangled rope (simulation as partial solution with hidden decay mechanism); beneficiary is certification industry (ongoing training revenue); victim is long-term safety margins"
+      },
+      {
+        "reading_id": "simulation_fidelity_threshold",
+        "commitment": "Competence retention depends on simulation crossing fidelity threshold where stress/uncertainty matches real catastrophe; sufficiency is technology-dependent not categorical",
+        "authority_grounding": "Human factors engineering; simulation technology research; grounded in measurable fidelity metrics (physiological stress, decision latency)",
+        "sibling_readings": [
+          "simulation_as_proxy_catastrophe_reading",
+          "catastrophe_necessity_reading",
+          "hybrid_degradation_reading"
+        ],
+        "expected_structural_delta": "Rope (coordination via technology investment); beneficiary is simulation technology vendors; threshold creates binary sufficiency condition"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "simulation_as_proxy_catastrophe_reading",
+        "reading_b": "catastrophe_necessity_reading",
+        "basis": "Simulation-sufficiency axiom (drills are structurally equivalent to real events for competence maintenance) cannot coexist with catastrophe-necessity axiom (irreducible difference between simulation and reality makes only real events competence-sustaining)"
+      },
+      {
+        "reading_a": "catastrophe_necessity_reading",
+        "reading_b": "simulation_fidelity_threshold",
+        "basis": "Catastrophe-necessity axiom (no simulation can substitute for real events) cannot coexist with threshold-conditional axiom (sufficiently high-fidelity simulation crosses into equivalence)"
+      }
+    ]
+  },
+  "_seed_id": "aviation_nuclear_safety_retention"
+}

@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Nuclear Non-Proliferation / Treaty Compliance",
+  "family_id": "jcpoa_treaty_obligations_2026",
+  "topic_summary": "Analysis of the Joint Comprehensive Plan of Action (JCPOA) as a contested kernel in international law. The same treaty text is read by different parties as either a strictly binding multilateral commitment requiring consensus to dissolve, or as a provisional transactional framework voidable upon unilateral perception of bad faith. These competing readings produce structurally different constraints on sanctions, nuclear enrichment, and enforcement mechanisms.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "JCPOA treaty text (2015 agreement limiting Iranian nuclear program)",
+      "P5+1 parties (United States, United Kingdom, France, Russia, China, Germany)",
+      "Iran (Islamic Republic, signatory state)",
+      "IAEA (International Atomic Energy Agency, verification authority)",
+      "UNSC (UN Security Council, sanctions authority under Resolution 2231)",
+      "U.S. Treasury OFAC (sanctions enforcement mechanism)"
+    ],
+    "key_tensions": [
+      "Multilateral treaty architecture vs unilateral withdrawal authority (P5+1 consensus vs U.S. 2018 withdrawal)",
+      "Reciprocal compliance vs good faith interpretation (Iranian enrichment vs sanctions relief)"
+    ],
+    "key_mechanisms": [
+      "Snapback sanctions mechanism (UNSC Resolution 2231 dispute resolution pathway)",
+      "IAEA verification regime (inspections, monitoring, reporting)",
+      "Secondary sanctions enforcement (U.S. extraterritorial financial penalties)"
+    ],
+    "key_absences": [
+      "Explicit dispute resolution mechanism for competing interpretations of treaty bindingness itself",
+      "Clear protocol for distinguishing technical non-compliance from fundamental breach justifying withdrawal"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The JCPOA treaty text as shared international legal commitment governing nuclear non-proliferation obligations, sanctions relief, and compliance verification",
+    "authority_description": "Interpretive authority contested between multilateral treaty parties (P5+1 consensus model) and individual signatory states claiming unilateral assessment prerogative under customary international law",
+    "drift_status": "absent",
+    "candidate_pattern": "dynastic_succession",
+    "is_contested_kernel": true,
+    "kernel_id": "jcpoa_treaty_bindingness",
+    "readings": [
+      {
+        "reading_id": "binding_multilateral_reading",
+        "commitment": "JCPOA as binding multilateral treaty requiring consensus-based modification or dissolution",
+        "authority_grounding": "Vienna Convention on Law of Treaties (VCLT) Article 54 (termination by consent); UN Charter Chapter VII enforcement",
+        "sibling_readings": [
+          "transactional_provisional_reading",
+          "graduated_compliance_reading"
+        ],
+        "expected_structural_delta": "High constraint on unilateral withdrawal; sanctions reimposition requires UNSC consensus; Iranian enrichment violations trigger multilateral dispute resolution before snapback; beneficiaries are multilateral institutions and non-proliferation regime stability"
+      },
+      {
+        "reading_id": "transactional_provisional_reading",
+        "commitment": "JCPOA as provisional transactional framework voidable upon unilateral determination of bad faith",
+        "authority_grounding": "VCLT Article 60 (material breach); customary international law of state sovereignty and national security prerogative",
+        "sibling_readings": [
+          "binding_multilateral_reading",
+          "graduated_compliance_reading"
+        ],
+        "expected_structural_delta": "Low constraint on unilateral withdrawal; sanctions reimposition follows national determination; Iranian violations justify immediate exit; beneficiaries are individual state sovereignty and domestic political coalitions opposing the deal"
+      },
+      {
+        "reading_id": "graduated_compliance_reading",
+        "commitment": "JCPOA as scaled reciprocal commitment with graduated enforcement tied to proportional compliance assessment",
+        "authority_grounding": "VCLT Article 60(3) (proportionality in suspension); diplomatic practice of calibrated response",
+        "sibling_readings": [
+          "binding_multilateral_reading",
+          "transactional_provisional_reading"
+        ],
+        "expected_structural_delta": "Moderate constraint calibrated to violation severity; partial sanctions relief withdrawal proportional to Iranian enrichment increases; dispute resolution prioritizes de-escalation over formal legal closure; beneficiaries are pragmatic diplomacy advocates and economic actors seeking partial engagement"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "binding_multilateral_reading",
+        "reading_b": "transactional_provisional_reading",
+        "basis": "No single coherent framework can simultaneously hold that treaty dissolution requires multilateral consensus (binding reading's axiom) and that unilateral withdrawal upon perceived bad faith is legitimate (transactional reading's axiom). Accepting transactional reading's axiom requires rejecting the binding reading's foundational premise that treaty architecture constrains unilateral exit."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "binding_multilateral_reading",
+      "human_readable": "Binding Multilateral Reading (JCPOA as Consensus-Locked Treaty)",
+      "structural_delta": "Treaty dissolution requires P5+1 consensus; unilateral withdrawal illegitimate under VCLT Article 54",
+      "primary_observable": "Legal opinions citing VCLT consensus requirements; UNSC voting patterns on snapback mechanism invocation; European adherence to deal post-U.S. withdrawal",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "multilateral_institutions",
+      "victim": "unilateral_state_prerogative",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest structural centrality; instantiates the strictest constraint on state behavior; represents formal international law orthodoxy"
+    },
+    {
+      "claim_id": "transactional_provisional_reading",
+      "human_readable": "Transactional Provisional Reading (JCPOA as Voidable Framework)",
+      "structural_delta": "Treaty voidable upon unilateral bad faith determination under VCLT Article 60 material breach doctrine",
+      "primary_observable": "State practice of unilateral withdrawal (U.S. 2018); sanctions reimposition without UNSC authorization; legal opinions citing Article 60",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "sovereignty_maximalists",
+      "victim": "treaty_stability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural opposite of binding reading; represents realist state practice; captures U.S. 2018 withdrawal logic"
+    },
+    {
+      "claim_id": "graduated_compliance_reading",
+      "human_readable": "Graduated Compliance Reading (JCPOA as Scaled Reciprocal Framework)",
+      "structural_delta": "Enforcement calibrated to violation severity via VCLT Article 60(3) proportionality; partial compliance yields partial relief",
+      "primary_observable": "Iranian enrichment levels vs sanctions relief timing; IAEA reporting on centrifuge activation; diplomatic statements referencing proportionality",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "pragmatic_diplomacy_advocates",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Intermediate structural position; captures actual diplomatic practice post-2018; represents coordination-focused reading"
+    },
+    {
+      "claim_id": "iaea_verification_independence",
+      "human_readable": "IAEA Verification Independence (Technical Monitoring as Neutral Arbiter)",
+      "structural_delta": "IAEA monitoring provides objective compliance data independent of political interpretation",
+      "primary_observable": "IAEA quarterly reports on enrichment levels, centrifuge counts, uranium stockpiles",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "binding_multilateral_reading",
+        "graduated_compliance_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: provides factual substrate for readings but does not itself constitute a competing interpretation of treaty bindingness"
+    },
+    {
+      "claim_id": "secondary_sanctions_coercion",
+      "human_readable": "Secondary Sanctions Coercion (Extraterritorial Financial Enforcement)",
+      "structural_delta": "U.S. financial system dominance enables unilateral sanctions enforcement regardless of treaty status",
+      "primary_observable": "OFAC designation counts; European company withdrawal from Iran; SWIFT messaging system access",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "u_s_treasury",
+      "victim": "third_party_economic_actors",
+      "downstream_of": [
+        "transactional_provisional_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism downstream of transactional reading rather than competing reading of kernel itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "binding_multilateral_reading",
+      "kernel_id": "jcpoa_treaty_bindingness",
+      "reading_id": "binding_multilateral_reading"
+    },
+    {
+      "claim_id": "transactional_provisional_reading",
+      "kernel_id": "jcpoa_treaty_bindingness",
+      "reading_id": "transactional_provisional_reading"
+    },
+    {
+      "claim_id": "graduated_compliance_reading",
+      "kernel_id": "jcpoa_treaty_bindingness",
+      "reading_id": "graduated_compliance_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "iaea_verification_independence",
+      "structural_delta": "IAEA monitoring as objective compliance arbiter",
+      "hypothesis": "mountain",
+      "deferral_reason": "Provides factual substrate for competing readings but does not itself constitute a competing interpretation of treaty bindingness"
+    },
+    {
+      "claim_id": "secondary_sanctions_coercion",
+      "structural_delta": "Extraterritorial U.S. financial enforcement regardless of treaty status",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism downstream of transactional reading; not a competing reading of the kernel itself"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_dispute_resolution_absence",
+      "description": "The JCPOA lacks explicit mechanism for resolving disputes about treaty bindingness itself (meta-interpretive authority). Does this absence make the kernel inherently unstable, or does customary international law provide implicit resolution pathway?",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_vclt_application",
+      "description": "Is the JCPOA subject to VCLT rules given U.S. claims it was never a 'treaty' under domestic law? If VCLT does not apply, does the binding multilateral reading collapse into the transactional reading by default?",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_iran_reciprocal_withdrawal",
+      "description": "Iranian incremental enrichment increases post-2018 claim reciprocal withdrawal logic. Does this constitute a fourth reading (mutual transactional symmetry) or confirm the transactional reading's internal logic?",
+      "source": "Dark Matter Probe 2 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_snapback_activation_2020",
+      "description": "U.S. attempted snapback sanctions activation in August 2020 was rejected by other UNSC members. Does this state practice confirm the binding reading or merely reflect political coalition dynamics?",
+      "source": "Pairwise Independence Testing (§3.1)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings capture the structural topology of competing interpretations. IAEA verification and secondary sanctions enforcement are correctly identified as distinct from the kernel contest itself."
+  },
+  "_seed_id": "jcpoa_collapse_and_renewal"
+}

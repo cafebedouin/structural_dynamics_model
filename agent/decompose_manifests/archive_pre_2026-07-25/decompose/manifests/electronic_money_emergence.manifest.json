@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Economic History / Monetary Theory / Technology Studies",
+  "family_id": "electronic_money_emergence",
+  "topic_summary": "Analysis of the emergence of electronic/digital money, examining the contested kernel of when digital money 'became thinkable' versus when it was 'first held.' This tests whether the M4/M5 monetary aggregate collapse represents a genuine conceptual kernel or a measurement artifact.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Electronic money (digital bearer instruments, dematerialized currency)",
+      "M4/M5 monetary aggregates (statistical categories distinguishing non-electronic from electronic money)",
+      "Central banks (measurement authorities, definitional gatekeepers)",
+      "Commercial banking system (intermediary layer between central bank reserves and public deposits)",
+      "Bretton Woods system (last metallic convertibility regime, collapsed 1971-1973)",
+      "Bitcoin/cryptocurrency (decentralized digital money, emerged 2009)"
+    ],
+    "key_tensions": [
+      "Conceptual innovation vs institutional recognition (when digital money became thinkable vs when it was measured/classified)",
+      "Measurement category vs ontological reality (M4/M5 distinction as statistical artifact vs capturing genuine structural transformation)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The moment of emergence for electronic/digital money as a monetary form",
+    "authority_description": "Central bank statistical offices and monetary theorists claiming definitional authority over what counts as 'money'",
+    "drift_status": "partial",
+    "candidate_pattern": "definitional_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "electronic_money_emergence",
+    "readings": [
+      {
+        "reading_id": "became_thinkable_reading",
+        "commitment": "Digital money emerged when the conceptual possibility became technically and socially thinkable, prior to institutional measurement",
+        "authority_grounding": "Technology studies / innovation theory / conceptual history",
+        "sibling_readings": [
+          "first_held_reading",
+          "m4_m5_collapse_reading"
+        ],
+        "expected_structural_delta": "Emergence is a gradual diffusion process; no single threshold event; measurement lags conceptual innovation by decades"
+      },
+      {
+        "reading_id": "first_held_reading",
+        "commitment": "Digital money emerged when the first institutional bearer held dematerialized currency in a form distinguishable from physical notes",
+        "authority_grounding": "Legal positivism / institutional economics / banking regulation",
+        "sibling_readings": [
+          "became_thinkable_reading",
+          "m4_m5_collapse_reading"
+        ],
+        "expected_structural_delta": "Emergence is a discrete institutional event; observable threshold tied to legal/regulatory recognition; measurement captures ontological transition"
+      },
+      {
+        "reading_id": "m4_m5_collapse_reading",
+        "commitment": "The M4/M5 statistical distinction itself created the category of electronic money retroactively, making the 'emergence' a measurement artifact",
+        "authority_grounding": "Metrology critique / social construction of measurement / Goodhart's Law",
+        "sibling_readings": [
+          "became_thinkable_reading",
+          "first_held_reading"
+        ],
+        "expected_structural_delta": "No genuine emergence event; the distinction is a classificatory piton that stabilizes a measurement convention without corresponding to underlying monetary physics"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "became_thinkable_reading",
+        "reading_b": "first_held_reading",
+        "basis": "One reading treats emergence as a diffusion process (thinkability spreads gradually); the other treats it as a threshold crossing tied to institutional recognition. No single framework can hold both 'money exists when thinkable' and 'money exists when first held' as the defining criterion simultaneously."
+      },
+      {
+        "reading_a": "first_held_reading",
+        "reading_b": "m4_m5_collapse_reading",
+        "basis": "One reading treats institutional holding as ontologically primary (measurement captures reality); the other treats measurement as constitutive (the category creates the reality). A framework cannot simultaneously hold 'the first holder defines emergence' and 'the measurement category is a retrospective construction with no referent.'"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "became_thinkable_reading",
+      "human_readable": "Digital Money as Conceptual Possibility (Became Thinkable)",
+      "structural_delta": "Emergence tied to when dematerialized currency became technically and socially thinkable, independent of institutional recognition",
+      "primary_observable": "Historical evidence of conceptual innovation (e.g., Hayek's Denationalisation of Money 1976, academic proposals for electronic currency pre-1980)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "One of three kernel readings; represents the innovation-theory pole of the contested kernel"
+    },
+    {
+      "claim_id": "first_held_reading",
+      "human_readable": "Digital Money as Institutional Event (First Held)",
+      "structural_delta": "Emergence tied to discrete institutional event when first bearer held dematerialized currency distinguishable from physical notes",
+      "primary_observable": "Banking records of first dematerialized account balances; regulatory timestamps for electronic clearing systems",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "One of three kernel readings; represents the legal-positivist pole of the contested kernel"
+    },
+    {
+      "claim_id": "m4_m5_collapse_reading",
+      "human_readable": "M4/M5 Collapse as Measurement Artifact (Retroactive Category)",
+      "structural_delta": "The M4/M5 statistical distinction created the category of electronic money retroactively; emergence is a classificatory piton",
+      "primary_observable": "Historical timing of M4/M5 disaggregation by central banks; correlation between measurement introduction and 'electronic money' discourse frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "central_bank_measurement_authority",
+      "victim": "monetary_theorists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "One of three kernel readings; highest centrality as it subsumes both alternatives as measurement conventions"
+    },
+    {
+      "claim_id": "bretton_woods_threshold",
+      "human_readable": "Bretton Woods Collapse as Dematerialization Threshold",
+      "structural_delta": "End of metallic convertibility (1971-1973) as necessary condition for digital money to become conceptually viable",
+      "primary_observable": "Nixon shock date (August 1971); subsequent proposals for electronic currency",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "became_thinkable_reading",
+        "first_held_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural upstream but lower distinctiveness; captured implicitly in 'became_thinkable' as enabling condition"
+    },
+    {
+      "claim_id": "cryptocurrency_discontinuity",
+      "human_readable": "Cryptocurrency as Discontinuous Rupture (Bitcoin 2009)",
+      "structural_delta": "Bitcoin (2009) as qualitatively distinct from central-bank-issued electronic money; decentralized bearer instrument vs ledger entry",
+      "primary_observable": "Bitcoin white paper (2008); proof-of-work consensus mechanism; absence of central issuer",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "cryptocurrency_advocates",
+      "victim": "central_bank_monetary_authority",
+      "downstream_of": [
+        "became_thinkable_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream discontinuity; shifts kernel to 'what counts as money' rather than 'when money became electronic'; omega material"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "became_thinkable_reading",
+      "kernel_id": "electronic_money_emergence",
+      "reading_id": "became_thinkable_reading"
+    },
+    {
+      "claim_id": "first_held_reading",
+      "kernel_id": "electronic_money_emergence",
+      "reading_id": "first_held_reading"
+    },
+    {
+      "claim_id": "m4_m5_collapse_reading",
+      "kernel_id": "electronic_money_emergence",
+      "reading_id": "m4_m5_collapse_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "bretton_woods_threshold",
+      "structural_delta": "End of metallic convertibility as enabling condition for digital money",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural upstream but lower distinctiveness than the three kernel readings; captured implicitly in 'became_thinkable' as necessary condition"
+    },
+    {
+      "claim_id": "cryptocurrency_discontinuity",
+      "structural_delta": "Bitcoin as qualitatively distinct decentralized bearer instrument",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream discontinuity; shifts kernel to definitional boundaries ('what counts as money') rather than temporal emergence; omega variable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse_risk",
+      "description": "If all three readings converge on the same observables in generation (e.g., all point to 1970s electronic clearing systems as the 'real' emergence), the kernel collapses into a single constraint. The M4/M5 collapse reading may subsume the other two as measurement conventions.",
+      "source": "Kernel/reading decomposition (§1.3-K)"
+    },
+    {
+      "id": "omega_cryptocurrency_boundary",
+      "description": "Does cryptocurrency (Bitcoin 2009) constitute a second emergence event, or is it continuous with central-bank electronic money? If discontinuous, the kernel shifts to 'what counts as money' rather than 'when money became electronic.'",
+      "source": "Deferred axis cryptocurrency_discontinuity"
+    },
+    {
+      "id": "omega_goodhart_recursion",
+      "description": "If M4/M5 distinction is a measurement artifact (Goodhart's Law), does the very act of measuring 'electronic money' constitute it as a category? Metrology critique may reveal the kernel as self-referential.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to m4_m5_collapse_reading"
+    },
+    {
+      "id": "omega_bretton_woods_necessity",
+      "description": "Is Bretton Woods collapse a necessary condition (mountain) or merely enabling context (piton)? Global energy transition to fiat currency may reclassify this axis if metallic convertibility returns as a policy option.",
+      "source": "Deferred axis bretton_woods_threshold + F03 concern"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected represent genuinely distinct interpretive commitments. Kernel structure confirmed: all three readings share the common substrate (electronic money emergence) but read it differently (gradual diffusion vs institutional threshold vs measurement artifact). Expected collapse risk documented in omega_kernel_collapse_risk."
+  },
+  "_seed_id": "electronic_money_emergence"
+}

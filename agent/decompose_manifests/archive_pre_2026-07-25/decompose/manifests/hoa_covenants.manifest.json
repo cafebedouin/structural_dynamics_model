@@ -1,0 +1,235 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Property Law / Collective Governance / Urban Planning",
+  "family_id": "hoa_covenant_authority_2026",
+  "topic_summary": "Analysis of Homeowner Association covenants as contested legal kernels where identical covenant text is read as either a minimal coordination mechanism for shared infrastructure (Rope reading) or as comprehensive behavioral control and value extraction apparatus (Snare/Tangled Rope reading). The interpretive authority of incumbent boards to expand covenant scope without formal amendment creates a commitment system with partial drift absorption.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "HOA Board (interpretive authority; enforcement discretion)",
+      "Covenant Document (fixed legal kernel; recorded against title)",
+      "Homeowners (bound parties; variable exit costs)",
+      "State Statutory Framework (defines amendment thresholds and board powers)",
+      "Property Values (claimed beneficiary of enforcement; actual beneficiary contested)"
+    ],
+    "key_tensions": [
+      "Textual minimalism vs expansive interpretation (narrow coordination reading vs behavioral control reading)",
+      "Founder intent vs incumbent board discretion (original covenant purpose vs current enforcement practice)"
+    ],
+    "mechanisms": [
+      "Fine/lien enforcement (economic coercion; varies by reading from cost-recovery to revenue generation)",
+      "Selective enforcement (discriminatory application; available under expansive reading)",
+      "Supermajority amendment requirement (revision barrier; drift absorption when threshold unmet)"
+    ],
+    "absences": [
+      "Exit cost heterogeneity (renters vs owners vs underwater mortgages; affects power asymmetry)",
+      "Board capture dynamics (who runs for board; correlation between expansive reading and self-interested enforcement)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "HOA covenant document as recorded legal instrument binding property title, stabilizing shared commitments to maintenance contributions and baseline conduct rules",
+    "authority_description": "Board interpretive authority grounded in state statutory framework (typically business judgment rule) combined with amendment supermajority requirement (67-80% thresholds)",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive_Monarchy (board as semi-autonomous interpreter with weak democratic check due to high amendment threshold)",
+    "is_contested_kernel": true,
+    "kernel_id": "hoa_covenant_scope",
+    "readings": [
+      {
+        "reading_id": "coordination_reading",
+        "commitment": "Covenant exists to coordinate shared infrastructure maintenance and resolve genuine externalities",
+        "authority_grounding": "Contractarian/consent-based (covenant as mutual insurance contract for property value protection via infrastructure upkeep)",
+        "sibling_readings": [
+          "behavioral_control_reading",
+          "extraction_reading"
+        ],
+        "expected_structural_delta": "Low ε (0.10-0.25); Rope constraint; beneficiary=all_homeowners symmetrically; victim=none or free_riders; narrow enforcement scope limited to infrastructure cost recovery and objective nuisance"
+      },
+      {
+        "reading_id": "behavioral_control_reading",
+        "commitment": "Covenant exists to enforce aesthetic uniformity and behavioral conformity as property value maximization strategy",
+        "authority_grounding": "Paternalistic/majoritarian (board as aesthetic guardian; property values as trump card)",
+        "sibling_readings": [
+          "coordination_reading",
+          "extraction_reading"
+        ],
+        "expected_structural_delta": "Moderate ε (0.35-0.50); Snare constraint; beneficiary=conformist_majority or board_aligned_homeowners; victim=nonconformists and marginal_aesthetics; expansive enforcement scope including subjective aesthetic judgments, lifestyle restrictions, speech suppression (yard signs, flags)"
+      },
+      {
+        "reading_id": "extraction_reading",
+        "commitment": "Covenant exists as revenue generation mechanism and board power consolidation tool via fine proliferation and selective enforcement",
+        "authority_grounding": "Captured authority (board self-interest or property management company profit maximization)",
+        "sibling_readings": [
+          "coordination_reading",
+          "behavioral_control_reading"
+        ],
+        "expected_structural_delta": "High ε (0.55-0.70); Tangled Rope constraint; beneficiary=board_members, property_management_firms, legal_counsel; victim=financially_vulnerable_homeowners, renters_via_pass_through; rent-seeking enforcement targeting high-fine violations, expedited lien processes, attorney fee extraction"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "coordination_reading",
+        "reading_b": "extraction_reading",
+        "basis": "Coordination reading axiom (covenant legitimacy derives from mutual benefit and cost minimization) cannot coexist with extraction reading axiom (covenant legitimacy survives even when net transfer flows from homeowners to board/management apparatus). No single framework treats fine revenue as both cost-recovery-only and profit-center simultaneously."
+      },
+      {
+        "reading_a": "behavioral_control_reading",
+        "reading_b": "coordination_reading",
+        "basis": "Behavioral control reading axiom (aesthetic uniformity is legitimate covenant purpose even absent measurable externality) contradicts coordination reading axiom (enforcement legitimate only when addressing genuine spillover costs). No single framework can hold both 'subjective aesthetic preference warrants coercion' and 'only objective harm warrants coercion' as true."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "coordination_reading",
+      "human_readable": "Coordination Reading (Covenant as Shared Infrastructure Contract)",
+      "structural_delta": "Covenant interpreted as minimal mutual insurance for infrastructure maintenance and objective externality resolution",
+      "primary_observable": "Board enforcement limited to cost-recovery violations (unpaid dues, objectively measurable nuisance); zero or near-zero fine revenue as percentage of budget",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Structurally cleanest reading; establishes baseline Rope constraint for comparison with expansive readings"
+    },
+    {
+      "claim_id": "behavioral_control_reading",
+      "human_readable": "Behavioral Control Reading (Covenant as Aesthetic Enforcement Regime)",
+      "structural_delta": "Covenant interpreted as comprehensive behavioral regulation for aesthetic uniformity and lifestyle conformity",
+      "primary_observable": "Board enforcement extends to subjective aesthetic judgments, prior approval requirements for home modifications, restrictions on speech/expression (yard signs, flags, decorations)",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "conformist_majority",
+      "victim": "aesthetic_nonconformists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Most socially prevalent reading in practice; Snare hypothesis with clear beneficiary/victim asymmetry distinct from coordination baseline"
+    },
+    {
+      "claim_id": "extraction_reading",
+      "human_readable": "Extraction Reading (Covenant as Revenue Generation Apparatus)",
+      "structural_delta": "Covenant interpreted as rent-seeking mechanism via fine proliferation, selective enforcement, and expedited lien processes",
+      "primary_observable": "Fine revenue as material budget component (>10%); attorney fees exceeding violation remedy costs; property management company profit-sharing from fines; disparate enforcement correlated with homeowner vulnerability (financial distress, renters)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "board_members_and_management_firms",
+      "victim": "financially_vulnerable_homeowners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest ε reading; Tangled Rope with explicit rent-seeking structure; captures dark matter of who benefits from expansive interpretation"
+    },
+    {
+      "claim_id": "exit_cost_heterogeneity",
+      "human_readable": "Exit Cost Heterogeneity (Power Asymmetry via Mobility Constraints)",
+      "structural_delta": "Variation in homeowner exit costs (renters, underwater mortgages, elderly, immobile populations) creates enforcement leverage asymmetry",
+      "primary_observable": "Enforcement intensity correlated with exit cost proxies (rental properties, negative equity neighborhoods, elderly homeowner concentration)",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "low_mobility_homeowners",
+      "downstream_of": [],
+      "feeds_into": [
+        "extraction_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captures power asymmetry enabling extraction but structurally subsumed by extraction_reading's victim identification; would add granularity without distinct structural delta"
+    },
+    {
+      "claim_id": "board_capture_dynamics",
+      "human_readable": "Board Capture Dynamics (Self-Selection into Interpretive Authority)",
+      "structural_delta": "Correlation between board candidacy and preference for expansive covenant reading; self-reinforcing authority consolidation",
+      "primary_observable": "Board composition skewed toward retirees, prior property management professionals, or homeowners with aesthetic grievances; board tenure negatively correlated with covenant amendment attempts",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "expansive_reading_advocates",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "behavioral_control_reading",
+        "extraction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: explains how expansive readings become entrenched but is mechanism for readings already selected rather than independent axis; omega material on authority consolidation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "coordination_reading",
+      "kernel_id": "hoa_covenant_scope",
+      "reading_id": "coordination_reading"
+    },
+    {
+      "claim_id": "behavioral_control_reading",
+      "kernel_id": "hoa_covenant_scope",
+      "reading_id": "behavioral_control_reading"
+    },
+    {
+      "claim_id": "extraction_reading",
+      "kernel_id": "hoa_covenant_scope",
+      "reading_id": "extraction_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "exit_cost_heterogeneity",
+      "structural_delta": "Variation in homeowner mobility constraints creates enforcement leverage asymmetry",
+      "hypothesis": "piton",
+      "deferral_reason": "Power asymmetry already captured in extraction_reading victim identification; would refine granularity without adding independent structural observable"
+    },
+    {
+      "claim_id": "board_capture_dynamics",
+      "structural_delta": "Self-selection into board positions by expansive-reading advocates creates authority consolidation feedback loop",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Explains entrenchment mechanism for behavioral_control and extraction readings but is not independent constraint axis; omega material on how authority drift becomes self-reinforcing"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_state_statutory_variance",
+      "description": "State law variation in board authority limits and homeowner remedies (e.g., California's strict disclosure requirements vs Texas's weak oversight). Does coordination_reading become impossible in states with weak judicial review of board discretion, collapsing to behavioral_control as floor?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — state statutory framework identified but not decomposed"
+    },
+    {
+      "id": "omega_amendment_threshold_lock",
+      "description": "Supermajority amendment requirements (67-80%) create path dependency where expansive board interpretation becomes de facto irreversible. Is this a Piton (atrophied revision capacity) masquerading as democratic safeguard? Interaction with board_capture_dynamics suggests revision threshold itself may be tangled rope.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from high amendment threshold when board interpretation drifts"
+    },
+    {
+      "id": "omega_property_value_measurement",
+      "description": "All three readings claim property value protection as justification. Is 'property value' a measurable observable or rhetorical cover? If measurable, does enforcement actually correlate with value maintenance, or is this claimed beneficiary fictional? Empirical gap: controlled studies of HOA enforcement intensity vs resale values.",
+      "source": "F03 (Hasty Generalization) — property_value_maximization accepted as observable without validation"
+    },
+    {
+      "id": "omega_renter_exclusion",
+      "description": "Renters bear enforcement costs (passed through via lease terms) without board voting rights or covenant amendment participation. Are renters a fourth reading's victim class, or subsumed by extraction_reading? Exit cost analysis suggests distinct structural position.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — renter asymmetry identified in extraction but not fully developed"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: property_value_maximization treated as observable across all readings without empirical validation. Generated omega_property_value_measurement to bound uncertainty about whether this is measurable constraint or rhetorical justification. All three readings claim this as legitimating ground, but actual correlation between enforcement and values is under-determined by available data."
+  },
+  "_seed_id": "hoa_covenants"
+}

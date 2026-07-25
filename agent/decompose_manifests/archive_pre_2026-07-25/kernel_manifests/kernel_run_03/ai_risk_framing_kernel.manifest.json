@@ -1,0 +1,256 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "AI Governance / Technology Ethics / Risk Assessment",
+  "family_id": "ai_risk_kernel_2026",
+  "topic_summary": "Analysis of the AI risk debate between existential risk (x-risk) and near-term harms framings. The debate emerged prominently after ChatGPT's 2022 release but reflects deeper structural tensions about resource allocation, methodological standards, and which populations' vulnerabilities receive priority in AI governance.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Existential Risk Community (x-risk advocates: Bostrom, Musk, Open Philanthropy, Future of Life Institute)",
+      "Near-Term Harms Community (FATE researchers, digital humanities, AI ethics)",
+      "Effective Altruism Movement (philanthropic framework prioritizing tractable high-impact causes)",
+      "Open Philanthropy (largest x-risk funder, Moskovitz/Tuna backed)",
+      "AI Safety Field (alignment as control problem, adversarial red-teaming)",
+      "AI Ethics Field (alignment as justice problem, sociotechnical audits)",
+      "Global South Populations (vulnerable to both present extraction and future x-risk)",
+      "Technology Companies (benefit from x-risk framing diverting attention from current harms)"
+    ],
+    "key_tensions": [
+      "Resource allocation: x-risk funding vs near-term harm mitigation (distraction hypothesis)",
+      "Methodological standards: adversarial red-teaming vs sociotechnical audits (empirical disjunction)",
+      "Population prioritization: future humanity vs present marginalized groups (temporal/geographic)",
+      "Institutional separation: safety conferences/departments vs ethics conferences/departments (80% within-community collaboration)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that AI systems pose risks requiring governance intervention, but contested on which risks (existential vs near-term) warrant priority",
+    "authority_description": "Interpretive legitimacy grounded in disciplinary methodology (computer science/philosophy for x-risk, sociotechnical analysis for ethics) and funding control (EA-aligned philanthropy vs academic/civil society)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "ai_risk_governance_priority",
+    "readings": [
+      {
+        "reading_id": "existential_risk_reading",
+        "commitment": "AI risk governance must prioritize preventing superintelligence scenarios that could annihilate or permanently curtail humanity's potential",
+        "authority_grounding": "Effective altruism's tractability framework, computer science/philosophy expertise on advanced AI capabilities, control of tens of billions in philanthropic capital",
+        "sibling_readings": [
+          "near_term_harms_reading",
+          "bridge_reading"
+        ],
+        "expected_structural_delta": "Victim set: all future humanity. Beneficiary: x-risk research institutions, AI labs claiming safety leadership. High ε on speculative capabilities, low ε on present algorithmic bias. Resource flow to alignment-as-control, adversarial testing, governance frameworks for AGI scenarios."
+      },
+      {
+        "reading_id": "near_term_harms_reading",
+        "commitment": "AI risk governance must prioritize mitigating demonstrated present harms (bias, misinformation, labor displacement, surveillance) affecting marginalized populations now",
+        "authority_grounding": "Sociotechnical analysis methodology, lived experience of affected communities, academic ethics/humanities disciplinary norms, civil society advocacy",
+        "sibling_readings": [
+          "existential_risk_reading",
+          "bridge_reading"
+        ],
+        "expected_structural_delta": "Victim set: Global South populations, marginalized groups facing algorithmic discrimination, workers displaced by automation. Beneficiary: technology companies (x-risk framing diverts regulatory attention). High ε on present deployment harms, low ε on speculative superintelligence. Resource flow to fairness audits, bias mitigation, regulatory frameworks for current systems."
+      },
+      {
+        "reading_id": "bridge_reading",
+        "commitment": "AI risk governance must address both present harms and existential risks as non-mutually-exclusive, structurally entangled concerns requiring unified frameworks",
+        "authority_grounding": "Cross-disciplinary synthesis, empirical evidence that both concerns are legitimate (survey data showing public concern for both), recognition that present harms may amplify x-risk pathways",
+        "sibling_readings": [
+          "existential_risk_reading",
+          "near_term_harms_reading"
+        ],
+        "expected_structural_delta": "Victim set: both present marginalized populations and future humanity. Beneficiary: bridging institutions (the 5% of papers accounting for 85% of cross-field links). Moderate ε on both dimensions. Resource flow to integrated safety-ethics research, but structurally fragile (depends on handful of broker actors rather than distributed collaboration)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "existential_risk_reading",
+        "reading_b": "near_term_harms_reading",
+        "basis": "Existential risk reading's axiom that future humanity's potential loss is the paramount concern requires deprioritizing present harms as lower-magnitude. Near-term harms reading's axiom that present injustice to actual people takes moral precedence over speculative future scenarios requires rejecting x-risk prioritization. No single coherent framework can hold both 'future potential loss is paramount' and 'present actual harm takes precedence' simultaneously as foundational commitments."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "existential_risk_reading",
+      "human_readable": "Existential Risk Reading (X-Risk Prioritization)",
+      "structural_delta": "Governance prioritizes preventing superintelligence scenarios threatening all future humanity",
+      "primary_observable": "Resource allocation to x-risk research (Open Philanthropy grants, FLI funding); policy frameworks addressing AGI scenarios; adversarial red-teaming deployment",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "x_risk_research_institutions",
+      "victim": "present_marginalized_populations_deprioritized",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest resource control (tens of billions EA funding); distinct victim/beneficiary structure"
+    },
+    {
+      "claim_id": "near_term_harms_reading",
+      "human_readable": "Near-Term Harms Reading (Present Justice Prioritization)",
+      "structural_delta": "Governance prioritizes mitigating demonstrated algorithmic harms affecting marginalized populations now",
+      "primary_observable": "Resource allocation to FATE research; regulatory frameworks for current AI systems (bias audits, transparency requirements); sociotechnical audit deployment",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "technology_companies_via_regulatory_diversion",
+      "victim": "global_south_populations_facing_present_extraction",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structurally opposite victim set and temporal focus; distinct methodological grounding"
+    },
+    {
+      "claim_id": "bridge_reading",
+      "human_readable": "Bridge Reading (Integrated Safety-Ethics Framework)",
+      "structural_delta": "Governance addresses both present harms and x-risk as entangled, non-mutually-exclusive concerns",
+      "primary_observable": "Cross-disciplinary collaboration metrics (5% of papers accounting for 85% of bridging links); integrated policy frameworks; survey data showing public concern for both",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "bridging_institutions",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; structurally fragile (depends on handful of brokers); tests whether synthesis is viable or kernel remains bifurcated"
+    },
+    {
+      "claim_id": "institutional_separation_mechanism",
+      "human_readable": "Institutional Separation Mechanism (Structural Siloing)",
+      "structural_delta": "Separate conferences, funding streams, departments sustain 80% within-community collaboration",
+      "primary_observable": "Co-authorship network analysis; conference attendance patterns; departmental affiliations",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "existential_risk_reading",
+        "near_term_harms_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism sustaining kernel bifurcation, but captured by structural analysis of readings themselves"
+    },
+    {
+      "claim_id": "effective_altruism_funding_control",
+      "human_readable": "Effective Altruism Funding Control (Resource Capture)",
+      "structural_delta": "EA movement's tractability framework steers tens of billions toward x-risk, structurally deprioritizing near-term harms",
+      "primary_observable": "Open Philanthropy grant distribution; EA-aligned funding as percentage of total AI safety/ethics funding",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "x_risk_research_community",
+      "victim": "near_term_harms_researchers_resource_starved",
+      "downstream_of": [],
+      "feeds_into": [
+        "existential_risk_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: critical mechanism but subsumed within existential_risk_reading's authority grounding and beneficiary structure"
+    },
+    {
+      "claim_id": "global_south_vulnerability_asymmetry",
+      "human_readable": "Global South Vulnerability Asymmetry (Dual Exposure)",
+      "structural_delta": "Global South populations face both present AI-driven extraction and heightened future x-risk vulnerability due to post-colonial contexts",
+      "primary_observable": "Differential impact studies; resource extraction patterns; climate/military AI deployment in Global South",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "global_south_populations",
+      "downstream_of": [],
+      "feeds_into": [
+        "near_term_harms_reading",
+        "bridge_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: critical victim-set observation but captured within near_term_harms_reading's structural delta and bridge_reading's synthesis attempt"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "existential_risk_reading",
+      "kernel_id": "ai_risk_governance_priority",
+      "reading_id": "existential_risk_reading"
+    },
+    {
+      "claim_id": "near_term_harms_reading",
+      "kernel_id": "ai_risk_governance_priority",
+      "reading_id": "near_term_harms_reading"
+    },
+    {
+      "claim_id": "bridge_reading",
+      "kernel_id": "ai_risk_governance_priority",
+      "reading_id": "bridge_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_separation_mechanism",
+      "structural_delta": "Separate conferences, funding, departments sustain 80% within-community collaboration",
+      "hypothesis": "rope",
+      "deferral_reason": "Mechanism sustaining kernel bifurcation captured by structural analysis of readings themselves; would add detail without structural novelty"
+    },
+    {
+      "claim_id": "effective_altruism_funding_control",
+      "structural_delta": "EA tractability framework steers tens of billions toward x-risk",
+      "hypothesis": "snare",
+      "deferral_reason": "Critical mechanism but subsumed within existential_risk_reading's authority grounding and beneficiary structure"
+    },
+    {
+      "claim_id": "global_south_vulnerability_asymmetry",
+      "structural_delta": "Global South faces both present extraction and heightened future x-risk vulnerability",
+      "hypothesis": "mountain",
+      "deferral_reason": "Victim-set observation captured within near_term_harms_reading and bridge_reading; high ε but redundant with selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Is this genuinely one kernel with two readings, or two separate kernels (risk-as-control vs risk-as-justice) that happen to share vocabulary? The 80% within-community collaboration and disjoint empirical standards suggest structural separation, not interpretive contest. Bridge_reading's fragility (5% of papers, handful of brokers) may indicate the kernel has already fractured.",
+      "source": "§1.3-K kernel/reading decomposition; research finding that 'the divide is not merely rhetorical but structural'"
+    },
+    {
+      "id": "omega_distraction_hypothesis_validity",
+      "description": "Research shows existential risk narratives increase concern for catastrophic risks WITHOUT diminishing concern for immediate harms (empirical rejection of distraction hypothesis). Does this invalidate the axiom contradiction, or does resource scarcity make the contradiction real despite non-exclusive public concern?",
+      "source": "Research finding contradicting distraction hypothesis; tension with declared axiom contradiction"
+    },
+    {
+      "id": "omega_bridge_viability",
+      "description": "Bridge_reading classified as scaffold (institutionally fragile, depends on handful of actors). If removing a small number of brokers sharply increases segregation, is synthesis structurally possible, or is the bridge a temporary coordination artifact that will collapse under institutional pressure?",
+      "source": "Research on network fragility; scaffold hypothesis for bridge_reading"
+    },
+    {
+      "id": "omega_beneficiary_reversal",
+      "description": "Near_term_harms_reading lists technology companies as beneficiaries (x-risk framing diverts regulation). But x-risk advocates claim tech companies resist x-risk governance. Is the beneficiary structure inverted, or do different tech actors benefit from different framings (frontier labs from x-risk legitimacy, deployment-focused companies from regulatory diversion)?",
+      "source": "Tension between 'tech companies benefit from x-risk distraction' claim and x-risk community's adversarial framing of tech companies"
+    },
+    {
+      "id": "omega_temporal_collapse",
+      "description": "If present harms 'may magnify, complicate, or exacerbate' x-risk pathways (research finding), does the temporal distinction collapse? Would a sufficiently long time horizon reveal near-term harms AS x-risk mechanisms, invalidating the kernel contest?",
+      "source": "Research on 'bridge connecting present harms to x-risk'; potential collapse of temporal distinction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied as specified. Five omegas generated to bound uncertainties about kernel coherence, axiom contradiction validity, bridge viability, beneficiary structure, and temporal distinction collapse."
+  },
+  "_seed_id": "ai_risk_framing_kernel"
+}

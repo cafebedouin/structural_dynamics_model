@@ -1,0 +1,225 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Ecclesiastical History / Theological Doctrine / Institutional Change",
+  "family_id": "vatican_ii_composite_2026",
+  "topic_summary": "Analysis of Vatican II (1962-1965) as either a unified doctrinal reinterpretation of Catholic tradition or an overdetermined composite of multiple independent shifts that happened to co-occur. The kernel question is whether Vatican II represents one contested reading of Catholic continuity or several distinct doctrinal movements bundled under institutional convenience.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Vatican II (Second Vatican Council, 1962-1965 ecumenical council)",
+      "Magisterium (teaching authority of Catholic Church)",
+      "Traditionalist opposition (SSPX, sedevacantists, ressourcement critics)",
+      "Sacrosanctum Concilium (Constitution on Sacred Liturgy)",
+      "Lumen Gentium (Dogmatic Constitution on the Church)",
+      "Dignitatis Humanae (Declaration on Religious Freedom)",
+      "Nostra Aetate (Declaration on Non-Christian Religions)",
+      "Pope Paul VI / John XXIII (conciliar conveners and implementers)"
+    ],
+    "key_tensions": [
+      "Continuity vs rupture (official hermeneutic of continuity vs traditionalist rupture claim)",
+      "Doctrinal development vs doctrinal innovation (organic growth vs novel teaching)",
+      "Ecumenical openness vs salvific exclusivity (extra ecclesiam nulla salus reinterpretation)"
+    ],
+    "key_mechanisms": [
+      "Aggiornamento (updating): John XXIII's stated goal to open windows and engage modernity",
+      "Ressourcement (return to sources): retrieval of patristic/biblical theology vs scholastic framework",
+      "Reception dynamics: delayed and contested implementation across national episcopates",
+      "Interpretive authority concentration: post-conciliar Magisterium as sole legitimate reader"
+    ],
+    "key_absences": [
+      "No formal definition of what constitutes doctrinal development vs innovation (mechanism underdetermined)",
+      "No acknowledgment that multiple independent shifts may have been bundled (overdetermination hypothesis not addressed in official historiography)",
+      "Limited documentation of minority theological positions that influenced final texts (suppressed dissent)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Catholic doctrinal tradition as transmitted through councils, papal teaching, and magisterial interpretation, with Vatican II as either a unified reinterpretation or a composite of independent shifts",
+    "authority_description": "Magisterium (pope and bishops in communion) holds exclusive interpretive authority; Vatican II texts become part of the authoritative corpus",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": false,
+    "collapse_reason": "The supposed readings do not generate structurally different constraints. All parties agree Vatican II changed doctrine/practice in multiple domains; they disagree about whether these changes were legitimate development (continuity reading) or rupture (traditionalist reading), but both readings identify the SAME set of changes as constraints. The 'composite vs unified' framing is not a kernel contest but an analytical question about how to model the constraint structure itself. This is a single constraint with contested legitimacy, not multiple constraints from one kernel.",
+    "actual_structure": "Vatican II as a bundle of 4-6 independent doctrinal/liturgical shifts that co-occurred under one institutional event. Each shift has its own structural delta and could have happened without the others. The analytical question is whether to treat them as one composite constraint or decompose into constituent constraints."
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_vernacularization",
+      "human_readable": "Liturgical Vernacularization (Latin → Vernacular Shift)",
+      "structural_delta": "Replacement of Latin liturgical language with local vernaculars, eliminating universal liturgical intelligibility",
+      "primary_observable": "Percentage of Masses celebrated in Latin vs vernacular languages; rubrical changes in Novus Ordo Missae (1970)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "national_episcopates",
+      "victim": "liturgical_traditionalists",
+      "downstream_of": [],
+      "feeds_into": [
+        "ecumenical_boundary_shift",
+        "interpretive_authority_concentration"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest epsilon independent shift; most publicly visible Vatican II change; feeds into downstream authority concentration"
+    },
+    {
+      "claim_id": "ecumenical_boundary_shift",
+      "human_readable": "Ecumenical Boundary Shift (Salvific Exclusivity Relaxation)",
+      "structural_delta": "Reinterpretation of extra ecclesiam nulla salus from absolute exclusivity to subsistit in (Church of Christ subsists in Catholic Church but not exclusively identified with it)",
+      "primary_observable": "Doctrinal statements on Protestant/Orthodox ecclesial status; interreligious dialogue institutionalization",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ecumenical_movement_advocates",
+      "victim": "exclusivist_salvation_theology",
+      "downstream_of": [
+        "liturgical_vernacularization"
+      ],
+      "feeds_into": [
+        "interpretive_authority_concentration"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core doctrinal shift distinct from liturgical change; highest centrality score; synthesis node for theological implications"
+    },
+    {
+      "claim_id": "interpretive_authority_concentration",
+      "human_readable": "Interpretive Authority Concentration (Magisterium as Sole Legitimate Reader)",
+      "structural_delta": "Post-conciliar concentration of interpretive authority in papal/curial apparatus to enforce 'hermeneutic of continuity' against traditionalist rupture claims",
+      "primary_observable": "Excommunications/suppressions of traditionalist groups (SSPX 1988); papal statements asserting continuity (Benedict XVI 2005 address)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "post_conciliar_magisterium",
+      "victim": "interpretive_pluralism",
+      "downstream_of": [
+        "liturgical_vernacularization",
+        "ecumenical_boundary_shift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis capturing authority dynamics; snare hypothesis captures coercive interpretive closure"
+    },
+    {
+      "claim_id": "religious_freedom_innovation",
+      "human_readable": "Religious Freedom Innovation (Dignitatis Humanae Shift)",
+      "structural_delta": "Doctrinal innovation affirming religious freedom as natural right vs prior teaching condemning religious indifferentism and error having no rights",
+      "primary_observable": "Dignitatis Humanae text vs Syllabus of Errors (1864) and Mirari Vos (1832); theological debate on discontinuity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "liberal_catholicism",
+      "victim": "integralist_political_theology",
+      "downstream_of": [],
+      "feeds_into": [
+        "interpretive_authority_concentration"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: similar structural position to ecumenical_boundary_shift but lower epsilon; captured indirectly via ecumenical axis and authority concentration"
+    },
+    {
+      "claim_id": "episcopal_collegiality_introduction",
+      "human_readable": "Episcopal Collegiality Introduction (Power-Sharing with Bishops)",
+      "structural_delta": "Doctrinal affirmation of episcopal college sharing supreme authority with pope (Lumen Gentium 22) vs prior papal supremacy emphasis",
+      "primary_observable": "Synod of Bishops institutionalization (1965); national episcopal conferences' legislative authority",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "interpretive_authority_concentration"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: rope-level coordination change; lower epsilon than selected axes; institutional rather than doctrinal"
+    },
+    {
+      "claim_id": "ressourcement_method_shift",
+      "human_readable": "Ressourcement Method Shift (Patristic/Biblical vs Scholastic Theology)",
+      "structural_delta": "Methodological shift from neo-scholastic manualist theology to patristic/biblical ressourcement approach",
+      "primary_observable": "Dei Verbum emphasis on Scripture; decline of Thomistic metaphysics in seminary curricula post-1965",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "ecumenical_boundary_shift",
+        "liturgical_vernacularization"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological piton; feeds into substantive changes but lower independent yield; captured via downstream axes"
+    }
+  ],
+  "generation_sequence": [
+    "liturgical_vernacularization",
+    "ecumenical_boundary_shift",
+    "interpretive_authority_concentration"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "religious_freedom_innovation",
+      "structural_delta": "Religious freedom as natural right vs prior condemnation of error having no rights",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Similar structural position to ecumenical_boundary_shift; lower epsilon; captured indirectly via selected axes"
+    },
+    {
+      "claim_id": "episcopal_collegiality_introduction",
+      "structural_delta": "Episcopal college sharing supreme authority with pope",
+      "hypothesis": "rope",
+      "deferral_reason": "Lower epsilon coordination change; institutional rather than doctrinal; feeds into authority concentration axis"
+    },
+    {
+      "claim_id": "ressourcement_method_shift",
+      "structural_delta": "Methodological shift from scholastic to patristic/biblical theology",
+      "hypothesis": "piton",
+      "deferral_reason": "Methodological substrate; lower independent yield; captured via downstream doctrinal shifts"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_composite_vs_unified",
+      "description": "Is Vatican II genuinely overdetermined (4-6 independent shifts bundled by institutional co-occurrence) or a unified reinterpretation? If composite, each shift could have happened without the others. If unified, they are structurally entangled. Current decomposition treats as composite; essay must examine whether structural dependencies actually exist.",
+      "source": "Kernel collapse analysis + §1.3-K composite test"
+    },
+    {
+      "id": "omega_continuity_rupture_asymmetry",
+      "description": "Official 'hermeneutic of continuity' vs traditionalist 'rupture' thesis may both be correct depending on which axis: liturgical vernacularization is clear rupture (Latin to vernacular is non-reversible structural shift), while ecumenical boundary shift can be framed as development. Asymmetry across axes complicates unified narrative.",
+      "source": "Cross-axis epsilon variance + interpretive authority concentration snare"
+    },
+    {
+      "id": "omega_authority_concentration_mechanism",
+      "description": "Did interpretive authority concentration occur because Vatican II was genuinely ambiguous (requiring magisterial clarification) or because post-conciliar leadership needed to suppress traditionalist dissent? If the latter, interpretive_authority_concentration may be a snare masquerading as rope (coordination necessity claimed to justify extraction).",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + snare hypothesis for axis 3"
+    },
+    {
+      "id": "omega_non_break_composite_validity",
+      "description": "If Vatican II is a NON-BREAK composite (multiple shifts bundled without structural necessity), does the 'council' label itself become a piton—atrophied category obscuring independent dynamics? Treating it as unified event may be historiographic artifact rather than structural reality.",
+      "source": "§1.3-K composite test + absence of formal bundling mechanism in extraction"
+    },
+    {
+      "id": "omega_episcopal_collegiality_underestimation",
+      "description": "Deferred axis episcopal_collegiality_introduction may be structurally upstream to authority concentration rather than downstream. If collegiality was introduced to diffuse papal authority but then reabsorbed via interpretive control, the causal arrow reverses. Requires generation to test.",
+      "source": "Deferred axis with uncertain causal position + §3.1 pairwise test ambiguity"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Vatican II historical theology and magisterial interpretation exceed model's competence in doctrinal development criteria and patristic/scholastic method distinctions. Religious_freedom_innovation axis deferred partly due to insufficient expertise in pre-conciliar papal teaching continuity. Generated omega_continuity_rupture_asymmetry and omega_authority_concentration_mechanism to bound this uncertainty. Recommend human review of doctrinal classifications."
+  },
+  "_seed_id": "vatican_ii_composite"
+}

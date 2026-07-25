@@ -1,0 +1,186 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional History / Legal Philosophy / Political Theory",
+  "family_id": "magna_carta_sovereignty_limits",
+  "topic_summary": "Analysis of Magna Carta (1215) as a contested kernel in constitutional thought, examining whether it functions as a living source of due process and lawful restraint on sovereignty, or as a historically bounded feudal bargain superseded by absolute sovereignty doctrine. The kernel question centers on whether rulers inherit binding constraints from foundational charters or whether sovereignty requires discretionary supremacy.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Magna Carta 1215 (charter text stabilizing baronial liberties against King John)",
+      "English Crown (royal authority; interpretive target of constraint)",
+      "Baronage (original beneficiary class; later expanded to 'free men')",
+      "Common Law tradition (evolutionary interpretive mechanism)",
+      "Parliamentary sovereignty doctrine (competing authority structure post-1688)",
+      "Due process tradition (juridical lineage claiming Magna Carta ancestry)"
+    ],
+    "key_tensions": [
+      "Charter fixity vs evolutionary interpretation (static text vs living constitutionalism)",
+      "Restraint inheritance vs sovereignty supremacy (binding precedent vs executive discretion)"
+    ],
+    "key_mechanisms": [
+      "Juridical invocation (judges cite Magna Carta as precedent for restraint)",
+      "Parliamentary entrenchment (statutes claiming Magna Carta lineage as superior law)",
+      "Executive nullification (royal prerogative or parliamentary sovereignty declaring charter obsolete)"
+    ],
+    "key_absences": [
+      "Popular sovereignty grounding (charter is baronial compact, not democratic mandate)",
+      "Non-English constitutional systems (analysis assumes common law inheritance; civil law traditions absent)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Magna Carta (1215) as a stabilized charter text claiming to bind royal authority through enumerated liberties and due process protections",
+    "authority_description": "Interpretive legitimacy contested between juridical tradition (courts invoking charter precedent), parliamentary sovereignty (statute law claiming charter inheritance), and executive prerogative (Crown discretion superseding charter limits)",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "magna_carta_constraint_authority",
+    "readings": [
+      {
+        "reading_id": "living_constitutionalism_reading",
+        "commitment": "Magna Carta establishes inherited due process and lawful restraint that binds all subsequent rulers through juridical precedent and evolutionary interpretation",
+        "authority_grounding": "Common law tradition; judicial interpretation as continuous inheritance; Coke's 17th century revival; American constitutional borrowing",
+        "sibling_readings": [
+          "feudal_obsolescence_reading",
+          "parliamentary_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Royal prerogative and executive discretion enter victim set; subjects gain due process shield; constraint type is rope (coordination around inherited restraint) with low-to-moderate extractiveness"
+      },
+      {
+        "reading_id": "feudal_obsolescence_reading",
+        "commitment": "Magna Carta was a baronial compact addressing 13th century feudal grievances with no binding authority over modern sovereignty structures",
+        "authority_grounding": "Historical positivism; state sovereignty doctrine (Bodin, Hobbes); executive prerogative tradition; parliamentary supremacy post-1688",
+        "sibling_readings": [
+          "living_constitutionalism_reading",
+          "parliamentary_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Popular constitutionalism and juridical restraint enter victim set; executive discretion maximized; constraint type is piton (atrophied restraint) or snare (obsolescence claimed to enable extraction) with moderate-to-high extractiveness"
+      },
+      {
+        "reading_id": "parliamentary_sovereignty_reading",
+        "commitment": "Magna Carta's restraints survive only as absorbed into parliamentary statute law; Parliament inherits constraint authority but can revise or repeal any charter provision",
+        "authority_grounding": "Westminster sovereignty doctrine; Blackstone's Commentaries; constitutional settlement of 1688-1689; statute law supremacy",
+        "sibling_readings": [
+          "living_constitutionalism_reading",
+          "feudal_obsolescence_reading"
+        ],
+        "expected_structural_delta": "Crown prerogative constrained but popular will mediated through Parliament; victim set includes minorities unprotected by majoritarian legislation; constraint type is tangled_rope (restraint exists but controlled by legislature with revisionary power) with moderate extractiveness"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "living_constitutionalism_reading",
+        "reading_b": "feudal_obsolescence_reading",
+        "basis": "Living constitutionalism requires that foundational charters create binding precedent across temporal distance; feudal obsolescence requires that sovereignty cannot be bound by prior compacts. No single framework can hold both: either Magna Carta binds or it does not."
+      },
+      {
+        "reading_a": "living_constitutionalism_reading",
+        "reading_b": "parliamentary_sovereignty_reading",
+        "basis": "Living constitutionalism posits inherited restraint superior to legislative revision; parliamentary sovereignty posits no law superior to Parliament. A framework holding both must either subordinate Parliament to charter (rejecting sovereignty) or subordinate charter to Parliament (rejecting binding inheritance)."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "living_constitutionalism_reading",
+      "human_readable": "Living Constitutionalism (Inherited Due Process Restraint)",
+      "structural_delta": "Magna Carta creates binding precedent for due process and lawful restraint on executive power that survives through juridical interpretation across centuries",
+      "primary_observable": "Frequency of judicial citation of Magna Carta in restraint-of-power cases; constitutional borrowing in Anglophone legal systems (e.g., Fifth Amendment due process clause)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "juridical_tradition_subjects",
+      "victim": "royal_prerogative_executive_discretion",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest structural coherence as inherited restraint reading; captures juridical lineage and due process tradition"
+    },
+    {
+      "claim_id": "feudal_obsolescence_reading",
+      "human_readable": "Feudal Obsolescence (Historical Positivism & Sovereignty Supremacy)",
+      "structural_delta": "Magna Carta is a 13th century feudal compact with no binding authority over modern sovereignty; executive discretion supersedes obsolete charter restraints",
+      "primary_observable": "Legal doctrine asserting parliamentary or executive supremacy over charter precedent; frequency of prerogative invocation overriding putative Magna Carta protections",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "executive_prerogative_state_sovereignty",
+      "victim": "popular_constitutionalism_juridical_restraint",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiomatically contradictory to living constitutionalism; captures state sovereignty and executive discretion maximization"
+    },
+    {
+      "claim_id": "parliamentary_sovereignty_reading",
+      "human_readable": "Parliamentary Sovereignty (Mediated Restraint via Statute Law)",
+      "structural_delta": "Magna Carta's restraints survive as absorbed into parliamentary statute law but remain subject to legislative revision or repeal",
+      "primary_observable": "Westminster sovereignty doctrine in constitutional practice; frequency of statutory entrenchment vs repeal of charter-derived protections",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "parliamentary_majority_legislative_discretion",
+      "victim": "minorities_unprotected_by_statute",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position mediating between inherited restraint and sovereignty supremacy; captures Westminster model complexity"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "living_constitutionalism_reading",
+      "kernel_id": "magna_carta_constraint_authority",
+      "reading_id": "living_constitutionalism_reading"
+    },
+    {
+      "claim_id": "feudal_obsolescence_reading",
+      "kernel_id": "magna_carta_constraint_authority",
+      "reading_id": "feudal_obsolescence_reading"
+    },
+    {
+      "claim_id": "parliamentary_sovereignty_reading",
+      "kernel_id": "magna_carta_constraint_authority",
+      "reading_id": "parliamentary_sovereignty_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_american_exceptionalism",
+      "description": "Does U.S. constitutionalism inherit Magna Carta restraints via common law or invent them through Enlightenment social contract theory? If the former, living constitutionalism reading gains global constraint reach; if the latter, feudal obsolescence reading may be correct for England while restraint survives in America through different grounding.",
+      "source": "Absence Inventory (extraction noted non-English systems absent)"
+    },
+    {
+      "id": "omega_civil_law_absence",
+      "description": "Analysis assumes common law inheritance as the only constitutional lineage. Civil law traditions (Roman law, Napoleonic codes) have no Magna Carta kernel but may have functional equivalents (e.g., French Déclaration). Does restraint-on-sovereignty require charter inheritance or can it emerge from different authority structures?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_judicial_independence",
+      "description": "Living constitutionalism reading depends on judicial independence to interpret and enforce charter restraints. If courts lack independence (captured by executive or legislature), does the reading collapse into feudal obsolescence? Constraint effectiveness may depend on institutional enforcement capacity not captured in kernel recognition.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan — who benefits from interpretive authority?)"
+    },
+    {
+      "id": "omega_popular_sovereignty_grounding",
+      "description": "Extraction identified absence of popular sovereignty grounding (Magna Carta is baronial compact). Does modern restraint-on-sovereignty require democratic mandate, or can it survive through juridical inheritance alone? If democratic grounding is necessary, all three readings may misidentify the constraint source.",
+      "source": "Absence Inventory (key_absences field)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings identified with clear axiom contradictions. All readings selected for generation due to structural independence and axiom incompatibility. Parliamentary sovereignty reading included as mediating position despite partial overlap with feudal obsolescence on revisability question."
+  },
+  "_seed_id": "magna_carta_1215"
+}

@@ -1,0 +1,257 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Ideology Studies / Economic History",
+  "family_id": "market_naturalization_2026",
+  "topic_summary": "Analysis of how 'the free market as natural default' became culturally embedded, examining whether this naturalization results from lapsed alternatives (historical forgetting) or beneficiary-maintained closure (incumbent defense). The research context reveals a century-long PR campaign, regulatory cycles of constraint and dismantling, and post-hoc rationalization protecting market fundamentalism from empirical falsification.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Market fundamentalism ideology (laissez-faire belief system)",
+      "Glass-Steagall Act (regulatory constraint, repealed 1999)",
+      "Cold War ideological architects (government-to-market converts)",
+      "Corporate-religious alliance (embedding capitalism in Christianity)",
+      "Reagan-Thatcher deregulation coalition",
+      "Climate change denial apparatus (market fundamentalism defense)"
+    ],
+    "key_tensions": [
+      "Regulatory constraint (1930s-1980s) vs deregulation (1980s-present)",
+      "Market-as-natural vs market-as-ideologically-constructed",
+      "Empirical falsification (2008 crisis, climate) vs defensive rationalization"
+    ],
+    "key_mechanisms": [
+      "Century-long PR campaign naturalizing markets",
+      "Boom-bust-reregulation-deregulation cycle",
+      "Post-hoc rationalization protecting worldview from evidence",
+      "Corporate profit channeling to ideological infrastructure"
+    ],
+    "key_absences": [
+      "Mechanism by which alternatives are forgotten vs actively suppressed",
+      "Distinction between sincere belief and cynical defense among beneficiaries"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The market is the natural/default organizing principle for economic life",
+    "authority_description": "Economic expertise, historical precedent claims, freedom-preservation arguments",
+    "drift_status": "partial",
+    "candidate_pattern": "naturalization_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "market_as_natural_default",
+    "readings": [
+      {
+        "reading_id": "lapsed_alternative_reading",
+        "commitment": "Market dominance results from historical forgetting of alternatives, not active closure",
+        "authority_grounding": "Historical contingency; path dependency; genuine epistemic loss",
+        "sibling_readings": [
+          "beneficiary_maintained_reading",
+          "hybrid_amnesia_reading"
+        ],
+        "expected_structural_delta": "No identifiable beneficiary class; naturalization is D3 artifact of lapsed memory; alternatives could be recovered through historical research; low extractiveness (ε ≤ 0.15)"
+      },
+      {
+        "reading_id": "beneficiary_maintained_reading",
+        "commitment": "Market naturalization is actively defended post-hoc by incumbent beneficiaries",
+        "authority_grounding": "Cui bono analysis; PR campaign evidence; institutional capture patterns",
+        "sibling_readings": [
+          "lapsed_alternative_reading",
+          "hybrid_amnesia_reading"
+        ],
+        "expected_structural_delta": "Identifiable beneficiary class (finance, corporate); naturalization is engineered closure via PR/institutional capture; alternatives are suppressed not forgotten; moderate-to-high extractiveness (ε 0.35-0.55)"
+      },
+      {
+        "reading_id": "hybrid_amnesia_reading",
+        "commitment": "Initial lapsed closure creates conditions for beneficiary capture; amnesia enables extraction",
+        "authority_grounding": "Historical sequence analysis; ratchet mechanisms; opportunistic capture",
+        "sibling_readings": [
+          "lapsed_alternative_reading",
+          "beneficiary_maintained_reading"
+        ],
+        "expected_structural_delta": "Two-stage process: genuine forgetting (1930s-1970s) followed by defensive rationalization (1980s-present); beneficiaries inherit and weaponize pre-existing amnesia; extractiveness increases over time (ε 0.20 → 0.45)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "lapsed_alternative_reading",
+        "reading_b": "beneficiary_maintained_reading",
+        "basis": "Lapsed reading requires no intentional agent maintaining closure (pure historical accident); beneficiary reading requires intentional defense by identifiable actors. No framework can hold both 'purely accidental forgetting' and 'actively maintained suppression' as the primary mechanism simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "lapsed_alternative_reading",
+      "human_readable": "Lapsed Alternative Naturalization (Historical Forgetting)",
+      "structural_delta": "Market naturalization as D3 artifact of genuine epistemic loss, not engineered closure",
+      "primary_observable": "Absence of identifiable PR infrastructure pre-1970s; recovery of alternatives via archival research; no beneficiary class defending the forgetting itself",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading in kernel decomposition; establishes null hypothesis (no engineered closure)"
+    },
+    {
+      "claim_id": "beneficiary_maintained_reading",
+      "human_readable": "Beneficiary-Maintained Naturalization (Incumbent Defense)",
+      "structural_delta": "Market naturalization as post-hoc rationalization defended by identifiable beneficiaries",
+      "primary_observable": "Century-long PR campaign infrastructure; corporate profit channeling to ideological apparatus; post-hoc rationalization patterns (climate denial, crisis denial)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "finance_corporate_incumbents",
+      "victim": "regulatory_state_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading in kernel decomposition; establishes engineered-closure hypothesis with identifiable beneficiaries"
+    },
+    {
+      "claim_id": "hybrid_amnesia_reading",
+      "human_readable": "Hybrid Amnesia (Lapsed-Then-Captured)",
+      "structural_delta": "Two-stage process: genuine forgetting creates vulnerability, then beneficiaries weaponize pre-existing amnesia",
+      "primary_observable": "Historical sequence: Glass-Steagall era (lapsed alternatives) → Reagan-Thatcher (beneficiary capture); ratchet mechanisms preventing re-regulation",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "finance_corporate_opportunists",
+      "victim": "regulatory_state_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading in kernel decomposition; synthesis position capturing temporal dynamics"
+    },
+    {
+      "claim_id": "boom_bust_regulatory_cycle",
+      "human_readable": "Boom-Bust Regulatory Cycle (Constraint-Dismantling Pattern)",
+      "structural_delta": "Recurring pattern: crisis → regulation → prosperity → deregulation → crisis",
+      "primary_observable": "Glass-Steagall (1933) → repeal (1999) → 2008 crisis; frequency of regulatory constraint vs dismantling",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "beneficiary_maintained_reading",
+        "hybrid_amnesia_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as temporal mechanism within hybrid_amnesia_reading; not structurally independent"
+    },
+    {
+      "claim_id": "corporate_religious_alliance",
+      "human_readable": "Corporate-Religious Alliance (Embedding Capitalism in Christianity)",
+      "structural_delta": "Ideological infrastructure embedding market fundamentalism into religious practice",
+      "primary_observable": "Frequency of pro-market messaging in sermons; corporate funding of religious institutions; theological market naturalization",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "corporate_donors",
+      "victim": "congregants_economic_interests",
+      "downstream_of": [],
+      "feeds_into": [
+        "beneficiary_maintained_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: specific mechanism of beneficiary_maintained_reading; not independent axis"
+    },
+    {
+      "claim_id": "falsification_resistance",
+      "human_readable": "Falsification Resistance (Climate Denial as Market Defense)",
+      "structural_delta": "Post-hoc rationalization protecting market fundamentalism from empirical falsification",
+      "primary_observable": "Climate denial prevalence among market fundamentalists; 2008 crisis rationalization patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "fossil_fuel_finance_incumbents",
+      "victim": "climate_stability",
+      "downstream_of": [
+        "beneficiary_maintained_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of beneficiary_maintained_reading; evidence of mechanism not independent constraint"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "lapsed_alternative_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "lapsed_alternative_reading"
+    },
+    {
+      "claim_id": "beneficiary_maintained_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "beneficiary_maintained_reading"
+    },
+    {
+      "claim_id": "hybrid_amnesia_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "hybrid_amnesia_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "boom_bust_regulatory_cycle",
+      "structural_delta": "Recurring crisis-regulation-deregulation pattern",
+      "hypothesis": "rope",
+      "deferral_reason": "Temporal mechanism captured within hybrid_amnesia_reading; not structurally independent"
+    },
+    {
+      "claim_id": "corporate_religious_alliance",
+      "structural_delta": "Embedding market fundamentalism into religious practice",
+      "hypothesis": "snare",
+      "deferral_reason": "Specific implementation mechanism of beneficiary_maintained_reading; not independent axis"
+    },
+    {
+      "claim_id": "falsification_resistance",
+      "structural_delta": "Post-hoc rationalization protecting worldview from evidence",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of beneficiary_maintained_reading; evidence of mechanism not independent constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_sincere_vs_cynical",
+      "description": "Are beneficiary defenders sincere believers or cynical extractors? Hybrid reading allows both: early adopters sincere, later defenders cynical. Extractiveness estimate depends on this ratio.",
+      "source": "Absence Inventory (§1.1) + beneficiary_maintained_reading classification"
+    },
+    {
+      "id": "omega_recovery_feasibility",
+      "description": "If lapsed_alternative_reading is correct, can alternatives be recovered through historical research alone, or has the infrastructure atrophied beyond recovery? Mountain vs Piton distinction.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + lapsed_alternative_reading"
+    },
+    {
+      "id": "omega_ratchet_mechanism",
+      "description": "What prevents re-regulation after crises in the hybrid model? Is it beneficiary power, genuine belief, or institutional path dependency? Affects extractiveness trajectory.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + hybrid_amnesia_reading"
+    },
+    {
+      "id": "omega_kernel_stability",
+      "description": "Is 'market as natural default' itself stable, or does climate crisis/2008 fracture the kernel? If fracturing, readings may collapse into post-market alternatives.",
+      "source": "Fracture Scan (F03) + commitment system drift status"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: lapsed_alternative_reading classified as mountain (no beneficiary) but research context shows PR campaign infrastructure, suggesting beneficiary presence. Generated omega_recovery_feasibility and omega_kernel_stability to bound this uncertainty. Kernel decomposition allows both readings to coexist as contested interpretations."
+  },
+  "_seed_id": "free_market_naturalization"
+}

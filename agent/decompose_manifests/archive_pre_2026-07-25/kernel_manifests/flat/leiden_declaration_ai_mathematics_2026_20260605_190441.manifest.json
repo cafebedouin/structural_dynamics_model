@@ -1,0 +1,247 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Science Policy / Professional Ethics / Technology Governance",
+  "family_id": "leiden_declaration_ai_mathematics_2026",
+  "topic_summary": "The Leiden Declaration on Artificial Intelligence and Mathematics (June 2026) is a policy statement by 16 mathematicians addressing how AI technologies threaten core values of mathematical practice: proof integrity, attribution, research autonomy, proper evaluation, and ethical responsibility. It provides recommendations for individuals, institutions, funders, and industry to preserve mathematical values while engaging with AI tools.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Leiden Declaration working group (16 mathematicians from 15 universities, convened September 2025)",
+      "International Mathematical Union (IMU) (endorsing organization)",
+      "Technology companies (Google DeepMind, OpenAI, Axiom, Math Inc.) (AI developers using mathematics for training/publicity)",
+      "Mathematical community (130+ signatories at publication, including Fields medalist Peter Scholze)",
+      "Academic publishers and journals (gatekeepers of peer review)",
+      "National Science Foundation ICARM (U.S. institute supporting AI adoption in mathematics)",
+      "Formal proof verification systems (AlphaProof, Gauss, agentic systems)",
+      "Mathematical commons (published papers, formal libraries used as training data)"
+    ],
+    "key_tensions": [
+      "Proof integrity vs AI plausibility (correct proofs vs unreliable but plausible AI-generated arguments)",
+      "Research autonomy vs commercial priorities (expert-driven significance vs AI-amenable problems)",
+      "Attribution norms vs training data practices (proper citation vs unlicensed corpus scraping)",
+      "Peer review timelines vs market publicity (community evaluation vs press release announcements)"
+    ],
+    "key_mechanisms": [
+      "Peer review system (journals, proceedings, books as validation mechanism)",
+      "Attribution system (credit to human authors, responsibility for correctness)",
+      "Training data extraction (systematic use of published mathematics without consent for model training)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for disclosure requirements (declaration provides recommendations but no binding compliance structure)",
+      "Quantitative threshold for what constitutes 'significant' AI use requiring disclosure"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "proof_verification_crisis",
+      "human_readable": "Proof Verification Crisis (AI Plausibility vs Mathematical Certainty)",
+      "structural_delta": "AI systems generate plausible but unreliable arguments indistinguishable from correct proofs without formal verification",
+      "primary_observable": "Rate of retracted AI-assisted proofs; proportion of submissions requiring formal verification; reviewer time per paper",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "review_system_collapse",
+        "attribution_erosion"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational mountain: epistemic integrity is the substrate on which all other mathematical values depend"
+    },
+    {
+      "claim_id": "attribution_erosion",
+      "human_readable": "Attribution Erosion (Training Data Extraction vs Citation Norms)",
+      "structural_delta": "AI models trained on mathematical commons return outputs without proper citation, violating attribution norms",
+      "primary_observable": "Proportion of AI-generated outputs with complete citations; copyright violation complaints; licensing opt-out rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ai_developers",
+      "victim": "mathematical_authors",
+      "downstream_of": [
+        "proof_verification_crisis"
+      ],
+      "feeds_into": [
+        "research_autonomy_capture"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Tangled_rope with highest centrality: extraction mechanism that benefits AI developers while undermining merit-based credit system"
+    },
+    {
+      "claim_id": "review_system_collapse",
+      "human_readable": "Review System Collapse (Peer Review vs Press Release Publicity)",
+      "structural_delta": "Results announced via press releases on market timelines before peer review can occur",
+      "primary_observable": "Time lag between press release and peer-reviewed publication; proportion of announced results never published; reviewer burden metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "commercial_ai_companies",
+      "victim": "peer_review_integrity",
+      "downstream_of": [
+        "proof_verification_crisis"
+      ],
+      "feeds_into": [
+        "research_autonomy_capture"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Snare mechanism: commercial publicity timelines trap mathematics in evaluation bypass loop"
+    },
+    {
+      "claim_id": "research_autonomy_capture",
+      "human_readable": "Research Autonomy Capture (Expert Judgment vs AI-Amenable Problems)",
+      "structural_delta": "Research priorities shift from expert-judged significance to problems amenable to automated methods",
+      "primary_observable": "Funding allocation to AI-amenable vs expert-prioritized problems; hiring criteria emphasizing AI tool use; problem selection in major journals",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "technology_companies",
+      "victim": "autonomous_mathematical_research",
+      "downstream_of": [
+        "attribution_erosion",
+        "review_system_collapse",
+        "asymmetric_collaboration_terms"
+      ],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Downstream synthesis node with highest centrality: captures the cumulative effect of multiple extraction mechanisms on disciplinary autonomy"
+    },
+    {
+      "claim_id": "asymmetric_collaboration_terms",
+      "human_readable": "Asymmetric Collaboration Terms (Industry Resources vs Academic Bargaining Power)",
+      "structural_delta": "Mathematicians collaborate with industry under asymmetric terms due to resource disparities and precarious academic employment",
+      "primary_observable": "Proportion of industry collaborations with IP restrictions; academic salary stagnation vs industry offers; access to computational resources",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "research_autonomy_capture"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Structural rope enabling autonomy capture: resource asymmetry creates coordination problem independent of other axes"
+    },
+    {
+      "claim_id": "dual_use_complicity",
+      "human_readable": "Dual-Use Complicity (Mathematical Reasoning Training vs Harmful Applications)",
+      "structural_delta": "Mathematical theorem proving used to train general-purpose AI deployed in warfare, surveillance, and democracy-undermining applications",
+      "primary_observable": "Proportion of math-trained models deployed in military/surveillance contracts; mathematician participation in dual-use projects; ethical review adoption rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Piton of atrophied ethical oversight: mathematicians historically treated their work as value-neutral, now face complicity in harmful applications"
+    },
+    {
+      "claim_id": "formalization_translation_gap",
+      "human_readable": "Formalization Translation Gap (Computer-Encoded vs Human Presentation)",
+      "structural_delta": "Difficulty in translating between formal proof encodings and human-readable mathematical concepts",
+      "primary_observable": "Error rate in human-to-formal translations; proportion of formalized proofs requiring human verification; translation time per proof",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "proof_verification_crisis"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as component of proof_verification_crisis mountain; translation gap is mechanism within broader verification challenge"
+    },
+    {
+      "claim_id": "early_career_disproportionate_impact",
+      "human_readable": "Early-Career Disproportionate Impact (Established vs Emerging Researchers)",
+      "structural_delta": "AI disruptions disproportionately affect students and early-career mathematicians who lack established reputations",
+      "primary_observable": "Hiring rates for early-career mathematicians; PhD completion rates; career trajectory changes post-AI adoption",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "early_career_mathematicians",
+      "downstream_of": [
+        "research_autonomy_capture"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: distributional consequence of research_autonomy_capture rather than independent structural axis"
+    }
+  ],
+  "generation_sequence": [
+    "proof_verification_crisis",
+    "attribution_erosion",
+    "review_system_collapse",
+    "asymmetric_collaboration_terms",
+    "research_autonomy_capture",
+    "dual_use_complicity"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "formalization_translation_gap",
+      "structural_delta": "Difficulty translating between formal encodings and human presentations",
+      "hypothesis": "mountain",
+      "deferral_reason": "Captured as mechanism within proof_verification_crisis; not structurally independent"
+    },
+    {
+      "claim_id": "early_career_disproportionate_impact",
+      "structural_delta": "AI disruptions disproportionately affect early-career mathematicians",
+      "hypothesis": "snare",
+      "deferral_reason": "Distributional consequence of research_autonomy_capture rather than independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_mechanism",
+      "description": "Declaration provides recommendations but no binding enforcement. Are disclosure requirements Rope (voluntary coordination) or Scaffold (aspirational without teeth)? Effectiveness depends on professional organization adoption.",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_threshold_ambiguity",
+      "description": "What constitutes 'significant' AI use requiring disclosure? Declaration leaves threshold undefined. Without operational definition, compliance becomes subjective and unverifiable.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_mountain_reclassification",
+      "description": "Is proof_verification_crisis a true Mountain (inherent epistemic limits of AI) or Piton (current technical limitations)? Future formal verification advances may reclassify.",
+      "source": "F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_complicity_threshold",
+      "description": "At what point does mathematical contribution to general AI training constitute complicity in harmful applications? Declaration asserts responsibility but provides no decision procedure.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_public_infrastructure_viability",
+      "description": "Declaration recommends public computational infrastructure as alternative to proprietary systems. Is this Rope (coordination solution) or Scaffold (underfunded aspiration)? Depends on government funding commitment.",
+      "source": "Deferred axis early_career_disproportionate_impact + policy recommendations"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: proof_verification_crisis classified as mountain (inherent epistemic limits) but may be piton (current technical state). Future advances in formal verification could reclassify. Generated omega_mountain_reclassification to bound this uncertainty."
+  }
+}

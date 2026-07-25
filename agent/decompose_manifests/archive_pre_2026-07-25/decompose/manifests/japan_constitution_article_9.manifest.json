@@ -1,0 +1,247 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Security Policy / Institutional Legitimacy",
+  "family_id": "article_9_interpretation",
+  "topic_summary": "Analysis of Article 9 of the Japanese Constitution (1947), which renounces war and prohibits maintenance of war potential. The article has generated two fundamental interpretive traditions: strict pacifism treating the text as categorical prohibition, versus reinterpretation permitting Self-Defense Forces and limited collective self-defense through executive reading of inherent self-defense rights.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Article 9 text (constitutional provision: war renunciation, prohibition on 'land, sea, and air forces, as well as other war potential')",
+      "Self-Defense Forces (SDF: actual military organization with ~250k personnel, established 1954)",
+      "Japanese Cabinet Legal Bureau (interpretive authority body, issued 2014 collective self-defense reinterpretation)",
+      "Supreme Court of Japan (constitutional review authority, has avoided direct Article 9 rulings via political question doctrine)",
+      "U.S.-Japan Security Treaty structure (external security guarantee creating interpretive pressure)",
+      "Postwar settlement architecture (1947 constitutional imposition context under occupation)"
+    ],
+    "key_tensions": [
+      "Textual prohibition ('never be maintained') vs operational reality (SDF as world's 8th largest military by expenditure)",
+      "Amendment-as-legitimation (Article 96 formal revision process) vs interpretation-as-legitimation (cabinet decisions bypassing amendment)"
+    ],
+    "key_claims": [
+      "Plain text reading: 'will never be maintained' bars any armed forces (strict pacifist position)",
+      "Inherent right doctrine: sovereign states retain self-defense capacity regardless of constitutional text (reinterpretation position)",
+      "2014 Cabinet Decision: collective self-defense permissible when Japan's survival threatened (Abe administration reinterpretation)",
+      "Sunagawa precedent (1959): Supreme Court defers to cabinet on security policy, establishing interpretive latitude"
+    ],
+    "key_mechanisms": [
+      "Cabinet Legal Bureau interpretation process: executive body issues binding constitutional readings without legislative vote",
+      "Political question doctrine: Supreme Court declines Article 9 cases, creating interpretive vacuum filled by executive",
+      "Security treaty obligation: U.S. alliance creates functional pressure for expanded SDF role independent of domestic constitutional consensus"
+    ],
+    "key_absences": [
+      "Formal amendment process: Article 9 never amended despite 70+ years of controversy, suggesting amendment threshold too high or reinterpretation sufficient",
+      "Judicial constitutional enforcement: Supreme Court has never invalidated SDF or security policy on Article 9 grounds, unlike active review in other domains"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_pacifist_reading",
+      "human_readable": "Strict Pacifist Reading (Categorical Force Prohibition)",
+      "structural_delta": "Text as absolute bar: 'never be maintained' forecloses any armed forces, including defensive ones; self-defense through non-military means or alliance dependence only",
+      "primary_observable": "Compliance measured by existence/non-existence of organized military forces; binary observable (forces exist = violation)",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": "domestic_pacifist_constituency",
+      "victim": "state_security_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents textual originalism grounding"
+    },
+    {
+      "claim_id": "inherent_right_reading",
+      "human_readable": "Inherent Right Reading (Self-Defense Exception)",
+      "structural_delta": "Sovereign right to self-defense survives textual renunciation; Article 9 bars 'war' (aggressive) but not 'self-defense forces' (defensive); SDF constitutionally permissible as minimum necessary force",
+      "primary_observable": "Compliance measured by proportionality: force levels, deployments, and missions stay within 'minimum necessary' for territorial defense",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "security_bureaucracy",
+      "victim": "textual_constraint_fidelity",
+      "downstream_of": [],
+      "feeds_into": [
+        "collective_self_defense_reading"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; dominant postwar interpretation enabling SDF existence"
+    },
+    {
+      "claim_id": "collective_self_defense_reading",
+      "human_readable": "Collective Self-Defense Reading (2014 Reinterpretation Expansion)",
+      "structural_delta": "2014 cabinet decision extends inherent right to collective self-defense when Japan's survival threatened; permits military action to defend allies (primarily U.S.) without direct attack on Japan",
+      "primary_observable": "Compliance measured by mission scope: overseas deployments, joint operations, 'survival-threatening' trigger interpretations",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "alliance_coordination_infrastructure",
+      "victim": "interpretive_constraint_stability",
+      "downstream_of": [
+        "inherent_right_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; represents interpretive drift endpoint and structural entanglement with alliance commitments"
+    },
+    {
+      "claim_id": "amendment_bypass_mechanism",
+      "human_readable": "Amendment Bypass (Interpretation as De Facto Revision)",
+      "structural_delta": "Cabinet reinterpretation substitutes for formal Article 96 amendment process; executive branch expands security capacity without legislative supermajority or referendum",
+      "primary_observable": "Procedural legitimacy gap: measure divergence between security policy outcomes and what Article 96 amendment process would produce",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "executive_security_apparatus",
+      "victim": "constitutional_amendment_process_integrity",
+      "downstream_of": [
+        "inherent_right_reading",
+        "collective_self_defense_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-constitutional process axis, captured as structural consequence in reading 3's tangled_rope dynamics"
+    },
+    {
+      "claim_id": "judicial_abdication",
+      "human_readable": "Judicial Abdication (Political Question Doctrine Vacuum)",
+      "structural_delta": "Supreme Court systematically declines Article 9 cases via political question doctrine, creating interpretive monopoly for executive branch",
+      "primary_observable": "Judicial review gap: count of Article 9 challenges reaching merits vs dismissed on justiciability grounds",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "executive_interpretive_authority",
+      "victim": "judicial_constitutional_review",
+      "downstream_of": [],
+      "feeds_into": [
+        "inherent_right_reading",
+        "collective_self_defense_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enables reinterpretation readings but not itself a reading of Article 9 text; meta-level institutional structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strict_pacifist_reading",
+      "kernel_id": "article_9_war_renunciation",
+      "reading_id": "strict_pacifist_reading"
+    },
+    {
+      "claim_id": "inherent_right_reading",
+      "kernel_id": "article_9_war_renunciation",
+      "reading_id": "inherent_right_reading"
+    },
+    {
+      "claim_id": "collective_self_defense_reading",
+      "kernel_id": "article_9_war_renunciation",
+      "reading_id": "collective_self_defense_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "amendment_bypass_mechanism",
+      "structural_delta": "Cabinet reinterpretation substitutes for Article 96 formal amendment",
+      "hypothesis": "snare",
+      "deferral_reason": "Meta-constitutional process axis; structural consequence emergent from reading 3 (collective self-defense) rather than independent reading of Article 9 text"
+    },
+    {
+      "claim_id": "judicial_abdication",
+      "structural_delta": "Supreme Court political question doctrine creates executive interpretive monopoly",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Institutional precondition enabling reinterpretation readings; not itself a reading of Article 9 kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_foreclosure",
+      "description": "Do the three selected readings exhaust the interpretive space, or does a fourth reading exist (e.g., 'Article 9 void ab initio as imposed under occupation')? If so, omission privileges postwar legitimacy frame.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + §1.3-K coherence check"
+    },
+    {
+      "id": "omega_constitutional_death",
+      "description": "At what interpretive distance does a 'reading' become a functional nullification? Is collective self-defense reading (reading 3) still within the constitutional domain or de facto amendment without process?",
+      "source": "§1.3-K independence test + F03 (Hasty Generalization risk on 'reading' classification)"
+    },
+    {
+      "id": "omega_beneficiary_reversal",
+      "description": "Strict pacifist reading lists 'neighboring states historically harmed' as beneficiaries, but does categorical disarmament actually serve their security interests in current geopolitical environment, or does it create power vacuum inviting instability?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + §2.2 classification gates"
+    },
+    {
+      "id": "omega_u_s_occupation_constraint",
+      "description": "Is Article 9 itself a piton of imposed postwar order rather than a mountain of Japanese constitutional choice? If so, all readings operate within a prior constraint (occupation-era imposition) not addressed in decomposition.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — postwar settlement context in extraction but not elevated to axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Strict pacifist reading classified as 'mountain' but classification depends on whether constitutional text under occupation conditions can be structural bedrock or is itself imposed constraint (piton). Generated omega_u_s_occupation_constraint to bound this uncertainty. Also: omega_constitutional_death flags risk that 'reading 3' label obscures functional nullification."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article 9 of 1947 Japanese Constitution: renounces war as sovereign right, states 'land, sea, and air forces, as well as other war potential, will never be maintained'",
+    "authority_description": "Interpretive authority contested: strict textualists ground in plain language and postwar settlement intent; reinterpretation camp grounds in Cabinet Legal Bureau precedent, executive security necessity, and Supreme Court's political question abstention creating interpretive vacuum",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "article_9_war_renunciation",
+    "readings": [
+      {
+        "reading_id": "strict_pacifist_reading",
+        "commitment": "Textual language 'never be maintained' is categorical prohibition on any armed forces, including defensive; war renunciation absolute",
+        "authority_grounding": "Plain language originalism + postwar settlement intent (1947 occupation-era constitutional imposition as binding constraint)",
+        "sibling_readings": [
+          "inherent_right_reading",
+          "collective_self_defense_reading"
+        ],
+        "expected_structural_delta": "Binary constraint: organized military forces categorically impermissible; self-defense achievable only through non-military means or alliance dependence; victim set includes state security autonomy"
+      },
+      {
+        "reading_id": "inherent_right_reading",
+        "commitment": "Sovereign states retain inherent right to self-defense; Article 9 renounces 'war' (aggressive action) but not minimum necessary defensive capacity",
+        "authority_grounding": "Cabinet Legal Bureau interpretation + international law doctrine of inherent self-defense + Supreme Court Sunagawa deference (1959)",
+        "sibling_readings": [
+          "strict_pacifist_reading",
+          "collective_self_defense_reading"
+        ],
+        "expected_structural_delta": "Proportionality constraint: military forces permissible if kept to 'minimum necessary' for territorial defense; SDF organizationally legitimate but scope-limited; textual constraint becomes a threshold rather than prohibition"
+      },
+      {
+        "reading_id": "collective_self_defense_reading",
+        "commitment": "Inherent right extends to collective self-defense when Japan's survival threatened; Article 9 permits military action to defend allies without direct attack on Japan",
+        "authority_grounding": "2014 Abe Cabinet Decision reinterpretation + alliance treaty obligations + security necessity doctrine",
+        "sibling_readings": [
+          "strict_pacifist_reading",
+          "inherent_right_reading"
+        ],
+        "expected_structural_delta": "Mission-scope expansion: overseas deployments and joint operations permissible under 'survival-threatening' trigger; interpretive constraint becomes elastic, absorbing incremental expansion; victim set includes those relying on narrower inherent-right reading's stability"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_pacifist_reading",
+        "reading_b": "inherent_right_reading",
+        "basis": "Strict pacifist reading holds that explicit textual prohibition ('never be maintained') controls and cannot be overridden by unenumerated doctrines; inherent right reading holds that foundational sovereign capacities survive textual silence or even explicit renunciation. No single framework accepts both axioms: either text is sovereign or inherent rights are."
+      },
+      {
+        "reading_a": "strict_pacifist_reading",
+        "reading_b": "collective_self_defense_reading",
+        "basis": "Same foundational contradiction as strict vs inherent-right, with additional layer: collective self-defense permits force absent direct attack on Japan, which strict reading treats as categorically outside 'self'-defense definition. One framework cannot hold both 'force only when Japan attacked' and 'force when ally attacked suffices.'"
+      }
+    ]
+  },
+  "_seed_id": "japan_constitution_article_9"
+}

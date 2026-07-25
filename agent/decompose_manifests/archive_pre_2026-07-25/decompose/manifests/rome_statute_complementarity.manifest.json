@@ -1,0 +1,210 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Criminal Justice / State Sovereignty",
+  "family_id": "icc_complementarity_principle",
+  "topic_summary": "Analysis of the International Criminal Court's complementarity principle (Rome Statute Article 17), examining the structural tension between national sovereignty over criminal justice and international oversight of mass atrocity crimes. The principle establishes ICC jurisdiction as complementary to national courts but permits ICC intervention when states are unwilling or unable to prosecute genuinely.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "International Criminal Court (supranational court with jurisdiction over genocide, crimes against humanity, war crimes, aggression)",
+      "State Parties to Rome Statute (signatories with treaty obligations but retained sovereignty claims)",
+      "National Courts (domestic judicial systems with primary jurisdiction under complementarity)",
+      "Office of the Prosecutor (ICC organ initiating investigations and assessing admissibility)",
+      "Victims of mass atrocity crimes (rights-holders under international humanitarian law)",
+      "Non-Party States (particularly USA, Russia, China - powerful states rejecting ICC jurisdiction)"
+    ],
+    "key_tensions": [
+      "State sovereignty vs international accountability (national courts as primary vs ICC as impunity guardian)",
+      "Procedural safeguards vs justice urgency (genuine investigation threshold vs timely intervention)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "national_primacy_reading",
+      "human_readable": "National Primacy Reading (Sovereignty-Grounded Complementarity)",
+      "structural_delta": "Complementarity as deference mechanism prioritizing domestic jurisdiction; ICC intervention exceptional and disfavored",
+      "primary_observable": "Frequency of inadmissibility rulings; prosecutorial discretion patterns favoring national proceedings",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "powerful_state_parties_and_national_judiciaries",
+      "victim": "victims_in_states_with_sham_proceedings",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of two contested readings; instantiates sovereignty-maximizing constraint structure"
+    },
+    {
+      "claim_id": "international_oversight_reading",
+      "human_readable": "International Oversight Reading (Accountability-Grounded Complementarity)",
+      "structural_delta": "Complementarity as intervention trigger when states fail victims; ICC as primary guarantor against impunity",
+      "primary_observable": "Frequency of proprio motu investigations; threshold for 'unwilling or unable' determination",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "victims_in_failed_or_complicit_states",
+      "victim": "states_facing_investigations_despite_domestic_proceedings",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second contested reading; instantiates victim-protection maximizing constraint structure"
+    },
+    {
+      "claim_id": "procedural_gatekeeping_mechanism",
+      "human_readable": "Procedural Gatekeeping Mechanism (Admissibility Test as Control Point)",
+      "structural_delta": "Article 17 admissibility criteria as structural chokepoint determining which reading dominates in practice",
+      "primary_observable": "ICC Pre-Trial Chamber rulings on admissibility challenges; OTP interpretation of 'genuine investigation' standard",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "parties_controlling_admissibility_interpretation",
+      "victim": "parties_lacking_interpretive_capture",
+      "downstream_of": [
+        "national_primacy_reading",
+        "international_oversight_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node where competing readings collide in operational practice"
+    },
+    {
+      "claim_id": "geopolitical_selectivity",
+      "human_readable": "Geopolitical Selectivity (Asymmetric Application by State Power)",
+      "structural_delta": "De facto complementarity operates differently for powerful vs weak states regardless of Article 17 text",
+      "primary_observable": "Geographic distribution of ICC investigations (Africa vs permanent UNSC members); withdrawal threats correlation with investigation",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "powerful_non_parties_and_veto_holders",
+      "victim": "weak_state_parties_and_their_nationals",
+      "downstream_of": [],
+      "feeds_into": [
+        "procedural_gatekeeping_mechanism"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural importance but captured indirectly via beneficiary/victim analysis in procedural_gatekeeping_mechanism"
+    },
+    {
+      "claim_id": "temporal_jurisdiction_gap",
+      "human_readable": "Temporal Jurisdiction Gap (Pre-Ratification Immunity)",
+      "structural_delta": "Rome Statute cannot prosecute crimes before state ratification, creating systematic impunity window",
+      "primary_observable": "Crimes occurring pre-ratification vs post-ratification prosecution rates; temporal loopholes in UNSC referrals",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "victims_of_pre_ratification_crimes",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: treaty law constraint but orthogonal to complementarity principle dynamics"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "national_primacy_reading",
+      "kernel_id": "article_17_complementarity",
+      "reading_id": "national_primacy_reading"
+    },
+    {
+      "claim_id": "international_oversight_reading",
+      "kernel_id": "article_17_complementarity",
+      "reading_id": "international_oversight_reading"
+    },
+    {
+      "claim_id": "procedural_gatekeeping_mechanism",
+      "kernel_id": "article_17_complementarity",
+      "reading_id": "procedural_gatekeeping_mechanism"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "geopolitical_selectivity",
+      "structural_delta": "Asymmetric complementarity application by state power",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural dynamic captured via beneficiary/victim analysis in procedural_gatekeeping_mechanism; independent treatment would produce redundant constraint story"
+    },
+    {
+      "claim_id": "temporal_jurisdiction_gap",
+      "structural_delta": "Pre-ratification immunity window",
+      "hypothesis": "mountain",
+      "deferral_reason": "Treaty law constraint orthogonal to complementarity readings; zero centrality to kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_genuine_investigation_threshold",
+      "description": "What constitutes 'genuine' investigation under Article 17(2)? Threshold interpretation determines whether most national proceedings satisfy complementarity or trigger ICC admissibility. This is the operational fulcrum where readings diverge most sharply.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + procedural_gatekeeping_mechanism analysis"
+    },
+    {
+      "id": "omega_state_cooperation_enforcement",
+      "description": "Rome Statute lacks enforcement mechanism for non-cooperation. Does this absence convert international_oversight_reading into aspirational scaffold rather than operational constraint? Arrest warrant non-execution patterns suggest systematic extraction by powerful states.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_hybrid_tribunal_alternative",
+      "description": "Are hybrid tribunals (national courts + international judges/prosecutors) a third reading that transcends the binary? Or do they collapse into one reading when examined structurally? Sierra Leone Special Court and Cambodia ECCC may instantiate distinct constraint structure.",
+      "source": "§3.1 Pairwise Test + Multi-Lens Scan (Comparative Criminal Justice Lens)"
+    },
+    {
+      "id": "omega_aggression_crime_activation",
+      "description": "Aggression jurisdiction (activated 2018) alters complementarity dynamics by targeting state leadership directly. Does this shift the kernel itself, or merely expand the domain over which complementarity operates? Kampala amendments may have created kernel drift.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan included sovereignty theory, international relations, comparative criminal procedure, and human rights lenses. Kernel decomposition validated: readings emit structurally different constraints (beneficiary/victim pairs diverge, epsilon bins differ in their operational targets). Procedural_gatekeeping_mechanism identified as synthesis node where readings collide in practice."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Rome Statute Article 17 complementarity principle: ICC jurisdiction is complementary to national criminal jurisdictions, exercised only when states are unwilling or unable to investigate or prosecute genuinely",
+    "authority_description": "Interpretive authority vested in ICC Pre-Trial Chamber for admissibility determinations; Office of the Prosecutor exercises prosecutorial discretion within Article 17 framework; state parties retain primary jurisdiction claim grounded in sovereignty",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "article_17_complementarity",
+    "readings": [
+      {
+        "reading_id": "national_primacy_reading",
+        "commitment": "Complementarity as sovereignty-protection mechanism; national courts presumptively adequate unless proven sham; ICC burden to demonstrate inadmissibility",
+        "authority_grounding": "Westphalian state sovereignty; treaty interpretation favoring retained jurisdiction (pacta sunt servanda applied to preserve signatory discretion)",
+        "sibling_readings": [
+          "international_oversight_reading"
+        ],
+        "expected_structural_delta": "High inadmissibility threshold; victims in states with weak-but-genuine proceedings fall outside ICC reach; state cooperation prioritized; beneficiaries are national judiciaries and sovereignty-maximizing states; victim set restricted to cases of complete judicial collapse"
+      },
+      {
+        "reading_id": "international_oversight_reading",
+        "commitment": "Complementarity as accountability-trigger mechanism; ICC as guardian against impunity when states fail; 'unwilling or unable' interpreted broadly to capture victor's justice and elite immunity",
+        "authority_grounding": "International humanitarian law obligations (erga omnes); teleological treaty interpretation favoring object-and-purpose (Rome Statute Preamble: 'end impunity'); victims' rights prioritization",
+        "sibling_readings": [
+          "national_primacy_reading"
+        ],
+        "expected_structural_delta": "Low admissibility threshold; ICC intervenes when domestic proceedings lack independence or genuine intent; state cooperation demands intensify; beneficiaries are victims in complicit/failed states; victim set expands to include symbolic/sham prosecution scenarios"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "national_primacy_reading",
+        "reading_b": "international_oversight_reading",
+        "basis": "National_primacy reading holds sovereignty as lexically prior to accountability (states retain jurisdiction unless proven inadequate); international_oversight reading holds accountability as lexically prior to sovereignty (ICC authority presumed unless states prove adequacy). No coherent framework simultaneously treats sovereignty as presumptive gate-keeper and accountability as presumptive trigger—one must be default, the other exception."
+      }
+    ]
+  },
+  "_seed_id": "rome_statute_complementarity"
+}

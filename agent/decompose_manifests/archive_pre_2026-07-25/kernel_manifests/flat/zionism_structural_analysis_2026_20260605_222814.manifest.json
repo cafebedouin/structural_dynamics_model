@@ -1,0 +1,283 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political History / Nationalism / Settler-Colonialism Studies",
+  "family_id": "zionism_structural_analysis_2026",
+  "topic_summary": "Analysis of Zionism as an ethnocultural nationalist movement that emerged in late 19th-century Europe to establish a Jewish homeland in Palestine. The movement evolved from ideological diversity in its early phase to state formation in 1948, characterized by demographic engineering, land acquisition, and the displacement of the indigenous Palestinian population. The analysis examines the structural tensions between national self-determination claims and settler-colonial practices, the role of external sponsorship (British Mandate), and the ongoing contestation over the movement's characterization.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Theodor Herzl (founder of modern political Zionism, 1896)",
+      "World Zionist Organization (established 1897, institutional vehicle)",
+      "British Mandate for Palestine (1922-1948, colonial sponsor)",
+      "Chaim Weizmann (WZO leader, secured Balfour Declaration)",
+      "David Ben-Gurion (Labor Zionist leader, first Israeli PM)",
+      "Ze'ev Jabotinsky (Revisionist Zionist founder, Iron Wall doctrine)",
+      "Histadrut (Labor federation, quasi-state apparatus)",
+      "Jewish National Fund (land acquisition mechanism, established 1901)",
+      "Palestinian Arab population (indigenous majority, subject of displacement)",
+      "Haganah (paramilitary force, became IDF)",
+      "UN Partition Plan (1947, allocated 55% of Palestine to Jewish state)",
+      "State of Israel (declared 1948, established sovereignty over 78% of Mandate Palestine)"
+    ],
+    "key_tensions": [
+      "National self-determination claim vs settler-colonial displacement (Zionist movement vs Palestinian Arabs)",
+      "Demographic majority requirement vs existing population (Jewish minority seeking majority status vs Arab majority)",
+      "Ideological diversity vs unified state-building project (Labor/Revisionist/Cultural Zionism vs single territorial outcome)",
+      "External sponsorship dependency vs autonomous national movement (British colonial support vs Zionist self-determination narrative)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 'historical right' to Palestine grounded in ancient Jewish presence, biblical covenant, and two millennia of diaspora longing for return",
+    "authority_description": "Zionist leadership's claim to interpret Jewish collective needs and historical destiny; later, Israeli state sovereignty as fulfillment of that interpretation",
+    "drift_status": "partial",
+    "candidate_pattern": "scaffold_to_piton",
+    "is_contested_kernel": true,
+    "kernel_id": "zionist_legitimacy_basis",
+    "readings": [
+      {
+        "reading_id": "national_liberation_reading",
+        "commitment": "Zionism as national liberation movement for persecuted indigenous people returning to ancestral homeland",
+        "authority_grounding": "Historical continuity, persecution-driven necessity, self-determination principle",
+        "sibling_readings": [
+          "settler_colonial_reading",
+          "religious_restoration_reading"
+        ],
+        "expected_structural_delta": "Persecution and historical connection justify displacement; Arab opposition delegitimized as denial of Jewish rights"
+      },
+      {
+        "reading_id": "settler_colonial_reading",
+        "commitment": "Zionism as European settler-colonial movement establishing ethno-state through indigenous displacement",
+        "authority_grounding": "Structural analysis of land acquisition, demographic engineering, external sponsorship patterns",
+        "sibling_readings": [
+          "national_liberation_reading",
+          "religious_restoration_reading"
+        ],
+        "expected_structural_delta": "Colonial structure determines legitimacy; displacement recognized as constitutive rather than incidental"
+      },
+      {
+        "reading_id": "religious_restoration_reading",
+        "commitment": "Zionism as fulfillment of divine promise and messianic process (religious Zionist interpretation post-1967)",
+        "authority_grounding": "Biblical covenant, rabbinic interpretation (Kook school), territorial sanctity",
+        "sibling_readings": [
+          "national_liberation_reading",
+          "settler_colonial_reading"
+        ],
+        "expected_structural_delta": "Religious obligation overrides secular political considerations; territorial maximalism theologically mandated"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "national_liberation_reading",
+        "reading_b": "settler_colonial_reading",
+        "basis": "National liberation frameworks presuppose indigenous status and defensive necessity; settler-colonial frameworks identify the movement as externally-originated displacement project. No coherent framework holds both the Zionist movement as indigenous return AND as European colonial transplantation simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "demographic_engineering_imperative",
+      "human_readable": "Demographic Engineering as Structural Imperative",
+      "structural_delta": "The requirement for Jewish demographic majority as precondition for state viability, necessitating either mass immigration or Arab population reduction",
+      "primary_observable": "Jewish-to-Arab population ratio targets; immigration policy; transfer proposals and implementation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "zionist_movement_leadership",
+      "victim": "palestinian_arab_population",
+      "downstream_of": [],
+      "feeds_into": [
+        "transfer_doctrine",
+        "british_mandate_scaffolding"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; identified by multiple sources as 'key issue in implementation of Zionism' and 'essential aspect'; feeds into both transfer doctrine and reliance on external force"
+    },
+    {
+      "claim_id": "transfer_doctrine",
+      "human_readable": "Transfer Doctrine (Euphemized Ethnic Cleansing)",
+      "structural_delta": "The ideological and practical commitment to Arab population removal as solution to demographic problem, evolving from proposal to implementation",
+      "primary_observable": "Transfer advocacy in leadership statements; Peel Commission response; Plan Dalet implementation; 1948 expulsion patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "jewish_state_builders",
+      "victim": "palestinian_refugees",
+      "downstream_of": [
+        "demographic_engineering_imperative"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis of demographic imperative; distinct observable (expulsion events vs population ratios); high epsilon as implemented policy"
+    },
+    {
+      "claim_id": "british_mandate_scaffolding",
+      "human_readable": "British Mandate as Colonial Scaffolding",
+      "structural_delta": "The dependency on British imperial power to establish conditions (legal framework, military protection, immigration facilitation) that Zionist movement could not create autonomously",
+      "primary_observable": "Balfour Declaration terms; Mandate provisions privileging Jewish settlement; British military suppression of Arab resistance; immigration quotas",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "zionist_quasi_state",
+      "victim": "palestinian_arabs_under_mandate",
+      "downstream_of": [
+        "demographic_engineering_imperative"
+      ],
+      "feeds_into": [
+        "iron_wall_strategy"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct from demographic imperative (external vs internal mechanism); feeds into military strategy; moderate epsilon as temporary but essential structure"
+    },
+    {
+      "claim_id": "iron_wall_strategy",
+      "human_readable": "Iron Wall Strategy (Force as Precondition for Negotiation)",
+      "structural_delta": "The doctrine that Jewish military superiority must precede any political settlement, making Arab despair the prerequisite for acceptance",
+      "primary_observable": "Haganah development; Jabotinsky writings; Labor Zionist adoption post-1936; military expenditure patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "british_mandate_scaffolding"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct observable (military capacity vs legal framework); emerged as consensus across ideological spectrum; moderate epsilon as strategic doctrine"
+    },
+    {
+      "claim_id": "ideological_diversity_convergence",
+      "human_readable": "Ideological Diversity Converging on Territorial Outcome",
+      "structural_delta": "The phenomenon of diverse Zionist ideologies (Labor, Revisionist, Cultural, Religious) producing unified territorial maximalism despite different justifications",
+      "primary_observable": "Partition debate outcomes; territorial expansion patterns; ideological rhetoric vs policy alignment",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_building_apparatus",
+      "victim": "palestinian_territorial_claims",
+      "downstream_of": [],
+      "feeds_into": [
+        "demographic_engineering_imperative"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Independent of demographic imperative (ideological vs demographic axis); distinct observable (rhetoric-policy gap); explains how diversity produced unity"
+    },
+    {
+      "claim_id": "conquest_of_labor_exclusion",
+      "human_readable": "Conquest of Labor (Economic Exclusion as Nation-Building)",
+      "structural_delta": "The policy of excluding Arab labor from Jewish economic sector to build separate national infrastructure and prevent class solidarity across ethnic lines",
+      "primary_observable": "Jewish-only employment policies; Histadrut membership restrictions; wage differentials; economic sector separation",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "demographic_engineering_imperative"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Distinct from demographic imperative (economic vs population mechanism); independent observable (employment vs immigration); feeds into state-building capacity"
+    }
+  ],
+  "generation_sequence": [
+    "demographic_engineering_imperative",
+    "british_mandate_scaffolding",
+    "transfer_doctrine",
+    "iron_wall_strategy",
+    "ideological_diversity_convergence",
+    "conquest_of_labor_exclusion",
+    {
+      "claim_id": "national_liberation_reading",
+      "kernel_id": "zionist_legitimacy_basis",
+      "reading_id": "national_liberation_reading"
+    },
+    {
+      "claim_id": "settler_colonial_reading",
+      "kernel_id": "zionist_legitimacy_basis",
+      "reading_id": "settler_colonial_reading"
+    },
+    {
+      "claim_id": "religious_restoration_reading",
+      "kernel_id": "zionist_legitimacy_basis",
+      "reading_id": "religious_restoration_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "land_acquisition_mechanisms",
+      "structural_delta": "JNF purchase policies, tenant farmer expulsion, inalienable Jewish ownership doctrine",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured as implementation mechanism within demographic_engineering_imperative and conquest_of_labor_exclusion; not structurally independent"
+    },
+    {
+      "claim_id": "diaspora_negation_ideology",
+      "structural_delta": "Rejection of diaspora Jewish identity as deficient, requiring territorial normalization",
+      "hypothesis": "piton",
+      "deferral_reason": "Ideological motivation rather than structural constraint; feeds into demographic imperative but lacks independent observable"
+    },
+    {
+      "claim_id": "christian_zionist_support",
+      "structural_delta": "Evangelical Christian backing motivated by eschatological beliefs requiring Jewish return",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Secondary to British Mandate scaffolding; distinct actor but same structural function (external sponsorship)"
+    },
+    {
+      "claim_id": "un_partition_plan_rejection",
+      "structural_delta": "Zionist acceptance of partition as tactical step toward territorial maximalism",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Specific instance of ideological_diversity_convergence pattern; not independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_indigenous_claim_validity",
+      "description": "Is the 'indigenous return' framing a Mountain (historical continuity as objective fact) or a Tangled Rope (constructed narrative serving state-building)? The 2000-year diaspora interrupts continuous habitation claims that define indigeneity in other contexts.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + national_liberation_reading vs settler_colonial_reading tension"
+    },
+    {
+      "id": "omega_holocaust_causality",
+      "description": "Does the Holocaust transform Zionism's structural character (from colonial project to refugee necessity) or only its moral framing? The movement's 1897-1939 trajectory preceded the genocide that later became its primary justification.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analyzing through post-1945 lens obscures pre-genocide structure"
+    },
+    {
+      "id": "omega_transfer_inevitability",
+      "description": "Was population transfer 'inevitable and inbuilt' (Morris) or a contingent choice? If demographic majority was structural requirement, was displacement necessary or merely chosen? The counterfactual (binational state) was rejected but not structurally impossible.",
+      "source": "F03 (Hasty Generalization) concern re: transfer_doctrine necessity claim"
+    },
+    {
+      "id": "omega_religious_zionism_transformation",
+      "description": "Did 1967 conquest activate latent religious Zionism or create new phenomenon? Pre-1967 religious Zionism was minority current; post-1967 messianic territorial maximalism became dominant settler ideology. Structural discontinuity vs ideological continuity unclear.",
+      "source": "Deferred axis religious_restoration_reading + Dark Matter Probe 3 (Beneficiary Scan) — who benefits from messianic framing?"
+    },
+    {
+      "id": "omega_labor_zionist_exceptionalism",
+      "description": "Does socialist ideology make Labor Zionism structurally distinct from other settler-colonialisms, or does 'conquest of labor' reveal socialism as instrument of ethnic nationalism? The Histadrut excluded Arabs while claiming universalist worker solidarity.",
+      "source": "conquest_of_labor_exclusion axis + ideological_diversity_convergence — rhetoric-practice gap"
+    },
+    {
+      "id": "omega_partition_counterfactual",
+      "description": "Would acceptance of 1937 Peel partition (17% of Palestine) or 1947 UN partition (55%) have produced structurally different outcome, or was territorial maximalism inherent regardless of initial borders? All partition proposals were accepted tactically, rejected strategically.",
+      "source": "Deferred axis un_partition_plan_rejection + ideological_diversity_convergence"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: transfer_doctrine classified as high-epsilon snare with 'inevitable and inbuilt' framing, but sources show contested historiography. Morris argues inevitability; Shapira/Ben-Ami emphasize contingency. Generated omega_transfer_inevitability to bound this uncertainty. No F34: domain is well-documented political history within model competence. No F01: extraction adheres to source framing of Zionism as nationalist movement with contested characterization."
+  }
+}

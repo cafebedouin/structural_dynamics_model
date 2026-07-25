@@ -1,0 +1,246 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Theory / Political Philosophy",
+  "family_id": "us_constitution_interpretive_schools",
+  "topic_summary": "Analysis of three competing interpretive schools for the U.S. Constitution — originalist, living constitutionalist, and legal positivist readings. Each reading treats the same textual kernel as generating different constraints on state action, with different authority-grounding mechanisms and temporal relationships to the founding text.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "U.S. Constitution (1787 text + amendments, stabilized kernel)",
+      "Originalist school (Scalia, Thomas tradition; authority grounded in framers' intent)",
+      "Living constitutionalist school (Brennan, Marshall tradition; authority grounded in evolving norms)",
+      "Legal positivist school (Holmes tradition; authority grounded in democratic amendment process)",
+      "Supreme Court (interpretive authority holder; legitimacy contested across schools)",
+      "Article V amendment process (formal revision mechanism)"
+    ],
+    "key_tensions": [
+      "Textual fixity vs normative evolution (frozen 1787 text vs changing social values)",
+      "Framers' intent vs contemporary democratic will (originalist vs living constitutionalist authority grounding)",
+      "Judicial interpretation vs legislative supremacy (positivist constraint on judicial activism)"
+    ],
+    "key_mechanisms": [
+      "Judicial review (Marbury v Madison 1803; Court asserts interpretive supremacy)",
+      "Article V supermajority amendment (formal democratic revision; positivist legitimacy path)"
+    ],
+    "key_absences": [
+      "No explicit theory of interpretation in the Constitution itself (meta-interpretive void)",
+      "Indigenous treaty status post-1787 (sovereignty collision with territorial claims)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The U.S. Constitution as frozen founding text plus ratified amendments; shared commitment that legitimate state action must conform to this document",
+    "authority_description": "Supreme Court holds interpretive authority via judicial review (Marbury 1803), but the grounding of that authority is contested across schools",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "us_constitution_1787",
+    "readings": [
+      {
+        "reading_id": "originalist_reading",
+        "commitment": "Constitutional meaning fixed at ratification; framers' intent is binding",
+        "authority_grounding": "Democratic legitimacy inheres in the ratification moment; judges discover rather than create meaning",
+        "sibling_readings": [
+          "living_reading",
+          "positivist_reading"
+        ],
+        "expected_structural_delta": "Narrow constraint set; pre-1787 practices legitimate; modern social rights claims outside constraint boundary; high epistemic demands on historical evidence"
+      },
+      {
+        "reading_id": "living_reading",
+        "commitment": "Constitutional meaning evolves with society; text is aspirational framework",
+        "authority_grounding": "Democratic legitimacy inheres in contemporary consensus; judges interpret evolving norms",
+        "sibling_readings": [
+          "originalist_reading",
+          "positivist_reading"
+        ],
+        "expected_structural_delta": "Expanding constraint set; incorporates modern rights claims (privacy, dignity); lower epistemic demands but vulnerable to elite capture of 'evolving norms'"
+      },
+      {
+        "reading_id": "positivist_reading",
+        "commitment": "Constitutional meaning is what the text says plus democratic amendments; judicial interpretation constrained to text",
+        "authority_grounding": "Democratic legitimacy inheres in Article V supermajority process; judges are servants not masters",
+        "sibling_readings": [
+          "originalist_reading",
+          "living_reading"
+        ],
+        "expected_structural_delta": "Moderate constraint set; text-bound but not historically bound; judicial activism constrained; amendment process becomes primary democratic mechanism"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "originalist_reading",
+        "reading_b": "living_reading",
+        "basis": "Originalism's axiom that constitutional meaning is fixed at ratification is mutually exclusive with living constitutionalism's axiom that meaning evolves with society. No single framework can hold both that meaning is temporally fixed and that it changes over time."
+      },
+      {
+        "reading_a": "living_reading",
+        "reading_b": "positivist_reading",
+        "basis": "Living constitutionalism's axiom that judges may interpret evolving norms beyond text is mutually exclusive with positivism's axiom that only text plus formal amendments bind. No framework can hold both that judicial norm-interpretation is legitimate and that only Article V amendments legitimately change meaning."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "originalist_reading",
+      "human_readable": "Originalist Reading (Framers' Intent as Binding)",
+      "structural_delta": "Constitutional meaning fixed at 1787 ratification; framers' original public meaning governs",
+      "primary_observable": "Scalia/Thomas jurisprudence; historical evidence requirements in opinions; textualist methodology",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "conservative_legal_movement",
+      "victim": "modern_rights_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading; establishes baseline constraint set and authority structure"
+    },
+    {
+      "claim_id": "living_reading",
+      "human_readable": "Living Constitutionalist Reading (Evolving Norms)",
+      "structural_delta": "Constitutional meaning evolves with contemporary social values; judges interpret aspirational text",
+      "primary_observable": "Brennan/Marshall jurisprudence; substantive due process doctrine; privacy/dignity rights",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "progressive_legal_movement",
+      "victim": "democratic_amendment_process",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading; maximal constraint divergence from originalist reading"
+    },
+    {
+      "claim_id": "positivist_reading",
+      "human_readable": "Legal Positivist Reading (Text Plus Formal Amendments)",
+      "structural_delta": "Constitutional meaning limited to enacted text and Article V amendments; judicial restraint",
+      "primary_observable": "Holmes tradition; Thayer's doctrine of judicial deference; amendment-centered legitimacy",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; structural alternative constraining both originalist historical epistemology and living constitutionalist norm-evolution"
+    },
+    {
+      "claim_id": "amendment_atrophy",
+      "human_readable": "Amendment Process Atrophy (Article V Disuse as Piton)",
+      "structural_delta": "Formal amendment mechanism rendered practically unusable by supermajority threshold; interpretive drift substitutes",
+      "primary_observable": "27 amendments in 235 years; last substantive amendment 1971 (26th); polarization makes Article V infeasible",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "originalist_reading",
+        "living_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural backdrop explaining why interpretive schools dominate; omega material on revision-avoidance"
+    },
+    {
+      "claim_id": "judicial_capture",
+      "human_readable": "Judicial Appointment as Interpretive Capture Mechanism",
+      "structural_delta": "Appointment politics as struggle to control which reading dominates Supreme Court",
+      "primary_observable": "Senate confirmation battles; litmus-test questioning; partisan composition of Court",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "partisan_coalitions",
+      "victim": "interpretive_pluralism",
+      "downstream_of": [
+        "amendment_atrophy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of kernel contest; captured by readings' authority-grounding analysis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "originalist_reading",
+      "kernel_id": "us_constitution_1787",
+      "reading_id": "originalist_reading"
+    },
+    {
+      "claim_id": "living_reading",
+      "kernel_id": "us_constitution_1787",
+      "reading_id": "living_reading"
+    },
+    {
+      "claim_id": "positivist_reading",
+      "kernel_id": "us_constitution_1787",
+      "reading_id": "positivist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "amendment_atrophy",
+      "structural_delta": "Article V amendment process rendered practically unusable by supermajority threshold",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural backdrop explaining kernel contest dynamics; omega material on revision-avoidance as driver of interpretive schools"
+    },
+    {
+      "claim_id": "judicial_capture",
+      "structural_delta": "Appointment politics as mechanism to control interpretive dominance",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of kernel contest; authority-grounding analysis within readings captures this mechanism"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_temporal_kernel_drift",
+      "description": "Amendments from 1791 (Bill of Rights) through 1971 (26th) create temporal kernel layers. Do later amendments get originalist reading from their ratification date, or are they absorbed into living constitutionalist framework? Reconstruction Amendments (13th-15th) particularly contested.",
+      "source": "User prompt flag: temporal kernel across amendments"
+    },
+    {
+      "id": "omega_meta_interpretive_void",
+      "description": "Constitution contains no theory of its own interpretation. Which reading is constitutionally correct is an unanswerable question within the kernel — a Gödelian incompleteness. Originalists claim framers assumed originalism, but this is historically contested.",
+      "source": "Absence Inventory: no explicit interpretive meta-rule in Constitution"
+    },
+    {
+      "id": "omega_indigenous_treaty_collision",
+      "description": "Pre-1787 treaties with Indigenous nations create parallel legal kernel. Do these predate Constitutional authority (mountain), or are they subordinate to federal plenary power (rope)? Originalist reading may delegitimize treaties; living reading may incorporate them via evolving sovereignty norms.",
+      "source": "Absence Inventory: Indigenous treaty status"
+    },
+    {
+      "id": "omega_amendment_threshold_counterfactual",
+      "description": "If Article V required simple majority rather than 2/3+3/4, would interpretive schools exist? Amendment atrophy may be the upstream cause of kernel contest, not a downstream consequence. This inverts the causal graph.",
+      "source": "Deferred axis: amendment_atrophy"
+    },
+    {
+      "id": "omega_positivist_reading_instability",
+      "description": "Positivist reading claims text-boundedness but inherits common-law tradition of precedent (stare decisis). Is precedent a fourth reading, or does it collapse positivism into living constitutionalism via incremental drift?",
+      "source": "Dark Matter Probe 2: Absence — precedent doctrine not explicitly a reading"
+    },
+    {
+      "id": "omega_elite_capture_asymmetry",
+      "description": "Living constitutionalism vulnerable to elite capture of 'evolving norms' (beneficiary: progressive legal movement). Originalism vulnerable to selective historical evidence (beneficiary: conservative legal movement). Positivism vulnerable to gridlock (beneficiary: status quo). Beneficiary asymmetry across readings may determine dominance independent of interpretive validity.",
+      "source": "Dark Matter Probe 3: Beneficiary Scan"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel identification confirmed: three readings emit structurally distinct constraints (narrow/fixed vs expanding/evolving vs text-bound/restrained) with mutually exclusive authority-grounding axioms. Temporal kernel drift and meta-interpretive void documented as omegas. Amendment atrophy deferred as structural backdrop."
+  },
+  "_seed_id": "us_constitution_interpretive_schools"
+}

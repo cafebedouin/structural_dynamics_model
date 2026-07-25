@@ -1,0 +1,232 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Political Economy / Development Finance / Institutional Economics",
+  "family_id": "bretton_woods_structural_adjustment",
+  "topic_summary": "Analysis of IMF/World Bank structural adjustment conditionalities as a contested institutional kernel. International creditors read these mandates as necessary coordination mechanisms for fiscal solvency (Rope), while debtor nations read them as extractive neo-colonial regimes dismantling social safety nets (Snare). The readings instantiate fundamentally different constraint structures with opposing victim/beneficiary sets.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "International Monetary Fund (multilateral lender; conditionality enforcer)",
+      "World Bank (development lender; structural adjustment architect)",
+      "Debtor nation governments (borrowers subject to conditionalities)",
+      "International creditor community (private banks, sovereign lenders)",
+      "Domestic populations in debtor nations (recipients of cut social services)",
+      "Transnational capital (beneficiaries of liberalization mandates)"
+    ],
+    "key_tensions": [
+      "Fiscal solvency vs social safety net preservation (creditor priority vs debtor population welfare)",
+      "Policy sovereignty vs conditionality compliance (national autonomy vs external mandate)",
+      "Short-term stabilization vs long-term development (immediate debt service vs structural transformation)"
+    ],
+    "key_mechanisms": [
+      "Conditionality enforcement (loan disbursement contingent on policy reforms)",
+      "Capital account liberalization mandates (removal of exchange controls, financial deregulation)",
+      "Public sector retrenchment requirements (subsidy cuts, privatization, wage freezes)"
+    ],
+    "key_absences": [
+      "Voice mechanisms for affected populations in conditionality design",
+      "Alternative development finance models that existed before Bretton Woods hegemony"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The institutionalized macroeconomic conditionalities of the IMF/World Bank — the formalized set of fiscal, monetary, and structural policy reforms required for loan disbursement.",
+    "authority_description": "Interpretive legitimacy grounded in technical expertise claims (creditor reading) versus sovereign right to domestic policy autonomy (debtor reading). No single arbiter; contested at every negotiation.",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_authority_contest",
+    "is_contested_kernel": true,
+    "kernel_id": "structural_adjustment_conditionalities",
+    "readings": [
+      {
+        "reading_id": "creditor_coordination_reading",
+        "commitment": "Conditionalities as necessary coordination mechanisms ensuring fiscal sustainability and market confidence",
+        "authority_grounding": "Technical macroeconomic expertise; fiduciary duty to protect loan repayment",
+        "sibling_readings": [
+          "debtor_extraction_reading",
+          "hybrid_selectivity_reading"
+        ],
+        "expected_structural_delta": "Rope constraint: coordination problem solved; victims are inefficient state sectors; beneficiaries are future taxpayers and international capital"
+      },
+      {
+        "reading_id": "debtor_extraction_reading",
+        "commitment": "Conditionalities as extractive neo-colonial instruments violently dismantling social contracts for creditor profit",
+        "authority_grounding": "Sovereign right to domestic policy autonomy; democratic legitimacy of elected governments",
+        "sibling_readings": [
+          "creditor_coordination_reading",
+          "hybrid_selectivity_reading"
+        ],
+        "expected_structural_delta": "Snare constraint: coercive extraction regime; victims are domestic populations losing services; beneficiaries are transnational capital and creditor banks"
+      },
+      {
+        "reading_id": "hybrid_selectivity_reading",
+        "commitment": "Conditionalities as selectively applied discipline — enforced harshly on weak states, waived for geopolitically strategic debtors",
+        "authority_grounding": "Empirical pattern recognition; institutional political economy analysis",
+        "sibling_readings": [
+          "creditor_coordination_reading",
+          "debtor_extraction_reading"
+        ],
+        "expected_structural_delta": "Tangled Rope: ostensibly coordination, functionally extraction for non-strategic debtors; victims determined by geopolitical position; beneficiaries are hegemon-aligned states and core creditors"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "creditor_coordination_reading",
+        "reading_b": "debtor_extraction_reading",
+        "basis": "Creditor reading requires accepting conditionalities as welfare-enhancing through efficiency gains; debtor reading requires accepting them as welfare-destroying through service dismantlement. No coherent framework holds both as simultaneously true descriptions of the same policy regime."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "creditor_coordination_reading",
+      "human_readable": "Creditor Coordination Reading (Conditionalities as Solvency Scaffolding)",
+      "structural_delta": "Conditionalities solve collective action problem among creditors and prevent moral hazard in debtor fiscal policy",
+      "primary_observable": "Debt repayment rates post-conditionality; sovereign bond yield spreads before/after IMF program",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "international_creditor_community",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: creditor interpretation as coordination Rope; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "debtor_extraction_reading",
+      "human_readable": "Debtor Extraction Reading (Conditionalities as Neo-Colonial Snare)",
+      "structural_delta": "Conditionalities function as extractive regime prioritizing creditor claims over domestic welfare, dismantling social safety nets",
+      "primary_observable": "Social expenditure cuts post-conditionality; health/education budget reductions; mortality rate changes",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "transnational_capital",
+      "victim": "domestic_populations_in_debtor_nations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: debtor interpretation as extractive Snare; axiom-contradictory to first reading"
+    },
+    {
+      "claim_id": "hybrid_selectivity_reading",
+      "human_readable": "Hybrid Selectivity Reading (Geopolitically Contingent Enforcement)",
+      "structural_delta": "Conditionality enforcement varies by geopolitical position: harsh for weak states, waived for strategic allies",
+      "primary_observable": "Waiver frequency by debtor; correlation between enforcement stringency and U.S. geopolitical alignment",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "hegemon_aligned_states",
+      "victim": "non_strategic_debtor_nations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: synthesis perspective revealing selectivity; completes kernel decomposition with intermediate extractiveness"
+    },
+    {
+      "claim_id": "debt_trap_mechanism",
+      "human_readable": "Debt Trap Mechanism (Conditionality-Induced Recession)",
+      "structural_delta": "Austerity conditionalities induce recession, reducing tax revenue and necessitating additional borrowing",
+      "primary_observable": "GDP growth post-conditionality; debt-to-GDP ratio trajectories; repeat borrower frequency",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "international_financial_institutions",
+      "victim": "debtor_nation_fiscal_capacity",
+      "downstream_of": [
+        "debtor_extraction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanistic detail downstream of debtor_extraction_reading; captured implicitly in Snare narrative"
+    },
+    {
+      "claim_id": "washington_consensus_ideological_lock",
+      "human_readable": "Washington Consensus Ideological Lock (Neoliberal Policy Monoculture)",
+      "structural_delta": "Conditionalities impose uniform neoliberal policy template regardless of national context or development strategy",
+      "primary_observable": "Policy template similarity across diverse debtor nations; deviation penalties",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "policy_experimentation_space",
+      "downstream_of": [],
+      "feeds_into": [
+        "debtor_extraction_reading",
+        "hybrid_selectivity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream ideological substrate feeding multiple readings; structurally important but lower centrality than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "creditor_coordination_reading",
+      "kernel_id": "structural_adjustment_conditionalities",
+      "reading_id": "creditor_coordination_reading"
+    },
+    {
+      "claim_id": "debtor_extraction_reading",
+      "kernel_id": "structural_adjustment_conditionalities",
+      "reading_id": "debtor_extraction_reading"
+    },
+    {
+      "claim_id": "hybrid_selectivity_reading",
+      "kernel_id": "structural_adjustment_conditionalities",
+      "reading_id": "hybrid_selectivity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "debt_trap_mechanism",
+      "structural_delta": "Conditionalities induce recession, necessitating repeat borrowing",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanistic detail captured within debtor_extraction_reading Snare narrative"
+    },
+    {
+      "claim_id": "washington_consensus_ideological_lock",
+      "structural_delta": "Uniform neoliberal policy template imposed regardless of context",
+      "hypothesis": "piton",
+      "deferral_reason": "Upstream ideological substrate; structurally important but lower graph centrality than kernel readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_outcome_divergence",
+      "description": "Do loan outcomes systematically favor creditor or debtor claims? If creditor reading correct, repayment rates should improve without welfare collapse. If debtor reading correct, social indicators should deteriorate while debt persists. Hybrid reading predicts divergence by geopolitical tier.",
+      "source": "Axiom contradiction between creditor_coordination_reading and debtor_extraction_reading"
+    },
+    {
+      "id": "omega_counterfactual_development_paths",
+      "description": "What were the non-Bretton Woods development finance models that preceded structural adjustment hegemony? Import-substitution industrialization, state-led development banks, South-South cooperation frameworks. Their absence from training data risks naturalizing the current regime.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_voice_mechanism_absence",
+      "description": "Affected populations have no formal voice in conditionality design. Is this a Rope feature (technical decisions require expert insulation) or Snare feature (extraction requires victim silence)? Reading-dependent classification.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + Absence Inventory"
+    },
+    {
+      "id": "omega_china_alternative_emergence",
+      "description": "Does China's Belt and Road lending (no governance conditionalities, infrastructure-for-resources) constitute an alternative reading of development finance, or merely a different Snare with different beneficiaries?",
+      "source": "Dark Matter Probe 1 (Operational Medium) — Western institutional economics may obscure non-Western models"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel recognition successful: three readings with genuinely different beneficiary/victim structures and axiom-contradictory commitments. Hybrid_selectivity_reading provides empirical test case for distinguishing coordination from extraction via enforcement pattern analysis."
+  },
+  "_seed_id": "structural_adjustment_doctrine"
+}

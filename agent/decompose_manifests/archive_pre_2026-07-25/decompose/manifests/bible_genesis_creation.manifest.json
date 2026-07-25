@@ -1,0 +1,191 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Biblical Hermeneutics / Science-Religion Interface",
+  "family_id": "genesis_creation_contested_kernel_2026",
+  "topic_summary": "Analysis of the Genesis 1-2 creation narrative as a contested kernel where different hermeneutic traditions instantiate structurally distinct constraints. The canonical text describing six-day creation and human dominion serves as shared substrate, but literal young-earth and theistic evolutionary readings emit different constraint structures regarding cosmological timescales, evolutionary biology validity, and environmental ethics frameworks.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Genesis 1-2 canonical text (Hebrew scripture; foundational creation narrative)",
+      "Young-Earth Creationist interpretive tradition (literal 24-hour days; 6000-10000 year timeline)",
+      "Theistic Evolutionary interpretive tradition (allegorical framework; deep-time compatible)",
+      "Scientific consensus on cosmology/evolution (13.8 billion year universe; 3.8 billion year biosphere)",
+      "Public education curriculum standards (venues where constraint collision manifests)",
+      "Environmental stewardship theology (derivative ethical framework dependent on dominion reading)"
+    ],
+    "key_tensions": [
+      "Literal chronology vs deep-time cosmology (YEC vs scientific consensus)",
+      "Divine fiat creation vs evolutionary mechanisms (special creation vs natural selection)",
+      "Dominion-as-exploitation vs dominion-as-stewardship (anthropocentric vs ecocentric ethics)"
+    ],
+    "key_mechanisms": [
+      "Curricular gatekeeping: State education boards adjudicating which reading's constraints govern biology instruction",
+      "Hermeneutic authority structures: Denominational hierarchies enforcing interpretive fidelity to chosen reading"
+    ],
+    "key_absences": [
+      "Jewish interpretive traditions (Midrash, Kabbalah) treating Genesis as non-historical mythopoetic literature",
+      "Process theology readings rejecting ex nihilo creation entirely"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Genesis 1-2 canonical text describing six-day creation sequence and human dominion mandate",
+    "authority_description": "Denominational/scholarly hermeneutic traditions claiming legitimacy through textual fidelity or scientific compatibility",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Drift (CS-3)",
+    "is_contested_kernel": true,
+    "kernel_id": "genesis_creation_narrative",
+    "readings": [
+      {
+        "reading_id": "literal_young_earth",
+        "commitment": "Genesis 1-2 as inerrant historical-scientific chronicle; 24-hour days; recent creation",
+        "authority_grounding": "Scriptural inerrancy doctrine; Reformed/Fundamentalist hermeneutic tradition",
+        "sibling_readings": [
+          "theistic_evolutionary",
+          "allegorical_ancient_near_east"
+        ],
+        "expected_structural_delta": "Evolution categorically false; high suppression of non-literalist readings in conservative institutions; dominion read as exploitation license"
+      },
+      {
+        "reading_id": "theistic_evolutionary",
+        "commitment": "Genesis 1-2 as theological framework compatible with scientific cosmology; days as epochs or literary device",
+        "authority_grounding": "Faith-science integration movements; mainline Protestant/Catholic Magisterium compatibility",
+        "sibling_readings": [
+          "literal_young_earth",
+          "allegorical_ancient_near_east"
+        ],
+        "expected_structural_delta": "Evolution theologically permissible; low suppression of scientific consensus; dominion read as stewardship ethic"
+      },
+      {
+        "reading_id": "allegorical_ancient_near_east",
+        "commitment": "Genesis 1-2 as Ancient Near Eastern mythopoetic literature; no historical-scientific claims",
+        "authority_grounding": "Historical-critical biblical scholarship; comparative mythology framework",
+        "sibling_readings": [
+          "literal_young_earth",
+          "theistic_evolutionary"
+        ],
+        "expected_structural_delta": "Text has no adjudicative authority over cosmology/biology; complete decoupling from science; dominion metaphor loses normative force"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "literal_young_earth",
+        "reading_b": "theistic_evolutionary",
+        "basis": "Inerrancy axiom (text cannot err on material facts) vs accommodation axiom (divine communication uses pre-scientific frameworks) are mutually exclusive—no framework holds both simultaneously"
+      },
+      {
+        "reading_a": "literal_young_earth",
+        "reading_b": "allegorical_ancient_near_east",
+        "basis": "Divine authorship axiom (text conveys God's factual account) vs human authorship axiom (text reflects ancient human cosmology) cannot coexist—one requires rejecting the other's ontological claim"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "literal_young_earth",
+      "human_readable": "Literal Young-Earth Reading",
+      "structural_delta": "Genesis 1-2 read as inerrant historical-scientific chronicle emitting constraints of recent creation, anti-evolutionary biology policy, and exploitative dominion theology",
+      "primary_observable": "Denominational position statements on biblical inerrancy; curriculum standards excluding evolutionary biology; environmental theology treating nature as instrumental resource",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "fundamentalist_denominational_authorities",
+      "victim": "scientific_literacy_public_education",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: highest extractiveness; clearest beneficiary/victim structure; institutional suppression mechanisms"
+    },
+    {
+      "claim_id": "theistic_evolutionary",
+      "human_readable": "Theistic Evolutionary Reading",
+      "structural_delta": "Genesis 1-2 read as theological framework compatible with deep time emitting constraints permitting evolutionary biology and stewardship-based environmental ethics",
+      "primary_observable": "Mainline denominational statements endorsing evolution; theological bioethics literature citing Genesis for ecological responsibility; science-faith integration curricula",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: moderate extractiveness; structurally distinct from literal_young_earth (coordination rope vs suppression snare); represents licensed plurality"
+    },
+    {
+      "claim_id": "allegorical_ancient_near_east",
+      "human_readable": "Allegorical Ancient Near Eastern Reading",
+      "structural_delta": "Genesis 1-2 read as mythopoetic literature decoupling text from cosmological/biological authority entirely",
+      "primary_observable": "Historical-critical biblical scholarship adoption rates; secularization of environmental ethics (non-theological framings); interfaith dialogue treating Genesis as cultural artifact",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: completes triadic structure; scaffold hypothesis tests whether full decoupling is stable or collapses back into faith-science coordination"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "literal_young_earth",
+      "kernel_id": "genesis_creation_narrative",
+      "reading_id": "literal_young_earth"
+    },
+    {
+      "claim_id": "theistic_evolutionary",
+      "kernel_id": "genesis_creation_narrative",
+      "reading_id": "theistic_evolutionary"
+    },
+    {
+      "claim_id": "allegorical_ancient_near_east",
+      "kernel_id": "genesis_creation_narrative",
+      "reading_id": "allegorical_ancient_near_east"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_jewish_midrashic_absence",
+      "description": "Jewish interpretive traditions (Talmudic, Midrashic, Kabbalistic) absent from analysis. These traditions historically treated Genesis as non-literal centuries before Christian debates, potentially invalidating Christian readings' claim to hermeneutic originality. Absence may reflect Christian-centric framing of the kernel.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_process_theology_decoupling",
+      "description": "Process theology readings rejecting ex nihilo creation (God as persuader not controller) absent. If this reading gains traction, it may reclassify the kernel itself from 'creation account' to 'divine-world relationship metaphor,' collapsing all three selected readings.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_dominion_ethics_downstream",
+      "description": "Environmental ethics (dominion-as-exploitation vs dominion-as-stewardship) treated as derivative of creation reading, but may be independent axis with own epsilon. Ecotheology movements may reconstruct dominion ethics without resolving Genesis chronology debates.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_intelligent_design_wedge",
+      "description": "Intelligent Design movement (ID) attempts to decouple anti-evolutionism from Genesis literalism, positioning as scientific rather than religious. If successful, literal_young_earth reading's constraint structure partially transfers to ID framework, but with different authority grounding (scientific falsification claims vs scriptural inerrancy). Not analyzed as separate reading due to contested scientific legitimacy.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_allegorical_stability",
+      "description": "Allegorical_ancient_near_east reading classified as scaffold, but stability uncertain. Historical-critical scholarship has institutional foothold in seminaries but limited congregational uptake. May be piton (atrophied authority) rather than scaffold (emerging coordination) if secularization continues.",
+      "source": "§2.3 Classification uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected capture structural diversity: high-epsilon snare (literal_young_earth), moderate-epsilon rope (theistic_evolutionary), low-epsilon scaffold (allegorical_ancient_near_east). Axiom contradictions declared for literal_young_earth vs both alternatives. Jewish interpretive traditions and process theology flagged as omega-level absences."
+  },
+  "_seed_id": "bible_genesis_creation"
+}

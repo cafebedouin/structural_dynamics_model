@@ -1,0 +1,201 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal History / Political Theory",
+  "family_id": "magna_carta_interpretive_scope",
+  "topic_summary": "Analysis of the Magna Carta as a contested kernel where the same 1215 text is read as either a narrow baronial privilege document or an expansive foundational mandate for universal due process and human rights. The interpretive contest centers on whether the kernel stabilizes feudal-specific constraints or emits transhistorical constitutional principles.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Magna Carta 1215 text (the codified kernel document)",
+      "English barons (original contracting party; beneficiaries of 1215 privileges)",
+      "English monarchy (King John and successors; authority constrained by charter)",
+      "Later constitutional interpreters (jurists, political theorists from 17th century onward)",
+      "Universal rights claimants (modern individuals invoking Magna Carta precedent)"
+    ],
+    "key_tensions": [
+      "Narrow baronial privilege vs universal rights principle (textualist vs expansive readings)",
+      "Historical context fidelity vs living constitutionalism (originalist vs adaptive interpretation)"
+    ],
+    "key_mechanisms": [
+      "Clause 39 invocation (specific text: 'No free man shall be seized or imprisoned...except by lawful judgment of equals or by law of the land') as interpretive pivot",
+      "Precedential authority structure (English common law tradition treating Magna Carta as foundational despite narrow original scope)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for charter compliance in 1215 context (baronial rebellion as de facto enforcement versus institutional review)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "baronial_privilege_reading",
+      "human_readable": "Baronial Privilege Reading (Narrow Feudal Contract)",
+      "structural_delta": "Magna Carta as feudal-specific bargain between king and barons; 'free men' means landowning class only",
+      "primary_observable": "Textual analysis of 1215 context; beneficiary class explicitly baronial; no institutional mechanism for broader enforcement",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "english_barons_1215",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct commitment; instantiates narrow constraint scope where protection set limited to feudal elite"
+    },
+    {
+      "claim_id": "universal_rights_reading",
+      "human_readable": "Universal Rights Reading (Transhistorical Constitutional Principle)",
+      "structural_delta": "Magna Carta as foundational precedent for universal due process; 'free men' read as all persons; Clause 39 emits transhistorical constraint on arbitrary power",
+      "primary_observable": "17th-century onward judicial citations treating Magna Carta as rights precedent; modern human rights discourse invoking charter; constitutional entrenchment in common law jurisdictions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "constitutional_interpreters",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading with entirely different victim/beneficiary structure; instantiates expansive constraint where all persons protected; structural entanglement via precedent authority"
+    },
+    {
+      "claim_id": "living_document_reading",
+      "human_readable": "Living Document Reading (Adaptive Constitutional Core)",
+      "structural_delta": "Magna Carta as evolving constitutional substrate whose meaning legitimately changes with political context; original narrow scope superseded by accumulated interpretive tradition",
+      "primary_observable": "Judicial doctrine of living constitutionalism; reinterpretation of 'free men' over centuries; acceptance of precedential drift as legitimate constitutional development",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": "interpretive_authorities",
+      "victim": "textualist_originalists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Meta-reading addressing interpretive authority itself; captures mechanism by which readings 1 and 2 coexist; scaffolds the contestation structure"
+    },
+    {
+      "claim_id": "symbolic_invocation_reading",
+      "human_readable": "Symbolic Invocation Reading (Charter as Legitimation Tool)",
+      "structural_delta": "Magna Carta invoked symbolically for political legitimacy regardless of actual textual content; authority derived from name recognition rather than substantive constraint",
+      "primary_observable": "Political rhetoric invoking Magna Carta without textual specificity; public belief in charter significance exceeding actual legal effect",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "political_actors",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captures rhetorical usage but not substantive constraint contestation; omega material on legitimation mechanisms"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "baronial_privilege_reading",
+      "kernel_id": "magna_carta_1215",
+      "reading_id": "baronial_privilege_reading"
+    },
+    {
+      "claim_id": "universal_rights_reading",
+      "kernel_id": "magna_carta_1215",
+      "reading_id": "universal_rights_reading"
+    },
+    {
+      "claim_id": "living_document_reading",
+      "kernel_id": "magna_carta_1215",
+      "reading_id": "living_document_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "symbolic_invocation_reading",
+      "structural_delta": "Charter invoked symbolically for legitimacy without substantive constraint",
+      "hypothesis": "piton",
+      "deferral_reason": "Captures rhetorical usage rather than structural constraint contestation; lowest centrality; omega material on performative constitutionalism"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_mechanism",
+      "description": "Neither baronial nor universal reading explains institutional enforcement. 1215 had baronial rebellion; modern invocation lacks equivalent mechanism. Is Magna Carta's constraint power purely precedential (scaffold) or does it route through judicial review institutions that post-date the kernel?",
+      "source": "Absence Inventory (§1.1) + enforcement mechanism gap"
+    },
+    {
+      "id": "omega_textual_ambiguity",
+      "description": "Clause 39's 'free men' is textually ambiguous even in 1215 context. Does ambiguity enable legitimate drift (living_document reading) or constitute interpretive trespass (baronial reading)? The kernel itself may be under-specified.",
+      "source": "Independence testing between readings 1 and 2"
+    },
+    {
+      "id": "omega_other_clauses",
+      "description": "Analysis focuses on Clause 39 as interpretive pivot. Magna Carta contains 63 clauses; many are explicitly feudal (e.g., scutage provisions). Do readings 1 and 2 apply uniformly across all clauses or only to rights-relevant provisions? Clause selectivity may be third axis of contestation.",
+      "source": "Granularity check (§3.3) + Dark Matter Probe 2"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: same text, genuinely different constraints. Baronial reading emits narrow protection set (feudal elite only); universal reading emits broad protection set (all persons); living document reading provides meta-mechanism explaining coexistence."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1215 Magna Carta text, particularly Clause 39 ('No free man shall be seized...'), stabilized as foundational constitutional document in English common law tradition",
+    "authority_description": "Interpretive legitimacy derived from common law precedent and judicial authority; English/Commonwealth courts treat charter as binding despite lack of formal constitutional entrenchment in 1215",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "magna_carta_1215",
+    "readings": [
+      {
+        "reading_id": "baronial_privilege_reading",
+        "commitment": "Magna Carta as feudal contract; 'free men' equals landowning barons; protection set limited to contracting parties",
+        "authority_grounding": "textualist / originalist interpretation grounded in 1215 historical context",
+        "sibling_readings": [
+          "universal_rights_reading",
+          "living_document_reading"
+        ],
+        "expected_structural_delta": "Narrow victim/beneficiary set; constraint applies only to king-baron relationship; no protection for commoners, women, or non-landowners"
+      },
+      {
+        "reading_id": "universal_rights_reading",
+        "commitment": "Magna Carta as transhistorical rights precedent; 'free men' equals all persons; Clause 39 emits universal due process constraint",
+        "authority_grounding": "common law precedent / 17th-century onward reinterpretation / modern human rights discourse",
+        "sibling_readings": [
+          "baronial_privilege_reading",
+          "living_document_reading"
+        ],
+        "expected_structural_delta": "Expansive victim/beneficiary set; constraint applies to all state power over individuals; protection covers arbitrary detention, extrajudicial punishment for all persons"
+      },
+      {
+        "reading_id": "living_document_reading",
+        "commitment": "Magna Carta as adaptive constitutional substrate; original meaning legitimately superseded by interpretive tradition; precedential accumulation constitutes constitutional development",
+        "authority_grounding": "living constitutionalism doctrine / judicial supremacy in common law systems",
+        "sibling_readings": [
+          "baronial_privilege_reading",
+          "universal_rights_reading"
+        ],
+        "expected_structural_delta": "Meta-constraint on interpretive authority; readings 1 and 2 coexist as legitimate positions; authority structure scaffolds contestation without resolution"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "baronial_privilege_reading",
+        "reading_b": "universal_rights_reading",
+        "basis": "No single coherent framework can hold both 'protection set = feudal elite only' (reading 1) and 'protection set = all persons' (reading 2) as simultaneously true from the same text. One requires rejecting the other's beneficiary structure."
+      },
+      {
+        "reading_a": "baronial_privilege_reading",
+        "reading_b": "living_document_reading",
+        "basis": "Originalist textualism (reading 1's authority grounding) categorically rejects legitimacy of precedential drift that supersedes original meaning (reading 3's core mechanism). No framework accepts both fixed original meaning and legitimate interpretive evolution."
+      }
+    ]
+  },
+  "_seed_id": "magna_carta_liberties"
+}

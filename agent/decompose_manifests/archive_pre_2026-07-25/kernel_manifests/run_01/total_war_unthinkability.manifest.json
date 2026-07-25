@@ -1,0 +1,192 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Relations Theory / Strategic Studies / Institutional History",
+  "family_id": "great_power_war_disappearance_1945",
+  "topic_summary": "Analysis of the post-1945 disappearance of winnable great-power total war from the strategic possibility space. The kernel question is whether this represents a reading that dropped in probability (still reachable but disfavored) versus a reading that left the reachable space entirely (structural contraction). This tests whether commitment system machinery can represent readings becoming unreachable rather than merely improbable.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear weapons arsenals (mutual assured destruction capability)",
+      "Great powers (U.S., USSR/Russia, China, UK, France post-1945)",
+      "International institutional architecture (UN Security Council, NATO, nuclear treaties)",
+      "Pre-1945 strategic doctrine (total war as winnable through industrial/territorial conquest)",
+      "Post-1945 strategic doctrine (deterrence, limited war, proxy conflict)",
+      "Reachability space (mathematical/conceptual: set of strategically thinkable options)"
+    ],
+    "key_tensions": [
+      "Nuclear deterrence stability vs pre-nuclear great-power war logic",
+      "Institutional constraint (UN veto, alliance structures) vs sovereign war-making authority"
+    ],
+    "key_mechanisms": [
+      "Mutual assured destruction (MAD): nuclear second-strike capability removes victory condition",
+      "Security Council veto: institutional blocking of legitimated great-power war",
+      "Economic interdependence: globalized supply chains raise opportunity cost of total war"
+    ],
+    "key_absences": [
+      "No discussion of whether 'winnability' itself is the contested kernel vs 'total war as option'",
+      "No examination of whether pre-1945 wars were actually winnable or merely believed winnable"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "nuclear_physics_constraint",
+      "human_readable": "Nuclear Physics Constraint (MAD as Physical Impossibility)",
+      "structural_delta": "Nuclear weapons physics makes total war unwinnable by removing victory condition",
+      "primary_observable": "Second-strike capability metrics; strategic doctrine shift from victory to deterrence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_lock_in",
+        "economic_interdependence_feedback"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical constraint base; highest structural distinctiveness"
+    },
+    {
+      "claim_id": "institutional_lock_in",
+      "human_readable": "Institutional Lock-In (UN/Alliance Architecture as Coordination Mechanism)",
+      "structural_delta": "Post-1945 institutional architecture coordinates away from total war via veto power and alliance commitments",
+      "primary_observable": "Security Council veto usage patterns; NATO Article 5 invocation thresholds",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "nuclear_physics_constraint"
+      ],
+      "feeds_into": [
+        "reachability_contraction_vs_probability_drop"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Coordination mechanism distinct from physical constraint; intermediate node in causal chain"
+    },
+    {
+      "claim_id": "economic_interdependence_feedback",
+      "human_readable": "Economic Interdependence Feedback (Globalization as Cost Amplifier)",
+      "structural_delta": "Post-1945 economic integration raises opportunity cost of total war via supply chain disruption",
+      "primary_observable": "Trade-to-GDP ratios among great powers; financial market integration metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "nuclear_physics_constraint"
+      ],
+      "feeds_into": [
+        "reachability_contraction_vs_probability_drop"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: correlated with institutional_lock_in; both are coordination mechanisms downstream of nuclear constraint"
+    },
+    {
+      "claim_id": "reachability_contraction_vs_probability_drop",
+      "human_readable": "Reachability Contraction vs Probability Drop (Kernel Reading Status)",
+      "structural_delta": "Whether 'winnable total war' reading left the reachable space (contraction) or merely became improbable (probability drop)",
+      "primary_observable": "Strategic doctrine documents; war college curricula; absence of total-war planning in declassified materials",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "nuclear_powers",
+      "victim": "non_nuclear_states",
+      "downstream_of": [
+        "nuclear_physics_constraint",
+        "institutional_lock_in",
+        "economic_interdependence_feedback"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node; directly addresses kernel question"
+    },
+    {
+      "claim_id": "pre_1945_winnability_illusion",
+      "human_readable": "Pre-1945 Winnability Illusion (Historical Counterfactual)",
+      "structural_delta": "Whether pre-1945 total wars were actually winnable or merely believed winnable",
+      "primary_observable": "Historical war outcomes; post-war stability metrics; Pyrrhic victory analysis",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "reachability_contraction_vs_probability_drop"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical counterfactual with limited structural yield; omega material"
+    }
+  ],
+  "generation_sequence": [
+    "nuclear_physics_constraint",
+    "institutional_lock_in",
+    "reachability_contraction_vs_probability_drop"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "economic_interdependence_feedback",
+      "structural_delta": "Globalization raises opportunity cost of total war",
+      "hypothesis": "rope",
+      "deferral_reason": "Correlated with institutional_lock_in; both are coordination mechanisms downstream of nuclear constraint"
+    },
+    {
+      "claim_id": "pre_1945_winnability_illusion",
+      "structural_delta": "Whether pre-1945 wars were actually winnable or believed winnable",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical counterfactual with limited structural yield; omega material for essay synthesis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_validity",
+      "description": "Is 'winnable great-power total war' actually a contested kernel, or is the contest between 'total war as option' (reachable) vs 'total war as non-option' (unreachable)? The kernel may be one level up: 'great-power war as strategic instrument' with readings {total_war, limited_war, no_war}.",
+      "source": "§1.3-K kernel/not-kernel decision; absence inventory"
+    },
+    {
+      "id": "omega_contraction_mechanism",
+      "description": "If reachability contraction occurred, what is the mechanism? Physical impossibility (mountain), coordination lock-in (rope), or authority suppression (snare)? The three upstream axes suggest different mechanisms.",
+      "source": "Axis independence testing; downstream synthesis node ambiguity"
+    },
+    {
+      "id": "omega_library_test_validity",
+      "description": "Does the M-set library verdict (site-expansion but no contraction cell) mean the kernel structure CANNOT represent contraction, or that this specific case is not contraction? The test may be checking library capability vs empirical claim.",
+      "source": "User's kernel contest framing; F34 epistemic trespass boundary"
+    },
+    {
+      "id": "omega_winnability_definition",
+      "description": "What constitutes 'winnable'? If defined as 'achieves political objectives at acceptable cost,' nuclear weapons may not remove winnability but redefine acceptable cost to zero. The kernel may be definitional rather than empirical.",
+      "source": "Dark Matter Probe 1 (Operational Medium); pre_1945_winnability_illusion deferred axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: nuclear_physics_constraint classified as mountain but may be piton of strategic doctrine choice rather than physics constraint. F34 detected: library verdict interpretation (M-set contraction cell capability) exceeds model's formal verification competence. Generated omega_library_test_validity and omega_contraction_mechanism to bound uncertainties."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Great-power war as legitimate strategic instrument for resolving disputes and advancing national interests",
+    "authority_description": "Sovereign state authority to wage war; international law (pre-UN Charter: unrestricted; post-Charter: self-defense only)",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_reason": "The supposed readings ('winnable total war still reachable' vs 'winnable total war unreachable') do not emit structurally different constraints. Both readings accept that nuclear weapons changed the strategic calculus; they differ only on whether the change is probabilistic (reading dropped) or categorical (reading left space). This is an observer-position disagreement about one constraint (nuclear deterrence), not two readings of one kernel. The actual kernel is one level up: 'great-power war as strategic option' with potential readings {total_war, limited_war, no_war}, but the user's framing packages this as a meta-question about reachability space rather than as competing strategic doctrines. Decomposing into standard axes with reachability_contraction_vs_probability_drop as the synthesis node that addresses the kernel question directly."
+  },
+  "_seed_id": "total_war_unthinkability"
+}

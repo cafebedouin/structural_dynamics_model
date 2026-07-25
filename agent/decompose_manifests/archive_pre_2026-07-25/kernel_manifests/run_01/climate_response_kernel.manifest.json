@@ -1,0 +1,176 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Climate Policy / Political Economy / Intergenerational Ethics",
+  "family_id": "climate_response_kernel_2026",
+  "topic_summary": "Analysis of three competing readings of the climate-response kernel: mitigation-priority (decarbonize to prevent future harm), adaptation-priority (accept warming, invest in resilience), and degrowth (reduce material throughput to stay within planetary boundaries). Each reading instantiates a different constraint with distinct victim structures across generations and regions.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Global North industrial economies (historical emitters, capital holders)",
+      "Global South developing economies (low historical emissions, high climate vulnerability)",
+      "Current generation (consumption beneficiaries, policy decision-makers)",
+      "Future generations (inheritors of climate system state, no current political voice)",
+      "Fossil fuel capital (stranded asset holders, transition resistors)",
+      "IPCC / UNFCCC (epistemic authorities, consensus-building institutions)"
+    ],
+    "key_tensions": [
+      "Intergenerational: current consumption vs future climate stability",
+      "North-South: historical responsibility vs current development rights",
+      "Growth-stability: GDP expansion vs planetary boundary constraints"
+    ],
+    "key_mechanisms": [
+      "Carbon pricing (mitigation tool, regressive without redistribution)",
+      "Technology transfer (North-South mitigation capacity building)",
+      "Adaptation finance (reactive investment in climate-resilient infrastructure)",
+      "Degrowth policy (consumption caps, work-time reduction, sufficiency norms)"
+    ],
+    "key_absences": [
+      "Geoengineering as fourth reading (solar radiation management, carbon removal)",
+      "Non-state actor enforcement (corporate voluntary commitments, investor pressure)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that humanity must respond to anthropogenic climate change, grounded in IPCC consensus on warming attribution and UNFCCC framework legitimacy",
+    "authority_description": "Scientific consensus (IPCC) establishes the problem; UNFCCC/Paris framework provides procedural legitimacy; national sovereignty determines implementation",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence",
+    "is_contested_kernel": true,
+    "kernel_id": "climate_response_obligation",
+    "readings": [
+      {
+        "reading_id": "mitigation_priority",
+        "commitment": "Prevent future harm by rapid decarbonization; intergenerational justice requires minimizing warming",
+        "authority_grounding": "IPCC carbon budgets, Paris 1.5°C target, precautionary principle",
+        "sibling_readings": [
+          "adaptation_priority",
+          "degrowth_reading"
+        ],
+        "expected_structural_delta": "Future generations primary beneficiaries; current generation bears transition costs; Global North bears disproportionate mitigation burden due to historical emissions; fossil capital enters victim set via stranded assets"
+      },
+      {
+        "reading_id": "adaptation_priority",
+        "commitment": "Accept 2-3°C warming as inevitable; invest in resilience rather than costly prevention",
+        "authority_grounding": "Cost-benefit analysis, technological optimism, revealed preference of continued emissions growth",
+        "sibling_readings": [
+          "mitigation_priority",
+          "degrowth_reading"
+        ],
+        "expected_structural_delta": "Current generation primary beneficiary (avoids transition costs); future generations and Global South enter victim set (bear climate impacts without prevention); fossil capital protected; adaptation investment concentrates in wealthy regions"
+      },
+      {
+        "reading_id": "degrowth_reading",
+        "commitment": "Reduce material throughput to stay within planetary boundaries; sufficiency over efficiency",
+        "authority_grounding": "Ecological economics, planetary boundaries framework, critique of green growth feasibility",
+        "sibling_readings": [
+          "mitigation_priority",
+          "adaptation_priority"
+        ],
+        "expected_structural_delta": "Planetary systems primary beneficiary (reduced extraction pressure); current Global North consumption patterns enter victim set (lifestyle reduction); Global South development constrained unless North reduces first; capital accumulation itself becomes extractive mechanism"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "mitigation_priority",
+      "human_readable": "Mitigation-Priority Reading (Prevent Future Harm via Decarbonization)",
+      "structural_delta": "Rapid emissions reduction to minimize warming; intergenerational justice via prevention",
+      "primary_observable": "Carbon budget compliance, renewable energy deployment rates, fossil fuel phase-out timelines",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "future_generations",
+      "victim": "current_generation_consumers, fossil_capital",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline intergenerational victim structure and mitigation constraint architecture"
+    },
+    {
+      "claim_id": "adaptation_priority",
+      "human_readable": "Adaptation-Priority Reading (Accept Warming, Invest in Resilience)",
+      "structural_delta": "Accept 2-3°C warming; prioritize adaptation investment over mitigation costs",
+      "primary_observable": "Adaptation finance flows, climate-resilient infrastructure investment, revealed emissions trajectories",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "current_generation_consumers, fossil_capital",
+      "victim": "future_generations, global_south",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: inverts victim structure from mitigation reading; protects current consumption"
+    },
+    {
+      "claim_id": "degrowth_reading",
+      "human_readable": "Degrowth Reading (Reduce Throughput, Planetary Boundaries)",
+      "structural_delta": "Material throughput reduction as primary response; sufficiency over technological efficiency",
+      "primary_observable": "GDP decoupling from emissions (absolute vs relative), work-time reduction policies, consumption cap proposals",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "planetary_systems, global_south_development_space",
+      "victim": "global_north_consumption, capital_accumulation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: challenges growth paradigm itself; distinct beneficiary/victim structure from both mitigation and adaptation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "mitigation_priority",
+      "kernel_id": "climate_response_obligation",
+      "reading_id": "mitigation_priority"
+    },
+    {
+      "claim_id": "adaptation_priority",
+      "kernel_id": "climate_response_obligation",
+      "reading_id": "adaptation_priority"
+    },
+    {
+      "claim_id": "degrowth_reading",
+      "kernel_id": "climate_response_obligation",
+      "reading_id": "degrowth_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_geoengineering_fourth_reading",
+      "description": "Geoengineering (solar radiation management, carbon dioxide removal) constitutes a potential fourth reading of the climate-response kernel, with distinct victim structure (governance risk, unilateral deployment, termination shock). Deferred due to three-reading budget and lower current policy salience.",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_north_south_equity",
+      "description": "All three readings embed contested assumptions about North-South equity (common but differentiated responsibilities, climate debt, development rights). The equity dimension is orthogonal to the mitigation/adaptation/degrowth axis but shapes extractiveness within each reading.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_technology_feasibility",
+      "description": "Mitigation reading assumes green growth feasibility (absolute decoupling of GDP from emissions); degrowth reading contests this. If decoupling is infeasible, mitigation collapses into degrowth. If feasible, degrowth is unnecessary. Empirical question with high structural stakes.",
+      "source": "Independence Testing (§3)"
+    },
+    {
+      "id": "omega_discount_rate",
+      "description": "Intergenerational victim structure depends on discount rate choice (pure time preference vs declining marginal utility). Low discount rates favor mitigation; high rates favor adaptation. The discount rate itself is a contested normative parameter, not an observable.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings share the climate-response obligation substrate but instantiate genuinely different constraints with distinct beneficiary/victim structures and extractiveness profiles. North-South equity and discount rate choice are orthogonal dimensions documented as omegas."
+  },
+  "_seed_id": "climate_response_kernel"
+}

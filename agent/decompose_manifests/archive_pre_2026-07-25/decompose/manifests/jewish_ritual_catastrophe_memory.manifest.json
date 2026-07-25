@@ -1,0 +1,237 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Collective Memory / Ritual Studies",
+  "family_id": "ritual_catastrophe_memory_2026",
+  "topic_summary": "Analysis of Jewish commemorative rituals (Tisha B'Av, Passover) as transmission mechanisms for catastrophe-memory across millennia. The kernel question: do these practices preserve survival-competence (adaptive capacity for future catastrophes) or only mourning-practice (symbolic continuity without operational yield)?",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Tisha B'Av (annual fast commemorating Temple destructions 586 BCE, 70 CE)",
+      "Passover (exodus commemoration with prescribed ritual sequence)",
+      "Rabbinic authority (interpretive tradition maintaining ritual fidelity)",
+      "Diasporic communities (distributed practice-keepers across geography/time)",
+      "Catastrophe-memory substrate (layered destructions: Temples, expulsions, Shoah)",
+      "Survival-competence mechanisms (pattern recognition, resource pooling, rapid mobility)"
+    ],
+    "key_tensions": [
+      "Ritual fidelity (preservation of exact commemorative form) vs adaptive revision (updating practice for current threat environment)",
+      "Mourning-as-identity (catastrophe as defining communal marker) vs mourning-as-preparation (catastrophe as training scenario)"
+    ],
+    "key_mechanisms": [
+      "Annual re-enactment (Tisha B'Av fasting/lamentations; Passover seder sequence)",
+      "Intergenerational transmission (Passover 'you shall tell your child' mandate)",
+      "Distributed redundancy (no central authority required for practice continuation)"
+    ],
+    "key_absences": [
+      "Empirical measurement of whether ritual participation correlates with demonstrated survival competence in actual catastrophes (Shoah survival rates, Soviet emigration success, etc.)",
+      "Comparison class: other catastrophe-memory rituals (Armenian Genocide commemorations, Indigenous land-loss ceremonies) for structural convergence/divergence"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Catastrophe-memory rituals stabilized by rabbinic interpretive tradition across 2500+ years, claiming to transmit essential knowledge about survival through cyclical re-enactment.",
+    "authority_description": "Rabbinic tradition grounds interpretive legitimacy in unbroken chain (mesorah) from Sinai revelation; authority derives from fidelity to received practice rather than demonstrated efficacy.",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_text_system",
+    "is_contested_kernel": true,
+    "kernel_id": "catastrophe_memory_transmission",
+    "readings": [
+      {
+        "reading_id": "symbol_continuity_reading",
+        "commitment": "Ritual preserves identity and mourning-practice as intrinsic communal good; transmission of symbolic form is the survival mechanism.",
+        "authority_grounding": "Rabbinic fidelity to received practice; continuity itself as sacred obligation.",
+        "sibling_readings": [
+          "operational_competence_reading",
+          "hybrid_embedded_reading"
+        ],
+        "expected_structural_delta": "High ritual fidelity constraint, low operational adaptation; beneficiary is communal identity continuity; victim is adaptive capacity sacrificed to preserve form. Type: tangled_rope (identity maintenance vs environmental responsiveness)."
+      },
+      {
+        "reading_id": "operational_competence_reading",
+        "commitment": "Ritual encodes and transmits survival competence through pattern recognition, resource coordination, and threat assessment rehearsal.",
+        "authority_grounding": "Empirical survival outcomes; retrospective validation through demonstrated catastrophe navigation.",
+        "sibling_readings": [
+          "symbol_continuity_reading",
+          "hybrid_embedded_reading"
+        ],
+        "expected_structural_delta": "Ritual elements evaluated by operational yield (e.g., Passover rapid-departure readiness, Tisha B'Av resource-scarcity training). Beneficiary is future survival capacity; constraint type: rope (coordination mechanism) or mountain (if competence extraction is universal law). Victim: potentially those who mistake symbol for substance."
+      },
+      {
+        "reading_id": "hybrid_embedded_reading",
+        "commitment": "Survival competence is encoded within symbolic form; the two are inseparable. Ritual fidelity transmits operational capacity through non-propositional knowledge embedded in practice.",
+        "authority_grounding": "Phenomenological participation; knowledge-through-doing rather than knowledge-about.",
+        "sibling_readings": [
+          "symbol_continuity_reading",
+          "operational_competence_reading"
+        ],
+        "expected_structural_delta": "Ritual form and operational function are co-constitutive. Altering form degrades function, but function only exists through enacted form. Type: likely rope (coordination through shared practice) with mountain substrate (embodied knowledge as physical constraint). No clear victim unless practice is discontinued."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "symbol_continuity_reading",
+        "reading_b": "operational_competence_reading",
+        "basis": "Symbol-continuity reading treats ritual form as intrinsically valuable independent of operational outcomes; operational-competence reading treats form as instrumentally valuable only insofar as it transmits survival capacity. No single framework can simultaneously hold both 'ritual fidelity is sacred regardless of survival yield' and 'ritual value derives entirely from survival yield.'"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "symbol_continuity_reading",
+      "human_readable": "Symbol Continuity Reading (Ritual as Identity Preservation)",
+      "structural_delta": "Ritual transmission valued for preserving communal identity and mourning-practice form, independent of operational survival outcomes.",
+      "primary_observable": "Ritual fidelity metrics (practice adherence rates, textual/liturgical stability over time); identity continuity measures (self-identification rates, boundary maintenance).",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "communal_identity_continuity",
+      "victim": "adaptive_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading of kernel; tangled_rope with clear beneficiary/victim structure; establishes baseline for contested interpretation."
+    },
+    {
+      "claim_id": "operational_competence_reading",
+      "human_readable": "Operational Competence Reading (Ritual as Survival Training)",
+      "structural_delta": "Ritual encodes and transmits survival competence through pattern recognition, resource coordination, and threat-response rehearsal mechanisms.",
+      "primary_observable": "Correlation between ritual participation and demonstrated survival outcomes (emigration success rates, resource pooling capacity, threat-pattern recognition in crisis events); analysis of ritual elements for operational analogs (Passover haste preparation, Tisha B'Av resource scarcity simulation).",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "future_survival_capacity",
+      "victim": "those_mistaking_symbol_for_substance",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiomatically contradicts symbol_continuity_reading; operationalizes alternative constraint structure; testable empirical claims."
+    },
+    {
+      "claim_id": "hybrid_embedded_reading",
+      "human_readable": "Hybrid Embedded Reading (Competence Through Form)",
+      "structural_delta": "Survival competence is inseparable from symbolic form; operational capacity exists only through enacted ritual practice as non-propositional embodied knowledge.",
+      "primary_observable": "Phenomenological evidence of practice-dependent knowledge transmission; degradation studies (whether ritual modification reduces survival competence); ethnographic accounts of knowledge-through-participation.",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "integrated_practice_communities",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Mediating position between first two readings; tests whether dichotomy is false; pluralist framework candidate."
+    },
+    {
+      "claim_id": "distributed_redundancy_mechanism",
+      "human_readable": "Distributed Redundancy as Resilience Infrastructure",
+      "structural_delta": "No central authority required for practice continuation; geographically distributed communities maintain ritual independently, providing catastrophe-resistant transmission.",
+      "primary_observable": "Network topology of practice communities; survival analysis of transmission chains through catastrophes; comparison with centralized ritual systems.",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "symbol_continuity_reading",
+        "operational_competence_reading",
+        "hybrid_embedded_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: feeds into all three readings as shared substrate; mountain-type constraint that all readings build upon; can be addressed in omega context without separate generation."
+    },
+    {
+      "claim_id": "rabbinic_authority_drift_absorption",
+      "human_readable": "Rabbinic Authority as Drift-Absorption Layer",
+      "structural_delta": "Interpretive authority allows covert revision while maintaining surface fidelity; new catastrophes integrated through halakhic innovation presented as tradition.",
+      "primary_observable": "Historical analysis of responsa literature; documentation of ritual modifications post-Shoah; comparison of pre-70 CE vs rabbinic-era practices.",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "rabbinic_interpretive_authority",
+      "victim": "practice_transparency",
+      "downstream_of": [],
+      "feeds_into": [
+        "symbol_continuity_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: secondary mechanism; primarily relevant to symbol_continuity_reading; commitment-system internal dynamics rather than kernel contest."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "symbol_continuity_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "symbol_continuity_reading"
+    },
+    {
+      "claim_id": "operational_competence_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "operational_competence_reading"
+    },
+    {
+      "claim_id": "hybrid_embedded_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "hybrid_embedded_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "distributed_redundancy_mechanism",
+      "structural_delta": "Geographically distributed practice continuation without central authority",
+      "hypothesis": "mountain",
+      "deferral_reason": "Shared substrate feeding all three readings; mountain constraint that does not require separate generation; omega context sufficient."
+    },
+    {
+      "claim_id": "rabbinic_authority_drift_absorption",
+      "structural_delta": "Interpretive authority allows covert revision while maintaining surface fidelity",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Secondary mechanism primarily relevant to symbol_continuity reading; commitment-system internal dynamics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_survival_correlation",
+      "description": "Do ritual participation rates correlate with demonstrated survival outcomes? Shoah survival data, Soviet emigration success, and other catastrophe navigation metrics would test operational_competence_reading's core claim. Absence of this measurement is structural gap.",
+      "source": "Absence Inventory (§1.1) + operational_competence_reading testability"
+    },
+    {
+      "id": "omega_comparison_class_convergence",
+      "description": "Do other multi-generational catastrophe-memory rituals (Armenian, Indigenous, Chinese diaspora) exhibit similar structure? Convergent evolution would strengthen mountain classification of distributed redundancy; divergence would suggest cultural contingency.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 3"
+    },
+    {
+      "id": "omega_shoah_integration_mechanism",
+      "description": "How was Shoah integrated into existing catastrophe-memory framework? Did Tisha B'Av kinot (lamentations) absorb it as continuous with Temple destructions, or did it require new ritual form? Tests drift_status classification and authority structure adaptation capacity.",
+      "source": "Dark Matter Probe 2 (Absence as Figure) + rabbinic_authority_drift_absorption deferred axis"
+    },
+    {
+      "id": "omega_kernel_collapse_risk",
+      "description": "If hybrid_embedded_reading is correct, the dichotomy between symbol and competence is false—both readings collapse into one constraint where form IS function. This would require reclassification from contested kernel to single axis with observer-position variance.",
+      "source": "§1.3-K coherence check + hybrid_embedded_reading structural mediation"
+    },
+    {
+      "id": "omega_pre_rabbinic_substrate",
+      "description": "Pre-70 CE practice vs post-destruction rabbinic codification: is current ritual form continuous with Second Temple practice, or is it rabbinic innovation claiming continuity? If innovation, operational_competence claims about 2500-year transmission may be overstated.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + Historical extraction gap"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Empirical claims about survival competence correlation require domain expertise in demographic history, Holocaust studies, and ritual studies that exceed model training depth. operational_competence_reading makes testable claims the model cannot validate. Omega_empirical_survival_correlation documents this limitation. Kernel structure itself is within competence (commitment system recognition, reading decomposition), but evidentiary basis for operational claims is beyond training."
+  },
+  "_seed_id": "jewish_ritual_catastrophe_memory"
+}

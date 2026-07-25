@@ -1,0 +1,225 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Housing Markets / Institutional Analysis",
+  "family_id": "housing_price_formation_kernel",
+  "topic_summary": "Analysis of the contested commitment that 'housing prices are set by a natural law of supply and demand.' The naturalist reading treats price formation as a mountain (inevitable equilibrium, no beneficiaries). The institutional reading treats clearing prices as constructed by zoning, lending standards, tax policy, and platform intermediaries, with identifiable beneficiaries (incumbent owners, lenders, intermediaries) and victims (renters, first-time buyers). The contest is whether 'the market price' names a natural fact or an enforced allocation presented as one.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Housing market (domain of analysis)",
+      "Incumbent homeowners (beneficiaries under institutional reading)",
+      "First-time buyers (victims under institutional reading)",
+      "Renters (victims under institutional reading)",
+      "Lending institutions (beneficiaries under institutional reading)",
+      "Platform intermediaries / real estate industry (beneficiaries under institutional reading)",
+      "Zoning authorities (mechanism operators under institutional reading)"
+    ],
+    "key_tensions": [
+      "Natural equilibrium vs constructed allocation (naturalist vs institutional readings)",
+      "Price-taker assumption vs price-making power (market participant characterization)"
+    ],
+    "key_mechanisms": [
+      "Zoning restrictions (supply constraint mechanism)",
+      "Mortgage lending standards (access constraint mechanism)",
+      "Tax treatment of housing (subsidy/penalty mechanism)",
+      "Platform intermediation (information/transaction cost mechanism)"
+    ],
+    "key_absences": [
+      "Land as distinct from improvements (classical political economy distinction)",
+      "Positional good dynamics (housing as relative status marker)",
+      "Intergenerational wealth transfer mechanism (inheritance/gift down payment)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "price_formation_kernel",
+      "human_readable": "Price Formation Kernel (Natural Law vs Institutional Construction)",
+      "structural_delta": "Whether housing price formation is a natural equilibrium process or an institutionally constructed allocation mechanism",
+      "primary_observable": "Presence/absence of identifiable beneficiaries from price level; regulatory variance in price formation across jurisdictions with similar supply/demand fundamentals",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "reading_dependent",
+      "victim": "reading_dependent",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with structurally distinct readings that emit different constraint types and beneficiary structures"
+    },
+    {
+      "claim_id": "land_improvement_conflation",
+      "human_readable": "Land-Improvement Conflation (Ricardian Rent Erasure)",
+      "structural_delta": "Treating land (fixed supply, location value) and improvements (reproducible capital) as single commodity 'housing'",
+      "primary_observable": "Price decomposition into land vs structure value; land value capture mechanisms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "landowners",
+      "victim": "labor_income_earners",
+      "downstream_of": [],
+      "feeds_into": [
+        "price_formation_kernel"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent structural dimension; classical political economy absence; feeds into institutional reading of kernel"
+    },
+    {
+      "claim_id": "positional_good_dynamics",
+      "human_readable": "Positional Good Dynamics (Housing as Status Competition)",
+      "structural_delta": "Housing demand driven by relative position in status hierarchy rather than absolute shelter need",
+      "primary_observable": "Price premium for school district ranking; neighborhood sorting by income percentile",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "price_formation_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within institutional reading's beneficiary structure; lower centrality than land_improvement_conflation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "naturalist_reading",
+      "kernel_id": "price_formation_kernel",
+      "reading_id": "naturalist_reading"
+    },
+    {
+      "claim_id": "institutional_reading",
+      "kernel_id": "price_formation_kernel",
+      "reading_id": "institutional_reading"
+    },
+    {
+      "claim_id": "georgist_reading",
+      "kernel_id": "price_formation_kernel",
+      "reading_id": "georgist_reading"
+    },
+    {
+      "claim_id": "financialization_reading",
+      "kernel_id": "price_formation_kernel",
+      "reading_id": "financialization_reading"
+    },
+    "land_improvement_conflation"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "positional_good_dynamics",
+      "structural_delta": "Housing demand driven by relative status position rather than absolute need",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured within institutional reading's beneficiary structure; lower centrality than selected axes"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do institutional and financialization readings collapse into one? Both identify beneficiaries and constructed allocation, but financialization emphasizes asset-price feedback loops and credit expansion as distinct mechanisms. Kept separate pending generation test.",
+      "source": "§1.3-K coherence check"
+    },
+    {
+      "id": "omega_georgist_mountain_claim",
+      "description": "Does georgist reading's land-rent mountain survive institutional critique? If land value is itself constructed by zoning/infrastructure, the mountain may be a piton. Generation will test whether land scarcity is natural or policy-generated.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_intergenerational_transfer",
+      "description": "Inheritance and parental down payment assistance as wealth transfer mechanism absent from all readings. May warrant separate axis in future expansion if it has independent epsilon from financialization reading.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_comparative_jurisdiction",
+      "description": "Cross-national variance in price formation (Vienna social housing, Singapore public housing, Tokyo zoning liberalization) may falsify naturalist reading's universality claim. Omega pending empirical grounding.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: georgist reading treats land scarcity as mountain but zoning/infrastructure policy may construct scarcity, making it a piton. Generated omega_georgist_mountain_claim to bound this uncertainty. Four readings selected based on distinct interpretive commitments that would emit structurally different constraints."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The commitment that 'housing prices are determined by supply and demand' — a shared substrate all parties argue about, but read differently in ways that change what it constrains and who benefits.",
+    "authority_description": "Economic orthodoxy (naturalist), institutional economics (institutional), classical political economy (georgist), heterodox finance theory (financialization). Authority grounded in disciplinary tradition and empirical interpretation.",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "price_formation_kernel",
+    "readings": [
+      {
+        "reading_id": "naturalist_reading",
+        "commitment": "Price formation is a natural equilibrium process reflecting objective scarcity and preference",
+        "authority_grounding": "Neoclassical economics / market fundamentalism",
+        "sibling_readings": [
+          "institutional_reading",
+          "georgist_reading",
+          "financialization_reading"
+        ],
+        "expected_structural_delta": "Mountain constraint: no beneficiaries, no victims, no extractiveness. Price is discovered, not constructed. Policy interventions create deadweight loss."
+      },
+      {
+        "reading_id": "institutional_reading",
+        "commitment": "Price formation is constructed by zoning, lending standards, tax treatment, and intermediary platforms",
+        "authority_grounding": "Institutional economics / regulatory analysis",
+        "sibling_readings": [
+          "naturalist_reading",
+          "georgist_reading",
+          "financialization_reading"
+        ],
+        "expected_structural_delta": "Tangled rope: identifiable beneficiaries (incumbent owners, lenders, intermediaries) and victims (renters, first-time buyers). Extractiveness moderate to high depending on regulatory restrictiveness."
+      },
+      {
+        "reading_id": "georgist_reading",
+        "commitment": "Price formation separates land rent (unearned, location-based) from improvement value (earned, labor/capital-based)",
+        "authority_grounding": "Classical political economy / land value taxation tradition",
+        "sibling_readings": [
+          "naturalist_reading",
+          "institutional_reading",
+          "financialization_reading"
+        ],
+        "expected_structural_delta": "Hybrid: land component is mountain (fixed supply, location scarcity), but rent capture is snare (landowners extract from labor without producing). Improvement component is rope (coordination of production)."
+      },
+      {
+        "reading_id": "financialization_reading",
+        "commitment": "Price formation is driven by credit expansion, asset-price feedback loops, and housing-as-financial-asset demand",
+        "authority_grounding": "Heterodox finance theory / Minsky-Keen credit dynamics",
+        "sibling_readings": [
+          "naturalist_reading",
+          "institutional_reading",
+          "georgist_reading"
+        ],
+        "expected_structural_delta": "Tangled rope with high extractiveness: financial sector benefits from credit expansion and transaction volume; households bear debt service and crash risk. Price level decoupled from shelter value, driven by leverage availability."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "naturalist_reading",
+        "reading_b": "institutional_reading",
+        "basis": "Naturalist axiom (prices are discovered facts) and institutional axiom (prices are constructed allocations) cannot both be true. If price is constructed, it is not discovered; if discovered, construction is epiphenomenal."
+      },
+      {
+        "reading_a": "naturalist_reading",
+        "reading_b": "georgist_reading",
+        "basis": "Naturalist treats all price components as earned returns to scarcity/productivity. Georgist axiom that land rent is unearned contradicts this — no framework holds both 'all returns are earned' and 'land returns are unearned' simultaneously."
+      },
+      {
+        "reading_a": "naturalist_reading",
+        "reading_b": "financialization_reading",
+        "basis": "Naturalist axiom (price reflects real scarcity/preference) contradicts financialization axiom (price reflects credit availability and speculative feedback). If price is credit-driven, it does not reflect real scarcity; if it reflects real scarcity, credit is neutral."
+      }
+    ]
+  },
+  "_seed_id": "market_price_naturalization"
+}

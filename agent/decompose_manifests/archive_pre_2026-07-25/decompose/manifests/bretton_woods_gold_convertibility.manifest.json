@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Political Economy / Monetary History / International Law",
+  "family_id": "bretton_woods_dollar_gold_interpretation",
+  "topic_summary": "Analysis of the Bretton Woods Agreement's dollar-gold convertibility framework as a contested kernel. Two primary readings emerge: strict convertibility (binding obligation constraining U.S. monetary expansion, benefiting creditor nations) versus policy-flexible interpretation (prioritizing domestic stability, enabling suspension as in 1971, shifting burdens to dollar holders). The analytical question centers on whether these represent genuinely different constraint structures or merely different policy preferences within a single constraint.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "United States (hegemon, reserve currency issuer, debtor by 1960s)",
+      "Bretton Woods Agreement 1944 (founding treaty establishing dollar-gold convertibility at $35/oz)",
+      "Creditor Nations (France, Germany, others demanding gold conversion)",
+      "International Monetary Fund (institutional arbiter, enforcement mechanism)",
+      "Gold Standard (pre-existing commitment system, template for Bretton Woods)"
+    ],
+    "key_tensions": [
+      "U.S. domestic monetary autonomy vs international convertibility obligation",
+      "Creditor nations' legal claims vs U.S. strategic interests (Cold War financing, Great Society programs)"
+    ],
+    "key_mechanisms": [
+      "Article IV convertibility obligation (treaty mechanism linking dollar to gold)",
+      "Gold window (operational mechanism: foreign central banks exchange dollars for gold at Fed)",
+      "Nixon Shock August 1971 (unilateral suspension, treaty breach vs force majeure)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for convertibility breach — IMF lacked credible sanction power against hegemon",
+      "Adjustment mechanism for structural U.S. deficits — Triffin dilemma not addressed in treaty design"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Dollar-gold convertibility at $35/oz as fixed monetary anchor stabilizing international payments",
+    "authority_description": "Treaty authority (Bretton Woods Agreement 1944), interpreted by IMF and enforced through creditor nation gold redemption claims",
+    "drift_status": "absent",
+    "candidate_pattern": "dynastic_lineage",
+    "is_contested_kernel": true,
+    "kernel_id": "dollar_gold_convertibility",
+    "readings": [
+      {
+        "reading_id": "strict_convertibility_reading",
+        "commitment": "Article IV convertibility as binding legal obligation constraining U.S. monetary policy",
+        "authority_grounding": "Treaty textualism / international law positivism",
+        "sibling_readings": [
+          "policy_flexible_reading",
+          "triffin_structural_reading"
+        ],
+        "expected_structural_delta": "U.S. enters victim set (constrained issuer); creditor nations beneficiaries with enforceable claims; high extractiveness from U.S. domestic policy space"
+      },
+      {
+        "reading_id": "policy_flexible_reading",
+        "commitment": "Convertibility as conditional obligation subordinate to domestic economic stability",
+        "authority_grounding": "Sovereign prerogative / realist international relations",
+        "sibling_readings": [
+          "strict_convertibility_reading",
+          "triffin_structural_reading"
+        ],
+        "expected_structural_delta": "Dollar holders enter victim set (devaluation risk); U.S. exits victim set (regains monetary autonomy); extractiveness shifts from domestic policy to external creditors"
+      },
+      {
+        "reading_id": "triffin_structural_reading",
+        "commitment": "Convertibility as inherently unsustainable design flaw requiring systemic revision",
+        "authority_grounding": "Structural economics / systems analysis",
+        "sibling_readings": [
+          "strict_convertibility_reading",
+          "policy_flexible_reading"
+        ],
+        "expected_structural_delta": "Both U.S. and creditor nations in victim set of impossible trilemma; beneficiary is post-Bretton Woods floating regime; high extractiveness from both parties until collapse"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_convertibility_reading",
+        "reading_b": "policy_flexible_reading",
+        "basis": "Strict convertibility axiom holds treaty obligation as supreme constraint on monetary sovereignty; policy-flexible axiom holds domestic stability as trump card against external commitments. No coherent framework simultaneously treats both as foundational—accepting one as true requires rejecting the other's priority claim."
+      },
+      {
+        "reading_a": "triffin_structural_reading",
+        "reading_b": "strict_convertibility_reading",
+        "basis": "Triffin axiom holds the system was structurally impossible from inception (contradiction between liquidity provision and convertibility maintenance); strict convertibility axiom holds the treaty obligation was coherent and enforceable. A framework holding Triffin's structural impossibility cannot simultaneously hold that strict enforcement was feasible."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_convertibility_reading",
+      "human_readable": "Strict Convertibility Reading (Binding Legal Obligation)",
+      "structural_delta": "Treaty convertibility as supreme constraint on U.S. monetary expansion",
+      "primary_observable": "U.S. gold reserves vs dollar liabilities 1958-1971; French gold redemption demands",
+      "epsilon_bin": "high",
+      "hypothesis": "rope",
+      "beneficiary": "creditor_nations",
+      "victim": "u_s_domestic_policy_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: establishes the binding-obligation pole of the kernel contest"
+    },
+    {
+      "claim_id": "policy_flexible_reading",
+      "human_readable": "Policy-Flexible Reading (Domestic Stability Priority)",
+      "structural_delta": "Convertibility subordinate to domestic economic management",
+      "primary_observable": "Nixon administration internal deliberations 1971; Fed discount rate decisions vs gold outflow",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "u_s_domestic_policy_autonomy",
+      "victim": "dollar_holders_globally",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: establishes the sovereign-prerogative pole, structurally inverts victim/beneficiary from reading 1"
+    },
+    {
+      "claim_id": "triffin_structural_reading",
+      "human_readable": "Triffin Structural Reading (Inherent Design Flaw)",
+      "structural_delta": "Convertibility system inherently unsustainable due to liquidity-confidence tradeoff",
+      "primary_observable": "Triffin dilemma mathematics: U.S. deficits required for liquidity vs gold reserve adequacy",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "both_u_s_and_creditor_nations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: provides structural impossibility frame, treats both other readings as operating within a flawed system"
+    },
+    {
+      "claim_id": "cold_war_strategic_override",
+      "human_readable": "Cold War Strategic Override (Convertibility Subordinate to Alliance Maintenance)",
+      "structural_delta": "U.S. security commitments override treaty obligations when in conflict",
+      "primary_observable": "Vietnam War financing 1965-1971; NATO defense spending vs gold window pressure",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "u_s_strategic_interests",
+      "victim": "treaty_credibility_system",
+      "downstream_of": [
+        "policy_flexible_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as operational consequence of policy_flexible_reading; adds mechanism detail but not independent constraint structure"
+    },
+    {
+      "claim_id": "imf_enforcement_void",
+      "human_readable": "IMF Enforcement Void (Institutional Impotence Against Hegemon)",
+      "structural_delta": "IMF lacks credible enforcement mechanism when debtor is system anchor",
+      "primary_observable": "IMF Article IV consultation history; absence of sanctions post-1971 suspension",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "policy_flexible_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional weakness enabling policy_flexible_reading, but not independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strict_convertibility_reading",
+      "kernel_id": "dollar_gold_convertibility",
+      "reading_id": "strict_convertibility_reading"
+    },
+    {
+      "claim_id": "policy_flexible_reading",
+      "kernel_id": "dollar_gold_convertibility",
+      "reading_id": "policy_flexible_reading"
+    },
+    {
+      "claim_id": "triffin_structural_reading",
+      "kernel_id": "dollar_gold_convertibility",
+      "reading_id": "triffin_structural_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "cold_war_strategic_override",
+      "structural_delta": "Security commitments override treaty obligations",
+      "hypothesis": "snare",
+      "deferral_reason": "Operational mechanism within policy_flexible_reading framework; not independent constraint axis"
+    },
+    {
+      "claim_id": "imf_enforcement_void",
+      "structural_delta": "IMF lacks enforcement power against hegemon",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Institutional precondition enabling policy_flexible_reading; low independent analytical yield"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_bretton_woods_ii_parallel",
+      "description": "Does the current dollar-treasury system (Bretton Woods II) instantiate the same kernel contest with China as creditor? If so, is the strict-convertibility reading now a Piton (atrophied norm) rather than Rope?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + historical recursion"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do strict_convertibility and policy_flexible readings collapse into one constraint (treaty obligation) with two observer positions (creditor vs debtor)? Independence test: they emit different epsilon bins and victim sets, but share the treaty text as observable. Bounded as genuine kernel per §1.3-K, but collapse risk noted.",
+      "source": "§1.3-K coherence signal"
+    },
+    {
+      "id": "omega_triffin_mountain_validity",
+      "description": "Is Triffin dilemma a true Mountain (mathematical constraint on any reserve currency system) or a Rope (coordination failure solvable via SDR-like mechanisms)? Classification affects whether it constrains future digital currency regimes.",
+      "source": "F03 (Hasty Generalization) + mountain classification uncertainty"
+    },
+    {
+      "id": "omega_enforcement_absence",
+      "description": "Extraction cataloged enforcement mechanism absence (§1.1). Does this absence convert strict_convertibility_reading from Rope to Scaffold (unenforceable norm)? If so, the kernel contest may be asymmetric: one reading enforceable (policy_flexible via unilateral action), one not.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + imf_enforcement_void deferred axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: triffin_structural_reading classified as Mountain (mathematical impossibility) but may be Rope (coordination problem with institutional solutions like SDR expansion). Generated omega_triffin_mountain_validity. Kernel recognition proceeded: three readings selected pass independence test (different victim sets, different epsilon, different beneficiaries). omega_reading_collapse_risk bounds residual uncertainty about strict/flexible distinction."
+  },
+  "_seed_id": "bretton_woods_gold_convertibility"
+}

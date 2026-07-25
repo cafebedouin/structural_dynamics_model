@@ -1,0 +1,217 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Infrastructure Governance / Disaster Preparedness / Institutional Memory",
+  "family_id": "dutch_flood_preparedness_generational",
+  "topic_summary": "Analysis of Dutch flood-control preparedness across non-catastrophe generations following the 1953 North Sea flood. The Delta Works infrastructure project (1953-1997) and ongoing dike inspection/drill regimes raise the question: do memorial practices and routine exercises preserve live competence, or do they ossify into symbolic husks that create false confidence while actual preparedness atrophies?",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Delta Committee (established Feb 18, 1953; advisory body for flood prevention)",
+      "Rijkswaterstaat (national water authority; coordinates with water boards)",
+      "Water Boards/Waterschappen (2,700 in 1953, now 21; local autonomous flood management)",
+      "Delta Works (coastal defense system, 1953-1997)",
+      "Hydraulic Works Strengthening Programme (current inter-agency coordination)",
+      "IHE Delft (knowledge transfer institution; 'second generation' conduit)"
+    ],
+    "key_tensions": [
+      "Institutional confidence vs actual preparedness (1953 warnings mistaken for routine; 'unquestioning trust' in dikes)",
+      "Local autonomy vs centralized coordination (water boards refused to cede authority to Rijkswaterstaat)",
+      "Risk-averse sectoral organization vs adaptive management (petrification; 'answer to yesterday's challenges')"
+    ],
+    "key_mechanisms": [
+      "Drill and inspection routines (post-1953 regime to maintain preparedness)",
+      "Knowledge transfer via 'sender-receiver approach' (IHE Delft second-generation scholars)",
+      "Democratic water board governance (4-year elected general boards)",
+      "Infrastructure upgrade cycles (aging structures, evolving safety standards, sea level rise)"
+    ],
+    "key_absences": [
+      "Measurement of actual competence retention vs symbolic compliance (no observable distinguishing live knowledge from memorial performance)",
+      "Catastrophe-independent validation mechanism (how to test preparedness without a flood)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Post-1953 flood preparedness regime stabilized through drills, inspections, and Delta Works infrastructure as commitment to 'never again'",
+    "authority_description": "Rijkswaterstaat and water boards derive legitimacy from technical expertise and democratic mandate, but preparedness authority grounded in fidelity to 1953 catastrophe memory",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Petrification (memorial practices absorb drift; revision of preparedness concept institutionally difficult)",
+    "is_contested_kernel": true,
+    "kernel_id": "preparedness_retention",
+    "readings": [
+      {
+        "reading_id": "husk_reading",
+        "commitment": "Memorial practices and routine compliance preserve preparedness across generations",
+        "authority_grounding": "Institutional continuity; symbolic fidelity to 1953 memory",
+        "sibling_readings": [
+          "competence_reading"
+        ],
+        "expected_structural_delta": "Drills become ritualized performance; inspection routines satisfy bureaucratic requirements without testing actual response capacity; 'unquestioning trust' in infrastructure substitutes for live knowledge; beneficiary is institutional legitimacy; victim is actual disaster response capability"
+      },
+      {
+        "reading_id": "competence_reading",
+        "commitment": "Live exercised knowledge maintained through active practice and knowledge transfer",
+        "authority_grounding": "Technical expertise; demonstrated capability; adaptive learning",
+        "sibling_readings": [
+          "husk_reading"
+        ],
+        "expected_structural_delta": "Drills test and update response protocols; inspections identify and remediate actual vulnerabilities; knowledge transfer (IHE Delft 'second generation') maintains operational competence; infrastructure upgrades reflect evolving risk models; no single beneficiary (distributed resilience)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "husk_reading",
+        "reading_b": "competence_reading",
+        "basis": "Husk reading holds that symbolic continuity (memorial, routine) is sufficient for preparedness retention; competence reading holds that preparedness requires active validation and knowledge refresh independent of symbolic practice. No framework can hold both: either symbolic fidelity preserves capability (husk) or capability requires continuous active testing (competence). The 1953 case ('warnings mistaken for routine') suggests husk failure, but post-1953 regime institutionalized both readings simultaneously without resolving which mechanism actually retains preparedness."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "husk_reading",
+      "human_readable": "Husk Reading: Memorial Preparedness (Symbolic Retention)",
+      "structural_delta": "Preparedness retained through memorial practices, routine compliance, and institutional continuity without catastrophe-independent validation",
+      "primary_observable": "Drill participation rates, inspection completion metrics, infrastructure maintenance budgets; absence of observable distinguishing symbolic compliance from actual capability",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_legitimacy",
+      "victim": "actual_disaster_response_capability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; high epsilon snare with clear beneficiary/victim structure"
+    },
+    {
+      "claim_id": "competence_reading",
+      "human_readable": "Competence Reading: Live Exercised Knowledge",
+      "structural_delta": "Preparedness maintained through active practice, knowledge transfer, adaptive learning, and continuous capability validation",
+      "primary_observable": "Knowledge transfer effectiveness (IHE Delft second-generation metrics), infrastructure upgrade cycles responding to new risk models, adaptive management adoption rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structurally distinct from husk (different observable, different beneficiary/victim structure)"
+    },
+    {
+      "claim_id": "polycentric_petrification",
+      "human_readable": "Polycentric Petrification (Institutional Rigidity)",
+      "structural_delta": "Water board autonomy and sectoral organization resist adaptive management; 'answer to yesterday's challenges rather than today's'",
+      "primary_observable": "Water board merger rates (2,700 in 1953 to 21 today), cross-functional collaboration metrics, time-to-adoption for new safety standards",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "local_water_board_autonomy",
+      "victim": "adaptive_flood_management",
+      "downstream_of": [],
+      "feeds_into": [
+        "husk_reading"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; tangled_rope feeding into husk reading; captures institutional mechanism that enables symbolic drift"
+    },
+    {
+      "claim_id": "infrastructure_aging_cycle",
+      "human_readable": "Infrastructure Aging and Standards Evolution",
+      "structural_delta": "Continuous infrastructure upgrade demands from aging structures, sea level rise, and evolving safety standards",
+      "primary_observable": "Infrastructure replacement/upgrade rates, safety standard revision frequency, climate adaptation investment",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "competence_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing physical constraint base but lower structural distinctiveness than polycentric_petrification"
+    },
+    {
+      "claim_id": "catastrophe_validation_gap",
+      "human_readable": "Catastrophe-Independent Validation Gap",
+      "structural_delta": "No mechanism to test actual preparedness without a flood event; drills may test compliance rather than capability",
+      "primary_observable": "Absence of observable; drill design (compliance-focused vs capability-focused), post-drill learning integration",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "drill_administrators",
+      "victim": "actual_response_capability",
+      "downstream_of": [],
+      "feeds_into": [
+        "husk_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured by husk_reading's core mechanism; would duplicate rather than extend"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "husk_reading",
+      "kernel_id": "preparedness_retention",
+      "reading_id": "husk_reading"
+    },
+    {
+      "claim_id": "competence_reading",
+      "kernel_id": "preparedness_retention",
+      "reading_id": "competence_reading"
+    },
+    {
+      "claim_id": "polycentric_petrification",
+      "kernel_id": "preparedness_retention",
+      "reading_id": "polycentric_petrification"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "infrastructure_aging_cycle",
+      "structural_delta": "Continuous infrastructure upgrade demands from aging structures and evolving standards",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint base with lower structural distinctiveness than selected tangled_rope; feeds competence_reading but does not add independent analytical yield"
+    },
+    {
+      "claim_id": "catastrophe_validation_gap",
+      "structural_delta": "No mechanism to test preparedness without flood event",
+      "hypothesis": "snare",
+      "deferral_reason": "Core mechanism already captured by husk_reading; would duplicate rather than extend structural analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d5_national_scale",
+      "description": "User flags 'D5 break at national scale' — if the husk reading is correct and preparedness has ossified into symbolic compliance, a catastrophic flood would reveal the break between memorial practice and actual capability. The 1953 case ('warnings mistaken for routine') suggests prior husk failure. Has the post-1953 regime resolved this, or institutionalized both readings without testing which mechanism actually works?",
+      "source": "User prompt kernel contest flag + extraction anchor (1953 unquestioning trust)"
+    },
+    {
+      "id": "omega_measurement_impossibility",
+      "description": "The husk/competence distinction may be empirically unresolvable without a catastrophe. Drill participation and inspection completion are observables for both readings. Only a flood event would distinguish symbolic compliance from actual capability — but that event is precisely what preparedness aims to prevent. The system may be structurally unable to validate itself.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + catastrophe_validation_gap deferred axis"
+    },
+    {
+      "id": "omega_polycentric_resilience_tradeoff",
+      "description": "Is polycentric petrification a snare (local autonomy blocks adaptation) or a rope (distributed authority prevents single-point failure)? Water board autonomy resisted Rijkswaterstaat centralization, but also prevented top-down rigidity. The 2,700-to-21 merger may represent adaptive consolidation or loss of local knowledge. Unclear which reading the consolidation supports.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + polycentric_petrification axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied per §1.3-K. User's 'husk vs competence' framing confirmed as genuine contested kernel: both readings share the preparedness_retention substrate but instantiate structurally different constraints (husk: high-epsilon snare with institutional beneficiary; competence: low-epsilon rope with no single beneficiary). Polycentric_petrification selected as third axis because it feeds the husk mechanism and has highest centrality score."
+  },
+  "_seed_id": "dutch_flood_control_culture"
+}

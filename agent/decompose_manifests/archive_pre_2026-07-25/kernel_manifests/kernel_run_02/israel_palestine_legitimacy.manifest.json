@@ -1,0 +1,245 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Theory / International Relations / Territorial Sovereignty",
+  "family_id": "israel_palestine_legitimacy_2026",
+  "topic_summary": "Analysis of competing legitimacy claims over Israel/Palestine territory. Research reveals two potentially distinct kernels: 1948 existential legitimacy (Israel's right to exist vs Palestinian displacement) and 1967 territorial boundaries (occupation vs self-determination). The dispute conflates these kernels at elite/institutional level while grassroots actors show partial shared substrate recognition.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "State of Israel (established 1948, claims divine promise and refuge narrative)",
+      "Palestinian Authority/PLO (governance in West Bank, claims autochthony and displacement narrative)",
+      "Hamas (governance in Gaza, rejectionist position on 1948)",
+      "UNRWA (tracks 5.7M Palestinian refugees and descendants)",
+      "United States (primary diplomatic patron of Israel)",
+      "UN (observer status for PLO 1974, Resolution 181 partition plan)",
+      "Likud Party (Israeli conservative, settlement expansion)",
+      "1948 refugees and descendants (core of Palestinian narrative)"
+    ],
+    "key_tensions": [
+      "Autochthony vs divine promise (first possession vs God-given land)",
+      "1948 legitimacy vs displacement (Israel's existence vs Nakba)",
+      "1967 boundaries vs security (occupation vs self-determination)",
+      "Memory vs memory (persecution-survival narrative vs displacement-loss narrative)"
+    ],
+    "key_mechanisms": [
+      "Narrative selectivity (each side omits own contribution, demonizes other)",
+      "Conflation of 1948 and 1967 grievances (valorizes own victimization, denies other's legitimacy)",
+      "Historical revisionism (excludes other from continuity claims when national identity hinges on millennia-long presence)"
+    ],
+    "key_absences": [
+      "Grassroots coexistence frameworks (research notes individual-level shared substrate recognition not reflected in elite positions)",
+      "Distinction between moderate and extremist positions (conflation mechanism obscures this boundary)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Two distinct but conflated kernels: (1) 1948 existential legitimacy kernel (right to statehood vs displacement), (2) 1967 territorial boundaries kernel (occupation vs self-determination). Elite/institutional actors treat as mutually exclusive; grassroots shows partial shared substrate.",
+    "authority_description": "Competing authority structures: Israeli state claims Balfour Declaration + UN 181 + divine promise; Palestinian claims autochthony + UNRWA refugee status + UN observer recognition. No shared interpretive authority.",
+    "drift_status": "absent",
+    "candidate_pattern": "dual_kernel_conflation",
+    "is_contested_kernel": true,
+    "kernel_id": "territorial_legitimacy_dual",
+    "readings": [
+      {
+        "reading_id": "zionist_refuge_reading",
+        "commitment": "Israel's legitimacy grounded in historical persecution, divine promise, and UN partition acceptance",
+        "authority_grounding": "Balfour Declaration + UN Resolution 181 + religious covenant + Holocaust trauma",
+        "sibling_readings": [
+          "palestinian_autochthony_reading",
+          "two_state_coexistence_reading"
+        ],
+        "expected_structural_delta": "1948 legitimacy uncontested; 1967 boundaries negotiable; Palestinian displacement framed as consequence of Arab rejection of partition; security concerns justify territorial control"
+      },
+      {
+        "reading_id": "palestinian_autochthony_reading",
+        "commitment": "Palestinian legitimacy grounded in continuous habitation, displacement trauma, and right of return",
+        "authority_grounding": "Autochthony principle + UNRWA refugee status + religious significance of land + Nakba memory",
+        "sibling_readings": [
+          "zionist_refuge_reading",
+          "two_state_coexistence_reading"
+        ],
+        "expected_structural_delta": "1948 displacement as ongoing injustice requiring remedy; territorial reduction as severe deprivation; Israeli state legitimacy contested; right of return non-negotiable"
+      },
+      {
+        "reading_id": "two_state_coexistence_reading",
+        "commitment": "Mutual recognition of dual legitimacy with 1967 boundaries as compromise framework",
+        "authority_grounding": "Oslo Accords framework + international consensus + pragmatic coexistence necessity",
+        "sibling_readings": [
+          "zionist_refuge_reading",
+          "palestinian_autochthony_reading"
+        ],
+        "expected_structural_delta": "1948 legitimacy accepted for both peoples; 1967 boundaries as basis for partition; right of return limited to Palestinian state; security cooperation replaces zero-sum competition"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "zionist_refuge_reading",
+        "reading_b": "palestinian_autochthony_reading",
+        "basis": "Zionist reading holds Israeli statehood as legitimate response to persecution with Palestinian displacement as regrettable but secondary; Palestinian reading holds displacement as primary injustice requiring remedy through right of return. No framework can simultaneously hold both 'Israeli statehood legitimately established 1948' and 'Palestinian displacement delegitimizes 1948 state formation' as foundational axioms."
+      },
+      {
+        "reading_a": "two_state_coexistence_reading",
+        "reading_b": "palestinian_autochthony_reading",
+        "basis": "Coexistence reading accepts permanence of 1948 state formation and limits right of return to future Palestinian state; autochthony reading treats right of return to 1948 territories as non-negotiable. No framework can hold both 'right of return must be limited to enable coexistence' and 'right of return to original homes is foundational and non-negotiable.'"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "zionist_refuge_reading",
+      "human_readable": "Zionist Refuge Reading (Legitimacy via Persecution + Divine Promise)",
+      "structural_delta": "Israeli statehood legitimacy grounded in historical trauma, religious covenant, and international recognition; Palestinian displacement secondary to survival imperative",
+      "primary_observable": "Acceptance of 1948 borders as legitimate; framing of security concerns as justification for territorial control; treatment of right of return as demographic threat",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "israeli_state_apparatus",
+      "victim": "palestinian_refugees_descendants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating Israeli legitimacy framework; high epsilon due to conflation of 1948 and 1967 kernels"
+    },
+    {
+      "claim_id": "palestinian_autochthony_reading",
+      "human_readable": "Palestinian Autochthony Reading (Legitimacy via Continuous Habitation + Displacement)",
+      "structural_delta": "Palestinian legitimacy grounded in first possession, continuous habitation, and displacement trauma; Israeli state formation as ongoing injustice",
+      "primary_observable": "Treatment of 1948 as Nakba requiring remedy; right of return as non-negotiable; territorial reduction as severe deprivation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "palestinian_national_movement",
+      "victim": "israeli_security_framework",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading instantiating Palestinian legitimacy framework; axiom-contradictory to zionist_refuge_reading"
+    },
+    {
+      "claim_id": "two_state_coexistence_reading",
+      "human_readable": "Two-State Coexistence Reading (Mutual Recognition + 1967 Boundaries)",
+      "structural_delta": "Dual legitimacy recognition with 1967 boundaries as compromise; right of return limited to Palestinian state; security cooperation framework",
+      "primary_observable": "Oslo framework acceptance; 1967 boundaries as negotiation basis; limited right of return proposals",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "moderate_coalitions_both_sides",
+      "victim": "maximalist_positions_both_sides",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Pragmatic reading attempting to resolve axiom contradiction; demonstrates licensed plurality structure"
+    },
+    {
+      "claim_id": "narrative_conflation_mechanism",
+      "human_readable": "1948/1967 Conflation Mechanism (Grievance Bundling)",
+      "structural_delta": "Elite/institutional actors conflate existential legitimacy (1948) with territorial boundaries (1967) to valorize own victimization and deny other's legitimacy",
+      "primary_observable": "Frequency of bundled claims in diplomatic positions; separation of 1948 vs 1967 issues in negotiation frameworks",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "extremist_factions_both_sides",
+      "victim": "moderate_coexistence_frameworks",
+      "downstream_of": [
+        "zionist_refuge_reading",
+        "palestinian_autochthony_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism captured implicitly in reading structures; would require fourth generation slot"
+    },
+    {
+      "claim_id": "grassroots_shared_substrate",
+      "human_readable": "Grassroots Shared Substrate (Individual-Level Dual Entitlement Recognition)",
+      "structural_delta": "Individual-level recognition that both groups have some entitlement to land, contrasting with elite zero-sum framing",
+      "primary_observable": "Survey data on dual entitlement recognition; grassroots coexistence initiatives",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "two_state_coexistence_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: feeds into coexistence reading but lacks independent constraint structure; omega material on elite/grassroots divergence"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "zionist_refuge_reading",
+      "kernel_id": "territorial_legitimacy_dual",
+      "reading_id": "zionist_refuge_reading"
+    },
+    {
+      "claim_id": "palestinian_autochthony_reading",
+      "kernel_id": "territorial_legitimacy_dual",
+      "reading_id": "palestinian_autochthony_reading"
+    },
+    {
+      "claim_id": "two_state_coexistence_reading",
+      "kernel_id": "territorial_legitimacy_dual",
+      "reading_id": "two_state_coexistence_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "narrative_conflation_mechanism",
+      "structural_delta": "Elite conflation of 1948 existential legitimacy with 1967 territorial boundaries",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism captured implicitly in reading structures; would require fourth generation slot beyond structural budget"
+    },
+    {
+      "claim_id": "grassroots_shared_substrate",
+      "structural_delta": "Individual-level dual entitlement recognition diverging from elite zero-sum framing",
+      "hypothesis": "rope",
+      "deferral_reason": "Feeds into coexistence reading but lacks independent constraint structure; omega material on elite/grassroots divergence"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_dual_kernel_structure",
+      "description": "Research finding: dispute contains TWO distinct kernels (1948 existential legitimacy, 1967 territorial boundaries) conflated at elite level but partially separated at grassroots. This is a structural finding about the dispute itself, not a generation failure. The conflation mechanism may itself warrant separate analysis.",
+      "source": "§1.3-K kernel recognition + research context on 1948/1967 disentanglement"
+    },
+    {
+      "id": "omega_elite_grassroots_divergence",
+      "description": "Grassroots actors show partial shared substrate recognition (dual entitlement) not reflected in elite/institutional positions. This divergence may indicate that the axiom contradictions are elite-constructed rather than inherent to the dispute. Deferred axis grassroots_shared_substrate captures this.",
+      "source": "Deferred axis grassroots_shared_substrate + research on individual-level dual entitlement"
+    },
+    {
+      "id": "omega_licensed_plurality_status",
+      "description": "Two-state coexistence reading has coexists_with edge to both maximalist readings AND axiom contradictions with palestinian_autochthony_reading. This is licensed plurality: socially live position holding axioms that contradict another live position. Does this indicate the dispute is structurally resolvable via institutional design, or does it merely defer the contradiction?",
+      "source": "§1.3-K axiom contradiction declaration + two_state_coexistence_reading selection"
+    },
+    {
+      "id": "omega_religious_boundary_rigidity",
+      "description": "Research notes religion as 'bright boundary' implying ultimate truth and heresy framing. Does this make the divine promise component of zionist_refuge_reading non-negotiable even within moderate Israeli frameworks? If so, the coexistence reading may be structurally unstable.",
+      "source": "Extraction anchor on religion as bright boundary + zionist_refuge_reading authority grounding"
+    },
+    {
+      "id": "omega_right_of_return_extractiveness",
+      "description": "Right of return appears in palestinian_autochthony_reading as non-negotiable and in two_state_coexistence_reading as limited to Palestinian state. Is this a rope (coordination problem) or snare (one reading's core demand structurally forecloses the other)? Epsilon classification may shift based on demographic projections.",
+      "source": "Axiom contradiction between autochthony and coexistence readings + extraction anchor on right of return as demographic threat"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied as specified. Research context provided sufficient structural detail to identify dual-kernel structure and axiom contradictions. Deferred axes documented with clear rationale."
+  },
+  "_seed_id": "israel_palestine_legitimacy"
+}

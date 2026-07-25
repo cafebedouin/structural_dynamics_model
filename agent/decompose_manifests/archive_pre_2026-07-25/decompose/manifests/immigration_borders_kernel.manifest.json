@@ -1,0 +1,250 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Migration Policy / Constitutional Law",
+  "family_id": "immigration_sovereignty_movement_2026",
+  "topic_summary": "Analysis of immigration policy as a contested kernel where different parties read the border commitment differently. Sovereignty-primary readings ground border control in state self-determination and territorial integrity. Freedom-of-movement-primary readings ground migration rights in individual liberty and cosmopolitan equality. Each reading instantiates a structurally different constraint with distinct victim sets (excluded migrants vs displaced citizens).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nation-state (territorial authority claiming border control legitimacy)",
+      "Prospective migrants (individuals seeking entry/residence)",
+      "Current citizens (rights-holders within existing polity)",
+      "International law framework (refugee conventions, human rights treaties)",
+      "Labor markets (employment systems affected by migration flows)",
+      "Border enforcement apparatus (immigration agencies, visa systems)"
+    ],
+    "key_tensions": [
+      "State sovereignty vs individual mobility rights (who holds authority over territorial access)",
+      "Economic complementarity vs labor competition (migrants as benefit vs threat to citizen welfare)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The border as normative boundary: what legitimizes control over territorial access and membership",
+    "authority_description": "Contested between state sovereignty (Westphalian legitimacy) and individual rights (cosmopolitan/libertarian legitimacy)",
+    "drift_status": "partial",
+    "candidate_pattern": "textual_ambiguity",
+    "is_contested_kernel": true,
+    "kernel_id": "border_legitimacy",
+    "readings": [
+      {
+        "reading_id": "sovereignty_primary_reading",
+        "commitment": "Border control is grounded in collective self-determination; state authority to exclude derives from territorial sovereignty and democratic mandate of existing citizenry",
+        "authority_grounding": "Westphalian state system; democratic self-governance; cultural preservation",
+        "sibling_readings": [
+          "freedom_of_movement_primary_reading",
+          "economic_utility_reading"
+        ],
+        "expected_structural_delta": "Excluded migrants are legitimate constraint targets; state holds adjudicative authority; victim set = those denied entry; epsilon driven by enforcement capacity and political will"
+      },
+      {
+        "reading_id": "freedom_of_movement_primary_reading",
+        "commitment": "Migration is a fundamental individual right; state borders are morally arbitrary constraints on human liberty absent compelling justification",
+        "authority_grounding": "Cosmopolitan ethics; natural rights; libertarian non-coercion principles",
+        "sibling_readings": [
+          "sovereignty_primary_reading",
+          "economic_utility_reading"
+        ],
+        "expected_structural_delta": "Citizens claiming exclusion rights are imposing illegitimate constraint; migrants are victims of coercion; victim set = those forcibly excluded; epsilon driven by state enforcement willingness to override individual liberty"
+      },
+      {
+        "reading_id": "economic_utility_reading",
+        "commitment": "Border policy should optimize aggregate welfare; migration permitted when net economic benefit exceeds costs",
+        "authority_grounding": "Technocratic consequentialism; cost-benefit analysis; labor market optimization",
+        "sibling_readings": [
+          "sovereignty_primary_reading",
+          "freedom_of_movement_primary_reading"
+        ],
+        "expected_structural_delta": "Victim set varies by calculation: either inefficiently excluded migrants (if benefit > cost) or economically displaced citizens (if cost > benefit); epsilon tied to measurement uncertainty and discount rates"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereignty_primary_reading",
+        "reading_b": "freedom_of_movement_primary_reading",
+        "basis": "Sovereignty reading treats collective territorial authority as foundational (state legitimacy precedes individual mobility claims); freedom reading treats individual liberty as foundational (any territorial constraint requires justification from individual rights). No single coherent framework can hold both: accepting that states have inherent authority to exclude contradicts accepting that individuals have inherent rights to move."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_primary_reading",
+      "human_readable": "Sovereignty-Primary Border Reading (State Authority as Foundation)",
+      "structural_delta": "Border control derives legitimacy from collective self-determination; exclusion authority grounded in territorial sovereignty",
+      "primary_observable": "Legal framework granting states categorical exclusion authority; citizenship as prerequisite for rights claims; enforcement prioritization of state interest over individual mobility",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "existing_citizens_claiming_cultural_preservation",
+      "victim": "prospective_migrants_denied_entry",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading with distinct victim set and beneficiary structure; grounds enforcement regime in collective authority"
+    },
+    {
+      "claim_id": "freedom_of_movement_primary_reading",
+      "human_readable": "Freedom-of-Movement-Primary Border Reading (Individual Liberty as Foundation)",
+      "structural_delta": "Migration rights derive from individual liberty; state borders are presumptively illegitimate constraints requiring justification",
+      "primary_observable": "Legal frameworks treating migration as default-permissible pending extraordinary justification; cosmopolitan rights discourse; open-borders advocacy prevalence",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "migrants_asserting_mobility_rights",
+      "victim": "citizens_coerced_into_accepting_migrants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory sibling reading with inverted victim set; highest epsilon bin reflects radical divergence from status quo enforcement"
+    },
+    {
+      "claim_id": "economic_utility_reading",
+      "human_readable": "Economic-Utility Border Reading (Welfare Optimization as Foundation)",
+      "structural_delta": "Border policy legitimacy derives from aggregate welfare maximization; migration permitted when net benefit positive",
+      "primary_observable": "Cost-benefit analyses in policy debates; points-based immigration systems; economic impact studies driving policy",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "whoever_loses_in_welfare_calculation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural reading with conditional victim assignment; completes the triadic kernel decomposition"
+    },
+    {
+      "claim_id": "refugee_exception_carveout",
+      "human_readable": "Refugee Exception as Sovereignty Compromise",
+      "structural_delta": "International refugee law creates categorical exception to sovereignty reading; persecution survivors gain rights-claim against exclusion",
+      "primary_observable": "UNHCR conventions; asylum adjudication systems; refugee vs economic migrant distinction in law",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "sovereignty_primary_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional carveout within sovereignty reading; not structurally independent kernel reading"
+    },
+    {
+      "claim_id": "labor_market_segmentation",
+      "human_readable": "Labor Market Segmentation (Complementarity vs Competition)",
+      "structural_delta": "Migrants either complement existing workforce (filling gaps) or compete with it (displacement); structural position determines victim identity",
+      "primary_observable": "Wage effects by skill level; employment rates for natives vs migrants in same sectors; occupational concentration indices",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "economic_utility_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical input to economic reading but not independent normative reading of border legitimacy"
+    },
+    {
+      "claim_id": "cultural_assimilation_trajectory",
+      "human_readable": "Cultural Assimilation Trajectory (Integration vs Displacement)",
+      "structural_delta": "Speed and completeness of migrant cultural integration determines whether sovereignty concerns materialize as actual costs",
+      "primary_observable": "Language acquisition rates; intermarriage rates; value survey convergence over generations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_primary_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical input to sovereignty reading's cultural preservation claim; not independent reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_primary_reading",
+      "kernel_id": "border_legitimacy",
+      "reading_id": "sovereignty_primary_reading"
+    },
+    {
+      "claim_id": "freedom_of_movement_primary_reading",
+      "kernel_id": "border_legitimacy",
+      "reading_id": "freedom_of_movement_primary_reading"
+    },
+    {
+      "claim_id": "economic_utility_reading",
+      "kernel_id": "border_legitimacy",
+      "reading_id": "economic_utility_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "refugee_exception_carveout",
+      "structural_delta": "International refugee law creates categorical exception to sovereignty reading",
+      "hypothesis": "piton",
+      "deferral_reason": "Institutional carveout within sovereignty reading; not structurally independent kernel reading"
+    },
+    {
+      "claim_id": "labor_market_segmentation",
+      "structural_delta": "Migrants either complement or compete with existing workforce",
+      "hypothesis": "mountain",
+      "deferral_reason": "Empirical input to economic reading but not independent normative reading of border legitimacy"
+    },
+    {
+      "claim_id": "cultural_assimilation_trajectory",
+      "structural_delta": "Speed of cultural integration determines materialization of sovereignty costs",
+      "hypothesis": "mountain",
+      "deferral_reason": "Empirical input to sovereignty reading's cultural claim; not independent reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_feasibility",
+      "description": "All three readings assume enforcement capacity exists. If state cannot actually control borders (geographic, technological, or political constraints), sovereignty and economic readings collapse into de facto freedom reading regardless of normative commitment.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_democratic_mandate_scope",
+      "description": "Sovereignty reading assumes existing citizens hold legitimate collective authority over membership. But who counts as 'existing citizens' for this purpose? Second-generation migrants? Residents without citizenship? Diasporas? The boundary of the democratic mandate is itself contested.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_rights_bearer_threshold",
+      "description": "Freedom reading assumes migrants are rights-bearing subjects whose liberty claims override state authority. But does this extend to all migrants or only those fleeing persecution? To temporary workers? To undocumented migrants? The threshold for rights-bearer status is ambiguous.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_measurement_arbitrage",
+      "description": "Economic reading depends on cost-benefit measurement. But costs and benefits to whom, over what time horizon, and discounted at what rate? Measurement choices determine victim assignment, creating arbitrage opportunity for motivated reasoning.",
+      "source": "F03 (Hasty Generalization) re: economic_utility_reading"
+    },
+    {
+      "id": "omega_hybrid_frameworks",
+      "description": "Actual policy systems blend all three readings (refugee exceptions, points systems, border enforcement). Hybrid stability may indicate complementarity rather than true kernel contest. Or it may indicate drift accumulation masking unresolvable axiom contradiction.",
+      "source": "Commitment system drift_status=partial"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: economic_utility_reading classified as 'rope' (coordination problem) but may be 'tangled_rope' or 'snare' depending on whose welfare function is used for optimization. Generated omega_measurement_arbitrage to bound this uncertainty. All three readings confirmed as axiom-distinct with non-collapsing victim sets, validating kernel status."
+  },
+  "_seed_id": "immigration_borders_kernel"
+}

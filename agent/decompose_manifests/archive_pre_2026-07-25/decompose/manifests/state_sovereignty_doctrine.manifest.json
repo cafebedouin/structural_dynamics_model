@@ -1,0 +1,264 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Political Philosophy / International Relations",
+  "family_id": "westphalian_sovereignty_2026",
+  "topic_summary": "Analysis of the Westphalian sovereignty doctrine as a contested kernel in international law, examining the collision between traditional absolutist readings (domestic jurisdiction as inviolable) and conditional readings through the Responsibility to Protect (R2P) framework. The contest determines the legal and epistemic boundaries of legitimate international coercion.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Westphalian State (territorial sovereign claiming absolute domestic jurisdiction)",
+      "UN Security Council (institutional authority structure for R2P invocations)",
+      "International Criminal Court (subsidiary enforcement mechanism)",
+      "Humanitarian intervention coalitions (ad hoc enforcement outside UNSC)",
+      "Domestic populations (victim set varies by reading)"
+    ],
+    "key_tensions": [
+      "Absolute sovereignty vs conditional sovereignty (kernel contest)",
+      "UNSC monopoly vs unilateral intervention (authority structure)"
+    ],
+    "key_mechanisms": [
+      "UNSC Chapter VII authorization (formal R2P pathway)",
+      "Unilateral humanitarian intervention (informal R2P pathway)",
+      "State practice as customary law formation (kernel drift mechanism)"
+    ],
+    "key_absences": [
+      "Economic sovereignty (trade/finance coercion not addressed in R2P framework)",
+      "Colonial legacy influence on which states face R2P scrutiny",
+      "Threshold measurement for 'mass atrocity' trigger (epistemic ambiguity)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Westphalian sovereignty doctrine as foundational practice-norm stabilizing territorial state's claim to non-interference in domestic affairs",
+    "authority_description": "UN Charter Article 2(7) as textual anchor; UNSC as interpretive authority with veto structure preserving great power privilege; ICJ as secondary interpretive body; state practice as customary law formation mechanism",
+    "drift_status": "partial",
+    "candidate_pattern": "Ambiguity Exploitation Pattern (AEP) — the kernel's deliberate vagueness about sovereignty's limits allows selective interpretation by UNSC permanent members; R2P as formalized interpretive layer absorbing humanitarian norm drift without revising Charter text",
+    "is_contested_kernel": true,
+    "kernel_id": "westphalian_sovereignty",
+    "readings": [
+      {
+        "reading_id": "absolutist_reading",
+        "commitment": "Sovereignty grants inviolable domestic jurisdiction; external intervention is categorically impermissible regardless of internal conduct",
+        "authority_grounding": "UN Charter Article 2(7) literal text; Treaty of Westphalia (1648) as historical foundation; state practice norm of non-interference",
+        "sibling_readings": [
+          "r2p_reading",
+          "gradated_reading"
+        ],
+        "expected_structural_delta": "All domestic populations outside victim set for international law purposes; domestic regime is sole rights-holder; zero legitimate external coercion threshold; high suppression of humanitarian intervention norm"
+      },
+      {
+        "reading_id": "r2p_reading",
+        "commitment": "Sovereignty is conditional on state protecting populations from mass atrocities; failure triggers residual international responsibility",
+        "authority_grounding": "2005 World Summit Outcome Document; UNSC resolutions 1674, 1973; 'sovereignty as responsibility' doctrine (Deng/ICISS)",
+        "sibling_readings": [
+          "absolutist_reading",
+          "gradated_reading"
+        ],
+        "expected_structural_delta": "Populations suffering mass atrocities enter victim set; international community becomes residual rights-holder; UNSC becomes constraint arbiter; moderate suppression of unilateral intervention but licensed multilateral coercion"
+      },
+      {
+        "reading_id": "gradated_reading",
+        "commitment": "Sovereignty is spectrum of legitimacy correlating with domestic governance quality; intervention legitimacy scales with regime type and conduct severity",
+        "authority_grounding": "Democratic peace theory; 'illegal but legitimate' intervention doctrine (Kosovo 1999); emerging norm of democratic sovereignty",
+        "sibling_readings": [
+          "absolutist_reading",
+          "r2p_reading"
+        ],
+        "expected_structural_delta": "Victim set determined by governance-quality threshold (authoritarian regimes more vulnerable); legitimacy decoupled from legality; coalitions of democracies as de facto arbiter; minimal suppression of unilateral intervention by 'legitimate' actors"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "absolutist_reading",
+        "reading_b": "r2p_reading",
+        "basis": "Absolutist treats sovereignty as categorical right independent of internal conduct; R2P treats sovereignty as conditional status dependent on performance. No single framework can hold both: either sovereignty is categorically inviolable or it is not."
+      },
+      {
+        "reading_a": "absolutist_reading",
+        "reading_b": "gradated_reading",
+        "basis": "Absolutist treats all states as equal holders of sovereignty regardless of regime type; gradated treats sovereignty as legitimacy spectrum varying by governance quality. No framework can hold both: either sovereignty is regime-neutral or it is regime-dependent."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "absolutist_reading",
+      "human_readable": "Absolutist Reading (Inviolable Domestic Jurisdiction)",
+      "structural_delta": "Sovereignty as categorical shield against external intervention regardless of internal conduct",
+      "primary_observable": "State practice in UNSC veto use; invocations of Article 2(7) in resisting humanitarian pressure",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "incumbent_regimes_resisting_accountability",
+      "victim": "domestic_populations_under_mass_atrocity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core kernel reading with highest suppression of external accountability; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "r2p_reading",
+      "human_readable": "R2P Reading (Conditional Sovereignty as Responsibility)",
+      "structural_delta": "Sovereignty conditional on protecting populations; residual international responsibility for mass atrocities",
+      "primary_observable": "UNSC Chapter VII authorizations for humanitarian intervention; frequency of R2P invocations in resolutions",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "unsc_permanent_members_selective_enforcement",
+      "victim": "small_states_vulnerable_to_selective_application",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Dominant institutional reading; licensed plurality with absolutist (both socially live); highest centrality due to UNSC enforcement mechanism"
+    },
+    {
+      "claim_id": "gradated_reading",
+      "human_readable": "Gradated Reading (Legitimacy Spectrum by Regime Type)",
+      "structural_delta": "Sovereignty as legitimacy spectrum correlating with governance quality; intervention legitimacy scales with regime type",
+      "primary_observable": "Pattern of humanitarian interventions by regime type of target; 'illegal but legitimate' rhetoric frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "democratic_coalitions_as_de_facto_arbiters",
+      "victim": "authoritarian_states_facing_unilateral_coercion",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Emerging reading decoupling legality from legitimacy; structurally distinct from R2P (unilateral vs UNSC-mediated); captures Kosovo/Libya tension"
+    },
+    {
+      "claim_id": "economic_sovereignty_absence",
+      "human_readable": "Economic Sovereignty Exclusion (Trade/Finance Coercion Outside R2P)",
+      "structural_delta": "R2P framework excludes economic coercion despite comparable structural effects on populations",
+      "primary_observable": "Sanctions regimes causing humanitarian crises not triggering R2P; IMF structural adjustment conditionality",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "financial_hegemonic_states",
+      "victim": "populations_under_economic_siege",
+      "downstream_of": [
+        "r2p_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally important absence but outside kernel contest proper; omega material for selective enforcement pattern"
+    },
+    {
+      "claim_id": "colonial_legacy_selectivity",
+      "human_readable": "Colonial Legacy Selectivity (Non-Western States as Primary R2P Targets)",
+      "structural_delta": "R2P invocations disproportionately target former colonial territories; great powers exempt via veto structure",
+      "primary_observable": "Geographic/political distribution of R2P interventions vs atrocity incidence; UNSC veto patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "former_colonial_powers",
+      "victim": "postcolonial_states",
+      "downstream_of": [
+        "r2p_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: critical empirical pattern but derivative of R2P reading structure; captured in beneficiary/victim analysis of selected axis"
+    },
+    {
+      "claim_id": "atrocity_threshold_ambiguity",
+      "human_readable": "Atrocity Threshold Ambiguity (Epistemic Indeterminacy of Trigger)",
+      "structural_delta": "No operational definition of 'mass atrocity' threshold for R2P activation; arbiter has discretion",
+      "primary_observable": "Variance in UNSC response to comparable casualty events; 'mass atrocity' invocation patterns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "r2p_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: measurement ambiguity is feature not bug (AEP pattern); kernel's interpretive flexibility depends on this; omega for threshold operationalization"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "absolutist_reading",
+      "kernel_id": "westphalian_sovereignty",
+      "reading_id": "absolutist_reading"
+    },
+    {
+      "claim_id": "r2p_reading",
+      "kernel_id": "westphalian_sovereignty",
+      "reading_id": "r2p_reading"
+    },
+    {
+      "claim_id": "gradated_reading",
+      "kernel_id": "westphalian_sovereignty",
+      "reading_id": "gradated_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "economic_sovereignty_absence",
+      "structural_delta": "R2P framework excludes economic coercion despite comparable humanitarian effects",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Outside kernel contest proper but critical for selective enforcement analysis; high epsilon suggests future axis if expanding beyond legal sovereignty"
+    },
+    {
+      "claim_id": "colonial_legacy_selectivity",
+      "structural_delta": "R2P targets disproportionately postcolonial states; great powers exempt via veto",
+      "hypothesis": "snare",
+      "deferral_reason": "Empirical pattern derivative of R2P reading structure; captured in beneficiary/victim analysis of selected reading"
+    },
+    {
+      "claim_id": "atrocity_threshold_ambiguity",
+      "structural_delta": "No operational mass atrocity threshold; interpretive discretion preserved",
+      "hypothesis": "piton",
+      "deferral_reason": "Measurement ambiguity is structural feature enabling AEP pattern; omega material for operationalization challenge"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_coherence",
+      "description": "Are these three genuinely distinct readings or merely tactical invocations of one malleable kernel? If all states cite whichever reading suits immediate interests, the kernel may not be contested but deliberately indeterminate (pure AEP). Empirical test: do states maintain reading consistency across cases or switch opportunistically?",
+      "source": "§1.3-K coherence test; commitment_system_recognition drift_status='partial'"
+    },
+    {
+      "id": "omega_licensed_plurality",
+      "description": "Absolutist and R2P readings coexist as socially live positions (coexists_with edge) yet hold axiom-contradictory foundations. This identifies licensed plurality: the system permits both to operate because ambiguity serves the UNSC permanent members. Is this stable or degrading toward one reading's dominance?",
+      "source": "axiom_contradictions + social liveness observation"
+    },
+    {
+      "id": "omega_economic_sovereignty_exclusion",
+      "description": "Economic coercion (sanctions, structural adjustment) excluded from R2P framework despite causing humanitarian crises comparable to those triggering military intervention. Is this exclusion sustainable as debt-trap diplomacy and financial warfare proliferate? Deferred axis may warrant generation if focus expands beyond military intervention.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); deferred axis economic_sovereignty_absence"
+    },
+    {
+      "id": "omega_threshold_operationalization",
+      "description": "R2P lacks operational atrocity threshold. Is this epistemic gap or deliberate ambiguity (AEP feature)? If the former, legal scholarship should converge on metric; if latter, discretion is the point. Deferred axis suggests latter but requires institutional analysis.",
+      "source": "deferred axis atrocity_threshold_ambiguity; AEP pattern recognition"
+    },
+    {
+      "id": "omega_cyber_sovereignty",
+      "description": "Does sovereignty doctrine extend to cyberspace? State practice emerging around 'digital sovereignty' may instantiate fourth reading of kernel or constitute separate kernel entirely. Not addressed in extraction but structurally adjacent.",
+      "source": "Dark Matter Probe 2 (domain boundary scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel recognition supported by: (1) shared substrate (sovereignty doctrine) all parties argue about, (2) readings emit structurally different constraints (victim sets, enforcement mechanisms, suppression levels differ), (3) axiom contradictions confirmed for absolutist vs R2P and absolutist vs gradated pairs. Licensed plurality pattern (axiom-contradictory yet socially coexistent readings) documented in omega_licensed_plurality."
+  },
+  "_seed_id": "state_sovereignty_doctrine"
+}

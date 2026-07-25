@@ -1,0 +1,235 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Social Policy / Labor Economics",
+  "family_id": "ubi_kernel_2026",
+  "topic_summary": "Analysis of Universal Basic Income as a contested kernel where the same policy instrument (unconditional cash transfer) is read through fundamentally different normative frameworks. The freedom-floor reading treats UBI as expanding individual autonomy and reducing coercive labor relations. The dependency-trap reading treats UBI as state-induced atrophy of work ethic and market participation. Each reading emits constraints with inverted victim/beneficiary structures.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Universal Basic Income (unconditional cash transfer policy)",
+      "Labor market (site of wage negotiation and employment relations)",
+      "Welfare state apparatus (existing means-tested transfer system)",
+      "Tax base (funding mechanism for transfers)",
+      "Precarious workers (gig economy, part-time, contingent labor)",
+      "Technological unemployment (automation-displaced workers)"
+    ],
+    "key_tensions": [
+      "Individual autonomy vs work obligation (freedom to refuse exploitative work vs duty to labor)",
+      "Unconditional transfers vs means-testing (dignity vs targeting efficiency)",
+      "State capacity vs market discipline (redistribution authority vs employment constraint)"
+    ],
+    "mechanisms": [
+      "Exit threat enhancement (workers can refuse low-wage jobs, shifting bargaining power)",
+      "Labor supply reduction (fewer workers seeking employment at given wage)",
+      "Consumption floor stabilization (demand-side automatic stabilizer)",
+      "Skill atrophy feedback (prolonged non-employment reduces employability)"
+    ],
+    "absences": [
+      "Capital taxation incidence (who ultimately bears the tax cost of UBI funding)",
+      "Care work valuation (UBI's effect on unpaid domestic/community labor)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The income-support commitment: that a society should provide material subsistence independently of market participation",
+    "authority_description": "Competing normative frameworks (liberal autonomy theory, work-ethic conservatism, republican non-domination, paternalist welfare theory) each claiming authority to interpret what income support legitimately is",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "income_support_commitment",
+    "readings": [
+      {
+        "reading_id": "freedom_floor_reading",
+        "commitment": "Income support expands negative liberty by removing coercive market necessity",
+        "authority_grounding": "Liberal autonomy theory / republican non-domination",
+        "sibling_readings": [
+          "dependency_trap_reading",
+          "care_economy_reading"
+        ],
+        "expected_structural_delta": "Precarious workers enter beneficiary set; employers of low-wage labor enter victim set (reduced labor supply raises wages or reduces profitability)"
+      },
+      {
+        "reading_id": "dependency_trap_reading",
+        "commitment": "Income support atrophies self-sufficiency and market discipline",
+        "authority_grounding": "Work-ethic conservatism / paternalist welfare theory",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "care_economy_reading"
+        ],
+        "expected_structural_delta": "Future recipients enter victim set (skill atrophy, reduced employability); current taxpayers enter beneficiary set (if UBI prevents and is cheaper than means-tested welfare expansion)"
+      },
+      {
+        "reading_id": "care_economy_reading",
+        "commitment": "Income support recognizes and values non-market productive labor",
+        "authority_grounding": "Feminist economics / care work valuation frameworks",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "dependency_trap_reading"
+        ],
+        "expected_structural_delta": "Unpaid caregivers enter beneficiary set; market-wage earners subsidizing non-market work enter ambiguous position (benefit from care provision, bear tax cost)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "freedom_floor_reading",
+        "reading_b": "dependency_trap_reading",
+        "basis": "Freedom-floor holds that autonomy-from-necessity is the foundational good; dependency-trap holds that obligation-to-labor is the foundational good. No single framework can simultaneously treat exit-from-labor as both liberation and harm."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "freedom_floor_reading",
+      "human_readable": "Freedom-Floor Reading: UBI as Exit-Threat Enhancement",
+      "structural_delta": "Unconditional income removes coercive necessity from labor market participation, expanding workers' exit options and shifting bargaining power",
+      "primary_observable": "Wage floor movement in low-skill sectors post-UBI implementation; quit rates in exploitative employment",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "precarious_workers",
+      "victim": "low_wage_employers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading of kernel; distinct beneficiary/victim structure from sibling readings"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "human_readable": "Dependency-Trap Reading: UBI as Skill-Atrophy Mechanism",
+      "structural_delta": "Unconditional income reduces labor market participation, inducing skill atrophy and long-term employability decline",
+      "primary_observable": "Employment rates among UBI recipients over 3-5 year window; skill-matched wage trajectories for non-participants vs participants",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "future_ubi_recipients",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory reading; inverts victim structure from freedom-floor reading"
+    },
+    {
+      "claim_id": "care_economy_reading",
+      "human_readable": "Care-Economy Reading: UBI as Non-Market Labor Subsidy",
+      "structural_delta": "Unconditional income legitimizes and funds unpaid care work, shifting productive activity from market to household/community",
+      "primary_observable": "Time-use surveys (hours in unpaid care work); gender wage gap movements; child/elder care quality metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "unpaid_caregivers",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structurally independent reading surfacing absence (care work); different observable and beneficiary set"
+    },
+    {
+      "claim_id": "capital_tax_incidence",
+      "human_readable": "Capital Tax Incidence (UBI Funding Source)",
+      "structural_delta": "The distribution of tax burden for UBI funding determines who ultimately bears cost",
+      "primary_observable": "Tax incidence analysis (statutory vs economic burden); capital flight metrics; effective corporate tax rates",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "freedom_floor_reading",
+        "dependency_trap_reading",
+        "care_economy_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but all three selected readings implicitly handle funding questions; lower structural distinctiveness than readings themselves"
+    },
+    {
+      "claim_id": "automation_displacement_upstream",
+      "human_readable": "Automation Displacement as UBI Driver",
+      "structural_delta": "Technological unemployment increases political demand for UBI as compensatory mechanism",
+      "primary_observable": "Labor force participation rate; automation penetration by sector; unemployment duration trends",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "freedom_floor_reading",
+        "care_economy_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream context but not a reading of the income-support kernel itself; captured in freedom-floor's exit-threat mechanism"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "freedom_floor_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "freedom_floor_reading"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "dependency_trap_reading"
+    },
+    {
+      "claim_id": "care_economy_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "care_economy_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "capital_tax_incidence",
+      "structural_delta": "Tax burden distribution for UBI funding",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain feeding all three readings; lower priority than readings themselves which embed funding assumptions"
+    },
+    {
+      "claim_id": "automation_displacement_upstream",
+      "structural_delta": "Technological unemployment as UBI demand driver",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream context captured within freedom-floor's exit-threat mechanism; not a reading of the kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_collapse",
+      "description": "If long-term UBI pilots show neither significant exit-threat effects NOR skill atrophy, both primary readings collapse. The kernel may not be contestable on structural grounds—only on predicted magnitudes of agreed mechanisms.",
+      "source": "Kernel independence test (§1.3-K coherence signal)"
+    },
+    {
+      "id": "omega_inflation_passthrough",
+      "description": "Does UBI trigger price inflation that nullifies purchasing power gains? If full passthrough occurs, freedom-floor constraint reclassifies as scaffold (nominal transfer with no real effect). Dependency-trap reading survives if labor-supply reduction is real.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F03 risk on freedom-floor's epsilon estimate"
+    },
+    {
+      "id": "omega_care_work_measurement",
+      "description": "Care-economy reading depends on reliably measuring unpaid labor value and quality. If time-use surveys are insufficient observables, the reading's epsilon bin may shift or independence from freedom-floor may collapse.",
+      "source": "Primary observable adequacy check for care_economy_reading"
+    },
+    {
+      "id": "omega_licensed_plurality",
+      "description": "Freedom-floor and dependency-trap hold axiom-contradictory foundations yet both are socially live positions. This is licensed plurality: no arbiter exists to settle the normative dispute, so both readings persist as constraints on policy space.",
+      "source": "Axiom contradiction declaration + edge type analysis (coexists_with + contradictory axioms)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: All three readings assign mod epsilon bins but empirical evidence from existing pilots (Kenya GiveDirectly, Stockton CA, Finland) shows mixed and context-dependent magnitudes. Generated omega_empirical_collapse and omega_inflation_passthrough to bound this uncertainty. Care-economy reading's epsilon depends on measurement infrastructure (omega_care_work_measurement)."
+  },
+  "_seed_id": "ubi_kernel"
+}

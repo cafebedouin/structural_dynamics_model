@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal History / Intellectual Property / Institutional Economics",
+  "family_id": "statute_of_anne_ip_kernel",
+  "topic_summary": "Analysis of the Statute of Anne (1710) as a contested kernel in intellectual property law. The statute simultaneously introduced copyright as a conceptual category ('became thinkable') and reallocated institutional rights from the Stationers' Company to authors ('first held'). The kernel contest examines whether these are two readings of one commitment or a spurious synchronic/diachronic cut.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Statute of Anne (1710 copyright law establishing limited-term author rights)",
+      "Stationers' Company (pre-1710 guild monopoly over printing/publishing)",
+      "Parliament/Drafting Committee (legislative authority enacting the statute)",
+      "Authors (Daniel Defoe et al.; nominal beneficiaries of the statute)",
+      "Publishers/Booksellers (practical beneficiaries via manuscript purchase)"
+    ],
+    "key_tensions": [
+      "Property right vs regulatory incentive (preamble shift from 'Securing Property' to 'Encouragement of Learning')",
+      "Author rights vs publisher control (statutory beneficiary vs practical beneficiary)",
+      "Limited term vs perpetual common law right (statute vs Stationers' subsequent litigation)",
+      "Conceptual novelty vs institutional reallocation (new legal category vs power transfer)",
+      "Synchronic meaning vs diachronic change (what the statute meant vs what it did)"
+    ],
+    "key_mechanisms": [
+      "Copyright term structure (21 years existing works, 14+14 years new works)",
+      "Manuscript purchase + copyright assignment (publishers buying both text and legal right)",
+      "Public domain creation (works entering common pool after term expiration)"
+    ],
+    "key_absences": [
+      "Definition of 'copy,' 'property,' 'author' in statutory text (drafting ambiguity)",
+      "Enforcement mechanism for author rights against publishers (practical power asymmetry)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Statute of Anne as the founding text establishing copyright as a legal category—a stabilized reference point for what intellectual property is and who holds it",
+    "authority_description": "Parliamentary legislative authority grounded in the statute's text; subsequent judicial interpretation in the copyright wars (1731+) claiming either statutory creation or common law perpetuity",
+    "drift_status": "absent",
+    "candidate_pattern": "Founding Text (Pattern 1)",
+    "is_contested_kernel": true,
+    "kernel_id": "statute_of_anne_ip_foundation",
+    "readings": [
+      {
+        "reading_id": "conceptual_emergence_reading",
+        "commitment": "The statute created a new conceptual space—copyright as a limited regulatory tool for learning, not perpetual property",
+        "authority_grounding": "Textualist/originalist: the preamble shift from 'Securing Property' to 'Encouragement of Learning' marks the conceptual break",
+        "sibling_readings": [
+          "institutional_reallocation_reading",
+          "entangled_event_reading"
+        ],
+        "expected_structural_delta": "IP 'became thinkable' as a distinct legal category; the space gained a point; beneficiary is public learning; victim is perpetual monopoly"
+      },
+      {
+        "reading_id": "institutional_reallocation_reading",
+        "commitment": "The statute reallocated existing rights from the Stationers' Company to authors, changing who occupied the institutional space",
+        "authority_grounding": "Institutional/materialist: the practical effect was power transfer; publishers immediately bought copyrights from authors, perpetuating monopoly",
+        "sibling_readings": [
+          "conceptual_emergence_reading",
+          "entangled_event_reading"
+        ],
+        "expected_structural_delta": "IP 'first held' by a new class; the occupied set changed; beneficiary is publishers (via assignment); victim is Stationers' monopoly"
+      },
+      {
+        "reading_id": "entangled_event_reading",
+        "commitment": "The statute is a single event with two inseparable dimensions—conceptual and institutional change occurred simultaneously and cannot be disentangled",
+        "authority_grounding": "Holistic/pragmatist: the synchronic/diachronic distinction is a spurious cut; the copyright wars reveal the statute never resolved the tension",
+        "sibling_readings": [
+          "conceptual_emergence_reading",
+          "institutional_reallocation_reading"
+        ],
+        "expected_structural_delta": "IP is both 'became thinkable' and 'first held' in one act; no clean separation; beneficiary is ambiguous (authors nominal, publishers practical); victim is conceptual clarity"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "conceptual_emergence_reading",
+        "reading_b": "institutional_reallocation_reading",
+        "basis": "One reading holds that the statute's primary achievement was creating a new legal category (conceptual novelty as the irreducible change); the other holds that the primary achievement was reallocating power (institutional transfer as the irreducible change). No single framework can hold both as the fundamental event—one must be derivative of the other or they collapse into the entangled reading."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "conceptual_emergence_reading",
+      "human_readable": "Conceptual Emergence (IP as New Legal Category)",
+      "structural_delta": "Copyright became thinkable as a limited regulatory tool distinct from perpetual property",
+      "primary_observable": "Preamble language shift ('Securing Property' → 'Encouragement of Learning'); statutory term limits (14+14 years); public domain creation",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "public_learning",
+      "victim": "perpetual_monopoly_claim",
+      "downstream_of": [],
+      "feeds_into": [
+        "drafting_ambiguity_extraction"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest conceptual distinctiveness; upstream to ambiguity axis"
+    },
+    {
+      "claim_id": "institutional_reallocation_reading",
+      "human_readable": "Institutional Reallocation (Power Transfer from Stationers to Authors)",
+      "structural_delta": "Copyright rights transferred from guild monopoly to individual authors, who immediately assigned them to publishers",
+      "primary_observable": "Stationers' Company petition failure; author-as-statutory-beneficiary clause; manuscript+copyright purchase contracts",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "publishers_via_assignment",
+      "victim": "stationers_monopoly",
+      "downstream_of": [],
+      "feeds_into": [
+        "drafting_ambiguity_extraction"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; institutional materialist lens; same centrality as reading 1"
+    },
+    {
+      "claim_id": "entangled_event_reading",
+      "human_readable": "Entangled Event (Synchronic/Diachronic Collapse)",
+      "structural_delta": "The statute is one event with inseparable conceptual and institutional dimensions; the synchronic/diachronic cut is spurious",
+      "primary_observable": "Copyright wars (1731+) litigation over perpetual vs statutory rights; unresolved philosophical tensions; drafting ambiguities never clarified",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "ambiguous_authors_nominal_publishers_practical",
+      "victim": "conceptual_clarity",
+      "downstream_of": [],
+      "feeds_into": [
+        "drafting_ambiguity_extraction"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality; synthesis position claiming the kernel contest itself is the structural fact"
+    },
+    {
+      "claim_id": "drafting_ambiguity_extraction",
+      "human_readable": "Drafting Ambiguity as Extraction Mechanism",
+      "structural_delta": "Undefined terms ('copy,' 'property,' 'author') enabled publishers to extract rents via interpretive control",
+      "primary_observable": "Decades of litigation; Stationers' common law perpetuity claims; publisher-author contract asymmetry",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "publishers_legal_class",
+      "victim": "authors_public_domain",
+      "downstream_of": [
+        "conceptual_emergence_reading",
+        "institutional_reallocation_reading",
+        "entangled_event_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream snare; all three readings feed into it; would exceed 3-axis budget; high omega value"
+    },
+    {
+      "claim_id": "public_domain_as_mountain",
+      "human_readable": "Public Domain as Structural Constraint",
+      "structural_delta": "Term expiration creates a commons independent of any actor's intent",
+      "primary_observable": "1731 expiration of pre-statute copyrights; subsequent litigation attempting to prevent public domain entry",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "conceptual_emergence_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain upstream to conceptual reading; lower centrality; captured implicitly in reading 1's term-limit observable"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "conceptual_emergence_reading",
+      "kernel_id": "statute_of_anne_ip_foundation",
+      "reading_id": "conceptual_emergence_reading"
+    },
+    {
+      "claim_id": "institutional_reallocation_reading",
+      "kernel_id": "statute_of_anne_ip_foundation",
+      "reading_id": "institutional_reallocation_reading"
+    },
+    {
+      "claim_id": "entangled_event_reading",
+      "kernel_id": "statute_of_anne_ip_foundation",
+      "reading_id": "entangled_event_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "drafting_ambiguity_extraction",
+      "structural_delta": "Undefined statutory terms enabled publisher rent extraction via interpretive control",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of all three readings; exceeds 3-axis budget; high omega value as mechanism explaining why the kernel contest persisted"
+    },
+    {
+      "claim_id": "public_domain_as_mountain",
+      "structural_delta": "Term expiration creates a commons independent of actor intent",
+      "hypothesis": "mountain",
+      "deferral_reason": "Lower centrality; implicitly captured in conceptual_emergence_reading's term-limit observable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_validity",
+      "description": "Is this a genuine contested kernel or a spurious cut? If the entangled_event_reading is correct, the kernel structure itself forces an artificial separation. The copyright wars (1731+) suggest the statute never resolved the tension, supporting entanglement. But if readings 1 and 2 are genuinely independent (one could occur without the other), the kernel is real.",
+      "source": "§1.3-K kernel/not-kernel decision; user's M4/M5 collapse flag"
+    },
+    {
+      "id": "omega_drafting_ambiguity_intentionality",
+      "description": "Were the undefined terms ('copy,' 'property,' 'author') a drafting failure or a deliberate snare? If deliberate, publishers are beneficiaries of intentional ambiguity. If failure, the snare is emergent. Evidence: Stationers' lobbying success suggests intentional vagueness to preserve flexibility.",
+      "source": "Deferred axis drafting_ambiguity_extraction; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_author_agency",
+      "description": "Did authors have genuine agency in the institutional reallocation, or were they nominal beneficiaries in a publisher-controlled system? The manuscript+copyright purchase pattern suggests the latter, but Defoe's advocacy suggests some authors understood the stakes. Affects whether institutional_reallocation_reading's victim is authors or Stationers.",
+      "source": "Extraction tension: author rights vs publisher control; institutional_reallocation_reading beneficiary ambiguity"
+    },
+    {
+      "id": "omega_common_law_perpetuity",
+      "description": "Did copyright exist in common law before the statute (Stationers' claim) or was it created by the statute (textualist claim)? This is the copyright wars' central question. If common law perpetuity is valid, the statute is institutional reallocation only. If not, the statute is conceptual emergence. Unresolved in the research context.",
+      "source": "Extraction tension: limited vs perpetual rights; conceptual_emergence vs institutional_reallocation axiom contradiction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure applied as specified. Three readings selected exhaust the structural budget. Deferred axes documented with high omega value. The entangled_event_reading itself flags the possibility that the kernel structure is a spurious cut, which is the user's M4/M5 test case."
+  },
+  "_seed_id": "intellectual_property_category"
+}

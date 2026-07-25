@@ -1,0 +1,238 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Collective Memory / Ritual Practice",
+  "family_id": "ritual_catastrophe_memory_2026",
+  "topic_summary": "Analysis of Jewish ritual catastrophe-memory practices (Tisha B'Av, Passover) examining whether commemorative reading preserves survival-competence (D5) or only mourning-practice and symbol-survival (D1/D4). Research reveals structural asymmetry: Tisha B'Av functions primarily as boundary-maintenance through contained mourning; Passover embeds practical knowledge within a symbol-survival framework where the 'memory experience' itself is the survival mechanism.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Tisha B'Av (annual fast day commemorating Temple destructions and collective catastrophes)",
+      "Passover Seder (ritual meal commemorating Exodus from Egypt)",
+      "Rabbinic tradition (interpretive authority grounding ritual meaning)",
+      "Haggadah (fixed liturgical text ordering Passover ritual)",
+      "Kinnot (liturgical dirges for Tisha B'Av)",
+      "Jewish diaspora communities (practitioners maintaining ritual across millennia)"
+    ],
+    "key_tensions": [
+      "Historical accuracy vs. theological comfort (Tisha B'Av's compartmentalization of tragedies to one date)",
+      "Study vs. memory experience (Passover's requirement for experiential transmission, not mere learning)",
+      "Secularization vs. ritual continuity (weakening of practice in parts of culture threatens transmission)"
+    ],
+    "key_mechanisms": [
+      "Temporal containment (limiting mourning to one day/three weeks to prevent year-round affect)",
+      "Generational transmission protocol (Passover's 'in each generation' commandment)",
+      "Symbolic food encoding (matzah as both historical necessity and testimony)",
+      "Introspective interpretation (Rabbinic reading of destructions as consequences of internal failings)"
+    ],
+    "key_absences": [
+      "Comparative analysis with other diaspora memory-practices (Armenian Genocide commemoration, African diaspora ritual)",
+      "Measurement of actual survival-competence transmission (what practical knowledge transfers vs. what is symbolic)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Ritual catastrophe-memory as mechanism for collective survival across diaspora",
+    "authority_description": "Rabbinic interpretive tradition grounding ritual meaning in fixed liturgical texts (Haggadah, Lamentations, kinnot) and halakhic practice-norms",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "catastrophe_memory_survival",
+    "readings": [
+      {
+        "reading_id": "symbol_survival_reading",
+        "commitment": "Ritual preserves identity and boundary-norms through symbolic experience; survival is continuity of practice itself",
+        "authority_grounding": "Rabbinic tradition emphasizing introspection, theological rationalization, and 'memory experience' as sufficient",
+        "sibling_readings": [
+          "competence_transmission_reading",
+          "hybrid_encoding_reading"
+        ],
+        "expected_structural_delta": "High ε for ritual form preservation; victim set is secularized Jews losing transmission; beneficiary is rabbinic authority maintaining interpretive control"
+      },
+      {
+        "reading_id": "competence_transmission_reading",
+        "commitment": "Ritual encodes and transmits practical survival knowledge (timing, resource management, family protocols, adaptation strategies)",
+        "authority_grounding": "Historical-materialist reading emphasizing embedded practical knowledge (unleavened bread as hurried departure protocol, Seder order as transmission pedagogy)",
+        "sibling_readings": [
+          "symbol_survival_reading",
+          "hybrid_encoding_reading"
+        ],
+        "expected_structural_delta": "Moderate ε for practical knowledge extraction; victim set is communities that lose practical content while maintaining form; beneficiary is diaspora communities gaining adaptive capacity"
+      },
+      {
+        "reading_id": "hybrid_encoding_reading",
+        "commitment": "Ritual operates on dual registers: symbolic boundary-maintenance AND embedded practical knowledge, with survival depending on both",
+        "authority_grounding": "Functionalist reading where 'memory experience' itself is the survival competence (meta-skill of collective memory maintenance)",
+        "sibling_readings": [
+          "symbol_survival_reading",
+          "competence_transmission_reading"
+        ],
+        "expected_structural_delta": "Low ε for separating symbol from competence; victim set is analysts forcing binary classification; beneficiary is communities maintaining both registers without theoretical resolution"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "symbol_survival_reading",
+        "reading_b": "competence_transmission_reading",
+        "basis": "Symbol-survival reading holds that ritual form preservation IS sufficient for survival (D1/D4 claim); competence-transmission reading holds that survival requires extractable practical knowledge beyond symbolic continuity (D5 claim). No single framework can hold both: either symbolic continuity suffices or it does not."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "symbol_survival_reading",
+      "human_readable": "Symbol-Survival Reading (Ritual Form as Sufficient Survival Mechanism)",
+      "structural_delta": "Ritual preserves collective identity through symbolic experience and boundary-maintenance; survival is continuity of practice itself, not transmission of extractable competencies",
+      "primary_observable": "Ritual participation rates; halakhic compliance with mourning/celebration norms; rabbinic authority over interpretation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rabbinic_interpretive_authority",
+      "victim": "secularized_communities_losing_transmission",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest ε; captures D1/D4 claim that library assessment suggests is dominant; tangled_rope with clear beneficiary structure"
+    },
+    {
+      "claim_id": "competence_transmission_reading",
+      "human_readable": "Competence-Transmission Reading (Ritual as Practical Knowledge Encoding)",
+      "structural_delta": "Ritual encodes and transmits practical survival knowledge (resource management, timing protocols, family transmission pedagogy, adaptation strategies)",
+      "primary_observable": "Extractable practical knowledge from ritual elements; transmission success of adaptive strategies; diaspora community resilience metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "diaspora_communities_gaining_adaptive_capacity",
+      "victim": "communities_losing_practical_content",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Moderate ε; captures D5 claim that research shows is embedded but contested; different beneficiary/victim structure from reading 1"
+    },
+    {
+      "claim_id": "hybrid_encoding_reading",
+      "human_readable": "Hybrid-Encoding Reading (Dual-Register Operation)",
+      "structural_delta": "Ritual operates simultaneously on symbolic and practical registers; 'memory experience' itself is the meta-competence for collective survival",
+      "primary_observable": "Correlation between ritual participation and community adaptive capacity; meta-cognitive transmission success",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "communities_maintaining_both_registers",
+      "victim": "analysts_forcing_binary_classification",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Low ε but structurally distinct; captures the 'memory experience as survival mechanism' claim that research surfaces; scaffold hypothesis tests whether dual-register claim collapses"
+    },
+    {
+      "claim_id": "temporal_containment_mechanism",
+      "human_readable": "Temporal Containment (Compartmentalization as Resilience Strategy)",
+      "structural_delta": "Limiting mourning to bounded periods prevents year-round affect and enables functional continuity",
+      "primary_observable": "Psychological resilience metrics; community function outside mourning periods; historical survival rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "symbol_survival_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism supporting symbol-survival reading but lower structural distinctiveness; piton rather than independent axis"
+    },
+    {
+      "claim_id": "secularization_erosion",
+      "human_readable": "Secularization Erosion (Weakening of Ritual Transmission)",
+      "structural_delta": "Decline in religious practice threatens ritual continuity and whatever survival mechanisms it encodes",
+      "primary_observable": "Ritual participation rates across generations; secularization indices; knowledge transmission success",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "secularized_jews_losing_transmission",
+      "downstream_of": [
+        "symbol_survival_reading",
+        "competence_transmission_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of both readings; captured in victim sets; would duplicate rather than add structural dimension"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "symbol_survival_reading",
+      "kernel_id": "catastrophe_memory_survival",
+      "reading_id": "symbol_survival_reading"
+    },
+    {
+      "claim_id": "competence_transmission_reading",
+      "kernel_id": "catastrophe_memory_survival",
+      "reading_id": "competence_transmission_reading"
+    },
+    {
+      "claim_id": "hybrid_encoding_reading",
+      "kernel_id": "catastrophe_memory_survival",
+      "reading_id": "hybrid_encoding_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "temporal_containment_mechanism",
+      "structural_delta": "Compartmentalization of mourning to bounded periods as resilience strategy",
+      "hypothesis": "piton",
+      "deferral_reason": "Mechanism supporting symbol-survival reading; lower structural distinctiveness than selected readings; piton rather than independent axis"
+    },
+    {
+      "claim_id": "secularization_erosion",
+      "structural_delta": "Decline in religious practice threatening ritual continuity",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of both primary readings; captured in victim sets; would duplicate rather than add structural dimension"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_measurement_gap",
+      "description": "Research lacks empirical measurement of actual survival-competence transmission vs. symbolic continuity. What practical knowledge transfers? How would we measure it? Without measurement, the D5 vs. D1/D4 contest remains theoretical.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_comparative_diaspora",
+      "description": "Absence of comparative analysis with other diaspora memory-practices (Armenian, African diaspora, etc.). Does ritual catastrophe-memory structure generalize? Are there universal vs. particular features?",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_hybrid_collapse",
+      "description": "Does hybrid-encoding reading collapse into one of the binary readings under generation, or does it identify a genuine third structural position? Scaffold hypothesis tests this.",
+      "source": "Hybrid-encoding axis selection + §3.2 Type B overlap classification"
+    },
+    {
+      "id": "omega_authority_extraction",
+      "description": "Is rabbinic interpretive authority a beneficiary of symbol-survival framing (maintaining control over meaning) or a neutral transmitter? Dark matter probe suggests potential extraction dynamic.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_kernel_validity",
+      "description": "Is this genuinely a contested kernel or a single constraint with different observer positions? The axiom contradiction between symbol-survival and competence-transmission readings appears genuine (symbolic continuity either suffices or it does not), but generation may reveal collapse.",
+      "source": "§1.3-K kernel recognition + independence testing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings identified with genuine axiom contradiction (symbol-survival vs. competence-transmission). Hybrid-encoding reading tests whether dual-register claim is structurally independent or collapses. Research context provides sufficient grounding for all three readings. Omega_kernel_validity flags for generation-stage validation."
+  },
+  "_seed_id": "jewish_ritual_catastrophe_memory"
+}

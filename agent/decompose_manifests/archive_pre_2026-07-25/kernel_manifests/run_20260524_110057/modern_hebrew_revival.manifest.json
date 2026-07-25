@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Sociolinguistics / Historical Linguistics / Commitment Systems",
+  "family_id": "hebrew_revival_kernel_contest",
+  "topic_summary": "Analysis of the Hebrew language revival (late 19th-20th century) as a contested kernel case. The commitment 'Hebrew is a living language' was held under two incompatible readings across two millennia: liturgical-only (preserved recitation without native generation) versus native-daily (reconstructed into ordinary speech). The contest centers on whether reciting a preserved symbol constitutes occupying the kernel or whether only native generation does.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Eliezer Ben-Yehuda (linguist, primary revival architect, 1858-1922)",
+      "Va'ad HaLashon / Academy of the Hebrew Language (standardization authority, founded 1890)",
+      "Ultra-Orthodox community (liturgical-only defenders, opposed secular use)",
+      "Zionist movement (cultural renewal ideology, native-daily advocates)",
+      "Jewish immigrant waves 1880s-1930s (diverse linguistic backgrounds: Yiddish, Ladino, Arabic, etc.)",
+      "Hebrew educational system (first Hebrew-speaking schools, late 19th century)"
+    ],
+    "key_tensions": [
+      "Liturgical preservation vs secular vernacular use (ultra-Orthodox vs Ben-Yehuda)",
+      "Sacred status vs practical communication tool (religious leaders vs educators)",
+      "Unified national language vs immigrant linguistic diversity (Zionist ideology vs multilingual reality)"
+    ],
+    "key_mechanisms": [
+      "Neologism creation (Ben-Yehuda coined thousands of terms for modern concepts)",
+      "Educational enforcement (Hebrew-only instruction in schools from 1880s)",
+      "Institutional standardization (Va'ad HaLashon vocabulary gap-filling and word creation)"
+    ],
+    "key_absences": [
+      "No discussion of phonological reconstruction choices (Sephardic vs Ashkenazi pronunciation systems)",
+      "Limited treatment of failed revival attempts for other liturgical languages (e.g., Latin, Sanskrit)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "is_contested_kernel": true,
+    "kernel_description": "The commitment 'Hebrew is a living language' — a claim to linguistic vitality that grounds authority to define legitimate Hebrew practice",
+    "authority_structure": "Contested between two interpretive communities: (1) rabbinic/liturgical authorities claiming continuity through preserved recitation, (2) secular nationalist authorities (Ben-Yehuda, Va'ad HaLashon, Zionist educators) claiming reconstruction through native generation",
+    "drift_status": "absent_under_liturgical_reading_functioning_under_native_reading",
+    "candidate_pattern": "Contested Kernel (Pattern 6)",
+    "readings": [
+      {
+        "reading_id": "liturgical_continuity",
+        "reading_label": "Liturgical Continuity Reading",
+        "kernel_claim": "Hebrew remained a living language through unbroken liturgical recitation (200 CE - 1880s)",
+        "authority_basis": "Rabbinic tradition; preservation of Torah reading, prayer, and religious scholarship",
+        "legitimacy_test": "Fidelity to preserved texts; ability to recite and interpret canonical sources",
+        "revision_mechanism": "Medieval Hebrew development for religious/scholarly purposes; liturgical poetry innovation",
+        "structural_status": "Occupied kernel with constrained generativity — language 'alive' through ritual performance but not native speech",
+        "beneficiaries": "Religious authorities maintaining interpretive monopoly; communities preserving sacred-profane boundary",
+        "costs_borne_by": "Potential secular users excluded from legitimate Hebrew practice; vernacular communication needs unmet"
+      },
+      {
+        "reading_id": "native_reconstruction",
+        "reading_label": "Native Reconstruction Reading",
+        "kernel_claim": "Hebrew became a living language only through revival as native vernacular (1880s-1920s)",
+        "authority_basis": "Linguistic nationalism; Zionist cultural renewal ideology; educational institutions",
+        "legitimacy_test": "Native speaker generation; vocabulary expansion for modern life; daily communicative use",
+        "revision_mechanism": "Neologism creation by Va'ad HaLashon; phonological standardization; grammar modernization",
+        "structural_status": "Reconstructed kernel with full generativity — language 'alive' through native acquisition and spontaneous use",
+        "beneficiaries": "Secular nationalist movement; immigrant communities needing unified communication; Ben-Yehuda's institutional authority",
+        "costs_borne_by": "Ultra-Orthodox communities experiencing sacralization loss; liturgical-only practitioners delegitimized"
+      },
+      {
+        "reading_id": "strict_reachability_break",
+        "reading_label": "Strict Reachability Break (Library Verdict Context)",
+        "kernel_claim": "The two readings are structurally incompatible — liturgical recitation and native generation constitute different language-aliveness criteria",
+        "authority_basis": "Metalinguistic analysis; sociolinguistic distinction between preserved symbol and generative system",
+        "legitimacy_test": "Whether recitation without native acquisition counts as 'living' — a definitional contest with no neutral arbiter",
+        "revision_mechanism": "Not applicable — this reading identifies the impossibility of reconciling the other two",
+        "structural_status": "D1 strict-reachability break: no continuous path from liturgical-only to native-daily without abandoning one reading's legitimacy test",
+        "beneficiaries": "Analysts recognizing the kernel contest; historians documenting the rupture",
+        "costs_borne_by": "Participants forced to choose sides; communities experiencing the revival as either restoration or desecration"
+      }
+    ],
+    "selected_readings_for_generation": [
+      "liturgical_continuity",
+      "native_reconstruction",
+      "strict_reachability_break"
+    ],
+    "selection_rationale": "All three readings are structurally necessary to capture the kernel contest. Reading 1 and 2 represent the incompatible interpretive positions held by historical actors. Reading 3 represents the metalinguistic recognition that the contest cannot be resolved within either framework — it is a definitional rupture, not a factual disagreement."
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_continuity_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "liturgical_continuity",
+      "human_readable": "Liturgical Continuity Reading: Hebrew as Living Through Preserved Recitation",
+      "structural_delta": "Language vitality grounded in unbroken ritual performance and textual preservation (200 CE - 1880s) without native speaker generation",
+      "primary_observable": "Continuity of Torah reading, prayer recitation, religious scholarship in Hebrew across diaspora communities; absence of native speakers",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinic_authorities",
+      "victim": "secular_users_excluded",
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_reachability_break_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First pole of the kernel contest; establishes the pre-revival interpretive framework"
+    },
+    {
+      "claim_id": "native_reconstruction_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "native_reconstruction",
+      "human_readable": "Native Reconstruction Reading: Hebrew as Living Through Vernacular Revival",
+      "structural_delta": "Language vitality grounded in native speaker generation and daily communicative use (1880s-1920s revival period)",
+      "primary_observable": "First native speakers (Ben-Yehuda's son, 1882); Hebrew-only schools; neologism creation rate; census data on Hebrew as home language",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "zionist_nationalist_movement",
+      "victim": "ultra_orthodox_sacralization",
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_reachability_break_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second pole of the kernel contest; represents the rupture with liturgical-only framework"
+    },
+    {
+      "claim_id": "strict_reachability_break_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "strict_reachability_break",
+      "human_readable": "Strict Reachability Break: Incompatible Legitimacy Tests for Language Aliveness",
+      "structural_delta": "The two readings employ structurally incompatible criteria for 'living language' status — no continuous path between them without abandoning one reading's legitimacy test",
+      "primary_observable": "Ultra-Orthodox opposition to secular Hebrew use (HaZvi newspaper closure, 1893); Ben-Yehuda's explicit rejection of liturgical-only status; absence of neutral arbiter for 'aliveness' definition",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "metalinguistic_analysts",
+      "victim": "participants_forced_to_choose",
+      "downstream_of": [
+        "liturgical_continuity_reading",
+        "native_reconstruction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Synthesis node capturing the D1 strict-reachability break; highest centrality as downstream of both poles"
+    },
+    {
+      "claim_id": "phonological_reconstruction_choice",
+      "human_readable": "Phonological Reconstruction Choice (Sephardic vs Ashkenazi)",
+      "structural_delta": "Selection of Sephardic pronunciation system over Ashkenazi as standard for Modern Hebrew",
+      "primary_observable": "Adoption of Sephardic phonology in educational institutions; rejection of Ashkenazi pronunciation in official contexts",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "native_reconstruction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technical implementation detail downstream of native reconstruction; lower structural distinctiveness than the three kernel-contest readings"
+    },
+    {
+      "claim_id": "immigrant_linguistic_diversity",
+      "human_readable": "Immigrant Linguistic Diversity (Multilingual Reality vs Unified Language)",
+      "structural_delta": "Tension between diverse immigrant mother tongues (Yiddish, Ladino, Arabic, etc.) and Hebrew unification project",
+      "primary_observable": "Language census data 1880s-1930s; educational policy enforcement; marketplace communication patterns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "native_reconstruction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream physical constraint but captured implicitly in native_reconstruction_reading's neologism creation and educational enforcement mechanisms"
+    }
+  ],
+  "generation_sequence": [
+    "liturgical_continuity_reading",
+    "native_reconstruction_reading",
+    "strict_reachability_break_reading"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "phonological_reconstruction_choice",
+      "structural_delta": "Selection of Sephardic over Ashkenazi pronunciation as Modern Hebrew standard",
+      "hypothesis": "piton",
+      "deferral_reason": "Technical implementation detail; lower structural priority than kernel-contest readings"
+    },
+    {
+      "claim_id": "immigrant_linguistic_diversity",
+      "structural_delta": "Multilingual immigrant reality vs Hebrew unification project",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint captured implicitly in native_reconstruction_reading mechanisms"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_comparative_revival_failure",
+      "description": "Why did Hebrew revival succeed when Latin, Sanskrit, and other liturgical languages did not? Is the success contingent on Zionist state-building, or could liturgical-only languages be revived under other conditions?",
+      "source": "Absence Inventory (§1.1) — no comparative analysis of failed revivals"
+    },
+    {
+      "id": "omega_phonological_arbitrariness",
+      "description": "Was the Sephardic pronunciation choice a Mountain (historical fidelity) or a Piton (arbitrary authority decision)? Ashkenazi speakers constituted majority of early immigrants.",
+      "source": "Deferred axis phonological_reconstruction_choice + Dark Matter Probe 3"
+    },
+    {
+      "id": "omega_liturgical_reading_collapse",
+      "description": "Does the liturgical_continuity reading collapse under scrutiny? If 'living language' requires native speakers, then medieval Hebrew was not alive — but this delegitimates the ultra-Orthodox position retroactively. The reading may be internally coherent only if 'aliveness' is redefined as ritual performance.",
+      "source": "Independence Testing (§3) — potential Type A overlap if 'living' is univocal"
+    },
+    {
+      "id": "omega_reachability_break_timing",
+      "description": "When did the D1 break occur? Was it gradual (200-1880 CE) or sudden (1881 Ben-Yehuda arrival)? If gradual, the 'contest' may be anachronistic — liturgical users never claimed native-daily status until nationalists demanded it.",
+      "source": "Fracture F01 (Premise Drift) — user's framing may impose modern categories on historical actors"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F01 detected: The 'kernel contest' framing may be anachronistic. Historical evidence suggests ultra-Orthodox opposition to secular Hebrew use (1893 HaZvi closure) was about sacralization loss, not competing claims to 'living language' status. The contest may be a modern analytical imposition rather than a historical actor's framework. Generated omega_reachability_break_timing and omega_liturgical_reading_collapse to bound this uncertainty."
+  },
+  "_seed_id": "modern_hebrew_revival"
+}

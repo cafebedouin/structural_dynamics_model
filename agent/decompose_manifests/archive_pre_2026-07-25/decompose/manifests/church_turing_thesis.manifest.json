@@ -1,0 +1,205 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Philosophy of Mathematics / Philosophy of Computation / Foundations of Computer Science",
+  "family_id": "church_turing_thesis_interpretations",
+  "topic_summary": "Analysis of the Church-Turing thesis as a contested kernel where different readings instantiate fundamentally different constraints on what counts as computation. The mathematical reading treats it as a definition capturing an abstract class; the physical reading treats it as an empirical claim about the universe's computational capacity; the epistemological reading treats it as a boundary on knowable computable functions.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 1,
+    "absence_count": 3,
+    "key_entities": [
+      "Church-Turing thesis (shared kernel: equivalence between effective computability and Turing-machine computability)",
+      "Turing machine (abstract mathematical formalism)",
+      "Lambda calculus (Church's alternative formalism)",
+      "Physical computational systems (real-world computers, brains, quantum computers)",
+      "Mathematical community (interpreters of formal definitions)",
+      "Physics community (interpreters of physical possibility)"
+    ],
+    "key_tensions": [
+      "Mathematical formalism vs physical instantiation (is the thesis about abstract functions or universe capacity)",
+      "Definition vs empirical claim (is it true by stipulation or falsifiable by counterexample)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Church-Turing thesis: the claim that effective computability (what can be computed by any algorithmic process) is captured by Turing-machine computability",
+    "authority_description": "Mathematical community defines effective computability; physics community adjudicates physical realizability; philosophy of mathematics community interprets scope and status",
+    "drift_status": "functioning",
+    "candidate_pattern": "ambiguity_preservation",
+    "is_contested_kernel": true,
+    "kernel_id": "church_turing_thesis",
+    "readings": [
+      {
+        "reading_id": "mathematical_definition_reading",
+        "commitment": "The thesis is a mathematical definition stipulating what we mean by 'effective computability' — true by convention, not empirically testable",
+        "authority_grounding": "Mathematical practice / definitional authority",
+        "sibling_readings": [
+          "physical_claim_reading",
+          "epistemological_boundary_reading"
+        ],
+        "expected_structural_delta": "No victim set (definitions cannot be violated); constraint type is coordination (aligning terminology); beneficiary is mathematical clarity; ε very low (stable definition)"
+      },
+      {
+        "reading_id": "physical_claim_reading",
+        "commitment": "The thesis is an empirical claim about the universe: no physical process can compute functions beyond Turing-machine computability",
+        "authority_grounding": "Physical realizability / empirical testability",
+        "sibling_readings": [
+          "mathematical_definition_reading",
+          "epistemological_boundary_reading"
+        ],
+        "expected_structural_delta": "Potential victim set (hypercomputation researchers, quantum supremacy claims if they exceed CT); constraint type is suppression if true (blocks non-Turing computation research) or scaffold if false (opens new physics); ε moderate (empirically contestable)"
+      },
+      {
+        "reading_id": "epistemological_boundary_reading",
+        "commitment": "The thesis marks the boundary of formally knowable computation: functions we can prove computable are exactly Turing-computable, regardless of physical possibility",
+        "authority_grounding": "Proof theory / formal epistemology",
+        "sibling_readings": [
+          "mathematical_definition_reading",
+          "physical_claim_reading"
+        ],
+        "expected_structural_delta": "Victim set includes non-constructive mathematical claims about computability; constraint type is methodological exclusion (defines what counts as valid computability proof); ε low-to-moderate (stable within proof-theoretic framework but contested at boundaries)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "mathematical_definition_reading",
+        "reading_b": "physical_claim_reading",
+        "basis": "One reading holds the thesis is definitional (cannot be false), the other holds it is empirical (could be falsified by hypercomputation). No coherent framework treats the same statement as both stipulated-true and empirically-testable."
+      },
+      {
+        "reading_a": "physical_claim_reading",
+        "reading_b": "epistemological_boundary_reading",
+        "basis": "Physical reading grounds computability in universe capacity (external reality); epistemological reading grounds it in proof-theoretic demonstrability (internal to formal systems). One says 'what the universe can do,' the other says 'what we can formally show.' These are orthogonal grounding claims that cannot both be the thesis's foundation."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "mathematical_definition_reading",
+      "human_readable": "Mathematical Definition Reading (CT as Stipulative Coordination)",
+      "structural_delta": "The thesis stipulates what 'effective computability' means, creating terminological coordination rather than making empirical claims",
+      "primary_observable": "Usage patterns in mathematical texts; whether counterexamples are treated as refutations or as falling outside scope",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "mathematical_clarity",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes definitional baseline with clearest structural delta from siblings"
+    },
+    {
+      "claim_id": "physical_claim_reading",
+      "human_readable": "Physical Claim Reading (CT as Universe Capacity Limit)",
+      "structural_delta": "The thesis claims no physical process in the universe can compute beyond Turing-machine limits — empirically falsifiable",
+      "primary_observable": "Experimental attempts at hypercomputation; quantum computing supremacy claims; physical Church-Turing thesis literature",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain_or_scaffold",
+      "beneficiary": null,
+      "victim": "hypercomputation_research_if_true",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: highest ε bin, introduces victim set, structurally opposed to definitional reading"
+    },
+    {
+      "claim_id": "epistemological_boundary_reading",
+      "human_readable": "Epistemological Boundary Reading (CT as Proof-Theoretic Limit)",
+      "structural_delta": "The thesis delimits what can be formally proven computable, independent of physical or definitional concerns",
+      "primary_observable": "Constructive vs non-constructive computability proofs; incompleteness results; proof-theoretic restrictions in computability theory",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "constructive_mathematics",
+      "victim": "non_constructive_computability_claims",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: introduces distinct methodological constraint with its own victim set, completes the triangulation of interpretive space"
+    },
+    {
+      "claim_id": "pragmatic_convergence_reading",
+      "human_readable": "Pragmatic Convergence Reading (CT as Empirical Observation About Formalisms)",
+      "structural_delta": "The thesis observes that all proposed models of computation have converged on equivalent power, suggesting underlying regularity without committing to definition or physical necessity",
+      "primary_observable": "Historical pattern of formalism equivalences; continued convergence of new models to Turing-equivalence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower structural distinctiveness; captured partially by mathematical_definition_reading's coordination aspect"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "mathematical_definition_reading",
+      "kernel_id": "church_turing_thesis",
+      "reading_id": "mathematical_definition_reading"
+    },
+    {
+      "claim_id": "physical_claim_reading",
+      "kernel_id": "church_turing_thesis",
+      "reading_id": "physical_claim_reading"
+    },
+    {
+      "claim_id": "epistemological_boundary_reading",
+      "kernel_id": "church_turing_thesis",
+      "reading_id": "epistemological_boundary_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pragmatic_convergence_reading",
+      "structural_delta": "Empirical observation of formalism convergence without ontological commitment",
+      "hypothesis": "piton",
+      "deferral_reason": "Lower centrality; coordination aspect covered by mathematical_definition_reading; observational pattern rather than constraint with independent ε"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_quantum_hypercomputation",
+      "description": "Does quantum computing constitute a counterexample to the physical reading? If quantum supremacy achieves non-Turing computation, physical_claim_reading collapses to scaffold. If not, it remains mountain. Current evidence suggests Turing-equivalence but debate continues.",
+      "source": "Physical claim reading analysis + Dark Matter Probe 2 (absence of settled quantum verdict)"
+    },
+    {
+      "id": "omega_analog_computation",
+      "description": "Do analog physical systems (infinite-precision real-valued computation) violate the physical reading? If idealized analog computers are physically realizable, the thesis as physical claim faces structural challenge. Digital supremacy may be contingent.",
+      "source": "Dark Matter Probe 2 (absence inventory: analog computation not addressed in extraction)"
+    },
+    {
+      "id": "omega_oracle_machines",
+      "description": "Does the epistemological reading exclude oracle machines (Turing machines with halting-problem oracles) from 'computable'? Boundary is contested within computability theory. May warrant separate axis if expansion requested.",
+      "source": "Epistemological boundary reading edge cases"
+    },
+    {
+      "id": "omega_definition_vs_discovery",
+      "description": "Can a reading be both definitional (stipulated) and discovered (convergent observation)? Pragmatic reading suggests empirical convergence motivates definition, collapsing mathematical/physical distinction. Not addressed in selected trio.",
+      "source": "Deferred axis pragmatic_convergence_reading + axiom contradiction analysis"
+    },
+    {
+      "id": "omega_beneficiary_asymmetry",
+      "description": "Mathematical reading has beneficiary (clarity) with no victim; physical reading has victim (hypercomputation research) with no clear beneficiary beyond 'epistemic honesty.' Asymmetry may indicate incomplete extraction or genuine structural difference in reading-types.",
+      "source": "Dark Matter Probe 3 (beneficiary scan) + classification pattern analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings instantiate genuinely different constraints from shared kernel. Axiom contradictions validated: no single framework treats CT as both stipulated-definition AND empirical-physical-claim, nor as both proof-boundary AND universe-capacity-limit. Kernel structure confirmed."
+  },
+  "_seed_id": "church_turing_thesis"
+}

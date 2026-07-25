@@ -1,0 +1,216 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Astrophysics / Stellar Spectroscopy / Nuclear Physics",
+  "family_id": "przybylski_star_actinide_anomaly",
+  "topic_summary": "Analysis of Przybylski's Star (HD 101065), an Ap star with impossible chemical abundances including short-lived radioactive actinides in its atmosphere. The star exhibits extreme rare-earth element overabundances (~1000x solar) while depleting common elements like iron, combined with exceptionally slow rotation (~188 years) and strong magnetic fields that stratify its atmosphere through radiative levitation.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Przybylski's Star / HD 101065 (rapidly oscillating Ap star, 356 ly distant, 1.5 Gyr old)",
+      "Antoni Przybylski (discoverer, 1961)",
+      "Gopka et al. (identified actinides in spectrum, 2008)",
+      "Dzuba-Flambaum-Webb (proposed superheavy element hypothesis)",
+      "Ap star class (A-type peculiar stars with strong magnetic fields, slow rotation, stratified atmospheres)",
+      "Short-lived actinides (Tc, Pm, Ac, Pu, Am, Cm with half-lives 17.7 years to millions of years)",
+      "Island of stability isotopes (hypothetical 298Fl, 304Ubn, 310Ubh with potentially billion-year half-lives)",
+      "Radiative levitation mechanism (photon pressure sorting ions by element in strong magnetic field)"
+    ],
+    "key_tensions": [
+      "Observed actinide presence vs. radioactive decay timescales (elements with 17.7-year to million-year half-lives persist in 1.5-billion-year-old star)",
+      "Extreme rare-earth overabundance vs. iron depletion (holmium detected before solar detection; iron down >10x)",
+      "Natural astrophysical process vs. artifact hypothesis (nuclear waste disposal speculation vs. superheavy element decay)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "radiative_levitation_stratification",
+      "human_readable": "Radiative Levitation Stratification (Magnetic Field-Driven Atmospheric Sorting)",
+      "structural_delta": "Strong magnetic fields (kG-scale) combined with radiative pressure and slow rotation (~188 yr period) stratify atmospheric ions by atomic number, concentrating specific elements in observable layers",
+      "primary_observable": "Spectral line strength ratios vs. solar abundances; magnetic field strength measurements; rotational velocity (v sin i = 3.5 km/s)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "actinide_replenishment_mechanism"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Physical mechanism underlying all Ap star abundance anomalies; mountain providing observational constraint base for actinide puzzle"
+    },
+    {
+      "claim_id": "actinide_replenishment_mechanism",
+      "human_readable": "Actinide Replenishment Mechanism (Source of Short-Lived Radioactive Elements)",
+      "structural_delta": "Mechanism continuously supplying radioactive elements with half-lives orders of magnitude shorter than stellar age",
+      "primary_observable": "Spectral identification of Tc, Pm, Ac, Pu, Am, Cm, Bk, Cf, Es lines; isotopic ratios if resolvable; temporal stability of actinide signatures",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "radiative_levitation_stratification"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core contested kernel with three structurally distinct readings; highest centrality as synthesis node"
+    },
+    {
+      "claim_id": "spectroscopic_misidentification_risk",
+      "human_readable": "Spectroscopic Misidentification Risk (Line Blending and Rare-Earth Confusion)",
+      "structural_delta": "Extreme rare-earth overabundances create dense forest of spectral lines where actinide identifications may be false positives from overlapping rare-earth transitions",
+      "primary_observable": "Line-by-line verification against laboratory wavelengths; recent non-confirmations of Tc and Pm; spectral resolution limits",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "radiative_levitation_stratification"
+      ],
+      "feeds_into": [
+        "actinide_replenishment_mechanism"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological uncertainty affecting kernel readings but not structurally independent axis; captured in omega_spectroscopic_fidelity"
+    }
+  ],
+  "generation_sequence": [
+    "radiative_levitation_stratification",
+    {
+      "claim_id": "neutron_star_bombardment_reading",
+      "kernel_id": "actinide_replenishment_mechanism",
+      "reading_id": "neutron_star_bombardment_reading"
+    },
+    {
+      "claim_id": "superheavy_decay_reading",
+      "kernel_id": "actinide_replenishment_mechanism",
+      "reading_id": "superheavy_decay_reading"
+    },
+    {
+      "claim_id": "artifact_disposal_reading",
+      "kernel_id": "actinide_replenishment_mechanism",
+      "reading_id": "artifact_disposal_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "spectroscopic_misidentification_risk",
+      "structural_delta": "Extreme rare-earth overabundances create line-blending confusion for actinide identifications",
+      "hypothesis": "piton",
+      "deferral_reason": "Methodological uncertainty affecting all kernel readings equally; not structurally independent from levitation mechanism; omega material"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_spectroscopic_fidelity",
+      "description": "Recent analyses failed to confirm Tc and Pm detections. If actinide identifications are systematic misidentifications of rare-earth lines, the entire kernel collapses to ordinary Ap star levitation. The 2008 Gopka et al. identifications require independent verification with higher-resolution spectroscopy and laboratory wavelength cross-checks.",
+      "source": "Deferred axis spectroscopic_misidentification_risk + recent non-confirmations in literature"
+    },
+    {
+      "id": "omega_radial_velocity_constraint",
+      "description": "Neutron star companion hypothesis requires short-period binary. Sharp spectral lines enable precise RV measurements. If no RV variation detected over multi-year baseline, neutron star reading is falsified. Current literature states 'does not have short period neutron star companion' but lacks quantitative RV precision and baseline data.",
+      "source": "Neutron star reading falsifiability condition"
+    },
+    {
+      "id": "omega_island_isotope_identification",
+      "description": "Superheavy element hypothesis predicts specific parent isotopes (298Fl, 304Ubn, 310Ubh) with billion-year half-lives. No current spectroscopic technique can resolve isotopic mass differences for superheavy elements in stellar atmospheres. Hypothesis is unfalsifiable with existing observational methods unless laboratory synthesis confirms island-of-stability isotopes first.",
+      "source": "Superheavy decay reading observational limits"
+    },
+    {
+      "id": "omega_artifact_prior",
+      "description": "Artifact disposal reading assigns non-zero prior to extraterrestrial intelligence without independent evidence. Sagan-Shklovskii 'salting' prediction and Whitmire-Wright waste disposal hypothesis are untestable absent communication signal or independent technosignature. Reading remains in set because it makes same observational predictions as natural hypotheses (actinide presence) but differs in causal mechanism.",
+      "source": "Artifact reading epistemological status"
+    },
+    {
+      "id": "omega_roap_pulsation_coupling",
+      "description": "Przybylski's Star is prototype rapidly oscillating Ap star (12.15 min pulsation period). Pulsation-driven atmospheric mixing could affect levitation stratification or actinide distribution. No current model integrates pulsation dynamics with radiative levitation. Potential fourth reading of replenishment kernel if pulsation drives nuclear reactions.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - roAp pulsation mechanism not addressed in any reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three-reading kernel structure captures full hypothesis space from literature. Radiative levitation mountain is well-established Ap star physics. Spectroscopic uncertainty bounded in omega rather than flagged as F03 because recent non-confirmations are documented."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The mechanism continuously replenishing short-lived radioactive actinides (half-lives 17.7 years to millions of years) in the atmosphere of a 1.5-billion-year-old star",
+    "authority_description": "Observational spectroscopy (line identification) combined with nuclear physics (decay rates) and stellar evolution theory (age constraints)",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "actinide_replenishment_mechanism",
+    "readings": [
+      {
+        "reading_id": "neutron_star_bombardment_reading",
+        "commitment": "Companion neutron star wind bombards stellar atmosphere with high-energy particles, transmuting heavy elements into observed actinides through spallation and neutron capture",
+        "authority_grounding": "High-energy astrophysics / binary stellar evolution",
+        "sibling_readings": [
+          "superheavy_decay_reading",
+          "artifact_disposal_reading"
+        ],
+        "expected_structural_delta": "Requires binary system with neutron star companion; predicts radial velocity variation, X-ray emission, particle wind signatures; actinide production rate tied to neutron star spin-down luminosity",
+        "edge_type_to_siblings": {
+          "superheavy_decay_reading": "forecloses",
+          "artifact_disposal_reading": "forecloses"
+        },
+        "falsification_pathway": "Precise radial velocity measurements over multi-year baseline showing no periodic variation; absence of X-ray emission; no pulsar detection"
+      },
+      {
+        "reading_id": "superheavy_decay_reading",
+        "commitment": "Undiscovered superheavy elements from island of stability (298Fl, 304Ubn, or 310Ubh with ~billion-year half-lives) present in stellar atmosphere decay into observed actinide daughter products",
+        "authority_grounding": "Nuclear physics (island of stability theory) / supernova nucleosynthesis",
+        "sibling_readings": [
+          "neutron_star_bombardment_reading",
+          "artifact_disposal_reading"
+        ],
+        "expected_structural_delta": "Requires supernova nucleosynthesis pathway producing superheavy isotopes; predicts specific actinide abundance ratios matching decay chain; parent isotope spectral signature (if detectable); actinide ratios stable over observational timescales",
+        "edge_type_to_siblings": {
+          "neutron_star_bombardment_reading": "forecloses",
+          "artifact_disposal_reading": "coexists_with"
+        },
+        "falsification_pathway": "Laboratory synthesis of island-of-stability isotopes showing half-lives incompatible with stellar age; actinide abundance ratios inconsistent with any superheavy decay chain; detection of actinide temporal variation"
+      },
+      {
+        "reading_id": "artifact_disposal_reading",
+        "commitment": "Advanced extraterrestrial civilization uses star as nuclear waste repository, depositing fission products and transuranic elements that accumulate in stratified atmosphere through radiative levitation",
+        "authority_grounding": "SETI artifact hypothesis / technosignature detection framework",
+        "sibling_readings": [
+          "neutron_star_bombardment_reading",
+          "superheavy_decay_reading"
+        ],
+        "expected_structural_delta": "Requires technological civilization with nuclear fission capability and stellar engineering; predicts isotopic ratios matching fission product yields rather than natural nucleosynthesis; possible temporal variation if disposal is ongoing; potential correlation with other technosignatures",
+        "edge_type_to_siblings": {
+          "neutron_star_bombardment_reading": "forecloses",
+          "superheavy_decay_reading": "coexists_with"
+        },
+        "falsification_pathway": "Isotopic ratios inconsistent with fission products; actinide abundances explainable by natural process; absence of other technosignatures in system"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "neutron_star_bombardment_reading",
+        "reading_b": "superheavy_decay_reading",
+        "basis": "Neutron star reading requires external energy source (companion star) continuously driving transmutation; superheavy decay reading requires primordial element present since stellar formation decaying passively. No framework holds both: either actinides are externally produced (bombardment) or internally sourced (decay), not both."
+      },
+      {
+        "reading_a": "neutron_star_bombardment_reading",
+        "reading_b": "artifact_disposal_reading",
+        "basis": "Neutron star reading grounds actinide presence in natural astrophysical process; artifact reading grounds it in intentional technological intervention. Accepting natural bombardment as sufficient cause precludes need for artificial deposition; accepting artificial origin as true cause precludes neutron star companion as explanation."
+      }
+    ],
+    "reading_notes": "Superheavy decay and artifact disposal readings are NOT axiom-contradictory because both could be true simultaneously (civilization could deposit superheavy elements as waste). They share 'coexists_with' edge type and lack axiom contradiction. This identifies licensed plurality: both readings are socially live positions in SETI discourse, neither forecloses the other, and a hybrid framework (natural superheavy elements later recognized and exploited by civilization) is coherent."
+  }
+}

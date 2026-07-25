@@ -1,0 +1,248 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Safety Engineering / Organizational Learning / High-Reliability Organizations",
+  "family_id": "catastrophe_avoidance_competence_retention",
+  "topic_summary": "Analysis of whether simulation-based training adequately maintains catastrophe-avoidance competence in aviation (stall recovery, CRM) and nuclear (meltdown response) sectors across decades without recurring real catastrophes. The kernel contest is whether drills count as the exercise that keeps competence alive, or whether only actual catastrophic events do.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "FAA/EASA (regulatory bodies mandating simulator training as sufficient)",
+      "Airlines and nuclear plant operators (institutional implementers)",
+      "Simulator manufacturers (CORYS, L3Harris, APS - technology providers)",
+      "Pilots and nuclear operators (practitioners with embodied competence)",
+      "Colgan Air/Air France 447 crashes (catastrophe anchors driving regulatory change)",
+      "Fukushima disaster (nuclear catastrophe anchor)",
+      "ICATEE (international aviation training coordination body)",
+      "Line audits vs jeopardy simulation (assessment mechanism tension)"
+    ],
+    "key_tensions": [
+      "Regulatory mandate (simulation sufficient) vs practitioner skepticism (real aircraft/events irreplaceable)",
+      "Skill retention via simulation vs skill decay without real-world exercise (2-month deterioration window)",
+      "Fidelity of simulation vs transfer-of-training concerns (negative transfer, idealized conditions)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Catastrophe-avoidance competence must be exercised to remain occupied; the shared commitment is that competence atrophies without exercise",
+    "authority_description": "Regulatory bodies (FAA, NRC) claim authority to certify what counts as adequate exercise; practitioners claim authority grounded in embodied experience",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_CS",
+    "is_contested_kernel": true,
+    "kernel_id": "competence_exercise_requirement",
+    "readings": [
+      {
+        "reading_id": "simulation_as_adequate_exercise",
+        "commitment": "Simulation with high fidelity and debriefing constitutes adequate exercise of the competence kernel",
+        "authority_grounding": "Regulatory mandate + learning science evidence (skill retention studies, debriefing effectiveness)",
+        "sibling_readings": [
+          "catastrophe_as_necessary_anchor",
+          "hybrid_dependency"
+        ],
+        "expected_structural_delta": "Competence maintained via scheduled simulation cycles; catastrophe-free decades validate the reading; regulatory compliance sufficient"
+      },
+      {
+        "reading_id": "catastrophe_as_necessary_anchor",
+        "commitment": "Only real catastrophic events (or near-misses) provide the irreducible exercise that maintains competence",
+        "authority_grounding": "Practitioner embodied knowledge + transfer-of-training skepticism + real-world variability claims",
+        "sibling_readings": [
+          "simulation_as_adequate_exercise",
+          "hybrid_dependency"
+        ],
+        "expected_structural_delta": "Competence kernel atrophies during catastrophe-free periods despite simulation; first real event reveals decay; 'muscle memory' vs 'knowing about' distinction"
+      },
+      {
+        "reading_id": "hybrid_dependency",
+        "commitment": "Simulation is necessary but insufficient; competence requires both simulation foundation and periodic real-world anchoring (line operations, non-jeopardy audits, actual aircraft time)",
+        "authority_grounding": "Synthesis position grounded in 'complementary not replacement' evidence + skill decay timelines + negative transfer concerns",
+        "sibling_readings": [
+          "simulation_as_adequate_exercise",
+          "catastrophe_as_necessary_anchor"
+        ],
+        "expected_structural_delta": "Competence maintained via hybrid regime; pure simulation creates fragile equilibrium; pure real-world exercise ethically/practically impossible; line audits and real aircraft time bridge the gap"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "simulation_as_adequate_exercise",
+        "reading_b": "catastrophe_as_necessary_anchor",
+        "basis": "One holds that high-fidelity representation with debriefing is structurally equivalent to the real event for competence maintenance; the other holds that embodied experience of actual physical systems under real stakes is irreducible and cannot be simulated. No single framework can hold both 'simulation is adequate' and 'only real catastrophe maintains competence' simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "simulation_as_adequate_exercise",
+      "human_readable": "Simulation as Adequate Exercise (Regulatory/Learning Science Reading)",
+      "structural_delta": "High-fidelity simulation with debriefing constitutes structurally adequate exercise of catastrophe-avoidance competence",
+      "primary_observable": "Skill retention metrics post-simulation; regulatory compliance rates; catastrophe-free operational years",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "regulatory_bodies",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents institutional/regulatory position with measurable observables"
+    },
+    {
+      "claim_id": "catastrophe_as_necessary_anchor",
+      "human_readable": "Catastrophe as Necessary Anchor (Practitioner Embodied Knowledge Reading)",
+      "structural_delta": "Only real catastrophic events or near-misses provide irreducible exercise; simulation cannot substitute for embodied stakes",
+      "primary_observable": "Practitioner testimony on simulation vs real-world gaps; transfer-of-training failure rates; first-real-event performance degradation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "practitioner_authority",
+      "victim": "regulatory_certification_regime",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; captures practitioner skepticism and embodied knowledge claims; highest epsilon bin"
+    },
+    {
+      "claim_id": "hybrid_dependency",
+      "human_readable": "Hybrid Dependency (Complementary Exercise Regime Reading)",
+      "structural_delta": "Competence requires both simulation foundation and real-world anchoring (line ops, non-jeopardy audits, actual aircraft time)",
+      "primary_observable": "Skill decay timelines (2-month window); line audit vs jeopardy-simulation performance gaps; real aircraft hours correlation with competence",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; synthesis position with highest centrality; captures 'complementary not replacement' evidence"
+    },
+    {
+      "claim_id": "skill_decay_timeline",
+      "human_readable": "Skill Decay Timeline (2-Month Deterioration Window)",
+      "structural_delta": "Technical skills deteriorate within 2 months without practice; high-stakes low-frequency procedures most vulnerable",
+      "primary_observable": "CPR competence decay studies; pilot skill retention metrics; time-since-last-simulation performance correlation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hybrid_dependency"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing temporal constraint but captured within hybrid_dependency reading's observables"
+    },
+    {
+      "claim_id": "negative_transfer_risk",
+      "human_readable": "Negative Transfer Risk (Simulation-Induced Response Suppression)",
+      "structural_delta": "Training in idealized simulation conditions may cause pilots to suppress responses to real alerts or fail to adapt to real-world variability",
+      "primary_observable": "Alert response patterns in line ops vs simulation; real-world adaptation failures post-simulation training",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "operational_safety",
+      "downstream_of": [
+        "simulation_as_adequate_exercise"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: snare downstream of simulation_as_adequate_exercise but lower centrality than selected readings"
+    },
+    {
+      "claim_id": "regulatory_certification_sufficiency",
+      "human_readable": "Regulatory Certification Sufficiency (Mandate as Competence Guarantee)",
+      "structural_delta": "FAA/NRC mandate that simulation-based training is sufficient creates legal/institutional guarantee of competence",
+      "primary_observable": "Regulatory compliance rates; post-mandate catastrophe frequency; certification audit pass rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "airlines_nuclear_operators",
+      "victim": null,
+      "downstream_of": [
+        "simulation_as_adequate_exercise"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: rope downstream of simulation_as_adequate_exercise with limited independent structural yield"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "simulation_as_adequate_exercise",
+      "kernel_id": "competence_exercise_requirement",
+      "reading_id": "simulation_as_adequate_exercise"
+    },
+    {
+      "claim_id": "catastrophe_as_necessary_anchor",
+      "kernel_id": "competence_exercise_requirement",
+      "reading_id": "catastrophe_as_necessary_anchor"
+    },
+    {
+      "claim_id": "hybrid_dependency",
+      "kernel_id": "competence_exercise_requirement",
+      "reading_id": "hybrid_dependency"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "skill_decay_timeline",
+      "structural_delta": "Technical skills deteriorate within 2 months without practice",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain providing temporal constraint but observables captured within hybrid_dependency reading's evidence base"
+    },
+    {
+      "claim_id": "negative_transfer_risk",
+      "structural_delta": "Simulation may cause response suppression or adaptation failures",
+      "hypothesis": "snare",
+      "deferral_reason": "Snare downstream of simulation_as_adequate_exercise with lower centrality than selected readings; omega material for transfer-of-training concerns"
+    },
+    {
+      "claim_id": "regulatory_certification_sufficiency",
+      "structural_delta": "Regulatory mandate creates institutional guarantee of competence",
+      "hypothesis": "rope",
+      "deferral_reason": "Rope downstream of simulation_as_adequate_exercise with limited independent structural yield; institutional mechanism rather than competence substrate"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d5_collapse_test",
+      "description": "Does the 'drills as proxy-catastrophe' formulation collapse the reading distinction? Evidence suggests NO: practitioners distinguish 'muscle memory' from 'knowing about,' line audits reveal non-jeopardy performance gaps, and real aircraft time remains structurally distinct from simulation. The readings remain operationally meaningful.",
+      "source": "Kernel contest specification + research evidence on complementary-not-replacement"
+    },
+    {
+      "id": "omega_catastrophe_free_validation",
+      "description": "Decades of catastrophe-free operations could validate simulation_as_adequate_exercise OR mask competence decay that would only surface in the next real catastrophe. The absence of catastrophe is not evidence of competence retention—it is absence of the test.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + practitioner skepticism evidence"
+    },
+    {
+      "id": "omega_embodied_stakes_irreducibility",
+      "description": "Is the 'feel of turbulence' and 'physical cues' claim a mountain (irreducible physics) or a rope (coordination around shared practitioner norms)? If mountain, catastrophe_as_necessary_anchor reading gains structural weight. If rope, simulation fidelity improvements could close the gap.",
+      "source": "F03 (Hasty Generalization) + practitioner testimony on real vs simulated aircraft"
+    },
+    {
+      "id": "omega_line_audit_mechanism",
+      "description": "Line audits under non-jeopardy conditions reveal crew coordination gaps not visible in simulation. This suggests a fourth reading: 'routine operations as competence anchor' distinct from both simulation and catastrophe. Deferred for token budget but structurally significant.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + line audit evidence"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: catastrophe_as_necessary_anchor reading treats embodied physical experience as irreducible mountain, but this may be a rope of practitioner norms rather than physics. Generated omega_embodied_stakes_irreducibility to bound this uncertainty. Kernel contest validated: readings do NOT collapse—axiom contradiction holds between 'simulation is adequate' and 'only real catastrophe maintains competence.'"
+  },
+  "_seed_id": "aviation_nuclear_safety_retention"
+}

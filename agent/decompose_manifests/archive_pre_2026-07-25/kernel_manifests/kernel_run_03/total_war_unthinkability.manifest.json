@@ -1,0 +1,270 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Strategic Studies / International Relations / Nuclear Deterrence Theory",
+  "family_id": "great_power_war_disappearance_1945",
+  "topic_summary": "Analysis of whether 'winnable great-power total war' became structurally impossible (contraction) or merely rationally avoided (dropout) after 1945. The nuclear revolution created a regime where direct superpower confrontation risked mutual annihilation, yet proxy wars, limited conflicts, and ongoing strategic debates suggest the concept may remain intellectually reachable even if politically unthinkable.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "United States (superpower; MAD doctrine architect)",
+      "Soviet Union/USSR (superpower; MAD counterparty)",
+      "Bernard Brodie (strategic theorist; 1946 nuclear revolution thesis)",
+      "Robert McNamara (Defense Secretary; assured destruction architect)",
+      "Kenneth Waltz (IR theorist; nuclear peace thesis)",
+      "Herman Kahn (strategic analyst; nuclear war thinkability proponent)",
+      "Mutually Assured Destruction doctrine (strategic framework)",
+      "Nuclear weapons (technological constraint)"
+    ],
+    "key_tensions": [
+      "Deterrence credibility vs. use impossibility (MAD requires believable threat but use guarantees mutual destruction)",
+      "Geopolitical competition vs. direct confrontation prohibition (proxy wars as substitution mechanism)",
+      "Structural impossibility vs. rational choice constraint (contraction vs. dropout)",
+      "Post-Cold War nuclear irrelevance vs. renewed great-power competition (unipolar moment vs. multipolar return)"
+    ],
+    "key_mechanisms": [
+      "Mutually Assured Destruction (MAD): retaliatory capacity guarantees unacceptable damage even after first strike",
+      "Proxy war substitution: superpower competition channeled through third-party conflicts (14M deaths 1950-1989)",
+      "Assured destruction targeting: McNamara's 400-warhead countervalue doctrine"
+    ],
+    "key_absences": [
+      "Non-nuclear great powers (China pre-1964, major powers without arsenals) and their strategic calculus",
+      "Accidental war/unauthorized use mechanisms (technical failure modes that bypass rational deterrence)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that nuclear weapons fundamentally altered the possibility space for great-power total war, removing 'winnable total war' from the strategic menu",
+    "authority_description": "Strategic theorists, defense intellectuals, and superpower policymakers claiming interpretive authority over what nuclear weapons structurally permit",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "nuclear_impossibility_kernel",
+    "readings": [
+      {
+        "reading_id": "structural_contraction_reading",
+        "commitment": "Nuclear weapons created a physical impossibility: no rational path to victory exists because mutual annihilation is guaranteed",
+        "authority_grounding": "Mathematical game theory, MAD doctrine architects (Brodie, McNamara, Waltz)",
+        "sibling_readings": [
+          "rational_dropout_reading",
+          "credibility_paradox_reading"
+        ],
+        "expected_structural_delta": "War exits the reachable set entirely; M-set contraction (no site-expansion cell can represent this); proxy wars are substitution not continuation"
+      },
+      {
+        "reading_id": "rational_dropout_reading",
+        "commitment": "Nuclear weapons created a rational-choice constraint: victory remains structurally possible but costs exceed any conceivable benefit",
+        "authority_grounding": "Rational choice IR theory, cost-benefit deterrence models, critics of nuclear revolution thesis",
+        "sibling_readings": [
+          "structural_contraction_reading",
+          "credibility_paradox_reading"
+        ],
+        "expected_structural_delta": "War remains in reachable set but dropped from active consideration; M-set site-expansion can represent (reading still accessible); ongoing strategic debates confirm reachability"
+      },
+      {
+        "reading_id": "credibility_paradox_reading",
+        "commitment": "Nuclear weapons created a paradox: deterrence requires credible use-threat, but use guarantees mutual destruction, so the threat is inherently incredible",
+        "authority_grounding": "Brennan, Kahn, limited nuclear war theorists, counterforce doctrine advocates",
+        "sibling_readings": [
+          "structural_contraction_reading",
+          "rational_dropout_reading"
+        ],
+        "expected_structural_delta": "Deterrence is unstable; great powers seek usable nuclear options (counterforce, limited war); 'unthinkability' is rhetorical not structural; war remains reachable via escalation ladders"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "structural_contraction_reading",
+        "reading_b": "rational_dropout_reading",
+        "basis": "Contraction reading holds that no coherent strategic framework can include 'winnable nuclear war' because victory is physically impossible; dropout reading holds that victory is possible but irrational. No single framework can hold both 'victory is impossible' and 'victory is possible but too costly' as simultaneously true."
+      },
+      {
+        "reading_a": "structural_contraction_reading",
+        "reading_b": "credibility_paradox_reading",
+        "basis": "Contraction reading holds that use is impossible (guaranteed mutual annihilation removes it from possibility space); paradox reading holds that use must remain possible for deterrence to function. No framework can hold both 'use is impossible' and 'use must be credibly possible' simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "structural_contraction_reading",
+      "human_readable": "Structural Contraction (Nuclear War as Physical Impossibility)",
+      "structural_delta": "Nuclear weapons removed winnable great-power war from the possibility space via guaranteed mutual annihilation",
+      "primary_observable": "Absence of direct superpower military confrontation 1945-present; MAD doctrine institutionalization; Brodie/Waltz consensus in strategic studies",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "proxy_war_substitution"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading of the kernel; mountain hypothesis with clearest observable (70-year great-power peace); upstream to proxy war mechanism"
+    },
+    {
+      "claim_id": "rational_dropout_reading",
+      "human_readable": "Rational Dropout (Nuclear War as Cost-Prohibitive Choice)",
+      "structural_delta": "Nuclear weapons made great-power war irrational via cost-benefit calculus, but victory remains structurally possible",
+      "primary_observable": "Ongoing nuclear strategy debates; counterforce doctrine development; limited nuclear war scenarios in defense planning",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "credibility_paradox_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with distinct observable (strategic debate persistence); rope coordination problem; feeds credibility paradox"
+    },
+    {
+      "claim_id": "credibility_paradox_reading",
+      "human_readable": "Credibility Paradox (Deterrence Requires Incredible Threat)",
+      "structural_delta": "MAD deterrence is inherently unstable because the threat must be credible but use guarantees mutual destruction",
+      "primary_observable": "Counterforce doctrine adoption; tactical nuclear weapons development; Brennan/Kahn critiques of MAD; first-use policy debates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "defense_intellectuals",
+      "victim": "civilian_populations",
+      "downstream_of": [
+        "rational_dropout_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; tangled_rope synthesis of deterrence instability; distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "proxy_war_substitution",
+      "human_readable": "Proxy War Substitution (Geopolitical Competition Displacement)",
+      "structural_delta": "Nuclear deterrence displaced direct superpower confrontation into proxy wars (14M deaths 1950-1989)",
+      "primary_observable": "Proxy war casualty counts; superpower arms/funding flows to third-party conflicts; Korea/Vietnam/Afghanistan patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "superpowers",
+      "victim": "proxy_war_populations",
+      "downstream_of": [
+        "structural_contraction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of contraction reading; high epsilon but structurally derivative; omega material on extraction displacement"
+    },
+    {
+      "claim_id": "post_cold_war_irrelevance",
+      "human_readable": "Post-Cold War Nuclear Irrelevance (Unipolar Moment Dropout)",
+      "structural_delta": "Nuclear weapons dropped from strategic discourse during unipolar era (1991-2014) as great-power competition appeared obsolete",
+      "primary_observable": "Nuclear policy literature volume 1991-2014; arms control treaty activity; public discourse frequency",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal anomaly (unipolar moment); zero centrality; does not test kernel contest directly"
+    },
+    {
+      "claim_id": "non_nuclear_great_powers",
+      "human_readable": "Non-Nuclear Great Power Constraint (Pre-1964 China, Major Powers Without Arsenals)",
+      "structural_delta": "Great powers without nuclear arsenals faced different strategic calculus; tests whether nuclear possession or bipolarity drove peace",
+      "primary_observable": "China's strategic behavior pre/post-1964 nuclear test; non-nuclear major power conflict patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence probe (§1.1); scaffold for testing nuclear-specific vs. systemic causes; omega variable"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "structural_contraction_reading",
+      "kernel_id": "nuclear_impossibility_kernel",
+      "reading_id": "structural_contraction_reading"
+    },
+    {
+      "claim_id": "rational_dropout_reading",
+      "kernel_id": "nuclear_impossibility_kernel",
+      "reading_id": "rational_dropout_reading"
+    },
+    {
+      "claim_id": "credibility_paradox_reading",
+      "kernel_id": "nuclear_impossibility_kernel",
+      "reading_id": "credibility_paradox_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "proxy_war_substitution",
+      "structural_delta": "Nuclear deterrence displaced superpower confrontation into proxy wars (14M deaths)",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of structural_contraction_reading; high epsilon but structurally derivative; extraction displacement is omega material"
+    },
+    {
+      "claim_id": "post_cold_war_irrelevance",
+      "structural_delta": "Nuclear weapons dropped from strategic discourse during unipolar era",
+      "hypothesis": "piton",
+      "deferral_reason": "Temporal anomaly; zero centrality; does not directly test contraction vs. dropout kernel contest"
+    },
+    {
+      "claim_id": "non_nuclear_great_powers",
+      "structural_delta": "Great powers without arsenals faced different strategic calculus",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Absence probe; tests nuclear-specific vs. systemic causes; omega variable for causal attribution"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m_set_representation",
+      "description": "If structural_contraction_reading is correct (war exits reachable set entirely), M-set site-expansion cannot represent this because it lacks a contraction cell. The kernel contest directly tests whether the M-set formalism is complete for representing reading-space dynamics.",
+      "source": "User's kernel contest framing; §1.3 commitment system recognition"
+    },
+    {
+      "id": "omega_proxy_war_extraction",
+      "description": "If direct war became impossible, did proxy wars displace extraction (14M deaths 1950-1989) or reduce total violence? Deferred axis proxy_war_substitution carries high epsilon; may warrant independent generation if extraction displacement is the analytical target.",
+      "source": "Deferred axis proxy_war_substitution; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_accidental_war",
+      "description": "Rational deterrence models assume intentional decision-making. Accidental war mechanisms (technical failure, unauthorized use, misperception) bypass rational calculus. Does this invalidate both contraction and dropout readings by introducing a third path?",
+      "source": "Absence inventory (§1.1); Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_non_nuclear_causation",
+      "description": "Is the 70-year great-power peace caused by nuclear weapons specifically, or by post-1945 systemic factors (UN, economic interdependence, democratic peace)? Deferred axis non_nuclear_great_powers tests this; China pre/post-1964 is natural experiment.",
+      "source": "Deferred axis non_nuclear_great_powers; causal attribution uncertainty"
+    },
+    {
+      "id": "omega_multipolar_return",
+      "description": "Post-Cold War irrelevance (1991-2014) suggests nuclear constraints may be regime-dependent (bipolar vs. unipolar vs. multipolar). Does renewed great-power competition (2014-present) reactivate the kernel contest, or confirm dropout reading via continued non-use?",
+      "source": "Deferred axis post_cold_war_irrelevance; temporal boundary condition"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings (contraction, dropout, credibility paradox) captures the structural contest. Axiom contradictions declared between contraction/dropout and contraction/credibility pairs. Five omegas generated to bound uncertainties (M-set representation, proxy war extraction, accidental war, non-nuclear causation, multipolar regime-dependence)."
+  },
+  "_seed_id": "total_war_unthinkability"
+}

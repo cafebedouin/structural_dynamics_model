@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology Governance / Internet Standards / Institutional Economics",
+  "family_id": "ietf_standards_governance_2026",
+  "topic_summary": "Analysis of IETF open standards and internet governance, examining whether the published standards process constitutes a contested kernel with multiple readings that instantiate different constraints, or a single constraint observed from different positions. The IETF's commitment to rough consensus, open participation, and interoperable protocol specifications serves as potential shared substrate.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "IETF (Internet Engineering Task Force — standards body operating on rough consensus model)",
+      "Large Platform Operators (Google, Meta, Cloudflare — implement and extend standards)",
+      "Small Implementers (independent developers, regional ISPs, non-profit infrastructure)",
+      "W3C and other standards bodies (parallel governance structures)",
+      "Nation-State Regulatory Bodies (EU, U.S., China — external constraint imposers)",
+      "End Users (constituency nominally protected by open standards)"
+    ],
+    "key_tensions": [
+      "Open participation vs practical gatekeeping (anyone can contribute vs resource/expertise barriers)",
+      "Interoperability commitment vs proprietary extension (standards as commons vs competitive moat)",
+      "Rough consensus legitimacy vs capture risk (procedural openness vs organized faction dominance)"
+    ],
+    "key_mechanisms": [
+      "RFC publication process (formal standards documentation and version control)",
+      "Working Group consensus calls (legitimacy grounding mechanism)",
+      "Implementation experience requirement (standards must prove deployable before ratification)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "commons_stewardship_reading",
+      "human_readable": "Commons Stewardship Reading (Standards as Public Infrastructure Constraint)",
+      "structural_delta": "Open standards constrain all implementers equally, preventing proprietary lock-in and preserving interoperability as shared substrate",
+      "primary_observable": "Adoption rate of published RFCs without proprietary extensions; market share of interoperable vs closed implementations",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "end_users_and_small_implementers",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating open interoperability as governing constraint with low extractiveness"
+    },
+    {
+      "claim_id": "capture_substrate_reading",
+      "human_readable": "Capture Substrate Reading (Standards as Platform Control Mechanism)",
+      "structural_delta": "Standards process becomes coordination point for organized factions to encode proprietary advantages, shifting constraint toward gatekeeping",
+      "primary_observable": "Proprietary extension proliferation; working group participant employment concentration; RFC authorship distribution",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "large_platform_operators",
+      "victim": "small_implementers_and_users",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Alternative reading with structurally different beneficiary/victim structure and higher extractiveness"
+    },
+    {
+      "claim_id": "legitimacy_erosion_reading",
+      "human_readable": "Legitimacy Erosion Reading (Consensus Process as Vulnerable Substrate)",
+      "structural_delta": "Rough consensus mechanism itself becomes contested, with procedural openness insufficient against resource asymmetry and organized capture",
+      "primary_observable": "Appeals frequency; working group chair turnover; participant employment diversity metrics",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "well_resourced_factions",
+      "victim": "consensus_legitimacy_itself",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Meta-level reading targeting the authority structure itself; distinct victim (legitimacy as commons)"
+    },
+    {
+      "claim_id": "resource_asymmetry_mountain",
+      "human_readable": "Resource Asymmetry Mountain (Participation Cost as Physical Constraint)",
+      "structural_delta": "Time, expertise, and travel costs to participate in standards process create de facto exclusion regardless of formal openness",
+      "primary_observable": "Participant employment distribution; geographic concentration of in-person meetings; individual vs corporate affiliation ratio",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "capture_substrate_reading",
+        "legitimacy_erosion_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain feeding into readings 2 and 3, but lower centrality than selected trio"
+    },
+    {
+      "claim_id": "regulatory_override_piton",
+      "human_readable": "Regulatory Override Piton (Nation-State Law as External Constraint)",
+      "structural_delta": "GDPR, Chinese Great Firewall rules, and other sovereign regulations override IETF standards in practice, making openness irrelevant in regulatory domains",
+      "primary_observable": "Geographic fragmentation of protocol deployment; compliance-driven protocol forks",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "global_interoperability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: external constraint outside IETF governance frame; omega-level consideration"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "commons_stewardship_reading",
+      "kernel_id": "ietf_openness_commitment",
+      "reading_id": "commons_stewardship_reading"
+    },
+    {
+      "claim_id": "capture_substrate_reading",
+      "kernel_id": "ietf_openness_commitment",
+      "reading_id": "capture_substrate_reading"
+    },
+    {
+      "claim_id": "legitimacy_erosion_reading",
+      "kernel_id": "ietf_openness_commitment",
+      "reading_id": "legitimacy_erosion_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "resource_asymmetry_mountain",
+      "structural_delta": "Participation cost creates de facto exclusion despite formal openness",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream constraint feeding both capture and legitimacy erosion readings, but lower graph centrality than selected trio"
+    },
+    {
+      "claim_id": "regulatory_override_piton",
+      "structural_delta": "Sovereign law overrides IETF standards in practice",
+      "hypothesis": "piton",
+      "deferral_reason": "External to IETF governance frame; regulatory fragmentation is omega-level variable affecting all readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_implementation_gap",
+      "description": "Do published RFCs constrain actual deployment, or does the implementation experience requirement create a selection effect where only implementer-favored standards advance? If the latter, the commons reading may be aspirational rather than descriptive.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analyzing standards texts rather than deployment reality"
+    },
+    {
+      "id": "omega_cryptography_warfare",
+      "description": "Are encryption standards (TLS, DNSSEC) genuinely open constraints or sites of covert state influence? The Dual_EC_DRBG backdoor case suggests IETF process vulnerable to intelligence agency insertion.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — state security apparatus not cataloged as entity"
+    },
+    {
+      "id": "omega_platform_monoculture",
+      "description": "Does Chrome/Chromium dominance (>65% browser share) make W3C and WHATWG standards de facto Google standards, collapsing the distinction between open process and proprietary control?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — Google benefits from standards framing that obscures effective veto power"
+    },
+    {
+      "id": "omega_consensus_threshold",
+      "description": "Is 'rough consensus' operationally defined, or does ambiguity in the threshold constitute a discretionary gate that working group chairs control? If the latter, legitimacy erosion reading gains strength.",
+      "source": "Tension 3 (Rough consensus legitimacy vs capture risk)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel recognition validated: three readings instantiate genuinely different constraints from the IETF openness commitment. Commons stewardship treats openness as low-epsilon rope; capture substrate treats standards process as coordination point for extractive gatekeeping; legitimacy erosion targets the consensus mechanism itself as vulnerable snare. All three share the IETF published process as common substrate but would emit different victim sets and extractiveness levels."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The IETF's published commitment to open participation, rough consensus decision-making, and interoperable protocol specifications as the fixed substrate for internet governance",
+    "authority_description": "Interpretive legitimacy grounded in procedural openness (anyone can contribute), implementation experience (running code and rough consensus), and voluntary adoption by implementers rather than regulatory mandate",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_authority (multiple readings of what openness commitment actually constrains in practice)",
+    "is_contested_kernel": true,
+    "kernel_id": "ietf_openness_commitment",
+    "readings": [
+      {
+        "reading_id": "commons_stewardship_reading",
+        "commitment": "Open standards as public infrastructure constraint preserving interoperability for all implementers",
+        "authority_grounding": "Procedural openness + implementation experience requirement = legitimate constraint on proprietary enclosure",
+        "sibling_readings": [
+          "capture_substrate_reading",
+          "legitimacy_erosion_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness; no structural beneficiary class; standards constrain large and small implementers equally toward interoperability"
+      },
+      {
+        "reading_id": "capture_substrate_reading",
+        "commitment": "Standards process as coordination substrate where resource advantage translates to encoded gatekeeping",
+        "authority_grounding": "Procedural openness is nominal; effective authority resides with well-resourced factions who can sustain participation and shape working group consensus",
+        "sibling_readings": [
+          "commons_stewardship_reading",
+          "legitimacy_erosion_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness; large platform operators as structural beneficiaries; small implementers and users as victims of proprietary extensions disguised as open standards"
+      },
+      {
+        "reading_id": "legitimacy_erosion_reading",
+        "commitment": "Rough consensus mechanism itself as contested and vulnerable to organized capture despite procedural safeguards",
+        "authority_grounding": "Authority derived from consensus process, but process integrity depends on resource parity and good-faith participation — both failing under asymmetric capture pressure",
+        "sibling_readings": [
+          "commons_stewardship_reading",
+          "capture_substrate_reading"
+        ],
+        "expected_structural_delta": "High extractiveness targeting legitimacy commons itself; well-resourced factions extract procedural legitimacy to ratify self-serving outcomes; victim is the consensus mechanism's credibility"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "commons_stewardship_reading",
+        "reading_b": "capture_substrate_reading",
+        "basis": "Commons reading holds that procedural openness successfully constrains proprietary enclosure; capture reading holds that procedural openness is insufficient against resource asymmetry and becomes substrate for encoding advantage. No single framework can hold both 'openness prevents capture' and 'openness enables capture' as simultaneously true."
+      },
+      {
+        "reading_a": "commons_stewardship_reading",
+        "reading_b": "legitimacy_erosion_reading",
+        "basis": "Commons reading treats rough consensus as robust legitimacy mechanism; legitimacy erosion reading treats rough consensus as fragile and already compromised. No framework can hold both 'consensus process is legitimate' and 'consensus process has lost legitimacy' as foundational axioms."
+      }
+    ]
+  },
+  "_seed_id": "ietf_open_internet_standards"
+}

@@ -1,0 +1,192 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Legal Theory / Religious Authority",
+  "family_id": "sharia_interpretive_contest_2026",
+  "topic_summary": "Analysis of interpretive contest within Islamic law between classical traditionalist readings grounding authority in historical fiqh schools and consensus (ijma), versus reformist readings grounding authority in contextual ijtihad for modern circumstances. Both readings claim fidelity to the same foundational texts (Quran + Hadith corpus) but emit structurally divergent constraints on gender roles, criminal justice, and religious authority distribution.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Quran + Hadith corpus (foundational textual kernel)",
+      "Classical fiqh schools (Hanafi, Maliki, Shafi'i, Hanbali madhhabs; interpretive authority structures)",
+      "Traditionalist ulama (religious scholars claiming authority via ijma and taqlid)",
+      "Reformist interpreters (progressive scholars, women's rights advocates grounding authority in maslaha and contextual ijtihad)",
+      "State legal systems in Muslim-majority countries (variable adoption of classical vs reformed codes)",
+      "Muslim communities in non-Muslim-majority contexts (diaspora populations navigating secular/religious law interfaces)"
+    ],
+    "key_tensions": [
+      "Textual fixity vs contextual application (same hadith corpus read as eternally binding vs historically contingent)",
+      "Consensus authority vs individual reasoning (ijma as constraining vs ijtihad as liberating)",
+      "Gender role prescriptions (classical readings restrict women's testimony, inheritance, public roles; reformist readings contextualize or reinterpret)"
+    ],
+    "key_claims": [
+      "Traditionalist: Classical fiqh represents authoritative consensus; deviation threatens doctrinal integrity",
+      "Reformist: Contextual ijtihad is mandated when historical rulings conflict with contemporary ethics and maslaha (public interest)",
+      "Traditionalist: Women's reduced inheritance share and testimony weight are divine ordinances not subject to revision",
+      "Reformist: These rulings were contextual responses to 7th-century Arabian economic structures, not universal commands"
+    ],
+    "key_mechanisms": [
+      "Taqlid system (adherence to madhhab rulings) vs ijtihad practice (independent juristic reasoning)",
+      "State incorporation of sharia (variability in which reading informs criminal codes, family law, finance regulations)"
+    ],
+    "key_absences": [
+      "Mystical/Sufi interpretive traditions (neither traditionalist ulama nor reformist camps centrally engage tasawwuf hermeneutics)",
+      "Non-Sunni readings (Shia usul al-fiqh, Ibadi jurisprudence treated as background rather than co-equal interpretive communities)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Quran and Hadith corpus as immutable divine revelation, claimed by all parties as the singular authoritative substrate for deriving legitimate Islamic legal rulings",
+    "authority_description": "Contested between traditionalist ulama (authority via unbroken transmission chains and historical consensus) and reformist interpreters (authority via reasoned engagement with text under changed material conditions)",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Monopoly Erosion (Pattern 3: reformists challenge ulama's exclusive claim to authoritative interpretation; traditionalists deny legitimacy of reform readings but cannot suppress them institutionally in all contexts)",
+    "is_contested_kernel": true,
+    "kernel_id": "quran_hadith_substrate",
+    "readings": [
+      {
+        "reading_id": "traditionalist_taqlid",
+        "commitment": "Classical fiqh schools represent authoritative consensus (ijma); contemporary Muslims obligated to follow established madhhab rulings via taqlid",
+        "authority_grounding": "Unbroken transmission chains (isnad) and historical scholarly consensus as guarantors of doctrinal integrity",
+        "sibling_readings": [
+          "reformist_ijtihad",
+          "state_hybrid"
+        ],
+        "expected_structural_delta": "High suppression of alternative readings; beneficiaries include traditional religious authority structures (ulama, mosque hierarchies, madhhab institutions); victims include progressive Muslims, women seeking equal legal status, religious minorities under classical dhimmi frameworks; ε bin: High (0.60+) due to institutionalized enforcement mechanisms in traditionalist-dominant contexts"
+      },
+      {
+        "reading_id": "reformist_ijtihad",
+        "commitment": "Contextual ijtihad mandated when classical rulings conflict with contemporary ethics, human rights norms, or maslaha (public interest); Quran's ethical trajectory prioritized over literalist hadith application",
+        "authority_grounding": "Reasoned engagement with foundational texts under changed material and social conditions; authority derived from demonstrated competence in both classical sources and modern disciplines (sociology, gender studies, human rights law)",
+        "sibling_readings": [
+          "traditionalist_taqlid",
+          "state_hybrid"
+        ],
+        "expected_structural_delta": "Lower suppression of alternative readings; beneficiaries include progressive Muslims, women, LGBTQ+ individuals, religious minorities; victims include traditional authority structures whose legitimacy depends on interpretive monopoly; ε bin: Moderate (0.35-0.50) in contexts where reformist readings have institutional backing, but vulnerable to traditionalist counter-mobilization"
+      },
+      {
+        "reading_id": "state_hybrid",
+        "commitment": "State selectively adopts classical rulings in family law and criminal codes while applying reformist or secular frameworks in commercial, administrative law; legitimacy grounded in political sovereignty rather than pure doctrinal fidelity",
+        "authority_grounding": "State apparatus as arbiter; authority derived from territorial monopoly on violence and legal codification, not scholarly consensus or reasoned interpretation",
+        "sibling_readings": [
+          "traditionalist_taqlid",
+          "reformist_ijtihad"
+        ],
+        "expected_structural_delta": "Variable suppression depending on regime incentives; beneficiaries include state elites who instrumentalize sharia for legitimacy while preserving flexibility in economic policy; victims include both traditionalists (whose comprehensive sharia vision is truncated) and reformists (whose critical readings threaten regime stability); ε bin: Low to Moderate (0.25-0.45) — high variability across state contexts"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "traditionalist_taqlid",
+        "reading_b": "reformist_ijtihad",
+        "basis": "Traditionalist axiom: divine law as crystallized in classical consensus is epistemically superior to contemporary reasoning, which is corrupted by non-Islamic influences. Reformist axiom: human understanding of divine intent evolves with material conditions; classical consensus was itself contextual ijtihad, not final revelation. No single coherent framework can hold both: accepting reformist axiom requires rejecting traditionalist claim that ijma closes the gate of ijtihad."
+      },
+      {
+        "reading_a": "traditionalist_taqlid",
+        "reading_b": "state_hybrid",
+        "basis": "Traditionalist axiom: comprehensive sharia (covering all domains from ritual to criminal to commercial law) is obligatory; selective adoption is impermissible bid'ah (innovation). State hybrid axiom: political sovereignty permits instrumental adoption of sharia in domains that serve regime legitimacy while excluding domains that constrain state power. No coherent framework holds both: accepting state sovereignty as supreme contradicts traditionalist claim that divine law supersedes political authority."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "traditionalist_taqlid",
+      "human_readable": "Traditionalist Taqlid Reading (Classical Fiqh as Binding Consensus)",
+      "structural_delta": "Authority grounded in historical consensus and madhhab transmission; contemporary deviation treated as doctrinal corruption",
+      "primary_observable": "Institutional support from traditional madrasas, Al-Azhar, Saudi Permanent Committee for Scholarly Research; legal codes in traditionalist-governed contexts (e.g., Saudi Arabia, Taliban Afghanistan)",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "traditionalist_ulama",
+      "victim": "progressive_muslims",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three sibling readings; highest ε bin; captures traditionalist pole of interpretive contest"
+    },
+    {
+      "claim_id": "reformist_ijtihad",
+      "human_readable": "Reformist Ijtihad Reading (Contextual Reinterpretation for Modern Ethics)",
+      "structural_delta": "Authority grounded in reasoned engagement with texts under changed conditions; classical rulings treated as historically contingent",
+      "primary_observable": "Reformist fatwa institutions (e.g., European Council for Fatwa and Research), progressive Muslim organizations (Musawah, Sisters in Islam), academic Islamic feminist scholarship",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "progressive_muslims",
+      "victim": "traditionalist_authority_structures",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second sibling reading; moderate ε; captures reformist pole of interpretive contest with distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "state_hybrid",
+      "human_readable": "State Hybrid Reading (Selective Sharia Adoption for Political Legitimacy)",
+      "structural_delta": "State as arbiter; sharia instrumentalized in domains serving regime legitimacy while excluded from domains constraining state power",
+      "primary_observable": "Legal codes in hybrid regimes (e.g., Egypt, Malaysia, Pakistan); state-controlled religious bureaucracies (Diyanet in Turkey, Ministry of Religious Affairs in Indonesia)",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "state_elites",
+      "victim": "comprehensive_sharia_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third sibling reading; distinct structural position as state-mediated compromise; lower ε but illuminates institutional enforcement mechanisms"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "traditionalist_taqlid",
+      "kernel_id": "quran_hadith_substrate",
+      "reading_id": "traditionalist_taqlid"
+    },
+    {
+      "claim_id": "reformist_ijtihad",
+      "kernel_id": "quran_hadith_substrate",
+      "reading_id": "reformist_ijtihad"
+    },
+    {
+      "claim_id": "state_hybrid",
+      "kernel_id": "quran_hadith_substrate",
+      "reading_id": "state_hybrid"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_sufi_hermeneutics",
+      "description": "Do mystical interpretive traditions (Sufi ta'wil) constitute a fourth reading with distinct constraint structure? Classical Sufis often subordinated external fiqh to internal spiritual realization, potentially emitting lower ε on legal domains while high ε on ritual/devotional practice. Deferred due to absence in both traditionalist and reformist framings.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_shia_usul",
+      "description": "Does Shia jurisprudence (with marja' system and different hadith corpus) instantiate a structurally distinct reading or a parallel kernel? Shia usul al-fiqh has ongoing ijtihad via living mujtahids, unlike Sunni gate-closure. This may be a separate CS rather than a reading of the Sunni kernel.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_gender_as_test_domain",
+      "description": "Are gender role constraints the primary observable for all three readings, or do other domains (e.g., criminal hudud punishments, riba prohibitions) show different constraint structures? If traditionalist reading has low ε on commercial law but high ε on gender, that reveals domain-specific enforcement priorities rather than uniform high suppression.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_licensed_plurality",
+      "description": "Do traditionalist_taqlid and reformist_ijtihad coexist as socially live positions (coexists_with edge) while holding axiom-contradictory commitments? If yes, this instantiates licensed plurality—neither reading can institutionally eliminate the other despite mutual exclusivity. Requires empirical observation of whether reformist institutions survive in traditionalist-majority contexts and vice versa.",
+      "source": "§1.3-K Axiom Contradiction Declaration"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Domain recognition confirms commitment system with contested kernel structure. Three readings selected represent distinct authority groundings and beneficiary structures. Deferred Sufi and Shia readings documented as omegas for potential future decomposition."
+  },
+  "_seed_id": "quran_sharia_interpretation"
+}

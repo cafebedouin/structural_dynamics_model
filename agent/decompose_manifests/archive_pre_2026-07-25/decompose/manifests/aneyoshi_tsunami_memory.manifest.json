@@ -1,0 +1,241 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Anthropology / Commitment System Analysis / Institutional Memory",
+  "family_id": "aneyoshi_tsunami_stone_2011",
+  "topic_summary": "Analysis of the Aneyoshi tsunami stone's 'do not build below this line' inscription as a commitment system tested across 78 years of non-catastrophe, culminating in the 2011 Tōhoku tsunami. The kernel contest is whether the commitment decayed to commemorative symbol or retained live behavioral force. The 2011 event provides a D5 catastrophe-theorem break: the village's survival (building compliance) vs neighboring villages' destruction (compliance failure) offers decisive temporal evidence on commitment vitality.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Aneyoshi village (survived 2011 tsunami; stone-compliant settlement)",
+      "Tsunami stone marker (1933 inscription: 'high dwellings ensure peace and happiness to our descendants')",
+      "Neighboring coastal villages (destroyed in 2011; non-compliant settlement patterns)",
+      "1933 Showa-Sanriku tsunami (precipitating catastrophe; 3000+ deaths; stone placement event)",
+      "2011 Tōhoku tsunami (testing catastrophe; 18,500+ deaths; stone validation event)"
+    ],
+    "key_tensions": [
+      "Commemorative decay vs behavioral persistence (78-year gap between catastrophes)",
+      "Individual economic incentive (coastal access, flat land value) vs collective survival commitment"
+    ],
+    "key_claims": [
+      "Aneyoshi maintained stone-line compliance through 2011 (empirical: village survived with zero tsunami deaths)",
+      "Neighboring villages violated equivalent elevation constraints (empirical: catastrophic losses in 2011)",
+      "78-year inter-catastrophe gap tests commitment durability under non-reinforcement",
+      "Stone inscription retained behavioral force rather than decaying to symbol"
+    ],
+    "key_mechanisms": [
+      {
+        "id": "intergenerational_transmission",
+        "description": "Oral tradition and land-use norm enforcement across generational turnover without catastrophe reinforcement",
+        "agents": "Village elders, family land allocation decisions",
+        "targets": "New households, land development proposals"
+      },
+      {
+        "id": "catastrophe_theorem_test",
+        "description": "2011 tsunami event provides decisive binary outcome: compliance = survival, violation = destruction",
+        "agents": "Natural hazard as test mechanism",
+        "targets": "Commitment system integrity"
+      }
+    ],
+    "absences": [
+      "Legal enforcement mechanism: stone compliance was not legally mandated by Japanese building codes pre-2011"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "human_readable": "Commemorative Husk (Symbolic Decay)",
+      "structural_delta": "Stone inscription decayed to symbolic artifact without behavioral force; compliance was coincidental or attenuated",
+      "primary_observable": "Land-use decision frequency citing stone vs other factors (economic, convenience); evidence of below-stone development proposals blocked or permitted",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "economic_development_actors",
+      "victim": "future_generations_in_hazard_zone",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents commitment-decay interpretation"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "human_readable": "Behavioral Competence (Live Commitment Persistence)",
+      "structural_delta": "Stone inscription retained live behavioral force; compliance was active norm enforcement through intergenerational transmission",
+      "primary_observable": "Same as commemorative_husk but interpreted as evidence of sustained commitment; 2011 survival as validation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents commitment-persistence interpretation"
+    },
+    {
+      "claim_id": "catastrophe_validation_axis",
+      "human_readable": "Catastrophe Validation Mechanism (D5 Temporal Break)",
+      "structural_delta": "2011 event as decisive test providing binary evidence: Aneyoshi (compliant) survived, neighbors (non-compliant) destroyed",
+      "primary_observable": "Casualty counts, damage assessments, settlement elevation measurements pre/post 2011",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "commemorative_husk_reading",
+        "behavioral_competence_reading"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Mountain providing physical constraint test; feeds into both readings as empirical adjudication mechanism"
+    },
+    {
+      "claim_id": "intergenerational_transmission_mechanism",
+      "human_readable": "Intergenerational Transmission Without Reinforcement",
+      "structural_delta": "Norm persistence across 78-year gap without catastrophe reinforcement; elder transmission vs generational forgetting",
+      "primary_observable": "Generational turnover rate, documented land-use disputes citing stone, oral history corpus",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "behavioral_competence_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism detail subordinate to behavioral_competence reading's primary claim"
+    },
+    {
+      "claim_id": "legal_enforcement_absence",
+      "human_readable": "Legal Enforcement Absence (Non-Coercive Compliance)",
+      "structural_delta": "Stone compliance achieved without legal mandate or state enforcement; social norm vs formal regulation",
+      "primary_observable": "Pre-2011 Japanese building code provisions, municipal zoning records",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "behavioral_competence_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence observation important but structural role captured by behavioral_competence reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "kernel_id": "tsunami_stone_commitment",
+      "reading_id": "commemorative_husk_reading"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "kernel_id": "tsunami_stone_commitment",
+      "reading_id": "behavioral_competence_reading"
+    },
+    {
+      "claim_id": "catastrophe_validation_axis",
+      "kernel_id": "tsunami_stone_commitment",
+      "reading_id": "catastrophe_validation_axis"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "intergenerational_transmission_mechanism",
+      "structural_delta": "Norm persistence across generational turnover without catastrophe reinforcement",
+      "hypothesis": "rope",
+      "deferral_reason": "Mechanistic detail subordinate to behavioral_competence reading's structural claim"
+    },
+    {
+      "claim_id": "legal_enforcement_absence",
+      "structural_delta": "Compliance achieved without legal mandate or state enforcement",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Absence observation captured implicitly by behavioral_competence reading's non-coercive compliance structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_counterfactual_villages",
+      "description": "Were there other villages with similar stone markers that violated compliance? If so, 2011 provides comparative test. If not, Aneyoshi may be survivor-bias case rather than commitment-validity proof.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): neighboring village compliance status"
+    },
+    {
+      "id": "omega_generational_handoff",
+      "description": "At what generational depth (1933 survivors' grandchildren? great-grandchildren?) does transmission fidelity collapse without reinforcement? 78 years spans ~3-4 generations; is this the durability ceiling?",
+      "source": "Deferred axis intergenerational_transmission_mechanism + temporal analysis"
+    },
+    {
+      "id": "omega_post_2011_normalization",
+      "description": "Has 2011 validation re-stabilized the commitment for another ~80-year cycle, or does catastrophe-driven compliance (fear-based) differ structurally from intergenerational-transmitted compliance (norm-based)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): commitment system reconstitution vs trauma response"
+    },
+    {
+      "id": "omega_economic_gradient",
+      "description": "Did Aneyoshi's compliance persist because the village lacked strong coastal economic incentives (fishing port, tourism), making the sacrifice trivial? If so, commemorative_husk may be valid for high-value coastal zones.",
+      "source": "Dark Matter Probe 1 (Operational Medium): unexamined economic constraint axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied successfully. D5 catastrophe-theorem break provides unusually strong empirical constraint on readings. Omegas bound counterfactual and generalization limits."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "1933 tsunami stone inscription: 'Do not build below this line. High dwellings ensure peace and happiness to our descendants.' Stabilized prohibition on low-elevation settlement.",
+    "authority_description": "Intergenerational oral tradition; elder enforcement of land-use norm; catastrophe memory as legitimating source.",
+    "drift_status": "functioning",
+    "candidate_pattern": "D5_catastrophe_theorem",
+    "is_contested_kernel": true,
+    "kernel_id": "tsunami_stone_commitment",
+    "readings": [
+      {
+        "reading_id": "commemorative_husk_reading",
+        "commitment": "Stone inscription decayed to symbolic artifact; compliance was coincidental or weakly enforced",
+        "authority_grounding": "symbolic/commemorative tradition without behavioral force",
+        "sibling_readings": [
+          "behavioral_competence_reading"
+        ],
+        "expected_structural_delta": "High ε (extractive on future generations via non-protection); beneficiary = economic development actors; victim = future coastal residents"
+      },
+      {
+        "reading_id": "behavioral_competence_reading",
+        "commitment": "Stone inscription retained live behavioral force; active norm enforcement through intergenerational transmission",
+        "authority_grounding": "oral tradition + elder enforcement + catastrophe memory",
+        "sibling_readings": [
+          "commemorative_husk_reading"
+        ],
+        "expected_structural_delta": "Very low ε (piton: stabilized constraint that functioned as intended); no extractive beneficiary structure"
+      },
+      {
+        "reading_id": "catastrophe_validation_axis",
+        "commitment": "2011 tsunami as decisive empirical test providing binary validation evidence",
+        "authority_grounding": "physical/natural law (tsunami height) + comparative outcome (Aneyoshi survival vs neighbor destruction)",
+        "sibling_readings": [],
+        "expected_structural_delta": "Mountain: physical constraint serving as commitment-test mechanism; feeds into both readings as adjudication device"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "commemorative_husk_reading",
+        "reading_b": "behavioral_competence_reading",
+        "basis": "Commemorative decay assumes inscription lost behavioral force and compliance was coincidental; behavioral competence assumes inscription retained causal efficacy. No coherent framework holds both: either the norm was causally operative (and compliance was functional) or it was not (and survival was fortuitous). The 2011 binary outcome adjudicates between them."
+      }
+    ]
+  },
+  "_seed_id": "aneyoshi_tsunami_memory"
+}

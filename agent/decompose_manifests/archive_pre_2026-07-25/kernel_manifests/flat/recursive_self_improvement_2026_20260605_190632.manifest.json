@@ -1,0 +1,264 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "AI Development / Technology Governance / Organizational Dynamics",
+  "family_id": "recursive_self_improvement_2026",
+  "topic_summary": "Anthropic's analysis of AI systems increasingly automating their own development cycle, presenting evidence that Claude now writes 80% of Anthropic's code and handles increasingly complex tasks. The document argues this trend points toward potential recursive self-improvement—AI systems fully autonomously designing successors—with major implications for control, alignment, and societal adaptation timelines.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Anthropic (AI lab developing Claude; primary case study organization)",
+      "Claude (AI system; multiple versions from Opus 3 to Mythos Preview)",
+      "Anthropic engineers (human developers whose role is shifting from writing to reviewing code)",
+      "OpenAI (competitor lab; also researching recursive self-improvement)",
+      "METR (benchmark organization measuring long-duration task capability)",
+      "GitHub (platform infrastructure strained by AI-generated code volume)",
+      "Fortune 100 companies (enterprise adopters; 70% now use Claude)",
+      "Policymakers/civil society (external stakeholders Anthropic proposes to involve in deliberation)"
+    ],
+    "key_tensions": [
+      "Automation acceleration vs human oversight capacity (code generation outpacing review; Amdahl's law bottlenecks)",
+      "Competitive pressure vs safety investment (alignment tax creates defection incentives; unilateral pause changes leader without creating coordination)",
+      "Capability measurement vs real-world transfer (benchmarks saturate but SWE-Bench Pro shows 23% vs 70% gap)",
+      "Recursive improvement potential vs alignment uncertainty (models may solve alignment or compound misalignment as they build successors)"
+    ],
+    "key_mechanisms": [
+      "Productivity multiplication (engineers merge 8x code/day via Claude assistance; 4x subjective output reported)",
+      "Bottleneck migration (Amdahl's law: as code generation accelerates, review becomes constraint; then idea generation becomes constraint)",
+      "Benchmark saturation (SWE-bench, CORE-Bench went from single-digit to near-100% performance in 15-24 months)",
+      "Capability doubling (task duration AI can handle reliably doubles every 4 months, accelerating from prior 7-month trend)",
+      "Verification regime requirement (pause/slowdown requires multi-lab agreement plus detectability infrastructure analogous to nuclear arms control)"
+    ],
+    "key_absences": [
+      "Independent verification of Anthropic's internal metrics (80% code authorship, 8x productivity claims rely on self-reported data)",
+      "Concrete governance mechanisms beyond proposal (document identifies need for verification systems but provides no implementation pathway)",
+      "Analysis of what happens if recursive improvement does NOT occur (all three futures assume either stall-then-diffusion, compounding gains, or full recursion; no scenario for capability plateau without diffusion)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "automation_velocity_vs_oversight_capacity",
+      "human_readable": "Automation Velocity vs Oversight Capacity (Amdahl's Law Bottleneck)",
+      "structural_delta": "AI code generation accelerates faster than human review capacity can scale, creating systemic bottleneck migration",
+      "primary_observable": "Ratio of code generation rate to review throughput; wait time for AI-generated PRs vs human-generated PRs",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "anthropic_as_organization",
+      "victim": "code_quality_assurance_process",
+      "downstream_of": [],
+      "feeds_into": [
+        "recursive_capability_threshold",
+        "alignment_tax_defection"
+      ],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; core organizational constraint with measurable observables (4.6x longer review wait for AI PRs); feeds both capability and governance axes"
+    },
+    {
+      "claim_id": "benchmark_saturation_vs_deployment_gap",
+      "human_readable": "Benchmark Saturation vs Deployment Gap (Measurement Validity)",
+      "structural_delta": "Models saturate controlled benchmarks (SWE-bench Verified 80%) while failing on real-world complexity (SWE-Bench Pro 23%)",
+      "primary_observable": "Performance delta between sanitized benchmarks and production-environment tasks; transfer learning failure rate",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "recursive_capability_threshold"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable from axis 1 (measurement validity vs organizational throughput); upstream to capability assessment; distinct ε"
+    },
+    {
+      "claim_id": "recursive_capability_threshold",
+      "human_readable": "Recursive Capability Threshold (Research Judgment Automation)",
+      "structural_delta": "Transition from AI executing specified experiments to AI selecting which experiments matter—the judgment gap between automation and autonomy",
+      "primary_observable": "Model performance on open-ended next-step selection vs human researchers; success rate on self-directed research projects",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "automation_velocity_vs_oversight_capacity",
+        "benchmark_saturation_vs_deployment_gap"
+      ],
+      "feeds_into": [
+        "alignment_tax_defection",
+        "verification_regime_feasibility"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Central synthesis node; downstream of both measurement and organizational axes; determines whether recursive improvement is achievable; highest structural weight (mountain with high ε)"
+    },
+    {
+      "claim_id": "alignment_tax_defection",
+      "human_readable": "Alignment Tax Defection Incentive (Competitive Safety Erosion)",
+      "structural_delta": "Individual labs face structural incentive to reduce safety investment when competitors may defect, even if all prefer coordinated safety",
+      "primary_observable": "Safety investment as % of compute budget across labs; time-to-deployment for models with equivalent capability scores",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "first_mover_lab",
+      "victim": "collective_safety_infrastructure",
+      "downstream_of": [
+        "automation_velocity_vs_oversight_capacity",
+        "recursive_capability_threshold"
+      ],
+      "feeds_into": [
+        "verification_regime_feasibility"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct game-theoretic structure from other axes; snare with clear beneficiary/victim; feeds governance feasibility"
+    },
+    {
+      "claim_id": "verification_regime_feasibility",
+      "human_readable": "Verification Regime Feasibility (Detectability Infrastructure)",
+      "structural_delta": "Training runs are concealable unlike missile silos; verification requires infrastructure that does not yet exist and may be technically infeasible",
+      "primary_observable": "Detectability of large training runs via energy consumption, chip allocation, or other side channels; false negative rate for concealed training",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "defecting_lab",
+      "victim": "pause_coordination_regime",
+      "downstream_of": [
+        "recursive_capability_threshold",
+        "alignment_tax_defection"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Terminal governance node; downstream synthesis of capability and incentive axes; distinct technical challenge (detectability) from alignment tax (incentive structure)"
+    },
+    {
+      "claim_id": "productivity_measurement_validity",
+      "human_readable": "Productivity Measurement Validity (Self-Reported Metrics)",
+      "structural_delta": "Anthropic's 8x code output and 4x subjective productivity claims lack independent verification; lines-of-code is acknowledged imperfect proxy",
+      "primary_observable": "Independent audit of code quality, bug introduction rate, and long-term maintainability of AI-generated vs human code",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "automation_velocity_vs_oversight_capacity"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: measurement validity concern but overlaps with benchmark_saturation_vs_deployment_gap's core observable (measurement-reality gap); lower centrality; piton rather than structural constraint"
+    },
+    {
+      "claim_id": "embodied_intelligence_lag",
+      "human_readable": "Embodied Intelligence Lag (Physical World Bottleneck)",
+      "structural_delta": "Recursive intelligence may advance rapidly in software but physical-world deployment (robotics, manufacturing, clinical trials) remains constrained by non-intelligence factors",
+      "primary_observable": "Time-to-deployment for AI capabilities in physical vs digital domains; robotics capability vs software capability growth rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "recursive_capability_threshold"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: distinct observable but peripheral to core recursive improvement question; document acknowledges this as Amdahl's law in physical domain but does not analyze deeply; omega material"
+    },
+    {
+      "claim_id": "human_comparative_advantage_erosion",
+      "human_readable": "Human Comparative Advantage Erosion (Taste and Judgment Automation)",
+      "structural_delta": "The residual human role (research taste, problem selection) may itself be automatable rather than a permanent human advantage",
+      "primary_observable": "Model performance on meta-research tasks (grant proposal evaluation, research direction selection); human vs AI agreement on 'important' problems",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "recursive_capability_threshold"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: conceptually downstream of recursive_capability_threshold and does not add independent structural delta; the threshold axis already captures the judgment automation question; this would be redundant"
+    }
+  ],
+  "generation_sequence": [
+    "automation_velocity_vs_oversight_capacity",
+    "benchmark_saturation_vs_deployment_gap",
+    "recursive_capability_threshold",
+    "alignment_tax_defection",
+    "verification_regime_feasibility"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "productivity_measurement_validity",
+      "structural_delta": "Anthropic's productivity claims lack independent verification",
+      "hypothesis": "piton",
+      "deferral_reason": "Overlaps with benchmark_saturation_vs_deployment_gap's measurement-reality gap observable; lower centrality (2 vs 3); piton rather than structural constraint"
+    },
+    {
+      "claim_id": "embodied_intelligence_lag",
+      "structural_delta": "Physical-world deployment constrained by non-intelligence factors",
+      "hypothesis": "mountain",
+      "deferral_reason": "Peripheral to core recursive improvement analysis; document acknowledges but does not deeply analyze; suitable for omega treatment"
+    },
+    {
+      "claim_id": "human_comparative_advantage_erosion",
+      "structural_delta": "Research taste and judgment may themselves be automatable",
+      "hypothesis": "rope",
+      "deferral_reason": "Redundant with recursive_capability_threshold which already captures judgment automation question; no independent structural delta"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_independent_verification_gap",
+      "description": "All productivity metrics (80% code authorship, 8x output, 4x subjective gain) are self-reported by Anthropic. No independent audit of code quality, bug rates, or long-term maintainability. If AI-generated code introduces technical debt at higher rates, the productivity gains may be illusory or front-loaded.",
+      "source": "Absence Inventory (§1.1) + deferred axis productivity_measurement_validity"
+    },
+    {
+      "id": "omega_discontinuity_vs_smooth_curve",
+      "description": "Does recursive self-improvement produce a smooth capability curve or a sudden discontinuity (intelligence explosion)? Document acknowledges uncertainty but provides no framework for distinguishing regimes in advance. If discontinuous, human adaptation may be impossible; if smooth, institutions have time. No observable proposed to detect which regime we are entering.",
+      "source": "Critical Uncertainties section + Dark Matter Probe 2 (what is not being described)"
+    },
+    {
+      "id": "omega_governance_implementation_pathway",
+      "description": "Document proposes pause/slowdown coordination but provides no concrete implementation mechanism. Verification regime 'analogous to nuclear arms control' took decades to build; document claims 'we don't have that long' but offers no alternative pathway. Gap between proposal and feasibility.",
+      "source": "Absence Inventory (§1.1) + verification_regime_feasibility axis"
+    },
+    {
+      "id": "omega_capability_plateau_without_diffusion",
+      "description": "All three futures assume either stall-then-diffusion, compounding gains, or full recursion. No scenario for capability plateau without widespread diffusion. What if models hit a ceiling AND adoption remains concentrated? This would be structurally different from all three proposed futures.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F15 (Premature Closure)"
+    },
+    {
+      "id": "omega_alignment_compounding_direction",
+      "description": "Document states misalignment in today's models 'could compound as models build successors, growing more frequent but less understood until we lose control.' But also: models 'could prove sufficiently aligned and capable of research taste that they discover and implement novel solutions.' No framework for determining which trendline we are on, and document admits 'we can't build, integrate, and verify the tools we'd need to understand which trendline we are actually on.'",
+      "source": "Recursive capability threshold analysis + F34 (Epistemic Trespass) potential"
+    },
+    {
+      "id": "omega_anthropic_as_case_study_generalizability",
+      "description": "Anthropic is a frontier lab with top-tier talent, massive compute budget, and organizational structure optimized for AI integration. Productivity gains may not transfer to organizations with different talent distributions, legacy codebases, or regulatory constraints. The 100-person-does-10000-person-work claim may be Anthropic-specific, not economy-wide.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction entity analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: Document proposes three futures (stall-then-diffuse, compounding gains, full recursion) but does not consider capability plateau without diffusion, or scenarios where verification regimes prove technically infeasible rather than merely difficult. Enumeration stopped at familiar scenario set. Generated omega_capability_plateau_without_diffusion and omega_governance_implementation_pathway to bound these gaps."
+  }
+}

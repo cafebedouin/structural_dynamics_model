@@ -1,0 +1,266 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Linguistics / State Formation / Cultural Engineering",
+  "family_id": "turkish_alphabet_reform_1928",
+  "topic_summary": "Analysis of Turkey's 1928 alphabet reform (Law 1353), which replaced Arabic script with Latin script in a compressed 3-month implementation. The reform was imposed top-down by Atatürk with minimal prior mass literacy in Latin-script Turkish, creating a generational rupture with Ottoman literary heritage while advancing secular nationalist state-building.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Mustafa Kemal Atatürk (authoritarian reformer; primary driver of compressed timeline)",
+      "Language Commission / Dil Encümeni (technical body; proposed 5-15 year transition, overruled to 3 months)",
+      "Republican People's Party (one-party state apparatus; enforcement mechanism)",
+      "Ottoman literary heritage (600-year corpus rendered inaccessible)",
+      "Conservative/religious opposition (silenced or converted post-implementation)",
+      "Kurdish populations (prosecuted under alphabet law for non-prescribed letters)"
+    ],
+    "key_tensions": [
+      "Secular nationalist identity vs pan-Islamic unity (Latin script as European vs Arabic script as sacred)",
+      "Literacy facilitation claim vs generational knowledge rupture (reform created illiteracy in Ottoman texts)",
+      "Proposed gradual transition (5-15 years) vs imposed compression (3 months)",
+      "Technical phonological argument (Arabic inadequate for Turkish vowels) vs cultural continuity preservation"
+    ],
+    "key_mechanisms": [
+      "Alphabet mobilization campaign (Atatürk's personal tours, public examinations)",
+      "Phased legal enforcement (government officials Oct 1928, newspapers Dec 1928, all public communications Jan 1929)",
+      "Prosecution mechanism (alphabet law used against Kurdish letter usage)"
+    ],
+    "key_absences": [
+      "No documentation of mass resistance or enforcement costs during 1928-1929 transition",
+      "Limited data on literacy rates 1929-1940 to test phonological facilitation claim"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The graphemic substrate of Turkish linguistic identity — which script system legitimately represents the Turkish language",
+    "authority_description": "State monopoly on legitimate orthographic definition, grounded in nationalist modernization ideology and one-party control",
+    "drift_status": "absent",
+    "candidate_pattern": "authoritarian_kernel_installation",
+    "is_contested_kernel": true,
+    "kernel_id": "turkish_graphemic_substrate",
+    "readings": [
+      {
+        "reading_id": "ottoman_continuity_reading",
+        "commitment": "Turkish linguistic identity is continuous with Ottoman-Islamic civilization; Arabic script is the legitimate graphemic substrate",
+        "authority_grounding": "Religious tradition; 900-year historical practice; pan-Islamic unity",
+        "sibling_readings": [
+          "secular_nationalist_reading",
+          "gradual_transition_reading"
+        ],
+        "expected_structural_delta": "Ottoman literary corpus remains accessible; religious education infrastructure preserved; pan-Islamic identity maintained; generational continuity in literacy"
+      },
+      {
+        "reading_id": "secular_nationalist_reading",
+        "commitment": "Turkish linguistic identity is distinct from Ottoman-Islamic past; Latin script is the legitimate graphemic substrate aligned with European modernity",
+        "authority_grounding": "State nationalist ideology; phonological technical argument; civilizational reorientation toward Europe",
+        "sibling_readings": [
+          "ottoman_continuity_reading",
+          "gradual_transition_reading"
+        ],
+        "expected_structural_delta": "Generational rupture with Ottoman heritage; rapid secularization; European identity alignment; homogenization of national territory under state power"
+      },
+      {
+        "reading_id": "gradual_transition_reading",
+        "commitment": "Both scripts can coexist during a managed transition period (5-15 years) to preserve intergenerational knowledge transfer while enabling modernization",
+        "authority_grounding": "Technical linguistic expertise (Language Commission); pedagogical pragmatism",
+        "sibling_readings": [
+          "ottoman_continuity_reading",
+          "secular_nationalist_reading"
+        ],
+        "expected_structural_delta": "Dual-script literacy maintained temporarily; reduced generational rupture; slower state homogenization; higher implementation costs"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "ottoman_continuity_reading",
+        "reading_b": "secular_nationalist_reading",
+        "basis": "No single framework can hold both 'Turkish identity is continuous with Ottoman-Islamic civilization' and 'Turkish identity must rupture from Ottoman-Islamic past.' Accepting one axiom requires rejecting the other as the foundation of legitimate graphemic authority."
+      },
+      {
+        "reading_a": "gradual_transition_reading",
+        "reading_b": "secular_nationalist_reading",
+        "basis": "No single framework can hold both 'dual-script coexistence preserves knowledge continuity' and 'rapid single-script imposition is necessary for state consolidation.' The gradual reading treats intergenerational transfer as a constraint; the nationalist reading treats it as an obstacle to be eliminated."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "ottoman_continuity_reading",
+      "human_readable": "Ottoman Continuity Reading (Arabic Script as Legitimate Substrate)",
+      "structural_delta": "Arabic script maintains 900-year graphemic continuity with Ottoman-Islamic civilization and pan-Islamic identity",
+      "primary_observable": "Accessibility of Ottoman literary corpus; preservation of religious education infrastructure; pan-Islamic institutional ties",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "religious_educational_establishment",
+      "victim": "secular_state_apparatus",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Represents the pre-reform status quo reading; necessary baseline for measuring structural delta of imposed reading"
+    },
+    {
+      "claim_id": "secular_nationalist_reading",
+      "human_readable": "Secular Nationalist Reading (Latin Script as Modernization Substrate)",
+      "structural_delta": "Latin script ruptures Ottoman heritage to align Turkish identity with European modernity and consolidate state power",
+      "primary_observable": "Generational literacy rupture metrics; European institutional alignment; state homogenization of national territory",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "republican_state_apparatus",
+      "victim": "ottoman_literate_generation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "The imposed reading; highest centrality as the actual historical outcome; tests kernel installation with minimal prior occupancy"
+    },
+    {
+      "claim_id": "gradual_transition_reading",
+      "human_readable": "Gradual Transition Reading (Dual-Script Coexistence)",
+      "structural_delta": "Managed 5-15 year transition preserves intergenerational knowledge transfer while enabling script modernization",
+      "primary_observable": "Dual-script literacy rates; intergenerational text accessibility; implementation cost metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "The suppressed alternative proposed by technical experts; tests whether compression itself was the extractive mechanism"
+    },
+    {
+      "claim_id": "phonological_adequacy_claim",
+      "human_readable": "Phonological Adequacy Claim (Arabic Script Inadequate for Turkish Vowels)",
+      "structural_delta": "Arabic script's vowel representation inadequacy creates technical barrier to mass literacy in Turkish",
+      "primary_observable": "Comparative literacy acquisition rates; phonological representation fidelity measurements",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "secular_nationalist_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technical justification claim for secular_nationalist_reading; research context flags this as potentially pretextual (1927 literacy lower than 1894-95 Ottoman rate)"
+    },
+    {
+      "claim_id": "implementation_compression_mechanism",
+      "human_readable": "Implementation Compression (3-Month vs 5-15 Year Timeline)",
+      "structural_delta": "Atatürk's compression of proposed transition from 5-15 years to 3 months eliminated dual-script coexistence period",
+      "primary_observable": "Enforcement timeline; examination requirements; legal prohibition dates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": "state_consolidation_project",
+      "victim": "intergenerational_literacy_continuity",
+      "downstream_of": [
+        "secular_nationalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism rather than independent constraint; captured within secular_nationalist_reading's structural delta"
+    },
+    {
+      "claim_id": "prior_latin_script_occupancy",
+      "human_readable": "Prior Latin-Script Occupancy (1850s-1928 Commercial/Technical Usage)",
+      "structural_delta": "Limited Latin-script Turkish usage in telegraphy, commerce, and intellectual class from 1850s onward",
+      "primary_observable": "Documented Latin-script usage in shop signs, advertisements, telegrams; French-educated intellectual class size",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "secular_nationalist_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: addresses 'zero practitioners' claim but research context shows this was narrow-domain usage, not mass literacy; omega material for M-set gap analysis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "ottoman_continuity_reading",
+      "kernel_id": "turkish_graphemic_substrate",
+      "reading_id": "ottoman_continuity_reading"
+    },
+    {
+      "claim_id": "secular_nationalist_reading",
+      "kernel_id": "turkish_graphemic_substrate",
+      "reading_id": "secular_nationalist_reading"
+    },
+    {
+      "claim_id": "gradual_transition_reading",
+      "kernel_id": "turkish_graphemic_substrate",
+      "reading_id": "gradual_transition_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "phonological_adequacy_claim",
+      "structural_delta": "Arabic script inadequate for Turkish vowel representation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Technical justification for secular_nationalist_reading; research context flags as potentially pretextual given literacy decline 1894-1927"
+    },
+    {
+      "claim_id": "implementation_compression_mechanism",
+      "structural_delta": "3-month compression vs proposed 5-15 year transition",
+      "hypothesis": "piton",
+      "deferral_reason": "Enforcement mechanism captured within secular_nationalist_reading's structural delta; not independent constraint"
+    },
+    {
+      "claim_id": "prior_latin_script_occupancy",
+      "structural_delta": "Limited Latin-script usage 1850s-1928 in commercial/technical domains",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Addresses 'zero practitioners' claim but was narrow-domain usage; omega material for M-set gap analysis rather than generation target"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m_set_gap",
+      "description": "Does prior Latin-script occupancy in narrow domains (telegraphy, commerce, intellectual class) constitute sufficient M-set occupancy to invalidate 'zero practitioners' claim? Research shows limited but real usage 1850s-1928, but not mass literacy. Tests whether kernel installation requires mass prior occupancy or merely elite/technical bridgehead.",
+      "source": "User's kernel contest framing + deferred axis prior_latin_script_occupancy"
+    },
+    {
+      "id": "omega_phonological_pretext",
+      "description": "Is the phonological adequacy claim (Arabic script inadequate for Turkish vowels) a genuine Mountain or a pretextual justification for nationalist reading? Research shows 1927 literacy rate declined from 1894-95 Ottoman rate, suggesting script change did not facilitate literacy as claimed.",
+      "source": "Deferred axis phonological_adequacy_claim + research context literacy data"
+    },
+    {
+      "id": "omega_resistance_silence",
+      "description": "Research notes 'opponents remained silent or were seemingly converted' post-implementation with no documentation of mass resistance. Is this genuine conversion, successful suppression, or archival erasure? Absence of enforcement cost data is structurally suspicious.",
+      "source": "Extraction absence + research context on opposition"
+    },
+    {
+      "id": "omega_kurdish_prosecution",
+      "description": "Alphabet law used to prosecute Kurds for non-prescribed letters. Is this incidental enforcement or does it reveal the reform as ethnic homogenization mechanism? Kurdish letter prosecution suggests the reform's extractiveness extends beyond generational literacy rupture to minority linguistic suppression.",
+      "source": "Research context on Kurdish prosecutions"
+    },
+    {
+      "id": "omega_compression_necessity",
+      "description": "Was Atatürk's 3-month compression necessary for success (as he claimed: 'either in three months or not at all') or was it extractive elimination of gradual_transition_reading to prevent dual-script equilibrium? Language Commission's 5-15 year proposal suggests technical experts saw compression as unnecessary.",
+      "source": "Tension between Atatürk's timeline and Language Commission proposal + deferred axis implementation_compression_mechanism"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied per §1.3-K. Three readings selected represent genuine axiom contradictions: ottoman_continuity vs secular_nationalist on civilizational continuity, gradual_transition vs secular_nationalist on intergenerational transfer as constraint vs obstacle. Prior Latin-script occupancy documented but limited to narrow domains, supporting user's 'effectively zero practitioners' framing for mass literacy context."
+  },
+  "_seed_id": "turkish_alphabet_reform_1928"
+}

@@ -1,0 +1,267 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Psychology / Philosophy of Action / Social Psychology",
+  "family_id": "baggini_character_circumstance_2010",
+  "topic_summary": "Julian Baggini's philosophical argument following the 2010 Cumbria shootings that moral character is fragile rather than robust, that situational factors rather than dispositional traits better predict behavior, and that most people lack stable moral character. The essay engages the situationism vs. dispositionism debate in moral psychology, using Derrick Bird's case and evidence from Zimbardo's research to argue for a situationist understanding of moral action while preserving individual responsibility.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Derrick Bird (Cumbria shooter, described as 'normal bloke' by acquaintances)",
+      "Philip Zimbardo (psychologist, situationist theorist, Stanford Prison Experiment)",
+      "Gerard Bailes (forensic clinical psychologist, notes unpredictability of spree killings)",
+      "Sergeant Chip Frederick (Abu Ghraib guard, Zimbardo expert witness case)",
+      "Michelle Haigh (pub landlady, testified Bird acted 'out of character')",
+      "Situationism (psychological framework: behavior determined by circumstances)",
+      "Dispositionism (psychological framework: behavior determined by character traits)",
+      "The Bystander Effect (social psychology phenomenon: helping behavior varies with number of observers)"
+    ],
+    "key_tensions": [
+      "Public desire for reassurance (killers are fundamentally different) vs. empirical evidence (ordinary people commit atrocities)",
+      "Situationist explanation (circumstances determine behavior) vs. responsibility preservation (individuals remain accountable)",
+      "Conservative view (character determines criminality, poverty is excuse) vs. left view (social determinism, no individual control)",
+      "Predictive failure (character profiles don't predict rare events) vs. explanatory success (situational factors explain behavior post-hoc)"
+    ],
+    "key_claims": [
+      "Moral character is fragile much more often than it is robust; most people have no robust character at all",
+      "Situation rather than character usually matters more in how people behave",
+      "The best predictor of behavior is the circumstance people find themselves in, not their predispositions",
+      "Concentration camp guards were ordinary people who had the worst brought out by circumstances",
+      "Character profiles are terrible predictors of one-off spree killings",
+      "The bystander effect shows helping behavior depends on number of observers present",
+      "Simply receiving an unexpected coin made people more likely to help others",
+      "Trainee priests in a hurry were much less likely to act as good Samaritans",
+      "All nine Abu Ghraib night shift guards engaged in similar abusive behavior",
+      "To explain all is not to forgive all—understanding doesn't absolve responsibility",
+      "Politics should create conditions where chances of staying morally good are higher",
+      "Most people blow with the ethical wind but it is possible to hold fast"
+    ],
+    "key_mechanisms": [
+      "Bystander effect: diffusion of responsibility when multiple observers present reduces individual helping behavior",
+      "Situational corruption: total situations impact human nature in ways that challenge stability of personality and morality",
+      "Post-hoc rationalization: after atrocities, people search for character clues that weren't predictive beforehand"
+    ],
+    "key_absences": [
+      "Explanation for why spree killings remain rare if situations are determinative and stressors are common",
+      "Account of individual variation within identical situations (not all Stanford guards behaved identically)",
+      "Mechanism for how some individuals develop robust character that resists situational pressure"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The locus of moral causation: whether moral action originates primarily in stable internal character traits (dispositional kernel) or in external situational forces (situational kernel)",
+    "authority_description": "Empirical psychology research (experimental evidence) combined with philosophical interpretation of what that evidence means for moral agency and responsibility",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "moral_causation_locus",
+    "readings": [
+      {
+        "reading_id": "dispositional_reading",
+        "commitment": "Moral action originates in stable character traits that persist across situations; people have robust moral characters that determine behavior",
+        "authority_grounding": "Virtue ethics tradition, folk psychology, character education frameworks",
+        "sibling_readings": [
+          "situational_reading",
+          "interactionist_reading"
+        ],
+        "expected_structural_delta": "Character traits as primary observable; individual moral development as intervention target; atrocities explained by defective character formation"
+      },
+      {
+        "reading_id": "situational_reading",
+        "commitment": "Moral action originates in external circumstances that override individual dispositions; most people lack robust character and blow with the ethical wind",
+        "authority_grounding": "Situationist psychology (Zimbardo, Milgram, Darley & Latané), experimental social psychology evidence",
+        "sibling_readings": [
+          "dispositional_reading",
+          "interactionist_reading"
+        ],
+        "expected_structural_delta": "Situational variables as primary observable; social/institutional design as intervention target; atrocities explained by corrupting circumstances affecting ordinary people"
+      },
+      {
+        "reading_id": "interactionist_reading",
+        "commitment": "Moral action emerges from person-situation interaction; character exists but is neither fully stable nor fully malleable, shaped by and responsive to circumstances",
+        "authority_grounding": "Contemporary personality psychology, Baggini's synthesis position, trait-situation interaction research",
+        "sibling_readings": [
+          "dispositional_reading",
+          "situational_reading"
+        ],
+        "expected_structural_delta": "Interaction terms as primary observable; dual intervention targets (character fortification AND situational design); atrocities explained by failure of both character resilience and situational safeguards"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "dispositional_reading",
+        "reading_b": "situational_reading",
+        "basis": "Dispositional reading holds that stable character traits are the primary causal factor and persist across situations; situational reading holds that circumstances override dispositions and most people lack stable character. No single framework can hold both that character is causally primary and stable AND that circumstances override character and stability is absent."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "moral_causation_locus",
+      "human_readable": "Moral Causation Locus (Character vs. Circumstance as Primary Determinant)",
+      "structural_delta": "Whether moral behavior is primarily caused by stable internal character traits or by external situational forces",
+      "primary_observable": "Variance explained by person vs. situation in behavioral prediction studies; cross-situational consistency coefficients; experimental manipulation effects",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "responsibility_preservation_mechanism",
+        "intervention_target_selection"
+      ],
+      "centrality_score": 9,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with three distinct readings that instantiate structurally different constraints; readings expand to full generation sequence"
+    },
+    {
+      "claim_id": "responsibility_preservation_mechanism",
+      "human_readable": "Responsibility Preservation Mechanism (Accountability Despite Situational Causation)",
+      "structural_delta": "How moral and legal responsibility is maintained when situational factors are acknowledged as primary behavioral determinants",
+      "primary_observable": "Legal doctrine on mitigating circumstances; philosophical arguments for compatibilist responsibility; Zimbardo's expert testimony structure",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "legal_system_legitimacy",
+      "victim": "defendants_with_situational_defenses",
+      "downstream_of": [
+        "moral_causation_locus"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally independent from kernel (different observable: responsibility attribution vs. causal explanation); addresses critical tension in Baggini's argument"
+    },
+    {
+      "claim_id": "intervention_target_selection",
+      "human_readable": "Intervention Target Selection (Individual Character vs. Social Conditions)",
+      "structural_delta": "Whether moral improvement efforts should target individual character development or situational/institutional design",
+      "primary_observable": "Policy resource allocation between character education programs vs. social welfare/institutional reform; left-right political divide on crime prevention",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "political_ideology_validation",
+      "victim": "evidence_based_policy",
+      "downstream_of": [
+        "moral_causation_locus"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structurally independent from kernel and responsibility mechanism (different observable: policy resource allocation); captures left-right political tension Baggini explicitly addresses"
+    },
+    {
+      "claim_id": "predictive_vs_explanatory_asymmetry",
+      "human_readable": "Predictive vs. Explanatory Asymmetry (Post-hoc Success, Predictive Failure)",
+      "structural_delta": "Situational factors explain behavior post-hoc but fail to predict rare events like spree killings prospectively",
+      "primary_observable": "Base rate of spree killings vs. prevalence of risk factors; false positive rate of character profiles; retrospective vs. prospective accuracy",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "moral_causation_locus"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as omega_predictive_failure; methodological issue rather than substantive constraint axis"
+    },
+    {
+      "claim_id": "individual_variation_within_situations",
+      "human_readable": "Individual Variation Within Situations (Differential Susceptibility to Corruption)",
+      "structural_delta": "Why some individuals resist corrupting situations while others in identical circumstances succumb",
+      "primary_observable": "Within-condition variance in Stanford Prison Experiment; differential guard behavior at Abu Ghraib; resilience factors",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "moral_causation_locus"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Baggini acknowledges this (interactionist reading addresses it) but does not develop mechanism; captured in omega_individual_variation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "dispositional_reading",
+      "kernel_id": "moral_causation_locus",
+      "reading_id": "dispositional_reading"
+    },
+    {
+      "claim_id": "situational_reading",
+      "kernel_id": "moral_causation_locus",
+      "reading_id": "situational_reading"
+    },
+    {
+      "claim_id": "interactionist_reading",
+      "kernel_id": "moral_causation_locus",
+      "reading_id": "interactionist_reading"
+    },
+    "responsibility_preservation_mechanism",
+    "intervention_target_selection"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "predictive_vs_explanatory_asymmetry",
+      "structural_delta": "Situational factors explain post-hoc but fail to predict prospectively",
+      "hypothesis": "piton",
+      "deferral_reason": "Methodological issue rather than substantive constraint; captured as omega_predictive_failure"
+    },
+    {
+      "claim_id": "individual_variation_within_situations",
+      "structural_delta": "Differential susceptibility to situational corruption",
+      "hypothesis": "mountain",
+      "deferral_reason": "Acknowledged by Baggini but mechanism underdeveloped; interactionist reading addresses this; captured as omega_individual_variation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_predictive_failure",
+      "description": "If situations determine behavior and stressors are common, why are spree killings so rare? Situationism explains variance in common behaviors (helping, obedience) but may not scale to rare, extreme acts. The base rate problem: character profiles have high false positive rates because the outcome is so rare relative to the risk factors.",
+      "source": "Absence Inventory (§1.1) + deferred axis predictive_vs_explanatory_asymmetry"
+    },
+    {
+      "id": "omega_individual_variation",
+      "description": "Not all Stanford guards behaved identically; not all Abu Ghraib guards abused prisoners. What explains within-situation variance? Baggini's interactionist reading acknowledges this but doesn't specify the mechanism. Is it prior character development, cognitive factors, or random variation?",
+      "source": "Absence Inventory (§1.1) + deferred axis individual_variation_within_situations"
+    },
+    {
+      "id": "omega_robust_character_mechanism",
+      "description": "Baggini concludes it is possible to 'hold fast' and develop robust character, but provides no mechanism for how this is achieved if most people lack robust character and situations override dispositions. Is robust character a rare trait, a learnable skill, or a retrospective attribution to those who happened to avoid corrupting situations?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — Baggini's normative conclusion lacks causal pathway"
+    },
+    {
+      "id": "omega_bystander_effect_replication",
+      "description": "Recent research (2019 meta-analysis) found intervention was the norm in over 90% of conflicts and increased bystander presence increased likelihood of intervention—opposite of classic bystander effect. Does this undermine situationism's empirical foundation or refine it? Baggini's 2010 essay predates this evidence.",
+      "source": "Research context contradiction between classic bystander effect and recent replication failures"
+    },
+    {
+      "id": "omega_stanford_validity",
+      "description": "The Stanford Prison Experiment has faced methodological critiques (demand characteristics, researcher interference, small sample). If SPE is less robust than Zimbardo claimed, does this weaken situationism's case or merely require better experiments? Baggini relies heavily on Zimbardo's authority.",
+      "source": "Research context on SPE critiques + F34 epistemic trespass concern"
+    },
+    {
+      "id": "omega_political_synthesis",
+      "description": "Baggini claims the left-right synthesis is 'perhaps more to be said for the traditional left-wing view than the majority believes' but doesn't specify the mixing ratio. How much weight should character vs. circumstance receive in policy? The interactionist reading doesn't resolve the resource allocation question.",
+      "source": "Intervention_target_selection axis + Baggini's hedged political conclusion"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: The model is not a trained psychologist and cannot adjudicate between situationism and dispositionism with authority. The kernel decomposition reflects the contested nature of the domain rather than claiming resolution. Omega_stanford_validity and omega_bystander_effect_replication flag empirical uncertainties the model cannot resolve. The readings are drawn from the philosophical and psychological literature Baggini engages, not from the model's independent expertise."
+  }
+}

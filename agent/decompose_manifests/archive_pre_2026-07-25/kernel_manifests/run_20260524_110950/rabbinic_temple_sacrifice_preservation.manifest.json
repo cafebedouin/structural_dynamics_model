@@ -1,0 +1,210 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Halakhic Theory / Commitment System Analysis",
+  "family_id": "kodashim_preservation_2026",
+  "topic_summary": "Analysis of the 1,900-year continuous rabbinic study of Temple sacrifice laws (Kodashim) without performance capability. The topic examines whether this constitutes living engagement with divine commandment (study-as-exercise) or preservation of obsolete practice (performance-only reading), creating a boundary case between exercising a commitment and archiving its symbol.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Kodashim (fifth order of Mishnah/Talmud, 11 tractates on Temple sacrifice)",
+      "Second Temple (destroyed 70 CE, creating 1,900-year performance gap)",
+      "Maimonides (12th century, defended Kodashim study as equivalent to performance)",
+      "Rabbi Yohanan ben Zakkai (post-70 CE, established study/prayer/ethics as replacement)",
+      "Contemporary Orthodox yeshivot (maintain Kodashim study for messianic restoration)",
+      "Mishneh Torah vs Guide of the Perplexed (Maimonides' internal tension on sacrifice purpose)"
+    ],
+    "key_tensions": [
+      "Study-as-substitute vs prayer/ethics-as-replacement (competing post-Temple frameworks)",
+      "Intrinsic cosmic significance vs historical concession to idolatry (Maimonidean internal contradiction)",
+      "Messianic deferral vs practical obsolescence (Orthodox preparation vs Reform abandonment)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The divine commandment structure of Temple sacrifice as encoded in Torah and elaborated in Kodashim",
+    "authority_description": "Textual authority (Torah as divine revelation) interpreted through rabbinic chain of transmission (Oral Torah), with legitimacy grounded in unbroken study lineage from Sinai",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_layer_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "kodashim_commandment_status",
+    "readings": [
+      {
+        "reading_id": "study_as_performance",
+        "commitment": "Studying sacrifice laws fulfills the commandment itself; the kernel remains occupied through intellectual engagement",
+        "authority_grounding": "Maimonidean equivalence principle ('occupying himself with the law is as if he had offered'); textual study as performative act",
+        "sibling_readings": [
+          "performance_only",
+          "messianic_deferral"
+        ],
+        "expected_structural_delta": "Zero extractiveness from performance gap; study maintains full commandment force; victim set empty (no one harmed by non-performance)"
+      },
+      {
+        "reading_id": "performance_only",
+        "commitment": "Sacrifice laws are contingent on Temple existence; without altar, the commandment is suspended (husk)",
+        "authority_grounding": "Materialist reading of halakhic obligation; physical performance as necessary condition; Neusner's 'map without territory'",
+        "sibling_readings": [
+          "study_as_performance",
+          "messianic_deferral"
+        ],
+        "expected_structural_delta": "High extractiveness from continued study investment; resources diverted to obsolete practice; victim set includes those who could benefit from redirected scholarly effort"
+      },
+      {
+        "reading_id": "messianic_deferral",
+        "commitment": "Commandment is temporally suspended but not obsolete; study maintains readiness for future restoration",
+        "authority_grounding": "Eschatological authority (messianic prophecy); Orthodox institutional practice (Jerusalem yeshivot preparing for Third Temple)",
+        "sibling_readings": [
+          "study_as_performance",
+          "performance_only"
+        ],
+        "expected_structural_delta": "Moderate extractiveness from opportunity cost; study justified by future contingency rather than present fulfillment; victim set includes present-generation needs subordinated to messianic preparation"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_performance",
+      "human_readable": "Study-as-Performance Reading (Maimonidean Equivalence)",
+      "structural_delta": "Intellectual engagement with sacrifice laws constitutes fulfillment of the commandment itself, independent of physical performance",
+      "primary_observable": "Institutional investment in Kodashim study (yeshiva curriculum allocation); theological defenses of study-as-substitute (Maimonides commentary frequency in responsa)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinic_scholarly_class",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes zero-extractiveness baseline",
+      "kernel_id": "kodashim_commandment_status",
+      "reading_id": "study_as_performance"
+    },
+    {
+      "claim_id": "performance_only",
+      "human_readable": "Performance-Only Reading (Materialist Halakhic Obligation)",
+      "structural_delta": "Physical altar performance is necessary condition for commandment fulfillment; study without performance is archival preservation, not religious obligation",
+      "primary_observable": "Reform/secular Jewish abandonment of Kodashim study; Neusner-style academic framing as 'fictitious territory'",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "reform_modernist_movements",
+      "victim": "orthodox_communities_investing_in_obsolete_study",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; highest extractiveness contrast with reading 1",
+      "kernel_id": "kodashim_commandment_status",
+      "reading_id": "performance_only"
+    },
+    {
+      "claim_id": "messianic_deferral",
+      "human_readable": "Messianic Deferral Reading (Eschatological Suspension)",
+      "structural_delta": "Commandment is temporally suspended pending messianic restoration; study maintains institutional readiness rather than fulfilling present obligation",
+      "primary_observable": "Third Temple preparation institutions (Jerusalem yeshivot training kohanim); messianic timeline discourse in Orthodox responsa",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "messianic_preparation_institutions",
+      "victim": "present_generation_needs_subordinated_to_future",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; intermediate extractiveness; captures temporal dimension of kernel contest",
+      "kernel_id": "kodashim_commandment_status",
+      "reading_id": "messianic_deferral"
+    },
+    {
+      "claim_id": "prayer_ethics_replacement",
+      "human_readable": "Prayer/Ethics Replacement (Post-Temple Substitution)",
+      "structural_delta": "Yohanan ben Zakkai framework: prayer, Torah study, and loving-kindness replace sacrifice entirely, not as equivalents but as superior forms",
+      "primary_observable": "Liturgical substitution patterns (Hosea 14:3 'bullocks of our lips'); ethical emphasis in post-Temple rabbinic literature",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "study_as_performance"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps with study_as_performance reading but focuses on replacement rather than equivalence; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "maimonidean_internal_tension",
+      "human_readable": "Maimonidean Internal Tension (Guide vs Mishneh Torah)",
+      "structural_delta": "Maimonides' contradiction: sacrifices as anti-idolatry ruse (Guide) vs cosmic necessity requiring messianic restoration (Mishneh Torah)",
+      "primary_observable": "Textual analysis of Guide III:32 vs Mishneh Torah Hilkhot Beit HaBechirah; scholarly attempts at reconciliation",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "study_as_performance",
+        "messianic_deferral"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: biographical/textual tension rather than structural constraint; feeds into readings but not itself a reading"
+    }
+  ],
+  "generation_sequence": [
+    "study_as_performance",
+    "performance_only",
+    "messianic_deferral"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "prayer_ethics_replacement",
+      "structural_delta": "Prayer/ethics as superior replacement rather than equivalent substitute",
+      "hypothesis": "rope",
+      "deferral_reason": "Overlaps with study_as_performance reading; lower structural distinctiveness; captured implicitly in reading 1's zero-extractiveness claim"
+    },
+    {
+      "claim_id": "maimonidean_internal_tension",
+      "structural_delta": "Maimonides' Guide vs Mishneh Torah contradiction on sacrifice purpose",
+      "hypothesis": "piton",
+      "deferral_reason": "Biographical/textual tension rather than independent structural constraint; feeds into readings 1 and 3 but not itself a reading of the kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d1_d4_boundary",
+      "description": "Is Kodashim study a D1 (functioning commitment system with interpretive drift absorption) or D4 (absent revision with covert drift accumulation)? The 1,900-year performance gap makes this genuinely undecidable: study-as-performance reading treats it as D1 (study IS the performance, no drift); performance-only reading treats it as D4 (drift accumulates covertly as 'archival preservation' masks obsolescence).",
+      "source": "User's kernel contest framing + §1.3 commitment system recognition"
+    },
+    {
+      "id": "omega_palestinian_talmud_absence",
+      "description": "Why is there no Palestinian Talmud on Kodashim despite its compilation in the Land of Israel? Does this absence signal early recognition of performance-only reading (closer to Temple destruction, less investment in obsolete study), or merely resource constraints?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + research context"
+    },
+    {
+      "id": "omega_third_temple_movement",
+      "description": "Does contemporary Third Temple activism (Temple Institute, red heifer breeding) shift messianic_deferral from tangled_rope to snare? If restoration becomes politically feasible rather than eschatologically deferred, extractiveness increases (geopolitical risk, Palestinian displacement).",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + messianic_deferral reading"
+    },
+    {
+      "id": "omega_neusner_map_territory",
+      "description": "Neusner's 'map without territory' framing assumes performance-only reading. But if study-as-performance reading is correct, the map IS the territory (intellectual engagement constitutes the commanded act). The academic framing may itself be extractive if it delegitimizes living practice.",
+      "source": "Research context + performance_only reading structural delta"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Three readings selected capture full structural range (v_low to high epsilon). Deferred axes documented with clear rationale. D1/D4 boundary case flagged in omega_d1_d4_boundary."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

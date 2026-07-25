@@ -1,0 +1,177 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Theology / Biblical Hermeneutics / Christology",
+  "family_id": "john_1_1_logos_status",
+  "topic_summary": "Analysis of John 1:1 ('In the beginning was the Logos, and the Logos was with God, and the Logos was God') as a contested kernel. The Greek term 'Logos' and its relation to divinity generates structurally distinct constraint profiles depending on whether it is read as ontological predication of Christ's preexistence and deity (orthodox Christology), or as functional/poetic language for divine wisdom or creative principle (non-incarnational monotheism). The reading determines victim sets, sacramental authority structures, and doctrinal exclusivity boundaries.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "John 1:1 text (Greek: 'Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν, καὶ θεὸς ἦν ὁ λόγος')",
+      "Logos (Greek term: word, reason, principle, or divine creative force)",
+      "Orthodox Christology (incarnation doctrine, Nicene Creed, hypostatic union)",
+      "Arian/Subordinationist traditions (Logos as created or subordinate being)",
+      "Non-Trinitarian monotheism (Unitarian, Jehovah's Witness, Islamic readings)",
+      "Sacramental authority structures (high-church traditions grounding legitimacy in incarnation)"
+    ],
+    "key_tensions": [
+      "Ontological vs functional interpretation of 'theos' (deity as substance vs deity as role/function)",
+      "Exclusivity of incarnation claim vs pluralist theological frameworks"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The opening Logos formulation of John 1:1, particularly the predicate 'theos ēn ho logos' and its relation to preexistence, divinity, and incarnation in 1:14.",
+    "authority_description": "Interpretive legitimacy grounded in linguistic analysis of Greek anarthrous 'theos', theological tradition (ecumenical councils for orthodox readings; sola scriptura or rational monotheism for non-Trinitarian readings), and continuity with broader scriptural canon.",
+    "drift_status": "partial",
+    "candidate_pattern": "Founding Text (Scriptural Kernel)",
+    "is_contested_kernel": true,
+    "kernel_id": "john_1_1_logos",
+    "readings": [
+      {
+        "reading_id": "orthodox_christological",
+        "commitment": "Logos is ontologically divine, preexistent, and identical with the second person of the Trinity; incarnation in 1:14 is God becoming flesh.",
+        "authority_grounding": "Ecumenical councils (Nicaea 325, Chalcedon 451), patristic consensus, liturgical tradition",
+        "sibling_readings": [
+          "subordinationist",
+          "non_incarnational_monotheist"
+        ],
+        "expected_structural_delta": "High constraint on christological boundaries (what counts as orthodox belief), sacramental authority derives from incarnation, exclusivist soteriology, victims are non-Trinitarian groups who are anathematized or excluded from communion."
+      },
+      {
+        "reading_id": "subordinationist",
+        "commitment": "Logos is a created being or subordinate divine agent, first and highest creation but not co-eternal or consubstantial with the Father.",
+        "authority_grounding": "Pre-Nicene textual traditions (Arius, some early apologists), literal reading of 'with God' as distinction, rejection of post-biblical metaphysical categories",
+        "sibling_readings": [
+          "orthodox_christological",
+          "non_incarnational_monotheist"
+        ],
+        "expected_structural_delta": "Moderate constraint on worship practices (Logos venerated but not worshipped as fully divine), reduced sacramental exclusivity, victims are high-church traditions whose authority rests on full divinity claim."
+      },
+      {
+        "reading_id": "non_incarnational_monotheist",
+        "commitment": "Logos is poetic/functional language for divine wisdom, plan, or creative speech act; not a distinct hypostasis or incarnate being.",
+        "authority_grounding": "Strict monotheism (Islamic, Unitarian, rationalist), rejection of Greek metaphysical categories as later interpolation, emphasis on John's Jewish Wisdom literature context",
+        "sibling_readings": [
+          "orthodox_christological",
+          "subordinationist"
+        ],
+        "expected_structural_delta": "Low constraint on christological boundaries (Logos doctrine becomes non-binding), eliminates sacramental authority grounded in incarnation, high victim set includes all traditions requiring Christ's full divinity for doctrinal coherence."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "orthodox_christological",
+        "reading_b": "non_incarnational_monotheist",
+        "basis": "Orthodox reading's axiom (the Logos IS God ontologically, incarnation is historical event) requires accepting that one divine essence subsists in three persons; non-incarnational reading's axiom (God is indivisible monad, incarnation metaphysically impossible) requires rejecting hypostatic distinction as incoherent. No single coherent framework can hold both the Trinity doctrine and strict unipersonal monotheism simultaneously."
+      },
+      {
+        "reading_a": "orthodox_christological",
+        "reading_b": "subordinationist",
+        "basis": "Orthodox reading's axiom (consubstantiality, homoousios) requires the Logos to share the Father's essence fully and eternally; subordinationist reading's axiom (the Logos is created/begotten in time or ontologically posterior) requires ontological distinction of essences. A single coherent framework cannot hold both 'of one substance' and 'created being' for the same entity."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "orthodox_christological",
+      "human_readable": "Orthodox Christological Reading (Logos as Fully Divine Preexistent Second Person)",
+      "structural_delta": "Logos interpreted as ontologically divine, consubstantial with Father, preexistent, generating incarnation doctrine and Trinitarian metaphysics.",
+      "primary_observable": "Ecumenical creedal formulations, anathemas in conciliar canons, liturgical practices (worship of Christ as God), sacramental theology grounding authority in divine incarnation.",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "orthodox_institutional_authority",
+      "victim": "non_trinitarian_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest institutional extractiveness; dominant reading for 1700 years; core of sacramental authority structure; defines who is excluded from communion."
+    },
+    {
+      "claim_id": "subordinationist",
+      "human_readable": "Subordinationist Reading (Logos as Created or Subordinate Divine Agent)",
+      "structural_delta": "Logos as first creation or ontologically posterior agent, venerated but not worshipped as fully divine, rejecting homoousios.",
+      "primary_observable": "Arian liturgical texts, early apologist writings (Justin Martyr's 'second God' language), Jehovah's Witness New World Translation rendering ('a god'), absence of full divine worship practices.",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct middle position; historically significant (Arianism pre-Nicaea); illuminates the coordination problem of Trinitarian metaphysics; different victim set than orthodox or non-incarnational."
+    },
+    {
+      "claim_id": "non_incarnational_monotheist",
+      "human_readable": "Non-Incarnational Monotheist Reading (Logos as Divine Wisdom or Creative Speech)",
+      "structural_delta": "Logos as poetic language for divine attribute or plan, not hypostasis; strict unipersonal monotheism; incarnation metaphysically impossible.",
+      "primary_observable": "Unitarian liturgy (no Trinitarian doxology), Islamic theological treatments of Christ as prophet not deity, rationalist biblical criticism treating John prologue as Hellenistic overlay on Jewish monotheism.",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "strict_monotheist_coherence",
+      "victim": "high_church_sacramental_systems",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structurally radical alternative; eliminates incarnation constraint entirely; victim set is orthodox sacramental authority; illuminates what orthodox reading extracts."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "orthodox_christological",
+      "kernel_id": "john_1_1_logos",
+      "reading_id": "orthodox_christological"
+    },
+    {
+      "claim_id": "subordinationist",
+      "kernel_id": "john_1_1_logos",
+      "reading_id": "subordinationist"
+    },
+    {
+      "claim_id": "non_incarnational_monotheist",
+      "kernel_id": "john_1_1_logos",
+      "reading_id": "non_incarnational_monotheist"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_anarthrous_theos",
+      "description": "Does the anarthrous 'theos' in 'theos ēn ho logos' indicate qualitative predication (Logos has divine nature) or indefinite ('a god')? Colwell's Rule disputed; Greek grammar does not settle the metaphysics. This ambiguity is weight-bearing for the kernel contest.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — grammatical analysis itself contested"
+    },
+    {
+      "id": "omega_wisdom_literature_precedent",
+      "description": "Does Proverbs 8 (personified Wisdom with YHWH at creation) provide precedent for poetic non-hypostatic reading of John's Logos? If yes, non-incarnational reading gains textual support; if no (Wisdom is proto-Trinitarian), orthodox reading strengthened. Hebrew Bible context unresolved.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — intertextual grounding underspecified"
+    },
+    {
+      "id": "omega_johannine_community_intent",
+      "description": "Was the Fourth Gospel's community asserting ontological deity against docetic or Jewish-Christian opponents, or was Logos language evangelistic bridge to Hellenistic audience without metaphysical commitment? Authorial intent unknowable; affects kernel status.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — historical context underdetermined"
+    },
+    {
+      "id": "omega_translation_layer_drift",
+      "description": "Latin 'Deus erat Verbum' (Vulgate) and English 'the Word was God' collapse Greek grammatical ambiguity. Does translation history itself constitute an interpretive layer that has drifted the kernel toward orthodox reading? Partial drift status may understate this.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — translation tradition benefits orthodox reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings are structurally distinct (different constraint profiles, different victim sets, genuinely incompatible axioms). Greek grammatical ambiguity of anarthrous 'theos' and Wisdom literature intertextuality are genuine omegas, not premature closure. Domain is within theological hermeneutics competence."
+  },
+  "_seed_id": "gospel_of_john_in_the_beginning"
+}

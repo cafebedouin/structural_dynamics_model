@@ -1,0 +1,215 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal History / Intellectual Property / Institutional Economics",
+  "family_id": "statute_of_anne_ip_category",
+  "topic_summary": "Analysis of the Statute of Anne (1710) as the foundational moment of modern copyright law, examining whether intellectual property as a legal category represents a commitment that 'became thinkable' (conceptual space opened) versus one 'first held' (occupied set changed). The statute shifted copyright from Stationers' Company monopoly to author's rights while creating ambiguities that fueled decades of litigation over whether copyright was statutory creation or common-law perpetuity.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Stationers' Company (guild monopoly pre-1710; lost exclusive printing rights)",
+      "Parliament (legislative authority; drafting committee Compton/Peyton/Wortley)",
+      "Authors (nominal beneficiaries; Defoe as advocate; practical sellers to publishers)",
+      "Publishers/Booksellers (economic intermediaries; manuscript purchasers; monopoly preservers)",
+      "Public Domain (statutory creation; works entering after term expiration)",
+      "Common Law Courts (adjudicators of perpetual copyright claims post-1731)"
+    ],
+    "key_tensions": [
+      "Author rights vs publisher monopoly (statute nominally favors authors; economic reality preserves publisher control)",
+      "Statutory creation vs common-law perpetuity (Stationers claim copyright pre-existed statute)",
+      "Public learning vs private property (dual rationale ambiguity in statutory purpose)",
+      "Conceptual novelty vs institutional continuity (new legal category vs preserved economic structure)"
+    ],
+    "key_mechanisms": [
+      "Term limits (21 years existing works; 14+14 renewal new works) creating public domain entry",
+      "Manuscript purchase agreements (authors sell outright to publishers; statutory rights transferred immediately)",
+      "Lobbying and litigation cascade (1731 expiration → legislative lobbying → common-law perpetuity claims)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for author retention of rights (no prohibition on immediate sale to publishers)",
+      "Definition of core terms ('copy,' 'property,' 'author' undefined; litigation generator)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Intellectual property as a legal category stabilized through the Statute of Anne's grant of exclusive printing rights",
+    "authority_description": "Parliamentary statute as interpretive authority; common-law courts as secondary adjudicators of scope and perpetuity",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_analysis": "Initial hypothesis: two readings (conceptual_space_opening vs occupied_set_shift) would capture synchronic/diachronic distinction. Testing reveals: both readings describe the SAME structural event from different temporal frames. The 'became thinkable' reading (conceptual space gained a point) and 'first held' reading (occupied set changed) are not competing interpretations of what the statute DID—they are complementary descriptions of a single institutional transformation. No coherent framework could hold one as true and the other as false; they are analytically separable moments of one event. The M4/M5 library verdict (synchronic/diachronic seam collapse) is confirmed: the kernel structure forces a spurious cut. Decomposing into standard axes instead, with omega documenting the analytical seam."
+  },
+  "axes": [
+    {
+      "claim_id": "statutory_term_limit_mountain",
+      "human_readable": "Statutory Term Limit as Public Domain Generator",
+      "structural_delta": "Fixed copyright duration (21/14+14 years) creating mandatory public domain entry",
+      "primary_observable": "Expiration dates of copyrights; volume of works entering public domain 1731+",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "perpetual_copyright_snare",
+        "author_publisher_tangled_rope"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical constraint base; term limit is the irreducible statutory innovation regardless of interpretive contests"
+    },
+    {
+      "claim_id": "author_publisher_tangled_rope",
+      "human_readable": "Author-Publisher Entanglement (Nominal vs Economic Rights)",
+      "structural_delta": "Statutory rights vest in authors who immediately sell to publishers via manuscript purchase, preserving pre-statute economic structure under new legal form",
+      "primary_observable": "Frequency of author-retained vs publisher-transferred copyrights; contract terms in manuscript sales",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "publishers_booksellers",
+      "victim": "authors_as_class",
+      "downstream_of": [
+        "statutory_term_limit_mountain"
+      ],
+      "feeds_into": [
+        "perpetual_copyright_snare"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; captures the core structural ambiguity where legal form (author's right) diverges from economic reality (publisher control)"
+    },
+    {
+      "claim_id": "perpetual_copyright_snare",
+      "human_readable": "Perpetual Copyright as Common-Law Snare",
+      "structural_delta": "Post-1731 litigation claiming copyright pre-existed statute as perpetual common-law right, attempting to nullify term limits",
+      "primary_observable": "Court rulings on Millar v Taylor (1769) and Donaldson v Beckett (1774); lobbying records for term extension",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "stationers_company_publishers",
+      "victim": "public_domain_public_learning",
+      "downstream_of": [
+        "statutory_term_limit_mountain",
+        "author_publisher_tangled_rope"
+      ],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node; highest centrality; captures the extractive mechanism where ambiguous statutory drafting enables rent-seeking via perpetuity claims"
+    },
+    {
+      "claim_id": "drafting_ambiguity_piton",
+      "human_readable": "Drafting Ambiguity as Litigation Generator",
+      "structural_delta": "Undefined core terms ('copy,' 'property,' 'author') creating decades of interpretive contests",
+      "primary_observable": "Volume of copyright litigation 1710-1774; frequency of term-definition disputes",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "perpetual_copyright_snare"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via perpetual_copyright_snare's mechanism; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "public_learning_rationale_rope",
+      "human_readable": "Public Learning as Statutory Rationale",
+      "structural_delta": "Dual rationale ambiguity: statute framed as 'Encouragement of Learning' but operationally protects publisher interests",
+      "primary_observable": "Parliamentary debate records; preamble language vs operational clauses",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "author_publisher_tangled_rope"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: rhetorical framing rather than structural mechanism; lower centrality than selected axes"
+    },
+    {
+      "claim_id": "stationers_monopoly_collapse",
+      "human_readable": "Stationers' Monopoly Collapse (1694-1710)",
+      "structural_delta": "Licensing Act expiration (1694) ending guild monopoly; 16-year gap before statutory replacement",
+      "primary_observable": "Publishing volume 1694-1710; unauthorized printing frequency; Stationers' lobbying records",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "statutory_term_limit_mountain"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical precondition rather than ongoing structural constraint; scaffold status"
+    }
+  ],
+  "generation_sequence": [
+    "statutory_term_limit_mountain",
+    "author_publisher_tangled_rope",
+    "perpetual_copyright_snare"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "drafting_ambiguity_piton",
+      "structural_delta": "Undefined core terms creating litigation cascade",
+      "hypothesis": "piton",
+      "deferral_reason": "Mechanism captured via perpetual_copyright_snare; lower structural distinctiveness than selected axes"
+    },
+    {
+      "claim_id": "public_learning_rationale_rope",
+      "structural_delta": "Dual rationale ambiguity in statutory purpose",
+      "hypothesis": "rope",
+      "deferral_reason": "Rhetorical framing rather than structural mechanism; lower centrality"
+    },
+    {
+      "claim_id": "stationers_monopoly_collapse",
+      "structural_delta": "1694-1710 gap between monopoly collapse and statutory replacement",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Historical precondition; scaffold status; not ongoing structural constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The proposed kernel contest (conceptual space opening vs occupied set shift) collapses under analysis. Both readings describe the same institutional event from different temporal frames—one synchronic (the legal category became thinkable), one diachronic (the occupied set changed). No coherent framework could hold one true and the other false; they are complementary moments of a single transformation. The M4/M5 library verdict is confirmed: the kernel structure forces a spurious cut between analytically separable but ontologically unified aspects of the Statute's effect. This is not a contested kernel but a single constraint viewed through synchronic/diachronic lenses.",
+      "source": "§1.3-K kernel/reading decomposition test; commitment_system_recognition collapse_analysis"
+    },
+    {
+      "id": "omega_defoe_agency",
+      "description": "Daniel Defoe's advocacy role (1704-1711) is documented but his structural influence is uncertain. Was he a causal agent shaping the statute's author-centric rhetoric, or a visible symptom of broader economic pressures on the Stationers' monopoly? The research context emphasizes his 'instrumental' role but does not establish counterfactual necessity. If Defoe is causal, author_publisher_tangled_rope may underweight the genuine ideological shift toward author's rights; if symptomatic, the tangled_rope classification holds.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); extraction entity 'Authors (Defoe as advocate)'"
+    },
+    {
+      "id": "omega_common_law_perpetuity",
+      "description": "The perpetual copyright claims (post-1731) rest on whether copyright existed at common law before the statute. If it did, the Statute of Anne is a limitation on pre-existing rights (mountain reclassified as snare). If it did not, perpetual_copyright_snare is correctly classified. Millar v Taylor (1769) ruled for perpetuity; Donaldson v Beckett (1774) overturned it. The 5-year gap suggests institutional uncertainty about the mountain/snare boundary. This omega bounds the hypothesis classification for perpetual_copyright_snare.",
+      "source": "F03 (Hasty Generalization) check on perpetual_copyright_snare classification; structural tension 'Statutory creation vs common-law perpetuity'"
+    },
+    {
+      "id": "omega_public_domain_novelty",
+      "description": "Was the public domain a conceptual innovation of the Statute of Anne, or did works already enter 'the commons' after Licensing Act expiration (1694-1710)? If the latter, statutory_term_limit_mountain is a formalization rather than creation. The research context claims the statute 'established the concept of the public domain' but does not address the 16-year gap. If works were freely printable 1694-1710, the mountain may be a rope (coordination of existing practice) rather than a new physical constraint.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); extraction absence 'Enforcement mechanism for author retention'; deferred axis stationers_monopoly_collapse"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: perpetual_copyright_snare classified as snare but common-law perpetuity claims (Millar v Taylor 1769) suggest the statute may have limited pre-existing rights rather than created new ones. If copyright existed at common law, the mountain/snare boundary shifts. Generated omega_common_law_perpetuity to bound this uncertainty. Additionally, statutory_term_limit_mountain may be rope if public domain already existed 1694-1710 (omega_public_domain_novelty)."
+  },
+  "_seed_id": "intellectual_property_category"
+}

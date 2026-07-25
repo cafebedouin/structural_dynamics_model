@@ -1,0 +1,198 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Machine Learning / Information Ecology / Computational Epistemology",
+  "family_id": "elias_thorne_ai_inbreeding_2026",
+  "topic_summary": "Analysis of the Elias Thorne phenomenon: a fictional character appearing in 26.5% of AI-generated stories across multiple LLMs, traced to alignment training constraints and dataset recycling. The case exemplifies 'model collapse' or 'AI inbreeding'—degradation of AI outputs when models train on synthetic data from prior models, creating a feedback loop that amplifies quirks and reduces diversity.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Elias Thorne (fictional character; appears in 26.5% of sampled AI stories)",
+      "Cornell University researchers Sil Hamilton and David Mimno (primary investigators)",
+      "WildChat dataset (1M GPT-3.5 conversations; 166 featuring Elias; recycled into training sets)",
+      "Major AI labs: OpenAI, Anthropic, Google (models exhibiting phenomenon)",
+      "Daniel May (software engineer; first public documentation)",
+      "Amazon Kindle store (platform where Elias Thorne appears as author byline)",
+      "Alignment training systems (safety guardrails steering away from copyrighted/adult content)",
+      "Contemporary published fiction corpus (2,700 novels; baseline for frequency comparison)"
+    ],
+    "key_tensions": [
+      "Safety alignment vs output diversity (guardrails create safe-but-repetitive generation space)",
+      "Synthetic training data availability vs human-generated data scarcity (web increasingly AI-generated)",
+      "Model performance optimization vs long-tail distribution preservation (tails disappear under recursive training)"
+    ],
+    "key_claims": [
+      "Elias appears 900x more frequently in AI stories than in contemporary published fiction",
+      "88.3% of generated stories share 11 core tokens (names, professions, locations)",
+      "Alignment training to avoid copyrighted characters created inadvertent prominence for 'safe' alternatives",
+      "WildChat dataset recycling propagated Elias fixation across industry training pipelines",
+      "Model collapse is irreversible once synthetic data dominates training corpus",
+      "Character has escaped AI systems into commercial products (Kindle books, YouTube videos)"
+    ],
+    "key_mechanisms": [
+      "Alignment training filters: steer generation away from copyrighted/adult content toward narrow 'safe' space",
+      "Dataset recycling pipeline: WildChat → industry training sets → cross-model propagation",
+      "Synthetic data feedback loop: AI outputs → web content → future training data → degraded models",
+      "Commercial amplification: AI-generated content published to platforms → further contaminates training corpus"
+    ],
+    "key_absences": [
+      "No documentation of original Elias Thorne source (pre-WildChat origin unknown)",
+      "No industry-wide synthetic data tracking or labeling standard",
+      "No mechanism to reverse model collapse once initiated"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "alignment_constraint_narrowing",
+      "human_readable": "Alignment Constraint Narrowing (Safety Guardrails as Generative Bottleneck)",
+      "structural_delta": "Safety alignment training creates inadvertent concentration in 'safe' generation space by filtering out copyrighted/adult content",
+      "primary_observable": "Distribution of character names/settings in aligned vs unaligned model outputs; frequency of 11 core tokens pre/post alignment",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ai_safety_compliance_teams",
+      "victim": "output_diversity_and_creative_range",
+      "downstream_of": [],
+      "feeds_into": [
+        "dataset_recycling_amplification",
+        "model_collapse_feedback"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream causal node for both dataset recycling and model collapse; tangled_rope with clear beneficiary/victim structure"
+    },
+    {
+      "claim_id": "dataset_recycling_amplification",
+      "human_readable": "Dataset Recycling Amplification (Cross-Model Quirk Propagation)",
+      "structural_delta": "Industry practice of training on datasets derived from prior model outputs (WildChat → training sets) amplifies statistical quirks across model families",
+      "primary_observable": "WildChat dataset usage across training pipelines; cross-model correlation of Elias frequency; temporal spread pattern",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "alignment_constraint_narrowing"
+      ],
+      "feeds_into": [
+        "model_collapse_feedback"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (dataset lineage vs alignment filters); rope coordination failure; bridges upstream alignment to downstream collapse"
+    },
+    {
+      "claim_id": "model_collapse_feedback",
+      "human_readable": "Model Collapse Feedback Loop (Synthetic Data Degradation)",
+      "structural_delta": "Recursive training on AI-generated content causes irreversible distribution tail loss and quality degradation",
+      "primary_observable": "Output diversity metrics across model generations; long-tail token frequency decay; quality degradation rate under synthetic training",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "future_model_quality_and_information_ecosystem",
+      "downstream_of": [
+        "alignment_constraint_narrowing",
+        "dataset_recycling_amplification"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node; snare with systemic victim; captures irreversibility claim"
+    },
+    {
+      "claim_id": "commercial_contamination_escape",
+      "human_readable": "Commercial Contamination Escape (AI Slop Platform Infiltration)",
+      "structural_delta": "AI-generated content escapes containment into commercial platforms (Kindle, YouTube), further contaminating training corpus",
+      "primary_observable": "Elias Thorne byline frequency on Amazon; AI-generated book/video proliferation rate; platform detection/removal effectiveness",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "model_collapse_feedback"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of model_collapse_feedback; piton documenting atrophied platform curation; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "training_data_scarcity_mountain",
+      "human_readable": "Training Data Scarcity (Human-Generated Content Depletion)",
+      "structural_delta": "Finite supply of high-quality human-generated text as web becomes increasingly AI-generated",
+      "primary_observable": "Ratio of human/synthetic content on web over time; available training corpus size; human data exhaustion timeline",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "model_collapse_feedback"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing physical constraint but captured via model_collapse_feedback's synthetic data mechanism; lower centrality than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    "alignment_constraint_narrowing",
+    "dataset_recycling_amplification",
+    "model_collapse_feedback"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "commercial_contamination_escape",
+      "structural_delta": "AI-generated content escapes into commercial platforms, contaminating training corpus",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence of model_collapse_feedback; documents atrophied platform curation but adds limited independent structural yield"
+    },
+    {
+      "claim_id": "training_data_scarcity_mountain",
+      "structural_delta": "Finite supply of high-quality human-generated text",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint captured via model_collapse_feedback's synthetic data mechanism; lower centrality than selected upstream axes"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_original_elias_source",
+      "description": "What is the pre-WildChat origin of Elias Thorne? If traceable to a single human-written story or prompt template, the phenomenon is dataset contamination rather than emergent alignment artifact. If untraceable, suggests spontaneous generation from alignment constraints.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_reversibility_threshold",
+      "description": "At what synthetic-to-human data ratio does model collapse become irreversible? Cornell paper claims irreversibility but does not quantify threshold. If reversible via high-quality data injection, snare classification weakens to rope.",
+      "source": "F03 (Hasty Generalization) on irreversibility claim"
+    },
+    {
+      "id": "omega_alignment_tradeoff_necessity",
+      "description": "Is the alignment-diversity tradeoff structurally necessary, or artifact of current RLHF methods? Alternative alignment approaches (constitutional AI, debate, etc.) may preserve diversity while achieving safety. If avoidable, tangled_rope reclassifies to rope.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + F34 check on alignment engineering"
+    },
+    {
+      "id": "omega_cross_modality_collapse",
+      "description": "Does model collapse affect image/video generation models similarly? Text-only analysis may miss broader pattern. If multimodal collapse follows different dynamics, current framing is domain-specific rather than general AI phenomenon.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + F14 check"
+    },
+    {
+      "id": "omega_elias_as_canary",
+      "description": "Is Elias Thorne a unique case or representative of broader class of alignment-induced quirks? If unique, phenomenon is anecdotal; if representative, suggests systematic measurement gap in alignment evaluation.",
+      "source": "F15 (Premature Closure) on generalization from single case"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: model_collapse_feedback classified as snare with irreversibility claim, but Cornell paper does not quantify reversibility threshold or test recovery via high-quality data injection. Generated omega_reversibility_threshold to bound this uncertainty. No F34: domain (ML training dynamics, information theory) is within model competence. No F14: three lenses applied (ML engineering, information ecology, epistemology). No F15: five candidate axes enumerated; three selected after independence testing."
+  }
+}

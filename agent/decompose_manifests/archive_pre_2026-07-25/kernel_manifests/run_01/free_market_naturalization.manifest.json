@@ -1,0 +1,250 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Economic History / Institutional Analysis",
+  "family_id": "market_naturalization_2026",
+  "topic_summary": "Analysis of the claim that 'the market is the natural default' economic arrangement, examining whether this represents a lapsed-alternative naturalization (no active maintenance required) or a beneficiary-maintained construction (incumbents defend it post-hoc). The kernel contest centers on whether market dominance is a D3 artifact requiring engineered closure or a lapsed closure that persists without active defense.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "The Market (claimed as natural default economic coordination mechanism)",
+      "State Apparatus (enforcer of property rights, contract law, monetary system)",
+      "Incumbent Capital Holders (beneficiaries of current property distribution)",
+      "Alternative Coordination Systems (commons, gift economies, planned economies, mutual aid)",
+      "Naturalization Discourse (rhetorical apparatus claiming market as pre-political)"
+    ],
+    "key_tensions": [
+      "Natural vs Constructed (market as discovered vs engineered institutional arrangement)",
+      "Lapsed vs Maintained (closure requiring no defense vs active beneficiary protection)"
+    ],
+    "key_mechanisms": [
+      "Property Rights Enforcement (state violence backing ownership claims)",
+      "Enclosure Processes (conversion of commons to private property)",
+      "Ideological Reproduction (education, media, economic theory naturalizing market logic)"
+    ],
+    "key_absences": [
+      "Historical Contingency (specific conditions enabling market dominance)",
+      "Maintenance Costs (resources required to sustain market institutions)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The market as natural default economic arrangement",
+    "authority_description": "Economic theory, policy institutions, and property law claiming to describe rather than prescribe coordination mechanisms",
+    "drift_status": "partial",
+    "candidate_pattern": "naturalized_construction",
+    "is_contested_kernel": true,
+    "kernel_id": "market_naturalization",
+    "readings": [
+      {
+        "reading_id": "lapsed_alternative_reading",
+        "commitment": "Market dominance is a lapsed closure requiring no active maintenance",
+        "authority_grounding": "Evolutionary economics, spontaneous order theory, efficiency claims",
+        "sibling_readings": [
+          "beneficiary_maintained_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "No identifiable beneficiary class; alternatives atrophied through non-use; low extractiveness (coordination costs only)"
+      },
+      {
+        "reading_id": "beneficiary_maintained_reading",
+        "commitment": "Market dominance is actively defended by incumbent capital holders",
+        "authority_grounding": "Historical materialism, institutional economics, power analysis",
+        "sibling_readings": [
+          "lapsed_alternative_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Identifiable beneficiary class (capital holders); active suppression of alternatives; high extractiveness (rents + enforcement costs)"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Market dominance combines lapsed elements with active maintenance",
+        "authority_grounding": "Institutional path dependency, political economy synthesis",
+        "sibling_readings": [
+          "lapsed_alternative_reading",
+          "beneficiary_maintained_reading"
+        ],
+        "expected_structural_delta": "Mixed beneficiary structure; some alternatives lapsed, others suppressed; moderate extractiveness (varies by domain)"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "lapsed_alternative_reading",
+      "human_readable": "Lapsed Alternative Reading (No Engineered Closure)",
+      "structural_delta": "Market dominance persists because alternatives atrophied through non-use, not active suppression",
+      "primary_observable": "Absence of identifiable enforcement mechanisms targeting non-market coordination; historical record of alternative system decline without state intervention",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; tests whether market naturalization is coordination mechanism without beneficiary structure"
+    },
+    {
+      "claim_id": "beneficiary_maintained_reading",
+      "human_readable": "Beneficiary-Maintained Reading (Incumbents Defend Post-Hoc)",
+      "structural_delta": "Market dominance requires active defense by capital holders through state apparatus and ideological reproduction",
+      "primary_observable": "Identifiable enforcement spending (police, courts, IP law); lobbying expenditures; enclosure history; suppression of alternative experiments",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_capital_holders",
+      "victim": "alternative_coordination_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; tests whether market naturalization is extractive construction requiring maintenance"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading (Path-Dependent Mix)",
+      "structural_delta": "Market dominance combines genuinely lapsed elements with actively maintained components varying by domain",
+      "primary_observable": "Domain-specific variation in enforcement intensity; differential survival rates of alternative systems by sector",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "domain_specific_incumbents",
+      "victim": "domain_specific_alternatives",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; tests whether market naturalization is heterogeneous across institutional domains"
+    },
+    {
+      "claim_id": "property_rights_mountain",
+      "human_readable": "Property Rights as Physical Constraint",
+      "structural_delta": "Property rights enforcement as unavoidable coordination cost in any economic system",
+      "primary_observable": "Cross-system comparison of enforcement costs; transaction cost economics",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "lapsed_alternative_reading",
+        "beneficiary_maintained_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream to all readings but kernel contest centers on maintenance structure, not base coordination costs"
+    },
+    {
+      "claim_id": "enclosure_history",
+      "human_readable": "Historical Enclosure Processes",
+      "structural_delta": "Specific historical mechanisms converting commons to private property",
+      "primary_observable": "Enclosure Acts, land privatization records, indigenous dispossession documentation",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "historical_capital_accumulators",
+      "victim": "commoners_indigenous_peoples",
+      "downstream_of": [],
+      "feeds_into": [
+        "beneficiary_maintained_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical evidence for beneficiary_maintained_reading but kernel contest is synchronic (current maintenance structure)"
+    },
+    {
+      "claim_id": "ideological_reproduction",
+      "human_readable": "Ideological Reproduction Apparatus",
+      "structural_delta": "Educational and media systems naturalizing market logic",
+      "primary_observable": "Economics curriculum content; media ownership concentration; think tank funding",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "incumbent_capital_holders",
+      "victim": "alternative_economic_imaginaries",
+      "downstream_of": [],
+      "feeds_into": [
+        "beneficiary_maintained_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: evidence for beneficiary_maintained_reading but kernel contest is institutional structure, not discourse"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "lapsed_alternative_reading",
+      "kernel_id": "market_naturalization",
+      "reading_id": "lapsed_alternative_reading"
+    },
+    {
+      "claim_id": "beneficiary_maintained_reading",
+      "kernel_id": "market_naturalization",
+      "reading_id": "beneficiary_maintained_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "market_naturalization",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "property_rights_mountain",
+      "structural_delta": "Property rights enforcement as unavoidable coordination cost",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream to all readings but kernel contest centers on maintenance structure rather than base coordination costs"
+    },
+    {
+      "claim_id": "enclosure_history",
+      "structural_delta": "Historical mechanisms converting commons to private property",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical evidence for beneficiary_maintained_reading but kernel contest is synchronic (current maintenance structure)"
+    },
+    {
+      "claim_id": "ideological_reproduction",
+      "structural_delta": "Educational and media systems naturalizing market logic",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Evidence for beneficiary_maintained_reading but kernel contest is institutional structure rather than discourse"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_domain_variation",
+      "description": "Does maintenance structure vary systematically by domain (finance vs agriculture vs digital goods)? Hybrid reading predicts heterogeneity but lacks domain-specific decomposition.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + hybrid_reading structural delta"
+    },
+    {
+      "id": "omega_measurement_challenge",
+      "description": "How to distinguish lapsed closure from successfully concealed maintenance? Absence of visible enforcement may indicate either genuine lapse or effective naturalization.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + lapsed_alternative_reading observable"
+    },
+    {
+      "id": "omega_alternative_viability",
+      "description": "Are contemporary alternative experiments (cooperatives, commons, mutual aid) suppressed or simply uncompetitive? Empirical test requires controlling for scale and network effects.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + beneficiary_maintained_reading victim identification"
+    },
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Do the three readings share a genuine common substrate or are they incommensurable frameworks? Lapsed reading denies beneficiary existence; beneficiary-maintained reading requires it. Hybrid reading may be conceptual compromise rather than structural synthesis.",
+      "source": "§1.3-K coherence check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings with different beneficiary structures and epsilon bins. Omega_kernel_coherence flags potential incommensurability between readings for downstream analysis."
+  },
+  "_seed_id": "free_market_naturalization"
+}

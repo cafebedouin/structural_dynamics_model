@@ -1,0 +1,205 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Theology / Ecclesiastical Authority / Commitment Systems",
+  "family_id": "filioque_creed_381",
+  "topic_summary": "Analysis of the Filioque controversy: the unilateral Western addition of 'and the Son' to the Nicene Creed's pneumatology article ('the Spirit proceeds from the Father'), examining how competing readings of the 381 creed instantiate structurally divergent constraints on doctrinal authority, conciliar consent, and ecclesial unity.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nicene-Constantinopolitan Creed 381 CE (ecumenical doctrinal formula)",
+      "Roman See / Latin West (unilateral amender; magisterial authority claimant)",
+      "Eastern Churches / Constantinople (mono-procession defender; conciliar consent guardian)",
+      "Ecumenical Council institution (collective authority mechanism)",
+      "Filioque clause text (contested insertion)",
+      "Great Schism 1054 CE (institutionalized separation event)"
+    ],
+    "key_tensions": [
+      "Papal magisterial competence vs conciliar consent requirement (Western single-authority vs Eastern collegial-authority models)",
+      "Pneumatological theology vs ecclesiological authority structure (doctrinal content dispute overlaying institutional power dispute)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "filioque_reading",
+      "human_readable": "Filioque Reading (Western Magisterial Clarification)",
+      "structural_delta": "Addition legitimate as papal/conciliar exposition of implicit Trinitarian doctrine; authority grounded in Roman magisterial competence to develop deposit of faith",
+      "primary_observable": "Western liturgical texts post-589 CE; papal decretals affirming Filioque; Thomist theological synthesis",
+      "epsilon_bin": "high",
+      "hypothesis": "anchor_cs",
+      "beneficiary": "roman_papal_see",
+      "victim": "eastern_autocephalous_churches",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading with highest victim-set extractiveness; instantiates centralized authority constraint"
+    },
+    {
+      "claim_id": "monoprocession_reading",
+      "human_readable": "Mono-Procession Reading (Eastern Conciliar Wall)",
+      "structural_delta": "381 creed inviolable without ecumenical consent; unilateral amendment constitutive breach; authority vested solely in ecumenical council",
+      "primary_observable": "Eastern liturgical preservation of unmodified creed; synodal condemnations of Filioque; photian polemics",
+      "epsilon_bin": "high",
+      "hypothesis": "wall_cs",
+      "beneficiary": "eastern_autocephalous_churches",
+      "victim": "western_unilateral_innovators",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct reading with inverse beneficiary/victim structure; wall vs anchor typology"
+    },
+    {
+      "claim_id": "ecumenical_reunion_reading",
+      "human_readable": "Ecumenical Reunion Reading (Mutual Recognition Framework)",
+      "structural_delta": "Both formulae acceptable as regional theological expressions; authority grounded in bilateral recognition of valid local tradition",
+      "primary_observable": "20th-21st century bilateral theological dialogues; 1965 mutual anathema lifting; Florence 1439 reunion attempt",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold_cs",
+      "beneficiary": "ecumenical_movement_advocates",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural reading with cooperative rather than competitive constraint; lower ε but distinct beneficiary structure"
+    },
+    {
+      "claim_id": "subordinationist_heresy_reading",
+      "human_readable": "Subordinationist Heresy Reading (Anti-Arian Bulwark)",
+      "structural_delta": "Filioque necessary to safeguard full divinity of Son against Arian subordination; authority grounded in anti-heretical imperative",
+      "primary_observable": "Carolingian anti-Adoptionist polemics; Spanish anti-Arian context; Augustinian procession theology",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton_cs",
+      "beneficiary": "western_anti_arian_orthodoxy",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical justification reading collapsed into primary Filioque reading; limited independent structural yield"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "filioque_reading",
+      "kernel_id": "creed_381_pneumatology",
+      "reading_id": "filioque_reading"
+    },
+    {
+      "claim_id": "monoprocession_reading",
+      "kernel_id": "creed_381_pneumatology",
+      "reading_id": "monoprocession_reading"
+    },
+    {
+      "claim_id": "ecumenical_reunion_reading",
+      "kernel_id": "creed_381_pneumatology",
+      "reading_id": "ecumenical_reunion_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "subordinationist_heresy_reading",
+      "structural_delta": "Filioque as anti-Arian bulwark; authority grounded in heresy prevention",
+      "hypothesis": "piton_cs",
+      "deferral_reason": "Theological justification collapsed into primary Filioque reading; not structurally independent constraint on authority"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_theological_vs_political",
+      "description": "Is the Filioque dispute primarily theological (procession doctrine) or ecclesiological (authority structure)? Structural analysis treats theology as substrate for authority constraint, but participants experience it as doctrinal truth-claim.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_schism_overdetermination",
+      "description": "Filioque cited as 1054 schism cause, but structural entanglement with papal claims, liturgical differences, political fragmentation suggests overdetermined break. Single-cause narrative may be post-hoc legitimation.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — political/economic schism drivers underweighted"
+    },
+    {
+      "id": "omega_ecumenical_sincerity",
+      "description": "Is ecumenical_reunion_reading genuine third constraint or strategic posture by both sides? If latter, scaffold hypothesis collapses to rope (coordination theater with no enforcement).",
+      "source": "F03 concern + Probe 3 (Beneficiary Scan) — ecumenical bureaucracies benefit from perpetual dialogue"
+    },
+    {
+      "id": "omega_living_vs_museum",
+      "description": "Analysis treats this as historical case study. If still-live theological dispute for practicing communities, extractiveness measurements shift from archival to contemporary (e.g., Orthodox-Catholic reunion negotiations, Anglican Communion internal debates).",
+      "source": "F34 concern — model uncertainty about contemporary salience"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03: ecumenical_reunion_reading classified as scaffold_cs but may be coordination theater (rope) rather than genuine cooperative constraint; generated omega_ecumenical_sincerity. F34: Historical theology domain — model has access to secondary literature but lacks primary liturgical/patristic source depth and confessional insider perspective; generated omega_living_vs_museum and omega_theological_vs_political to bound expertise limits."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Nicene-Constantinopolitan Creed (381 CE), specifically the pneumatology article: 'And [we believe] in the Holy Spirit, the Lord and Giver of Life, who proceeds from the Father, who with the Father and the Son together is worshiped and glorified.' This formula is the stabilized shared commitment.",
+    "authority_description": "Interpretive legitimacy grounded in two competing models: (1) Western: papal magisterium and regional councils possess competence to clarify implicit doctrine (Filioque as legitimate development); (2) Eastern: only ecumenical councils of undivided Church possess amendment authority (Filioque as illegitimate unilateralism).",
+    "drift_status": "absent",
+    "candidate_pattern": "Pattern 3: Interpretive Monopoly Capture — Western reading grants Roman see exclusive interpretive authority over creedal meaning, generating high extractiveness (beneficiary: papal magisterium; victim: autocephalous Eastern churches whose consent is overridden). Pattern contested by Eastern wall-type constraint asserting ecumenical council monopoly.",
+    "is_contested_kernel": true,
+    "kernel_id": "creed_381_pneumatology",
+    "readings": [
+      {
+        "reading_id": "filioque_reading",
+        "commitment": "The Spirit proceeds from Father and Son (Filioque); papal/conciliar magisterium possesses authority to clarify implicit Trinitarian doctrine",
+        "authority_grounding": "Roman magisterial competence; regional councils (Toledo, Lateran); papal ratification",
+        "sibling_readings": [
+          "monoprocession_reading",
+          "ecumenical_reunion_reading"
+        ],
+        "expected_structural_delta": "Anchor-type CS: fixes doctrinal unity under centralized Roman authority; beneficiary papal see; victim Eastern churches whose theological autonomy overridden; high ε (structural reconfiguration of ecclesial polity)"
+      },
+      {
+        "reading_id": "monoprocession_reading",
+        "commitment": "The Spirit proceeds from Father alone; 381 creed inviolable without ecumenical consent; unilateral amendment constitutes breach",
+        "authority_grounding": "Ecumenical council exclusivity; conciliar consent requirement; principle of canonical autocephaly",
+        "sibling_readings": [
+          "filioque_reading",
+          "ecumenical_reunion_reading"
+        ],
+        "expected_structural_delta": "Wall-type CS: blocks any single see from legislating doctrine for whole Church; beneficiary Eastern autocephalous churches; victim Western unilateral innovators; high ε (preserves decentralized polity structure)"
+      },
+      {
+        "reading_id": "ecumenical_reunion_reading",
+        "commitment": "Both Filioque and mono-procession acceptable as regional theological expressions within single communion; bilateral recognition replaces unilateral imposition",
+        "authority_grounding": "Mutual recognition of valid local tradition; theological dialogue commissions; 20th-century ecumenical movement",
+        "sibling_readings": [
+          "filioque_reading",
+          "monoprocession_reading"
+        ],
+        "expected_structural_delta": "Scaffold-type CS: permits theological pluralism under ecclesial unity; beneficiary ecumenical advocates; no direct victim set (consensus model); low-mod ε (coordination framework without coercive enforcement)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "filioque_reading",
+        "reading_b": "monoprocession_reading",
+        "basis": "Filioque reading's axiom that papal magisterium possesses competence to clarify doctrine unilaterally is mutually exclusive with monoprocession reading's axiom that only ecumenical councils possess amendment authority. No coherent ecclesiology holds both: either a single see can bind the whole Church doctrinally (centralized magisterium) or it cannot (conciliar consent requirement). These are competing sovereignty models."
+      },
+      {
+        "reading_a": "ecumenical_reunion_reading",
+        "reading_b": "filioque_reading",
+        "basis": "Reunion reading's axiom that regional theological diversity is permissible within communion contradicts Filioque reading's axiom that doctrinal uniformity under papal magisterium is necessary for ecclesial unity. One permits pluralism; the other requires conformity to a single magisterial interpretation."
+      },
+      {
+        "reading_a": "ecumenical_reunion_reading",
+        "reading_b": "monoprocession_reading",
+        "basis": "Reunion reading's axiom of bilateral recognition (both formulae valid) contradicts monoprocession reading's axiom that the unmodified 381 creed is exclusively legitimate and Filioque constitutes breach. One treats amendment as acceptable regional expression; the other treats it as canonical violation requiring repudiation."
+      }
+    ]
+  },
+  "_seed_id": "filioque_nicene_creed"
+}

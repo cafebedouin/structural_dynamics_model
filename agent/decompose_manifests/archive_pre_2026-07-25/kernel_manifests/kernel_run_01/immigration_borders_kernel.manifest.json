@@ -1,0 +1,259 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Political Philosophy / Migration Studies",
+  "family_id": "immigration_border_kernel_2025",
+  "topic_summary": "Analysis of the contested border kernel in immigration policy, where sovereignty-primary and freedom-of-movement-primary readings emit structurally different constraints with distinct victim sets (excluded migrants vs displaced citizens). The kernel is the normative status of the territorial border itself—whether it functions primarily as a legitimate filter for state self-determination or as an illegitimate barrier to fundamental human mobility rights.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Destination/Transit States (sovereign border control authority)",
+      "Source Countries (emigration management, diaspora interests)",
+      "International Human Rights Law (UDHR Article 13, refugee conventions)",
+      "Migrants and Refugees (100M+ displaced persons globally as of 2022)",
+      "Citizens in Host Countries (labor market competition, public service strain)",
+      "Local Governments (operational absorption of migration consequences)",
+      "EU Freedom of Movement Regime (Treaty of Rome 1957, Schengen)",
+      "International Migration Law (fragmented across 9+ legal domains)"
+    ],
+    "key_tensions": [
+      "State sovereignty (border control as definitional) vs human rights obligations (non-refoulement, family unity)",
+      "Security imperatives (terrorism prevention, organized crime) vs refugee protection standards",
+      "Federal immigration policy vs local government operational capacity and political climate",
+      "Public perception (systematic overestimation of immigrant share, underestimation of integration) vs empirical reality"
+    ],
+    "key_mechanisms": [
+      "Secure Communities deportation program (federal-local enforcement cooperation with documented citizen job loss)",
+      "State immigrant policies with unequal local implementation (institutional misalignment)",
+      "Emergency measures and tighter immigration controls post-9/11 (security prioritization over rights)"
+    ],
+    "key_absences": [
+      "Economic beneficiary analysis: who profits from restrictive vs open borders (labor arbitrage, remittance flows, human smuggling economies)",
+      "Climate displacement projections: how environmental migration will stress the sovereignty/mobility tension at scale"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The normative status of the territorial border as either a legitimate sovereignty instrument or an illegitimate barrier to fundamental human mobility",
+    "authority_description": "Interpretive legitimacy derives from competing foundational commitments: Westphalian state sovereignty (UN Charter Article 2) vs universal human rights (UDHR Article 13)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence",
+    "is_contested_kernel": true,
+    "kernel_id": "border_normative_status",
+    "readings": [
+      {
+        "reading_id": "sovereignty_primary",
+        "commitment": "Territorial borders are constitutive of state sovereignty; admission control is a core sovereign prerogative subject only to narrow international law constraints (non-refoulement, treaty obligations)",
+        "authority_grounding": "Westphalian sovereignty doctrine; UN Charter Article 2(1) sovereign equality; state practice since 20th century",
+        "sibling_readings": [
+          "freedom_of_movement_primary",
+          "managed_migration_hybrid"
+        ],
+        "expected_structural_delta": "Excluded migrants enter victim set only when state violates specific treaty obligations (refugee convention, family reunification); displaced citizens are NOT victims because state exercises legitimate authority; beneficiary is the political community's self-determination capacity"
+      },
+      {
+        "reading_id": "freedom_of_movement_primary",
+        "commitment": "Freedom of movement is a fundamental human right that presumptively extends across borders; states may regulate but not categorically exclude absent compelling justification",
+        "authority_grounding": "UDHR Article 13 universalist interpretation; cosmopolitan moral philosophy; territorial rights as jurisdictional not exclusionary",
+        "sibling_readings": [
+          "sovereignty_primary",
+          "managed_migration_hybrid"
+        ],
+        "expected_structural_delta": "Excluded migrants are victims of illegitimate state coercion; displaced citizens are NOT victims because no right to exclude exists; beneficiary is global human mobility and labor market efficiency"
+      },
+      {
+        "reading_id": "managed_migration_hybrid",
+        "commitment": "States retain border control authority but exercise it within a framework of graduated rights (temporary workers, refugees, family reunification) and multilateral cooperation",
+        "authority_grounding": "EU freedom of movement regime; bilateral labor agreements; ILO conventions; 'sovereignty as responsibility' doctrine",
+        "sibling_readings": [
+          "sovereignty_primary",
+          "freedom_of_movement_primary"
+        ],
+        "expected_structural_delta": "Both excluded migrants (outside treaty categories) and displaced citizens (from unmanaged flows) can be victims; beneficiary is institutional capacity to balance competing claims through negotiated frameworks"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereignty_primary",
+        "reading_b": "freedom_of_movement_primary",
+        "basis": "Sovereignty-primary holds that the political community's right to self-determination includes categorical admission control; freedom-of-movement-primary holds that no such categorical right exists because territorial jurisdiction does not entail exclusion authority. No single coherent framework can hold both: either borders are presumptively legitimate filters (sovereignty) or presumptively illegitimate barriers (freedom). The hybrid reading attempts synthesis but does not resolve the foundational axiom conflict."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_primary",
+      "human_readable": "Sovereignty-Primary Reading (Border as Legitimate Filter)",
+      "structural_delta": "State exercises constitutive sovereign authority to determine admission; exclusion is legitimate unless specific treaty obligations violated",
+      "primary_observable": "Legal doctrine in immigration case law; state practice in visa/deportation regimes; international law treatises on sovereign prerogatives",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "political_community_self_determination",
+      "victim": "migrants_outside_treaty_protections",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct victim set and beneficiary structure; high epsilon due to enforcement discretion and treaty interpretation latitude"
+    },
+    {
+      "claim_id": "freedom_of_movement_primary",
+      "human_readable": "Freedom-of-Movement-Primary Reading (Border as Illegitimate Barrier)",
+      "structural_delta": "Fundamental human right to mobility presumptively extends across borders; state exclusion requires compelling justification",
+      "primary_observable": "Cosmopolitan philosophy literature; UDHR Article 13 maximalist interpretations; open borders advocacy positions",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "global_labor_mobility",
+      "victim": "excluded_migrants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory sibling reading with inverted victim/beneficiary structure; same epsilon bin but different extractiveness target"
+    },
+    {
+      "claim_id": "managed_migration_hybrid",
+      "human_readable": "Managed Migration Hybrid (Graduated Rights Framework)",
+      "structural_delta": "Border control authority exercised within multilateral treaty frameworks and graduated rights categories",
+      "primary_observable": "EU freedom of movement data; bilateral labor agreement compliance; refugee resettlement quotas vs actual admissions",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "institutional_coordination_capacity",
+      "victim": "migrants_outside_treaty_categories_and_citizens_from_unmanaged_flows",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Synthesis reading that attempts to reconcile axiom contradiction through institutional design; lower epsilon due to treaty constraints but reveals dual victim set"
+    },
+    {
+      "claim_id": "security_rights_tradeoff",
+      "human_readable": "Security-Rights Tradeoff (Post-9/11 Emergency Measures)",
+      "structural_delta": "Counter-terrorism imperatives override refugee protection and due process standards",
+      "primary_observable": "Emergency immigration measures post-9/11; detention without trial rates; asylum rejection rates for security-flagged cases",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "security_state_apparatus",
+      "victim": "refugees_and_asylum_seekers",
+      "downstream_of": [
+        "sovereignty_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream application of sovereignty-primary reading in security context; captured by sovereignty_primary constraint with security as extractiveness amplifier"
+    },
+    {
+      "claim_id": "federal_local_misalignment",
+      "human_readable": "Federal-Local Misalignment (Operational Absorption Gap)",
+      "structural_delta": "Federal immigration policy sets admission rules; local governments absorb operational consequences without policy authority",
+      "primary_observable": "Municipal budget strain from migrant services; state-level sanctuary policies vs federal enforcement; school enrollment surge data",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "sovereignty_primary",
+        "managed_migration_hybrid"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional coordination failure downstream of border control readings; omega material on governance structure rather than kernel contest"
+    },
+    {
+      "claim_id": "public_perception_gap",
+      "human_readable": "Public Perception Gap (Systematic Overestimation)",
+      "structural_delta": "Citizens systematically overestimate immigrant share and underestimate integration, driving restrictive policy preferences",
+      "primary_observable": "Survey data on perceived vs actual immigrant share; educational attainment misperception; crime rate attribution errors",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_primary"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: epistemic failure feeding political demand for restriction; not a constraint reading itself but a mechanism amplifying sovereignty-primary extractiveness"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_primary",
+      "kernel_id": "border_normative_status",
+      "reading_id": "sovereignty_primary"
+    },
+    {
+      "claim_id": "freedom_of_movement_primary",
+      "kernel_id": "border_normative_status",
+      "reading_id": "freedom_of_movement_primary"
+    },
+    {
+      "claim_id": "managed_migration_hybrid",
+      "kernel_id": "border_normative_status",
+      "reading_id": "managed_migration_hybrid"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "security_rights_tradeoff",
+      "structural_delta": "Counter-terrorism imperatives override refugee protection standards",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream application of sovereignty-primary reading in security context; extractiveness amplifier rather than independent reading"
+    },
+    {
+      "claim_id": "federal_local_misalignment",
+      "structural_delta": "Federal policy sets rules; local governments absorb operational consequences without authority",
+      "hypothesis": "rope",
+      "deferral_reason": "Institutional coordination failure downstream of border control readings; governance structure issue rather than kernel contest"
+    },
+    {
+      "claim_id": "public_perception_gap",
+      "structural_delta": "Systematic overestimation of immigrant share and underestimation of integration",
+      "hypothesis": "piton",
+      "deferral_reason": "Epistemic failure feeding political demand for restriction; mechanism amplifying sovereignty-primary extractiveness rather than independent constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_climate_displacement",
+      "description": "How will climate-driven migration at scale (projected 200M+ by 2050) stress the kernel contest? If environmental displacement is non-voluntary, does freedom-of-movement-primary reading collapse into sovereignty-primary by necessity, or does it force recognition of a new treaty category (climate refugees) that sovereignty-primary must accommodate?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary absence on climate displacement"
+    },
+    {
+      "id": "omega_economic_beneficiary",
+      "description": "Who profits from the current restrictive regime? Labor arbitrage (employers accessing undocumented workers at below-market wages), remittance transfer fees, human smuggling economies, and immigration enforcement contractors are absent from the victim/beneficiary analysis. Is the sovereignty-primary reading a tangled_rope masking a snare where restriction itself is the extractive mechanism?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction_summary absence on economic beneficiaries"
+    },
+    {
+      "id": "omega_hybrid_coherence",
+      "description": "Does managed_migration_hybrid resolve the axiom contradiction or merely defer it? EU freedom of movement coexists with Fortress Europe external borders—is this a stable synthesis or a geographically bounded exception that proves the sovereignty-primary rule? If the hybrid only functions within high-trust treaty regimes, it may be a scaffold rather than a resolution.",
+      "source": "Kernel decomposition analysis + managed_migration_hybrid selection"
+    },
+    {
+      "id": "omega_citizen_displacement_empirics",
+      "description": "Secure Communities data shows 88,000 US citizen job losses per 1M deportations, but is this displacement a constraint violation (citizens as victims) or a coordination failure (labor market adjustment lag)? If citizens are genuine victims, sovereignty-primary reading may be a snare for both excluded migrants AND displaced citizens, collapsing the victim set distinction that grounds the kernel contest.",
+      "source": "Extraction anchor on Secure Communities + victim set analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied as specified. Three readings selected represent axiom-contradictory positions (sovereignty_primary vs freedom_of_movement_primary) plus synthesis attempt (managed_migration_hybrid). Deferred axes are downstream applications or amplification mechanisms rather than independent readings. Omegas surface climate displacement gap, economic beneficiary absence, hybrid coherence question, and citizen displacement empirics."
+  },
+  "_seed_id": "immigration_borders_kernel"
+}

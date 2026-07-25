@@ -1,0 +1,209 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Philology / Intellectual History",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist reconstruction of Classical Latin from medieval vernacular forms. The core question is whether 'correct Latin' represents a contested kernel with two incompatible readings (medieval drift vs. classical recovery) or a D1 discontinuity where the reconstructed form was unreachable from the drifted vernacular and required reoccupation from textual symbols.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin (living drifted vernacular, 500-1400 CE)",
+      "Classical Latin (Ciceronian standard, 1st century BCE)",
+      "Humanist reconstructors (Petrarch, Valla, Erasmus)",
+      "Textual corpus (Cicero, Virgil, Livy as stabilized reference)",
+      "Living practitioners (medieval clergy, notaries, university scholars)"
+    ],
+    "key_tensions": [
+      "Living drift vs. textual fixity (medieval users vs. humanist philologists)",
+      "Continuity claim vs. discontinuity claim (evolutionary path vs. symbolic reoccupation)"
+    ],
+    "key_mechanisms": [
+      "Orthographic standardization (humanist spelling reforms eliminating medieval innovations)",
+      "Syntactic purification (removal of Romance-influenced constructions)",
+      "Lexical archaeology (recovery of classical vocabulary from texts, rejection of medieval coinages)"
+    ],
+    "key_absences": [
+      "Phonological reconstruction (humanists had no access to classical pronunciation)",
+      "Sociolinguistic context of medieval Latin as functional lingua franca vs. classical Latin as elite literary register"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuity_reading",
+      "human_readable": "Continuity Reading (Medieval Latin as Evolved Classical)",
+      "structural_delta": "Medieval Latin is Classical Latin after 1000 years of natural linguistic drift; reconstruction is correction within one evolving system",
+      "primary_observable": "Morphological and syntactic features traceable through continuous textual transmission; medieval innovations as extensions not replacements",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "medieval_practitioners",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; individually holdable position"
+    },
+    {
+      "claim_id": "discontinuity_reading",
+      "human_readable": "Discontinuity Reading (Classical Latin as Reoccupied Symbol)",
+      "structural_delta": "Medieval Latin and Classical Latin are structurally distinct languages; humanist reconstruction required symbolic reoccupation from texts, not evolutionary reversal",
+      "primary_observable": "Syntactic structures in medieval Latin that are ungrammatical in classical norms; lexical items with no classical precedent; Romance substrate interference",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": "humanist_reconstructors",
+      "victim": "medieval_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; individually holdable position"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading (Partial Continuity with Symbolic Overlay)",
+      "structural_delta": "Core morphology continuous, but syntactic and lexical layers required textual reoccupation; reconstruction was neither pure evolution nor pure symbol",
+      "primary_observable": "Differential success rates in reconstruction: morphology (high continuity) vs. syntax (medium) vs. lexicon (low, required textual recovery)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "modern_philologists",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; individually holdable position bridging the poles"
+    },
+    {
+      "claim_id": "phonological_inaccessibility",
+      "human_readable": "Phonological Inaccessibility (Pronunciation as Unrecoverable)",
+      "structural_delta": "Classical pronunciation was structurally unrecoverable from texts alone; humanist Latin retained medieval phonology despite orthographic reconstruction",
+      "primary_observable": "Divergent national pronunciation traditions (Italian vs. French vs. German humanist Latin); absence of phonetic notation in classical texts",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent axis; survives pairwise test (different observable from kernel readings); addresses extraction absence"
+    },
+    {
+      "claim_id": "sociolinguistic_register_shift",
+      "human_readable": "Sociolinguistic Register Shift (Functional Lingua Franca to Elite Literary Code)",
+      "structural_delta": "Medieval Latin was a working administrative and scholarly language; humanist Latin became a prestige literary register with restricted functional domain",
+      "primary_observable": "Decline in Latin notarial documents post-1500; rise of vernacular administration; Latin restricted to scholarship and diplomacy",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "vernacular_state_builders",
+      "victim": "latin_institutional_infrastructure",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Independent axis; survives pairwise test (different observable and beneficiary structure); addresses extraction absence"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "correct_latin_kernel",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "discontinuity_reading",
+      "kernel_id": "correct_latin_kernel",
+      "reading_id": "discontinuity_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "correct_latin_kernel",
+      "reading_id": "hybrid_reading"
+    },
+    "phonological_inaccessibility",
+    "sociolinguistic_register_shift"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_textual_corpus_stability",
+      "description": "Were the classical texts themselves stable? Manuscript transmission introduced variants; humanists reconstructed from already-drifted copies. The 'classical' target may itself be a moving reference.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_pronunciation_reconstruction_attempts",
+      "description": "Did any humanists attempt phonological reconstruction from meter or orthographic clues? If so, phonological_inaccessibility may be overstated as a mountain.",
+      "source": "F03 (Hasty Generalization) on phonological_inaccessibility"
+    },
+    {
+      "id": "omega_vernacular_displacement_timing",
+      "description": "Did the register shift cause or follow humanist reconstruction? Causal arrow unclear; may be bidirectional feedback.",
+      "source": "§3 Independence Testing (sociolinguistic_register_shift correlation with kernel readings)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: phonological_inaccessibility classified as mountain but humanist attempts at phonological reconstruction from metrical evidence may exist. Generated omega_pronunciation_reconstruction_attempts to bound this uncertainty."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The stabilized shared commitment is 'correct Latin' as a normative linguistic standard, claimed by both medieval users and humanist reconstructors as the legitimate continuation of classical authority.",
+    "authority_description": "Medieval users grounded authority in continuous institutional transmission (Church, universities, notarial practice). Humanist reconstructors grounded authority in textual fidelity to classical authors (Cicero as gold standard).",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "correct_latin_kernel",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Medieval Latin is Classical Latin after natural linguistic evolution; reconstruction is internal correction",
+        "authority_grounding": "Continuous institutional transmission; living practice as legitimating",
+        "sibling_readings": [
+          "discontinuity_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Medieval innovations treated as legitimate developments; humanist reforms as prescriptive purism"
+      },
+      {
+        "reading_id": "discontinuity_reading",
+        "commitment": "Classical Latin and Medieval Latin are distinct systems; reconstruction required symbolic reoccupation from texts",
+        "authority_grounding": "Textual fidelity to classical authors; written corpus as sole legitimate reference",
+        "sibling_readings": [
+          "continuity_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Medieval forms treated as corruptions; reconstruction as recovery of lost structure from symbols"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Core morphology continuous, but syntax and lexicon required textual recovery; reconstruction was layered",
+        "authority_grounding": "Differential weighting of transmission modes (morphology via practice, syntax/lexicon via texts)",
+        "sibling_readings": [
+          "continuity_reading",
+          "discontinuity_reading"
+        ],
+        "expected_structural_delta": "Some medieval forms legitimate (morphology), others corruptions (syntax/lexicon); reconstruction as partial reoccupation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "discontinuity_reading",
+        "basis": "Continuity reading holds that living practice legitimates linguistic change; discontinuity reading holds that only textual fidelity legitimates. No single framework can hold both: either drift is legitimate evolution or it is corruption requiring symbolic recovery."
+      }
+    ]
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

@@ -1,0 +1,215 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Technology / Religious History / Media Studies",
+  "family_id": "printing_press_reformation_2026",
+  "topic_summary": "Analysis of the relationship between printing press technology and the Protestant Reformation, examining whether vernacular scripture dissemination was a technologically-driven inevitability or a beneficiary-driven outcome shaped by reformers and printers pursuing specific interests. The kernel contest centers on technological determinism versus agency-driven adoption.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Printing Press (Gutenberg c.1440, movable type technology)",
+      "Protestant Reformers (Luther, Calvin, Tyndale - theological dissidents)",
+      "Printers/Publishers (commercial actors, profit-seeking)",
+      "Catholic Church (incumbent authority, Latin monopoly holder)",
+      "Vernacular Scripture (translated Bibles in German, English, French)",
+      "Literate Laity (emerging reading public, urban burghers)"
+    ],
+    "key_tensions": [
+      "Technological capacity vs adoption choice (press could print anything; vernacular scripture was selected)",
+      "Incumbent authority vs distributed interpretation (Church Latin monopoly vs vernacular access)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The causal relationship between printing technology and religious reformation - whether technology drives social change or social actors deploy technology for pre-existing goals",
+    "authority_description": "Historiographic schools claiming interpretive legitimacy via either technological determinism (medium theory) or social constructivism (actor-network theory)",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "technology_reformation_causality",
+    "readings": [
+      {
+        "reading_id": "technological_determinism_reading",
+        "commitment": "Printing press made Reformation inevitable by enabling mass vernacular scripture distribution",
+        "authority_grounding": "Medium theory (McLuhan, Eisenstein) - technology shapes social possibility space",
+        "sibling_readings": [
+          "beneficiary_agency_reading",
+          "co_constitution_reading"
+        ],
+        "expected_structural_delta": "Technology as mountain (physical constraint); reformers as downstream adapters; ε derives from production cost reduction"
+      },
+      {
+        "reading_id": "beneficiary_agency_reading",
+        "commitment": "Reformers and printers deployed printing strategically to bypass Church authority; technology was tool not cause",
+        "authority_grounding": "Social constructivism / actor-network theory - agents shape technology adoption",
+        "sibling_readings": [
+          "technological_determinism_reading",
+          "co_constitution_reading"
+        ],
+        "expected_structural_delta": "Reformer-printer coalition as tangled_rope (mutual extraction); technology as scaffold; ε derives from authority bypass value"
+      },
+      {
+        "reading_id": "co_constitution_reading",
+        "commitment": "Technology and social actors co-evolved; press enabled but did not determine; reformers shaped what press produced",
+        "authority_grounding": "Historical institutionalism - path-dependent interaction effects",
+        "sibling_readings": [
+          "technological_determinism_reading",
+          "beneficiary_agency_reading"
+        ],
+        "expected_structural_delta": "Bidirectional causality; technology as rope (coordination); reformers as piton (atrophied alternatives); ε from interaction term"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "technological_determinism_reading",
+      "human_readable": "Technological Determinism Reading (Press as Causal Driver)",
+      "structural_delta": "Printing press reduced scripture reproduction cost by 95%+, making vernacular distribution economically inevitable regardless of reformer intent",
+      "primary_observable": "Cost per Bible copy 1450 vs 1520; print run volumes; geographic diffusion rate of printed vernacular texts",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes technology-as-constraint baseline; mountain hypothesis with measurable cost reduction observable"
+    },
+    {
+      "claim_id": "beneficiary_agency_reading",
+      "human_readable": "Beneficiary Agency Reading (Reformers as Strategic Deployers)",
+      "structural_delta": "Reformers and printers formed coalition to bypass Church Latin monopoly; press was adopted for vernacular scripture specifically because it served their extraction goals",
+      "primary_observable": "Proportion of early print runs devoted to religious vs secular texts; reformer-printer financial arrangements; Church censorship attempts vs actual distribution",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reformer_printer_coalition",
+      "victim": "church_interpretive_monopoly",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: establishes agency-driven constraint with clear beneficiary/victim structure; tangled_rope with higher ε than determinism reading"
+    },
+    {
+      "claim_id": "co_constitution_reading",
+      "human_readable": "Co-Constitution Reading (Bidirectional Causality)",
+      "structural_delta": "Technology enabled new distribution scale; reformers shaped what was printed and how; neither fully determined the other; path-dependent interaction",
+      "primary_observable": "Timing of vernacular print adoption relative to theological disputes; content evolution of printed materials 1450-1550; counterfactual analysis of manuscript-only scenarios",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: synthesis position capturing interaction effects; rope hypothesis with coordination framing; completes the kernel decomposition"
+    },
+    {
+      "claim_id": "latin_monopoly_erosion",
+      "human_readable": "Latin Monopoly Erosion (Incumbent Authority Collapse)",
+      "structural_delta": "Church's interpretive authority depended on Latin literacy barrier; vernacular access eliminated the barrier regardless of causal mechanism",
+      "primary_observable": "Lay literacy rates in vernacular vs Latin; Church disciplinary actions against vernacular Bible possession; emergence of lay theological debate",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "church_hierarchical_authority",
+      "downstream_of": [
+        "technological_determinism_reading",
+        "beneficiary_agency_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence captured by all three readings; does not distinguish between kernel interpretations"
+    },
+    {
+      "claim_id": "commercial_print_incentives",
+      "human_readable": "Commercial Print Incentives (Profit-Driven Selection)",
+      "structural_delta": "Printers chose vernacular religious texts because they were bestsellers; market demand shaped technology deployment independent of reformer theology",
+      "primary_observable": "Print run profitability data; bestseller lists 1450-1550; printer bankruptcy/success rates by genre",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "printer_class",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "beneficiary_agency_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: component of beneficiary_agency_reading; printers as coalition members rather than independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "technological_determinism_reading",
+      "kernel_id": "technology_reformation_causality",
+      "reading_id": "technological_determinism_reading"
+    },
+    {
+      "claim_id": "beneficiary_agency_reading",
+      "kernel_id": "technology_reformation_causality",
+      "reading_id": "beneficiary_agency_reading"
+    },
+    {
+      "claim_id": "co_constitution_reading",
+      "kernel_id": "technology_reformation_causality",
+      "reading_id": "co_constitution_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "latin_monopoly_erosion",
+      "structural_delta": "Church interpretive authority collapse via vernacular access",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of all three readings; does not distinguish between kernel interpretations; captured in victim structure of beneficiary_agency_reading"
+    },
+    {
+      "claim_id": "commercial_print_incentives",
+      "structural_delta": "Printers selected vernacular religious texts for profit maximization",
+      "hypothesis": "piton",
+      "deferral_reason": "Component mechanism of beneficiary_agency_reading coalition structure; printers as coalition members rather than independent constraint axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_counterfactual_validity",
+      "description": "All three readings depend on counterfactual claims about what would have happened without the press or without reformers. Historical counterfactuals are epistemically fragile; ε measurements may conflate correlation with causation.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - historiographic method itself"
+    },
+    {
+      "id": "omega_orthodox_adoption",
+      "description": "Why did Orthodox Christianity not experience parallel reformation despite access to printing technology? Geographic/linguistic factors, or does this falsify technological_determinism_reading?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - comparative religious history"
+    },
+    {
+      "id": "omega_manuscript_persistence",
+      "description": "Manuscript production continued alongside print for 150+ years. Does this indicate technology was scaffold (optional tool) rather than mountain (inevitable constraint)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - scriptoria and manuscript guilds as losers"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Co_constitution_reading may collapse into 'both matter' without specifying mechanism. If interaction term is unmeasurable, this reading becomes unfalsifiable synthesis rather than distinct constraint.",
+      "source": "§1.3-K coherence check - synthesis readings risk tautology"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: technological_determinism_reading classifies press as mountain (physical constraint) but this depends on economic inevitability claim that may be historiographic assumption rather than demonstrated fact. Generated omega_counterfactual_validity and omega_manuscript_persistence to bound this uncertainty. Kernel structure is valid: three readings emit genuinely different constraint types (mountain vs tangled_rope vs rope) with different beneficiary/victim structures and different ε sources."
+  },
+  "_seed_id": "printing_press_reformation"
+}

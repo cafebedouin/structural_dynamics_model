@@ -1,0 +1,274 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Policy / Criminal Justice / Political Economy",
+  "family_id": "drug_policy_kernel_2026",
+  "topic_summary": "Analysis of drug policy as a contested kernel with three structural readings: prohibition (criminalize use to protect third parties), harm reduction (accept use while minimizing health harms), and legalization (regulate markets to protect both users and third parties). Each reading instantiates different victim sets and constraint structures, creating irreducible conflicts over whose protection takes priority.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 4,
+    "mechanism_count": 6,
+    "absence_count": 3,
+    "key_entities": [
+      "Drug Policy Alliance (reform advocacy organization)",
+      "Office of National Drug Control Policy (US federal drug policy authority)",
+      "WHO/UNAIDS/UNODC (international health/drug control bodies)",
+      "People who use drugs (primary affected population)",
+      "Law enforcement apparatus (enforcement mechanism)",
+      "Illegal drug markets (economic structure)",
+      "Harm reduction service providers (syringe exchanges, naloxone distribution)",
+      "Incarcerated drug offenders (criminalized population)"
+    ],
+    "key_tensions": [
+      "Individual sovereignty vs social order (freedom to use vs community protection)",
+      "Evidence-based policy vs ideological commitment (empirical outcomes vs moral frameworks)",
+      "Health paradigm vs criminal justice paradigm (treatment vs punishment)",
+      "Harm redistribution vs harm elimination (who bears costs of each approach)"
+    ],
+    "key_mechanisms": [
+      "Criminalization enforcement (arrests, incarceration for possession/use)",
+      "Harm reduction services (needle exchanges, naloxone distribution, supervised consumption)",
+      "Market regulation (legal supply chains, quality control, taxation)",
+      "Racial disparities in enforcement (2.5x arrest rate for Black adults despite similar use rates)",
+      "Overdose mortality pathways (unregulated supply, incarceration-linked mortality)",
+      "Disease transmission vectors (HIV/Hepatitis C among people who inject drugs)"
+    ],
+    "key_absences": [
+      "Treatment capacity infrastructure (availability and accessibility of evidence-based addiction treatment)",
+      "Economic beneficiaries of prohibition (prison-industrial complex, law enforcement budgets, illegal market actors)",
+      "International drug trafficking dynamics (supply-side enforcement, cartel violence, producer country impacts)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The substance-control kernel: the state's authority to regulate individual drug use and market access, grounded in competing claims about legitimate protection of persons and social order",
+    "authority_description": "Legislative/executive power to define controlled substances and enforcement regimes; medical/public health authority to define harm and treatment; judicial authority to adjudicate violations",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_legitimacy",
+    "is_contested_kernel": true,
+    "kernel_id": "substance_control_authority",
+    "readings": [
+      {
+        "reading_id": "prohibition_reading",
+        "commitment": "State authority to criminalize drug use/possession to protect third parties from drug-related crime and social disorder",
+        "authority_grounding": "Criminal law sovereignty; moral/paternalistic duty to prevent self-harm and social harm",
+        "sibling_readings": [
+          "harm_reduction_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users enter victim set via criminalization; third parties protected via deterrence; high enforcement costs; racial disparities in application; incarceration as primary mechanism"
+      },
+      {
+        "reading_id": "harm_reduction_reading",
+        "commitment": "State authority to accept drug use while minimizing health harms through public health interventions",
+        "authority_grounding": "Public health paradigm; pragmatic acceptance of use as persistent reality; evidence-based harm minimization",
+        "sibling_readings": [
+          "prohibition_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users remain in partial victim set (health harms) but exit criminal victim set; third parties bear disease transmission and crime risks; services as primary mechanism; decriminalization without full legalization"
+      },
+      {
+        "reading_id": "legalization_reading",
+        "commitment": "State authority to regulate drug markets as legal commerce with quality/access controls",
+        "authority_grounding": "Individual sovereignty over bodily autonomy; market regulation paradigm; elimination of prohibition harms",
+        "sibling_readings": [
+          "prohibition_reading",
+          "harm_reduction_reading"
+        ],
+        "expected_structural_delta": "Users exit both criminal and unregulated-supply victim sets; third parties protected via market regulation; illegal markets eliminated; regulatory capacity as primary mechanism; potential increase in use volume"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "prohibition_reading",
+        "reading_b": "legalization_reading",
+        "basis": "Prohibition's axiom that state criminalization of use is legitimate protection cannot coexist with legalization's axiom that individual bodily sovereignty prohibits such criminalization. One framework treats use as legitimate state concern requiring criminal sanction; the other treats it as protected individual choice requiring only market regulation."
+      },
+      {
+        "reading_a": "prohibition_reading",
+        "reading_b": "harm_reduction_reading",
+        "basis": "Prohibition's axiom that deterrence via criminalization reduces use and protects society cannot coexist with harm reduction's axiom that use is a persistent reality best addressed through health services rather than criminal sanction. One framework treats criminalization as protective mechanism; the other treats it as counterproductive harm."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "prohibition_reading",
+      "human_readable": "Prohibition Reading (Criminalization as Protection)",
+      "structural_delta": "State criminalizes drug use/possession to deter use and protect third parties from drug-related crime and disorder",
+      "primary_observable": "Arrest rates for drug possession; incarceration rates for drug offenses; self-reported deterrence effects; drug-related crime rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "law_enforcement_apparatus",
+      "victim": "criminalized_users",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest enforcement costs and victim set size; generates racial disparity mechanisms"
+    },
+    {
+      "claim_id": "harm_reduction_reading",
+      "human_readable": "Harm Reduction Reading (Health Services as Mitigation)",
+      "structural_delta": "State accepts drug use as persistent reality and deploys public health interventions to minimize health harms without criminalization",
+      "primary_observable": "Overdose mortality rates; HIV/Hepatitis C transmission rates among PWID; naloxone distribution coverage; syringe service program access",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "public_health_infrastructure",
+      "victim": "users_facing_health_harms",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; intermediate position between prohibition and legalization; evidence-based outcomes documented"
+    },
+    {
+      "claim_id": "legalization_reading",
+      "human_readable": "Legalization Reading (Market Regulation as Harm Elimination)",
+      "structural_delta": "State regulates drug markets as legal commerce with quality controls, eliminating illegal markets and criminalization harms",
+      "primary_observable": "Legal market size and tax revenue; illegal market elimination rate; regulatory compliance costs; use prevalence changes post-legalization",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "legal_market_actors",
+      "victim": "third_parties_if_use_increases",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; most structurally transformative; shifts harm from criminalization to market regulation"
+    },
+    {
+      "claim_id": "racial_enforcement_disparity",
+      "human_readable": "Racial Enforcement Disparity (Structurally Mediated Harm)",
+      "structural_delta": "Black adults arrested at 2.5x rate of white adults despite similar use rates, creating racialized victimization under prohibition",
+      "primary_observable": "Arrest rate ratios by race; incarceration rate ratios by race; use prevalence by race",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "white_drug_users",
+      "victim": "black_drug_users",
+      "downstream_of": [
+        "prohibition_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural consequence of prohibition reading; captured in prohibition constraint story as enforcement mechanism; high epsilon but derivative of primary reading"
+    },
+    {
+      "claim_id": "treatment_capacity_gap",
+      "human_readable": "Treatment Capacity Gap (Infrastructure Absence)",
+      "structural_delta": "Insufficient availability and accessibility of evidence-based addiction treatment across all three policy readings",
+      "primary_observable": "Treatment slots per capita; wait times for treatment access; insurance coverage for MAT; geographic distribution of treatment facilities",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "users_seeking_treatment",
+      "downstream_of": [],
+      "feeds_into": [
+        "prohibition_reading",
+        "harm_reduction_reading",
+        "legalization_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects all three readings but is not reading-specific; infrastructure constraint rather than policy choice; omega material for cross-reading analysis"
+    },
+    {
+      "claim_id": "prohibition_economic_beneficiaries",
+      "human_readable": "Prohibition Economic Beneficiaries (Structural Entrenchment)",
+      "structural_delta": "Prison-industrial complex, law enforcement budgets, and illegal market actors benefit from prohibition maintenance",
+      "primary_observable": "Law enforcement budget allocations for drug enforcement; private prison contracts for drug offenders; illegal market revenue estimates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "prison_industrial_complex",
+      "victim": "reform_advocates",
+      "downstream_of": [
+        "prohibition_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural consequence of prohibition reading; captured as beneficiary analysis within prohibition constraint; high epsilon but derivative"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "prohibition_reading",
+      "kernel_id": "substance_control_authority",
+      "reading_id": "prohibition_reading"
+    },
+    {
+      "claim_id": "harm_reduction_reading",
+      "kernel_id": "substance_control_authority",
+      "reading_id": "harm_reduction_reading"
+    },
+    {
+      "claim_id": "legalization_reading",
+      "kernel_id": "substance_control_authority",
+      "reading_id": "legalization_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "racial_enforcement_disparity",
+      "structural_delta": "Black adults arrested at 2.5x rate despite similar use rates",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural consequence of prohibition reading; captured in prohibition constraint story as enforcement mechanism; high epsilon but derivative of primary reading"
+    },
+    {
+      "claim_id": "treatment_capacity_gap",
+      "structural_delta": "Insufficient evidence-based addiction treatment infrastructure",
+      "hypothesis": "piton",
+      "deferral_reason": "Affects all three readings but is not reading-specific; infrastructure constraint rather than policy choice; omega material for cross-reading analysis"
+    },
+    {
+      "claim_id": "prohibition_economic_beneficiaries",
+      "structural_delta": "Prison-industrial complex and illegal markets benefit from prohibition",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural consequence of prohibition reading; captured as beneficiary analysis within prohibition constraint; high epsilon but derivative"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_harm_redistribution_not_elimination",
+      "description": "All three readings redistribute harm rather than eliminate it. Prohibition shifts harm to criminalized users and creates enforcement disparities. Harm reduction accepts use-related health harms while reducing criminalization harms. Legalization may increase use volume while eliminating criminalization and unregulated supply harms. No reading achieves zero-harm state; each makes different trade-offs about whose protection takes priority.",
+      "source": "Structural analysis of victim sets across readings"
+    },
+    {
+      "id": "omega_evidence_ideology_gap",
+      "description": "Harm reduction and legalization show consistent evidence of reduced arrests without increased violent crime, and harm reduction shows reduced disease transmission. Yet prohibition persists despite evidence, suggesting ideological commitment or beneficiary entrenchment overrides empirical outcomes. The gap between evidence and policy choice is itself a structural feature requiring explanation.",
+      "source": "Research context on evidence base vs policy persistence"
+    },
+    {
+      "id": "omega_treatment_capacity_universal",
+      "description": "Treatment capacity gap (deferred axis) affects all three readings. Prohibition criminalizes users who cannot access treatment. Harm reduction cannot fully mitigate health harms without treatment access. Legalization cannot prevent problematic use without treatment infrastructure. This cross-reading constraint may be more structurally fundamental than the kernel contest itself.",
+      "source": "Deferred axis treatment_capacity_gap + absence inventory"
+    },
+    {
+      "id": "omega_international_supply_dynamics",
+      "description": "All three readings focus on demand-side policy within one jurisdiction. Supply-side dynamics (international trafficking, producer country violence, cartel economics) are absent from analysis. Legalization in one jurisdiction may not eliminate illegal markets if neighboring jurisdictions maintain prohibition. This absence may invalidate legalization's claimed benefit of illegal market elimination.",
+      "source": "Absence inventory + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_axiom_contradiction_coexistence",
+      "description": "Prohibition and harm reduction hold axiom-contradictory positions (criminalization as protection vs criminalization as harm) yet coexist in many jurisdictions as hybrid policy. This suggests either: (1) the axiom contradiction is not absolute in practice, (2) different readings apply to different substances (marijuana legalization + heroin prohibition), or (3) the hybrid is unstable and will resolve toward one reading. The coexistence pattern requires explanation.",
+      "source": "Axiom contradiction declaration + empirical policy hybrids"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied as specified. Three readings selected for generation with distinct victim sets and constraint structures. Deferred axes are structural consequences of primary readings rather than independent axes. Omegas document cross-reading tensions and absences."
+  },
+  "_seed_id": "drug_policy_kernel"
+}

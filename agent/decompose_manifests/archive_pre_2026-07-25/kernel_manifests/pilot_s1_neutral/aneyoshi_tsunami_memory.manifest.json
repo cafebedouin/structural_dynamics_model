@@ -1,0 +1,171 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Anthropology / Institutional Memory / Land-Use Governance",
+  "family_id": "aneyoshi_tsunami_stone_2011",
+  "topic_summary": "Analysis of the Aneyoshi tsunami stone's 'do not build below this line' directive, which persisted as a land-use constraint across 78 years without catastrophe validation, then proved decisive in the 2011 Tōhoku tsunami. The kernel contest centers on whether the commitment decayed to commemorative symbol or retained behavioral force during the inter-catastrophe period.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aneyoshi village (coastal settlement, Iwate Prefecture)",
+      "1933 Sanriku tsunami (founding catastrophe; 600+ deaths regionally)",
+      "2011 Tōhoku tsunami (validation catastrophe; Aneyoshi survival)",
+      "Tsunami stone (physical marker inscribed 'High dwellings ensure peace for descendants')",
+      "Inter-catastrophe generation (residents 1933-2011 without direct tsunami experience)"
+    ],
+    "key_tensions": [
+      "Commemorative decay vs behavioral persistence (symbol erosion vs live constraint)",
+      "Economic pressure vs elevation constraint (coastal access value vs stone-line prohibition)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "human_readable": "Commemorative Husk Reading (Symbol Without Behavioral Force)",
+      "structural_delta": "Stone interpreted as memorial artifact; land-use decisions made independently of directive",
+      "primary_observable": "Building permit patterns relative to stone line; resident testimony on decision-making rationale",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "economic_development_interests",
+      "victim": "future_catastrophe_victims",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel reading 1 of 2; represents decay hypothesis"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "human_readable": "Behavioral Competence Reading (Live Land-Use Practice)",
+      "structural_delta": "Stone directive retained as binding constraint; building decisions actively constrained by elevation rule",
+      "primary_observable": "Zero structures built below stone line 1933-2011; resident testimony on constraint internalization",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Kernel reading 2 of 2; represents persistence hypothesis"
+    },
+    {
+      "claim_id": "temporal_validation_asymmetry",
+      "human_readable": "Temporal Validation Asymmetry (78-Year Observational Gap)",
+      "structural_delta": "Commitment system operated without catastrophe feedback across three generations",
+      "primary_observable": "Inter-catastrophe duration (1933-2011); generational turnover rate; absence of validation events",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "commemorative_husk_reading",
+        "behavioral_competence_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent structural axis; temporal substrate affecting both readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "kernel_id": "aneyoshi_stone_directive",
+      "reading_id": "commemorative_husk_reading"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "kernel_id": "aneyoshi_stone_directive",
+      "reading_id": "behavioral_competence_reading"
+    },
+    "temporal_validation_asymmetry"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "regional_comparison_gradient",
+      "structural_delta": "Neighboring villages without stones experienced different land-use patterns and 2011 outcomes",
+      "hypothesis": "rope",
+      "deferral_reason": "Comparative axis; requires multi-site data beyond single-village kernel analysis"
+    },
+    {
+      "claim_id": "inscription_literacy_transmission",
+      "structural_delta": "Mechanism of directive transmission (physical inscription vs oral tradition vs institutional enforcement)",
+      "hypothesis": "rope",
+      "deferral_reason": "Transmission mechanism captured within readings; independent axis would require ethnographic detail absent from prompt"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_counterfactual_validation",
+      "description": "If 2011 tsunami had NOT occurred, would the stone directive have decayed by 2030? The 78-year gap tests commitment durability, but 2011 validation may have artificially extended what was already eroding.",
+      "source": "Temporal validation asymmetry analysis"
+    },
+    {
+      "id": "omega_enforcement_mechanism",
+      "description": "Was compliance voluntary (internalized norm) or enforced (village council veto power)? Behavioral-competence reading assumes internalization; enforcement would reclassify as rope rather than mountain.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_economic_pressure_threshold",
+      "description": "At what coastal-access economic value would the stone directive have been violated? The 78-year period may represent below-threshold conditions rather than absolute commitment.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_library_d5_classification",
+      "description": "Prompt flags D5 catastrophe-theorem break as 'decisive' but does not specify which reading it validates. If D5 validates behavioral-competence, commemorative-husk becomes empirically falsified rather than contested.",
+      "source": "F01 (Premise Drift)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F01 detected: Prompt states 'Library verdict context: D5 catastrophe-theorem break (decisive)' but does not specify which reading the verdict validates. If D5 empirically validates behavioral-competence (zero structures below line = zero casualties), the kernel may not be genuinely contested post-2011 — commemorative-husk would be falsified rather than live. Generated omega_library_d5_classification to bound this ambiguity."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Physical stone inscription 'Do not build your homes below this point' stabilized as land-use prohibition following 1933 Sanriku tsunami",
+    "authority_description": "Catastrophe-derived authority; founding generation's direct experience grounds interpretive legitimacy for descendants",
+    "drift_status": "partial",
+    "candidate_pattern": "Catastrophe-Kernel Commitment System",
+    "is_contested_kernel": true,
+    "kernel_id": "aneyoshi_stone_directive",
+    "readings": [
+      {
+        "reading_id": "commemorative_husk_reading",
+        "commitment": "Stone is memorial artifact; directive lost behavioral force during inter-catastrophe period",
+        "authority_grounding": "Symbolic/commemorative tradition; authority decayed with generational distance from 1933",
+        "sibling_readings": [
+          "behavioral_competence_reading"
+        ],
+        "expected_structural_delta": "High epsilon (suppression of economically rational coastal development); beneficiary structure (development interests gain from decay)"
+      },
+      {
+        "reading_id": "behavioral_competence_reading",
+        "commitment": "Stone directive retained as binding land-use constraint across 78 years without validation",
+        "authority_grounding": "Internalized catastrophe-prevention norm; authority persists through institutional/cultural transmission",
+        "sibling_readings": [
+          "commemorative_husk_reading"
+        ],
+        "expected_structural_delta": "Very low epsilon (physical geography constraint); mountain structure (no beneficiary of compliance)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "commemorative_husk_reading",
+        "reading_b": "behavioral_competence_reading",
+        "basis": "Commemorative-husk axiom (symbols decay without reinforcement) and behavioral-competence axiom (catastrophe-derived norms persist through transmission) are mutually exclusive. No framework holds both: either the directive lost force (husk) or retained it (competence), but not both simultaneously across the same 78-year period."
+      }
+    ]
+  },
+  "_seed_id": "aneyoshi_tsunami_memory"
+}

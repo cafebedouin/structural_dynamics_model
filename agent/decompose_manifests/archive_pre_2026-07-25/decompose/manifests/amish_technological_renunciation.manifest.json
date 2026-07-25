@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Technology Governance / Commitment Systems",
+  "family_id": "amish_ordnung_boundaries_2026",
+  "topic_summary": "Analysis of Amish technological Ordnung boundaries as a dynamic commitment system where a religious community adjudicates which emerging technologies breach the kernel commitment to separation from the world versus acceptable adaptation. The Ordnung functions as an interpretive layer between a fixed theological kernel and evolving technological affordances.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Amish community (commitment system operating through practice-based authority)",
+      "Ordnung (the interpretive framework: written and unwritten rules governing technology use)",
+      "Gelassenheit kernel (theological commitment to submission, humility, separation from world)",
+      "Emerging technologies (telephones, solar panels, smartphones as test cases)",
+      "District bishops and ministers (interpretive authority holders)"
+    ],
+    "key_tensions": [
+      "Theological fixity vs practical adaptation (kernel stability vs technology evolution)",
+      "Individual conscience vs collective authority (member judgment vs bishop discretion)",
+      "Economic necessity vs separation commitment (farming viability vs technology rejection)"
+    ],
+    "key_mechanisms": [
+      "District-level deliberation and consensus process for technology approval/rejection",
+      "Graduated adoption patterns (telephone in barn acceptable, in home forbidden; solar for farm not personal entertainment)"
+    ],
+    "key_absences": [
+      "Explicit written criteria for technology evaluation (Ordnung is largely oral tradition)",
+      "Formal appeal mechanism when district bishop interprets kernel restrictively"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "principle_reading",
+      "human_readable": "Principle-Based Reading (Technology Evaluated by Theological Consequence)",
+      "structural_delta": "Technologies judged by whether they structurally entangle community members in worldly systems (electricity grid dependency, mandatory insurance, legal employment structures) rather than by the artifact itself",
+      "primary_observable": "Which technologies are permitted when they can be isolated from grid/system entanglement (e.g., pneumatic tools, solar panels off-grid) vs forbidden when entanglement is unavoidable (e.g., household grid electricity, internet-connected devices)",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading",
+      "beneficiary": "community_cohesion",
+      "victim": "individual_convenience",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading that evaluates technology by structural entanglement rather than artifact characteristics; produces constraint focused on system-level dependencies"
+    },
+    {
+      "claim_id": "artifact_reading",
+      "human_readable": "Artifact-Based Reading (Technology Evaluated by Visible Form)",
+      "structural_delta": "Technologies judged by their visible similarity to forbidden worldly artifacts regardless of functional isolation; a solar panel is 'too modern' even if off-grid because it resembles English electrical infrastructure",
+      "primary_observable": "Which technologies are forbidden despite functional isolation from worldly systems (restrictive districts rejecting solar panels, battery-powered tools, modern fabrics) based on visual/formal resemblance to prohibited items",
+      "epsilon_bin": "high",
+      "hypothesis": "reading",
+      "beneficiary": "boundary_visibility",
+      "victim": "adaptive_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct reading that produces different constraint boundaries; prioritizes visible separation markers over functional analysis"
+    },
+    {
+      "claim_id": "consequence_reading",
+      "human_readable": "Consequence-Based Reading (Technology Evaluated by Social Outcome)",
+      "structural_delta": "Technologies judged by observed or anticipated effects on community practices (telephones in barns permitted because they preserve geographic rootedness; in homes forbidden because they erode visiting practices)",
+      "primary_observable": "District-specific rules that permit identical technology in certain spatial/functional contexts while forbidding it in others (telephone placement rules, tractor-for-belt-power-only regulations)",
+      "epsilon_bin": "low",
+      "hypothesis": "reading",
+      "beneficiary": "adaptive_flexibility",
+      "victim": "rule_clarity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis reading that permits fine-grained contextual distinctions and explains observed variation across districts"
+    },
+    {
+      "claim_id": "economic_pressure_axis",
+      "human_readable": "Economic Viability Pressure (Farm Productivity vs Separation Commitment)",
+      "structural_delta": "Structural tension between maintaining economically viable farms and rejecting productivity-enhancing technologies",
+      "primary_observable": "Technology adoption patterns correlated with farm income decline or loss of agricultural viability",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "consequence_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic pressure is a forcing function on interpretation but not itself a reading of the Gelassenheit kernel; captured as context in consequence_reading"
+    },
+    {
+      "claim_id": "youth_retention_axis",
+      "human_readable": "Youth Retention Pressure (Rumspringa Exposure vs Boundary Maintenance)",
+      "structural_delta": "Structural tension between maintaining strict technology boundaries and preventing youth defection after exposure to English technology during Rumspringa",
+      "primary_observable": "Baptism rates and technology policy shifts in districts with high youth exposure to smartphones/internet",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "adaptive_districts",
+      "victim": "restrictive_districts",
+      "downstream_of": [],
+      "feeds_into": [
+        "consequence_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: retention pressure influences which readings gain authority but is not itself a theological reading; relevant as omega for long-term drift dynamics"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "principle_reading",
+      "kernel_id": "gelassenheit_separation",
+      "reading_id": "principle_reading"
+    },
+    {
+      "claim_id": "artifact_reading",
+      "kernel_id": "gelassenheit_separation",
+      "reading_id": "artifact_reading"
+    },
+    {
+      "claim_id": "consequence_reading",
+      "kernel_id": "gelassenheit_separation",
+      "reading_id": "consequence_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "economic_pressure_axis",
+      "structural_delta": "Farm productivity vs separation commitment trade-off",
+      "hypothesis": "rope",
+      "deferral_reason": "Economic pressure is a forcing function on interpretation rather than a reading of the kernel itself; captured as context within consequence_reading"
+    },
+    {
+      "claim_id": "youth_retention_axis",
+      "structural_delta": "Boundary maintenance vs youth defection after Rumspringa exposure",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Retention pressure influences which readings gain authority over time but is not itself a theological reading; deferred as omega variable for long-term drift analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_authority_deadlock",
+      "description": "What happens when principle-reading and artifact-reading produce irreconcilable judgments for the same technology (e.g., solar panels off-grid)? Does the district split, does one reading dominate, or does a hybrid emerge? The commitment_system lacks a meta-level adjudication mechanism.",
+      "source": "Kernel decomposition analysis: readings instantiate genuinely different constraints with no shared resolution framework"
+    },
+    {
+      "id": "omega_smartphone_threshold",
+      "description": "Smartphones may represent a qualitative threshold where all three readings converge on prohibition (principle: internet entanglement unavoidable; artifact: maximally worldly form; consequence: demolishes visiting/letter-writing). If so, does convergence stabilize the kernel or does economic/retention pressure force a fourth reading (necessity-based exemption)?",
+      "source": "Technology trajectory analysis + youth_retention_axis deferral"
+    },
+    {
+      "id": "omega_written_codification",
+      "description": "The Ordnung is largely oral tradition. Does codifying technology rules (to reduce bishop discretion) stabilize boundaries or trigger departure by making the interpretive layer rigid? Written = less drift absorption, more fracture risk.",
+      "source": "Absence Inventory: no formal written criteria or appeal mechanism"
+    },
+    {
+      "id": "omega_inter_district_drift",
+      "description": "Districts operate independently. Do divergent technology interpretations eventually produce incompatible Ordnungs where inter-district marriage/cooperation becomes structurally impossible? At what epsilon divergence does one faith become multiple commitment systems?",
+      "source": "Dark Matter Probe 2: what is not being described = the centrifugal force of distributed interpretive authority"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition is well-bounded: three readings produce genuinely different constraints (structural entanglement vs visible form vs social outcome) from the shared Gelassenheit commitment. Readings are structurally independent (different primary observables, different beneficiary/victim pairs, different epsilon profiles)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Gelassenheit: theological commitment to submission, humility, and separation from the world",
+    "authority_description": "District bishops and ministers hold interpretive authority grounded in congregational consensus and tradition continuity; no formal appeals mechanism beyond district consensus or departure",
+    "drift_status": "functioning",
+    "candidate_pattern": "Dynamic Reinterpretation",
+    "is_contested_kernel": true,
+    "kernel_id": "gelassenheit_separation",
+    "readings": [
+      {
+        "reading_id": "principle_reading",
+        "commitment": "Separation means avoiding structural entanglement in worldly systems; technology acceptable if functionally isolated",
+        "authority_grounding": "Theological analysis of systemic dependency (e.g., grid electricity creates dependence on English infrastructure)",
+        "sibling_readings": [
+          "artifact_reading",
+          "consequence_reading"
+        ],
+        "expected_structural_delta": "Lower epsilon (moderate suppression); permits solar/pneumatic tools when off-grid; forbids internet/insurance regardless of isolation possibility"
+      },
+      {
+        "reading_id": "artifact_reading",
+        "commitment": "Separation means visible distinction from English society; technology forbidden if it resembles worldly artifacts regardless of function",
+        "authority_grounding": "Boundary maintenance through form-based classification (appearance signals membership)",
+        "sibling_readings": [
+          "principle_reading",
+          "consequence_reading"
+        ],
+        "expected_structural_delta": "High epsilon (maximal suppression); forbids solar panels and modern fabrics even when off-grid; prioritizes visible markers"
+      },
+      {
+        "reading_id": "consequence_reading",
+        "commitment": "Separation means preserving community practices; technology evaluated by its effect on visiting, mutual aid, geographic rootedness",
+        "authority_grounding": "Empirical observation of social outcomes within district experience",
+        "sibling_readings": [
+          "principle_reading",
+          "artifact_reading"
+        ],
+        "expected_structural_delta": "Low epsilon (fine-grained contextual rules); permits telephones in barns (preserve rootedness), forbids in homes (erode visiting); tractor for belt power only"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "principle_reading",
+        "reading_b": "artifact_reading",
+        "basis": "Principle-reading accepts off-grid solar panels (no systemic entanglement) while artifact-reading rejects them (visible resemblance to English electrical infrastructure). No single coherent framework can simultaneously hold 'functional isolation is sufficient' and 'visible form determines permissibility' as foundational axioms."
+      }
+    ]
+  },
+  "_seed_id": "amish_technological_renunciation"
+}

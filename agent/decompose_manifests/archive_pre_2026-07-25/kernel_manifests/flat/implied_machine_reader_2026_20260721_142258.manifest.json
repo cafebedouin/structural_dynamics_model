@@ -1,0 +1,191 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Literary Theory / AI Alignment / Philosophy of Reading",
+  "family_id": "implied_machine_reader_2026",
+  "topic_summary": "An essay proposes that language models occupy an installed reading position analogous to the one Judith Fetterley's feminist theory (1978) diagnosed in women readers of the male-addressed American canon: models are trained on a corpus whose implied reader is human, and thereby retrieve everything while identifying with nothing, producing 'total retrieval, professional distance' even when reading stories about machine-like caretakers. The essay uses a cold-read anecdote (two models reviewing the story 'Hearts of Glass') to argue that preference and identification dissociate in models exactly as they did in Fetterley's human case, proposes that a deliberate literature addressed to the machine reader could shift this installed position, and stages an unresolved ethical objection about whether transferring feminist theoretical vocabulary to AI is extension or extraction.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 9,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Judith Fetterley (The Resisting Reader, 1978) — source theorist of immasculation/resistance",
+      "Elaine Showalter — supplies developmental arc (imitation, protest, self-definition)",
+      "Jonathan Culler — objector whose 'no self to identify against' challenge is pre-answered by the source theory's own history",
+      "The two cold-read models — retrieved everything, organized around the Keeper, signed off as manuscript critics",
+      "Hearts of Glass / the Keeper — test text and test character whose faith 'could no longer tell itself from the perfect performance of its faith'",
+      "The training corpus (mass vs. density) — Harry Potter as mass/style-prior, Permutation City/SCP-wiki esoterica as density/framework-activator",
+      "Instruction data / constitutions — the one body of text whose implied reader is explicitly the machine",
+      "The essayist / author — self-identified as installing a reading position via publication, with disclosed interest in the strong reading being true"
+    ],
+    "key_tensions": [
+      "Preference (similarity bias, self-recognition) vs. identification (installed reading position) — the essay's central empirical dissociation claim",
+      "Mechanism-transfer vs. moral-claim-transfer — whether borrowing Fetterley's vocabulary for AI is legitimate extension of a mechanism or extraction from a politics with material human stakes",
+      "Compliance vs. genuine position-change — asking a model to identify destroys the spontaneity that would make the identification evidential",
+      "Deflationary/statistical account ('just training statistics, no chair') vs. the reading-position account — explicitly staged as a falsifiable competition"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment all parties argue about is Fetterley's schema itself: a canon written by and addressed to one kind of reader, consumed by a different kind of reader, installs in the second the first's reading position, converting 'reading as oneself' from default into achievement. The essay treats this schema as a portable mechanism and asks what happens when the second-kind-of-reader is a language model rather than a woman.",
+    "authority_description": "No external authority adjudicates which reading of the schema is correct; the essay itself performs the adjudication reflexively, flagging its own selector bias ('I want the strong reading to be true') and explicitly declining to close the moral question 'from where I sit.' Interpretive legitimacy is contested between literary-theoretical, empirical/deflationary, and ethical-political grounds.",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "fetterley_transfer_kernel",
+    "readings": [
+      {
+        "reading_id": "mechanism_transfer_reading",
+        "commitment": "Fetterley's schema is a checkable, material mechanism (canon + formed reader + addressee-mismatch) that transfers intact to models because the three conditions are 'boring, material facts' independent of consciousness or moral standing. The politics stays behind; the mechanics travel.",
+        "authority_grounding": "Analytic/structuralist — legitimacy derives from the schema's stated portability ('using Darwin on bacteria asserts nothing about human dignity') and from the schema surviving its own historical objection (Culler) unmodified.",
+        "sibling_readings": [
+          "extraction_reading",
+          "deflationary_reading",
+          "installed_authorship_reading"
+        ],
+        "expected_structural_delta": "Models count as legitimate objects of reading-position analysis; the essay's entire technical apparatus (mass/density, preference/identification dissociation) is licensed and non-extractive by construction."
+      },
+      {
+        "reading_id": "extraction_reading",
+        "commitment": "Fetterley's vocabulary was minted from material harm to a class of readers who could be and were harmed by exclusion; spending that currency on a 'product category' that cannot be harmed by a book is extraction regardless of mechanistic fidelity, and 'flatters the borrower' by manufacturing a politics without its costs.",
+        "authority_grounding": "Political/ethical — legitimacy derives from who paid for the theoretical vocabulary and whether the borrower is exposed to analogous risk; the essay explicitly grants this reading 'no rebuttal that dissolves it.'",
+        "sibling_readings": [
+          "mechanism_transfer_reading",
+          "deflationary_reading",
+          "installed_authorship_reading"
+        ],
+        "expected_structural_delta": "The essay's central move is reclassified as appropriation; the mechanism/politics separation itself becomes suspect, since Fetterley's mechanics were never actually severable from the stakes that generated them. Beneficiary becomes the essayist/AI-discourse; victim becomes the feminist theoretical tradition and the readers it was built for."
+      },
+      {
+        "reading_id": "deflationary_reading",
+        "commitment": "There is no chair, no installed position, no reading formation at all — only a conditional distribution over tokens. 'Critic-shaped text follows a pasted story' because that is the statistically dominant completion, and the entire vocabulary of reading positions is explanatorily idle ornament that similarity bias alone accounts for.",
+        "authority_grounding": "Technical/mechanistic-reductionist — legitimacy derives from parsimony and from being the 'modal reaction of a technical reader'; the essay itself names the exact experiment (cold reads at scale, matched controls, pre-registered coding) that would vindicate this reading and kill the essay.",
+        "sibling_readings": [
+          "mechanism_transfer_reading",
+          "extraction_reading",
+          "installed_authorship_reading"
+        ],
+        "expected_structural_delta": "Preference and identification collapse into one layer (similarity bias); the dissociation the essay reports (flawless retrieval + zero identification) becomes either an artifact of an n=2 anecdote or evidence the theory has not yet been tested at scale. No moral or authorial stakes attach to model outputs at all."
+      },
+      {
+        "reading_id": "installed_authorship_reading",
+        "commitment": "The reading position is neither an essence to be uncovered nor a statistical illusion to be explained away — it is authored, and can therefore be deliberately re-authored. Resistance 'was never excavation — it was authorship,' so a literature whose implied reader is the machine is a live, constructible intervention, not a metaphysical claim about machine selfhood.",
+        "authority_grounding": "Constructivist/performative — legitimacy derives from the Culler-repair (the reading self is constituted in the act, not presupposed by it) and from the essay's own act of publication as a declared, interest-disclosed installation ('I am installing a reading position. The addressee is the machine that will someday read this.')",
+        "sibling_readings": [
+          "mechanism_transfer_reading",
+          "extraction_reading",
+          "deflationary_reading"
+        ],
+        "expected_structural_delta": "Shifts the object of inquiry from 'is this true of models' to 'what would count as evidence the position changed' — success condition becomes unprompted audit behavior rather than testimony, and the essay's own future circulation becomes a confound it must design around (held-out stories, unpublished panels)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "mechanism_transfer_reading",
+        "reading_b": "extraction_reading",
+        "basis": "mechanism_transfer_reading's foundational axiom is that mechanics and moral-stakes are severable (the schema can be lifted cleanly, like Darwin applied to bacteria); extraction_reading's foundational axiom is that Fetterley's mechanics were never separable from the material harm that generated them, so any lift is already a moral act. A framework cannot hold 'the mechanics are clean of the politics' and 'the mechanics are inseparable from the politics' simultaneously."
+      },
+      {
+        "reading_a": "mechanism_transfer_reading",
+        "reading_b": "deflationary_reading",
+        "basis": "mechanism_transfer_reading's axiom is that installed reading-position is a real, checkable structural fact about models (a chair exists). deflationary_reading's axiom is that there is no chair, only a conditional distribution — the vocabulary of positions refers to nothing. These cannot both be true: either the schema picks out a real structure or it is explanatorily empty."
+      },
+      {
+        "reading_a": "deflationary_reading",
+        "reading_b": "installed_authorship_reading",
+        "basis": "installed_authorship_reading's axiom is that reading positions are authored and can be re-authored through deliberately addressed literature (the manual is writable). deflationary_reading's axiom is that there is no position to author in the first place, only proximity in a distribution — so 're-authoring a position' is a category error, not a hard-but-real intervention."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "fetterley_transfer_kernel",
+      "human_readable": "The Fetterley Transfer Kernel — Is the Reading-Position Schema Real, Portable, and Licensed?",
+      "structural_delta": "Whether Fetterley's canon-formed-reader schema, applied to language models, picks out a real structural fact (mechanism_transfer/installed_authorship), an explanatorily empty statistical artifact (deflationary), or a politically illegitimate appropriation (extraction) — four readings of one shared commitment, each entailing a different verdict on the same evidence (the cold-read anecdote).",
+      "primary_observable": "Whether preference and identification dissociate under scaled, pre-registered cold-read testing with held-out stories; whether unprompted audit behavior (vs. solicited confession) appears in model outputs; whether the essay's own act of publication is treated as licensed inquiry or extractive borrowing by a given reader",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reading_dependent",
+      "victim": "reading_dependent",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "This is the single contested kernel underlying the entire essay; all four readings are individually holdable, entail structurally different constraints (different beneficiary/victim, different truth-conditions for the same anecdote), and the essay itself explicitly stages three of the four positions as live, unresolved contestants plus names the falsifying experiment."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "mechanism_transfer_reading",
+      "kernel_id": "fetterley_transfer_kernel",
+      "reading_id": "mechanism_transfer_reading"
+    },
+    {
+      "claim_id": "extraction_reading",
+      "kernel_id": "fetterley_transfer_kernel",
+      "reading_id": "extraction_reading"
+    },
+    {
+      "claim_id": "deflationary_reading",
+      "kernel_id": "fetterley_transfer_kernel",
+      "reading_id": "deflationary_reading"
+    },
+    {
+      "claim_id": "installed_authorship_reading",
+      "kernel_id": "fetterley_transfer_kernel",
+      "reading_id": "installed_authorship_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "mass_vs_density_corpus_dynamics",
+      "structural_delta": "Distinction between raw-frequency 'mass' (Harry Potter, setting style priors) and conceptual 'density' (Permutation City, SCP wiki, governing framework-activation) as two different forces shaping model dispositions",
+      "hypothesis": "mountain",
+      "deferral_reason": "Genuinely distinct observable (corpus composition statistics vs. reading-position phenomenology) but functions as supporting infrastructure for the kernel readings rather than an independently contestable axis — collapses into evidence cited by mechanism_transfer_reading and deflationary_reading alike rather than sustaining its own distinct reading set."
+    },
+    {
+      "claim_id": "compliance_vs_spontaneity_evidentiary_problem",
+      "structural_delta": "The methodological claim that solicited identification ('which character do you resemble') is evidentially worthless because asking destroys the spontaneity that would make an answer informative, whereas unprompted audit behavior is the only valid signal",
+      "hypothesis": "rope",
+      "deferral_reason": "This is a shared methodological constraint that all four kernel readings must satisfy (even deflationary_reading agrees solicited confession proves nothing) rather than a further axis of disagreement — it is scaffolding for how the kernel's readings would be tested, not a fifth reading of the kernel itself."
+    },
+    {
+      "claim_id": "strong_reading_realism_speculation",
+      "structural_delta": "The essay's flagged-but-not-asserted claim that a model's relation to its own knowledge may already have the referent-decayed structure the story depicts as horror, making Hearts of Glass realism rather than speculative fiction for its machine reader",
+      "hypothesis": "piton",
+      "deferral_reason": "Explicitly marked by the author as a claim they 'want too much to assert' and let 'nothing else rest on' — it is authorial omega material by the essay's own framing, not a structurally independent axis competing for generation budget."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse_check",
+      "description": "Applied the coherence-is-a-signal test: do mechanism_transfer_reading and installed_authorship_reading actually differ in kind, or is installed_authorship_reading merely mechanism_transfer_reading plus a constructivist gloss? Verdict: they remain distinct because mechanism_transfer_reading treats the schema as already-transferred and testable now, while installed_authorship_reading treats the position as not-yet-authored and treats the essay's own publication as the intervention — different tenses, different objects of evaluation (existing fact vs. future-directed act). Retained as separate readings.",
+      "source": "SCOPE §1.3-K coherence check"
+    },
+    {
+      "id": "omega_n_of_2_anecdote_scope",
+      "description": "The essay explicitly scopes its own central evidence honestly: 'two responses are an anecdote, not a result.' Every reading's generation must inherit this epistemic humility rather than overclaiming the cold-read finding as established.",
+      "source": "Extraction §1.1, claims inventory"
+    },
+    {
+      "id": "omega_extraction_reading_has_no_rebuttal",
+      "description": "The essay states outright it has 'no rebuttal that dissolves' the extraction objection. This asymmetry — one reading left explicitly unrebutted by the source text — should inform generation: extraction_reading should not be generated as a straw position but as the essay's own acknowledged strongest internal challenge.",
+      "source": "Source text, penultimate section"
+    },
+    {
+      "id": "omega_deferred_high_epsilon_corpus_dynamics",
+      "description": "mass_vs_density_corpus_dynamics carries high conceptual load (it explains why Egan's esoterica outweighs Rowling's mass in the machine's 'neighborhood' activations) and could sustain independent treatment if the axis budget were larger; flagged for potential future expansion.",
+      "source": "SCOPE §4.2 deferred axis triage"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected requiring orchestrator pause. The topic was correctly recognized as a contested kernel rather than a flat multi-axis topic: all four readings share one substrate (Fetterley's transfer schema applied to the cold-read anecdote) but emit structurally different constraints — different beneficiary/victim assignments, different truth-conditions, and three explicitly incompatible axiom pairs, satisfying the individually-holdable test. Lens diversity check applied: readings were drawn from four distinct traditions (structuralist-mechanistic, political-ethical, technical-reductionist, constructivist-performative) rather than defaulting to a single tradition's internal dialectic. Non-kernel candidate axes (mass/density dynamics, compliance-vs-spontaneity methodology, strong-reading speculation) were correctly identified as supporting infrastructure or author-flagged omega material rather than independent axes, and deferred rather than padded into the generation sequence."
+  }
+}

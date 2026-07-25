@@ -1,0 +1,174 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Civil Rights",
+  "family_id": "affirmative_action_equal_treatment_2026",
+  "topic_summary": "Analysis of affirmative action as a contested kernel where the equal-treatment commitment under the Fourteenth Amendment is read differently by remedial and colorblind interpretive traditions. Each reading instantiates a structurally distinct constraint with different beneficiary/victim structures, enforcement mechanisms, and extractiveness profiles.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Fourteenth Amendment Equal Protection Clause (constitutional kernel)",
+      "Remedial tradition (group-conscious interpretation grounded in Brown v. Board and historical redress)",
+      "Colorblind tradition (individual-rights interpretation grounded in Harlan dissent and formal equality)",
+      "Supreme Court (interpretive authority with shifting composition)",
+      "Historically disadvantaged groups (beneficiaries under remedial reading)",
+      "Individual applicants (victims under remedial reading; rights-holders under colorblind reading)"
+    ],
+    "key_tensions": [
+      "Group remedy vs individual merit (structural opposition between collective redress and individual assessment)",
+      "Historical context vs formal neutrality (backward-looking correction vs forward-looking blindness)"
+    ],
+    "key_mechanisms": [
+      "Race-conscious admissions (remedial enforcement: diversity targets, holistic review with race as factor)",
+      "Strict scrutiny doctrine (judicial enforcement: compelling interest + narrow tailoring test)",
+      "Colorblind enforcement (prohibition of racial classification regardless of intent)"
+    ],
+    "key_absences": [
+      "Class-based alternatives (economic disadvantage as proxy for racial disadvantage)",
+      "Structural racism mechanisms (how colorblind policies perpetuate disparities through facially neutral means)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Equal protection under law as guaranteed by Fourteenth Amendment — the shared constitutional commitment that all parties invoke",
+    "authority_description": "Supreme Court interpretive supremacy grounded in Marbury v. Madison; legitimacy derives from constitutional fidelity claim",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "equal_protection_commitment",
+    "readings": [
+      {
+        "reading_id": "remedial_reading",
+        "commitment": "Equal protection requires remedying historical group-based subordination through race-conscious measures",
+        "authority_grounding": "Brown v. Board precedent; substantive equality tradition; historical context as interpretive lens",
+        "sibling_readings": [
+          "colorblind_reading",
+          "antisubordination_reading"
+        ],
+        "expected_structural_delta": "Historically disadvantaged groups enter beneficiary set; individual applicants from majority groups enter victim set; high ε from race-conscious classification; enforcement targets outcome disparities"
+      },
+      {
+        "reading_id": "colorblind_reading",
+        "commitment": "Equal protection prohibits any racial classification by state actors regardless of remedial intent",
+        "authority_grounding": "Harlan dissent in Plessy; formal equality tradition; text-originalist interpretation",
+        "sibling_readings": [
+          "remedial_reading",
+          "antisubordination_reading"
+        ],
+        "expected_structural_delta": "All individuals equal rights-holders; state becomes victim of its own race-conscious policies; low ε from prohibition of classification; enforcement targets process not outcomes"
+      },
+      {
+        "reading_id": "antisubordination_reading",
+        "commitment": "Equal protection prohibits policies that perpetuate caste-like subordination of historically disadvantaged groups",
+        "authority_grounding": "Substantive equality tradition; structural racism scholarship; effects-based interpretation",
+        "sibling_readings": [
+          "remedial_reading",
+          "colorblind_reading"
+        ],
+        "expected_structural_delta": "Subordinated groups as primary rights-holders; facially neutral policies with disparate impact enter victim set; very high ε from structural analysis requirement; enforcement targets systemic effects not formal rules"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "remedial_reading",
+      "human_readable": "Remedial Reading (Group-Conscious Redress)",
+      "structural_delta": "Equal protection instantiated as obligation to remedy historical group subordination through race-conscious measures",
+      "primary_observable": "Permissibility of race as admissions factor; diversity ratios in admitted classes; judicial strict scrutiny outcomes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "historically_disadvantaged_groups",
+      "victim": "individual_majority_applicants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest structural distinctiveness from colorblind alternative"
+    },
+    {
+      "claim_id": "colorblind_reading",
+      "human_readable": "Colorblind Reading (Individual Formal Equality)",
+      "structural_delta": "Equal protection instantiated as prohibition of any state racial classification regardless of remedial purpose",
+      "primary_observable": "Prohibition of race-conscious policies; individual rights enforcement; process-based judicial review",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "state_race_conscious_programs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structural opposite of remedial reading with different beneficiary/victim topology"
+    },
+    {
+      "claim_id": "antisubordination_reading",
+      "human_readable": "Antisubordination Reading (Structural Effects-Based)",
+      "structural_delta": "Equal protection instantiated as prohibition of caste-perpetuating policies regardless of formal neutrality",
+      "primary_observable": "Disparate impact analysis; structural racism metrics; subordination effects measurement",
+      "epsilon_bin": "v_high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "subordinated_groups",
+      "victim": "facially_neutral_policies_with_disparate_impact",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; captures structural dimension absent from remedial/colorblind binary"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "remedial_reading",
+      "kernel_id": "equal_protection_commitment",
+      "reading_id": "remedial_reading"
+    },
+    {
+      "claim_id": "colorblind_reading",
+      "kernel_id": "equal_protection_commitment",
+      "reading_id": "colorblind_reading"
+    },
+    {
+      "claim_id": "antisubordination_reading",
+      "kernel_id": "equal_protection_commitment",
+      "reading_id": "antisubordination_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_class_proxy",
+      "description": "Are class-based affirmative action policies a genuine alternative reading or a strategic retreat from the kernel contest? If class proxies for race without naming it, does this instantiate a fourth reading or collapse into remedial-with-plausible-deniability?",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_strict_scrutiny_drift",
+      "description": "Has strict scrutiny doctrine drifted from neutral interpretive tool to enforcement mechanism for colorblind reading? If so, the authority structure itself becomes a constraint rather than neutral arbiter.",
+      "source": "Commitment System Recognition (§1.3) + drift_status=partial"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "Do the three readings remain structurally distinct under demographic shift? If majority-minority inversion occurs, does remedial reading's beneficiary/victim structure flip or does the reading itself transform?",
+      "source": "Independence Testing (§3) + temporal stability check"
+    },
+    {
+      "id": "omega_structural_neutrality",
+      "description": "Does colorblind reading's claim to formal neutrality mask structural extraction? If facially neutral policies perpetuate disparities, is colorblindness a rope (coordination on neutrality) or a snare (extraction via neutral-appearing rules)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + antisubordination_reading structural analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings with different beneficiary/victim topologies, enforcement mechanisms, and extractiveness profiles. All three readings share the equal protection kernel but instantiate genuinely different constraints."
+  },
+  "_seed_id": "affirmative_action_kernel"
+}

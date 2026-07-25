@@ -1,0 +1,187 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Anthropology / Material Culture / Evolutionary Linguistics",
+  "family_id": "fork_adoption_overbite_2026",
+  "topic_summary": "Analysis of the historical shift from stuff-and-cut eating (food clamped in teeth, cut with knife) to fork-mediated eating (food pre-cut into morsels), examining how this technological adoption altered human bite configuration from edge-to-edge to overbite. The transition represents a case of beneficiary-less path-naturalization where a biomechanical capacity (edge-to-edge bite) atrophied through disuse rather than deliberate suppression.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Fork (eating implement; spread ~250 years ago in Western Europe)",
+      "Overbite (dental configuration; upper teeth overlap lower teeth vertically)",
+      "Edge-to-edge bite (ancestral configuration; incisors meet without overlap)",
+      "Stuff-and-cut method (pre-fork eating: food clamped in teeth, cut with knife)",
+      "Labiodental phonemes (f/v sounds; emerged post-Neolithic with bite changes)"
+    ],
+    "key_tensions": [
+      "Biomechanical capacity maintenance vs technological substitution (edge-to-edge bite vs fork adoption)"
+    ],
+    "key_mechanisms": [
+      "Phenotypic plasticity: bite configuration responds to mechanical loading patterns during development",
+      "Path-naturalization: fork adoption removes selective pressure for edge-to-edge bite; overbite becomes default without active suppression"
+    ],
+    "key_absences": [
+      "No identified beneficiary of the transition (neither fork manufacturers nor users deliberately sought bite reconfiguration)",
+      "No institutional authority enforcing the shift (unlike commitment systems with interpretive gatekeepers)",
+      "No contested readings of a shared kernel (the biomechanical substrate changed uniformly across populations adopting forks)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Edge-to-edge bite configuration as ancestral human default, maintained by mechanical loading from stuff-and-cut eating",
+    "authority_description": "No interpretive authority; biomechanical constraint enforced by developmental plasticity responding to use patterns",
+    "drift_status": "absent",
+    "candidate_pattern": "does_not_qualify",
+    "is_contested_kernel": false,
+    "collapse_reason": "Topic fails kernel test on all three criteria: (1) No shared commitment exists—populations did not 'hold' edge-to-edge bite as a normative commitment, only as a biomechanical outcome of eating practices. (2) No competing readings—all populations adopting forks experienced the same biomechanical shift; no interpretive disagreement about what the 'bite-configuration kernel' means. (3) No structural constraint variation—overbite emergence is uniform across fork-adopting populations, not reading-dependent. This is a single constraint (biomechanical capacity maintenance) observed through one lens (phenotypic plasticity), not multiple readings of a contested kernel. The absence of beneficiaries and institutional authority confirms this is path-naturalization of a physical constraint, not a commitment system with interpretive drift."
+  },
+  "axes": [
+    {
+      "claim_id": "phenotypic_plasticity_gate",
+      "human_readable": "Phenotypic Plasticity Gate (Bite Configuration as Use-Dependent)",
+      "structural_delta": "Human bite configuration is developmentally plastic, responding to mechanical loading patterns rather than genetically fixed",
+      "primary_observable": "Cross-population bite configuration variance correlating with eating implement adoption timelines; experimental orthodontic data on loading-induced bone remodeling",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "fork_mediated_disuse",
+        "labiodental_phoneme_emergence"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain establishing the physical constraint base; highest inbound centrality (feeds two downstream axes)"
+    },
+    {
+      "claim_id": "fork_mediated_disuse",
+      "human_readable": "Fork-Mediated Disuse (Technological Substitution Without Beneficiary)",
+      "structural_delta": "Fork adoption removes mechanical loading that maintained edge-to-edge bite, causing overbite emergence through disuse rather than active suppression",
+      "primary_observable": "Historical timeline of fork spread (Western Europe ~1750s) vs overbite prevalence in skeletal records; contemporary hunter-gatherer populations without forks retain edge-to-edge bite",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "phenotypic_plasticity_gate"
+      ],
+      "feeds_into": [
+        "labiodental_phoneme_emergence"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core case of beneficiary-less path-naturalization; structurally distinct from mountain (coordination mechanism vs physical constraint)"
+    },
+    {
+      "claim_id": "labiodental_phoneme_emergence",
+      "human_readable": "Labiodental Phoneme Emergence (Linguistic Constraint Shift)",
+      "structural_delta": "Overbite configuration enables labiodental sounds (f/v) by facilitating upper-teeth-to-lower-lip contact; phoneme innovation follows bite reconfiguration",
+      "primary_observable": "Phylogenetic analysis of language families showing labiodental phoneme emergence post-Neolithic; articulatory phonetics data on overbite-dependent sound production",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "post_neolithic_language_communities",
+      "victim": null,
+      "downstream_of": [
+        "phenotypic_plasticity_gate",
+        "fork_mediated_disuse"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality (downstream synthesis node); demonstrates cascade from biomechanical to linguistic constraints; introduces beneficiary structure absent in upstream axes"
+    },
+    {
+      "claim_id": "stuff_and_cut_extinction",
+      "human_readable": "Stuff-and-Cut Extinction (Practice Obsolescence)",
+      "structural_delta": "Pre-fork eating method (food clamped in teeth, cut with knife) becomes culturally extinct in fork-adopting populations",
+      "primary_observable": "Historical etiquette manuals documenting shift from stuff-and-cut to fork-mediated eating; contemporary absence of stuff-and-cut in Western dining",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "edge_to_edge_bite_capacity",
+      "downstream_of": [
+        "fork_mediated_disuse"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality; cultural practice layer already captured via fork_mediated_disuse rope"
+    },
+    {
+      "claim_id": "orthodontic_intervention_emergence",
+      "human_readable": "Orthodontic Intervention Emergence (Corrective Industry)",
+      "structural_delta": "Overbite pathologization creates demand for orthodontic correction, establishing professional gatekeeping over 'normal' bite configuration",
+      "primary_observable": "Historical emergence of orthodontics as profession (~1900s); contemporary prevalence of braces/aligners in overbite populations",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "orthodontic_profession",
+      "victim": "patients_with_malocclusion",
+      "downstream_of": [
+        "fork_mediated_disuse"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: introduces beneficiary structure absent in core path-naturalization case; secondary extractive layer not central to disuse mechanism"
+    }
+  ],
+  "generation_sequence": [
+    "phenotypic_plasticity_gate",
+    "fork_mediated_disuse",
+    "labiodental_phoneme_emergence"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "stuff_and_cut_extinction",
+      "structural_delta": "Pre-fork eating method becomes culturally extinct",
+      "hypothesis": "piton",
+      "deferral_reason": "Cultural practice layer redundant with fork_mediated_disuse rope; lower centrality"
+    },
+    {
+      "claim_id": "orthodontic_intervention_emergence",
+      "structural_delta": "Overbite pathologization creates orthodontic industry",
+      "hypothesis": "snare",
+      "deferral_reason": "Secondary extractive layer not central to core disuse mechanism; introduces beneficiary structure tangential to path-naturalization case"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_genetic_vs_plastic",
+      "description": "Is overbite purely phenotypic plasticity or does fork adoption select for genetic predisposition to overbite? If genetic, phenotypic_plasticity_gate may be misclassified as mountain rather than rope of evolutionary selection.",
+      "source": "F03 (Hasty Generalization) + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_non_western_trajectories",
+      "description": "Do non-Western populations adopting forks (e.g., East Asia with chopsticks as alternative) show different bite configuration outcomes? If so, fork_mediated_disuse may be Western-specific rope rather than universal mechanism.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reversal_possibility",
+      "description": "Can edge-to-edge bite be restored in adulthood through deliberate mechanical loading (e.g., stuff-and-cut practice revival)? If irreversible post-development, phenotypic_plasticity_gate has critical period constraint not captured in mountain classification.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis stuff_and_cut_extinction"
+    },
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Topic flagged as contested kernel candidate but fails all three kernel tests: no shared normative commitment, no competing readings, no reading-dependent constraint variation. This is beneficiary-less path-naturalization of a physical constraint, not a commitment system. Collapse documented in commitment_system_recognition.collapse_reason.",
+      "source": "§1.3-K kernel/reading decomposition"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: phenotypic_plasticity_gate classified as mountain but genetic selection vs pure plasticity distinction unclear from available evidence. Generated omega_genetic_vs_plastic to bound this uncertainty. Topic correctly identified as NOT a contested kernel despite user flag—no interpretive authority, no competing readings, uniform biomechanical outcome across populations."
+  },
+  "_seed_id": "fork_overbite_disuse"
+}

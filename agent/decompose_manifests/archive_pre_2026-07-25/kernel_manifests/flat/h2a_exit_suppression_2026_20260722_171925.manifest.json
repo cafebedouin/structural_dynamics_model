@@ -1,0 +1,283 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy of Labor Migration / Administrative Law / Agricultural Policy",
+  "family_id": "h2a_exit_suppression_2026",
+  "topic_summary": "In 2025-2026, USDA discontinued the Farm Labor Survey that had set the H-2A Adverse Effect Wage Rate, and DOL replaced the methodology with one built on BLS's OEWS survey — an instrument that by its own technical documentation excludes farm establishments and samples farm labor contractors instead, deducts employer-provided housing value from wages, and coincides with a historic ICE detention buildout. The essay argues the combined effect is not a reduction in agricultural labor supply but the suppression of workers' ability to exit — turning a statutory wage floor into a de facto ceiling — while explicitly disclaiming any claim of inter-agency coordination.",
+  "extraction_summary": {
+    "entity_count": 9,
+    "claim_count": 14,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 4,
+    "key_entities": [
+      "USDA NASS (discontinued the Farm Labor Survey, Aug/Sept 2025)",
+      "DOL/OFLC (issued Oct 2 2025 IFR restructuring AEWR methodology)",
+      "BLS OEWS (replacement survey; excludes NAICS 111/112 by design)",
+      "ICE/DHS (contemporaneous detention capacity expansion, $45bn, 92,600 beds)",
+      "H-2A workers (employer-tied visa holders subject to new wage floor)",
+      "Farm labor contractors / NAICS 115 (the actual OEWS agricultural sample)",
+      "State minimum wage regimes (CA, FL, WA, HI, CT, ME, MD, RI, OR, NY — binding constraint where federal floor falls below)",
+      "Congressional Research Service (source of Tier-S documentation)",
+      "American Farm Bureau Federation / EPI (interested-party analyses, both named and bracketed)"
+    ],
+    "key_tensions": [
+      "Statutory adverse-effect wage floor vs. an instrument structurally incapable of measuring the wage it is meant to protect",
+      "Labor-supply-reduction narrative (enforcement) vs. labor-channel-expansion narrative (H-2A growth) occurring simultaneously",
+      "Contracting/hold-up justification for employer-tied status vs. portability solutions that solve the same problem without residency capture",
+      "Exit-suppression mechanism vs. demand-collapse mechanism — both predict flat relative wages, requiring a state-border discontinuity test to separate"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Immigration and Nationality Act's adverse-effect wage protection is a commitment system: DOL's authority to certify H-2A admissions is legitimated by its claim to enforce a fixed statutory guarantee — that admitting guest workers will not adversely affect the wages of similarly employed US workers — a guarantee whose legitimacy depends on the existence of a measured wage baseline.",
+    "authority_description": "DOL/OFLC interprets and operationalizes the statutory adverse-effect test; its interpretive legitimacy has historically rested on an independent, sector-specific wage measurement (the Farm Labor Survey) that made the test falsifiable. With that measurement replaced by an instrument that cannot observe the regulated sector, the authority's claim to be enforcing the same fixed statutory kernel is contested.",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "adverse_effect_measurability",
+    "readings": [
+      {
+        "reading_id": "instrument_capture_reading",
+        "commitment": "The adverse-effect wage floor is only as real as the instrument measuring it; discontinuing farm-specific measurement and substituting a survey that structurally excludes farms is a substantive policy choice dressed as a data-methodology update, and it operates as a de facto repeal of the statutory protection without a vote.",
+        "authority_grounding": "Textual/functionalist reading of the INA's adverse-effect clause: a legal standard requires an operational measurement to be a standard at all; absent one, the clause is void for vagueness in practice even if not in doctrine.",
+        "sibling_readings": [
+          "bureaucratic_drift_reading",
+          "hold_up_efficiency_reading",
+          "coverage_neutral_reading"
+        ],
+        "expected_structural_delta": "Wage floor systematically biased downward and effectively unenforceable; DOL's certifications proceed as if the statutory test is satisfied when it structurally cannot be evaluated; H-2A workers and CRS/GAO become the victim/watchdog set respectively."
+      },
+      {
+        "reading_id": "bureaucratic_drift_reading",
+        "commitment": "Agencies act on separate, non-coordinated rationales — USDA had genuine budget exposure and methodological problems with FLS; DOL needed any replacement dataset and reasonably reached for the largest wage survey the federal government runs; employer lobbying obtained ordinary discretionary relief. The outcome is the predictable residue of routine administrative process, not a hidden repeal.",
+        "authority_grounding": "Public-choice / administrative-process reading: legitimacy derives from each agency acting within its ordinary discretionary authority and stated rationale, regardless of downstream alignment of effects.",
+        "sibling_readings": [
+          "instrument_capture_reading",
+          "hold_up_efficiency_reading",
+          "coverage_neutral_reading"
+        ],
+        "expected_structural_delta": "No single beneficiary/victim structure; effects are diffuse and incidental; the same facts obtain but carry no normative charge beyond ordinary regulatory politics — this reading treats the wage floor's degradation as a byproduct, not a mechanism."
+      },
+      {
+        "reading_id": "hold_up_efficiency_reading",
+        "commitment": "Employer-tied status and the wage restructuring are best read as a mechanism-design response to a genuine contracting problem (sunk recruitment costs, unenforceable penalty clauses against judgment-proof workers), not as a rights violation. The wage floor's degradation is a second-order effect of legitimate cost-shifting, not the point of the policy.",
+        "authority_grounding": "Law-and-economics / contractarian reading: legitimacy derives from solving a real hold-up problem efficiently, with employer-tied status functioning as a state-enforced performance bond.",
+        "sibling_readings": [
+          "instrument_capture_reading",
+          "bureaucratic_drift_reading",
+          "coverage_neutral_reading"
+        ],
+        "expected_structural_delta": "Beneficiary set includes both employers and (indirectly) the viability of the program itself; victim set is minimized in this reading's own terms because the alternative is presented as no program at all rather than a portable one — a framing the essay itself contests via the H-1B counterexample."
+      },
+      {
+        "reading_id": "coverage_neutral_reading",
+        "commitment": "OEWS's exclusion of farm establishments is a real technical gap but does not necessarily bias the wage floor downward; OEWS offers superior geographic/occupational granularity and higher frequency, and the direction of bias is an open empirical question, not a settled fact of extraction.",
+        "authority_grounding": "DOL's own stated technical position: superior instrument design outweighs sector-coverage gaps, and the gap is slated for remediation (IFR's commitment to add farm employers to the sample).",
+        "sibling_readings": [
+          "instrument_capture_reading",
+          "bureaucratic_drift_reading",
+          "hold_up_efficiency_reading"
+        ],
+        "expected_structural_delta": "No presumption of victim class; if bias direction is neutral or upward, the instrument_capture_reading's core inferential step collapses even though the coverage gap remains real."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "instrument_capture_reading",
+        "reading_b": "hold_up_efficiency_reading",
+        "basis": "instrument_capture_reading holds that employer-tied status combined with an unmeasurable wage floor is illegitimate extraction regardless of contracting rationale; hold_up_efficiency_reading holds that the same arrangement is a legitimate efficient solution to a real hold-up problem. A framework cannot simultaneously treat the wage-floor/status pairing as per se extractive and as per se efficient — accepting one's normative premise (the arrangement is illegitimate because unmeasurable and non-consensual) requires rejecting the other's (the arrangement is legitimate because efficient and consensual-in-aggregate)."
+      },
+      {
+        "reading_a": "instrument_capture_reading",
+        "reading_b": "bureaucratic_drift_reading",
+        "basis": "instrument_capture_reading's core claim is that the alignment of discretionary choices constitutes a functional repeal worth naming as a mechanism, independent of intent; bureaucratic_drift_reading's core claim is that absent coordination, the alignment carries no mechanism-level significance beyond ordinary incidental politics. These are not merely different confidence levels about the same claim — one treats structural outcome as the operative unit of analysis regardless of intent, the other treats agency intent/process as the necessary condition for a 'mechanism' to exist at all. A single framework cannot hold both as its organizing principle for what counts as an explanandum."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "adverse_effect_measurability",
+      "human_readable": "Contested Kernel: Is the Adverse-Effect Wage Floor Still a Measurable Legal Standard?",
+      "structural_delta": "Four incompatible readings of what the FLS-discontinuation/OEWS-substitution/housing-deduction bundle IS — repeal-by-instrument, incidental drift, efficient hold-up solution, or a neutral/open coverage question — each implying a different victim set and a different normative status for the same documented facts.",
+      "primary_observable": "N/A at kernel level — see individual reading expected_structural_delta fields; empirically adjudicated in part by Unresolved Question #4 (direction of OEWS coverage bias) and by F9/F10 (state-border wage discontinuity).",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "contested_by_reading",
+      "victim": "contested_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "exit_suppression_mechanism",
+        "channel_conversion_pairing"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel — counts as one axis; instantiates all four readings for generation per budget rule."
+    },
+    {
+      "claim_id": "exit_suppression_mechanism",
+      "human_readable": "Exit Suppression as a Monopsony Mechanism (Employer-Tied Status)",
+      "structural_delta": "Whether the operative causal mechanism suppressing farmworker wages is the worker's inability to observe and act on an alternative wage (exit suppression via unmeasurability + visa lock-in) versus ordinary labor-supply/demand adjustment.",
+      "primary_observable": "State-line wage discontinuity in H-2A offered wages between binding-state-minimum states and contiguous non-binding states (F9/F10); relative wage growth in NAICS 111 vs. private-sector average (F3/F4).",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "h2a_certified_employers",
+      "victim": "h2a_workers",
+      "downstream_of": [
+        "adverse_effect_measurability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (state-border discontinuity, distinct econometric test) from the kernel's interpretive dispute; survives §3 pairwise test as causally downstream but empirically separable via F9/F10."
+    },
+    {
+      "claim_id": "channel_conversion_pairing",
+      "human_readable": "Channel Conversion: Enforcement Expansion Paired With Guest-Worker Channel Expansion",
+      "structural_delta": "The simultaneous, non-coordinated pairing of interior immigration enforcement (removing unauthorized workers from a non-offshorable sector) with H-2A program growth past 500,000 jobs — read as functional channel conversion rather than net labor-supply reduction, independent of which kernel-reading one holds about the wage-floor instrument itself.",
+      "primary_observable": "DOL OFLC certified H-2A positions FY2025 vs FY2028 (>15% growth threshold) jointly with BLS QCEW NAICS 111 employment change (<10% decline threshold) — F1/F2.",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "agricultural_employers",
+      "victim": "unauthorized_and_h2a_workforce_combined",
+      "downstream_of": [
+        "adverse_effect_measurability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (joint certification+employment data, not wage data) and distinct beneficiary/victim framing from exit_suppression_mechanism; survives independence test — this axis is about labor-supply quantity substitution, the sibling axis is about wage-level suppression conditional on the channel existing."
+    },
+    {
+      "claim_id": "baumol_separability_frame",
+      "human_readable": "Non-Offshorability / Baumol Cost-Disease Framing of Migration",
+      "structural_delta": "The essay's interpretive model that non-offshorable sectors (agriculture, care work) are structurally exposed to the same repricing pressure and that migration functions as 'Baumol arbitrage in non-tradable tasks,' predicting the next employer-tied channel emerges in direct care.",
+      "primary_observable": "Whether a federal visa category/guest-worker pathway specific to direct-care occupations advances (F5/F6).",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: explicitly self-labeled by the source as an interpretive model rather than a measured claim; low centrality; captured as omega material rather than an independently generatable constraint axis."
+    },
+    {
+      "claim_id": "detention_infrastructure_lockin",
+      "human_readable": "Detention Capacity Lock-In (Owned/Financed vs. Leased Beds)",
+      "structural_delta": "Whether the 2025-2026 ICE detention build-out creates durable lock-in through owned/long-term-financed capacity that survives an administration change, versus short-term leased capacity that can be drawn down quickly.",
+      "primary_observable": "Facility ownership/contract-term composition of net bed-capacity growth (F7); ICE average daily population at a future date (F8).",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "detention_contractors",
+      "victim": "detained_population",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: genuinely independent structural question (H4) but orthogonal to the wage-floor kernel and its two selected downstream axes; lower centrality than selected set and best carried as omega/forecast context rather than a fourth generated axis."
+    },
+    {
+      "claim_id": "hold_up_portability_design",
+      "human_readable": "Recruitment-Cost Transfer as an Alternative to Employer-Tied Status",
+      "structural_delta": "Whether a certified recruitment-cost-transfer/portability scheme resolves the employer hold-up problem without residency capture, as demonstrated by H-1B portability.",
+      "primary_observable": "Existence/adoption of a recruitment-cost-transfer mechanism in visa portability proposals.",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "adverse_effect_measurability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: this is already fully absorbed as one of the four kernel readings (hold_up_efficiency_reading) plus its rebuttal within the essay body; treating it as a separate axis would duplicate the kernel's own reading structure (Type A overlap, merge into kernel)."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "instrument_capture_reading",
+      "kernel_id": "adverse_effect_measurability",
+      "reading_id": "instrument_capture_reading"
+    },
+    {
+      "claim_id": "bureaucratic_drift_reading",
+      "kernel_id": "adverse_effect_measurability",
+      "reading_id": "bureaucratic_drift_reading"
+    },
+    {
+      "claim_id": "hold_up_efficiency_reading",
+      "kernel_id": "adverse_effect_measurability",
+      "reading_id": "hold_up_efficiency_reading"
+    },
+    {
+      "claim_id": "coverage_neutral_reading",
+      "kernel_id": "adverse_effect_measurability",
+      "reading_id": "coverage_neutral_reading"
+    },
+    "exit_suppression_mechanism",
+    "channel_conversion_pairing"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "baumol_separability_frame",
+      "structural_delta": "Non-offshorable sectors as the next site of employer-tied visa channels via cost-disease dynamics",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Self-disclosed as interpretive model, not measurement; low centrality; retained as omega"
+    },
+    {
+      "claim_id": "detention_infrastructure_lockin",
+      "structural_delta": "Owned/financed vs. leased detention capacity determines drawdown difficulty across administrations",
+      "hypothesis": "piton",
+      "deferral_reason": "Independent structural question but orthogonal to wage-floor kernel; lower centrality than selected axes"
+    },
+    {
+      "claim_id": "hold_up_portability_design",
+      "structural_delta": "Recruitment-cost transfer as alternative to employer-tied status",
+      "hypothesis": "rope",
+      "deferral_reason": "Already fully instantiated as hold_up_efficiency_reading within the kernel; separate axis would duplicate reading structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_bias_direction",
+      "description": "The instrument_capture_reading's core inferential step — that OEWS exclusion of farms biases the wage floor downward — is an assumption, not a finding (Unresolved Question #4 in source). If comparison against overlapping FLS/OEWS years shows neutral or upward bias, instrument_capture_reading weakens substantially relative to coverage_neutral_reading, though exit_suppression_mechanism and channel_conversion_pairing axes are not directly affected.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + source's own Adversarial Review 'weakest link'"
+    },
+    {
+      "id": "omega_coordination_disclaimer",
+      "description": "The source explicitly disclaims any claim of inter-agency coordination and treats structural outcome as the unit of analysis regardless of intent. This is precisely the axiom that separates instrument_capture_reading from bureaucratic_drift_reading — whether 'mechanism' requires intent or can be defined purely structurally. Neither reading is falsified by the absence of a coordination document; the disagreement is about what counts as an explanandum at all.",
+      "source": "§1.3-K axiom contradiction analysis"
+    },
+    {
+      "id": "omega_hirschman_peonage_analogy",
+      "description": "The historical analogy to Southern anti-enticement/peonage statutes (Bailey v. Alabama) is explicitly flagged UNVERIFIED by the source itself — case citations recalled but not independently retrieved. This analogy underwrites exit_suppression_mechanism's framing but is not load-bearing for the kernel's axiom contradiction; if the citations do not hold up, the mechanism argument survives on the H-1B portability comparison alone.",
+      "source": "Source's own OPEN VERIFICATION ITEM #5"
+    },
+    {
+      "id": "omega_detention_lockin_context",
+      "description": "H4 (detention capacity lock-in via owned/financed vs. leased beds) is a genuinely independent structural question about durability of the enforcement apparatus across administrations, deferred from generation but relevant context for essay synthesis regarding whether channel_conversion_pairing is a durable equilibrium or a transitional one.",
+      "source": "Deferred axis detention_infrastructure_lockin"
+    },
+    {
+      "id": "omega_care_work_extension",
+      "description": "The Baumol/care-work extension (H3) predicts the next employer-tied channel emerges in direct care. Explicitly self-labeled interpretive in the source. Deferred but should surface in essay synthesis as the generalization test of the kernel's instrument_capture_reading beyond agriculture.",
+      "source": "Deferred axis baumol_separability_frame"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Source material is unusually well-instrumented for this protocol: it already contains its own adversarial review, falsification tests (F1-F10), and explicit tiering of evidence quality, which substantially reduces extraction risk. The primary judgment call in this scoping was recognizing the topic as a genuine contested kernel rather than a single axis with a contested valence — the four readings (instrument_capture, bureaucratic_drift, hold_up_efficiency, coverage_neutral) were tested against the individually-holdable criterion and against the axiom-contradiction selectivity test; two pairs passed (instrument_capture vs hold_up_efficiency; instrument_capture vs bureaucratic_drift), which is why is_contested_kernel=true rather than false. exit_suppression_mechanism and channel_conversion_pairing were retained as separate ordinary axes because they carry distinct primary observables (state-border wage discontinuity vs. joint certification/employment counts) that survive independently of which kernel-reading a reader holds — a reader could hold coverage_neutral_reading about the instrument's bias direction while still finding exit_suppression_mechanism's border-discontinuity test compelling or not on its own econometric merits."
+  }
+}

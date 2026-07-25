@@ -1,0 +1,222 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal Philosophy / Intellectual Property / Historical Jurisprudence",
+  "family_id": "ip_statute_of_anne_1710",
+  "topic_summary": "Analysis of intellectual property as a legal category through the Statute of Anne (1710), examining whether IP emergence represents a contested kernel with distinct readings (thinkability vs first-holding) or a single constraint with diachronic/synchronic collapse. Tests M4/M5 library verdict seam and kernel authenticity.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Statute of Anne (1710 English copyright statute, first statutory IP framework)",
+      "Stationers' Company (pre-statutory guild monopoly enforcer)",
+      "Author-as-rights-holder (novel legal subject created by statute)",
+      "Public Domain (emergent concept; work-set not owned)",
+      "Crown/Parliament (authority granting statutory protection)"
+    ],
+    "key_tensions": [
+      "Guild privilege vs individual natural right (Stationers' perpetual control vs author's limited term)",
+      "Thinkability vs first-holding (space gaining legal category vs occupied set changing membership)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "thinkability_reading",
+      "human_readable": "Thinkability Reading (IP as Emergent Legal Category)",
+      "structural_delta": "1710 marks when 'ownable expression' became a coherent legal object; the conceptual space gained a point",
+      "primary_observable": "Pre-1710 legal records lacking IP category vocabulary vs post-1710 deployment of 'copy right' as distinct from guild privilege",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "synchronic_diachronic_seam"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading candidate; distinct epistemic commitment (category emergence)"
+    },
+    {
+      "claim_id": "first_holding_reading",
+      "human_readable": "First-Holding Reading (IP as Membership Change in Occupied Set)",
+      "structural_delta": "1710 marks when author-as-rights-holder entered the set of legitimate claimants; occupied set membership changed",
+      "primary_observable": "Pre-1710 Stationers' monopoly vs post-1710 statutory author protection; shift in who can invoke law",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "synchronic_diachronic_seam"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading candidate; distinct structural commitment (occupancy change)"
+    },
+    {
+      "claim_id": "synchronic_diachronic_seam",
+      "human_readable": "Synchronic/Diachronic Seam (M4/M5 Collapse Question)",
+      "structural_delta": "Whether thinkability and first-holding are structurally independent or artifact of temporal framing",
+      "primary_observable": "Formal independence test: can thinkability change without occupancy changing, or vice versa?",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "legal_historians",
+      "victim": "categorical_clarity",
+      "downstream_of": [
+        "thinkability_reading",
+        "first_holding_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; synthesis node testing kernel authenticity"
+    },
+    {
+      "claim_id": "guild_to_statute_extraction",
+      "human_readable": "Guild-to-Statute Extraction (Monopoly Reframing as Natural Right)",
+      "structural_delta": "Statute reframes Stationers' guild privilege as author's natural right, obscuring continuity of monopoly structure",
+      "primary_observable": "Continuity of restriction duration (14-year term mirrors guild practice) vs rhetorical shift to Lockean labor theory",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "stationers_rebranded_as_publishers",
+      "victim": "public_access_to_knowledge",
+      "downstream_of": [],
+      "feeds_into": [
+        "synchronic_diachronic_seam"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captures practical extraction mechanism but overlaps with first-holding reading's structural shift"
+    },
+    {
+      "claim_id": "public_domain_emergence",
+      "human_readable": "Public Domain Emergence (Negative Space as Legal Category)",
+      "structural_delta": "1710 creates 'unowned works' as a category by defining owned works; public domain is residual not primordial",
+      "primary_observable": "Post-term reversion to commons as statutory construct vs pre-statutory absence of ownership framework",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "thinkability_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream of thinkability reading with lower structural distinctiveness"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "thinkability_reading",
+      "kernel_id": "ip_category_emergence",
+      "reading_id": "thinkability_reading"
+    },
+    {
+      "claim_id": "first_holding_reading",
+      "kernel_id": "ip_category_emergence",
+      "reading_id": "first_holding_reading"
+    },
+    {
+      "claim_id": "synchronic_diachronic_seam",
+      "kernel_id": "ip_category_emergence",
+      "reading_id": "synchronic_diachronic_seam"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "guild_to_statute_extraction",
+      "structural_delta": "Monopoly reframing as natural right obscures continuity",
+      "hypothesis": "snare",
+      "deferral_reason": "Overlaps with first-holding reading's occupancy shift; practical extraction mechanism but lower structural independence"
+    },
+    {
+      "claim_id": "public_domain_emergence",
+      "structural_delta": "Unowned works as residual category created by defining ownership",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream of thinkability reading with lower structural yield; omega candidate for negative-space analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_authenticity",
+      "description": "Is IP emergence a genuine contested kernel or M4/M5 collapse artifact? If thinkability entails first-holding (you cannot occupy a category before it exists), the readings collapse into one diachronic constraint. If they can vary independently (e.g., category exists but no statute grants occupancy, or statute grants before category stabilizes), they are distinct readings. Synchronic_diachronic_seam axis tests this formally.",
+      "source": "User-supplied kernel contest flag + §1.3-K kernel decomposition"
+    },
+    {
+      "id": "omega_lockean_retrofit",
+      "description": "Did Locke's labor theory of property (1689) actually ground the Statute of Anne (1710), or was Lockean language retrofitted to legitimize guild monopoly continuity? If retrofit, guild_to_statute_extraction becomes primary snare. Historical evidence ambiguous.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis guild_to_statute_extraction"
+    },
+    {
+      "id": "omega_negative_space_primacy",
+      "description": "Is public domain a residual (created by defining IP) or primordial (pre-existing commons that IP carves from)? If primordial, public_domain_emergence misclassifies the structural direction. Depends on whether 1710 creates ownership or recognizes pre-existing authorial claim.",
+      "source": "Deferred axis public_domain_emergence + Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure preserved; readings maintain formal independence for generation. M4/M5 collapse test deferred to synchronic_diachronic_seam axis generation."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Intellectual property as a legal category — the stabilized commitment that expressive works can be owned as property distinct from physical media",
+    "authority_description": "Statutory enactment by Crown/Parliament; legitimacy grounded in legislative sovereignty post-Glorious Revolution",
+    "drift_status": "functioning",
+    "candidate_pattern": "constitutional_formalism",
+    "is_contested_kernel": true,
+    "kernel_id": "ip_category_emergence",
+    "readings": [
+      {
+        "reading_id": "thinkability_reading",
+        "commitment": "IP marks category emergence; ownable expression became legally coherent in 1710",
+        "authority_grounding": "epistemological / legal realist (law creates categories)",
+        "sibling_readings": [
+          "first_holding_reading",
+          "synchronic_diachronic_seam"
+        ],
+        "expected_structural_delta": "Emphasizes conceptual space gaining a point; pre-1710 disputes lacked IP vocabulary; post-1710 deployment of 'copy right' as distinct from guild privilege"
+      },
+      {
+        "reading_id": "first_holding_reading",
+        "commitment": "IP marks occupancy change; author-as-rights-holder entered legitimate claimant set in 1710",
+        "authority_grounding": "institutional / positivist (statute changes who can invoke law)",
+        "sibling_readings": [
+          "thinkability_reading",
+          "synchronic_diachronic_seam"
+        ],
+        "expected_structural_delta": "Emphasizes membership shift in occupied set; Stationers' monopoly vs statutory author protection; change in enforcement beneficiary"
+      },
+      {
+        "reading_id": "synchronic_diachronic_seam",
+        "commitment": "Thinkability and first-holding are either formally independent or temporal framing artifact (M4/M5 collapse test)",
+        "authority_grounding": "meta-analytical / library verdict context",
+        "sibling_readings": [
+          "thinkability_reading",
+          "first_holding_reading"
+        ],
+        "expected_structural_delta": "Tests whether category emergence and occupancy change can vary independently or always co-occur; determines if kernel structure is authentic or spurious"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "thinkability_reading",
+        "reading_b": "first_holding_reading",
+        "basis": "Thinkability reading holds that legal categories are epistemologically prior (you cannot hold what is not thinkable); first-holding reading holds that occupancy changes are logically prior (statute grants before conceptual stabilization). No single coherent framework holds both as foundational — one must be derivative of the other. Synchronic_diachronic_seam tests which."
+      }
+    ]
+  },
+  "_seed_id": "intellectual_property_category"
+}

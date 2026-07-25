@@ -1,0 +1,257 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Social Ontology / Political Philosophy / Bioethics",
+  "family_id": "sex_gender_category_kernel_2026",
+  "topic_summary": "Analysis of the contested category kernel where 'sex-as-biology' and 'gender-as-identity' represent mutually exclusive readings of what grounds membership in gendered categories. Each reading instantiates different constraint structures with distinct victim sets, authority sources, and beneficiary/harm distributions.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Biological sex classification systems (medical/chromosomal)",
+      "Gender identity frameworks (self-identification)",
+      "Trans individuals (subjects of category membership dispute)",
+      "Cis women (claimed beneficiaries/victims depending on reading)",
+      "Medical/psychiatric gatekeepers (historical authority)",
+      "State administrative systems (current enforcers)"
+    ],
+    "key_tensions": [
+      "Immutable biology vs mutable identity as membership criterion",
+      "Self-determination vs external verification as authority source",
+      "Single-sex space access (conflicting safety/dignity claims)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "What grounds legitimate membership in gendered social categories and the authority to adjudicate boundary disputes",
+    "authority_description": "Contested between biological essentialism (medical/scientific authority) and identity autonomy (self-declaration)",
+    "drift_status": "absent",
+    "candidate_pattern": "category_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "gendered_category_membership",
+    "readings": [
+      {
+        "reading_id": "biological_sex_reading",
+        "commitment": "Category membership grounded in immutable biological markers (chromosomes, reproductive anatomy at birth)",
+        "authority_grounding": "Medical/scientific observation; claimed objectivity of physical facts",
+        "sibling_readings": [
+          "gender_identity_reading",
+          "social_role_reading"
+        ],
+        "expected_structural_delta": "Trans women excluded from 'woman' category; sex-segregated spaces preserve binary biology boundary; high ε for identity suppression; cis women positioned as victims of category dilution"
+      },
+      {
+        "reading_id": "gender_identity_reading",
+        "commitment": "Category membership grounded in subjective identity and self-declaration",
+        "authority_grounding": "Autonomy principle; psychological self-knowledge as epistemically privileged",
+        "sibling_readings": [
+          "biological_sex_reading",
+          "social_role_reading"
+        ],
+        "expected_structural_delta": "Trans women included in 'woman' category via self-ID; sex-segregated spaces become gender-segregated; moderate ε for gatekeeping costs; cis women positioned as perpetrators of exclusion if they resist"
+      },
+      {
+        "reading_id": "social_role_reading",
+        "commitment": "Category membership grounded in sustained social performance and recognition by others",
+        "authority_grounding": "Intersubjective validation; community norms of gender presentation",
+        "sibling_readings": [
+          "biological_sex_reading",
+          "gender_identity_reading"
+        ],
+        "expected_structural_delta": "Trans women conditionally included based on passing/recognition; gatekeeping distributed across social interactions; low-to-moderate ε for performance costs; ambiguous victim structure (both trans individuals and cis women bear exclusion risk)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "biological_sex_reading",
+        "reading_b": "gender_identity_reading",
+        "basis": "One holds category boundaries as observer-independent physical facts (sex exists prior to cognition); the other holds them as subjective identity claims (gender exists only through self-declaration). No coherent framework can hold both 'membership determined by body at birth' and 'membership determined by current identity' as simultaneously true for the same category."
+      },
+      {
+        "reading_a": "biological_sex_reading",
+        "reading_b": "social_role_reading",
+        "basis": "One grounds membership in immutable biology (chromosomes cannot be performed); the other in mutable social performance (presentation can change biology's social meaning). A framework cannot hold both 'XX chromosomes sufficient for woman status' and 'sustained feminine presentation sufficient regardless of chromosomes' as true simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "biological_sex_reading",
+      "human_readable": "Biological Sex Reading (Immutable Physical Markers)",
+      "structural_delta": "Category membership determined by chromosomal/anatomical sex at birth, immutable and observer-independent",
+      "primary_observable": "Legal/medical documentation requirements for sex-segregated spaces; chromosome/anatomy verification protocols",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "biological_essentialists",
+      "victim": "trans_individuals",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel reading with highest suppression ε; distinct victim set; axiom-contradictory to identity reading"
+    },
+    {
+      "claim_id": "gender_identity_reading",
+      "human_readable": "Gender Identity Reading (Self-Determined Membership)",
+      "structural_delta": "Category membership determined by subjective identity claim, self-declared and epistemically privileged",
+      "primary_observable": "Self-ID legal frameworks; removal of medical gatekeeping requirements; pronoun enforcement norms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "trans_rights_advocates",
+      "victim": "boundary_enforcement_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Kernel reading with axiom-contradiction to biological reading; inverts victim structure"
+    },
+    {
+      "claim_id": "social_role_reading",
+      "human_readable": "Social Role Reading (Performance & Recognition)",
+      "structural_delta": "Category membership determined by sustained social performance and intersubjective recognition",
+      "primary_observable": "Passing success rates; social acceptance thresholds; community norm enforcement patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading with distributed gatekeeping; tests coherence of 'recognition' as middle path between essentialist poles"
+    },
+    {
+      "claim_id": "medical_gatekeeping_decay",
+      "human_readable": "Medical Gatekeeping Decay (Authority Delegitimation)",
+      "structural_delta": "Erosion of psychiatric diagnosis requirements for gender transition access",
+      "primary_observable": "DSM revisions (Gender Identity Disorder → Gender Dysphoria → depathologization); informed consent model adoption rates",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "gender_identity_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical context for identity reading's rise but not structurally independent axis"
+    },
+    {
+      "claim_id": "single_sex_space_extraction",
+      "human_readable": "Single-Sex Space Extraction (Zero-Sum Safety Claims)",
+      "structural_delta": "Competing safety/dignity claims over sex-segregated spaces where inclusion for one group is framed as harm to another",
+      "primary_observable": "Bathroom/locker room policy disputes; prison/shelter placement rules; sports eligibility criteria",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "varies_by_reading",
+      "downstream_of": [
+        "biological_sex_reading",
+        "gender_identity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream application of kernel readings, not independent constraint; captured via victim structure in parent readings"
+    },
+    {
+      "claim_id": "sports_fairness_mountain",
+      "human_readable": "Sports Fairness Mountain (Physical Performance Disparities)",
+      "structural_delta": "Male puberty confers persistent performance advantages in strength/speed sports",
+      "primary_observable": "Trans women athlete performance statistics vs cis women; testosterone suppression effect studies",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "biological_sex_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: domain-specific (athletics only); feeds biological reading but not core to category kernel structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "biological_sex_reading",
+      "kernel_id": "gendered_category_membership",
+      "reading_id": "biological_sex_reading"
+    },
+    {
+      "claim_id": "gender_identity_reading",
+      "kernel_id": "gendered_category_membership",
+      "reading_id": "gender_identity_reading"
+    },
+    {
+      "claim_id": "social_role_reading",
+      "kernel_id": "gendered_category_membership",
+      "reading_id": "social_role_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "medical_gatekeeping_decay",
+      "structural_delta": "Erosion of psychiatric diagnosis requirements for transition",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical context for identity reading but not independent constraint axis; feeds into rather than constitutes kernel reading"
+    },
+    {
+      "claim_id": "single_sex_space_extraction",
+      "structural_delta": "Zero-sum safety claims over sex-segregated spaces",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream application of kernel readings; victim structure already captured in parent readings; not independent constraint"
+    },
+    {
+      "claim_id": "sports_fairness_mountain",
+      "structural_delta": "Male puberty performance advantages in athletics",
+      "hypothesis": "mountain",
+      "deferral_reason": "Domain-specific; feeds biological reading but not central to category membership kernel; narrow observable scope"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_intersex_erasure",
+      "description": "Both biological and identity readings elide intersex individuals whose chromosomal/anatomical variation defies binary classification. Is the kernel itself a snare that requires a victim set (intersex) to stabilize the binary it claims to describe?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_legal_pluralism",
+      "description": "Can jurisdiction-specific rules allow coexistence (biological reading for sports, identity reading for documentation)? Or does kernel structure require global consistency to avoid incoherence?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_recognition_collapse",
+      "description": "Does social_role_reading collapse into gender_identity_reading if 'recognition' becomes legally mandated (compelled pronoun use)? Or into biological_sex_reading if 'passing' becomes the de facto gate? Tests whether recognition is a stable middle position.",
+      "source": "§3 Independence Testing"
+    },
+    {
+      "id": "omega_epistemic_asymmetry",
+      "description": "Identity reading privileges self-knowledge but only for gender (not age, race, species). What grounds this asymmetry? Is it a principled distinction or an ad hoc carve-out?",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_kernel_coherence_limit",
+      "description": "If axiom_contradictions hold, can policy frameworks adopting both readings simultaneously (self-ID for some contexts, biology for others) remain coherent? Or does contradiction propagate into fracture?",
+      "source": "§1.3-K Axiom Contradiction Declaration"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings with distinct victim sets and axiom contradictions. Sports_fairness_mountain deferred to avoid domain-specific tangent. Intersex erasure documented as omega rather than fourth axis due to absence from source framings."
+  },
+  "_seed_id": "sex_gender_kernel"
+}

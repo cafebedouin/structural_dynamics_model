@@ -1,0 +1,286 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Federalism / Migration Policy",
+  "family_id": "eu_free_movement_2026",
+  "topic_summary": "Analysis of free movement of workers within the European Union, examining the contested federation-membership kernel read as integration-primary (mobility as economic imperative requiring supranational enforcement) versus member-sovereignty-primary (welfare state protection and labor market control at national level). The contest manifests as judicial expansion via CJEU versus legislative containment by member states, with asymmetric cost-bearers: displaced local labor and welfare systems in receiving states versus constrained mobility and demographic loss in sending states.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Court of Justice of the European Union (CJEU) - judicial authority interpreting Article 45 TFEU expansively",
+      "Member States - retain welfare system responsibility and labor market sovereignty",
+      "European Commission - coordinates social security rights across borders",
+      "14 million intra-EU mobile workers - primary beneficiaries of free movement regime",
+      "Receiving states (Germany, Spain, Italy, France) - host majority of mobile workers",
+      "Sending states (Romania, Poland, Portugal, Bulgaria) - experience demographic loss",
+      "Unskilled workers in receiving states - compete with mobile labor",
+      "Treaty of Maastricht (1992) - established Union citizenship as legal foundation"
+    ],
+    "key_tensions": [
+      "Judicial activism (CJEU expansive interpretation) vs member state sovereignty (welfare eligibility restrictions)",
+      "Economic integration imperative (single market completion) vs welfare state integrity (national social protection systems)",
+      "Mobile worker rights (Article 45 TFEU) vs local labor protection (wage competition and job displacement)",
+      "Sending state demographic stability vs receiving state service capacity"
+    ],
+    "key_mechanisms": [
+      "Transitional restrictions (up to 7 years for new member states) - sovereignty carve-out mechanism",
+      "Welfare coordination (not harmonization) - member states retain system design authority",
+      "CJEU teleological interpretation - expands 'worker' definition and related rights beyond treaty text"
+    ],
+    "key_absences": [
+      "Enforcement mechanisms for implementation gaps - Commission infringement proceedings exist but member state non-compliance persists",
+      "Democratic accountability pathway for CJEU rulings - no mechanism for member state override of judicial expansion into reserved domains"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "integration_reading",
+      "human_readable": "Integration-Primary Reading (Mobility as Economic Imperative)",
+      "structural_delta": "Free movement as constitutive single market element requiring supranational enforcement and limiting member state discretion over labor mobility and welfare access",
+      "primary_observable": "CJEU case law expanding worker definition and rights; Commission infringement proceedings against member state restrictions; economic integration metrics (cross-border employment share, GDP effects)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "mobile_workers_capital_owners_highly_educated",
+      "victim": "unskilled_workers_receiving_states_sending_state_demographics",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel - integration-primary interpretation with CJEU as authority structure",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "integration_reading",
+      "commitment": "Federation membership entails irreversible transfer of labor mobility sovereignty to supranational institutions for single market completion",
+      "authority_grounding": "CJEU teleological interpretation of Article 45 TFEU; Commission enforcement via infringement proceedings",
+      "sibling_readings": [
+        "sovereignty_reading",
+        "hybrid_reading"
+      ],
+      "expected_structural_delta": "High extractiveness from unskilled workers in receiving states (wage competition) and sending states (demographic loss); beneficiaries are mobile workers, capital owners, highly educated complementary labor"
+    },
+    {
+      "claim_id": "sovereignty_reading",
+      "human_readable": "Member-Sovereignty-Primary Reading (Welfare State Protection)",
+      "structural_delta": "Free movement constrained by welfare state integrity, labor market protection, and democratic accountability at national level, with member states retaining authority over social protection access",
+      "primary_observable": "Transitional restriction invocations; welfare eligibility legislation; implementation gaps in Directive 2004/38/EC; political mobilization against free movement (Brexit referendum, welfare chauvinism)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "unskilled_workers_receiving_states_welfare_system_integrity",
+      "victim": "mobile_workers_economic_efficiency",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel - sovereignty-primary interpretation with member states as authority structure",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "sovereignty_reading",
+      "commitment": "Federation membership preserves member state authority over welfare systems and labor markets as core national sovereignty domains",
+      "authority_grounding": "Member state legislative authority over welfare eligibility; transitional restriction provisions in Accession Treaties; democratic accountability at national level",
+      "sibling_readings": [
+        "integration_reading",
+        "hybrid_reading"
+      ],
+      "expected_structural_delta": "High extractiveness from mobile workers (restricted access to employment and welfare) and economic efficiency (foregone integration gains); beneficiaries are unskilled workers in receiving states and welfare system sustainability"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading (Coordinated Sovereignty)",
+      "structural_delta": "Free movement as qualified right subject to proportionality review, with supranational coordination of cross-border effects but national authority over welfare system design and labor market regulation",
+      "primary_observable": "EU social security coordination regulations (not harmonization); proportionality doctrine in CJEU rulings; member state use of transitional restrictions and welfare eligibility rules within EU law constraints",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel - coordination framework attempting to reconcile integration and sovereignty readings through proportionality",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "hybrid_reading",
+      "commitment": "Federation membership requires coordination of cross-border welfare and labor market effects while preserving national system design authority",
+      "authority_grounding": "EU coordination regulations (not harmonization); CJEU proportionality review; member state legislative discretion within EU law boundaries",
+      "sibling_readings": [
+        "integration_reading",
+        "sovereignty_reading"
+      ],
+      "expected_structural_delta": "Moderate extractiveness distributed across multiple actors - mobile workers face some restrictions, receiving states bear some welfare costs, sending states experience some demographic loss, but coordination reduces friction compared to pure sovereignty reading"
+    },
+    {
+      "claim_id": "judicial_activism_mechanism",
+      "human_readable": "Judicial Activism as Authority Expansion Mechanism",
+      "structural_delta": "CJEU progressive extension of EU influence into domains reserved to national sovereignty through expansive interpretation of free movement provisions",
+      "primary_observable": "CJEU case law expanding worker definition beyond employment to job-seeking, economically inactive citizens; family law implications derived from free movement; citizenship jurisprudence creating direct EU-citizen bonds",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "supranational_institutions_mobile_workers",
+      "victim": "member_state_sovereignty_democratic_accountability",
+      "downstream_of": [
+        "integration_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism axis downstream of integration_reading; captured by integration_reading's authority structure analysis"
+    },
+    {
+      "claim_id": "implementation_gap_mechanism",
+      "human_readable": "Implementation Gap as Sovereignty Reassertion",
+      "structural_delta": "Member state non-compliance with Directive 2004/38/EC and CJEU rulings as de facto sovereignty reassertion despite formal legal obligations",
+      "primary_observable": "Commission infringement proceedings; Parliament studies documenting implementation obstacles; gap between formal rights and practical access",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "member_states_retaining_discretion",
+      "victim": "mobile_workers_legal_certainty",
+      "downstream_of": [
+        "sovereignty_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism axis downstream of sovereignty_reading; captured by sovereignty_reading's legislative containment analysis"
+    },
+    {
+      "claim_id": "demographic_asymmetry",
+      "human_readable": "Demographic Asymmetry (Sending State Population Loss)",
+      "structural_delta": "Large outflows from sending states threaten demographic balance and workforce replacement for aging populations",
+      "primary_observable": "Population loss statistics for Romania, Poland, Bulgaria; workforce age structure in sending states; replacement rate metrics",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "sending_state_demographics",
+      "downstream_of": [],
+      "feeds_into": [
+        "integration_reading",
+        "sovereignty_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but lower structural distinctiveness than the three selected readings; demographic effects captured as victim set in integration_reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "integration_reading",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "integration_reading"
+    },
+    {
+      "claim_id": "sovereignty_reading",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "sovereignty_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "judicial_activism_mechanism",
+      "structural_delta": "CJEU progressive extension into reserved national domains",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism axis downstream of integration_reading; authority expansion captured in integration_reading's CJEU authority structure"
+    },
+    {
+      "claim_id": "implementation_gap_mechanism",
+      "structural_delta": "Member state non-compliance as de facto sovereignty reassertion",
+      "hypothesis": "piton",
+      "deferral_reason": "Mechanism axis downstream of sovereignty_reading; legislative containment captured in sovereignty_reading's member state authority structure"
+    },
+    {
+      "claim_id": "demographic_asymmetry",
+      "structural_delta": "Sending state population loss threatening demographic balance",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain with lower structural distinctiveness than selected readings; demographic effects captured as victim set in integration_reading and sovereignty_reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_democratic_accountability_gap",
+      "description": "No mechanism exists for member state override of CJEU rulings that expand EU competence into reserved domains. Is this a design feature (preventing sovereignty reassertion) or a Snare (judicial activism without democratic check)? The absence of an accountability pathway may itself be the extractive mechanism.",
+      "source": "Absence Inventory (§1.1) - democratic accountability pathway for CJEU rulings"
+    },
+    {
+      "id": "omega_third_country_nationals",
+      "description": "Analysis focuses on intra-EU mobility. Third-country nationals posted workers regime (carved out by CJEU and Commission) represents a parallel constraint system with different authority structure. Does this create a two-tier mobility regime where member state sovereignty is differentially constrained?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - third-country nationals mentioned in extraction but not decomposed"
+    },
+    {
+      "id": "omega_brexit_as_kernel_test",
+      "description": "Brexit represents the only case of a member state exiting the federation-membership kernel entirely. Does the 52% Leave vote validate the sovereignty_reading's claim that integration-primary interpretation extracts unsustainably from receiving state populations? Or does it demonstrate that the hybrid_reading failed to provide sufficient coordination mechanisms?",
+      "source": "Extraction (§1.1) - Brexit referendum as political backlash; tests kernel reading validity"
+    },
+    {
+      "id": "omega_axiom_contradiction_scope",
+      "description": "Integration_reading and sovereignty_reading hold contradictory axioms about the locus of legitimate authority over labor mobility (supranational vs national). Hybrid_reading attempts to reconcile through proportionality doctrine. Does proportionality review constitute a genuine third framework, or does it collapse into one of the two primary readings depending on CJEU composition?",
+      "source": "§1.3-K Axiom Contradiction Declaration - testing whether hybrid_reading is structurally independent or unstable"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings identified from contested kernel decomposition. Integration_reading and sovereignty_reading hold contradictory axioms about authority locus (supranational vs national). Hybrid_reading attempts reconciliation through proportionality but may be unstable (omega_axiom_contradiction_scope). Deferred axes are mechanisms downstream of selected readings or upstream mountains with lower distinctiveness."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Federation membership as shared commitment to free movement of workers, stabilized in Article 45 TFEU and Union citizenship provisions (Treaty of Maastricht 1992)",
+    "authority_description": "Contested between CJEU (supranational judicial interpretation) and member states (legislative authority over welfare and labor markets). CJEU grounds interpretive legitimacy in teleological reading prioritizing economic integration; member states ground legitimacy in democratic accountability and retained sovereignty over social protection.",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Capture (Pattern 3) - CJEU absorbs drift through expansive interpretation of worker definition and citizenship rights, while member states resist through implementation gaps and transitional restrictions. Revision of Article 45 TFEU is institutionally possible but politically blocked; drift accumulates in case law rather than treaty text.",
+    "is_contested_kernel": true,
+    "kernel_id": "federation_membership_kernel",
+    "readings": [
+      {
+        "reading_id": "integration_reading",
+        "commitment": "Federation membership entails irreversible transfer of labor mobility sovereignty to supranational institutions for single market completion",
+        "authority_grounding": "CJEU teleological interpretation of Article 45 TFEU; Commission enforcement via infringement proceedings",
+        "sibling_readings": [
+          "sovereignty_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High extractiveness from unskilled workers in receiving states (wage competition) and sending states (demographic loss); beneficiaries are mobile workers, capital owners, highly educated complementary labor"
+      },
+      {
+        "reading_id": "sovereignty_reading",
+        "commitment": "Federation membership preserves member state authority over welfare systems and labor markets as core national sovereignty domains",
+        "authority_grounding": "Member state legislative authority over welfare eligibility; transitional restriction provisions in Accession Treaties; democratic accountability at national level",
+        "sibling_readings": [
+          "integration_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High extractiveness from mobile workers (restricted access to employment and welfare) and economic efficiency (foregone integration gains); beneficiaries are unskilled workers in receiving states and welfare system sustainability"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Federation membership requires coordination of cross-border welfare and labor market effects while preserving national system design authority",
+        "authority_grounding": "EU coordination regulations (not harmonization); CJEU proportionality review; member state legislative discretion within EU law boundaries",
+        "sibling_readings": [
+          "integration_reading",
+          "sovereignty_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness distributed across multiple actors - mobile workers face some restrictions, receiving states bear some welfare costs, sending states experience some demographic loss, but coordination reduces friction compared to pure sovereignty reading"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "integration_reading",
+        "reading_b": "sovereignty_reading",
+        "basis": "Integration_reading holds that legitimate authority over labor mobility resides at supranational level (CJEU/Commission) as necessary for single market completion. Sovereignty_reading holds that legitimate authority over labor mobility resides at national level (member state legislatures) as core democratic sovereignty. No single coherent framework can hold both axioms simultaneously - accepting supranational authority as legitimate requires rejecting national authority as ultimate, and vice versa."
+      }
+    ]
+  },
+  "_seed_id": "federation_free_movement_kernel"
+}

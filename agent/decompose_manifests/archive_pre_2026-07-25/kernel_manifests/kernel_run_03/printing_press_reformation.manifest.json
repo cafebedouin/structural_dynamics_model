@@ -1,0 +1,259 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Technology / Religious History / Media Studies",
+  "family_id": "printing_press_reformation_causality",
+  "topic_summary": "Analysis of the relationship between the printing press (c.1440) and the Protestant Reformation (1517+), examining whether vernacular scripture dissemination was a technologically-driven inevitability or a beneficiary-driven strategic deployment by reformers and printers. The kernel contest centers on competing causal models: technological determinism vs. agentic strategic choice.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Johannes Gutenberg (inventor of movable type printing, c.1440)",
+      "Martin Luther (reformer, strategic user of print 1517-1546)",
+      "Wittenberg printers (economic actors producing 2,721 works 1517-1546)",
+      "Catholic Church (institutional authority with delayed print response)",
+      "Vernacular Bible readers (newly literate laity)",
+      "Female reformers (Argula von Grumbach, Katharina Zell, Marie Dentière)",
+      "Censorship authorities (licensing agencies attempting control)",
+      "Competitive printing industry (profit-driven technology diffusion)"
+    ],
+    "key_tensions": [
+      "Technological determinism vs. strategic agency (inevitability vs. choice in causation)",
+      "Manuscript scarcity vs. print abundance (pre-1450 vs. post-1450 information economics)",
+      "Latin monopoly vs. vernacular access (clerical control vs. lay reading)",
+      "Censorship vs. demand (authority control vs. market forces)"
+    ],
+    "key_mechanisms": [
+      "Print-demand feedback loop (reformer celebrity → printer profit → wider distribution → more demand)",
+      "Simplification-as-weapon (pamphlet format encouraging urgency over nuance)",
+      "Geographic diffusion (technology spread from Mainz to Venice/Paris/London by 1460s)"
+    ],
+    "key_absences": [
+      "Oral transmission networks (sermons, public readings) as parallel diffusion mechanism",
+      "Economic preconditions (urbanization, literacy rates, merchant capital) enabling print adoption"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The causal relationship between printing press technology and Protestant Reformation success",
+    "authority_description": "Historical narrative authority grounded in empirical evidence selection and causal model choice",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "press_reformation_causality",
+    "readings": [
+      {
+        "reading_id": "technological_determinism",
+        "commitment": "Printing press as sufficient cause: technology made Reformation inevitable by enabling mass vernacular scripture access",
+        "authority_grounding": "Materialist historiography; technology-as-prime-mover frameworks",
+        "sibling_readings": [
+          "strategic_deployment",
+          "convergence_synthesis"
+        ],
+        "expected_structural_delta": "Technology enters as mountain (physical constraint); human agency as downstream response; ε_tech drives ε_reform"
+      },
+      {
+        "reading_id": "strategic_deployment",
+        "commitment": "Reformers and printers as causal agents: technology was necessary but not sufficient; strategic choices weaponized available tools",
+        "authority_grounding": "Agency-centered historiography; economic actor models",
+        "sibling_readings": [
+          "technological_determinism",
+          "convergence_synthesis"
+        ],
+        "expected_structural_delta": "Human strategy enters as tangled_rope (beneficiary-driven extraction); technology as scaffold (enabling condition); ε_agency drives ε_reform"
+      },
+      {
+        "reading_id": "convergence_synthesis",
+        "commitment": "Reformation as emergent phenomenon from technology-agency feedback loop: neither sufficient alone, recursive acceleration from interaction",
+        "authority_grounding": "Systems historiography; complexity theory frameworks",
+        "sibling_readings": [
+          "technological_determinism",
+          "strategic_deployment"
+        ],
+        "expected_structural_delta": "Feedback mechanism as primary constraint; technology and agency as coupled variables; ε_feedback > ε_tech + ε_agency"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "technological_determinism",
+        "reading_b": "strategic_deployment",
+        "basis": "Determinism requires technology as sufficient cause (Reformation would occur regardless of actor choices); agency reading requires technology as necessary-but-not-sufficient (different strategic choices yield different outcomes). No single framework holds both: either outcomes are determined by material conditions or they depend on contingent choices."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "technological_determinism",
+      "human_readable": "Technological Determinism Reading (Press as Sufficient Cause)",
+      "structural_delta": "Printing press technology as sufficient cause of Reformation success via inevitable vernacular access",
+      "primary_observable": "Technology diffusion timeline (1440-1517) vs. Reformation outbreak timing; vernacular Bible production rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents materialist causal model"
+    },
+    {
+      "claim_id": "strategic_deployment",
+      "human_readable": "Strategic Deployment Reading (Reformers/Printers as Causal Agents)",
+      "structural_delta": "Reformers and printers strategically weaponized available technology; technology necessary but not sufficient",
+      "primary_observable": "Luther's deliberate print strategy (2,721 Wittenberg works 1517-1546); printer profit motives; Catholic delayed response",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reformers_printers",
+      "victim": "catholic_institutional_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents agency-centered causal model with clear beneficiary structure"
+    },
+    {
+      "claim_id": "convergence_synthesis",
+      "human_readable": "Convergence Synthesis Reading (Recursive Feedback Loop)",
+      "structural_delta": "Reformation as emergent from technology-agency feedback loop; neither sufficient alone",
+      "primary_observable": "Print-demand acceleration metrics (celebrity → profit → distribution → demand cycle); pamphlet simplification dynamics",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reformers_printers",
+      "victim": "catholic_institutional_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality via feedback mechanism complexity; synthesizes competing models"
+    },
+    {
+      "claim_id": "censorship_control_failure",
+      "human_readable": "Censorship Control Failure (Authority vs. Market Demand)",
+      "structural_delta": "Licensing and censorship agencies unable to control cross-border print circulation driven by demand",
+      "primary_observable": "Censorship regime implementation vs. forbidden work circulation rates; cross-territory exchange frequency",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "strategic_deployment",
+        "convergence_synthesis"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of strategic deployment reading; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "simplification_weapon",
+      "human_readable": "Simplification as Weapon (Pamphlet Format Constraints)",
+      "structural_delta": "Print pamphlet structure encouraged urgency/sharpness over nuance/contemplation as deliberate strategic choice",
+      "primary_observable": "Pamphlet length/format vs. theological treatise complexity; polemical tone frequency",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "strategic_deployment"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: tactical detail of strategic deployment reading; captured in broader agency analysis"
+    },
+    {
+      "claim_id": "oral_transmission_parallel",
+      "human_readable": "Oral Transmission Parallel (Sermons and Public Readings)",
+      "structural_delta": "Oral networks (sermons, public readings) as parallel diffusion mechanism independent of print",
+      "primary_observable": "Sermon attendance records; public reading practices; illiteracy rates vs. Reformation spread",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "convergence_synthesis"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: identified absence; complicates determinism reading but data sparse in research context"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "technological_determinism",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "technological_determinism"
+    },
+    {
+      "claim_id": "strategic_deployment",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "strategic_deployment"
+    },
+    {
+      "claim_id": "convergence_synthesis",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "convergence_synthesis"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "censorship_control_failure",
+      "structural_delta": "Licensing agencies unable to control cross-border circulation driven by demand",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of strategic deployment reading; lower structural distinctiveness than kernel readings"
+    },
+    {
+      "claim_id": "simplification_weapon",
+      "structural_delta": "Pamphlet format encouraged urgency over nuance as strategic choice",
+      "hypothesis": "piton",
+      "deferral_reason": "Tactical detail captured within strategic deployment reading; limited independent yield"
+    },
+    {
+      "claim_id": "oral_transmission_parallel",
+      "structural_delta": "Oral networks as parallel diffusion mechanism independent of print",
+      "hypothesis": "mountain",
+      "deferral_reason": "Identified absence with structural relevance but sparse data in research context; omega material"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_oral_transmission_gap",
+      "description": "Oral transmission networks (sermons, public readings) may constitute independent diffusion mechanism. If oral spread was sufficient for Reformation success in low-literacy regions, technological determinism reading collapses. Research context lacks sermon attendance/public reading data.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis oral_transmission_parallel"
+    },
+    {
+      "id": "omega_economic_preconditions",
+      "description": "Urbanization, literacy rates, merchant capital as enabling conditions for print adoption. If these preconditions were necessary for both technology diffusion AND Reformation receptivity, convergence synthesis may underweight structural economic base. Research context lacks economic data.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_counterfactual_instability",
+      "description": "All three readings depend on counterfactual claims (what would have happened without X). Technological determinism requires 'Reformation inevitable with press'; strategic deployment requires 'different choices yield different outcomes'; convergence requires 'neither sufficient alone'. No reading has direct empirical test for its counterfactual.",
+      "source": "§2.1 Multi-Lens Scan (historiographic methodology lens)"
+    },
+    {
+      "id": "omega_female_reformers_erasure",
+      "description": "Female reformers (von Grumbach, Zell, Dentière, Morata) used print strategically but are marginal in all three readings. If gendered access to print shaped Reformation theology (e.g., emphasis on household religion), current readings miss structural axis. Research context mentions them but provides no analysis of differential impact.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings with axiom contradiction between determinism and agency readings. Convergence synthesis represents genuine third position (feedback loop primacy) rather than mere compromise. Deferred axes and omegas document bounded uncertainties."
+  },
+  "_seed_id": "printing_press_reformation"
+}

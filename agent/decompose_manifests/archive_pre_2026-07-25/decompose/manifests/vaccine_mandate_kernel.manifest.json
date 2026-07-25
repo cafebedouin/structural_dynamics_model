@@ -1,0 +1,221 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Policy / Constitutional Law / Bioethics",
+  "family_id": "vaccine_mandate_kernel_2024",
+  "topic_summary": "Analysis of vaccine mandate policy as a contested kernel where the legitimacy of state coercion depends on which foundational commitment grounds interpretation: public health primacy (collective harm prevention) or bodily autonomy primacy (individual sovereignty over medical decisions). Each reading produces structurally different constraints with distinct victim sets and authority structures.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "State public health authority (administrative agencies with emergency powers)",
+      "Unvaccinated individuals (those refusing vaccination under mandate regimes)",
+      "Immunocompromised populations (those unable to vaccinate or vulnerable despite vaccination)",
+      "Healthcare infrastructure (hospitals, ICUs, care delivery systems)",
+      "Vaccine manufacturers (Pfizer, Moderna, J&J — liability-shielded producers)",
+      "Judicial review structures (courts adjudicating mandate constitutionality)"
+    ],
+    "key_tensions": [
+      "Collective risk reduction vs individual medical autonomy (state vs refusers)",
+      "Emergency authority expansion vs due process protections (administrative state vs constitutional limits)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "public_health_primacy_reading",
+      "human_readable": "Public Health Primacy Reading (Collective Harm Prevention Authority)",
+      "structural_delta": "State authority to mandate vaccination grounded in duty to prevent collective harm; unvaccinated status creates externality",
+      "primary_observable": "Transmission rate reduction post-mandate; ICU capacity utilization; case fatality rate differentials",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "public_health_bureaucracy",
+      "victim": "unvaccinated_refusers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; high-epsilon tangled rope with clear victim set and beneficiary structure"
+    },
+    {
+      "claim_id": "bodily_autonomy_primacy_reading",
+      "human_readable": "Bodily Autonomy Primacy Reading (Medical Self-Sovereignty)",
+      "structural_delta": "State coercion in medical decisions categorically impermissible; mandate constitutes assault regardless of public health benefit",
+      "primary_observable": "Legal precedent citations (Nuremberg Code, informed consent doctrine); philosophical consistency with other bodily autonomy protections",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_liberty_advocates",
+      "victim": "immunocompromised_exposed",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structurally symmetrical to first reading but opposite victim set"
+    },
+    {
+      "claim_id": "risk_stratification_reading",
+      "human_readable": "Risk-Stratification Reading (Targeted Mandate Legitimacy)",
+      "structural_delta": "Mandate legitimacy contingent on actuarial risk stratification; blanket mandates illegitimate but targeted high-risk mandates permissible",
+      "primary_observable": "Age/comorbidity-stratified mandate policies; infection fatality rate by demographic cohort",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading offering structural compromise; coordination mechanism between extreme readings"
+    },
+    {
+      "claim_id": "liability_shield_extraction",
+      "human_readable": "Liability Shield as State-Corporate Extraction",
+      "structural_delta": "PREP Act liability shields transfer injury risk from manufacturers to mandated individuals without compensation",
+      "primary_observable": "PREP Act invocation frequency; VAERS reporting rates vs judicial remedy access",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "pharmaceutical_manufacturers",
+      "victim": "vaccine_injured_individuals",
+      "downstream_of": [],
+      "feeds_into": [
+        "public_health_primacy_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important snare but orthogonal to kernel contest; would complicate rather than clarify readings"
+    },
+    {
+      "claim_id": "emergency_authority_ratchet",
+      "human_readable": "Emergency Authority Ratchet (Administrative State Expansion)",
+      "structural_delta": "Emergency powers invoked for mandates become permanent administrative capacity; crisis used to bypass legislative deliberation",
+      "primary_observable": "Duration of emergency declarations; statutory authority expansions post-crisis",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "public_health_bureaucracy",
+      "victim": "legislative_oversight",
+      "downstream_of": [],
+      "feeds_into": [
+        "public_health_primacy_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton describing authority drift rather than kernel contest; omega material"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "public_health_primacy_reading",
+      "kernel_id": "vaccine_mandate_legitimacy",
+      "reading_id": "public_health_primacy_reading"
+    },
+    {
+      "claim_id": "bodily_autonomy_primacy_reading",
+      "kernel_id": "vaccine_mandate_legitimacy",
+      "reading_id": "bodily_autonomy_primacy_reading"
+    },
+    {
+      "claim_id": "risk_stratification_reading",
+      "kernel_id": "vaccine_mandate_legitimacy",
+      "reading_id": "risk_stratification_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "liability_shield_extraction",
+      "structural_delta": "PREP Act liability shields transfer injury risk without compensation",
+      "hypothesis": "snare",
+      "deferral_reason": "Important extraction mechanism but orthogonal to kernel contest; would add complexity without clarifying which reading is correct"
+    },
+    {
+      "claim_id": "emergency_authority_ratchet",
+      "structural_delta": "Emergency powers become permanent administrative capacity",
+      "hypothesis": "piton",
+      "deferral_reason": "Describes authority drift secondary to whichever reading prevails; omega material on institutional consequences"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_efficacy_assumption",
+      "description": "Public health primacy reading assumes mandate efficacy (transmission reduction). If vaccines primarily reduce severity rather than transmission, the externality justification collapses and the reading becomes incoherent.",
+      "source": "Primary observable validation for public_health_primacy_reading"
+    },
+    {
+      "id": "omega_absolutism_test",
+      "description": "Bodily autonomy primacy reading implies categorical prohibition. Does this extend to quarantine for known infectious disease (typhoid, smallpox)? If not, the reading smuggles in a public health exception and is not genuinely absolutist.",
+      "source": "Structural delta coherence check for bodily_autonomy_primacy_reading"
+    },
+    {
+      "id": "omega_stratification_collapse",
+      "description": "Risk-stratification reading may collapse into public health primacy if all demographic cohorts above threshold include majority of population. Observable: what percentage must be mandated before distinction is merely rhetorical?",
+      "source": "Independence testing between risk_stratification_reading and public_health_primacy_reading"
+    },
+    {
+      "id": "omega_liability_shield_necessity",
+      "description": "If liability shields are removed, does mandate regime become economically infeasible? Deferred snare (liability_shield_extraction) may be upstream constraint making entire kernel contest moot.",
+      "source": "Deferred axis liability_shield_extraction with high epsilon"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean decomposition. Three readings identified with structurally distinct victim sets and observables. Deferred axes (liability shield, emergency ratchet) are genuine orthogonal dimensions rather than kernel readings."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "State authority to mandate medical intervention grounded in either collective harm prevention duty or categorical prohibition on bodily coercion",
+    "authority_description": "Public health bureaucracy (CDC, FDA, state health departments) vs constitutional/human rights frameworks (Nuremberg Code, informed consent doctrine)",
+    "drift_status": "absent",
+    "candidate_pattern": "Schism Pattern (competing interpretive authorities with no shared adjudicative structure)",
+    "is_contested_kernel": true,
+    "kernel_id": "vaccine_mandate_legitimacy",
+    "readings": [
+      {
+        "reading_id": "public_health_primacy_reading",
+        "commitment": "State duty to prevent collective harm justifies mandate authority; unvaccinated status = externality",
+        "authority_grounding": "Utilitarian public health framework; Jacobson v Massachusetts precedent; emergency powers doctrine",
+        "sibling_readings": [
+          "bodily_autonomy_primacy_reading",
+          "risk_stratification_reading"
+        ],
+        "expected_structural_delta": "Unvaccinated enter victim set; high suppression cost borne by refusers; beneficiary = public health bureaucracy gaining authority"
+      },
+      {
+        "reading_id": "bodily_autonomy_primacy_reading",
+        "commitment": "Medical self-sovereignty absolute; state coercion categorically impermissible regardless of outcome",
+        "authority_grounding": "Deontological rights framework; Nuremberg Code; bodily integrity precedents (McFall v Shimp)",
+        "sibling_readings": [
+          "public_health_primacy_reading",
+          "risk_stratification_reading"
+        ],
+        "expected_structural_delta": "Immunocompromised enter victim set; high exposure risk borne by vulnerable; beneficiary = liberty advocacy movements"
+      },
+      {
+        "reading_id": "risk_stratification_reading",
+        "commitment": "Mandate legitimacy contingent on actuarial risk threshold; blanket mandates fail proportionality but targeted mandates permissible",
+        "authority_grounding": "Intermediate scrutiny constitutional doctrine; epidemiological risk modeling",
+        "sibling_readings": [
+          "public_health_primacy_reading",
+          "bodily_autonomy_primacy_reading"
+        ],
+        "expected_structural_delta": "Victim set size varies by threshold definition; coordination mechanism between extreme readings but may collapse into one"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "public_health_primacy_reading",
+        "reading_b": "bodily_autonomy_primacy_reading",
+        "basis": "Utilitarian harm prevention axiom (aggregate welfare justifies individual coercion) cannot coexist with deontological bodily sovereignty axiom (categorical prohibition on medical coercion) in any single coherent framework. Accepting one requires rejecting the other."
+      }
+    ]
+  },
+  "_seed_id": "vaccine_mandate_kernel"
+}

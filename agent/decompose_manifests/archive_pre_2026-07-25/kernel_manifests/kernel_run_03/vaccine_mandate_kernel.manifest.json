@@ -1,0 +1,232 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Ethics / Constitutional Law / Political Philosophy",
+  "family_id": "vaccine_mandate_kernel_2026",
+  "topic_summary": "Analysis of vaccine mandates as a contested kernel where the same policy instrument (mandatory vaccination) is read through fundamentally incompatible normative frameworks. Public-health-primary readings prioritize collective protection and treat the immunocompromised-exposed as victims of non-compliance. Bodily-autonomy-primary readings prioritize individual consent and treat the unvaccinated-coerced as victims of state overreach. The victim sets do not overlap; the constraints emitted are structurally distinct.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Public Health Advocates (collective protection framework)",
+      "Immunocompromised Populations (vulnerable to exposure; benefit from herd immunity)",
+      "Mandate Opponents (bodily autonomy framework; vaccine hesitant)",
+      "Healthcare Workers (subject to pre-existing occupational mandates; divided on COVID mandates)",
+      "State Governments (police power authority; Jacobson precedent)",
+      "Pharmaceutical Companies (vaccine manufacturers; trust deficit)"
+    ],
+    "key_tensions": [
+      "Collective protection vs individual consent (core ethical conflict)",
+      "Victim set inversion (unvaccinated-coerced vs immunocompromised-exposed)",
+      "Functional governance vs political polarization (mandate effectiveness vs backlash)"
+    ],
+    "key_mechanisms": [
+      "School entry requirements (enforcement via access restriction)",
+      "Jacobson v. Massachusetts precedent (constitutional police power)",
+      "Religious/philosophical exemptions (political pressure valve)",
+      "Herd immunity threshold (epidemiological protection mechanism)"
+    ],
+    "key_absences": [
+      "Vaccine injury compensation frameworks (absent from mandate debate framing)",
+      "Differential mandate design by transmission risk (blanket vs targeted mandates)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that vaccination policy must balance individual rights against collective welfare, with the mandate as the contested instrument for achieving that balance.",
+    "authority_description": "Constitutional police power (Jacobson precedent) grants states authority to mandate, but interpretive legitimacy contested between public health expertise (epidemiological necessity) and liberal rights theory (consent primacy).",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "vaccine_mandate_balance",
+    "readings": [
+      {
+        "reading_id": "public_health_primary",
+        "commitment": "Collective protection supersedes individual consent when voluntary compliance fails to achieve herd immunity and vulnerable populations face lethal exposure risk.",
+        "authority_grounding": "Public health expertise; Jacobson precedent; utilitarian harm minimization",
+        "sibling_readings": [
+          "bodily_autonomy_primary",
+          "proportionality_reading"
+        ],
+        "expected_structural_delta": "Immunocompromised-exposed enter victim set when mandates absent; unvaccinated-coerced not victims (consent subordinated to necessity); high ε from mandate enforcement mechanisms"
+      },
+      {
+        "reading_id": "bodily_autonomy_primary",
+        "commitment": "Individual consent is inviolable; state cannot compel medical intervention regardless of collective benefit.",
+        "authority_grounding": "Liberal rights theory; informed consent doctrine; anti-paternalism",
+        "sibling_readings": [
+          "public_health_primary",
+          "proportionality_reading"
+        ],
+        "expected_structural_delta": "Unvaccinated-coerced enter victim set when mandates imposed; immunocompromised-exposed not victims (risk acceptance inherent to liberty); high ε from coercion mechanisms"
+      },
+      {
+        "reading_id": "proportionality_reading",
+        "commitment": "Mandates permissible only when disease severity, transmission risk, and vaccine safety meet strict proportionality thresholds; exemptions must be robust.",
+        "authority_grounding": "Proportionality doctrine; harm principle (Mill); contextual balancing",
+        "sibling_readings": [
+          "public_health_primary",
+          "bodily_autonomy_primary"
+        ],
+        "expected_structural_delta": "Both victim sets conditional on disease parameters; ε varies by pathogen (smallpox vs seasonal flu); mandate legitimacy context-dependent rather than categorical"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "public_health_primary",
+        "reading_b": "bodily_autonomy_primary",
+        "basis": "Public-health-primary holds that consent can be legitimately overridden when collective harm exceeds individual autonomy cost. Bodily-autonomy-primary holds that consent is categorically inviolable regardless of collective harm. No single coherent framework can hold both: accepting consent-override-permissibility requires rejecting consent-inviolability, and vice versa."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "public_health_primary",
+      "human_readable": "Public Health Primary Reading (Collective Protection Supersedes Consent)",
+      "structural_delta": "Mandate legitimacy grounded in collective protection; immunocompromised-exposed are victims when voluntary compliance fails; unvaccinated-coerced not victims because consent subordinated to necessity.",
+      "primary_observable": "Herd immunity threshold achievement; immunocompromised hospitalization/mortality rates; mandate enforcement coverage",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "public_health_authorities",
+      "victim": "immunocompromised_exposed",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct victim set; highest structural delta from bodily_autonomy_primary"
+    },
+    {
+      "claim_id": "bodily_autonomy_primary",
+      "human_readable": "Bodily Autonomy Primary Reading (Consent Inviolable)",
+      "structural_delta": "Mandate illegitimacy grounded in consent inviolability; unvaccinated-coerced are victims when mandates imposed; immunocompromised-exposed not victims because risk acceptance inherent to liberty.",
+      "primary_observable": "Mandate enforcement mechanisms (job loss, school exclusion); vaccine hesitancy rates; exemption denial rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "anti_mandate_movement",
+      "victim": "unvaccinated_coerced",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory sibling to public_health_primary; non-overlapping victim set"
+    },
+    {
+      "claim_id": "proportionality_reading",
+      "human_readable": "Proportionality Reading (Context-Dependent Legitimacy)",
+      "structural_delta": "Mandate legitimacy conditional on disease severity, transmission risk, vaccine safety, and exemption robustness; both victim sets exist but thresholds vary by pathogen.",
+      "primary_observable": "Case fatality rate; R0 value; vaccine adverse event rates; exemption approval rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Mediating reading that contextualizes the binary; captures policy design space between extremes"
+    },
+    {
+      "claim_id": "trust_deficit_upstream",
+      "human_readable": "Trust Deficit in Pharmaceutical/Government Institutions",
+      "structural_delta": "Vaccine hesitancy driven by distrust of pharmaceutical profit motives and government overreach rather than medical risk assessment.",
+      "primary_observable": "Trust in institutions surveys; conspiracy theory prevalence; exemption request justifications",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "bodily_autonomy_primary"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream cultural factor but lower structural distinctiveness than the three readings"
+    },
+    {
+      "claim_id": "enforcement_mechanism_design",
+      "human_readable": "Enforcement Mechanism Design (Coercion vs Incentive)",
+      "structural_delta": "Mandate enforcement via access restriction (school, employment) vs financial incentives vs criminal penalties; extractiveness varies by mechanism.",
+      "primary_observable": "Enforcement mechanism type distribution; compliance rates by mechanism; legal challenge success rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "public_health_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: implementation detail downstream of public_health_primary; captured in that reading's constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "public_health_primary",
+      "kernel_id": "vaccine_mandate_balance",
+      "reading_id": "public_health_primary"
+    },
+    {
+      "claim_id": "bodily_autonomy_primary",
+      "kernel_id": "vaccine_mandate_balance",
+      "reading_id": "bodily_autonomy_primary"
+    },
+    {
+      "claim_id": "proportionality_reading",
+      "kernel_id": "vaccine_mandate_balance",
+      "reading_id": "proportionality_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "trust_deficit_upstream",
+      "structural_delta": "Vaccine hesitancy driven by institutional distrust",
+      "hypothesis": "piton",
+      "deferral_reason": "Upstream cultural factor with lower structural distinctiveness than the three kernel readings; feeds into bodily_autonomy_primary but does not alter victim set topology"
+    },
+    {
+      "claim_id": "enforcement_mechanism_design",
+      "structural_delta": "Coercion vs incentive mechanism design",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Implementation detail downstream of public_health_primary; extractiveness variation captured within that reading's constraint story"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_vaccine_injury_compensation",
+      "description": "Vaccine injury compensation frameworks (VICP in U.S.) absent from mandate debate framing. Does compensation availability alter bodily_autonomy_primary's victim set by providing exit from pure coercion? Or does it function as a Snare (state liability shield masquerading as protection)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_differential_mandate_design",
+      "description": "Blanket mandates vs risk-stratified mandates (e.g., healthcare workers only, high-transmission settings only). Does proportionality_reading collapse into public_health_primary when mandates are narrowly targeted? Or does targeting create new victim sets (excluded-from-protection)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_exemption_as_valve",
+      "description": "Religious/philosophical exemptions function as political pressure valve (drift_status: partial). Are exemptions a Rope (coordination mechanism preserving pluralism) or a Snare (undermining herd immunity while appearing to respect autonomy)? Exemption prevalence may determine whether proportionality_reading is functional or decorative.",
+      "source": "Commitment system recognition (drift_status: partial)"
+    },
+    {
+      "id": "omega_axiom_contradiction_stability",
+      "description": "Public_health_primary and bodily_autonomy_primary hold axiom-contradictory commitments. Does proportionality_reading mediate this contradiction or merely defer it? If proportionality thresholds are themselves contested (what CFR justifies mandates?), the reading may collapse back into the binary.",
+      "source": "Axiom contradiction declaration between public_health_primary and bodily_autonomy_primary"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition confirmed: three readings with non-overlapping victim sets, axiom contradiction between public_health_primary and bodily_autonomy_primary, proportionality_reading as mediating framework. Trust_deficit_upstream and enforcement_mechanism_design deferred as lower-centrality axes captured within selected readings."
+  },
+  "_seed_id": "vaccine_mandate_kernel"
+}

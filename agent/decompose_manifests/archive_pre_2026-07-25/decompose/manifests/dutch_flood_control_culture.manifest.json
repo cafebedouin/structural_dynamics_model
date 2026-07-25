@@ -1,0 +1,253 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Risk Management / Institutional Memory / Civil Defense Systems",
+  "family_id": "dutch_flood_preparedness_generational",
+  "topic_summary": "Analysis of how Dutch flood-control preparedness persists across non-catastrophe generations following the 1953 North Sea flood. The kernel question: are post-1953 drills and dike-inspection routines a 'husk' (memorial performance lacking operational knowledge) or 'competence' (live exercised capability)? Examines whether national-scale competence decay (D5 break) has occurred despite continued ritual performance.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "1953 North Sea Flood (catastrophic event: 1,836 deaths, catalyst for modern flood control)",
+      "Rijkswaterstaat (national water authority, dike inspection and maintenance)",
+      "Delta Works (engineering megaproject, completed 1997, physical infrastructure)",
+      "Post-catastrophe generation (those who experienced 1953)",
+      "Non-catastrophe generations (born after 1953, inheritors of preparedness system)"
+    ],
+    "key_tensions": [
+      "Memorial performance vs operational capability (ritual continuation vs live competence)",
+      "Physical infrastructure permanence vs knowledge-base decay (dikes remain but skills atrophy)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1953 flood created a national commitment to 'never again' — institutionalized as drills, inspection routines, and maintenance protocols that must transmit preparedness across generations who never experienced catastrophe",
+    "authority_description": "Rijkswaterstaat and municipal civil defense authorities derive legitimacy from fidelity to post-1953 protocols and the Delta Works engineering standards",
+    "drift_status": "partial",
+    "candidate_pattern": "maintenance_protocol_CS",
+    "is_contested_kernel": true,
+    "kernel_id": "preparedness_transmission",
+    "readings": [
+      {
+        "reading_id": "husk_reading",
+        "commitment": "Continued performance of drills and inspections as memorial ritual — organizational memory persists but operational knowledge has hollowed out",
+        "authority_grounding": "Institutional continuity and public commemoration of 1953",
+        "sibling_readings": [
+          "competence_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High compliance with protocol form; low adaptive capacity under novel flood scenarios; inspection routines detect only pre-specified failure modes"
+      },
+      {
+        "reading_id": "competence_reading",
+        "commitment": "Drills and inspections as live exercised knowledge — each generation re-validates capability through practice",
+        "authority_grounding": "Engineering standards, drill performance metrics, and professional certification requirements",
+        "sibling_readings": [
+          "husk_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High adaptive capacity; inspectors recognize novel failure signatures; drill participants improvise effectively under scenario variation"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Preparedness transmission is stratified — physical infrastructure competence remains high (engineering), but civilian coordination knowledge has decayed",
+        "authority_grounding": "Split authority: Rijkswaterstaat maintains engineering fidelity; municipal civil defense shows ritual compliance without operational depth",
+        "sibling_readings": [
+          "husk_reading",
+          "competence_reading"
+        ],
+        "expected_structural_delta": "Infrastructure performs as designed, but evacuation/coordination fails under stress; D5 break exists in the coordination layer, not the physical layer"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "husk_reading",
+        "reading_b": "competence_reading",
+        "basis": "Husk reading holds that ritual performance without catastrophe inevitably produces knowledge decay (organizational memory cannot substitute for lived experience). Competence reading holds that systematic drill practice generates and maintains operational knowledge independent of catastrophe experience (practice is sufficient). No single framework can hold both: either practice suffices or it does not."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "husk_reading",
+      "human_readable": "Husk Reading (Memorial Ritual Without Operational Knowledge)",
+      "structural_delta": "Post-1953 protocols performed as institutional memory ritual; operational competence has decayed across non-catastrophe generations",
+      "primary_observable": "Drill performance under novel scenario variation; inspector detection of non-canonical failure modes; civilian coordination effectiveness during unscripted stress events",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_continuity",
+      "victim": "actual_flood_response_capability",
+      "downstream_of": [
+        "catastrophe_distance"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading: ritual compliance masks competence decay; snare where institutional legitimacy depends on performance fidelity but operational depth is untestable without catastrophe"
+    },
+    {
+      "claim_id": "competence_reading",
+      "human_readable": "Competence Reading (Live Exercised Knowledge Through Practice)",
+      "structural_delta": "Systematic drill practice and engineering standards maintain operational knowledge independent of catastrophe experience",
+      "primary_observable": "Inspector recognition of novel failure signatures; drill participant improvisation quality; adaptive response to scenario modifications",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "catastrophe_distance"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Contradictory reading: practice suffices to transmit competence; rope where coordination protocols function as designed across generational turnover"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading (Stratified Competence: Engineering vs Coordination)",
+      "structural_delta": "Physical infrastructure knowledge remains high (Rijkswaterstaat engineering competence); civilian coordination knowledge has decayed (municipal civil defense ritual compliance)",
+      "primary_observable": "Delta Works maintenance quality vs civilian evacuation drill effectiveness; professional engineer skill retention vs volunteer coordinator skill retention",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "engineering_professional_class",
+      "victim": "civilian_coordination_capacity",
+      "downstream_of": [
+        "catastrophe_distance",
+        "institutional_stratification"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Synthesis reading: D5 break exists in coordination layer but not physical infrastructure layer; highest centrality due to dual-layer structure"
+    },
+    {
+      "claim_id": "catastrophe_distance",
+      "human_readable": "Catastrophe Distance (Temporal Separation from 1953 Event)",
+      "structural_delta": "Number of generations born after 1953 with no direct catastrophe experience",
+      "primary_observable": "Years since 1953; proportion of current dike inspectors/drill participants born post-1953; median age of civil defense volunteers",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "husk_reading",
+        "competence_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 6,
+      "selected": false,
+      "generation_order": 1,
+      "selection_reason": "Deferred: upstream mountain feeding all three readings; temporal progression is the shared substrate but readings diverge on what distance produces"
+    },
+    {
+      "claim_id": "institutional_stratification",
+      "human_readable": "Institutional Stratification (Professional vs Volunteer Knowledge Transmission)",
+      "structural_delta": "Engineering competence maintained through professional credentialing and continuous practice; civilian coordination relies on volunteer retention and episodic drills",
+      "primary_observable": "Rijkswaterstaat engineer certification renewal rates vs municipal volunteer turnover rates; professional vs volunteer drill frequency",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hybrid_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural explanation for hybrid_reading's split competence; lower centrality than the readings themselves"
+    },
+    {
+      "claim_id": "infrastructure_permanence",
+      "human_readable": "Infrastructure Permanence (Delta Works Physical Resilience vs Knowledge Decay)",
+      "structural_delta": "Physical flood barriers persist and function mechanically even as operator knowledge atrophies",
+      "primary_observable": "Delta Works structural integrity metrics vs operator manual comprehension scores; automated vs manual override success rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hybrid_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: physical infrastructure as atrophied contingency plan; lowest centrality; omega material on automation masking skill loss"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "husk_reading",
+      "kernel_id": "preparedness_transmission",
+      "reading_id": "husk_reading"
+    },
+    {
+      "claim_id": "competence_reading",
+      "kernel_id": "preparedness_transmission",
+      "reading_id": "competence_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "preparedness_transmission",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "catastrophe_distance",
+      "structural_delta": "Temporal separation from 1953 catastrophe",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain feeding all readings; the shared substrate rather than a distinct reading"
+    },
+    {
+      "claim_id": "institutional_stratification",
+      "structural_delta": "Professional vs volunteer knowledge transmission mechanisms",
+      "hypothesis": "rope",
+      "deferral_reason": "Structural explanation for hybrid_reading's split competence; captured implicitly in hybrid_reading generation"
+    },
+    {
+      "claim_id": "infrastructure_permanence",
+      "structural_delta": "Physical barriers function mechanically despite operator knowledge atrophy",
+      "hypothesis": "piton",
+      "deferral_reason": "Lowest centrality; omega variable on whether automation masks skill loss"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_drill_realism_gradient",
+      "description": "Do current drills test only pre-scripted scenarios (husk confirmation) or introduce novel variations that reveal adaptive capacity (competence validation)? Without access to actual drill protocols and performance assessments, the husk/competence distinction remains empirically underdetermined.",
+      "source": "Axiom contradiction between husk_reading and competence_reading + absence of drill performance data in prompt"
+    },
+    {
+      "id": "omega_d5_observability",
+      "description": "The D5 break (national-scale competence decay) may not be observable until the next catastrophe. If infrastructure performs but coordination fails, hybrid_reading is validated retroactively. If both perform, competence_reading wins. If both fail despite ritual compliance, husk_reading wins. Current steady-state cannot adjudicate.",
+      "source": "All three readings coexist as socially live positions until stress-tested by actual flood event"
+    },
+    {
+      "id": "omega_automation_masking",
+      "description": "Delta Works automation may mask operator skill decay (infrastructure_permanence piton). If systems function mechanically without deep operator knowledge, is this a rope (reliable automation) or a snare (brittleness under novel failure modes)? Unclear whether automation substitutes for or erodes competence.",
+      "source": "Deferred axis infrastructure_permanence + Dark Matter Probe 3 (beneficiary of 'competence retention' framing)"
+    },
+    {
+      "id": "omega_civilian_coordination_testability",
+      "description": "Civilian evacuation effectiveness (core to hybrid_reading's split) is untestable without actual emergency. Municipal drills may be self-confirming rituals. Hybrid_reading's claim of coordination decay is plausible but not falsifiable under normal conditions.",
+      "source": "Hybrid_reading's victim identification (civilian_coordination_capacity) + absence of real evacuation performance data"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition proceeded cleanly into three structurally distinct readings with genuine axiom contradiction between husk and competence readings. Hybrid reading provides synthesis rather than compromise. All readings reference the same observable domains (drill performance, inspection quality) but predict different ε values and beneficiary/victim structures."
+  },
+  "_seed_id": "dutch_flood_control_culture"
+}

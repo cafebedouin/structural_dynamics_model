@@ -1,0 +1,206 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Theology / Christology / Ecclesiastical Authority",
+  "family_id": "nicene_christology_325_381",
+  "topic_summary": "Analysis of the Nicene Creed's formulation of Christ's nature, focusing on the homoousios/homoiousios distinction that defined the Arian controversy. The creed's language establishes Christ's relationship to God the Father as either consubstantial (same substance) or similar in substance, with profound implications for Trinitarian theology, ecclesiastical authority, and doctrinal enforcement.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nicene Creed (325 CE, revised 381 CE — credal formula stabilizing Christological doctrine)",
+      "Council of Nicaea (ecclesiastical assembly claiming interpretive authority)",
+      "Homoousios faction (Athanasius, pro-consubstantiality position)",
+      "Homoiousios/Arian faction (subordinationist Christology)",
+      "Imperial authority (Constantine, Theodosius — enforcement mechanism)",
+      "Scripture (contested textual kernel underlying both readings)"
+    ],
+    "key_tensions": [
+      "Consubstantiality vs subordination (nature of Christ's divinity)",
+      "Conciliar authority vs scriptural primacy (who adjudicates orthodoxy)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "homoousios_reading",
+      "human_readable": "Homoousios Reading (Consubstantial Unity)",
+      "structural_delta": "Christ as 'of the same substance' (homoousios) with the Father; full divinity; no ontological subordination",
+      "primary_observable": "Credal language adoption; anathema declarations against subordinationism; liturgical practice enforcing full divine worship of Christ",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "conciliar_orthodoxy_authority",
+      "victim": "theological_diversity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary orthodox reading; highest extractiveness; established enforcement mechanisms through imperial-ecclesiastical alliance"
+    },
+    {
+      "claim_id": "homoiousios_reading",
+      "human_readable": "Homoiousios Reading (Similar Substance)",
+      "structural_delta": "Christ as 'of similar substance' (homoiousios) with the Father; subordinate divinity; ontological distinction preserved",
+      "primary_observable": "Alternative credal formulations; persistence of Arian communities; theological arguments for scriptural primacy over conciliar definition",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "scriptural_interpretive_autonomy",
+      "victim": "institutional_unity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct reading with different victim set and beneficiary; historical competitor that survived enforcement for centuries"
+    },
+    {
+      "claim_id": "adoptionist_reading",
+      "human_readable": "Adoptionist Reading (Human Elevation)",
+      "structural_delta": "Christ as human elevated to divine status at baptism or resurrection; no pre-existent divine nature",
+      "primary_observable": "Early Jewish-Christian theological texts; Paul of Samosata traditions; dynamic monarchianism",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "monotheistic_simplicity",
+      "victim": "incarnational_theology",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: earlier theological position largely suppressed before Nicaea; lower structural persistence post-325 CE"
+    },
+    {
+      "claim_id": "monophysite_reading",
+      "human_readable": "Monophysite Reading (Single Divine Nature)",
+      "structural_delta": "Christ has one nature (divine) after the Incarnation; humanity absorbed into divinity",
+      "primary_observable": "Post-Chalcedonian controversies (451 CE); Oriental Orthodox churches; miaphysite formulations",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "christological_unity_emphasis",
+      "victim": "full_humanity_doctrine",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emerges primarily post-Nicaea in response to Chalcedonian definition; outside the 325-381 CE homoousios/homoiousios contest"
+    },
+    {
+      "claim_id": "nestorian_reading",
+      "human_readable": "Nestorian Reading (Two Distinct Persons)",
+      "structural_delta": "Christ as two persons (divine Logos, human Jesus) in loose conjunction; Mary as Christotokos not Theotokos",
+      "primary_observable": "Nestorius of Constantinople controversy (428-431 CE); Church of the East theology; two-nature Christology with person distinction",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "antiochene_exegetical_tradition",
+      "victim": "soteriological_unity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: post-Nicene controversy; addresses hypostatic union not substance question; outside core kernel contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "homoousios_reading",
+      "kernel_id": "nicene_christological_kernel",
+      "reading_id": "homoousios_reading"
+    },
+    {
+      "claim_id": "homoiousios_reading",
+      "kernel_id": "nicene_christological_kernel",
+      "reading_id": "homoiousios_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "adoptionist_reading",
+      "structural_delta": "Christ as human elevated to divine status",
+      "hypothesis": "contested_kernel_reading",
+      "deferral_reason": "Earlier position largely suppressed before Nicaea; lower structural persistence in 4th century contest"
+    },
+    {
+      "claim_id": "monophysite_reading",
+      "structural_delta": "Christ has single divine nature post-Incarnation",
+      "hypothesis": "contested_kernel_reading",
+      "deferral_reason": "Post-Chalcedonian controversy; addresses nature-unity not substance-similarity question"
+    },
+    {
+      "claim_id": "nestorian_reading",
+      "structural_delta": "Christ as two persons in conjunction",
+      "hypothesis": "contested_kernel_reading",
+      "deferral_reason": "Post-Nicene; focuses on hypostatic union not consubstantiality; outside 325-381 kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_imperial_enforcement",
+      "description": "Did imperial enforcement (Constantine's exile of Arius, Theodosius' Cunctos populos edict) make homoousios dominant via political extraction rather than theological persuasion? Enforcement mechanism may be upstream snare converting theological rope into tangled_rope.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_scriptural_ambiguity",
+      "description": "Does the New Testament text actually resolve the substance question, or does conciliar authority impose closure on textual ambiguity? If the latter, the kernel's fixity is constructed not discovered.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — scriptural warrant for homoousios not directly attested"
+    },
+    {
+      "id": "omega_greek_philosophical_medium",
+      "description": "Both readings operate within ousia/hypostasis Greek philosophical framework absent from Hebraic scriptural tradition. Is the entire substance-debate a category error imported from Hellenistic metaphysics?",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_iota_subscript",
+      "description": "Historical tradition claims the controversy turned on a single Greek letter (iota). If substantive theological divergence hinges on orthographic precision, is the kernel stable or does translation-drift inevitably generate new readings?",
+      "source": "F01 boundary condition — interpretive stability across linguistic translation"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel identification robust: shared substrate (Nicene Creed language on Christ-Father relationship), structurally distinct readings with different constraint emissions (uniformity enforcement vs interpretive diversity), and persistent historical instantiation (Arian communities survived into 7th century despite imperial suppression)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Nicene Creed's formulation of Christ's relationship to God the Father, specifically the homoousios clause defining consubstantiality",
+    "authority_description": "Ecumenical councils (Nicaea 325, Constantinople 381) claiming binding interpretive authority over credal language, enforced through imperial edict and episcopal anathema",
+    "drift_status": "partial",
+    "candidate_pattern": "doctrinal_ossification",
+    "is_contested_kernel": true,
+    "kernel_id": "nicene_christological_kernel",
+    "readings": [
+      {
+        "reading_id": "homoousios_reading",
+        "commitment": "Christ is homoousios (of the same substance) with the Father; full equality of divine essence",
+        "authority_grounding": "Conciliar decree (Nicaea 325, Constantinople 381); imperial enforcement (Theodosius I); patristic consensus (Athanasius, Cappadocian Fathers)",
+        "sibling_readings": [
+          "homoiousios_reading"
+        ],
+        "expected_structural_delta": "High extractiveness: enforces doctrinal uniformity through anathema, exile, and property confiscation; suppresses alternative readings; benefits institutional ecclesiastical authority; victims are theological diversity and regional autonomy (Gothic Arians, North African communities)"
+      },
+      {
+        "reading_id": "homoiousios_reading",
+        "commitment": "Christ is homoiousios (of similar substance) with the Father; ontological distinction preserved to maintain monotheistic clarity",
+        "authority_grounding": "Scriptural primacy (John 14:28 'Father is greater than I'); regional episcopal autonomy; anti-Sabellian monotheism",
+        "sibling_readings": [
+          "homoousios_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness: allows theological pluralism but fragments ecclesiastical unity; benefits regional churches and exegetical autonomy; victim is institutional cohesion and imperial religious uniformity"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "homoousios_reading",
+        "reading_b": "homoiousios_reading",
+        "basis": "Homoousios requires ontological identity (same ousia) eliminating subordination; homoiousios requires ontological distinction (similar but not identical ousia) preserving hierarchy. No coherent metaphysical framework can hold both 'identical essence' and 'distinct essence' for the same entity simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "nicene_creed_christ_nature"
+}

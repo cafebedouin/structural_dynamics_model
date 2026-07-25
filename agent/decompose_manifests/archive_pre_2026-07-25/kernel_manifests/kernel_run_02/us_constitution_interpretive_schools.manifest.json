@@ -1,0 +1,276 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Theory / Political Philosophy",
+  "family_id": "us_constitution_interpretive_schools_2026",
+  "topic_summary": "Analysis of three major interpretive schools of the US Constitution—Originalism, Living Constitutionalism, and Legal Positivism—as contested readings of a single constitutional kernel. Each reading locates authority differently (historical fact, evolving values, formal procedure) and emits structurally distinct constraints from the same frozen text. The current Supreme Court is nominally originalist-majority, but internal divisions and hybrid approaches reveal ongoing authority-grounding contest.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "US Constitution (frozen text kernel, ratified 1788, amended 27 times)",
+      "Originalist Bloc (Thomas, Gorsuch, Barrett, Kavanaugh, Alito, Roberts—6-justice majority)",
+      "Living Constitutionalist Bloc (Breyer retired, Kagan, Sotomayor, Jackson—minority/dissent)",
+      "Antonin Scalia (deceased 2016, originalism architect)",
+      "Stephen Breyer (retired 2022, pragmatist living constitutionalist)",
+      "Robert Bork (rejected nominee 1987, originalism theorist)",
+      "Edwin Meese III (Reagan AG, originalism advocate)",
+      "Federalist Society (originalist institutional infrastructure)",
+      "14th Amendment (1868, temporal kernel reset—equal protection, due process)",
+      "Second Amendment (test case for originalist methodology—Heller 2008, Bruen 2022)",
+      "Dobbs v. Jackson (2022, originalist overturning of Roe)",
+      "Article V (amendment procedure, formal positivist mechanism)"
+    ],
+    "key_tensions": [
+      "Historical fact vs evolving values as authority source (originalism vs living constitutionalism)",
+      "Constraint determinacy vs judicial discretion (all three schools claim to constrain judges, all face internal disagreement)",
+      "Temporal kernel problem: which 'original' moment controls when amendments reset ratification date",
+      "Legitimacy grounding: democratic mandate (living) vs counter-majoritarian constraint (originalist) vs formal procedure (positivist)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The US Constitution as frozen text whose meaning must be extracted to adjudicate legitimate state action",
+    "authority_description": "Judicial interpretive legitimacy grounded in fidelity to constitutional meaning, but 'meaning' itself is contested—originalists claim historical fact, living constitutionalists claim evolving principles, positivists claim formal enactment authority",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "us_constitution_meaning",
+    "readings": [
+      {
+        "reading_id": "originalist_reading",
+        "commitment": "Constitutional meaning fixed at ratification moment; judges bound by historical public meaning",
+        "authority_grounding": "Historical fact as constraint—'history not policy' (Scalia/Gorsuch doctrine)",
+        "sibling_readings": [
+          "living_constitutionalist_reading",
+          "positivist_reading"
+        ],
+        "expected_structural_delta": "Judges constrained by 1788/amendment-date evidence; contemporary circumstances irrelevant to meaning (though relevant to application); high suppression of non-originalist outcomes; beneficiary: counter-majoritarian constraint advocates; victim: rights claimants whose claims lack 18th-century historical support"
+      },
+      {
+        "reading_id": "living_constitutionalist_reading",
+        "commitment": "Constitutional principles endure but application evolves with social attitudes and circumstances",
+        "authority_grounding": "Democratic evolution and pragmatic consequences—'ancient values' applied to new contexts (Breyer doctrine)",
+        "sibling_readings": [
+          "originalist_reading",
+          "positivist_reading"
+        ],
+        "expected_structural_delta": "Judges constrained by enduring principles but empowered to adapt application; contemporary moral consensus relevant; lower suppression of rights expansion; beneficiary: rights claimants in evolving social contexts; victim: counter-majoritarian constraint (risk of judicial overreach)"
+      },
+      {
+        "reading_id": "positivist_reading",
+        "commitment": "Constitutional validity derives from formal enactment procedures and institutional authority, not external moral principles",
+        "authority_grounding": "Article V amendment process and recognized institutional sources—formal procedure as legitimacy ground",
+        "sibling_readings": [
+          "originalist_reading",
+          "living_constitutionalist_reading"
+        ],
+        "expected_structural_delta": "Judges constrained by enacted text and formal amendment process; moral reasoning excluded from validity determination; beneficiary: procedural legitimacy; victim: substantive justice claims lacking formal textual support; collapses into originalism in practice when amendment process gridlocked"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "originalist_reading",
+        "reading_b": "living_constitutionalist_reading",
+        "basis": "Originalism holds constitutional meaning is fixed at ratification and discoverable through historical fact; living constitutionalism holds meaning evolves with social attitudes even without formal amendment. No single coherent framework can hold both 'meaning is fixed' and 'meaning evolves' as simultaneously true for the same text."
+      },
+      {
+        "reading_a": "positivist_reading",
+        "reading_b": "living_constitutionalist_reading",
+        "basis": "Positivism excludes moral reasoning from validity determination (law is valid if formally enacted); living constitutionalism requires moral reasoning to identify 'ancient values' and apply them to new contexts. No single framework can hold both 'moral content irrelevant to validity' and 'moral evolution drives application' as simultaneously true."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "originalist_reading",
+      "human_readable": "Originalist Reading (Historical Fact as Constraint)",
+      "structural_delta": "Constitutional meaning fixed at ratification; judges bound by historical public meaning discoverable through 18th-century evidence",
+      "primary_observable": "Citation frequency of Founding-era sources in opinions; outcomes in cases lacking historical support (e.g., abortion, digital privacy)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "counter_majoritarian_constraint_advocates",
+      "victim": "rights_claimants_lacking_18th_century_support",
+      "downstream_of": [],
+      "feeds_into": [
+        "temporal_kernel_collision"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant reading on current Court (6-justice majority); highest structural extractiveness; emits constraints that foreclose living constitutionalist outcomes"
+    },
+    {
+      "claim_id": "living_constitutionalist_reading",
+      "human_readable": "Living Constitutionalist Reading (Evolving Principles)",
+      "structural_delta": "Constitutional principles endure but application evolves with social attitudes; judges apply 'ancient values' to contemporary circumstances",
+      "primary_observable": "Citation of contemporary social science, evolving moral consensus, pragmatic consequences in opinions; dissent frequency in rights-expansion cases",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rights_claimants_in_evolving_contexts",
+      "victim": "counter_majoritarian_constraint",
+      "downstream_of": [],
+      "feeds_into": [
+        "temporal_kernel_collision"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory to originalism; minority reading but structurally necessary to capture authority-grounding contest; different beneficiary/victim structure"
+    },
+    {
+      "claim_id": "positivist_reading",
+      "human_readable": "Positivist Reading (Formal Procedure as Authority)",
+      "structural_delta": "Constitutional validity derives from Article V amendment process and formal enactment, not moral content",
+      "primary_observable": "Frequency of Article V invocations; rejection of natural law reasoning; deference to formal amendment process",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "substantive_justice_claims_lacking_textual_support",
+      "downstream_of": [],
+      "feeds_into": [
+        "temporal_kernel_collision"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: collapses into originalism in practice when amendment process gridlocked; lower structural distinctiveness; theoretical foundation but limited independent constraint emission"
+    },
+    {
+      "claim_id": "temporal_kernel_collision",
+      "human_readable": "Temporal Kernel Collision (Which 'Original' Moment Controls)",
+      "structural_delta": "27 amendments create 27 ratification moments; originalism must recalibrate for each, creating internal tension about which 'original' meaning controls",
+      "primary_observable": "Originalist disagreement over 14th Amendment (1868) vs 2nd Amendment (1791) temporal priority; Bruen's use of post-ratification evidence",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "originalist_constraint_determinacy",
+      "downstream_of": [
+        "originalist_reading",
+        "living_constitutionalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node exposing internal fracture within originalism; high epsilon (originalists disagree on methodology); captures temporal dimension of kernel contest"
+    },
+    {
+      "claim_id": "federalist_society_infrastructure",
+      "human_readable": "Federalist Society Infrastructure (Institutional Capture)",
+      "structural_delta": "Originalism's institutional infrastructure (Federalist Society judicial pipeline) vs living constitutionalism's lack of equivalent",
+      "primary_observable": "Federalist Society membership among federal judges; appointment patterns; law school influence",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "originalist_bloc",
+      "victim": "living_constitutionalist_institutional_power",
+      "downstream_of": [],
+      "feeds_into": [
+        "originalist_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold enabling originalist dominance but not a reading of the kernel itself; institutional rather than interpretive axis"
+    },
+    {
+      "claim_id": "progressive_originalism_emergence",
+      "human_readable": "Progressive Originalism Emergence (Hybrid Reading)",
+      "structural_delta": "Jackson/Kagan's 'new textualism' attempts to synthesize originalist methodology with living constitutionalist outcomes",
+      "primary_observable": "Jackson's confirmation testimony ('I am constrained to interpret the text'); Kagan's 'We are all originalists' convergence claim",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "originalist_reading",
+        "living_constitutionalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emerging hybrid but unclear if it emits distinct constraints or merely rebrands living constitutionalism in originalist language; piton of rhetorical adaptation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "originalist_reading",
+      "kernel_id": "us_constitution_meaning",
+      "reading_id": "originalist_reading"
+    },
+    {
+      "claim_id": "living_constitutionalist_reading",
+      "kernel_id": "us_constitution_meaning",
+      "reading_id": "living_constitutionalist_reading"
+    },
+    {
+      "claim_id": "temporal_kernel_collision",
+      "kernel_id": "us_constitution_meaning",
+      "reading_id": "temporal_kernel_collision"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "positivist_reading",
+      "structural_delta": "Constitutional validity from formal procedure, not moral content",
+      "hypothesis": "rope",
+      "deferral_reason": "Collapses into originalism in practice when Article V amendment process gridlocked; theoretical foundation but limited independent constraint emission; lower structural distinctiveness than selected readings"
+    },
+    {
+      "claim_id": "federalist_society_infrastructure",
+      "structural_delta": "Institutional infrastructure enabling originalist dominance",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Institutional rather than interpretive axis; enables originalist reading but not a reading of the kernel itself; captured in omega_institutional_asymmetry"
+    },
+    {
+      "claim_id": "progressive_originalism_emergence",
+      "structural_delta": "Jackson/Kagan hybrid attempting to synthesize originalist methodology with living constitutionalist outcomes",
+      "hypothesis": "piton",
+      "deferral_reason": "Emerging pattern but unclear if it emits distinct constraints or merely rebrands living constitutionalism; rhetorical adaptation rather than structural reading; omega_convergence_thesis captures uncertainty"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_positivist_collapse",
+      "description": "Does positivist reading emit independent constraints or collapse into originalism when Article V gridlock prevents formal amendment? If collapse, positivism becomes procedural rhetoric masking originalist outcomes. If independent, what distinguishes positivist constraint from originalist constraint in practice?",
+      "source": "Deferred axis positivist_reading + independence testing"
+    },
+    {
+      "id": "omega_convergence_thesis",
+      "description": "Kagan's 'We are all originalists' and Jackson's textualist testimony suggest convergence toward hybrid 'new textualism.' Is this genuine synthesis or strategic rebranding? If synthesis, does it emit constraints distinct from both parent readings? If rebranding, which reading's constraints actually govern?",
+      "source": "Deferred axis progressive_originalism_emergence + research context on Kagan/Jackson testimony"
+    },
+    {
+      "id": "omega_institutional_asymmetry",
+      "description": "Federalist Society provides originalism with judicial pipeline infrastructure; living constitutionalism lacks equivalent. Does this asymmetry make originalist dominance a scaffold (institutional capture) rather than a mountain (intellectual superiority)? If scaffold, what happens when institutional power shifts?",
+      "source": "Deferred axis federalist_society_infrastructure + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_temporal_determinacy",
+      "description": "Temporal kernel collision exposes originalist disagreement over which 'original' moment controls. Barrett argues only ratification-era evidence counts; Bruen cites 19th-century regulations. If originalists cannot agree on temporal scope, does originalism constrain judges or merely relocate discretion to historical periodization?",
+      "source": "Selected axis temporal_kernel_collision + research on Barrett/Bruen methodological split"
+    },
+    {
+      "id": "omega_legitimacy_grounding",
+      "description": "All three readings claim to constrain judges, but all face internal disagreement (originalists on methodology, living constitutionalists on overreach limits, positivists on moral reasoning exclusion). If no reading achieves constraint determinacy, is the legitimacy contest resolvable, or is judicial discretion inevitable regardless of interpretive school?",
+      "source": "Extraction summary tension 'constraint determinacy vs judicial discretion' + research on intra-school disagreement"
+    },
+    {
+      "id": "omega_amendment_27_problem",
+      "description": "27th Amendment (1992) ratified 203 years after proposal. Does this break originalism's temporal coherence? If 'original public meaning' is 1789 (proposal) vs 1992 (ratification), which controls? Living constitutionalism handles this easily (evolving application), but originalism faces paradox.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)—27th Amendment not mentioned in research but structurally relevant to temporal kernel problem"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Three readings selected: two axiom-contradictory parent readings (originalist, living constitutionalist) plus one downstream synthesis node (temporal_kernel_collision) exposing internal fracture within originalism. Positivist reading deferred due to practical collapse into originalism. All dark matter probes applied; institutional asymmetry and 27th Amendment temporal paradox surfaced as omegas."
+  },
+  "_seed_id": "us_constitution_interpretive_schools"
+}

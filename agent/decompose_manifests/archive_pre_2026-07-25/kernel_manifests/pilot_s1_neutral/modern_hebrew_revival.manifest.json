@@ -1,0 +1,224 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Sociolinguistics / Language Revitalization / Commitment Systems",
+  "family_id": "hebrew_revival_kernel",
+  "topic_summary": "Analysis of the Hebrew language revival as a contested kernel where the commitment 'Hebrew is a living language' was held under fundamentally different readings across two millennia. The liturgical-only reading treated preserved recitation as kernel occupation; the native-daily reading required reconstruction into ordinary generative speech. The contest centers on whether symbolic preservation counts as linguistic life or whether only native generation does.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Hebrew language (the kernel itself — commitment to its status as 'living')",
+      "Liturgical communities (Rabbinic Judaism, diaspora synagogues — holders of liturgical-only reading)",
+      "Zionist language planners (Ben-Yehuda, Hebrew Language Committee — holders of native-daily reading)",
+      "Yiddish-speaking communities (competing vernacular; displaced by Hebrew revival)",
+      "Modern Israeli state (institutional enforcer of native-daily reading)",
+      "Ancient Hebrew corpus (Biblical/Mishnaic texts — the stabilized reference)"
+    ],
+    "key_tensions": [
+      "Liturgical preservation vs vernacular generation (symbolic recitation vs daily native use)",
+      "Continuity claim vs reconstruction reality (unbroken tradition narrative vs documented lexical/phonological innovation)"
+    ],
+    "key_claims": [
+      "Liturgical reading: Hebrew remained 'living' through continuous ritual use across diaspora",
+      "Native-daily reading: Hebrew was dormant/dead until late 19th century reconstruction",
+      "Zionist claim: Revival was restoration of natural state, not artificial creation",
+      "Sociolinguistic claim: No other documented case of successful vernacular revival from liturgical-only status"
+    ],
+    "key_mechanisms": [
+      "Liturgical transmission (ritual recitation, Torah study — preserved corpus without native generation)",
+      "Language planning apparatus (Committee decisions on neologisms, grammar standardization, phonology)",
+      "State enforcement (education policy, military service, civic participation requiring Hebrew)"
+    ],
+    "key_absences": [
+      "Yiddish speakers' perspective on displacement (treated as background, not structural victim)",
+      "Sephardic vs Ashkenazi phonological contest (which pronunciation tradition grounds 'authentic' Hebrew)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_reading",
+      "human_readable": "Liturgical Reading (Preserved Recitation as Life)",
+      "structural_delta": "Hebrew remained living through continuous ritual use; symbolic preservation constitutes kernel occupation",
+      "primary_observable": "Continuity of liturgical practice; number of ritual contexts requiring Hebrew recitation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinic_authority",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "native_daily_reading",
+      "human_readable": "Native-Daily Reading (Generative Speech as Life)",
+      "structural_delta": "Hebrew was dormant until reconstruction into native vernacular; only generative daily use constitutes linguistic life",
+      "primary_observable": "Native speaker population; lexical innovation rate; use in non-ritual contexts",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "zionist_state_builders",
+      "victim": "yiddish_speaking_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; introduces victim structure absent in liturgical reading"
+    },
+    {
+      "claim_id": "continuity_narrative_reading",
+      "human_readable": "Continuity Narrative Reading (Revival as Restoration)",
+      "structural_delta": "Revival framed as restoration of natural state rather than artificial creation; unbroken tradition claim",
+      "primary_observable": "Official state narratives; education curriculum framing; public discourse on 'return' vs 'invention'",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "nationalist_legitimacy_claims",
+      "victim": "historical_accuracy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; captures legitimacy-grounding function distinct from first two"
+    },
+    {
+      "claim_id": "vernacular_displacement",
+      "human_readable": "Vernacular Displacement (Yiddish as Structural Victim)",
+      "structural_delta": "Hebrew revival required active suppression of competing vernacular (Yiddish); language shift imposed costs on existing speech communities",
+      "primary_observable": "Yiddish speaker population decline in Israel; institutional policies penalizing Yiddish use",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "hebrew_monolingualism_project",
+      "victim": "yiddish_cultural_continuity",
+      "downstream_of": [
+        "native_daily_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent axis (not a kernel reading); captures victim structure absent from kernel itself; downstream of native-daily reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liturgical_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "liturgical_reading"
+    },
+    {
+      "claim_id": "native_daily_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "native_daily_reading"
+    },
+    {
+      "claim_id": "continuity_narrative_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "continuity_narrative_reading"
+    },
+    "vernacular_displacement"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "phonological_authority_contest",
+      "structural_delta": "Sephardic vs Ashkenazi pronunciation traditions competing for 'authentic' Hebrew status",
+      "hypothesis": "rope",
+      "deferral_reason": "Subsumed by continuity_narrative_reading's legitimacy-grounding function; pronunciation contest is downstream implementation detail"
+    },
+    {
+      "claim_id": "lexical_innovation_mechanism",
+      "structural_delta": "Committee-driven neologism creation vs organic borrowing patterns",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Operational mechanism of native-daily reading implementation; not structurally independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_uniqueness_claim",
+      "description": "Is Hebrew revival genuinely unique (no other successful liturgical→vernacular case) or are there unexamined parallels (e.g., Irish, Cornish attempts)? Uniqueness claim strengthens nationalist legitimacy but may be empirically contested.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction claim 4"
+    },
+    {
+      "id": "omega_reachability_break",
+      "description": "User flags 'D1 strict-reachability break' — does this mean the liturgical reading could not reach native-daily reading without external forcing (Zionist state apparatus)? If so, the kernel contest may be resolved by path-dependency rather than interpretive validity.",
+      "source": "User context flag + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_victim_visibility",
+      "description": "Yiddish displacement treated as background in most Hebrew revival narratives. Is this absence structural (victim erasure as legitimacy requirement) or historiographical (later scholarship correcting earlier blind spot)?",
+      "source": "Absence inventory + vernacular_displacement axis selection"
+    },
+    {
+      "id": "omega_liturgical_generativity",
+      "description": "Does liturgical use involve any generative capacity (e.g., Talmudic commentary, responsa literature in Hebrew) or is it purely recitative? If generative, the liturgical/native-daily boundary may be less sharp than the kernel contest assumes.",
+      "source": "F03 (Hasty Generalization) — liturgical_reading classification as 'rope' may underestimate extractiveness if commentary tradition was suppressed"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: liturgical_reading classified as 'rope' (coordination) but may underestimate extractiveness if Talmudic commentary tradition involved generative Hebrew use that was structurally suppressed by native-daily reading's vernacular requirement. Generated omega_liturgical_generativity to bound this uncertainty."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The commitment 'Hebrew is a living language' — a claim about linguistic vitality that different communities held under fundamentally different operational definitions across two millennia",
+    "authority_description": "Liturgical reading: rabbinic authority grounded in unbroken ritual transmission. Native-daily reading: Zionist language planners and state apparatus grounded in vernacular reconstruction. Continuity narrative: nationalist historiography grounded in restoration claim.",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Enclosure (Pattern 3) — the kernel ('living language') was stabilized but its interpretation was controlled by different authorities across eras, with the native-daily reading eventually capturing state enforcement apparatus",
+    "is_contested_kernel": true,
+    "kernel_id": "hebrew_living_language",
+    "readings": [
+      {
+        "reading_id": "liturgical_reading",
+        "commitment": "Hebrew remains living through continuous ritual use; symbolic preservation constitutes linguistic life",
+        "authority_grounding": "Rabbinic tradition; unbroken liturgical transmission across diaspora",
+        "sibling_readings": [
+          "native_daily_reading",
+          "continuity_narrative_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness (coordination around ritual practice); no victim structure; beneficiary is rabbinic authority maintaining interpretive control"
+      },
+      {
+        "reading_id": "native_daily_reading",
+        "commitment": "Hebrew was dormant/dead until reconstruction into native vernacular; only generative daily use constitutes linguistic life",
+        "authority_grounding": "Zionist language planning apparatus; state enforcement through education and civic participation",
+        "sibling_readings": [
+          "liturgical_reading",
+          "continuity_narrative_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (vernacular shift imposed costs on Yiddish speakers); victim structure emerges (Yiddish cultural continuity); beneficiary is state-building project requiring linguistic unity"
+      },
+      {
+        "reading_id": "continuity_narrative_reading",
+        "commitment": "Revival was restoration of natural state, not artificial creation; unbroken tradition narrative",
+        "authority_grounding": "Nationalist historiography; state education curriculum; public discourse control",
+        "sibling_readings": [
+          "liturgical_reading",
+          "native_daily_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (historical accuracy subordinated to legitimacy claims); victim is counter-narrative (Hebrew as constructed language); beneficiary is nationalist legitimacy project"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "liturgical_reading",
+        "reading_b": "native_daily_reading",
+        "basis": "No single coherent framework can hold both 'symbolic preservation constitutes linguistic life' and 'only generative vernacular use constitutes linguistic life' — these are mutually exclusive definitions of what 'living language' means"
+      },
+      {
+        "reading_a": "continuity_narrative_reading",
+        "reading_b": "native_daily_reading",
+        "basis": "No single coherent framework can hold both 'revival was restoration of pre-existing natural state' and 'Hebrew was dormant/dead until reconstruction' — one requires continuity, the other requires rupture and reconstruction"
+      }
+    ]
+  },
+  "_seed_id": "modern_hebrew_revival"
+}

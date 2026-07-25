@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Firearms Policy",
+  "family_id": "second_amendment_readings_2026",
+  "topic_summary": "Analysis of the Second Amendment as a contested constitutional kernel. The 27-word text admits structurally incompatible readings: an individual-right reading (Heller framework) treating the operative clause as primary and the prefatory militia clause as non-limiting, versus a militia-conditioned reading treating the prefatory clause as definitional and permitting collective regulation. Each reading instantiates a genuinely different constraint with distinct victim sets and extractiveness profiles.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Second Amendment text (27-word constitutional provision, ratified 1791)",
+      "Supreme Court (authoritative interpreter post-Heller 2008)",
+      "Individual gun owners (rights-claimants under individual-right reading)",
+      "State/federal regulators (governance authority under militia-conditioned reading)",
+      "Firearms industry (market beneficiary of individual-right framework)",
+      "Victims of gun violence (harm-bearers whose protection depends on regulatory scope)"
+    ],
+    "key_tensions": [
+      "Prefatory clause ('well regulated Militia') vs operative clause ('right of the people') — textual primacy dispute",
+      "Individual liberty claim vs collective security claim — zero-sum victim-set boundary"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Second Amendment text as a fixed constitutional commitment whose interpretation determines the boundary of legitimate state action on firearms",
+    "authority_description": "Supreme Court holds final interpretive authority; legitimacy grounded in Article III textual fidelity claim (originalism vs living constitutionalism as competing hermeneutics)",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "second_amendment_boundary",
+    "readings": [
+      {
+        "reading_id": "individual_right_reading",
+        "commitment": "The operative clause establishes a pre-existing individual right; the prefatory militia clause states a purpose but does not limit the right's scope",
+        "authority_grounding": "Originalist textualism (Heller majority: 'right of the people' parallels First/Fourth Amendment individual rights); pre-political natural right claim",
+        "sibling_readings": [
+          "militia_conditioned_reading",
+          "insurrectionist_reading"
+        ],
+        "expected_structural_delta": "Private possession enters protected domain; state regulation treated as presumptive infringement; firearms market becomes constitutionally shielded; victim set = those harmed by unrestricted access (mass shooting victims, domestic violence victims, suicide completers with firearm access)"
+      },
+      {
+        "reading_id": "militia_conditioned_reading",
+        "commitment": "The prefatory clause defines the right's scope; 'well regulated Militia' bounds 'keep and bear Arms' to collective defense context, permitting comprehensive regulation",
+        "authority_grounding": "Purposive textualism (Stevens dissent: prefatory clause would be surplusage under individual-right reading); police power and democratic governance authority",
+        "sibling_readings": [
+          "individual_right_reading",
+          "insurrectionist_reading"
+        ],
+        "expected_structural_delta": "State regulatory authority presumed legitimate; private possession subject to means-end scrutiny; firearms market exposed to democratic restriction; victim set = gun owners whose possession is restricted (collectors, self-defense claimants in high-regulation jurisdictions)"
+      },
+      {
+        "reading_id": "insurrectionist_reading",
+        "commitment": "The right exists to preserve armed resistance capacity against tyrannical government; individual possession is instrumental to potential overthrow",
+        "authority_grounding": "Anti-Federalist tradition and Revolutionary memory; popular sovereignty as requiring credible threat capacity against state monopoly on force",
+        "sibling_readings": [
+          "individual_right_reading",
+          "militia_conditioned_reading"
+        ],
+        "expected_structural_delta": "Military-grade arms enter protected domain (logical endpoint of insurrectionist premise); state disarmament efforts treated as tyranny precursors; victim set = state security apparatus and civilians caught in hypothetical armed conflict; beneficiary = armed citizens claiming deterrent legitimacy"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "individual_right_reading",
+        "reading_b": "militia_conditioned_reading",
+        "basis": "Individual-right reading holds that the prefatory clause cannot limit the operative clause (text establishes unconditional personal entitlement); militia-conditioned reading holds that the prefatory clause defines the right's scope (entitlement exists only within collective-defense context). No single framework treats the prefatory clause as both non-limiting AND definitional."
+      },
+      {
+        "reading_a": "insurrectionist_reading",
+        "reading_b": "militia_conditioned_reading",
+        "basis": "Insurrectionist reading treats state arms regulation as the threat the Amendment guards against (tyranny deterrence requires armed populace); militia-conditioned reading treats state regulation as the legitimate authority the Amendment permits (democratic governance over collective defense). No single framework treats state regulation as both the existential threat and the legitimate authority."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "individual_right_reading",
+      "human_readable": "Individual Right Reading (Heller Framework)",
+      "structural_delta": "Operative clause primacy: private arms possession as pre-political right, prefatory clause non-limiting",
+      "primary_observable": "Post-Heller invalidation rate of firearms regulations; courts' treatment of prefatory clause in opinions",
+      "epsilon_bin": "high",
+      "hypothesis": "wall",
+      "beneficiary": "individual_gun_owners, firearms_industry",
+      "victim": "gun_violence_victims, high_risk_populations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: structurally dominant post-2008, highest market and jurisprudential entrenchment"
+    },
+    {
+      "claim_id": "militia_conditioned_reading",
+      "human_readable": "Militia-Conditioned Reading (Collective Defense Framework)",
+      "structural_delta": "Prefatory clause primacy: right bounded by collective defense purpose, comprehensive regulation permitted",
+      "primary_observable": "Pre-Heller jurisprudence (U.S. v. Miller 1939); state regulation scope in dissenting opinions",
+      "epsilon_bin": "high",
+      "hypothesis": "lever",
+      "beneficiary": "public_health_advocates, state_regulators",
+      "victim": "gun_owners_in_restrictive_jurisdictions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: axiom-contradictory with reading 1; captures regulatory-authority pole"
+    },
+    {
+      "claim_id": "insurrectionist_reading",
+      "human_readable": "Insurrectionist Reading (Anti-Tyranny Deterrence)",
+      "structural_delta": "Right exists to preserve overthrow capacity; military-grade arms logically protected",
+      "primary_observable": "Advocacy for unrestricted access to military weapons; anti-government militia organizing",
+      "epsilon_bin": "v_high",
+      "hypothesis": "wall",
+      "beneficiary": "armed_resistance_advocates",
+      "victim": "state_security_forces, bystanders_in_armed_conflict",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: axiom-contradictory with reading 2; captures logical endpoint of individual-right premise extended to anti-state function"
+    },
+    {
+      "claim_id": "textualist_originalism_authority",
+      "human_readable": "Textualist Originalism as Interpretive Authority",
+      "structural_delta": "Heller's originalist methodology claims to discover fixed 1791 meaning, foreclosing living-constitution adaptation",
+      "primary_observable": "Frequency of originalist warrant in Second Amendment opinions; public-meaning dictionaries cited",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "originalist_legal_movement",
+      "victim": "democratic_majorities_seeking_adaptive_regulation",
+      "downstream_of": [],
+      "feeds_into": [
+        "individual_right_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological scaffold; captured implicitly in authority_grounding for readings"
+    },
+    {
+      "claim_id": "firearms_market_capture",
+      "human_readable": "Firearms Market Capture of Rights Discourse",
+      "structural_delta": "Individual-right reading serves industry profit maximization by constitutionalizing market access",
+      "primary_observable": "NRA/NSSF lobbying expenditures correlated with Heller-doctrine entrenchment; industry revenue post-2008",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "firearms_manufacturers, gun_rights_lobbying_organizations",
+      "victim": "gun_violence_victims, public_health_infrastructure",
+      "downstream_of": [
+        "individual_right_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of reading 1; structural but not kernel-decomposition target"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "individual_right_reading",
+      "kernel_id": "second_amendment_boundary",
+      "reading_id": "individual_right_reading"
+    },
+    {
+      "claim_id": "militia_conditioned_reading",
+      "kernel_id": "second_amendment_boundary",
+      "reading_id": "militia_conditioned_reading"
+    },
+    {
+      "claim_id": "insurrectionist_reading",
+      "kernel_id": "second_amendment_boundary",
+      "reading_id": "insurrectionist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "textualist_originalism_authority",
+      "structural_delta": "Originalist methodology claims to discover fixed 1791 meaning",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Methodological axis; authority_grounding fields in readings capture this structure"
+    },
+    {
+      "claim_id": "firearms_market_capture",
+      "structural_delta": "Individual-right reading serves industry profit by constitutionalizing market access",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of individual_right_reading; structural consequence rather than kernel-reading decomposition target"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_standing_doctrine_gate",
+      "description": "Does Article III standing doctrine (injury-in-fact requirement) prevent gun-violence victims from challenging Heller framework? If so, the Wall becomes uncontestable by those it harms most.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + standing jurisprudence absence in extraction"
+    },
+    {
+      "id": "omega_second_amendment_incorporation",
+      "description": "McDonald v. Chicago (2010) incorporated Second Amendment against states via Fourteenth Amendment. Does incorporation doctrine itself rest on contested reading of privileges-or-immunities vs due-process clause? Kernel stacked on kernel.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — incorporation mechanism not in source material"
+    },
+    {
+      "id": "omega_insurrectionist_logical_endpoint",
+      "description": "If insurrectionist reading is correct, does it protect private ownership of anti-aircraft missiles, tactical nuclear weapons? At what threshold does the state's survival interest override overthrow-capacity preservation?",
+      "source": "Insurrectionist_reading logical extension + symmetry with state military capacity"
+    },
+    {
+      "id": "omega_heller_as_piton",
+      "description": "Is Heller a Wall (durable constraint reflecting constitutional architecture) or a Piton (5-4 decision vulnerable to court composition change)? Overruling precedent would reclassify from constraint to historical artifact.",
+      "source": "Precedent stability vs judicial ideology cycling"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Three readings selected capture axiom-contradictory positions on textual primacy and state regulatory authority. Insurrectionist reading extends individual-right logic to anti-state function, surfacing the unstated premise that private arms serve as tyranny deterrent."
+  },
+  "_seed_id": "second_amendment_text"
+}

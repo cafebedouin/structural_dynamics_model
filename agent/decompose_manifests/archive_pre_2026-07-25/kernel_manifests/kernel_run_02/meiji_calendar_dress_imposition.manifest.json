@@ -1,0 +1,217 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political History / Institutional Change / Modernization Theory",
+  "family_id": "meiji_calendar_dress_imposition_1872",
+  "topic_summary": "Analysis of the Meiji government's 1872-1873 calendar reform (lunisolar to Gregorian) and 1870-1886 dress reform (traditional to Western), examining whether these constituted top-down exogenous imposition or endogenous displacement. The case tests whether commitment system vocabulary can capture forced institutional change where the prior system persists in practice despite legal abolition, creating stratified temporality rather than clean displacement.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Meiji Government Oligarchy (Ōkubo Toshimichi, samurai-descended reformers)",
+      "Emperor Meiji (symbolic legitimator; cut topknot 1872)",
+      "Ministry of Finance (fiscal implementer; 13-month salary burden driver)",
+      "Fukuzawa Yukichi (intellectual advocate for Westernization)",
+      "Rural/Traditional Populations (continued lunisolar calendar observance)",
+      "Kazoku/Former Samurai (resisted Western dress as status threat)",
+      "International System (Western powers; diplomatic/economic alignment pressure)"
+    ],
+    "key_tensions": [
+      "Official/Public vs Private/Rural Practice (nijuu seikatsu double life)",
+      "Fiscal Efficiency vs Cultural Continuity (13-month salary vs traditional festivals)",
+      "Geopolitical Positioning vs Endogenous Preference (datsu-A nyū-Ō vs actual demand)",
+      "Elite Status Markers vs Modernization Imperative (samurai dress resistance)"
+    ],
+    "key_mechanisms": [
+      "Imperial Edict Enforcement (1871-1886 dress codes; 1872 calendar decree)",
+      "Rhetorical Legitimation (Western dress framed as return to Emperor Jimmu era)",
+      "Fiscal Coercion (calendar switch eliminated intercalary month salary payment)"
+    ],
+    "key_absences": [
+      "No institutional mechanism for bottom-up input or consent in reform design",
+      "No category in standard modernization frameworks for enforced coexistence (stratified temporality where official system overlays but does not displace prior practice)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimate basis for temporal coordination and social presentation — what grounds the authority to declare 'this is the correct calendar' or 'this is proper dress for public life'",
+    "authority_description": "Meiji oligarchy claimed interpretive legitimacy through imperial symbolism (Emperor's personal adoption) and geopolitical necessity (alignment with Western powers for survival)",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "Initial hypothesis: two readings (endogenous climb vs exogenous imposition) would emit different constraints. Actual finding: the Meiji case is NOT a contested kernel because there is no shared commitment being read differently. The prior system (lunisolar calendar, traditional dress) and the imposed system (Gregorian calendar, Western dress) are not two readings of one kernel — they are two separate kernels in forced coexistence. The 'contest' is not interpretive (how to read a shared commitment) but territorial (which kernel has authority in which domain). The oligarchy did not reinterpret the lunisolar calendar; it legally abolished it while lacking enforcement capacity to eliminate practice. This is institutional override, not kernel contestation. The structural phenomenon is stratified authority (official vs private domains operating under different kernels), not plural readings of one kernel."
+  },
+  "axes": [
+    {
+      "claim_id": "geopolitical_survival_imperative",
+      "human_readable": "Geopolitical Survival Imperative (Exogenous Modernization Pressure)",
+      "structural_delta": "International system pressure requiring institutional alignment with Western powers to avoid colonization",
+      "primary_observable": "Treaty negotiation outcomes; diplomatic recognition conditions; military/economic capability gaps vs Western powers",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "top_down_institutional_override",
+        "stratified_temporal_authority"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Mountain providing physical constraint base; exogenous pressure is the upstream driver for all downstream institutional changes"
+    },
+    {
+      "claim_id": "fiscal_calendar_extraction",
+      "human_readable": "Fiscal Calendar Extraction (13-Month Salary Burden Elimination)",
+      "structural_delta": "Government's fiscal capacity to pay civil servant salaries 12 vs 13 times annually",
+      "primary_observable": "Treasury balance sheets; intercalary month occurrence frequency; salary payment records",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "top_down_institutional_override"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Different observable from geopolitical pressure; immediate material driver for calendar reform timing (1873 intercalary month)"
+    },
+    {
+      "claim_id": "top_down_institutional_override",
+      "human_readable": "Top-Down Institutional Override (Exogenous Imposition Without Endogenous Climb)",
+      "structural_delta": "State capacity to impose institutional change via decree without bottom-up adoption pathway or consent mechanism",
+      "primary_observable": "Implementation timeline (20-day notice); legal abolition vs continued practice rates; nijuu seikatsu prevalence",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "meiji_oligarchy",
+      "victim": "rural_traditional_populations",
+      "downstream_of": [
+        "geopolitical_survival_imperative",
+        "fiscal_calendar_extraction"
+      ],
+      "feeds_into": [
+        "stratified_temporal_authority"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node; directly addresses kernel contest question (exogenous vs endogenous)"
+    },
+    {
+      "claim_id": "stratified_temporal_authority",
+      "human_readable": "Stratified Temporal Authority (Official/Public vs Private/Rural Domain Bifurcation)",
+      "structural_delta": "Coexistence of two temporal/dress systems in separate social domains rather than displacement",
+      "primary_observable": "Festival timing patterns (solar calendar + 1 month); nijuu seikatsu documentation; urban vs rural practice divergence",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "populations_navigating_dual_systems",
+      "downstream_of": [
+        "top_down_institutional_override",
+        "geopolitical_survival_imperative"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via top_down_institutional_override tangled_rope; stratification is the outcome of override mechanism rather than independent axis"
+    },
+    {
+      "claim_id": "rhetorical_legitimation_strategy",
+      "human_readable": "Rhetorical Legitimation Strategy (Western Dress as Return to Jimmu Era)",
+      "structural_delta": "Framing exogenous imposition as recovery of authentic Japanese tradition",
+      "primary_observable": "Imperial edict language; intellectual discourse (Fukuzawa writings); elite acceptance rates",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "top_down_institutional_override"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold supporting override mechanism but not structurally independent; rhetorical strategy is implementation detail"
+    },
+    {
+      "claim_id": "status_hierarchy_disruption",
+      "human_readable": "Status Hierarchy Disruption (Samurai Dress Resistance)",
+      "structural_delta": "Western dress codes erasing visible markers of samurai/kazoku status distinction",
+      "primary_observable": "Elite resistance documentation; dress code compliance rates by class; Osakabe opposition records",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "former_samurai_class",
+      "downstream_of": [
+        "top_down_institutional_override"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of override rather than independent structural driver; class-specific rather than system-level"
+    }
+  ],
+  "generation_sequence": [
+    "geopolitical_survival_imperative",
+    "fiscal_calendar_extraction",
+    "top_down_institutional_override"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "stratified_temporal_authority",
+      "structural_delta": "Coexistence of two temporal/dress systems in separate social domains",
+      "hypothesis": "snare",
+      "deferral_reason": "Outcome of top_down_institutional_override rather than independent axis; stratification is the structural consequence of override mechanism"
+    },
+    {
+      "claim_id": "rhetorical_legitimation_strategy",
+      "structural_delta": "Framing exogenous imposition as recovery of authentic tradition",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Implementation detail supporting override mechanism; not structurally independent"
+    },
+    {
+      "claim_id": "status_hierarchy_disruption",
+      "structural_delta": "Western dress erasing samurai status markers",
+      "hypothesis": "snare",
+      "deferral_reason": "Class-specific downstream consequence rather than system-level structural driver"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_vocabulary_gap",
+      "description": "Standard commitment system vocabulary lacks category for 'enforced coexistence' or 'stratified temporality' — where top-down imposition creates institutional bifurcation (official/public vs private/rural) rather than displacement. The Meiji case is not a contested kernel (no shared commitment being read differently) but rather two separate kernels in forced coexistence under asymmetric enforcement capacity. This suggests need for new category: 'territorial kernel contest' where authority domains rather than interpretive readings are contested.",
+      "source": "§1.3-K kernel/reading decomposition; research context absence inventory"
+    },
+    {
+      "id": "omega_enforcement_capacity_threshold",
+      "description": "At what enforcement capacity does top-down imposition achieve displacement vs stratification? Meiji government could abolish legally but not eliminate practice. Is there a measurable threshold (state penetration ratio, rural/urban population distribution, communication infrastructure density) that predicts bifurcation vs displacement outcomes?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — no mechanism specified for enforcement capacity limits"
+    },
+    {
+      "id": "omega_persistence_duration",
+      "description": "How long does stratified coexistence persist? Research notes 'decades' of continued lunisolar observance but does not specify convergence timeline or conditions. Does stratification eventually collapse to displacement, or does it stabilize as permanent dual-system equilibrium?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — rural populations bear navigation costs indefinitely?"
+    },
+    {
+      "id": "omega_modernization_framework_bias",
+      "description": "Standard modernization theory assumes either endogenous adoption (demonstration effects) or complete displacement. The Meiji case fits neither. Is this a general blind spot in modernization frameworks, or is Meiji an outlier case? Cross-domain comparison needed (e.g., Soviet calendar reform, French Revolutionary calendar, Turkish script reform).",
+      "source": "F34 (Epistemic Trespass) — model's training on modernization theory may not cover coercion-driven institutional change adequately"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model's training on modernization theory and institutional change may not adequately cover coercion-driven top-down imposition cases. The research context provides strong empirical grounding, but the analytical framework (endogenous vs exogenous displacement) may be under-theorized in training data. Generated omega_modernization_framework_bias to bound this uncertainty. Additionally, the kernel/reading decomposition revealed that the initial 'contested kernel' hypothesis was incorrect — this is not interpretive contestation but territorial authority bifurcation, suggesting the kernel vocabulary itself has a gap (omega_kernel_vocabulary_gap)."
+  },
+  "_seed_id": "meiji_calendar_dress_imposition"
+}

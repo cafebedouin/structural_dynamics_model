@@ -1,0 +1,215 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Economics / International Political Economy / Institutional History",
+  "family_id": "gold_fiat_transition_1971",
+  "topic_summary": "Analysis of the 1971 Nixon Shock and the collapse of Bretton Woods, examining whether the gold-to-fiat transition was a discrete policy swap or an overdetermined composite of incompatible structural pressures. The research context frames this as a kernel contest: single-event reading vs. multi-pressure composite reading.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "President Richard Nixon (executive decision-maker, August 15 1971 announcement)",
+      "Federal Reserve (monetary authority, established 1913)",
+      "Bretton Woods System (1945-1971 fixed exchange rate regime)",
+      "International Monetary Fund (multilateral coordination institution)",
+      "Group of Ten (international negotiating bloc, Smithsonian Agreement Dec 1971)",
+      "Gold reserves (physical constraint on money supply)",
+      "U.S. dollar (reserve currency under Bretton Woods)"
+    ],
+    "key_tensions": [
+      "Domestic monetary flexibility vs. gold parity discipline (Fed policy space vs. $35/oz commitment)",
+      "International coordination vs. national sovereignty (Bretton Woods obligations vs. domestic growth priorities)",
+      "Capital mobility vs. fixed exchange rates (private cross-border flows vs. pegged currencies)",
+      "Inflation management vs. commodity backing (purchasing power erosion vs. gold value stability)",
+      "Reserve currency privilege vs. gold redemption obligation (dollar as global medium vs. convertibility drain)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The monetary regime commitment: what grounds the legitimacy and stability of the currency system",
+    "authority_description": "Central banks and international monetary institutions claiming authority to define what constitutes sound money",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_reason": "The supposed readings (single-swap vs. composite-pressure) do NOT emit different constraints—they are two analytical framings of the same historical rupture. A 'single swap' reading would still identify the same structural pressures (inflation, capital flows, coordination costs) as causal factors; it would merely claim they converged into one decision moment. A 'composite' reading identifies the same pressures as independently sufficient causes. Both readings observe the SAME constraint topology: the incompatibility between gold convertibility and the five structural demands cataloged in extraction. The disagreement is historiographic (was this overdetermined or contingent?) not structural (what constraints existed). This is a single constraint system read from different temporal/causal lenses, not multiple constraint systems from one kernel."
+  },
+  "axes": [
+    {
+      "claim_id": "gold_convertibility_trilemma",
+      "human_readable": "Gold Convertibility Trilemma (Mundell-Fleming Impossible Trinity)",
+      "structural_delta": "Structural impossibility of maintaining gold convertibility, fixed exchange rates, and monetary policy autonomy simultaneously",
+      "primary_observable": "Central bank gold reserves vs. outstanding currency liabilities; capital account openness; domestic inflation rate vs. gold parity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "bretton_woods_coordination_costs",
+        "reserve_currency_extraction"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Mountain providing the physical/mathematical constraint base; highest inbound edge count from all other axes"
+    },
+    {
+      "claim_id": "bretton_woods_coordination_costs",
+      "human_readable": "Bretton Woods Coordination Costs (Multilateral Discipline Failure)",
+      "structural_delta": "Rising transaction costs of maintaining international monetary coordination as domestic policy priorities diverged",
+      "primary_observable": "Frequency of G10 negotiations; Smithsonian Agreement compliance rates; bilateral vs. multilateral policy coordination attempts",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "gold_convertibility_trilemma"
+      ],
+      "feeds_into": [
+        "reserve_currency_extraction"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Rope documenting the coordination mechanism that failed; structurally distinct from mountain (social vs. physical constraint)"
+    },
+    {
+      "claim_id": "reserve_currency_extraction",
+      "human_readable": "Reserve Currency Extraction (Exorbitant Privilege as Structural Snare)",
+      "structural_delta": "U.S. ability to run persistent deficits by issuing reserve currency, creating asymmetric extraction from gold redemption obligations",
+      "primary_observable": "U.S. current account balance; foreign dollar holdings vs. U.S. gold reserves; Vietnam War + Great Society spending vs. gold coverage ratio",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "u_s_treasury",
+      "victim": "bretton_woods_surplus_countries",
+      "downstream_of": [
+        "gold_convertibility_trilemma",
+        "bretton_woods_coordination_costs"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node capturing the extraction dynamic that made the system unsustainable"
+    },
+    {
+      "claim_id": "federal_reserve_mandate_drift",
+      "human_readable": "Federal Reserve Mandate Drift (Employment Targeting vs. Gold Discipline)",
+      "structural_delta": "Post-1930s shift in Fed mandate from gold parity maintenance to domestic employment/growth stabilization",
+      "primary_observable": "Fed policy statements prioritizing employment vs. gold coverage; discount rate changes independent of gold flows",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "reserve_currency_extraction"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional drift captured indirectly via reserve_currency_extraction snare; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "capital_mobility_acceleration",
+      "human_readable": "Capital Mobility Acceleration (Technology-Driven Flow Velocity)",
+      "structural_delta": "Rising speed and volume of private cross-border capital flows undermining fixed exchange rate enforcement",
+      "primary_observable": "Cross-border capital flow volumes 1960s-1971; telecommunications infrastructure expansion; speculative attack frequency",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "gold_convertibility_trilemma"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technological mountain feeding into trilemma; already captured as one leg of the trilemma constraint"
+    },
+    {
+      "claim_id": "inflation_gold_parity_divergence",
+      "human_readable": "Inflation-Gold Parity Divergence (Purchasing Power Erosion vs. Fixed Metal Value)",
+      "structural_delta": "Domestic inflation eroding dollar purchasing power while gold parity remained fixed at $35/oz, creating arbitrage pressure",
+      "primary_observable": "U.S. CPI inflation rate 1960s-1971; gold market price vs. official $35/oz parity; London Gold Pool intervention frequency",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "gold_speculators",
+      "victim": "u_s_treasury_gold_reserves",
+      "downstream_of": [
+        "gold_convertibility_trilemma"
+      ],
+      "feeds_into": [
+        "reserve_currency_extraction"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: tangled_rope captured as mechanism within reserve_currency_extraction; redundant with trilemma dynamics"
+    }
+  ],
+  "generation_sequence": [
+    "gold_convertibility_trilemma",
+    "bretton_woods_coordination_costs",
+    "reserve_currency_extraction"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "federal_reserve_mandate_drift",
+      "structural_delta": "Fed mandate shift from gold parity to employment targeting",
+      "hypothesis": "piton",
+      "deferral_reason": "Institutional drift captured indirectly via reserve_currency_extraction; lower graph centrality"
+    },
+    {
+      "claim_id": "capital_mobility_acceleration",
+      "structural_delta": "Technology-driven acceleration of cross-border capital flows",
+      "hypothesis": "mountain",
+      "deferral_reason": "Already incorporated as one leg of the trilemma mountain; redundant independent axis"
+    },
+    {
+      "claim_id": "inflation_gold_parity_divergence",
+      "structural_delta": "Domestic inflation vs. fixed gold parity creating arbitrage pressure",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Mechanism subsumed within reserve_currency_extraction snare; overlapping observable with trilemma"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The kernel contest (single-swap vs. composite) collapses because both readings observe the same constraint topology. The disagreement is historiographic (overdetermination vs. contingency) not structural (what constraints existed). This is NOT a contested kernel—it is one constraint system with two causal narratives.",
+      "source": "§1.3-K kernel/reading decomposition test"
+    },
+    {
+      "id": "omega_counterfactual_gold_retention",
+      "description": "Could the gold standard have been retained with different institutional design (e.g., adjustable parity, partial convertibility)? If yes, the Mountain classification of gold_convertibility_trilemma is weakened—it becomes a Piton of policy choice rather than physical necessity.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F03 mountain validity check"
+    },
+    {
+      "id": "omega_post_1971_fiat_discipline",
+      "description": "Does fiat currency eliminate the trilemma or merely shift it? Modern central banks face inflation-credibility-growth trilemmas without gold. The 1971 transition may have swapped one mountain for another rather than eliminating constraint.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + structural persistence question"
+    },
+    {
+      "id": "omega_petrodollar_successor_snare",
+      "description": "Post-1971, did the petrodollar system (oil priced in dollars) replace gold convertibility as the reserve currency anchor? If so, reserve_currency_extraction persists with different victims (oil importers vs. gold redeemers).",
+      "source": "Absence Inventory (post-1971 monetary regime structure not analyzed)"
+    },
+    {
+      "id": "omega_smithsonian_agreement_scaffold",
+      "description": "The December 1971 Smithsonian Agreement attempted to preserve fixed rates without gold. Its rapid failure (by 1973) suggests the coordination_costs rope was already severed. Was this a genuine reform attempt or a face-saving scaffold?",
+      "source": "Extraction anchor (Smithsonian Agreement) + scaffold hypothesis test"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: gold_convertibility_trilemma classified as mountain (physical/mathematical impossibility) but counterfactual institutional designs (adjustable parity, partial convertibility, capital controls) may have been viable. Generated omega_counterfactual_gold_retention to bound this uncertainty. The trilemma is a mountain given the Bretton Woods institutional design, but that design was a policy choice."
+  },
+  "_seed_id": "gold_to_fiat_transition"
+}

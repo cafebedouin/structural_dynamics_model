@@ -1,0 +1,250 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Sociolinguistics / Religious Studies / Nationalism Studies",
+  "family_id": "hebrew_revival_kernel_2026",
+  "topic_summary": "Analysis of the Hebrew language revival (1880s-1948) as a contested kernel. The commitment 'Hebrew is a living language' was held under two mutually exclusive readings: liturgical-only (recitation of preserved texts suffices) versus native-daily (only native generational transmission counts). The revival transformed Hebrew from a liturgical medium into the mother tongue of a new speech community, but religious opposition framed this as desecration rather than restoration.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Eliezer Ben-Yehuda (linguist, primary revival architect, 1858-1922)",
+      "Va'ad HaLashon / Academy of the Hebrew Language (standardization authority, est. 1890)",
+      "Orthodox rabbinical authorities (opponents framing secular use as desecration)",
+      "Yishuv educators (immersion teachers, 1880s-1930s)",
+      "Immigrant speech communities (Yiddish, Ladino, Arabic, Russian speakers)",
+      "Ottoman authorities (political opposition to nationalist linguistic project)"
+    ],
+    "key_tensions": [
+      "Sacred vs. secular use (liturgical preservation vs. daily speech)",
+      "Linguistic diversity vs. monolingual nation-building (immigrant mother tongues vs. Hebrew adoption)",
+      "Vocabulary gap vs. modernization (biblical lexicon vs. contemporary referents)",
+      "Religious authority vs. secular nationalist authority (rabbinical vs. Va'ad HaLashon)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Hebrew is a living language — the shared commitment that Hebrew occupies the category 'living' rather than 'dead/extinct'",
+    "authority_description": "Contested between rabbinical authority (grounded in halakhic tradition and textual preservation) and secular nationalist authority (grounded in linguistic vitality metrics and native speaker generation)",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Capture (rabbinical reading) vs. Kernel Replacement (revivalist reading claiming to restore true vitality)",
+    "is_contested_kernel": true,
+    "kernel_id": "living_language_status",
+    "readings": [
+      {
+        "reading_id": "liturgical_preservation_reading",
+        "commitment": "A language is living if its sacred texts are continuously recited, studied, and used in ritual — preservation through liturgical transmission suffices",
+        "authority_grounding": "Rabbinical / halakhic tradition — authority derives from unbroken chain of textual transmission (mesorah)",
+        "sibling_readings": [
+          "native_generation_reading",
+          "literary_continuity_reading"
+        ],
+        "expected_structural_delta": "Beneficiary: rabbinical authority (interpretive monopoly preserved); Victim: secular speech community (delegitimized as desecrators); ε bin: Low (coordination around fixed liturgical corpus)"
+      },
+      {
+        "reading_id": "native_generation_reading",
+        "commitment": "A language is living only if native speakers transmit it generationally as a mother tongue in daily life — liturgical recitation is preservation of a corpse, not vitality",
+        "authority_grounding": "Sociolinguistic / nationalist — authority derives from demonstrated native speaker population and intergenerational transmission",
+        "sibling_readings": [
+          "liturgical_preservation_reading",
+          "literary_continuity_reading"
+        ],
+        "expected_structural_delta": "Beneficiary: secular nationalist movement (legitimacy via linguistic sovereignty); Victim: liturgical-only communities (framed as preserving death); ε bin: Moderate (requires institutional infrastructure for native transmission)"
+      },
+      {
+        "reading_id": "literary_continuity_reading",
+        "commitment": "A language is living if it remains a productive medium for new literary and intellectual work, regardless of native speaker status — the Haskalah periodicals and modern Hebrew literature demonstrate vitality",
+        "authority_grounding": "Literary / intellectual elite — authority derives from demonstrated creative productivity in the language",
+        "sibling_readings": [
+          "liturgical_preservation_reading",
+          "native_generation_reading"
+        ],
+        "expected_structural_delta": "Beneficiary: maskilim and secular intellectuals (cultural authority without requiring mass adoption); Victim: illiterate or non-literary speakers (excluded from vitality definition); ε bin: Low (elite coordination around literary production)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "liturgical_preservation_reading",
+        "reading_b": "native_generation_reading",
+        "basis": "No single framework can hold both 'recitation of fixed texts = living language' and 'only native daily generation = living language' as simultaneously true. Accepting the native-generation axiom requires rejecting liturgical recitation as sufficient; accepting the liturgical axiom requires rejecting native transmission as necessary. The rabbinical excommunication of Ben-Yehuda demonstrates this mutual exclusivity — his project was framed as desecration precisely because it rejected liturgical sufficiency."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_preservation_reading",
+      "human_readable": "Liturgical Preservation Reading (Recitation as Vitality)",
+      "structural_delta": "Language vitality grounded in continuous liturgical recitation and textual study across diaspora communities",
+      "primary_observable": "Frequency of liturgical use; number of communities maintaining daily prayer in Hebrew; volume of rabbinic commentary production",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinical_authority",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents 2000-year status quo ante"
+    },
+    {
+      "claim_id": "native_generation_reading",
+      "human_readable": "Native Generation Reading (Daily Speech as Vitality)",
+      "structural_delta": "Language vitality requires native speakers transmitting the language as mother tongue in daily life",
+      "primary_observable": "Number of native speakers; intergenerational transmission rate; use in non-liturgical domains (commerce, education, domestic life)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "secular_nationalist_movement",
+      "victim": "liturgical_only_communities",
+      "downstream_of": [],
+      "feeds_into": [
+        "vocabulary_modernization_mechanism"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents the revival project's core claim; highest centrality"
+    },
+    {
+      "claim_id": "literary_continuity_reading",
+      "human_readable": "Literary Continuity Reading (Creative Production as Vitality)",
+      "structural_delta": "Language vitality demonstrated through productive literary and intellectual work, independent of native speaker status",
+      "primary_observable": "Volume of new Hebrew periodicals, novels, poetry; number of active Hebrew writers; linguistic innovation in literary contexts",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "maskilim_intellectual_elite",
+      "victim": "non_literate_speakers",
+      "downstream_of": [],
+      "feeds_into": [
+        "vocabulary_modernization_mechanism"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; intermediate position between liturgical and native readings; feeds into modernization mechanism"
+    },
+    {
+      "claim_id": "vocabulary_modernization_mechanism",
+      "human_readable": "Vocabulary Modernization (Neologism Creation Infrastructure)",
+      "structural_delta": "Institutional mechanism for coining new words to bridge biblical lexicon and modern referents",
+      "primary_observable": "Number of neologisms coined by Va'ad HaLashon; adoption rate of new terms; domains covered (technology, cuisine, administration)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "native_generation_reading",
+        "literary_continuity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream mechanism serving both native and literary readings; lower structural distinctiveness than kernel readings themselves"
+    },
+    {
+      "claim_id": "immigrant_linguistic_diversity",
+      "human_readable": "Immigrant Linguistic Diversity (Multilingual Yishuv Friction)",
+      "structural_delta": "Structural friction between monolingual Hebrew nation-building and immigrant retention of mother tongues (Yiddish, Ladino, Arabic, Russian)",
+      "primary_observable": "Language use surveys in Yishuv households; school language policies; resistance to Hebrew-only mandates",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "immigrant_mother_tongue_speakers",
+      "downstream_of": [
+        "native_generation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream implementation friction of native-generation reading; captured implicitly in that reading's constraint story"
+    },
+    {
+      "claim_id": "ottoman_political_opposition",
+      "human_readable": "Ottoman Political Opposition (Nationalist Threat Perception)",
+      "structural_delta": "Ottoman authorities viewing Hebrew revival as nationalist threat to imperial territorial integrity",
+      "primary_observable": "Ottoman restrictions on Hebrew education; surveillance of Hebrew institutions; administrative language policies",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: external political constraint orthogonal to kernel contest; zero centrality in kernel topology"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liturgical_preservation_reading",
+      "kernel_id": "living_language_status",
+      "reading_id": "liturgical_preservation_reading"
+    },
+    {
+      "claim_id": "native_generation_reading",
+      "kernel_id": "living_language_status",
+      "reading_id": "native_generation_reading"
+    },
+    {
+      "claim_id": "literary_continuity_reading",
+      "kernel_id": "living_language_status",
+      "reading_id": "literary_continuity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "vocabulary_modernization_mechanism",
+      "structural_delta": "Institutional neologism creation to bridge biblical lexicon and modern referents",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream mechanism serving both native and literary readings; lower structural distinctiveness than kernel readings; implementation detail rather than foundational commitment"
+    },
+    {
+      "claim_id": "immigrant_linguistic_diversity",
+      "structural_delta": "Friction between monolingual nation-building and immigrant mother tongue retention",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream implementation friction of native-generation reading; captured implicitly in that reading's constraint story as victim structure"
+    },
+    {
+      "claim_id": "ottoman_political_opposition",
+      "structural_delta": "Ottoman perception of Hebrew revival as nationalist threat",
+      "hypothesis": "rope",
+      "deferral_reason": "External political constraint orthogonal to kernel contest; zero centrality in kernel topology; context rather than structural axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_yiddish_counter_reading",
+      "description": "Was there a fourth reading — Yiddish as the authentic living Jewish language, with Hebrew revival as artificial elite imposition? Bundist opposition to Hebraization may constitute a separate kernel contest (Yiddish vs. Hebrew as carrier of Jewish national identity) rather than a reading of the Hebrew-vitality kernel. Requires disambiguation.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — Yiddish-speaking communities appear as victims but not as holders of an alternative reading"
+    },
+    {
+      "id": "omega_liturgical_reading_epsilon",
+      "description": "Is liturgical_preservation_reading truly Low-ε (mere coordination) or does it contain hidden extractiveness? Rabbinical authority's monopoly on interpretation may constitute a Snare (extracting deference) rather than a Rope (neutral coordination). Classification unstable pending generation.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — rabbinical authority benefits from liturgical-only framing"
+    },
+    {
+      "id": "omega_literary_reading_collapse",
+      "description": "Does literary_continuity_reading collapse into native_generation_reading? If Haskalah periodicals required native-competent writers, literary production may be downstream of native transmission rather than independent. Structural independence uncertain.",
+      "source": "§3 Independence Testing — literary and native readings share overlapping observables (both require productive language use)"
+    },
+    {
+      "id": "omega_reachability_break_status",
+      "description": "User flagged 'D1 strict-reachability break' — does the 2000-year liturgical-only period constitute a true reachability break (no native speakers = language death) or continuous occupation under a different reading? If reachability was broken, the revival is not restoration but new language creation using old lexicon. Ontological status of 'same language' contested.",
+      "source": "User-provided kernel contest framing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings captures the structural contest. Omega_yiddish_counter_reading flags potential fourth reading but insufficient evidence in source material to warrant inclusion. Omega_reachability_break_status preserves user's D1 framing for downstream analysis."
+  },
+  "_seed_id": "modern_hebrew_revival"
+}

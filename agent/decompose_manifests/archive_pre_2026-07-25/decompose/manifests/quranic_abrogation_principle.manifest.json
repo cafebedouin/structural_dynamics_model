@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Quranic Hermeneutics / Legal Theory",
+  "family_id": "quranic_naskh_2026",
+  "topic_summary": "Analysis of the Islamic principle of naskh (abrogation) in Quranic interpretation. The fixed substrate is the Quranic text itself and the methodological principle of naskh. Two primary readings contest how to resolve apparent textual contradictions: Classical Abrogation (later verses supersede earlier ones based on chronology) versus Contextual Harmonization (all verses remain valid within their contexts).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Quranic text (fixed revealed scripture, approximately 114 surahs over 23 years)",
+      "Classical abrogation school (Shafi'i, Hanbali majority position)",
+      "Contextual harmonization school (modernist, some Hanafi interpretations)",
+      "Legal jurists (mujtahidun - those authorized to derive law)",
+      "Ordinary believers (muqallidun - those who follow established rulings)",
+      "State legal systems (where Sharia is codified or referenced)"
+    ],
+    "key_tensions": [
+      "Textual contradiction resolution: chronological supersession vs contextual preservation",
+      "Hermeneutic authority: jurist consensus based on abrogation vs interpretive pluralism"
+    ],
+    "key_mechanisms": [
+      "Naskh mechanism: Later revelation invalidates earlier ruling on same topic (Classical reading)",
+      "Contextual specification: Each verse applies to its situational context (Harmonization reading)"
+    ],
+    "key_absences": [
+      "Absence of definitive chronological ordering for all Quranic verses (only partial scholarly consensus)",
+      "Absence of explicit meta-textual abrogation markers within the Quran itself",
+      "Absence of discussion on who adjudicates which reading is authoritative in pluralistic contexts"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Quranic text as fixed divine revelation combined with the methodological principle of naskh (abrogation) for resolving apparent textual contradictions",
+    "authority_description": "Interpretive legitimacy grounded in scholarly consensus (ijma) within madhabs (legal schools), with classical schools deriving authority from chronological revelation order and harmonization schools deriving authority from divine unity and contextual coherence",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_authority_CS",
+    "is_contested_kernel": true,
+    "kernel_id": "naskh_principle",
+    "readings": [
+      {
+        "reading_id": "classical_abrogation",
+        "commitment": "Later Quranic verses abrogate earlier verses on the same legal/theological topic based on chronological revelation order",
+        "authority_grounding": "Scholarly consensus (ijma) within classical madhabs; chronological ordering of revelation as determinative",
+        "sibling_readings": [
+          "contextual_harmonization",
+          "progressive_restriction"
+        ],
+        "expected_structural_delta": "Fixed legal rulings with clear supersession hierarchy; abrogated verses lose legal force but retain spiritual/historical value; benefits legal certainty, victims are interpretive flexibility and theological coherence when verses appear contradictory"
+      },
+      {
+        "reading_id": "contextual_harmonization",
+        "commitment": "All Quranic verses remain valid within their specific revelatory and situational contexts; apparent contradictions resolved through contextual specification rather than chronological supersession",
+        "authority_grounding": "Divine unity (tawhid) and Quranic completeness; modernist and some classical Hanafi interpretive traditions",
+        "sibling_readings": [
+          "classical_abrogation",
+          "progressive_restriction"
+        ],
+        "expected_structural_delta": "Flexible legal interpretation requiring contextual analysis; all verses retain legal potential depending on circumstance; benefits theological coherence and adaptability, victims are legal predictability and jurist authority to definitively close questions"
+      },
+      {
+        "reading_id": "progressive_restriction",
+        "commitment": "Quranic revelation progressively restricted permissions rather than abrogating earlier rulings; movement from permissive to restrictive represents divine pedagogy not textual invalidation",
+        "authority_grounding": "Pedagogical reading of revelation as gradual reform; historical sequence as teaching method rather than legal hierarchy",
+        "sibling_readings": [
+          "classical_abrogation",
+          "contextual_harmonization"
+        ],
+        "expected_structural_delta": "Earlier permissive verses understood as transitional accommodations not permanent law; later restrictions represent final divine intent; benefits evolutionary legal reading, victims are those who cite earlier permissive texts for contemporary practice"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "classical_abrogation",
+        "reading_b": "contextual_harmonization",
+        "basis": "Classical abrogation's foundational axiom that later revelation invalidates earlier text cannot coexist with contextual harmonization's axiom that all revelation remains valid in context. Accepting one requires rejecting the other as a coherent hermeneutic principle, though both can socially coexist as competing schools."
+      },
+      {
+        "reading_a": "classical_abrogation",
+        "reading_b": "progressive_restriction",
+        "basis": "Classical abrogation treats supersession as binary (verse X no longer applies) while progressive restriction treats it as pedagogical layering (verse X was always provisional). A single framework cannot hold both that a verse is genuinely abrogated and that it was pedagogically transitional without collapsing into one or the other."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "classical_abrogation",
+      "human_readable": "Classical Abrogation (Chronological Supersession)",
+      "structural_delta": "Later revealed verses supersede earlier verses on same topic; abrogated text loses legal force but retains spiritual/historical significance",
+      "primary_observable": "Jurist rulings citing specific abrogated verses (mansukh) and abrogating verses (nasikh); legal codifications based on chronological primacy",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "classical_jurists",
+      "victim": "interpretive_flexibility",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading in the kernel contest with highest social embeddedness in classical legal tradition; establishes baseline constraint structure for comparison"
+    },
+    {
+      "claim_id": "contextual_harmonization",
+      "human_readable": "Contextual Harmonization (Situational Validity Preservation)",
+      "structural_delta": "All verses remain legally valid within their specific contexts; apparent contradictions resolved through contextual specification not chronological supersession",
+      "primary_observable": "Modernist fatwas citing multiple seemingly contradictory verses as simultaneously valid; hermeneutic writings rejecting naskh taxonomy",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "modernist_reformers",
+      "victim": "legal_predictability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct alternative reading with different beneficiary/victim structure and different epsilon; necessary for kernel contest comparison"
+    },
+    {
+      "claim_id": "progressive_restriction",
+      "human_readable": "Progressive Restriction (Pedagogical Evolution)",
+      "structural_delta": "Revelation moved from permissive to restrictive as divine pedagogy; earlier verses were transitional not permanent law",
+      "primary_observable": "Historical sequence analysis showing pattern of permission followed by restriction (e.g., alcohol, warfare rules); scholarly arguments treating early verses as pedagogical staging",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "evolutionary_interpreters",
+      "victim": "textualist_conservatives",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third distinct reading offering alternative resolution mechanism; completes the triadic kernel structure; lower centrality but necessary for comprehensive kernel analysis"
+    },
+    {
+      "claim_id": "chronology_uncertainty",
+      "human_readable": "Chronological Ordering Uncertainty (Revelation Dating Contestation)",
+      "structural_delta": "Absence of definitive chronological order for all verses undermines abrogation claims that depend on precise dating",
+      "primary_observable": "Scholarly disagreement on Meccan/Medinan classification and intra-period ordering; number of verses with contested chronology",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "classical_abrogation"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain that affects classical_abrogation reading's empirical basis but does not itself constitute a reading; omega material on epistemological limits"
+    },
+    {
+      "claim_id": "state_codification_pressure",
+      "human_readable": "State Codification Pressure (Legal Determinacy Requirement)",
+      "structural_delta": "Modern nation-state legal systems require determinacy and reject hermeneutic pluralism; pressure toward single authoritative reading",
+      "primary_observable": "National Sharia codifications selecting one reading; state fatwa councils rejecting competing interpretations",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "state_legal_apparatus",
+      "victim": "madhab_pluralism",
+      "downstream_of": [
+        "classical_abrogation",
+        "contextual_harmonization"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream snare that operates on the kernel contest rather than being a reading of the kernel itself; omega material on institutional capture"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "classical_abrogation",
+      "kernel_id": "naskh_principle",
+      "reading_id": "classical_abrogation"
+    },
+    {
+      "claim_id": "contextual_harmonization",
+      "kernel_id": "naskh_principle",
+      "reading_id": "contextual_harmonization"
+    },
+    {
+      "claim_id": "progressive_restriction",
+      "kernel_id": "naskh_principle",
+      "reading_id": "progressive_restriction"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "chronology_uncertainty",
+      "structural_delta": "Absence of definitive chronological order undermines precise abrogation claims",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream epistemic constraint on classical_abrogation reading but not itself a reading; captured as omega uncertainty about empirical basis for chronological supersession claims"
+    },
+    {
+      "claim_id": "state_codification_pressure",
+      "structural_delta": "Modern states require legal determinacy and suppress hermeneutic pluralism",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream institutional force acting on the kernel contest as a whole rather than instantiating a reading; omega material on how state power resolves kernel contests through coercion rather than interpretation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_chronology_epistemic_limit",
+      "description": "Classical abrogation depends on precise chronological ordering of revelation. Scholarly consensus exists for some verse clusters but not all. What is the epistemological status of abrogation claims when chronology is contested? Does uncertainty collapse the reading or shift it from Mountain to Rope of scholarly convention?",
+      "source": "Deferred axis chronology_uncertainty + Absence Inventory"
+    },
+    {
+      "id": "omega_authority_adjudication",
+      "description": "In pluralistic contexts where multiple readings coexist (e.g., diaspora communities, secular states with Muslim populations), who adjudicates which reading is authoritative for legal purposes? Is this a Snare where state power resolves hermeneutic contest, or a Scaffold of emerging transnational interpretive networks?",
+      "source": "Absence Inventory + deferred axis state_codification_pressure"
+    },
+    {
+      "id": "omega_abrogation_count_divergence",
+      "description": "Classical scholars disagree on the number of abrogated verses (estimates range from 5 to over 500). Does this divergence indicate the reading itself is unstable, or does it reflect different thresholds for what counts as abrogation? Potential reclassification from Tangled Rope to Rope of scholarly convention.",
+      "source": "Dark Matter Probe 2 (operational medium of classical jurisprudence) + extraction absence"
+    },
+    {
+      "id": "omega_divine_intentionality",
+      "description": "Does the progressive restriction reading presume divine pedagogy (Allah accommodating human capacity) in ways that classical theology rejects? If so, is this reading theologically compatible with classical doctrines of divine omniscience and revelation completeness at each moment?",
+      "source": "Dark Matter Probe 3 (beneficiary scan) — progressive_restriction benefits evolutionary interpreters but may extract from classical theological coherence"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected represent structurally distinct resolutions of the kernel contest with different authority groundings, beneficiary/victim structures, and epsilon profiles. Chronology_uncertainty and state_codification_pressure properly deferred as non-readings. Kernel contest validated: classical_abrogation and contextual_harmonization hold axioms that no single coherent framework can simultaneously accept."
+  },
+  "_seed_id": "quranic_abrogation_principle"
+}

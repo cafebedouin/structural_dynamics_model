@@ -1,0 +1,259 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Federalism / Migration Policy / Welfare State Theory",
+  "family_id": "eu_free_movement_2026",
+  "topic_summary": "Analysis of free movement within the EU federation, examining the structural tension between integration-primary and member-sovereignty-primary readings of the federation-membership kernel. The Treaty of Rome (1957) established worker mobility rights, expanded to full citizenship rights by Maastricht (1992). Eastern enlargement (2004) added 75 million citizens with mobility rights, triggering welfare state/labor market tensions that manifested in Brexit and ongoing authority-locus contests between ECJ/Commission and member states.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "European Court of Justice (ECJ) - judicial authority expanding citizenship rights beyond economic activity",
+      "Member States - retain welfare state sovereignty; impose transitional restrictions on new entrants",
+      "EU Commission - enforcement and coordination of social security systems",
+      "Mobile workers - 14 million EU citizens exercising free movement rights",
+      "Eastern European sending states - experiencing brain drain and labor shortages (Romania, Poland, Bulgaria)",
+      "Western European receiving states - hosting displaced local labor concerns (Germany, Spain, France)",
+      "National welfare states - exclusive solidarity systems with closure logics",
+      "Treaty framework - Rome (1957) worker mobility, Maastricht (1992) citizenship expansion"
+    ],
+    "key_tensions": [
+      "Integration logic (single market mobility) vs closure logic (national welfare state boundaries)",
+      "ECJ citizenship jurisprudence (direct EU-citizen bonds) vs member state welfare sovereignty",
+      "Eastern enlargement mobility (8 million movers 2004-2015) vs transitional restrictions (7-year caps)",
+      "Judicial/bureaucratic authority (ECJ/Commission) vs legislative/democratic authority (member state parliaments)"
+    ],
+    "key_mechanisms": [
+      "Regulation 1612/68 (1968) - full implementation of worker mobility on equal conditions basis",
+      "Transitional restrictions - member states permitted 7-year labor market protection periods for new accessions",
+      "Social security coordination - EU coordinates but does not harmonize welfare systems; member states retain responsibility"
+    ],
+    "key_absences": [
+      "Fiscal transfer mechanism - no EU-level redistribution to compensate sending states for brain drain or receiving states for welfare costs",
+      "Democratic legitimation pathway - politically sensitive conflicts delegated to courts/bureaucrats rather than legislative resolution"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The federation-membership kernel: what obligations and rights flow from EU membership regarding citizen mobility and welfare access",
+    "authority_description": "Contested between ECJ/Commission (integration-primary interpretation) and member state legislatures/welfare administrations (sovereignty-primary interpretation)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "federation_membership_obligations",
+    "readings": [
+      {
+        "reading_id": "integration_primary",
+        "commitment": "Free movement is constitutive of EU citizenship and single market functioning; member state welfare boundaries must yield to mobility rights",
+        "authority_grounding": "ECJ citizenship jurisprudence; Treaty of Rome/Maastricht as foundational texts; Commission enforcement authority",
+        "sibling_readings": [
+          "member_sovereignty_primary",
+          "selective_solidarity"
+        ],
+        "expected_structural_delta": "Mobile workers enter full welfare beneficiary set in receiving states; displaced local labor bears adjustment costs; ECJ authority expands via case law"
+      },
+      {
+        "reading_id": "member_sovereignty_primary",
+        "commitment": "National welfare states retain closure authority; free movement is conditional on labor market protection and welfare system sustainability",
+        "authority_grounding": "Member state legislative sovereignty; welfare state as nation-state project; transitional restriction provisions in Accession Treaties",
+        "sibling_readings": [
+          "integration_primary",
+          "selective_solidarity"
+        ],
+        "expected_structural_delta": "Mobile workers excluded from full welfare beneficiary set; receiving state labor forces protected; member state legislatures retain veto authority over welfare access"
+      },
+      {
+        "reading_id": "selective_solidarity",
+        "commitment": "Free movement rights are tiered by contribution history and economic activity status; welfare access follows contributory principle not citizenship principle",
+        "authority_grounding": "Coordination (not harmonization) framework; economically inactive citizens face restrictions; welfare state chauvinism as legitimate self-interest",
+        "sibling_readings": [
+          "integration_primary",
+          "member_sovereignty_primary"
+        ],
+        "expected_structural_delta": "Mobile workers bifurcated into employed (full rights) vs economically inactive (restricted rights); cost-bearing distributed by contribution status rather than citizenship or nationality"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "integration_primary",
+        "reading_b": "member_sovereignty_primary",
+        "basis": "Integration-primary holds that EU citizenship creates direct bonds between individuals and Union that override national welfare boundaries (ECJ jurisprudence expanding rights beyond economic activity). Member-sovereignty-primary holds that welfare solidarity is constitutively national and member states retain ultimate authority over access (welfare state as nation-state project). No single framework can hold both: either citizenship trumps national boundaries or national boundaries trump citizenship."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "integration_primary",
+      "human_readable": "Integration-Primary Reading (Citizenship Trumps Welfare Boundaries)",
+      "structural_delta": "Free movement as constitutive EU citizenship right; national welfare boundaries yield to mobility",
+      "primary_observable": "ECJ case law expanding rights beyond economic activity; Commission infringement proceedings against member state restrictions",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "mobile_workers",
+      "victim": "displaced_local_labor",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest epsilon; ECJ authority expansion as primary extractive mechanism"
+    },
+    {
+      "claim_id": "member_sovereignty_primary",
+      "human_readable": "Member-Sovereignty-Primary Reading (Welfare Closure Authority Retained)",
+      "structural_delta": "National welfare states retain closure authority; mobility conditional on labor market protection",
+      "primary_observable": "Transitional restrictions invoked; welfare state chauvinism in public opinion; Brexit referendum outcome",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "receiving_state_labor_forces",
+      "victim": "mobile_workers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; axiom-contradictory to integration_primary; Brexit as manifestation"
+    },
+    {
+      "claim_id": "selective_solidarity",
+      "human_readable": "Selective Solidarity Reading (Tiered Rights by Contribution)",
+      "structural_delta": "Welfare access follows contributory principle not citizenship; employed vs economically inactive bifurcation",
+      "primary_observable": "Coordination framework preserving national systems; restrictions on economically inactive citizens; contribution-based benefit calculations",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; coexists_with both primary readings as compromise position; lower epsilon but distinct cost-bearing structure"
+    },
+    {
+      "claim_id": "eastern_enlargement_shock",
+      "human_readable": "Eastern Enlargement Shock (75M Citizen Mobility Rights Addition)",
+      "structural_delta": "2004 accession added 75 million citizens with mobility rights; 8 million moved west 2004-2015",
+      "primary_observable": "Migration flows from Romania/Poland/Bulgaria to Germany/Spain/France; wage differentials; transitional restriction usage",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "integration_primary",
+        "member_sovereignty_primary"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing scale context but captured via readings' victim/beneficiary structures"
+    },
+    {
+      "claim_id": "fiscal_transfer_absence",
+      "human_readable": "Fiscal Transfer Absence (No EU Redistribution Mechanism)",
+      "structural_delta": "No EU-level transfers to compensate sending states for brain drain or receiving states for welfare costs",
+      "primary_observable": "EU budget composition; absence of equalization payments; member state fiscal autonomy",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "net_contributor_states",
+      "victim": "sending_states",
+      "downstream_of": [],
+      "feeds_into": [
+        "member_sovereignty_primary"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton of institutional design choice; absence magnifies sovereignty reading but not independent constraint"
+    },
+    {
+      "claim_id": "judicial_authority_expansion",
+      "human_readable": "Judicial Authority Expansion (ECJ as De Facto Legislator)",
+      "structural_delta": "Politically sensitive conflicts delegated to courts/bureaucrats rather than democratic legislative resolution",
+      "primary_observable": "ECJ case law volume on free movement/welfare rights; member state compliance rates; democratic deficit discourse",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "ecj_commission",
+      "victim": "member_state_legislatures",
+      "downstream_of": [],
+      "feeds_into": [
+        "integration_primary"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: snare of judicialisation process; authority mechanism for integration reading but not independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "integration_primary",
+      "kernel_id": "federation_membership_obligations",
+      "reading_id": "integration_primary"
+    },
+    {
+      "claim_id": "member_sovereignty_primary",
+      "kernel_id": "federation_membership_obligations",
+      "reading_id": "member_sovereignty_primary"
+    },
+    {
+      "claim_id": "selective_solidarity",
+      "kernel_id": "federation_membership_obligations",
+      "reading_id": "selective_solidarity"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "eastern_enlargement_shock",
+      "structural_delta": "2004 accession added 75 million mobility rights; 8 million moved west",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain providing scale context but structural impact captured via readings' victim/beneficiary sets and epsilon values"
+    },
+    {
+      "claim_id": "fiscal_transfer_absence",
+      "structural_delta": "No EU-level redistribution to compensate brain drain or welfare costs",
+      "hypothesis": "piton",
+      "deferral_reason": "Piton of institutional design choice; absence magnifies sovereignty reading but not independent constraint with own epsilon"
+    },
+    {
+      "claim_id": "judicial_authority_expansion",
+      "structural_delta": "ECJ as de facto legislator via case law; democratic deficit",
+      "hypothesis": "snare",
+      "deferral_reason": "Snare of judicialisation process; authority mechanism for integration reading but not structurally independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_brexit_counterfactual",
+      "description": "Does Brexit validate member-sovereignty reading or prove integration reading's inevitability? UK exit may strengthen integration among remaining members (selection effect) or demonstrate sovereignty reading's political viability (precedent effect). Observational window too short.",
+      "source": "Brexit as manifestation of sovereignty reading; unclear whether exit option strengthens or weakens remaining kernel contest"
+    },
+    {
+      "id": "omega_covid_mobility_restrictions",
+      "description": "Did COVID-19 border closures (2020-2021) reveal integration-primary reading as piton (suspended under crisis) or validate it as rope (temporary, restored)? Member states invoked emergency powers; ECJ did not block. Drift status may shift from partial to absent if crisis precedent normalizes unilateral restrictions.",
+      "source": "Absence inventory: pandemic response not in research context but structurally relevant to authority-locus contest"
+    },
+    {
+      "id": "omega_sending_state_voice",
+      "description": "Eastern European sending states (Romania, Poland, Bulgaria) experience brain drain but lack structural voice in kernel contest. Are they victims of integration reading (mobility drains human capital) or beneficiaries (remittances, wage convergence via labor scarcity)? Beneficiary/victim classification unstable.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): sending states absent from authority-locus contest despite bearing costs"
+    },
+    {
+      "id": "omega_selective_solidarity_stability",
+      "description": "Is selective_solidarity reading a stable compromise or transitional position? Coordination framework may collapse toward either integration (ECJ expands economically inactive rights) or sovereignty (member states tighten contribution requirements). Current coexistence may be drift-absorption rather than equilibrium.",
+      "source": "Reading independence test: selective_solidarity coexists_with both primary readings but may not survive their axiom contradiction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied correctly: three readings with axiom contradiction between integration_primary and member_sovereignty_primary. Selective_solidarity coexists with both as compromise position. Eastern_enlargement_shock deferred as mountain (scale context captured in readings). Fiscal_transfer_absence and judicial_authority_expansion deferred as mechanisms of primary readings rather than independent constraints."
+  },
+  "_seed_id": "federation_free_movement_kernel"
+}

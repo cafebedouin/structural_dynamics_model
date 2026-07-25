@@ -1,0 +1,196 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Labor Economics / Platform Economy / Social Policy",
+  "family_id": "china_blue_collar_wage_convergence_2026",
+  "topic_summary": "Analysis of China's six-year trend of blue-collar wage growth outpacing white-collar pay, driven by platform economy expansion and flexible employment reaching 300+ million workers. The wage gap has narrowed 32.7% since 2013, with delivery riders and maternity caregivers earning CNY8,000+ monthly, while flexible workers face persistent challenges in employment stability and long-term social security despite 91.5% medical insurance coverage.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "China New Employment Forms Research Center (think tank producing the 2025 report)",
+      "Platform economy companies (Meituan, delivery platforms employing 7.45M+ riders)",
+      "Flexible workforce (300M+ workers, 40%+ of urban employment)",
+      "Blue-collar workforce (427M workers, 0.5% annual growth)",
+      "White-collar workforce (experiencing wage stagnation relative to blue-collar)",
+      "State Council and Central Committee (issuing 12-point labor protection plan)",
+      "Food delivery riders (8.325M earning CNY8,325/month, 10%+ annual growth)",
+      "Maternity caregivers (highest-paid at CNY10,128/month)"
+    ],
+    "key_tensions": [
+      "Wage convergence vs employment stability (blue-collar income rising but 48% of Meituan riders work <30 days/year)",
+      "Social security coverage vs long-term confidence (91.5% medical insurance but only 42.3% retirement confidence)",
+      "Platform flexibility vs worker precarity (300M flexible jobs but unstable income and AI displacement risk)"
+    ],
+    "key_claims": [
+      "Blue-collar wages have grown faster than white-collar for six consecutive years (2020-2025)",
+      "Wage gap narrowed 32.7% in 2025 to CNY2,250 from CNY3,344 peak in 2013",
+      "Flexible workforce reached 300M+ in 2025, expected 320M in 2026 (40%+ urban employment)",
+      "Food delivery riders achieved 10%+ compound annual income growth 2023-2025",
+      "Basic social security largely in place (91.5% medical, 86.2% injury) but long-term confidence low",
+      "Government issued 12-point plan targeting 2027 for standardized platform labor practices"
+    ],
+    "key_mechanisms": [
+      "Platform algorithm allocation (orders, pricing, time limits) driving gig income volatility",
+      "Demographic shift (50% of blue-collar workers over 40, post-1990 cohort avoiding manual labor)",
+      "Government policy intervention (Tianjin maternity insurance covering 550K flexible workers)",
+      "Job market expansion (delivery/logistics openings up 800% vs 2019 pre-pandemic)"
+    ],
+    "key_absences": [
+      "Pension system design for flexible workers (medical insurance addressed, retirement planning not)",
+      "Platform company profit margins and cost structure (wage growth sustainability unclear)",
+      "Regional variation in wage convergence (national aggregates obscure geographic disparities)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "platform_flexibility_precarity_tradeoff",
+      "human_readable": "Platform Flexibility-Precarity Tradeoff",
+      "structural_delta": "Platform gig work offers income flexibility and wage growth but structurally generates employment instability and long-term insecurity",
+      "primary_observable": "Worker tenure distribution (48% of Meituan riders <30 days/year); income volatility measures; retirement confidence (42.3%)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "platform_companies",
+      "victim": "flexible_workers_long_term_security",
+      "downstream_of": [],
+      "feeds_into": [
+        "wage_convergence_sustainability"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core structural tension with highest centrality; tangled_rope capturing the flexibility-precarity coupling that defines the platform economy model"
+    },
+    {
+      "claim_id": "demographic_skill_mismatch",
+      "human_readable": "Demographic Skill Mismatch (Aging Blue-Collar, Youth Avoidance)",
+      "structural_delta": "50% of blue-collar workers over 40, post-1990 cohort avoiding manual labor, creating supply-side pressure on wages",
+      "primary_observable": "Age distribution of blue-collar workforce; post-1990 cohort participation rates in manual labor; wage premium for younger workers",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "wage_convergence_sustainability"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct demographic constraint independent of platform structure; mountain providing supply-side wage pressure"
+    },
+    {
+      "claim_id": "wage_convergence_sustainability",
+      "human_readable": "Wage Convergence Sustainability (Blue-Collar Gains vs White-Collar Stagnation)",
+      "structural_delta": "Six-year trend of blue-collar wage growth outpacing white-collar, driven by platform expansion and demographic pressure, but sustainability depends on platform profitability and policy intervention",
+      "primary_observable": "Blue-collar vs white-collar wage growth rates; wage gap trajectory (CNY2,250 in 2025, projected CNY2,020 in 2027); platform company margins",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "platform_flexibility_precarity_tradeoff",
+        "demographic_skill_mismatch"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node integrating platform and demographic pressures; rope capturing coordination problem of sustaining convergence"
+    },
+    {
+      "claim_id": "social_security_coverage_confidence_gap",
+      "human_readable": "Social Security Coverage-Confidence Gap",
+      "structural_delta": "High coverage of basic protections (91.5% medical, 86.2% injury) but low confidence in long-term security (42.3% retirement, 54.8% advancement)",
+      "primary_observable": "Insurance coverage rates vs worker confidence surveys; pension system participation rates; career advancement perceptions",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "flexible_workers_long_term_planning",
+      "downstream_of": [
+        "platform_flexibility_precarity_tradeoff"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via platform_flexibility_precarity_tradeoff's long-term insecurity dimension; piton of policy design rather than independent structural constraint"
+    },
+    {
+      "claim_id": "government_policy_intervention_trajectory",
+      "human_readable": "Government Policy Intervention Trajectory (2027 Standardization Target)",
+      "structural_delta": "State Council 12-point plan targeting 2027 for standardized platform labor practices, including wage transparency and algorithm regulation",
+      "primary_observable": "Policy implementation milestones; platform compliance rates; enforcement mechanisms; Tianjin maternity insurance expansion (550K workers covered)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "platform_flexibility_precarity_tradeoff",
+        "wage_convergence_sustainability"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold of policy intent rather than implemented constraint; 2027 target makes this speculative; omega material on policy effectiveness"
+    }
+  ],
+  "generation_sequence": [
+    "platform_flexibility_precarity_tradeoff",
+    "demographic_skill_mismatch",
+    "wage_convergence_sustainability"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "social_security_coverage_confidence_gap",
+      "structural_delta": "High basic coverage but low long-term confidence",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured indirectly via platform_flexibility_precarity_tradeoff's long-term insecurity dimension; piton of policy design rather than independent structural constraint"
+    },
+    {
+      "claim_id": "government_policy_intervention_trajectory",
+      "structural_delta": "State Council 12-point plan targeting 2027 standardization",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold of policy intent rather than implemented constraint; 2027 target makes this speculative; omega material on policy effectiveness"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_platform_profitability_ceiling",
+      "description": "Is wage convergence sustainable if platform companies face profitability constraints? Absence of platform margin data makes this a bounded uncertainty. If margins compress, wage growth may stall or reverse, reclassifying the convergence trend from rope to piton of temporary market conditions.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction absence: platform profit margins"
+    },
+    {
+      "id": "omega_regional_variation",
+      "description": "National aggregates obscure geographic disparities. Is wage convergence uniform across tier-1, tier-2, and rural areas? Regional variation could reveal that convergence is a tier-1 phenomenon masking divergence elsewhere, affecting the mountain classification of demographic_skill_mismatch.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction absence: regional variation"
+    },
+    {
+      "id": "omega_pension_system_design",
+      "description": "Medical insurance coverage is high (91.5%) but retirement planning confidence is low (42.3%). Is this a piton of incomplete policy design or a mountain of actuarial impossibility for flexible workers? The absence of pension system details for gig workers makes this a critical omega for long-term sustainability.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction absence: pension system design + deferred axis social_security_coverage_confidence_gap"
+    },
+    {
+      "id": "omega_ai_displacement_timeline",
+      "description": "Research context mentions AI displacement risk for flexible workers but provides no timeline or sector-specific impact data. Is AI a near-term mountain (autonomous delivery) or distant scaffold (speculative)? This affects the durability of demographic_skill_mismatch as a wage pressure source.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + research context: AI adoption concerns"
+    },
+    {
+      "id": "omega_policy_enforcement_effectiveness",
+      "description": "The 2027 standardization target is a scaffold of policy intent. Will enforcement mechanisms be strong enough to convert this into a rope (coordination) or will it remain a scaffold (aspirational)? Tianjin maternity insurance expansion is a positive signal but national scalability is uncertain.",
+      "source": "Deferred axis government_policy_intervention_trajectory + Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan applied labor economics, platform economy, demographic analysis, and social policy lenses. Dark matter probes surfaced five omegas (platform profitability, regional variation, pension design, AI timeline, policy enforcement). Independence testing confirmed three distinct axes with different observables and beneficiary structures. Demographic mountain and platform tangled_rope are structurally independent despite both feeding into wage convergence rope."
+  }
+}

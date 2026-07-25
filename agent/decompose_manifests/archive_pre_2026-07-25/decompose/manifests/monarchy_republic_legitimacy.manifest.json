@@ -1,0 +1,224 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Constitutional Theory / Comparative Government",
+  "family_id": "sovereign_legitimacy_kernel_2026",
+  "topic_summary": "Analysis of the sovereign-legitimacy kernel as read through monarchical (inherited bloodline) versus republican (delegated consent) frameworks. This is a foundational contest over what grounds the right to rule — whether legitimate authority derives from dynastic succession or from popular mandate. The kernel is the shared commitment that political authority requires legitimacy; the readings instantiate incompatible criteria for what constitutes legitimacy.",
+  "extraction_summary": {
+    "entity_count": 4,
+    "claim_count": 2,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Monarchical authority structure (hereditary sovereignty grounded in bloodline/divine right)",
+      "Republican authority structure (delegated sovereignty grounded in consent/election)",
+      "Sovereign-legitimacy kernel (the shared substrate: political authority requires legitimacy)",
+      "Constitutional frameworks (mechanisms that stabilize each reading)"
+    ],
+    "key_tensions": [
+      "Inherited right vs delegated right as legitimacy criterion"
+    ],
+    "key_mechanisms": [
+      "Dynastic succession (enforcement: primogeniture, regency councils, legitimacy tests)",
+      "Electoral mandate (enforcement: periodic elections, constitutional limits, impeachment)"
+    ],
+    "key_absences": [
+      "Hybrid/constitutional monarchy status (modern Westminster systems that blend both readings)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Political authority requires legitimacy to command obedience; the question is what grounds legitimacy",
+    "authority_description": "In monarchical reading: dynastic law and tradition; in republican reading: constitutional procedure and electoral mandate",
+    "drift_status": "functioning",
+    "candidate_pattern": "Authority Structure Contest (Pattern 5)",
+    "is_contested_kernel": true,
+    "kernel_id": "sovereign_legitimacy",
+    "readings": [
+      {
+        "reading_id": "monarchical_reading",
+        "commitment": "Legitimate authority derives from inherited bloodline; the sovereign is sovereign by birth, not by grant",
+        "authority_grounding": "dynastic succession law, divine right doctrine, or historical continuity",
+        "sibling_readings": [
+          "republican_reading",
+          "constitutional_hybrid_reading"
+        ],
+        "expected_structural_delta": "Authority holder fixed by birth; no periodic legitimacy test; beneficiary is dynastic line; victim is popular will when misaligned"
+      },
+      {
+        "reading_id": "republican_reading",
+        "commitment": "Legitimate authority derives from consent of the governed; the sovereign is sovereign by delegation, revocable",
+        "authority_grounding": "electoral mandate, constitutional procedure, social contract theory",
+        "sibling_readings": [
+          "monarchical_reading",
+          "constitutional_hybrid_reading"
+        ],
+        "expected_structural_delta": "Authority holder determined by election; periodic legitimacy test required; beneficiary is electorate (in theory); victim is dynastic claimants"
+      },
+      {
+        "reading_id": "constitutional_hybrid_reading",
+        "commitment": "Legitimate authority blends inherited symbol with delegated power; monarch reigns but does not rule",
+        "authority_grounding": "constitutional settlement (e.g., 1688 Glorious Revolution, Westminster model)",
+        "sibling_readings": [
+          "monarchical_reading",
+          "republican_reading"
+        ],
+        "expected_structural_delta": "Authority split: ceremonial inheritance + elected government; beneficiary is stability (continuity without absolutism); victim is logical purity of either pole"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "monarchical_reading",
+        "reading_b": "republican_reading",
+        "basis": "The monarchical axiom that legitimacy is birthright (cannot be granted or revoked by the people) contradicts the republican axiom that all political authority flows from consent (can always be revoked). No single coherent framework can hold both: accepting consent as the sole source of legitimacy requires rejecting birthright as a valid source, and vice versa."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "monarchical_reading",
+      "human_readable": "Monarchical Legitimacy (Inherited Sovereignty)",
+      "structural_delta": "Authority derives from bloodline; legitimacy grounded in dynastic continuity, not popular mandate",
+      "primary_observable": "Constitutional provisions for hereditary succession; absence of electoral mechanisms for head of state",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dynastic_line",
+      "victim": "popular_will_when_misaligned",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating one pole of the authority-grounding contest"
+    },
+    {
+      "claim_id": "republican_reading",
+      "human_readable": "Republican Legitimacy (Delegated Sovereignty)",
+      "structural_delta": "Authority derives from consent; legitimacy grounded in electoral mandate, revocable by the people",
+      "primary_observable": "Constitutional provisions for elected head of state; periodic elections; impeachment/recall mechanisms",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "electorate_in_theory",
+      "victim": "dynastic_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading instantiating opposing pole; axiom-contradictory to monarchical_reading"
+    },
+    {
+      "claim_id": "constitutional_hybrid_reading",
+      "human_readable": "Constitutional Hybrid (Reigning vs Ruling Split)",
+      "structural_delta": "Authority split between inherited ceremonial role and delegated executive power; monarch reigns, parliament rules",
+      "primary_observable": "Constitutional frameworks where monarch holds nominal sovereignty but elected government exercises real power (e.g., UK, Netherlands, Sweden)",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "institutional_stability",
+      "victim": "logical_consistency",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structural compromise reading; illustrates licensed plurality where both axioms coexist_with in practice despite axiom contradiction in theory"
+    },
+    {
+      "claim_id": "absolute_vs_limited_axis",
+      "human_readable": "Absolutism vs Limited Power (Extent of Sovereign Authority)",
+      "structural_delta": "Whether the sovereign's authority is unlimited (absolute monarchy/dictatorship) or constitutionally bounded",
+      "primary_observable": "Existence of constitutional limits, separation of powers, judicial review",
+      "epsilon_bin": "high",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: orthogonal to legitimacy-grounding question; concerns scope of power rather than source of legitimacy"
+    },
+    {
+      "claim_id": "stability_vs_accountability_tradeoff",
+      "human_readable": "Stability vs Accountability (Irremovability vs Revocability Trade-off)",
+      "structural_delta": "Hereditary systems trade accountability for stability; elected systems trade stability for accountability",
+      "primary_observable": "Constitutional crisis frequency; leadership continuity metrics; responsiveness to popular discontent",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "monarchical_reading",
+        "republican_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of legitimacy readings rather than a distinct reading of the kernel itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "monarchical_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "monarchical_reading"
+    },
+    {
+      "claim_id": "republican_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "republican_reading"
+    },
+    {
+      "claim_id": "constitutional_hybrid_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "constitutional_hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "absolute_vs_limited_axis",
+      "structural_delta": "Whether sovereign authority is unlimited or constitutionally bounded",
+      "hypothesis": "rope",
+      "deferral_reason": "Orthogonal to legitimacy-grounding question; concerns scope of power rather than source; both monarchies and republics can be absolute or limited"
+    },
+    {
+      "claim_id": "stability_vs_accountability_tradeoff",
+      "structural_delta": "Hereditary systems trade accountability for stability; elected systems trade for opposite",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of legitimacy readings rather than a distinct reading of the kernel; captured indirectly through generation of the three selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_hybrid_coherence",
+      "description": "Constitutional hybrid reading (Westminster model) exhibits coexists_with edge despite axiom contradiction. Is this licensed plurality that resolves the contest, or does it defer the contest by compartmentalizing the contradiction? Does the ceremonial/executive split eliminate the legitimacy question or merely relocate it?",
+      "source": "Axiom contradiction recognition + hybrid reading selection"
+    },
+    {
+      "id": "omega_divine_right_collapse",
+      "description": "Monarchical reading historically grounded in divine right doctrine; in secular modernity, does inherited legitimacy collapse to mere tradition (piton of historical inertia) or does it remain a coherent commitment system grounded in non-democratic authority principles?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + authority grounding instability"
+    },
+    {
+      "id": "omega_popular_sovereignty_extraction",
+      "description": "Republican reading claims electorate as beneficiary; but does electoral mechanism itself become a snare where procedural legitimacy masks substantive extraction by political class? Is 'consent of the governed' a rope (coordination) or a tangled_rope obscuring elite capture?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + tangled_rope hypothesis for republican_reading"
+    },
+    {
+      "id": "omega_absolute_power_orthogonality",
+      "description": "Deferred axis absolute_vs_limited may not be orthogonal; if monarchical legitimacy historically correlates with absolutism and republican with limited power, the correlation may be structural rather than contingent. Does legitimacy-source determine power-scope?",
+      "source": "Deferred axis absolute_vs_limited_axis + independence testing uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel recognition applied correctly: the monarchical and republican readings hold mutually exclusive axioms about legitimacy-source (birthright vs consent), emit structurally different constraints (different beneficiary/victim pairs, different ε profiles), and share a common substrate (the requirement that political authority have legitimacy). Constitutional hybrid reading introduces licensed plurality: axiom contradiction persists in theory but coexists_with in practice through structural compartmentalization."
+  },
+  "_seed_id": "monarchy_republic_legitimacy"
+}

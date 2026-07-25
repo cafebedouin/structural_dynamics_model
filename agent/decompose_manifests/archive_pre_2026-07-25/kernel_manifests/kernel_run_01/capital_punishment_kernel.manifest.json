@@ -1,0 +1,265 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Criminal Justice / Political Philosophy / Constitutional Law",
+  "family_id": "capital_punishment_kernel_2026",
+  "topic_summary": "Analysis of capital punishment as a contested kernel where three incompatible readings of state authority to kill—retributive desert, instrumental deterrence, and categorical impermissibility—emit structurally different constraints with distinct beneficiary/victim structures and authority groundings.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 7,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "State execution authority (24 US states retain; 23 abolished; global majority abolitionist)",
+      "Retributive justice advocates (Kantian lex talionis; proportionate desert)",
+      "Deterrence proponents (rational choice theory; execution as cost signal)",
+      "Abolitionists (Beccaria lineage; right-to-life framework; BLM racial justice)",
+      "Murder victims' families (divided; 2.5% report closure post-execution)",
+      "Death row condemned (200+ exonerated; irreversible error risk)",
+      "Prosecutors (override victim family preferences; pursue capital charges)",
+      "National Research Council (2012 report: deterrence evidence fundamentally flawed)"
+    ],
+    "key_tensions": [
+      "Retribution vs deterrence as justifications (incompatible authority groundings)",
+      "Empirical uncertainty on deterrence (NRC: existing research not informative)",
+      "Victim family interests—mixed authority (families divided; state claims to represent them)",
+      "Victim impact statements vs sentencing fairness (emotional testimony vs reasoned decision-making)",
+      "Racial discrimination (Black defendants more likely executed; Black victims less valued)",
+      "Cost vs resource allocation (capital litigation exceeds life imprisonment cost)",
+      "Irreversible error risk (200+ exonerations; innocent execution probability)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "State authority to impose death as criminal sanction—the legitimacy boundary of sovereign killing power",
+    "authority_description": "Contested: retributivists ground in moral desert and lex talionis; deterrence theorists ground in consequentialist public safety mandate; abolitionists deny any legitimate grounding",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_authority_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "state_killing_authority",
+    "readings": [
+      {
+        "reading_id": "retributive_desert",
+        "commitment": "Execution is morally required proportionate response to murder; murderer forfeits right to life",
+        "authority_grounding": "Kantian deontology; lex talionis; intrinsic moral desert independent of consequences",
+        "sibling_readings": [
+          "deterrence_instrument",
+          "categorical_impermissibility"
+        ],
+        "expected_structural_delta": "Murderer enters victim set (of disproportionate punishment if not executed); moral order and law-abiding citizens are beneficiaries; authority derives from desert not outcomes"
+      },
+      {
+        "reading_id": "deterrence_instrument",
+        "commitment": "Execution is legitimate if and only if it prevents future murders through rational deterrence",
+        "authority_grounding": "Consequentialist utilitarianism; state authority grounded in public safety maximization",
+        "sibling_readings": [
+          "retributive_desert",
+          "categorical_impermissibility"
+        ],
+        "expected_structural_delta": "Current condemned is instrumental sacrifice; future potential victims are beneficiaries; authority contingent on empirical deterrence evidence (currently absent per NRC)"
+      },
+      {
+        "reading_id": "categorical_impermissibility",
+        "commitment": "State killing is inherently illegitimate; right to life is inalienable even for murderers",
+        "authority_grounding": "Beccarian natural rights; human dignity as categorical constraint on state power",
+        "sibling_readings": [
+          "retributive_desert",
+          "deterrence_instrument"
+        ],
+        "expected_structural_delta": "Condemned person is victim of state violence; society benefits from resource reallocation and moral consistency; no legitimate authority for execution exists"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "retributive_desert",
+        "reading_b": "categorical_impermissibility",
+        "basis": "Retributive reading holds that moral desert can require death (murderer forfeits right to life); abolitionist reading holds right to life is inalienable (cannot be forfeited). No coherent framework can hold both that a right is inalienable AND that it can be forfeited through wrongdoing."
+      },
+      {
+        "reading_a": "deterrence_instrument",
+        "reading_b": "categorical_impermissibility",
+        "basis": "Deterrence reading treats persons as instrumentally sacrificeable for aggregate welfare; abolitionist reading treats persons as ends-in-themselves with inviolable dignity. Kantian deontology (which grounds abolition here) categorically rejects treating persons as mere means."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "retributive_desert",
+      "human_readable": "Retributive Desert Reading (Execution as Moral Requirement)",
+      "structural_delta": "Execution required by proportionate justice; murderer forfeits right to life through act",
+      "primary_observable": "Sentencing patterns in jurisdictions with mandatory death penalty for murder; philosophical coherence of lex talionis application",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "moral_order_and_law_abiding_citizens",
+      "victim": "murderer_if_not_executed_plus_condemned_under_abolitionist_reading",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct authority grounding (deontological desert); highest beneficiary/victim structural distinctiveness"
+    },
+    {
+      "claim_id": "deterrence_instrument",
+      "human_readable": "Deterrence Instrument Reading (Execution as Crime Prevention Tool)",
+      "structural_delta": "Execution legitimate only if empirically proven to deter future murders",
+      "primary_observable": "Homicide rate differentials between death penalty and abolitionist jurisdictions; NRC meta-analysis findings",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "potential_future_murder_victims",
+      "victim": "current_condemned_as_instrumental_sacrifice",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Consequentialist authority grounding incompatible with retributive; empirical evidence gap creates structural instability"
+    },
+    {
+      "claim_id": "categorical_impermissibility",
+      "human_readable": "Categorical Impermissibility Reading (State Killing as Rights Violation)",
+      "structural_delta": "Right to life inalienable; state execution inherently illegitimate regardless of desert or consequences",
+      "primary_observable": "Abolitionist jurisdiction count; constitutional right-to-life interpretations; exoneration rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "condemned_persons_and_wrongly_convicted",
+      "victim": "none_under_this_reading",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; captures irreversible error and racial discrimination tensions; beneficiary structure inverts other readings"
+    },
+    {
+      "claim_id": "victim_family_authority_contest",
+      "human_readable": "Victim Family Authority Contest (Whose Voice Legitimates Execution?)",
+      "structural_delta": "State claims to act for victims' families but families are divided; prosecutors override family preferences",
+      "primary_observable": "Victim family testimony patterns; prosecutor override frequency; closure achievement rates (2.5%)",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "prosecutors_claiming_victim_representation",
+      "victim": "victim_families_opposing_execution",
+      "downstream_of": [
+        "retributive_desert",
+        "deterrence_instrument"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within retributive_desert reading's authority grounding instability; victim impact statement tension documented in omega"
+    },
+    {
+      "claim_id": "racial_extraction_pattern",
+      "human_readable": "Racial Extraction Pattern (Systemic Discrimination in Application)",
+      "structural_delta": "Black defendants more likely executed; Black victims less valued; death penalty as racialized state violence",
+      "primary_observable": "Execution rates by defendant race and victim race; BLM abolitionist framework adoption",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "white_victims_and_prosecutors",
+      "victim": "Black_defendants_and_Black_victims_families",
+      "downstream_of": [
+        "retributive_desert",
+        "deterrence_instrument",
+        "categorical_impermissibility"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high epsilon but applies across all three readings; documented as omega for cross-reading analysis"
+    },
+    {
+      "claim_id": "irreversible_error_mountain",
+      "human_readable": "Irreversible Error Mountain (Execution Forecloses Exoneration)",
+      "structural_delta": "200+ exonerations demonstrate wrongful conviction risk; execution makes error permanent",
+      "primary_observable": "Exoneration count and time-to-exoneration; DNA evidence availability",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "categorical_impermissibility"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain feeding into categorical_impermissibility; error risk captured in that reading's constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "retributive_desert",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "retributive_desert"
+    },
+    {
+      "claim_id": "deterrence_instrument",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "deterrence_instrument"
+    },
+    {
+      "claim_id": "categorical_impermissibility",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "categorical_impermissibility"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "victim_family_authority_contest",
+      "structural_delta": "State claims victim representation but families divided; prosecutors override preferences",
+      "hypothesis": "snare",
+      "deferral_reason": "Authority grounding instability captured within retributive_desert reading; victim impact statement tension documented in omega_victim_voice"
+    },
+    {
+      "claim_id": "racial_extraction_pattern",
+      "structural_delta": "Black defendants more likely executed; Black victims less valued",
+      "hypothesis": "snare",
+      "deferral_reason": "High epsilon but applies across all three readings; warrants cross-reading analysis in omega_racial_discrimination rather than standalone axis"
+    },
+    {
+      "claim_id": "irreversible_error_mountain",
+      "structural_delta": "200+ exonerations; execution forecloses correction",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain feeding categorical_impermissibility; error risk integrated into that reading's constraint story"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_deterrence_empirics",
+      "description": "NRC 2012 report concludes existing deterrence research 'not informative'—neither proves nor disproves deterrent effect. Deterrence_instrument reading's authority grounding depends on empirical claim that cannot currently be verified. If deterrence is absent, does consequentialist framework collapse to categorical_impermissibility, or does retributive_desert become sole remaining justification?",
+      "source": "Tension 1 (Empirical Uncertainty); deterrence_instrument reading instability"
+    },
+    {
+      "id": "omega_victim_voice",
+      "description": "Victim impact statements institutionalized post-Payne v. Tennessee (1991), but 2.5% closure rate and prosecutor override of family preferences reveal authority contest: whose voice legitimates execution when families are divided? Retributive reading claims to vindicate victims but empirically fails; state appropriates victim voice to justify execution families may oppose.",
+      "source": "Deferred axis victim_family_authority_contest; Tensions 3 and 4"
+    },
+    {
+      "id": "omega_racial_discrimination",
+      "description": "Racial extraction pattern (Black defendants more likely executed; Black victims less valued) operates across all three readings but destabilizes each differently: retributive desert fails proportionality if applied discriminatorily; deterrence loses legitimacy if selectively applied; categorical_impermissibility gains force from systemic bias evidence. BLM abolitionist framework treats death penalty as racialized state violence—does this constitute a fourth reading or a meta-critique of all three?",
+      "source": "Deferred axis racial_extraction_pattern; Tension 5"
+    },
+    {
+      "id": "omega_cost_resource_allocation",
+      "description": "Capital litigation costs exceed life imprisonment; resources diverted from crime prevention. Does cost-benefit analysis undermine deterrence_instrument reading if marginal deterrence (even if proven) does not justify resource diversion? Or does it support categorical_impermissibility by revealing execution as net harm to public safety?",
+      "source": "Tension 6"
+    },
+    {
+      "id": "omega_retribution_deterrence_incompatibility",
+      "description": "Research context notes 'retribution considerations weigh as heavily against punishment by death as in favor of it.' If retributive and deterrence justifications are structurally incompatible (one grounds authority in desert, other in consequences), can they be combined in practice, or does their simultaneous invocation reveal incoherence in state killing authority itself?",
+      "source": "Tension 2; axiom_contradictions between readings"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings with axiom contradictions declared. Racial discrimination and victim voice tensions deferred to omega analysis rather than standalone axes to preserve three-reading budget. Deterrence empirical uncertainty documented in omega_deterrence_empirics."
+  },
+  "_seed_id": "capital_punishment_kernel"
+}

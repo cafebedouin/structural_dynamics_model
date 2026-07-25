@@ -1,0 +1,170 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Anthropology / Commitment Systems / Temporal Institutional Analysis",
+  "family_id": "aneyoshi_tsunami_stone_2011",
+  "topic_summary": "Analysis of the Aneyoshi tsunami stone's 'do not build below this line' directive across 78 years of non-catastrophe (1933-2011), examining whether the kernel decayed to commemorative symbol or retained behavioral force. The 2011 Tōhoku tsunami provided a D5 catastrophe-theorem test: Aneyoshi village survived while neighboring settlements were destroyed, suggesting the commitment remained operationally live.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Aneyoshi tsunami stone (1933 memorial marker with land-use prohibition)",
+      "Aneyoshi village (settlement that observed the stone's directive)",
+      "Neighboring coastal settlements (communities that built below equivalent elevation lines)",
+      "2011 Tōhoku tsunami (D5 catastrophe-theorem test event)",
+      "1933 Sanriku tsunami (kernel-generating catastrophe)"
+    ],
+    "key_tensions": [
+      "Commemorative-husk interpretation vs behavioral-competence interpretation of the stone's function across 78 years"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "human_readable": "Commemorative Husk Reading",
+      "structural_delta": "Stone as dead symbol: commitment decayed to ritual observance without behavioral constraint",
+      "primary_observable": "Land-use pattern divergence from stone directive; memorial tourism vs functional compliance",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents decay hypothesis"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "human_readable": "Behavioral Competence Reading",
+      "structural_delta": "Stone as live constraint: commitment retained operational force in land-use decisions",
+      "primary_observable": "Actual building locations relative to stone line; survival differential in 2011",
+      "epsilon_bin": "v_low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents retention hypothesis"
+    },
+    {
+      "claim_id": "temporal_decay_gradient",
+      "human_readable": "Temporal Decay Gradient (Generational Memory Loss)",
+      "structural_delta": "Rate of commitment erosion across generations absent catastrophe reinforcement",
+      "primary_observable": "Generational distance from 1933 event; land-use compliance by cohort age",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "commemorative_husk_reading",
+        "behavioral_competence_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent axis: measures temporal mechanism affecting kernel viability; distinct observable from kernel readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "kernel_id": "aneyoshi_stone_commitment",
+      "reading_id": "commemorative_husk_reading"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "kernel_id": "aneyoshi_stone_commitment",
+      "reading_id": "behavioral_competence_reading"
+    },
+    "temporal_decay_gradient"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "comparative_settlement_pattern",
+      "structural_delta": "Neighboring settlements' land-use decisions as control group",
+      "hypothesis": "mountain",
+      "deferral_reason": "Captured as observable within behavioral_competence_reading; not structurally independent"
+    },
+    {
+      "claim_id": "physical_tsunami_mechanics",
+      "structural_delta": "Wave height and inundation physics at stone elevation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint underlying both readings; not a distinct axis of commitment analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_intermediate_compliance",
+      "description": "Were there partial violations (building slightly below stone line) that went unpunished pre-2011? Intermediate states between full decay and full retention may exist.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_enforcement_mechanism",
+      "description": "What enforced the directive if behavioral_competence reading is correct? Social sanction, legal prohibition, or internalized norm? Mechanism unspecified in kernel contest.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_post_2011_recalibration",
+      "description": "Did 2011 survival reset the decay clock? If so, the kernel may now be in a different phase of its lifecycle than the 78-year period tested.",
+      "source": "§2.2 Probe 3 (Beneficiary Scan) - temporal boundary question"
+    },
+    {
+      "id": "omega_literacy_requirement",
+      "description": "Does the stone's function depend on literacy and historical knowledge transmission? If so, the commitment is not purely behavioral but requires cultural infrastructure.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest is well-defined with decisive empirical test (2011 tsunami). Temporal_decay_gradient passes independence test as distinct mechanism axis."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The directive 'do not build below this stone line' inscribed on the 1933 Aneyoshi tsunami memorial, stabilizing a land-use prohibition grounded in catastrophe memory",
+    "authority_description": "Authority derives from catastrophe witness testimony (1933 survivors) encoded in stone; legitimacy grounded in demonstrated predictive validity (2011 survival)",
+    "drift_status": "partial",
+    "candidate_pattern": "catastrophe_theorem_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "aneyoshi_stone_commitment",
+    "readings": [
+      {
+        "reading_id": "commemorative_husk_reading",
+        "commitment": "Stone as memorial artifact: commitment decayed to symbolic observance without behavioral constraint on land use",
+        "authority_grounding": "Historical preservation / tourism / ritual commemoration",
+        "sibling_readings": [
+          "behavioral_competence_reading"
+        ],
+        "expected_structural_delta": "High epsilon: land-use decisions made independently of stone directive; survival in 2011 attributed to luck or other factors; stone functions as museum piece"
+      },
+      {
+        "reading_id": "behavioral_competence_reading",
+        "commitment": "Stone as live land-use rule: commitment retained operational force in building location decisions across 78 years",
+        "authority_grounding": "Catastrophe memory / demonstrated predictive validity / internalized norm",
+        "sibling_readings": [
+          "commemorative_husk_reading"
+        ],
+        "expected_structural_delta": "Very low epsilon: land-use decisions constrained by stone directive; 2011 survival causally linked to compliance; stone functions as active regulatory mechanism"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "commemorative_husk_reading",
+        "reading_b": "behavioral_competence_reading",
+        "basis": "No single framework can hold both 'the commitment decayed to non-functional symbol' and 'the commitment retained operational constraint force' as simultaneously true for the same 78-year period. The 2011 survival outcome provides decisive evidence for one reading or the other."
+      }
+    ]
+  },
+  "_seed_id": "aneyoshi_tsunami_memory"
+}

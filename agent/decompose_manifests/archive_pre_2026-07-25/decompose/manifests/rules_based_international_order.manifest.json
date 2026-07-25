@@ -1,0 +1,274 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Relations / International Law / Political Economy",
+  "family_id": "rules_based_international_order_2026",
+  "topic_summary": "Analysis of the contested nature of the Rules-Based International Order (RBIO), examining whether it represents a neutral coordination framework or an extractive hegemonic structure. The topic centers on how different state actors interpret the legitimacy, universality, and amendability of post-WWII international norms and institutions.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "United States (post-WWII architect; primary norm enforcer)",
+      "China (revisionist power; alternative institution builder)",
+      "Russia (revisionist power; sovereignty maximalist)",
+      "United Nations Security Council (primary legitimation mechanism)",
+      "Bretton Woods Institutions (IMF/World Bank; economic governance)",
+      "International Criminal Court (selective jurisdiction enforcement)",
+      "Global South states (heterogeneous coalition; mixed dependency/resentment)"
+    ],
+    "key_tensions": [
+      "Universality claim vs selective enforcement (humanitarian intervention; ICC jurisdiction)",
+      "Sovereignty protection vs intervention authority (R2P doctrine; sanctions regimes)",
+      "Amendment impossibility vs functional obsolescence (UNSC veto; treaty revision deadlock)"
+    ],
+    "key_mechanisms": [
+      "UNSC P5 veto (grants 5 states absolute blocking authority)",
+      "Conditionality lending (IMF structural adjustment; World Bank project criteria)",
+      "Sanctions enforcement (SWIFT exclusion; secondary sanctions)",
+      "Norm entrepreneurship (humanitarian intervention precedents; atrocity prevention)"
+    ],
+    "key_absences": [
+      "Formal amendment process for core UN Charter provisions beyond Article 108/109",
+      "Binding dispute resolution for great power conflicts (UNSC deadlock endemic)",
+      "Representation mechanisms for post-colonial states in governance design"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The uncodified practice-norm complex of post-1945 international order: state sovereignty, territorial integrity, peaceful dispute resolution, and free trade/capital flows as mutually reinforcing and universally applicable",
+    "authority_description": "Interpretive legitimacy claimed through: (1) consent-based treaty law (UN Charter Article 2); (2) customary international law derived from state practice; (3) enforcement capacity via UNSC authorization and U.S.-led coalitions",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_sovereignty (state sovereignty as kernel commitment; competing claims about who legitimately interprets exceptions)",
+    "is_contested_kernel": true,
+    "kernel_id": "rbio_practice_norm_complex",
+    "readings": [
+      {
+        "reading_id": "liberal_institutional_reading",
+        "commitment": "RBIO norms are universal, consent-based, and revisable through legitimate multilateral processes; enforcement selectivity is a capacity problem, not a legitimacy problem",
+        "authority_grounding": "Democratic peace theory; consent-based treaty law; track record of conflict reduction vs pre-1945 era",
+        "sibling_readings": [
+          "hegemonic_extraction_reading",
+          "sovereignty_maximalist_reading"
+        ],
+        "expected_structural_delta": "Intervention justified when UNSC authorizes or grave atrocities occur; economic conditionality acceptable as contract terms; beneficiary: intervening states and their contractors; victim: targeted states and their civilian populations during sanctions"
+      },
+      {
+        "reading_id": "hegemonic_extraction_reading",
+        "commitment": "RBIO norms are a frozen hegemonic project: formally revisable but practically un-amendable due to P5 veto and institutional path-dependency; enforcement selectivity reveals extractive intent",
+        "authority_grounding": "Historical materialism; dependency theory; empirical record of selective enforcement (Iraq 2003 vs Chechnya; Libya vs Yemen)",
+        "sibling_readings": [
+          "liberal_institutional_reading",
+          "sovereignty_maximalist_reading"
+        ],
+        "expected_structural_delta": "Any intervention not authorized by target state is illegitimate; conditionality is coerced contract; beneficiary: U.S. and European capital; victim: Global South states and populations subjected to structural adjustment"
+      },
+      {
+        "reading_id": "sovereignty_maximalist_reading",
+        "commitment": "State sovereignty is absolute; RBIO norms legitimate only when they protect sovereignty against external interference; humanitarian exceptions are pretexts for regime change",
+        "authority_grounding": "Westphalian sovereignty; UN Charter Article 2(7) (non-intervention); post-colonial state formation experience",
+        "sibling_readings": [
+          "liberal_institutional_reading",
+          "hegemonic_extraction_reading"
+        ],
+        "expected_structural_delta": "No legitimate intervention authority beyond self-defense; conditionality acceptable only when target state can exit without cost; beneficiary: authoritarian regimes; victim: populations trapped under repressive governments with no external recourse"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "liberal_institutional_reading",
+        "reading_b": "hegemonic_extraction_reading",
+        "basis": "Liberal reading holds multilateral institutions CAN legitimately override sovereignty when authorized; hegemonic reading holds such authorization is itself structurally illegitimate due to frozen power distribution. No framework can hold both: either authorization process is legitimate or it is not."
+      },
+      {
+        "reading_a": "liberal_institutional_reading",
+        "reading_b": "sovereignty_maximalist_reading",
+        "basis": "Liberal reading accepts humanitarian intervention as legitimate exception to sovereignty; sovereignty maximalist reading holds sovereignty admits no exceptions. One requires accepting that external actors can legitimately judge internal affairs; the other categorically denies this."
+      },
+      {
+        "reading_a": "hegemonic_extraction_reading",
+        "reading_b": "sovereignty_maximalist_reading",
+        "basis": "Hegemonic reading accepts intervention could be legitimate if power distribution were equitable; sovereignty maximalist reading rejects intervention categorically regardless of who authorizes it. These are different foundational commitments about whether any external authority can ever override sovereignty."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liberal_institutional_reading",
+      "human_readable": "Liberal Institutional Reading (Universal Consent-Based Framework)",
+      "structural_delta": "RBIO norms are universal, revisable through legitimate processes; enforcement selectivity is capacity constraint not legitimacy flaw",
+      "primary_observable": "State consent to treaty ratification; UNSC authorization patterns; institutional participation rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "intervening_states_and_contractors",
+      "victim": "populations_under_sanctions_and_intervention",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant institutional framing; structural delta distinct from other two readings"
+    },
+    {
+      "claim_id": "hegemonic_extraction_reading",
+      "human_readable": "Hegemonic Extraction Reading (Frozen Western Project)",
+      "structural_delta": "RBIO norms are practically un-amendable hegemonic extraction; enforcement selectivity reveals extractive intent",
+      "primary_observable": "P5 veto patterns blocking reform; IMF/World Bank voting share vs global GDP distribution; intervention case selection (authorized vs unauthorized)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "u_s_and_european_capital",
+      "victim": "global_south_under_structural_adjustment",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; directly contests liberal reading's authority grounding"
+    },
+    {
+      "claim_id": "sovereignty_maximalist_reading",
+      "human_readable": "Sovereignty Maximalist Reading (Absolute Non-Intervention)",
+      "structural_delta": "State sovereignty is absolute; any external override is illegitimate regardless of multilateral authorization",
+      "primary_observable": "State invocations of Article 2(7); rejection of R2P doctrine; withdrawal from ICC/other tribunals",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "authoritarian_regimes",
+      "victim": "populations_under_repression_without_external_recourse",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading; completes the tripartite contest over intervention legitimacy"
+    },
+    {
+      "claim_id": "institutional_path_dependency",
+      "human_readable": "Institutional Path Dependency (Amendment Impossibility)",
+      "structural_delta": "UNSC P5 veto creates structural lock-in preventing governance reform even when majority supports change",
+      "primary_observable": "Failed reform attempts (G4 expansion bid 2005; Uniting for Consensus counter-proposal); veto use frequency",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hegemonic_extraction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural lock-in mechanism already captured in hegemonic_extraction_reading's enforcement selectivity observable"
+    },
+    {
+      "claim_id": "sanctions_as_coercive_instrument",
+      "human_readable": "Sanctions as Coercive Instrument (Economic Warfare via Financial Infrastructure)",
+      "structural_delta": "Secondary sanctions and SWIFT exclusion function as extra-territorial coercion bypassing UNSC authorization",
+      "primary_observable": "Treasury OFAC designation counts; SWIFT exclusion cases; third-party compliance rates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "sanctioning_states_enforcing_preferred_outcomes",
+      "victim": "civilian_populations_under_sanctions",
+      "downstream_of": [
+        "liberal_institutional_reading",
+        "hegemonic_extraction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism debate already captured in three selected readings; extractiveness overlaps with hegemonic_extraction_reading"
+    },
+    {
+      "claim_id": "multipolarity_transition",
+      "human_readable": "Multipolarity Transition (Power Distribution Shift)",
+      "structural_delta": "Relative decline of U.S./Western economic and military dominance creates enforcement capacity gap",
+      "primary_observable": "GDP PPP share of G7 vs BRICS; defense spending ratios; alternative institution membership (AIIB, SCO, BRICS+)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hegemonic_extraction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: power shift is context for kernel contest, not independent constraint; already implicit in hegemonic_extraction_reading's institutional voting share observable"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liberal_institutional_reading",
+      "kernel_id": "rbio_practice_norm_complex",
+      "reading_id": "liberal_institutional_reading"
+    },
+    {
+      "claim_id": "hegemonic_extraction_reading",
+      "kernel_id": "rbio_practice_norm_complex",
+      "reading_id": "hegemonic_extraction_reading"
+    },
+    {
+      "claim_id": "sovereignty_maximalist_reading",
+      "kernel_id": "rbio_practice_norm_complex",
+      "reading_id": "sovereignty_maximalist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_path_dependency",
+      "structural_delta": "UNSC P5 veto creates amendment impossibility",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mechanism already captured in hegemonic_extraction_reading's P5 veto observable"
+    },
+    {
+      "claim_id": "sanctions_as_coercive_instrument",
+      "structural_delta": "Secondary sanctions function as extra-territorial coercion",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism overlaps with three selected readings; extractiveness covered by hegemonic_extraction_reading"
+    },
+    {
+      "claim_id": "multipolarity_transition",
+      "structural_delta": "Power distribution shift creates enforcement capacity gap",
+      "hypothesis": "rope",
+      "deferral_reason": "Contextual condition for kernel contest, not independent constraint; implicit in hegemonic_extraction_reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernels_coherence",
+      "description": "Are these three genuine readings of one kernel, or three separate kernels masquerading as one? If sovereignty protection and free trade/capital flows are separable commitments with different historical trajectories, the kernel may fracture under analysis.",
+      "source": "§1.3-K coherence requirement"
+    },
+    {
+      "id": "omega_global_south_heterogeneity",
+      "description": "Global South states do not form a coherent bloc: some align with sovereignty maximalism (Russia-China), others with conditional liberalism (conditional on reform). Treating them as single victim/beneficiary set may obscure intra-South extraction dynamics.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): representation mechanisms"
+    },
+    {
+      "id": "omega_revision_mechanisms",
+      "description": "Is the order genuinely un-amendable, or are alternative institutions (AIIB, BRICS+) constituting de facto amendment through competitive governance? If exit + build alternative is viable, hegemonic_extraction_reading's claimed lock-in weakens.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): institutional_path_dependency"
+    },
+    {
+      "id": "omega_intervention_outcomes",
+      "description": "Do humanitarian interventions systematically produce worse outcomes than non-intervention? Outcome data (Libya post-2011, Iraq post-2003) bears on whether liberal_institutional_reading's capacity framing holds or collapses into extraction.",
+      "source": "F03 concern: liberal_institutional_reading may assume universal applicability without outcome evidence"
+    },
+    {
+      "id": "omega_sanctions_effectiveness",
+      "description": "Are sanctions effective coercion or performative signaling? If target states durably resist (Russia post-2022, Iran post-2012), the snare classification may overstate extractive yield.",
+      "source": "Deferred axis sanctions_as_coercive_instrument"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: liberal_institutional_reading assumes universal applicability and revisability through legitimate processes, but amendment mechanisms (Article 108/109) have never successfully reformed core governance structures. Generated omega_intervention_outcomes and omega_revision_mechanisms to bound this uncertainty. All three readings rest on contested empirical claims about enforcement patterns that training data may not adjudicate reliably."
+  },
+  "_seed_id": "rules_based_international_order"
+}

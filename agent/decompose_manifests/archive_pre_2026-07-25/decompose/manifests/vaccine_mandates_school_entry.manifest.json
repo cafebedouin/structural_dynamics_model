@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Law / Constitutional Rights / Bioethics",
+  "family_id": "public_health_mandate_boundary",
+  "topic_summary": "Analysis of the public health mandate as a contested kernel where the same legal/administrative authority to impose health interventions is read through fundamentally incompatible frameworks: public-health-primary (protecting vulnerable populations via collective obligation) versus bodily-autonomy-primary (individual rights against state-imposed medical intervention). Each reading generates structurally distinct constraints with non-overlapping victim sets.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Public Health Authority (state/administrative body with statutory mandate to impose interventions)",
+      "Immunocompromised Population (medically vulnerable; cannot safely vaccinate; depend on herd immunity)",
+      "Unvaccinated Population (refuse intervention on autonomy/religious/safety grounds)",
+      "Healthcare Infrastructure (hospitals/ICUs; capacity-limited commons)",
+      "Vaccine Mandate (coercive mechanism: employment/school/service access conditioned on compliance)",
+      "Emergency Declaration Framework (mechanism activating expanded authority)"
+    ],
+    "key_tensions": [
+      "Collective disease prevention vs individual bodily sovereignty",
+      "Vulnerability protection (immunocompromised) vs coercion harm (mandate-resistant)"
+    ],
+    "key_claims": [
+      "Public health mandates reduce community transmission and protect those who cannot protect themselves",
+      "Mandates constitute impermissible bodily coercion regardless of collective benefit",
+      "Emergency powers expand state authority beyond peacetime constitutional limits",
+      "Mandate resistance driven by distrust of pharmaceutical industry/regulatory capture"
+    ],
+    "key_mechanisms": [
+      "Herd immunity threshold enforcement (vaccination rate → pathogen reproductive number suppression)",
+      "Employment/education access conditioning (mandate compliance → retained livelihood/schooling)",
+      "Emergency authority escalation (declared crisis → suspended normal procedural constraints)"
+    ],
+    "key_absences": [
+      "Liability framework for vaccine injury (who bears cost when mandate-coerced individual harmed?)",
+      "Exit option analysis (can mandate-resistant relocate to jurisdiction without mandates? At what cost?)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The public health statutory mandate: codified legal authority to impose disease-control interventions on populations, grounded in police power doctrine and administrative law.",
+    "authority_description": "Public health agencies derive interpretive legitimacy from statutory delegation (legislative grants of emergency/police power) and claimed epidemiological expertise.",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition_lockout",
+    "is_contested_kernel": true,
+    "kernel_id": "public_health_mandate_authority",
+    "readings": [
+      {
+        "reading_id": "public_health_primary",
+        "commitment": "Public health mandate is an obligation to protect the vulnerable commons (immunocompromised, healthcare infrastructure) via collective action.",
+        "authority_grounding": "Epidemiological expertise; utilitarian harm minimization; police power precedent (Jacobson v. Massachusetts)",
+        "sibling_readings": [
+          "bodily_autonomy_primary",
+          "proportionality_reading"
+        ],
+        "expected_structural_delta": "Immunocompromised enter victim set when mandates fail; unvaccinated excluded from victim set (framed as free-riders imposing externality). High extractiveness on mandate-resistant (coercion via employment/service loss)."
+      },
+      {
+        "reading_id": "bodily_autonomy_primary",
+        "commitment": "Public health mandate is a categorical violation of bodily sovereignty; no collective benefit can justify non-consensual medical intervention.",
+        "authority_grounding": "Natural rights theory; religious liberty; Nuremberg Code informed consent principles",
+        "sibling_readings": [
+          "public_health_primary",
+          "proportionality_reading"
+        ],
+        "expected_structural_delta": "Unvaccinated enter victim set (coercion harm); immunocompromised excluded from victim set (no duty to protect via bodily invasion). Zero extractiveness on public-health-primary advocates (no coercion imposed on them)."
+      },
+      {
+        "reading_id": "proportionality_reading",
+        "commitment": "Mandate legitimacy depends on sliding scale: severity of threat, availability of alternatives, magnitude of coercion, and duration of imposition.",
+        "authority_grounding": "Constitutional balancing tests; administrative law proportionality doctrine; European Convention on Human Rights Article 8",
+        "sibling_readings": [
+          "public_health_primary",
+          "bodily_autonomy_primary"
+        ],
+        "expected_structural_delta": "Both immunocompromised and unvaccinated potentially in victim set depending on proportionality assessment. Extractiveness varies with threat level (high for Ebola-level pathogen, low for mild seasonal respiratory virus). Creates dynamic constraint rather than fixed victim boundary."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "public_health_primary",
+        "reading_b": "bodily_autonomy_primary",
+        "basis": "Public-health-primary holds that collective harm prevention can override individual bodily refusal (utilitarian framework with state as legitimate arbiter). Bodily-autonomy-primary holds that bodily sovereignty is non-overrideable regardless of collective consequences (deontological framework with individual as sole arbiter). No single coherent normative framework can hold both: accepting bodily sovereignty as absolute requires rejecting utilitarian override, and vice versa."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "public_health_primary",
+      "human_readable": "Public Health Primary Reading (Vulnerable Commons Protection Obligation)",
+      "structural_delta": "Mandate as obligation to protect immunocompromised and healthcare infrastructure via herd immunity enforcement",
+      "primary_observable": "ICU capacity utilization during outbreaks; immunocompromised infection/mortality rates; community transmission rates vs vaccination coverage",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "public_health_authority",
+      "victim": "mandate_resistant_population",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: instantiates kernel via public-health-primary framework with immunocompromised as protected class and mandate-resistant as cost-bearers"
+    },
+    {
+      "claim_id": "bodily_autonomy_primary",
+      "human_readable": "Bodily Autonomy Primary Reading (Categorical Non-Consent Principle)",
+      "structural_delta": "Mandate as categorical violation of bodily sovereignty regardless of collective benefit",
+      "primary_observable": "Employment/service exclusions for unvaccinated; religious exemption denial rates; litigation outcomes on bodily autonomy claims",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "public_health_authority",
+      "victim": "unvaccinated_population",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: instantiates kernel via bodily-autonomy framework with unvaccinated as victims and no duty to protect immunocompromised via coercion"
+    },
+    {
+      "claim_id": "proportionality_reading",
+      "human_readable": "Proportionality Reading (Sliding Scale Legitimacy)",
+      "structural_delta": "Mandate legitimacy varies with threat severity, alternative availability, coercion magnitude, and duration",
+      "primary_observable": "Case-fatality rate of pathogen; existence of treatment alternatives; economic cost of compliance/non-compliance; temporal scope of mandate",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: hybrid framework creating dynamic constraint boundary; structurally distinct from binary readings; provides coordination mechanism between extremes"
+    },
+    {
+      "claim_id": "regulatory_capture_mechanism",
+      "human_readable": "Regulatory Capture (Pharmaceutical Industry Influence on Mandate Policy)",
+      "structural_delta": "Public health authority decisions shaped by pharmaceutical industry lobbying and revolving-door employment",
+      "primary_observable": "Funding sources for regulatory agencies; employment transitions between pharma and public health leadership; lobbying expenditure vs mandate stringency",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "pharmaceutical_industry",
+      "victim": "mandate_resistant_population",
+      "downstream_of": [],
+      "feeds_into": [
+        "public_health_primary"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally feeds into public_health_primary reading but lower centrality than kernel readings themselves; captured implicitly via beneficiary analysis in primary reading"
+    },
+    {
+      "claim_id": "liability_void_mechanism",
+      "human_readable": "Liability Void (No Recourse for Mandate-Coerced Vaccine Injury)",
+      "structural_delta": "Legal immunity for vaccine manufacturers plus mandatory compliance creates uncompensated injury risk",
+      "primary_observable": "Vaccine injury compensation fund denial rates; legal immunity scope (PREP Act, VICP); economic cost of injury without recourse",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "pharmaceutical_industry",
+      "victim": "vaccine_injured_mandate_compliers",
+      "downstream_of": [
+        "public_health_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of public_health_primary reading but distinct victim set (injured compliers, not mandate resisters); omega material for expansion"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "public_health_primary",
+      "kernel_id": "public_health_mandate_authority",
+      "reading_id": "public_health_primary"
+    },
+    {
+      "claim_id": "bodily_autonomy_primary",
+      "kernel_id": "public_health_mandate_authority",
+      "reading_id": "bodily_autonomy_primary"
+    },
+    {
+      "claim_id": "proportionality_reading",
+      "kernel_id": "public_health_mandate_authority",
+      "reading_id": "proportionality_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "regulatory_capture_mechanism",
+      "structural_delta": "Pharmaceutical industry influence on mandate policy via lobbying and revolving door",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Lower centrality than kernel readings; captured implicitly via beneficiary analysis in public_health_primary reading"
+    },
+    {
+      "claim_id": "liability_void_mechanism",
+      "structural_delta": "Legal immunity plus mandate coercion creates uncompensated injury risk",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence with distinct victim set (injured compliers); omega expansion candidate"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_liability_framework",
+      "description": "Does the liability void (PREP Act immunity + mandatory compliance) convert the public-health-primary reading from tangled_rope to snare? If mandate-coerced individuals bear uncompensated injury risk, the constraint's extractiveness increases without changing its claimed type.",
+      "source": "Absence Inventory (§1.1) + deferred axis liability_void_mechanism"
+    },
+    {
+      "id": "omega_exit_cost_asymmetry",
+      "description": "What is the economic/social cost of exit for mandate resisters vs immunocompromised? If exit is impossible for immunocompromised (cannot relocate away from unvaccinated populations) but costly for mandate resisters (job loss, relocation), does this asymmetry affect epsilon bin classification?",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_proportionality_threshold",
+      "description": "At what case-fatality rate does proportionality_reading collapse into public_health_primary (consensus override) or bodily_autonomy_primary (consensus refusal)? The sliding-scale framework may be rope coordination only in mid-range threats.",
+      "source": "Pairwise independence test (§3.1)"
+    },
+    {
+      "id": "omega_regulatory_capture_weight",
+      "description": "If regulatory_capture_mechanism is confirmed (pharma funding drives mandate stringency beyond epidemiological necessity), does this reclassify public_health_primary from tangled_rope to snare with pharmaceutical_industry as primary beneficiary?",
+      "source": "Deferred axis regulatory_capture_mechanism"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings. Axiom contradiction declared for public_health_primary vs bodily_autonomy_primary (utilitarian override vs deontological non-overrideability). Proportionality_reading coexists with both as hybrid/mediating framework."
+  },
+  "_seed_id": "vaccine_mandates_school_entry"
+}

@@ -1,0 +1,265 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Technology / Religious History / Media Studies",
+  "family_id": "printing_press_reformation_2026",
+  "topic_summary": "Analysis of the relationship between printing press technology and the Protestant Reformation, examining whether vernacular scripture spread was a technologically-driven inevitability or a beneficiary-driven outcome shaped by reformers and printers with economic/ideological stakes. The kernel contest centers on technological determinism vs. structural beneficiary analysis.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Printing Press (Gutenberg technology, 1450s onward)",
+      "Protestant Reformers (Luther, Calvin, Tyndale - vernacular translation advocates)",
+      "Commercial Printers (guild members, economic actors seeking profitable markets)",
+      "Catholic Church (institutional authority claiming Latin scripture monopoly)",
+      "Vernacular Scripture (translated Bibles in German, English, French)",
+      "Literate Laity (emerging reading public, urban artisans/merchants)"
+    ],
+    "key_tensions": [
+      "Technological capacity (press can print anything) vs. selective deployment (reformers/printers chose vernacular scripture over other texts)",
+      "Deterministic framing (technology causes reformation) vs. beneficiary framing (technology deployed by actors with stakes in decentralization)"
+    ],
+    "key_mechanisms": [
+      "Market demand creation: vernacular Bibles became profitable commodity once theological legitimacy granted",
+      "Authority bypass: printing circumvented manuscript control by ecclesiastical institutions",
+      "Network effects: each printed Bible increased demand for literacy, further Bible sales"
+    ],
+    "key_absences": [
+      "Counterfactual constraint: printing existed in Korea/China centuries earlier without triggering analogous religious decentralization - what structural preconditions were necessary?",
+      "Catholic Counter-Reformation printing: Church also used press technology for Latin texts, indulgences, apologetics - why did decentralized deployment win?",
+      "Economic beneficiary analysis: who profited from vernacular scripture market vs. Latin monopoly? Printers' guild politics absent from deterministic accounts"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The relationship between printing press technology and Protestant Reformation as causal mechanism",
+    "authority_description": "Historical interpretation grounded in either technological determinism (press causes reformation) or structural beneficiary analysis (press deployed by actors with decentralization stakes)",
+    "drift_status": "functioning",
+    "candidate_pattern": "contested_kernel_technology_determinism",
+    "is_contested_kernel": true,
+    "kernel_id": "press_reformation_causality",
+    "readings": [
+      {
+        "reading_id": "technological_inevitability",
+        "commitment": "Printing press technology made vernacular scripture spread inevitable through reduced reproduction costs and information access",
+        "authority_grounding": "Technological determinism - physical capacity of technology determines social outcomes",
+        "sibling_readings": [
+          "beneficiary_deployment",
+          "precondition_convergence"
+        ],
+        "expected_structural_delta": "Technology as mountain constraint - press physics constrain outcomes; reformers/printers as passive deployers; reformation becomes engineering problem"
+      },
+      {
+        "reading_id": "beneficiary_deployment",
+        "commitment": "Reformers and printers deployed printing technology to advance decentralization because they held structural stakes in breaking ecclesiastical monopoly",
+        "authority_grounding": "Structural beneficiary analysis - technology adoption reflects deployer incentives",
+        "sibling_readings": [
+          "technological_inevitability",
+          "precondition_convergence"
+        ],
+        "expected_structural_delta": "Technology as rope constraint - press enables but does not compel; reformers/printers as active beneficiaries extracting from Latin monopoly; reformation becomes beneficiary coordination problem"
+      },
+      {
+        "reading_id": "precondition_convergence",
+        "commitment": "Printing technology required specific structural preconditions (urban literacy, weakened imperial authority, vernacular language standardization) to trigger reformation - same technology in different context produces different outcome",
+        "authority_grounding": "Comparative historical analysis - technology effects conditional on institutional/cultural substrate",
+        "sibling_readings": [
+          "technological_inevitability",
+          "beneficiary_deployment"
+        ],
+        "expected_structural_delta": "Technology as scaffold constraint - press necessary but insufficient; reformation requires alignment of multiple independent constraints; Korean/Chinese printing counterfactual becomes central"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "technological_inevitability",
+        "reading_b": "beneficiary_deployment",
+        "basis": "Inevitability axiom (technology physics determines outcomes regardless of actor incentives) cannot coexist with beneficiary axiom (outcomes reflect deployer stakes and extraction targets) - one treats reformers/printers as causal, other as epiphenomenal"
+      },
+      {
+        "reading_a": "technological_inevitability",
+        "reading_b": "precondition_convergence",
+        "basis": "Inevitability axiom (same technology produces same outcome across contexts) directly contradicts precondition axiom (same technology in Korea/China without reformation proves technology insufficient) - no framework holds both"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "technological_inevitability",
+      "human_readable": "Technological Inevitability (Press Physics Determine Outcomes)",
+      "structural_delta": "Printing press reduces reproduction costs by 95%+ and eliminates manuscript bottleneck, making vernacular scripture spread inevitable regardless of actor incentives",
+      "primary_observable": "Cost-per-page reduction ratio; print volume growth curves; technology diffusion timelines",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading - technological determinism baseline; mountain classification treats press physics as constraint foundation"
+    },
+    {
+      "claim_id": "beneficiary_deployment",
+      "human_readable": "Beneficiary Deployment (Reformers/Printers Extract from Monopoly)",
+      "structural_delta": "Protestant reformers and commercial printers held structural stakes in breaking Catholic Latin monopoly - press technology enabled extraction but did not compel it",
+      "primary_observable": "Printer guild records showing vernacular scripture profit margins vs. Latin texts; reformer writings on decentralization strategy; counterfactual of Catholic press usage",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reformers_printers_coalition",
+      "victim": "ecclesiastical_latin_monopoly",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading - beneficiary analysis foregrounds extraction dynamics; tangled_rope classification captures coordination between reformers and economic actors"
+    },
+    {
+      "claim_id": "precondition_convergence",
+      "human_readable": "Precondition Convergence (Technology Conditional on Substrate)",
+      "structural_delta": "Printing required convergence of urban literacy, weakened imperial authority, vernacular standardization, and theological legitimacy crisis to trigger reformation - Korean/Chinese printing counterfactual proves technology insufficient",
+      "primary_observable": "Comparative case analysis of printing technology in different institutional contexts; literacy rate thresholds; imperial vs. fragmented authority structures",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading - comparative historical control; scaffold classification captures contingency and institutional preconditions"
+    },
+    {
+      "claim_id": "literacy_threshold_gate",
+      "human_readable": "Literacy Threshold Gate (Reading Public as Necessary Precondition)",
+      "structural_delta": "Vernacular scripture market required urban literacy rate above 15-20% threshold - technology useless without readers",
+      "primary_observable": "Urban literacy rates 1450-1550; correlation between literacy and vernacular Bible sales; regional variation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "precondition_convergence"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within precondition_convergence reading as one substrate element"
+    },
+    {
+      "claim_id": "censorship_evasion_mechanism",
+      "human_readable": "Censorship Evasion Mechanism (Distributed Production Defeats Control)",
+      "structural_delta": "Printing enabled distributed production across multiple cities/jurisdictions, making Catholic censorship unenforceable - structural bypass of centralized manuscript control",
+      "primary_observable": "Number of printing centers producing vernacular scripture; Index Librorum Prohibitorum enforcement failure rates; smuggling networks",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "beneficiary_deployment"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism subsumed within beneficiary_deployment reading - technology enables extraction via institutional bypass"
+    },
+    {
+      "claim_id": "catholic_counter_deployment",
+      "human_readable": "Catholic Counter-Deployment (Church Also Adopted Press Technology)",
+      "structural_delta": "Catholic Church actively used printing for Latin texts, apologetics, and indulgence production - technology itself was neutral, deployment reflected beneficiary incentives",
+      "primary_observable": "Catholic press output volume 1450-1600; Latin vs. vernacular print ratios by institutional sponsor; Jesuit printing operations",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "beneficiary_deployment"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: critical counterfactual evidence for beneficiary reading but structurally redundant with censorship_evasion_mechanism - both demonstrate technology neutrality"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "technological_inevitability",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "technological_inevitability"
+    },
+    {
+      "claim_id": "beneficiary_deployment",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "beneficiary_deployment"
+    },
+    {
+      "claim_id": "precondition_convergence",
+      "kernel_id": "press_reformation_causality",
+      "reading_id": "precondition_convergence"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "literacy_threshold_gate",
+      "structural_delta": "Urban literacy rate threshold as necessary precondition for vernacular scripture market",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured as substrate element within precondition_convergence reading"
+    },
+    {
+      "claim_id": "censorship_evasion_mechanism",
+      "structural_delta": "Distributed printing production defeats centralized Catholic censorship",
+      "hypothesis": "rope",
+      "deferral_reason": "Mechanism subsumed within beneficiary_deployment reading as institutional bypass"
+    },
+    {
+      "claim_id": "catholic_counter_deployment",
+      "structural_delta": "Catholic Church also adopted press for Latin texts and apologetics",
+      "hypothesis": "rope",
+      "deferral_reason": "Critical counterfactual for beneficiary reading but structurally redundant with censorship_evasion - both demonstrate technology neutrality"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_korea_china_counterfactual",
+      "description": "Korean movable type (1230s) and Chinese woodblock printing (800s CE) did not trigger analogous religious decentralization despite earlier technology - what structural preconditions differentiate Europe 1517? If technology insufficient, inevitability reading collapses to scaffold.",
+      "source": "Absence Inventory (Dark Matter Probe 2) + precondition_convergence reading"
+    },
+    {
+      "id": "omega_catholic_press_volume",
+      "description": "Catholic Church printed substantial Latin apologetics, indulgences, devotional materials 1450-1600 - if technology was neutral tool, why did decentralized deployment (vernacular) win market? Beneficiary reading requires quantified comparison of economic incentives.",
+      "source": "Deferred axis catholic_counter_deployment + beneficiary_deployment reading"
+    },
+    {
+      "id": "omega_language_standardization",
+      "description": "Vernacular printing required prior language standardization (German dialects, English variants) - which was cause, which effect? If printing drove standardization, inevitability reading gains strength. If standardization preceded printing, scaffold reading gains strength.",
+      "source": "Precondition_convergence reading + Dark Matter Probe 1 (operational medium)"
+    },
+    {
+      "id": "omega_beneficiary_coalition_stability",
+      "description": "Reformers and printers held aligned interests in 1517-1550 but diverged afterward (state churches, licensing) - was reformation-era coalition contingent or structurally stable? If contingent, beneficiary reading requires temporal scope limitation.",
+      "source": "Beneficiary_deployment reading + Dark Matter Probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_mountain_classification",
+      "description": "Technological_inevitability reading treats press as mountain (physics determines outcomes), but human choice selected vernacular over other printable texts (classical literature, scientific treatises). If selection reflects beneficiary stakes, mountain reclassifies to rope or tangled_rope.",
+      "source": "F03 (Hasty Generalization) + technological_inevitability vs beneficiary_deployment axiom contradiction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: technological_inevitability reading classifies press as mountain (physics determines outcomes) but vernacular scripture was one choice among many printable texts. Selection reflects beneficiary stakes, not technological compulsion. Generated omega_mountain_classification to bound this uncertainty. All three readings generate structurally distinct constraints with different epsilon bins and beneficiary/victim structures - kernel decomposition valid."
+  },
+  "_seed_id": "printing_press_reformation"
+}

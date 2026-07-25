@@ -1,0 +1,190 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Cultural Anthropology / Technology Adoption / Behavioral Economics",
+  "family_id": "fork_adoption_overbite_2026",
+  "topic_summary": "Analysis of the hypothesis that widespread fork adoption in Europe altered bite configuration and contributed to the reduction of edge-to-edge bite (overbite development), representing a case of structural change through technology-mediated behavioral drift rather than conscious selection. The fork case tests whether path-naturalization can occur without identifiable beneficiaries when an alternative simply becomes unavailable through disuse.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Fork (eating utensil technology, 11th-17th century European diffusion)",
+      "Overbite/dental occlusion (vertical overlap of upper over lower incisors)",
+      "Edge-to-edge bite (historical human dental configuration)",
+      "Table manners code (civilizing process behavioral norms)",
+      "Knife-based eating (pre-fork alternative requiring anterior tooth engagement)"
+    ],
+    "key_tensions": [
+      "Fork-mediated vs anterior-tooth-mediated food processing (mechanical path selection)",
+      "Conscious etiquette adoption vs unconscious biomechanical consequence (intentionality)"
+    ],
+    "key_mechanisms": [
+      "Anterior tooth disengagement (fork eliminates need for incisor tearing/holding)",
+      "Developmental plasticity (juvenile jaw development responds to loading patterns)",
+      "Technology-behavior-morphology feedback (tool use → behavior → skeletal adaptation)"
+    ],
+    "key_absences": [
+      "Beneficiary of overbite emergence (no actor gained advantage from the shift)",
+      "Selection pressure favoring overbite (no fitness or social reward)",
+      "Counter-technology preserving edge-to-edge bite (no fork-alternative maintenance path)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "fork_mechanical_substitution",
+      "human_readable": "Fork as Mechanical Substitution (Anterior Tooth Disengagement)",
+      "structural_delta": "Fork eliminates functional requirement for anterior tooth engagement in food processing",
+      "primary_observable": "Frequency of incisor loading during eating; historical fork adoption rates vs dental wear patterns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "overbite_developmental_drift",
+        "bite_configuration_naturalization"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain establishing physical constraint base; highest inbound-to-downstream ratio"
+    },
+    {
+      "claim_id": "overbite_developmental_drift",
+      "human_readable": "Overbite as Developmental Drift (Biomechanical Consequence)",
+      "structural_delta": "Reduced anterior loading during growth permits vertical maxillary development unconstrained by functional occlusion",
+      "primary_observable": "Overbite prevalence correlation with fork-adoption timeline; comparative dental morphology pre/post-fork populations",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "fork_mechanical_substitution"
+      ],
+      "feeds_into": [
+        "bite_configuration_naturalization"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Mediating rope between technology and path-naturalization; necessary causal link"
+    },
+    {
+      "claim_id": "bite_configuration_naturalization",
+      "human_readable": "Bite Configuration Naturalization (Capacity Lost by Disuse)",
+      "structural_delta": "Edge-to-edge bite becomes unavailable as developmental pathway through multi-generational disuse; no conscious selection or beneficiary",
+      "primary_observable": "Cross-cultural overbite prevalence in fork-adopting vs non-fork populations; reversibility experiments",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "edge_to_edge_bite_developmental_capacity",
+      "downstream_of": [
+        "fork_mechanical_substitution",
+        "overbite_developmental_drift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node; cleanest test case for beneficiary-less path-naturalization"
+    },
+    {
+      "claim_id": "etiquette_coordination_driver",
+      "human_readable": "Etiquette Coordination (Civilizing Process Driver)",
+      "structural_delta": "Fork adoption driven by social coordination around table manners rather than functional superiority",
+      "primary_observable": "Historical etiquette manual proliferation; fork adoption correlation with courtly vs peasant populations",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "fork_mechanical_substitution"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: cultural coordination mechanism; captured indirectly via fork_mechanical_substitution mountain"
+    },
+    {
+      "claim_id": "evolutionary_misalignment_cost",
+      "human_readable": "Evolutionary Misalignment Cost (Malocclusion Increase)",
+      "structural_delta": "Overbite associated with increased orthodontic pathology; mismatch between derived occlusion and evolutionary baseline",
+      "primary_observable": "Malocclusion prevalence rates; orthodontic intervention rates in fork-adopting populations",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "individuals_with_severe_overbite",
+      "downstream_of": [
+        "overbite_developmental_drift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: secondary health consequence; omega material regarding cost-benefit assessment"
+    }
+  ],
+  "generation_sequence": [
+    "fork_mechanical_substitution",
+    "overbite_developmental_drift",
+    "bite_configuration_naturalization"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "etiquette_coordination_driver",
+      "structural_delta": "Fork adoption via social coordination around table manners",
+      "hypothesis": "rope",
+      "deferral_reason": "Cultural mechanism; captured indirectly via fork_mechanical_substitution mountain establishing technology presence"
+    },
+    {
+      "claim_id": "evolutionary_misalignment_cost",
+      "structural_delta": "Overbite associated with increased orthodontic pathology",
+      "hypothesis": "snare",
+      "deferral_reason": "Secondary health consequence; omega material regarding whether path-naturalization imposes long-term cost"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_causality_direction",
+      "description": "Does fork adoption cause overbite, or does some third factor (e.g., grain processing technology, cooking methods) drive both? Correlation-causation uncertainty in historical population data.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — missing experimental control for confounders"
+    },
+    {
+      "id": "omega_reversibility",
+      "description": "Is bite configuration truly naturalized (irreversible at population level) or could targeted intervention restore edge-to-edge developmental capacity? Test of piton permanence.",
+      "source": "Generation constraint — primary_observable includes 'reversibility experiments' but no data cited"
+    },
+    {
+      "id": "omega_beneficiary_absence",
+      "description": "Is the absence of beneficiaries real or observational artifact? Could fork manufacturers, etiquette arbiters, or orthodontists constitute indirect beneficiaries? Test case validity depends on true beneficiary-lessness.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — topic claims no beneficiary but professional groups may benefit downstream"
+    },
+    {
+      "id": "omega_malocclusion_cost",
+      "description": "If overbite increases orthodontic pathology (deferred axis evolutionary_misalignment_cost), does beneficiary-less naturalization impose long-term population health cost? Cost-benefit assessment missing.",
+      "source": "Deferred axis evolutionary_misalignment_cost — mod epsilon snare"
+    },
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Topic flagged as contested kernel but no readings identified. Edge-to-edge vs overbite are outcomes, not interpretive commitments. Fork adoption is uncontested technology diffusion, not kernel contest. Is this misclassification?",
+      "source": "§1.3-K kernel recognition — topic does not meet 'shared commitment read differently' test"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F03 detected: fork_mechanical_substitution classified as mountain but requires empirical validation of causal chain (correlation vs causation). F01 detected: topic submitted as 'contested kernel' but analysis finds no interpretive contest — edge-to-edge vs overbite are biomechanical outcomes, not readings of a shared commitment. Generated omega_kernel_collapse and omega_causality_direction to bound these uncertainties."
+  },
+  "commitment_system_recognition": {
+    "is_contested_kernel": false,
+    "collapse_reason": "Topic does not meet contested kernel criteria per §1.3-K. No shared commitment exists that parties read differently. Fork adoption is uncontested technology diffusion; edge-to-edge vs overbite are biomechanical outcomes (consequences of tool use), not interpretive readings of a stabilized kernel. The 'bite configuration commitment' phrase in prompt appears to be metaphorical — there is no authority structure adjudicating legitimate bite configurations, no interpretive contest over what correct occlusion means. This is standard causal analysis (technology → behavior → morphology), not kernel/reading decomposition. Decomposed into ordinary axes with plain string claim_ids."
+  },
+  "_seed_id": "fork_overbite_disuse"
+}

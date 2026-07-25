@@ -1,0 +1,128 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Transportation Engineering / Institutional Coordination / Historical Path Dependency",
+  "family_id": "traffic_handedness_convention",
+  "topic_summary": "Analysis of the traffic convention mandating which side of the road vehicles drive on (right-hand vs left-hand). This is a coordination standard with no inherent physical superiority of either choice, but with massive switching costs once established.",
+  "extraction_summary": {
+    "entity_count": 3,
+    "claim_count": 2,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "National traffic authorities (enforcement bodies setting and maintaining the standard)",
+      "Vehicle manufacturers (design infrastructure around dominant convention)",
+      "International border crossings (sites where conventions collide)"
+    ],
+    "key_tensions": [
+      "Coordination efficiency vs switching cost inertia (standardization gains vs transition impossibility)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that all vehicles within a jurisdiction must use the same side of the road",
+    "authority_description": "State traffic law enforcement; legitimacy grounded in coordination necessity rather than interpretive tradition",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "All supposed 'readings' of this topic converge on the same constraint structure: a coordination standard with arbitrary choice but mandatory uniformity. Right-hand and left-hand are not different interpretive commitments producing different constraints — they are two instances of the identical constraint type (coordination rope) with flipped parameters. No party 'reads' the coordination requirement differently; they merely instantiated different arbitrary choices historically. The disagreement is about WHICH standard to adopt, not about what KIND of constraint the standard creates."
+  },
+  "axes": [
+    {
+      "claim_id": "coordination_lock_in",
+      "human_readable": "Coordination Lock-In (Network Effects of Handedness Choice)",
+      "structural_delta": "Once a handedness convention is established, switching costs (vehicle redesign, infrastructure, retraining, accident risk during transition) create irreversible lock-in",
+      "primary_observable": "Cost estimate for full national handedness switch; number of countries that have successfully switched post-1950",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "border_crossing_friction"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core structural constraint; upstream to all other dynamics"
+    },
+    {
+      "claim_id": "border_crossing_friction",
+      "human_readable": "Border Crossing Friction (Convention Collision Zones)",
+      "structural_delta": "At borders between right-hand and left-hand jurisdictions, infrastructure must manage the transition (lane crossovers, signage, accident risk)",
+      "primary_observable": "Accident rates at handedness-transition borders vs same-handedness borders; infrastructure cost per transition point",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "coordination_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct observable (border infrastructure vs national switching cost); downstream consequence of lock-in"
+    },
+    {
+      "claim_id": "manufacturing_standardization",
+      "human_readable": "Manufacturing Standardization (Vehicle Design Asymmetry)",
+      "structural_delta": "Vehicle manufacturers design for dominant global convention (right-hand traffic = left-hand drive vehicles), creating cost asymmetry for minority-convention markets",
+      "primary_observable": "Price differential for right-hand-drive vehicles in right-hand-traffic markets; production volume ratios",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "right_hand_traffic_markets",
+      "victim": "left_hand_traffic_markets",
+      "downstream_of": [
+        "coordination_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via coordination_lock_in rope; manufacturing asymmetry is a downstream consequence of the same network effect observable"
+    }
+  ],
+  "generation_sequence": [
+    "coordination_lock_in",
+    "border_crossing_friction"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "manufacturing_standardization",
+      "structural_delta": "Vehicle design asymmetry favoring dominant global convention",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of coordination_lock_in with overlapping observable (both measure network effect costs); limited independent structural yield"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Topic was flagged as contested kernel but analysis reveals no genuine readings. Right-hand vs left-hand are not different interpretive commitments — they are two instances of the same coordination constraint with arbitrary parameter choice. The 'contest' is historical (which choice was made) not structural (what kind of constraint exists).",
+      "source": "§1.3-K kernel/reading decomposition"
+    },
+    {
+      "id": "omega_pedestrian_handedness",
+      "description": "Does pedestrian flow convention (which side of sidewalk/stairway) correlate with vehicle handedness? If so, is it a separate rope or the same coordination constraint extended to non-vehicular traffic?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_cognitive_asymmetry",
+      "description": "Is there any measurable safety difference between right-hand and left-hand traffic for populations with different handedness distributions? If yes, the rope may have a weak mountain component (neurological asymmetry).",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model assumes pure coordination, but human cognitive asymmetry may introduce physical constraint"
+    },
+    {
+      "id": "omega_colonial_imposition",
+      "description": "For countries that inherited handedness from colonial powers, is the lock-in a rope (coordination) or a piton (atrophied sovereignty)? Post-independence switching attempts (e.g., Samoa 2009) suggest some view it as reversible.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic is structurally simpler than kernel flag suggested — pure coordination problem with no contested interpretive layer."
+  }
+}

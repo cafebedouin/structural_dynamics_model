@@ -1,0 +1,206 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Arms Control / Treaty Interpretation",
+  "family_id": "npt_regime_structure",
+  "topic_summary": "Analysis of the Nuclear Non-Proliferation Treaty as a contested commitment system where nuclear weapons states and non-nuclear weapons states read the same treaty text to generate structurally different constraint regimes. The NPT kernel stabilizes horizontal proliferation prevention while creating interpretive space for vertical proliferation legitimacy.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear Weapons States (P5 - US, Russia, UK, France, China; recognized possessors under NPT Article IX.3)",
+      "Non-Nuclear Weapons States (191 signatories committed to non-acquisition under Article II)",
+      "International Atomic Energy Agency (verification mechanism under Article III)",
+      "Treaty on the Prohibition of Nuclear Weapons (2017 competing regime, not signed by NWS)",
+      "Article VI (disarmament obligation clause)",
+      "Article X (withdrawal mechanism)"
+    ],
+    "key_tensions": [
+      "Horizontal non-proliferation (NWS → NNWS constraint) vs vertical disarmament (NNWS → NWS constraint demand)",
+      "Sovereign right to withdraw (Article X escape clause) vs treaty stability (collective security architecture)"
+    ],
+    "key_mechanisms": [
+      "IAEA safeguards (technical verification of civilian nuclear programs)",
+      "Security Council enforcement (treaty violation triggers Chapter VII authority)",
+      "Review Conference cycle (5-year interpretive contestation forum)"
+    ],
+    "key_absences": [
+      "No enforcement mechanism for Article VI disarmament obligations",
+      "No definition of 'at an early date' in Article VI language"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "nws_reading",
+      "human_readable": "Nuclear Weapons States' Reading (Non-Proliferation Priority)",
+      "structural_delta": "Treaty read as permanent non-proliferation constraint on NNWS with discretionary disarmament timeline for NWS",
+      "primary_observable": "NWS modernization spending vs Article VI compliance rhetoric at Review Conferences; IAEA safeguards budget allocation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "nuclear_weapons_states",
+      "victim": "non_nuclear_weapons_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Instantiates authority structure benefiting NWS through interpretive control of ambiguous Article VI"
+    },
+    {
+      "claim_id": "nnws_reading",
+      "human_readable": "Non-Nuclear Weapons States' Reading (Disarmament Priority)",
+      "structural_delta": "Treaty read as mutual bargain where NNWS restraint purchases NWS disarmament obligation",
+      "primary_observable": "NNWS coalition statements at Review Conferences; TPNW signing as exit threat signal",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "global_security_advocates",
+      "victim": "nuclear_weapons_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Counter-reading with distinct beneficiary structure; reading generates constraints on NWS that NWS reading denies"
+    },
+    {
+      "claim_id": "withdrawal_threshold_reading",
+      "human_readable": "Article X Withdrawal Threshold Reading (Exit vs Entrapment)",
+      "structural_delta": "Interpretation of 'extraordinary events' clause as low-threshold exit (sovereignty preservation) vs high-threshold trap (regime stability)",
+      "primary_observable": "North Korea precedent effects; Security Council response to withdrawal notices",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "threshold_nuclear_states",
+      "victim": "regime_stability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structural independence from disarmament axis; addresses regime exit mechanism as separate interpretive contest"
+    },
+    {
+      "claim_id": "peaceful_use_ambiguity",
+      "human_readable": "Peaceful Use Ambiguity (Article IV Dual-Use Technology)",
+      "structural_delta": "Inalienable right to peaceful nuclear technology vs proliferation risk of dual-use enrichment/reprocessing",
+      "primary_observable": "Iran enrichment dispute; Japan's plutonium stockpile; technology transfer denial patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "supplier_states",
+      "victim": "technology_recipient_states",
+      "downstream_of": [],
+      "feeds_into": [
+        "nws_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: feeds into NWS reading but lower centrality; distinct observable (technology transfer) separates from disarmament/withdrawal axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "nws_reading",
+      "kernel_id": "npt_treaty_text",
+      "reading_id": "nws_reading"
+    },
+    {
+      "claim_id": "nnws_reading",
+      "kernel_id": "npt_treaty_text",
+      "reading_id": "nnws_reading"
+    },
+    {
+      "claim_id": "withdrawal_threshold_reading",
+      "kernel_id": "npt_treaty_text",
+      "reading_id": "withdrawal_threshold_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "peaceful_use_ambiguity",
+      "structural_delta": "Inalienable right to peaceful nuclear technology vs proliferation risk",
+      "hypothesis": "snare",
+      "deferral_reason": "Distinct observable (technology transfer vs interpretive authority) but feeds into NWS reading; lower centrality than selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_article_vi_temporality",
+      "description": "Article VI requires disarmament 'at an early date' but provides no temporal benchmark. Is this deliberate ambiguity (enabling partial drift) or drafting failure? NWS reading treats 'early' as indefinitely elastic; NNWS reading treats it as breached after 55 years.",
+      "source": "Absence Inventory (§1.1) - no definition of temporal obligation"
+    },
+    {
+      "id": "omega_tpnw_regime_fragmentation",
+      "description": "Does TPNW represent NNWS exit from NPT interpretive contest (abandoning the kernel) or escalation within it (leveraging treaty competition)? If exit, NPT ceases to be contested kernel and becomes competing kernels.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - TPNW as counter-authority structure"
+    },
+    {
+      "id": "omega_north_korea_precedent",
+      "description": "North Korea withdrawal (2003) under Article X created precedent that withdrawal is operationally possible but legally/politically contested. Does this precedent lower withdrawal threshold (making NPT a rope) or raise it via Security Council response (maintaining tangled_rope status)?",
+      "source": "Mechanism extraction (withdrawal mechanism) - ambiguous precedent effects"
+    },
+    {
+      "id": "omega_iaea_safeguards_limit",
+      "description": "IAEA safeguards verify declared facilities but cannot detect undeclared programs (Iraq 1991, Libya 2003 revealed). Is verification a rope (coordination success) or piton (atrophied detection capability creating false confidence)?",
+      "source": "Dark Matter Probe 2 (Operational Medium) - verification as unexamined background"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied per §1.3-K. Three readings selected maintain structural independence: NWS reading (interpretive authority over disarmament timeline), NNWS reading (counter-interpretation asserting binding obligation), withdrawal reading (separate axis addressing exit mechanism rather than substantive obligation interpretation)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "NPT treaty text (1968) stabilizing horizontal non-proliferation (Article II) while creating interpretive ambiguity in vertical disarmament obligation (Article VI)",
+    "authority_description": "Interpretive legitimacy contested between NWS (possessor privilege, Security Council veto power) and NNWS coalitions (numerical majority, Review Conference forum access)",
+    "drift_status": "partial",
+    "candidate_pattern": "Anchored_Pluralism_Trap",
+    "is_contested_kernel": true,
+    "kernel_id": "npt_treaty_text",
+    "readings": [
+      {
+        "reading_id": "nws_reading",
+        "commitment": "Non-proliferation as binding constraint on NNWS; disarmament as aspirational long-term goal without enforcement",
+        "authority_grounding": "Possessor privilege (Article IX.3 recognition); Security Council enforcement monopoly; modernization programs as revealed preference",
+        "sibling_readings": [
+          "nnws_reading",
+          "withdrawal_threshold_reading"
+        ],
+        "expected_structural_delta": "High epsilon tangled_rope benefiting NWS through interpretive control of 'at an early date' ambiguity; IAEA safeguards budget concentrates on horizontal proliferation verification"
+      },
+      {
+        "reading_id": "nnws_reading",
+        "commitment": "Disarmament as binding obligation under Article VI; non-proliferation as conditional restraint purchasing NWS compliance",
+        "authority_grounding": "Numerical coalition majority; treaty reciprocity doctrine; TPNW as exit threat establishing bargaining power",
+        "sibling_readings": [
+          "nws_reading",
+          "withdrawal_threshold_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon rope attempting to impose constraints on NWS via Review Conference pressure and TPNW regime competition; lower epsilon reflects weaker enforcement mechanisms"
+      },
+      {
+        "reading_id": "withdrawal_threshold_reading",
+        "commitment": "Article X withdrawal requires high threshold (regime stability priority) vs low threshold (sovereignty preservation priority)",
+        "authority_grounding": "Security Council (high threshold through enforcement threat) vs sovereignty doctrine (low threshold as inalienable right)",
+        "sibling_readings": [
+          "nws_reading",
+          "nnws_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon tangled_rope where North Korea precedent creates ambiguous withdrawal pathway; benefits threshold states (Iran, potentially Japan/South Korea) by maintaining exit option credibility"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "nws_reading",
+        "reading_b": "nnws_reading",
+        "basis": "NWS reading's axiom (possessor privilege grounds indefinite retention legitimacy) cannot coexist with NNWS reading's axiom (mutual restraint grounds time-bounded disarmament obligation) in any single coherent framework. Accepting possessor privilege as foundational requires rejecting reciprocal obligation as binding; accepting reciprocal obligation as binding requires rejecting possessor privilege as legitimate."
+      }
+    ]
+  },
+  "_seed_id": "nuclear_non_proliferation"
+}

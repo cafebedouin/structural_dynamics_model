@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious History / Theology / Political Authority",
+  "family_id": "nicene_creed_boundaries_2026",
+  "topic_summary": "Analysis of the Nicene Creed as a commitment system kernel, examining how the same fixed textual commitment is read differently by centralized imperial/ecclesiastical authorities (as a coercive uniformity mandate with heresy suppression apparatus) versus localized/reformist communities (as a voluntary spiritual confession). The contest centers on whether the Creed's authority structure licenses extraction through enforcement or functions as shared theological vocabulary without coercive power.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nicene Creed (textual kernel, 325 CE Nicaea + 381 CE Constantinople)",
+      "Imperial/Ecclesiastical Authority (Roman Empire, later Catholic/Orthodox hierarchies)",
+      "Heresy Enforcement Apparatus (councils, excommunication, state violence)",
+      "Localized Communities (Arian remnants, early Protestants, modern ecumenical movements)",
+      "Theological Interpretation Layer (exegesis, credal commentary, conciliar decisions)"
+    ],
+    "key_tensions": [
+      "Uniformity enforcement vs voluntary confession (coercive vs persuasive authority)",
+      "Kernel fixity vs interpretive drift (immutable text vs evolving application)"
+    ],
+    "key_mechanisms": [
+      "Conciliar Authority (ecumenical councils declaring orthodoxy/heresy)",
+      "State Enforcement (imperial backing for credal conformity, punishment for deviation)",
+      "Interpretive Monopoly (episcopal hierarchy as sole legitimate exegetes)"
+    ],
+    "key_absences": [
+      "Economic dimension: Who materially benefits from heresy suppression? (land seizure, rival elimination)",
+      "Gender dimension: Creed's gendered language and enforcement's differential impact on women theologians"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "imperial_uniformity_reading",
+      "human_readable": "Imperial Uniformity Reading (Creed as Coercive Mandate)",
+      "structural_delta": "The Creed read as requiring structural uniformity enforced through state-backed ecclesiastical apparatus; deviation = heresy = legitimate target for extraction/elimination",
+      "primary_observable": "Frequency and severity of heresy prosecutions; state resources allocated to credal enforcement; conciliar condemnations",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "imperial_ecclesiastical_hierarchy",
+      "victim": "theological_dissenters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading: interprets kernel as licensing maximum extraction through enforcement apparatus"
+    },
+    {
+      "claim_id": "confessional_reading",
+      "human_readable": "Confessional Reading (Creed as Voluntary Spiritual Vocabulary)",
+      "structural_delta": "The Creed read as shared theological vocabulary for voluntary confession; authority derived from persuasion and tradition rather than coercion; deviation = theological disagreement requiring dialogue",
+      "primary_observable": "Presence/absence of enforcement mechanisms in communities using the Creed; frequency of ecumenical vs exclusionary language",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposite reading: same kernel, radically different authority grounding and epsilon"
+    },
+    {
+      "claim_id": "boundary_maintenance_reading",
+      "human_readable": "Boundary Maintenance Reading (Creed as Minimum Threshold)",
+      "structural_delta": "The Creed read as establishing minimum doctrinal boundaries necessary for communion but permitting interpretive diversity within those bounds; moderate enforcement targeting only extreme deviation",
+      "primary_observable": "Scope of tolerated theological diversity; threshold for heresy declarations; distinction between core/peripheral doctrines",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "orthodox_consensus_maintainers",
+      "victim": "extreme_theological_innovators",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Intermediate reading: captures middle position between coercive uniformity and pure voluntarism; distinct epsilon and victim set"
+    },
+    {
+      "claim_id": "mystical_reading",
+      "human_readable": "Mystical Reading (Creed as Apophatic Pointer)",
+      "structural_delta": "The Creed read as linguistic approximation pointing toward ineffable divine reality; literal enforcement inappropriate because language necessarily fails; deviation = different pointer to same transcendent truth",
+      "primary_observable": "Prominence of apophatic theology in communities; tolerance for paradox and mystery in credal interpretation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality; minority position within historical tradition; captured implicitly by confessional_reading's low epsilon"
+    },
+    {
+      "claim_id": "economic_extraction_substrate",
+      "human_readable": "Economic Extraction Substrate (Material Incentives for Heresy Prosecution)",
+      "structural_delta": "Heresy enforcement as mechanism for property seizure, rival elimination, and resource consolidation; doctrinal justification masks economic motivation",
+      "primary_observable": "Correlation between heresy prosecutions and asset transfers; geographic/temporal clustering of enforcement with economic crises",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "prosecuting_authorities",
+      "victim": "convicted_heretics",
+      "downstream_of": [
+        "imperial_uniformity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural substrate of imperial_uniformity_reading but requires economic history competence beyond model's reliable domain; flagged F34"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "imperial_uniformity_reading",
+      "kernel_id": "nicene_creed_authority",
+      "reading_id": "imperial_uniformity_reading"
+    },
+    {
+      "claim_id": "confessional_reading",
+      "kernel_id": "nicene_creed_authority",
+      "reading_id": "confessional_reading"
+    },
+    {
+      "claim_id": "boundary_maintenance_reading",
+      "kernel_id": "nicene_creed_authority",
+      "reading_id": "boundary_maintenance_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "mystical_reading",
+      "structural_delta": "Creed as apophatic pointer to transcendent reality",
+      "hypothesis": "rope",
+      "deferral_reason": "Lower centrality; minority position; implicitly captured by confessional_reading's non-coercive structure"
+    },
+    {
+      "claim_id": "economic_extraction_substrate",
+      "structural_delta": "Heresy enforcement as property seizure mechanism",
+      "hypothesis": "snare",
+      "deferral_reason": "Requires economic history competence beyond reliable model domain; F34 epistemic trespass concern; omega material"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_economic_motivation",
+      "description": "To what extent was heresy enforcement driven by economic extraction (property seizure, rival elimination) rather than theological conviction? This transforms imperial_uniformity_reading from tangled_rope to potential snare with clearer beneficiary structure. Requires economic history sources beyond model training.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis economic_extraction_substrate"
+    },
+    {
+      "id": "omega_gender_enforcement",
+      "description": "Did credal enforcement differentially target women theologians or communities? The Creed's gendered language and male-dominated enforcement apparatus may hide a gendered extraction dimension. Absence flagged in extraction but not decomposed into axis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do boundary_maintenance_reading and imperial_uniformity_reading collapse into one reading at sufficient temporal distance? The distinction may be observer-position dependent rather than structurally independent. Pairwise independence test flagged potential Type A overlap.",
+      "source": "§3.1 (Pairwise Test) - structural similarity concern"
+    },
+    {
+      "id": "omega_axiom_contradiction_boundaries",
+      "description": "Are the axioms of imperial_uniformity_reading and confessional_reading genuinely mutually exclusive, or can a hybrid framework hold both (e.g., voluntary within bounds, coercive beyond)? The boundary_maintenance_reading suggests potential pluralist synthesis. Axiom contradiction declaration may be overstated.",
+      "source": "§1.3-K (Axiom Contradiction Declaration) - boundary ambiguity"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: economic_extraction_substrate axis (heresy prosecution as property seizure mechanism) requires economic history competence and archival source access beyond model's reliable domain. Deferred with omega_economic_motivation to bound uncertainty. All three selected readings remain within theological/political history domain where model has adequate training coverage."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Nicene Creed as fixed textual formulation of Christian orthodoxy (homoousios formula, Trinitarian structure, Christological claims) stabilized at Nicaea 325 CE and Constantinople 381 CE",
+    "authority_description": "Interpretive legitimacy grounded in conciliar authority (ecumenical councils as Christ-guided consensus) backed by imperial/ecclesiastical power to enforce conformity; later contested by reformist claim that individual conscience or local community interprets without hierarchical intermediary",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Capture (Pattern 2)",
+    "is_contested_kernel": true,
+    "kernel_id": "nicene_creed_authority",
+    "readings": [
+      {
+        "reading_id": "imperial_uniformity_reading",
+        "commitment": "The Creed mandates structural uniformity enforced through state-backed ecclesiastical apparatus; deviation constitutes heresy requiring suppression",
+        "authority_grounding": "Imperial/conciliar authority as divinely ordained enforcers of orthodoxy; uniformity = ecclesial unity = salvific necessity",
+        "sibling_readings": [
+          "confessional_reading",
+          "boundary_maintenance_reading"
+        ],
+        "expected_structural_delta": "High epsilon; victims = theological dissenters; beneficiaries = imperial/ecclesiastical hierarchy consolidating power; enforcement mechanisms include excommunication, property seizure, exile, execution"
+      },
+      {
+        "reading_id": "confessional_reading",
+        "commitment": "The Creed provides shared theological vocabulary for voluntary confession; authority derived from persuasion and tradition rather than coercion",
+        "authority_grounding": "Individual conscience or local community as legitimate interpreter; persuasion rather than enforcement; unity through shared language not imposed uniformity",
+        "sibling_readings": [
+          "imperial_uniformity_reading",
+          "boundary_maintenance_reading"
+        ],
+        "expected_structural_delta": "Low epsilon; no distinct victim set (theological disagreement not structural extraction); rope-type coordination constraint; diversity tolerated within shared vocabulary"
+      },
+      {
+        "reading_id": "boundary_maintenance_reading",
+        "commitment": "The Creed establishes minimum doctrinal boundaries for communion while permitting interpretive diversity within bounds",
+        "authority_grounding": "Hierarchical authority to define boundaries but restrained enforcement targeting only extreme deviation; moderate extraction",
+        "sibling_readings": [
+          "imperial_uniformity_reading",
+          "confessional_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon; victims = extreme theological innovators; beneficiaries = orthodox consensus maintainers; enforcement selective rather than comprehensive; intermediate position between coercion and voluntarism"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "imperial_uniformity_reading",
+        "reading_b": "confessional_reading",
+        "basis": "No single coherent framework can simultaneously hold both 'coercive enforcement of uniformity is legitimate and necessary for orthodoxy' (imperial) and 'voluntary confession without coercion is the proper mode of credal authority' (confessional). Accepting voluntarism as legitimate requires rejecting coercion's legitimacy; accepting coercion as necessary requires rejecting voluntarism as sufficient. The boundary_maintenance_reading attempts synthesis but resolves the tension by restricting coercion's scope, not by holding both axioms simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "nicene_orthodoxy_enforcement"
+}

@@ -1,0 +1,214 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Bioethics / Medical Law / Political Philosophy",
+  "family_id": "euthanasia_autonomy_sanctity_2026",
+  "topic_summary": "Analysis of end-of-life decision-making frameworks where the shared commitment to 'dignified death' is read through competing interpretive lenses: autonomy-primary (self-determination as paramount) versus sanctity-of-life-primary (life preservation as paramount). Each reading generates structurally distinct constraints with different victim sets and authority structures.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Terminally ill patient (rights-holder under autonomy reading; protected life under sanctity reading)",
+      "Medical practitioner (agent of patient will vs guardian of life)",
+      "State regulatory apparatus (licensing, criminal law enforcement)",
+      "Vulnerable populations (elderly, disabled, economically precarious)",
+      "Religious/philosophical authority structures (natural law, divine command, secular humanism)",
+      "Family members (decision-makers in incapacity scenarios)"
+    ],
+    "key_tensions": [
+      "Individual self-determination vs collective duty to protect life",
+      "Suffering relief vs slippery slope to coerced death"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that 'death should occur with dignity' — a stabilized norm all parties invoke but read through incompatible interpretive frameworks",
+    "authority_description": "Autonomy reading: individual as sole legitimate interpreter of own dignity. Sanctity reading: transcendent moral law (religious or natural law) as interpretive authority, with state/medical profession as enforcement agents",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_monopoly",
+    "is_contested_kernel": true,
+    "kernel_id": "dignified_death",
+    "readings": [
+      {
+        "reading_id": "autonomy_primary",
+        "commitment": "Dignity resides in self-determination; suffering individual has final authority over timing and method of death",
+        "authority_grounding": "Liberal autonomy doctrine; Millian harm principle; patient sovereignty in medical ethics",
+        "sibling_readings": [
+          "sanctity_primary",
+          "relational_autonomy"
+        ],
+        "expected_structural_delta": "Victim set: those denied exit (suffering prolonged against will). Beneficiary: autonomous agent. High ε for state prohibition (0.45-0.60 range). Constraint type: tangled_rope (autonomy norm entangled with medical gatekeeping, eligibility criteria)."
+      },
+      {
+        "reading_id": "sanctity_primary",
+        "commitment": "Dignity resides in life's intrinsic value; intentional life-termination violates transcendent moral law regardless of consent",
+        "authority_grounding": "Natural law tradition; religious doctrine (Catholic, Islamic, Orthodox Jewish); vitalist medical ethics",
+        "sibling_readings": [
+          "autonomy_primary",
+          "relational_autonomy"
+        ],
+        "expected_structural_delta": "Victim set: vulnerable populations subject to coercion/pressure (elderly, disabled, poor). Beneficiary: moral order / community. High ε for legalization (0.50-0.65 range). Constraint type: snare (protection norm becomes coercive prolongation of suffering)."
+      },
+      {
+        "reading_id": "relational_autonomy",
+        "commitment": "Dignity emerges from relational context; decision authority distributed across patient-family-clinician triad with procedural safeguards",
+        "authority_grounding": "Feminist care ethics; communitarian bioethics; Belgian/Dutch regulatory models",
+        "sibling_readings": [
+          "autonomy_primary",
+          "sanctity_primary"
+        ],
+        "expected_structural_delta": "Victim set: those excluded from decision-making process (patient in pure autonomy model, vulnerable in pure sanctity model). Beneficiary: relational network. Moderate ε (0.30-0.45 range). Constraint type: rope (coordination problem with high procedural overhead)."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "autonomy_primary",
+      "human_readable": "Autonomy-Primary Reading (Self-Determination as Paramount)",
+      "structural_delta": "Individual sovereignty over own death; state prohibition as rights violation",
+      "primary_observable": "Legal permissibility of physician-assisted death; patient eligibility criteria breadth",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "autonomous_patient",
+      "victim": "suffering_prolonged_against_will",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct victim set and high structural tension with sibling readings"
+    },
+    {
+      "claim_id": "sanctity_primary",
+      "human_readable": "Sanctity-Primary Reading (Life Preservation as Paramount)",
+      "structural_delta": "Life's intrinsic value transcends individual preference; legalization as moral hazard",
+      "primary_observable": "Criminal prohibition scope; conscientious objection protections for medical practitioners",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "moral_order",
+      "victim": "vulnerable_populations_pressured_to_die",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposed reading with non-overlapping victim set; captures slippery slope mechanism"
+    },
+    {
+      "claim_id": "relational_autonomy",
+      "human_readable": "Relational Autonomy Reading (Distributed Decision Authority)",
+      "structural_delta": "Decision-making as shared process; procedural safeguards over absolute rights or prohibitions",
+      "primary_observable": "Regulatory framework complexity; multi-party consent requirements; waiting periods",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "relational_network",
+      "victim": "those_excluded_from_process",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position attempting synthesis; captures real-world regulatory compromise models"
+    },
+    {
+      "claim_id": "medical_gatekeeping",
+      "human_readable": "Medical Gatekeeping (Physician as Authority Bottleneck)",
+      "structural_delta": "Physician discretion as constraint on patient autonomy; professional liability as enforcement mechanism",
+      "primary_observable": "Physician participation rates in jurisdictions with legal assisted death; conscientious objection prevalence",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "medical_profession",
+      "victim": "patients_denied_access",
+      "downstream_of": [
+        "autonomy_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: implementation detail downstream of autonomy_primary reading; captured in that constraint's gatekeeping dimension"
+    },
+    {
+      "claim_id": "economic_coercion",
+      "human_readable": "Economic Coercion (Cost-Driven Pressure on Vulnerable)",
+      "structural_delta": "Healthcare cost burden as coercive force toward assisted death; means-testing as vulnerability amplifier",
+      "primary_observable": "Correlation between assisted death uptake and healthcare cost burden; insurance coverage disparities",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "healthcare_cost_bearers",
+      "victim": "economically_vulnerable",
+      "downstream_of": [
+        "sanctity_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: specific mechanism within sanctity_primary's victim set; omega material on structural coercion"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "autonomy_primary",
+      "kernel_id": "dignified_death",
+      "reading_id": "autonomy_primary"
+    },
+    {
+      "claim_id": "sanctity_primary",
+      "kernel_id": "dignified_death",
+      "reading_id": "sanctity_primary"
+    },
+    {
+      "claim_id": "relational_autonomy",
+      "kernel_id": "dignified_death",
+      "reading_id": "relational_autonomy"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "medical_gatekeeping",
+      "structural_delta": "Physician discretion as autonomy bottleneck",
+      "hypothesis": "piton",
+      "deferral_reason": "Implementation detail captured within autonomy_primary reading's constraint structure"
+    },
+    {
+      "claim_id": "economic_coercion",
+      "structural_delta": "Healthcare cost as coercive force toward death",
+      "hypothesis": "snare",
+      "deferral_reason": "Specific mechanism within sanctity_primary's victim set; warrants omega on structural coercion dynamics"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_disability_rights_critique",
+      "description": "Disability rights advocates argue both readings erase disabled experience: autonomy reading assumes suffering is objective; sanctity reading denies disabled agency. Is there a fourth reading grounded in disability justice that neither selected reading captures?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_economic_coercion_mechanism",
+      "description": "Does economic pressure (deferred axis economic_coercion) constitute a distinct constraint or amplify sanctity_primary's victim set? If healthcare cost burden systematically channels vulnerable populations toward assisted death, the rope of relational_autonomy becomes a snare.",
+      "source": "Deferred axis economic_coercion + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_cultural_variation",
+      "description": "Do non-Western frameworks (e.g., Confucian filial piety, Ubuntu communalism) constitute additional readings or cultural implementations of relational_autonomy? Extraction limited by Western bioethics training data.",
+      "source": "F34 (Epistemic Trespass) + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "Are these readings stable across jurisdictions or do they drift under implementation pressure? Oregon's Death with Dignity Act (autonomy-primary in statute) shows procedural accretion toward relational model in practice.",
+      "source": "Commitment system drift_status assessment"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Analysis grounded in Western bioethics literature (Beauchamp/Childress, Dworkin, Callahan). Non-Western frameworks (Confucian, Ubuntu, Islamic bioethics) may constitute distinct readings not captured. Generated omega_cultural_variation to bound this limitation. Relational_autonomy reading draws on feminist care ethics but may inadequately represent non-Western communitarian traditions."
+  },
+  "_seed_id": "euthanasia_kernel"
+}

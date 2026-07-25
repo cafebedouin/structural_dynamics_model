@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Philology / Intellectual History",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance reconstruction of Classical Latin, examining the epistemological contest between medieval Latin as a living drifted vernacular and humanist Classical Latin as a textual ideal recovered from ancient sources. The core question is whether the reconstructed form was reachable through continuous linguistic evolution or required a discontinuous leap to a separate symbolic kernel.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 8,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin users (living vernacular practitioners, no textual purism)",
+      "Humanist reconstructors (philological scholars seeking Classical purity)",
+      "Lorenzo Valla (descriptive philologist, Classical Latin advocate)",
+      "Ciceronian extremists (Bembo, Sadoleto - prescriptive purists)",
+      "Reformist critics (Poliziano, Erasmus - adaptive vitality advocates)",
+      "Classical Latin corpus (Cicero, Virgil - textual authority)",
+      "Vulgate Latin (ecclesiastical standard, vernacular-influenced)"
+    ],
+    "key_tensions": [
+      "Living language vs textual artifact (medieval practice vs humanist reconstruction)",
+      "Continuity vs rupture (evolutionary drift vs discontinuous recovery)",
+      "Prescriptive vs descriptive (Ciceronian rules vs Valla's usage-based approach)",
+      "Natural vs artificial (Dante's vernacular vs grammatica distinction)",
+      "Rigid reconstruction vs adaptive use (Bembo's oath vs Erasmus's pragmatism)"
+    ],
+    "key_mechanisms": [
+      "Philological reconstruction (ad fontes methodology, orthographic purging)",
+      "Prescriptive standardization (Ciceronian imitation, vocabulary policing)",
+      "Dual register maintenance (purified publication vs vernacular-influenced practice)"
+    ],
+    "key_absences": [
+      "Phonological evidence (how Classical Latin actually sounded - no living speakers)",
+      "Non-elite medieval Latin users (ecclesiastical and administrative practitioners outside humanist circles)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment to 'correct Latin' as the legitimate form of the language, with contested readings of what that correctness consists of and how it is accessed",
+    "authority_description": "Medieval users ground authority in living practice and ecclesiastical tradition; humanists ground authority in textual fidelity to Classical sources",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Tradition (contested readings of a shared linguistic kernel)",
+    "is_contested_kernel": true,
+    "kernel_id": "correct_latin",
+    "readings": [
+      {
+        "reading_id": "living_drift_reading",
+        "commitment": "Correct Latin is the living evolved form shaped by continuous use, vernacular influence, and practical needs",
+        "authority_grounding": "Living practice, ecclesiastical tradition, natural linguistic evolution",
+        "sibling_readings": [
+          "textual_recovery_reading",
+          "prescriptive_ideal_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness (no enforcement cost for natural drift); beneficiary is the practicing community; victim is textual purity; continuity with medieval practice"
+      },
+      {
+        "reading_id": "textual_recovery_reading",
+        "commitment": "Correct Latin is the Classical form recoverable through philological analysis of ancient texts",
+        "authority_grounding": "Textual evidence from Cicero and Virgil, philological methodology (ad fontes)",
+        "sibling_readings": [
+          "living_drift_reading",
+          "prescriptive_ideal_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (requires scholarly apparatus and orthographic discipline); beneficiary is humanist elite; victim is vernacular-influenced users; rupture from medieval practice but claims historical continuity with Classical period"
+      },
+      {
+        "reading_id": "prescriptive_ideal_reading",
+        "commitment": "Correct Latin is the prescriptive ideal defined by strict Ciceronian imitation, excluding all post-Classical developments",
+        "authority_grounding": "Cicero's corpus as exclusive authority, oath-bound fidelity to textual precedent",
+        "sibling_readings": [
+          "living_drift_reading",
+          "textual_recovery_reading"
+        ],
+        "expected_structural_delta": "High extractiveness (requires constant policing of vocabulary and forms, dual register maintenance); beneficiary is Ciceronian elite (Bembo, Sadoleto); victim is linguistic vitality and adaptive capacity; complete rupture from both medieval practice and natural language evolution"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "living_drift_reading",
+        "reading_b": "prescriptive_ideal_reading",
+        "basis": "Living drift treats language as naturally evolving through use (Dante's 'natural' vernacular principle); prescriptive ideal treats language as artificial construct bound by textual rules. No single framework can hold both that linguistic correctness emerges from living practice AND that it requires rigid conformity to historical textual precedent."
+      },
+      {
+        "reading_a": "textual_recovery_reading",
+        "reading_b": "living_drift_reading",
+        "basis": "Textual recovery assumes Classical Latin is a recoverable historical form accessible through philological reconstruction; living drift assumes correctness is defined by current practice. No single framework can hold both that the correct form is what ancient texts preserve AND that the correct form is what living users produce."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "living_drift_reading",
+      "human_readable": "Living Drift Reading (Medieval Latin as Natural Evolution)",
+      "structural_delta": "Latin as living language shaped by continuous vernacular influence and practical ecclesiastical/administrative use",
+      "primary_observable": "Orthographic variation in medieval manuscripts (e for ae, palatalization effects); vocabulary borrowing from Vulgate and Germanic sources; vernacular pronunciation patterns in handwritten documents",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "medieval_practicing_community",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline of medieval practice before humanist intervention"
+    },
+    {
+      "claim_id": "textual_recovery_reading",
+      "human_readable": "Textual Recovery Reading (Philological Reconstruction)",
+      "structural_delta": "Classical Latin as recoverable historical form accessed through ad fontes philological methodology",
+      "primary_observable": "Humanist orthographic reforms (ae written in full, t/c distinction); Valla's descriptive philology; dual register maintenance (purified publication vs vernacular-influenced practice)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "humanist_scholarly_elite",
+      "victim": "vernacular_influenced_users",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; moderate extractiveness; claims continuity with Classical period while rupturing from medieval practice"
+    },
+    {
+      "claim_id": "prescriptive_ideal_reading",
+      "human_readable": "Prescriptive Ideal Reading (Ciceronian Extremism)",
+      "structural_delta": "Correct Latin as prescriptive ideal requiring strict Ciceronian imitation and exclusion of all post-Classical developments",
+      "primary_observable": "Bembo's oath to use no non-Ciceronian words; refusal to use specific verb forms absent from Cicero's corpus; Erasmus's critique of rigidity in Ciceronianus",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "ciceronian_elite",
+      "victim": "linguistic_vitality",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest extractiveness; reveals the limit case of textual authority over living practice"
+    },
+    {
+      "claim_id": "phonological_absence",
+      "human_readable": "Phonological Absence (No Living Speakers)",
+      "structural_delta": "Absence of phonological evidence for how Classical Latin actually sounded, creating irreducible uncertainty in reconstruction",
+      "primary_observable": "Gap between textual evidence and acoustic reality; reliance on orthographic inference and Romance language comparison",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "textual_recovery_reading",
+        "prescriptive_ideal_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural absence feeding into both reconstruction readings but lower centrality than the readings themselves"
+    },
+    {
+      "claim_id": "dual_register_mechanism",
+      "human_readable": "Dual Register Mechanism (Purified Publication vs Vernacular Practice)",
+      "structural_delta": "Humanists maintained two distinct Latin registers: purified Classical for publication, vernacular-influenced for practical handwritten use",
+      "primary_observable": "Orthographic differences between published humanist works and their handwritten correspondence; vernacular pronunciation in practical documents",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "humanist_elite",
+      "victim": null,
+      "downstream_of": [
+        "textual_recovery_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream mechanism of textual_recovery_reading with limited independent structural yield"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "living_drift_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "living_drift_reading"
+    },
+    {
+      "claim_id": "textual_recovery_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "textual_recovery_reading"
+    },
+    {
+      "claim_id": "prescriptive_ideal_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "prescriptive_ideal_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "phonological_absence",
+      "structural_delta": "Absence of phonological evidence for Classical Latin pronunciation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural absence feeding into reconstruction readings but lower centrality; captured indirectly through the readings' reliance on textual rather than acoustic evidence"
+    },
+    {
+      "claim_id": "dual_register_mechanism",
+      "structural_delta": "Humanist maintenance of purified publication vs vernacular-influenced practice registers",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream mechanism of textual_recovery_reading with limited independent yield; the dual register is evidence of the reading's extractiveness rather than a separate constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_continuity_rupture",
+      "description": "Is the textual_recovery_reading genuinely continuous with Classical Latin (as humanists claimed) or is it a discontinuous reoccupation of a symbolic kernel? The absence of living speakers makes this epistemologically undecidable—we cannot verify whether reconstructed pronunciation, syntax, and usage match Classical practice or constitute a new artificial language.",
+      "source": "Core kernel contest; phonological_absence deferred axis"
+    },
+    {
+      "id": "omega_erasmus_synthesis",
+      "description": "Does Erasmus's adaptive position (Ciceronianus critique) represent a fourth reading that synthesizes textual authority with linguistic vitality, or does it collapse into textual_recovery_reading with pragmatic modifications? His position may warrant separate analysis if the binary between reconstruction and prescription is insufficient.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - reformist critics as potential separate reading"
+    },
+    {
+      "id": "omega_vernacular_displacement",
+      "description": "The humanist project displaced vernacular languages from elite discourse. Is this displacement a separate snare (extracting from vernacular literary development) or a consequence of the readings already identified? The victim set may extend beyond Latin users to vernacular language communities.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - Dante's vernacular advocacy vs humanist Latin valorization"
+    },
+    {
+      "id": "omega_non_elite_practice",
+      "description": "Medieval Latin users outside humanist circles (parish priests, notaries, merchants) are absent from the analysis. Their practice may constitute a separate reading or may simply be living_drift_reading at different social registers. Insufficient evidence to classify.",
+      "source": "Extraction absence: non-elite medieval Latin users"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel/reading decomposition successfully captures the epistemological contest. The three readings represent genuinely distinct commitments about what 'correct Latin' consists of and how it is accessed. Axiom contradictions confirmed: no single framework can hold both that correctness emerges from living practice AND that it requires textual fidelity, nor that the correct form is recoverable from texts AND defined by current use."
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

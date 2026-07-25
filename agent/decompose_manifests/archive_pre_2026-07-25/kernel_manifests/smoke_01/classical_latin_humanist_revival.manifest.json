@@ -1,0 +1,209 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Philology / Commitment Systems",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist reconstruction of Classical Latin as a contested kernel. Medieval users treated Latin as a living drifted vernacular with continuous evolution from Classical forms. Humanist reconstructors treated Classical Latin as a fixed kernel recoverable from ancient texts, requiring deliberate restoration rather than organic continuation. The contest centers on whether the reconstructed Classical form was reachable via drift correction from medieval Latin or constituted reoccupation of a separate, extinct linguistic kernel.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin users (clerics, scribes, university scholars treating Latin as living language)",
+      "Humanist reconstructors (Petrarch, Valla, Erasmus claiming to restore 'true' Classical Latin)",
+      "Classical Latin corpus (Cicero, Virgil, Livy as textual kernel)",
+      "Medieval Latin vernacular (evolved form with Romance interference, simplified syntax)",
+      "Church/University institutional authority (legitimacy grounded in Latin literacy)"
+    ],
+    "key_tensions": [
+      "Continuity vs rupture (medieval users claim unbroken transmission; humanists claim corruption requiring restoration)",
+      "Living practice vs textual reconstruction (medieval Latin has native speakers in institutional contexts; Classical Latin has no living practitioners, only textual witnesses)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuity_reading",
+      "human_readable": "Continuity Reading (Medieval Latin as Evolved Classical)",
+      "structural_delta": "Medieval Latin is Classical Latin after 1000 years of natural drift; correction is internal to one linguistic system",
+      "primary_observable": "Phonological/morphological changes traceable as regular sound shifts; syntactic simplifications as grammaticalization",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "medieval_institutional_users",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "authority_structure_axis"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline constraint structure for comparison"
+    },
+    {
+      "claim_id": "rupture_reading",
+      "human_readable": "Rupture Reading (Classical Latin as Extinct Kernel Reoccupied)",
+      "structural_delta": "Classical Latin is a separate extinct kernel; humanist reconstruction is reoccupation from textual symbols, not drift correction",
+      "primary_observable": "Presence of forms unattested in medieval practice but reconstructed from texts; deliberate archaism; rejection of Romance interference",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "humanist_elite",
+      "victim": "medieval_practitioners",
+      "downstream_of": [],
+      "feeds_into": [
+        "authority_structure_axis"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; higher epsilon due to deliberate exclusion of living practice"
+    },
+    {
+      "claim_id": "authority_structure_axis",
+      "human_readable": "Authority Structure (Who Adjudicates Correctness)",
+      "structural_delta": "Shift from living institutional practice to textual philology as legitimacy source",
+      "primary_observable": "Citation patterns in grammatical disputes; institutional adoption of humanist vs medieval norms",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "humanist_philologists",
+      "victim": "medieval_practitioners",
+      "downstream_of": [
+        "continuity_reading",
+        "rupture_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node; captures the commitment system's authority shift regardless of which reading is adopted"
+    },
+    {
+      "claim_id": "pedagogical_extraction",
+      "human_readable": "Pedagogical Extraction (Learning Cost Imposed by Reconstruction)",
+      "structural_delta": "Humanist reconstruction imposes higher learning costs by requiring mastery of extinct forms vs evolved vernacular",
+      "primary_observable": "Curriculum changes; time to Latin literacy; exclusion rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "elite_gatekeepers",
+      "victim": "non_elite_learners",
+      "downstream_of": [
+        "rupture_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via authority_structure_axis; lower centrality"
+    },
+    {
+      "claim_id": "textual_authority_mountain",
+      "human_readable": "Textual Authority Mountain (Fixity of Classical Corpus)",
+      "structural_delta": "Classical texts as immutable reference regardless of reading",
+      "primary_observable": "Manuscript transmission fidelity; editorial practices",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "continuity_reading",
+        "rupture_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but both readings share this constraint; lower structural distinctiveness"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "rupture_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "rupture_reading"
+    },
+    {
+      "claim_id": "authority_structure_axis",
+      "kernel_id": null,
+      "reading_id": null
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pedagogical_extraction",
+      "structural_delta": "Humanist reconstruction imposes higher learning costs",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured indirectly via authority_structure_axis; lower centrality score"
+    },
+    {
+      "claim_id": "textual_authority_mountain",
+      "structural_delta": "Classical texts as immutable reference",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain shared by both readings; lower structural distinctiveness than selected axes"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reachability_empirical",
+      "description": "Is the continuity reading empirically falsifiable? If medieval Latin phonology/morphology cannot generate attested Classical forms via known drift mechanisms, rupture reading gains support. Requires comparative Romance linguistics + Latin corpus analysis.",
+      "source": "Kernel contest core question"
+    },
+    {
+      "id": "omega_symbol_reoccupation_mechanism",
+      "description": "If rupture reading holds, what is the cognitive mechanism of reoccupying an extinct kernel from symbols alone? Does this require living informants (none existed) or is textual reconstruction sufficient? Implications for dead language revival generally.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_vernacular_suppression",
+      "description": "Did humanist reconstruction suppress viable Romance-influenced Latin registers that could have served institutional functions? If so, authority_structure_axis may be snare with higher epsilon than currently estimated.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_church_resistance",
+      "description": "Church institutional resistance to humanist reforms not captured in current axes. Vulgate vs Classical translation debates may constitute separate axis. Deferred for omega-level treatment.",
+      "source": "Absence Inventory (mechanisms)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Two readings emit structurally different constraints: continuity_reading treats correction as internal drift reversal (low epsilon rope); rupture_reading treats reconstruction as external kernel reoccupation (moderate epsilon tangled_rope with deliberate exclusion of living practice)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment to 'correct Latin' as the legitimate medium for learned discourse, law, and liturgy",
+    "authority_description": "Medieval: living institutional practice (Church, universities) grounds correctness. Humanist: textual philology and Classical corpus fidelity grounds correctness.",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition_with_contested_founding_moment",
+    "is_contested_kernel": true,
+    "kernel_id": "correct_latin",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Medieval Latin is Classical Latin after natural drift; correction is internal to one linguistic system",
+        "authority_grounding": "Living institutional practice; unbroken transmission claim",
+        "sibling_readings": [
+          "rupture_reading"
+        ],
+        "expected_structural_delta": "Low epsilon rope: drift correction via institutional norm enforcement. Beneficiary: medieval practitioners whose existing competence remains valid. No victim set (correction is refinement, not exclusion)."
+      },
+      {
+        "reading_id": "rupture_reading",
+        "commitment": "Classical Latin is an extinct kernel; humanist reconstruction is reoccupation from textual symbols, not drift correction",
+        "authority_grounding": "Textual philology; Classical corpus as immutable reference; rejection of living practice as corrupted",
+        "sibling_readings": [
+          "continuity_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon tangled_rope: deliberate exclusion of Romance-influenced forms and living practice. Beneficiary: humanist elite who control textual interpretation. Victim: medieval practitioners whose competence is reclassified as corruption."
+      }
+    ]
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

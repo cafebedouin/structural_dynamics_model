@@ -1,0 +1,178 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Theology / Philosophy of Language / Political Authority",
+  "family_id": "quran_created_uncreated_mu_tazila_ash_ari",
+  "topic_summary": "Analysis of the Mu'tazilite-Ash'arite theological dispute over whether the Qur'an is created (makhlūq) or uncreated (ghayr makhlūq) divine speech. The dispute centers on the ontological status of revelation and its implications for prophetic authority, scriptural hermeneutics, rational theology, and state doctrinal enforcement, crystallized during the 9th-century mihna (inquisition) under Abbasid caliph al-Ma'mun.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Mu'tazilite school (rationalist theology; Qur'an as created)",
+      "Ash'arite school (traditionalist synthesis; Qur'an as uncreated eternal speech)",
+      "Abbasid caliphate (state enforcer of doctrinal orthodoxy during mihna)",
+      "Ahmad ibn Hanbal (jurist; resisted mihna; martyred traditionalist icon)",
+      "al-Ma'mun (caliph 813-833; imposed created-Qur'an doctrine via inquisition)",
+      "Qur'an itself (fixed revealed text; disputed ontological substrate)"
+    ],
+    "key_tensions": [
+      "Divine transcendence (tanzīh) vs divine immanence in scripture (taqlīd literalism)",
+      "Rational theology (kalām) vs transmitted tradition (naql) as interpretive authority",
+      "State enforcement of doctrine vs scholarly interpretive pluralism"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Qur'an as singular revealed text whose ontological status determines the scope of divine constraint and interpretive authority",
+    "authority_description": "Competing scholarly schools claim interpretive legitimacy grounded in different metaphysical commitments about revelation's nature; state power historically intervenes to enforce one reading",
+    "drift_status": "partial",
+    "candidate_pattern": "Fixed_Text_Variable_Interpretation",
+    "is_contested_kernel": true,
+    "kernel_id": "quran_ontological_status",
+    "readings": [
+      {
+        "reading_id": "uncreated_reading",
+        "commitment": "Qur'an is uncreated eternal divine speech (kalām Allāh qadīm); revelation itself is an ontic constraint coeternal with God",
+        "authority_grounding": "Traditionalist transmission (naql); Ash'arite synthesis; post-mihna Sunni orthodoxy",
+        "sibling_readings": [
+          "created_reading",
+          "state_enforced_creation_reading"
+        ],
+        "expected_structural_delta": "Revelation enters constraint space as permanent mountain; prophetic authority maximized; literalist hermeneutics privileged; textual meaning treated as fixed divine fact rather than contingent artifact; benefits: traditional jurists, literalist communities, anti-rationalist schools; victims: rational theologians, metaphorical interpreters, reform movements requiring textual flexibility"
+      },
+      {
+        "reading_id": "created_reading",
+        "commitment": "Qur'an is created divine speech (makhlūq); God's essence transcends all temporal artifacts including revelation",
+        "authority_grounding": "Mu'tazilite rationalist theology (kalām); emphasis on divine transcendence (tanzīh); philosophical coherence",
+        "sibling_readings": [
+          "uncreated_reading",
+          "state_enforced_creation_reading"
+        ],
+        "expected_structural_delta": "Revelation classified as rope (coordination artifact) rather than mountain; divine transcendence preserved by locating God above text; rational theology gains hermeneutic authority; textual meaning becomes interpretively flexible; benefits: rationalist theologians, reform movements, philosophical schools; victims: traditionalist jurists whose authority derives from textual fixity, literalist communities whose identity depends on unmediated divine speech"
+      },
+      {
+        "reading_id": "state_enforced_creation_reading",
+        "commitment": "Qur'an is created (as Mu'tazilite doctrine) AND state enforces this via inquisition (mihna)",
+        "authority_grounding": "Abbasid caliphal authority; caliph as Commander of Faithful with doctrinal enforcement power; Mu'tazilite theology weaponized for political consolidation",
+        "sibling_readings": [
+          "uncreated_reading",
+          "created_reading"
+        ],
+        "expected_structural_delta": "Theological dispute transformed into snare: state power converts metaphysical claim into suppression mechanism; created-Qur'an doctrine becomes justification for purging traditionalist scholars; benefits: caliphal authority (doctrinal control as political tool), rationalist school temporarily (state backing); victims: traditionalist scholars (Ahmad ibn Hanbal imprisoned/tortured), literalist communities, scholarly pluralism itself; mechanism: mihna inquisition tribunals demanding public affirmation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "uncreated_reading",
+        "reading_b": "created_reading",
+        "basis": "No single coherent metaphysical framework can hold both 'revelation is coeternal divine attribute' and 'revelation is temporal created artifact.' Accepting uncreated status requires treating the Qur'an as ontologically equivalent to God's knowledge/will (divine attributes); accepting created status requires locating it in the category of temporal existents subject to divine creative act. These are mutually exclusive ontic categories."
+      },
+      {
+        "reading_a": "created_reading",
+        "reading_b": "state_enforced_creation_reading",
+        "basis": "The axioms do NOT contradict (both hold Qur'an as created), but the enforcement mechanism transforms the constraint type: pure rationalist reading treats creation-doctrine as conclusion of theological reasoning accessible to scholarly debate; state-enforced reading converts it into loyalty oath backed by coercion, foreclosing the debate the rationalist axiom presupposes. A pluralist framework could hold both the metaphysical claim and reject state enforcement, but no framework coherently holds 'doctrine established by rational persuasion' and 'doctrine established by inquisition threat' as compatible methods simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "uncreated_reading",
+      "human_readable": "Uncreated Qur'an (Eternal Divine Speech)",
+      "structural_delta": "Revelation as permanent ontic constraint coeternal with God; textual meaning fixed by divine attribute rather than human artifact",
+      "primary_observable": "Juridical authority structure: proportion of rulings grounded in 'plain meaning' vs ijtihad/qiyas; resistance to textual reinterpretation across historical contexts",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": "traditionalist_jurists",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational reading; mountain hypothesis with distinct beneficiary structure; establishes baseline constraint topology"
+    },
+    {
+      "claim_id": "created_reading",
+      "human_readable": "Created Qur'an (Temporal Divine Artifact)",
+      "structural_delta": "Revelation as rope (coordination artifact) preserving divine transcendence; textual meaning hermeneutically flexible",
+      "primary_observable": "Theological method: ratio of rational-theological (kalām) to transmitted-traditional (naql) arguments in doctrinal disputes; prevalence of metaphorical vs literal interpretation",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "rationalist_theologians",
+      "victim": "literalist_authority_structures",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural antithesis to reading 1; different constraint type (rope vs mountain) and beneficiary/victim inversion; axiom-contradictory pair"
+    },
+    {
+      "claim_id": "state_enforced_creation_reading",
+      "human_readable": "State-Enforced Creation Doctrine (Mihna Inquisition)",
+      "structural_delta": "Theological claim weaponized as loyalty oath; state converts metaphysical dispute into suppression mechanism",
+      "primary_observable": "Historical record: mihna tribunals 833-851 CE; scholar imprisonment/execution rates; post-mihna reversal and traditionalist martyrology",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "abbasid_caliphal_authority",
+      "victim": "traditionalist_scholars",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; transforms metaphysical dispute into political extraction; snare hypothesis with distinct suppression mechanism; illuminates constraint-type instability under state enforcement"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "uncreated_reading",
+      "kernel_id": "quran_ontological_status",
+      "reading_id": "uncreated_reading"
+    },
+    {
+      "claim_id": "created_reading",
+      "kernel_id": "quran_ontological_status",
+      "reading_id": "created_reading"
+    },
+    {
+      "claim_id": "state_enforced_creation_reading",
+      "kernel_id": "quran_ontological_status",
+      "reading_id": "state_enforced_creation_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_shi_i_imami_reading",
+      "description": "Shi'i Imami theology holds a distinct position: Qur'an created but Imamate preserves authoritative interpretation. Does this instantiate a fourth reading (created text + charismatic interpretive authority) or collapse into created_reading with different authority structure? Imami doctrine may warrant separate axis if generation budget expands.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): Shi'i theological traditions underrepresented in Sunni-centric Mu'tazilite/Ash'arite framing"
+    },
+    {
+      "id": "omega_Ibn_Taymiyya_voluntarism",
+      "description": "Ibn Taymiyya's voluntarist position (uncreated but not coeternal; created in time but not contingent artifact) may represent synthesis reading or expose incoherence in binary created/uncreated framing. Does voluntarism dissolve the kernel or add fifth reading?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): Post-mihna Hanbali synthesis benefits from ambiguity rather than clarity on ontological status"
+    },
+    {
+      "id": "omega_contemporary_reform_movements",
+      "description": "Do modern reform movements (Muhammad Abduh, Fazlur Rahman) implicitly rely on created-Qur'an metaphysics without explicit commitment? Observable: correlation between historical-critical methodology adoption and effective constraint-type reclassification. If so, created_reading constraint may be reactivating covertly in 20th-21st century Islamic modernism.",
+      "source": "Dark Matter Probe 1 (Operational Medium): Model's training data emphasizes medieval dispute; contemporary theological landscape underexplored"
+    },
+    {
+      "id": "omega_constraint_type_instability",
+      "description": "State enforcement reading demonstrates that constraint type (rope vs mountain vs snare) is NOT fixed by metaphysical claim alone but depends on enforcement regime. Same theological proposition (Qur'an as created) generates different ε and victim structure under scholarly debate vs inquisition. Does this invalidate independent ε assumption for theological constraints generally?",
+      "source": "§3 Independence Testing: state_enforced_creation_reading shares metaphysical substrate with created_reading but exhibits different constraint type"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks deep training in Islamic theological metaphysics (kalām), Ash'arite/Mu'tazilite technical terminology, and Arabic-language primary sources. Classification of uncreated_reading as mountain vs rope depends on ontic commitments about divine attributes (ṣifāt) that exceed model's domain competence. Generated omega_constraint_type_instability to bound uncertainty. Recommend expert review of constraint type assignments and ε bins before generation."
+  },
+  "_seed_id": "quran_created_uncreated"
+}

@@ -1,0 +1,222 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal History / Intellectual Property / Institutional Economics",
+  "family_id": "statute_of_anne_ip_kernel",
+  "topic_summary": "Analysis of the Statute of Anne (1710) as the foundational moment of statutory copyright, examining whether intellectual property emerged as a new conceptual category ('became thinkable') or as occupation of existing trade regulation structures ('first held'). The statute created author-centered limited copyright while simultaneously perpetuating bookseller monopoly practices, generating unresolved tensions between public learning, author protection, and trade control that persist in modern IP law.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Statute of Anne (1710 copyright statute; first statutory IP regulation)",
+      "Stationers' Company (guild monopoly 1556-1694; lobbied for author-centered framing)",
+      "Parliament (legislative authority; ended Licensing Act 1694, enacted Statute 1710)",
+      "Authors (Daniel Defoe et al.; rhetorical beneficiaries, actual contractors to publishers)",
+      "Reading Public (stated beneficiary of 'encouragement of learning')",
+      "Common Law Courts (adjudicators of perpetuity claims post-1731)"
+    ],
+    "key_tensions": [
+      "Trade regulation (stated purpose: regulate book trade) vs Author protection (emergent interpretation: natural rights of authors)",
+      "Limited term (14+14 years statutory) vs Perpetual rights (common law claims by Stationers post-1731)",
+      "Public interest (advancement of learning, public domain) vs Private monopoly (bookseller control, rent extraction)",
+      "Synchronic rationale (1710 encouragement of learning) vs Diachronic perpetuation (continuation of 1556-1694 monopoly structures)"
+    ],
+    "key_mechanisms": [
+      "Statutory grant mechanism: 14-year initial term + 14-year renewal if author alive",
+      "Public domain creation: works enter commons after term expiration",
+      "Reinterpretation mechanism: booksellers reframe statute as protecting author natural rights (1731-1774) to claim perpetuity"
+    ],
+    "key_absences": [
+      "Definition of 'copy', 'property', 'author' in statute text (drafting ambiguity)",
+      "Enforcement mechanism for author vs publisher rights (authors had no practical alternative to publisher contracts)",
+      "International dimension (statute applies only to Great Britain; no cross-border IP framework)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Intellectual property as a legal category stabilized by the Statute of Anne, claimed as both a new conceptual space ('copyright became thinkable as author-centered statutory right') and occupation of existing structures ('first statutory holding of pre-existing trade monopoly practices')",
+    "authority_description": "Parliament as legislative authority grounding statutory copyright; Common Law courts as interpretive authority for perpetuity claims; booksellers as practical gatekeepers controlling author access to publication",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Drift (booksellers reframe trade regulation as author natural rights to claim perpetuity) overlaid on Founding Ambiguity (statute fails to define core terms)",
+    "is_contested_kernel": false,
+    "kernel_collapse_analysis": "The 'became thinkable' vs 'first held' framing initially appears to instantiate two readings of the IP kernel. However, structural analysis reveals these are not genuinely independent readings but rather two observer positions on a single historical event with internal contradiction. The synchronic/diachronic seam (M4/M5 collapse) is not a contest between readings but a structural feature of the statute itself: Parliament's 1710 act simultaneously created a new legal category (statutory copyright) AND occupied existing monopoly structures (Stationers' trade control). This is not two interpretations of one kernel but one kernel with two simultaneous structural effects. A 'became thinkable' reading and a 'first held' reading would emit the same constraint structure: a tangled_rope where stated public-interest rationale (encouragement of learning) masks continuity of private extraction (bookseller monopoly). The readings collapse because they describe the same extractive mechanism from different temporal vantage points rather than instantiating different constraints. The kernel structure does not force a spurious cut; it reveals that the cut was never real—the statute was always both innovation and occupation simultaneously.",
+    "omega_reference": "omega_kernel_collapse"
+  },
+  "axes": [
+    {
+      "claim_id": "statutory_copyright_creation",
+      "human_readable": "Statutory Copyright Creation (Legal Category Innovation)",
+      "structural_delta": "Introduction of author-centered limited-term copyright as statutory category distinct from guild monopoly or royal privilege",
+      "primary_observable": "Presence/absence of statutory copyright framework; term limits (14+14 years) vs perpetual claims; author as rights-holder vs publisher as monopolist",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "author_publisher_extraction",
+        "perpetuity_reinterpretation"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream coordination mechanism; establishes the legal category that downstream axes manipulate"
+    },
+    {
+      "claim_id": "author_publisher_extraction",
+      "human_readable": "Author-Publisher Extraction (Rhetorical Capture of Statutory Benefits)",
+      "structural_delta": "Statute frames copyright as author protection but structural reality is publisher monopoly continuation; authors lack bargaining power and contract rights to publishers",
+      "primary_observable": "Gap between statutory rhetoric (author rights) and contractual reality (publisher control); author income vs publisher profits; prevalence of exclusive publisher contracts",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "stationers_company_publishers",
+      "victim": "authors_reading_public",
+      "downstream_of": [
+        "statutory_copyright_creation"
+      ],
+      "feeds_into": [
+        "perpetuity_reinterpretation"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core extractive mechanism; highest centrality; reveals gap between stated purpose (encouragement of learning) and structural operation (monopoly perpetuation)"
+    },
+    {
+      "claim_id": "perpetuity_reinterpretation",
+      "human_readable": "Perpetuity Reinterpretation (Common Law Natural Rights Claims)",
+      "structural_delta": "Post-1731 bookseller campaign to reinterpret statute as recognizing pre-existing perpetual common law copyright rather than creating limited statutory right",
+      "primary_observable": "Legal arguments in Millar v Taylor (1769) and Donaldson v Becket (1774); House of Lords ruling on perpetuity; prevalence of natural rights rhetoric",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "stationers_company_publishers",
+      "victim": "public_domain_reading_public",
+      "downstream_of": [
+        "statutory_copyright_creation",
+        "author_publisher_extraction"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node; highest centrality; reveals mechanism by which limited statutory grant is reframed as perpetual natural right to block public domain"
+    },
+    {
+      "claim_id": "public_interest_rhetoric",
+      "human_readable": "Public Interest Rhetoric (Encouragement of Learning as Legitimation)",
+      "structural_delta": "Statute's stated purpose is advancement of learning and public benefit, but operational structure perpetuates private monopoly",
+      "primary_observable": "Preamble language ('Encouragement of Learning') vs enforcement patterns; public domain creation vs perpetuity claims; author income vs publisher profits",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "author_publisher_extraction"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: legitimation rhetoric captured by author_publisher_extraction tangled_rope; scaffold function subsumed"
+    },
+    {
+      "claim_id": "drafting_ambiguity",
+      "human_readable": "Drafting Ambiguity (Undefined Core Terms)",
+      "structural_delta": "Statute fails to define 'copy', 'property', 'author', enabling divergent interpretations and decades of litigation",
+      "primary_observable": "Presence/absence of term definitions in statute text; frequency of litigation over term meanings; interpretive variance in court rulings",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "perpetuity_reinterpretation"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enabling condition for perpetuity_reinterpretation but lower structural distinctiveness; piton function noted in omega"
+    },
+    {
+      "claim_id": "licensing_act_rupture",
+      "human_readable": "Licensing Act Rupture (1694 Monopoly Collapse)",
+      "structural_delta": "Parliament's 1694 refusal to renew Licensing Act ended Stationers' monopoly, forcing shift from crown-granted privilege to statutory author-centered framing",
+      "primary_observable": "Licensing Act expiration 1694; gap period 1694-1710; Stationers' petition strategy shift from publisher monopoly to author rights rhetoric",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "statutory_copyright_creation"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical precondition but lower structural yield than selected axes; mountain context for rope creation"
+    }
+  ],
+  "generation_sequence": [
+    "statutory_copyright_creation",
+    "author_publisher_extraction",
+    "perpetuity_reinterpretation"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "public_interest_rhetoric",
+      "structural_delta": "Statute's stated purpose (learning) vs operational structure (monopoly)",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Legitimation function captured by author_publisher_extraction tangled_rope; scaffold role subsumed in core extractive mechanism"
+    },
+    {
+      "claim_id": "drafting_ambiguity",
+      "structural_delta": "Undefined core terms enabling divergent interpretations",
+      "hypothesis": "piton",
+      "deferral_reason": "Enabling condition for perpetuity_reinterpretation but lower structural distinctiveness; atrophied precision noted in omega_drafting_ambiguity"
+    },
+    {
+      "claim_id": "licensing_act_rupture",
+      "structural_delta": "1694 monopoly collapse forcing statutory reframing",
+      "hypothesis": "mountain",
+      "deferral_reason": "Historical precondition with lower structural yield; mountain context for statutory_copyright_creation rope"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The 'became thinkable' vs 'first held' framing collapses under structural analysis. The Statute of Anne simultaneously created a new legal category (statutory copyright) AND occupied existing monopoly structures (Stationers' trade control). These are not two readings of one kernel but two simultaneous structural effects of one historical event. The synchronic/diachronic seam (M4/M5 collapse) is not a contest between interpretations but an internal contradiction in the statute itself: Parliament's stated rationale was synchronic (1710 encouragement of learning) but the operational structure was diachronic (perpetuation of 1556-1694 monopoly). A 'became thinkable' reading and a 'first held' reading would emit identical constraint structures—both describe the same tangled_rope where public-interest rhetoric masks private extraction. The kernel structure does not force a spurious cut; it reveals the cut was never real. The statute was always both innovation and occupation simultaneously, which is why booksellers could credibly reinterpret it as recognizing pre-existing common law rights (perpetuity_reinterpretation snare). This is a single kernel with internal contradiction, not a contested kernel with competing readings.",
+      "source": "§1.3-K kernel/reading decomposition; commitment_system_recognition analysis"
+    },
+    {
+      "id": "omega_drafting_ambiguity",
+      "description": "The statute's failure to define 'copy', 'property', and 'author' is not mere legislative sloppiness but a piton of atrophied precision. The ambiguity enabled the perpetuity_reinterpretation snare: without clear definitions, booksellers could plausibly claim the statute recognized pre-existing common law copyright rather than creating a new statutory right. This piton persists in modern IP law—core terms remain contested (what is 'authorship' in AI-generated works? what is 'copy' in digital reproduction?). The ambiguity may be structural rather than accidental: defining terms would have forced Parliament to choose between trade regulation and author protection, exposing the contradiction the statute was designed to obscure.",
+      "source": "Deferred axis drafting_ambiguity; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_author_bargaining_power",
+      "description": "The statute grants rights to authors but provides no mechanism to enforce author vs publisher bargaining power. Authors had no practical alternative to contracting with the Stationers' Company publishers, who controlled printing presses and distribution networks. This absence is not incidental—it reveals that 'author protection' was rhetorical cover for monopoly perpetuation. Modern IP law inherits this structure: creators hold statutory rights but lack bargaining power against platforms/publishers (musicians vs Spotify, authors vs Amazon, filmmakers vs streaming services). The extractive mechanism persists because the statute created a legal category (copyright) without creating the material conditions for authors to exercise it independently.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); author_publisher_extraction tangled_rope"
+    },
+    {
+      "id": "omega_international_dimension",
+      "description": "The statute applies only to Great Britain, creating no cross-border IP framework. This absence becomes critical in the 18th-century transatlantic book trade: American printers could legally reprint British works without compensation, undermining the statute's stated purpose (encouragement of learning) while benefiting American readers. The international dimension remains unresolved in modern IP law—territorial copyright creates enforcement gaps in digital distribution, and international treaties (Berne Convention, TRIPS) layer coordination mechanisms atop fundamentally territorial rights. The statute's national scope may be a mountain (sovereignty limits) or a piton (atrophied internationalism), depending on whether cross-border enforcement was technically feasible in 1710.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); extraction_summary key_absences"
+    },
+    {
+      "id": "omega_public_domain_mechanism",
+      "description": "The statute created the public domain as a legal category—works enter the commons after term expiration. This is structurally novel: prior monopoly systems had no expiration mechanism. However, the perpetuity_reinterpretation snare attempted to eliminate the public domain by claiming common law copyright was perpetual. The House of Lords' rejection of perpetuity in Donaldson v Becket (1774) preserved the public domain, but the mechanism remains contested in modern IP law (copyright term extensions, orphan works, digital rights management). The public domain may be a rope (coordination mechanism for knowledge commons) or a scaffold (legitimation rhetoric for limited monopoly), depending on whether term limits are enforced or systematically extended.",
+      "source": "Dark Matter Probe 1 (Operational Medium); perpetuity_reinterpretation snare; public_interest_rhetoric scaffold"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan applied legal history, institutional economics, and political economy lenses. Dark matter probes surfaced author bargaining power absence, international dimension absence, and public domain mechanism ambiguity. Kernel/reading decomposition (§1.3-K) applied and determined topic is NOT a contested kernel—the 'became thinkable' vs 'first held' framing collapses into one kernel with internal contradiction rather than two competing readings. Decomposed into standard axes with kernel collapse documented in omega_kernel_collapse."
+  },
+  "_seed_id": "intellectual_property_category"
+}

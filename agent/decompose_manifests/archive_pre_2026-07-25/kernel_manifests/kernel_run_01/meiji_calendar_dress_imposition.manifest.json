@@ -1,0 +1,238 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political History / Modernization Studies / Institutional Change",
+  "family_id": "meiji_calendar_dress_imposition_1872",
+  "topic_summary": "Analysis of the Meiji government's 1872-1873 calendar reform (lunisolar to Gregorian) and dress code imposition (traditional to Western), examining whether these constitute top-down exogenous override versus endogenous displacement. The reforms were implemented with minimal preparation (20 days for calendar), legal enforcement mechanisms, and fiscal motivations (avoiding 13th month salaries), producing surface compliance with persistent underground practice ('double life').",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Meiji oligarchy (Ōkubo Toshimichi and peers; ruling group imposing reforms)",
+      "Emperor Meiji (symbolic authority; personal adoption of Western dress 1872)",
+      "Ministry of Finance (fiscal administrator; calendar change reduced salary obligations)",
+      "Rural populations (calendar users; continued lunar New Year observance for decades)",
+      "Former samurai (dress code targets; forced choice between Western suits and traditional headdress)",
+      "Fukuzawa Yukichi (intellectual; Westernization advocate)",
+      "Enforcement apparatus (police, Misdemeanor Law 1872; fines and force for compliance)"
+    ],
+    "key_tensions": [
+      "Top-down decree vs endogenous adoption (oligarchy mandate vs voluntary practice change)",
+      "Surface compliance vs underground persistence (public Western dress vs private traditional practice; 'double life')",
+      "Fiscal extraction vs cultural continuity (13th month salary avoidance vs lunisolar festival cycle)"
+    ],
+    "key_mechanisms": [
+      "Calendar Ordinance 1872 (legal abolition; December 3, 1872 = January 1, 1873)",
+      "Misdemeanor Law 1872 (enforcement; fines for non-compliance with dress codes)",
+      "Imperial modeling (Emperor's personal adoption of Western dress as normative example)",
+      "Dual practice adaptation ('nijuu seikatsu'; public conformity, private tradition)"
+    ],
+    "key_absences": [
+      "Vocabulary for top-down imposition in modernization typologies (M-set gap identified in prompt)",
+      "Mechanism for converting coerced surface compliance into genuine internalization (or its absence)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy basis for calendar and bodily practice norms — whether authority to set temporal and sartorial standards derives from endogenous cultural evolution or exogenous state decree",
+    "authority_description": "Meiji oligarchy claims interpretive authority via state power and modernization ideology (datsu-A nyū-Ō); traditional authority grounded in lunisolar cosmology and Tokugawa-era practice norms",
+    "drift_status": "absent",
+    "candidate_pattern": "Imposition Pattern (not in original six CS patterns; identified as M-set gap)",
+    "is_contested_kernel": true,
+    "kernel_id": "legitimacy_of_practice_standardization",
+    "readings": [
+      {
+        "reading_id": "endogenous_displacement_reading",
+        "commitment": "Practice change is legitimate when it emerges from voluntary adoption driven by perceived utility or cultural evolution",
+        "authority_grounding": "Modernization theory; rational choice; cultural diffusion models",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "dual_practice_equilibrium_reading"
+        ],
+        "expected_structural_delta": "Calendar/dress change would show gradual adoption curves, regional variation, elite-to-mass diffusion; resistance would be temporary friction; 'double life' would be transitional phase"
+      },
+      {
+        "reading_id": "exogenous_override_reading",
+        "commitment": "Practice change is legitimate when state authority decrees it for collective benefit (modernization, fiscal stability, international alignment)",
+        "authority_grounding": "State sovereignty; Meiji oligarchy's claimed mandate to modernize Japan; datsu-A nyū-Ō ideology",
+        "sibling_readings": [
+          "endogenous_displacement_reading",
+          "dual_practice_equilibrium_reading"
+        ],
+        "expected_structural_delta": "Calendar/dress change shows abrupt legal imposition, enforcement mechanisms, surface compliance masking persistent underground practice; 'double life' is stable equilibrium not transitional phase; rural populations maintain lunar calendar for decades"
+      },
+      {
+        "reading_id": "dual_practice_equilibrium_reading",
+        "commitment": "Practice legitimacy is domain-partitioned: state authority governs public/administrative domains, traditional authority governs private/ritual domains",
+        "authority_grounding": "Pragmatic adaptation; 'nijuu seikatsu' as rational response to dual authority structures",
+        "sibling_readings": [
+          "endogenous_displacement_reading",
+          "exogenous_override_reading"
+        ],
+        "expected_structural_delta": "Calendar/dress norms bifurcate permanently: Gregorian for taxes/bureaucracy, lunar for festivals/agriculture; Western suits for work, kimono for home; no expectation of convergence; compliance is strategic not internalized"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "endogenous_displacement_reading",
+        "reading_b": "exogenous_override_reading",
+        "basis": "Endogenous reading holds that legitimacy requires voluntary adoption (state decree without consent is illegitimate coercion); exogenous reading holds that state authority to decree practice change is itself legitimate regardless of consent (modernization mandate justifies imposition). No single framework can hold both: either consent grounds legitimacy or state authority does."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "endogenous_displacement_reading",
+      "human_readable": "Endogenous Displacement (Voluntary Adoption Model)",
+      "structural_delta": "Practice change emerges from perceived utility and cultural evolution, not state decree",
+      "primary_observable": "Adoption curves over time; regional variation in uptake; elite-to-mass diffusion patterns; duration of 'double life' as transitional friction",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline expectation for voluntary adoption model"
+    },
+    {
+      "claim_id": "exogenous_override_reading",
+      "human_readable": "Exogenous Override (Top-Down Imposition Model)",
+      "structural_delta": "Practice change imposed by state decree with enforcement mechanisms, producing surface compliance masking persistent underground practice",
+      "primary_observable": "Abruptness of legal change (20-day implementation window); enforcement mechanisms (Misdemeanor Law fines); persistence of lunar calendar in rural areas; 'double life' as stable equilibrium not transitional phase",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "meiji_oligarchy",
+      "victim": "rural_populations_and_traditional_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; highest centrality due to enforcement mechanisms and beneficiary/victim structure; core analytical target for M-set gap"
+    },
+    {
+      "claim_id": "dual_practice_equilibrium_reading",
+      "human_readable": "Dual Practice Equilibrium (Domain-Partitioned Legitimacy)",
+      "structural_delta": "Practice legitimacy bifurcates: state authority governs public/administrative domains, traditional authority governs private/ritual domains, with no expectation of convergence",
+      "primary_observable": "Persistence of 'nijuu seikatsu' beyond transitional period; stable domain partitioning (Gregorian for bureaucracy, lunar for festivals); strategic compliance without internalization",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "pragmatic_adapters",
+      "victim": "cultural_purists_and_state_universalists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; captures stable equilibrium outcome that neither endogenous nor exogenous reading predicts; structurally distinct from both"
+    },
+    {
+      "claim_id": "fiscal_extraction_mechanism",
+      "human_readable": "Fiscal Extraction via Calendar Manipulation",
+      "structural_delta": "Calendar reform as mechanism to avoid 13th month salary payments in 1873 leap year",
+      "primary_observable": "Ministry of Finance budget documents; timing of decree relative to fiscal year; salary payment reduction from 13 to 12 months",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": "meiji_treasury",
+      "victim": "civil_servants",
+      "downstream_of": [],
+      "feeds_into": [
+        "exogenous_override_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: fiscal motivation is upstream context for exogenous override but does not constitute independent reading of legitimacy kernel; captured as mechanism within exogenous_override_reading"
+    },
+    {
+      "claim_id": "modernization_ideology_scaffold",
+      "human_readable": "Datsu-A Nyū-Ō Ideological Scaffold",
+      "structural_delta": "Westernization ideology ('leaving Asia, entering Europe') as justification framework for calendar and dress reforms",
+      "primary_observable": "Fukuzawa Yukichi writings; government proclamations framing reforms as modernization; international alignment rhetoric",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "exogenous_override_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: ideological justification is context for exogenous override but does not constitute independent reading of legitimacy kernel; omega material on whether ideology enables or merely rationalizes imposition"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "endogenous_displacement_reading",
+      "kernel_id": "legitimacy_of_practice_standardization",
+      "reading_id": "endogenous_displacement_reading"
+    },
+    {
+      "claim_id": "exogenous_override_reading",
+      "kernel_id": "legitimacy_of_practice_standardization",
+      "reading_id": "exogenous_override_reading"
+    },
+    {
+      "claim_id": "dual_practice_equilibrium_reading",
+      "kernel_id": "legitimacy_of_practice_standardization",
+      "reading_id": "dual_practice_equilibrium_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "fiscal_extraction_mechanism",
+      "structural_delta": "Calendar reform as mechanism to avoid 13th month salary payments",
+      "hypothesis": "piton",
+      "deferral_reason": "Fiscal motivation is upstream context for exogenous override reading but does not constitute independent reading of legitimacy kernel; captured as mechanism within exogenous_override_reading constraint story"
+    },
+    {
+      "claim_id": "modernization_ideology_scaffold",
+      "structural_delta": "Datsu-A nyū-Ō ideology as justification framework",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Ideological justification is context for exogenous override but does not constitute independent reading; omega material on whether ideology enables or merely rationalizes top-down imposition"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m_set_gap_confirmation",
+      "description": "Does the exogenous_override_reading confirm the M-set non-exhaustiveness claim? The Meiji case shows top-down imposition with enforcement producing stable dual practice equilibrium, not transitional friction. Standard modernization typologies lack vocabulary for this: neither 'rational adoption' nor 'cultural resistance' captures coerced surface compliance masking persistent underground practice as permanent equilibrium. If exogenous_override constraint story validates this pattern, the M-set gap is confirmed.",
+      "source": "User prompt kernel contest claim + exogenous_override_reading structural delta"
+    },
+    {
+      "id": "omega_internalization_mechanism_absence",
+      "description": "What mechanism would convert coerced surface compliance into genuine internalization? The Meiji case shows 'double life' persisting for decades (rural lunar New Year observance continues). Is there a threshold of enforcement duration, generational turnover, or institutional embedding that converts exogenous override into endogenous norm? Or does dual practice equilibrium persist indefinitely absent such mechanism?",
+      "source": "Extraction absence inventory + dual_practice_equilibrium_reading"
+    },
+    {
+      "id": "omega_ideology_as_enabler_vs_rationalization",
+      "description": "Does datsu-A nyū-Ō ideology enable top-down imposition (provides legitimacy basis for oligarchy to override traditional authority) or merely rationalize it post-hoc (fiscal extraction was primary motive, ideology was rhetorical cover)? If ideology is enabler, it is upstream scaffold; if rationalization, it is downstream justification. Deferred axis modernization_ideology_scaffold could resolve this.",
+      "source": "Deferred axis modernization_ideology_scaffold + fiscal_extraction_mechanism timing"
+    },
+    {
+      "id": "omega_emperor_symbolic_vs_coercive_authority",
+      "description": "Emperor Meiji's personal adoption of Western dress in 1872 is framed as 'leading by example,' but the Misdemeanor Law enforcement mechanisms suggest coercion not voluntary emulation. Is imperial modeling a genuine rope (coordination via example) or a piton (symbolic cover for state coercion)? The extraction notes 'emperor did not rule directly' but 'was expected to accept oligarchy advice,' suggesting symbolic authority without decision power.",
+      "source": "Extraction entity 'Emperor Meiji' + mechanism 'Imperial modeling' vs 'Misdemeanor Law 1872'"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do endogenous_displacement_reading and dual_practice_equilibrium_reading collapse into one? Both predict persistent traditional practice, but endogenous reading treats 'double life' as transitional friction (eventual convergence to Western norms) while dual_practice reading treats it as stable equilibrium (permanent domain partitioning). If empirical evidence shows convergence over multi-generational timescale, readings collapse; if evidence shows stable partitioning, they remain distinct. Current evidence (rural lunar calendar 'continues to be used' per extraction) supports distinction, but longer timescale data needed.",
+      "source": "Kernel/reading decomposition coherence check (SCOPE §1.3-K)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings decomposed from contested kernel with distinct structural deltas and non-collapsing observables. Axiom contradiction declared between endogenous and exogenous readings (consent vs state authority as legitimacy basis). Dual practice equilibrium reading is structurally independent (predicts stable bifurcation neither other reading predicts). M-set gap claim (top-down imposition vocabulary absence) is testable via exogenous_override constraint story generation."
+  },
+  "_seed_id": "meiji_calendar_dress_imposition"
+}

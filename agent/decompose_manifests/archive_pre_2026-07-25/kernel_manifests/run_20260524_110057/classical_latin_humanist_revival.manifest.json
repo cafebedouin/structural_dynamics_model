@@ -1,0 +1,210 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Intellectual History / Philology",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist project to reconstruct Classical Latin from medieval Latin usage. The core tension is whether 'correct Latin' refers to the living drifted vernacular of medieval users or the textually-recovered Classical form championed by humanists like Petrarch, Valla, and Erasmus. This is a contested kernel: the same linguistic corpus read as continuous evolution vs. corrupted deviation requiring purification.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 8,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin (living drifted vernacular, 5th-15th centuries, influenced by Romance phonology and Vulgate syntax)",
+      "Classical Latin (textually-recovered form, Ciceronian standard, no living practitioners post-3rd century)",
+      "Humanist reformers (Petrarch, Valla, Erasmus: manuscript hunters, grammar codifiers, educational reformers)",
+      "Scholastic tradition (medieval university Latin, technical vocabulary, criticized as 'artificial' by humanists)",
+      "Educational institutions (schools adopting humanist orthography and text selection)",
+      "Textual corpus (ancient manuscripts as authoritative kernel vs. medieval manuscripts as corrupted transmission)"
+    ],
+    "key_tensions": [
+      "Continuity vs. rupture (medieval Latin as evolution vs. corruption requiring purification)",
+      "Living usage vs. textual authority (vernacular-influenced pronunciation vs. reconstructed classical pronunciation)",
+      "Natural vs. artificial language (Valla's framing: classical Latin as 'natural' vs. scholastic Latin as 'technical/unnatural')"
+    ]
+  },
+  "commitment_system_recognition": {
+    "is_contested_kernel": true,
+    "kernel_description": "The Latin language corpus (texts, grammar, pronunciation norms) stabilized in the Classical period (1st century BCE - 2nd century CE), transmitted through medieval manuscripts and usage",
+    "contest_description": "Two incompatible readings of what 'correct Latin' means: (R1) the living medieval form as legitimate evolution from the classical baseline, vs. (R2) the classical form as the only legitimate standard, with medieval usage as corruption requiring correction",
+    "authority_structure": "Humanist philologists claim interpretive authority via manuscript recovery and grammatical reconstruction, grounding legitimacy in textual fidelity to ancient sources rather than continuity of practice",
+    "drift_status": "absent",
+    "drift_status_explanation": "Humanists denied legitimacy to medieval drift, framing it as corruption rather than evolution. No institutional mechanism existed to revise the classical kernel; instead, the humanist project claimed to restore it.",
+    "candidate_pattern": "Founding Text Literalism",
+    "readings": [
+      {
+        "reading_id": "r1_medieval_continuity",
+        "reading_label": "Medieval Continuity Reading",
+        "kernel_claim": "Latin is a living language that evolved naturally from Classical Latin through phonetic drift, Romance influence, and Vulgate Latinity. Medieval Latin is the legitimate successor form.",
+        "authority_basis": "Living usage by educated clergy, scribes, and scholars across centuries. Authority derives from unbroken transmission and functional adequacy for theological, legal, and administrative purposes.",
+        "legitimacy_grounding": "Continuity of practice. The language works for its users; pronunciation follows vernacular phonology; orthography reflects actual speech.",
+        "beneficiaries": "Medieval scholastics, clergy using ecclesiastical pronunciation, scribes writing in vernacular-influenced orthography",
+        "structural_implications": "If this reading is correct, humanist reconstruction is an artificial imposition—a symbolic reoccupation rather than recovery. The 'corruption' narrative is ideological, not linguistic."
+      },
+      {
+        "reading_id": "r2_humanist_restoration",
+        "reading_label": "Humanist Restoration Reading",
+        "kernel_claim": "Classical Latin (Ciceronian standard) is the only correct form. Medieval usage represents corruption through ignorance, vernacular contamination, and scholastic artificiality. The humanist project restores the true kernel.",
+        "authority_basis": "Textual fidelity to ancient manuscripts. Authority derives from philological expertise in recovering original forms and rejecting post-classical 'barbarisms.'",
+        "legitimacy_grounding": "Fidelity to the textual kernel. Correctness is determined by conformity to ancient usage as preserved in manuscripts, not by living practice.",
+        "beneficiaries": "Humanist educators, classical scholars, Renaissance elites signaling cultural capital through Ciceronian style",
+        "structural_implications": "If this reading is correct, medieval Latin is genuinely corrupt—a deviation requiring correction. The humanist project is recovery, not invention. However, the lack of living practitioners means the 'restored' form is itself a reconstruction, not a return."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "phonetic_drift_vs_orthographic_purity",
+      "human_readable": "Phonetic Drift vs. Orthographic Purity",
+      "kernel_id": "latin_corpus",
+      "reading_id": "r1_medieval_continuity",
+      "structural_delta": "Medieval Latin orthography reflects vernacular phonology (e for ae, ci for ti, homophones collapsed). Humanist reform enforces classical orthography regardless of pronunciation.",
+      "primary_observable": "Manuscript orthography: frequency of ae vs. e, ti vs. ci, diphthong preservation. Educational texts: orthographic rules codified (e.g., Valla's Elegantiae).",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "textual_authority_vs_living_usage"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream rope: orthographic practice is the most concrete observable of the kernel contest. Different readings produce different orthographic norms."
+    },
+    {
+      "claim_id": "textual_authority_vs_living_usage",
+      "human_readable": "Textual Authority vs. Living Usage",
+      "kernel_id": "latin_corpus",
+      "reading_id": "r2_humanist_restoration",
+      "structural_delta": "Humanists ground correctness in ancient manuscripts (textual authority), rejecting medieval usage as corrupt. Medieval users ground correctness in functional adequacy and unbroken transmission (living usage).",
+      "primary_observable": "Humanist treatises (Valla, Erasmus) explicitly rejecting medieval forms. Educational adoption rates of humanist vs. scholastic texts. Manuscript circulation patterns (ancient vs. medieval).",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "humanist_educators",
+      "victim": "scholastic_tradition",
+      "downstream_of": [
+        "phonetic_drift_vs_orthographic_purity"
+      ],
+      "feeds_into": [
+        "continuity_vs_rupture_periodization"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Central tangled_rope: this is the core of the kernel contest. Authority structure determines which reading is legitimate."
+    },
+    {
+      "claim_id": "continuity_vs_rupture_periodization",
+      "human_readable": "Continuity vs. Rupture (Periodization)",
+      "kernel_id": "latin_corpus",
+      "reading_id": "r2_humanist_restoration",
+      "structural_delta": "Humanists periodize history as classical golden age → medieval corruption → Renaissance rebirth. This periodization justifies rupture (purification) over continuity (evolution).",
+      "primary_observable": "Humanist rhetoric of 'decadence' and 'rebirth.' Historical narratives in prefaces to classical editions. Educational curricula excluding post-classical texts.",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "renaissance_elites",
+      "victim": "medieval_intellectual_tradition",
+      "downstream_of": [
+        "textual_authority_vs_living_usage"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream snare: periodization is the ideological mechanism that enforces the humanist reading. It transforms a linguistic choice into a moral and cultural imperative."
+    },
+    {
+      "claim_id": "pronunciation_reconstruction_feasibility",
+      "human_readable": "Pronunciation Reconstruction Feasibility",
+      "kernel_id": "latin_corpus",
+      "reading_id": "r2_humanist_restoration",
+      "structural_delta": "Erasmus proposed reconstructed classical pronunciation, but no living speakers existed to validate it. Ecclesiastical pronunciation persisted in practice.",
+      "primary_observable": "Erasmus's De recta pronuntiatione (1528). Adoption rates of reconstructed vs. ecclesiastical pronunciation in schools and liturgy.",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "textual_authority_vs_living_usage"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: pronunciation is the clearest case of reoccupation (no living practitioners to validate reconstruction), but it is structurally downstream of the authority contest and adds limited independent yield."
+    },
+    {
+      "claim_id": "educational_institutional_capture",
+      "human_readable": "Educational Institutional Capture",
+      "kernel_id": "latin_corpus",
+      "reading_id": "r2_humanist_restoration",
+      "structural_delta": "Humanist Latin became the educational standard, marginalizing scholastic and medieval texts. Schools taught humanist orthography and selected humanist-approved texts.",
+      "primary_observable": "Curriculum records: ratio of classical to medieval texts. Grammar textbooks: humanist (Valla) vs. scholastic (Alexander de Villa Dei). Printing press output: classical editions vs. medieval commentaries.",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "humanist_movement",
+      "victim": null,
+      "downstream_of": [
+        "textual_authority_vs_living_usage"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional capture is the mechanism by which the humanist reading became dominant, but it is a consequence rather than a cause of the kernel contest."
+    }
+  ],
+  "generation_sequence": [
+    "phonetic_drift_vs_orthographic_purity",
+    "textual_authority_vs_living_usage",
+    "continuity_vs_rupture_periodization"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pronunciation_reconstruction_feasibility",
+      "structural_delta": "Reconstructed classical pronunciation proposed without living speakers to validate",
+      "hypothesis": "piton",
+      "deferral_reason": "Clearest case of symbolic reoccupation, but structurally downstream of authority contest with limited independent yield"
+    },
+    {
+      "claim_id": "educational_institutional_capture",
+      "structural_delta": "Humanist Latin became educational standard, marginalizing medieval texts",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Mechanism of dominance rather than cause; consequence of kernel contest resolution"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reachability_vs_reoccupation",
+      "description": "The kernel contest question: Was humanist Latin reachable from medieval Latin through systematic reform (continuity), or was it a separate symbolic kernel reoccupied from textual authority (rupture)? Evidence suggests both: orthographic reforms imply continuity, but rejection of living usage and appeal to ancient texts as sole authority implies reoccupation. The humanists claimed recovery while enacting transformation.",
+      "source": "User's kernel contest formulation + §1.3-K contested kernel analysis"
+    },
+    {
+      "id": "omega_pronunciation_validation",
+      "description": "Erasmus's reconstructed classical pronunciation had no living speakers to validate it. Was it recovery or invention? The lack of phonetic continuity makes this the clearest case of reoccupation, yet humanists framed it as restoration. Deferred axis pronunciation_reconstruction_feasibility explores this.",
+      "source": "Deferred axis pronunciation_reconstruction_feasibility + research context on Erasmus"
+    },
+    {
+      "id": "omega_scholastic_latin_legitimacy",
+      "description": "Was scholastic Latin genuinely 'artificial' and 'unnatural' (Valla's claim), or was this a rhetorical move to delegitimize a rival tradition? If scholastic Latin was functionally adequate for its purposes (theology, law, philosophy), the humanist critique may be aesthetic rather than structural.",
+      "source": "Research context on Valla's critique + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_romance_vernacular_influence",
+      "description": "Medieval Latin's drift was driven by Romance vernacular phonology. If the vernaculars are legitimate descendants of Latin, is their influence on written Latin corruption or natural evolution? The humanist reading requires treating vernacular influence as contamination, but this assumes a static kernel rather than a living language.",
+      "source": "Research context on medieval Latin phonology + Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel contest structure is well-supported by research context. The two readings are genuinely incompatible (continuity vs. rupture), and the authority structure (textual fidelity vs. living usage) is clearly documented. The three selected axes capture the upstream (orthography), central (authority), and downstream (periodization) topology of the contest."
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

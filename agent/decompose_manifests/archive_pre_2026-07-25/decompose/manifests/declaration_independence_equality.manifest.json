@@ -1,0 +1,204 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Civil Rights History",
+  "family_id": "declaration_equality_clause_2026",
+  "topic_summary": "Analysis of the Declaration of Independence's 'all men are created equal' clause as a contested kernel with two primary readings: a restrictive originalist interpretation grounded in 18th-century propertied male franchise, and an expansive universalist interpretation grounding contemporary civil rights claims. The readings emit structurally different constraints on franchise extension, anti-discrimination law, and rights scope.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Declaration of Independence (founding text, 1776)",
+      "Founding Generation Elites (property-owning white males, original beneficiaries)",
+      "Marginalized Groups (women, enslaved persons, non-property owners, original exclusions)",
+      "Civil Rights Movements (20th century actors claiming expansive reading authority)",
+      "Federal Courts (interpretive authority post-14th Amendment)",
+      "State Legislatures (franchise gatekeepers, variable restriction levels)"
+    ],
+    "key_tensions": [
+      "Original intent vs living constitutionalism (interpretive authority contest)",
+      "Self-evident truth claim vs historical exclusion practice (kernel ambiguity as resource)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Declaration clause 'all men are created equal' as stabilized natural rights commitment whose scope and application authority is contested",
+    "authority_description": "Split between originalist authority (grounded in Founders' demonstrable intent) and universalist authority (grounded in abstract equality principle claimed as transcendent)",
+    "drift_status": "partial",
+    "candidate_pattern": "ambiguity_as_resource",
+    "is_contested_kernel": true,
+    "kernel_id": "equality_clause_scope",
+    "readings": [
+      {
+        "reading_id": "restrictive_originalist",
+        "commitment": "Equality applies to propertied white males as political actors within 18th-century social contract framework",
+        "authority_grounding": "Founders' demonstrable intent; historical practice as interpretive constraint",
+        "sibling_readings": [
+          "expansive_universalist",
+          "progressive_textualist"
+        ],
+        "expected_structural_delta": "Narrow beneficiary set; franchise and rights claims outside original scope require separate constitutional basis (amendments); high legitimacy threshold for expansion"
+      },
+      {
+        "reading_id": "expansive_universalist",
+        "commitment": "Equality is self-evident universal truth applying to all humans regardless of historical exclusions",
+        "authority_grounding": "Abstract moral principle; Declaration as aspirational standard transcending Founders' limitations",
+        "sibling_readings": [
+          "restrictive_originalist",
+          "progressive_textualist"
+        ],
+        "expected_structural_delta": "Universal beneficiary set; historical exclusions are hypocrisy to be corrected not binding precedent; low legitimacy threshold for rights expansion via judicial interpretation"
+      },
+      {
+        "reading_id": "progressive_textualist",
+        "commitment": "Text contains equality principle but application scope expands through democratic amendment process not judicial reinterpretation",
+        "authority_grounding": "Popular sovereignty via Article V amendment process; text as constraint on interpretation but not on constitutional revision",
+        "sibling_readings": [
+          "restrictive_originalist",
+          "expansive_universalist"
+        ],
+        "expected_structural_delta": "Bounded universalism; expansion requires supermajority democratic consent (amendments) not court decree; moderate legitimacy threshold balancing original limits with revision capacity"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "restrictive_originalist",
+        "reading_b": "expansive_universalist",
+        "basis": "Originalist axiom that meaning is fixed by Founders' intent is mutually exclusive with universalist axiom that moral truth transcends historical context; no coherent framework can hold both interpretive commitments simultaneously"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "restrictive_originalist",
+      "human_readable": "Restrictive Originalist Reading (Equality as 18th-Century Political Status)",
+      "structural_delta": "Equality clause applies only to property-owning white males as originally understood and practiced",
+      "primary_observable": "Franchise restrictions in state constitutions 1776-1860; exclusion of women/enslaved persons from political participation; Supreme Court citations to original intent in franchise/rights cases",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "founding_generation_elites",
+      "victim": "marginalized_groups_claiming_equality",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading instantiating narrow constraint; establishes baseline for comparison with expansive alternative"
+    },
+    {
+      "claim_id": "expansive_universalist",
+      "human_readable": "Expansive Universalist Reading (Equality as Transcendent Moral Truth)",
+      "structural_delta": "Equality clause establishes universal human equality principle independent of Founders' historical limitations",
+      "primary_observable": "Civil rights movement invocations of Declaration; Supreme Court citations in Brown v. Board, Loving v. Virginia; legislative expansions of anti-discrimination law beyond original scope",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "civil_rights_claimants",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Sibling reading instantiating expansive constraint; axiom-contradictory with restrictive reading per §1.3-K"
+    },
+    {
+      "claim_id": "progressive_textualist",
+      "human_readable": "Progressive Textualist Reading (Equality via Democratic Amendment)",
+      "structural_delta": "Equality principle in text but expansion requires supermajority constitutional amendment not judicial reinterpretation",
+      "primary_observable": "13th/14th/15th/19th Amendment history; Article V amendment difficulty; judicial deference to amendment process in rights expansion cases",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "democratic_majorities",
+      "victim": "minorities_seeking_judicial_remedy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading balancing originalist constraint with democratic revision capacity; illuminates amendment process as extraction bypass mechanism"
+    },
+    {
+      "claim_id": "judicial_authority_competition",
+      "human_readable": "Judicial Authority Competition (Supreme Court as Reading Selector)",
+      "structural_delta": "Federal courts' institutional power to select between readings determines which constraint governs",
+      "primary_observable": "Supreme Court composition shifts correlating with reading shifts; citation patterns to Founders vs universal principles; reversal rates of rights-expanding precedents",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "judicial_appointees",
+      "victim": "rights_claimants_under_disfavored_reading",
+      "downstream_of": [
+        "restrictive_originalist",
+        "expansive_universalist",
+        "progressive_textualist"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-level authority axis; high epsilon but generation budget spent on three readings themselves; documented as omega for observer-axis treatment"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "restrictive_originalist",
+      "kernel_id": "equality_clause_scope",
+      "reading_id": "restrictive_originalist"
+    },
+    {
+      "claim_id": "expansive_universalist",
+      "kernel_id": "equality_clause_scope",
+      "reading_id": "expansive_universalist"
+    },
+    {
+      "claim_id": "progressive_textualist",
+      "kernel_id": "equality_clause_scope",
+      "reading_id": "progressive_textualist"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "judicial_authority_competition",
+      "structural_delta": "Supreme Court selection between readings as extraction mechanism",
+      "hypothesis": "snare",
+      "deferral_reason": "Meta-level authority axis; three-reading budget exhausted; high-epsilon deferred axis suitable for omega treatment as observer-level constraint on reading selection process"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_declaration_binding_force",
+      "description": "Is the Declaration legally binding or hortatory? If hortatory, all readings are rhetorical resources not legal constraints (Mountain reclassification). If binding, through what mechanism—natural law, incorporation via 14th Amendment Due Process, or custom?",
+      "source": "Dark Matter Probe 1 (Operational Medium): analysis assumes Declaration constrains legal interpretation but mechanism unexamined"
+    },
+    {
+      "id": "omega_reconstruction_amendments_override",
+      "description": "Do 13th/14th/15th Amendments supersede Declaration as equality source, making Declaration reading contest legally moot? Progressive textualist reading may collapse into amendment-supremacy framework.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): Reconstruction Amendments absent from extraction despite being primary equality source in positive law"
+    },
+    {
+      "id": "omega_standing_doctrine_gate",
+      "description": "Does Article III standing doctrine prevent equality clause claims from reaching courts, making reading contest irrelevant to most claimants? Judicial authority axis deferred but standing may be prior constraint.",
+      "source": "Deferred axis judicial_authority_competition + Dark Matter Probe 3 (Beneficiary Scan): procedural barriers to judicial reading selection"
+    },
+    {
+      "id": "omega_men_vs_people_textualism",
+      "description": "Does 'men' in 1776 text exclude women as matter of plain meaning, making expansive reading textually unavailable? Strict textualism would collapse expansive and progressive readings into amendment-only path.",
+      "source": "§1.3-K coherence check: expansive universalist reading may be textually unavailable without shifting from 'men' to 'persons'"
+    },
+    {
+      "id": "omega_global_equality_norms",
+      "description": "Are international human rights norms (UDHR, ICCPR) now the operative equality kernel, with Declaration as historical artifact? Modern equality claims may bypass Declaration entirely.",
+      "source": "Dark Matter Probe 1 (Operational Medium): analysis assumes Declaration remains operative kernel but global legal frameworks may have displaced it"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Analysis assumes Declaration is binding legal constraint (Mountain) but may be hortatory aspiration (Rope). Generated omega_declaration_binding_force to bound this classification uncertainty. Additionally, Reconstruction Amendments may supersede Declaration as positive law source, making reading contest historically important but legally moot (omega_reconstruction_amendments_override)."
+  },
+  "_seed_id": "declaration_independence_equality"
+}

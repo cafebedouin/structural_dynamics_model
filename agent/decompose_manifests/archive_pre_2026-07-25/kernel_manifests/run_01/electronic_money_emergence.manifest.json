@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary History / Technology Studies / Institutional Economics",
+  "family_id": "digital_money_emergence_2026",
+  "topic_summary": "Analysis of the emergence of electronic/digital money, examining the contested kernel of when digital money 'became thinkable' versus when it was 'first held' as a practical instrument. The M4/M5 monetary aggregate collapse tests whether different temporal framings of digital money's origin instantiate structurally different constraints or merely reflect observer disagreement about a single historical trajectory.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "M4/M5 monetary aggregates (statistical categories for broad money supply measurement)",
+      "Central banks (monetary authorities defining and measuring money supply)",
+      "Commercial banking system (deposit-creating institutions)",
+      "Electronic payment networks (infrastructure enabling non-physical money transfer)",
+      "Regulatory frameworks (legal definitions of what counts as money)",
+      "Cryptographic currency systems (decentralized digital money architectures)"
+    ],
+    "key_tensions": [
+      "Conceptual availability vs practical implementation (when digital money became thinkable vs when it became holdable)",
+      "Statistical measurement vs economic function (M4/M5 categories vs actual money-like instruments)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The temporal origin point of digital money as a legitimate monetary instrument",
+    "authority_description": "Central banks and monetary economists who define what counts as money through statistical aggregates and regulatory classification",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "digital_money_origin",
+    "readings": [
+      {
+        "reading_id": "became_thinkable_reading",
+        "commitment": "Digital money emerged when the concept became technically and institutionally conceivable, prior to widespread implementation",
+        "authority_grounding": "Technology studies / institutional economics perspective prioritizing conceptual infrastructure",
+        "sibling_readings": [
+          "first_held_reading",
+          "regulatory_recognition_reading"
+        ],
+        "expected_structural_delta": "Earlier origin date; constraint set includes conceptual/regulatory barriers that precede implementation; beneficiaries are early institutional architects; victims are those excluded from conceptual framing"
+      },
+      {
+        "reading_id": "first_held_reading",
+        "commitment": "Digital money emerged when individuals first held non-physical monetary instruments as practical stores of value",
+        "authority_grounding": "Monetary history / user-practice perspective prioritizing actual economic function",
+        "sibling_readings": [
+          "became_thinkable_reading",
+          "regulatory_recognition_reading"
+        ],
+        "expected_structural_delta": "Later origin date; constraint set includes implementation barriers and network effects; beneficiaries are early adopters with access; victims are those without infrastructure access"
+      },
+      {
+        "reading_id": "regulatory_recognition_reading",
+        "commitment": "Digital money emerged when monetary authorities formally incorporated it into statistical aggregates and regulatory frameworks",
+        "authority_grounding": "Central banking / legal positivism perspective prioritizing official classification",
+        "sibling_readings": [
+          "became_thinkable_reading",
+          "first_held_reading"
+        ],
+        "expected_structural_delta": "Latest origin date; constraint set dominated by legal/regulatory barriers; beneficiaries are incumbent financial institutions; victims are unregulated innovators"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "became_thinkable_reading",
+      "human_readable": "Digital Money as Conceptual Emergence (Became Thinkable)",
+      "structural_delta": "Digital money originated when technical and institutional preconditions made non-physical money conceptually viable, prior to mass adoption",
+      "primary_observable": "Publication dates of technical specifications (e.g., electronic funds transfer protocols), institutional policy documents discussing digital payment systems, patent filings for electronic money systems",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_architects",
+      "victim": "conceptually_excluded_populations",
+      "downstream_of": [],
+      "feeds_into": [
+        "first_held_reading",
+        "regulatory_recognition_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream reading with distinct observable (conceptual infrastructure) and earliest temporal framing; establishes baseline for other readings"
+    },
+    {
+      "claim_id": "first_held_reading",
+      "human_readable": "Digital Money as Practical Implementation (First Held)",
+      "structural_delta": "Digital money originated when individuals first held and transacted with non-physical monetary instruments in daily economic life",
+      "primary_observable": "Adoption rates of electronic banking services, volume of non-cash transactions, survey data on money-holding practices, ATM deployment statistics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "early_adopters_with_infrastructure_access",
+      "victim": "infrastructure_excluded_populations",
+      "downstream_of": [
+        "became_thinkable_reading"
+      ],
+      "feeds_into": [
+        "regulatory_recognition_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Middle reading bridging conceptual and regulatory framings; distinct observable (user behavior) and different victim set than upstream reading"
+    },
+    {
+      "claim_id": "regulatory_recognition_reading",
+      "human_readable": "Digital Money as Official Classification (Regulatory Recognition)",
+      "structural_delta": "Digital money originated when monetary authorities formally incorporated electronic instruments into money supply definitions and regulatory frameworks",
+      "primary_observable": "Central bank statistical aggregate definitions (M4/M5 composition changes), regulatory framework publication dates, legal tender status modifications",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_financial_institutions",
+      "victim": "unregulated_innovators",
+      "downstream_of": [
+        "became_thinkable_reading",
+        "first_held_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis reading with highest centrality; captures regulatory capture dynamics and highest epsilon; distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "network_effects_lock_in",
+      "human_readable": "Network Effects Lock-In (Payment System Monopolization)",
+      "structural_delta": "Early electronic payment networks created winner-take-all dynamics that locked in specific technical standards and institutional arrangements",
+      "primary_observable": "Market concentration in payment processing, switching costs between payment systems, technical standard adoption rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "dominant_payment_networks",
+      "victim": "alternative_payment_innovators",
+      "downstream_of": [
+        "first_held_reading"
+      ],
+      "feeds_into": [
+        "regulatory_recognition_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly through first_held_reading's infrastructure access dynamics and regulatory_recognition_reading's incumbent beneficiary structure"
+    },
+    {
+      "claim_id": "cryptographic_sovereignty_challenge",
+      "human_readable": "Cryptographic Sovereignty Challenge (Decentralized Money as Authority Bypass)",
+      "structural_delta": "Cryptographic currencies challenge the regulatory_recognition reading by creating money-like instruments outside official classification frameworks",
+      "primary_observable": "Cryptocurrency adoption rates, regulatory responses to decentralized money, central bank digital currency development timelines",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": "sovereignty_seeking_users",
+      "victim": "monetary_policy_effectiveness",
+      "downstream_of": [
+        "regulatory_recognition_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: contemporary development outside historical emergence scope; omega material for future kernel evolution"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "became_thinkable_reading",
+      "kernel_id": "digital_money_origin",
+      "reading_id": "became_thinkable_reading"
+    },
+    {
+      "claim_id": "first_held_reading",
+      "kernel_id": "digital_money_origin",
+      "reading_id": "first_held_reading"
+    },
+    {
+      "claim_id": "regulatory_recognition_reading",
+      "kernel_id": "digital_money_origin",
+      "reading_id": "regulatory_recognition_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "network_effects_lock_in",
+      "structural_delta": "Early payment networks created winner-take-all lock-in dynamics",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured indirectly through infrastructure access dynamics in first_held_reading and incumbent beneficiary structure in regulatory_recognition_reading"
+    },
+    {
+      "claim_id": "cryptographic_sovereignty_challenge",
+      "structural_delta": "Cryptocurrencies challenge official money classification frameworks",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Contemporary development outside historical emergence scope; represents potential future kernel evolution rather than origin contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m4_m5_collapse_mechanism",
+      "description": "The M4/M5 collapse may itself be a regulatory_recognition artifact: did statistical categories fail because digital money was already functionally present (validating first_held_reading) or because conceptual frameworks lagged implementation (validating became_thinkable_reading)? The collapse is evidence for both readings.",
+      "source": "Kernel coherence analysis"
+    },
+    {
+      "id": "omega_temporal_ordering_ambiguity",
+      "description": "The three readings may not be temporally sequential but simultaneous processes at different institutional levels. Became_thinkable (technical papers), first_held (user adoption), and regulatory_recognition (official classification) may have overlapped 1970s-1990s, making origin date selection an arbitrary cut rather than structural difference.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_global_south_exclusion",
+      "description": "All three readings implicitly frame digital money emergence through Global North institutional and infrastructural contexts. Mobile money in Kenya (M-Pesa 2007) may represent a fourth reading where 'first held' preceded 'became thinkable' in regulatory frameworks, inverting the assumed sequence.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "If all three readings converge on the same constraint structure (access to non-physical money instruments gated by infrastructure and regulation), they may not be genuine readings but observer positions on a single constraint. The structural delta test during generation will determine whether they emit different constraint types or merely different victim sets.",
+      "source": "§1.3-K coherence gate"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three readings with distinct observables, beneficiary/victim structures, and temporal framings. Omega_reading_collapse_risk flags the possibility that generation may reveal these as observer positions rather than genuine readings, but structural deltas are sufficiently distinct to warrant generation."
+  },
+  "_seed_id": "electronic_money_emergence"
+}

@@ -1,0 +1,239 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Transitions / Post-Revolutionary State-Building",
+  "family_id": "bangladesh_july_charter_2024",
+  "topic_summary": "Analysis of competing interpretations of Bangladesh's July 2024 National Charter following the mass uprising that ousted Prime Minister Sheikh Hasina. The charter emerged from student-led protests and interim government formation, creating a foundational document whose interpretation determines sovereign legitimacy, institutional authority, and the boundaries of political contestation in post-Awami League Bangladesh.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "July 2024 National Charter (foundational document post-uprising)",
+      "Student Coordination Movement (primary revolutionary actor; charter drafters)",
+      "Interim Government led by Muhammad Yunus (transitional authority)",
+      "Bangladesh Nationalist Party/BNP (secular-nationalist opposition)",
+      "Jamaat-e-Islami (Islamist political formation; participation contested)",
+      "Military/Security Apparatus (institutional continuity actor; interpretive authority contested)"
+    ],
+    "key_tensions": [
+      "Secular democratic institutionalism vs religiously-guided nationalism (charter interpretation axis)",
+      "Revolutionary legitimacy vs constitutional continuity (sovereign authority grounding)",
+      "Student movement autonomy vs military institutional control (interpretive authority structure)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The July 2024 National Charter as stabilized commitment establishing post-revolutionary sovereign legitimacy and institutional authority boundaries",
+    "authority_description": "Contested between student movement (revolutionary mandate), interim government (administrative custody), military (institutional continuity), and political parties (electoral legitimacy claims)",
+    "drift_status": "absent",
+    "candidate_pattern": "founding_ambiguity (deliberate underdetermination enabling coalition formation)",
+    "is_contested_kernel": true,
+    "kernel_id": "july_charter_sovereign_legitimacy",
+    "readings": [
+      {
+        "reading_id": "secular_democratic_reading",
+        "commitment": "Charter mandates secular democratic institutions with military subordination to civilian authority",
+        "authority_grounding": "Student movement revolutionary mandate plus constitutional reform tradition (1972 baseline)",
+        "sibling_readings": [
+          "guided_nationalism_reading",
+          "military_custodian_reading"
+        ],
+        "expected_structural_delta": "Political Islam actors excluded or constrained; military as subordinate institution; victim set includes Jamaat-e-Islami and military autonomous authority"
+      },
+      {
+        "reading_id": "guided_nationalism_reading",
+        "commitment": "Charter establishes Islamic-nationalist framework with religious identity as sovereign legitimacy ground",
+        "authority_grounding": "Mass uprising interpreted as rejection of secular Awami League; Islamic parties' participation legitimizes religious grounding",
+        "sibling_readings": [
+          "secular_democratic_reading",
+          "military_custodian_reading"
+        ],
+        "expected_structural_delta": "Secular institutions constrained; religious law or norms gain constitutional status; victim set includes secular civil society and religious minorities"
+      },
+      {
+        "reading_id": "military_custodian_reading",
+        "commitment": "Charter ratifies military as permanent institutional guardian ensuring stability",
+        "authority_grounding": "Military institutional continuity across regime transitions; self-claimed role as national unity guarantor",
+        "sibling_readings": [
+          "secular_democratic_reading",
+          "guided_nationalism_reading"
+        ],
+        "expected_structural_delta": "Civilian institutions subordinated to military veto authority; political contestation bounded by security apparatus; victim set includes autonomous political parties and student movement"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "secular_democratic_reading",
+        "reading_b": "guided_nationalism_reading",
+        "basis": "No single coherent framework can simultaneously hold that religious identity is constitutionally irrelevant to sovereign legitimacy (secular baseline) and that religious identity grounds sovereign legitimacy (Islamic framework). Accepting one axiom as true requires rejecting the other as false."
+      },
+      {
+        "reading_a": "secular_democratic_reading",
+        "reading_b": "military_custodian_reading",
+        "basis": "No single coherent framework can simultaneously hold that civilian authority is supreme and final (democratic constitutionalism) and that military institutional authority overrides civilian decisions (custodian model). The axioms are mutually exclusive regarding ultimate sovereign location."
+      },
+      {
+        "reading_a": "guided_nationalism_reading",
+        "reading_b": "military_custodian_reading",
+        "basis": "These axioms can coexist in a hybrid framework (military guaranteeing Islamic order). This pair does NOT meet the mutual exclusivity test and is therefore NOT declared contradictory despite different institutional priorities."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "secular_democratic_reading",
+      "human_readable": "Secular Democratic Reading (Charter as Civilian Supremacy Mandate)",
+      "structural_delta": "Charter interpreted as mandate for secular institutions with military subordination and political Islam constraints",
+      "primary_observable": "Interim government policy on Jamaat-e-Islami participation; military budget autonomy vs civilian oversight; constitutional reform proposals on secularism clauses",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "secular_civil_society",
+      "victim": "islamist_political_formations_and_military_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest structural distinctiveness; represents revolutionary movement's stated interpretation; clearest victim set (Jamaat + military autonomous authority)"
+    },
+    {
+      "claim_id": "guided_nationalism_reading",
+      "human_readable": "Guided Nationalism Reading (Charter as Islamic Framework Legitimation)",
+      "structural_delta": "Charter interpreted as establishing religious identity grounding for sovereign legitimacy with Islamic norms gaining constitutional status",
+      "primary_observable": "Constitutional reform proposals on state religion clauses; Jamaat-e-Islami electoral participation status; blasphemy law enforcement patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "islamist_political_parties",
+      "victim": "secular_institutions_and_religious_minorities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposite victim set from secular_democratic_reading; represents emergent coalition interpretation with BNP-Jamaat alignment"
+    },
+    {
+      "claim_id": "military_custodian_reading",
+      "human_readable": "Military Custodian Reading (Charter as Institutional Guardian Ratification)",
+      "structural_delta": "Charter interpreted as ratifying military as permanent institutional authority ensuring national stability above civilian politics",
+      "primary_observable": "Military budget and command autonomy; frequency of security apparatus vetoes on civilian policy; student movement autonomy vs military control",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "military_institutional_autonomy",
+      "victim": "civilian_political_contestation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third distinct reading with different beneficiary structure; captures institutional continuity axis orthogonal to secular/religious divide"
+    },
+    {
+      "claim_id": "awami_league_delegitimation",
+      "human_readable": "Awami League Delegitimation (Charter as Permanent Exclusion Mechanism)",
+      "structural_delta": "Charter interpreted as establishing permanent exclusion of Awami League from political contestation",
+      "primary_observable": "Legal status of Awami League; eligibility rules for former AL members in elections; asset seizure scope",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "opposition_political_formations",
+      "victim": "awami_league_members_and_supporters",
+      "downstream_of": [],
+      "feeds_into": [
+        "secular_democratic_reading",
+        "guided_nationalism_reading",
+        "military_custodian_reading"
+      ],
+      "centrality_score": 5,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: feeds into all three selected readings as upstream delegitimation mechanism; analytically important but structurally downstream-enabling rather than interpretation-defining"
+    },
+    {
+      "claim_id": "student_movement_authority_eclipse",
+      "human_readable": "Student Movement Authority Eclipse (Revolutionary Mandate Decay)",
+      "structural_delta": "Student movement's revolutionary legitimacy claims erode as traditional power centers (military, parties) capture charter interpretation",
+      "primary_observable": "Student movement representation in interim government decisions; frequency of student veto on policy; media framing of movement authority",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "student_revolutionary_autonomy",
+      "downstream_of": [],
+      "feeds_into": [
+        "military_custodian_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal decay mechanism rather than interpretive axis; relevant to military_custodian_reading emergence but lower structural priority than direct readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "secular_democratic_reading",
+      "kernel_id": "july_charter_sovereign_legitimacy",
+      "reading_id": "secular_democratic_reading"
+    },
+    {
+      "claim_id": "guided_nationalism_reading",
+      "kernel_id": "july_charter_sovereign_legitimacy",
+      "reading_id": "guided_nationalism_reading"
+    },
+    {
+      "claim_id": "military_custodian_reading",
+      "kernel_id": "july_charter_sovereign_legitimacy",
+      "reading_id": "military_custodian_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "awami_league_delegitimation",
+      "structural_delta": "Charter as permanent exclusion mechanism for Awami League",
+      "hypothesis": "snare",
+      "deferral_reason": "Feeds into all three readings as upstream delegitimation mechanism; analytically critical but interpretation-enabling rather than interpretation-defining"
+    },
+    {
+      "claim_id": "student_movement_authority_eclipse",
+      "structural_delta": "Revolutionary mandate decay as traditional power centers capture interpretation",
+      "hypothesis": "piton",
+      "deferral_reason": "Temporal decay mechanism; relevant to military reading emergence but lower structural distinctiveness than direct interpretive readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_charter_text_availability",
+      "description": "Is there a single canonical charter text, or are multiple documents being called 'the July Charter'? If multiple, the kernel may itself be contested at the textual level, not just interpretive.",
+      "source": "Extraction limitation: no source text provided; ambiguity in kernel fixity assumption"
+    },
+    {
+      "id": "omega_interim_duration",
+      "description": "How long does the interim government claim authority? If indefinite, the 'transitional' framing may be a snare. If fixed timeline, readings compete under deadline pressure.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): no temporal bound specified in extraction"
+    },
+    {
+      "id": "omega_india_patron_constraint",
+      "description": "Does Indian strategic interest constrain which readings are viable? Secular reading may align with Indian preference; guided nationalism reading may trigger external patron opposition.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): regional patron not surfaced in extraction but historically determinative in Bangladesh transitions"
+    },
+    {
+      "id": "omega_yunus_custodian_collapse",
+      "description": "Does Yunus interim government operate as civilian front for military custodianship? If so, secular_democratic_reading and military_custodian_reading may collapse into single hybrid reading.",
+      "source": "Dark Matter Probe 1 (Operational Medium): extraction treats interim government as separate from military, but institutional boundaries unclear"
+    },
+    {
+      "id": "omega_awami_league_return_path",
+      "description": "If AL returns to power via election, does charter reading revert or does AL adopt one of the three readings to relegitimize? Charter stability depends on AL's permanent exclusion.",
+      "source": "Deferred axis awami_league_delegitimation: permanent exclusion may be assumed rather than structurally enforced"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: All three readings classified as high/mod epsilon without direct observational grounding in charter text itself (no source text provided). F34 detected: Bangladesh constitutional politics and civil-military relations exceed model's direct domain competence; analysis relies on pattern-matching to other post-revolutionary transitions (Egypt 2011-2013, Pakistan recurring). Generated omegas to bound charter text ambiguity, interim duration, and external patron constraints."
+  },
+  "_seed_id": "bangladesh_july_national_charter"
+}

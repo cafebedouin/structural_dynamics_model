@@ -1,0 +1,184 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology History / Industrial Standards / Path Dependence",
+  "family_id": "qwerty_naturalization_2026",
+  "topic_summary": "Analysis of QWERTY keyboard layout persistence as a contested kernel where one reading treats it as neutral path-dependent artifact (alternatives lapsed without antagonism) and another treats it as beneficiary-preserved incumbency (manufacturers/typists actively maintained dominance). The topic tests whether kernel structure reproduces D3 ARTIFACT (beneficiary-hunting finds beneficiaries by construction) or reveals genuine structural difference.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "QWERTY layout (1873 Sholes & Glidden typewriter standard)",
+      "Dvorak Simplified Keyboard (1936 ergonomic alternative)",
+      "Remington (manufacturer with QWERTY typewriter monopoly 1873-1890s)",
+      "Touch-typing training infrastructure (schools, corporate training, standardized curricula)",
+      "Early adopter typists (developed muscle memory on QWERTY 1880s-1920s)"
+    ],
+    "key_tensions": [
+      "Alleged efficiency advantage (Dvorak claims 20-40% speed increase) vs empirical performance studies (1956 GSA study found minimal advantage)",
+      "Network effects explanation (coordination value of shared standard) vs lock-in explanation (switching costs preserve inferior standard)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "lapsed_alternatives_reading",
+      "human_readable": "Lapsed Alternatives (Neutral Path Dependence)",
+      "structural_delta": "QWERTY persists because alternatives never achieved sufficient adoption to trigger coordination cascade, not because anyone defended it",
+      "primary_observable": "Absence of documented suppression campaigns; presence of multiple failed alternative launches with low adoption",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; tests whether coordination-only story generates different constraint structure"
+    },
+    {
+      "claim_id": "incumbent_preservation_reading",
+      "human_readable": "Incumbent Preservation (Beneficiary Defense)",
+      "structural_delta": "QWERTY persists because manufacturers, training institutions, and skilled typists benefit from preventing alternatives that would devalue their capital",
+      "primary_observable": "Evidence of active resistance to alternatives; asymmetric marketing/training investment; documented suppression attempts",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "typewriter_manufacturers",
+      "victim": "potential_alternative_adopters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; tests whether adding beneficiary structure changes constraint type from rope to tangled_rope"
+    },
+    {
+      "claim_id": "efficiency_mythology",
+      "human_readable": "Efficiency Mythology (Constructed Naturalization)",
+      "structural_delta": "QWERTY naturalized via efficiency claims (jam prevention, optimal finger travel) that are post-hoc rationalizations rather than design intent",
+      "primary_observable": "Historical design documents vs retrospective efficiency claims; experimental ergonomics data",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "lapsed_alternatives_reading",
+        "incumbent_preservation_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold feeding into both readings but not structurally distinct enough for independent generation"
+    },
+    {
+      "claim_id": "switching_cost_asymmetry",
+      "human_readable": "Switching Cost Asymmetry (Training Investment Lock-In)",
+      "structural_delta": "Cost to retrain existing typists vastly exceeds benefit from marginal efficiency gains, even if alternatives are objectively superior",
+      "primary_observable": "Retraining time studies; productivity loss during transition; institutional training investment",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "lapsed_alternatives_reading",
+        "incumbent_preservation_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Mountain base affecting both readings; tests whether switching costs are neutral constraint or benefit-preserving mechanism"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "lapsed_alternatives_reading",
+      "kernel_id": "qwerty_persistence",
+      "reading_id": "lapsed_alternatives_reading"
+    },
+    {
+      "claim_id": "incumbent_preservation_reading",
+      "kernel_id": "qwerty_persistence",
+      "reading_id": "incumbent_preservation_reading"
+    },
+    "switching_cost_asymmetry"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "efficiency_mythology",
+      "structural_delta": "Efficiency claims are post-hoc naturalizations rather than design intent",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Feeds into both readings but lacks independent structural yield; captured via naturalization claims within each reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d3_artifact_test",
+      "description": "Does the beneficiary-reading emit genuinely different constraint structure (type/epsilon/victim-set) than the lapsed-alternatives reading, or does D3 ARTIFACT hold—beneficiary-hunting finds beneficiaries by construction without changing the structural analysis? If both readings produce rope-type constraints with identical switching-cost observables, the kernel is not contested and should collapse.",
+      "source": "Kernel contest declaration + D3 ARTIFACT warning"
+    },
+    {
+      "id": "omega_empirical_efficiency",
+      "description": "Is QWERTY objectively less efficient than Dvorak? 1956 GSA study found minimal difference; later studies contest this. If no measurable efficiency gap exists, both readings collapse to pure coordination story (rope without victim set).",
+      "source": "Extraction tension on alleged efficiency advantage + F03 gate"
+    },
+    {
+      "id": "omega_suppression_evidence",
+      "description": "Is there documentary evidence of active suppression (manufacturers blocking Dvorak typewriters, training institutions refusing to teach alternatives)? Incumbent-preservation reading requires affirmative evidence; absence would collapse it to lapsed-alternatives.",
+      "source": "Primary observable for incumbent_preservation_reading + F34 domain competence limit"
+    },
+    {
+      "id": "omega_touch_typing_revolution",
+      "description": "Did the 1888 touch-typing standardization create the lock-in, or was QWERTY already entrenched? If touch-typing is the mechanism, it's a mountain (training infrastructure) not a tangled_rope (beneficiary defense).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) on training infrastructure timing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03: efficiency_mythology classified as scaffold but historical design intent claims may exceed available evidence. F34: Domain competence limited on 19th-century typewriter industry suppression tactics; empirical ergonomics contested. Generated omegas for D3 artifact test, efficiency claims, and suppression evidence."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "QWERTY keyboard layout persistence as either neutral coordination equilibrium or beneficiary-defended incumbency",
+    "authority_description": "Historical narrative authority—whether QWERTY story is framed as path-dependent accident or strategic lock-in",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "qwerty_persistence",
+    "readings": [
+      {
+        "reading_id": "lapsed_alternatives_reading",
+        "commitment": "Standards persist via coordination value; alternatives lapse when adoption fails to reach critical mass",
+        "authority_grounding": "Network economics / evolutionary game theory",
+        "sibling_readings": [
+          "incumbent_preservation_reading"
+        ],
+        "expected_structural_delta": "Rope constraint (coordination requirement) with no beneficiary set; epsilon determined by switching costs alone; victim set empty or symmetric (all parties bear coordination costs equally)"
+      },
+      {
+        "reading_id": "incumbent_preservation_reading",
+        "commitment": "Standards persist via beneficiary defense; incumbents actively preserve dominance to protect capital investments",
+        "authority_grounding": "Political economy / regulatory capture theory",
+        "sibling_readings": [
+          "lapsed_alternatives_reading"
+        ],
+        "expected_structural_delta": "Tangled_rope constraint (coordination + extraction) with defined beneficiary set (manufacturers, trained typists, training institutions); epsilon includes defensive suppression costs; victim set includes alternative-adopters and efficiency-seekers"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "lapsed_alternatives_reading",
+        "reading_b": "incumbent_preservation_reading",
+        "basis": "One treats persistence as neutral outcome of coordination failure (no agent defends the standard); the other treats persistence as defended outcome of beneficiary action (agents actively suppress alternatives). No single framework can hold both: either suppression happened (beneficiary reading) or it didn't (lapsed-alternatives reading). The presence/absence of beneficiary defense is empirically decidable, not interpretive."
+      }
+    ]
+  },
+  "_seed_id": "qwerty_path_naturalization"
+}

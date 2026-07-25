@@ -1,0 +1,176 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal History / Political Theory",
+  "family_id": "magna_carta_clause_39_2026",
+  "topic_summary": "Analysis of Magna Carta Clause 39 (1215) as a contested kernel. The clause states 'No free man shall be seized or imprisoned... except by the lawful judgment of his equals or by the law of the land.' Two primary readings emerge: Liberal Due Process (expansive individual protections against arbitrary state power) and Feudal Royal Prerogative (narrow procedural rights within hierarchical order preserving crown/noble privileges).",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 3,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Clause 39 of Magna Carta 1215 (constitutional text)",
+      "Free men (beneficiary class - scope contested)",
+      "Crown/Executive Authority (constraint target)",
+      "Peers/Equals (adjudicatory mechanism)",
+      "Law of the Land (procedural standard - meaning contested)"
+    ],
+    "key_tensions": [
+      "Individual liberty vs state authority (liberal reading vs prerogative reading)",
+      "Expansive vs restrictive interpretation of 'free men' and 'law of the land'"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Clause 39 of the 1215 Magna Carta establishing due process protections against arbitrary detention",
+    "authority_description": "Judicial and constitutional interpretive authority grounded in textual fidelity and precedent",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "magna_carta_clause_39",
+    "readings": [
+      {
+        "reading_id": "liberal_due_process_reading",
+        "commitment": "Clause 39 establishes universal individual rights against arbitrary state power",
+        "authority_grounding": "Liberal constitutional tradition / judicial expansion via common law precedent",
+        "sibling_readings": [
+          "feudal_prerogative_reading",
+          "originalist_limitation_reading"
+        ],
+        "expected_structural_delta": "Expansive constraint on executive discretion; broad victim set (all citizens); high extractiveness against unchecked authority"
+      },
+      {
+        "reading_id": "feudal_prerogative_reading",
+        "commitment": "Clause 39 preserves narrow procedural rights within established hierarchical order",
+        "authority_grounding": "Historical contextualism / preservation of feudal social structure",
+        "sibling_readings": [
+          "liberal_due_process_reading",
+          "originalist_limitation_reading"
+        ],
+        "expected_structural_delta": "Narrow constraint preserving crown/noble privileges; restricted victim set (elite peers only); low extractiveness against traditional authority"
+      },
+      {
+        "reading_id": "originalist_limitation_reading",
+        "commitment": "Clause 39 limits only specific royal abuses documented in 1215 context",
+        "authority_grounding": "Originalist textualism / historical method",
+        "sibling_readings": [
+          "liberal_due_process_reading",
+          "feudal_prerogative_reading"
+        ],
+        "expected_structural_delta": "Constraint bounded by 13th century grievances; victim set limited to barons who negotiated charter; moderate extractiveness only against documented King John abuses"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "liberal_due_process_reading",
+        "reading_b": "feudal_prerogative_reading",
+        "basis": "Liberal reading axiom (rights are expansive and anti-hierarchical) cannot coexist with feudal reading axiom (rights are narrow and hierarchy-preserving) in a single coherent framework - accepting universal individual rights as foundational requires rejecting hierarchy-preservation as foundational"
+      },
+      {
+        "reading_a": "liberal_due_process_reading",
+        "reading_b": "originalist_limitation_reading",
+        "basis": "Liberal reading axiom (constitutional text evolves with moral progress) cannot coexist with originalist axiom (constitutional meaning is fixed at ratification) - accepting evolving interpretation requires rejecting fixed original meaning"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liberal_due_process_reading",
+      "human_readable": "Liberal Due Process Reading (Expansive Individual Rights)",
+      "structural_delta": "Interprets Clause 39 as establishing universal individual protections against arbitrary state power, expanding 'free men' to all citizens and 'law of the land' to substantive justice standards",
+      "primary_observable": "Scope of judicial review of executive detention; breadth of habeas corpus protections; citation patterns in constitutional jurisprudence",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_citizens_facing_state_action",
+      "victim": "executive_discretion_unchecked_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest structural distinctiveness; dominant reading in Anglo-American constitutional tradition; high extractiveness against executive power"
+    },
+    {
+      "claim_id": "feudal_prerogative_reading",
+      "human_readable": "Feudal Royal Prerogative Reading (Hierarchy-Preserving Constraint)",
+      "structural_delta": "Interprets Clause 39 as preserving narrow procedural rights within feudal social order, limiting 'free men' to elite peers and 'law of the land' to existing hierarchical norms",
+      "primary_observable": "Historical scope of charter enforcement 1215-1400; class-based restrictions in medieval legal proceedings; crown prerogative doctrines",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "feudal_elites_traditional_authority",
+      "victim": "egalitarian_challenges_to_hierarchy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct observable (historical enforcement patterns vs modern judicial doctrine); represents historical baseline reading"
+    },
+    {
+      "claim_id": "originalist_limitation_reading",
+      "human_readable": "Originalist Limitation Reading (1215 Context-Bound)",
+      "structural_delta": "Interprets Clause 39 as addressing only specific documented abuses by King John, with meaning fixed by 1215 context and negotiating parties' intent",
+      "primary_observable": "Historical record of King John's arbitrary seizures; baronial grievances documented in 1215; textual constraints from contemporary Latin usage",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "originalist_interpretive_authority",
+      "victim": "evolving_constitutional_interpretation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Provides methodological contrast to liberal and feudal readings; moderate centrality; captures originalist-textualist tension"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liberal_due_process_reading",
+      "kernel_id": "magna_carta_clause_39",
+      "reading_id": "liberal_due_process_reading"
+    },
+    {
+      "claim_id": "feudal_prerogative_reading",
+      "kernel_id": "magna_carta_clause_39",
+      "reading_id": "feudal_prerogative_reading"
+    },
+    {
+      "claim_id": "originalist_limitation_reading",
+      "kernel_id": "magna_carta_clause_39",
+      "reading_id": "originalist_limitation_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_free_men_scope",
+      "description": "Who counts as 'free men' in 1215 vs modern interpretation? Medieval term excluded villeins, women, clergy under separate law. Liberal reading's expansion may be anachronistic projection rather than textual evolution.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - class and gender exclusions in original scope"
+    },
+    {
+      "id": "omega_law_of_the_land",
+      "description": "Does 'law of the land' (lex terrae) mean procedural due process only, or substantive justice standards? Reading determines whether Clause 39 constrains arbitrary detention or arbitrary law itself.",
+      "source": "Structural ambiguity in kernel text - phrase permits multiple constraint architectures"
+    },
+    {
+      "id": "omega_judgment_of_equals",
+      "description": "Does 'judgment of his equals' require jury trial, or merely status-matching adjudicators? Peer-based constraint may be rope (coordination norm) or mountain (unavoidable feudal structure).",
+      "source": "Dark Matter Probe 1 (Operational Medium) - assumed jury trial norm may be later accretion"
+    },
+    {
+      "id": "omega_enforcement_mechanism",
+      "description": "Clause 39 lacks enforcement provisions. Is it a mountain (self-enforcing norm) or scaffold (requires external institutional support)? Medieval baronial rebellion vs modern judicial review as enforcement mode.",
+      "source": "§1.1 mechanism extraction - enforcement mechanism conspicuously absent from text"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean scan. Three readings capture structural range from expansive liberal (high-ε tangled_rope) to hierarchy-preserving feudal (low-ε rope) to originalist limitation (moderate-ε piton). Axiom contradictions properly declared between liberal/feudal and liberal/originalist pairs. No single coherent framework holds both universal individual rights and hierarchy-preservation as simultaneous foundational axioms."
+  },
+  "_seed_id": "magna_carta_clause_39"
+}

@@ -1,0 +1,260 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Medical Ethics / Bioethics / End-of-Life Policy",
+  "family_id": "euthanasia_autonomy_sanctity_2026",
+  "topic_summary": "Analysis of the euthanasia debate as a contested kernel where the end-of-life decision framework is read through either autonomy-primary or sanctity-of-life-primary lenses. Each reading produces structurally different constraints with distinct victim sets: the suffering-prolonged (denied relief) versus the pressured-vulnerable (coerced into death). The kernel contest centers on whether individual self-determination or life preservation takes interpretive priority in medical ethics.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 8,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Terminally ill patients requesting euthanasia (primary rights-claimants in autonomy reading)",
+      "Vulnerable populations (elderly, disabled, mentally ill) (primary victims in sanctity reading)",
+      "Healthcare professionals (physicians, nurses) (interpretive authority holders)",
+      "Legal jurisdictions (Belgium, Netherlands, Canada, 14 US states) (authority structures)",
+      "Religious institutions (historical kernel stabilizers)",
+      "Nazi euthanasia program (historical contamination event)"
+    ],
+    "key_tensions": [
+      "Individual autonomy vs collective protection (autonomy reading vs sanctity reading)",
+      "Physician as healer vs physician as death-facilitator (professional identity)",
+      "Compassionate relief vs slippery slope risk (beneficence vs non-maleficence)"
+    ],
+    "key_mechanisms": [
+      "Legal eligibility criteria (gatekeeping mechanism in autonomy-permitting jurisdictions)",
+      "Physician conscientious objection (authority fragmentation mechanism)",
+      "Coercion pressure (systemic vulnerability mechanism in sanctity reading)",
+      "Psychiatric disability expansion (scope creep mechanism in Belgium/Netherlands)"
+    ],
+    "key_absences": [
+      "Palliative care infrastructure quality (alternative to euthanasia not examined in source)",
+      "Economic incentives in healthcare systems (cost-saving pressure on vulnerable populations)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "autonomy_reading",
+      "human_readable": "Autonomy-Primary Reading (Self-Determination as Foundational)",
+      "structural_delta": "Individual right to choose death with dignity takes interpretive priority; suffering-prolonged are victims of denial",
+      "primary_observable": "Legal eligibility criteria emphasizing competent consent; patient autonomy as first-order principle in medical ethics codes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "terminally_ill_requesting_relief",
+      "victim": "suffering_prolonged_denied_choice",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading of contested kernel; distinct victim set and constraint structure",
+      "kernel_id": "end_of_life_decision_authority",
+      "reading_id": "autonomy_reading",
+      "interpretive_commitment": "Competent individuals possess sovereign authority over their own death; state/medical authority exists to facilitate, not override, this choice",
+      "authority_grounding": "Liberal individualism; Enlightenment autonomy tradition (Hume, Kant); patient rights movement",
+      "sibling_readings": [
+        "sanctity_reading",
+        "vulnerability_protection_reading"
+      ],
+      "expected_structural_delta": "Suffering-prolonged enter victim set when denied access; healthcare professionals become facilitators rather than gatekeepers; slippery slope risk externalized as acceptable cost"
+    },
+    {
+      "claim_id": "sanctity_reading",
+      "human_readable": "Sanctity-of-Life-Primary Reading (Life Preservation as Foundational)",
+      "structural_delta": "Intrinsic value of human life takes interpretive priority; pressured-vulnerable are victims of coercion",
+      "primary_observable": "Legal prohibition regimes; physician role definitions emphasizing life preservation; religious doctrine on life sanctity",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "life_preservation_advocates",
+      "victim": "pressured_vulnerable_coerced",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading of contested kernel; distinct victim set and constraint structure; axiomatically contradictory to autonomy reading",
+      "kernel_id": "end_of_life_decision_authority",
+      "reading_id": "sanctity_reading",
+      "interpretive_commitment": "Human life possesses intrinsic value independent of individual will; intentional life-ending violates this value regardless of consent",
+      "authority_grounding": "Religious tradition (Christian sanctity doctrine); Hippocratic oath; deontological ethics",
+      "sibling_readings": [
+        "autonomy_reading",
+        "vulnerability_protection_reading"
+      ],
+      "expected_structural_delta": "Pressured-vulnerable enter victim set when euthanasia is available; physician role becomes healer-only; individual suffering externalized as necessary cost of life protection"
+    },
+    {
+      "claim_id": "vulnerability_protection_reading",
+      "human_readable": "Vulnerability-Protection Reading (Systemic Safeguarding as Foundational)",
+      "structural_delta": "Protection of vulnerable populations from systemic coercion takes interpretive priority; both suffering-prolonged and pressured-vulnerable are victims of inadequate safeguards",
+      "primary_observable": "Eligibility criteria complexity; psychiatric disability expansion rates (Belgium/Netherlands); palliative care infrastructure investment",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "safeguard_designers",
+      "victim": "both_suffering_prolonged_and_pressured_vulnerable",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Hybrid reading attempting to reconcile kernel contest; distinct structural delta focusing on institutional design rather than foundational axioms",
+      "kernel_id": "end_of_life_decision_authority",
+      "reading_id": "vulnerability_protection_reading",
+      "interpretive_commitment": "End-of-life authority must be distributed across multiple institutional checkpoints to prevent both denial of relief and coercive pressure",
+      "authority_grounding": "Institutional design theory; harm reduction frameworks; disability rights advocacy",
+      "sibling_readings": [
+        "autonomy_reading",
+        "sanctity_reading"
+      ],
+      "expected_structural_delta": "Dual victim set acknowledged; constraint focuses on procedural safeguards rather than categorical permission/prohibition; slippery slope becomes empirical question rather than axiom"
+    },
+    {
+      "claim_id": "physician_role_identity",
+      "human_readable": "Physician Role Identity (Healer vs Facilitator)",
+      "structural_delta": "Professional identity conflict between healer-only role and death-facilitator role",
+      "primary_observable": "Conscientious objection rates; professional ethics codes; physician participation rates in legal jurisdictions",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "autonomy_reading",
+        "sanctity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of kernel readings rather than independent constraint; captured in reading-level analysis"
+    },
+    {
+      "claim_id": "slippery_slope_mechanism",
+      "human_readable": "Slippery Slope Mechanism (Eligibility Expansion Dynamics)",
+      "structural_delta": "Progressive expansion of eligibility criteria beyond initial safeguards",
+      "primary_observable": "Psychiatric disability euthanasia rates in Belgium/Netherlands; eligibility criteria evolution over time",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "expanded_vulnerable_populations",
+      "downstream_of": [
+        "autonomy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical mechanism rather than foundational constraint; evidence-dependent rather than axiom-dependent"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "autonomy_reading",
+      "kernel_id": "end_of_life_decision_authority",
+      "reading_id": "autonomy_reading"
+    },
+    {
+      "claim_id": "sanctity_reading",
+      "kernel_id": "end_of_life_decision_authority",
+      "reading_id": "sanctity_reading"
+    },
+    {
+      "claim_id": "vulnerability_protection_reading",
+      "kernel_id": "end_of_life_decision_authority",
+      "reading_id": "vulnerability_protection_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "physician_role_identity",
+      "structural_delta": "Professional identity conflict between healer-only and death-facilitator roles",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of kernel readings; professional identity crisis is effect rather than independent constraint"
+    },
+    {
+      "claim_id": "slippery_slope_mechanism",
+      "structural_delta": "Progressive expansion of eligibility criteria beyond initial safeguards",
+      "hypothesis": "piton",
+      "deferral_reason": "Empirical mechanism rather than foundational constraint; Belgium/Netherlands data suggests scope creep but this is evidence-dependent rather than axiom-dependent"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_palliative_care_infrastructure",
+      "description": "Is the autonomy vs sanctity contest a false binary masking inadequate palliative care investment? If high-quality pain management were universally available, would the suffering-prolonged victim set shrink to near-zero, collapsing the autonomy reading's empirical foundation?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — palliative care quality not examined in source material"
+    },
+    {
+      "id": "omega_economic_coercion",
+      "description": "Do healthcare cost pressures create systemic coercion independent of individual choice architecture? If vulnerable populations face implicit pressure to choose death due to care costs, the vulnerability-protection reading may underestimate extractiveness.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — economic incentives absent from source material"
+    },
+    {
+      "id": "omega_nazi_contamination",
+      "description": "Does the Nazi euthanasia program's historical shadow function as a piton (atrophied discourse) preventing legitimate autonomy claims, or as a mountain (genuine risk signal) validating sanctity concerns? The kernel contest may be distorted by this unresolved historical trauma.",
+      "source": "Extraction anchor (Nazi program) + F03 concern about mountain classification"
+    },
+    {
+      "id": "omega_psychiatric_disability_expansion",
+      "description": "Is psychiatric disability euthanasia (Belgium/Netherlands) a slippery slope confirmation or a legitimate autonomy extension? The vulnerability-protection reading treats this as safeguard failure; the autonomy reading may treat it as proper scope expansion. Empirical data insufficient to resolve.",
+      "source": "Deferred axis slippery_slope_mechanism + extraction mechanism (psychiatric expansion)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Nazi euthanasia program treated as historical mountain (genuine risk signal) but may be piton (discourse contamination). Generated omega_nazi_contamination to bound this uncertainty. Also: palliative care infrastructure absence may indicate under-extraction of upstream mountain (pain management technology limits)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The end-of-life decision authority kernel: who holds legitimate authority to determine when and how a human life may intentionally end",
+    "authority_description": "Contested between individual (autonomy reading), divine/natural law (sanctity reading), and institutional safeguard designers (vulnerability-protection reading). No single interpretive authority; jurisdictional fragmentation.",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "end_of_life_decision_authority",
+    "readings": [
+      {
+        "reading_id": "autonomy_reading",
+        "commitment": "Competent individuals possess sovereign authority over their own death",
+        "authority_grounding": "Liberal individualism; Enlightenment autonomy tradition; patient rights movement",
+        "sibling_readings": [
+          "sanctity_reading",
+          "vulnerability_protection_reading"
+        ],
+        "expected_structural_delta": "Suffering-prolonged enter victim set when denied access; healthcare professionals become facilitators; slippery slope risk externalized"
+      },
+      {
+        "reading_id": "sanctity_reading",
+        "commitment": "Human life possesses intrinsic value independent of individual will; intentional life-ending violates this value",
+        "authority_grounding": "Religious tradition (Christian sanctity doctrine); Hippocratic oath; deontological ethics",
+        "sibling_readings": [
+          "autonomy_reading",
+          "vulnerability_protection_reading"
+        ],
+        "expected_structural_delta": "Pressured-vulnerable enter victim set when euthanasia available; physician role healer-only; individual suffering externalized"
+      },
+      {
+        "reading_id": "vulnerability_protection_reading",
+        "commitment": "End-of-life authority must be distributed across institutional checkpoints to prevent both denial and coercion",
+        "authority_grounding": "Institutional design theory; harm reduction frameworks; disability rights advocacy",
+        "sibling_readings": [
+          "autonomy_reading",
+          "sanctity_reading"
+        ],
+        "expected_structural_delta": "Dual victim set acknowledged; procedural safeguards primary; slippery slope becomes empirical question"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "autonomy_reading",
+        "reading_b": "sanctity_reading",
+        "basis": "Autonomy reading holds individual will as sovereign over life/death decisions; sanctity reading holds life value as independent of and superior to individual will. No coherent framework can simultaneously hold both that individual consent makes intentional killing permissible AND that life's intrinsic value makes intentional killing impermissible regardless of consent."
+      }
+    ]
+  },
+  "_seed_id": "euthanasia_kernel"
+}

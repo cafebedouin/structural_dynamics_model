@@ -1,0 +1,230 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Free Speech Theory",
+  "family_id": "free_speech_absolutism_harm_limited_2026",
+  "topic_summary": "Analysis of the constitutional and philosophical contest between free speech absolutism (near-categorical protection under First Amendment) and harm-limited approaches (speech restrictions justified by demonstrable harm). The disagreement centers on where the boundary lies between protected and unprotected speech, with structural tensions around incitement doctrine, fighting words, asymmetric harm distribution, and the paradox that free speech's significance depends partly on protecting harmful expression.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "First Amendment (constitutional text: 'Congress shall make no law... abridging the freedom of speech')",
+      "Supreme Court (interpretive authority; Brandenburg, fighting words doctrine)",
+      "Justice Hugo Black (absolutist jurist: 'no law means no law')",
+      "Justice William O. Douglas (absolutist jurist, Black's ally)",
+      "Alexander Meiklejohn (democratic self-governance theorist)",
+      "John Stuart Mill (harm principle philosopher)",
+      "Rebecca L. Brown (contemporary harm-principle scholar)",
+      "Vulnerable minorities (asymmetric harm bearers under absolutism)"
+    ],
+    "key_tensions": [
+      "Categorical protection vs harm-justified restriction (absolutist vs harm-limited readings)",
+      "Democratic self-governance value vs individual dignity protection (Meiklejohnian vs anti-bigotry frameworks)",
+      "Incitement/fighting words exceptions vs absolutist consistency (doctrinal practice vs theoretical purity)",
+      "Aggregate free speech value vs concentrated minority harm (utilitarian vs rights-based balancing)"
+    ],
+    "key_mechanisms": [
+      "Brandenburg incitement test (imminent lawless action standard)",
+      "Fighting words doctrine (narrowed over time, high bar)",
+      "Balancing approach (weighing First Amendment against competing interests)"
+    ],
+    "key_absences": [
+      "Platform governance (private speech regulation outside state action doctrine)",
+      "International comparison (European hate speech laws, Canadian reasonable limits)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "First Amendment speech protection as constitutional commitment with contested boundary between protected and unprotected expression",
+    "authority_description": "Supreme Court interpretive supremacy grounded in constitutional text and precedent",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_drift_managed",
+    "is_contested_kernel": true,
+    "kernel_id": "speech_protection_boundary",
+    "readings": [
+      {
+        "reading_id": "near_absolutist_reading",
+        "commitment": "First Amendment 'no law' language prohibits content-based restrictions except narrow categorical exceptions (incitement, fighting words) defined by imminent physical harm",
+        "authority_grounding": "Textualist (Black: 'no law means no law') + democratic self-governance (Meiklejohn)",
+        "sibling_readings": [
+          "dignitary_harm_reading",
+          "balancing_reading"
+        ],
+        "expected_structural_delta": "Minimal victim set (only imminent physical violence targets); low suppression; high tolerance for offensive/bigoted speech as cost of robust debate"
+      },
+      {
+        "reading_id": "dignitary_harm_reading",
+        "commitment": "Speech causing tangible dignitary harm (bigotry, harassment constructing systemic oppression) can be restricted when harm is demonstrable and non-speculative",
+        "authority_grounding": "Empirical harm evidence + anti-subordination constitutional values",
+        "sibling_readings": [
+          "near_absolutist_reading",
+          "balancing_reading"
+        ],
+        "expected_structural_delta": "Expanded victim set (targets of bigoted speech, vulnerable minorities); moderate suppression of hate speech; lower tolerance for expression causing epistemic injustice"
+      },
+      {
+        "reading_id": "balancing_reading",
+        "commitment": "No single constitutional right categorically overrides others; speech protection and competing interests (dignity, equality, public safety) require case-by-case balancing",
+        "authority_grounding": "Pragmatic judicial review + multi-value constitutionalism",
+        "sibling_readings": [
+          "near_absolutist_reading",
+          "dignitary_harm_reading"
+        ],
+        "expected_structural_delta": "Context-dependent victim set; variable suppression based on balancing outcome; institutionalizes judicial discretion over categorical rules"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "near_absolutist_reading",
+        "reading_b": "dignitary_harm_reading",
+        "basis": "Absolutist axiom holds that content-based harm (offense, dignitary injury) cannot justify restriction because all ideas must compete freely; dignitary harm axiom holds that speech constructing subordination is itself a liberty violation requiring state intervention. No single framework can hold both: accepting dignitary harm as restrictable requires rejecting absolutist immunity for harmful ideas."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "near_absolutist_reading",
+      "human_readable": "Near-Absolutist Reading (Categorical Protection with Narrow Exceptions)",
+      "structural_delta": "First Amendment read as near-categorical bar on content regulation except imminent physical harm",
+      "primary_observable": "Scope of protected speech categories; incitement/fighting words doctrine application rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "democratic_debate_infrastructure",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "dignitary_harm_reading",
+      "human_readable": "Dignitary Harm Reading (Harm-Limited Protection)",
+      "structural_delta": "Speech causing demonstrable dignitary harm to vulnerable groups can be restricted",
+      "primary_observable": "Hate speech regulation scope; empirical harm evidence standards in doctrine",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "vulnerable_minorities",
+      "victim": "speakers_of_bigoted_expression",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; axiom-contradictory to first reading"
+    },
+    {
+      "claim_id": "balancing_reading",
+      "human_readable": "Balancing Reading (Case-by-Case Adjudication)",
+      "structural_delta": "No categorical rule; speech protection weighed against competing constitutional values per case",
+      "primary_observable": "Judicial balancing test application frequency; outcome variance across similar cases",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": "judicial_discretion",
+      "victim": "rule_of_law_predictability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; institutionalizes interpretive flexibility as alternative to categorical rules"
+    },
+    {
+      "claim_id": "platform_governance_gap",
+      "human_readable": "Platform Governance Gap (Private Speech Regulation Outside State Action)",
+      "structural_delta": "First Amendment binds state actors only; private platforms regulate speech without constitutional constraint",
+      "primary_observable": "Platform content moderation policies; state action doctrine application to digital platforms",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "platform_corporations",
+      "victim": "users_subject_to_arbitrary_moderation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural gap outside kernel contest; omega material on state action doctrine limits"
+    },
+    {
+      "claim_id": "international_comparison_absence",
+      "human_readable": "International Comparison Absence (European/Canadian Reasonable Limits)",
+      "structural_delta": "U.S. exceptionalism in speech protection; comparative constitutional law largely absent from doctrine",
+      "primary_observable": "Citation rates of foreign precedent in First Amendment cases; comparative hate speech law scholarship",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: comparative context useful for omega but not structurally central to kernel contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "near_absolutist_reading",
+      "kernel_id": "speech_protection_boundary",
+      "reading_id": "near_absolutist_reading"
+    },
+    {
+      "claim_id": "dignitary_harm_reading",
+      "kernel_id": "speech_protection_boundary",
+      "reading_id": "dignitary_harm_reading"
+    },
+    {
+      "claim_id": "balancing_reading",
+      "kernel_id": "speech_protection_boundary",
+      "reading_id": "balancing_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "platform_governance_gap",
+      "structural_delta": "Private platforms regulate speech without First Amendment constraint",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural gap outside kernel contest; state action doctrine limits create separate extractive dynamic"
+    },
+    {
+      "claim_id": "international_comparison_absence",
+      "structural_delta": "U.S. exceptionalism in speech protection; comparative law absent",
+      "hypothesis": "piton",
+      "deferral_reason": "Comparative context useful for omega but not structurally central to kernel readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_black_exception_paradox",
+      "description": "Justice Black claimed absolutism yet carved exceptions (falsely yelling fire, speech-conduct distinction). Is this principled line-drawing or covert balancing? If the latter, absolutism collapses into dignitary harm reading with different threshold.",
+      "source": "Extraction anchors (Black's fire-in-theater exception) + axiom contradiction analysis"
+    },
+    {
+      "id": "omega_harm_definition_drift",
+      "description": "Dignitary harm reading depends on 'demonstrable harm' standard. As empirical methods evolve (neuroscience, epistemic injustice research), does the victim set expand indefinitely? Potential reclassification from tangled_rope to snare if harm becomes unfalsifiable.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction anchor on evolving harm evidence"
+    },
+    {
+      "id": "omega_platform_state_action",
+      "description": "If platforms become quasi-governmental (network effects, essential infrastructure), does state action doctrine expand to bind them? Would collapse platform_governance_gap snare into kernel contest.",
+      "source": "Deferred axis platform_governance_gap + absence inventory"
+    },
+    {
+      "id": "omega_balancing_as_piton",
+      "description": "Balancing reading classified as scaffold (institutionalizes flexibility). Alternative: it is a piton of judicial supremacy, atrophying legislative/popular capacity to define speech boundaries. Reclassification would shift beneficiary from 'judicial discretion' to 'judicial class.'",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F03 mountain validity concern"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied per §1.3-K. Three readings selected capture axiom-contradictory positions (absolutist vs dignitary harm) plus institutional alternative (balancing). Platform governance and international comparison deferred as structurally peripheral to kernel contest."
+  },
+  "_seed_id": "free_speech_kernel"
+}

@@ -1,0 +1,255 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Epistemology / Science and Technology Studies / Political Theory",
+  "family_id": "epistemic_legitimacy_boundaries_2026",
+  "topic_summary": "Analysis of contested boundaries defining 'legitimate knowledge' — whether epistemic authority derives from credentialed institutional expertise with methodological gatekeeping, or from distributed experiential validation and pluralistic frameworks. The contest determines participation rights in knowledge production and whose claims count as evidence in public discourse.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Credentialed institutions (universities, research councils, professional bodies claiming methodological authority)",
+      "Epistemic commons (shared knowledge production space where participation is contested)",
+      "Distributed knowledge communities (citizen science, indigenous knowledge systems, experiential expertise)",
+      "Methodological gatekeepers (peer review, credentialing systems, funding bodies)",
+      "Experiential validators (communities of practice, affected populations, traditional knowledge holders)",
+      "Public discourse infrastructure (platforms and processes where knowledge claims enter policy)"
+    ],
+    "key_tensions": [
+      "Centralized methodological authority vs distributed experiential validation (who sets standards for what counts as knowledge)",
+      "Credential-based participation rights vs experiential legitimacy (who gets to make knowledge claims that matter)"
+    ],
+    "key_mechanisms": [
+      "Peer review and credentialing systems (enforce methodological standards; exclude non-credentialed claims)",
+      "Experiential validation networks (community-based legitimation; parallel knowledge production)",
+      "Epistemic trespass accusations (boundary enforcement claiming domain incompetence; deployed asymmetrically)"
+    ],
+    "key_absences": [
+      "Power asymmetries in who can demand methodological rigor from whom (credentialed experts rarely subjected to experiential validity tests)",
+      "Historical track record of institutional epistemic failure (expert consensus errors; marginalized knowledge later validated)",
+      "Structural incentives shaping what gets researched (funding, tenure, publication bias toward credentialed-legible questions)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that 'legitimate knowledge' exists as a category distinct from mere belief or opinion, grounding authority to adjudicate truth-claims in public discourse",
+    "authority_description": "Contested between institutional methodological gatekeepers (credentials + peer review) and distributed validators (experience + community verification)",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_authority_contested",
+    "is_contested_kernel": true,
+    "kernel_id": "legitimate_knowledge_boundary",
+    "readings": [
+      {
+        "reading_id": "credentialed_expertise_reading",
+        "commitment": "Legitimate knowledge derives from methodologically rigorous inquiry validated by credentialed peer review",
+        "authority_grounding": "Institutional credentials, replicability standards, formal training in domain methods",
+        "sibling_readings": [
+          "experiential_pluralism_reading",
+          "hybrid_coproduction_reading"
+        ],
+        "expected_structural_delta": "High barriers to entry; centralized gatekeeping; methodological rigor enforced asymmetrically; expert consensus treated as truth-proxy"
+      },
+      {
+        "reading_id": "experiential_pluralism_reading",
+        "commitment": "Legitimate knowledge arises from lived experience and community validation, with methodological standards as one tool among many",
+        "authority_grounding": "Direct experience, affected-population testimony, traditional/indigenous knowledge systems, distributed verification",
+        "sibling_readings": [
+          "credentialed_expertise_reading",
+          "hybrid_coproduction_reading"
+        ],
+        "expected_structural_delta": "Low barriers to entry; distributed validation; experiential claims weighted equally or higher than methodological claims; expertise redefined as context-specific"
+      },
+      {
+        "reading_id": "hybrid_coproduction_reading",
+        "commitment": "Legitimate knowledge requires integration of methodological rigor AND experiential validity through co-production processes",
+        "authority_grounding": "Participatory research frameworks, transdisciplinary validation, structured dialogue between credentialed and experiential experts",
+        "sibling_readings": [
+          "credentialed_expertise_reading",
+          "experiential_pluralism_reading"
+        ],
+        "expected_structural_delta": "Moderate barriers; dual validation required; co-production infrastructure investment; both methodological and experiential standards enforced"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "credentialed_expertise_reading",
+        "reading_b": "experiential_pluralism_reading",
+        "basis": "Credentialed reading holds methodological rigor as necessary condition for legitimacy; pluralism reading rejects necessity and treats it as one optional tool. No framework can hold both 'methodological validation is necessary' and 'methodological validation is optional' as true simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "credentialed_expertise_reading",
+      "human_readable": "Credentialed Expertise Reading (Methodological Authority)",
+      "structural_delta": "Knowledge legitimacy grounded in institutional credentials and peer-reviewed methodological rigor",
+      "primary_observable": "Gatekeeping mechanisms (peer review rejection rates for non-credentialed authors; policy influence by credential type; expert witness qualification standards)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "credentialed_institutions",
+      "victim": "experiential_knowledge_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating dominant institutional framework; highest extractiveness from exclusion of non-credentialed claims"
+    },
+    {
+      "claim_id": "experiential_pluralism_reading",
+      "human_readable": "Experiential Pluralism Reading (Distributed Validation)",
+      "structural_delta": "Knowledge legitimacy grounded in lived experience and community-based validation without methodological gatekeeping",
+      "primary_observable": "Alternative validation mechanisms (citizen science participation rates; indigenous knowledge legal recognition; experiential testimony weight in policy)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct alternative reading; different beneficiary/victim structure; axiom-contradictory to reading 1"
+    },
+    {
+      "claim_id": "hybrid_coproduction_reading",
+      "human_readable": "Hybrid Co-Production Reading (Integrated Validation)",
+      "structural_delta": "Knowledge legitimacy requires both methodological rigor AND experiential validity through structured integration",
+      "primary_observable": "Co-production infrastructure (participatory research funding; transdisciplinary review standards; joint validation frameworks)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position attempting synthesis; scaffold attempting to resolve axiom contradiction; lower extractiveness but high institutional investment required"
+    },
+    {
+      "claim_id": "power_asymmetry_enforcement",
+      "human_readable": "Asymmetric Rigor Enforcement (One-Way Methodological Demands)",
+      "structural_delta": "Credentialed experts demand methodological rigor from experiential claims but face no reciprocal experiential validity tests",
+      "primary_observable": "Burden-of-proof asymmetry (rejection rates for citizen science vs institutional papers with methodology errors; expert testimony standards vs lived experience testimony)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "credentialed_gatekeepers",
+      "victim": "non_credentialed_knowledge_producers",
+      "downstream_of": [
+        "credentialed_expertise_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: operationalization of credentialed_expertise_reading; captured in that reading's constraint story as enforcement mechanism"
+    },
+    {
+      "claim_id": "institutional_epistemic_failure_track_record",
+      "human_readable": "Institutional Failure Precedent (Expert Consensus Errors)",
+      "structural_delta": "Historical record of credentialed consensus being wrong (marginal knowledge later validated; systematic exclusion of correct experiential claims)",
+      "primary_observable": "Documented cases (indigenous fire ecology ignored then adopted; patient experience of chronic illness dismissed then confirmed; lay expertise in environmental contamination)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "experiential_pluralism_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: evidentiary base for experiential_pluralism_reading but lower structural centrality; omega material on reputation repair"
+    },
+    {
+      "claim_id": "research_incentive_structure",
+      "human_readable": "Credentialed Research Incentives (Structural Bias Toward Fundable Questions)",
+      "structural_delta": "Funding, tenure, and publication systems reward credentialed-legible questions over experientially-important ones",
+      "primary_observable": "Funding allocation (grant success rates by question type; publication bias toward RCT-feasible interventions; tenure metrics ignoring community impact)",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "academic_institutions",
+      "victim": "under_researched_communities",
+      "downstream_of": [
+        "credentialed_expertise_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural consequence of credentialed_expertise_reading; important but redundant with selected axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "credentialed_expertise_reading",
+      "kernel_id": "legitimate_knowledge_boundary",
+      "reading_id": "credentialed_expertise_reading"
+    },
+    {
+      "claim_id": "experiential_pluralism_reading",
+      "kernel_id": "legitimate_knowledge_boundary",
+      "reading_id": "experiential_pluralism_reading"
+    },
+    {
+      "claim_id": "hybrid_coproduction_reading",
+      "kernel_id": "legitimate_knowledge_boundary",
+      "reading_id": "hybrid_coproduction_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "power_asymmetry_enforcement",
+      "structural_delta": "Credentialed experts demand rigor from experiential claims without reciprocal validity tests",
+      "hypothesis": "snare",
+      "deferral_reason": "Operationalization of credentialed_expertise_reading; captured as enforcement mechanism in that constraint story"
+    },
+    {
+      "claim_id": "institutional_epistemic_failure_track_record",
+      "structural_delta": "Historical expert consensus errors and marginal knowledge later validated",
+      "hypothesis": "mountain",
+      "deferral_reason": "Evidentiary base for experiential_pluralism_reading; lower centrality; omega material on reputation repair dynamics"
+    },
+    {
+      "claim_id": "research_incentive_structure",
+      "structural_delta": "Funding and tenure systems reward credentialed-legible over experientially-important questions",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural consequence of credentialed_expertise_reading; important atrophy but redundant with selected reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reputation_repair",
+      "description": "How do credentialed institutions recover legitimacy after epistemic failure? If failure record is Mountain (unavoidable) but repair is Piton (institutional choice not to acknowledge), does the credentialed_expertise_reading become self-undermining over time?",
+      "source": "Deferred axis institutional_epistemic_failure_track_record + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_coproduction_capture",
+      "description": "Does hybrid_coproduction_reading actually integrate or does credentialed authority capture the process (participatory theater)? If co-production requires institutional resources, does it become Snare rather than Scaffold?",
+      "source": "Classification uncertainty for hybrid_coproduction_reading + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_pluralism_coordination",
+      "description": "If experiential_pluralism_reading has no gatekeeping, how are contradictory experiential claims adjudicated? Is absence of method a Rope (pluralistic coexistence) or does it collapse into power contest (loudest voice wins)?",
+      "source": "Dark Matter Probe 1 (Operational Medium) + structural gap in experiential_pluralism_reading"
+    },
+    {
+      "id": "omega_credentialing_class_structure",
+      "description": "Does credentialed_expertise_reading map onto socioeconomic class boundaries (higher education access)? If so, is epistemic exclusion downstream of economic extraction, making this Snare rather than Tangled Rope?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction_summary absence on class structure"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings emit genuinely different constraints (different gatekeeping mechanisms, different beneficiary/victim structures, different authority-grounding). Axiom contradiction declared between credentialed_expertise and experiential_pluralism readings (necessity vs optionality of methodological validation). Hybrid_coproduction_reading attempts synthesis but carries scaffold uncertainty (omega_coproduction_capture)."
+  },
+  "_seed_id": "epistemic_authority_gatekeeping"
+}

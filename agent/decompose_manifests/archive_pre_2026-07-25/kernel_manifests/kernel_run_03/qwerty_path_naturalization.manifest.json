@@ -1,0 +1,247 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Economic History / Technology Studies / Path Dependence Theory",
+  "family_id": "qwerty_naturalization_2026",
+  "topic_summary": "Analysis of QWERTY keyboard layout persistence examining whether its dominance reflects technical necessity (naturalization), path-dependent lock-in with identifiable beneficiaries (manufacturers/incumbents), or rational market selection. The topic tests whether beneficiary-hunting constitutes analytical artifact (D3) or reveals genuine structural extraction.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Christopher Latham Sholes (inventor, QWERTY designer)",
+      "Remington & Sons / Union Typewriter Company (manufacturer, standardization agent)",
+      "Paul David (economist, path dependence theorist)",
+      "Liebowitz & Margolis (economists, market efficiency defenders)",
+      "August Dvorak (alternative layout designer)",
+      "Telegraph operators (early adopters, transcription priority users)",
+      "Touch typists (skill-invested labor pool)",
+      "U.S. Navy (testing authority, contested methodology)"
+    ],
+    "key_tensions": [
+      "Technical necessity vs historical accident (jam prevention narrative vs telegraph operator adaptation)",
+      "Lock-in inefficiency vs rational persistence (David's market failure vs Liebowitz-Margolis market selection)",
+      "Beneficiary extraction vs beneficiary artifact (incumbent protection vs analytical construction)"
+    ],
+    "key_mechanisms": [
+      "Network effects in typing skill standardization (typists train on employer standard, employers hire trained typists)",
+      "Manufacturer consolidation via Union Typewriter Company (1893 merger creating de facto standard)",
+      "Contest-based legitimation (Cincinnati 1888, McGurrin victory)",
+      "Navy testing methodology (Dvorak involvement, later methodological critique)"
+    ],
+    "key_absences": [
+      "Counterfactual evidence: what would alternative-layout adoption have required in 1890s vs 1930s vs 2000s",
+      "Quantified switching costs: actual measured cost of retraining vs claimed efficiency gains"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "QWERTY's persistence as either natural/efficient outcome or path-dependent lock-in",
+    "authority_description": "Economic historians and technology scholars interpreting the same historical record",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_ambiguity",
+    "is_contested_kernel": true,
+    "kernel_id": "qwerty_persistence_mechanism",
+    "readings": [
+      {
+        "reading_id": "naturalization_reading",
+        "commitment": "QWERTY persists because it was/became genuinely adequate; alternatives lapsed through fair competition",
+        "authority_grounding": "Liebowitz-Margolis empirical historiography; market efficiency presumption",
+        "sibling_readings": [
+          "lock_in_reading",
+          "beneficiary_extraction_reading"
+        ],
+        "expected_structural_delta": "No systematic beneficiary; switching costs reflect genuine skill investment; Dvorak advantage empirically contested"
+      },
+      {
+        "reading_id": "lock_in_reading",
+        "commitment": "QWERTY persists through path-dependent coordination failure despite technical inferiority",
+        "authority_grounding": "Paul David's path dependence framework; network externality theory",
+        "sibling_readings": [
+          "naturalization_reading",
+          "beneficiary_extraction_reading"
+        ],
+        "expected_structural_delta": "Social cost-benefit divergence; no individual beneficiary but collective suboptimality; market failure without extraction"
+      },
+      {
+        "reading_id": "beneficiary_extraction_reading",
+        "commitment": "QWERTY persists because manufacturers/incumbents actively maintained it to protect training investments and market position",
+        "authority_grounding": "Critical political economy; beneficiary-hunting as analytical method",
+        "sibling_readings": [
+          "naturalization_reading",
+          "lock_in_reading"
+        ],
+        "expected_structural_delta": "Identifiable beneficiaries (Remington/Union Typewriter, incumbent typing schools); active suppression of alternatives; extraction via artificial switching costs"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "naturalization_reading",
+        "reading_b": "lock_in_reading",
+        "basis": "Naturalization requires QWERTY to be efficient or efficiency-neutral; lock-in requires it to be inferior to available alternatives. No framework holds both QWERTY-is-adequate and QWERTY-is-inferior simultaneously."
+      },
+      {
+        "reading_a": "naturalization_reading",
+        "reading_b": "beneficiary_extraction_reading",
+        "basis": "Naturalization denies systematic beneficiaries (outcomes reflect fair competition); beneficiary extraction requires identifiable agents who profit from maintaining the standard. No framework holds both no-beneficiary and beneficiary-extraction simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "naturalization_reading",
+      "human_readable": "Naturalization Reading (QWERTY as Adequate Standard)",
+      "structural_delta": "QWERTY persists because it was/became genuinely adequate through competitive selection; alternatives failed fair tests",
+      "primary_observable": "Liebowitz-Margolis Navy test critique; 1880s-1890s typing contest outcomes; measured Dvorak advantage (contested/minimal)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline of no-extraction interpretation; rope (coordination without systematic beneficiary)"
+    },
+    {
+      "claim_id": "lock_in_reading",
+      "human_readable": "Lock-In Reading (Path-Dependent Coordination Failure)",
+      "structural_delta": "QWERTY persists through network externalities despite technical inferiority; collective action problem prevents superior alternative adoption",
+      "primary_observable": "David's three features (technical interrelatedness, economies of scale, quasi-irreversibility); typist-employer coordination trap; social vs private switching costs",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "potential_adopters_of_superior_layout",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: introduces victim set (collective suboptimality) without beneficiary; tangled_rope (market failure without extraction agent)"
+    },
+    {
+      "claim_id": "beneficiary_extraction_reading",
+      "human_readable": "Beneficiary Extraction Reading (Incumbent Protection)",
+      "structural_delta": "QWERTY persists because manufacturers and incumbent training institutions actively maintained it to protect market position and training investments",
+      "primary_observable": "Union Typewriter Company 1893 merger and standardization; typing school curriculum lock-in; manufacturer resistance to alternative layouts; Remington market dominance timeline",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "typewriter_manufacturers_and_typing_schools",
+      "victim": "workers_and_employers_bearing_suboptimal_efficiency",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: introduces beneficiary and active maintenance mechanism; snare (extraction via artificial switching costs); tests D3 artifact hypothesis"
+    },
+    {
+      "claim_id": "telegraph_operator_adaptation",
+      "human_readable": "Telegraph Operator Adaptation (Early Adopter Constraint)",
+      "structural_delta": "QWERTY layout emerged from telegraph operators' transcription needs, not mechanical jam prevention",
+      "primary_observable": "Yasuoka & Yasuoka research findings; early adopter identity; transcription vs composition use case",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "naturalization_reading",
+        "lock_in_reading",
+        "beneficiary_extraction_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical origin constraint feeds into all readings but does not itself constitute a reading of the persistence mechanism"
+    },
+    {
+      "claim_id": "switching_cost_quantification",
+      "human_readable": "Switching Cost Quantification (Measured vs Claimed Efficiency)",
+      "structural_delta": "Actual measured retraining costs vs claimed Dvorak efficiency gains; empirical basis for lock-in claims",
+      "primary_observable": "Navy test methodology and results; later controlled studies; typing speed measurements QWERTY vs Dvorak",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "naturalization_reading",
+        "lock_in_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical evidence base for efficiency claims; feeds into naturalization vs lock-in distinction but is not itself a reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "naturalization_reading",
+      "kernel_id": "qwerty_persistence_mechanism",
+      "reading_id": "naturalization_reading"
+    },
+    {
+      "claim_id": "lock_in_reading",
+      "kernel_id": "qwerty_persistence_mechanism",
+      "reading_id": "lock_in_reading"
+    },
+    {
+      "claim_id": "beneficiary_extraction_reading",
+      "kernel_id": "qwerty_persistence_mechanism",
+      "reading_id": "beneficiary_extraction_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "telegraph_operator_adaptation",
+      "structural_delta": "QWERTY layout emerged from telegraph operators' transcription needs",
+      "hypothesis": "mountain",
+      "deferral_reason": "Historical origin constraint; feeds into all readings but does not constitute a reading of the persistence mechanism kernel"
+    },
+    {
+      "claim_id": "switching_cost_quantification",
+      "structural_delta": "Actual measured retraining costs vs claimed Dvorak efficiency gains",
+      "hypothesis": "piton",
+      "deferral_reason": "Empirical evidence base for efficiency claims; supports naturalization vs lock-in distinction but is not itself a reading; omega material for methodological critique"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d3_artifact_test",
+      "description": "Does the beneficiary_extraction_reading constitute genuine structural analysis or analytical artifact (D3)? If beneficiary-hunting finds beneficiaries by construction, the reading may be methodologically invalid despite narrative coherence. The constraint story generation must test whether identifiable beneficiaries (Union Typewriter, typing schools) demonstrably acted to suppress alternatives vs whether beneficiaries are retrodicted from outcome.",
+      "source": "User's explicit D3 ARTIFACT flag; kernel contest framing"
+    },
+    {
+      "id": "omega_counterfactual_switching_windows",
+      "description": "What would alternative-layout adoption have required in 1890s (pre-standardization) vs 1930s (Dvorak introduction) vs 2000s (Colemak, software remapping)? Switching cost structure changes across eras; lock-in claims may be era-specific rather than universal.",
+      "source": "Absence Inventory (counterfactual evidence gap)"
+    },
+    {
+      "id": "omega_navy_test_validity",
+      "description": "Liebowitz-Margolis critique of Navy test methodology (Dvorak involvement, bias) vs David's reliance on those tests. If the empirical basis for Dvorak superiority is contested, lock_in_reading's technical inferiority premise weakens. Naturalization and lock-in readings may collapse if Dvorak advantage is artifact.",
+      "source": "Switching cost quantification deferred axis; methodological dispute in research context"
+    },
+    {
+      "id": "omega_network_externality_measurement",
+      "description": "David's three features (technical interrelatedness, economies of scale, quasi-irreversibility) are theoretical constructs. Were they measured or assumed? If assumed, lock_in_reading may be theoretical projection rather than empirical finding.",
+      "source": "Dark Matter Probe 2 (what is treated as background); path dependence theory as lens"
+    },
+    {
+      "id": "omega_beneficiary_vs_artifact_distinction",
+      "description": "How to distinguish genuine beneficiary extraction (agents act to maintain standard) from beneficiary artifact (analysts retrodict beneficiaries from outcome)? Union Typewriter merger (1893) and standardization is observable; active suppression of alternatives is not directly evidenced in research context. Beneficiary_extraction_reading may require evidence of deliberate suppression, not merely outcome-consistent incentives.",
+      "source": "D3 artifact concern; beneficiary-hunting methodology critique"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure correctly identified: three readings instantiate genuinely different constraints (no beneficiary vs collective victim vs identifiable beneficiary). Axiom contradictions declared for naturalization vs lock-in (efficiency vs inferiority) and naturalization vs beneficiary extraction (no beneficiary vs beneficiary). D3 artifact concern flagged as omega_d3_artifact_test for generation step to resolve empirically."
+  },
+  "_seed_id": "qwerty_path_naturalization"
+}

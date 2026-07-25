@@ -1,0 +1,252 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Education Policy",
+  "family_id": "affirmative_action_equal_protection_2026",
+  "topic_summary": "Analysis of affirmative action through competing interpretations of the Equal Protection Clause. The remedial reading treats race-conscious policies as necessary to remedy historical group subordination; the colorblind reading treats any racial classification as constitutionally suspect regardless of remedial intent. Both claim fidelity to equal protection but generate incompatible beneficiary/victim structures.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Equal Protection Clause (Fourteenth Amendment constitutional substrate)",
+      "Students for Fair Admissions (SFFA, plaintiff organization advancing colorblind interpretation)",
+      "Harvard Plan (Walter J. Leonard's 1970s race-conscious admissions model)",
+      "Supreme Court (adjudicative authority interpreting equal protection)",
+      "Justice Clarence Thomas (colorblind constitutionalism proponent)",
+      "Justice Harry Blackmun (remedial approach proponent, Bakke dissent)",
+      "Executive Order 10925 (JFK 1961, first federal affirmative action mandate)",
+      "Civil Rights Act of 1964 (statutory anti-discrimination framework)"
+    ],
+    "key_claims": [
+      "Remedial reading: Equal protection requires race-conscious remedies to undo historical group subordination (Blackmun: 'to get beyond racism, we must first take account of race')",
+      "Colorblind reading: Equal protection forbids all racial classifications regardless of remedial intent (Roberts: 'stop discriminating on the basis of race')",
+      "Anti-discrimination statutes alone insufficient to break longstanding patterns (historical claim grounding remedial necessity)",
+      "Race-neutral policies ignore structural inequality, are not truly neutral (critique of colorblind implementation)",
+      "Diversity rationale centers white students as beneficiaries, not minority students (critique of post-Bakke jurisprudence)",
+      "Colorblindness doctrine creates false equivalence between remediation and segregation (structural critique)"
+    ],
+    "key_tensions": [
+      "Individual vs group as proper constitutional unit (procedural individualism vs anti-subordination)",
+      "Formal equality (race-neutral rules) vs structural equality (race-conscious remediation)",
+      "Remediation rationale (undo historical wrongs) vs diversity rationale (educational benefits for all)",
+      "Original Fourteenth Amendment purpose (anti-subjugation) vs contemporary colorblind interpretation",
+      "Temporary remedy logic (eventually achieve race-neutrality) vs permanent diversity logic (ongoing educational value)"
+    ],
+    "key_mechanisms": [
+      "Race-conscious admissions (Harvard Plan model: holistic review considering race as one factor)",
+      "Strict scrutiny doctrine (judicial review standard requiring compelling interest + narrow tailoring)",
+      "Executive orders and federal contracting requirements (enforcement mechanism for affirmative action compliance)"
+    ],
+    "key_absences": [
+      "Class-based affirmative action as alternative (mentioned in critiques but not structurally analyzed)",
+      "International comparative frameworks (other democracies' approaches to group remediation absent)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Equal Protection Clause of the Fourteenth Amendment as shared constitutional commitment to equality under law",
+    "authority_description": "Supreme Court interpretive authority grounded in judicial review doctrine and constitutional supremacy",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_overlay",
+    "is_contested_kernel": true,
+    "kernel_id": "equal_protection_clause",
+    "readings": [
+      {
+        "reading_id": "remedial_reading",
+        "commitment": "Equal protection requires race-conscious remediation of historical group subordination to achieve substantive equality",
+        "authority_grounding": "Anti-subordination principle, Fourteenth Amendment original purpose (Reconstruction-era anti-subjugation), precedent from Bakke diversity rationale",
+        "sibling_readings": [
+          "colorblind_reading",
+          "diversity_reading"
+        ],
+        "expected_structural_delta": "Groups (historically marginalized racial minorities) enter beneficiary set; individual members of non-preferred groups enter victim set; high ε from structural remediation mandate; temporary constraint (sunset when remediation complete)"
+      },
+      {
+        "reading_id": "colorblind_reading",
+        "commitment": "Equal protection forbids all governmental racial classifications, treating individuals as rights-bearers independent of group membership",
+        "authority_grounding": "Procedural individualism, Harlan's Plessy dissent, contemporary strict scrutiny doctrine treating race as inherently suspect classification",
+        "sibling_readings": [
+          "remedial_reading",
+          "diversity_reading"
+        ],
+        "expected_structural_delta": "Individuals (regardless of race) as sole beneficiaries of non-discrimination; any race-conscious policy creates individual victims; very low ε (formal rule application); permanent constraint (race never relevant)"
+      },
+      {
+        "reading_id": "diversity_reading",
+        "commitment": "Equal protection permits race-conscious policies when they serve compelling educational diversity interests benefiting all students",
+        "authority_grounding": "Powell's Bakke opinion, O'Connor's Grutter framework, educational autonomy doctrine",
+        "sibling_readings": [
+          "remedial_reading",
+          "colorblind_reading"
+        ],
+        "expected_structural_delta": "All students (including white students) as primary beneficiaries of diverse learning environment; minority students as instrumental means; moderate ε (narrow tailoring requirements); permanent constraint (ongoing educational value, not remedial sunset)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "remedial_reading",
+        "reading_b": "colorblind_reading",
+        "basis": "Remedial reading holds that equal protection's purpose is anti-subordination (groups as constitutional subjects); colorblind reading holds that equal protection's purpose is anti-classification (only individuals as constitutional subjects). No single framework can simultaneously treat groups as proper constitutional units requiring remediation AND treat all group-conscious policies as constitutionally forbidden. Accepting colorblind's axiom (race never relevant) requires rejecting remedial's axiom (race-conscious remediation necessary)."
+      },
+      {
+        "reading_a": "diversity_reading",
+        "reading_b": "colorblind_reading",
+        "basis": "Diversity reading holds that race may be considered when it serves compelling interests in educational pluralism; colorblind reading holds that race is inherently suspect and may never be a permissible classification basis. No framework can hold both that racial classifications are categorically forbidden AND that they are permissible when narrowly tailored to diversity interests."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "remedial_reading",
+      "human_readable": "Remedial Reading (Group-Conscious Anti-Subordination)",
+      "structural_delta": "Equal protection interpreted as requiring race-conscious remediation of historical group subordination to achieve substantive equality",
+      "primary_observable": "Judicial opinions citing anti-subordination principle; policies explicitly targeting historical discrimination effects; beneficiary identification by group membership",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "historically_marginalized_racial_groups",
+      "victim": "individual_members_non_preferred_groups",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with highest structural extractiveness; group-conscious framework generates distinct beneficiary/victim structure; tangled_rope with remedial leadership as beneficiary of anti-subordination framing"
+    },
+    {
+      "claim_id": "colorblind_reading",
+      "human_readable": "Colorblind Reading (Individual Procedural Equality)",
+      "structural_delta": "Equal protection interpreted as forbidding all governmental racial classifications, treating individuals as rights-bearers independent of group membership",
+      "primary_observable": "Judicial strict scrutiny application to race-conscious policies; Roberts/Thomas opinions; SFFA litigation strategy; formal equality metrics",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally independent reading with lowest ε; mountain classification (formal rule application regardless of political system); provides contrast to remedial's high-ε tangled_rope"
+    },
+    {
+      "claim_id": "diversity_reading",
+      "human_readable": "Diversity Reading (Educational Pluralism Rationale)",
+      "structural_delta": "Equal protection permits race-conscious policies when they serve compelling educational diversity interests benefiting all students, not remediation",
+      "primary_observable": "Post-Bakke jurisprudence (Powell, O'Connor opinions); university amicus briefs citing educational benefits; narrow tailoring requirements; diversity as ongoing value not temporary remedy",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "white_students_extracting_educational_value",
+      "victim": "minority_students_instrumentalized",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; snare classification (diversity rationale centers white students as beneficiaries, minority students as means); captures doctrinal shift from remediation to diversity that critics identify as extractive reframing"
+    },
+    {
+      "claim_id": "class_based_alternative",
+      "human_readable": "Class-Based Affirmative Action (Socioeconomic Proxy)",
+      "structural_delta": "Race-neutral policies targeting socioeconomic disadvantage as alternative to explicit racial classifications",
+      "primary_observable": "State policies post-affirmative action bans; percentage plans (Texas Top 10%); income-based admissions preferences",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold (proposed alternative not yet institutionalized); mentioned in research but lacks structural development; lower centrality than three selected readings"
+    },
+    {
+      "claim_id": "structural_inequality_persistence",
+      "human_readable": "Structural Inequality Persistence (Race-Neutral Policies Reproduce Hierarchy)",
+      "structural_delta": "Formally race-neutral policies reproduce racial stratification when applied to structurally unequal baseline conditions",
+      "primary_observable": "Admissions outcomes under race-neutral policies; wealth/income gaps by race; educational resource disparities; residential segregation metrics",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "remedial_reading",
+        "diversity_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain (structural baseline condition) but captured implicitly in remedial_reading's anti-subordination framing; would be upstream to both remedial and diversity readings but adds limited independent analytical yield given kernel structure already captures the contested interpretation of how to respond to this baseline"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "remedial_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "remedial_reading"
+    },
+    {
+      "claim_id": "colorblind_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "colorblind_reading"
+    },
+    {
+      "claim_id": "diversity_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "diversity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "class_based_alternative",
+      "structural_delta": "Race-neutral socioeconomic targeting as alternative to racial classifications",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Proposed alternative not yet institutionalized; lower centrality than kernel readings; mentioned in research but lacks structural development for independent constraint story"
+    },
+    {
+      "claim_id": "structural_inequality_persistence",
+      "structural_delta": "Race-neutral policies reproduce stratification under unequal baseline",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain captured implicitly in remedial_reading's anti-subordination framing; kernel structure already addresses contested interpretation of baseline inequality; limited independent yield"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_remediation_sunset",
+      "description": "Remedial reading contains internal tension: if remediation succeeds, does the constraint self-terminate? O'Connor's 25-year timeline in Grutter implies temporary scaffold, but anti-subordination principle may require permanent vigilance if structural inequality persists. Is remedial_reading a temporary tangled_rope or permanent mountain?",
+      "source": "Tension 5 (temporary remedy logic vs permanent diversity logic) + remedial_reading classification uncertainty"
+    },
+    {
+      "id": "omega_diversity_beneficiary_inversion",
+      "description": "Diversity reading's snare classification depends on whether minority students are genuinely instrumentalized or whether educational benefits are mutual. If diversity serves minority students' interests equally, snare collapses to rope. Requires empirical data on whose interests diversity rationale actually serves in practice.",
+      "source": "Tension 3 (diversity rationale critique) + diversity_reading victim identification"
+    },
+    {
+      "id": "omega_colorblind_mountain_validity",
+      "description": "Colorblind reading classified as mountain (formal rule application persists across political systems), but historical analysis suggests it is a piton of contemporary conservative legal movement, not a transhistorical constitutional principle. Harlan's Plessy dissent was minoritarian; colorblindness became dominant only post-1970s. May be rope or piton, not mountain.",
+      "source": "F03 (Hasty Generalization) + Tension 5 (colorblindness as recent doctrinal construction, not original meaning)"
+    },
+    {
+      "id": "omega_international_comparison_gap",
+      "description": "Analysis lacks comparative constitutional frameworks. Do other democracies with equal protection commitments adopt remedial, colorblind, or hybrid readings? Canada's Section 15(2) explicitly permits affirmative action; South Africa's Constitution mandates remedial measures. U.S. colorblind reading may be outlier, not universal interpretation of equality commitment.",
+      "source": "Absence 2 (international comparative frameworks) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_class_race_intersection",
+      "description": "Class-based alternative deferred, but intersection of race and class may reveal that colorblind policies are not race-neutral in effect. If wealth gaps are racialized, class-based affirmative action may function as covert race-conscious policy. Requires analysis of whether class and race are structurally independent axes or entangled.",
+      "source": "Deferred axis class_based_alternative + Tension 2 (structural vs formal equality)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: colorblind_reading classified as mountain but historical evidence suggests it is a recent doctrinal construction (post-1970s conservative legal movement), not a transhistorical constitutional principle. Harlan's Plessy dissent was minoritarian; colorblindness became dominant only after Civil Rights era backlash. May be rope (coordination around formal equality norm) or piton (atrophied remedial capacity), not mountain. Generated omega_colorblind_mountain_validity to bound this uncertainty. Kernel structure confirmed: three readings hold mutually exclusive axioms about equal protection's purpose (anti-subordination vs anti-classification vs educational pluralism), no single framework holds all three simultaneously."
+  },
+  "_seed_id": "affirmative_action_kernel"
+}

@@ -1,0 +1,269 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Applied Ethics / Legal Philosophy / Political Economy",
+  "family_id": "animal_status_kernel_2026",
+  "topic_summary": "Analysis of three mutually exclusive readings of the animal-status kernel: welfare-regulated-use (animals as subjects of moral consideration within continued use), abolitionist (animals as rights-holders precluding instrumental use), and property (animals as legal objects without independent moral standing). The contest centers on victim-set membership: whether nonhuman animals can be victims of constraint violations at all.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Nonhuman animals (contested moral/legal status)",
+      "Welfare regulatory frameworks (e.g., Animal Welfare Act, EU Directive 2010/63)",
+      "Abolitionist movement (rights-based advocacy against all instrumental use)",
+      "Property law regimes (animals as chattel under common law)",
+      "Agricultural/research industries (structural beneficiaries of property status)",
+      "Moral philosophy traditions (utilitarianism, deontology, contractarianism)"
+    ],
+    "key_tensions": [
+      "Sentience recognition vs legal property status (scientific consensus vs juridical classification)",
+      "Welfare improvement vs use abolition (reformist vs revolutionary framings)",
+      "Human supremacy vs species-neutral ethics (anthropocentric vs biocentric foundations)"
+    ],
+    "key_mechanisms": [
+      "Welfare standards enforcement (inspections, certifications, exemptions)",
+      "Property rights exclusion (animals legally cannot be rights-holders in most jurisdictions)",
+      "Abolitionist advocacy (legislative campaigns, constitutional challenges, direct action)",
+      "Economic structure lock-in (animal agriculture/research integration into GDP)"
+    ],
+    "key_absences": [
+      "Absence 1: Wild animal suffering (welfare/abolitionist frameworks centered on domesticated/captive animals)",
+      "Absence 2: Differential sentience thresholds (vertebrate vs invertebrate; mammal vs fish)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The moral and legal status of nonhuman animals — whether they are subjects with interests that constrain human action, objects available for unrestricted use, or something between",
+    "authority_description": "Authority derives from foundational moral axioms (utilitarianism, deontology, contractarianism) combined with legal positivism (property law) or natural law (inherent rights). Each reading grounds interpretive legitimacy in a different philosophical tradition.",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "animal_status",
+    "readings": [
+      {
+        "reading_id": "welfare_reading",
+        "commitment": "Animals are sentient beings with interests that constrain but do not prohibit human use",
+        "authority_grounding": "Utilitarian (suffering minimization) + scientific consensus (sentience)",
+        "sibling_readings": [
+          "abolitionist_reading",
+          "property_reading"
+        ],
+        "expected_structural_delta": "Animals in victim set for gratuitous harm; not in victim set for instrumental use with welfare protections; high extractiveness (ε ~0.45) via exemption structures"
+      },
+      {
+        "reading_id": "abolitionist_reading",
+        "commitment": "Animals are rights-holders with inherent value precluding all instrumental use",
+        "authority_grounding": "Deontological (Kantian/Regan rights theory) + sentience threshold",
+        "sibling_readings": [
+          "welfare_reading",
+          "property_reading"
+        ],
+        "expected_structural_delta": "Animals fully in victim set for any instrumental use; zero extractiveness for use categories; welfare reforms rejected as legitimation"
+      },
+      {
+        "reading_id": "property_reading",
+        "commitment": "Animals are legal objects without independent moral standing; human ownership unrestricted except by welfare statutes",
+        "authority_grounding": "Legal positivism (property law tradition) + anthropocentric ethics (contractarian/rationality threshold)",
+        "sibling_readings": [
+          "welfare_reading",
+          "abolitionist_reading"
+        ],
+        "expected_structural_delta": "Animals not in victim set; constraints exist only as human-to-human property disputes or voluntarily adopted welfare standards; near-zero extractiveness (ε ~0.05)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "abolitionist_reading",
+        "reading_b": "property_reading",
+        "basis": "Abolitionist axiom (nonhuman sentience generates rights that prohibit ownership) cannot coexist with property axiom (only rational agents hold rights; animals are ownable objects). No coherent framework holds both."
+      },
+      {
+        "reading_a": "abolitionist_reading",
+        "reading_b": "welfare_reading",
+        "basis": "Abolitionist axiom (rights-holders cannot be used as mere means) cannot coexist with welfare axiom (sentient beings' interests constrain but permit continued use). Welfare accepts instrumental use; abolition categorically rejects it."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "welfare_reading",
+      "human_readable": "Welfare Reading (Regulated Use)",
+      "structural_delta": "Animals as sentient subjects whose suffering matters but whose instrumental use is permissible under welfare constraints",
+      "primary_observable": "Welfare statute scope and exemption breadth; enforcement budgets; industry compliance rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "animal_agriculture_research_industries",
+      "victim": "animals_under_exempted_use_categories",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant institutional reading; tangled_rope structure with high extractiveness via exemption mechanisms"
+    },
+    {
+      "claim_id": "abolitionist_reading",
+      "human_readable": "Abolitionist Reading (Rights-Based Prohibition)",
+      "structural_delta": "Animals as rights-holders whose inherent value categorically prohibits instrumental use",
+      "primary_observable": "Abolitionist movement political power; constitutional/legislative success rate; public opinion on use prohibition",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiomatically contradicts welfare and property readings; necessary for kernel contest mapping"
+    },
+    {
+      "claim_id": "property_reading",
+      "human_readable": "Property Reading (Legal Object Status)",
+      "structural_delta": "Animals as legal property without independent moral standing; human ownership rights unrestricted except by voluntary welfare adoption",
+      "primary_observable": "Property law doctrines; judicial rulings on standing; absence of animal-specific constitutional protections",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "welfare_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Juridical foundation for welfare reading's extractiveness; mountain baseline enabling tangled_rope overlay"
+    },
+    {
+      "claim_id": "sentience_threshold_contestation",
+      "human_readable": "Sentience Threshold Contestation",
+      "structural_delta": "Disagreement over which species possess morally relevant sentience (vertebrate-only vs invertebrate inclusion)",
+      "primary_observable": "Scientific consensus boundaries; policy inclusion/exclusion of fish, cephalopods, crustaceans, insects",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "welfare_reading",
+        "abolitionist_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects victim-set boundary but is secondary to core kernel contest over status given sentience"
+    },
+    {
+      "claim_id": "wild_animal_suffering_absence",
+      "human_readable": "Wild Animal Suffering Absence",
+      "structural_delta": "Neither welfare nor abolitionist frameworks address suffering of animals outside human control",
+      "primary_observable": "Policy/advocacy focus on domesticated vs wild populations; predation/disease intervention debates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence beyond kernel scope; future research axis"
+    },
+    {
+      "claim_id": "economic_lock_in",
+      "human_readable": "Economic Lock-In (Structural Dependence on Animal Use)",
+      "structural_delta": "GDP dependence on animal agriculture/research creates resistance to abolitionist reforms",
+      "primary_observable": "Animal agriculture share of GDP; research funding dependent on animal models; employment in animal-use industries",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "property_reading"
+      ],
+      "feeds_into": [
+        "welfare_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: explanatory for why welfare reading dominates but not part of kernel contest itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "welfare_reading",
+      "kernel_id": "animal_status",
+      "reading_id": "welfare_reading"
+    },
+    {
+      "claim_id": "abolitionist_reading",
+      "kernel_id": "animal_status",
+      "reading_id": "abolitionist_reading"
+    },
+    {
+      "claim_id": "property_reading",
+      "kernel_id": "animal_status",
+      "reading_id": "property_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "sentience_threshold_contestation",
+      "structural_delta": "Disagreement over which species possess morally relevant sentience",
+      "hypothesis": "rope",
+      "deferral_reason": "Secondary to core kernel contest; affects victim-set boundary but not status framework itself"
+    },
+    {
+      "claim_id": "wild_animal_suffering_absence",
+      "structural_delta": "Absence of wild animal consideration in welfare/abolitionist frameworks",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Beyond kernel scope; speculative future extension"
+    },
+    {
+      "claim_id": "economic_lock_in",
+      "structural_delta": "GDP dependence on animal use industries",
+      "hypothesis": "piton",
+      "deferral_reason": "Explanatory for welfare dominance but not part of kernel contest itself; political economy axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_sentience_science_drift",
+      "description": "If neuroscience expands sentience recognition to invertebrates (cephalopods, crustaceans, insects), does welfare reading collapse into abolitionist (victim set becomes computationally unmanageable) or does exemption structure expand to absorb new members? Sentience threshold contestation becomes weight-bearing.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + deferred axis sentience_threshold_contestation"
+    },
+    {
+      "id": "omega_property_mountain_validity",
+      "description": "Is property reading a true mountain (legal positivism as bedrock) or a piton (contingent juridical choice)? Constitutional challenges in jurisdictions recognizing animal sentience (e.g., Switzerland 1992, India 2014) suggest piton reclassification.",
+      "source": "F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_welfare_extractiveness_measurement",
+      "description": "Welfare reading's ε depends on exemption breadth and enforcement gaps. If exemptions cover 90%+ of animal use (e.g., livestock, most research), is ε truly mod (0.45) or high (0.65+)? Empirical measurement required.",
+      "source": "Primary observable uncertainty"
+    },
+    {
+      "id": "omega_wild_suffering_paradigm_shift",
+      "description": "If wild animal suffering becomes salient (climate-driven ecosystem collapse), does it force abolitionist reading to address intervention ethics, potentially fracturing into interventionist vs non-interventionist branches? Deferred axis may become weight-bearing.",
+      "source": "Absence Inventory + deferred axis wild_animal_suffering_absence"
+    },
+    {
+      "id": "omega_reading_coherence_test",
+      "description": "Welfare reading claims animals are both in victim set (for gratuitous harm) and not in victim set (for instrumental use). Is this coherent harm-threshold distinction or covert property reading with welfare overlay? Beneficiary scan suggests the latter.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: property_reading classified as mountain (legal positivism as bedrock) but constitutional/statutory reforms in multiple jurisdictions suggest piton (contingent juridical choice). Generated omega_property_mountain_validity to bound uncertainty. Kernel decomposition confirmed: three readings emit structurally distinct constraints with different victim-set membership, different ε values, and axiomatically contradictory foundations. No collapse detected."
+  },
+  "_seed_id": "animal_rights_kernel"
+}

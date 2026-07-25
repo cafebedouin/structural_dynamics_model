@@ -1,0 +1,163 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Anthropology / Commitment Systems / Temporal Institutional Analysis",
+  "family_id": "aneyoshi_tsunami_stone_2011",
+  "topic_summary": "Analysis of the Aneyoshi tsunami stone's 'do not build below this line' directive across 78 years of non-catastrophe (1933-2011), examining whether the kernel decayed to commemorative symbol or retained live behavioral commitment. The 2011 Tōhoku tsunami provided a decisive test: Aneyoshi village survived while neighboring communities were destroyed, suggesting the kernel remained operationally live.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aneyoshi tsunami stone (physical marker erected 1933, inscribed with land-use prohibition)",
+      "Aneyoshi village (community that observed the prohibition 1933-2011)",
+      "Neighboring coastal communities (violated equivalent prohibitions; destroyed 2011)",
+      "1933 Sanriku tsunami (catastrophe that motivated stone placement)",
+      "2011 Tōhoku tsunami (catastrophe that tested commitment persistence)"
+    ],
+    "key_tensions": [
+      "Commemorative decay vs behavioral persistence (whether the kernel remained live across 78 years)",
+      "Economic pressure vs catastrophe memory (development incentives vs prohibition observance)"
+    ],
+    "key_mechanisms": [
+      "Catastrophe-theorem break (D5 pattern: decisive test after long dormancy)",
+      "Intergenerational transmission (mechanism by which prohibition was or was not maintained)",
+      "Land-use enforcement (formal or informal mechanisms preventing construction below stone line)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "human_readable": "Commemorative Husk Reading (Symbol Without Behavioral Force)",
+      "structural_delta": "The stone became a historical marker without operational land-use constraint",
+      "primary_observable": "Presence of post-1933 construction below stone line; community testimony treating stone as memorial rather than rule",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "development_interests",
+      "victim": "future_residents_below_line",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents decay hypothesis"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "human_readable": "Behavioral Competence Reading (Live Land-Use Practice)",
+      "structural_delta": "The stone remained an operationally enforced land-use prohibition across 78 years",
+      "primary_observable": "Absence of post-1933 construction below stone line; 2011 survival as empirical validation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents persistence hypothesis"
+    },
+    {
+      "claim_id": "transmission_mechanism",
+      "human_readable": "Intergenerational Transmission Mechanism",
+      "structural_delta": "How the prohibition was or was not maintained across generations who did not experience 1933",
+      "primary_observable": "Educational practices, oral history transmission, formal land-use regulation presence/absence",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "commemorative_husk_reading",
+        "behavioral_competence_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent axis: mechanism question distinct from kernel-reading question; survives §3 test"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "kernel_id": "aneyoshi_land_use_prohibition",
+      "reading_id": "commemorative_husk_reading"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "kernel_id": "aneyoshi_land_use_prohibition",
+      "reading_id": "behavioral_competence_reading"
+    },
+    "transmission_mechanism"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_neighboring_village_comparison",
+      "description": "Did neighboring villages have equivalent stones that decayed to symbols, or did they lack physical markers entirely? Comparative analysis would distinguish transmission failure from absence of initial commitment.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_formal_enforcement",
+      "description": "Was the prohibition enforced through formal land-use regulation, informal social pressure, or property ownership patterns? Mechanism ambiguity affects whether this is rope or mountain.",
+      "source": "§2.2 Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_economic_counterfactual",
+      "description": "What was the economic cost of observing the prohibition? If coastal land had high development value, observance suggests stronger commitment than if land was marginal.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_post_2011_replication",
+      "description": "Has the 2011 validation caused other communities to adopt similar prohibitions? If not, suggests the commitment was Aneyoshi-specific rather than generalizable.",
+      "source": "§2.2 Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition is well-bounded by 2011 empirical test. Transmission mechanism axis passes §3 independence test (different observable: educational/regulatory practices vs land-use outcomes)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The prohibition 'do not build below this stone line' inscribed on the Aneyoshi tsunami stone in 1933",
+    "authority_description": "Catastrophe memory as legitimating force; authority grounded in 1933 survivors' testimony and physical marker placement",
+    "drift_status": "functioning",
+    "candidate_pattern": "D5_catastrophe_theorem",
+    "is_contested_kernel": true,
+    "kernel_id": "aneyoshi_land_use_prohibition",
+    "readings": [
+      {
+        "reading_id": "commemorative_husk_reading",
+        "commitment": "The stone is a historical memorial; the prohibition decayed to symbol without behavioral force",
+        "authority_grounding": "Symbolic/commemorative tradition; authority is cultural rather than operational",
+        "sibling_readings": [
+          "behavioral_competence_reading"
+        ],
+        "expected_structural_delta": "High extractiveness: development interests benefit from treating prohibition as non-binding; future residents below line become victims when catastrophe returns"
+      },
+      {
+        "reading_id": "behavioral_competence_reading",
+        "commitment": "The stone is a live land-use rule; the prohibition was operationally enforced across 78 years",
+        "authority_grounding": "Catastrophe memory + empirical validation (2011 survival); authority is practical/experiential",
+        "sibling_readings": [
+          "commemorative_husk_reading"
+        ],
+        "expected_structural_delta": "Very low extractiveness: physical constraint (tsunami physics) enforced through social practice; no beneficiary structure"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "commemorative_husk_reading",
+        "reading_b": "behavioral_competence_reading",
+        "basis": "No single framework can hold both 'the prohibition was symbolically maintained but behaviorally violated' and 'the prohibition was behaviorally enforced.' The 2011 outcome (zero construction below line) falsifies the husk reading empirically, but the contest is whether that outcome was commitment or coincidence."
+      }
+    ]
+  },
+  "_seed_id": "aneyoshi_tsunami_memory"
+}

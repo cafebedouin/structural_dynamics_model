@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Cultural Property / Post-Colonial Studies",
+  "family_id": "cultural_heritage_restitution_2026",
+  "topic_summary": "Analysis of the contested legal frameworks governing cultural heritage restitution, examining how international customary law and treaties are read differently by holding institutions (as mandates for universal access and preservation) versus post-colonial successor states (as mandates for repatriation of expropriated sovereign property). The disagreement centers on who holds legitimate authority to adjudicate historical extraction.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Holding institutions (museums, former colonial powers claiming custodial authority)",
+      "Post-colonial successor states (claiming sovereign property rights)",
+      "International customary law corpus (UNESCO conventions, Hague protocols)",
+      "Universal encyclopedic heritage doctrine (framing as public good)",
+      "Indigenous communities (often distinct from state actors)",
+      "UNESCO (treaty administrator and norm-setter)"
+    ],
+    "key_tensions": [
+      "Custodial preservation vs sovereign repatriation (holding institutions vs successor states)",
+      "Universal access vs particularist ownership (cosmopolitan vs nationalist framings)",
+      "Legal continuity vs historical rupture (colonial acquisition as valid title vs illegitimate extraction)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "International customary law and treaty provisions regarding cultural property acquired during colonial periods, establishing principles for legitimate possession and transfer",
+    "authority_description": "Interpretive legitimacy contested between international bodies (UNESCO, ICJ), holding institutions (claiming expertise and treaty compliance), and successor states (claiming sovereignty and historical grievance)",
+    "drift_status": "partial",
+    "candidate_pattern": "Legitimacy Shell (authority derives from kernel interpretation; rival interpretations produce incompatible legitimacy claims)",
+    "is_contested_kernel": true,
+    "kernel_id": "cultural_property_legal_corpus",
+    "readings": [
+      {
+        "reading_id": "universal_heritage_reading",
+        "commitment": "Cultural artifacts are humanity's shared heritage; legitimate authority rests with institutions that maximize preservation and universal access regardless of geographic origin",
+        "authority_grounding": "Expertise-based custodianship; UNESCO universal heritage doctrine; cosmopolitan ethics",
+        "sibling_readings": [
+          "sovereign_repatriation_reading",
+          "indigenous_stewardship_reading"
+        ],
+        "expected_structural_delta": "Holding institutions become beneficiaries; successor states' claims treated as particularist threats to public good; high ε extraction from claimant states (legal costs, diplomatic friction, identity harm)"
+      },
+      {
+        "reading_id": "sovereign_repatriation_reading",
+        "commitment": "Cultural artifacts are sovereign property of successor states; colonial acquisition was illegitimate extraction; legitimate authority rests with states claiming historical continuity with expropriated peoples",
+        "authority_grounding": "Territorial sovereignty; principle of inalienability of national patrimony; post-colonial legal revision",
+        "sibling_readings": [
+          "universal_heritage_reading",
+          "indigenous_stewardship_reading"
+        ],
+        "expected_structural_delta": "Successor states become beneficiaries; holding institutions become extractors of identity capital; moderate ε (repatriation costs, diplomatic friction, but restoration of symbolic capital)"
+      },
+      {
+        "reading_id": "indigenous_stewardship_reading",
+        "commitment": "Cultural artifacts are sacred or communal property of indigenous communities; legitimate authority rests with communities maintaining cultural continuity, not colonial successor states or museums",
+        "authority_grounding": "Cultural continuity; UNDRIP principles; sacred/communal property distinctions outside state sovereignty framework",
+        "sibling_readings": [
+          "universal_heritage_reading",
+          "sovereign_repatriation_reading"
+        ],
+        "expected_structural_delta": "Indigenous communities become beneficiaries; both holding institutions AND successor states become extractors; highest ε (artifacts held by parties with no legitimate claim under this reading)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "universal_heritage_reading",
+        "reading_b": "sovereign_repatriation_reading",
+        "basis": "No single framework can hold both 'legitimate possession derives from preservation capacity regardless of acquisition method' and 'colonial acquisition was categorically illegitimate extraction requiring restitution.' Accepting repatriation's axiom requires rejecting universal heritage's claim that acquisition history is legally subordinate to current custodial capacity."
+      },
+      {
+        "reading_a": "universal_heritage_reading",
+        "reading_b": "indigenous_stewardship_reading",
+        "basis": "No single framework can hold both 'state or institutional custody over cultural property is legitimate if it serves universal access' and 'cultural property is inalienable sacred/communal trust outside state sovereignty.' The indigenous reading rejects the state-centric property regime the universal heritage reading assumes."
+      },
+      {
+        "reading_a": "sovereign_repatriation_reading",
+        "reading_b": "indigenous_stewardship_reading",
+        "basis": "No single framework can hold both 'successor states inherit sovereign property rights to cultural artifacts' and 'indigenous communities hold inalienable stewardship claims independent of state sovereignty.' One locates authority in state succession; the other denies the state's legitimacy as heir to pre-colonial property."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "universal_heritage_reading",
+      "human_readable": "Universal Heritage Reading (Custodial Preservation as Legitimacy)",
+      "structural_delta": "Legitimate possession derives from capacity for preservation and universal access, not acquisition history",
+      "primary_observable": "Museum acquisition policies; UNESCO World Heritage designations treating artifacts as 'humanity's heritage'; legal arguments invoking 'safe harbor' and 'encyclopedic mission'",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "holding_institutions",
+      "victim": "successor_states_and_claimant_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First selected reading; represents dominant institutional framing; highest beneficiary asymmetry"
+    },
+    {
+      "claim_id": "sovereign_repatriation_reading",
+      "human_readable": "Sovereign Repatriation Reading (Post-Colonial Legal Revision)",
+      "structural_delta": "Colonial acquisition was illegitimate extraction; successor states hold inalienable patrimony rights",
+      "primary_observable": "Repatriation litigation rates; bilateral treaty negotiations; UNESCO 1970 Convention interpretations; national patrimony laws",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "successor_states",
+      "victim": "holding_institutions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second selected reading; oppositional to first; represents post-colonial state claims"
+    },
+    {
+      "claim_id": "indigenous_stewardship_reading",
+      "human_readable": "Indigenous Stewardship Reading (Sacred Trust Outside State Sovereignty)",
+      "structural_delta": "Artifacts are sacred/communal property; authority rests with communities maintaining cultural continuity, not states or museums",
+      "primary_observable": "NAGPRA claims (U.S.); UNDRIP Article 31 invocations; indigenous-museum direct negotiations bypassing state actors",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "indigenous_communities",
+      "victim": "both_states_and_museums",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third selected reading; orthogonal to state-centric framings; highest structural novelty"
+    },
+    {
+      "claim_id": "market_commodification_axis",
+      "human_readable": "Market Commodification (Artifacts as Tradeable Assets)",
+      "structural_delta": "Legal and illegal artifact markets treat cultural property as fungible commodity; price signals overwhelm custodial/sacred claims",
+      "primary_observable": "Auction house sales of contested artifacts; antiquities smuggling prosecution rates; private collection insurance valuations",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "collectors_and_dealers",
+      "victim": "all_claimant_frameworks",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: orthogonal market mechanism; not a reading of the legal kernel but a parallel extraction system"
+    },
+    {
+      "claim_id": "diplomatic_hostage_axis",
+      "human_readable": "Restitution as Diplomatic Hostage (Artifacts as Bargaining Chips)",
+      "structural_delta": "States and museums use artifact return/retention as leverage in unrelated diplomatic negotiations",
+      "primary_observable": "Conditional repatriation offers tied to trade deals or political recognition; bilateral treaty quid-pro-quos",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "states_with_leverage",
+      "victim": "claimants_without_leverage",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: instrumental mechanism downstream of all three readings; captured implicitly in their constraint stories"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "universal_heritage_reading",
+      "kernel_id": "cultural_property_legal_corpus",
+      "reading_id": "universal_heritage_reading"
+    },
+    {
+      "claim_id": "sovereign_repatriation_reading",
+      "kernel_id": "cultural_property_legal_corpus",
+      "reading_id": "sovereign_repatriation_reading"
+    },
+    {
+      "claim_id": "indigenous_stewardship_reading",
+      "kernel_id": "cultural_property_legal_corpus",
+      "reading_id": "indigenous_stewardship_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "market_commodification_axis",
+      "structural_delta": "Artifacts treated as tradeable assets; price signals overwhelm custodial/sacred claims",
+      "hypothesis": "snare",
+      "deferral_reason": "Not a reading of the legal kernel but a parallel extraction system; orthogonal market mechanism affecting all three selected readings"
+    },
+    {
+      "claim_id": "diplomatic_hostage_axis",
+      "structural_delta": "Artifact return/retention used as leverage in unrelated diplomatic negotiations",
+      "hypothesis": "snare",
+      "deferral_reason": "Instrumental mechanism downstream of all three readings; captured implicitly in their constraint stories as secondary extraction"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_coexistence",
+      "description": "Can any hybrid framework accommodate two of the three readings without contradiction? Or does each reading's axiom necessarily foreclose the others, creating a zero-sum legitimacy contest?",
+      "source": "Axiom contradiction analysis; all three pairwise contradictions declared"
+    },
+    {
+      "id": "omega_nagpra_exception",
+      "description": "Does NAGPRA (U.S. indigenous repatriation law) represent a functioning hybrid, or does it merely subordinate indigenous claims to federal sovereignty (collapsing indigenous_stewardship_reading into sovereign_repatriation_reading)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory): U.S.-specific legal instrument with potential hybrid structure"
+    },
+    {
+      "id": "omega_looted_vs_collected",
+      "description": "Does the structural analysis change if artifacts were acquired through warfare/looting versus ethnographic 'collecting'? All three readings may treat these differently, creating sub-readings.",
+      "source": "Dark Matter Probe 1 (Operational Medium): acquisition context as unexamined variable"
+    },
+    {
+      "id": "omega_temporal_jurisdiction",
+      "description": "At what point does long-term possession by a holding institution generate its own legitimate claim? Is there a 'statute of limitations' on extraction, or does the indigenous_stewardship_reading's inalienability principle override temporal arguments?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): temporal legitimacy as potential fourth reading or modifier"
+    },
+    {
+      "id": "omega_unesco_drift",
+      "description": "UNESCO's 1970 Convention prohibits illicit transfer but does not mandate return of pre-1970 acquisitions. Is this partial drift (absorbing post-colonial pressure without kernel revision) or functioning drift (enabling gradual norm evolution)?",
+      "source": "Commitment system drift_status=partial; temporal cutoff as boundary maintenance"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "All scans passed. Kernel decomposition into three readings with pairwise axiom contradictions declared. Two deferred axes (market_commodification, diplomatic_hostage) documented as orthogonal mechanisms rather than kernel readings. Five omegas generated for bounded uncertainties."
+  },
+  "_seed_id": "ottoman_cultural_heritage_restitution"
+}

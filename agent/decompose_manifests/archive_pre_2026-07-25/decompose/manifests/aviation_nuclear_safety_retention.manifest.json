@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Safety Engineering / Organizational Learning / High-Reliability Systems",
+  "family_id": "catastrophe_avoidance_retention_2026",
+  "topic_summary": "Analysis of how aviation and nuclear industries retain catastrophe-avoidance competence across decades without recurring disasters. The kernel contest centers on whether simulation exercises constitute genuine practice of safety-critical skills or whether only actual catastrophic events provide the selection pressure necessary to maintain competence.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aviation stall recovery protocols (FAA-mandated simulator training for loss-of-control scenarios)",
+      "Nuclear reactor operators (emergency response drills, control room simulators)",
+      "High-fidelity simulation systems (proxy-catastrophe environments)",
+      "Actual catastrophic events (Three Mile Island, Tenerife, AF447)",
+      "Regulatory bodies (FAA, NRC; mandate simulation frequency and fidelity)"
+    ],
+    "key_tensions": [
+      "Simulation fidelity vs real-world unpredictability (can drills capture chaos?)",
+      "Competence decay vs catastrophe frequency (decades between events; how is skill retained?)"
+    ],
+    "key_mechanisms": [
+      "Simulator-based skill maintenance (scheduled drills as substitute for real events)",
+      "Incident learning propagation (near-misses and foreign accidents analyzed industry-wide)",
+      "Regulatory enforcement of training cycles (FAA Part 121 recurrent training; NRC operator licensing)"
+    ],
+    "key_absences": [
+      "Medical crisis management (lacks high-fidelity simulation infrastructure; sepsis/cardiac arrest competence retention unclear)",
+      "Decay measurement (no quantitative metric for how fast catastrophe-avoidance skills atrophy without practice)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that catastrophe-avoidance competence must be maintained across long periods without actual catastrophes",
+    "authority_description": "Regulatory bodies (FAA, NRC) mandate training cycles; professional norms define acceptable practice",
+    "drift_status": "functioning",
+    "candidate_pattern": "dynamic_equilibrium",
+    "is_contested_kernel": true,
+    "kernel_id": "catastrophe_avoidance_retention",
+    "readings": [
+      {
+        "reading_id": "simulation_as_proxy_catastrophe",
+        "commitment": "High-fidelity simulation constitutes genuine practice; drills are functionally equivalent to real catastrophic events for competence maintenance",
+        "authority_grounding": "Engineering / empirical training effectiveness data",
+        "sibling_readings": [
+          "catastrophe_as_necessary_selector",
+          "hybrid_near_miss_learning"
+        ],
+        "expected_structural_delta": "Simulation infrastructure becomes critical; competence decay manageable via scheduled drills; regulatory enforcement sufficient"
+      },
+      {
+        "reading_id": "catastrophe_as_necessary_selector",
+        "commitment": "Only actual catastrophes provide the selection pressure (chaos, mortality salience, organizational trauma) necessary to maintain competence",
+        "authority_grounding": "Evolutionary epistemology / Taleb-style anti-fragility",
+        "sibling_readings": [
+          "simulation_as_proxy_catastrophe",
+          "hybrid_near_miss_learning"
+        ],
+        "expected_structural_delta": "Long peacetime periods = inevitable competence decay; simulation creates false confidence; industry vulnerable to black swan re-emergence"
+      },
+      {
+        "reading_id": "hybrid_near_miss_learning",
+        "commitment": "Neither simulation alone nor catastrophe alone sufficient; competence maintained via distributed learning from near-misses, foreign incidents, and high-realism drills",
+        "authority_grounding": "High-reliability organization theory (Weick/Sutcliffe)",
+        "sibling_readings": [
+          "simulation_as_proxy_catastrophe",
+          "catastrophe_as_necessary_selector"
+        ],
+        "expected_structural_delta": "Competence retention depends on incident-sharing networks; industries with strong cross-organizational learning (aviation) succeed; those without (medicine?) fail"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "simulation_as_proxy_catastrophe",
+        "reading_b": "catastrophe_as_necessary_selector",
+        "basis": "One holds that drills replicate the critical selection mechanism; the other holds that only real catastrophes provide mortality salience and organizational trauma necessary for competence retention. No framework can hold both the sufficiency of simulation AND the necessity of actual catastrophe simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "simulation_as_proxy_catastrophe",
+      "human_readable": "Simulation as Proxy Catastrophe",
+      "structural_delta": "High-fidelity drills functionally equivalent to real events for skill maintenance",
+      "primary_observable": "Operator performance degradation rates in simulator vs post-incident competence loss; FAA stall recovery training outcomes vs AF447-type incidents",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "regulatory_training_infrastructure",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_false_confidence"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading; structurally distinct commitment about simulation sufficiency"
+    },
+    {
+      "claim_id": "catastrophe_as_necessary_selector",
+      "human_readable": "Catastrophe as Necessary Selector",
+      "structural_delta": "Only actual catastrophes provide mortality salience and chaos necessary for competence retention",
+      "primary_observable": "Competence decay curves during long peacetime periods; black swan re-emergence rates in mature safety regimes",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "populations_protected_by_safety_systems",
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_false_confidence"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading; competing structural claim about necessity of real catastrophes"
+    },
+    {
+      "claim_id": "hybrid_near_miss_learning",
+      "human_readable": "Hybrid Near-Miss Learning",
+      "structural_delta": "Competence maintained via distributed learning from near-misses, foreign incidents, and high-realism drills",
+      "primary_observable": "Aviation Safety Reporting System effectiveness; cross-organizational incident learning network density",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; structurally distinct from binary simulation/catastrophe opposition"
+    },
+    {
+      "claim_id": "institutional_false_confidence",
+      "human_readable": "Institutional False Confidence (Simulation Theater Risk)",
+      "structural_delta": "Regulatory compliance with simulation schedules creates organizational confidence decoupled from actual competence",
+      "primary_observable": "Compliance audit pass rates vs actual incident response failures; checkbox-training prevalence",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "compliance_auditors",
+      "victim": "operator_competence",
+      "downstream_of": [
+        "simulation_as_proxy_catastrophe"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream snare of first reading; covered implicitly in simulation_as_proxy_catastrophe constraint story"
+    },
+    {
+      "claim_id": "decay_measurement_absence",
+      "human_readable": "Decay Measurement Absence (No Quantitative Atrophy Metric)",
+      "structural_delta": "No industry-standard metric for catastrophe-avoidance skill decay rates without practice",
+      "primary_observable": "Absence of longitudinal competence tracking; simulator performance variance over time",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophe_as_necessary_selector"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream absence that weakens measurement of decay; omega material rather than distinct axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "simulation_as_proxy_catastrophe",
+      "kernel_id": "catastrophe_avoidance_retention",
+      "reading_id": "simulation_as_proxy_catastrophe"
+    },
+    {
+      "claim_id": "catastrophe_as_necessary_selector",
+      "kernel_id": "catastrophe_avoidance_retention",
+      "reading_id": "catastrophe_as_necessary_selector"
+    },
+    {
+      "claim_id": "hybrid_near_miss_learning",
+      "kernel_id": "catastrophe_avoidance_retention",
+      "reading_id": "hybrid_near_miss_learning"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_false_confidence",
+      "structural_delta": "Regulatory compliance creates confidence decoupled from actual competence",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of simulation_as_proxy_catastrophe reading; implicit in that constraint story as the failure mode of checkbox training"
+    },
+    {
+      "claim_id": "decay_measurement_absence",
+      "structural_delta": "No quantitative metric for catastrophe-avoidance skill atrophy rates",
+      "hypothesis": "piton",
+      "deferral_reason": "Measurement infrastructure absence; omega uncertainty rather than distinct constraint axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_medical_contrast",
+      "description": "Medicine lacks high-fidelity simulation infrastructure for crisis scenarios (sepsis, code blue). Does competence retention fail there, or is distributed real-event frequency (every hospital has codes) sufficient? Tests necessity of either simulation OR catastrophe centrality.",
+      "source": "Absence Inventory (§1.1) + cross-domain comparison"
+    },
+    {
+      "id": "omega_decay_curve",
+      "description": "How fast do catastrophe-avoidance skills decay without practice? No quantitative industry metric. If decay is slow (years), simulation_as_proxy_catastrophe is stronger. If fast (months), catastrophe_as_necessary_selector gains support.",
+      "source": "Deferred axis decay_measurement_absence + measurement gap"
+    },
+    {
+      "id": "omega_d5_boundary",
+      "description": "Does the D5 break (drills-as-proxy-catastrophe collapse) occur? If simulation and catastrophe are structurally identical for competence maintenance, the kernel contest dissolves. If they differ in mortality salience or chaos fidelity, readings remain distinct.",
+      "source": "User's kernel contest flag + axiom contradiction test"
+    },
+    {
+      "id": "omega_cross_industry_variance",
+      "description": "Aviation shows decades-long competence retention; nuclear similar. Do industries WITHOUT strong simulation infrastructure (e.g., dam failure management, pandemic response) show faster decay? If yes, supports simulation_as_proxy_catastrophe. If no, supports catastrophe_as_necessary_selector or hybrid_near_miss_learning.",
+      "source": "Dark Matter Probe 2 (absence of non-aviation/nuclear comparisons in extraction)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition produces three structurally distinct readings with measurable structural deltas. Axiom contradiction declared between simulation_as_proxy_catastrophe and catastrophe_as_necessary_selector (sufficiency of drills vs necessity of real chaos). Hybrid_near_miss_learning occupies intermediate position with distinct observable (incident-sharing network density)."
+  },
+  "_seed_id": "aviation_nuclear_safety_retention"
+}

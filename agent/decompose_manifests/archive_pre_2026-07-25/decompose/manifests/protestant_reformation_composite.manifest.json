@@ -1,0 +1,222 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Epistemology / Religious History / Commitment System Theory",
+  "family_id": "reformation_composite_kernel_2026",
+  "topic_summary": "Analysis of the Protestant Reformation as a potentially composite event structure, testing whether it represents one contested kernel with multiple readings or an overdetermined convergence of several distinct kernels. The NON-BREAK library verdict (defender absorbs as composite) provides baseline expectation that commitment system analysis should identify compositeness rather than force singular kernel reduction.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Catholic Church (pre-Reformation institutional authority structure)",
+      "Martin Luther (theological reformer, 95 Theses initiator)",
+      "Protestant movements (Lutheran, Reformed, Radical traditions)",
+      "Biblical text (contested kernel candidate)",
+      "Papal authority (interpretive legitimacy structure)",
+      "Printing press (technological mechanism)",
+      "Territorial princes (political-economic actors)"
+    ],
+    "key_tensions": [
+      "Scriptural authority vs ecclesiastical tradition (sola scriptura vs magisterial interpretation)",
+      "Salvation mechanism (faith alone vs works/sacraments)",
+      "Economic extraction (indulgences, clerical taxation vs lay autonomy)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Reformation appears to be a COMPOSITE of at least three distinct kernels operating simultaneously: (1) soteriological kernel (salvation mechanism), (2) scriptural authority kernel (interpretive legitimacy), (3) ecclesiastical resource extraction kernel (economic-political structure). Each kernel admits different readings, but they are NOT readings of one shared commitment.",
+    "authority_description": "Pre-Reformation: Papal magisterium claims exclusive interpretive authority over both scripture and salvation doctrine. Post-Reformation: contested—Protestant readings ground authority in scripture directly (priesthood of all believers) or in reformed ecclesiastical structures (Reformed magisterial interpretation).",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain—composite event does not cleanly instantiate one CS pattern; different kernels exhibit different patterns (soteriological kernel shows CLIMB characteristics; scriptural authority kernel shows SWAP; extraction kernel shows DROP)",
+    "is_contested_kernel": false,
+    "composite_structure": {
+      "kernel_count": 3,
+      "kernels": [
+        {
+          "kernel_id": "soteriological_mechanism",
+          "description": "How salvation is achieved—faith alone vs faith+works vs sacramental participation",
+          "readings": [
+            "sola_fide_reading",
+            "participatory_reading",
+            "radical_immediacy_reading"
+          ],
+          "cs_pattern": "climb"
+        },
+        {
+          "kernel_id": "scriptural_authority",
+          "description": "Who legitimately interprets binding religious truth—papal magisterium vs individual conscience vs reformed ecclesiastical body",
+          "readings": [
+            "sola_scriptura_reading",
+            "magisterial_reading",
+            "radical_spirit_reading"
+          ],
+          "cs_pattern": "swap"
+        },
+        {
+          "kernel_id": "ecclesiastical_extraction",
+          "description": "Whether clerical institutions extract resources (indulgences, tithes, lands) and under what legitimacy structure",
+          "readings": [
+            "anti_extraction_reading",
+            "reformed_extraction_reading",
+            "territorial_sovereignty_reading"
+          ],
+          "cs_pattern": "drop"
+        }
+      ],
+      "independence_test_result": "The three kernels are STRUCTURALLY INDEPENDENT: different observables (salvation mechanism vs interpretive authority vs resource flows), different victim sets, different beneficiary structures. They co-occurred historically but do not share a common substrate commitment. The Reformation's overdetermination derives from temporal convergence of three distinct kernel contests.",
+      "historical_convergence_mechanism": "Printing press (technological shock reducing interpretation-monopoly enforcement costs) + fiscal crisis of Habsburg-Papal alliance + soteriological anxiety from plague/war mortality all activated simultaneously ca. 1517-1555. The composite nature explains why Reformation outcomes varied by territory—different kernels dominated in different polities."
+    },
+    "decomposition_decision": "NOT A SINGLE CONTESTED KERNEL. Decompose as three independent axes (one per kernel) rather than readings of one kernel. Each axis will be a distinct constraint story capturing one kernel's structural delta. The compositeness itself becomes an omega variable documenting why singular-kernel analysis would fail.",
+    "decomposition_rationale": "The coherence test fails: supposed readings of 'the Reformation kernel' would emit constraints with entirely different type, beneficiary, victim, and epsilon structures. Sola fide is about individual salvation access (mountain-like physical constraint on grace mechanism). Sola scriptura is about interpretive authority distribution (rope of coordination costs). Anti-clericalism is about resource extraction termination (snare dissolution). These are not different readings of one commitment—they are three commitments that Luther, Zwingli, and various princes held simultaneously for contingent historical reasons."
+  },
+  "axes": [
+    {
+      "claim_id": "soteriological_kernel_contest",
+      "human_readable": "Soteriological Mechanism Contest (Faith Alone vs Works/Sacraments)",
+      "structural_delta": "Whether salvation requires institutional mediation (sacraments, works, clerical absolution) or is accessible through faith alone, eliminating priestly gatekeeping",
+      "primary_observable": "Doctrine of justification in confessional statements; sacramental theology (number of sacraments, ex opere operato efficacy); clerical mediation requirements",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "scriptural_authority_contest"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing theological foundation; Luther's core doctrinal innovation; affects downstream authority structure"
+    },
+    {
+      "claim_id": "scriptural_authority_contest",
+      "human_readable": "Scriptural Authority Contest (Sola Scriptura vs Magisterial Tradition)",
+      "structural_delta": "Who possesses legitimate authority to interpret binding religious truth—papal magisterium, reformed ecclesiastical bodies, or individual conscience guided by scripture",
+      "primary_observable": "Institutional structures for doctrinal adjudication; censorship mechanisms; translation/vernacular Bible access; priesthood of believers implementation",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "soteriological_kernel_contest"
+      ],
+      "feeds_into": [
+        "ecclesiastical_extraction_collapse"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Central coordination problem mediating between upstream theology and downstream extraction; highest centrality score; distinct observable from soteriological mechanism"
+    },
+    {
+      "claim_id": "ecclesiastical_extraction_collapse",
+      "human_readable": "Ecclesiastical Extraction Collapse (Indulgences, Tithes, Clerical Lands)",
+      "structural_delta": "Whether Catholic institutional structures extract resources (indulgences, compulsory tithes, monastic/episcopal landholdings) and under what legitimacy",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "territorial_princes",
+      "victim": "catholic_clerical_hierarchy",
+      "downstream_of": [
+        "scriptural_authority_contest"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node; captures economic-political dimension distinct from theological axes; clear beneficiary/victim structure; territorial princes used Protestant theology to legitimate seizure of Church lands"
+    },
+    {
+      "claim_id": "printing_press_enforcement_cost",
+      "human_readable": "Printing Press as Enforcement Cost Shock",
+      "structural_delta": "Gutenberg printing technology (post-1450) reduced cost of producing and distributing heterodox texts by orders of magnitude, making papal censorship unenforceable at scale",
+      "primary_observable": "Publication rates of vernacular Bibles, theological pamphlets, and broadsheets 1517-1555; survival rates of condemned texts; geographic diffusion speed",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "scriptural_authority_contest"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technological enabler but lower structural distinctiveness than selected axes; captured indirectly via scriptural_authority_contest's coordination analysis"
+    },
+    {
+      "claim_id": "territorial_sovereignty_emergence",
+      "human_readable": "Territorial Sovereignty Emergence (Cuius Regio, Eius Religio)",
+      "structural_delta": "Peace of Augsburg (1555) principle that territorial rulers determine official religion, displacing universal papal jurisdiction with sovereignty-based religious authority",
+      "primary_observable": "Treaty provisions; princely conversion patterns; population confessional uniformity enforcement mechanisms",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "ecclesiastical_extraction_collapse"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important outcome but structurally downstream of extraction collapse; Westphalian sovereignty formation warrants separate analysis beyond Reformation proper"
+    }
+  ],
+  "generation_sequence": [
+    "soteriological_kernel_contest",
+    "scriptural_authority_contest",
+    "ecclesiastical_extraction_collapse"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "printing_press_enforcement_cost",
+      "structural_delta": "Printing technology reduced heterodoxy enforcement costs catastrophically",
+      "hypothesis": "piton",
+      "deferral_reason": "Technological enabler with lower distinctiveness than selected theological/political axes; enforcement cost shock captured via scriptural_authority_contest coordination analysis"
+    },
+    {
+      "claim_id": "territorial_sovereignty_emergence",
+      "structural_delta": "Augsburg principle (cuius regio, eius religio) displaced universal papal jurisdiction",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Structurally downstream outcome; Westphalian state formation exceeds Reformation scope; minimal graph centrality"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_composite_vs_singular",
+      "description": "The Reformation's compositeness is itself the key finding. Standard CS analysis that searches for ONE contested kernel would fail by forcing artificial unification. The three kernels (soteriological, authority, extraction) are independent—they share no common substrate commitment. Their simultaneous activation (1517-1555) was historically contingent, not structurally necessary. This explains territorial variation: Lutheran territories prioritized soteriological/authority axes; Reformed/Zwinglian territories integrated all three; Radical Reformation prioritized authority axis (Spirit over institution) while rejecting extraction entirely.",
+      "source": "§1.3-K composite structure analysis + independence testing"
+    },
+    {
+      "id": "omega_counter_reformation_asymmetry",
+      "description": "Catholic Counter-Reformation (Trent 1545-1563) responded asymmetrically to the three kernels: doubled down on soteriological orthodoxy (reaffirmed sacramental necessity), conceded partial authority decentralization (vernacular catechisms, episcopal reform), and partially addressed extraction abuses (indulgence restrictions) while retaining core resource flows. This asymmetric response pattern supports composite diagnosis—no single kernel reading would predict this divergent Counter-Reformation strategy.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)—Counter-Reformation omitted from extraction but structurally diagnostic"
+    },
+    {
+      "id": "omega_radical_reformation_fracture",
+      "description": "Anabaptist/Radical movements rejected ALL THREE kernels' institutional settlements: denied infant baptism (soteriological), rejected both papal AND magisterial Reformed authority (authority), and refused all state-church economic integration (extraction). Their persecution by both Catholic and Protestant authorities suggests they were not simply picking different readings but rejecting the kernel-revision framework itself—a meta-level dropout from the CS. This warrants separate analysis as potential system exit rather than kernel contest.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)—Radical movements victimized by ALL institutional settlements"
+    },
+    {
+      "id": "omega_english_reformation_sui_generis",
+      "description": "The English Reformation (1534 Act of Supremacy) inverted the causal chain: began with extraction axis (Henry VIII seizing monastic lands), then imposed authority shift (royal supremacy over papal), while leaving soteriological doctrine initially ambiguous (via media only settled under Elizabeth). This suggests extraction kernel can activate independently and drag the others in its wake—but English case may be outlier rather than general mechanism.",
+      "source": "Dark Matter Probe 1 (Operational Medium)—analysis assumes theological kernels primary; English case reverses priority"
+    },
+    {
+      "id": "omega_climb_drop_swap_simultaneity",
+      "description": "The input's framing ('fits climb, drop, swap, and emergence at once') is validated but reinterpreted: NOT one kernel exhibiting all four patterns simultaneously (which would be structurally incoherent), but three independent kernels each exhibiting one pattern (soteriological=climb, authority=swap, extraction=drop) plus emergent Westphalian sovereignty as fourth-order effect. The CS pattern taxonomy was designed for singular kernels; composite events require multi-kernel notation.",
+      "source": "§1.3 commitment system recognition + input's challenge premise"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The composite-kernel diagnosis is grounded in structural independence testing (different observables, beneficiaries, victims, epsilon structures). The input's NON-BREAK expectation is satisfied: defender (CS framework) absorbs the challenge by recognizing compositeness rather than forcing singular-kernel reduction. Three selected axes map to three independent kernels; omega_composite_vs_singular documents why singular-kernel analysis fails."
+  },
+  "_seed_id": "protestant_reformation_composite"
+}

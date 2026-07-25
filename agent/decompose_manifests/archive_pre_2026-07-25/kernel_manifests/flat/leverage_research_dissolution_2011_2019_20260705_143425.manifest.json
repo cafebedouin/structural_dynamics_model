@@ -1,0 +1,211 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Organizational Psychology / Group Dynamics / Epistemology of Psychological Research",
+  "family_id": "leverage_research_dissolution_2011_2019",
+  "topic_summary": "Between 2011-2019, Leverage Research—an early Effective Altruism organization founded by philosopher Geoff Anders—developed proprietary introspection tools ('Connection Theory,' charting, bodywork) to enable radical self-improvement and organizational effectiveness. The group attracted Silicon Valley funding and grew to 45 members living communally at '454' in Oakland. By 2018, researchers reported experiencing 'intention objects' or 'demons,' leading to an 'Intention War' period of acute paranoia and psychological distress. In 2019, Anders abruptly dissolved most departments. Former members later reported PTSD symptoms, cult-like dynamics, and ongoing trauma.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Geoff Anders (founder, philosopher, Connection Theory developer)",
+      "Leverage Research (nonprofit research org, 2011-2019)",
+      "454 building (communal living/working space, Lake Merritt Oakland)",
+      "Effective Altruism movement (rationalist philanthropic community)",
+      "Psychology program (introspection toolkit: charting, bodywork, parts work)",
+      "Peter Thiel, Jaan Tallinn, Luke Nosek (Silicon Valley funders)",
+      "Anna-Lisa Adelberg (energy healing teacher, Luminous Awareness Institute)",
+      "David (bodywork master, visiting lecturer)",
+      "Zoe Curzi (ex-researcher, 2021 Medium whistleblower)",
+      "Emily Dama, James Dama, Tyler Alterman, Nevin Freeman (core researchers)",
+      "Samo Burja (neoreactionary researcher, later Palladium editor)",
+      "Reserve/Palladium (post-Leverage ventures)"
+    ],
+    "key_tensions": [
+      "Rationalist epistemology vs esoteric/spiritual practice (materialist EA norms vs 'demons' language)",
+      "Organizational secrecy vs community transparency (information control vs EA open-science norms)",
+      "Therapeutic experimentation vs participant safety (no IRB, no licensed therapists, severe side effects)",
+      "Founder authority vs distributed autonomy (Geoff's 'master' status vs minimalist self-organization claims)",
+      "Internal loyalty vs external accountability (communal living/visa dependency vs ability to exit or criticize)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "communal_total_institution",
+      "human_readable": "Communal Total Institution (Blurred Boundaries Across Life Domains)",
+      "structural_delta": "Workplace, residence, therapy, romance, and spiritual practice collapsed into single social system with shared authority structure",
+      "primary_observable": "Percentage of waking hours spent with co-members; number of life domains (work/home/therapy/romance) sharing same personnel; exit costs (housing, visa, social network, income)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "organizational_leadership",
+      "victim": "members_seeking_exit_or_boundaries",
+      "downstream_of": [],
+      "feeds_into": [
+        "unregulated_psychological_experimentation",
+        "information_control_regime"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream structural condition enabling both psychological experimentation and information control; distinct from those downstream axes"
+    },
+    {
+      "claim_id": "unregulated_psychological_experimentation",
+      "human_readable": "Unregulated Psychological Experimentation (No IRB, No Licensed Practitioners)",
+      "structural_delta": "Psychological intervention research conducted on employees by untrained peers, without institutional review board oversight, informed consent protocols, or professional licensing",
+      "primary_observable": "Presence/absence of IRB approval; credentials of practitioners; documented informed consent; adverse event reporting mechanisms; participant ability to decline without professional/social penalty",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "research_leadership",
+      "victim": "research_subjects_employees",
+      "downstream_of": [
+        "communal_total_institution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (regulatory compliance vs communal structure); high epsilon; direct causal link to reported harms"
+    },
+    {
+      "claim_id": "information_control_regime",
+      "human_readable": "Information Control Regime (Secrecy as Dual-Use Protective/Coercive Mechanism)",
+      "structural_delta": "Organizational secrecy justified by 'dangerous knowledge' concern, simultaneously protecting proprietary research and preventing external accountability",
+      "primary_observable": "Information classification policies; external communication restrictions; consequences for unauthorized disclosure; accessibility of internal records to outsiders or departing members",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "leadership_controlling_narrative",
+      "victim": "members_seeking_external_validation_or_accountability",
+      "downstream_of": [
+        "communal_total_institution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Different observable than communal structure (information policy vs residential/work integration); distinct beneficiary/victim structure; documented as deliberate 2011 pivot"
+    },
+    {
+      "claim_id": "epistemic_framework_collapse",
+      "human_readable": "Epistemic Framework Collapse (Rationalist to Esoteric Transition)",
+      "structural_delta": "Group epistemology shifted from materialist rationalism to acceptance of 'demons,' 'intention objects,' and intersubjective psychic phenomena without resolving foundational ontological disagreement",
+      "primary_observable": "Language used in internal documents (2011 vs 2018); percentage of members endorsing non-materialist ontology; presence/absence of shared epistemic standards for validating claims",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "unregulated_psychological_experimentation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as downstream consequence of unregulated experimentation; lower centrality; primarily descriptive of ideological drift rather than structural constraint"
+    },
+    {
+      "claim_id": "founder_romantic_entanglement",
+      "human_readable": "Founder Romantic Entanglement (Power-Imbalanced Polyamory)",
+      "structural_delta": "Founder maintained multiple simultaneous romantic/sexual relationships with employees, including secret relationships, within power hierarchy",
+      "primary_observable": "Number of founder-employee romantic relationships; transparency of relationships to other partners; organizational consequences for non-founder polyamory vs founder polyamory",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "founder",
+      "victim": "employee_romantic_partners",
+      "downstream_of": [
+        "communal_total_institution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: while structurally enabled by communal total institution, this is instance of broader power-imbalance pattern rather than independent axis; lower centrality than selected axes"
+    },
+    {
+      "claim_id": "visa_dependency_coercion",
+      "human_readable": "Visa Dependency Coercion (Immigration Status as Exit Barrier)",
+      "structural_delta": "Foreign national employees' legal immigration status dependent on continued Leverage employment, creating exit barrier independent of psychological or social factors",
+      "primary_observable": "Percentage of employees on employer-sponsored visas; visa-holder exit rate vs citizen exit rate; organizational policies around visa support for departing members",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "foreign_national_employees",
+      "downstream_of": [
+        "communal_total_institution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: real but lower epsilon than selected axes; mentioned in source but not central to dissolution narrative; structural effect already captured by communal_total_institution exit costs"
+    }
+  ],
+  "generation_sequence": [
+    "communal_total_institution",
+    "unregulated_psychological_experimentation",
+    "information_control_regime"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "epistemic_framework_collapse",
+      "structural_delta": "Group epistemology shifted from materialist rationalism to esoteric acceptance without resolving ontological disagreement",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of unregulated experimentation rather than independent structural axis; lower centrality; ideological drift is effect not cause"
+    },
+    {
+      "claim_id": "founder_romantic_entanglement",
+      "structural_delta": "Founder maintained multiple power-imbalanced romantic relationships with employees including secret relationships",
+      "hypothesis": "snare",
+      "deferral_reason": "Instance of broader power-imbalance pattern enabled by communal total institution; lower centrality than selected structural axes; specific rather than systemic"
+    },
+    {
+      "claim_id": "visa_dependency_coercion",
+      "structural_delta": "Foreign employees' immigration status dependent on continued employment creating exit barrier",
+      "hypothesis": "piton",
+      "deferral_reason": "Real but lower epsilon; exit cost mechanism already captured by communal_total_institution; mentioned but not central to dissolution"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_psychological_ontology",
+      "description": "Are 'intention objects' / 'demons' real psychological phenomena (intersubjective trauma patterns, unattached burdens per IFS), real spiritual entities, or shared delusion? Source material shows practitioners converging on similar methods independently (Leverage + IFS 'The Others Within Us'), suggesting possible genuine phenomenon, but no controlled studies exist. Ontological status remains unresolved.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + epistemic_framework_collapse deferred axis"
+    },
+    {
+      "id": "omega_therapeutic_harm_threshold",
+      "description": "At what point does unregulated peer psychological intervention cross from 'self-improvement' to iatrogenic harm? Source documents severe adverse effects (screaming, convulsions, PTSD symptoms, 'being taken out' for days) but also reported benefits (cluster headache resolution, anxiety reduction). No professional consensus exists on acceptable risk levels for non-clinical psychological experimentation.",
+      "source": "unregulated_psychological_experimentation axis + F34 epistemic trespass concern"
+    },
+    {
+      "id": "omega_secrecy_dual_use",
+      "description": "Was 2011 information control pivot genuinely protective (preventing 'dangerous knowledge' proliferation) or primarily coercive (preventing accountability)? Both functions operated simultaneously. Counterfactual unknowable: would transparent research have been more/less harmful? Would external oversight have prevented harms or destroyed valuable research?",
+      "source": "information_control_regime axis + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_communal_necessity",
+      "description": "Is communal living/working structurally necessary for deep psychological research (as practitioners claim) or contingent choice that enabled harm? Source shows both: communal context enabled rapid iteration and peer support, but also prevented boundaries and exit. Unclear whether research goals required total institution or whether less intensive structure would suffice.",
+      "source": "communal_total_institution axis + deferred founder_romantic_entanglement"
+    },
+    {
+      "id": "omega_post_leverage_transmission",
+      "description": "Former Leverage Psychology researchers now work as independent coaches teaching similar methods (Supercycle, private coaching). Are they transmitting validated techniques or replicating harmful dynamics? No longitudinal data on client outcomes. Transmission pathway from unregulated research to commercial coaching practice creates accountability gap.",
+      "source": "Extraction summary + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_ea_structural_complicity",
+      "description": "Did broader EA movement's funding structures, status hierarchies, and 'impact maximization' framing enable Leverage's trajectory? Funders (Thiel, Tallinn, Nosek) provided resources without oversight; EA community provided recruitment pipeline and legitimacy. Unclear whether Leverage is aberration or predictable outcome of EA structural incentives.",
+      "source": "Extraction summary (EA movement context) + Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks domain expertise in clinical psychology, trauma treatment, spiritual/esoteric practice safety protocols, and cult dynamics. Source material describes severe psychological effects (PTSD, 'psychotic break' allegations, prolonged distress) requiring clinical assessment. Model cannot adjudicate whether reported phenomena (intention objects, intersubjective effects, bodywork outcomes) represent genuine psychological mechanisms, shared delusion, or measurement artifacts. Generated omega_psychological_ontology and omega_therapeutic_harm_threshold to bound uncertainty. Recommend consultation with: (1) trauma-informed clinical psychologist familiar with high-demand groups, (2) researcher in contemplative science / meditation adverse effects, (3) religious studies scholar specializing in new religious movements."
+  }
+}

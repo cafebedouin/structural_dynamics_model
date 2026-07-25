@@ -1,0 +1,254 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / Legal History / Normative Systems",
+  "family_id": "dueling_honor_settlement_decline",
+  "topic_summary": "Analysis of dueling's disappearance from Western societies (roughly 1650-1900), examining whether this represents a simple frequency decline (practice fell to fringe), a structural contraction (became cognitively unthinkable), or an overdetermined composite where multiple mechanisms operated simultaneously.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Dueling practice (ritualized lethal combat for honor satisfaction)",
+      "State monopoly on violence (emerging centralized legal systems)",
+      "Aristocratic honor culture (status-maintenance framework)",
+      "Bourgeois respectability (emerging middle-class normative system)",
+      "Legal prohibition regimes (anti-dueling statutes, prosecution)",
+      "Insurance/financial systems (economic vulnerability to death)"
+    ],
+    "key_tensions": [
+      "Private honor satisfaction vs state monopoly on violence adjudication",
+      "Aristocratic status maintenance vs bourgeois reputation mechanisms",
+      "Lethal risk acceptance vs financial/familial responsibility"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Honor as requiring visible, physical risk-taking for satisfaction after insult",
+    "authority_description": "Aristocratic peer recognition; legitimacy grounded in shared code of conduct texts and practice-lineage",
+    "drift_status": "absent",
+    "candidate_pattern": "ossified_legitimacy",
+    "is_contested_kernel": true,
+    "kernel_id": "honor_satisfaction_mechanism",
+    "readings": [
+      {
+        "reading_id": "decline_reading",
+        "commitment": "Dueling was a practice that persisted at declining frequency until fringe status",
+        "authority_grounding": "Statistical/behavioral — measured by duel counts, prosecution records, mentions",
+        "sibling_readings": [
+          "contraction_reading",
+          "composite_reading"
+        ],
+        "expected_structural_delta": "Constraint weakens but remains conceptually available; epsilon drops via enforcement and social cost"
+      },
+      {
+        "reading_id": "contraction_reading",
+        "commitment": "Dueling became cognitively unthinkable, a category-level impossibility",
+        "authority_grounding": "Structural/normative — measured by conceptual availability, not just frequency",
+        "sibling_readings": [
+          "decline_reading",
+          "composite_reading"
+        ],
+        "expected_structural_delta": "Constraint disappears structurally; not merely suppressed but evacuated from possibility space"
+      },
+      {
+        "reading_id": "composite_reading",
+        "commitment": "Multiple distinct mechanisms operated: state monopoly, bourgeois norms, insurance, category-shift",
+        "authority_grounding": "Mechanistic — each pathway documented independently",
+        "sibling_readings": [
+          "decline_reading",
+          "contraction_reading"
+        ],
+        "expected_structural_delta": "Constraint eroded via multiple independent extractive pressures plus structural recategorization"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "decline_reading",
+        "reading_b": "contraction_reading",
+        "basis": "Decline assumes the practice remained conceptually available throughout (just suppressed); contraction asserts it became structurally unthinkable. A single framework cannot hold both: either the category persisted as live option or it didn't."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "decline_reading",
+      "human_readable": "Decline Reading: Dueling as Suppressed-But-Available Practice",
+      "structural_delta": "Frequency decline via rising costs (legal, social, financial) while practice remains conceptually live",
+      "primary_observable": "Duel frequency over time; prosecution records; persistence in fringe contexts (military, frontier)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "state_legal_monopoly",
+      "victim": "aristocratic_honor_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: maps statistical suppression mechanism; cleanest empirical observables"
+    },
+    {
+      "claim_id": "contraction_reading",
+      "human_readable": "Contraction Reading: Dueling as Structurally Unthinkable",
+      "structural_delta": "Category-level evacuation from normative possibility space; not suppressed but conceptually unavailable",
+      "primary_observable": "Absence in counterfactual reasoning; cultural texts treating it as archaic/absurd rather than merely illegal",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: structural contrast to decline; mountain vs snare type difference"
+    },
+    {
+      "claim_id": "composite_reading",
+      "human_readable": "Composite Reading: Overdetermined Multi-Mechanism Collapse",
+      "structural_delta": "State monopoly + bourgeois norm displacement + insurance/financial + cognitive recategorization as simultaneous pathways",
+      "primary_observable": "Independent documentation of each mechanism's operation; non-redundant causal pathways",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "emerging_nation_state",
+      "victim": "honor_culture_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: synthesis attempting to reconcile decline + contraction via multi-pathway model"
+    },
+    {
+      "claim_id": "state_violence_monopoly",
+      "human_readable": "State Monopoly on Violence (Weberian Consolidation)",
+      "structural_delta": "Centralization of legitimate force; private violence redefined as criminal",
+      "primary_observable": "Legal codification of anti-dueling statutes; prosecution success rates; military court-martial records",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "decline_reading",
+        "composite_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: component mechanism within composite; already captured in decline_reading snare structure"
+    },
+    {
+      "claim_id": "bourgeois_norm_displacement",
+      "human_readable": "Bourgeois Respectability vs Aristocratic Honor",
+      "structural_delta": "Rising middle-class norm system privileging financial prudence and family responsibility over physical courage display",
+      "primary_observable": "Conduct manual content shifts; insurance contract clauses; bankruptcy/debt records of duelists' families",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "decline_reading",
+        "composite_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: component mechanism within composite; norm-displacement already embedded in composite_reading"
+    },
+    {
+      "claim_id": "insurance_financial_constraint",
+      "human_readable": "Insurance/Financial Vulnerability Mechanism",
+      "structural_delta": "Dueling created uninsurable death risk; voided life insurance contracts; exposed families to financial ruin",
+      "primary_observable": "Life insurance policy dueling exclusion clauses; bankruptcy filings post-duel; credit denial records",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "decline_reading",
+        "composite_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: narrow economic mechanism; lower structural distinctiveness than norm-displacement"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "decline_reading",
+      "kernel_id": "honor_satisfaction_mechanism",
+      "reading_id": "decline_reading"
+    },
+    {
+      "claim_id": "contraction_reading",
+      "kernel_id": "honor_satisfaction_mechanism",
+      "reading_id": "contraction_reading"
+    },
+    {
+      "claim_id": "composite_reading",
+      "kernel_id": "honor_satisfaction_mechanism",
+      "reading_id": "composite_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "state_violence_monopoly",
+      "structural_delta": "Centralization of legitimate force; private violence criminalized",
+      "hypothesis": "rope",
+      "deferral_reason": "Component mechanism already embedded in decline_reading and composite_reading; lower independent yield"
+    },
+    {
+      "claim_id": "bourgeois_norm_displacement",
+      "structural_delta": "Middle-class prudence norms displacing aristocratic honor culture",
+      "hypothesis": "rope",
+      "deferral_reason": "Norm-shift mechanism captured within composite_reading's multi-pathway structure"
+    },
+    {
+      "claim_id": "insurance_financial_constraint",
+      "structural_delta": "Life insurance exclusions and financial ruin risk from dueling death",
+      "hypothesis": "piton",
+      "deferral_reason": "Narrow economic pathway; lower structural centrality than norm or state mechanisms"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_test",
+      "description": "Do decline and contraction readings actually emit different constraints, or do they collapse into one constraint observed from different methodological positions? If contraction is just decline's asymptotic limit (frequency → 0), they may not be genuinely distinct readings. Composite reading's validity depends on this non-collapse holding.",
+      "source": "§1.3-K coherence test"
+    },
+    {
+      "id": "omega_mountain_validity_contraction",
+      "description": "Is contraction_reading a true Mountain (dueling became structurally impossible) or a Rope (collective norm-shift that could reverse)? Classification depends on whether cognitive unavailability is reversible or physically entrenched.",
+      "source": "F03 (Hasty Generalization) + contraction_reading classification"
+    },
+    {
+      "id": "omega_composite_overdetermination",
+      "description": "Does composite_reading document genuine causal independence of mechanisms, or are state monopoly/bourgeois norms/insurance merely correlated expressions of one underlying shift? If not independent, composite collapses to decline with multiple symptoms.",
+      "source": "§3.1 Pairwise Independence Test + composite_reading causal claims"
+    },
+    {
+      "id": "omega_fringe_persistence",
+      "description": "Dueling persisted in military contexts (officer corps) and frontiers into 20th century. Does this persistence falsify contraction_reading (proving it remained conceptually available), or does it confirm decline_reading's suppression-not-erasure model?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — fringe contexts not addressed in input"
+    },
+    {
+      "id": "omega_non_western_trajectories",
+      "description": "Analysis assumes Western European/North American trajectory. Japan (samurai culture), Latin America (machismo honor codes), Middle East (tribal honor systems) had different dueling-analogue trajectories. Are the three readings Western-specific or universal?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — Western normative framing privilege"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: contraction_reading classified as Mountain (structural impossibility) but may be Rope (reversible norm-shift). Generated omega_mountain_validity_contraction. Also flagged potential reading collapse (omega_reading_collapse_test) — decline and contraction may be same constraint at different frequencies rather than distinct structural positions."
+  },
+  "_seed_id": "dueling_decline"
+}

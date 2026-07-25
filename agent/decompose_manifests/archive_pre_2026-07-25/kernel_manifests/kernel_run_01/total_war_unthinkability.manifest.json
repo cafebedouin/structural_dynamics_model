@@ -1,0 +1,230 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Strategic Studies / Nuclear Deterrence Theory / International Relations",
+  "family_id": "great_power_war_disappearance_1945",
+  "topic_summary": "Analysis of the post-1945 disappearance of winnable great-power total war as a reachable strategic option. The nuclear revolution created a contested kernel around war winnability: deterrence theorists read nuclear weapons as making great-power war categorically unwinnable (and thus unthinkable), while countervailing strategists read the same weapons as requiring winnable-war planning (making it thinkable but constrained). The kernel contest tests whether 'winnability' underwent rhetorical contraction (became unsayable) versus operational contraction (became unreachable).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear weapons (physical constraint: MAD capability threshold ~1950s)",
+      "Bernard Brodie (deterrence theorist: 'chief purpose must be to avert war')",
+      "Harold Brown (countervailing strategy architect: PD-59, 1980)",
+      "MAD doctrine (mutual assured destruction framework)",
+      "Countervailing strategy (winnable-war planning within MAD)",
+      "Post-1945 great-power peace (70+ year absence of industrial-scale war)"
+    ],
+    "key_tensions": [
+      "Deterrence reading (war unwinnable/unthinkable) vs countervailing reading (war winnable/thinkable with constraints)",
+      "Rhetorical contraction (Pentagon stopped saying 'winnable') vs operational persistence (doctrine still plans for victory)",
+      "Nuclear taboo (normative prohibition on use) vs strategic utility (weapons as coercive tools)"
+    ],
+    "key_mechanisms": [
+      "MAD deterrence (mutual vulnerability prevents initiation)",
+      "Countervailing targeting (leadership/military targets before cities)",
+      "Democratic peace (democracies don't fight each other)",
+      "Nuclear taboo (normative constraint on first use)"
+    ],
+    "key_absences": [
+      "No analysis of non-nuclear great powers (China pre-1964, Japan post-1945) and their war calculus",
+      "Limited treatment of proxy wars as substitution mechanism (Korea, Vietnam, Afghanistan as displaced total-war impulse)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is 'great-power war winnability' as a strategic planning category. All parties argue about whether nuclear weapons made this category operationally unreachable (deterrence reading) or merely rhetorically constrained (countervailing reading). The kernel is the winnability concept itself, not the weapons.",
+    "authority_description": "Interpretive authority rests with strategic doctrine architects (civilian defense officials, military planners, academic strategists). Legitimacy derives from claimed expertise in nuclear strategy and operational feasibility assessment. No fixed text grounds authority—it is technocratic and revisable.",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "war_winnability_post_1945",
+    "readings": [
+      {
+        "reading_id": "deterrence_unthinkable",
+        "commitment": "Nuclear weapons made great-power total war categorically unwinnable; planning for victory is incoherent",
+        "authority_grounding": "Brodie school deterrence theorists; MAD doctrine architects; arms control advocates",
+        "sibling_readings": [
+          "countervailing_thinkable",
+          "rhetorical_contraction"
+        ],
+        "expected_structural_delta": "War winnability exits the reachable space entirely (operational contraction). Strategic planning shifts to war prevention. Beneficiary: civilian populations (no war). Victim: military establishments (mission incoherence)."
+      },
+      {
+        "reading_id": "countervailing_thinkable",
+        "commitment": "Nuclear weapons constrain but do not eliminate winnability; limited victory remains achievable through counterforce targeting",
+        "authority_grounding": "PD-59 architects (Harold Brown); counterforce strategists; nuclear warfighting schools",
+        "sibling_readings": [
+          "deterrence_unthinkable",
+          "rhetorical_contraction"
+        ],
+        "expected_structural_delta": "War winnability remains in reachable space but with higher costs (operational persistence under constraint). Strategic planning continues for victory scenarios. Beneficiary: military-industrial complex (mission continuity). Victim: arms control regimes (undermined by winnable-war planning)."
+      },
+      {
+        "reading_id": "rhetorical_contraction",
+        "commitment": "Winnability became unsayable (rhetorical taboo) while remaining operationally planned; the space contracted discursively but not strategically",
+        "authority_grounding": "Critical security studies scholars; discourse analysts of nuclear strategy; historians of strategic rhetoric",
+        "sibling_readings": [
+          "deterrence_unthinkable",
+          "countervailing_thinkable"
+        ],
+        "expected_structural_delta": "Winnability undergoes dual-layer contraction: public discourse treats it as unthinkable (rhetorical space contracts) while classified planning treats it as constrained-but-reachable (operational space persists). Beneficiary: strategic planners (operational flexibility without public accountability). Victim: democratic oversight (planning hidden behind taboo)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "deterrence_unthinkable",
+        "reading_b": "countervailing_thinkable",
+        "basis": "Deterrence reading holds that MAD makes victory incoherent (no framework can define 'winning' when both sides are destroyed). Countervailing reading holds that limited victory is definable (Soviet leadership decapitation = win before total destruction). No single coherent strategic framework can hold both 'victory is incoherent' and 'victory is achievable through counterforce' as simultaneously true."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "deterrence_unthinkable",
+      "human_readable": "Deterrence Reading: War Unwinnable/Unthinkable",
+      "structural_delta": "Nuclear weapons create mutual vulnerability that makes great-power war categorically unwinnable; winnability exits operational space",
+      "primary_observable": "MAD doctrine adoption rates; arms control treaty ratifications; absence of great-power war 1945-present",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents operational contraction claim"
+    },
+    {
+      "claim_id": "countervailing_thinkable",
+      "human_readable": "Countervailing Reading: War Winnable Under Constraints",
+      "structural_delta": "Nuclear weapons constrain but do not eliminate winnability; counterforce targeting enables limited victory scenarios",
+      "primary_observable": "PD-59 adoption (1980); SIOP revisions for counterforce; contemporary 'tailored deterrence' doctrines",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "military_industrial_complex",
+      "victim": "arms_control_regimes",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents operational persistence claim; tangled_rope with identifiable beneficiary"
+    },
+    {
+      "claim_id": "rhetorical_contraction",
+      "human_readable": "Rhetorical Contraction Reading: Dual-Layer Space Dynamics",
+      "structural_delta": "Winnability became rhetorically taboo (public discourse contracted) while remaining operationally planned (strategic space persisted)",
+      "primary_observable": "Pentagon rhetoric shifts (pre-1980 vs post-1980); classified vs public doctrine divergence; FOIA-revealed war plans",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "strategic_planners",
+      "victim": "democratic_oversight",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality; captures the kernel contest's core question (drop vs contraction); snare structure (taboo hides operational reality)"
+    },
+    {
+      "claim_id": "proxy_war_substitution",
+      "human_readable": "Proxy War as Substitution Mechanism",
+      "structural_delta": "Great-power total war impulse displaced into proxy conflicts (Korea, Vietnam, Afghanistan) rather than eliminated",
+      "primary_observable": "Frequency/intensity of proxy wars 1945-present; superpower involvement in regional conflicts",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "deterrence_unthinkable"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: substitution mechanism rather than reading of winnability kernel; lower centrality than selected readings"
+    },
+    {
+      "claim_id": "democratic_peace_overdetermination",
+      "human_readable": "Democratic Peace as Overdetermining Factor",
+      "structural_delta": "Democratization (not nuclear weapons) explains great-power peace; winnability question is moot because democracies don't fight each other",
+      "primary_observable": "Democratic dyad war rates; correlation between democratization waves and peace periods",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: alternative explanation rather than reading of nuclear winnability kernel; zero centrality in kernel contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "deterrence_unthinkable",
+      "kernel_id": "war_winnability_post_1945",
+      "reading_id": "deterrence_unthinkable"
+    },
+    {
+      "claim_id": "countervailing_thinkable",
+      "kernel_id": "war_winnability_post_1945",
+      "reading_id": "countervailing_thinkable"
+    },
+    {
+      "claim_id": "rhetorical_contraction",
+      "kernel_id": "war_winnability_post_1945",
+      "reading_id": "rhetorical_contraction"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "proxy_war_substitution",
+      "structural_delta": "Great-power war impulse displaced into proxy conflicts rather than eliminated",
+      "hypothesis": "rope",
+      "deferral_reason": "Substitution mechanism rather than reading of winnability kernel; addresses war displacement not winnability contraction"
+    },
+    {
+      "claim_id": "democratic_peace_overdetermination",
+      "structural_delta": "Democratization explains peace; nuclear winnability question is moot",
+      "hypothesis": "rope",
+      "deferral_reason": "Alternative causal explanation rather than reading of nuclear winnability kernel; zero centrality in kernel contest structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_non_nuclear_great_powers",
+      "description": "How did non-nuclear great powers (China pre-1964, Japan post-1945) calculate war winnability? If they still saw conventional war as winnable, the contraction may be weapon-specific rather than categorical.",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_m_set_representation",
+      "description": "Can the M-set framework represent rhetorical_contraction's dual-layer dynamics (public space contracts, operational space persists)? If M-set has site-expansion but no contraction cell, it may collapse the distinction between 'became unsayable' and 'became unreachable'.",
+      "source": "User's kernel contest framing + rhetorical_contraction reading"
+    },
+    {
+      "id": "omega_cyber_circumvention",
+      "description": "Do emerging domains (cyber, hypersonics, AI-enabled targeting) re-open winnability by circumventing MAD? If so, the contraction may be temporary (1945-2020s) rather than permanent.",
+      "source": "Research context: 'Emerging domains threaten to circumvent MAD'"
+    },
+    {
+      "id": "omega_taboo_vs_constraint",
+      "description": "Is the nuclear taboo a normative constraint (mountain) or a strategic choice (rope)? If taboo weakens (e.g., tactical nukes in Ukraine scenario), does winnability re-enter public discourse or remain operationally constrained?",
+      "source": "Tension between rhetorical taboo and operational planning"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings decompose the kernel contest cleanly: deterrence_unthinkable (operational contraction), countervailing_thinkable (operational persistence), rhetorical_contraction (dual-layer dynamics). Axiom contradiction declared between deterrence and countervailing readings (victory incoherence vs victory achievability). Deferred axes address alternative explanations (democratic peace) and substitution mechanisms (proxy wars) rather than readings of the winnability kernel itself."
+  },
+  "_seed_id": "total_war_unthinkability"
+}

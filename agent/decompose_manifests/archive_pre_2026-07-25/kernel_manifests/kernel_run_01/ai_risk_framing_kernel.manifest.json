@@ -1,0 +1,263 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "AI Governance / Technology Ethics / Risk Assessment",
+  "family_id": "ai_risk_existential_vs_nearterm_2026",
+  "topic_summary": "Analysis of the structural divide between existential AI risk (catastrophic/extinction scenarios from advanced AI) and near-term AI harms (present discrimination, misinformation, labor displacement). Research reveals an 83.1% in-group collaboration rate, separate institutional homes, and contested resource allocation, but recent generative AI advances are forcing epistemological convergence.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Machine Intelligence Research Institute (MIRI) - foundational existential risk research org, founded by Eliezer Yudkowsky",
+      "Open Philanthropy - largest funder in existential risk space, backed by Dustin Moskovitz/Cari Tuna",
+      "Future of Life Institute - existential risk advocacy organization",
+      "AI Ethics community - distributed network focused on present harms, bias audits, sociotechnical analysis",
+      "Effective Altruism movement - philanthropic framework prioritizing tractable high-impact causes including AI x-risk",
+      "Workday AI discrimination plaintiffs (Mobley case) - concrete near-term harm victims",
+      "Elon Musk, Stephen Hawking, Nick Bostrom - public existential risk advocates",
+      "Federal funding agencies - limited appetite for alignment research",
+      "ML researcher community - median 5% p(extinction from AGI), higher concern for immediate harms",
+      "Conference/publication networks - separate institutional homes (83.1% homophily)",
+      "Cross-field brokers - 5% of papers account for 85% of bridging links",
+      "Generative AI systems - forcing epistemological convergence"
+    ],
+    "key_tensions": [
+      "Existential risk framing vs near-term harms framing (control problem vs justice problem)",
+      "Resource allocation: speculative catastrophic risks vs demonstrated present harms",
+      "Institutional separation: 83.1% in-group collaboration, fragile brokerage",
+      "Methodological divide: adversarial red-teaming vs sociotechnical audits"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "AI alignment as the shared commitment that AI systems must be made safe/beneficial, with contested interpretation of what 'safe' means and for whom",
+    "authority_description": "Epistemic authority grounded in disciplinary methodology (computer science/philosophy for x-risk, STS/critical theory for ethics) and funding gatekeepers (EA donors vs federal agencies)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence",
+    "is_contested_kernel": true,
+    "kernel_id": "ai_alignment_priority",
+    "readings": [
+      {
+        "reading_id": "existential_risk_reading",
+        "commitment": "Alignment means preventing catastrophic loss of control over advanced AI systems; priority is existential safety",
+        "authority_grounding": "Computer science/decision theory; EA philanthropic funding; median ML researcher p(extinction)=5%",
+        "sibling_readings": [
+          "nearterm_harms_reading",
+          "integrated_reading"
+        ],
+        "expected_structural_delta": "High ε on speculative future capabilities; victim set is 'all of humanity' (undifferentiated); beneficiary is long-term future; adversarial red-teaming methodology; resource flow to capability-focused research"
+      },
+      {
+        "reading_id": "nearterm_harms_reading",
+        "commitment": "Alignment means preventing present discriminatory/extractive harms from deployed AI; priority is justice for marginalized populations",
+        "authority_grounding": "STS/critical theory; demonstrated harms (Mobley case, bias audits); researcher concern distribution (malicious use 11%, jobs 7% >> x-risk)",
+        "sibling_readings": [
+          "existential_risk_reading",
+          "integrated_reading"
+        ],
+        "expected_structural_delta": "High ε on deployed system audits; victim set is specific marginalized groups (age, race, disability); beneficiary is present vulnerable populations; sociotechnical audit methodology; resource flow to bias mitigation"
+      },
+      {
+        "reading_id": "integrated_reading",
+        "commitment": "Alignment requires addressing both catastrophic and present harms as complementary rather than competing priorities",
+        "authority_grounding": "Recent generative AI scholarship forcing epistemological convergence; recognition of false dichotomy",
+        "sibling_readings": [
+          "existential_risk_reading",
+          "nearterm_harms_reading"
+        ],
+        "expected_structural_delta": "Moderate ε on both capability risks and deployment harms; victim set spans present marginalized groups AND future populations; dual methodology (red-teaming + audits); resource allocation balances both"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "existential_risk_reading",
+        "reading_b": "nearterm_harms_reading",
+        "basis": "Existential reading's axiom that undifferentiated future humanity is the primary victim set is incompatible with nearterm reading's axiom that present marginalized populations bear differentiated harms requiring prioritized redress. No single framework can simultaneously hold 'all future people equally' and 'present victims disproportionately' as the primary moral patient."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "existential_risk_reading",
+      "human_readable": "Existential Risk Reading (Catastrophic Control Loss Priority)",
+      "structural_delta": "Alignment interpreted as preventing loss of control over advanced AI leading to human extinction or permanent disempowerment",
+      "primary_observable": "Resource allocation to capability research, adversarial red-teaming frequency, p(extinction) estimates in ML researcher surveys",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "longtermist_philanthropists",
+      "victim": "present_marginalized_populations",
+      "downstream_of": [
+        "institutional_separation_mountain"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading with distinct victim set (undifferentiated future humanity) and high ε; downstream synthesis of institutional structure"
+    },
+    {
+      "claim_id": "nearterm_harms_reading",
+      "human_readable": "Near-Term Harms Reading (Present Justice Priority)",
+      "structural_delta": "Alignment interpreted as preventing discriminatory/extractive harms from deployed AI systems affecting specific marginalized groups",
+      "primary_observable": "Bias audit frequency, discrimination lawsuit outcomes (Mobley), researcher concern distribution (malicious use/jobs/misinformation)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "sts_critical_theory_community",
+      "victim": "future_populations",
+      "downstream_of": [
+        "institutional_separation_mountain"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Core reading with distinct victim set (present marginalized groups) and high ε; structural mirror of existential reading"
+    },
+    {
+      "claim_id": "institutional_separation_mountain",
+      "human_readable": "Institutional Separation (Network Homophily Structure)",
+      "structural_delta": "83.1% in-group collaboration rate, separate conferences/funding/departments, fragile brokerage (5% of papers = 85% of bridges)",
+      "primary_observable": "Citation network homophily metrics, cross-field collaboration rates, broker node removal impact on segregation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "existential_risk_reading",
+        "nearterm_harms_reading"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing structural base for both readings; highest centrality; different observable than readings"
+    },
+    {
+      "claim_id": "integrated_reading",
+      "human_readable": "Integrated Reading (Complementary Priorities)",
+      "structural_delta": "Recognition that generative AI advances require addressing both catastrophic and present harms as non-competing priorities",
+      "primary_observable": "Frequency of dual-methodology papers, convergence scholarship citations, funding proposals addressing both",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "existential_risk_reading",
+        "nearterm_harms_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold hypothesis with moderate ε; emergent rather than structurally established; omega material on convergence trajectory"
+    },
+    {
+      "claim_id": "ea_funding_concentration",
+      "human_readable": "Effective Altruism Funding Concentration",
+      "structural_delta": "Tens of billions in EA-aligned grants prioritizing tractable high-impact causes including AI x-risk; federal agencies have limited appetite",
+      "primary_observable": "Open Philanthropy grant totals, EA-affiliated funding as % of total AI safety funding, federal vs private funding ratio",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "existential_risk_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: rope mechanism feeding existential reading but lower structural distinctiveness than institutional_separation_mountain"
+    },
+    {
+      "claim_id": "distraction_hypothesis",
+      "human_readable": "Distraction Hypothesis (Resource Diversion Claim)",
+      "structural_delta": "Claim that existential risk focus diverts finite resources (talent/funding/attention) from immediate realized harms",
+      "primary_observable": "Resource allocation shifts over time, talent flow between communities, attention metrics in policy discourse",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "nearterm_harms_advocates",
+      "downstream_of": [
+        "existential_risk_reading",
+        "nearterm_harms_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: snare downstream of both readings but empirical evidence shows existential narratives increase concern for both risk types without zero-sum trade-off"
+    }
+  ],
+  "generation_sequence": [
+    "institutional_separation_mountain",
+    {
+      "claim_id": "existential_risk_reading",
+      "kernel_id": "ai_alignment_priority",
+      "reading_id": "existential_risk_reading"
+    },
+    {
+      "claim_id": "nearterm_harms_reading",
+      "kernel_id": "ai_alignment_priority",
+      "reading_id": "nearterm_harms_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "integrated_reading",
+      "structural_delta": "Generative AI forcing epistemological convergence toward complementary priorities",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Emergent scaffold with moderate ε; not yet structurally established; omega material on convergence trajectory"
+    },
+    {
+      "claim_id": "ea_funding_concentration",
+      "structural_delta": "EA-aligned grants dominate AI safety funding; federal agencies limited appetite",
+      "hypothesis": "rope",
+      "deferral_reason": "Rope mechanism feeding existential reading but lower structural distinctiveness than institutional_separation_mountain"
+    },
+    {
+      "claim_id": "distraction_hypothesis",
+      "structural_delta": "Existential focus allegedly diverts resources from immediate harms",
+      "hypothesis": "snare",
+      "deferral_reason": "Empirical evidence contradicts zero-sum framing; existential narratives increase concern for both risk types"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_convergence_trajectory",
+      "description": "Is the integrated_reading a genuine convergence or a rhetorical compromise that preserves institutional separation? Generative AI may force structural integration or merely surface-level acknowledgment.",
+      "source": "Deferred axis integrated_reading + research noting 'forcing epistemological convergence'"
+    },
+    {
+      "id": "omega_broker_fragility",
+      "description": "5% of papers account for 85% of bridging links. If key brokers exit (career change, funding loss), does segregation sharply increase? Mountain of network structure may be Piton of individual actors.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + institutional_separation_mountain observable"
+    },
+    {
+      "id": "omega_victim_set_incommensurability",
+      "description": "Can a single normative framework hold both 'undifferentiated future humanity' and 'present marginalized groups' as co-primary moral patients, or does prioritizing one necessarily deprioritize the other? Axiom contradiction may be deeper than resource allocation.",
+      "source": "Axiom contradiction between existential_risk_reading and nearterm_harms_reading"
+    },
+    {
+      "id": "omega_distraction_empirics",
+      "description": "Research shows existential narratives increase concern for both risk types without zero-sum trade-off, contradicting distraction hypothesis. Is this a measurement artifact (survey vs actual resource allocation) or genuine complementarity?",
+      "source": "Deferred axis distraction_hypothesis + research finding 'existential risk narratives increase concerns for catastrophic risks without diminishing worries for immediate harms'"
+    },
+    {
+      "id": "omega_federal_funding_absence",
+      "description": "Why do federal agencies have 'limited appetite' for alignment research? Is this a Rope (bureaucratic coordination failure) or Snare (deliberate deprioritization to favor industry self-regulation)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + ea_funding_concentration axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan applied (network science, STS, moral philosophy, institutional economics). Dark matter probes surfaced broker fragility and federal funding absence. Kernel decomposition coherent: two readings with genuinely incompatible victim-set axioms, not merely different policy preferences."
+  },
+  "_seed_id": "ai_risk_framing_kernel"
+}

@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Federalism / Commerce Regulation",
+  "family_id": "commerce_clause_scope_2026",
+  "topic_summary": "Analysis of the contested scope of the U.S. Constitution's Commerce Clause (Article I, Section 8, Clause 3), examining how different interpretive commitments generate structurally distinct federal-state power allocations. The kernel is the constitutional text granting Congress power to 'regulate Commerce...among the several States.' Competing readings produce different constraint architectures for regulatory authority, beneficiary structures, and externality management.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Commerce Clause (Article I, Section 8, Clause 3 of U.S. Constitution)",
+      "Federal Government (regulatory authority claimant)",
+      "State Governments (concurrent/reserved power claimants)",
+      "Supreme Court (interpretive authority adjudicator)",
+      "Interstate commerce actors (businesses, individuals crossing state lines)",
+      "Intrastate actors (local economic activity participants)"
+    ],
+    "key_tensions": [
+      "Federal uniformity vs state autonomy (centralized regulation vs localized variation)",
+      "Textual originalism vs living constitutionalism (fixed 1787 meaning vs evolving interpretation)"
+    ],
+    "key_mechanisms": [
+      "Dormant Commerce Clause doctrine (limits state interference with interstate commerce even absent federal action)",
+      "Substantial effects test (post-Wickard framework extending federal reach to intrastate activity affecting interstate commerce)",
+      "Enumerated powers limitation (federalism constraint treating federal power as bounded by constitutional text)"
+    ],
+    "key_absences": [
+      "Treaty clause interaction (how Commerce Clause readings affect international trade agreement authority)",
+      "Reconstruction Amendment interplay (whether 14th Amendment citizenship rights alter Commerce Clause constraint structure)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article I, Section 8, Clause 3 text stabilizing federal commerce power scope",
+    "authority_description": "Supreme Court interpretive supremacy grounded in Marbury judicial review doctrine and constitutional finality",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_scripture",
+    "is_contested_kernel": true,
+    "kernel_id": "commerce_clause_text",
+    "readings": [
+      {
+        "reading_id": "expansive_federal_reading",
+        "commitment": "Interstate commerce encompasses all economic activity with substantial aggregate effects on national markets",
+        "authority_grounding": "New Deal Court precedent (Wickard v. Filburn substantial effects doctrine); living constitutionalism",
+        "sibling_readings": [
+          "originalist_narrow_reading",
+          "substantial_effects_limited_reading"
+        ],
+        "expected_structural_delta": "Federal government enters as primary regulatory authority over vast economic domain; state power subordinated; beneficiaries are national policy coherence advocates and federal administrative state; victims are state autonomy and local variation"
+      },
+      {
+        "reading_id": "originalist_narrow_reading",
+        "commitment": "Interstate commerce limited to trade crossing state borders and instrumentalities of interstate movement",
+        "authority_grounding": "Textualist originalism; pre-1937 Court doctrine (E.C. Knight, Hammer v. Dagenhart); Founding-era dictionaries",
+        "sibling_readings": [
+          "expansive_federal_reading",
+          "substantial_effects_limited_reading"
+        ],
+        "expected_structural_delta": "Federal authority confined to border-crossing transactions; states retain police power over intrastate activity; beneficiaries are state governments and anti-federal-consolidation advocates; victims are uniform national standards and externality management"
+      },
+      {
+        "reading_id": "substantial_effects_limited_reading",
+        "commitment": "Federal power extends to intrastate activity with substantial effects on interstate commerce but requires jurisdictional nexus and non-pretextual economic regulation",
+        "authority_grounding": "Post-Lopez limiting principles (Morrison, NFIB); textualist pragmatism requiring activity/economic nature tests",
+        "sibling_readings": [
+          "expansive_federal_reading",
+          "originalist_narrow_reading"
+        ],
+        "expected_structural_delta": "Federal authority over genuinely economic intrastate activity affecting commerce but not police power regulation disguised as commerce regulation; hybrid beneficiary structure privileging economic vs non-economic distinction; category boundary policing as constraint mechanism"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "expansive_federal_reading",
+        "reading_b": "originalist_narrow_reading",
+        "basis": "Expansive reading's axiom (constitutional meaning evolves with economic integration) directly contradicts originalist reading's axiom (constitutional meaning fixed at ratification). No single interpretive framework can hold both as simultaneously true."
+      },
+      {
+        "reading_a": "substantial_effects_limited_reading",
+        "reading_b": "originalist_narrow_reading",
+        "basis": "Substantial effects reading's axiom (aggregation of intrastate activity creates interstate commerce) contradicts originalist reading's axiom (intrastate activity categorically outside commerce power regardless of aggregate effects). The former accepts economic realism; the latter rejects it as interpretive method."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "expansive_federal_reading",
+      "human_readable": "Expansive Federal Reading (Substantial Effects Doctrine)",
+      "structural_delta": "Federal regulatory authority extends to all economic activity with aggregate effects on interstate commerce",
+      "primary_observable": "Scope of federal statutes upheld under Commerce Clause; breadth of administrative agency jurisdiction",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "federal_administrative_state",
+      "victim": "state_regulatory_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant post-New Deal reading producing maximum federal constraint scope; beneficiary structure clear"
+    },
+    {
+      "claim_id": "originalist_narrow_reading",
+      "human_readable": "Originalist Narrow Reading (Border-Crossing Limitation)",
+      "structural_delta": "Federal authority confined to transactions literally crossing state lines",
+      "primary_observable": "Frequency of Commerce Clause invalidations; state law preemption rate",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_governments",
+      "victim": "uniform_national_regulation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposite constraint architecture from expansive reading; different beneficiary-victim pair"
+    },
+    {
+      "claim_id": "substantial_effects_limited_reading",
+      "human_readable": "Substantial Effects with Limiting Principles (Lopez/Morrison Framework)",
+      "structural_delta": "Federal power over intrastate economic activity but not general police power",
+      "primary_observable": "Economic vs non-economic activity distinction enforcement; jurisdictional element requirements",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "category_boundary_enforcers",
+      "victim": "regulatory_certainty",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Intermediate reading attempting to reconcile expansive and narrow; produces distinct constraint structure through boundary policing"
+    },
+    {
+      "claim_id": "dormant_commerce_clause",
+      "human_readable": "Dormant Commerce Clause (Negative Implication Doctrine)",
+      "structural_delta": "State laws impermissible if they discriminate against or unduly burden interstate commerce absent federal legislation",
+      "primary_observable": "State law invalidation rate on dormant Commerce Clause grounds; Pike balancing test application frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: orthogonal doctrine constraining state power regardless of which reading prevails; coordination mechanism rather than reading-dependent"
+    },
+    {
+      "claim_id": "reconstruction_amendment_override",
+      "human_readable": "Section 5 Enforcement Power (14th Amendment Alternative Basis)",
+      "structural_delta": "Congress may regulate state action under 14th Amendment Section 5 independent of Commerce Clause scope",
+      "primary_observable": "Frequency of legislation justified under Section 5 rather than Commerce Clause after Lopez",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: alternative constitutional pathway reducing Commerce Clause constraint salience; speculative scaffold for post-Lopez federal power"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "expansive_federal_reading",
+      "kernel_id": "commerce_clause_text",
+      "reading_id": "expansive_federal_reading"
+    },
+    {
+      "claim_id": "originalist_narrow_reading",
+      "kernel_id": "commerce_clause_text",
+      "reading_id": "originalist_narrow_reading"
+    },
+    {
+      "claim_id": "substantial_effects_limited_reading",
+      "kernel_id": "commerce_clause_text",
+      "reading_id": "substantial_effects_limited_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "dormant_commerce_clause",
+      "structural_delta": "Negative implication limiting state power regardless of federal action",
+      "hypothesis": "rope",
+      "deferral_reason": "Orthogonal coordination mechanism operating across all three readings; not reading-dependent"
+    },
+    {
+      "claim_id": "reconstruction_amendment_override",
+      "structural_delta": "Section 5 enforcement power as alternative federal authority basis",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Speculative workaround reducing Commerce Clause salience; zero centrality to kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_treaty_clause_interaction",
+      "description": "Does Commerce Clause scope constraint apply to treaty implementation? Missouri v. Holland suggests treaties override federalism limits, potentially rendering Commerce Clause scope contest irrelevant for international trade agreements.",
+      "source": "Absence Inventory (Dark Matter Probe 2)"
+    },
+    {
+      "id": "omega_chevron_deference_collapse",
+      "description": "If Chevron deference doctrine collapses, does judicial review intensity change Commerce Clause constraint extractiveness? Aggressive statutory interpretation review may compress difference between expansive and limited readings.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - administrative state as beneficiary vulnerable to interpretive regime change"
+    },
+    {
+      "id": "omega_nfib_severability_doctrine",
+      "description": "NFIB v. Sebelius severability holding (individual mandate struck but ACA upheld) suggests Roberts Court willing to cabin federal power without invalidating entire statutes. Does this reduce extractiveness of all three readings by increasing surgical invalidation frequency?",
+      "source": "Preliminary classification instability - substantial_effects_limited_reading may be unstable under evolving severability doctrine"
+    },
+    {
+      "id": "omega_structural_constitution",
+      "description": "Does the kernel contest collapse if structural constitutional interpretation (Balkin, Amar) treats federalism as outcome-invariant coordination rather than fixed power allocation? All three readings may be Mountains of political economy rather than Tangled Ropes of beneficiary extraction.",
+      "source": "F03 (Hasty Generalization) - tangled_rope classification assumes beneficiary-victim structure; structural reading would reclassify"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: All three readings classified as tangled_rope with beneficiary-victim pairs, but structural constitutional theory (Balkin federalism-as-coordination) may reclassify all as Mountain constraints reflecting political economy realities rather than extraction mechanisms. Generated omega_structural_constitution to bound this uncertainty. Tangled_rope classification rests on assumption that interpretive choice benefits specific institutional actors rather than instantiating different coordination equilibria."
+  },
+  "_seed_id": "us_commerce_clause"
+}

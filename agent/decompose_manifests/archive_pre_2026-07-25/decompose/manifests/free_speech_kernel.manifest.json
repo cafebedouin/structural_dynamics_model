@@ -1,0 +1,207 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Communication Ethics",
+  "family_id": "free_speech_harm_boundary_2026",
+  "topic_summary": "Analysis of contested interpretations of free speech protection, examining whether the speech kernel is read as near-absolute (protection overrides most harm claims) or harm-limited (certain demonstrated harms override protection). The disagreement locates at the boundary condition: where does harm sufficiently override speech protection to justify state restriction?",
+  "extraction_summary": {
+    "entity_count": 4,
+    "claim_count": 3,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "State (authority claiming legitimacy to restrict speech based on kernel interpretation)",
+      "Speaker (entity seeking protection under speech kernel)",
+      "Victim/Target (entity claiming harm sufficient to override protection)",
+      "Judiciary (interpretive authority adjudicating kernel boundaries)"
+    ],
+    "key_tensions": [
+      "Speaker autonomy vs victim protection (where does the protected/unprotected boundary fall)"
+    ],
+    "key_mechanisms": [
+      "Harm threshold adjudication (judicial process determining when harm claim overrides speech protection)",
+      "Category-based exclusion (certain speech types ruled categorically unprotected vs harm-balancing per instance)"
+    ],
+    "key_absences": [
+      "Power asymmetry consideration (whether speaker/victim power differential affects harm threshold)",
+      "Empirical harm measurement (what constitutes sufficient demonstration of harm for override)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "absolutist_reading",
+      "human_readable": "Absolutist Reading (Protection Overrides Nearly All Harm Claims)",
+      "structural_delta": "Speech protection operates categorically; harm claims rarely meet override threshold except narrow categories (incitement, true threats, defamation)",
+      "primary_observable": "Scope of unprotected categories; judicial deference to speaker vs victim harm claims",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "powerful_speakers",
+      "victim": "marginalized_targets",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates narrow victim set (only recognized harm categories)"
+    },
+    {
+      "claim_id": "harm_balancing_reading",
+      "human_readable": "Harm-Balancing Reading (Protection Yields to Demonstrated Harm)",
+      "structural_delta": "Speech protection operates presumptively but yields when harm to victim is demonstrated; broader unprotected categories including hate speech, harassment",
+      "primary_observable": "Breadth of recognized harm categories; presence of hate speech laws; harassment doctrine scope",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "vulnerable_populations",
+      "victim": "speakers_claiming_viewpoint_discrimination",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates expanded victim set (targets of harmful speech)"
+    },
+    {
+      "claim_id": "dignity_reading",
+      "human_readable": "Dignity Reading (Protection Subordinate to Human Dignity)",
+      "structural_delta": "Speech protection operates only within bounds of human dignity; speech denying personhood categorically unprotected",
+      "primary_observable": "Constitutional dignity clauses; hate speech prosecution rates; Holocaust denial laws",
+      "epsilon_bin": "v_high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "historical_victim_groups",
+      "victim": "speakers_of_identity_based_harm",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; instantiates dignity-based override (German/Canadian model)"
+    },
+    {
+      "claim_id": "marketplace_reading",
+      "human_readable": "Marketplace Reading (Truth Emerges from Unrestricted Exchange)",
+      "structural_delta": "Speech protection grounded in epistemic claim that truth emerges from competition; restriction impedes discovery",
+      "primary_observable": "Judicial reliance on marketplace metaphor; rejection of content-based restriction",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "absolutist_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: justificatory framework for absolutist reading rather than distinct constraint"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "absolutist_reading",
+      "kernel_id": "speech_harm_boundary",
+      "reading_id": "absolutist_reading"
+    },
+    {
+      "claim_id": "harm_balancing_reading",
+      "kernel_id": "speech_harm_boundary",
+      "reading_id": "harm_balancing_reading"
+    },
+    {
+      "claim_id": "dignity_reading",
+      "kernel_id": "speech_harm_boundary",
+      "reading_id": "dignity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "marketplace_reading",
+      "structural_delta": "Truth emerges from unrestricted competition of ideas",
+      "hypothesis": "rope",
+      "deferral_reason": "Justificatory framework for absolutist reading; does not emit distinct constraint boundary"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_power_asymmetry",
+      "description": "Does speaker/victim power differential affect harm threshold? Absolutist reading treats power-neutral; harm-balancing may weight by vulnerability; dignity reading may incorporate historical oppression. Structural delta unclear without empirical weighting.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_harm_measurement",
+      "description": "What constitutes sufficient demonstration of harm for override? Psychological harm vs material harm vs dignitary harm have different evidentiary standards. Readings diverge on which harms count but do not specify measurement protocols.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_institutional_drift",
+      "description": "Are these readings stable or drifting? U.S. absolutist reading shows drift toward harassment/hostile environment exceptions. European dignity reading shows drift in online speech enforcement. Constraint boundaries may be moving.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_kernel_stability",
+      "description": "Is the speech kernel itself stable or contested? Social media era introduces scale/algorithmic amplification that may destabilize all three readings by changing what 'speech' means structurally.",
+      "source": "F03 (Hasty Generalization concern about reading persistence)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: readings classified as stable constraint structures but social media/algorithmic amplification may be destabilizing the kernel itself. Generated omega_kernel_stability to bound this uncertainty. All three readings assume traditional speaker/audience model; platform-mediated speech may require different constraint ontology."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Constitutional/philosophical commitment to speech protection, stabilized in First Amendment tradition (U.S.) or international human rights instruments (ICCPR Article 19, ECHR Article 10)",
+    "authority_description": "Judiciary interprets kernel via constitutional adjudication; legitimacy grounded in fidelity to founding text and precedent",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_legitimacy_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "speech_harm_boundary",
+    "readings": [
+      {
+        "reading_id": "absolutist_reading",
+        "commitment": "Speech protection operates near-absolutely; harm override threshold extremely high",
+        "authority_grounding": "Textualist / originalist interpretation of 'no law abridging'; marketplace-of-ideas epistemology",
+        "sibling_readings": [
+          "harm_balancing_reading",
+          "dignity_reading"
+        ],
+        "expected_structural_delta": "Narrow unprotected category set (incitement, true threats, defamation, obscenity); high ε for speaker autonomy; targets bear harm costs"
+      },
+      {
+        "reading_id": "harm_balancing_reading",
+        "commitment": "Speech protection presumptive but yields to demonstrated harm; proportionality balancing",
+        "authority_grounding": "Living constitutionalism / proportionality doctrine; harm-prevention legitimacy",
+        "sibling_readings": [
+          "absolutist_reading",
+          "dignity_reading"
+        ],
+        "expected_structural_delta": "Broader unprotected categories (hate speech, group libel, harassment); moderate ε; speakers bear restriction costs when harm demonstrated"
+      },
+      {
+        "reading_id": "dignity_reading",
+        "commitment": "Speech protection subordinate to human dignity; personhood-denying speech categorically unprotected",
+        "authority_grounding": "Post-WWII constitutionalism / dignity as constitutional floor; historical atrocity prevention",
+        "sibling_readings": [
+          "absolutist_reading",
+          "harm_balancing_reading"
+        ],
+        "expected_structural_delta": "Categorical exclusions for dignity-violating speech (Holocaust denial, hate speech, group defamation); very high ε for victim protection; speakers of identity-harm bear heavy restriction"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "absolutist_reading",
+        "reading_b": "dignity_reading",
+        "basis": "Absolutist reading holds that speech protection is a constitutional floor beneath which the state cannot regulate absent narrow exceptions; dignity reading holds that human dignity is the constitutional floor beneath which speech protection cannot extend. No single framework can simultaneously hold both as foundational axioms — one must be subordinated to the other."
+      },
+      {
+        "reading_a": "harm_balancing_reading",
+        "reading_b": "absolutist_reading",
+        "basis": "Harm-balancing reading treats demonstrated harm as sufficient condition for override; absolutist reading treats harm as necessary but insufficient (override requires harm PLUS categorical exception). These are incompatible harm-threshold axioms — one framework cannot hold both threshold standards simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "free_speech_kernel"
+}

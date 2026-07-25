@@ -1,0 +1,214 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Colonial History / Sovereignty Theory",
+  "family_id": "tordesillas_treaty_1494",
+  "topic_summary": "Analysis of the Treaty of Tordesillas (1494), examining papal authority as the legitimating basis for Iberian division of the New World. The treaty established a demarcation line ~370 leagues west of Cape Verde, with Spain claiming exclusive rights west and Portugal claiming rights east, both grounding territorial sovereignty in papal grant rather than indigenous sovereignty or prior occupation.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Pope Alexander VI (Borgia pope; issued Inter caetera bulls 1493)",
+      "Spanish Crown (Castile and Aragon; beneficiary west of line)",
+      "Portuguese Crown (beneficiary east of line; prior Treaty of Alcáçovas 1479)",
+      "Indigenous populations (non-Christian peoples subject to conquest)",
+      "Rival European powers (France, England, Netherlands; excluded from papal grant)",
+      "Papal See (Rome; claimed universal temporal authority over non-Christian lands)"
+    ],
+    "key_tensions": [
+      "Papal authority vs secular sovereignty (Rome's claim to grant territorial rights vs emerging state sovereignty)",
+      "Prior discovery vs papal grant (Portuguese exploration-based claims vs papal bulls)",
+      "Christian vs non-Christian land rights (papal doctrine vs indigenous territorial sovereignty)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "papal_temporal_authority_mountain",
+      "human_readable": "Papal Temporal Authority (Universal Jurisdiction Claim)",
+      "structural_delta": "Papal claim to universal temporal authority over non-Christian territories as theological-legal doctrine",
+      "primary_observable": "Frequency and geographic scope of papal territorial grants 1400-1600; acceptance/rejection rate by European powers",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "spanish_conquest_legitimation",
+        "portuguese_exploration_legitimation"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing theological-legal substrate for both readings; structural prerequisite for treaty validity"
+    },
+    {
+      "claim_id": "spanish_conquest_legitimation",
+      "human_readable": "Spanish Reading: Papal Grant as Conquest License",
+      "structural_delta": "Papal bull interpreted as license for territorial conquest and indigenous subjugation west of demarcation line",
+      "primary_observable": "Requerimiento deployment frequency; encomienda grant patterns; Spanish legal codes referencing papal authority",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "spanish_colonial_administration",
+      "victim": "indigenous_populations_west",
+      "downstream_of": [
+        "papal_temporal_authority_mountain"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Reading A of kernel; high epsilon snare with distinct victim set (indigenous populations west of line)"
+    },
+    {
+      "claim_id": "portuguese_exploration_legitimation",
+      "human_readable": "Portuguese Reading: Prior Discovery Ratified by Papal Confirmation",
+      "structural_delta": "Papal treaty interpreted as confirmation of prior exploration rights and exclusion of rival European powers east of line",
+      "primary_observable": "Portuguese padrão placement frequency; Estado da Índia trade monopoly enforcement; Padroado Real scope",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "portuguese_colonial_administration",
+      "victim": "rival_european_powers",
+      "downstream_of": [
+        "papal_temporal_authority_mountain"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Reading B of kernel; tangled rope with different victim set (European rivals) and different authority grounding (prior discovery vs pure papal grant)"
+    },
+    {
+      "claim_id": "indigenous_sovereignty_erasure",
+      "human_readable": "Indigenous Sovereignty Erasure (Terra Nullius Doctrine)",
+      "structural_delta": "Treaty's foundational erasure of indigenous territorial sovereignty via Christian/non-Christian binary",
+      "primary_observable": "Absence of indigenous legal recognition in Spanish/Portuguese colonial law 1494-1550; doctrine of discovery application patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "iberian_crowns",
+      "victim": "all_indigenous_populations",
+      "downstream_of": [
+        "papal_temporal_authority_mountain"
+      ],
+      "feeds_into": [
+        "spanish_conquest_legitimation",
+        "portuguese_exploration_legitimation"
+      ],
+      "centrality_score": 5,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured structurally as shared victim-erasure mechanism in both readings; would produce redundant constraint story"
+    },
+    {
+      "claim_id": "westphalian_sovereignty_emergence",
+      "human_readable": "Westphalian Sovereignty Emergence (Secular State Authority)",
+      "structural_delta": "Gradual shift from papal to state-based territorial sovereignty claims 1494-1648",
+      "primary_observable": "Treaty of Westphalia provisions vs Tordesillas; decline in papal territorial grant frequency post-1550",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: diachronic process beyond treaty's synchronic structure; omega variable on authority transition"
+    }
+  ],
+  "generation_sequence": [
+    "papal_temporal_authority_mountain",
+    {
+      "claim_id": "spanish_conquest_legitimation",
+      "kernel_id": "tordesillas_demarcation_kernel",
+      "reading_id": "spanish_conquest_legitimation"
+    },
+    {
+      "claim_id": "portuguese_exploration_legitimation",
+      "kernel_id": "tordesillas_demarcation_kernel",
+      "reading_id": "portuguese_exploration_legitimation"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "indigenous_sovereignty_erasure",
+      "structural_delta": "Foundational erasure of indigenous territorial sovereignty via Christian/non-Christian binary",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured structurally as shared victim-erasure mechanism in both selected readings; independent constraint story would duplicate this analysis"
+    },
+    {
+      "claim_id": "westphalian_sovereignty_emergence",
+      "structural_delta": "Gradual shift from papal to state-based territorial sovereignty 1494-1648",
+      "hypothesis": "piton",
+      "deferral_reason": "Diachronic process beyond treaty's synchronic structure; omega variable on authority transition timeline"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_indigenous_legal_standing",
+      "description": "Does indigenous_sovereignty_erasure warrant independent constraint axis, or is it structurally derivative of the papal authority mountain? If indigenous peoples had legal standing, the entire kernel collapses—suggesting erasure is prerequisite, not consequence.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis indigenous_sovereignty_erasure"
+    },
+    {
+      "id": "omega_treaty_binding_force",
+      "description": "Was Tordesillas ever binding on non-signatories (France, England, Netherlands)? If not, Portuguese reading's victim set (rival_european_powers) may be mislabeled—constraint operated only within Iberian dyad, not globally.",
+      "source": "Independence Testing §3.1 + primary_observable uncertainty"
+    },
+    {
+      "id": "omega_line_practicality",
+      "description": "How enforceable was the demarcation line given 1494 cartographic precision? If practically unenforceable, both readings may be post-hoc legitimations of conquest rather than operational constraints.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + epsilon_bin classification uncertainty"
+    },
+    {
+      "id": "omega_papal_authority_persistence",
+      "description": "Is papal_temporal_authority a true Mountain (theological necessity for Catholic powers) or a Piton (contingent on Catholic dominance)? Protestant Reformation and Westphalian sovereignty reclassify it as historically bounded Piton.",
+      "source": "F03 (Hasty Generalization) + deferred axis westphalian_sovereignty_emergence"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: papal_temporal_authority_mountain classified as mountain but may be historically bounded piton contingent on Catholic theological-political dominance. Protestant powers rejected this authority basis ab initio. Generated omega_papal_authority_persistence to bound this uncertainty."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The papal bull Inter caetera and Treaty of Tordesillas establish a fixed demarcation line as the shared commitment—a geographic partition grounding territorial legitimacy claims for Iberian powers",
+    "authority_description": "Papal See claims universal temporal authority over non-Christian lands; interpretive legitimacy derives from theological doctrine of papal supremacy and Christian evangelization duty",
+    "drift_status": "absent",
+    "candidate_pattern": "Founding Text (Type 1): fixed demarcation line functions as immutable founding text; revisions (e.g., line adjustments) required new treaties rather than interpretive flexibility",
+    "is_contested_kernel": true,
+    "kernel_id": "tordesillas_demarcation_kernel",
+    "readings": [
+      {
+        "reading_id": "spanish_conquest_legitimation",
+        "commitment": "Papal grant as license for territorial conquest and indigenous subjugation west of line",
+        "authority_grounding": "Pure papal grant; theological duty to evangelize; Requerimiento as legal ritual",
+        "sibling_readings": [
+          "portuguese_exploration_legitimation"
+        ],
+        "expected_structural_delta": "High epsilon snare; victim set = indigenous populations west of line; beneficiary = Spanish colonial administration; extractiveness manifest in encomienda system and forced conversion"
+      },
+      {
+        "reading_id": "portuguese_exploration_legitimation",
+        "commitment": "Papal treaty as confirmation of prior exploration rights and exclusion of European rivals east of line",
+        "authority_grounding": "Prior discovery (Treaty of Alcáçovas 1479) ratified by papal authority; trade monopoly enforcement",
+        "sibling_readings": [
+          "spanish_conquest_legitimation"
+        ],
+        "expected_structural_delta": "Moderate epsilon tangled rope; victim set = rival European powers (not indigenous populations as primary target); beneficiary = Portuguese Estado da Índia; extractiveness in trade monopoly rather than land conquest"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "spanish_conquest_legitimation",
+        "reading_b": "portuguese_exploration_legitimation",
+        "basis": "Spanish reading treats papal authority as sufficient ground for conquest regardless of prior occupation; Portuguese reading treats prior discovery as necessary precondition that papal authority merely ratifies. No coherent framework holds both 'papal grant creates territorial right ex nihilo' and 'papal grant only confirms pre-existing discovery-based right' simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "treaty_of_tordesillas_1494"
+}

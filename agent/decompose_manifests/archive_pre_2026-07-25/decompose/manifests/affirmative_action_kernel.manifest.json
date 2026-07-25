@@ -1,0 +1,221 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Social Policy",
+  "family_id": "affirmative_action_equal_treatment_2026",
+  "topic_summary": "Analysis of affirmative action as a contested kernel where the equal-treatment principle from the 14th Amendment is read through fundamentally different interpretive lenses. The remedial reading treats race-conscious policies as necessary correction of historical subordination; the colorblind reading treats any race-based classification as categorical violation of individual equality. Each reading instantiates a constraint with different victim sets and extractiveness profiles from the same constitutional commitment to equal protection.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "14th Amendment Equal Protection Clause (constitutional kernel stabilizing equal treatment commitment)",
+      "Remedial framework advocates (NAACP Legal Defense Fund, civil rights organizations)",
+      "Colorblind framework advocates (Students for Fair Admissions, conservative legal movement)",
+      "Supreme Court (interpretive authority post-Brown, shifting composition)",
+      "Historically excluded groups (Black Americans, other minorities targeted by Jim Crow)",
+      "Individual applicants (persons claiming injury from race-conscious admissions)"
+    ],
+    "key_tensions": [
+      "Group remedy vs individual rights (whether equal protection protects groups from subordination or individuals from classification)",
+      "Historical context vs formal neutrality (whether past discrimination creates ongoing duty to remedy or whether Constitution mandates present-tense blindness)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 14th Amendment Equal Protection Clause as shared commitment that 'no state shall deny equal protection of the laws'—the constitutional substrate both frameworks claim to uphold",
+    "authority_description": "Supreme Court interpretive monopoly grounded in Markov v. Madison plus stare decisis doctrine; legitimacy derives from constitutional fidelity claim rather than democratic mandate",
+    "drift_status": "functioning",
+    "candidate_pattern": "Interpretive Pluralism (Pattern 2)—multiple live readings coexist in legal and political culture; Court oscillates between them across composition changes",
+    "is_contested_kernel": true,
+    "kernel_id": "equal_protection_commitment",
+    "readings": [
+      {
+        "reading_id": "remedial_reading",
+        "commitment": "Equal protection forbids perpetuation of caste system; permits race-conscious measures to dismantle subordination",
+        "authority_grounding": "Originalist (Reconstruction Amendments intended to remedy racial hierarchy) plus Living Constitution (ongoing duty to address structural inequality)",
+        "sibling_readings": [
+          "colorblind_reading",
+          "diversity_reading"
+        ],
+        "expected_structural_delta": "State actors in beneficiary set when implementing remedial programs; historically privileged groups enter victim set when denied preferential access; high ε (0.45-0.60) because beneficiary/victim structure inverts depending on observer position"
+      },
+      {
+        "reading_id": "colorblind_reading",
+        "commitment": "Equal protection forbids any state use of racial classification; Constitution is 'color-blind' (Harlan's Plessy dissent)",
+        "authority_grounding": "Textualist (plain meaning of 'equal protection' as individual right) plus Anti-Classification principle (any race-consciousness entrenches racial thinking)",
+        "sibling_readings": [
+          "remedial_reading",
+          "diversity_reading"
+        ],
+        "expected_structural_delta": "Race-conscious state programs enter victim set (Asian/white applicants denied admission); implementing institutions in perpetrator set; moderate-high ε (0.35-0.50) because classification itself is the harm"
+      },
+      {
+        "reading_id": "diversity_reading",
+        "commitment": "Equal protection permits race as one factor among many to achieve educational diversity as compelling state interest",
+        "authority_grounding": "Pragmatic Balancing (Powell in Bakke, O'Connor in Grutter)—neither pure remedial nor pure colorblind but instrumental use of race for pedagogical benefit",
+        "sibling_readings": [
+          "remedial_reading",
+          "colorblind_reading"
+        ],
+        "expected_structural_delta": "Universities in beneficiary set (gain discretion for mission-driven admissions); all applicants potentially in victim set (holistic review obscures individual claims); low-moderate ε (0.20-0.35) because constraint is procedural rather than substantive"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "remedial_reading",
+        "reading_b": "colorblind_reading",
+        "basis": "Remedial axiom holds that equal protection REQUIRES attention to group-based subordination and permits race-conscious remedy; colorblind axiom holds that equal protection FORBIDS any racial classification by the state. No coherent framework can simultaneously hold that the Constitution requires race-consciousness to remedy hierarchy AND forbids race-consciousness as categorical violation. Accepting one axiom as constitutionally mandated requires rejecting the other as constitutionally impermissible."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "remedial_reading",
+      "human_readable": "Remedial Reading (Equal Protection as Anti-Subordination)",
+      "structural_delta": "Constitutional commitment read as forbidding perpetuation of racial caste, permitting group-conscious measures to dismantle structural hierarchy",
+      "primary_observable": "Legal doctrine permitting race-conscious admissions/hiring when tied to remedying identified discrimination; beneficiary groups = historically excluded minorities",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "historically_excluded_groups",
+      "victim": "historically_privileged_groups_losing_preferential_access",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with highest structural tension; axiom-contradictory to colorblind reading"
+    },
+    {
+      "claim_id": "colorblind_reading",
+      "human_readable": "Colorblind Reading (Equal Protection as Anti-Classification)",
+      "structural_delta": "Constitutional commitment read as forbidding any state use of racial classification regardless of remedial intent; formal neutrality as constitutional mandate",
+      "primary_observable": "Strict scrutiny applied to any race-conscious policy; invalidation of race-based admissions/set-asides; beneficiary = individuals claiming race-neutral treatment",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "individual_applicants_claiming_race_neutral_process",
+      "victim": "programs_using_race_conscious_remedies",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory sibling to remedial reading; generates opposing constraint structure from same kernel"
+    },
+    {
+      "claim_id": "diversity_reading",
+      "human_readable": "Diversity Reading (Equal Protection as Educational-Benefit Balancing)",
+      "structural_delta": "Constitutional commitment permits instrumental race-consciousness when narrowly tailored to achieve educational diversity as compelling interest; neither pure anti-subordination nor pure anti-classification",
+      "primary_observable": "Grutter/Gratz framework allowing race as 'plus factor' in holistic review but not mechanical points; beneficiary = universities gaining discretion",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "universities_with_admissions_discretion",
+      "victim": "applicants_in_holistic_review_opacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Pragmatic middle reading that has governed doctrine 2003-2023; structural bridge between contradictory axioms"
+    },
+    {
+      "claim_id": "socioeconomic_substitution_axis",
+      "human_readable": "Socioeconomic Status as Race-Neutral Proxy",
+      "structural_delta": "Class-based affirmative action as alternative mechanism achieving partial diversity effects without triggering strict scrutiny",
+      "primary_observable": "Admission policies using family income, first-generation status, zip code as factors; racial composition of admitted class as outcome measure",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "institutions_seeking_constitutional_safe_harbor",
+      "victim": "middle_class_minorities_excluded_by_class_proxy",
+      "downstream_of": [
+        "colorblind_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional workaround rather than core interpretive reading; lower epsilon; omega material on proxy effectiveness"
+    },
+    {
+      "claim_id": "legacy_preference_inversion",
+      "human_readable": "Legacy Preferences as Structural Inversion",
+      "structural_delta": "Legacy admissions preferences preserve historical advantage without triggering equal protection scrutiny; race-neutral in form but race-preserving in effect",
+      "primary_observable": "Legacy admission rates vs non-legacy; racial composition of legacy vs non-legacy admits; judicial treatment of legacy vs affirmative action challenges",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "historically_privileged_families",
+      "victim": "first_generation_applicants",
+      "downstream_of": [
+        "colorblind_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: exposes asymmetry in colorblind reading's application but not itself a reading of equal protection kernel; high omega value"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "remedial_reading",
+      "kernel_id": "equal_protection_commitment",
+      "reading_id": "remedial_reading"
+    },
+    {
+      "claim_id": "colorblind_reading",
+      "kernel_id": "equal_protection_commitment",
+      "reading_id": "colorblind_reading"
+    },
+    {
+      "claim_id": "diversity_reading",
+      "kernel_id": "equal_protection_commitment",
+      "reading_id": "diversity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "socioeconomic_substitution_axis",
+      "structural_delta": "Class-based affirmative action as race-neutral proxy mechanism",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Institutional workaround rather than interpretive reading of kernel; lower structural centrality; effectiveness as diversity mechanism is omega variable"
+    },
+    {
+      "claim_id": "legacy_preference_inversion",
+      "structural_delta": "Legacy admissions as race-neutral preference preserving historical advantage",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Exposes asymmetry in colorblind framework's application (why legacy preferences escape strict scrutiny while affirmative action triggers it); critical omega for understanding beneficiary structure but not itself a reading of equal protection kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_anticlassification_asymmetry",
+      "description": "Why does colorblind reading apply strict scrutiny to race-conscious remedies but not to legacy preferences that preserve historical racial advantage? Is the anti-classification principle neutral or does it systematically privilege status quo distributions? If legacy preferences were subject to same scrutiny as affirmative action, would colorblind reading collapse into remedial reading's anti-subordination logic?",
+      "source": "Deferred axis legacy_preference_inversion + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_diversity_reading_durability",
+      "description": "Post-SFFA v. Harvard (2023), diversity reading appears foreclosed by Court's rejection of educational benefits rationale. Does this reading persist as de facto practice under colorblind-compliant rhetoric (holistic review without explicit race factor), or has it been structurally eliminated? If diversity reading survives as covert practice, does it become a tangled rope (legitimacy without transparency)?",
+      "source": "Diversity reading classification + fracture F03 risk"
+    },
+    {
+      "id": "omega_socioeconomic_proxy_fidelity",
+      "description": "Class-based affirmative action is scaffold if it achieves diversity effects without race-consciousness, but piton if it fails to reach middle-class minorities or becomes cover for abandoning racial equity goals. Which constraint type depends on empirical effectiveness data not yet established. If proxy fails, does colorblind reading force choice between no diversity or covert race-consciousness?",
+      "source": "Deferred axis socioeconomic_substitution_axis"
+    },
+    {
+      "id": "omega_axiom_contradiction_resolution",
+      "description": "Remedial and colorblind readings hold mutually exclusive axioms yet both claim fidelity to same constitutional text. Does this reveal that equal protection clause is inherently indeterminate (linguistic ambiguity requiring extra-textual resolution), or that one reading is bad-faith misappropriation? If indeterminate, by what meta-principle should courts choose between contradictory but textually plausible readings?",
+      "source": "Axiom contradiction declaration between remedial and colorblind readings"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Diversity reading's current doctrinal status uncertain post-SFFA; classification as live reading vs historical artifact depends on whether holistic-review practices continue to operationalize race-consciousness covertly. Generated omega_diversity_reading_durability to bound this uncertainty. Also: legacy preference asymmetry (omega_anticlassification_asymmetry) suggests colorblind reading may be tangled rope rather than rope—beneficiary structure analysis deferred to generation but flagged here."
+  },
+  "_seed_id": "affirmative_action_kernel"
+}

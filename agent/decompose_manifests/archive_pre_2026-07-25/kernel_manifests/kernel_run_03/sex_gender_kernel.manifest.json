@@ -1,0 +1,277 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Social Ontology / Medical Classification / Rights Frameworks",
+  "family_id": "sex_gender_category_contest_2026",
+  "topic_summary": "Analysis of the contested category kernel where 'woman' and 'female' are read either as sex-defined-by-biology or gender-defined-by-identity. Each reading emits constraints with different membership criteria and victim sets. The contest operates across medical classification, legal recognition, spatial access rights, and institutional policy domains.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "NIH Office of Women's Health Research (institutional site of definitional conflict in 1990s)",
+      "Declaration on Women's Sex-Based Rights (2019 advocacy framework, 30K+ signatories)",
+      "Gender identity rights advocates (framework prioritizing self-identification)",
+      "Sex-based rights advocates (framework prioritizing biological classification)",
+      "Intersex individuals (biological edge case challenging binary)",
+      "Transgender women (population whose category membership differs by reading)",
+      "Federal agencies (enforcement bodies for sex-based vs gender-based frameworks)",
+      "WHO and intergovernmental bodies (institutional distinction-makers)"
+    ],
+    "key_claims": [
+      "Sex is biological, binary, immutable, observable (sex-based reading axiom)",
+      "Gender identity is self-determined, central to personhood, takes precedence over sex (gender-identity reading axiom)",
+      "Inclusion of trans women in 'women' category constitutes sex-based discrimination (sex-based framework claim)",
+      "Exclusion of trans women from 'women' category constitutes gender identity discrimination (gender-identity framework claim)",
+      "Both perspectives can coexist with diversity as default (proposed resolution)",
+      "Conflation of sex and gender has pitted biology against culture (meta-critique)"
+    ],
+    "key_tensions": [
+      "Binary biological classification vs spectrum of gender identities (ontological)",
+      "Sex-based spatial access vs gender-identity spatial access (women's spaces, prisons, sports)",
+      "Biological researchers vs behavioral scholars at NIH (disciplinary epistemology)",
+      "Material consequences of sexed bodies vs social construction of gender (paradox of gender)"
+    ],
+    "key_mechanisms": [
+      "Legal sex classification systems (state enforcement of category membership)",
+      "Self-identification protocols (administrative mechanism for gender identity recognition)",
+      "Single-sex space access policies (institutional gatekeeping mechanism)"
+    ],
+    "key_absences": [
+      "Intersex individuals' position in both frameworks (biological edge case largely unaddressed)",
+      "Non-binary identities' relationship to sex-based protections (neither framework fully accounts)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The category 'woman'/'female' as the stabilized shared commitment that all parties argue about",
+    "authority_description": "Contested between biological science (chromosomal/reproductive authority) and self-identification (phenomenological/rights authority)",
+    "drift_status": "absent",
+    "candidate_pattern": "dual_authority_deadlock",
+    "is_contested_kernel": true,
+    "kernel_id": "woman_female_category",
+    "readings": [
+      {
+        "reading_id": "sex_biology_reading",
+        "commitment": "Woman/female defined by biological sex (chromosomal, reproductive, anatomical)",
+        "authority_grounding": "Scientific observation, medical classification, reproductive biology",
+        "sibling_readings": [
+          "gender_identity_reading",
+          "intersectional_coexistence_reading"
+        ],
+        "expected_structural_delta": "Trans women excluded from victim set of sex-based discrimination; cis women's spatial access protected; intersex individuals create classification instability"
+      },
+      {
+        "reading_id": "gender_identity_reading",
+        "commitment": "Woman/female defined by gender identity (self-identification as central to personhood)",
+        "authority_grounding": "Phenomenological experience, autonomy rights, anti-discrimination frameworks",
+        "sibling_readings": [
+          "sex_biology_reading",
+          "intersectional_coexistence_reading"
+        ],
+        "expected_structural_delta": "Trans women included in victim set of gender-based discrimination; self-ID grants spatial access; biological sex becomes legally subordinate"
+      },
+      {
+        "reading_id": "intersectional_coexistence_reading",
+        "commitment": "Both sex and gender as non-conflicting dimensions requiring distinct protections",
+        "authority_grounding": "Pragmatic pluralism, harm-reduction frameworks, context-dependent application",
+        "sibling_readings": [
+          "sex_biology_reading",
+          "gender_identity_reading"
+        ],
+        "expected_structural_delta": "Dual victim sets acknowledged; context-specific rules (medical vs social); administrative complexity as cost"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sex_biology_reading",
+        "reading_b": "gender_identity_reading",
+        "basis": "Sex-biology reading holds category membership is observer-independent biological fact; gender-identity reading holds category membership is subject-dependent self-identification. No single framework can hold both 'membership is independent of subject's claim' and 'membership is constituted by subject's claim' as simultaneously true for the same category."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sex_biology_reading",
+      "human_readable": "Sex-Biology Reading (Biological Classification Authority)",
+      "structural_delta": "Category membership determined by chromosomal/reproductive biology; trans women excluded from 'women' victim set",
+      "primary_observable": "Legal sex classification systems requiring biological criteria; single-sex space access policies based on birth sex",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "sex_based_rights_advocates",
+      "victim": "transgender_women",
+      "downstream_of": [],
+      "feeds_into": [
+        "spatial_access_conflict"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct victim set; highest structural extractiveness; upstream to spatial conflict"
+    },
+    {
+      "claim_id": "gender_identity_reading",
+      "human_readable": "Gender-Identity Reading (Self-Identification Authority)",
+      "structural_delta": "Category membership determined by self-identification; cis women's sex-based protections subordinated",
+      "primary_observable": "Self-ID legal frameworks; gender identity anti-discrimination law; administrative protocols for legal sex change",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "gender_identity_rights_advocates",
+      "victim": "sex_based_rights_claimants",
+      "downstream_of": [],
+      "feeds_into": [
+        "spatial_access_conflict"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory sibling to sex_biology_reading; equal structural extractiveness; distinct victim set"
+    },
+    {
+      "claim_id": "spatial_access_conflict",
+      "human_readable": "Spatial Access Conflict (Women's Spaces as Zero-Sum Gatekeeping)",
+      "structural_delta": "Single-sex spaces (prisons, shelters, sports, changing rooms) become sites of irreconcilable access claims",
+      "primary_observable": "Policy disputes over prison placement, sports eligibility, shelter admission criteria",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "both_frameworks_claimants",
+      "downstream_of": [
+        "sex_biology_reading",
+        "gender_identity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node where both readings collide; concrete policy manifestation; snare structure"
+    },
+    {
+      "claim_id": "intersectional_coexistence_reading",
+      "human_readable": "Intersectional Coexistence Reading (Dual-Dimension Framework)",
+      "structural_delta": "Sex and gender as non-conflicting dimensions requiring context-dependent rules",
+      "primary_observable": "Jurisdictions with dual-track protections; medical contexts using biological sex + social contexts using gender identity",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: proposed resolution with low institutional uptake; scaffold hypothesis; omega material on feasibility"
+    },
+    {
+      "claim_id": "medical_classification_instability",
+      "human_readable": "Medical Classification Instability (Intersex as Edge Case)",
+      "structural_delta": "Intersex individuals destabilize binary biological classification without fitting gender-identity framework",
+      "primary_observable": "Medical protocols for intersex classification; legal recognition systems for intersex status",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "intersex_individuals",
+      "downstream_of": [
+        "sex_biology_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: edge case with low population prevalence; piton revealing biological classification limits; omega on non-binary ontology"
+    },
+    {
+      "claim_id": "disciplinary_epistemology_split",
+      "human_readable": "Disciplinary Epistemology Split (Biology vs Behavioral Science)",
+      "structural_delta": "Biological researchers privilege genetic determinism; behavioral scholars privilege experiential plasticity",
+      "primary_observable": "NIH research funding patterns; citation networks in sex/gender research",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sex_biology_reading",
+        "gender_identity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream epistemological split but lower extractiveness than core readings; captured in reading authority_grounding"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sex_biology_reading",
+      "kernel_id": "woman_female_category",
+      "reading_id": "sex_biology_reading"
+    },
+    {
+      "claim_id": "gender_identity_reading",
+      "kernel_id": "woman_female_category",
+      "reading_id": "gender_identity_reading"
+    },
+    {
+      "claim_id": "spatial_access_conflict",
+      "kernel_id": "woman_female_category",
+      "reading_id": "spatial_access_conflict"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "intersectional_coexistence_reading",
+      "structural_delta": "Sex and gender as non-conflicting dimensions requiring context-dependent rules",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Proposed resolution with low institutional uptake; scaffold structure; omega material on pragmatic feasibility"
+    },
+    {
+      "claim_id": "medical_classification_instability",
+      "structural_delta": "Intersex individuals destabilize binary biological classification",
+      "hypothesis": "piton",
+      "deferral_reason": "Edge case with low population prevalence; piton revealing limits of binary classification; omega on non-binary ontology"
+    },
+    {
+      "claim_id": "disciplinary_epistemology_split",
+      "structural_delta": "Biological vs behavioral science epistemological divide",
+      "hypothesis": "rope",
+      "deferral_reason": "Upstream epistemological split captured in reading authority_grounding fields; lower extractiveness than core readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_intersex_ontology",
+      "description": "Intersex individuals (1.7% of population) destabilize both readings: sex-biology reading cannot cleanly classify them; gender-identity reading does not address their biological distinctiveness. Neither framework provides adequate protection. Deferred axis medical_classification_instability.",
+      "source": "Absence Inventory (§1.1) + deferred axis medical_classification_instability"
+    },
+    {
+      "id": "omega_non_binary_erasure",
+      "description": "Non-binary identities are structurally erased by both readings: sex-biology reading has no category for them; gender-identity reading focuses on binary trans identities. A third reading (non-binary ontology) may be required.",
+      "source": "Absence Inventory (§1.1)"
+    },
+    {
+      "id": "omega_coexistence_feasibility",
+      "description": "Is intersectional_coexistence_reading a viable scaffold or a rhetorical evasion? Dual-track systems exist in some jurisdictions but face administrative collapse under adversarial pressure. Empirical test: do dual-track systems survive legal challenge?",
+      "source": "Deferred axis intersectional_coexistence_reading"
+    },
+    {
+      "id": "omega_victim_set_symmetry",
+      "description": "Both readings claim victim status for their excluded population. Is this symmetrical (equal harms) or asymmetrical (one population faces greater material harm)? Requires empirical harm measurement, not axiom comparison.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_authority_legitimacy",
+      "description": "What grounds interpretive authority over the category kernel? Sex-biology reading appeals to scientific observation (but science cannot derive 'ought' from 'is'); gender-identity reading appeals to phenomenological experience (but subjective experience cannot bind others). Neither authority structure is self-legitimating.",
+      "source": "Commitment System Recognition (authority_description field)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied correctly: three readings selected (two axiom-contradictory core readings + one downstream synthesis node). Intersex edge case and non-binary erasure documented as omegas. Disciplinary epistemology captured in authority_grounding rather than separate axis."
+  },
+  "_seed_id": "sex_gender_kernel"
+}

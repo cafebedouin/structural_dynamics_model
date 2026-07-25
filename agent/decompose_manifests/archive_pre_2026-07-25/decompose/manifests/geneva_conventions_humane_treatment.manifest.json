@@ -1,0 +1,223 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Humanitarian Law / State Security / Human Rights",
+  "family_id": "geneva_conventions_humane_treatment",
+  "topic_summary": "Analysis of contested interpretations of the Geneva Conventions' provisions on humane treatment of prisoners, examining the structural collision between absolute prohibition readings grounded in universal human rights and contextual necessity readings grounded in state sovereignty, with particular focus on how different authority structures emit incompatible constraint sets regarding permissible treatment of detainees.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Geneva Conventions (treaty text establishing humane treatment standards)",
+      "International Committee of the Red Cross (treaty custodian and interpretive authority)",
+      "State security agencies (interrogators, intelligence services)",
+      "Detainees/prisoners of war (rights-holders under treaty)",
+      "International Criminal Court (enforcement mechanism for violations)",
+      "Domestic courts (alternative enforcement venue with state-specific interpretation)"
+    ],
+    "key_tensions": [
+      "Absolute prohibition vs contextual flexibility (universalist human rights frame vs state sovereignty frame)",
+      "Treaty fidelity vs operational necessity (legal compliance vs security effectiveness claims)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Geneva Conventions Article 3 (Common Article 3) prohibition on 'violence to life and person, in particular murder of all kinds, mutilation, cruel treatment and torture' and 'outrages upon personal dignity, in particular humiliating and degrading treatment' as applied to prisoners",
+    "authority_description": "Contested between ICRC treaty custodianship grounded in international humanitarian law consensus vs domestic executive interpretation grounded in national security prerogative",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "humane_treatment_standard",
+    "readings": [
+      {
+        "reading_id": "absolute_prohibition",
+        "commitment": "Common Article 3 establishes non-derogable minimum standards; no circumstances permit torture or degrading treatment",
+        "authority_grounding": "ICRC interpretive authority; universal human rights framework; treaty object and purpose",
+        "sibling_readings": [
+          "contextual_necessity",
+          "proportionality_balancing"
+        ],
+        "expected_structural_delta": "Detainees enter full rights-holder set; state interrogation methods constrained absolutely; no security exception permits crossing threshold"
+      },
+      {
+        "reading_id": "contextual_necessity",
+        "commitment": "Common Article 3 sets baseline but permits enhanced interrogation when national security imperatives override; humane treatment is context-dependent",
+        "authority_grounding": "Executive authority during armed conflict/emergency; state sovereignty over security matters; necessity doctrine",
+        "sibling_readings": [
+          "absolute_prohibition",
+          "proportionality_balancing"
+        ],
+        "expected_structural_delta": "Security agencies gain discretion to define 'humane'; detainee protections become conditional; victim set shrinks to exclude high-value targets in necessity scenarios"
+      },
+      {
+        "reading_id": "proportionality_balancing",
+        "commitment": "Common Article 3 requires proportional balancing between detainee dignity and security needs; neither absolute prohibition nor unlimited discretion",
+        "authority_grounding": "Judicial review; proportionality doctrine from constitutional law traditions; case-by-case adjudication",
+        "sibling_readings": [
+          "absolute_prohibition",
+          "contextual_necessity"
+        ],
+        "expected_structural_delta": "Courts become gatekeepers; treatment permissibility decided case-by-case; moderate constraint on interrogators with procedural safeguards rather than absolute prohibitions"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "absolute_prohibition",
+        "reading_b": "contextual_necessity",
+        "basis": "No coherent framework can simultaneously hold that a prohibition is non-derogable (absolute_prohibition's axiom) and that it permits exceptions when security requires (contextual_necessity's axiom). Accepting non-derogability as true requires rejecting security exceptions as legitimate."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "absolute_prohibition",
+      "human_readable": "Absolute Prohibition Reading (Non-Derogable Minimum Standards)",
+      "structural_delta": "Treaty obligations create unconditional protections; no security circumstance permits crossing torture/degrading treatment threshold",
+      "primary_observable": "ICRC treaty commentary; international court rulings treating Common Article 3 as jus cogens; state practice that prosecutes violators without security exception defenses",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": "detainees_as_rights_holders",
+      "victim": "state_security_agencies",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with highest structural constraints; represents treaty-as-written interpretation grounded in international law consensus"
+    },
+    {
+      "claim_id": "contextual_necessity",
+      "human_readable": "Contextual Necessity Reading (Security-Contingent Standards)",
+      "structural_delta": "Treaty obligations become conditional on security context; state sovereignty permits enhanced interrogation when necessity overrides",
+      "primary_observable": "Executive memos authorizing enhanced interrogation; domestic legal opinions carving security exceptions; state practice during post-9/11 period",
+      "epsilon_bin": "v_low",
+      "hypothesis": "snare",
+      "beneficiary": "state_security_agencies",
+      "victim": "detainees_in_necessity_scenarios",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally contradictory to absolute_prohibition; captures executive branch interpretive capture of kernel"
+    },
+    {
+      "claim_id": "proportionality_balancing",
+      "human_readable": "Proportionality Balancing Reading (Judicial Case-by-Case Review)",
+      "structural_delta": "Treaty obligations require balancing detainee dignity against security needs via judicial oversight; neither absolute nor discretionary",
+      "primary_observable": "Domestic court rulings applying proportionality tests; judicial review mechanisms for interrogation methods; procedural safeguards in detention law",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "judicial_institutions",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position attempting to mediate contradiction; represents institutional compromise with distinct authority grounding"
+    },
+    {
+      "claim_id": "enforcement_gap",
+      "human_readable": "Enforcement Gap (Impunity for State Violators)",
+      "structural_delta": "Absence of effective enforcement mechanism when states violate treaty obligations; international courts lack jurisdiction over non-consenting states",
+      "primary_observable": "ICC jurisdiction gaps; state non-cooperation with international tribunals; domestic amnesty laws shielding interrogators",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "states_violating_treaty",
+      "victim": "detainees_without_remedy",
+      "downstream_of": [
+        "contextual_necessity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural consequence of contextual_necessity reading but adds enforcement dimension beyond core interpretive contest"
+    },
+    {
+      "claim_id": "definitional_drift",
+      "human_readable": "Definitional Drift (Torture Redefinition)",
+      "structural_delta": "State actors redefine 'torture' and 'degrading treatment' to exclude techniques they wish to employ; semantic drift as evasion mechanism",
+      "primary_observable": "Legal memos redefining torture (e.g., Bybee memo); training manuals describing 'enhanced interrogation' as distinct from torture",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "state_interrogators",
+      "victim": "treaty_coherence",
+      "downstream_of": [
+        "contextual_necessity"
+      ],
+      "feeds_into": [
+        "enforcement_gap"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism enabling contextual_necessity reading but less structurally fundamental than the readings themselves"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "absolute_prohibition",
+      "kernel_id": "humane_treatment_standard",
+      "reading_id": "absolute_prohibition"
+    },
+    {
+      "claim_id": "contextual_necessity",
+      "kernel_id": "humane_treatment_standard",
+      "reading_id": "contextual_necessity"
+    },
+    {
+      "claim_id": "proportionality_balancing",
+      "kernel_id": "humane_treatment_standard",
+      "reading_id": "proportionality_balancing"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_gap",
+      "structural_delta": "Impunity when states violate treaty due to jurisdiction gaps and non-cooperation",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural consequence of contextual_necessity reading but enforcement dimension beyond core interpretive contest; would become fourth axis"
+    },
+    {
+      "claim_id": "definitional_drift",
+      "structural_delta": "States redefine torture/degrading treatment to exclude preferred techniques",
+      "hypothesis": "piton",
+      "deferral_reason": "Mechanism enabling contextual_necessity but less structurally fundamental than readings; semantic evasion tactic rather than foundational interpretation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_jus_cogens_status",
+      "description": "Is the absolute prohibition reading grounded in jus cogens (peremptory international law norms) or merely treaty interpretation? If jus cogens, contextual_necessity reading becomes illegitimate under international law rather than merely contested.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — legal hierarchy question affects constraint type"
+    },
+    {
+      "id": "omega_ticking_bomb_hypothetical",
+      "description": "Does the ticking bomb scenario constitute genuine necessity or rhetorical device to justify routine practices? If rhetorical, contextual_necessity is Snare disguised as emergency exception; if genuine, may warrant Piton rather than Snare classification.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — security agencies benefit from hypothetical remaining abstract"
+    },
+    {
+      "id": "omega_domestic_vs_international",
+      "description": "When domestic courts apply proportionality_balancing, are they mediating the kernel contest or domesticating international law into national security law? If domestication, proportionality_balancing becomes absorption mechanism rather than compromise.",
+      "source": "§2.1 Multi-Lens Scan (Constitutional Law lens) — judicial review may be regime-laundering"
+    },
+    {
+      "id": "omega_non_state_actors",
+      "description": "Geneva Conventions apply to state parties; do non-state armed groups fall under humane treatment obligations? If not, absolute_prohibition reading has scope limit that contextual_necessity exploits via legal category manipulation.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — non-state actors absent from extraction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest confirmed: three readings share Common Article 3 substrate but emit structurally different constraints (absolute prohibition vs security-contingent vs case-by-case balancing). Axiom contradiction verified between absolute_prohibition and contextual_necessity. Proportionality_balancing represents institutional third position with distinct authority grounding (judicial vs treaty custodian vs executive)."
+  },
+  "_seed_id": "geneva_conventions_humane_treatment"
+}

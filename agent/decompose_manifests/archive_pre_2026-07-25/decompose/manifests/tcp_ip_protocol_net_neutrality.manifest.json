@@ -1,0 +1,200 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology Governance / Internet Policy / Telecommunications Law",
+  "family_id": "tcp_ip_net_neutrality_2026",
+  "topic_summary": "Analysis of the TCP/IP protocol stack as a contested kernel in net neutrality debates. The technical architecture is claimed as a fixed reference point by both proponents of equal packet treatment and advocates of differentiated service quality, with each reading instantiating different constraints on ISP behavior and different victim sets.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "TCP/IP Protocol Stack (technical substrate; layered packet-switching architecture)",
+      "Internet Service Providers (network operators; gatekeeper position)",
+      "End Users (consumers; content creators; edge service providers)",
+      "FCC/Regulatory Bodies (interpretive authority claimant)",
+      "Content Delivery Networks (infrastructure layer; traffic optimization)",
+      "Network Equipment Vendors (DPI capability providers)"
+    ],
+    "key_tensions": [
+      "Equal treatment vs differentiated service (net neutrality vs paid prioritization)",
+      "Innovation at edges vs network investment incentive (end-to-end principle vs managed services)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "neutrality_reading",
+      "human_readable": "Net Neutrality Reading (Equal Treatment Mandate)",
+      "structural_delta": "TCP/IP read as requiring non-discriminatory packet forwarding; ISPs prohibited from content-based prioritization",
+      "primary_observable": "Regulatory enforcement actions; ISP traffic management policies; packet inspection depth",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "edge_innovators",
+      "victim": "isp_revenue_optimization",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates constraint preventing ISP discrimination"
+    },
+    {
+      "claim_id": "prioritization_reading",
+      "human_readable": "Prioritized Service Reading (Differentiated QoS)",
+      "structural_delta": "TCP/IP read as permitting service-tier differentiation; ISPs authorized to implement paid fast lanes",
+      "primary_observable": "Peering agreements; CDN-ISP contracts; QoS implementation rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "isp_revenue_extraction",
+      "victim": "unfunded_edge_services",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates constraint enabling ISP gatekeeper extraction"
+    },
+    {
+      "claim_id": "zero_rating_reading",
+      "human_readable": "Zero-Rating Reading (Selective Exemption)",
+      "structural_delta": "TCP/IP read as allowing sponsored data exemptions; ISPs authorized to exempt partnered content from data caps",
+      "primary_observable": "Zero-rating program adoption; sponsored data contracts; market concentration metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_content_platforms",
+      "victim": "competitive_entry",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; hybrid position instantiating selective discrimination constraint"
+    },
+    {
+      "claim_id": "technical_necessity_reading",
+      "human_readable": "Technical Necessity Reading (Network Management Exception)",
+      "structural_delta": "TCP/IP read as requiring reasonable network management; ISPs authorized to manage congestion via protocol-layer intervention",
+      "primary_observable": "Network congestion metrics; DPI deployment; protocol blocking incidents",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower epsilon; captured as exception within neutrality/prioritization readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "neutrality_reading",
+      "kernel_id": "tcp_ip_interpretation",
+      "reading_id": "neutrality_reading"
+    },
+    {
+      "claim_id": "prioritization_reading",
+      "kernel_id": "tcp_ip_interpretation",
+      "reading_id": "prioritization_reading"
+    },
+    {
+      "claim_id": "zero_rating_reading",
+      "kernel_id": "tcp_ip_interpretation",
+      "reading_id": "zero_rating_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "technical_necessity_reading",
+      "structural_delta": "TCP/IP read as requiring reasonable network management for congestion",
+      "hypothesis": "rope",
+      "deferral_reason": "Lower structural distinctiveness; network management exception functions as carve-out within neutrality/prioritization frameworks rather than independent constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_protocol_immutability",
+      "description": "Is TCP/IP actually immutable? Protocol evolution (IPv6, QUIC, HTTP/3) may reclassify the kernel from fixed to evolving, undermining claims to interpretive authority grounded in protocol fixity.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_cdncollapse",
+      "description": "Do CDN-ISP private peering agreements already constitute a parallel prioritization layer that bypasses the kernel debate? If yes, the entire debate may be scaffold-level theater over an already-settled infrastructure reality.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_regulatory_capture",
+      "description": "All three readings assume FCC/regulatory authority is the legitimate interpreter. Who benefits from this framing? Alternative interpretive authorities (IETF, end-user collectives, antitrust) are structurally excluded.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_international_divergence",
+      "description": "EU, China, India instantiate different TCP/IP interpretations with different authority structures. Does kernel contestation at national scale indicate the substrate is not actually shared, but jurisdiction-specific?",
+      "source": "F34 (Epistemic Trespass) — international regulatory comparison"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks deep expertise in IETF protocol governance and international telecommunications regulatory structures. Generated omega_international_divergence and omega_regulatory_capture to bound competence limits. Readings remain structurally valid but authority-grounding claims require domain expert validation."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The TCP/IP protocol stack as fixed technical architecture requiring interpretation for legitimate regulatory intervention",
+    "authority_description": "Regulatory bodies (FCC, EU) claim interpretive legitimacy grounded in statutory mandate; industry actors claim technical expertise; civil society claims end-user representation",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "tcp_ip_interpretation",
+    "readings": [
+      {
+        "reading_id": "neutrality_reading",
+        "commitment": "TCP/IP embodies end-to-end principle requiring non-discrimination",
+        "authority_grounding": "open internet principles / Title II common carrier framework",
+        "sibling_readings": [
+          "prioritization_reading",
+          "zero_rating_reading"
+        ],
+        "expected_structural_delta": "ISPs prohibited from content/application-based discrimination; edge innovation protected; ISP revenue optimization constrained"
+      },
+      {
+        "reading_id": "prioritization_reading",
+        "commitment": "TCP/IP permits differentiated service quality as network management",
+        "authority_grounding": "market efficiency / property rights in network infrastructure",
+        "sibling_readings": [
+          "neutrality_reading",
+          "zero_rating_reading"
+        ],
+        "expected_structural_delta": "ISPs authorized to implement paid fast lanes; network investment incentivized; unfunded edge services disadvantaged"
+      },
+      {
+        "reading_id": "zero_rating_reading",
+        "commitment": "TCP/IP allows selective exemptions for sponsored content",
+        "authority_grounding": "consumer welfare / competitive neutrality balance",
+        "sibling_readings": [
+          "neutrality_reading",
+          "prioritization_reading"
+        ],
+        "expected_structural_delta": "ISPs authorized to partner with content providers for data cap exemptions; incumbent platforms advantaged; competitive entry barriers raised"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "neutrality_reading",
+        "reading_b": "prioritization_reading",
+        "basis": "Accepting that TCP/IP requires non-discrimination (neutrality axiom) necessitates rejecting that ISPs may legitimately implement paid prioritization (market efficiency axiom). No single coherent framework treats both axioms as simultaneously valid."
+      },
+      {
+        "reading_a": "neutrality_reading",
+        "reading_b": "zero_rating_reading",
+        "basis": "Accepting that all packets must be treated equally (neutrality axiom) necessitates rejecting that some data flows may be exempted from metering (selective exemption axiom). The frameworks are mutually exclusive at the foundational level."
+      }
+    ]
+  },
+  "_seed_id": "tcp_ip_protocol_net_neutrality"
+}

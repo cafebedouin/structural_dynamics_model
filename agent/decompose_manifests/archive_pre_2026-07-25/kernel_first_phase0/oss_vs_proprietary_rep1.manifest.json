@@ -1,0 +1,217 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Software Engineering / Political Economy of Technology / Intellectual Property",
+  "family_id": "foss_vs_proprietary_2024",
+  "topic_summary": "Analysis of the free/open-source software (FOSS) versus proprietary software debate. The topic is framed by some as a foundational question of user freedom and digital autonomy, and by others as a pragmatic choice of development model and business sustainability. The debate centers on whether software source code should be publicly available with freedoms to use, study, modify, and share, or whether it should remain closed and licensed under restrictive terms.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Free Software Foundation (FSF) - advocacy organization promoting software freedom as ethical imperative",
+      "Open Source Initiative (OSI) - organization promoting open development as pragmatic methodology",
+      "Proprietary software vendors - commercial entities distributing closed-source software under restrictive licenses",
+      "End users - individuals and organizations consuming software",
+      "Developers/contributors - individuals writing and maintaining software code",
+      "Licensing frameworks - legal mechanisms governing software distribution and modification rights"
+    ],
+    "key_tensions": [
+      "User freedom vs vendor control (FSF ethical framing vs proprietary licensing restrictions)",
+      "Collaborative development vs competitive advantage (open development model vs trade secret protection)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared substrate is software itself as a medium of human capability and social organization, with all parties arguing about what moral/legal status software source code should hold",
+    "authority_description": "Interpretive legitimacy derives from different foundational commitments: ethical philosophy (FSF), pragmatic engineering methodology (OSI), property rights theory (proprietary), or hybrid frameworks blending multiple grounds",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "software_source_status",
+    "readings": [
+      {
+        "reading_id": "freedom_imperative_reading",
+        "commitment": "Software freedom is a moral imperative; users have inherent rights to control their computing",
+        "authority_grounding": "Deontological ethics / natural rights framework (FSF tradition)",
+        "sibling_readings": [
+          "pragmatic_openness_reading",
+          "property_rights_reading",
+          "commons_stewardship_reading"
+        ],
+        "expected_structural_delta": "Source availability becomes non-negotiable ethical requirement; proprietary software categorized as injustice; high suppression of pragmatic trade-offs"
+      },
+      {
+        "reading_id": "pragmatic_openness_reading",
+        "commitment": "Open source is a superior development methodology that produces better software through collaborative peer review",
+        "authority_grounding": "Engineering pragmatism / consequentialist framework (OSI tradition)",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "property_rights_reading",
+          "commons_stewardship_reading"
+        ],
+        "expected_structural_delta": "Source availability justified by engineering outcomes rather than rights; proprietary models acceptable when they produce better results; licensing choice is context-dependent optimization"
+      },
+      {
+        "reading_id": "property_rights_reading",
+        "commitment": "Software is intellectual property; creators have legitimate rights to control distribution and extract value",
+        "authority_grounding": "Property rights theory / labor theory of value (Lockean tradition)",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "pragmatic_openness_reading",
+          "commons_stewardship_reading"
+        ],
+        "expected_structural_delta": "Source code treated as proprietary asset; licensing restrictions legitimate as property control; FOSS framed as voluntary donation rather than obligation"
+      },
+      {
+        "reading_id": "commons_stewardship_reading",
+        "commitment": "Software is collective knowledge infrastructure requiring active stewardship against enclosure",
+        "authority_grounding": "Commons theory / institutional economics (Ostrom tradition)",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "pragmatic_openness_reading",
+          "property_rights_reading"
+        ],
+        "expected_structural_delta": "Source availability necessary to prevent knowledge enclosure; governance structures for sustainable commons maintenance; proprietary models as tragedy-of-the-commons risk"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "freedom_imperative_reading",
+        "reading_b": "property_rights_reading",
+        "basis": "Freedom imperative holds that users have inherent moral rights to software source code that override creator property claims; property rights reading holds that creators have legitimate exclusion rights that override user access claims. No single framework can simultaneously hold both as foundational axioms."
+      },
+      {
+        "reading_a": "pragmatic_openness_reading",
+        "reading_b": "freedom_imperative_reading",
+        "basis": "Pragmatic openness treats source availability as contingent optimization (acceptable to choose proprietary when outcomes warrant); freedom imperative treats it as categorical moral requirement (never acceptable to deny). A consequentialist framework cannot simultaneously hold a practice as both contingently optimal and categorically required."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "software_source_status_kernel",
+      "human_readable": "Software Source Status (Contested Kernel)",
+      "structural_delta": "Foundational disagreement about what moral/legal status software source code holds and what obligations that status creates",
+      "primary_observable": "Licensing choice patterns; rhetorical framing in advocacy materials; legal enforcement of source access vs restriction",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "developer_sustainability_mechanism",
+        "platform_control_asymmetry"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with four distinct readings passing independence test; all readings proceed to generation as expansion of this single axis"
+    },
+    {
+      "claim_id": "developer_sustainability_mechanism",
+      "human_readable": "Developer Sustainability Mechanism (Compensation Models)",
+      "structural_delta": "How developers are compensated for software creation work under different licensing regimes",
+      "primary_observable": "Revenue models (proprietary licensing, support contracts, donations, employment); developer income distribution; project abandonment rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "proprietary_vendors",
+      "victim": "foss_maintainers",
+      "downstream_of": [
+        "software_source_status_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (compensation mechanisms) distinct from kernel's moral/legal status question; genuine structural delta survives pairwise test"
+    },
+    {
+      "claim_id": "platform_control_asymmetry",
+      "human_readable": "Platform Control Asymmetry (Vendor Lock-In Dynamics)",
+      "structural_delta": "Power asymmetry between software vendors and users regarding switching costs and data portability",
+      "primary_observable": "Switching cost measurements; data export capabilities; API compatibility; user migration rates between platforms",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "dominant_platform_vendors",
+      "victim": "locked_in_users",
+      "downstream_of": [
+        "software_source_status_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent observable (lock-in mechanisms) distinct from both kernel and sustainability axis; captures structural power dynamic absent from other axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "freedom_imperative_reading",
+      "kernel_id": "software_source_status",
+      "reading_id": "freedom_imperative_reading"
+    },
+    {
+      "claim_id": "pragmatic_openness_reading",
+      "kernel_id": "software_source_status",
+      "reading_id": "pragmatic_openness_reading"
+    },
+    {
+      "claim_id": "property_rights_reading",
+      "kernel_id": "software_source_status",
+      "reading_id": "property_rights_reading"
+    },
+    {
+      "claim_id": "commons_stewardship_reading",
+      "kernel_id": "software_source_status",
+      "reading_id": "commons_stewardship_reading"
+    },
+    "developer_sustainability_mechanism",
+    "platform_control_asymmetry"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "security_through_obscurity",
+      "structural_delta": "Whether closed source provides security advantage through obscurity or disadvantage through reduced audit",
+      "hypothesis": "rope",
+      "deferral_reason": "Empirical question downstream of kernel readings; captured in pragmatic_openness_reading's engineering outcomes framing"
+    },
+    {
+      "claim_id": "innovation_rate_differential",
+      "structural_delta": "Comparative innovation rates between open collaborative and proprietary competitive models",
+      "hypothesis": "rope",
+      "deferral_reason": "Empirical measurement question; outcome variable rather than structural constraint; addressed within pragmatic_openness_reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_hybrid_models",
+      "description": "How do hybrid models (open core, source-available, delayed open-source) map to the four readings? They may instantiate fifth reading or reveal kernel instability.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - hybrid licensing models conspicuously absent from initial extraction"
+    },
+    {
+      "id": "omega_ai_training_collision",
+      "description": "Does AI training on open-source code without contribution back constitute a new form of enclosure that none of the four readings anticipated? Potential kernel drift.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - AI companies benefit from open source without clear reciprocity mechanism"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do pragmatic_openness and commons_stewardship readings collapse under empirical pressure? Both justify openness consequentially but through different mechanisms (engineering vs institutional).",
+      "source": "§3 Independence Testing - potential Type A overlap requiring empirical validation"
+    },
+    {
+      "id": "omega_global_south_lens",
+      "description": "Is there a fifth reading grounded in development economics where FOSS is infrastructure for technological sovereignty? Absent from Western-centric four-reading decomposition.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - analysis conducted within Western IP/ethics framework"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four readings pass independence test with distinct authority groundings and structural deltas. Two additional axes (sustainability, lock-in) survive pairwise independence test with different observables. Omega_global_south_lens flags potential fifth reading for future expansion."
+  }
+}

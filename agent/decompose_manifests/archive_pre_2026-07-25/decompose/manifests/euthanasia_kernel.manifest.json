@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Medical Ethics / Bioethics / Constitutional Law",
+  "family_id": "euthanasia_autonomy_sanctity_2026",
+  "topic_summary": "Analysis of euthanasia policy as a contested kernel where end-of-life decision authority is read through autonomy-primary or sanctity-of-life-primary commitments. Each reading instantiates a structurally different constraint with distinct victim sets: the suffering-prolonged under sanctity frameworks versus the pressured-vulnerable under autonomy frameworks.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Terminally ill patient (agent seeking death with dignity or preservation)",
+      "Medical authority (physician; interprets permissibility under legal/ethical framework)",
+      "State regulatory apparatus (licensing body; defines legitimate medical practice)",
+      "Family/proxy decision-makers (authority when patient incapacitated)",
+      "Vulnerable populations (elderly, disabled, economically marginalized)"
+    ],
+    "key_tensions": [
+      "Individual autonomy vs collective protection duty (patient self-determination vs state paternalism)",
+      "Suffering relief vs life preservation (medical imperative to end suffering vs Hippocratic do-no-harm)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The end-of-life decision kernel: what grounds legitimate authority to determine when and how a life may end",
+    "authority_description": "Interpretive legitimacy derives from competing moral foundations (autonomy, sanctity, dignity) embedded in medical ethics codes, constitutional rights frameworks, and religious traditions",
+    "drift_status": "partial",
+    "candidate_pattern": "Competing Foundations Pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "end_of_life_authority",
+    "readings": [
+      {
+        "reading_id": "autonomy_reading",
+        "commitment": "Legitimate authority derives from patient autonomy; self-determination over bodily integrity is foundational",
+        "authority_grounding": "Liberal rights framework; Millian harm principle; bodily autonomy as constitutional right",
+        "sibling_readings": [
+          "sanctity_reading",
+          "dignity_reading"
+        ],
+        "expected_structural_delta": "Victim set: pressured-vulnerable (coercion risk from family/economic factors). Beneficiary: suffering patient. High ε from consent infrastructure requirements."
+      },
+      {
+        "reading_id": "sanctity_reading",
+        "commitment": "Legitimate authority derives from life's intrinsic sanctity; intentional life-ending categorically impermissible",
+        "authority_grounding": "Natural law; Abrahamic religious traditions; vitalist medical ethics",
+        "sibling_readings": [
+          "autonomy_reading",
+          "dignity_reading"
+        ],
+        "expected_structural_delta": "Victim set: suffering-prolonged (patient denied relief). Beneficiary: moral community upholding sanctity norm. Low ε from categorical prohibition."
+      },
+      {
+        "reading_id": "dignity_reading",
+        "commitment": "Legitimate authority balances autonomy with dignified conditions; state duty to prevent undignified deaths",
+        "authority_grounding": "Capabilities approach; European dignity jurisprudence; palliative care ethics",
+        "sibling_readings": [
+          "autonomy_reading",
+          "sanctity_reading"
+        ],
+        "expected_structural_delta": "Victim set: both suffering-prolonged AND pressured-vulnerable (dual protection failure). Moderate ε from case-by-case assessment requirements."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "autonomy_reading",
+        "reading_b": "sanctity_reading",
+        "basis": "Autonomy reading requires accepting patient's death choice as legitimate exercise of self-determination; sanctity reading requires rejecting any intentional life-ending as categorically illegitimate regardless of consent. No single coherent framework can hold both life as inviolable AND patient sovereignty over life-termination."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "autonomy_reading",
+      "human_readable": "Autonomy Reading (Self-Determination as Foundational)",
+      "structural_delta": "Patient autonomy grounds legitimate end-of-life authority; state permits voluntary euthanasia with consent safeguards",
+      "primary_observable": "Legal permissibility of physician-assisted death with documented consent; consent verification infrastructure",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "suffering_patient",
+      "victim": "pressured_vulnerable",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Autonomy reading selected as first reading; instantiates high-ε constraint requiring consent infrastructure to separate voluntary from coerced death"
+    },
+    {
+      "claim_id": "sanctity_reading",
+      "human_readable": "Sanctity Reading (Life as Categorically Inviolable)",
+      "structural_delta": "Intrinsic sanctity of life grounds legitimate end-of-life authority; state prohibits all intentional life-ending",
+      "primary_observable": "Legal prohibition of euthanasia; criminal penalties for physicians; palliative care availability",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "moral_community",
+      "victim": "suffering_prolonged",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Sanctity reading selected as axiom-contradictory sibling; low-ε categorical prohibition producing opposite victim set"
+    },
+    {
+      "claim_id": "dignity_reading",
+      "human_readable": "Dignity Reading (Balanced Capabilities Approach)",
+      "structural_delta": "Human dignity balances autonomy with state duty to prevent coercion and ensure dignified conditions",
+      "primary_observable": "Euthanasia permitted under strict safeguards; mandatory palliative care access; independent review boards",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "dual_protection_framework",
+      "victim": "either_suffering_or_vulnerable",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Dignity reading selected as third reading; hybrid framework attempting to address both victim sets simultaneously"
+    },
+    {
+      "claim_id": "slippery_slope_mechanism",
+      "human_readable": "Slippery Slope Mechanism (Normalization of Death Choice)",
+      "structural_delta": "Permissive policy shifts social norms such that vulnerable populations experience implicit pressure to choose death",
+      "primary_observable": "Demographic distribution of euthanasia uptake; socioeconomic status correlation; disability advocacy resistance",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "vulnerable_populations",
+      "downstream_of": [
+        "autonomy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: embedded in autonomy reading's victim set analysis; mechanism rather than independent reading"
+    },
+    {
+      "claim_id": "pain_management_availability",
+      "human_readable": "Pain Management Availability (Palliative Care Infrastructure)",
+      "structural_delta": "Availability and quality of palliative care determines whether suffering-relief requires death or can be achieved through pain management",
+      "primary_observable": "Palliative care access rates; opioid prescription availability; hospice facility distribution",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sanctity_reading",
+        "dignity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream physical constraint affecting feasibility of sanctity/dignity positions but not a kernel reading itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "autonomy_reading",
+      "kernel_id": "end_of_life_authority",
+      "reading_id": "autonomy_reading"
+    },
+    {
+      "claim_id": "sanctity_reading",
+      "kernel_id": "end_of_life_authority",
+      "reading_id": "sanctity_reading"
+    },
+    {
+      "claim_id": "dignity_reading",
+      "kernel_id": "end_of_life_authority",
+      "reading_id": "dignity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "slippery_slope_mechanism",
+      "structural_delta": "Permissive policy shifts norms creating implicit death pressure on vulnerable populations",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism embedded within autonomy reading's victim set; not independent reading of kernel"
+    },
+    {
+      "claim_id": "pain_management_availability",
+      "structural_delta": "Palliative care infrastructure determines feasibility of suffering-relief without death",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream physical constraint affecting multiple readings but not a reading itself; omega variable for sanctity/dignity positions"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_coercion_detection",
+      "description": "Can consent infrastructure reliably distinguish voluntary choice from subtle economic/familial coercion? If not, autonomy reading's victim set expands unpredictably.",
+      "source": "Autonomy reading victim set boundary uncertainty"
+    },
+    {
+      "id": "omega_suffering_definition",
+      "description": "Is unbearable suffering objectively measurable or subjectively defined? Definition determines which sanctity reading victims are 'genuinely' suffering-prolonged versus treatable through palliative care.",
+      "source": "Sanctity reading victim set boundary uncertainty"
+    },
+    {
+      "id": "omega_dignity_operationalization",
+      "description": "Dignity reading requires balancing autonomy and protection but provides no algorithmic decision rule. Case-by-case assessment may collapse to either autonomy or sanctity in practice.",
+      "source": "Dignity reading structural instability"
+    },
+    {
+      "id": "omega_palliative_care_adequacy",
+      "description": "If universal high-quality palliative care were available, would sanctity reading's victim set (suffering-prolonged) approach zero? Physical constraint uncertainty affects reading viability.",
+      "source": "Deferred axis pain_management_availability; mountain validity for sanctity position"
+    },
+    {
+      "id": "omega_disability_rights_collision",
+      "description": "Disability rights advocates contest autonomy reading's framing of 'unbearable suffering' as reinforcing ableist devaluation of disabled lives. Victim/beneficiary classification contested.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): disability community objections absent from extraction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Kernel recognition confirmed: three readings instantiate genuinely different constraints with non-overlapping victim sets. Autonomy/sanctity pair meets axiom contradiction test. Dignity reading attempts synthesis but may collapse to one pole in practice (documented as omega_dignity_operationalization)."
+  },
+  "_seed_id": "euthanasia_kernel"
+}

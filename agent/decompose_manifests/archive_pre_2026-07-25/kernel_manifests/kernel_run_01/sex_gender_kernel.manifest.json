@@ -1,0 +1,237 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Bioethics / Gender Studies / Law",
+  "family_id": "sex_gender_category_kernel_2026",
+  "topic_summary": "Analysis of the contested category kernel 'woman/female' read as either sex-defined-by-biology or gender-defined-by-identity. Each reading emits constraints with different membership criteria and victim sets, creating incompatible policy outcomes in contexts like sports, prisons, shelters, and medical care. The kernel contest tests the coherence boundary between biological observables and self-identification as category-defining mechanisms.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "WHO and UN Human Rights Council (international bodies establishing gender-identity frameworks)",
+      "Transgender advocacy communities (promoting gender-identity-based rights)",
+      "Sex-based rights advocates (promoting biological-sex-based protections)",
+      "Medical and scientific communities (divided between biological and behavioral paradigms)",
+      "Women's shelters and single-sex facilities (sites of category-membership contestation)",
+      "Legal systems (adjudicating competing rights frameworks)",
+      "John Money and Rhoda Unger (historical architects of sex/gender distinction)",
+      "States rejecting SOGI rights (international resistance to gender-identity framework)"
+    ],
+    "key_tensions": [
+      "Biological sex observables vs self-identified gender identity as category-defining mechanism",
+      "Sex-based protections for females vs gender-identity-based access to female-designated spaces",
+      "Religious liberty vs gender-identity non-discrimination in employment law",
+      "International human rights consensus vs state sovereignty on SOGI rights"
+    ],
+    "key_mechanisms": [
+      "Legal sex classification systems (determine access to sex-segregated facilities and protections)",
+      "Gender-identity self-declaration policies (replace biological criteria with self-identification)",
+      "Violence against women tracking (victim set defined by biological sex vs gender identity)"
+    ],
+    "key_absences": [
+      "Intersex conditions as distinct from transgender identity (biological edge cases not addressed in binary framing)",
+      "Economic class stratification in access to gender-affirming medical interventions (resource constraints on identity expression)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The category 'woman/female' as the stabilized shared commitment that all parties argue about, where different readings change what the category constrains (who is protected, who is excluded, what rights apply)",
+    "authority_description": "Contested between biological science (chromosomal/anatomical authority), legal systems (statutory definitions), medical institutions (diagnostic criteria), and self-identification (individual autonomy as interpretive ground)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_with_suppression",
+    "is_contested_kernel": true,
+    "kernel_id": "woman_female_category",
+    "readings": [
+      {
+        "reading_id": "sex_biology_reading",
+        "commitment": "Category membership determined by chromosomal sex, reproductive anatomy, and developmental biology (XX/XY, gamete production capacity)",
+        "authority_grounding": "Biological science observables; evolutionary biology; medical diagnostics",
+        "sibling_readings": [
+          "gender_identity_reading",
+          "hybrid_contextual_reading"
+        ],
+        "expected_structural_delta": "Victim set = biological females (XX); excludes trans women from female-only spaces; high ε on physical safety in prisons/shelters; beneficiary = natal females seeking sex-based protections"
+      },
+      {
+        "reading_id": "gender_identity_reading",
+        "commitment": "Category membership determined by internal self-identification with gender category, independent of biological sex",
+        "authority_grounding": "Individual autonomy; psychological self-knowledge; anti-discrimination frameworks",
+        "sibling_readings": [
+          "sex_biology_reading",
+          "hybrid_contextual_reading"
+        ],
+        "expected_structural_delta": "Victim set = anyone identifying as woman/female; includes trans women in female-only spaces; high ε on dignity/recognition harms; beneficiary = transgender individuals seeking identity-based protections"
+      },
+      {
+        "reading_id": "hybrid_contextual_reading",
+        "commitment": "Category membership varies by context: biological sex for medical/sports/safety contexts, gender identity for social/legal recognition contexts",
+        "authority_grounding": "Pragmatic balancing of competing rights; context-specific risk assessment",
+        "sibling_readings": [
+          "sex_biology_reading",
+          "gender_identity_reading"
+        ],
+        "expected_structural_delta": "Victim set shifts by domain; moderate ε across multiple contexts; beneficiary = institutional actors seeking conflict-minimization; victim = both groups in contexts where their reading is subordinated"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sex_biology_reading",
+        "reading_b": "gender_identity_reading",
+        "basis": "No single coherent framework can hold both 'category membership is determined by chromosomal/anatomical observables' and 'category membership is determined by internal self-identification independent of observables' as simultaneously true for the same category in the same context. Accepting one as the category-defining mechanism requires rejecting the other as the category-defining mechanism."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sex_biology_reading",
+      "human_readable": "Sex-Biology Reading (Chromosomal/Anatomical Category Definition)",
+      "structural_delta": "Category membership determined by biological observables (chromosomes, reproductive anatomy, gamete type)",
+      "primary_observable": "Karyotype testing (XX/XY); reproductive anatomy; developmental sex characteristics",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": "natal_females_seeking_sex_based_protections",
+      "victim": "transgender_women_excluded_from_female_spaces",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with highest structural distinctiveness; mountain grounded in biological observables; defines one pole of the kernel contest"
+    },
+    {
+      "claim_id": "gender_identity_reading",
+      "human_readable": "Gender-Identity Reading (Self-Identification Category Definition)",
+      "structural_delta": "Category membership determined by internal self-identification independent of biological sex",
+      "primary_observable": "Self-declaration; legal sex marker change; social gender expression",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "transgender_individuals_seeking_identity_recognition",
+      "victim": "natal_females_losing_sex_based_protections",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading with axiom-contradictory relationship to sex_biology_reading; tangled_rope because authority grounding (individual autonomy) conflicts with institutional enforcement mechanisms"
+    },
+    {
+      "claim_id": "hybrid_contextual_reading",
+      "human_readable": "Hybrid-Contextual Reading (Domain-Specific Category Definition)",
+      "structural_delta": "Category membership varies by institutional context (biological for medical/sports, identity for social/legal)",
+      "primary_observable": "Policy variation across domains; institutional risk assessments; legal precedent fragmentation",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "institutional_actors_seeking_conflict_minimization",
+      "victim": "both_groups_in_subordinated_contexts",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Pragmatic synthesis reading that attempts to resolve axiom contradiction through domain partitioning; scaffold because it lacks stable authority grounding and depends on institutional capacity to maintain context boundaries"
+    },
+    {
+      "claim_id": "intersex_edge_case",
+      "human_readable": "Intersex Conditions as Biological Edge Cases",
+      "structural_delta": "Individuals with DSDs (differences of sex development) challenge binary sex classification",
+      "primary_observable": "Karyotype variations (XXY, XO, mosaicism); ambiguous genitalia; discordant sex characteristics",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "intersex_individuals_instrumentalized_in_debate",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: biological edge case affecting <0.02% of population; frequently invoked rhetorically but structurally distinct from transgender identity claims; piton of atrophied medical authority"
+    },
+    {
+      "claim_id": "economic_stratification_axis",
+      "human_readable": "Economic Stratification in Gender-Affirming Care Access",
+      "structural_delta": "Class-based differential access to medical interventions that enable gender identity expression",
+      "primary_observable": "Cost of hormone therapy, surgeries, legal name changes; insurance coverage disparities",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "low_income_transgender_individuals",
+      "downstream_of": [],
+      "feeds_into": [
+        "gender_identity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic constraint on identity-reading implementation but not on the kernel contest itself; rope of resource allocation rather than category definition"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sex_biology_reading",
+      "kernel_id": "woman_female_category",
+      "reading_id": "sex_biology_reading"
+    },
+    {
+      "claim_id": "gender_identity_reading",
+      "kernel_id": "woman_female_category",
+      "reading_id": "gender_identity_reading"
+    },
+    {
+      "claim_id": "hybrid_contextual_reading",
+      "kernel_id": "woman_female_category",
+      "reading_id": "hybrid_contextual_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "intersex_edge_case",
+      "structural_delta": "Intersex conditions challenge binary sex classification",
+      "hypothesis": "piton",
+      "deferral_reason": "Biological edge case distinct from transgender identity claims; affects <0.02% of population; frequently invoked rhetorically but not structurally central to kernel contest"
+    },
+    {
+      "claim_id": "economic_stratification_axis",
+      "structural_delta": "Class-based differential access to gender-affirming medical care",
+      "hypothesis": "rope",
+      "deferral_reason": "Economic constraint on identity-reading implementation but not on category definition itself; rope of resource allocation rather than kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_intersex_instrumentalization",
+      "description": "Intersex conditions are frequently invoked to challenge binary sex classification, but intersex advocacy groups report their experiences are instrumentalized in the trans rights debate. Does the biological edge case of DSDs actually support the gender-identity reading, or is it a distinct category being collapsed into the kernel contest?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis intersex_edge_case"
+    },
+    {
+      "id": "omega_hybrid_stability",
+      "description": "Can the hybrid-contextual reading maintain stable boundaries between 'biological-sex contexts' and 'gender-identity contexts' under institutional pressure? Or does it collapse into one reading dominating all contexts (scaffold failure)?",
+      "source": "Scaffold hypothesis for hybrid_contextual_reading"
+    },
+    {
+      "id": "omega_international_divergence",
+      "description": "States rejecting SOGI rights create jurisdictional fragmentation. Does this produce a global patchwork of incompatible legal sex definitions, or does one reading achieve hegemonic status through international institutions?",
+      "source": "Extraction anchor: states withdrawing from SOGI conversations"
+    },
+    {
+      "id": "omega_victim_set_measurement",
+      "description": "Violence-against-women statistics depend on victim-set definition. If gender-identity reading prevails, does male-on-female violence tracking collapse (because perpetrators can self-identify as women), or does a covert sex-based tracking system persist?",
+      "source": "Mechanism: violence tracking systems + distinct victim sets"
+    },
+    {
+      "id": "omega_medical_authority_erosion",
+      "description": "If gender-identity reading subordinates biological observables in medical contexts (e.g., cervical cancer screening for 'anyone with a cervix'), does this erode the authority of biological sex as a diagnostic category, or does medical practice covertly maintain sex-based protocols?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + medical community division"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings with axiom-contradictory relationship between sex_biology_reading and gender_identity_reading. Hybrid_contextual_reading is a pragmatic synthesis attempt (scaffold) rather than a third axiom-contradictory reading. Intersex edge case correctly identified as distinct from kernel contest and deferred."
+  },
+  "_seed_id": "sex_gender_kernel"
+}

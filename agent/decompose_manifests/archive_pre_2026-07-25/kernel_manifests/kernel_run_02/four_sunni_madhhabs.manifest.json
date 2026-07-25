@@ -1,0 +1,289 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Legal Theory / Institutional Pluralism",
+  "family_id": "sunni_madhahib_jurisprudential_method",
+  "topic_summary": "Analysis of the four Sunni schools of jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali) as a contested kernel case. Each school reads the same jurisprudential-method kernel (Quran, Hadith, Ijma, Qiyas) through different methodological hierarchies and epistemological commitments, grounding interpretive legitimacy differently while maintaining mutual recognition. The Mamluk institutional solution (four independent judicial positions) locked in pluralism rather than displacement.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Abu Hanifa (founder, Hanafi school, d. 767 CE, emphasized analogy and reason)",
+      "Malik ibn Anas (founder, Maliki school, d. 795 CE, emphasized Medinan practice)",
+      "Muhammad ibn Idris al-Shafi'i (founder, Shafi'i school, d. 820 CE, standardized methodology)",
+      "Ahmad ibn Hanbal (founder, Hanbali school, d. 855 CE, literalist approach)",
+      "Mamluk Sultanate (institutional patron, established four independent judicial positions 13th century)",
+      "Ahl al-Sunnah wa'l-Jamā'ah (Sunni orthodoxy, umbrella recognizing all four schools)",
+      "Ijma (scholarly consensus, secondary source)",
+      "Qiyas (analogical reasoning, contested weighting across schools)"
+    ],
+    "key_tensions": [
+      "Methodological hierarchy contest: Hanafi (analogy-heavy) vs Hanbali (literalist, minimal analogy)",
+      "Authority grounding: Maliki (Medinan practice as Urf) vs other three schools (reject Urf as independent source)",
+      "Mutual recognition asymmetry: Hanafi/Maliki/Shafi'i recognize each other and Hanbali; Hanbali initially refused reciprocal recognition"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The jurisprudential method for deriving Islamic law from foundational sources (Quran, Hadith, Ijma, Qiyas)",
+    "authority_description": "Each school grounds interpretive legitimacy through different methodological hierarchies and epistemological commitments while claiming fidelity to the same kernel",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "jurisprudential_method_kernel",
+    "readings": [
+      {
+        "reading_id": "hanafi_reading",
+        "commitment": "Analogy (qiyas) and reason (ra'y) as primary interpretive tools; Istihsan (juristic preference) as valid secondary source",
+        "authority_grounding": "Rationalist epistemology; legitimacy from systematic application of analogical reasoning to novel cases",
+        "sibling_readings": [
+          "maliki_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "High flexibility in rulings; broader victim set for innovation charges (bid'ah); lower suppression of analogical extension"
+      },
+      {
+        "reading_id": "maliki_reading",
+        "commitment": "Medinan practice (Urf of Medina) as independent authoritative source alongside Quran/Hadith",
+        "authority_grounding": "Historical continuity; legitimacy from proximity to Prophet's community and preservation of living tradition",
+        "sibling_readings": [
+          "hanafi_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Geographic constraint on authority (Medina-specific); practice-norm stabilization; moderate suppression of non-Medinan innovation"
+      },
+      {
+        "reading_id": "shafii_reading",
+        "commitment": "Standardized hierarchy: Quran > Hadith > Ijma > Qiyas; strict reliance on authenticated hadith over local practice",
+        "authority_grounding": "Methodological systematization; legitimacy from explicit textualist hierarchy and hadith authentication rigor",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Moderate flexibility; hadith corpus as constraint boundary; rejection of Urf and Istihsan as independent sources"
+      },
+      {
+        "reading_id": "hanbali_reading",
+        "commitment": "Literalist textualism; minimal analogical reasoning; rejection of juristic discretion (ra'y) and consensus of later generations",
+        "authority_grounding": "Traditionalist reaction to bid'ah; legitimacy from maximal fidelity to text and Salaf (early generations)",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "shafii_reading"
+        ],
+        "expected_structural_delta": "Lowest flexibility; broadest victim set for innovation (bid'ah); highest suppression of analogical extension and juristic discretion"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hanafi_reading",
+        "reading_b": "hanbali_reading",
+        "basis": "Hanafi grounds legitimacy in systematic analogical reasoning as valid interpretive extension; Hanbali treats analogical reasoning beyond minimal necessity as illegitimate innovation. No single framework can hold both 'analogy is a primary legitimate tool' and 'analogy beyond minimal use is bid'ah' simultaneously."
+      },
+      {
+        "reading_a": "maliki_reading",
+        "reading_b": "shafii_reading",
+        "basis": "Maliki treats Medinan practice (Urf) as independent authoritative source; Shafi'i explicitly rejects local practice as independent source, subordinating it to authenticated hadith. No single framework can hold both 'living tradition is authoritative' and 'only explicit text is authoritative' simultaneously."
+      },
+      {
+        "reading_a": "maliki_reading",
+        "reading_b": "hanbali_reading",
+        "basis": "Maliki grounds authority in continuity of Medinan living practice; Hanbali rejects later-generation consensus and practice as authoritative. No single framework can hold both 'post-Salaf community practice is authoritative' and 'only Salaf-era sources are authoritative' simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "hanafi_reading",
+      "human_readable": "Hanafi Reading (Rationalist Analogy)",
+      "structural_delta": "Analogy and reason as primary interpretive tools; Istihsan as valid secondary source",
+      "primary_observable": "Frequency of qiyas-based rulings in fiqh corpus; acceptance of Istihsan in legal reasoning",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "jurists_with_rationalist_training",
+      "victim": "strict_textualists",
+      "downstream_of": [
+        "jurisprudential_method_kernel"
+      ],
+      "feeds_into": [
+        "institutional_pluralism_lock_in"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest methodological flexibility; clearest axiom contradiction with Hanbali; represents rationalist pole of the kernel contest"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "human_readable": "Hanbali Reading (Literalist Textualism)",
+      "structural_delta": "Minimal analogical reasoning; rejection of juristic discretion and later-generation consensus",
+      "primary_observable": "Rejection rate of qiyas-based rulings; bid'ah accusations against other schools",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "traditionalist_scholars",
+      "victim": "rationalist_jurists",
+      "downstream_of": [
+        "jurisprudential_method_kernel"
+      ],
+      "feeds_into": [
+        "institutional_pluralism_lock_in"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest extractiveness; asymmetric recognition pattern (refused to recognize others initially); represents textualist pole; axiom-contradictory to Hanafi"
+    },
+    {
+      "claim_id": "institutional_pluralism_lock_in",
+      "human_readable": "Institutional Pluralism Lock-In (Mamluk Four-Judge System)",
+      "structural_delta": "State institutionalization of four independent judicial positions rather than single orthodoxy",
+      "primary_observable": "Mamluk judicial appointment records; persistence of four-school system post-Mamluk",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "all_four_schools",
+      "victim": null,
+      "downstream_of": [
+        "hanafi_reading",
+        "maliki_reading",
+        "shafii_reading",
+        "hanbali_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node explaining coexistence-without-displacement; captures the D2 break mechanism"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "human_readable": "Maliki Reading (Medinan Practice Authority)",
+      "structural_delta": "Medinan practice (Urf) as independent authoritative source alongside Quran/Hadith",
+      "primary_observable": "Citations of Medinan Urf in Maliki fiqh; geographic distribution of Maliki adherence",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "medinan_scholarly_lineage",
+      "victim": "non_medinan_jurists",
+      "downstream_of": [
+        "jurisprudential_method_kernel"
+      ],
+      "feeds_into": [
+        "institutional_pluralism_lock_in"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: axiom-contradictory to both Shafi'i and Hanbali, but lower structural distinctiveness than Hanafi/Hanbali pair; geographic constraint less generalizable"
+    },
+    {
+      "claim_id": "shafii_reading",
+      "human_readable": "Shafi'i Reading (Standardized Textualist Hierarchy)",
+      "structural_delta": "Explicit methodological hierarchy: Quran > Hadith > Ijma > Qiyas; strict hadith authentication",
+      "primary_observable": "Hadith authentication rigor in Shafi'i corpus; rejection of Urf/Istihsan",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "jurisprudential_method_kernel"
+      ],
+      "feeds_into": [
+        "institutional_pluralism_lock_in"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: middle position between Hanafi and Hanbali; methodological systematization important but less structurally extreme than the two poles"
+    },
+    {
+      "claim_id": "geographic_distribution_pattern",
+      "human_readable": "Geographic Distribution Pattern (Regional School Dominance)",
+      "structural_delta": "Non-random geographic clustering of school adherence (Hanafi in South Asia, Maliki in North Africa, etc.)",
+      "primary_observable": "Regional school dominance maps; correlation with trade routes and political patronage",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "institutional_pluralism_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of institutional lock-in rather than independent structural axis; historical contingency rather than methodological necessity"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hanafi_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "hanafi_reading"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "hanbali_reading"
+    },
+    {
+      "claim_id": "institutional_pluralism_lock_in",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "institutional_pluralism_lock_in"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "maliki_reading",
+      "structural_delta": "Medinan practice as independent authoritative source",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Axiom-contradictory to Shafi'i and Hanbali but lower structural distinctiveness than Hanafi/Hanbali rationalist/textualist poles; geographic constraint less generalizable than methodological extremes"
+    },
+    {
+      "claim_id": "shafii_reading",
+      "structural_delta": "Standardized textualist hierarchy with strict hadith authentication",
+      "hypothesis": "rope",
+      "deferral_reason": "Middle position between Hanafi rationalism and Hanbali literalism; methodological systematization important but structurally less extreme than the two poles selected"
+    },
+    {
+      "claim_id": "geographic_distribution_pattern",
+      "structural_delta": "Non-random regional clustering of school adherence",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence of institutional lock-in rather than independent structural axis; historical contingency rather than methodological necessity"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_shii_exclusion",
+      "description": "Why did Shi'i jurisprudential schools (Ja'fari, Zaydi, Ismaili) not achieve parallel institutional recognition within the Mamluk four-judge system despite sharing the same kernel sources? Does the Sunni/Shi'i split represent a different kernel (Imamate authority) rather than different readings of the jurisprudential-method kernel?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_zahiri_extinction",
+      "description": "The Zahiri school (literalist like Hanbali but rejecting qiyas entirely) existed contemporaneously but went extinct. Does this suggest institutional patronage (scaffold) rather than methodological coherence determined survival? If so, is institutional_pluralism_lock_in a piton (atrophied sovereignty of jurisprudential method) rather than scaffold?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_modern_displacement",
+      "description": "20th-21st century rise of Salafi/Wahhabi movements (Hanbali-derived but rejecting taqlid/madhab loyalty) and state codification of law. Does this represent drift-status shift from 'functioning' to 'partial' or 'absent'? Is the four-school system now a piton rather than functioning pluralism?",
+      "source": "F01 (Premise Drift) — temporal scope ambiguity"
+    },
+    {
+      "id": "omega_axiom_contradiction_stability",
+      "description": "How did axiom-contradictory readings (Hanafi analogy-primacy vs Hanbali analogy-minimization) coexist for centuries without one displacing the other? Does the Mamluk institutional solution (four independent judges) suppress rather than resolve the contradiction, making it a snare for jurisprudential coherence?",
+      "source": "§1.3-K Axiom Contradiction Declaration"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F01 detected: User prompt does not specify temporal scope. Analysis assumes classical period (9th-15th centuries) when four-school system was institutionally stable. Modern period (20th-21st century) may represent different constraint topology with Salafi rejection of madhab loyalty and state legal codification. Generated omega_modern_displacement to bound this temporal ambiguity."
+  },
+  "_seed_id": "four_sunni_madhhabs"
+}

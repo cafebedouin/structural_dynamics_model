@@ -1,0 +1,257 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Maritime Governance / Geopolitical Strategy",
+  "family_id": "unclos_territorial_contest_2026",
+  "topic_summary": "Analysis of the UN Convention on the Law of the Sea (UNCLOS) as a contested kernel where competing readings of geographic definitions and EEZ provisions generate structurally different maritime sovereignty constraints. The strict geographic reading ties sovereignty to natural features; the expansive artificial-island reading asserts that constructed features generate territorial waters, affecting resource extraction and military navigation rights.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "UNCLOS Treaty (1982 multilateral maritime law framework)",
+      "Permanent Court of Arbitration (adjudicatory body; issued 2016 South China Sea ruling)",
+      "China (expansive reading proponent; South China Sea island construction)",
+      "United States (strict reading proponent; freedom of navigation operations)",
+      "Coastal States (EEZ claimants under UNCLOS provisions)",
+      "International Tribunal for the Law of the Sea (ITLOS; dispute resolution mechanism)",
+      "Artificial Islands (constructed features in South China Sea and elsewhere)"
+    ],
+    "key_tensions": [
+      "Strict geographic interpretation (natural features only) vs expansive interpretation (artificial features generate sovereignty)",
+      "Coastal state resource jurisdiction vs freedom of navigation/overflight rights",
+      "Treaty compliance vs unilateral territorial expansion through construction"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "UNCLOS Articles 60, 121, and Part V provisions defining territorial sea, EEZ boundaries, and the legal status of islands versus rocks; the fixed treaty text establishing maritime zones",
+    "authority_description": "Interpretive legitimacy grounded in International Court of Justice and ITLOS jurisdiction, state practice, and treaty negotiation history; contested by states claiming domestic courts or unilateral interpretation authority",
+    "drift_status": "partial",
+    "candidate_pattern": "legal_constitutional_originalism",
+    "is_contested_kernel": true,
+    "kernel_id": "unclos_maritime_sovereignty",
+    "readings": [
+      {
+        "reading_id": "strict_geographic_reading",
+        "commitment": "Only naturally formed features above water at high tide qualify as islands generating territorial sea and EEZ; artificial construction does not alter legal status",
+        "authority_grounding": "Vienna Convention treaty interpretation rules; 2016 PCA South China Sea arbitral award; State Department legal advisors",
+        "sibling_readings": [
+          "expansive_construction_reading",
+          "hybrid_effective_control_reading"
+        ],
+        "expected_structural_delta": "Narrow sovereignty scope; artificial islands are installations without territorial sea; beneficiary: naval powers and non-claimant states; victim: expansionist coastal states"
+      },
+      {
+        "reading_id": "expansive_construction_reading",
+        "commitment": "Artificial island construction on submerged features or low-tide elevations generates de facto territorial waters through effective occupation and administrative control",
+        "authority_grounding": "Domestic legal frameworks (China's 1992 Territorial Sea Law); effective control doctrine; rejection of external adjudication",
+        "sibling_readings": [
+          "strict_geographic_reading",
+          "hybrid_effective_control_reading"
+        ],
+        "expected_structural_delta": "Expansive sovereignty scope; constructed features generate 12nm territorial sea or broader; beneficiary: island-constructing states; victim: neighboring claimants and freedom-of-navigation states"
+      },
+      {
+        "reading_id": "hybrid_effective_control_reading",
+        "commitment": "Natural features generate full EEZ/territorial sea; artificial features generate limited safety zones (500m) but may mature into territorial claims through prolonged effective control absent challenge",
+        "authority_grounding": "Article 60 safety zone provisions; acquiescence doctrine; pragmatic state practice in less-contested waters",
+        "sibling_readings": [
+          "strict_geographic_reading",
+          "expansive_construction_reading"
+        ],
+        "expected_structural_delta": "Graduated sovereignty based on feature type and duration of control; intermediate ε; beneficiary: states with construction capacity and regional power projection; victim: militarily weaker claimants"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_geographic_reading",
+        "reading_b": "expansive_construction_reading",
+        "basis": "No coherent legal framework can hold both that artificial construction is legally inert (strict reading) and that it generates territorial sovereignty (expansive reading); accepting one as true requires rejecting the other as false"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_geographic_reading",
+      "human_readable": "Strict Geographic Reading (Natural Features Only)",
+      "structural_delta": "Territorial sea and EEZ generation tied exclusively to naturally formed features above high-tide mark",
+      "primary_observable": "PCA arbitral awards; State Department legal interpretations; freedom-of-navigation operation frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "naval_powers_and_non_claimants",
+      "victim": "expansionist_coastal_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct beneficiary/victim structure; establishes baseline constraint for comparison"
+    },
+    {
+      "claim_id": "expansive_construction_reading",
+      "human_readable": "Expansive Construction Reading (Artificial Features Generate Sovereignty)",
+      "structural_delta": "Artificial island construction on submerged features generates de facto territorial waters through effective occupation",
+      "primary_observable": "China's territorial sea claims around Spratly artificial islands; rejection of PCA jurisdiction; domestic legal codification",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "island_constructing_states",
+      "victim": "neighboring_claimants_and_navigation_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest ε; structurally opposed to strict reading; generates distinct victim set"
+    },
+    {
+      "claim_id": "hybrid_effective_control_reading",
+      "human_readable": "Hybrid Effective Control Reading (Graduated Sovereignty by Duration)",
+      "structural_delta": "Natural features generate full zones; artificial features generate limited zones that may mature through unchallenged effective control",
+      "primary_observable": "State practice in Persian Gulf, Mediterranean; acquiescence patterns in low-contestation zones",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "regional_powers_with_construction_capacity",
+      "victim": "militarily_weaker_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Intermediate position capturing real-world drift; tangled_rope entanglement between treaty text and state practice"
+    },
+    {
+      "claim_id": "resource_extraction_asymmetry",
+      "human_readable": "Resource Extraction Asymmetry (EEZ Access Differential)",
+      "structural_delta": "Which reading prevails determines who can extract seabed hydrocarbons and fisheries in contested zones",
+      "primary_observable": "Oil/gas drilling permits issued; fishing fleet arrests; revenue differentials by reading",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "depends_on_reading",
+      "downstream_of": [
+        "strict_geographic_reading",
+        "expansive_construction_reading",
+        "hybrid_effective_control_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of readings; captured by victim sets in selected readings"
+    },
+    {
+      "claim_id": "naval_projection_constraint",
+      "human_readable": "Naval Projection Constraint (Freedom of Navigation vs Territorial Waters)",
+      "structural_delta": "Reading determines whether naval vessels can transit contested zones or must seek permission",
+      "primary_observable": "FON operation routes; permission requests; close-encounter incidents",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "depends_on_reading",
+      "downstream_of": [
+        "strict_geographic_reading",
+        "expansive_construction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream military consequence; covered by beneficiary analysis in readings"
+    },
+    {
+      "claim_id": "enforcement_legitimacy_gap",
+      "human_readable": "Enforcement Legitimacy Gap (Compliance Without Coercive Mechanism)",
+      "structural_delta": "UNCLOS lacks binding enforcement; compliance depends on voluntary adherence or unilateral coercion",
+      "primary_observable": "PCA ruling compliance rates; sanctioning mechanisms (none codified); bilateral pressure patterns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_geographic_reading",
+        "expansive_construction_reading",
+        "hybrid_effective_control_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural precondition (mountain enabling reading divergence) but lower distinctiveness than three selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strict_geographic_reading",
+      "kernel_id": "unclos_maritime_sovereignty",
+      "reading_id": "strict_geographic_reading"
+    },
+    {
+      "claim_id": "expansive_construction_reading",
+      "kernel_id": "unclos_maritime_sovereignty",
+      "reading_id": "expansive_construction_reading"
+    },
+    {
+      "claim_id": "hybrid_effective_control_reading",
+      "kernel_id": "unclos_maritime_sovereignty",
+      "reading_id": "hybrid_effective_control_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "resource_extraction_asymmetry",
+      "structural_delta": "EEZ access differential determines extraction rights in contested zones",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of readings; victim sets captured in selected reading analyses"
+    },
+    {
+      "claim_id": "naval_projection_constraint",
+      "structural_delta": "Freedom of navigation vs territorial water permission requirements",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream military consequence; beneficiary structure covered in readings"
+    },
+    {
+      "claim_id": "enforcement_legitimacy_gap",
+      "structural_delta": "UNCLOS compliance without binding coercive enforcement",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural precondition enabling reading divergence; lower distinctiveness than selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_acquiescence_threshold",
+      "description": "At what duration does unchallenged effective control mature into accepted territorial claim under hybrid reading? 5 years? 20? Highly contested; affects constraint transition timing.",
+      "source": "Hybrid reading authority_grounding; Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_non_state_actors",
+      "description": "UNCLOS framework addresses states only; private maritime security firms, NGO conservation patrols, and piracy operate in legal gray zones. Readings affect their actionability differently.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_climate_submergence",
+      "description": "Rising seas may submerge currently-exposed natural features. Does a formerly-valid island lose EEZ if it becomes submerged? Strict reading says yes; expansive reading may assert historical claim preservation.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + extraction absence climate_impact"
+    },
+    {
+      "id": "omega_u_s_non_ratification",
+      "description": "United States has not ratified UNCLOS despite advocating strict reading. Does non-party status undermine interpretive authority? Affects legitimacy of FON operations as treaty enforcement.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction absence u_s_ratification_status"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "If state practice under hybrid reading converges toward expansive outcomes (acquiescence becomes norm), the three readings may collapse to two. Monitor for drift-driven kernel simplification.",
+      "source": "§1.3-K coherence check; drift_status=partial indicates active interpretive layer absorption"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "All checks passed. Three readings identified with structurally distinct ε bins and beneficiary/victim sets. Axiom contradiction declared between strict and expansive readings (natural-only vs construction-generates-sovereignty). Hybrid reading captures tangled_rope state practice drift. Deferred axes are legitimate downstream consequences. Five omegas bound acquiescence thresholds, non-state actors, climate submergence, U.S. ratification status, and reading collapse risk."
+  },
+  "_seed_id": "unclos_2026"
+}

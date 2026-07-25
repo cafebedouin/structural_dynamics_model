@@ -1,0 +1,259 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Rights Jurisprudence",
+  "family_id": "second_amendment_kernel_2026",
+  "topic_summary": "Analysis of the Second Amendment as a contested kernel where identical constitutional text ('A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed') is read as either an individual right to firearms ownership or a collective right tied to militia service. Each reading instantiates a structurally different constraint with distinct beneficiary/victim sets and enforcement mechanisms.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Second Amendment text (constitutional kernel: 27 words, ratified 1791)",
+      "Supreme Court (interpretive authority post-Marbury; final arbiter of constitutional meaning)",
+      "Individual rights advocates (NRA, gun rights organizations, originalist scholars)",
+      "Collective rights advocates (gun control organizations, living constitutionalists)",
+      "State militias / National Guard (institutional embodiment of 'well regulated Militia')",
+      "Federal/state legislatures (regulatory authority constrained by judicial interpretation)"
+    ],
+    "key_tensions": [
+      "Prefatory clause ('well regulated Militia') vs operative clause ('right of the people') — grammatical structure contested as limiting or explanatory",
+      "Originalist textualism vs living constitutionalism — interpretive methodology determines which historical context controls"
+    ],
+    "key_mechanisms": [
+      "Judicial review (Supreme Court opinions establish binding precedent; Heller 2008 and McDonald 2010 instantiated individual-right reading)",
+      "Stare decisis (precedent stability vs overruling; individual-right reading now embedded but contested)",
+      "Legislative constraint (gun regulations must survive strict/intermediate scrutiny under current doctrine)"
+    ],
+    "key_absences": [
+      "Absence of explicit individual/collective distinction in text itself — ambiguity is structural feature, not drafting error",
+      "Absence of militia-service requirement in post-Heller doctrine — prefatory clause treated as non-operative"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Second Amendment text as fixed constitutional commitment requiring interpretation to determine scope of protected conduct",
+    "authority_description": "Supreme Court holds interpretive monopoly via judicial review; legitimacy grounded in constitutional role rather than democratic mandate",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Monopoly (Pattern 3)",
+    "is_contested_kernel": true,
+    "kernel_id": "second_amendment_scope",
+    "readings": [
+      {
+        "reading_id": "individual_right_reading",
+        "commitment": "Second Amendment protects individual right to firearms ownership unconnected to militia service",
+        "authority_grounding": "Originalist textualism (Heller majority: operative clause controls; 'people' = individuals; prefatory clause explanatory only)",
+        "sibling_readings": [
+          "collective_right_reading",
+          "civic_right_reading"
+        ],
+        "expected_structural_delta": "All individuals enter beneficiary set; state regulatory authority heavily constrained; high ε (mod-high) due to broad coverage and strict scrutiny"
+      },
+      {
+        "reading_id": "collective_right_reading",
+        "commitment": "Second Amendment protects state authority to maintain militias, not individual ownership rights",
+        "authority_grounding": "Structural constitutionalism (pre-Heller doctrine: prefatory clause controls; right belongs to states collectively)",
+        "sibling_readings": [
+          "individual_right_reading",
+          "civic_right_reading"
+        ],
+        "expected_structural_delta": "States/militias in beneficiary set, individuals excluded; broad regulatory authority; low ε due to narrow institutional scope"
+      },
+      {
+        "reading_id": "civic_right_reading",
+        "commitment": "Second Amendment protects individual right conditioned on civic militia participation",
+        "authority_grounding": "Civic republican synthesis (middle position: individual right exists but tied to collective defense function)",
+        "sibling_readings": [
+          "individual_right_reading",
+          "collective_right_reading"
+        ],
+        "expected_structural_delta": "Militia-eligible individuals in beneficiary set; regulatory authority moderate; moderate ε with service-based gating"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "individual_right_reading",
+      "human_readable": "Individual Right Reading (Heller Doctrine)",
+      "structural_delta": "Constitutional text read to protect individual firearms ownership independent of militia service or state authority",
+      "primary_observable": "Scope of protected conduct (individual ownership vs militia service); level of scrutiny applied to regulations (strict vs rational basis)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_gun_owners",
+      "victim": "gun_control_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant current doctrine post-Heller; highest beneficiary set size; instantiates core kernel contest"
+    },
+    {
+      "claim_id": "collective_right_reading",
+      "human_readable": "Collective Right Reading (Pre-Heller Doctrine)",
+      "structural_delta": "Constitutional text read to protect state militia authority rather than individual ownership rights",
+      "primary_observable": "Locus of right-holder (state institutions vs individuals); regulatory authority scope (broad vs narrow)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "state_regulatory_authority",
+      "victim": "individual_gun_owners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural opposite of individual reading; demonstrates kernel's capacity to emit contradictory constraints from identical text"
+    },
+    {
+      "claim_id": "civic_right_reading",
+      "human_readable": "Civic Right Reading (Republican Synthesis)",
+      "structural_delta": "Constitutional text read to protect individual right conditioned on civic militia participation",
+      "primary_observable": "Gating mechanism (service requirement vs none); beneficiary set boundary (militia-eligible vs all individuals)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "militia_eligible_citizens",
+      "victim": "non_militia_eligible_individuals",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position; demonstrates kernel's capacity for intermediate readings; historically significant minority view"
+    },
+    {
+      "claim_id": "originalist_methodology",
+      "human_readable": "Originalist Interpretive Methodology",
+      "structural_delta": "Constitutional meaning fixed at ratification (1791); historical practice and founding-era sources control",
+      "primary_observable": "Weight given to 18th-century sources vs contemporary policy concerns in judicial opinions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "individual_right_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological mountain upstream of individual reading but not itself a reading of the kernel"
+    },
+    {
+      "claim_id": "living_constitutionalism",
+      "human_readable": "Living Constitution Methodology",
+      "structural_delta": "Constitutional meaning evolves with contemporary values and social conditions",
+      "primary_observable": "Weight given to contemporary policy concerns vs founding-era sources in judicial opinions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collective_right_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological mountain upstream of collective reading but not itself a reading of the kernel"
+    },
+    {
+      "claim_id": "stare_decisis_constraint",
+      "human_readable": "Stare Decisis Constraint (Precedent Stability)",
+      "structural_delta": "Prior Supreme Court interpretations constrain future readings via precedent doctrine",
+      "primary_observable": "Overruling frequency; weight given to precedent vs original meaning in opinions",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "individual_right_reading",
+        "collective_right_reading",
+        "civic_right_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects all readings but is meta-constraint on interpretive authority rather than reading of kernel itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "individual_right_reading",
+      "kernel_id": "second_amendment_scope",
+      "reading_id": "individual_right_reading"
+    },
+    {
+      "claim_id": "collective_right_reading",
+      "kernel_id": "second_amendment_scope",
+      "reading_id": "collective_right_reading"
+    },
+    {
+      "claim_id": "civic_right_reading",
+      "kernel_id": "second_amendment_scope",
+      "reading_id": "civic_right_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "originalist_methodology",
+      "structural_delta": "Constitutional meaning fixed at ratification",
+      "hypothesis": "mountain",
+      "deferral_reason": "Methodological mountain upstream of individual reading but not itself a reading of the Second Amendment kernel; interpretive framework rather than substantive constraint"
+    },
+    {
+      "claim_id": "living_constitutionalism",
+      "structural_delta": "Constitutional meaning evolves with contemporary values",
+      "hypothesis": "mountain",
+      "deferral_reason": "Methodological mountain upstream of collective reading but not itself a reading of the Second Amendment kernel; interpretive framework rather than substantive constraint"
+    },
+    {
+      "claim_id": "stare_decisis_constraint",
+      "structural_delta": "Prior interpretations constrain future readings via precedent",
+      "hypothesis": "rope",
+      "deferral_reason": "Meta-constraint on interpretive authority affecting all readings; not itself a reading of the kernel; omega material on precedent stability"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_prefatory_clause_function",
+      "description": "Does the prefatory clause ('well regulated Militia') limit the operative clause or merely explain one purpose? Grammatical structure contested; no consensus among linguists or historians. Individual reading treats as explanatory; collective reading treats as limiting. Civic reading treats as conditional.",
+      "source": "Kernel ambiguity (structural feature of 27-word text)"
+    },
+    {
+      "id": "omega_people_referent",
+      "description": "Does 'the people' in Second Amendment refer to individuals (as in First/Fourth Amendments) or collective body politic? Individual reading: individuals. Collective reading: people-as-state. Civic reading: people-as-militia-eligible-citizens. Same term, three referents.",
+      "source": "Kernel ambiguity (term appears in multiple amendments with potentially different meanings)"
+    },
+    {
+      "id": "omega_heller_stability",
+      "description": "Is Heller (2008) stable precedent or vulnerable to overruling? Stare decisis doctrine suggests stability, but 5-4 decision and ongoing political contestation create uncertainty. If overruled, collective reading could return as dominant doctrine.",
+      "source": "Deferred axis: stare_decisis_constraint"
+    },
+    {
+      "id": "omega_militia_obsolescence",
+      "description": "Are state militias (now National Guard) structurally obsolete for constitutional interpretation? If militia clause is non-operative (Heller position), does this render collective reading historically moot? Or does obsolescence itself argue for living constitutionalism?",
+      "source": "Absence inventory: militia-service requirement absent in post-Heller doctrine"
+    },
+    {
+      "id": "omega_intermediate_scrutiny",
+      "description": "Post-Heller cases apply varying levels of scrutiny (strict, intermediate, rational basis) to gun regulations. No consensus on standard. This uncertainty affects ε measurement for individual reading — constraint may be weaker in practice than doctrine suggests.",
+      "source": "Primary observable uncertainty: level of scrutiny applied to regulations"
+    },
+    {
+      "id": "omega_civic_reading_viability",
+      "description": "Civic right reading has no current Supreme Court support but represents coherent structural position. Could emerge if Court seeks middle ground or if militia service becomes politically salient. Currently speculative but structurally valid.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): civic reading benefits neither current coalition"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings emit genuinely different constraints (different beneficiary sets, different ε values, different regulatory authority scope) from identical 27-word text. Readings are structurally independent (not merely different opinions about same constraint). Deferred axes are methodological mountains and meta-constraints, not alternative readings of the kernel itself."
+  },
+  "_seed_id": "second_amendment_reading"
+}

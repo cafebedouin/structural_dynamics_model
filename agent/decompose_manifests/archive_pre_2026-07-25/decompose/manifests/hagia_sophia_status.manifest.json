@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Cultural Heritage / Sovereignty / Religious Authority",
+  "family_id": "hagia_sophia_status_2024",
+  "topic_summary": "Analysis of the Hagia Sophia's contested status between secular museum (1934-2020) and active mosque (2020-present). The 1934 conversion to museum under Atatürk framed the site as universal cultural heritage; the 2020 reconversion to mosque under Erdoğan reasserted Islamic sovereignty and worship primacy. The substrate—the physical monument with its layered Byzantine-Ottoman history—persists, but readings differ on what authority legitimately controls it and for whose benefit.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Hagia Sophia (6th century Byzantine cathedral → Ottoman mosque 1453 → secular museum 1934 → mosque 2020)",
+      "Turkish State (sovereign authority over the site)",
+      "UNESCO (international cultural heritage regime)",
+      "Atatürk / Turkish Republic founding ideology (secularist modernization)",
+      "Erdoğan / AKP (political Islamist movement)",
+      "Eastern Orthodox diaspora (historical claimants to Byzantine legacy)"
+    ],
+    "key_tensions": [
+      "Secularist universalism vs Islamic sovereignty (framing of legitimate site control)",
+      "National patrimony vs global heritage (Turkish state vs UNESCO jurisdiction claims)",
+      "Historical layering vs conquest priority (Byzantine foundation vs Ottoman conquest as legitimating event)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Hagia Sophia as physical substrate with layered Byzantine-Ottoman history, claimed as both universal cultural heritage and site of Islamic conquest",
+    "authority_description": "Turkish state sovereignty via court rulings interpreting founding-era secularist commitments (1934) versus executive reinterpretation of conquest rights (2020)",
+    "drift_status": "partial",
+    "candidate_pattern": "Pattern 1: Founding Text Capture (secularist constitution) overlaid with Pattern 5: Conquest Kernel Claim (1453 as legitimating event)",
+    "is_contested_kernel": true,
+    "kernel_id": "hagia_sophia_substrate",
+    "readings": [
+      {
+        "reading_id": "universal_heritage_reading",
+        "commitment": "The site's legitimacy derives from its status as shared human cultural heritage transcending any single religious or national claim",
+        "authority_grounding": "Atatürk's secularist state-building project plus UNESCO World Heritage regime; authority grounded in modernist universalism",
+        "sibling_readings": [
+          "islamic_sovereignty_reading",
+          "orthodox_restitution_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: global tourism/scholarship sector, secularist Turkish elites. Victim set: Islamic worship claims suppressed. Authority: technocratic museum administration under secular constitutional framework. High ε (tourism revenue, ideological signal of secular modernity)."
+      },
+      {
+        "reading_id": "islamic_sovereignty_reading",
+        "commitment": "The site's legitimacy derives from the 1453 Ottoman conquest and continuous Islamic endowment (waqf), making it sovereign Islamic worship space under Turkish state authority",
+        "authority_grounding": "Conquest rights plus Turkish state sovereignty; authority grounded in post-Ottoman nation-state's right to define its own cultural patrimony and religious practice",
+        "sibling_readings": [
+          "universal_heritage_reading",
+          "orthodox_restitution_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: AKP political coalition, Turkish Islamic constituency, broader Sunni ummah symbolically. Victim set: non-Muslim visitors (access restrictions), UNESCO regime (jurisdiction denied), secularist Turks (ideological defeat). Authority: executive decree validated by court reversal of 1934 ruling. Moderate-high ε (political consolidation, religious identity signal, diplomatic friction cost)."
+      },
+      {
+        "reading_id": "orthodox_restitution_reading",
+        "commitment": "The site's legitimacy derives from its founding as a Christian cathedral and should return to Orthodox ecclesiastical control or remain neutral to honor its Byzantine origins",
+        "authority_grounding": "Historical precedent of pre-conquest Christian status; authority grounded in civilizational continuity argument and restitution norms (though no viable enforcement mechanism exists)",
+        "sibling_readings": [
+          "universal_heritage_reading",
+          "islamic_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: Eastern Orthodox diaspora (symbolic), Greek state (diplomatic leverage). Victim set: Turkish sovereignty (external claim on national territory), Islamic worship continuity (interrupted again). Authority: external normative claim with no enforcement; practically dormant but ideologically active in Greek-Turkish tensions. Low ε in material terms (no realistic implementation pathway) but symbolically generative."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "universal_heritage_reading",
+        "reading_b": "islamic_sovereignty_reading",
+        "basis": "Universal heritage reading requires the site transcend sectarian ownership claims (neutrality axiom); Islamic sovereignty reading requires the site function as active worship space under religious authority (sectarian primacy axiom). No framework can simultaneously hold both as true: a neutral museum cannot be a functioning mosque, and a functioning mosque cannot maintain neutrality toward competing religious claims."
+      },
+      {
+        "reading_a": "islamic_sovereignty_reading",
+        "reading_b": "orthodox_restitution_reading",
+        "basis": "Islamic sovereignty reading grounds legitimacy in conquest and continuous Islamic endowment (conquest-as-title axiom); Orthodox restitution reading grounds legitimacy in pre-conquest Christian foundation and denies conquest as legitimate title transfer (conquest-as-illegitimate axiom). These axioms are mutually exclusive: accepting conquest as legitimate title requires rejecting restitution claims, and vice versa."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "universal_heritage_reading",
+      "human_readable": "Universal Heritage Reading (Secular Museum as Neutral Ground)",
+      "structural_delta": "Site legitimacy grounded in transcendent cultural value, neutralizing sectarian claims",
+      "primary_observable": "Museum governance structure (1934-2020); UNESCO World Heritage designation; visitor access policies; religious symbol display rules",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "secularist_elites_tourism_sector",
+      "victim": "islamic_worship_constituency",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes the 1934-2020 baseline governance structure and beneficiary set"
+    },
+    {
+      "claim_id": "islamic_sovereignty_reading",
+      "human_readable": "Islamic Sovereignty Reading (Mosque as Conquest Right)",
+      "structural_delta": "Site legitimacy grounded in 1453 conquest and Ottoman waqf endowment, reasserted via 2020 executive action",
+      "primary_observable": "2020 court ruling reversing 1934 decree; mosque operational status; prayer call reinstatement; Christian iconography covering during worship",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "akp_coalition_islamic_constituency",
+      "victim": "unesco_regime_secularist_turks",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: direct contestation of first reading, highest centrality due to current operational status"
+    },
+    {
+      "claim_id": "orthodox_restitution_reading",
+      "human_readable": "Orthodox Restitution Reading (Christian Cathedral Legacy)",
+      "structural_delta": "Site legitimacy grounded in Byzantine Christian foundation, denying conquest as legitimate title transfer",
+      "primary_observable": "Greek state diplomatic protests; Ecumenical Patriarch statements; Orthodox diaspora symbolic claims; absence of enforcement mechanism",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "orthodox_diaspora_greek_state",
+      "victim": "turkish_sovereignty",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: completes the triadic contest; low material ε but high symbolic generativity in regional diplomatic tensions"
+    },
+    {
+      "claim_id": "tourism_revenue_dependency",
+      "human_readable": "Tourism Revenue Dependency (Economic Incentive Structure)",
+      "structural_delta": "Site's economic value as tourist attraction creates material incentive for access maximization",
+      "primary_observable": "Annual visitor numbers (pre-2020 vs post-2020); ticket revenue vs waqf donation models; hospitality sector employment dependence",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "universal_heritage_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: material constraint feeding universal_heritage_reading but lower structural distinctiveness than three selected readings"
+    },
+    {
+      "claim_id": "diplomatic_signaling_axis",
+      "human_readable": "Diplomatic Signaling Axis (Site Status as Foreign Policy Tool)",
+      "structural_delta": "Site's international visibility makes status changes high-leverage diplomatic signals",
+      "primary_observable": "Timing of 2020 conversion relative to Turkey-EU negotiations; responses from Orthodox-majority states; UNESCO reaction protocols",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "islamic_sovereignty_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: secondary instrumental axis; captured indirectly via islamic_sovereignty_reading beneficiary structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "universal_heritage_reading",
+      "kernel_id": "hagia_sophia_substrate",
+      "reading_id": "universal_heritage_reading"
+    },
+    {
+      "claim_id": "islamic_sovereignty_reading",
+      "kernel_id": "hagia_sophia_substrate",
+      "reading_id": "islamic_sovereignty_reading"
+    },
+    {
+      "claim_id": "orthodox_restitution_reading",
+      "kernel_id": "hagia_sophia_substrate",
+      "reading_id": "orthodox_restitution_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "tourism_revenue_dependency",
+      "structural_delta": "Economic value as tourist attraction incentivizes access maximization",
+      "hypothesis": "rope",
+      "deferral_reason": "Material constraint feeding universal_heritage_reading but lower structural distinctiveness than kernel readings"
+    },
+    {
+      "claim_id": "diplomatic_signaling_axis",
+      "structural_delta": "International visibility makes status changes high-leverage diplomatic signals",
+      "hypothesis": "piton",
+      "deferral_reason": "Secondary instrumental axis captured via islamic_sovereignty_reading beneficiary structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_coexists_edge_type",
+      "description": "Universal_heritage and islamic_sovereignty readings both remain socially live despite axiom contradiction—this is licensed plurality. The coexists_with edge type documents this: contradictory axioms, stable coexistence, no synthesis pathway. Orthodox_restitution has foreclosed edge (dormant in enforcement terms).",
+      "source": "§1.3-K Axiom Contradiction Declaration + §3 Independence Testing"
+    },
+    {
+      "id": "omega_waqf_legal_status",
+      "description": "Does the Ottoman waqf endowment have continuous legal force, or was it legally extinguished by the 1934 decree? If extinguished, the 2020 reconversion is new policy (Piton) rather than restoration of standing law (Rope). Turkish jurisprudence treats waqf as never extinguished, but this remains contested.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)—legal continuity assumption unexamined in readings"
+    },
+    {
+      "id": "omega_iconography_covering",
+      "description": "Does the practice of covering Christian mosaics during Muslim prayer constitute a hybrid accommodation (reducing ε of both readings) or a scaffold toward eventual permanent removal? Current reversible covering suggests hybrid; future trajectory uncertain.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)—operational compromise may mask future extraction"
+    },
+    {
+      "id": "omega_unesco_enforcement",
+      "description": "UNESCO World Heritage status remains formally intact despite functional mosque conversion. Does this create a dormant enforcement mechanism (Scaffold) if Turkish state seeks future EU accession, or is it a permanently defanged constraint (Piton of international law without enforcement)?",
+      "source": "Deferred axis diplomatic_signaling_axis + F34 domain competence boundary"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Turkish constitutional law and Ottoman waqf jurisprudence exceed training data competence. Generated omega_waqf_legal_status to bound this uncertainty. Orthodox_restitution_reading's low ε classification assumes no enforcement pathway exists, but international law mechanisms (e.g., European Court of Human Rights precedent on religious site restitution) may exist beyond model's visibility."
+  },
+  "_seed_id": "hagia_sophia_status"
+}

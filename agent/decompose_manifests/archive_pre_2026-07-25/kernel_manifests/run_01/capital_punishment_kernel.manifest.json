@@ -1,0 +1,255 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Criminal Justice / Political Philosophy / Constitutional Law",
+  "family_id": "capital_punishment_kernel_2026",
+  "topic_summary": "Analysis of capital punishment as a contested kernel where the state's authority to execute is read through three incompatible interpretive frameworks: retributive justice (execution as moral restoration), deterrence (execution as crime prevention instrument), and abolition (execution as impermissible state violence). Each reading instantiates a structurally different constraint with distinct beneficiary/victim sets and extractiveness profiles.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "State execution authority (monopoly on legitimate lethal force)",
+      "Convicted capital offenders (subjects of execution)",
+      "Victims' families (claimed beneficiaries under retribution reading)",
+      "Future potential victims (claimed beneficiaries under deterrence reading)",
+      "Wrongfully convicted (victims under all readings, magnitude varies)",
+      "Abolitionist movements (challengers to kernel legitimacy)"
+    ],
+    "key_tensions": [
+      "Retributive closure vs utilitarian prevention (incompatible justificatory grounds)",
+      "State sovereignty vs individual inviolability (authority to kill vs right not to be killed)",
+      "Procedural legitimacy vs substantive prohibition (can-we-do-it-fairly vs should-we-do-it-at-all)"
+    ],
+    "key_mechanisms": [
+      "Death penalty statutes (legal authorization framework)",
+      "Appellate review systems (error correction mechanisms)",
+      "Victim impact statements (retributive legitimation ritual)",
+      "Deterrence studies (empirical justification apparatus)"
+    ],
+    "key_absences": [
+      "International law constraints (most peer nations abolished; U.S. exceptionalism unexamined)",
+      "Execution method evolution (lethal injection drug shortages forcing return to older methods; reveals scaffold instability)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The state's claimed authority to execute convicted offenders as legitimate exercise of sovereign power",
+    "authority_description": "Legislative enactment plus judicial review; legitimacy grounded in constitutional text (Eighth Amendment 'cruel and unusual' standard) and democratic mandate",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_authority_CS",
+    "is_contested_kernel": true,
+    "kernel_id": "state_execution_authority",
+    "readings": [
+      {
+        "reading_id": "retributive_reading",
+        "commitment": "Execution restores moral balance by imposing proportionate punishment for heinous crimes",
+        "authority_grounding": "Retributive justice theory; lex talionis tradition; victim-centered moral restoration",
+        "sibling_readings": [
+          "deterrence_reading",
+          "abolition_reading"
+        ],
+        "expected_structural_delta": "Victims' families enter beneficiary set; executed offender is legitimate cost; high ε from moral-restoration requirement (cannot substitute imprisonment); wrongful execution is tragic error but does not invalidate framework"
+      },
+      {
+        "reading_id": "deterrence_reading",
+        "commitment": "Execution prevents future murders by raising the cost of capital crimes",
+        "authority_grounding": "Utilitarian calculus; Beccaria deterrence theory; public safety mandate",
+        "sibling_readings": [
+          "retributive_reading",
+          "abolition_reading"
+        ],
+        "expected_structural_delta": "Future potential victims enter beneficiary set; executed offender is instrumental cost; moderate ε from deterrence-efficacy requirement (can substitute if life-without-parole deters equally); wrongful execution is utilitarian loss requiring error-rate minimization"
+      },
+      {
+        "reading_id": "abolition_reading",
+        "commitment": "State execution is categorically impermissible regardless of crime severity or procedural safeguards",
+        "authority_grounding": "Human dignity inviolability; international human rights law; Eighth Amendment evolving standards",
+        "sibling_readings": [
+          "retributive_reading",
+          "deterrence_reading"
+        ],
+        "expected_structural_delta": "All executed persons enter victim set (including guilty); no legitimate beneficiaries (retribution/deterrence rejected as justifications); very high ε from categorical prohibition (no substitution possible; life imprisonment is qualitatively different); wrongful execution is proof of systemic illegitimacy"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "retributive_reading",
+      "human_readable": "Retributive Justice Reading (Execution as Moral Restoration)",
+      "structural_delta": "Execution restores moral balance through proportionate punishment; victims' families are primary beneficiaries",
+      "primary_observable": "Victim impact statement prevalence in capital sentencing; public support for execution-as-closure",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "victims_families",
+      "victim": "executed_offender",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Distinct beneficiary structure (victims' families); high ε from non-substitutability of moral restoration claim"
+    },
+    {
+      "claim_id": "deterrence_reading",
+      "human_readable": "Deterrence Instrument Reading (Execution as Crime Prevention)",
+      "structural_delta": "Execution prevents future murders by raising cost of capital crimes; future potential victims are beneficiaries",
+      "primary_observable": "Deterrence study methodologies; murder rate differentials between death penalty and abolitionist jurisdictions",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "future_potential_victims",
+      "victim": "executed_offender",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Different beneficiary set and ε profile from retributive reading; utilitarian vs deontological grounding"
+    },
+    {
+      "claim_id": "abolition_reading",
+      "human_readable": "Categorical Prohibition Reading (Execution as Impermissible State Violence)",
+      "structural_delta": "State execution is categorically impermissible; all executed persons are victims regardless of guilt",
+      "primary_observable": "International abolitionist treaty ratifications; Eighth Amendment evolving standards doctrine",
+      "epsilon_bin": "v_high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "all_executed_persons",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest ε; inverts victim set (includes guilty); categorical prohibition vs conditional justification"
+    },
+    {
+      "claim_id": "wrongful_execution_risk",
+      "human_readable": "Wrongful Execution Risk (Irreversible Error in Fallible System)",
+      "structural_delta": "Execution forecloses error correction; wrongful execution rate is non-zero and unknowable",
+      "primary_observable": "DNA exoneration rates; post-execution evidence discoveries; appellate reversal rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "wrongfully_executed",
+      "downstream_of": [],
+      "feeds_into": [
+        "retributive_reading",
+        "deterrence_reading",
+        "abolition_reading"
+      ],
+      "centrality_score": 6,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects all three readings but does not constitute independent reading of kernel; captured as omega_error_rate_unknowability"
+    },
+    {
+      "claim_id": "racial_disparity_extraction",
+      "human_readable": "Racial Disparity as Extraction (Disproportionate Black/Latino Death Sentences)",
+      "structural_delta": "Death penalty application exhibits racial disparities in charging, sentencing, and victim-race effects",
+      "primary_observable": "Death row demographics vs general population; victim-race sentencing differentials",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "white_victims_families",
+      "victim": "black_latino_defendants",
+      "downstream_of": [],
+      "feeds_into": [
+        "retributive_reading",
+        "deterrence_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high ε but operates as implementation-layer snare rather than kernel reading; captured in omega_disparity_as_implementation_vs_essence"
+    },
+    {
+      "claim_id": "execution_method_scaffold",
+      "human_readable": "Execution Method Scaffold (Lethal Injection Drug Shortage Instability)",
+      "structural_delta": "Preferred execution method depends on pharmaceutical supply chains; shortages force reversion to older methods",
+      "primary_observable": "State execution protocol changes; drug manufacturer boycotts; botched execution rates",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold instability reveals legitimacy fragility but does not constitute kernel reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "retributive_reading",
+      "kernel_id": "state_execution_authority",
+      "reading_id": "retributive_reading"
+    },
+    {
+      "claim_id": "deterrence_reading",
+      "kernel_id": "state_execution_authority",
+      "reading_id": "deterrence_reading"
+    },
+    {
+      "claim_id": "abolition_reading",
+      "kernel_id": "state_execution_authority",
+      "reading_id": "abolition_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "wrongful_execution_risk",
+      "structural_delta": "Irreversible error in fallible system",
+      "hypothesis": "snare",
+      "deferral_reason": "Affects all readings but does not constitute independent kernel reading; error rate is input to each reading's constraint calculus rather than separate interpretive commitment"
+    },
+    {
+      "claim_id": "racial_disparity_extraction",
+      "structural_delta": "Disproportionate Black/Latino death sentences",
+      "hypothesis": "snare",
+      "deferral_reason": "Implementation-layer extraction rather than kernel-level reading; operates within retributive/deterrence frameworks rather than offering third interpretive ground"
+    },
+    {
+      "claim_id": "execution_method_scaffold",
+      "structural_delta": "Lethal injection drug shortage forcing protocol changes",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Reveals legitimacy fragility but does not constitute kernel reading; method instability is symptom of deeper contested authority"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_error_rate_unknowability",
+      "description": "Wrongful execution rate is structurally unknowable (cannot exhume and retry). Each reading handles this differently: retributive treats as tragic but non-invalidating error; deterrence requires error-rate minimization in utilitarian calculus; abolition treats any error as proof of categorical impermissibility. The unknowability itself may be a fourth reading (epistemic-humility prohibition).",
+      "source": "Deferred axis wrongful_execution_risk + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_disparity_as_implementation_vs_essence",
+      "description": "Is racial disparity an implementation flaw (fixable through better procedures) or essence of the practice (unfixable because discretion is load-bearing)? If essence, it collapses deterrence reading (cannot deter if application is arbitrary) and retributive reading (cannot restore balance if racially selective). Abolition reading absorbs this as additional proof.",
+      "source": "Deferred axis racial_disparity_extraction + Dark Matter Probe 3"
+    },
+    {
+      "id": "omega_international_law_constraint",
+      "description": "U.S. is only Western democracy retaining death penalty. Is this exceptionalism (legitimate sovereignty) or isolation (drift from evolving human rights norms)? Abolition reading treats international consensus as evidence of evolving standards; retributive/deterrence readings treat as irrelevant to domestic constitutional authority. Unexamined in extraction.",
+      "source": "Absence inventory + Dark Matter Probe 1"
+    },
+    {
+      "id": "omega_victim_family_heterogeneity",
+      "description": "Retributive reading assumes victims' families benefit from execution-as-closure. Empirical evidence shows heterogeneity: some families oppose execution, some report closure from execution, some report no closure. If beneficiary set is empty or contested, retributive reading loses its justificatory ground. Requires empirical decomposition.",
+      "source": "Dark Matter Probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_deterrence_substitution",
+      "description": "If life-without-parole deters equally to execution (contested empirical claim), deterrence reading collapses to retributive reading or abolition reading depending on whether non-deterrence justification is accepted. Deterrence reading's moderate ε depends on this substitutability claim holding false.",
+      "source": "Epsilon bin classification + independence testing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: abolition_reading classified as mountain (categorical prohibition grounded in human dignity inviolability) but this may be piton of evolving moral consensus rather than physical/logical necessity. International law trend and Eighth Amendment 'evolving standards' doctrine suggest norm-shift rather than discovered truth. Generated omega_international_law_constraint to bound this uncertainty. Kernel recognition is valid: three readings emit genuinely different constraints (different beneficiary/victim sets, different ε profiles, different substitutability claims)."
+  },
+  "_seed_id": "capital_punishment_kernel"
+}

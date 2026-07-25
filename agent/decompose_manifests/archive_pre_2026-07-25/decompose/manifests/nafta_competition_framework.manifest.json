@@ -1,0 +1,255 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Trade Law / Political Economy / Regulatory Federalism",
+  "family_id": "nafta_jurisdictional_contest_2026",
+  "topic_summary": "Analysis of North American trade agreement frameworks as contested kernels where the same multilateral legal text is read by multinational corporations as mandating unfettered capital mobility and regulatory harmonization versus read by domestic labor/environmental agencies as subordinate to sovereign local protections. The interpretive contest defines the practical boundaries of state jurisdiction over economic activity.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Multilateral trade agreement text (NAFTA/USMCA legal kernel)",
+      "Multinational corporations (extractive reading interpreters)",
+      "Domestic labor agencies (protective reading interpreters)",
+      "Domestic environmental agencies (protective reading interpreters)",
+      "Investor-State Dispute Settlement tribunals (interpretive authority)",
+      "Sovereign state regulatory agencies (protective authority)"
+    ],
+    "key_tensions": [
+      "Capital mobility mandate vs sovereign regulatory capacity (MNCs vs domestic agencies)",
+      "Harmonization pressure vs local standard differentiation (trade text vs state sovereignty)"
+    ],
+    "key_mechanisms": [
+      "ISDS arbitration pathway (enforces extractive reading through binding awards)",
+      "Regulatory chill (anticipatory compliance with extractive reading to avoid litigation)",
+      "Ratchet clauses (prevent rollback of liberalization, encode extractive reading into future state)"
+    ],
+    "key_absences": [
+      "Explicit labor/environmental override provisions in treaty text",
+      "Democratic revision mechanism for interpretive disputes"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The multilateral trade agreement text itself — a legal instrument stabilizing commitments to liberalized cross-border trade and investment, whose jurisdictional scope and hierarchy relative to domestic law remains interpretively contested",
+    "authority_description": "Interpretive authority split between ISDS tribunals (enforce capital mobility reading), domestic courts (sometimes enforce protective reading), and treaty negotiators (political mandate ambiguous)",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_pluralism",
+    "is_contested_kernel": true,
+    "kernel_id": "nafta_jurisdictional_boundary",
+    "readings": [
+      {
+        "reading_id": "capital_supremacy_reading",
+        "commitment": "Trade agreement text as supreme law overriding domestic regulatory standards; capital mobility and regulatory harmonization as mandatory treaty obligations",
+        "authority_grounding": "ISDS tribunal precedent; corporate legal teams; trade ministry negotiators",
+        "sibling_readings": [
+          "embedded_liberalism_reading",
+          "sovereignty_primacy_reading"
+        ],
+        "expected_structural_delta": "Domestic labor/environmental standards enter victim set; regulatory agencies lose jurisdictional authority; extraction flows upward to capital mobility beneficiaries"
+      },
+      {
+        "reading_id": "embedded_liberalism_reading",
+        "commitment": "Trade agreement text as framework for market access balanced with legitimate domestic policy space; environmental/labor standards as compatible with trade obligations when non-discriminatory",
+        "authority_grounding": "Domestic courts applying proportionality tests; administrative law tradition; some treaty side-agreements",
+        "sibling_readings": [
+          "capital_supremacy_reading",
+          "sovereignty_primacy_reading"
+        ],
+        "expected_structural_delta": "Partial jurisdictional overlap; regulatory agencies retain defensive authority within 'legitimate objectives' boundary; moderate extraction through litigation costs"
+      },
+      {
+        "reading_id": "sovereignty_primacy_reading",
+        "commitment": "Trade agreement text as coordination mechanism subordinate to sovereign domestic law; states retain full regulatory authority over labor/environmental/health standards within their territory",
+        "authority_grounding": "Constitutional law tradition; domestic labor/environmental agencies; civil society opposition movements",
+        "sibling_readings": [
+          "capital_supremacy_reading",
+          "embedded_liberalism_reading"
+        ],
+        "expected_structural_delta": "Treaty obligations enter compliance-cost set but not as overriding constraints; regulatory agencies retain full jurisdictional authority; extraction limited to voluntary compliance costs"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "capital_supremacy_reading",
+        "reading_b": "sovereignty_primacy_reading",
+        "basis": "One reading holds treaty obligations as supreme law overriding domestic standards; the other holds domestic law as supreme with treaty as subordinate coordination mechanism. No single coherent framework can simultaneously hold both treaty-supremacy and domestic-supremacy axioms."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "capital_supremacy_reading",
+      "human_readable": "Capital Supremacy Reading (Treaty as Overriding Mandate)",
+      "structural_delta": "Interpretation of trade agreement text as supreme law mandating capital mobility and regulatory harmonization, overriding domestic labor/environmental standards",
+      "primary_observable": "ISDS tribunal awards enforcing expansive investor rights; regulatory chill documented in environmental impact assessments; corporate legal briefs citing treaty supremacy",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "multinational_capital",
+      "victim": "domestic_regulatory_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary extractive reading instantiating high-epsilon constraint; structurally entangles jurisdictional boundary with capital accumulation"
+    },
+    {
+      "claim_id": "embedded_liberalism_reading",
+      "human_readable": "Embedded Liberalism Reading (Trade with Policy Space)",
+      "structural_delta": "Interpretation of trade agreement text as balancing market access with legitimate domestic policy space for non-discriminatory labor/environmental standards",
+      "primary_observable": "Domestic court rulings applying proportionality tests; side-agreement enforcement (labor/environment); administrative law defenses of regulatory authority within 'legitimate objectives' boundary",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Median coordination reading documenting the contested middle ground; structurally distinct from capital_supremacy (different epsilon, different beneficiary structure)"
+    },
+    {
+      "claim_id": "sovereignty_primacy_reading",
+      "human_readable": "Sovereignty Primacy Reading (Treaty as Subordinate Coordination)",
+      "structural_delta": "Interpretation of trade agreement text as coordination mechanism subordinate to sovereign domestic law; states retain full regulatory authority over labor/environmental standards",
+      "primary_observable": "Constitutional court assertions of domestic law supremacy; domestic agency defenses of regulatory authority citing constitutional mandate; civil society legal challenges to ISDS jurisdiction",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Protective reading instantiating minimal-extraction constraint; structurally necessary to bound the interpretive contest space"
+    },
+    {
+      "claim_id": "isds_enforcement_asymmetry",
+      "human_readable": "ISDS Enforcement Asymmetry (Capital-Favoring Dispute Resolution)",
+      "structural_delta": "Investor-State Dispute Settlement mechanism provides binding arbitration favoring capital mobility reading but no equivalent enforcement pathway for labor/environmental readings",
+      "primary_observable": "ISDS case filings overwhelmingly by corporations against states; win rates; average awards; absence of state counterclaims for labor/environmental violations",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "multinational_capital",
+      "victim": "state_regulatory_budgets",
+      "downstream_of": [
+        "capital_supremacy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism structurally downstream of capital_supremacy_reading; captured implicitly in that reading's constraint story"
+    },
+    {
+      "claim_id": "regulatory_chill_mechanism",
+      "human_readable": "Regulatory Chill (Anticipatory Compliance with Extractive Reading)",
+      "structural_delta": "Domestic agencies anticipatorily weaken labor/environmental standards to avoid ISDS litigation costs, even when legal defense would likely succeed",
+      "primary_observable": "Environmental impact assessments citing trade liability; regulatory proposals abandoned after corporate ISDS threats; documented agency self-censorship",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "multinational_capital",
+      "victim": "regulatory_ambition",
+      "downstream_of": [
+        "capital_supremacy_reading",
+        "isds_enforcement_asymmetry"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: second-order effect of capital_supremacy_reading enforcement; lower structural priority than direct readings"
+    },
+    {
+      "claim_id": "ratchet_clause_lock_in",
+      "human_readable": "Ratchet Clause Lock-In (Encoded Irreversibility)",
+      "structural_delta": "Treaty provisions preventing rollback of liberalization encode capital_supremacy reading into future state structure regardless of democratic preference shifts",
+      "primary_observable": "Treaty text prohibiting re-nationalization; standstill clauses preventing new restrictions; grandfathering of existing investor rights",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": "multinational_capital",
+      "victim": "democratic_revision_capacity",
+      "downstream_of": [
+        "capital_supremacy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: treaty design feature downstream of capital_supremacy reading; lower structural centrality than primary readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "capital_supremacy_reading",
+      "kernel_id": "nafta_jurisdictional_boundary",
+      "reading_id": "capital_supremacy_reading"
+    },
+    {
+      "claim_id": "embedded_liberalism_reading",
+      "kernel_id": "nafta_jurisdictional_boundary",
+      "reading_id": "embedded_liberalism_reading"
+    },
+    {
+      "claim_id": "sovereignty_primacy_reading",
+      "kernel_id": "nafta_jurisdictional_boundary",
+      "reading_id": "sovereignty_primacy_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "isds_enforcement_asymmetry",
+      "structural_delta": "ISDS mechanism provides binding arbitration for capital mobility reading but no equivalent for labor/environmental readings",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism structurally downstream of capital_supremacy_reading; captured implicitly in that reading's constraint story"
+    },
+    {
+      "claim_id": "regulatory_chill_mechanism",
+      "structural_delta": "Agencies anticipatorily weaken standards to avoid ISDS litigation costs",
+      "hypothesis": "piton",
+      "deferral_reason": "Second-order effect of capital_supremacy_reading enforcement; lower structural priority than direct kernel readings"
+    },
+    {
+      "claim_id": "ratchet_clause_lock_in",
+      "structural_delta": "Treaty provisions preventing rollback encode capital_supremacy reading into future state structure",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Treaty design feature downstream of capital_supremacy reading; lower structural centrality; omega material for democratic revision constraints"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_convergence",
+      "description": "Do embedded_liberalism and sovereignty_primacy readings collapse into one constraint in practice, distinguished only by rhetorical emphasis? If ISDS enforcement systematically favors capital_supremacy, other readings may be normative aspirations without structural instantiation.",
+      "source": "Kernel/Reading Decomposition (§1.3-K); structural coherence test"
+    },
+    {
+      "id": "omega_treaty_revision_pathway",
+      "description": "Is treaty text itself revisable through democratic process, or has ratchet_clause_lock_in created an irreversible commitment system? If revision is structurally blocked, capital_supremacy reading becomes permanent regardless of interpretive contest.",
+      "source": "Deferred axis ratchet_clause_lock_in; drift_status assessment"
+    },
+    {
+      "id": "omega_domestic_court_authority",
+      "description": "Can domestic courts enforce sovereignty_primacy reading against ISDS awards, or does treaty structure subordinate domestic law? The practical hierarchy determines whether sovereignty_primacy is a real constraint or normative fiction.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); enforcement asymmetry analysis"
+    },
+    {
+      "id": "omega_labor_environmental_override",
+      "description": "Absence of explicit labor/environmental override provisions in treaty text may indicate intentional ambiguity preserving capital_supremacy reading dominance. Was this omission structural design or negotiation failure?",
+      "source": "Extraction (key_absences); commitment system authority grounding"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition yields three structurally distinct readings with different epsilon values, beneficiary structures, and authority groundings. Axiom contradiction confirmed between capital_supremacy and sovereignty_primacy readings."
+  },
+  "_seed_id": "nafta_competition_framework"
+}

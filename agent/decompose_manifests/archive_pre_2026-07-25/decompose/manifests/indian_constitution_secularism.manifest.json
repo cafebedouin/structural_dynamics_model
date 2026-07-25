@@ -1,0 +1,218 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Religious Governance",
+  "family_id": "indian_constitutional_secularism",
+  "topic_summary": "Analysis of the contested secular framework in the Indian Constitution, examining whether secularism mandates strict state-religion separation (equal distance from all religions) or permits principled state intervention in religious affairs for reform and minority protection. The interpretive contest shapes enforcement mechanisms, minority rights protections, and the legitimacy of differential treatment across religious communities.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Indian Constitution (secular framework articles 25-28, preamble amendment 1976)",
+      "Supreme Court of India (interpretive authority over secular provisions)",
+      "Majority Hindu community (demographic and political dominance)",
+      "Religious minorities (Muslims, Christians, Sikhs, others - constitutional protection beneficiaries)",
+      "Personal law systems (parallel legal frameworks for marriage, inheritance by religious community)",
+      "State legislative and executive apparatus (implements secular framework interpretations)"
+    ],
+    "key_tensions": [
+      "Uniform Civil Code mandate (Art 44) vs religious personal law preservation (Arts 25-26)",
+      "Minority educational institution autonomy (Art 30) vs equality before law (Art 14)",
+      "State reform of religious practices (temple entry, untouchability) vs non-interference principle"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Constitutional secularism as shared commitment to state-religion relationship management, grounded in Articles 25-28 and the 1976 Preamble amendment declaring India a 'secular' republic",
+    "authority_description": "Supreme Court interpretive monopoly via judicial review; political legitimacy derived from constitutional fidelity claims",
+    "drift_status": "partial",
+    "candidate_pattern": "twin_peaks",
+    "is_contested_kernel": true,
+    "kernel_id": "constitutional_secularism",
+    "readings": [
+      {
+        "reading_id": "strict_neutrality_reading",
+        "commitment": "State maintains equal distance from all religions; no preferential treatment or interference",
+        "authority_grounding": "Originalist interpretation of Articles 25-26 as negative liberties; Western Enlightenment separation models",
+        "sibling_readings": [
+          "principled_intervention_reading",
+          "reformist_reading"
+        ],
+        "expected_structural_delta": "Uniform constraint application across communities; limits state capacity for religious reform; minority autonomy preserved but vulnerability to majority norms"
+      },
+      {
+        "reading_id": "principled_intervention_reading",
+        "commitment": "State may intervene in religious affairs to advance social reform and protect weaker sections within communities",
+        "authority_grounding": "Contextual constitutionalism; Directive Principles (Art 44 UCC mandate); post-colonial sovereignty over social transformation",
+        "sibling_readings": [
+          "strict_neutrality_reading",
+          "reformist_reading"
+        ],
+        "expected_structural_delta": "Differential treatment legitimized by reform objectives; state authority expanded into religious domain; higher risk of majoritarian capture"
+      },
+      {
+        "reading_id": "reformist_reading",
+        "commitment": "State has affirmative duty to eliminate religious practices oppressing marginalized groups, superseding religious autonomy claims",
+        "authority_grounding": "Transformative constitutionalism; fundamental rights as positive obligations; anti-caste social justice mandate",
+        "sibling_readings": [
+          "strict_neutrality_reading",
+          "principled_intervention_reading"
+        ],
+        "expected_structural_delta": "Most extractive constraint on religious autonomy; benefits scheduled castes and women; victim set includes religious conservatives across communities"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_neutrality_reading",
+        "reading_b": "reformist_reading",
+        "basis": "Strict neutrality axiom (state categorically excluded from religious domain) contradicts reformist axiom (state has duty to intervene against religious oppression). No single framework can hold both state non-interference as foundational and state intervention as obligatory."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_neutrality_reading",
+      "human_readable": "Strict Neutrality Reading (Equal Distance Secularism)",
+      "structural_delta": "State maintains equidistant non-interference across all religious communities",
+      "primary_observable": "Supreme Court rulings on state-religion entanglement; personal law preservation vs reform cases",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline constraint structure with moderate ε; foundational to kernel contestation"
+    },
+    {
+      "claim_id": "principled_intervention_reading",
+      "human_readable": "Principled Intervention Reading (Reform-Oriented Secularism)",
+      "structural_delta": "State authorized to intervene selectively in religious affairs for social reform objectives",
+      "primary_observable": "Legislative interventions in religious practices (temple entry, triple talaq); differential personal law treatment",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_reform_apparatus",
+      "victim": "religious_conservative_factions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: highest centrality; captures majoritarian capture risk and reform justification dynamics"
+    },
+    {
+      "claim_id": "reformist_reading",
+      "human_readable": "Reformist Reading (Transformative Anti-Oppression Mandate)",
+      "structural_delta": "State obligated to eliminate religious practices oppressing marginalized groups regardless of autonomy claims",
+      "primary_observable": "Constitutional challenges to caste-based temple restrictions, gender discrimination in personal law",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "scheduled_castes_and_women",
+      "victim": "religious_authority_structures",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: completes the interpretive triangle; maximal extractiveness on religious autonomy"
+    },
+    {
+      "claim_id": "minority_protection_asymmetry",
+      "human_readable": "Minority Protection Asymmetry (Article 30 Special Rights)",
+      "structural_delta": "Minority educational and cultural institutions receive constitutional protections unavailable to majority",
+      "primary_observable": "Article 30 jurisprudence on minority institution autonomy vs state regulation",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "minority_religious_institutions",
+      "victim": "majority_community_parallel_institutions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within principled_intervention_reading's differential treatment structure; lower centrality"
+    },
+    {
+      "claim_id": "uniform_civil_code_mandate",
+      "human_readable": "Uniform Civil Code Mandate (Article 44 Directive)",
+      "structural_delta": "Constitutional directive for uniform personal law across communities vs actual personal law preservation",
+      "primary_observable": "Legislative attempts at UCC implementation; political mobilization around personal law",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: directive principle not enforceable; contested between readings but not independent structural axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strict_neutrality_reading",
+      "kernel_id": "constitutional_secularism",
+      "reading_id": "strict_neutrality_reading"
+    },
+    {
+      "claim_id": "principled_intervention_reading",
+      "kernel_id": "constitutional_secularism",
+      "reading_id": "principled_intervention_reading"
+    },
+    {
+      "claim_id": "reformist_reading",
+      "kernel_id": "constitutional_secularism",
+      "reading_id": "reformist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "minority_protection_asymmetry",
+      "structural_delta": "Article 30 grants minority institutions autonomy unavailable to majority institutions",
+      "hypothesis": "snare",
+      "deferral_reason": "Subsumed within principled_intervention_reading's differential treatment analysis; lower independent structural yield"
+    },
+    {
+      "claim_id": "uniform_civil_code_mandate",
+      "structural_delta": "Constitutional directive for uniform personal law vs preservation of religious personal laws",
+      "hypothesis": "piton",
+      "deferral_reason": "Non-enforceable directive principle; contestation captured across three selected readings without independent observables"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kashmir_article370_interaction",
+      "description": "Article 370 abrogation (2019) removed Jammu & Kashmir's special status including distinct personal law framework. Does this constitute principled_intervention_reading applied asymmetrically, or strict_neutrality_reading eliminating differential treatment? Interaction effects with secularism kernel not yet stabilized in jurisprudence.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - major constitutional event affecting religious governance unaddressed in extraction"
+    },
+    {
+      "id": "omega_caste_religion_boundary",
+      "description": "Anti-caste reform (temple entry, untouchability abolition) crosses religious autonomy boundaries. Is caste-based discrimination 'religious practice' protected by Article 25, or social oppression the state must eliminate? Boundary contestation determines which reading applies.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - scheduled caste beneficiaries of reformist_reading face resistance framed as religious freedom"
+    },
+    {
+      "id": "omega_majoritarianism_capture_risk",
+      "description": "Principled_intervention_reading and reformist_reading grant state authority over religious domain. In Hindu-majority polity, does demographic dominance convert 'principled' intervention into majoritarian imposition on minorities? Structural risk vs intention distinction unclear.",
+      "source": "§2.2 Dark Matter Probe 3 (Beneficiary Scan) - state_reform_apparatus beneficiary in principled_intervention may mask majority capture"
+    },
+    {
+      "id": "omega_western_secularism_translation",
+      "description": "Strict_neutrality_reading imports Western Enlightenment church-state separation model. Does this framework translate coherently to Indic religious traditions lacking church-like institutional structures? Translation validity affects reading applicability.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - Western constitutional law framework as unexamined analytical lens"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic correctly identified as contested kernel. Three readings selected capture interpretive triangle with axiom contradiction declared between strict_neutrality and reformist positions. Deferred axes documented as subsumed within reading structure. Four omegas bound major uncertainties including Kashmir interaction, caste-religion boundary, majoritarian capture risk, and Western framework translation validity."
+  },
+  "_seed_id": "indian_constitution_secularism"
+}

@@ -1,0 +1,243 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Philosophy of Religion / Japanese Cultural History",
+  "family_id": "shinbutsu_shugo_syncretism",
+  "topic_summary": "Analysis of Shinbutsu-shugo (Shinto-Buddhist syncretism), the dominant religious framework in Japan from the 9th century until the Meiji period (1868). The system combined Shinto kami worship with Buddhist practice through the honji suijaku theory, which posited kami as manifestations of buddhas. The research context frames this as a potential contested kernel: whether the syncretism represents a coherent fused commitment, a domain partition (life vs death), or an incoherent bundle exposed by simultaneous fusion (shūgō) and separation (kakuri) practices.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Honji suijaku theory (kami as manifestations of buddhas/bodhisattvas)",
+      "Tendai Buddhism / Sannō Ichijitsu Shintō (syncretic school)",
+      "Shingon Buddhism / Ryōbu Shintō (syncretic school)",
+      "Meiji government (enforced separation 1868-1873)",
+      "Temple-shrine complexes (jinguji - institutional fusion sites)",
+      "Kami (Shinto deities)",
+      "Buddhas/Bodhisattvas (Buddhist enlightened beings)",
+      "Haibutsu kishaku movement (violent anti-Buddhist purge)"
+    ],
+    "key_tensions": [
+      "Fusion (shūgō) vs separation (kakuri) - simultaneous contradictory practices",
+      "Hierarchical reading (buddhas as ontologically prior) vs reciprocal reading (mutual dependence)",
+      "Theoretical systematization (honji suijaku as keystone) vs practical unsystematization (never fully systematized)",
+      "Life domain (Shinto) vs death domain (Buddhism) - functional partition",
+      "Forced separation (Meiji) vs incomplete separation (persistence post-1873)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The ontological relationship between kami and buddhas - whether they are manifestations of a single ultimate reality, functionally partitioned domains, or an unsystematized bundle held by institutional practice",
+    "authority_description": "Interpretive authority distributed across Buddhist schools (Tendai, Shingon), shrine-temple institutional complexes, and popular practice; no single adjudicating body until Meiji state intervention",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "kami_buddha_ontology",
+    "readings": [
+      {
+        "reading_id": "honji_suijaku_monism",
+        "commitment": "Kami and buddhas are ontologically identical - kami are phenomenal traces (suijaku) of the original ground (honji) of buddhas/bodhisattvas",
+        "authority_grounding": "Buddhist philosophical frameworks (Tendai, Shingon); honji suijaku theory as systematizing principle",
+        "sibling_readings": [
+          "domain_partition",
+          "incoherent_bundle"
+        ],
+        "expected_structural_delta": "Single ultimate reality; hierarchical ontology with Buddhist entities as prior; kami cannot exist independently; theoretical systematization required"
+      },
+      {
+        "reading_id": "domain_partition",
+        "commitment": "Kami and buddhas are ontologically distinct entities governing separate functional domains - Shinto for life/purity/living, Buddhism for death/impurity/deceased",
+        "authority_grounding": "Popular practice ('born Shinto, die Buddhist'); institutional division of ritual labor; Shinto aversion to death pollution",
+        "sibling_readings": [
+          "honji_suijaku_monism",
+          "incoherent_bundle"
+        ],
+        "expected_structural_delta": "Two parallel ontologies; functional complementarity without fusion; no hierarchy; practical coordination without theoretical unity"
+      },
+      {
+        "reading_id": "incoherent_bundle",
+        "commitment": "Shinbutsu-shugo is not a coherent kernel but an institutionally sustained bundle of contradictory commitments - simultaneous fusion and separation, hierarchical and reciprocal, systematized and unsystematized",
+        "authority_grounding": "Historical evidence of simultaneous shūgō (fusion) and kakuri (separation); failure of Meiji forced separation; persistence of contradictory practices",
+        "sibling_readings": [
+          "honji_suijaku_monism",
+          "domain_partition"
+        ],
+        "expected_structural_delta": "No single ontology; institutional inertia and practical efficacy sustain contradictions; theoretical incoherence masked by ritual success; separation attempts fail"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "honji_suijaku_monism",
+        "reading_b": "domain_partition",
+        "basis": "Monism requires kami to be ontologically dependent manifestations of buddhas (cannot exist independently); domain partition requires kami and buddhas to be ontologically independent entities governing separate spheres. No single framework can hold both that kami are buddha-manifestations AND that kami are independent entities."
+      },
+      {
+        "reading_a": "honji_suijaku_monism",
+        "reading_b": "incoherent_bundle",
+        "basis": "Monism requires a coherent unified ontology with systematic theoretical grounding; incoherent bundle denies the possibility of such coherence and attributes persistence to institutional practice rather than philosophical truth. One cannot simultaneously hold that honji suijaku provides coherent systematization AND that the system is fundamentally unsystematized."
+      },
+      {
+        "reading_a": "domain_partition",
+        "reading_b": "incoherent_bundle",
+        "basis": "Domain partition requires stable functional boundaries and ontological independence that enable clean division of labor; incoherent bundle requires simultaneous fusion and separation that violates stable boundaries. One cannot hold both that the domains are cleanly partitioned AND that fusion/separation occur simultaneously in the same contexts."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "honji_suijaku_monism",
+      "human_readable": "Honji Suijaku Monism (Unified Ontology Reading)",
+      "structural_delta": "Kami as phenomenal manifestations of ontologically prior Buddhist ultimate reality",
+      "primary_observable": "Hierarchical correspondence charts (Amaterasu-Vairocana); temple records prioritizing Buddhist entities; theoretical treatises asserting ontological dependence",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "buddhist_institutional_authority",
+      "victim": "shinto_ontological_independence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents dominant theoretical framework (honji suijaku as 'keystone'); highest institutional backing"
+    },
+    {
+      "claim_id": "domain_partition",
+      "human_readable": "Domain Partition (Functional Complementarity Reading)",
+      "structural_delta": "Ontologically independent entities governing separate life/death domains through division of ritual labor",
+      "primary_observable": "Birth/wedding rituals (Shinto) vs funeral rituals (Buddhist); shrine-temple spatial separation in some contexts; popular saying 'born Shinto, die Buddhist'",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents popular practice layer; structurally distinct observable (ritual domain boundaries vs ontological hierarchy)"
+    },
+    {
+      "claim_id": "incoherent_bundle",
+      "human_readable": "Incoherent Bundle (Contradictions Sustained by Practice Reading)",
+      "structural_delta": "No unified ontology; simultaneous contradictory commitments (fusion/separation, hierarchical/reciprocal) held together by institutional inertia and ritual efficacy",
+      "primary_observable": "Simultaneous shūgō and kakuri practices; failure of Meiji forced separation; persistence of contradictory theoretical claims; 'never systematized' despite being 'keystone'",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_complexes",
+      "victim": "philosophical_coherence_seekers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality (explains persistence of contradictions); meta-level reading that accounts for failure of other readings to achieve dominance"
+    },
+    {
+      "claim_id": "meiji_separation_failure",
+      "human_readable": "Meiji Separation Failure (State Intervention Incompleteness)",
+      "structural_delta": "State-enforced separation (1868-1873) stalled and remains incomplete; institutional fusion persists despite legal mandate",
+      "primary_observable": "Buddhist temples retaining Shinto shrines post-1873; Kannon worship in Shinto contexts; incomplete haibutsu kishaku outcomes",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "honji_suijaku_monism",
+        "domain_partition",
+        "incoherent_bundle"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream evidence for incoherent_bundle reading rather than independent axis; historical test case rather than structural dimension"
+    },
+    {
+      "claim_id": "reciprocal_dependence",
+      "human_readable": "Reciprocal Dependence (Mutual Manifestation Reading)",
+      "structural_delta": "Kami and buddhas mutually dependent - 'true nature only perceived in manifestations'; neither ontologically prior",
+      "primary_observable": "Tendai version of honji suijaku emphasizing interdependence; ritual practices treating both as equally necessary",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "incoherent_bundle"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: variant of honji_suijaku_monism that contradicts its hierarchical claim; captured as internal tension within monism reading rather than separate axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "honji_suijaku_monism",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "honji_suijaku_monism"
+    },
+    {
+      "claim_id": "domain_partition",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "domain_partition"
+    },
+    {
+      "claim_id": "incoherent_bundle",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "incoherent_bundle"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "meiji_separation_failure",
+      "structural_delta": "State-enforced separation stalled and incomplete",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical test case for kernel readings rather than independent structural dimension; evidence for incoherent_bundle reading"
+    },
+    {
+      "claim_id": "reciprocal_dependence",
+      "structural_delta": "Mutual dependence - neither kami nor buddhas ontologically prior",
+      "hypothesis": "rope",
+      "deferral_reason": "Internal variant of honji_suijaku_monism that contradicts its hierarchical claim; captured as tension within monism reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_systematization_paradox",
+      "description": "Honji suijaku described as both 'keystone of shinbutsu-shūgō edifice' AND 'never systematized' - if it was never systematized, how could it be the keystone? This may indicate incoherent_bundle is correct, or that 'systematization' means different things in different contexts.",
+      "source": "Extraction tension 3 (theoretical systematization vs practical unsystematization)"
+    },
+    {
+      "id": "omega_hierarchical_reciprocal_collapse",
+      "description": "Honji suijaku theory interpreted as both hierarchical (buddhas ontologically prior) and reciprocal (mutual dependence, neither prior). If both interpretations coexisted, this supports incoherent_bundle. If one dominated in practice, this affects which reading is structurally accurate.",
+      "source": "Extraction tension 2 (hierarchical vs reciprocal readings) + deferred axis reciprocal_dependence"
+    },
+    {
+      "id": "omega_meiji_counterfactual",
+      "description": "If Meiji separation had succeeded completely, would this prove the system was coherently partitioned (domain_partition correct) or that state power can override incoherent bundles? Failure of separation is evidence for incoherent_bundle but success would be ambiguous.",
+      "source": "Deferred axis meiji_separation_failure + extraction tension 5"
+    },
+    {
+      "id": "omega_popular_vs_elite",
+      "description": "Domain partition reading may reflect popular practice while honji_suijaku_monism reflects elite Buddhist theory. If so, the 'kernel' may be stratified by social class rather than contested at the same level. This would require different constraint analysis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - class stratification not addressed in extraction"
+    },
+    {
+      "id": "omega_shinto_agency",
+      "description": "All theoretical frameworks (honji suijaku, Sannō, Ryōbu) are Buddhist constructions. Shinto institutional voice is absent from extraction. Does Shinto have its own reading of the kernel, or is 'Shinto' itself a Meiji-era construction? If the latter, the kernel may be anachronistic.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - Buddhist institutional authority benefits from all theoretical frameworks"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks deep expertise in Japanese religious history, medieval Buddhist philosophy, and Shinto studies. Extraction relies on secondary English-language sources. Honji suijaku theory's actual systematization status, the precise nature of Tendai vs Shingon interpretive differences, and the historical accuracy of 'domain partition' as a medieval vs modern construction are beyond model's competence. Generated omega_popular_vs_elite and omega_shinto_agency to bound these uncertainties. Kernel/reading decomposition is structurally sound but specific historical claims require domain expert validation."
+  },
+  "_seed_id": "shinto_buddhist_syncretism"
+}

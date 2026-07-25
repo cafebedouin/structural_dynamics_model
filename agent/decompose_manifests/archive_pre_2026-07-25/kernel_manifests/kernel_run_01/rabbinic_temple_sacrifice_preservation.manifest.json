@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Halakhic Theory / Commitment System Analysis",
+  "family_id": "rabbinic_kodashim_preservation",
+  "topic_summary": "Analysis of rabbinic preservation of Temple sacrifice law (Kodashim) across 1,900 years without performance. The study-as-substitute doctrine creates a boundary collapse between exercising a commitment and archiving its symbol, raising questions about whether continuous study of unperformable ritual constitutes occupation of a living kernel or maintenance of an empty husk.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Kodashim (fifth order of Mishnah/Talmud, 11 tractates on Temple sacrifice)",
+      "Second Temple (destroyed 70 CE, ending sacrificial practice)",
+      "Babylonian Talmud (Gemara on Kodashim motivated by study-as-substitute doctrine)",
+      "Maimonides (12th century, codified Kodashim despite practical irrelevance)",
+      "Rabbinic academies (post-70 CE institutions maintaining sacrificial study)"
+    ],
+    "key_tensions": [
+      "Study vs performance: intellectual engagement with laws vs physical execution of ritual",
+      "Eschatological suspension: laws studied as if performable yet performance indefinitely deferred",
+      "Historical contingency vs eternal validity: Maimonidean claim that sacrifices are both time-bound accommodation and timeless law"
+    ],
+    "key_mechanisms": [
+      "Study-as-substitute doctrine: Talmudic principle that studying sacrifice laws equals performing them",
+      "Messianic deferral: Temple restoration tied to messianic expectation, creating permanent temporal suspension"
+    ],
+    "key_absences": [
+      "No Jerusalem Talmud on Kodashim; briefer Babylonian Gemara than other orders—suggests practical irrelevance recognized even within tradition"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The divine commandment to perform Temple sacrifice as prescribed in Torah",
+    "authority_description": "Rabbinic interpretive authority grounded in Oral Law transmission and halakhic reasoning",
+    "drift_status": "partial",
+    "candidate_pattern": "suspended_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "sacrifice_commandment",
+    "readings": [
+      {
+        "reading_id": "study_as_performance",
+        "commitment": "Study of sacrifice law IS the exercise of the commandment; intellectual engagement fulfills divine obligation",
+        "authority_grounding": "Talmudic doctrine that study equals offering; Maimonidean codification as eternal law",
+        "sibling_readings": [
+          "performance_only",
+          "archive_maintenance"
+        ],
+        "expected_structural_delta": "Zero extractiveness—study is intrinsically valuable worship; no victim set; beneficiary is the scholar-worshipper"
+      },
+      {
+        "reading_id": "performance_only",
+        "commitment": "Sacrifice commandment requires physical execution; without Temple, commandment is suspended not fulfilled",
+        "authority_grounding": "Literalist reading of Torah prescription; early Reform critique of rabbinic substitution",
+        "sibling_readings": [
+          "study_as_performance",
+          "archive_maintenance"
+        ],
+        "expected_structural_delta": "High extractiveness—1,900 years of study labor directed at unperformable acts; victim is scholarly attention diverted from living law"
+      },
+      {
+        "reading_id": "archive_maintenance",
+        "commitment": "Study preserves technical knowledge for future Temple restoration; messianic preparation not present worship",
+        "authority_grounding": "Eschatological expectation; rabbinic merit-seeking for Temple rebuilding",
+        "sibling_readings": [
+          "study_as_performance",
+          "performance_only"
+        ],
+        "expected_structural_delta": "Moderate extractiveness—study justified by future utility but present value uncertain; beneficiary is future generation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "study_as_performance",
+        "reading_b": "performance_only",
+        "basis": "Study-as-performance holds that intellectual engagement fulfills the commandment; performance-only holds that only physical execution fulfills it. No single framework can hold both: either study IS worship or it is NOT worship."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_performance",
+      "human_readable": "Study as Performance (Intellectual Engagement as Worship)",
+      "structural_delta": "Study of sacrifice law treated as equivalent to performing sacrifice",
+      "primary_observable": "Talmudic statements equating study with offering; Maimonidean codification of Kodashim as binding law",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "scholar_worshipper",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading: study-as-substitute doctrine as living commitment; zero extractiveness interpretation"
+    },
+    {
+      "claim_id": "performance_only",
+      "human_readable": "Performance-Only (Physical Execution Required)",
+      "structural_delta": "Sacrifice commandment requires physical ritual execution; study without performance is empty formalism",
+      "primary_observable": "Reform critique of rabbinic substitution; literalist Torah interpretation requiring altar and Temple",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "scholarly_attention",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural opposite: high extractiveness reading where 1,900 years of study is misdirected labor"
+    },
+    {
+      "claim_id": "archive_maintenance",
+      "human_readable": "Archive Maintenance (Messianic Preparation)",
+      "structural_delta": "Study preserves technical knowledge for future Temple restoration; present value is preparation not worship",
+      "primary_observable": "Eschatological statements linking study to Temple merit; messianic expectation in rabbinic literature",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "future_generation",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Middle position: moderate extractiveness; value deferred to eschatological future; captures temporal suspension"
+    },
+    {
+      "claim_id": "maimonidean_paradox",
+      "human_readable": "Maimonidean Paradox (Historical Contingency vs Eternal Validity)",
+      "structural_delta": "Sacrifices simultaneously historically contingent accommodation and eternally valid divine law",
+      "primary_observable": "Maimonides' Guide statements on sacrifice as accommodation vs Mishneh Torah codification as binding",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "study_as_performance",
+        "performance_only"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream philosophical tension; captured implicitly in study_as_performance vs performance_only contrast"
+    },
+    {
+      "claim_id": "textual_asymmetry",
+      "human_readable": "Textual Asymmetry (Reduced Gemara on Kodashim)",
+      "structural_delta": "No Jerusalem Talmud on Kodashim; briefer Babylonian Gemara suggests recognized practical irrelevance",
+      "primary_observable": "Absence of Palestinian Talmud; comparative length of Babylonian Gemara tractates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "performance_only"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: evidentiary support for performance_only reading; lower structural centrality"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "study_as_performance",
+      "kernel_id": "sacrifice_commandment",
+      "reading_id": "study_as_performance"
+    },
+    {
+      "claim_id": "performance_only",
+      "kernel_id": "sacrifice_commandment",
+      "reading_id": "performance_only"
+    },
+    {
+      "claim_id": "archive_maintenance",
+      "kernel_id": "sacrifice_commandment",
+      "reading_id": "archive_maintenance"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "maimonidean_paradox",
+      "structural_delta": "Sacrifices as both historical accommodation and eternal law",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream philosophical tension captured implicitly in kernel reading contrast; lower independent yield"
+    },
+    {
+      "claim_id": "textual_asymmetry",
+      "structural_delta": "Reduced Gemara on Kodashim signals recognized irrelevance",
+      "hypothesis": "mountain",
+      "deferral_reason": "Evidentiary support for performance_only reading; lower structural centrality than selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Does the study-as-performance reading genuinely occupy the kernel, or does 1,900 years of study without performance prove the kernel is empty? The boundary between exercising a commitment and archiving its symbol may be indeterminate—study could be both simultaneously.",
+      "source": "Kernel/reading decomposition; D1/D4 boundary case recognition"
+    },
+    {
+      "id": "omega_eschatological_sincerity",
+      "description": "Is messianic expectation (archive_maintenance reading) sincere preparation or post-hoc rationalization? If rabbis genuinely expected Temple restoration, why no Jerusalem Talmud on Kodashim? Temporal suspension may mask kernel abandonment.",
+      "source": "Textual asymmetry absence; eschatological tension"
+    },
+    {
+      "id": "omega_reform_critique_validity",
+      "description": "Early Reform claim that Maimonides had 'no option but to include' sacrifices suggests performance_only reading. But if study is empty formalism, why 1,900 years of continuous engagement? Extractiveness assessment depends on whether study has intrinsic or only instrumental value.",
+      "source": "Performance_only reading; Maimonidean paradox"
+    },
+    {
+      "id": "omega_commitment_system_classification",
+      "description": "Is this a commitment system at all, or a post-destruction adaptation that only mimics CS structure? The kernel (sacrifice commandment) may be genuinely contested, or the contest may be between a living kernel (study) and a dead one (performance). Classification instability.",
+      "source": "CS recognition boundary case; suspended_kernel pattern uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Three readings selected capture the structural range: zero extractiveness (study_as_performance), high extractiveness (performance_only), and moderate extractiveness with temporal deferral (archive_maintenance). Axiom contradiction declared between study_as_performance and performance_only."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

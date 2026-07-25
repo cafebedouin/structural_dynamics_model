@@ -1,0 +1,221 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Philology / Commitment Systems",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist reconstruction of Classical Latin as a contested kernel. Medieval users read 'correct Latin' as a living drifted vernacular continuous with Classical forms. Humanist reconstructors read it as the Classical form recovered from texts, requiring discontinuous return to a fixed reference point with no living practitioners as intermediaries.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin users (practitioners of drifted vernacular claiming continuity)",
+      "Humanist reconstructors (Petrarch, Valla, Erasmus - textual archaeologists)",
+      "Classical Latin corpus (Cicero, Virgil, Caesar - the stabilized kernel)",
+      "Medieval Latin texts (legal, ecclesiastical, scholastic - the drifted form)",
+      "Renaissance printing press (mechanism for kernel stabilization and distribution)"
+    ],
+    "key_tensions": [
+      "Continuity vs discontinuity (living tradition vs archaeological recovery)",
+      "Authority grounding (practice-norm vs textual fidelity)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Classical Latin as codified in the literary corpus of Cicero, Virgil, Caesar, and other canonical authors - a fixed linguistic reference point claimed as the legitimate standard",
+    "authority_description": "Contested between practice-based legitimacy (medieval users claiming unbroken transmission) and textual-archaeological legitimacy (humanists claiming direct access to original forms via philological reconstruction)",
+    "drift_status": "absent",
+    "candidate_pattern": "interpretive_monopoly",
+    "is_contested_kernel": true,
+    "kernel_id": "classical_latin_standard",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Correct Latin is the living form transmitted through unbroken practice, incorporating natural linguistic drift as legitimate development",
+        "authority_grounding": "Practice-norm: legitimacy derives from continuous institutional use (Church, law, university) - the living speakers ARE the authority",
+        "sibling_readings": [
+          "reconstruction_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Low suppression of alternatives (drift is legitimate); beneficiary is existing institutional users; victim set is empty or minimal (only 'barbarisms' excluded); extractiveness moderate (gatekeeping via institutional access but no systematic delegitimization of practice)"
+      },
+      {
+        "reading_id": "reconstruction_reading",
+        "commitment": "Correct Latin is the Classical form recoverable only through philological archaeology, requiring discontinuous return to textual sources and rejection of medieval drift",
+        "authority_grounding": "Textual-archaeological: legitimacy derives from demonstrated fidelity to the stabilized corpus - the texts ARE the authority, not living practice",
+        "sibling_readings": [
+          "continuity_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High suppression of alternatives (medieval forms delegitimized as 'corruption'); beneficiary is humanist elite with philological training; victim set is existing institutional users whose Latin is now 'incorrect'; extractiveness high (systematic delegitimization of practice-based authority, creation of new gatekeeping class)"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Correct Latin requires both textual fidelity to Classical norms AND recognition of legitimate post-Classical developments in technical/ecclesiastical domains",
+        "authority_grounding": "Dual: textual authority for literary/rhetorical forms, practice authority for specialized institutional vocabularies",
+        "sibling_readings": [
+          "continuity_reading",
+          "reconstruction_reading"
+        ],
+        "expected_structural_delta": "Moderate suppression (some medieval forms legitimized, others rejected); beneficiary is institutional users who adopt Classical norms while retaining domain-specific vocabulary; victim set is reduced (only 'barbarisms' excluded, not all drift); extractiveness moderate (partial delegitimization but with accommodation)"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuity_reading",
+      "human_readable": "Continuity Reading (Living Tradition)",
+      "structural_delta": "Latin as living language with legitimate drift through continuous institutional practice",
+      "primary_observable": "Acceptance of post-Classical vocabulary and syntax in authoritative texts; institutional resistance to humanist reforms",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "medieval_institutional_users",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "printing_press_stabilization"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline of practice-based authority before reconstruction challenge"
+    },
+    {
+      "claim_id": "reconstruction_reading",
+      "human_readable": "Reconstruction Reading (Archaeological Recovery)",
+      "structural_delta": "Latin as dead language requiring discontinuous philological recovery from fixed textual corpus",
+      "primary_observable": "Systematic rejection of medieval forms; creation of new grammatical/lexical standards based on Classical corpus analysis; humanist educational curricula",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "humanist_philological_elite",
+      "victim": "medieval_institutional_users",
+      "downstream_of": [],
+      "feeds_into": [
+        "printing_press_stabilization"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: highest centrality; establishes the extractive dimension of reconstruction as delegitimization"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading (Selective Accommodation)",
+      "structural_delta": "Dual authority structure: Classical norms for rhetoric/literature, practice norms for technical domains",
+      "primary_observable": "Retention of medieval legal/theological terminology alongside Classical literary standards; Erasmus's ecclesiastical Latin reforms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_users_adopting_classical_norms",
+      "victim": "purist_humanists_and_unreformed_medievalists",
+      "downstream_of": [
+        "continuity_reading",
+        "reconstruction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: synthesis node showing how the kernel contest resolved in practice through partial accommodation"
+    },
+    {
+      "claim_id": "printing_press_stabilization",
+      "human_readable": "Printing Press as Kernel Stabilization Mechanism",
+      "structural_delta": "Mechanical reproduction technology enabling mass distribution of standardized Classical texts and grammars",
+      "primary_observable": "Publication rates of Classical editions vs medieval texts; standardization of orthography and grammar across printed works",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "continuity_reading",
+        "reconstruction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing technological constraint but lower structural distinctiveness than the three readings themselves"
+    },
+    {
+      "claim_id": "vernacular_displacement",
+      "human_readable": "Vernacular Displacement (Latin as Elite Barrier)",
+      "structural_delta": "Reconstructed Classical Latin as mechanism for excluding vernacular speakers from elite discourse",
+      "primary_observable": "Correlation between Classical Latin mastery and access to university/ecclesiastical/diplomatic positions; resistance to vernacular translation",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "latin_educated_elite",
+      "victim": "vernacular_only_speakers",
+      "downstream_of": [
+        "reconstruction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via reconstruction_reading's victim structure; additional axis would over-split the beneficiary analysis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "classical_latin_standard",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "reconstruction_reading",
+      "kernel_id": "classical_latin_standard",
+      "reading_id": "reconstruction_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "classical_latin_standard",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "printing_press_stabilization",
+      "structural_delta": "Mechanical reproduction enabling mass distribution of standardized texts",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain providing technological constraint but lower structural distinctiveness than the kernel readings; technological enabler rather than interpretive commitment"
+    },
+    {
+      "claim_id": "vernacular_displacement",
+      "structural_delta": "Reconstructed Latin as barrier excluding vernacular speakers from elite discourse",
+      "hypothesis": "snare",
+      "deferral_reason": "Extractive dimension captured via reconstruction_reading's victim structure; separate axis would over-split beneficiary analysis without adding structural novelty"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d1_break_mechanism",
+      "description": "Was the reconstruction a D1 break (discontinuous reoccupation of symbol from external reference) or D2 (continuous evolution with retrospective legitimation)? If D1, the 'same Latin' claim is false - humanists created a new language using the old name. If D2, continuity reading has stronger structural validity.",
+      "source": "User's kernel contest framing + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_kernel_accessibility",
+      "description": "Was the Classical corpus genuinely accessible as a fixed reference, or did humanists construct 'Classical Latin' through selective reading and normalization? If constructed, the kernel itself is a reading, not a stable substrate.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - no entity for 'Classical Latin as actually practiced' vs 'Classical Latin as textually preserved'"
+    },
+    {
+      "id": "omega_church_latin_survival",
+      "description": "Why did ecclesiastical Latin survive reconstruction pressure when legal/scholastic Latin did not? Hybrid reading suggests domain-specific resistance, but mechanism unclear. Possible mountain of liturgical fixity vs rope of legal adaptability.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - Church as institution with power to resist humanist authority claims"
+    },
+    {
+      "id": "omega_vernacular_counterfactual",
+      "description": "If humanist reconstruction had failed, would vernaculars have displaced Latin earlier? Reconstruction may have extended Latin's elite status by making it 'pure' rather than 'corrupt', delaying vernacular ascendancy.",
+      "source": "Deferred axis vernacular_displacement + absence of vernacular-Latin competition mechanism in extraction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest confirmed: three readings emit structurally distinct constraints (different victim sets, different extractiveness levels, different authority grounding). Continuity reading treats drift as legitimate (low suppression); reconstruction reading treats drift as corruption (high suppression, new gatekeeping class); hybrid reading splits authority by domain (moderate suppression, partial accommodation). The D1/D2 break question remains omega-bounded but does not prevent constraint generation."
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

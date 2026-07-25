@@ -1,0 +1,186 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology History / Economic Sociology / Path Dependence Theory",
+  "family_id": "qwerty_naturalization_2026",
+  "topic_summary": "Analysis of QWERTY keyboard layout persistence examining whether its dominance represents natural technical optimization, deliberate manufacturer lock-in strategy, or path-dependent emergence without clear beneficiaries. The topic tests whether beneficiary-hunting analytical frameworks construct beneficiaries artifactually or discover them structurally.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Christopher Latham Sholes (inventor, 1868 patent holder)",
+      "E. Remington and Sons (manufacturer, 1873 rights purchaser)",
+      "Union Typewriter Company (1893 standardization cartel)",
+      "Dvorak layout (1930s ergonomic alternative, never adopted)",
+      "Paul David (path dependence theorist, inefficiency argument)",
+      "Liebowitz & Margolis (efficiency defenders, 'Fable of the Keys' authors)"
+    ],
+    "key_tensions": [
+      "Technical necessity (jam prevention) vs strategic design (training lock-in)",
+      "Path dependence with multiple equilibria (David) vs single efficient outcome (Liebowitz/Margolis)",
+      "Naturalization narrative (QWERTY looks inevitable) vs constructed persistence (beneficiaries maintain it)"
+    ],
+    "key_mechanisms": [
+      "Typist training investment creating switching costs",
+      "Manufacturer standardization via Union Typewriter Company cartel (1893)",
+      "Employer dependence on existing skilled labor pool"
+    ],
+    "key_absences": [
+      "Direct evidence of deliberate anti-competitive intent by Remington",
+      "Controlled ergonomic comparison data from adoption period (pre-1930s Dvorak)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "QWERTY layout persistence as either natural technical optimization or constructed lock-in",
+    "authority_description": "Contested between economic historians (David vs Liebowitz/Margolis) and technology adoption theorists",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_reason": "Readings do not emit structurally different constraints—they emit different EXPLANATIONS for the same observable constraint (QWERTY dominance). The constraint itself (switching cost, training investment requirement, manufacturer standardization) is identical across readings. What differs is the CAUSAL STORY (accident vs design vs emergence) and the NORMATIVE FRAMING (efficient vs inefficient), not the constraint structure. This is observer-position disagreement about one constraint, not multiple constraints from one kernel.",
+    "analytical_note": "The D3 artifact warning is valid: beneficiary-hunting frameworks risk constructing beneficiaries where structural analysis finds only path-dependent emergence. The 'beneficiary reading' and 'no-beneficiary reading' are not two constraints but two interpretations of switching-cost lock-in. Decomposing into ordinary axes with the beneficiary question as an omega variable."
+  },
+  "axes": [
+    {
+      "claim_id": "switching_cost_lock_in",
+      "human_readable": "Switching Cost Lock-In (Training Investment Barrier)",
+      "structural_delta": "Accumulated typist training investment creates prohibitive switching cost regardless of layout efficiency",
+      "primary_observable": "Cost to retrain existing typist workforce vs cost to continue QWERTY; employer hiring preferences for QWERTY-trained typists",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "uncertain_see_omega_beneficiary_construction",
+      "victim": "potential_adopters_of_superior_layouts",
+      "downstream_of": [
+        "typist_training_externality"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; downstream synthesis node; core analytical target where beneficiary question concentrates"
+    },
+    {
+      "claim_id": "typist_training_externality",
+      "human_readable": "Typist Training Externality (Skill Specificity)",
+      "structural_delta": "Typing skill is layout-specific rather than layout-general, creating coordination problem",
+      "primary_observable": "Transfer time between layouts; muscle memory persistence; retraining cost data",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "switching_cost_lock_in",
+        "manufacturer_standardization_incentive"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical/cognitive constraint base; structurally distinct from coordination mechanisms"
+    },
+    {
+      "claim_id": "manufacturer_standardization_incentive",
+      "human_readable": "Manufacturer Standardization Incentive (Cartel Coordination)",
+      "structural_delta": "Union Typewriter Company cartel adoption (1893) converted market fragmentation into universal standard",
+      "primary_observable": "Pre-1893 layout diversity vs post-1893 uniformity; cartel formation documents",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "union_typewriter_cartel_members",
+      "victim": null,
+      "downstream_of": [
+        "typist_training_externality"
+      ],
+      "feeds_into": [
+        "switching_cost_lock_in"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Coordination mechanism with clear beneficiary structure; completes upstream/downstream topology"
+    },
+    {
+      "claim_id": "jam_prevention_necessity",
+      "human_readable": "Jam Prevention Necessity (Mechanical Constraint)",
+      "structural_delta": "Type-bar collision physics required non-alphabetical layout in early typewriters",
+      "primary_observable": "Mechanical arm collision frequency in alphabetical vs QWERTY layouts on 1870s hardware",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical constraint obsolete by 1900s; does not explain post-mechanical persistence"
+    },
+    {
+      "claim_id": "ergonomic_efficiency_delta",
+      "human_readable": "Ergonomic Efficiency Delta (Dvorak vs QWERTY Performance)",
+      "structural_delta": "Claimed typing speed and error rate differences between layouts",
+      "primary_observable": "Controlled study results; finger travel distance measurements",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: David vs Liebowitz/Margolis dispute centers here; empirical evidence contested; omega variable"
+    }
+  ],
+  "generation_sequence": [
+    "typist_training_externality",
+    "switching_cost_lock_in",
+    "manufacturer_standardization_incentive"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "jam_prevention_necessity",
+      "structural_delta": "Type-bar collision physics required non-alphabetical layout",
+      "hypothesis": "mountain",
+      "deferral_reason": "Historical constraint obsolete by early 1900s; does not explain persistence after mechanical typewriters"
+    },
+    {
+      "claim_id": "ergonomic_efficiency_delta",
+      "structural_delta": "Claimed typing speed/error differences between layouts",
+      "hypothesis": "contested_mountain",
+      "deferral_reason": "Empirical evidence contested (David vs Liebowitz/Margolis); central to scholarly dispute but not to structural lock-in mechanism"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_beneficiary_construction",
+      "description": "Does switching_cost_lock_in have a beneficiary, or does beneficiary-hunting construct one artifactually? Three candidate answers: (1) No beneficiary—pure path dependence, training externality creates lock-in without strategic actors. (2) Emergent beneficiary—Remington/Union Typewriter gained from lock-in but did not design it. (3) Designed beneficiary—manufacturers deliberately exploited training costs (Remington training courses claim). Evidence for (3) is thin (no smoking-gun anti-competitive intent documents). Evidence for (1) vs (2) depends on whether 'gaining from' equals 'benefiting from' in constraint ontology. The D3 artifact warning applies: if the analytical framework requires finding a beneficiary, it will construct Remington as strategic actor even if lock-in was accidental.",
+      "source": "User's D3 ARTIFACT flag + Dark Matter Probe 3 (Beneficiary Scan) + deferred axis ergonomic_efficiency_delta"
+    },
+    {
+      "id": "omega_efficiency_dispute",
+      "description": "Is QWERTY actually inefficient (David) or approximately optimal given historical constraints (Liebowitz/Margolis)? If Liebowitz/Margolis are correct, typist_training_externality is a Mountain (layout-specific skill is unavoidable) and switching_cost_lock_in is a Rope (coordination on any standard beats fragmentation). If David is correct, switching_cost_lock_in is a Snare (inferior equilibrium maintained by coordination failure). Empirical evidence is contested; no controlled ergonomic studies from adoption period exist.",
+      "source": "Deferred axis ergonomic_efficiency_delta + scholarly dispute between David and Liebowitz/Margolis"
+    },
+    {
+      "id": "omega_intentionality",
+      "description": "Did Remington design QWERTY to be non-intuitive to create training-course revenue and lock-in (beneficiary reading), or was layout choice driven by jam prevention and typist feedback with lock-in as unintended consequence (no-beneficiary reading)? The 'Remington training courses' claim appears in secondary sources but lacks primary documentation. If true, it evidences strategic exploitation of switching costs. If false or exaggerated, it exemplifies beneficiary-construction artifact. The constraint (switching cost) exists either way; the beneficiary attribution is the variable.",
+      "source": "User's kernel contest framing + absence of direct evidence for deliberate anti-competitive intent"
+    },
+    {
+      "id": "omega_mountain_validity",
+      "description": "Is typist_training_externality a true Mountain (cognitive/motor learning is inherently layout-specific) or a Piton (layout-specificity is a training method choice)? Modern touch-typing pedagogy assumes layout-specificity, but this may be self-fulfilling. If layout-general typing skill is learnable, the Mountain collapses to a Piton of pedagogical convention, and switching_cost_lock_in becomes a Snare maintained by training industry inertia rather than cognitive necessity.",
+      "source": "F03 (Hasty Generalization) + Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: typist_training_externality classified as Mountain but layout-specificity of typing skill may be pedagogical convention rather than cognitive necessity. Generated omega_mountain_validity to bound this uncertainty. Additionally, the beneficiary question (omega_beneficiary_construction) flags potential D3 artifact: analytical framework may construct Remington as strategic beneficiary where structural analysis finds only path-dependent emergence without clear intentionality."
+  },
+  "_seed_id": "qwerty_path_naturalization"
+}

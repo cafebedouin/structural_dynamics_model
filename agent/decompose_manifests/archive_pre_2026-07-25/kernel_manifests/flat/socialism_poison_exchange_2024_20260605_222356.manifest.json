@@ -1,0 +1,209 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Rhetorical Analysis / Ideological Discourse",
+  "family_id": "socialism_poison_exchange_2024",
+  "topic_summary": "Analysis of an online ideological exchange where one participant claims socialism is widespread poison in Western societies with hope residing in Russia, followed by a counter-argument using concrete institutional examples (justice, medicine, security), a metaphysical retreat to soul-stakes, and subsequent meta-analysis of the rhetorical patterns and the value of challenging unchallenged assertions in public discourse.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 8,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Original poster (ideological claimant using 'socialism' as tribal marker)",
+      "Respondent (challenger using concrete institutional examples)",
+      "Lurkers/audience (third-party observers calibrating norms)",
+      "Institutional domains (justice, medicine, security as test cases)",
+      "Russia (invoked as counter-example to Western socialism)",
+      "Religious framework (metaphysical retreat position)"
+    ],
+    "key_tensions": [
+      "Vague ideological claim vs concrete institutional counter-examples",
+      "Empirical argumentation vs metaphysical unfalsifiable stakes",
+      "Public challenge as norm-maintenance vs exhaustion/burnout cost"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "tribal_marker_vs_analytical_work",
+      "human_readable": "Tribal Marker vs Analytical Work (Ideological Terms as Identity Signals)",
+      "structural_delta": "Use of ideological terms ('socialism') to signal group membership rather than describe institutional arrangements",
+      "primary_observable": "Whether term usage survives request for operational definition; whether concrete examples are engaged or bypassed",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "in_group_members",
+      "victim": "analytical_clarity",
+      "downstream_of": [],
+      "feeds_into": [
+        "metaphysical_retreat_mechanism",
+        "normalization_through_repetition"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream to both retreat mechanism and normalization; distinct observable (term-usage pattern vs definitional engagement)"
+    },
+    {
+      "claim_id": "metaphysical_retreat_mechanism",
+      "human_readable": "Metaphysical Retreat Mechanism (Escalation to Unfalsifiable Stakes)",
+      "structural_delta": "When empirical argument fails, escalation to stakes that cannot be tested (souls, absolute good/evil)",
+      "primary_observable": "Shift from testable claims to untestable claims when challenged; abandonment of original frame",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "original_claimant",
+      "victim": "dialogue_possibility",
+      "downstream_of": [
+        "tribal_marker_vs_analytical_work"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (claim-type shift under pressure); different victim structure than axis 1; captures defensive mechanism"
+    },
+    {
+      "claim_id": "normalization_through_repetition",
+      "human_readable": "Normalization Through Repetition (Unchallenged Assertions as Consensus Signal)",
+      "structural_delta": "Repeated unchallenged claims shift Overton window through calibration of what counts as sayable/normal",
+      "primary_observable": "Frequency of assertion without pushback; lurker perception of consensus vs actual agreement",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "bad_faith_actors",
+      "victim": "epistemic_commons",
+      "downstream_of": [
+        "tribal_marker_vs_analytical_work"
+      ],
+      "feeds_into": [
+        "challenge_as_commons_maintenance"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Different observable than axes 1-2 (repetition frequency vs term usage vs claim-type); feeds into commons axis"
+    },
+    {
+      "claim_id": "challenge_as_commons_maintenance",
+      "human_readable": "Challenge as Commons Maintenance (Public Correction as Depletable Resource)",
+      "structural_delta": "Challenging error maintains epistemic commons but depletes challenger resources; cost-benefit varies by venue saturation",
+      "primary_observable": "Challenger burnout rates; ratio of challenges to assertions in venue; lurker norm-calibration shifts",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "normalization_through_repetition"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct observable (resource depletion vs normalization frequency); coordination problem structure; different from upstream tangled_rope"
+    },
+    {
+      "claim_id": "transmissibility_advantage",
+      "human_readable": "Transmissibility Advantage (Simple Claims Outcompete Nuanced Ones)",
+      "structural_delta": "Ideas compete on transmissibility/emotional resonance rather than truth; simple false claims structurally advantaged",
+      "primary_observable": "Viral spread rates of simple vs complex claims; retention/repetition patterns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "normalization_through_repetition"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Mountain providing physical constraint base (cognitive/memetic physics); distinct from coordination and identity-signaling axes"
+    },
+    {
+      "claim_id": "audience_vs_interlocutor",
+      "human_readable": "Audience vs Interlocutor (Lurkers as True Target)",
+      "structural_delta": "Public exchanges optimize for lurker persuasion rather than interlocutor conversion",
+      "primary_observable": "Strategic choices in argument (concrete examples vs dismissals); who changes position post-exchange",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "challenge_as_commons_maintenance"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps with challenge_as_commons_maintenance on observable (both measure lurker effects); lower centrality"
+    },
+    {
+      "claim_id": "concrete_vs_abstract_framing",
+      "human_readable": "Concrete vs Abstract Framing (Institutional Examples as Reframe Tool)",
+      "structural_delta": "Shift from abstract ideological claims to concrete institutional questions (justice, medicine, security)",
+      "primary_observable": "Whether abstract claims survive request for operational examples; engagement vs bypass",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "tribal_marker_vs_analytical_work"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured by tribal_marker_vs_analytical_work axis which measures same observable (term usage vs operational definition); piton vs tangled_rope but same structural delta"
+    }
+  ],
+  "generation_sequence": [
+    "tribal_marker_vs_analytical_work",
+    "metaphysical_retreat_mechanism",
+    "normalization_through_repetition",
+    "challenge_as_commons_maintenance",
+    "transmissibility_advantage"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "audience_vs_interlocutor",
+      "structural_delta": "Public exchanges optimize for lurker persuasion rather than interlocutor conversion",
+      "hypothesis": "rope",
+      "deferral_reason": "Overlaps with challenge_as_commons_maintenance on primary observable (both measure lurker norm-calibration effects); lower centrality score"
+    },
+    {
+      "claim_id": "concrete_vs_abstract_framing",
+      "structural_delta": "Shift from abstract ideological claims to concrete institutional questions",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured by tribal_marker_vs_analytical_work which measures same observable (term usage surviving operational definition request); same structural delta with different type classification"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_marketplace_metaphor_validity",
+      "description": "Is the 'marketplace of ideas' a Mountain (emergent truth-finding mechanism) or a Piton (atrophied assumption masking active maintenance requirements)? Respondent's suspicion suggests the latter but analysis incomplete.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + explicit skepticism in exchange"
+    },
+    {
+      "id": "omega_venue_saturation_threshold",
+      "description": "At what assertion-to-challenge ratio does a venue flip from 'individual challenges matter' to 'flooding has won'? Observable exists but threshold unknown; affects challenge_as_commons_maintenance ε.",
+      "source": "challenge_as_commons_maintenance axis + venue-dependence claim in exchange"
+    },
+    {
+      "id": "omega_russia_claim_validity",
+      "description": "Original claim that 'Russia is where most of hope is' went entirely unexamined. Is this a factual claim (testable), a tribal marker (identity signal), or a provocation (engagement bait)? Structural role in exchange unclear.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_fundamentalism_reframe",
+      "description": "Respondent's 'fundamentalism is the evil' reframe was noted as 'the sharp move' but not decomposed. Is fundamentalism itself a Mountain (cognitive rigidity), Rope (coordination on certainty), or Tangled_Rope (identity-protective cognition)? Requires separate analysis.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred concrete_vs_abstract_framing axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F01 detected: Input contained both the original exchange AND meta-analysis of it. Decomposition treated the meta-analysis (rhetorical patterns, normalization mechanisms) as the primary substrate rather than the original ideological claims. This matches the research context note that the material 'isn't a factual topic that can be researched in the traditional sense' but is 'a case study in how ideological arguments work.' If user intended analysis of socialism/capitalism institutional arrangements rather than discourse mechanics, premise drift occurred. Generated omega_russia_claim_validity and omega_fundamentalism_reframe to flag unexamined substantive claims."
+  }
+}

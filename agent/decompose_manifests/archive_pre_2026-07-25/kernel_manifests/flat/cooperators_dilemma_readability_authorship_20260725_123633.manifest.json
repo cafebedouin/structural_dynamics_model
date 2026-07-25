@@ -1,0 +1,179 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Epistemics of Cooperation / Signaling Theory / Authorship & Attribution",
+  "family_id": "cooperators_dilemma_readability_authorship",
+  "topic_summary": "The phrase names a structural bind in cooperative signaling: cooperation that is legible to an evaluator (smooth, well-formed, easy to verify as 'good cooperation') tends to have had its rough authorial fingerprints sanded off by editing, convention, or delegated composition — it reads as if no single struggling author produced it. Cooperation that retains a visible, idiosyncratic authorial signature — the marks of one mind actually doing the difficult joint work — tends to be structurally harder to parse, verify, or credit cleanly. The dilemma is not 'cooperate vs defect' (Lichbach's classical formulation) but a second-order bind about how the readability of cooperative output and the traceability of who produced it trade off against each other.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "The cooperator (the agent doing joint work)",
+      "The reader/evaluator (grader, reviewer, audience, collaborator judging output)",
+      "The editorial/normalizing layer (style guides, ghostwriters, consensus process, LLM smoothing)",
+      "The attribution record (byline, credit line, commit history, acknowledgments)",
+      "Classical Cooperator's Dilemma (Lichbach) — collective-action framing this phrase is punning on"
+    ],
+    "key_claims": [
+      "Readable cooperation is ghost-written: legibility is achieved by erasing the individual authorial trace that would make the text harder to parse",
+      "Authored cooperation is unreadable: preserving a visible individual signature within joint work produces friction, inconsistency, or opacity to outside readers",
+      "These two states are presented as exhaustive — there is no stated third option where cooperation is both readable and attributable",
+      "The Lichbach 'Cooperator's Dilemma' concerns whether to cooperate at all; this phrase concerns what cooperation costs once you're already inside it"
+    ],
+    "key_tensions": [
+      "Legibility (to an outside evaluator) vs. traceability (to a specific author)",
+      "Smoothness/coherence of the joint artifact vs. visibility of the individual contribution",
+      "Institutional/collective credit norms vs. individual credit norms"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment underneath both readings is that cooperative work produces an ARTIFACT that must simultaneously satisfy two audiences: an evaluator who needs to consume it efficiently, and an attribution system that needs to trace it to a responsible originator. Both readings agree this artifact exists and that it is being judged. What they dispute is which property of the artifact — its surface legibility or its causal/authorial history — is the true site of value, and therefore which failure mode ('ghost-written' or 'unreadable') is the real cost and which is the acceptable trade-off.",
+    "authority_description": "There is no single adjudicating authority; legitimacy is contested between institutional/evaluative norms (journals, employers, graders, platforms — who reward legible output) and individual/craft norms (authorship ethics, integrity codes, artisanal or scholarly traditions — who reward traceable origination). Each reading treats a different party as the rightful judge of what 'good cooperation' means.",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "cooperative_artifact_legitimacy",
+    "readings": [
+      {
+        "reading_id": "legibility_primacy_reading",
+        "commitment": "The purpose of cooperative output is to be consumed, verified, and acted upon efficiently by an evaluator/audience. Smoothing away individual authorial texture is a legitimate, even necessary, cost of producing usable joint work. 'Ghost-writing' is not theft but normal editorial integration — the text belongs to the collective enterprise, not to any single hand.",
+        "authority_grounding": "institutional/functionalist — publishers, editors, organizations, platforms whose legitimacy derives from serving readers/users",
+        "sibling_readings": [
+          "authorial_primacy_reading",
+          "process_transparency_reading"
+        ],
+        "expected_structural_delta": "Victim set centers on individual contributors whose labor is real but rendered invisible; beneficiary is the reading/evaluating audience and the institution that owns the smoothed artifact. High suppression of alternative credit claims."
+      },
+      {
+        "reading_id": "authorial_primacy_reading",
+        "commitment": "The purpose of cooperative output is to preserve an honest record of who did what and how a mind or minds actually reasoned. Legibility achieved by erasing that record is a form of fraud (ghost-authorship, effacement of labor). A text that stays 'unreadable' because it retains real authorial texture is more legitimate, even if harder to consume, because legitimacy is grounded in traceable origination, not in ease of consumption.",
+        "authority_grounding": "individual/deontological — authorship ethics codes, integrity bodies (ICMJE-style norms), craft and scholarly traditions grounding legitimacy in provenance",
+        "sibling_readings": [
+          "legibility_primacy_reading",
+          "process_transparency_reading"
+        ],
+        "expected_structural_delta": "Victim set centers on the audience/evaluator who must now do costly interpretive labor, and on collective projects that fail to cohere; beneficiary is the individual contributor whose authorship is preserved and verifiable."
+      },
+      {
+        "reading_id": "process_transparency_reading",
+        "commitment": "The dilemma is dissolved, not chosen between, by separating the ARTIFACT from the RECORD: let the surface text be smoothed for legibility, but require a parallel, explicit trace (revision history, contribution statements, process logs) that preserves authorship without degrading readability. Legitimacy attaches neither to the smoothed surface nor to the raw authored draft alone, but to the coupled pair of (readable output, disclosed process).",
+        "authority_grounding": "procedural/infrastructural — version-control norms, CRediT taxonomy, transparent-collaboration standards; legitimacy derives from disclosure architecture rather than from either surface property",
+        "sibling_readings": [
+          "legibility_primacy_reading",
+          "authorial_primacy_reading"
+        ],
+        "expected_structural_delta": "Attempts to convert the tangled_rope into a scaffold: does not eliminate the underlying tension but externalizes it into an auditable side-channel. Beneficiary is whoever controls or trusts the disclosure infrastructure; victim is any context where that infrastructure is absent, faked, or itself gamed (fabricated contribution statements, hollow revision histories)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "legibility_primacy_reading",
+        "reading_b": "authorial_primacy_reading",
+        "basis": "Legibility-primacy holds that the collective enterprise, not the individual hand, is the proper unit of ownership over the joint artifact; authorial-primacy holds that traceable individual origination is the non-waivable ground of legitimacy. Accepting that erasing authorial trace is legitimate (legibility-primacy's axiom) requires denying that traceable origination is a non-waivable legitimacy condition (authorial-primacy's axiom) — no single framework can hold both as foundational simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "cooperative_artifact_legitimacy",
+      "human_readable": "Contested Kernel: What Makes Cooperative Output Legitimate — Its Legibility or Its Authorial Trace?",
+      "structural_delta": "A single shared commitment (cooperative work produces a judged artifact) sustains at least three incompatible readings of what property of that artifact confers legitimacy",
+      "primary_observable": "Whether legitimacy claims in a given cooperative-writing dispute ground themselves in consumption-ease metrics, provenance/traceability metrics, or disclosure-architecture metrics",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reading_dependent — see per-reading expected_structural_delta",
+      "victim": "reading_dependent — see per-reading expected_structural_delta",
+      "downstream_of": [],
+      "feeds_into": [
+        "evaluator_incentive_asymmetry"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel status confirmed: readings emit structurally different victim/beneficiary sets and rest on axiom-contradictory foundations, not mere disagreement about a shared constraint. Counts as one axis per budget rule; all three readings proceed to generation."
+    },
+    {
+      "claim_id": "evaluator_incentive_asymmetry",
+      "human_readable": "Evaluator Incentive Asymmetry (Why Readers Structurally Reward Smoothing)",
+      "structural_delta": "Independent of which reading an author holds, the evaluator (grader, reviewer, hiring committee, algorithmic filter) faces time/attention constraints that mechanically reward legible surface form over verified provenance, regardless of the artifact's true authorship structure",
+      "primary_observable": "Time-to-evaluate as a function of surface smoothness vs. as a function of provenance-verification effort; correlation between measured 'quality' scores and detectable single-author stylistic consistency",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "high-throughput evaluators; institutions optimizing for volume of processed cooperative artifacts",
+      "victim": "individual contributors whose authorship legibility is sacrificed to institutional throughput",
+      "downstream_of": [
+        "cooperative_artifact_legitimacy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Passes §3 independence test: distinct observable (evaluator time/attention economics) from the kernel's normative-legitimacy observable; causally downstream (the incentive asymmetry is what makes the kernel's dilemma bite in practice) rather than a restatement of any single reading. Retained as the sole additional axis under this run's structural budget."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "legibility_primacy_reading",
+      "kernel_id": "cooperative_artifact_legitimacy",
+      "reading_id": "legibility_primacy_reading"
+    },
+    {
+      "claim_id": "authorial_primacy_reading",
+      "kernel_id": "cooperative_artifact_legitimacy",
+      "reading_id": "authorial_primacy_reading"
+    },
+    {
+      "claim_id": "process_transparency_reading",
+      "kernel_id": "cooperative_artifact_legitimacy",
+      "reading_id": "process_transparency_reading"
+    },
+    "evaluator_incentive_asymmetry"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "lichbach_collective_action_homonymy",
+      "structural_delta": "The phrase's use of 'cooperator's dilemma' is a deliberate pun on Lichbach's classical collective-action term, but the classical term concerns whether-to-cooperate, not the readability/authorship bind — the two are namesakes, not the same structure",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Purely terminological/etymological observation; does not survive as an independent generative axis because it produces no distinct observable of its own — folded into omega instead"
+    },
+    {
+      "claim_id": "llm_ghost_authorship_acceleration",
+      "structural_delta": "Large language models as a new, industrial-scale ghostwriting layer may be quantitatively changing the ratio of readable-but-ghost-written to authored-but-unreadable output in ways historical academic-ghostwriting literature didn't anticipate",
+      "hypothesis": "piton",
+      "deferral_reason": "High-salience but insufficiently distinct from legibility_primacy_reading's structural delta at this scoping stage — LLM-smoothing is an instance/accelerant of the legibility_primacy mechanism, not a separate constraint; flagged as omega for essayist rather than promoted to its own axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_no_established_framework",
+      "description": "Search grounding confirms no established academic or theoretical literature uses this exact phrase; the kernel decomposition above is a novel synthesis constructed from the phrase's internal logic plus adjacent literatures (ghost-authorship ethics, collaboration-paradox research, classical collective-action theory). Confidence in the kernel structure should be treated as an interpretive hypothesis, not a documented consensus finding.",
+      "source": "Research summary (no established framework found) + F03 caution"
+    },
+    {
+      "id": "omega_lichbach_homonymy",
+      "description": "The classical 'Cooperator's Dilemma' (Lichbach) is a homonym, not the same structure as this topic's dilemma; an essayist should explicitly flag the pun rather than conflate collective-action defection incentives with the readability/authorship bind described here.",
+      "source": "Deferred axis lichbach_collective_action_homonymy"
+    },
+    {
+      "id": "omega_process_transparency_gaming",
+      "description": "The process_transparency_reading's proposed resolution (separate readable surface from disclosed authorial record) assumes the disclosure infrastructure itself is trustworthy. Where contribution statements or revision histories can be fabricated or gamed, this reading's scaffold collapses back into the kernel's original tangled_rope — worth flagging as a bounded fragility rather than a true resolution.",
+      "source": "commitment_system_recognition.readings[2] + F03 caution"
+    },
+    {
+      "id": "omega_llm_acceleration",
+      "description": "Whether LLM-mediated smoothing is merely a faster version of pre-existing ghost-authorship dynamics (quantitative shift) or introduces a qualitatively new victim/beneficiary structure (e.g., no human ghostwriter to eventually credit) is unresolved and worth surfacing at the essay level.",
+      "source": "Deferred axis llm_ghost_authorship_acceleration"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 flagged: because no established literature uses this exact phrase, the kernel/readings structure is a constructed interpretive hypothesis rather than an extraction from documented theory. The three readings and their axiom-contradiction were tested against the §1.3-K coherence gate (would the readings collapse into one constraint?) and judged genuinely distinct — legibility_primacy and authorial_primacy emit different victim sets and rest on mutually exclusive foundational axioms, and process_transparency is not a mere blend but a distinct procedural claim about where legitimacy attaches. Recorded as omega_no_established_framework so the essayist treats this as a live synthesis, not settled doctrine."
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal Theory / Jurisprudence / Constitutional Law",
+  "family_id": "common_law_precedent_authority",
+  "topic_summary": "Analysis of common law precedent as a contested kernel where the corpus of case law is read through fundamentally different interpretive commitments: strict stare decisis treats precedent as binding backward constraint, while evolutionary frameworks treat it as dynamic normative adaptation. The authority-grounding contest centers on whether judicial legitimacy derives from fidelity to past decisions or responsive evolution to contemporary values.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Common Law Precedent Corpus (accumulated case law as authoritative substrate)",
+      "Judiciary (interpretive authority over precedent application)",
+      "Strict Stare Decisis School (binding backward constraint reading)",
+      "Evolutionary Jurisprudence School (adaptive normative framework reading)",
+      "Litigants (parties subject to precedent application outcomes)"
+    ],
+    "key_tensions": [
+      "Backward fidelity vs contemporary normative adaptation (interpretive authority grounding)",
+      "Stability/predictability vs responsive justice (competing legitimacy claims)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The corpus of common law precedent as accumulated judicial practice, claimed as authoritative substrate for adjudication",
+    "authority_description": "Judicial interpretive legitimacy grounded in either fidelity to past holdings (originalist) or responsive adaptation to evolving norms (living constitutionalism analog for common law)",
+    "drift_status": "functioning",
+    "candidate_pattern": "Interpretive Custody (Pattern 3) — judiciary holds interpretive monopoly over precedent application, with institutional mechanisms (distinguishing, overruling) that permit controlled revision",
+    "is_contested_kernel": true,
+    "kernel_id": "common_law_precedent_corpus",
+    "readings": [
+      {
+        "reading_id": "strict_stare_decisis",
+        "commitment": "Precedent binds as backward constraint; departure requires extraordinary justification",
+        "authority_grounding": "Judicial legitimacy derives from fidelity to past authoritative holdings; predictability and equal treatment demand binding force",
+        "sibling_readings": [
+          "evolutionary_framework",
+          "pluralist_balancing"
+        ],
+        "expected_structural_delta": "High constraint rigidity; precedent overruling rare and contested; litigants face narrow pathways for norm challenge; judiciary constrained by accumulated holdings"
+      },
+      {
+        "reading_id": "evolutionary_framework",
+        "commitment": "Precedent provides adaptive framework; contemporary normative evolution permits reinterpretation",
+        "authority_grounding": "Judicial legitimacy derives from responsive justice and normative coherence with contemporary values; law must evolve or ossify",
+        "sibling_readings": [
+          "strict_stare_decisis",
+          "pluralist_balancing"
+        ],
+        "expected_structural_delta": "Lower constraint rigidity; precedent overruling normalized as corrective; litigants gain broader pathways for norm challenge; judiciary empowered as normative updater"
+      },
+      {
+        "reading_id": "pluralist_balancing",
+        "commitment": "Precedent weight varies by domain and context; balancing stability and adaptation case-by-case",
+        "authority_grounding": "Judicial legitimacy requires domain-sensitive judgment; constitutional/statutory precedent treated differently than common law tort; recent precedent more revisable",
+        "sibling_readings": [
+          "strict_stare_decisis",
+          "evolutionary_framework"
+        ],
+        "expected_structural_delta": "Medium constraint rigidity with context-dependent variance; precedent hierarchy creates multi-tier extractiveness; litigants face unpredictable domain-switching costs"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_stare_decisis",
+        "reading_b": "evolutionary_framework",
+        "basis": "Strict stare decisis grounds legitimacy in backward fidelity (past holdings as immutable unless demonstrably erroneous), while evolutionary framework grounds legitimacy in forward responsiveness (contemporary norms as legitimating adaptation). No single coherent theory holds both: accepting contemporary norms as sufficient grounds for revision requires rejecting past holdings as necessarily binding."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_stare_decisis",
+      "human_readable": "Strict Stare Decisis (Binding Backward Constraint)",
+      "structural_delta": "Precedent as immutable holding requiring extraordinary justification for departure; judicial legitimacy through fidelity",
+      "primary_observable": "Overruling rate per decade; judicial rhetoric invoking 'settled law'; dissent frequency in precedent-challenge cases",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "established_legal_actors",
+      "victim": "norm_challengers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with axiom-contradictory relationship to evolutionary_framework; high epsilon from constraint rigidity"
+    },
+    {
+      "claim_id": "evolutionary_framework",
+      "human_readable": "Evolutionary Framework (Adaptive Normative Authority)",
+      "structural_delta": "Precedent as revisable framework; judicial legitimacy through responsive normative updating to contemporary values",
+      "primary_observable": "Overruling justifications citing 'changed circumstances' or 'evolving standards'; frequency of substantive precedent revision vs narrow distinguishing",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "norm_challengers",
+      "victim": "settled_expectation_holders",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory sibling to strict_stare_decisis; captures opposite authority grounding with different victim structure"
+    },
+    {
+      "claim_id": "pluralist_balancing",
+      "human_readable": "Pluralist Balancing (Context-Dependent Precedent Weight)",
+      "structural_delta": "Precedent weight varies by domain, recency, and institutional context; stability/adaptation tradeoff case-by-case",
+      "primary_observable": "Differential overruling rates across legal domains (constitutional vs tort vs contract); judicial doctrine distinguishing precedent tiers",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "judicial_discretion_holders",
+      "victim": "predictability_seekers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural reading instantiating hybrid constraint; different extractiveness profile (discretion costs) from binary pair"
+    },
+    {
+      "claim_id": "institutional_overruling_mechanisms",
+      "human_readable": "Institutional Overruling Mechanisms (Drift Absorption Pathways)",
+      "structural_delta": "Formal procedures for precedent revision (en banc review, Supreme Court cert, legislative override) vs informal erosion (distinguishing, narrow holdings)",
+      "primary_observable": "Ratio of formal overrulings to informal erosions; petition rates for en banc/cert review in precedent-challenge cases",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_stare_decisis",
+        "evolutionary_framework",
+        "pluralist_balancing"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional mechanism feeds all readings but lacks independent constraint story; captured implicitly in reading-level extractiveness"
+    },
+    {
+      "claim_id": "precedent_as_information_system",
+      "human_readable": "Precedent as Information System (Coordination Through Published Holdings)",
+      "structural_delta": "Common law precedent as distributed coordination mechanism; published holdings signal judicial expectations to future litigants and lower courts",
+      "primary_observable": "Citation network density; precedent predictive power for case outcomes; lower court compliance rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_stare_decisis",
+        "evolutionary_framework"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain-level coordination function orthogonal to authority-grounding contest; all readings depend on precedent as information system"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strict_stare_decisis",
+      "kernel_id": "common_law_precedent_corpus",
+      "reading_id": "strict_stare_decisis"
+    },
+    {
+      "claim_id": "evolutionary_framework",
+      "kernel_id": "common_law_precedent_corpus",
+      "reading_id": "evolutionary_framework"
+    },
+    {
+      "claim_id": "pluralist_balancing",
+      "kernel_id": "common_law_precedent_corpus",
+      "reading_id": "pluralist_balancing"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_overruling_mechanisms",
+      "structural_delta": "Formal vs informal pathways for precedent revision",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Institutional mechanism feeds all readings but lacks independent constraint story; extractiveness captured in reading-level analysis"
+    },
+    {
+      "claim_id": "precedent_as_information_system",
+      "structural_delta": "Precedent as distributed coordination mechanism through published holdings",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain-level coordination function orthogonal to authority-grounding contest; all readings presuppose this substrate"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_legislative_override",
+      "description": "Does legislative override (statutory reversal of common law holdings) destabilize all three readings, or does it merely shift the kernel locus from judiciary to legislature? If override is frequent, precedent authority may be piton rather than mountain.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — legislative override conspicuously absent from extraction"
+    },
+    {
+      "id": "omega_transnational_precedent",
+      "description": "Do transnational citation practices (citing foreign precedent) erode strict stare decisis or enrich evolutionary framework? If judges cite non-binding foreign holdings, does this signal precedent as persuasive rather than authoritative?",
+      "source": "Dark Matter Probe 1 (Operational Medium) — implicit assumption of national precedent closure"
+    },
+    {
+      "id": "omega_predictive_analytics",
+      "description": "Do machine learning case outcome predictors (trained on precedent corpus) undermine evolutionary framework by exposing precedent as determinate constraint, or validate it by revealing judicial discretion as pattern-breaking adaptation?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — legal tech industry benefits from precedent predictability; evolutionary reading threatens that commercial model"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Is pluralist_balancing genuinely a third reading, or is it strict_stare_decisis with domain-specific exceptions (i.e., a variant within one reading rather than a distinct interpretive commitment)? Generation step may reveal collapse.",
+      "source": "§1.3-K coherence signal — pluralist reading shares backward-looking authority grounding with strict stare decisis in some domains"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. All three readings proceed to generation with distinct authority groundings and expected structural deltas. Axiom contradiction declared between strict_stare_decisis and evolutionary_framework. Pluralist_balancing flagged in omega_reading_collapse_risk for generation-step validation."
+  },
+  "_seed_id": "english_common_law_development"
+}

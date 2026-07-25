@@ -1,0 +1,252 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Corporate Finance / Technology Strategy / Space Economics",
+  "family_id": "spacex_s1_2026",
+  "topic_summary": "Analysis of SpaceX's May 2026 S-1 registration statement, examining the company's vertically integrated strategy across Space, Connectivity, and AI segments under Elon Musk's controlling ownership. The document presents management's vision of a $28.5 trillion market opportunity anchored by orbital AI compute and reusable launch systems, alongside extensive risk disclosures regarding unproven technologies, regulatory dependencies, massive capital requirements, and uncertain profitability timelines.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "SpaceX (vertically integrated space/connectivity/AI conglomerate seeking public listing)",
+      "Elon Musk (controlling shareholder, 85.1% post-IPO voting power, multi-company CEO)",
+      "Class A public shareholders (limited voting rights, 1 vote/share)",
+      "U.S. Government/NASA (primary customer, ~20% of 2025 revenue, regulatory authority via FAA/FCC)",
+      "Starlink (profitable connectivity segment, 10.3M subscribers, $7.2B Adjusted EBITDA 2025)",
+      "Starship (heavy-lift vehicle in development, $3B R&D 2025, critical path dependency)",
+      "COLOSSUS/Grok AI segment (massive losses, $6.4B operating loss 2025, unproven orbital compute vision)",
+      "Creditors ($29.1B debt including $20B bridge loan maturing Sept 2027)"
+    ],
+    "key_tensions": [
+      "Management optimism (trillion-dollar TAM, unique capabilities, orbital AI inevitability) vs. risk disclosures (unproven tech, regulatory uncertainty, capital burn)",
+      "Musk control (85.1% voting power, governance exemptions) vs. public shareholder interests (no influence on major decisions)",
+      "Connectivity profitability ($7.2B Adjusted EBITDA) vs. AI segment losses ($6.4B operating loss, $12.7B capex)",
+      "Vertical integration advantages (speed, cost) vs. execution dependencies (Starship delays cascade across all segments)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "vertical_integration_moat",
+      "human_readable": "Vertical Integration as Competitive Moat",
+      "structural_delta": "End-to-end control of launch, satellites, chips, data centers, and power infrastructure claimed as durable competitive advantage vs. modular specialist competitors",
+      "primary_observable": "Cost per kg to orbit ($2,700 Falcon 9 vs. industry); data center build time (122 days COLOSSUS vs. 2-year benchmark); market share (80%+ global payload mass 2025)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "spacex_management",
+      "victim": "modular_competitors",
+      "downstream_of": [],
+      "feeds_into": [
+        "orbital_ai_compute_viability",
+        "starship_critical_path"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream to both orbital AI and Starship dependencies; tangled_rope with clear beneficiary structure"
+    },
+    {
+      "claim_id": "musk_control_governance",
+      "human_readable": "Musk Control & Governance Structure",
+      "structural_delta": "Dual-class share structure (10:1 voting ratio) concentrates control in Musk, enabling 'controlled company' exemptions from independent governance requirements",
+      "primary_observable": "Post-IPO voting power (85.1% Musk); board composition (Musk-controlled majority); governance exemptions (no independent comp/nominating committees)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "musk",
+      "victim": "class_a_shareholders",
+      "downstream_of": [],
+      "feeds_into": [
+        "capital_allocation_risk"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (voting structure vs. operational metrics); high ε; snare with clear victim set; feeds capital allocation axis"
+    },
+    {
+      "claim_id": "starship_critical_path",
+      "human_readable": "Starship as Critical Path Dependency",
+      "structural_delta": "Starship development success is necessary condition for orbital AI compute, lunar economy, Mars transport, and Starlink V3 economics",
+      "primary_observable": "Starship launch cadence (target: 100+ annually by decade's end); payload capacity to orbit (100+ tons vs. Falcon 9's 22.8 tons); regulatory approval timeline (FAA environmental reviews)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "vertical_integration_moat"
+      ],
+      "feeds_into": [
+        "orbital_ai_compute_viability",
+        "capital_allocation_risk"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Mountain providing physical constraint base; downstream of integration moat; feeds both AI viability and capital risk"
+    },
+    {
+      "claim_id": "orbital_ai_compute_viability",
+      "human_readable": "Orbital AI Compute Technical & Economic Viability",
+      "structural_delta": "Space-based solar + orbital compute claimed as 'only truly scalable solution' to terrestrial power constraints vs. unproven technology with no existing operational precedent",
+      "primary_observable": "Power generation capacity in orbit (target: 100 GW annually by decade's end vs. zero operational today); compute cost per FLOP in orbit vs. terrestrial; latency penalties for orbital workloads",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "vertical_integration_moat",
+        "starship_critical_path"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Scaffold hypothesis for unproven tech; downstream synthesis of integration + Starship; distinct observable (orbital power/compute economics)"
+    },
+    {
+      "claim_id": "capital_allocation_risk",
+      "human_readable": "Capital Allocation Under Musk Control",
+      "structural_delta": "Musk's multi-company commitments (Tesla, Neuralink, Boring Company) + no key-person insurance + opportunity renunciation clause create principal-agent risk in capital deployment",
+      "primary_observable": "Capex allocation across segments (AI $12.7B vs. Space $3.8B vs. Connectivity $4.2B in 2025); debt service coverage (cash $15.8B vs. debt $29.1B, bridge loan maturity Sept 2027); related-party transactions (Terafab/Tesla, X platform integration)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "musk_portfolio_interests",
+      "victim": "spacex_minority_shareholders",
+      "downstream_of": [
+        "musk_control_governance",
+        "starship_critical_path"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Tangled_rope downstream of governance + Starship; distinct observable (capital flows vs. voting structure); completes governance→capital pathway"
+    },
+    {
+      "claim_id": "connectivity_cash_cow_sustainability",
+      "human_readable": "Starlink Connectivity as Sustainable Cash Cow",
+      "structural_delta": "Starlink's current profitability ($7.2B Adjusted EBITDA 2025) vs. competitive threats (Amazon Kuiper, OneWeb, terrestrial 5G) and spectrum/regulatory dependencies",
+      "primary_observable": "Starlink subscriber growth rate (105% YoY 2025); ARPU trends; competitive launch cadence (Kuiper deployment timeline); spectrum auction outcomes (EchoStar acquisition $19.6B)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "capital_allocation_risk"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality; profitability sustainability captured indirectly via capital_allocation_risk axis which examines cash generation vs. AI/Starship burn"
+    },
+    {
+      "claim_id": "regulatory_approval_bottleneck",
+      "human_readable": "Regulatory Approval as Execution Bottleneck",
+      "structural_delta": "FAA launch licensing, FCC spectrum coordination, international ITU approvals required for all three segments with 'complex and time-consuming' timelines",
+      "primary_observable": "FAA environmental review duration (Starship Boca Chica); FCC experimental license grant rate; ITU coordination filing backlog; international spectrum allocation outcomes",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "starship_critical_path",
+        "orbital_ai_compute_viability"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: rope feeding into already-selected mountain (Starship) and scaffold (orbital AI); regulatory constraint captured as component of those axes rather than independent dimension"
+    },
+    {
+      "claim_id": "ai_segment_profitability_timeline",
+      "human_readable": "AI Segment Path to Profitability",
+      "structural_delta": "AI segment's $6.4B operating loss and $12.7B capex in 2025 vs. management's claim of eventual profitability through compute sales and Grok monetization",
+      "primary_observable": "AI segment operating margin trajectory; Grok MAU monetization rate; Anthropic compute contract economics ($1.25B/month through May 2029); GPU utilization rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "orbital_ai_compute_viability"
+      ],
+      "feeds_into": [
+        "capital_allocation_risk"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton downstream of orbital_ai_compute_viability scaffold; profitability uncertainty captured in capital_allocation_risk axis examining cash burn vs. debt maturity"
+    }
+  ],
+  "generation_sequence": [
+    "vertical_integration_moat",
+    "musk_control_governance",
+    "starship_critical_path",
+    "orbital_ai_compute_viability",
+    "capital_allocation_risk"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "connectivity_cash_cow_sustainability",
+      "structural_delta": "Starlink profitability sustainability vs. competitive and regulatory threats",
+      "hypothesis": "rope",
+      "deferral_reason": "Lower centrality; profitability dynamics captured indirectly via capital_allocation_risk axis examining cash generation vs. AI/Starship capital requirements"
+    },
+    {
+      "claim_id": "regulatory_approval_bottleneck",
+      "structural_delta": "FAA/FCC/ITU approval timelines as execution constraint",
+      "hypothesis": "rope",
+      "deferral_reason": "Rope feeding into already-selected Starship mountain and orbital AI scaffold; regulatory constraint captured as component of those axes rather than independent dimension"
+    },
+    {
+      "claim_id": "ai_segment_profitability_timeline",
+      "structural_delta": "AI segment path from $6.4B loss to profitability",
+      "hypothesis": "piton",
+      "deferral_reason": "Piton downstream of orbital_ai_compute_viability scaffold; profitability uncertainty captured in capital_allocation_risk axis examining burn rate vs. debt maturity"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_not_contested_kernel",
+      "description": "Topic flagged as candidate contested kernel but does NOT qualify. The S-1 presents internal tension (management optimism vs. risk disclosures) within a single institutional voice, not competing readings of a shared commitment by distinct interpretive communities. There is no kernel being read differently—only SpaceX's dual obligation to market its vision and disclose material risks. The 'contest' is between promotional framing and legal liability management within one document, not between holdable positions that would instantiate different constraints. Decomposed into ordinary axes instead.",
+      "source": "§1.3-K kernel/reading decision"
+    },
+    {
+      "id": "omega_starship_mountain_validity",
+      "description": "Starship classified as mountain (physical constraint: heavy-lift capability required for orbital infrastructure) but could reclassify to piton if alternative launch architectures (distributed small-sat deployment, in-space assembly, non-SpaceX heavy-lift) prove viable. Mountain status depends on assumption that 100+ ton payload capacity is necessary condition for orbital AI economics.",
+      "source": "F03 (Hasty Generalization) + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_orbital_compute_physics",
+      "description": "Orbital AI compute viability depends on unverified physics: space-based solar efficiency at scale, thermal management in vacuum, radiation hardening for AI accelerators, latency tolerance for training workloads. Scaffold hypothesis assumes these are solvable engineering problems; if fundamental physics constraints emerge (e.g., cosmic ray bit-flip rates exceed error correction capacity), reclassifies to impossible rather than unproven.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + orbital_ai_compute_viability axis"
+    },
+    {
+      "id": "omega_musk_attention_allocation",
+      "description": "Capital allocation risk axis examines financial flows but not Musk's cognitive/temporal allocation across Tesla, SpaceX, Neuralink, Boring Company, X. If Musk's attention is the binding constraint (not capital), the governance snare may understate extraction. No observable metric available for CEO attention allocation.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_geopolitical_launch_monopoly",
+      "description": "SpaceX's 80%+ global payload share and U.S. government dependency (~20% revenue) creates national security entanglement not analyzed as independent axis. If SpaceX becomes 'too critical to fail' (analogous to defense primes or systemically important banks), governance and capital allocation constraints may be overridden by state intervention. Geopolitical dimension absent from financial analysis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_debt_maturity_wall",
+      "description": "Bridge loan maturity (Sept 2027, $20B) occurs 16 months post-S-1 filing. If IPO proceeds insufficient and AI segment unprofitable, refinancing risk becomes existential. Capital_allocation_risk axis examines deployment; omega flags timing mismatch between capital burn rate ($10.1B Q1 2026 capex) and debt service capacity.",
+      "source": "Extraction (financial position) + capital_allocation_risk axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: starship_critical_path classified as mountain (physical necessity of heavy-lift for orbital infrastructure) but alternative architectures may exist. Generated omega_starship_mountain_validity to bound this uncertainty. Also: orbital_ai_compute_viability scaffold depends on unverified physics assumptions (omega_orbital_compute_physics)."
+  }
+}

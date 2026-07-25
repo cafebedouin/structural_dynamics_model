@@ -1,0 +1,216 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Pluralism / Comparative Family Law",
+  "family_id": "india_personal_law_coexistence",
+  "topic_summary": "Analysis of India's coexisting personal-law regimes governing marriage, divorce, inheritance, and family matters under Hindu, Muslim, Christian, Parsi, and secular frameworks within a single constitutional state. The system has persisted for 75+ years without zero-sum resolution, raising the question of whether this represents one contested kernel (marriage/family law authority) read through multiple religious lenses, or genuinely distinct kernels coexisting without unified normative foundation.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Hindu Personal Law (codified 1950s: Hindu Marriage Act 1955, Hindu Succession Act 1956, applies to Hindus/Buddhists/Jains/Sikhs)",
+      "Muslim Personal Law (Shariat Application Act 1937, largely uncodified, textual interpretation)",
+      "Christian Personal Law (Indian Christian Marriage Act 1872, Indian Divorce Act 1869)",
+      "Parsi Personal Law (Parsi Marriage and Divorce Act 1936)",
+      "Special Marriage Act 1954 (secular civil marriage alternative)",
+      "Article 44 (Directive Principle: state shall endeavor to secure uniform civil code)",
+      "Supreme Court of India (Shah Bano 1985, Sarla Mudgal 1995, Shayara Bano 2017)",
+      "Darul Qaza (Sharia courts, community-based adjudication parallel to state courts)"
+    ],
+    "key_tensions": [
+      "Legal pluralism vs constitutional equality (Article 44 directive vs community autonomy)",
+      "Gender justice asymmetry (differential inheritance/divorce rights across regimes)",
+      "Codification asymmetry (Hindu law fully codified vs Muslim law textual/interpretive)",
+      "Parallel adjudication (state courts vs community courts with overlapping jurisdiction)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Marriage and family law authority — the state's claim to adjudicate legitimate family formation, dissolution, inheritance, and maintenance",
+    "authority_description": "Contested between constitutional supremacy (Article 44 UCC directive + fundamental rights) and religious community autonomy (personal law as protected minority right)",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "The five regimes do NOT read one shared kernel differently — they instantiate genuinely distinct kernels with non-overlapping normative foundations. Hindu law grounds authority in codified statutory reform (1950s modernization); Muslim law grounds authority in Sharia textual interpretation (pre-state religious law); Christian/Parsi laws ground authority in colonial-era statutory frameworks; Special Marriage Act grounds authority in secular constitutional citizenship. These are not different readings of 'what marriage law is' — they are different answers to 'what grounds the authority to define marriage at all.' The system is an incoherent bundle, not a contested kernel. No single coherent normative framework could hold all five as complementary readings of one commitment.",
+    "structural_implication": "This is D2 culture-level break material: the system tests whether legal pluralism can sustain without unified normative foundation. Decompose into flat axes capturing the structural mechanics of coexistence rather than kernel readings."
+  },
+  "axes": [
+    {
+      "claim_id": "codification_asymmetry",
+      "human_readable": "Codification Asymmetry (Differential Legal Certainty Across Regimes)",
+      "structural_delta": "Hindu law fully codified (1950s Acts) vs Muslim law largely uncodified (textual Sharia interpretation) creates differential legal certainty, reform capacity, and state penetration across communities",
+      "primary_observable": "Ratio of statutory provisions to interpretive discretion; frequency of judicial intervention in personal law disputes by community",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "gender_justice_fragmentation",
+        "parallel_adjudication_structure"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing structural base for legal pluralism mechanics; highest inbound edge count; different observable from other candidates"
+    },
+    {
+      "claim_id": "gender_justice_fragmentation",
+      "human_readable": "Gender Justice Fragmentation (Asymmetric Rights Across Religious Boundaries)",
+      "structural_delta": "Women's inheritance, divorce access, and maintenance rights vary fundamentally by religious community membership, creating citizenship stratification along religious lines",
+      "primary_observable": "Comparative inheritance shares (Muslim women receive half of male heirs vs Hindu equal inheritance post-2005); divorce grounds availability; maintenance duration limits",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "male_heirs_under_muslim_law",
+      "victim": "women_in_uncodified_regimes",
+      "downstream_of": [
+        "codification_asymmetry"
+      ],
+      "feeds_into": [
+        "ucc_as_extraction_bypass"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; downstream synthesis node; captures core constitutional dilemma of equality vs pluralism; distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "parallel_adjudication_structure",
+      "human_readable": "Parallel Adjudication Structure (State Courts vs Community Courts)",
+      "structural_delta": "Darul Qaza (Sharia courts) and state courts operate simultaneously with overlapping jurisdiction, creating dual authority pathways with no clear hierarchy",
+      "primary_observable": "Forum shopping frequency; enforcement rate of Darul Qaza rulings vs state court rulings; jurisdictional conflict case count",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "codification_asymmetry"
+      ],
+      "feeds_into": [
+        "ucc_as_extraction_bypass"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (adjudication pathway rather than substantive rights); captures institutional mechanics of pluralism; different type (rope vs tangled_rope) from axis 2"
+    },
+    {
+      "claim_id": "ucc_as_extraction_bypass",
+      "human_readable": "UCC as Extraction Bypass (Uniform Civil Code as Majoritarian Homogenization)",
+      "structural_delta": "Article 44 UCC directive framed by minority communities as mechanism to eliminate Islamic/Christian legal autonomy under guise of gender equality, extracting community self-governance",
+      "primary_observable": "UCC advocacy correlation with Hindu nationalist political strength; minority community opposition intensity; Special Marriage Act usage rate as revealed preference",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "hindu_majoritarian_state",
+      "victim": "muslim_christian_legal_autonomy",
+      "downstream_of": [
+        "gender_justice_fragmentation",
+        "parallel_adjudication_structure"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream synthesis but lower structural distinctiveness than selected axes; captured indirectly via gender_justice_fragmentation tangled_rope"
+    },
+    {
+      "claim_id": "interfaith_marriage_friction",
+      "human_readable": "Interfaith Marriage Friction (Conversion Requirement vs Secular Alternative)",
+      "structural_delta": "Traditional personal laws require religious conversion for interfaith marriage; Special Marriage Act 1954 provides secular bypass but faces social resistance and legal complexity",
+      "primary_observable": "Interfaith marriage rate under personal law vs Special Marriage Act; conversion frequency; anti-conversion law enforcement in interfaith marriage context",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "religious_gatekeepers",
+      "victim": "interfaith_couples",
+      "downstream_of": [
+        "codification_asymmetry"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality; specific case of broader gender_justice_fragmentation dynamic; limited independent structural yield"
+    },
+    {
+      "claim_id": "judicial_convergence_pathway",
+      "human_readable": "Judicial Convergence Pathway (Supreme Court as De Facto Harmonizer)",
+      "structural_delta": "Supreme Court rulings (Shah Bano, Shayara Bano) create convergence toward gender equality norms without legislative UCC, using fundamental rights to override personal law",
+      "primary_observable": "Frequency of Supreme Court personal law interventions; citation of fundamental rights vs religious text in rulings; legislative response rate to judicial directives",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "gender_justice_fragmentation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold with zero outbound edges; speculative convergence mechanism; omega material on whether judicial path bypasses legislative deadlock"
+    }
+  ],
+  "generation_sequence": [
+    "codification_asymmetry",
+    "gender_justice_fragmentation",
+    "parallel_adjudication_structure"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "ucc_as_extraction_bypass",
+      "structural_delta": "UCC directive as mechanism to eliminate minority legal autonomy under gender equality guise",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream synthesis with lower structural distinctiveness than selected axes; political framing of gender_justice_fragmentation rather than independent constraint"
+    },
+    {
+      "claim_id": "interfaith_marriage_friction",
+      "structural_delta": "Conversion requirement vs secular marriage alternative creates interfaith couple friction",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Specific case of codification_asymmetry and gender_justice_fragmentation; limited independent yield"
+    },
+    {
+      "claim_id": "judicial_convergence_pathway",
+      "structural_delta": "Supreme Court creates convergence via fundamental rights override without legislative UCC",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Speculative convergence mechanism; zero graph centrality; omega variable on judicial vs legislative pathway"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The five regimes are NOT readings of one kernel but genuinely distinct kernels with non-overlapping normative foundations (statutory reform vs Sharia text vs colonial statute vs secular citizenship). This is incoherent bundle, not contested kernel. The system tests whether legal pluralism can sustain without unified normative foundation — D2 culture-level break material.",
+      "source": "§1.3-K kernel/reading decomposition; commitment_system_recognition analysis"
+    },
+    {
+      "id": "omega_special_marriage_act_usage",
+      "description": "Special Marriage Act 1954 provides secular alternative but usage rate is unknown. If high, reveals preference for exit over voice (pluralism as trap). If low, reveals social cost of secular path (rope becomes snare via community enforcement).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — usage data not in research context"
+    },
+    {
+      "id": "omega_judicial_vs_legislative_pathway",
+      "description": "Is Supreme Court convergence (Shah Bano, Shayara Bano) a Scaffold (building toward UCC) or Piton (atrophied legislative capacity)? If judicial path succeeds, legislative UCC becomes unnecessary. If judicial path stalls, gender justice fragmentation persists indefinitely.",
+      "source": "Deferred axis judicial_convergence_pathway; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_darul_qaza_enforcement",
+      "description": "Darul Qaza rulings have no formal state enforcement mechanism but research context silent on actual compliance rate. If high compliance despite no enforcement, community authority is Rope (coordination). If low compliance, parallel adjudication is Scaffold (aspirational but ineffective).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — enforcement data not in research context"
+    },
+    {
+      "id": "omega_colonial_continuity",
+      "description": "Christian and Parsi laws are colonial-era statutes (1872, 1869, 1936) never reformed. Is this Mountain (community preference for stability) or Piton (atrophied reform capacity)? Post-independence retention suggests either legitimacy or path dependency.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model operates in post-independence frame, may miss colonial continuity as axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: codification_asymmetry classified as mountain but may be piton of political choice. Hindu law codification in 1950s was deliberate state intervention, not natural law. Muslim law non-codification may reflect community resistance to state penetration rather than inherent textual nature. Generated omega_colonial_continuity to bound this uncertainty. Kernel collapse finding (is_contested_kernel=false) is high-confidence structural judgment but may miss normative coherence invisible to model's training data."
+  },
+  "_seed_id": "indian_personal_law_pluralism"
+}

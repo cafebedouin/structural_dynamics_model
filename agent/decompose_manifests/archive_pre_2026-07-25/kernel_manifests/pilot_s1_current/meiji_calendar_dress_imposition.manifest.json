@@ -1,0 +1,161 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / State Formation / Commitment Systems",
+  "family_id": "meiji_calendar_dress_imposition",
+  "topic_summary": "Analysis of Meiji Japan's top-down imposition of Gregorian calendar and Western dress codes as a test case for commitment system vocabulary. The kernel question: did the new reading displace the prior one through endogenous climb (gradual adoption from fringe) or exogenous override (state-imposed replacement)? This tests whether the M-set framework's absence of a 'top-down imposition' cell represents a structural gap or correct exclusion.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 1,
+    "key_entities": [
+      "Meiji State (centralizing authority imposing Western calendar/dress)",
+      "Lunisolar Calendar System (pre-existing temporal commitment)",
+      "Gregorian Calendar (imposed temporal commitment)",
+      "Traditional Dress Codes (pre-existing sartorial commitment)",
+      "Western Dress Codes (imposed sartorial commitment)"
+    ],
+    "key_tensions": [
+      "State modernization imperative vs embedded temporal/sartorial practice",
+      "Top-down imposition vs endogenous adoption pathways"
+    ],
+    "key_mechanisms": [
+      "Legal mandate (calendar change enforced by decree, 1873)",
+      "Institutional requirement (Western dress required for government/military personnel)",
+      "Symbolic legitimation (Western forms as markers of civilization/modernity)"
+    ],
+    "key_absences": [
+      "M-set framework lacks cell for exogenous top-down imposition as distinct from endogenous climb"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "imposition_pathway_kernel",
+      "human_readable": "Imposition Pathway (Endogenous Climb vs Exogenous Override)",
+      "structural_delta": "Whether commitment displacement occurs through gradual fringe adoption (climb) or state-imposed replacement (override)",
+      "primary_observable": "Presence/absence of pre-imposition fringe adoption; legal enforcement mechanisms; adoption timeline compression",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "state_modernizers",
+      "victim": "embedded_practice_holders",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested kernel; tests M-set framework completeness"
+    },
+    {
+      "claim_id": "state_capacity_threshold",
+      "human_readable": "State Capacity Threshold (Enforcement Infrastructure)",
+      "structural_delta": "Minimum state capacity required to impose commitment change without fringe adoption pathway",
+      "primary_observable": "Bureaucratic penetration depth; enforcement mechanism density; compliance monitoring capability",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "imposition_pathway_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent structural precondition; mountain providing physical constraint on imposition feasibility"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "endogenous_climb_reading",
+      "kernel_id": "imposition_pathway_kernel",
+      "reading_id": "endogenous_climb_reading"
+    },
+    {
+      "claim_id": "exogenous_override_reading",
+      "kernel_id": "imposition_pathway_kernel",
+      "reading_id": "exogenous_override_reading"
+    },
+    {
+      "claim_id": "hybrid_cascade_reading",
+      "kernel_id": "imposition_pathway_kernel",
+      "reading_id": "hybrid_cascade_reading"
+    },
+    "state_capacity_threshold"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_m_set_completeness",
+      "description": "Does the M-set framework's lack of a top-down imposition cell represent a structural gap (the framework cannot handle exogenous override) or correct exclusion (all apparent overrides are actually compressed climbs with invisible fringe adoption)? The Meiji case tests this directly.",
+      "source": "§1.1 Absence Inventory + kernel recognition"
+    },
+    {
+      "id": "omega_enforcement_durability",
+      "description": "Did calendar/dress changes persist because of continued enforcement or because they became self-sustaining commitments? If the former, they remain state-dependent scaffolds; if the latter, they transitioned to mountains or ropes.",
+      "source": "§2.2 Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_fringe_invisibility",
+      "description": "Were there invisible fringe adopters (e.g., merchant class, treaty port residents) whose pre-decree adoption the historical record does not capture? If so, the 'top-down' imposition may be a compressed climb misread as override.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied as specified. State capacity threshold identified as independent mountain axis."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The pathway by which a new commitment reading displaces a prior one — whether through endogenous adoption from fringe (climb) or exogenous state imposition (override)",
+    "authority_description": "State authority to mandate temporal and sartorial practice; legitimacy grounded in modernization imperative and international standing",
+    "drift_status": "absent",
+    "candidate_pattern": "M-set framework test case",
+    "is_contested_kernel": true,
+    "kernel_id": "imposition_pathway_kernel",
+    "readings": [
+      {
+        "reading_id": "endogenous_climb_reading",
+        "commitment": "All commitment displacement occurs through fringe adoption and gradual climb; apparent top-down impositions are compressed climbs with invisible fringe stages",
+        "authority_grounding": "M-set framework as currently specified (no top-down cell)",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "hybrid_cascade_reading"
+        ],
+        "expected_structural_delta": "Meiji calendar/dress changes had pre-decree fringe adoption (treaty ports, merchant class, military modernizers); state decree accelerated but did not initiate; enforcement was ratification of existing climb"
+      },
+      {
+        "reading_id": "exogenous_override_reading",
+        "commitment": "State capacity enables commitment displacement without fringe adoption pathway; top-down imposition is a distinct mechanism requiring separate M-set cell",
+        "authority_grounding": "Historical sociology of state formation; Weberian state capacity theory",
+        "sibling_readings": [
+          "endogenous_climb_reading",
+          "hybrid_cascade_reading"
+        ],
+        "expected_structural_delta": "Meiji calendar/dress changes had no meaningful pre-decree fringe adoption; state decree created new commitment through enforcement; compliance was coerced, not emergent; M-set framework incomplete without override cell"
+      },
+      {
+        "reading_id": "hybrid_cascade_reading",
+        "commitment": "Top-down imposition creates artificial fringe (state employees, military) which then climbs organically; override initiates, climb completes",
+        "authority_grounding": "Institutional diffusion theory; two-stage adoption models",
+        "sibling_readings": [
+          "endogenous_climb_reading",
+          "exogenous_override_reading"
+        ],
+        "expected_structural_delta": "Meiji decree created mandatory fringe (government/military personnel required to adopt); this artificial fringe then became organic climb vector; M-set framework captures this as compressed climb with state-manufactured fringe"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "endogenous_climb_reading",
+        "reading_b": "exogenous_override_reading",
+        "basis": "Endogenous climb reading holds that all commitment displacement requires fringe adoption as necessary precondition; exogenous override reading holds that state capacity can bypass fringe adoption entirely. No single framework can hold both axioms — accepting override as distinct mechanism requires rejecting climb as universal pathway."
+      }
+    ]
+  },
+  "_seed_id": "meiji_calendar_dress_imposition"
+}

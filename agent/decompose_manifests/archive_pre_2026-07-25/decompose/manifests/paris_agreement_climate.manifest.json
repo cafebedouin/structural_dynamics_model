@@ -1,0 +1,209 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Climate Governance / Treaty Law / Political Economy",
+  "family_id": "paris_article_4_ndc_2026",
+  "topic_summary": "Analysis of Article 4 of the 2015 Paris Climate Agreement establishing 'nationally determined contributions' (NDCs) toward emission reduction goals. The article is contested between sovereigntist readings (voluntary pledges preserving energy autonomy) and supranational readings (binding trajectories with ratcheting accountability). The interpretive conflict structures fundamentally different constraint systems regarding development pathways, wealth transfers, and enforcement mechanisms.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Paris Agreement Article 4 (treaty text establishing NDC framework)",
+      "Nationally Determined Contributions / NDCs (commitment mechanism)",
+      "Conference of Parties / COP (governance body)",
+      "Fossil-dependent economies (Global South hydrocarbon states, coal-dependent industrializers)",
+      "International climate bureaucracies (UNFCCC secretariat, Green Climate Fund)",
+      "Carbon-intensive industries (extraction, heavy manufacturing, agriculture)"
+    ],
+    "key_tensions": [
+      "National sovereignty vs supranational accountability (who interprets obligation)",
+      "Development rights vs emissions constraint (equity vs planetary boundary)"
+    ],
+    "key_mechanisms": [
+      "NDC submission and revision cycle (5-year ratcheting mechanism)",
+      "Global stocktake (collective accountability assessment)",
+      "Differentiated responsibility framework (developed vs developing state obligations)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism (no sanctions for non-compliance in treaty text)",
+      "Financial transfer conditionality structure (Green Climate Fund governance ambiguities)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereigntist_reading",
+      "human_readable": "Sovereigntist Reading: NDCs as Voluntary Non-Binding Pledges",
+      "structural_delta": "Interprets Article 4 as preserving national energy sovereignty through voluntary self-determined targets without enforceable international obligation",
+      "primary_observable": "State invocation of sovereignty doctrine in domestic energy policy; frequency of NDC revision downward or delay without sanction",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "fossil_dependent_economies",
+      "victim": "global_enforcement_mechanisms",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes loose-constraint baseline"
+    },
+    {
+      "claim_id": "supranational_reading",
+      "human_readable": "Supranational Reading: NDCs as Binding Ratcheting Trajectory",
+      "structural_delta": "Interprets Article 4 as establishing binding progression toward net-zero with international accountability and wealth transfer obligations",
+      "primary_observable": "COP pressure mechanisms for NDC ambition increases; Green Climate Fund disbursement conditionality",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "international_climate_bureaucracies",
+      "victim": "carbon_intensive_industries",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; establishes strict-constraint alternative"
+    },
+    {
+      "claim_id": "equity_reading",
+      "human_readable": "Equity Reading: Common But Differentiated Responsibilities",
+      "structural_delta": "Interprets Article 4 through CBDR principle requiring differentiated obligations based on historical emissions and development stage",
+      "primary_observable": "North-South transfer commitments vs actual disbursements; developing state NDC conditionality clauses",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "global_south_states",
+      "victim": "developed_economies",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading addressing structural equity dimension absent from sovereigntist/supranational binary"
+    },
+    {
+      "claim_id": "market_reading",
+      "human_readable": "Market Reading: NDCs as Carbon Pricing Coordination Mechanism",
+      "structural_delta": "Interprets Article 4 as framework for coordinating national carbon markets and border adjustment mechanisms",
+      "primary_observable": "Article 6 market mechanism adoption rates; carbon border adjustment proliferation",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "green_tech_sector",
+      "victim": "non_compliant_exporters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Market mechanisms are derivative of core sovereignty/obligation contest; captured as omega"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereigntist_reading",
+      "kernel_id": "paris_article_4_ndc",
+      "reading_id": "sovereigntist_reading"
+    },
+    {
+      "claim_id": "supranational_reading",
+      "kernel_id": "paris_article_4_ndc",
+      "reading_id": "supranational_reading"
+    },
+    {
+      "claim_id": "equity_reading",
+      "kernel_id": "paris_article_4_ndc",
+      "reading_id": "equity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "market_reading",
+      "structural_delta": "NDCs as carbon pricing coordination framework",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Derivative of sovereignty/obligation contest; market mechanisms are enforcement layer applied post-interpretation; omega material on carbon border adjustment as coercive harmonization"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_vacuum",
+      "description": "Article 4 lacks explicit enforcement mechanism. Is the absence a sovereigntist victory (rope preserved) or a supranational Trojan horse (enforcement imported through Article 6 markets, border adjustments, and financial conditionality)? Market reading axis deferred but may contain primary extraction mechanism.",
+      "source": "Absence Inventory (§1.1) + deferred axis market_reading"
+    },
+    {
+      "id": "omega_ratchet_mechanism",
+      "description": "Does the 5-year NDC revision cycle constitute binding progression (supranational) or voluntary aspiration (sovereigntist)? Treaty text ambiguous. COP pressure vs state practice may diverge. Classification of ratchet as rope (coordination) vs snare (coercive harmonization) remains contested.",
+      "source": "Key mechanism extraction + structural delta overlap between readings"
+    },
+    {
+      "id": "omega_cbdr_operationalization",
+      "description": "Common But Differentiated Responsibilities principle (equity reading) intersects with both other readings but operates on different axis. Is CBDR a mountain (physical historical emissions fact) or tangled_rope (interpretive frame for wealth transfer)? Green Climate Fund governance structure obscured in input; insufficient data to classify.",
+      "source": "Equity reading centrality score vs generation budget constraint; absence of financial transfer conditionality structure"
+    },
+    {
+      "id": "omega_china_classification",
+      "description": "China is largest absolute emitter (supranational constraint target) but developing economy under CBDR (equity exemption). Sovereigntist reading allows self-classification; supranational reading challenges it. Reading divergence on single case may determine global constraint topology.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from classification ambiguity"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition executed cleanly. Three readings selected represent structural trilemma (sovereignty vs accountability vs equity) rather than binary. Market reading deferred as derivative enforcement layer."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article 4 of the Paris Agreement establishing 'nationally determined contributions' as the core commitment mechanism for emission reduction goals",
+    "authority_description": "Interpretive authority contested between: (1) national governments claiming sovereignty over energy policy, (2) UNFCCC COP bodies claiming treaty enforcement powers, (3) equity coalitions claiming CBDR framework primacy. No single authoritative interpreter.",
+    "drift_status": "absent",
+    "candidate_pattern": "Ambiguity Reservoir (Pattern 5)",
+    "is_contested_kernel": true,
+    "kernel_id": "paris_article_4_ndc",
+    "readings": [
+      {
+        "reading_id": "sovereigntist_reading",
+        "commitment": "NDCs are voluntary self-determined pledges preserving national energy sovereignty",
+        "authority_grounding": "Westphalian sovereignty doctrine; treaty text silence on enforcement as consent-preserving design",
+        "sibling_readings": [
+          "supranational_reading",
+          "equity_reading"
+        ],
+        "expected_structural_delta": "Low epsilon constraint system; states retain exit option and revision freedom; fossil-dependent economies preserve development pathways; global enforcement mechanisms atrophy"
+      },
+      {
+        "reading_id": "supranational_reading",
+        "commitment": "NDCs are binding commitments on ratcheting trajectory toward net-zero with international accountability",
+        "authority_grounding": "Treaty succession to Rio/Kyoto framework; Article 4.3 progression principle as binding obligation; COP bodies as authoritative interpreters",
+        "sibling_readings": [
+          "sovereigntist_reading",
+          "equity_reading"
+        ],
+        "expected_structural_delta": "High epsilon constraint system; states face reputational and financial sanctions for non-compliance; carbon-intensive industries face regulatory extinction; wealth transfers from North to South institutionalized"
+      },
+      {
+        "reading_id": "equity_reading",
+        "commitment": "NDCs must be interpreted through Common But Differentiated Responsibilities requiring structural distinctions between developed and developing states",
+        "authority_grounding": "Rio Declaration Principle 7; Paris Agreement Preamble and Article 4.4; historical emissions accountability framework",
+        "sibling_readings": [
+          "sovereigntist_reading",
+          "supranational_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon with asymmetric distribution; developed states face binding constraints and transfer obligations; developing states retain policy space; equity coalitions gain veto power over supranational enforcement"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereigntist_reading",
+        "reading_b": "supranational_reading",
+        "basis": "Sovereigntist axiom (treaty obligations terminate at national consent boundary) cannot coexist with supranational axiom (treaty creates binding obligations enforceable against state will) in single coherent framework. One treats NDCs as aspirational, the other as justiciable."
+      },
+      {
+        "reading_a": "equity_reading",
+        "reading_b": "supranational_reading",
+        "basis": "Equity axiom (differentiated obligations based on historical responsibility) fundamentally contradicts universalist supranational axiom (uniform ratcheting trajectory applies to all parties). CBDR requires exempting developing states from binding progression; supranational reading requires universal binding trajectory. No single framework holds both."
+      }
+    ]
+  },
+  "_seed_id": "paris_agreement_climate"
+}

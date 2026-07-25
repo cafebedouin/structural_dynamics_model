@@ -1,0 +1,153 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Preparedness / Institutional Memory / Commitment Systems",
+  "family_id": "dutch_flood_preparedness_generational",
+  "topic_summary": "Analysis of Dutch flood-control preparedness maintenance across non-catastrophe generations following the 1953 North Sea flood. The kernel question: what sustains preparedness when living memory fades—memorial ritual (husk) or exercised competence? Examines the D5 (Deferential Realism type 5: commitment system drift) break at national scale.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 1,
+    "key_entities": [
+      "1953 North Sea Flood (catastrophic event; 1,836 deaths; founding trauma)",
+      "Rijkswaterstaat (national water authority; dike inspection regime administrator)",
+      "Delta Works (physical infrastructure; flood barrier system)",
+      "Post-1953 generation (cohort without lived flood experience)",
+      "Drill/inspection regime (preparedness maintenance mechanism)"
+    ],
+    "key_tensions": [
+      "Living memory vs institutional memory (experiential knowledge vs codified practice)",
+      "Ritual performance vs operational competence (memorial observance vs exercised capability)"
+    ],
+    "key_mechanisms": [
+      "Annual dike inspection cycles (Rijkswaterstaat-administered; mandatory local participation)",
+      "Flood evacuation drills (periodic exercises; declining participation post-1980s)",
+      "Watersnoodramp memorial observance (February 1 commemoration; national ritual)"
+    ],
+    "absences": [
+      "Competence verification metrics: no systematic measurement of whether drill participants could execute actual evacuation vs performing memorial ritual"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Flood preparedness as sustained institutional commitment across generations without catastrophe reinforcement",
+    "authority_description": "Rijkswaterstaat technical authority grounded in 1953 trauma memory and Delta Works engineering success",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "preparedness_persistence",
+    "readings": [
+      {
+        "reading_id": "husk_reading",
+        "commitment": "Preparedness sustained through memorial ritual and symbolic observance",
+        "authority_grounding": "Trauma memory; national identity anchored in 1953 event",
+        "sibling_readings": [
+          "competence_reading"
+        ],
+        "expected_structural_delta": "Drill participation becomes performative; inspection routines become bureaucratic compliance; preparedness measured by ritual observance rather than operational capability; beneficiary is national identity maintenance; victim is actual flood response capacity"
+      },
+      {
+        "reading_id": "competence_reading",
+        "commitment": "Preparedness sustained through exercised operational knowledge",
+        "authority_grounding": "Engineering competence; demonstrated Delta Works performance",
+        "sibling_readings": [
+          "husk_reading"
+        ],
+        "expected_structural_delta": "Drill participation measured by skill retention; inspection routines verify actual structural integrity; preparedness measured by response capability metrics; beneficiary is population safety; victim is memorial ritual budget"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "husk_reading",
+        "reading_b": "competence_reading",
+        "basis": "Husk reading holds that symbolic continuity with 1953 trauma is sufficient for preparedness (ritual performance equals readiness). Competence reading holds that only exercised capability constitutes preparedness (performance without skill is hollow). No single framework can hold both: either the ritual is the substance or the ritual is merely a vehicle for skill maintenance."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "preparedness_persistence_kernel",
+      "human_readable": "Preparedness Persistence (Kernel: Husk vs Competence Readings)",
+      "structural_delta": "Whether flood preparedness across non-catastrophe generations is sustained by memorial ritual (husk) or exercised operational competence",
+      "primary_observable": "Drill participation rates; inspection completion rates; competence verification metrics (if they exist); memorial attendance; actual evacuation capability in simulated scenarios",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with two structurally distinct readings; this is the core analytical target"
+    },
+    {
+      "claim_id": "infrastructure_confidence_displacement",
+      "human_readable": "Infrastructure Confidence Displacement (Delta Works as Preparedness Substitute)",
+      "structural_delta": "Physical infrastructure success (Delta Works) displaces behavioral preparedness maintenance",
+      "primary_observable": "Correlation between Delta Works completion milestones and drill participation decline; public survey data on flood risk perception post-1986",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "engineering_authority",
+      "victim": "behavioral_preparedness_capacity",
+      "downstream_of": [],
+      "feeds_into": [
+        "preparedness_persistence_kernel"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (infrastructure completion vs drill participation); distinct beneficiary structure; affects kernel interpretation but does not collapse into it"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "husk_reading",
+      "kernel_id": "preparedness_persistence",
+      "reading_id": "husk_reading"
+    },
+    {
+      "claim_id": "competence_reading",
+      "kernel_id": "preparedness_persistence",
+      "reading_id": "competence_reading"
+    },
+    {
+      "claim_id": "infrastructure_confidence_displacement",
+      "kernel_id": null,
+      "reading_id": null
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_competence_measurement_absence",
+      "description": "No systematic competence verification metrics identified in extraction. If they exist but are not publicly reported, husk/competence distinction may be empirically unresolvable. If they do not exist, that absence itself is evidence for husk reading dominance.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_delta_works_completion_timing",
+      "description": "Infrastructure_confidence_displacement hypothesis depends on temporal correlation between Delta Works milestones (1986 Oosterscheldekering completion) and drill participation decline. If decline predates completion, hypothesis fails; if decline is gradual across 1960-2000, confounding variables (urbanization, generational turnover) may dominate.",
+      "source": "Primary observable specification for infrastructure_confidence_displacement"
+    },
+    {
+      "id": "omega_ritual_competence_hybrid",
+      "description": "Possible third reading: ritual as competence-maintenance vehicle (drills are both memorial and skill-building). If this reading is empirically dominant, the husk/competence binary collapses into a spectrum. Current framing assumes binary contest; hybrid reading would require reclassification.",
+      "source": "Axiom contradiction declaration + §1.3-K coherence signal"
+    },
+    {
+      "id": "omega_climate_change_reactivation",
+      "description": "Post-2000 climate change discourse may reactivate competence reading by introducing new catastrophe probability. If so, the kernel contest is temporally bounded (1953-2000 husk dominance, 2000+ competence resurgence). Generational analysis would need periodization.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from climate reframing?"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition proceeded cleanly with two distinct readings passing axiom contradiction test. Infrastructure_confidence_displacement survived pairwise independence test (different observable, different beneficiary structure, affects but does not collapse into kernel). Competence measurement absence flagged as omega rather than fracture because it bounds empirical resolvability rather than indicating analytical error."
+  },
+  "_seed_id": "dutch_flood_control_culture"
+}

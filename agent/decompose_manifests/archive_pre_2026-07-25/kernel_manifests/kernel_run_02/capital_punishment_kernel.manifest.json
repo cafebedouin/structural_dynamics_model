@@ -1,0 +1,266 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Criminal Justice / Political Philosophy / Legal Theory",
+  "family_id": "capital_punishment_kernel_2026",
+  "topic_summary": "Analysis of capital punishment as a contested kernel where the state-killing commitment is read through three incompatible frameworks: retributive justice (desert-based execution), deterrence (instrumental crime prevention), and abolition (categorical impermissibility). Each reading instantiates a structurally different constraint with distinct beneficiary/victim configurations and authority groundings.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "State execution apparatus (prosecutors, courts, corrections systems)",
+      "Condemned persons (death row population)",
+      "Murder victims' families (heterogeneous stakeholder group)",
+      "Retributive theorists (Kant, lex talionis tradition)",
+      "Deterrence researchers (contested empirical literature)",
+      "Abolitionist movement (Beccaria lineage, human rights framework)",
+      "Potential future victims (deterrence beneficiary class)",
+      "Innocent persons at risk of wrongful execution"
+    ],
+    "key_tensions": [
+      "Victim family interests vs state prosecution interests (families divided; prosecutors assume unanimity)",
+      "Empirical deterrence claims vs null findings (NRC review vs pro-deterrence studies)",
+      "Retributive desert vs human rights inviolability (proportionality vs categorical prohibition)",
+      "Cost of capital litigation vs alternative crime prevention (resource allocation)",
+      "Irreversible error risk vs claimed moral necessity (innocence vs desert)"
+    ],
+    "key_mechanisms": [
+      "Lex talionis proportionality doctrine (retributive framework)",
+      "Deterrence signaling (threatened execution prevents future murders)",
+      "Closure provision for families (contested empirical claim)",
+      "Human rights treaty obligations (abolitionist legal architecture)"
+    ],
+    "key_absences": [
+      "Racial disparities in death sentencing (not addressed in research context)",
+      "International law pressure on retentionist states (mentioned but not analyzed)",
+      "Victim family agency in sentencing decisions (families excluded from process despite being invoked)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "retributive_reading",
+      "human_readable": "Retributive Reading (Desert-Based State Killing)",
+      "structural_delta": "Execution grounded in proportional desert: murderer forfeits life-right through taking another's life",
+      "primary_observable": "Sentencing doctrine invoking lex talionis; judicial opinions citing proportionality",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "moral_order_of_society",
+      "victim": "condemned_person_as_deserving",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct authority grounding (Kantian desert) and victim structure (offender as morally forfeited)"
+    },
+    {
+      "claim_id": "deterrence_reading",
+      "human_readable": "Deterrence Reading (Instrumental Crime Prevention)",
+      "structural_delta": "Execution justified as rational signal to prevent future murders; offender as means to social end",
+      "primary_observable": "Empirical murder-rate studies; cost-benefit analyses of execution vs imprisonment",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "potential_future_victims",
+      "victim": "condemned_person_as_instrument",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (empirical deterrence data) and victim structure (instrumentalization vs desert)"
+    },
+    {
+      "claim_id": "abolition_reading",
+      "human_readable": "Abolition Reading (Categorical Impermissibility)",
+      "structural_delta": "State killing categorically violates human dignity; no desert or utility justifies intentional killing",
+      "primary_observable": "Human rights treaty ratification; abolitionist legal doctrine (Beccaria lineage)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "condemned_person_as_rights_bearer",
+      "victim": "state_killing_power_itself",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Axiomatically incompatible with retributive reading; distinct beneficiary (condemned person vs society)"
+    },
+    {
+      "claim_id": "victim_family_heterogeneity",
+      "human_readable": "Victim Family Heterogeneity (Contested Closure Claim)",
+      "structural_delta": "Murder victims' families hold diverse views; state assumes unanimity favoring execution",
+      "primary_observable": "Family testimony in capital cases; post-execution family interviews",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "prosecutors_claiming_victim_mandate",
+      "victim": "abolitionist_victim_families",
+      "downstream_of": [
+        "retributive_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream of retributive reading; lower structural distinctiveness than three selected readings"
+    },
+    {
+      "claim_id": "empirical_deterrence_contest",
+      "human_readable": "Empirical Deterrence Contest (Null vs Positive Findings)",
+      "structural_delta": "NRC review finds no informative evidence; some studies claim 18 murders prevented per execution",
+      "primary_observable": "Meta-analyses of deterrence literature; methodological critiques",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "deterrence_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: internal to deterrence reading; does not change constraint structure"
+    },
+    {
+      "claim_id": "irreversible_error_risk",
+      "human_readable": "Irreversible Error Risk (Innocence Execution Probability)",
+      "structural_delta": "Capital punishment creates non-zero probability of executing innocent persons",
+      "primary_observable": "Exoneration rates; DNA evidence overturning convictions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "wrongfully_convicted_persons",
+      "downstream_of": [],
+      "feeds_into": [
+        "abolition_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain feeding abolition reading; captured via abolition's categorical prohibition"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "retributive_reading",
+      "kernel_id": "state_killing_legitimacy",
+      "reading_id": "retributive_reading"
+    },
+    {
+      "claim_id": "deterrence_reading",
+      "kernel_id": "state_killing_legitimacy",
+      "reading_id": "deterrence_reading"
+    },
+    {
+      "claim_id": "abolition_reading",
+      "kernel_id": "state_killing_legitimacy",
+      "reading_id": "abolition_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "victim_family_heterogeneity",
+      "structural_delta": "Murder victims' families hold diverse views; state assumes unanimity",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of retributive reading; lower structural distinctiveness than three kernel readings"
+    },
+    {
+      "claim_id": "empirical_deterrence_contest",
+      "structural_delta": "Contested empirical evidence on deterrence effect",
+      "hypothesis": "rope",
+      "deferral_reason": "Internal methodological dispute within deterrence reading; does not change constraint structure"
+    },
+    {
+      "claim_id": "irreversible_error_risk",
+      "structural_delta": "Non-zero probability of executing innocent persons",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain feeding abolition reading; captured via abolition's categorical prohibition framework"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_racial_disparity",
+      "description": "Racial disparities in death sentencing may constitute a fourth reading (procedural-justice framework) or expose retributive reading as snare. Research context silent on this dimension.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_victim_family_agency",
+      "description": "Victim families invoked by prosecutors but excluded from sentencing decisions. Is this a beneficiary misattribution (families are victims, not beneficiaries) or authority structure masking extraction?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis victim_family_heterogeneity"
+    },
+    {
+      "id": "omega_international_law_pressure",
+      "description": "International human rights treaties create external constraint on retentionist states. Is this a fifth reading (international-law framework) or enforcement mechanism for abolition reading?",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model operates within domestic legal framework; international law treated as background"
+    },
+    {
+      "id": "omega_retribution_deterrence_hybrid",
+      "description": "Some jurisdictions invoke both desert and deterrence. Are these complementary justifications within one framework or incoherent mixing of incompatible readings?",
+      "source": "§1.3-K Axiom Contradiction Declaration — retributive and deterrence readings may coexist in hybrid frameworks"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected represent structurally distinct constraint instantiations with different authority groundings, beneficiary/victim structures, and observables. Deferred axes documented as downstream or internal to selected readings."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "State authority to intentionally kill condemned persons as legitimate exercise of sovereign power",
+    "authority_description": "Mixed: retributive (Kantian desert), utilitarian (consequentialist crime prevention), human rights (categorical dignity)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "state_killing_legitimacy",
+    "readings": [
+      {
+        "reading_id": "retributive_reading",
+        "commitment": "Murderer forfeits life-right through proportional desert (lex talionis)",
+        "authority_grounding": "Kantian deontology / natural law tradition",
+        "sibling_readings": [
+          "deterrence_reading",
+          "abolition_reading"
+        ],
+        "expected_structural_delta": "Offender enters victim set as morally deserving; society/moral order as beneficiary; high ε from desert-based legitimacy"
+      },
+      {
+        "reading_id": "deterrence_reading",
+        "commitment": "Execution justified as rational signal preventing future murders",
+        "authority_grounding": "Utilitarian consequentialism / cost-benefit analysis",
+        "sibling_readings": [
+          "retributive_reading",
+          "abolition_reading"
+        ],
+        "expected_structural_delta": "Offender instrumentalized as means to social end; potential future victims as beneficiary; moderate ε from contested empirical evidence"
+      },
+      {
+        "reading_id": "abolition_reading",
+        "commitment": "State killing categorically violates human dignity regardless of desert or utility",
+        "authority_grounding": "Human rights framework / Beccaria lineage",
+        "sibling_readings": [
+          "retributive_reading",
+          "deterrence_reading"
+        ],
+        "expected_structural_delta": "Condemned person as rights-bearer beneficiary; state killing power itself as victim; high ε from categorical prohibition"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "retributive_reading",
+        "reading_b": "abolition_reading",
+        "basis": "Retributive axiom (proportional desert can mandate death) and abolitionist axiom (human dignity categorically prohibits intentional state killing) cannot coexist in a single coherent normative framework. Accepting abolition's categorical prohibition requires rejecting desert as sufficient justification."
+      },
+      {
+        "reading_a": "deterrence_reading",
+        "reading_b": "abolition_reading",
+        "basis": "Deterrence axiom (consequentialist utility can justify killing as means) and abolitionist axiom (human dignity prohibits instrumentalization unto death) cannot coexist. Accepting abolition's categorical prohibition requires rejecting utilitarian instrumentalization as legitimate."
+      }
+    ]
+  },
+  "_seed_id": "capital_punishment_kernel"
+}

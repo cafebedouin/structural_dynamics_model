@@ -1,0 +1,249 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Comparative Religion / Japanese History",
+  "family_id": "shinbutsu_shugo_syncretism",
+  "topic_summary": "Analysis of Shinbutsu-shugo (Shinto-Buddhist syncretism) in Japan from 6th century to Meiji separation (1868), examining whether 1200+ years of institutional coexistence constituted a coherent unified ontology or pragmatic domain partition. The honji suijaku theory claimed kami as manifestations of buddhas, yet persistent separation (shinbutsu kakuri) and functional division (birth Shinto/death Buddhist) suggest incomplete fusion.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Honji Suijaku Theory (9th century framework: kami as emanations of buddhas/bodhisattvas)",
+      "Ryōbu Shintō (Shingon school: kami as expressions of Dainichi Nyorai cosmic principles)",
+      "Sannō Ichijitsu Shintō (Tendai school: kami as Buddhist guardians)",
+      "Yoshida Kanetomo (late medieval reversal: Shinto as root, Buddhism as fruit)",
+      "Meiji Government (1868+ separation laws)",
+      "Jinguji (Buddhist temples attached to Shinto shrines)",
+      "Shinbutsu kakuri (systematic separation of certain kami from Buddhism)",
+      "Ise Shrine / Usa Hachiman (early integration sites)"
+    ],
+    "key_claims": [
+      "Honji suijaku established hierarchical relationship with buddhas as more fundamental than kami",
+      "The two religions never fused completely, kept particular identity in tense un-systematized relationship",
+      "Born Shinto, die Buddhist — functional domain partition by life stage",
+      "No agreement among specialists on exact extent of fusion",
+      "Separation after 1868 still only partially complete today",
+      "Relationship existed between particular kami and particular buddhas, not between two systems"
+    ],
+    "key_tensions": [
+      "Ontological unity (honji suijaku) vs persistent institutional separation (shinbutsu kakuri)",
+      "Hierarchical subordination (kami as traces) vs reciprocal parity (setting realms on par)",
+      "Systematic fusion (jinguji temple-shrine complexes) vs systematic separation (certain kami kept from Buddhism)",
+      "Theoretical coherence (Ryōbu/Sannō unified frameworks) vs practical incoherence (un-systematized tense relationship)"
+    ],
+    "key_mechanisms": [
+      "Honji suijaku interpretive framework: redefines kami as manifest traces of buddha original substance",
+      "Jinguji institutional integration: physical co-location of temples and shrines",
+      "Meiji shinbutsu bunri: legal separation dismantling 1200-year arrangement"
+    ],
+    "key_absences": [
+      "No systematic theology reconciling Shinto purity taboos with Buddhist death rituals — domain partition may be structural necessity not choice",
+      "No explanation for why Yoshida reversal (Shinto as root) was possible if honji suijaku was ontologically true rather than politically contingent"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The ontological relationship between kami (Shinto deities) and buddhas/bodhisattvas — whether they are unified manifestations of single ultimate reality or separate entities serving different domains",
+    "authority_description": "Interpretive authority distributed across Buddhist schools (Shingon, Tendai), shrine lineages, and imperial/governmental power; no single adjudicator; legitimacy grounded in ritual efficacy and institutional accommodation rather than doctrinal consistency",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "kami_buddha_ontology",
+    "readings": [
+      {
+        "reading_id": "unified_manifestation_reading",
+        "commitment": "Kami and buddhas are manifestations of single ultimate reality (honji suijaku: kami as traces of buddha original ground)",
+        "authority_grounding": "Buddhist scholastic frameworks (Ryōbu Shintō, Sannō Ichijitsu Shintō); institutional integration via jinguji",
+        "sibling_readings": [
+          "domain_partition_reading",
+          "pragmatic_accommodation_reading"
+        ],
+        "expected_structural_delta": "Ontological hierarchy with buddhas as more fundamental; kami cannot exist independently; Buddhism structurally prior despite historical posteriority in Japan"
+      },
+      {
+        "reading_id": "domain_partition_reading",
+        "commitment": "Kami and buddhas are separate entities serving different functional domains (life/purity vs death/impurity)",
+        "authority_grounding": "Ritual practice ('born Shinto, die Buddhist'); shinbutsu kakuri (systematic separation); Shinto purity taboos incompatible with Buddhist death handling",
+        "sibling_readings": [
+          "unified_manifestation_reading",
+          "pragmatic_accommodation_reading"
+        ],
+        "expected_structural_delta": "Functional complementarity without ontological unity; each system retains independent existence; separation is structural necessity not historical accident"
+      },
+      {
+        "reading_id": "pragmatic_accommodation_reading",
+        "commitment": "No coherent ontology exists; 1200-year coexistence was un-systematized pragmatic accommodation of institutional power",
+        "authority_grounding": "Scholarly consensus ('never fused completely', 'no agreement on extent of fusion'); Yoshida reversal demonstrates contingency; Meiji separation reveals lack of deep integration",
+        "sibling_readings": [
+          "unified_manifestation_reading",
+          "domain_partition_reading"
+        ],
+        "expected_structural_delta": "Apparent syncretism masks incoherent bundle; relationship between particular kami and particular buddhas, not between systems; theoretical frameworks (honji suijaku) are post-hoc rationalizations of political arrangements"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "unified_manifestation_reading",
+        "reading_b": "domain_partition_reading",
+        "basis": "Unified manifestation requires ontological dependence (kami cannot exist without buddha ground); domain partition requires ontological independence (each system operates in its domain regardless of the other). No single framework can hold both kami-as-dependent-trace AND kami-as-independent-domain-entity simultaneously."
+      },
+      {
+        "reading_a": "unified_manifestation_reading",
+        "reading_b": "pragmatic_accommodation_reading",
+        "basis": "Unified manifestation requires that honji suijaku describes actual ontological structure; pragmatic accommodation requires that honji suijaku is political rationalization with no ontological truth-value. A framework cannot hold both 'this theory describes reality' and 'this theory is merely convenient fiction' for the same theory."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "unified_manifestation_reading",
+      "human_readable": "Unified Manifestation Reading (Honji Suijaku Ontology)",
+      "structural_delta": "Kami ontologically dependent on buddhas as manifestations of single ultimate reality",
+      "primary_observable": "Prevalence of honji suijaku interpretive frameworks in temple-shrine complexes; doctrinal texts asserting kami-as-traces",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "buddhist_institutional_authority",
+      "victim": "shinto_ontological_independence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading establishing ontological hierarchy; highest institutional documentation; tangled_rope with clear beneficiary structure"
+    },
+    {
+      "claim_id": "domain_partition_reading",
+      "human_readable": "Domain Partition Reading (Functional Complementarity)",
+      "structural_delta": "Kami and buddhas as ontologically independent entities serving different life-stage domains",
+      "primary_observable": "Ritual practice patterns (birth/marriage at shrines, funerals at temples); shinbutsu kakuri institutional separation; Shinto death pollution taboos",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct observable (ritual practice vs doctrinal text); different constraint type (coordination rope vs hierarchical tangled_rope); axiom-contradictory to reading 1"
+    },
+    {
+      "claim_id": "pragmatic_accommodation_reading",
+      "human_readable": "Pragmatic Accommodation Reading (Incoherent Bundle)",
+      "structural_delta": "No coherent ontology; apparent syncretism masks un-systematized institutional power accommodation",
+      "primary_observable": "Scholarly consensus on incomplete fusion; Yoshida reversal feasibility; Meiji separation ease; lack of systematic theology",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "dual_institutional_elites",
+      "victim": "ontological_coherence_seekers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; meta-level reading exposing other readings as contingent; snare structure (coherence claimed but not delivered); axiom-contradictory to both other readings"
+    },
+    {
+      "claim_id": "meiji_separation_mechanism",
+      "human_readable": "Meiji Separation as Ontological Stress Test",
+      "structural_delta": "1868+ legal separation reveals depth of integration vs surface accommodation",
+      "primary_observable": "Completeness of separation by 1873 stall; persistence of mixed sites today; resistance patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "unified_manifestation_reading",
+        "domain_partition_reading",
+        "pragmatic_accommodation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream diagnostic rather than independent reading; separation outcome depends on which reading was structurally true"
+    },
+    {
+      "claim_id": "purity_death_incompatibility",
+      "human_readable": "Purity-Death Structural Incompatibility",
+      "structural_delta": "Shinto death pollution taboos structurally incompatible with Buddhist death ritual specialization",
+      "primary_observable": "Shinto avoidance of corpse handling; Buddhist monopoly on funeral rites; no Shinto funeral tradition development",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "domain_partition_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream physical/ritual constraint feeding domain_partition_reading but lower independent analytical yield than selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "unified_manifestation_reading",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "unified_manifestation_reading"
+    },
+    {
+      "claim_id": "domain_partition_reading",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "domain_partition_reading"
+    },
+    {
+      "claim_id": "pragmatic_accommodation_reading",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "pragmatic_accommodation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "meiji_separation_mechanism",
+      "structural_delta": "1868+ legal separation as stress test of integration depth",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream diagnostic; separation outcome depends on which reading was structurally true; lower independent yield than meta-level pragmatic_accommodation_reading"
+    },
+    {
+      "claim_id": "purity_death_incompatibility",
+      "structural_delta": "Shinto death pollution taboos incompatible with Buddhist death specialization",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream physical constraint feeding domain_partition_reading; captured indirectly via that reading's ritual practice observable; lower centrality than selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_yoshida_reversal_feasibility",
+      "description": "If honji suijaku described ontological truth (unified_manifestation_reading), how was Yoshida Kanetomo's late-medieval reversal (Shinto as root, Buddhism as fruit) institutionally possible? Reversal feasibility suggests honji suijaku was political arrangement not ontological necessity, supporting pragmatic_accommodation_reading.",
+      "source": "Absence Inventory (§1.1) + axiom contradiction between unified_manifestation and pragmatic_accommodation"
+    },
+    {
+      "id": "omega_separation_incompleteness",
+      "description": "Meiji separation stalled by 1873 and remains incomplete today. Does incompleteness indicate deep structural integration (supporting unified_manifestation or domain_partition) or merely institutional inertia (supporting pragmatic_accommodation)? Observable: persistence of mixed sites vs ease of initial separation.",
+      "source": "Deferred axis meiji_separation_mechanism + research claim 'separation still only partially complete'"
+    },
+    {
+      "id": "omega_scholarly_disagreement_source",
+      "description": "Research reports 'no agreement among specialists on exact extent of fusion.' Is disagreement due to (a) insufficient historical evidence, (b) regional variation making single answer impossible, or (c) the fusion itself being genuinely indeterminate (supporting pragmatic_accommodation)? Meta-uncertainty about whether coherence question is answerable.",
+      "source": "Research claim + F34 epistemic trespass boundary"
+    },
+    {
+      "id": "omega_particular_vs_systemic",
+      "description": "Research claims relationship existed 'between particular kami and particular buddhas, not between two systems.' Does this granularity undermine all three readings (each assumes system-level ontology), or does it support pragmatic_accommodation (no system-level coherence exists)? Potential fourth reading: network of particular relationships with no general ontology.",
+      "source": "Research claim + Dark Matter Probe 2 (what is treated as background)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks deep expertise in Japanese religious history and medieval Buddhist scholasticism. Classification of honji suijaku as 'tangled_rope' vs 'rope' depends on specialist knowledge of whether hierarchy was enforced or merely claimed. Scholarly disagreement on fusion extent suggests domain requires expertise beyond training data. Generated omega_scholarly_disagreement_source and omega_particular_vs_systemic to bound uncertainty. Readings are structurally sound but epsilon bins and beneficiary/victim assignments should be treated as provisional pending specialist review."
+  },
+  "_seed_id": "shinto_buddhist_syncretism"
+}

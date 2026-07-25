@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Theology / Ecclesiastical History / Philosophy of Religion",
+  "family_id": "homoousios_nicene_contest",
+  "topic_summary": "Analysis of the Nicene Creed's homoousios formula ('of one substance with the Father') as a contested interpretive kernel. The Creed stabilizes trinitarian language following the Council of Nicaea (325 CE), but competing readings of homoousios—one emphasizing metaphysical equality and conciliar authority, another accommodating subordination or functional hierarchy—instantiate structurally different constraints on christological orthodoxy, authority distribution, and victim/beneficiary sets.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Nicene Creed (325 CE text, revised 381 CE at Constantinople)",
+      "Homoousios formula (Greek: ὁμοούσιος, 'of one substance')",
+      "Conciliar tradition (Nicaea, Constantinople, Chalcedon—ecumenical councils)",
+      "Arian/Semi-Arian christologies (subordinationist alternatives)",
+      "Episcopal hierarchy (bishops as interpretive authorities)",
+      "Scriptural literalism (alternative authority grounding)"
+    ],
+    "key_tensions": [
+      "Metaphysical equality vs functional subordination (homoousios readings)",
+      "Conciliar authority vs scriptural primacy (interpretive legitimacy)",
+      "Inclusion vs exclusion (orthodox boundary maintenance vs theological pluralism)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Nicene Creed's confession that the Son is 'of one substance (homoousios) with the Father,' stabilized as the boundary of trinitarian orthodoxy following Nicaea (325 CE) and Constantinople (381 CE)",
+    "authority_description": "Conciliar tradition—ecumenical councils convened by imperial authority, with bishops as interpretive agents—claims legitimacy through fidelity to apostolic deposit and resolution of doctrinal dispute",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_kernel_fragmentation",
+    "is_contested_kernel": true,
+    "kernel_id": "homoousios_nicene",
+    "readings": [
+      {
+        "reading_id": "metaphysical_equality_reading",
+        "commitment": "Homoousios secures full ontological equality of Father and Son—same divine essence, co-eternal, no subordination in being",
+        "authority_grounding": "Conciliar tradition; episcopal hierarchy as guardians of apostolic deposit; philosophical-theological synthesis (Nicene Fathers, Athanasius, Cappadocian Fathers)",
+        "sibling_readings": [
+          "subordinationist_reading",
+          "honorific_similarity_reading"
+        ],
+        "expected_structural_delta": "Trinitarian equality enters constraint as metaphysical boundary; conciliar authority distributes interpretive power to episcopal hierarchy; heterodox christologies enter victim set (anathematized); high suppression of alternative readings"
+      },
+      {
+        "reading_id": "subordinationist_reading",
+        "commitment": "Homoousios compatible with functional or ontological subordination—Son derives being from Father, shares divinity but not equality",
+        "authority_grounding": "Scriptural literalism (Johannine 'Father is greater than I,' Pauline 'firstborn of creation'); philosophical voluntarism; resistance to Hellenistic metaphysics",
+        "sibling_readings": [
+          "metaphysical_equality_reading",
+          "honorific_similarity_reading"
+        ],
+        "expected_structural_delta": "Subordination remains permissible; scriptural authority distributes power away from conciliar tradition; Nicene orthodoxy enters victim set (exclusion of theological flexibility); beneficiary set includes subordinationist communities (Arian, Semi-Arian remnants)"
+      },
+      {
+        "reading_id": "honorific_similarity_reading",
+        "commitment": "Homoousios signifies similarity or likeness (homoiousios blur), not strict metaphysical identity—honorific unity without ontological reduction",
+        "authority_grounding": "Moderate scriptural interpretation; apophatic theology (divine essence unknowable); pastoral pragmatism (avoid division)",
+        "sibling_readings": [
+          "metaphysical_equality_reading",
+          "subordinationist_reading"
+        ],
+        "expected_structural_delta": "Boundary relaxes to functional unity; interpretive authority shifts toward local bishops and pastoral discretion; victim set includes both strict Nicene enforcers (rigidity) and hard subordinationists (heresy charges); beneficiary set includes semi-Arian moderates and apophatic traditions"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "metaphysical_equality_reading",
+        "reading_b": "subordinationist_reading",
+        "basis": "No single coherent framework can hold both 'the Son is ontologically equal to the Father in essence' and 'the Son is ontologically subordinate or derivative.' Accepting full equality as true requires rejecting subordination as false; accepting subordination requires denying equality."
+      },
+      {
+        "reading_a": "metaphysical_equality_reading",
+        "reading_b": "honorific_similarity_reading",
+        "basis": "Strict metaphysical identity (same ousia) and honorific similarity without ontological identity cannot both be true of the same relationship. One framework holds essence as knowable and shared; the other treats essence as apophatic or loose enough to permit functional-only unity."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "metaphysical_equality_reading",
+      "human_readable": "Metaphysical Equality Reading (Homoousios as Ontological Identity)",
+      "structural_delta": "Homoousios interpreted as securing full ontological equality—same divine essence, no subordination in being",
+      "primary_observable": "Enforcement of metaphysical equality language in conciliar documents, anathemas against subordination (Nicaea, Constantinople, Chalcedon); alignment of episcopal teaching with Athanasian/Cappadocian formulas",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "conciliar_hierarchy",
+      "victim": "subordinationist_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; establishes orthodox baseline constraint from which other readings deviate"
+    },
+    {
+      "claim_id": "subordinationist_reading",
+      "human_readable": "Subordinationist Reading (Homoousios as Compatible with Derived Being)",
+      "structural_delta": "Homoousios read as permitting functional or ontological subordination—Son derives divinity from Father",
+      "primary_observable": "Persistence of subordinationist language in post-Nicene communities; scriptural proof-texts (John 14:28, Colossians 1:15); resistance to conciliar metaphysics",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "subordinationist_communities",
+      "victim": "conciliar_orthodoxy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct victim/beneficiary inversion; captures primary alternative reading with highest historical instantiation"
+    },
+    {
+      "claim_id": "honorific_similarity_reading",
+      "human_readable": "Honorific Similarity Reading (Homoousios as Functional Unity)",
+      "structural_delta": "Homoousios interpreted as likeness or functional unity without strict metaphysical identity",
+      "primary_observable": "Semi-Arian formulas (homoiousios—'of similar substance'); apophatic theological traditions; moderate bishop statements avoiding metaphysical precision",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "semi_arian_moderates",
+      "victim": "both_extremes",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Captures middle-ground reading with distinct structural position; victim set includes both strict Nicene and hard subordinationist poles"
+    },
+    {
+      "claim_id": "imperial_enforcement_mechanism",
+      "human_readable": "Imperial Enforcement Mechanism (State Power Behind Conciliar Decisions)",
+      "structural_delta": "Roman/Byzantine imperial authority enforces conciliar outcomes through exile, property confiscation, and suppression of dissent",
+      "primary_observable": "Imperial edicts post-Nicaea; exile of Arius and followers; state persecution of non-Nicene bishops",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "imperial_church_alliance",
+      "victim": "dissenting_bishops_communities",
+      "downstream_of": [
+        "metaphysical_equality_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism downstream of metaphysical_equality_reading; captured implicitly in that reading's extractiveness"
+    },
+    {
+      "claim_id": "hellenistic_metaphysics_adoption",
+      "human_readable": "Hellenistic Metaphysics Adoption (Ousia/Hypostasis Vocabulary)",
+      "structural_delta": "Adoption of Greek philosophical categories (ousia, hypostasis) to articulate trinitarian doctrine",
+      "primary_observable": "Use of ousia/hypostasis terminology in Nicene formula and Cappadocian writings; departure from purely scriptural language",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "metaphysical_equality_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing vocabulary substrate, but structurally upstream and less analytically central than the readings themselves"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "metaphysical_equality_reading",
+      "kernel_id": "homoousios_nicene",
+      "reading_id": "metaphysical_equality_reading"
+    },
+    {
+      "claim_id": "subordinationist_reading",
+      "kernel_id": "homoousios_nicene",
+      "reading_id": "subordinationist_reading"
+    },
+    {
+      "claim_id": "honorific_similarity_reading",
+      "kernel_id": "homoousios_nicene",
+      "reading_id": "honorific_similarity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "imperial_enforcement_mechanism",
+      "structural_delta": "Imperial power enforces conciliar orthodoxy through exile and suppression",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism structurally downstream of metaphysical_equality_reading; extractiveness captured in that reading's victim set analysis"
+    },
+    {
+      "claim_id": "hellenistic_metaphysics_adoption",
+      "structural_delta": "Adoption of Greek philosophical categories (ousia/hypostasis) to express doctrine",
+      "hypothesis": "mountain",
+      "deferral_reason": "Vocabulary substrate upstream of readings but less analytically central than the contested interpretations themselves"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_apophatic_collapse",
+      "description": "Does the honorific_similarity_reading's reliance on apophatic theology (divine essence unknowable) collapse into a non-constraint? If essence is truly unknowable, homoousios becomes semantically empty, offering no metaphysical boundary at all. This may reclassify the reading from rope to scaffold.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) applied to honorific_similarity_reading"
+    },
+    {
+      "id": "omega_subordination_beneficiary",
+      "description": "Who materially benefited from subordinationist readings post-Nicaea? If the primary beneficiaries were imperial factions seeking theological flexibility for political alliance (e.g., Gothic evangelization), the reading may be more tangled_rope than captured. Requires analysis of Ulfila's Gothic mission and Constantius II's theological positioning.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to subordinationist_reading"
+    },
+    {
+      "id": "omega_drift_vs_fragmentation",
+      "description": "Commitment system marked as 'partial' drift status—interpretive layer absorbs disagreement without formal kernel revision. But if the three readings constitute genuine fragmentation (multiple competing kernels, not one kernel read differently), the system may be 'absent' drift with covert fracture. Requires distinguishing between licensed interpretive plurality and suppressed schism.",
+      "source": "§1.3 Commitment System Recognition—drift status classification uncertainty"
+    },
+    {
+      "id": "omega_scriptural_literalism_authority",
+      "description": "Subordinationist_reading claims scriptural literalism as authority grounding, but post-Nicene scriptural interpretation was itself mediated by conciliar tradition (canonical lists, hermeneutical rules). Does scriptural literalism function as independent authority or as a rhetorical move within an already-conciliar framework? If the latter, the reading's authority grounding collapses into the same structure it claims to oppose.",
+      "source": "F34 (Epistemic Trespass) boundary—model lacks detailed knowledge of 4th-century hermeneutical debates"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model operates at boundary of domain competence for 4th-century patristic theology. Subordinationist_reading's scriptural literalism claim and honorific_similarity_reading's apophatic grounding both require deeper hermeneutical context than training data provides. Generated omega_scriptural_literalism_authority and omega_apophatic_collapse to bound uncertainty. Recommend consultation with patristic theology specialist if precision on authority grounding is required."
+  },
+  "_seed_id": "nicene_creed_homoousios"
+}

@@ -1,0 +1,252 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Health Systems / Labor Economics / Organizational Behavior",
+  "family_id": "physician_early_departure_2026",
+  "topic_summary": "Analysis of Chen et al. 2026 AMA study documenting early clinical departure among U.S. physicians. Survey of 971 clinically inactive physicians (residency completion 2000-2022) reveals mean departure age dropped from 57.1 (2008) to 48.1 (2024), with 11% never entering practice post-residency. Primary drivers shifted from malpractice/health concerns to burnout, administrative burden, and unrealistic patient expectations. Gender disparity: women exit after median 9 years vs 12 for men, 43% higher departure rate across all ages.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Clinically inactive physicians (n=971, residency 2000-2022)",
+      "American Medical Association (research sponsor)",
+      "U.S. healthcare delivery system (organizational context)",
+      "Concierge/direct primary care models (market alternative, 80% growth 2018-2023)",
+      "Association of American Medical Colleges (workforce projection authority)",
+      "Female physicians (2/3 of departures, 43% higher exit rate)",
+      "Residency-trained non-entrants (11% of sample)",
+      "Patient population (source of 'unrealistic demands')"
+    ],
+    "key_claims": [
+      "Mean departure age fell 9 years (57.1→48.1) between 2008-2024",
+      "Top departure reasons: hassle factor 44.7%, stress 44.5%, unrealistic patient demands 41.1%",
+      "11% of residency-trained physicians never entered clinical practice",
+      "Women exit 3 years earlier (median 9 vs 12 years) with 43% higher departure rate",
+      "Projected physician shortage of 40,000 by 2036 despite pipeline expansion",
+      "Concierge medicine growth (80% 2018-2023) as market signal of system failure",
+      "33% of medical groups lost a physician to burnout in past year (MGMA 2026)"
+    ],
+    "key_tensions": [
+      "Pipeline expansion (new medical schools, residency slots) vs accelerating mid-career attrition",
+      "Patient demand for comprehensive care vs time-constrained visit structure",
+      "Physician autonomy/professional satisfaction vs administrative burden/EHR requirements",
+      "Gender-neutral training pipeline vs gendered caregiving burden driving differential exit"
+    ],
+    "key_mechanisms": [
+      "Burnout cascade: administrative burden → chronic stress → early departure (feedback loop)",
+      "Market bypass: physicians exit traditional employment → concierge/DPC models (80% growth)",
+      "Training investment loss: 11% residency completion → immediate non-entry (sunk cost)"
+    ],
+    "key_absences": [
+      "No analysis of specialty-specific departure rates (data collected but not reported)",
+      "No financial modeling of training investment loss (11% non-entry + early departure)",
+      "No comparison to other high-skill professions with similar training investment (law, engineering)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "administrative_extraction_ratchet",
+      "human_readable": "Administrative Extraction Ratchet (EHR/Documentation Burden as Structural Tax)",
+      "structural_delta": "Increasing non-clinical documentation requirements that extract time from patient care without corresponding reduction in clinical workload",
+      "primary_observable": "Hours per week on EHR/administrative tasks; ratio of documentation time to patient contact time; inbox message volume",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "regulatory_compliance_apparatus",
+      "victim": "physician_clinical_time",
+      "downstream_of": [],
+      "feeds_into": [
+        "burnout_as_structural_outcome",
+        "market_bypass_mechanism"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest-epsilon snare with 2 outbound edges; 'hassle factor' (44.7%) operationalizes as measurable administrative burden"
+    },
+    {
+      "claim_id": "patient_expectation_inflation",
+      "human_readable": "Patient Expectation Inflation (Demand Expansion Without Resource Expansion)",
+      "structural_delta": "Patient expectations for comprehensive, immediate, always-available care exceed structural capacity of visit-based care model",
+      "primary_observable": "Patient portal message volume; after-hours contact attempts; multi-problem visit frequency; patient satisfaction scores vs physician burnout scores",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "patient_satisfaction_metrics",
+      "victim": "physician_time_boundaries",
+      "downstream_of": [],
+      "feeds_into": [
+        "burnout_as_structural_outcome"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable from axis 1 (patient-side demand vs system-side documentation); 41.1% cite unrealistic demands; tangled_rope captures coordination failure"
+    },
+    {
+      "claim_id": "gendered_caregiving_penalty",
+      "human_readable": "Gendered Caregiving Penalty (Differential Exit via Unpaid Labor Collision)",
+      "structural_delta": "Women physicians face structural collision between clinical workload and disproportionate unpaid caregiving responsibilities, producing 43% higher exit rate",
+      "primary_observable": "Gender-stratified departure rates; median career length by gender; cited reasons (caregiving responsibilities); hours spent on household/childcare labor",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "female_physicians",
+      "downstream_of": [],
+      "feeds_into": [
+        "burnout_as_structural_outcome"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (gender-stratified exit rates) with independent ε; 43% higher departure rate is structural, not preference-based"
+    },
+    {
+      "claim_id": "burnout_as_structural_outcome",
+      "human_readable": "Burnout as Structural Outcome (Chronic Stress as Downstream Synthesis)",
+      "structural_delta": "Burnout is not a psychological failure but the predictable outcome of sustained extraction via administrative burden, patient demand inflation, and caregiving collision",
+      "primary_observable": "Burnout prevalence rates; correlation between administrative burden/patient demands and burnout scores; departure timing relative to burnout onset",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "physician_workforce",
+      "downstream_of": [
+        "administrative_extraction_ratchet",
+        "patient_expectation_inflation",
+        "gendered_caregiving_penalty"
+      ],
+      "feeds_into": [
+        "early_departure_age_collapse",
+        "residency_trained_non_entry"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Highest centrality (3 inbound, 2 outbound); downstream synthesis node; 44.5% cite 'too stressful' as direct manifestation"
+    },
+    {
+      "claim_id": "early_departure_age_collapse",
+      "human_readable": "Early Departure Age Collapse (9-Year Forward Shift in Exit Timing)",
+      "structural_delta": "Mean departure age fell from 57.1 (2008) to 48.1 (2024), representing structural acceleration of career truncation",
+      "primary_observable": "Mean/median departure age over time; years of clinical practice before exit; age distribution of departing physicians",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "burnout_as_structural_outcome"
+      ],
+      "feeds_into": [
+        "workforce_pipeline_paradox"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Mountain capturing observable outcome; distinct from mechanism (burnout) and distinct from non-entry; feeds workforce crisis"
+    },
+    {
+      "claim_id": "residency_trained_non_entry",
+      "human_readable": "Residency-Trained Non-Entry (11% Immediate Exit Post-Training)",
+      "structural_delta": "11% of residency-trained physicians never enter clinical practice, representing complete training investment loss before career start",
+      "primary_observable": "Percentage of residency graduates not entering practice; timing of exit decision relative to residency completion; specialty distribution of non-entrants",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "medical_education_investment",
+      "downstream_of": [
+        "burnout_as_structural_outcome"
+      ],
+      "feeds_into": [
+        "workforce_pipeline_paradox"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Distinct observable from early departure (exit before vs during career); piton captures atrophied function (training pipeline that doesn't produce clinicians)"
+    },
+    {
+      "claim_id": "workforce_pipeline_paradox",
+      "human_readable": "Workforce Pipeline Paradox (Expansion at Intake, Hemorrhage at Output)",
+      "structural_delta": "System expands medical school/residency capacity while losing physicians at both ends (11% non-entry + accelerating mid-career exit), producing net workforce contraction despite input growth",
+      "primary_observable": "Medical school enrollment trends; residency slot expansion; net physician workforce change; projected shortage (40,000 by 2036) despite pipeline growth",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "medical_education_institutions",
+      "victim": "healthcare_access",
+      "downstream_of": [
+        "early_departure_age_collapse",
+        "residency_trained_non_entry"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Downstream synthesis of workforce crisis; captures policy failure (expanding intake while ignoring retention); 2 inbound edges"
+    },
+    {
+      "claim_id": "market_bypass_mechanism",
+      "human_readable": "Market Bypass Mechanism (Concierge/DPC as Extraction Escape)",
+      "structural_delta": "Physicians exit traditional employment for concierge/direct primary care models (80% growth 2018-2023) to escape administrative burden and restore clinical autonomy",
+      "primary_observable": "Concierge/DPC practice growth rates; physician migration from traditional to alternative models; patient panel size reduction; administrative burden comparison",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "high_income_patients",
+      "victim": "low_income_patient_access",
+      "downstream_of": [
+        "administrative_extraction_ratchet"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 8,
+      "selection_reason": "Distinct observable (practice model migration) with independent ε; rope captures coordination mechanism (physicians + patients jointly exit); market signal of system failure"
+    }
+  ],
+  "generation_sequence": [
+    "administrative_extraction_ratchet",
+    "patient_expectation_inflation",
+    "gendered_caregiving_penalty",
+    "burnout_as_structural_outcome",
+    "early_departure_age_collapse",
+    "residency_trained_non_entry",
+    "workforce_pipeline_paradox",
+    "market_bypass_mechanism"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_specialty_stratification",
+      "description": "Study collected specialty-specific departure data but did not report it. Primary care vs procedural specialties may have structurally different ε values for administrative burden and patient expectation axes. Absence of stratification may mask specialty-specific snares.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary absence 1"
+    },
+    {
+      "id": "omega_training_investment_loss",
+      "description": "No financial modeling of sunk cost: 11% non-entry + early departure (9 years earlier) represents massive training investment loss. Is this a Piton (atrophied medical education ROI) or a Mountain (unavoidable given labor market structure)? Quantification would clarify.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary absence 2"
+    },
+    {
+      "id": "omega_cross_profession_comparison",
+      "description": "No comparison to law, engineering, or other high-skill professions with similar training investment. Is physician departure rate structurally higher, or is this a general high-skill labor market phenomenon? Absence of comparison limits causal attribution.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary absence 3"
+    },
+    {
+      "id": "omega_concierge_sustainability",
+      "description": "Is market_bypass_mechanism a stable Rope (sustainable alternative model) or a Scaffold (temporary arbitrage that collapses when concierge market saturates)? 80% growth may be early-phase bubble. Longitudinal data needed.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + axis classification uncertainty"
+    },
+    {
+      "id": "omega_patient_expectation_source",
+      "description": "Patient expectation inflation axis does not identify upstream driver. Is it a Rope (coordination failure) or downstream of a Snare (insurance/regulatory structure that incentivizes patient maximalism)? Causal direction unclear from study data.",
+      "source": "§3 Independence Testing + axis classification uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Eight axes survived independence testing with distinct observables and ε values. Specialty stratification absence noted in omega but does not constitute F15 (study collected data; reporting choice, not analytical closure). Gender axis passes independence test (distinct observable: gender-stratified exit rates; distinct ε: caregiving collision vs administrative burden)."
+  }
+}

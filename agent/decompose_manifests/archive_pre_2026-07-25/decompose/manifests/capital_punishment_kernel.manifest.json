@@ -1,0 +1,184 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Criminal Justice / Legal Philosophy / Political Theory",
+  "family_id": "capital_punishment_kernel_2026",
+  "topic_summary": "Analysis of state execution authority through three mutually exclusive readings of the state-killing kernel: retributive justice (execution as proportional desert), deterrence instrumentalism (execution as rational crime prevention), and categorical abolition (state killing as impermissible). Each reading instantiates a structurally distinct constraint with different victim sets, authority grounds, and extractiveness profiles.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "State execution authority (monopoly on legitimate killing)",
+      "Condemned person (subject of execution)",
+      "Murder victim (original crime victim)",
+      "Society/potential offenders (deterrence target population)",
+      "Innocence Project / exoneration data (empirical challenge to system reliability)"
+    ],
+    "key_tensions": [
+      "Desert vs utility (retribution grounds vs consequentialist grounds)",
+      "State authority legitimacy (who adjudicates permissible killing)",
+      "Irreversibility vs error correction (execution prevents exoneration)"
+    ],
+    "key_mechanisms": [
+      "Proportionality doctrine (lex talionis / desert-matching mechanism)",
+      "Rational deterrence theory (severity-certainty tradeoff in crime prevention)"
+    ],
+    "key_absences": [
+      "Victim family preferences (whether families support execution; treated as irrelevant to both retribution and abolition frameworks)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The state-killing kernel: under what conditions (if any) does the state possess legitimate authority to execute a person convicted of capital crime",
+    "authority_description": "Mixed authority structure — retributive reading grounds authority in proportional justice principles; deterrence reading grounds authority in consequentialist state function; abolition reading denies state authority categorically regardless of crime severity",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_kernel_authority_competition",
+    "is_contested_kernel": true,
+    "kernel_id": "state_killing_authority",
+    "readings": [
+      {
+        "reading_id": "retributive_reading",
+        "commitment": "execution is legitimate when proportional to offense gravity (desert-based authority)",
+        "authority_grounding": "natural justice / proportionality doctrine / lex talionis",
+        "sibling_readings": [
+          "deterrence_reading",
+          "abolition_reading"
+        ],
+        "expected_structural_delta": "condemned person enters victim set only if execution exceeds proportional desert; murder victim beneficiary via restored moral balance; state authority derived from justice equilibrium not utility"
+      },
+      {
+        "reading_id": "deterrence_reading",
+        "commitment": "execution is legitimate when it produces net social utility via crime prevention (instrumental authority)",
+        "authority_grounding": "consequentialist state function / rational choice theory / Benthamite utility maximization",
+        "sibling_readings": [
+          "retributive_reading",
+          "abolition_reading"
+        ],
+        "expected_structural_delta": "condemned person enters victim set when execution lacks deterrence efficacy; society/potential offenders are beneficiaries; state authority derived from crime-reduction mandate not desert"
+      },
+      {
+        "reading_id": "abolition_reading",
+        "commitment": "state killing is categorically impermissible regardless of offense or utility (rights-based prohibition)",
+        "authority_grounding": "human dignity inviolability / state power limitation / anti-totalitarian principle",
+        "sibling_readings": [
+          "retributive_reading",
+          "deterrence_reading"
+        ],
+        "expected_structural_delta": "condemned person is always victim; no state authority exists for execution; irreversibility of error becomes structural rather than operational concern"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "retributive_reading",
+        "reading_b": "abolition_reading",
+        "basis": "Retribution requires that proportional desert can justify state killing; abolition requires that no justification can authorize state killing. No single framework holds both axioms — accepting abolition's categorical prohibition requires rejecting proportionality as sufficient grounds for execution."
+      },
+      {
+        "reading_a": "deterrence_reading",
+        "reading_b": "abolition_reading",
+        "basis": "Deterrence requires that utility consequences can justify state killing; abolition requires that state killing is impermissible regardless of consequences. No single framework holds both axioms — accepting abolition's rights-based prohibition requires rejecting utility maximization as sufficient grounds for execution."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "retributive_reading",
+      "human_readable": "Retributive Justice Reading (Execution as Proportional Desert)",
+      "structural_delta": "State execution authority grounded in proportionality doctrine: killing warranted when offense gravity demands equivalent response",
+      "primary_observable": "Judicial invocation of proportionality principles; sentencing guidelines tied to offense severity matching; public desert intuitions in capital jury instructions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "murder_victim_via_moral_equilibrium",
+      "victim": "condemned_person_if_disproportionate",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct authority grounding (desert vs utility vs prohibition); highest centrality among justice-framework readings"
+    },
+    {
+      "claim_id": "deterrence_reading",
+      "human_readable": "Deterrence Instrumentalism Reading (Execution as Crime Prevention Tool)",
+      "structural_delta": "State execution authority grounded in consequentialist mandate: killing warranted when it produces net crime reduction via rational actor deterrence",
+      "primary_observable": "Empirical deterrence effect studies (elasticity of murder rates to execution probability); cost-benefit analyses in sentencing policy; rational choice model invocations in legislation",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "society_via_crime_reduction",
+      "victim": "condemned_person_when_deterrence_fails",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct observable (empirical efficacy vs moral desert); different beneficiary structure (societal utility vs victim equilibrium)"
+    },
+    {
+      "claim_id": "abolition_reading",
+      "human_readable": "Categorical Abolition Reading (State Killing as Impermissible)",
+      "structural_delta": "State execution authority categorically denied: no crime severity or utility consequence can authorize state killing due to human dignity inviolability",
+      "primary_observable": "Constitutional challenges citing cruel-and-unusual / dignity clauses; international human rights treaty ratification patterns; irreversibility-of-error doctrines in anti-death-penalty litigation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "condemned_person_always",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Mountain-type constraint (categorical prohibition); different victim structure (always-victim vs conditional); completes the triadic reading set"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "retributive_reading",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "retributive_reading"
+    },
+    {
+      "claim_id": "deterrence_reading",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "deterrence_reading"
+    },
+    {
+      "claim_id": "abolition_reading",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "abolition_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_victim_family_preference",
+      "description": "Does victim family support for execution strengthen retributive justification or is it structurally irrelevant? Abolition reading treats it as irrelevant (state authority not derived from victim preferences); retribution might incorporate it as desert-validation signal. Unresolved whether family opposition undermines retributive reading's beneficiary claim.",
+      "source": "Absence Inventory (§1.1 key_absences)"
+    },
+    {
+      "id": "omega_hybrid_framework_possibility",
+      "description": "Can a single jurisdiction hold deterrence AND retribution as complementary justifications (both/and) or are they mutually exclusive grounds? Empirically, jurisdictions invoke both, but no axiom contradiction declared between them — both accept execution as legitimate, differing only in justification source. This suggests licensed plurality rather than kernel contest between these two readings.",
+      "source": "Axiom Contradiction Declaration (§1.3-K)"
+    },
+    {
+      "id": "omega_innocence_project_challenge",
+      "description": "Do exoneration data (Innocence Project) undermine deterrence reading (execution of innocents destroys utility justification) or retribution reading (execution of innocents violates proportionality) or both? Abolition reading incorporates irreversibility as structural; other readings treat it as operational error-rate problem. Unresolved whether high error rates collapse deterrence/retribution into abolition.",
+      "source": "Dark Matter Probe 2 (Absence as Signal)"
+    },
+    {
+      "id": "omega_international_norm_cascade",
+      "description": "Is global abolition trend (140+ countries abolished) a mountain (emerging jus cogens norm) or scaffold (contingent policy fashion)? If mountain, U.S. retention becomes anomalous piton. If scaffold, abolition reading's authority grounding weakens in jurisdictions without constitutional dignity clauses.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel identification is clean: three readings hold mutually exclusive axioms (retribution/abolition and deterrence/abolition pairs declared contradictory), emit structurally distinct constraints (different victim sets, beneficiary structures, authority grounds), and share the state-killing kernel as common substrate. Retribution/deterrence pair NOT axiom-contradictory (both accept execution legitimacy, differ only in justification source), but emit different observables and beneficiary structures warranting separate constraint stories. All three readings selected for generation."
+  },
+  "_seed_id": "capital_punishment_kernel"
+}

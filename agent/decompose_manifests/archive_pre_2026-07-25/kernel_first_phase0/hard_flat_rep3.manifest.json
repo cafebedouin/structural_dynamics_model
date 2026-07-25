@@ -1,0 +1,131 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Information Standards / Sociotechnical Systems / Representational Conventions",
+  "family_id": "date_format_standards_2026",
+  "topic_summary": "Analysis of the ISO 8601 (YYYY-MM-DD) versus US (MM/DD/YYYY) date format dispute. The topic presents as a representational standard conflict but examination reveals it is NOT a contested kernel—both formats encode identical information with identical precision, differing only in serialization order. The dispute is downstream of network effects and legacy system lock-in, not competing readings of a shared commitment.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "ISO 8601 standard (international date/time representation standard, YYYY-MM-DD)",
+      "US date convention (MM/DD/YYYY format, culturally dominant in United States)",
+      "International Organization for Standardization (standards body)",
+      "Legacy systems (databases, forms, software expecting specific format)",
+      "Cross-border data exchange contexts (international commerce, aviation, healthcare)"
+    ],
+    "key_tensions": [
+      "Lexicographic sortability (ISO) vs cultural familiarity (US convention)",
+      "Global interoperability (ISO adoption) vs domestic system continuity (US format persistence)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Date representation as information encoding standard",
+    "authority_description": "ISO as voluntary international standards body; US cultural practice as de facto authority in domestic contexts",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_reason": "Both formats encode identical information (year, month, day) with identical precision. The 'readings' would differ only in serialization order, not in what constraint exists. This is a coordination problem (which equilibrium to adopt) rather than competing interpretations of a shared commitment. No axioms are in conflict—both parties agree dates have three components requiring unambiguous representation."
+  },
+  "axes": [
+    {
+      "claim_id": "network_coordination_lock_in",
+      "human_readable": "Network Coordination Lock-In (Format Adoption as Equilibrium Selection)",
+      "structural_delta": "Adoption of date format as network coordination problem with multiple stable equilibria and switching costs",
+      "primary_observable": "Market share of format usage in different contexts (domestic vs international); cost of format conversion in legacy systems",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sortability_as_technical_debt"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream coordination constraint; structurally distinct from technical debt axis"
+    },
+    {
+      "claim_id": "sortability_as_technical_debt",
+      "human_readable": "Sortability as Technical Debt (Lexicographic Ordering Failure)",
+      "structural_delta": "Non-ISO formats fail lexicographic sort, requiring custom parsing logic and creating maintenance burden",
+      "primary_observable": "Frequency of date-sorting bugs in software; prevalence of custom date-parsing libraries",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "software_maintainers",
+      "downstream_of": [
+        "network_coordination_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Downstream technical consequence; distinct observable (sorting correctness vs adoption rate)"
+    },
+    {
+      "claim_id": "cultural_familiarity_inertia",
+      "human_readable": "Cultural Familiarity Inertia (Cognitive Load of Format Switching)",
+      "structural_delta": "Cognitive overhead and error rate when users must switch between culturally-learned and standardized formats",
+      "primary_observable": "User error rates in date entry; time-to-comprehension for unfamiliar formats",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "network_coordination_lock_in"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via network_coordination_lock_in rope (cultural practice is one component of coordination equilibrium)"
+    }
+  ],
+  "generation_sequence": [
+    "network_coordination_lock_in",
+    "sortability_as_technical_debt"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "cultural_familiarity_inertia",
+      "structural_delta": "Cognitive overhead when switching between learned and standardized formats",
+      "hypothesis": "mountain",
+      "deferral_reason": "Subsumed by network_coordination_lock_in—cultural familiarity is one factor in coordination equilibrium, not independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Topic flagged as contested kernel but examination reveals both formats encode identical information with identical precision. The dispute is over serialization order (coordination problem) not competing interpretations of what a date IS. No axioms conflict—both agree dates require unambiguous year/month/day representation.",
+      "source": "§1.3-K kernel/reading decomposition"
+    },
+    {
+      "id": "omega_ambiguity_window",
+      "description": "Dates 01-12 in day position create MM/DD vs DD/MM ambiguity window (e.g., 03/04/2026 could be March 4 or April 3). This is a THIRD format (DD/MM/YYYY, used in Europe) not analyzed here. The US vs ISO framing may obscure the three-way coordination problem.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_unix_epoch_substrate",
+      "description": "Beneath both formats lies Unix epoch time (seconds since 1970-01-01). The 'dispute' may be purely presentational—systems often store epoch internally and format on display. If true, the constraint is display convention (rope) not data model (mountain).",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_regulatory_mandate",
+      "description": "Does any jurisdiction legally mandate date format in contracts, medical records, or financial reporting? If so, network_coordination_lock_in may misclassify—legal mandate would make it a snare (compliance extraction) rather than rope (voluntary coordination).",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: cultural_familiarity_inertia classified as mountain (cognitive universals) but may be piton (learned convention). Generated omega_kernel_collapse to document that topic is NOT a contested kernel despite flagging—both formats encode identical information, differing only in serialization order."
+  }
+}

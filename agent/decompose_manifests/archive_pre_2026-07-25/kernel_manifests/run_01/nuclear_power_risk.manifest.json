@@ -1,0 +1,223 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Risk Assessment / Energy Policy / Decision Theory",
+  "family_id": "acceptable_risk_energy_nuclear",
+  "topic_summary": "Analysis of the nuclear energy debate as a contested kernel where parties read the acceptable-risk-for-energy commitment differently. Anti-nuclear positions weight catastrophic tail risk dominantly (precautionary principle, irreversible harm focus). Pro-nuclear positions weight expected value dominantly (aggregate harm minimization, comparative mortality rates). Each reading instantiates structurally different constraints with different victim sets and temporal horizons.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear power industry (energy generation sector with unique risk profile)",
+      "Anti-nuclear movement (advocacy coalition emphasizing catastrophic risk)",
+      "Pro-nuclear advocates (technocratic/climate coalition emphasizing expected value)",
+      "Regulatory bodies (NRC, IAEA - authority structures adjudicating acceptable risk)",
+      "Fossil fuel alternatives (comparative baseline for harm assessment)",
+      "Renewable energy sector (alternative decarbonization pathway)"
+    ],
+    "key_tensions": [
+      "Catastrophic tail risk vs aggregate expected harm (precautionary vs utilitarian framing)",
+      "Irreversibility of nuclear accidents vs irreversibility of climate change (competing irreversibilities)"
+    ],
+    "key_mechanisms": [
+      "Regulatory licensing (authority translates risk reading into operational permission)",
+      "Public opinion formation (media coverage of accidents shapes risk perception)",
+      "Comparative mortality accounting (deaths per TWh as decision metric)"
+    ],
+    "key_absences": [
+      "Intergenerational equity dimension (waste storage burden on future generations not addressed by either reading)",
+      "Insurance market behavior (nuclear plants uninsurable without government backstop - revealed preference about tail risk)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that energy systems must operate within acceptable risk bounds, where 'acceptable' is the contested interpretive site",
+    "authority_description": "Regulatory bodies (NRC, IAEA) claim legitimacy to define acceptable risk through technical expertise, but their standards reflect one reading rather than neutral adjudication",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Tradition (competing hermeneutic communities reading the same risk data)",
+    "is_contested_kernel": true,
+    "kernel_id": "acceptable_risk_energy",
+    "readings": [
+      {
+        "reading_id": "catastrophic_tail_dominant",
+        "commitment": "Acceptable risk prioritizes avoiding low-probability catastrophic outcomes even at cost of higher expected aggregate harm",
+        "authority_grounding": "Precautionary principle, irreversible harm doctrine, intergenerational responsibility",
+        "sibling_readings": [
+          "expected_value_dominant",
+          "option_value_preserving"
+        ],
+        "expected_structural_delta": "Nuclear accidents enter victim set with infinite weight; fossil fuel deaths discounted as distributed/reversible; high suppression of nuclear pathway"
+      },
+      {
+        "reading_id": "expected_value_dominant",
+        "commitment": "Acceptable risk minimizes aggregate expected harm across all energy pathways using mortality-per-TWh metrics",
+        "authority_grounding": "Utilitarian calculus, technocratic expertise, climate urgency",
+        "sibling_readings": [
+          "catastrophic_tail_dominant",
+          "option_value_preserving"
+        ],
+        "expected_structural_delta": "Fossil fuel deaths (air pollution, mining) enter victim set with full weight; nuclear accidents discounted by probability; high suppression of fossil pathway"
+      },
+      {
+        "reading_id": "option_value_preserving",
+        "commitment": "Acceptable risk maintains multiple energy pathways to preserve decision flexibility under deep uncertainty",
+        "authority_grounding": "Real options theory, adaptive management, epistemic humility about future states",
+        "sibling_readings": [
+          "catastrophic_tail_dominant",
+          "expected_value_dominant"
+        ],
+        "expected_structural_delta": "Both nuclear and fossil pathways kept viable; victim set includes opportunity costs of premature closure; moderate suppression of both extremes"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "catastrophic_tail_dominant",
+      "human_readable": "Catastrophic Tail Dominant Reading (Precautionary Anti-Nuclear)",
+      "structural_delta": "Risk assessment that weights low-probability catastrophic outcomes infinitely higher than aggregate expected harm",
+      "primary_observable": "Policy outcomes: nuclear plant closures, regulatory stringency asymmetry (nuclear vs fossil), media framing of accidents vs chronic deaths",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "fossil_fuel_incumbents",
+      "victim": "climate_stability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates precautionary constraint structure"
+    },
+    {
+      "claim_id": "expected_value_dominant",
+      "human_readable": "Expected Value Dominant Reading (Utilitarian Pro-Nuclear)",
+      "structural_delta": "Risk assessment that minimizes aggregate mortality across all energy pathways using deaths-per-TWh metrics",
+      "primary_observable": "Policy outcomes: nuclear expansion advocacy, comparative mortality studies, climate mitigation urgency framing",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates utilitarian constraint structure"
+    },
+    {
+      "claim_id": "option_value_preserving",
+      "human_readable": "Option Value Preserving Reading (Adaptive Portfolio Management)",
+      "structural_delta": "Risk assessment that maintains multiple energy pathways to preserve decision flexibility under deep uncertainty about future states",
+      "primary_observable": "Policy outcomes: diversified energy portfolios, resistance to premature closure of either nuclear or fossil capacity, adaptive management frameworks",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; instantiates real-options constraint structure; captures regulatory middle path"
+    },
+    {
+      "claim_id": "insurance_market_revealed_preference",
+      "human_readable": "Insurance Market Revealed Preference (Tail Risk Validation)",
+      "structural_delta": "Nuclear plants uninsurable without government backstop (Price-Anderson Act) reveals market assessment of tail risk as unacceptable",
+      "primary_observable": "Insurance premium structures, government liability caps, reinsurance market behavior",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophic_tail_dominant"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: provides empirical validation for catastrophic_tail_dominant reading but not itself a reading of the kernel"
+    },
+    {
+      "claim_id": "intergenerational_waste_burden",
+      "human_readable": "Intergenerational Waste Burden (Temporal Externality)",
+      "structural_delta": "Nuclear waste storage imposes costs on generations who receive no benefit from the energy produced",
+      "primary_observable": "Waste storage timescales (10,000+ years), repository siting conflicts, intergenerational discount rate debates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "future_generations",
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophic_tail_dominant"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal externality not captured by either dominant reading; omega material on intergenerational equity"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "catastrophic_tail_dominant",
+      "kernel_id": "acceptable_risk_energy",
+      "reading_id": "catastrophic_tail_dominant"
+    },
+    {
+      "claim_id": "expected_value_dominant",
+      "kernel_id": "acceptable_risk_energy",
+      "reading_id": "expected_value_dominant"
+    },
+    {
+      "claim_id": "option_value_preserving",
+      "kernel_id": "acceptable_risk_energy",
+      "reading_id": "option_value_preserving"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "insurance_market_revealed_preference",
+      "structural_delta": "Nuclear uninsurable without government backstop reveals market tail risk assessment",
+      "hypothesis": "mountain",
+      "deferral_reason": "Empirical validation for catastrophic_tail_dominant reading but not itself a kernel reading; provides omega material on market vs regulatory risk assessment divergence"
+    },
+    {
+      "claim_id": "intergenerational_waste_burden",
+      "structural_delta": "Waste storage imposes 10,000+ year costs on non-beneficiaries",
+      "hypothesis": "piton",
+      "deferral_reason": "Temporal externality dimension not captured by either dominant reading; neither precautionary nor utilitarian frameworks adequately address intergenerational equity; omega material"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_insurance_divergence",
+      "description": "Insurance markets treat nuclear tail risk as unacceptable (uninsurable without government backstop) while regulators treat it as acceptable. This divergence suggests either market irrationality or regulatory capture. If markets are rational, catastrophic_tail_dominant reading has empirical validation. If regulators are correct, massive market failure in risk assessment.",
+      "source": "Deferred axis insurance_market_revealed_preference + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_intergenerational_equity",
+      "description": "Neither reading addresses intergenerational equity adequately. Catastrophic_tail_dominant focuses on present-generation catastrophe avoidance. Expected_value_dominant discounts future waste burden. A third reading grounded in intergenerational justice might reject both nuclear (waste burden) and fossil (climate burden) in favor of renewable-only pathway despite transition costs.",
+      "source": "Deferred axis intergenerational_waste_burden + Absence Inventory"
+    },
+    {
+      "id": "omega_competing_irreversibilities",
+      "description": "Both readings claim irreversibility as justification. Anti-nuclear: nuclear accidents are irreversible (Chernobyl exclusion zone). Pro-nuclear: climate change is irreversible (tipping points). The kernel contest may be unresolvable because both invoke the same meta-principle (avoid irreversible harm) but apply it to different timescales and victim sets.",
+      "source": "Tension analysis + §2.2 Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_regulatory_capture_asymmetry",
+      "description": "Regulatory stringency is asymmetric: nuclear faces orders-of-magnitude higher safety requirements than fossil despite lower mortality-per-TWh. This asymmetry could indicate either (1) catastrophic_tail_dominant reading is institutionally dominant, or (2) fossil fuel regulatory capture, or (3) both. The kernel contest may be downstream of a prior institutional capture contest.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction mechanism analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings with different constraint topologies. Insurance market and intergenerational equity dimensions deferred as non-reading axes that provide empirical validation and normative critique respectively."
+  },
+  "_seed_id": "nuclear_power_risk"
+}

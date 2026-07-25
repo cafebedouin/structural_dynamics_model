@@ -1,0 +1,176 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Linguistics / State Formation / Commitment Systems",
+  "family_id": "turkish_alphabet_reform_1928",
+  "topic_summary": "Analysis of Turkey's 1928 alphabet reform (Law 1353), which replaced Arabic script with Latin script via top-down state imposition. The reform had effectively zero prior practitioners of Latin-script Turkish and was implemented within months, testing whether a commitment system kernel can be installed with no pre-existing occupancy of the new reading.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Mustafa Kemal Atatürk (state authority; reform architect)",
+      "Ottoman Turkish literate class (Arabic-script practitioners; displaced)",
+      "Turkish Grand National Assembly (legislative body; Law 1353 passage)",
+      "Arabic script (pre-reform orthographic kernel)",
+      "Latin script (imposed orthographic kernel)",
+      "Turkish Language Association (post-reform standardization body)"
+    ],
+    "key_tensions": [
+      "State modernization imperative vs orthographic continuity (Kemalist state vs Ottoman tradition)",
+      "Literacy expansion vs cultural rupture (reformers vs traditional elites)",
+      "Imposed uniformity vs organic linguistic evolution (top-down vs bottom-up change)"
+    ],
+    "key_mechanisms": [
+      "Legislative prohibition: Arabic script banned in public documents, education, publishing",
+      "Mass literacy campaigns: Nation Schools (Millet Mektepleri) teaching Latin script to adults",
+      "Institutional enforcement: State employment, education access contingent on Latin-script literacy"
+    ],
+    "key_absences": [
+      "No documented resistance movements or alternative script proposals that gained institutional traction",
+      "Limited data on rural literacy rates pre/post reform to validate claimed literacy expansion"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "orthographic_kernel_replacement",
+      "human_readable": "Orthographic Kernel Replacement (Script as Commitment System)",
+      "structural_delta": "Replacement of one orthographic kernel (Arabic script) with another (Latin script) as the fixed reference for legitimate written Turkish",
+      "primary_observable": "Legal status of scripts; institutional enforcement mechanisms; literacy curriculum content",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "kemalist_state_apparatus",
+      "victim": "ottoman_literate_class",
+      "downstream_of": [],
+      "feeds_into": [
+        "state_capacity_expansion"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested kernel; zero prior occupancy of Latin reading tests M-set gap hypothesis"
+    },
+    {
+      "claim_id": "state_capacity_expansion",
+      "human_readable": "State Capacity Expansion (Literacy as Legibility Mechanism)",
+      "structural_delta": "Alphabet reform as mechanism to expand state legibility and administrative reach via standardized literacy",
+      "primary_observable": "Literacy rates pre/post reform; state employment literacy requirements; census/taxation data quality",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "central_state_bureaucracy",
+      "victim": "regional_autonomy",
+      "downstream_of": [
+        "orthographic_kernel_replacement"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (administrative capacity vs orthographic legitimacy); downstream synthesis of kernel effects"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "orthographic_kernel",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "modernization_reading",
+      "kernel_id": "orthographic_kernel",
+      "reading_id": "modernization_reading"
+    },
+    {
+      "claim_id": "rupture_reading",
+      "kernel_id": "orthographic_kernel",
+      "reading_id": "rupture_reading"
+    },
+    "state_capacity_expansion"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_m_set_gap",
+      "description": "Does zero prior occupancy of Latin reading invalidate M-set continuity assumption? If kernel installation requires no pre-existing practitioners, the M-set may be a post-hoc rationalization rather than a structural constraint.",
+      "source": "User-flagged kernel contest + §1.3-K analysis"
+    },
+    {
+      "id": "omega_literacy_data",
+      "description": "Claimed literacy expansion (3% to 33% by 1950s) lacks granular rural/urban breakdown. If gains concentrated in urban centers already targeted by state, reform may be Piton (state capacity) rather than Mountain (literacy barrier).",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_resistance_absence",
+      "description": "No documented organized resistance to script change. Does absence indicate genuine consensus, successful suppression, or historiographic gap? If suppression, continuity_reading may have higher ε than observable data suggests.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_persian_arabic_comparison",
+      "description": "Iran and Arab states retained Arabic script despite similar modernization pressures. Does Turkish exceptionalism indicate unique state capacity (Rope) or unique cultural rupture willingness (Snare for tradition)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied per §1.3-K. M-set gap hypothesis flagged as omega_m_set_gap for generation-stage testing."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Orthographic standard for written Turkish — the fixed script system that grounds legitimate literacy, state documentation, and cultural transmission",
+    "authority_description": "State legislative and educational apparatus; legitimacy grounded in modernization imperative and national sovereignty claims",
+    "drift_status": "absent",
+    "candidate_pattern": "Imposed Kernel Installation",
+    "is_contested_kernel": true,
+    "kernel_id": "orthographic_kernel",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Arabic script preserves Ottoman cultural continuity and Islamic textual tradition",
+        "authority_grounding": "Traditional religious and literary elites; legitimacy from historical precedent",
+        "sibling_readings": [
+          "modernization_reading",
+          "rupture_reading"
+        ],
+        "expected_structural_delta": "High ε for Ottoman literate class (victim set); low ε for state modernization (blocked reform path)"
+      },
+      {
+        "reading_id": "modernization_reading",
+        "commitment": "Latin script enables technological/scientific modernization while preserving Turkish linguistic identity",
+        "authority_grounding": "Kemalist state; legitimacy from national sovereignty and European alignment",
+        "sibling_readings": [
+          "continuity_reading",
+          "rupture_reading"
+        ],
+        "expected_structural_delta": "Moderate ε (literacy expansion costs); beneficiary set = state bureaucracy + new literate class"
+      },
+      {
+        "reading_id": "rupture_reading",
+        "commitment": "Script change as deliberate cultural rupture to sever Ottoman/Islamic past and create new national identity",
+        "authority_grounding": "Radical Kemalist faction; legitimacy from revolutionary transformation mandate",
+        "sibling_readings": [
+          "continuity_reading",
+          "modernization_reading"
+        ],
+        "expected_structural_delta": "Very high ε for cultural continuity (victim set = entire pre-reform literate population); beneficiary set = post-reform state apparatus"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "rupture_reading",
+        "basis": "Continuity reading holds that orthographic stability is necessary for cultural transmission; rupture reading holds that orthographic discontinuity is necessary for cultural transformation. No coherent framework can simultaneously require stability and discontinuity of the same substrate."
+      },
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "modernization_reading",
+        "basis": "Continuity reading grounds legitimacy in historical precedent and religious tradition; modernization reading grounds legitimacy in technological efficiency and European alignment. These are mutually exclusive sources of orthographic authority."
+      }
+    ]
+  },
+  "_seed_id": "turkish_alphabet_reform_1928"
+}

@@ -1,0 +1,162 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Constitutional Theory / Authority Studies",
+  "family_id": "sovereignty_legitimacy_kernel",
+  "topic_summary": "Analysis of the sovereign-legitimacy kernel as read through monarchical (inherited authority) versus republican (delegated authority) frameworks. The contest concerns what grounds the right to rule: bloodline continuity versus popular mandate. This is an authority-grounding dispute where different readings of the legitimacy kernel instantiate structurally different constraints on who may rule and under what conditions.",
+  "extraction_summary": {
+    "entity_count": 4,
+    "claim_count": 2,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Monarchical authority structure (hereditary succession as legitimacy ground)",
+      "Republican authority structure (electoral mandate as legitimacy ground)",
+      "Sovereign-legitimacy kernel (the shared commitment that authority requires grounding)",
+      "Citizenry/subjects (those over whom authority is exercised)"
+    ],
+    "key_tensions": [
+      "Inherited right vs delegated right as the proper source of political authority"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The sovereign-legitimacy kernel: the shared commitment that political authority requires a legitimate grounding mechanism to distinguish rightful rule from mere force",
+    "authority_description": "Contested — monarchical reading grounds authority in dynastic continuity and divine/natural right; republican reading grounds authority in popular sovereignty and consent",
+    "drift_status": "functioning",
+    "candidate_pattern": "dual_authority_competing_kernels",
+    "is_contested_kernel": true,
+    "kernel_id": "sovereign_legitimacy",
+    "readings": [
+      {
+        "reading_id": "monarchical_reading",
+        "commitment": "Authority derives from hereditary succession; bloodline continuity is the legitimacy mechanism",
+        "authority_grounding": "dynastic_continuity / divine_right / natural_hierarchy",
+        "sibling_readings": [
+          "republican_reading",
+          "mixed_constitutional_reading"
+        ],
+        "expected_structural_delta": "Ruler selection constrained by birth; succession crisis when lineage breaks; legitimacy independent of performance or consent; victim set includes those excluded from succession regardless of competence"
+      },
+      {
+        "reading_id": "republican_reading",
+        "commitment": "Authority derives from popular mandate; electoral delegation is the legitimacy mechanism",
+        "authority_grounding": "popular_sovereignty / consent_theory / democratic_mandate",
+        "sibling_readings": [
+          "monarchical_reading",
+          "mixed_constitutional_reading"
+        ],
+        "expected_structural_delta": "Ruler selection constrained by electoral process; legitimacy crisis when mandate expires or is contested; authority conditional on performance and periodic renewal; victim set includes minorities whose consent is structurally overridden by majority"
+      },
+      {
+        "reading_id": "mixed_constitutional_reading",
+        "commitment": "Authority derives from constitutional framework balancing inherited and delegated elements",
+        "authority_grounding": "constitutional_settlement / institutional_balance",
+        "sibling_readings": [
+          "monarchical_reading",
+          "republican_reading"
+        ],
+        "expected_structural_delta": "Dual legitimacy sources create institutional checks; succession constrained by both bloodline and constitutional limits; legitimacy crisis when the two sources conflict; victim set includes those caught between competing authority claims during constitutional deadlock"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "monarchical_reading",
+      "human_readable": "Monarchical Reading (Hereditary Authority)",
+      "structural_delta": "Authority legitimacy grounded in dynastic succession; bloodline continuity as the irreducible legitimacy mechanism",
+      "primary_observable": "Succession rules codified in law; frequency of succession crises when lineage breaks; constitutional provisions for regency/minority rule",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dynastic_lineage_holders",
+      "victim": "competent_non_heirs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates constraint where succession is birth-determined regardless of competence"
+    },
+    {
+      "claim_id": "republican_reading",
+      "human_readable": "Republican Reading (Delegated Authority)",
+      "structural_delta": "Authority legitimacy grounded in popular mandate; electoral delegation as the irreducible legitimacy mechanism",
+      "primary_observable": "Electoral cycle frequency; voter turnout rates; constitutional provisions for mandate renewal; frequency of legitimacy crises when elections contested",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "electoral_majority_coalition",
+      "victim": "structural_minorities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates constraint where authority expires without periodic renewal"
+    },
+    {
+      "claim_id": "mixed_constitutional_reading",
+      "human_readable": "Mixed Constitutional Reading (Dual Legitimacy)",
+      "structural_delta": "Authority legitimacy grounded in constitutional balance of inherited and delegated elements",
+      "primary_observable": "Constitutional provisions for monarch-parliament interaction; frequency of constitutional crises when sources conflict; historical evolution from absolute to constitutional monarchy",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "constitutional_settlement_architects",
+      "victim": "those_caught_in_authority_deadlock",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; instantiates constraint where dual legitimacy sources create structural tension and potential deadlock"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "monarchical_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "monarchical_reading"
+    },
+    {
+      "claim_id": "republican_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "republican_reading"
+    },
+    {
+      "claim_id": "mixed_constitutional_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "mixed_constitutional_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_theocratic_reading",
+      "description": "A fourth reading exists: theocratic authority grounded in divine mandate interpreted by religious authority. Not selected due to 3-axis budget, but structurally distinct from both monarchical (which may claim divine right but grounds succession in bloodline) and republican (which grounds in popular will). Would instantiate constraint where religious authority adjudicates legitimacy.",
+      "source": "Kernel decomposition — additional reading beyond structural budget"
+    },
+    {
+      "id": "omega_meritocratic_reading",
+      "description": "A fifth reading exists: meritocratic authority grounded in demonstrated competence. Distinct from republican (which grounds in consent regardless of competence) and monarchical (which grounds in birth regardless of competence). Would instantiate constraint where legitimacy requires passing competence tests.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_anarchist_reading",
+      "description": "A sixth reading exists: rejection of the kernel itself — authority as inherently illegitimate regardless of grounding mechanism. Not a reading of the kernel but a denial that the kernel should exist. Would instantiate constraint where all authority claims are treated as extraction.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from the kernel's existence"
+    },
+    {
+      "id": "omega_succession_crisis_asymmetry",
+      "description": "Monarchical reading has higher epsilon during succession crises (when lineage breaks) but lower epsilon during stable succession. Republican reading has periodic epsilon spikes at each electoral cycle. The readings may not be directly comparable on epsilon because they operate on different temporal rhythms.",
+      "source": "Independence testing — temporal structure difference"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successful: three readings instantiate genuinely different constraints (different succession mechanisms, different victim sets, different temporal structures). Coherence confirmed: all three readings share the sovereign-legitimacy kernel as common substrate. Deferred readings (theocratic, meritocratic, anarchist) documented in omegas."
+  },
+  "_seed_id": "monarchy_republic_legitimacy"
+}

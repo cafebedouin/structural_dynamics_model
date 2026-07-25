@@ -1,0 +1,243 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Institutional History / Commitment Systems / Political Theology",
+  "family_id": "mormon_polygamy_reversal_1890",
+  "topic_summary": "Analysis of the 1890 Manifesto through which LDS Church President Wilford Woodruff suspended polygamy practice under federal coercion while preserving doctrinal commitment to plural marriage as divinely mandated. The case examines whether this constitutes exogenous override (practice reversed by external force) versus endogenous reinterpretation (doctrine revised internally), and the structural gap between marriage-commitment principle and institutional practice.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Wilford Woodruff (LDS Church President 1890, Manifesto author)",
+      "Joseph F. Smith (successor, explicitly denied Manifesto was revelation)",
+      "U.S. Federal Government (coercive authority via Edmunds-Tucker Act)",
+      "Section 132 D&C (1843 polygamy revelation, canonized 1876)",
+      "Mormon Fundamentalists (rejected Manifesto, continued practice)",
+      "LDS General Membership (experienced betrayal/bewilderment at reversal)"
+    ],
+    "key_tensions": [
+      "Divine mandate for polygamy (Section 132) vs federal criminalization (Edmunds-Tucker Act)",
+      "Woodruff's prior promises (God would save Church from enemies) vs capitulation (Manifesto submission)",
+      "Doctrine preservation (polygamy never renounced as principle) vs practice cessation (public compliance with law)"
+    ],
+    "key_mechanisms": [
+      "Escalating federal coercion: Morrill Act (1862) → Edmunds Act (1882) → Edmunds-Tucker Act (1887) → Supreme Court upheld (1890)",
+      "Manifesto ambiguity: 200+ polygamous marriages 1890-1904 in Mexico/at sea/Great Lakes where believed legal",
+      "Dual-track legitimation: Manifesto canonized as Official Declaration 1 (divine inspiration claimed) but Joseph F. Smith denied it was revelation"
+    ],
+    "key_absences": [
+      "No formal doctrinal renunciation of Section 132 or polygamy as principle (Nash: 'church has never renounced the doctrine')",
+      "No internal theological reinterpretation explaining why divine mandate could be suspended (exogenous override without endogenous justification)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "exogenous_override_reading",
+      "human_readable": "Exogenous Override Reading (Federal Coercion Forced Reversal)",
+      "structural_delta": "Practice reversed by external threat (asset seizure, disincorporation, imprisonment) without internal doctrinal revision",
+      "primary_observable": "Manifesto timing (Sept 1890, 4 months after Supreme Court upheld Edmunds-Tucker); Woodruff's journal entry ('temporal salvation of the church'); continued doctrine preservation (Section 132 never renounced)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "federal_government",
+      "victim": "lds_institutional_autonomy",
+      "downstream_of": [],
+      "feeds_into": [
+        "practice_doctrine_gap"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading: external coercion as primary causal mechanism; highest structural distinctiveness from endogenous reading"
+    },
+    {
+      "claim_id": "endogenous_reinterpretation_reading",
+      "human_readable": "Endogenous Reinterpretation Reading (Divine Revelation Justified Reversal)",
+      "structural_delta": "Practice reversed by internal revelation (Woodruff's Sept 23 vision) reinterpreting divine will under changed circumstances",
+      "primary_observable": "Manifesto canonization as Official Declaration 1 ('prompted by divine revelation'); Woodruff's claimed vision (Jesus showed temples would be lost); rhetorical framing as prophetic guidance not capitulation",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "lds_leadership_legitimacy",
+      "victim": "theological_consistency",
+      "downstream_of": [],
+      "feeds_into": [
+        "practice_doctrine_gap"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading: internal legitimation narrative; different beneficiary structure and extractiveness profile from exogenous reading"
+    },
+    {
+      "claim_id": "practice_doctrine_gap",
+      "human_readable": "Practice-Doctrine Gap (M-Set Structural Tension)",
+      "structural_delta": "Marriage-commitment principle preserved in doctrine (Section 132 intact) while practice suspended (public compliance), creating permanent structural ambiguity",
+      "primary_observable": "200+ polygamous marriages 1890-1904 in jurisdictions claimed legal; fundamentalist schism; Joseph F. Smith's 1891 denial Manifesto was revelation; doctrine never renounced (Nash)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_flexibility",
+      "victim": "membership_clarity",
+      "downstream_of": [
+        "exogenous_override_reading",
+        "endogenous_reinterpretation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node capturing structural consequence of reading collision"
+    },
+    {
+      "claim_id": "federal_escalation_mechanism",
+      "human_readable": "Federal Escalation Mechanism (Incremental Coercion 1862-1890)",
+      "structural_delta": "28-year escalation from symbolic prohibition (Morrill 1862) to existential threat (Edmunds-Tucker asset seizure 1887)",
+      "primary_observable": "Legislative sequence: Morrill → Edmunds → Edmunds-Tucker → Supreme Court; property confiscation; voting rights denial; imprisonment of leaders",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "exogenous_override_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as upstream context for exogenous_override_reading; mountain providing coercive substrate but lower structural distinctiveness than selected axes"
+    },
+    {
+      "claim_id": "fundamentalist_schism",
+      "human_readable": "Fundamentalist Schism (Rejection of Manifesto Authority)",
+      "structural_delta": "Subset of membership rejected Manifesto as illegitimate capitulation, continued polygamy practice, formed breakaway sects",
+      "primary_observable": "Mormon fundamentalist groups (FLDS, AUB, etc.); continued polygamy practice post-1890; rejection of Woodruff's prophetic authority on this issue",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "practice_doctrine_gap"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of practice_doctrine_gap but lower centrality; omega material on institutional fragmentation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "exogenous_override_reading",
+      "kernel_id": "marriage_commitment_reversal",
+      "reading_id": "exogenous_override_reading"
+    },
+    {
+      "claim_id": "endogenous_reinterpretation_reading",
+      "kernel_id": "marriage_commitment_reversal",
+      "reading_id": "endogenous_reinterpretation_reading"
+    },
+    {
+      "claim_id": "practice_doctrine_gap",
+      "kernel_id": "marriage_commitment_reversal",
+      "reading_id": "practice_doctrine_gap"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "federal_escalation_mechanism",
+      "structural_delta": "28-year incremental coercion from symbolic to existential",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream substrate for exogenous_override_reading; lower structural distinctiveness than selected readings"
+    },
+    {
+      "claim_id": "fundamentalist_schism",
+      "structural_delta": "Subset rejected Manifesto, formed breakaway sects",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of practice_doctrine_gap; lower centrality; omega material on institutional fragmentation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_revelation_authenticity",
+      "description": "Was Woodruff's Sept 23, 1890 vision genuine divine revelation or post-hoc legitimation of coerced decision? Joseph F. Smith's 1891 denial ('emphatically no') vs Manifesto's canonization as divinely inspired creates unresolvable epistemic gap.",
+      "source": "Extraction tension: Woodruff claimed revelation, successor denied it was revelation, both claims documented"
+    },
+    {
+      "id": "omega_doctrine_renunciation",
+      "description": "Why was Section 132 never formally renounced if polygamy practice was genuinely abandoned? Nash: 'church has never renounced the doctrine.' Gap between practice cessation and doctrinal preservation suggests incomplete endogenous reinterpretation.",
+      "source": "Absence Inventory (§1.1): no formal doctrinal revision mechanism deployed"
+    },
+    {
+      "id": "omega_1890_1904_ambiguity",
+      "description": "200+ polygamous marriages 1890-1904 in Mexico/at sea/Great Lakes. Was this Manifesto violation or legitimate interpretation ('where believed legal')? Woodruff himself may have married plural wife at sea 1897. Institutional ambiguity unresolved until Joseph F. Smith's 1904 complete ban.",
+      "source": "Mechanism extraction: dual-track practice continued 14 years post-Manifesto"
+    },
+    {
+      "id": "omega_membership_betrayal",
+      "description": "Why did membership experience 'betrayal and bewilderment' if Manifesto was divinely inspired? 45 years of resistance ('God would save Church from enemies') followed by sudden capitulation. Suggests exogenous override reading was dominant lived experience despite official endogenous framing.",
+      "source": "Entity extraction: general membership reaction; Dark Matter Probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_kernel_collapse_test",
+      "description": "Do exogenous_override and endogenous_reinterpretation readings emit genuinely different constraints, or do they collapse into one constraint (practice cessation) with different legitimation narratives? Test: exogenous reading predicts continued doctrine preservation + institutional ambiguity (observed); endogenous reading predicts clean doctrinal revision (not observed). Readings do NOT collapse—different structural consequences.",
+      "source": "§1.3-K kernel/not-kernel decision; coherence signal"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan (political theology, institutional sociology, legal history) applied. Dark matter probes surfaced absence of doctrinal renunciation mechanism and membership lived experience divergence from official narrative. Kernel/reading decomposition warranted: exogenous and endogenous readings emit structurally different constraints (different beneficiaries, different downstream consequences, different extractiveness profiles)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Marriage-commitment framework grounded in Section 132 (1843 polygamy revelation, canonized 1876) as divinely mandated eternal principle",
+    "authority_description": "LDS Church President as prophet/seer/revelator holds exclusive interpretive authority over divine will; succession legitimacy derives from prophetic mantle not democratic mandate",
+    "drift_status": "partial",
+    "candidate_pattern": "Dynastic Succession (prophetic authority passes through fixed succession line; interpretive legitimacy grounded in office not performance)",
+    "is_contested_kernel": true,
+    "kernel_id": "marriage_commitment_reversal",
+    "readings": [
+      {
+        "reading_id": "exogenous_override_reading",
+        "commitment": "Practice reversed by external coercion (federal threat) without internal doctrinal revision; Section 132 preserved as principle",
+        "authority_grounding": "Federal government as coercive external authority; LDS leadership capitulated to preserve institutional survival ('temporal salvation')",
+        "sibling_readings": [
+          "endogenous_reinterpretation_reading",
+          "practice_doctrine_gap"
+        ],
+        "expected_structural_delta": "High extractiveness (federal government extracts institutional autonomy); victim set = LDS institutional sovereignty; beneficiary = federal territorial control; doctrine-practice gap persists (Section 132 never renounced)"
+      },
+      {
+        "reading_id": "endogenous_reinterpretation_reading",
+        "commitment": "Practice reversed by internal divine revelation (Woodruff's Sept 23 vision) reinterpreting God's will under changed circumstances",
+        "authority_grounding": "Prophetic authority (Woodruff as revelator); Manifesto canonized as Official Declaration 1 ('prompted by divine revelation')",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "practice_doctrine_gap"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (leadership legitimacy preserved via revelation framing); victim set = theological consistency (why did God's will change?); beneficiary = institutional legitimacy (prophet maintains interpretive authority); doctrine-practice gap obscured by revelation narrative"
+      },
+      {
+        "reading_id": "practice_doctrine_gap",
+        "commitment": "Structural ambiguity where marriage-commitment principle (Section 132) preserved in doctrine while practice suspended in public compliance",
+        "authority_grounding": "Dual authority structure: federal law governs practice, prophetic authority governs doctrine; gap between jurisdictions creates permanent tension",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "endogenous_reinterpretation_reading"
+        ],
+        "expected_structural_delta": "High extractiveness (membership clarity sacrificed for institutional flexibility); victim set = general membership (experienced betrayal/bewilderment) + fundamentalists (schism); beneficiary = institutional survival (ambiguity allows 200+ marriages 1890-1904 in claimed-legal jurisdictions); enables dual-track legitimation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "exogenous_override_reading",
+        "reading_b": "endogenous_reinterpretation_reading",
+        "basis": "Exogenous reading holds that external coercion was the primary causal mechanism (practice would not have reversed absent federal threat); endogenous reading holds that internal divine revelation was the primary causal mechanism (practice reversed because God's will changed). No single coherent framework can hold both: either the Manifesto was capitulation to force (exogenous) or obedience to revelation (endogenous). Joseph F. Smith's 1891 denial that Manifesto was revelation supports exogenous reading; Manifesto's canonization as divinely inspired supports endogenous reading. The axioms are mutually exclusive regarding causal primacy."
+      }
+    ]
+  },
+  "_seed_id": "mormon_polygamy_manifesto_1890"
+}

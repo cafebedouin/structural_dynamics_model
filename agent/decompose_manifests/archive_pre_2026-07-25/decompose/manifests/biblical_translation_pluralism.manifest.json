@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Biblical Studies / Translation Theory / Religious Authority",
+  "family_id": "biblical_translation_pluralism",
+  "topic_summary": "Analysis of competing translation philosophies in biblical studies, examining how formal equivalence (word-for-word literalism) and dynamic equivalence (meaning-for-meaning contextualization) constitute distinct readings of the same scriptural kernel, each grounding different authority structures and behavioral constraints for religious communities.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Source text corpus (Hebrew Bible, Greek New Testament - the stabilized kernel)",
+      "Formal equivalence tradition (KJV, NASB, ESV lineage)",
+      "Dynamic equivalence tradition (NIV, NLT, Message lineage)",
+      "Translation committees (authority structures interpreting kernel)",
+      "Interpretive communities (denominations, seminaries, individual readers)",
+      "Original language scholarship (technical authority layer)"
+    ],
+    "key_tensions": [
+      "Fidelity to source structure vs intelligibility to target audience",
+      "Prescriptive stability (unchanging text) vs pastoral adaptation (meeting readers where they are)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "formal_equivalence_reading",
+      "human_readable": "Formal Equivalence Reading (Prescriptive Literalism)",
+      "structural_delta": "Word-for-word preservation of source language structure as primary constraint; intelligibility subordinated to structural fidelity",
+      "primary_observable": "Translation committee adherence to source syntax/morphology; resistance to target-language idiom insertion; measurement via word-order preservation metrics and lexical one-to-one mapping rates",
+      "epsilon_bin": "high",
+      "hypothesis": "commitment_system_reading",
+      "beneficiary": "conservative_hermeneutical_communities",
+      "victim": "non_specialist_readers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading with distinct authority grounding in textual immutability; high epsilon due to significant behavioral constraint (requires specialist knowledge for comprehension)"
+    },
+    {
+      "claim_id": "dynamic_equivalence_reading",
+      "human_readable": "Dynamic Equivalence Reading (Contextual Pastoral Adaptation)",
+      "structural_delta": "Meaning-for-meaning transfer prioritizing target-language intelligibility; structural fidelity subordinated to communicative effectiveness",
+      "primary_observable": "Translation committee use of target-language idioms, cultural adaptation, readability metrics (Flesch-Kincaid scores); measurement via departure from source syntax",
+      "epsilon_bin": "mod",
+      "hypothesis": "commitment_system_reading",
+      "beneficiary": "lay_readers_pastoral_contexts",
+      "victim": "original_language_precision",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with distinct authority grounding in communicative mission; different beneficiary/victim structure from formal equivalence"
+    },
+    {
+      "claim_id": "critical_reconstructive_reading",
+      "human_readable": "Critical Reconstructive Reading (Academic Source-Criticism)",
+      "structural_delta": "Translation as reconstruction of hypothetical original text through textual criticism; neither structure nor meaning privileged over historical recovery",
+      "primary_observable": "Use of critical apparatus, emendations, manuscript family preferences; measurement via departures from Masoretic/Textus Receptus bases",
+      "epsilon_bin": "low",
+      "hypothesis": "commitment_system_reading",
+      "beneficiary": "academic_biblical_scholarship",
+      "victim": "confessional_stability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading with academic authority grounding distinct from ecclesiastical traditions; lower epsilon but structurally independent axis"
+    },
+    {
+      "claim_id": "reception_history_axis",
+      "human_readable": "Reception History Constraint (Liturgical Fixity)",
+      "structural_delta": "Constraint imposed by centuries of liturgical use, memorization, and confessional formulation tied to specific translation choices",
+      "primary_observable": "Resistance to translation revision in liturgical contexts; measurement via denominational liturgy retention of archaic forms",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "formal_equivalence_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of formal equivalence rather than independent reading; piton of historical path dependency"
+    },
+    {
+      "claim_id": "gender_language_revision",
+      "human_readable": "Gender-Inclusive Language Revision (Contemporary Adaptation)",
+      "structural_delta": "Constraint imposed by contemporary gender-egalitarian norms on pronoun and role-term choices",
+      "primary_observable": "Frequency of gender-neutral pronoun substitutions, removal of 'man'/'mankind' for 'humanity'; measurement via comparative word frequency analysis",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "gender_egalitarian_communities",
+      "victim": "morphological_transparency",
+      "downstream_of": [
+        "dynamic_equivalence_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: specific application of dynamic equivalence principle; captured by broader reading rather than requiring separate axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "formal_equivalence_reading",
+      "kernel_id": "biblical_source_text",
+      "reading_id": "formal_equivalence_reading"
+    },
+    {
+      "claim_id": "dynamic_equivalence_reading",
+      "kernel_id": "biblical_source_text",
+      "reading_id": "dynamic_equivalence_reading"
+    },
+    {
+      "claim_id": "critical_reconstructive_reading",
+      "kernel_id": "biblical_source_text",
+      "reading_id": "critical_reconstructive_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "reception_history_axis",
+      "structural_delta": "Liturgical fixity as path dependency from historical translation choices",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence of formal equivalence reading; does not constitute independent reading of kernel"
+    },
+    {
+      "claim_id": "gender_language_revision",
+      "structural_delta": "Contemporary gender-egalitarian norms constraining pronoun/role-term choices",
+      "hypothesis": "snare",
+      "deferral_reason": "Specific application of dynamic equivalence principle; captured by broader reading rather than requiring separate generation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_paraphrase_boundary",
+      "description": "At what point does dynamic equivalence cross into paraphrase that no longer qualifies as translation? The Message presents boundary case—is it a reading or a distinct genre?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - translation vs commentary boundary not surfaced in primary readings"
+    },
+    {
+      "id": "omega_multilingual_asymmetry",
+      "description": "Do these readings only exist for major-language translations with competitive markets? Minority-language Bible translation (e.g., Wycliffe's work) may collapse the distinction due to resource constraints.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - analysis assumes English/European translation ecosystem"
+    },
+    {
+      "id": "omega_digital_disruption",
+      "description": "Does proliferation of digital parallel texts and interlinear tools dissolve the authority structure by giving lay readers direct access to multiple readings simultaneously?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - current authority structures assume single-translation dominance within communities"
+    },
+    {
+      "id": "omega_textual_criticism_stability",
+      "description": "Is the 'stabilized kernel' assumption valid given ongoing manuscript discoveries and critical text revisions? Dead Sea Scrolls disrupted Masoretic stability; future discoveries may do same.",
+      "source": "F03 consideration - kernel fixity may itself be a historical artifact rather than mountain"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean scan. Three readings identified with genuinely distinct authority groundings and structural deltas. Kernel decomposition warranted: formal equivalence and dynamic equivalence hold mutually exclusive axioms about translation priority (structure vs meaning), yet both operate on same source text. Critical reconstructive reading adds third axis with academic rather than ecclesiastical authority grounding."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The biblical source text corpus (Hebrew Bible, Greek New Testament) stabilized through manuscript tradition and canonical closure",
+    "authority_description": "Translation committees grounded in either confessional/ecclesiastical traditions (formal/dynamic) or academic textual criticism (reconstructive), each claiming legitimacy to interpret kernel for target-language community",
+    "drift_status": "functioning",
+    "candidate_pattern": "confessional_contestation",
+    "is_contested_kernel": true,
+    "kernel_id": "biblical_source_text",
+    "readings": [
+      {
+        "reading_id": "formal_equivalence_reading",
+        "commitment": "Fidelity to source language structure is primary; intelligibility is subordinate responsibility of reader/community through teaching",
+        "authority_grounding": "Confessional/prescriptive - grounded in doctrine of verbal inspiration requiring preservation of original language structure as divine form",
+        "sibling_readings": [
+          "dynamic_equivalence_reading",
+          "critical_reconstructive_reading"
+        ],
+        "expected_structural_delta": "High extractiveness on non-specialist readers (requires education to access); beneficiary set is hermeneutically conservative communities maintaining authority through textual stability"
+      },
+      {
+        "reading_id": "dynamic_equivalence_reading",
+        "commitment": "Communicative effectiveness in target language is primary; structural fidelity subordinated to intelligibility and pastoral mission",
+        "authority_grounding": "Pastoral/missional - grounded in doctrine of incarnational communication requiring translation to meet reader in their linguistic-cultural context",
+        "sibling_readings": [
+          "formal_equivalence_reading",
+          "critical_reconstructive_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (loses morphological precision); beneficiary set is lay readers and missionary contexts; victim set is scholars requiring word-study precision"
+      },
+      {
+        "reading_id": "critical_reconstructive_reading",
+        "commitment": "Historical recovery of hypothetical original text is primary; neither structure nor meaning can be privileged until textual basis is established",
+        "authority_grounding": "Academic/reconstructive - grounded in text-critical methodology and manuscript evidence independent of confessional commitments",
+        "sibling_readings": [
+          "formal_equivalence_reading",
+          "dynamic_equivalence_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness on academic readers; high extractiveness on confessional communities (destabilizes received text basis); beneficiary set is academic biblical scholarship"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "formal_equivalence_reading",
+        "reading_b": "dynamic_equivalence_reading",
+        "basis": "Formal equivalence axiom: 'preservation of source structure is non-negotiable fidelity' is mutually exclusive with dynamic equivalence axiom: 'meaning transfer requires structural adaptation'. No single translation philosophy can hold both as foundational commitments—one must be subordinated to the other."
+      },
+      {
+        "reading_a": "formal_equivalence_reading",
+        "reading_b": "critical_reconstructive_reading",
+        "basis": "Formal equivalence operates on received text basis (Masoretic/Textus Receptus as stable kernel) while critical reconstruction treats received texts as provisional artifacts requiring emendation. Cannot simultaneously hold 'received text is authoritative base' and 'received text requires critical reconstruction before authority can be claimed'."
+      },
+      {
+        "reading_a": "dynamic_equivalence_reading",
+        "reading_b": "critical_reconstructive_reading",
+        "basis": "Dynamic equivalence prioritizes communicative effectiveness in target context (pastoral axiom) while critical reconstruction subordinates all considerations to historical recovery of hypothetical original (academic axiom). Cannot simultaneously hold 'contemporary intelligibility governs translation choices' and 'only historically reconstructed text governs translation choices'."
+      }
+    ]
+  },
+  "_seed_id": "biblical_translation_pluralism"
+}

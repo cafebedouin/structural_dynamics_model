@@ -1,0 +1,210 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Philology / Intellectual History",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist reconstruction of Classical Latin, examining the collision between medieval Latin as a living drifted vernacular and the humanist project to recover 'correct' Classical forms from ancient texts. The central question is whether the reconstructed form was reachable through continuous evolution from medieval Latin or constituted a separate kernel reoccupied from symbolic sources, representing a D1 discontinuity.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin (living vernacular, evolved from Classical through continuous drift)",
+      "Classical Latin (ancient literary form, preserved in texts, no living speakers post-6th century)",
+      "Humanist philologists (Petrarch, Valla, Erasmus - reconstructors claiming authority via textual scholarship)",
+      "Medieval scholastics (users of drifted Latin as working language of theology/law/administration)",
+      "Ancient texts (Cicero, Virgil, Caesar - material substrate for reconstruction)",
+      "Printing press (technology enabling standardization of reconstructed forms)"
+    ],
+    "key_tensions": [
+      "Continuity vs discontinuity (medieval users claiming unbroken tradition vs humanists claiming rupture and recovery)",
+      "Authority grounding (living practice vs textual fidelity as source of linguistic legitimacy)"
+    ],
+    "key_claims": [
+      "Medieval Latin is 'corrupt' Classical Latin (humanist framing)",
+      "Medieval Latin is legitimate evolved form (continuity framing)",
+      "Reconstruction achieves return to Classical standard (humanist claim)",
+      "Reconstruction creates new artificial register (discontinuity claim)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuity_reading",
+      "human_readable": "Continuity Reading (Medieval Latin as Evolved Classical)",
+      "structural_delta": "Medieval Latin is Classical Latin after 800 years of natural linguistic drift; reconstruction is internal reform of a living tradition",
+      "primary_observable": "Phonological/morphological changes traceable through continuous manuscript tradition; mutual intelligibility between periods",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "medieval_scholastic_establishment",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents medieval users' interpretive commitment"
+    },
+    {
+      "claim_id": "discontinuity_reading",
+      "human_readable": "Discontinuity Reading (Reconstruction as Kernel Reoccupation)",
+      "structural_delta": "Classical Latin died as living language; humanist reconstruction reoccupies extinct form from textual symbols, creating artificial register with no living transmission",
+      "primary_observable": "Absence of native speakers post-6th century; reconstruction dependent on archaeological textual recovery rather than oral tradition",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "humanist_philological_elite",
+      "victim": "medieval_linguistic_continuity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents humanist reconstructors' interpretive commitment"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading (Partial Continuity with Textual Correction)",
+      "structural_delta": "Medieval Latin maintains partial continuity with Classical substrate; humanist reconstruction is corrective reform guided by textual evidence, not full reoccupation",
+      "primary_observable": "Degree of morphological/syntactic preservation in medieval texts; humanist reforms target specific features (orthography, vocabulary) while preserving grammatical core",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; represents compromise position acknowledging both drift and textual authority"
+    },
+    {
+      "claim_id": "printing_standardization",
+      "human_readable": "Printing Press Standardization (Technology-Driven Fixation)",
+      "structural_delta": "Printing technology enables enforcement of reconstructed standard by freezing orthographic/morphological variation",
+      "primary_observable": "Pre-print manuscript variation vs post-print standardization; adoption rates of humanist orthography in printed texts",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": "printing_industry",
+      "victim": "regional_latin_variants",
+      "downstream_of": [],
+      "feeds_into": [
+        "discontinuity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent axis; technology constraint enabling enforcement of reconstructed forms; survives §3 test as distinct observable (printing adoption) and distinct ε (standardization pressure)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "discontinuity_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "discontinuity_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "correct_latin",
+      "reading_id": "hybrid_reading"
+    },
+    "printing_standardization"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "vernacular_displacement",
+      "structural_delta": "Humanist Latin reconstruction displaces emerging vernacular literatures by reasserting Latin prestige",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of discontinuity_reading rather than independent structural axis; captured by victim field in discontinuity_reading"
+    },
+    {
+      "claim_id": "pedagogical_gatekeeping",
+      "structural_delta": "Reconstructed Classical standard creates higher barrier to Latin literacy, concentrating access",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism of discontinuity_reading rather than independent constraint; epsilon not distinct from discontinuity_reading's extractiveness"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_mutual_intelligibility",
+      "description": "Were medieval and Classical Latin mutually intelligible in practice? If yes, strengthens continuity reading; if no, strengthens discontinuity. Historical evidence ambiguous: written texts show continuity, but phonological drift may have broken oral comprehension.",
+      "source": "§3 Independence Testing - observables for continuity vs discontinuity readings overlap in manuscript tradition but diverge in oral practice"
+    },
+    {
+      "id": "omega_native_speaker_threshold",
+      "description": "At what point does a language with no native speakers but continuous learned transmission cease to be 'living'? Discontinuity reading assumes 6th century threshold; continuity reading denies such threshold exists for learned languages.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - model's default framing privileges native-speaker criterion from modern linguistics"
+    },
+    {
+      "id": "omega_textual_authority_grounding",
+      "description": "Why did textual fidelity to ancient sources trump living practice as authority criterion? Humanist framing assumes texts > practice, but this itself is a commitment system choice requiring explanation.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - humanist philologists benefit from textual authority criterion; medieval scholastics benefit from practice authority"
+    },
+    {
+      "id": "omega_d1_classification",
+      "description": "Is the humanist reconstruction a true D1 discontinuity (kernel reoccupation from symbol) or D0 (reform within continuous tradition)? Depends on whether grammatical core was preserved or reconstructed. Printing_standardization axis suggests D1 via technology-enabled enforcement, but hybrid_reading suggests D0.",
+      "source": "User's kernel contest framing + §2 decomposition tension"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings emerge from genuine interpretive contest over shared kernel ('correct Latin'). Printing_standardization survives §3 as independent axis with distinct observable (technology adoption) and distinct epsilon (standardization pressure). Deferred axes are enforcement mechanisms rather than independent constraints."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The stabilized shared commitment is 'correct Latin' - the normative standard for Latin usage. All parties agree Latin has a correct form; they contest what that form is and how it is determined.",
+    "authority_description": "Contested between two grounding sources: (1) living practice and continuous transmission (medieval scholastic authority), (2) textual fidelity to ancient sources (humanist philological authority). The contest is over which criterion legitimates linguistic correctness.",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Capture (Pattern 3) - humanists claim interpretive authority over the kernel by redefining correctness criterion from practice to textual fidelity, absorbing drift (medieval evolution) as 'corruption' requiring correction",
+    "is_contested_kernel": true,
+    "kernel_id": "correct_latin",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Correct Latin is the form transmitted through continuous living practice; medieval Latin is legitimate evolved Classical Latin",
+        "authority_grounding": "Living transmission and institutional practice (universities, Church, legal systems)",
+        "sibling_readings": [
+          "discontinuity_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Medieval forms enter legitimate usage set; no rupture between Classical and medieval periods; reform is internal adjustment not external reconstruction"
+      },
+      {
+        "reading_id": "discontinuity_reading",
+        "commitment": "Correct Latin is the Classical form preserved in ancient texts; medieval Latin is corrupt deviation requiring reconstruction from textual sources",
+        "authority_grounding": "Textual fidelity to ancient sources (Cicero, Virgil, Caesar as normative models)",
+        "sibling_readings": [
+          "continuity_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Medieval forms exit legitimate usage set; rupture declared between Classical and medieval; reconstruction is external reoccupation of extinct form from textual symbols (D1 discontinuity)"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Correct Latin is Classical form as transmitted through medieval practice but correctable via textual evidence; partial continuity with targeted reform",
+        "authority_grounding": "Dual authority: practice provides grammatical continuity, texts provide corrective standard for specific features",
+        "sibling_readings": [
+          "continuity_reading",
+          "discontinuity_reading"
+        ],
+        "expected_structural_delta": "Medieval forms partially legitimate (grammatical core preserved) but subject to textual correction (orthography, vocabulary); reform is corrective adjustment not full reoccupation (D0 with textual guidance)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "discontinuity_reading",
+        "basis": "Continuity reading's axiom (living practice grounds linguistic legitimacy) and discontinuity reading's axiom (textual fidelity grounds linguistic legitimacy) are mutually exclusive authority criteria. No single coherent framework can hold both: either practice or text is the ultimate arbiter of correctness, not both simultaneously. Hybrid_reading attempts to hold both but does so by subordinating practice to textual correction, effectively collapsing to discontinuity's axiom with a continuity concession."
+      }
+    ]
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

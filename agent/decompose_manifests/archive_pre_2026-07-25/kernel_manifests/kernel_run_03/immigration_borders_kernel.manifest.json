@@ -1,0 +1,223 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / International Law / Migration Studies",
+  "family_id": "immigration_border_kernel_2026",
+  "topic_summary": "Analysis of the border control kernel as contested between sovereignty-primary and freedom-of-movement-primary readings. Each reading instantiates a different constraint with distinct victim sets: excluded migrants under sovereignty-primary borders vs displaced domestic workers under freedom-of-movement-primary borders. The kernel is the normative status of territorial boundaries in regulating human movement.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "UN Charter (establishes state sovereignty over borders)",
+      "UDHR Article 13.1 (right to freedom of movement within states, not between)",
+      "Excluded migrants (those barred from crossing borders)",
+      "Domestic workers (native labor force affected by migration)",
+      "State actors (enforce territorial control)",
+      "Human rights advocates (promote individual liberty of movement)"
+    ],
+    "key_tensions": [
+      "Individual rights vs state sovereignty (core structural opposition)",
+      "Right to emigrate vs no right to immigrate (legal asymmetry)",
+      "Border control as security vs border control as rights violation"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The normative status of territorial boundaries as legitimate regulators of human movement across space",
+    "authority_description": "State sovereignty doctrine (Westphalian system) vs cosmopolitan human rights framework; interpretive legitimacy contested between state actors and international human rights institutions",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_authority_deadlock",
+    "is_contested_kernel": true,
+    "kernel_id": "border_normative_status",
+    "readings": [
+      {
+        "reading_id": "sovereignty_primary",
+        "commitment": "Territorial boundaries are legitimate instruments of collective self-determination; states have foundational authority to exclude non-members",
+        "authority_grounding": "Westphalian sovereignty doctrine; UN Charter Article 2(1); national security framework",
+        "sibling_readings": [
+          "freedom_primary",
+          "qualified_sovereignty"
+        ],
+        "expected_structural_delta": "Excluded migrants enter victim set; border enforcement becomes legitimate state function; displacement of citizens treated as externality or non-issue"
+      },
+      {
+        "reading_id": "freedom_primary",
+        "commitment": "Freedom of movement is a fundamental human right that borders impermissibly restrict; exclusion requires extraordinary justification",
+        "authority_grounding": "Cosmopolitan moral philosophy; extension of UDHR Article 13.1 logic across borders; individual autonomy primacy",
+        "sibling_readings": [
+          "sovereignty_primary",
+          "qualified_sovereignty"
+        ],
+        "expected_structural_delta": "Excluded migrants exit victim set (no legitimate exclusion); displaced domestic workers enter victim set; border enforcement becomes rights violation requiring justification"
+      },
+      {
+        "reading_id": "qualified_sovereignty",
+        "commitment": "States retain border control authority but must exercise it proportionately to legitimate state interests and consistently with human rights obligations",
+        "authority_grounding": "International human rights law synthesis; proportionality doctrine; refugee convention obligations",
+        "sibling_readings": [
+          "sovereignty_primary",
+          "freedom_primary"
+        ],
+        "expected_structural_delta": "Both excluded migrants and displaced citizens in victim set; border control legitimate only when justified, necessary, proportionate; creates adjudication burden on states"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereignty_primary",
+        "reading_b": "freedom_primary",
+        "basis": "Sovereignty-primary holds that states have foundational authority to exclude (exclusion requires no justification beyond state decision); freedom-primary holds that exclusion is a rights violation requiring extraordinary justification. No single framework can hold both: either exclusion is presumptively legitimate or presumptively illegitimate."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_primary",
+      "human_readable": "Sovereignty-Primary Border Reading",
+      "structural_delta": "Borders as legitimate instruments of collective self-determination with foundational exclusion authority",
+      "primary_observable": "Legal doctrine treating border control as core sovereignty function; policy requiring no justification for exclusion beyond state decision",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_actors_domestic_workers",
+      "victim": "excluded_migrants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; distinct victim set (excluded migrants); high epsilon from enforcement apparatus"
+    },
+    {
+      "claim_id": "freedom_primary",
+      "human_readable": "Freedom-of-Movement-Primary Border Reading",
+      "structural_delta": "Borders as impermissible restrictions on fundamental human right to movement requiring extraordinary justification",
+      "primary_observable": "Moral/legal framework treating exclusion as rights violation; policy requiring justification for any border enforcement",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "excluded_migrants",
+      "victim": "displaced_domestic_workers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; inverted victim set from sovereignty_primary; axiom-contradictory to first reading"
+    },
+    {
+      "claim_id": "qualified_sovereignty",
+      "human_readable": "Qualified Sovereignty Border Reading",
+      "structural_delta": "Border control authority constrained by proportionality and human rights obligations",
+      "primary_observable": "Proportionality tests in border enforcement; refugee convention compliance; human rights adjudication of exclusion decisions",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "both_excluded_migrants_and_displaced_workers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; synthesis position attempting to hold both victim sets; demonstrates structural impossibility of full reconciliation"
+    },
+    {
+      "claim_id": "labor_market_displacement",
+      "human_readable": "Labor Market Displacement Mechanism",
+      "structural_delta": "Migration's differential impact on native workers by skill level and sector",
+      "primary_observable": "Wage effects and employment displacement by education level; occupational downgrading patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_primary",
+        "qualified_sovereignty"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical mechanism feeding into sovereignty_primary reading but lower structural priority than kernel readings themselves"
+    },
+    {
+      "claim_id": "legal_asymmetry_structure",
+      "human_readable": "Right-to-Leave / No-Right-to-Enter Asymmetry",
+      "structural_delta": "International law grants emigration rights but no corresponding immigration rights",
+      "primary_observable": "UDHR Article 13.1 scope; absence of reciprocal entry rights in international law",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_primary"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: legal structure supporting sovereignty_primary but captured by that reading's constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_primary",
+      "kernel_id": "border_normative_status",
+      "reading_id": "sovereignty_primary"
+    },
+    {
+      "claim_id": "freedom_primary",
+      "kernel_id": "border_normative_status",
+      "reading_id": "freedom_primary"
+    },
+    {
+      "claim_id": "qualified_sovereignty",
+      "kernel_id": "border_normative_status",
+      "reading_id": "qualified_sovereignty"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "labor_market_displacement",
+      "structural_delta": "Migration's differential impact on native workers by skill level",
+      "hypothesis": "mountain",
+      "deferral_reason": "Empirical mechanism feeding sovereignty_primary reading; lower structural priority than kernel readings; captured in sovereignty_primary constraint story as affects_constraint hook"
+    },
+    {
+      "claim_id": "legal_asymmetry_structure",
+      "structural_delta": "Right to emigrate without corresponding right to immigrate",
+      "hypothesis": "rope",
+      "deferral_reason": "Legal structure supporting sovereignty_primary reading; fully captured by that reading's constraint story; no independent epsilon"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_refugee_exception",
+      "description": "Refugee Convention creates partial exception to sovereignty_primary reading (non-refoulement obligation). Does this exception prove the rule or undermine it? If states can be obligated to admit some non-citizens, sovereignty_primary's foundational exclusion authority is already compromised.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — refugee law conspicuously absent from sovereignty_primary framing"
+    },
+    {
+      "id": "omega_citizenship_acquisition",
+      "description": "All three readings treat citizenship as given (accident of birth). None address whether citizenship acquisition rules themselves are legitimate constraints. If birthright citizenship is arbitrary, sovereignty_primary's beneficiary set (citizens) may itself be a Snare.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from citizenship-as-given framing"
+    },
+    {
+      "id": "omega_qualified_sovereignty_collapse",
+      "description": "Does qualified_sovereignty reading collapse into one of the other two under pressure? If proportionality review is deferential (state wins most cases), it collapses to sovereignty_primary. If proportionality review is strict (exclusion rarely justified), it collapses to freedom_primary. The synthesis may be unstable.",
+      "source": "Independence testing — qualified_sovereignty may not have independent epsilon from its parent readings"
+    },
+    {
+      "id": "omega_empirical_displacement",
+      "description": "Labor market displacement evidence is mixed (Brazil +3% wages, Colombia -30% for low-education workers). Is this a Mountain (economic mechanism) or a Piton (policy choice to protect/not protect domestic workers)? Classification affects whether displacement is inevitable or contingent.",
+      "source": "Deferred axis labor_market_displacement + F03 concern"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successful: three readings with distinct victim sets and axiom contradictions identified. Labor market displacement deferred as empirical mechanism rather than independent reading."
+  },
+  "_seed_id": "immigration_borders_kernel"
+}

@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Economics / Political Economy / History of Economic Thought",
+  "family_id": "gold_fiat_transition_kernel",
+  "topic_summary": "Analysis of the historical shift from gold-backed to fiat currency systems, examining whether this represents a single discrete policy swap or an overdetermined composite of multiple structural transitions. The kernel contest concerns whether different readings of this transition instantiate genuinely different constraints or merely different interpretations of one transition.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Gold Standard (monetary regime constraining money supply to metal reserves, 1870s-1971)",
+      "Bretton Woods System (1944-1971 hybrid regime with dollar-gold convertibility)",
+      "Nixon Shock (1971 unilateral suspension of dollar-gold convertibility)",
+      "Federal Reserve (central bank with discretionary monetary authority post-1971)",
+      "International Monetary Fund (multilateral institution managing post-Bretton Woods regime)",
+      "Creditor nations (holders of dollar reserves demanding gold redemption pre-1971)",
+      "Inflation hawks (economists viewing fiat as license for debasement)",
+      "Keynesian economists (viewing discretionary policy as stabilization tool)"
+    ],
+    "key_tensions": [
+      "Automatic constraint (gold supply mechanics) vs discretionary authority (central bank policy)",
+      "Creditor discipline (redemption threat) vs debtor flexibility (inflation option)",
+      "Single-cause narrative (Nixon decision) vs overdetermined composite (multiple structural pressures)"
+    ],
+    "key_mechanisms": [
+      "Gold convertibility as constraint on money creation (automatic limit)",
+      "Balance of payments discipline under fixed exchange rates (creditor redemption threat)",
+      "Central bank discretion post-fiat (active monetary policy implementation)",
+      "Inflation as implicit taxation (transfer from creditors to debtors)"
+    ],
+    "key_absences": [
+      "Domestic political economy (labor-capital distributional conflict as driver)",
+      "Legal tender laws (state enforcement of fiat acceptance independent of convertibility)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "automatic_constraint_reading",
+      "human_readable": "Automatic Constraint Reading (Gold as Physical Limit)",
+      "structural_delta": "Transition read as shift from automatic physical constraint (gold reserves) to discretionary policy regime (central bank authority)",
+      "primary_observable": "Monetary base growth rate pre/post-1971; central bank balance sheet discretion",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_contested_kernel",
+      "beneficiary": "monetary_authorities",
+      "victim": "creditor_class",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading instantiating constraint shift from physical to institutional; highest epistemic clarity"
+    },
+    {
+      "claim_id": "creditor_discipline_reading",
+      "human_readable": "Creditor Discipline Reading (Redemption Threat as Constraint)",
+      "structural_delta": "Transition read as elimination of creditor veto power (gold redemption threat) enabling debtor-nation fiscal flexibility",
+      "primary_observable": "Balance of payments constraint binding pre-1971; reserve currency privilege post-1971",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_contested_kernel",
+      "beneficiary": "debtor_nations",
+      "victim": "creditor_nations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct beneficiary/victim structure from automatic constraint reading; geopolitical dimension"
+    },
+    {
+      "claim_id": "composite_overdetermination_reading",
+      "human_readable": "Composite Overdetermination Reading (Multiple Simultaneous Transitions)",
+      "structural_delta": "Transition read as convergence of multiple independent structural shifts (technology, geopolitics, labor power, legal infrastructure) rather than single policy swap",
+      "primary_observable": "Count of independent structural changes 1944-1971; temporal clustering vs distributed emergence",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_contested_kernel",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Meta-reading challenging kernel singularity itself; tests whether Nixon Shock is misattributed causal node"
+    },
+    {
+      "claim_id": "distributional_conflict_axis",
+      "human_readable": "Distributional Conflict Axis (Labor-Capital Inflation Bargain)",
+      "structural_delta": "Domestic inflation tolerance as function of labor bargaining power and capital's exit options",
+      "primary_observable": "Union density and wage growth 1950-1980; capital mobility indices",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "organized_labor",
+      "victim": "rentier_class",
+      "downstream_of": [],
+      "feeds_into": [
+        "automatic_constraint_reading",
+        "composite_overdetermination_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: domestic political economy dimension; captured partially in creditor_discipline_reading's victim structure"
+    },
+    {
+      "claim_id": "legal_tender_mechanism",
+      "human_readable": "Legal Tender Enforcement Mechanism (State Coercion Independent of Metal)",
+      "structural_delta": "State's ability to enforce fiat acceptance through legal tender laws and tax obligations independent of convertibility",
+      "primary_observable": "Legal tender law enforcement history; tax payment requirements in currency",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "automatic_constraint_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: foundational legal mechanism but lower centrality; absence noted in extraction"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "automatic_constraint_reading",
+      "kernel_id": "gold_fiat_transition_mechanism",
+      "reading_id": "automatic_constraint_reading"
+    },
+    {
+      "claim_id": "creditor_discipline_reading",
+      "kernel_id": "gold_fiat_transition_mechanism",
+      "reading_id": "creditor_discipline_reading"
+    },
+    {
+      "claim_id": "composite_overdetermination_reading",
+      "kernel_id": "gold_fiat_transition_mechanism",
+      "reading_id": "composite_overdetermination_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "distributional_conflict_axis",
+      "structural_delta": "Domestic inflation tolerance as function of labor-capital conflict",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Domestic political economy dimension captured partially in creditor_discipline_reading's distributional structure; lower graph centrality than selected readings"
+    },
+    {
+      "claim_id": "legal_tender_mechanism",
+      "structural_delta": "State enforcement of fiat acceptance independent of convertibility",
+      "hypothesis": "mountain",
+      "deferral_reason": "Foundational but low centrality; legal infrastructure assumption underlying automatic_constraint_reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse_test",
+      "description": "Do the three readings instantiate genuinely different constraints or merely different emphases on one composite transition? Composite_overdetermination_reading challenges kernel singularity itself. If it is correct, the kernel contest may be moot—there is no single transition to read differently, only multiple parallel transitions misattributed to Nixon Shock.",
+      "source": "§1.3-K coherence test; composite_overdetermination_reading selection rationale"
+    },
+    {
+      "id": "omega_mountain_validity_legal_tender",
+      "description": "Is legal_tender_mechanism a true Mountain (state enforcement capacity independent of metal supply) or a Piton (contingent on state legitimacy)? Legal tender laws were enforceable under gold standard too; the transition may not require this mechanism as a new constraint.",
+      "source": "Deferred axis legal_tender_mechanism; Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_distributional_beneficiary",
+      "description": "Who actually benefited from fiat transition in the long run? Initial readings assign beneficiaries (monetary_authorities, debtor_nations) but ignore capital's adaptation: financialization and inflation hedging may have restored extractive capacity. The victim class may have rotated rather than persisted.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); deferred axis distributional_conflict_axis"
+    },
+    {
+      "id": "omega_temporal_boundary",
+      "description": "When did the transition 'complete'? Nixon Shock (1971) is symbolically salient but legal tender enforcement, central bank independence, and inflation-targeting regimes emerged over 1971-1990. Temporal ambiguity affects which structural changes count as 'the transition' vs aftermath.",
+      "source": "Extraction absence (temporal boundary not specified in research context); composite_overdetermination_reading structural_delta"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F01 detected: User prompt flags 'NON-BREAK composite test' suggesting expectation that composite reading would dominate or invalidate single-swap readings. Decomposition treats composite as one of three coequal readings rather than as meta-critique. If user intended composite to be tested against simplified narratives rather than treated as peer reading, this interpretation drift should be corrected. Generated omega_kernel_collapse_test to surface this ambiguity."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The gold-to-fiat transition as a shared historical event subject to contested interpretation: whether it represents a single discrete policy swap (Nixon Shock as causal node) or an overdetermined composite of multiple structural transitions converging 1944-1990.",
+    "authority_description": "Academic historians and economists claiming interpretive legitimacy through archival access and economic modeling; central bankers claiming operational knowledge; political economists claiming structural analysis of power relations. No single authority structure; competing disciplinary lenses.",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "gold_fiat_transition_mechanism",
+    "readings": [
+      {
+        "reading_id": "automatic_constraint_reading",
+        "commitment": "The transition eliminated an automatic physical constraint (gold reserves limit money creation), replacing it with discretionary central bank authority. Constraint type changed from material to institutional.",
+        "authority_grounding": "Orthodox monetary economics; central bank institutional histories",
+        "sibling_readings": [
+          "creditor_discipline_reading",
+          "composite_overdetermination_reading"
+        ],
+        "expected_structural_delta": "High epsilon; beneficiary is monetary_authorities (gained discretion); victim is creditor_class (lost automatic protection from debasement). Constraint weakened but remained institutional."
+      },
+      {
+        "reading_id": "creditor_discipline_reading",
+        "commitment": "The transition eliminated creditor veto power (gold redemption threat as balance-of-payments discipline), enabling debtor-nation fiscal flexibility. Geopolitical power shift from creditor to reserve-currency issuer.",
+        "authority_grounding": "International political economy; hegemonic stability theory; balance-of-payments accounting",
+        "sibling_readings": [
+          "automatic_constraint_reading",
+          "composite_overdetermination_reading"
+        ],
+        "expected_structural_delta": "High epsilon; beneficiary is debtor_nations (especially US as reserve currency issuer); victim is creditor_nations (lost redemption leverage). Constraint eliminated for reserve issuer, tightened for non-reserve holders."
+      },
+      {
+        "reading_id": "composite_overdetermination_reading",
+        "commitment": "The transition was not a single swap but convergence of multiple independent structural changes: telecommunications technology enabling instant capital flows, collapse of Bretton Woods pegs, labor bargaining power shifts, legal tender enforcement maturation. Nixon Shock was symbolic marker, not causal node.",
+        "authority_grounding": "Structural historiography; overdetermination analysis from Althusserian tradition; institutionalist economics",
+        "sibling_readings": [
+          "automatic_constraint_reading",
+          "creditor_discipline_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon; no single beneficiary (different structural changes had different distributional effects); challenges kernel singularity itself. If correct, the other two readings misattribute causality to a non-existent unified transition."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "automatic_constraint_reading",
+        "reading_b": "composite_overdetermination_reading",
+        "basis": "Automatic_constraint_reading presupposes a discrete causal node (gold convertibility suspension) that changed constraint type. Composite_overdetermination_reading denies any single causal node exists—transition is emergent property of multiple independent changes. No coherent framework holds both: either there is a singular transition event or there is not."
+      },
+      {
+        "reading_a": "creditor_discipline_reading",
+        "reading_b": "composite_overdetermination_reading",
+        "basis": "Creditor_discipline_reading presupposes a unified geopolitical shift (elimination of redemption threat as single mechanism). Composite_overdetermination_reading denies mechanism unity—creditor discipline eroded through multiple channels (capital controls collapse, reserve diversification, IMF creation) without singular pivot. No framework holds both unified mechanism and distributed emergence."
+      }
+    ]
+  },
+  "_seed_id": "gold_to_fiat_transition"
+}

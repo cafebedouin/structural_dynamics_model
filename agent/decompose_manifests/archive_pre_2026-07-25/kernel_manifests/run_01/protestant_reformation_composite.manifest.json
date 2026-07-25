@@ -1,0 +1,209 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Epistemology / Religious History / Commitment System Analysis",
+  "family_id": "reformation_composite_event_2026",
+  "topic_summary": "Analysis of the Protestant Reformation as a potentially composite event that instantiates multiple commitment system patterns simultaneously (climb, drop, swap, emergence). The kernel contest asks whether this represents one kernel with one dominant reading, or an overdetermined composite of several distinct kernels that defenders absorb as unified. Library verdict context indicates NON-BREAK status where a defender absorbs it as composite.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Protestant Reformation (1517-1648, religious/political rupture event)",
+      "Catholic Church (incumbent authority structure, pre-Reformation kernel holder)",
+      "Luther/Calvin/Zwingli (reformer agents, kernel interpreters)",
+      "Sola Scriptura doctrine (new interpretive principle)",
+      "Council of Trent (Catholic counter-reformation response)",
+      "Peace of Westphalia (institutional settlement mechanism)"
+    ],
+    "key_tensions": [
+      "Unified event narrative vs composite of distinct structural breaks",
+      "Single kernel with contested readings vs multiple kernels operating simultaneously",
+      "Defender absorption (NON-BREAK) vs analytical decomposition requirement"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Reformation as historical event-kernel: what constitutes legitimate Christian authority and how scriptural/traditional commitments ground that authority",
+    "authority_description": "Contested between papal magisterium (tradition + scripture) and reformer sola scriptura (scripture alone as self-interpreting)",
+    "drift_status": "absent",
+    "candidate_pattern": "composite (climb + drop + swap + emergence simultaneously)",
+    "is_contested_kernel": false,
+    "kernel_id": "reformation_composite",
+    "collapse_reason": "The supposed readings are not different interpretations of one shared commitment but structurally distinct events that historians package under one label. A Catholic reading the Reformation as 'heretical departure from apostolic tradition' and a Protestant reading it as 'recovery of scriptural authority' are not reading the same kernel differently—they are describing different structural breaks with different victim sets, different authority structures, and different extractiveness profiles. The 'Reformation' is a historiographic convenience that bundles: (1) a CLIMB (Luther's 95 Theses as interpretive challenge within existing system), (2) a DROP (Augsburg Confession as new kernel instantiation), (3) a SWAP (Henry VIII's Act of Supremacy as authority substitution), and (4) EMERGENCE (Anabaptist rejection of state-church fusion). These are four distinct commitment system events, not four readings of one event. The defender absorbs them as composite (NON-BREAK) because the institutional Church survived all four, but analytical decomposition requires treating them as separate constraint axes.",
+    "readings": []
+  },
+  "axes": [
+    {
+      "claim_id": "climb_interpretive_challenge",
+      "human_readable": "Climb: Interpretive Challenge Within Existing System (Luther 1517-1521)",
+      "structural_delta": "Luther's 95 Theses and early writings as internal reform attempt using existing interpretive authority (appeal to councils, scripture as corrective to papal excess) before Worms excommunication",
+      "primary_observable": "Pre-1521 Luther texts invoking conciliar authority; absence of new institutional claims; Diet of Worms as boundary event",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "drop_confessional_instantiation",
+        "composite_historiographic_packaging"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Structurally distinct from other Reformation events; captures the pre-break phase where reform operates within existing kernel"
+    },
+    {
+      "claim_id": "drop_confessional_instantiation",
+      "human_readable": "Drop: New Kernel Instantiation (Augsburg Confession 1530)",
+      "structural_delta": "Augsburg Confession as new kernel with distinct authority structure (sola scriptura + princely protection) and victim set (Catholic sacramental system)",
+      "primary_observable": "Confessional documents (Augsburg, Heidelberg, Westminster) as new kernels; cuius regio eius religio as institutional settlement",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "territorial_princes",
+      "victim": "catholic_sacramental_authority",
+      "downstream_of": [
+        "climb_interpretive_challenge"
+      ],
+      "feeds_into": [
+        "composite_historiographic_packaging"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest epsilon; captures the actual structural break where new kernel is instantiated with different authority grounding"
+    },
+    {
+      "claim_id": "swap_henrician_substitution",
+      "human_readable": "Swap: Authority Substitution Without Doctrinal Change (Henry VIII 1534)",
+      "structural_delta": "Act of Supremacy as pure authority swap (papal → royal) with minimal doctrinal revision; same sacramental kernel, different interpreter",
+      "primary_observable": "Six Articles (1539) maintaining Catholic doctrine under royal supremacy; absence of sola scriptura adoption",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "english_crown",
+      "victim": "papal_fiscal_extraction",
+      "downstream_of": [],
+      "feeds_into": [
+        "composite_historiographic_packaging"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structurally distinct from both climb and drop; captures authority substitution without kernel change"
+    },
+    {
+      "claim_id": "emergence_anabaptist_rejection",
+      "human_readable": "Emergence: Rejection of State-Church Fusion (Anabaptist 1525+)",
+      "structural_delta": "Anabaptist rejection of both Catholic and magisterial Protestant state-church fusion; voluntary association as new authority principle",
+      "primary_observable": "Schleitheim Confession (1527) rejecting infant baptism and state coercion; persecution by both Catholic and Protestant authorities",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "state_church_monopoly",
+      "downstream_of": [],
+      "feeds_into": [
+        "composite_historiographic_packaging"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: fourth distinct event but lower centrality than swap; captures radical reformation as separate structural break"
+    },
+    {
+      "claim_id": "composite_historiographic_packaging",
+      "human_readable": "Composite Historiographic Packaging (Defender Absorption)",
+      "structural_delta": "The bundling of climb, drop, swap, and emergence under single 'Reformation' label as historiographic convenience and defender NON-BREAK strategy",
+      "primary_observable": "Historiographic periodization practices; Catholic institutional continuity claims; Protestant unity narratives",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": "institutional_continuity_narratives",
+      "victim": null,
+      "downstream_of": [
+        "climb_interpretive_challenge",
+        "drop_confessional_instantiation",
+        "swap_henrician_substitution",
+        "emergence_anabaptist_rejection"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-level packaging axis; captured in omega as historiographic artifact rather than structural constraint"
+    },
+    {
+      "claim_id": "trent_counter_reformation",
+      "human_readable": "Counter-Reformation Kernel Hardening (Council of Trent 1545-1563)",
+      "structural_delta": "Trent as kernel clarification and drift elimination in response to Protestant challenge; removal of interpretive ambiguity",
+      "primary_observable": "Tridentine decrees on scripture/tradition, justification, sacraments; Index of Forbidden Books; Jesuit founding",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "catholic_interpretive_pluralism",
+      "downstream_of": [
+        "drop_confessional_instantiation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Catholic response axis; important but lower centrality than the three primary structural breaks"
+    }
+  ],
+  "generation_sequence": [
+    "climb_interpretive_challenge",
+    "drop_confessional_instantiation",
+    "swap_henrician_substitution"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "emergence_anabaptist_rejection",
+      "structural_delta": "Anabaptist rejection of state-church fusion as fourth distinct structural break",
+      "hypothesis": "mountain",
+      "deferral_reason": "Fourth distinct event pattern; lower centrality than swap; radical reformation as separate analysis"
+    },
+    {
+      "claim_id": "composite_historiographic_packaging",
+      "structural_delta": "Bundling of multiple structural breaks under single 'Reformation' label",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Meta-level packaging axis; historiographic artifact rather than structural constraint; captured in omega"
+    },
+    {
+      "claim_id": "trent_counter_reformation",
+      "structural_delta": "Catholic kernel hardening and drift elimination in response to Protestant challenge",
+      "hypothesis": "piton",
+      "deferral_reason": "Catholic response axis; important but lower centrality than primary structural breaks"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The Reformation is not a contested kernel with multiple readings but a historiographic package containing at least four structurally distinct commitment system events: climb (Luther pre-1521), drop (Augsburg 1530), swap (Henry VIII 1534), and emergence (Anabaptists 1525+). Each has different authority structures, victim sets, and extractiveness profiles. The 'one Reformation' narrative is a defender absorption strategy (NON-BREAK) that preserves institutional continuity claims for both Catholic and Protestant traditions. Analytical decomposition requires treating these as separate constraint axes rather than readings of one kernel.",
+      "source": "§1.3-K kernel/reading decomposition; commitment_system_recognition collapse_reason field"
+    },
+    {
+      "id": "omega_defender_absorption",
+      "description": "The NON-BREAK verdict (defender absorbs as composite) is itself a structural constraint. Catholic historiography absorbs all four events as 'heretical departures' that left the Church intact. Protestant historiography absorbs them as 'recovery of gospel' that unified despite institutional fragmentation. Both narratives obscure the structural distinctness of climb vs drop vs swap vs emergence. The composite packaging serves institutional continuity for both sides.",
+      "source": "Deferred axis composite_historiographic_packaging; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_westphalia_settlement",
+      "description": "Peace of Westphalia (1648) as institutional settlement mechanism that froze the composite in place. Cuius regio eius religio transformed theological dispute into territorial sovereignty question. Does this settlement itself constitute a fifth pattern (institutional fossilization of multiple kernels)? Deferred for future analysis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); extraction entity Peace of Westphalia"
+    },
+    {
+      "id": "omega_anabaptist_suppression",
+      "description": "Anabaptist emergence pattern (rejection of state-church fusion) was suppressed by both Catholic and magisterial Protestant authorities. Does this suppression indicate that emergence is the structurally most threatening pattern to institutional authority? The victim set (state_church_monopoly) spans both sides of the Catholic-Protestant divide. Deferred axis emergence_anabaptist_rejection warrants separate analysis.",
+      "source": "Deferred axis emergence_anabaptist_rejection; Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel collapse (is_contested_kernel=false) is not a fracture but the correct analytical outcome: the Reformation is not one kernel with multiple readings but multiple distinct structural breaks packaged under one historiographic label. The three selected axes (climb, drop, swap) capture the primary structural patterns. Emergence and counter-reformation deferred for token budget reasons but documented in omegas."
+  },
+  "_seed_id": "protestant_reformation_composite"
+}

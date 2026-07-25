@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Climate Policy / Political Economy / Intergenerational Ethics",
+  "family_id": "climate_response_kernel_2024",
+  "topic_summary": "Analysis of three competing climate response frameworks—mitigation-priority, adaptation-priority, and degrowth—each reading the climate crisis kernel differently and emitting structurally distinct constraints with different victim sets, cost-bearer allocations, and intergenerational equity implications.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 9,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Mitigation-Priority Coalition (IPCC, tech-optimist governments, renewable energy sector)",
+      "Adaptation-Priority Coalition (vulnerable nations, insurance sector, disaster management institutions)",
+      "Degrowth Movement (post-growth economists, climate justice activists, global South advocacy)",
+      "Future Generations (unborn/young populations bearing long-term climate costs)",
+      "Carbon-Intensive Industries (fossil fuel sector, heavy manufacturing)",
+      "Global Financial System (capital allocation mechanisms, discount rate authorities)"
+    ],
+    "key_tensions": [
+      "Present consumption vs future climate stability (mitigation vs all other approaches)",
+      "Global North emissions history vs Global South adaptation burden (justice vs efficiency)",
+      "Economic growth imperative vs planetary boundaries (degrowth vs both mainstream approaches)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Climate crisis as a coordination problem requiring collective action, where the shared commitment is 'preventing/managing climate harm' but readings disagree on what constitutes legitimate harm prevention and who bears costs",
+    "authority_description": "Epistemic authority grounded in climate science consensus (IPCC) contested by political-economic interpretations of feasibility, justice, and growth compatibility",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_stabilization (multiple authorities claim different readings of climate science implications)",
+    "is_contested_kernel": true,
+    "kernel_id": "climate_harm_prevention",
+    "readings": [
+      {
+        "reading_id": "mitigation_priority",
+        "commitment": "Legitimate climate response prioritizes emissions reduction to prevent future harm via technological transition within growth framework",
+        "authority_grounding": "IPCC carbon budget science + technological feasibility assessments + economic modeling assuming continued growth",
+        "sibling_readings": [
+          "adaptation_priority",
+          "degrowth_reading"
+        ],
+        "expected_structural_delta": "Future generations primary beneficiaries; present generation (especially carbon-intensive sectors) bears transition costs; assumes growth-compatible decarbonization"
+      },
+      {
+        "reading_id": "adaptation_priority",
+        "commitment": "Legitimate climate response prioritizes near-term resilience building as mitigation politically/economically infeasible; accepts higher warming trajectory",
+        "authority_grounding": "Political realism about mitigation barriers + actuarial risk assessment + vulnerable nation survival imperatives",
+        "sibling_readings": [
+          "mitigation_priority",
+          "degrowth_reading"
+        ],
+        "expected_structural_delta": "Present vulnerable populations primary beneficiaries; future generations and low-adaptation-capacity regions bear residual climate costs; front-loads expenditure"
+      },
+      {
+        "reading_id": "degrowth_reading",
+        "commitment": "Legitimate climate response requires planned economic contraction in Global North as mitigation within growth framework is physically/politically impossible",
+        "authority_grounding": "Planetary boundaries science + critique of green growth feasibility + climate justice/decolonial frameworks",
+        "sibling_readings": [
+          "mitigation_priority",
+          "adaptation_priority"
+        ],
+        "expected_structural_delta": "Global South and future generations primary beneficiaries; Global North present consumption bears costs; rejects growth as constraint boundary"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "mitigation_priority",
+        "reading_b": "degrowth_reading",
+        "basis": "Mitigation-priority assumes decarbonization within continued economic growth is feasible; degrowth asserts this is thermodynamically/politically impossible. No framework can hold both 'growth-compatible transition is feasible' and 'growth must be abandoned' as simultaneously true."
+      },
+      {
+        "reading_a": "adaptation_priority",
+        "reading_b": "mitigation_priority",
+        "basis": "Adaptation-priority treats mitigation as politically/economically non-viable and accepts higher warming; mitigation-priority treats sub-2°C warming as achievable necessity. A single framework cannot hold both 'mitigation is achievable' and 'mitigation has failed, accept warming' as foundational premises."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "mitigation_priority",
+      "human_readable": "Mitigation-Priority Reading (Prevent Future Harm via Decarbonization)",
+      "structural_delta": "Emissions reduction prioritized to prevent >2°C warming; technological transition within growth paradigm; future-oriented cost-benefit analysis",
+      "primary_observable": "Carbon budget compliance trajectories; renewable energy deployment rates; climate finance allocation to mitigation vs adaptation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "future_generations",
+      "victim": "present_carbon_intensive_sectors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct intergenerational victim structure; highest training data availability requires critical generation"
+    },
+    {
+      "claim_id": "adaptation_priority",
+      "human_readable": "Adaptation-Priority Reading (Build Resilience, Accept Higher Warming)",
+      "structural_delta": "Near-term resilience investments prioritized over emissions cuts; accepts 2.5-4°C trajectory; vulnerability-focused resource allocation",
+      "primary_observable": "Adaptation finance flows; disaster preparedness infrastructure investment; insurance penetration in vulnerable regions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "present_vulnerable_populations",
+      "victim": "future_generations_low_adaptation_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct beneficiary set (present vs future); political realism grounding challenges mitigation reading"
+    },
+    {
+      "claim_id": "degrowth_reading",
+      "human_readable": "Degrowth Reading (Planned Contraction in Global North)",
+      "structural_delta": "Economic growth rejected as constraint boundary; planned consumption reduction in high-income nations; climate justice as decolonial project",
+      "primary_observable": "GDP trajectory advocacy; Global North consumption metrics; sufficiency-based policy proposals vs efficiency-based",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "global_south_and_future_generations",
+      "victim": "global_north_present_consumption",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Axiom-contradictory to mitigation reading on growth feasibility; lowest training data representation requires dark matter probe"
+    },
+    {
+      "claim_id": "carbon_removal_backstop",
+      "human_readable": "Carbon Removal Backstop (Negative Emissions Technology Dependence)",
+      "structural_delta": "All three readings implicitly or explicitly depend on future carbon dioxide removal availability; constraint on what overshoot is 'acceptable'",
+      "primary_observable": "CDR scaling assumptions in IPCC pathways; investment in DAC/BECCS; overshoot scenario prevalence",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "future_generations_if_CDR_fails",
+      "downstream_of": [],
+      "feeds_into": [
+        "mitigation_priority",
+        "adaptation_priority"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: shared dependency across readings but not a distinct reading itself; omega material on technological lock-in"
+    },
+    {
+      "claim_id": "discount_rate_authority",
+      "human_readable": "Discount Rate Authority (Intergenerational Weighting Mechanism)",
+      "structural_delta": "Cost-benefit analysis discount rates determine present vs future cost allocation; readings differ on legitimate rates",
+      "primary_observable": "Discount rates in climate policy models; Stern vs Nordhaus debate framing in policy documents",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "mitigation_priority",
+        "adaptation_priority"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological rope underlying victim structure but not independent reading; captured in intergenerational framing"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "mitigation_priority",
+      "kernel_id": "climate_harm_prevention",
+      "reading_id": "mitigation_priority"
+    },
+    {
+      "claim_id": "adaptation_priority",
+      "kernel_id": "climate_harm_prevention",
+      "reading_id": "adaptation_priority"
+    },
+    {
+      "claim_id": "degrowth_reading",
+      "kernel_id": "climate_harm_prevention",
+      "reading_id": "degrowth_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "carbon_removal_backstop",
+      "structural_delta": "Shared dependence on future negative emissions technology across all readings",
+      "hypothesis": "piton",
+      "deferral_reason": "Not a distinct reading but a shared technological dependency; omega material on lock-in risk if CDR fails to scale"
+    },
+    {
+      "claim_id": "discount_rate_authority",
+      "structural_delta": "Intergenerational cost weighting mechanism underlying victim structure",
+      "hypothesis": "rope",
+      "deferral_reason": "Methodological rope captured within each reading's intergenerational framing; low independent analytical yield"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_cdr_failure_cascade",
+      "description": "If carbon dioxide removal fails to scale, do all three readings collapse into adaptation-priority by default? The mitigation reading's carbon budget overshoot scenarios depend on CDR backstop.",
+      "source": "Deferred axis carbon_removal_backstop + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_growth_thermodynamics",
+      "description": "Is absolute decoupling of emissions from GDP thermodynamically achievable at required scale and speed? If not, mitigation-priority reading collapses into degrowth reading, validating axiom contradiction.",
+      "source": "Axiom contradiction between mitigation_priority and degrowth_reading + F34 epistemic boundary"
+    },
+    {
+      "id": "omega_adaptation_limits",
+      "description": "At what warming threshold does adaptation become non-viable (e.g., wet-bulb temperature exceeding human survivability)? Adaptation-priority reading may front-load costs into an unlivable future.",
+      "source": "Dark Matter Probe 1 (Operational Medium: survival as background assumption) + adaptation_priority victim structure"
+    },
+    {
+      "id": "omega_political_feasibility_circularity",
+      "description": "Adaptation-priority grounds authority in 'mitigation is politically infeasible,' but this feasibility claim may be self-fulfilling. Does treating mitigation as infeasible make it so?",
+      "source": "Authority grounding critique of adaptation_priority reading"
+    },
+    {
+      "id": "omega_global_south_agency",
+      "description": "All three readings risk treating Global South as object rather than agent. Degrowth reading centers justice but may impose Northern framework; mitigation/adaptation assume Northern policy authority.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan: who controls framing) + extraction_summary tensions"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: thermodynamic feasibility of absolute decoupling (omega_growth_thermodynamics) exceeds model's physics competence. Bounded as omega rather than asserted. No other fractures detected; kernel structure cleanly instantiates three structurally distinct readings with axiom contradictions."
+  },
+  "_seed_id": "climate_response_kernel"
+}

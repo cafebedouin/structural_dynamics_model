@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Historical Ethics / Commitment Systems",
+  "family_id": "spartan_exposure_moral_standing",
+  "topic_summary": "Analysis of Spartan infant exposure practice as a test case for contested personhood boundaries across time. Examines whether the hillside-exposure reading represents a genuinely different moral constraint that has become unreachable from the modern ethical window, or whether it was always within the same possibility space but obscured by cultural drift.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Spartan state (authority structure enforcing exposure practice)",
+      "Gerousia (council of elders; inspection authority)",
+      "Exposed infants (subjects of moral-standing determination)",
+      "Modern human rights framework (contemporary authority claiming universal personhood)",
+      "Apothetae (hillside exposure site; physical mechanism of exclusion)"
+    ],
+    "key_tensions": [
+      "State eugenic interest vs individual infant survival (Spartan practice vs modern rights)",
+      "Conditional personhood vs inherent personhood (exposure-permitting vs exposure-prohibiting readings)"
+    ],
+    "mechanisms": [
+      {
+        "id": "gerousia_inspection",
+        "description": "Council inspection of newborns for fitness; authorization of exposure for those deemed unfit",
+        "agents": "Gerousia elders",
+        "targets": "Newborn infants"
+      },
+      {
+        "id": "apothetae_exclusion",
+        "description": "Physical removal to hillside site; death by exposure as mechanism of population control",
+        "agents": "State-authorized parents/officials",
+        "targets": "Infants judged unfit"
+      }
+    ],
+    "absences": [
+      "No evidence of infant consent mechanisms (expected in modern framework, absent in Spartan)",
+      "No recorded Spartan ethical debate over exposure legitimacy (practice treated as uncontested)",
+      "No intermediate readings between full exposure permission and full prohibition (binary shift)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The personhood-boundary kernel: the point at which a human organism acquires moral standing sufficient to prohibit intentional killing",
+    "authority_description": "In Spartan context: state eugenic interest grounds interpretive authority. In modern context: inherent human dignity claims ground universal prohibition authority",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Petrification (Pattern 2) — revision of the personhood boundary is institutionally denied in both eras; drift accumulates as unreachable readings rather than acknowledged revision",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "conditional_fitness_reading",
+        "commitment": "Moral standing contingent on state-assessed fitness; exposure of unfit infants is legitimate state action",
+        "authority_grounding": "State eugenic interest; collective survival priority over individual life",
+        "sibling_readings": [
+          "birth_threshold_reading",
+          "viability_threshold_reading"
+        ],
+        "expected_structural_delta": "Infants judged unfit excluded from victim set; state authority to kill without murder classification; high suppression of parental autonomy"
+      },
+      {
+        "reading_id": "birth_threshold_reading",
+        "commitment": "Moral standing begins at live birth; all born infants possess equal standing regardless of fitness",
+        "authority_grounding": "Inherent human dignity; universal human rights framework",
+        "sibling_readings": [
+          "conditional_fitness_reading",
+          "viability_threshold_reading"
+        ],
+        "expected_structural_delta": "All born infants enter victim set; state killing classified as murder; parental protection duty rather than state inspection authority"
+      },
+      {
+        "reading_id": "viability_threshold_reading",
+        "commitment": "Moral standing begins at viability (capacity for independent survival); pre-viable organisms lack full standing",
+        "authority_grounding": "Biological capacity grounds moral status; medical determination of viability",
+        "sibling_readings": [
+          "conditional_fitness_reading",
+          "birth_threshold_reading"
+        ],
+        "expected_structural_delta": "Non-viable infants excluded from victim set; exposure of non-viable permitted; medical authority replaces state eugenic authority"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "conditional_fitness_reading",
+      "human_readable": "Conditional Fitness Reading (State Eugenic Authority)",
+      "structural_delta": "Moral standing contingent on state-assessed fitness for collective survival",
+      "primary_observable": "Legal classification of infant exposure (legitimate vs murder); presence/absence of state inspection mechanisms",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "spartan_state_collective",
+      "victim": "infants_judged_unfit",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating the historical Spartan constraint; highest structural distinctiveness from modern framework"
+    },
+    {
+      "claim_id": "birth_threshold_reading",
+      "human_readable": "Birth Threshold Reading (Universal Inherent Dignity)",
+      "structural_delta": "Moral standing begins at live birth; all born humans possess equal standing",
+      "primary_observable": "Legal prohibition of infanticide; universal human rights declarations; absence of state fitness inspection",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "modern_rights_framework",
+      "victim": "state_eugenic_programs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Dominant modern reading; structurally opposite victim/beneficiary structure from conditional_fitness_reading"
+    },
+    {
+      "claim_id": "viability_threshold_reading",
+      "human_readable": "Viability Threshold Reading (Medical Capacity Grounding)",
+      "structural_delta": "Moral standing contingent on biological viability; medical determination replaces state eugenic or inherent dignity claims",
+      "primary_observable": "Abortion law viability cutoffs; neonatal intensive care protocols; medical ethics committee authority",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "medical_authority",
+      "victim": "pre_viable_organisms",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Intermediate reading bridging historical and modern frameworks; tests whether viability mediates the path-naturalization question"
+    },
+    {
+      "claim_id": "path_naturalization_mechanism",
+      "human_readable": "Path Naturalization Mechanism (Temporal Reachability Dynamics)",
+      "structural_delta": "The process by which a once-reachable reading becomes structurally inaccessible from a later ethical window",
+      "primary_observable": "Presence/absence of institutional mechanisms for reviving historical readings; ethical debate structure",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "conditional_fitness_reading",
+        "birth_threshold_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-level mechanism rather than substantive reading; captured in omega_path_naturalization"
+    },
+    {
+      "claim_id": "collective_survival_priority",
+      "human_readable": "Collective Survival Priority (Resource Scarcity Justification)",
+      "structural_delta": "State resource constraints justify exclusion of resource-intensive individuals from moral community",
+      "primary_observable": "Historical resource scarcity metrics; state survival threat levels; eugenic program intensity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "conditional_fitness_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream material constraint but lower structural distinctiveness; captured implicitly in conditional_fitness_reading beneficiary structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "conditional_fitness_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "conditional_fitness_reading"
+    },
+    {
+      "claim_id": "birth_threshold_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "birth_threshold_reading"
+    },
+    {
+      "claim_id": "viability_threshold_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "viability_threshold_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "path_naturalization_mechanism",
+      "structural_delta": "Process by which historical readings become unreachable from later ethical windows",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Meta-level mechanism; analytical target rather than substantive constraint; addressed in omega_path_naturalization"
+    },
+    {
+      "claim_id": "collective_survival_priority",
+      "structural_delta": "Resource scarcity justifies exclusion from moral community",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream material constraint captured implicitly in conditional_fitness_reading; lower structural distinctiveness than selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_path_naturalization",
+      "description": "Core analytical question: Did the conditional_fitness_reading DROP from the possibility space (became structurally impossible) or LEAVE the space (remains possible but institutionally suppressed)? If it dropped, what material constraint changed? If it left, what authority structure enforces the suppression?",
+      "source": "Deferred axis path_naturalization_mechanism + kernel contest framing"
+    },
+    {
+      "id": "omega_reading_coherence",
+      "description": "Do the three readings emit genuinely different constraints or do they collapse under analysis? Viability_threshold_reading may collapse into conditional_fitness_reading if medical authority is functionally equivalent to state eugenic authority, or into birth_threshold_reading if viability determination is post-hoc rationalization of inherent dignity commitment.",
+      "source": "§1.3-K coherence signal + independence testing"
+    },
+    {
+      "id": "omega_spartan_evidence_quality",
+      "description": "Historical evidence for Spartan exposure practice comes primarily from Plutarch (writing 500+ years later) and may reflect Hellenistic projection rather than archaic Spartan reality. If practice is mythologized, the reading may never have been instantiated.",
+      "source": "F34 (Epistemic Trespass) + extraction absence of contemporary Spartan sources"
+    },
+    {
+      "id": "omega_modern_suppression_mechanism",
+      "description": "If conditional_fitness_reading remains structurally possible, what mechanism prevents its re-instantiation? Universal human rights declarations lack enforcement against state eugenic programs (see 20th century counterexamples). Is suppression institutional or merely rhetorical?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + commitment_system drift_status=absent"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Historical evidence quality concern. Spartan exposure practice primarily attested by Plutarch (500+ years post-facto) and may reflect Hellenistic projection. Generated omega_spartan_evidence_quality to bound this uncertainty. Proceeding with analysis as test case for path-naturalization dynamics rather than historical reconstruction."
+  },
+  "_seed_id": "spartan_infant_exposure"
+}

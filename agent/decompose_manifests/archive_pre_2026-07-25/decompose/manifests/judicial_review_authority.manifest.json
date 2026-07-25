@@ -1,0 +1,235 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Institutional Design",
+  "family_id": "judicial_review_constitutional_supremacy",
+  "topic_summary": "Analysis of judicial review as a contested kernel in constitutional systems. The foundational question is whether a codified constitution establishes the judiciary as the ultimate, unchallengeable arbiter of legislative legitimacy (judicial supremacy) or whether the judiciary operates as a co-equal branch with limited review powers, or is subordinate to parliamentary sovereignty. Different readings instantiate structurally different constraint systems regarding who holds final interpretive authority over the constitutional kernel.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Judiciary (branch claiming interpretive authority over constitutional text)",
+      "Legislature (elected law-making body, subject to or co-equal with judicial review)",
+      "Constitutional Text (written kernel establishing structure and limits)",
+      "Executive (enforcement arm, bounded by both judicial and legislative authority)",
+      "Citizenry (ultimate source of constituent power in democratic theory)"
+    ],
+    "key_tensions": [
+      "Judicial final authority vs legislative supremacy (who has last word on constitutional meaning)",
+      "Counter-majoritarian difficulty (unelected judges overturning democratic will)",
+      "Constitutional fixity vs democratic revision (whether interpretive layer can substitute for amendment)"
+    ],
+    "mechanisms": [
+      "Judicial review power (courts strike down legislation as unconstitutional)",
+      "Constitutional amendment process (formal revision requiring supermajority)",
+      "Legislative override/notwithstanding clauses (legislative reversal of judicial interpretation)"
+    ],
+    "absences": [
+      "Popular constitutional referendum mechanisms (direct democratic interpretation bypass)",
+      "Extra-judicial constitutional councils (non-court interpretive bodies)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Written constitutional text establishing governmental structure, powers, and limits",
+    "authority_description": "Contested: judicial supremacists ground interpretive legitimacy in constitutional text's claim to higher law status; parliamentary supremacists ground legitimacy in democratic mandate and legislative sovereignty; co-equal theorists distribute interpretive authority across branches",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "constitutional_authority_boundary",
+    "readings": [
+      {
+        "reading_id": "judicial_supremacy_reading",
+        "commitment": "The constitutional text establishes courts as final, unchallengeable arbiters of all constitutional questions, with authority to invalidate legislative and executive acts without remedy",
+        "authority_grounding": "Marbury v. Madison logic — judicial duty to apply higher law (constitution) over lower law (statute) necessarily implies judicial supremacy",
+        "sibling_readings": [
+          "coordinate_construction_reading",
+          "parliamentary_primacy_reading"
+        ],
+        "expected_structural_delta": "Judiciary enters beneficiary set for interpretive monopoly rents; legislature enters victim set for constrained policy space; high ε (0.60+) due to counter-majoritarian veto power; forecloses legislative override mechanisms"
+      },
+      {
+        "reading_id": "coordinate_construction_reading",
+        "commitment": "The constitutional text establishes three co-equal branches with distributed interpretive authority; each branch interprets the constitution within its sphere, with no single final arbiter",
+        "authority_grounding": "Departmentalist tradition — each branch takes oath to constitution and must independently interpret its bounds; judiciary interprets in cases, legislature in lawmaking, executive in enforcement",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "parliamentary_primacy_reading"
+        ],
+        "expected_structural_delta": "No monopoly beneficiary; interpretive authority distributed; moderate ε (0.35-0.50) due to inter-branch conflict potential; coexists with legislative override and executive non-acquiescence mechanisms"
+      },
+      {
+        "reading_id": "parliamentary_primacy_reading",
+        "commitment": "The constitutional text, where it exists, is subordinate to parliamentary sovereignty; elected legislature retains final authority to define constitutional meaning through ordinary or entrenched legislation",
+        "authority_grounding": "Westminster tradition — democratic legitimacy via electoral mandate supersedes judicial interpretation; constitution is ordinary law subject to legislative revision",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "coordinate_construction_reading"
+        ],
+        "expected_structural_delta": "Legislature as primary beneficiary of interpretive authority; judiciary constrained to advisory role or easily-overridden review; low ε (0.15-0.25) for judicial constraint on democratic will; forecloses strong-form judicial review"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "judicial_supremacy_reading",
+        "reading_b": "parliamentary_primacy_reading",
+        "basis": "Cannot simultaneously hold that courts have final unchallengeable authority over constitutional meaning AND that elected legislature has final authority to define constitutional meaning through legislation. One axiom entails the other is false."
+      },
+      {
+        "reading_a": "judicial_supremacy_reading",
+        "reading_b": "coordinate_construction_reading",
+        "basis": "Cannot simultaneously hold that judiciary is the FINAL arbiter with no co-equal challenge AND that each branch independently interprets constitution within its sphere with no final arbiter. Supremacy axiom forecloses coordinate equality."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "human_readable": "Judicial Supremacy Reading (Courts as Final Constitutional Arbiters)",
+      "structural_delta": "Judiciary holds unchallengeable final authority to interpret constitutional text and invalidate legislative/executive acts",
+      "primary_observable": "Presence/absence of legislative override mechanisms; judicial strike-down rates of major legislation; constitutional amendment frequency as workaround",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "judicial_branch",
+      "victim": "democratic_legislative_process",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating highest extractiveness constraint system; counter-majoritarian veto as primary structural feature"
+    },
+    {
+      "claim_id": "coordinate_construction_reading",
+      "human_readable": "Coordinate Construction Reading (Distributed Constitutional Authority)",
+      "structural_delta": "Constitutional interpretation distributed across three co-equal branches, each authoritative within its sphere, no final arbiter",
+      "primary_observable": "Frequency of inter-branch constitutional disputes; executive non-acquiescence patterns; legislative rejection of judicial interpretations",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from supremacy reading; coordination constraint rather than monopoly extraction; demonstrates alternative authority distribution"
+    },
+    {
+      "claim_id": "parliamentary_primacy_reading",
+      "human_readable": "Parliamentary Primacy Reading (Legislative Sovereignty Over Constitution)",
+      "structural_delta": "Elected legislature retains final authority to define and revise constitutional meaning; judicial review weak or absent",
+      "primary_observable": "Legislative override clause usage (e.g., Section 33 notwithstanding clause); ease of constitutional revision; judicial deference rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading; inverts supremacy model; low ε demonstrates constraint range across readings"
+    },
+    {
+      "claim_id": "interpretive_drift_accumulation",
+      "human_readable": "Interpretive Drift Accumulation (Judicial Doctrine as Constitutional Revision)",
+      "structural_delta": "Judicial precedent accumulates as de facto constitutional revision without formal amendment process",
+      "primary_observable": "Gap between original constitutional text and operative constitutional doctrine; amendment frequency vs doctrinal change rate",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "judicial_branch",
+      "victim": "formal_amendment_process",
+      "downstream_of": [
+        "judicial_supremacy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of supremacy reading rather than independent kernel reading; captured in supremacy analysis"
+    },
+    {
+      "claim_id": "democratic_legitimacy_gap",
+      "human_readable": "Democratic Legitimacy Gap (Counter-Majoritarian Difficulty)",
+      "structural_delta": "Unelected judges with life tenure overturn decisions of elected representatives",
+      "primary_observable": "Public opinion on judicial decisions vs legislative preferences; appointment process politicization",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "judicial_supremacy_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream constraint (judicial insulation from electoral pressure) but lower structural centrality than three selected readings; serves as context rather than independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "kernel_id": "constitutional_authority_boundary",
+      "reading_id": "judicial_supremacy_reading"
+    },
+    {
+      "claim_id": "coordinate_construction_reading",
+      "kernel_id": "constitutional_authority_boundary",
+      "reading_id": "coordinate_construction_reading"
+    },
+    {
+      "claim_id": "parliamentary_primacy_reading",
+      "kernel_id": "constitutional_authority_boundary",
+      "reading_id": "parliamentary_primacy_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "interpretive_drift_accumulation",
+      "structural_delta": "Judicial precedent accumulates as de facto constitutional revision without amendment",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence of judicial supremacy reading; structural feature captured in supremacy analysis rather than independent reading"
+    },
+    {
+      "claim_id": "democratic_legitimacy_gap",
+      "structural_delta": "Unelected judges overturn elected representatives' decisions",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream constraint (judicial insulation) with lower centrality; contextual rather than reading-level distinction; feeds into supremacy reading but not independent kernel interpretation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_popular_constitutionalism",
+      "description": "Are popular constitutional referenda (e.g., Swiss model) a fourth reading that bypasses judicial/legislative contest entirely? If so, the kernel contest may be incomplete — direct democratic interpretation could instantiate a constraint system orthogonal to all three readings.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — popular referendum mechanisms absent from extraction"
+    },
+    {
+      "id": "omega_transitional_instability",
+      "description": "Does a system transition from one reading to another (e.g., UK Human Rights Act creating judicial review in historically parliamentary-supreme system) via interpretive drift (partial drift_status), or does it require formal kernel revision? If drift, the readings may not be as discrete as modeled.",
+      "source": "§3 Independence Testing — potential Type B overlap if readings are points on a continuum rather than discrete alternatives"
+    },
+    {
+      "id": "omega_reading_persistence",
+      "description": "Can a coordinate construction reading persist under institutional pressure toward supremacy capture (judges expanding authority) or parliamentary reassertion (legislatures clawing back review)? If unstable, coordinate reading may be a transient rather than equilibrium state.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — coordinate model lacks clear beneficiary; may be vulnerable to capture by supremacist or parliamentary coalitions"
+    },
+    {
+      "id": "omega_extrajudicial_councils",
+      "description": "French Conseil Constitutionnel and other constitutional councils that review legislation before enactment (not courts, not legislatures) may instantiate a fourth reading: technocratic ex ante review. Absence suggests incomplete kernel coverage.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — extra-judicial constitutional councils not addressed in readings"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected represent discrete structural alternatives with distinct ε profiles, beneficiary structures, and constraint topologies. Axiom contradictions between supremacy and primacy, and between supremacy and coordinate construction, confirm genuine kernel contest. Omegas document bounded uncertainties regarding reading completeness (popular constitutionalism, extrajudicial councils) and stability (coordinate construction as equilibrium vs transitional state)."
+  },
+  "_seed_id": "judicial_review_authority"
+}

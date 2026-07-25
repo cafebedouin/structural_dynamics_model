@@ -1,0 +1,264 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Educational Psychology / Literacy Pedagogy / Cognitive Science",
+  "family_id": "reading_instruction_wars",
+  "topic_summary": "The decades-long dispute over reading instruction methodology, pitting systematic phonics instruction against whole-language and balanced-literacy approaches. The conflict involves rival research paradigms, professional teacher training traditions, and education policy advocacy coalitions, with each side claiming empirical support and accusing the other of harming children's literacy development.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Phonics advocates (systematic instruction proponents; cite cognitive science)",
+      "Whole-language advocates (meaning-centered instruction proponents; cite constructivist pedagogy)",
+      "National Reading Panel (2000 meta-analysis favoring phonics)",
+      "Teachers College Reading and Writing Project (Lucy Calkins; balanced literacy)",
+      "State education departments (policy implementers; curriculum adopters)",
+      "Publishing industry (textbook producers; curriculum materials vendors)"
+    ],
+    "key_tensions": [
+      "Decoding-first vs meaning-first instructional sequence",
+      "Explicit systematic instruction vs emergent discovery learning",
+      "Cognitive science evidence base vs practitioner wisdom and classroom observation"
+    ],
+    "key_mechanisms": [
+      "Teacher training pipeline (colleges of education shape instructional beliefs)",
+      "Curriculum adoption cycles (district purchasing decisions lock in approaches for years)",
+      "Reading assessment regimes (what gets tested determines what gets taught)",
+      "Professional identity formation (teachers' pedagogical commitments become identity markers)"
+    ],
+    "key_absences": [
+      "Socioeconomic stratification effects (phonics/whole-language adoption correlates with district wealth)",
+      "Second-language learner outcomes (ESL students' differential response to methods)",
+      "Dyslexia and learning disability accommodation (structured literacy as intervention vs universal design)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "literacy_acquisition_kernel",
+      "human_readable": "Literacy Acquisition Kernel (Contested Reading of How Children Learn to Read)",
+      "structural_delta": "Foundational disagreement about the cognitive mechanism of reading acquisition: whether decoding precedes comprehension or emerges from meaning-making",
+      "primary_observable": "Instructional sequence: phoneme-grapheme correspondence taught before connected text (phonics) vs connected text exposure with phonics embedded (whole-language)",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "teacher_training_pipeline",
+        "assessment_regime_lock_in"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with axiom-contradictory readings; all other axes downstream of this foundational dispute"
+    },
+    {
+      "claim_id": "teacher_training_pipeline",
+      "human_readable": "Teacher Training Pipeline (Pedagogical Socialization as Commitment Mechanism)",
+      "structural_delta": "Pre-service teacher education programs transmit one reading of the literacy kernel as professional orthodoxy, creating path-dependent instructional commitments",
+      "primary_observable": "Colleges of education curriculum content; required reading lists; student teaching placement school methods",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "education_school_faculty",
+      "victim": "teachers_trained_in_non-evidence-based_methods",
+      "downstream_of": [
+        "literacy_acquisition_kernel"
+      ],
+      "feeds_into": [
+        "assessment_regime_lock_in"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent mechanism axis; distinct observable (teacher training content) and epsilon (institutional capture of method transmission)"
+    },
+    {
+      "claim_id": "assessment_regime_lock_in",
+      "human_readable": "Assessment Regime Lock-In (Testing Infrastructure as Method Stabilizer)",
+      "structural_delta": "Standardized reading assessments embed assumptions about literacy development, reinforcing the instructional method they were designed to measure",
+      "primary_observable": "State reading test design (phonics skills vs reading comprehension emphasis); benchmark assessment tools adopted",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "assessment_publishers",
+      "victim": "students_in_misaligned_instruction_systems",
+      "downstream_of": [
+        "literacy_acquisition_kernel",
+        "teacher_training_pipeline"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct downstream mechanism; different observable (testing regime) and victim structure (systemic misalignment costs)"
+    },
+    {
+      "claim_id": "socioeconomic_stratification",
+      "human_readable": "Socioeconomic Stratification (Method Adoption as Class Marker)",
+      "structural_delta": "Affluent districts adopt whole-language (cultural capital signaling); under-resourced districts receive phonics mandates (remediation framing)",
+      "primary_observable": "District median household income vs curriculum adoption patterns; private school method prevalence",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: correlation with kernel readings but not causally upstream; omega-level sociological observation"
+    },
+    {
+      "claim_id": "publishing_industry_capture",
+      "human_readable": "Publishing Industry Capture (Curriculum Materials as Revenue Lock-In)",
+      "structural_delta": "Textbook publishers profit from method churn and district adoption cycles, incentivizing perpetuation of the dispute",
+      "primary_observable": "Curriculum sales revenue by method; rebranding frequency (e.g., 'balanced literacy' as whole-language rebrand)",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "educational_publishers",
+      "victim": "district_budgets",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic incentive structure but not structurally independent from teacher_training_pipeline tangled_rope"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "phonics_reading",
+      "kernel_id": "literacy_acquisition_kernel",
+      "reading_id": "phonics_reading"
+    },
+    {
+      "claim_id": "whole_language_reading",
+      "kernel_id": "literacy_acquisition_kernel",
+      "reading_id": "whole_language_reading"
+    },
+    {
+      "claim_id": "balanced_literacy_reading",
+      "kernel_id": "literacy_acquisition_kernel",
+      "reading_id": "balanced_literacy_reading"
+    },
+    {
+      "claim_id": "structured_literacy_reading",
+      "kernel_id": "literacy_acquisition_kernel",
+      "reading_id": "structured_literacy_reading"
+    },
+    "teacher_training_pipeline",
+    "assessment_regime_lock_in"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "socioeconomic_stratification",
+      "structural_delta": "Method adoption correlates with district wealth and cultural capital",
+      "hypothesis": "rope",
+      "deferral_reason": "Sociological correlation with kernel readings but not causally independent; omega-level observation about method distribution"
+    },
+    {
+      "claim_id": "publishing_industry_capture",
+      "structural_delta": "Curriculum publishers profit from method churn and perpetuate dispute",
+      "hypothesis": "piton",
+      "deferral_reason": "Economic incentive structure captured by teacher_training_pipeline tangled_rope; not structurally independent"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_dyslexia_intervention",
+      "description": "Does structured literacy for dyslexia intervention constitute a fifth reading (universal design for neurodivergence) or collapse into phonics_reading? Orton-Gillingham tradition may warrant separate reading if it instantiates different constraint.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + §1.3-K reading coherence test"
+    },
+    {
+      "id": "omega_esl_differential",
+      "description": "Do ESL students' differential outcomes under phonics vs whole-language constitute evidence for one reading's validity, or reveal a sixth reading (L2 literacy acquisition as distinct mechanism)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_socioeconomic_causality",
+      "description": "Is socioeconomic_stratification a rope (neutral correlation) or a snare (affluent districts' whole-language adoption harms their own students via method mismatch)? Deferred axis may warrant promotion if causal direction clarifies.",
+      "source": "Deferred axis socioeconomic_stratification + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_science_of_reading_rebrand",
+      "description": "Is 'Science of Reading' movement (2010s–present) a genuine fifth reading or phonics_reading rebrand? If rebrand, does it constitute drift absorption (partial CS drift status) or genuine paradigm shift?",
+      "source": "§1.3 commitment system recognition + Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four readings identified via §1.3-K kernel decomposition; each passes individually-holdable test. Balanced_literacy_reading is contested as either genuine third reading or whole_language_reading rebrand; retained as distinct reading pending generation-stage clarification."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The cognitive mechanism of literacy acquisition: whether reading emerges from decoding-first instruction (phoneme-grapheme correspondence precedes meaning-making) or meaning-first instruction (comprehension drives decoding skill emergence)",
+    "authority_description": "Competing authority structures: cognitive science research community (phonics); constructivist pedagogy tradition and practitioner wisdom (whole-language); institutional education schools (method transmission); state education departments (policy enforcement)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition_CS",
+    "is_contested_kernel": true,
+    "kernel_id": "literacy_acquisition_kernel",
+    "readings": [
+      {
+        "reading_id": "phonics_reading",
+        "commitment": "Reading acquisition requires explicit, systematic instruction in phoneme-grapheme correspondence before connected text exposure; decoding precedes and enables comprehension",
+        "authority_grounding": "Cognitive science (National Reading Panel 2000; simple view of reading model); neuroscience of reading (Dehaene); evidence-based medicine framework applied to education",
+        "sibling_readings": [
+          "whole_language_reading",
+          "balanced_literacy_reading",
+          "structured_literacy_reading"
+        ],
+        "expected_structural_delta": "High extractiveness on teacher autonomy (scripted lessons); low extractiveness on student decoding failure (systematic skill-building reduces failure rate); beneficiary: students with weak phonological awareness; victim: teachers' professional judgment"
+      },
+      {
+        "reading_id": "whole_language_reading",
+        "commitment": "Reading acquisition emerges from meaningful engagement with connected text; phonics skills develop naturally through exposure and context; explicit decoding instruction is unnecessary and potentially harmful to reading motivation",
+        "authority_grounding": "Constructivist pedagogy (Goodman, Smith); teacher practitioner wisdom; progressive education tradition; child-centered learning philosophy",
+        "sibling_readings": [
+          "phonics_reading",
+          "balanced_literacy_reading",
+          "structured_literacy_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness on teacher autonomy (professional judgment preserved); high extractiveness on students without print-rich home environments (emergent literacy assumes background knowledge); beneficiary: teachers' professional identity; victim: students lacking home literacy support"
+      },
+      {
+        "reading_id": "balanced_literacy_reading",
+        "commitment": "Reading acquisition requires both systematic phonics instruction AND meaningful text engagement; the two are complementary rather than contradictory; instructional balance is the key",
+        "authority_grounding": "Pragmatic synthesis (Teachers College Reading and Writing Project; Lucy Calkins pre-2023 revision); institutional education schools seeking middle ground; district administrators avoiding controversy",
+        "sibling_readings": [
+          "phonics_reading",
+          "whole_language_reading",
+          "structured_literacy_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness on both dimensions; beneficiary: education schools and publishers (method churn revenue); victim: unclear—either achieves synthesis or satisfies neither camp; contested whether this is genuine third reading or whole_language rebrand"
+      },
+      {
+        "reading_id": "structured_literacy_reading",
+        "commitment": "Reading acquisition requires explicit, systematic, cumulative instruction in phonological awareness, phonics, fluency, vocabulary, and comprehension; designed for students with dyslexia but applicable universally; Orton-Gillingham tradition",
+        "authority_grounding": "Learning disability research (International Dyslexia Association); special education tradition; neurodiversity framework; clinical intervention evidence base",
+        "sibling_readings": [
+          "phonics_reading",
+          "whole_language_reading",
+          "balanced_literacy_reading"
+        ],
+        "expected_structural_delta": "Highest extractiveness on teacher training requirements (specialized certification); lowest extractiveness on dyslexic students (intervention reduces failure); beneficiary: students with learning disabilities; victim: general education teachers (increased training burden); contested whether this is fourth reading or phonics_reading variant"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "phonics_reading",
+        "reading_b": "whole_language_reading",
+        "basis": "Phonics_reading axiom: decoding skill is prerequisite to comprehension (bottom-up processing). Whole_language_reading axiom: comprehension drives decoding skill development (top-down processing). No single coherent framework holds both as simultaneously true—one must be causally prior."
+      },
+      {
+        "reading_a": "phonics_reading",
+        "reading_b": "balanced_literacy_reading",
+        "basis": "Phonics_reading axiom: systematic explicit instruction is necessary and sufficient. Balanced_literacy_reading axiom: systematic instruction is necessary but not sufficient (meaningful text engagement also required). A framework holding phonics_reading's sufficiency claim cannot simultaneously hold balanced_literacy's insufficiency claim."
+      }
+    ]
+  }
+}

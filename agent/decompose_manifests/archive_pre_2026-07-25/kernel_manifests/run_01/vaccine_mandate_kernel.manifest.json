@@ -1,0 +1,215 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Policy / Medical Ethics / Constitutional Law",
+  "family_id": "vaccine_mandate_kernel_2024",
+  "topic_summary": "Analysis of vaccine mandate policies as a contested kernel where different parties read the shared commitment to 'legitimate state health intervention' differently. Public-health-primary readings ground legitimacy in population-level harm reduction and treat refusal as imposing externalized risk. Bodily-autonomy-primary readings ground legitimacy in individual consent and treat mandates as coercive state intrusion into medical decisions.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "State public health authority (mandate-issuing entity with police power)",
+      "Unvaccinated individuals (subject to mandate enforcement)",
+      "Immunocompromised populations (vulnerable to transmission)",
+      "Healthcare institutions (enforcement sites and professional norm-setters)",
+      "Vaccine efficacy data (contested observable for transmission reduction claims)",
+      "Constitutional bodily integrity doctrine (legal framework for autonomy claims)"
+    ],
+    "key_tensions": [
+      "Population-level harm reduction vs individual medical autonomy (state authority vs personal sovereignty)",
+      "Externality internalization vs coercion prohibition (public health rationale vs consent requirement)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that state health intervention must be legitimate, with legitimacy grounded in either population-level harm reduction (public health reading) or individual consent preservation (autonomy reading)",
+    "authority_description": "Public health agencies claim interpretive authority via epidemiological expertise; civil liberties frameworks claim authority via constitutional precedent and consent doctrine",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence",
+    "is_contested_kernel": true,
+    "kernel_id": "legitimate_health_intervention",
+    "readings": [
+      {
+        "reading_id": "public_health_primary",
+        "commitment": "Legitimacy derives from measurable reduction in population-level morbidity/mortality; individual refusal is externality imposition",
+        "authority_grounding": "Epidemiological expertise; Jacobson v Massachusetts precedent (state police power for communicable disease)",
+        "sibling_readings": [
+          "bodily_autonomy_primary",
+          "proportionality_reading"
+        ],
+        "expected_structural_delta": "Unvaccinated enter victim set as disease vectors; immunocompromised are beneficiaries; high ε from enforcement mechanisms (employment termination, access restrictions)"
+      },
+      {
+        "reading_id": "bodily_autonomy_primary",
+        "commitment": "Legitimacy requires informed consent for medical interventions; state coercion violates bodily integrity regardless of public benefit",
+        "authority_grounding": "Constitutional privacy doctrine; Nuremberg Code; medical ethics consent framework",
+        "sibling_readings": [
+          "public_health_primary",
+          "proportionality_reading"
+        ],
+        "expected_structural_delta": "Mandate-coerced individuals enter victim set; state becomes extractor via employment/access leverage; moderate-to-high ε depending on enforcement severity"
+      },
+      {
+        "reading_id": "proportionality_reading",
+        "commitment": "Legitimacy requires proportionality between intervention severity and threat level; both population harm and individual autonomy matter but are weighted by disease characteristics",
+        "authority_grounding": "European Court of Human Rights proportionality doctrine; Canadian Oakes test; harm principle balancing",
+        "sibling_readings": [
+          "public_health_primary",
+          "bodily_autonomy_primary"
+        ],
+        "expected_structural_delta": "Victim set varies by disease severity (measles vs flu); ε scales with transmissibility and case-fatality rate; introduces conditional constraint structure"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "public_health_primary",
+      "human_readable": "Public Health Primary Reading (Population Harm Reduction as Legitimacy Ground)",
+      "structural_delta": "State authority to mandate vaccination derives from measurable reduction in population morbidity/mortality; individual refusal treated as externality imposition on vulnerable populations",
+      "primary_observable": "Transmission reduction rates; hospitalization/mortality differentials between vaccinated and unvaccinated cohorts; immunocompromised exposure risk",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "immunocompromised_populations",
+      "victim": "unvaccinated_coerced",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; distinct victim set and beneficiary structure from sibling readings"
+    },
+    {
+      "claim_id": "bodily_autonomy_primary",
+      "human_readable": "Bodily Autonomy Primary Reading (Consent as Legitimacy Ground)",
+      "structural_delta": "State authority to mandate medical interventions requires informed consent; coercion via employment/access restrictions violates bodily integrity regardless of population benefit",
+      "primary_observable": "Enforcement mechanism severity (job loss, institutional exclusion); consent framework violations; constitutional privacy doctrine precedents",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "civil_liberties_framework",
+      "victim": "mandate_coerced_individuals",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; inverts victim/beneficiary structure from public_health_primary"
+    },
+    {
+      "claim_id": "proportionality_reading",
+      "human_readable": "Proportionality Reading (Threat-Scaled Legitimacy)",
+      "structural_delta": "Mandate legitimacy scales with disease severity and transmissibility; both population harm and individual autonomy are weighted by epidemiological characteristics",
+      "primary_observable": "Case-fatality rate; R0 (basic reproduction number); vaccine efficacy against transmission; availability of less-restrictive alternatives",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; introduces conditional constraint structure that neither polar reading captures"
+    },
+    {
+      "claim_id": "institutional_capture",
+      "human_readable": "Institutional Capture (Healthcare System as Enforcement Proxy)",
+      "structural_delta": "Healthcare institutions become state enforcement proxies for mandates, creating professional norm conflicts and liability transfer",
+      "primary_observable": "Hospital/clinic mandate adoption rates; professional association policy statements; liability insurance requirements",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "state_public_health_authority",
+      "victim": "healthcare_professionals",
+      "downstream_of": [
+        "public_health_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism detail downstream of public_health_primary reading; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "efficacy_contestation",
+      "human_readable": "Efficacy Contestation (Transmission Reduction as Disputed Observable)",
+      "structural_delta": "Vaccine efficacy against transmission becomes contested observable, undermining externality rationale for mandates",
+      "primary_observable": "Breakthrough infection rates; viral load comparisons; duration of protection; variant-specific efficacy data",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "public_health_primary",
+        "proportionality_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but captured within proportionality_reading's conditional structure; would require separate generation only if efficacy data were uncontested"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "public_health_primary",
+      "kernel_id": "legitimate_health_intervention",
+      "reading_id": "public_health_primary"
+    },
+    {
+      "claim_id": "bodily_autonomy_primary",
+      "kernel_id": "legitimate_health_intervention",
+      "reading_id": "bodily_autonomy_primary"
+    },
+    {
+      "claim_id": "proportionality_reading",
+      "kernel_id": "legitimate_health_intervention",
+      "reading_id": "proportionality_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_capture",
+      "structural_delta": "Healthcare institutions as state enforcement proxies",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism detail downstream of public_health_primary; lower structural distinctiveness than kernel readings"
+    },
+    {
+      "claim_id": "efficacy_contestation",
+      "structural_delta": "Vaccine transmission reduction as contested observable",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain captured within proportionality_reading's conditional structure; efficacy data contestation is the mechanism by which proportionality assessment varies"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_natural_immunity",
+      "description": "Does prior infection confer equivalent protection to vaccination? If yes, mandate legitimacy under public_health_primary reading weakens (externality rationale collapses). If no, bodily_autonomy_primary reading must address why natural immunity holders are coerced.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_liability_shield",
+      "description": "Vaccine manufacturers hold liability immunity under PREP Act. Does this asymmetry (state mandates product, manufacturer bears no liability for adverse events) constitute a Snare where the unvaccinated subsidize manufacturer risk externalization?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_temporal_efficacy",
+      "description": "If vaccine efficacy wanes over 6-12 months, does the mandate become a Piton (recurring coercion cycle) rather than a one-time Rope (coordination mechanism)? Proportionality_reading may reclassify based on booster frequency.",
+      "source": "Deferred axis efficacy_contestation + temporal dimension"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "If transmission reduction is negligible (efficacy_contestation resolves against public health claims), public_health_primary and proportionality_reading collapse into bodily_autonomy_primary. Externality rationale disappears; only coercion remains.",
+      "source": "Kernel coherence check (§1.3-K)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings emit structurally distinct constraints with different victim sets (unvaccinated-coerced vs immunocompromised-exposed vs conditional-on-threat-level). Efficacy_contestation deferred because it is the mechanism by which proportionality_reading's conditional structure operates, not a separate axis."
+  },
+  "_seed_id": "vaccine_mandate_kernel"
+}

@@ -1,0 +1,243 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Comparative Religious Law / Political Theology",
+  "family_id": "jihad_interpretations_jurisprudence",
+  "topic_summary": "Analysis of competing interpretations of jihad within Islamic jurisprudence, examining how different readings of Qur'anic and hadith texts generate distinct constraint structures regarding legitimate violence, authority to declare armed struggle, and the rights/obligations of Muslims and non-Muslims. The analytical question is whether these constitute genuinely different constraint readings of a shared textual kernel or positional disagreements within a single constraint framework.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Qur'anic jihad corpus (Medinan suras 2, 8, 9; Meccan spiritual struggle verses)",
+      "Classical jurisprudential schools (Hanafi, Maliki, Shafi'i, Hanbali madhahib)",
+      "State authority structures (caliphate/sultanate vs contemporary nation-state)",
+      "Non-state armed actors (modern jihadist organizations claiming jurisprudential legitimacy)",
+      "Dar al-Islam / Dar al-Harb territorial framework (classical division of Muslim/non-Muslim lands)",
+      "Dhimmi status framework (protected non-Muslim minorities under Islamic rule)"
+    ],
+    "key_tensions": [
+      "Textual authority vs contextual interpretation (literalist vs reformist hermeneutics)",
+      "State monopoly on jihad declaration vs decentralized authority claims",
+      "Internal spiritual struggle vs external armed struggle as primary meaning"
+    ],
+    "key_mechanisms": [
+      "Abrogation (naskh) doctrine: later Medinan verses superseding earlier Meccan verses",
+      "Jurisprudential consensus (ijma) processes for legitimating specific jihad conditions",
+      "Takfir declarations: excommunication enabling violence against apostates",
+      "Modern fatwa economy: competing religious authorities issuing binding legal opinions"
+    ],
+    "key_absences": [
+      "Shi'a jurisprudential divergence on jihad authority (awaiting the Hidden Imam)",
+      "Sufi mystical tradition's reframing of jihad as primarily internal nafs struggle"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Qur'anic and hadith textual corpus concerning jihad, whose interpretation determines legitimate grounds for violence, authority structures for declaring armed struggle, and rights/obligations toward non-Muslims",
+    "authority_description": "Interpretive legitimacy grounded in classical madhahib scholarship, ijma consensus mechanisms, and claims to authentic textual exegesis. Modern fragmentation: state-appointed muftis vs independent clerics vs self-declared authorities in non-state contexts.",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_monopoly (classical period) degrading toward contested_authority (modern fragmentation)",
+    "is_contested_kernel": true,
+    "kernel_id": "jihad_quranic_corpus",
+    "readings": [
+      {
+        "reading_id": "defensive_spiritual_reading",
+        "commitment": "Jihad as primarily internal spiritual struggle (jihad al-nafs) and defensive armed response to aggression, constrained by proportionality and non-combatant immunity",
+        "authority_grounding": "Emphasis on Meccan spiritual verses, abrogation skepticism, reformation-era ijtihad reopening, modern liberal Islamic scholarship",
+        "sibling_readings": [
+          "expansionist_legalist_reading",
+          "revolutionary_vanguard_reading"
+        ],
+        "expected_structural_delta": "Non-Muslims outside victim set unless aggressors; state authority required for legitimate armed jihad; high threshold for declaration; coexistence framework privileged"
+      },
+      {
+        "reading_id": "expansionist_legalist_reading",
+        "commitment": "Jihad as obligation to establish Islamic governance where absent, with specific jurisprudential conditions (invitation to Islam first, imam authority, proportionality) but permitting offensive campaigns",
+        "authority_grounding": "Classical madhahib consensus on dar al-Islam expansion duty, Medinan verse primacy via abrogation, historical practice of early caliphates",
+        "sibling_readings": [
+          "defensive_spiritual_reading",
+          "revolutionary_vanguard_reading"
+        ],
+        "expected_structural_delta": "Non-Muslims in liminal status (potential dhimmi or combatant); state/caliph monopoly on declaration; systematic expansion permitted under rule-bound conditions; conquest legitimated within legal framework"
+      },
+      {
+        "reading_id": "revolutionary_vanguard_reading",
+        "commitment": "Jihad as immediate individual obligation (fard 'ayn) against apostate rulers and occupiers, bypassing state authority via takfir and emergency jurisprudence",
+        "authority_grounding": "Salafi-jihadist reinterpretation (Qutb, Faraj, bin Laden lineage), selective hadith emphasis, rejection of state-controlled fatwa apparatus",
+        "sibling_readings": [
+          "defensive_spiritual_reading",
+          "expansionist_legalist_reading"
+        ],
+        "expected_structural_delta": "Apostate Muslims and occupiers enter victim set; decentralized authority; eliminates state monopoly constraint; emergency doctrine overrides classical jurisprudential safeguards; civilians become combatants via collective guilt"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "defensive_spiritual_reading",
+        "reading_b": "expansionist_legalist_reading",
+        "basis": "Defensive reading holds armed jihad is only legitimate in response to aggression (no first-strike legitimacy); expansionist reading holds offensive campaigns to establish Islamic governance are obligatory under conditions. No single framework can hold both: accepting the defensive axiom as true requires rejecting expansionist axiom's first-strike legitimacy."
+      },
+      {
+        "reading_a": "defensive_spiritual_reading",
+        "reading_b": "revolutionary_vanguard_reading",
+        "basis": "Defensive reading requires state authority and proportionality constraints on armed action; revolutionary reading holds individual obligation bypasses state authority when rulers deemed apostate. No framework can simultaneously require state monopoly and deny it via individual emergency obligation."
+      },
+      {
+        "reading_a": "expansionist_legalist_reading",
+        "reading_b": "revolutionary_vanguard_reading",
+        "basis": "Expansionist reading grounds legitimacy in state/caliph authority and classical jurisprudential process; revolutionary reading rejects state authority via takfir and emergency doctrine. Both permit offensive action but through mutually exclusive authority structures: accepting state monopoly as necessary requires rejecting decentralized emergency authority as illegitimate."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "defensive_spiritual_reading",
+      "human_readable": "Defensive/Spiritual Reading (Internal Struggle & Proportional Defense)",
+      "structural_delta": "Jihad as primarily internal spiritual struggle with armed defense only against aggression, requiring state authority and proportionality",
+      "primary_observable": "Fatwa corpus emphasis on spiritual vs armed jihad; thresholds for legitimate defensive action in contemporary scholarship",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "reformist_scholars_pluralist_states",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: represents modernist/reformist interpretive lineage with distinct constraint structure emphasizing coexistence and state monopoly on violence"
+    },
+    {
+      "claim_id": "expansionist_legalist_reading",
+      "human_readable": "Expansionist/Legalist Reading (Conquest Under Classical Jurisprudence)",
+      "structural_delta": "Jihad as obligatory expansion of Islamic governance with state/caliph authority and rule-bound conditions permitting offensive campaigns",
+      "primary_observable": "Classical fiqh texts on dar al-Islam expansion; modern state fatwa apparatus positions on offensive jihad legitimacy",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "state_religious_authorities_classical_scholars",
+      "victim": "non_muslim_populations_unconquered_territories",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: classical madhahib consensus position with highest epsilon (systematic expansion doctrine) and distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "revolutionary_vanguard_reading",
+      "human_readable": "Revolutionary/Vanguard Reading (Decentralized Emergency Jihad)",
+      "structural_delta": "Jihad as immediate individual obligation bypassing state authority via takfir, treating apostate rulers and occupiers as legitimate targets",
+      "primary_observable": "Salafi-jihadist organizational declarations; takfir frequency; civilian targeting justifications in militant discourse",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "non_state_armed_movements_vanguard_clerics",
+      "victim": "muslim_civilian_populations_apostate_rulers_non_muslims",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: represents modern non-state reinterpretation with distinct authority structure (decentralized) and expanded victim set (includes Muslim civilians)"
+    },
+    {
+      "claim_id": "shia_imamate_constraint",
+      "human_readable": "Shi'a Imamate Constraint (Suspended Offensive Jihad)",
+      "structural_delta": "Offensive jihad authority suspended pending return of Hidden Imam (Twelver doctrine), limiting legitimate armed struggle to defensive contexts",
+      "primary_observable": "Shi'a jurisprudential texts on jihad authority; Iranian Revolutionary Guard doctrine vs classical Shi'a fiqh",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Shi'a reading represents fourth interpretive tradition but lower centrality in contemporary global jihad discourse; captured partially via defensive_spiritual_reading's state-authority requirement"
+    },
+    {
+      "claim_id": "sufi_mystical_reframing",
+      "human_readable": "Sufi Mystical Reframing (Greater Jihad as Soul Purification)",
+      "structural_delta": "Jihad as primarily spiritual struggle against the ego (nafs), with armed jihad relegated to 'lesser jihad' and subordinated to mystical practice",
+      "primary_observable": "Sufi text corpus (Ghazali, Rumi) emphasis ratios; tariqa institutional positions on armed conflict",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "sufi_orders_mystical_traditions",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Sufi reframing represents fifth interpretive tradition but minimal institutional impact on armed conflict legitimacy debates; primarily operates in devotional rather than jurisprudential domain"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "defensive_spiritual_reading",
+      "kernel_id": "jihad_quranic_corpus",
+      "reading_id": "defensive_spiritual_reading"
+    },
+    {
+      "claim_id": "expansionist_legalist_reading",
+      "kernel_id": "jihad_quranic_corpus",
+      "reading_id": "expansionist_legalist_reading"
+    },
+    {
+      "claim_id": "revolutionary_vanguard_reading",
+      "kernel_id": "jihad_quranic_corpus",
+      "reading_id": "revolutionary_vanguard_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "shia_imamate_constraint",
+      "structural_delta": "Offensive jihad authority suspended pending Hidden Imam's return",
+      "hypothesis": "contested_kernel_reading",
+      "deferral_reason": "Fourth reading with lower centrality in contemporary Sunni-dominated jihad discourse; Shi'a doctrine overlaps defensively with defensive_spiritual_reading's state-authority requirement"
+    },
+    {
+      "claim_id": "sufi_mystical_reframing",
+      "structural_delta": "Jihad reframed as primarily internal soul purification",
+      "hypothesis": "contested_kernel_reading",
+      "deferral_reason": "Fifth reading operating primarily in devotional domain with minimal institutional impact on armed conflict jurisprudence; devotional reinterpretation rather than legal constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_abrogation_doctrine",
+      "description": "Does naskh (abrogation) doctrine objectively establish Medinan verse primacy, or is abrogation itself a contested interpretive choice? If contested, the 'later verse supersedes earlier' claim becomes a reading-dependent axiom rather than neutral exegetical principle.",
+      "source": "§1.3-K kernel recognition: abrogation is invoked by expansionist reading to privilege Medinan conquest verses but rejected by defensive reading as context-dependent rather than chronologically determinative"
+    },
+    {
+      "id": "omega_state_collapse_authority",
+      "description": "In failed-state contexts (Somalia, Yemen, Libya), does absence of recognized state authority make revolutionary_vanguard_reading's decentralized model descriptively accurate rather than normatively deviant? Authority structure collapse may convert a reading from heterodox to default.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): non-state actors benefit from state-monopoly erosion; unclear whether this represents opportunistic exploitation or structural adaptation to authority vacuum"
+    },
+    {
+      "id": "omega_historical_practice_calibration",
+      "description": "Classical madhahib developed during Abbasid/Umayyad expansion periods. Is expansionist_legalist_reading's 'conquest under jurisprudential conditions' doctrine a reflection of empire-building historical context rather than timeless textual interpretation? If so, may be reclassified from kernel reading to historical piton.",
+      "source": "§2.1 Multi-Lens Scan (Historical Sociology lens): legal doctrine may encode specific political economy of early Islamic state formation rather than universal textual mandate"
+    },
+    {
+      "id": "omega_takfir_boundary_slippage",
+      "description": "Revolutionary_vanguard_reading's takfir mechanism (excommunication enabling violence) lacks stable boundary conditions. If takfir criteria are endogenously determined by the actor declaring jihad, victim set becomes unbounded. This may convert the reading from rule-based (snare) to arbitrary-power (tangled_rope).",
+      "source": "§2.3 Preliminary Classification: beneficiary/victim structure unstable when takfir authority is self-declared rather than institutionally constrained"
+    },
+    {
+      "id": "omega_shia_pragmatic_drift",
+      "description": "Iranian Revolutionary Guard Corps doctrine post-1979 permits offensive operations (Hezbollah support, regional proxy warfare) despite classical Twelver suspension of offensive jihad. Is this doctrinal evolution, pragmatic reinterpretation, or velayat-e faqih (guardianship of jurist) creating new authority bypass? Shia reading may itself be splitting.",
+      "source": "Deferred axis shia_imamate_constraint + Absence Inventory: modern Shi'a state practice diverges from classical jurisprudential doctrine"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Analysis operates at boundary of model's domain competence in Islamic jurisprudence. Model lacks direct training on Arabic-language fiqh texts, classical hadith scholarship, and intra-madhahib disputes. Readings identified via secondary scholarly sources (English-language Islamic studies literature). Risk: oversimplification of jurisprudential nuance, particularly in abrogation doctrine mechanics and conditions for legitimate offensive jihad in classical sources. Generated omega_abrogation_doctrine and omega_historical_practice_calibration to bound interpretive uncertainty."
+  },
+  "_seed_id": "quranic_jihad_interpretation"
+}

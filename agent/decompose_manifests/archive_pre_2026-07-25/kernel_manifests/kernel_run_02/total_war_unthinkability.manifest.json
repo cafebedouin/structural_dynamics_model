@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Relations / Strategic Studies / Nuclear Deterrence Theory",
+  "family_id": "post_1945_total_war_disappearance",
+  "topic_summary": "Analysis of whether 'winnable great-power total war' became merely unlikely (dropped but reachable) or structurally impossible (contracted out of the feasible space) after 1945. Nuclear weapons transformed total war from a strategic option requiring full mobilization into what deterrence theorists called 'the unthinkable,' yet debates over limited nuclear war and recent great-power tensions suggest the concept may retain residual reachability.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "United States (Cold War superpower; nuclear arsenal holder; deterrence doctrine architect)",
+      "Soviet Union (Cold War superpower; nuclear arsenal holder; MAD participant)",
+      "RAND Corporation (strategic think tank; deterrence theory development; limited nuclear war wargaming)",
+      "Nuclear weapons (technological constraint; MAD enabler; total war short-circuit mechanism)",
+      "Proxy war system (structural substitute for direct great-power conflict)",
+      "Deterrence theory community (Brodie, Schelling, Wohlstetter; cognitive framework builders)"
+    ],
+    "key_tensions": [
+      "Pre-nuclear mobilization logic vs nuclear deterrence logic (total war requires mobilization; nuclear war short-circuits mobilization)",
+      "MAD stability vs limited war doctrines (unthinkable total war vs attempts to preserve graduated escalation options)",
+      "Theoretical reachability vs cognitive unthinkability (strategic planners debate scenarios vs public/elite consensus that total war is absurd)",
+      "Historical precedent vs structural novelty (pre-1945 total wars were winnable; post-1945 nuclear exchange destroys both sides)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The post-1945 strategic order stabilized around the commitment that great-power total war had become structurally unwinnable due to nuclear weapons, removing it from the reachable strategic space",
+    "authority_description": "Deterrence theorists, strategic communities, and nuclear-armed state leaderships interpret the nuclear constraint and define what remains thinkable/reachable",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "total_war_reachability_boundary",
+    "readings": [
+      {
+        "reading_id": "contraction_reading",
+        "commitment": "Nuclear weapons contracted the strategic space; winnable total war left the feasible set entirely",
+        "authority_grounding": "Structural determinism via MAD physics; deterrence theory consensus (Brodie, Schelling); 70+ years without great-power war",
+        "sibling_readings": [
+          "dropping_reading",
+          "contingent_reachability_reading"
+        ],
+        "expected_structural_delta": "Total war becomes a mountain (physical impossibility given MAD); no beneficiary structure because no actor can win; victim set is universal (species-level extinction risk)"
+      },
+      {
+        "reading_id": "dropping_reading",
+        "commitment": "Total war dropped in probability but remains reachable; deterrence is a rope (coordination equilibrium), not a mountain",
+        "authority_grounding": "Limited nuclear war theorists; ongoing strategic planning for escalation scenarios; recent great-power tensions (Ukraine, Taiwan)",
+        "sibling_readings": [
+          "contraction_reading",
+          "contingent_reachability_reading"
+        ],
+        "expected_structural_delta": "Total war is a tangled_rope (deterrence as coordination game with defection risk); beneficiaries are actors who gain from deterrence credibility; victims are populations under nuclear threat"
+      },
+      {
+        "reading_id": "contingent_reachability_reading",
+        "commitment": "Reachability is technology-dependent; current contraction is a piton (atrophied capability) that could reverse with technological change",
+        "authority_grounding": "Arms control skeptics; missile defense advocates; emerging tech (AI, hypersonics, cyber) that may destabilize MAD",
+        "sibling_readings": [
+          "contraction_reading",
+          "dropping_reading"
+        ],
+        "expected_structural_delta": "Total war reachability is a scaffold (temporary constraint dependent on current tech equilibrium); beneficiaries are states investing in destabilizing technologies; victims are populations if deterrence fails"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "contraction_reading",
+        "reading_b": "dropping_reading",
+        "basis": "Contraction reading holds that MAD physics makes total war structurally impossible (no coherent winning strategy exists); dropping reading holds that total war remains a strategic option whose probability is suppressed by coordination (deterrence equilibrium could fail). No single framework can hold both: either the constraint is physical (mountain) or behavioral (rope)."
+      },
+      {
+        "reading_a": "contraction_reading",
+        "reading_b": "contingent_reachability_reading",
+        "basis": "Contraction reading treats nuclear constraint as permanent structural fact; contingent reading treats it as technology-dependent and reversible. No framework can hold both: either the constraint is invariant to technological change or it is not."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "contraction_reading",
+      "human_readable": "Contraction Reading: Total War as Structurally Impossible",
+      "structural_delta": "Nuclear MAD physics removes winnable total war from the feasible strategic space entirely",
+      "primary_observable": "70+ years without great-power war; universal elite consensus on unthinkability; absence of mobilization infrastructure for total war",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading representing structural determinism position; mountain hypothesis with clearest physical constraint claim"
+    },
+    {
+      "claim_id": "dropping_reading",
+      "human_readable": "Dropping Reading: Total War as Suppressed but Reachable",
+      "structural_delta": "Deterrence is a coordination equilibrium (rope) that suppresses total war probability without removing it from the reachable set",
+      "primary_observable": "Ongoing limited nuclear war debates; strategic planning for escalation scenarios; recent great-power tensions (Ukraine, Taiwan Strait)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "nuclear_armed_states",
+      "victim": "populations_under_nuclear_threat",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with different constraint type (rope vs mountain); captures coordination/defection dynamics absent from contraction reading"
+    },
+    {
+      "claim_id": "contingent_reachability_reading",
+      "human_readable": "Contingent Reachability Reading: Technology-Dependent Constraint",
+      "structural_delta": "Current contraction is a piton (atrophied capability) dependent on MAD stability; emerging technologies may restore reachability",
+      "primary_observable": "Investment in missile defense, hypersonics, AI-enabled targeting; arms control breakdown; strategic instability indicators",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "states_investing_in_destabilizing_tech",
+      "victim": "populations_if_deterrence_fails",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading capturing technology-dependence dimension; scaffold hypothesis distinct from mountain and rope; addresses kernel contest's M-set expansion question"
+    },
+    {
+      "claim_id": "proxy_war_substitution",
+      "human_readable": "Proxy War as Structural Substitute",
+      "structural_delta": "Systematic replacement of direct great-power conflict with third-party proxy wars",
+      "primary_observable": "Cold War proxy war frequency; superpower support for allied states/insurgencies; avoidance of direct military confrontation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "proxy_war_theater_populations",
+      "downstream_of": [
+        "contraction_reading",
+        "dropping_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: consequence of either contraction or dropping reading rather than independent axis; captured in downstream analysis"
+    },
+    {
+      "claim_id": "cognitive_unthinkability",
+      "human_readable": "Cognitive Unthinkability as Elite Consensus",
+      "structural_delta": "Total war removed from strategic imagination through deterrence theory and elite socialization",
+      "primary_observable": "Deterrence theory literature dominance; absence of total war planning in declassified documents; public/elite rhetoric of absurdity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "deterrence_theory_community",
+      "victim": null,
+      "downstream_of": [
+        "contraction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: epiphenomenal to contraction reading if MAD is physical constraint; if dropping reading correct, cognitive unthinkability is the rope mechanism itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "contraction_reading",
+      "kernel_id": "total_war_reachability_boundary",
+      "reading_id": "contraction_reading"
+    },
+    {
+      "claim_id": "dropping_reading",
+      "kernel_id": "total_war_reachability_boundary",
+      "reading_id": "dropping_reading"
+    },
+    {
+      "claim_id": "contingent_reachability_reading",
+      "kernel_id": "total_war_reachability_boundary",
+      "reading_id": "contingent_reachability_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "proxy_war_substitution",
+      "structural_delta": "Systematic replacement of direct conflict with proxy wars",
+      "hypothesis": "rope",
+      "deferral_reason": "Consequence of primary readings rather than independent axis; proxy wars are the observable output of either contraction or dropping constraint"
+    },
+    {
+      "claim_id": "cognitive_unthinkability",
+      "structural_delta": "Elite consensus removing total war from strategic imagination",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Epiphenomenal to contraction reading if physical constraint; if dropping reading correct, unthinkability IS the rope mechanism"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m_set_expansion_test",
+      "description": "Kernel contest asks whether M-set can represent a reading going unreachable (contraction) given that M-set has site-expansion but no contraction cell. If contraction reading is correct (total war left the space), this tests whether the kernel structure can model space contraction or only probability suppression (dropping).",
+      "source": "User's kernel contest framing"
+    },
+    {
+      "id": "omega_limited_nuclear_war_collapse",
+      "description": "RAND wargames in 1960s-80s tested limited nuclear war scenarios; most escalated to total war. Does this evidence support contraction reading (no limited option exists) or dropping reading (coordination failure is the risk, not physical impossibility)?",
+      "source": "Research context on RAND wargaming"
+    },
+    {
+      "id": "omega_deterrence_failure_modes",
+      "description": "If dropping reading is correct, what are the structural conditions for deterrence failure? Accidental launch, miscalculation, or deliberate defection? Each implies different ε and different victim sets.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_technological_destabilization",
+      "description": "Contingent reachability reading depends on whether emerging tech (AI targeting, hypersonics, cyber) can destabilize MAD. Is this a genuine scaffold (temporary constraint) or a piton (atrophied capability that cannot be restored)?",
+      "source": "Research context on resurgence of great-power competition"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do the three readings genuinely emit different constraints, or do they collapse into one constraint (MAD physics) read from different observer positions? If contraction and dropping both reduce to 'nuclear weapons change the payoff matrix,' they are not separate readings.",
+      "source": "§1.3-K coherence check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings identified with genuinely different structural deltas (mountain vs rope vs scaffold). Axiom contradictions declared between contraction/dropping and contraction/contingent pairs. Kernel contest question (M-set expansion test) preserved as omega_m_set_expansion_test."
+  },
+  "_seed_id": "total_war_unthinkability"
+}

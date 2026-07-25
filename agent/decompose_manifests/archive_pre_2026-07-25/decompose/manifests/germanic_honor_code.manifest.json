@@ -1,0 +1,269 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal Anthropology / Medieval History / Comparative Political Systems",
+  "family_id": "germanic_honor_codes_medieval",
+  "topic_summary": "Analysis of early medieval Germanic honor codes as a contested kernel: blood-feud and reciprocal honor obligations functioning as stateless coordination mechanisms versus their framing by emerging central and ecclesiastical authorities as destructive cycles requiring suppression. The kernel contest centers on which framework holds legitimate authority to adjudicate violence in societies transitioning from kinship-based to territorial governance.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Germanic kinship groups (primary enforcers of blood-feud obligations)",
+      "Emerging territorial monarchies (Frankish, Anglo-Saxon kingdoms seeking monopoly on violence)",
+      "Christian Church (ecclesiastical authority claiming moral jurisdiction over violence)",
+      "Wergild system (compensatory payment mechanism embedded in honor code)",
+      "Royal/ecclesiastical courts (competing adjudication institutions)"
+    ],
+    "key_tensions": [
+      "Kinship-based enforcement vs centralized state monopoly on legitimate violence",
+      "Honor-obligation reciprocity vs ecclesiastical peace doctrine"
+    ],
+    "mechanisms": [
+      "Blood-feud cycle (reciprocal violence obligations within kinship networks)",
+      "Wergild compensation (monetary satisfaction of honor debt)",
+      "Royal peace proclamations (attempts to suspend feud obligations within territorial boundaries)"
+    ],
+    "absences": [
+      "Perspective of non-noble participants (thralls, freedmen) in honor code enforcement",
+      "Economic substrate enabling wergild payments (wealth distribution required for compensation mechanism)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Reciprocal blood-feud and honor obligations as the legitimate framework for adjudicating violence and maintaining social order",
+    "authority_description": "Kinship group consensus interprets obligations; legitimacy derives from ancestral practice-norm and reciprocal recognition among status equals",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_authority_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "feud_obligation_kernel",
+    "readings": [
+      {
+        "reading_id": "stateless_coordination_reading",
+        "commitment": "Blood-feud obligations constitute a self-enforcing coordination mechanism providing justice and deterrence in the absence of centralized enforcement capacity",
+        "authority_grounding": "Kinship network consensus; legitimacy from demonstrated reciprocity and ancestral practice",
+        "sibling_readings": [
+          "extraction_cycle_reading",
+          "christianized_pacification_reading"
+        ],
+        "expected_structural_delta": "Feud participants enter beneficiary set (receive justice); defectors enter victim set (honor loss, kinship expulsion); low suppression of alternative dispute mechanisms (wergild coexists)"
+      },
+      {
+        "reading_id": "extraction_cycle_reading",
+        "commitment": "Blood-feud obligations constitute a destructive extraction cycle that depletes productive capacity and prevents territorial consolidation",
+        "authority_grounding": "Emerging royal/state authority; legitimacy from superior coordination capacity and monopoly on organized force",
+        "sibling_readings": [
+          "stateless_coordination_reading",
+          "christianized_pacification_reading"
+        ],
+        "expected_structural_delta": "Feud participants enter victim set (resource depletion, mortality); royal authority enters beneficiary set (monopoly on violence legitimizes tax extraction); high suppression of kinship-based enforcement"
+      },
+      {
+        "reading_id": "christianized_pacification_reading",
+        "commitment": "Blood-feud obligations violate divine law prohibiting vengeance; legitimate violence authority resides with God and delegated ecclesiastical/royal institutions",
+        "authority_grounding": "Ecclesiastical doctrine; legitimacy from scriptural interpretation and sacramental authority",
+        "sibling_readings": [
+          "stateless_coordination_reading",
+          "extraction_cycle_reading"
+        ],
+        "expected_structural_delta": "All feud participants enter victim set (spiritual peril); Church enters beneficiary set (interpretive monopoly on legitimate violence, expanded jurisdictional reach); complete suppression sought via penitential discipline"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "stateless_coordination_reading",
+        "reading_b": "extraction_cycle_reading",
+        "basis": "Coordination reading holds that reciprocal violence obligations generate net social surplus (order without state); extraction reading holds they generate net deficit (resource destruction). No framework can simultaneously hold violence-reciprocity as wealth-creating AND wealth-destroying."
+      },
+      {
+        "reading_a": "stateless_coordination_reading",
+        "reading_b": "christianized_pacification_reading",
+        "basis": "Coordination reading locates legitimate authority to adjudicate violence in horizontal kinship consensus; Christian reading locates it in vertical divine delegation. No framework can hold both that legitimacy derives from peer recognition AND that it derives from transcendent authority."
+      },
+      {
+        "reading_a": "extraction_cycle_reading",
+        "reading_b": "christianized_pacification_reading",
+        "basis": "Extraction reading grounds suppression in pragmatic state-building (resource conservation, territorial control); Christian reading grounds it in theological prohibition. These axioms are not contradictory—both can coexist as complementary justifications within a single framework (e.g., Carolingian fusion of royal and ecclesiastical authority)."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "stateless_coordination_reading",
+      "human_readable": "Stateless Coordination Reading (Feud as Self-Enforcing Justice)",
+      "structural_delta": "Blood-feud obligations function as decentralized enforcement mechanism providing deterrence and dispute resolution without centralized state capacity",
+      "primary_observable": "Frequency and settlement patterns of recorded feuds; wergild payment completion rates; kinship network stability metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "kinship_network_participants",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline coordination mechanism before suppression dynamics"
+    },
+    {
+      "claim_id": "extraction_cycle_reading",
+      "human_readable": "Extraction Cycle Reading (Feud as Destructive Resource Drain)",
+      "structural_delta": "Blood-feud obligations constitute extraction mechanism depleting productive capacity and preventing territorial state consolidation",
+      "primary_observable": "Mortality rates from feud violence; economic productivity disruption; correlation between feud frequency and state formation failure",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "emerging_royal_authority",
+      "victim": "kinship_networks_and_productive_economy",
+      "downstream_of": [
+        "stateless_coordination_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading; introduces suppression dynamic and state-building extractiveness claim"
+    },
+    {
+      "claim_id": "christianized_pacification_reading",
+      "human_readable": "Christianized Pacification Reading (Feud as Spiritual Peril)",
+      "structural_delta": "Blood-feud obligations violate divine law; legitimate violence authority resides with ecclesiastical/royal institutions under theological jurisdiction",
+      "primary_observable": "Ecclesiastical legislation frequency (synodal canons, penitentials); Church court jurisdictional expansion; royal-ecclesiastical coordination in feud suppression",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "ecclesiastical_authority",
+      "victim": "all_feud_participants",
+      "downstream_of": [
+        "stateless_coordination_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; introduces theological suppression layer and jurisdictional competition dimension"
+    },
+    {
+      "claim_id": "wergild_compensation_mechanism",
+      "human_readable": "Wergild as Embedded Escape Valve",
+      "structural_delta": "Compensatory payment system provides exit from blood-feud cycle while preserving honor-obligation framework",
+      "primary_observable": "Wergild tariff schedules in law codes; payment completion rates; correlation between wealth inequality and feud escalation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "stateless_coordination_reading"
+      ],
+      "feeds_into": [
+        "extraction_cycle_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: wergild mechanism captured implicitly within stateless_coordination_reading as internal feature of the kernel"
+    },
+    {
+      "claim_id": "royal_monopoly_consolidation",
+      "human_readable": "Royal Monopoly Consolidation (State Violence Legitimation)",
+      "structural_delta": "Territorial monarchy's claim to monopoly on legitimate violence enables tax extraction and territorial administration",
+      "primary_observable": "Royal peace proclamation frequency; royal court case volume; correlation between feud suppression success and fiscal capacity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "territorial_monarchy",
+      "victim": "kinship_authority_structures",
+      "downstream_of": [
+        "extraction_cycle_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: royal monopoly claim already captured in extraction_cycle_reading as the authority basis for that reading"
+    },
+    {
+      "claim_id": "non_noble_exclusion",
+      "human_readable": "Non-Noble Exclusion from Honor Framework",
+      "structural_delta": "Thralls and lower-status groups excluded from wergild/feud participation, rendering them structurally vulnerable without recourse",
+      "primary_observable": "Legal code distinctions by status; absence of recorded feuds involving thralls as primary parties; differential compensation tariffs",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "non_noble_population",
+      "downstream_of": [],
+      "feeds_into": [
+        "stateless_coordination_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: status exclusion is structural background condition rather than contested reading of the kernel itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "stateless_coordination_reading",
+      "kernel_id": "feud_obligation_kernel",
+      "reading_id": "stateless_coordination_reading"
+    },
+    {
+      "claim_id": "extraction_cycle_reading",
+      "kernel_id": "feud_obligation_kernel",
+      "reading_id": "extraction_cycle_reading"
+    },
+    {
+      "claim_id": "christianized_pacification_reading",
+      "kernel_id": "feud_obligation_kernel",
+      "reading_id": "christianized_pacification_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "wergild_compensation_mechanism",
+      "structural_delta": "Compensatory payment system as embedded escape valve within feud framework",
+      "hypothesis": "rope",
+      "deferral_reason": "Wergild mechanism already captured as internal feature of stateless_coordination_reading; generating separately would duplicate structural coverage"
+    },
+    {
+      "claim_id": "royal_monopoly_consolidation",
+      "structural_delta": "Territorial monarchy's monopoly claim on legitimate violence",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Royal monopoly claim functions as authority basis for extraction_cycle_reading rather than independent axis"
+    },
+    {
+      "claim_id": "non_noble_exclusion",
+      "structural_delta": "Status-based exclusion from honor framework participation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Status hierarchy functions as background structural condition rather than contested reading of the kernel itself; omega variable for future expansion"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_wergild_wealth_substrate",
+      "description": "Is wergild a genuine escape valve or does wealth inequality convert it into a Piton (only nobles can afford compensation, locking lower-status groups into violence cycle)? Absence of economic distribution data limits classification.",
+      "source": "Absence Inventory (economic substrate) + deferred axis wergild_compensation_mechanism"
+    },
+    {
+      "id": "omega_reading_coexistence",
+      "description": "Did these three readings exist as simultaneous live interpretations within specific communities, or are they diachronic stages (coordination → extraction suppression → Christianization)? Historical record ambiguity affects edge type classification.",
+      "source": "Dark Matter Probe 1 (operational medium—model may be imposing synchronic frame on diachronic process)"
+    },
+    {
+      "id": "omega_non_noble_perspective",
+      "description": "Were non-nobles excluded from honor framework by structural necessity (Mountain) or elite extraction (Snare)? Thrall/freedmen agency in feud participation is absent from extant legal codes.",
+      "source": "Absence Inventory (non-noble participants) + deferred axis non_noble_exclusion"
+    },
+    {
+      "id": "omega_axiom_contradiction_pragmatic_theological",
+      "description": "Extraction_cycle_reading and christianized_pacification_reading marked as non-contradictory (both can coexist as complementary suppression justifications). Does Carolingian synthesis demonstrate this, or does theological grounding ultimately subordinate pragmatic state-building?",
+      "source": "Axiom Contradiction Declaration—edge case requiring historical verification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings share substrate (feud obligations as adjudication mechanism) but emit structurally distinct constraints with different beneficiary/victim sets and authority groundings. Axiom contradiction test applied to all three pairs; one pair (extraction/Christian) found compatible as complementary justifications."
+  },
+  "_seed_id": "germanic_honor_code"
+}

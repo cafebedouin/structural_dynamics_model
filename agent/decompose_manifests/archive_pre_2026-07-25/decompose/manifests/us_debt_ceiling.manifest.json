@@ -1,0 +1,241 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Economy / Fiscal Governance",
+  "family_id": "us_debt_ceiling_2026",
+  "topic_summary": "Analysis of the U.S. statutory debt limit established by the Second Liberty Bond Act of 1917, examining whether this legislative constraint functions as originally designed (a procedural coordination mechanism) or has undergone interpretive drift into a weaponized extraction tool. The kernel question is whether the statute's meaning has fundamentally changed through contextual reinterpretation rather than formal amendment.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Second Liberty Bond Act of 1917 (statutory authorization for Treasury borrowing)",
+      "U.S. Treasury Department (operational borrower constrained by statutory limit)",
+      "U.S. Congress (legislative authority with power to raise/suspend limit)",
+      "Legislative minority factions (potential beneficiaries of extraction opportunities)",
+      "Credit rating agencies (external validators of sovereign creditworthiness)",
+      "14th Amendment Section 4 (constitutional backstop: 'validity of public debt shall not be questioned')"
+    ],
+    "key_tensions": [
+      "Statutory constraint vs constitutional debt validity guarantee (debt ceiling vs 14th Amendment)",
+      "Procedural coordination vs strategic obstruction (original intent vs modern practice)",
+      "Legislative sovereignty vs executive fiscal execution (congressional authorization vs Treasury operational needs)"
+    ],
+    "key_mechanisms": [
+      "Debt ceiling suspension/increase votes (legislative mechanism for periodic adjustment)",
+      "Extraordinary measures (Treasury cash management tactics to delay default)",
+      "Default threat escalation (weaponization mechanism: minority faction threatens non-raise to extract concessions)"
+    ],
+    "key_absences": [
+      "Formal interpretive revision process (statute has not been amended to clarify modern usage)",
+      "Judicial resolution of 14th Amendment supremacy question (no definitive SCOTUS ruling on whether debt ceiling violates Section 4)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The statutory debt ceiling as a fixed legislative constraint on Treasury borrowing authority",
+    "authority_description": "Congressional interpretive control via authorization votes and enforcement through threat of non-action",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_threshold",
+    "is_contested_kernel": true,
+    "kernel_id": "statutory_debt_ceiling",
+    "readings": [
+      {
+        "reading_id": "coordination_scaffold_reading",
+        "commitment": "Debt ceiling as procedural coordination mechanism facilitating Treasury operations without repeated congressional micromanagement",
+        "authority_grounding": "Original legislative intent (1917): efficiency-enhancing delegation",
+        "sibling_readings": [
+          "extraction_snare_reading",
+          "constitutional_nullity_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness scaffold; routine periodic adjustments; no systematic hostage-taking; Treasury operational autonomy within aggregate limit"
+      },
+      {
+        "reading_id": "extraction_snare_reading",
+        "commitment": "Debt ceiling as weaponized boundary enabling legislative minority extraction under default threat",
+        "authority_grounding": "Modern practice (post-1995): procedural rules + filibuster enable minority veto",
+        "sibling_readings": [
+          "coordination_scaffold_reading",
+          "constitutional_nullity_reading"
+        ],
+        "expected_structural_delta": "High extractiveness snare; systematic use as hostage mechanism; credit rating downgrades; policy concessions extracted; beneficiaries are minority factions"
+      },
+      {
+        "reading_id": "constitutional_nullity_reading",
+        "commitment": "Debt ceiling as constitutionally void constraint superseded by 14th Amendment Section 4",
+        "authority_grounding": "Constitutional supremacy doctrine + debt validity clause",
+        "sibling_readings": [
+          "coordination_scaffold_reading",
+          "extraction_snare_reading"
+        ],
+        "expected_structural_delta": "Zero extractiveness (legally inoperative); Treasury executes borrowing as required by appropriations; congressional authorization votes ceremonial or ignored"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "coordination_scaffold_reading",
+        "reading_b": "extraction_snare_reading",
+        "basis": "No single coherent framework treats the same institutional rule simultaneously as efficiency-enhancing coordination (assumes good-faith routine adjustment) AND as weaponized extraction tool (assumes systematic hostage-taking). Accepting one axiom requires rejecting the other's behavioral premises."
+      },
+      {
+        "reading_a": "extraction_snare_reading",
+        "reading_b": "constitutional_nullity_reading",
+        "basis": "No framework simultaneously holds that statutory constraint enables effective minority extraction (snare has bite) AND that constitutional supremacy renders the constraint legally inoperative (snare has no bite). One axiom's truth requires the other's falsity."
+      },
+      {
+        "reading_a": "coordination_scaffold_reading",
+        "reading_b": "constitutional_nullity_reading",
+        "basis": "Coordination scaffold assumes the statutory limit is legally binding and operationally meaningful (coordinates around real constraint). Nullity reading assumes statute is void ab initio (nothing to coordinate around). No coherent framework holds both."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "coordination_scaffold_reading",
+      "human_readable": "Coordination Scaffold Reading (Original Intent: Efficiency-Enhancing Delegation)",
+      "structural_delta": "Debt ceiling as procedural coordination mechanism facilitating Treasury operations without repeated congressional micromanagement",
+      "primary_observable": "Historical frequency of routine adjustments (1917-1995); absence of systematic default threats; Congressional debate records emphasizing administrative efficiency",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes original interpretive baseline against which drift is measured"
+    },
+    {
+      "claim_id": "extraction_snare_reading",
+      "human_readable": "Extraction Snare Reading (Modern Practice: Weaponized Boundary for Minority Veto)",
+      "structural_delta": "Debt ceiling as weaponized boundary enabling legislative minority extraction under default threat",
+      "primary_observable": "Frequency of debt ceiling crises (1995-present); credit rating downgrades; policy concessions extracted; minority party vote patterns; extraordinary measures deployment",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "legislative_minority_factions",
+      "victim": "sovereign_creditworthiness",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: highest extractiveness; beneficiary/victim structure distinct from scaffold; captures modern practice divergence"
+    },
+    {
+      "claim_id": "constitutional_nullity_reading",
+      "human_readable": "Constitutional Nullity Reading (14th Amendment Supremacy: Ceiling as Void Constraint)",
+      "structural_delta": "Debt ceiling as constitutionally void constraint superseded by 14th Amendment Section 4 debt validity clause",
+      "primary_observable": "Constitutional law scholarship on debt clause supremacy; hypothetical executive invocation scenarios; absence of judicial resolution",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: structurally distinct constitutional supremacy argument; resolves kernel ambiguity by invalidating the kernel itself; completes triadic structure"
+    },
+    {
+      "claim_id": "extraordinary_measures_piton",
+      "human_readable": "Extraordinary Measures as Institutional Atrophy (Treasury Workarounds Normalize Crisis)",
+      "structural_delta": "Treasury's extraordinary measures (accounting gimmicks, cash management tactics) have become routine tools that normalize crisis governance and mask underlying extraction",
+      "primary_observable": "Frequency and duration of extraordinary measures periods; Treasury general counsel memo patterns; institutional memory of crisis management",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "fiscal_planning_capacity",
+      "downstream_of": [
+        "extraction_snare_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of snare reading rather than independent interpretive axis; captured in snare's operational manifestation"
+    },
+    {
+      "claim_id": "credit_rating_externality",
+      "human_readable": "Credit Rating Downgrade as Market Discipline (External Validators Penalize Extraction)",
+      "structural_delta": "Credit rating agencies respond to debt ceiling crises by downgrading sovereign debt, imposing market costs that partially discipline extraction behavior",
+      "primary_observable": "S&P, Moody's, Fitch ratings and outlook changes correlated with debt ceiling episodes; borrowing cost impacts; market volatility",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "extraction_snare_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: market feedback mechanism downstream of extraction behavior; interesting for consequences but not central to kernel interpretation contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "coordination_scaffold_reading",
+      "kernel_id": "statutory_debt_ceiling",
+      "reading_id": "coordination_scaffold_reading"
+    },
+    {
+      "claim_id": "extraction_snare_reading",
+      "kernel_id": "statutory_debt_ceiling",
+      "reading_id": "extraction_snare_reading"
+    },
+    {
+      "claim_id": "constitutional_nullity_reading",
+      "kernel_id": "statutory_debt_ceiling",
+      "reading_id": "constitutional_nullity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "extraordinary_measures_piton",
+      "structural_delta": "Treasury extraordinary measures normalize crisis governance and mask extraction",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream operational consequence of extraction_snare_reading; interesting institutional atrophy dimension but not independent kernel interpretation"
+    },
+    {
+      "claim_id": "credit_rating_externality",
+      "structural_delta": "Credit rating agencies impose market discipline on extraction behavior",
+      "hypothesis": "rope",
+      "deferral_reason": "Market feedback mechanism downstream of extraction; captures consequences rather than interpretive contest over kernel meaning"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_judicial_resolution",
+      "description": "No definitive SCOTUS ruling exists on whether statutory debt ceiling violates 14th Amendment Section 4. If nullity reading is legally correct, all extraction under snare reading is constitutionally void. Unresolved constitutional supremacy question makes all three readings simultaneously live.",
+      "source": "Absence Inventory (§1.1) + Constitutional Nullity Reading interpretive premise"
+    },
+    {
+      "id": "omega_filibuster_dependency",
+      "description": "Extraction snare reading's viability depends on Senate filibuster rules enabling minority veto. If filibuster is eliminated, snare collapses back toward coordination scaffold (simple majority can always raise ceiling). Snare extractiveness is institutionally contingent, not inherent to statute.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + Extraction Snare structural analysis"
+    },
+    {
+      "id": "omega_executive_invocation",
+      "description": "Constitutional nullity reading remains untested hypothesis until executive branch actually invokes 14th Amendment to override debt ceiling during crisis. Reading's operational validity unknown; could be scaffold (ceremonial legal theory) or mountain (enforceable constitutional constraint).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + primary_observable gap in Constitutional Nullity axis"
+    },
+    {
+      "id": "omega_international_precedent",
+      "description": "Do other Westminster/presidential systems with statutory borrowing limits exhibit similar drift from coordination to extraction? Comparative institutional analysis would clarify whether pattern is U.S.-specific (contingent on filibuster/polarization) or structural to statutory debt limits generally.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis conducted within U.S. institutional context without cross-national comparison"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition identified three genuinely distinct readings with mutually exclusive axioms. Coordination scaffold vs extraction snare is not merely positional disagreement (observers of same constraint) but interpretive contest over what constraint exists. Constitutional nullity adds third reading that invalidates kernel itself. All three axiom pairs declared contradictory per §1.3-K selectivity test."
+  },
+  "_seed_id": "us_debt_ceiling"
+}

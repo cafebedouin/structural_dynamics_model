@@ -1,0 +1,148 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / State Formation / Cultural Authority",
+  "family_id": "meiji_calendar_dress_imposition",
+  "topic_summary": "Analysis of Meiji Japan's top-down imposition of Gregorian calendar adoption and Western dress codes as state-building mechanisms. The kernel question: did the new reading (Western temporal/sartorial norms as legitimate) displace the prior reading (lunisolar calendar and traditional dress as legitimate) through endogenous climb (bottom-up adoption) or exogenous override (state coercion)? This tests whether commitment system vocabulary can accommodate top-down kernel installation.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Meiji State (centralizing authority imposing Western norms)",
+      "Lunisolar Calendar System (prior temporal commitment)",
+      "Gregorian Calendar (imposed temporal commitment)",
+      "Traditional Japanese Dress (kimono, hakama as prior sartorial norm)",
+      "Western Dress Codes (imposed sartorial norm for official contexts)"
+    ],
+    "key_tensions": [
+      "State modernization imperative vs cultural continuity (Meiji reformers vs traditional practice)",
+      "Legitimacy grounding: endogenous adoption vs exogenous imposition (climb vs override)"
+    ],
+    "key_mechanisms": [
+      "Legal mandate (calendar change by imperial decree 1873; dress codes for officials)",
+      "Institutional enforcement (government employment conditional on Western dress compliance)",
+      "Symbolic authority transfer (emperor's public Western dress adoption as legitimation signal)"
+    ],
+    "key_absences": [
+      "Popular resistance documentation (enforcement records exist; sustained opposition records sparse)",
+      "Alternative modernization paths (why Western calendar/dress specifically vs other reform options)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "imposition_mechanism_kernel",
+      "human_readable": "Imposition Mechanism (Endogenous Climb vs Exogenous Override)",
+      "structural_delta": "Whether the new reading displaced the prior reading through bottom-up adoption or top-down state coercion",
+      "primary_observable": "Adoption timeline relative to state mandate; enforcement mechanism presence/absence; popular resistance evidence",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "state_modernization_project",
+      "victim": "traditional_practice_continuity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested kernel; three structurally distinct readings of legitimacy grounding mechanism"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "endogenous_climb_reading",
+      "kernel_id": "imposition_mechanism_kernel",
+      "reading_id": "endogenous_climb_reading"
+    },
+    {
+      "claim_id": "exogenous_override_reading",
+      "kernel_id": "imposition_mechanism_kernel",
+      "reading_id": "exogenous_override_reading"
+    },
+    {
+      "claim_id": "hybrid_legitimation_reading",
+      "kernel_id": "imposition_mechanism_kernel",
+      "reading_id": "hybrid_legitimation_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_m_set_gap",
+      "description": "The M-set library lacks a cell for top-down imposition (exogenous override). If exogenous_override_reading is empirically correct, this reveals a structural gap in the climb/drift/fracture taxonomy — a fourth mechanism (state-imposed kernel installation) that the original vocabulary does not accommodate. The kernel framework itself may need expansion.",
+      "source": "User prompt flag + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_enforcement_vs_adoption",
+      "description": "Sparse popular resistance records may indicate either (a) successful coercion (override reading correct) or (b) rapid voluntary adoption (climb reading correct). Absence of resistance evidence is structurally ambiguous — cannot distinguish suppressed opposition from genuine acceptance without enforcement cost data.",
+      "source": "Extraction absence: popular resistance documentation"
+    },
+    {
+      "id": "omega_symbolic_vs_material",
+      "description": "Emperor's public Western dress adoption may function as (a) legitimation signal (hybrid reading) or (b) coercive precedent (override reading). The mechanism's structural role depends on whether subjects interpreted it as invitation or command — a distinction the historical record may not preserve.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + mechanism classification ambiguity"
+    },
+    {
+      "id": "omega_alternative_paths",
+      "description": "Why Western calendar/dress specifically vs other modernization options (e.g., Chinese calendar reform, hybrid dress codes)? The choice of Western norms may itself be a kernel reading (Western modernity as universal vs Western as one option among many). Deferred pending comparative state-building analysis.",
+      "source": "Extraction absence: alternative modernization paths"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings are structurally distinct (different legitimacy grounding mechanisms) and individually holdable. Kernel decomposition appropriate for this topic."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy grounding for temporal and sartorial norms — whether authority to define 'correct' calendar and dress derives from endogenous cultural adoption, exogenous state mandate, or hybrid symbolic-coercive mechanisms",
+    "authority_description": "Meiji state claims interpretive authority via imperial decree and institutional enforcement; prior authority grounded in customary practice and religious/agricultural cycles",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "imposition_mechanism_kernel",
+    "readings": [
+      {
+        "reading_id": "endogenous_climb_reading",
+        "commitment": "New norms achieved legitimacy through bottom-up adoption; state mandate followed rather than preceded popular acceptance",
+        "authority_grounding": "Cultural diffusion / voluntary modernization",
+        "sibling_readings": [
+          "exogenous_override_reading",
+          "hybrid_legitimation_reading"
+        ],
+        "expected_structural_delta": "Low enforcement costs; rapid adoption timeline; minimal resistance; state acts as coordinator rather than coercer"
+      },
+      {
+        "reading_id": "exogenous_override_reading",
+        "commitment": "New norms imposed by state coercion; legitimacy derived from monopoly on violence rather than cultural acceptance",
+        "authority_grounding": "State capacity / top-down mandate",
+        "sibling_readings": [
+          "endogenous_climb_reading",
+          "hybrid_legitimation_reading"
+        ],
+        "expected_structural_delta": "High enforcement costs; resistance suppression; compliance conditional on state monitoring; legitimacy contested but overridden"
+      },
+      {
+        "reading_id": "hybrid_legitimation_reading",
+        "commitment": "New norms achieved legitimacy through symbolic authority transfer (emperor's example) combined with institutional incentives; neither pure climb nor pure override",
+        "authority_grounding": "Symbolic precedent + institutional design",
+        "sibling_readings": [
+          "endogenous_climb_reading",
+          "exogenous_override_reading"
+        ],
+        "expected_structural_delta": "Moderate enforcement costs; stratified adoption (elites first, masses later); legitimacy derived from imperial charisma rather than coercion or grassroots demand"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "endogenous_climb_reading",
+        "reading_b": "exogenous_override_reading",
+        "basis": "Endogenous climb axiom (legitimacy derives from cultural acceptance) and exogenous override axiom (legitimacy derives from state coercion) cannot coexist in a single framework. Accepting climb as true requires rejecting override as the legitimacy source, and vice versa. A framework cannot simultaneously hold that the same norm achieved legitimacy both through voluntary adoption and through coercive imposition."
+      }
+    ]
+  },
+  "_seed_id": "meiji_calendar_dress_imposition"
+}

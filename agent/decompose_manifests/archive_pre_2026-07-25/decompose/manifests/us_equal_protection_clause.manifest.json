@@ -1,0 +1,177 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Civil Rights / Legal Theory",
+  "family_id": "equal_protection_clause_2026",
+  "topic_summary": "Analysis of the Fourteenth Amendment's Equal Protection Clause as a contested constitutional kernel. Two dominant readings—formal equality (constraining only explicit facial classifications) versus substantive equality (constraining structures that reproduce group subordination)—instantiate fundamentally different constraints with distinct victim sets, authority groundings, and extractiveness profiles.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Fourteenth Amendment Equal Protection Clause (constitutional text)",
+      "U.S. Supreme Court (interpretive authority)",
+      "Historically marginalized groups (beneficiaries under substantive reading)",
+      "Incumbent institutional actors (beneficiaries under formal reading)",
+      "Facial classification doctrine (enforcement mechanism)",
+      "Anti-caste principle (enforcement mechanism)"
+    ],
+    "key_tensions": [
+      "Textual neutrality vs structural subordination (formal reading treats facially neutral laws as legitimate; substantive reading interrogates disparate impact)",
+      "Narrow judicial review vs broad remedial power (formal reading minimizes court intervention; substantive reading empowers structural remediation)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Fourteenth Amendment Equal Protection Clause as fixed constitutional text whose legitimacy-grounding function depends on interpretive fidelity to founding commitments",
+    "authority_description": "U.S. Supreme Court exercises interpretive monopoly grounded in Article III constitutional supremacy; legitimacy derives from claimed fidelity to constitutional text and precedent",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "equal_protection_clause",
+    "readings": [
+      {
+        "reading_id": "formal_equality_reading",
+        "commitment": "Equal protection constrains only explicit facial classifications; identical treatment in statutory text satisfies constitutional requirement",
+        "authority_grounding": "Textualist originalism; narrow construction of judicial review power; deference to legislative process",
+        "sibling_readings": [
+          "substantive_equality_reading",
+          "anti_subordination_reading"
+        ],
+        "expected_structural_delta": "Facially neutral laws with disparate impact exit victim set; institutional incumbents retain discretion over structure; low extractiveness on existing power arrangements"
+      },
+      {
+        "reading_id": "substantive_equality_reading",
+        "commitment": "Equal protection constrains maintenance of structures that reproduce group subordination regardless of facial neutrality",
+        "authority_grounding": "Anti-caste constitutional purpose; living constitutionalism; Brown v. Board lineage",
+        "sibling_readings": [
+          "formal_equality_reading",
+          "anti_subordination_reading"
+        ],
+        "expected_structural_delta": "Disparate impact brings policies into victim set; historically marginalized groups gain standing; high extractiveness on housing/education/voting regimes with structural barriers"
+      },
+      {
+        "reading_id": "anti_subordination_reading",
+        "commitment": "Equal protection prohibits state action that reinforces social hierarchies along protected class lines",
+        "authority_grounding": "Reconstruction Amendment purpose; anti-caste principle as foundational commitment",
+        "sibling_readings": [
+          "formal_equality_reading",
+          "substantive_equality_reading"
+        ],
+        "expected_structural_delta": "State maintains affirmative duty to dismantle subordination; beneficiary set includes groups facing systemic disadvantage; moderate-to-high extractiveness on neutral policies with subordinating effects"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "formal_equality_reading",
+        "reading_b": "substantive_equality_reading",
+        "basis": "Formal reading's axiom that facially neutral law is constitutionally sufficient contradicts substantive reading's axiom that disparate impact alone can constitute constitutional violation. No single coherent framework can hold both: accepting that identical statutory language satisfies equal protection requires rejecting that structural subordination without explicit classification violates equal protection."
+      },
+      {
+        "reading_a": "formal_equality_reading",
+        "reading_b": "anti_subordination_reading",
+        "basis": "Formal reading's axiom that state neutrality (non-classification) is constitutionally adequate contradicts anti-subordination reading's axiom that state bears affirmative duty to dismantle hierarchy. No framework can simultaneously hold that state satisfies equal protection through inaction and that state violates equal protection through inaction that permits subordination."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "formal_equality_reading",
+      "human_readable": "Formal Equality Reading (Facial Classification Doctrine)",
+      "structural_delta": "Constitutional constraint applies only to explicit facial classifications; facially neutral laws with disparate impact are constitutionally permissible",
+      "primary_observable": "Judicial decisions upholding facially neutral statutes despite disparate racial/gender impact; narrow application of strict scrutiny",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "incumbent_institutional_actors",
+      "victim": "groups_facing_disparate_impact_without_facial_classification",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three readings; establishes baseline constraint structure with low extractiveness on existing arrangements"
+    },
+    {
+      "claim_id": "substantive_equality_reading",
+      "human_readable": "Substantive Equality Reading (Anti-Caste Structural Constraint)",
+      "structural_delta": "Constitutional constraint applies to structures reproducing group subordination regardless of facial neutrality; disparate impact triggers heightened scrutiny",
+      "primary_observable": "Judicial invalidation of facially neutral policies with disparate impact; disparate impact doctrine in housing/voting/education; structural remedies",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "historically_marginalized_groups",
+      "victim": "incumbent_property_and_discretion_holders",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest extractiveness reading; structurally distinct victim/beneficiary set from formal reading; captures core analytical tension"
+    },
+    {
+      "claim_id": "anti_subordination_reading",
+      "human_readable": "Anti-Subordination Reading (Affirmative State Duty)",
+      "structural_delta": "Constitutional constraint imposes affirmative duty on state to dismantle social hierarchies along protected class lines; state inaction can constitute violation",
+      "primary_observable": "Judicial recognition of affirmative remedial obligations; state duty to integrate or desegregate beyond mere non-discrimination",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "groups_facing_systemic_subordination",
+      "victim": "state_discretion_to_maintain_neutral_stance",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading capturing affirmative duty dimension; distinct from both formal (goes beyond non-classification) and substantive (imposes duty beyond non-maintenance of subordination)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "formal_equality_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "formal_equality_reading"
+    },
+    {
+      "claim_id": "substantive_equality_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "substantive_equality_reading"
+    },
+    {
+      "claim_id": "anti_subordination_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "anti_subordination_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_doctrinal_drift",
+      "description": "Court doctrine exhibits partial drift between readings without explicit acknowledgment. Washington v. Davis (1976) formal framework coexists with disparate impact statutes (Fair Housing Act, Title VII). Is this licensed plurality or covert extraction via selective deployment?",
+      "source": "Commitment system partial drift status + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_standing_barrier",
+      "description": "Standing doctrine may function as meta-constraint determining which reading applies. If plaintiffs cannot demonstrate particularized injury from structural subordination, formal reading wins by procedural default rather than substantive adjudication.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_affirmative_action_tension",
+      "description": "Race-conscious remedial measures create tension within substantive/anti-subordination framework: do they violate formal equality constraint or satisfy anti-subordination duty? Readings may collapse or bifurcate depending on whether remediation is classified as classification.",
+      "source": "Multi-lens scan (Constitutional Law) + axiom contradiction analysis"
+    },
+    {
+      "id": "omega_enforcement_mechanism_asymmetry",
+      "description": "Formal reading has robust enforcement via facial classification doctrine and strict scrutiny. Substantive reading lacks parallel doctrinal mechanism—disparate impact recognized in statute but not constitutional doctrine. Enforcement asymmetry may determine reading dominance regardless of normative commitment.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected based on structural distinctness: formal (low ε, beneficiary=incumbents), substantive (high ε, beneficiary=marginalized), anti-subordination (mod ε, affirmative duty). Axiom contradictions declared between formal/substantive and formal/anti-subordination based on mutual exclusivity test: no single framework can hold both that facially neutral law satisfies equal protection AND that disparate impact/inaction violates it."
+  },
+  "_seed_id": "us_equal_protection_clause"
+}

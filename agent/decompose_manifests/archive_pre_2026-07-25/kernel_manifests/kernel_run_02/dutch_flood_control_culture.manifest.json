@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Preparedness / Institutional Memory / Governance",
+  "family_id": "dutch_flood_preparedness_generational",
+  "topic_summary": "Analysis of Dutch flood-control preparedness across non-catastrophe generations following the 1953 North Sea flood. Examines whether post-disaster drills, dike-inspection routines, and institutional frameworks constitute genuine competence retention or memorial performance—a contested kernel where different readings of 'preparedness' emit structurally different constraints on resource allocation, training intensity, and institutional design.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Water Boards (Waterschappen) - local autonomous institutions responsible for dike maintenance since 12th century, consolidated from 2,700 to 22",
+      "Rijkswaterstaat - national water management authority established 1798, operates alongside water boards",
+      "Delta Committee - established February 18, 1953 to advise on flood prevention measures",
+      "IHE Delft - knowledge transfer institution where Delta Works builders trained subsequent generations",
+      "Dutch Flood Protection Programme - contemporary framework stressing sender-receiver knowledge transfer",
+      "1953 North Sea Flood - catastrophic event killing 1,836, triggering institutional transformation"
+    ],
+    "key_tensions": [
+      "Local autonomy vs centralized coordination (water boards refusing to cede authority to Rijkswaterstaat)",
+      "Technical expertise vs adaptive governance (flood safety as engineering problem vs climate-adaptive system)",
+      "Institutional memory retention vs knowledge uptake barriers (transmission, cognitive, psychological obstacles)",
+      "Fragmented responsibilities vs comprehensive adaptation (institutional context hampering integrated strategies)"
+    ],
+    "key_mechanisms": [
+      "Six-year dike reassessment cycle against flood protection standards with mandatory upgrades",
+      "Two-year testing cycle for climate change resilience verification",
+      "Three-yearly viewing system (historical) where farmers maintained designated dike sections under water board inspection"
+    ],
+    "key_absences": [
+      "Measurement of actual competence retention vs ceremonial compliance in drill participation",
+      "Quantitative data on knowledge decay rates between catastrophe generations (1953-2026 = 73 years, ~3 generations)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Post-1953 flood preparedness as institutionalized practice—drills, inspections, and maintenance routines claimed to preserve catastrophe-response competence across generations that never experienced the 1953 flood",
+    "authority_description": "Water boards and Rijkswaterstaat derive legitimacy from 1953 normative consensus and technical expertise; authority to define 'adequate preparedness' grounded in Delta Committee norms and engineering standards",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "preparedness_retention",
+    "readings": [
+      {
+        "reading_id": "husk_reading",
+        "commitment": "Preparedness is memorial performance—drills and inspections are rituals that feel like retention but lack live competence",
+        "authority_grounding": "Sociological critique of institutional memory; knowledge decay literature",
+        "sibling_readings": [
+          "competence_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High ceremony-to-competence ratio; resource allocation favors visible compliance over tacit skill retention; beneficiary is institutional legitimacy, victim is actual response capacity during D5 event"
+      },
+      {
+        "reading_id": "competence_reading",
+        "commitment": "Preparedness is live exercised knowledge—drills and inspections are competence-preserving practices that maintain operational capacity",
+        "authority_grounding": "Engineering standards; Dutch Flood Protection Programme sender-receiver model; IHE Delft knowledge transfer framework",
+        "sibling_readings": [
+          "husk_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Low ceremony-to-competence ratio; resource allocation optimizes for skill retention and adaptive capacity; beneficiary is population safety, victim is none (or fiscal efficiency if over-invested)"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Preparedness is stratified—technical competence retained in specialized institutions (Rijkswaterstaat, water boards) while broader societal memory becomes ceremonial",
+        "authority_grounding": "Institutional fragmentation literature; knowledge uptake barriers research",
+        "sibling_readings": [
+          "husk_reading",
+          "competence_reading"
+        ],
+        "expected_structural_delta": "Dual-track system: core technical staff maintain competence, peripheral actors perform ceremony; beneficiary is institutional continuity, victim is distributed resilience (centralized expertise creates single point of failure)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "husk_reading",
+        "reading_b": "competence_reading",
+        "basis": "Husk reading holds that ritual performance cannot preserve tacit operational knowledge across non-catastrophe generations; competence reading holds that structured practice does preserve such knowledge. No single framework can hold both—either drills work or they don't."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "husk_reading",
+      "human_readable": "Preparedness as Memorial Husk (Ceremonial Compliance Without Competence)",
+      "structural_delta": "Drills and inspections function as legitimacy-preserving rituals rather than competence-preserving practices; knowledge decay masked by procedural compliance",
+      "primary_observable": "Ratio of drill participation metrics to actual emergency response performance; knowledge uptake barriers (transmission, cognitive, psychological) documented in research; gap between technical research output and operational implementation",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_legitimacy",
+      "victim": "actual_response_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest epsilon (snare with institutional beneficiary); captures knowledge decay hypothesis"
+    },
+    {
+      "claim_id": "competence_reading",
+      "human_readable": "Preparedness as Live Competence (Exercised Knowledge Retention)",
+      "structural_delta": "Drills and inspections successfully preserve operational capacity through structured practice; six-year reassessment and two-year testing cycles maintain tacit knowledge",
+      "primary_observable": "Dike upgrade completion rates; technical staff retention and training pipeline metrics; IHE Delft knowledge transfer outcomes; actual flood response performance in minor events",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structural contrast to husk_reading (rope vs snare, low vs high epsilon); represents engineering/institutional success narrative"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Preparedness as Stratified Retention (Core Competence, Peripheral Ceremony)",
+      "structural_delta": "Technical competence retained in specialized institutions (Rijkswaterstaat, consolidated water boards) while broader societal memory becomes ceremonial; creates centralized expertise dependency",
+      "primary_observable": "Water board consolidation trajectory (2,700 to 22); knowledge concentration in Rijkswaterstaat vs distributed local capacity; institutional fragmentation barriers documented in research",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "centralized_technical_institutions",
+      "victim": "distributed_resilience",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality (synthesis of husk/competence tension); tangled_rope captures institutional fragmentation and single-point-of-failure risk"
+    },
+    {
+      "claim_id": "climate_adaptation_pressure",
+      "human_readable": "Climate Adaptation Pressure (Technical System Under Strain)",
+      "structural_delta": "Climate change (soil erosion, higher river discharge, sea-level rise) exceeds capacity of technical flood-safety paradigm; forces shift from engineering to adaptive governance",
+      "primary_observable": "Frequency of norm-exceeding events; cost escalation of meeting flood protection standards; political will for alternative adaptation strategies",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "husk_reading",
+        "competence_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain feeding all three readings, but kernel contest itself is the primary analytical target; climate pressure is context not core structure"
+    },
+    {
+      "claim_id": "institutional_consolidation_trajectory",
+      "human_readable": "Institutional Consolidation Trajectory (Autonomy Loss vs Efficiency Gain)",
+      "structural_delta": "Water board consolidation from 2,700 to 22 trades local autonomy and distributed knowledge for technical capacity and fiscal efficiency",
+      "primary_observable": "Water board merger timeline; tax base and technical staff capacity pre/post consolidation; local leader recruitment and institutional memory anchoring",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hybrid_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within hybrid_reading's stratified retention structure; consolidation is mechanism not independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "husk_reading",
+      "kernel_id": "preparedness_retention",
+      "reading_id": "husk_reading"
+    },
+    {
+      "claim_id": "competence_reading",
+      "kernel_id": "preparedness_retention",
+      "reading_id": "competence_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "preparedness_retention",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "climate_adaptation_pressure",
+      "structural_delta": "Climate change exceeds technical flood-safety paradigm capacity",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream context for all three readings; kernel contest itself is primary analytical target; climate pressure is environmental constraint not preparedness structure"
+    },
+    {
+      "claim_id": "institutional_consolidation_trajectory",
+      "structural_delta": "Water board consolidation trades local autonomy for technical capacity",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured within hybrid_reading's stratified retention analysis; consolidation is mechanism of centralization not independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d5_empirical_test",
+      "description": "The kernel contest resolves empirically only during a D5-scale event. 73 years post-1953 with no comparable flood means all three readings remain unfalsified. A 2026 North Sea surge would reveal whether drills preserved competence (competence_reading), masked decay (husk_reading), or created centralized fragility (hybrid_reading).",
+      "source": "Kernel structure + absence of catastrophe-scale empirical test"
+    },
+    {
+      "id": "omega_knowledge_decay_measurement",
+      "description": "No quantitative data on tacit knowledge decay rates across non-catastrophe generations. Husk_reading predicts high decay; competence_reading predicts low decay; hybrid_reading predicts stratified decay. Without measurement, epsilon bins are hypotheses not observations.",
+      "source": "Absence inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_ceremony_competence_ratio",
+      "description": "Primary observable for husk_reading (ceremony-to-competence ratio) lacks operationalization. How to measure 'ceremonial compliance' vs 'live competence' in drill participation? Proxy metrics (attendance vs performance under stress) may not capture tacit knowledge retention.",
+      "source": "Primary observable specification challenge (§2.1)"
+    },
+    {
+      "id": "omega_international_comparison",
+      "description": "Dutch system operates in unique institutional context (water boards since 12th century, 1953 normative consensus). Do other flood-prone nations with different institutional histories exhibit same husk/competence/hybrid patterns? Japan (tsunami preparedness), Bangladesh (cyclone preparedness), New Orleans (post-Katrina) as comparative cases.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + domain boundary question"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings captures the structural contest. Climate_adaptation_pressure deferred as upstream context rather than independent axis. Institutional_consolidation_trajectory absorbed into hybrid_reading. Four omegas document empirical test absence, measurement challenges, and domain boundary questions."
+  },
+  "_seed_id": "dutch_flood_control_culture"
+}

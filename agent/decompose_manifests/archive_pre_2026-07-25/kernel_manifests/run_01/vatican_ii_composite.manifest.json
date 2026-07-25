@@ -1,0 +1,179 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Catholic Ecclesiology / Doctrinal History / Institutional Change",
+  "family_id": "vatican_ii_composite_2026",
+  "topic_summary": "Analysis of Vatican II (1962-1965) as either a single coherent reinterpretation of Catholic doctrine or an overdetermined composite of multiple independent doctrinal shifts that happened to coincide temporally. The kernel question: does Vatican II represent one reading of Catholic tradition or multiple simultaneous readings that produced structurally different constraints on Church practice and authority.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Vatican II Council (1962-1965 ecumenical council)",
+      "Magisterium (teaching authority of Catholic Church)",
+      "Pre-conciliar tradition (Tridentine/Vatican I framework)",
+      "Liturgical reform movement (Sacrosanctum Concilium)",
+      "Ecumenical movement (Unitatis Redintegratio)",
+      "Religious liberty doctrine (Dignitatis Humanae)"
+    ],
+    "key_tensions": [
+      "Continuity vs rupture (hermeneutic of reform vs hermeneutic of discontinuity)",
+      "Papal primacy vs episcopal collegiality (Lumen Gentium §22-23)",
+      "Extra ecclesiam nulla salus vs ecumenical openness (salvation outside visible Church)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The deposit of faith and apostolic tradition as authoritative reference for legitimate Catholic doctrine",
+    "authority_description": "Magisterial teaching authority grounded in apostolic succession and conciliar consensus",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": false,
+    "kernel_id": "vatican_ii_composite",
+    "readings": [],
+    "collapse_reason": "Proposed readings (single_reinterpretation vs composite_overdetermination) do not emit structurally different constraints. Both readings accept the same doctrinal outputs (liturgical reform, ecumenism, religious liberty) as legitimate. The disagreement is historiographic (how to narrate the change) rather than structural (what constraints the change produces). A genuine kernel contest would require readings that disagree on whether specific Vatican II documents bind the faithful, or which interpretation of those documents is authoritative. Instead, this is a single constraint system with contested narrative framing."
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_vernacularization",
+      "human_readable": "Liturgical Vernacularization (Sacrosanctum Concilium)",
+      "structural_delta": "Shift from mandatory Latin liturgy to vernacular languages as normative option",
+      "primary_observable": "Percentage of masses in vernacular vs Latin; missal translation approval rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "episcopal_collegiality_tension"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Most structurally distinct upstream; coordination mechanism with measurable observable"
+    },
+    {
+      "claim_id": "ecumenical_boundary_shift",
+      "human_readable": "Ecumenical Boundary Shift (Salvation Outside Visible Church)",
+      "structural_delta": "Reinterpretation of extra ecclesiam nulla salus to permit salvation for non-Catholics in good faith",
+      "primary_observable": "Magisterial statements on Protestant/Orthodox salvation status; joint worship permissions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ecumenical_movement_leadership",
+      "victim": "exclusivist_traditionalists",
+      "downstream_of": [],
+      "feeds_into": [
+        "episcopal_collegiality_tension"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Different observable and victim structure; moderate epsilon with clear beneficiary"
+    },
+    {
+      "claim_id": "episcopal_collegiality_tension",
+      "human_readable": "Episcopal Collegiality Tension (Lumen Gentium Authority Structure)",
+      "structural_delta": "Bishops as college with pope vs pope as sole supreme authority",
+      "primary_observable": "Synod voting procedures; papal motu proprio frequency overriding episcopal conferences",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "national_episcopal_conferences",
+      "downstream_of": [
+        "liturgical_vernacularization",
+        "ecumenical_boundary_shift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node capturing authority structure ambiguity"
+    },
+    {
+      "claim_id": "religious_liberty_doctrine",
+      "human_readable": "Religious Liberty Doctrine (Dignitatis Humanae)",
+      "structural_delta": "State coercion in religious matters rejected; individual conscience primacy",
+      "primary_observable": "Vatican diplomatic positions on state religion; concordat renegotiations",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "liberal_democratic_states",
+      "victim": "confessional_state_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally parallel to ecumenical_boundary_shift with similar epsilon; lower graph centrality"
+    },
+    {
+      "claim_id": "ressourcement_vs_aggiornamento",
+      "human_readable": "Ressourcement vs Aggiornamento (Patristic Return vs Modernization)",
+      "structural_delta": "Return to early Church sources vs adaptation to modern world as reform logic",
+      "primary_observable": "Patristic citations in conciliar documents vs contemporary social science references",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "liturgical_vernacularization",
+        "ecumenical_boundary_shift"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological framing rather than structural constraint; feeds into selected axes indirectly"
+    }
+  ],
+  "generation_sequence": [
+    "liturgical_vernacularization",
+    "ecumenical_boundary_shift",
+    "episcopal_collegiality_tension"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "religious_liberty_doctrine",
+      "structural_delta": "State coercion in religious matters rejected",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Structurally parallel to ecumenical_boundary_shift; lower centrality score"
+    },
+    {
+      "claim_id": "ressourcement_vs_aggiornamento",
+      "structural_delta": "Patristic return vs modernization as reform logic",
+      "hypothesis": "piton",
+      "deferral_reason": "Methodological framing; captured indirectly via selected axes"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The proposed kernel contest (single reinterpretation vs composite) collapses because both readings accept the same doctrinal outputs as legitimate. The disagreement is historiographic (narrative framing) not structural (what constraints bind). A genuine kernel would require readings that disagree on whether specific Vatican II documents are authoritative or how to interpret them in binding ways.",
+      "source": "§1.3-K kernel/reading decomposition"
+    },
+    {
+      "id": "omega_traditionalist_schism",
+      "description": "Does the SSPX/sedevacantist rejection of Vatican II constitute a fourth reading of the Catholic tradition kernel, or a rejection of the kernel itself? If the former, episcopal_collegiality_tension becomes a contested kernel with three readings (conciliar, ultramontane, traditionalist).",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_papal_supremacy_ratchet",
+      "description": "Is episcopal collegiality a Rope (coordination) or a Snare where papal primacy systematically overrides collegial authority? Post-conciliar history (Humanae Vitae, liturgical rollbacks, synod marginalization) suggests the latter, but this requires longitudinal data beyond the model's training cutoff.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_composite_vs_package",
+      "description": "If Vatican II is a composite of independent shifts rather than a single reinterpretation, what mechanism synchronized their temporal coincidence? Was it institutional opportunity (council as forcing function), generational turnover, or external pressure (Cold War, decolonization)? The composite hypothesis requires explaining the bundling.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel collapse (single_reinterpretation vs composite_overdetermination not emitting different constraints) is documented in omega_kernel_collapse. The topic decomposes into ordinary axes rather than contested readings."
+  },
+  "_seed_id": "vatican_ii_composite"
+}

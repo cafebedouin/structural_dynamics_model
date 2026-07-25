@@ -1,0 +1,255 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Trade Law / Public Health Policy / Intellectual Property Regime",
+  "family_id": "wto_trips_medicines_access",
+  "topic_summary": "Analysis of the WTO TRIPS Agreement as a contested kernel where identical treaty text is read through incompatible interpretive frameworks. Strong-exclusivity reading enforces high uniform patent protections benefiting pharmaceutical multinationals and IP-exporting states, while public-health-flexibility reading emphasizes compulsory licensing and parallel import provisions benefiting generic manufacturers and patients in low-income states. The interpretive contest structures fundamentally different constraints on medicines access.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "WTO TRIPS Agreement (multilateral treaty establishing minimum IP standards, 1995)",
+      "Multinational pharmaceutical firms (patent holders, R&D investors)",
+      "Generic manufacturers (producers of off-patent medicines)",
+      "IP-exporting states (US, EU, Japan—high patent enforcement)",
+      "Low-income states (importers seeking affordable medicines)",
+      "Health ministries (demand-side actors negotiating access)",
+      "WTO Dispute Settlement Body (interpretive authority)"
+    ],
+    "key_tensions": [
+      "Patent exclusivity vs medicines access (pharmaceutical firms vs patients/health ministries)",
+      "Innovation incentives vs public health emergency response (IP-exporting states vs low-income states)",
+      "Treaty text stability vs interpretive flexibility (strong-exclusivity vs public-health readings)"
+    ],
+    "key_mechanisms": [
+      "Compulsory licensing (Article 31—state can override patent for public health)",
+      "Parallel importation (exhaust IP rights across borders to source cheaper generics)",
+      "Dispute settlement (binding WTO panel rulings on treaty interpretation)"
+    ],
+    "key_absences": [
+      "Differential pricing mechanisms outside patent regime (global fund structures, tiered pricing agreements)",
+      "Technology transfer obligations (TRIPS mandates IP protection but not knowledge diffusion)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strong_exclusivity_reading",
+      "human_readable": "Strong-Exclusivity Reading (High Uniform Patent Protections)",
+      "structural_delta": "TRIPS text interpreted to impose stringent 20-year patent terms with narrow compulsory licensing exceptions, maximizing pharmaceutical firm control over pricing and market access",
+      "primary_observable": "Frequency of compulsory license rejections; patent term enforcement in signatory states; WTO panel rulings favoring patent holder complaints",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "multinational_pharmaceutical_firms, ip_exporting_states",
+      "victim": "low_income_states, patients_needing_affordable_generics",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading in kernel contest; high extractiveness; defines pharmaceutical firm/IP-exporting state beneficiary structure"
+    },
+    {
+      "claim_id": "public_health_flexibility_reading",
+      "human_readable": "Public-Health-Flexibility Reading (Broad Compulsory Licensing)",
+      "structural_delta": "TRIPS text interpreted to embed wide compulsory licensing and parallel import flexibilities, expanding generic manufacturer and health ministry leverage to override patents during public health crises",
+      "primary_observable": "Frequency of compulsory license grants; Doha Declaration invocations; generic drug market share in signatory states post-flexibility claims",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "generic_manufacturers, health_ministries, patients_in_low_income_states",
+      "victim": "pharmaceutical_patent_holders, ip_exporting_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading in kernel contest; inverts beneficiary/victim structure; equally high extractiveness but opposite polarity"
+    },
+    {
+      "claim_id": "dispute_settlement_interpretive_authority",
+      "human_readable": "Dispute Settlement as Interpretive Authority (WTO Panel Binding Rulings)",
+      "structural_delta": "WTO dispute panels hold binding interpretive authority over TRIPS text, with rulings that can lock in one reading over another through precedent and enforcement mechanisms",
+      "primary_observable": "WTO panel case outcomes on TRIPS flexibilities; compliance rate with panel rulings; frequency of appeal to Appellate Body (now defunct)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strong_exclusivity_reading",
+        "public_health_flexibility_reading"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Meta-constraint on kernel contest; highest centrality; feeds into both readings by determining which interpretation becomes enforceable; coordination mechanism over interpretive authority"
+    },
+    {
+      "claim_id": "pharmaceutical_r_and_d_incentive_structure",
+      "human_readable": "Pharmaceutical R&D Incentive Structure (Patent-Dependent Innovation Model)",
+      "structural_delta": "Global pharmaceutical innovation structurally depends on patent-protected monopoly pricing to recover R&D costs, creating tension between access and incentive preservation",
+      "primary_observable": "Ratio of R&D spending to patent revenue; drug development pipeline changes under different patent regimes; venture capital flows into biotech conditional on IP protections",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strong_exclusivity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain constraint, but reading contest can proceed without explicitly modeling R&D structure; implicit in strong-exclusivity beneficiary rationale"
+    },
+    {
+      "claim_id": "generic_manufacturing_capacity_distribution",
+      "human_readable": "Generic Manufacturing Capacity Distribution (Spatial Concentration in India/China)",
+      "structural_delta": "Global generic manufacturing capacity is spatially concentrated in India and China, creating structural dependency for low-income states on these suppliers' ability to exploit TRIPS flexibilities",
+      "primary_observable": "Generic drug export volumes from India/China; number of WHO-prequalified generic manufacturers by country; low-income state import dependency ratios",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "public_health_flexibility_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural precondition for public-health reading but not contested; reading analysis can proceed without modeling capacity distribution in detail"
+    },
+    {
+      "claim_id": "technology_transfer_absence",
+      "human_readable": "Technology Transfer Absence (No Knowledge Diffusion Obligation)",
+      "structural_delta": "TRIPS mandates IP protection but imposes no reciprocal obligation for patent holders to transfer production knowledge, creating structural asymmetry favoring existing manufacturers",
+      "primary_observable": "Frequency of technology transfer agreements vs patent grants; local manufacturing capacity growth in low-income states; voluntary licensing terms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "incumbent_pharmaceutical_firms",
+      "victim": "low_income_state_manufacturing_sectors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important structural gap but orthogonal to kernel contest; absence noted in extraction, omega variable for future analysis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strong_exclusivity_reading",
+      "kernel_id": "trips_agreement_interpretive_kernel",
+      "reading_id": "strong_exclusivity_reading"
+    },
+    {
+      "claim_id": "public_health_flexibility_reading",
+      "kernel_id": "trips_agreement_interpretive_kernel",
+      "reading_id": "public_health_flexibility_reading"
+    },
+    {
+      "claim_id": "dispute_settlement_interpretive_authority",
+      "kernel_id": "trips_agreement_interpretive_kernel",
+      "reading_id": "dispute_settlement_interpretive_authority"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pharmaceutical_r_and_d_incentive_structure",
+      "structural_delta": "Innovation depends on patent monopoly pricing to recover R&D costs",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain implicit in strong-exclusivity rationale; reading contest can proceed without explicit R&D modeling"
+    },
+    {
+      "claim_id": "generic_manufacturing_capacity_distribution",
+      "structural_delta": "Generic capacity concentrated in India/China creates import dependency",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural precondition for public-health reading but not contested within kernel framework"
+    },
+    {
+      "claim_id": "technology_transfer_absence",
+      "structural_delta": "No reciprocal knowledge diffusion obligation in TRIPS text",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Important asymmetry but orthogonal to interpretive contest; noted as absence in extraction"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_appellate_body_paralysis",
+      "description": "WTO Appellate Body has been non-functional since 2019 due to US blocking appointments. Does this collapse dispute_settlement_interpretive_authority from Rope to Piton, leaving TRIPS interpretation to bilateral power dynamics rather than multilateral adjudication?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + real-world institutional drift"
+    },
+    {
+      "id": "omega_covid_vaccine_waiver",
+      "description": "2022 TRIPS waiver for COVID vaccines represents rare instance of explicit text modification. Does this undermine kernel stability or validate public-health reading's authority basis by forcing explicit revision rather than reinterpretation?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + recent treaty evolution"
+    },
+    {
+      "id": "omega_technology_transfer_extraction",
+      "description": "Deferred axis technology_transfer_absence may be higher-extractiveness than readings themselves—pharmaceutical firms extract knowledge-production rents without reciprocal diffusion. Warrants future generation as potential primary snare.",
+      "source": "Deferred axis technology_transfer_absence + §4.2 deferral review"
+    },
+    {
+      "id": "omega_differential_pricing_bypass",
+      "description": "Global health funds and tiered pricing agreements operate outside TRIPS framework entirely. Do these mechanisms make the kernel contest structurally irrelevant for medicines access, or are they constrained by TRIPS dispute outcomes?",
+      "source": "Absence Inventory (differential_pricing_mechanisms)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel recognition valid: two readings share substrate (TRIPS treaty text) but instantiate genuinely different constraints with inverted beneficiary/victim structures. Dispute settlement authority selected as meta-constraint feeding into both readings. Three deferred axes documented with structural rationales."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The WTO TRIPS Agreement treaty text as stabilized multilateral commitment establishing minimum intellectual property standards for 164 member states",
+    "authority_description": "Interpretive authority vested in WTO dispute settlement panels with binding enforcement mechanisms; competing authority claims from IP-exporting states (property-rights basis) vs low-income states and NGOs (right-to-health basis)",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_authority_dual_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "trips_agreement_interpretive_kernel",
+    "readings": [
+      {
+        "reading_id": "strong_exclusivity_reading",
+        "commitment": "TRIPS text mandates high uniform patent protections with narrow flexibilities to incentivize pharmaceutical innovation",
+        "authority_grounding": "property-rights / innovation-incentive framework; backed by IP-exporting states and pharmaceutical industry lobbying",
+        "sibling_readings": [
+          "public_health_flexibility_reading"
+        ],
+        "expected_structural_delta": "Patent holders enter beneficiary set with enforcement mechanisms; low-income states and patients enter victim set facing high drug prices and constrained generic access; compulsory licensing narrowly construed"
+      },
+      {
+        "reading_id": "public_health_flexibility_reading",
+        "commitment": "TRIPS text embeds broad compulsory licensing and parallel import flexibilities to protect public health access",
+        "authority_grounding": "right-to-health / development framework; backed by low-income states, generic manufacturers, and global health NGOs; codified in 2001 Doha Declaration",
+        "sibling_readings": [
+          "strong_exclusivity_reading"
+        ],
+        "expected_structural_delta": "Generic manufacturers and health ministries enter beneficiary set with expanded negotiating leverage; pharmaceutical patent holders enter victim set facing pricing erosion and market exclusivity loss; compulsory licensing broadly construed"
+      },
+      {
+        "reading_id": "dispute_settlement_interpretive_authority",
+        "commitment": "WTO dispute panels hold binding interpretive authority over TRIPS text with enforcement through trade retaliation mechanisms",
+        "authority_grounding": "procedural / multilateral adjudication framework; treaty-grounded but contested due to Appellate Body paralysis since 2019",
+        "sibling_readings": [
+          "strong_exclusivity_reading",
+          "public_health_flexibility_reading"
+        ],
+        "expected_structural_delta": "Meta-constraint on kernel contest: panel rulings lock in one reading over another through precedent; bilateral power dynamics increasingly substitute for multilateral adjudication post-Appellate Body collapse"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strong_exclusivity_reading",
+        "reading_b": "public_health_flexibility_reading",
+        "basis": "Strong-exclusivity grounds legitimacy in property-rights absolutism where patent holder's monopoly is sacrosanct and flexibilities are narrow exceptions; public-health-flexibility grounds legitimacy in right-to-health prioritization where medicines access overrides patent exclusivity and flexibilities are default. No single coherent framework can simultaneously hold patent monopoly as sacrosanct AND medicines access as overriding—accepting one axiom requires rejecting the other's foundational priority."
+      }
+    ]
+  },
+  "_seed_id": "wto_trips_and_access_to_medicines"
+}

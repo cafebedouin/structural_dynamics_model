@@ -1,0 +1,253 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Safety Engineering / Organizational Learning / High-Reliability Organizations",
+  "family_id": "catastrophe_avoidance_retention_2026",
+  "topic_summary": "Analysis of how aviation and nuclear industries retain catastrophe-avoidance competence across decades without recurring real catastrophes. The kernel contest examines whether simulation-based training constitutes genuine exercise of safety competence or whether only actual catastrophic events can maintain the organizational knowledge required for prevention.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aviation industry (commercial flight operations with simulator-based training)",
+      "Nuclear power industry (reactor operations with emergency drill protocols)",
+      "Simulator technology (high-fidelity training environments)",
+      "Regulatory bodies (FAA, NRC - mandate recurrent training)",
+      "Crew Resource Management (CRM) doctrine",
+      "Organizational memory systems (incident databases, training curricula)"
+    ],
+    "key_tensions": [
+      "Simulation fidelity vs real-world unpredictability (can drills capture true catastrophe dynamics)",
+      "Competence decay vs training frequency (how often must skills be exercised to remain viable)"
+    ],
+    "key_mechanisms": [
+      "Recurrent simulator training (mandated periodic exposure to emergency scenarios)",
+      "Incident investigation and knowledge codification (NTSB/NRC reports feeding training updates)",
+      "Regulatory enforcement of training standards (license renewal contingent on demonstrated competence)"
+    ],
+    "key_absences": [
+      "Absence of discussion of near-miss incidents as intermediate validation points between simulation and catastrophe",
+      "Absence of analysis of industries that lost catastrophe-avoidance competence (e.g., offshore drilling, chemical plants with long incident-free periods preceding major failures)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that catastrophe-avoidance competence must be actively maintained through repeated exercise, not merely documented in procedures",
+    "authority_description": "Regulatory bodies (FAA, NRC) ground legitimacy in demonstrated performance under test conditions; industry grounds legitimacy in zero-catastrophe operational records",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "competence_retention_exercise",
+    "readings": [
+      {
+        "reading_id": "simulation_as_sufficient",
+        "commitment": "High-fidelity simulation constitutes genuine exercise of catastrophe-avoidance competence; the cognitive and procedural demands are structurally equivalent to real events",
+        "authority_grounding": "Regulatory validation through zero-catastrophe outcomes in industries with mature simulator programs; transfer-of-training research showing skill retention",
+        "sibling_readings": [
+          "catastrophe_as_necessary",
+          "near_miss_as_bridge"
+        ],
+        "expected_structural_delta": "Training infrastructure becomes the primary competence-maintenance mechanism; real catastrophes are prevented rather than experienced; competence is measured by simulator performance metrics"
+      },
+      {
+        "reading_id": "catastrophe_as_necessary",
+        "commitment": "Only actual catastrophic events provide the organizational learning and visceral stakes required to maintain genuine competence; simulation is rehearsal but not the real thing",
+        "authority_grounding": "Historical pattern of competence decay in long-incident-free periods (normalization of deviance); distinction between knowing-about and knowing-how under true stakes",
+        "sibling_readings": [
+          "simulation_as_sufficient",
+          "near_miss_as_bridge"
+        ],
+        "expected_structural_delta": "Competence decays invisibly during incident-free periods; organizations become vulnerable precisely when they appear safest; simulation creates false confidence; real catastrophes are necessary system resets"
+      },
+      {
+        "reading_id": "near_miss_as_bridge",
+        "commitment": "Near-miss incidents and minor failures provide sufficient real-world feedback to validate and update simulator training without requiring full catastrophes",
+        "authority_grounding": "Safety science literature on precursor events; organizational learning theory emphasizing weak signals; incident reporting systems as competence-maintenance infrastructure",
+        "sibling_readings": [
+          "simulation_as_sufficient",
+          "catastrophe_as_necessary"
+        ],
+        "expected_structural_delta": "Competence maintenance requires hybrid system: simulators for routine skill preservation plus active near-miss investigation and integration; catastrophes are neither necessary nor sufficient alone"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "simulation_as_sufficient",
+      "human_readable": "Simulation as Sufficient Exercise (High-Fidelity Training Equivalence)",
+      "structural_delta": "Simulator training provides cognitively and procedurally equivalent exercise to real catastrophic events for competence retention",
+      "primary_observable": "Correlation between simulator training frequency/fidelity and catastrophe-avoidance success rates; transfer-of-training validation studies",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "regulatory_training_complex",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents dominant industry/regulatory position"
+    },
+    {
+      "claim_id": "catastrophe_as_necessary",
+      "human_readable": "Catastrophe as Necessary Reset (Real Stakes Requirement)",
+      "structural_delta": "Actual catastrophic events are necessary to maintain organizational vigilance and genuine competence; simulation cannot replicate true stakes",
+      "primary_observable": "Competence decay patterns in long-incident-free periods; normalization of deviance indicators; post-catastrophe performance improvements",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "safety_dependent_populations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents safety-critical challenge to dominant paradigm"
+    },
+    {
+      "claim_id": "near_miss_as_bridge",
+      "human_readable": "Near-Miss as Bridge (Hybrid Validation System)",
+      "structural_delta": "Near-miss incidents provide real-world validation and updating mechanism for simulator training without requiring full catastrophes",
+      "primary_observable": "Near-miss reporting rates and integration into training curricula; incident investigation thoroughness; precursor event analysis",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; represents synthesis position with distinct structural mechanism"
+    },
+    {
+      "claim_id": "regulatory_capture_of_standards",
+      "human_readable": "Regulatory Capture of Training Standards (Industry Self-Certification)",
+      "structural_delta": "Training standards are set by industry-dominated bodies with incentive to minimize cost and maximize pass rates",
+      "primary_observable": "Regulatory rulemaking participation ratios; training cost trends; pass rate statistics; post-incident standard revisions",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "training_providers",
+      "victim": "public_safety",
+      "downstream_of": [
+        "simulation_as_sufficient"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream of simulation_as_sufficient reading; captured as potential tangled_rope within that constraint story"
+    },
+    {
+      "claim_id": "simulator_fidelity_ceiling",
+      "human_readable": "Simulator Fidelity Ceiling (Unmodeled Complexity)",
+      "structural_delta": "Physical and cognitive limits to simulator fidelity create systematic gaps in what can be trained",
+      "primary_observable": "Post-incident analysis of simulator vs actual event divergence; unmodeled failure modes; surprise factor in real events",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "simulation_as_sufficient",
+        "catastrophe_as_necessary"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream physical constraint but lower structural distinctiveness; feeds into both primary readings"
+    },
+    {
+      "claim_id": "organizational_memory_decay",
+      "human_readable": "Organizational Memory Decay (Knowledge Loss Across Generations)",
+      "structural_delta": "Tacit knowledge and institutional memory decay as experienced personnel retire without catastrophe-driven knowledge refresh",
+      "primary_observable": "Workforce turnover rates; incident investigation quality over time; training curriculum staleness indicators",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophe_as_necessary"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: feeds only into catastrophe_as_necessary reading; lower centrality than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "simulation_as_sufficient",
+      "kernel_id": "competence_retention_exercise",
+      "reading_id": "simulation_as_sufficient"
+    },
+    {
+      "claim_id": "catastrophe_as_necessary",
+      "kernel_id": "competence_retention_exercise",
+      "reading_id": "catastrophe_as_necessary"
+    },
+    {
+      "claim_id": "near_miss_as_bridge",
+      "kernel_id": "competence_retention_exercise",
+      "reading_id": "near_miss_as_bridge"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "regulatory_capture_of_standards",
+      "structural_delta": "Training standards set by industry-dominated bodies with cost-minimization incentive",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of simulation_as_sufficient reading; potential tangled_rope within that constraint story rather than independent axis"
+    },
+    {
+      "claim_id": "simulator_fidelity_ceiling",
+      "structural_delta": "Physical and cognitive limits to simulator fidelity create systematic training gaps",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream physical constraint feeding into both primary readings; lower structural distinctiveness than selected readings"
+    },
+    {
+      "claim_id": "organizational_memory_decay",
+      "structural_delta": "Tacit knowledge decay as experienced personnel retire without catastrophe-driven refresh",
+      "hypothesis": "piton",
+      "deferral_reason": "Feeds only into catastrophe_as_necessary reading; lower centrality and captured within that reading's scope"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_test",
+      "description": "Do the three readings emit structurally different constraints or collapse into one? If simulation_as_sufficient and near_miss_as_bridge both rely on non-catastrophe feedback loops, they may be variants of one constraint rather than distinct readings. Generation will test whether the ε values and beneficiary/victim structures actually differ.",
+      "source": "§1.3-K kernel/reading decomposition coherence check"
+    },
+    {
+      "id": "omega_medical_surgery_comparison",
+      "description": "Does surgical training (where real operations provide continuous feedback) constitute a control case? If surgeons maintain competence through real procedures rather than simulation, does this validate catastrophe_as_necessary or merely show that non-catastrophic real-world exercise suffices?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - missing comparison domain"
+    },
+    {
+      "id": "omega_normalization_of_deviance_mechanism",
+      "description": "Is normalization of deviance a mountain (inevitable drift in long-stable systems) or a snare (manageable through cultural/procedural intervention)? If mountain, catastrophe_as_necessary gains structural support. If snare, simulation_as_sufficient or near_miss_as_bridge may suffice with proper organizational design.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - who benefits from framing deviance as inevitable vs preventable"
+    },
+    {
+      "id": "omega_stakes_simulation_gap",
+      "description": "Can the psychological stakes of real catastrophe (career destruction, mass casualties, criminal liability) be simulated? If not, catastrophe_as_necessary may be correct on psychological rather than technical grounds. If yes, what mechanism creates equivalent stakes in training?",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium) - model operates in technical/procedural domain but stakes may be psychological"
+    },
+    {
+      "id": "omega_industry_divergence",
+      "description": "Why has aviation maintained near-zero catastrophe rates while nuclear has had Three Mile Island, Chernobyl, Fukushima? If both use simulation-based training, what structural difference explains outcome divergence? May invalidate kernel as cross-industry generalization.",
+      "source": "§1.1 Absence Inventory - missing analysis of outcome divergence between supposedly similar industries"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied as specified. Three readings selected represent genuinely distinct structural positions: simulation-sufficiency (regulatory/industry consensus), catastrophe-necessity (safety-critical challenge), and near-miss-bridge (synthesis via hybrid system). Coherence test deferred to generation phase via omega_reading_collapse_test."
+  },
+  "_seed_id": "aviation_nuclear_safety_retention"
+}

@@ -1,0 +1,238 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Law / Political Theology / Commitment System Dynamics",
+  "family_id": "mormon_polygamy_reversal_1890",
+  "topic_summary": "Analysis of the 1890 Manifesto reversing Mormon polygamy practice under US federal pressure. The case examines whether this represents exogenous coercion overriding a religious kernel versus endogenous reinterpretation, and whether the commitment system's revision mechanism functioned or was bypassed.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "LDS Church (religious authority claiming scriptural mandate for plural marriage)",
+      "US Federal Government (territorial sovereign enforcing monogamy via Edmunds-Tucker Act)",
+      "Wilford Woodruff (Church President who issued 1890 Manifesto)",
+      "D&C Section 132 (1843 revelation establishing polygamy as eternal principle)",
+      "Post-Manifesto fundamentalists (splinter groups maintaining original reading)"
+    ],
+    "key_tensions": [
+      "Divine command vs state law (religious obligation to practice polygamy vs federal criminalization)",
+      "Eternal principle vs temporal accommodation (immutable doctrine vs pragmatic suspension)",
+      "Prophetic authority vs kernel fidelity (President can revise vs revelation is binding)"
+    ],
+    "key_mechanisms": [
+      "Edmunds-Tucker Act enforcement (asset seizure, disenfranchisement, imprisonment creating existential threat)",
+      "Continuing revelation doctrine (living prophet can receive new revelation superseding prior)",
+      "Underground practice continuation (post-Manifesto covert polygamy by leadership 1890-1904)"
+    ],
+    "key_absences": [
+      "Formal doctrinal renunciation: Manifesto framed as suspension of practice, not error correction of D&C 132",
+      "Member consent mechanism: Revision imposed top-down without sustaining vote on doctrinal change"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "D&C Section 132 (1843 revelation) establishing plural marriage as eternal covenant required for highest exaltation",
+    "authority_description": "Prophetic succession—living Church President holds exclusive interpretive authority via continuing revelation doctrine",
+    "drift_status": "absent",
+    "candidate_pattern": "Type 2 (Prophetic Override) + Type 6 (Coerced Revision)",
+    "is_contested_kernel": true,
+    "kernel_id": "eternal_marriage_covenant",
+    "readings": [
+      {
+        "reading_id": "immutable_commandment_reading",
+        "commitment": "D&C 132 establishes polygamy as eternal, immutable divine law required for exaltation",
+        "authority_grounding": "scriptural literalism + early prophetic statements (Brigham Young: 'The only men who become Gods...are those who enter into polygamy')",
+        "sibling_readings": [
+          "prophetic_override_reading",
+          "temporal_accommodation_reading"
+        ],
+        "expected_structural_delta": "Federal pressure creates martyrdom constraint; compliance means apostasy; no legitimate revision path exists"
+      },
+      {
+        "reading_id": "prophetic_override_reading",
+        "commitment": "Continuing revelation doctrine allows living prophet to supersede prior revelation when circumstances require",
+        "authority_grounding": "Articles of Faith 9 ('we believe all that God has revealed...and that He will yet reveal many great things') + institutional hierarchy",
+        "sibling_readings": [
+          "immutable_commandment_reading",
+          "temporal_accommodation_reading"
+        ],
+        "expected_structural_delta": "Federal pressure activates prophetic authority to receive new revelation; church survival constraint supersedes practice mandate"
+      },
+      {
+        "reading_id": "temporal_accommodation_reading",
+        "commitment": "Manifesto suspends practice without renouncing doctrine; eternal principle remains valid but obedience to law of land takes precedence",
+        "authority_grounding": "12th Article of Faith ('we believe in...obeying, honoring, and sustaining the law') + pragmatic institutional preservation",
+        "sibling_readings": [
+          "immutable_commandment_reading",
+          "prophetic_override_reading"
+        ],
+        "expected_structural_delta": "Federal pressure creates temporary suspension; doctrine remains dormant pending future restoration when political constraints lift"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "immutable_commandment_reading",
+        "reading_b": "prophetic_override_reading",
+        "basis": "Immutable reading holds that no prophetic authority can supersede an eternal commandment (prophets administer but do not revise divine law); prophetic override reading holds living prophet's authority includes doctrinal revision. No framework holds both: either the law is revisable or it is not."
+      },
+      {
+        "reading_a": "immutable_commandment_reading",
+        "reading_b": "temporal_accommodation_reading",
+        "basis": "Immutable reading treats suspension-without-renunciation as illegitimate evasion (practice and doctrine are inseparable for eternal ordinances); temporal accommodation treats suspension as legitimate balancing of competing divine commands. A single framework cannot hold both that the practice is mandatory for salvation AND that its suspension is divinely approved."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "immutable_commandment_reading",
+      "human_readable": "Immutable Commandment Reading (Scriptural Literalism)",
+      "structural_delta": "D&C 132 binding as eternal law; federal pressure creates martyrdom constraint but no legitimate revision path",
+      "primary_observable": "Fundamentalist splinter group formation post-1890; doctrinal statements treating Manifesto as apostasy",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "federal_enforced_monogamists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Scriptural literalism reading with highest ε; grounds fundamentalist persistence"
+    },
+    {
+      "claim_id": "prophetic_override_reading",
+      "human_readable": "Prophetic Override Reading (Continuing Revelation Authority)",
+      "structural_delta": "Living prophet authority supersedes prior revelation; federal coercion activates revision mechanism",
+      "primary_observable": "Official LDS institutional adoption of Manifesto as binding; Second Manifesto 1904 enforcement",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_lds_leadership",
+      "victim": "polygamist_members",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Mainstream institutional reading; tangled_rope structure (authority override); distinct from literalist mountain"
+    },
+    {
+      "claim_id": "temporal_accommodation_reading",
+      "human_readable": "Temporal Accommodation Reading (Dormant Doctrine)",
+      "structural_delta": "Doctrine remains valid but practice suspended pending political conditions; underground continuation 1890-1904",
+      "primary_observable": "Leadership's covert plural marriages 1890-1904; absence of formal doctrinal renunciation in D&C",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Intermediate position explaining leadership behavior 1890-1904; distinct observable from other readings"
+    },
+    {
+      "claim_id": "federal_coercion_mechanism",
+      "human_readable": "Federal Coercion Mechanism (Edmunds-Tucker Existential Threat)",
+      "structural_delta": "Asset seizure, leadership imprisonment, and statehood denial creating existential organizational threat",
+      "primary_observable": "Edmunds-Tucker Act provisions; church property confiscation; Utah statehood timeline correlation with Manifesto",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "prophetic_override_reading",
+        "temporal_accommodation_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: physical constraint underlying all readings but lower structural complexity than reading axes themselves"
+    },
+    {
+      "claim_id": "m_set_gap_structure",
+      "human_readable": "M-Set Gap (Exogenous Override vs Endogenous Revision)",
+      "structural_delta": "Revision driven by external coercion rather than internal doctrinal evolution; no functioning revision mechanism",
+      "primary_observable": "Timing correlation (Manifesto immediately follows intensified federal enforcement); absence of internal theological debate preceding reversal",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "federal_government",
+      "victim": "commitment_system_integrity",
+      "downstream_of": [
+        "federal_coercion_mechanism"
+      ],
+      "feeds_into": [
+        "prophetic_override_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-level structural analysis; captured via prophetic_override reading's tangled_rope beneficiary structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "immutable_commandment_reading",
+      "kernel_id": "eternal_marriage_covenant",
+      "reading_id": "immutable_commandment_reading"
+    },
+    {
+      "claim_id": "prophetic_override_reading",
+      "kernel_id": "eternal_marriage_covenant",
+      "reading_id": "prophetic_override_reading"
+    },
+    {
+      "claim_id": "temporal_accommodation_reading",
+      "kernel_id": "eternal_marriage_covenant",
+      "reading_id": "temporal_accommodation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "federal_coercion_mechanism",
+      "structural_delta": "Edmunds-Tucker Act creating existential organizational threat",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint underlying all readings; lower structural complexity than reading-level analyses"
+    },
+    {
+      "claim_id": "m_set_gap_structure",
+      "structural_delta": "Exogenous coercion overriding endogenous revision mechanism",
+      "hypothesis": "snare",
+      "deferral_reason": "Meta-level structural analysis; beneficiary structure captured via prophetic_override reading's tangled_rope classification"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_underground_continuation",
+      "description": "Post-Manifesto covert polygamy by leadership 1890-1904 suggests temporal_accommodation was official position but leadership maintained immutable_commandment privately. Did prophetic_override fully activate only with Second Manifesto 1904?",
+      "source": "Absence Inventory (§1.1) + temporal_accommodation reading structural analysis"
+    },
+    {
+      "id": "omega_fundamentalist_legitimacy",
+      "description": "If immutable_commandment reading is correct, fundamentalist splinter groups are doctrinally legitimate and mainstream LDS apostate. If prophetic_override correct, fundamentalists reject valid authority. No neutral ground exists—one reading's legitimacy is the other's apostasy.",
+      "source": "Axiom contradiction between immutable_commandment and prophetic_override readings"
+    },
+    {
+      "id": "omega_revision_mechanism",
+      "description": "Did continuing revelation doctrine provide legitimate endogenous revision path, or was it retrofit to rationalize exogenous coercion? Drift_status='absent' suggests revision mechanism did not function—Manifesto was imposed, not deliberated. But prophetic_override reading claims mechanism functioned exactly as designed.",
+      "source": "Commitment system recognition + M-set gap deferred axis"
+    },
+    {
+      "id": "omega_statehood_causation",
+      "description": "Utah statehood granted 1896 (6 years post-Manifesto). Was statehood the actual constraint (making federal_coercion a Rope coordinating territorial vs state status) rather than pure coercion (Mountain)? Changes federal_coercion classification.",
+      "source": "Dark Matter Probe 1 (Operational Medium)—analysis assumes coercion as Mountain; statehood-as-goal reframes as coordination problem"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings successfully captures structural contest between scriptural literalism, prophetic authority, and pragmatic accommodation. Axiom contradictions properly identified between immutable/override and immutable/accommodation pairs. Deferred axes appropriately capture physical constraint and meta-level analysis without redundancy."
+  },
+  "_seed_id": "mormon_polygamy_manifesto_1890"
+}

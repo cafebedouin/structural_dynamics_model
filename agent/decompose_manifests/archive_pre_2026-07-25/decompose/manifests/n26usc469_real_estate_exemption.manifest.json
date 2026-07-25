@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Tax Law / Real Estate Investment / Regulatory Interpretation",
+  "family_id": "irc_469_real_estate_exemption",
+  "topic_summary": "Analysis of IRC Section 469's real estate professional exemption, which allows qualifying taxpayers to deduct passive real estate losses against ordinary income. The statutory text establishes material participation requirements, but interpretive ambiguity in 'more than half of personal services' and '750 hours' creates a contested boundary between legitimate professional classification and strategic tax sheltering.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "IRC Section 469 (statutory text establishing passive activity loss limitations)",
+      "IRS (interpretive authority via Revenue Procedures, audit enforcement)",
+      "Real Estate Professional (statutory classification with material participation test)",
+      "Tax Court (adjudicative body resolving disputes over qualification)",
+      "High-income taxpayers (primary beneficiaries of exemption when qualified)",
+      "General Fund / social programs (victim of foregone revenue when exemption exploited)"
+    ],
+    "key_tensions": [
+      "IRS enforcement posture (narrow gate, high documentation bar) vs taxpayer maximization (broad interpretation, minimal compliance friction)",
+      "Statutory text ambiguity ('more than half', 'material participation') vs need for administrable bright-line rules"
+    ],
+    "key_mechanisms": [
+      "Material participation test (750 hours + majority-of-time requirement as gating mechanism)",
+      "Contemporaneous time log requirement (IRS enforcement via Rev Proc 2011-34 creating documentation burden)",
+      "Grouping election under Reg 1.469-9 (allows aggregation of multiple properties to meet hour threshold)"
+    ],
+    "key_absences": [
+      "Absence of third-party verification requirement for time logs (unlike W-2 wage reporting)",
+      "Absence of Congressional clarity on whether exemption intended for small landlords or large-scale investors"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_gatekeeper_reading",
+      "human_readable": "Strict Gatekeeper Reading (IRS Narrow Interpretation)",
+      "structural_delta": "Material participation construed as requiring verifiable, substantial, regular personal labor in property operations, with high documentation bar and skepticism toward time log self-reporting",
+      "primary_observable": "Audit adjustment rate for REP claims; Tax Court ruling frequency upholding IRS disallowance",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_contested_kernel",
+      "beneficiary": "general_fund_revenue_protection",
+      "victim": "high_income_real_estate_investors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "kernel_id": "irc_469_material_participation_kernel",
+      "reading_id": "strict_gatekeeper_reading",
+      "sibling_readings": [
+        "strategic_shelter_reading"
+      ],
+      "expected_structural_delta": "High suppression of passive loss deductions; narrow set of qualifying taxpayers; high compliance friction",
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1
+    },
+    {
+      "claim_id": "strategic_shelter_reading",
+      "human_readable": "Strategic Shelter Reading (Industry Broad Interpretation)",
+      "structural_delta": "Material participation construed as permissive threshold achievable through aggressive time log construction, property grouping elections, and minimal-substance activities counted toward 750-hour requirement",
+      "primary_observable": "Industry advisory guidance promoting REP status; volume of grouping elections filed; tax planning product market size",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_contested_kernel",
+      "beneficiary": "high_income_real_estate_investors",
+      "victim": "general_fund_revenue",
+      "downstream_of": [],
+      "feeds_into": [],
+      "kernel_id": "irc_469_material_participation_kernel",
+      "reading_id": "strategic_shelter_reading",
+      "sibling_readings": [
+        "strict_gatekeeper_reading"
+      ],
+      "expected_structural_delta": "Low friction access to passive loss deductions; large qualifying population; revenue leakage via strategic compliance",
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2
+    },
+    {
+      "claim_id": "statutory_ambiguity_substrate",
+      "human_readable": "Statutory Ambiguity Substrate (Text-Level Indeterminacy)",
+      "structural_delta": "IRC 469(c)(7) text leaves 'material participation' and 'more than half of personal services' operationally undefined, creating interpretive space that neither IRS regulations nor case law has fully closed",
+      "primary_observable": "Frequency of Tax Court disputes over hour-counting methodology; variance in Circuit court interpretations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_gatekeeper_reading",
+        "strategic_shelter_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Upstream substrate that enables contested readings; different type (mountain vs tangled_rope readings)"
+    },
+    {
+      "claim_id": "grouping_election_scaffold",
+      "human_readable": "Grouping Election Scaffold (Reg 1.469-9 Aggregation Mechanism)",
+      "structural_delta": "Regulatory permission to aggregate multiple rental properties as single activity enables meeting 750-hour threshold through distributed activity across portfolio rather than per-property intensity",
+      "primary_observable": "Percentage of REP claimants filing grouping elections; portfolio size correlation with REP qualification",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "large_portfolio_investors",
+      "victim": null,
+      "downstream_of": [
+        "strategic_shelter_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "deferral_reason": "Specific mechanism downstream of strategic_shelter_reading; captured implicitly in reading-level constraint story"
+    },
+    {
+      "claim_id": "documentation_enforcement_gap",
+      "human_readable": "Documentation Enforcement Gap (Self-Reported Time Log Unverifiability)",
+      "structural_delta": "Unlike W-2 wage reporting with third-party verification, REP time logs are self-reported contemporaneous records with no independent verification requirement, creating enforcement asymmetry",
+      "primary_observable": "Audit detection rate for fabricated time logs; IRS resource allocation to REP audits vs total examinations",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "sophisticated_tax_planners",
+      "victim": "compliant_taxpayers_via_enforcement_cost",
+      "downstream_of": [
+        "strategic_shelter_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "deferral_reason": "Enforcement mechanism downstream of reading contest; omega material on verification infrastructure absence"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "statutory_ambiguity_substrate",
+      "kernel_id": "irc_469_material_participation_kernel",
+      "reading_id": "statutory_ambiguity_substrate"
+    },
+    {
+      "claim_id": "strict_gatekeeper_reading",
+      "kernel_id": "irc_469_material_participation_kernel",
+      "reading_id": "strict_gatekeeper_reading"
+    },
+    {
+      "claim_id": "strategic_shelter_reading",
+      "kernel_id": "irc_469_material_participation_kernel",
+      "reading_id": "strategic_shelter_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "grouping_election_scaffold",
+      "structural_delta": "Reg 1.469-9 aggregation mechanism enables portfolio-level hour threshold attainment",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Specific tactical mechanism downstream of strategic_shelter_reading; implicit in reading-level analysis"
+    },
+    {
+      "claim_id": "documentation_enforcement_gap",
+      "structural_delta": "Self-reported time logs lack third-party verification infrastructure",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement gap is consequence of reading contest; omega material on verification absence"
+    }
+  ],
+  "commitment_system_recognition": {
+    "kernel_description": "IRC Section 469(c)(7) statutory text establishing material participation requirements for real estate professional exemption from passive activity loss limitations",
+    "authority_description": "IRS holds interpretive authority via Revenue Procedures and audit enforcement; Tax Court adjudicates disputes; authority grounded in statutory delegation rather than textual immutability",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "irc_469_material_participation_kernel",
+    "readings": [
+      {
+        "reading_id": "strict_gatekeeper_reading",
+        "commitment": "Material participation requires verifiable, substantial personal labor with high documentation bar",
+        "authority_grounding": "IRS enforcement posture via Rev Proc 2011-34 and audit practice; protective of general fund revenue",
+        "sibling_readings": [
+          "strategic_shelter_reading"
+        ],
+        "expected_structural_delta": "Narrow qualifying population; high compliance friction; passive losses rarely deductible against ordinary income"
+      },
+      {
+        "reading_id": "strategic_shelter_reading",
+        "commitment": "Material participation is permissive threshold achievable through aggressive hour-counting and grouping elections",
+        "authority_grounding": "Tax planning industry practice; taxpayer-favorable Tax Court precedents; wealth preservation orientation",
+        "sibling_readings": [
+          "strict_gatekeeper_reading"
+        ],
+        "expected_structural_delta": "Broad qualifying population; low compliance friction; systematic passive loss deduction enabling wealth preservation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_gatekeeper_reading",
+        "reading_b": "strategic_shelter_reading",
+        "basis": "Strict reading holds that exemption requires genuine vocational commitment to real estate operations (desert-based access to tax benefit); strategic reading holds that exemption is mechanical threshold claimable through formal compliance regardless of economic substance (formalist entitlement). No coherent tax policy framework simultaneously holds both: either the exemption gates based on genuine professional activity or it does not."
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "omega_congressional_intent_ambiguity",
+      "description": "Legislative history of IRC 469(c)(7) does not definitively resolve whether Congress intended exemption for small active landlords (5-10 units, genuine sweat equity) or for large-scale investors (100+ unit portfolios with professional management). This ambiguity is structural substrate enabling the reading contest.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_third_party_verification_absence",
+      "description": "Unlike W-2 wage reporting or brokerage 1099 forms, REP time logs have no third-party verification requirement. Is this absence a deliberate Congressional choice (low-friction access for small landlords) or an enforcement gap (unintended exploitation vector)? Shifts classification of documentation_enforcement_gap between scaffold and snare.",
+      "source": "Deferred axis documentation_enforcement_gap + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_tax_court_circuit_split_risk",
+      "description": "If Circuit courts split on grouping election or time-counting methodology, does the kernel fracture into multiple sub-kernels (regional variation in effective law) or does Supreme Court review collapse readings into single authoritative interpretation?",
+      "source": "Structural analysis of authority_description in commitment_system_recognition"
+    },
+    {
+      "id": "omega_mountain_classification_validity",
+      "description": "Is statutory_ambiguity_substrate truly a mountain (immutable text requiring Congressional amendment) or a piton (interpretive flexibility that IRS could close via regulatory tightening under existing statutory authority)? Depends on scope of Chevron deference post-Loper Bright.",
+      "source": "F03 self-scan (Hasty Generalization potential for mountain classification)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: statutory_ambiguity_substrate classified as mountain (immutable statutory text) but post-Loper Bright Chevron deference landscape may reclassify it as piton if IRS regulatory authority to tighten interpretation is narrower than assumed. Generated omega_mountain_classification_validity to bound this uncertainty. Also flagged: the kernel contest is genuine (readings emit different constraint types and beneficiary/victim structures) but relies on assumption that IRS enforcement posture and industry practice constitute stable 'readings' rather than tactical positions within single shared interpretation. If both parties privately agree on textual meaning and differ only on enforcement rigor, the kernel collapses into a single constraint with variance in enforcement epsilon. However, case law and advisory guidance suggest genuine axiom-level disagreement (formalist vs substance-based access to exemption), so is_contested_kernel=true is warranted."
+  },
+  "_seed_id": "n26usc469_real_estate_exemption"
+}

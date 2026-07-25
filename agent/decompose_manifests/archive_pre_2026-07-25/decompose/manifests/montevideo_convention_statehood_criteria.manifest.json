@@ -1,0 +1,257 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Political Philosophy / State Theory",
+  "family_id": "montevideo_statehood_criteria",
+  "topic_summary": "Analysis of the Montevideo Convention's criteria for statehood (population, territory, government, capacity for relations) as a contested kernel. Two structurally distinct readings exist: declaratory (criteria as objective constraints sufficient for statehood regardless of recognition) and constitutive (criteria necessary but recognition decisive). The readings instantiate different constraints with opposing authority structures and beneficiary/victim sets.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Montevideo Convention 1933 (treaty codifying statehood criteria)",
+      "De facto authorities / secessionist regimes (entities controlling territory)",
+      "Parent states (existing states facing secessionist claims)",
+      "Great powers (UN Security Council permanent members, G7)",
+      "International organizations (UN, regional bodies)",
+      "Unrecognized/partially recognized polities (Taiwan, Northern Cyprus, Somaliland, etc.)"
+    ],
+    "key_tensions": [
+      "Objective criteria vs recognition gatekeeping (declaratory vs constitutive readings)",
+      "Effective control vs diplomatic/economic access (de facto authorities vs international system)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "declaratory_reading",
+      "human_readable": "Declaratory Reading (Criteria as Objective Constraints)",
+      "structural_delta": "Meeting Montevideo criteria (population, territory, government, capacity) is sufficient for statehood; recognition merely acknowledges pre-existing fact",
+      "primary_observable": "Frequency of legal arguments citing Montevideo as self-executing; success rate of statehood claims based solely on effective control",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "de_facto_authorities",
+      "victim": "parent_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct authority structure (legal formalism); benefits secessionist regimes by removing recognition as gate",
+      "kernel_id": "montevideo_statehood_criteria",
+      "reading_id": "declaratory_reading",
+      "interpretive_commitment": "Statehood is an objective legal status arising from factual criteria",
+      "authority_grounding": "Legal formalism / treaty text literalism",
+      "sibling_readings": [
+        "constitutive_reading",
+        "hybrid_reading"
+      ]
+    },
+    {
+      "claim_id": "constitutive_reading",
+      "human_readable": "Constitutive Reading (Recognition as Decisive Constraint)",
+      "structural_delta": "Montevideo criteria are necessary but recognition by existing states is the decisive constraint for statehood",
+      "primary_observable": "Gatekeeping behavior by major powers; UN membership conditioned on Security Council approval; treaty participation rules",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "existing_states",
+      "victim": "unrecognized_polities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; captures current system operation where recognition determines access despite control",
+      "kernel_id": "montevideo_statehood_criteria",
+      "reading_id": "constitutive_reading",
+      "interpretive_commitment": "Statehood is a status conferred by the international community of states",
+      "authority_grounding": "Great-power practice / institutional gatekeeping",
+      "sibling_readings": [
+        "declaratory_reading",
+        "hybrid_reading"
+      ]
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading (Criteria Plus Legitimacy Threshold)",
+      "structural_delta": "Montevideo criteria plus normative legitimacy conditions (democratic governance, human rights, non-aggression) determine statehood",
+      "primary_observable": "Post-Cold War recognition patterns (Kosovo vs Crimea); conditional recognition statements citing governance standards",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": "liberal_democratic_states",
+      "victim": "non_liberal_secessionists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Emerging practice reading; distinct beneficiary structure (liberal order maintenance) and different observable set",
+      "kernel_id": "montevideo_statehood_criteria",
+      "reading_id": "hybrid_reading",
+      "interpretive_commitment": "Statehood requires both factual control and normative legitimacy",
+      "authority_grounding": "Liberal international order norms / R2P doctrine",
+      "sibling_readings": [
+        "declaratory_reading",
+        "constitutive_reading"
+      ]
+    },
+    {
+      "claim_id": "effective_control_mountain",
+      "human_readable": "Effective Control as Physical Substrate",
+      "structural_delta": "Physical capacity to control territory and population—administrative apparatus, monopoly on force",
+      "primary_observable": "Territory controlled; population governed; enforcement capacity; border integrity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "declaratory_reading",
+        "constitutive_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: all readings presuppose effective control as necessary condition; captured in reading descriptions"
+    },
+    {
+      "claim_id": "recognition_network_effects",
+      "human_readable": "Recognition as Network Coordination",
+      "structural_delta": "Recognition creates diplomatic/economic access through network effects (treaty participation, banking, air traffic)",
+      "primary_observable": "Number of bilateral treaties; banking system access; international organization membership",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "constitutive_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism through which constitutive reading operates; not independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "declaratory_reading",
+      "kernel_id": "montevideo_statehood_criteria",
+      "reading_id": "declaratory_reading"
+    },
+    {
+      "claim_id": "constitutive_reading",
+      "kernel_id": "montevideo_statehood_criteria",
+      "reading_id": "constitutive_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "montevideo_statehood_criteria",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "effective_control_mountain",
+      "structural_delta": "Physical capacity to control territory and population",
+      "hypothesis": "mountain",
+      "deferral_reason": "All readings presuppose effective control as necessary condition; substrate rather than independent constraint"
+    },
+    {
+      "claim_id": "recognition_network_effects",
+      "structural_delta": "Recognition creates access through network coordination",
+      "hypothesis": "rope",
+      "deferral_reason": "Mechanism through which constitutive reading operates; not structurally independent"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_secession_legitimacy",
+      "description": "Does the hybrid reading's legitimacy threshold apply symmetrically? If existing states can deny recognition to Kosovo but grant it to South Sudan based on governance criteria, is this a normative constraint or disguised geopolitical preference?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + hybrid_reading analysis"
+    },
+    {
+      "id": "omega_declaratory_enforcement",
+      "description": "Under declaratory reading, who enforces the criteria? Without recognition-based exclusion mechanism, what prevents spurious statehood claims? Is criteria-meeting verification itself a form of constitutive gatekeeping?",
+      "source": "§1.3-K independence testing between readings"
+    },
+    {
+      "id": "omega_indigenous_sovereignty",
+      "description": "Do indigenous nations with effective self-governance meet Montevideo criteria but lack statehood due to historical subordination? If so, all three readings may share an unexamined premise (territorial exclusivity of state sovereignty) that forecloses polity forms outside the Westphalian model.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_micronation_exclusion",
+      "description": "Why don't micronations (Sealand, Liberland) meeting declaratory criteria achieve statehood? Is there an implicit minimum viability threshold (population size, economic capacity) that all readings share but the Convention text does not specify?",
+      "source": "§2.1 multi-lens scan (comparative state theory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: the three readings hold mutually exclusive axioms about the source of legal authority (treaty text vs state practice vs normative order) and instantiate structurally distinct constraints with different beneficiary/victim sets."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Montevideo Convention's four criteria for statehood (permanent population, defined territory, government, capacity to enter into relations with other states) as stabilized textual commitment",
+    "authority_description": "Contested: declaratory reading grounds authority in treaty text and legal formalism; constitutive reading grounds authority in state practice and great-power consensus; hybrid reading grounds authority in liberal international order norms",
+    "drift_status": "partial",
+    "candidate_pattern": "forking_authority",
+    "is_contested_kernel": true,
+    "kernel_id": "montevideo_statehood_criteria",
+    "readings": [
+      {
+        "reading_id": "declaratory_reading",
+        "commitment": "Meeting the four objective criteria establishes statehood as a legal fact",
+        "authority_grounding": "Legal formalism / treaty text literalism",
+        "sibling_readings": [
+          "constitutive_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "De facto authorities enter victim set under recognition denial; parent states lose structural leverage to condition recognition; international law becomes self-executing rather than consensus-dependent"
+      },
+      {
+        "reading_id": "constitutive_reading",
+        "commitment": "Statehood requires recognition by the existing community of states",
+        "authority_grounding": "Great-power practice / institutional membership gatekeeping",
+        "sibling_readings": [
+          "declaratory_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Unrecognized polities enter victim set; existing states retain structural veto over new state creation; treaty participation and economic access depend on recognition"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Statehood requires objective criteria plus normative legitimacy (democratic governance, human rights, non-aggression)",
+        "authority_grounding": "Liberal international order norms / Responsibility to Protect doctrine",
+        "sibling_readings": [
+          "declaratory_reading",
+          "constitutive_reading"
+        ],
+        "expected_structural_delta": "Non-liberal secessionists enter victim set; liberal democratic states gain normative justification for recognition denial; humanitarian intervention and regime change gain legal cover"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "declaratory_reading",
+        "reading_b": "constitutive_reading",
+        "basis": "Declaratory axiom: legal status arises from factual criteria (law describes reality). Constitutive axiom: legal status arises from collective recognition (law creates reality). No single framework can hold both—one must be the generative source of statehood."
+      },
+      {
+        "reading_a": "declaratory_reading",
+        "reading_b": "hybrid_reading",
+        "basis": "Declaratory axiom: objective factual criteria are sufficient. Hybrid axiom: normative legitimacy conditions are necessary. If legitimacy is necessary, criteria alone cannot be sufficient."
+      },
+      {
+        "reading_a": "constitutive_reading",
+        "reading_b": "hybrid_reading",
+        "basis": "Constitutive axiom: recognition authority derives from state sovereignty (no external normative constraint on recognition decisions). Hybrid axiom: recognition must conform to liberal order norms (external normative constraint on sovereignty). No framework can hold both state practice as sovereign and normatively constrained simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "montevideo_convention_statehood_criteria"
+}

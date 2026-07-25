@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Science / Public Opinion Research / Democratic Theory",
+  "family_id": "pew_american_political_fragmentation_2025",
+  "topic_summary": "Analysis of Pew Research Center's 2025-2026 American Trends Panel surveys revealing deep internal divisions within both major U.S. political parties, declining institutional trust, and a politically fragmented electorate sorted into nine distinct typology groups. The surveys document cross-cutting value systems that challenge traditional left-right partisan frameworks, with significant generational, cultural, and economic fault lines within party coalitions.",
+  "extraction_summary": {
+    "entity_count": 15,
+    "claim_count": 8,
+    "tension_count": 6,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Pew Research Center (nonpartisan polling organization conducting longitudinal political typology research)",
+      "American Trends Panel (probability-based survey panel of ~10,000 U.S. adults)",
+      "Nine Political Typology Groups (Faith First Conservatives, No Apologies Right, Unconventional Right, Pragmatic and Polite Right, Order and Opportunity Left, Left-Out Left, Loyal Liberals, Leftward Progressives, plus one centrist group)",
+      "Republican Party (coalition containing four identified right-leaning groups with internal divisions)",
+      "Democratic Party (coalition containing four identified left-leaning groups with internal divisions)",
+      "Left-Out Left (12% of adults; most likely to say neither party represents them)",
+      "Pragmatic and Polite Right (11% of adults; Republican-leaning but frustrated with GOP)",
+      "Leftward Progressives (7% of adults; youngest, most ideologically progressive Democratic group)",
+      "U.S. Political System (institutional framework experiencing declining public confidence)",
+      "Survey Respondents (10,357 panelists in Wave 183; representative sample of U.S. adults)"
+    ],
+    "key_tensions": [
+      "Partisan identity vs. intra-party ideological diversity (party labels obscure deep internal disagreements)",
+      "Traditional left-right spectrum vs. cross-cutting value dimensions (cultural, economic, and stylistic divisions don't align with party)",
+      "Party loyalty vs. representation dissatisfaction (many voters support party candidates while saying neither party represents them)",
+      "Generational cohorts within parties (age-based value differences creating internal coalition stress)",
+      "Political engagement vs. efficacy skepticism (high information consumption coexisting with low confidence in voting impact)",
+      "Institutional legitimacy vs. performance dissatisfaction (system-level trust erosion despite continued participation)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "intra_party_fragmentation",
+      "human_readable": "Intra-Party Fragmentation (Internal Coalition Diversity)",
+      "structural_delta": "Both major parties contain multiple distinct value clusters with conflicting policy preferences and cultural orientations that cannot be reconciled through traditional left-right positioning",
+      "primary_observable": "Distribution of typology group membership within party coalitions; within-party variance on policy questions (abortion, gun rights, transgender issues, democratic socialism); percentage saying party doesn't represent them well despite voting for party candidates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "party_leadership_maintaining_coalition",
+      "victim": "voters_seeking_coherent_representation",
+      "downstream_of": [],
+      "feeds_into": [
+        "representation_legitimacy_gap",
+        "generational_value_divergence"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; core structural finding of the typology research; feeds into multiple downstream axes"
+    },
+    {
+      "claim_id": "representation_legitimacy_gap",
+      "human_readable": "Representation Legitimacy Gap (Party-Voter Alignment Failure)",
+      "structural_delta": "Significant portion of electorate votes for party candidates while simultaneously reporting that neither party represents them well or cares about people like them",
+      "primary_observable": "Percentage saying neither party represents them well (18% overall, 39% among Left-Out Left); percentage saying neither party cares about people like them; gap between party voting behavior and party favorability ratings",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "two_party_duopoly",
+      "victim": "voters_without_viable_alternatives",
+      "downstream_of": [
+        "intra_party_fragmentation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable from intra-party fragmentation; captures voter-institution relationship rather than internal party structure; snare mechanism warrants independent analysis"
+    },
+    {
+      "claim_id": "generational_value_divergence",
+      "human_readable": "Generational Value Divergence (Age-Based Coalition Instability)",
+      "structural_delta": "Systematic age-based differences in typology group membership and policy preferences within party coalitions, creating temporal instability in coalition composition",
+      "primary_observable": "Age distribution across typology groups (26% of young Democrats are Leftward Progressives vs. 6% of older Democrats; 25% of older Democrats are Loyal Liberals vs. 16% of young Democrats); age-correlated policy preference gaps on cultural issues",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "intra_party_fragmentation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Temporally distinct mechanism from static fragmentation; age cohort replacement creates dynamic rather than fixed coalition structure"
+    },
+    {
+      "claim_id": "institutional_trust_erosion",
+      "human_readable": "Institutional Trust Erosion (System-Level Confidence Decline)",
+      "structural_delta": "Declining confidence in political system, voting efficacy, and interpersonal trust, independent of partisan affiliation or policy preferences",
+      "primary_observable": "Confidence in political system (44% not too much/none at all); voting efficacy (39% say voting doesn't affect government); interpersonal trust (53% say most people can't be trusted); elite understanding perception (75% say elites understand challenges not too well/not at all)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "representation_legitimacy_gap"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Structurally independent from party fragmentation; operates at system level rather than coalition level; mountain providing baseline constraint"
+    },
+    {
+      "claim_id": "cross_cutting_cultural_axes",
+      "human_readable": "Cross-Cutting Cultural Axes (Non-Partisan Value Dimensions)",
+      "structural_delta": "Cultural and stylistic preferences (humiliating opponents, offensive speech tolerance, religious values in government) that divide both party coalitions rather than distinguishing between them",
+      "primary_observable": "Within-party variance on cultural comfort questions (pronouns, guns in public, Confederate flags, transgender athletes); within-party splits on political style questions (humiliating opponents, offensive speech as problem)",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "cultural_issue_entrepreneurs",
+      "victim": "voters_seeking_consistent_cultural_packages",
+      "downstream_of": [],
+      "feeds_into": [
+        "intra_party_fragmentation"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as component of intra_party_fragmentation rather than independent axis; cultural divisions are manifestation of broader coalition diversity"
+    },
+    {
+      "claim_id": "economic_fairness_perception",
+      "human_readable": "Economic Fairness Perception (Systemic Equity Assessment)",
+      "structural_delta": "Majority perception that economic system is unfair, with cross-partisan agreement on inequality as major problem despite disagreement on solutions",
+      "primary_observable": "Economic system fairness rating (50% not too/not at all fair); economic inequality as very big problem (47%); financial situation distribution (only 27% live comfortably); billionaire existence assessment",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "intra_party_fragmentation"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic perceptions feed into party fragmentation but lack independent structural mechanism; captured as input to coalition diversity rather than distinct constraint"
+    },
+    {
+      "claim_id": "methodological_panel_effects",
+      "human_readable": "Methodological Panel Effects (Survey Design Influence on Findings)",
+      "structural_delta": "Longitudinal panel design with high retention rates may produce different typology distributions than cross-sectional sampling due to panel conditioning and attrition patterns",
+      "primary_observable": "92% response rate among sampled panelists; comparison of panel vs. phone trend data where available; stability of typology group membership over time",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological consideration rather than substantive political structure; omega-level uncertainty about measurement validity"
+    }
+  ],
+  "generation_sequence": [
+    "intra_party_fragmentation",
+    "generational_value_divergence",
+    "representation_legitimacy_gap",
+    "institutional_trust_erosion"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "cross_cutting_cultural_axes",
+      "structural_delta": "Cultural and stylistic preferences that divide both party coalitions",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Captured as component manifestation of intra_party_fragmentation rather than structurally independent axis; cultural divisions are expression of broader coalition diversity"
+    },
+    {
+      "claim_id": "economic_fairness_perception",
+      "structural_delta": "Majority perception that economic system is unfair with cross-partisan agreement",
+      "hypothesis": "rope",
+      "deferral_reason": "Economic perceptions feed into party fragmentation but lack independent structural mechanism; input to coalition diversity rather than distinct constraint"
+    },
+    {
+      "claim_id": "methodological_panel_effects",
+      "structural_delta": "Longitudinal panel design influence on typology distributions",
+      "hypothesis": "piton",
+      "deferral_reason": "Methodological consideration rather than substantive political structure; omega-level uncertainty about measurement validity"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_typology_stability",
+      "description": "Are the nine typology groups stable categories or fluid positions? If individuals move between groups over time, the fragmentation may be less structural than the snapshot suggests. Longitudinal tracking of individual panelists would test whether typology membership is durable identity or context-dependent positioning.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - panel design enables longitudinal analysis not reported"
+    },
+    {
+      "id": "omega_non_voter_structure",
+      "description": "Analysis focuses on survey respondents and registered voters, but 2024 turnout was ~66% of eligible population. Do non-voters constitute additional typology groups with distinct value structures, or are they distributed across existing groups? The 34% who don't vote may have systematically different constraint structures.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - non-voter political structure not examined"
+    },
+    {
+      "id": "omega_elite_coordination",
+      "description": "If intra-party fragmentation is as severe as data suggests, how do party elites maintain coalition discipline for legislative voting and candidate nomination? Either (1) elite coordination mechanisms are more powerful than voter preference diversity, or (2) legislative behavior doesn't reflect voter typology distribution. Both possibilities have distinct extractiveness implications.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - party leadership benefits from obscuring internal diversity"
+    },
+    {
+      "id": "omega_measurement_validity",
+      "description": "92% response rate among sampled panelists is exceptionally high for contemporary surveys. Panel conditioning (repeated exposure to political questions) may produce more ideologically consistent responses than general population holds. Cross-validation against non-panel probability samples would test whether typology structure is measurement artifact.",
+      "source": "Deferred axis methodological_panel_effects"
+    },
+    {
+      "id": "omega_causal_direction",
+      "description": "Does intra-party fragmentation cause representation legitimacy gap, or does legitimacy gap cause voters to perceive more internal party disagreement than exists? Survey data shows correlation but cannot establish whether coalition diversity drives dissatisfaction or dissatisfaction drives perception of diversity.",
+      "source": "§3 Independence Testing - causal relationship between axes uncertain"
+    },
+    {
+      "id": "omega_international_comparison",
+      "description": "Is U.S. party fragmentation unusual among democracies, or is this pattern universal in two-party systems? Multi-party parliamentary systems may distribute these typology groups across separate parties rather than containing them within two coalitions. Comparative analysis would test whether fragmentation is structural feature of two-party systems or U.S.-specific phenomenon.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - analysis assumes U.S. two-party system as background"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: institutional_trust_erosion classified as mountain (structural feature independent of political system) but may be piton of recent policy choices and elite behavior rather than inevitable feature of democratic systems. Global comparison and historical U.S. data would test whether current trust levels represent stable equilibrium or recoverable decline. Generated omega_mountain_validity and omega_international_comparison to bound this uncertainty."
+  }
+}

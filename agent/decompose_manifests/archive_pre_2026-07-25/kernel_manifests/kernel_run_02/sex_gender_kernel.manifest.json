@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Law / Social Policy / Bioethics",
+  "family_id": "sex_gender_category_kernel_2026",
+  "topic_summary": "Analysis of the contested category kernel 'woman' (or 'female') as read through sex-defined-by-biology versus gender-defined-by-identity frameworks. Each reading emits constraints with different membership criteria, different victim sets, and incompatible policy implications across domains including sports eligibility, violence-against-women frameworks, and sex-segregated spaces. The debate tests whether these readings can coexist within a single coherent legal/policy framework.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "U.N. Commission on the Status of Women (international policy forum; site of definitional contest)",
+      "U.S. Trump Administration / Education Secretary Linda McMahon (state actor; sex-based reading enforcement)",
+      "Alliance Defending Freedom (legal advocacy; sex-based reading litigation)",
+      "Hands Across the Aisle Coalition (bi-partisan feminist coalition; sex-based reading advocacy)",
+      "GLAAD / transgender advocacy organizations (identity-based reading advocacy)",
+      "International Olympic Committee (regulatory body; performance-advantage framework)",
+      "Caster Semenya (intersex athlete; boundary case for both readings)",
+      "Title IX of Education Amendments 1972 (U.S. federal law; contested interpretive kernel)",
+      "Stoller & Greenson 1964 / Money 1970s (historical origin of gender-identity concept)",
+      "Second-wave feminists (historical actors; sex-based category defense)",
+      "Permissive-policy states (identity-aligned sports eligibility)",
+      "Restrictive-policy states (sex-assigned-at-birth sports eligibility)"
+    ],
+    "key_tensions": [
+      "Cisgender female athletes vs transgender female athletes (sports eligibility; incompatible victim sets)",
+      "Violence-against-women frameworks (sex-based vs identity-based protected categories)",
+      "U.S. 2026 U.N. resolution (sex-binary definition) vs EU/Sweden opposition (gender-identity inclusion)",
+      "Intersex athletes (Semenya case) vs binary-sex sports categories (neither reading fully accommodates)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The category 'woman' (or 'female') as the basis for legal protection, policy eligibility, and rights adjudication",
+    "authority_description": "Interpretive legitimacy contested between biological-science institutions (chromosomes/anatomy as fixed reference) and social-science/human-rights institutions (self-identification as authoritative)",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Drift Absorption (partial) transitioning to Covert Revision Accumulation",
+    "is_contested_kernel": true,
+    "kernel_id": "woman_category",
+    "readings": [
+      {
+        "reading_id": "sex_biology_reading",
+        "commitment": "Category membership determined by chromosomal/anatomical/reproductive biology; 'woman' = adult human female with XX chromosomes and female reproductive anatomy (typical case)",
+        "authority_grounding": "Biological science; evolutionary biology; medical taxonomy; second-wave feminist theory (sex-based oppression analysis)",
+        "sibling_readings": [
+          "gender_identity_reading",
+          "intersex_accommodation_reading"
+        ],
+        "expected_structural_delta": "Victim set = people with female biology; excludes transgender women from sex-segregated protections; includes intersex people ambiguously; high ε in sports (performance advantage framework) and violence-against-women policy (sex-based data collection)"
+      },
+      {
+        "reading_id": "gender_identity_reading",
+        "commitment": "Category membership determined by internal gender identity; 'woman' = person who identifies as a woman regardless of assigned sex at birth",
+        "authority_grounding": "Psychological science (Stoller/Money lineage); human rights frameworks (self-determination); transgender advocacy; U.N. gender-mainstreaming policy",
+        "sibling_readings": [
+          "sex_biology_reading",
+          "intersex_accommodation_reading"
+        ],
+        "expected_structural_delta": "Victim set = people who identify as women (includes transgender women); excludes sex-based protections as discriminatory; moderate ε in identity-document policy, high ε in sports eligibility and sex-segregated spaces (access rights vs exclusion rights collision)"
+      },
+      {
+        "reading_id": "intersex_accommodation_reading",
+        "commitment": "Category membership acknowledges biological sex as non-binary spectrum; 'woman' includes typical female biology plus intersex variations that do not fit male category",
+        "authority_grounding": "Medical science (DSD research); intersex advocacy; biological complexity literature (chromosomal/hormonal variation)",
+        "sibling_readings": [
+          "sex_biology_reading",
+          "gender_identity_reading"
+        ],
+        "expected_structural_delta": "Victim set = people with female-typical or ambiguous biology (Semenya case); challenges binary enforcement in both other readings; low ε in most policy domains (small population) but high ε in elite sports (performance-advantage boundary cases)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sex_biology_reading",
+        "reading_b": "gender_identity_reading",
+        "basis": "Biology-reading axiom: category membership is observer-independent fact determined by chromosomes/anatomy. Identity-reading axiom: category membership is self-determined internal state. No single framework can hold both as simultaneously authoritative for the same category—one must be epistemically prior."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sex_biology_reading",
+      "human_readable": "Sex-as-Biology Reading (Chromosomal/Anatomical Membership)",
+      "structural_delta": "Category 'woman' defined by biological markers (XX chromosomes, female reproductive anatomy); membership is observer-independent",
+      "primary_observable": "Chromosomal karyotype; reproductive anatomy; hormone profiles; sports performance metrics (testosterone levels, muscle mass)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "cisgender_women_athletes",
+      "victim": "transgender_women",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest policy-domain coverage (sports, violence frameworks, sex-segregated spaces); distinct victim set from sibling reading"
+    },
+    {
+      "claim_id": "gender_identity_reading",
+      "human_readable": "Gender-as-Identity Reading (Self-Determination Membership)",
+      "structural_delta": "Category 'woman' defined by internal gender identity; membership is self-determined",
+      "primary_observable": "Self-identification; legal gender marker changes; identity-document policy; permissive sports eligibility rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "transgender_women",
+      "victim": "cisgender_women_seeking_sex_based_protections",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; axiom-contradictory to sex_biology_reading; equal policy-domain coverage; distinct victim set"
+    },
+    {
+      "claim_id": "intersex_accommodation_reading",
+      "human_readable": "Intersex Accommodation Reading (Non-Binary Biological Spectrum)",
+      "structural_delta": "Category 'woman' acknowledges biological sex as spectrum; includes intersex variations",
+      "primary_observable": "DSD diagnosis rates; Semenya-type cases in elite sports; chromosomal variation prevalence",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "intersex_individuals",
+      "victim": "binary_enforcement_frameworks",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; challenges binary assumptions in both other readings; high ε in elite sports despite small population; boundary-case stress test"
+    },
+    {
+      "claim_id": "policy_domain_fragmentation",
+      "human_readable": "Policy Domain Fragmentation (Jurisdictional Reading Divergence)",
+      "structural_delta": "Different jurisdictions adopt incompatible readings; no federal/international coherence",
+      "primary_observable": "State-by-state sports eligibility policy divergence; U.N. resolution voting patterns; Title IX interpretation variance",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "sex_biology_reading",
+        "gender_identity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of kernel contest rather than independent reading; captured in generation via affects_constraint edges from primary readings"
+    },
+    {
+      "claim_id": "violence_framework_incoherence",
+      "human_readable": "Violence-Against-Women Framework Incoherence (Data Collection Collapse)",
+      "structural_delta": "Sex-based violence data collection incompatible with gender-identity frameworks; statistical victim-set ambiguity",
+      "primary_observable": "Crime statistics categorization; shelter eligibility criteria; U.N. gender-based violence reporting standards",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "sex_based_violence_tracking",
+      "downstream_of": [
+        "sex_biology_reading",
+        "gender_identity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: specific policy-domain manifestation of kernel contest; lower structural priority than boundary-case reading (intersex_accommodation_reading)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sex_biology_reading",
+      "kernel_id": "woman_category",
+      "reading_id": "sex_biology_reading"
+    },
+    {
+      "claim_id": "gender_identity_reading",
+      "kernel_id": "woman_category",
+      "reading_id": "gender_identity_reading"
+    },
+    {
+      "claim_id": "intersex_accommodation_reading",
+      "kernel_id": "woman_category",
+      "reading_id": "intersex_accommodation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "policy_domain_fragmentation",
+      "structural_delta": "Jurisdictional divergence in reading adoption; no federal/international coherence",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream consequence of kernel contest; captured via affects_constraint edges from primary readings rather than independent axis"
+    },
+    {
+      "claim_id": "violence_framework_incoherence",
+      "structural_delta": "Sex-based violence data collection incompatible with identity frameworks",
+      "hypothesis": "snare",
+      "deferral_reason": "Specific policy-domain manifestation; lower structural priority than intersex boundary-case reading within 3-axis budget"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_coherence_boundary",
+      "description": "Can a single legal/policy framework hold both sex-biology and gender-identity readings as simultaneously valid? Research indicates 'sex and gender are not neatly separable' but no coherent pluralist framework has emerged. If axiom contradiction is genuine, one reading must be epistemically prior—but which, and on what grounds?",
+      "source": "Axiom Contradiction Declaration (§1.3-K); research quote 'rationale where both perspectives coexist...remains elusive in policy contexts'"
+    },
+    {
+      "id": "omega_intersex_prevalence",
+      "description": "Intersex_accommodation_reading classified as moderate ε based on small population (~1.7% DSD prevalence). But Semenya-type cases have disproportionate policy impact in elite sports. Is this a piton (atrophied consideration) or a mountain (biological constraint that binary frameworks cannot accommodate)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory); classification uncertainty"
+    },
+    {
+      "id": "omega_second_wave_feminist_fracture",
+      "description": "Hands Across the Aisle Coalition represents second-wave feminists defending sex-based categories. Is this a principled defense of sex-based oppression analysis, or does it function as a snare benefiting cisgender women at transgender women's expense? Beneficiary/victim classification depends on whether sex-based oppression framework is itself a mountain or tangled_rope.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); extraction entity 'Hands Across the Aisle Coalition'"
+    },
+    {
+      "id": "omega_stoller_money_lineage",
+      "description": "Gender-identity concept originates with Stoller/Greenson 1964 and Money 1970s. Money's research involved controversial practices (David Reimer case). Does this origin delegitimize the gender-identity reading, or is genetic fallacy? Authority grounding may be contested on historical grounds.",
+      "source": "Extraction anchors; historical development section; potential F34 (epistemic trespass into history of psychology)"
+    },
+    {
+      "id": "omega_title_ix_kernel_drift",
+      "description": "Title IX (1972) predates gender-identity concept's mainstream adoption. Is current identity-based interpretation legitimate textual evolution or covert revision? Drift status classified as 'absent' but Title IX itself may be a nested kernel within the woman_category kernel.",
+      "source": "Commitment system recognition; extraction entity 'Title IX'; potential nested kernel structure"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks domain expertise in history of psychology (Stoller/Money lineage), feminist theory (second-wave vs third-wave), and legal interpretation (Title IX original intent vs living-document interpretation). Generated omega_stoller_money_lineage and omega_title_ix_kernel_drift to bound uncertainty. Intersex biology classification (piton vs mountain) also uncertain; generated omega_intersex_prevalence."
+  },
+  "_seed_id": "sex_gender_kernel"
+}

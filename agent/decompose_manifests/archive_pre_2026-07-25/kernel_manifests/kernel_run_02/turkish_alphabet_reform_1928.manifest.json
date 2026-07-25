@@ -1,0 +1,213 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Linguistics / State Formation / Cultural Engineering",
+  "family_id": "turkish_alphabet_reform_1928",
+  "topic_summary": "Analysis of Turkey's 1928 alphabet reform (Law 1353), which replaced the Ottoman Arabic script with a Latin-based alphabet within three months. The reform represents an extreme case of top-down linguistic engineering with effectively zero prior practitioners of the new script, creating a generational literacy rupture while serving Atatürk's modernization project.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 8,
+    "tension_count": 6,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Mustafa Kemal Atatürk (reform architect; authoritarian modernizer)",
+      "Language Commission / Dil Encümeni (technical implementers; linguists and educators)",
+      "Republican People's Party (one-party state apparatus)",
+      "Ottoman literate class (8-10% of population; Arabic-script readers rendered functionally illiterate)",
+      "Nation's Schools / Millet Mektepleri (compulsory re-education infrastructure)",
+      "Traditionalist opposition (Kâzım Karabekir; Islamic unity advocates)"
+    ],
+    "key_tensions": [
+      "Three-month implementation vs. five-year transition proposal (Atatürk vs. Language Commission)",
+      "Modernization imperative vs. Ottoman cultural continuity (state vs. traditionalists)",
+      "Legal prohibition vs. persistent Ottoman script use (formal law vs. social practice)",
+      "Generational literacy rupture (post-1928 cohort vs. pre-1928 literate class)",
+      "Phonetic adequacy claim vs. cultural severance cost (technical justification vs. heritage access)",
+      "Democratic rhetoric vs. authoritarian implementation (Atatürk's stated ideals vs. coercive enforcement)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "script_phonetic_adequacy",
+      "human_readable": "Script-Phonetic Adequacy (Technical Justification for Reform)",
+      "structural_delta": "Degree to which writing system represents spoken language phonology",
+      "primary_observable": "Vowel representation completeness; consonant-phoneme mapping ambiguity (Arabic abjad vs. Latin alphabet)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "modernization_as_westernization",
+        "generational_literacy_rupture"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical-linguistic constraint base; claimed technical justification for entire reform"
+    },
+    {
+      "claim_id": "modernization_as_westernization",
+      "human_readable": "Modernization as Westernization (Latin Script as Civilizational Alignment)",
+      "structural_delta": "Adoption of European script as signal of civilizational orientation and state legitimacy",
+      "primary_observable": "Atatürk's stated goals; diplomatic recognition patterns; European press reception",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "kemalist_state_elite",
+      "victim": "ottoman_cultural_continuity",
+      "downstream_of": [
+        "script_phonetic_adequacy"
+      ],
+      "feeds_into": [
+        "generational_literacy_rupture"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Central tangled_rope synthesizing technical justification with political project; highest centrality"
+    },
+    {
+      "claim_id": "generational_literacy_rupture",
+      "human_readable": "Generational Literacy Rupture (Engineered Historical Discontinuity)",
+      "structural_delta": "Deliberate severance of population's ability to access pre-reform texts",
+      "primary_observable": "Post-1928 cohort's inability to read Ottoman documents; archival access patterns; intergenerational knowledge transmission",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "kemalist_state_elite",
+      "victim": "post_1928_generations",
+      "downstream_of": [
+        "script_phonetic_adequacy",
+        "modernization_as_westernization"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream snare capturing extraction mechanism; distinct victim set from axis 2"
+    },
+    {
+      "claim_id": "authoritarian_implementation_speed",
+      "human_readable": "Authoritarian Implementation Speed (Three-Month Coercion)",
+      "structural_delta": "Compression of transition period from proposed five years to three months via state coercion",
+      "primary_observable": "Law 1353 timeline; Nation's Schools attendance enforcement; penal sanctions for non-compliance",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "generational_literacy_rupture"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: implementation mechanism rather than structural constraint; captured via modernization_as_westernization's beneficiary structure"
+    },
+    {
+      "claim_id": "ottoman_script_persistence",
+      "human_readable": "Ottoman Script Persistence (Informal Resistance to Legal Prohibition)",
+      "structural_delta": "Continued use of prohibited script in private/informal contexts despite legal sanctions",
+      "primary_observable": "Archival evidence of post-1928 Ottoman script use; oral history accounts; prosecution records",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "generational_literacy_rupture"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: resistance artifact rather than primary constraint; omega material on enforcement limits"
+    },
+    {
+      "claim_id": "islamic_unity_severance",
+      "human_readable": "Islamic Unity Severance (Script as Religious Community Marker)",
+      "structural_delta": "Arabic script as shared marker of Islamic civilization; Latin adoption as deliberate exit",
+      "primary_observable": "Kâzım Karabekir's objections; traditionalist opposition rhetoric; mosque exemption in Law 1353",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "modernization_as_westernization"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: cultural dimension captured via modernization_as_westernization's victim structure (ottoman_cultural_continuity)"
+    }
+  ],
+  "generation_sequence": [
+    "script_phonetic_adequacy",
+    "modernization_as_westernization",
+    "generational_literacy_rupture"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "authoritarian_implementation_speed",
+      "structural_delta": "Three-month coercion vs. five-year transition proposal",
+      "hypothesis": "rope",
+      "deferral_reason": "Implementation mechanism rather than structural constraint; enforcement speed captured via modernization_as_westernization beneficiary structure"
+    },
+    {
+      "claim_id": "ottoman_script_persistence",
+      "structural_delta": "Continued prohibited script use despite legal sanctions",
+      "hypothesis": "piton",
+      "deferral_reason": "Resistance artifact; omega material on enforcement limits and informal practice persistence"
+    },
+    {
+      "claim_id": "islamic_unity_severance",
+      "structural_delta": "Arabic script as Islamic civilization marker; Latin adoption as exit signal",
+      "hypothesis": "rope",
+      "deferral_reason": "Cultural dimension absorbed into modernization_as_westernization's victim structure (ottoman_cultural_continuity)"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_not_contested_kernel",
+      "description": "KERNEL COLLAPSE: This is NOT a contested kernel. There was no prior occupancy of the Latin-script reading to contest. The 'kernel' (writing system choice) had only one socially instantiated reading (Ottoman Arabic script) before 1928. The reform installed a NEW kernel with zero prior practitioners, not a new reading of an existing contested kernel. The absence of M-set (practitioners of the new reading) is the structural fact, not evidence of kernel contestation. What appears contested is the LEGITIMACY of kernel replacement (modernization vs. tradition), not competing readings of a shared commitment. Reclassified as standard constraint decomposition.",
+      "source": "§1.3-K kernel/not-kernel decision"
+    },
+    {
+      "id": "omega_mountain_validity",
+      "description": "Is script_phonetic_adequacy a true Mountain (linguistic physics) or a Tangled_Rope (technical justification serving political project)? The Arabic abjad's vowel inadequacy for Turkish is measurable, but the NECESSITY of alphabet replacement (vs. diacritic reform) is contested. Ottoman script had been used for 600 years; sudden inadequacy claim may be post-hoc rationalization. Preliminary classification as Mountain may collapse to Rope upon generation.",
+      "source": "F03 (Hasty Generalization) + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_enforcement_limits",
+      "description": "Deferred axis ottoman_script_persistence suggests Law 1353's formal prohibition did not achieve complete social compliance. Oral histories and archival evidence show continued informal use. The gap between legal kernel installation and social embedding may be larger than the 'three-month success' narrative suggests. High-epsilon deferred axis warranting future investigation.",
+      "source": "Deferred axis ottoman_script_persistence + research context on persistence"
+    },
+    {
+      "id": "omega_literacy_rate_ambiguity",
+      "description": "The 8-10% pre-reform literacy rate is cited as evidence of Arabic script inadequacy, but causation is unclear. Was low literacy due to script phonetic mismatch, or due to Ottoman educational infrastructure limits? Post-reform literacy gains may reflect Nation's Schools expansion rather than script superiority. Confounding variable not disentangled in available research.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_kurdish_prosecution",
+      "description": "Research notes Law 1353 has been used to prosecute Kurds for using non-Turkish alphabet letters. This suggests the reform's extractiveness extends beyond generational literacy rupture to ethnic-linguistic suppression. Victim set may be broader than modeled. Potential additional axis (linguistic_minority_suppression) not developed due to limited research context.",
+      "source": "Research context on enforcement + Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: script_phonetic_adequacy classified as Mountain but the necessity of full alphabet replacement (vs. diacritic reform of Arabic script) is contested. The 600-year use of Ottoman script suggests adequacy is relative to educational infrastructure, not absolute linguistic physics. Generated omega_mountain_validity to bound this uncertainty. Additionally, the user's kernel contest framing was rejected: this is NOT a contested kernel (no prior readings to contest), but rather a case of authoritarian kernel REPLACEMENT with zero M-set. Generated omega_not_contested_kernel to document the reclassification."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Writing system as marker of civilizational alignment and state legitimacy",
+    "authority_description": "Kemalist state monopoly on legitimate script choice; enforcement via Law 1353 penal sanctions and compulsory re-education",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "No prior occupancy of Latin-script reading before 1928. The reform installed a NEW kernel (Latin alphabet) with zero practitioners, not a new reading of an existing contested kernel. What appears contested is the LEGITIMACY of kernel replacement (modernization vs. Ottoman continuity), not competing readings of a shared commitment. The 8-10% literacy rate was entirely in Arabic script. Reclassified as standard constraint decomposition with modernization_as_westernization as the central tangled_rope capturing the political project."
+  },
+  "_seed_id": "turkish_alphabet_reform_1928"
+}

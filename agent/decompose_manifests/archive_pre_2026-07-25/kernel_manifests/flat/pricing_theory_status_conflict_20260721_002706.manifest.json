@@ -1,0 +1,252 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Social Epistemology / Signaling Theory / Conflict Economics",
+  "family_id": "pricing_theory_status_conflict",
+  "topic_summary": "An essay proposing that status claims and physical threats are the same signaling instrument, priced on three variables: settlement hazard, cost-at-settlement, and horizon. It uses a 2026 YouGov penalty-kick survey (zero-settlement region) and a hotel-manager anecdote (unchecked-but-checkable region) to argue that unfalsifiable or socially-expensive-to-test claims measure 'register' rather than belief, then extends the same pricing logic to threats, coalition dissolution, bullies, and honor-culture pre-payment, culminating in a falsifiable law that no one purchases unbounded individual risk at full marginal price.",
+  "extraction_summary": {
+    "entity_count": 9,
+    "claim_count": 11,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "The marathoner (domain expert, private ledger holder)",
+      "The hotel manager (bravado claimant, filter operator)",
+      "YouGov survey respondents (2026 penalty-kick poll, N=6297)",
+      "The bully (settlement-probability manager, asymmetric exit)",
+      "The gang member / honor-culture man (pre-paid horizon holder)",
+      "Frankfurt's liar/bullshitter distinction (imported theoretical apparatus)",
+      "The community/audience (ledger-keeper, register-setter)",
+      "The group facing a multi-opponent threat (coalition being dissolved)",
+      "Political partisans (Republican vs Democrat men, register-bearing subpopulations)"
+    ],
+    "key_tensions": [
+      "Settlement hazard near zero (survey bravado) vs settlement hazard near one (delivered threat)",
+      "Impression management (audience-tailored persona) vs filter (truth-indifferent sorting device) as competing explanations for the same doubling-down behavior",
+      "Bounded, pooled-risk group conflict vs unbounded, individually-addressed feud — the coalition-dissolution mechanism",
+      "Register (community-rewarded performance) vs drift (register annealing into genuine self-model) as competing explanations for confidence gaps that persist under incentives"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment all readings argue about is: 'what does an untested or barely-tested self-assertive claim (of ability, nerve, or capacity for violence) represent about the speaker?' Every reading agrees a claim exists, circulates, and is not settled; they disagree about what kind of object is being priced underneath the circulation.",
+    "authority_description": "No external authority adjudicates which reading is correct; the essay itself claims interpretive authority by proposing a falsifiable pricing law, but explicitly declines to close the question in its final section (\"the residue I cannot close\").",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "unsettled_claim_ontology",
+    "readings": [
+      {
+        "reading_id": "stance_reading",
+        "commitment": "In zero-settlement domains, no fact of self-assessment exists beneath the claim at all; the assertion is a stance — a social commitment that guides behavior without any underlying belief to be accurate or miscalibrated. Truth-tracking machinery never formed because nothing ever called for it.",
+        "authority_grounding": "Expressive-responding / social-performance theory (survey research on partisan factual polling); the essay's own 'residue I cannot close' section",
+        "sibling_readings": [
+          "register_reading",
+          "drift_reading",
+          "filter_reading",
+          "impression_management_reading"
+        ],
+        "expected_structural_delta": "Predicts confusion, not surprise, when settlement is suddenly imposed on native zero-settlement populations — the question 'could you actually?' was never a question they had answered internally."
+      },
+      {
+        "reading_id": "register_reading",
+        "commitment": "Beneath the claim sits an ordinary, intact belief-forming system; the bravado answer is a translation layer — the speaker knows their real capacity and separately produces the community-rewarded performance. The two are cleanly separable at the population level.",
+        "authority_grounding": "Expressive-responding literature; incentive-compression experiments showing partisan gaps collapse under small accuracy stakes",
+        "sibling_readings": [
+          "stance_reading",
+          "drift_reading",
+          "filter_reading",
+          "impression_management_reading"
+        ],
+        "expected_structural_delta": "Predicts gaps fully collapse under attached stakes, with no residue; the claim was cheap talk over an intact ground truth the whole time."
+      },
+      {
+        "reading_id": "drift_reading",
+        "commitment": "The bravado register is not free-floating performance layered over intact belief, nor stance-without-belief — it is a genuine causal input that reshapes the self-model over time. Long-run occupancy of the register produces real miscalibration where none existed before; the mask becomes the face.",
+        "authority_grounding": "The essay's own 'seam' section, extending incentive-compression evidence with a developmental/temporal claim",
+        "sibling_readings": [
+          "stance_reading",
+          "register_reading",
+          "filter_reading",
+          "impression_management_reading"
+        ],
+        "expected_structural_delta": "Predicts a bimodal population under incentive-compression testing: gaps that collapse (register-only) and gaps that survive (drifted, now genuinely miscalibrated) — a mixture, not a clean binary."
+      },
+      {
+        "reading_id": "filter_reading",
+        "commitment": "The claim's function is not primarily about the speaker's self-model (calibrated, drifted, or absent) at all — it is a sorting instrument. The point of asserting and doubling down is to partition the audience into deferential and non-deferential nodes; truth-indifference is instrumental to sorting, not evidence about belief formation.",
+        "authority_grounding": "Frankfurt's bullshitter-indifference frame, applied to social filtering rather than epistemic status; the hotel-manager anecdote's escalation-under-challenge behavior",
+        "sibling_readings": [
+          "stance_reading",
+          "register_reading",
+          "drift_reading",
+          "impression_management_reading"
+        ],
+        "expected_structural_delta": "Predicts the same claim told identically across audiences with escalation (not retreat) under expert challenge, because challenge is the informative sorting event — orthogonal to whether any belief underlies the claim."
+      },
+      {
+        "reading_id": "impression_management_reading",
+        "commitment": "The claim is audience-tailored persona management: the speaker adjusts the claim's strength and defense to what will play well with the specific audience present, and would retreat or hedge if the audience or its expertise changed.",
+        "authority_grounding": "Classical impression-management / self-presentation theory (Goffman-adjacent), presented in the essay explicitly as the rejected alternative to the filter reading",
+        "sibling_readings": [
+          "stance_reading",
+          "register_reading",
+          "drift_reading",
+          "filter_reading"
+        ],
+        "expected_structural_delta": "Predicts retreat or hedging when challenged by a domain expert, and audience-tailoring of claim strength — the reading the essay's single data point falsifies for the hotel-manager case, but which remains live in general until tested per-instance."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "stance_reading",
+        "reading_b": "register_reading",
+        "basis": "Stance_reading holds that no fact of self-assessment exists beneath the claim; register_reading holds that an intact, accurate self-assessment exists beneath the claim and is merely being translated. A claim cannot simultaneously have no ground-truth self-model and an intact one — accepting one axiom requires denying the other."
+      },
+      {
+        "reading_a": "stance_reading",
+        "reading_b": "drift_reading",
+        "basis": "Drift_reading requires that belief-forming machinery originally existed (or exists) and was reshaped by the register; stance_reading requires that such machinery never formed at all in this domain. Both cannot be true of the same claim-domain simultaneously."
+      },
+      {
+        "reading_a": "register_reading",
+        "reading_b": "drift_reading",
+        "basis": "Register_reading's axiom is that the underlying belief remains untouched and fully recoverable under incentives (clean separability); drift_reading's axiom is that occupancy of the register causally alters the underlying belief such that it is no longer recoverable. A single claim instance cannot be both fully intact and causally altered."
+      },
+      {
+        "reading_a": "filter_reading",
+        "reading_b": "impression_management_reading",
+        "basis": "Filter_reading's axiom is that escalation under challenge is the mechanism's success condition (challenge is the informative event); impression_management_reading's axiom is that retreat under challenge is the rational response to preserve audience approval. The same behavioral observation (escalate vs. retreat under expert challenge) cannot be explained by both axioms as the mechanism's intended function simultaneously — the essay's own worked example treats them as mutually falsifying."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "unsettled_claim_ontology",
+      "human_readable": "What Is Actually Underneath an Unsettled Bravado Claim (Contested Kernel)",
+      "structural_delta": "Five mutually incompatible accounts of what a claim-with-low-settlement-hazard represents about the speaker's inner state and social intent — no belief at all (stance), intact belief under translation (register), causally-altered belief (drift), audience-sorting instrument (filter), or audience-tailored persona (impression management).",
+      "primary_observable": "Behavior under sudden imposition of settlement (confusion vs. surprise vs. no reaction vs. collapse); behavior under incentive-compression (full collapse vs. partial collapse vs. no collapse); behavior under audience variation (consistency vs. tailoring); behavior under expert challenge (escalation vs. retreat)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "status_as_ledger_synthesis"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested kernel of the essay — the entire piece is an extended argument about what kind of object a bravado claim is; every other mechanism (filter, threat-pricing, bully/gang classification) is downstream of settling which reading of the claim's ontology is operative."
+    },
+    {
+      "claim_id": "horizon_boundedness_mechanism",
+      "human_readable": "The Horizon Dial as Load-Bearing Variable in Threat Pricing and Coalition Dissolution",
+      "structural_delta": "Distinct from the kernel's question of what a claim represents epistemically: this is a claim about a specific causal mechanism — that converting bounded, pooled-risk conflict into unbounded, individually-addressed risk dissolves coalitions and extracts concessions, independent of any change in the target's fear of the underlying fight.",
+      "primary_observable": "Coalition dissolution rate under bounded vs. unbounded threat framing, controlled for perceived violence probability; differential success of the boundedness counter-move against populations with pre-existing unbounded conflict exposure (rival crews, prison tiers) vs. populations without it",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "threat_issuer_with_credible_standing",
+      "victim": "coalition_targeted_by_unbounded_threat",
+      "downstream_of": [],
+      "feeds_into": [
+        "bully_gang_classification_law"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Passes independence test against the kernel: this axis concerns a causal/game-theoretic mechanism (bounded vs. unbounded risk pricing in group conflict) with its own falsifier (rival-crew populations), a different observable (coalition dissolution vs. audience-confusion/collapse), and survives even if every reading of the kernel were resolved identically — the horizon mechanism is orthogonal to whether claims are stances, drifted beliefs, or filters."
+    },
+    {
+      "claim_id": "bully_gang_classification_law",
+      "human_readable": "The Subsidy/Pre-Payment Law and Its Ex-Ante Discipline",
+      "structural_delta": "A falsifiable universal claim — no one purchases unbounded individual risk at full marginal price — defended by a specific methodological discipline requiring subsidy (target selection) and pre-payment (upstream identity cost) to be established ex ante, independent of the outcome being explained. This is a distinct structural claim from the horizon mechanism itself: it is about whether apparent counterexamples to boundedness-pricing can be explained away, and the discipline that prevents that explanatory move from becoming unfalsifiable.",
+      "primary_observable": "Documented ex-ante target-selection patterns (visible pattern of choosing non-testing opponents) vs. documented ex-ante identity costs (initiation, staked reputation) vs. absence of either — the presence of a genuine exit-having agent who repeatedly chooses open-ended feuds over comparable bounded settlements",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "theory_defender_using_post_hoc_subsidy_pre_payment_categorization",
+      "victim": "falsifiability_of_the_law_itself",
+      "downstream_of": [
+        "horizon_boundedness_mechanism"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Passes independence test: distinct observable (ex-ante classifiability of subsidy/pre-payment) from both the kernel (claim ontology) and the horizon mechanism (coalition dissolution dynamics); high epsilon because the essay's own discipline requirement ('if the classification can only be made after watching the choice, the law has stopped being a law') creates a genuine risk this axis is a snare — a self-sealing explanatory structure — rather than a clean mountain-level law, and that risk is exactly what the essay is honest enough to flag but does not resolve."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "stance_reading",
+      "kernel_id": "unsettled_claim_ontology",
+      "reading_id": "stance_reading"
+    },
+    {
+      "claim_id": "register_reading",
+      "kernel_id": "unsettled_claim_ontology",
+      "reading_id": "register_reading"
+    },
+    {
+      "claim_id": "drift_reading",
+      "kernel_id": "unsettled_claim_ontology",
+      "reading_id": "drift_reading"
+    },
+    {
+      "claim_id": "filter_reading",
+      "kernel_id": "unsettled_claim_ontology",
+      "reading_id": "filter_reading"
+    },
+    {
+      "claim_id": "impression_management_reading",
+      "kernel_id": "unsettled_claim_ontology",
+      "reading_id": "impression_management_reading"
+    },
+    "horizon_boundedness_mechanism",
+    "bully_gang_classification_law"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "zero_settlement_survey_methodology",
+      "structural_delta": "The specific empirical properties of the YouGov penalty-kick instrument (sample size, partisan cross-tabs, age cohorts) as a measurement-validity question distinct from the pricing theory itself",
+      "hypothesis": "scaffold",
+      "deferral_reason": "This is evidentiary support for the kernel's readings rather than an independent structural axis; it has no ε of its own separable from which kernel-reading it is being used to support, and collapses into the kernel's observable set under §3.1 (same observable, different framing)."
+    },
+    {
+      "claim_id": "frankfurt_liar_bullshitter_import",
+      "structural_delta": "Whether Frankfurt's philosophical distinction between liar and bullshitter is being correctly or usefully imported into a social-signaling context versus stretched beyond its original epistemic scope",
+      "hypothesis": "piton",
+      "deferral_reason": "This is a citation-fidelity / conceptual-borrowing question nested entirely within the filter_reading of the kernel; it does not survive as independent structure once filter_reading is generated, since any concerns about the Frankfurt import are internal to defending or critiquing that single reading."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse_risk",
+      "description": "The essay itself performs partial collapse-testing between two of the five readings (filter vs. impression_management) using the single hotel-manager data point, and explicitly states this is one data point that could be falsified by a single counter-observation (the manager hedging with the next skeptical guest). The kernel readings are not equally load-bearing in the source text — filter_reading and impression_management_reading receive direct empirical adjudication, while stance_reading, register_reading, and drift_reading are adjudicated only by proposed future tests. Generation should preserve this asymmetry rather than treating all five readings as equally evidenced.",
+      "source": "§1.3-K kernel decomposition, cross-referenced against extraction_summary key_tensions"
+    },
+    {
+      "id": "omega_extractiveness_of_the_law_itself",
+      "description": "The essay explicitly worries that its own subsidy/pre-payment classification scheme could become unfalsifiable ('a filing system' rather than a law) if the ex-ante discipline is not honored. This makes bully_gang_classification_law a candidate snare in a way the essay itself flags but does not fully resolve — worth testing during generation whether the ex-ante discipline as stated is sufficient or merely aspirational.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to axis bully_gang_classification_law"
+    },
+    {
+      "id": "omega_generalization_disclaimer_tension",
+      "description": "The essay explicitly disclaims applicability to war, markets, and geopolitics while noting the 'machinery generalizes suspiciously well.' This creates a live tension between the stated scope (interpersonal/small-group conflict) and the theory's apparent structural ambition (a general pricing law for signaling under variable settlement hazard). Not selected as an axis because it does not survive independence testing against the existing three axes — it is a meta-commentary on scope rather than a distinct structural claim with its own observable — but it should surface in the final essay's honest-accounting section.",
+      "source": "§1.1 Absence Inventory — the essay's own scope disclaimer"
+    },
+    {
+      "id": "omega_honor_culture_evidence_asymmetry",
+      "description": "Research context surfaces substantial independent literature on honor cultures (apology reluctance, homicide triggers, escalation dynamics) that the essay uses briefly to support the pre-paid gang-member classification. This literature is more empirically developed than the essay's own worked examples for that claim, creating an asymmetry where bully_gang_classification_law may be better evidenced for the gang-member/pre-payment half than the bully/subsidy half.",
+      "source": "Research context cross-reference against axis bully_gang_classification_law"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected on bully_gang_classification_law: the essay states 'no one purchases unbounded individual risk at full marginal price' as a law while simultaneously acknowledging the classification scheme that would falsify it (subsidy vs. pre-payment) risks becoming unfalsifiable if not disciplined ex ante. This is a self-aware hasty-generalization risk rather than an undetected one — the essay flags it explicitly — but it still merits omega tracking rather than treating the law as settled. No F34 concerns: the domain (signaling theory, social psychology of status, honor-culture research) is well within typical training coverage and the essay engages recognized frameworks (Frankfurt, expressive responding, honor-culture homicide literature) appropriately rather than trespassing into specialized empirical territory it lacks grounding for."
+  }
+}

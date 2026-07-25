@@ -1,0 +1,179 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Mathematics / Philosophy of Mathematics / Intellectual History",
+  "family_id": "zero_western_mathematics_2026",
+  "topic_summary": "Analysis of zero's entry into Western mathematics as a number, examining whether this represents a contested kernel where different readings instantiate structurally different constraints. The topic probes the distinction between zero-as-concept-becoming-thinkable versus zero-as-concept-first-held, testing whether this is a genuine kernel or an M4/M5 collapse where observer position rather than reading difference generates apparent variation.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Zero (mathematical object with contested ontological status)",
+      "Western mathematical tradition (Greco-Roman through medieval European)",
+      "Hindu-Arabic numeral system (transmission vector for positional zero)",
+      "Fibonacci/Leonardo of Pisa (Liber Abaci 1202, European introduction)",
+      "Greek mathematical philosophy (geometric foundation, magnitude-based)",
+      "Scholastic theology (ontological framework for nothing/void)"
+    ],
+    "key_tensions": [
+      "Number vs non-number (zero as quantity vs zero as placeholder/absence)",
+      "Thinkability vs possession (conceptual availability vs historical instantiation)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Zero as a mathematical object with number status in Western mathematics",
+    "authority_description": "Mathematical community consensus on what constitutes a number (ontological category membership)",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": false,
+    "collapse_reason": "The supposed readings (thinkability vs first-held) do not instantiate different constraints. Both readings accept that zero entered Western mathematics as a number through Hindu-Arabic transmission (1200s). The 'thinkability' reading claims Greeks could have conceived zero but didn't; the 'first-held' reading claims they couldn't conceive it until cultural/notational prerequisites arrived. These are observer positions on ONE constraint (the historical adoption event) differing on counterfactual capacity, not different readings of a shared kernel that emit different constraint structures. The constraint is the same: zero-as-number was absent in Greek mathematics, present after Hindu-Arabic transmission. No beneficiary/victim structure changes between readings. This is M4/M5 collapse: one constraint, multiple observer interpretations of why it has the shape it does."
+  },
+  "axes": [
+    {
+      "claim_id": "positional_notation_dependency",
+      "human_readable": "Positional Notation Dependency (Zero as Placeholder Prerequisite)",
+      "structural_delta": "Zero-as-number requires positional place-value notation; magnitude-based systems (Greek geometric algebra) structurally exclude it",
+      "primary_observable": "Presence/absence of positional notation in mathematical texts; zero's role as placeholder vs quantity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "ontological_category_shift",
+        "theological_void_resistance"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing notational constraint base; highest inbound/outbound edge count"
+    },
+    {
+      "claim_id": "ontological_category_shift",
+      "human_readable": "Ontological Category Shift (Nothing Becoming Something)",
+      "structural_delta": "Zero's admission as a number requires reclassifying 'nothing' from absence-of-quantity to quantity-itself",
+      "primary_observable": "Definitional statements in mathematical texts (e.g., Fibonacci's Liber Abaci treatment of zero vs Greek definitions of number as 'multitude of units')",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "positional_notation_dependency"
+      ],
+      "feeds_into": [
+        "transmission_as_conceptual_import"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (definitional shift vs notational structure); bridges notation and transmission axes"
+    },
+    {
+      "claim_id": "transmission_as_conceptual_import",
+      "human_readable": "Transmission as Conceptual Import (Zero Arriving, Not Discovered)",
+      "structural_delta": "Zero entered Western mathematics through cultural transmission (Hindu-Arabic via Islamic scholars), not independent derivation",
+      "primary_observable": "Historical documentation of transmission routes (Al-Khwarizmi, Fibonacci); absence of indigenous European zero-development",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "ontological_category_shift"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis; different observable (transmission documentation vs ontological definitions); completes causal chain"
+    },
+    {
+      "claim_id": "theological_void_resistance",
+      "human_readable": "Theological Void Resistance (Scholastic Ontology as Barrier)",
+      "structural_delta": "Christian scholastic framework treating void/nothing as theologically problematic delayed zero's acceptance",
+      "primary_observable": "Theological treatises on creation ex nihilo; scholastic debates on vacuum/void",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "theological_authority",
+      "victim": "mathematical_innovation",
+      "downstream_of": [
+        "positional_notation_dependency"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality than selected axes; theological resistance captured as context in ontological_category_shift story"
+    },
+    {
+      "claim_id": "greek_geometric_algebra_lock_in",
+      "human_readable": "Greek Geometric Algebra Lock-In (Magnitude-Based System Path Dependency)",
+      "structural_delta": "Greek mathematics' foundation in geometric magnitudes (lines, areas) structurally excluded zero (no magnitude = no object)",
+      "primary_observable": "Euclidean definitions of number and magnitude; absence of zero in Greek arithmetic texts",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "positional_notation_dependency"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural overlap with positional_notation_dependency (both address Greek system's exclusion); piton vs mountain distinction marginal"
+    }
+  ],
+  "generation_sequence": [
+    "positional_notation_dependency",
+    "ontological_category_shift",
+    "transmission_as_conceptual_import"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "theological_void_resistance",
+      "structural_delta": "Scholastic ontology treating void as theologically problematic",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Lower centrality; theological dimension captured as contextual factor in ontological_category_shift"
+    },
+    {
+      "claim_id": "greek_geometric_algebra_lock_in",
+      "structural_delta": "Magnitude-based system structurally excluding zero",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural overlap with positional_notation_dependency; Greek exclusion mechanism covered by mountain axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The thinkability vs first-held distinction is an M4/M5 collapse. Both readings agree zero-as-number entered via Hindu-Arabic transmission. The disagreement is counterfactual (could Greeks have conceived it?) not structural (what constraint existed?). One constraint, multiple observer interpretations of its necessity. Not a contested kernel.",
+      "source": "§1.3-K kernel/reading decomposition"
+    },
+    {
+      "id": "omega_indian_priority",
+      "description": "Indian mathematicians (Brahmagupta 628 CE) treated zero as a number centuries before Western adoption. The 'Western mathematics' scope artificially bounds the analysis. A fuller treatment would examine why Indian positional notation enabled zero-as-number while Greek magnitude-based notation excluded it, making transmission the variable rather than conceptual capacity.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_negative_number_coupling",
+      "description": "Zero's acceptance as a number is structurally coupled to negative numbers' acceptance (both require abandoning 'number as magnitude'). The axes treat zero in isolation, but the ontological category shift may be a joint transition. Deferred for potential expansion.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + independence testing"
+    },
+    {
+      "id": "omega_commercial_arithmetic_driver",
+      "description": "Fibonacci's Liber Abaci introduced Hindu-Arabic numerals for commercial calculation (double-entry bookkeeping, currency conversion). Zero's adoption may be driven by mercantile utility rather than philosophical resolution. The selected axes emphasize ontological/notational constraints; economic incentive structure is absent.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel/reading test correctly identified M4/M5 collapse. The topic is not a contested kernel; it is one constraint (zero's historical entry) with observer disagreement about counterfactual necessity. Decomposed into standard axes with positional_notation_dependency as upstream mountain."
+  },
+  "_seed_id": "zero_as_number"
+}

@@ -1,0 +1,239 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Constitutional Theory / Legitimacy Studies",
+  "family_id": "sovereignty_legitimacy_kernel_2026",
+  "topic_summary": "Analysis of the contested sovereign-legitimacy kernel: whether the right to rule derives from inherited status (monarchical reading) or delegated popular consent (republican reading). This is a foundational authority-grounding contest that has structured constitutional development across centuries, with different readings producing incompatible constraint structures around succession, accountability, and the locus of sovereignty.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Hereditary Monarchy (dynastic succession system grounding authority in bloodline)",
+      "Constitutional Monarchy (hybrid form retaining symbolic monarch with parliamentary constraint)",
+      "Republic (delegated authority system grounding legitimacy in popular consent)",
+      "Divine Right Doctrine (theological legitimation framework)",
+      "Social Contract Tradition (Hobbes, Locke, Rousseau - consent-based legitimation)",
+      "Parliamentary Systems (institutional constraint on monarchical power)",
+      "Electoral Mechanisms (delegation and accountability infrastructure)",
+      "Marsilius of Padua / Defensor Pacis (early republican theorist, 1324)"
+    ],
+    "key_tensions": [
+      "Divine ordination vs popular consent as source of authority",
+      "Inherited privilege vs delegated mandate as legitimation principle",
+      "Traditional continuity vs democratic reform as governing logic",
+      "Symbolic stability (monarchy) vs electoral accountability (republic)"
+    ],
+    "key_mechanisms": [
+      "Dynastic succession (bloodline determines ruler; contested succession produces warfare)",
+      "Electoral delegation (citizens authorize representatives; officials removable via vote/recall)",
+      "Constitutional constraint (parliamentary limits on monarchical discretion in hybrid systems)"
+    ],
+    "key_absences": [
+      "Non-Western legitimation frameworks (Mandate of Heaven, Islamic caliphate models, African ubuntu-based authority)",
+      "Post-colonial legitimacy crises (imposed European state forms vs indigenous authority structures)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The sovereign-legitimacy kernel: the shared commitment that political authority requires justification, but contested on whether that justification derives from inherited status or delegated consent",
+    "authority_description": "Monarchical reading: authority grounded in tradition, divine sanction, bloodline continuity. Republican reading: authority grounded in popular sovereignty, electoral mandate, constitutional delegation",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_pluralism",
+    "is_contested_kernel": true,
+    "kernel_id": "sovereign_legitimacy",
+    "readings": [
+      {
+        "reading_id": "monarchical_reading",
+        "commitment": "Authority derives from inherited status, sanctioned by tradition and divine ordination",
+        "authority_grounding": "Traditional authority (Weber) + divine right theology + dynastic continuity",
+        "sibling_readings": [
+          "republican_reading",
+          "constitutional_hybrid_reading"
+        ],
+        "expected_structural_delta": "Succession by bloodline; accountability to God/tradition not electorate; beneficiary=dynastic_lineage; victim=excluded_commoners; high ε (0.65+) due to non-removability of monarch"
+      },
+      {
+        "reading_id": "republican_reading",
+        "commitment": "Authority derives from delegated popular consent, revocable by the governed",
+        "authority_grounding": "Social contract theory (Locke, Rousseau) + popular sovereignty doctrine + electoral mechanisms",
+        "sibling_readings": [
+          "monarchical_reading",
+          "constitutional_hybrid_reading"
+        ],
+        "expected_structural_delta": "Succession by election; accountability to electorate; beneficiary=citizenry; victim=none (in theory) or excluded_non-citizens (in practice); moderate ε (0.35-0.50) due to electoral removability but institutional inertia"
+      },
+      {
+        "reading_id": "constitutional_hybrid_reading",
+        "commitment": "Authority bifurcated: symbolic continuity via hereditary monarch, operational legitimacy via parliamentary delegation",
+        "authority_grounding": "Negotiated settlement between monarchical tradition and liberal reform (historical compromise)",
+        "sibling_readings": [
+          "monarchical_reading",
+          "republican_reading"
+        ],
+        "expected_structural_delta": "Dual legitimation structure; monarch as symbolic anchor, parliament as policy authority; beneficiary=both_crown_and_parliament; victim=absolutist_factions_on_both_sides; low ε (0.20-0.30) due to institutional flexibility but symbolic lock-in"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "monarchical_reading",
+        "reading_b": "republican_reading",
+        "basis": "Monarchical axiom (authority inheres in bloodline, non-revocable by subjects) and republican axiom (authority delegated by consent, revocable by governed) cannot coexist in a single coherent framework. Accepting republican axiom as true requires rejecting the monarchical claim that inherited status grounds legitimate rule independent of popular will."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "monarchical_reading",
+      "human_readable": "Monarchical Legitimacy (Inherited Authority)",
+      "structural_delta": "Authority grounded in bloodline succession, divine sanction, and traditional continuity rather than popular mandate",
+      "primary_observable": "Succession mechanism (hereditary vs electoral); constitutional provisions on monarch's divine right or traditional status; removal mechanisms (none vs impeachment/recall)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dynastic_lineage",
+      "victim": "excluded_commoners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading of contested kernel; highest ε; distinct beneficiary/victim structure from republican reading"
+    },
+    {
+      "claim_id": "republican_reading",
+      "human_readable": "Republican Legitimacy (Delegated Authority)",
+      "structural_delta": "Authority grounded in popular consent, delegated via electoral mechanisms, revocable by the governed",
+      "primary_observable": "Electoral systems; constitutional provisions on popular sovereignty; accountability mechanisms (impeachment, recall, term limits)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "citizenry",
+      "victim": "excluded_non_citizens",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading of contested kernel; axiom-contradictory to monarchical reading; different ε and constraint type"
+    },
+    {
+      "claim_id": "constitutional_hybrid_reading",
+      "human_readable": "Constitutional Monarchy (Bifurcated Authority)",
+      "structural_delta": "Dual legitimation: hereditary monarch provides symbolic continuity, elected parliament provides operational authority",
+      "primary_observable": "Constitutional provisions bifurcating ceremonial vs policy powers; historical compromise documents (e.g., English Bill of Rights 1689)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "both_crown_and_parliament",
+      "victim": "absolutist_factions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Hybrid reading demonstrating licensed plurality; lower ε but structurally distinct mechanism (bifurcation vs unitary authority)"
+    },
+    {
+      "claim_id": "succession_warfare_mechanism",
+      "human_readable": "Dynastic Succession Warfare (Contested Bloodline Claims)",
+      "structural_delta": "Monarchical succession rules produce chronic violent conflict when bloodline claims are ambiguous or contested",
+      "primary_observable": "Historical frequency of succession wars (Wars of the Roses, Spanish Succession, etc.); constitutional provisions for succession dispute resolution",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "civilian_populations",
+      "downstream_of": [
+        "monarchical_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of monarchical reading rather than independent axis; captured in monarchical constraint story as affects_constraint"
+    },
+    {
+      "claim_id": "electoral_accountability_gap",
+      "human_readable": "Electoral Accountability Gap (Representation vs Responsiveness)",
+      "structural_delta": "Republican systems exhibit gap between formal electoral accountability and actual responsiveness to popular will",
+      "primary_observable": "Policy-preference divergence studies; voter turnout rates; recall/impeachment frequency vs public dissatisfaction metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "political_class",
+      "victim": "disenfranchised_voters",
+      "downstream_of": [
+        "republican_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: internal critique of republican reading but lower structural priority than core kernel readings; omega material on republican extractiveness"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "monarchical_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "monarchical_reading"
+    },
+    {
+      "claim_id": "republican_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "republican_reading"
+    },
+    {
+      "claim_id": "constitutional_hybrid_reading",
+      "kernel_id": "sovereign_legitimacy",
+      "reading_id": "constitutional_hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "succession_warfare_mechanism",
+      "structural_delta": "Monarchical succession produces chronic violent conflict when bloodline claims contested",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence of monarchical reading; captured as affects_constraint in monarchical constraint story rather than independent axis"
+    },
+    {
+      "claim_id": "electoral_accountability_gap",
+      "structural_delta": "Republican systems exhibit gap between formal accountability and actual responsiveness",
+      "hypothesis": "snare",
+      "deferral_reason": "Internal critique of republican reading; lower structural priority than core kernel readings; omega material on republican extractiveness"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_non_western_legitimacy",
+      "description": "Absence of non-Western legitimation frameworks (Mandate of Heaven, Islamic caliphate, African ubuntu-based authority). Are these genuinely different readings of the sovereign-legitimacy kernel, or distinct kernels entirely? If distinct, the kernel itself may be a Western construct.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_postcolonial_legitimacy_crisis",
+      "description": "Post-colonial states inherit European constitutional forms (monarchy or republic) imposed over indigenous authority structures. Does this produce a third reading (syncretic legitimacy) or a legitimacy vacuum? Deferred axis candidate.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_republican_extractiveness",
+      "description": "Republican reading claims beneficiary=citizenry, but electoral_accountability_gap axis suggests political_class as actual beneficiary. Is republican legitimacy a rope (coordination) or snare (extraction masked as delegation)? Deferred axis electoral_accountability_gap explores this.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis electoral_accountability_gap"
+    },
+    {
+      "id": "omega_hybrid_stability",
+      "description": "Constitutional hybrid reading classified as scaffold (low ε, institutional flexibility). But UK/Spain/Japan stability vs Thailand/Morocco instability suggests ε may vary by implementation. Is this one reading or multiple?",
+      "source": "F15 (Premature Closure) + constitutional_hybrid_reading classification uncertainty"
+    },
+    {
+      "id": "omega_axiom_contradiction_licensed_plurality",
+      "description": "Monarchical and republican readings hold axiom-contradictory positions (inherited vs delegated authority), yet constitutional hybrid reading demonstrates both can coexist institutionally. Does this invalidate the axiom contradiction, or does the hybrid reading constitute a third axiom (bifurcated authority) that sidesteps rather than resolves the contradiction?",
+      "source": "Axiom Contradiction Declaration + constitutional_hybrid_reading analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: Stopped at three readings (monarchical, republican, hybrid) without fully exploring non-Western legitimation frameworks or post-colonial syncretic forms. Generated omega_non_western_legitimacy and omega_postcolonial_legitimacy_crisis to bound this gap. Constitutional hybrid reading may itself contain multiple sub-readings (Westminster vs Continental vs East Asian models) — generated omega_hybrid_stability."
+  },
+  "_seed_id": "monarchy_republic_legitimacy"
+}

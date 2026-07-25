@@ -1,0 +1,228 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Intellectual Property Law / Technology Governance / Information Economics",
+  "family_id": "derivative_work_boundary_2024",
+  "topic_summary": "Analysis of the contested legal boundary of 'derivative work' under copyright law, where the statutory kernel is read expansively by incumbent rightsholders (maximizing enclosure over downstream creative acts) versus narrowly by generative AI proponents and transformative use advocates (protecting coordination scaffolds for new creation). The disagreement concerns what the statutory constraint itself permits, not merely policy preference.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "17 U.S.C. § 101 (statutory definition of derivative work)",
+      "Incumbent rightsholders (publishers, studios, estates)",
+      "Generative AI developers (OpenAI, Stability AI, etc.)",
+      "Transformative use doctrine (fair use carveout)",
+      "Copyright Office (interpretive authority)",
+      "Federal judiciary (final interpretive authority)"
+    ],
+    "key_tensions": [
+      "Expansive reading (any use of expression is derivative) vs narrow reading (only fixed recastings are derivative)",
+      "Enclosure maximization (rightsholder control over training/transformation) vs coordination scaffold (public domain expansion via non-infringing uses)"
+    ],
+    "key_mechanisms": [
+      "Licensing requirement (rightsholders extract rents from derivative uses)",
+      "Fair use doctrine (judicial escape valve for transformative uses)",
+      "Statutory interpretation (courts adjudicate boundary disputes)"
+    ],
+    "key_absences": [
+      "Statutory definition does not specify whether intermediate/ephemeral uses (e.g., ML training) constitute 'preparation' of derivative work",
+      "No explicit treatment of probabilistic transformation vs deterministic recasting"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "enclosure_reading",
+      "human_readable": "Enclosure Reading (Expansive Derivative Work Boundary)",
+      "structural_delta": "Any use of copyrighted expression in creating new work constitutes preparation of derivative work requiring authorization",
+      "primary_observable": "Licensing requirements enforced; injunctions against ML training; statutory damages awarded for unauthorized transformative use",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_rightsholders",
+      "victim": "downstream_creators_and_AI_developers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested reading; instantiates high-extraction constraint with clear beneficiary/victim structure"
+    },
+    {
+      "claim_id": "coordination_reading",
+      "human_readable": "Coordination Reading (Narrow Derivative Work Boundary)",
+      "structural_delta": "Only fixed recastings that substantially incorporate original expression constitute derivative works; transformative and intermediate uses are non-infringing",
+      "primary_observable": "Fair use defenses succeed; ML training held non-infringing; transformative works proliferate without licensing",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with structurally opposite constraint (low ε coordination vs high ε extraction)"
+    },
+    {
+      "claim_id": "hybrid_carveout_reading",
+      "human_readable": "Hybrid Carveout Reading (Categorical Non-Commercial Exception)",
+      "structural_delta": "Derivative work boundary depends on commercial exploitation: non-commercial transformative use permitted; commercial use requires authorization",
+      "primary_observable": "Split outcomes in fair use cases by commerciality; statutory amendment proposals distinguishing commercial ML training",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "academic_and_nonprofit_users",
+      "victim": "commercial_AI_developers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading attempting to reconcile poles via categorical carveout; instantiates partial extraction"
+    },
+    {
+      "claim_id": "fixation_reading",
+      "human_readable": "Fixation-Contingent Reading (Ephemeral Use Non-Derivative)",
+      "structural_delta": "Derivative work requires fixation in tangible medium; intermediate/ephemeral uses (e.g., ML training without storing copies) are non-derivative",
+      "primary_observable": "Court holdings on RAM copies; transitory use doctrine applications",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "coordination_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technical doctrinal refinement of coordination_reading; lower independent structural yield"
+    },
+    {
+      "claim_id": "authorship_attribution_reading",
+      "human_readable": "Authorship Attribution Reading (AI Output Attribution Determines Derivative Status)",
+      "structural_delta": "Whether AI-generated output is derivative depends on whether human prompting/curation establishes authorship distinct from training corpus",
+      "primary_observable": "Copyright Office guidance on AI authorship; judicial holdings on human creative contribution threshold",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: orthogonal authorship question; does not directly resolve derivative work boundary dispute"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "enclosure_reading",
+      "kernel_id": "derivative_work_statutory_boundary",
+      "reading_id": "enclosure_reading"
+    },
+    {
+      "claim_id": "coordination_reading",
+      "kernel_id": "derivative_work_statutory_boundary",
+      "reading_id": "coordination_reading"
+    },
+    {
+      "claim_id": "hybrid_carveout_reading",
+      "kernel_id": "derivative_work_statutory_boundary",
+      "reading_id": "hybrid_carveout_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "fixation_reading",
+      "structural_delta": "Derivative work requires fixation; ephemeral uses non-derivative",
+      "hypothesis": "piton",
+      "deferral_reason": "Technical refinement of coordination_reading; lower independent structural yield; captured by broader narrow-reading analysis"
+    },
+    {
+      "claim_id": "authorship_attribution_reading",
+      "structural_delta": "AI output derivative status depends on human authorship contribution",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Orthogonal authorship question; does not resolve core derivative work boundary contest; generative for future expansion"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_statutory_ambiguity",
+      "description": "Is the statutory kernel genuinely ambiguous (licensing legitimate plurality of readings) or is one reading clearly correct under textualist/purposivist interpretation? If the latter, the contest is not kernel-level but enforcement/political.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + §1.3-K coherence test"
+    },
+    {
+      "id": "omega_fair_use_absorption",
+      "description": "Does fair use doctrine absorb all derivative work boundary disputes (making the statutory kernel effectively inert) or does it operate as separate filter after derivative work determination?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — mechanism interaction not explicit in source"
+    },
+    {
+      "id": "omega_international_divergence",
+      "description": "Do parallel jurisdictions (EU database rights, UK TDM exceptions) instantiate different constraints from the same conceptual kernel, or are they separate kernels? If separate, U.S. derivative work boundary is not universal.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — geographic scope of extraction"
+    },
+    {
+      "id": "omega_commerciality_collapse",
+      "description": "Does hybrid_carveout_reading collapse into coordination_reading empirically (if courts reliably find commercial transformative use fair) or does it remain structurally distinct?",
+      "source": "§3.1 Independence Testing — potential Type A overlap"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings pass independence test with distinct observables and epsilon structures. Kernel recognition coherent: statutory ambiguity licenses plural readings, each instantiating different constraint type."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "17 U.S.C. § 101 definition of 'derivative work' as 'work based upon one or more preexisting works' — statutory text claimed as fixed reference point for legitimate copyright enforcement",
+    "authority_description": "Federal judiciary holds final interpretive authority via case law; Copyright Office issues administrative guidance; rightsholders claim interpretive legitimacy via statutory language and legislative history",
+    "drift_status": "partial",
+    "candidate_pattern": "hermeneutic_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "derivative_work_statutory_boundary",
+    "readings": [
+      {
+        "reading_id": "enclosure_reading",
+        "commitment": "Any use of copyrighted expression in creating new work constitutes preparation of derivative work",
+        "authority_grounding": "Textual maximalism — 'based upon' read broadly; rightsholder economic interest as interpretive lens; legislative history emphasizing author control",
+        "sibling_readings": [
+          "coordination_reading",
+          "hybrid_carveout_reading"
+        ],
+        "expected_structural_delta": "High ε snare: licensing requirements enforced pre-creation; downstream innovation bottlenecked; extraction flows to incumbents"
+      },
+      {
+        "reading_id": "coordination_reading",
+        "commitment": "Only fixed recastings substantially incorporating original expression are derivative works; transformative and intermediate uses non-infringing",
+        "authority_grounding": "Purposivist — copyright promotes progress via incentives, not maximal control; fair use doctrine as co-equal interpretive principle; First Amendment considerations",
+        "sibling_readings": [
+          "enclosure_reading",
+          "hybrid_carveout_reading"
+        ],
+        "expected_structural_delta": "Low ε rope: no ex-ante licensing requirement for transformative use; ML training permissible; coordination scaffold for generative technologies"
+      },
+      {
+        "reading_id": "hybrid_carveout_reading",
+        "commitment": "Derivative work boundary varies by commercial exploitation: non-commercial transformative use permitted; commercial use requires authorization",
+        "authority_grounding": "Pragmatic balancing — fair use statutory factors (purpose/character, market effect) as interpretive heuristic; judicial reluctance to choose absolute rule",
+        "sibling_readings": [
+          "enclosure_reading",
+          "coordination_reading"
+        ],
+        "expected_structural_delta": "Moderate ε tangled_rope: commercial developers face licensing costs; non-commercial users exempt; partial extraction with categorical beneficiary split"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "enclosure_reading",
+        "reading_b": "coordination_reading",
+        "basis": "Enclosure reading treats copyright as property right maximally excludable against all uses absent consent (Lockean/natural rights axiom). Coordination reading treats copyright as limited utilitarian grant subordinate to public interest in access and transformation (consequentialist/public goods axiom). No single coherent framework holds both: property absolutism and consequentialist balancing are mutually exclusive normative foundations."
+      }
+    ]
+  },
+  "_seed_id": "derivative_work_definition"
+}

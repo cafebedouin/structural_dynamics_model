@@ -1,0 +1,188 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Anthropology / Technology Adoption / Cultural Evolution",
+  "family_id": "fork_adoption_overbite_2026",
+  "topic_summary": "Analysis of the historical transition from knife-and-fingers eating to fork adoption in Europe (16th-18th centuries), examining how this technology shift altered bite configuration and jaw mechanics, producing the modern overbite dental pattern. The topic tests whether a commitment system can exist without beneficiaries—whether path-naturalization can occur through pure disuse rather than extraction.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Fork (eating implement; European adoption 1500s-1700s)",
+      "Edge-to-edge bite (pre-fork jaw mechanics; anterior teeth meet edge-to-edge)",
+      "Overbite (post-fork dental pattern; upper incisors overlap lower by 2-4mm)",
+      "European aristocracy (early fork adopters; status signaling)",
+      "Peasant/working populations (late/non-adopters; retained edge-to-edge bite longer)"
+    ],
+    "key_tensions": [
+      "Fork adoption as technology diffusion vs fork adoption as commitment-system kernel (is there a stabilized reference point being interpreted, or just material practice spreading?)"
+    ],
+    "key_mechanisms": [
+      "Bite configuration feedback loop: fork use → reduced anterior tooth loading → jaw development shifts → overbite becomes population norm",
+      "Status diffusion: aristocratic fork adoption → middle-class emulation → working-class adoption (centuries-long cascade)"
+    ],
+    "key_absences": [
+      "No identifiable authority structure claiming interpretive legitimacy over 'correct' eating posture",
+      "No founding text or codified rule stabilizing bite configuration",
+      "No beneficiary extracting rents from the transition (unlike most commitment system examples)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Edge-to-edge bite configuration as the biomechanically stable eating posture for knife-and-fingers food processing",
+    "authority_description": "None identifiable—no institution claims interpretive authority over bite mechanics",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_reason": "The supposed 'kernel' (bite configuration commitment) fails the shared-commitment test. No parties argue ABOUT a common substrate—there is no interpretive dispute over what the bite-configuration commitment means or requires. The edge-to-edge bite was not a commitment at all but an emergent biomechanical equilibrium. The fork did not produce competing READINGS of a kernel; it produced a material substitution (fork for fingers/knife) that removed the mechanical load requiring edge-to-edge contact. This is technology-driven path displacement, not kernel contestation. The absence of beneficiaries is not evidence of a beneficiary-less commitment system—it is evidence that no commitment system existed. What appears to be 'drift by disuse' is actually the collapse of a biomechanical constraint when its material precondition (anterior tooth loading during eating) was removed.",
+    "structural_reclassification": "The topic decomposes into three ordinary axes: (1) biomechanical constraint (mountain), (2) technology diffusion as status signal (rope), (3) path-naturalization of the overbite (piton). No kernel structure warranted."
+  },
+  "axes": [
+    {
+      "claim_id": "anterior_tooth_loading_constraint",
+      "human_readable": "Anterior Tooth Loading Constraint (Biomechanical Equilibrium)",
+      "structural_delta": "Edge-to-edge bite as biomechanical response to high anterior tooth loading during knife-and-fingers eating",
+      "primary_observable": "Skeletal evidence of bite patterns in pre-fork vs post-fork populations; experimental biomechanics of food processing methods",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "fork_diffusion_status_signal",
+        "overbite_path_naturalization"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical constraint base; highest structural distinctiveness"
+    },
+    {
+      "claim_id": "fork_diffusion_status_signal",
+      "human_readable": "Fork Diffusion as Status Signal (Technology Adoption Cascade)",
+      "structural_delta": "Fork adoption spreading via status emulation rather than functional superiority",
+      "primary_observable": "Timeline of fork adoption by social class; etiquette manual prescriptions; archaeological distribution patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "anterior_tooth_loading_constraint"
+      ],
+      "feeds_into": [
+        "overbite_path_naturalization"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Coordination mechanism distinct from biomechanical constraint; intermediate node in causal chain"
+    },
+    {
+      "claim_id": "overbite_path_naturalization",
+      "human_readable": "Overbite Path-Naturalization (Disuse-Driven Norm Shift)",
+      "structural_delta": "Overbite becoming 'normal' human dentition through multi-generational disuse of edge-to-edge mechanics",
+      "primary_observable": "Dental records showing overbite prevalence shift 1600-1900; modern perception of edge-to-edge bite as 'abnormal'",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "anterior_tooth_loading_constraint",
+        "fork_diffusion_status_signal"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node capturing path-naturalization mechanism"
+    },
+    {
+      "claim_id": "orthodontic_medicalization",
+      "human_readable": "Orthodontic Medicalization (Overbite as Treatment Target)",
+      "structural_delta": "Modern orthodontics treating edge-to-edge bite as malocclusion requiring correction",
+      "primary_observable": "Orthodontic treatment protocols; insurance coverage for 'malocclusion' correction",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "orthodontic_profession",
+      "victim": "patients_with_edge_to_edge_bite",
+      "downstream_of": [
+        "overbite_path_naturalization"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream extraction mechanism but outside historical scope of fork adoption analysis"
+    },
+    {
+      "claim_id": "dietary_texture_shift",
+      "human_readable": "Dietary Texture Shift (Softer Foods Enabling Fork Use)",
+      "structural_delta": "Parallel shift toward softer, pre-processed foods reducing need for anterior tooth tearing",
+      "primary_observable": "Historical food preparation methods; bread texture evolution; meat processing techniques",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "anterior_tooth_loading_constraint"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: potential confounding variable but lower structural distinctiveness than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    "anterior_tooth_loading_constraint",
+    "fork_diffusion_status_signal",
+    "overbite_path_naturalization"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "orthodontic_medicalization",
+      "structural_delta": "Modern orthodontics treating edge-to-edge bite as malocclusion",
+      "hypothesis": "snare",
+      "deferral_reason": "Outside historical scope; downstream extraction mechanism not central to fork adoption analysis"
+    },
+    {
+      "claim_id": "dietary_texture_shift",
+      "structural_delta": "Parallel shift toward softer foods reducing anterior tooth loading",
+      "hypothesis": "rope",
+      "deferral_reason": "Potential confounding variable but captured indirectly via anterior_tooth_loading_constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The supposed kernel (bite configuration commitment) fails the shared-commitment test. No authority structure, no interpretive dispute, no readings—only biomechanical equilibrium displaced by material substitution. This is the cleanest test case for why 'beneficiary-less commitment system' may be a category error: without beneficiaries, there may be no commitment system at all, only path-dependent material constraints.",
+      "source": "§1.3-K kernel/reading decomposition"
+    },
+    {
+      "id": "omega_dietary_confound",
+      "description": "Did dietary texture shifts (softer breads, pre-processed meats) precede or follow fork adoption? If dietary changes reduced anterior tooth loading independently, the fork may be epiphenomenal rather than causal. Skeletal evidence needed to sequence the transitions.",
+      "source": "Deferred axis dietary_texture_shift + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_class_divergence",
+      "description": "Did working-class populations who adopted forks late (1800s+) develop overbites at the same rate as early-adopting aristocracy? If not, the path-naturalization mechanism may require multi-generational exposure, complicating the 'disuse' framing.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to class stratification"
+    },
+    {
+      "id": "omega_modern_reversal",
+      "description": "Does the rise of orthodontic medicalization (treating edge-to-edge as malocclusion) constitute a snare that extracts rents from the path-naturalized overbite? If so, the 'no beneficiary' claim fails—beneficiaries emerged downstream, not during the original transition.",
+      "source": "Deferred axis orthodontic_medicalization"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: anterior_tooth_loading_constraint classified as mountain (biomechanical law) but may be piton (contingent on specific food processing methods). If dietary texture shifts preceded fork adoption, the 'mountain' reclassifies as rope or piton. Generated omega_dietary_confound to bound this uncertainty. Additionally, the kernel collapse (is_contested_kernel=false) itself constitutes a meta-level finding: the topic was proposed as a test case for beneficiary-less commitment systems, but the analysis reveals no commitment system existed—only material path-dependence. This negative result is structurally significant."
+  },
+  "_seed_id": "fork_overbite_disuse"
+}

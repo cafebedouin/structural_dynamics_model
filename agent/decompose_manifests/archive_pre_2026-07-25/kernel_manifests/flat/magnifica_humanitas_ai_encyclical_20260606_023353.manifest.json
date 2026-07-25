@@ -1,0 +1,317 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Catholic Social Doctrine / Technology Ethics / Political Theology",
+  "family_id": "magnifica_humanitas_ai_encyclical",
+  "topic_summary": "Papal encyclical Magnifica Humanitas addresses artificial intelligence through Catholic Social Doctrine, framing technological transformation as a choice between Babel (technocratic domination) and Jerusalem (shared responsibility for common good). The document integrates 135 years of social teaching with contemporary AI governance challenges, emphasizing human dignity, subsidiarity, solidarity, and integral development.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Catholic Church / Magisterium (authoritative teaching body addressing AI ethics)",
+      "AI developers and technology companies (private actors with unprecedented power)",
+      "Digital labor force (data labelers, content moderators, resource extractors)",
+      "Transhumanist/posthumanist movements (ideological currents promising human enhancement)",
+      "Nation-states (diminished regulatory capacity relative to tech power)",
+      "Vulnerable populations (poor, migrants, children, workers facing displacement)",
+      "International institutions (UN, multilateral bodies in crisis)",
+      "Catholic Social Doctrine tradition (Leo XIII through Francis)"
+    ],
+    "key_tensions": [
+      "Technocratic efficiency vs human dignity and relational flourishing",
+      "Private technological power vs state sovereignty and democratic governance",
+      "AI-driven optimization vs acceptance of human limitation and finitude",
+      "Universal destination of goods vs concentration of data/algorithmic power",
+      "Speed of technological change vs pace of ethical/institutional development"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "technocratic_paradigm_dominance",
+      "human_readable": "Technocratic Paradigm Dominance",
+      "structural_delta": "Efficiency, control, and profit become the ultimate criteria for evaluating human activity, reducing persons to optimizable resources",
+      "primary_observable": "Prevalence of performance metrics in decision-making; displacement of qualitative human judgment by algorithmic optimization",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "technology_companies_financial_elites",
+      "victim": "workers_vulnerable_populations_relational_goods",
+      "downstream_of": [],
+      "feeds_into": [
+        "ai_governance_accountability_gap",
+        "digital_labor_exploitation",
+        "transhumanist_anthropology"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream synthesis node feeding four downstream axes; core diagnostic of encyclical's concern"
+    },
+    {
+      "claim_id": "private_technological_power_concentration",
+      "human_readable": "Private Technological Power Concentration",
+      "structural_delta": "Control over platforms, data, algorithms, and infrastructure resides with transnational private actors rather than democratic institutions",
+      "primary_observable": "Market share of tech platforms; regulatory capture indices; private vs public R&D spending ratios",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "major_tech_companies",
+      "victim": "democratic_institutions_civil_society_global_south",
+      "downstream_of": [],
+      "feeds_into": [
+        "ai_governance_accountability_gap",
+        "universal_destination_goods_violation",
+        "subsidiarity_inversion"
+      ],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from technocratic paradigm; addresses power topology rather than value system; high epsilon"
+    },
+    {
+      "claim_id": "ai_governance_accountability_gap",
+      "human_readable": "AI Governance and Accountability Gap",
+      "structural_delta": "Opacity of algorithmic decision-making combined with diffuse responsibility chains prevents meaningful oversight and redress",
+      "primary_observable": "Explainability metrics for deployed systems; existence of appeal mechanisms; traceability of decision chains",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "system_designers_deployers",
+      "victim": "individuals_subject_to_algorithmic_decisions",
+      "downstream_of": [
+        "technocratic_paradigm_dominance",
+        "private_technological_power_concentration"
+      ],
+      "feeds_into": [
+        "truth_democracy_erosion"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis of power and paradigm axes; distinct observable (opacity/accountability vs power concentration)"
+    },
+    {
+      "claim_id": "digital_labor_exploitation",
+      "human_readable": "Digital Labor Exploitation and New Slavery",
+      "structural_delta": "AI systems depend on hidden labor (data annotation, content moderation, resource extraction) performed under exploitative conditions",
+      "primary_observable": "Wages and working conditions in data labor sector; child labor in rare earth mining; trafficking facilitated by digital platforms",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "technology_companies_consumers_of_ai_services",
+      "victim": "global_south_workers_children_trafficking_victims",
+      "downstream_of": [
+        "technocratic_paradigm_dominance",
+        "private_technological_power_concentration"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct victim set and observable from governance gap; material exploitation vs epistemic/political harm"
+    },
+    {
+      "claim_id": "work_dignity_transformation",
+      "human_readable": "Work Dignity Transformation (Automation and Displacement)",
+      "structural_delta": "AI-driven automation restructures labor markets, threatening employment, deskilling workers, and subordinating human agency to machine pace",
+      "primary_observable": "Unemployment rates in automatable sectors; worker autonomy indices; wage distribution between high-skill and displaced workers",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "capital_owners_highly_specialized_workers",
+      "victim": "displaced_workers_families_communities_dependent_on_stable_employment",
+      "downstream_of": [
+        "technocratic_paradigm_dominance"
+      ],
+      "feeds_into": [
+        "family_social_fabric_erosion"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Distinct from digital labor exploitation (displacement vs exploitation); different victim set (Global North workers vs Global South laborers)"
+    },
+    {
+      "claim_id": "truth_democracy_erosion",
+      "human_readable": "Truth and Democracy Erosion (Disinformation and Epistemic Crisis)",
+      "structural_delta": "AI-amplified disinformation, algorithmic curation, and manipulation of collective imagination undermine shared truth and democratic deliberation",
+      "primary_observable": "Prevalence of deepfakes and synthetic media; polarization indices; trust in institutions; information source diversity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "actors_seeking_political_manipulation_platform_engagement_metrics",
+      "victim": "democratic_publics_truth_seeking_institutions",
+      "downstream_of": [
+        "ai_governance_accountability_gap",
+        "technocratic_paradigm_dominance"
+      ],
+      "feeds_into": [
+        "war_normalization_culture_power"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Distinct observable (epistemic vs labor/power); feeds into war axis; different mechanism than governance gap"
+    },
+    {
+      "claim_id": "transhumanist_anthropology",
+      "human_readable": "Transhumanist Anthropology (Rejection of Human Limitation)",
+      "structural_delta": "Cultural narratives frame human finitude as defect to be overcome through technological enhancement rather than condition for flourishing",
+      "primary_observable": "Prevalence of enhancement discourse in tech culture; investment in life extension and augmentation; cultural valorization of optimization",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "technocratic_paradigm_dominance"
+      ],
+      "feeds_into": [
+        "human_dignity_ontological_foundation"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Distinct cultural/ideological axis; different observable (narrative/anthropology vs material power); upstream to dignity axis"
+    },
+    {
+      "claim_id": "universal_destination_goods_violation",
+      "human_readable": "Universal Destination of Goods Violation (Data and Knowledge Enclosure)",
+      "structural_delta": "Concentration of data, algorithms, and digital infrastructure violates principle that goods are intended for all humanity",
+      "primary_observable": "Gini coefficient for data/algorithmic access; patent concentration; digital divide metrics; platform monopoly indices",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "tech_monopolies_global_north",
+      "victim": "global_south_excluded_populations",
+      "downstream_of": [
+        "private_technological_power_concentration"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 8,
+      "selection_reason": "Distinct from power concentration (violation of distributive principle vs power topology); different observable"
+    },
+    {
+      "claim_id": "subsidiarity_inversion",
+      "human_readable": "Subsidiarity Inversion (Centralization and Disempowerment)",
+      "structural_delta": "Digital systems impose decisions from above (platforms, algorithms) rather than enabling local communities and intermediary organizations",
+      "primary_observable": "Degree of local control over digital infrastructure; participation in algorithmic governance; intermediary organization capacity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "centralized_platform_operators",
+      "victim": "local_communities_intermediary_organizations_civil_society",
+      "downstream_of": [
+        "private_technological_power_concentration"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 9,
+      "selection_reason": "Distinct from universal destination (procedural/structural vs distributive); different victim set and mechanism"
+    },
+    {
+      "claim_id": "family_social_fabric_erosion",
+      "human_readable": "Family and Social Fabric Erosion",
+      "structural_delta": "Job insecurity, digital addiction, and fragmentation of attention undermine family stability and intergenerational transmission",
+      "primary_observable": "Family formation rates; time spent in face-to-face interaction; digital device usage patterns; social capital indices",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "attention_economy_platforms",
+      "victim": "families_children_communities",
+      "downstream_of": [
+        "work_dignity_transformation",
+        "technocratic_paradigm_dominance"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 10,
+      "selection_reason": "Distinct from work axis (social/relational vs economic); different observable (family/community vs employment)"
+    },
+    {
+      "claim_id": "war_normalization_culture_power",
+      "human_readable": "War Normalization and Culture of Power",
+      "structural_delta": "AI in warfare, erosion of just war limits, and algorithmic amplification of conflict normalize violence and undermine peace as political goal",
+      "primary_observable": "Military AI deployment; autonomous weapons development; conflict escalation patterns; peace process success rates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "military_industrial_complex_authoritarian_regimes",
+      "victim": "civilians_vulnerable_populations_peace_processes",
+      "downstream_of": [
+        "truth_democracy_erosion",
+        "ai_governance_accountability_gap"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 11,
+      "selection_reason": "Distinct domain (military/geopolitical vs economic/social); different victim set; downstream synthesis of epistemic and governance crises"
+    },
+    {
+      "claim_id": "human_dignity_ontological_foundation",
+      "human_readable": "Human Dignity Ontological Foundation (Theological Grounding)",
+      "structural_delta": "Human dignity is infinite and inalienable, grounded in being created in God's image, not in performance or optimization",
+      "primary_observable": "Theological coherence of dignity claims; resistance to utilitarian reduction; cultural recognition of unconditional worth",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "technocratic_paradigm_dominance",
+        "transhumanist_anthropology"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 12,
+      "selection_reason": "Mountain providing theological/metaphysical foundation; distinct from all other axes (ontological vs structural/political)"
+    }
+  ],
+  "generation_sequence": [
+    "technocratic_paradigm_dominance",
+    "private_technological_power_concentration",
+    "ai_governance_accountability_gap",
+    "digital_labor_exploitation",
+    "work_dignity_transformation",
+    "truth_democracy_erosion",
+    "transhumanist_anthropology",
+    "universal_destination_goods_violation",
+    "subsidiarity_inversion",
+    "family_social_fabric_erosion",
+    "war_normalization_culture_power",
+    "human_dignity_ontological_foundation"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_church_internal_application",
+      "description": "Encyclical calls for Church to apply social doctrine principles internally (transparency, subsidiarity, accountability). Does the Church's own governance structure model these principles or contradict them? Unexamined tension between prescriptive teaching and institutional practice.",
+      "source": "§1.1 Absence Inventory (Church as subject vs object of critique)"
+    },
+    {
+      "id": "omega_non_christian_foundations",
+      "description": "Encyclical grounds dignity in Trinitarian theology and Incarnation. How do these principles translate for non-Christian interlocutors? Document addresses 'all people of goodwill' but foundation remains explicitly theological. Natural law arguments present but subordinate.",
+      "source": "Dark Matter Probe 2 (Absence: secular philosophical grounding)"
+    },
+    {
+      "id": "omega_global_south_agency",
+      "description": "Document identifies Global South as victim of digital colonialism but does not center Global South theological or philosophical voices as sources of critique. Extractive framing (data as 'rare earths') accurate but potentially replicates epistemic patterns it critiques.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan: who speaks for whom)"
+    },
+    {
+      "id": "omega_temporal_horizon",
+      "description": "Encyclical's temporal framing oscillates between urgent present crisis and eschatological hope (New Jerusalem). Unclear whether technological transformation is understood as qualitatively unprecedented or continuous with prior industrial revolutions. Affects strategic recommendations.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium: historical analogy)"
+    },
+    {
+      "id": "omega_commitment_system_status",
+      "description": "Catholic Social Doctrine may itself be a commitment system: kernel = human dignity/imago Dei; authority = Magisterium; drift status uncertain. If so, encyclical is both analyzing AI through CS doctrine AND potentially instantiating CS pattern. Reflexive dimension unexamined.",
+      "source": "§1.3 Commitment System Recognition (self-referential possibility)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Twelve distinct axes identified through multi-lens scan (theological, political economy, labor, epistemology, anthropology, geopolitical). All axes passed §3 pairwise independence testing. Mountain axis (human_dignity_ontological_foundation) grounded in explicit theological claims within document's own framework. Deferred axes: none (all §3 survivors selected per protocol)."
+  }
+}

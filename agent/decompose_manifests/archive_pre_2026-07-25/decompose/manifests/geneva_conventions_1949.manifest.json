@@ -1,0 +1,238 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Humanitarian Law / Law of Armed Conflict / Political Philosophy",
+  "family_id": "geneva_conventions_lawful_combat_2026",
+  "topic_summary": "Analysis of the Geneva Conventions as a contested kernel regarding lawful combat, examining whether the 1949 Conventions and their protocols function as absolute humanitarian ceilings limiting state violence regardless of reciprocity, or as conditional reciprocal restraints that can be degraded or suspended against irregular forces or non-compliant adversaries.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "1949 Geneva Conventions and Additional Protocols (treaty text defining protected persons, POW status, civilian immunity)",
+      "State militaries bound by Convention obligations (signatories with enforcement mechanisms)",
+      "Irregular forces / non-state combatants (entities whose Convention status is contested)",
+      "International Committee of the Red Cross (interpretive authority claiming humanitarian primacy)",
+      "Civilian populations in conflict zones (primary beneficiary or victim set depending on reading)",
+      "Detainees / prisoners (status and treatment contested across readings)"
+    ],
+    "key_tensions": [
+      "Absolute humanitarian protection vs conditional reciprocal restraint (ICRC interpretation vs state security doctrine)",
+      "Privileged combatant status vs unlawful combatant category (regular military vs irregular fighters)",
+      "Civilian immunity as inviolable vs civilian immunity as forfeitable (absolute protection vs security-maximizing degradation)"
+    ],
+    "key_mechanisms": [
+      "POW status determination (whether captured combatants receive Article 4 protections or are excluded as unlawful)",
+      "Principle of distinction enforcement (whether states must distinguish civilians from combatants even when adversary embeds forces)"
+    ],
+    "key_absences": [
+      "Drone warfare and targeted killing outside active battlefields (Conventions drafted for territorial war; remote violence beyond their spatial model)",
+      "Private military contractors and corporate combatants (non-state but non-irregular; treaty does not clearly classify)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1949 Geneva Conventions and their Additional Protocols as the fixed humanitarian law treaty defining protected persons, combatant privilege, POW status, and civilian immunity.",
+    "authority_description": "ICRC claims interpretive authority grounded in treaty mandate; state militaries claim operational authority grounded in sovereign self-defense and reciprocity principles; international tribunals adjudicate violations.",
+    "drift_status": "partial",
+    "candidate_pattern": "fork_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "geneva_conventions_1949",
+    "readings": [
+      {
+        "reading_id": "humanitarian_ceiling_reading",
+        "commitment": "Conventions establish absolute humanitarian minimums that constrain state violence regardless of adversary compliance or reciprocity",
+        "authority_grounding": "ICRC treaty interpretation; jus cogens human rights framework; Martens Clause invoking 'laws of humanity'",
+        "sibling_readings": [
+          "conditional_reciprocity_reading",
+          "security_maximization_reading"
+        ],
+        "expected_structural_delta": "High suppression of security rationales; expansive civilian and detainee protections; irregular combatants retain basic humanitarian protections even without POW status; state militaries bear asymmetric burden"
+      },
+      {
+        "reading_id": "conditional_reciprocity_reading",
+        "commitment": "Conventions function as reciprocal restraints that apply fully only when adversaries comply; non-compliance by irregular forces permits proportional degradation",
+        "authority_grounding": "State practice doctrine; reciprocity as foundational treaty principle; operational military necessity",
+        "sibling_readings": [
+          "humanitarian_ceiling_reading",
+          "security_maximization_reading"
+        ],
+        "expected_structural_delta": "Moderate constraint on state violence; POW protections conditional on meeting Article 4 criteria (organized command, distinctive insignia, carrying arms openly); civilian immunity preserved but narrowed by proportionality calculations; detained irregulars classified as unlawful combatants without full POW protections"
+      },
+      {
+        "reading_id": "security_maximization_reading",
+        "commitment": "Conventions are peacetime aspirations that must yield to operational necessity in asymmetric conflict; irregular warfare justifies suspending most protections to maximize state security",
+        "authority_grounding": "Executive national security prerogative; post-9/11 'new paradigm' legal theory; effective sovereignty doctrine",
+        "sibling_readings": [
+          "humanitarian_ceiling_reading",
+          "conditional_reciprocity_reading"
+        ],
+        "expected_structural_delta": "Minimal constraint on state violence; unlawful combatant category expands to deny POW status and habeas corpus; civilian immunity degraded via 'human shields' doctrine and collateral damage acceptance; indefinite detention without trial; coercive interrogation normalized as non-torture"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "humanitarian_ceiling_reading",
+        "reading_b": "security_maximization_reading",
+        "basis": "Humanitarian ceiling treats Convention obligations as deontological constraints that bind regardless of adversary conduct or security costs; security maximization treats them as rebuttable presumptions that yield to consequentialist necessity. No single framework holds both that protections are absolute AND that they are suspendable for security reasons."
+      },
+      {
+        "reading_a": "humanitarian_ceiling_reading",
+        "reading_b": "conditional_reciprocity_reading",
+        "basis": "Humanitarian ceiling rejects reciprocity as a condition for protection (captured irregulars retain humane treatment regardless of their prior conduct); conditional reciprocity makes protection contingent on adversary compliance. These are mutually exclusive grounds for obligation."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "humanitarian_ceiling_reading",
+      "human_readable": "Humanitarian Ceiling Reading (Absolute Minimums Regardless of Reciprocity)",
+      "structural_delta": "Geneva Conventions as deontological humanitarian floor that constrains state violence regardless of adversary compliance, irregular status, or operational necessity",
+      "primary_observable": "ICRC interpretation documents; international tribunal rulings expanding protections; human rights litigation challenging unlawful combatant detention",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "human_rights_advocacy_framework",
+      "victim": "state_operational_flexibility",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three sibling readings from contested kernel; highest suppression of alternative justifications"
+    },
+    {
+      "claim_id": "conditional_reciprocity_reading",
+      "human_readable": "Conditional Reciprocity Reading (Protections Contingent on Adversary Compliance)",
+      "structural_delta": "Geneva Conventions as reciprocal treaty obligations that degrade proportionally when adversaries violate; irregular forces without Article 4 compliance forfeit POW protections",
+      "primary_observable": "State practice in asymmetric conflicts; military law manuals conditioning protections on adversary conduct; unlawful combatant legal category creation",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "irregular_combatants_detained",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second sibling reading; structurally distinct middle position between absolute ceiling and security maximization"
+    },
+    {
+      "claim_id": "security_maximization_reading",
+      "human_readable": "Security Maximization Reading (Conventions as Aspirational, Yield to Necessity)",
+      "structural_delta": "Geneva Conventions as peacetime aspirations that must be suspended in asymmetric conflict to maximize state security against irregular threats",
+      "primary_observable": "Post-9/11 detention policies (Guantanamo, black sites); enhanced interrogation memos; collateral damage doctrine in drone warfare",
+      "epsilon_bin": "v_low",
+      "hypothesis": "snare",
+      "beneficiary": "executive_national_security_apparatus",
+      "victim": "civilian_populations_in_conflict_zones",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third sibling reading; downstream extraction maximizer with highest victim set expansion"
+    },
+    {
+      "claim_id": "treaty_spatial_model_obsolescence",
+      "human_readable": "Treaty Spatial Model Obsolescence (Territorial War Assumptions vs Borderless Conflict)",
+      "structural_delta": "Geneva Conventions assume bounded territorial battlefields; drone warfare, global targeting, and non-territorial asymmetric conflict render spatial model obsolete",
+      "primary_observable": "Geographic scope of drone strikes outside declared war zones; targeted killing legal memos extending 'battlefield' globally",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "security_maximization_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural background mountain that enables security maximization reading but lower centrality than the three kernel readings"
+    },
+    {
+      "claim_id": "private_military_classification_gap",
+      "human_readable": "Private Military Classification Gap (Corporate Combatants Outside Treaty Categories)",
+      "structural_delta": "PMCs are neither state militaries nor irregular forces; Geneva Conventions lack clear classification framework for corporate violence actors",
+      "primary_observable": "PMC employment rates in conflict zones; legal ambiguity in contractor prosecution for alleged war crimes",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emerging classification problem but speculative scaffold with zero graph centrality relative to core kernel contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "humanitarian_ceiling_reading",
+      "kernel_id": "geneva_conventions_1949",
+      "reading_id": "humanitarian_ceiling_reading"
+    },
+    {
+      "claim_id": "conditional_reciprocity_reading",
+      "kernel_id": "geneva_conventions_1949",
+      "reading_id": "conditional_reciprocity_reading"
+    },
+    {
+      "claim_id": "security_maximization_reading",
+      "kernel_id": "geneva_conventions_1949",
+      "reading_id": "security_maximization_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "treaty_spatial_model_obsolescence",
+      "structural_delta": "Conventions assume bounded territorial battlefields; borderless asymmetric conflict renders spatial model obsolete",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural background condition that enables security maximization reading but lower centrality than the three primary kernel readings"
+    },
+    {
+      "claim_id": "private_military_classification_gap",
+      "structural_delta": "PMCs lack clear treaty classification as neither state militaries nor irregular forces",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Emerging problem but speculative scaffold with zero centrality relative to core reciprocity/necessity kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_non_state_symmetry",
+      "description": "Does humanitarian ceiling reading bind non-state forces equally? If protections are asymmetric (states constrained, irregulars not), the rope becomes a snare benefiting groups that instrumentalize civilian embedding.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) on humanitarian_ceiling_reading"
+    },
+    {
+      "id": "omega_proportionality_measurement",
+      "description": "Conditional reciprocity reading depends on measuring adversary non-compliance to calibrate proportional degradation. Without objective metric, this becomes a piton allowing ad hoc justification of any security measure.",
+      "source": "Dark Matter Probe 1 (Operational Medium) on conditional_reciprocity_reading"
+    },
+    {
+      "id": "omega_torture_definition_drift",
+      "description": "Security maximization reading distinguishes 'enhanced interrogation' from torture. If the distinction is purely stipulative (torture = what we don't do), the rope of legal definition becomes a snare permitting indefinite redefinition.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — definitional boundary enforcement absent in security maximization reading"
+    },
+    {
+      "id": "omega_icrc_interpretive_legitimacy",
+      "description": "Humanitarian ceiling reading grounds authority in ICRC mandate. Is ICRC interpretation binding on states, advisory, or merely one litigating position? If advisory, the claimed humanitarian floor is a rope (coordination norm) not a mountain (enforceable law).",
+      "source": "Commitment system authority structure question: what enforces ICRC interpretation against non-compliant states?"
+    },
+    {
+      "id": "omega_private_military_extraction",
+      "description": "Deferred axis: PMC classification gap may allow states to offshore violence beyond Geneva constraints. If PMCs operate as state proxies without treaty obligations, all three readings are bypassed via jurisdictional arbitrage.",
+      "source": "Deferred axis private_military_classification_gap + Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition confirmed: three readings emit structurally distinct constraints (different epsilon bins, different victim sets, axiom contradictions established). Treaty spatial obsolescence mountain deferred as lower centrality than core kernel contest."
+  },
+  "_seed_id": "geneva_conventions_1949"
+}

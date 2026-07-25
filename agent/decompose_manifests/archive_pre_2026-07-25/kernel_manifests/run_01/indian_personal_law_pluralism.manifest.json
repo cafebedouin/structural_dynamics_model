@@ -1,0 +1,189 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Pluralism / Comparative Family Law",
+  "family_id": "india_personal_law_coexistence",
+  "topic_summary": "Analysis of India's parallel personal-law regime where Hindu, Muslim, Christian, Parsi, and secular family law systems operate simultaneously within one constitutional state. The core question is whether this represents one contested kernel (marriage/family authority) read multiple ways, or multiple distinct kernels coexisting without integration—a test case for coherent-multi-reading versus incoherent-bundle classification.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Indian Constitution (secular framework claiming supremacy)",
+      "Hindu Marriage Act 1955 (codified Hindu/Buddhist/Jain/Sikh family law)",
+      "Muslim Personal Law (Shariat) Application Act 1937 (uncodified religious law)",
+      "Indian Christian Marriage Act 1872 (codified Christian family law)",
+      "Parsi Marriage and Divorce Act 1936 (codified Zoroastrian family law)",
+      "Special Marriage Act 1954 (secular opt-in alternative)",
+      "Supreme Court of India (constitutional adjudicator; periodic UCC advocacy)"
+    ],
+    "key_claims": [
+      "Article 44 (Directive Principle) mandates eventual Uniform Civil Code but remains unimplemented since 1950",
+      "Muslim Personal Law Board claims Shariat authority is non-negotiable religious freedom under Article 25",
+      "Shah Bano case (1985) triggered legislative override when Court applied secular maintenance standards to Muslim divorce",
+      "Triple talaq criminalization (2019) imposed state authority over Muslim divorce practice despite Board opposition",
+      "Goa operates a Portuguese-derived uniform civil code as legacy exception, demonstrating feasibility"
+    ],
+    "key_tensions": [
+      "Constitutional secularism vs religious community autonomy (State vs Personal Law Boards)",
+      "Gender equality (Article 14/15) vs religious freedom (Article 25/26) in family law domain",
+      "Majoritarian pressure for UCC vs minority protection concerns (Hindu nationalism vs Muslim/Christian communities)"
+    ],
+    "key_mechanisms": [
+      "Opt-in escape valve: Special Marriage Act allows individuals to exit communal law into secular framework",
+      "Judicial case-by-case intervention: Supreme Court applies constitutional standards to personal law when cases reach it",
+      "Legislative override: Parliament can codify/reform personal law (Hindu Code Bills 1950s, Triple Talaq Act 2019) but faces political cost",
+      "Community enforcement: Personal Law Boards issue fatwas/guidance but lack formal state enforcement power"
+    ],
+    "key_absences": [
+      "No formal mechanism for resolving inter-system conflicts when parties from different personal law regimes marry/divorce",
+      "No systematic data on gender equity outcomes across the five regimes despite equality being constitutional mandate"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Authority to define legitimate marriage formation, dissolution, inheritance, and family obligations within the Indian state",
+    "authority_description": "Contested between religious community tradition (claimed as Article 25/26 protection) and constitutional state sovereignty (Article 44 UCC mandate + Article 14/15 equality)",
+    "drift_status": "partial",
+    "candidate_pattern": "D2_culture_level_break",
+    "is_contested_kernel": true,
+    "kernel_id": "family_law_authority",
+    "readings": [
+      {
+        "reading_id": "communal_autonomy_reading",
+        "commitment": "Family law authority derives from religious community tradition; state role is recognition not regulation",
+        "authority_grounding": "Religious freedom (Article 25/26) as constitutional trump; Personal Law Boards as interpretive authorities",
+        "sibling_readings": [
+          "constitutional_supremacy_reading",
+          "hybrid_accommodation_reading"
+        ],
+        "expected_structural_delta": "High beneficiary extraction for religious elites (Board authority); high victim extraction for women under uncodified systems (Muslim, Christian pre-reform); state authority constrained to recognition; ε_base ~0.45 (moderate—community enforcement soft but identity-binding)"
+      },
+      {
+        "reading_id": "constitutional_supremacy_reading",
+        "commitment": "Family law authority derives from constitutional state; religious practice is private sphere not legal regime",
+        "authority_grounding": "Article 44 UCC mandate + Article 14/15 equality as constitutional hierarchy; Parliament/Courts as sole legitimate authorities",
+        "sibling_readings": [
+          "communal_autonomy_reading",
+          "hybrid_accommodation_reading"
+        ],
+        "expected_structural_delta": "Beneficiary extraction for state (monopoly on legal authority); victim extraction for religious minorities (loss of communal autonomy); uniform rules across communities; ε_base ~0.25 (low-moderate—state enforcement robust but implementation politically costly)"
+      },
+      {
+        "reading_id": "hybrid_accommodation_reading",
+        "commitment": "Family law authority is shared: communities govern internal practice, state enforces constitutional floor (gender equality, fundamental rights)",
+        "authority_grounding": "Pragmatic balance between Article 25/26 and Article 14/15; Supreme Court as boundary-setter via case law; opt-in secular alternative (Special Marriage Act) as pressure valve",
+        "sibling_readings": [
+          "communal_autonomy_reading",
+          "constitutional_supremacy_reading"
+        ],
+        "expected_structural_delta": "Beneficiary extraction for state (retains ultimate authority) and moderate religious elites (retain internal governance); victim extraction for women varies by community (codified Hindu law better than uncodified Muslim law); ε_base ~0.35 (moderate—enforcement selective, depends on judicial intervention and political will)"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "communal_autonomy_reading",
+      "human_readable": "Communal Autonomy Reading (Religious Freedom as Legal Pluralism)",
+      "structural_delta": "Family law authority grounded in religious community tradition with state limited to recognition role",
+      "primary_observable": "Personal Law Board authority; frequency of state non-intervention in intra-community disputes; Article 25/26 invocations in litigation",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "religious_elites_personal_law_boards",
+      "victim": "women_under_uncodified_systems",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest-extractiveness reading; captures beneficiary structure (Board authority) and victim structure (gender inequality in uncodified Muslim/Christian law)"
+    },
+    {
+      "claim_id": "constitutional_supremacy_reading",
+      "human_readable": "Constitutional Supremacy Reading (UCC as State Monopoly)",
+      "structural_delta": "Family law authority derives solely from constitutional state; religious practice is private not legal",
+      "primary_observable": "Article 44 UCC advocacy; legislative overrides of personal law (Triple Talaq Act); judicial imposition of constitutional standards",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "state_legal_monopoly",
+      "victim": "religious_minorities_autonomy_loss",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposite to reading 1; different beneficiary (state vs Boards) and victim (minorities vs women); lower ε reflects political implementation cost"
+    },
+    {
+      "claim_id": "hybrid_accommodation_reading",
+      "human_readable": "Hybrid Accommodation Reading (Shared Authority with Constitutional Floor)",
+      "structural_delta": "Family law authority shared between communities (internal governance) and state (constitutional minimum standards)",
+      "primary_observable": "Special Marriage Act usage rates; Supreme Court intervention frequency; legislative reform patterns (Hindu Code Bills vs Muslim law stasis)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_ultimate_authority_plus_moderate_religious_elites",
+      "victim": "women_variably_by_community",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; represents actual institutional equilibrium (status quo); captures both state and communal authority claims; victim structure varies by community (Hindu women better protected than Muslim women under current hybrid)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "communal_autonomy_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "communal_autonomy_reading"
+    },
+    {
+      "claim_id": "constitutional_supremacy_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "constitutional_supremacy_reading"
+    },
+    {
+      "claim_id": "hybrid_accommodation_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "hybrid_accommodation_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Is this ONE kernel read three ways, or THREE distinct kernels coexisting? The readings share a common substrate (family law authority within Indian state) but instantiate structurally different constraints with different beneficiary/victim pairs and different ε values. Coherence test: Can a single individual hold all three readings simultaneously? No—each reading excludes the others' authority claims. This supports contested-kernel classification over incoherent-bundle.",
+      "source": "§1.3-K kernel/reading decomposition"
+    },
+    {
+      "id": "omega_goa_exception",
+      "description": "Goa's Portuguese-derived uniform civil code operates as natural experiment. Does its existence prove UCC feasibility (constitutional_supremacy_reading) or demonstrate that uniformity requires colonial imposition rather than democratic consensus (communal_autonomy_reading)? Goa's small population and Catholic majority may make it non-generalizable.",
+      "source": "Extraction claim 5; absence of systematic comparison data"
+    },
+    {
+      "id": "omega_gender_equity_measurement",
+      "description": "No systematic data comparing gender equity outcomes across the five personal law regimes despite Article 14/15 equality mandate. Codified Hindu law post-1950s reform vs uncodified Muslim law is claimed divergence, but empirical measurement absent. Without measurement, victim identification in each reading remains partially speculative.",
+      "source": "Absence inventory; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_inter_regime_conflict",
+      "description": "What happens when parties from different personal law regimes marry or divorce? No formal conflict-of-laws mechanism documented. Special Marriage Act provides opt-in secular alternative but requires prospective choice. Retrospective conflicts (e.g., Hindu-Muslim divorce, Christian-Parsi inheritance) may force de facto constitutional_supremacy_reading via judicial intervention even under hybrid_accommodation equilibrium.",
+      "source": "Absence inventory; mechanism gap"
+    },
+    {
+      "id": "omega_drift_trajectory",
+      "description": "Drift status classified as 'partial' but trajectory unclear. Triple Talaq Act (2019) represents state override of Muslim Personal Law Board authority—movement toward constitutional_supremacy_reading. But Hindu Code Bills (1950s) represent state codification OF communal law—movement toward hybrid_accommodation. Is drift unidirectional or oscillating? Political economy of Hindu nationalism (BJP) vs minority protection (Congress/regional parties) suggests oscillation rather than convergence.",
+      "source": "Commitment system recognition; drift status classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Three readings selected represent structurally distinct constraints with different beneficiary/victim pairs and different ε values. Coherence test (omega_kernel_coherence) confirms contested-kernel classification over incoherent-bundle."
+  },
+  "_seed_id": "indian_personal_law_pluralism"
+}

@@ -1,0 +1,221 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Human Rights / Political Philosophy",
+  "family_id": "udhr_article_3_interpretive_contest",
+  "topic_summary": "Analysis of UDHR Article 3 ('Everyone has the right to life, liberty and security of person') as a contested kernel. Two dominant readings diverge structurally: Negative Liberty (prohibition on state interference, targeting capital punishment and expansive security measures) versus Positive Entitlement (state obligation to provide material conditions for life, targeting welfare provision and group protections). The readings emit structurally distinct constraints with different beneficiary/victim configurations.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "UDHR Article 3 (canonical human rights text)",
+      "Negative Liberty Reading Tradition (liberal individualist interpretation)",
+      "Positive Entitlement Reading Tradition (social democratic/communitarian interpretation)",
+      "State (dual role: constraint target in Reading A, obligation-bearer in Reading B)",
+      "Individual Rights-Holder (abstract universal person vs situated vulnerable person)"
+    ],
+    "key_tensions": [
+      "State restraint vs state action as primary mechanism for securing 'life'",
+      "Individual autonomy vs collective welfare as priority protected interest"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "negative_liberty_reading",
+      "human_readable": "Negative Liberty Reading (Right Against State Killing)",
+      "structural_delta": "Article 3 grounds absolute prohibition on state deprivation of life except narrow procedural justice; liberty as freedom from interference",
+      "primary_observable": "Capital punishment abolition rate; constitutional restrictions on state violence; self-defense doctrine breadth",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "individual_rights_holder",
+      "victim": "state_security_apparatus",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct constraint structure; high epsilon via capital punishment and expansive security prohibitions"
+    },
+    {
+      "claim_id": "positive_entitlement_reading",
+      "human_readable": "Positive Entitlement Reading (Right to Material Conditions of Life)",
+      "structural_delta": "Article 3 grounds state obligation to provide welfare, healthcare, housing as preconditions for 'security of person'; permits speech/property limits for collective welfare",
+      "primary_observable": "Constitutional welfare guarantees; hate speech laws; wealth redistribution mechanisms",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "vulnerable_populations_via_state",
+      "victim": "property_and_expression_rights",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally incompatible with Reading A; different victim/beneficiary configuration and base extractiveness"
+    },
+    {
+      "claim_id": "procedural_hybrid_reading",
+      "human_readable": "Procedural Hybrid Reading (Right to Due Process Protections)",
+      "structural_delta": "Article 3 grounds procedural safeguards (habeas corpus, trial rights) without resolving substantive liberty/welfare debate",
+      "primary_observable": "Emergency detention limits; judicial review availability; torture prohibition enforcement",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "accused_persons",
+      "victim": "state_emergency_powers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Coexists with both A and B in practice; captures distinct procedural constraint layer; documents middle ground"
+    },
+    {
+      "claim_id": "dignitarian_reading",
+      "human_readable": "Dignitarian Reading (Right to Non-Degradation)",
+      "structural_delta": "Article 3 grounds prohibition on treatment that violates human dignity (torture, inhuman punishment) independent of liberty/welfare framework",
+      "primary_observable": "Torture convention ratifications; degrading punishment jurisprudence; dignity-centered constitutional provisions",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "detained_persons",
+      "victim": "interrogation_regimes",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps substantially with procedural_hybrid_reading on observable enforcement mechanisms; epsilon captured via torture prohibition in Reading C"
+    },
+    {
+      "claim_id": "group_rights_reading",
+      "human_readable": "Group Rights Reading (Collective Security Against Genocide)",
+      "structural_delta": "Article 3 grounds protection of group existence (not just individual life) as precondition for individual security",
+      "primary_observable": "Genocide prevention obligations; minority protection regimes; group-differentiated rights frameworks",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "ethnic_religious_minorities",
+      "victim": "majority_sovereignty",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural novelty but exceeds 3-axis budget; represents fourth major reading tradition; candidate for future generation if user requests expansion"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "negative_liberty_reading",
+      "kernel_id": "udhr_article_3",
+      "reading_id": "negative_liberty_reading"
+    },
+    {
+      "claim_id": "positive_entitlement_reading",
+      "kernel_id": "udhr_article_3",
+      "reading_id": "positive_entitlement_reading"
+    },
+    {
+      "claim_id": "procedural_hybrid_reading",
+      "kernel_id": "udhr_article_3",
+      "reading_id": "procedural_hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "dignitarian_reading",
+      "structural_delta": "Prohibition on degrading treatment as dignity protection",
+      "hypothesis": "reading_of_kernel",
+      "deferral_reason": "Overlaps with procedural_hybrid_reading on enforcement mechanisms; torture prohibition captured in selected reading"
+    },
+    {
+      "claim_id": "group_rights_reading",
+      "structural_delta": "Protection of group existence as precondition for individual security",
+      "hypothesis": "reading_of_kernel",
+      "deferral_reason": "High structural novelty but exceeds 3-axis budget; represents fourth major reading tradition; documents collective security dimension not captured in selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_negative_positive_synthesis_impossibility",
+      "description": "Can a single jurisdiction coherently instantiate both negative liberty and positive entitlement readings simultaneously, or does one always dominate? European Convention (negative + procedural) vs South African Constitution (positive + group rights) suggest path dependency prevents full synthesis.",
+      "source": "Axiom contradiction between Reading A and Reading B"
+    },
+    {
+      "id": "omega_security_interpretation_drift",
+      "description": "'Security of person' has drifted from physical safety (1948 context) toward data privacy and environmental security in contemporary jurisprudence. Does this drift represent kernel evolution or interpretive capture?",
+      "source": "Dark Matter Probe 2 (Absence Inventory): environmental threats, digital surveillance not in 1948 text"
+    },
+    {
+      "id": "omega_group_rights_exclusion",
+      "description": "Deferred group_rights_reading captures structural dimension (genocide prevention, minority protections) that neither negative nor positive frameworks fully address. Its exclusion leaves collective security mechanisms under-analyzed.",
+      "source": "Deferred axis with high epsilon and distinct beneficiary structure"
+    },
+    {
+      "id": "omega_procedural_collapse_risk",
+      "description": "Does procedural_hybrid_reading genuinely coexist with A and B, or does it collapse into one under institutional pressure? Emergency jurisprudence suggests proceduralism defaults to negative liberty in liberal regimes, positive entitlement in social democracies.",
+      "source": "Independence testing ambiguity: procedural reading may be synthesis artifact rather than independent constraint"
+    },
+    {
+      "id": "omega_capital_punishment_mountain_validity",
+      "description": "Is capital punishment prohibition a mountain (physiological irreversibility of death) or tangled_rope (cultural/political choice)? Iran and U.S. maintain death penalty while claiming Article 3 compliance; suggests rope not mountain.",
+      "source": "F03 (Hasty Generalization) on negative_liberty_reading epsilon classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: negative_liberty_reading classifies capital punishment abolition as high-epsilon constraint, but persistent practice by UDHR signatories (U.S., Iran, Japan) suggests constraint may be rope (coordination problem) rather than mountain (physiological inevitability). Generated omega_capital_punishment_mountain_validity to bound uncertainty."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "UDHR Article 3: 'Everyone has the right to life, liberty and security of person' — canonical human rights text stabilizing commitment to individual inviolability",
+    "authority_description": "International human rights courts (ECHR, Inter-American Court), domestic constitutional courts, UN treaty bodies interpret via respective jurisdictional traditions",
+    "drift_status": "partial",
+    "candidate_pattern": "scriptural_irreversibility",
+    "is_contested_kernel": true,
+    "kernel_id": "udhr_article_3",
+    "readings": [
+      {
+        "reading_id": "negative_liberty_reading",
+        "commitment": "Article 3 prohibits state deprivation of life/liberty except via narrow procedural justice; security = freedom from state violence",
+        "authority_grounding": "Liberal individualist tradition (Locke, Mill); ECHR jurisprudence",
+        "sibling_readings": [
+          "positive_entitlement_reading",
+          "procedural_hybrid_reading"
+        ],
+        "expected_structural_delta": "High epsilon via capital punishment abolition, restrictive self-defense doctrine, expansive due process; beneficiary: individual vs state; victim: collective security measures"
+      },
+      {
+        "reading_id": "positive_entitlement_reading",
+        "commitment": "Article 3 obligates state provision of material conditions (welfare, healthcare, housing) necessary for life and security",
+        "authority_grounding": "Social democratic tradition (Marshall, Rawls); South African Constitutional Court",
+        "sibling_readings": [
+          "negative_liberty_reading",
+          "procedural_hybrid_reading"
+        ],
+        "expected_structural_delta": "High epsilon via constitutional welfare guarantees, hate speech restrictions, wealth redistribution; beneficiary: vulnerable groups via state action; victim: property and expression rights"
+      },
+      {
+        "reading_id": "procedural_hybrid_reading",
+        "commitment": "Article 3 guarantees due process protections (habeas corpus, torture prohibition) without resolving substantive liberty/welfare contest",
+        "authority_grounding": "Common law tradition; UN Convention Against Torture",
+        "sibling_readings": [
+          "negative_liberty_reading",
+          "positive_entitlement_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon via emergency detention limits, torture prohibition, judicial review availability; coexists with both A and B in practice"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "negative_liberty_reading",
+        "reading_b": "positive_entitlement_reading",
+        "basis": "Negative liberty grounds rights as shields against state action (state restraint protects life); positive entitlement grounds rights as claims on state resources (state action protects life). No single framework can hold both 'state must not act to preserve life' and 'state must act to preserve life' as foundational axioms simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "universal_declaration_human_rights_article_3"
+}

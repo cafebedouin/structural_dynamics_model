@@ -1,0 +1,217 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Comparative Religion / Japanese History",
+  "family_id": "shinbutsu_shugo_syncretism",
+  "topic_summary": "Analysis of shinbutsu-shugo (Shinto-Buddhist syncretism) in pre-Meiji Japan, examining whether centuries of simultaneous practice represent a single fused commitment or domain-partitioned coexistence. The kernel contest tests whether 'one-syncretic-kernel' and 'domain-partition' readings cohere or expose structural incoherence in what appeared as unified practice.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Shinbutsu-shugo (syncretic practice system, 8th-19th centuries)",
+      "Kami (Shinto deities, indigenous spirits)",
+      "Buddhas/Bodhisattvas (Buddhist enlightened beings)",
+      "Honji-suijaku theory (interpretive framework: kami as local manifestations of universal buddhas)",
+      "Meiji government (1868+ state authority enforcing shinbutsu-bunri separation)",
+      "Jingu-ji temples (institutional sites housing both kami shrines and Buddhist halls)"
+    ],
+    "key_tensions": [
+      "Ontological unity vs functional partition (whether kami and buddhas are same beings or domain-specialized entities)",
+      "Elite interpretation vs popular practice (honji-suijaku theory vs lay ritual behavior)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that kami and buddhas can be simultaneously venerated without contradiction",
+    "authority_description": "Interpretive legitimacy distributed across Buddhist clergy (honji-suijaku doctrine), shrine priests (kami ritual specialists), and popular practice (ritual pragmatism)",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "simultaneous_veneration",
+    "readings": [
+      {
+        "reading_id": "ontological_fusion_reading",
+        "commitment": "Kami and buddhas are ontologically identical beings viewed through different cultural lenses; honji-suijaku theory captures metaphysical truth",
+        "authority_grounding": "Buddhist doctrinal authority (Tendai/Shingon scholasticism)",
+        "sibling_readings": [
+          "domain_partition_reading",
+          "pragmatic_incoherence_reading"
+        ],
+        "expected_structural_delta": "Single constraint with high ε (ontological unity enforced); beneficiary: Buddhist institutional hierarchy claiming interpretive monopoly; victim: indigenous kami autonomy"
+      },
+      {
+        "reading_id": "domain_partition_reading",
+        "commitment": "Kami and buddhas are functionally distinct entities governing separate domains (this-worldly prosperity vs afterlife salvation); simultaneous veneration is domain-appropriate specialization",
+        "authority_grounding": "Popular practice norms and shrine-temple institutional division of labor",
+        "sibling_readings": [
+          "ontological_fusion_reading",
+          "pragmatic_incoherence_reading"
+        ],
+        "expected_structural_delta": "Two parallel constraints (life-domain kami constraint + death-domain buddha constraint) with independent ε values; no beneficiary extraction, coordination rope structure"
+      },
+      {
+        "reading_id": "pragmatic_incoherence_reading",
+        "commitment": "Simultaneous veneration was never coherent; practitioners held contradictory beliefs simultaneously without resolution, sustained by lack of enforcement pressure until Meiji separation",
+        "authority_grounding": "Meiji-era rationalist critique and modern religious studies skepticism of syncretism coherence",
+        "sibling_readings": [
+          "ontological_fusion_reading",
+          "domain_partition_reading"
+        ],
+        "expected_structural_delta": "No stable constraint; high ε from suppressed contradiction; Meiji shinbutsu-bunri as revelation of latent incoherence rather than imposed rupture"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "ontological_fusion_reading",
+      "human_readable": "Ontological Fusion Reading (Honji-Suijaku as Metaphysical Truth)",
+      "structural_delta": "Kami and buddhas are identical beings; honji-suijaku theory enforces ontological unity",
+      "primary_observable": "Prevalence of honji-suijaku doctrine in temple records; institutional merger of shrine-temple complexes",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "buddhist_clergy",
+      "victim": "indigenous_kami_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest institutional authority grounding; tangled_rope structure with clear beneficiary extraction"
+    },
+    {
+      "claim_id": "domain_partition_reading",
+      "human_readable": "Domain Partition Reading (Functional Specialization Without Ontological Claim)",
+      "structural_delta": "Kami govern this-worldly prosperity, buddhas govern afterlife; simultaneous veneration is domain-appropriate coordination",
+      "primary_observable": "Ritual context analysis (birth/harvest rituals at shrines vs funeral/memorial rituals at temples); lay practitioner testimony",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from fusion reading (coordination vs extraction); grounded in popular practice rather than elite doctrine"
+    },
+    {
+      "claim_id": "pragmatic_incoherence_reading",
+      "human_readable": "Pragmatic Incoherence Reading (Sustained Contradiction Until Meiji Enforcement)",
+      "structural_delta": "Simultaneous veneration was never coherent; practitioners held contradictory beliefs without resolution",
+      "primary_observable": "Meiji shinbutsu-bunri enforcement success rate; speed of shrine-temple separation; lack of popular resistance",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "pre_meiji_religious_establishment",
+      "victim": "rational_belief_coherence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; tests whether kernel itself is coherent or a suppressed contradiction; Meiji separation as natural experiment"
+    },
+    {
+      "claim_id": "institutional_merger_mountain",
+      "human_readable": "Institutional Merger as Physical Constraint (Jingu-ji Architecture)",
+      "structural_delta": "Physical co-location of shrines and temples in jingu-ji complexes created path-dependent fusion",
+      "primary_observable": "Architectural records of jingu-ji sites; cost of separation during Meiji period",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "ontological_fusion_reading",
+        "domain_partition_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream physical constraint but lower structural distinctiveness than selected readings; captured implicitly in fusion/partition readings"
+    },
+    {
+      "claim_id": "meiji_separation_as_revelation",
+      "human_readable": "Meiji Shinbutsu-Bunri as Coherence Test (State-Imposed Separation)",
+      "structural_delta": "Meiji government separation policy as natural experiment revealing whether syncretism was stable or suppressed incoherence",
+      "primary_observable": "Resistance patterns to separation edicts; speed of compliance; post-separation practice continuity",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "ontological_fusion_reading",
+        "domain_partition_reading",
+        "pragmatic_incoherence_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream test of kernel coherence but redundant with pragmatic_incoherence_reading which already incorporates Meiji separation as evidence"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "ontological_fusion_reading",
+      "kernel_id": "simultaneous_veneration",
+      "reading_id": "ontological_fusion_reading"
+    },
+    {
+      "claim_id": "domain_partition_reading",
+      "kernel_id": "simultaneous_veneration",
+      "reading_id": "domain_partition_reading"
+    },
+    {
+      "claim_id": "pragmatic_incoherence_reading",
+      "kernel_id": "simultaneous_veneration",
+      "reading_id": "pragmatic_incoherence_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_merger_mountain",
+      "structural_delta": "Physical co-location in jingu-ji complexes created path-dependent fusion",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream physical constraint captured implicitly in selected readings; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "meiji_separation_as_revelation",
+      "structural_delta": "Meiji separation policy as natural experiment testing syncretism stability",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream test redundant with pragmatic_incoherence_reading which already incorporates Meiji evidence"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do the three readings genuinely emit different constraints, or do fusion and partition readings collapse into the same observable (ritual behavior) with different post-hoc rationalizations? If collapse occurs, the kernel is incoherent and should be reclassified as a single axis with contested interpretation rather than contested constraint.",
+      "source": "§1.3-K coherence test; D2 half-break deliberate probe"
+    },
+    {
+      "id": "omega_meiji_counterfactual",
+      "description": "If Meiji separation had not occurred, would shinbutsu-shugo have persisted indefinitely or collapsed under internal contradiction? Pragmatic_incoherence_reading depends on Meiji as revealing latent instability, but absence of separation might have sustained indefinite coexistence.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): no internal enforcement mechanism prior to Meiji"
+    },
+    {
+      "id": "omega_popular_vs_elite_divergence",
+      "description": "Elite honji-suijaku doctrine vs popular domain-partition practice may represent two non-communicating systems rather than two readings of one kernel. If so, the kernel is not contested but fragmented across social strata.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): Buddhist clergy benefit from fusion reading; popular practitioners may have operated under partition reading without awareness of doctrinal conflict"
+    },
+    {
+      "id": "omega_epistemic_trespass_risk",
+      "description": "Model's training on English-language religious studies scholarship may overweight Meiji-era rationalist critiques and underweight Japanese-language primary sources on pre-Meiji practice. Pragmatic_incoherence_reading may reflect scholarly bias rather than historical reality.",
+      "source": "F34 (Epistemic Trespass) concern: limited access to pre-Meiji Japanese primary sources"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model's competence on pre-Meiji Japanese religious practice is limited by English-language secondary source bias. Pragmatic_incoherence_reading may overweight Meiji-era rationalist critiques. Generated omega_epistemic_trespass_risk to bound this uncertainty. Recommend human review of Japanese primary sources before finalizing pragmatic_incoherence constraint story."
+  },
+  "_seed_id": "shinto_buddhist_syncretism"
+}

@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / National Security / Surveillance Policy",
+  "family_id": "fisa_702_interpretations",
+  "topic_summary": "Analysis of FISA Section 702 as a contested kernel where the same statutory text is read through incompatible interpretive frameworks. The 'incidental collection' reading legitimizes domestic surveillance of U.S. persons via foreign-targeted queries, while the 'foreign-target-only' reading constrains executive authority to genuine foreign intelligence collection. Each reading instantiates different constitutional victim sets and authority structures from identical statutory language.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "FISA Section 702 (statutory kernel authorizing foreign intelligence surveillance)",
+      "NSA/FBI (operational authorities conducting queries)",
+      "FISA Court (interpretive authority for surveillance authorization)",
+      "U.S. Persons (constitutional rights-holders; victim set under broad reading)",
+      "Foreign Targets (statutory target class)",
+      "Fourth Amendment (constitutional constraint on unreasonable searches)"
+    ],
+    "key_tensions": [
+      "Executive efficiency in counterterrorism vs Fourth Amendment warrant requirements",
+      "Statutory 'foreign target' language vs operational 'U.S. person query' practice"
+    ],
+    "mechanisms": [
+      "Incidental collection doctrine (permits retention/query of U.S. person communications acquired via foreign targeting)",
+      "Backdoor search loophole (warrantless FBI queries of 702 database for domestic investigations)",
+      "Minimization procedures (administrative safeguards claimed to substitute for warrant requirement)"
+    ],
+    "absences": [
+      "Independent oversight of query justifications (FISA Court reviews targeting procedures but not individual queries)",
+      "Criminal defense disclosure (702-derived evidence pathway obscured from defendants)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "FISA Section 702 authorizes surveillance 'targeting persons reasonably believed to be located outside the United States' for foreign intelligence purposes. The statutory text does not explicitly address U.S. person data collection, query authority, or Fourth Amendment compliance mechanisms.",
+    "authority_description": "FISA Court provides ex ante certification of targeting procedures; Executive Branch (AG/DNI) certifies foreign intelligence purpose; Congressional oversight via classified briefings. Interpretive legitimacy contested between judicial minimalism (deference to executive certification) and Fourth Amendment textualism (warrant requirement applies).",
+    "drift_status": "partial",
+    "candidate_pattern": "Revisability Denial (Type 2): Executive claims national security necessity precludes warrant requirement; FISA Court defers to executive certification without case-by-case Fourth Amendment review; revision surfaces only via legislative reauthorization cycles or litigated constitutional challenges.",
+    "is_contested_kernel": true,
+    "kernel_id": "fisa_702_statutory_text",
+    "readings": [
+      {
+        "reading_id": "incidental_collection_reading",
+        "commitment": "Foreign targeting statute permits retention and warrantless query of incidentally collected U.S. person communications when justified by foreign intelligence purpose",
+        "authority_grounding": "Executive authority via national security necessity; FISA Court deference to AG/DNI certification; Congress implicitly ratified via reauthorization knowing operational practice",
+        "sibling_readings": [
+          "foreign_target_strict_reading",
+          "constitutional_floor_reading"
+        ],
+        "expected_structural_delta": "U.S. persons enter victim set via backdoor searches; FBI domestic investigations access 702 database without warrants; Fourth Amendment displaced by administrative minimization procedures. High extractiveness (ε≈0.45) from rights-holders who cannot exit (U.S. persons subject to warrantless surveillance)."
+      },
+      {
+        "reading_id": "foreign_target_strict_reading",
+        "commitment": "Statutory 'foreign target' language constrains collection to communications where both sender and primary investigative interest are non-U.S. persons abroad; incidental U.S. person data must be minimized and inaccessible for domestic purposes",
+        "authority_grounding": "Statutory textualism; legislative history emphasizing 'foreign intelligence' limitation; separation of powers (Congress sets surveillance scope, not Executive operational expansion)",
+        "sibling_readings": [
+          "incidental_collection_reading",
+          "constitutional_floor_reading"
+        ],
+        "expected_structural_delta": "U.S. persons excluded from victim set unless individualized warrant obtained; FBI queries of 702 database for domestic crimes categorically prohibited; minimization as deletion rather than access restriction. Low extractiveness (ε≈0.15) from rights-holders who retain Fourth Amendment protections."
+      },
+      {
+        "reading_id": "constitutional_floor_reading",
+        "commitment": "Regardless of statutory interpretation, Fourth Amendment requires probable cause warrant for any government search of U.S. person communications content; 702 queries constitute searches triggering warrant requirement independent of foreign/domestic distinction",
+        "authority_grounding": "Constitutional textualism (Fourth Amendment 'unreasonable searches' clause); Supreme Court precedent on content vs metadata; separation of powers (judiciary enforces constitutional floor, not deference to executive)",
+        "sibling_readings": [
+          "incidental_collection_reading",
+          "foreign_target_strict_reading"
+        ],
+        "expected_structural_delta": "702 database queries classified as Fourth Amendment searches; warrant requirement applies pre-query regardless of collection legitimacy; FISA Court must conduct individualized probable cause review. Structural reframing: not a foreign intelligence statute but a criminal procedure question. Extractiveness measurement shifts from operational efficiency to constitutional compliance costs (ε≈0.25 from executive speed/secrecy preferences)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "incidental_collection_reading",
+        "reading_b": "constitutional_floor_reading",
+        "basis": "Incidental reading's core axiom (executive certification substitutes for individualized judicial warrant) is mutually exclusive with constitutional floor reading's axiom (Fourth Amendment warrant requirement is non-waivable for content searches). No coherent framework holds both: accepting constitutional floor as true requires rejecting executive substitution as false."
+      },
+      {
+        "reading_a": "foreign_target_strict_reading",
+        "reading_b": "incidental_collection_reading",
+        "basis": "Strict reading's axiom (statutory 'foreign target' language precludes U.S. person queries as beyond congressional authorization) contradicts incidental reading's axiom (congressional silence/reauthorization constitutes implicit ratification of operational expansion). No framework coherently holds both statutory constraint and implied authorization simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "incidental_collection_reading",
+      "human_readable": "Incidental Collection Reading (Executive Authority Maximization)",
+      "structural_delta": "Foreign targeting statute interpreted to permit retention and warrantless query of U.S. person communications when executive certifies foreign intelligence purpose",
+      "primary_observable": "FBI 702 query volume for U.S. person identifiers in domestic investigations; FISA Court approval rate for targeting certifications; congressional reauthorization votes",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "executive_national_security_apparatus",
+      "victim": "u_s_persons_constitutional_rights",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: establishes maximal executive authority interpretation; tangled_rope extracting from constitutional rights-holders"
+    },
+    {
+      "claim_id": "foreign_target_strict_reading",
+      "human_readable": "Foreign Target Strict Reading (Statutory Textualism)",
+      "structural_delta": "Statutory language constrains 702 collection to genuine foreign targets; incidental U.S. person data must be minimized and inaccessible for domestic purposes",
+      "primary_observable": "Minimization procedure compliance rates; database query restrictions; statutory reauthorization amendments",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: establishes textualist constraint; rope limiting operational scope via statutory interpretation; structural contrast with reading 1"
+    },
+    {
+      "claim_id": "constitutional_floor_reading",
+      "human_readable": "Constitutional Floor Reading (Fourth Amendment Warrant Requirement)",
+      "structural_delta": "Fourth Amendment requires individualized probable cause warrant for 702 database queries regardless of foreign targeting legitimacy; constitutional constraint independent of statutory interpretation",
+      "primary_observable": "Supreme Court Fourth Amendment doctrine on content searches; warrant requirement application to government databases; judicial review of query justifications",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: establishes constitutional baseline independent of statutory interpretation; mountain constraint that other readings must address or circumvent; highest structural distinctiveness"
+    },
+    {
+      "claim_id": "fisa_court_deference_structure",
+      "human_readable": "FISA Court Deference Structure (Institutional Minimization)",
+      "structural_delta": "FISA Court reviews targeting procedures ex ante but defers to executive certification of foreign intelligence purpose without individualized query oversight",
+      "primary_observable": "FISA Court approval/modification rates; judicial opinions on scope of review; congressional oversight hearing transcripts",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "incidental_collection_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional mechanism enabling incidental_collection_reading but lower structural distinctiveness; captured in reading 1's authority_grounding"
+    },
+    {
+      "claim_id": "backdoor_search_loophole",
+      "human_readable": "Backdoor Search Loophole (Domestic Investigation Access)",
+      "structural_delta": "FBI queries 702 database using U.S. person identifiers for domestic criminal investigations without obtaining warrants, exploiting incidental collection doctrine",
+      "primary_observable": "FBI query statistics by investigation type; IG reports on query justifications; criminal case disclosures",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "federal_law_enforcement",
+      "victim": "criminal_defendants_fourth_amendment",
+      "downstream_of": [
+        "incidental_collection_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: operational mechanism downstream of incidental_collection_reading; high extractiveness but structurally derivative; omega material for enforcement implementation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "incidental_collection_reading",
+      "kernel_id": "fisa_702_statutory_text",
+      "reading_id": "incidental_collection_reading"
+    },
+    {
+      "claim_id": "foreign_target_strict_reading",
+      "kernel_id": "fisa_702_statutory_text",
+      "reading_id": "foreign_target_strict_reading"
+    },
+    {
+      "claim_id": "constitutional_floor_reading",
+      "kernel_id": "fisa_702_statutory_text",
+      "reading_id": "constitutional_floor_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "fisa_court_deference_structure",
+      "structural_delta": "FISA Court defers to executive certification without individualized query oversight",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Institutional mechanism enabling incidental_collection_reading; lower structural distinctiveness than three selected readings; authority structure captured in reading 1"
+    },
+    {
+      "claim_id": "backdoor_search_loophole",
+      "structural_delta": "FBI warrantless queries of 702 database for domestic investigations",
+      "hypothesis": "snare",
+      "deferral_reason": "Operational implementation downstream of incidental_collection_reading; high extractiveness but structurally derivative; deferred as omega enforcement mechanism"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_criminal_disclosure_gap",
+      "description": "Does 702-derived evidence disclosure in criminal trials force judicial confrontation with constitutional floor reading? If prosecution obscures 702 pathway via parallel construction, constitutional review is systematically evaded.",
+      "source": "Absence Inventory (§1.1): criminal defense disclosure pathway"
+    },
+    {
+      "id": "omega_reauthorization_drift",
+      "description": "Congressional reauthorization without amendment: does this constitute affirmative ratification of incidental collection reading, or merely failure to confront operational drift? Interpretive legitimacy depends on whether silence is consent or abdication.",
+      "source": "Commitment System Recognition: drift_status=partial; revisability surface exists but may not function"
+    },
+    {
+      "id": "omega_minimization_substitution",
+      "description": "Do administrative minimization procedures constitute a Fourth Amendment substitute or merely statutory compliance? If constitutional floor reading prevails, minimization becomes irrelevant; if incidental reading prevails, minimization is the entire constitutional analysis.",
+      "source": "Reading independence testing: mechanism classification depends on which reading is adopted"
+    },
+    {
+      "id": "omega_intelligence_criminal_boundary",
+      "description": "At what point does 'foreign intelligence purpose' become pretextual cover for domestic law enforcement? Backdoor search loophole suggests boundary collapse, but measurement requires operational transparency absent from current oversight.",
+      "source": "Deferred axis: backdoor_search_loophole extractiveness measurement depends on query volume/justification data unavailable to external analysis"
+    },
+    {
+      "id": "omega_section_215_interaction",
+      "description": "How do other FISA authorities (Section 215 bulk metadata, Section 703 U.S. person targeting) interact with 702 interpretations? A strict reading of 702 may push surveillance into less-constrained authorities, changing net extractiveness measurement.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): other FISA Title V authorities not decomposed"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings capture interpretive contest with genuine axiom contradictions. Constitutional floor reading provides mountain baseline that other readings must address. Deferred axes are structurally downstream implementation mechanisms rather than independent constraint sources. Kernel decomposition is stable."
+  },
+  "_seed_id": "fisa_surveillance_expansion"
+}

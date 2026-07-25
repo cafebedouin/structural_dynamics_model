@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Comparative Linguistics / Political Authority / State-Building",
+  "family_id": "turkish_alphabet_reform_1928",
+  "topic_summary": "Analysis of Turkey's 1928 alphabet reform (Law 1353), which replaced Arabic script with Latin script for Turkish within months via top-down decree. The reform had effectively zero pre-existing Latin-script practitioners, making it a test case for whether a contested kernel (script-as-identity) can be installed with no prior occupancy of the new reading—a 'clean slate' imposition that bypasses gradual drift.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Mustafa Kemal Atatürk (reform architect; secular modernization authority)",
+      "Ottoman Empire (defunct polity; Arabic-script legacy holder)",
+      "Turkish Grand National Assembly (legislative body; ratified Law 1353)",
+      "Arabic script (Ottoman administrative/religious medium; 600+ year incumbent)",
+      "Latin script (imposed replacement; zero prior Turkish practitioners)",
+      "Turkish Language Association (post-reform standardization body)",
+      "Religious establishment (ulema; displaced authority structure)"
+    ],
+    "key_tensions": [
+      "Secular modernization vs Islamic continuity (Kemalist state vs Ottoman religious identity)",
+      "Literacy accessibility vs cultural rupture (phonetic transparency vs historical text access)",
+      "State sovereignty vs imperial legacy (Republic vs Ottoman institutional memory)"
+    ],
+    "key_mechanisms": [
+      "Legal prohibition: Arabic script banned for public use within 3 months (enforcement via fines/closure)",
+      "Mass literacy campaigns: 'Nation Schools' program teaching Latin script to adults",
+      "Textual erasure: All government documents, street signs, educational materials reissued",
+      "Authority re-grounding: Script change severs institutional continuity with Ottoman past"
+    ],
+    "key_absences": [
+      "No documented resistance movement: lack of organized opposition despite cultural magnitude",
+      "No transition period: immediate switch vs gradual digraphia (cf. Soviet Turkic reforms)",
+      "No preservation infrastructure: pre-1928 texts became inaccessible to new generations"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Script-as-identity: the shared substrate that written language encodes and transmits communal memory, religious authority, and legitimate governance",
+    "authority_description": "Post-Ottoman Turkish state claims exclusive authority to define national identity via script selection, grounding legitimacy in modernization rather than continuity",
+    "drift_status": "absent",
+    "candidate_pattern": "authoritarian_interpretive_monopoly",
+    "is_contested_kernel": true,
+    "kernel_id": "script_as_identity",
+    "readings": [
+      {
+        "reading_id": "ottoman_continuity_reading",
+        "commitment": "Arabic script is constitutive of Turkish-Islamic identity and historical continuity",
+        "authority_grounding": "religious tradition (ulema) + imperial precedent (600 years)",
+        "sibling_readings": [
+          "kemalist_rupture_reading",
+          "phonetic_instrumentalism_reading"
+        ],
+        "expected_structural_delta": "High suppression cost; script preserves access to Ottoman institutional memory; religious authority structure maintained"
+      },
+      {
+        "reading_id": "kemalist_rupture_reading",
+        "commitment": "Latin script enables secular modernization by severing Ottoman-Islamic past",
+        "authority_grounding": "state sovereignty + nationalist self-determination",
+        "sibling_readings": [
+          "ottoman_continuity_reading",
+          "phonetic_instrumentalism_reading"
+        ],
+        "expected_structural_delta": "Zero transition cost (no incumbents to displace); textual rupture is feature not bug; state monopolizes literacy apparatus"
+      },
+      {
+        "reading_id": "phonetic_instrumentalism_reading",
+        "commitment": "Script is neutral technology; Latin provides superior phonetic transparency for Turkish vowel harmony",
+        "authority_grounding": "linguistic expertise + literacy pragmatism",
+        "sibling_readings": [
+          "ottoman_continuity_reading",
+          "kemalist_rupture_reading"
+        ],
+        "expected_structural_delta": "Low ε (technical optimization); depoliticizes decision; obscures identity-encoding function"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "ottoman_continuity_reading",
+        "reading_b": "kemalist_rupture_reading",
+        "basis": "Continuity reading holds that legitimate authority derives from preserving historical identity substrate; rupture reading holds that legitimate authority derives from severing that substrate. No framework can simultaneously ground authority in both preservation and erasure of the same identity kernel."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "ottoman_continuity_reading",
+      "human_readable": "Ottoman Continuity Reading (Script as Identity Preservation)",
+      "structural_delta": "Arabic script encodes 600 years of institutional memory, religious authority, and Ottoman identity; switching scripts severs access to historical texts and displaces ulema",
+      "primary_observable": "Accessibility of pre-1928 texts to post-reform population; religious authority structure continuity",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ottoman_institutional_continuity",
+      "victim": "kemalist_state_builders",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel reading 1 of 3: represents incumbent constraint (Arabic script as identity substrate); high ε due to suppression cost of 600-year precedent"
+    },
+    {
+      "claim_id": "kemalist_rupture_reading",
+      "human_readable": "Kemalist Rupture Reading (Script as Modernization Tool)",
+      "structural_delta": "Latin script enables deliberate break with Ottoman-Islamic past; zero pre-existing Latin practitioners means no incumbents to displace; textual rupture is strategic feature",
+      "primary_observable": "Speed of implementation (3-month enforcement window); adult literacy rate change 1928-1935; absence of organized resistance",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "kemalist_state_apparatus",
+      "victim": "ottoman_cultural_continuity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Kernel reading 2 of 3: represents imposed constraint (zero-occupancy installation); highest centrality due to state enforcement mechanism; axiom-contradictory with ottoman_continuity_reading"
+    },
+    {
+      "claim_id": "phonetic_instrumentalism_reading",
+      "human_readable": "Phonetic Instrumentalism Reading (Script as Technical Optimization)",
+      "structural_delta": "Latin script provides superior phonetic transparency for Turkish vowel harmony system; frames decision as technical rather than political",
+      "primary_observable": "Linguistic arguments in 1928 reform debates; vowel-marking efficiency comparisons",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Kernel reading 3 of 3: represents depoliticization strategy (technical framing obscures identity contest); scaffold because it provides legitimation cover for snare"
+    },
+    {
+      "claim_id": "literacy_accessibility_delta",
+      "human_readable": "Literacy Accessibility Delta (Mass Education Enabler)",
+      "structural_delta": "Latin script reduced learning curve for mass literacy campaigns compared to Arabic script's consonantal limitations",
+      "primary_observable": "Adult literacy rates 1927 vs 1935; Nation Schools enrollment/completion data",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "kemalist_rupture_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of rupture reading rather than independent constraint; captured by phonetic_instrumentalism_reading's technical framing"
+    },
+    {
+      "claim_id": "textual_erasure_mechanism",
+      "human_readable": "Textual Erasure Mechanism (Institutional Memory Severance)",
+      "structural_delta": "Immediate script switch rendered pre-1928 Ottoman archives inaccessible to new generations, severing institutional memory",
+      "primary_observable": "Percentage of post-1928 population able to read Ottoman Turkish; archival access rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "historical_scholarship_community",
+      "downstream_of": [
+        "kemalist_rupture_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural consequence of rupture rather than independent axis; already captured in rupture reading's 'textual rupture is feature not bug' framing"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "ottoman_continuity_reading",
+      "kernel_id": "script_as_identity",
+      "reading_id": "ottoman_continuity_reading"
+    },
+    {
+      "claim_id": "kemalist_rupture_reading",
+      "kernel_id": "script_as_identity",
+      "reading_id": "kemalist_rupture_reading"
+    },
+    {
+      "claim_id": "phonetic_instrumentalism_reading",
+      "kernel_id": "script_as_identity",
+      "reading_id": "phonetic_instrumentalism_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "literacy_accessibility_delta",
+      "structural_delta": "Latin script reduced learning curve for mass literacy",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of rupture reading; already captured by phonetic_instrumentalism technical framing"
+    },
+    {
+      "claim_id": "textual_erasure_mechanism",
+      "structural_delta": "Script switch severed institutional memory access",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural consequence baked into rupture reading's 'textual rupture is feature' claim"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_zero_occupancy_test",
+      "description": "Does the absence of pre-existing Latin-script practitioners mean the reform bypassed M-set conflict entirely, or did it merely suppress latent Ottoman-continuity commitment that lacked organizational capacity? If the latter, the 'clean slate' is artifact of state coercion rather than genuine kernel vacancy.",
+      "source": "Research context flag: M-set gap claim requires validation against absence of documented resistance"
+    },
+    {
+      "id": "omega_instrumentalism_sincerity",
+      "description": "Is phonetic_instrumentalism_reading a genuine constraint (linguistic community held this as primary justification) or post-hoc legitimation scaffold for political rupture? If the latter, it is not a true kernel reading but rather rhetorical cover for snare extraction.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): technical framing benefits state by depoliticizing identity contest"
+    },
+    {
+      "id": "omega_resistance_erasure",
+      "description": "The absence of documented resistance may reflect successful state suppression rather than genuine absence of opposition. If archival silence is coerced rather than consensual, the 'zero practitioner' framing is state propaganda rather than structural fact.",
+      "source": "Extraction absence inventory: no recorded resistance movement despite cultural magnitude"
+    },
+    {
+      "id": "omega_digraphia_counterfactual",
+      "description": "Would gradual transition (temporary digraphia, as in Soviet Turkic reforms) have revealed latent continuity-reading holders? The immediate switch may have foreclosed observation of the M-set structure by eliminating the transition period where competing readings would visibly coexist.",
+      "source": "Extraction absence inventory: no transition period; comparison to Soviet gradual reforms"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: phonetic_instrumentalism_reading classified as scaffold/v_low ε but may be post-hoc legitimation rather than genuine constraint. Ottoman_continuity_reading's high ε classification assumes suppression cost scales with historical duration, but zero documented resistance challenges this. Generated omega_instrumentalism_sincerity and omega_zero_occupancy_test to bound these uncertainties."
+  },
+  "_seed_id": "turkish_alphabet_reform_1928"
+}

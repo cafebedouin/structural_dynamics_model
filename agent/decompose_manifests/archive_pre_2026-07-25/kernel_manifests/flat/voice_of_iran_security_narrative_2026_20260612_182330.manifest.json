@@ -1,0 +1,174 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Strategic Communications / Information Warfare / Geopolitical Narrative Construction",
+  "family_id": "voice_of_iran_security_narrative_2026",
+  "topic_summary": "Analysis of a May 2026 Voice of Iran newspaper article (KHAMENEI.IR publication) constructing a narrative of Iranian strategic advantage following unspecified conflict. The article claims Iran achieved 'control of Hormuz Strait' and strengthened regional position despite conflict costs, framing Hezbollah as integral to Iranian national security rather than independent resistance movement. The source text is machine-translated Persian with significant corruption, making factual extraction unreliable.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 4,
+    "key_entities": [
+      "Voice of Iran (KHAMENEI.IR state media outlet, described as 'voice of Iranian nation')",
+      "Islamic Republic of Iran (state actor claiming strategic gains)",
+      "Hezbollah / Islamic Resistance of Lebanon (described as 'contribution to Iran's national interests')",
+      "United States (described as unable to pursue goals through war)",
+      "Zionist regime / Israel (adversary in unspecified conflict)",
+      "Strait of Hormuz (strategic chokepoint claimed as Iranian leverage)"
+    ],
+    "key_tensions": [
+      "Narrative sovereignty vs factual verification (Voice of Iran claims to separate 'right and wrong news' but text quality prevents verification)",
+      "Hezbollah autonomy vs Iranian integration (article explicitly reframes Hezbollah as Iranian national interest tool rather than independent resistance)"
+    ],
+    "key_absences": [
+      "No verifiable conflict timeline or casualty data",
+      "No independent sourcing for claimed 'control of Hormuz'",
+      "No acknowledgment of Hezbollah's Lebanese domestic political role",
+      "No discussion of economic costs to Iran or sanctions impact"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "narrative_construction_apparatus",
+      "human_readable": "State Narrative Construction Apparatus (Information Warfare Infrastructure)",
+      "structural_delta": "Institutional capacity to produce and disseminate strategic narratives independent of factual verification",
+      "primary_observable": "Publication frequency, distribution channels, narrative consistency across state media outlets",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strategic_victory_narrative",
+        "proxy_integration_narrative"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical infrastructure constraint; feeds both downstream narrative axes"
+    },
+    {
+      "claim_id": "strategic_victory_narrative",
+      "human_readable": "Strategic Victory Narrative (Post-Conflict Advantage Framing)",
+      "structural_delta": "Framing of conflict outcome as Iranian strategic gain despite acknowledged costs",
+      "primary_observable": "Narrative claims of 'control' vs verifiable military/economic indicators",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "iranian_state_legitimacy",
+      "victim": "factual_accountability",
+      "downstream_of": [
+        "narrative_construction_apparatus"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest epsilon; downstream synthesis of narrative infrastructure into specific strategic claim"
+    },
+    {
+      "claim_id": "proxy_integration_narrative",
+      "human_readable": "Proxy Integration Narrative (Hezbollah as Iranian National Interest)",
+      "structural_delta": "Explicit reframing of Hezbollah from autonomous resistance to Iranian strategic asset",
+      "primary_observable": "Frequency and explicitness of integration language in state media",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "iranian_regional_control",
+      "victim": "hezbollah_autonomy_narrative",
+      "downstream_of": [
+        "narrative_construction_apparatus"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable from strategic_victory_narrative; different victim structure; independent downstream node"
+    },
+    {
+      "claim_id": "hormuz_leverage_claim",
+      "human_readable": "Hormuz Leverage Claim (Strait Control as Bargaining Tool)",
+      "structural_delta": "Claimed control of Hormuz Strait as coercive leverage in regional negotiations",
+      "primary_observable": "Naval deployments, shipping disruptions, insurance rate changes",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strategic_victory_narrative"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: factual claims unverifiable from source text; captured indirectly via strategic_victory_narrative's broader framing"
+    },
+    {
+      "claim_id": "us_constraint_narrative",
+      "human_readable": "US Constraint Narrative (American Inability to Pursue War)",
+      "structural_delta": "Framing of US as constrained from military action despite stated objectives",
+      "primary_observable": "US military deployments, diplomatic statements, sanction enforcement",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strategic_victory_narrative"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: component of strategic_victory_narrative rather than independent axis; same observable domain"
+    }
+  ],
+  "generation_sequence": [
+    "narrative_construction_apparatus",
+    "strategic_victory_narrative",
+    "proxy_integration_narrative"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "hormuz_leverage_claim",
+      "structural_delta": "Claimed Strait of Hormuz control as coercive leverage",
+      "hypothesis": "rope",
+      "deferral_reason": "Factual claims unverifiable from corrupted source text; captured indirectly via strategic_victory_narrative"
+    },
+    {
+      "claim_id": "us_constraint_narrative",
+      "structural_delta": "US framed as unable to pursue military objectives",
+      "hypothesis": "rope",
+      "deferral_reason": "Component of strategic_victory_narrative rather than independent axis; fails pairwise independence test"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_source_reliability",
+      "description": "Is Voice of Iran a reliable factual source or purely strategic narrative vehicle? Machine translation corruption prevents verification of specific claims (Hormuz control, conflict timeline, casualty data). Classification of narrative_construction_apparatus as Mountain assumes institutional capacity exists; if source is purely aspirational propaganda, reclassify as Scaffold.",
+      "source": "§1.1 Extraction (Absences: no verifiable conflict data) + F34 (Epistemic Trespass)"
+    },
+    {
+      "id": "omega_hezbollah_autonomy",
+      "description": "Does explicit Iranian integration narrative reflect actual command-and-control relationship or aspirational framing? If Hezbollah retains operational autonomy, proxy_integration_narrative is Rope (coordination) not Snare (extraction). Lebanese domestic political role entirely absent from source.",
+      "source": "§1.1 Extraction (Absence: Hezbollah Lebanese political role) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_conflict_referent",
+      "description": "What conflict does the article reference? Text mentions '12th war,' 'last 40 days,' US-Zionist missile attack killing IRGC general, but provides no verifiable timeline or context. Without conflict identification, strategic_victory_narrative's factual basis cannot be assessed.",
+      "source": "§1.1 Extraction (Absence: conflict timeline) + F01 (Premise Drift)"
+    },
+    {
+      "id": "omega_translation_fidelity",
+      "description": "Machine translation quality severely limits extraction reliability. Phrases like 'carry money on a daily basis' and 'not specific to Hormuz, not specific to' suggest OCR or translation errors. Original Persian text may contain verifiable claims lost in translation.",
+      "source": "§1.1 Extraction + L8 (Extraction Fidelity)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": true,
+    "notes": "F34 detected: Model lacks domain expertise to verify Iranian state media claims about Hormuz Strait control, Hezbollah command relationships, or unspecified conflict outcomes. Generated omega_source_reliability and omega_hezbollah_autonomy. F01 detected: Unclear what conflict the article references; 'last 40 days of war' and '12th war' are unverifiable. Generated omega_conflict_referent. Source text corruption (machine translation errors) limits extraction reliability across all axes."
+  }
+}

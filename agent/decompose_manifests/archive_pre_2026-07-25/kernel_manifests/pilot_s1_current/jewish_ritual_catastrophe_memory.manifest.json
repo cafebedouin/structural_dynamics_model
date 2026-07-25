@@ -1,0 +1,174 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Collective Memory / Ritual Practice",
+  "family_id": "ritual_catastrophe_memory",
+  "topic_summary": "Analysis of Jewish catastrophe-commemoration rituals (Tisha B'Av, Passover) as contested kernels of mourning-practice preservation. The domain question: does millennia-long ritual transmission preserve survival-competence (adaptive capacity under persecution) or only mourning-practice itself (symbolic continuity without operational yield)?",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Tisha B'Av (annual fast commemorating Temple destructions, 586 BCE and 70 CE)",
+      "Passover (annual festival commemorating Exodus from Egypt, ~1300 BCE claimed)",
+      "Rabbinic Authority (interpretive tradition stabilizing ritual practice post-Temple)",
+      "Diaspora Communities (geographically dispersed populations maintaining synchronized practice)",
+      "Halakhic Corpus (legal framework encoding ritual obligations)",
+      "Historical Catastrophe Events (Temple destructions, expulsions, pogroms, Shoah)"
+    ],
+    "key_tensions": [
+      "Ritual fidelity vs adaptive modification (fixed practice vs contextual survival needs)",
+      "Mourning-as-identity vs mourning-as-preparation (symbolic continuity vs operational readiness)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Obligation to transmit catastrophe-memory through fixed ritual practice across generations",
+    "authority_description": "Rabbinic interpretive tradition grounded in Talmudic precedent and halakhic continuity",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "catastrophe_memory_transmission",
+    "readings": [
+      {
+        "reading_id": "symbolic_continuity_reading",
+        "commitment": "Ritual preserves identity-marker and mourning-practice; survival-competence is incidental byproduct",
+        "authority_grounding": "Formalist halakhic tradition; ritual obligation as intrinsic value independent of outcomes",
+        "sibling_readings": [
+          "adaptive_competence_reading",
+          "hybrid_resilience_reading"
+        ],
+        "expected_structural_delta": "High ritual fidelity; mourning-practice itself is the preserved substrate; victim set = communities that lose practice under assimilation pressure; beneficiary = ritual authority maintaining interpretive control"
+      },
+      {
+        "reading_id": "adaptive_competence_reading",
+        "commitment": "Ritual transmits survival-competence through catastrophe-rehearsal and threat-recognition training",
+        "authority_grounding": "Functionalist reading; ritual as adaptive mechanism encoding persecution-response patterns",
+        "sibling_readings": [
+          "symbolic_continuity_reading",
+          "hybrid_resilience_reading"
+        ],
+        "expected_structural_delta": "Ritual content selected for operational yield; mourning-practice is vehicle for competence transmission; victim set = communities that maintain ritual without extracting survival lessons; beneficiary = populations that convert ritual knowledge into adaptive capacity"
+      },
+      {
+        "reading_id": "hybrid_resilience_reading",
+        "commitment": "Ritual preserves both identity-continuity AND adaptive capacity through dual-function encoding",
+        "authority_grounding": "Pluralist synthesis; ritual as multi-layered transmission system",
+        "sibling_readings": [
+          "symbolic_continuity_reading",
+          "adaptive_competence_reading"
+        ],
+        "expected_structural_delta": "Ritual structure optimizes for both symbolic fidelity and operational readiness; mourning-practice and survival-competence co-evolve; victim set = communities that collapse either dimension; beneficiary = populations maintaining both functions in tension"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "symbolic_continuity_reading",
+        "reading_b": "adaptive_competence_reading",
+        "basis": "Symbolic reading treats survival-competence as epiphenomenal (ritual value is intrinsic); adaptive reading treats symbolic continuity as instrumental (ritual value derives from operational yield). No single framework holds both: either ritual obligation is grounded in divine command independent of outcomes, or it is grounded in adaptive function. Hybrid reading attempts synthesis but does not resolve the foundational axiom conflict."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "catastrophe_memory_transmission",
+      "human_readable": "Catastrophe-Memory Transmission (Contested Kernel)",
+      "structural_delta": "Ritual obligation to transmit catastrophe-memory across generations; contested whether transmission preserves survival-competence or only mourning-practice",
+      "primary_observable": "Ritual participation rates; intergenerational transmission fidelity; correlation between ritual practice and persecution-response outcomes",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "diaspora_synchronization_mechanism"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel; all three readings proceed to generation as expansion of this single axis"
+    },
+    {
+      "claim_id": "diaspora_synchronization_mechanism",
+      "human_readable": "Diaspora Synchronization Mechanism (Ritual Calendar as Coordination Technology)",
+      "structural_delta": "Fixed ritual calendar enables geographically dispersed communities to maintain synchronized practice without central authority",
+      "primary_observable": "Calendar adherence rates across diaspora communities; ritual timing variance; community cohesion metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "catastrophe_memory_transmission"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (coordination mechanism vs memory content); structurally downstream; passes pairwise test against kernel"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "symbolic_continuity_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "symbolic_continuity_reading"
+    },
+    {
+      "claim_id": "adaptive_competence_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "adaptive_competence_reading"
+    },
+    {
+      "claim_id": "hybrid_resilience_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "hybrid_resilience_reading"
+    },
+    "diaspora_synchronization_mechanism"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "halakhic_drift_absorption",
+      "structural_delta": "Rabbinic interpretive layer absorbs contextual adaptation without surfacing as ritual revision",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured within commitment_system_recognition drift_status=partial; interpretive mechanism rather than independent constraint axis"
+    },
+    {
+      "claim_id": "shoah_commemoration_rupture",
+      "structural_delta": "Holocaust memory challenges traditional catastrophe-ritual framework (Yom HaShoah vs Tisha B'Av integration)",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Temporal scope issue; 20th-century rupture is downstream consequence of kernel structure rather than independent axis; omega material for historical boundary question"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_competence_measurement",
+      "description": "How would survival-competence be measured independently of ritual practice? If competence is only observable through persecution-response outcomes, the adaptive_competence_reading may be unfalsifiable until catastrophe occurs.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + adaptive_competence_reading structural delta"
+    },
+    {
+      "id": "omega_shoah_integration",
+      "description": "Does Shoah memory integration (Yom HaShoah) validate or rupture the catastrophe-memory kernel? If traditional ritual framework cannot absorb industrial genocide, the kernel's adaptive claim weakens; if it absorbs via interpretive drift, the symbolic_continuity_reading strengthens.",
+      "source": "Deferred axis shoah_commemoration_rupture + Absence Inventory (post-1945 ritual evolution)"
+    },
+    {
+      "id": "omega_secularization_test",
+      "description": "Do secularized communities that abandon ritual practice lose survival-competence, or does competence transfer through non-ritual channels? Natural experiment in 20th-21st century diaspora.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + symbolic_continuity_reading victim set"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Hybrid_resilience_reading may collapse into symbolic_continuity if operational yield is unmeasurable. If survival-competence cannot be isolated from ritual practice, the three-reading structure reduces to two (symbolic vs adaptive) or one (symbolic only).",
+      "source": "§1.3-K coherence signal + axiom_contradictions basis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure cleanly identified; three readings are individually holdable and structurally distinct. Axiom contradiction declared between symbolic_continuity and adaptive_competence readings. Diaspora_synchronization_mechanism passes pairwise independence test (different observable: coordination technology vs memory content)."
+  },
+  "_seed_id": "jewish_ritual_catastrophe_memory"
+}

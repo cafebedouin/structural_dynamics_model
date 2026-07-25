@@ -1,0 +1,224 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Federalism / Migration Policy",
+  "family_id": "eu_free_movement_2026",
+  "topic_summary": "Analysis of free movement within the European Union as a contested kernel where the federation-membership commitment is read differently by integration-primary and member-sovereignty-primary interpretations. Each reading produces structurally different constraints with distinct cost-bearer sets: displaced local labor under integration primacy versus constrained mobility under sovereignty primacy.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "European Union (supranational federation with treaty-based authority)",
+      "Member States (sovereign nations with treaty obligations)",
+      "Mobile EU Citizens (workers exercising free movement rights)",
+      "Local Labor Markets (destination-state workers facing competition)",
+      "European Court of Justice (interpretive authority for treaty law)",
+      "National Governments (implementers with electoral accountability)"
+    ],
+    "key_tensions": [
+      "Supranational treaty authority vs national sovereignty (ECJ vs member state parliaments)",
+      "Mobile worker rights vs local labor market protection (EU citizens vs destination-state workers)",
+      "Economic integration efficiency vs democratic accountability (market optimization vs electoral mandate)"
+    ],
+    "key_mechanisms": [
+      "Treaty of Rome Article 45 enforcement (ECJ rulings override national restrictions)",
+      "Welfare magnet dynamics (benefit access differentials drive migration patterns)"
+    ],
+    "key_absences": [
+      "Fiscal federalism mechanisms (no EU-level unemployment insurance or wage equalization)",
+      "Exit cost asymmetries (high-skill vs low-skill mobility barriers)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The federation-membership treaty commitment establishing free movement as a fundamental right within the EU legal order",
+    "authority_description": "ECJ holds interpretive supremacy over treaty meaning; member states retain implementation authority but cannot override treaty obligations",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "federation_membership_treaty",
+    "readings": [
+      {
+        "reading_id": "integration_primary",
+        "commitment": "Free movement is constitutive of the single market; restrictions are presumptively illegitimate unless narrowly justified",
+        "authority_grounding": "ECJ jurisprudence prioritizing market integration and individual rights over member state discretion",
+        "sibling_readings": [
+          "sovereignty_primary",
+          "subsidiarity_balance"
+        ],
+        "expected_structural_delta": "Mobile workers enter beneficiary set; local labor markets and welfare systems enter victim set; high suppression of national restrictions"
+      },
+      {
+        "reading_id": "sovereignty_primary",
+        "commitment": "Free movement is conditional on member state consent; states retain authority to protect national labor markets and welfare systems",
+        "authority_grounding": "National constitutional orders and democratic accountability; treaty as compact among sovereigns",
+        "sibling_readings": [
+          "integration_primary",
+          "subsidiarity_balance"
+        ],
+        "expected_structural_delta": "Local labor markets enter beneficiary set; mobile workers enter victim set via restricted access; high preservation of national regulatory autonomy"
+      },
+      {
+        "reading_id": "subsidiarity_balance",
+        "commitment": "Free movement operates within bounds of proportionality; legitimate national interests constrain but do not eliminate mobility rights",
+        "authority_grounding": "Treaty subsidiarity principle; ECJ proportionality doctrine balancing integration and sovereignty",
+        "sibling_readings": [
+          "integration_primary",
+          "sovereignty_primary"
+        ],
+        "expected_structural_delta": "Graduated constraint structure; beneficiary/victim sets vary by policy domain; moderate suppression of both unrestricted mobility and blanket restrictions"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "integration_primary",
+      "human_readable": "Integration-Primary Reading (Market Constitutionalism)",
+      "structural_delta": "Free movement as constitutive right; national restrictions presumptively illegitimate",
+      "primary_observable": "ECJ case law strike-down rate of national mobility restrictions; treaty infringement proceedings",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "mobile_eu_citizens",
+      "victim": "destination_state_labor_markets",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest epsilon; captures ECJ-driven integration logic"
+    },
+    {
+      "claim_id": "sovereignty_primary",
+      "human_readable": "Sovereignty-Primary Reading (Compact Constitutionalism)",
+      "structural_delta": "Free movement as conditional treaty obligation; states retain labor market protection authority",
+      "primary_observable": "National restriction implementation rate; political resistance to ECJ rulings; Brexit-style exit threats",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "destination_state_labor_markets",
+      "victim": "mobile_eu_citizens",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; inverts beneficiary/victim structure; captures member state resistance"
+    },
+    {
+      "claim_id": "subsidiarity_balance",
+      "human_readable": "Subsidiarity-Balance Reading (Proportionality Doctrine)",
+      "structural_delta": "Free movement bounded by proportionality; graduated constraint structure across policy domains",
+      "primary_observable": "ECJ proportionality test outcomes; variance in restriction legitimacy by policy area",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; captures institutional compromise position; moderate epsilon"
+    },
+    {
+      "claim_id": "fiscal_federalism_absence",
+      "human_readable": "Fiscal Federalism Absence (No EU-Level Redistribution)",
+      "structural_delta": "Absence of EU-level unemployment insurance or wage equalization mechanisms amplifies local cost concentration",
+      "primary_observable": "EU budget share of GDP vs US federal budget; absence of cross-border automatic stabilizers",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "integration_primary",
+        "sovereignty_primary"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural precondition but lower analytical priority than kernel readings; captured in omega"
+    },
+    {
+      "claim_id": "exit_cost_asymmetry",
+      "human_readable": "Exit Cost Asymmetry (Skill-Stratified Mobility Barriers)",
+      "structural_delta": "High-skill workers face low exit costs; low-skill workers face high barriers despite formal rights",
+      "primary_observable": "Migration rate variance by skill level; credential recognition barriers; language requirements",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "integration_primary"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: implementation friction rather than kernel-level structural difference"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "integration_primary",
+      "kernel_id": "federation_membership_treaty",
+      "reading_id": "integration_primary"
+    },
+    {
+      "claim_id": "sovereignty_primary",
+      "kernel_id": "federation_membership_treaty",
+      "reading_id": "sovereignty_primary"
+    },
+    {
+      "claim_id": "subsidiarity_balance",
+      "kernel_id": "federation_membership_treaty",
+      "reading_id": "subsidiarity_balance"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "fiscal_federalism_absence",
+      "structural_delta": "Absence of EU-level redistribution mechanisms amplifies local cost concentration",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural precondition captured across all three readings; mountain status makes it analytically simpler than kernel readings"
+    },
+    {
+      "claim_id": "exit_cost_asymmetry",
+      "structural_delta": "Skill-stratified mobility barriers despite formal rights equality",
+      "hypothesis": "piton",
+      "deferral_reason": "Implementation friction rather than kernel-level constitutional contest; lower centrality"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_fiscal_federalism_counterfactual",
+      "description": "Would EU-level unemployment insurance or wage equalization collapse the kernel contest by removing local cost concentration? Or would it shift the contest to fiscal sovereignty vs redistribution authority?",
+      "source": "Deferred axis fiscal_federalism_absence + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_ecj_legitimacy_crisis",
+      "description": "Does repeated ECJ override of national restrictions trigger legitimacy crisis (sovereignty_primary reading gains authority) or normalize integration (integration_primary reading consolidates)? Path-dependent outcome.",
+      "source": "Commitment system drift_status=partial + authority_grounding contest"
+    },
+    {
+      "id": "omega_brexit_as_kernel_test",
+      "description": "Brexit exit demonstrates sovereignty_primary reading can override integration_primary via constitutional rupture. Does this validate sovereignty_primary as the true kernel reading, or prove integration_primary requires coercive enforcement?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + sovereignty_primary observable"
+    },
+    {
+      "id": "omega_welfare_magnet_empirics",
+      "description": "Empirical evidence on welfare magnet effects is contested. If magnets are weak, integration_primary cost-bearer set shrinks. If strong, sovereignty_primary legitimacy increases. Measurement uncertainty affects kernel reading validity.",
+      "source": "Mechanism extraction + primary_observable uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings with inverted beneficiary/victim structures. Fiscal federalism absence and exit cost asymmetry appropriately deferred as lower-priority structural conditions rather than kernel-level contests."
+  },
+  "_seed_id": "federation_free_movement_kernel"
+}

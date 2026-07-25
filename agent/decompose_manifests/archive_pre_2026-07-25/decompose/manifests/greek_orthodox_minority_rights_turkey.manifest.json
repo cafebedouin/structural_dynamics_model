@@ -1,0 +1,260 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Religious Governance / Minority Rights",
+  "family_id": "lausanne_minority_protections_2026",
+  "topic_summary": "Analysis of the 1923 Treaty of Lausanne minority protection provisions as contested kernel, examining the structural collision between the Turkish state's restrictive reading (minimizing Patriarchate institutional autonomy and property rights) and the Patriarchate's expansive reading (guaranteeing full religious continuity and self-governance). The treaty text functions as a fixed reference point whose interpretation determines the legitimate scope of minority rights, institutional authority, and property ownership.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Treaty of Lausanne Articles 37-45 (minority protection provisions; fixed kernel text)",
+      "Turkish Republic (successor state; interpretive authority via sovereignty)",
+      "Ecumenical Patriarchate of Constantinople (minority institution; claims interpretive authority via historical continuity)",
+      "European Court of Human Rights (external adjudicator invoking Lausanne as standard)",
+      "Lausanne signatories (guarantor powers: UK, France, Italy, Japan, Greece, Romania, Yugoslavia)",
+      "Halki Seminary (theological school closed 1971; test case for 'necessary institutions' interpretation)"
+    ],
+    "key_tensions": [
+      "State sovereignty vs treaty obligation (Turkey's domestic authority vs international commitments)",
+      "Minimalist vs maximalist reading (what 'full protection' and 'necessary institutions' entail)",
+      "Historical continuity vs legal positivism (Ottoman millet system legacy vs post-1923 legal framework)"
+    ],
+    "mechanisms": [
+      "Property confiscation apparatus (1936 Declaration, 1974 Vakıf Law amendments; implements restrictive reading)",
+      "ECHR petition pathway (Patriarchate appeals to European court citing Lausanne violations)",
+      "Diplomatic pressure cycles (U.S. State Department religious freedom reports; EU accession leverage periods)"
+    ],
+    "absences": [
+      "Enforcement mechanism in original treaty (no International Court of Justice referral clause; no sanctions for non-compliance)",
+      "Kurdish minority status (Lausanne protects non-Muslim minorities; Kurdish Muslims excluded from protection framework)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "restrictive_reading",
+      "human_readable": "Restrictive Reading (State Minimalism)",
+      "structural_delta": "Reading that interprets 'full protection' as individual worship rights only, denying institutional autonomy, property ownership, and theological education as protected categories",
+      "primary_observable": "Legal instruments implementing restrictive interpretation: 1936 Property Declaration requirement, 1971 Halki closure decree, 1974 Vakıf Law amendments restricting foundation property rights, denial of legal personality to Patriarchate",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "turkish_state_apparatus",
+      "victim": "patriarchate_institutional_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading with highest documented extractiveness; implements state sovereignty maximization through treaty interpretation",
+      "kernel_link": {
+        "kernel_id": "lausanne_minority_protections",
+        "reading_id": "restrictive_reading",
+        "sibling_readings": [
+          "expansive_reading",
+          "guarantor_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "expansive_reading",
+      "human_readable": "Expansive Reading (Institutional Continuity)",
+      "structural_delta": "Reading that interprets 'full protection' and 'necessary institutions' as guaranteeing the functional continuity of pre-1923 religious governance structures including property rights, theological education, and institutional self-administration",
+      "primary_observable": "Patriarchate legal claims and ECHR petitions asserting Lausanne violations: Halki reopening demands, property restitution cases, legal personality recognition appeals",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct reading with different observable set; documents alternative constraint instantiation with coordination rather than extraction dynamics",
+      "kernel_link": {
+        "kernel_id": "lausanne_minority_protections",
+        "reading_id": "expansive_reading",
+        "sibling_readings": [
+          "restrictive_reading",
+          "guarantor_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "guarantor_reading",
+      "human_readable": "Guarantor Reading (International Supervision)",
+      "structural_delta": "Reading that interprets signatory guarantor powers (Articles 37-45) as retaining supervisory authority over implementation, with minority rights enforceable through international mechanisms rather than solely domestic interpretation",
+      "primary_observable": "ECHR case law invoking Lausanne as European human rights standard; diplomatic demarches by guarantor states; EU progress reports citing Lausanne compliance as accession criterion",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading documenting external adjudication pathway; lower epsilon but captures international institutional dimension absent from bilateral readings",
+      "kernel_link": {
+        "kernel_id": "lausanne_minority_protections",
+        "reading_id": "guarantor_reading",
+        "sibling_readings": [
+          "restrictive_reading",
+          "expansive_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "property_regime_axis",
+      "human_readable": "Property Regime Collision (Vakıf vs Canonical Law)",
+      "structural_delta": "Incompatible property systems: Ottoman vakıf framework requiring state-administered foundations versus canonical law tradition of ecclesiastical ownership independent of state supervision",
+      "primary_observable": "1936 Declaration asset freeze; 1974 amendments restricting property transfer/acquisition; cumulative property loss metrics 1923-2024",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_treasury",
+      "victim": "minority_foundations",
+      "downstream_of": [
+        "restrictive_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream implementation mechanism of restrictive_reading rather than independent reading; captured by generation of restrictive_reading constraint"
+    },
+    {
+      "claim_id": "theological_education_axis",
+      "human_readable": "Theological Education Foreclosure (Halki Closure)",
+      "structural_delta": "State monopoly on higher education interpreted to prohibit minority theological schools, severing clergy formation pipeline",
+      "primary_observable": "1971 Halki Seminary closure decree; subsequent Patriarchs educated abroad; demographic decline of Istanbul Greek Orthodox community",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "state_education_monopoly",
+      "victim": "clergy_formation_capacity",
+      "downstream_of": [
+        "restrictive_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: specific implementation of restrictive_reading in education domain; would duplicate core snare mechanism already documented in restrictive_reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "restrictive_reading",
+      "kernel_id": "lausanne_minority_protections",
+      "reading_id": "restrictive_reading"
+    },
+    {
+      "claim_id": "expansive_reading",
+      "kernel_id": "lausanne_minority_protections",
+      "reading_id": "expansive_reading"
+    },
+    {
+      "claim_id": "guarantor_reading",
+      "kernel_id": "lausanne_minority_protections",
+      "reading_id": "guarantor_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "property_regime_axis",
+      "structural_delta": "Vakıf vs canonical law property systems collision",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Downstream implementation mechanism of restrictive_reading; not independent reading of kernel; captured by primary reading generation"
+    },
+    {
+      "claim_id": "theological_education_axis",
+      "structural_delta": "State education monopoly prohibiting minority theological schools",
+      "hypothesis": "snare",
+      "deferral_reason": "Domain-specific implementation of restrictive_reading snare mechanism; would duplicate rather than complement selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_absence",
+      "description": "Does absence of enforcement mechanism in Articles 37-45 constitute structural defect (Mountain of treaty design) or deliberate ambiguity allowing interpretive drift (Piton of negotiated vagueness)? If latter, restrictive_reading may be licensed rather than prohibited by kernel structure.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_kurdish_exclusion",
+      "description": "Is Kurdish exclusion from minority protection (Muslim vs non-Muslim binary) a separate kernel or implementation of restrictive_reading? Would require analysis of whether Muslim minorities' exclusion follows same interpretive logic or different structural constraint.",
+      "source": "Absence Inventory (§1.1) + Beneficiary Scan"
+    },
+    {
+      "id": "omega_millet_continuity",
+      "description": "Do expansive_reading claims rest on Ottoman millet system continuity that Lausanne explicitly terminated? If so, expansive reading may invoke non-existent legal substrate, collapsing to aspirational rather than treaty-grounded constraint.",
+      "source": "Independence Testing (§3) + Historical Continuity vs Legal Positivism tension"
+    },
+    {
+      "id": "omega_echr_jurisdiction",
+      "description": "Does ECHR invocation of Lausanne create new interpretive authority (guarantor_reading instantiation) or judicial overreach beyond treaty text? Turkey's non-ECHR status 1923-1954 suggests guarantor mechanism may be post-hoc rather than treaty-embedded.",
+      "source": "Guarantor Reading hypothesis generation + Operational Medium Probe"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings pass kernel test: shared commitment (Lausanne minority protections as binding), structurally different constraints (individual worship vs institutional autonomy vs international supervision), non-collapsing observables (domestic legal instruments vs ECHR petitions vs diplomatic mechanisms). Property and education axes correctly identified as downstream implementations rather than independent readings."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Treaty of Lausanne Articles 37-45 minority protection provisions establishing 'full protection of life and liberty' and rights to 'establish, manage and control at their own expense, any charitable, religious and social institutions, any schools and other establishments for instruction and education' for non-Muslim minorities",
+    "authority_description": "Contested tripartite structure: Turkish state claims interpretive monopoly via territorial sovereignty; Ecumenical Patriarchate claims interpretive authority via historical continuity and canonical law; guarantor powers claim supervisory authority via treaty signatory status",
+    "drift_status": "absent",
+    "candidate_pattern": "contested_foundation_text",
+    "is_contested_kernel": true,
+    "kernel_id": "lausanne_minority_protections",
+    "readings": [
+      {
+        "reading_id": "restrictive_reading",
+        "commitment": "Lausanne protections extend only to individual worship rights; institutional autonomy, property ownership, and theological education are domestic matters subject to general Turkish law",
+        "authority_grounding": "State sovereignty; successor state interpretive monopoly; 1982 Constitution supremacy over prior treaties",
+        "sibling_readings": [
+          "expansive_reading",
+          "guarantor_reading"
+        ],
+        "expected_structural_delta": "High extractiveness snare: minority institutions enter victim set; property confiscation, educational foreclosure, legal personality denial. Beneficiary: state apparatus consolidating control over minority institutional capacity."
+      },
+      {
+        "reading_id": "expansive_reading",
+        "commitment": "Lausanne protections guarantee functional continuity of pre-1923 religious governance including institutional self-administration, property rights, and clergy formation via theological schools",
+        "authority_grounding": "Historical continuity; canonical law tradition; treaty text 'necessary institutions' interpreted via Ottoman millet precedent",
+        "sibling_readings": [
+          "restrictive_reading",
+          "guarantor_reading"
+        ],
+        "expected_structural_delta": "Moderate coordination rope: minority institutions as self-governing but dependent on treaty compliance for survival. No beneficiary extraction but institutional vulnerability if reading loses interpretive contest."
+      },
+      {
+        "reading_id": "guarantor_reading",
+        "commitment": "Lausanne minority protections are internationally supervised obligations enforceable through guarantor state diplomacy and European human rights mechanisms, not solely domestic interpretation",
+        "authority_grounding": "Treaty signatory status; ECHR jurisdiction invoking Lausanne as European standard; international law supremacy principle",
+        "sibling_readings": [
+          "restrictive_reading",
+          "expansive_reading"
+        ],
+        "expected_structural_delta": "Low-extractiveness scaffold: creates external adjudication pathway but lacks enforcement mechanism. Functions as diplomatic leverage rather than binding constraint on state behavior."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "restrictive_reading",
+        "reading_b": "expansive_reading",
+        "basis": "Restrictive reading's axiom that treaty protections are bounded by state sovereignty and general law supremacy is mutually exclusive with expansive reading's axiom that minority institutional autonomy is treaty-guaranteed and immune from general law subordination. No coherent framework simultaneously holds both: either minority institutions have treaty-protected autonomy or they are subject to general state regulation."
+      },
+      {
+        "reading_a": "restrictive_reading",
+        "reading_b": "guarantor_reading",
+        "basis": "Restrictive reading's axiom of state interpretive monopoly (treaty obligations as domestically self-interpreted) contradicts guarantor reading's axiom of international supervisory authority (treaty obligations as externally adjudicated). A single framework cannot simultaneously hold that Turkey has final interpretive authority and that guarantor powers or international courts retain supervisory jurisdiction."
+      }
+    ]
+  },
+  "_seed_id": "greek_orthodox_minority_rights_turkey"
+}

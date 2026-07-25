@@ -1,0 +1,250 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Migration Studies / International Law",
+  "family_id": "immigration_border_kernel_2026",
+  "topic_summary": "Analysis of immigration as a contested kernel where the border commitment is read through sovereignty-primary or freedom-of-movement-primary lenses. Each reading instantiates structurally different constraints with distinct victim sets: sovereignty readings place excluded migrants in the victim set, while freedom-of-movement readings place displaced citizens or welfare recipients in the victim set.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nation-state (territorial authority claiming monopoly on legitimate border enforcement)",
+      "Prospective migrants (individuals seeking entry across borders)",
+      "Current citizens (residents with legal status in destination state)",
+      "International human rights regime (normative framework claiming universal personhood rights)",
+      "Labor markets (economic mechanism mediating wage/employment effects)",
+      "Welfare systems (redistributive mechanisms funded by taxation)"
+    ],
+    "key_tensions": [
+      "State sovereignty vs universal human rights (territorial control vs freedom of movement as human right)",
+      "Citizen preference vs migrant welfare (democratic mandate to restrict vs humanitarian obligation to admit)"
+    ],
+    "key_mechanisms": [
+      "Border enforcement apparatus (visa systems, deportation, detention)",
+      "Labor market competition (wage suppression or complementarity depending on skill distribution)",
+      "Fiscal redistribution (tax-funded services accessed by new entrants)"
+    ],
+    "key_absences": [
+      "Colonial/imperial history creating migration pressures (why certain populations seek entry)",
+      "Capital mobility asymmetry (capital crosses borders freely while labor faces restrictions)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The border as a legitimacy-conferring boundary: who has authority to determine crossing rights and on what grounds",
+    "authority_description": "State claims interpretive authority via territorial sovereignty; human rights regime claims authority via universal personhood",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_authority",
+    "is_contested_kernel": true,
+    "kernel_id": "border_legitimacy",
+    "readings": [
+      {
+        "reading_id": "sovereignty_reading",
+        "commitment": "Border authority derives from territorial sovereignty; state has legitimate right to exclude",
+        "authority_grounding": "Westphalian state system; democratic self-determination",
+        "sibling_readings": [
+          "freedom_of_movement_reading",
+          "humanitarian_obligation_reading"
+        ],
+        "expected_structural_delta": "Excluded migrants enter victim set; state enforcement is legitimate constraint; high ε on exclusion"
+      },
+      {
+        "reading_id": "freedom_of_movement_reading",
+        "commitment": "Freedom of movement is a human right; borders are presumptively illegitimate restrictions",
+        "authority_grounding": "Universal human rights; cosmopolitan moral philosophy",
+        "sibling_readings": [
+          "sovereignty_reading",
+          "humanitarian_obligation_reading"
+        ],
+        "expected_structural_delta": "Current citizens (displaced workers, welfare recipients) enter victim set; border enforcement is extractive; high ε on restriction"
+      },
+      {
+        "reading_id": "humanitarian_obligation_reading",
+        "commitment": "States have obligation to admit those fleeing persecution/disaster but not general economic migrants",
+        "authority_grounding": "Refugee Convention; humanitarian international law",
+        "sibling_readings": [
+          "sovereignty_reading",
+          "freedom_of_movement_reading"
+        ],
+        "expected_structural_delta": "Refugee/non-refugee distinction creates bifurcated victim set; moderate ε on categorical exclusion"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_reading",
+      "human_readable": "Sovereignty-Primary Reading (State Right to Exclude)",
+      "structural_delta": "Border authority grounded in territorial sovereignty; exclusion is legitimate exercise of state power",
+      "primary_observable": "Visa rejection rates; deportation enforcement levels; public opinion on immigration restriction",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "current_citizens_sovereignty_frame",
+      "victim": "excluded_migrants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates constraint with excluded migrants as victim set"
+    },
+    {
+      "claim_id": "freedom_of_movement_reading",
+      "human_readable": "Freedom-of-Movement-Primary Reading (Presumptive Right to Migrate)",
+      "structural_delta": "Border restrictions are presumptively illegitimate constraints on human freedom; burden of proof on state to justify exclusion",
+      "primary_observable": "Open borders advocacy strength; human rights litigation against border enforcement; philosophical consensus in cosmopolitan ethics",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "prospective_migrants",
+      "victim": "displaced_workers_welfare_recipients",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates constraint with current citizens as victim set; structurally inverts first reading"
+    },
+    {
+      "claim_id": "humanitarian_obligation_reading",
+      "human_readable": "Humanitarian Obligation Reading (Refugee/Migrant Distinction)",
+      "structural_delta": "States must admit those fleeing persecution but retain discretion over economic migration; categorical distinction creates bifurcated constraint",
+      "primary_observable": "Refugee Convention compliance rates; asylum approval vs economic visa approval; UNHCR resettlement quotas",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "refugees_fleeing_persecution",
+      "victim": "economic_migrants_excluded_by_category",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; intermediate position with categorical victim set; demonstrates kernel's structural range"
+    },
+    {
+      "claim_id": "labor_market_competition",
+      "human_readable": "Labor Market Competition (Wage/Employment Effects)",
+      "structural_delta": "Immigration affects native wages and employment through supply-side labor market effects; magnitude and distribution contested",
+      "primary_observable": "Econometric studies of wage elasticity; employment displacement rates by skill level",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_reading",
+        "freedom_of_movement_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical mountain feeding into readings but not itself a reading; captured as affects_constraint in generation"
+    },
+    {
+      "claim_id": "fiscal_redistribution_strain",
+      "human_readable": "Fiscal Redistribution Strain (Welfare System Load)",
+      "structural_delta": "New entrants access tax-funded services; net fiscal impact depends on age, skill, and welfare generosity",
+      "primary_observable": "Net fiscal contribution studies; welfare usage rates by immigration status",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_reading",
+        "freedom_of_movement_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: coordination constraint feeding into readings but not itself a reading; captured as affects_constraint in generation"
+    },
+    {
+      "claim_id": "colonial_migration_causation",
+      "human_readable": "Colonial Migration Causation (Historical Extraction Creating Push Factors)",
+      "structural_delta": "Imperial extraction created economic/political conditions driving migration from former colonies to metropole",
+      "primary_observable": "Migration flow patterns from former colonies; development indicators in post-colonial states",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_reading",
+        "freedom_of_movement_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical piton; dark matter probe surfaced but lower centrality than selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_reading",
+      "kernel_id": "border_legitimacy",
+      "reading_id": "sovereignty_reading"
+    },
+    {
+      "claim_id": "freedom_of_movement_reading",
+      "kernel_id": "border_legitimacy",
+      "reading_id": "freedom_of_movement_reading"
+    },
+    {
+      "claim_id": "humanitarian_obligation_reading",
+      "kernel_id": "border_legitimacy",
+      "reading_id": "humanitarian_obligation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "labor_market_competition",
+      "structural_delta": "Immigration affects native wages through labor supply",
+      "hypothesis": "mountain",
+      "deferral_reason": "Empirical mountain feeding into readings; not itself a reading of the border kernel; will be referenced via affects_constraint"
+    },
+    {
+      "claim_id": "fiscal_redistribution_strain",
+      "structural_delta": "New entrants access tax-funded services",
+      "hypothesis": "rope",
+      "deferral_reason": "Coordination constraint feeding into readings; not itself a reading of the border kernel; will be referenced via affects_constraint"
+    },
+    {
+      "claim_id": "colonial_migration_causation",
+      "structural_delta": "Imperial extraction created migration push factors",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical piton with lower centrality; dark matter probe surfaced but not selected for generation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_capital_mobility_asymmetry",
+      "description": "Capital crosses borders freely while labor faces restrictions. Is this asymmetry a Mountain (economic efficiency) or a Snare (extraction favoring capital over labor)? Sovereignty reading treats it as legitimate; freedom-of-movement reading treats it as extractive.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_skill_distribution_effects",
+      "description": "Labor market effects vary by skill level (high-skill complementarity vs low-skill substitution). Does this bifurcate the victim set within each reading, or does it collapse the readings into one constraint with skill-conditional victims?",
+      "source": "Independence Testing (Type B overlap between labor_market_competition and readings)"
+    },
+    {
+      "id": "omega_enforcement_selectivity",
+      "description": "Border enforcement is selectively applied (visa overstays vs border crossings; high-skill vs low-skill). Does selective enforcement reveal sovereignty reading as Snare (extractive class sorting) rather than Rope (legitimate coordination)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_refugee_definition_drift",
+      "description": "Refugee Convention definition (persecution) excludes climate/economic displacement. As climate migration increases, does humanitarian_obligation_reading collapse into sovereignty_reading (no obligation) or expand toward freedom_of_movement_reading (general admission)?",
+      "source": "Commitment System Recognition (drift_status: partial)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successful: three readings instantiate genuinely different constraints with distinct victim sets. Sovereignty reading places excluded migrants in victim set; freedom-of-movement reading places displaced citizens in victim set; humanitarian reading creates categorical bifurcation. Deferred axes (labor_market_competition, fiscal_redistribution_strain) are empirical mountains/ropes feeding into readings, not readings themselves."
+  },
+  "_seed_id": "immigration_borders_kernel"
+}

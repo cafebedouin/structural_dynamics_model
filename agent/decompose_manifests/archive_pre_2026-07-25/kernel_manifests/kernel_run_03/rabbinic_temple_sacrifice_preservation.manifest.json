@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Rabbinic Judaism / Commitment System Theory",
+  "family_id": "kodashim_preservation_2026",
+  "topic_summary": "Analysis of rabbinic preservation of Temple sacrifice law (Kodashim) across 1,900 years without performance. The kernel contest: study-as-exercise reading treats the kernel as occupied through continuous engagement; performance-only reading treats it as archived husk awaiting messianic restoration. This collapses the boundary between exercising a commitment and archiving its symbol—a D1/D4 boundary case in commitment system theory.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Seder Kodashim (fifth order of Mishnah, 11 tractates on Temple sacrifice)",
+      "Rabbinic Judaism post-70 CE (interpretive authority after Temple destruction)",
+      "Maimonides (12th c., defended study-as-substitute position)",
+      "Jacob Neusner (20th c., 'map without territory' interpretation)",
+      "Temple Mount Institute / Modern Yeshivot (contemporary messianic-preparation institutions)",
+      "Palestinian/Babylonian Talmud (differential treatment: no Palestinian Talmud on Kodashim, abbreviated Babylonian)"
+    ],
+    "key_tensions": [
+      "Study vs Performance: Is engagement with Kodashim itself the fulfillment or merely preparation for future restoration?",
+      "Kernel vs Husk: Does continuous study occupy the commitment or merely archive its symbol?",
+      "Historical Neglect vs Theological Necessity: Maimonides' era saw widespread neglect justified by 'no practical benefit,' contradicting study-as-sacred-exercise position"
+    ],
+    "key_mechanisms": [
+      "Mishnaic Codification (200 CE): Rabbi Judah ha-Nasi's redaction stabilized oral traditions as written kernel",
+      "Study-as-Substitute Doctrine: Maimonides' ruling that studying sacrifice law equals performing it"
+    ],
+    "key_absences": [
+      "No Palestinian Talmud on Kodashim (suggests limited practical engagement in Land of Israel)",
+      "Centuries of documented neglect (contradicts continuous-occupation claim)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The halakhic corpus of Temple sacrifice procedure (Seder Kodashim), stabilized in Mishnah c.200 CE, claiming to preserve divine commandments (mitzvot) governing korbanot",
+    "authority_description": "Rabbinic interpretive authority grounded in chain of transmission (mesorah) from Sinai through oral law, codified post-Temple to preserve divine instruction",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Absorption (Pattern 3)",
+    "is_contested_kernel": true,
+    "kernel_id": "kodashim_corpus",
+    "readings": [
+      {
+        "reading_id": "study_as_exercise",
+        "commitment": "Study of sacrifice law is itself the performance of the mitzvah; the kernel is occupied through continuous intellectual-spiritual engagement",
+        "authority_grounding": "Maimonidean doctrine that 'occupying oneself with the law is as if he had offered a burnt offering'; cosmic-repair theology (tikkun) sustained through contemplation",
+        "sibling_readings": [
+          "performance_only",
+          "substitution_archive"
+        ],
+        "expected_structural_delta": "Zero extractiveness—study is the complete fulfillment; no victim set (no one deprived); beneficiary: scholars maintaining cosmic order through engagement; type: rope (coordination around shared interpretive practice)"
+      },
+      {
+        "reading_id": "performance_only",
+        "commitment": "The kernel is a husk—an archived blueprint awaiting messianic restoration when physical sacrifice resumes",
+        "authority_grounding": "Orthodox messianic deferral position; Temple Mount Institute preparation yeshivot; historical neglect justified by 'no practical benefit until Messiah comes'",
+        "sibling_readings": [
+          "study_as_exercise",
+          "substitution_archive"
+        ],
+        "expected_structural_delta": "High extractiveness—current study extracts legitimacy from future performance it cannot deliver; victim: those who treat archive as living practice (misallocated devotion); beneficiary: messianic-preparation institutions; type: snare (legitimacy derived from unrealizable future state)"
+      },
+      {
+        "reading_id": "substitution_archive",
+        "commitment": "Prayer and Torah study replaced sacrifice; Kodashim is memorial archive documenting what was superseded, not occupied kernel",
+        "authority_grounding": "Post-Temple substitution theology; Neusner's 'map without territory' interpretation; Reform/Conservative positions treating sacrifice as historically superseded",
+        "sibling_readings": [
+          "study_as_exercise",
+          "performance_only"
+        ],
+        "expected_structural_delta": "Moderate extractiveness—archive claims continuity with what it has replaced; victim: those seeking living sacrificial practice (told it's obsolete); beneficiary: rabbinic text-study institutions; type: tangled_rope (substitution obscures the replacement, claiming continuity while denying restoration)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "study_as_exercise",
+        "reading_b": "performance_only",
+        "basis": "Study-as-exercise holds that intellectual engagement IS the complete fulfillment of the mitzvah (no future performance needed). Performance-only holds that study is preparation for future physical restoration (current engagement is incomplete). No single framework can hold both: either study completes the obligation or it does not."
+      },
+      {
+        "reading_a": "study_as_exercise",
+        "reading_b": "substitution_archive",
+        "basis": "Study-as-exercise holds the kernel is occupied (sacrifice law remains living divine command). Substitution-archive holds the kernel was superseded (sacrifice replaced by prayer/study, now archived as memorial). No single framework can hold both: either the original commandment persists or it was replaced."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_exercise",
+      "human_readable": "Study-as-Exercise Reading (Kernel Occupied Through Engagement)",
+      "structural_delta": "Intellectual-spiritual engagement with sacrifice law constitutes complete fulfillment of mitzvah; no performance gap",
+      "primary_observable": "Maimonidean rulings equating study with performance; cosmic-repair theology (tikkun) literature; continuous yeshiva curriculum inclusion",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinic_scholars_maintaining_cosmic_order",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes zero-extractiveness baseline (study = performance)"
+    },
+    {
+      "claim_id": "performance_only",
+      "human_readable": "Performance-Only Reading (Kernel as Archived Husk)",
+      "structural_delta": "Study is preparation for future messianic restoration; current engagement incomplete without physical sacrifice",
+      "primary_observable": "Orthodox messianic-deferral doctrine; Temple Mount Institute preparation programs; historical neglect justified by 'no practical benefit'",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "messianic_preparation_institutions",
+      "victim": "practitioners_treating_archive_as_living_practice",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading; highest extractiveness (legitimacy from unrealizable future); axiom-contradictory to reading 1"
+    },
+    {
+      "claim_id": "substitution_archive",
+      "human_readable": "Substitution-Archive Reading (Sacrifice Superseded, Kodashim Memorial)",
+      "structural_delta": "Prayer/study replaced sacrifice; Kodashim documents what was superseded, not occupied kernel",
+      "primary_observable": "Neusner's 'map without territory' analysis; Reform/Conservative theological positions; post-Temple substitution liturgy",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rabbinic_text_study_institutions",
+      "victim": "seekers_of_living_sacrificial_practice",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; moderate extractiveness; substitution obscures replacement while claiming continuity"
+    },
+    {
+      "claim_id": "talmudic_neglect_pattern",
+      "human_readable": "Talmudic Neglect Pattern (Differential Treatment as Structural Signal)",
+      "structural_delta": "No Palestinian Talmud on Kodashim; abbreviated Babylonian Talmud; documented centuries of neglect",
+      "primary_observable": "Absence of Palestinian Talmud tractates; Babylonian Talmud brevity metrics; Maimonides-era neglect documentation",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "performance_only",
+        "substitution_archive"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical evidence axis supporting performance_only and substitution_archive readings; captured in their constraint stories"
+    },
+    {
+      "claim_id": "messianic_temporal_horizon",
+      "human_readable": "Messianic Temporal Horizon (Indefinite Deferral as Structural Feature)",
+      "structural_delta": "Messianic restoration timeframe indefinite; creates permanent preparation state without performance accountability",
+      "primary_observable": "Orthodox eschatology; Temple Mount Institute mission statements; absence of performance-readiness criteria",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "performance_only"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal structure supporting performance_only reading; omega material on indefinite deferral as legitimacy mechanism"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "study_as_exercise",
+      "kernel_id": "kodashim_corpus",
+      "reading_id": "study_as_exercise"
+    },
+    {
+      "claim_id": "performance_only",
+      "kernel_id": "kodashim_corpus",
+      "reading_id": "performance_only"
+    },
+    {
+      "claim_id": "substitution_archive",
+      "kernel_id": "kodashim_corpus",
+      "reading_id": "substitution_archive"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "talmudic_neglect_pattern",
+      "structural_delta": "No Palestinian Talmud on Kodashim; centuries of documented neglect",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical evidence axis; captured within performance_only and substitution_archive constraint stories as supporting evidence"
+    },
+    {
+      "claim_id": "messianic_temporal_horizon",
+      "structural_delta": "Indefinite messianic deferral creates permanent preparation state",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Temporal structure supporting performance_only reading; omega material on deferral-as-legitimacy mechanism"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d1_d4_boundary",
+      "description": "Does the D1/D4 boundary (kernel occupied vs husk archived) collapse into a false dichotomy? All three readings may coexist as licensed plurality within rabbinic Judaism—different communities instantiate different readings without requiring global resolution. The 'contest' may be a feature, not a bug.",
+      "source": "§1.3-K kernel recognition; axiom contradictions declared but readings coexist historically"
+    },
+    {
+      "id": "omega_neglect_as_signal",
+      "description": "Does historical neglect (no Palestinian Talmud, Maimonides-era abandonment) falsify the study-as-exercise reading, or does it merely show that reading was contested rather than universal? Neglect may indicate performance_only was dominant, not that study-as-exercise was incoherent.",
+      "source": "Deferred axis talmudic_neglect_pattern; tension between theological necessity and historical practice"
+    },
+    {
+      "id": "omega_extractiveness_reversal",
+      "description": "Is performance_only's high extractiveness score correct, or does it reverse victim/beneficiary? If messianic preparation is sincere (not cynical), the 'victim' (those treating archive as living practice) may be the extractive party—demanding immediate fulfillment from a commitment explicitly deferred to messianic age.",
+      "source": "§2 epsilon_bin classification for performance_only reading; beneficiary/victim assignment contested"
+    },
+    {
+      "id": "omega_neusner_map_territory",
+      "description": "Does Neusner's 'map without territory' interpretation (substitution_archive reading) commit epistemic trespass? His framework may impose secular academic categories ('fictitious territory') onto a system that rejects the map/territory distinction—for Maimonides, the map IS the territory.",
+      "source": "F34 epistemic trespass check; Neusner's interpretive authority over internal rabbinic theology contested"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Neusner's 'map without territory' interpretation (substitution_archive reading) may impose secular academic framework onto internal rabbinic theology. Generated omega_neusner_map_territory to bound this uncertainty. Model lacks deep Talmudic training to adjudicate between Maimonidean cosmic-repair theology and Neusner's sociological interpretation."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

@@ -1,0 +1,281 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Ethics / Constitutional Law / Medical Autonomy",
+  "family_id": "vaccine_mandate_kernel_2026",
+  "topic_summary": "Analysis of vaccine mandate frameworks as a contested kernel where public-health-primary and bodily-autonomy-primary readings emit structurally different constraints with incompatible victim sets: the immunocompromised-exposed (public health reading) versus the unvaccinated-coerced (autonomy reading). Historical foundation in Jacobson v. Massachusetts (1905) establishes state police power; contemporary COVID-19 mandates for healthcare workers and large employers surface the kernel contest.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Public Health Authorities (CDC, state health boards; mandate enforcement)",
+      "Immunocompromised Populations (vulnerable to severe disease; mandate beneficiaries under PH reading)",
+      "Mandate Opponents (healthcare workers, parents; coercion victims under autonomy reading)",
+      "U.S. Supreme Court (Jacobson precedent; constitutional arbiter)",
+      "OSHA/Biden Administration (COVID-19 employer mandate authority)",
+      "Pharmaceutical Industry (vaccine manufacturers; trust/exploitation concern)"
+    ],
+    "key_tensions": [
+      "Community protection vs individual autonomy (public health authority vs mandate opponents)",
+      "Vulnerable population safety vs healthcare worker consent (immunocompromised vs HCW autonomy)",
+      "Trust in institutions vs radicalization risk (mandate enforcement vs long-term public health legitimacy)"
+    ],
+    "key_mechanisms": [
+      {
+        "id": "school_entry_requirement",
+        "description": "All 50 states require vaccination for public school entry; enforcement via exclusion",
+        "agents": "State health boards, school administrators",
+        "targets": "Parents, unvaccinated children"
+      },
+      {
+        "id": "herd_immunity_threshold",
+        "description": "Population-level vaccination coverage protects those unable to vaccinate",
+        "agents": "Vaccinated majority",
+        "targets": "Immunocompromised, medically contraindicated, too young to vaccinate"
+      },
+      {
+        "id": "employer_mandate_osha",
+        "description": "OSHA workplace safety authority used to require vaccination or testing",
+        "agents": "Federal government via OSHA",
+        "targets": "Large employers (100+ employees), healthcare facilities"
+      }
+    ],
+    "key_absences": [
+      {
+        "id": "absence_compensation_mechanism",
+        "description": "No structured compensation for vaccine injury under mandate (VICP exists but contested adequacy)"
+      },
+      {
+        "id": "absence_exit_option",
+        "description": "Mandates often lack genuine exit: homeschooling requires resources; job loss imposes severe costs"
+      }
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimate scope of state authority to compel medical intervention for collective benefit",
+    "authority_description": "Constitutional police power (Jacobson precedent) interpreted through public health expertise vs individual rights frameworks",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "mandate_legitimacy_scope",
+    "readings": [
+      {
+        "reading_id": "public_health_primary",
+        "commitment": "State authority to compel vaccination is legitimate when necessary to protect vulnerable populations from serious harm",
+        "authority_grounding": "Jacobson precedent + epidemiological expertise + utilitarian harm prevention",
+        "sibling_readings": [
+          "bodily_autonomy_primary",
+          "proportionality_reading"
+        ],
+        "expected_structural_delta": "Immunocompromised enter victim set when mandates absent; unvaccinated bear duty to protect; high ε from mandate absence"
+      },
+      {
+        "reading_id": "bodily_autonomy_primary",
+        "commitment": "Medical intervention without informed consent violates fundamental bodily integrity regardless of collective benefit",
+        "authority_grounding": "Nuremberg Code + liberal rights tradition + self-ownership principle",
+        "sibling_readings": [
+          "public_health_primary",
+          "proportionality_reading"
+        ],
+        "expected_structural_delta": "Unvaccinated-coerced enter victim set when mandates present; state becomes rights violator; high ε from mandate presence"
+      },
+      {
+        "reading_id": "proportionality_reading",
+        "commitment": "Mandate legitimacy depends on disease severity, vaccine safety/efficacy, and availability of less restrictive alternatives",
+        "authority_grounding": "Constitutional strict scrutiny + risk-benefit analysis + least restrictive means doctrine",
+        "sibling_readings": [
+          "public_health_primary",
+          "bodily_autonomy_primary"
+        ],
+        "expected_structural_delta": "Victim set conditional on disease parameters; measles mandate legitimate, flu mandate not; moderate ε varies by pathogen"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "public_health_primary",
+        "reading_b": "bodily_autonomy_primary",
+        "basis": "Public health reading holds that collective harm prevention can override individual medical consent; autonomy reading holds that bodily integrity is categorically inviolable regardless of collective benefit. No single framework can hold both: accepting autonomy's axiom (consent is absolute) requires rejecting public health's axiom (consent is conditional on harm to others)."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "public_health_primary",
+      "human_readable": "Public Health Primary Reading (Collective Protection Mandate)",
+      "structural_delta": "State authority to compel vaccination grounded in duty to protect immunocompromised from serious harm",
+      "primary_observable": "Immunocompromised hospitalization/mortality rates; herd immunity threshold achievement",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "public_health_authority",
+      "victim": "immunocompromised_populations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; distinct victim set (immunocompromised-exposed); high ε from mandate absence"
+    },
+    {
+      "claim_id": "bodily_autonomy_primary",
+      "human_readable": "Bodily Autonomy Primary Reading (Consent Inviolability)",
+      "structural_delta": "Medical intervention without informed consent violates fundamental bodily integrity regardless of collective benefit",
+      "primary_observable": "Mandate enforcement actions; consent framework violations; coercion mechanisms",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_rights_framework",
+      "victim": "unvaccinated_coerced",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; incompatible victim set (unvaccinated-coerced); axiom-contradictory to reading 1"
+    },
+    {
+      "claim_id": "proportionality_reading",
+      "human_readable": "Proportionality Reading (Context-Dependent Legitimacy)",
+      "structural_delta": "Mandate legitimacy conditional on disease severity, vaccine efficacy, and availability of less restrictive alternatives",
+      "primary_observable": "Case fatality rate; vaccine efficacy data; alternative intervention availability",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; attempts to resolve kernel contest via conditional framework; moderate ε varies by pathogen context"
+    },
+    {
+      "claim_id": "trust_erosion_feedback",
+      "human_readable": "Trust Erosion Feedback Loop (Radicalization Risk)",
+      "structural_delta": "Mandates may radicalize hesitants, eroding long-term institutional trust and future vaccine uptake",
+      "primary_observable": "Trust in public health institutions over time; uptake of non-mandatory vaccines post-mandate",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "future_public_health_capacity",
+      "downstream_of": [
+        "public_health_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of public_health_primary reading; captured as omega variable"
+    },
+    {
+      "claim_id": "exit_option_absence",
+      "human_readable": "Exit Option Absence (Coercion Intensification)",
+      "structural_delta": "Mandates lack genuine exit options; homeschooling requires resources, job loss imposes severe costs",
+      "primary_observable": "Homeschooling accessibility by income; employment termination rates for non-compliance",
+      "epsilon_bin": "high",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "low_income_mandate_opponents",
+      "downstream_of": [
+        "bodily_autonomy_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: intensifies bodily_autonomy_primary reading's coercion claim; omega variable on exit feasibility"
+    },
+    {
+      "claim_id": "compensation_mechanism_absence",
+      "human_readable": "Compensation Mechanism Absence (Injury Without Remedy)",
+      "structural_delta": "No adequate compensation for vaccine injury under mandate; VICP exists but contested adequacy",
+      "primary_observable": "VICP claim approval rates; compensation amounts vs injury severity",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "vaccine_injured_under_mandate",
+      "downstream_of": [
+        "public_health_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality; captured as omega on remedy adequacy"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "public_health_primary",
+      "kernel_id": "mandate_legitimacy_scope",
+      "reading_id": "public_health_primary"
+    },
+    {
+      "claim_id": "bodily_autonomy_primary",
+      "kernel_id": "mandate_legitimacy_scope",
+      "reading_id": "bodily_autonomy_primary"
+    },
+    {
+      "claim_id": "proportionality_reading",
+      "kernel_id": "mandate_legitimacy_scope",
+      "reading_id": "proportionality_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "trust_erosion_feedback",
+      "structural_delta": "Mandates may radicalize hesitants, eroding long-term institutional trust",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of public_health_primary reading; second-order effect captured as omega"
+    },
+    {
+      "claim_id": "exit_option_absence",
+      "structural_delta": "Mandates lack genuine exit options; homeschooling/job loss impose severe costs",
+      "hypothesis": "piton",
+      "deferral_reason": "Intensifies bodily_autonomy_primary coercion claim; omega variable on exit feasibility"
+    },
+    {
+      "claim_id": "compensation_mechanism_absence",
+      "structural_delta": "No adequate compensation for vaccine injury under mandate",
+      "hypothesis": "piton",
+      "deferral_reason": "Lower centrality; remedy adequacy is omega variable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_trust_radicalization",
+      "description": "Does mandate enforcement radicalize hesitants, creating long-term trust erosion that reduces future vaccine uptake? If yes, public_health_primary reading's short-term protection may generate long-term vulnerability.",
+      "source": "Deferred axis trust_erosion_feedback + research context on radicalization risk"
+    },
+    {
+      "id": "omega_exit_feasibility",
+      "description": "Are exit options (homeschooling, job change) genuinely available across income strata? If not, bodily_autonomy_primary reading's coercion claim intensifies; mandate becomes Snare rather than Rope.",
+      "source": "Deferred axis exit_option_absence + absence inventory"
+    },
+    {
+      "id": "omega_proportionality_threshold",
+      "description": "What disease severity/vaccine efficacy threshold makes proportionality_reading collapse into one of the primary readings? Measles (high severity, high efficacy) may collapse to public_health_primary; flu (low severity, moderate efficacy) may collapse to bodily_autonomy_primary.",
+      "source": "Proportionality_reading conditional framework + pathogen variability"
+    },
+    {
+      "id": "omega_compensation_adequacy",
+      "description": "Is VICP compensation adequate for vaccine injury under mandate? If not, public_health_primary reading imposes uncompensated harm on a subset, violating its own utilitarian logic.",
+      "source": "Deferred axis compensation_mechanism_absence + research context on VICP contested adequacy"
+    },
+    {
+      "id": "omega_jacobson_drift",
+      "description": "Has Jacobson precedent drifted from its original scope (local smallpox outbreak) to justify federal employer mandates for respiratory viruses? If yes, authority_grounding for public_health_primary reading may be weaker than claimed.",
+      "source": "Commitment system drift_status=partial + historical vs contemporary mandate scope"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest confirmed: public_health_primary and bodily_autonomy_primary hold axioms that no single coherent framework can hold simultaneously (collective harm prevention overrides consent vs consent is categorically inviolable). Proportionality_reading attempts resolution via conditional framework but does not eliminate the axiom contradiction for edge cases (high-severity diseases vs low-severity diseases). Three readings selected capture the kernel topology."
+  },
+  "_seed_id": "vaccine_mandate_kernel"
+}

@@ -1,0 +1,253 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Software Engineering / Political Economy of Technology / Intellectual Property",
+  "family_id": "foss_vs_proprietary_2024",
+  "topic_summary": "Analysis of the free/open-source software (FOSS) versus proprietary software debate. The topic is framed by some as a foundational question of user freedom and digital autonomy, and by others as a pragmatic choice of development model and business strategy. The debate centers on whether software source code should be publicly available with freedoms to use, study, modify, and share, or whether it should be closed and licensed under restrictive terms.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Free Software Foundation (FSF) - advocacy organization promoting software freedom as ethical imperative",
+      "Open Source Initiative (OSI) - organization promoting open development as pragmatic methodology",
+      "Proprietary software vendors - commercial entities distributing closed-source software under restrictive licenses",
+      "End users - individuals and organizations consuming software",
+      "Developers/contributors - individuals writing and maintaining software",
+      "License enforcement mechanisms - legal and technical systems controlling software use and distribution"
+    ],
+    "key_tensions": [
+      "User freedom vs vendor control (FOSS advocates vs proprietary vendors)",
+      "Ethical imperative vs pragmatic optimization (FSF vs OSI framings)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy boundary of software control: who has the right to determine how software may be used, studied, modified, and shared",
+    "authority_description": "Competing claims to interpretive authority: ethical philosophy (FSF), pragmatic engineering (OSI), property rights (proprietary vendors), user sovereignty (various)",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "software_control_legitimacy",
+    "readings": [
+      {
+        "reading_id": "freedom_imperative_reading",
+        "commitment": "Software control is a matter of fundamental user freedom; proprietary software is ethically illegitimate because it denies users control over their computing",
+        "authority_grounding": "Deontological ethics / natural rights framework (FSF tradition)",
+        "sibling_readings": [
+          "pragmatic_openness_reading",
+          "property_rights_reading",
+          "commons_reading"
+        ],
+        "expected_structural_delta": "All proprietary software enters victim set (users denied freedom); high ε from categorical rejection of closed source; beneficiary: users as rights-holders"
+      },
+      {
+        "reading_id": "pragmatic_openness_reading",
+        "commitment": "Software control is a development methodology choice; open source produces better software through peer review and collaboration, but proprietary models are legitimate alternatives",
+        "authority_grounding": "Engineering pragmatism / consequentialist optimization (OSI tradition)",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "property_rights_reading",
+          "commons_reading"
+        ],
+        "expected_structural_delta": "No victim set (both models legitimate); low ε from accepting coexistence; beneficiary: developers and users via quality optimization"
+      },
+      {
+        "reading_id": "property_rights_reading",
+        "commitment": "Software control is a property right; creators have legitimate authority to restrict use, modification, and distribution to protect investment and enable commercial sustainability",
+        "authority_grounding": "Lockean property theory / commercial law framework",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "pragmatic_openness_reading",
+          "commons_reading"
+        ],
+        "expected_structural_delta": "FOSS advocates enter victim set (denied return on investment); moderate ε from restricting freedoms; beneficiary: software vendors and investors"
+      },
+      {
+        "reading_id": "commons_reading",
+        "commitment": "Software control is a commons governance question; neither absolute freedom nor absolute property but negotiated collective management of shared digital infrastructure",
+        "authority_grounding": "Commons theory / institutional economics (Ostrom tradition)",
+        "sibling_readings": [
+          "freedom_imperative_reading",
+          "pragmatic_openness_reading",
+          "property_rights_reading"
+        ],
+        "expected_structural_delta": "Both absolutist positions enter victim set (denied governance participation); variable ε depending on commons rules; beneficiary: stakeholder communities"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "freedom_imperative_reading",
+        "reading_b": "property_rights_reading",
+        "basis": "Freedom imperative holds that users have inalienable right to control their computing; property rights holds that creators have legitimate authority to deny that control. No single framework can hold both as simultaneously valid foundational axioms."
+      },
+      {
+        "reading_a": "freedom_imperative_reading",
+        "reading_b": "pragmatic_openness_reading",
+        "basis": "Freedom imperative treats proprietary software as categorically illegitimate (ethical violation); pragmatic openness treats it as a legitimate alternative methodology. No framework can simultaneously hold proprietary software as both ethically impermissible and methodologically acceptable."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "software_control_legitimacy_kernel",
+      "human_readable": "Software Control Legitimacy (Contested Kernel)",
+      "structural_delta": "Competing foundational commitments about who has legitimate authority to control software use, modification, and distribution",
+      "primary_observable": "License choice distribution; enforcement mechanisms; community discourse framing (freedom vs property vs pragmatism)",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "network_effects_lock_in",
+        "sustainability_mechanism"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with four distinct readings passing independence test; highest centrality as upstream to all other axes"
+    },
+    {
+      "claim_id": "network_effects_lock_in",
+      "human_readable": "Network Effects Lock-In (Compatibility and Switching Costs)",
+      "structural_delta": "Proprietary software creates switching costs through incompatible formats and vendor-specific ecosystems; FOSS enables interoperability but may lack network critical mass",
+      "primary_observable": "Market share concentration; file format compatibility; migration cost data",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dominant_vendors",
+      "victim": "users_and_competitors",
+      "downstream_of": [
+        "software_control_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally independent from kernel (different observable: market dynamics vs legitimacy claims); passes pairwise test; moderate ε from lock-in effects"
+    },
+    {
+      "claim_id": "sustainability_mechanism",
+      "human_readable": "Sustainability Mechanism (Funding and Maintenance Models)",
+      "structural_delta": "Proprietary software funded through license fees; FOSS funded through donations, services, dual-licensing, or volunteer labor with chronic under-resourcing of maintenance",
+      "primary_observable": "Funding sources; maintainer burnout rates; critical infrastructure support levels",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "proprietary_vendors",
+      "victim": "foss_maintainers",
+      "downstream_of": [
+        "software_control_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structurally independent from kernel and network effects (different observable: resource flows vs legitimacy vs market dynamics); passes pairwise test"
+    },
+    {
+      "claim_id": "security_transparency_tradeoff",
+      "human_readable": "Security Through Transparency vs Obscurity",
+      "structural_delta": "FOSS enables security auditing through source availability; proprietary claims security through obscurity and controlled disclosure",
+      "primary_observable": "Vulnerability disclosure rates; time-to-patch; audit coverage",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "software_control_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as downstream consequence of kernel readings (freedom_imperative and pragmatic_openness both emphasize transparency); low independent ε"
+    },
+    {
+      "claim_id": "innovation_velocity",
+      "human_readable": "Innovation Velocity (Development Speed and Direction)",
+      "structural_delta": "Proprietary development directed by vendor strategy; FOSS development directed by contributor interests and user needs",
+      "primary_observable": "Feature release cadence; responsiveness to user requests; innovation direction alignment",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "software_control_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps with pragmatic_openness_reading's development methodology claims; low independent ε beyond kernel"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "freedom_imperative_reading",
+      "kernel_id": "software_control_legitimacy",
+      "reading_id": "freedom_imperative_reading"
+    },
+    {
+      "claim_id": "pragmatic_openness_reading",
+      "kernel_id": "software_control_legitimacy",
+      "reading_id": "pragmatic_openness_reading"
+    },
+    {
+      "claim_id": "property_rights_reading",
+      "kernel_id": "software_control_legitimacy",
+      "reading_id": "property_rights_reading"
+    },
+    {
+      "claim_id": "commons_reading",
+      "kernel_id": "software_control_legitimacy",
+      "reading_id": "commons_reading"
+    },
+    "network_effects_lock_in",
+    "sustainability_mechanism"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "security_transparency_tradeoff",
+      "structural_delta": "Security through source transparency vs obscurity",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured as downstream consequence of kernel readings; low independent ε beyond what freedom_imperative and pragmatic_openness already surface"
+    },
+    {
+      "claim_id": "innovation_velocity",
+      "structural_delta": "Development speed and direction under different control models",
+      "hypothesis": "rope",
+      "deferral_reason": "Overlaps with pragmatic_openness_reading's development methodology claims; insufficient structural independence"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_hybrid_models",
+      "description": "Do hybrid models (dual-licensing, open-core, source-available-but-restricted) constitute a fifth reading of the kernel, or are they unstable compromises that collapse into one of the four readings under pressure?",
+      "source": "§2.2 Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_ai_training_data",
+      "description": "Does AI training on open-source code without contribution back constitute a new form of extraction that none of the four readings adequately address? Potential fifth reading or modification of commons_reading.",
+      "source": "§2.2 Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_state_sovereignty",
+      "description": "Do nation-state software sovereignty concerns (China's push for domestic FOSS, EU digital autonomy) constitute a distinct reading grounded in geopolitical rather than individual/commercial authority?",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "Are pragmatic_openness and commons_reading genuinely distinct, or do they collapse under analysis? Both accept coexistence and reject absolutism, differing primarily in governance mechanism emphasis.",
+      "source": "§3.2 Overlap Classification (Type B structure-generated entanglement)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four readings pass pairwise independence test: freedom_imperative vs pragmatic_openness differ on legitimacy of proprietary software; freedom_imperative vs property_rights hold contradictory axioms; pragmatic_openness vs property_rights differ on whether openness is optimization or concession; commons_reading vs all three differs on governance locus (collective vs individual/vendor). Two additional independent axes (network_effects, sustainability) pass §3 test with different observables and beneficiary structures."
+  }
+}

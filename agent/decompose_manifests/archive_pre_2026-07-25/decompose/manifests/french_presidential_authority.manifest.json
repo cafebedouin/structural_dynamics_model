@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Systems / Comparative Government",
+  "family_id": "fifth_republic_executive_authority",
+  "topic_summary": "Analysis of competing interpretations of the French Fifth Republic Constitution as a commitment system kernel. Two fundamentally incompatible readings exist: a hyper-presidential reading granting near-unmediated sovereign executive power, versus a parliamentary-constrained reading requiring legislative coordination. Both readings claim fidelity to the same constitutional text, but instantiate structurally different constraints on democratic governance.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 3,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 1,
+    "key_entities": [
+      "Constitution of the Fifth Republic (founding text, 1958)",
+      "President of the Republic (executive office with contested scope)",
+      "National Assembly (legislative body with contested constraint power)",
+      "Constitutional Council (interpretive authority)",
+      "de Gaulle/Debré framers (original interpretive authority)"
+    ],
+    "key_tensions": [
+      "Executive sovereignty vs legislative constraint (competing readings of Articles 5, 15, 16, 49.3)",
+      "Plebiscitary legitimacy vs parliamentary legitimacy (dual authority sources in same document)"
+    ],
+    "key_mechanisms": [
+      "Article 16 emergency powers (presidential suspension of normal constraints)",
+      "Article 49.3 confidence vote bypass (legislative constraint override)",
+      "Cohabitation periods (forced parliamentary reading when president lacks Assembly majority)"
+    ],
+    "key_absences": [
+      "Explicit hierarchy between presidential and parliamentary authority sources when they conflict"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1958 Constitution as stabilized commitment defining legitimate executive authority scope and legislative constraint power",
+    "authority_description": "Constitutional Council formally interprets; presidents and prime ministers claim competing readings in practice; original framers (de Gaulle/Debré) invoked as interpretive anchors",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_authority_trap",
+    "is_contested_kernel": true,
+    "kernel_id": "fifth_republic_constitution",
+    "readings": [
+      {
+        "reading_id": "hyper_presidential_reading",
+        "commitment": "President as direct sovereign embodying national will, minimally constrained by legislature",
+        "authority_grounding": "Plebiscitary legitimacy via direct election (1962 reform); Gaullist founding intent; Articles 5, 15, 16 as grant of sovereign decision-making",
+        "sibling_readings": [
+          "parliamentary_constraint_reading",
+          "cohabitation_equilibrium_reading"
+        ],
+        "expected_structural_delta": "Legislature enters victim set when president invokes Article 49.3 or Article 16; executive extractiveness high; democratic constraint weak; beneficiary is presidency as institution and incumbent president"
+      },
+      {
+        "reading_id": "parliamentary_constraint_reading",
+        "commitment": "President as coordinated executive requiring legislative authorization for policy implementation",
+        "authority_grounding": "Parliamentary sovereignty tradition; Articles 20-21 (government responsible to Assembly); constitutional practice during cohabitation periods",
+        "sibling_readings": [
+          "hyper_presidential_reading",
+          "cohabitation_equilibrium_reading"
+        ],
+        "expected_structural_delta": "Executive enters victim set when Assembly withholds confidence or blocks legislation; executive extractiveness low; democratic constraint strong; beneficiary is legislative majority"
+      },
+      {
+        "reading_id": "cohabitation_equilibrium_reading",
+        "commitment": "Dual executive requiring negotiated authority allocation between president and prime minister",
+        "authority_grounding": "Constitutional practice 1986-1988, 1993-1995, 1997-2002; Article 8 (president appoints PM acceptable to Assembly); pragmatic resolution of ambiguity",
+        "sibling_readings": [
+          "hyper_presidential_reading",
+          "parliamentary_constraint_reading"
+        ],
+        "expected_structural_delta": "Both president and Assembly constrain each other; extractiveness moderate but unstable; beneficiary is whichever actor controls key policy domains (foreign vs domestic split); victim is policy coherence"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hyper_presidential_reading",
+        "reading_b": "parliamentary_constraint_reading",
+        "basis": "No single constitutional framework can hold both 'president as sovereign minimally constrained' and 'president as executive requiring legislative authorization' simultaneously. Accepting one axiom requires rejecting the other's foundational claim about where legitimate authority resides."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "hyper_presidential_reading",
+      "human_readable": "Hyper-Presidential Reading (Executive Sovereignty)",
+      "structural_delta": "President as direct sovereign embodying national will with minimal legislative constraint",
+      "primary_observable": "Frequency of Article 49.3 invocations, Article 16 usage, presidential decree authority exercised without legislative pre-approval",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "presidency_as_institution",
+      "victim": "legislative_constraint_mechanism",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating high extractiveness; axiom-contradictory with parliamentary reading"
+    },
+    {
+      "claim_id": "parliamentary_constraint_reading",
+      "human_readable": "Parliamentary Constraint Reading (Legislative Sovereignty)",
+      "structural_delta": "President as coordinated executive requiring legislative authorization",
+      "primary_observable": "Government formation requiring Assembly confidence, legislative veto frequency, cohabitation period duration",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "legislative_majority",
+      "victim": "executive_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory alternative reading; structurally opposite epsilon and beneficiary/victim structure"
+    },
+    {
+      "claim_id": "cohabitation_equilibrium_reading",
+      "human_readable": "Cohabitation Equilibrium (Pragmatic Dual Executive)",
+      "structural_delta": "Negotiated authority allocation between president and Assembly-backed prime minister",
+      "primary_observable": "Policy domain split (foreign/defense vs domestic), duration of cohabitation periods, frequency of inter-executive conflicts",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "domain_control_holder",
+      "victim": "policy_coherence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third live reading demonstrating licensed plurality; documents how contradictory readings coexist in practice"
+    },
+    {
+      "claim_id": "article_16_emergency_monarchy",
+      "human_readable": "Article 16 Emergency Powers (Temporary Absolutism)",
+      "structural_delta": "Constitutional mechanism allowing president to suspend normal constraints during crisis",
+      "primary_observable": "Article 16 invocation frequency, duration, scope of measures taken",
+      "epsilon_bin": "v_high",
+      "hypothesis": "snare",
+      "beneficiary": "presidency_during_crisis",
+      "victim": "all_constraint_mechanisms",
+      "downstream_of": [
+        "hyper_presidential_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: extreme extractiveness but captured as special case within hyper-presidential reading"
+    },
+    {
+      "claim_id": "constitutional_council_constraint",
+      "human_readable": "Constitutional Council Review (Judicial Constraint)",
+      "structural_delta": "Ex-ante constitutional review mechanism limiting both presidential and legislative action",
+      "primary_observable": "Frequency of Council invalidations of government acts, scope of review",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hyper_presidential_reading",
+        "parliamentary_constraint_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects both readings but not itself a reading of the executive authority kernel"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hyper_presidential_reading",
+      "kernel_id": "fifth_republic_constitution",
+      "reading_id": "hyper_presidential_reading"
+    },
+    {
+      "claim_id": "parliamentary_constraint_reading",
+      "kernel_id": "fifth_republic_constitution",
+      "reading_id": "parliamentary_constraint_reading"
+    },
+    {
+      "claim_id": "cohabitation_equilibrium_reading",
+      "kernel_id": "fifth_republic_constitution",
+      "reading_id": "cohabitation_equilibrium_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "article_16_emergency_monarchy",
+      "structural_delta": "Constitutional crisis mechanism suspending normal constraints",
+      "hypothesis": "snare",
+      "deferral_reason": "Extreme but rare case captured within hyper-presidential reading; historical invocation data limited"
+    },
+    {
+      "claim_id": "constitutional_council_constraint",
+      "structural_delta": "Judicial review constraining both executive and legislature",
+      "hypothesis": "piton",
+      "deferral_reason": "Cross-cutting constraint affecting both readings but not itself a reading of executive authority kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Does cohabitation equilibrium reading genuinely instantiate a third constraint, or does it collapse into parliamentary reading when tested? Cohabitation forces negotiation but may not establish stable third framework.",
+      "source": "§1.3-K coherence test; structural delta appears distinct but may be situational rather than foundational"
+    },
+    {
+      "id": "omega_2000_reform_impact",
+      "description": "Did the 2000 quinquennat reform (aligning presidential and legislative terms) structurally eliminate cohabitation possibility, thereby collapsing three-reading kernel into de facto binary hyper-presidential vs parliamentary contest?",
+      "source": "Dark Matter Probe 2 (Absence Inventory); mechanism change may have altered kernel structure"
+    },
+    {
+      "id": "omega_founding_intent_authority",
+      "description": "Is Gaullist original intent legitimate interpretive authority, or does constitutional evolution since 1958 supersede framers' reading? If superseded, hyper-presidential reading loses primary authority grounding.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); founding intent invocation benefits presidency institutionally"
+    },
+    {
+      "id": "omega_licensed_plurality_stability",
+      "description": "Can axiom-contradictory readings coexist indefinitely via domain split and cohabitation practice, or does the contradiction require eventual resolution? If resolution required, which reading survives depends on future electoral outcomes.",
+      "source": "§1.3-K axiom contradiction declaration; licensed plurality may be stable or transitional"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition yields three structurally distinct readings with different epsilon values, beneficiary/victim structures, and authority groundings. Axiom contradiction properly declared between hyper-presidential and parliamentary readings. Cohabitation reading documented as pragmatic resolution demonstrating licensed plurality."
+  },
+  "_seed_id": "french_presidential_authority"
+}

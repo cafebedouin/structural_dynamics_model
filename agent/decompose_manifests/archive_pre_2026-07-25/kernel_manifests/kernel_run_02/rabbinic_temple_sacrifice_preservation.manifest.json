@@ -1,0 +1,262 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Jewish Law / Textual Preservation",
+  "family_id": "kodashim_preservation_2026",
+  "topic_summary": "Analysis of the rabbinic preservation of Temple sacrifice law (Seder Kodashim) across 1,900 years without performance. The Mishnaic order details sacrificial regulations compiled after the Second Temple's destruction (70 CE), creating a contested kernel: is continuous study of unperformable ritual law an exercise of living commitment or archival preservation of a defunct system? The tension collapses the boundary between performative legal obligation and historical documentation.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Seder Kodashim (fifth order of Mishnah/Talmud, 11 tractates on Temple sacrifice)",
+      "Second Temple (destroyed 70 CE, ending sacrificial practice)",
+      "Maimonides (12th century, codified all commandments including Kodashim in Mishneh Torah)",
+      "Rabbi Judah ha-Nasi (redacted Mishnah c.200 CE, 130 years post-Temple)",
+      "Babylonian Talmud (brief commentary on Kodashim vs other orders)",
+      "Palestinian Talmud (no commentary on Kodashim except one tractate)",
+      "Contemporary yeshivot (study Kodashim for messianic restoration preparation)"
+    ],
+    "key_tensions": [
+      "Study-as-substitution vs study-as-preparation (cosmic repair now vs messianic readiness later)",
+      "Maimonides' internal contradiction (Guide: sacrifices as idolatry-ruse; Mishneh Torah: literal restoration)",
+      "Neglect vs preservation (most generations ignored Kodashim; Maimonides insisted on comprehensive study)"
+    ],
+    "key_mechanisms": [
+      "Mishnaic codification (200 CE): oral traditions frozen in text to prevent loss",
+      "Study-as-performance doctrine: 'as if the Temple were built in their day' transforms reading into ritual enactment"
+    ],
+    "key_absences": [
+      "No practical halakhic application for 1,900 years (acknowledged even by practitioners)",
+      "Palestinian Talmud's near-total silence on Kodashim (only Chullin receives commentary)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The obligation to preserve and transmit sacrificial law (Kodashim) in the absence of the Temple that would make performance possible",
+    "authority_description": "Rabbinic interpretive authority grounded in chain of transmission from Sinai; Maimonides' codification establishes comprehensive study as obligatory regardless of performability",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Absorption (Type 2)",
+    "is_contested_kernel": true,
+    "kernel_id": "kodashim_obligation",
+    "readings": [
+      {
+        "reading_id": "study_as_performance",
+        "commitment": "Studying sacrificial law enacts the cosmic function of sacrifice itself; the Temple's physical absence is irrelevant to the law's spiritual efficacy",
+        "authority_grounding": "Kabbalistic/mystical tradition; Maimonides' Mishneh Torah framing ('as if the Temple were built'); study-as-substitution doctrine",
+        "sibling_readings": [
+          "study_as_preparation",
+          "study_as_archive"
+        ],
+        "expected_structural_delta": "Zero extractiveness—study is the performance; no victim set; beneficiary is cosmic order itself; Temple restoration not structurally necessary"
+      },
+      {
+        "reading_id": "study_as_preparation",
+        "commitment": "Sacrificial law remains binding but unperformable; study preserves technical knowledge for messianic restoration when performance resumes",
+        "authority_grounding": "Orthodox halakhic consensus; contemporary yeshivot training scholars for Third Temple; Maimonides' Mishneh Torah restoration prophecy",
+        "sibling_readings": [
+          "study_as_performance",
+          "study_as_archive"
+        ],
+        "expected_structural_delta": "Low extractiveness—study is instrumental preparation; victim set is current generation (deferred cosmic repair); beneficiary is messianic future; Temple restoration structurally required"
+      },
+      {
+        "reading_id": "study_as_archive",
+        "commitment": "Kodashim documents a defunct system; study is historical preservation and identity-maintenance, not legal obligation or cosmic function",
+        "authority_grounding": "Neusner's academic reading; Reform/Reconstructionist rejection of sacrifice restoration; 'map without territory' framing",
+        "sibling_readings": [
+          "study_as_performance",
+          "study_as_preparation"
+        ],
+        "expected_structural_delta": "Moderate extractiveness—study extracts legitimacy from historical continuity without functional output; victim set is intellectual resources diverted from applicable law; beneficiary is communal identity; Temple restoration structurally impossible/undesired"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "study_as_performance",
+        "reading_b": "study_as_archive",
+        "basis": "Performance reading requires that study enacts cosmic repair now (Temple-independent efficacy); archive reading requires that study documents a past system with no present function. No coherent framework can hold both: either study performs the law's purpose or it does not."
+      },
+      {
+        "reading_a": "study_as_preparation",
+        "reading_b": "study_as_archive",
+        "basis": "Preparation reading requires Temple restoration as structurally necessary future event (study is instrumental to that telos); archive reading requires Temple restoration as structurally impossible or undesired (study is memorial only). No coherent framework can hold both: either restoration is the system's telos or it is not."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_performance",
+      "human_readable": "Study-as-Performance (Cosmic Repair Through Contemplation)",
+      "structural_delta": "Study of sacrificial law enacts the cosmic function of sacrifice itself, independent of Temple existence",
+      "primary_observable": "Kabbalistic commentaries treating Kodashim study as mystical practice; Maimonides' 'as if the Temple were built' doctrine; absence of performance-contingency language in study obligations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; mountain-type constraint (study obligation independent of external conditions)"
+    },
+    {
+      "claim_id": "study_as_preparation",
+      "human_readable": "Study-as-Preparation (Messianic Restoration Readiness)",
+      "structural_delta": "Sacrificial law remains binding but unperformable; study preserves technical competence for future Temple restoration",
+      "primary_observable": "Contemporary yeshivot curriculum focused on Kodashim; Orthodox eschatological texts linking study to messianic preparation; Maimonides' Mishneh Torah restoration prophecy",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "current_generation_deferred_repair",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; rope-type constraint (coordination for future event)"
+    },
+    {
+      "claim_id": "study_as_archive",
+      "human_readable": "Study-as-Archive (Historical Preservation & Identity Maintenance)",
+      "structural_delta": "Kodashim documents a defunct system; study is memorial practice extracting legitimacy from continuity without functional output",
+      "primary_observable": "Neusner's 'map without territory' analysis; Reform/Reconstructionist liturgical removal of sacrifice restoration prayers; Palestinian Talmud's near-total silence on Kodashim",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "communal_identity_maintenance",
+      "victim": "intellectual_resources_diverted_from_applicable_law",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; tangled_rope with extractive identity function"
+    },
+    {
+      "claim_id": "maimonides_internal_contradiction",
+      "human_readable": "Maimonides' Internal Contradiction (Ruse vs Restoration)",
+      "structural_delta": "Guide of the Perplexed: sacrifices as idolatry-ruse; Mishneh Torah: literal messianic restoration—unresolved tension in single authority",
+      "primary_observable": "Textual comparison of Guide III:32 vs Mishneh Torah, Laws of Kings 11:1; scholarly literature on Maimonidean esotericism",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "study_as_performance",
+        "study_as_preparation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: internal to Maimonides' thought; lower structural priority than kernel readings themselves"
+    },
+    {
+      "claim_id": "neglect_vs_preservation_oscillation",
+      "human_readable": "Neglect vs Preservation Oscillation (Generational Attention Cycles)",
+      "structural_delta": "Most generations ignored Kodashim; periodic revivals (Maimonides, contemporary yeshivot) reassert study obligation",
+      "primary_observable": "Historical patterns of Kodashim commentary production; yeshiva curriculum data across centuries",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "study_as_preparation",
+        "study_as_archive"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: sociological pattern downstream of kernel readings; captured by preparation/archive tension"
+    },
+    {
+      "claim_id": "talmudic_silence_asymmetry",
+      "human_readable": "Talmudic Silence Asymmetry (Palestinian vs Babylonian Commentary Gaps)",
+      "structural_delta": "Palestinian Talmud: no Kodashim commentary except Chullin; Babylonian Talmud: brief commentary—reveals early recognition of impracticality",
+      "primary_observable": "Comparative volume analysis of Talmudic tractates; historical explanations for Palestinian silence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "study_as_archive"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical evidence for archive reading but lower structural centrality"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "study_as_performance",
+      "kernel_id": "kodashim_obligation",
+      "reading_id": "study_as_performance"
+    },
+    {
+      "claim_id": "study_as_preparation",
+      "kernel_id": "kodashim_obligation",
+      "reading_id": "study_as_preparation"
+    },
+    {
+      "claim_id": "study_as_archive",
+      "kernel_id": "kodashim_obligation",
+      "reading_id": "study_as_archive"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "maimonides_internal_contradiction",
+      "structural_delta": "Guide: sacrifices as ruse; Mishneh Torah: literal restoration—unresolved in single authority",
+      "hypothesis": "piton",
+      "deferral_reason": "Internal to Maimonides' thought; lower structural priority than kernel readings; relevant as omega for performance vs preparation tension"
+    },
+    {
+      "claim_id": "neglect_vs_preservation_oscillation",
+      "structural_delta": "Generational cycles of Kodashim study neglect and revival",
+      "hypothesis": "rope",
+      "deferral_reason": "Sociological pattern downstream of kernel readings; captured by preparation/archive tension"
+    },
+    {
+      "claim_id": "talmudic_silence_asymmetry",
+      "structural_delta": "Palestinian Talmud's near-total silence on Kodashim vs Babylonian brevity",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical evidence for archive reading but lower structural centrality than readings themselves"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_maimonides_esotericism",
+      "description": "Does Maimonides' Guide/Mishneh Torah contradiction reflect esoteric vs exoteric writing (Straussian reading), or genuine unresolved tension? If esoteric, which text carries his true position? Affects whether preparation reading is coherent or internally fractured.",
+      "source": "Deferred axis maimonides_internal_contradiction + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_third_temple_feasibility",
+      "description": "Is Temple restoration structurally possible (preparation reading) or structurally foreclosed (archive reading)? Modern Israeli state control of Temple Mount, Islamic holy sites, international law, and intra-Jewish theological disputes may make restoration a category error rather than deferred event.",
+      "source": "Axiom contradiction between preparation and archive readings + Absence Inventory (geopolitical constraints not addressed in rabbinic sources)"
+    },
+    {
+      "id": "omega_chullin_exception",
+      "description": "Why does Palestinian Talmud comment only on Chullin (non-sacred slaughter) within Kodashim? Does this reveal that archive reading was dominant in Palestine (practical law only), while performance reading emerged in Babylon? Affects geographic distribution of kernel readings.",
+      "source": "Deferred axis talmudic_silence_asymmetry + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_cosmic_repair_mechanism",
+      "description": "Performance reading claims study enacts cosmic repair, but what is the causal mechanism? Kabbalistic sources are vague. Without specified mechanism, performance reading may collapse into preparation reading (study as symbolic placeholder for future performance).",
+      "source": "F03 (Hasty Generalization) on study_as_performance mountain classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: study_as_performance classified as mountain (v_low epsilon) based on Maimonides' 'as if the Temple were built' doctrine and kabbalistic sources, but the causal mechanism for cosmic repair through study is underspecified in available sources. May be rope (coordination around mystical practice) rather than mountain (physical/logical necessity). Generated omega_cosmic_repair_mechanism to bound this uncertainty. No F34: rabbinic literature and secondary scholarship provide sufficient domain grounding. No F01: kernel contest framing matches research context accurately."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

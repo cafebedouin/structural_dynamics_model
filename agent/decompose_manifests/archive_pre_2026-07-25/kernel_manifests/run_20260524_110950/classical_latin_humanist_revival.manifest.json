@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Intellectual History / Philology",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist project to reconstruct Classical Latin from medieval Latin, examining whether this represented continuous evolution from a living drifted vernacular or discontinuous reoccupation of a textually-preserved kernel. The contest centers on competing readings of 'correct Latin' by medieval users (living practice) versus humanist reconstructors (textual authority).",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin (living evolved vernacular, 5th-14th centuries)",
+      "Classical Latin (textually preserved form, 1st century BCE - 2nd century CE)",
+      "Humanist reconstructors (Petrarch, Valla, Bruni, Poggio, Erasmus)",
+      "Medieval users (ecclesiastical/administrative practitioners)",
+      "Textual corpus (manuscripts recovered via ad fontes)",
+      "Pronunciation systems (medieval vernacular-influenced vs reconstructed classical)",
+      "Ciceronian movement (radical return to single classical model)"
+    ],
+    "key_tensions": [
+      "Living practice vs textual authority (medieval drift vs humanist reconstruction)",
+      "Continuity vs rupture (development claim vs discontinuous replacement)",
+      "Vitality vs rigidity (Poliziano's evolution vs Cortesi's Ciceronian purity)",
+      "Private usage vs public performance (humanists wrote vernacular-influenced Latin privately, classical publicly)"
+    ],
+    "key_mechanisms": [
+      "Textual criticism (manuscript recovery, editing, orthographic standardization)",
+      "Pedagogical reform (curriculum expansion, then Ciceronian narrowing)",
+      "Pronunciation standardization (Erasmus's reconstructed classical pronunciation)"
+    ],
+    "key_absences": [
+      "Native speaker testimony (no living Classical Latin speakers to adjudicate correctness)",
+      "Phonological evidence (pronunciation reconstruction based on orthography and meter, not recordings)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Latin language as authoritative medium for learned discourse, law, and liturgy",
+    "authority_description": "Correctness grounded in either living practice (medieval) or textual fidelity to classical corpus (humanist)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "latin_correctness",
+    "readings": [
+      {
+        "reading_id": "medieval_living_reading",
+        "commitment": "Correct Latin is the evolved form shaped by continuous use, pronunciation, and practical needs",
+        "authority_grounding": "living practice / institutional continuity / Vulgate authority",
+        "sibling_readings": [
+          "humanist_textual_reading",
+          "ciceronian_purity_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness (ε ≤0.15); language serves users; drift is legitimate evolution; beneficiary is the practicing community; no victim set (evolution is not extraction)"
+      },
+      {
+        "reading_id": "humanist_textual_reading",
+        "commitment": "Correct Latin is the classical form recoverable from 1st-century BCE texts via philological reconstruction",
+        "authority_grounding": "textual authority / ad fontes / manuscript evidence",
+        "sibling_readings": [
+          "medieval_living_reading",
+          "ciceronian_purity_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (ε 0.30-0.45); reconstruction imposes costs on medieval users (retraining, delegitimization); beneficiary is humanist elite; victim is medieval practitioner whose competence is now 'incorrect'"
+      },
+      {
+        "reading_id": "ciceronian_purity_reading",
+        "commitment": "Correct Latin is exclusively Ciceronian usage; post-Ciceronian and medieval forms are corruption",
+        "authority_grounding": "single-author textual authority / aesthetic purity",
+        "sibling_readings": [
+          "medieval_living_reading",
+          "humanist_textual_reading"
+        ],
+        "expected_structural_delta": "High extractiveness (ε 0.55-0.70); radical narrowing of acceptable usage; beneficiary is Ciceronian faction (Cortesi); victim is broader humanist community (Poliziano) and all medieval users; suppresses linguistic vitality"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "medieval_living_reading",
+      "human_readable": "Medieval Living Reading (Latin as Evolved Vernacular)",
+      "structural_delta": "Latin correctness grounded in continuous living practice from Late Antiquity through medieval period",
+      "primary_observable": "Orthographic variation (eciam/etiam), vocabulary borrowing from Vulgate/Germanic sources, pronunciation-based spelling in private documents",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "medieval_practitioners",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "humanist_textual_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream reading; establishes baseline of what humanists were replacing; lowest ε (coordination without extraction)",
+      "kernel_id": "latin_correctness",
+      "reading_id": "medieval_living_reading"
+    },
+    {
+      "claim_id": "humanist_textual_reading",
+      "human_readable": "Humanist Textual Reading (Latin as Recoverable Classical Form)",
+      "structural_delta": "Latin correctness grounded in philological reconstruction from 1st-century BCE textual corpus",
+      "primary_observable": "Textual criticism practices (manuscript editing, orthographic standardization), curriculum reform (ad fontes), pronunciation reconstruction (Erasmus), public vs private usage split",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "humanist_elite",
+      "victim": "medieval_practitioners",
+      "downstream_of": [
+        "medieval_living_reading"
+      ],
+      "feeds_into": [
+        "ciceronian_purity_reading"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Central synthesis node; highest centrality; tangled_rope captures extraction via delegitimization of medieval competence",
+      "kernel_id": "latin_correctness",
+      "reading_id": "humanist_textual_reading"
+    },
+    {
+      "claim_id": "ciceronian_purity_reading",
+      "human_readable": "Ciceronian Purity Reading (Latin as Single-Author Standard)",
+      "structural_delta": "Latin correctness exclusively Ciceronian; all other usage (post-Ciceronian, medieval, even broader humanist) is corruption",
+      "primary_observable": "Late 15th-century curriculum narrowing to Cicero, Cortesi vs Poliziano debate on imitation, 'servile Ciceronianism' as documented movement",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "ciceronian_faction",
+      "victim": "broader_humanist_community",
+      "downstream_of": [
+        "humanist_textual_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream radicalization; snare captures suppression of linguistic vitality; completes the drift from living practice to rigid textual authority",
+      "kernel_id": "latin_correctness",
+      "reading_id": "ciceronian_purity_reading"
+    },
+    {
+      "claim_id": "continuity_vs_rupture",
+      "human_readable": "Continuity vs Rupture (Was Reconstruction Reachable?)",
+      "structural_delta": "Whether humanist Latin represents development of medieval forms or discontinuous replacement",
+      "primary_observable": "Humanist claims of continuity vs evidence of discontinuity (pronunciation reform, orthographic purging, vocabulary replacement)",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "humanist_textual_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural question about reachability is captured within humanist_textual_reading's tangled_rope analysis; separate axis would duplicate"
+    },
+    {
+      "claim_id": "native_speaker_absence",
+      "human_readable": "Native Speaker Absence (No Living Adjudicators)",
+      "structural_delta": "Absence of native Classical Latin speakers to adjudicate correctness claims",
+      "primary_observable": "Reliance on textual/orthographic evidence rather than phonological recordings or native speaker intuition",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "humanist_textual_reading",
+        "ciceronian_purity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enabling condition for the contest but not itself a reading; captured as omega_adjudication_vacuum"
+    }
+  ],
+  "generation_sequence": [
+    "medieval_living_reading",
+    "humanist_textual_reading",
+    "ciceronian_purity_reading"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "continuity_vs_rupture",
+      "structural_delta": "Whether reconstruction was reachable from drift or discontinuous replacement",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural question embedded within humanist_textual_reading analysis; separate axis would duplicate the core contest"
+    },
+    {
+      "claim_id": "native_speaker_absence",
+      "structural_delta": "No living Classical Latin speakers to adjudicate correctness",
+      "hypothesis": "mountain",
+      "deferral_reason": "Enabling condition for the contest, not a reading itself; captured as omega_adjudication_vacuum"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_adjudication_vacuum",
+      "description": "The absence of native Classical Latin speakers creates an adjudication vacuum: no external authority can definitively resolve whether humanist reconstruction recovered the 'true' classical form or constructed a new standard. This vacuum is what makes the kernel contest possible—both readings claim correctness, but neither can appeal to living practice to validate their claim.",
+      "source": "Deferred axis native_speaker_absence + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reachability_question",
+      "description": "The user's D1 break question—whether reconstructed Classical Latin was reachable from medieval drift or a separate kernel reoccupied—cannot be definitively answered from the evidence. The humanists claimed continuity ('development of medieval forms') while their methods created discontinuity (pronunciation reform, orthographic purging). The contest may be irresolvable: reachability depends on whether you privilege the humanists' self-understanding (continuous) or their observable practices (discontinuous).",
+      "source": "User's kernel contest framing + deferred axis continuity_vs_rupture"
+    },
+    {
+      "id": "omega_poliziano_vitality",
+      "description": "Poliziano's opposition to Ciceronian rigidity ('vitality of writing could not be limited by norms too rigid in imitation') suggests a fourth reading not selected for generation: Latin as living evolving standard that incorporates classical models without servile imitation. This reading would have moderate ε (extraction via elite gatekeeping but not radical narrowing) and might represent a synthesis position. Deferred due to limited textual evidence of institutional uptake.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + research context on Poliziano vs Cortesi"
+    },
+    {
+      "id": "omega_vulgate_authority",
+      "description": "Medieval Latin's grounding in Vulgate authority (Jerome's 4th-century translation) creates a competing textual authority that humanists had to navigate. The Vulgate was itself a translation from Greek/Hebrew, not 'pure' classical Latin, yet it carried ecclesiastical authority. How did humanists reconcile their classical purism with the Church's authoritative Latin text? This tension is not addressed in the research context and may represent a suppressed axis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction anchor 'Vulgate influence'"
+    },
+    {
+      "id": "omega_pronunciation_reconstruction",
+      "description": "Erasmus's reconstructed classical pronunciation was based on orthography and meter, not phonological recordings. How accurate was it? If significantly inaccurate, then humanist 'classical' Latin may have been a new constructed standard rather than a recovery. This uncertainty affects whether the humanist reading represents reoccupation of a preserved kernel or construction of a new one.",
+      "source": "Extraction anchor 'pronunciation systems' + absence of phonological evidence"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel/reading decomposition successfully captures the structural contest. Three readings selected represent the full spectrum from living practice (low ε) through textual reconstruction (moderate ε) to Ciceronian purity (high ε). Deferred axes are genuinely redundant or under-evidenced, not suppressed due to availability bias."
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

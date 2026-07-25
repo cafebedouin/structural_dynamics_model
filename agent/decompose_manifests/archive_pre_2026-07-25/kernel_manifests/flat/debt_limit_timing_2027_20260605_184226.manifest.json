@@ -1,0 +1,353 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Finance / Fiscal Policy / Political Economy",
+  "family_id": "debt_limit_timing_2027",
+  "topic_summary": "Analysis of when the U.S. will reach its $41.1 trillion debt limit, projected for late winter to mid-summer 2027. The Bipartisan Policy Center identifies three major variables affecting timing: Iran conflict military spending, tariff revenue uncertainty due to legal challenges and refunds, and changing economic conditions. Treasury cash management practices and the use of extraordinary measures will determine the gap between reaching the limit and the X Date when obligations cannot be met.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "U.S. Treasury Department (cash manager; extraordinary measures administrator)",
+      "Congress (debt limit authorization authority)",
+      "Bipartisan Policy Center (projection modeler)",
+      "Credit rating agencies (S&P, Fitch, Moody's - sovereign debt evaluators)",
+      "Federal Reserve (implicit: interest rate setter; not mentioned but structurally present)",
+      "Customs and Border Protection (tariff refund administrator)"
+    ],
+    "key_tensions": [
+      "Debt limit ceiling vs ongoing fiscal obligations (statutory constraint vs operational necessity)",
+      "Treasury cash drawdown timing vs X Date proximity (early limit arrival vs longer extraordinary measures period)",
+      "Congressional authorization timing vs market confidence (legislative delay vs borrowing cost increases)"
+    ],
+    "key_mechanisms": [
+      "Extraordinary measures: accounting maneuvers extending time between limit and X Date",
+      "Treasury cash management: discretionary reserve levels affecting limit arrival timing",
+      "Credit rating downgrades: investor confidence → interest rate → borrowing cost transmission",
+      "Tariff refund process: court-ordered reversal of revenue stream"
+    ],
+    "key_absences": [
+      "Federal Reserve monetary policy interaction with debt limit episodes (interest rate policy during fiscal stress)",
+      "International holder response to repeated debt limit episodes (foreign central bank Treasury holdings behavior)",
+      "Structural budget reform mechanisms that would eliminate recurring debt limit episodes"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "statutory_ceiling_mechanism",
+      "human_readable": "Statutory Ceiling Mechanism (Dollar Limit vs Date Suspension)",
+      "structural_delta": "2027 episode uses fixed dollar ceiling ($41.1T) rather than suspension-until-date, changing the constraint's observability and Treasury's operational flexibility",
+      "primary_observable": "Debt subject to limit approaching $41.1T threshold; daily Treasury Statement tracking",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "treasury_cash_discretion",
+        "extraordinary_measures_duration"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational constraint type; different structural properties than date-suspension format; upstream to multiple operational axes"
+    },
+    {
+      "claim_id": "fiscal_flow_volatility",
+      "human_readable": "Fiscal Flow Volatility (Revenue/Outlay Uncertainty)",
+      "structural_delta": "Compound uncertainty from three independent variables (Iran spending, tariff refunds, economic conditions) affecting cash flow projections",
+      "primary_observable": "Monthly Treasury cash flow variance; CBO projection error bands; actual vs projected deficit",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "projection_accuracy",
+      "downstream_of": [],
+      "feeds_into": [
+        "limit_arrival_timing"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Three structurally independent volatility sources (military, tariff, economic) entangled in single cash flow; distinct from Treasury discretion"
+    },
+    {
+      "claim_id": "treasury_cash_discretion",
+      "human_readable": "Treasury Cash Discretion (Reserve Level Management)",
+      "structural_delta": "Treasury's discretionary choice of cash reserve levels ($950B projected) affects limit arrival timing but not X Date timing",
+      "primary_observable": "Treasury General Account balance; Treasury Borrowing Advisory Committee recommendations vs actual reserves",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "statutory_ceiling_mechanism"
+      ],
+      "feeds_into": [
+        "limit_arrival_timing"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (TGA balance) and different ε structure than fiscal_flow_volatility; coordination mechanism rather than uncertainty"
+    },
+    {
+      "claim_id": "limit_arrival_timing",
+      "human_readable": "Limit Arrival Timing (Late Winter to Mid-Summer 2027 Range)",
+      "structural_delta": "Six-month projection window driven by interaction of fiscal volatility and Treasury discretion",
+      "primary_observable": "BPC projection updates; Treasury public statements on limit proximity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "congressional_planning_horizon",
+      "downstream_of": [
+        "fiscal_flow_volatility",
+        "treasury_cash_discretion"
+      ],
+      "feeds_into": [
+        "extraordinary_measures_duration",
+        "market_confidence_extraction"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Highest centrality; synthesis node integrating upstream volatility and discretion; feeds both operational and market axes"
+    },
+    {
+      "claim_id": "extraordinary_measures_duration",
+      "human_readable": "Extraordinary Measures Duration (6-9 Month X Date Window)",
+      "structural_delta": "Accounting maneuvers extend time between limit and X Date; duration depends on limit arrival timing and available measure types",
+      "primary_observable": "Treasury extraordinary measures announcements; Government Accountability Office X Date projections",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "statutory_ceiling_mechanism",
+        "limit_arrival_timing"
+      ],
+      "feeds_into": [
+        "congressional_authorization_timing"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Distinct mechanism from limit arrival; different observable (measure availability vs cash flow); coordination device for congressional action"
+    },
+    {
+      "claim_id": "market_confidence_extraction",
+      "human_readable": "Market Confidence Extraction (Brinkmanship → Borrowing Cost)",
+      "structural_delta": "Delayed congressional action increases short-term yields and triggers credit downgrades, extracting higher interest costs from taxpayers",
+      "primary_observable": "Treasury auction yields near X Date; credit rating actions; spread between near-X-Date and normal-period securities",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "taxpayers_via_interest_costs",
+      "downstream_of": [
+        "limit_arrival_timing"
+      ],
+      "feeds_into": [
+        "congressional_authorization_timing"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Distinct extractive mechanism; different beneficiary/victim structure than other axes; high ε from compounding interest costs"
+    },
+    {
+      "claim_id": "congressional_authorization_timing",
+      "human_readable": "Congressional Authorization Timing (Legislative Response Delay)",
+      "structural_delta": "Congress's choice of when to act relative to X Date proximity; political incentives vs economic costs tradeoff",
+      "primary_observable": "Days between limit arrival and congressional action; legislative calendar vs X Date proximity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "political_leverage_seekers",
+      "victim": "market_stability",
+      "downstream_of": [
+        "extraordinary_measures_duration",
+        "market_confidence_extraction"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Terminal synthesis node; integrates operational timeline and market pressure; distinct political economy observable"
+    },
+    {
+      "claim_id": "tariff_revenue_legal_reversal",
+      "human_readable": "Tariff Revenue Legal Reversal (Court-Ordered Refund Mechanism)",
+      "structural_delta": "Judicial invalidation of tariff authority converts past revenue into future liability ($166B+ refunds)",
+      "primary_observable": "Supreme Court and CIT rulings; CBP refund processing rate; Treasury cash outflow for refunds",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "fiscal_flow_volatility"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as one component of fiscal_flow_volatility's compound uncertainty; insufficient independent structural delta to warrant separate axis"
+    },
+    {
+      "claim_id": "iran_conflict_spending_escalation",
+      "human_readable": "Iran Conflict Spending Escalation (Defense Outlay Surge)",
+      "structural_delta": "War-driven defense spending increase (42% FY2027 request) plus supplemental appropriations",
+      "primary_observable": "Pentagon outlays vs baseline; supplemental appropriation size; weapons replenishment contracts",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "fiscal_flow_volatility"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as one component of fiscal_flow_volatility's compound uncertainty; insufficient independent structural delta to warrant separate axis"
+    },
+    {
+      "claim_id": "economic_slowdown_feedback",
+      "human_readable": "Economic Slowdown Feedback (Energy Costs → Safety Net Spending)",
+      "structural_delta": "War-driven energy cost increases → inflation → household strain → increased safety net outlays and reduced revenue",
+      "primary_observable": "Energy price indices; unemployment insurance claims; SNAP enrollment; individual income tax receipts",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "fiscal_flow_volatility"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as one component of fiscal_flow_volatility's compound uncertainty; insufficient independent structural delta to warrant separate axis"
+    },
+    {
+      "claim_id": "credit_rating_downgrade_cascade",
+      "human_readable": "Credit Rating Downgrade Cascade (Sovereign Debt Degradation)",
+      "structural_delta": "Sequential downgrades by all three major agencies (S&P 2011, Fitch 2023, Moody's 2025) creating compounding borrowing cost increases",
+      "primary_observable": "Credit rating levels; investment fund Treasury holdings changes; sovereign debt spreads",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "long_term_borrowing_costs",
+      "downstream_of": [],
+      "feeds_into": [
+        "market_confidence_extraction"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as transmission mechanism within market_confidence_extraction; insufficient independent structural delta (same observable as parent axis)"
+    },
+    {
+      "claim_id": "federal_reserve_policy_interaction",
+      "human_readable": "Federal Reserve Policy Interaction (Monetary Policy During Fiscal Stress)",
+      "structural_delta": "Fed interest rate policy and balance sheet operations during debt limit episodes; potential conflict between price stability mandate and financial stability concerns",
+      "primary_observable": "Fed funds rate changes during debt limit proximity; Fed Treasury holdings; FOMC statement language on fiscal policy",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence in source material; speculative scaffold; Fed operational independence means limited direct coupling to debt limit mechanics"
+    }
+  ],
+  "generation_sequence": [
+    "statutory_ceiling_mechanism",
+    "fiscal_flow_volatility",
+    "treasury_cash_discretion",
+    "limit_arrival_timing",
+    "extraordinary_measures_duration",
+    "market_confidence_extraction",
+    "congressional_authorization_timing"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "tariff_revenue_legal_reversal",
+      "structural_delta": "Judicial invalidation converts revenue into liability",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured as component of fiscal_flow_volatility; insufficient independent structural delta"
+    },
+    {
+      "claim_id": "iran_conflict_spending_escalation",
+      "structural_delta": "War-driven defense spending surge",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured as component of fiscal_flow_volatility; insufficient independent structural delta"
+    },
+    {
+      "claim_id": "economic_slowdown_feedback",
+      "structural_delta": "Energy costs → safety net spending increase",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured as component of fiscal_flow_volatility; insufficient independent structural delta"
+    },
+    {
+      "claim_id": "credit_rating_downgrade_cascade",
+      "structural_delta": "Sequential sovereign downgrades by all three agencies",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured as transmission mechanism within market_confidence_extraction; same observable as parent axis"
+    },
+    {
+      "claim_id": "federal_reserve_policy_interaction",
+      "structural_delta": "Monetary policy during fiscal stress",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Absence in source material; speculative; Fed independence limits direct coupling to debt limit mechanics"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_fiscal_volatility_decomposition",
+      "description": "Are the three fiscal_flow_volatility components (Iran spending, tariff refunds, economic slowdown) genuinely independent, or do they share common drivers that would justify separate axes? War → energy costs → economic slowdown suggests causal linkage.",
+      "source": "§3 Pairwise Independence Testing + deferred axes iran_conflict_spending_escalation, economic_slowdown_feedback"
+    },
+    {
+      "id": "omega_treasury_discretion_limits",
+      "description": "What constrains Treasury's cash management discretion? Source states 'considerable discretion' but does not specify statutory, advisory committee, or market-imposed bounds. Is this a true Rope (coordination) or a Piton (atrophied constraint)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + treasury_cash_discretion classification"
+    },
+    {
+      "id": "omega_extraordinary_measures_exhaustion",
+      "description": "Source states 6-9 month duration but does not specify which measures are available or their individual capacities. Is the duration estimate a function of measure availability (Rope) or Treasury's discretionary sequencing (Piton)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraordinary_measures_duration mechanism"
+    },
+    {
+      "id": "omega_congressional_incentive_structure",
+      "description": "What drives congressional_authorization_timing delay? Source documents costs of delay but not the political economy of why Congress repeatedly approaches X Date. Is this a Tangled Rope (competing factions) or a Snare (deliberate extraction of concessions)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + congressional_authorization_timing beneficiary field"
+    },
+    {
+      "id": "omega_international_holder_response",
+      "description": "Absence: How do foreign central banks and sovereign wealth funds respond to repeated debt limit episodes? Do they reduce Treasury holdings, demand higher yields, or diversify into other reserve assets? This could be a separate Snare axis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary key_absences"
+    },
+    {
+      "id": "omega_structural_reform_absence",
+      "description": "Absence: Why does the source not discuss mechanisms to eliminate recurring debt limit episodes (e.g., automatic increase tied to budget passage, abolition of separate debt limit)? Is the recurring crisis itself a Snare extracting political leverage?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary key_absences"
+    },
+    {
+      "id": "omega_fed_independence_boundary",
+      "description": "Deferred axis federal_reserve_policy_interaction: If debt limit episode threatens financial stability, does Fed operational independence hold, or does fiscal dominance emerge? This boundary condition could reclassify multiple axes.",
+      "source": "Deferred axis federal_reserve_policy_interaction + Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Seven distinct axes survived §3 pairwise independence testing. Multi-lens scan applied fiscal policy, political economy, and market microstructure lenses. Dark matter probes surfaced five omega-level uncertainties regarding mechanism decomposition, constraint boundaries, and structural absences. Deferred axes documented with specific reasons for deferral (component capture or absence in source material)."
+  }
+}

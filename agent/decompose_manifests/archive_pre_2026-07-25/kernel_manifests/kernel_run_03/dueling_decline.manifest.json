@@ -1,0 +1,261 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / Legal History / Cultural Anthropology",
+  "family_id": "dueling_decline_honor_settlement",
+  "topic_summary": "Analysis of dueling's disappearance as an honor-settlement mechanism in 19th-century America, examining whether the decline represents a cultural contraction (became unthinkable), a drop to fringe practice, or an overdetermined composite. The research context emphasizes geographic variation (North vs South), the honor-to-dignity cultural shift, institutional modernization, and the Civil War as potential turning points.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Honor culture practitioners (Southern gentlemen, military officers)",
+      "Dignity culture advocates (moral reformers, republican theorists)",
+      "State legal apparatus (legislatures, courts, enforcement mechanisms)",
+      "Modern banking institutions (commercial lenders, credit markets)",
+      "Civil War participants (soldiers experiencing industrialized violence)",
+      "Frontier communities (Western settlers, isolated populations)"
+    ],
+    "key_tensions": [
+      "Honor culture vs dignity culture (personal violence vs legal mediation)",
+      "Legal prohibition vs social custom (formal ban vs continued practice)",
+      "Institutional modernization vs personal dispute resolution (courts vs duels)"
+    ],
+    "key_mechanisms": [
+      "Cultural shift from honor to dignity (cognitive framework transformation)",
+      "State capacity increase (enforcement capability, legal infrastructure)",
+      "Economic institutionalization (banking transparency, lower transaction costs)",
+      "Civil War trauma (mass violence delegitimizing personal combat)"
+    ],
+    "key_absences": [
+      "Class stratification analysis (who retained access to dueling as practice declined)",
+      "Gender dimension (dueling as exclusively male honor mechanism, what replaced it for women)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimate mechanism for settling honor disputes among peers",
+    "authority_description": "Peer recognition within honor culture; no formal adjudicative body",
+    "drift_status": "absent",
+    "candidate_pattern": "honor_code_collapse",
+    "is_contested_kernel": true,
+    "kernel_id": "honor_settlement_legitimacy",
+    "readings": [
+      {
+        "reading_id": "contraction_reading",
+        "commitment": "Dueling became cognitively unthinkable through cultural framework transformation",
+        "authority_grounding": "Dignity culture norms; republican equality principles",
+        "sibling_readings": [
+          "drop_reading",
+          "composite_reading"
+        ],
+        "expected_structural_delta": "Honor culture itself exits the normative possibility space; dueling not merely prohibited but incomprehensible as legitimate action"
+      },
+      {
+        "reading_id": "drop_reading",
+        "commitment": "Dueling persisted as fringe practice among residual honor culture adherents",
+        "authority_grounding": "Frontier isolation; Southern regional identity",
+        "sibling_readings": [
+          "contraction_reading",
+          "composite_reading"
+        ],
+        "expected_structural_delta": "Honor culture remains live option in specific geographic/social niches; dueling suppressed but not eliminated from normative repertoire"
+      },
+      {
+        "reading_id": "composite_reading",
+        "commitment": "Dueling's decline overdetermined by multiple reinforcing mechanisms with contraction edge",
+        "authority_grounding": "Institutional modernization; state capacity; economic transparency; Civil War trauma",
+        "sibling_readings": [
+          "contraction_reading",
+          "drop_reading"
+        ],
+        "expected_structural_delta": "Multiple causal pathways converge; contraction (cultural unthinkability) dominates but is reinforced by material/institutional changes that would independently suppress practice"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "contraction_reading",
+        "reading_b": "drop_reading",
+        "basis": "Contraction requires honor culture itself to become unthinkable (no coherent framework holds both honor and dignity as simultaneously valid); drop requires honor culture to remain a live normative option in residual communities. No single framework can hold both 'honor culture is cognitively impossible' and 'honor culture persists as minority position.'"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "contraction_reading",
+      "human_readable": "Cultural Contraction (Honor → Dignity Framework Shift)",
+      "structural_delta": "Honor culture exits normative possibility space through dignity culture ascendance",
+      "primary_observable": "Discourse analysis of insult-response norms; legal treatises on personal honor; etiquette manuals",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_legal_apparatus",
+      "victim": "honor_culture_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with highest structural distinctiveness; captures cognitive framework transformation"
+    },
+    {
+      "claim_id": "drop_reading",
+      "human_readable": "Fringe Persistence (Geographic/Social Niche Survival)",
+      "structural_delta": "Honor culture remains live option in frontier/Southern contexts despite legal prohibition",
+      "primary_observable": "Duel frequency by region post-1850; frontier vs urban duel rates; Southern vs Northern legal enforcement patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory to contraction_reading; tests whether honor culture truly exited normative space"
+    },
+    {
+      "claim_id": "composite_reading",
+      "human_readable": "Overdetermined Composite (Multiple Reinforcing Mechanisms)",
+      "structural_delta": "Cultural contraction reinforced by institutional modernization, state capacity, economic transparency, Civil War trauma",
+      "primary_observable": "Banking institution growth rates; state enforcement capacity metrics; Civil War casualty exposure; legal prohibition effectiveness",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "modern_banking_institutions",
+      "victim": "frontier_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; synthesizes material and cultural mechanisms; tests whether contraction alone sufficient or requires institutional reinforcement"
+    },
+    {
+      "claim_id": "state_capacity_mechanism",
+      "human_readable": "State Capacity Increase (Enforcement Infrastructure Growth)",
+      "structural_delta": "State's ability to monopolize legitimate violence increases through institutional development",
+      "primary_observable": "Court system expansion; police force professionalization; legal enforcement consistency metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "composite_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as component mechanism within composite_reading; lower independent structural yield"
+    },
+    {
+      "claim_id": "civil_war_trauma",
+      "human_readable": "Civil War Delegitimization (Industrialized Violence Trauma)",
+      "structural_delta": "Mass battlefield violence delegitimizes personal combat as romantic/honorable",
+      "primary_observable": "Pre/post-Civil War duel frequency; veteran vs non-veteran duel participation; discourse shift in violence romanticism",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "composite_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal specificity (1861-1865) makes it component of composite rather than independent axis; Wells vs Calabresi/Agudo disagreement suggests omega uncertainty"
+    },
+    {
+      "claim_id": "economic_institutionalization",
+      "human_readable": "Economic Institutionalization (Banking Transparency Substitution)",
+      "structural_delta": "Modern banking institutions reduce transaction costs and increase transparency, substituting for personal reputation enforcement",
+      "primary_observable": "Banking institution density; credit market formalization; commercial lending growth rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "composite_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Southern-specific mechanism; lower structural distinctiveness; captured within composite_reading's institutional modernization component"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "contraction_reading",
+      "kernel_id": "honor_settlement_legitimacy",
+      "reading_id": "contraction_reading"
+    },
+    {
+      "claim_id": "drop_reading",
+      "kernel_id": "honor_settlement_legitimacy",
+      "reading_id": "drop_reading"
+    },
+    {
+      "claim_id": "composite_reading",
+      "kernel_id": "honor_settlement_legitimacy",
+      "reading_id": "composite_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "state_capacity_mechanism",
+      "structural_delta": "State monopolization of legitimate violence through institutional development",
+      "hypothesis": "rope",
+      "deferral_reason": "Component mechanism within composite_reading; research links decline to state capacity increases but as reinforcing factor rather than independent axis"
+    },
+    {
+      "claim_id": "civil_war_trauma",
+      "structural_delta": "Industrialized violence delegitimizes personal combat romanticism",
+      "hypothesis": "piton",
+      "deferral_reason": "Temporal specificity and scholarly disagreement (Wells vs Calabresi/Agudo) suggest component rather than independent axis; omega uncertainty about causal mechanism"
+    },
+    {
+      "claim_id": "economic_institutionalization",
+      "structural_delta": "Banking transparency substitutes for personal reputation enforcement",
+      "hypothesis": "rope",
+      "deferral_reason": "Southern-specific mechanism with lower structural distinctiveness; captured within composite_reading's institutional modernization component"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_class_stratification",
+      "description": "Who retained access to dueling as practice declined? Did upper classes preserve it longer as exclusive honor mechanism while lower classes adopted dignity norms earlier? Class dimension absent from research context.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_gender_substitution",
+      "description": "Dueling was exclusively male honor mechanism. What replaced it for women's honor disputes? Did dignity culture's legal mediation apply equally, or did gendered honor mechanisms persist through different channels (reputation, social exclusion)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_civil_war_mechanism",
+      "description": "Scholarly disagreement about Civil War's causal role: Wells (violence delegitimization) vs Calabresi/Agudo (morality campaign alignment). Was Civil War necessary condition, sufficient condition, or merely temporal coincidence with broader cultural shift?",
+      "source": "Deferred axis civil_war_trauma + research context tension"
+    },
+    {
+      "id": "omega_contraction_completeness",
+      "description": "If contraction_reading is correct (honor culture became unthinkable), how do we explain 20th-century honor culture persistence in military academies, fraternities, gang cultures? Did contraction apply only to formal dueling, or did honor culture itself contract with residual pockets?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + contraction_reading structural implications"
+    },
+    {
+      "id": "omega_legal_effectiveness",
+      "description": "Research states 'legal prohibitions and moral campaigners failed to instigate change' but also 'public opinion, not legislation, caused the change.' If legislation was ineffective, why did public opinion shift? Was legislation epiphenomenal or did it signal/reinforce cultural shift?",
+      "source": "Research context tension between legal prohibition ineffectiveness and public opinion causation"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings capture genuine axiom-contradictory positions on whether honor culture exited normative space (contraction) vs persisted in niches (drop) vs was overdetermined by multiple mechanisms (composite). Research context provides sufficient grounding for all three readings. Class and gender absences noted as omegas rather than fractures."
+  },
+  "_seed_id": "dueling_decline"
+}

@@ -1,0 +1,225 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Social Policy / Labor Markets",
+  "family_id": "ubi_freedom_dependency_2026",
+  "topic_summary": "Analysis of Universal Basic Income as a contested kernel where the same income-support commitment is read as either a freedom-floor (enabling autonomy and risk-taking) or a dependency-trap (eroding work incentives and creating state dependence). Each reading instantiates structurally different constraints with distinct beneficiary/victim structures and extractiveness profiles.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Universal Basic Income (unconditional cash transfer to all citizens)",
+      "Labor market (employment structure and wage dynamics)",
+      "Welfare state apparatus (existing means-tested transfer systems)",
+      "Precarious workers (gig economy, part-time, informal sector participants)",
+      "Capital holders (employers, investors benefiting from wage suppression)",
+      "State fiscal capacity (tax base and transfer sustainability)"
+    ],
+    "key_tensions": [
+      "Autonomy enhancement vs work disincentive (freedom-floor vs dependency-trap readings)",
+      "Unconditional transfer vs means-tested targeting (universalism vs efficiency)"
+    ],
+    "key_mechanisms": [
+      "Income floor effect (minimum guaranteed income altering reservation wages)",
+      "Labor supply response (behavioral change in work hours and job acceptance)",
+      "Fiscal sustainability constraint (tax revenue requirements vs transfer obligations)"
+    ],
+    "absences": [
+      "Inflation transmission mechanism (how UBI affects price levels and real purchasing power)",
+      "Monopsony power dynamics (employer wage-setting power in thin labor markets)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Unconditional income support as a policy commitment stabilizing citizen economic security",
+    "authority_description": "State fiscal and legislative authority to tax and transfer",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "income_support_commitment",
+    "readings": [
+      {
+        "reading_id": "freedom_floor_reading",
+        "commitment": "Income support as autonomy-enabling floor that expands choice sets",
+        "authority_grounding": "Liberal autonomy / capability approach / labor market power rebalancing",
+        "sibling_readings": [
+          "dependency_trap_reading",
+          "subsidy_capture_reading"
+        ],
+        "expected_structural_delta": "Workers enter beneficiary set via expanded exit options; employers enter victim set via reduced monopsony power; moderate extractiveness from tax base"
+      },
+      {
+        "reading_id": "dependency_trap_reading",
+        "commitment": "Income support as work-disincentive creating state dependence",
+        "authority_grounding": "Work ethic / human capital theory / fiscal conservatism",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "subsidy_capture_reading"
+        ],
+        "expected_structural_delta": "State enters beneficiary set via expanded client base; workers enter victim set via skill atrophy and reduced earnings; high extractiveness from future productivity"
+      },
+      {
+        "reading_id": "subsidy_capture_reading",
+        "commitment": "Income support as employer subsidy enabling wage suppression",
+        "authority_grounding": "Marxian labor theory / monopsony analysis / fiscal sociology",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "dependency_trap_reading"
+        ],
+        "expected_structural_delta": "Capital holders enter beneficiary set via socialized wage floor; workers ambiguous (income floor vs wage suppression); high extractiveness from public fiscal capacity"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "freedom_floor_reading",
+      "human_readable": "Freedom-Floor Reading (Autonomy-Enabling Income Support)",
+      "structural_delta": "Unconditional income floor expands worker choice sets and rebalances labor market power",
+      "primary_observable": "Reservation wage changes; job acceptance rates for low-quality work; entrepreneurship entry rates; care work time allocation",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "precarious_workers",
+      "victim": "monopsony_employers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; distinct beneficiary structure (workers gain exit power)"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "human_readable": "Dependency-Trap Reading (Work-Disincentive State Dependence)",
+      "structural_delta": "Unconditional income reduces work incentives and creates long-term state dependence",
+      "primary_observable": "Labor force participation rates; hours worked; skill acquisition rates; intergenerational welfare dependency",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "state_bureaucracy",
+      "victim": "future_worker_productivity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; opposite victim structure (workers harmed via atrophy)"
+    },
+    {
+      "claim_id": "subsidy_capture_reading",
+      "human_readable": "Subsidy-Capture Reading (Employer Wage-Floor Socialization)",
+      "structural_delta": "UBI functions as public subsidy to low-wage employers by socializing the wage floor",
+      "primary_observable": "Wage distribution changes post-UBI; employer labor cost reductions; public expenditure as share of total compensation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "capital_holders",
+      "victim": "public_fiscal_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality via fiscal extraction dimension"
+    },
+    {
+      "claim_id": "inflation_transmission",
+      "human_readable": "Inflation Transmission (Price-Level Response to Income Floor)",
+      "structural_delta": "Universal income floor triggers price increases that erode real purchasing power",
+      "primary_observable": "CPI changes post-implementation; rent inflation in housing markets; wage-price spiral indicators",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "freedom_floor_reading",
+        "dependency_trap_reading",
+        "subsidy_capture_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects all readings but is upstream mountain; token budget prioritizes contested readings"
+    },
+    {
+      "claim_id": "fiscal_sustainability_constraint",
+      "human_readable": "Fiscal Sustainability Constraint (Tax Base vs Transfer Obligations)",
+      "structural_delta": "UBI requires tax increases that may exceed politically feasible or economically sustainable levels",
+      "primary_observable": "Required tax rates for full UBI funding; tax base elasticity; political support thresholds",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "subsidy_capture_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: coordination constraint but lower structural distinctiveness than kernel readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "freedom_floor_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "freedom_floor_reading"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "dependency_trap_reading"
+    },
+    {
+      "claim_id": "subsidy_capture_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "subsidy_capture_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "inflation_transmission",
+      "structural_delta": "Price-level response to universal income floor",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain affecting all readings; deferred to preserve token budget for contested kernel analysis"
+    },
+    {
+      "claim_id": "fiscal_sustainability_constraint",
+      "structural_delta": "Tax base capacity vs transfer obligations",
+      "hypothesis": "rope",
+      "deferral_reason": "Coordination constraint with lower structural distinctiveness than kernel readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_collapse",
+      "description": "Do the three readings actually emit different constraints, or do they collapse under empirical scrutiny? If labor supply is inelastic and wage suppression dominates, subsidy_capture_reading absorbs the other two.",
+      "source": "Kernel coherence test (§1.3-K)"
+    },
+    {
+      "id": "omega_inflation_dominance",
+      "description": "If inflation_transmission mountain fully erodes real purchasing power, all three readings may reduce to the same null constraint (no real income change). Deferred axis may invalidate kernel structure.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis inflation_transmission"
+    },
+    {
+      "id": "omega_monopsony_threshold",
+      "description": "At what level of employer market power does freedom_floor flip to subsidy_capture? The threshold is empirically contested and may vary by labor market segment.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + absence: monopsony power dynamics"
+    },
+    {
+      "id": "omega_pilot_generalizability",
+      "description": "Existing UBI pilots (Kenya, Finland, Stockton) operate at scales where general equilibrium effects (inflation, wage suppression) do not manifest. Extrapolation to national scale is structurally uncertain.",
+      "source": "F34 (Epistemic Trespass) boundary"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks domain expertise to adjudicate empirical claims about labor supply elasticity, monopsony power distribution, and inflation transmission mechanisms at national scale. Generated omega_pilot_generalizability and omega_empirical_collapse to bound uncertainty. Kernel structure is analytically valid but empirical substrate is contested beyond model's competence."
+  },
+  "_seed_id": "ubi_kernel"
+}

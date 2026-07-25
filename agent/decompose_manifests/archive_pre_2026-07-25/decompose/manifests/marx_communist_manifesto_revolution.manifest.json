@@ -1,0 +1,248 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Revolutionary Theory / Historical Materialism",
+  "family_id": "communist_manifesto_revolutionary_method",
+  "topic_summary": "Analysis of the Communist Manifesto's revolutionary method as a contested kernel. The 1848 text by Marx and Engels presents a foundational commitment to working-class emancipation through capitalism's overthrow, but subsequent movements have read this kernel through incompatible interpretive lenses: vanguard revolutionary seizure versus democratic gradualist transition. These readings generate structurally distinct constraints on political organization, state power, and economic transformation.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Communist Manifesto (1848 founding text)",
+      "Marx & Engels (authors; theoretical authority)",
+      "Vanguard party organizations (Leninist interpretation; Bolsheviks, etc.)",
+      "Social democratic parties (Bernstein, SPD, Labor parties)",
+      "Working class / proletariat (claimed beneficiary in both readings)",
+      "Capitalist state apparatus (target of transformation)"
+    ],
+    "key_tensions": [
+      "Revolutionary rupture vs evolutionary reform (method of transition)",
+      "Party dictatorship vs democratic majoritarianism (locus of authority)",
+      "Centralized planning vs worker self-management (economic organization)"
+    ],
+    "key_mechanisms": [
+      "Class struggle as historical motor (shared substrate)",
+      "State seizure and dictatorship of proletariat (Manifesto phrase contested)",
+      "Democratic electoral pathway (absent from Manifesto, added by revisionists)"
+    ],
+    "key_absences": [
+      "Concrete institutional design for post-revolutionary society",
+      "Resolution mechanism for inter-reading disputes within socialist movements"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Communist Manifesto's commitment to working-class emancipation through overthrow of capitalist property relations and establishment of proletarian political supremacy",
+    "authority_description": "Interpretive authority claimed by successor movements (Leninist parties, social democratic parties) grounded in fidelity to Marx-Engels text and working-class interests",
+    "drift_status": "partial",
+    "candidate_pattern": "Contested Sacred Text (Pattern 1) — founding document stabilized but interpretive authority fragmented across incompatible movements",
+    "is_contested_kernel": true,
+    "kernel_id": "manifesto_revolutionary_method",
+    "readings": [
+      {
+        "reading_id": "vanguard_rupture_reading",
+        "commitment": "Revolutionary transformation requires organized party seizure of state power; dictatorship of proletariat as transitional state form under party guidance",
+        "authority_grounding": "Leninist interpretation; Manifesto phrases 'forcible overthrow,' 'conquest of political power,' 'despotic inroads' read as mandate for vanguard organization and state centralization",
+        "sibling_readings": [
+          "democratic_gradualism_reading",
+          "council_communist_reading"
+        ],
+        "expected_structural_delta": "High state centralization; beneficiaries include party cadres and state-planning apparatus; victims include political pluralists, autonomous worker organizations; ε_high (0.60+) due to suppression of alternative pathways"
+      },
+      {
+        "reading_id": "democratic_gradualism_reading",
+        "commitment": "Socialism achievable through democratic electoral majority and gradual institutional reform; working-class power exercised through existing democratic structures",
+        "authority_grounding": "Bernsteinian revisionism; later Manifesto prefaces emphasizing democratic transition; appeals to universal suffrage passages as mandate for parliamentary strategy",
+        "sibling_readings": [
+          "vanguard_rupture_reading",
+          "council_communist_reading"
+        ],
+        "expected_structural_delta": "Institutional continuity with liberal democracy; beneficiaries include social democratic parties and unions; victims include revolutionary militants suppressed as 'adventurist'; ε_moderate (0.40) due to constraints on rapid transformation"
+      },
+      {
+        "reading_id": "council_communist_reading",
+        "commitment": "Workers' councils (soviets) as direct democratic organs replacing both capitalist state and vanguard party; power held by federated workplace assemblies",
+        "authority_grounding": "Left communist critique of both Leninism and social democracy; Manifesto's 'association of producers' read as mandate for bottom-up self-organization",
+        "sibling_readings": [
+          "vanguard_rupture_reading",
+          "democratic_gradualism_reading"
+        ],
+        "expected_structural_delta": "Decentralized coordination; beneficiaries include autonomous worker collectives; victims include both state bureaucrats and party officials; ε_low (0.25) within councils but high external suppression by rival readings"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "vanguard_rupture_reading",
+        "reading_b": "democratic_gradualism_reading",
+        "basis": "Vanguard reading holds that capitalist state must be smashed and replaced (non-reformable); gradualist reading holds that existing democratic institutions can be transformed into socialist instruments. No single framework can simultaneously hold that a structure is non-reformable AND reformable."
+      },
+      {
+        "reading_a": "vanguard_rupture_reading",
+        "reading_b": "council_communist_reading",
+        "basis": "Vanguard reading centralizes authority in party apparatus as necessary agent of transformation; council reading rejects party mediation as reproducing hierarchy. No framework can hold that workers require party guidance AND that workers autonomously self-organize without mediation."
+      },
+      {
+        "reading_a": "democratic_gradualism_reading",
+        "reading_b": "council_communist_reading",
+        "basis": "Gradualist reading accepts parliamentary state as legitimate arena for working-class power; council reading rejects representation as alienation of worker agency. No framework can hold that electoral representation is genuine worker power AND that representation structurally alienates power."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "vanguard_rupture_reading",
+      "human_readable": "Vanguard Rupture Reading (Party-Led Revolutionary Seizure)",
+      "structural_delta": "Revolutionary party as necessary organizing form; state power seized and wielded centrally during transitional dictatorship of proletariat",
+      "primary_observable": "Organizational structure of socialist movements (centralized party discipline, democratic centralism); post-revolution state centralization index",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "party_cadres_state_planners",
+      "victim": "autonomous_worker_organizations_political_pluralists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested reading; highest structural delta from kernel; distinct beneficiary/victim structure; upstream to historical 20th century implementations"
+    },
+    {
+      "claim_id": "democratic_gradualism_reading",
+      "human_readable": "Democratic Gradualism Reading (Electoral/Reformist Pathway)",
+      "structural_delta": "Socialism achieved through democratic majority and gradual institutional transformation; continuity with liberal-democratic forms",
+      "primary_observable": "Electoral participation rates of socialist parties; policy incrementalism vs rupture rhetoric; union integration into state structures",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "social_democratic_parties_trade_unions",
+      "victim": "revolutionary_militants_suppressed_as_adventurist",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposed to vanguard reading; different epsilon and observable; dominant in post-WWII West"
+    },
+    {
+      "claim_id": "council_communist_reading",
+      "human_readable": "Council Communist Reading (Workers' Council Direct Democracy)",
+      "structural_delta": "Federated workers' councils as alternative to both capitalist state and vanguard party; decentralized coordination through workplace assemblies",
+      "primary_observable": "Presence of autonomous council structures; rejection of both parliamentary and party-centralist forms; workplace democracy mechanisms",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "autonomous_worker_collectives",
+      "victim": "state_bureaucrats_party_officials",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading; critiques both previous readings; lowest epsilon within councils but historically suppressed by both; completes triadic kernel decomposition"
+    },
+    {
+      "claim_id": "dictatorship_of_proletariat_ambiguity",
+      "human_readable": "Dictatorship of Proletariat Phrase Ambiguity",
+      "structural_delta": "Manifesto phrase 'dictatorship of proletariat' interpretable as either (a) class rule in general or (b) specific institutional form; ambiguity enables divergent readings",
+      "primary_observable": "Textual exegesis frequency; historical usage shifts (Marx 1850s vs Lenin 1917 vs Kautsky)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "vanguard_rupture_reading",
+        "democratic_gradualism_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: textual ambiguity axis; informative but structural consequences already captured in reading decomposition"
+    },
+    {
+      "claim_id": "historical_stage_theory_constraint",
+      "human_readable": "Historical Stage Theory Constraint (Capitalism as Necessary Precondition)",
+      "structural_delta": "Manifesto's historical materialism requires capitalism to develop productive forces before socialism possible; constrains timing and location of revolution",
+      "primary_observable": "Industrial development level at time of socialist movements; debates over 'premature' revolutions in agrarian societies",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "vanguard_rupture_reading",
+        "democratic_gradualism_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream material constraint but shared across all readings; lower structural distinctiveness than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "vanguard_rupture_reading",
+      "kernel_id": "manifesto_revolutionary_method",
+      "reading_id": "vanguard_rupture_reading"
+    },
+    {
+      "claim_id": "democratic_gradualism_reading",
+      "kernel_id": "manifesto_revolutionary_method",
+      "reading_id": "democratic_gradualism_reading"
+    },
+    {
+      "claim_id": "council_communist_reading",
+      "kernel_id": "manifesto_revolutionary_method",
+      "reading_id": "council_communist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "dictatorship_of_proletariat_ambiguity",
+      "structural_delta": "Textual ambiguity in Manifesto's 'dictatorship of proletariat' phrase enables divergent institutional readings",
+      "hypothesis": "piton",
+      "deferral_reason": "Textual-exegetical axis; structural consequences captured in reading decomposition; informative for omega but not distinct constraint type"
+    },
+    {
+      "claim_id": "historical_stage_theory_constraint",
+      "structural_delta": "Historical materialism requires capitalism to develop productive forces before socialism",
+      "hypothesis": "mountain",
+      "deferral_reason": "Shared upstream constraint across all readings; lower structural distinctiveness; informs timing debates but not organizational form"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_test",
+      "description": "Do all three readings genuinely emit distinct constraints, or do vanguard and council readings collapse under suppression pressure? Historical record shows councils suppressed by both vanguards (Kronstadt) and gradualists (German 1919), suggesting distinctness, but within-reading epsilon may be lower than between-reading.",
+      "source": "§1.3-K coherence test"
+    },
+    {
+      "id": "omega_manifesto_vs_later_marx",
+      "description": "Does later Marx (Paris Commune writings, Gotha Programme critique) constitute a second kernel that revises the Manifesto kernel? If so, council reading gains textual authority and vanguard/gradualist split may be reading one kernel (Manifesto 1848) vs another (late Marx 1870s).",
+      "source": "Extraction absence: Manifesto treated as sole kernel but Marx corpus contains competing kernels"
+    },
+    {
+      "id": "omega_authority_fragmentation",
+      "description": "No reading controls interpretive authority over the kernel. Is this licensed plurality (Patterns 4/5) or failed succession (Pattern 6)? Social democrats, Leninists, and anarcho-syndicalists all claim Marx-Engels lineage but lack shared adjudication mechanism.",
+      "source": "Commitment system drift_status='partial' classification; Pattern 1 vs Pattern 6 ambiguity"
+    },
+    {
+      "id": "omega_beneficiary_inversion",
+      "description": "All readings claim working class as beneficiary, but structural analysis identifies cadres/parties/unions as beneficiaries. Is this beneficiary drift (claimed vs actual) or is working class genuinely beneficiary under specific conditions not captured in epsilon measure?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); tension between claimed and structural beneficiaries"
+    },
+    {
+      "id": "omega_21st_century_readings",
+      "description": "Do contemporary readings (ecosocialism, post-work, intersectional socialism) constitute fourth/fifth readings of the Manifesto kernel, or do they reject the kernel entirely? If reject, topic becomes 'Manifesto relevance' rather than 'Manifesto method.'",
+      "source": "F15 (Premature Closure) check; only historical readings (pre-1950) analyzed"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: Analysis limited to historical readings dominant 1890-1950. Contemporary socialist movements (ecosocialism, intersectional frameworks, post-work theory) may constitute additional readings or kernel rejection. Generated omega_21st_century_readings to bound. Kernel decomposition confirmed: three readings hold mutually exclusive axioms (reformability of state, necessity of party mediation, legitimacy of representation) and emit structurally distinct constraints. All three proceed to generation."
+  },
+  "_seed_id": "marx_communist_manifesto_revolution"
+}

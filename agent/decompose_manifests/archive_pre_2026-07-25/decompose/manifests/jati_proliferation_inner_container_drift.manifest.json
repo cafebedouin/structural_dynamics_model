@@ -1,0 +1,197 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Social Anthropology / Religious Studies / Political Economy",
+  "family_id": "jati_practice_norm_legitimation",
+  "topic_summary": "Analysis of the Jati system as a contested kernel where orthodox centralized authorities read it as a rigid, textually mandated hierarchy (varna-grounded classification) while localized communities read it through continuous drift, proliferation, and renegotiation of practice norms. Tests whether formal extractive authority structures can stabilize a commitment against ground-level mutation.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Orthodox Brahminical authorities (centralized interpreters claiming textual mandate)",
+      "Local Jati communities (decentralized practice-norm negotiators)",
+      "Varna framework (four-fold textual classification claimed as scriptural kernel)",
+      "Jati categories (thousands of localized occupational/endogamous groups)",
+      "Colonial census apparatus (externalized enforcement attempting to freeze categories)"
+    ],
+    "key_tensions": [
+      "Textual authority vs practice-norm autonomy (Brahminical orthodoxy vs local mutation)",
+      "Categorical stability vs proliferation dynamics (fixed hierarchy claim vs empirical 3000+ jatis)"
+    ],
+    "key_mechanisms": [
+      "Ritual pollution rules (enforce separation; locally contested thresholds)",
+      "Occupational heredity norms (claimed as immutable; empirically fluid across generations)",
+      "Endogamy enforcement (marriage boundaries as category stabilizers; locally negotiated)"
+    ],
+    "key_absences": [
+      "Exit mechanisms: no analysis of how individuals/families escape categorical assignment",
+      "Inter-jati economic cooperation patterns that cross claimed hierarchy boundaries"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "orthodox_textual_reading",
+      "human_readable": "Orthodox Textual Reading (Varna-Grounded Rigid Hierarchy)",
+      "structural_delta": "Jati categories derive legitimacy from fixed scriptural varna framework; deviation is pollution",
+      "primary_observable": "Brahminical legal texts (Dharmashastra); ritual purity thresholds in orthodox communities",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "brahminical_authority_structure",
+      "victim": "lower_jati_groups_assigned_polluting_occupations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: highest extractiveness; authority structure grounds itself in textual fixity to legitimate hierarchy"
+    },
+    {
+      "claim_id": "localized_practice_reading",
+      "human_readable": "Localized Practice Reading (Continuous Drift & Renegotiation)",
+      "structural_delta": "Jati categories are practice-norms subject to local negotiation; boundaries proliferate and shift",
+      "primary_observable": "Empirical jati count (3000+); marriage boundary shifts; occupational mobility patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: coordination-norm structure; lowest extractiveness; empirically grounded in proliferation dynamics"
+    },
+    {
+      "claim_id": "colonial_census_reading",
+      "human_readable": "Colonial Census Reading (Administrative Reification)",
+      "structural_delta": "Jati categories stabilized via external census apparatus; British Raj froze fluid categories for governance",
+      "primary_observable": "Colonial census classifications (1871-1931); legal codification of caste in British Indian law",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "colonial_administrative_apparatus",
+      "victim": "communities_whose_fluidity_was_frozen",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: synthesis node; external enforcement attempting to stabilize contested kernel; moderate extractiveness via administrative coercion"
+    },
+    {
+      "claim_id": "reform_movement_reading",
+      "human_readable": "Reform Movement Reading (Anti-Caste Abolitionism)",
+      "structural_delta": "Jati system as categorically illegitimate extractive structure to be dismantled",
+      "primary_observable": "Ambedkar's writings; Dalit movement mobilization; constitutional Article 15-17 prohibitions",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: abolitionist position rejects kernel rather than reading it; structural delta is rejection not interpretation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "orthodox_textual_reading",
+      "kernel_id": "jati_practice_norm",
+      "reading_id": "orthodox_textual_reading"
+    },
+    {
+      "claim_id": "localized_practice_reading",
+      "kernel_id": "jati_practice_norm",
+      "reading_id": "localized_practice_reading"
+    },
+    {
+      "claim_id": "colonial_census_reading",
+      "kernel_id": "jati_practice_norm",
+      "reading_id": "colonial_census_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "reform_movement_reading",
+      "structural_delta": "Jati system as categorically illegitimate to be dismantled",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Abolitionist stance rejects the kernel rather than reading it differently; structural position is external to the interpretive contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_exit_mechanisms",
+      "description": "How do individuals/families escape jati assignment? If exit is structurally blocked, orthodox reading's snare designation is confirmed. If exit is common, localized reading's rope designation captures only the coordination layer, not the coercive substrate.",
+      "source": "Absence Inventory (Dark Matter Probe 2)"
+    },
+    {
+      "id": "omega_economic_cooperation",
+      "description": "Do inter-jati economic partnerships cross claimed hierarchy boundaries? If yes, localized practice reading's coordination-norm structure may be understating the system's extractive residue. If no, orthodox reading's pollution enforcement is empirically validated.",
+      "source": "Absence Inventory (Dark Matter Probe 2)"
+    },
+    {
+      "id": "omega_census_persistence",
+      "description": "Did colonial census reification permanently stabilize previously fluid categories, or did proliferation resume post-independence? If reification persists, colonial reading's tangled_rope classification may understate ongoing extractiveness. If proliferation resumed, the reading captures a historical intervention that failed to durably freeze the kernel.",
+      "source": "Beneficiary Scan (Dark Matter Probe 3) applied to colonial_census_reading"
+    },
+    {
+      "id": "omega_axiom_contradiction_edges",
+      "description": "Are orthodox_textual and localized_practice readings axiom-contradictory, or do they coexist as licensed plurality? A Brahmin village elder may hold both simultaneously: varna is scriptural truth (orthodox) AND this particular marriage boundary shift is legitimate local adjustment (localized). If both can be held in one framework, no axiom contradiction—readings instantiate different extraction levels of the same multi-layer system.",
+      "source": "Axiom Contradiction Declaration test (§1.3-K)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three disciplinary lenses applied (social anthropology, religious studies, political economy). Dark matter probes surfaced two key absences (exit mechanisms, inter-jati cooperation). Kernel decomposition correctly identified three distinct readings with different authority groundings and extractiveness levels. Reform movement reading deferred as external abolitionist stance rather than interpretive reading of the kernel."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Jati occupational and social classification system—a deep practice-norm commitment defining legitimate social boundaries, occupational assignment, and ritual purity thresholds",
+    "authority_description": "Contested between centralized Brahminical textual interpreters (claiming scriptural derivation from varna framework) and localized community practice-norm negotiation (claiming legitimate drift via lived precedent)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition_with_covert_revision",
+    "is_contested_kernel": true,
+    "kernel_id": "jati_practice_norm",
+    "readings": [
+      {
+        "reading_id": "orthodox_textual_reading",
+        "commitment": "Jati boundaries derive from fixed scriptural varna framework; deviation is ritual pollution",
+        "authority_grounding": "Brahminical textual interpretation claiming Dharmashastra mandate",
+        "sibling_readings": [
+          "localized_practice_reading",
+          "colonial_census_reading"
+        ],
+        "expected_structural_delta": "High extractiveness (snare); lower jatis assigned polluting occupations with blocked mobility; authority structure benefits from categorical rigidity"
+      },
+      {
+        "reading_id": "localized_practice_reading",
+        "commitment": "Jati boundaries are coordination norms subject to continuous local renegotiation and proliferation",
+        "authority_grounding": "Community practice precedent; lived legitimacy via successful boundary shifts",
+        "sibling_readings": [
+          "orthodox_textual_reading",
+          "colonial_census_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness (rope); empirical proliferation to 3000+ categories indicates weak enforcement; coordination function dominates over coercion"
+      },
+      {
+        "reading_id": "colonial_census_reading",
+        "commitment": "Jati categories stabilized and reified via external administrative apparatus for governance legibility",
+        "authority_grounding": "British colonial state power; census classification backed by legal codification",
+        "sibling_readings": [
+          "orthodox_textual_reading",
+          "localized_practice_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (tangled_rope); external enforcement froze previously fluid categories; benefits colonial administrative efficiency at cost of community autonomy"
+      }
+    ],
+    "axiom_contradictions": []
+  },
+  "_seed_id": "jati_proliferation_inner_container_drift"
+}

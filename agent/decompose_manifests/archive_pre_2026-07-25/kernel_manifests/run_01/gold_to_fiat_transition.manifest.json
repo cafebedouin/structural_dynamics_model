@@ -1,0 +1,218 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Economics / Political Economy / Institutional History",
+  "family_id": "gold_fiat_transition",
+  "topic_summary": "Analysis of the transition from gold-backed to fiat currency systems, examining whether this represents a single institutional swap or an overdetermined composite of multiple structural shifts. The kernel contest tests whether different readings of 'what changed' emit structurally different constraints or collapse into one constraint viewed from different positions.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Gold Standard (pre-1971 monetary regime with convertibility commitment)",
+      "Bretton Woods System (1944-1971 hybrid gold-exchange standard)",
+      "Nixon Shock (August 1971 suspension of dollar-gold convertibility)",
+      "Fiat Currency Regime (post-1971 non-convertible state money)",
+      "Central Banks (monetary authorities with discretionary policy space)",
+      "International Monetary Fund (multilateral institution managing exchange rate system)"
+    ],
+    "key_tensions": [
+      "Convertibility constraint vs monetary policy autonomy (Triffin dilemma)",
+      "Fixed exchange rates vs capital mobility (Mundell-Fleming trilemma)",
+      "Commodity anchor vs state discretion (metallism vs chartalism)"
+    ],
+    "key_mechanisms": [
+      "Gold convertibility enforcement (automatic balance-of-payments adjustment via gold flows)",
+      "Central bank sterilization operations (neutralizing gold flow effects on money supply)",
+      "Exchange rate management (intervention to maintain parities without gold backing)"
+    ],
+    "key_absences": [
+      "Domestic political economy of inflation tolerance (who benefits from monetary expansion)",
+      "Fiscal capacity implications (seigniorage vs gold reserve constraints)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The monetary regime transition as a structural change in what constrains state monetary authority",
+    "authority_description": "Central banks and treasuries claiming legitimacy to manage currency value",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_analysis": "Initial hypothesis: three readings (single_swap, composite_overdetermined, continuity_through_discretion) would emit different constraints. Testing reveals collapse: all three readings describe the SAME constraint (state monetary discretion bounded by inflation credibility) observed from different analytical positions. The 'single swap' reading emphasizes the 1971 event; the 'composite' reading emphasizes multiple prior erosions; the 'continuity' reading emphasizes persistent discretion throughout. But the CONSTRAINT ITSELF—the ε of monetary expansion limited by credibility loss—does not change across readings. This is one constraint with contested historiography, not multiple constraints from one kernel. Reclassifying as standard axis decomposition.",
+    "kernel_id": null,
+    "readings": []
+  },
+  "axes": [
+    {
+      "claim_id": "convertibility_constraint_removal",
+      "human_readable": "Convertibility Constraint Removal (Gold Anchor Elimination)",
+      "structural_delta": "Elimination of automatic external constraint on domestic money supply via gold convertibility obligation",
+      "primary_observable": "Legal convertibility status; central bank gold reserve ratios; balance-of-payments adjustment mechanisms",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "monetary_discretion_expansion",
+        "inflation_credibility_constraint"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical/legal constraint base; highest inbound edge count"
+    },
+    {
+      "claim_id": "monetary_discretion_expansion",
+      "human_readable": "Monetary Discretion Expansion (Policy Space Opening)",
+      "structural_delta": "Expansion of central bank operational freedom to manage domestic economic conditions without external anchor",
+      "primary_observable": "Central bank balance sheet operations; interest rate policy independence; countercyclical intervention capacity",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "convertibility_constraint_removal"
+      ],
+      "feeds_into": [
+        "inflation_credibility_constraint"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Intermediate coordination mechanism; structurally distinct from upstream mountain and downstream tangled_rope"
+    },
+    {
+      "claim_id": "inflation_credibility_constraint",
+      "human_readable": "Inflation Credibility Constraint (Discretion Bounded by Reputation)",
+      "structural_delta": "Replacement of gold anchor with credibility anchor; monetary expansion limited by inflation expectations and currency confidence",
+      "primary_observable": "Inflation rates; currency depreciation episodes; central bank independence indices; bond market reactions to policy",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "financial_sector",
+      "victim": "wage_earners",
+      "downstream_of": [
+        "convertibility_constraint_removal",
+        "monetary_discretion_expansion"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node capturing entanglement between discretion and discipline"
+    },
+    {
+      "claim_id": "fiscal_seigniorage_expansion",
+      "human_readable": "Fiscal Seigniorage Expansion (Inflation Tax Capacity)",
+      "structural_delta": "State capacity to finance deficits via monetary expansion rather than gold reserve constraints",
+      "primary_observable": "Seigniorage revenue as % GDP; deficit monetization episodes; inflation tax incidence",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "state_fiscal_authority",
+      "victim": "fixed_income_holders",
+      "downstream_of": [
+        "convertibility_constraint_removal"
+      ],
+      "feeds_into": [
+        "inflation_credibility_constraint"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via inflation_credibility_constraint tangled_rope; fiscal dimension secondary to monetary structure"
+    },
+    {
+      "claim_id": "exchange_rate_regime_shift",
+      "human_readable": "Exchange Rate Regime Shift (Fixed to Floating Transition)",
+      "structural_delta": "Transition from fixed parities maintained by gold flows to floating rates managed by intervention",
+      "primary_observable": "Exchange rate volatility; foreign exchange reserve management; currency crisis frequency",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "convertibility_constraint_removal"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: parallel consequence of convertibility removal but lower structural centrality than monetary_discretion_expansion"
+    },
+    {
+      "claim_id": "bretton_woods_erosion_sequence",
+      "human_readable": "Bretton Woods Erosion Sequence (Gradual Constraint Weakening)",
+      "structural_delta": "Multi-decade erosion of gold discipline via sterilization, capital controls, and two-tier gold markets before formal abandonment",
+      "primary_observable": "Sterilization operation frequency; capital control intensity; London Gold Pool interventions; two-tier market price spreads",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "convertibility_constraint_removal"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical process detail; the 'composite vs single swap' debate is historiographic rather than structural—both views describe the same final constraint state"
+    }
+  ],
+  "generation_sequence": [
+    "convertibility_constraint_removal",
+    "monetary_discretion_expansion",
+    "inflation_credibility_constraint"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "fiscal_seigniorage_expansion",
+      "structural_delta": "State capacity to finance deficits via monetary expansion",
+      "hypothesis": "snare",
+      "deferral_reason": "Fiscal dimension captured indirectly via inflation_credibility_constraint; secondary to core monetary structure"
+    },
+    {
+      "claim_id": "exchange_rate_regime_shift",
+      "structural_delta": "Fixed to floating exchange rate transition",
+      "hypothesis": "rope",
+      "deferral_reason": "Parallel consequence of convertibility removal with lower graph centrality than selected axes"
+    },
+    {
+      "claim_id": "bretton_woods_erosion_sequence",
+      "structural_delta": "Multi-decade gradual weakening of gold discipline before formal abandonment",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical process detail; 'composite vs single swap' debate is historiographic—both describe same final constraint state"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The 'single swap vs composite' kernel contest collapses: both readings describe the same constraint (monetary discretion bounded by credibility) from different historiographic positions. The timing debate (1971 event vs gradual erosion) does not change the structural constraint that emerged. This is one constraint with contested narrative, not multiple constraints from one kernel.",
+      "source": "§1.3-K kernel/reading decomposition test"
+    },
+    {
+      "id": "omega_credibility_mechanism",
+      "description": "Is inflation_credibility_constraint a true Tangled_Rope (entanglement between discretion and discipline) or a Snare (discipline imposed by financial sector)? The beneficiary structure (financial sector gains from credible low inflation) suggests Snare, but the mechanism is more complex—credibility is co-produced by central bank behavior and market expectations.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_political_economy_absence",
+      "description": "Domestic political coalitions favoring/opposing monetary expansion are absent from the structural analysis. Who benefits from inflation tolerance? Labor vs capital, debtors vs creditors, exporters vs importers—these distributional conflicts shape the credibility constraint but are not captured in the monetary mechanics.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary key_absences"
+    },
+    {
+      "id": "omega_mountain_validity",
+      "description": "Is convertibility_constraint_removal a true Mountain (legal/physical elimination of gold convertibility) or a Piton (policy choice that could be reversed)? Return to gold standard is technically possible but institutionally implausible. The constraint's permanence depends on political economy, not physics.",
+      "source": "F03 (Hasty Generalization)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: convertibility_constraint_removal classified as mountain but reversibility depends on political economy rather than physical law. Generated omega_mountain_validity to bound this uncertainty. Kernel collapse documented in omega_kernel_collapse—the 'single swap vs composite' contest is historiographic rather than structural."
+  },
+  "_seed_id": "gold_to_fiat_transition"
+}

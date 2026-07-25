@@ -1,0 +1,261 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Intellectual History / Philology",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist reconstruction of Classical Latin from medieval Latin practice. The central question is whether humanist Classical Latin represented continuous evolution from medieval usage or a radical reconstruction from textual sources—whether the reconstructed form was reachable from the drifted vernacular or required symbolic reoccupation of an abandoned kernel.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin (living drifted vernacular, 5th-15th century)",
+      "Classical Latin (reconstructed textual standard, Ciceronian/Virgilian)",
+      "Petrarch (1304-1374, initiator of textual recovery vocation)",
+      "Lorenzo Valla (1407-1457, grammarian, classical purist)",
+      "Erasmus (1466-1536, pronunciation reformer)",
+      "Vulgate (Latin Bible translation, source of medieval peculiarities)"
+    ],
+    "key_tensions": [
+      "Living drift vs textual reconstruction (medieval users vs humanist philologists)",
+      "Vernacular phonology vs reconstructed classical pronunciation (local sound systems vs Erasmian reform)",
+      "Organic vocabulary expansion vs classical purism (medieval technical terms vs Ciceronian lexicon)",
+      "Continuity vs rupture (evolutionary change vs symbolic reoccupation)"
+    ],
+    "key_mechanisms": [
+      "Ad fontes recovery (manuscript hunting, transcription, circulation of classical texts)",
+      "Grammatical codification (Valla's Elegantiae, Tortelli's De orthographia establishing classical norms)",
+      "Orthographic purification (insistence on ae/oe diphthongs, t/c distinction vs medieval simplifications)"
+    ],
+    "key_absences": [
+      "Absence of living native speakers to adjudicate correctness (no community of practice, only textual authority)",
+      "Absence of institutional enforcement mechanism for humanist reforms in vernacular-adjacent domains (law, medicine, science)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Latin language as authoritative medium for learned discourse, grounded in textual exemplars from Roman antiquity",
+    "authority_description": "Textual fidelity to classical authors (Cicero, Virgil) as interpreted by humanist philologists; no living native speakers to adjudicate",
+    "drift_status": "absent",
+    "candidate_pattern": "Textual Kernel / Interpretive Drift (Pattern 1)",
+    "is_contested_kernel": true,
+    "kernel_id": "latin_correctness",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Medieval Latin is the legitimate continuation of classical Latin through organic linguistic change",
+        "authority_grounding": "Living practice of educated users; functional adequacy for contemporary domains (theology, law, science)",
+        "sibling_readings": [
+          "rupture_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness; vernacular phonology and expanded vocabulary treated as natural evolution; no victim set (medieval users are legitimate inheritors)"
+      },
+      {
+        "reading_id": "rupture_reading",
+        "commitment": "Classical Latin is a fixed textual standard requiring reconstruction from ancient sources; medieval usage is corruption",
+        "authority_grounding": "Textual fidelity to Cicero/Virgil as interpreted by humanist philologists; ad fontes recovery as moral-intellectual vocation",
+        "sibling_readings": [
+          "continuity_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High extractiveness; medieval practice delegitimized; victim set includes medieval scholars, vernacular-adjacent technical domains where classical purity is unattainable"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Classical norms apply to literary/rhetorical domains; medieval forms remain legitimate for technical/practical domains",
+        "authority_grounding": "Domain-specific appropriateness; stylistic register differentiation",
+        "sibling_readings": [
+          "continuity_reading",
+          "rupture_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness; bifurcated legitimacy creates status hierarchy (literary > technical); partial victim set (technical writers pressured toward unattainable classical standards)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "rupture_reading",
+        "basis": "Continuity reading treats linguistic change as legitimate evolution; rupture reading treats post-classical change as corruption requiring reversal. No single framework can hold both 'organic change is legitimate' and 'organic change is corruption' simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuity_reading",
+      "human_readable": "Continuity Reading: Medieval Latin as Legitimate Evolution",
+      "structural_delta": "Medieval Latin treated as organic continuation of classical Latin through natural linguistic change",
+      "primary_observable": "Acceptance of vernacular-influenced pronunciation, expanded vocabulary, relaxed grammar as legitimate practice",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "medieval_scholars",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline of medieval practice as legitimate"
+    },
+    {
+      "claim_id": "rupture_reading",
+      "human_readable": "Rupture Reading: Classical Latin as Reconstructed Standard",
+      "structural_delta": "Classical Latin as fixed textual standard requiring reconstruction from ancient sources; medieval usage delegitimized as corruption",
+      "primary_observable": "Humanist insistence on Ciceronian lexicon, classical orthography (ae/oe), reconstructed pronunciation; rejection of medieval forms",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "humanist_philologists",
+      "victim": "medieval_scholars_technical_writers",
+      "downstream_of": [],
+      "feeds_into": [
+        "domain_bifurcation"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; highest extractiveness; creates victim set through delegitimization"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading: Domain-Specific Legitimacy",
+      "structural_delta": "Classical norms for literary/rhetorical domains; medieval forms legitimate for technical/practical domains",
+      "primary_observable": "Bifurcated practice: edited literary works vs handwritten technical documents; register differentiation",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "literary_humanists",
+      "victim": "technical_writers_pressured_toward_classical_standards",
+      "downstream_of": [
+        "rupture_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; captures actual historical compromise; moderate extractiveness through status hierarchy"
+    },
+    {
+      "claim_id": "pronunciation_authority_vacuum",
+      "human_readable": "Pronunciation Authority Vacuum",
+      "structural_delta": "Absence of living native speakers creates interpretive vacuum for phonological reconstruction",
+      "primary_observable": "Competing pronunciation systems (vernacular-influenced vs Erasmian reconstruction); no adjudicating community",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "rupture_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural precondition for kernel contest but lower centrality than selected readings"
+    },
+    {
+      "claim_id": "domain_bifurcation",
+      "human_readable": "Domain Bifurcation: Literary vs Technical Latin",
+      "structural_delta": "Increasing difficulty of writing law/medicine/science in classical Latin while maintaining humanist standards",
+      "primary_observable": "Divergence between edited literary works and handwritten technical documents; eventual vernacularization of technical domains",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "technical_domains_requiring_latin",
+      "downstream_of": [
+        "rupture_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of rupture reading; captured implicitly in hybrid_reading"
+    },
+    {
+      "claim_id": "orthographic_purification",
+      "human_readable": "Orthographic Purification Campaign",
+      "structural_delta": "Humanist insistence on classical orthography (ae/oe, t/c distinction) vs medieval simplifications",
+      "primary_observable": "16th-century Ciceronian reforms; manuscript editing practices",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "humanist_editors",
+      "victim": null,
+      "downstream_of": [
+        "rupture_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: implementation mechanism of rupture reading; lower structural priority"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "latin_correctness",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "rupture_reading",
+      "kernel_id": "latin_correctness",
+      "reading_id": "rupture_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "latin_correctness",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pronunciation_authority_vacuum",
+      "structural_delta": "Absence of living native speakers creates interpretive vacuum for phonological reconstruction",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural precondition for kernel contest but lower centrality than selected readings; captured as background condition"
+    },
+    {
+      "claim_id": "domain_bifurcation",
+      "structural_delta": "Increasing difficulty of writing technical subjects in classical Latin",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence of rupture reading; captured implicitly in hybrid_reading's domain-specific legitimacy"
+    },
+    {
+      "claim_id": "orthographic_purification",
+      "structural_delta": "Humanist insistence on classical orthography vs medieval simplifications",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Implementation mechanism of rupture reading; lower structural priority than readings themselves"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reachability",
+      "description": "Was classical Latin reachable from medieval Latin through continuous reform, or did it require symbolic reoccupation of an abandoned kernel? The rupture reading treats it as unreachable (requiring textual reconstruction); the continuity reading treats medieval forms as legitimate evolution. The hybrid reading suggests partial reachability (literary domains yes, technical domains no).",
+      "source": "Core kernel contest; user's D1 break flag"
+    },
+    {
+      "id": "omega_pronunciation_reconstruction",
+      "description": "Was Erasmian pronunciation a genuine reconstruction of ancient Roman speech or a scholarly construct? No living speakers exist to adjudicate; textual evidence (spelling, meter, grammarian descriptions) is incomplete. Pronunciation is the only domain where 'Ecclesiastical' and 'Classical' Latin can be presented as competing standards rather than literary subsets.",
+      "source": "Deferred axis pronunciation_authority_vacuum; absence of native speaker community"
+    },
+    {
+      "id": "omega_vernacularization_counterfactual",
+      "description": "If humanists had not imposed classical standards, would Latin have evolved into a pan-European learned vernacular (like medieval Latin was becoming) rather than fragmenting into national vernaculars? The rupture reading's high extractiveness may have accelerated Latin's abandonment for technical domains.",
+      "source": "Deferred axis domain_bifurcation; Dark Matter Probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_textual_authority_legitimacy",
+      "description": "What grounds the authority of textual exemplars (Cicero, Virgil) over living practice? The rupture reading assumes textual fidelity is self-evidently superior to functional adequacy. This assumption is contested by the continuity reading but not examined within either framework.",
+      "source": "Dark Matter Probe 2 (absence inventory); unexamined premise of humanist philology"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied as specified. Three readings selected capture the structural topology: continuity (low ε, medieval practice legitimate), rupture (high ε, classical reconstruction delegitimizes medieval), hybrid (moderate ε, domain-specific bifurcation). Axiom contradiction declared between continuity and rupture readings (organic change as legitimate vs organic change as corruption). Deferred axes document structural preconditions and downstream consequences without adding independent constraint dimensions."
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

@@ -1,0 +1,180 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / State Formation / Cultural Authority",
+  "family_id": "meiji_calendar_dress_imposition",
+  "topic_summary": "The Meiji state's 1873 adoption of the Gregorian calendar and Western dress codes imposed new commitments from the top of the authority hierarchy downward, without grassroots climb. The topic tests whether the kernel/reading vocabulary can capture top-down exogenous displacement versus endogenous climb from institutional fringes.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Meiji State (1868+ centralized authority claiming modernization mandate)",
+      "Lunisolar Calendar System (pre-existing temporal commitment structure)",
+      "Gregorian Calendar (Western temporal standard imposed 1873)",
+      "Traditional Dress Practices (kimono, topknot as pre-existing sartorial commitment)",
+      "Western Dress Codes (imposed via bureaucratic/military requirements)"
+    ],
+    "key_tensions": [
+      "State modernization mandate vs existing temporal/sartorial practice commitments",
+      "Top-down imposition mechanism vs fringe-climb pattern assumed in M-set taxonomy"
+    ],
+    "mechanisms": [
+      "Legislative decree (calendar change by fiat, 1873)",
+      "Institutional enforcement (military/bureaucratic dress requirements)",
+      "Subsidy/penalty structures (Western dress required for official contexts, traditional dress penalized via exclusion)"
+    ],
+    "absences": [
+      "No grassroots advocacy preceding imposition (calendar/dress changes not demanded from below)",
+      "No institutional fringe where alternative reading could climb (commitment installed at hierarchy apex)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimate basis for state authority to define temporal standards and sartorial norms within the national administrative structure",
+    "authority_description": "Meiji state claiming transformation authority via restoration narrative and civilizational advancement mandate",
+    "drift_status": "absent",
+    "candidate_pattern": "dynastic_succession",
+    "is_contested_kernel": true,
+    "kernel_id": "state_commitment_installation_mechanism",
+    "readings": [
+      {
+        "reading_id": "endogenous_climb_reading",
+        "commitment": "New commitments gain legitimacy by climbing from institutional fringes through demonstrated superiority",
+        "authority_grounding": "Evolutionary institutional selection; bottom-up validation",
+        "sibling_readings": [
+          "exogenous_imposition_reading",
+          "hybrid_cascade_reading"
+        ],
+        "expected_structural_delta": "Fringe actors as beneficiaries; grassroots advocacy visible; gradual adoption curves; resistance at apex"
+      },
+      {
+        "reading_id": "exogenous_imposition_reading",
+        "commitment": "New commitments gain legitimacy through top-down installation by authority holding transformation mandate",
+        "authority_grounding": "Sovereign right to redefine temporal and sartorial standards; modernization as civilizational necessity",
+        "sibling_readings": [
+          "endogenous_climb_reading",
+          "hybrid_cascade_reading"
+        ],
+        "expected_structural_delta": "State as beneficiary; no grassroots advocacy; abrupt adoption via decree; resistance at base"
+      },
+      {
+        "reading_id": "hybrid_cascade_reading",
+        "commitment": "New commitments installed at apex cascade downward but require fringe validation to stabilize",
+        "authority_grounding": "Mixed: sovereign installation plus subsequent endogenous adoption at implementation layers",
+        "sibling_readings": [
+          "endogenous_climb_reading",
+          "exogenous_imposition_reading"
+        ],
+        "expected_structural_delta": "State initiates; fringe actors adapt and legitimate; two-phase adoption; partial resistance absorbed via local interpretation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "endogenous_climb_reading",
+        "reading_b": "exogenous_imposition_reading",
+        "basis": "Endogenous climb axiom holds that legitimacy flows from fringe validation upward; exogenous imposition axiom holds that transformation authority can install commitments downward without fringe validation. No single framework can hold both as simultaneously valid sources of commitment legitimacy."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "endogenous_climb_reading",
+      "human_readable": "Endogenous Climb Reading (Fringe-Validated Commitment Installation)",
+      "structural_delta": "Legitimacy of new commitments depends on fringe-originated advocacy and upward climb through institutional layers",
+      "primary_observable": "Presence/absence of grassroots advocacy; adoption timeline shape (gradual vs abrupt); resistance location (apex vs base)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "institutional_fringe_actors",
+      "victim": "apex_authorities_resisting_change",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of kernel; expected pattern per M-set taxonomy; structural baseline for comparison"
+    },
+    {
+      "claim_id": "exogenous_imposition_reading",
+      "human_readable": "Exogenous Imposition Reading (Apex-Installed Commitment Cascade)",
+      "structural_delta": "Legitimacy of new commitments flows from transformation authority at hierarchy apex; no fringe validation required",
+      "primary_observable": "Absence of grassroots advocacy; abrupt adoption via legislative decree; resistance at base rather than apex",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "centralizing_state",
+      "victim": "populations_with_existing_temporal_sartorial_commitments",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of kernel; historically observed pattern in Meiji case; tests M-set taxonomy gap"
+    },
+    {
+      "claim_id": "hybrid_cascade_reading",
+      "human_readable": "Hybrid Cascade Reading (Apex Installation with Fringe Stabilization)",
+      "structural_delta": "New commitments installed by apex authority but require subsequent fringe adoption to stabilize",
+      "primary_observable": "Two-phase adoption: initial decree followed by voluntary uptake patterns; local interpretation diversity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "intermediate_institutional_layers",
+      "victim": "apex_and_base_both_bear_coordination_costs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of kernel; captures potential coexistence of both mechanisms; highest structural complexity"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "endogenous_climb_reading",
+      "kernel_id": "state_commitment_installation_mechanism",
+      "reading_id": "endogenous_climb_reading"
+    },
+    {
+      "claim_id": "exogenous_imposition_reading",
+      "kernel_id": "state_commitment_installation_mechanism",
+      "reading_id": "exogenous_imposition_reading"
+    },
+    {
+      "claim_id": "hybrid_cascade_reading",
+      "kernel_id": "state_commitment_installation_mechanism",
+      "reading_id": "hybrid_cascade_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_m_set_exhaustiveness",
+      "description": "Does the M-set taxonomy's cell structure assume endogenous climb as the only legitimate commitment installation mechanism? If so, the exogenous imposition reading represents a gap in the ontology — a structurally real mechanism the taxonomy cannot classify.",
+      "source": "User prompt (library verdict context: M-set non-exhaustiveness)"
+    },
+    {
+      "id": "omega_legitimacy_source",
+      "description": "What makes top-down imposition legitimate? Meiji case claims restoration narrative plus civilizational advancement mandate. But is this a distinct legitimacy type or merely force dressed as legitimacy? Affects whether exogenous imposition is a reading or a degenerate case.",
+      "source": "Authority grounding ambiguity in commitment_system_recognition"
+    },
+    {
+      "id": "omega_resistance_asymmetry",
+      "description": "Endogenous climb predicts resistance at apex; exogenous imposition predicts resistance at base. Hybrid predicts both. Historical record shows base resistance (calendar riots, dress non-compliance) but also apex resistance to earlier reform proposals pre-1868. Does this support hybrid reading or sequential readings?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — resistance location as discriminator"
+    },
+    {
+      "id": "omega_stabilization_timeline",
+      "description": "How long does exogenous imposition take to stabilize? If stabilization requires eventual fringe validation, exogenous and endogenous may differ only in initiation mechanism, not ultimate structure. Calendar adoption stabilized within 5 years; Western dress took 30+ years to diffuse beyond official contexts.",
+      "source": "Preliminary classification — timeline difference between calendar and dress suggests different mechanisms"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic is genuinely a contested kernel: three readings emit structurally different constraints (fringe-beneficiary vs state-beneficiary; gradual vs abrupt adoption; resistance location inverted). Axiom contradiction holds between endogenous and exogenous readings. Hybrid reading allows coexistence of mechanisms sequentially but not simultaneously for the same commitment."
+  },
+  "_seed_id": "meiji_calendar_dress_imposition"
+}

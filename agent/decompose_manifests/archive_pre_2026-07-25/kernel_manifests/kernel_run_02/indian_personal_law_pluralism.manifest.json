@@ -1,0 +1,261 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Pluralism / Religious Governance",
+  "family_id": "india_personal_law_coexistence",
+  "topic_summary": "Analysis of India's coexisting personal-law regimes governing marriage, divorce, inheritance, and adoption through Hindu, Muslim, Christian, Parsi, and secular frameworks. The system permits religion-based legal authority within a constitutional secular state, creating structural tensions over whether family law authority derives from religious tradition or state sovereignty. The Shah Bano case (1985) crystallized this contest when Parliament legislatively overrode Supreme Court application of secular maintenance law to Muslim women.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Indian Constitution Article 44 (Directive Principle for Uniform Civil Code, non-justiciable)",
+      "Supreme Court of India (constitutional adjudicator, secular law enforcer)",
+      "Parliament (legislative authority, enacted Muslim Women Act 1986)",
+      "All India Muslim Personal Law Board (religious authority claimant, mobilized against Shah Bano verdict)",
+      "Hindu Marriage Act 1955 / Muslim Personal Law (Shariat) Application Act 1937 / Christian Marriage Act 1872 / Parsi Marriage and Divorce Act 1936 (statutory personal law frameworks)",
+      "Section 125 Code of Criminal Procedure (secular maintenance provision applied across religions)",
+      "Shah Bano (Muslim divorcée, Supreme Court maintenance case plaintiff)",
+      "Rajiv Gandhi government (enacted 1986 Act diluting Shah Bano verdict)"
+    ],
+    "key_tensions": [
+      "State sovereignty vs religious autonomy (Parliament/Courts vs AIMPLB over who controls family law authority)",
+      "Gender justice vs community identity (women's maintenance rights vs religious personal law preservation)",
+      "Constitutional secularism vs legal pluralism (Article 44 UCC directive vs Article 25-28 religious freedom)",
+      "Authority source ambiguity (personal laws as state-codified statutes vs religious commands)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Authority to adjudicate legitimate family law action (marriage validity, divorce procedure, inheritance distribution, adoption rights)",
+    "authority_description": "Contested between state constitutional supremacy (Parliament/Courts enforce secular law) and religious community autonomy (personal law boards claim interpretive authority over religious tradition)",
+    "drift_status": "absent",
+    "candidate_pattern": "D2_culture_level_break",
+    "is_contested_kernel": true,
+    "kernel_id": "family_law_authority",
+    "readings": [
+      {
+        "reading_id": "state_supremacy_reading",
+        "commitment": "Family law authority derives from constitutional state sovereignty; personal laws are statutory creations subject to secular override",
+        "authority_grounding": "Constitutional supremacy doctrine; Parliament's legislative power; Supreme Court's Shah Bano verdict applying Section 125 CrPC universally",
+        "sibling_readings": [
+          "religious_autonomy_reading",
+          "hybrid_accommodation_reading"
+        ],
+        "expected_structural_delta": "State holds monopoly on legitimate family law; religious traditions are advisory inputs to statutory codification; gender justice claims override religious practice; UCC becomes constitutional mandate not aspiration"
+      },
+      {
+        "reading_id": "religious_autonomy_reading",
+        "commitment": "Family law authority derives from immutable religious tradition; state role is administrative recognition not substantive control",
+        "authority_grounding": "Religious freedom (Articles 25-28); AIMPLB's claim that Shariat is divine law beyond state modification; millet system historical precedent; community identity preservation",
+        "sibling_readings": [
+          "state_supremacy_reading",
+          "hybrid_accommodation_reading"
+        ],
+        "expected_structural_delta": "Religious communities hold autonomous jurisdiction; state intervention is illegitimate encroachment; personal law boards are interpretive authorities not advisory bodies; UCC violates religious freedom; Shah Bano override (1986 Act) was legitimate restoration of religious authority"
+      },
+      {
+        "reading_id": "hybrid_accommodation_reading",
+        "commitment": "Family law authority is shared domain requiring negotiated balance between state constitutional values and religious community norms",
+        "authority_grounding": "Concurrent List structure; Article 44 as non-justiciable directive (aspiration not mandate); colonial-era codification creating state-administered religious law; pragmatic pluralism managing diverse society",
+        "sibling_readings": [
+          "state_supremacy_reading",
+          "religious_autonomy_reading"
+        ],
+        "expected_structural_delta": "Authority is genuinely divided not unified; state and religious bodies both hold legitimate but bounded claims; conflicts require political negotiation not legal resolution; personal law reform proceeds incrementally through community consent; UCC remains perpetually deferred; system sustains structural incoherence as equilibrium not dysfunction"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "state_supremacy_reading",
+        "reading_b": "religious_autonomy_reading",
+        "basis": "State supremacy axiom holds constitutional law as ultimate authority over all domains including family law; religious autonomy axiom holds divine/traditional law as beyond state modification in family matters. No single framework can simultaneously accept both as true—accepting state supremacy requires rejecting religious law's claim to autonomous authority, and vice versa."
+      },
+      {
+        "reading_a": "state_supremacy_reading",
+        "reading_b": "hybrid_accommodation_reading",
+        "basis": "State supremacy axiom holds authority as indivisible (state holds monopoly); hybrid axiom holds authority as genuinely divisible (both state and religious bodies hold legitimate bounded claims). A framework cannot simultaneously hold that authority is monopolistic and that it is shared without collapsing into incoherence."
+      },
+      {
+        "reading_a": "religious_autonomy_reading",
+        "reading_b": "hybrid_accommodation_reading",
+        "basis": "Religious autonomy axiom holds religious law as beyond state negotiation (immutable divine command); hybrid axiom holds religious norms as subject to state-community negotiation and incremental reform. No framework can hold both that religious law is non-negotiable and that it requires ongoing negotiated balance."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "state_supremacy_reading",
+      "human_readable": "State Supremacy Reading (Constitutional Authority Over Family Law)",
+      "structural_delta": "Family law authority derives from constitutional state sovereignty with religious traditions as statutory inputs subject to secular override",
+      "primary_observable": "Judicial enforcement of secular law (Section 125 CrPC) against personal law claims; legislative codification of religious practices into state statutes; Supreme Court rulings asserting constitutional supremacy",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "secular_state_apparatus",
+      "victim": "religious_community_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating constitutional supremacy doctrine; highest structural tension with religious autonomy claim; Shah Bano verdict exemplifies this constraint"
+    },
+    {
+      "claim_id": "religious_autonomy_reading",
+      "human_readable": "Religious Autonomy Reading (Divine/Traditional Law Beyond State Control)",
+      "structural_delta": "Family law authority derives from immutable religious tradition with state role limited to administrative recognition not substantive modification",
+      "primary_observable": "AIMPLB mobilization against Shah Bano; 1986 Act legislative override restoring religious law primacy; community resistance to UCC proposals; personal law board claims to interpretive authority",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "religious_leadership_structures",
+      "victim": "women_seeking_secular_rights",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiomatically contradictory to state supremacy; AIMPLB's successful 1986 Act lobbying demonstrates this constraint's enforcement power; captures religious freedom vs gender justice tension"
+    },
+    {
+      "claim_id": "hybrid_accommodation_reading",
+      "human_readable": "Hybrid Accommodation Reading (Shared Authority Requiring Negotiation)",
+      "structural_delta": "Family law authority is genuinely divided domain where state constitutional values and religious community norms both hold legitimate but bounded claims requiring ongoing political negotiation",
+      "primary_observable": "Article 44 non-justiciable status (aspiration not mandate); Concurrent List structure enabling state-religion overlap; incremental personal law reforms through community consultation; perpetual UCC deferral despite constitutional directive",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Captures the system's actual operational logic as sustained structural incoherence rather than dysfunction; explains why neither state supremacy nor religious autonomy fully prevails; documents the equilibrium mechanism"
+    },
+    {
+      "claim_id": "colonial_codification_legacy",
+      "human_readable": "Colonial Codification Legacy (State-Created 'Religious' Law)",
+      "structural_delta": "Personal laws are British colonial constructions rationalizing diverse practices into statutory frameworks, not authentic preservation of religious tradition",
+      "primary_observable": "Historical analysis showing Hindu/Muslim law as colonial-era codifications; divergence between statutory personal law and actual religious texts/practices; state's role in defining what counts as 'religious law'",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "state_supremacy_reading",
+        "religious_autonomy_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical context axis; feeds into both supremacy and autonomy readings but lacks independent constraint story; omega material on authority source ambiguity"
+    },
+    {
+      "claim_id": "gender_justice_extraction",
+      "human_readable": "Gender Justice Extraction (Women as Victims of Authority Contest)",
+      "structural_delta": "Women's rights become bargaining chips in state-religion authority contest, with both sides extracting legitimacy from women's subordination or liberation claims",
+      "primary_observable": "Shah Bano case outcome (maintenance rights granted then legislatively revoked); women's rights activists' mobilization; differential maintenance/inheritance/divorce rights across personal law regimes",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "women_across_all_communities",
+      "downstream_of": [
+        "state_supremacy_reading",
+        "religious_autonomy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream snare captured within the three readings' victim structures; state supremacy and religious autonomy both extract from women's subordination/liberation framing"
+    },
+    {
+      "claim_id": "ucc_perpetual_deferral",
+      "human_readable": "UCC Perpetual Deferral (Constitutional Aspiration as Equilibrium Mechanism)",
+      "structural_delta": "Article 44's non-justiciable status enables indefinite deferral of Uniform Civil Code, functioning as pressure valve rather than mandate",
+      "primary_observable": "75+ years without UCC implementation despite constitutional directive; political cost of UCC proposals; Article 44 invoked rhetorically but never legislatively enforced",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "hybrid_accommodation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream mechanism of hybrid reading; non-justiciable status already captured in hybrid accommodation's structural delta"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "state_supremacy_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "state_supremacy_reading"
+    },
+    {
+      "claim_id": "religious_autonomy_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "religious_autonomy_reading"
+    },
+    {
+      "claim_id": "hybrid_accommodation_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "hybrid_accommodation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "colonial_codification_legacy",
+      "structural_delta": "Personal laws as British colonial constructions rationalizing diverse practices into statutory frameworks",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical context axis feeding into both supremacy and autonomy readings but lacking independent constraint story; authority source ambiguity better addressed as omega"
+    },
+    {
+      "claim_id": "gender_justice_extraction",
+      "structural_delta": "Women's rights as bargaining chips in state-religion authority contest",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream snare captured within the three readings' victim structures; both state supremacy and religious autonomy extract legitimacy from women's subordination/liberation framing"
+    },
+    {
+      "claim_id": "ucc_perpetual_deferral",
+      "structural_delta": "Article 44's non-justiciable status enabling indefinite UCC deferral as equilibrium mechanism",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream mechanism of hybrid accommodation reading; non-justiciable status already captured in hybrid reading's structural delta"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_authority_source_ambiguity",
+      "description": "Colonial codification legacy reveals personal laws are state creations not authentic religious preservation. If religious autonomy reading claims divine law authority over state-constructed statutes, the authority source becomes circular: religious law derives legitimacy from state codification which derives legitimacy from religious tradition. This ambiguity enables both state supremacy and religious autonomy readings to claim the same statutory framework as their foundation.",
+      "source": "Deferred axis colonial_codification_legacy + extraction anchor 'What eventually came to be known as Hindu and Mahomedan laws were creations of the colonial state'"
+    },
+    {
+      "id": "omega_incoherence_as_equilibrium",
+      "description": "Hybrid accommodation reading treats structural incoherence (competing authority sources, legal fragmentation, perpetual UCC deferral) as equilibrium mechanism rather than dysfunction. If this is correct, attempts to 'resolve' the contest through UCC or constitutional amendment would destabilize the system. If incorrect, the system is accumulating drift that will eventually fracture. No empirical test distinguishes stable incoherence from pre-fracture drift.",
+      "source": "Hybrid accommodation reading + extraction anchor 'balancing claims of religious communities with modern secular state has caused intractable problems'"
+    },
+    {
+      "id": "omega_gender_justice_instrumentalization",
+      "description": "Women's rights claims are instrumentalized by both state supremacy (Shah Bano verdict as secular progress) and religious autonomy (1986 Act as community protection). If gender justice is genuinely the constraint, neither reading should extract legitimacy from women's subordination. But both do: state supremacy tolerates Hindu personal law inequalities while targeting Muslim law; religious autonomy defends patriarchal inheritance rules as religious freedom. The victim set (women across all communities) remains constant across readings, suggesting gender extraction is the upstream mountain both readings obscure.",
+      "source": "Deferred axis gender_justice_extraction + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_d2_pattern_validity",
+      "description": "Commitment system recognition flags D2 culture-level break as candidate pattern. D2 requires: (1) multiple cultures each with internal kernel-authority structure, (2) no shared meta-authority, (3) coexistence without zero-sum shedding. India's system meets (1) and (3) but fails (2): Parliament and Supreme Court claim meta-authority (Section 125 CrPC applies universally; 1986 Act legislatively overrides religious practice). This may be D1 interpretive-layer absorption (state absorbs religious diversity through statutory personal law framework) rather than D2. Pattern classification uncertain pending generation.",
+      "source": "Commitment system recognition + extraction anchor 'Parliament explicitly reasserted state control by legislating 1986 Act yet perceived as religious encroachment'"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected capture axiomatically contradictory positions on authority source. Kernel decomposition applied per §1.3-K: is_contested_kernel=true with readings array. Each generation_sequence entry is object with kernel_id and reading_id fields. Dark matter probes surfaced gender justice extraction (deferred as captured in victim structures) and authority source ambiguity (omega). Colonial codification legacy deferred as historical context feeding into readings without independent constraint story."
+  },
+  "_seed_id": "indian_personal_law_pluralism"
+}

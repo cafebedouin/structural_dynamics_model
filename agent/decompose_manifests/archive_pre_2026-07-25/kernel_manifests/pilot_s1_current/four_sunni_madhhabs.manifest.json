@@ -1,0 +1,161 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Legal Theory / Commitment Systems",
+  "family_id": "sunni_madhahib_jurisprudential_method",
+  "topic_summary": "Analysis of the four Sunni schools of jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali) as a contested kernel case. Each school offers a distinct reading of the shared jurisprudential-method kernel—how to derive legal rulings from foundational sources—while grounding interpretive authority differently. The schools have coexisted for over a millennium without displacement, instantiating licensed plurality within Islamic legal tradition.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 1,
+    "key_entities": [
+      "Hanafi school (founded Abu Hanifa, 8th century; emphasizes qiyas/analogical reasoning)",
+      "Maliki school (founded Malik ibn Anas; emphasizes Medinan practice/amal)",
+      "Shafi'i school (founded al-Shafi'i; systematized usul al-fiqh hierarchy)",
+      "Hanbali school (founded Ahmad ibn Hanbal; textualist, restricts qiyas)",
+      "Shared kernel: Quran + Sunnah as foundational sources",
+      "Usul al-fiqh (legal theory methodology)",
+      "Taqlid (following established school authority)",
+      "Ijtihad (independent legal reasoning)"
+    ],
+    "key_tensions": [
+      "Textualist restriction (Hanbali) vs expansive analogical reasoning (Hanafi)",
+      "Systematic hierarchy (Shafi'i) vs practice-grounded authority (Maliki)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "jurisprudential_method_kernel",
+      "human_readable": "Jurisprudential Method Kernel (Contested Readings of Source-to-Ruling Derivation)",
+      "structural_delta": "Four distinct methodologies for deriving legal rulings from shared foundational sources (Quran/Sunnah), each grounding interpretive authority differently while maintaining mutual recognition",
+      "primary_observable": "Divergent rulings on identical fact patterns; explicit usul al-fiqh treatises documenting methodological differences; institutional persistence of four schools across centuries and geographies",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_with_readings",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with four individually-holdable readings; entire topic structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hanafi_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "hanafi_reading"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "maliki_reading"
+    },
+    {
+      "claim_id": "shafi_i_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "shafi_i_reading"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "kernel_id": "jurisprudential_method_kernel",
+      "reading_id": "hanbali_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_shia_exclusion",
+      "description": "Analysis limited to Sunni schools. Ja'fari (Twelver Shia) jurisprudence offers fifth reading of same kernel with distinct authority structure (Imamate). Exclusion reflects Sunni-Shia sectarian boundary, not structural necessity.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_modern_displacement",
+      "description": "Does codification (modern nation-state legal codes) convert the kernel from functioning to partial drift? Schools persist institutionally but state law may absorb interpretive authority without surfacing revision.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_gender_rulings",
+      "description": "All four schools share patriarchal assumptions in family law. Shared substrate may indicate second-order kernel (gender hierarchy) beneath jurisprudential-method kernel. Requires separate analysis.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four-reading structure matches historical madhahib taxonomy. Lens diversity achieved via legal-theory, sociological-institutionalist, and comparative-law perspectives."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared jurisprudential method for deriving legal rulings (fiqh) from foundational sources (Quran and Sunnah), including the hierarchy and scope of secondary sources (qiyas, ijma, istihsan, maslaha, etc.)",
+    "authority_description": "Each school grounds interpretive legitimacy in its founder's methodology and the continuity of scholarly transmission (isnad) within that tradition. Authority is distributed across mujtahid scholars within each school, not centralized.",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "jurisprudential_method_kernel",
+    "readings": [
+      {
+        "reading_id": "hanafi_reading",
+        "commitment": "Expansive use of qiyas (analogical reasoning) and istihsan (juristic preference) to extend rulings beyond explicit texts; reason-based authority",
+        "authority_grounding": "Abu Hanifa's rationalist methodology; scholarly consensus within Hanafi tradition; institutional continuity in Ottoman/South Asian contexts",
+        "sibling_readings": [
+          "maliki_reading",
+          "shafi_i_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Broader scope for derived rulings; higher tolerance for regional variation; reason as co-equal source alongside text"
+      },
+      {
+        "reading_id": "maliki_reading",
+        "commitment": "Medinan practice (amal ahl al-Madina) as authoritative source; living tradition of the Prophet's city grounds rulings",
+        "authority_grounding": "Malik ibn Anas's proximity to Medinan practice; continuity of communal custom; institutional dominance in North/West Africa",
+        "sibling_readings": [
+          "hanafi_reading",
+          "shafi_i_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Practice-based authority competes with textual authority; regional custom elevated to source-level; communal continuity as legitimation"
+      },
+      {
+        "reading_id": "shafi_i_reading",
+        "commitment": "Systematic hierarchy of sources (Quran > Sunnah > ijma > qiyas) with explicit methodology (usul al-fiqh) governing derivation",
+        "authority_grounding": "Al-Shafi'i's Risala as foundational text systematizing legal theory; scholarly mastery of usul; institutional spread via educational institutions",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Formalized methodology reduces discretion; hierarchy stabilizes but may rigidify; systematic training becomes authority prerequisite"
+      },
+      {
+        "reading_id": "hanbali_reading",
+        "commitment": "Textualist restriction: primacy of Quran/Sunnah with minimal analogical extension; suspicion of rationalist methods",
+        "authority_grounding": "Ahmad ibn Hanbal's hadith expertise and resistance to speculative theology; scholarly fidelity to transmitted texts; institutional base in Arabian Peninsula",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "shafi_i_reading"
+        ],
+        "expected_structural_delta": "Narrower scope for derived rulings; higher evidentiary bar for analogy; text-fidelity as primary legitimation criterion"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hanafi_reading",
+        "reading_b": "hanbali_reading",
+        "basis": "Hanafi elevates reason (qiyas/istihsan) to co-equal source status; Hanbali restricts reason to servant of text. No single framework holds both: accepting reason as co-equal source requires rejecting textualist restriction as foundational axiom."
+      },
+      {
+        "reading_a": "maliki_reading",
+        "reading_b": "shafi_i_reading",
+        "basis": "Maliki grounds authority in living communal practice (amal) as independent source; Shafi'i subordinates practice to systematic textual hierarchy. No single framework holds both: accepting practice as source-level authority requires rejecting Shafi'i's hierarchical systematization as complete."
+      }
+    ]
+  },
+  "_seed_id": "four_sunni_madhhabs"
+}

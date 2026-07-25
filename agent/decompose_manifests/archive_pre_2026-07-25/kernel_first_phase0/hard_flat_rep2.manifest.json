@@ -1,0 +1,175 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Information Standards / Sociotechnical Systems / Representational Conventions",
+  "family_id": "date_format_standards_2026",
+  "topic_summary": "Analysis of the ISO 8601 (YYYY-MM-DD) versus US month/day/year (MM/DD/YYYY) date format dispute. The topic presents as a representational standard conflict but examination reveals it is NOT a contested kernel — both formats encode identical information with identical precision, differing only in serialization order. The disagreement is about coordination costs and legacy path dependency, not about what constitutes a valid date representation.",
+  "extraction_summary": {
+    "entity_count": 4,
+    "claim_count": 3,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "ISO 8601 standard (international date/time representation standard, YYYY-MM-DD)",
+      "US date convention (MM/DD/YYYY format, dominant in American contexts)",
+      "International Organization for Standardization (standards body)",
+      "Legacy systems (databases, forms, software expecting specific format)"
+    ],
+    "key_tensions": [
+      "Lexicographic sortability vs cultural familiarity (ISO advocates vs US convention defenders)",
+      "Global interoperability vs domestic coordination equilibrium (international vs national optimization)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "What constitutes a valid calendar date representation",
+    "authority_description": "ISO standards body vs national/cultural practice",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_reason": "All candidate readings encode identical information (year, month, day) with identical precision. Disagreement is about serialization order and coordination costs, not about what a date IS. The 'kernel' collapses to a single constraint (calendar date representation) observed from different coordination positions. This is ordinary axis decomposition territory, not kernel/reading structure."
+  },
+  "axes": [
+    {
+      "claim_id": "lexicographic_sortability",
+      "human_readable": "Lexicographic Sortability (ISO 8601 Design Principle)",
+      "structural_delta": "YYYY-MM-DD format enables correct chronological sorting via simple string comparison",
+      "primary_observable": "Database query performance on date fields; filesystem timestamp ordering correctness",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "format_coordination_trap",
+        "interoperability_friction"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Mountain providing physical constraint base — string comparison is a computational primitive"
+    },
+    {
+      "claim_id": "cultural_familiarity_inertia",
+      "human_readable": "Cultural Familiarity Inertia (US Convention Persistence)",
+      "structural_delta": "MM/DD/YYYY embedded in educational systems, legal documents, and cognitive habits",
+      "primary_observable": "Format prevalence in government forms, educational materials, public signage",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "format_coordination_trap"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (cultural embedding vs computational property); piton of historical path dependency"
+    },
+    {
+      "claim_id": "format_coordination_trap",
+      "human_readable": "Format Coordination Trap (Network Lock-In)",
+      "structural_delta": "Switching costs create equilibrium where suboptimal format persists due to coordination failure",
+      "primary_observable": "Migration cost estimates for legacy systems; format conversion error rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "legacy_system_vendors",
+      "victim": "international_data_exchange_participants",
+      "downstream_of": [
+        "lexicographic_sortability",
+        "cultural_familiarity_inertia"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis of mountain and piton; captures extractive dimension"
+    },
+    {
+      "claim_id": "interoperability_friction",
+      "human_readable": "Interoperability Friction (Cross-Border Data Exchange Costs)",
+      "structural_delta": "Format ambiguity (01/02/2026 = Jan 2 or Feb 1?) creates parsing errors and manual verification overhead",
+      "primary_observable": "Error rates in international transactions; manual verification labor hours",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "lexicographic_sortability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally captured by format_coordination_trap's victim set; independent observable but overlapping extractive mechanism"
+    },
+    {
+      "claim_id": "regulatory_mandate_potential",
+      "human_readable": "Regulatory Mandate Potential (Government-Imposed Standardization)",
+      "structural_delta": "State capacity to mandate format adoption via procurement rules or legal requirements",
+      "primary_observable": "Government procurement specifications; regulatory adoption timelines",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "format_coordination_trap"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold with speculative extractiveness; omega variable for policy intervention"
+    }
+  ],
+  "generation_sequence": [
+    "lexicographic_sortability",
+    "cultural_familiarity_inertia",
+    "format_coordination_trap"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "interoperability_friction",
+      "structural_delta": "Format ambiguity creates parsing errors in cross-border data exchange",
+      "hypothesis": "rope",
+      "deferral_reason": "Structurally captured by format_coordination_trap's victim set; independent observable but overlapping extractive mechanism with selected tangled_rope"
+    },
+    {
+      "claim_id": "regulatory_mandate_potential",
+      "structural_delta": "State capacity to mandate format via procurement or legal requirements",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Speculative scaffold; omega variable for policy intervention scenarios"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Topic flagged as contested kernel but examination reveals collapse: all candidate 'readings' encode identical information (year/month/day) with identical precision. Disagreement is about serialization order (coordination problem) not about what constitutes a valid date (ontological disagreement). The kernel collapses to a single constraint observed from different coordination positions. Decomposed as ordinary axes instead.",
+      "source": "§1.3-K kernel/reading analysis"
+    },
+    {
+      "id": "omega_dd_mm_yyyy_exclusion",
+      "description": "Analysis focuses on ISO vs US formats but excludes DD/MM/YYYY (European convention), which creates a three-way coordination problem with different ambiguity patterns. The mountain of lexicographic sortability applies identically; the piton of cultural familiarity has a different geographic distribution. Deferred for scope management.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_regulatory_intervention",
+      "description": "Is regulatory_mandate_potential a Scaffold (enabling coordination) or a Snare (imposing costs on non-compliant actors)? Depends on whether mandate includes transition support or simply penalizes legacy format use. Deferred axis with high policy sensitivity.",
+      "source": "Deferred axis regulatory_mandate_potential + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_unicode_calendar_systems",
+      "description": "Analysis assumes Gregorian calendar. Non-Gregorian calendar systems (Hebrew, Islamic, Chinese) have fundamentally different date representation requirements. ISO 8601 is Gregorian-only; treating it as universal standard erases non-Western temporal systems. Potential Snare for cultural minorities.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F34 epistemic trespass boundary"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Analysis assumes Gregorian calendar universality. Model lacks domain expertise to evaluate non-Gregorian calendar representation standards (Hebrew, Islamic, Chinese calendars). Generated omega_unicode_calendar_systems to bound this limitation. Kernel collapse (not a contested kernel) documented in omega_kernel_collapse."
+  }
+}

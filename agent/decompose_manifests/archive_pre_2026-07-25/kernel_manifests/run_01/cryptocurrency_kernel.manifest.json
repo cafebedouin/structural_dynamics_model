@@ -1,0 +1,216 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Theory / Technology Governance / Political Economy",
+  "family_id": "cryptocurrency_kernel_contest_2026",
+  "topic_summary": "Analysis of cryptocurrency as a contested kernel with three candidate readings: sound-money (inflation hedge, store of value), speculative-asset (price appreciation vehicle), and decentralization-ideology (censorship resistance, sovereignty). The core question is whether these are three readings of one shared commitment or three distinct kernels sharing a technological substrate.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Bitcoin/cryptocurrency protocols (technological substrate)",
+      "Sound-money advocates (Austrian economics, gold-standard nostalgia)",
+      "Speculative traders (retail and institutional capital seeking returns)",
+      "Cypherpunk/decentralization ideologues (censorship resistance, sovereignty)",
+      "Central banks and monetary authorities (fiat currency issuers)",
+      "Regulatory bodies (SEC, CFTC, international equivalents)"
+    ],
+    "key_tensions": [
+      "Fixed supply (sound-money reading) vs price volatility (speculative reading)",
+      "Decentralization commitment (ideology reading) vs institutional adoption (speculative reading)",
+      "Censorship resistance (ideology reading) vs regulatory compliance (all readings under state pressure)"
+    ],
+    "key_mechanisms": [
+      "Proof-of-work mining (secures ledger, enforces scarcity)",
+      "Exchange-mediated price discovery (enables speculation, undermines self-custody)",
+      "Regulatory classification (commodity vs security vs currency determines legal constraint)",
+      "Network effect accumulation (winner-take-all dynamics vs fragmentation)"
+    ],
+    "key_absences": [
+      "Actual transaction usage data (payment vs speculation vs hoarding)",
+      "Energy cost externalities (proof-of-work environmental impact)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Cryptocurrency as a technological commitment to algorithmic scarcity and distributed consensus",
+    "authority_description": "No single interpretive authority; competing communities claim legitimacy via different groundings (economic theory, market performance, ideological purity)",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_analysis": "Initial hypothesis: three readings of one kernel. Testing reveals THREE DISTINCT KERNELS sharing a technological substrate. Sound-money reading grounds commitment in scarcity (Austrian monetary theory). Speculative reading grounds commitment in price appreciation (market performance). Decentralization reading grounds commitment in censorship resistance (cypherpunk ideology). These are not different interpretations of one shared commitment—they are three separate commitments that happen to use the same technology. A sound-money advocate and a speculator do not disagree about what Bitcoin IS; they agree it is scarce digital tokens, but one values scarcity-as-inflation-hedge while the other values scarcity-as-supply-constraint-for-price-pumping. The substrate (blockchain, proof-of-work, fixed supply) is shared infrastructure, not a kernel. Coherence test fails: removing any reading does not change what the other readings constrain. This is three parallel constraint systems, not one contested kernel."
+  },
+  "axes": [
+    {
+      "claim_id": "sound_money_scarcity_constraint",
+      "human_readable": "Sound Money Scarcity Constraint (Inflation Hedge)",
+      "structural_delta": "Fixed supply as protection against monetary debasement; store-of-value function",
+      "primary_observable": "Correlation with M2 money supply growth; adoption by inflation-hedging portfolios",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "early_adopters_holding_for_appreciation",
+      "victim": "late_adopters_buying_at_peak",
+      "downstream_of": [],
+      "feeds_into": [
+        "speculative_price_volatility_trap"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Distinct observable (M2 correlation vs price volatility); upstream to speculation axis"
+    },
+    {
+      "claim_id": "speculative_price_volatility_trap",
+      "human_readable": "Speculative Price Volatility Trap (Asset Bubble Dynamics)",
+      "structural_delta": "Price volatility driven by speculation undermines store-of-value and payment-medium functions",
+      "primary_observable": "30-day price volatility; ratio of exchange volume to transaction volume",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "exchanges_capturing_trading_fees",
+      "victim": "retail_speculators_losing_capital",
+      "downstream_of": [
+        "sound_money_scarcity_constraint"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; downstream synthesis of sound-money and speculation dynamics"
+    },
+    {
+      "claim_id": "decentralization_sovereignty_commitment",
+      "human_readable": "Decentralization Sovereignty Commitment (Censorship Resistance)",
+      "structural_delta": "Distributed consensus as mechanism to resist state control and financial censorship",
+      "primary_observable": "Node distribution; resistance to regulatory capture; self-custody adoption rate",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ideological_purists_maintaining_protocol_integrity",
+      "victim": "users_seeking_institutional_custody_convenience",
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_capture_drift"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent observable; structurally distinct from monetary axes; feeds into institutional capture"
+    },
+    {
+      "claim_id": "institutional_capture_drift",
+      "human_readable": "Institutional Capture Drift (Exchange-Mediated Centralization)",
+      "structural_delta": "Institutional adoption via custodial exchanges undermines decentralization commitment",
+      "primary_observable": "Percentage of supply held on exchanges vs self-custody; ETF adoption rate",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "institutional_intermediaries",
+      "victim": "decentralization_ideology",
+      "downstream_of": [
+        "decentralization_sovereignty_commitment"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream of decentralization axis with overlapping observable (custody distribution)"
+    },
+    {
+      "claim_id": "energy_externality_mountain",
+      "human_readable": "Energy Externality Mountain (Proof-of-Work Environmental Cost)",
+      "structural_delta": "Proof-of-work mining imposes energy consumption externality not priced into transaction costs",
+      "primary_observable": "Network energy consumption; carbon emissions per transaction",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "global_climate_system",
+      "downstream_of": [],
+      "feeds_into": [
+        "regulatory_classification_uncertainty"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain with low epsilon; environmental constraint orthogonal to monetary/governance axes"
+    },
+    {
+      "claim_id": "regulatory_classification_uncertainty",
+      "human_readable": "Regulatory Classification Uncertainty (Commodity vs Security vs Currency)",
+      "structural_delta": "Legal classification determines permissible use cases and compliance burden",
+      "primary_observable": "SEC enforcement actions; international regulatory divergence",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": "regulatory_arbitrage_actors",
+      "victim": "compliant_market_participants",
+      "downstream_of": [
+        "energy_externality_mountain"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold with high uncertainty; regulatory environment still forming"
+    }
+  ],
+  "generation_sequence": [
+    "sound_money_scarcity_constraint",
+    "speculative_price_volatility_trap",
+    "decentralization_sovereignty_commitment"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_capture_drift",
+      "structural_delta": "Institutional adoption via custodial exchanges undermines decentralization",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream of decentralization_sovereignty_commitment with overlapping custody observable"
+    },
+    {
+      "claim_id": "energy_externality_mountain",
+      "structural_delta": "Proof-of-work energy consumption externality",
+      "hypothesis": "mountain",
+      "deferral_reason": "Low epsilon mountain orthogonal to selected monetary/governance axes; environmental constraint"
+    },
+    {
+      "claim_id": "regulatory_classification_uncertainty",
+      "structural_delta": "Legal classification determines compliance burden and use cases",
+      "hypothesis": "scaffold",
+      "deferral_reason": "High-uncertainty scaffold; regulatory environment still forming; omega material"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The three candidate readings (sound-money, speculation, decentralization) are not readings of one kernel but three distinct kernels sharing technological infrastructure. A sound-money advocate and a speculator agree on what Bitcoin is (scarce digital tokens) but value different properties. This is not interpretive disagreement about one commitment but three parallel commitments. The 'cryptocurrency kernel' is a category error—there is no single shared commitment being read differently.",
+      "source": "§1.3-K coherence test failure"
+    },
+    {
+      "id": "omega_transaction_usage_gap",
+      "description": "Extraction identifies absence of actual transaction usage data. If cryptocurrency is primarily held for speculation rather than used for payments, the sound-money reading collapses into a speculative narrative with Austrian-economics branding. Observable: ratio of transaction volume to exchange volume.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_regulatory_classification_instability",
+      "description": "Deferred axis regulatory_classification_uncertainty has high epsilon but unstable observable. If SEC classifies most tokens as securities, the decentralization reading becomes a piton (atrophied sovereignty claim). If classified as commodities, speculation reading gains institutional legitimacy. Classification is upstream to all three selected axes but too uncertain for generation.",
+      "source": "Deferred axis with high epsilon + Dark Matter Probe 3"
+    },
+    {
+      "id": "omega_energy_externality_reclassification",
+      "description": "Energy_externality_mountain classified as low-epsilon mountain, but global carbon pricing or proof-of-stake transition could reclassify it as high-epsilon snare. If energy costs are internalized, proof-of-work becomes economically unviable, collapsing sound-money and decentralization readings that depend on it.",
+      "source": "F03 (Hasty Generalization) + deferred axis analysis"
+    },
+    {
+      "id": "omega_institutional_capture_inevitability",
+      "description": "Deferred axis institutional_capture_drift suggests decentralization commitment may be a piton rather than tangled_rope. If exchange custody becomes dominant (already >80% of supply), censorship resistance becomes theoretical rather than operational. Observable: self-custody adoption trajectory.",
+      "source": "Deferred axis institutional_capture_drift + beneficiary scan"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: energy_externality_mountain classified as low-epsilon mountain but global carbon pricing or proof-of-stake transition could reclassify as high-epsilon snare. Generated omega_energy_externality_reclassification. Also: kernel coherence test failed—three distinct kernels, not one contested kernel. Recorded in omega_kernel_collapse and commitment_system_recognition.collapse_analysis."
+  },
+  "_seed_id": "cryptocurrency_kernel"
+}

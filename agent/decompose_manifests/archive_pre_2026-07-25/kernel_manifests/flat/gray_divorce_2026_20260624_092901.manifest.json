@@ -1,0 +1,251 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Family Sociology / Demography / Gender Studies",
+  "family_id": "gray_divorce_2026",
+  "topic_summary": "Analysis of the sharp rise in 'gray divorce' (splits among those 50+) in the United States, which doubled between 1990 and 2010. The phenomenon is driven by longer life expectancies, changing marriage expectations emphasizing self-actualization, women's financial independence, and generational unwillingness to remain in 'empty shell marriages' lacking vitality or connection.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Baby Boomer cohort (generation driving gray divorce rates; married young under different norms)",
+      "Empty shell marriages (relationships lacking connection/vitality but maintained for external reasons)",
+      "Women 50+ (primary initiators of gray divorce; financially independent unlike prior generations)",
+      "Marriage as self-actualization institution (contemporary expectation vs. prior breadwinner/homemaker model)",
+      "Menopause (biological/psychological transition sharpening awareness of relationship inequities)",
+      "Second/third marriages (higher divorce rates; 'divorce echo effect')",
+      "Dating apps for older adults (14% of 60s, 12% of 70+ use; perception of options post-divorce)",
+      "Financial consequences (41% income drop for women, 50% wealth drop for both genders)"
+    ],
+    "key_tensions": [
+      "Longevity vs. relationship durability (unprecedented 50-70 year partnerships vs. evolved pair-bonding timescales)",
+      "Self-actualization expectations vs. sunk costs (desire for meaningful third act vs. financial/social costs of divorce)",
+      "Gender asymmetry in outcomes (women initiate but face worse financial consequences; men re-partner more easily)"
+    ],
+    "key_mechanisms": [
+      "Empty shell tolerance threshold (societal shift from staying for kids/stigma to exiting for self-fulfillment)",
+      "Women's financial independence enabling exit (Boomer women's economic autonomy vs. prior generations' dependence)",
+      "Menopause as reassessment trigger (hormonal/psychological changes sharpening awareness of relationship inequities)",
+      "Divorce echo effect (prior divorce experience lowering barrier to subsequent divorce)"
+    ],
+    "key_absences": [
+      "Children's perspective on late-life parental divorce (adult children's experience/outcomes not addressed)",
+      "Cultural/ethnic variation in gray divorce rates (data appears US-aggregate; no breakdown by race/ethnicity/religion)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "longevity_mismatch",
+      "human_readable": "Longevity-Monogamy Mismatch (Evolutionary Timescale Collision)",
+      "structural_delta": "Human pair-bonding evolved for shorter lifespans; 50-70 year partnerships are evolutionarily unprecedented",
+      "primary_observable": "Life expectancy at age 50 vs. median marriage duration; divorce rate trajectory by marriage length",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "empty_shell_tolerance",
+        "third_act_arbitrage"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Mountain providing biological constraint base; upstream to both tolerance shift and arbitrage framing"
+    },
+    {
+      "claim_id": "empty_shell_tolerance",
+      "human_readable": "Empty Shell Tolerance Shift (Generational Unwillingness to Endure)",
+      "structural_delta": "Boomer cohort's declining tolerance for maintaining marriages lacking vitality/connection",
+      "primary_observable": "Survey data on willingness to stay in unsatisfying marriage; moral acceptability of divorce (59% 2001 → 79% 2021)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "longevity_mismatch"
+      ],
+      "feeds_into": [
+        "third_act_arbitrage"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (social norm shift) from longevity; upstream to synthesis node"
+    },
+    {
+      "claim_id": "third_act_arbitrage",
+      "human_readable": "Third Act Arbitrage (Divorce as Self-Actualization Mechanism)",
+      "structural_delta": "Gray divorce framed as mechanism to exit sunk-cost relationship for remaining 20-40 years of self-actualization",
+      "primary_observable": "Qualitative accounts of post-divorce identity reconstruction; dating app usage rates 60+",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "divorcing_individuals_seeking_fulfillment",
+      "victim": "financial_security_of_both_parties",
+      "downstream_of": [
+        "longevity_mismatch",
+        "empty_shell_tolerance",
+        "womens_financial_autonomy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Highest centrality; downstream synthesis node integrating longevity, tolerance, and autonomy axes"
+    },
+    {
+      "claim_id": "womens_financial_autonomy",
+      "human_readable": "Women's Financial Autonomy (Economic Exit Capacity)",
+      "structural_delta": "Boomer women's financial independence enabling divorce initiation despite worse post-divorce outcomes",
+      "primary_observable": "Women's labor force participation 50+; gender gap in divorce initiation vs. post-divorce income drop (41% women, 23% men)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "third_act_arbitrage",
+        "gendered_outcome_asymmetry"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (economic capacity) enabling exit; feeds both arbitrage and asymmetry axes"
+    },
+    {
+      "claim_id": "gendered_outcome_asymmetry",
+      "human_readable": "Gendered Outcome Asymmetry (Initiation vs. Consequence Mismatch)",
+      "structural_delta": "Women initiate majority of gray divorces but face worse financial outcomes and lower re-partnering rates",
+      "primary_observable": "Gender gap in divorce initiation, post-divorce income/wealth, re-partnering rates, food insecurity",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "divorcing_women_50_plus",
+      "downstream_of": [
+        "womens_financial_autonomy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Distinct snare structure; captures extraction dynamic not reducible to autonomy axis"
+    },
+    {
+      "claim_id": "menopause_reassessment_trigger",
+      "human_readable": "Menopause as Reassessment Trigger (Hormonal Clarity Mechanism)",
+      "structural_delta": "Menopause-linked hormonal/psychological changes sharpening awareness of relationship inequities and lowering tolerance",
+      "primary_observable": "Divorce rate spike during menopause years; qualitative accounts of 'losing tolerance' and identity reassessment",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "empty_shell_tolerance"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: biological mechanism feeding tolerance shift but lower structural distinctiveness than selected axes; captured indirectly via empty_shell_tolerance rope"
+    },
+    {
+      "claim_id": "divorce_echo_effect",
+      "human_readable": "Divorce Echo Effect (Prior Divorce Lowering Barrier)",
+      "structural_delta": "Second/third marriages have higher divorce rates; prior divorce experience reduces psychological/social barrier to subsequent divorce",
+      "primary_observable": "Divorce rate by marriage order (first vs. second/third); proportion of gray divorces that are remarriages",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "empty_shell_tolerance"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: subset phenomenon (applies only to remarriages, not first marriages which are 55%+ of gray divorces); lower centrality"
+    },
+    {
+      "claim_id": "boomer_cohort_specificity",
+      "human_readable": "Boomer Cohort Specificity (Generational Peak Hypothesis)",
+      "structural_delta": "Gray divorce as Boomer-specific phenomenon due to early marriage age; Gen X/Millennials unlikely to replicate",
+      "primary_observable": "Gray divorce rate trajectory by birth cohort; marriage age by generation; projected rates for Gen X",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal boundary condition rather than structural axis; omega material on generational specificity"
+    }
+  ],
+  "generation_sequence": [
+    "longevity_mismatch",
+    "empty_shell_tolerance",
+    "womens_financial_autonomy",
+    "third_act_arbitrage",
+    "gendered_outcome_asymmetry"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "menopause_reassessment_trigger",
+      "structural_delta": "Menopause-linked hormonal changes sharpening relationship inequity awareness",
+      "hypothesis": "piton",
+      "deferral_reason": "Biological mechanism feeding tolerance shift; captured indirectly via empty_shell_tolerance rope with lower structural distinctiveness"
+    },
+    {
+      "claim_id": "divorce_echo_effect",
+      "structural_delta": "Prior divorce experience lowering barrier to subsequent divorce",
+      "hypothesis": "piton",
+      "deferral_reason": "Subset phenomenon applying only to remarriages (45% of gray divorces); lower centrality than selected axes"
+    },
+    {
+      "claim_id": "boomer_cohort_specificity",
+      "structural_delta": "Gray divorce as Boomer-specific peak due to early marriage age",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Temporal boundary condition rather than structural axis; zero centrality; omega material on generational limits"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_adult_children_impact",
+      "description": "What are the psychological/relational outcomes for adult children of gray divorce? Source material focuses on divorcing parents; children's perspective is structurally absent despite potential for significant impact on family system.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_cultural_variation",
+      "description": "Do gray divorce rates vary significantly by race, ethnicity, religion, or cultural tradition? Data appears US-aggregate; cultural/religious commitment systems may alter tolerance thresholds or financial autonomy dynamics.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_generational_boundary",
+      "description": "Is gray divorce a Boomer-specific peak or a durable structural shift? Researchers predict Gen X/Millennials will avoid similar rates due to later marriage age, but longevity_mismatch mountain persists. Deferred axis boomer_cohort_specificity bounds this uncertainty.",
+      "source": "Deferred axis boomer_cohort_specificity + F15 (Premature Closure)"
+    },
+    {
+      "id": "omega_menopause_mechanism",
+      "description": "Is menopause a distinct causal trigger or a correlate of midlife reassessment? Research shows divorce rate spike during menopause years, but mechanism (hormonal vs. life-stage) remains contested. Deferred axis menopause_reassessment_trigger.",
+      "source": "Deferred axis menopause_reassessment_trigger"
+    },
+    {
+      "id": "omega_financial_recovery",
+      "description": "Do women's worse post-divorce financial outcomes persist long-term or recover? Data shows 41% income drop and elevated food insecurity for 6+ years, but longitudinal recovery trajectories beyond that window are not addressed.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + gendered_outcome_asymmetry axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan (demography, gender studies, evolutionary psychology, economics, sociology) produced diverse axis set. Dark matter probes surfaced adult children and cultural variation absences. Deferred axes documented with clear structural rationale."
+  }
+}

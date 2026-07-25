@@ -1,0 +1,235 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Biomedical Science / Aging Biology / Nutritional Biochemistry",
+  "family_id": "signal_ecology_metabolic_cognitive_health",
+  "topic_summary": "A framework proposing that metabolic and cognitive decline result from degraded biological signal environments rather than inevitable aging. The framework converges on mitochondrial dysfunction as the common downstream target of protein deficiency, mineral depletion, movement deprivation, circadian disruption, and chronic inflammation, arguing that demand-signal restoration can maintain or restore function.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 6,
+    "absence_count": 3,
+    "key_entities": [
+      "Mitochondrion (cellular organelle; ATP synthesis; convergence point for multiple degradation pathways)",
+      "APOE4 (genetic variant; strongest risk factor for late-onset Alzheimer's; impairs lipid transport and mitochondrial function)",
+      "NAD+ (nicotinamide adenine dinucleotide; coenzyme; declines ~50% from early adulthood to age 60)",
+      "Protein intake (dietary intervention; anabolic resistance increases past age 40)",
+      "Magnesium (mineral cofactor; required for ATP synthesis; widespread functional insufficiency)",
+      "Insulin resistance (metabolic state; compensated by elevated fasting insulin before glucose rises)",
+      "Methylation pathway (biochemical process; impaired by MTHFR variants in ~40% of population)",
+      "Circadian system (physiological coordinator; governs cortisol, melatonin, insulin sensitivity, immune function)",
+      "Gut microbiome (bacterial ecosystem; produces butyrate; bidirectional communication with brain via vagus nerve)",
+      "Resistance training (movement intervention; primary trigger for PGC-1α and mitochondrial biogenesis)",
+      "Sleep architecture (physiological state; eight hours target; cool environment amplifies deep sleep)",
+      "Homocysteine (metabolite; functional proxy for methylation capacity; independent cardiovascular and neurological risk factor)"
+    ],
+    "key_tensions": [
+      "Preclinical efficacy vs human outcome gap (NAD+ precursors raise circulating NAD+ 130-150% but show minimal functional improvement in short-term human trials)",
+      "Mechanistic coherence vs prospective validation (framework synthesizes converging evidence but unified thesis unproven in human trials at scale)",
+      "Universal intervention vs individual variation (Tier 1 interventions have wide therapeutic windows but APOE4 carriers require protocol adjustments)",
+      "Restoration vs slowing (acute mitochondrial function improvement demonstrated but long-term reversal of age-related decline unproven)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "mitochondrial_demand_signal_deficiency",
+      "human_readable": "Mitochondrial Demand-Signal Deficiency (Signal Ecology Thesis)",
+      "structural_delta": "Decline attributed to absence of maintenance demand signals rather than inevitable degeneration",
+      "primary_observable": "Mitochondrial ATP synthesis capacity; electron transport chain activity; mitochondrial membrane potential; measured via respirometry or phosphorus MRS",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "supplement_industry",
+      "victim": "patients_attributing_decline_to_inevitability",
+      "downstream_of": [],
+      "feeds_into": [
+        "protein_anabolic_resistance",
+        "nad_precursor_bioavailability",
+        "apoe4_mitochondrial_vulnerability"
+      ],
+      "centrality_score": 9,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; core thesis with three outbound edges; tangled_rope requiring extraction of signal-ecology framing from mechanistic substrate"
+    },
+    {
+      "claim_id": "protein_anabolic_resistance",
+      "human_readable": "Protein Anabolic Resistance (Age-Related Muscle Protein Synthesis Decline)",
+      "structural_delta": "Older muscle requires higher protein intake per meal to achieve equivalent protein synthesis response",
+      "primary_observable": "Muscle protein synthesis rate measured via stable isotope tracer; leucine threshold for mTOR activation (~2.5-3g per meal past age 60)",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "mitochondrial_demand_signal_deficiency"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (protein synthesis rate vs ATP synthesis); mountain with established age-physiology basis; upstream to signal-ecology thesis"
+    },
+    {
+      "claim_id": "nad_precursor_bioavailability",
+      "human_readable": "NAD+ Precursor Bioavailability Gap (Circulating vs Tissue-Level Efficacy)",
+      "structural_delta": "NR/NMN raise circulating NAD+ consistently but functional outcomes in humans remain minimal",
+      "primary_observable": "Blood NAD+ levels vs tissue-specific NAD+ absorption; functional outcomes (cognition, vascular function, muscle performance) in controlled trials",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "supplement_manufacturers",
+      "victim": "consumers_expecting_functional_improvement",
+      "downstream_of": [
+        "mitochondrial_demand_signal_deficiency"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (blood vs tissue NAD+); snare with beneficiary structure; captures preclinical-human evidence gap"
+    },
+    {
+      "claim_id": "apoe4_mitochondrial_vulnerability",
+      "human_readable": "APOE4 Mitochondrial Vulnerability (Genetic Amplification of Stress-Induced Dysfunction)",
+      "structural_delta": "APOE4 carriers exhibit exacerbated mitochondrial dysfunction under stress via mPTP opening and tau pathology",
+      "primary_observable": "Mitochondrial Ca2+ load; ROS production; membrane potential; tau phosphorylation in APOE4 vs APOE3 carriers under glucocorticoid exposure",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "apoe4_carriers_unaware_of_stress_vulnerability",
+      "downstream_of": [
+        "mitochondrial_demand_signal_deficiency"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct observable (genetic variant interaction with stress); tangled_rope with victim structure; captures individual variation requiring protocol adjustment"
+    },
+    {
+      "claim_id": "magnesium_atp_coupling",
+      "human_readable": "Magnesium-ATP Coupling (Cofactor Insufficiency in Energy Metabolism)",
+      "structural_delta": "Magnesium deficiency impairs ATP synthesis directly; serum testing fails to detect functional insufficiency",
+      "primary_observable": "Mitochondrial ATP synthesis rate; intracellular magnesium concentration; RBC magnesium (better proxy than serum)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "mitochondrial_demand_signal_deficiency"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanistically upstream but captured indirectly via mitochondrial_demand_signal_deficiency constraint story; distinct observable but lower structural yield than selected axes"
+    },
+    {
+      "claim_id": "insulin_resistance_compensated_state",
+      "human_readable": "Insulin Resistance Compensated State (Elevated Insulin Masking Glucose Dysregulation)",
+      "structural_delta": "Fasting insulin elevated while glucose remains normal; pancreas compensating for reduced insulin sensitivity",
+      "primary_observable": "HOMA-IR calculation (fasting insulin × fasting glucose / 405); threshold >2.0 indicates meaningful resistance",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "mitochondrial_demand_signal_deficiency"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: distinct observable but testing-dependent (Tier 2); rope with coordination structure; lower centrality than selected axes"
+    },
+    {
+      "claim_id": "methylation_pathway_impairment",
+      "human_readable": "Methylation Pathway Impairment (MTHFR Variants and Functional Insufficiency)",
+      "structural_delta": "Genetic variants reduce folate conversion efficiency; synthetic folic acid can block pathway in affected individuals",
+      "primary_observable": "Homocysteine level (functional proxy); MTHFR genotype (C677T, A1298C variants); methylfolate vs folic acid response",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "mitochondrial_demand_signal_deficiency"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: distinct observable but testing-dependent (Tier 2/3); rope with coordination structure; captured indirectly via methylated B-vitamin recommendation in Tier 1"
+    }
+  ],
+  "generation_sequence": [
+    "mitochondrial_demand_signal_deficiency",
+    "protein_anabolic_resistance",
+    "nad_precursor_bioavailability",
+    "apoe4_mitochondrial_vulnerability"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "magnesium_atp_coupling",
+      "structural_delta": "Magnesium deficiency impairs ATP synthesis directly; serum testing fails to detect functional insufficiency",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mechanistically upstream but captured indirectly via mitochondrial_demand_signal_deficiency constraint story; distinct observable but lower structural yield than selected axes; Tier 1 intervention already addresses universally"
+    },
+    {
+      "claim_id": "insulin_resistance_compensated_state",
+      "structural_delta": "Fasting insulin elevated while glucose remains normal; pancreas compensating for reduced insulin sensitivity",
+      "hypothesis": "rope",
+      "deferral_reason": "Distinct observable but testing-dependent (Tier 2); rope with coordination structure; lower centrality than selected axes; HOMA-IR calculation provides actionable signal but not structurally independent from mitochondrial dysfunction axis"
+    },
+    {
+      "claim_id": "methylation_pathway_impairment",
+      "structural_delta": "Genetic variants reduce folate conversion efficiency; synthetic folic acid can block pathway in affected individuals",
+      "hypothesis": "rope",
+      "deferral_reason": "Distinct observable but testing-dependent (Tier 2/3); rope with coordination structure; captured indirectly via methylated B-vitamin recommendation in Tier 1; homocysteine as functional proxy reduces need for separate axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reversibility_threshold",
+      "description": "What can be restored versus merely slowed remains genuinely open. Acute mitochondrial function improvement is demonstrated, but long-term reversal of age-related decline in humans is unproven. The framework may overstate restoration potential relative to slowing.",
+      "source": "Framework acknowledgment + research gap in human outcome data"
+    },
+    {
+      "id": "omega_psychosocial_signal_domain",
+      "description": "Chronic psychological stress, social connection, and cognitive engagement are genuine signal domains affecting inflammation and mitochondrial function but are treated as separate from the framework. Their structural independence is assumed but not demonstrated.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_environmental_toxin_load",
+      "description": "Heavy metals and persistent organic pollutants create mitochondrial stress through pathways outside this framework. The framework does not account for toxin-induced dysfunction, which may confound intervention efficacy in exposed populations.",
+      "source": "Framework acknowledgment + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_nad_tissue_penetration",
+      "description": "Whether tissues and organs effectively absorb increased NAD+ levels from bloodstream to counteract declining NAD+ throughout multiple organ systems requires further human testing. The bioavailability gap may be a Snare masquerading as a Rope.",
+      "source": "Research context + nad_precursor_bioavailability axis"
+    },
+    {
+      "id": "omega_protein_intake_optimization",
+      "description": "Optimal protein intake by age, sex, and activity level remains contested. The 1.6-2.2g/kg recommendation is evidence-based but the upper bound and individual variation are not fully characterized. Some evidence suggests older adults can achieve equivalent synthesis with optimal timing even at lower total intake.",
+      "source": "Research context + protein_anabolic_resistance axis"
+    },
+    {
+      "id": "omega_apoe4_sex_interaction",
+      "description": "Emerging evidence (2025-2026) shows female APOE4 carriers may experience greater neuroinflammation and mitochondrial dysfunction via cGAS-STING signaling. The framework does not differentiate protocol adjustments by sex within APOE4 carriers.",
+      "source": "Research context + apoe4_mitochondrial_vulnerability axis"
+    },
+    {
+      "id": "omega_multifactorial_causation_separation",
+      "description": "The degree to which longevity effects in specific populations are driven by diet versus movement versus social connection versus chronic stress reduction versus genetics has not been cleanly separated. The framework synthesizes these as convergent but their relative contributions remain unknown.",
+      "source": "Framework acknowledgment + Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: mitochondrial_demand_signal_deficiency classified as tangled_rope but the signal-ecology thesis as a unified framework remains a hypothesis supported by converging evidence, not proven in prospective human trials at scale. The mechanistic substrate (mitochondrial dysfunction as convergence point) is well-established, but the framing as demand-signal deficiency rather than inevitable degeneration may overstate restoration potential. Generated omega_reversibility_threshold to bound this uncertainty. The classification stands as tangled_rope because the extraction structure (supplement industry beneficiary, framing that obscures limits) is present even if the underlying mountain (mitochondrial dysfunction) is real."
+  }
+}

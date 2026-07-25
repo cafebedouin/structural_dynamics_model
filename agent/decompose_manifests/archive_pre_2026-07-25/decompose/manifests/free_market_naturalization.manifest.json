@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Institutional Theory / Market Design",
+  "family_id": "market_naturalization_2026",
+  "topic_summary": "Analysis of the naturalization of free markets as default institutional arrangement. Examines whether market dominance represents lapsed-alternative naturalization (engineered closure that has naturalized over time) or beneficiary-maintained naturalization (active post-hoc defense by incumbents). Tests D3 artifact shape hypothesis: whether current market arrangements are engineered-closure or lapsed-closure artifacts.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Market mechanism (price-mediated resource allocation system)",
+      "State/regulatory apparatus (rule-setting authority for market operation)",
+      "Incumbent beneficiaries (actors whose position depends on current market structure)",
+      "Alternative coordination systems (commons management, gift economies, state planning)",
+      "Hayek/classical liberal tradition (intellectual framework naturalizing markets)"
+    ],
+    "key_tensions": [
+      "Markets as discovered vs designed (naturalization narrative vs historical construction)",
+      "Default status as inevitable vs actively maintained (lapsed vs beneficiary-maintained closure)"
+    ],
+    "key_mechanisms": [
+      "Intellectual naturalization (economic theory presenting markets as neutral/inevitable)",
+      "Legal enclosure (property rights systems foreclosing non-market coordination)",
+      "Path dependency (sunk costs and network effects making alternatives costly)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy claim that free markets represent the natural, default state of economic coordination absent interference",
+    "authority_description": "Economic orthodoxy and legal systems claiming authority to define what counts as 'natural' vs 'artificial' coordination",
+    "drift_status": "partial",
+    "candidate_pattern": "naturalized_closure",
+    "is_contested_kernel": true,
+    "kernel_id": "market_as_natural_default",
+    "readings": [
+      {
+        "reading_id": "lapsed_alternative_reading",
+        "commitment": "Market dominance is a lapsed-closure artifact: active engineering that has naturalized over time, now defended through naturalization narrative rather than continued active maintenance",
+        "authority_grounding": "Historical institutionalism / path dependency / Polanyian embedded-economy frameworks",
+        "sibling_readings": [
+          "beneficiary_maintained_reading",
+          "genuine_natural_reading"
+        ],
+        "expected_structural_delta": "Enclosure mechanisms (property law, contract enforcement) identified as historical D3 artifacts whose origins are obscured; beneficiaries operate through naturalization narrative rather than active suppression; high victim set (those foreclosed from non-market coordination) but diffuse harm attribution"
+      },
+      {
+        "reading_id": "beneficiary_maintained_reading",
+        "commitment": "Market dominance is actively maintained post-hoc by incumbent beneficiaries who defend it against alternatives through ongoing suppression and legal engineering",
+        "authority_grounding": "Critical political economy / regulatory capture frameworks / neo-Marxian state theory",
+        "sibling_readings": [
+          "lapsed_alternative_reading",
+          "genuine_natural_reading"
+        ],
+        "expected_structural_delta": "Lobbying, regulatory capture, and legal barriers identified as active snare mechanisms; clear beneficiary set (capital holders, financial intermediaries); high victim set with concentrated harm attribution; ongoing extractiveness visible in current policy battles"
+      },
+      {
+        "reading_id": "genuine_natural_reading",
+        "commitment": "Markets emerge spontaneously from voluntary exchange and represent the baseline state absent coercive intervention; alternatives require active state engineering",
+        "authority_grounding": "Austrian economics / libertarian philosophy / spontaneous-order tradition",
+        "sibling_readings": [
+          "lapsed_alternative_reading",
+          "beneficiary_maintained_reading"
+        ],
+        "expected_structural_delta": "Property rights and contract enforcement seen as mountains (physical/coordination constraints); state interventions (regulation, taxation, planning) identified as ropes or snares imposing artificial constraints; victim set inverted (taxpayers, regulated firms)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "lapsed_alternative_reading",
+        "reading_b": "genuine_natural_reading",
+        "basis": "Lapsed-alternative reading holds that all coordination systems (including markets) are constructed artifacts requiring active engineering; genuine-natural reading holds markets are the spontaneous default requiring no construction. No single framework can hold both that markets are constructed-then-naturalized and that they are pre-political spontaneous order."
+      },
+      {
+        "reading_a": "beneficiary_maintained_reading",
+        "reading_b": "genuine_natural_reading",
+        "basis": "Beneficiary-maintained reading identifies current market structure as actively imposed by powerful actors; genuine-natural reading identifies it as emerging from voluntary coordination. No single framework can hold both that market dominance requires ongoing coercive maintenance and that it represents absence of coercion."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "lapsed_alternative_reading",
+      "human_readable": "Lapsed-Alternative Naturalization (Engineered Closure Naturalized Over Time)",
+      "structural_delta": "Market dominance as historical artifact of enclosure and legal engineering that has naturalized to the point where its constructed nature is obscured",
+      "primary_observable": "Historical enclosure timelines; legal property regimes vs pre-enclosure commons; naturalization narrative prevalence in economics discourse",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "historical_enclosure_winners_descendants",
+      "victim": "foreclosed_alternative_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested reading; D3 artifact hypothesis; lapsed-closure pattern test case"
+    },
+    {
+      "claim_id": "beneficiary_maintained_reading",
+      "human_readable": "Beneficiary-Maintained Naturalization (Active Post-Hoc Defense by Incumbents)",
+      "structural_delta": "Market dominance as ongoing suppression of alternatives through regulatory capture, lobbying, and legal barriers actively maintained by current beneficiaries",
+      "primary_observable": "Lobbying expenditures by financial/corporate sectors; regulatory barriers to alternative coordination (co-ops, commons); legal suppression of mutual-aid systems",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_capital_holders",
+      "victim": "alternative_economy_participants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from lapsed-alternative (active vs lapsed maintenance); highest epsilon; tests engineered-closure hypothesis"
+    },
+    {
+      "claim_id": "genuine_natural_reading",
+      "human_readable": "Genuine Natural Default (Markets as Spontaneous Order)",
+      "structural_delta": "Markets as emergent baseline from voluntary exchange; state intervention as artificial constraint on natural coordination",
+      "primary_observable": "Transaction cost economics; spontaneous-order emergence in unregulated settings; regulatory burden measurements",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Counterfactual reading necessary for kernel structure; inverted victim set; tests whether baseline can be genuinely natural"
+    },
+    {
+      "claim_id": "intellectual_naturalization_apparatus",
+      "human_readable": "Intellectual Naturalization Apparatus (Economic Theory as Legitimation)",
+      "structural_delta": "Economics profession's role in constructing and maintaining naturalization narrative through theory and pedagogy",
+      "primary_observable": "Econ curriculum treatment of markets vs alternatives; DSGE model assumptions; textbook framing",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "economics_profession",
+      "victim": "alternative_coordination_theorists",
+      "downstream_of": [
+        "lapsed_alternative_reading",
+        "beneficiary_maintained_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism rather than structural reading; captured by naturalization narrative dimension within selected readings"
+    },
+    {
+      "claim_id": "property_rights_enclosure",
+      "human_readable": "Property Rights Enclosure (Legal Foreclosure of Commons)",
+      "structural_delta": "Property law as mechanism foreclosing non-market coordination by legally barring commons management and mutual aid",
+      "primary_observable": "Enclosure Act timelines; current legal barriers to community land trusts; co-op formation restrictions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": "landholding_class",
+      "victim": "commoners",
+      "downstream_of": [
+        "lapsed_alternative_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical mechanism component of lapsed-alternative reading; not independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "lapsed_alternative_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "lapsed_alternative_reading"
+    },
+    {
+      "claim_id": "beneficiary_maintained_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "beneficiary_maintained_reading"
+    },
+    {
+      "claim_id": "genuine_natural_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "genuine_natural_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "intellectual_naturalization_apparatus",
+      "structural_delta": "Economics profession's role in constructing naturalization narrative",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Mechanism rather than independent reading; naturalization narrative captured within lapsed-alternative and beneficiary-maintained readings"
+    },
+    {
+      "claim_id": "property_rights_enclosure",
+      "structural_delta": "Property law foreclosing commons coordination",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical mechanism component of lapsed-alternative reading; not structurally independent"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do lapsed-alternative and beneficiary-maintained readings collapse empirically? If current beneficiaries are descendants of historical enclosure winners operating through naturalized institutions, the distinction between lapsed and active maintenance may be unstable.",
+      "source": "Kernel independence test"
+    },
+    {
+      "id": "omega_baseline_problem",
+      "description": "Can any coordination system be 'natural'? If all require some degree of legal/social infrastructure, the genuine-natural reading may collapse into a question of which infrastructure is least visible or most taken-for-granted.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_victim_set_boundaries",
+      "description": "Who counts as foreclosed? Are gig workers victims of market naturalization (precarity) or beneficiaries (flexibility)? Boundary instability across readings.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_non_western_baselines",
+      "description": "Does analysis assume Western property/market history as universal baseline? Gift economies, rotating credit associations, and commons management in non-Western contexts may present alternative naturalization trajectories.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure validated: three readings hold genuinely different axioms about whether markets are constructed, naturally emergent, or actively maintained. Axiom contradictions declared between lapsed-alternative/genuine-natural and beneficiary-maintained/genuine-natural. Readings coexist socially (all three have live scholarly/political constituencies) but cannot be held simultaneously in a single coherent framework."
+  },
+  "_seed_id": "free_market_naturalization"
+}

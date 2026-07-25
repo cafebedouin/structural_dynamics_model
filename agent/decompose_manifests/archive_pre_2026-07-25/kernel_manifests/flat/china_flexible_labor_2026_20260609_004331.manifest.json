@@ -1,0 +1,237 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Labor Economics / Platform Economy / Social Policy",
+  "family_id": "china_flexible_labor_2026",
+  "topic_summary": "Analysis of China's labor market transformation where blue-collar wages have grown faster than white-collar pay for six consecutive years, driven by a flexible workforce exceeding 300 million workers. The report documents wage convergence between occupational classes while highlighting structural tensions between immediate income gains and long-term security deficits in platform-mediated employment.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Flexible workforce (300M+ workers in platform-mediated, gig, and non-standard employment)",
+      "Blue-collar workers (427M total; subset includes delivery riders, maternity caregivers, truck drivers)",
+      "White-collar workers (comparison class; wage gap narrowing)",
+      "Platform companies (implicit employers/intermediaries for delivery riders and gig workers)",
+      "Chinese state social insurance system (medical insurance 91.5% coverage, injury protection 86.2%)",
+      "China New Employment Forms Research Center (report authors; state-affiliated think tank)"
+    ],
+    "key_tensions": [
+      "Wage convergence (blue-collar gains) vs employment precarity (flexible workers lack career advancement)",
+      "High basic insurance coverage (91.5% medical) vs low retirement confidence (42.3%)",
+      "Platform-mediated income growth (10%+ CAGR for delivery riders) vs structural employment instability"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is the legitimacy boundary of 'employment' — what counts as a genuine employment relationship that triggers employer obligations (social insurance, job security, career development) versus what counts as independent contracting that does not.",
+    "authority_description": "Chinese labor law (Labor Contract Law 2008, Social Insurance Law 2011) establishes the employment/contractor distinction; platform companies claim algorithmic intermediation places workers outside employment; state regulators selectively enforce or reinterpret the boundary; workers experience the classification but lack interpretive power.",
+    "drift_status": "partial",
+    "candidate_pattern": "Selective Interpretation (Pattern 3) — the kernel (employment definition) remains textually stable, but platform companies and state regulators interpret it to exclude platform workers from full employment protections, absorbing drift (300M flexible workers) without surfacing the need for kernel revision.",
+    "is_contested_kernel": true,
+    "kernel_id": "employment_boundary",
+    "readings": [
+      {
+        "reading_id": "formalist_employment_reading",
+        "commitment": "Employment is defined by formal contract and direct supervision; platform workers are independent contractors outside the employment relationship.",
+        "authority_grounding": "Textualist reading of Labor Contract Law Article 7 (written contract requirement) and Article 17 (employer supervision clause); platform companies' legal departments; state tolerance of platform classification.",
+        "sibling_readings": [
+          "substantive_employment_reading",
+          "hybrid_security_reading"
+        ],
+        "expected_structural_delta": "Platform workers excluded from victim set of employment precarity (they chose flexibility); platforms excluded from beneficiary obligations; high ε extraction via cost externalization to workers and state insurance system."
+      },
+      {
+        "reading_id": "substantive_employment_reading",
+        "commitment": "Employment is defined by economic dependence and algorithmic control; platform workers are employees regardless of contract form.",
+        "authority_grounding": "Substantive reading emphasizing Labor Contract Law Article 3 (equal consultation, labor protection) and Article 26 (employer obligations); labor scholars; worker advocacy groups; occasional local court rulings.",
+        "sibling_readings": [
+          "formalist_employment_reading",
+          "hybrid_security_reading"
+        ],
+        "expected_structural_delta": "Platform workers enter victim set of employment precarity; platforms become obligated beneficiaries (must provide full social insurance, job security); moderate ε as platforms resist reclassification."
+      },
+      {
+        "reading_id": "hybrid_security_reading",
+        "commitment": "Platform workers occupy a third category requiring tailored protections distinct from both employment and independent contracting.",
+        "authority_grounding": "Emerging regulatory experiments (occupational injury insurance pilots for delivery riders 2021-2025, platform-specific social insurance schemes); State Council guidance on 'new employment forms'; academic proposals for intermediate status.",
+        "sibling_readings": [
+          "formalist_employment_reading",
+          "substantive_employment_reading"
+        ],
+        "expected_structural_delta": "Platform workers partially in victim set (lack career development, retirement security) but receive basic protections (medical 91.5%, injury 86.2%); platforms partially obligated (injury insurance, not full employment); moderate ε as hybrid status institutionalizes precarity while claiming protection."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "formalist_employment_reading",
+        "reading_b": "substantive_employment_reading",
+        "basis": "Formalist reading holds that contractual form determines employment status (no written employment contract = no employment relationship); substantive reading holds that economic reality determines status regardless of contract form (algorithmic control + income dependence = employment). No single coherent framework can hold both: accepting that contract form is dispositive requires rejecting that economic substance overrides form, and vice versa."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "employment_boundary_kernel",
+      "human_readable": "Employment Boundary (Contested Kernel: What Counts as Employment?)",
+      "structural_delta": "Three incompatible readings of what triggers employer obligations in platform-mediated work",
+      "primary_observable": "Legal classification of platform workers; employer obligation enforcement; social insurance coverage gaps",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "platform_companies (under formalist reading); workers (under substantive reading); state (under hybrid reading — offloads full employment costs)",
+      "victim": "workers (under formalist and hybrid readings — lack full employment protections); platforms (under substantive reading — forced reclassification costs)",
+      "downstream_of": [],
+      "feeds_into": [
+        "wage_convergence_mechanism",
+        "retirement_security_deficit"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with three distinct, individually-holdable readings; highest centrality; upstream to all other structural dynamics"
+    },
+    {
+      "claim_id": "wage_convergence_mechanism",
+      "human_readable": "Wage Convergence Mechanism (Blue-Collar Gains via Platform Labor Demand)",
+      "structural_delta": "Platform-mediated labor demand drives blue-collar wage growth (10%+ CAGR for delivery riders) faster than white-collar wage growth, narrowing the occupational wage gap",
+      "primary_observable": "Blue-collar vs white-collar wage gap (CNY 2,250 in 2025, down from CNY 3,344 in 2013); delivery rider hourly wage (CNY 37.30); maternity caregiver monthly income (CNY 10,128)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "employment_boundary_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (wage gap narrowing) independent of employment classification; rope coordinating labor supply to platform demand; downstream of kernel (wage growth enabled by flexible classification)"
+    },
+    {
+      "claim_id": "retirement_security_deficit",
+      "human_readable": "Retirement Security Deficit (Long-Term Planning Confidence Gap)",
+      "structural_delta": "High basic insurance coverage (91.5% medical, 86.2% injury) coexists with low retirement planning confidence (42.3%) and career advancement belief (54.8%)",
+      "primary_observable": "Retirement confidence survey data (42.3%); career advancement belief (54.8%); pension coverage rates for flexible workers",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_insurance_system (offloads long-term pension obligations to individual workers)",
+      "victim": "flexible_workers (bear long-term insecurity despite immediate income gains)",
+      "downstream_of": [
+        "employment_boundary_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (retirement confidence vs basic insurance coverage); tangled_rope where immediate security masks long-term extraction; downstream of kernel (hybrid reading institutionalizes this split)"
+    },
+    {
+      "claim_id": "platform_algorithmic_control",
+      "human_readable": "Platform Algorithmic Control (Supervision Without Employment)",
+      "structural_delta": "Platforms exercise algorithmic control over work processes (routing, pricing, performance metrics) while denying employment relationship",
+      "primary_observable": "Algorithm-determined delivery routes, surge pricing, performance deactivation policies; platform terms-of-service classification",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "platform_companies",
+      "victim": "delivery_riders_and_gig_workers",
+      "downstream_of": [
+        "employment_boundary_kernel"
+      ],
+      "feeds_into": [
+        "retirement_security_deficit"
+      ],
+      "centrality_score": 5,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within employment_boundary_kernel substantive_employment_reading (algorithmic control as employment indicator); would duplicate kernel analysis"
+    },
+    {
+      "claim_id": "demographic_labor_supply_shift",
+      "human_readable": "Demographic Labor Supply Shift (Aging Population + Rural-Urban Migration Slowdown)",
+      "structural_delta": "Declining working-age population and slowing rural-urban migration reduce labor supply, increasing blue-collar bargaining power",
+      "primary_observable": "Working-age population decline rate; rural-urban migration flows; labor force participation rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "wage_convergence_mechanism"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: demographic mountain upstream to wage convergence, but input lacks demographic data; would require external research; omega_demographic_supply flagged"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "formalist_employment_reading",
+      "kernel_id": "employment_boundary",
+      "reading_id": "formalist_employment_reading"
+    },
+    {
+      "claim_id": "substantive_employment_reading",
+      "kernel_id": "employment_boundary",
+      "reading_id": "substantive_employment_reading"
+    },
+    {
+      "claim_id": "hybrid_security_reading",
+      "kernel_id": "employment_boundary",
+      "reading_id": "hybrid_security_reading"
+    },
+    "wage_convergence_mechanism",
+    "retirement_security_deficit"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "platform_algorithmic_control",
+      "structural_delta": "Algorithmic control over work processes while denying employment",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured within employment_boundary_kernel substantive_employment_reading; algorithmic control is the substantive employment indicator; generating separately would duplicate kernel analysis"
+    },
+    {
+      "claim_id": "demographic_labor_supply_shift",
+      "structural_delta": "Declining working-age population reduces labor supply, increasing blue-collar bargaining power",
+      "hypothesis": "mountain",
+      "deferral_reason": "Input lacks demographic data (working-age population trends, migration flows); would require external research beyond source material; flagged as omega_demographic_supply"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_demographic_supply",
+      "description": "Is wage convergence driven by platform demand (rope) or demographic labor supply constraints (mountain)? Input reports wage growth but lacks working-age population data, rural-urban migration trends, or labor force participation rates. If demographic mountain is primary driver, platform flexibility may be response to supply shortage rather than cause of wage growth.",
+      "source": "Deferred axis demographic_labor_supply_shift; Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_white_collar_stagnation",
+      "description": "Is blue-collar wage growth absolute or relative to white-collar stagnation? Input reports narrowing gap but does not specify whether white-collar wages are flat, declining, or growing slower. If white-collar stagnation is primary, convergence may reflect educated labor oversupply rather than blue-collar gains.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — white-collar wage trajectory not reported"
+    },
+    {
+      "id": "omega_state_fiscal_capacity",
+      "description": "Can the state afford to extend full employment protections to 300M flexible workers? Hybrid_security_reading may be fiscal constraint (state cannot fund full pensions for 40% of urban employment) rather than principled third-category design. If fiscal mountain, substantive_employment_reading is structurally unavailable regardless of legal interpretation.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — state benefits from hybrid status by capping pension obligations"
+    },
+    {
+      "id": "omega_platform_profit_margins",
+      "description": "Are platform companies profitable under current flexible classification? If platforms operate at loss (subsidizing wages to gain market share), formalist_employment_reading may collapse when subsidy ends. Wage convergence may be temporary arbitrage of venture capital rather than sustainable labor market structure.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — platform financial sustainability not reported"
+    },
+    {
+      "id": "omega_kernel_revision_pathway",
+      "description": "Is there an institutional pathway for kernel revision (amending Labor Contract Law to create statutory third category), or is drift absorption permanent? If revision is structurally blocked (legislative gridlock, platform lobbying power), hybrid_security_reading becomes piton (atrophied revision capacity) rather than functioning commitment system.",
+      "source": "Commitment system recognition — drift_status marked 'partial' but revision pathway not documented"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied correctly: three readings are individually-holdable (formalist, substantive, hybrid), structurally distinct (different victim sets and ε structures), and grounded in live interpretive traditions (platform legal practice, labor scholarship, state regulatory experiments). Axiom contradiction declared for formalist/substantive pair (contract form vs economic substance as dispositive). Deferred axes either duplicate kernel analysis (algorithmic_control) or lack source data (demographic_supply). Five omegas bound uncertainties in demographic drivers, white-collar trajectory, state fiscal capacity, platform profitability, and revision pathway."
+  }
+}

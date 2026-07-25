@@ -1,0 +1,222 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology Governance / International Law / Privacy Regulation",
+  "family_id": "gdpr_extraterritoriality_2026",
+  "topic_summary": "Analysis of GDPR Article 3's extraterritorial application, examining whether territorial scope constitutes a contested kernel with divergent readings on jurisdiction, enforcement authority, and data sovereignty. The tension centers on whether GDPR extends EU regulatory authority globally through effects-based jurisdiction or represents overreach into sovereign digital spaces.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "GDPR Article 3 (territorial scope provision defining 'offering goods or services' and 'monitoring behaviour')",
+      "European Data Protection Board (interpretive authority for GDPR application)",
+      "Non-EU data controllers (entities subject to extraterritorial reach)",
+      "EU data subjects (residents whose data triggers GDPR protection)",
+      "National data protection authorities (enforcement bodies in EU member states)",
+      "Alternative regulatory regimes (APEC CBPR, US sectoral approach)"
+    ],
+    "key_tensions": [
+      "Effects-based jurisdiction vs territorial sovereignty (EU vs non-EU states)",
+      "Privacy protection vs regulatory arbitrage (EDPB vs non-EU controllers)",
+      "Compliance cost distribution vs enforcement reach (global tech vs EU authorities)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "effects_jurisdiction_reading",
+      "human_readable": "Effects-Based Jurisdiction Reading (EU-Centric Protection)",
+      "structural_delta": "GDPR authority extends globally via effects on EU residents; jurisdiction follows data subject location not processor location",
+      "primary_observable": "EDPB guidance on Article 3(2) 'targeting' test; enforcement actions against non-EU entities; compliance adoption rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "eu_data_subjects",
+      "victim": "non_eu_controllers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading instantiating high-epsilon constraint via effects-based jurisdiction; distinct structural delta from territorial sovereignty reading"
+    },
+    {
+      "claim_id": "territorial_sovereignty_reading",
+      "human_readable": "Territorial Sovereignty Reading (Digital Borders)",
+      "structural_delta": "Jurisdiction bounded by national borders; extraterritorial application as regulatory imperialism; data localization as sovereignty defense",
+      "primary_observable": "National data localization laws (China, Russia, India); non-compliance rates; jurisdictional conflict litigation",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "non_eu_states",
+      "victim": "eu_enforcement_regime",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally exclusive reading producing inverse constraint topology; same kernel, incompatible authority grounding"
+    },
+    {
+      "claim_id": "market_access_reading",
+      "human_readable": "Market Access Conditional Reading (Brussels Effect)",
+      "structural_delta": "GDPR as entry condition to EU digital market; compliance voluntary but practically mandatory for market participation",
+      "primary_observable": "Non-EU entity GDPR adoption rates; market exit vs compliance decisions; Brussels Effect metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "eu_regulatory_standard",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading treating extraterritoriality as coordination mechanism rather than jurisdiction assertion; lower epsilon but distinct observable"
+    },
+    {
+      "claim_id": "enforcement_asymmetry",
+      "human_readable": "Enforcement Asymmetry (Jurisdictional Impotence)",
+      "structural_delta": "GDPR's claimed reach exceeds practical enforcement capacity against non-EU entities",
+      "primary_observable": "Fine collection rates for non-EU controllers; jurisdictional cooperation treaties; enforcement mechanism gaps",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "non_eu_non_compliers",
+      "victim": "eu_enforcement_credibility",
+      "downstream_of": [
+        "effects_jurisdiction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism rather than interpretive reading of kernel; captured as downstream consequence of effects_jurisdiction_reading"
+    },
+    {
+      "claim_id": "data_localization_spiral",
+      "human_readable": "Data Localization Spiral (Fragmentation Cascade)",
+      "structural_delta": "GDPR extraterritoriality triggers retaliatory localization requirements; global data flows fragment",
+      "primary_observable": "Number of national data localization laws enacted post-2018; cross-border data flow volume decline",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "global_digital_economy",
+      "downstream_of": [
+        "territorial_sovereignty_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: second-order consequence of territorial sovereignty reading; speculative cascade rather than primary constraint"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "effects_jurisdiction_reading",
+      "kernel_id": "gdpr_article_3_scope",
+      "reading_id": "effects_jurisdiction_reading"
+    },
+    {
+      "claim_id": "territorial_sovereignty_reading",
+      "kernel_id": "gdpr_article_3_scope",
+      "reading_id": "territorial_sovereignty_reading"
+    },
+    {
+      "claim_id": "market_access_reading",
+      "kernel_id": "gdpr_article_3_scope",
+      "reading_id": "market_access_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_asymmetry",
+      "structural_delta": "GDPR claimed reach exceeds enforcement capacity against non-EU entities",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism downstream of effects_jurisdiction_reading; not a primary kernel reading"
+    },
+    {
+      "claim_id": "data_localization_spiral",
+      "structural_delta": "GDPR triggers retaliatory localization; global data flows fragment",
+      "hypothesis": "piton",
+      "deferral_reason": "Second-order cascade effect; low centrality; speculative rather than structurally grounded"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_schrems_invalidation",
+      "description": "Does Schrems II invalidation of Privacy Shield convert effects_jurisdiction_reading from tangled_rope to snare? If adequacy mechanisms fail, enforcement becomes coercive rather than coordinative.",
+      "source": "Absence Inventory: Schrems jurisprudence not surfaced in initial extraction"
+    },
+    {
+      "id": "omega_china_collision",
+      "description": "How do effects_jurisdiction_reading and China's Personal Information Protection Law (PIPL) extraterritorial claims interact when both assert jurisdiction over same data flows? Dual-compliance impossibility creates trap.",
+      "source": "Dark Matter Probe 3: Beneficiary of framing obscures jurisdictional collision between competing extraterritorial regimes"
+    },
+    {
+      "id": "omega_market_access_coercion",
+      "description": "Is market_access_reading genuinely lower epsilon (coordination) or does Brussels Effect market power convert it to high-epsilon coercion? Classification unstable based on market concentration.",
+      "source": "Classification instability: Brussels Effect as voluntary coordination vs structural coercion depends on market dominance measurement"
+    },
+    {
+      "id": "omega_reading_collapse_test",
+      "description": "Do effects_jurisdiction_reading and market_access_reading collapse into single constraint under high EU market power? If compliance becomes mandatory regardless of jurisdiction theory, readings merge.",
+      "source": "Independence testing: Observables potentially correlated if Brussels Effect dominates jurisdictional theory"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean scan. Three readings pass independence test with distinct structural deltas: effects-based jurisdiction (EU resident as trigger), territorial sovereignty (national border as limit), market access (voluntary compliance for entry). No epistemic trespass concerns; GDPR extraterritoriality is well-documented in legal scholarship and case law."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "GDPR Article 3 territorial scope provision: shared substrate defining when regulation applies based on 'offering goods or services' to EU residents or 'monitoring their behaviour'",
+    "authority_description": "EDPB interpretive guidance and CJEU jurisprudence; legitimacy grounded in EU legislative sovereignty and treaty obligations to protect fundamental rights",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "gdpr_article_3_scope",
+    "readings": [
+      {
+        "reading_id": "effects_jurisdiction_reading",
+        "commitment": "Jurisdiction follows effects on EU residents; Article 3(2) extends protection extraterritorially via targeting/monitoring test",
+        "authority_grounding": "EU fundamental rights protection mandate; effects doctrine in international law; EDPB targeting guidelines",
+        "sibling_readings": [
+          "territorial_sovereignty_reading",
+          "market_access_reading"
+        ],
+        "expected_structural_delta": "High compliance costs for non-EU controllers; enforcement through adequacy mechanisms and fines; beneficiary is EU data subject protection regime"
+      },
+      {
+        "reading_id": "territorial_sovereignty_reading",
+        "commitment": "Jurisdiction bounded by territorial sovereignty; extraterritorial application exceeds legitimate regulatory authority",
+        "authority_grounding": "Westphalian sovereignty norms; national regulatory autonomy; non-interference principles",
+        "sibling_readings": [
+          "effects_jurisdiction_reading",
+          "market_access_reading"
+        ],
+        "expected_structural_delta": "Data localization as resistance mechanism; jurisdictional conflict escalation; beneficiary is non-EU state regulatory independence"
+      },
+      {
+        "reading_id": "market_access_reading",
+        "commitment": "GDPR as conditional market access requirement; extraterritoriality is Brussels Effect standard-setting not jurisdictional assertion",
+        "authority_grounding": "Market power and regulatory leadership; voluntary adoption incentives; de facto global standard emergence",
+        "sibling_readings": [
+          "effects_jurisdiction_reading",
+          "territorial_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Compliance as market strategy; lower enforcement tension; beneficiary is EU regulatory influence via standard diffusion"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "effects_jurisdiction_reading",
+        "reading_b": "territorial_sovereignty_reading",
+        "basis": "Effects-based jurisdiction axiomatically accepts extraterritorial reach as legitimate when affecting domestic persons; territorial sovereignty axiom holds extraterritorial application categorically exceeds legitimate authority. No single coherent framework holds both—accepting effects doctrine requires rejecting strict territoriality, and vice versa."
+      }
+    ]
+  },
+  "_seed_id": "gdpr_data_protection_extraterritoriality"
+}

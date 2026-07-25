@@ -1,0 +1,251 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Policy / Digital Currency / Behavioral Economics",
+  "family_id": "econographics_2026",
+  "topic_summary": "Analysis of 'Econographics' as both a behavioral economics methodology measuring trait-like economic decision-making patterns and an Atlantic Council publication series tracking digital currency developments, particularly China's e-CNY CBDC experiment and its geopolitical implications for dollar hegemony.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "People's Bank of China (PBOC) - central bank issuing e-CNY",
+      "Atlantic Council - policy research organization using 'Econographics' as publication category",
+      "Chapman/Dean/Ortoleva/Snowberg/Camerer - behavioral economics researchers defining econographics as trait measures",
+      "Project mBridge - wholesale CBDC cross-border settlement platform",
+      "BIS Innovation Hub - original incubator of mBridge, withdrew 2024",
+      "U.S. Federal Reserve - implicit competitor in CBDC/stablecoin space",
+      "Commercial stablecoins (Tether/USDC) - private digital money alternatives",
+      "Chinese tourists/merchants - retail e-CNY adoption vector"
+    ],
+    "key_tensions": [
+      "Behavioral regularities vs rational choice models (econographics as methodology challenges standard economics)",
+      "Sovereign digital currency vs private stablecoins (e-CNY as state answer to crypto)",
+      "Dollar hegemony vs multipolar monetary system (mBridge as parallel settlement rail)"
+    ],
+    "key_claims": [
+      "Econographics (behavioral) reduces 21 measures to 6 principal components, revealing structure in economic decision-making",
+      "China's e-CNY grew 800% since 2023, reaching $2.3T cumulative transaction value by late 2025",
+      "Project mBridge volume increased 2,500-fold to $55.49B, with e-CNY comprising 95% of settlement",
+      "Interest-bearing e-CNY features move CBDC from payment instrument to savings-adjacent asset",
+      "PBOC frames e-CNY within vision for 'multipolar international monetary system' as counterweight to dollar weaponization",
+      "146 countries representing 98% of global GDP exploring CBDCs, with 77 in advanced phase"
+    ],
+    "key_mechanisms": [
+      "Principal component analysis reducing behavioral measures to underlying structure",
+      "E-CNY distribution through commercial banks with PBOC oversight via dual operations centers",
+      "Project mBridge direct central bank settlement bypassing correspondent banking",
+      "Interest-bearing CBDC features competing with stablecoins within regulated framework"
+    ],
+    "key_absences": [
+      "No discussion of whether behavioral econographics correlate with CBDC adoption patterns",
+      "Missing analysis of how consumer spending profiles (econography definition 1) inform CBDC design",
+      "Absent treatment of whether U.S. will pursue CBDC or rely on stablecoin regulation"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "What constitutes legitimate digital money in a sovereign monetary system",
+    "authority_description": "Central bank monopoly on legal tender issuance vs market-driven private money innovation",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "digital_money_legitimacy",
+    "readings": [
+      {
+        "reading_id": "sovereign_cbdc_reading",
+        "commitment": "Legitimate digital money must be state-issued legal tender under central bank control",
+        "authority_grounding": "Monetary sovereignty doctrine; central bank as lender of last resort",
+        "sibling_readings": [
+          "regulated_stablecoin_reading",
+          "crypto_permissionless_reading"
+        ],
+        "expected_structural_delta": "State visibility into all transactions; programmable money with policy-embedded rules; beneficiary is state fiscal/monetary control; victim is financial privacy"
+      },
+      {
+        "reading_id": "regulated_stablecoin_reading",
+        "commitment": "Legitimate digital money can be privately issued if regulated and backed by sovereign currency reserves",
+        "authority_grounding": "Banking regulation precedent; deposit insurance frameworks",
+        "sibling_readings": [
+          "sovereign_cbdc_reading",
+          "crypto_permissionless_reading"
+        ],
+        "expected_structural_delta": "Private innovation within regulatory perimeter; beneficiary is payment efficiency and financial inclusion; victim is monetary policy transmission (leakage to private issuers)"
+      },
+      {
+        "reading_id": "crypto_permissionless_reading",
+        "commitment": "Legitimate digital money emerges from decentralized consensus without state permission",
+        "authority_grounding": "Cryptographic proof; network effects; censorship resistance",
+        "sibling_readings": [
+          "sovereign_cbdc_reading",
+          "regulated_stablecoin_reading"
+        ],
+        "expected_structural_delta": "No central authority; beneficiary is individual financial sovereignty; victim is state capacity for capital controls and sanctions enforcement"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereign_cbdc_reading",
+        "reading_b": "crypto_permissionless_reading",
+        "basis": "Sovereign CBDC axiom requires state monopoly on legitimate money issuance; crypto axiom requires money legitimacy independent of state permission. No coherent framework holds both simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "digital_money_legitimacy_kernel",
+      "human_readable": "Digital Money Legitimacy (Contested Kernel)",
+      "structural_delta": "Competing foundations for what makes digital money legitimate in sovereign monetary systems",
+      "primary_observable": "Regulatory treatment of CBDCs vs stablecoins vs crypto; cross-border settlement volume by instrument type",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "geopolitical_settlement_competition",
+        "behavioral_adoption_friction"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with three distinct readings; highest centrality as upstream to both geopolitical and adoption axes"
+    },
+    {
+      "claim_id": "geopolitical_settlement_competition",
+      "human_readable": "Geopolitical Settlement Competition (Dollar Hegemony vs Parallel Rails)",
+      "structural_delta": "Competition between dollar-based correspondent banking and alternative settlement infrastructure",
+      "primary_observable": "mBridge transaction volume; share of trade settled outside SWIFT; central bank reserve currency composition",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "non_dollar_reserve_issuers",
+      "victim": "dollar_seigniorage_recipients",
+      "downstream_of": [
+        "digital_money_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (settlement infrastructure topology) independent of legitimacy kernel; downstream synthesis of sovereign_cbdc_reading implications"
+    },
+    {
+      "claim_id": "behavioral_adoption_friction",
+      "human_readable": "Behavioral Adoption Friction (Econographic Trait Barriers to CBDC Use)",
+      "structural_delta": "Mismatch between CBDC design assumptions and actual economic decision-making patterns",
+      "primary_observable": "Correlation between econographic principal components and e-CNY wallet activation/usage rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "digital_money_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Bridges behavioral econographics methodology to CBDC adoption; different observable than geopolitical axis; coordination problem not extraction"
+    },
+    {
+      "claim_id": "interest_bearing_cbdc_innovation",
+      "human_readable": "Interest-Bearing CBDC Innovation (Deposit-Like Features in Sovereign Digital Money)",
+      "structural_delta": "CBDC transition from pure payment instrument to savings-adjacent asset via interest features",
+      "primary_observable": "E-CNY interest rate policy; household allocation between bank deposits and e-CNY wallets",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "digital_money_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: implementation detail of sovereign_cbdc_reading rather than independent axis; captured in that reading's constraint story"
+    },
+    {
+      "claim_id": "privacy_efficiency_tradeoff",
+      "human_readable": "Privacy-Efficiency Tradeoff (Transaction Visibility vs Payment Speed)",
+      "structural_delta": "Inverse relationship between state transaction visibility and user financial privacy",
+      "primary_observable": "E-CNY transaction metadata granularity; user wallet adoption rates by privacy-sensitive demographics",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "digital_money_legitimacy_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: physical constraint of digital payment systems; feeds into kernel but lower centrality than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereign_cbdc_reading",
+      "kernel_id": "digital_money_legitimacy",
+      "reading_id": "sovereign_cbdc_reading"
+    },
+    {
+      "claim_id": "regulated_stablecoin_reading",
+      "kernel_id": "digital_money_legitimacy",
+      "reading_id": "regulated_stablecoin_reading"
+    },
+    {
+      "claim_id": "crypto_permissionless_reading",
+      "kernel_id": "digital_money_legitimacy",
+      "reading_id": "crypto_permissionless_reading"
+    },
+    "geopolitical_settlement_competition",
+    "behavioral_adoption_friction"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "interest_bearing_cbdc_innovation",
+      "structural_delta": "CBDC transition from payment instrument to savings-adjacent asset",
+      "hypothesis": "piton",
+      "deferral_reason": "Implementation detail of sovereign_cbdc_reading; interest-bearing features are mechanism within that reading's constraint story rather than independent axis"
+    },
+    {
+      "claim_id": "privacy_efficiency_tradeoff",
+      "structural_delta": "Inverse relationship between transaction visibility and financial privacy",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint of digital payment systems; lower centrality than selected axes; feeds into kernel but captured implicitly in sovereign_cbdc_reading victim structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_econographics_cbdc_correlation",
+      "description": "Does behavioral econographics (trait-like decision patterns) predict CBDC adoption? No research links the Chapman et al. principal components to digital currency usage. If risk aversion or time preference clusters correlate with e-CNY wallet activation, the behavioral methodology becomes predictive tool for CBDC design.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - missing link between two definitions of econographics"
+    },
+    {
+      "id": "omega_us_cbdc_stablecoin_choice",
+      "description": "Will U.S. pursue CBDC or rely on regulated stablecoins? Input describes conflicting policy agendas but no resolution. If U.S. chooses stablecoin regulation over CBDC, the regulated_stablecoin_reading becomes dominant Western model; if CBDC, sovereign_cbdc_reading becomes global norm.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - U.S. policy choice determines which reading captures dollar system evolution"
+    },
+    {
+      "id": "omega_mbridge_bis_withdrawal",
+      "description": "Why did BIS withdraw from mBridge governance in October 2024? Input notes transfer to partner central banks but no explanation. If withdrawal signals Western concern about sanctions evasion, mBridge becomes explicitly geopolitical; if technical handoff, remains neutral infrastructure.",
+      "source": "Extraction (Mechanisms) - BIS withdrawal mechanism unexplained"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do regulated_stablecoin and sovereign_cbdc readings collapse if stablecoins become fully reserve-backed and supervised like narrow banks? If regulatory convergence eliminates structural difference, kernel reduces to two readings (state vs permissionless).",
+      "source": "§1.3-K coherence check - potential reading collapse under regulatory convergence scenario"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied successfully; three readings pass individually-holdable test with distinct authority groundings and structural deltas. Geopolitical and behavioral axes pass §3 pairwise independence test (different observables, different beneficiary structures)."
+  }
+}

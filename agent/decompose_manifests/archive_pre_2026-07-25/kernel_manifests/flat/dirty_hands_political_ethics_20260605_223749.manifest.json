@@ -1,0 +1,256 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Normative Ethics / Applied Ethics",
+  "family_id": "dirty_hands_political_ethics",
+  "topic_summary": "Analysis of the 'dirty hands' problem in political ethics: whether political leaders may legitimately violate fundamental moral constraints to achieve great goods or prevent catastrophes. The problem poses a paradox—claiming it is sometimes right to do what is wrong—and raises questions about moral absolutism, political exceptionalism, citizen complicity, and the coherence of maintaining moral remainder while justifying violations of deep prohibitions.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 6,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Michael Walzer (central theorist; evolved from broad to narrow scope)",
+      "Political leaders (agents who dirty hands on behalf of communities)",
+      "Democratic citizens (potentially complicit in leaders' dirty hands decisions)",
+      "Machiavelli (historical precursor; necessity overrides ordinary morality)",
+      "Max Weber (ethic of responsibility vs. ethic of ultimate ends)",
+      "Moral absolutists (reject any exceptions to deep prohibitions)",
+      "Consequentialists/utilitarians (deny moral remainder; right act = best consequences)",
+      "Threshold deontologists (prima facie duties overridable at high thresholds)",
+      "Political realists (deny morality's comprehensiveness in politics)",
+      "Torture victims (paradigmatic case of dirty hands violation)",
+      "WWII German civilians (Walzer's supreme emergency case)",
+      "Non-state actors (excluded from dirty hands justification in Walzer's framework)"
+    ],
+    "key_tensions": [
+      "Right to do wrong (logical paradox at heart of dirty hands)",
+      "Moral dominance vs. political necessity (can non-moral necessity override morality?)",
+      "Political exceptionalism vs. universalism (why should leaders have unique prerogatives?)",
+      "Absolutism vs. threshold deontology (are prohibitions absolute or prima facie?)",
+      "State vs. non-state actors (Walzer accepts state terrorism in emergency but rejects non-state)",
+      "Citizen authorization vs. dissent (do all citizens share guilt for leaders' dirty hands?)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "logical_coherence_paradox",
+      "human_readable": "Logical Coherence Paradox (Right-to-Do-Wrong Structure)",
+      "structural_delta": "The claim that an act can be simultaneously categorically wrong and yet right to perform",
+      "primary_observable": "Presence/absence of logical contradiction in dirty hands formulations; whether theorists resolve paradox via internal/external conflict or accept incoherence",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dirty_hands_theorists",
+      "victim": "logical_consistency_standards",
+      "downstream_of": [],
+      "feeds_into": [
+        "moral_remainder_requirement",
+        "absolutism_attachment"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; foundational paradox structure feeds all other axes; tangled_rope with beneficiary (theorists who maintain paradox) and victim (logical standards)"
+    },
+    {
+      "claim_id": "political_exceptionalism",
+      "human_readable": "Political Exceptionalism (Unique Prerogatives of Political Role)",
+      "structural_delta": "The claim that political leaders possess moral prerogatives unavailable to ordinary citizens or non-state actors",
+      "primary_observable": "Differential treatment of state vs. non-state actors in emergency scenarios; Walzer's acceptance of state terrorism vs. rejection of non-state terrorism",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "state_actors",
+      "victim": "non_state_actors",
+      "downstream_of": [],
+      "feeds_into": [
+        "citizen_complicity_structure",
+        "scope_restriction"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from paradox axis; snare benefiting state actors at expense of non-state; feeds citizen complicity and scope questions"
+    },
+    {
+      "claim_id": "moral_remainder_requirement",
+      "human_readable": "Moral Remainder Requirement (Guilt Despite Justification)",
+      "structural_delta": "The requirement that agents experience remorse/guilt for acts that were nonetheless right and necessary",
+      "primary_observable": "Presence of remorse/shame requirements in dirty hands formulations; distinction from threshold deontology which has no remainder",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "absolutist_intuitions",
+      "victim": "coherent_justification",
+      "downstream_of": [
+        "logical_coherence_paradox"
+      ],
+      "feeds_into": [
+        "absolutism_attachment",
+        "punishment_regress"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream of paradox but distinct observable (remorse requirement); tangled_rope preserving absolutist intuitions while denying absolutism"
+    },
+    {
+      "claim_id": "absolutism_attachment",
+      "human_readable": "Absolutism Attachment (Wistful Retention of Absolute Prohibitions)",
+      "structural_delta": "The ambiguous attitude combining rejection of absolute prohibitions with emotional/conceptual attachment to their force",
+      "primary_observable": "Theorists' simultaneous denial of absolutism and insistence on wrongness of violations; Sandsmark's claim that dirty hands requires absolutism",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dirty_hands_framework",
+      "victim": "theoretical_consistency",
+      "downstream_of": [
+        "logical_coherence_paradox",
+        "moral_remainder_requirement"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Downstream synthesis of paradox and remainder; distinct observable (wistful attachment); tangled_rope maintaining framework at cost of consistency"
+    },
+    {
+      "claim_id": "citizen_complicity_structure",
+      "human_readable": "Citizen Complicity Structure (Democratic Authorization and Shared Guilt)",
+      "structural_delta": "The claim that democratic citizens share moral taint through authorization of leaders' dirty hands decisions",
+      "primary_observable": "Theorists' arguments about citizen authorization, shared guilt, and restitution obligations; treatment of dissenting vs. consenting citizens",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "political_leaders",
+      "victim": "dissenting_citizens",
+      "downstream_of": [
+        "political_exceptionalism"
+      ],
+      "feeds_into": [
+        "punishment_regress"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Downstream of exceptionalism but distinct observable (authorization/guilt distribution); snare imposing costs on dissenters"
+    },
+    {
+      "claim_id": "punishment_regress",
+      "human_readable": "Punishment Regress (Infinite Dirtying Through Penalty)",
+      "structural_delta": "The infinite regress generated when punishing dirty hands agents dirties our hands, requiring us to pay a price, which dirties our hands further",
+      "primary_observable": "Walzer's acknowledgment that punishment dirties hands; logical structure of regress; absence of stopping principle",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "moral_remainder_requirement",
+        "citizen_complicity_structure"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Downstream of remainder and complicity; distinct observable (regress structure); piton revealing framework atrophy"
+    },
+    {
+      "claim_id": "scope_restriction",
+      "human_readable": "Scope Restriction (Politics vs. Universal Applicability)",
+      "structural_delta": "The claim that dirty hands is distinctive to or primarily relevant to political contexts rather than universal across moral domains",
+      "primary_observable": "Walzer's restriction to politics despite acknowledging private-life applicability; inability to justify political uniqueness",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "political_exceptionalism"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Downstream of exceptionalism; distinct observable (domain restriction); rope coordinating political focus without clear justification"
+    },
+    {
+      "claim_id": "necessity_ambiguity",
+      "human_readable": "Necessity Ambiguity (Deterministic vs. Rational vs. Preferential)",
+      "structural_delta": "The unresolved question of what constitutes genuine necessity: unavoidable determinism, best available option, or mere strong preference",
+      "primary_observable": "Variation in necessity claims from Hobbes (self-preservation) to Walzer (supreme emergency); absence of clear necessity criteria",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "expansive_dirty_hands_application",
+      "victim": "restrictive_criteria",
+      "downstream_of": [],
+      "feeds_into": [
+        "supreme_emergency_threshold"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 8,
+      "selection_reason": "Independent upstream axis; distinct observable (necessity definition); tangled_rope allowing expansive vs. restrictive interpretations"
+    },
+    {
+      "claim_id": "supreme_emergency_threshold",
+      "human_readable": "Supreme Emergency Threshold (Walzer's Evolving Trigger Conditions)",
+      "structural_delta": "The dramatic narrowing from broad emergencies (torture to prevent hundreds of deaths) to supreme emergency (communal death/way of life destruction)",
+      "primary_observable": "Walzer's 1973 vs. 2004 formulations; shift from torture/bribery examples to existential community threat",
+      "epsilon_bin": "high",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "necessity_ambiguity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 9,
+      "selection_reason": "Downstream of necessity ambiguity; distinct observable (threshold evolution); piton showing framework instability under scrutiny"
+    }
+  ],
+  "generation_sequence": [
+    "logical_coherence_paradox",
+    "political_exceptionalism",
+    "moral_remainder_requirement",
+    "absolutism_attachment",
+    "citizen_complicity_structure",
+    "punishment_regress",
+    "scope_restriction",
+    "necessity_ambiguity",
+    "supreme_emergency_threshold"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_threshold_deontology_collapse",
+      "description": "Does dirty hands collapse into threshold deontology, eliminating what makes it philosophically distinctive? If so, the entire framework may be ordinary moral reasoning misnamed.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + threshold deontology discussion"
+    },
+    {
+      "id": "omega_realism_boundary",
+      "description": "Where exactly does dirty hands diverge from political realism? Both deny moral dominance in politics; the regret/remorse distinction may be psychologically rather than structurally significant.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + realism comparison"
+    },
+    {
+      "id": "omega_empirical_effectiveness",
+      "description": "Do dirty hands scenarios assume empirical effectiveness (torture works, individual soldiers constrain wars) that real-world evidence contradicts? Shue's 'dreamland' critique may apply broadly.",
+      "source": "Extraction (torture debate, Tadros participation case) + Dark Matter Probe 1"
+    },
+    {
+      "id": "omega_communal_transcendence",
+      "description": "Walzer admits he cannot justify political community's unique value 'without ascribing to communal life a kind of transcendence that I don't believe it to have.' This unresolved foundation may undermine the entire framework.",
+      "source": "Extraction (Walzer's scope ambiguity) + F03 concern"
+    },
+    {
+      "id": "omega_non_state_symmetry",
+      "description": "If Palestinian dispossession constitutes supreme emergency (al-Nakba as catastrophe), does Walzer's framework permit Palestinian terrorism? His ambiguity here may reveal state-centric bias rather than principled distinction.",
+      "source": "Extraction (Israeli-Palestinian case) + political_exceptionalism axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: political_exceptionalism and scope_restriction may assume political community's unique value without adequate justification. Walzer himself acknowledges inability to ground this claim. Generated omega_communal_transcendence to bound this uncertainty. All nine axes pass independence testing with distinct observables and non-redundant epsilon structures."
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / American Studies",
+  "family_id": "declaration_equality_clause_2026",
+  "topic_summary": "Analysis of the Declaration of Independence's 'all men are created equal' clause as a contested kernel with divergent readings that emit structurally different constraints. The substrate is the fixed phrase itself; the contest is whether it was intentionally limited to propertied white males (originalist reading) or whether it encoded a universal principle that subsequent generations are bound to expand (progressive reading).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Declaration's text (founding document, 1776)",
+      "Continental Congress (drafting authority)",
+      "Jefferson (primary author)",
+      "Enslaved population (excluded from original application)",
+      "Women (excluded from original application)",
+      "Later social movements (Civil Rights, suffrage, claiming kernel authority)"
+    ],
+    "key_tensions": [
+      "Textual universalism vs. contextual limitation (language says 'all' but application was restricted)",
+      "Fixed founding intent vs. evolving interpretation (originalism vs. living constitutionalism in kernel form)"
+    ],
+    "mechanisms": [
+      "Kernel invocation in expansion movements (suffrage, abolition, Civil Rights citing the Declaration)",
+      "Judicial interpretation drift (Supreme Court cases reading equal protection expansively)",
+      "Counter-interpretation via historical scholarship (originalist claim that founders intended limitation)"
+    ],
+    "absences": [
+      "Indigenous peoples not addressed in kernel debate despite territorial dispossession justified by Declaration",
+      "Economic equality absent from both readings (both accept property rights; debate is about membership not redistribution)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "originalist_reading",
+      "human_readable": "Originalist Reading (Intentional Limitation to Propertied White Males)",
+      "structural_delta": "Equality clause interpreted as bounded by 18th-century social taxonomy; authority grounded in founders' documented intent; excludes enslaved people, women, and non-property holders from equal status protections",
+      "primary_observable": "Historical evidence of founders' views; documented exclusions in contemporaneous law (slavery, coverture); originalist judicial opinions",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "founding_elite_and_descendants",
+      "victim": "historically_excluded_groups",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes restrictive victim-set baseline"
+    },
+    {
+      "claim_id": "universalist_reading",
+      "human_readable": "Universalist Reading (Universal Principle Requiring Expansion)",
+      "structural_delta": "Equality clause interpreted as encoding universal moral principle; authority grounded in natural law and moral philosophy; demands iterative expansion of equal status to all humans regardless of founder intent",
+      "primary_observable": "Civil Rights movement documents; judicial precedent (Brown v. Board, Obergefell); philosophical arguments from Locke/Kant grounding rights in personhood",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "marginalized_groups_claiming_inclusion",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; establishes expansive interpretation with different authority grounding"
+    },
+    {
+      "claim_id": "textualist_paradox_reading",
+      "human_readable": "Textualist Paradox Reading (Universal Language, Restricted Application as Founding Hypocrisy)",
+      "structural_delta": "Equality clause's universal language ('all men') is textually irreconcilable with founders' simultaneous maintenance of slavery and coverture; interprets kernel as encoding a performative contradiction that delegitimizes originalist claims",
+      "primary_observable": "Textual analysis of 'all' vs. documented exclusions; abolitionist and suffragist arguments pointing to textual hypocrisy; modern critical scholarship",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "originalist_authority_claims",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; captures the contradiction between text and context that neither originalist nor universalist readings fully address; exposes kernel instability"
+    },
+    {
+      "claim_id": "economic_equality_absence",
+      "human_readable": "Economic Equality Exclusion (Property Rights as Uncontested Substrate)",
+      "structural_delta": "All three readings accept property rights and economic hierarchy; the kernel contest is about membership in the protected class, not redistribution or economic leveling",
+      "primary_observable": "Absence of economic equality demands in Civil Rights discourse grounded in Declaration; Lockean property theory underlying all readings",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural absence rather than reading; mountain context for all readings but not itself a reading of the equality kernel"
+    },
+    {
+      "claim_id": "indigenous_exclusion_axis",
+      "human_readable": "Indigenous Exclusion (Territorial Dispossession Outside Kernel Scope)",
+      "structural_delta": "Indigenous peoples not included in any reading's victim/beneficiary analysis despite Declaration serving as justification for territorial expansion; sovereignty rather than equality is the operative concept",
+      "primary_observable": "Absence of Indigenous peoples in equality-kernel debates; separate sovereignty doctrine; territorial acquisition justified by Declaration's self-determination language",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "settler_colonial_project",
+      "victim": "indigenous_nations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally separate axis (sovereignty vs. equality); high epsilon but outside the specific kernel contest over 'all men created equal' interpretation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "originalist_reading",
+      "kernel_id": "all_men_created_equal",
+      "reading_id": "originalist_reading"
+    },
+    {
+      "claim_id": "universalist_reading",
+      "kernel_id": "all_men_created_equal",
+      "reading_id": "universalist_reading"
+    },
+    {
+      "claim_id": "textualist_paradox_reading",
+      "kernel_id": "all_men_created_equal",
+      "reading_id": "textualist_paradox_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "economic_equality_absence",
+      "structural_delta": "Property rights uncontested across all readings; membership vs. redistribution distinction",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural absence rather than a reading of the equality kernel; provides context but not a competing interpretation"
+    },
+    {
+      "claim_id": "indigenous_exclusion_axis",
+      "structural_delta": "Indigenous peoples outside kernel debate despite Declaration's role in territorial dispossession",
+      "hypothesis": "snare",
+      "deferral_reason": "High epsilon but separate sovereignty axis, not an interpretation of the equality clause itself; omega material for expansion"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_economic_equality_blind_spot",
+      "description": "All three readings accept property rights and economic hierarchy as uncontested substrate. The kernel contest is about WHO is included in 'equal' status, not WHETHER equality demands economic leveling. This shared blindness may itself be a fourth reading that no constituency articulates because it would threaten cross-cutting elite interests.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis economic_equality_absence"
+    },
+    {
+      "id": "omega_indigenous_sovereignty_kernel",
+      "description": "Indigenous peoples are absent from all readings not because they were included or excluded from 'all men' but because sovereignty rather than equality is the operative framework for their relation to the founding. The Declaration's self-determination language justified territorial dispossession through a separate kernel that remains unanalyzed in equality-focused scholarship.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis indigenous_exclusion_axis"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "If textualist_paradox_reading is correct that the kernel encodes a performative contradiction, do originalist and universalist readings collapse into motivated interpretations of an incoherent substrate? The three readings may not be genuinely independent if the kernel itself is unstable.",
+      "source": "§3.1 Pairwise Test + §1.3-K coherence signal"
+    },
+    {
+      "id": "omega_reading_fourth_implicit",
+      "description": "Possible fourth reading not surfaced: equality as aspirational rhetoric with no binding authority (cynical reading). This would treat the clause as scaffold rather than kernel, benefiting elites who invoke it ceremonially while blocking enforcement. Not selected due to lower documented scholarly/judicial presence, but may explain observed drift between invocation and implementation.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + §2.2 probe results"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings are structurally distinct with different authority groundings and victim sets. Deferred axes address absences without forcing inclusion. Kernel decomposition proceeds as specified."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The phrase 'all men are created equal' in the Declaration of Independence, treated as a fixed founding commitment whose interpretation determines the scope of equal status protections",
+    "authority_description": "Contested between originalist authority (founders' documented intent as binding) and universalist authority (natural law/moral philosophy as transcendent); textualist reading exposes the contest by foregrounding textual contradiction",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "all_men_created_equal",
+    "readings": [
+      {
+        "reading_id": "originalist_reading",
+        "commitment": "Equality bounded by 18th-century social taxonomy; founders' intent governs scope",
+        "authority_grounding": "Historical evidence and originalist interpretive method",
+        "sibling_readings": [
+          "universalist_reading",
+          "textualist_paradox_reading"
+        ],
+        "expected_structural_delta": "High extractiveness; benefits founding elite and descendants; victims are historically excluded groups; narrow victim set"
+      },
+      {
+        "reading_id": "universalist_reading",
+        "commitment": "Equality as universal principle requiring iterative expansion regardless of founder intent",
+        "authority_grounding": "Natural law, moral philosophy, and living constitutionalism",
+        "sibling_readings": [
+          "originalist_reading",
+          "textualist_paradox_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (coordination costs of expansion); benefits marginalized groups claiming inclusion; expanding victim set (those denied equal status)"
+      },
+      {
+        "reading_id": "textualist_paradox_reading",
+        "commitment": "Universal language irreconcilable with restricted application reveals performative contradiction",
+        "authority_grounding": "Textual analysis and critical scholarship exposing founding hypocrisy",
+        "sibling_readings": [
+          "originalist_reading",
+          "universalist_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (delegitimizes originalist authority claims); victim is originalist interpretive framework itself; exposes kernel instability"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "originalist_reading",
+        "reading_b": "universalist_reading",
+        "basis": "No coherent framework can simultaneously hold that founder intent is binding (originalist axiom) and that moral principles transcend historical context (universalist axiom); accepting universalism requires rejecting originalism's foundational premise that historical intent constrains interpretation"
+      },
+      {
+        "reading_a": "originalist_reading",
+        "reading_b": "textualist_paradox_reading",
+        "basis": "Textualist reading treats the contradiction between universal language and restricted application as delegitimizing founder authority; originalist reading requires treating founders as coherent authorities whose intent resolves apparent contradictions; no framework holds both that founders are incoherent (textualist) and authoritative (originalist)"
+      }
+    ]
+  },
+  "_seed_id": "declaration_of_independence_equality"
+}

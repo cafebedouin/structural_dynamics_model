@@ -1,0 +1,254 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / Cultural Anthropology / Legal History",
+  "family_id": "dueling_decline_honor_settlement",
+  "topic_summary": "Analysis of dueling's disappearance in 19th-century America and Europe as a contested interpretive kernel. The practice served as formal honor-settlement mechanism until mid-1800s, then vanished through geographically uneven process. Competing readings frame this as cultural contraction (became unthinkable), institutional displacement (fell to fringe), or overdetermined composite of reinforcing mechanisms.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Code Duello (formal honor-settlement protocol requiring seconds, rules of conduct)",
+      "Northern US states (early institutional development, dueling banned by 1820s-1840s)",
+      "Southern US states (weak institutional capacity, dueling persisted until 1870s)",
+      "Dignity culture framework (emerging norm system treating insult response as compromise/legal rather than violent)",
+      "Honor culture framework (traditional norm system requiring violent defense of reputation)",
+      "Civil War battlefield experience (traumatic rupture changing public opinion)",
+      "Modern banking/commercial institutions (alternative dispute resolution via contracts, courts)"
+    ],
+    "key_tensions": [
+      "Honor defense via violence vs honor defense via legal mechanisms (dueling vs libel suits)",
+      "Regional institutional capacity (North's developed courts vs South's weak formal systems)",
+      "Generational value shift (Old World honor code vs emerging dignity norms)",
+      "Public opinion vs legal prohibition (cultural change preceded vs followed statutory bans)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that dueling's disappearance represents a fundamental transformation in honor-settlement legitimacy, with all parties agreeing the practice moved from culturally central to culturally marginal/extinct",
+    "authority_description": "Historical sociologists and cultural anthropologists claiming interpretive authority via methodological frameworks (institutional analysis, cultural evolution models, overdetermination theory)",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "dueling_disappearance_mechanism",
+    "readings": [
+      {
+        "reading_id": "contraction_reading",
+        "commitment": "Dueling became culturally unthinkable through dignity-culture displacement of honor-culture axioms",
+        "authority_grounding": "Cultural anthropology (honor/dignity/victimhood culture typology)",
+        "sibling_readings": [
+          "institutional_displacement_reading",
+          "overdetermined_composite_reading"
+        ],
+        "expected_structural_delta": "Constraint type shifts from rope (coordination on honor norms) to mountain (dignity culture as irreversible substrate); victim set includes honor-culture practitioners whose framework became illegible"
+      },
+      {
+        "reading_id": "institutional_displacement_reading",
+        "commitment": "Dueling fell to fringe through institutional substitution (courts, banking, libel law) outcompeting it as dispute-resolution mechanism",
+        "authority_grounding": "Institutional economics / legal history",
+        "sibling_readings": [
+          "contraction_reading",
+          "overdetermined_composite_reading"
+        ],
+        "expected_structural_delta": "Constraint type remains rope (coordination on dispute-resolution protocol); dueling persists as available-but-disfavored option in institutional gaps; no victim set (voluntary substitution)"
+      },
+      {
+        "reading_id": "overdetermined_composite_reading",
+        "commitment": "Dueling's decline was causally overdetermined by multiple independent sufficient conditions (legal prohibition, institutional modernization, cultural shift, Civil War trauma) acting simultaneously",
+        "authority_grounding": "Historical sociology / causal pluralism",
+        "sibling_readings": [
+          "contraction_reading",
+          "institutional_displacement_reading"
+        ],
+        "expected_structural_delta": "Constraint type is tangled_rope (multiple beneficiaries from different mechanisms); no single ε measurable because causal pathways are non-separable; victim set unclear (depends on which mechanism dominated)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "contraction_reading",
+        "reading_b": "institutional_displacement_reading",
+        "basis": "Contraction requires dignity culture to render honor-violence axiomatically illegitimate (no coherent framework holds both honor-as-violence and dignity-as-compromise). Institutional displacement allows honor culture to persist as coherent framework while practitioners voluntarily adopt superior technology. No single normative framework can hold both 'dueling became unthinkable' and 'dueling remained thinkable but inferior'."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "contraction_reading",
+      "human_readable": "Cultural Contraction (Dignity Culture Displacement)",
+      "structural_delta": "Honor-culture axioms (violent defense of reputation as obligatory) replaced by dignity-culture axioms (insult response via compromise/law, violence as barbaric)",
+      "primary_observable": "Discourse analysis of honor-defense justifications in newspapers, letters, legal proceedings 1780-1900; shift from 'duty to duel' to 'dueling as murder'",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "honor_culture_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest structural distinctiveness; mountain hypothesis with irreversible cultural substrate shift"
+    },
+    {
+      "claim_id": "institutional_displacement_reading",
+      "human_readable": "Institutional Displacement (Courts and Commerce Outcompete Dueling)",
+      "structural_delta": "Formal legal institutions (libel law, contract enforcement, banking transparency) provide superior dispute-resolution technology, making dueling obsolete without cultural delegitimization",
+      "primary_observable": "Regional correlation between institutional development (court capacity, banking penetration) and dueling decline rates; persistence in institutional gaps (Southern/Western US)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally independent from contraction reading; different observable and constraint type"
+    },
+    {
+      "claim_id": "overdetermined_composite_reading",
+      "human_readable": "Overdetermined Composite (Multiple Sufficient Causes)",
+      "structural_delta": "Dueling's decline resulted from simultaneous operation of independent sufficient conditions (legal bans, institutional modernization, cultural shift, Civil War trauma), making causal attribution indeterminate",
+      "primary_observable": "Temporal clustering of multiple mechanisms in 1850s-1870s; counterfactual analysis showing each mechanism alone would have sufficed",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "multiple_institutional_actors",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; synthesis reading that explicitly addresses causal non-separability"
+    },
+    {
+      "claim_id": "regional_institutional_capacity",
+      "human_readable": "Regional Institutional Capacity Gradient (North-South Divergence)",
+      "structural_delta": "Northern states developed formal legal/commercial institutions earlier than Southern states, creating geographic variation in dueling persistence",
+      "primary_observable": "Court density, banking penetration, commercial law codification by region 1800-1870; dueling frequency correlation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_displacement_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as evidence within institutional_displacement_reading; lower independent structural yield"
+    },
+    {
+      "claim_id": "generational_value_shift",
+      "human_readable": "Generational Value Shift (Old World Honor Code Rejection)",
+      "structural_delta": "Younger generations rejected Code Duello as anachronistic Old World practice incompatible with emerging American identity",
+      "primary_observable": "Age distribution of duelists over time; generational rhetoric in anti-dueling discourse",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "contraction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism within contraction reading rather than independent axis"
+    },
+    {
+      "claim_id": "civil_war_traumatic_rupture",
+      "human_readable": "Civil War Traumatic Rupture (Battlefield Experience Delegitimizes Honor Violence)",
+      "structural_delta": "Mass battlefield death experience (1861-1865) made ritualized single-combat violence culturally intolerable",
+      "primary_observable": "Sharp decline in Southern dueling post-1865; discourse shift from 'honorable combat' to 'senseless bloodshed'",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "post_war_honor_culture_practitioners",
+      "downstream_of": [],
+      "feeds_into": [
+        "contraction_reading",
+        "overdetermined_composite_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: one mechanism among several in overdetermined composite; lower structural distinctiveness than selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "contraction_reading",
+      "kernel_id": "dueling_disappearance_mechanism",
+      "reading_id": "contraction_reading"
+    },
+    {
+      "claim_id": "institutional_displacement_reading",
+      "kernel_id": "dueling_disappearance_mechanism",
+      "reading_id": "institutional_displacement_reading"
+    },
+    {
+      "claim_id": "overdetermined_composite_reading",
+      "kernel_id": "dueling_disappearance_mechanism",
+      "reading_id": "overdetermined_composite_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "regional_institutional_capacity",
+      "structural_delta": "North-South institutional development gradient explains geographic variation in dueling persistence",
+      "hypothesis": "rope",
+      "deferral_reason": "Evidence component within institutional_displacement_reading rather than independent axis"
+    },
+    {
+      "claim_id": "generational_value_shift",
+      "structural_delta": "Younger generations rejected Old World honor code as anachronistic",
+      "hypothesis": "piton",
+      "deferral_reason": "Mechanism within contraction_reading; lower independent structural yield"
+    },
+    {
+      "claim_id": "civil_war_traumatic_rupture",
+      "structural_delta": "Battlefield experience made ritualized violence culturally intolerable",
+      "hypothesis": "snare",
+      "deferral_reason": "One mechanism among several in overdetermined composite; captured in generation via composite reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_public_opinion_legislation_sequence",
+      "description": "Research claims 'public opinion, not legislation, caused the change' but also notes '18 states outlawed dueling by 1859.' Causal sequence unclear: did legal prohibition follow cultural shift, or did enforcement of existing laws require cultural shift? Affects whether legal mechanism is downstream consequence or independent cause.",
+      "source": "Extraction tension between claims"
+    },
+    {
+      "id": "omega_honor_culture_persistence",
+      "description": "If contraction_reading is correct (dignity culture rendered honor-violence unthinkable), how do contemporary honor cultures (Mediterranean, Middle Eastern, gang subcultures) persist? Does this falsify the mountain hypothesis or indicate incomplete cultural diffusion?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_non_break_composite_test",
+      "description": "User flagged 'NON-BREAK composite test with a contraction edge.' If overdetermined_composite_reading is correct, does the presence of a contraction mechanism (dignity culture shift) break the composite into a dominant cause, or do all mechanisms remain genuinely independent sufficient conditions? Affects whether composite is tangled_rope or snare with hidden beneficiary.",
+      "source": "User prompt kernel contest specification"
+    },
+    {
+      "id": "omega_institutional_substitution_completeness",
+      "description": "Institutional_displacement_reading assumes courts/banking fully substitute for dueling's honor-defense function. But dueling provided immediate public satisfaction; legal proceedings are slow and private. Does institutional substitution leave an honor-defense gap that other mechanisms (e.g., public shaming, social ostracism) filled?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "If all three readings are empirically true (culture shifted AND institutions substituted AND causes were overdetermined), do they collapse into a single composite axis? The axiom_contradiction between contraction and institutional_displacement may be false if dignity culture was itself caused by institutional modernization (not independent).",
+      "source": "§1.3-K coherence check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: contraction_reading classified as mountain (irreversible cultural substrate) but contemporary honor cultures persist globally. Generated omega_honor_culture_persistence to bound this uncertainty. May require reclassification to rope or piton depending on cultural diffusion model."
+  },
+  "_seed_id": "dueling_decline"
+}

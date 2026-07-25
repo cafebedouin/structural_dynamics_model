@@ -1,0 +1,239 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Civil Rights / Educational Policy",
+  "family_id": "affirmative_action_equal_protection_2026",
+  "topic_summary": "Analysis of affirmative action through competing interpretations of the Equal Protection Clause. The colorblind reading treats race-conscious policies as constitutional violations requiring strict individual equality. The remedial reading treats such policies as constitutionally permissible tools to dismantle systemic discrimination. Each reading emits a constraint with inverted beneficiary/victim structures from the same Fourteenth Amendment substrate.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Fourteenth Amendment Equal Protection Clause (constitutional kernel)",
+      "Students for Fair Admissions (anti-affirmative action litigant)",
+      "Harvard University (institutional defendant; remedial framework architect)",
+      "Supreme Court conservative majority (colorblind enforcement authority)",
+      "Justice Clarence Thomas (colorblind constitutional defender)",
+      "Justice Ketanji Brown Jackson (remedial framework defender)",
+      "Executive Order 10925 / Civil Rights Act 1964 (statutory implementation layer)",
+      "Historically marginalized groups (beneficiaries under remedial; victims under colorblind)"
+    ],
+    "key_tensions": [
+      "Individual equality vs group remedy (procedural individualism vs systemic discrimination)",
+      "Formal neutrality vs substantive equality (treating everyone identically vs accounting for uneven playing field)",
+      "Constitutional text vs constitutional purpose (literal colorblindness vs anti-subordination intent)",
+      "White/Asian applicant harm vs Black/Latino exclusion harm (competing victim narratives)"
+    ],
+    "key_mechanisms": [
+      "Strict scrutiny doctrine (judicial enforcement of colorblind reading via compelling interest test)",
+      "Diversity rationale (narrow remedial justification surviving Bakke, rejected in SFFA)",
+      "Quota prohibition (Bakke compromise limiting remedial tools)"
+    ],
+    "key_absences": [
+      "Economic class-based alternatives (absent from both readings despite potential to address material inequality without race)",
+      "Indigenous sovereignty frameworks (tribal nations' distinct constitutional status absent from equal protection debate)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Equal Protection Clause of the Fourteenth Amendment as the shared constitutional commitment that all parties invoke to ground their claims about legitimate state action regarding race",
+    "authority_description": "Supreme Court interpretive authority grounded in Markov v. Madison judicial review power; legitimacy derives from claimed fidelity to constitutional text and original intent",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Drift Absorption (remedial reading absorbed 1960s-2020s civil rights expansion; colorblind reading now reasserting textual literalism to foreclose further drift)",
+    "is_contested_kernel": true,
+    "kernel_id": "equal_protection_clause",
+    "readings": [
+      {
+        "reading_id": "colorblind_reading",
+        "commitment": "Equal protection requires absolute race neutrality in state action; any racial classification is presumptively unconstitutional regardless of remedial intent",
+        "authority_grounding": "Textualist/originalist interpretation claiming fidelity to Fourteenth Amendment's literal language and Harlan's Plessy dissent",
+        "sibling_readings": [
+          "remedial_reading",
+          "diversity_reading"
+        ],
+        "expected_structural_delta": "White and Asian applicants enter victim set; affirmative action beneficiaries (Black, Latino students) become constitutional violators; state universities face suppression of race-conscious tools; beneficiary = formal equality advocates; epsilon = moderate (constitutional doctrine permits narrow exceptions)"
+      },
+      {
+        "reading_id": "remedial_reading",
+        "commitment": "Equal protection permits race-conscious remedies to dismantle systemic discrimination and achieve substantive equality; anti-subordination is the clause's core purpose",
+        "authority_grounding": "Purpose-oriented interpretation claiming fidelity to Reconstruction-era intent to protect formerly enslaved persons and dismantle racial caste",
+        "sibling_readings": [
+          "colorblind_reading",
+          "diversity_reading"
+        ],
+        "expected_structural_delta": "Historically marginalized groups (Black, Latino, Indigenous students) enter victim set of past/ongoing discrimination; state has affirmative duty to remedy; white applicants bear costs of remedial action; beneficiary = civil rights advocates and universities; epsilon = high (reading permits broad remedial tools but faces judicial suppression)"
+      },
+      {
+        "reading_id": "diversity_reading",
+        "commitment": "Equal protection permits limited race consideration when diversity serves compelling educational interests; race as one factor among many in holistic review",
+        "authority_grounding": "Pragmatic compromise grounded in Powell's Bakke opinion and Grutter precedent; legitimacy derives from balancing competing constitutional values",
+        "sibling_readings": [
+          "colorblind_reading",
+          "remedial_reading"
+        ],
+        "expected_structural_delta": "Universities gain limited discretion to consider race; no group enters victim set explicitly (framed as benefiting all students via diverse learning environment); beneficiary = institutional autonomy; epsilon = low (narrow window between quota prohibition and colorblind mandate, now closing post-SFFA)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "colorblind_reading",
+        "reading_b": "remedial_reading",
+        "basis": "Colorblind reading holds that any state use of racial classification violates equal protection regardless of remedial purpose; remedial reading holds that equal protection's core purpose is to permit race-conscious action to dismantle subordination. No single framework can hold both: accepting colorblindness as constitutional mandate requires rejecting remedial action as constitutional violation, and vice versa."
+      },
+      {
+        "reading_a": "diversity_reading",
+        "reading_b": "colorblind_reading",
+        "basis": "Diversity reading permits race as one factor in holistic admissions to achieve educational benefits; colorblind reading categorically prohibits any racial classification in state action. No framework can hold both: accepting diversity rationale requires accepting race-conscious decision-making, which colorblindness categorically forbids."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "colorblind_reading",
+      "human_readable": "Colorblind Constitutional Reading (Race-Neutral Mandate)",
+      "structural_delta": "Constitutional mandate for absolute race neutrality in state action; any racial classification triggers strict scrutiny and presumptive invalidity",
+      "primary_observable": "Judicial application of strict scrutiny to race-conscious policies; frequency of invalidation regardless of remedial intent",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "formal_equality_advocates",
+      "victim": "affirmative_action_beneficiaries",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest structural tension with sibling readings; inverts victim/beneficiary structure relative to remedial reading"
+    },
+    {
+      "claim_id": "remedial_reading",
+      "human_readable": "Remedial Constitutional Reading (Anti-Subordination Purpose)",
+      "structural_delta": "Constitutional permission for race-conscious remedies to dismantle systemic discrimination; anti-subordination as equal protection's core purpose",
+      "primary_observable": "Scope of permissible race-conscious state action; judicial acceptance of remedial justifications beyond diversity",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "civil_rights_advocates",
+      "victim": "historically_marginalized_groups",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; axiom-contradictory to colorblind reading; highest epsilon (permits broadest remedial tools but faces suppression)"
+    },
+    {
+      "claim_id": "diversity_reading",
+      "human_readable": "Diversity Rationale Reading (Pragmatic Compromise)",
+      "structural_delta": "Limited race consideration permitted when diversity serves compelling educational interests; race as one factor in holistic review",
+      "primary_observable": "Judicial acceptance of diversity justification; scope of permissible holistic review practices",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "institutional_autonomy",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; pragmatic middle position between axiom-contradictory poles; demonstrates licensed plurality collapsing post-SFFA"
+    },
+    {
+      "claim_id": "class_based_alternative",
+      "human_readable": "Class-Based Affirmative Action (Economic Proxy)",
+      "structural_delta": "Socioeconomic status as race-neutral proxy for disadvantage; addresses material inequality without explicit racial classification",
+      "primary_observable": "Adoption rates of class-based admissions policies; correlation between class-based and race-based diversity outcomes",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "colorblind_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold emerging from colorblind constraint; structurally downstream; captured in omega as alternative framework"
+    },
+    {
+      "claim_id": "strict_scrutiny_mechanism",
+      "human_readable": "Strict Scrutiny Doctrine (Judicial Enforcement Tool)",
+      "structural_delta": "Compelling interest + narrow tailoring test applied to racial classifications; enforcement mechanism for colorblind reading",
+      "primary_observable": "Application frequency and pass rate of strict scrutiny to race-conscious policies",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "colorblind_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism for colorblind reading; lower centrality than kernel readings themselves"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "colorblind_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "colorblind_reading"
+    },
+    {
+      "claim_id": "remedial_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "remedial_reading"
+    },
+    {
+      "claim_id": "diversity_reading",
+      "kernel_id": "equal_protection_clause",
+      "reading_id": "diversity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "class_based_alternative",
+      "structural_delta": "Socioeconomic status as race-neutral proxy for disadvantage",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold emerging from colorblind constraint; structurally downstream of kernel readings; alternative framework warranting separate analysis"
+    },
+    {
+      "claim_id": "strict_scrutiny_mechanism",
+      "structural_delta": "Compelling interest + narrow tailoring test as enforcement mechanism",
+      "hypothesis": "piton",
+      "deferral_reason": "Enforcement mechanism for colorblind reading; lower centrality than kernel readings; captured implicitly in colorblind constraint story"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_class_proxy_effectiveness",
+      "description": "Does class-based affirmative action achieve racial diversity outcomes comparable to race-conscious policies? If not, colorblind reading may foreclose substantive equality while maintaining formal neutrality. Empirical question with structural implications for whether colorblindness is rope (coordination) or snare (extraction).",
+      "source": "Deferred axis class_based_alternative + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_indigenous_sovereignty_exclusion",
+      "description": "Tribal nations' distinct constitutional status (political sovereignty, not racial classification) absent from equal protection debate. Does federal Indian law provide alternative framework for group-conscious remedies? Structural gap in kernel contest.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_licensed_plurality_collapse",
+      "description": "Diversity reading historically coexisted with both colorblind and remedial readings (licensed plurality). Post-SFFA, does diversity reading collapse into colorblind mandate, or does it persist as underground practice? Axiom contradiction between diversity and colorblindness may not prevent coexistence if enforcement is selective.",
+      "source": "Axiom Contradiction Declaration (§1.3-K) + diversity_reading low epsilon"
+    },
+    {
+      "id": "omega_remedial_epsilon_suppression",
+      "description": "Remedial reading classified as high epsilon (permits broad tools) but faces judicial suppression. Is high epsilon intrinsic to the reading, or artifact of current enforcement regime? If Court composition shifts, does epsilon remain high or does it reflect latent constitutional permission?",
+      "source": "F03 (Hasty Generalization) + remedial_reading epsilon classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: remedial_reading classified as high epsilon based on scope of permissible remedial tools, but this may conflate intrinsic reading structure with current judicial suppression. Generated omega_remedial_epsilon_suppression to bound uncertainty about whether epsilon is reading-intrinsic or enforcement-contingent."
+  },
+  "_seed_id": "affirmative_action_kernel"
+}

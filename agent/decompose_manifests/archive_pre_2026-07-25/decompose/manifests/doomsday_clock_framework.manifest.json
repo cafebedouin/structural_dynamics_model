@@ -1,0 +1,205 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Science Communication / Normative Epistemology / Risk Governance",
+  "family_id": "doomsday_clock_metric_2025",
+  "topic_summary": "Analysis of the Bulletin of the Atomic Scientists' Doomsday Clock as a contested interpretive practice. The Clock functions as a deliberately ambiguous kernel: one shared commitment (temporal metaphor quantifying existential risk proximity) read through incompatible interpretive frames—scientific measurement versus political performance—each instantiating structurally different constraints on how the Clock's pronouncements legitimate action.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Bulletin of the Atomic Scientists (authority; clock-keeper; Science and Security Board)",
+      "Doomsday Clock (the kernel; temporal metaphor; 'minutes to midnight' metric)",
+      "Scientific community (epistemic authority grounding objective reading)",
+      "Policy actors (action recipients; legitimacy consumers)",
+      "Media infrastructure (amplification mechanism; annual announcement ritual)"
+    ],
+    "key_tensions": [
+      "Objectivity claim vs performative function (Clock as measurement vs Clock as intervention)",
+      "Expert authority vs democratic legitimacy (Science Board interpretive monopoly vs public contestation rights)"
+    ],
+    "key_mechanisms": [
+      "Annual announcement ritual (media amplification; public attention capture)",
+      "Science and Security Board deliberation (closed expert panel; opaque weighting methodology)",
+      "Temporal metaphor translation (continuous risk → discrete minutes; incommensurable threats → single metric)"
+    ],
+    "key_absences": [
+      "Empirical validation methodology: no falsifiable predictions; no ex-post accuracy assessment of past Clock settings",
+      "Counterfactual baseline: what would 'midnight minus 20 minutes' operationally mean for policy differently than 'midnight minus 90 seconds'?"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "objective_index_reading",
+      "human_readable": "Objective Scientific Index Reading",
+      "structural_delta": "Clock setting derived from measurable risk indicators through expert synthesis; legitimate because it tracks objective threat levels",
+      "primary_observable": "Correlation between Clock movements and quantifiable risk events (nuclear arsenals, climate metrics, biosecurity incidents)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "scientific_authority",
+      "victim": "democratic_accountability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: instantiates Clock as measurement constraint; claims epistemic authority grounded in scientific objectivity"
+    },
+    {
+      "claim_id": "performative_tool_reading",
+      "human_readable": "Normative Political Performance Reading",
+      "structural_delta": "Clock setting strategically chosen to maximize policy impact; legitimate because it mobilizes collective action against existential threats",
+      "primary_observable": "Clock announcement timing relative to policy windows; rhetorical framing in Bulletin statements prioritizing urgency over precision",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "policy_activism",
+      "victim": "epistemic_credibility",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: instantiates Clock as intervention constraint; claims political legitimacy grounded in consequentialist necessity"
+    },
+    {
+      "claim_id": "hybrid_legitimacy_reading",
+      "human_readable": "Hybrid Expert-Activist Legitimacy Reading",
+      "structural_delta": "Clock simultaneously scientific and political; legitimate because expert judgment inherently contains normative elements when stakes are existential",
+      "primary_observable": "Bulletin's own methodological statements; Science and Security Board composition (scientists + policy experts)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: instantiates Clock as boundary object between science and politics; claims legitimacy from deliberate ambiguity maintenance"
+    },
+    {
+      "claim_id": "attention_economy_capture",
+      "human_readable": "Media Attention Economy Capture",
+      "structural_delta": "Clock's annual ritual optimized for news cycle dominance; structural incentive to move Clock frequently regardless of risk changes",
+      "primary_observable": "Frequency of Clock changes vs baseline null hypothesis of 'no change years'; media coverage volume correlation with movement magnitude",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "bulletin_institutional_survival",
+      "victim": "measurement_stability",
+      "downstream_of": [
+        "performative_tool_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of performative reading; structural media logic rather than kernel reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "objective_index_reading",
+      "kernel_id": "doomsday_clock_metric",
+      "reading_id": "objective_index_reading"
+    },
+    {
+      "claim_id": "performative_tool_reading",
+      "kernel_id": "doomsday_clock_metric",
+      "reading_id": "performative_tool_reading"
+    },
+    {
+      "claim_id": "hybrid_legitimacy_reading",
+      "kernel_id": "doomsday_clock_metric",
+      "reading_id": "hybrid_legitimacy_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "attention_economy_capture",
+      "structural_delta": "Annual ritual optimized for media coverage; incentive structure favoring frequent Clock movement",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream structural consequence rather than interpretive reading of the kernel; captured via performative_tool_reading constraints"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_falsifiability_absence",
+      "description": "Neither reading produces falsifiable predictions. Objective index reading claims measurement but offers no ex-post validation methodology. If Clock cannot be wrong, is it measuring?",
+      "source": "Absence Inventory (extraction) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_hybrid_collapse_risk",
+      "description": "Does hybrid_legitimacy_reading represent genuine third constraint, or post-hoc rationalization collapsing under scrutiny? If deliberate ambiguity is the strategy, what structural difference from performative reading?",
+      "source": "Independence Testing (§3) concern"
+    },
+    {
+      "id": "omega_midnight_operationalization",
+      "description": "What policy action would be different at 90 seconds vs 100 seconds to midnight? If answer is 'none,' the metric's granularity is performative rather than operational.",
+      "source": "Absence Inventory (counterfactual baseline) + Primary Observable validation"
+    },
+    {
+      "id": "omega_authority_legitimacy_recursion",
+      "description": "Who legitimates the Science and Security Board's interpretive authority? If scientific reading, peer review should constrain; if political reading, democratic accountability should constrain. Hybrid reading may escape both.",
+      "source": "Beneficiary Scan (Dark Matter Probe 3) + commitment system recognition"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No critical fractures detected. Kernel decomposition succeeded: three readings instantiate genuinely different constraints (different beneficiary/victim pairs, different epsilon sources). Hybrid reading borderline—may collapse into performative reading under generation, tracked via omega_hybrid_collapse_risk."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Doomsday Clock temporal metaphor as shared commitment: 'minutes to midnight' as quantified proximity to civilizational catastrophe",
+    "authority_description": "Bulletin of the Atomic Scientists Science and Security Board; interpretive legitimacy claimed through scientific expertise (objective reading) or moral urgency (performative reading)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tradition_with_controlled_ambiguity",
+    "is_contested_kernel": true,
+    "kernel_id": "doomsday_clock_metric",
+    "readings": [
+      {
+        "reading_id": "objective_index_reading",
+        "commitment": "Clock setting tracks measurable existential risk levels through expert synthesis of empirical indicators",
+        "authority_grounding": "scientific_expertise",
+        "sibling_readings": [
+          "performative_tool_reading",
+          "hybrid_legitimacy_reading"
+        ],
+        "expected_structural_delta": "High suppression of normative framing; beneficiary is scientific authority; victim is democratic accountability (expert monopoly on interpretation)"
+      },
+      {
+        "reading_id": "performative_tool_reading",
+        "commitment": "Clock setting strategically chosen to maximize policy impact and mobilize collective action",
+        "authority_grounding": "consequentialist_moral_urgency",
+        "sibling_readings": [
+          "objective_index_reading",
+          "hybrid_legitimacy_reading"
+        ],
+        "expected_structural_delta": "High tolerance for strategic manipulation of metric; beneficiary is policy activism; victim is epistemic credibility (undermines future trust)"
+      },
+      {
+        "reading_id": "hybrid_legitimacy_reading",
+        "commitment": "Clock setting embodies irreducible entanglement of scientific judgment and normative stakes in existential risk domain",
+        "authority_grounding": "expert_judgment_under_uncertainty",
+        "sibling_readings": [
+          "objective_index_reading",
+          "performative_tool_reading"
+        ],
+        "expected_structural_delta": "Maintains deliberate ambiguity as legitimacy source; no clear beneficiary/victim structure (coordination benefit vs accountability void)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "objective_index_reading",
+        "reading_b": "performative_tool_reading",
+        "basis": "Objective reading requires measurement fidelity independent of desired policy outcomes; performative reading requires subordinating measurement accuracy to strategic impact. No single coherent framework holds both: optimizing for accuracy precludes optimizing for mobilization effect."
+      }
+    ]
+  },
+  "_seed_id": "doomsday_clock_framework"
+}

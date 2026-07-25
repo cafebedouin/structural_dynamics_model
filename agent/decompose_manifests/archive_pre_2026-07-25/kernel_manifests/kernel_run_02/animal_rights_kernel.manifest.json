@@ -1,0 +1,187 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Animal Ethics / Legal Theory",
+  "family_id": "animal_status_kernel_2026",
+  "topic_summary": "Analysis of the animal-status kernel as read through three incompatible frameworks: property (animals as economic resources), welfare-regulated-use (animals as sentient beings whose suffering matters but whose use is acceptable if regulated), and abolitionist (animals as rights-holders who cannot be property). The disagreement centers on victim-set membership: whether animals belong in the moral victim-set at all, partially (suffering-relevant), or fully (rights-bearing).",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Peter Singer (utilitarian philosopher, Animal Liberation 1975, preference-utilitarian framework)",
+      "Gary Francione (abolitionist theorist, Rutgers law professor, property-status critique)",
+      "Tom Regan (abolitionist philosopher, 'empty cages not bigger cages')",
+      "Robert Garner (welfare theorist, Leicester University, incremental reform defender)",
+      "PETA (professionalized animal advocacy, welfare reforms, 'new welfarist' per Francione)",
+      "Legal property regime (animals classified as property with economic value only)",
+      "Victorian animal protection movement (Richard Martin, RSPCA 1824, first welfare laws)",
+      "Vivisection industry (structural beneficiary of property status)"
+    ],
+    "key_tensions": [
+      "Victim-set membership: property reading excludes animals entirely; welfare includes suffering-capacity; abolitionist includes full moral personhood",
+      "Property status paradox: welfare reforms regulate use without eliminating property classification, which abolitionists argue perpetuates the fundamental injustice",
+      "Strategic factionalism: professionalized mainstream (welfare reforms, donations, media) vs radical abolitionist/direct action (property abolition, vegan advocacy)",
+      "Empirical effectiveness dispute: Francione claims welfare reforms make public comfortable with 'happy meat'; Garner claims reforms reduce suffering and abolitionist strategy is speculative",
+      "New welfarism critique: self-described rights groups pursuing welfare reforms indistinguishable from traditional welfarists"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "property_reading",
+      "human_readable": "Property Reading (Animals as Economic Resources)",
+      "structural_delta": "Animals classified as property with economic value only; excluded from moral victim-set; owners possess right to use, sell, breed, euthanize",
+      "primary_observable": "Legal classification as property; absence of standing to sue; transferability as chattel",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "animal_use_industries",
+      "victim": "animals_as_excluded_class",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational reading establishing baseline constraint structure; highest extractiveness; defines zero-inclusion victim-set boundary"
+    },
+    {
+      "claim_id": "welfare_reading",
+      "human_readable": "Welfare-Regulated-Use Reading (Sentience-Grounded Partial Inclusion)",
+      "structural_delta": "Animals partially included in victim-set via suffering-capacity; use acceptable if regulated to minimize pain; property status retained but constrained",
+      "primary_observable": "Welfare legislation density; enforcement mechanisms; industry compliance metrics; public comfort with 'humane' animal products",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "professionalized_advocacy_orgs",
+      "victim": "abolitionist_movement_coherence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Intermediate reading with distinct structural delta (partial victim-set inclusion); highest centrality due to strategic position between property and abolitionist poles; generates 'new welfarism' critique tension"
+    },
+    {
+      "claim_id": "abolitionist_reading",
+      "human_readable": "Abolitionist Reading (Full Moral Personhood)",
+      "structural_delta": "Animals fully included in victim-set with basic right not to be property; property status itself is the injustice; all use categorically impermissible",
+      "primary_observable": "Vegan advocacy success rates; property-status legal challenges; abolitionist movement growth vs professionalized welfare orgs",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "abolitionist_movement_purity",
+      "victim": "incremental_harm_reduction",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Maximal-inclusion reading; structurally distinct from welfare (categorical vs regulated use); completes the victim-set membership spectrum"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "property_reading",
+      "kernel_id": "animal_status_kernel",
+      "reading_id": "property_reading"
+    },
+    {
+      "claim_id": "welfare_reading",
+      "kernel_id": "animal_status_kernel",
+      "reading_id": "welfare_reading"
+    },
+    {
+      "claim_id": "abolitionist_reading",
+      "kernel_id": "animal_status_kernel",
+      "reading_id": "abolitionist_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_sentience_boundary",
+      "description": "Where does sentience-grounded victim-set inclusion terminate? Welfare reading includes mammals/birds but boundary for fish, invertebrates, insects contested. Abolitionist reading (Francione) includes all sentient beings but sentience itself is empirically uncertain for many taxa. Property reading denies relevance but cannot specify why sentience is morally irrelevant without circular appeal to property status.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): sentience boundary not addressed in any reading"
+    },
+    {
+      "id": "omega_wild_animal_suffering",
+      "description": "All three readings address domesticated/farmed animals but wild animal suffering is structurally absent. If welfare reading's logic (suffering matters) extends to wild predation/starvation, does it require intervention in nature? If abolitionist reading grants rights, do wild animals have positive rights to assistance? Property reading has no mechanism to address this but also no obligation.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): wild animals excluded from all frameworks"
+    },
+    {
+      "id": "omega_welfare_effectiveness_empirics",
+      "description": "Francione claims welfare reforms make public comfortable with 'happy meat' (counterproductive). Garner claims reforms reduce suffering and abolitionist strategy is speculative. Research context notes 'few empirical studies exist' and 'intuition suggests welfare laws reduce suffering' but provides no controlled studies. Empirical question unresolved; both positions rely on theoretical priors.",
+      "source": "Extraction: empirical disagreement flagged but evidence base thin"
+    },
+    {
+      "id": "omega_property_status_legal_path",
+      "description": "Abolitionist reading requires eliminating property status but legal mechanism unclear. Constitutional amendment? Statutory reclassification? Common-law evolution? Research context silent on feasibility. Welfare reading works within existing property framework (incremental). Abolitionist path dependency: if property status is the injustice, how is it dismantled without first achieving political power that presupposes its dismantling?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): abolitionist strategy benefits from moral clarity but lacks institutional pathway"
+    },
+    {
+      "id": "omega_indigenous_subsistence_collision",
+      "description": "All three readings address industrial animal use but subsistence hunting/fishing by Indigenous communities is structurally absent. Abolitionist reading (all use impermissible) collides with Indigenous sovereignty and cultural practice. Welfare reading might permit subsistence use if suffering minimized but framework unclear. Property reading treats Indigenous hunting as property right but ignores treaty/sovereignty dimensions.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): Indigenous subsistence use not addressed"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings are structurally distinct (different victim-set boundaries, different beneficiary/victim pairs, different epsilon bins). Research context provides sufficient grounding for all three positions. Omegas bound empirical uncertainties (welfare effectiveness, sentience boundary) and structural absences (wild animals, Indigenous subsistence) without invalidating core decomposition."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The animal-status kernel: the shared substrate all parties argue about is the moral/legal standing of non-human animals, but they read this substrate through incompatible foundational commitments about what grounds moral considerability (property rights, sentience/suffering-capacity, or personhood/rights-bearing status)",
+    "authority_description": "Authority is contested across three domains: legal (property law, welfare statutes), philosophical (utilitarian vs rights-based frameworks), and social movement (professionalized advocacy vs abolitionist purity). No single interpretive authority; each reading claims different grounding (economic efficiency, suffering reduction, moral consistency).",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_pluralism_with_licensed_coexistence",
+    "is_contested_kernel": true,
+    "kernel_id": "animal_status_kernel",
+    "readings": [
+      {
+        "reading_id": "property_reading",
+        "commitment": "Animals are property; moral considerability derives from ownership rights; economic value is the only relevant value",
+        "authority_grounding": "Legal property regime (common law, statutory classification); economic efficiency; historical practice",
+        "sibling_readings": [
+          "welfare_reading",
+          "abolitionist_reading"
+        ],
+        "expected_structural_delta": "Animals excluded from victim-set entirely; owners possess unrestricted use rights (subject only to anti-cruelty statutes that protect owner property value, not animal interests); extractiveness high because no countervailing moral constraint on use"
+      },
+      {
+        "reading_id": "welfare_reading",
+        "commitment": "Animals are sentient beings whose suffering is morally relevant; use is acceptable if regulated to minimize pain; property status retained but constrained by welfare obligations",
+        "authority_grounding": "Utilitarian philosophy (Singer's preference utilitarianism); welfare science (animal behavior, stress physiology); professionalized advocacy organizations (PETA, RSPCA); incremental legal reform",
+        "sibling_readings": [
+          "property_reading",
+          "abolitionist_reading"
+        ],
+        "expected_structural_delta": "Animals partially included in victim-set via suffering-capacity; welfare regulations constrain but do not eliminate use; extractiveness moderate because suffering-minimization imposes costs on industry but permits continued use; generates 'new welfarism' critique from abolitionists (welfare reforms make public comfortable with 'happy meat')"
+      },
+      {
+        "reading_id": "abolitionist_reading",
+        "commitment": "Animals are moral persons with the basic right not to be property; property status itself is the injustice; all use categorically impermissible regardless of welfare conditions",
+        "authority_grounding": "Rights-based philosophy (Regan, Francione); moral consistency arguments (if sentience grounds rights for humans, it grounds rights for animals); vegan advocacy movement",
+        "sibling_readings": [
+          "property_reading",
+          "welfare_reading"
+        ],
+        "expected_structural_delta": "Animals fully included in victim-set with rights against being property; property status must be abolished, not regulated; extractiveness high because any use violates rights; strategic tension with welfare reading (incremental reforms vs categorical abolition); empirical dispute over whether welfare reforms delay or advance abolition"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "property_reading",
+        "reading_b": "abolitionist_reading",
+        "basis": "Property reading's axiom (moral considerability derives from ownership; animals have economic value only) is mutually exclusive with abolitionist reading's axiom (animals are moral persons with rights against being property). No coherent framework can hold both: if animals are property, they cannot have rights against being property; if they have such rights, they cannot be property. The axioms define incompatible ontological categories."
+      },
+      {
+        "reading_a": "welfare_reading",
+        "reading_b": "abolitionist_reading",
+        "basis": "Welfare reading's axiom (suffering matters but use is acceptable if regulated) is mutually exclusive with abolitionist reading's axiom (property status itself is the injustice; all use categorically impermissible). No coherent framework can hold both: if property status is inherently unjust, then regulating use within that status cannot be morally acceptable; if regulated use is acceptable, then property status is not inherently unjust. Francione's 'new welfarism' critique identifies this contradiction: welfare reforms presuppose that animals can be property, which abolitionists deny."
+      }
+    ]
+  },
+  "_seed_id": "animal_rights_kernel"
+}

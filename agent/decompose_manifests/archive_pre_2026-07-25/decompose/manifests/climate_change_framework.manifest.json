@@ -1,0 +1,219 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Climate Governance / Treaty Law / Development Economics",
+  "family_id": "unfccc_framework_2026",
+  "topic_summary": "Analysis of the UN Framework Convention on Climate Change as a contested kernel where developed and developing nations read the treaty's commitments differently. The UNFCCC text stabilizes 'common but differentiated responsibilities' as a shared reference point, but interpretive authority is contested, producing structurally different constraints on emissions reductions, financial obligations, and climate justice.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "UNFCCC text (treaty framework establishing climate governance architecture)",
+      "Developed nations / Annex I parties (historical emitters with technology/capital)",
+      "Developing nations / Non-Annex I parties (vulnerable populations, limited historical emissions)",
+      "Conference of Parties (COP) (interpretive authority body with consensus requirement)",
+      "Green Climate Fund (financial mechanism for technology transfer and adaptation)",
+      "Paris Agreement (2015 successor framework embedding UNFCCC principles)"
+    ],
+    "key_tensions": [
+      "Binding vs voluntary commitments (developed nations favor flexibility; developing nations seek enforceable obligations)",
+      "Historical responsibility vs contemporary emissions (developing nations emphasize cumulative emissions; developed nations focus on current/future contributions)"
+    ],
+    "key_mechanisms": [
+      "Nationally Determined Contributions (NDCs) system allowing voluntary self-defined targets",
+      "Common But Differentiated Responsibilities (CBDR) principle requiring greater obligations from developed nations",
+      "Loss and Damage financing mechanism for climate impacts in vulnerable nations"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for treaty compliance beyond voluntary reporting",
+      "Formal adjudication process for interpretive disputes between reading coalitions"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The UNFCCC treaty text stabilizes 'common but differentiated responsibilities and respective capabilities' as the interpretive substrate for allocating climate obligations",
+    "authority_description": "COP consensus process grants interpretive legitimacy, but lack of adjudication mechanism allows parallel readings to persist without formal resolution",
+    "drift_status": "partial",
+    "candidate_pattern": "Dual Monarchy (two interpretive coalitions, neither able to suppress the other, operating through parallel institutional channels)",
+    "is_contested_kernel": true,
+    "kernel_id": "cbdr_principle",
+    "readings": [
+      {
+        "reading_id": "voluntary_commitment_reading",
+        "commitment": "CBDR requires voluntary, nationally determined contributions with technology transfer as primary developed nation obligation",
+        "authority_grounding": "COP consensus requiring developed nation approval; Paris Agreement voluntary NDC architecture",
+        "sibling_readings": [
+          "historical_responsibility_reading"
+        ],
+        "expected_structural_delta": "Developed nations exit victim set for binding emissions constraints; developing nations enter victim set for adaptation costs without compensation guarantees"
+      },
+      {
+        "reading_id": "historical_responsibility_reading",
+        "commitment": "CBDR requires binding emissions reductions from developed nations proportional to cumulative historical emissions plus loss/damage financing",
+        "authority_grounding": "G77+China coalition voting bloc; invocation of atmospheric carbon budget depletion by industrialized nations",
+        "sibling_readings": [
+          "voluntary_commitment_reading"
+        ],
+        "expected_structural_delta": "Developed nations enter victim set for financial transfer obligations and emissions constraints; developing nations exit victim set for adaptation financing gaps"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "voluntary_commitment_reading",
+        "reading_b": "historical_responsibility_reading",
+        "basis": "No single framework can hold both 'climate obligations are voluntary sovereignty expressions' and 'climate obligations are binding compensatory duties for historical atmospheric depletion' — the first treats emissions space as unowned commons, the second treats it as depleted resource creating debt obligation"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "voluntary_commitment_reading",
+      "human_readable": "Voluntary Commitment Reading (Developed Nations' Interpretation)",
+      "structural_delta": "CBDR interpreted as voluntary NDC system with technology transfer, not binding emissions reductions",
+      "primary_observable": "Developed nation emissions trajectory vs Paris 1.5°C pathway; technology transfer fund capitalization vs pledges",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "developed_nation_industrial_sectors",
+      "victim": "climate_vulnerable_populations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "One of two kernel readings; structural reading of CBDR principle producing constraints favoring developed nation flexibility"
+    },
+    {
+      "claim_id": "historical_responsibility_reading",
+      "human_readable": "Historical Responsibility Reading (Developing Nations' Interpretation)",
+      "structural_delta": "CBDR interpreted as binding obligation to reduce emissions proportional to cumulative historical carbon budget depletion plus loss/damage financing",
+      "primary_observable": "Loss and Damage fund capitalization; Annex I emissions reduction legally binding vs voluntary",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "climate_vulnerable_populations",
+      "victim": "developed_nation_industrial_sectors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Sibling kernel reading; structural reading producing constraints requiring developed nation sacrifice"
+    },
+    {
+      "claim_id": "cop_consensus_paralysis",
+      "human_readable": "COP Consensus Paralysis (Institutional Deadlock Structure)",
+      "structural_delta": "Consensus requirement in COP process allows either reading coalition to block formal resolution, institutionalizing interpretive plurality",
+      "primary_observable": "Frequency of COP decisions requiring 'noting' vs 'adopting' language; timelines for Loss and Damage operationalization",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "status_quo_emissions_regime",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "voluntary_commitment_reading",
+        "historical_responsibility_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Institutional mechanism enabling kernel contest persistence; explains why neither reading can suppress the other"
+    },
+    {
+      "claim_id": "adaptation_financing_gap",
+      "human_readable": "Adaptation Financing Gap (Under-Capitalization of Climate Fund)",
+      "structural_delta": "Green Climate Fund and Loss and Damage fund capitalization chronically below assessed need",
+      "primary_observable": "GCF/L&D pledges vs disbursements; adaptation costs vs available financing",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "climate_vulnerable_populations",
+      "downstream_of": [
+        "voluntary_commitment_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of voluntary_commitment_reading already captured in that reading's victim structure"
+    },
+    {
+      "claim_id": "paris_ratchet_mechanism",
+      "human_readable": "Paris Ratchet Mechanism (Progressive Ambition Increase Requirement)",
+      "structural_delta": "Paris Agreement requires successive NDC rounds to represent 'progression' in ambition, but lacks enforcement for what constitutes progression",
+      "primary_observable": "NDC ambition trajectory vs carbon budget; compliance with 'progression' requirement",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: procedural mechanism with uncertain effectiveness; lower structural centrality than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "voluntary_commitment_reading",
+      "kernel_id": "cbdr_principle",
+      "reading_id": "voluntary_commitment_reading"
+    },
+    {
+      "claim_id": "historical_responsibility_reading",
+      "kernel_id": "cbdr_principle",
+      "reading_id": "historical_responsibility_reading"
+    },
+    {
+      "claim_id": "cop_consensus_paralysis",
+      "kernel_id": null,
+      "reading_id": null
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "adaptation_financing_gap",
+      "structural_delta": "Chronic under-capitalization of climate finance mechanisms",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence already captured in voluntary_commitment_reading victim structure; would duplicate analytical ground"
+    },
+    {
+      "claim_id": "paris_ratchet_mechanism",
+      "structural_delta": "Progressive ambition requirement without enforcement",
+      "hypothesis": "rope",
+      "deferral_reason": "Procedural mechanism with low structural centrality; effectiveness uncertain relative to kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_china_classification_drift",
+      "description": "Is China a 'developing nation' under UNFCCC framework given current emissions levels and economic capacity? Classification determines which reading it institutionally supports, but framework lacks revision mechanism for this boundary.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — no formal process for reclassifying Annex/Non-Annex status"
+    },
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "Why does the UNFCCC lack binding enforcement when WTO trade agreements have dispute settlement? Absence suggests institutional design choice favoring voluntary_commitment_reading from inception.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — treaty architecture itself may encode developed nation preferences"
+    },
+    {
+      "id": "omega_atmospheric_commons_ownership",
+      "description": "The axiom contradiction rests on whether atmospheric carbon budget is unowned commons or depleted resource. Neither reading explicitly defends its ownership axiom — both assume it as substrate.",
+      "source": "Axiom contradiction between readings — ownership premise unexamined in treaty text itself"
+    },
+    {
+      "id": "omega_fossil_fuel_producer_capture",
+      "description": "Neither reading addresses fossil fuel producer states (petrostates) as distinct beneficiary class. Their interests may shape both readings' limitations on enforcement and ambition.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — absence of explicit producer state constraints in either reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure successfully identified; readings are genuinely structurally distinct (different beneficiary/victim pairs, different constraint types). COP consensus mechanism selected as third axis provides institutional explanation for kernel persistence. Deferred axes are genuine downstream consequences, not missed primary structure."
+  },
+  "_seed_id": "climate_change_framework"
+}

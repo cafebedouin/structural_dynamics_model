@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Labor Economics / Regulatory Policy / Public Administration",
+  "family_id": "occupational_licensing_mandates_2026",
+  "topic_summary": "Analysis of state occupational licensing statutes as a contested kernel where professional boards read the same legal text as necessary public safety coordination (Rope) while marginalized workers and market entrants read it as rent-seeking labor suppression (Snare). The statutory mandate remains fixed while generating structurally opposite constraint types depending on interpretive commitment.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "State occupational licensing statute (legal kernel establishing credential requirements)",
+      "Professional licensing boards (interpret and enforce statutory requirements)",
+      "Licensed incumbents (benefit from reduced competition)",
+      "Marginalized workers / market entrants (excluded by credential barriers)",
+      "Consumers (claimed beneficiaries of quality assurance)"
+    ],
+    "key_tensions": [
+      "Public safety rationale vs rent-seeking suppression (boards vs entrants)",
+      "Credential requirements as quality signal vs artificial barrier (incumbent protection vs market access)"
+    ],
+    "key_mechanisms": [
+      "Credential requirements (education, examination, apprenticeship hours)",
+      "Board enforcement (disciplinary action, license revocation)",
+      "Interstate reciprocity barriers (state-specific credential traps)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "State occupational licensing statute establishing mandatory credential requirements for market entry in a regulated profession",
+    "authority_description": "Professional boards claim interpretive legitimacy through claimed expertise and delegated state authority; entrants claim legitimacy through market access rights and anti-monopoly principles",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_interpretation",
+    "is_contested_kernel": true,
+    "kernel_id": "licensing_statute_mandate",
+    "readings": [
+      {
+        "reading_id": "public_safety_coordination",
+        "commitment": "Statutory credential requirements exist to prevent consumer harm through minimum competence standards",
+        "authority_grounding": "Professional expertise / delegated state police power",
+        "sibling_readings": [
+          "rent_seeking_suppression",
+          "graduated_access_filter"
+        ],
+        "expected_structural_delta": "Rope: consumers in beneficiary set, incompetent practitioners in victim set; coordination around shared quality threshold"
+      },
+      {
+        "reading_id": "rent_seeking_suppression",
+        "commitment": "Statutory credential requirements exist to restrict labor supply and extract rents for incumbent practitioners",
+        "authority_grounding": "Economic analysis / market access rights",
+        "sibling_readings": [
+          "public_safety_coordination",
+          "graduated_access_filter"
+        ],
+        "expected_structural_delta": "Snare: incumbents in beneficiary set, entrants and consumers (via higher prices) in victim set; artificial scarcity extraction"
+      },
+      {
+        "reading_id": "graduated_access_filter",
+        "commitment": "Statutory credential requirements create tiered market access where differential barriers sort by class and prior resource access",
+        "authority_grounding": "Sociological analysis / equity frameworks",
+        "sibling_readings": [
+          "public_safety_coordination",
+          "rent_seeking_suppression"
+        ],
+        "expected_structural_delta": "Snare: credentialed class in beneficiary set, marginalized workers without credential-acquisition resources in victim set; structural exclusion mechanism"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "public_safety_coordination",
+        "reading_b": "rent_seeking_suppression",
+        "basis": "Public safety reading holds consumer protection as legitimate state interest requiring credential floors; rent-seeking reading holds same floors as illegitimate market restriction absent demonstrated harm. No framework can simultaneously accept credential requirements as necessary consumer protection AND as illegitimate rent extraction."
+      },
+      {
+        "reading_a": "public_safety_coordination",
+        "reading_b": "graduated_access_filter",
+        "basis": "Public safety reading grounds legitimacy in competence-based exclusion (incompetent practitioners harmed); graduated access reading grounds illegitimacy in resource-based exclusion (poor workers excluded regardless of competence). No framework can hold both credential requirements as competence-neutral class filters AND as competence-based safety mechanisms simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "public_safety_coordination",
+      "human_readable": "Public Safety Coordination (Credential Requirements as Consumer Protection)",
+      "structural_delta": "Statutory mandate read as coordination mechanism establishing minimum competence threshold to prevent consumer harm",
+      "primary_observable": "Disciplinary action rates, malpractice claims, consumer complaint frequency pre/post-licensing regime",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "consumers",
+      "victim": "incompetent_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes coordination baseline where statutory kernel operates as claimed by professional boards"
+    },
+    {
+      "claim_id": "rent_seeking_suppression",
+      "human_readable": "Rent-Seeking Suppression (Credential Requirements as Incumbent Protection)",
+      "structural_delta": "Statutory mandate read as artificial barrier restricting labor supply to extract monopoly rents for licensed incumbents",
+      "primary_observable": "Price differentials in licensed vs unlicensed markets, wage premiums for credential holders controlling for skill, interstate licensing reciprocity barriers",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "licensed_incumbents",
+      "victim": "market_entrants_and_consumers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: same kernel generates extractive structure with opposite beneficiary set"
+    },
+    {
+      "claim_id": "graduated_access_filter",
+      "human_readable": "Graduated Access Filter (Credential Requirements as Class Stratification)",
+      "structural_delta": "Statutory mandate read as resource-dependent barrier sorting by prior wealth/education access rather than competence",
+      "primary_observable": "Demographic composition of licensed vs unlicensed workers, credential-acquisition cost burden by income quintile, occupational mobility rates for marginalized groups",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "credentialed_class",
+      "victim": "marginalized_workers_without_resources",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: surfaces class-stratification dimension invisible in binary safety/rent-seeking frame"
+    },
+    {
+      "claim_id": "interstate_reciprocity_trap",
+      "human_readable": "Interstate Reciprocity Trap (State-Specific Credential Lock-In)",
+      "structural_delta": "State-by-state variation in credential requirements creates geographic mobility barriers for licensed workers",
+      "primary_observable": "Interstate migration rates for licensed vs unlicensed occupations, reciprocity agreement coverage, relicensing cost burden",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "geographically_mobile_workers",
+      "downstream_of": [
+        "public_safety_coordination"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: derivative of coordination reading; lower structural priority than class-stratification axis"
+    },
+    {
+      "claim_id": "scope_creep_expansion",
+      "human_readable": "Scope Creep Expansion (Board-Driven Requirement Inflation)",
+      "structural_delta": "Professional boards incrementally expand credential requirements beyond statutory minimum through rulemaking authority",
+      "primary_observable": "Credential hour requirements over time, examination pass rates, new subspecialty certifications",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "training_institutions",
+      "victim": "new_entrants",
+      "downstream_of": [
+        "public_safety_coordination",
+        "rent_seeking_suppression"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism axis rather than reading; captured via board enforcement in selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "public_safety_coordination",
+      "kernel_id": "licensing_statute_mandate",
+      "reading_id": "public_safety_coordination"
+    },
+    {
+      "claim_id": "rent_seeking_suppression",
+      "kernel_id": "licensing_statute_mandate",
+      "reading_id": "rent_seeking_suppression"
+    },
+    {
+      "claim_id": "graduated_access_filter",
+      "kernel_id": "licensing_statute_mandate",
+      "reading_id": "graduated_access_filter"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "interstate_reciprocity_trap",
+      "structural_delta": "State-specific credential barriers to geographic mobility",
+      "hypothesis": "piton",
+      "deferral_reason": "Derivative mechanism of coordination reading; lower structural priority than class-stratification dimension"
+    },
+    {
+      "claim_id": "scope_creep_expansion",
+      "structural_delta": "Board-driven inflation of credential requirements beyond statutory minimum",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Implementation mechanism rather than foundational reading; captured through board enforcement analysis in selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_harm_threshold",
+      "description": "At what demonstrated consumer harm rate does the public_safety_coordination reading's legitimacy claim become empirically sustainable? Absent measurable harm reduction, does the coordination Rope collapse into the rent_seeking Snare?",
+      "source": "Axiom contradiction between public_safety_coordination and rent_seeking_suppression"
+    },
+    {
+      "id": "omega_competence_proxy_validity",
+      "description": "Do credential requirements actually measure competence, or are they resource-access proxies? If the latter, graduated_access_filter reading undermines public_safety_coordination's foundational claim even when harm reduction is measurable.",
+      "source": "Axiom contradiction between public_safety_coordination and graduated_access_filter"
+    },
+    {
+      "id": "omega_consumer_vs_worker_welfare",
+      "description": "Do licensing regimes produce net welfare gains when consumer protection benefits are weighed against worker exclusion costs? Trade-off depends on which reading's victim set dominates the social welfare function.",
+      "source": "Beneficiary/victim structure divergence across readings"
+    },
+    {
+      "id": "omega_board_capture_mechanism",
+      "description": "Are professional boards structurally captured by incumbent interests (supporting rent_seeking reading) or do they operate as neutral competence arbiters (supporting public_safety reading)? Board composition and incentive structure determine which constraint type the kernel actually instantiates.",
+      "source": "Authority grounding divergence; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_license_vs_certification",
+      "description": "Would voluntary certification (market signal) vs mandatory licensing (legal barrier) produce equivalent consumer protection with lower exclusion costs? If yes, mandatory structure reveals rent-seeking rather than safety motivation.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — certification alternative not addressed in kernel"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean scan. Kernel structure confirmed: same statutory text generates structurally opposite constraint types (Rope vs Snare) depending on reading commitment. Three readings selected capture coordination/extraction/stratification topology. Deferred axes document implementation mechanisms without adding independent structural dimensions."
+  },
+  "_seed_id": "occupational_licensing_barriers"
+}

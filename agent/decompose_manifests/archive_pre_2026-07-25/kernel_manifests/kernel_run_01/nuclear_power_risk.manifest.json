@@ -1,0 +1,305 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Risk Assessment / Energy Policy / Technology Governance",
+  "family_id": "nuclear_acceptable_risk_2026",
+  "topic_summary": "Analysis of the nuclear energy risk debate as a contested kernel where pro-nuclear and anti-nuclear positions read the 'acceptable risk for energy' commitment through fundamentally different risk frameworks. Pro-nuclear actors employ expected-value dominance (comparing average fatality rates and carbon benefits), while anti-nuclear actors employ catastrophic-tail dominance (emphasizing irreversible, spatially-concentrated extreme events). The measurement incommensurability is philosophical, not merely technical.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear power plants (energy infrastructure with heavy-tailed accident severity)",
+      "Probabilistic Safety Assessments (PSAs) (risk quantification methodology systematically underestimating accident probability)",
+      "Three Mile Island, Chernobyl, Fukushima (historical accidents establishing empirical tail distribution)",
+      "Expected utility framework (decision theory with constant relative risk aversion)",
+      "Heavy-tailed probability distributions (statistical model for catastrophic events)",
+      "Public trust institutions (regulatory agencies, central government, mass media)"
+    ],
+    "key_tensions": [
+      "Expected-value framework vs catastrophic-tail framework (incommensurable risk metrics from identical empirical data)",
+      "Voluntary risk (driving) vs involuntary risk (nuclear accidents) (psychological acceptability asymmetry)",
+      "Technical uncertainty elimination vs social uncertainty management (epistemic limits of engineering)",
+      "Carbon reduction goals vs catastrophic accident risk (climate mitigation vs nuclear safety trade-off)"
+    ],
+    "key_claims": [
+      "PSAs systematically underestimate accident probability by orders of magnitude",
+      "Heavy-tailed severity implies average annual cost ~$5.5B with dispersion ~$55B",
+      "At 99.5% reactor safety, 49% probability of Chernobyl/Fukushima-scale event for global fleet",
+      "Expected utility framework is fragile under heavy-tailed distributional assumptions",
+      "Major accidents influence values and proenvironmental beliefs via psychological trauma",
+      "Uncertainties cannot be fully eliminated by technical approaches alone",
+      "Public accepts some nuclear risk if it provides clean reliable energy (trade-off acceptability)",
+      "Nuclear power viable for meeting energy demands while reducing CO2 emissions"
+    ],
+    "mechanisms": [
+      {
+        "id": "psa_underestimation",
+        "description": "Probabilistic Safety Assessments systematically underestimate tail risk due to model assumptions incompatible with heavy-tailed distributions",
+        "agents": "Nuclear industry, regulatory agencies",
+        "targets": "Public risk perception, policy decisions"
+      },
+      {
+        "id": "psychological_amplification",
+        "description": "Major accidents trigger persistent mental health problems and value shifts that amplify perceived risk beyond actuarial calculations",
+        "agents": "Mass media, affected populations",
+        "targets": "Public attitudes, political feasibility"
+      },
+      {
+        "id": "institutional_trust_mediation",
+        "description": "Trust in regulatory institutions and government correlates with elevated anxiety (not reduced anxiety), suggesting trust does not buffer catastrophic-tail concerns",
+        "agents": "Central government, regulatory agencies, mass media",
+        "targets": "Public knowledge and concern levels"
+      }
+    ],
+    "absences": [
+      {
+        "id": "absence_discount_rate",
+        "description": "No discussion of temporal discounting in expected-value calculations—how future catastrophic costs are weighted against present energy benefits"
+      },
+      {
+        "id": "absence_spatial_concentration",
+        "description": "Missing analysis of spatial concentration of harm (Chernobyl exclusion zone, Fukushima evacuation) vs diffuse harm from fossil alternatives (global atmospheric carbon)"
+      }
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Acceptable risk for energy production—the threshold at which society permits deployment of an energy technology given its harm profile",
+    "authority_description": "Regulatory agencies, national governments, and international bodies (IAEA) claim interpretive authority via technical expertise and democratic mandate, but legitimacy contested by affected publics and environmental movements",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_overlay",
+    "is_contested_kernel": true,
+    "kernel_id": "acceptable_risk_for_energy",
+    "readings": [
+      {
+        "reading_id": "expected_value_reading",
+        "commitment": "Acceptable risk determined by expected-value calculation: probability-weighted average of outcomes compared across energy alternatives",
+        "authority_grounding": "Technocratic expertise (engineering risk assessment, cost-benefit analysis, comparative mortality statistics)",
+        "sibling_readings": [
+          "catastrophic_tail_reading",
+          "precautionary_reading"
+        ],
+        "expected_structural_delta": "Low victim count in expectation; high ε from carbon lock-in if nuclear rejected; beneficiaries are climate mitigation advocates and nuclear industry; victims are fossil fuel workers and communities bearing diffuse pollution costs"
+      },
+      {
+        "reading_id": "catastrophic_tail_reading",
+        "commitment": "Acceptable risk determined by catastrophic-tail dominance: low-probability high-consequence events weighted by irreversibility, spatial concentration, and psychological trauma",
+        "authority_grounding": "Precautionary principle, affected community sovereignty, psychological harm recognition",
+        "sibling_readings": [
+          "expected_value_reading",
+          "precautionary_reading"
+        ],
+        "expected_structural_delta": "High victim count in tail scenarios; moderate ε from path-dependent evacuation and exclusion zones; beneficiaries are anti-nuclear movements and renewable energy advocates; victims are spatially-concentrated populations near accident sites plus psychologically-traumatized broader publics"
+      },
+      {
+        "reading_id": "precautionary_reading",
+        "commitment": "Acceptable risk determined by epistemic humility: when uncertainty is irreducible and consequences catastrophic, burden of proof shifts to technology proponents to demonstrate safety",
+        "authority_grounding": "Epistemic conservatism, intergenerational justice (nuclear waste), democratic consent under uncertainty",
+        "sibling_readings": [
+          "expected_value_reading",
+          "catastrophic_tail_reading"
+        ],
+        "expected_structural_delta": "Victim set includes future generations (waste legacy); very high ε from foreclosed nuclear option under climate emergency; beneficiaries are epistemic conservatives and waste-burdened communities; victims are present populations denied low-carbon baseload and future populations facing unmitigated climate change"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "expected_value_reading",
+        "reading_b": "catastrophic_tail_reading",
+        "basis": "Expected-value reading treats all harms as commensurable via probability weighting (1000 deaths at 0.1% probability = 1 expected death). Catastrophic-tail reading treats spatially-concentrated irreversible harms as categorically different from diffuse harms regardless of probability weighting. No single coherent framework can simultaneously hold that catastrophic events are reducible to expected values AND that they constitute a categorically distinct harm type."
+      },
+      {
+        "reading_a": "expected_value_reading",
+        "reading_b": "precautionary_reading",
+        "basis": "Expected-value reading places burden of proof on demonstrating harm exceeds benefits via quantified risk assessment. Precautionary reading reverses burden of proof under irreducible uncertainty, requiring proponents demonstrate safety. These are mutually exclusive epistemic stances on where default presumption lies when uncertainty cannot be eliminated."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "psa_systematic_underestimation",
+      "human_readable": "PSA Systematic Underestimation (Methodological Fragility)",
+      "structural_delta": "Probabilistic Safety Assessments systematically underestimate tail risk because expected utility framework with constant relative risk aversion is fragile under heavy-tailed distributions",
+      "primary_observable": "Ratio of predicted accident probability (from PSAs) to observed accident frequency (empirical base rate from TMI/Chernobyl/Fukushima)",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "expected_value_reading",
+        "catastrophic_tail_reading",
+        "precautionary_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain feeding all three readings, but methodological critique rather than constraint instantiation—belongs in omega as measurement validity concern"
+    },
+    {
+      "claim_id": "expected_value_reading",
+      "human_readable": "Expected-Value Reading (Probability-Weighted Risk)",
+      "structural_delta": "Risk acceptability determined by expected-value calculation comparing probability-weighted outcomes across energy alternatives",
+      "primary_observable": "Comparative mortality rates (deaths per TWh) across energy sources; carbon emissions avoided by nuclear vs fossil alternatives",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "climate_mitigation_advocates",
+      "victim": "fossil_fuel_dependent_communities",
+      "downstream_of": [
+        "psa_systematic_underestimation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: instantiates technocratic risk framework with measurable ε from carbon lock-in if nuclear rejected"
+    },
+    {
+      "claim_id": "catastrophic_tail_reading",
+      "human_readable": "Catastrophic-Tail Reading (Irreversible Extreme Events)",
+      "structural_delta": "Risk acceptability determined by catastrophic-tail dominance: low-probability high-consequence events weighted by irreversibility, spatial concentration, and psychological trauma",
+      "primary_observable": "Exclusion zone area (km²); evacuation population count; mental health outcomes (PTSD prevalence, suicide rates) in affected regions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "anti_nuclear_movements",
+      "victim": "spatially_concentrated_accident_populations",
+      "downstream_of": [
+        "psa_systematic_underestimation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: structurally distinct from expected-value (different observable, different victim set, different ε source)"
+    },
+    {
+      "claim_id": "precautionary_reading",
+      "human_readable": "Precautionary Reading (Epistemic Humility Under Irreducible Uncertainty)",
+      "structural_delta": "Risk acceptability determined by burden-of-proof reversal: when uncertainty is irreducible and consequences catastrophic, proponents must demonstrate safety rather than opponents demonstrate harm",
+      "primary_observable": "Regulatory approval thresholds; waste storage timescales (10,000+ years); epistemic uncertainty bounds in PSA models",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "epistemic_conservatives",
+      "victim": "present_populations_denied_low_carbon_baseload",
+      "downstream_of": [
+        "psa_systematic_underestimation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: highest ε bin, captures intergenerational dimension absent from other two readings"
+    },
+    {
+      "claim_id": "voluntary_involuntary_asymmetry",
+      "human_readable": "Voluntary/Involuntary Risk Asymmetry (Psychological Acceptability)",
+      "structural_delta": "Psychologically, involuntary risks (nuclear accidents) are less acceptable than voluntary risks (driving) even when actuarial risk is lower",
+      "primary_observable": "Public opinion surveys on risk acceptability; willingness-to-pay for risk reduction across voluntary vs involuntary domains",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophic_tail_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: psychological mechanism feeding catastrophic-tail reading but not structurally independent—captured within that reading's trauma weighting"
+    },
+    {
+      "claim_id": "institutional_trust_paradox",
+      "human_readable": "Institutional Trust Paradox (Trust Amplifies Anxiety)",
+      "structural_delta": "Trust in regulatory institutions correlates with elevated anxiety about nuclear risk, not reduced anxiety—suggesting trust does not buffer catastrophic-tail concerns",
+      "primary_observable": "Correlation between institutional trust scores and nuclear anxiety measures in survey data",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "catastrophic_tail_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical anomaly (trust increases rather than decreases anxiety) but low ε—omega material on institutional legitimacy limits"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "expected_value_reading",
+      "kernel_id": "acceptable_risk_for_energy",
+      "reading_id": "expected_value_reading"
+    },
+    {
+      "claim_id": "catastrophic_tail_reading",
+      "kernel_id": "acceptable_risk_for_energy",
+      "reading_id": "catastrophic_tail_reading"
+    },
+    {
+      "claim_id": "precautionary_reading",
+      "kernel_id": "acceptable_risk_for_energy",
+      "reading_id": "precautionary_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "psa_systematic_underestimation",
+      "structural_delta": "PSAs systematically underestimate tail risk due to expected utility framework fragility under heavy-tailed distributions",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain feeding all three readings, but methodological critique rather than constraint instantiation—measurement validity concern for omega rather than standalone constraint story"
+    },
+    {
+      "claim_id": "voluntary_involuntary_asymmetry",
+      "structural_delta": "Involuntary risks psychologically less acceptable than voluntary risks at equal actuarial levels",
+      "hypothesis": "rope",
+      "deferral_reason": "Psychological mechanism captured within catastrophic-tail reading's trauma weighting—not structurally independent"
+    },
+    {
+      "claim_id": "institutional_trust_paradox",
+      "structural_delta": "Trust in regulatory institutions correlates with elevated (not reduced) nuclear anxiety",
+      "hypothesis": "piton",
+      "deferral_reason": "Empirical anomaly with low ε—omega material on institutional legitimacy limits under catastrophic-tail framing"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_psa_validity",
+      "description": "If PSAs underestimate accident probability by 2-3 orders of magnitude (as empirical base rate suggests), does expected-value reading collapse into catastrophic-tail reading? The mountain of methodological fragility may reclassify expected-value as a piton of measurement choice rather than a coherent risk framework.",
+      "source": "Deferred axis psa_systematic_underestimation + F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_spatial_concentration",
+      "description": "Absence inventory: no analysis of spatial concentration of harm (Chernobyl 2600 km² exclusion zone, Fukushima 371 km²) vs diffuse harm from fossil alternatives (global atmospheric carbon). Does spatial concentration constitute a categorically distinct harm type, or is it commensurable via expected-value weighting? This absence may indicate a fourth reading (spatial justice) not captured by the three selected.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_temporal_discounting",
+      "description": "Absence inventory: no discussion of temporal discounting in expected-value calculations. How are future catastrophic costs (nuclear waste 10,000+ year timescales) weighted against present energy benefits? Discount rate choice may determine whether precautionary reading or expected-value reading dominates, but this parameter is unexamined in source material.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_institutional_trust",
+      "description": "Deferred axis institutional_trust_paradox: trust in regulatory agencies correlates with elevated anxiety, not reduced anxiety. This suggests catastrophic-tail concerns are not buffered by institutional legitimacy—trust may amplify rather than dampen perceived risk when the trusted authority acknowledges irreducible uncertainty. Omega: does this paradox invalidate technocratic authority grounding for expected-value reading?",
+      "source": "Deferred axis institutional_trust_paradox"
+    },
+    {
+      "id": "omega_reading_collapse",
+      "description": "If heavy-tailed distributions are empirically confirmed (average annual cost $5.5B, dispersion $55B), and expected utility framework is fragile under such distributions, does expected-value reading collapse into precautionary reading? The axiom contradiction between them may be unstable if the mathematical framework underlying expected-value is invalidated by the empirical distribution.",
+      "source": "Axiom contradiction analysis + commitment system drift status (partial)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: psa_systematic_underestimation classified as mountain (methodological fragility as physical constraint) but may be piton of measurement choice if alternative risk frameworks (e.g., robust decision-making under deep uncertainty) exist. Generated omega_psa_validity to bound this uncertainty. Additionally, spatial concentration and temporal discounting absences may indicate missing readings (spatial justice, intergenerational equity) not captured by the three selected—generated omegas to flag these gaps."
+  },
+  "_seed_id": "nuclear_power_risk"
+}

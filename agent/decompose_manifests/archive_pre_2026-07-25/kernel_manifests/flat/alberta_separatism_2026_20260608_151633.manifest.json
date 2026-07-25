@@ -1,0 +1,228 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Federalism / Resource Politics",
+  "family_id": "alberta_separatism_2026",
+  "topic_summary": "Analysis of Alberta separatism as a political movement seeking provincial independence from Canada. The movement frames independence as a solution to perceived federal extraction via equalization payments, climate policy constraints on hydrocarbon development, and constitutional limits on provincial autonomy. Core tension: whether separatism is a legitimate response to structural grievance or an extractive project benefiting elite interests.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Alberta provincial government (resource jurisdiction holder)",
+      "Canadian federal government (constitutional authority, transfer administrator)",
+      "Alberta separatist movements (Wildrose Independence Party, Alberta Prosperity Project)",
+      "Hydrocarbon industry (primary economic base)",
+      "Equalization transfer system (federal fiscal mechanism)",
+      "Indigenous treaty holders (Crown treaty parties, absent from separatist discourse)"
+    ],
+    "key_tensions": [
+      "Provincial resource sovereignty vs federal constitutional authority",
+      "Hydrocarbon revenue maximization vs federal climate transition policy",
+      "Perceived net fiscal contribution vs actual equalization formula mechanics"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy boundary of provincial exit from confederation — what grounds a province's right to unilateral secession",
+    "authority_description": "Constitutional interpretation (Supreme Court Reference re Secession of Quebec 1998), federal legislative authority, provincial legislative claims, popular sovereignty claims",
+    "drift_status": "partial",
+    "candidate_pattern": "constitutional_ambiguity",
+    "is_contested_kernel": true,
+    "kernel_id": "secession_legitimacy_boundary",
+    "readings": [
+      {
+        "reading_id": "constitutional_impossibility_reading",
+        "commitment": "Unilateral secession is constitutionally impermissible; only negotiated exit via constitutional amendment is legitimate",
+        "authority_grounding": "Supreme Court precedent (Reference re Secession 1998), constitutional supremacy doctrine",
+        "sibling_readings": [
+          "popular_sovereignty_reading",
+          "grievance_threshold_reading",
+          "treaty_primacy_reading"
+        ],
+        "expected_structural_delta": "Federal authority absolute; separatist claims categorically illegitimate; no victim set from federal 'extraction' because extraction claim is invalid"
+      },
+      {
+        "reading_id": "popular_sovereignty_reading",
+        "commitment": "Democratic majority within provincial boundaries holds ultimate sovereignty; referendum result is self-legitimating",
+        "authority_grounding": "Democratic theory, self-determination principle, popular will as supreme authority",
+        "sibling_readings": [
+          "constitutional_impossibility_reading",
+          "grievance_threshold_reading",
+          "treaty_primacy_reading"
+        ],
+        "expected_structural_delta": "Provincial majority can exit unilaterally; federal authority subordinate to popular will; 'extraction' claims valid if majority perceives them"
+      },
+      {
+        "reading_id": "grievance_threshold_reading",
+        "commitment": "Secession becomes legitimate when federal actions cross a threshold of structural injustice, regardless of constitutional text",
+        "authority_grounding": "Natural law, remedial secession doctrine, structural justice theory",
+        "sibling_readings": [
+          "constitutional_impossibility_reading",
+          "popular_sovereignty_reading",
+          "treaty_primacy_reading"
+        ],
+        "expected_structural_delta": "Legitimacy conditional on demonstrable federal overreach; 'extraction' claims must meet objective burden of proof; victim set exists only if threshold crossed"
+      },
+      {
+        "reading_id": "treaty_primacy_reading",
+        "commitment": "Indigenous treaty rights predate and supersede both federal and provincial authority; no secession legitimate without treaty holder consent",
+        "authority_grounding": "Treaty law, Indigenous sovereignty doctrine, Crown obligations",
+        "sibling_readings": [
+          "constitutional_impossibility_reading",
+          "popular_sovereignty_reading",
+          "grievance_threshold_reading"
+        ],
+        "expected_structural_delta": "Neither federal nor provincial authority can unilaterally alter treaty relationships; separatist claims invalid without Indigenous consent; Indigenous peoples enter victim set if secession proceeds without consultation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "constitutional_impossibility_reading",
+        "reading_b": "popular_sovereignty_reading",
+        "basis": "Constitutional supremacy (written law binds popular will) vs popular sovereignty (popular will supersedes written law) — no single framework can hold both as simultaneously true"
+      },
+      {
+        "reading_a": "constitutional_impossibility_reading",
+        "reading_b": "treaty_primacy_reading",
+        "basis": "Constitutional supremacy (1982 Constitution Act is ultimate authority) vs treaty primacy (pre-Confederation treaties supersede constitutional text) — mutually exclusive claims about ultimate legal authority"
+      },
+      {
+        "reading_a": "popular_sovereignty_reading",
+        "reading_b": "treaty_primacy_reading",
+        "basis": "Provincial majority will as self-legitimating vs treaty holder consent as prerequisite — no framework can hold both that majority referendum is sufficient AND that Indigenous consent is necessary"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "secession_legitimacy_boundary_kernel",
+      "human_readable": "Secession Legitimacy Boundary (Contested Kernel)",
+      "structural_delta": "Contested interpretations of what grounds provincial right to exit confederation",
+      "primary_observable": "Legal doctrine citations, referendum threshold claims, treaty consultation requirements",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "fiscal_extraction_perception",
+        "hydrocarbon_policy_collision"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with four structurally distinct readings; upstream to all other axes"
+    },
+    {
+      "claim_id": "fiscal_extraction_perception",
+      "human_readable": "Fiscal Extraction Perception (Net Contributor Narrative)",
+      "structural_delta": "Perceived vs actual net fiscal contribution to Canadian federation via equalization transfers",
+      "primary_observable": "Equalization payment data, provincial GDP contribution, per-capita federal spending by province",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "secession_legitimacy_boundary_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (fiscal data vs legitimacy doctrine); structurally distinct from kernel"
+    },
+    {
+      "claim_id": "hydrocarbon_policy_collision",
+      "human_readable": "Hydrocarbon Policy Collision (Climate Transition vs Resource Maximization)",
+      "structural_delta": "Federal climate policy (carbon pricing, emissions caps) constraining provincial hydrocarbon revenue maximization",
+      "primary_observable": "Federal emissions legislation, provincial production targets, carbon price impact on extraction costs",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "hydrocarbon_industry",
+      "victim": "climate_transition_goals",
+      "downstream_of": [
+        "secession_legitimacy_boundary_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent observable (emissions policy vs legitimacy doctrine); different beneficiary structure; tangled_rope with identifiable extraction"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "constitutional_impossibility_reading",
+      "kernel_id": "secession_legitimacy_boundary",
+      "reading_id": "constitutional_impossibility_reading"
+    },
+    {
+      "claim_id": "popular_sovereignty_reading",
+      "kernel_id": "secession_legitimacy_boundary",
+      "reading_id": "popular_sovereignty_reading"
+    },
+    {
+      "claim_id": "grievance_threshold_reading",
+      "kernel_id": "secession_legitimacy_boundary",
+      "reading_id": "grievance_threshold_reading"
+    },
+    {
+      "claim_id": "treaty_primacy_reading",
+      "kernel_id": "secession_legitimacy_boundary",
+      "reading_id": "treaty_primacy_reading"
+    },
+    "fiscal_extraction_perception",
+    "hydrocarbon_policy_collision"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "heritage_fund_underinvestment",
+      "structural_delta": "Chronic under-capitalization of Alberta Heritage Savings Trust Fund during boom periods",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured indirectly via fiscal_extraction_perception; lower centrality; historical rather than structural"
+    },
+    {
+      "claim_id": "interprovincial_trade_barriers",
+      "structural_delta": "Constitutional barriers to free movement of goods/labor between provinces",
+      "hypothesis": "mountain",
+      "deferral_reason": "Not specific to Alberta separatism; general federalism constraint; low relevance to secession legitimacy question"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_indigenous_treaty_erasure",
+      "description": "Treaty_primacy_reading surfaces structural absence in separatist discourse: Indigenous treaty holders are constitutional parties whose consent is legally required but systematically excluded from separatist frameworks. If secession proceeds without treaty holder consent, Indigenous peoples enter victim set via territorial dispossession.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + treaty_primacy_reading"
+    },
+    {
+      "id": "omega_referendum_threshold_ambiguity",
+      "description": "Popular_sovereignty_reading assumes simple majority suffices, but Reference re Secession (1998) requires 'clear question, clear majority' without defining threshold. 50%+1 vs 60% vs 66% materially changes legitimacy calculus.",
+      "source": "Kernel decomposition + constitutional_impossibility_reading tension"
+    },
+    {
+      "id": "omega_grievance_objectivity",
+      "description": "Grievance_threshold_reading requires objective standard for 'structural injustice,' but no consensus exists on what constitutes threshold-crossing federal overreach. Equalization formula mechanics vs perceived extraction; climate policy as legitimate federal authority vs illegitimate constraint.",
+      "source": "Grievance_threshold_reading + fiscal_extraction_perception axis"
+    },
+    {
+      "id": "omega_post_secession_currency",
+      "description": "All readings assume post-secession economic viability, but currency question (CAD, USD, new Alberta dollar) has massive extractiveness implications. Dollar adoption without Fed oversight creates systemic vulnerability; new currency faces credibility crisis.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from currency choice?"
+    },
+    {
+      "id": "omega_interprovincial_precedent",
+      "description": "Successful Alberta secession creates precedent for other provinces (Saskatchewan, BC Interior). Does popular_sovereignty_reading scale to Balkanization scenario? Federal authority collapses if multiple provinces exit simultaneously.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model assumes single-province exit"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied successfully. Four readings pass independence test (mutually exclusive axioms, distinct authority groundings, different victim sets). Two additional axes (fiscal_extraction_perception, hydrocarbon_policy_collision) survive pairwise independence test with kernel and each other."
+  }
+}

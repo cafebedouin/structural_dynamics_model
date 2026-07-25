@@ -1,0 +1,204 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "System Dynamics / Ecological Economics / Computational Modeling",
+  "family_id": "world3_recalibration_2024",
+  "topic_summary": "Analysis of the 2024 recalibration of the World3 model from the 1972 Limits to Growth study. Researchers at TH Köln updated the model with 50 years of empirical data using iterative parameter optimization, finding that the recalibrated model still projects overshoot-and-collapse dynamics with industrial output peaking around 2024-2030, driven primarily by resource depletion rather than pollution. The study demonstrates improved fit to historical data (18% NRMSD reduction) while maintaining the core LtG thesis that exponential growth within finite planetary boundaries leads to systemic collapse.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "World3 model (system dynamics simulation of global material flows, 1972-2024)",
+      "TH Köln research team (Nebel, Kling, Willamowski, Schell)",
+      "Original LtG authors (Meadows et al., Club of Rome commission)",
+      "PyWorld3-03 (Python implementation updated to 2005 World3 version)",
+      "Empirical validation researchers (Turner 2008-2012, Herrington 2021)",
+      "Neo-liberal economic critics (Nordhaus, Lomborg, market-mechanism advocates)",
+      "Earth4all model (2022 successor with regional resolution)",
+      "Planetary boundaries framework (Rockström et al. 2009, Persson et al. 2022)"
+    ],
+    "key_tensions": [
+      "Prediction vs illustration framing (model as forecast vs system behavior demonstration)",
+      "Technological optimism vs biophysical limits (CT scenario vs BAU collapse dynamics)",
+      "Aggregation vs regional heterogeneity (global model vs differentiated collapse impacts)",
+      "Empirical validation paradox (better data enables calibration but reveals proxy inadequacy)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "model_validation_epistemology",
+      "human_readable": "Model Validation Epistemology (Calibration vs Prediction Validity)",
+      "structural_delta": "Distinction between historical fit (calibration accuracy) and future predictive validity in complex system models",
+      "primary_observable": "NRMSD improvement (18% reduction) vs uncertainty bounds on collapse timing (2024-2030 window)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collapse_mechanism_attribution",
+        "parameter_sensitivity_robustness"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream methodological axis; affects interpretation of all empirical claims; distinct observable (calibration metrics vs predictive uncertainty)"
+    },
+    {
+      "claim_id": "collapse_mechanism_attribution",
+      "human_readable": "Collapse Mechanism Attribution (Resource Depletion vs Pollution Overshoot)",
+      "structural_delta": "Causal pathway to system collapse: resource exhaustion (BAU) vs pollution-climate feedback (BAU2)",
+      "primary_observable": "Recalibrated model output (resource depletion primary) vs empirical pollution/climate data (IPCC 2022 measurable impacts)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "fossil_fuel_industry",
+      "victim": "climate_vulnerable_populations",
+      "downstream_of": [
+        "model_validation_epistemology"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; core analytical target; tangled_rope with clear beneficiary structure (delay of climate attribution benefits extraction industries)"
+    },
+    {
+      "claim_id": "parameter_sensitivity_robustness",
+      "human_readable": "Parameter Sensitivity vs Structural Robustness",
+      "structural_delta": "Model outputs vary with parameter choices (local minima, weighting schemes) but overshoot-collapse pattern persists",
+      "primary_observable": "Sensitivity analysis results (different parameter sets) vs invariant collapse dynamics across variations",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "model_validation_epistemology"
+      ],
+      "feeds_into": [
+        "collapse_mechanism_attribution"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct from validation epistemology (focuses on parameter space exploration); feeds into mechanism attribution uncertainty"
+    },
+    {
+      "claim_id": "proxy_data_adequacy",
+      "human_readable": "Proxy Data Adequacy (Sector Representation Fidelity)",
+      "structural_delta": "Gap between model sectors (pollution units, resource units) and empirical proxies (CO2 ppm, fossil fuel consumption)",
+      "primary_observable": "NRMSD by sector (pollution 0.3371, resources 0.7571) vs data coverage completeness",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collapse_mechanism_attribution"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via model_validation_epistemology (calibration limits) and collapse_mechanism_attribution (pollution sector uncertainty)"
+    },
+    {
+      "claim_id": "technological_substitution_limits",
+      "human_readable": "Technological Substitution Limits (CT Scenario Feasibility)",
+      "structural_delta": "Whether technological solutions (efficiency, recycling, pollution reduction) can decouple growth from resource/pollution constraints",
+      "primary_observable": "CT scenario trajectory vs empirical technology deployment rates (renewable energy, circular economy metrics)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "technological_optimism_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high epsilon but structurally downstream of collapse_mechanism_attribution; CT scenario not focus of recalibration"
+    },
+    {
+      "claim_id": "regional_heterogeneity_aggregation",
+      "human_readable": "Regional Heterogeneity vs Global Aggregation",
+      "structural_delta": "World3 treats Earth as single system; collapse impacts and resource distribution are regionally differentiated",
+      "primary_observable": "Global model outputs vs regional inequality metrics (Earth4all social tension indices)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: acknowledged limitation but not addressed by recalibration; Earth4all model is separate research program"
+    }
+  ],
+  "generation_sequence": [
+    "model_validation_epistemology",
+    "collapse_mechanism_attribution",
+    "parameter_sensitivity_robustness"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "proxy_data_adequacy",
+      "structural_delta": "Gap between model sectors and empirical proxies",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Captured indirectly via model_validation_epistemology and collapse_mechanism_attribution; data limitations already surfaced in those axes"
+    },
+    {
+      "claim_id": "technological_substitution_limits",
+      "structural_delta": "Whether technology can decouple growth from resource/pollution constraints",
+      "hypothesis": "snare",
+      "deferral_reason": "High epsilon but structurally downstream of collapse_mechanism_attribution; CT scenario not primary focus of recalibration study"
+    },
+    {
+      "claim_id": "regional_heterogeneity_aggregation",
+      "structural_delta": "Global aggregation vs regional differentiation of collapse impacts",
+      "hypothesis": "piton",
+      "deferral_reason": "Acknowledged model limitation but not addressed by recalibration methodology; Earth4all represents separate research trajectory"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_collapse_timing_window",
+      "description": "Recalibration projects collapse onset 2024-2030, but sensitivity analysis shows parameter variations shift timing. Is the 6-year window a robust prediction or an artifact of optimization convergence to local minima?",
+      "source": "Parameter sensitivity analysis + F03 (Hasty Generalization) on temporal projections"
+    },
+    {
+      "id": "omega_pollution_delay_mechanism",
+      "description": "Persistent pollution transmission delay increased 481% (20→116 years). Does this reflect genuine atmospheric/oceanic absorption dynamics, or is it compensating for CO2 proxy inadequacy (excludes plastics, toxics, other pollutants)?",
+      "source": "Table 2 parameter changes + proxy data adequacy concerns in Section 4.2"
+    },
+    {
+      "id": "omega_industrial_capital_lifetime",
+      "description": "Average industrial capital lifetime increased 662% (2→15.24 years). This is the largest parameter change. Does it reflect genuine capital stock durability improvements, or is it absorbing model structural errors elsewhere?",
+      "source": "Table 2 parameter changes + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_hdI_divergence_paradox",
+      "description": "BAU scenario has lower HWI NRMSD (0.089) than Recalibration23 (0.178), yet Recalibration23 has better total NRMSD. Does weighting scheme obscure a genuine model failure in welfare dynamics?",
+      "source": "Table 1 + Figure 5 discussion in Section 3.1"
+    },
+    {
+      "id": "omega_resource_vs_climate_causation",
+      "description": "Recalibration attributes collapse to resource depletion (BAU mechanism), but authors acknowledge 'resource and pollution sectors are the most inaccurate data sets.' Is causal attribution reliable given proxy limitations?",
+      "source": "Section 4.1 discussion + F34 (Epistemic Trespass) on causal mechanism certainty"
+    },
+    {
+      "id": "omega_post_collapse_dynamics",
+      "description": "Model assumes constant socio-economic relationships; authors note these will reorganize during collapse. Is the collapse trajectory itself (steep decline) an artifact of fixed-relationship assumption?",
+      "source": "Section 4.3 limitations discussion + absence inventory (behavioral regime shifts)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Collapse timing projection (2024-2030) treated as robust despite sensitivity analysis showing parameter-dependent variation and acknowledged proxy data limitations in resource/pollution sectors. F34 detected: Causal mechanism attribution (resource depletion vs pollution overshoot) exceeds model's empirical grounding given that 'resource and pollution sectors are the most inaccurate data sets' per authors' own assessment. Generated omegas for both."
+  }
+}

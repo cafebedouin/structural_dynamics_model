@@ -1,0 +1,237 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Authority / Social Stratification / Interpretive Legitimacy",
+  "family_id": "brahminical_interpretive_monopoly",
+  "topic_summary": "Analysis of competing interpretive frameworks for Vedic and Dharmic texts, examining how differential readings of the same scriptural corpus produce fundamentally different constraint regimes regarding caste hierarchy, ritual authority, and social mobility. The contest centers on whether interpretive legitimacy derives from hereditary lineage (Brahminical monopoly) or from alternative groundings (textual egalitarianism, devotional access, reformist reinterpretation).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Vedic-Dharmic textual corpus (Vedas, Upanishads, Dharmashastras, Puranas)",
+      "Brahminical priestly class (hereditary interpreters claiming exclusive authority)",
+      "Lower-caste communities (structurally excluded from textual access and ritual performance)",
+      "Bhakti movement (devotional tradition challenging scriptural gatekeeping)",
+      "Colonial-era reformers (Ram Mohan Roy, Ambedkar - reinterpretation via modern egalitarian lens)",
+      "Post-independence secular state (constitutional guarantor of religious equality)"
+    ],
+    "key_tensions": [
+      "Hereditary interpretive monopoly vs democratic textual access",
+      "Caste-prescriptive ritual performance vs devotional universalism",
+      "Sanskrit as sacred/restricted language vs vernacular accessibility"
+    ],
+    "key_mechanisms": [
+      "Exclusion from Vedic study via pollution doctrine (shudras/women barred from recitation)",
+      "Brahminical control of ritual economy (life-cycle sacraments requiring priestly intermediation)",
+      "Textual interpolation and commentary tradition (Manusmriti, Shankaracharya commentaries stabilizing orthodox reading)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "hereditary_monopoly_reading",
+      "human_readable": "Hereditary Monopoly Reading (Orthodox Caste-Prescriptive Framework)",
+      "structural_delta": "Interpretive authority grounded in birth lineage; ritual legitimacy requires Brahmin intermediation; textual access restricted by varna",
+      "primary_observable": "Enforcement of ritual exclusion; prevalence of Brahmin-only temple priesthoods; Sanskrit education gatekeeping",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "brahminical_priestly_class",
+      "victim": "lower_caste_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core orthodox reading; highest extractive character; establishes baseline constraint regime"
+    },
+    {
+      "claim_id": "bhakti_devotional_reading",
+      "human_readable": "Bhakti Devotional Reading (Direct-Access Framework)",
+      "structural_delta": "Interpretive authority grounded in sincere devotion; ritual legitimacy bypasses caste requirements; vernacular texts democratize access",
+      "primary_observable": "Bhakti saint poetry in regional languages; temple traditions accepting non-Brahmin priests; devotional movements' social composition",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct alternative grounding; historical challenge to monopoly; different victim/beneficiary structure"
+    },
+    {
+      "claim_id": "reformist_egalitarian_reading",
+      "human_readable": "Reformist Egalitarian Reading (Constitutional-Universalist Framework)",
+      "structural_delta": "Interpretive authority grounded in rational critique and constitutional equality; ritual legitimacy divorced from birth; textual meaning reclaimed via anti-caste lens",
+      "primary_observable": "Temple entry movements; Ambedkarite Buddhist conversion; legal challenges to caste-based priesthood restrictions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dalit_and_reformist_movements",
+      "victim": "orthodox_institutional_structures",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Modern institutional reading; entanglement with state apparatus; distinct from devotional route"
+    },
+    {
+      "claim_id": "vernacular_textual_reading",
+      "human_readable": "Vernacular Textual Reading (Regional Language Democratization)",
+      "structural_delta": "Authority grounded in regional-language commentary traditions bypassing Sanskrit gatekeeping",
+      "primary_observable": "Tamil Shaiva Siddhanta texts; Marathi Warkari literature; Bengali Vaishnavism",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "bhakti_devotional_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism for bhakti reading rather than independent interpretive framework; captured via bhakti axis"
+    },
+    {
+      "claim_id": "colonial_orientalist_reading",
+      "human_readable": "Colonial Orientalist Reading (Textualist-Essentialist Framework)",
+      "structural_delta": "Authority grounded in philological expertise; scriptural 'true' meaning frozen via European academic lens",
+      "primary_observable": "Max Müller translations; British legal codifications of 'Hindu law'; missionary polemics",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "reformist_egalitarian_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical precursor to reformist reading but lacks independent contemporary constraint force"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hereditary_monopoly_reading",
+      "kernel_id": "vedic_dharmic_corpus",
+      "reading_id": "hereditary_monopoly_reading"
+    },
+    {
+      "claim_id": "bhakti_devotional_reading",
+      "kernel_id": "vedic_dharmic_corpus",
+      "reading_id": "bhakti_devotional_reading"
+    },
+    {
+      "claim_id": "reformist_egalitarian_reading",
+      "kernel_id": "vedic_dharmic_corpus",
+      "reading_id": "reformist_egalitarian_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "vernacular_textual_reading",
+      "structural_delta": "Regional-language commentary bypassing Sanskrit gatekeeping",
+      "hypothesis": "rope",
+      "deferral_reason": "Mechanism for bhakti devotional reading rather than independent interpretive framework; captured structurally via bhakti axis"
+    },
+    {
+      "claim_id": "colonial_orientalist_reading",
+      "structural_delta": "Colonial philological authority freezing scriptural meaning",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Historical precursor to reformist reading; lacks independent contemporary constraint force; relevant as omega variable for understanding reformist framework's colonial entanglement"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_textual_variance",
+      "description": "Are variant manuscript traditions (e.g., Tamil vs Sanskrit Ramayana) independent kernels or readings of one kernel? If independent, orthodox monopoly claim structurally collapses for non-Sanskritic traditions.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - textual transmission plurality not addressed"
+    },
+    {
+      "id": "omega_buddhist_exit",
+      "description": "Does mass conversion (Ambedkar's 1956 Buddhist conversion) constitute reading-shift or kernel-abandonment? If exit rather than reinterpretation, constraint dissolves rather than mutates.",
+      "source": "Axis independence testing - reformist_egalitarian_reading boundary case"
+    },
+    {
+      "id": "omega_state_enforcement",
+      "description": "Do temple entry laws (post-1950 constitutional provisions) enforce reformist reading or merely constrain orthodox reading's enforcement mechanisms? Distinction determines whether state is interpretive authority or constraint-limiter.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - state's role in reading-contest underspecified"
+    },
+    {
+      "id": "omega_jati_varna_collapse",
+      "description": "Do readings contest varna (textual four-fold schema) or jati (empirical endogamous groups)? If contestation is over jati but texts only prescribe varna, orthodox reading may be structurally incoherent rather than extractive.",
+      "source": "F03 (Hasty Generalization) concern - textual prescription vs social practice mapping"
+    },
+    {
+      "id": "omega_colonial_scaffold_persistence",
+      "description": "Does reformist reading's grounding in colonial orientalist textualism (deferred axis colonial_orientalist_reading) constitute hidden extraction? If constitutional equality rests on missionary-era 'true Hinduism' claims, beneficiary structure inverts.",
+      "source": "Deferred axis colonial_orientalist_reading - potential piton underlying reformist rope"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: hereditary_monopoly_reading classified as tangled_rope with high epsilon, but textual warrant for caste-prescriptive ritual exclusion is contested scholarly question (interpolation hypothesis, Aryan invasion debates). Generated omega_jati_varna_collapse to bound uncertainty about whether orthodox reading is extractive (tangled_rope) or incoherent (failed scaffold). Additionally flagged omega_textual_variance and omega_colonial_scaffold_persistence as dark matter concerns."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Vedic-Dharmic textual corpus (Vedas, Upanishads, Dharmashastras, Puranas) stabilized as sacred scripture grounding legitimate religious and social practice",
+    "authority_description": "Contested: orthodox claims hereditary lineage grounds interpretive legitimacy; bhakti claims devotional sincerity; reformist claims constitutional rationality and anti-caste ethics",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_authority_contested_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "vedic_dharmic_corpus",
+    "readings": [
+      {
+        "reading_id": "hereditary_monopoly_reading",
+        "commitment": "Ritual and interpretive authority derive from birth into Brahmin lineage; varna hierarchy is divinely ordained and textually prescribed",
+        "authority_grounding": "Hereditary transmission of sacred knowledge (guru-shishya parampara); pollution doctrine enforcing exclusion",
+        "sibling_readings": [
+          "bhakti_devotional_reading",
+          "reformist_egalitarian_reading"
+        ],
+        "expected_structural_delta": "High extractiveness (epsilon ~0.65); clear beneficiary (Brahmin priestly class) and victim (lower castes, women); institutional enforcement via temple control and ritual economy"
+      },
+      {
+        "reading_id": "bhakti_devotional_reading",
+        "commitment": "Direct devotional access to divine bypasses caste requirements; sincere bhakti (devotion) rather than birth determines spiritual authority",
+        "authority_grounding": "Personal experiential realization; vernacular saint-poetry as alternative textual authority; regional temple traditions",
+        "sibling_readings": [
+          "hereditary_monopoly_reading",
+          "reformist_egalitarian_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (epsilon ~0.40); no clear beneficiary class; coordination rope rather than snare; victim set shrinks but does not eliminate caste hierarchy"
+      },
+      {
+        "reading_id": "reformist_egalitarian_reading",
+        "commitment": "Textual meaning must conform to constitutional equality principles; caste hierarchy is historical accretion rather than scriptural essence; rational critique supersedes traditional authority",
+        "authority_grounding": "Post-colonial state constitutional framework; Ambedkarite anti-caste political theology; rationalist critique of interpolation",
+        "sibling_readings": [
+          "hereditary_monopoly_reading",
+          "bhakti_devotional_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (epsilon ~0.45); inverted beneficiary structure (Dalit movements vs orthodox institutions); entanglement with state apparatus and legal enforcement"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hereditary_monopoly_reading",
+        "reading_b": "reformist_egalitarian_reading",
+        "basis": "No single coherent framework can hold both 'varna hierarchy is divinely ordained and birth-determined' (hereditary monopoly axiom) and 'caste discrimination is social evil violating fundamental equality' (reformist axiom). Accepting reformist's constitutional equality as normatively binding requires rejecting hereditary monopoly's divine ordinance as false or irrelevant."
+      },
+      {
+        "reading_a": "hereditary_monopoly_reading",
+        "reading_b": "bhakti_devotional_reading",
+        "basis": "No single coherent framework can hold both 'ritual legitimacy requires Brahmin intermediation' (hereditary monopoly axiom) and 'sincere devotion provides direct divine access bypassing caste' (bhakti axiom). Bhakti's core claim that a lower-caste devotee achieves moksha without Brahmin mediation directly contradicts hereditary monopoly's authority structure."
+      }
+    ]
+  },
+  "_seed_id": "brahminical_interpretive_monopoly"
+}

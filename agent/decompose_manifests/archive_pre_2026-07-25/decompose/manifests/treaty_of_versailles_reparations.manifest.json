@@ -1,0 +1,237 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Relations / Legal History / Political Economy",
+  "family_id": "versailles_reparations_1919",
+  "topic_summary": "Analysis of the Treaty of Versailles reparations provisions (Articles 231-235) as a contested commitment system. The treaty text stabilizes Allied claims to German compensation while leaving scope for divergent interpretations of liability extent, enforcement legitimacy, and compliance limits. Two primary readings emerge: punitive-liability (unlimited moral debt) versus limited-responsibility (viability-constrained obligation).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Treaty of Versailles Articles 231-235 (war-guilt and reparations clauses)",
+      "Allied Reparations Commission (enforcement body with payment schedule authority)",
+      "German Reichstag (legislative body accepting/contesting treaty obligations)",
+      "Weimar Republic fiscal apparatus (revenue extraction and debt servicing mechanism)",
+      "Allied creditor states (France, Britain, Belgium as primary claimants)",
+      "German industrial and banking sectors (payers and negotiators of revised schedules)"
+    ],
+    "key_tensions": [
+      "Victor entitlement vs capacity-to-pay principle (Allied maximalist claims vs economic sustainability)",
+      "Deterrence logic vs stability requirements (punishment as prevention vs functional German economy as European anchor)",
+      "Moral responsibility framing vs shared-causation counterclaims (Article 231 'war guilt' vs revisionist historiography)"
+    ],
+    "key_mechanisms": [
+      "Reparations Commission discretionary authority (sets schedules, monitors compliance, can impose sanctions)",
+      "Transfer problem mechanism (converting German marks to foreign currency for payment creates exchange-rate instability)",
+      "Dawes Plan / Young Plan revision apparatus (external lending to facilitate payments, restructuring schedules)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for Allied creditor coordination failures (no treaty provision preventing competitive extraction or unilateral action)",
+      "Definition of 'total cost' baseline (Articles reference civilian damages but leave upper bound ambiguous, enabling interpretive drift)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Articles 231-235 of the Treaty of Versailles, establishing German liability for war damages and empowering the Reparations Commission to determine amounts and schedules",
+    "authority_description": "Allied governments as treaty signatories and Reparations Commission as interpretive body; German signature under duress grounds revisionist interpretive claims",
+    "drift_status": "partial",
+    "candidate_pattern": "anchored_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "versailles_reparations_clauses",
+    "readings": [
+      {
+        "reading_id": "punitive_liability_reading",
+        "commitment": "Germany bears unique moral and financial responsibility for total war costs; Article 231 grounds quasi-unlimited reparations claims",
+        "authority_grounding": "victor entitlement and deterrence logic; Allied governments' electoral mandates to extract compensation",
+        "sibling_readings": [
+          "limited_responsibility_reading",
+          "repudiation_reading"
+        ],
+        "expected_structural_delta": "German fiscal sovereignty subordinated to external claims; Allied creditor states as beneficiaries; German workers/taxpayers as victims; high ε (mod-to-high suppression of alternatives)"
+      },
+      {
+        "reading_id": "limited_responsibility_reading",
+        "commitment": "Reparations must align with German economic capacity; Article 231 is legal formality not moral judgment; payments bounded by viability",
+        "authority_grounding": "economic rationality and European stability imperatives; technocratic oversight (Dawes Committee, Young Plan architects)",
+        "sibling_readings": [
+          "punitive_liability_reading",
+          "repudiation_reading"
+        ],
+        "expected_structural_delta": "Payment schedules revised downward; German elites gain negotiating leverage; Allied creditors and occupied territories as victims of reduced compensation; mod ε (partial constraint on Allied maximalism)"
+      },
+      {
+        "reading_id": "repudiation_reading",
+        "commitment": "Treaty imposed under duress is illegitimate; Germany has no binding obligation to pay reparations beyond token gestures",
+        "authority_grounding": "nationalist revisionism and Dolchstoßlegende (stab-in-the-back myth); parliamentary opposition factions",
+        "sibling_readings": [
+          "punitive_liability_reading",
+          "limited_responsibility_reading"
+        ],
+        "expected_structural_delta": "Total rejection of payment obligations; German rearmament space maximized; Allied security guarantees and compensation claims nullified; high ε (complete suppression of creditor claims)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "punitive_liability_reading",
+        "reading_b": "repudiation_reading",
+        "basis": "Punitive reading holds treaty obligations as morally and legally binding on Germany regardless of capacity; repudiation reading holds treaty as void due to coerced signature. No single normative framework accepts both German binding obligation and treaty illegitimacy simultaneously."
+      },
+      {
+        "reading_a": "limited_responsibility_reading",
+        "reading_b": "repudiation_reading",
+        "basis": "Limited-responsibility accepts treaty validity but constrains it by economic rationality; repudiation denies treaty authority entirely. A stability-focused framework cannot simultaneously hold treaty as legitimate-but-constrained and as void-ab-initio."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "punitive_liability_reading",
+      "human_readable": "Punitive Liability Reading (Unlimited Moral Debt)",
+      "structural_delta": "Germany uniquely responsible for war costs; Article 231 grounds quasi-unlimited reparations enforceable via Allied coercion",
+      "primary_observable": "Allied political rhetoric (electoral mandates for 'making Germany pay'); Reparations Commission maximalist schedules (1921 London Ultimatum £6.6B demand)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "allied_creditor_states",
+      "victim": "german_workers_taxpayers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary contested reading instantiating high-extraction constraint; highest political salience among Allied domestic constituencies"
+    },
+    {
+      "claim_id": "limited_responsibility_reading",
+      "human_readable": "Limited Responsibility Reading (Viability-Constrained Obligation)",
+      "structural_delta": "Reparations bounded by German economic capacity; Article 231 reinterpreted as legal formality not moral condemnation",
+      "primary_observable": "Dawes Plan (1924) and Young Plan (1929) revisions reducing payment schedules; technocratic oversight replacing punitive enforcement",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "german_political_industrial_elites",
+      "victim": "allied_creditors_occupied_territories",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with distinct beneficiary/victim structure; governs actual payment outcomes via revisionist negotiations"
+    },
+    {
+      "claim_id": "repudiation_reading",
+      "human_readable": "Repudiation Reading (Treaty as Illegitimate Diktat)",
+      "structural_delta": "Treaty imposed under duress is void; Germany has no binding obligation beyond token compliance",
+      "primary_observable": "Nazi-era total repudiation (1933 cessation of payments); Weimar-era parliamentary rhetoric rejecting war-guilt clause",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "german_nationalist_factions",
+      "victim": "allied_security_guarantees",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Terminal reading eliminating constraint entirely; explains 1933 breakdown and rearmament trajectory"
+    },
+    {
+      "claim_id": "allied_coordination_failure",
+      "human_readable": "Allied Coordination Failure (Competitive Extraction)",
+      "structural_delta": "Absence of binding Allied coordination mechanism enables unilateral French occupation (Ruhr 1923) undermining collective enforcement",
+      "primary_observable": "French unilateral action vs British/US preference for negotiated schedules; divergent creditor state priorities",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "punitive_liability_reading",
+        "limited_responsibility_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: coordination dynamics captured implicitly in punitive vs limited-responsibility tension; lower structural priority than readings themselves"
+    },
+    {
+      "claim_id": "transfer_problem_mechanism",
+      "human_readable": "Transfer Problem (Currency Conversion Instability)",
+      "structural_delta": "Converting marks to foreign currency for reparations payments creates self-defeating hyperinflation and exchange-rate collapse",
+      "primary_observable": "1923 hyperinflation (mark-to-dollar collapse); Keynes's Economic Consequences argument about payment impossibility",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "limited_responsibility_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic constraint underlying limited-responsibility reading but lower centrality than reading itself; omega material on mountain vs piton classification"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "punitive_liability_reading",
+      "kernel_id": "versailles_reparations_clauses",
+      "reading_id": "punitive_liability_reading"
+    },
+    {
+      "claim_id": "limited_responsibility_reading",
+      "kernel_id": "versailles_reparations_clauses",
+      "reading_id": "limited_responsibility_reading"
+    },
+    {
+      "claim_id": "repudiation_reading",
+      "kernel_id": "versailles_reparations_clauses",
+      "reading_id": "repudiation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "allied_coordination_failure",
+      "structural_delta": "Absence of Allied creditor coordination enables competitive extraction and unilateral enforcement",
+      "hypothesis": "rope",
+      "deferral_reason": "Coordination dynamics captured within punitive vs limited-responsibility readings; lower graph centrality"
+    },
+    {
+      "claim_id": "transfer_problem_mechanism",
+      "structural_delta": "Currency conversion for reparations payments creates hyperinflation and exchange-rate collapse",
+      "hypothesis": "mountain",
+      "deferral_reason": "Economic constraint underlying limited-responsibility reading; mountain/piton ambiguity warrants omega rather than separate generation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_transfer_problem_classification",
+      "description": "Is the transfer problem a Mountain (physical economic law) or Piton (policy choice to prioritize reparations over currency stability)? Keynes argued physical impossibility; French maximalists argued German sabotage. Classification determines whether limited-responsibility reading is constraint-following or self-serving.",
+      "source": "Deferred axis transfer_problem_mechanism; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_dawes_young_continuity",
+      "description": "Do Dawes/Young Plans represent genuine limited-responsibility reading adoption, or tactical Allied concessions preserving punitive framework? Payment reductions may be pragmatic adjustments within punitive logic rather than reading shifts.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium); generation of limited_responsibility_reading may surface this ambiguity"
+    },
+    {
+      "id": "omega_repudiation_inevitability",
+      "description": "Was repudiation structurally inevitable given treaty terms, or contingent on Weimar collapse and Nazi rise? If inevitable, punitive reading is self-defeating snare; if contingent, it's tangled_rope with stochastic resolution.",
+      "source": "§3.1 Independence Testing (repudiation_reading vs punitive_liability_reading causal linkage)"
+    },
+    {
+      "id": "omega_interwar_counterfactual",
+      "description": "Would limited-responsibility reading adoption in 1919 (low initial demands, explicit capacity limits) have prevented Nazi rise? Or would domestic German politics demand repudiation regardless? Reading selection may have been structurally irrelevant to 1930s outcome.",
+      "source": "§2.2 Dark Matter Probe 2 (Absence Inventory); missing axis on domestic German political economy independent of reparations"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: transfer_problem_mechanism provisionally classified as mountain (economic law) but may be piton (policy choice to defend mark vs prioritize payments). Generated omega_transfer_problem_classification. Repudiation reading classified as snare (eliminates constraint) but may be tangled_rope outcome of punitive reading's internal contradiction—omega_repudiation_inevitability captures this uncertainty."
+  },
+  "_seed_id": "treaty_of_versailles_reparations"
+}

@@ -1,0 +1,241 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Higher Education Governance / Labor Economics / Institutional Theory",
+  "family_id": "academic_tenure_commitment_2026",
+  "topic_summary": "Analysis of the academic tenure system as a commitment mechanism, examining whether it functions primarily as protection for academic freedom (enabling truth-seeking coordination) or as institutional extraction (gatekeeping and inertia). The tenure contract codifies lifetime employment conditional on early-career performance evaluation, creating structural divergence in who benefits and who bears costs depending on interpretive frame.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Tenure-track faculty (probationary employees seeking permanent status)",
+      "Tenured faculty (permanent employees with dismissal protection)",
+      "University administration (employer; promotion/retention authority)",
+      "Adjunct/contingent faculty (non-tenure-track labor pool)",
+      "Students (service recipients; cost bearers)",
+      "External funders/trustees (resource providers; governance authority)"
+    ],
+    "key_tensions": [
+      "Academic freedom protection vs. employment inflexibility (tenure as shield vs. rigidity)",
+      "Merit-based gatekeeping vs. demographic reproduction (promotion criteria as quality filter vs. exclusion mechanism)"
+    ],
+    "key_mechanisms": [
+      "Up-or-out evaluation (tenure denial = termination; creates selection pressure)",
+      "Peer review governance (tenured faculty control hiring/promotion; self-perpetuating authority)",
+      "Dismissal protection (cause-only termination post-tenure; asymmetric exit costs)"
+    ],
+    "key_absences": [
+      "Absence of systematic tenure denial rate data disaggregated by field/institution type",
+      "Absence of comparative analysis with non-tenure research employment models (national labs, industry R&D with strong IP/publication rights)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The tenure contract as codified lifetime employment conditional on peer-evaluated merit, claimed to stabilize academic freedom against institutional or political pressure.",
+    "authority_description": "Tenured faculty collectively hold interpretive authority over promotion standards through peer review committees; administrative authority ratifies but rarely overrides faculty judgment in research universities.",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_flexibility",
+    "is_contested_kernel": true,
+    "kernel_id": "tenure_contract",
+    "readings": [
+      {
+        "reading_id": "academic_freedom_reading",
+        "commitment": "Tenure stabilizes truth-seeking by decoupling researcher survival from institutional displeasure or political backlash, enabling high-risk inquiry.",
+        "authority_grounding": "Professional autonomy; peer expertise in evaluating scholarly merit",
+        "sibling_readings": [
+          "institutional_extraction_reading",
+          "demographic_reproduction_reading"
+        ],
+        "expected_structural_delta": "High ε for external political actors (suppression difficult); low ε for faculty (coordination benefits via independence); students neutral beneficiaries via quality research."
+      },
+      {
+        "reading_id": "institutional_extraction_reading",
+        "commitment": "Tenure functions as permanent rent extraction by early winners, creating employment rigidity that prevents resource reallocation and loads costs onto contingent labor.",
+        "authority_grounding": "Managerial efficiency; labor market flexibility norms",
+        "sibling_readings": [
+          "academic_freedom_reading",
+          "demographic_reproduction_reading"
+        ],
+        "expected_structural_delta": "High ε for tenured faculty (beneficiaries of permanent claim on resources); high ε for contingent faculty (victims bearing flexibility costs); high ε for students (cost bearers via tuition/reduced instructional investment)."
+      },
+      {
+        "reading_id": "demographic_reproduction_reading",
+        "commitment": "Tenure peer review operates as demographic gatekeeping, reproducing dominant group composition through 'fit' and 'collegiality' criteria unmoored from research productivity.",
+        "authority_grounding": "Critical institutional analysis; disparate impact evidence",
+        "sibling_readings": [
+          "academic_freedom_reading",
+          "institutional_extraction_reading"
+        ],
+        "expected_structural_delta": "High ε for demographically dominant groups (beneficiaries of preferential evaluation); high ε for underrepresented groups (victims of structural exclusion); academic freedom claim collapses if tenure protects demographic closure rather than inquiry."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "academic_freedom_reading",
+        "reading_b": "institutional_extraction_reading",
+        "basis": "Academic freedom reading axiomatically requires that tenure's employment protection enables inquiry that would not occur under market discipline. Extraction reading axiomatically requires that tenure's employment protection creates inefficiency and rent-seeking that would not occur under market discipline. No single framework can hold both: either the protection enables value (freedom) or destroys value (extraction)."
+      },
+      {
+        "reading_a": "academic_freedom_reading",
+        "reading_b": "demographic_reproduction_reading",
+        "basis": "Academic freedom reading requires that peer review evaluates scholarly merit independent of social identity. Demographic reproduction reading requires that peer review systematically conflates social identity with perceived merit. If tenure protects demographic closure rather than inquiry, the freedom claim is empirically false within that framework."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "academic_freedom_reading",
+      "human_readable": "Academic Freedom Reading (Tenure as Truth-Seeking Protection)",
+      "structural_delta": "Employment protection decouples researcher survival from institutional/political approval, enabling controversial inquiry.",
+      "primary_observable": "Research topic risk distribution (controversial vs. consensus topics); retaliation/dismissal attempt rate for tenured vs. non-tenured faculty.",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "research_community_aggregate",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with clearest coordination hypothesis; structural baseline for comparison with extraction and reproduction readings."
+    },
+    {
+      "claim_id": "institutional_extraction_reading",
+      "human_readable": "Institutional Extraction Reading (Tenure as Permanent Rent)",
+      "structural_delta": "Lifetime employment claim creates resource rigidity, shifting labor flexibility costs onto contingent workforce and students.",
+      "primary_observable": "Tenured vs. contingent faculty compensation ratio; administrative overhead allocation; tuition growth vs. tenured faculty salary growth.",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "tenured_faculty_cohort",
+      "victim": "contingent_faculty_and_students",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest ε; clearest beneficiary/victim structure; direct contradiction with freedom reading on value vs. cost of protection."
+    },
+    {
+      "claim_id": "demographic_reproduction_reading",
+      "human_readable": "Demographic Reproduction Reading (Tenure as Gatekeeping Mechanism)",
+      "structural_delta": "Peer review authority operates as demographic filter through 'fit' criteria unmoored from research productivity metrics.",
+      "primary_observable": "Tenure grant rate by demographic group controlling for publication/citation metrics; 'collegiality' vs. research weight in denial justifications.",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "demographically_dominant_faculty",
+      "victim": "underrepresented_demographic_groups",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent structural dimension (demographic rather than economic); snare hypothesis tests whether freedom claim collapses under closure evidence."
+    },
+    {
+      "claim_id": "peer_review_self_perpetuation",
+      "human_readable": "Peer Review Self-Perpetuation (Tenured Faculty as Sole Evaluators)",
+      "structural_delta": "Tenured faculty collectively control promotion standards without external validation or accountability.",
+      "primary_observable": "Frequency of administrative override of faculty tenure recommendations; external review weight in tenure decisions.",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "demographic_reproduction_reading",
+        "institutional_extraction_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Mechanism common to multiple readings; captured implicitly in authority_grounding for each reading rather than warranting independent axis."
+    },
+    {
+      "claim_id": "up_or_out_selection_pressure",
+      "human_readable": "Up-or-Out Selection Pressure (Tenure Denial as Terminal Event)",
+      "structural_delta": "Promotion failure equals termination, creating high-stakes evaluation with asymmetric career consequences.",
+      "primary_observable": "Tenure denial rate; post-denial employment outcomes (re-entry to tenure track vs. exit from academia).",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "demographic_reproduction_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Structural precondition shared across all readings; mountain-level constraint that shapes evaluation stakes but doesn't discriminate between interpretations."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "academic_freedom_reading",
+      "kernel_id": "tenure_contract",
+      "reading_id": "academic_freedom_reading"
+    },
+    {
+      "claim_id": "institutional_extraction_reading",
+      "kernel_id": "tenure_contract",
+      "reading_id": "institutional_extraction_reading"
+    },
+    {
+      "claim_id": "demographic_reproduction_reading",
+      "kernel_id": "tenure_contract",
+      "reading_id": "demographic_reproduction_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "peer_review_self_perpetuation",
+      "structural_delta": "Tenured faculty control promotion standards without external accountability",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Mechanism shared across readings; authority structure already captured in commitment_system_recognition rather than warranting independent generation."
+    },
+    {
+      "claim_id": "up_or_out_selection_pressure",
+      "structural_delta": "Tenure denial as terminal career event creating high-stakes evaluation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural precondition common to all readings; does not discriminate between freedom, extraction, or reproduction interpretations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_counterfactual_academic_freedom",
+      "description": "Does strong academic freedom exist in non-tenure research environments (national labs with publication rights, industry R&D with IP protections)? If yes, tenure's freedom claim may be rope-level coordination rather than mountain-level necessity.",
+      "source": "Absence Inventory + Academic Freedom Reading validation check"
+    },
+    {
+      "id": "omega_tenure_denial_base_rate",
+      "description": "Systematic tenure denial rate data missing. If denial is rare (<5%), up-or-out functions as credible threat (scaffold) rather than active filter. If common (>20%), selection pressure is genuine mountain.",
+      "source": "Absence Inventory + Up-or-Out axis deferral"
+    },
+    {
+      "id": "omega_contingent_faculty_extractiveness",
+      "description": "Is adjunctification extraction BY tenured faculty FROM contingent labor, or extraction BY administration FROM both groups via deliberate labor segmentation? Beneficiary identification uncertain.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to Institutional Extraction Reading"
+    },
+    {
+      "id": "omega_demographic_closure_vs_pipeline",
+      "description": "Does demographic underrepresentation in tenured ranks result from tenure evaluation bias (snare) or from upstream PhD pipeline demographics (mountain)? Requires cohort-level data controlling for applicant pool composition.",
+      "source": "Demographic Reproduction Reading validation requirements"
+    },
+    {
+      "id": "omega_reading_coexistence",
+      "description": "Can academic freedom and demographic reproduction readings coexist (tenure protects inquiry for in-group, excludes out-group) or are they mutually exclusive? If coexist, freedom reading's universalist claim collapses to particularist operation.",
+      "source": "Axiom Contradiction Testing + Licensed Plurality check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied successfully. Three readings selected represent structurally independent interpretations with distinct beneficiary/victim structures and mutually exclusive axioms. Deferred axes documented as shared mechanisms rather than independent dimensions."
+  },
+  "_seed_id": "academic_tenure_system"
+}

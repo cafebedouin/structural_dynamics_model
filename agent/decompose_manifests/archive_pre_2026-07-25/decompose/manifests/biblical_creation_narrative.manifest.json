@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Theology / Philosophy of Science",
+  "family_id": "genesis_creation_narrative_2026",
+  "topic_summary": "Analysis of the Genesis 1-2 creation narrative as a contested kernel where different interpretive communities read the same fixed text through incompatible hermeneutical frameworks, generating structurally different constraints on belief, scientific engagement, and communal identity.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Genesis 1-2 text (fixed canonical substrate)",
+      "Young Earth Creationism movement (literalist interpretive authority)",
+      "Theistic Evolution proponents (harmonizing interpretive authority)",
+      "Scientific consensus (evolutionary biology, cosmology)",
+      "Traditionalist faith communities (beneficiaries of literalist reading)",
+      "Modernist faith communities (beneficiaries of harmonizing reading)"
+    ],
+    "key_tensions": [
+      "Scriptural inerrancy vs empirical evidence primacy",
+      "Literal interpretation vs allegorical/figurative reading",
+      "Faith community coherence vs scientific literacy integration"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Genesis 1-2 creation narrative stabilized as canonical scripture with claimed interpretive authority over cosmological origins",
+    "authority_description": "Competing hermeneut frameworks claim legitimacy through either scriptural literalism (sola scriptura tradition) or faith-reason synthesis (Augustinian/Thomistic tradition)",
+    "drift_status": "absent",
+    "candidate_pattern": "interpretive_schism",
+    "is_contested_kernel": true,
+    "kernel_id": "genesis_creation_cosmology",
+    "readings": [
+      {
+        "reading_id": "young_earth_literal",
+        "commitment": "Genesis describes six literal 24-hour days of creation occurring ~6000-10000 years ago",
+        "authority_grounding": "Scriptural inerrancy; plain-sense reading as divine revelation immune to empirical correction",
+        "sibling_readings": [
+          "theistic_evolution",
+          "literary_framework"
+        ],
+        "expected_structural_delta": "Scientific consensus enters victim set; empirical method subordinated to textual authority; high suppression of evolutionary pedagogy"
+      },
+      {
+        "reading_id": "theistic_evolution",
+        "commitment": "Genesis describes theological truth through non-literal literary forms compatible with evolutionary cosmology",
+        "authority_grounding": "Faith-reason synthesis; divine revelation mediated through human literary convention and empirical discovery",
+        "sibling_readings": [
+          "young_earth_literal",
+          "literary_framework"
+        ],
+        "expected_structural_delta": "Literalist doctrine enters victim set; scientific method coexists with theological claims; textual authority limited to theological domain"
+      },
+      {
+        "reading_id": "literary_framework",
+        "commitment": "Genesis 1-2 employs Ancient Near Eastern cosmological schema as literary framework without cosmological claims",
+        "authority_grounding": "Historical-critical method; ancient authorial intent recovered through comparative literature",
+        "sibling_readings": [
+          "young_earth_literal",
+          "theistic_evolution"
+        ],
+        "expected_structural_delta": "Both scientific and traditional theological authority displaced; text becomes cultural artifact rather than normative constraint"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "young_earth_literal",
+        "reading_b": "theistic_evolution",
+        "basis": "One reading treats empirical falsifiability as irrelevant to scriptural truth claims (textual authority absolute); the other treats empirical evidence as legitimate correction mechanism (textual authority bounded). No coherent epistemological framework holds both axioms simultaneously."
+      },
+      {
+        "reading_a": "young_earth_literal",
+        "reading_b": "literary_framework",
+        "basis": "One reading asserts Genesis makes factual cosmological claims requiring assent; the other denies Genesis intends any cosmological claims. No hermeneutic can simultaneously affirm and deny authorial cosmological intent for the same text."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "young_earth_literal",
+      "human_readable": "Young Earth Literalism (Scriptural Inerrancy as Cosmological Authority)",
+      "structural_delta": "Treats Genesis as inerrant cosmological report requiring rejection of evolutionary timescales and common descent",
+      "primary_observable": "Belief in 6000-10000 year Earth age; rejection of macroevolution; pedagogical suppression metrics in faith-affiliated schools",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "traditionalist_leadership",
+      "victim": "scientific_literacy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: highest downstream impact on educational and scientific engagement constraints"
+    },
+    {
+      "claim_id": "theistic_evolution",
+      "human_readable": "Theistic Evolution (Faith-Reason Harmonization)",
+      "structural_delta": "Treats Genesis as theological truth expressed through non-literal literary forms compatible with evolutionary science",
+      "primary_observable": "Acceptance of deep time and common descent while maintaining divine creative agency; pedagogical integration metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "modernist_faith_communities",
+      "victim": "literalist_doctrine",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: structurally distinct from literalism; different beneficiary/victim structure"
+    },
+    {
+      "claim_id": "literary_framework",
+      "human_readable": "Literary Framework Hypothesis (Ancient Literary Convention)",
+      "structural_delta": "Treats Genesis as Ancient Near Eastern literary artifact using cosmological schema without making cosmological claims",
+      "primary_observable": "Comparative ANE literature analysis; scholarly consensus on genre classification",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "academic_theology",
+      "victim": "normative_theological_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: third reading with lower centrality; captured as omega regarding genre classification"
+    },
+    {
+      "claim_id": "institutional_enforcement",
+      "human_readable": "Institutional Enforcement Mechanisms (Denominational Gatekeeping)",
+      "structural_delta": "Denominational credentialing and employment contingent on reading adherence",
+      "primary_observable": "Seminary employment contracts; denominational discipline processes for doctrinal deviation",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "denominational_hierarchy",
+      "victim": "heterodox_scholars",
+      "downstream_of": [
+        "young_earth_literal",
+        "theistic_evolution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third axis selected: enforcement mechanism downstream of both readings; distinct observable (institutional rather than hermeneutical)"
+    },
+    {
+      "claim_id": "identity_boundary_maintenance",
+      "human_readable": "Identity Boundary Maintenance (Reading as Tribal Marker)",
+      "structural_delta": "Genesis interpretation functions as in-group/out-group boundary marker beyond theological content",
+      "primary_observable": "Social sorting by reading adherence; friendship network segregation; marriage partner selection criteria",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "community_cohesion",
+      "victim": "interfaith_dialogue",
+      "downstream_of": [
+        "young_earth_literal",
+        "theistic_evolution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: social sorting mechanism but lower structural priority than institutional enforcement"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "young_earth_literal",
+      "kernel_id": "genesis_creation_cosmology",
+      "reading_id": "young_earth_literal"
+    },
+    {
+      "claim_id": "theistic_evolution",
+      "kernel_id": "genesis_creation_cosmology",
+      "reading_id": "theistic_evolution"
+    },
+    {
+      "claim_id": "institutional_enforcement",
+      "kernel_id": "genesis_creation_cosmology",
+      "reading_id": "institutional_enforcement"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "literary_framework",
+      "structural_delta": "Genesis as ANE literary artifact without cosmological claims",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Third reading with lower centrality; academic framework displacing both scientific and traditional theological authority; captured in omega_genre_classification"
+    },
+    {
+      "claim_id": "identity_boundary_maintenance",
+      "structural_delta": "Reading adherence as tribal boundary marker",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Social mechanism downstream of readings but lower structural priority than institutional enforcement; captured in omega_social_sorting"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_genre_classification",
+      "description": "If literary_framework reading is correct, both literalism and harmonization are category errors—text makes no cosmological claims to accept or reconcile. Genre classification becomes upstream constraint that invalidates the entire kernel contest.",
+      "source": "Deferred axis literary_framework + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_social_sorting",
+      "description": "Does reading adherence function primarily as identity marker rather than truth claim? If so, rational persuasion is structurally ineffective—the constraint is tribal boundary maintenance, not cosmological belief.",
+      "source": "Deferred axis identity_boundary_maintenance + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_biblical_authority_hierarchy",
+      "description": "Absent: which biblical texts possess interpretive priority when Genesis conflicts with other scripture? Literalism applied selectively (Levitical law ignored) suggests meta-constraint on biblical authority not surfaced.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_educational_impact",
+      "description": "Victim set for young_earth_literal includes scientific_literacy, but extractiveness magnitude depends on educational context (homeschool vs public vs faith-affiliated school)—measurement uncertainty high.",
+      "source": "F03 concern regarding epsilon_bin classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: epsilon_bin for young_earth_literal classified as 'high' but extractiveness magnitude varies substantially by institutional context (homeschool extraction differs from public school where doctrine has no purchase). Generated omega_educational_impact to bound this measurement uncertainty. Kernel decomposition valid: axiom contradictions confirmed between young_earth_literal and theistic_evolution—no coherent epistemological framework holds both 'empirical evidence is irrelevant to scriptural cosmology' and 'empirical evidence legitimately corrects scriptural cosmology' simultaneously."
+  },
+  "_seed_id": "biblical_creation_narrative"
+}

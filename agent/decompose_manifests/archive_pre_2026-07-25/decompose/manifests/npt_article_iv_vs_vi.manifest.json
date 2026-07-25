@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Nuclear Governance / Treaty Interpretation",
+  "family_id": "npt_peaceful_use_disarmament",
+  "topic_summary": "Analysis of the Treaty on the Non-Proliferation of Nuclear Weapons (NPT) as a contested kernel where Article IV (inalienable right to peaceful nuclear technology) and Article VI (disarmament obligation) are read differently by weapon states versus non-weapon states, producing structurally incompatible constraint regimes.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "NPT Treaty Text (1968/1970 founding document; Articles IV and VI as contested kernel)",
+      "Nuclear Weapon States (P5: US, Russia, UK, France, China; de facto authority holders)",
+      "Non-Nuclear Weapon States (NNWS signatories; restrained parties claiming breach)",
+      "IAEA (International Atomic Energy Agency; verification mechanism)",
+      "Nuclear Suppliers Group (informal cartel; export control regime)"
+    ],
+    "key_tensions": [
+      "Vertical proliferation (weapon state arsenal expansion) vs horizontal proliferation (new weapon state emergence)",
+      "Treaty equity (reciprocal disarmament-for-restraint bargain) vs security hierarchy (two-tier order as permanent)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The NPT's pairing of Article IV (inalienable right to peaceful nuclear technology) with Article VI (disarmament obligation pursued in good faith) as a bargained exchange",
+    "authority_description": "Contested: weapon states ground authority in security interest and verification capacity; non-weapon states ground authority in treaty reciprocity and sovereign equality",
+    "drift_status": "partial",
+    "candidate_pattern": "Licensed Plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "npt_article_iv_vi_pairing",
+    "readings": [
+      {
+        "reading_id": "nonproliferation_primary",
+        "commitment": "Article IV is conditional on Article III verification; Article VI is aspirational and non-justiciable; authority derives from weapon states' security interest in preventing horizontal proliferation",
+        "authority_grounding": "Security Council P5 position; IAEA safeguards enforcement capacity; implicit threat of sanctions/withdrawal",
+        "sibling_readings": [
+          "grand_bargain",
+          "abolitionist"
+        ],
+        "expected_structural_delta": "Two-tier order permanently stabilized; weapon state arsenals excluded from treaty enforcement; non-weapon states as perpetual restraint-bearers; Article VI timeline unenforceable"
+      },
+      {
+        "reading_id": "grand_bargain",
+        "commitment": "Article IV and Article VI are reciprocal obligations; non-weapon state restraint is conditional on weapon state disarmament progress; breach of Article VI undermines Article IV legitimacy",
+        "authority_grounding": "Treaty text as bilateral contract; sovereign equality principle; NNWS diplomatic coalition (NAM bloc)",
+        "sibling_readings": [
+          "nonproliferation_primary",
+          "abolitionist"
+        ],
+        "expected_structural_delta": "Disarmament obligation becomes enforceable; failure to disarm licenses NNWS withdrawal or Article IV expansion; weapon states as treaty-breach actors; verification reciprocity required"
+      },
+      {
+        "reading_id": "abolitionist",
+        "commitment": "Article VI mandates complete disarmament; Article IV is illegitimate if it perpetuates dual-use proliferation risk; authority derives from humanitarian law and weapons-prohibition treaty precedent (TPNW)",
+        "authority_grounding": "Treaty on the Prohibition of Nuclear Weapons (2017); ICRC humanitarian law doctrine; civil society/non-state actor mobilization",
+        "sibling_readings": [
+          "nonproliferation_primary",
+          "grand_bargain"
+        ],
+        "expected_structural_delta": "NPT itself delegitimized as insufficient; Article IV constrained by prohibition norm; weapon possession categorically illegal; no distinction between peaceful and military programs"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "nonproliferation_primary",
+        "reading_b": "grand_bargain",
+        "basis": "Nonproliferation-primary treats weapon state arsenals as outside treaty enforcement (structural exception); grand-bargain treats disarmament failure as treaty breach nullifying NNWS obligations. No single framework can hold both weapon state exceptionalism and reciprocal conditionality simultaneously."
+      },
+      {
+        "reading_a": "nonproliferation_primary",
+        "reading_b": "abolitionist",
+        "basis": "Nonproliferation-primary legitimizes permanent weapon state status with aspirational disarmament; abolitionist categorically prohibits possession regardless of security claims. No framework can hold both 'arsenals legitimate pending eventual disarmament' and 'all possession inherently illegal' simultaneously."
+      },
+      {
+        "reading_a": "grand_bargain",
+        "reading_b": "abolitionist",
+        "basis": "Grand-bargain preserves Article IV peaceful-use right as core treaty value; abolitionist subordinates Article IV to prohibition norm (dual-use technology as proliferation vector). No framework can simultaneously treat peaceful nuclear programs as inalienable right and as illegitimate proliferation risk."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "nonproliferation_primary",
+      "human_readable": "Non-Proliferation Primary Reading (Security Hierarchy)",
+      "structural_delta": "Treaty authority grounded in weapon state security interest; Article VI aspirational; two-tier order permanent",
+      "primary_observable": "IAEA safeguards enforcement asymmetry (NNWS inspected, NWS arsenals uninspected); Security Council permanent member veto over treaty enforcement; weapon state modernization spending vs Article VI compliance rhetoric",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "nuclear_weapon_states",
+      "victim": "non_nuclear_weapon_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant institutional reading; highest ε (permanent two-tier extraction); structurally entrenched via P5 veto and safeguards asymmetry"
+    },
+    {
+      "claim_id": "grand_bargain",
+      "human_readable": "Grand Bargain Reading (Reciprocal Obligation)",
+      "structural_delta": "Treaty authority grounded in reciprocal exchange; Article VI binding and justiciable; disarmament failure delegitimizes NNWS restraint",
+      "primary_observable": "NNWS diplomatic bloc cohesion (NAM voting patterns); withdrawal threats as enforcement mechanism; Article VI compliance metrics (arsenal reduction timelines, FMCT stagnation)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural alternative to nonproliferation-primary; different authority grounding (reciprocity vs hierarchy); captures NNWS coalition position"
+    },
+    {
+      "claim_id": "abolitionist",
+      "human_readable": "Abolitionist Reading (Categorical Prohibition)",
+      "structural_delta": "NPT insufficient; Article VI requires complete disarmament; Article IV subordinated to prohibition norm",
+      "primary_observable": "TPNW ratification/accession count; humanitarian law advocacy mobilization; NPT withdrawal precedents (North Korea) as delegitimization signal",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading; captures treaty-external challenge (TPNW as competing regime); different beneficiary/victim structure (no extractive axis, but regime displacement threat)"
+    },
+    {
+      "claim_id": "verification_asymmetry_mountain",
+      "human_readable": "Verification Asymmetry (Technical Inspection Capacity)",
+      "structural_delta": "Physical impossibility of symmetric safeguards enforcement given NWS arsenal size/secrecy",
+      "primary_observable": "IAEA budget allocation; safeguards inspection hours NNWS vs NWS voluntary offers; uranium enrichment detection limits",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "nonproliferation_primary"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream physical constraint but structurally redundant with nonproliferation-primary reading's safeguards asymmetry discussion"
+    },
+    {
+      "claim_id": "dual_use_technology_rope",
+      "human_readable": "Dual-Use Technology Coordination (Peaceful vs Military Boundary)",
+      "structural_delta": "Shared technical substrate of enrichment/reprocessing requiring coordination on permissible civil use",
+      "primary_observable": "Nuclear Suppliers Group export controls; enrichment technology transfer restrictions; centrifuge design classification",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "nonproliferation_primary",
+        "abolitionist"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technical coordination layer captured within readings' treatment of Article IV boundaries; lower structural priority than competing authority groundings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "nonproliferation_primary",
+      "kernel_id": "npt_article_iv_vi_pairing",
+      "reading_id": "nonproliferation_primary"
+    },
+    {
+      "claim_id": "grand_bargain",
+      "kernel_id": "npt_article_iv_vi_pairing",
+      "reading_id": "grand_bargain"
+    },
+    {
+      "claim_id": "abolitionist",
+      "kernel_id": "npt_article_iv_vi_pairing",
+      "reading_id": "abolitionist"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "verification_asymmetry_mountain",
+      "structural_delta": "Physical impossibility of symmetric safeguards given arsenal size/secrecy",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream physical constraint redundant with nonproliferation-primary reading's safeguards asymmetry; technical detail vs structural authority contest"
+    },
+    {
+      "claim_id": "dual_use_technology_rope",
+      "structural_delta": "Enrichment/reprocessing coordination on civil vs military boundary",
+      "hypothesis": "rope",
+      "deferral_reason": "Technical coordination layer subsumed within readings' Article IV treatment; lower structural priority than authority grounding disputes"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_p5_veto_extraction",
+      "description": "Is P5 veto power over treaty enforcement a structural Mountain (Security Council charter design) or Snare (NWS blocking reciprocal accountability)? If Snare, grand-bargain reading's enforcement mechanism depends on extra-treaty pressure.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + nonproliferation_primary reading analysis"
+    },
+    {
+      "id": "omega_tpnw_regime_competition",
+      "description": "Does TPNW (2021 entry into force) function as competing treaty regime or abolitionist Piton atrophying NPT legitimacy? If regime competition, NPT's authority grounding becomes contested even among NNWS parties.",
+      "source": "Absence Inventory (TPNW as parallel legal framework) + abolitionist reading"
+    },
+    {
+      "id": "omega_article_x_withdrawal",
+      "description": "Does Article X withdrawal right (with 3-month notice) convert grand-bargain reading's reciprocal conditionality into enforceable threat, or does nonproliferation-primary reading's security logic make withdrawal itself a proliferation act? Determines whether NNWS coalition has structural leverage.",
+      "source": "Dark Matter Probe 2 (Absence Inventory: withdrawal mechanism as constraint) + grand_bargain reading"
+    },
+    {
+      "id": "omega_fmct_stagnation",
+      "description": "Is Fissile Material Cutoff Treaty stagnation (no negotiation progress since 1995) evidence of Article VI breach (grand-bargain) or practical security prudence (nonproliferation-primary)? Observable metric for disarmament 'good faith' contested.",
+      "source": "Primary Observable ambiguity + axiom contradiction between readings A and B"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings instantiate genuinely different constraint regimes (two-tier hierarchy vs reciprocal rope vs categorical prohibition), each with distinct authority grounding and victim set. Axiom contradictions verified for all three pairs. User's analytical estimate validated."
+  },
+  "_seed_id": "npt_article_iv_vs_vi"
+}

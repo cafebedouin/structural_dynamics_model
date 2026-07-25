@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Administrative Law",
+  "family_id": "separation_of_powers_doctrine_2026",
+  "topic_summary": "Analysis of the constitutional separation of powers doctrine as a contested kernel where the same founding text is read through formalist versus functionalist lenses to emit structurally different constraints on state capacity. Formalist readings weaponize strict boundary maintenance to dismantle administrative delegation; functionalist readings permit overlapping authority and regulatory expertise.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Constitutional text (Articles I-III establishing tripartite government)",
+      "Administrative agencies (FDA, EPA, SEC — delegated regulatory authority)",
+      "Federal judiciary (interpretive authority over constitutional boundaries)",
+      "Formalist legal movement (Federalist Society, originalist scholars)",
+      "Functionalist tradition (New Deal settlement, Chevron deference framework)",
+      "Regulated industries (beneficiaries of administrative dismantlement)"
+    ],
+    "key_tensions": [
+      "Textual fixity vs adaptive governance (formalist insistence on 1789 boundaries vs functionalist embrace of modern state complexity)",
+      "Nondelegation revival vs regulatory capacity (recent Supreme Court moves to restrict agency authority vs need for technical expertise in rule-making)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Articles I-III of the U.S. Constitution vesting legislative, executive, and judicial powers in separate branches, with ambiguous boundaries between them",
+    "authority_description": "Supreme Court holds final interpretive authority via judicial review, but legitimacy derives from claimed fidelity to original constitutional meaning or evolving constitutional practice",
+    "drift_status": "partial",
+    "candidate_pattern": "Contested Fixity (Pattern 2)",
+    "is_contested_kernel": true,
+    "kernel_id": "separation_of_powers_text",
+    "readings": [
+      {
+        "reading_id": "formalist_reading",
+        "commitment": "Separation of powers establishes strict, impermeable boundaries; Congress cannot delegate legislative authority to agencies",
+        "authority_grounding": "Originalist textualism — vesting clauses as exhaustive grants with 1789 meanings",
+        "sibling_readings": [
+          "functionalist_reading",
+          "unitary_executive_reading"
+        ],
+        "expected_structural_delta": "Administrative agencies enter victim set (delegations unconstitutional); regulatory capacity drastically reduced; high ε suppression of alternatives"
+      },
+      {
+        "reading_id": "functionalist_reading",
+        "commitment": "Separation of powers is a flexible framework permitting overlapping authority and intelligible principle delegation",
+        "authority_grounding": "Pragmatic constitutionalism — precedent, workability, necessity of modern administrative state",
+        "sibling_readings": [
+          "formalist_reading",
+          "unitary_executive_reading"
+        ],
+        "expected_structural_delta": "Agencies legitimate; regulatory state preserved; lower ε (coordination via deference doctrines); Congress and President share legislative/executive functions"
+      },
+      {
+        "reading_id": "unitary_executive_reading",
+        "commitment": "All executive power vests in President; independent agencies violate unitary executive principle",
+        "authority_grounding": "Originalist focus on Article II vesting clause as conferring plenary control over executive branch",
+        "sibling_readings": [
+          "formalist_reading",
+          "functionalist_reading"
+        ],
+        "expected_structural_delta": "Independent agencies (FTC, NLRB, Fed) enter victim set; Presidential removal power becomes absolute; different beneficiary structure than formalist (executive branch gains at judiciary's expense)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "formalist_reading",
+        "reading_b": "functionalist_reading",
+        "basis": "Formalist axiom (vesting clauses are exhaustive and fixed) requires rejecting functionalist axiom (constitutional structure adapts to governance needs); no single framework can hold both exhaustive textual boundaries AND flexible overlapping authority"
+      },
+      {
+        "reading_a": "unitary_executive_reading",
+        "reading_b": "functionalist_reading",
+        "basis": "Unitary executive axiom (all executive power flows through President) requires rejecting functionalist axiom (independent agencies legitimate); no framework can hold both plenary Presidential control AND insulated expert authority"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "formalist_reading",
+      "human_readable": "Formalist Reading (Strict Boundary Maintenance)",
+      "structural_delta": "Constitutional vesting clauses interpreted as exhaustive, impermeable grants requiring strict separation and prohibiting legislative delegation",
+      "primary_observable": "Supreme Court nondelegation doctrine invocations; agency authority invalidation rate",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "regulated_industries",
+      "victim": "administrative_agencies",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading driving administrative state dismantlement; highest ε; clear beneficiary/victim structure"
+    },
+    {
+      "claim_id": "functionalist_reading",
+      "human_readable": "Functionalist Reading (Overlapping Authority Framework)",
+      "structural_delta": "Constitutional structure interpreted as flexible system permitting delegation under intelligible principle standard and agency expertise",
+      "primary_observable": "Chevron deference application rate; upholding of broad delegations (Clean Air Act, Dodd-Frank)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Sibling reading to formalist; structurally opposite ε and type; necessary for kernel contest analysis"
+    },
+    {
+      "claim_id": "unitary_executive_reading",
+      "human_readable": "Unitary Executive Reading (Presidential Control Maximization)",
+      "structural_delta": "Article II vesting clause interpreted as conferring plenary Presidential control over all executive functions including independent agencies",
+      "primary_observable": "Presidential removal power scope; independent agency structural challenges",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "executive_branch",
+      "victim": "independent_regulatory_commissions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading with distinct beneficiary/victim structure; moderate ε; cross-cuts formalist/functionalist divide"
+    },
+    {
+      "claim_id": "judicial_supremacy_amplification",
+      "human_readable": "Judicial Supremacy Amplification (Court as Boundary Enforcer)",
+      "structural_delta": "Supreme Court's power to invalidate legislation and agency action expands under formalist doctrine via major questions doctrine and nondelegation revival",
+      "primary_observable": "Rate of statutes/regulations struck down; major questions doctrine invocations",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "federal_judiciary",
+      "victim": "elected_branches",
+      "downstream_of": [
+        "formalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural consequence of formalist reading rather than independent kernel reading; captured via formalist generation"
+    },
+    {
+      "claim_id": "regulatory_capture_inversion",
+      "human_readable": "Regulatory Capture Inversion (From Agency to Judiciary)",
+      "structural_delta": "Dismantling administrative expertise shifts capture point from agencies (industry influence on rules) to courts (industry-funded litigation campaigns)",
+      "primary_observable": "Funding sources for anti-regulatory litigation; Chamber of Commerce amicus brief frequency",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "extractive_capital",
+      "victim": "diffuse_public",
+      "downstream_of": [
+        "formalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence mechanism; omega material on beneficiary structure evolution"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "formalist_reading",
+      "kernel_id": "separation_of_powers_text",
+      "reading_id": "formalist_reading"
+    },
+    {
+      "claim_id": "functionalist_reading",
+      "kernel_id": "separation_of_powers_text",
+      "reading_id": "functionalist_reading"
+    },
+    {
+      "claim_id": "unitary_executive_reading",
+      "kernel_id": "separation_of_powers_text",
+      "reading_id": "unitary_executive_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "judicial_supremacy_amplification",
+      "structural_delta": "Court's boundary-enforcement power expands under formalist doctrine",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural consequence of formalist reading rather than independent kernel reading; captured via formalist constraint story"
+    },
+    {
+      "claim_id": "regulatory_capture_inversion",
+      "structural_delta": "Capture point shifts from agencies to courts via litigation funding",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream beneficiary mechanism; omega material on second-order extraction dynamics"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_licensed_plurality",
+      "description": "Formalist and functionalist readings have axiom-contradictory foundations yet both remain socially live judicial positions (5-4 splits). This is licensed plurality — no single framework holds both, but the Court alternates between them. Does this represent interpretive drift or legitimate constitutional ambiguity?",
+      "source": "§1.3-K axiom contradiction analysis + commitment system recognition"
+    },
+    {
+      "id": "omega_nondelegation_threshold",
+      "description": "If formalist reading prevails, which delegations survive? 'Intelligible principle' is itself contested. Without granular threshold, cannot predict regulatory collapse scope.",
+      "source": "Generation context requirement for formalist_reading"
+    },
+    {
+      "id": "omega_beneficiary_visibility",
+      "description": "Formalist reading framed as neutral constitutional fidelity, but regulatory_capture_inversion axis reveals extractive capital as primary beneficiary. How visible is this beneficiary structure in judicial reasoning?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis regulatory_capture_inversion"
+    },
+    {
+      "id": "omega_unitary_executive_alliance",
+      "description": "Do formalist and unitary executive readings align or compete? Both restrict agency independence, but unitary executive empowers President while formalist empowers Congress and courts. Coalition stability uncertain.",
+      "source": "Sibling reading tension + §2.1 multi-lens scan"
+    },
+    {
+      "id": "omega_historical_contingency",
+      "description": "Is the New Deal settlement (functionalist reading) a rope of coordination or a piton of path-dependent drift? Formalist movement treats it as illegitimate drift; functionalists treat it as legitimate constitutional evolution.",
+      "source": "Commitment system drift_status assessment (partial drift) + Pattern 2 contestation"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Three readings selected represent structurally distinct constraints with different ε bins, beneficiary/victim pairs, and axiom commitments. Deferred axes documented as downstream consequences rather than independent readings."
+  },
+  "_seed_id": "separation_of_powers"
+}

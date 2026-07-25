@@ -1,0 +1,265 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Medical Ethics / Bioethics / End-of-Life Policy",
+  "family_id": "euthanasia_autonomy_sanctity_2024",
+  "topic_summary": "Analysis of the euthanasia and physician-assisted suicide debate, examining the structural collision between autonomy-primary and sanctity-of-life-primary readings of end-of-life decision-making authority. The debate centers on incompatible victim sets: the suffering-prolonged (patients denied choice to end unbearable suffering) versus the pressured-vulnerable (elderly, disabled, and economically disadvantaged populations at risk of coercion or devaluation).",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Terminally ill patients (primary stakeholders requesting assisted dying)",
+      "Healthcare professionals (physicians, palliative care providers with divided opinions)",
+      "Disability Rights Education and Defense Fund (advocacy organization opposing legalization)",
+      "American Medical Association (institutional opposition, physician role as healer)",
+      "Vulnerable populations (elderly, disabled, socioeconomically disadvantaged)",
+      "Legal jurisdictions (Netherlands, Belgium, Canada, Switzerland, 9 U.S. states + D.C.)",
+      "Palliative care institutions (Canadian Society of Palliative Care Physicians)",
+      "Nazi euthanasia program (historical shadow event)"
+    ],
+    "key_tensions": [
+      "Individual autonomy vs societal protection of vulnerable populations",
+      "Physician role as healer vs physician as facilitator of chosen death",
+      "Right to die vs duty to die (resource pressure concern)"
+    ],
+    "key_mechanisms": [
+      "Progressive eligibility expansion (Netherlands, Belgium, Canada empirical pattern)",
+      "Slippery slope pathway (competent terminal → incompetent non-terminal)",
+      "Coercion gradient (economic/familial pressure on vulnerable populations)",
+      "Palliative care gatekeeping (assessment separation from MAiD eligibility)"
+    ],
+    "key_absences": [
+      "Empirical data on actual coercion rates in jurisdictions with legal assisted dying",
+      "Comparative suffering metrics between jurisdictions with/without legal access"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "autonomy_reading",
+      "human_readable": "Autonomy-Primary Reading (Self-Determination as Foundational Right)",
+      "structural_delta": "Individual autonomy grounds the right to control circumstances and timing of death when facing unbearable suffering",
+      "primary_observable": "Legal frameworks prioritizing patient choice; eligibility criteria centered on competent request",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "autonomy_advocates",
+      "victim": "suffering_prolonged",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct victim set (suffering-prolonged); high extractiveness from denial of choice"
+    },
+    {
+      "claim_id": "sanctity_reading",
+      "human_readable": "Sanctity-of-Life-Primary Reading (Life Preservation as Categorical Imperative)",
+      "structural_delta": "Intrinsic value of human life prohibits intentional life-ending; physician role limited to preservation",
+      "primary_observable": "Legal prohibitions; institutional policies (AMA position); religious/philosophical frameworks",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "sanctity_advocates",
+      "victim": "pressured_vulnerable",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading with distinct victim set (pressured-vulnerable); high extractiveness from coercion risk"
+    },
+    {
+      "claim_id": "slippery_slope_mechanism",
+      "human_readable": "Progressive Expansion Mechanism (Eligibility Creep)",
+      "structural_delta": "Empirical pattern of eligibility criteria expanding beyond initial scope over time",
+      "primary_observable": "Netherlands/Belgium/Canada legislative history; competent terminal → incompetent non-terminal pathway",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "incompetent_patients",
+      "downstream_of": [
+        "autonomy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Empirically documented mechanism linking autonomy framework to sanctity concerns; distinct observable (legislative expansion)"
+    },
+    {
+      "claim_id": "palliative_care_substitution",
+      "human_readable": "Palliative Care Substitution Effect",
+      "structural_delta": "Assisted dying availability reduces investment in or access to palliative care alternatives",
+      "primary_observable": "Palliative care funding/availability in jurisdictions with vs without legal assisted dying",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "autonomy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical data absent from research context; speculative mechanism"
+    },
+    {
+      "claim_id": "disability_devaluation",
+      "human_readable": "Disability Devaluation Gradient",
+      "structural_delta": "Assisted dying frameworks encode assumptions about quality of life that devalue disabled existence",
+      "primary_observable": "Disability rights organization positions; eligibility criteria language (unbearable suffering)",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "disabled_populations",
+      "downstream_of": [
+        "autonomy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within sanctity_reading victim set (pressured-vulnerable includes disabled); lower centrality than slippery_slope_mechanism"
+    },
+    {
+      "claim_id": "economic_coercion_gradient",
+      "human_readable": "Economic Coercion Gradient (Resource Pressure)",
+      "structural_delta": "Healthcare resource constraints create pressure for vulnerable populations to choose death over expensive care",
+      "primary_observable": "Right-to-die becoming duty-to-die under resource scarcity; family/institutional pressure metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "economically_disadvantaged",
+      "downstream_of": [
+        "autonomy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within sanctity_reading victim set (pressured-vulnerable includes economically disadvantaged); empirical coercion data absent"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "autonomy_reading",
+      "kernel_id": "end_of_life_authority",
+      "reading_id": "autonomy_reading"
+    },
+    {
+      "claim_id": "sanctity_reading",
+      "kernel_id": "end_of_life_authority",
+      "reading_id": "sanctity_reading"
+    },
+    {
+      "claim_id": "slippery_slope_mechanism",
+      "kernel_id": "end_of_life_authority",
+      "reading_id": "slippery_slope_mechanism"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "palliative_care_substitution",
+      "structural_delta": "Assisted dying availability reduces palliative care investment",
+      "hypothesis": "rope",
+      "deferral_reason": "Empirical data absent from research context; speculative coordination mechanism"
+    },
+    {
+      "claim_id": "disability_devaluation",
+      "structural_delta": "Assisted dying frameworks devalue disabled existence",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured within sanctity_reading victim set (pressured-vulnerable); lower centrality than selected mechanism"
+    },
+    {
+      "claim_id": "economic_coercion_gradient",
+      "structural_delta": "Resource constraints create duty-to-die pressure",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured within sanctity_reading victim set (economically disadvantaged); empirical coercion rates unavailable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_coercion_empirics",
+      "description": "Are actual coercion rates in legal jurisdictions measurably higher than baseline? Research context lacks comparative data. Sanctity_reading's victim set (pressured-vulnerable) may be theoretical rather than empirical.",
+      "source": "Absence Inventory (key_absences: empirical coercion data)"
+    },
+    {
+      "id": "omega_suffering_metrics",
+      "description": "Is prolonged suffering in prohibition jurisdictions quantifiable? Autonomy_reading's victim set (suffering-prolonged) lacks comparative suffering metrics across legal regimes.",
+      "source": "Absence Inventory (key_absences: comparative suffering data)"
+    },
+    {
+      "id": "omega_slippery_slope_inevitability",
+      "description": "Is progressive expansion (Netherlands/Belgium/Canada pattern) a necessary consequence of autonomy frameworks, or jurisdiction-specific? Slippery_slope_mechanism may be a contingent snare rather than structural necessity.",
+      "source": "Dark Matter Probe 1 (Operational Medium: model operates within legalization-as-binary frame; gradual expansion may be policy choice rather than structural inevitability)"
+    },
+    {
+      "id": "omega_physician_role_drift",
+      "description": "Does physician participation in assisted dying erode healer identity (AMA claim) or expand it to include suffering relief? Tension between institutional position and individual physician willingness suggests role definition is contested, not fixed.",
+      "source": "Dark Matter Probe 2 (Absence: physician identity as variable rather than constant)"
+    },
+    {
+      "id": "omega_nazi_shadow_validity",
+      "description": "Does the Nazi euthanasia program historical shadow constitute valid structural evidence, or is it a category error (state-imposed murder vs individual choice)? Sanctity arguments invoke this precedent; autonomy arguments reject analogy.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan: who benefits from Nazi analogy? Sanctity advocates gain rhetorical leverage; autonomy advocates lose legitimacy)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied successfully. Three readings selected: two core readings (autonomy_reading, sanctity_reading) with distinct victim sets, plus one empirically documented mechanism (slippery_slope_mechanism) linking autonomy framework to sanctity concerns."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Authority to determine the legitimacy of intentionally ending a human life in medical contexts",
+    "authority_description": "Contested between individual autonomy (patient as sole legitimate authority) and sanctity-of-life principle (life preservation as categorical constraint on individual choice)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "end_of_life_authority",
+    "readings": [
+      {
+        "reading_id": "autonomy_reading",
+        "commitment": "Individual autonomy grounds the right to control circumstances and timing of death when facing unbearable suffering",
+        "authority_grounding": "Liberal individualism / self-determination principle",
+        "sibling_readings": [
+          "sanctity_reading",
+          "slippery_slope_mechanism"
+        ],
+        "expected_structural_delta": "Suffering-prolonged enter victim set (patients denied choice); high suppression of paternalistic restrictions; eligibility criteria expand over time (empirical pattern)"
+      },
+      {
+        "reading_id": "sanctity_reading",
+        "commitment": "Intrinsic value of human life prohibits intentional life-ending regardless of individual preference",
+        "authority_grounding": "Religious / deontological / physician-as-healer role",
+        "sibling_readings": [
+          "autonomy_reading",
+          "slippery_slope_mechanism"
+        ],
+        "expected_structural_delta": "Pressured-vulnerable enter victim set (elderly, disabled, economically disadvantaged at coercion risk); categorical prohibition on assisted dying; physician role limited to life preservation"
+      },
+      {
+        "reading_id": "slippery_slope_mechanism",
+        "commitment": "Initial autonomy-based frameworks empirically expand beyond competent terminal cases to incompetent and non-terminal populations",
+        "authority_grounding": "Empirical observation (Netherlands, Belgium, Canada legislative history)",
+        "sibling_readings": [
+          "autonomy_reading",
+          "sanctity_reading"
+        ],
+        "expected_structural_delta": "Incompetent patients enter victim set; eligibility criteria drift from terminal-only to chronic suffering; autonomy framework becomes vehicle for sanctity concerns"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "autonomy_reading",
+        "reading_b": "sanctity_reading",
+        "basis": "Autonomy reading holds that individual choice is the sole legitimate authority over one's death; sanctity reading holds that life preservation is a categorical constraint that overrides individual choice. No single coherent framework can simultaneously hold both that individual autonomy is supreme in end-of-life decisions AND that life preservation categorically prohibits those decisions."
+      }
+    ]
+  },
+  "_seed_id": "euthanasia_kernel"
+}

@@ -1,0 +1,267 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Intellectual Property Law / Legal Interpretation / Information Economics",
+  "family_id": "fair_use_interpretive_boundaries",
+  "topic_summary": "Analysis of the Fair Use doctrine (17 U.S.C. § 107) as a contested legal kernel where different interpretive commitments generate structurally distinct constraints on copyright enforcement. The expansive reading treats fair use as a structural right ensuring transformative capacity and innovation, while the restrictive reading treats it as a narrow defense grudgingly carved from property rights.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "17 U.S.C. § 107 (Fair Use statutory provision - the kernel)",
+      "Rights-holders / incumbent copyright owners (beneficiaries of restrictive reading)",
+      "Transformative users / innovators / researchers (beneficiaries of expansive reading)",
+      "Federal judiciary (interpretive authority - circuit splits documented)",
+      "Copyright Office (administrative authority - limited interpretive role)",
+      "Secondary markets (downstream economic actors affected by boundary placement)"
+    ],
+    "key_tensions": [
+      "Property absolutism vs access commons (rights-holder exclusivity vs public transformative capacity)",
+      "Commercial harm standard vs transformative purpose standard (market substitute test vs innovation test)"
+    ],
+    "key_mechanisms": [
+      "Four-factor balancing test (purpose/character, nature, amount, market effect) - interpretive mechanism",
+      "Transformativeness doctrine (Campbell v. Acuff-Rose 1994) - doctrinal gloss on factor one",
+      "Licensing market assumption (circuit-dependent: some courts assume any use could be licensed, collapsing fair use)"
+    ],
+    "key_absences": [
+      "Statutory revision mechanism - Congress has not amended § 107 since 1976 despite circuit splits",
+      "Upstream authorship incentive effects - doctrine focuses on downstream use, silent on whether expansive fair use increases upstream creation"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "transformative_right_reading",
+      "human_readable": "Transformative Right Reading (Fair Use as Structural Public Scaffold)",
+      "structural_delta": "Fair use interpreted as affirmative right to transformative coordination, not grudging exception",
+      "primary_observable": "Frequency of transformative purpose overriding commercial nature in case outcomes; licensing market evidence excluded",
+      "epsilon_bin": "high",
+      "hypothesis": "rope",
+      "beneficiary": "transformative_users_innovators",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading proceeding to generation: instantiates kernel as coordination scaffold with low ε on transformative activity",
+      "kernel_id": "fair_use_statutory_exception",
+      "reading_id": "transformative_right_reading",
+      "commitment": "Fair use exists to enable transformative reuse and cultural production; courts must facilitate innovation",
+      "authority_grounding": "First Amendment values, progress clause purpose, Campbell transformativeness doctrine",
+      "sibling_readings": [
+        "narrow_defense_reading",
+        "market_licensing_reading"
+      ],
+      "expected_structural_delta": "Low ε for transformative uses; high ε for substitutive uses; licensing markets not dispositive"
+    },
+    {
+      "claim_id": "narrow_defense_reading",
+      "human_readable": "Narrow Defense Reading (Fair Use as Grudging Property Carve-Out)",
+      "structural_delta": "Fair use interpreted as narrow exception to property rights, burden on defendant, presumption favors rights-holder",
+      "primary_observable": "Frequency of commercial use tipping against fair use regardless of transformativeness; burden of proof allocation",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_rights_holders",
+      "victim": "secondary_users_lacking_licensing_capital",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: instantiates kernel as enclosure mechanism with high ε on unlicensed use",
+      "kernel_id": "fair_use_statutory_exception",
+      "reading_id": "narrow_defense_reading",
+      "commitment": "Copyright is property; fair use is an affirmative defense narrowly construed to preserve market value",
+      "authority_grounding": "Property absolutism, market harm emphasis, pre-Campbell restrictive precedent",
+      "sibling_readings": [
+        "transformative_right_reading",
+        "market_licensing_reading"
+      ],
+      "expected_structural_delta": "High ε for most unauthorized uses; commercial nature determinative; transformativeness underweighted"
+    },
+    {
+      "claim_id": "market_licensing_reading",
+      "human_readable": "Market Licensing Reading (Fair Use Collapsed by Hypothetical Markets)",
+      "structural_delta": "Fair use defeated by mere existence of potential licensing market, regardless of transformativeness",
+      "primary_observable": "Frequency of factor four (market harm) dispositive based on licensing market evidence alone",
+      "epsilon_bin": "v_high",
+      "hypothesis": "snare",
+      "beneficiary": "licensing_intermediaries_collective_rights_orgs",
+      "victim": "non_commercial_transformative_users",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: most extractive instantiation, converts kernel into circular enclosure (any use defeats itself by creating licensable market)",
+      "kernel_id": "fair_use_statutory_exception",
+      "reading_id": "market_licensing_reading",
+      "commitment": "Any use that could be licensed harms the market for licensed uses; fair use exists only where no market exists",
+      "authority_grounding": "American Geophysical Union v. Texaco (2d Cir. 1994), pre-Google Books licensing market presumption",
+      "sibling_readings": [
+        "transformative_right_reading",
+        "narrow_defense_reading"
+      ],
+      "expected_structural_delta": "Extremely high ε for all uses where licensing mechanism exists; fair use collapses to de minimis or unmonetizable uses only"
+    },
+    {
+      "claim_id": "circuit_split_institutional_drift",
+      "human_readable": "Circuit Split as Institutional Drift Accumulator",
+      "structural_delta": "Absence of statutory revision or Supreme Court harmonization allows circuit-level reading divergence to persist",
+      "primary_observable": "Variance in fair use outcomes across circuits for factually similar cases; duration of unresolved splits",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "national_coordination_actors_requiring_legal_certainty",
+      "downstream_of": [],
+      "feeds_into": [
+        "transformative_right_reading",
+        "narrow_defense_reading",
+        "market_licensing_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-level structural axis about interpretive drift mechanism itself; informs omega on commitment system revision capacity"
+    },
+    {
+      "claim_id": "upstream_authorship_incentive",
+      "human_readable": "Upstream Authorship Incentive Effects (Doctrine's Silence on Creation)",
+      "structural_delta": "Fair use doctrine addresses downstream use constraints but does not measure whether expansive fair use increases upstream creative output",
+      "primary_observable": "Empirical studies correlating fair use breadth with authorship rates; absence of such studies in judicial reasoning",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical mountain outside legal interpretive layer; flagged in absence inventory but not directly contested in kernel readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "transformative_right_reading",
+      "kernel_id": "fair_use_statutory_exception",
+      "reading_id": "transformative_right_reading"
+    },
+    {
+      "claim_id": "narrow_defense_reading",
+      "kernel_id": "fair_use_statutory_exception",
+      "reading_id": "narrow_defense_reading"
+    },
+    {
+      "claim_id": "market_licensing_reading",
+      "kernel_id": "fair_use_statutory_exception",
+      "reading_id": "market_licensing_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "circuit_split_institutional_drift",
+      "structural_delta": "Circuit-level divergence persists without statutory or Supreme Court harmonization",
+      "hypothesis": "piton",
+      "deferral_reason": "Meta-level axis about drift mechanism itself; surfaces as omega on commitment system revision capacity rather than separate constraint story"
+    },
+    {
+      "claim_id": "upstream_authorship_incentive",
+      "structural_delta": "Doctrine silent on whether expansive fair use increases upstream creative output",
+      "hypothesis": "mountain",
+      "deferral_reason": "Empirical question outside interpretive contest; flagged as absence but not part of kernel reading structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_revision_mechanism_absence",
+      "description": "Is the absence of statutory revision since 1976 despite circuit splits a functioning commitment system (interpretive flexibility tolerated) or a partial drift system (revision institutionally blocked by rights-holder lobbying)? Affects whether readings represent licensed plurality or covert extraction.",
+      "source": "Absence Inventory + deferred axis circuit_split_institutional_drift"
+    },
+    {
+      "id": "omega_authorship_incentive_empirics",
+      "description": "Does expansive fair use increase or decrease upstream authorship? Doctrine assumes property maximalism incentivizes creation, but empirical literature is contested. If expansive fair use increases creation, narrow readings are net-extractive even for rights-holders.",
+      "source": "Absence Inventory + deferred axis upstream_authorship_incentive"
+    },
+    {
+      "id": "omega_ai_training_reclassification",
+      "description": "Do LLM training datasets constitute transformative use under the transformative_right_reading, or substitutive commercial use under narrow_defense_reading? Market_licensing_reading would collapse fair use entirely (training data always licensable). Ongoing litigation may force Supreme Court harmonization or Congressional revision.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - AI training as test case for reading stability"
+    },
+    {
+      "id": "omega_international_harmonization",
+      "description": "U.S. fair use doctrine is outlier vs. EU/UK fair dealing enumerated exceptions. Does trade pressure force convergence toward narrow_defense_reading (rights-holder harmonization) or does U.S. maintain expansive reading as competitive advantage for tech sector?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - international legal context absent from kernel analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected represent structural endpoints of interpretive spectrum. Market_licensing_reading is extreme case but institutionally live (Texaco precedent, licensing industry arguments). Deferred axes appropriately triaged to omega layer."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "17 U.S.C. § 107 four-factor fair use test - statutory provision enacted 1976, codifying prior common law doctrine with deliberately open-ended factors",
+    "authority_description": "Federal judiciary interprets kernel through case-by-case balancing; no administrative agency with binding interpretive authority; Supreme Court provides occasional harmonization but tolerates circuit splits",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "fair_use_statutory_exception",
+    "readings": [
+      {
+        "reading_id": "transformative_right_reading",
+        "commitment": "Fair use exists to enable transformative reuse and cultural production; courts must facilitate innovation",
+        "authority_grounding": "First Amendment values, progress clause purpose, Campbell transformativeness doctrine (Supreme Court 1994)",
+        "sibling_readings": [
+          "narrow_defense_reading",
+          "market_licensing_reading"
+        ],
+        "expected_structural_delta": "Low ε for transformative uses; high ε for substitutive uses; licensing markets not dispositive; burden of proof shared"
+      },
+      {
+        "reading_id": "narrow_defense_reading",
+        "commitment": "Copyright is property; fair use is affirmative defense narrowly construed to preserve market value",
+        "authority_grounding": "Property absolutism, market harm emphasis, pre-Campbell restrictive precedent, rights-holder lobbying narrative",
+        "sibling_readings": [
+          "transformative_right_reading",
+          "market_licensing_reading"
+        ],
+        "expected_structural_delta": "High ε for most unauthorized uses; commercial nature determinative; transformativeness underweighted; burden on defendant"
+      },
+      {
+        "reading_id": "market_licensing_reading",
+        "commitment": "Any use that could be licensed harms the market for licensed uses; fair use exists only where no market exists",
+        "authority_grounding": "American Geophysical Union v. Texaco (2d Cir. 1994), licensing industry expert testimony, circular market harm reasoning",
+        "sibling_readings": [
+          "transformative_right_reading",
+          "narrow_defense_reading"
+        ],
+        "expected_structural_delta": "Extremely high ε for all uses where licensing mechanism exists; fair use collapses to de minimis or unmonetizable uses only; doctrine becomes null in practice"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "transformative_right_reading",
+        "reading_b": "narrow_defense_reading",
+        "basis": "Transformative_right_reading treats fair use as structural entitlement grounded in First Amendment and progress clause (use is presumptively permissible if transformative); narrow_defense_reading treats copyright as property right with fair use as grudging exception (use is presumptively impermissible unless defendant proves all four factors). No single framework can hold both 'transformative use is constitutionally privileged' and 'unauthorized use is property trespass requiring affirmative defense.'"
+      },
+      {
+        "reading_a": "transformative_right_reading",
+        "reading_b": "market_licensing_reading",
+        "basis": "Transformative_right_reading excludes licensing market evidence when use is transformative (market harm irrelevant if purpose is transformative); market_licensing_reading makes licensing market dispositive (existence of potential license defeats fair use regardless of transformativeness). No single framework can hold both 'transformative purpose trumps market harm' and 'market harm from forgone licensing trumps transformative purpose.'"
+      },
+      {
+        "reading_a": "narrow_defense_reading",
+        "reading_b": "market_licensing_reading",
+        "basis": "These readings COEXIST rather than contradict - market_licensing_reading is an extreme instantiation of narrow_defense_reading's property logic. A single framework can hold both (property rights maximalism that treats fair use as narrow exception AND circular reasoning that any use creates licensable market). This pair does NOT meet the axiom contradiction test."
+      }
+    ]
+  },
+  "_seed_id": "fair_use_doctrine"
+}

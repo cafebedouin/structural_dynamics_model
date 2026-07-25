@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Migration Governance / Human Rights",
+  "family_id": "refugee_convention_obligations_2026",
+  "topic_summary": "Analysis of the 1951 Refugee Convention as a contested kernel where destination states and human rights institutions read the same treaty text differently, producing structurally distinct constraints on border enforcement. The restrictive reading narrows 'well-founded fear' and 'particular social group' definitions to maximize domestic insulation; the expansive reading treats the Convention as an unbendable humanitarian mandate with broad victim sets.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "1951 Refugee Convention (founding treaty text; Articles 1, 31, 33 as stabilized kernel)",
+      "UNHCR (UN Refugee Agency; interpretive authority via treaty mandate)",
+      "Destination States (sovereign signatories with border enforcement apparatus)",
+      "Asylum Seekers (persons claiming protection under Convention definitions)",
+      "Human Rights Courts (European Court of Human Rights, Inter-American Court; subsidiary interpretive authority)",
+      "Non-Refoulement Norm (Article 33 prohibition on return to persecution)"
+    ],
+    "key_tensions": [
+      "Sovereign border control discretion vs treaty-based protection obligations (states vs UNHCR/courts)",
+      "Narrow definitional gatekeeping vs broad humanitarian mandate (restrictive vs expansive readings)"
+    ],
+    "key_claims": [
+      "States argue 'well-founded fear' requires individualized persecution proof, excluding generalized violence victims",
+      "UNHCR Guidelines interpret 'particular social group' expansively to include gender-based persecution, LGBTQ+ status",
+      "Restrictive reading permits offshore processing and expedited removal as non-refoulement compliant",
+      "Expansive reading treats any interdiction preventing claim assessment as refoulement violation"
+    ],
+    "key_mechanisms": [
+      "Admissibility screening (states filter claims before substantive review; restrictive reading enables high rejection rates)",
+      "Offshore processing zones (Australia, Italy/Libya arrangements; restrictive reading permits extraterritorial interdiction)",
+      "UNHCR Handbook Guidelines (soft law interpretive authority; expansive reading uses as binding standard)"
+    ],
+    "key_absences": [
+      "Climate displacement not recognized in Convention text; neither reading extends protection to climate migrants despite growing numbers",
+      "Economic enforcement mechanisms absent; Convention relies on reputational compliance, no sanctions for violation"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1951 Refugee Convention text, particularly Articles 1 (refugee definition), 31 (non-penalization of irregular entry), and 33 (non-refoulement), stabilized as treaty law",
+    "authority_description": "UNHCR holds treaty-mandated interpretive authority (Article 35 supervisory function); national courts and regional human rights courts exercise subsidiary interpretive power; states claim residual sovereignty",
+    "drift_status": "partial",
+    "candidate_pattern": "Commitment System Pattern 2: Authority-Fixing Trap (interpretive layer controlled by UNHCR/courts absorbs drift; states cannot revise treaty but can refuse to ratify protocols or withdraw from regional human rights courts)",
+    "is_contested_kernel": true,
+    "kernel_id": "refugee_convention_text",
+    "readings": [
+      {
+        "reading_id": "restrictive_sovereignty_reading",
+        "commitment": "Convention as minimum floor permitting maximum sovereign discretion; 'well-founded fear' requires individualized persecution proof; 'particular social group' limited to immutable characteristics with state awareness",
+        "authority_grounding": "State sovereignty over borders; domestic administrative law traditions; national security imperatives",
+        "sibling_readings": [
+          "expansive_humanitarian_reading",
+          "procedural_integrity_reading"
+        ],
+        "expected_structural_delta": "Narrow victim set (individualized persecution only); high admissibility screening; offshore processing permissible; generalized violence and non-state persecution excluded"
+      },
+      {
+        "reading_id": "expansive_humanitarian_reading",
+        "commitment": "Convention as unbendable humanitarian mandate requiring broad protection; 'well-founded fear' includes generalized violence and non-state persecution; 'particular social group' encompasses gender, LGBTQ+, clan-based persecution",
+        "authority_grounding": "UNHCR Handbook as authoritative soft law; human rights treaty obligations; pro homine interpretation principle",
+        "sibling_readings": [
+          "restrictive_sovereignty_reading",
+          "procedural_integrity_reading"
+        ],
+        "expected_structural_delta": "Broad victim set (generalized violence, non-state actors, social groups); interdiction and offshore processing as refoulement violations; duty to assess all claims substantively"
+      },
+      {
+        "reading_id": "procedural_integrity_reading",
+        "commitment": "Convention as procedural safeguard requiring fair individualized assessment; protection threshold flexible but process integrity non-negotiable; outcome secondary to procedure",
+        "authority_grounding": "Administrative law principles; due process norms; separation of treaty interpretation (UNHCR) from domestic adjudication (courts)",
+        "sibling_readings": [
+          "restrictive_sovereignty_reading",
+          "expansive_humanitarian_reading"
+        ],
+        "expected_structural_delta": "Victim set depends on procedural access; offshore processing permissible only with full procedural guarantees; states may narrow definitions but not eliminate substantive review"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "restrictive_sovereignty_reading",
+        "reading_b": "expansive_humanitarian_reading",
+        "basis": "Restrictive reading's axiom that states retain residual sovereignty to define protection scope cannot coexist with expansive reading's axiom that the Convention imposes absolute humanitarian obligations independent of state consent. A framework accepting the latter axiom must reject the former as categorically false."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "restrictive_sovereignty_reading",
+      "human_readable": "Restrictive Sovereignty Reading (Narrow Definitions, Maximum State Discretion)",
+      "structural_delta": "Convention interpreted as minimum floor permitting states to narrow 'well-founded fear' and 'particular social group' definitions, maximizing border control discretion",
+      "primary_observable": "Asylum recognition rates; admissibility screening rejection rates; use of safe third country agreements and offshore processing",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "destination_state_immigration_bureaucracies",
+      "victim": "asylum_seekers_generalized_violence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with highest suppression of alternatives; restrictive reading produces narrow victim set"
+    },
+    {
+      "claim_id": "expansive_humanitarian_reading",
+      "human_readable": "Expansive Humanitarian Reading (Broad Mandate, Minimal State Discretion)",
+      "structural_delta": "Convention interpreted as unbendable humanitarian mandate requiring broad victim set inclusion, treating interdiction and offshore processing as refoulement violations",
+      "primary_observable": "UNHCR Handbook citation frequency in national courts; human rights court rulings on interdiction; NGO litigation success rates",
+      "epsilon_bin": "high",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposite reading with different beneficiary/victim structure; core axis for kernel contest"
+    },
+    {
+      "claim_id": "procedural_integrity_reading",
+      "human_readable": "Procedural Integrity Reading (Process Over Outcome)",
+      "structural_delta": "Convention as procedural safeguard requiring fair individualized assessment regardless of substantive protection threshold; outcome flexibility conditional on process integrity",
+      "primary_observable": "Presence of legal representation guarantees; individual hearing requirements; administrative review mechanisms",
+      "epsilon_bin": "moderate",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Hybrid reading with independent structural logic; captures procedural dimension absent from sovereignty/humanitarian binary"
+    },
+    {
+      "claim_id": "enforcement_vacuum",
+      "human_readable": "Enforcement Vacuum (Reputational Compliance Only)",
+      "structural_delta": "Treaty lacks economic sanctions or withdrawal penalties; compliance depends on reputational costs and domestic legal cultures",
+      "primary_observable": "State withdrawal threats (Australia, Hungary); UNHCR budget dependency on voluntary contributions; lack of ICJ enforcement jurisdiction",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "restrictive_sovereignty_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream structural condition enabling restrictive reading but not itself a reading of the kernel"
+    },
+    {
+      "claim_id": "climate_exclusion",
+      "human_readable": "Climate Displacement Exclusion (Static 1951 Definition)",
+      "structural_delta": "Convention text predates climate migration; all readings exclude climate-displaced persons despite growing numbers",
+      "primary_observable": "Failed attempts to expand 'refugee' definition via protocol; climate migrants channeled to complementary protection frameworks",
+      "epsilon_bin": "very_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural gap shared by all readings; not itself a reading contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "restrictive_sovereignty_reading",
+      "kernel_id": "refugee_convention_text",
+      "reading_id": "restrictive_sovereignty_reading"
+    },
+    {
+      "claim_id": "expansive_humanitarian_reading",
+      "kernel_id": "refugee_convention_text",
+      "reading_id": "expansive_humanitarian_reading"
+    },
+    {
+      "claim_id": "procedural_integrity_reading",
+      "kernel_id": "refugee_convention_text",
+      "reading_id": "procedural_integrity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_vacuum",
+      "structural_delta": "Treaty lacks economic sanctions; compliance via reputational costs only",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream structural condition enabling restrictive reading but not itself a reading of the kernel; omega material on why restrictive reading faces no enforcement cost"
+    },
+    {
+      "claim_id": "climate_exclusion",
+      "structural_delta": "All readings exclude climate-displaced persons; 1951 definition predates climate migration",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural gap shared by all readings; not a kernel contest itself; omega material on Convention's static scope"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_enforcement_vacuum",
+      "description": "Does the enforcement vacuum (deferred axis) make the restrictive reading a Piton (atrophied treaty obligation) rather than a Tangled Rope? Without sanctions, state non-compliance may be structural default rather than extractive deviation.",
+      "source": "Deferred axis enforcement_vacuum + F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_climate_protocol",
+      "description": "Would a climate displacement protocol collapse the kernel contest (all parties accept expanded scope) or spawn a new contest (restrictive reading applies narrow climate definitions)? Structural gap may be irresolvable within current treaty framework.",
+      "source": "Deferred axis climate_exclusion + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_regional_fragmentation",
+      "description": "Does the restrictive reading's dominance in domestic courts but expansive reading's dominance in regional human rights courts (ECtHR, IACtHR) create a Scaffold (parallel authority structures) rather than a Rope/Tangled Rope binary? Jurisdictional layering may be the actual constraint topology.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_procedural_hybrid",
+      "description": "Is the procedural integrity reading a genuine third reading or a compromise position that collapses under pressure? If states can narrow definitions while maintaining formal procedures, victim set may converge with restrictive reading.",
+      "source": "§3.1 Independence Testing + §1.3-K coherence check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: restrictive_sovereignty_reading classified as tangled_rope but enforcement vacuum may reclassify it as piton (structural default rather than extractive deviation). Generated omega_enforcement_vacuum to bound this uncertainty."
+  },
+  "_seed_id": "refugee_convention_state_interpretation"
+}

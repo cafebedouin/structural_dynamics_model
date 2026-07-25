@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Organizational Safety / Technology Governance / Regulatory Compliance",
+  "family_id": "rogers_commission_safety_mandate",
+  "topic_summary": "Analysis of the Rogers Commission Report as a contested kernel where engineers read the findings as an absolute technocratic safety threshold requiring launch suspension until O-ring redesign, while NASA administrative management reads the same document as a performative compliance narrative that permits continued launch operations with risk acceptance protocols. The collision generates an internal authority gap over who legitimately interprets 'safe to fly.'",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Rogers Commission (presidential investigative body; author of fixed kernel text)",
+      "NASA Engineering Staff (Thiokol engineers, Marshall engineers; technical authority claimants)",
+      "NASA Administrative Management (program managers, headquarters; schedule authority claimants)",
+      "Space Shuttle Program (operational system under dual interpretation)",
+      "O-ring Joint System (technical artifact whose risk status is contested)"
+    ],
+    "key_tensions": [
+      "Absolute safety threshold vs risk acceptance framework (engineers vs management reading of same findings)",
+      "Technical authority vs programmatic authority (who legitimately interprets 'recommendations')"
+    ],
+    "key_mechanisms": [
+      "Flight Readiness Review process (formal gate that both readings claim to satisfy)",
+      "Waiver system (mechanism by which management reading permits continued flight)",
+      "Normalized deviation (cultural mechanism by which risk thresholds drift without formal revision)"
+    ],
+    "key_absences": [
+      "Formal authority hierarchy for interpreting Commission findings (who adjudicates competing readings)",
+      "Revision mechanism for kernel itself (Commission report treated as immutable despite operational learning)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Rogers Commission Report findings and recommendations, particularly the characterization of O-ring erosion as a critical safety issue requiring redesign before return to flight",
+    "authority_description": "Legitimacy grounded in presidential mandate and external expert review, but interpretive authority over implementation unspecified between technical and programmatic chains of command",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "rogers_commission_findings",
+    "readings": [
+      {
+        "reading_id": "engineering_absolute_threshold",
+        "commitment": "Rogers findings establish a technical safety boundary: flight operations must cease until O-ring redesign certified",
+        "authority_grounding": "technical expertise; Commission's reliance on engineering testimony as factual basis",
+        "sibling_readings": [
+          "management_compliance_narrative",
+          "actuarial_risk_acceptance"
+        ],
+        "expected_structural_delta": "High suppression of launch operations; engineers hold veto authority over Flight Readiness Reviews; beneficiary: flight crew safety; victim: launch cadence"
+      },
+      {
+        "reading_id": "management_compliance_narrative",
+        "commitment": "Rogers findings establish a compliance process: demonstrate documented risk awareness and mitigation efforts sufficient to proceed",
+        "authority_grounding": "programmatic authority; Commission's recommendations as guidelines requiring operational judgment",
+        "sibling_readings": [
+          "engineering_absolute_threshold",
+          "actuarial_risk_acceptance"
+        ],
+        "expected_structural_delta": "Moderate constraint on operations; management retains launch authority with documented rationale; beneficiary: program continuity; victim: engineering veto power"
+      },
+      {
+        "reading_id": "actuarial_risk_acceptance",
+        "commitment": "Rogers findings establish a risk quantification requirement: acceptable to fly if failure probability documented and accepted by informed decision-makers",
+        "authority_grounding": "rational choice framework; Commission's implicit acceptance that zero-risk spaceflight impossible",
+        "sibling_readings": [
+          "engineering_absolute_threshold",
+          "management_compliance_narrative"
+        ],
+        "expected_structural_delta": "Flight operations continue with probability bounds; actuarial framing; beneficiary: mission planners; victim: categorical safety norms"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "engineering_absolute_threshold",
+        "reading_b": "management_compliance_narrative",
+        "basis": "Absolute threshold reading holds that no operational judgment can override technical inadequacy (categorical imperative), while compliance narrative reading holds that documented process satisfies safety obligation regardless of residual risk (procedural adequacy). No single framework accepts both: either technical findings are dispositive or they are inputs to managerial discretion."
+      },
+      {
+        "reading_a": "engineering_absolute_threshold",
+        "reading_b": "actuarial_risk_acceptance",
+        "basis": "Absolute threshold reading rejects probabilistic trade-offs when critical system known defective (deontological), while actuarial reading holds all flight operations are probability distributions requiring informed acceptance (consequentialist). No framework holds both: either known defects prohibit flight categorically or all risks reduce to acceptable probability bounds."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "engineering_absolute_threshold",
+      "human_readable": "Engineering Absolute Threshold Reading",
+      "structural_delta": "Rogers findings interpreted as categorical prohibition on flight until O-ring redesign certified; technical authority holds veto over programmatic schedule",
+      "primary_observable": "Frequency of engineering-initiated launch holds; ratio of engineering vs management sign-offs in Flight Readiness Reviews post-Rogers",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "flight_crew_safety",
+      "victim": "launch_cadence_targets",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three kernel readings; highest suppression effect; establishes baseline constraint"
+    },
+    {
+      "claim_id": "management_compliance_narrative",
+      "human_readable": "Management Compliance Narrative Reading",
+      "structural_delta": "Rogers findings interpreted as process mandate: documented risk awareness and mitigation efforts sufficient; programmatic authority retains launch discretion",
+      "primary_observable": "Presence of risk acceptance waivers in flight approval documentation; management override frequency in readiness reviews",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "program_continuity",
+      "victim": "engineering_veto_power",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second kernel reading; moderate constraint; operationally dominant interpretation in historical record"
+    },
+    {
+      "claim_id": "actuarial_risk_acceptance",
+      "human_readable": "Actuarial Risk Acceptance Reading",
+      "structural_delta": "Rogers findings interpreted as risk quantification mandate: acceptable to fly if failure probability documented and accepted by informed decision-makers",
+      "primary_observable": "Presence of probabilistic risk assessments in flight approval process; explicit numerical failure probability thresholds",
+      "epsilon_bin": "low",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "mission_planners",
+      "victim": "categorical_safety_norms",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third kernel reading; lowest constraint but captures rational-choice legitimation framework"
+    },
+    {
+      "claim_id": "organizational_memory_decay",
+      "human_readable": "Organizational Memory Decay (Personnel Turnover)",
+      "structural_delta": "Loss of tacit knowledge and cultural memory of pre-Challenger risk normalization as personnel rotate",
+      "primary_observable": "Average tenure of Flight Readiness Review participants; frequency of Challenger case study training",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "management_compliance_narrative"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects drift rate but not kernel reading structure itself"
+    },
+    {
+      "claim_id": "external_oversight_atrophy",
+      "human_readable": "External Oversight Atrophy (Congressional/Media Attention Decay)",
+      "structural_delta": "Decline in external accountability pressure as Challenger recedes from public memory",
+      "primary_observable": "Frequency of Congressional hearings on shuttle safety; media coverage volume of mission risks",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "management_compliance_narrative"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: contextual pressure but not a competing reading of the kernel itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "engineering_absolute_threshold",
+      "kernel_id": "rogers_commission_findings",
+      "reading_id": "engineering_absolute_threshold"
+    },
+    {
+      "claim_id": "management_compliance_narrative",
+      "kernel_id": "rogers_commission_findings",
+      "reading_id": "management_compliance_narrative"
+    },
+    {
+      "claim_id": "actuarial_risk_acceptance",
+      "kernel_id": "rogers_commission_findings",
+      "reading_id": "actuarial_risk_acceptance"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "organizational_memory_decay",
+      "structural_delta": "Loss of tacit knowledge and cultural memory via personnel turnover",
+      "hypothesis": "piton",
+      "deferral_reason": "Affects drift rate but not kernel reading structure; captured in drift_status assessment"
+    },
+    {
+      "claim_id": "external_oversight_atrophy",
+      "structural_delta": "Decline in Congressional/media accountability pressure over time",
+      "hypothesis": "rope",
+      "deferral_reason": "Contextual pressure variable; does not constitute a competing reading of Commission findings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_authority_gap",
+      "description": "Who holds legitimate interpretive authority when readings conflict? Rogers Commission did not specify whether technical findings are dispositive or advisory. The authority gap itself may be the kernel's structurally generative feature—permitting both readings to claim legitimacy.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): formal authority hierarchy for kernel interpretation"
+    },
+    {
+      "id": "omega_columbia_replication",
+      "description": "Did Columbia disaster (2003) instantiate the same kernel contest? If management_compliance_narrative reading dominated both accidents, the pattern is the kernel's stable attractor. If readings shifted, kernel may self-revise through catastrophic feedback.",
+      "source": "Historical continuity check"
+    },
+    {
+      "id": "omega_numerical_threshold",
+      "description": "Actuarial reading requires explicit failure probability threshold (e.g., 1/100 acceptable?). Rogers Commission provided no such number. Is the absence deliberate (permits flexibility) or an oversight (generates interpretive void)? Affects whether actuarial reading is legitimate kernel interpretation or post-hoc rationalization.",
+      "source": "Dark Matter Probe 1 (Operational Medium): probabilistic risk assessment framework assumed but not mandated"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean scan. Kernel structure confirmed: three readings generate genuinely different constraints (engineering veto vs procedural compliance vs actuarial acceptance). Axiom contradictions validated: no single coherent framework holds both absolute threshold and compliance narrative simultaneously. Authority gap (omega_authority_gap) is the kernel's structurally generative feature, not a defect."
+  },
+  "_seed_id": "rogers_commission_institutional_analysis"
+}

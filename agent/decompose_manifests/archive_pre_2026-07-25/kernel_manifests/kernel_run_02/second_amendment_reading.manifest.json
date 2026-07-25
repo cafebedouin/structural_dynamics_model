@@ -1,0 +1,261 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Federalism",
+  "family_id": "second_amendment_individual_collective_2024",
+  "topic_summary": "Analysis of the Second Amendment's contested interpretation as either an individual right to firearms ownership or a collective right tied to militia service. The identical constitutional text generates structurally different constraints depending on whether the prefatory militia clause limits the operative clause or merely announces a purpose. Heller (2008) adopted the individual reading 5-4, but the interpretive contest remains structurally live.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Second Amendment text (26 words with prefatory and operative clauses)",
+      "Supreme Court majority in Heller (Scalia, Roberts, Kennedy, Thomas, Alito)",
+      "Supreme Court dissenters in Heller (Stevens, Souter, Ginsburg, Breyer)",
+      "State militias (institutional structure referenced in prefatory clause)",
+      "Individual gun owners (beneficiaries under individual-right reading)",
+      "Federal government (potential tyrannical actor in Anti-Federalist framing)"
+    ],
+    "key_tensions": [
+      "Prefatory clause as limiting vs. prefatory clause as purpose-announcing (grammatical structure contest)",
+      "Individual right to self-defense vs. collective right to resist tyranny (beneficiary structure)",
+      "Standing army threat vs. individual security threat (historical context framing)"
+    ],
+    "key_mechanisms": [
+      "Judicial review via Supreme Court interpretation (Heller as authoritative reading)",
+      "Textual originalism vs. structural purposivism (interpretive methodology contest)"
+    ],
+    "key_absences": [
+      "Third reading: hybrid right (individual possession conditioned on militia-readiness)",
+      "Enforcement mechanism for 'well regulated' if individual reading prevails"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Second Amendment's 26-word text stabilizes a commitment to arms-bearing rights, but the relationship between its prefatory militia clause and operative 'right of the people' clause is grammatically ambiguous in modern English",
+    "authority_description": "Supreme Court holds interpretive authority via judicial review; originalist textualism (Scalia) vs. structural purposivism (Stevens) compete for methodological legitimacy",
+    "drift_status": "partial",
+    "candidate_pattern": "constitutional_ambiguity_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "second_amendment_text",
+    "readings": [
+      {
+        "reading_id": "individual_right_reading",
+        "commitment": "The operative clause 'right of the people to keep and bear Arms' grants an individual right; the prefatory militia clause announces a purpose but does not limit scope",
+        "authority_grounding": "Originalist textualism (Heller majority): operative clause is paramount; prefatory clauses in 18th-century grammar do not restrict operative clauses",
+        "sibling_readings": [
+          "collective_right_reading",
+          "hybrid_militia_readiness_reading"
+        ],
+        "expected_structural_delta": "Individual gun owners enter beneficiary set; federal/state firearms regulations face strict scrutiny; self-defense becomes constitutional anchor; militia clause becomes non-operative"
+      },
+      {
+        "reading_id": "collective_right_reading",
+        "commitment": "The prefatory militia clause limits the operative clause to a collective right of states to maintain armed militias; individual possession is protected only in militia context",
+        "authority_grounding": "Structural purposivism (Stevens dissent): prefatory clause gives essential meaning; 'well regulated Militia' and 'security of a free State' define the right's scope",
+        "sibling_readings": [
+          "individual_right_reading",
+          "hybrid_militia_readiness_reading"
+        ],
+        "expected_structural_delta": "State militias (National Guard) enter beneficiary set; individual gun owners outside militia service not constitutionally protected; federal firearms regulation faces rational basis review; tyranny-resistance becomes constitutional anchor"
+      },
+      {
+        "reading_id": "hybrid_militia_readiness_reading",
+        "commitment": "Individual right to possess arms exists but is conditioned on maintaining militia-readiness; 'well regulated' imposes affirmative obligations on rights-holders",
+        "authority_grounding": "Structural synthesis: both clauses operative; 'well regulated' modifies the nature of the individual right rather than eliminating it",
+        "sibling_readings": [
+          "individual_right_reading",
+          "collective_right_reading"
+        ],
+        "expected_structural_delta": "Individual gun owners conditionally in beneficiary set; training/registration requirements constitutionally permissible; both self-defense and collective security are constitutional anchors; 'well regulated' becomes enforceable standard"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "individual_right_reading",
+        "reading_b": "collective_right_reading",
+        "basis": "Individual reading holds that the prefatory clause cannot limit the operative clause (textualist axiom: prefatory clauses announce purpose only). Collective reading holds that the prefatory clause gives essential meaning and limits scope (purposivist axiom: constitutional text must be read as integrated whole). No single interpretive framework can hold both axioms simultaneously—one must be false if the other is true."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "individual_right_reading",
+      "human_readable": "Individual Right Reading (Operative Clause Primacy)",
+      "structural_delta": "Constitutional protection extends to individual firearms possession for self-defense independent of militia service",
+      "primary_observable": "Heller doctrine application in circuit courts; strict scrutiny standard for firearms regulations; individual standing in Second Amendment cases",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_gun_owners",
+      "victim": "gun_control_advocates",
+      "downstream_of": [
+        "originalist_textualism_method"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; downstream synthesis of interpretive method; currently authoritative reading post-Heller"
+    },
+    {
+      "claim_id": "collective_right_reading",
+      "human_readable": "Collective Right Reading (Prefatory Clause Primacy)",
+      "structural_delta": "Constitutional protection limited to state militia context; individual possession outside militia service not constitutionally protected",
+      "primary_observable": "Pre-Heller jurisprudence (Miller 1939); Stevens dissent reasoning; state militia (National Guard) structure",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_militias",
+      "victim": "individual_gun_owners_outside_militia",
+      "downstream_of": [
+        "structural_purposivism_method"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Equal centrality to individual reading; structurally contradictory beneficiary set; pre-Heller authoritative reading"
+    },
+    {
+      "claim_id": "hybrid_militia_readiness_reading",
+      "human_readable": "Hybrid Militia-Readiness Reading (Both Clauses Operative)",
+      "structural_delta": "Individual right exists but conditioned on militia-readiness obligations; 'well regulated' becomes enforceable standard",
+      "primary_observable": "Swiss militia model; colonial-era militia training requirements; modern proposals for conditional licensing",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "trained_gun_owners",
+      "victim": "untrained_gun_owners",
+      "downstream_of": [
+        "originalist_textualism_method",
+        "structural_purposivism_method"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality; not currently instantiated in jurisprudence; speculative synthesis"
+    },
+    {
+      "claim_id": "originalist_textualism_method",
+      "human_readable": "Originalist Textualism (18th-Century Grammar as Constraint)",
+      "structural_delta": "Constitutional meaning fixed at ratification; prefatory clauses in 18th-century usage announce purpose but do not limit operative clauses",
+      "primary_observable": "Scalia's Heller opinion linguistic analysis; corpus linguistics studies of Founding-era grammar",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "individual_right_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream methodological constraint; feeds individual reading; different observable than structural purposivism"
+    },
+    {
+      "claim_id": "structural_purposivism_method",
+      "human_readable": "Structural Purposivism (Integrated Text as Constraint)",
+      "structural_delta": "Constitutional meaning derived from structural integration of all clauses; prefatory clause gives essential meaning to operative clause",
+      "primary_observable": "Stevens dissent reasoning; pre-Heller scholarly consensus; holistic textual interpretation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collective_right_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream methodological constraint but lower structural distinctiveness than originalist textualism in current jurisprudence"
+    },
+    {
+      "claim_id": "standing_army_threat_framing",
+      "human_readable": "Standing Army Threat Framing (Anti-Federalist Context)",
+      "structural_delta": "Historical context frames Second Amendment as response to federal military tyranny threat rather than individual criminal threat",
+      "primary_observable": "Anti-Federalist Papers; Federalist 46; colonial militia history",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collective_right_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical context mountain but lower centrality than methodological axes; captured in collective reading's authority grounding"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "individual_right_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "individual_right_reading"
+    },
+    {
+      "claim_id": "collective_right_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "collective_right_reading"
+    },
+    {
+      "claim_id": "originalist_textualism_method",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "originalist_textualism_method"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "hybrid_militia_readiness_reading",
+      "structural_delta": "Individual right conditioned on militia-readiness obligations",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Not currently instantiated in jurisprudence; speculative synthesis of contradictory readings; lower centrality than selected readings"
+    },
+    {
+      "claim_id": "structural_purposivism_method",
+      "structural_delta": "Constitutional meaning from integrated text; prefatory clause gives essential meaning",
+      "hypothesis": "rope",
+      "deferral_reason": "Upstream methodological constraint but lower structural distinctiveness than originalist textualism in post-Heller jurisprudence; captured in collective reading's authority grounding"
+    },
+    {
+      "claim_id": "standing_army_threat_framing",
+      "structural_delta": "Historical framing as response to federal military tyranny threat",
+      "hypothesis": "mountain",
+      "deferral_reason": "Historical context mountain with lower centrality than methodological axes; Anti-Federalist framing captured in collective reading's expected structural delta"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_hybrid_reading_viability",
+      "description": "Is the hybrid militia-readiness reading a genuine third constraint or a political compromise that collapses under scrutiny? Swiss model suggests institutional viability, but no U.S. jurisprudential instantiation exists. If viable, it would resolve the axiom contradiction by rejecting both textualist and purposivist axioms in favor of a third interpretive framework.",
+      "source": "Deferred axis hybrid_militia_readiness_reading + absence inventory (enforcement mechanism for 'well regulated')"
+    },
+    {
+      "id": "omega_grammatical_determinacy",
+      "description": "Does 18th-century grammar determinately resolve the clause relationship, or is the originalist textualist claim itself a tangled rope? Corpus linguistics studies may show usage variation rather than fixed convention. If grammar is indeterminate, both readings rest on non-textual foundations.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): originalist textualism benefits individual-right advocates by claiming grammatical objectivity"
+    },
+    {
+      "id": "omega_incorporation_doctrine_dependency",
+      "description": "Both readings assume Second Amendment applies to states via Fourteenth Amendment incorporation (McDonald 2010). If incorporation doctrine is contested, the individual vs. collective debate may be downstream of a more fundamental federalism question about whether the Bill of Rights constrains states at all.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): incorporation doctrine not addressed in extraction"
+    },
+    {
+      "id": "omega_beneficiary_reversal",
+      "description": "Under individual reading, gun manufacturers enter beneficiary set (not just individual owners). Under collective reading, state governments enter beneficiary set (not just militias). Both readings may obscure institutional beneficiaries by framing debate as individual liberty vs. collective security.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): institutional actors not surfaced in primary beneficiary classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified two axiom-contradictory readings with structurally different beneficiary sets. Hybrid reading deferred as speculative scaffold. Methodological upstream (originalist textualism) selected to show interpretive method as constraint rather than neutral tool."
+  },
+  "_seed_id": "second_amendment_reading"
+}

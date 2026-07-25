@@ -1,0 +1,204 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Humanitarian Law / Law of Armed Conflict",
+  "family_id": "geneva_combatant_status_2026",
+  "topic_summary": "Analysis of combatant status definitions under the Geneva Conventions and Additional Protocols, examining how different interpretative frameworks produce divergent constraints on detention, targeting, and treatment of fighters in conventional versus asymmetric warfare contexts.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Geneva Conventions 1949 (treaty framework establishing IHL protections)",
+      "Additional Protocol I 1977 (extending protections to wars of national liberation)",
+      "Additional Protocol II 1977 (governing non-international armed conflicts)",
+      "State military forces (conventional armies with clear command structure)",
+      "Non-state armed groups (insurgents, liberation movements, organized militias)",
+      "Unlawful combatants / unprivileged belligerents (category disputed by some states)"
+    ],
+    "key_tensions": [
+      "State sovereignty vs insurgent legitimacy (who gets POW status and immunity from prosecution)",
+      "Distinction principle vs civilian immunity (how combatant definition affects targeting rules)",
+      "Treaty universality vs selective implementation (state vs non-state actor obligations)"
+    ],
+    "key_mechanisms": [
+      "Article 4 POW status criteria (fixed characteristics: command, insignia, arms openly, laws of war)",
+      "Common Article 3 baseline protections (minimum standards for all parties in non-international conflicts)"
+    ],
+    "key_absences": [
+      "Explicit status for cyber combatants or autonomous weapon operators",
+      "Resolution mechanism for contested status determinations in occupation scenarios"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "state_centric_reading",
+      "human_readable": "State-Centric Reading (Traditional Combatant Privilege)",
+      "structural_delta": "Combatant status granted only to state-organized forces meeting Article 4 criteria; non-state fighters categorically excluded from POW protections",
+      "primary_observable": "State practice in detention policy; domestic prosecution rates of captured insurgents",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "conventional_state_militaries",
+      "victim": "non_state_fighters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading with highest structural extractiveness; establishes baseline constraint against which other readings diverge"
+    },
+    {
+      "claim_id": "national_liberation_reading",
+      "human_readable": "National Liberation Reading (Expanded Combatant Privilege)",
+      "structural_delta": "Combatant status extended to organized armed groups fighting colonial domination, foreign occupation, or racist regimes under AP I Article 1(4)",
+      "primary_observable": "AP I ratification patterns; state recognition of liberation movements as legitimate belligerents",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "anti_colonial_movements",
+      "victim": "occupying_powers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct reading with different beneficiary/victim topology and different treaty substrate (AP I)"
+    },
+    {
+      "claim_id": "functional_protection_reading",
+      "human_readable": "Functional Protection Reading (Status-Independent Protections)",
+      "structural_delta": "All detained persons receive Common Article 3 protections regardless of combatant status; detention and trial rights delinked from POW classification",
+      "primary_observable": "Judicial interpretations (ICJ, ICTY); human rights treaty application in armed conflict",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "all_detained_persons",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position representing humanitarian minimum distinct from both state-centric and liberation frameworks"
+    },
+    {
+      "claim_id": "unlawful_combatant_reading",
+      "human_readable": "Unlawful Combatant Reading (Status Denial Framework)",
+      "structural_delta": "Third category below civilian and combatant; fighters not meeting Article 4 criteria receive neither POW protections nor civilian immunities",
+      "primary_observable": "U.S. detention practice post-9/11; Guantanamo legal framework",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "detaining_states",
+      "victim": "detained_non_state_fighters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps structurally with state_centric_reading victim topology; adds extractiveness but not structural novelty"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "state_centric_reading",
+      "kernel_id": "combatant_status_definition",
+      "reading_id": "state_centric_reading"
+    },
+    {
+      "claim_id": "national_liberation_reading",
+      "kernel_id": "combatant_status_definition",
+      "reading_id": "national_liberation_reading"
+    },
+    {
+      "claim_id": "functional_protection_reading",
+      "kernel_id": "combatant_status_definition",
+      "reading_id": "functional_protection_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "unlawful_combatant_reading",
+      "structural_delta": "Third status category denying both POW and civilian protections",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural overlap with state_centric_reading victim topology; represents intensification rather than independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_cyber_combatant_status",
+      "description": "Geneva framework silent on cyber operators and autonomous systems. Do remote drone operators qualify as combatants? Does AI targeting software? Absence leaves constraint undefined for emerging warfare modes.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_determination_mechanism",
+      "description": "No neutral arbiter specified when parties contest combatant status. ICRC opinion is advisory; domestic courts defer to executive. Gap enables extractive framing without accountability.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_ap_i_non_ratification",
+      "description": "Major powers (U.S., Israel, India, Pakistan, Iran, Turkey) have not ratified AP I. National liberation reading has formal treaty status but limited binding authority. Constraint exists legally but not operationally for non-parties.",
+      "source": "Extraction phase recognition of AP I ratification gap"
+    },
+    {
+      "id": "omega_reading_coexistence",
+      "description": "Three readings selected for generation coexist in international practice (state_centric in conventional wars, national_liberation in decolonization conflicts, functional_protection as judicial minimum). This is licensed plurality, not collapse. No single state applies all three consistently, but all three are live interpretive positions.",
+      "source": "§3 Independence Testing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Domain is well within model training coverage (IHL is extensively documented). Three readings are structurally independent with different beneficiary/victim topologies and different ε profiles."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Geneva Conventions Articles 4 and 5 on combatant status criteria (command structure, fixed distinctive sign, carrying arms openly, conducting operations per laws of war)",
+    "authority_description": "Treaty text interpreted by state practice, ICRC commentary, and international tribunals; no centralized enforcement",
+    "drift_status": "partial",
+    "candidate_pattern": "Authority Capture (state parties control interpretation via selective ratification and domestic implementation)",
+    "is_contested_kernel": true,
+    "kernel_id": "combatant_status_definition",
+    "readings": [
+      {
+        "reading_id": "state_centric_reading",
+        "commitment": "Combatant status requires formal state military organization meeting Article 4 criteria; non-state actors categorically excluded from POW protections",
+        "authority_grounding": "Traditional state-sovereignty interpretation; pre-AP I treaty framework",
+        "sibling_readings": [
+          "national_liberation_reading",
+          "functional_protection_reading"
+        ],
+        "expected_structural_delta": "High ε for non-state fighters (no POW immunity, subject to prosecution under domestic law); low ε for state militaries (full Geneva protections)"
+      },
+      {
+        "reading_id": "national_liberation_reading",
+        "commitment": "Combatant status extends to non-state armed groups fighting colonial/occupation/racist regimes under AP I Article 1(4) if organized and command-controlled",
+        "authority_grounding": "Additional Protocol I (1977) treaty text; ICRC interpretation; decolonization-era state practice",
+        "sibling_readings": [
+          "state_centric_reading",
+          "functional_protection_reading"
+        ],
+        "expected_structural_delta": "Mod ε for liberation movements (conditional POW status if criteria met); high ε for occupying powers (obligation to grant combatant immunity to insurgents)"
+      },
+      {
+        "reading_id": "functional_protection_reading",
+        "commitment": "All detained persons receive Common Article 3 minimum protections regardless of combatant status; humane treatment and fair trial rights are status-independent",
+        "authority_grounding": "Judicial interpretation (ICJ, ICTY); human rights law convergence with IHL; ICRC customary law study",
+        "sibling_readings": [
+          "state_centric_reading",
+          "national_liberation_reading"
+        ],
+        "expected_structural_delta": "Low ε for all detainees (baseline floor of protections applies universally); removes status determination as precondition for humane treatment"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "state_centric_reading",
+        "reading_b": "national_liberation_reading",
+        "basis": "State-centric axiom holds that combatant privilege flows exclusively from state authorization; national liberation axiom holds that combatant privilege can flow from resistance to illegitimate state authority. No coherent framework grants both: either state authority is necessary for combatant status (state-centric) or resistance to state authority can ground combatant status (liberation). These are mutually exclusive foundational commitments about the source of legitimate violence."
+      }
+    ]
+  },
+  "_seed_id": "geneva_conventions_combatant_status"
+}

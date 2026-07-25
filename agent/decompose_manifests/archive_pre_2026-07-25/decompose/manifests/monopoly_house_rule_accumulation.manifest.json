@@ -1,0 +1,207 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Game Theory / Social Coordination / Institutional Design",
+  "family_id": "monopoly_rules_contest_2026",
+  "topic_summary": "Analysis of the persistent divergence between Monopoly's official rulebook (designed as a fast, brutal rent-extraction demonstration) and widespread 'house rules' (Free Parking jackpots, no auctions, anti-monopoly deals) that fundamentally alter game duration, win conditions, and social dynamics. The official rules constitute a fixed kernel read in two incompatible ways: as authoritative design intent versus as a harsh framework requiring social correction.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Parker Brothers/Hasbro Official Rulebook (immutable published text, 1935-present)",
+      "House Rules Practitioners (majority of casual players across generations)",
+      "Lizzie Magie's Original Landlord's Game (1904 predecessor with explicit anti-monopolist pedagogy)",
+      "Tournament/Competitive Players (strict rulebook adherents)",
+      "Free Parking Jackpot Rule (most widespread deviation: tax/fee accumulation)",
+      "Auction Mechanism (official rule routinely ignored in house play)"
+    ],
+    "key_tensions": [
+      "Rulebook authority vs. community practice legitimacy (tournament vs. family game night)",
+      "Speed/brutality vs. social tolerance (2-hour design vs. 4+ hour house games)",
+      "Designer intent vs. player experience (pedagogical extraction demo vs. fun family activity)"
+    ],
+    "mechanisms": [
+      "Auction Bypass: Official rule requires auctioning unowned properties when declined; house rules skip auctions, slowing property acquisition and extending game length",
+      "Free Parking Jackpot: Unofficial rule pools tax/fee payments for windfall redistribution, creating liquidity injection counter to extraction design",
+      "Anti-Monopoly Deals: Informal norms against completing property sets or charging full rent to avoid elimination, preventing the endgame the rulebook mandates"
+    ],
+    "absences": [
+      "No official acknowledgment of house rules in rulebook despite 90+ years of documented deviation",
+      "Absence of difficulty scaling or social friction mitigation in official rules despite known player frustration with elimination mechanics"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "extraction_demo_reading",
+      "human_readable": "Extraction Demo Reading (Rulebook as Pedagogical Truth)",
+      "structural_delta": "The official rules instantiate a constraint where winner-take-all rent extraction is the structural inevitability, with no mechanisms for redistribution or mercy. Game ends when all but one player are bankrupt. The rulebook is read as authoritative design intent: a teaching tool demonstrating how monopoly capitalism concentrates wealth through compounding advantage.",
+      "primary_observable": "Game duration under strict rules (median 60-90 minutes); player elimination rate; property auction usage; winner's final cash/asset ratio to second place",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "eliminated_players",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; instantiates high-extraction constraint where rulebook authority is absolute and elimination is structurally necessary outcome"
+    },
+    {
+      "claim_id": "social_scaffold_reading",
+      "human_readable": "Social Scaffold Reading (House Rules as Necessary Correction)",
+      "structural_delta": "House rules instantiate a fundamentally different constraint where the game must sustain social cohesion and prolong coordination. Free Parking jackpots inject liquidity to prevent early elimination. Auction bypass slows property concentration. Anti-monopoly norms prevent the endgame. The rulebook is read as a flawed harsh framework requiring community correction to be socially playable.",
+      "primary_observable": "House rule adoption rate (surveys show 70%+ use Free Parking jackpot); game duration under house rules (median 3+ hours); player satisfaction metrics; continued inclusion of eliminated players in social context",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "social_group_cohesion",
+      "victim": "design_intent_fidelity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; instantiates moderate-extraction constraint where community authority overrides text to preserve coordination and reduce friction from elimination mechanics"
+    },
+    {
+      "claim_id": "tournament_orthodoxy_reading",
+      "human_readable": "Tournament Orthodoxy Reading (Rulebook as Competitive Standard)",
+      "structural_delta": "Official rules read as the legitimate competitive framework where skill, strategy, and probabilistic optimization determine outcomes. House rules are noise that obscures strategic depth. Auctions enable price discovery and strategic blocking. Fast elimination separates skilled from unskilled play. The rulebook is the immutable competitive standard, not a pedagogical tool or social instrument.",
+      "primary_observable": "Tournament play adherence to official rules (100% in sanctioned events); player ranking systems based on strict-rule performance; strategy literature referencing only official mechanics",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "competitive_player_community",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; low-extraction coordination constraint where rulebook authority serves competitive legitimacy rather than pedagogy or social cohesion; completes the tripartite structure"
+    },
+    {
+      "claim_id": "original_intent_recovery",
+      "human_readable": "Original Intent Recovery (Lizzie Magie's Anti-Monopolist Design)",
+      "structural_delta": "The kernel has a suppressed upstream history: Lizzie Magie's 1904 Landlord's Game was explicitly designed with two rulesets (monopolist vs. anti-monopolist) to teach that monopoly rules produce misery while cooperative rules produce shared prosperity. Parker Brothers' 1935 appropriation stripped the anti-monopolist ruleset, leaving only the extractive half. House rules may be vestigial attempts to recover the lost cooperative framework.",
+      "primary_observable": "Historical documentation of dual-ruleset design; correlation between house rules and cooperative/redistributive mechanics in Magie's anti-monopolist rules; player interviews on why they adopt house rules",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "original_designer_intent",
+      "downstream_of": [],
+      "feeds_into": [
+        "social_scaffold_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical context axis that enriches social_scaffold_reading but lower structural centrality than the three primary readings; omega material on design lineage"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "extraction_demo_reading",
+      "kernel_id": "monopoly_rulebook",
+      "reading_id": "extraction_demo_reading"
+    },
+    {
+      "claim_id": "social_scaffold_reading",
+      "kernel_id": "monopoly_rulebook",
+      "reading_id": "social_scaffold_reading"
+    },
+    {
+      "claim_id": "tournament_orthodoxy_reading",
+      "kernel_id": "monopoly_rulebook",
+      "reading_id": "tournament_orthodoxy_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "original_intent_recovery",
+      "structural_delta": "Historical lineage from Lizzie Magie's dual-ruleset anti-monopolist pedagogy to Parker Brothers' extraction-only appropriation",
+      "hypothesis": "piton",
+      "deferral_reason": "Enriches social_scaffold_reading with design history context but lower graph centrality; serves omega function on suppressed cooperative ruleset"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_magie_suppression",
+      "description": "Does house rule proliferation constitute unconscious recovery of Lizzie Magie's suppressed anti-monopolist ruleset? If players independently reinvent redistribution/cooperation mechanics, the 'house rules' framing as deviation may invert: the official rules are the deviation from a stable equilibrium of tolerable extraction.",
+      "source": "Deferred axis original_intent_recovery + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_rulebook_ossification",
+      "description": "Why has Hasbro never officially acknowledged or integrated house rules despite 90 years of documented universal adoption? Is this institutional commitment to kernel immutability (maintaining extraction_demo_reading authority) or institutional ignorance? If the former, it is a Snare maintaining pedagogical intent against community preference.",
+      "source": "Absence Inventory (no official house rules acknowledgment) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_generational_transmission",
+      "description": "How do house rules transmit across generations without textual codification? Oral tradition, internet forums, or independent reinvention? If independent reinvention, this suggests house rules are not arbitrary deviations but responses to a structural problem in the official constraint (elimination mechanics incompatible with sustained family play).",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analyzing transmission medium itself"
+    },
+    {
+      "id": "omega_axiom_contradiction_strength",
+      "description": "The extraction_demo and social_scaffold readings declare axiom contradiction (no framework holds both 'elimination is pedagogically necessary' and 'elimination must be prevented for social cohesion'). But tournament_orthodoxy coexists with both by rejecting their normative premises ('the game is neither pedagogy nor social instrument; it is a competitive test'). Does this third reading dissolve the contradiction or merely operate in a separate domain?",
+      "source": "Axiom contradiction analysis in commitment_system_recognition"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings structurally distinct with different observables, beneficiary/victim structures, and epsilon bins. Kernel decomposition cleanly separates extraction pedagogy (mountain) from social coordination (scaffold) from competitive standard (rope). Deferred axis enriches but does not alter topology."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Parker Brothers/Hasbro official Monopoly rulebook, published 1935-present with minimal revision, stabilizing property auction mechanics, rent extraction rates, and bankruptcy-elimination endgame as immutable game structure",
+    "authority_description": "Publisher (Hasbro) holds copyright and trademark; tournament organizers derive legitimacy from publisher-sanctioned rules; house rules practitioners claim interpretive authority through community tradition and social context primacy over text",
+    "drift_status": "absent",
+    "candidate_pattern": "dual_authority_unresolved",
+    "is_contested_kernel": true,
+    "kernel_id": "monopoly_rulebook",
+    "readings": [
+      {
+        "reading_id": "extraction_demo_reading",
+        "commitment": "The rulebook instantiates inevitable wealth concentration through rent extraction; elimination is the structurally necessary outcome demonstrating monopoly capitalism's pedagogical truth",
+        "authority_grounding": "Publisher intent + original designer pedagogy (post-appropriation from Magie) + tournament competitive standard",
+        "sibling_readings": [
+          "social_scaffold_reading",
+          "tournament_orthodoxy_reading"
+        ],
+        "expected_structural_delta": "High epsilon (0.56+); mountain constraint; victim set = eliminated players; game duration 60-90 min; no redistribution mechanisms; winner takes all"
+      },
+      {
+        "reading_id": "social_scaffold_reading",
+        "commitment": "The rulebook requires community correction to be socially playable; house rules inject liquidity, slow elimination, and preserve coordination by preventing the harsh endgame the text mandates",
+        "authority_grounding": "Community practice transmitted across generations + majority adoption (70%+ use Free Parking jackpot) + social cohesion preservation priority",
+        "sibling_readings": [
+          "extraction_demo_reading",
+          "tournament_orthodoxy_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon (0.31-0.55); scaffold constraint; beneficiary = social group cohesion; game duration 3+ hours; redistribution via house rules; prolonged coordination over fidelity to text"
+      },
+      {
+        "reading_id": "tournament_orthodoxy_reading",
+        "commitment": "The rulebook is the legitimate competitive framework where strategic skill determines outcomes; house rules are noise obscuring competitive depth; text authority is immutable for ranking/comparison purposes",
+        "authority_grounding": "Tournament organizers + competitive player community + publisher sanctioning of official rules for ranked play",
+        "sibling_readings": [
+          "extraction_demo_reading",
+          "social_scaffold_reading"
+        ],
+        "expected_structural_delta": "Very low epsilon (≤0.10); rope constraint (coordination around shared standard); beneficiary = competitive community; no victim set (voluntary participation); rejects both pedagogy and social correction framings"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "extraction_demo_reading",
+        "reading_b": "social_scaffold_reading",
+        "basis": "Extraction_demo holds elimination as pedagogically necessary (demonstrating monopoly capitalism's structural outcome); social_scaffold holds elimination as structurally intolerable for sustained family play requiring prevention via house rules. No single normative framework can hold both 'elimination must occur to teach the lesson' and 'elimination must be prevented to preserve coordination.'"
+      }
+    ]
+  },
+  "_seed_id": "monopoly_house_rule_accumulation"
+}

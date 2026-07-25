@@ -1,0 +1,190 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Theory / Political Philosophy / Comparative Law",
+  "family_id": "constitutional_supremacy_sovereignty_contest",
+  "topic_summary": "Analysis of the foundational contest between constitutional supremacy (courts as ultimate arbiters of constitutional meaning) and legislative sovereignty (parliament/popular will as ultimate authority). This is a kernel-level disagreement about where interpretive authority resides in constitutional systems, affecting how gridlock is resolved and whose reading of legitimacy prevails.",
+  "extraction_summary": {
+    "entity_count": 4,
+    "claim_count": 3,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Constitutional text (the kernel — written constitution establishing governmental structure and rights)",
+      "Judiciary (courts claiming authority to interpret constitutional meaning)",
+      "Legislature (parliament/congress claiming sovereignty or coordinate interpretation)",
+      "Popular sovereign (the demos as ultimate authority source)"
+    ],
+    "key_tensions": [
+      "Judicial interpretive finality vs legislative/popular override capacity"
+    ],
+    "key_mechanisms": [
+      "Judicial review (courts invalidate legislation as unconstitutional)",
+      "Legislative override (parliament declares its own constitutional interpretation binding)"
+    ],
+    "key_absences": [
+      "Executive branch role in constitutional interpretation (coordinate review tradition)",
+      "Constituent power vs constituted power distinction (who can revise the kernel)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The written constitution as supreme law establishing governmental powers, individual rights, and amendment procedures",
+    "authority_description": "Contest between judicial interpretive finality (courts as ultimate arbiters) vs legislative/popular sovereignty (parliament or demos as superior to judicial interpretation)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_supremacy_contest",
+    "is_contested_kernel": true,
+    "kernel_id": "constitutional_text",
+    "readings": [
+      {
+        "reading_id": "judicial_supremacy_reading",
+        "commitment": "Constitutional text grants courts final interpretive authority; judicial invalidation of legislation is the conclusive determination of constitutional meaning",
+        "authority_grounding": "Legal formalist / counter-majoritarian protection / Marbury v. Madison tradition",
+        "sibling_readings": [
+          "legislative_sovereignty_reading",
+          "popular_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Courts enter constraint generation as gatekeepers; legislative override impossible; high rigidity in constitutional interpretation; beneficiary is rights-claimants against majoritarian overreach; victim is democratic responsiveness"
+      },
+      {
+        "reading_id": "legislative_sovereignty_reading",
+        "commitment": "Constitutional text establishes parliament as supreme; courts advise but legislature has final say on constitutional meaning through notwithstanding clauses or simple override",
+        "authority_grounding": "Parliamentary tradition / Diceyan sovereignty / Canadian Section 33 model",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "popular_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Legislature enters constraint generation as ultimate authority; judicial review is advisory; low rigidity; beneficiary is majoritarian will; victim is minority rights protection"
+      },
+      {
+        "reading_id": "popular_sovereignty_reading",
+        "commitment": "Constitutional text derives authority from constituent power of the demos; neither courts nor legislature are supreme — the people retain ultimate interpretive authority through amendment, convention, or revolution",
+        "authority_grounding": "Democratic constitutionalism / constituent power theory / referendum tradition",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "legislative_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Popular mobilization enters constraint generation as meta-authority; both courts and legislature are subordinate to extra-institutional democratic expression; beneficiary is democratic participation; victim is institutional stability and expertise"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "judicial_supremacy_reading",
+        "reading_b": "legislative_sovereignty_reading",
+        "basis": "One reading holds courts possess binding interpretive finality; the other holds legislature retains override capacity. No single framework can hold both as simultaneously true — accepting judicial finality as binding requires rejecting legislative override as legitimate, and vice versa."
+      },
+      {
+        "reading_a": "judicial_supremacy_reading",
+        "reading_b": "popular_sovereignty_reading",
+        "basis": "One reading holds courts possess final interpretive authority within the constitutional order; the other holds the people retain meta-constitutional authority to override any institutional interpretation. No framework can simultaneously hold both judicial finality and popular override as the ultimate authority."
+      },
+      {
+        "reading_a": "legislative_sovereignty_reading",
+        "reading_b": "popular_sovereignty_reading",
+        "basis": "One reading holds parliament is the supreme institutional authority; the other holds the people retain authority superior to any institution including parliament. These are competing claims to ultimate sovereignty that cannot both be true in a single framework."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "human_readable": "Judicial Supremacy Reading (Courts as Constitutional Gatekeepers)",
+      "structural_delta": "Courts possess final interpretive authority over constitutional meaning; legislative acts contrary to judicial interpretation are void",
+      "primary_observable": "Frequency of legislative invalidation without override; judicial review scope; constitutional amendment difficulty",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "counter_majoritarian_rights_claimants",
+      "victim": "democratic_responsiveness",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Canonical reading in U.S. constitutional tradition; highest rigidity; establishes courts as constraint generators"
+    },
+    {
+      "claim_id": "legislative_sovereignty_reading",
+      "human_readable": "Legislative Sovereignty Reading (Parliament as Constitutional Supreme)",
+      "structural_delta": "Legislature retains final say on constitutional meaning; judicial review is advisory or overrideable",
+      "primary_observable": "Notwithstanding clause invocation rates; legislative override frequency; parliamentary supremacy doctrine prevalence",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "majoritarian_will",
+      "victim": "minority_rights_protection",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Parliamentary tradition reading (Westminster model); mid-range rigidity; establishes legislature as constraint generator"
+    },
+    {
+      "claim_id": "popular_sovereignty_reading",
+      "human_readable": "Popular Sovereignty Reading (Demos as Meta-Constitutional Authority)",
+      "structural_delta": "Constitutional authority derives from and remains subordinate to constituent power of the people; institutional interpretations subject to popular override",
+      "primary_observable": "Constitutional referendum frequency; extra-institutional democratic mobilization; constituent assembly invocations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "judicial_supremacy_reading",
+        "legislative_sovereignty_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Foundational democratic theory; upstream constraint on both institutional readings; lowest rigidity (popular will as mountain)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "kernel_id": "constitutional_text",
+      "reading_id": "judicial_supremacy_reading"
+    },
+    {
+      "claim_id": "legislative_sovereignty_reading",
+      "kernel_id": "constitutional_text",
+      "reading_id": "legislative_sovereignty_reading"
+    },
+    {
+      "claim_id": "popular_sovereignty_reading",
+      "kernel_id": "constitutional_text",
+      "reading_id": "popular_sovereignty_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_executive_coordinate_review",
+      "description": "Executive branch coordinate review (e.g., Andrew Jackson's 'John Marshall has made his decision, now let him enforce it') represents a fourth reading not decomposed here. Does executive non-enforcement constitute a reading or a defection from the system?",
+      "source": "Absence Inventory (Dark Matter Probe 2)"
+    },
+    {
+      "id": "omega_constituent_vs_constituted_power",
+      "description": "The constituent power / constituted power distinction (Sieyès) may collapse popular_sovereignty_reading into a meta-level rather than a coordinate reading. Is popular sovereignty a reading of the kernel or a claim that the kernel itself is subordinate to constituent power?",
+      "source": "Multi-Lens Scan (Political Philosophy lens)"
+    },
+    {
+      "id": "omega_hybrid_systems",
+      "description": "Many systems combine elements (e.g., strong judicial review + legislative override via supermajority). Are these unstable hybrids or stable equilibria? Does the Canadian Charter + Section 33 model represent a fourth reading or an institutionalized oscillation between readings?",
+      "source": "Independence Testing (§3.2 Type B overlap)"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "Do readings evolve over time within a single system (e.g., U.S. shift from departmentalism to judicial supremacy 1801-1958)? If so, what are the trigger conditions for reading-shift?",
+      "source": "Operational Medium Probe (Dark Matter Probe 1)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "All three readings meet kernel criteria: they share a common substrate (constitutional text as supreme law), read it in structurally distinct ways (who possesses final interpretive authority), and emit different constraint structures (judicial finality vs legislative override vs popular meta-authority). No fractures detected. Executive coordinate review deferred as omega."
+  },
+  "_seed_id": "constitutional_supremacy"
+}

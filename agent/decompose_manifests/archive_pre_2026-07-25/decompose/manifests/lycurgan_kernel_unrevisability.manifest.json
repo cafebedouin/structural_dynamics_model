@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Constitutional Theory / Commitment Systems",
+  "family_id": "lycurgan_unrevisability",
+  "topic_summary": "Analysis of the Spartan Lycurgan constitution as a commitment system where revision was categorically forbidden. The kernel (Lycurgus's laws) is contested between two readings: one treating it as a sacred, unchangeable code requiring absolute fidelity, the other as a brittle demographic trap that caused Spartan collapse through inability to adapt.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 1,
+    "key_entities": [
+      "Lycurgus (legendary lawgiver; kernel authority)",
+      "Spartan gerousia and ephors (interpretive guardians)",
+      "Spartiates (full citizens; beneficiaries of homoioi equality)",
+      "Helots (enslaved population; structural victims)",
+      "Periokoi (free non-citizens; intermediate status)"
+    ],
+    "key_tensions": [
+      "Constitutional immutability vs demographic survival (unrevisability vs adaptation pressure)",
+      "Equality among Spartiates vs resource concentration (homoioi ideal vs kleros inheritance rules)"
+    ],
+    "key_mechanisms": [
+      "Oath lock: Lycurgus extracted oath that no law would change until his return; he never returned",
+      "Kleros system: fixed land allotments to Spartiates, non-divisible, non-saleable",
+      "Agoge: mandatory education/military training enforcing cultural reproduction without legal revision"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The laws of Lycurgus: a constitutional settlement claimed as divinely ordained, covering land distribution (kleros system), citizenship requirements, military organization, and social equality (homoioi), stabilized by Lycurgus's oath-locked departure",
+    "authority_description": "Dual kingship + gerousia + ephors; legitimacy derived from fidelity to Lycurgan precedent, not revisionary competence; no formal amendment mechanism",
+    "drift_status": "absent",
+    "candidate_pattern": "constitutional_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "lycurgan_laws",
+    "readings": [
+      {
+        "reading_id": "sacral_fidelity_reading",
+        "commitment": "Lycurgan laws as sacred, unchangeable divine ordinance requiring absolute adherence",
+        "authority_grounding": "religious/traditional; Lycurgus as quasi-divine founder; oath prevents revision",
+        "sibling_readings": [
+          "demographic_trap_reading",
+          "adaptive_fiction_reading"
+        ],
+        "expected_structural_delta": "Constitutional immutability classified as mountain (natural law); Spartan decline attributed to external pressures or citizen vice, not system design; zero revision capacity treated as virtue"
+      },
+      {
+        "reading_id": "demographic_trap_reading",
+        "commitment": "Lycurgan laws as brittle system whose unrevisability caused demographic collapse",
+        "authority_grounding": "historical/consequentialist; system evaluation by survival outcomes",
+        "sibling_readings": [
+          "sacral_fidelity_reading",
+          "adaptive_fiction_reading"
+        ],
+        "expected_structural_delta": "Constitutional immutability classified as snare (suppression mechanism preventing adaptation); kleros system + citizenship restrictions = declining Spartiate population; unrevisability = structural death spiral"
+      },
+      {
+        "reading_id": "adaptive_fiction_reading",
+        "commitment": "Lycurgan immutability as noble lie masking covert adaptation",
+        "authority_grounding": "Straussian/institutional; rhetoric of fixity conceals interpretive drift",
+        "sibling_readings": [
+          "sacral_fidelity_reading",
+          "demographic_trap_reading"
+        ],
+        "expected_structural_delta": "Constitutional rhetoric (mountain claim) conceals rope-level institutional flexibility; ephors/kings quietly adapted through interpretation; demographic decline from enforcement failure, not rigidity per se"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sacral_fidelity_reading",
+        "reading_b": "demographic_trap_reading",
+        "basis": "Sacral reading treats constitutional immutability as deontologically superior to survival; demographic reading treats survival as the validity test. No framework simultaneously holds 'immutability is categorically good' and 'immutability that kills the polity is bad design.'"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sacral_fidelity_reading",
+      "human_readable": "Sacral Fidelity Reading (Divine Ordinance Requiring Absolute Adherence)",
+      "structural_delta": "Constitutional immutability as sacred virtue; Lycurgan laws treated as divinely ordained mountain",
+      "primary_observable": "Frequency of Plutarch/Xenophon references to divine origins; absence of formal amendment mechanisms; oath as religious lock",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain (in this reading's ontology)",
+      "beneficiary": "traditionalist_faction",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three readings; establishes baseline ontology where immutability = mountain"
+    },
+    {
+      "claim_id": "demographic_trap_reading",
+      "human_readable": "Demographic Trap Reading (Unrevisability as Structural Death Spiral)",
+      "structural_delta": "Constitutional immutability as snare; kleros + citizenship rules + no revision = declining Spartiate population (from 8000 to 1500 over 200 years)",
+      "primary_observable": "Spartiate population counts (classical sources); correlation between kleros concentration and citizenship loss; absence of legal mechanisms to expand citizen base",
+      "epsilon_bin": "high",
+      "hypothesis": "snare (in this reading's ontology)",
+      "beneficiary": null,
+      "victim": "spartan_state_survival",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading; axiom-contradictory to first (survival vs immutability); highest epsilon (snare with demographic collapse as observable)"
+    },
+    {
+      "claim_id": "adaptive_fiction_reading",
+      "human_readable": "Adaptive Fiction Reading (Immutability Rhetoric Masking Covert Flexibility)",
+      "structural_delta": "Claimed immutability as tangled_rope; official rhetoric (mountain) conceals interpretive drift via ephors/kings; demographic decline from enforcement failure, not rigidity",
+      "primary_observable": "Gap between constitutional rhetoric and documented institutional changes (e.g., rhetra amendments, land redistribution proposals); ephor power expansion over time",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "interpretive_elites",
+      "victim": "transparent_governance",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; neither axiom-contradictory to first two (hybrid explanatory framework possible); tangled_rope captures rhetoric/practice gap"
+    },
+    {
+      "claim_id": "helot_suppression_infrastructure",
+      "human_readable": "Helot Suppression Infrastructure (Krypteia and Structural Terror)",
+      "structural_delta": "Institutionalized violence against helots as system maintenance mechanism; resource extraction via agricultural slavery enabling Spartiate military specialization",
+      "primary_observable": "Krypteia practice (annual helot culling); helot/Spartiate population ratio (~7:1); helot revolt frequency",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "spartiate_military_class",
+      "victim": "helot_population",
+      "downstream_of": [
+        "sacral_fidelity_reading",
+        "demographic_trap_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: critical structural element but not a reading of the Lycurgan kernel itself; helot suppression is downstream implementation, not contested interpretation of unrevisability"
+    },
+    {
+      "claim_id": "homoioi_equality_paradox",
+      "human_readable": "Homoioi Equality Paradox (Citizenship Erosion via Non-Divisible Kleros)",
+      "structural_delta": "Egalitarian ideology (homoioi = equals) undermined by inheritance mechanics; kleros indivisibility + primogeniture = citizenship loss for younger sons and impoverished Spartiates",
+      "primary_observable": "Declining Spartiate count despite formal equality rhetoric; classical sources on hypomeiones (inferiors who lost citizenship)",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "non_inheriting_spartiates",
+      "downstream_of": [
+        "demographic_trap_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanistically explains demographic collapse but is derivative of demographic_trap_reading; kleros mechanics are implementation detail of unrevisability snare"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sacral_fidelity_reading",
+      "kernel_id": "lycurgan_laws",
+      "reading_id": "sacral_fidelity_reading"
+    },
+    {
+      "claim_id": "demographic_trap_reading",
+      "kernel_id": "lycurgan_laws",
+      "reading_id": "demographic_trap_reading"
+    },
+    {
+      "claim_id": "adaptive_fiction_reading",
+      "kernel_id": "lycurgan_laws",
+      "reading_id": "adaptive_fiction_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "helot_suppression_infrastructure",
+      "structural_delta": "Institutionalized helot terror as Spartiate system maintenance",
+      "hypothesis": "snare",
+      "deferral_reason": "Critical structural element but not a reading of the Lycurgan kernel; implementation layer downstream of unrevisability readings"
+    },
+    {
+      "claim_id": "homoioi_equality_paradox",
+      "structural_delta": "Egalitarian rhetoric undermined by kleros inheritance mechanics",
+      "hypothesis": "piton",
+      "deferral_reason": "Derivative mechanism explaining demographic collapse; captured within demographic_trap_reading as implementation detail"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_lycurgus_historicity",
+      "description": "If Lycurgus is entirely mythical (modern consensus leans this way), does the kernel reading shift? Adaptive_fiction_reading gains strength (the 'founder oath' was always interpretive cover), but the system's operational immutability remains observable regardless of founder historicity.",
+      "source": "Extraction ambiguity + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_spartan_exceptionalism",
+      "description": "Are the three readings specific to Sparta's unique context (helot suppression, dual kingship, military specialization) or generalizable to other constitutional_capture commitment systems? Generalizability unclear without comparative analysis.",
+      "source": "F34 (Epistemic Trespass) + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_revision_counterfactual",
+      "description": "If Sparta had adopted a formal amendment mechanism (e.g., Athenian-style psephismata), would demographic collapse have been averted? Demographic_trap_reading assumes yes; adaptive_fiction_reading suggests enforcement failure, not rigidity, was the issue. Counterfactual not empirically testable.",
+      "source": "Axiom contradiction + §3.1 Independence Testing"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "Do the three readings map to different historical periods? Early Sparta may fit sacral_fidelity; post-Leuctra fits demographic_trap; classical-era rhetoric fits adaptive_fiction. Temporal dimension may collapse 'readings' into 'phases.'",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03: Sacral_fidelity_reading treats constitutional immutability as mountain, but this classification depends on accepting divine-law ontology; if Lycurgus is mythical, the 'mountain' claim collapses into noble lie (tangled_rope). Generated omega_lycurgus_historicity. F34: Model training on classical sources is shallow; Plutarch/Xenophon are late, ideologically shaped accounts. Demographic data rely on contested interpretations of Herodotus/Thucydides population figures. Generated omega_spartan_exceptionalism and omega_revision_counterfactual to bound domain limits."
+  },
+  "_seed_id": "lycurgan_kernel_unrevisability"
+}

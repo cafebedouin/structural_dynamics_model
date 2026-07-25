@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Humanitarian Law / Legal Theory / Armed Conflict Studies",
+  "family_id": "geneva_conventions_kernel_2024",
+  "topic_summary": "Analysis of the Geneva Conventions as a contested kernel in international humanitarian law. Two interpretive readings emerge: a state-centric reading limiting protections to uniformed combatants (benefiting conventional state military operations) versus a universal human rights reading extending protections to all persons in armed conflict (constraining state action while protecting non-state actors and civilians).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Geneva Conventions (1949 treaties plus 1977 Additional Protocols)",
+      "State military forces (uniformed armed forces under state command)",
+      "Non-state armed groups (insurgents, militias, non-uniformed combatants)",
+      "International Committee of the Red Cross (treaty guardian and interpretive authority)",
+      "International Criminal Court (enforcement mechanism for grave breaches)",
+      "Civilian populations (protected persons under all readings)"
+    ],
+    "key_tensions": [
+      "State sovereignty vs universal human rights (who holds interpretive authority)",
+      "Military necessity vs humanitarian protection (operational effectiveness vs constraint)"
+    ],
+    "key_mechanisms": [
+      "Common Article 3 (minimum protection baseline applicable to non-international conflicts)",
+      "Combatant privilege system (lawful combatant status confers immunity from prosecution)",
+      "Grave breaches regime (criminal liability for treaty violations)"
+    ],
+    "key_absences": [
+      "Cyber warfare application (Conventions predate digital domain; interpretive void)",
+      "Autonomous weapons systems (no explicit framework for AI-driven targeting)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Geneva Conventions treaties establish binding rules on wartime conduct, stabilized through treaty text ratified by 196 states",
+    "authority_description": "State parties hold primary interpretive authority through domestic military law implementation; ICRC holds persuasive authority through Commentary tradition; ICC exercises adjudicative authority over grave breaches",
+    "drift_status": "partial",
+    "candidate_pattern": "Dynastic Lineage (treaty succession from 1864 founding through 1949 codification to 1977 Protocols, with each generation claiming continuity while absorbing contextual drift)",
+    "is_contested_kernel": true,
+    "kernel_id": "geneva_conventions_protective_scope",
+    "readings": [
+      {
+        "reading_id": "state_centric_reading",
+        "commitment": "Geneva protections apply to uniformed combatants under responsible command meeting Article 4 criteria; unprivileged belligerents fall outside treaty scope",
+        "authority_grounding": "State sovereignty and treaty text originalism (1949 drafters focused on state-to-state war)",
+        "sibling_readings": [
+          "universal_rights_reading",
+          "hybrid_proportionality_reading"
+        ],
+        "expected_structural_delta": "Narrows victim set (excludes non-state actors from POW protections); lowers ε on state military operations (permits targeting of unprivileged belligerents without combatant immunity); beneficiary: conventional state militaries fighting asymmetric conflicts"
+      },
+      {
+        "reading_id": "universal_rights_reading",
+        "commitment": "Geneva protections extend to all persons affected by armed conflict regardless of combatant status; Common Article 3 plus human rights law create universal floor",
+        "authority_grounding": "International human rights law evolution and ICRC humanitarian principles (dignity-centric rather than sovereignty-centric)",
+        "sibling_readings": [
+          "state_centric_reading",
+          "hybrid_proportionality_reading"
+        ],
+        "expected_structural_delta": "Expands victim set (includes all conflict participants); raises ε on state military operations (restricts targeting, detention, interrogation practices); beneficiary: non-state actors and civilian populations; victim: state military operational flexibility"
+      },
+      {
+        "reading_id": "hybrid_proportionality_reading",
+        "commitment": "Geneva protections scale by conflict type: AP I standards for international armed conflict, AP II/Common Article 3 for non-international; proportionality analysis determines application",
+        "authority_grounding": "Functional pragmatism; balances state security interests with humanitarian protection through context-dependent proportionality tests",
+        "sibling_readings": [
+          "state_centric_reading",
+          "universal_rights_reading"
+        ],
+        "expected_structural_delta": "Victim set varies by conflict classification; ε fluctuates based on proportionality calculus; beneficiary: legal ambiguity allows selective interpretation by stronger party; potential victim: weaker parties lack clarity on protected status"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "state_centric_reading",
+        "reading_b": "universal_rights_reading",
+        "basis": "State-centric reading holds treaty obligations flow only from state consent (sovereignty axiom); universal rights reading holds human dignity protections transcend state consent (inalienability axiom). No single framework can hold both: either protections derive from state agreement OR from inherent human status, not both simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "state_centric_reading",
+      "human_readable": "State-Centric Interpretation (Combatant Status Requirement)",
+      "structural_delta": "Protective scope limited to uniformed combatants meeting Article 4 criteria under state command",
+      "primary_observable": "Domestic military law codification of combatant definitions; ICC/national court case law on unprivileged belligerent status",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "state_military_forces",
+      "victim": "non_state_armed_groups",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: establishes sovereignty-grounded baseline constraint structure"
+    },
+    {
+      "claim_id": "universal_rights_reading",
+      "human_readable": "Universal Human Rights Interpretation (Dignity-Based Protection)",
+      "structural_delta": "Protective scope extends to all persons in armed conflict zones regardless of combatant classification",
+      "primary_observable": "ICRC Commentary interpretation; ECtHR/Inter-American Court extraterritorial application rulings; NGO monitoring reports on detention practices",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "non_state_actors_and_civilians",
+      "victim": "state_operational_flexibility",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: represents axiomatically contradictory interpretive framework with higher ε"
+    },
+    {
+      "claim_id": "hybrid_proportionality_reading",
+      "human_readable": "Hybrid Proportionality Approach (Context-Dependent Scaling)",
+      "structural_delta": "Protective scope scales by conflict type through proportionality analysis; AP I vs AP II vs Common Article 3 application varies",
+      "primary_observable": "State practice in mixed conflicts (e.g., Syria, Yemen); proportionality determinations in targeting doctrine",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "dominant_military_power",
+      "victim": "weaker_parties_to_conflict",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: captures ambiguity-as-extraction dynamic where interpretive flexibility benefits stronger party"
+    },
+    {
+      "claim_id": "cyber_warfare_interpretive_void",
+      "human_readable": "Cyber Warfare Application Gap (Digital Domain Absence)",
+      "structural_delta": "Geneva Conventions drafted pre-internet; cyber operations targeting civilian infrastructure lack explicit treaty framework",
+      "primary_observable": "Tallinn Manual interpretive guidance adoption by states; cyber attack attribution and response patterns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence rather than contested interpretation; would require separate kernel analysis for cyber-specific norms"
+    },
+    {
+      "claim_id": "autonomous_weapons_governance",
+      "human_readable": "Autonomous Weapons Systems (AI-Driven Targeting Gap)",
+      "structural_delta": "Proportionality and distinction principles require human judgment; AWS capability may exceed treaty framework assumptions",
+      "primary_observable": "CCW Group of Governmental Experts proceedings; state declarations on meaningful human control requirements",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emergent technology outside kernel scope; belongs to future treaty regime rather than current interpretive contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "state_centric_reading",
+      "kernel_id": "geneva_conventions_protective_scope",
+      "reading_id": "state_centric_reading"
+    },
+    {
+      "claim_id": "universal_rights_reading",
+      "kernel_id": "geneva_conventions_protective_scope",
+      "reading_id": "universal_rights_reading"
+    },
+    {
+      "claim_id": "hybrid_proportionality_reading",
+      "kernel_id": "geneva_conventions_protective_scope",
+      "reading_id": "hybrid_proportionality_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "cyber_warfare_interpretive_void",
+      "structural_delta": "Geneva Conventions lack explicit cyber warfare framework",
+      "hypothesis": "mountain",
+      "deferral_reason": "Absence rather than contested interpretation; requires separate analysis as emergent norm area rather than kernel reading"
+    },
+    {
+      "claim_id": "autonomous_weapons_governance",
+      "structural_delta": "AWS challenges proportionality/distinction principles requiring human judgment",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Emergent technology outside current kernel scope; belongs to future treaty development rather than present interpretive contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_common_article_3_floor",
+      "description": "All three readings claim Common Article 3 as minimum baseline, but differ on whether it is a floor (universal reading), ceiling (state-centric reading), or sliding scale (hybrid reading). The kernel may actually contain three sub-kernels rather than one unified substrate.",
+      "source": "§1.3-K coherence check"
+    },
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "ICC jurisdiction over grave breaches creates asymmetric enforcement: state actors face potential prosecution, non-state actors typically do not (lack of treaty party status). This structural asymmetry may make the 'universal' reading hollow without corresponding accountability mechanisms.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_conflict_classification_manipulation",
+      "description": "Hybrid reading's context-dependence creates incentive for parties to manipulate conflict classification (international vs non-international) to access favorable interpretation. Syria (government denying civil war status) and Ukraine (Russia denying international conflict status) illustrate this dynamic.",
+      "source": "§2.3 Beneficiary Check on hybrid_proportionality_reading"
+    },
+    {
+      "id": "omega_icrc_interpretive_drift",
+      "description": "ICRC Commentary tradition (1949, 1977, 2016 updates) shows progressive expansion toward universal protection model. Is this drift absorption within kernel or authority structure failure to maintain fixity? Commitment system may be in partial → absent drift transition.",
+      "source": "Commitment system drift_status classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest is well-bounded: three readings share common substrate (treaty text), differ structurally (victim set, ε levels, beneficiary patterns), and instantiate genuinely different constraints (sovereignty-grounded vs dignity-grounded vs proportionality-scaled protection). Axiom contradiction between state-centric and universal readings confirmed (no single framework holds both sovereignty-consent and inalienability axioms). Hybrid reading may be licensed plurality rather than third pole, but generates distinct structural delta through ambiguity-as-extraction dynamic."
+  },
+  "_seed_id": "geneva_conventions"
+}

@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Health Workforce Economics / Organizational Behavior / Gender & Labor",
+  "family_id": "physician_workforce_attrition_2026",
+  "topic_summary": "National survey of 971 clinically inactive U.S. physicians examining early departure from clinical practice. Mean exit age is 48.1 years (9 years younger than 2008 cohort). Primary drivers: 'hassle factor' (44.7%), workplace stress (44.5%), unrealistic patient demands (41.1%). Women physicians exit earlier (median 9 vs 12 years) and comprise 63.9% of inactive cohort despite being ~50% of workforce. 11% never practiced after residency completion.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "American Medical Association (survey sponsor, data custodian)",
+      "Association of American Medical Colleges (workforce projection authority)",
+      "Clinically inactive physicians (study population: 971 respondents, mean age 45.8)",
+      "Women physicians (63.9% of inactive cohort, median 9-year clinical career)",
+      "Never-practiced cohort (11% of sample, fully trained but zero clinical hours post-residency)",
+      "Health system organizations (employers with modifiable workplace policies)"
+    ],
+    "key_tensions": [
+      "Workforce production vs attrition (insufficient graduates + rising exit rates → projected 13,500–86,000 shortage by 2036)",
+      "Gender parity in training vs gendered exit patterns (women 55.4% of matriculants but exit 3 years earlier, disproportionately for caregiving)",
+      "Burnout attribution vs structural causation (individual stress responses vs organizational 'hassle factor' as primary driver)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "administrative_burden_extraction",
+      "human_readable": "Administrative Burden as Structural Extraction (Hassle Factor)",
+      "structural_delta": "Non-clinical work requirements (EHR documentation, inbox management, prior authorizations) that extract time from patient care without compensating physicians for that labor",
+      "primary_observable": "Hours spent on administrative tasks per clinical hour; inbox message volume per physician; prior authorization denial rates requiring appeals",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "health_system_administrators",
+      "victim": "practicing_physicians",
+      "downstream_of": [],
+      "feeds_into": [
+        "burnout_as_exit_mechanism",
+        "never_practiced_cohort_formation"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest-reported exit driver (44.7%); structurally distinct from stress (which is downstream psychological response); feeds into multiple downstream axes"
+    },
+    {
+      "claim_id": "gendered_caregiving_penalty",
+      "human_readable": "Gendered Caregiving Penalty (Structural Exit Asymmetry)",
+      "structural_delta": "Differential exit rates driven by unpaid caregiving labor falling disproportionately on women physicians, with no organizational accommodation for reproductive/family care work",
+      "primary_observable": "Exit rate ratio women:men for childcare reasons (21.3% vs 4.2%); median clinical career length by gender (9 vs 12 years); proportion exiting for family care (7.9% vs 0.6%)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "women_physicians",
+      "downstream_of": [],
+      "feeds_into": [
+        "workforce_feminization_paradox"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally independent from administrative burden (different observable, different victim set); statistically significant gender differential (P < .001); amplified impact due to workforce feminization trend"
+    },
+    {
+      "claim_id": "burnout_as_exit_mechanism",
+      "human_readable": "Burnout as Exit Mechanism (Psychological Constraint Pathway)",
+      "structural_delta": "Chronic workplace stressors producing emotional exhaustion, depersonalization, and lack of accomplishment that converts intent-to-leave into actual departure",
+      "primary_observable": "Self-reported burnout prevalence (~50% of U.S. physicians); correlation between burnout scores and exit within 2 years; 'too stressful' as exit reason (44.5%)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "administrative_burden_extraction",
+        "patient_demand_escalation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Downstream synthesis node linking upstream stressors to exit behavior; distinct from stressors themselves (different observable: psychological state vs work conditions)"
+    },
+    {
+      "claim_id": "patient_demand_escalation",
+      "human_readable": "Patient Demand Escalation (Expectation Inflation)",
+      "structural_delta": "Rising patient expectations for immediate access, multi-problem visits, and 24/7 availability without corresponding increase in physician time allocation or compensation",
+      "primary_observable": "Patient message volume trends; proportion of visits addressing >3 problems; after-hours contact frequency; 'unrealistic patient demands' as exit reason (41.1%)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "burnout_as_exit_mechanism"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third-highest exit driver; structurally independent from administrative burden (patient-facing vs system-facing); feeds into burnout pathway"
+    },
+    {
+      "claim_id": "workforce_feminization_paradox",
+      "human_readable": "Workforce Feminization Paradox (Compositional Amplification)",
+      "structural_delta": "Increasing proportion of women entering medicine (55.4% of matriculants) colliding with higher female exit rates and shorter careers, amplifying total attrition impact",
+      "primary_observable": "Women as % of medical school matriculants (time series); women as % of inactive physicians (63.9% vs ~50% of workforce); projected shortage delta attributable to gender-differential attrition",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "physician_workforce_sustainability",
+      "downstream_of": [
+        "gendered_caregiving_penalty"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Structural amplifier: converts individual-level gender penalty into population-level workforce crisis; distinct observable (compositional dynamics vs individual exit drivers)"
+    },
+    {
+      "claim_id": "never_practiced_cohort_formation",
+      "human_readable": "Never-Practiced Cohort Formation (Training-to-Practice Fracture)",
+      "structural_delta": "Physicians completing residency but never entering clinical practice (11% of sample), representing complete loss of training investment at point of workforce entry",
+      "primary_observable": "Proportion of residency graduates with zero post-training clinical hours; time-to-first-job distribution; reasons for non-entry vs reasons for exit",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "administrative_burden_extraction"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Structurally distinct from exit-after-practice (different life-cycle stage, different decision calculus); previously unstudied population; high policy salience despite low ε"
+    },
+    {
+      "claim_id": "retirement_age_compression",
+      "human_readable": "Retirement Age Compression (Career Length Contraction)",
+      "structural_delta": "Mean exit age declining from 57.1 (2008) to 48.1 (2024), reducing effective career length by 9 years and amplifying replacement demand",
+      "primary_observable": "Mean/median age at clinical exit (time series); clinical career length distribution; workforce supply projections sensitivity to retirement age parameter",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emergent outcome of other axes rather than independent constraint; no distinct causal mechanism beyond aggregation of upstream drivers"
+    },
+    {
+      "claim_id": "organizational_intervention_gap",
+      "human_readable": "Organizational Intervention Gap (Policy-Practice Mismatch)",
+      "structural_delta": "Availability of evidence-based retention interventions (flexible scheduling, childcare support, inbox triaging) vs low implementation rates in practice settings",
+      "primary_observable": "Proportion of health systems offering childcare subsidies, paid family leave >12 weeks, schedule customization; intervention adoption rates vs burnout reduction effect sizes",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: intervention availability is not a constraint on exit (it's a potential solution); belongs in omega as policy recommendation rather than structural axis"
+    }
+  ],
+  "generation_sequence": [
+    "administrative_burden_extraction",
+    "gendered_caregiving_penalty",
+    "patient_demand_escalation",
+    "burnout_as_exit_mechanism",
+    "workforce_feminization_paradox",
+    "never_practiced_cohort_formation"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "retirement_age_compression",
+      "structural_delta": "Mean exit age declining 9 years (2008→2024), reducing career length",
+      "hypothesis": "mountain",
+      "deferral_reason": "Emergent outcome of upstream axes rather than independent constraint; no distinct causal mechanism"
+    },
+    {
+      "claim_id": "organizational_intervention_gap",
+      "structural_delta": "Evidence-based interventions available but not implemented",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Intervention availability is solution-space, not constraint-space; zero graph centrality; omega material for policy recommendations"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_ehr_frustration_absence",
+      "description": "EHR frustration was NOT a top exit driver (contradicting prior literature), yet 'hassle factor' was #1. Is EHR burden now subsumed under 'hassle factor' or genuinely declining as a distinct driver? Measurement artifact vs real shift unclear.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + study's own observation"
+    },
+    {
+      "id": "omega_never_practiced_causation",
+      "description": "Study identifies 11% never-practiced cohort but provides no causal data on WHY they never entered practice. Is this burnout during residency, better nonclinical opportunities, or structural barriers to first job? Axis classification as piton vs snare depends on answer.",
+      "source": "§1.1 Absences + study limitation acknowledgment"
+    },
+    {
+      "id": "omega_malpractice_premium_decline",
+      "description": "Malpractice premiums were #3 driver in 2008 (24.4%) but absent from top-4 in 2024. Is this tort reform success, premium stabilization, or displacement by more salient stressors? Structural change vs salience shift unresolved.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + temporal comparison"
+    },
+    {
+      "id": "omega_response_bias_direction",
+      "description": "1.6% response rate from disengaged population. Do respondents over-represent the most aggrieved (selection toward high-ε exits) or most articulate (selection toward professional-class exits)? Bias direction unknown; affects generalizability of all axes.",
+      "source": "Study's own limitation statement + F34 epistemic trespass concern"
+    },
+    {
+      "id": "omega_childcare_stress_mechanism",
+      "description": "Women exit 3 years earlier for childcare (21.3% vs 4.2% men), but study doesn't distinguish: lack of organizational support vs gendered division of household labor vs biological constraints (pregnancy/lactation). Mechanism ambiguity affects intervention design.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + gendered_caregiving_penalty axis"
+    },
+    {
+      "id": "omega_workforce_projection_validity",
+      "description": "AAMC projects 13,500–86,000 shortage by 2036 (6x range). Study shows 2-year retirement age shift = 40,000 physician delta. If exit age continues declining, is the projection floor already obsolete? Projection assumes stable attrition; this study falsifies that assumption.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium) + study's own workforce impact discussion"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Study's 1.6% response rate and non-representative sample (clinically inactive physicians only) limits model's ability to generalize about causal mechanisms. The 'never-practiced cohort' (11%) is identified but not explained—study provides no data on WHY they never entered practice, yet model must classify this axis. Generated omega_never_practiced_causation and omega_response_bias_direction to bound this uncertainty. Additionally, gender-differential exit mechanisms (childcare stress) are measured but not causally decomposed (organizational vs household vs biological), limiting confidence in intervention targeting."
+  }
+}

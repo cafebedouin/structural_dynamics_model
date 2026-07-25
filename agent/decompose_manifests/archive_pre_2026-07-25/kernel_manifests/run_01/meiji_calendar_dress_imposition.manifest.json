@@ -1,0 +1,158 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / State Formation / Commitment Systems",
+  "family_id": "meiji_calendar_dress_imposition",
+  "topic_summary": "Analysis of Meiji Japan's top-down imposition of Gregorian calendar and Western dress codes (1868-1912), examining whether this represents exogenous override of prior commitments or endogenous displacement. The case tests whether the kernel/reading framework can accommodate top-down imposition as a distinct mechanism, or whether the M-set's climb-from-fringe assumption creates a structural gap.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 1,
+    "key_entities": [
+      "Meiji State (centralizing authority post-1868 Restoration)",
+      "Lunisolar Calendar System (pre-existing temporal commitment)",
+      "Gregorian Calendar (imposed temporal commitment)",
+      "Traditional Dress Codes (kimono, topknot, pre-existing sartorial commitment)",
+      "Western Dress Codes (imposed sartorial commitment)"
+    ],
+    "key_tensions": [
+      "State modernization imperative vs embedded cultural practice",
+      "Top-down imposition vs bottom-up adoption dynamics"
+    ],
+    "key_mechanisms": [
+      "Legal decree (calendar change mandated 1872, effective 1873)",
+      "Bureaucratic enforcement (dress codes for officials, public spaces)",
+      "Economic incentive alignment (Western dress required for certain employment)"
+    ],
+    "absences": [
+      "No documented fringe community that climbed to dominance — the new reading was installed by state fiat, not adopted from periphery"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "temporal_commitment_override",
+      "human_readable": "Temporal Commitment Override (Calendar System Displacement)",
+      "structural_delta": "Lunisolar calendar displaced by Gregorian via state decree, not gradual adoption",
+      "primary_observable": "Legal enforcement dates; population compliance rates; persistence of dual-calendar usage",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "meiji_state_fiscal_apparatus",
+      "victim": "agricultural_population",
+      "downstream_of": [],
+      "feeds_into": [
+        "state_modernization_extraction"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core case of top-down override; highest epsilon; upstream to synthesis"
+    },
+    {
+      "claim_id": "sartorial_commitment_override",
+      "human_readable": "Sartorial Commitment Override (Dress Code Displacement)",
+      "structural_delta": "Traditional dress displaced by Western dress via bureaucratic mandate, not fashion diffusion",
+      "primary_observable": "Official dress code enforcement; photographic evidence of compliance; economic barriers to adoption",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "western_textile_importers",
+      "victim": "traditional_textile_artisans",
+      "downstream_of": [],
+      "feeds_into": [
+        "state_modernization_extraction"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Parallel case with different observable; distinct beneficiary structure"
+    },
+    {
+      "claim_id": "state_modernization_extraction",
+      "human_readable": "State Modernization as Extraction (Westernization as Legitimacy Mechanism)",
+      "structural_delta": "Modernization framed as civilizational necessity to justify extraction of traditional practice",
+      "primary_observable": "State rhetoric on 'civilization and enlightenment' (bunmei kaika); fiscal savings from calendar change",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "meiji_oligarchy",
+      "victim": "rural_population",
+      "downstream_of": [
+        "temporal_commitment_override",
+        "sartorial_commitment_override"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis of both override mechanisms"
+    },
+    {
+      "claim_id": "m_set_gap_hypothesis",
+      "human_readable": "M-Set Gap Hypothesis (Top-Down Imposition as Missing Cell)",
+      "structural_delta": "M-set framework assumes climb-from-fringe; no cell for exogenous state override",
+      "primary_observable": "Presence/absence of fringe community prior to imposition; state coercion vs voluntary adoption",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-analytical claim about framework completeness; omega material"
+    }
+  ],
+  "generation_sequence": [
+    "temporal_commitment_override",
+    "sartorial_commitment_override",
+    "state_modernization_extraction"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "m_set_gap_hypothesis",
+      "structural_delta": "M-set framework assumes climb-from-fringe; no cell for exogenous state override",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Meta-analytical claim about framework completeness; belongs in omega discussion rather than constraint generation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Is this a contested kernel or a single constraint with two observer positions? The 'prior reading' (lunisolar calendar, traditional dress) and 'imposed reading' (Gregorian calendar, Western dress) do not share a common interpretive substrate — they are different commitments entirely, not different readings of one commitment. The contest is not about how to read a shared kernel but about which commitment system exists at all. This suggests the topic is NOT a contested kernel but rather a constraint displacement event (one constraint replacing another via state coercion).",
+      "source": "§1.3-K kernel/not-kernel decision"
+    },
+    {
+      "id": "omega_m_set_gap",
+      "description": "Does the M-set framework have a cell for top-down imposition? The Meiji case exhibits no fringe community that climbed to dominance — the new commitment was installed by state decree. If the M-set assumes all reading displacement occurs via climb-from-fringe dynamics, it may lack vocabulary for exogenous override. This is a framework completeness question, not a constraint story.",
+      "source": "Deferred axis m_set_gap_hypothesis + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_endogenous_vs_exogenous",
+      "description": "Was the displacement endogenous (internal adoption) or exogenous (external imposition)? The historical record shows state coercion (legal decree, bureaucratic enforcement, economic penalties for non-compliance), not voluntary adoption from a fringe. This suggests exogenous override, but the boundary between coercion and incentive-driven adoption is contested. Some populations adopted Western dress for economic mobility, not purely under duress.",
+      "source": "§1.1 mechanism extraction + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_beneficiary_ambiguity",
+      "description": "Who benefited from calendar change? The state saved fiscal costs (one fewer month of official salaries in 1873 due to calendar shift), but Western textile importers and modernization advocates also gained. The beneficiary structure is multi-layered, not singular.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The topic was flagged as a candidate contested kernel, but §1.3-K analysis reveals it is NOT a contested kernel — the 'readings' do not share a common interpretive substrate. Generated omega_kernel_collapse to document this finding. Decomposed into ordinary constraint axes (temporal override, sartorial override, state extraction synthesis)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "No shared kernel identified. The lunisolar calendar and Gregorian calendar are distinct commitment systems, not different readings of one kernel. The displacement is exogenous override, not interpretive contest.",
+    "authority_description": "Meiji state claimed authority via modernization imperative and civilizational legitimacy, not via interpretation of a shared fixed reference.",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_reason": "The supposed 'readings' (lunisolar vs Gregorian, traditional vs Western dress) do not share a common substrate. They are different commitments, not different interpretations of one commitment. The contest is about which system exists, not how to read a shared kernel. This is constraint displacement via state coercion, not kernel contestation."
+  },
+  "_seed_id": "meiji_calendar_dress_imposition"
+}

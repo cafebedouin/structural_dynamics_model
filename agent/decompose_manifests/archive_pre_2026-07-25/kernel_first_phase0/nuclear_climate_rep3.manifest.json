@@ -1,0 +1,247 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Energy Policy / Climate Mitigation / Technology Governance",
+  "family_id": "nuclear_climate_solution_2026",
+  "topic_summary": "Analysis of the contested role of nuclear power expansion in climate decarbonization strategy. The dispute centers on whether nuclear is a necessary complement to renewables for reliable baseload power, or a capital-intensive distraction that delays faster renewable deployment. The kernel is the legitimacy criterion for climate-mitigation technology selection.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear power industry (existing fleet + new reactor designs)",
+      "Renewable energy sector (solar, wind, storage)",
+      "Climate policy frameworks (Paris Agreement, net-zero commitments)",
+      "Environmental advocacy groups (split pro/anti-nuclear factions)",
+      "Energy grid operators (reliability and dispatch authorities)",
+      "Capital markets (infrastructure investment allocation)"
+    ],
+    "key_tensions": [
+      "Baseload reliability vs intermittency risk (nuclear advocates vs renewable advocates)",
+      "Capital allocation competition (nuclear construction vs renewable deployment)",
+      "Temporal urgency vs technology maturity (deploy-now renewables vs build-later nuclear)"
+    ],
+    "key_mechanisms": [
+      "Capacity factor differential (nuclear ~90% vs solar ~25%, wind ~35%)",
+      "Learning curve effects (renewable costs declining, nuclear costs stable/rising)",
+      "Grid integration requirements (dispatchable vs variable generation)",
+      "Regulatory approval pathways (nuclear licensing vs renewable permitting)"
+    ],
+    "key_absences": [
+      "Demand-side management and efficiency as alternative to supply expansion",
+      "Geopolitical constraints on uranium supply chains and enrichment capacity"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "technology_legitimacy_kernel",
+      "human_readable": "Technology Legitimacy Kernel (What Grounds Climate-Mitigation Authority)",
+      "structural_delta": "Contested kernel: different readings of what makes a technology legitimate for climate mitigation emit structurally different constraints on technology selection",
+      "primary_observable": "Policy adoption patterns, advocacy coalition composition, capital allocation decisions",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with three structurally distinct readings; all readings proceed to generation as expansion of single kernel-axis"
+    },
+    {
+      "claim_id": "capital_allocation_competition",
+      "human_readable": "Capital Allocation Competition (Investment Zero-Sum Constraint)",
+      "structural_delta": "Finite infrastructure capital creates direct trade-off between nuclear construction and renewable deployment",
+      "primary_observable": "Annual energy infrastructure investment flows by technology type",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "technology_legitimacy_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (capital flows vs legitimacy criteria); passes §3 pairwise test; provides material constraint on kernel readings"
+    },
+    {
+      "claim_id": "grid_reliability_physics",
+      "human_readable": "Grid Reliability Physics (Dispatchability vs Intermittency)",
+      "structural_delta": "Physical constraint: grid frequency stability requires dispatchable generation or equivalent storage",
+      "primary_observable": "Grid frequency deviation metrics, curtailment rates, storage deployment",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "technology_legitimacy_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent observable (physical grid constraints vs legitimacy criteria); mountain providing base constraint; passes §3 test"
+    },
+    {
+      "claim_id": "temporal_urgency_mismatch",
+      "human_readable": "Temporal Urgency Mismatch (Construction Time vs Climate Deadline)",
+      "structural_delta": "Nuclear construction timelines (10-15 years) vs renewable deployment speed (1-3 years) against 2030/2050 climate targets",
+      "primary_observable": "Average construction duration by technology; emissions budget remaining",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "technology_legitimacy_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal dimension already captured in velocity_primacy reading of kernel; would create redundancy"
+    },
+    {
+      "claim_id": "waste_legacy_externality",
+      "human_readable": "Waste Legacy Externality (Intergenerational Cost Transfer)",
+      "structural_delta": "Nuclear waste storage imposes costs on future generations without consent mechanism",
+      "primary_observable": "Spent fuel inventory, repository construction status, long-term monitoring costs",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "current_generation_energy_consumers",
+      "victim": "future_generations",
+      "downstream_of": [],
+      "feeds_into": [
+        "technology_legitimacy_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: externality dimension already captured in precautionary_reading of kernel; independent axis would duplicate"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "reliability_primacy_reading",
+      "kernel_id": "technology_legitimacy_kernel",
+      "reading_id": "reliability_primacy_reading"
+    },
+    {
+      "claim_id": "velocity_primacy_reading",
+      "kernel_id": "technology_legitimacy_kernel",
+      "reading_id": "velocity_primacy_reading"
+    },
+    {
+      "claim_id": "precautionary_reading",
+      "kernel_id": "technology_legitimacy_kernel",
+      "reading_id": "precautionary_reading"
+    },
+    "capital_allocation_competition",
+    "grid_reliability_physics"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "temporal_urgency_mismatch",
+      "structural_delta": "Construction time vs climate deadline mismatch",
+      "hypothesis": "rope",
+      "deferral_reason": "Temporal dimension already captured in velocity_primacy reading; would create redundancy with kernel structure"
+    },
+    {
+      "claim_id": "waste_legacy_externality",
+      "structural_delta": "Intergenerational cost transfer via waste storage",
+      "hypothesis": "snare",
+      "deferral_reason": "Externality dimension already captured in precautionary_reading; independent axis would duplicate kernel coverage"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_storage_breakthrough",
+      "description": "If battery/storage costs drop below threshold, grid_reliability_physics mountain may reclassify to rope (coordination problem rather than physical constraint). Velocity_primacy reading gains structural advantage.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F03 mountain validity check"
+    },
+    {
+      "id": "omega_smr_deployment",
+      "description": "Small modular reactor (SMR) commercialization could collapse temporal_urgency_mismatch if construction time drops to 3-5 years. Currently speculative; deferred pending deployment data.",
+      "source": "Deferred axis temporal_urgency_mismatch + technology maturity uncertainty"
+    },
+    {
+      "id": "omega_demand_reduction",
+      "description": "Efficiency and demand-side management absent from kernel readings. If demand growth decouples from GDP, capital_allocation_competition constraint weakens. Beneficiary: neither nuclear nor renewables.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_geopolitical_supply",
+      "description": "Uranium enrichment capacity concentrated in Russia/China. Geopolitical supply risk not addressed in any reading. Potential snare for reliability_primacy reading if supply disrupted.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: grid_reliability_physics classified as mountain but storage technology advancement may reclassify to rope. Generated omega_storage_breakthrough to bound this uncertainty. Kernel structure validated: three readings hold genuinely distinct axioms about what grounds technology legitimacy (reliability vs velocity vs precaution)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is that climate-mitigation technology selection must be grounded in a legitimacy criterion. All parties argue about WHICH criterion (reliability, deployment velocity, precautionary principle) should govern, not whether a criterion is needed.",
+    "authority_description": "Interpretive legitimacy derives from different epistemic communities: grid engineers (reliability), climate scientists (velocity/urgency), environmental ethicists (precaution). No single authority adjudicates; policy outcomes reflect coalition strength.",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_pluralism",
+    "is_contested_kernel": true,
+    "kernel_id": "technology_legitimacy_kernel",
+    "readings": [
+      {
+        "reading_id": "reliability_primacy_reading",
+        "commitment": "A technology is legitimate for climate mitigation if and only if it provides dispatchable, baseload-capable generation to ensure grid stability",
+        "authority_grounding": "Grid engineering / systems reliability expertise",
+        "sibling_readings": [
+          "velocity_primacy_reading",
+          "precautionary_reading"
+        ],
+        "expected_structural_delta": "Nuclear enters beneficiary set (high capacity factor); intermittent renewables require costly storage to qualify; victim set includes ratepayers bearing reliability costs"
+      },
+      {
+        "reading_id": "velocity_primacy_reading",
+        "commitment": "A technology is legitimate for climate mitigation if and only if it can be deployed at scale within the remaining carbon budget timeline (2030/2050 targets)",
+        "authority_grounding": "Climate science / emissions budget accounting",
+        "sibling_readings": [
+          "reliability_primacy_reading",
+          "precautionary_reading"
+        ],
+        "expected_structural_delta": "Renewables enter beneficiary set (fast deployment); nuclear excluded or marginalized (construction time); victim set includes grid operators managing intermittency"
+      },
+      {
+        "reading_id": "precautionary_reading",
+        "commitment": "A technology is legitimate for climate mitigation if and only if its worst-case failure modes and legacy costs are bounded and reversible within a generation",
+        "authority_grounding": "Environmental ethics / intergenerational justice frameworks",
+        "sibling_readings": [
+          "reliability_primacy_reading",
+          "velocity_primacy_reading"
+        ],
+        "expected_structural_delta": "Renewables enter beneficiary set (decommissioning is reversible); nuclear excluded (waste legacy, accident risk); victim set includes future generations bearing irreversible costs"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "reliability_primacy_reading",
+        "reading_b": "velocity_primacy_reading",
+        "basis": "No single framework can hold both 'grid stability is the binding constraint' and 'deployment speed is the binding constraint' as simultaneously true. One must be subordinated to the other in any coherent policy."
+      },
+      {
+        "reading_a": "reliability_primacy_reading",
+        "reading_b": "precautionary_reading",
+        "basis": "No single framework can hold both 'accept irreversible legacy costs for grid stability' and 'reject technologies with irreversible legacy costs' as simultaneously true. These axioms are mutually exclusive."
+      },
+      {
+        "reading_a": "velocity_primacy_reading",
+        "reading_b": "precautionary_reading",
+        "basis": "Velocity primacy accepts intermittency risk and storage uncertainty to maximize deployment speed; precautionary reading rejects technologies whose failure modes are not fully characterized. A coherent framework cannot hold both as binding constraints."
+      }
+    ]
+  }
+}

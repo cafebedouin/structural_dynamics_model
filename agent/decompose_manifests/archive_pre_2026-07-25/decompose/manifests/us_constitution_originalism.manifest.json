@@ -1,0 +1,228 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Interpretation / Political Theory",
+  "family_id": "us_constitution_interpretive_contest",
+  "topic_summary": "Analysis of the contested interpretive kernel of the U.S. Constitution, examining the structural divergence between originalist readings (authority grounded in framers' intent and original textual meaning) and living constitution readings (authority grounded in evolving societal values and adaptive application). The disagreement centers not on whether the Constitution constrains but on which constraint it generates—different readings instantiate different beneficiary/victim structures, judicial power limits, and federal-state boundaries.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "U.S. Constitution (1787 text + 27 amendments; fixed textual substrate)",
+      "Federal Judiciary (interpretive authority; Supreme Court as final arbiter)",
+      "Framers/Ratifiers (historical collective; source of original intent claims)",
+      "Contemporary Society (living source of evolving values claims)",
+      "States (federalism stakeholders; beneficiaries under originalist readings)",
+      "Civil Rights Claimants (expansion stakeholders; beneficiaries under living readings)"
+    ],
+    "key_tensions": [
+      "Fixed textual meaning vs. adaptive interpretation (originalist vs. living constitution camps)",
+      "Judicial restraint vs. judicial evolution (limiting courts to 1787 meaning vs. empowering contemporary application)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The U.S. Constitution as a fixed textual substrate whose authority to legitimate governmental action all parties accept, but whose interpretation different camps read as generating structurally different constraints on power",
+    "authority_description": "Federal judiciary (particularly Supreme Court) claims interpretive legitimacy, but the basis for that legitimacy differs by reading: originalists ground it in fidelity to ratifiers' understanding; living constitutionalists ground it in reasoned adaptation to contemporary context",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Overlay (partial drift status; constitutional amendments provide formal revision path but Supreme Court doctrine absorbs most normative drift through interpretive layer)",
+    "is_contested_kernel": true,
+    "kernel_id": "us_constitution_interpretive",
+    "readings": [
+      {
+        "reading_id": "originalist_reading",
+        "commitment": "Constitutional meaning fixed at ratification; interpretive authority derives from fidelity to framers' intent or original public meaning",
+        "authority_grounding": "Textual fidelity to historical understanding at ratification (1787 + amendment ratification dates)",
+        "sibling_readings": [
+          "living_constitution_reading",
+          "popular_constitutionalism_reading"
+        ],
+        "expected_structural_delta": "Narrow judicial power scope; federal power constrained by 1787 understanding; states retain broader reserved powers; enumerated rights limited to historical scope; beneficiaries include federalism advocates, religious liberty claimants under original understanding, property rights defenders; victims include unenumerated rights claimants, federal regulatory expansion advocates"
+      },
+      {
+        "reading_id": "living_constitution_reading",
+        "commitment": "Constitutional meaning evolves with societal values; interpretive authority derives from reasoned adaptation to contemporary conditions",
+        "authority_grounding": "Judicial reasoning grounded in precedent, contemporary values, and consequentialist adaptation",
+        "sibling_readings": [
+          "originalist_reading",
+          "popular_constitutionalism_reading"
+        ],
+        "expected_structural_delta": "Broad judicial power scope; federal power expands via evolving Commerce Clause and implied powers; unenumerated rights recognized (privacy, dignity); beneficiaries include civil rights expansion claimants, reproductive autonomy advocates, LGBTQ+ rights claimants; victims include states' rights advocates, original-meaning textualists, those constrained by expanded federal reach"
+      },
+      {
+        "reading_id": "popular_constitutionalism_reading",
+        "commitment": "Constitutional meaning shaped by popular political movements and democratic contestation, not solely judicial interpretation",
+        "authority_grounding": "Democratic legitimacy through political mobilization, legislative action, and popular sovereignty rather than judicial supremacy",
+        "sibling_readings": [
+          "originalist_reading",
+          "living_constitution_reading"
+        ],
+        "expected_structural_delta": "Contested judicial supremacy; interpretive authority shared among branches and popular movements; constitutional meaning emerges from political struggle rather than judicial pronouncement; beneficiaries include popular movements, legislative majorities, anti-elitist claimants; victims include judicial finality advocates, those requiring stable constitutional settlement, minorities dependent on counter-majoritarian judicial protection"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "originalist_reading",
+        "reading_b": "living_constitution_reading",
+        "basis": "Originalism's axiom that legitimate interpretation requires fidelity to fixed historical meaning is mutually exclusive with living constitutionalism's axiom that legitimate interpretation requires adaptation to contemporary values—no single framework can simultaneously hold that constitutional meaning is both fixed at ratification and properly evolves with society"
+      },
+      {
+        "reading_a": "living_constitution_reading",
+        "reading_b": "popular_constitutionalism_reading",
+        "basis": "Living constitutionalism's axiom that judicial reasoning is the authoritative mechanism for constitutional adaptation is mutually exclusive with popular constitutionalism's axiom that democratic political contestation rather than judicial interpretation is the proper locus of constitutional meaning—no single framework can simultaneously hold that courts are both the primary adaptive authority and subordinate to popular political movements"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "originalist_reading",
+      "human_readable": "Originalist Reading (Fixed Meaning at Ratification)",
+      "structural_delta": "Constitutional constraints derived from framers' intent or original public meaning at ratification, limiting judicial and federal power to historical scope",
+      "primary_observable": "Supreme Court citations to ratification-era sources, Founding-era dictionaries, Federalist Papers; originalist methodology prevalence in opinions",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "states_rights_advocates, religious_liberty_original_scope_claimants, property_rights_defenders",
+      "victim": "unenumerated_rights_claimants, federal_regulatory_expansion_advocates, contemporary_equality_norm_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested reading with highest structural distinctiveness; generates narrow judicial power constraint"
+    },
+    {
+      "claim_id": "living_constitution_reading",
+      "human_readable": "Living Constitution Reading (Evolving Adaptation)",
+      "structural_delta": "Constitutional constraints derived from contemporary values and reasoned judicial adaptation, expanding federal power and unenumerated rights",
+      "primary_observable": "Supreme Court citations to contemporary values, evolving standards of decency, precedent-based evolution; living constitution methodology prevalence",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "civil_rights_expansion_claimants, reproductive_autonomy_advocates, lgbtq_rights_claimants",
+      "victim": "states_rights_advocates, original_meaning_textualists, federal_reach_skeptics",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Sibling contested reading with axiom-contradictory foundation to originalist reading; generates broad judicial power constraint"
+    },
+    {
+      "claim_id": "popular_constitutionalism_reading",
+      "human_readable": "Popular Constitutionalism Reading (Democratic Contestation)",
+      "structural_delta": "Constitutional constraints derived from popular political movements and democratic struggle rather than judicial supremacy",
+      "primary_observable": "Legislative challenges to judicial review, popular mobilization around constitutional meaning, constitutional politics scholarship prevalence",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "popular_movements, legislative_majorities, anti_judicial_elitism_advocates",
+      "victim": "judicial_finality_advocates, stable_settlement_seekers, counter_majoritarian_protection_dependents",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading challenging judicial supremacy shared by both originalist and living constitution camps; reveals interpretive authority as itself contested"
+    },
+    {
+      "claim_id": "amendment_process_friction",
+      "human_readable": "Amendment Process Friction (Article V Supermajority Gridlock)",
+      "structural_delta": "Formal constitutional revision requires supermajority consensus (2/3 + 3/4 states), functionally blocking adaptation and pushing change into interpretive layer",
+      "primary_observable": "Amendment proposal/ratification rate decline post-1971; failed amendment attempts (ERA, balanced budget, etc.)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "originalist_reading",
+        "living_constitution_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural friction upstream of all readings but lower epsilon; captured in commitment_system_recognition drift_status field"
+    },
+    {
+      "claim_id": "judicial_appointment_capture",
+      "human_readable": "Judicial Appointment as Interpretive Capture (Ideological Court-Packing)",
+      "structural_delta": "Presidential appointment power + Senate confirmation converts interpretive disputes into partisan court composition battles",
+      "primary_observable": "Supreme Court nominee confirmation vote polarization; ideological sorting of appointees by party of appointing president",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "partisan_coalition_controlling_appointments",
+      "victim": "interpretive_losers_under_resulting_court_majority",
+      "downstream_of": [
+        "originalist_reading",
+        "living_constitution_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream extraction mechanism rather than interpretive reading itself; omega material on enforcement structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "originalist_reading",
+      "kernel_id": "us_constitution_interpretive",
+      "reading_id": "originalist_reading"
+    },
+    {
+      "claim_id": "living_constitution_reading",
+      "kernel_id": "us_constitution_interpretive",
+      "reading_id": "living_constitution_reading"
+    },
+    {
+      "claim_id": "popular_constitutionalism_reading",
+      "kernel_id": "us_constitution_interpretive",
+      "reading_id": "popular_constitutionalism_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "amendment_process_friction",
+      "structural_delta": "Article V supermajority requirement functionally blocks formal revision, pushing change into interpretive layer",
+      "hypothesis": "piton",
+      "deferral_reason": "Upstream structural friction common to all readings; lower epsilon; already documented in commitment_system_recognition drift_status as 'partial'—formal revision path exists but is functionally blocked"
+    },
+    {
+      "claim_id": "judicial_appointment_capture",
+      "structural_delta": "Appointment politics converts interpretive disputes into partisan court-packing battles",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream enforcement mechanism rather than interpretive reading itself; lower structural priority than core readings; omega material on how interpretive authority is actually secured"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_interpretive_authority_recursion",
+      "description": "Who adjudicates which reading is legitimate? Each reading includes a meta-claim about interpretive authority itself (originalists say fidelity to text, living constitutionalists say reasoned evolution, popular constitutionalists say democratic contestation). No neutral ground exists—the Constitution does not specify its own theory of interpretation. This is interpretive authority turtles all the way down.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + popular_constitutionalism_reading emergence"
+    },
+    {
+      "id": "omega_stare_decisis_tension",
+      "description": "Precedent doctrine (stare decisis) creates path dependency favoring whichever reading dominated during precedent-setting era. Originalists must either accept non-originalist precedent or reject stare decisis; living constitutionalists must defend precedent shifts. Both camps treat precedent instrumentally when convenient. This is enforcement structure tension, not interpretive principle.",
+      "source": "Extraction Absence Inventory + deferred axis judicial_appointment_capture"
+    },
+    {
+      "id": "omega_popular_constitutionalism_epistemic_status",
+      "description": "Is popular constitutionalism a third reading or a meta-critique rejecting the premise that constitutional meaning requires judicial interpretation at all? If it denies judicial supremacy entirely, it may not be a reading of the Constitution but a rejection of the interpretive game. This affects whether it belongs in the kernel or as external structural criticism.",
+      "source": "§1.3-K kernel/not-kernel decision uncertainty + reading independence testing"
+    },
+    {
+      "id": "omega_amendment_27_anomaly",
+      "description": "27th Amendment (congressional pay) ratified 1992, 203 years after proposal. Does this prove Article V is not gridlocked (reading: piton is actually functioning rope) or confirm gridlock (reading: only trivial amendments pass)? Amendment process friction classification depends on this empirical judgment.",
+      "source": "F03 (Hasty Generalization) concern on amendment_process_friction classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: amendment_process_friction classified as piton (atrophied function) but 27th Amendment ratification 1992 and state-level constitutional convention movements suggest Article V may be functioning rope with high transaction costs rather than fully gridlocked piton. Generated omega_amendment_27_anomaly to bound this uncertainty. Additionally, popular_constitutionalism_reading may be meta-critique rather than interpretive reading—omega_popular_constitutionalism_epistemic_status documents this boundary condition."
+  },
+  "_seed_id": "us_constitution_originalism"
+}

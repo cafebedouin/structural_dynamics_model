@@ -1,0 +1,244 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Jewish Law / Textual Tradition",
+  "family_id": "kodashim_preservation_contested_kernel",
+  "topic_summary": "Analysis of rabbinic preservation of Temple sacrifice law (Kodashim) across 1,900 years without performance. The kernel contest asks whether continuous study constitutes active exercise of a living commitment or archival preservation of a dead symbol awaiting resurrection. This collapses the boundary between performing and archiving a commitment system.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Kodashim (fifth order of Mishnah, compiled ~200 CE, detailing Temple sacrifice law)",
+      "Second Temple (destroyed 70 CE, ending physical sacrifice)",
+      "Rabbinic authorities (Tannaim, Amoraim, Maimonides, contemporary yeshivot)",
+      "Study-as-substitute doctrine (prayer, study, tzedakah replace sacrifice)",
+      "Messianic restoration expectation (Temple will be rebuilt, knowledge reactivated)",
+      "Palestinian Talmud (absent for Kodashim except Chullin)",
+      "Babylonian Talmud (briefer treatment of Kodashim than other orders)"
+    ],
+    "key_tensions": [
+      "Study-as-performance vs study-as-archive (Maimonides' substitution vs Neusner's 'fictitious territory')",
+      "Perpetual readiness vs messianic deferral (yeshivot training for restoration vs indefinite postponement)",
+      "Cosmic significance vs practical irrelevance (intrinsic spiritual repair vs 'no practical benefit')",
+      "Detailed realism vs acknowledged fantasy (precise halakhic debate vs 'perfect fantasy')"
+    ]
+  },
+  "commitment_system_recognition": {
+    "is_contested_kernel": true,
+    "kernel_description": "The commandments of Temple sacrifice as revealed in Torah, preserved in Kodashim tractates",
+    "authority_structure": "Rabbinic interpretive tradition claims legitimacy through chain of transmission (mesorah) from Sinai; authority to interpret derives from fidelity to received text and precedent",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "kernel_contest_nature": "The contest is over whether the kernel is OCCUPIED (study is performance, commandments remain active) or EVACUATED (study is archival, awaiting future reactivation). This is not a dispute between factions but a productive ambiguity within the tradition itself.",
+    "readings": [
+      {
+        "reading_id": "study_as_exercise",
+        "reading_label": "Study-as-Exercise (Occupied Kernel)",
+        "interpretive_claim": "Continuous study of Kodashim IS the performance of the commandment. The kernel remains occupied because textual engagement constitutes ritual action. Maimonides: 'everyone occupying himself with the law is as if he had offered a burnt offering.' Study substitutes for sacrifice not as placeholder but as equivalent fulfillment.",
+        "authority_grounding": "Maimonidean substitution doctrine, Council of Yavneh's 'deeds of loving-kindness' equivalence, prayer/study/tzedakah as replacement mechanisms",
+        "structural_consequence": "No gap between text and practice. The commandment is continuously fulfilled through study. Messianic restoration would add physical dimension but not reactivate a dormant obligation.",
+        "beneficiary": "Rabbinic class whose authority derives from textual mastery; diaspora communities for whom study is accessible where Temple access was not",
+        "victim": "Priestly class (Kohanim) whose hereditary ritual role is permanently displaced by scholarly merit"
+      },
+      {
+        "reading_id": "study_as_archive",
+        "reading_label": "Study-as-Archive (Evacuated Kernel)",
+        "interpretive_claim": "Study of Kodashim preserves knowledge for future restoration but does not fulfill the commandment. The kernel is evacuated—a husk awaiting messianic reactivation. Neusner: 'creates a map for a fictitious territory.' Study is preparatory, not performative. The commandment is suspended, not substituted.",
+        "authority_grounding": "Messianic restoration expectation, yeshivot training scholars 'so that scholars will be able to advise on how the sacrifices are to be offered when the Messiah does come,' historical neglect of Kodashim study justified by 'no practical benefit'",
+        "structural_consequence": "Gap between text and practice. The commandment awaits physical Temple. Study maintains institutional memory but does not discharge obligation. Restoration would reactivate dormant law.",
+        "beneficiary": "Future priestly class whose role will be restored; messianic expectation as source of communal hope and identity",
+        "victim": "Present generation who cannot fulfill commandment; those who invested in study that may never be practically applied"
+      },
+      {
+        "reading_id": "productive_ambiguity",
+        "reading_label": "Productive Ambiguity (Superposition)",
+        "interpretive_claim": "The tradition deliberately maintains both readings simultaneously. Study is BOTH performance AND archive—a superposition that collapses the D1/D4 boundary. The rabbis held that study substitutes for sacrifice (exercise) while preserving knowledge for restoration (archive). This ambiguity is not confusion but structural feature.",
+        "authority_grounding": "The simultaneous presence of substitution doctrine AND messianic restoration expectation in same sources; detailed halakhic debate treating hypotheticals as real while acknowledging Temple's absence; cosmic significance claims coexisting with practical irrelevance acknowledgment",
+        "structural_consequence": "The kernel is neither fully occupied nor fully evacuated. It exists in liminal state where textual engagement is ritual action that also preserves for future physical action. This allows tradition to maintain continuity across catastrophic rupture without either abandoning commandment or claiming full equivalence.",
+        "beneficiary": "Tradition itself, which survives Temple destruction without theological collapse; rabbinic authority which gains legitimacy from both preserving past and preparing future",
+        "victim": "Conceptual clarity; those seeking definitive answer to whether obligation is fulfilled or deferred"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_exercise_axis",
+      "human_readable": "Study-as-Exercise (Occupied Kernel Reading)",
+      "structural_delta": "Study of sacrifice law constitutes performance of the commandment itself, not preparation for future performance",
+      "primary_observable": "Maimonidean substitution doctrine prevalence in halakhic literature; prayer/study/tzedakah institutionalization as sacrifice replacements; absence of theological crisis narrative around unfulfilled obligation",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rabbinic_scholarly_class",
+      "victim": "hereditary_priestly_class",
+      "downstream_of": [],
+      "feeds_into": [
+        "productive_ambiguity_axis"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First pole of kernel contest; highest independent structural yield; establishes occupied-kernel baseline",
+      "kernel_id": "kodashim_commandment_status",
+      "reading_id": "study_as_exercise"
+    },
+    {
+      "claim_id": "study_as_archive_axis",
+      "human_readable": "Study-as-Archive (Evacuated Kernel Reading)",
+      "structural_delta": "Study preserves knowledge for messianic restoration but does not fulfill the commandment in present",
+      "primary_observable": "Messianic restoration expectation in liturgy and yeshiva curricula; historical neglect of Kodashim justified by 'no practical benefit'; training programs explicitly for future Temple service",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "future_priestly_class",
+      "victim": "present_generation_unable_to_fulfill",
+      "downstream_of": [],
+      "feeds_into": [
+        "productive_ambiguity_axis"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second pole of kernel contest; structurally opposed to axis 1; necessary for superposition analysis",
+      "kernel_id": "kodashim_commandment_status",
+      "reading_id": "study_as_archive"
+    },
+    {
+      "claim_id": "productive_ambiguity_axis",
+      "human_readable": "Productive Ambiguity (Superposition Reading)",
+      "structural_delta": "Tradition deliberately maintains both exercise and archive readings simultaneously as structural feature, not confusion",
+      "primary_observable": "Coexistence of substitution doctrine and restoration expectation in same authoritative sources; detailed halakhic debate on hypotheticals treated as real; cosmic significance claims alongside practical irrelevance acknowledgment",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "tradition_continuity_across_rupture",
+      "victim": "conceptual_clarity_seekers",
+      "downstream_of": [
+        "study_as_exercise_axis",
+        "study_as_archive_axis"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Synthesis node; highest centrality; captures the D1/D4 boundary collapse that is the analytical target",
+      "kernel_id": "kodashim_commandment_status",
+      "reading_id": "productive_ambiguity"
+    },
+    {
+      "claim_id": "priestly_displacement_axis",
+      "human_readable": "Priestly Displacement (Hereditary to Merit Authority)",
+      "structural_delta": "Shift from hereditary priestly authority (Kohanim performing sacrifice) to merit-based rabbinic authority (scholars interpreting text)",
+      "primary_observable": "Absence of Kohen-specific authority in post-Temple halakhic discourse; rabbinic class composition vs priestly lineage; textual mastery as legitimacy source",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "rabbinic_scholarly_class",
+      "victim": "hereditary_priestly_class",
+      "downstream_of": [
+        "study_as_exercise_axis"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as beneficiary/victim structure within study_as_exercise_axis; lower independent yield"
+    },
+    {
+      "claim_id": "talmudic_neglect_axis",
+      "human_readable": "Talmudic Neglect (Absence of Palestinian Talmud, Brevity of Babylonian)",
+      "structural_delta": "Kodashim received less talmudic elaboration than other orders, reflecting perceived practical irrelevance",
+      "primary_observable": "Absence of Palestinian Talmud on Kodashim (except Chullin); comparative brevity of Babylonian Talmud treatment; historical justifications for neglect citing 'no practical benefit'",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "study_as_archive_axis"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical artifact of archive reading; lower structural centrality; omega material on institutional prioritization"
+    },
+    {
+      "claim_id": "cosmic_repair_axis",
+      "human_readable": "Cosmic Repair (Intrinsic Spiritual Significance)",
+      "structural_delta": "Sacrifices possess intrinsic cosmic significance (repairing divine attributes, facilitating indwelling) independent of physical performance",
+      "primary_observable": "Kabbalistic and mystical literature on sacrifice; claims that study sustains cosmic purpose; 'hidden secrets' discourse",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "study_as_exercise_axis"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mystical justification layer; speculative scaffold; captured in study_as_exercise beneficiary structure; omega material on theological justification"
+    }
+  ],
+  "generation_sequence": [
+    "study_as_exercise_axis",
+    "study_as_archive_axis",
+    "productive_ambiguity_axis"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "priestly_displacement_axis",
+      "structural_delta": "Shift from hereditary priestly to merit-based rabbinic authority",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured as beneficiary/victim structure within study_as_exercise_axis; authority shift is consequence of exercise reading, not independent axis"
+    },
+    {
+      "claim_id": "talmudic_neglect_axis",
+      "structural_delta": "Kodashim received less talmudic elaboration than other orders",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical artifact of archive reading; lower structural centrality; institutional prioritization question deferred to omega"
+    },
+    {
+      "claim_id": "cosmic_repair_axis",
+      "structural_delta": "Sacrifices possess intrinsic cosmic significance independent of physical performance",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Mystical justification layer for exercise reading; speculative scaffold; theological justification deferred to omega"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse_test",
+      "description": "If the three readings collapse into one (e.g., all sources actually support only exercise or only archive), then this is NOT a contested kernel but a single reading with interpretive drift. The productive ambiguity reading would then be a scholarly construction rather than a structural feature of the tradition. Test: do authoritative sources explicitly hold both readings simultaneously, or do they partition by time period/school?",
+      "source": "SCOPE §1.3-K kernel contest validation requirement"
+    },
+    {
+      "id": "omega_institutional_prioritization",
+      "description": "Why did Kodashim receive less talmudic elaboration (no Palestinian Talmud, brief Babylonian treatment) if it was considered either performative or essential archive? Does neglect indicate a third reading (irrelevance) that the tradition suppressed in later periods? Or does it confirm archive reading (no practical benefit) while substitution doctrine emerged later as compensatory theology?",
+      "source": "Deferred axis talmudic_neglect_axis + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_messianic_timeline",
+      "description": "Does indefinite messianic deferral eventually collapse archive reading into exercise reading? If restoration is perpetually deferred, at what point does 'preparation for future' become indistinguishable from 'substitute for present'? Is there a temporal threshold where the ambiguity resolves?",
+      "source": "Tension between messianic restoration expectation and 1,900-year duration without performance"
+    },
+    {
+      "id": "omega_third_temple_movement",
+      "description": "How do contemporary Third Temple movements (seeking to rebuild Temple and resume sacrifice) relate to the kernel contest? Do they reject productive ambiguity in favor of pure archive reading? Or do they represent a fourth reading (reactivation) that the rabbinic tradition did not anticipate?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - contemporary movements not addressed in extraction"
+    },
+    {
+      "id": "omega_chullin_exception",
+      "description": "Why does Chullin (non-sanctified slaughter) have Palestinian Talmud when other Kodashim tractates do not? Does this indicate that practical applicability (Chullin governs everyday meat consumption) drives talmudic elaboration, confirming that other Kodashim tractates were seen as impractical (archive reading)? Or does Chullin's exception prove that study-as-exercise was insufficient motivation for full talmudic treatment?",
+      "source": "Extraction note: 'Palestinian Talmud absent for Kodashim except Chullin' + deferred axis talmudic_neglect_axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest validated: sources explicitly support both exercise and archive readings simultaneously (Maimonides' substitution doctrine coexists with messianic restoration expectation in same tradition). Productive ambiguity is structural feature, not scholarly construction. Three readings selected capture the full topology of the contest."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

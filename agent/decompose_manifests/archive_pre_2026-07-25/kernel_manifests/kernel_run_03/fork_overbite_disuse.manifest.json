@@ -1,0 +1,175 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Biological Anthropology / Material Culture / Evolutionary Biology",
+  "family_id": "fork_adoption_overbite_2026",
+  "topic_summary": "Analysis of the overbite as a structural consequence of fork-and-knife adoption in Western Europe (~250 years ago) and chopstick adoption in China (~900 years earlier). C. Loring Brace's thesis: cutlery use eliminated the functional demand on anterior teeth, allowing overbite configuration to persist into adulthood through 'capacity by disuse.' Flagged as candidate for beneficiary-less path-naturalization.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "C. Loring Brace (American anthropologist, overbite-cutlery thesis originator)",
+      "Fork-and-knife eating practice (Western Europe, ~1750s adoption)",
+      "Chopstick eating practice (China, ~900 years earlier adoption)",
+      "Edge-to-edge bite (ancestral human jaw configuration, ape-like)",
+      "Overbite (modern human jaw configuration, upper incisors overlap lower)"
+    ],
+    "key_tensions": [
+      "Functional demand vs structural persistence (anterior tooth use vs overbite configuration)",
+      "Cultural practice vs biological morphology (cutlery adoption vs jaw development)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "cutlery_functional_displacement",
+      "human_readable": "Cutlery Functional Displacement (Anterior Tooth Disuse)",
+      "structural_delta": "Fork-and-knife use eliminates gripping/tearing function of incisors, removing corrective pressure on overbite",
+      "primary_observable": "Frequency of anterior tooth loading during eating; archaeological jaw wear patterns pre/post-cutlery",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "overbite_persistence_pathway",
+        "developmental_window_closure"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain; physical mechanism of functional displacement; feeds both downstream axes"
+    },
+    {
+      "claim_id": "developmental_window_closure",
+      "human_readable": "Developmental Window Closure (Childhood Practice Lock-In)",
+      "structural_delta": "Cutlery use from childhood prevents corrective jaw loading during critical developmental period",
+      "primary_observable": "Age of cutlery adoption vs jaw configuration fixation timeline; comparative developmental studies",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "cutlery_functional_displacement"
+      ],
+      "feeds_into": [
+        "overbite_persistence_pathway"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (developmental timing vs functional loading); mediates mountain-to-outcome pathway"
+    },
+    {
+      "claim_id": "overbite_persistence_pathway",
+      "human_readable": "Overbite Persistence Pathway (Beneficiary-Less Path Naturalization)",
+      "structural_delta": "Overbite configuration becomes population-normal through disuse of corrective mechanism, no actor benefits",
+      "primary_observable": "Population overbite prevalence pre/post-cutlery; absence of selection pressure or institutional enforcement",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "cutlery_functional_displacement",
+        "developmental_window_closure"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; synthesis node testing beneficiary-less naturalization; piton hypothesis (atrophied capacity)"
+    },
+    {
+      "claim_id": "cultural_diffusion_mechanism",
+      "human_readable": "Cultural Diffusion Mechanism (Cutlery Spread Dynamics)",
+      "structural_delta": "Fork adoption spreads through class emulation and trade networks, not functional superiority",
+      "primary_observable": "Historical adoption timelines by social class; trade route correlation with overbite prevalence",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "cutlery_functional_displacement"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: cultural mechanism upstream of functional displacement but lower structural distinctiveness"
+    },
+    {
+      "claim_id": "alternative_bite_extinction",
+      "human_readable": "Alternative Bite Extinction (Edge-to-Edge Configuration Loss)",
+      "structural_delta": "Edge-to-edge bite becomes structurally unavailable once developmental window closes under cutlery regime",
+      "primary_observable": "Reversibility studies; adult jaw reconfiguration capacity under restored anterior loading",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "developmental_window_closure"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured by developmental_window_closure; redundant observable (irreversibility)"
+    }
+  ],
+  "generation_sequence": [
+    "cutlery_functional_displacement",
+    "developmental_window_closure",
+    "overbite_persistence_pathway"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "cultural_diffusion_mechanism",
+      "structural_delta": "Fork adoption spreads through class emulation, not function",
+      "hypothesis": "rope",
+      "deferral_reason": "Cultural mechanism upstream but lower distinctiveness than selected functional/developmental axes"
+    },
+    {
+      "claim_id": "alternative_bite_extinction",
+      "structural_delta": "Edge-to-edge bite becomes unavailable post-development",
+      "hypothesis": "mountain",
+      "deferral_reason": "Redundant with developmental_window_closure; same irreversibility observable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Topic flagged as contested kernel but no genuine readings identified. The 'bite-configuration commitment' is not a kernel with competing interpretations—it is a single biological outcome (overbite) with one causal pathway (functional disuse). No authority structure adjudicates 'legitimate' bite configurations. Collapse to ordinary axis decomposition.",
+      "source": "§1.3-K kernel/reading test"
+    },
+    {
+      "id": "omega_beneficiary_absence_validity",
+      "description": "Is beneficiary-less naturalization a valid constraint type, or does absence of beneficiary indicate misclassification? If every constraint requires a beneficiary, overbite_persistence_pathway may be a mountain (biological inevitability) rather than piton (atrophied capacity). Requires ontological clarification.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_reversibility_threshold",
+      "description": "At what age does jaw configuration become irreversible? If adults can restore edge-to-edge bite through sustained anterior loading, developmental_window_closure is a rope (coordination problem) not a mountain (biological constraint). Empirical uncertainty.",
+      "source": "Independence testing (developmental_window_closure vs alternative_bite_extinction overlap)"
+    },
+    {
+      "id": "omega_chopstick_parallel",
+      "description": "Does the 900-year-earlier Chinese chopstick adoption show identical overbite timeline? If not, cultural_diffusion_mechanism may have higher epsilon than currently classified. Cross-cultural validation gap.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: cutlery_functional_displacement classified as mountain but may be rope if cultural practice (not physical constraint) drives adoption. Generated omega_beneficiary_absence_validity to bound classification uncertainty. Kernel test applied: no genuine contested readings identified—topic is single causal pathway, not interpretive contest. Collapsed to ordinary axis decomposition per §1.3-K."
+  },
+  "commitment_system_recognition": {
+    "is_contested_kernel": false,
+    "collapse_reason": "No interpretive contest exists. The 'bite-configuration commitment' is not a stabilized reference point with competing readings—it is a biological outcome with one proposed causal mechanism (Brace's functional disuse thesis). No authority structure adjudicates legitimate bite configurations. No alternative readings would emit structurally different constraints (e.g., 'overbite is genetic' vs 'overbite is cultural' are empirical disagreements about the same outcome, not different kernels). Topic decomposes into ordinary axes: functional displacement (mountain), developmental timing (rope), and persistence pathway (piton testing beneficiary-less naturalization)."
+  },
+  "_seed_id": "fork_overbite_disuse"
+}

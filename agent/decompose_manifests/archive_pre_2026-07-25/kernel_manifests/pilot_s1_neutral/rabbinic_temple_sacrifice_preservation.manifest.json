@@ -1,0 +1,256 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Law / Halakhic Authority / Commitment System Dynamics",
+  "family_id": "rabbinic_kodashim_preservation",
+  "topic_summary": "Analysis of the rabbinic preservation of Temple sacrifice law (Kodashim) through continuous study for ~1,900 years without performance. The kernel contest centers on whether study-without-performance constitutes genuine occupation of the commitment (study-as-exercise reading) or merely archival preservation of a defunct practice (performance-only reading). This is a D1/D4 boundary case where the distinction between exercising a commitment and archiving its symbol collapses.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Rabbinic Judaism (post-70 CE interpretive authority claiming continuity with Temple priesthood)",
+      "Temple Sacrifice System (Kodashim tractates: Zevachim, Menachot, Bekhorot, etc.)",
+      "Second Temple (destroyed 70 CE; physical locus of sacrifice performance)",
+      "Talmudic Study Tradition (continuous transmission of sacrifice law without performance)",
+      "Messianic Restoration Expectation (theological commitment to future Temple rebuilding)"
+    ],
+    "key_tensions": [
+      "Study continuity vs performance cessation (1,900 years of transmission with zero enactment)",
+      "Halakhic authority vs physical impossibility (law remains binding but unperformable)"
+    ],
+    "key_claims": [
+      "Study of sacrifice law is religiously obligatory independent of performance capacity",
+      "Sacrifice law remains halakhically binding despite Temple destruction",
+      "Study-as-substitute doctrine: learning the laws equals performing the sacrifices",
+      "Messianic restoration will require immediate operational knowledge of sacrifice procedures"
+    ],
+    "key_mechanisms": [
+      "Yeshiva curriculum structure: Kodashim tractates studied in rotation despite non-applicability",
+      "Halakhic adjudication: rulings issued on sacrifice law questions with no practical consequence",
+      "Transmission fidelity: minute procedural details preserved across 60+ generations"
+    ],
+    "key_absences": [
+      "No institutional mechanism for declaring sacrifice law obsolete or archived",
+      "No parallel case of comparable duration (other suspended mitzvot either restored or formally abrogated)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The halakhic obligation to perform Temple sacrifice as commanded in Torah",
+    "authority_description": "Rabbinic interpretive authority claiming unbroken chain from Sinai through Temple priesthood",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "sacrifice_obligation_kernel",
+    "readings": [
+      {
+        "reading_id": "study_as_exercise_reading",
+        "commitment": "Study of sacrifice law constitutes genuine exercise of the mitzvah; the obligation is occupied through intellectual engagement",
+        "authority_grounding": "Talmudic doctrine of study-as-substitute (Menachot 110a); rabbinic authority to redefine mitzvah performance modality",
+        "sibling_readings": [
+          "performance_only_reading",
+          "messianic_suspension_reading",
+          "symbolic_archive_reading"
+        ],
+        "expected_structural_delta": "Zero extractiveness: study is the legitimate form of the mitzvah under current conditions; no victim set (suspension is authorized transformation, not extraction); beneficiary: rabbinic authority (interpretive monopoly on what counts as fulfillment)"
+      },
+      {
+        "reading_id": "performance_only_reading",
+        "commitment": "Sacrifice obligation requires physical performance; study is preparatory but does not fulfill the mitzvah",
+        "authority_grounding": "Literalist reading of Torah sacrifice commands; physical Temple as non-negotiable precondition",
+        "sibling_readings": [
+          "study_as_exercise_reading",
+          "messianic_suspension_reading",
+          "symbolic_archive_reading"
+        ],
+        "expected_structural_delta": "High extractiveness: 1,900 years of unfulfilled obligation; victim set: entire Jewish people (commanded but unable to perform); beneficiary: none (this is structural impossibility, not extraction by an agent, but the gap between command and capacity persists)"
+      },
+      {
+        "reading_id": "messianic_suspension_reading",
+        "commitment": "Sacrifice obligation is divinely suspended (not transformed) until messianic restoration; study maintains operational readiness",
+        "authority_grounding": "Theological necessity: God would not command the impossible; suspension is implicit divine accommodation",
+        "sibling_readings": [
+          "study_as_exercise_reading",
+          "performance_only_reading",
+          "symbolic_archive_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness: obligation is in abeyance, not violated; study is instrumental (maintaining capacity) rather than substitutive; no victim set during suspension period; beneficiary: future generations (operational knowledge preserved for restoration)"
+      },
+      {
+        "reading_id": "symbolic_archive_reading",
+        "commitment": "Sacrifice law is a cultural-historical archive; study preserves identity and continuity but makes no halakhic claim",
+        "authority_grounding": "Secular/Reform Jewish frameworks; historical-critical scholarship; cultural Judaism",
+        "sibling_readings": [
+          "study_as_exercise_reading",
+          "performance_only_reading",
+          "messianic_suspension_reading"
+        ],
+        "expected_structural_delta": "Zero extractiveness: no binding obligation exists to be violated; study is voluntary cultural practice; no victim set; beneficiary: Jewish collective memory and identity (non-coercive preservation)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "study_as_exercise_reading",
+        "reading_b": "performance_only_reading",
+        "basis": "Study-as-exercise holds that rabbinic authority can redefine mitzvah modality (study = performance); performance-only holds that physical enactment is non-negotiable. No framework can simultaneously accept both: either rabbinic authority has this transformative power or it does not."
+      },
+      {
+        "reading_a": "study_as_exercise_reading",
+        "reading_b": "symbolic_archive_reading",
+        "basis": "Study-as-exercise holds sacrifice law as binding halakhic obligation currently fulfilled through study; symbolic-archive holds it as non-binding cultural heritage. No framework can hold both: either the law binds or it does not."
+      },
+      {
+        "reading_a": "performance_only_reading",
+        "reading_b": "messianic_suspension_reading",
+        "basis": "Performance-only holds the obligation remains active and unfulfilled (creating ongoing violation); messianic-suspension holds the obligation is divinely placed in abeyance (no violation during suspension). No framework can hold both: either the obligation is currently binding or it is suspended."
+      },
+      {
+        "reading_a": "messianic_suspension_reading",
+        "reading_b": "symbolic_archive_reading",
+        "basis": "Messianic-suspension holds sacrifice will be restored as binding divine command; symbolic-archive holds it as historical artifact with no future binding force. No framework can hold both: either messianic restoration reactivates the obligation or the obligation is permanently historical."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "study_as_exercise_reading",
+      "human_readable": "Study-as-Exercise Reading (Rabbinic Transformation of Mitzvah Modality)",
+      "structural_delta": "Study of sacrifice law constitutes genuine fulfillment of the mitzvah through rabbinic authority to redefine performance modality",
+      "primary_observable": "Halakhic rulings treating study as mitzvah fulfillment; yeshiva curriculum treating Kodashim as obligatory rather than historical",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": "rabbinic_interpretive_authority",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel reading 1 of 4"
+    },
+    {
+      "claim_id": "performance_only_reading",
+      "human_readable": "Performance-Only Reading (Literalist Physical Requirement)",
+      "structural_delta": "Sacrifice obligation requires physical Temple performance; study is preparatory but does not fulfill the mitzvah",
+      "primary_observable": "Literalist halakhic positions rejecting study-as-substitute; theological frameworks treating current state as ongoing unfulfilled obligation",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "entire_jewish_people",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Kernel reading 2 of 4"
+    },
+    {
+      "claim_id": "messianic_suspension_reading",
+      "human_readable": "Messianic Suspension Reading (Divine Abeyance Until Restoration)",
+      "structural_delta": "Sacrifice obligation is divinely suspended until messianic restoration; study maintains operational readiness",
+      "primary_observable": "Theological frameworks treating Temple destruction as divine suspension signal; study framed as instrumental preparation rather than substitutive fulfillment",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "future_generations",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Kernel reading 3 of 4"
+    },
+    {
+      "claim_id": "symbolic_archive_reading",
+      "human_readable": "Symbolic Archive Reading (Cultural Heritage Without Halakhic Claim)",
+      "structural_delta": "Sacrifice law is cultural-historical archive; study preserves identity but makes no binding halakhic claim",
+      "primary_observable": "Reform/secular Jewish frameworks treating Kodashim as historical study; absence of obligation language in non-Orthodox contexts",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": "jewish_collective_memory",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Kernel reading 4 of 4"
+    },
+    {
+      "claim_id": "transmission_fidelity_mechanism",
+      "human_readable": "Transmission Fidelity Mechanism (60-Generation Preservation Without Performance)",
+      "structural_delta": "Institutional mechanisms preserving minute procedural details across 1,900 years with zero enactment",
+      "primary_observable": "Yeshiva curriculum structure; halakhic adjudication on non-performable questions; manuscript transmission fidelity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "study_as_exercise_reading",
+        "messianic_suspension_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Independent structural axis: the HOW of preservation is distinct from the WHY (kernel readings); feeds into two readings but has its own observable (institutional transmission mechanisms)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "study_as_exercise_reading",
+      "kernel_id": "sacrifice_obligation_kernel",
+      "reading_id": "study_as_exercise_reading"
+    },
+    {
+      "claim_id": "performance_only_reading",
+      "kernel_id": "sacrifice_obligation_kernel",
+      "reading_id": "performance_only_reading"
+    },
+    {
+      "claim_id": "messianic_suspension_reading",
+      "kernel_id": "sacrifice_obligation_kernel",
+      "reading_id": "messianic_suspension_reading"
+    },
+    {
+      "claim_id": "symbolic_archive_reading",
+      "kernel_id": "sacrifice_obligation_kernel",
+      "reading_id": "symbolic_archive_reading"
+    },
+    "transmission_fidelity_mechanism"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_third_temple_movement",
+      "description": "Does the modern Third Temple movement (Temple Institute, etc.) constitute attempted reactivation of performance-only reading, or is it symbolic politics? If genuine reactivation attempt, what is the extractiveness of preparing for sacrifice without rabbinic consensus on permissibility?",
+      "source": "Dark Matter Probe 2 (Absence Inventory): modern Temple reconstruction efforts not addressed in extraction"
+    },
+    {
+      "id": "omega_karaite_comparison",
+      "description": "Karaite Judaism rejected rabbinic study-as-substitute doctrine but also ceased sacrifice after Temple destruction. Does this constitute a fifth reading (performance-only + practical abrogation), or does it collapse into symbolic-archive? Comparative case may illuminate kernel structure.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): rabbinic authority benefits from study-as-exercise reading; Karaite rejection of this reading is structurally significant absence"
+    },
+    {
+      "id": "omega_christian_supersession",
+      "description": "Christian theology treats Temple sacrifice as superseded by Christ's sacrifice. Is this a sixth reading of the same kernel, or a different kernel entirely (Christological vs. halakhic)? Cross-tradition comparison may reveal whether 'sacrifice obligation' is one kernel or multiple.",
+      "source": "Dark Matter Probe 1 (Operational Medium): analysis operates within Jewish halakhic framework; Christian reading may be structurally distinct kernel rather than reading of same kernel"
+    },
+    {
+      "id": "omega_gender_exclusion",
+      "description": "Kodashim study traditionally male-only in Orthodox contexts. Is gender exclusion from study a separate extractive axis, or is it subsumed under study-as-exercise reading's beneficiary structure (rabbinic male authority)? May warrant independent axis if extractiveness is distinct.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): who is excluded from the study that constitutes mitzvah fulfillment?"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four kernel readings pass independence test (each holds distinct axioms about obligation status and fulfillment modality). Transmission_fidelity_mechanism is genuinely independent axis (institutional HOW vs. theological WHY). Kernel structure is coherent: all four readings share the substrate of 'Torah sacrifice command' but read it through incompatible frameworks for what counts as fulfillment or suspension."
+  },
+  "_seed_id": "rabbinic_temple_sacrifice_preservation"
+}

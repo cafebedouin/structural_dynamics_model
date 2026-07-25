@@ -1,0 +1,250 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Biomedical Engineering / Reproductive Genetics / Bioethics",
+  "family_id": "base_editing_human_embryos_2026",
+  "topic_summary": "Analysis of a 2026 preprint demonstrating that adenine base editors (ABEs) can efficiently modify human embryo genomes at PCSK9 and HBG loci without the chromosomal breaks and large deletions characteristic of CRISPR/Cas9, while revealing unexpected mRNA-induced embryo arrest and persistent challenges with mosaicism and guide RNA-dependent off-target activity.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Adenine Base Editors (ABE) - genome editing tool using Cas9 nickase to create single-strand breaks rather than double-strand breaks",
+      "CRISPR/Cas9 - conventional genome editing tool creating double-strand DNA breaks",
+      "Human embryos (2PN zygotes and MII oocytes) - experimental substrate for editing",
+      "Egli laboratory research team - Columbia University-led consortium conducting the study",
+      "PCSK9 gene (chromosome 1) - target locus for splice-site disruption",
+      "HBG1/2 genes (chromosome 11) - target loci for promoter modification",
+      "Derived hESC lines (ESbe1, ESbe2, ESbe3) - stem cell lines from edited embryos",
+      "Regulatory frameworks (National Academies, He Jiankui precedent) - governance structures for germline editing"
+    ],
+    "key_tensions": [
+      "Therapeutic promise vs genotoxic risk: ABE eliminates Cas9-associated chromosome breaks but retains guide RNA-dependent off-target activity",
+      "Delivery format: ABE protein (RNP) enables normal development; ABE mRNA causes 100% embryo arrest",
+      "Precision vs mosaicism: High on-target efficiency (52-76% homozygous edits) but 78% of embryos show genetic mosaicism",
+      "Clinical readiness vs safety gaps: Technology demonstrates proof-of-concept but mosaicism, off-target effects, and unknown long-term consequences preclude clinical application"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "dna_repair_substrate_specificity",
+      "human_readable": "DNA Repair Substrate Specificity (SSB vs DSB Processing in Early Embryos)",
+      "structural_delta": "Human embryos efficiently repair single-strand breaks (SSBs) and mismatches without chromosomal instability, but process double-strand breaks (DSBs) into large deletions and aneuploidies",
+      "primary_observable": "Frequency of chromosomal breaks and large deletions (>100bp) at target loci; measured via SNP array copy number analysis and long-range PCR",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "editor_genotoxicity_differential",
+        "clinical_safety_threshold"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational biological constraint; no upstream dependencies; distinct observable (repair pathway outcomes) independent of technology choice"
+    },
+    {
+      "claim_id": "editor_genotoxicity_differential",
+      "human_readable": "Editor Genotoxicity Differential (ABE vs Cas9 Structural Damage)",
+      "structural_delta": "ABE-induced SSBs do not convert to DSBs at detectable frequency in human embryos, while Cas9-induced DSBs generate segmental aneuploidies in 35-50% of cells",
+      "primary_observable": "Incidence of on-target chromosome breaks, large deletions, and copy number variations; measured via SNP array and targeted sequencing",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "dna_repair_substrate_specificity"
+      ],
+      "feeds_into": [
+        "clinical_safety_threshold",
+        "off_target_guide_dependency"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct from upstream mountain (technology choice vs biological substrate); different observable (editor-specific damage patterns vs repair pathway capacity)"
+    },
+    {
+      "claim_id": "delivery_format_toxicity",
+      "human_readable": "Delivery Format Toxicity (mRNA-Induced Embryo Arrest)",
+      "structural_delta": "Exogenous mRNA encoding ABE causes 100% embryo arrest at 1-4 cell stage, while protein (RNP) delivery permits 32-33% blastocyst formation",
+      "primary_observable": "Embryo developmental progression beyond 4-cell stage; measured by cell count at day 3-6 post-injection",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rnp_delivery_protocols",
+      "victim": "mrna_delivery_protocols",
+      "downstream_of": [],
+      "feeds_into": [
+        "clinical_safety_threshold"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent observable (developmental arrest vs DNA damage); no correlation with repair substrate axis; entanglement between RNA sensing and developmental competence"
+    },
+    {
+      "claim_id": "off_target_guide_dependency",
+      "human_readable": "Off-Target Guide Dependency (sgRNA Sequence Determinism)",
+      "structural_delta": "Off-target editing frequency varies 40-fold between guide RNAs (HBG1/2: 11/14 sites active, up to 37% editing; PCSK9: 1/121 sites active, <1% editing)",
+      "primary_observable": "Number of active off-target sites and editing frequency at those sites; measured via targeted deep sequencing of predicted off-targets",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "editor_genotoxicity_differential"
+      ],
+      "feeds_into": [
+        "clinical_safety_threshold"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Different observable from editor_genotoxicity_differential (off-target promiscuity vs on-target damage); causally linked but independently measurable"
+    },
+    {
+      "claim_id": "temporal_mosaicism_generation",
+      "human_readable": "Temporal Mosaicism Generation (Injection Timing vs Genetic Uniformity)",
+      "structural_delta": "Injection at 2PN stage (post-DNA replication) produces 78% mosaic embryos; injection at fertilization (pre-replication) timing unknown but hypothesized to reduce mosaicism",
+      "primary_observable": "Proportion of embryos with uniform vs mosaic genotypes across blastomeres; measured via single-cell Sanger sequencing and NGS of multicell biopsies",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "clinical_safety_threshold"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Independent observable (genetic uniformity vs damage/arrest/off-targets); distinct structural delta (cell cycle timing vs repair pathway or delivery format)"
+    },
+    {
+      "claim_id": "clinical_safety_threshold",
+      "human_readable": "Clinical Safety Threshold (Germline Editing Permissibility Boundary)",
+      "structural_delta": "Convergence of technical constraints (mosaicism, off-target activity, unknown long-term effects) and ethical frameworks (National Academies criteria, He Jiankui precedent) defines current impermissibility despite reduced genotoxicity",
+      "primary_observable": "Regulatory approval status; expert consensus statements; clinical trial initiation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "regulatory_gatekeepers",
+      "victim": "prospective_patients_with_monogenic_disorders",
+      "downstream_of": [
+        "editor_genotoxicity_differential",
+        "delivery_format_toxicity",
+        "off_target_guide_dependency",
+        "temporal_mosaicism_generation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Highest centrality; downstream synthesis node integrating all technical axes with ethical/regulatory layer; distinct observable (permissibility vs technical metrics)"
+    },
+    {
+      "claim_id": "preprint_epistemic_status",
+      "human_readable": "Preprint Epistemic Status (Non-Peer-Reviewed Knowledge Claims)",
+      "structural_delta": "Findings disseminated before peer review; claims lack independent validation and may require revision",
+      "primary_observable": "Peer review completion status; post-publication corrections or retractions; independent replication attempts",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold with zero centrality; epistemic status is meta-level concern orthogonal to technical/ethical axes; omega material"
+    },
+    {
+      "claim_id": "target_gene_therapeutic_relevance",
+      "human_readable": "Target Gene Therapeutic Relevance (PCSK9/HBG vs Monogenic Disease Loci)",
+      "structural_delta": "Study targets chosen for technical validation (prior somatic cell data) rather than germline therapeutic need; neither meets National Academies criteria for heritable editing",
+      "primary_observable": "Disease burden prevented; availability of alternative interventions (PGT-M); naturalness of introduced variants",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "clinical_safety_threshold"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower structural distinctiveness than clinical_safety_threshold which already captures therapeutic appropriateness; target choice is methodological rather than constraint-generating"
+    }
+  ],
+  "generation_sequence": [
+    "dna_repair_substrate_specificity",
+    "editor_genotoxicity_differential",
+    "delivery_format_toxicity",
+    "off_target_guide_dependency",
+    "temporal_mosaicism_generation",
+    "clinical_safety_threshold"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "preprint_epistemic_status",
+      "structural_delta": "Findings disseminated before peer review; claims lack independent validation",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero centrality; meta-level epistemic concern orthogonal to technical/ethical constraint axes; omega material"
+    },
+    {
+      "claim_id": "target_gene_therapeutic_relevance",
+      "structural_delta": "Study targets chosen for validation rather than therapeutic need",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured indirectly via clinical_safety_threshold axis which integrates therapeutic appropriateness; target choice is methodological rather than constraint-generating"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_mrna_arrest_mechanism",
+      "description": "What is the molecular mechanism of mRNA-induced embryo arrest? Is it interferon response, dsRNA sensing, translation burden, or a novel pathway? The study identifies the phenomenon but not the cause.",
+      "source": "delivery_format_toxicity axis; Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_fertilization_timing_mosaicism",
+      "description": "Does injection at fertilization (MII oocyte + sperm) eliminate mosaicism? Study has 4 blastocysts from this condition but insufficient single-cell data to assess uniformity.",
+      "source": "temporal_mosaicism_generation axis; data limitation acknowledged in paper"
+    },
+    {
+      "id": "omega_long_term_developmental_effects",
+      "description": "Do base-edited embryos that reach blastocyst stage and produce normal hESC lines develop normally through gestation and postnatal life? No data beyond blastocyst stage.",
+      "source": "clinical_safety_threshold axis; F34 (Epistemic Trespass) - beyond current experimental scope"
+    },
+    {
+      "id": "omega_off_target_prediction_validity",
+      "description": "Are in silico off-target prediction tools (CRISPOR, Digenome-seq) sufficiently sensitive? Study found chromosome breaks at 18 sites near predicted off-targets but also spontaneous breaks, suggesting prediction tools may have false negatives.",
+      "source": "off_target_guide_dependency axis; Dark Matter Probe 3 (Beneficiary Scan) - prediction tool vendors benefit from appearing comprehensive"
+    },
+    {
+      "id": "omega_preprint_validity",
+      "description": "Will peer review validate the central claims? Preprint status means findings lack independent expert scrutiny; replication attempts and methodological critique pending.",
+      "source": "preprint_epistemic_status deferred axis; F03 (Hasty Generalization) potential"
+    },
+    {
+      "id": "omega_regulatory_trajectory",
+      "description": "Will technical improvements (elimination of mosaicism, better off-target prediction) shift regulatory stance, or is germline editing categorically impermissible regardless of safety profile?",
+      "source": "clinical_safety_threshold axis; entanglement between technical and ethical constraints"
+    },
+    {
+      "id": "omega_abe_vs_cbe_safety_differential",
+      "description": "Study uses ABE only; recent literature suggests CBE may have different off-target and genotoxicity profiles. Is the safety advantage over Cas9 base-editor-class-general or ABE-specific?",
+      "source": "editor_genotoxicity_differential axis; Dark Matter Probe 1 (Operational Medium) - study operates within ABE framework without testing CBE"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: dna_repair_substrate_specificity classified as mountain (biological constraint) but may be piton of current embryo culture conditions or developmental stage. Global energy transition analogy: what appears as physical constraint (embryo DSB repair deficiency) may be contingent on experimental context (culture media, oxygen tension, temporal window). Generated omega_long_term_developmental_effects and omega_abe_vs_cbe_safety_differential to bound this uncertainty. No F34 despite preprint status because domain (genome editing, embryo development, DNA repair) is within model's training distribution and claims are traceable to presented data."
+  }
+}

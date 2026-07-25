@@ -1,0 +1,183 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Anthropology / Institutional Memory / Land-Use Governance",
+  "family_id": "aneyoshi_tsunami_stone_2011",
+  "topic_summary": "Analysis of the Aneyoshi tsunami stone's 78-year persistence as a land-use constraint (1933-2011). The stone warned 'do not build below this point' after catastrophic tsunamis in 1896 and 1933. In 2011, all 11 households above the stone line survived while surrounding coastal communities were devastated. The kernel contest is whether the stone retained live behavioral force or decayed to commemorative symbol during the non-catastrophe period.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aneyoshi village (11 households, survived 2011 tsunami)",
+      "Tsunami stone (1933 marker, 'do not build below this point')",
+      "1933 survivors (stone placers, experienced two tsunamis in one lifetime)",
+      "Tamishige Kimura (village leader, 2011)",
+      "Fumihiko Imamura (disaster planning professor, three-generation decay thesis)",
+      "Broader Sanriku coast (rebuilt below stone lines, suffered 2011 casualties)"
+    ],
+    "key_tensions": [
+      "Commemorative-husk vs behavioral-competence readings of stone's status 1933-2011",
+      "Aneyoshi's compliance vs broader coast's non-compliance with stone warnings",
+      "Ancient stone warnings vs modern seawall technology as protection strategy"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1933 stone's land-use prohibition: 'do not build below this point'",
+    "authority_description": "Ancestral survivors of 1896/1933 catastrophes; interpretive legitimacy grounded in witnessed disaster and intergenerational transmission",
+    "drift_status": "functioning",
+    "candidate_pattern": "catastrophe_theorem",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "The two proposed readings (commemorative-husk vs behavioral-competence) do not emit different constraints—they are observer positions on whether ONE constraint (the land-use prohibition) remained operative. The 2011 outcome is a decisive empirical test: zero households built below the line, all survived. This is not a contested interpretation of what the kernel means; it is a temporal question of whether the kernel decayed. The readings collapse into a single axis: institutional persistence of disaster memory across non-catastrophe periods."
+  },
+  "axes": [
+    {
+      "claim_id": "catastrophe_memory_decay",
+      "human_readable": "Catastrophe Memory Decay (Three-Generation Forgetting)",
+      "structural_delta": "Institutional memory of low-frequency high-impact disasters decays across generations in absence of reinforcement events",
+      "primary_observable": "Compliance rate with historical disaster warnings across generational cohorts; land-use pattern drift toward prohibited zones",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "aneyoshi_institutional_persistence",
+        "seawall_substitution"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Mountain providing base constraint on institutional memory; Imamura's three-generation thesis is domain consensus"
+    },
+    {
+      "claim_id": "aneyoshi_institutional_persistence",
+      "human_readable": "Aneyoshi Institutional Persistence (Embedded Warning System)",
+      "structural_delta": "Stone warning embedded in land-use practice through education, cultural transmission, and physical placement; not merely commemorative",
+      "primary_observable": "Zero households below stone line 1933-2011; school curriculum inclusion; village leader testimony on rule status",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "catastrophe_memory_decay"
+      ],
+      "feeds_into": [
+        "coastal_compliance_divergence"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Rope showing successful coordination against mountain decay; structurally distinct from seawall_substitution (different mechanism)"
+    },
+    {
+      "claim_id": "coastal_compliance_divergence",
+      "human_readable": "Coastal Compliance Divergence (Aneyoshi Exception vs Broader Coast Failure)",
+      "structural_delta": "Aneyoshi maintained stone-line compliance while broader Sanriku coast rebuilt below warnings; divergence in institutional embedding",
+      "primary_observable": "2011 casualty differential: Aneyoshi zero deaths vs thousands in non-compliant coastal towns; land-use pattern comparison",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "aneyoshi_descendants",
+      "victim": "non_compliant_coastal_populations",
+      "downstream_of": [
+        "aneyoshi_institutional_persistence",
+        "seawall_substitution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis showing divergent outcomes from same initial conditions"
+    },
+    {
+      "claim_id": "seawall_substitution",
+      "human_readable": "Seawall Substitution (Modern Technology Displacing Ancient Warnings)",
+      "structural_delta": "Government seawall construction created false sense of security, displacing stone warnings as primary protection mechanism",
+      "primary_observable": "Seawall construction timeline vs land-use pattern changes; citizen testimony on seawall reliance",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "coastal_development_interests",
+      "victim": "seawall_reliant_populations",
+      "downstream_of": [
+        "catastrophe_memory_decay"
+      ],
+      "feeds_into": [
+        "coastal_compliance_divergence"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via coastal_compliance_divergence; seawall failure is mechanism of divergence outcome"
+    },
+    {
+      "claim_id": "property_value_gradient",
+      "human_readable": "Property Value Gradient (Economic Pressure Toward Waterfront)",
+      "structural_delta": "Waterfront property commands premium value, creating economic pressure to build in tsunami-vulnerable zones",
+      "primary_observable": "Land value differential between waterfront and elevated parcels; development density patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "coastal_compliance_divergence"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic mechanism present but not structurally central to Aneyoshi's success (village maintained compliance despite gradient)"
+    }
+  ],
+  "generation_sequence": [
+    "catastrophe_memory_decay",
+    "aneyoshi_institutional_persistence",
+    "coastal_compliance_divergence"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "seawall_substitution",
+      "structural_delta": "Modern seawalls displaced stone warnings as protection mechanism",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured indirectly via coastal_compliance_divergence; seawall failure is mechanism explaining divergent outcomes"
+    },
+    {
+      "claim_id": "property_value_gradient",
+      "structural_delta": "Economic pressure toward waterfront development",
+      "hypothesis": "rope",
+      "deferral_reason": "Economic mechanism present but not central to Aneyoshi's institutional persistence; village maintained compliance despite gradient"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The commemorative-husk vs behavioral-competence readings collapse into one axis (institutional persistence) because they are not different interpretations of what the kernel means—they are temporal observer positions on whether one constraint remained operative. The 2011 outcome is decisive: zero households below line, all survived. This is empirical validation, not interpretive contest.",
+      "source": "§1.3-K kernel/reading decomposition; commitment_system_recognition analysis"
+    },
+    {
+      "id": "omega_tight_knit_community",
+      "description": "Research emphasizes Aneyoshi as 'tightly knit community who revered their ancestors.' Is tight-knittedness a necessary condition for institutional persistence, or merely correlated? Other tight-knit communities failed to maintain compliance. Causal mechanism unclear.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_stone_placement",
+      "description": "The stone's physical placement 'where everyone walks past it' may be critical to persistence. Is visibility/unavoidability a design principle for disaster warnings? Broader coast had stones but possibly less integrated into daily movement patterns.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction anchor"
+    },
+    {
+      "id": "omega_school_curriculum",
+      "description": "12-year-old Yuto Kimura: 'We studied them in school.' Formal education as transmission mechanism appears critical but is under-documented. What was taught? How? For how long? Institutional design details missing.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel collapse (commemorative-husk vs behavioral-competence) is not a fracture but a correct application of §1.3-K: the readings do not emit different constraints, only different temporal assessments of one constraint's operativeness. The 2011 outcome provides decisive empirical resolution."
+  },
+  "_seed_id": "aneyoshi_tsunami_memory"
+}

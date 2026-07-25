@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Dynastic Succession / Political History",
+  "family_id": "salic_law_succession",
+  "topic_summary": "Analysis of Salic Law as a contested kernel in European dynastic succession systems. The historical codified prohibition on female inheritance is read by agnatic dynasties as an immutable divine mandate versus read by sovereigns lacking male heirs as an archaic legal husk subject to sovereign override. This authority-grounding contest historically triggered major continental conflicts including the War of Austrian Succession.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Salic Law (6th century Frankish legal code, Title 62 excluding females from land inheritance)",
+      "Agnatic dynasties (Bourbon Spain, Bourbon France pre-Revolution, various German principalities)",
+      "Habsburg Monarchy (Maria Theresa's succession via Pragmatic Sanction 1713)",
+      "Pragmatic Sanction of 1713 (Charles VI's decree reversing Salic precedent)",
+      "War of Austrian Succession 1740-1748 (military enforcement contest)",
+      "European state system 1500-1800 (territorial sovereignty framework)"
+    ],
+    "key_tensions": [
+      "Immutability claim vs sovereign override authority (who has final interpretive power over succession law)",
+      "Divine right legitimation vs pragmatic dynastic continuity (theological vs practical authority grounding)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Salic Law Title 62: prohibition on female inheritance of royal domains, originally land law extended to crown succession",
+    "authority_description": "Contested between (1) custodial interpretation by established dynasties claiming divine/natural law grounds, (2) sovereign legislative power claiming authority to revise or suspend",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_legitimacy_fracture",
+    "is_contested_kernel": true,
+    "kernel_id": "salic_prohibition",
+    "readings": [
+      {
+        "reading_id": "immutable_mandate_reading",
+        "commitment": "Salic Law as irrevocable natural/divine law embedded in dynastic constitution",
+        "authority_grounding": "theological-custodial: dynasty interprets immutable divine order",
+        "sibling_readings": [
+          "sovereign_override_reading",
+          "cognatic_reversion_reading"
+        ],
+        "expected_structural_delta": "Female heirs categorically excluded from succession; challengers to female succession legitimate; preventive war justifiable to enforce agnatic priority"
+      },
+      {
+        "reading_id": "sovereign_override_reading",
+        "commitment": "Salic Law as revocable positive law subject to sovereign legislative authority",
+        "authority_grounding": "absolutist-legislative: reigning monarch's decree supersedes prior custom",
+        "sibling_readings": [
+          "immutable_mandate_reading",
+          "cognatic_reversion_reading"
+        ],
+        "expected_structural_delta": "Female succession permissible via sovereign act (Pragmatic Sanction); challengers are rebels against legitimate authority; defensive war to protect dynastic continuity"
+      },
+      {
+        "reading_id": "cognatic_reversion_reading",
+        "commitment": "Salic Law as Frankish anachronism never properly binding on non-Frankish territories",
+        "authority_grounding": "historicist-territorial: pre-Salic customs retain precedence in non-Frankish domains",
+        "sibling_readings": [
+          "immutable_mandate_reading",
+          "sovereign_override_reading"
+        ],
+        "expected_structural_delta": "Female succession via cognatic primogeniture (eldest child regardless of sex); Salic Law inapplicable outside original Frankish jurisdiction; territorial integrity privileged over agnatic purity"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "immutable_mandate_reading",
+        "reading_b": "sovereign_override_reading",
+        "basis": "No single framework can hold both 'divine law is irrevocable by human authority' (immutable) and 'sovereign decree supersedes all prior law' (override). Accepting one axiom requires rejecting the other."
+      },
+      {
+        "reading_a": "immutable_mandate_reading",
+        "reading_b": "cognatic_reversion_reading",
+        "basis": "No single framework can hold both 'Salic prohibition is universally binding natural law' (immutable) and 'Salic Law was never legitimately extended beyond Frankish jurisdiction' (reversion). One claims universal binding force, the other denies it ever validly applied."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "immutable_mandate_reading",
+      "human_readable": "Immutable Mandate Reading (Salic Law as Divine/Natural Law)",
+      "structural_delta": "Salic prohibition treated as irrevocable theological-natural law embedded in dynastic constitution",
+      "primary_observable": "Frequency of divine-right justifications in succession disputes; rejection of female heirs despite pragmatic sanction attempts",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "established_agnatic_dynasties",
+      "victim": "female_heirs_and_cognatic_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading establishing agnatic exclusion as immutable; beneficiary structure (incumbent dynasties) documented"
+    },
+    {
+      "claim_id": "sovereign_override_reading",
+      "human_readable": "Sovereign Override Reading (Salic Law as Revocable Positive Law)",
+      "structural_delta": "Salic prohibition treated as revocable positive law subject to sovereign legislative authority",
+      "primary_observable": "Success rate of pragmatic sanctions and sovereign decrees reversing Salic precedent; international recognition of female succession",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "monarchs_lacking_male_heirs",
+      "victim": "agnatic_collateral_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory to reading 1; different beneficiary (heirless monarchs vs established dynasties); historically triggered War of Austrian Succession"
+    },
+    {
+      "claim_id": "cognatic_reversion_reading",
+      "human_readable": "Cognatic Reversion Reading (Salic Law as Frankish Anachronism)",
+      "structural_delta": "Salic prohibition rejected as Frankish anachronism never legitimately binding on non-Frankish territories",
+      "primary_observable": "Prevalence of cognatic primogeniture in non-Frankish kingdoms (England, Castile, Sweden post-1980)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Historicist alternative; axiom-contradictory to immutable reading; lower epsilon but structural completeness requires third reading"
+    },
+    {
+      "claim_id": "territorial_integrity_pressure",
+      "human_readable": "Territorial Integrity Pressure (Partition Risk from Succession Failure)",
+      "structural_delta": "Dynastic extinction via rigid agnatic rules risks territorial fragmentation and foreign partition",
+      "primary_observable": "Historical partition events following succession crises (Poland 1795, Habsburg near-partition 1740)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereign_override_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural mountain providing pragmatic pressure for override reading but lower centrality than selected readings"
+    },
+    {
+      "claim_id": "international_recognition_coordination",
+      "human_readable": "International Recognition Coordination (Great Power Veto over Succession)",
+      "structural_delta": "Great power recognition required to legitimate succession changes; unilateral pragmatic sanctions insufficient",
+      "primary_observable": "Treaty guarantees of Pragmatic Sanction (1713-1740); Concert of Europe succession arbitration post-1815",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereign_override_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: coordination mechanism but captured implicitly in override reading's enforcement requirements"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "immutable_mandate_reading",
+      "kernel_id": "salic_prohibition",
+      "reading_id": "immutable_mandate_reading"
+    },
+    {
+      "claim_id": "sovereign_override_reading",
+      "kernel_id": "salic_prohibition",
+      "reading_id": "sovereign_override_reading"
+    },
+    {
+      "claim_id": "cognatic_reversion_reading",
+      "kernel_id": "salic_prohibition",
+      "reading_id": "cognatic_reversion_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "territorial_integrity_pressure",
+      "structural_delta": "Dynastic extinction via rigid agnatic rules risks territorial fragmentation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural mountain providing pragmatic pressure but lower centrality than kernel readings; captured implicitly via sovereign override's pragmatic grounding"
+    },
+    {
+      "claim_id": "international_recognition_coordination",
+      "structural_delta": "Great power recognition required to legitimate succession changes",
+      "hypothesis": "rope",
+      "deferral_reason": "Coordination mechanism captured implicitly in override reading's enforcement requirements; treaty guarantee structure documented in historical record"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_gender_equity_anachronism",
+      "description": "Modern gender equity norms create fourth reading (categorical rejection of sex-based exclusion) not present in historical period. Does this retrospectively delegitimize all three historical readings or merely add a fourth?",
+      "source": "Dark Matter Probe 2 (Absence Inventory): contemporary egalitarian framework absent from 18th century context"
+    },
+    {
+      "id": "omega_elective_monarchy_alternative",
+      "description": "Elective systems (Poland-Lithuania, Holy Roman Empire) bypass Salic/cognatic binary entirely. Why did hereditary-vs-hereditary dominate the kernel contest rather than hereditary-vs-elective?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): hereditary claimants of both sexes benefit from excluding electoral mechanisms"
+    },
+    {
+      "id": "omega_theological_substrate",
+      "description": "Does immutable reading rest on specific theological substrate (Thomistic natural law, divine right theory) or is it theologically agnostic legitimation? Constraint strength depends on substrate.",
+      "source": "F03 check: authority_grounding='theological-custodial' but specific theological framework unspecified"
+    },
+    {
+      "id": "omega_post_revolutionary_persistence",
+      "description": "Why did Salic Law persist in Spain and Luxembourg post-1918 when divine right legitimation collapsed? Does this reveal a hidden piton (habituation) beneath the claimed mountain?",
+      "source": "F15 check: 20th century persistence not examined during candidate axis enumeration"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: stopped at historical period (1500-1800) without examining 20th century persistence (Spain 1830s, Luxembourg until 2011). Generated omega_post_revolutionary_persistence. F03 detected: immutable reading classified as high-epsilon tangled_rope but theological substrate unspecified; strength may vary by doctrine. Generated omega_theological_substrate."
+  },
+  "_seed_id": "salic_law_succession_kernel"
+}

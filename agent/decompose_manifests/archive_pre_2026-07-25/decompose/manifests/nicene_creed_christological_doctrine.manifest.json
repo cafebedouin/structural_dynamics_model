@@ -1,0 +1,232 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Systematic Theology / Ecclesiology / History of Christian Doctrine",
+  "family_id": "nicene_creed_christology_trinity",
+  "topic_summary": "Analysis of the Nicene-Constantinopolitan Creed as a contested kernel where strict-orthodox and symbolic-confessional readings instantiate structurally different constraints on Christological and Trinitarian doctrine, with implications for ecclesial authority, heresy policing, and interpretive latitude.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nicene-Constantinopolitan Creed (325/381 CE formulation, fixed liturgical text)",
+      "Ecumenical Councils (First Council of Nicaea 325, First Council of Constantinople 381)",
+      "Hierarchical church institutions (episcopal structures claiming apostolic succession)",
+      "Heterodox communities (Arians, Nestorians, Monophysites, modern non-creedal groups)",
+      "Local congregations (contemporary parish-level communities)",
+      "Clergy (bishops, priests claiming doctrinal gatekeeping authority)",
+      "Lay interpreters (non-ordained believers attempting personal theological interpretation)",
+      "Theological academy (systematic theologians, historical-critical scholars)"
+    ],
+    "key_tensions": [
+      "Metaphysical bindingness vs symbolic witness (ontological authority vs confessional expression)",
+      "Centralized doctrinal control vs local interpretive freedom (hierarchical vs congregational authority)",
+      "Heresy exclusion vs theological pluralism (boundary maintenance vs latitude)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_orthodox_reading",
+      "human_readable": "Strict-Orthodox Reading (Creed as Metaphysical Blueprint)",
+      "structural_delta": "The creed defines one authoritative Trinitarian ontology binding on all believers; deviation is heresy warranting institutional sanction",
+      "primary_observable": "Frequency and severity of heresy accusations; ecclesial discipline mechanisms (excommunication, anathema); doctrinal uniformity enforcement",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "hierarchical_clergy_doctrinal_gatekeepers",
+      "victim": "heterodox_communities_lay_interpreters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating high-extractiveness constraint structure with clear beneficiary/victim topology"
+    },
+    {
+      "claim_id": "symbolic_confessional_reading",
+      "human_readable": "Symbolic-Confessional Reading (Creed as Historical Witness)",
+      "structural_delta": "The creed is historically contingent symbolic expression; authority derives from community discernment and personal faith rather than metaphysical necessity",
+      "primary_observable": "Prevalence of non-literal creedal interpretation; theological diversity within communities claiming creedal identity; interfaith engagement patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "local_congregations_theological_academy",
+      "victim": "centralized_doctrinal_authorities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct reading with inverted authority topology; lower extractiveness due to coordination rather than coercion"
+    },
+    {
+      "claim_id": "liturgical_habituation_reading",
+      "human_readable": "Liturgical-Habituation Reading (Creed as Identity Marker)",
+      "structural_delta": "The creed functions primarily as communal identity boundary marker through repeated liturgical performance, independent of cognitive assent to metaphysical claims",
+      "primary_observable": "Creedal recitation frequency vs theological literacy; sociological markers of in-group identity; relationship between liturgical participation and doctrinal knowledge",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_orthodox_reading",
+        "symbolic_confessional_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Upstream reading capturing social-performative function independent of metaphysical interpretation; feeds both other readings"
+    },
+    {
+      "claim_id": "apophatic_minimalist_reading",
+      "human_readable": "Apophatic-Minimalist Reading (Creed as Negative Boundary)",
+      "structural_delta": "The creed establishes what cannot be said (heresies excluded) rather than positive metaphysical content; apophatic theology tradition",
+      "primary_observable": "Prevalence of via negativa in Eastern Orthodox theology; emphasis on mystery vs definition in creedal interpretation",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_orthodox_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: specialized Eastern Orthodox interpretive tradition; lower graph centrality; captured partially by strict_orthodox reading's heresy-exclusion mechanism"
+    },
+    {
+      "claim_id": "feminist_reconstructive_reading",
+      "human_readable": "Feminist-Reconstructive Reading (Creed as Gendered Power Structure)",
+      "structural_delta": "The creed's all-male Trinitarian language (Father, Son) and incarnation-as-male entrenches patriarchal theology and excludes feminist God-language",
+      "primary_observable": "Prevalence of alternative liturgical formulations (Creator-Redeemer-Sustainer); feminist theological scholarship on Trinitarian doctrine",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "women_non_binary_believers_feminist_theologians",
+      "downstream_of": [
+        "strict_orthodox_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important critical reading but structurally downstream of strict_orthodox enforcement; moderate extractiveness warrants omega documentation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strict_orthodox_reading",
+      "kernel_id": "nicene_creed_authority",
+      "reading_id": "strict_orthodox_reading"
+    },
+    {
+      "claim_id": "symbolic_confessional_reading",
+      "kernel_id": "nicene_creed_authority",
+      "reading_id": "symbolic_confessional_reading"
+    },
+    {
+      "claim_id": "liturgical_habituation_reading",
+      "kernel_id": "nicene_creed_authority",
+      "reading_id": "liturgical_habituation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "apophatic_minimalist_reading",
+      "structural_delta": "Creed establishes negative boundaries (what cannot be said) rather than positive metaphysical content",
+      "hypothesis": "piton",
+      "deferral_reason": "Specialized Eastern Orthodox tradition with lower graph centrality; heresy-exclusion mechanism already captured by strict_orthodox reading"
+    },
+    {
+      "claim_id": "feminist_reconstructive_reading",
+      "structural_delta": "Creed's gendered Trinitarian language entrenches patriarchal theology and excludes feminist alternatives",
+      "hypothesis": "snare",
+      "deferral_reason": "Structurally downstream of strict_orthodox enforcement; moderate extractiveness warrants omega but not immediate generation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_filioque_schism",
+      "description": "The Filioque controversy (Western addition 'and the Son' to procession clause) represents a fourth reading: the creed as living document subject to regional ecclesial amendment. Does this reading collapse into symbolic_confessional (creed is revisable) or instantiate distinct constraint (legitimate regional variation vs unauthorized innovation)?",
+      "source": "Absence Inventory (§1.1): major historical schism point not explicitly captured by three selected readings"
+    },
+    {
+      "id": "omega_non_christian_witness",
+      "description": "Does the strict_orthodox reading's heresy-exclusion mechanism extend beyond Christianity to delegitimize non-Christian monotheisms (Islam, Judaism), or does interfaith dialogue require a distinct reading where the creed functions as internal Christian identity marker without external exclusionary force?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): potential victim set extends beyond Christian heterodoxy"
+    },
+    {
+      "id": "omega_feminist_extractiveness_classification",
+      "description": "Is feminist_reconstructive_reading's moderate extractiveness (ε=0.31-0.55) accurate, or does the creed's gendered language operate as high-extractiveness snare (ε>0.56) by structurally excluding women from full theological agency? Measurement requires intersectional analysis of ordination rates, theological publication access, and liturgical reform resistance.",
+      "source": "Deferred axis feminist_reconstructive_reading with uncertain epsilon classification"
+    },
+    {
+      "id": "omega_liturgical_independence",
+      "description": "Does liturgical_habituation_reading truly function independently of cognitive assent (rope rather than downstream of either strict_orthodox or symbolic_confessional), or is it parasitic on one of the metaphysical readings? Sociological data on 'cultural Christians' needed.",
+      "source": "§3 Independence Testing: uncertain whether liturgical performance constitutes genuinely independent constraint or operationalizes one of the other readings"
+    },
+    {
+      "id": "omega_historical_contingency_paradox",
+      "description": "Both readings claim the same historical text yet reach opposite conclusions about its authority status. Does this reveal that the 'kernel' is not the text itself but the interpretive framework imposed on it? If so, is there truly one shared commitment, or are there two distinct epistemic communities with no common substrate?",
+      "source": "§1.3-K kernel identification: potential collapse if no genuine shared commitment exists"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "All fracture checks passed. Three readings selected represent distinct structural deltas with different epsilon bins and authority topologies. Deferred readings (apophatic_minimalist, feminist_reconstructive) documented with clear structural reasons. Five omegas generated for bounded uncertainties including Filioque controversy and kernel collapse risk."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Nicene-Constantinopolitan Creed (325/381 CE) as fixed liturgical and doctrinal text defining Trinitarian orthodoxy and Christology",
+    "authority_description": "Contested between conciliar-hierarchical authority (ecumenical councils + apostolic succession) and congregational-discernment authority (local faith communities + personal conscience)",
+    "drift_status": "partial",
+    "candidate_pattern": "Dynastic Legitimacy (Pattern 2)",
+    "is_contested_kernel": true,
+    "kernel_id": "nicene_creed_authority",
+    "readings": [
+      {
+        "reading_id": "strict_orthodox_reading",
+        "commitment": "The creed binds all believers to one metaphysical ontology; deviation is heresy warranting sanction",
+        "authority_grounding": "Ecumenical councils possess divine guidance; apostolic succession transmits interpretive authority",
+        "sibling_readings": [
+          "symbolic_confessional_reading",
+          "liturgical_habituation_reading"
+        ],
+        "expected_structural_delta": "High extractiveness (ε>0.56); clear beneficiary (hierarchical clergy) and victim (heterodox communities, lay interpreters) sets; heresy policing mechanisms; doctrinal uniformity enforcement"
+      },
+      {
+        "reading_id": "symbolic_confessional_reading",
+        "commitment": "The creed is historically contingent witness; authority derives from community discernment and personal faith",
+        "authority_grounding": "Historical-critical scholarship reveals contingency; Spirit guides through communal and individual conscience",
+        "sibling_readings": [
+          "strict_orthodox_reading",
+          "liturgical_habituation_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness (ε=0.11-0.30); inverted authority topology (beneficiaries are local congregations, victims are centralized authorities); theological pluralism permitted; interfaith engagement enabled"
+      },
+      {
+        "reading_id": "liturgical_habituation_reading",
+        "commitment": "The creed functions as identity boundary marker through liturgical performance, independent of cognitive metaphysical assent",
+        "authority_grounding": "Social-performative function grounds communal belonging; repeated ritual enactment creates in-group identity",
+        "sibling_readings": [
+          "strict_orthodox_reading",
+          "symbolic_confessional_reading"
+        ],
+        "expected_structural_delta": "Very low extractiveness (ε≤0.10); coordination mechanism (rope) rather than coercion; feeds both metaphysical readings by providing social substrate for doctrinal enforcement or pluralist reinterpretation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_orthodox_reading",
+        "reading_b": "symbolic_confessional_reading",
+        "basis": "Strict_orthodox holds that the creed's metaphysical claims are necessarily true and binding (divine revelation transmitted through councils); symbolic_confessional holds that the creed's metaphysical claims are historically contingent human expressions open to revision. No single coherent framework can hold both 'this doctrine is necessarily true because divinely revealed' and 'this doctrine is contingently true as human witness' simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "nicene_creed_christological_doctrine"
+}

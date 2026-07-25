@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal Anthropology / Indigenous Law / Comparative Constitutional Theory",
+  "family_id": "historical_treaty_interpretive_frameworks",
+  "topic_summary": "Analysis of contested readings of historical treaties between settler states and Indigenous nations. Settler-state legal regimes read treaties as finalized property transactions extinguishing Indigenous sovereign rights. Indigenous nations read the same treaties as living relational pacts for shared territorial stewardship. The competing readings instantiate structurally different constraints with different beneficiary/victim structures.",
+  "extraction_summary": {
+    "entity_count": 4,
+    "claim_count": 2,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Historical treaties (codified legal kernels)",
+      "Settler-state legal regimes (interpretive authority claiming Crown sovereignty)",
+      "Indigenous nations (interpretive authority claiming continuing sovereignty)",
+      "Territorial resources and jurisdiction (contested object)"
+    ],
+    "key_tensions": [
+      "Finalized transaction vs living relationship (ontological difference in what treaties ARE)"
+    ],
+    "key_mechanisms": [
+      "Settler-state judicial interpretation (courts applying extinguishment doctrine)",
+      "Indigenous treaty practice (ceremonial renewal, relational obligations)"
+    ],
+    "key_absences": [
+      "Treaty negotiation context (power asymmetries, translation failures, oral vs written)",
+      "Contemporary resource extraction regimes built on extinguishment reading",
+      "Indigenous legal orders as parallel rather than subordinate systems"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Historical treaties as shared commitment substrate—the same documents held by both parties as authoritative but read to generate opposing constraints",
+    "authority_description": "Dual authority structure: settler courts claim interpretive monopoly via Crown sovereignty; Indigenous nations claim interpretive authority via continuing sovereignty and treaty partner status",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Capture — settler legal system denies revision while absorbing drift through judicial 'interpretation' that functionally rewrites without surfacing as revision",
+    "is_contested_kernel": true,
+    "kernel_id": "historical_treaty_substrate",
+    "readings": [
+      {
+        "reading_id": "extinguishment_reading",
+        "commitment": "Treaties as completed property transactions—Indigenous parties ceded territorial sovereignty in exchange for defined reserves and payments",
+        "authority_grounding": "Settler-state courts claiming Crown sovereignty and juridical finality",
+        "sibling_readings": [
+          "stewardship_reading",
+          "nation_to_nation_reading"
+        ],
+        "expected_structural_delta": "Indigenous nations exit victim set for territorial jurisdiction; enter beneficiary set for narrow treaty rights (reserves, annuities); settler state becomes sole legitimate authority over ceded territory"
+      },
+      {
+        "reading_id": "stewardship_reading",
+        "commitment": "Treaties as relational pacts for shared territorial stewardship—no cession of sovereignty, mutual obligations for coexistence",
+        "authority_grounding": "Indigenous legal orders and treaty oral traditions claiming continuing sovereignty",
+        "sibling_readings": [
+          "extinguishment_reading",
+          "nation_to_nation_reading"
+        ],
+        "expected_structural_delta": "Indigenous nations remain in beneficiary set for territorial jurisdiction; settler state enters obligation set for consent and shared governance; territorial resources become jointly managed rather than unilaterally extracted"
+      },
+      {
+        "reading_id": "nation_to_nation_reading",
+        "commitment": "Treaties as international agreements between sovereign equals—requiring ongoing consent and subject to modern treaty law principles",
+        "authority_grounding": "International law frameworks (UNDRIP, treaty law principles) and Indigenous constitutional traditions",
+        "sibling_readings": [
+          "extinguishment_reading",
+          "stewardship_reading"
+        ],
+        "expected_structural_delta": "Indigenous nations enter beneficiary set as co-equal sovereigns with consent rights over territorial changes; settler state constrained by international treaty obligations; unilateral resource extraction becomes treaty violation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "extinguishment_reading",
+        "reading_b": "stewardship_reading",
+        "basis": "Extinguishment axiom (territorial sovereignty can be permanently transferred via treaty) cannot coexist with stewardship axiom (sovereignty is inalienable and treaties create shared obligations not transfers) in any single coherent framework—accepting one requires rejecting the other"
+      },
+      {
+        "reading_a": "extinguishment_reading",
+        "reading_b": "nation_to_nation_reading",
+        "basis": "Extinguishment axiom (treaties finalize status and are not revisable except by settler state) contradicts nation-to-nation axiom (treaties between sovereigns require ongoing consent and remain subject to treaty law)—no framework can hold both as simultaneously true"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "extinguishment_reading",
+      "human_readable": "Extinguishment Reading (Treaties as Completed Property Transactions)",
+      "structural_delta": "Treaties interpreted as finalized cessions of territorial sovereignty in exchange for defined reserves and payments",
+      "primary_observable": "Judicial doctrine prevalence; resource extraction permits issued without Indigenous consent; territorial jurisdiction exercised unilaterally",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "settler_state_extractive_industries",
+      "victim": "indigenous_territorial_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant institutional reading; high extractiveness; benefits settler resource economy at cost of Indigenous jurisdiction"
+    },
+    {
+      "claim_id": "stewardship_reading",
+      "human_readable": "Stewardship Reading (Treaties as Living Relational Pacts)",
+      "structural_delta": "Treaties interpreted as ongoing mutual obligations for shared territorial stewardship without sovereignty cession",
+      "primary_observable": "Indigenous legal practices (ceremonial renewal, consent protocols); community resistance to extraction; alternative governance proposals",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct observable (relational practice vs juridical doctrine); coordination rather than extraction logic; sibling reading to extinguishment"
+    },
+    {
+      "claim_id": "nation_to_nation_reading",
+      "human_readable": "Nation-to-Nation Reading (Treaties as International Agreements Between Sovereigns)",
+      "structural_delta": "Treaties interpreted through international law frameworks requiring ongoing consent and sovereign equality",
+      "primary_observable": "UNDRIP implementation; consent-based resource agreements; international legal advocacy; parallel governance structures",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Introduces international law dimension; structurally distinct authority grounding; provides third vertex for constraint topology"
+    },
+    {
+      "claim_id": "translation_substrate_erosion",
+      "human_readable": "Translation Substrate Erosion (Oral vs Written Treaty Divergence)",
+      "structural_delta": "Systematic divergence between oral Indigenous understandings and written English/French texts treated as authoritative",
+      "primary_observable": "Linguistic analysis of treaty texts; oral history records; documented translation failures during negotiations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "extinguishment_reading",
+        "stewardship_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream substrate that feeds all readings but contributes limited independent analytical yield beyond kernel recognition itself"
+    },
+    {
+      "claim_id": "resource_extraction_lock_in",
+      "human_readable": "Resource Extraction Lock-In (Economic Dependence on Extinguishment Regime)",
+      "structural_delta": "Settler-state economy structurally dependent on resource extraction premised on extinguishment reading",
+      "primary_observable": "GDP composition from extractive industries on treaty territory; infrastructure investments assuming unilateral jurisdiction",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "extinguishment_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence rather than independent reading; captured via extinguishment_reading's beneficiary structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "extinguishment_reading",
+      "kernel_id": "historical_treaty_substrate",
+      "reading_id": "extinguishment_reading"
+    },
+    {
+      "claim_id": "stewardship_reading",
+      "kernel_id": "historical_treaty_substrate",
+      "reading_id": "stewardship_reading"
+    },
+    {
+      "claim_id": "nation_to_nation_reading",
+      "kernel_id": "historical_treaty_substrate",
+      "reading_id": "nation_to_nation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "translation_substrate_erosion",
+      "structural_delta": "Systematic oral vs written treaty text divergence",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream substrate feeding all readings but limited independent yield beyond kernel recognition"
+    },
+    {
+      "claim_id": "resource_extraction_lock_in",
+      "structural_delta": "Economic dependence on extraction premised on extinguishment",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence captured via extinguishment_reading's beneficiary/victim structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_judicial_revision_surface",
+      "description": "Does settler judicial 'reconciliation' doctrine constitute covert revision of extinguishment reading, or reinforcement through partial accommodation? If revision, drift_status should be 'partial' not 'absent'.",
+      "source": "Commitment system drift assessment; judicial cases like Haida Nation, Tsilhqot'in"
+    },
+    {
+      "id": "omega_stewardship_extractiveness",
+      "description": "Is stewardship_reading truly a Rope (coordination without extraction) or does it become a Tangled_Rope when institutionalized through co-management regimes that preserve settler veto power?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to institutionalized stewardship"
+    },
+    {
+      "id": "omega_international_law_enforceability",
+      "description": "Is nation_to_nation_reading a true Scaffold (building toward alternative structure) or merely aspirational if international law lacks enforcement mechanism against settler states?",
+      "source": "Hypothesis classification uncertainty; UNDRIP non-binding status"
+    },
+    {
+      "id": "omega_fourth_reading_collapse",
+      "description": "Considered 'pragmatic accommodation reading' (treaties as flexible instruments adjusted through negotiation) but collapsed into stewardship_reading—pragmatism without sovereignty recognition still instantiates stewardship constraint, just with weaker enforcement.",
+      "source": "§1.3-K coherence test during reading enumeration"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition confirmed genuine: extinguishment and stewardship readings instantiate structurally different constraints (different victim/beneficiary sets, different epsilon structures). Nation-to-nation reading introduces third vertex via international law authority structure. All three readings proceed to generation as specified in §1.3-K."
+  },
+  "_seed_id": "indigenous_land_rights_constraint"
+}

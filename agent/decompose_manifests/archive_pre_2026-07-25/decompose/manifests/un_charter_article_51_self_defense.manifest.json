@@ -1,0 +1,249 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Security Studies / Constitutional Interpretation",
+  "family_id": "un_charter_article_51_self_defense",
+  "topic_summary": "Analysis of Article 51 of the UN Charter as a contested kernel where different interpretive communities read the same textual commitment ('inherent right of individual or collective self-defence') as generating structurally different constraints on the legitimate use of force. The narrow reading constrains force to responses to actual/imminent armed attacks by states; the expansive reading permits preemptive/preventive force against non-state actors and emerging threats.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "UN Charter Article 51 (textual kernel: 'inherent right of individual or collective self-defence if an armed attack occurs')",
+      "UN Security Council (constitutional authority to determine threats to peace; Article 39-42 enforcement monopoly)",
+      "International Court of Justice (judicial interpretive authority; Nicaragua case precedent)",
+      "Powerful military states (US, Russia, China, Israel—actors with capacity for unilateral force projection)",
+      "Weaker/target states (populations in regions subject to preventive strikes; Global South states)",
+      "Non-state armed groups (Al-Qaeda, ISIS—actors whose threat profile destabilizes state-centric framework)"
+    ],
+    "key_tensions": [
+      "Collective security primacy vs sovereign security discretion (Security Council authorization requirement vs unilateral self-defense claims)",
+      "State-centric framework vs transnational threat reality (armed attack by 'state' vs terrorist network harbored in failed state)"
+    ],
+    "key_claims": [
+      "Narrow reading: Article 51 self-defense is triggered only by an actual or imminent armed attack by a state attributable under international law",
+      "Expansive reading: Article 51 inherent right permits preemptive force against non-state actors when host state is unwilling/unable to act",
+      "Security Council: Article 51 is an exception to Article 2(4) prohibition on force, not a standalone authorization",
+      "Powerful states post-9/11: Transnational terrorism creates gaps in Charter framework that self-defense must fill"
+    ],
+    "key_mechanisms": [
+      "Security Council veto system (P5 monopoly on enforcement authorization; deadlock permits unilateral action in practice)",
+      "Customary international law evolution (state practice + opinio juris can modify Charter interpretation over time)",
+      "Imminence doctrine (Caroline test: necessity must be instant, overwhelming, leaving no choice of means, no moment for deliberation)"
+    ],
+    "key_absences": [
+      "Absence of enforcement mechanism for Charter violations (no sanction for expansive reading violations beyond reputational cost)",
+      "Absence of agreed definition of 'armed attack' threshold (accumulation-of-events doctrine vs single-incident requirement)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article 51 UN Charter text as fixed reference point for legitimate self-defense claims—all parties invoke it as the authoritative source, but read it differently",
+    "authority_description": "Interpretive legitimacy contested between ICJ judicial interpretation (narrow reading's institutional anchor) and state practice/custom (expansive reading's evolutionary anchor). Security Council authorization serves as procedural override but is structurally paralyzed by P5 veto.",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_authority_contest",
+    "is_contested_kernel": true,
+    "kernel_id": "article_51_self_defense",
+    "readings": [
+      {
+        "reading_id": "narrow_armed_attack_reading",
+        "commitment": "Self-defense is constrained to responses to an actual or imminent armed attack by a state attributable under international law",
+        "authority_grounding": "ICJ judicial interpretation (Nicaragua case, Oil Platforms case); collective security primacy via Security Council Article 39 authority",
+        "sibling_readings": [
+          "expansive_preventive_reading",
+          "unable_unwilling_doctrine_reading"
+        ],
+        "expected_structural_delta": "High constraint on unilateral force; non-state actor threats do not trigger Article 51 unless attributable to host state; beneficiaries are weaker states and multilateral institutions whose authority is preserved; victims are powerful states whose strategic freedom is constrained",
+        "beneficiary": "weaker_states_and_multilateral_institutions",
+        "victim": "militarily_powerful_states",
+        "epsilon_bin": "high",
+        "hypothesis": "rope"
+      },
+      {
+        "reading_id": "expansive_preventive_reading",
+        "commitment": "Self-defense extends to preemptive or preventive uses of force against non-state actors or emerging threats when necessity is demonstrated",
+        "authority_grounding": "State practice (US, Israel, Russia); sovereign security discretion; Bush Doctrine post-9/11; customary law evolution claim",
+        "sibling_readings": [
+          "narrow_armed_attack_reading",
+          "unable_unwilling_doctrine_reading"
+        ],
+        "expected_structural_delta": "Low constraint on unilateral force; necessity determination is self-judged by acting state; beneficiaries are militarily capable states and defense sectors; victims are target-region populations and multilateral veto authority",
+        "beneficiary": "militarily_capable_states_and_defense_sectors",
+        "victim": "target_region_populations_and_multilateral_authority",
+        "epsilon_bin": "low",
+        "hypothesis": "tangled_rope"
+      },
+      {
+        "reading_id": "unable_unwilling_doctrine_reading",
+        "commitment": "Self-defense is triggered when a non-state actor attack originates from a host state that is unwilling or unable to suppress the threat, creating a hybrid constraint",
+        "authority_grounding": "Hybrid: accepts ICJ state-attribution requirement but loosens it via inability/unwillingness proxy; US legal position post-Syria strikes; pragmatic accommodation",
+        "sibling_readings": [
+          "narrow_armed_attack_reading",
+          "expansive_preventive_reading"
+        ],
+        "expected_structural_delta": "Moderate constraint—requires non-state actor attack to have occurred (not purely preventive) but permits unilateral response when host state fails to act; beneficiaries are intervening states with counterterrorism mandates; victims are host states whose sovereignty is bypassed",
+        "beneficiary": "counterterrorism_mandate_states",
+        "victim": "weak_host_states_and_sovereignty_norms",
+        "epsilon_bin": "mod",
+        "hypothesis": "scaffold"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "narrow_armed_attack_reading",
+        "reading_b": "expansive_preventive_reading",
+        "basis": "Narrow reading's foundational axiom is that Charter Article 2(4) prohibition on force is the rule and Article 51 is a narrow exception requiring Security Council authorization or actual armed attack; expansive reading's axiom is that inherent sovereign right of self-defense predates the Charter and permits unilateral judgment of necessity. No single coherent framework can hold both: accepting Security Council primacy as binding requires rejecting unilateral necessity discretion, and vice versa."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "narrow_armed_attack_reading",
+      "human_readable": "Narrow Armed-Attack Reading (ICJ-Anchored Constraint)",
+      "structural_delta": "Self-defense constrained to actual/imminent armed attacks by states; non-state threats require Security Council authorization",
+      "primary_observable": "ICJ case law (Nicaragua, Oil Platforms); state invocations citing Article 51 + Security Council reporting under Article 51 duty",
+      "epsilon_bin": "high",
+      "hypothesis": "rope",
+      "beneficiary": "weaker_states_and_multilateral_institutions",
+      "victim": "militarily_powerful_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with high epsilon; institutionally anchored in ICJ jurisprudence; structurally distinct beneficiary/victim pair"
+    },
+    {
+      "claim_id": "expansive_preventive_reading",
+      "human_readable": "Expansive Preventive Reading (Sovereign-Discretion Constraint)",
+      "structural_delta": "Self-defense permits preemptive/preventive force against non-state threats; necessity is self-judged by acting state",
+      "primary_observable": "State practice (Bush Doctrine invocations, Israeli preventive strikes, Russian Georgia/Ukraine justifications); defense expenditure patterns in anticipatory capabilities",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "militarily_capable_states_and_defense_sectors",
+      "victim": "target_region_populations_and_multilateral_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory to narrow reading; captures post-9/11 drift in state practice; structurally opposite epsilon"
+    },
+    {
+      "claim_id": "unable_unwilling_doctrine_reading",
+      "human_readable": "Unable/Unwilling Doctrine Reading (Hybrid Sovereignty-Bypass Constraint)",
+      "structural_delta": "Self-defense triggered by non-state attack when host state cannot/will not suppress threat; hybrid constraint bypassing strict state-attribution",
+      "primary_observable": "US legal memoranda (Syria strikes 2017-18); NATO invocations post-Afghanistan; state practice distinguishing inability from unwillingness",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "counterterrorism_mandate_states",
+      "victim": "weak_host_states_and_sovereignty_norms",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Pragmatic middle position; captures real-world accommodation mechanism; structurally distinct from binary narrow/expansive opposition"
+    },
+    {
+      "claim_id": "security_council_paralysis_mechanism",
+      "human_readable": "Security Council Veto Paralysis (Authorization Bottleneck)",
+      "structural_delta": "P5 veto power creates structural deadlock on force authorization, incentivizing unilateral Article 51 claims",
+      "primary_observable": "Security Council resolution veto frequency on use-of-force matters; gap between Article 51 letters filed and Security Council authorizations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "narrow_armed_attack_reading",
+        "expansive_preventive_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain feeding all readings; structural bottleneck is context for kernel contest but not itself a reading"
+    },
+    {
+      "claim_id": "customary_law_evolution_mechanism",
+      "human_readable": "Customary Law Evolution (State Practice Drift)",
+      "structural_delta": "Repeated expansive invocations + acquiescence may modify Article 51 constraint via customary international law evolution",
+      "primary_observable": "State practice frequency; opinio juris evidence in legal memoranda; third-party state responses (protest vs acquiescence)",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "expansive_preventive_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism of drift rather than a reading; captured implicitly in expansive reading's authority grounding"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "narrow_armed_attack_reading",
+      "kernel_id": "article_51_self_defense",
+      "reading_id": "narrow_armed_attack_reading"
+    },
+    {
+      "claim_id": "expansive_preventive_reading",
+      "kernel_id": "article_51_self_defense",
+      "reading_id": "expansive_preventive_reading"
+    },
+    {
+      "claim_id": "unable_unwilling_doctrine_reading",
+      "kernel_id": "article_51_self_defense",
+      "reading_id": "unable_unwilling_doctrine_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "security_council_paralysis_mechanism",
+      "structural_delta": "P5 veto creates authorization bottleneck incentivizing unilateral claims",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream structural constraint feeding all readings; provides context but not itself a reading of Article 51"
+    },
+    {
+      "claim_id": "customary_law_evolution_mechanism",
+      "structural_delta": "State practice may modify Article 51 constraint via customary law",
+      "hypothesis": "piton",
+      "deferral_reason": "Mechanism of drift rather than distinct reading; captured in expansive reading's authority grounding"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_icj_enforcement_gap",
+      "description": "ICJ lacks enforcement power—narrow reading's authority is judicial but not coercive. If powerful states ignore ICJ rulings, does narrow reading become a Piton (atrophied norm) rather than a Rope (functioning constraint)?",
+      "source": "Absence Inventory (no enforcement mechanism for Charter violations)"
+    },
+    {
+      "id": "omega_armed_attack_threshold",
+      "description": "Absence of agreed 'armed attack' threshold—accumulation-of-events vs single-incident. Does this ambiguity structurally advantage expansive reading by creating interpretive space for lowering the trigger?",
+      "source": "Absence Inventory (no agreed definition of armed attack)"
+    },
+    {
+      "id": "omega_cyber_attacks",
+      "description": "Does Article 51 apply to cyber attacks? Neither reading explicitly addresses non-kinetic threats. Omission may require fourth reading (cyber-equivalence doctrine) for structural completeness.",
+      "source": "Dark Matter Probe 2 (Absence Inventory—domain gap)"
+    },
+    {
+      "id": "omega_reading_selection_bias",
+      "description": "Three-reading selection may underweight emerging 'humanitarian intervention as self-defense' hybrid (R2P claims invoking Article 51). Deferred but structurally relevant to Global South victim analysis.",
+      "source": "Selection budget constraint + Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition is clean: three readings are structurally distinct (different epsilon bins, different beneficiary/victim pairs), axiom contradiction between narrow and expansive is validated (Security Council primacy vs sovereign discretion cannot coexist), and unable/unwilling doctrine occupies genuine middle ground. Security Council paralysis and customary evolution are correctly deferred as mechanisms rather than readings."
+  },
+  "_seed_id": "un_charter_article_51_self_defense"
+}

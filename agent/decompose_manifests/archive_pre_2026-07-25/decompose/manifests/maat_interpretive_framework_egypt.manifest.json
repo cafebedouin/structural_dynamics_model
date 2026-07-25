@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Ancient History / Political Philosophy / Religious Studies",
+  "family_id": "maat_cosmic_political_order",
+  "topic_summary": "Analysis of Ma'at as both cosmic principle and political legitimation framework in ancient Egypt. The concept functioned as a stabilized kernel grounding pharaonic authority, with contested readings determining whether Ma'at justified absolute extraction or imposed reciprocal obligations on rulers. Central tension between divine mandate interpretation and justice-reciprocity interpretation shaped the relationship between central authority and local power structures across dynasties.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Ma'at (cosmic order principle; goddess personification; textual/liturgical kernel)",
+      "Pharaoh (divine king; chief interpreter of Ma'at; central authority)",
+      "Nomarchs (provincial governors; local authority; alternative interpreters)",
+      "Priesthood (ritual specialists; Ma'at doctrine custodians; interpretive mediators)",
+      "Commoners (agricultural laborers; corvée subjects; recipients of justice claims)"
+    ],
+    "key_tensions": [
+      "Centralized extraction vs reciprocal obligation (Pharaoh's reading vs nomarch/commoner counter-reading of Ma'at's demands)",
+      "Cosmic immutability vs political flexibility (Ma'at as eternal law vs Ma'at as responsive to conditions)"
+    ],
+    "key_mechanisms": [
+      "Royal titulary and coronation rituals establishing Pharaoh as Ma'at's guarantor",
+      "Nome system creating distributed authority with independent Ma'at interpretation capacity",
+      "Funerary literature (Pyramid Texts, Coffin Texts, Book of the Dead) encoding Ma'at claims accessible beyond royal monopoly"
+    ],
+    "key_absences": [
+      "Explicit constitutional mechanism for deposing rulers who violated Ma'at (claimed immutability without formal revision pathway)",
+      "Documentation of commoner theological argumentation (elite textual monopoly obscures subaltern Ma'at interpretation)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Ma'at as cosmic order principle encompassing truth, justice, balance, and reciprocity — stabilized through religious texts, iconography, and ritual practice as the foundational legitimation substrate for political authority",
+    "authority_description": "Pharaoh claims interpretive primacy as divine intermediary; priesthood provides ritual validation; nomarchs assert parallel interpretive capacity grounded in local Ma'at maintenance obligations",
+    "drift_status": "partial",
+    "candidate_pattern": "Theocratic Mandate (pharaonic reading) / Constitutional Norm (reciprocity reading)",
+    "is_contested_kernel": true,
+    "kernel_id": "maat_order_principle",
+    "readings": [
+      {
+        "reading_id": "divine_mandate_reading",
+        "commitment": "Ma'at flows from cosmic divine order through Pharaoh to society; ruler embodies Ma'at and cannot violate it by definition",
+        "authority_grounding": "Divine kingship doctrine; solar theology identifying Pharaoh with Ra; royal monopoly on cosmic mediation",
+        "sibling_readings": [
+          "reciprocity_reading",
+          "distributed_maintenance_reading"
+        ],
+        "expected_structural_delta": "Pharaoh outside constraint system as source rather than subject; Ma'at claims cannot constrain royal action; extraction justified as cosmic necessity; high suppression of alternative readings"
+      },
+      {
+        "reading_id": "reciprocity_reading",
+        "commitment": "Ma'at imposes mutual obligations; Pharaoh must provide justice, stability, and proper resource distribution to maintain cosmic balance",
+        "authority_grounding": "Wisdom literature (Instructions of Ptahhotep, etc.); legal precedent; nomarch autonomy traditions; Middle Kingdom weakening of absolute claims",
+        "sibling_readings": [
+          "divine_mandate_reading",
+          "distributed_maintenance_reading"
+        ],
+        "expected_structural_delta": "Pharaoh subject to Ma'at constraints; failed obligations justify resistance or withdrawal of support; moderate extraction ceiling grounded in reciprocity norm"
+      },
+      {
+        "reading_id": "distributed_maintenance_reading",
+        "commitment": "Ma'at maintenance is distributed responsibility; all actors from Pharaoh to commoner sustain cosmic order through proper conduct in their station",
+        "authority_grounding": "Democratization of afterlife access (First Intermediate Period onward); proliferation of Ma'at declarations in non-royal funerary texts; local temple theology",
+        "sibling_readings": [
+          "divine_mandate_reading",
+          "reciprocity_reading"
+        ],
+        "expected_structural_delta": "Multiple legitimate Ma'at interpreters; authority grounded in demonstrated maintenance rather than inherent status; lowest extraction via distributed accountability"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "divine_mandate_reading",
+        "reading_b": "reciprocity_reading",
+        "basis": "Divine mandate places Pharaoh as source of Ma'at (cannot violate what one embodies); reciprocity places Pharaoh as subject to Ma'at (can violate obligations). No framework can hold both: either the ruler is constrained by the norm or the norm flows from the ruler."
+      },
+      {
+        "reading_a": "divine_mandate_reading",
+        "reading_b": "distributed_maintenance_reading",
+        "basis": "Divine mandate centralizes Ma'at interpretation in royal person as cosmic mediator; distributed maintenance denies interpretive monopoly and grounds authority in maintenance performance. These axioms are mutually exclusive regarding locus of interpretive legitimacy."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "divine_mandate_reading",
+      "human_readable": "Divine Mandate Reading (Ma'at Embodied in Pharaoh)",
+      "structural_delta": "Pharaoh as cosmic intermediary embodying Ma'at rather than subject to it; authority flows from divine status rather than performance of obligations",
+      "primary_observable": "Royal titulary density (epithets claiming Ma'at embodiment); absence of mechanisms for deposing unjust rulers; corvée labor extraction levels",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "pharaonic_administration",
+      "victim": "corvée_labor_force",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core authoritarian reading with highest extraction coefficient; establishes baseline for comparative analysis"
+    },
+    {
+      "claim_id": "reciprocity_reading",
+      "human_readable": "Reciprocity Reading (Ma'at as Mutual Obligation)",
+      "structural_delta": "Ma'at imposes constraints on ruler; authority conditional on justice provision and resource reciprocity; violations justify resistance",
+      "primary_observable": "Wisdom literature maxims constraining royal conduct; nomarch autonomy periods; evidence of legitimacy crises following failed Nile floods or military defeats",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct constraint regime with different extractiveness; direct challenge to divine mandate reading"
+    },
+    {
+      "claim_id": "distributed_maintenance_reading",
+      "human_readable": "Distributed Maintenance Reading (Ma'at as Universal Responsibility)",
+      "structural_delta": "Ma'at maintenance distributed across social hierarchy; authority grounded in demonstrated maintenance rather than inherited status; multiple legitimate interpreters",
+      "primary_observable": "Proliferation of Ma'at declarations in non-royal tombs; local temple Ma'at theology; First Intermediate Period decentralization patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Most democratized reading; captures historical trajectory toward interpretive pluralism; completes spectrum of authority-grounding models"
+    },
+    {
+      "claim_id": "priesthood_mediation_axis",
+      "human_readable": "Priesthood as Interpretive Arbiter",
+      "structural_delta": "Priestly class mediates between royal claims and popular expectations; ritual validation as leverage for constraining Pharaoh",
+      "primary_observable": "Priestly land holdings and autonomy; temple building patronage patterns; priesthood succession mechanisms",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "priestly_hierarchy",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "divine_mandate_reading",
+        "reciprocity_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional mechanism rather than reading; captured indirectly through authority_grounding in readings"
+    },
+    {
+      "claim_id": "nile_flood_legitimacy_axis",
+      "human_readable": "Nile Flood as Ma'at Performance Metric",
+      "structural_delta": "Agricultural productivity as observable Ma'at maintenance measure; flood failures as legitimacy crises revealing constraint violations",
+      "primary_observable": "Nilometer records; correlation between flood levels and regime stability; royal famine relief inscriptions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "reciprocity_reading",
+        "distributed_maintenance_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: physical constraint feeding legitimacy evaluations; not independent reading of Ma'at kernel itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "divine_mandate_reading",
+      "kernel_id": "maat_order_principle",
+      "reading_id": "divine_mandate_reading"
+    },
+    {
+      "claim_id": "reciprocity_reading",
+      "kernel_id": "maat_order_principle",
+      "reading_id": "reciprocity_reading"
+    },
+    {
+      "claim_id": "distributed_maintenance_reading",
+      "kernel_id": "maat_order_principle",
+      "reading_id": "distributed_maintenance_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "priesthood_mediation_axis",
+      "structural_delta": "Priestly class as interpretive arbiter between royal and popular Ma'at claims",
+      "hypothesis": "snare",
+      "deferral_reason": "Institutional mechanism rather than independent kernel reading; captured through authority_grounding descriptions in selected readings"
+    },
+    {
+      "claim_id": "nile_flood_legitimacy_axis",
+      "structural_delta": "Nile flood performance as observable Ma'at maintenance metric",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint feeding legitimacy evaluations rather than contested interpretation of Ma'at kernel; relevant as validation mechanism but not independent reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_subaltern_theology",
+      "description": "Commoner theological argumentation is absent from textual record due to elite monopoly on writing. Did non-elite populations develop alternative Ma'at interpretations not captured in priesthood or nomarch theology? Distributed maintenance reading may underestimate radical egalitarian possibilities.",
+      "source": "Extraction absence inventory (missing commoner documentation)"
+    },
+    {
+      "id": "omega_diachronic_drift",
+      "description": "Ma'at readings shifted across Old/Middle/New Kingdom periods. Divine mandate strongest in Old Kingdom; reciprocity emerges prominently in Middle Kingdom wisdom literature; distributed maintenance accelerates in First Intermediate Period. Are these sequential readings or coexisting tensions throughout? Temporal dimension may reveal reading dominance as function of centralization strength.",
+      "source": "Dark Matter Probe 1 (temporal medium as unexamined axis)"
+    },
+    {
+      "id": "omega_reading_syncretism",
+      "description": "Historical actors may have held hybrid positions rather than pure readings. A nomarch might claim reciprocity obligations constrain Pharaoh while asserting divine mandate over local peasants. Readings may be strategically invoked rather than consistently held frameworks. This analysis treats readings as coherent positions; actual practice may be opportunistic mixture.",
+      "source": "§3.1 Independence Testing (potential Type B overlap between readings)"
+    },
+    {
+      "id": "omega_foreign_policy_exclusion",
+      "description": "Ma'at as cosmic order applied differentially to Egypt vs foreign lands (isfet/chaos). Did this create parallel extraction regime for conquered territories unconstrained by any Ma'at reading? Foreign policy axis entirely absent from current decomposition; may constitute fourth reading (Ma'at as ethnic boundary rather than universal principle).",
+      "source": "Dark Matter Probe 2 (absence inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Analysis relies on secondary Egyptological literature synthesis without primary source access or hieroglyphic competence. Authority-grounding claims (e.g., 'wisdom literature constrains royal conduct') depend on scholarly interpretations that may themselves reflect modern constitutional projection onto ancient material. Divine mandate vs reciprocity distinction may impose Enlightenment-era categories onto religious framework that integrated both without perceiving contradiction. Generated omega_reading_syncretism and omega_subaltern_theology to bound uncertainty. Distributed maintenance reading particularly speculative due to sparse direct evidence for commoner theology."
+  },
+  "_seed_id": "maat_interpretive_framework_egypt"
+}

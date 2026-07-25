@@ -1,0 +1,268 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Applied Ethics / Animal Studies / Legal Philosophy",
+  "family_id": "animal_status_kernel_2026",
+  "topic_summary": "Analysis of the animal rights debate structured around three incompatible readings of animal moral/legal status: property (animals as resources with no independent moral standing), welfare-regulated-use (animals as sentient beings whose suffering should be minimized within systems of human use), and abolitionist (animals as rights-bearing individuals whose property status itself constitutes victimization). The disagreement centers on victim-set membership: whether animals belong in the victim set at all, and if so, under what conditions.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Gary Francione (Rutgers law professor, abolitionist theorist)",
+      "Tom Regan (philosopher, abolitionist: 'empty cages not bigger ones')",
+      "Peter Singer (utilitarian philosopher, animal liberation)",
+      "Robert Garner (Leicester politics professor, welfare theorist)",
+      "RSPCA-Assured (welfare certification scheme)",
+      "Animal Rising (abolitionist movement against animal farming)",
+      "Nonhuman Rights Project (legal personhood litigation)",
+      "Animal Liberation Front (direct action abolitionist group)"
+    ],
+    "key_claims": [
+      "Nearly all U.S. animal protection law is welfare-based, not rights-based (legal status claim)",
+      "Animals are legally property, not rights-bearing individuals (legal classification claim)",
+      "Welfare regulation makes public comfortable with 'happy' animal use, prolonging property status (Francione's strategic claim)",
+      "No country has prohibited animal use in research or food (political reality claim)",
+      "France, New Zealand, Quebec, Spain, Germany, Switzerland, Austria, Portugal recognize animals as sentient beings (legal evolution claim)",
+      "All sentient beings share basic right not to be treated as property (abolitionist axiom)",
+      "Incremental welfare improvements are desirable regardless of strategic effects (Garner's counter-claim)"
+    ],
+    "key_tensions": [
+      "Abolitionist vs welfare strategic conflict: whether welfare reforms undermine or advance animal protection",
+      "Property status vs sentience recognition: legal classification vs moral/scientific consensus",
+      "Incremental reform vs systemic abolition: whether to work within or dismantle existing systems",
+      "Victim-set membership: whether animals are victims of cruelty-within-use, use-itself, or neither"
+    ],
+    "key_mechanisms": [
+      "Welfare certification schemes (RSPCA-Assured) that regulate conditions of use without challenging use itself",
+      "Legal personhood litigation (Nonhuman Rights Project) attempting to reclassify animals from property to persons",
+      "Property status as constraint mechanism: animals' legal classification subordinates their interests to owners' economic interests by definition"
+    ],
+    "key_absences": [
+      "Ecological/environmental dimension: how animal status readings interact with habitat destruction, climate, biodiversity (mentioned nowhere in research)",
+      "Non-Western/Indigenous frameworks: research presents exclusively Western philosophical debate (SPCA England, American philosophers)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The moral and legal status of nonhuman animals: whether they are property (resources), sentient beings whose suffering matters within systems of use, or rights-bearing individuals whose use itself constitutes violation",
+    "authority_description": "Contested across three domains: legal systems (property law, animal welfare statutes), philosophical traditions (utilitarian, deontological, abolitionist), and social movements (welfare organizations, abolitionist groups). No single interpretive authority; each reading grounds legitimacy differently (legal precedent, philosophical argument, moral intuition about sentience).",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Pluralism with Suppressed Revision (Pattern 3)",
+    "is_contested_kernel": true,
+    "kernel_id": "animal_moral_status",
+    "readings": [
+      {
+        "reading_id": "property_reading",
+        "commitment": "Animals are property/resources with no independent moral standing; their interests are subordinate to human interests by definition",
+        "authority_grounding": "Legal precedent (property law tradition), economic framework (animals as capital goods)",
+        "sibling_readings": [
+          "welfare_reading",
+          "abolitionist_reading"
+        ],
+        "expected_structural_delta": "Animals not in victim set; no constraint on use, only on waste/inefficiency; beneficiary: property owners/users; ε bin: v_low (property rights are mountains)"
+      },
+      {
+        "reading_id": "welfare_reading",
+        "commitment": "Animals are sentient beings whose suffering should be minimized within systems of regulated use; cruelty is wrong, use is permissible",
+        "authority_grounding": "Scientific consensus on sentience, utilitarian ethics (suffering minimization), regulatory frameworks (animal welfare statutes)",
+        "sibling_readings": [
+          "property_reading",
+          "abolitionist_reading"
+        ],
+        "expected_structural_delta": "Animals in victim set for cruelty, not for use; constraint on methods of use, not use itself; beneficiary: welfare organizations (legitimacy), regulated industries (public comfort); victim: animals suffering under 'humane' use; ε bin: low to moderate (rope with tangled_rope overlay)"
+      },
+      {
+        "reading_id": "abolitionist_reading",
+        "commitment": "Animals are rights-bearing individuals; property status itself is the violation; all use, however 'humane,' perpetuates victimization",
+        "authority_grounding": "Deontological ethics (inherent rights), sentience as sufficient condition for moral standing, abolitionist philosophical tradition (Francione, Regan)",
+        "sibling_readings": [
+          "property_reading",
+          "welfare_reading"
+        ],
+        "expected_structural_delta": "Animals in victim set by virtue of property status; constraint prohibits use, not just cruelty; beneficiary: none (abolition eliminates the use-relationship); victim: all animals under human dominion; ε bin: high (tangled_rope or snare, depending on whether property status is seen as contingent or structural)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "property_reading",
+        "reading_b": "abolitionist_reading",
+        "basis": "Property reading holds that animals have no independent moral standing (interests subordinate by definition); abolitionist reading holds that sentience alone confers the right not to be property. No coherent framework can hold both: accepting animals as rights-bearers requires rejecting their status as mere resources, and vice versa."
+      },
+      {
+        "reading_a": "welfare_reading",
+        "reading_b": "abolitionist_reading",
+        "basis": "Welfare reading holds that use is permissible if suffering is minimized (cruelty is the wrong, not use); abolitionist reading holds that property status itself is the wrong (use is inherently violative regardless of conditions). No coherent framework can hold both: accepting that 'humane use' is morally permissible requires rejecting the claim that all use violates rights, and vice versa."
+      }
+    ],
+    "notes": "Property vs welfare is NOT axiom-contradictory: a consequentialist framework could hold both as complementary (property rights as default, welfare regulation as constraint on externalities). The welfare/abolitionist split is the deeper fracture: whether suffering-minimization within use is morally adequate or whether use itself is categorically impermissible."
+  },
+  "axes": [
+    {
+      "claim_id": "property_reading",
+      "human_readable": "Property Reading: Animals as Resources",
+      "structural_delta": "Animals classified as property with no independent moral standing; interests subordinate to owners' by legal and economic definition",
+      "primary_observable": "Legal classification (property law), economic treatment (capital goods accounting), absence of standing to sue",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "welfare_reading",
+        "abolitionist_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing legal/economic substrate; all other readings respond to or modify this baseline"
+    },
+    {
+      "claim_id": "welfare_reading",
+      "human_readable": "Welfare Reading: Regulated Use with Suffering Minimization",
+      "structural_delta": "Animals as sentient beings whose suffering matters within systems of use; cruelty constrained, use permitted",
+      "primary_observable": "Welfare statutes (transport, slaughter, research protocols), certification schemes (RSPCA-Assured), public opinion on 'humane' animal products",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "welfare_organizations",
+      "victim": "animals_under_regulated_use",
+      "downstream_of": [
+        "property_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Dominant institutional reading; tangled_rope with identifiable beneficiary (welfare orgs gain legitimacy, regulated industries gain public comfort); structurally distinct from property baseline and abolitionist challenge"
+    },
+    {
+      "claim_id": "abolitionist_reading",
+      "human_readable": "Abolitionist Reading: Property Status as Inherent Violation",
+      "structural_delta": "Animals as rights-bearing individuals; property status itself is the wrong; all use perpetuates victimization regardless of conditions",
+      "primary_observable": "Abolitionist movement size/influence, legal personhood litigation outcomes (Nonhuman Rights Project), vegan adoption rates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "all_animals_under_human_dominion",
+      "downstream_of": [
+        "property_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream challenge to property baseline; snare hypothesis (property status as trap); structurally distinct victim set (all animals, not just those suffering cruelty)"
+    },
+    {
+      "claim_id": "sentience_threshold",
+      "human_readable": "Sentience as Moral Threshold",
+      "structural_delta": "Scientific consensus on animal sentience vs legal/moral recognition; gap between empirical knowledge and institutional response",
+      "primary_observable": "Sentience research (Cambridge Declaration 2012), legal recognition statutes (France, NZ, Quebec), public awareness surveys",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "welfare_reading",
+        "abolitionist_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: sentience recognition is embedded in both welfare and abolitionist readings; independent axis would duplicate their upstream substrate"
+    },
+    {
+      "claim_id": "strategic_conflict",
+      "human_readable": "Welfare Reform as Abolitionist Obstacle",
+      "structural_delta": "Whether incremental welfare improvements undermine or advance animal protection; Francione's 'happy meat' critique vs Garner's incrementalism",
+      "primary_observable": "Correlation between welfare reforms and public comfort with animal use, vegan adoption rates in jurisdictions with strong vs weak welfare laws",
+      "epsilon_bin": "moderate",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "welfare_organizations",
+      "victim": "abolitionist_movement",
+      "downstream_of": [
+        "welfare_reading",
+        "abolitionist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: strategic conflict is a second-order effect of the welfare/abolitionist axiom contradiction; captured in the readings themselves"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "property_reading",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "property_reading"
+    },
+    {
+      "claim_id": "welfare_reading",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "welfare_reading"
+    },
+    {
+      "claim_id": "abolitionist_reading",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "abolitionist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "sentience_threshold",
+      "structural_delta": "Scientific consensus on sentience vs legal/moral recognition gap",
+      "hypothesis": "rope",
+      "deferral_reason": "Sentience recognition is embedded in both welfare and abolitionist readings as upstream substrate; independent axis would duplicate their foundations without adding structural novelty"
+    },
+    {
+      "claim_id": "strategic_conflict",
+      "structural_delta": "Whether welfare reforms undermine or advance animal protection",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Strategic conflict is second-order effect of welfare/abolitionist axiom contradiction; the readings themselves capture the structural disagreement; this axis would analyze movement dynamics rather than constraint structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_ecological_absence",
+      "description": "Research presents exclusively individualist ethics debate (property, welfare, rights). Absent: ecological/environmental dimension. How do the three readings interact with habitat destruction, climate, biodiversity? Does abolitionist reading extend to wild animals (anti-predation intervention)? Does welfare reading address ecosystem-level harms? Ecological lens may reveal fourth reading or reclassify existing ones.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_non_western_frameworks",
+      "description": "Research is exclusively Western (SPCA England, American philosophers, European legal reforms). Absent: Indigenous frameworks, non-Western philosophical traditions (Buddhist, Jain, Confucian animal ethics). Do these traditions instantiate different readings of the kernel, or do they map onto the three identified? Potential fifth reading or evidence that the three-reading structure is culturally contingent.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_property_mountain_validity",
+      "description": "Property reading classified as mountain (v_low ε). But is property status a physical constraint or a legal piton? Legal systems have reclassified humans from property (slavery abolition) and are beginning to reclassify some animals (sentience statutes, personhood litigation). If property status is revisable, it may be a piton (atrophied legal choice) rather than a mountain. Reclassification would affect all downstream constraint stories.",
+      "source": "F03 (Hasty Generalization) + Mountain Check"
+    },
+    {
+      "id": "omega_welfare_beneficiary_structure",
+      "description": "Welfare reading identifies welfare organizations and regulated industries as beneficiaries. But is the beneficiary structure stable or does it shift? If welfare reforms genuinely reduce suffering, animals benefit (not just organizations). If Francione is correct ('happy meat' prolongs property status), animals are victims. The beneficiary/victim classification may depend on empirical question (do welfare reforms delay or advance abolition?) that the model cannot adjudicate.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + welfare_reading classification"
+    },
+    {
+      "id": "omega_abolitionist_epsilon",
+      "description": "Abolitionist reading assigned high ε (snare). But extractiveness depends on whether property status is contingent (high ε, snare) or structural (low ε, mountain). If property status is legally revisable (omega_property_mountain_validity), abolitionist reading may have lower ε than assigned. If property status is entrenched (legal path dependency, economic lock-in), ε may be even higher. Epsilon bin may need revision after property_reading generation.",
+      "source": "§2.2 Preliminary Classification + omega_property_mountain_validity coupling"
+    },
+    {
+      "id": "omega_victim_set_empirics",
+      "description": "The three readings emit different victim sets (property: none; welfare: animals suffering cruelty; abolitionist: all animals under human dominion). But victim-set membership is not purely definitional—it depends on empirical claims about animal sentience, capacity for suffering, and moral standing. If sentience research expands (e.g., fish, invertebrates, plants), victim sets may expand or contract. The readings may be stable interpretive frameworks applied to shifting empirical substrate.",
+      "source": "§1.1 Extraction + sentience_threshold deferred axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: property_reading classified as mountain (v_low ε) but property status may be legally revisable piton rather than physical constraint. Slavery abolition and emerging sentience statutes suggest legal reclassification is possible. Generated omega_property_mountain_validity to bound this uncertainty. If property status is piton, all downstream ε bins may need revision."
+  },
+  "_seed_id": "animal_rights_kernel"
+}

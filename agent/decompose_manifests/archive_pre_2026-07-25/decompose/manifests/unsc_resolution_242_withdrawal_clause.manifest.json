@@ -1,0 +1,260 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Diplomatic History / Treaty Interpretation",
+  "family_id": "unsc_242_withdrawal_clause",
+  "topic_summary": "Analysis of UNSC Resolution 242's withdrawal clause ambiguity, where the English text ('from territories occupied') lacks the definite article present in the equally authentic French text ('des territoires occupés'). Two interpretive readings instantiate structurally different constraints: maximal withdrawal grounded in territorial integrity norms versus partial withdrawal grounded in negotiated ambiguity and secure boundaries.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "UNSC Resolution 242 (Nov 22, 1967 - foundational text with dual-language ambiguity)",
+      "Israeli armed forces (occupying power post-1967 war)",
+      "Occupied territories (West Bank, Gaza, Golan Heights, Sinai - variable claim status)",
+      "UN Charter Article 2(4) (territorial integrity norm - cited by maximal reading)",
+      "Drafting states (UK, US, USSR - whose intent grounds partial reading)",
+      "Palestinian claimants/Jordanian/Syrian/Egyptian sovereigns (dispossessed parties)"
+    ],
+    "key_tensions": [
+      "Territorial integrity norm (Charter Article 2(4)) vs. secure boundaries principle (Resolution's preamble)",
+      "Treaty interpretation method: textualist uniformity vs. drafters' intent and subsequent practice"
+    ],
+    "key_claims": [
+      "English indefinite article ('territories') was deliberate negotiated ambiguity, not translation error (stated by US/UK drafters)",
+      "French definite article ('des territoires') reflects Charter territorial integrity norm and should control (argued by Arab states, many legal scholars)",
+      "Israel has withdrawn from Sinai (1982) and Gaza (2005), treating clause as partial (state practice)",
+      "International Court of Justice Wall Advisory Opinion (2004) cited 242 for full withdrawal obligation (contested judicial interpretation)"
+    ],
+    "mechanisms": [
+      {
+        "id": "translation_ambiguity_preservation",
+        "description": "Dual authentic texts with divergent articles allowed both readings to remain legally live",
+        "agents": "UN Secretariat translation services, Security Council drafters",
+        "targets": "Subsequent peace negotiators inheriting unresolved interpretive fork"
+      },
+      {
+        "id": "negotiated_incrementalism",
+        "description": "Partial withdrawal reading enables phased territorial concessions linked to security guarantees",
+        "agents": "Israeli government, US mediators",
+        "targets": "Palestinian Authority, neighboring Arab states in bilateral talks"
+      },
+      {
+        "id": "normative_reversion",
+        "description": "Maximal reading invokes Charter's territorial integrity as default that occupation cannot override",
+        "agents": "ICJ, UN General Assembly majorities, dispossessed claimants",
+        "targets": "Occupying power's legal position in international fora"
+      }
+    ],
+    "absences": [
+      {
+        "id": "subsequent_resolution_253",
+        "description": "UNSC Res 253 (1968, Rhodesia) used definite article explicitly ('from the territories') - suggests 242's indefinite was not accidental"
+      },
+      {
+        "id": "vienna_convention_interpretive_rules",
+        "description": "VCLT Article 33 (equally authentic texts) not addressed - would require harmonious reading or recourse to object/purpose"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "maximal_withdrawal_reading",
+      "human_readable": "Maximal Withdrawal Reading (Charter Territorial Integrity Norm)",
+      "structural_delta": "Treats withdrawal as mandatory from all occupied territories per Charter Article 2(4) territorial integrity default, with French definite article as controlling; indefinite English seen as translation variance",
+      "primary_observable": "Legal arguments citing French text and Charter norms; ICJ/UNGA resolutions invoking full withdrawal",
+      "epsilon_bin": "high",
+      "hypothesis": "rope",
+      "beneficiary": "dispossessed_claimants",
+      "victim": "occupying_power_legal_position",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel - instantiates Rope constraint binding occupier to full retrocession"
+    },
+    {
+      "claim_id": "partial_withdrawal_reading",
+      "human_readable": "Partial Withdrawal Reading (Negotiated Ambiguity & Secure Boundaries)",
+      "structural_delta": "Treats indefinite English article as deliberate, granting discretion over which territories per drafters' intent and secure boundaries principle; converts indefiniteness into bargaining asset",
+      "primary_observable": "Diplomatic statements citing English text and drafters' memoirs; Israeli state practice (Sinai withdrawal, Gaza retention variances)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "occupying_power_negotiating_position",
+      "victim": "claimants_without_fixed_enforcement_line",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel - instantiates Ledger converting ambiguity into extractable negotiating leverage"
+    },
+    {
+      "claim_id": "interpretive_authority_structure",
+      "human_readable": "Interpretive Authority Structure (Who Decides the Kernel)",
+      "structural_delta": "Contest over which institution holds authority to resolve the textual ambiguity: Security Council (political), ICJ (judicial), or state practice (customary)",
+      "primary_observable": "Invocation patterns in disputes; whether parties accept ICJ/UNGA interpretations or cite drafters' intent",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "authority_claimant_with_veto_power",
+      "victim": "parties_seeking_definitive_legal_resolution",
+      "downstream_of": [],
+      "feeds_into": [
+        "maximal_withdrawal_reading",
+        "partial_withdrawal_reading"
+      ],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Meta-axis: the authority structure determining which reading prevails is itself contested, feeds into both readings"
+    },
+    {
+      "claim_id": "secure_boundaries_mountain",
+      "human_readable": "Secure Boundaries as Geopolitical Constraint",
+      "structural_delta": "Physical military vulnerability if 1949 armistice lines restored without security arrangements",
+      "primary_observable": "Strategic depth metrics, rocket range data from Gaza/West Bank high ground",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "partial_withdrawal_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain feeding into partial reading but lower structural distinctiveness; security claim present in both readings' narratives"
+    },
+    {
+      "claim_id": "settlement_expansion_piton",
+      "human_readable": "Settlement Expansion as Fait Accompli Strategy",
+      "structural_delta": "Civilian settlement construction in occupied territories creates facts on ground that raise withdrawal costs",
+      "primary_observable": "Settlement population growth rates; land area under Israeli civil law vs. military administration",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "settlement_movement",
+      "victim": "territorial_claimants_facing_irreversibility",
+      "downstream_of": [
+        "partial_withdrawal_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton downstream of partial reading; captures extraction mechanism but adds limited structural novelty to kernel decomposition"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "maximal_withdrawal_reading",
+      "kernel_id": "unsc_242_withdrawal_clause",
+      "reading_id": "maximal_withdrawal_reading"
+    },
+    {
+      "claim_id": "partial_withdrawal_reading",
+      "kernel_id": "unsc_242_withdrawal_clause",
+      "reading_id": "partial_withdrawal_reading"
+    },
+    {
+      "claim_id": "interpretive_authority_structure",
+      "kernel_id": "unsc_242_withdrawal_clause",
+      "reading_id": "interpretive_authority_structure"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "secure_boundaries_mountain",
+      "structural_delta": "Physical military vulnerability from 1949 armistice lines",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain feeding partial reading but lower structural distinctiveness than authority axis; security rationale present in both readings' narratives"
+    },
+    {
+      "claim_id": "settlement_expansion_piton",
+      "structural_delta": "Settlement construction as irreversibility mechanism",
+      "hypothesis": "piton",
+      "deferral_reason": "Piton downstream of partial reading; extraction mechanism but limited structural novelty for kernel decomposition"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_vienna_convention_gap",
+      "description": "VCLT Article 33 (equally authentic texts) requires harmonious reading or object/purpose analysis if texts diverge. Neither reading addresses this: maximal dismisses English as error, partial dismisses French as non-binding. A third reading grounded in VCLT method might require secure-boundaries-compatible full withdrawal.",
+      "source": "Absence Inventory (Dark Matter Probe 2) - vienna_convention_interpretive_rules"
+    },
+    {
+      "id": "omega_subsequent_resolution_pattern",
+      "description": "UNSC Res 253 (1968, Rhodesia) explicitly used 'from the territories' with definite article, suggesting 242's indefinite was deliberate. But 242 drafters' memoirs claim ambiguity was compromise to secure Soviet/Arab votes. Both readings ignore this counter-evidence to their textual claims.",
+      "source": "Absence Inventory (Dark Matter Probe 2) - subsequent_resolution_253"
+    },
+    {
+      "id": "omega_reading_coexistence",
+      "description": "Can both readings remain socially live indefinitely? The dual-text ambiguity may be a Scaffold (enabling negotiation) rather than a Rope or Ledger. If neither side can definitively win the interpretive contest, the ambiguity itself becomes the structure.",
+      "source": "Independence Testing (§3) - potential Type B overlap between authority axis and readings"
+    },
+    {
+      "id": "omega_icj_authoritative_status",
+      "description": "Does ICJ Wall Advisory Opinion (2004) settle maximal reading as binding? Opinion cited 242 for full withdrawal but was advisory, not contentious jurisdiction. Partial reading proponents reject its authority. Authority axis selected to capture this meta-dispute.",
+      "source": "Extraction claim 4 + Authority axis selection"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition proceeded as designed: two readings instantiating genuinely different constraints (Rope vs. Ledger) from same textual substrate, plus meta-axis capturing authority contest. Deferred axes (mountain, piton) documented for omega-level treatment."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The withdrawal clause of UNSC Resolution 242 (1967), whose English text lacks the definite article ('from territories occupied') while the equally authentic French text includes it ('des territoires occupés'), creating a persisting interpretive fork in a binding Security Council resolution",
+    "authority_description": "Contested between: (1) ICJ/UNGA invoking Charter territorial integrity norm and French text, (2) drafting states (UK/US) invoking negotiating record and English text, (3) occupying state invoking subsequent practice and security rationale. No single authority has succeeded in definitively resolving the ambiguity.",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Ledger - ambiguity converts into bargaining asset; revision denied because both sides claim fidelity to original text",
+    "is_contested_kernel": true,
+    "kernel_id": "unsc_242_withdrawal_clause",
+    "readings": [
+      {
+        "reading_id": "maximal_withdrawal_reading",
+        "commitment": "Withdrawal is mandatory from all occupied territories per Charter Article 2(4) territorial integrity default; French definite article controls",
+        "authority_grounding": "ICJ judicial interpretation, UN Charter hierarchy, international law principle that occupation cannot yield sovereignty",
+        "sibling_readings": [
+          "partial_withdrawal_reading",
+          "interpretive_authority_structure"
+        ],
+        "expected_structural_delta": "Instantiates Rope binding occupier to full retrocession; beneficiaries are dispossessed claimants with enforceable legal position; ε high because constraint is mandatory and comprehensive"
+      },
+      {
+        "reading_id": "partial_withdrawal_reading",
+        "commitment": "Withdrawal scope is discretionary per drafters' intent encoded in indefinite English article; secure boundaries principle permits retention of strategic territories",
+        "authority_grounding": "Drafting states' memoirs and diplomatic practice, subsequent state behavior (Sinai withdrawal but West Bank/Golan retention), bilateralism trumping multilateral interpretation",
+        "sibling_readings": [
+          "maximal_withdrawal_reading",
+          "interpretive_authority_structure"
+        ],
+        "expected_structural_delta": "Instantiates Ledger converting indefiniteness into negotiating leverage; beneficiaries are occupying power and mediators controlling phased withdrawal; victims are claimants without fixed enforcement line; ε moderate because constraint is conditional and phased"
+      },
+      {
+        "reading_id": "interpretive_authority_structure",
+        "commitment": "The authority to resolve the textual ambiguity is itself contested: ICJ claims judicial interpretation, drafting states claim authorial intent, occupying state claims customary practice",
+        "authority_grounding": "No settled rule - Security Council has not issued clarifying resolution, ICJ opinion was advisory, state practice is divergent",
+        "sibling_readings": [
+          "maximal_withdrawal_reading",
+          "partial_withdrawal_reading"
+        ],
+        "expected_structural_delta": "Instantiates Snare: the meta-dispute over who decides prevents definitive resolution, allowing both readings to remain live; beneficiaries are parties with veto power or non-cooperation capacity; victims are parties seeking definitive legal closure; ε high because authority ambiguity perpetuates substantive ambiguity"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "maximal_withdrawal_reading",
+        "reading_b": "partial_withdrawal_reading",
+        "basis": "Maximal reading holds that territorial integrity norm (Charter Article 2(4)) is non-derogable and occupation cannot create legal discretion over sovereign territory; partial reading holds that negotiated ambiguity in Security Council resolutions grants political discretion and secure boundaries can override territorial integrity. No single coherent framework holds both: accepting territorial integrity as non-derogable requires rejecting discretion as legitimate, and vice versa."
+      }
+    ]
+  },
+  "_seed_id": "unsc_resolution_242_withdrawal_clause"
+}

@@ -1,0 +1,243 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Philosophy of Measurement / AI Capability Assessment / Epistemology of Forecasting",
+  "family_id": "ai_capability_measurement_2026",
+  "topic_summary": "Analysis of persistent disagreement about AI capability timelines, arguing that the disagreement itself is the measurement rather than noise around a hidden fact. The essay claims 'general' capability is a seated choice (observer-dependent partition) rather than a situation-settled scalar, distinguishing verification-bound progress (converges with better measurement) from threshold-bound claims (structure into camps). The convergence test—whether adding vantages shrinks or structures disagreement—is proposed as the empirical diagnostic separating discovered facts from chosen standards.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Benchmark saturation (MMLU 90%+ accuracy, ceiling effects destroying discriminative power)",
+      "Timeline forecasters (Altman: 2029 superintelligence; Amodei: 2026-2027 AGI; Metaculus: 2033 median, moved from 2031)",
+      "Convergence test (proposed diagnostic: does disagreement shrink or structure as vantages are added)",
+      "Verification vs generation faculty (self-supplied question authorship as potential gate)",
+      "Capability endogeneity (demand cultivates measured competences toward funded standards)",
+      "Trajectory-bound vs threshold-bound quantities (orbit-cost learning curves vs fusion's constant 20-year horizon)",
+      "Humanity's Last Exam / MMLU-Pro (reset benchmarks attempting to restore headroom)",
+      "Scaling laws (empirical, not inviolable; extrapolation uncertainty beyond training range)"
+    ],
+    "key_tensions": [
+      "Situation-settled capability (external yardstick, converges with measurement) vs seated capability (chosen partition, structures with measurement)",
+      "Short-timeline camp (2026-2030, Amodei/Altman) vs long-timeline camp (2033+, Metaculus/skeptics) with widening rather than converging spread",
+      "Verification faculty (witnessable, testable) vs generation faculty (self-authored standard, upstream of verification, untestable without instances)",
+      "Benchmark saturation as measurement ceiling (ruler ran out of room) vs capability ceiling (actual limit reached)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "What 'general' in artificial general intelligence refers to—the standard by which capability becomes general rather than narrow",
+    "authority_description": "Competing interpretive communities (AI labs, forecasters, researchers, philosophers) each claiming definitional authority over what counts as AGI/general capability",
+    "drift_status": "absent",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "generality_standard",
+    "readings": [
+      {
+        "reading_id": "trajectory_extrapolation_reading",
+        "commitment": "General capability is a continuous scalar climbing a learning curve; benchmarks measure progress toward a fixed threshold",
+        "authority_grounding": "Empirical scaling laws, compute trends, benchmark performance trajectories",
+        "sibling_readings": [
+          "partition_choice_reading",
+          "generation_gate_reading"
+        ],
+        "expected_structural_delta": "Timeline becomes physics question with forecastable date; disagreement is noise around hidden fact; more measurement converges estimates; beneficiary: labs claiming imminent breakthrough justifies current valuations and regulatory deference"
+      },
+      {
+        "reading_id": "partition_choice_reading",
+        "commitment": "General capability is a seated partition—a chosen weighting of competences with no single fact underneath",
+        "authority_grounding": "Philosophy of measurement, observer-dependence arguments, benchmark construction as normative choice",
+        "sibling_readings": [
+          "trajectory_extrapolation_reading",
+          "generation_gate_reading"
+        ],
+        "expected_structural_delta": "Timeline becomes declared bet not discoverable date; disagreement structures into position-correlated camps; more measurement sharpens rather than dissolves camps; no concentrated beneficiary of deflation"
+      },
+      {
+        "reading_id": "generation_gate_reading",
+        "commitment": "General capability requires self-authored standard-setting (generation faculty) distinct from verification; gate is qualitative not quantitative",
+        "authority_grounding": "Cognitive science distinction between problem-solving and problem-formulation; ill-structured problem literature",
+        "sibling_readings": [
+          "trajectory_extrapolation_reading",
+          "partition_choice_reading"
+        ],
+        "expected_structural_delta": "Convergence test cannot adjudicate because no instances exist to measure; verification progress (however fast) does not cross generation threshold; timeline fundamentally unforecastable until faculty appears"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "trajectory_extrapolation_reading",
+        "reading_b": "partition_choice_reading",
+        "basis": "Trajectory reading requires 'general' to name a single magnitude the world adjudicates (so forecasts converge); partition reading requires 'general' to be observer-dependent choice (so forecasts structure). No framework holds both: either there is one fact underneath or there isn't."
+      },
+      {
+        "reading_a": "trajectory_extrapolation_reading",
+        "reading_b": "generation_gate_reading",
+        "basis": "Trajectory reading treats verification progress as continuous path to general capability; generation reading treats verification and generation as categorically distinct faculties. No framework holds both: either more verification crosses the gate or it requires a qualitatively different faculty."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "generality_standard_kernel",
+      "human_readable": "Generality Standard (Contested Kernel)",
+      "structural_delta": "What 'general' in AGI refers to: continuous scalar (trajectory), chosen partition (seated), or generation faculty (qualitative gate)",
+      "primary_observable": "Whether timeline disagreement converges or structures as vantages/data are added; whether benchmark saturation reflects measurement ceiling or capability ceiling",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "trajectory_extrapolation_reading benefits AI labs (imminent breakthrough justifies valuations/deference); partition_choice_reading has no concentrated beneficiary; generation_gate_reading benefits skeptics (gate unforecastable)",
+      "victim": "partition_choice_reading: investors/policymakers misled by false physics framing; trajectory_extrapolation_reading: researchers whose work is defunded if breakthrough deemed distant",
+      "downstream_of": [],
+      "feeds_into": [
+        "benchmark_saturation_interpretation",
+        "capability_endogeneity"
+      ],
+      "centrality_score": 9,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested kernel; three readings with axiom contradictions; highest centrality as upstream to all other axes"
+    },
+    {
+      "claim_id": "benchmark_saturation_interpretation",
+      "human_readable": "Benchmark Saturation Interpretation (Measurement vs Capability Ceiling)",
+      "structural_delta": "Whether 90%+ benchmark accuracy reflects ruler running out of room (measurement ceiling) or models hitting actual limits (capability ceiling)",
+      "primary_observable": "Whether reset benchmarks (HLE, MMLU-Pro) restore discriminative power or also saturate; whether saturation correlates with demand shift or capability plateau",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "measurement_ceiling_interpretation benefits labs (saturation is artifact not limit); capability_ceiling_interpretation benefits skeptics (progress slower than claimed)",
+      "victim": "researchers misallocating effort to saturated benchmarks; policymakers mispricing risk based on false ceiling interpretation",
+      "downstream_of": [
+        "generality_standard_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Empirically testable; distinct observable from kernel (saturation pattern vs disagreement structure); downstream synthesis of kernel's measurement theory"
+    },
+    {
+      "claim_id": "capability_endogeneity",
+      "human_readable": "Capability Endogeneity (Demand-Cultivated Competence)",
+      "structural_delta": "Measured capability is not drawn from fixed latent pool but cultivated by demand toward funded/scored standards; decays when demand shifts",
+      "primary_observable": "Whether capability distributions track funding/benchmark incentives; whether competences atrophy when standards change (capability rust belt)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "generality_standard_kernel"
+      ],
+      "feeds_into": [
+        "benchmark_saturation_interpretation"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct mechanism (cultivation not measurement); explains why benchmark choice shapes capability distribution; independent observable (funding/competence correlation)"
+    },
+    {
+      "claim_id": "convergence_test_validity",
+      "human_readable": "Convergence Test Validity (Diagnostic Reliability)",
+      "structural_delta": "Whether the convergence test (disagreement shrinks vs structures) reliably distinguishes situation-settled from seated quantities",
+      "primary_observable": "Cross-domain validation: does the test correctly classify known situation-settled quantities (orbit cost) and known seated quantities (aesthetic preference)",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "generality_standard_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological rather than substantive; test's validity is meta-level to the kernel dispute; lower centrality than selected axes"
+    },
+    {
+      "claim_id": "forecaster_power_asymmetry",
+      "human_readable": "Forecaster Power Asymmetry (Who Can Afford to Wait)",
+      "structural_delta": "Convergence test requires longitudinal access and standing to call non-convergence a signal; competitive pressure rewards fast single-number forecasts over slow structured ones",
+      "primary_observable": "Which actors (labs, independent researchers, policymakers) have resources to run longitudinal disagreement tracking; which forecasts get cited/funded",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "well-resourced labs with slack to defer expensive witness",
+      "victim": "actors under competitive pressure forced to emit premature single-number forecasts",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: sociological rather than epistemic; lower structural distinctness from kernel's beneficiary analysis; lowest centrality"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "trajectory_extrapolation_reading",
+      "kernel_id": "generality_standard",
+      "reading_id": "trajectory_extrapolation_reading"
+    },
+    {
+      "claim_id": "partition_choice_reading",
+      "kernel_id": "generality_standard",
+      "reading_id": "partition_choice_reading"
+    },
+    {
+      "claim_id": "generation_gate_reading",
+      "kernel_id": "generality_standard",
+      "reading_id": "generation_gate_reading"
+    },
+    "benchmark_saturation_interpretation",
+    "capability_endogeneity"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "convergence_test_validity",
+      "structural_delta": "Whether convergence test reliably distinguishes situation-settled from seated quantities",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Methodological meta-level; test validity is upstream of applying test to AI case; lower centrality than substantive axes"
+    },
+    {
+      "claim_id": "forecaster_power_asymmetry",
+      "structural_delta": "Who has resources to run longitudinal disagreement tracking vs forced to emit fast forecasts",
+      "hypothesis": "snare",
+      "deferral_reason": "Sociological rather than epistemic; beneficiary structure already captured in kernel readings; lowest centrality"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_verifiable_structures_divergence",
+      "description": "Can a quantity be situation-settled (witnessable, verifiable) yet still structure rather than converge when measured? If yes, the unification of verifiable/declarable and noise/disparity cuts collapses—the essay's synthesis averaged two distinct boundaries. No counterexample in hand but search not exhaustive.",
+      "source": "Essay's own open question: 'Conceptually underspecified—can verifiable and structures-not-converges ever point opposite ways?'"
+    },
+    {
+      "id": "omega_generation_faculty_existence",
+      "description": "Is self-authored standard-setting (generation faculty) a distinct capability or merely verification over proposal streams? Convergence test cannot adjudicate without instances. If generation is real and distinct, verification progress (however fast) does not cross gate. If not, trajectory reading wins and gate is quantitative.",
+      "source": "Essay's structural irresolvability: 'Whether generation is a distinct faculty... is not a question the test can reach, because no instance of the second faculty exists to run the test on.'"
+    },
+    {
+      "id": "omega_longitudinal_disagreement_data",
+      "description": "Does AI timeline disagreement actually structure (become more position-correlated) or merely persist (remain wide but uncorrelated)? Essay claims structuring but evidence is suggestive not definitive. Requires tracking individual forecaster movements over time, not just aggregate spread.",
+      "source": "Research context shows persistent disagreement (2026 vs 2033+ camps) but not whether camps are stable/position-correlated vs individuals moving randomly within wide range"
+    },
+    {
+      "id": "omega_reset_benchmark_fate",
+      "description": "Will reset benchmarks (HLE, MMLU-Pro) restore lasting discriminative power or saturate like predecessors? If they saturate, supports measurement-ceiling interpretation (ruler problem). If they maintain headroom, supports capability-ceiling interpretation (models hit limits). Empirically resolvable but not yet settled.",
+      "source": "Research context: HLE and MMLU-Pro designed to restore headroom after MMLU saturation, but outcome not yet determined"
+    },
+    {
+      "id": "omega_scaling_law_breakdown",
+      "description": "Scaling laws are empirical not inviolable—no guarantee they hold beyond training range. If they break, trajectory extrapolation fails even for verification-bound capability. When/whether breakdown occurs is threshold-bound (fusion-type) not trajectory-bound, so unforecastable from current curve.",
+      "source": "Research context: 'Scaling laws are derived from empirical observations, not from inviolable principles... no mathematical guarantee that they will continue to hold for scales beyond the range of the empirical data'"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied correctly: three readings with axiom contradictions, each individually holdable. Two additional independent axes (benchmark saturation, capability endogeneity) pass pairwise test with distinct observables. Deferred axes have lower centrality but remain structurally valid. All omegas properly sourced from essay's own open questions or research gaps."
+  }
+}

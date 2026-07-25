@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Legal Interpretation",
+  "family_id": "second_amendment_right_contest",
+  "topic_summary": "Analysis of the Second Amendment as a contested constitutional kernel where fundamentally different readings of identical text ('A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed') emit structurally different constraints. The individual rights reading treats personal firearm ownership as constitutionally protected liberty; the collective rights reading treats militia service as the protected domain, subordinating personal arms to state regulation.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Second Amendment text (constitutional kernel: 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed')",
+      "Supreme Court (interpretive authority post-Marbury; arbitrates kernel meaning)",
+      "Individual gun owners (potential rights-holders under individual reading)",
+      "State governments (regulatory authority; potential rights-holders under collective reading)",
+      "Originalist legal movement (interpretive framework grounding individual reading)",
+      "Progressive constitutional scholars (interpretive framework grounding collective reading)"
+    ],
+    "key_tensions": [
+      "Prefatory clause ('well regulated Militia') vs operative clause ('right of the people') — grammatical structure contested as justification vs limitation",
+      "Originalist vs living constitutionalist interpretive methods — whether 1791 meaning or evolving public safety needs control"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Second Amendment text stabilized in 1791; grammatically ambiguous relationship between militia clause and arms clause enables divergent readings",
+    "authority_description": "Supreme Court holds interpretive monopoly post-Marbury; derives legitimacy from constitutional adjudication power, not democratic mandate",
+    "drift_status": "partial",
+    "candidate_pattern": "textual_ambiguity_exploitation",
+    "is_contested_kernel": true,
+    "kernel_id": "second_amendment_arms_right",
+    "readings": [
+      {
+        "reading_id": "individual_right_reading",
+        "commitment": "The right to keep and bear arms is an individual liberty pre-existing government, protected against federal infringement",
+        "authority_grounding": "Originalist textualism (Heller majority); 1791 usage of 'right of the people' as individual in Bill of Rights context",
+        "sibling_readings": [
+          "collective_right_reading",
+          "civic_republican_reading"
+        ],
+        "expected_structural_delta": "Individual gun owners enter beneficiary set; state/federal regulatory authority becomes constrained party; high ε on prohibition measures"
+      },
+      {
+        "reading_id": "collective_right_reading",
+        "commitment": "The right protects state militia authority, not individual ownership outside organized militia context",
+        "authority_grounding": "Purposivist reading (pre-Heller precedent); prefatory clause controls scope of operative clause",
+        "sibling_readings": [
+          "individual_right_reading",
+          "civic_republican_reading"
+        ],
+        "expected_structural_delta": "State governments as rights-holders; individual ownership subject to plenary regulation outside militia service; low ε on prohibition measures"
+      },
+      {
+        "reading_id": "civic_republican_reading",
+        "commitment": "The right protects armed citizenship as prerequisite for republican self-governance, neither purely individual nor state-centered",
+        "authority_grounding": "Civic republican historiography (Amar, Cornell); militia as universal citizenry, not select military force",
+        "sibling_readings": [
+          "individual_right_reading",
+          "collective_right_reading"
+        ],
+        "expected_structural_delta": "Citizen-militia members as dual beneficiaries (right + duty); regulatory authority constrained by civic participation norm but not libertarian individualism; moderate ε on training/qualification requirements"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "individual_right_reading",
+        "reading_b": "collective_right_reading",
+        "basis": "Individual reading axiom (personal ownership as pre-political natural right) and collective reading axiom (constitutional protection extends only to state-organized militia service) cannot coexist: one treats ownership as liberty prior to government, the other treats it as subject to plenary government control. No single framework holds both as complementary."
+      },
+      {
+        "reading_a": "civic_republican_reading",
+        "reading_b": "individual_right_reading",
+        "basis": "Civic republican axiom (right inseparable from duty of citizenship/militia participation) and individual reading axiom (ownership as liberty disconnected from collective obligation) are mutually exclusive: one grounds the right in communal obligation, the other in individual autonomy. Hybrid frameworks exist but must choose which axiom is foundational."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "individual_right_reading",
+      "human_readable": "Individual Right Reading (Personal Ownership as Protected Liberty)",
+      "structural_delta": "Constitutional text read to protect individual firearm ownership as pre-political liberty against government infringement",
+      "primary_observable": "Scope of permissible gun regulations under Heller/Bruen framework; individual standing to challenge gun laws",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "individual_gun_owners",
+      "victim": "public_safety_regulatory_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant reading post-Heller with highest extractiveness; establishes individual ownership baseline"
+    },
+    {
+      "claim_id": "collective_right_reading",
+      "human_readable": "Collective Right Reading (Militia Service as Protected Domain)",
+      "structural_delta": "Constitutional text read to protect state militia authority, not individual ownership outside organized service",
+      "primary_observable": "Pre-Heller precedent (Miller, Presser); state regulatory plenary power over civilian arms",
+      "epsilon_bin": "low",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "state_regulatory_authority",
+      "victim": "individual_gun_owners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposite beneficiary/victim configuration; historical precedent framework"
+    },
+    {
+      "claim_id": "civic_republican_reading",
+      "human_readable": "Civic Republican Reading (Armed Citizenship as Duty + Right)",
+      "structural_delta": "Constitutional text read to protect armed citizenship as prerequisite for self-governance, balancing individual and collective dimensions",
+      "primary_observable": "Militia participation norms; training/qualification requirements; civic virtue discourse in founding era",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "citizen_militia_participants",
+      "victim": "non_participating_civilians",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading offering structural middle path; distinct beneficiary structure (duty-based citizenship)"
+    },
+    {
+      "claim_id": "originalist_method_upstream",
+      "human_readable": "Originalist Interpretive Method (1791 Meaning Controls)",
+      "structural_delta": "Constitutional interpretation anchored to ratification-era public meaning, not evolving contemporary needs",
+      "primary_observable": "Frequency of originalist vs purposivist reasoning in Supreme Court opinions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "individual_right_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: interpretive method is upstream coordination mechanism but captured within individual_right_reading analysis"
+    },
+    {
+      "claim_id": "public_safety_externality",
+      "human_readable": "Public Safety Externality (Gun Violence as Regulatory Justification)",
+      "structural_delta": "Gun violence epidemiology used as warrant for expanded regulation, independent of constitutional text",
+      "primary_observable": "Gun homicide/suicide rates; mass shooting frequency; regulatory response patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collective_right_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical mountain but structurally downstream of kernel contest; different domain (public health vs constitutional law)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "individual_right_reading",
+      "kernel_id": "second_amendment_arms_right",
+      "reading_id": "individual_right_reading"
+    },
+    {
+      "claim_id": "collective_right_reading",
+      "kernel_id": "second_amendment_arms_right",
+      "reading_id": "collective_right_reading"
+    },
+    {
+      "claim_id": "civic_republican_reading",
+      "kernel_id": "second_amendment_arms_right",
+      "reading_id": "civic_republican_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "originalist_method_upstream",
+      "structural_delta": "Originalist vs purposivist interpretive method",
+      "hypothesis": "rope",
+      "deferral_reason": "Coordination mechanism upstream of individual_right_reading but captured in reading's authority_grounding; generating separately would duplicate interpretive framework analysis"
+    },
+    {
+      "claim_id": "public_safety_externality",
+      "structural_delta": "Gun violence epidemiology as regulatory warrant",
+      "hypothesis": "mountain",
+      "deferral_reason": "Empirical public health constraint orthogonal to kernel contest; different domain (epidemiology vs constitutional interpretation); relevant as policy context but not constitutional structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_incorporation_doctrine",
+      "description": "Does the Second Amendment apply to states via Fourteenth Amendment incorporation (McDonald v. Chicago)? If incorporation is contested, individual_right_reading may bind federal but not state governments, collapsing the victim set asymmetrically.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — incorporation doctrine absent from extraction but structurally critical"
+    },
+    {
+      "id": "omega_standing_doctrine",
+      "description": "Who has standing to challenge gun laws under each reading? Individual reading enables widespread litigation (any gun owner); collective reading restricts standing to state governments. Standing doctrine becomes enforcement mechanism for whichever reading prevails.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — procedural access shapes constraint enforcement"
+    },
+    {
+      "id": "omega_regulatory_floor",
+      "description": "Does individual_right_reading permit ANY regulation (safe storage, background checks) or is it libertarian absolutism? Heller acknowledged 'presumptively lawful' regulations but provided no framework. The reading's ε may be lower than claimed if Court discovers limiting principles.",
+      "source": "§3.3 Granularity Check — individual_right_reading may internally decompose into moderate vs absolutist variants"
+    },
+    {
+      "id": "omega_civic_republican_revival",
+      "description": "Civic republican reading is academically live but judicially dormant post-Heller. Is it a genuine third constraint or a scholarly construct with no enforcement mechanism? If SCOTUS cannot operationalize duty-based citizenship test, it collapses toward one of the other readings.",
+      "source": "§2.3 Classification — civic_republican_reading may be scaffold rather than enforceable constraint"
+    },
+    {
+      "id": "omega_second_amendment_obsolescence",
+      "description": "Is the Second Amendment itself obsolete in a world with standing armies and professionalized police? If original militia purpose is extinct, all three readings may be interpreting a dead letter. This would reclassify the entire kernel from mountain to piton of historical accident.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis assumes constitutional text still governs; modern military technology may render assumption false"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest confirmed: three readings emit structurally different constraints from identical text with mutually exclusive foundational axioms. Two axiom contradiction pairs declared (individual vs collective, civic republican vs individual). Public safety externality deferred as orthogonal domain rather than constitutional structure."
+  },
+  "_seed_id": "second_amendment_reading"
+}

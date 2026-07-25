@@ -1,0 +1,186 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology History / Path Dependence / Institutional Economics",
+  "family_id": "qwerty_naturalization_2026",
+  "topic_summary": "Analysis of QWERTY keyboard layout persistence as a candidate contested kernel. The prompt flags two readings: a no-beneficiary reading (alternatives merely lapsed through neutral drift) versus a beneficiary reading (manufacturers and incumbents actively maintained QWERTY dominance). The prompt explicitly notes this is a D3 ARTIFACT test case from the library verdict context, where beneficiary-hunting methodologies find beneficiaries by construction.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "QWERTY layout (1878 Sholes & Glidden typewriter standard)",
+      "Dvorak Simplified Keyboard (1936 alternative layout)",
+      "Typewriter manufacturers (Remington, et al.)",
+      "Touch-typing training infrastructure (schools, certification bodies)",
+      "Alternative layout proponents (ergonomics researchers, efficiency advocates)"
+    ],
+    "key_tensions": [
+      "Efficiency claims (Dvorak proponents) vs switching cost arguments (QWERTY defenders)",
+      "Network effects (coordination value) vs lock-in (suboptimal equilibrium)"
+    ],
+    "key_mechanisms": [
+      "Training infrastructure investment (typing schools standardized on QWERTY)",
+      "Manufacturer coordination (early standardization reduced production costs)",
+      "Switching cost accumulation (individual retraining cost vs collective efficiency gain)"
+    ],
+    "absences": [
+      "Empirical typing speed data controlling for training intensity (most studies confounded)",
+      "Manufacturer internal documents on alternative layout suppression (if any existed)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "QWERTY layout persistence as either neutral path dependence or maintained lock-in",
+    "authority_description": "Historical narrative authority: who gets to explain why QWERTY persists",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "collapse_reason": "The two supposed readings do not emit structurally different constraints. Both readings agree on the OBSERVABLE (QWERTY persists despite alternatives existing) and the CONSTRAINT TYPE (coordination lock-in with high switching costs). They differ only on ATTRIBUTION (neutral drift vs active maintenance) — which is an observer-position disagreement about the SAME constraint, not two constraints from one kernel. The beneficiary-hunting methodology flags this as D3 ARTIFACT: the search for beneficiaries constructs them rather than discovering independent structural evidence. No shared commitment is being read differently; there is one constraint (coordination lock-in) being explained differently.",
+    "kernel_id": null,
+    "readings": []
+  },
+  "axes": [
+    {
+      "claim_id": "coordination_lock_in",
+      "human_readable": "Coordination Lock-In (Network Effects & Switching Costs)",
+      "structural_delta": "High collective switching cost creates stable equilibrium regardless of efficiency",
+      "primary_observable": "Retraining cost per individual vs efficiency gain; installed base of QWERTY-trained typists",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "naturalization_narrative"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core structural constraint; upstream to narrative layer"
+    },
+    {
+      "claim_id": "naturalization_narrative",
+      "human_readable": "Naturalization Narrative (Equilibrium Framed as Optimality)",
+      "structural_delta": "Persistence interpreted as evidence of fitness rather than lock-in",
+      "primary_observable": "Frequency of 'QWERTY won because it's better' claims vs 'QWERTY won despite being worse' claims in popular/academic discourse",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "status_quo_defenders",
+      "victim": "alternative_layout_proponents",
+      "downstream_of": [
+        "coordination_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Downstream synthesis node; captures the interpretive layer where lock-in becomes 'natural'"
+    },
+    {
+      "claim_id": "empirical_efficiency_gap",
+      "human_readable": "Empirical Efficiency Gap (Contested Performance Data)",
+      "structural_delta": "Lack of clean experimental data on layout efficiency controlling for training",
+      "primary_observable": "Typing speed studies with matched training hours across layouts",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "naturalization_narrative"
+      ],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Evidentiary base; absence of data enables narrative flexibility"
+    },
+    {
+      "claim_id": "manufacturer_coordination",
+      "human_readable": "Manufacturer Coordination (Early Standardization)",
+      "structural_delta": "Production cost reduction via single-layout tooling",
+      "primary_observable": "Typewriter production cost curves 1880-1920; layout diversity in early market",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "coordination_lock_in"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical mechanism already captured in coordination_lock_in rope"
+    },
+    {
+      "claim_id": "training_infrastructure_investment",
+      "human_readable": "Training Infrastructure Investment (Typing School Lock-In)",
+      "structural_delta": "Sunk cost in QWERTY-specific training materials and certification",
+      "primary_observable": "Typing school curriculum standardization timeline; retraining cost estimates",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "coordination_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: reinforcement mechanism of coordination_lock_in, not independent axis"
+    }
+  ],
+  "generation_sequence": [
+    "coordination_lock_in",
+    "naturalization_narrative",
+    "empirical_efficiency_gap"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "manufacturer_coordination",
+      "structural_delta": "Production cost reduction via single-layout tooling",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical mechanism already captured in coordination_lock_in rope; no independent structural yield"
+    },
+    {
+      "claim_id": "training_infrastructure_investment",
+      "structural_delta": "Sunk cost in QWERTY-specific training materials",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Reinforcement mechanism of coordination_lock_in; not structurally independent"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d3_artifact_detection",
+      "description": "The prompt flags this as a D3 ARTIFACT test: beneficiary-hunting finds beneficiaries by construction. The kernel structure correctly collapsed because the two readings do not emit different constraints — they are observer-position disagreements about attribution (neutral drift vs active maintenance) for the SAME coordination lock-in. The beneficiary in naturalization_narrative is real (status quo defenders benefit from framing lock-in as optimality), but this is a downstream interpretive layer, not evidence that QWERTY itself is a snare rather than a rope. The D3 artifact would be claiming manufacturers are beneficiaries of the lock-in itself; the actual structure is that lock-in is a rope (neutral coordination problem) and naturalization is a tangled_rope (interpretive capture of that rope).",
+      "source": "§1.3-K kernel/reading decomposition + prompt flag"
+    },
+    {
+      "id": "omega_efficiency_counterfactual",
+      "description": "Is Dvorak actually more efficient? The empirical_efficiency_gap mountain captures the absence of clean data. If future controlled studies show no efficiency difference, naturalization_narrative collapses from tangled_rope to rope (QWERTY is optimal for coordination, not despite efficiency). If studies show large efficiency gains, the rope/tangled_rope distinction sharpens. Current state: insufficient evidence to resolve.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + empirical_efficiency_gap axis"
+    },
+    {
+      "id": "omega_beneficiary_construction",
+      "description": "The prompt warns that beneficiary-hunting methodologies find beneficiaries by construction. In this case: manufacturers benefited from early standardization (piton), but that does not make QWERTY a snare — it makes standardization a coordination solution. The naturalization_narrative tangled_rope has real beneficiaries (those who gain from framing lock-in as optimality), but this is a second-order interpretive layer, not evidence of first-order extraction. The distinction matters: if QWERTY is a rope, alternatives failed because switching costs exceeded gains; if QWERTY is a snare, alternatives failed because incumbents suppressed them. No evidence for the latter.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + D3 ARTIFACT flag"
+    },
+    {
+      "id": "omega_alternative_layout_suppression",
+      "description": "Were alternative layouts actively suppressed, or did they fail to overcome switching costs? The absence of manufacturer internal documents (noted in extraction) leaves this unresolved. If suppression evidence exists, coordination_lock_in may reclassify from rope to snare. If no suppression evidence exists, the beneficiary reading collapses entirely to observer bias. Current classification assumes no suppression evidence.",
+      "source": "Absence Inventory + F03 (Hasty Generalization) check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: coordination_lock_in classified as rope (neutral coordination problem) but reclassification to snare depends on suppression evidence not currently available. Generated omega_alternative_layout_suppression to bound this uncertainty. The kernel structure correctly collapsed because the two readings do not emit different constraints — they are observer-position disagreements about the same lock-in phenomenon. The D3 ARTIFACT flag is validated: beneficiary-hunting would construct beneficiaries (manufacturers) without independent structural evidence that QWERTY is a snare rather than a rope."
+  },
+  "_seed_id": "qwerty_path_naturalization"
+}

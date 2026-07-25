@@ -1,0 +1,199 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Property Rights / Regulatory Theory",
+  "family_id": "takings_clause_kernel",
+  "topic_summary": "Analysis of the Fifth Amendment Takings Clause as a contested constitutional kernel. The clause ('nor shall private property be taken for public use, without just compensation') serves as a fixed textual commitment that different interpretive traditions read to generate structurally distinct constraints on government power, creating different victim sets and different regulatory space.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Fifth Amendment Takings Clause (constitutional text kernel)",
+      "Property owners (rights-holders under all readings, extent varies)",
+      "Government regulatory agencies (constrained party, degree varies by reading)",
+      "Supreme Court (interpretive authority)",
+      "Public welfare interests (beneficiary of regulatory power, limited by takings doctrine)"
+    ],
+    "key_tensions": [
+      "Property protection vs regulatory flexibility (narrow reading favors regulation, broad reading favors property)",
+      "Textual fidelity vs policy consequences (originalist vs consequentialist grounding for readings)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Takings Clause text itself: 'nor shall private property be taken for public use, without just compensation' — a constitutional rule stabilizing property rights against government interference",
+    "authority_description": "Supreme Court interpretive authority grounded in constitutional supremacy and stare decisis; readings compete through precedent accretion",
+    "drift_status": "functioning",
+    "candidate_pattern": "Rule Kernel (Type 1) — precise text with contested operational boundary",
+    "is_contested_kernel": true,
+    "kernel_id": "takings_clause_boundary",
+    "readings": [
+      {
+        "reading_id": "physical_appropriation_reading",
+        "commitment": "Only direct physical seizures or permanent physical occupations trigger compensation requirement",
+        "authority_grounding": "Textualist/originalist — 'taken' means physical dispossession in 18th century usage",
+        "sibling_readings": [
+          "regulatory_takings_reading",
+          "categorical_takings_reading"
+        ],
+        "expected_structural_delta": "Narrow victim set (only physical dispossession victims); government retains broad regulatory power without compensation obligation; property owners bear regulatory losses as background risk"
+      },
+      {
+        "reading_id": "regulatory_takings_reading",
+        "commitment": "Regulations that go 'too far' in diminishing economic value constitute takings requiring compensation",
+        "authority_grounding": "Purposivist/common-law evolution — Pennsylvania Coal Co. v. Mahon (1922) expansion beyond text to protect property's economic substance",
+        "sibling_readings": [
+          "physical_appropriation_reading",
+          "categorical_takings_reading"
+        ],
+        "expected_structural_delta": "Expanded victim set (includes severe value diminution without possession); introduces ad hoc balancing test; creates uncertainty in regulatory space but provides property protection against non-physical extraction"
+      },
+      {
+        "reading_id": "categorical_takings_reading",
+        "commitment": "Permanent physical occupations and total value elimination are per se takings; all other regulations evaluated by Penn Central factors",
+        "authority_grounding": "Hybrid categorical/balancing framework — Loretto v. Teleprompter (1982) and Lucas v. South Carolina Coastal Council (1992) synthesizing physical and regulatory traditions",
+        "sibling_readings": [
+          "physical_appropriation_reading",
+          "regulatory_takings_reading"
+        ],
+        "expected_structural_delta": "Bright-line rules for extreme cases plus contextual balancing for middle ground; attempts to stabilize expectations while preserving regulatory flexibility; property owners gain predictability at poles but face uncertainty in middle"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "physical_appropriation_reading",
+        "reading_b": "regulatory_takings_reading",
+        "basis": "Physical reading's foundational axiom that constitutional 'taking' requires dispossession of title or possession cannot coexist with regulatory reading's axiom that severe value diminution without physical interference constitutes a constitutional taking. No single framework treats both physical dispossession and regulatory value loss as equally within the constitutional category 'taking'."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "physical_appropriation_reading",
+      "human_readable": "Physical Appropriation Reading (Narrow Takings Doctrine)",
+      "structural_delta": "Constitutional 'taking' limited to physical seizures, permanent occupations, or complete title transfers",
+      "primary_observable": "Supreme Court decisions compensating only for physical dispossession; regulatory diminutions treated as non-compensable exercises of police power",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "regulatory_state",
+      "victim": "property_owners_under_severe_regulation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline narrow interpretation; rope coordinating government regulatory power with minimal property protection"
+    },
+    {
+      "claim_id": "regulatory_takings_reading",
+      "human_readable": "Regulatory Takings Reading (Broad Takings Doctrine)",
+      "structural_delta": "Constitutional 'taking' extends to regulations that substantially diminish economic value even without physical interference",
+      "primary_observable": "Supreme Court compensation orders for regulations that 'go too far' (Penn Central balancing test application); regulatory state forced to compensate for severe value losses",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "property_owners",
+      "victim": "public_welfare_regulatory_capacity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: structural expansion of constitutional constraint; tangled_rope creating uncertainty in regulatory space while protecting property from non-physical extraction"
+    },
+    {
+      "claim_id": "categorical_takings_reading",
+      "human_readable": "Categorical Takings Reading (Hybrid Framework)",
+      "structural_delta": "Per se takings for permanent physical occupations and total value elimination; Penn Central balancing for intermediate cases",
+      "primary_observable": "Supreme Court application of bright-line rules (Loretto, Lucas) alongside contextual balancing; doctrinal stability at poles with flexibility in middle ground",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: attempts institutional synthesis of competing interpretations; scaffold attempting to stabilize expectations while preserving case-by-case flexibility"
+    },
+    {
+      "claim_id": "public_use_boundary",
+      "human_readable": "Public Use Boundary (Kelo Expansion)",
+      "structural_delta": "Whether 'public use' requires government possession or permits private development with public benefit rationale",
+      "primary_observable": "Kelo v. City of New London eminent domain for economic development; state constitutional amendments restricting Kelo",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "development_interests",
+      "victim": "displaced_property_owners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: separate kernel within takings doctrine ('public use' clause); distinct from 'taking' boundary question; captured in omega_public_use_kernel"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "physical_appropriation_reading",
+      "kernel_id": "takings_clause_boundary",
+      "reading_id": "physical_appropriation_reading"
+    },
+    {
+      "claim_id": "regulatory_takings_reading",
+      "kernel_id": "takings_clause_boundary",
+      "reading_id": "regulatory_takings_reading"
+    },
+    {
+      "claim_id": "categorical_takings_reading",
+      "kernel_id": "takings_clause_boundary",
+      "reading_id": "categorical_takings_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "public_use_boundary",
+      "structural_delta": "Whether 'public use' permits private development takings",
+      "hypothesis": "snare",
+      "deferral_reason": "Separate kernel within takings doctrine; 'public use' clause is distinct textual substrate from 'taking' boundary; Kelo controversy warrants independent kernel analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_coherence",
+      "description": "All three readings are structurally live positions in contemporary doctrine. Physical appropriation reading represents pre-1922 baseline, regulatory takings emerged from Pennsylvania Coal, categorical framework represents current doctrinal synthesis. No collapse detected — genuine kernel with competing interpretive traditions.",
+      "source": "Kernel coherence test (§1.3-K)"
+    },
+    {
+      "id": "omega_stare_decisis_constraint",
+      "description": "Supreme Court operates under stare decisis, creating path dependency. Current doctrine cannot cleanly adopt physical appropriation reading (would overrule 100+ years of precedent) or pure regulatory takings (would destabilize property expectations). Categorical reading represents compromise, but axiom contradiction between physical and regulatory foundations remains unresolved at doctrinal core.",
+      "source": "Authority structure analysis (commitment_system_recognition)"
+    },
+    {
+      "id": "omega_public_use_kernel",
+      "description": "The 'public use' clause constitutes a second kernel within the Fifth Amendment takings infrastructure. Kelo v. City of New London's broad reading (public benefit suffices) vs. narrow reading (government possession required) generates distinct victim sets. State constitutional amendments post-Kelo represent functioning drift response. Separate kernel analysis warranted.",
+      "source": "Deferred axis public_use_boundary + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_just_compensation_measurement",
+      "description": "Once a 'taking' is recognized under any reading, 'just compensation' calculation remains contested. Fair market value standard vs. subjective value vs. replacement cost generates distributional consequences independent of takings boundary. Measurement substrate may itself be kernel-like.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_physical_vs_regulatory_asymmetry",
+      "description": "Physical reading generates certainty (bright line) but narrow protection. Regulatory reading generates broad protection but doctrinal uncertainty (Penn Central balancing). Categorical reading attempts to split difference but inherits both problems in middle ground. No reading eliminates the fundamental trade-off between predictability and protection scope.",
+      "source": "Cross-reading structural comparison"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean kernel decomposition. All three readings are structurally distinct, produce different victim sets, and represent live doctrinal positions. Axiom contradiction between physical and regulatory readings confirmed (dispossession-as-taking vs value-loss-as-taking cannot coexist in single framework). Categorical reading attempts synthesis but does not resolve foundational axiom conflict. Public use boundary identified as separate kernel requiring independent analysis."
+  },
+  "_seed_id": "property_rights_clause"
+}

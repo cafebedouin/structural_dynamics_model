@@ -1,0 +1,220 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Relations Theory / Strategic Studies / Institutional History",
+  "family_id": "great_power_war_disappearance_1945",
+  "topic_summary": "Analysis of the post-1945 disappearance of winnable great-power total war from strategic planning space. The kernel question: did nuclear weapons make total war unwinnable (reading drop within reachable space) or remove it from consideration entirely (space contraction)? This tests whether commitment system structure can represent a reading becoming unreachable rather than merely disfavored.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear weapons states (US, USSR, later UK/France/China)",
+      "Pre-1945 great power war planning apparatus (general staffs, mobilization doctrine)",
+      "Post-1945 deterrence theory establishment (RAND, strategic studies community)",
+      "MAD doctrine (Mutual Assured Destruction as stabilizing framework)",
+      "Limited war doctrine (Korea, Vietnam as constrained conflicts)",
+      "Non-nuclear rising powers (contemporary China, India as test cases)"
+    ],
+    "key_tensions": [
+      "Deterrence stability vs war-fighting capability (MAD vs counterforce)",
+      "Reachable-but-rejected vs unreachable (reading drop vs space contraction)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The strategic possibility space for great-power conflict resolution through total war",
+    "authority_description": "Military planning establishments, strategic studies community, nuclear doctrine authorities",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "total_war_possibility_space",
+    "readings": [
+      {
+        "reading_id": "deterrence_equilibrium_reading",
+        "commitment": "Total war remains strategically reachable but is deterred by mutual vulnerability",
+        "authority_grounding": "MAD doctrine, arms control theory, rational deterrence models",
+        "sibling_readings": [
+          "space_contraction_reading",
+          "nuclear_taboo_reading"
+        ],
+        "expected_structural_delta": "War remains in planning space; constraint is cost-benefit calculation with extremely high costs. Generates continuous investment in war-fighting capability as deterrent signal. Reading predicts: doctrine development continues, counterforce targeting persists, escalation ladders remain theorized."
+      },
+      {
+        "reading_id": "space_contraction_reading",
+        "commitment": "Nuclear weapons removed total war from the strategically thinkable, not merely from the preferable",
+        "authority_grounding": "Constructivist IR theory, nuclear revolution thesis, epistemic community shift",
+        "sibling_readings": [
+          "deterrence_equilibrium_reading",
+          "nuclear_taboo_reading"
+        ],
+        "expected_structural_delta": "War exits planning space entirely; constraint is categorical impossibility rather than high cost. Generates institutional atrophy of total-war planning apparatus. Reading predicts: mobilization doctrine disappears, general staff war-gaming for great-power conflict ceases, strategic studies shifts to sub-nuclear domains."
+      },
+      {
+        "reading_id": "nuclear_taboo_reading",
+        "commitment": "Total war became normatively prohibited through constructed taboo, independent of material capability",
+        "authority_grounding": "Norm cascade theory, Tannenwald's nuclear taboo thesis, practice-based constructivism",
+        "sibling_readings": [
+          "deterrence_equilibrium_reading",
+          "space_contraction_reading"
+        ],
+        "expected_structural_delta": "War remains materially possible but normatively foreclosed. Generates norm-enforcement mechanisms (non-proliferation regime, no-first-use pledges). Reading predicts: taboo weakens if norm entrepreneurs exit, non-nuclear powers face different constraint structure."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "deterrence_equilibrium_reading",
+      "human_readable": "Deterrence Equilibrium (Total War as Deterred but Reachable)",
+      "structural_delta": "Nuclear weapons raised costs of total war to mutual annihilation, making it strategically irrational but not impossible",
+      "primary_observable": "Continued investment in strategic nuclear forces, counterforce doctrine development, escalation control theory",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "nuclear_weapons_states",
+      "victim": "non_nuclear_states_in_extended_deterrence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant reading in strategic studies literature; generates distinct institutional predictions"
+    },
+    {
+      "claim_id": "space_contraction_reading",
+      "human_readable": "Space Contraction (Total War as Categorically Unreachable)",
+      "structural_delta": "Nuclear weapons removed total war from strategic possibility space, not merely from preferred options",
+      "primary_observable": "Atrophy of mobilization doctrine, disappearance of total-war planning from general staff exercises, shift to limited-war focus",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from deterrence reading; tests whether M-set can represent reading exit from reachable space"
+    },
+    {
+      "claim_id": "nuclear_taboo_reading",
+      "human_readable": "Nuclear Taboo (Total War as Normatively Prohibited)",
+      "structural_delta": "Total war became unthinkable through norm construction independent of material deterrence",
+      "primary_observable": "Non-proliferation regime strength, rhetorical treatment of nuclear use, norm-enforcement mechanisms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "norm_entrepreneurs",
+      "victim": "states_outside_taboo_consensus",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading; captures social construction dimension absent from material readings"
+    },
+    {
+      "claim_id": "limited_war_substitution",
+      "human_readable": "Limited War Substitution (Proxy Conflicts as Constrained Outlet)",
+      "structural_delta": "Great powers shifted to limited wars and proxy conflicts as substitute for total war",
+      "primary_observable": "Frequency of proxy wars 1945-1991, explicit limitation doctrine (Korea, Vietnam)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": "proxy_war_populations",
+      "downstream_of": [
+        "deterrence_equilibrium_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of deterrence reading rather than independent reading of kernel"
+    },
+    {
+      "claim_id": "non_nuclear_power_divergence",
+      "human_readable": "Non-Nuclear Power Divergence (Rising Powers Face Different Constraint)",
+      "structural_delta": "Non-nuclear rising powers (pre-nuclear China, India) faced different strategic possibility space than nuclear states",
+      "primary_observable": "War planning doctrine in non-nuclear states, threshold at which nuclear acquisition changes doctrine",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "deterrence_equilibrium_reading",
+        "space_contraction_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: tests boundary conditions of readings but lower structural centrality than core readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "deterrence_equilibrium_reading",
+      "kernel_id": "total_war_possibility_space",
+      "reading_id": "deterrence_equilibrium_reading"
+    },
+    {
+      "claim_id": "space_contraction_reading",
+      "kernel_id": "total_war_possibility_space",
+      "reading_id": "space_contraction_reading"
+    },
+    {
+      "claim_id": "nuclear_taboo_reading",
+      "kernel_id": "total_war_possibility_space",
+      "reading_id": "nuclear_taboo_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "limited_war_substitution",
+      "structural_delta": "Great powers shifted to limited wars as substitute for total war",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream consequence of deterrence equilibrium reading rather than independent kernel reading"
+    },
+    {
+      "claim_id": "non_nuclear_power_divergence",
+      "structural_delta": "Non-nuclear rising powers faced different strategic possibility space",
+      "hypothesis": "piton",
+      "deferral_reason": "Tests boundary conditions but lower structural centrality; relevant for omega on reading universality"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m_set_contraction_test",
+      "description": "Does the M-set formalism have a cell for 'reading exits reachable space'? Space contraction reading claims total war became categorically unreachable, not merely deterred. If M-set has site-expansion but no contraction primitive, this reading may be inexpressible in current formalism. Library verdict context suggests this is the core test case.",
+      "source": "User kernel contest flag + §1.3-K kernel recognition"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do deterrence and taboo readings collapse into one constraint? Both predict non-use, but deterrence predicts continued capability investment while taboo predicts norm-enforcement investment. If observables converge (e.g., both predict no great-power nuclear war), readings may be empirically indistinguishable despite different generative mechanisms.",
+      "source": "§3.1 pairwise independence test"
+    },
+    {
+      "id": "omega_non_nuclear_universality",
+      "description": "Do these readings apply to non-nuclear rising powers? If China (pre-1964) or India (pre-1974) maintained total-war planning doctrine, space contraction reading is falsified for non-nuclear states. Deferred axis non_nuclear_power_divergence bounds this uncertainty.",
+      "source": "Deferred axis non_nuclear_power_divergence + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_ukraine_2022_falsification",
+      "description": "Does Russia's 2022 Ukraine invasion falsify space contraction reading? If great-power total war re-enters planning space (NATO-Russia escalation scenarios), contraction was temporary norm rather than structural impossibility. Deterrence reading predicts this as rational calculation; taboo reading predicts norm erosion; contraction reading has no mechanism for re-entry.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — contemporary great-power conflict absent from extraction"
+    },
+    {
+      "id": "omega_epistemic_trespass_strategic_studies",
+      "description": "Model training on strategic studies literature may bias toward deterrence reading (dominant paradigm 1960-1990). Space contraction and taboo readings emerged later in constructivist IR. F34 risk: model may underweight non-rationalist readings due to training distribution.",
+      "source": "F34 self-scan + Dark Matter Probe 1"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Strategic studies domain requires expertise in nuclear doctrine history, IR theory paradigm shifts, and Cold War institutional evolution. Model training likely overweights rationalist deterrence literature (RAND, Schelling, Waltz) relative to constructivist norm theory (Tannenwald, Price, Finnemore). Generated omega_epistemic_trespass_strategic_studies to bound this risk. Readings selected to force engagement with non-rationalist frameworks despite training bias."
+  },
+  "_seed_id": "total_war_unthinkability"
+}

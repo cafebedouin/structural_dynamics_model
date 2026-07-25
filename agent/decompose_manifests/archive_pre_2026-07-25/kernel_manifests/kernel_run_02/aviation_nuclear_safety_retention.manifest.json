@@ -1,0 +1,267 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "High-Reliability Organizations / Safety Training / Competence Maintenance",
+  "family_id": "catastrophe_avoidance_competence_2026",
+  "topic_summary": "Analysis of catastrophe-avoidance competence retention in aviation (stall recovery, crew resource management) and nuclear sectors (meltdown-avoidance), examining whether simulation-based training constitutes sufficient exercise to maintain competence over decades without recurring real catastrophes, or whether only actual catastrophic incidents can occupy the competence kernel.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "FAA (regulatory mandate-setter for aviation training requirements)",
+      "ICATEE (International Committee for Aviation Training in Extended Envelopes, formed 2009)",
+      "Airlines and flight training organizations (competence delivery agents)",
+      "Simulation companies (APS, CORYS - technology providers)",
+      "Nuclear power plant operators (catastrophe-avoidance practitioners)",
+      "Pilots and nuclear operators (competence holders)",
+      "Regulatory bodies (FAA, EASA, nuclear regulators)",
+      "Emergency response personnel (nuclear sector)"
+    ],
+    "key_tensions": [
+      "Simulation as proxy-catastrophe vs simulation as insufficient substitute (core kernel contest)",
+      "Demonstrated competence under jeopardy conditions vs actual practice in non-jeopardy operations",
+      "Skill decay timeline (6-12 months) vs training refresh intervals (1-2 years desired, actual varies)",
+      "High-fidelity environmental realism vs missing human factors elements in simulation"
+    ],
+    "key_mechanisms": [
+      "Low-dose high-frequency (LDHF) training to prevent skill deterioration",
+      "Booster training when competency begins to wane",
+      "Line audits under non-jeopardy conditions to assess real operational behavior"
+    ],
+    "key_absences": [
+      "Consensus on optimal timing and intensity for maintenance training",
+      "Validated metrics for measuring real-world competence transfer from simulation"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that catastrophe-avoidance competence must be continuously occupied through exercise to remain viable",
+    "authority_description": "Regulatory bodies (FAA, nuclear regulators) mandate training requirements; professional consensus and post-incident investigations ground interpretive legitimacy",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "competence_occupation",
+    "readings": [
+      {
+        "reading_id": "simulation_sufficiency",
+        "commitment": "Simulation-based drills constitute sufficient exercise to occupy the competence kernel and prevent skill decay",
+        "authority_grounding": "Regulatory mandate (FAA 2013 rule), simulator technology validation, controlled experimental conditions",
+        "sibling_readings": [
+          "real_incident_necessity",
+          "hybrid_occupation"
+        ],
+        "expected_structural_delta": "Training compliance becomes the observable; skill decay treated as solvable via frequency/fidelity optimization; simulation industry becomes primary beneficiary"
+      },
+      {
+        "reading_id": "real_incident_necessity",
+        "commitment": "Only actual catastrophic incidents provide the authentic conditions necessary to occupy the competence kernel",
+        "authority_grounding": "Empirical observation of jeopardy paradox (assessed performance ≠ actual practice), skill decay despite simulation, missing human factors",
+        "sibling_readings": [
+          "simulation_sufficiency",
+          "hybrid_occupation"
+        ],
+        "expected_structural_delta": "Rare real incidents become the observable; high-reliability organizations face unresolvable competence maintenance problem; no viable beneficiary structure (catastrophes are unacceptable)"
+      },
+      {
+        "reading_id": "hybrid_occupation",
+        "commitment": "Competence occupation requires continuous multi-mechanism exercise (simulation + refresher + procedural reinforcement + line audits) without consensus on optimal configuration",
+        "authority_grounding": "Systematic review evidence of skill decay timelines, LDHF/booster training literature, line audit findings",
+        "sibling_readings": [
+          "simulation_sufficiency",
+          "real_incident_necessity"
+        ],
+        "expected_structural_delta": "Multiple observables (simulation performance, line audit behavior, skill decay curves); no single mechanism sufficient; training optimization becomes perpetual research problem"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "simulation_sufficiency",
+        "reading_b": "real_incident_necessity",
+        "basis": "Simulation_sufficiency axiom holds that controlled replication of catastrophic conditions is structurally equivalent to the real event for competence maintenance. Real_incident_necessity axiom holds that authentic jeopardy conditions (uncontrolled, genuine consequences) are structurally irreplaceable. No single framework can hold both: either simulation is proxy-catastrophe (making real incidents unnecessary) or it is not (making them necessary). The jeopardy paradox evidence suggests the axioms are mutually exclusive."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "simulation_sufficiency",
+      "human_readable": "Simulation Sufficiency (Drills as Proxy-Catastrophe)",
+      "structural_delta": "Simulation-based training constitutes sufficient exercise to maintain catastrophe-avoidance competence without real incidents",
+      "primary_observable": "Training compliance rates, simulator fidelity metrics, initial competence acquisition success",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "simulation_industry",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "skill_decay_despite_simulation"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading in kernel contest; represents regulatory/industry consensus position"
+    },
+    {
+      "claim_id": "real_incident_necessity",
+      "human_readable": "Real Incident Necessity (Authentic Jeopardy Requirement)",
+      "structural_delta": "Only actual catastrophic incidents with genuine consequences provide conditions necessary to occupy competence kernel",
+      "primary_observable": "Jeopardy paradox evidence (assessed vs actual performance gap), missing human factors in simulation",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "high_reliability_organizations",
+      "downstream_of": [],
+      "feeds_into": [
+        "skill_decay_despite_simulation"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Contradictory reading to simulation_sufficiency; represents empirical challenge to consensus"
+    },
+    {
+      "claim_id": "skill_decay_despite_simulation",
+      "human_readable": "Skill Decay Despite Simulation (The 6-12 Month Problem)",
+      "structural_delta": "Documented skill deterioration 6-12 months post-training despite simulation-based competence acquisition",
+      "primary_observable": "Systematic review data on skill decay timelines, performance score decline curves",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "training_optimization_research",
+      "victim": "operators_between_refreshers",
+      "downstream_of": [
+        "simulation_sufficiency",
+        "real_incident_necessity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node where both readings converge on the maintenance problem"
+    },
+    {
+      "claim_id": "hybrid_occupation",
+      "human_readable": "Hybrid Occupation (Multi-Mechanism Maintenance)",
+      "structural_delta": "Competence requires continuous multi-mechanism exercise without consensus on optimal configuration",
+      "primary_observable": "LDHF training protocols, booster training schedules, line audit findings",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "skill_decay_despite_simulation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: pragmatic response reading with lower structural distinctiveness; captured in omega as unresolved optimization problem"
+    },
+    {
+      "claim_id": "jeopardy_paradox",
+      "human_readable": "Jeopardy Paradox (Assessed vs Actual Performance Gap)",
+      "structural_delta": "Crews demonstrate effective coordination under assessed jeopardy conditions but fail to practice concepts during normal operations",
+      "primary_observable": "Line audit data vs simulation assessment scores",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "normal_operations_safety",
+      "downstream_of": [
+        "simulation_sufficiency"
+      ],
+      "feeds_into": [
+        "skill_decay_despite_simulation"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: evidence mechanism for real_incident_necessity reading; structural delta captured in that axis"
+    },
+    {
+      "claim_id": "regulatory_compliance_substitution",
+      "human_readable": "Regulatory Compliance Substitution (Training Mandate as Competence Proxy)",
+      "structural_delta": "FAA/regulatory training mandates substitute compliance metrics for actual competence maintenance verification",
+      "primary_observable": "Training completion rates vs real-world incident response outcomes",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "regulatory_bodies",
+      "victim": "actual_safety_outcomes",
+      "downstream_of": [
+        "simulation_sufficiency"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional mechanism downstream of simulation_sufficiency; lower centrality than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "simulation_sufficiency",
+      "kernel_id": "competence_occupation",
+      "reading_id": "simulation_sufficiency"
+    },
+    {
+      "claim_id": "real_incident_necessity",
+      "kernel_id": "competence_occupation",
+      "reading_id": "real_incident_necessity"
+    },
+    {
+      "claim_id": "skill_decay_despite_simulation",
+      "kernel_id": "competence_occupation",
+      "reading_id": "skill_decay_despite_simulation"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "hybrid_occupation",
+      "structural_delta": "Competence requires continuous multi-mechanism exercise without consensus on optimal configuration",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Pragmatic response reading with lower structural distinctiveness; represents unresolved optimization problem rather than distinct constraint structure"
+    },
+    {
+      "claim_id": "jeopardy_paradox",
+      "structural_delta": "Assessed performance under jeopardy conditions does not transfer to normal operations",
+      "hypothesis": "snare",
+      "deferral_reason": "Evidence mechanism for real_incident_necessity reading; structural delta captured in that axis rather than requiring separate generation"
+    },
+    {
+      "claim_id": "regulatory_compliance_substitution",
+      "structural_delta": "Training mandates substitute compliance metrics for competence verification",
+      "hypothesis": "snare",
+      "deferral_reason": "Institutional mechanism downstream of simulation_sufficiency with lower centrality than selected synthesis node"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_hybrid_collapse",
+      "description": "Does hybrid_occupation reading collapse into 'we don't know the optimal mix' rather than a distinct structural constraint? If so, the kernel contest reduces to simulation_sufficiency vs real_incident_necessity binary, with skill_decay_despite_simulation as the unresolved empirical challenge to sufficiency.",
+      "source": "Kernel/reading decomposition (§1.3-K); hybrid_occupation deferred as scaffold"
+    },
+    {
+      "id": "omega_consensus_absence",
+      "description": "Absence of consensus on optimal timing/intensity for maintenance training suggests the competence occupation kernel may be fundamentally unstable—no configuration reliably prevents decay. If true, high-reliability organizations face structural impossibility: rare catastrophes cannot be allowed to occur (for competence maintenance) but simulation cannot prevent skill decay.",
+      "source": "Absence inventory (§1.1); systematic review evidence of overlapping terminology without consensus"
+    },
+    {
+      "id": "omega_transfer_validity",
+      "description": "Missing validated metrics for measuring real-world competence transfer from simulation. Line audit data suggests jeopardy paradox (assessed ≠ actual), but no consensus observable exists to measure whether simulation-acquired competence transfers to authentic catastrophe response. This measurement gap may be structural rather than methodological.",
+      "source": "Absence inventory (§1.1); line audit findings vs simulation assessment gap"
+    },
+    {
+      "id": "omega_mountain_validity",
+      "description": "Is real_incident_necessity a true mountain (physics of authentic jeopardy conditions) or a piton of current measurement limitations? If validated transfer metrics existed, simulation_sufficiency might be empirically testable rather than axiomatically contested.",
+      "source": "F03 (Hasty Generalization); mountain classification for real_incident_necessity based on jeopardy paradox evidence"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: real_incident_necessity classified as mountain based on jeopardy paradox evidence and missing human factors in simulation, but this may reflect current measurement limitations rather than irreducible physics of authentic jeopardy. If validated transfer metrics existed, the mountain/rope distinction might collapse. Generated omega_mountain_validity to bound this uncertainty. Kernel contest is genuine: simulation_sufficiency and real_incident_necessity hold mutually exclusive axioms about whether controlled replication equals authentic conditions for competence maintenance."
+  },
+  "_seed_id": "aviation_nuclear_safety_retention"
+}

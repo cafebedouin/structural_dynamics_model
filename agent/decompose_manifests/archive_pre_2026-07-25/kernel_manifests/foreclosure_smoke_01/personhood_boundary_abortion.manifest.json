@@ -1,0 +1,189 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Bioethics / Political Philosophy / Constitutional Law",
+  "family_id": "personhood_boundary_kernel",
+  "topic_summary": "Analysis of the abortion debate as a contested kernel where different parties read the personhood-boundary commitment differently. The conception reading, viability reading, and birth reading each instantiate structurally different constraints with distinct victim sets, beneficiary structures, and authority groundings.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Fetus/embryo (entity whose moral status is contested)",
+      "Pregnant person (rights-holder in all readings, scope varies)",
+      "State authority (enforcer of whichever reading prevails)",
+      "Medical profession (interpreter of viability threshold)",
+      "Religious institutions (natural-law authority grounding for conception reading)",
+      "Autonomy framework (liberal rights grounding for birth reading)"
+    ],
+    "key_tensions": [
+      "Fetal moral status vs maternal autonomy (victim-set boundary dispute)",
+      "Natural law vs positive law (authority grounding collision)",
+      "Fixed boundary vs developmental continuum (kernel stability vs gradualism)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "conception_reading",
+      "human_readable": "Conception Reading (Moral Status at Fertilization)",
+      "structural_delta": "Personhood begins at conception; fetus enters victim set immediately; abortion is homicide",
+      "primary_observable": "Legal personhood statutes; fetal homicide laws; abortion prohibition scope",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "state_enforcement_apparatus",
+      "victim": "pregnant_person",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest extractiveness; most restrictive victim-set boundary; canonical natural-law reading"
+    },
+    {
+      "claim_id": "viability_reading",
+      "human_readable": "Viability Reading (Moral Status at Independent Survival Threshold)",
+      "structural_delta": "Personhood begins at viability (~24 weeks); pre-viability abortion permitted; post-viability restricted",
+      "primary_observable": "Gestational age limits in abortion law; medical viability definitions; Roe v Wade framework",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Intermediate position; medical-authority grounding; distinct from both poles"
+    },
+    {
+      "claim_id": "birth_reading",
+      "human_readable": "Birth Reading (Moral Status at Birth)",
+      "structural_delta": "Personhood begins at birth; fetus not in victim set; pregnant person sole rights-holder",
+      "primary_observable": "Abortion access laws; gestational limits (none or very late); autonomy-based legal frameworks",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Autonomy-maximizing pole; lowest extractiveness; positivist grounding"
+    },
+    {
+      "claim_id": "sentience_reading",
+      "human_readable": "Sentience Reading (Moral Status at Neural Capacity)",
+      "structural_delta": "Personhood begins at sentience/pain capacity (~20 weeks); pre-sentience abortion unrestricted",
+      "primary_observable": "Fetal pain legislation; neural development thresholds; utilitarian ethical frameworks",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps structurally with viability reading; lower centrality; utilitarian rather than rights-based"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "conception_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "conception_reading"
+    },
+    {
+      "claim_id": "viability_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "viability_reading"
+    },
+    {
+      "claim_id": "birth_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "birth_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "sentience_reading",
+      "structural_delta": "Personhood at sentience/pain capacity",
+      "hypothesis": "rope",
+      "deferral_reason": "Overlaps with viability reading in practical implementation; utilitarian grounding less structurally distinct than natural-law vs autonomy poles"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_gradualism_collapse",
+      "description": "Does the kernel's fixity requirement collapse under developmental biology? If personhood is genuinely gradual, all three readings are arbitrary line-drawing rather than kernel interpretations.",
+      "source": "§1.3-K coherence check"
+    },
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "Conception reading requires state surveillance of pregnancy outcomes; birth reading does not. Is the extractiveness difference structural (snare vs mountain) or implementation-dependent?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_quickening_erasure",
+      "description": "Historical quickening standard (fetal movement ~16-20 weeks) was dominant pre-modern reading. Its absence from current debate suggests authority-structure shift rather than kernel stability.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_male_authority_substrate",
+      "description": "All three readings emerged from male-dominated interpretive authorities (church, court, legislature). Does a feminist reading of the kernel exist, or does patriarchal authority structure preclude it?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings share personhood-boundary substrate but emit constraints with different victim sets, epsilon values, and authority groundings. Sentience reading deferred as structurally redundant with viability."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The personhood-boundary kernel: a shared commitment that moral status attaches at some point in fetal development, contested over where that boundary lies",
+    "authority_description": "Natural-law (religious/metaphysical), medical-professional (viability), and autonomy-liberal (positivist) authority structures compete for interpretive legitimacy",
+    "drift_status": "absent",
+    "candidate_pattern": "Contested Present (Type 3)",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "conception_reading",
+        "commitment": "Moral status begins at conception (fertilization)",
+        "authority_grounding": "Natural law / religious metaphysics (soul ensoulment)",
+        "sibling_readings": [
+          "viability_reading",
+          "birth_reading"
+        ],
+        "expected_structural_delta": "Fetus in victim set from conception; abortion prohibited or heavily restricted; high state enforcement extractiveness; pregnant person's autonomy subordinated"
+      },
+      {
+        "reading_id": "viability_reading",
+        "commitment": "Moral status begins at viability (capacity for independent survival)",
+        "authority_grounding": "Medical-professional authority (developmental biology)",
+        "sibling_readings": [
+          "conception_reading",
+          "birth_reading"
+        ],
+        "expected_structural_delta": "Fetus enters victim set at ~24 weeks; pre-viability abortion permitted; post-viability restricted; moderate state role; balancing framework"
+      },
+      {
+        "reading_id": "birth_reading",
+        "commitment": "Moral status begins at birth (exit from maternal body)",
+        "authority_grounding": "Autonomy-liberal / positivist (bodily sovereignty)",
+        "sibling_readings": [
+          "conception_reading",
+          "viability_reading"
+        ],
+        "expected_structural_delta": "Fetus not in victim set until birth; pregnant person sole rights-holder; minimal state enforcement; abortion unrestricted or very late limits"
+      }
+    ]
+  },
+  "_seed_id": "personhood_boundary_abortion"
+}

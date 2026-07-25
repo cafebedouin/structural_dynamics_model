@@ -1,0 +1,206 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Anthropology / Commitment Systems / Temporal Institutional Analysis",
+  "family_id": "aneyoshi_tsunami_stone_2026",
+  "topic_summary": "Analysis of the Aneyoshi tsunami stone's 'do not build below this line' directive across 78 years (1933-2011) of non-catastrophe, examining whether the kernel decayed to commemorative symbol or retained live behavioral commitment. The 2011 Tohoku tsunami provided a decisive test: Aneyoshi village survived while neighboring communities were destroyed, suggesting the commitment remained operationally live.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aneyoshi tsunami stone (physical marker erected 1933, inscribed with land-use prohibition)",
+      "Aneyoshi village (community that adhered to stone directive, survived 2011)",
+      "Neighboring coastal communities (violated equivalent directives, suffered catastrophic losses 2011)",
+      "1933 Sanriku tsunami (founding catastrophe that motivated stone placement)",
+      "2011 Tohoku tsunami (decisive test event, D5 catastrophe-theorem break)"
+    ],
+    "key_tensions": [
+      "Commemorative interpretation (stone as memorial/symbol) vs behavioral interpretation (stone as live land-use constraint)",
+      "Temporal decay pressure (78 years without catastrophe eroding commitment salience) vs institutional persistence (village maintained compliance)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The directive 'do not build your homes below this point' inscribed on the Aneyoshi tsunami stone, stabilizing a land-use prohibition grounded in catastrophe memory",
+    "authority_description": "Authority derives from catastrophe witness testimony (1933 survivors) crystallized in physical monument; interpretive legitimacy contested between commemorative (symbolic) and behavioral (operational) readings",
+    "drift_status": "functioning",
+    "candidate_pattern": "witness_testimony_crystallization",
+    "is_contested_kernel": true,
+    "kernel_id": "aneyoshi_land_use_prohibition",
+    "readings": [
+      {
+        "reading_id": "commemorative_husk_reading",
+        "commitment": "Stone as memorial artifact—directive symbolically honored but operationally inert",
+        "authority_grounding": "Cultural preservation norms; stone maintains commemorative function without constraining actual land-use decisions",
+        "sibling_readings": [
+          "behavioral_competence_reading"
+        ],
+        "expected_structural_delta": "High epsilon—stone present but land-use decisions made independently; neighboring villages with equivalent stones built below line and suffered catastrophic losses; commitment decayed to ritual acknowledgment"
+      },
+      {
+        "reading_id": "behavioral_competence_reading",
+        "commitment": "Stone as live land-use constraint—directive operationally enforced through community practice",
+        "authority_grounding": "Catastrophe-prevention pragmatism; stone authority derives from demonstrated protective function",
+        "sibling_readings": [
+          "commemorative_husk_reading"
+        ],
+        "expected_structural_delta": "Very low epsilon—stone directive causally determines settlement pattern; Aneyoshi's survival in 2011 while neighbors perished constitutes decisive empirical validation; commitment retained operational force across 78-year non-catastrophe interval"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "human_readable": "Commemorative Husk Reading (Stone as Symbolic Memorial)",
+      "structural_delta": "Stone functions as cultural memorial without constraining land-use behavior; directive acknowledged symbolically but not operationally enforced",
+      "primary_observable": "Presence of stone monument with no corresponding settlement pattern constraint; neighboring villages with equivalent stones built below directive line",
+      "epsilon_bin": "high",
+      "hypothesis": "piton",
+      "beneficiary": "cultural_preservation_institutions",
+      "victim": "coastal_residents_seeking_economic_access",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents decay hypothesis with high epsilon (commitment failed)"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "human_readable": "Behavioral Competence Reading (Stone as Live Land-Use Constraint)",
+      "structural_delta": "Stone directive causally determines settlement pattern; community maintains operational compliance across 78-year non-catastrophe interval",
+      "primary_observable": "Settlement pattern conforming to stone directive; Aneyoshi survival vs neighboring community destruction in 2011 tsunami",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "temporal_decay_pressure"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents persistence hypothesis with very low epsilon (commitment retained); feeds into temporal analysis"
+    },
+    {
+      "claim_id": "temporal_decay_pressure",
+      "human_readable": "Temporal Decay Pressure (Non-Catastrophe Interval as Commitment Erosion)",
+      "structural_delta": "78-year interval without validating catastrophe creates structural pressure for commitment decay; each generation without disaster reduces salience",
+      "primary_observable": "Generational turnover rate vs catastrophe recurrence interval; comparative survival rates of communities with different stone-adherence patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "behavioral_competence_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Temporal mechanism axis; explains structural challenge to commitment persistence; downstream of behavioral reading"
+    },
+    {
+      "claim_id": "economic_opportunity_gradient",
+      "human_readable": "Economic Opportunity Gradient (Coastal Access vs Safety Trade-off)",
+      "structural_delta": "Proximity to coastline provides economic benefits (fishing access, tourism, trade) that create structural incentive to violate stone directive",
+      "primary_observable": "Economic productivity differential between coastal vs elevated settlement zones; property value gradients",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "coastal_economic_actors",
+      "victim": "safety_compliance_institutions",
+      "downstream_of": [],
+      "feeds_into": [
+        "commemorative_husk_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: economic pressure axis captured implicitly in commemorative_husk reading's beneficiary structure; would add token cost without structural novelty"
+    },
+    {
+      "claim_id": "comparative_stone_network",
+      "human_readable": "Comparative Stone Network (Regional Variation in Directive Adherence)",
+      "structural_delta": "Multiple coastal communities erected equivalent tsunami stones post-1933; differential adherence patterns provide natural experiment for commitment persistence",
+      "primary_observable": "Settlement pattern compliance rates across stone-marked communities; 2011 survival rates correlated with pre-tsunami adherence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "commemorative_husk_reading",
+        "behavioral_competence_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: comparative evidence axis; provides empirical grounding for kernel contest but adds methodological complexity beyond three-axis budget; omega material for validation discussion"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "commemorative_husk_reading",
+      "kernel_id": "aneyoshi_land_use_prohibition",
+      "reading_id": "commemorative_husk_reading"
+    },
+    {
+      "claim_id": "behavioral_competence_reading",
+      "kernel_id": "aneyoshi_land_use_prohibition",
+      "reading_id": "behavioral_competence_reading"
+    },
+    {
+      "claim_id": "temporal_decay_pressure",
+      "kernel_id": "aneyoshi_land_use_prohibition",
+      "reading_id": "temporal_decay_pressure"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "economic_opportunity_gradient",
+      "structural_delta": "Coastal proximity provides economic benefits creating violation incentive",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Economic pressure captured implicitly in commemorative_husk reading's beneficiary structure; redundant with kernel contest framing"
+    },
+    {
+      "claim_id": "comparative_stone_network",
+      "structural_delta": "Regional network of equivalent stones with differential adherence provides natural experiment",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Comparative evidence axis valuable for validation but exceeds three-axis structural budget; deferred to omega discussion of empirical grounding"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_decisive_test_validity",
+      "description": "Does the 2011 tsunami constitute a true D5 catastrophe-theorem break (decisive test of commitment persistence) or merely a single data point? If neighboring villages had different stone-adherence patterns for reasons unrelated to commitment decay (e.g., topography, economic structure), the causal inference weakens. Comparative stone network analysis (deferred axis) would bound this uncertainty.",
+      "source": "Kernel contest structure + deferred axis comparative_stone_network"
+    },
+    {
+      "id": "omega_generational_transmission_mechanism",
+      "description": "What institutional mechanisms sustained behavioral competence across 78 years? Was it formal land-use regulation, informal community enforcement, property inheritance patterns, or catastrophe pedagogy? The temporal_decay_pressure axis identifies the challenge but not the solution. Missing mechanism may be a Rope (coordination) or Scaffold (institutional design) that warrants independent analysis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + temporal_decay_pressure axis"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do the two readings genuinely emit different constraints, or are they observer-position differences on a single constraint? If commemorative_husk is merely 'behavioral_competence viewed by an outsider who doesn't see the enforcement mechanism,' the kernel contest collapses. The 2011 survival differential suggests genuine structural difference (Aneyoshi retained constraint, neighbors lost it), but this requires comparative_stone_network validation.",
+      "source": "§1.3-K coherence check + comparative evidence gap"
+    },
+    {
+      "id": "omega_post_2011_commitment_renewal",
+      "description": "Did the 2011 validation event reset the temporal decay clock, or does the 78-year interval remain the relevant timescale? If catastrophe recurrence is the commitment-renewal mechanism, the next non-catastrophe interval begins in 2011, not 1933. This affects whether temporal_decay_pressure is a Rope (coordination challenge) or Mountain (generational forgetting physics).",
+      "source": "Temporal analysis + catastrophe-theorem break context"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest structure validated: two readings emit genuinely different constraints (high epsilon decay vs very low epsilon persistence). The 2011 tsunami provides decisive empirical test distinguishing readings. Temporal_decay_pressure axis adds mechanism analysis without collapsing into either reading. Deferred axes documented for omega-level discussion."
+  },
+  "_seed_id": "aneyoshi_tsunami_memory"
+}

@@ -1,0 +1,279 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Catholic Social Teaching / Technology Ethics / Political Theology",
+  "family_id": "magnifica_humanitas_ai_encyclical",
+  "topic_summary": "Papal encyclical Magnifica Humanitas addresses artificial intelligence through Catholic Social Doctrine, framing AI as a test of humanity's choice between technocratic domination (Babel) and collaborative dignity (Jerusalem). The document synthesizes 135 years of social teaching to evaluate AI's impact on human dignity, work, truth, freedom, and peace.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Catholic Church (Magisterium; authoritative interpreter of social doctrine)",
+      "Artificial Intelligence (technological system; object of moral evaluation)",
+      "Technocratic Paradigm (cultural force; efficiency-driven worldview)",
+      "Human Person (theological subject; bearer of infinite dignity)",
+      "Digital Power Holders (private actors; controllers of platforms/data/infrastructure)",
+      "Common Good (normative principle; social expression of dignity)",
+      "Tower of Babel (biblical archetype; self-sufficient domination)",
+      "Jerusalem Rebuilding (biblical archetype; collaborative restoration under God)"
+    ],
+    "key_tensions": [
+      "Technological power vs. human dignity (concentration of AI control vs. inalienable personhood)",
+      "Efficiency optimization vs. relational flourishing (algorithmic performance vs. care/communion)",
+      "Private innovation vs. public governance (transnational tech actors vs. state/civil authority)",
+      "Transhumanist enhancement vs. incarnational humanism (technical transcendence vs. grace-mediated fulfillment)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The stabilized commitment is the normative authority of Catholic Social Doctrine as interpreter of human dignity and the common good in technological contexts. All parties accept that CST provides binding principles; they disagree on whether AI governance requires NEW doctrinal development or APPLICATION of existing principles.",
+    "authority_description": "Magisterial teaching authority (Pope, councils, tradition) grounds interpretive legitimacy. The encyclical itself claims to 'add my own voice to this living tradition' (§3), positioning AI as a res nova requiring doctrinal growth, not mere repetition.",
+    "drift_status": "functioning",
+    "candidate_pattern": "Interpretive Tradition (Pattern 2)",
+    "is_contested_kernel": false,
+    "kernel_id": null,
+    "readings": [],
+    "axiom_contradictions": [],
+    "collapse_note": "Initial kernel hypothesis: CST principles (dignity, common good, subsidiarity, solidarity, justice) as contested kernel with readings differing on whether AI requires doctrinal development vs. application. REJECTED: all 'readings' share the same structural commitment — that CST principles apply to AI and must guide its governance. The encyclical does not present competing interpretive schools (e.g., Thomist vs. personalist vs. liberationist readings of dignity in AI contexts); it synthesizes a single authoritative position. The document's internal structure (Chapters 2-5) applies principles uniformly, not as rival frameworks. What appears as tension (technocratic paradigm vs. civilization of love) is not a kernel dispute but a moral binary: the encyclical condemns one path and prescribes the other. No genuine readings survive independence testing."
+  },
+  "axes": [
+    {
+      "claim_id": "technocratic_paradigm_vs_human_primacy",
+      "human_readable": "Technocratic Paradigm vs. Human Primacy",
+      "structural_delta": "AI embeds efficiency/control/profit logic that can displace human dignity as the measure of value, reducing persons to optimizable data",
+      "primary_observable": "Design choices in AI systems: what they measure, optimize, and exclude; whether human override/appeal is structurally guaranteed",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "digital_power_holders",
+      "victim": "vulnerable_populations_excluded_by_algorithmic_classification",
+      "downstream_of": [],
+      "feeds_into": [
+        "ai_governance_accountability",
+        "work_displacement_dignity",
+        "truth_democracy_disinformation"
+      ],
+      "centrality_score": 9,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream to all other axes; encyclical's foundational diagnosis (§92-96, §112-114)"
+    },
+    {
+      "claim_id": "ai_governance_accountability",
+      "human_readable": "AI Governance and Accountability Structures",
+      "structural_delta": "Concentration of AI power in private transnational actors vs. public/participatory governance mechanisms",
+      "primary_observable": "Locus of decision-making authority over AI deployment; transparency/contestability of algorithmic decisions; existence of independent oversight",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "tech_monopolies",
+      "victim": "states_civil_society_lacking_governance_capacity",
+      "downstream_of": [
+        "technocratic_paradigm_vs_human_primacy"
+      ],
+      "feeds_into": [
+        "digital_colonialism_data_extraction",
+        "work_displacement_dignity"
+      ],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural synthesis node; encyclical's subsidiarity/solidarity application to AI (§71-72, §96-110)"
+    },
+    {
+      "claim_id": "work_displacement_dignity",
+      "human_readable": "Work Displacement and Human Dignity",
+      "structural_delta": "AI-driven automation threatens employment/meaningful work, which CST identifies as essential to human flourishing and family stability",
+      "primary_observable": "Labor market impacts of AI adoption; quality/security of remaining jobs; access to retraining; social safety net adequacy",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "workers_families_youth",
+      "downstream_of": [
+        "technocratic_paradigm_vs_human_primacy",
+        "ai_governance_accountability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "CST's 'essential key' to social question (§148-156); distinct observable (employment) from governance axis"
+    },
+    {
+      "claim_id": "truth_democracy_disinformation",
+      "human_readable": "Truth as Common Good vs. AI-Amplified Disinformation",
+      "structural_delta": "AI systems manipulate information/images, eroding shared epistemic foundations required for democracy and human dignity",
+      "primary_observable": "Prevalence/detectability of AI-generated disinformation; public trust in information sources; regulatory frameworks for content authenticity",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "democratic_publics_vulnerable_to_manipulation",
+      "downstream_of": [
+        "technocratic_paradigm_vs_human_primacy"
+      ],
+      "feeds_into": [
+        "war_normalization_autonomous_weapons"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct observable (epistemic integrity) from work/governance; encyclical's Chapter 4 focus (§132-138)"
+    },
+    {
+      "claim_id": "digital_colonialism_data_extraction",
+      "human_readable": "Digital Colonialism and Data Extraction",
+      "structural_delta": "Health/genetic/demographic data from Global South extracted by Northern tech actors, creating new dependencies and power asymmetries",
+      "primary_observable": "Data flows from low-resource to high-resource regions; ownership/control of aggregated datasets; benefit-sharing arrangements",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "northern_tech_actors",
+      "victim": "global_south_populations",
+      "downstream_of": [
+        "ai_governance_accountability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Encyclical's explicit 'new colonialism' framing (§178); distinct from labor/truth axes; universal destination of goods applied to data"
+    },
+    {
+      "claim_id": "war_normalization_autonomous_weapons",
+      "human_readable": "War Normalization and Autonomous Weapons",
+      "structural_delta": "AI in warfare lowers threshold for violence, automates lethal decisions, and erodes ethical/legal constraints on force",
+      "primary_observable": "Deployment of autonomous weapons systems; speed of strike decisions; civilian casualty rates; international treaty adoption",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "civilian_populations_in_conflict_zones",
+      "downstream_of": [
+        "truth_democracy_disinformation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Encyclical's Chapter 5 focus (§197-200); distinct observable (military AI) from civilian governance/work axes; just war doctrine rejection"
+    },
+    {
+      "claim_id": "transhumanist_anthropology",
+      "human_readable": "Transhumanist Anthropology vs. Incarnational Humanism",
+      "structural_delta": "Transhumanism treats human limits as defects to eliminate via technology; CST treats limits as sites of grace, relationship, and dignity",
+      "primary_observable": "Cultural narratives about enhancement; investment in life-extension/augmentation tech; public discourse on disability/aging/suffering",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "technocratic_paradigm_vs_human_primacy"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: cultural/ideological background to technocratic paradigm, but lacks independent ε; encyclical treats it as worldview feeding the paradigm, not a separate constraint (§115-130)"
+    },
+    {
+      "claim_id": "educational_digital_literacy",
+      "human_readable": "Educational Formation for Digital Literacy",
+      "structural_delta": "AI requires new pedagogical approaches to cultivate critical use, restraint, and protection of inner freedom against algorithmic manipulation",
+      "primary_observable": "Curriculum integration of AI ethics/literacy; teacher training; age-appropriate device policies; educational outcomes (attention, critical thinking)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: instrumental to truth/work axes but lacks independent constraint structure; encyclical treats education as response mechanism, not distinct axis (§139-147)"
+    },
+    {
+      "claim_id": "slavery_supply_chain_exploitation",
+      "human_readable": "Digital Slavery and Supply Chain Exploitation",
+      "structural_delta": "AI infrastructure depends on hidden labor (data labeling, content moderation, rare earth extraction) under exploitative conditions",
+      "primary_observable": "Working conditions in AI supply chains; child labor in mineral extraction; wages/protections for content moderators; supply chain transparency",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "tech_companies_externalizing_costs",
+      "victim": "global_south_workers_children",
+      "downstream_of": [
+        "ai_governance_accountability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: encyclical's §173-179 treats this as instance of digital colonialism axis; same beneficiary/victim structure; observable (labor conditions) subset of data extraction observable; would merge under independence testing"
+    }
+  ],
+  "generation_sequence": [
+    "technocratic_paradigm_vs_human_primacy",
+    "ai_governance_accountability",
+    "work_displacement_dignity",
+    "truth_democracy_disinformation",
+    "digital_colonialism_data_extraction",
+    "war_normalization_autonomous_weapons"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "transhumanist_anthropology",
+      "structural_delta": "Transhumanism treats limits as defects; CST treats them as grace sites",
+      "hypothesis": "rope",
+      "deferral_reason": "Lacks independent ε; functions as cultural substrate feeding technocratic_paradigm_vs_human_primacy rather than distinct constraint"
+    },
+    {
+      "claim_id": "educational_digital_literacy",
+      "structural_delta": "AI requires new pedagogical formation for critical use and restraint",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Instrumental response mechanism to truth/work axes; no independent constraint structure; encyclical treats as implementation detail"
+    },
+    {
+      "claim_id": "slavery_supply_chain_exploitation",
+      "structural_delta": "AI infrastructure depends on exploitative hidden labor",
+      "hypothesis": "snare",
+      "deferral_reason": "Collapses into digital_colonialism_data_extraction under independence testing; same beneficiary/victim; labor conditions are subset of data extraction observable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_cst_development_vs_application",
+      "description": "The encyclical claims AI requires doctrinal 'development in fidelity to the Gospel' (§17), not mere application. But it does not specify WHICH principles are genuinely new vs. which are restatements. Is 'data as common good' (§67, §108) a development of universal destination of goods, or a novel principle? Omega bounds uncertainty about doctrinal innovation.",
+      "source": "Kernel collapse analysis (§1.3-K); encyclical's methodological claim (§17-27) vs. substantive uniformity (Ch. 2-5)"
+    },
+    {
+      "id": "omega_subsidiarity_digital_power_asymmetry",
+      "description": "Subsidiarity (§68-72) assumes higher authorities CAN coordinate lower ones. But if private tech actors exceed state capacity, subsidiarity may be structurally inapplicable — not violated but irrelevant. The encyclical does not resolve whether subsidiarity is a Rope (coordination norm) or a Piton (atrophied principle in post-state context).",
+      "source": "Dark Matter Probe 2 (Absence Inventory); §71-72 acknowledge asymmetry but do not reclassify principle"
+    },
+    {
+      "id": "omega_just_war_rejection_scope",
+      "description": "The encyclical states 'just war theory is now outdated' (§192, footnote 182). Does this apply ONLY to AI-enabled warfare, or to all armed conflict? If the latter, this is a major doctrinal shift; if the former, the scope is unclear. The text does not disambiguate.",
+      "source": "§192 + footnote 182; potential doctrinal development vs. contextual application"
+    },
+    {
+      "id": "omega_slavery_apology_scope",
+      "description": "The encyclical apologizes for the Church's historical tolerance of slavery (§176), framing it as 'a wound in Christian memory.' But it does not specify reparative obligations beyond 'denounce, prevent, protect, liberate, rehabilitate' (§177). Is this a call for material reparations, or only moral witness? Omega bounds the apology's practical scope.",
+      "source": "§173-177; apology without specified remediation mechanism"
+    },
+    {
+      "id": "omega_eucharistic_solidarity_mechanism",
+      "description": "The Conclusion (§234-235) grounds solidarity in Eucharistic communion, claiming 'union with Christ is union with all to whom he gives himself.' But the encyclical does not explain how sacramental unity translates into political/economic solidarity structures. Is this a theological metaphor or a causal mechanism? Omega bounds the ecclesiology-to-politics link.",
+      "source": "§234-235; theological claim without institutional specification"
+    },
+    {
+      "id": "omega_nehemiah_parable_limits",
+      "description": "The Nehemiah rebuilding metaphor (§8, §241) assumes a shared 'God at the center' commitment. But in pluralistic democracies, this assumption does not hold. The encyclical addresses 'all people of good will' (§16) yet grounds its normative vision in Christian theology. Omega bounds the applicability of the Jerusalem model to non-confessional contexts.",
+      "source": "§8-10, §241; biblical framing vs. universal address (§2, §16)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan applied theological ethics, political economy, technology studies, and historical analysis. Dark matter probes surfaced subsidiarity asymmetry (omega_subsidiarity_digital_power_asymmetry) and Eucharistic mechanism gap (omega_eucharistic_solidarity_mechanism). Kernel hypothesis tested and rejected with documented collapse rationale. Six axes selected represent genuinely distinct observables and beneficiary/victim structures."
+  }
+}

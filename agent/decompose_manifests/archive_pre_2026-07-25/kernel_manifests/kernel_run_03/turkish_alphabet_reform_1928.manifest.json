@@ -1,0 +1,208 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / State Formation / Linguistic Engineering",
+  "family_id": "turkish_alphabet_reform_1928",
+  "topic_summary": "Analysis of Turkey's 1928 alphabet reform (Law 1353), which replaced Arabic script with Latin script within three months via top-down state imposition. The reform achieved rapid literacy gains but severed access to Ottoman literary heritage and created enforcement mechanisms targeting non-compliance. Tests whether a commitment system kernel can be installed with zero prior occupancy of the new reading.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Mustafa Kemal Atatürk (state founder; reform architect)",
+      "Language Commission / Dil Encümeni (technical implementation body)",
+      "Ottoman Empire (predecessor state; 600-year literary tradition)",
+      "Millet Mektepleri / Nation's Schools (mass literacy apparatus)",
+      "Arabic script (incumbent orthography; 900-year continuity)",
+      "Latin script (imposed orthography; zero prior Turkish practitioners)"
+    ],
+    "key_tensions": [
+      "Rapid implementation (3-month mandate) vs gradual transition (5-year commission proposal)",
+      "Literacy gains (8% to 20% in 7 years) vs cultural severance (Ottoman heritage inaccessible)",
+      "Secular modernization vs Islamic unity (1923 rejection grounds)",
+      "State coercion (2-6 month imprisonment) vs voluntary adoption"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The orthographic substrate through which Turkish language is encoded and transmitted — the shared commitment that written Turkish must use some script system",
+    "authority_description": "State monopoly on legitimate orthography; Atatürk's personal authority as founder; Language Commission technical legitimacy",
+    "drift_status": "absent",
+    "candidate_pattern": "revolutionary_displacement",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "Initial analysis identified potential readings (Arabic-script continuity vs Latin-script modernization vs gradual bilingual transition), but these collapse under §1.3-K coherence test. The Arabic-script reading had ZERO institutional defenders after 1928 — no authority structure claiming interpretive legitimacy for Arabic orthography survived the reform. The 'gradual transition' reading was a procedural proposal (5-year timeline), not a competing orthographic commitment. What appeared to be contested readings were actually: (1) an extinct reading with no post-1928 authority structure, (2) a timing dispute within the Latin-script reading, not a separate reading. The kernel was not contested — it was displaced. No pair of readings shares a common substrate while emitting different constraints; the Arabic reading was eliminated, not coexisting. This is state-imposed kernel replacement, not kernel contestation."
+  },
+  "axes": [
+    {
+      "claim_id": "orthographic_displacement_velocity",
+      "human_readable": "Orthographic Displacement Velocity (3-Month Imposition Timeline)",
+      "structural_delta": "State-mandated transition speed from Arabic to Latin script, rejecting gradual adoption",
+      "primary_observable": "Timeline from law enactment (Nov 1, 1928) to full enforcement; examination of officials (Oct 8-25); newspaper transition mandates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "state_modernization_project",
+      "victim": "intergenerational_literacy_continuity",
+      "downstream_of": [],
+      "feeds_into": [
+        "heritage_severance_mechanism",
+        "literacy_extraction_tradeoff"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream to both other selected axes; captures the core structural choice (rapid vs gradual) that determined all downstream effects"
+    },
+    {
+      "claim_id": "heritage_severance_mechanism",
+      "human_readable": "Heritage Severance Mechanism (Intergenerational Archive Inaccessibility)",
+      "structural_delta": "Immediate inaccessibility of 600-year Ottoman literary/administrative archive to post-reform population",
+      "primary_observable": "Percentage of post-1928 population able to read pre-1928 texts; archival access rates; translation pipeline capacity vs corpus size",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "orthographic_displacement_velocity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Mountain providing irreversible physical constraint; structurally distinct from velocity axis (measures outcome not process); different victim structure (cultural commons vs individuals)"
+    },
+    {
+      "claim_id": "literacy_extraction_tradeoff",
+      "human_readable": "Literacy Extraction Tradeoff (Phonemic Simplicity vs Cultural Continuity)",
+      "structural_delta": "Tradeoff between rapid literacy gains (phonemic Latin script) and preservation of access to cultural heritage (Arabic script continuity)",
+      "primary_observable": "Literacy rate delta (8% to 20%); learning time reduction (3 years to months); heritage access loss (100% to ~0%)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_capacity_building",
+      "victim": "ottoman_cultural_continuity",
+      "downstream_of": [
+        "orthographic_displacement_velocity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node; captures the fundamental extractive structure (literacy gains purchased via heritage severance); tangled_rope with clear beneficiary/victim asymmetry"
+    },
+    {
+      "claim_id": "enforcement_coercion_gradient",
+      "human_readable": "Enforcement Coercion Gradient (Criminal Sanctions for Non-Compliance)",
+      "structural_delta": "State coercion via 2-6 month imprisonment for Arabic script use in official contexts; disproportionate enforcement against Kurdish populations",
+      "primary_observable": "Prosecution rates under Law 1353; demographic distribution of enforcement; compliance timeline by region/ethnicity",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "turkish_linguistic_nationalism",
+      "victim": "kurdish_minority_populations",
+      "downstream_of": [
+        "orthographic_displacement_velocity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism is downstream consequence of velocity choice; captured indirectly via orthographic_displacement_velocity snare + literacy_extraction_tradeoff victim structure"
+    },
+    {
+      "claim_id": "secularization_coupling",
+      "human_readable": "Secularization Coupling (Alphabet Reform as Islamic Decoupling)",
+      "structural_delta": "Alphabet reform as component of broader secularization program (1928 secular state declaration; 1933 Turkish-language Quran mandate)",
+      "primary_observable": "Temporal correlation between alphabet law and secularization laws; rejection of 1923 proposal on 'Islamic unity' grounds vs 1928 acceptance",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "orthographic_displacement_velocity"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: coordination mechanism (rope) with lower structural distinctiveness; secularization context is upstream enabling condition but not independent constraint axis"
+    },
+    {
+      "claim_id": "zero_occupancy_installation",
+      "human_readable": "Zero-Occupancy Installation (M-Set Gap in Kernel Imposition)",
+      "structural_delta": "Installation of Latin-script reading with zero prior practitioners; tests whether kernel can be imposed without fringe reading to climb from",
+      "primary_observable": "Pre-1928 Latin-script Turkish practitioner count (effectively zero); post-1928 adoption rate; comparison to reforms with existing fringe readings",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "orthographic_displacement_velocity"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-analytical observation about kernel installation mechanics; piton (atrophied capacity for gradual transition) but lower centrality than velocity axis which captures the same structural choice"
+    }
+  ],
+  "generation_sequence": [
+    "orthographic_displacement_velocity",
+    "heritage_severance_mechanism",
+    "literacy_extraction_tradeoff"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_coercion_gradient",
+      "structural_delta": "Criminal sanctions (2-6 months) for Arabic script use; disproportionate Kurdish enforcement",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism is downstream consequence of velocity choice; victim structure (Kurdish populations) captured via literacy_extraction_tradeoff tangled_rope"
+    },
+    {
+      "claim_id": "secularization_coupling",
+      "structural_delta": "Alphabet reform as component of secularization program (1928 secular state; 1933 Turkish Quran)",
+      "hypothesis": "rope",
+      "deferral_reason": "Coordination mechanism with lower structural distinctiveness; secularization is enabling context not independent constraint"
+    },
+    {
+      "claim_id": "zero_occupancy_installation",
+      "structural_delta": "Latin-script installation with zero prior practitioners; M-set gap test case",
+      "hypothesis": "piton",
+      "deferral_reason": "Meta-analytical observation about kernel mechanics; structural choice captured by orthographic_displacement_velocity axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "Is the kernel/reading framework applicable when one reading is eliminated rather than coexisting? The Arabic-script reading had no post-1928 authority structure — this is displacement, not contestation. Framework may require extension to handle extinct readings vs contested readings.",
+      "source": "§1.3-K kernel/reading decomposition; commitment_system_recognition analysis"
+    },
+    {
+      "id": "omega_counterfactual_gradual",
+      "description": "Would a 5-year gradual transition (Language Commission proposal) have preserved heritage access while achieving literacy gains? Atatürk's claim that 'everyone will read that bit in the old writing' suggests gradual transition would fail — but this is untested assertion, not measured outcome.",
+      "source": "Deferred axis secularization_coupling; orthographic_displacement_velocity structural delta"
+    },
+    {
+      "id": "omega_literacy_causation",
+      "description": "Is the literacy rate increase (8% to 20%, 1927-1935) causally attributable to script change, or to mass education infrastructure (Millet Mektepleri)? Phonemic simplicity claim (3 years to months) is plausible but confounded by simultaneous expansion of state education apparatus.",
+      "source": "literacy_extraction_tradeoff axis; primary_observable measurement ambiguity"
+    },
+    {
+      "id": "omega_mountain_reclassification",
+      "description": "Is heritage_severance_mechanism a true Mountain (irreversible physical constraint) or a Piton of policy choice? Mass translation programs or mandatory Ottoman Turkish education could restore archive access — severance is contingent on state resource allocation, not physics.",
+      "source": "F03 (Hasty Generalization); heritage_severance_mechanism mountain classification"
+    },
+    {
+      "id": "omega_kurdish_enforcement_asymmetry",
+      "description": "Is disproportionate enforcement against Kurdish populations (deferred axis enforcement_coercion_gradient) a bug or feature? If feature, the reform may be a Snare targeting minority linguistic autonomy, not merely a literacy optimization.",
+      "source": "Deferred axis enforcement_coercion_gradient; Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: heritage_severance_mechanism classified as Mountain (irreversible physical constraint) but may be Piton of policy choice — mass translation or mandatory Ottoman education could restore archive access. Severance is contingent on state resource allocation, not physics. Generated omega_mountain_reclassification to bound this uncertainty. Additionally, kernel/reading framework collapsed under §1.3-K coherence test — Arabic-script reading had zero post-1928 authority structure, making this displacement rather than contestation. Generated omega_kernel_collapse to document framework boundary case."
+  },
+  "_seed_id": "turkish_alphabet_reform_1928"
+}

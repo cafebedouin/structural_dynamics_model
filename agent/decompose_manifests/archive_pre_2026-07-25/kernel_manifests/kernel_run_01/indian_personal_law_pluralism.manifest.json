@@ -1,0 +1,264 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Pluralism / Comparative Family Law",
+  "family_id": "india_personal_law_coexistence",
+  "topic_summary": "Analysis of India's simultaneous operation of Hindu, Muslim, Christian, Parsi, and secular personal law regimes governing marriage and family matters within a single constitutional framework. The system has persisted for seven decades without zero-sum shedding, raising the question of whether this represents one authority kernel read through multiple religious lenses or genuinely distinct kernels coexisting under constitutional pluralism.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Indian Constitution (supreme legal authority; Articles 25-28 protect religious freedom, Article 44 directs UCC)",
+      "Hindu Personal Law (codified via Hindu Marriage Act 1955; applies to Hindus, Buddhists, Jains, Sikhs)",
+      "Muslim Personal Law (largely uncodified; governed by Shariat Application Act 1937; retains classical features)",
+      "Christian Personal Law (Indian Christian Marriage Act 1872, Indian Divorce Act 1869/2001)",
+      "Parsi Personal Law (Parsi Marriage and Divorce Act 1936)",
+      "Supreme Court of India (interpretive authority; landmark judgments Shah Bano 1985, Shayara Bano 2017)",
+      "Religious community leadership (authority grounded in textual interpretation and community identity)",
+      "Parallel community courts (unrecognized bodies operating without legal authority)"
+    ],
+    "key_tensions": [
+      "Article 25 (religious freedom) vs Article 44 (UCC directive) — constitutional paradox",
+      "Gender equality (constitutional guarantee) vs discriminatory provisions in personal laws (polygamy, unequal inheritance)",
+      "Codified Hindu law vs uncodified Muslim law — uneven secularism",
+      "State judicial authority vs parallel community courts — jurisdictional competition"
+    ],
+    "key_mechanisms": [
+      "Constitutional pluralism: Article 25-28 protection enables state-administered religious jurisdiction over family matters",
+      "Selective codification: Hindu Code Bills 1950s reformed Hindu law; other communities retained uncodified systems",
+      "Judicial harmonization: Supreme Court interprets personal laws through constitutional lens, reshaping without abolishing"
+    ],
+    "key_absences": [
+      "No enforcement mechanism for Article 44 UCC directive despite seven decades and repeated Supreme Court advocacy",
+      "No formal recognition or regulation of parallel community courts despite documented interference in family matters"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Authority to adjudicate legitimate marriage, divorce, inheritance, and family relations",
+    "authority_description": "Contested between religious textual interpretation (community leaders), statutory codification (Parliament), and constitutional harmonization (Supreme Court)",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "family_law_authority",
+    "readings": [
+      {
+        "reading_id": "religious_autonomy_reading",
+        "commitment": "Family law authority derives from religious community identity; Article 25-28 protection makes personal law an essential religious practice",
+        "authority_grounding": "Religious texts and community leadership as primary; state role is administrative recognition",
+        "sibling_readings": [
+          "constitutional_supremacy_reading",
+          "pluralist_accommodation_reading"
+        ],
+        "expected_structural_delta": "Religious communities as primary rights-holders; state intervention in personal law becomes religious freedom violation; women's equality claims subordinated to community autonomy"
+      },
+      {
+        "reading_id": "constitutional_supremacy_reading",
+        "commitment": "Family law authority derives from constitutional mandate for equality and secularism; Article 44 UCC directive is binding; personal laws are state-regulated constructs subject to fundamental rights",
+        "authority_grounding": "Constitutional text and Supreme Court interpretation as supreme; religious practice protections do not extend to civil consequences",
+        "sibling_readings": [
+          "religious_autonomy_reading",
+          "pluralist_accommodation_reading"
+        ],
+        "expected_structural_delta": "Individual rights-holders primary; personal law provisions violating equality are unconstitutional; UCC implementation becomes constitutional obligation; community identity claims subordinated to uniformity"
+      },
+      {
+        "reading_id": "pluralist_accommodation_reading",
+        "commitment": "Family law authority is constitutionally distributed across religious communities and state; Article 25-28 and Article 44 coexist as complementary rather than contradictory; legal pluralism is the constitutional settlement",
+        "authority_grounding": "Constitutional framework as deliberately hybrid; Indian secularism as accommodative rather than separationist; stability of seven-decade coexistence as legitimating",
+        "sibling_readings": [
+          "religious_autonomy_reading",
+          "constitutional_supremacy_reading"
+        ],
+        "expected_structural_delta": "Dual rights-holders (individual and community); selective codification and judicial harmonization as legitimate tools; UCC as aspirational not mandatory; zero-sum shedding absence becomes feature not bug"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "religious_autonomy_reading",
+        "reading_b": "constitutional_supremacy_reading",
+        "basis": "Religious autonomy reading holds that community authority over family law is constitutionally protected as essential religious practice; constitutional supremacy reading holds that personal laws are state-regulated constructs subject to fundamental rights override. No single framework can simultaneously hold both that personal law is immune from state intervention as religious practice AND that it is subject to constitutional equality mandates."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "religious_autonomy_reading",
+      "human_readable": "Religious Autonomy Reading (Family Law as Essential Religious Practice)",
+      "structural_delta": "Authority to adjudicate family matters derives from religious community identity protected under Articles 25-28",
+      "primary_observable": "Frequency of religious freedom claims blocking personal law reform; community leadership resistance to codification",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "religious_community_leadership",
+      "victim": "women_seeking_equality_within_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest extractiveness; captures community autonomy pole"
+    },
+    {
+      "claim_id": "constitutional_supremacy_reading",
+      "human_readable": "Constitutional Supremacy Reading (Personal Law as State-Regulated Construct)",
+      "structural_delta": "Authority to adjudicate family matters derives from constitutional mandate for equality; personal laws subject to fundamental rights",
+      "primary_observable": "Supreme Court judgments invalidating personal law provisions; Article 44 UCC advocacy frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reformist_judiciary_and_womens_rights_advocates",
+      "victim": "religious_minorities_fearing_majoritarian_uniformity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; axiom-contradictory to first; captures uniformity pole"
+    },
+    {
+      "claim_id": "pluralist_accommodation_reading",
+      "human_readable": "Pluralist Accommodation Reading (Constitutional Pluralism as Settlement)",
+      "structural_delta": "Authority is constitutionally distributed; Articles 25-28 and 44 coexist as complementary; legal pluralism is the framework",
+      "primary_observable": "Seven-decade stability without zero-sum shedding; selective codification pattern; judicial harmonization without abolition",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; captures the hybrid condition that resists clean categorization; explains actual institutional behavior"
+    },
+    {
+      "claim_id": "uneven_codification_mechanism",
+      "human_readable": "Uneven Codification (Selective Reform as Structural Asymmetry)",
+      "structural_delta": "Hindu law extensively codified post-independence; Muslim law remains largely uncodified; creates differential state intervention",
+      "primary_observable": "Statutory codification count by community; reform legislation timeline asymmetry",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "hindu_majority_via_modernization_narrative",
+      "victim": "muslim_minority_via_uneven_secularism_critique",
+      "downstream_of": [
+        "constitutional_supremacy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism downstream of constitutional supremacy reading; captured implicitly in that reading's constraint story"
+    },
+    {
+      "claim_id": "parallel_courts_jurisdiction",
+      "human_readable": "Parallel Courts Jurisdiction (Unrecognized Community Adjudication)",
+      "structural_delta": "Parallel community and religious courts operate without legal authority alongside formal judicial system",
+      "primary_observable": "Documented interference by parallel courts; judicial deprecation frequency; enforcement gap",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "community_leaders_maintaining_informal_authority",
+      "victim": "individuals_subject_to_dual_jurisdiction_pressure",
+      "downstream_of": [
+        "religious_autonomy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism downstream of religious autonomy reading; lower centrality; omega material on authority atrophy"
+    },
+    {
+      "claim_id": "gender_equality_friction",
+      "human_readable": "Gender Equality Friction (Constitutional Guarantee vs Personal Law Discrimination)",
+      "structural_delta": "Constitutional equality guarantee collides with discriminatory provisions in personal laws (polygamy, unequal inheritance)",
+      "primary_observable": "Supreme Court gender equality judgments; women's rights litigation frequency; reform resistance patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "patriarchal_structures_across_communities",
+      "victim": "women_within_personal_law_regimes",
+      "downstream_of": [
+        "religious_autonomy_reading",
+        "constitutional_supremacy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: cross-cutting tension captured in both autonomy and supremacy readings; independent axis would duplicate kernel contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "religious_autonomy_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "religious_autonomy_reading"
+    },
+    {
+      "claim_id": "constitutional_supremacy_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "constitutional_supremacy_reading"
+    },
+    {
+      "claim_id": "pluralist_accommodation_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "pluralist_accommodation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "uneven_codification_mechanism",
+      "structural_delta": "Hindu law codified, Muslim law uncodified; differential state intervention",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism downstream of constitutional supremacy reading; captured implicitly in that reading's constraint story"
+    },
+    {
+      "claim_id": "parallel_courts_jurisdiction",
+      "structural_delta": "Unrecognized community courts operate alongside formal judicial system",
+      "hypothesis": "piton",
+      "deferral_reason": "Enforcement mechanism downstream of religious autonomy reading; lower centrality; omega material on authority atrophy"
+    },
+    {
+      "claim_id": "gender_equality_friction",
+      "structural_delta": "Constitutional equality guarantee collides with personal law discrimination",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Cross-cutting tension captured in both autonomy and supremacy readings; independent axis would duplicate kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Is this genuinely one kernel read three ways, or three distinct kernels that happen to govern the same domain? The seven-decade stability without zero-sum shedding suggests constitutional pluralism has institutionalized incoherence as a feature. If readings are genuinely incoherent (not merely in tension), the system may be a bundle of distinct kernels rather than contested readings of one kernel.",
+      "source": "§1.3-K kernel/reading decomposition; research context hybrid condition analysis"
+    },
+    {
+      "id": "omega_ucc_implementation_path",
+      "description": "If constitutional supremacy reading is correct that Article 44 UCC is binding, why has it not been implemented in seven decades despite repeated Supreme Court advocacy? If pluralist accommodation reading is correct that UCC is aspirational, what explains the persistent judicial rhetoric? The gap between doctrine and practice may indicate a fourth reading (UCC as symbolic legitimation) not captured in the three-reading decomposition.",
+      "source": "Absence inventory: no enforcement mechanism for Article 44; Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_parallel_courts_authority_source",
+      "description": "Parallel community courts operate without legal authority yet persist despite judicial deprecation. Is this a piton (atrophied state monopoly on adjudication) or a rope (community coordination filling state capacity gap)? The answer determines whether religious autonomy reading's authority grounding is textual-interpretive or enforcement-based.",
+      "source": "Deferred axis parallel_courts_jurisdiction; absence inventory: no regulation of parallel courts"
+    },
+    {
+      "id": "omega_selective_codification_intentionality",
+      "description": "Was uneven codification (Hindu law reformed, Muslim law not) a deliberate strategy to avoid majoritarian imposition, or an accident of political feasibility? If deliberate, pluralist accommodation reading gains support. If accidental, constitutional supremacy reading's claim that personal laws are state-regulated constructs is weakened by the state's failure to regulate uniformly.",
+      "source": "Deferred axis uneven_codification_mechanism; research context 'uneven secularism' framing"
+    },
+    {
+      "id": "omega_axiom_contradiction_resolution",
+      "description": "Religious autonomy and constitutional supremacy readings hold axiom-contradictory positions on whether personal law is immune from state intervention. Yet the system has operated for seven decades. Does this mean: (a) the contradiction is resolved by pluralist accommodation reading's hybrid framework, (b) the contradiction is unresolved and the system is in permanent crisis, or (c) the contradiction is resolved by one reading dominating in practice while the other dominates in rhetoric?",
+      "source": "Axiom contradiction declaration between religious_autonomy_reading and constitutional_supremacy_reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied as specified. Three readings selected capture the full topology of the contested kernel: religious autonomy (community authority pole), constitutional supremacy (uniformity pole), and pluralist accommodation (hybrid settlement). Axiom contradiction declared between autonomy and supremacy readings. Deferred axes are mechanisms or cross-cutting tensions captured within the readings."
+  },
+  "_seed_id": "indian_personal_law_pluralism"
+}

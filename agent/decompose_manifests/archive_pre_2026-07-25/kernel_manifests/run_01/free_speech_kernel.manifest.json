@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Communication Rights",
+  "family_id": "free_speech_kernel_2026",
+  "topic_summary": "Analysis of free speech as a contested kernel where different interpretive communities read the same commitment to expressive liberty differently, producing structurally distinct constraints on what speech receives protection. The absolutist reading treats speech protection as near-categorical; the harm-limited reading subordinates protection to demonstrable harm thresholds. The disagreement is not about whether speech matters but about what the speech commitment IS—whether it protects expression categorically or conditionally.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "First Amendment / Speech Kernel (constitutional commitment to expressive liberty)",
+      "Absolutist Interpretive Community (reads kernel as near-categorical protection)",
+      "Harm-Limited Interpretive Community (reads kernel as conditional on harm threshold)",
+      "State Authority (enforces whichever reading prevails in jurisdiction)",
+      "Speaker (entity whose expression is either protected or restricted)",
+      "Victim/Target (entity claiming harm from speech)"
+    ],
+    "key_tensions": [
+      "Categorical protection vs harm-conditional protection (absolutist vs harm-limited readings)",
+      "Speaker autonomy vs victim protection (structural opposition within harm-limited reading)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "absolutist_reading",
+      "human_readable": "Absolutist Reading (Near-Categorical Speech Protection)",
+      "structural_delta": "Speech protection operates categorically except for narrow exclusions (incitement, true threats, fraud). Harm to listeners is not grounds for restriction.",
+      "primary_observable": "Scope of protected speech category; judicial treatment of listener harm claims",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "speaker",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three readings; instantiates widest protection boundary"
+    },
+    {
+      "claim_id": "harm_threshold_reading",
+      "human_readable": "Harm-Threshold Reading (Protection Conditional on Demonstrable Harm)",
+      "structural_delta": "Speech protection is conditional: expression causing demonstrable harm (incitement, defamation, harassment, hate speech) loses protection. Harm to victims overrides speaker autonomy.",
+      "primary_observable": "Breadth of unprotected speech categories; evidentiary standards for harm claims",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "victim",
+      "victim": "speaker",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading; instantiates narrower protection with victim-centered harm calculus"
+    },
+    {
+      "claim_id": "marketplace_reading",
+      "human_readable": "Marketplace Reading (Truth-Discovery Mechanism)",
+      "structural_delta": "Speech protection serves epistemic function: free exchange of ideas produces truth over time. False/harmful speech is countered by more speech, not restriction.",
+      "primary_observable": "Judicial reliance on marketplace metaphor; rejection of content-based restrictions",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "collective_epistemic_process",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; distinct structural justification (epistemic rather than autonomy-based)"
+    },
+    {
+      "claim_id": "dignity_reading",
+      "human_readable": "Dignity Reading (Speech as Subordination Mechanism)",
+      "structural_delta": "Speech can function as structural subordination (hate speech, group libel). Protection is conditional on not undermining equal dignity of target groups.",
+      "primary_observable": "Recognition of group harm; hate speech laws; dignity-based restrictions",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "marginalized_groups",
+      "victim": "speaker",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps structurally with harm_threshold_reading but adds group-subordination dimension; fourth reading exceeds budget"
+    },
+    {
+      "claim_id": "democratic_participation_reading",
+      "human_readable": "Democratic Participation Reading (Political Speech Primacy)",
+      "structural_delta": "Speech protection is strongest for political expression necessary for self-governance. Non-political speech receives lower protection.",
+      "primary_observable": "Tiered protection levels; political vs commercial speech doctrine",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "democratic_process",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: creates internal hierarchy within protected speech rather than boundary shift; lower centrality"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "absolutist_reading",
+      "kernel_id": "speech_protection_kernel",
+      "reading_id": "absolutist_reading"
+    },
+    {
+      "claim_id": "harm_threshold_reading",
+      "kernel_id": "speech_protection_kernel",
+      "reading_id": "harm_threshold_reading"
+    },
+    {
+      "claim_id": "marketplace_reading",
+      "kernel_id": "speech_protection_kernel",
+      "reading_id": "marketplace_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "dignity_reading",
+      "structural_delta": "Speech as structural subordination mechanism; protection conditional on equal dignity",
+      "hypothesis": "snare",
+      "deferral_reason": "Fourth reading exceeds three-axis budget; overlaps with harm_threshold_reading but adds group-subordination dimension; high epsilon warrants omega documentation"
+    },
+    {
+      "claim_id": "democratic_participation_reading",
+      "structural_delta": "Tiered protection with political speech primacy",
+      "hypothesis": "rope",
+      "deferral_reason": "Lower centrality; creates hierarchy within protected category rather than boundary shift; captured partially by marketplace_reading's epistemic focus"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_dignity_subordination",
+      "description": "Does dignity_reading instantiate a genuinely different constraint or is it a high-epsilon variant of harm_threshold_reading? If group subordination is structurally distinct from individual harm, deferred reading may warrant separate generation.",
+      "source": "Deferred axis dignity_reading with high epsilon"
+    },
+    {
+      "id": "omega_kernel_stability",
+      "description": "Is the speech kernel itself stable across readings or do different readings point to different kernels (autonomy vs democracy vs dignity)? If the latter, this may be multiple kernels rather than one contested kernel.",
+      "source": "§1.3-K coherence check"
+    },
+    {
+      "id": "omega_harm_measurability",
+      "description": "Harm-threshold reading depends on 'demonstrable harm' as observable. What counts as demonstration? Evidentiary standards vary by jurisdiction and may themselves be contested, making the constraint boundary unstable.",
+      "source": "Primary observable ambiguity in harm_threshold_reading"
+    },
+    {
+      "id": "omega_absolutist_exceptions",
+      "description": "Absolutist reading claims 'near-categorical' protection with narrow exclusions. Are the exclusions (incitement, true threats, fraud) themselves readings of a deeper kernel, or are they mountains (physical impossibility of protecting certain speech acts)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) applied to absolutist_reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition produced structurally distinct readings with different victim/beneficiary structures and observables. Coherence confirmed: all readings share the speech protection kernel but instantiate different constraints."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Constitutional commitment to expressive liberty, stabilized in First Amendment text and common-law speech traditions",
+    "authority_description": "Judicial interpretation grounded in constitutional text, precedent, and normative theories of speech (autonomy, democracy, truth-discovery, dignity)",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "speech_protection_kernel",
+    "readings": [
+      {
+        "reading_id": "absolutist_reading",
+        "commitment": "Speech protection operates near-categorically; listener harm is not grounds for restriction",
+        "authority_grounding": "Autonomy theory; Blackstonian prior restraint doctrine; Brandenburg incitement standard",
+        "sibling_readings": [
+          "harm_threshold_reading",
+          "marketplace_reading",
+          "dignity_reading",
+          "democratic_participation_reading"
+        ],
+        "expected_structural_delta": "Widest protection boundary; speaker autonomy maximized; victim harm claims rejected unless speech crosses narrow categorical exclusions"
+      },
+      {
+        "reading_id": "harm_threshold_reading",
+        "commitment": "Speech protection is conditional on absence of demonstrable harm to victims",
+        "authority_grounding": "Harm principle (Mill); defamation/harassment doctrine; European hate speech frameworks",
+        "sibling_readings": [
+          "absolutist_reading",
+          "marketplace_reading",
+          "dignity_reading",
+          "democratic_participation_reading"
+        ],
+        "expected_structural_delta": "Narrower protection boundary; victim harm claims override speaker autonomy when harm threshold met; broader unprotected categories"
+      },
+      {
+        "reading_id": "marketplace_reading",
+        "commitment": "Speech protection serves truth-discovery; false/harmful speech countered by more speech",
+        "authority_grounding": "Holmes/Brandeis marketplace metaphor; epistemic justification for free expression",
+        "sibling_readings": [
+          "absolutist_reading",
+          "harm_threshold_reading",
+          "dignity_reading",
+          "democratic_participation_reading"
+        ],
+        "expected_structural_delta": "Protection justified by collective epistemic benefit rather than individual autonomy; content-based restrictions rejected as distorting truth-discovery process"
+      },
+      {
+        "reading_id": "dignity_reading",
+        "commitment": "Speech protection conditional on not functioning as structural subordination of target groups",
+        "authority_grounding": "Dignity theory; group libel doctrine; international human rights frameworks (ICCPR Article 20)",
+        "sibling_readings": [
+          "absolutist_reading",
+          "harm_threshold_reading",
+          "marketplace_reading",
+          "democratic_participation_reading"
+        ],
+        "expected_structural_delta": "Group harm recognized as distinct from individual harm; hate speech/group libel unprotected; protection conditional on equal dignity maintenance"
+      },
+      {
+        "reading_id": "democratic_participation_reading",
+        "commitment": "Speech protection strongest for political expression necessary for self-governance",
+        "authority_grounding": "Meiklejohn democratic theory; tiered scrutiny doctrine (political vs commercial speech)",
+        "sibling_readings": [
+          "absolutist_reading",
+          "harm_threshold_reading",
+          "marketplace_reading",
+          "dignity_reading"
+        ],
+        "expected_structural_delta": "Internal hierarchy within protected speech; political speech receives highest protection; non-political speech more readily restricted"
+      }
+    ]
+  },
+  "_seed_id": "free_speech_kernel"
+}

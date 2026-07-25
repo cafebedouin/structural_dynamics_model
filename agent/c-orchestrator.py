@@ -513,7 +513,11 @@ class DRAuditOrchestrator:
             from agent.generate_kernel_corpus import _scope_manifest_provenance
             manifest["_provenance"] = _scope_manifest_provenance(
                 self.MODELS["architect"], self.axes, topic=topic)
-            mdir = self._manifests_dir or (REPO_ROOT / "outputs" / "kernel_manifests" / "flat")
+            # Tracked location (OQ-254 Step 3, generator-forward): outputs/ is
+            # gitignored, which made every Q-choice record invisible to tracked read
+            # sites and gone on a fresh clone (Pattern 6). processed.txt stays in
+            # outputs/kernel_manifests/ — only the Q-record moves.
+            mdir = REPO_ROOT / "agent" / "decompose_manifests" / (self._run_tag or "flat")
             mdir.mkdir(parents=True, exist_ok=True)
             path = mdir / f"{fam}_{ts}.manifest.json"
             path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False),

@@ -1,0 +1,177 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Political Theory / State Systems",
+  "family_id": "westphalia_sovereignty_2026",
+  "topic_summary": "Analysis of the Treaty of Westphalia (1648) sovereignty principle as a contested kernel. Two foundational readings exist: Absolute Non-Intervention (territorial inviolability as categorical) versus Conditional Responsibility (sovereignty contingent on internal conduct). These readings emit structurally incompatible constraints regarding when external actors may legitimately breach territorial boundaries.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Treaty of Westphalia 1648 (founding text establishing territorial sovereignty norm)",
+      "Nation-states as primary subjects (beneficiaries of territorial inviolability)",
+      "United Nations / R2P doctrine (Responsibility to Protect framework, post-2005)",
+      "Humanitarian intervention advocates (actors justifying sovereignty breach)",
+      "Authoritarian regimes (victims of conditional sovereignty reading)",
+      "International Criminal Court (enforcement mechanism for conditional reading)"
+    ],
+    "key_tensions": [
+      "Territorial integrity vs humanitarian protection (when mass atrocities occur within borders)",
+      "Sovereign equality vs hierarchical enforcement (who adjudicates sovereignty violations)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1648 Westphalia treaties establishing territorial sovereignty as the foundational organizing principle of the international state system",
+    "authority_description": "Interpretive authority fragmented: realist IR scholars and non-intervention coalitions defend absolute reading; liberal institutionalists and humanitarian law scholars defend conditional reading. No single adjudicator; legitimacy derived from treaty law interpretation and customary international law evolution.",
+    "drift_status": "partial",
+    "candidate_pattern": "legitimacy_kernel",
+    "is_contested_kernel": true,
+    "kernel_id": "westphalia_sovereignty",
+    "readings": [
+      {
+        "reading_id": "absolute_non_intervention",
+        "commitment": "Sovereignty as categorical territorial inviolability—external interference in domestic affairs is per se illegitimate regardless of internal conduct",
+        "authority_grounding": "Realist IR theory; UN Charter Article 2(7) literal textualism; non-aligned movement historical practice",
+        "sibling_readings": [
+          "conditional_responsibility",
+          "graded_sovereignty"
+        ],
+        "expected_structural_delta": "High barrier to intervention; domestic atrocities remain internal matter; victim set excludes populations under authoritarian control; beneficiaries are state elites claiming territorial monopoly"
+      },
+      {
+        "reading_id": "conditional_responsibility",
+        "commitment": "Sovereignty as conditional status—states forfeit territorial inviolability when failing to protect populations from mass atrocities",
+        "authority_grounding": "Liberal institutionalism; R2P doctrine; International Criminal Court jurisprudence; customary international law evolution post-1945",
+        "sibling_readings": [
+          "absolute_non_intervention",
+          "graded_sovereignty"
+        ],
+        "expected_structural_delta": "Lowered intervention threshold; international community gains adjudicative authority; victim set includes populations under atrocity regimes; beneficiaries are humanitarian intervention coalitions and global governance institutions"
+      },
+      {
+        "reading_id": "graded_sovereignty",
+        "commitment": "Sovereignty as scalar capacity—territorial authority exists on spectrum from full (Western democracies) to nominal (failed states), with intervention legitimacy calibrated to capacity deficits",
+        "authority_grounding": "Post-colonial legal theory; sovereignty-as-responsibility framework; graduated membership in international institutions",
+        "sibling_readings": [
+          "absolute_non_intervention",
+          "conditional_responsibility"
+        ],
+        "expected_structural_delta": "Intervention legitimacy becomes function of state capacity metrics; creates hierarchical state system with de facto tiering; beneficiaries are capacity-evaluation authorities; victims are weak states subject to paternalistic oversight"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "absolute_non_intervention",
+        "reading_b": "conditional_responsibility",
+        "basis": "Absolute reading holds territorial inviolability as categorical moral principle (sovereignty never forfeited); conditional reading treats sovereignty as instrumental status dependent on performance (sovereignty forfeitable when protection obligation breached). No coherent framework can simultaneously hold both axioms—one requires sovereignty to be unconditional, the other requires it to be conditional."
+      },
+      {
+        "reading_a": "absolute_non_intervention",
+        "reading_b": "graded_sovereignty",
+        "basis": "Absolute reading requires sovereign equality (all states possess identical territorial authority); graded reading instantiates sovereign hierarchy (states possess differential authority based on capacity). A single framework cannot hold both formal equality and substantive hierarchy as foundational axioms simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "absolute_non_intervention",
+      "human_readable": "Absolute Non-Intervention (Categorical Territorial Inviolability)",
+      "structural_delta": "Sovereignty as unconditional status: external interference illegitimate regardless of internal conduct",
+      "primary_observable": "UN General Assembly voting patterns on intervention resolutions; treaty law interpretation by ICJ; state practice regarding border violations",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_elites_claiming_territorial_monopoly",
+      "victim": "populations_under_authoritarian_control",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: highest extractiveness bin (high ε); represents realist/statist position with clear beneficiary structure"
+    },
+    {
+      "claim_id": "conditional_responsibility",
+      "human_readable": "Conditional Responsibility (Sovereignty Contingent on Protection)",
+      "structural_delta": "Sovereignty as earned status: states forfeit inviolability when failing atrocity-prevention obligations",
+      "primary_observable": "R2P invocations in Security Council resolutions; ICC prosecutions; humanitarian intervention frequency post-1990s",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "humanitarian_intervention_coalitions",
+      "victim": "authoritarian_regimes_losing_territorial_monopoly",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: structurally opposite beneficiary/victim configuration; represents liberal institutionalist position with equal ε"
+    },
+    {
+      "claim_id": "graded_sovereignty",
+      "human_readable": "Graded Sovereignty (Capacity-Scalar Territorial Authority)",
+      "structural_delta": "Sovereignty as spectrum: intervention legitimacy calibrated to state capacity deficits rather than binary threshold",
+      "primary_observable": "Failed state index correlations with intervention frequency; differential treaty obligations; IMF/World Bank conditionality patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "capacity_evaluation_authorities",
+      "victim": "weak_states_under_paternalistic_oversight",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: introduces hierarchical dimension absent from binary readings; moderate ε reflects empirical instantiation without formal codification"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "absolute_non_intervention",
+      "kernel_id": "westphalia_sovereignty",
+      "reading_id": "absolute_non_intervention"
+    },
+    {
+      "claim_id": "conditional_responsibility",
+      "kernel_id": "westphalia_sovereignty",
+      "reading_id": "conditional_responsibility"
+    },
+    {
+      "claim_id": "graded_sovereignty",
+      "kernel_id": "westphalia_sovereignty",
+      "reading_id": "graded_sovereignty"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "All three readings face enforcement asymmetry: powerful states invoke whichever reading justifies desired action (absolute when resisting constraints, conditional when justifying intervention, graded when establishing hierarchy). This pattern suggests readings function as post-hoc rationalizations rather than binding constraints. Observable: correlation between state power and reading selection.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Graded sovereignty reading may collapse into conditional responsibility in practice—both justify intervention based on internal state conduct, differing only in whether threshold is binary or scalar. If operational distinction vanishes (all capacity deficits justify intervention), third reading becomes variant of second rather than independent reading.",
+      "source": "§3.1 Pairwise Independence Testing"
+    },
+    {
+      "id": "omega_historical_drift",
+      "description": "1648 treaties did not explicitly address humanitarian intervention (concept post-dates Westphalia). All three readings are retrospective interpretations projecting modern concerns onto historical text. Kernel may be less 'what Westphalia said' than 'what states claim Westphalia legitimates.' True kernel might be the practice of invoking Westphalia rather than treaty text itself.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_non_state_actors",
+      "description": "All readings assume state-centric system. Absent from analysis: how sovereignty readings handle non-state armed groups, multinational corporations, or transnational networks that operate across borders without invoking sovereignty claims. Modern interstate system may require fourth reading addressing non-territorial authority.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No critical fractures detected. Kernel structure holds: readings emit genuinely different constraints (absolute bars intervention; conditional permits it; graded calibrates it). Axiom contradictions confirmed via mutual exclusivity test. Enforcement asymmetry (omega_enforcement_asymmetry) noted but does not invalidate kernel structure—readings remain operationally distinct even if selectively invoked."
+  },
+  "_seed_id": "westphalia_treaty_sovereignty"
+}

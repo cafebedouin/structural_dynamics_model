@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Policy / Constitutional Law / EU Institutional Governance",
+  "family_id": "ecb_mandate_interpretation_2026",
+  "topic_summary": "Analysis of contested interpretations of the European Central Bank's statutory mandate under Article 127 TFEU and the ECB Statute. The shared kernel is the codified mandate text requiring price stability as primary objective. Orthodox reading restricts ECB action to narrow price stability. Expansive reading incorporates secondary objectives (employment, climate) under 'without prejudice' clause and evolving treaty interpretation.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "European Central Bank (monetary authority operating under Article 127 TFEU)",
+      "ECJ/CJEU (judicial authority interpreting treaty obligations)",
+      "Member State Governments (political principals with climate/employment mandates)",
+      "Financial Markets (constraint on ECB credibility via inflation expectations)",
+      "Article 127 TFEU + ECB Statute (codified mandate kernel)"
+    ],
+    "key_tensions": [
+      "Price stability primacy vs secondary objectives (orthodox vs expansive interpretive communities)",
+      "Judicial deference vs mandate constraint (ECJ proportionality review vs ECB operational independence)"
+    ],
+    "mechanisms": [
+      "Monetary policy transmission (interest rates → inflation via credit channel)",
+      "Forward guidance credibility (market belief formation constrains policy space)",
+      "Treaty interpretation evolution (living constitution vs originalist constraint)"
+    ],
+    "absences": [
+      "Democratic accountability pathway for mandate expansion (missing legislative authorization channel)",
+      "Conflict resolution mechanism when price stability and secondary objectives diverge structurally"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article 127 TFEU mandate text: 'primary objective shall be to maintain price stability' + 'without prejudice to the objective of price stability, the ESCB shall support general economic policies in the Union'",
+    "authority_description": "ECB Governing Council interprets operational implications; ECJ adjudicates treaty conformity; interpretive legitimacy grounded in treaty fidelity and central bank independence doctrine",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence_under_ambiguity",
+    "is_contested_kernel": true,
+    "kernel_id": "ecb_mandate_article_127",
+    "readings": [
+      {
+        "reading_id": "orthodox_price_stability",
+        "commitment": "Mandate requires exclusive focus on 2% inflation target; secondary objectives subordinate and non-operational",
+        "authority_grounding": "Originalist treaty interpretation + Bundesbank inflation-targeting tradition",
+        "sibling_readings": [
+          "expansive_secondary_objectives",
+          "climate_incorporation"
+        ],
+        "expected_structural_delta": "Narrow beneficiary set (savers/creditors); climate risks externalized; high suppression of mandate expansion"
+      },
+      {
+        "reading_id": "expansive_secondary_objectives",
+        "commitment": "Mandate permits operational weight on employment/growth when price stability not threatened; 'without prejudice' clause authorizes discretionary balancing",
+        "authority_grounding": "Living constitution + ECJ Gauweiler/Weiss proportionality review allowing policy flexibility",
+        "sibling_readings": [
+          "orthodox_price_stability",
+          "climate_incorporation"
+        ],
+        "expected_structural_delta": "Broader beneficiary set (workers/debtors); distributional considerations permitted; moderate suppression of alternatives"
+      },
+      {
+        "reading_id": "climate_incorporation",
+        "commitment": "Mandate requires climate risk integration into asset purchases and collateral frameworks; treaty obligation to support EU climate policy under Article 11 TFEU environmental integration clause",
+        "authority_grounding": "Systemic risk doctrine + teleological treaty interpretation linking monetary stability to climate stability",
+        "sibling_readings": [
+          "orthodox_price_stability",
+          "expansive_secondary_objectives"
+        ],
+        "expected_structural_delta": "Climate transition beneficiaries enter constraint set; fossil fuel sector faces extraction via collateral haircuts; novel suppression mechanism via portfolio tilting"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "orthodox_price_stability",
+        "reading_b": "expansive_secondary_objectives",
+        "basis": "Orthodox reading holds price stability as lexicographic priority (incommensurable with other objectives); expansive reading permits trade-offs when price stability secured. No single framework can hold both lexicographic priority and discretionary balancing simultaneously."
+      },
+      {
+        "reading_a": "orthodox_price_stability",
+        "reading_b": "climate_incorporation",
+        "basis": "Orthodox reading prohibits non-monetary criteria in asset selection (market neutrality axiom); climate reading mandates such criteria (climate neutrality axiom). Cannot hold both market neutrality and climate-tilting as simultaneously binding operational rules."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "orthodox_price_stability",
+      "human_readable": "Orthodox Price Stability Reading (Exclusive Inflation Targeting)",
+      "structural_delta": "Mandate interpreted as requiring exclusive operational focus on 2% inflation target with secondary objectives legally subordinate and non-actionable",
+      "primary_observable": "ECB policy statements referencing secondary objectives; asset purchase program sectoral neutrality; collateral framework climate exclusions",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "creditor_class_savers",
+      "victim": "climate_transition_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant institutional reading; highest suppression of alternatives; axiom-contradictory with both other readings"
+    },
+    {
+      "claim_id": "expansive_secondary_objectives",
+      "human_readable": "Expansive Secondary Objectives Reading (Balanced Mandate)",
+      "structural_delta": "Mandate interpreted as permitting operational weight on employment and growth when price stability constraint satisfied; 'without prejudice' clause authorizes discretionary policy space",
+      "primary_observable": "ECB forward guidance referencing employment gaps; ECJ Weiss judgment proportionality analysis admitting secondary considerations",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "debtor_states_workers",
+      "victim": "inflation_hawks",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Live interpretive position in ECJ case law; structurally distinct beneficiary set from orthodox; axiom-contradictory with orthodox"
+    },
+    {
+      "claim_id": "climate_incorporation",
+      "human_readable": "Climate Incorporation Reading (Environmental Integration Mandate)",
+      "structural_delta": "Mandate interpreted as requiring climate risk integration into monetary operations via Article 11 TFEU environmental clause and systemic risk doctrine",
+      "primary_observable": "ECB climate stress tests; CSPP green tilting announcements; collateral framework carbon intensity haircuts",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "climate_transition_sectors",
+      "victim": "fossil_fuel_incumbents",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Emerging interpretive claim with operational traction; structurally distinct from employment-focused expansive reading; axiom-contradictory with orthodox"
+    },
+    {
+      "claim_id": "judicial_deference_constraint",
+      "human_readable": "Judicial Deference as Structural Constraint (ECJ Non-Intervention Doctrine)",
+      "structural_delta": "ECJ proportionality review provides only minimal constraint on ECB discretion due to technical complexity and independence doctrine",
+      "primary_observable": "ECJ Gauweiler/Weiss/PSPP judgments deferring to ECB technical assessments; frequency of annulment vs validation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "expansive_secondary_objectives",
+        "climate_incorporation"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural enabler of interpretive drift but not itself a reading of the mandate kernel; captured as institutional background in reading constraints"
+    },
+    {
+      "claim_id": "democratic_accountability_absence",
+      "human_readable": "Democratic Accountability Gap (Missing Legislative Authorization)",
+      "structural_delta": "Mandate expansion via interpretation bypasses legislative channel; no formal democratic authorization for climate/employment operational weighting",
+      "primary_observable": "Absence of EU legislative acts authorizing secondary objective operationalization; ECB unilateral policy announcements",
+      "epsilon_bin": "high",
+      "hypothesis": "absence_as_constraint",
+      "beneficiary": null,
+      "victim": "electoral_accountability",
+      "downstream_of": [],
+      "feeds_into": [
+        "expansive_secondary_objectives",
+        "climate_incorporation"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: critical normative dimension but not a reading of the mandate itself; surfaces as omega regarding legitimacy deficit"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "orthodox_price_stability",
+      "kernel_id": "ecb_mandate_article_127",
+      "reading_id": "orthodox_price_stability"
+    },
+    {
+      "claim_id": "expansive_secondary_objectives",
+      "kernel_id": "ecb_mandate_article_127",
+      "reading_id": "expansive_secondary_objectives"
+    },
+    {
+      "claim_id": "climate_incorporation",
+      "kernel_id": "ecb_mandate_article_127",
+      "reading_id": "climate_incorporation"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "judicial_deference_constraint",
+      "structural_delta": "ECJ proportionality review provides minimal constraint on ECB discretion",
+      "hypothesis": "rope",
+      "deferral_reason": "Institutional enabler of interpretive drift rather than a reading of the mandate kernel; background condition for all three selected readings"
+    },
+    {
+      "claim_id": "democratic_accountability_absence",
+      "structural_delta": "Mandate expansion via interpretation bypasses legislative authorization channel",
+      "hypothesis": "absence_as_constraint",
+      "deferral_reason": "Normative critique of the interpretive mechanism rather than a competing reading; surfaces as omega regarding legitimacy of interpretive drift"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_legislative_bypass",
+      "description": "Does interpretive mandate expansion without legislative authorization constitute democratic deficit or legitimate treaty evolution? If the former, all expansive readings may be constitutionally suspect regardless of ECJ validation.",
+      "source": "Deferred axis: democratic_accountability_absence"
+    },
+    {
+      "id": "omega_conflict_resolution",
+      "description": "When price stability and secondary objectives structurally diverge (e.g., stagflation), which reading provides operational guidance? Orthodox has clear hierarchy; expansive readings lack formal conflict resolution mechanism.",
+      "source": "Absence Inventory: missing adjudication procedure for incommensurable objectives"
+    },
+    {
+      "id": "omega_market_constraint",
+      "description": "Do financial markets impose a binding constraint on expansive readings via inflation expectation channels? If so, orthodox reading may be a Piton (policy choice) masquerading as Mountain (credibility constraint).",
+      "source": "Dark Matter Probe 3: credibility as contested beneficiary narrative"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "Is the current interpretive pluralism stable or transitional? If ECB Governing Council composition shifts, does one reading achieve dominance and suppress alternatives via personnel rather than argument?",
+      "source": "F03 concern: durability of interpretive contest vs path-dependent lock-in"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: classification of readings as genuinely independent versus institutionally contingent positions depends on assumption of durable interpretive pluralism. If Governing Council turnover produces reading dominance, apparent kernel contest may collapse into single reading with historical alternatives. Generated omega_reading_stability to bound this uncertainty."
+  },
+  "_seed_id": "ecb_target_mandate_scope"
+}

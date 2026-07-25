@@ -1,0 +1,244 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Epistemology / Religious History / Commitment System Analysis",
+  "family_id": "reformation_composite_event_2026",
+  "topic_summary": "Analysis of the Protestant Reformation as a composite event that resists reduction to a single kernel narrative. The research context explicitly frames this as a test case for whether commitment system analysis can handle overdetermined historical events where multiple CS patterns (climb, drop, swap, emergence) operate simultaneously rather than sequentially.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Martin Luther (theological reformer, precipitating actor)",
+      "John Calvin (theological reformer, Reformed tradition founder)",
+      "Henry VIII (political actor, Anglican church founder)",
+      "Jan Hus (pre-Reformation precursor, executed 1415)",
+      "Johannes Gutenberg (technological enabler, printing press inventor)",
+      "Catholic Church (institutional target of reform)",
+      "Anabaptists (radical reformers, adult baptism advocates)",
+      "Protestant historiography (interpretive tradition, German nationalist framing)"
+    ],
+    "key_tensions": [
+      "Religious innovation vs political opportunism (theological vs secular motives)",
+      "Unity vs fragmentation (single movement vs proliferating schisms)",
+      "Continuity vs rupture (reform progression vs institutional threat)",
+      "Historiographical overdetermination (Protestant breakthrough vs Catholic spontaneous reform)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Protestant Reformation as historical event-kernel: what happened between 1517-1648 (or 1400-1750) that constitutes 'the Reformation'",
+    "authority_description": "Historiographical traditions (Protestant nationalist, Catholic revisionist, secular modernization theorists) claim interpretive legitimacy through different evidential standards and periodization schemes",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "reformation_event_boundary",
+    "readings": [
+      {
+        "reading_id": "theological_climb_reading",
+        "commitment": "The Reformation was primarily a theological innovation event: Luther's rediscovery of justification by faith alone constituted a genuine doctrinal breakthrough that required institutional separation",
+        "authority_grounding": "Protestant historiography (especially German nationalist tradition); treats Luther's 95 Theses as precipitating moment; privileges theological texts as primary evidence",
+        "sibling_readings": [
+          "political_swap_reading",
+          "composite_overdetermination_reading"
+        ],
+        "expected_structural_delta": "Reformation enters history as climb (new kernel reading of scripture); Catholic Church becomes victim of theological correction; beneficiaries are believers freed from false doctrine; periodization tight (1517-1555)"
+      },
+      {
+        "reading_id": "political_swap_reading",
+        "commitment": "The Reformation was primarily a political realignment event: secular rulers exploited theological disputes to break papal authority and seize church assets; theology was post-hoc rationalization",
+        "authority_grounding": "Materialist historiography; privileges economic and political motives over stated theological reasons; treats Henry VIII as paradigmatic case",
+        "sibling_readings": [
+          "theological_climb_reading",
+          "composite_overdetermination_reading"
+        ],
+        "expected_structural_delta": "Reformation enters history as swap (authority transfer from Rome to princes); Catholic Church becomes victim of asset seizure; beneficiaries are secular rulers; theology is scaffold for power consolidation; periodization extends to Westphalia (1648) when political settlement stabilizes"
+      },
+      {
+        "reading_id": "composite_overdetermination_reading",
+        "commitment": "The Reformation was an overdetermined composite event: theological innovation (climb), institutional collapse (drop), political realignment (swap), and denominational proliferation (emergence) occurred simultaneously and irreducibly; no single causal driver or periodization scheme captures the phenomenon",
+        "authority_grounding": "Post-1960s historiography emphasizing multiple causation; treats periodization instability and historiographical contestation as evidence of composite structure rather than interpretive failure",
+        "sibling_readings": [
+          "theological_climb_reading",
+          "political_swap_reading"
+        ],
+        "expected_structural_delta": "Reformation enters history as composite: multiple CS patterns operating in parallel rather than sequence; victim/beneficiary sets vary by which sub-event is foregrounded; periodization remains contested because different readings track different completion points; historiographical overdetermination is structural feature not bug"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "theological_climb_reading",
+        "reading_b": "political_swap_reading",
+        "basis": "Theological reading requires Luther's doctrinal innovation to be causally primary (politics follows theology); political reading requires rulers' asset-seizure motives to be causally primary (theology rationalizes politics). No single framework can hold both as simultaneously primary causes."
+      },
+      {
+        "reading_a": "theological_climb_reading",
+        "reading_b": "composite_overdetermination_reading",
+        "basis": "Theological reading requires reduction to single causal driver (doctrinal breakthrough); composite reading denies such reduction is possible (multiple irreducible drivers). A framework cannot simultaneously hold that one cause is primary and that no cause is primary."
+      },
+      {
+        "reading_a": "political_swap_reading",
+        "reading_b": "composite_overdetermination_reading",
+        "basis": "Political reading requires reduction to single causal driver (asset seizure); composite reading denies such reduction is possible. Same contradiction structure as theological vs composite."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "theological_climb_reading",
+      "human_readable": "Theological Climb Reading (Doctrinal Innovation as Primary Driver)",
+      "structural_delta": "Luther's justification-by-faith breakthrough constituted genuine theological innovation requiring institutional separation",
+      "primary_observable": "Periodization tightness (1517-1555); theological texts treated as primary evidence; Luther's 95 Theses as precipitating moment",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "believers_freed_from_false_doctrine",
+      "victim": "catholic_church_as_theological_error",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three kernel readings; represents dominant Protestant historiographical tradition; highest training-data availability"
+    },
+    {
+      "claim_id": "political_swap_reading",
+      "human_readable": "Political Swap Reading (Asset Seizure as Primary Driver)",
+      "structural_delta": "Secular rulers exploited theological disputes to break papal authority and seize church assets; theology was post-hoc rationalization",
+      "primary_observable": "Periodization extension to Westphalia (1648); economic/political motives privileged over theological; Henry VIII as paradigmatic case",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "secular_rulers",
+      "victim": "catholic_church_as_asset_holder",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second kernel reading; represents materialist historiographical tradition; structurally distinct beneficiary/victim set from theological reading"
+    },
+    {
+      "claim_id": "composite_overdetermination_reading",
+      "human_readable": "Composite Overdetermination Reading (Multiple Irreducible Drivers)",
+      "structural_delta": "Theological innovation, institutional collapse, political realignment, and denominational proliferation occurred simultaneously and irreducibly; no single causal driver captures the phenomenon",
+      "primary_observable": "Periodization instability across historiographical traditions; historiographical contestation persisting across centuries; multiple CS patterns (climb, drop, swap, emergence) operating in parallel",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "varies_by_sub_event_foregrounded",
+      "victim": "varies_by_sub_event_foregrounded",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third kernel reading; represents post-1960s historiography; highest centrality as it explicitly addresses the composite structure the topic tests for; structurally distinct from both reductionist readings"
+    },
+    {
+      "claim_id": "printing_press_enabler",
+      "human_readable": "Printing Press as Technological Enabler (Gutenberg Revolution)",
+      "structural_delta": "Mechanized printing enabled rapid circulation of theological texts, making Reformation possible at scale",
+      "primary_observable": "Print run volumes 1517-1555; geographic spread of Lutheran texts; comparison to pre-print heretical movements (Hus, Wycliffe)",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "theological_climb_reading",
+        "political_swap_reading",
+        "composite_overdetermination_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold enabling all three readings but not itself a contested interpretation of the Reformation event; captured in all three reading stories as technological precondition"
+    },
+    {
+      "claim_id": "denominational_fragmentation",
+      "human_readable": "Denominational Fragmentation (Emergence Pattern)",
+      "structural_delta": "Reformation generated proliferating schisms rather than unified Protestant church; tens of thousands of denominations trace origins to 16th century",
+      "primary_observable": "Denominational count over time; theological incompatibilities (Luther vs Calvin vs Anabaptists); institutional proliferation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "theological_climb_reading"
+      ],
+      "feeds_into": [
+        "composite_overdetermination_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emergence pattern is consequence of theological reading's internal contradictions; composite reading already incorporates this as one of four parallel patterns; lower structural distinctiveness"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "theological_climb_reading",
+      "kernel_id": "reformation_event_boundary",
+      "reading_id": "theological_climb_reading"
+    },
+    {
+      "claim_id": "political_swap_reading",
+      "kernel_id": "reformation_event_boundary",
+      "reading_id": "political_swap_reading"
+    },
+    {
+      "claim_id": "composite_overdetermination_reading",
+      "kernel_id": "reformation_event_boundary",
+      "reading_id": "composite_overdetermination_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "printing_press_enabler",
+      "structural_delta": "Mechanized printing enabled rapid circulation of theological texts",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Technological precondition captured in all three reading stories; not itself a contested interpretation of the Reformation event"
+    },
+    {
+      "claim_id": "denominational_fragmentation",
+      "structural_delta": "Reformation generated proliferating schisms rather than unified Protestant church",
+      "hypothesis": "mountain",
+      "deferral_reason": "Emergence pattern already incorporated in composite reading as one of four parallel patterns; consequence of theological reading's internal contradictions rather than independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_periodization_instability",
+      "description": "Is periodization instability (1400-1750 vs 1517-1648 vs 1517-1555) evidence of composite structure or historiographical failure? If composite, the instability is structural feature; if failure, one periodization scheme is correct and others are errors.",
+      "source": "Composite reading's core claim; research context notes 'dates not universally agreed upon'"
+    },
+    {
+      "id": "omega_hus_precursor_status",
+      "description": "Does Jan Hus (1415) belong inside or outside the Reformation event-boundary? If inside, periodization extends to 1400-1750; if outside, he is precursor and periodization tightens to 1517+. Affects whether Reformation is climb (new) or continuation (old).",
+      "source": "Research context notes Hus as 'pre-Reformation precursor' but also notes some scholars date Reformation from 1400; absence of clear boundary"
+    },
+    {
+      "id": "omega_catholic_reform_independence",
+      "description": "Was Catholic reform (Council of Trent, Jesuit order) independent movement or reactive Counter-Reformation? Research notes 'Catholic reform demonstrated to be spontaneous independent movement' vs 'Counter-Reformation' terminology. Affects whether Reformation is bilateral (two climbs) or unilateral (one climb, one defense).",
+      "source": "Research context notes 'contrasting interpretations of the same historical process'; absence inventory (Catholic perspective underweighted in extraction)"
+    },
+    {
+      "id": "omega_composite_collapse_risk",
+      "description": "Does composite reading collapse into 'everything is complicated' non-claim? If composite is just 'multiple causes exist,' it adds no structural insight. If composite identifies specific irreducible pattern-simultaneity (climb AND swap AND emergence operating in parallel, not sequence), it is genuine reading.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): who benefits from composite framing? Post-1960s historiography gains interpretive authority by denying earlier traditions' reductionism; but does this authority rest on genuine structural insight or methodological fashion?"
+    },
+    {
+      "id": "omega_axiom_contradiction_validity",
+      "description": "Are the declared axiom contradictions genuine or artifacts of caricature? Theological and political readings may not be mutually exclusive if theology and politics are co-constitutive rather than separable causal domains. A sophisticated framework might hold both as complementary rather than contradictory.",
+      "source": "§1.3-K axiom contradiction declaration; risk of forcing mutual exclusivity onto readings that could coexist in pluralist framework"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks domain expertise in Reformation historiography to adjudicate between readings with high confidence. Composite reading may be methodologically sophisticated or may be 'everything is complicated' evasion. Generated omega_composite_collapse_risk and omega_axiom_contradiction_validity to bound this uncertainty. Recommend human review of whether axiom contradictions are genuine or artifacts of caricature."
+  },
+  "_seed_id": "protestant_reformation_composite"
+}

@@ -1,0 +1,206 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal Philosophy / Constitutional Law / Rights Theory",
+  "family_id": "legal_personhood_boundary_2026",
+  "topic_summary": "Analysis of the legal personhood threshold as a contested kernel where different interpretive communities read the same foundational commitment (who counts as a rights-bearing entity) in structurally incompatible ways. Restrictive readings preserve traditional human-centric boundaries; expansive readings extend legal standing to nascent humans, non-human entities, or artificial agents. Each reading generates distinct constraint structures with non-overlapping victim/beneficiary sets.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Fetuses (nascent human entities at pre-viability stages)",
+      "Ecosystems/Natural Entities (rivers, forests, biospheres claimed as rights-holders)",
+      "AI Systems (artificial agents with potential cognitive standing claims)",
+      "Traditional Legal Persons (adult humans, corporations)",
+      "Judiciary (interpretive authority over personhood boundaries)",
+      "Legislative Bodies (codification authority for personhood criteria)"
+    ],
+    "key_tensions": [
+      "Human exceptionalism vs biocentric/ecocentric equality (personhood as species-exclusive vs shared property)",
+      "Cognitive capacity vs biological humanity (rationality/sentience vs human DNA as personhood criterion)",
+      "Present autonomy vs potential autonomy (actual rights-exercise vs future capacity)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "restrictive_anthropocentric_reading",
+      "human_readable": "Restrictive Anthropocentric Reading (Personhood as Born Human Only)",
+      "structural_delta": "Legal personhood confined to born humans (post-birth) with full cognitive capacity",
+      "primary_observable": "Court rulings on fetal/ecosystem/AI standing; statutory definitions of 'person'",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "existing_adult_human_rights_holders",
+      "victim": "excluded_entities_claiming_standing",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant reading in existing legal frameworks; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "developmental_potentiality_reading",
+      "human_readable": "Developmental Potentiality Reading (Personhood as Human Life Trajectory)",
+      "structural_delta": "Legal personhood extends to any entity on the human developmental trajectory from conception",
+      "primary_observable": "Fetal homicide laws; abortion restrictions; prenatal wrongful death standing",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "anti_abortion_advocates_religious_conservatives",
+      "victim": "pregnant_persons_seeking_reproductive_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from restrictive reading; generates incompatible victim set (fetus vs pregnant person)"
+    },
+    {
+      "claim_id": "functional_capacity_reading",
+      "human_readable": "Functional Capacity Reading (Personhood as Cognitive/Sentient Threshold)",
+      "structural_delta": "Legal personhood granted to any entity demonstrating rationality, self-awareness, or sentience",
+      "primary_observable": "Animal rights litigation; AI rights advocacy; ecosystem guardian cases (Te Urewera, Whanganui River)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "non_human_entities_demonstrating_capacity",
+      "victim": "human_exceptionalist_legal_frameworks",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Cross-cuts human/non-human boundary; distinct observable (capacity tests vs species membership)"
+    },
+    {
+      "claim_id": "relational_embeddedness_reading",
+      "human_readable": "Relational Embeddedness Reading (Personhood as Socio-Ecological Interdependence)",
+      "structural_delta": "Legal personhood recognition follows from material interdependence and cultural significance",
+      "primary_observable": "Indigenous legal traditions granting standing to land/rivers; biocentric constitutional provisions",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "indigenous_communities_ecological_movements",
+      "victim": "extractive_industries_property_rights_holders",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: culturally specific; lower structural centrality than functional_capacity_reading which covers overlapping domain"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "restrictive_anthropocentric_reading",
+      "kernel_id": "legal_personhood_boundary",
+      "reading_id": "restrictive_anthropocentric_reading"
+    },
+    {
+      "claim_id": "developmental_potentiality_reading",
+      "kernel_id": "legal_personhood_boundary",
+      "reading_id": "developmental_potentiality_reading"
+    },
+    {
+      "claim_id": "functional_capacity_reading",
+      "kernel_id": "legal_personhood_boundary",
+      "reading_id": "functional_capacity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "relational_embeddedness_reading",
+      "structural_delta": "Personhood from socio-ecological interdependence",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Structurally overlaps with functional_capacity_reading in non-human domain; culturally specific instantiation rather than distinct constraint type"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_corporate_personhood_anomaly",
+      "description": "Corporate personhood (Citizens United) does not fit cleanly into any reading. Lacks both biological humanity AND cognitive capacity, yet enjoys expansive rights. Suggests personhood kernel is instrumentally malleable rather than principled.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_viability_threshold_instability",
+      "description": "Roe's viability standard (now overturned) was a temporal compromise between restrictive and potentiality readings. Medical technology shifts viability earlier, destabilizing the compromise. Is viability a Mountain (biological limit) or Piton (policy artifact)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_rights_vs_standing_conflation",
+      "description": "Extraction conflates 'legal personhood' (rights-bearer) with 'legal standing' (capacity to sue). Some readings grant standing without full personhood (e.g., next friend suits for ecosystems). Decomposition assumes they collapse; they may not.",
+      "source": "F01 (Premise Drift)"
+    },
+    {
+      "id": "omega_ai_emergence_horizon",
+      "description": "Functional capacity reading assumes AI can demonstrate cognition legibly to courts. Current AI lacks self-awareness; future AGI may not. If AGI emerges before legal consensus, constraint collapses into emergency jurisprudence.",
+      "source": "F34 (Epistemic Trespass) + deferred reading trajectory"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": true,
+    "notes": "F34: AI cognition threshold beyond model's epistemology (no consensus neuroscience of machine sentience). F01: Extraction may conflate personhood with standing; user prompt treats them as unified but legal doctrine distinguishes. Generated omegas to bound both uncertainties."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legal threshold separating entities with rights/standing from those without, stabilized in constitutional text, common law precedent, and statutory definitions of 'person'",
+    "authority_description": "Judicial interpretation of constitutional personhood clauses (14th Amendment Due Process, etc.) and legislative codification of personhood criteria",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_creep",
+    "is_contested_kernel": true,
+    "kernel_id": "legal_personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "restrictive_anthropocentric_reading",
+        "commitment": "Personhood limited to born humans with cognitive capacity",
+        "authority_grounding": "Originalist interpretation of constitutional text; precedent (born-alive rule)",
+        "sibling_readings": [
+          "developmental_potentiality_reading",
+          "functional_capacity_reading"
+        ],
+        "expected_structural_delta": "Excludes fetuses, ecosystems, AI from victim set; maximizes pregnant person autonomy; minimizes state intervention in reproduction and environmental law"
+      },
+      {
+        "reading_id": "developmental_potentiality_reading",
+        "commitment": "Personhood begins at conception; any human life trajectory holder is a rights-bearer",
+        "authority_grounding": "Natural law / religious doctrine; textualist reading of 'life' in constitutional rights provisions",
+        "sibling_readings": [
+          "restrictive_anthropocentric_reading",
+          "functional_capacity_reading"
+        ],
+        "expected_structural_delta": "Fetus enters victim set from conception; pregnant person's autonomy subordinated to fetal rights; state acquires enforcement authority over pregnancy outcomes"
+      },
+      {
+        "reading_id": "functional_capacity_reading",
+        "commitment": "Personhood follows demonstrable cognitive capacity (rationality, sentience, self-awareness) regardless of species",
+        "authority_grounding": "Utilitarian/consequentialist ethics; emerging animal rights jurisprudence; AI rights advocacy",
+        "sibling_readings": [
+          "restrictive_anthropocentric_reading",
+          "developmental_potentiality_reading"
+        ],
+        "expected_structural_delta": "Non-human animals, ecosystems (if represented), future AI may enter victim set; human exceptionalism loses legal privilege; property rights over sentient beings become contestable"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "restrictive_anthropocentric_reading",
+        "reading_b": "developmental_potentiality_reading",
+        "basis": "No single framework can hold both 'personhood requires birth' and 'personhood begins at conception' as simultaneously true; accepting one axiom requires rejecting the other's threshold"
+      },
+      {
+        "reading_a": "restrictive_anthropocentric_reading",
+        "reading_b": "functional_capacity_reading",
+        "basis": "No single framework can hold both 'personhood is exclusively human' and 'personhood follows cognitive capacity regardless of species' as simultaneously true; species-boundary is either dispositive or irrelevant"
+      },
+      {
+        "reading_a": "developmental_potentiality_reading",
+        "reading_b": "functional_capacity_reading",
+        "basis": "No single framework can hold both 'human DNA trajectory confers personhood' and 'demonstrated cognitive capacity confers personhood' as simultaneously true; one privileges biological potential, the other actual function"
+      }
+    ]
+  },
+  "_seed_id": "legal_personhood_threshold"
+}

@@ -1,0 +1,248 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology Law / Software Liability / Consumer Protection",
+  "family_id": "software_beta_liability_2026",
+  "topic_summary": "Analysis of the legal designation 'beta' as applied to software, examining the structural contest between industry's expansive reading (blanket liability shield) and regulatory/consumer-protection reading (temporary warning label with bounded scope). The kernel is a shared commitment to the 'beta' designation's legal significance; the readings instantiate different constraint structures over who bears risk of software defects.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Software developers/publishers (industry actors asserting 'beta' as liability shield)",
+      "Regulatory bodies (FTC, EU consumer protection agencies interpreting 'beta' scope)",
+      "End users/consumers (bearing risk under expansive 'beta' reading)",
+      "Legal doctrine of 'beta' designation (the contested kernel: industry practice codified as norm)",
+      "Product liability frameworks (traditional consumer protection regimes that 'beta' potentially bypasses)"
+    ],
+    "key_tensions": [
+      "Industry liability minimization vs consumer risk allocation (developers vs users on defect responsibility)",
+      "Innovation velocity vs consumer protection (permissive beta deployment vs safety gatekeeping)"
+    ],
+    "key_mechanisms": [
+      "Beta designation as EULA/ToS clause (contractual mechanism purporting to disclaim liability)",
+      "Regulatory enforcement discretion (agencies' willingness to challenge overbroad 'beta' claims)",
+      "Market signaling ambiguity (consumers uncertain whether 'beta' means 'experimental' or 'nearly final')"
+    ],
+    "key_absences": [
+      "Temporal boundary enforcement: no institutional mechanism tracks when 'permanent beta' becomes abuse",
+      "Severity-based liability carveouts: whether critical systems (medical, financial) can invoke 'beta' shield at all"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "expansive_shield_reading",
+      "human_readable": "Expansive Shield Reading (Beta as Blanket Liability Waiver)",
+      "structural_delta": "Beta designation interpreted as comprehensive waiver of developer liability for all defects, indefinite duration",
+      "primary_observable": "EULA language scope; judicial enforcement of beta-based liability disclaimers; duration of 'beta' designation in production software",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "software_developers",
+      "victim": "end_users",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Reading 1 of contested kernel: instantiates high-extraction constraint (users bear all risk)"
+    },
+    {
+      "claim_id": "narrow_warning_reading",
+      "human_readable": "Narrow Warning Reading (Beta as Temporary Consumer Disclosure)",
+      "structural_delta": "Beta designation interpreted as time-bounded warning requiring genuine testing phase, preserving base liability",
+      "primary_observable": "Regulatory guidance on beta duration limits; judicial rejection of perpetual beta status; consumer protection enforcement actions",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Reading 2 of contested kernel: instantiates coordination constraint (temporary testing regime)"
+    },
+    {
+      "claim_id": "severity_carve_out_reading",
+      "human_readable": "Severity Carve-Out Reading (Beta Inapplicable to Critical Systems)",
+      "structural_delta": "Beta designation categorically unavailable for life-safety/financial systems regardless of testing status",
+      "primary_observable": "Sector-specific regulations (FDA medical device beta rules, financial services software deployment requirements); judicial categorical prohibitions",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Reading 3 of contested kernel: instantiates domain-specific physical constraint (safety requirements override beta designation)"
+    },
+    {
+      "claim_id": "market_signaling_ambiguity",
+      "human_readable": "Market Signaling Ambiguity (Consumer Interpretation Variance)",
+      "structural_delta": "Consumers systematically misinterpret beta signals due to industry 'permanent beta' normalization",
+      "primary_observable": "Consumer survey data on beta risk perception; market adoption rates of beta-labeled vs GA-labeled products",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "expansive_shield_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: market coordination failure feeding expansive reading, but structurally redundant with consumer victimization already captured in reading 1"
+    },
+    {
+      "claim_id": "temporal_boundary_absence",
+      "human_readable": "Temporal Boundary Enforcement Absence (No Beta Duration Limits)",
+      "structural_delta": "Legal frameworks lack institutional mechanism to challenge indefinite beta designation",
+      "primary_observable": "Absence of statutory beta duration caps; regulatory enforcement action frequency against perpetual beta",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "expansive_shield_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural absence enabling expansive reading, but captured implicitly in reading 1 vs reading 2 contrast (indefinite vs time-bounded)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "expansive_shield_reading",
+      "kernel_id": "beta_designation_doctrine",
+      "reading_id": "expansive_shield_reading"
+    },
+    {
+      "claim_id": "narrow_warning_reading",
+      "kernel_id": "beta_designation_doctrine",
+      "reading_id": "narrow_warning_reading"
+    },
+    {
+      "claim_id": "severity_carve_out_reading",
+      "kernel_id": "beta_designation_doctrine",
+      "reading_id": "severity_carve_out_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "market_signaling_ambiguity",
+      "structural_delta": "Consumer misinterpretation of beta signals due to permanent beta normalization",
+      "hypothesis": "rope",
+      "deferral_reason": "Consumer victimization already captured in expansive_shield_reading; signaling failure is mechanism of extraction not independent constraint"
+    },
+    {
+      "claim_id": "temporal_boundary_absence",
+      "structural_delta": "No institutional mechanism to challenge indefinite beta designation",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural absence enabling expansive reading, but contrast between indefinite and time-bounded beta already captured in reading 1 vs reading 2"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_international_divergence",
+      "description": "EU GDPR Article 25 and Product Liability Directive may categorically reject beta shields for data processing/physical products, creating jurisdictional arbitrage opportunities. If expansive reading only viable in US, does that reclassify it from Snare to Piton (atrophied sovereignty)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + absence of international harmonization in extraction"
+    },
+    {
+      "id": "omega_ai_liability_precedent",
+      "description": "Emerging AI liability frameworks (EU AI Act, algorithmic accountability bills) may bypass beta designation entirely by imposing strict liability for high-risk systems. Does severity_carve_out_reading become dominant framework, making readings 1 and 2 legacy doctrine for low-risk software only?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + domain evolution trajectory"
+    },
+    {
+      "id": "omega_open_source_exception",
+      "description": "Does open source software under permissive licenses (MIT, Apache) constitute a fourth reading where beta designation is genuine mutual waiver rather than extractive Snare? No commercial beneficiary changes constraint type.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + beneficiary structure variance"
+    },
+    {
+      "id": "omega_severity_boundary_contestation",
+      "description": "What defines 'critical system' for severity_carve_out_reading? Financial apps handling $10 vs $10M? Medical decision support vs diagnostic? Boundary ambiguity may allow migration from reading 3 to reading 1 via definitional capture.",
+      "source": "Classification instability in reading 3 mountain hypothesis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition valid: three readings instantiate genuinely different constraints (high extraction Snare vs low-coordination Scaffold vs domain-specific Mountain). Readings share substrate (beta designation) but emit different beneficiary/victim structures and epsilon values. Axiom contradictions documented in commitment_system_recognition."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legal/industry designation 'beta' for software, codified as a norm granting special status claims regarding liability allocation",
+    "authority_description": "Interpretive legitimacy contested: industry asserts self-regulatory authority via standard contracts; regulators/courts assert state authority via consumer protection frameworks",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture_with_covert_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "beta_designation_doctrine",
+    "readings": [
+      {
+        "reading_id": "expansive_shield_reading",
+        "commitment": "Beta designation constitutes comprehensive liability waiver; indefinite duration permissible; applies to all software contexts",
+        "authority_grounding": "Industry self-regulation via standard EULA practices; contract law freedom-of-contract principle",
+        "sibling_readings": [
+          "narrow_warning_reading",
+          "severity_carve_out_reading"
+        ],
+        "expected_structural_delta": "High extraction: developers externalize all defect costs to users; users enter victim set; no temporal or severity boundaries",
+        "constraint_type": "snare",
+        "beneficiary": "software_developers",
+        "victim": "end_users"
+      },
+      {
+        "reading_id": "narrow_warning_reading",
+        "commitment": "Beta designation is time-bounded testing disclosure; base product liability preserved; duration must be genuine testing phase",
+        "authority_grounding": "Regulatory consumer protection mandates; judicial scrutiny of unconscionable contract terms",
+        "sibling_readings": [
+          "expansive_shield_reading",
+          "severity_carve_out_reading"
+        ],
+        "expected_structural_delta": "Low coordination: temporary testing regime requiring good-faith bounds; liability shield expires with testing phase; users informed but not victimized",
+        "constraint_type": "scaffold",
+        "beneficiary": null,
+        "victim": null
+      },
+      {
+        "reading_id": "severity_carve_out_reading",
+        "commitment": "Beta designation categorically unavailable for life-safety, financial, or other critical systems regardless of testing status or disclosure",
+        "authority_grounding": "Sector-specific safety regulations (FDA, financial services prudential rules); strict liability doctrines",
+        "sibling_readings": [
+          "expansive_shield_reading",
+          "narrow_warning_reading"
+        ],
+        "expected_structural_delta": "Domain-specific physical constraint: safety requirements and harm severity override contractual liability allocation; beta unavailable as mechanism in high-stakes domains",
+        "constraint_type": "mountain",
+        "beneficiary": null,
+        "victim": null
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "expansive_shield_reading",
+        "reading_b": "narrow_warning_reading",
+        "basis": "Expansive reading holds contractual freedom permits indefinite liability waiver; narrow reading holds consumer protection law sets mandatory liability floors. No framework holds both: either contract trumps consumer protection or consumer protection limits contract."
+      },
+      {
+        "reading_a": "expansive_shield_reading",
+        "reading_b": "severity_carve_out_reading",
+        "basis": "Expansive reading holds beta applies universally to all software contexts; severity carve-out holds safety-critical domains categorically prohibit beta liability shields. No framework holds both: either beta universality or domain-specific categorical prohibition."
+      },
+      {
+        "reading_a": "narrow_warning_reading",
+        "reading_b": "severity_carve_out_reading",
+        "basis": "These readings can coexist: narrow warning allows temporary beta with preserved liability for non-critical systems; severity carve-out prohibits beta entirely for critical systems. Not axiom-contradictory; complementary scope-based rules."
+      }
+    ]
+  },
+  "_seed_id": "liability_shield_beta_label"
+}

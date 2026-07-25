@@ -1,0 +1,211 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Social Stratification / Hermeneutics",
+  "family_id": "vedic_interpretive_unrevisability_2026",
+  "topic_summary": "Analysis of the Vedic corpus as a commitment system where interpretive authority over unchangeable texts determines the legitimacy of the Varna hierarchy. Orthodox authorities read the texts as literal prescriptions establishing caste as divinely mandated social order, while reformist movements read the same texts as purely spiritual metaphor with no prescriptive social content. The kernel cannot be revised, so all conflict migrates into who has legitimate authority to interpret it.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Vedic Corpus (Samhitas, Brahmanas, Aranyakas, Upanishads - the textual kernel)",
+      "Orthodox Brahminical Authority (traditional interpretive monopoly grounded in birth-lineage)",
+      "Reformist Movements (Arya Samaj, Neo-Vedanta, Buddhist-influenced reform - interpretive challenge grounded in ethical universalism)",
+      "Varna Hierarchy (Brahmin/Kshatriya/Vaishya/Shudra stratification system)",
+      "British Colonial Administration (codified 'Hindu law' via orientalist readings, creating legal precedent)",
+      "Indian Constitution (Article 15-17 abolish untouchability, creating legal counter-authority)"
+    ],
+    "key_claims": [
+      "Orthodox claim: Purusha Sukta (Rigveda 10.90) literally describes cosmic origin of Varna from body parts of primordial being, establishing divine mandate",
+      "Reformist claim: Same text is spiritual allegory for cosmic unity, not social prescription",
+      "Orthodox claim: Manusmriti elaborates Vedic social order with detailed occupation/marriage/purity rules derived from Vedic authority",
+      "Reformist claim: Manusmriti is later interpolation/corruption, not authentic Vedic teaching which emphasized spiritual equality"
+    ],
+    "key_tensions": [
+      "Birth-lineage authority vs ethical-universalist authority (who has legitimate standing to interpret)",
+      "Literal-prescriptive reading vs metaphorical-spiritual reading (what the unchangeable text means)"
+    ],
+    "key_mechanisms": [
+      "Jati endogamy enforcement (marriage within birth-group maintains social boundaries)",
+      "Ritual purity codes (contact/occupation restrictions extract labor value from lower castes)",
+      "Educational access control (Sanskrit learning restricted to upper castes, limiting interpretive competition)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "orthodox_varna_reading",
+      "human_readable": "Orthodox Varna Reading (Literal Divine Mandate)",
+      "structural_delta": "Purusha Sukta read as cosmogonic blueprint establishing Varna hierarchy as unchangeable divine order embedded in reality's structure",
+      "primary_observable": "Frequency of literal citations in orthodox ritual/legal contexts; enforcement of birth-determined occupation/marriage rules",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "brahmin_caste",
+      "victim": "shudra_dalit_castes",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes extractive constraint structure; highest victim impact; literal-prescriptive pole of kernel contest"
+    },
+    {
+      "claim_id": "reformist_spiritual_reading",
+      "human_readable": "Reformist Spiritual Reading (Metaphorical Unity)",
+      "structural_delta": "Purusha Sukta read as allegory for cosmic unity and spiritual equality, with no prescriptive social content; Varna as later corruption",
+      "primary_observable": "Reformist movement texts (Arya Samaj, Vivekananda) citing same verses to argue against caste; constitutional anti-discrimination language",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: same kernel, opposite constraint structure; eliminates victim set; metaphorical-spiritual pole of kernel contest"
+    },
+    {
+      "claim_id": "colonial_orientalist_reading",
+      "human_readable": "Colonial Orientalist Reading (Codified Timeless Tradition)",
+      "structural_delta": "British administrative reading of Vedic/Dharmashastra texts as unified, unchanging 'Hindu law' system to be codified for colonial legal administration",
+      "primary_observable": "Anglo-Hindu law codes (1772-1947); Judicial Committee of Privy Council precedents; Census caste categorization",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "colonial_administration",
+      "victim": "colonized_legal_subjects",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: external authority imposing interpretive framework; crystallizes fluid practices into fixed legal categories; scaffold type reveals state-building dimension"
+    },
+    {
+      "claim_id": "dalit_buddhist_reading",
+      "human_readable": "Dalit Buddhist Reading (Rejection of Kernel Authority)",
+      "structural_delta": "Ambedkarite reading that rejects Vedic textual authority entirely, arguing Buddha's teachings supersede and repudiate caste system",
+      "primary_observable": "Dalit mass conversion movements (1956 onward); Ambedkar's 'Annihilation of Caste' text citations",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "dalit_communities",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: exits the kernel entirely rather than contesting interpretation; structurally distinct but outside the interpretive-unrevisability frame"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "orthodox_varna_reading",
+      "kernel_id": "vedic_corpus_social_prescription",
+      "reading_id": "orthodox_varna_reading"
+    },
+    {
+      "claim_id": "reformist_spiritual_reading",
+      "kernel_id": "vedic_corpus_social_prescription",
+      "reading_id": "reformist_spiritual_reading"
+    },
+    {
+      "claim_id": "colonial_orientalist_reading",
+      "kernel_id": "vedic_corpus_social_prescription",
+      "reading_id": "colonial_orientalist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "dalit_buddhist_reading",
+      "structural_delta": "Rejection of Vedic textual authority entirely in favor of Buddhist counter-canon",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Exits the kernel rather than contesting interpretation; represents authority-rejection rather than reading-contestation; structurally important but outside interpretive-unrevisability frame"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_manusmriti_status",
+      "description": "Is Manusmriti part of the unchangeable kernel or a revisable elaboration? Orthodox reading treats it as Vedic authority; reformist reading treats it as corruptible commentary. This ambiguity allows interpretive drift to be concealed as textual fidelity.",
+      "source": "Kernel boundary ambiguity"
+    },
+    {
+      "id": "omega_constitutional_override",
+      "description": "Does Indian Constitution (Articles 15-17) constitute a new kernel that overrides Vedic interpretive authority, or merely a legal layer that coexists with religious authority in separate domains? If the former, the commitment system has been replaced; if the latter, dual authority structures create ongoing tension.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - state legal authority as competing kernel"
+    },
+    {
+      "id": "omega_vernacular_access",
+      "description": "Does translation of Vedic corpus into vernacular languages (post-printing press, post-independence literacy campaigns) constitute kernel revision by changing who can access the text? Orthodox authority claims Sanskrit-only access preserves authentic meaning; reformist movements claim vernacular access reveals manipulated interpretations.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - linguistic gatekeeping as extraction mechanism"
+    },
+    {
+      "id": "omega_jati_varna_mapping",
+      "description": "Orthodox reading maps thousands of birth-groups (jati) onto four-fold Varna schema; reformist reading claims this mapping is arbitrary and historically contingent, not textually mandated. The kernel does not specify the mapping, so authority to interpret determines extraction targets.",
+      "source": "Extraction mechanism analysis - ambiguity in victim identification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic genuinely instantiates contested kernel structure: one shared textual commitment (Vedic corpus as authoritative), multiple incompatible readings (literal-prescriptive vs metaphorical-spiritual vs colonial-administrative), readings emit structurally different constraints (high-epsilon snare vs low-epsilon rope vs state-building scaffold). Dalit Buddhist reading exits the kernel entirely, representing authority-rejection rather than reading-contestation, appropriately deferred."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Vedic corpus (Samhitas, Brahmanas, Aranyakas, Upanishads) as unchangeable sacred texts whose authority all parties accept but whose meaning is contested",
+    "authority_description": "Orthodox: birth-lineage Brahminical monopoly on Sanskrit learning and ritual interpretation. Reformist: ethical universalism and textual-critical scholarship. Colonial: administrative codification backed by state power. Constitutional: legal framework overriding religious authority.",
+    "drift_status": "absent",
+    "candidate_pattern": "Absolutist Immutability with Covert Revision (Pattern 4)",
+    "is_contested_kernel": true,
+    "kernel_id": "vedic_corpus_social_prescription",
+    "readings": [
+      {
+        "reading_id": "orthodox_varna_reading",
+        "commitment": "Vedic texts literally prescribe Varna hierarchy as divinely mandated cosmic order",
+        "authority_grounding": "birth-lineage Brahminical interpretive monopoly grounded in ritual purity and Sanskrit access control",
+        "sibling_readings": [
+          "reformist_spiritual_reading",
+          "colonial_orientalist_reading"
+        ],
+        "expected_structural_delta": "High-epsilon snare: Shudra/Dalit castes enter victim set; occupational/marital/ritual restrictions extract labor value and enforce social boundaries; beneficiary is Brahmin caste"
+      },
+      {
+        "reading_id": "reformist_spiritual_reading",
+        "commitment": "Vedic texts describe spiritual unity and metaphorical cosmology with no prescriptive social content",
+        "authority_grounding": "ethical universalism, textual-critical scholarship, appeal to Upanishadic non-dualism as 'true' Vedic teaching",
+        "sibling_readings": [
+          "orthodox_varna_reading",
+          "colonial_orientalist_reading"
+        ],
+        "expected_structural_delta": "Low-epsilon rope: no victim set; Varna reinterpreted as symbolic or abolished as corruption; coordination cost is low (spiritual practice compatibility); no extractive mechanism"
+      },
+      {
+        "reading_id": "colonial_orientalist_reading",
+        "commitment": "Vedic/Dharmashastra texts constitute unified, timeless 'Hindu law' system to be codified for administrative governance",
+        "authority_grounding": "British colonial state power backed by orientalist scholarship claiming superior textual objectivity",
+        "sibling_readings": [
+          "orthodox_varna_reading",
+          "reformist_spiritual_reading"
+        ],
+        "expected_structural_delta": "Moderate-epsilon scaffold: crystallizes fluid social practices into fixed legal categories; creates legible subjects for census/taxation/adjudication; beneficiary is colonial administration; victim set includes all colonized legal subjects subjected to codified caste law"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "orthodox_varna_reading",
+        "reading_b": "reformist_spiritual_reading",
+        "basis": "Orthodox axiom: textual prescription determines social legitimacy (birth-caste is divinely mandated reality). Reformist axiom: ethical universalism determines social legitimacy (birth-caste is illegitimate discrimination). No single framework can hold both 'divine mandate legitimizes hierarchy' and 'ethical equality delegitimizes hierarchy' simultaneously."
+      },
+      {
+        "reading_a": "colonial_orientalist_reading",
+        "reading_b": "reformist_spiritual_reading",
+        "basis": "Colonial axiom: textual stability enables legal codification (unified timeless 'Hindu law' exists). Reformist axiom: textual plurality enables ethical reinterpretation (Vedic teaching is diverse and evolving). No single framework can hold both 'texts are fixed and unified for legal purposes' and 'texts are plural and revisable for ethical purposes' simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "vedic_kernel_unrevisability"
+}

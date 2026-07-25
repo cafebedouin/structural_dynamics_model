@@ -1,0 +1,239 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Economic Ideology / Institutional Design",
+  "family_id": "market_naturalization_2026",
+  "topic_summary": "Analysis of the ideological naturalization of 'the free market' as a default institutional arrangement, examining whether this naturalization represents a lapsed-alternative closure (markets as spontaneous order requiring no maintenance) or a beneficiary-maintained engineered closure (incumbent actors defending post-hoc a system requiring continuous state intervention). The kernel contest tests whether different readings of 'market as natural default' emit structurally different constraints.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Mont Pelerin Society / neoliberal architects (Hayek, Friedman - ideological framers)",
+      "Reagan-Thatcher administrations (political implementers of deregulation)",
+      "Financial industry incumbents (beneficiaries of Glass-Steagall repeal)",
+      "Market fundamentalism ideology (the naturalization claim itself)",
+      "Glass-Steagall Act (regulatory constraint, repealed 1999)",
+      "State regulatory apparatus (the hidden maintenance infrastructure)",
+      "Joseph Stiglitz, Paul Krugman, Edward Baptist (critics exposing engineered nature)",
+      "Polanyi's 'The Great Transformation' (theoretical counter-narrative)"
+    ],
+    "key_tensions": [
+      "Spontaneous order narrative vs empirical requirement for state maintenance (lapsed vs engineered closure)",
+      "Market freedom rhetoric vs beneficiary power concentration (ideological framing vs structural outcome)",
+      "Deregulation as liberation vs deregulation as power transfer (freedom vs one-dollar-one-vote)"
+    ],
+    "key_mechanisms": [
+      "Ideological naturalization apparatus (think tanks, academic capture, public relations)",
+      "Regulatory capture and repeal (Glass-Steagall lobbying, Clinton administration pressure)",
+      "Crisis-response pattern (Great Depression regulation → golden age → deregulation → 2008 crisis)",
+      "Post-hoc defense maintenance (incumbent actors reframing failures as insufficient marketization)"
+    ],
+    "key_absences": [
+      "Explicit accounting of state enforcement costs for 'free' markets (property rights, contract law, bankruptcy courts)",
+      "Comparative analysis of which market rules are naturalized vs which remain visible as political choices"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The claim that 'the market is the natural default institutional arrangement' - a shared substrate all parties argue about",
+    "authority_description": "Economic expertise (academic economists, policy institutions) claims interpretive legitimacy over what counts as 'natural' vs 'artificial' market arrangements",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_flexibility",
+    "is_contested_kernel": true,
+    "kernel_id": "market_as_natural_default",
+    "readings": [
+      {
+        "reading_id": "spontaneous_order_reading",
+        "commitment": "Markets emerge spontaneously from voluntary exchange; state intervention is artificial imposition",
+        "authority_grounding": "Austrian economics / Hayekian spontaneous order theory",
+        "sibling_readings": [
+          "engineered_infrastructure_reading",
+          "beneficiary_maintenance_reading"
+        ],
+        "expected_structural_delta": "State regulation enters victim set as constraint on natural freedom; deregulation is removal of artificial barriers; market failures are state-caused distortions"
+      },
+      {
+        "reading_id": "engineered_infrastructure_reading",
+        "commitment": "Markets are state-engineered artifacts requiring continuous legal/regulatory maintenance",
+        "authority_grounding": "Polanyian institutionalism / legal realism",
+        "sibling_readings": [
+          "spontaneous_order_reading",
+          "beneficiary_maintenance_reading"
+        ],
+        "expected_structural_delta": "Market rules are political choices; 'deregulation' is re-regulation favoring different beneficiaries; state is constitutive not external"
+      },
+      {
+        "reading_id": "beneficiary_maintenance_reading",
+        "commitment": "Naturalization is post-hoc ideological defense by incumbent beneficiaries of existing market rules",
+        "authority_grounding": "Critical political economy / power-resource theory",
+        "sibling_readings": [
+          "spontaneous_order_reading",
+          "engineered_infrastructure_reading"
+        ],
+        "expected_structural_delta": "Naturalization itself is the constraint mechanism; incumbent power enters beneficiary set; ideological apparatus is enforcement infrastructure"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "spontaneous_order_reading",
+        "reading_b": "engineered_infrastructure_reading",
+        "basis": "Spontaneous order axiom holds markets exist prior to and independent of state action; engineered infrastructure axiom holds markets are constituted by state legal frameworks. No coherent framework can hold both - either the state creates market possibility-space or it does not."
+      },
+      {
+        "reading_a": "spontaneous_order_reading",
+        "reading_b": "beneficiary_maintenance_reading",
+        "basis": "Spontaneous order axiom holds naturalization reflects discovered truth about market spontaneity; beneficiary maintenance axiom holds naturalization is strategic ideological construction. No coherent framework can hold both - either the claim is epistemically grounded or it is power-serving myth."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "spontaneous_order_reading",
+      "human_readable": "Spontaneous Order Reading (Markets as Pre-Political Natural Order)",
+      "structural_delta": "Markets emerge from voluntary exchange independent of state construction; regulation is artificial constraint on natural freedom",
+      "primary_observable": "Frequency of 'government interference' framing in policy discourse; deregulation presented as removal rather than re-regulation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ideological_purists",
+      "victim": "regulatory_state",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest epsilon; establishes baseline naturalization claim"
+    },
+    {
+      "claim_id": "engineered_infrastructure_reading",
+      "human_readable": "Engineered Infrastructure Reading (Markets as State-Constituted Artifacts)",
+      "structural_delta": "Markets require continuous state maintenance of property rights, contract enforcement, bankruptcy law; 'free market' is oxymoron",
+      "primary_observable": "State enforcement costs for market operation (courts, police, regulatory agencies); legal infrastructure density",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; mountain classification provides structural contrast to tangled_rope; axiom-contradictory to reading 1"
+    },
+    {
+      "claim_id": "beneficiary_maintenance_reading",
+      "human_readable": "Beneficiary Maintenance Reading (Naturalization as Incumbent Defense)",
+      "structural_delta": "Naturalization is post-hoc ideological construction by financial/corporate incumbents to defend favorable rule-sets",
+      "primary_observable": "Correlation between deregulation advocacy and incumbent profit concentration; think tank funding sources",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "financial_incumbents",
+      "victim": "regulatory_reformers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality; snare classification captures ideological enforcement mechanism"
+    },
+    {
+      "claim_id": "crisis_response_cycle",
+      "human_readable": "Crisis-Response Regulatory Cycle (Depression → Regulation → Deregulation → Crisis)",
+      "structural_delta": "Recurring pattern of crisis-driven regulation followed by gradual erosion and re-crisis",
+      "primary_observable": "Timeline of Glass-Steagall (1933) → repeal (1999) → 2008 crisis; regulatory density over time",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "beneficiary_maintenance_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal pattern rather than structural reading; captured as mechanism within beneficiary_maintenance_reading"
+    },
+    {
+      "claim_id": "ideological_apparatus",
+      "human_readable": "Ideological Naturalization Apparatus (Think Tanks, Academic Capture, PR)",
+      "structural_delta": "Infrastructure for producing and maintaining naturalization claim (Mont Pelerin Society, Chicago School, corporate-funded research)",
+      "primary_observable": "Think tank funding flows; academic department endowments; media placement frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "beneficiary_maintenance_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism for beneficiary_maintenance_reading rather than independent axis; omega material on apparatus effectiveness"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "spontaneous_order_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "spontaneous_order_reading"
+    },
+    {
+      "claim_id": "engineered_infrastructure_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "engineered_infrastructure_reading"
+    },
+    {
+      "claim_id": "beneficiary_maintenance_reading",
+      "kernel_id": "market_as_natural_default",
+      "reading_id": "beneficiary_maintenance_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "crisis_response_cycle",
+      "structural_delta": "Recurring crisis → regulation → deregulation → re-crisis pattern",
+      "hypothesis": "rope",
+      "deferral_reason": "Temporal mechanism rather than structural reading; captured within beneficiary_maintenance_reading's enforcement story"
+    },
+    {
+      "claim_id": "ideological_apparatus",
+      "structural_delta": "Think tank and academic infrastructure producing naturalization",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Enforcement mechanism for beneficiary_maintenance_reading; omega material on apparatus effectiveness and funding opacity"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_apparatus_effectiveness",
+      "description": "Is the ideological apparatus (think tanks, academic capture) a Scaffold (temporary construction) or Piton (permanent infrastructure)? If permanent, does it survive empirical falsification (2008 crisis) or require continuous re-investment?",
+      "source": "Deferred axis ideological_apparatus + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_polanyian_double_movement",
+      "description": "Does Polanyi's 'double movement' (marketization → social protection → re-marketization) constitute a fourth reading, or is it a meta-pattern encompassing all three? If meta-pattern, what is the structural delta between cycles?",
+      "source": "Extraction anchor (Polanyi's Great Transformation) + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_state_enforcement_costs",
+      "description": "What is the actual state expenditure on market-constituting infrastructure (property rights enforcement, contract law, bankruptcy courts)? If quantifiable, does it falsify spontaneous_order_reading or merely shift it to 'minimal state' defense?",
+      "source": "Absence inventory (explicit accounting of enforcement costs) + engineered_infrastructure_reading observable"
+    },
+    {
+      "id": "omega_reading_coexistence",
+      "description": "Can spontaneous_order_reading and beneficiary_maintenance_reading coexist as complementary (markets are natural AND incumbents defend favorable rules), or are they axiom-contradictory? If coexistent, what is the synthesis constraint?",
+      "source": "Axiom contradiction testing + Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings with axiom contradictions declared. All readings have distinct structural deltas, different beneficiary/victim structures, and would emit different constraint types. Crisis_response_cycle and ideological_apparatus deferred as mechanisms rather than independent readings."
+  },
+  "_seed_id": "free_market_naturalization"
+}

@@ -1,0 +1,232 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Separation of Powers / War Powers",
+  "family_id": "executive_war_powers_constitutional_boundary",
+  "topic_summary": "Analysis of the constitutional war powers allocation as a contested kernel where different interpretive communities read the same founding texts to emit structurally incompatible constraints on executive military authority. The congressional primacy reading requires explicit legislative authorization for military action; the inherent executive authority reading grants unilateral defense powers to the president. Each reading instantiates a different victim set and constraint type.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Article I Section 8 (congressional declare war power)",
+      "Article II Section 2 (presidential commander-in-chief power)",
+      "War Powers Resolution 1973 (statutory constraint attempt)",
+      "Office of Legal Counsel (executive interpretive authority)",
+      "Federal Courts (adjudicatory body, largely abstaining)",
+      "Legislative Authorization for Use of Military Force (AUMF mechanism)"
+    ],
+    "key_tensions": [
+      "Textual ambiguity: 'declare war' vs 'commander-in-chief' as allocation vs grant",
+      "Enforcement void: both branches claim interpretive authority; courts decline political question"
+    ],
+    "key_mechanisms": [
+      "AUMF passage (congressional authorization mechanism)",
+      "OLC opinion issuance (executive self-authorization mechanism)",
+      "Appropriations control (congressional indirect constraint)"
+    ],
+    "key_absences": [
+      "Judicial enforcement: courts systematically decline war powers cases via standing/political question doctrines",
+      "Framers' intent consensus: founding-era disagreement over executive war-making scope not resolved in text"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "congressional_primacy_reading",
+      "human_readable": "Congressional Primacy Reading (Authorization as Constitutional Requirement)",
+      "structural_delta": "Military force deployment beyond immediate defense requires explicit congressional authorization; violation is constitutional breach regardless of outcome",
+      "primary_observable": "Frequency of unauthorized military actions; congressional response to unauthorized deployments; OLC opinion rejection rate of primacy doctrine",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "legislative_branch_authority",
+      "victim": "executive_flexibility_in_emergency",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes constraint requiring congressional gate for coercive state action",
+      "kernel_link": {
+        "kernel_id": "war_powers_allocation",
+        "reading_id": "congressional_primacy_reading",
+        "sibling_readings": [
+          "inherent_executive_reading",
+          "functional_accommodation_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "inherent_executive_reading",
+      "human_readable": "Inherent Executive Authority Reading (Unilateral Defense Power)",
+      "structural_delta": "Commander-in-chief power grants president inherent authority to deploy force in defense of national interests without prior authorization; congressional role limited to funding and post-hoc ratification",
+      "primary_observable": "Frequency of unilateral executive military actions; OLC opinion citation of inherent authority; appropriations as ratification signal",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "executive_branch_authority",
+      "victim": "legislative_constraint_on_military_action",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; establishes structurally incompatible constraint placing coercive authority in executive discretion",
+      "kernel_link": {
+        "kernel_id": "war_powers_allocation",
+        "reading_id": "inherent_executive_reading",
+        "sibling_readings": [
+          "congressional_primacy_reading",
+          "functional_accommodation_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "functional_accommodation_reading",
+      "human_readable": "Functional Accommodation Reading (Context-Dependent Allocation)",
+      "structural_delta": "War powers allocation varies by operational context: imminent threats permit unilateral action; prolonged campaigns require authorization; boundary determined by functional necessities rather than categorical rule",
+      "primary_observable": "Executive practice distinguishing 'hostilities' from 'military operations'; congressional acquiescence patterns; OLC opinion temporal/scope distinctions",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "executive_operational_flexibility",
+      "victim": "bright_line_constitutional_constraint",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; establishes hybrid constraint with case-by-case extractiveness determination; captures War Powers Resolution compromise position",
+      "kernel_link": {
+        "kernel_id": "war_powers_allocation",
+        "reading_id": "functional_accommodation_reading",
+        "sibling_readings": [
+          "congressional_primacy_reading",
+          "inherent_executive_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "judicial_abstention_structure",
+      "human_readable": "Judicial Abstention Structure (Political Question Doctrine as Enforcement Void)",
+      "structural_delta": "Federal courts systematically decline war powers adjudication via standing and political question doctrines, creating enforcement void where both branches claim interpretive authority",
+      "primary_observable": "War powers case dismissal rate; judicial reliance on Baker v. Carr factors; absence of Supreme Court merits decisions on authorization requirement",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "congressional_primacy_reading",
+        "inherent_executive_reading",
+        "functional_accommodation_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing structural precondition (no judicial arbiter) that enables kernel contestation; already implicit in all three readings' enforcement mechanisms"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "congressional_primacy_reading",
+      "kernel_id": "war_powers_allocation",
+      "reading_id": "congressional_primacy_reading"
+    },
+    {
+      "claim_id": "inherent_executive_reading",
+      "kernel_id": "war_powers_allocation",
+      "reading_id": "inherent_executive_reading"
+    },
+    {
+      "claim_id": "functional_accommodation_reading",
+      "kernel_id": "war_powers_allocation",
+      "reading_id": "functional_accommodation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "judicial_abstention_structure",
+      "structural_delta": "Courts systematically decline war powers adjudication, creating enforcement void",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural precondition (absence of judicial arbiter) already implicit in all three readings' enforcement mechanisms; no independent constraint story needed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_framers_intent_indeterminacy",
+      "description": "Founding-era debates reveal disagreement over executive war-making scope (Hamilton Pacificus vs Madison Helvidius). Text deliberately ambiguous or unresolved? If latter, kernel contestation is not interpretive drift but baked-in constitutional design.",
+      "source": "Absence Inventory (§1.1) + historical scholarship gap"
+    },
+    {
+      "id": "omega_enforcement_mechanism_collapse",
+      "description": "Without judicial enforcement, does the distinction between readings collapse into pure power politics? If Congress cannot compel compliance and courts will not adjudicate, all three readings reduce to executive discretion constrained only by appropriations.",
+      "source": "Dark Matter Probe 2 (Absence as Figure) + deferred axis judicial_abstention_structure"
+    },
+    {
+      "id": "omega_aumf_as_ratification",
+      "description": "Do post-9/11 AUMFs constitute congressional authorization (primacy reading satisfied) or executive extraction of blank-check ratification (inherent authority reading vindicated)? Same statutory text interpreted oppositely by readings.",
+      "source": "Pairwise Independence Testing (§3.1) — same observable (AUMF passage) interpreted as satisfying incompatible constraints"
+    },
+    {
+      "id": "omega_cyber_and_space_operations",
+      "description": "Do cyber operations and space-based military activities fall within any reading's scope? All three readings developed in kinetic-force context; digital and orbital domains may require fourth reading or kernel revision.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis conducted in 20th-century military technology medium"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition captures structural incompatibility: congressional primacy and inherent executive readings cannot coexist in single framework (one requires authorization as constitutional necessity, other treats it as congressional courtesy). Functional accommodation attempts hybrid but dissolves bright-line constraint. Judicial abstention deferred as implicit precondition rather than independent axis."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Constitutional war powers allocation as fixed legal substrate: Article I Section 8 (congressional declare war power) and Article II Section 2 (presidential commander-in-chief power) stabilized in founding text, interpreted to emit incompatible constraints on military force deployment authority",
+    "authority_description": "Interpretive authority contested between Congress (via statute and appropriations), Executive (via OLC opinion and constitutional practice), and Federal Courts (abstaining via political question doctrine). No single arbiter; each branch claims legitimacy from constitutional fidelity.",
+    "drift_status": "absent",
+    "candidate_pattern": "Licensed Plurality (CS-LP)",
+    "is_contested_kernel": true,
+    "kernel_id": "war_powers_allocation",
+    "readings": [
+      {
+        "reading_id": "congressional_primacy_reading",
+        "commitment": "Military force beyond immediate defense requires explicit congressional authorization as constitutional necessity",
+        "authority_grounding": "Textualist reading of Article I 'declare war' as mandatory gate; Framers' anti-monarchical intent; statutory law (War Powers Resolution)",
+        "sibling_readings": [
+          "inherent_executive_reading",
+          "functional_accommodation_reading"
+        ],
+        "expected_structural_delta": "Legislative branch enters victim set when bypassed; executive unilateral action constitutes extraction from congressional war power; high suppression of inherent authority claims"
+      },
+      {
+        "reading_id": "inherent_executive_reading",
+        "commitment": "Commander-in-chief power grants president inherent authority to deploy force in defense of national interests without prior authorization",
+        "authority_grounding": "Executive power vesting clause as plenary grant; commander-in-chief as operational authority; historical practice since Jefferson; OLC precedent",
+        "sibling_readings": [
+          "congressional_primacy_reading",
+          "functional_accommodation_reading"
+        ],
+        "expected_structural_delta": "Congressional authorization becomes courtesy not requirement; legislative constraint enters victim set; low suppression of unilateral executive action; appropriations-as-ratification mechanism"
+      },
+      {
+        "reading_id": "functional_accommodation_reading",
+        "commitment": "War powers allocation varies by operational context: imminent threats permit unilateral action; prolonged campaigns require authorization",
+        "authority_grounding": "Pragmatic constitutionalism; War Powers Resolution compromise language; practice-based precedent distinguishing 'hostilities' from 'military operations'",
+        "sibling_readings": [
+          "congressional_primacy_reading",
+          "inherent_executive_reading"
+        ],
+        "expected_structural_delta": "Constraint extractiveness varies by context; temporal and scope distinctions create ambiguity zone; both branches claim authority within gray area; suppression of categorical rules"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "congressional_primacy_reading",
+        "reading_b": "inherent_executive_reading",
+        "basis": "No single coherent framework treats military authorization simultaneously as constitutional requirement (primacy) and presidential discretion (inherent authority). Accepting primacy axiom requires rejecting that commander-in-chief clause grants unilateral operational authority; accepting inherent authority requires rejecting that Article I declare war clause functions as mandatory gate."
+      }
+    ]
+  },
+  "_seed_id": "executive_war_powers_expansion"
+}

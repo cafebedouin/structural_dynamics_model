@@ -1,0 +1,241 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Humanitarian Law / Military Ethics / Technology Governance",
+  "family_id": "ihl_laws_2026",
+  "topic_summary": "Analysis of the collision between International Humanitarian Law's foundational principles (distinction, proportionality, precaution) and Lethal Autonomous Weapons Systems (LAWS). The kernel—IHL's obligation to discriminate between combatants and civilians—is read differently: one reading requires human moral agency in targeting decisions (human-in-the-loop), another permits delegation to autonomous systems if technical performance metrics are satisfied (outcomes-based). The disagreement is not about peripheral implementation but about what IHL's core commitments demand.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "International Humanitarian Law (Geneva Conventions 1949, Additional Protocols 1977)",
+      "Lethal Autonomous Weapons Systems (weapons selecting/engaging targets without human intervention)",
+      "Martens Clause (principles of humanity and dictates of public conscience)",
+      "Military necessity doctrine (operational efficiency vs constraint)",
+      "ICRC (interpretive authority claiming human judgment requirement)",
+      "U.S./Israel/Russia (states asserting technical compliance sufficiency)",
+      "Campaign to Stop Killer Robots (civil society demanding categorical prohibition)",
+      "Distinction principle (IHL Article 48: combatant/civilian discrimination obligation)"
+    ],
+    "key_tensions": [
+      "Human moral agency requirement vs technical performance metrics (interpretive axis of IHL compliance)",
+      "Autonomous precision vs accountable error (efficiency vs responsibility)",
+      "State sovereignty over weapons development vs emerging customary law norms"
+    ],
+    "key_mechanisms": [
+      "Distinction principle enforcement: IHL Article 48 requires parties to distinguish between civilian/combatant populations at all times",
+      "Proportionality assessment: IHL Article 51(5)(b) prohibits attacks with excessive incidental civilian harm relative to military advantage",
+      "Precautionary obligation: IHL Article 57 requires feasible precautions to avoid/minimize civilian harm",
+      "Martens Clause invocation: when treaty law is silent, conduct governed by principles of humanity and public conscience"
+    ],
+    "key_absences": [
+      "Absence of binding LAWS treaty: no treaty text explicitly addresses autonomous targeting; all readings derive from applying existing IHL to novel technology",
+      "Absence of technical capability consensus: no agreed measurement framework for 'sufficient' distinction/proportionality performance by autonomous systems",
+      "Absence of liability framework: unclear who bears legal responsibility for autonomous weapons violations—programmer, commander, state, or system itself"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "IHL's core obligation to discriminate between combatants and civilians (distinction principle, Article 48) and to make proportionality judgments (Article 51(5)(b)). The kernel is the fixed demand for lawful targeting; the contest is what satisfies that demand.",
+    "authority_description": "Interpretive legitimacy contested: ICRC claims authority through Geneva Convention custodianship and Martens Clause invocation (principles of humanity); state militaries claim authority through operational practice and sovereignty over means/methods of warfare; civil society invokes public conscience via Martens Clause.",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Layering (Type 2): IHL text remains fixed; interpretive authorities proliferate competing readings to absorb technological drift without treaty revision. Revision functionally blocked by state sovereignty over weapons development.",
+    "is_contested_kernel": true,
+    "kernel_id": "ihl_distinction_proportionality",
+    "readings": [
+      {
+        "reading_id": "human_agency_reading",
+        "commitment": "IHL's distinction and proportionality obligations require irreducible human moral judgment at the moment of lethal force application. Martens Clause principles of humanity prohibit delegating life/death decisions to machines.",
+        "authority_grounding": "ICRC custodianship of Geneva Conventions; Martens Clause invocation; civil society moral claims",
+        "sibling_readings": [
+          "outcomes_based_reading",
+          "categorical_prohibition_reading"
+        ],
+        "expected_structural_delta": "LAWS categorically unlawful unless human makes final targeting decision. High ε: suppresses all fully autonomous systems; authorizes only human-supervised autonomy. Beneficiary: IHL interpretive authorities (ICRC) maintaining centrality. Victim: military operational efficiency."
+      },
+      {
+        "reading_id": "outcomes_based_reading",
+        "commitment": "IHL obligations are satisfied if autonomous systems demonstrably achieve distinction/proportionality performance equal to or exceeding human operators. Technology-neutral: law governs outcomes, not means.",
+        "authority_grounding": "State military sovereignty; operational practice; technocratic measurement frameworks",
+        "sibling_readings": [
+          "human_agency_reading",
+          "categorical_prohibition_reading"
+        ],
+        "expected_structural_delta": "LAWS lawful if technical metrics pass compliance threshold. Moderate ε: permits autonomy where measurable performance justifies it. Beneficiary: military efficiency; defense contractors. Victim: interpretive authority of humanitarian law custodians; civilian populations if metrics fail."
+      },
+      {
+        "reading_id": "categorical_prohibition_reading",
+        "commitment": "Martens Clause principles of humanity and public conscience prohibit autonomous weapons categorically, regardless of technical performance. Crossing the threshold of machine-decided killing violates human dignity per se.",
+        "authority_grounding": "Civil society moral claims; public conscience invocation; deontological ethics",
+        "sibling_readings": [
+          "human_agency_reading",
+          "outcomes_based_reading"
+        ],
+        "expected_structural_delta": "LAWS unlawful in all cases. Highest ε: bans entire technology class. Beneficiary: anti-militarist civil society; states lacking LAWS capability. Victim: military technological advantage; states with advanced autonomous systems."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "human_agency_reading",
+        "reading_b": "outcomes_based_reading",
+        "basis": "Human agency reading holds that moral judgment is non-delegable (deontological constraint on means); outcomes-based reading holds that technical performance satisfying legal outcomes is sufficient. No framework accepts both: either the act of delegation violates dignity regardless of performance, or performance compliance satisfies law regardless of delegation."
+      },
+      {
+        "reading_a": "categorical_prohibition_reading",
+        "reading_b": "outcomes_based_reading",
+        "basis": "Categorical prohibition holds that machine-decided killing is impermissible per se (crossing dignity threshold); outcomes-based holds that technical compliance makes it permissible. No framework treats threshold-crossing as both categorically impermissible and conditionally permissible on metrics."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "human_agency_reading",
+      "human_readable": "Human Moral Agency Reading (IHL Requires Irreducible Human Judgment)",
+      "structural_delta": "IHL's distinction/proportionality obligations interpreted as requiring human moral agency at moment of targeting decision",
+      "primary_observable": "ICRC legal opinions; state ratification of human-control protocols; Martens Clause invocations in LAWS debates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "humanitarian_law_interpretive_authorities",
+      "victim": "military_operational_efficiency",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; high structural distinctiveness; beneficiary-victim pair differs from other readings"
+    },
+    {
+      "claim_id": "outcomes_based_reading",
+      "human_readable": "Outcomes-Based Reading (IHL Permits Autonomy if Metrics Satisfied)",
+      "structural_delta": "IHL obligations satisfied by demonstrable technical performance in distinction/proportionality, independent of human-in-loop requirement",
+      "primary_observable": "State military doctrine documents; autonomous systems deployment policies; technical compliance frameworks",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "military_efficiency_and_defense_contractors",
+      "victim": "humanitarian_interpretive_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; moderate ε; beneficiary-victim inverted from reading 1"
+    },
+    {
+      "claim_id": "categorical_prohibition_reading",
+      "human_readable": "Categorical Prohibition Reading (Martens Clause Bans LAWS Per Se)",
+      "structural_delta": "Martens Clause principles of humanity prohibit autonomous weapons regardless of technical performance",
+      "primary_observable": "Campaign to Stop Killer Robots advocacy; state treaty proposals for categorical ban; public opinion surveys",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "civil_society_anti_militarist_coalitions",
+      "victim": "states_with_autonomous_weapons_programs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest ε; distinct beneficiary class (civil society vs interpretive authorities vs military)"
+    },
+    {
+      "claim_id": "accountability_gap_mountain",
+      "human_readable": "Accountability Gap (Liability Attribution Failure)",
+      "structural_delta": "IHL requires identifiable legal responsibility for violations; autonomous systems diffuse responsibility across programmer/commander/state",
+      "primary_observable": "Legal scholarship on responsibility gaps; military justice precedents; liability case law",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "human_agency_reading",
+        "outcomes_based_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural backdrop affecting all readings but not itself a reading of the kernel; documented as omega"
+    },
+    {
+      "claim_id": "measurement_instability_rope",
+      "human_readable": "Measurement Instability (No Consensus Compliance Metrics)",
+      "structural_delta": "Absence of agreed technical framework for measuring 'sufficient' distinction/proportionality performance by autonomous systems",
+      "primary_observable": "Defense department testing protocols; academic measurement proposals; standards body activity",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "outcomes_based_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: affects feasibility of outcomes-based reading implementation but not distinct reading of kernel itself"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "human_agency_reading",
+      "kernel_id": "ihl_distinction_proportionality",
+      "reading_id": "human_agency_reading"
+    },
+    {
+      "claim_id": "outcomes_based_reading",
+      "kernel_id": "ihl_distinction_proportionality",
+      "reading_id": "outcomes_based_reading"
+    },
+    {
+      "claim_id": "categorical_prohibition_reading",
+      "kernel_id": "ihl_distinction_proportionality",
+      "reading_id": "categorical_prohibition_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "accountability_gap_mountain",
+      "structural_delta": "Liability attribution failure when responsibility diffused across autonomous system components",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural backdrop affecting all readings but not itself a reading of IHL kernel; captured as omega_accountability_gap"
+    },
+    {
+      "claim_id": "measurement_instability_rope",
+      "structural_delta": "Absence of consensus metrics for autonomous system IHL compliance",
+      "hypothesis": "rope",
+      "deferral_reason": "Implementation challenge for outcomes-based reading but not distinct kernel interpretation; noted as technical feasibility omega"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_accountability_gap",
+      "description": "Does diffusion of responsibility across programmer/commander/deployer make IHL enforcement structurally impossible for LAWS violations? If so, all three readings face enforcement gap regardless of their substantive commitments. Deferred mountain may escalate to tangled_rope if enforcement becomes primary axis.",
+      "source": "Deferred axis accountability_gap_mountain + Dark Matter Probe 2 (Absence Inventory: no liability framework in treaty law)"
+    },
+    {
+      "id": "omega_measurement_collapse",
+      "description": "If no consensus measurement framework emerges, does outcomes-based reading collapse into de facto prohibition (unmeasurable = unlawful) or de facto permission (no enforceable standard)? The rope of measurement instability may determine whether outcomes-based reading is live or defunct.",
+      "source": "Deferred axis measurement_instability_rope + Dark Matter Probe 3 (Beneficiary: who gains from lack of metrics?)"
+    },
+    {
+      "id": "omega_kernel_evolution",
+      "description": "Is IHL kernel stable or itself drifting? If state practice normalizes autonomous weapons without treaty revision, does customary law shift to outcomes-based reading by default? The commitment system may exhibit Type 2 drift (interpretive layer absorbing change) transitioning to Type 3 (covert kernel mutation).",
+      "source": "Commitment system recognition (partial drift status) + §1.3 authority contestation"
+    },
+    {
+      "id": "omega_martens_scope",
+      "description": "Does Martens Clause ground categorical prohibition reading or is it rhetorically invoked without binding force? If 'public conscience' has no enforcement mechanism, categorical prohibition may be aspirational scaffold rather than operative constraint.",
+      "source": "Dark Matter Probe 1 (Operational Medium: model operates within Western legal philosophy; Martens Clause scope contested in non-Western military doctrine)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied: three readings instantiate genuinely different constraints from shared IHL kernel. Axiom contradictions declared between human_agency_reading/outcomes_based_reading and categorical_prohibition_reading/outcomes_based_reading. Deferred axes (accountability_gap, measurement_instability) are structural backdrop, not kernel readings. Omegas document bounded uncertainties: enforcement gap, measurement collapse risk, kernel evolution trajectory, Martens Clause binding force."
+  },
+  "_seed_id": "autonomous_weapons_international_law"
+}

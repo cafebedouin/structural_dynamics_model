@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Sociolinguistics / Religious Studies / Nation-Building",
+  "family_id": "hebrew_revival_kernel_contest",
+  "topic_summary": "Analysis of the Hebrew language revival (1880s-1930s) as a contested kernel where 'Hebrew is a living language' was held under two mutually exclusive readings: liturgical-only (preserved recitation suffices) versus native-daily (only generational transmission counts). The transformation from liturgical medium to mother tongue represents an unparalleled linguistic resurrection with profound religious, ideological, and identity implications.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Eliezer Ben-Yehuda (linguist, primary revival architect, 1858-1922)",
+      "Orthodox rabbinical authorities (opponents of secular Hebrew use)",
+      "Yiddishists (Ashkenazi community advocating Yiddish primacy)",
+      "Committee of the Hebrew Language / Va'ad HaLashon (standardization body, est. 1890)",
+      "New Yishuv (Zionist settler population in Palestine)",
+      "Ben-Zion Ben-Yehuda (first native Modern Hebrew speaker)",
+      "Ottoman/British Mandate authorities (political context)"
+    ],
+    "key_tensions": [
+      "Sacred vs secular language use (Orthodox opposition to daily Hebrew)",
+      "Liturgical preservation vs native generation (kernel contest core)",
+      "Linguistic diversity vs Hebrew hegemony (Yiddish, Ladino, Arabic speakers)",
+      "Religious identity vs national identity (Torah observance vs Hebrew-based nationalism)"
+    ],
+    "key_mechanisms": [
+      "Hebrew-only household policy (Ben-Yehuda's 'Hebrew in the Home')",
+      "Immersion education in Hebrew schools (First-Third Aliyah periods)",
+      "Neologism creation via Committee (adapting biblical roots to modernity)"
+    ],
+    "key_absences": [
+      "Women's agency in language transmission (mothers as primary language teachers to children)",
+      "Arabic-speaking Mizrahi Jews' relationship to Hebrew (non-European migration streams)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_preservation_reading",
+      "human_readable": "Liturgical Preservation Reading (Recitation as Kernel Occupation)",
+      "structural_delta": "Hebrew remains 'living' through continuous liturgical recitation, scholarly transmission, and prayer practice across two millennia without native speakers",
+      "primary_observable": "Continuity of Hebrew literacy in religious contexts; rabbinic textual production; prayer book usage rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents pre-revival status quo with distinct constraint structure (preservation without generation)"
+    },
+    {
+      "claim_id": "native_generation_reading",
+      "human_readable": "Native Generation Reading (Mother Tongue as Kernel Requirement)",
+      "structural_delta": "Hebrew becomes 'living' only when transmitted as mother tongue to children who generate novel utterances, not merely recite preserved texts",
+      "primary_observable": "Native speaker population counts; household language surveys; children's spontaneous Hebrew production",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "zionist_nation_builders",
+      "victim": "orthodox_religious_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents revival movement with high extractiveness (displaces religious authority over language)"
+    },
+    {
+      "claim_id": "hybrid_coexistence_reading",
+      "human_readable": "Hybrid Coexistence Reading (Dual-Track Legitimacy)",
+      "structural_delta": "Both liturgical and native uses constitute valid forms of 'living' language, serving different but complementary functions without mutual exclusion",
+      "primary_observable": "Bilingual religious-secular Hebrew usage patterns; acceptance of neologisms in prayer contexts; secular literature incorporating religious vocabulary",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading representing synthesis position; lower centrality but structurally distinct from binary opposition"
+    },
+    {
+      "claim_id": "vocabulary_modernization_mechanism",
+      "human_readable": "Vocabulary Modernization Mechanism (Neologism Creation Infrastructure)",
+      "structural_delta": "Systematic creation of modern vocabulary through Committee standardization, adapting biblical roots to contemporary needs",
+      "primary_observable": "Ben-Yehuda Dictionary entries; Va'ad HaLashon neologism approval rates; adoption rates of coined terms",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "native_generation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: instrumental mechanism downstream of native_generation_reading; captured implicitly in that reading's constraint story"
+    },
+    {
+      "claim_id": "linguistic_diversity_suppression",
+      "human_readable": "Linguistic Diversity Suppression (Yiddish/Ladino/Arabic Displacement)",
+      "structural_delta": "Hebrew hegemony project systematically displaced immigrant mother tongues (Yiddish, Ladino, Arabic) through educational and social pressure",
+      "primary_observable": "Decline in Yiddish/Ladino newspaper circulation; school language policy enforcement; intergenerational language shift rates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "ashkenazi_zionist_elite",
+      "victim": "non_hebrew_speaking_immigrants",
+      "downstream_of": [
+        "native_generation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high epsilon but downstream consequence of native_generation_reading; warrants omega for extraction dynamics"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liturgical_preservation_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "liturgical_preservation_reading"
+    },
+    {
+      "claim_id": "native_generation_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "native_generation_reading"
+    },
+    {
+      "claim_id": "hybrid_coexistence_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "hybrid_coexistence_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "vocabulary_modernization_mechanism",
+      "structural_delta": "Systematic neologism creation through Committee standardization",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Instrumental mechanism captured implicitly in native_generation_reading constraint story"
+    },
+    {
+      "claim_id": "linguistic_diversity_suppression",
+      "structural_delta": "Hebrew hegemony displaced immigrant mother tongues",
+      "hypothesis": "snare",
+      "deferral_reason": "High epsilon downstream consequence; deferred to omega_linguistic_extraction for extraction dynamics analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_womens_transmission_agency",
+      "description": "Mothers were primary language teachers to children, yet sources focus overwhelmingly on male institutional actors (Ben-Yehuda, rabbis, Committee members). Did women's household language choices determine revival success more than institutional mandates? Absence may reflect archival bias or genuine patriarchal structure of decision-making.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - key_absences[0]"
+    },
+    {
+      "id": "omega_mizrahi_hebrew_relationship",
+      "description": "Arabic-speaking Mizrahi Jews had continuous contact with Semitic linguistic structures closer to Hebrew than Yiddish/Ladino speakers. Did this facilitate or complicate their adoption of Modern Hebrew? Sources emphasize European migration streams; Mizrahi experience may reveal different constraint topology.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - key_absences[1]"
+    },
+    {
+      "id": "omega_linguistic_extraction",
+      "description": "Hebrew hegemony systematically displaced Yiddish, Ladino, and Arabic as immigrant mother tongues. Was this extraction (Ashkenazi elite imposing costs on non-Hebrew speakers) or coordination (necessary for inter-communal communication)? Deferred axis linguistic_diversity_suppression warrants full constraint story if extraction dynamics are central to user's inquiry.",
+      "source": "Deferred axis linguistic_diversity_suppression (high epsilon snare)"
+    },
+    {
+      "id": "omega_strict_reachability_break",
+      "description": "User flags 'D1 strict-reachability break' in library verdict context. If this refers to Mishnaic Hebrew (2nd century CE) → Modern Hebrew (1880s) gap, the question is whether liturgical continuity maintained reachability or whether Ben-Yehuda's revival constituted a genuine break requiring reconstruction. Liturgical_preservation_reading claims continuity; native_generation_reading may claim break. Generation will test which constraint structure the evidence supports.",
+      "source": "User prompt kernel contest framing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest is well-supported by research context. Three readings represent genuinely distinct constraint structures with different beneficiary/victim topologies and epsilon values. Deferred axes documented with clear rationale."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Hebrew is a living language (shared commitment held across two millennia under contested interpretations)",
+    "authority_description": "Liturgical reading: rabbinic authority grounds interpretive legitimacy through continuous textual transmission. Native-daily reading: generational transmission and native speaker population grounds legitimacy through linguistic vitality metrics.",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Capture (Pattern 2)",
+    "is_contested_kernel": true,
+    "kernel_id": "hebrew_living_language",
+    "readings": [
+      {
+        "reading_id": "liturgical_preservation_reading",
+        "commitment": "Hebrew remains living through continuous liturgical recitation and scholarly transmission without requiring native speakers",
+        "authority_grounding": "Rabbinic textual authority; unbroken chain of Torah study and prayer practice",
+        "sibling_readings": [
+          "native_generation_reading",
+          "hybrid_coexistence_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness (preservation without displacement); mountain constraint (liturgical continuity as physical fact of practice); no victim set (non-coercive)"
+      },
+      {
+        "reading_id": "native_generation_reading",
+        "commitment": "Hebrew becomes living only when transmitted as mother tongue enabling spontaneous generation, not mere recitation",
+        "authority_grounding": "Linguistic vitality metrics; Zionist nation-building ideology; native speaker population as legitimacy ground",
+        "sibling_readings": [
+          "liturgical_preservation_reading",
+          "hybrid_coexistence_reading"
+        ],
+        "expected_structural_delta": "High extractiveness (displaces religious authority and immigrant languages); tangled_rope (nation-building project with beneficiary/victim structure); victim set includes Orthodox authorities and non-Hebrew-speaking immigrants"
+      },
+      {
+        "reading_id": "hybrid_coexistence_reading",
+        "commitment": "Both liturgical and native uses constitute valid forms of living language serving complementary functions",
+        "authority_grounding": "Pluralist framework accepting multiple legitimacy grounds; empirical coexistence of religious and secular Hebrew",
+        "sibling_readings": [
+          "liturgical_preservation_reading",
+          "native_generation_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (coordination costs but no categorical displacement); rope constraint (coordination without inherent victim); may represent post-revival synthesis rather than historical position"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "liturgical_preservation_reading",
+        "reading_b": "native_generation_reading",
+        "basis": "Liturgical reading holds that preserved recitation without native speakers suffices for 'living' status; native-generation reading holds that only mother-tongue transmission with spontaneous generation counts. No single coherent framework can hold both: either recitation alone suffices (making revival unnecessary) or it does not (making liturgical-only status 'dead' language). The Orthodox opposition to secular Hebrew use demonstrates this mutual exclusion in practice."
+      }
+    ]
+  },
+  "_seed_id": "modern_hebrew_revival"
+}

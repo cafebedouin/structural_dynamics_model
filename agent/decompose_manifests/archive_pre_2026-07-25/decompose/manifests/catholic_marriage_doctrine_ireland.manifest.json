@@ -1,0 +1,221 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Doctrine / Canon Law / Political Sociology",
+  "family_id": "catholic_marriage_ireland_2026",
+  "topic_summary": "Analysis of Catholic marriage doctrine in modern Ireland as a contested kernel where the sacrament of marriage is read differently by traditional hierarchical authority (indissoluble covenant) versus modern civic/pastoral frameworks (accommodating divorce and pluralism). Each reading instantiates distinct constraints with different victim sets and authority structures.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Catholic Church institutional hierarchy (Vatican, Irish bishops)",
+      "Irish State (civil authority post-1995 divorce referendum)",
+      "Traditional Catholic laity (commitment to indissolubility)",
+      "Secularized Catholic laity (nominal affiliation, civic marriage priority)",
+      "Divorce/remarriage petitioners (seeking annulment or civil divorce)",
+      "Canon law tribunals (interpretive authority over marriage validity)"
+    ],
+    "key_tensions": [
+      "Sacramental indissolubility vs civil divorce availability (1995 referendum aftermath)",
+      "Hierarchical interpretive authority vs pastoral accommodation pressure",
+      "Universal doctrinal claims vs declining institutional participation (Irish Mass attendance collapse)"
+    ],
+    "key_mechanisms": [
+      "Annulment process (canonical declaration of marriage invalidity, requires tribunal adjudication)",
+      "Civil divorce law (state authority over legal marriage dissolution, no Church recognition required)"
+    ],
+    "key_absences": [
+      "Economic consequences of marriage doctrine (gender disparities in post-divorce outcomes under traditional vs civil frameworks)",
+      "Interfaith/non-Catholic marriage treatment (majority of Irish marriages no longer exclusively Catholic)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "hierarchical_indissolubility_reading",
+      "human_readable": "Hierarchical Indissolubility Reading (Traditional Canonical Framework)",
+      "structural_delta": "Marriage as ontological reality requiring hierarchical adjudication; indissolubility grounded in sacramental theology",
+      "primary_observable": "Annulment tribunal activity; pastoral guidance requiring lifelong fidelity; institutional resistance to civil divorce recognition",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_hierarchy",
+      "victim": "divorced_remarried_catholics",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest institutional enforcement; distinct victim set (excludes divorced from sacraments)"
+    },
+    {
+      "claim_id": "civic_pastoral_reading",
+      "human_readable": "Civic-Pastoral Reading (Accommodationist Framework)",
+      "structural_delta": "Marriage as pastoral relationship subject to human failure; authority grounded in compassionate accompaniment rather than juridical enforcement",
+      "primary_observable": "Pastoral practice variations (communion for divorced/remarried); theological emphasis on mercy over law; acceptance of civil divorce validity",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "divorced_remarried_catholics",
+      "victim": "traditional_laity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; distinct authority structure (pastoral vs juridical); victim set inverted (traditional laity experience doctrinal betrayal)"
+    },
+    {
+      "claim_id": "secularization_pressure",
+      "human_readable": "Secularization Pressure (Institutional Decline as Constraint Erosion)",
+      "structural_delta": "Declining Mass attendance and sacramental participation erodes enforcement capacity regardless of doctrinal reading",
+      "primary_observable": "Mass attendance rates (collapsed from 90%+ in 1970s to <35% in 2020s); civil-only marriage prevalence; annulment petition volume",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hierarchical_indissolubility_reading",
+        "civic_pastoral_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Upstream mountain constraint; affects enforcement capacity of both readings; Irish-specific demographic context"
+    },
+    {
+      "claim_id": "gender_economic_consequences",
+      "human_readable": "Gender-Economic Consequences (Differential Material Outcomes)",
+      "structural_delta": "Women disproportionately bear economic costs under indissolubility framework due to property/custody law interaction",
+      "primary_observable": "Post-separation poverty rates by gender; access to Church-controlled social services for divorced women; custody outcomes",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "male_institutional_authority",
+      "victim": "divorced_women",
+      "downstream_of": [
+        "hierarchical_indissolubility_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream of hierarchical reading with limited independent observables; captured in victim set analysis"
+    },
+    {
+      "claim_id": "interfaith_marriage_ambiguity",
+      "human_readable": "Interfaith Marriage Ambiguity (Non-Catholic Partner Status)",
+      "structural_delta": "Mixed marriages create jurisdictional ambiguity over which authority adjudicates validity",
+      "primary_observable": "Dispensation process for interfaith marriages; non-Catholic partner's rights in annulment proceedings",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "hierarchical_indissolubility_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality; subset of broader canonical jurisdiction question"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hierarchical_indissolubility_reading",
+      "kernel_id": "marriage_sacrament",
+      "reading_id": "hierarchical_indissolubility_reading"
+    },
+    {
+      "claim_id": "civic_pastoral_reading",
+      "kernel_id": "marriage_sacrament",
+      "reading_id": "civic_pastoral_reading"
+    },
+    {
+      "claim_id": "secularization_pressure",
+      "kernel_id": null,
+      "reading_id": null
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "gender_economic_consequences",
+      "structural_delta": "Women disproportionately bear economic costs under indissolubility",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of hierarchical reading; gender economics captured in victim set analysis of primary reading"
+    },
+    {
+      "claim_id": "interfaith_marriage_ambiguity",
+      "structural_delta": "Mixed marriages create jurisdictional ambiguity",
+      "hypothesis": "rope",
+      "deferral_reason": "Lower centrality; subset of broader canonical jurisdiction question"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_amoris_laetitia_shift",
+      "description": "Pope Francis's Amoris Laetitia (2016) attempted pastoral accommodation without doctrinal revision. Is this a genuine third reading (conscience-based discernment) or civic_pastoral_reading in disguise? Operational ambiguity allows diocesan variation.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_annulment_industrialization",
+      "description": "U.S. annulment rates post-1970s suggest hierarchical_indissolubility_reading functions as de facto divorce system for economically privileged. Does Ireland replicate this? If so, the victim set is class-stratified.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_clerical_abuse_crisis_interaction",
+      "description": "Irish Church authority collapse post-Ryan Report (2009) and subsequent abuse scandals. Does secularization_pressure mountain subsume institutional legitimacy crisis, or is legitimacy crisis a distinct upstream constraint?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_northern_ireland_differential",
+      "description": "Northern Ireland abortion/marriage law divergence (pre-2020 Westminster intervention). Does partition create two distinct Irish Catholic populations with different reading-adoption rates?",
+      "source": "Extraction phase absence"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel contest confirmed: hierarchical and civic-pastoral readings instantiate distinct constraints with non-overlapping authority structures and inverted victim sets. Secularization_pressure mountain identified as Irish-specific upstream constraint affecting enforcement capacity of both readings."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The sacrament of marriage as codified in Canon Law (specifically Canons 1055-1165), stabilizing marriage as an indissoluble covenant established by consent and consummated by conjugal act",
+    "authority_description": "Hierarchical interpretive authority: Vatican Congregation for the Doctrine of the Faith issues binding interpretations; diocesan tribunals adjudicate validity; bishops enforce pastoral discipline",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_authority_fragmentation",
+    "is_contested_kernel": true,
+    "kernel_id": "marriage_sacrament",
+    "readings": [
+      {
+        "reading_id": "hierarchical_indissolubility_reading",
+        "commitment": "Marriage as ontological reality requiring hierarchical adjudication; indissolubility is constitutive, not aspirational",
+        "authority_grounding": "Magisterial tradition + canonical tribunal system; authority derives from apostolic succession and sacramental theology",
+        "sibling_readings": [
+          "civic_pastoral_reading"
+        ],
+        "expected_structural_delta": "High extractiveness: divorced/remarried excluded from Eucharist; annulment process imposes tribunal costs and delays; institutional enforcement via denial of sacraments. Victim set: divorced Catholics seeking remarriage and full sacramental participation."
+      },
+      {
+        "reading_id": "civic_pastoral_reading",
+        "commitment": "Marriage as pastoral relationship subject to human failure; indissolubility as ideal requiring compassionate discernment in individual cases",
+        "authority_grounding": "Pastoral theology + internal forum (conscience); authority derives from mercy and accompaniment rather than juridical enforcement",
+        "sibling_readings": [
+          "hierarchical_indissolubility_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness: traditional laity experience doctrinal relativization and loss of normative clarity; institutional authority eroded by inconsistent enforcement. Victim set: traditional Catholics whose identity depends on doctrinal stability."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hierarchical_indissolubility_reading",
+        "reading_b": "civic_pastoral_reading",
+        "basis": "Hierarchical reading holds that marriage indissolubility is ontological (a metaphysical fact about sacramental reality); civic-pastoral reading holds it is aspirational (a moral ideal subject to pastoral discernment). No single framework can hold both: either the marriage bond is ontologically real (and thus beyond human authority to dissolve) or it is a norm subject to compassionate exception. Accepting pastoral discernment as legitimate authority requires rejecting ontological indissolubility as binding."
+      }
+    ]
+  },
+  "_seed_id": "catholic_marriage_doctrine_ireland"
+}

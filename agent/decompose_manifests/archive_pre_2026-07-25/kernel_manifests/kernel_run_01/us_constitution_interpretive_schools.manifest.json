@@ -1,0 +1,327 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Legal Theory / Interpretive Jurisprudence",
+  "family_id": "us_constitution_interpretive_schools",
+  "topic_summary": "Analysis of three competing interpretive schools for the US Constitution: originalism (fixed meaning at ratification), living constitutionalism (evolving meaning responsive to contemporary values), and legal positivism (authority from formal enactment procedures). Each reading generates different constraints from the same constitutional text, with originalism currently dominant on the Supreme Court but showing pragmatic drift toward incorporating post-ratification evidence and tradition.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "US Constitution (frozen text kernel, ratified 1787-1791, amended through Article V)",
+      "Supreme Court (interpretive authority, 6-3 originalist majority as of 2024)",
+      "Originalist Justices (Thomas, Gorsuch, Barrett, Kavanaugh, Alito, Roberts)",
+      "Living Constitutionalist Justices (Breyer retired, Kagan, Sotomayor, Jackson)",
+      "Justice Antonin Scalia (originalism's intellectual architect, deceased 2016)",
+      "Attorney General Edwin Meese (1985 originalism announcement, Reagan administration)",
+      "Justice William Brennan (1985 living constitutionalism defense)",
+      "Federalist Society (originalist institutional infrastructure)",
+      "Harvard Law Professor Adrian Vermeule (Common Good Originalism proponent)",
+      "Harvard Law Professor Richard Fallon (selective originalism critic)",
+      "14th Amendment (1868, Reconstruction-era equal protection clause)",
+      "Article V (constitutional amendment procedure)"
+    ],
+    "key_tensions": [
+      "Originalism vs Living Constitutionalism: fixed historical meaning vs evolving contemporary values as authority source",
+      "Strict Originalism vs Pragmatic Originalism: ratification-era evidence only vs post-ratification tradition",
+      "Textualism vs Common Good Originalism: positivist text-fidelity vs natural-law moral principles",
+      "Majority Originalism vs Minority Living Constitutionalism: 6-3 Court split with dissents invoking material consequences",
+      "Originalist Rhetoric vs Originalist Practice: claimed fidelity to history vs selective application favoring conservative outcomes"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The US Constitution as frozen text (1787 founding + amendments through Article V) whose legitimate interpretation grounds judicial authority to adjudicate constitutional disputes",
+    "authority_description": "Supreme Court interpretive supremacy grounded in Marbury v. Madison (1803), with competing claims about what makes interpretation legitimate: fidelity to ratification-era meaning (originalism), responsiveness to evolving values (living constitutionalism), or adherence to formal enactment procedures (positivism)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "constitutional_text_authority",
+    "readings": [
+      {
+        "reading_id": "originalist_reading",
+        "commitment": "Constitutional meaning fixed at ratification; authority derives from historical public understanding",
+        "authority_grounding": "Ratification-era public meaning as discoverable through dictionaries, grammar, legal documents, and founding-era debate",
+        "sibling_readings": [
+          "living_constitutionalist_reading",
+          "positivist_reading"
+        ],
+        "expected_structural_delta": "Rigid constraint on judicial discretion; historical evidence gates permissible outcomes; unenumerated rights difficult to recognize; post-ratification social change cannot alter meaning without Article V amendment",
+        "internal_variants": [
+          "Original intent (Framers' subjective purposes)",
+          "Original public meaning (ratification-era public understanding)",
+          "Original law (H.L.A. Hart positivist variant)",
+          "Pragmatic originalism (Kavanaugh: post-ratification tradition as evidence)",
+          "Common Good Originalism (Vermeule: moral principles infused)"
+        ],
+        "current_institutional_position": "Supreme Court majority (Thomas, Gorsuch, Barrett, Kavanaugh, Alito, Roberts)",
+        "temporal_kernel_application": {
+          "founding_era_1787_1791": "Primary authority locus; Framers' generation public meaning",
+          "reconstruction_1868": "14th Amendment original public meaning on equal protection",
+          "modern_era_20th_21st": "Struggles with unenumerated rights (privacy, abortion); Dobbs overturns Roe by denying historical grounding"
+        }
+      },
+      {
+        "reading_id": "living_constitutionalist_reading",
+        "commitment": "Constitutional meaning evolves with social attitudes and values; authority derives from contemporary moral principles and ancient values applied to changing circumstances",
+        "authority_grounding": "Natural law tradition; underlying constitutional values (Breyer's 'ancient values') interpreted through contemporary lens; material consequences of rights recognition/denial",
+        "sibling_readings": [
+          "originalist_reading",
+          "positivist_reading"
+        ],
+        "expected_structural_delta": "Flexible constraint allowing judicial adaptation; contemporary values gate permissible outcomes; unenumerated rights recognizable through evolving understanding; Brown v. Board (1954) changed Constitution without Article V",
+        "internal_variants": [
+          "Purposivism (Breyer: underlying values + pragmatism)",
+          "New living constitutionalism (Kagan: text + evolving application)",
+          "Progressive originalism (Jackson: reclaim originalist authority for progressive ends)"
+        ],
+        "current_institutional_position": "Supreme Court minority (Kagan, Sotomayor, Jackson); dissent position",
+        "temporal_kernel_application": {
+          "founding_era_1787_1791": "Acknowledges historical constraints but not bound by them",
+          "reconstruction_1868": "14th Amendment equal protection evolves beyond 1868 understanding",
+          "modern_era_20th_21st": "Privacy, abortion, marriage equality recognized through evolving values; Dobbs dissent emphasizes material consequences of five decades of abortion access"
+        }
+      },
+      {
+        "reading_id": "positivist_reading",
+        "commitment": "Constitutional validity derives from formal enactment procedures and institutional sources, not moral content; law/morality distinction maintained",
+        "authority_grounding": "Article V amendment process; institutional recognition; adherence to written and enacted legal rules; H.L.A. Hart's rule of recognition",
+        "sibling_readings": [
+          "originalist_reading",
+          "living_constitutionalist_reading"
+        ],
+        "expected_structural_delta": "Procedural constraint on constitutional change; moral arguments irrelevant to validity; strict textualism indistinguishable from positivism; convergence with originalism on text-fidelity but divergence on natural law moorings",
+        "internal_variants": [
+          "Strict textualism (text as enacted, no moral overlay)",
+          "Original law originalism (Hart-influenced positivist originalism)"
+        ],
+        "current_institutional_position": "Underlying both originalism and living constitutionalism but not explicitly claimed by current justices; theoretical position more than judicial practice",
+        "temporal_kernel_application": {
+          "founding_era_1787_1791": "Constitution valid because ratified per Article VII procedures",
+          "reconstruction_1868": "14th Amendment valid because enacted per Article V procedures",
+          "modern_era_20th_21st": "Unenumerated rights require Article V amendment or cannot be constitutionally recognized"
+        }
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "originalist_reading",
+        "reading_b": "living_constitutionalist_reading",
+        "basis": "Originalism holds constitutional meaning is fixed at ratification and cannot change without Article V amendment; living constitutionalism holds meaning evolves with social values even without formal amendment. No single coherent framework can hold both that Brown v. Board (1954) changed the Constitution's meaning (living) and that it merely discovered the 14th Amendment's original 1868 meaning (originalist). The axioms are mutually exclusive on whether judicial interpretation can alter constitutional constraints."
+      },
+      {
+        "reading_a": "positivist_reading",
+        "reading_b": "living_constitutionalist_reading",
+        "basis": "Positivism holds law's validity is independent of moral content and derives solely from formal enactment; living constitutionalism holds constitutional meaning must evolve to reflect contemporary moral values and principles. No single framework can hold both that moral principles are irrelevant to constitutional validity (positivist) and that evolving moral values change constitutional meaning (living). The law/morality separation axiom contradicts the moral-evolution axiom."
+      }
+    ],
+    "drift_observations": [
+      {
+        "drift_type": "convergence_thesis",
+        "description": "Kagan's 'We are all originalists' testimony (2010) and Roberts's endorsement of living constitutionalism's broad-terms-in-modern-circumstances principle signal rhetorical convergence. New textualism synthesizes originalist starting point (text meaning) with living constitutionalist application (principles to changing circumstances).",
+        "constraint_impact": "Narrows gap between readings; originalism becomes less rigid, living constitutionalism adopts originalist language"
+      },
+      {
+        "drift_type": "pragmatic_originalism_emergence",
+        "description": "Kavanaugh's defense of post-ratification evidence as 'tradition' in Bruen/Rahimi; Barrett's 'historical regulations reveal a principle, not a mold' statement. Originalist majority incorporates later historical practice, moving away from strict ratification-era evidence.",
+        "constraint_impact": "Originalism's constraint becomes more flexible; temporal boundary of legitimate evidence expands from ratification moment to post-ratification tradition"
+      },
+      {
+        "drift_type": "selective_application_critique",
+        "description": "Fallon's observation that originalist justices apply originalism selectively to abet conservative outcomes; claim that originalists 'rewrite constitutional past based on logic of legal present' resembling living constitutionalism they disparage.",
+        "constraint_impact": "Originalism's claimed constraint (fidelity to history) may be rhetorical rather than operational; actual constraint may be ideological outcome preference"
+      },
+      {
+        "drift_type": "progressive_originalism_reclamation",
+        "description": "Justice Jackson and scholars advancing 'progressive originalism' to reclaim originalism's authority-grounding for progressive ends, particularly on Reconstruction amendments.",
+        "constraint_impact": "Originalism's constraint no longer maps cleanly to conservative outcomes; authority-grounding contest shifts from originalism vs living constitutionalism to competing originalist readings"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "originalist_reading",
+      "human_readable": "Originalist Reading (Fixed Meaning at Ratification)",
+      "structural_delta": "Constitutional meaning fixed at ratification; judicial authority constrained by historical public understanding discoverable through founding-era evidence",
+      "primary_observable": "Reliance on ratification-era dictionaries, grammar, legal documents, founding debates in judicial opinions; rejection of post-ratification social change as interpretive evidence; frequency of historical evidence citations in majority opinions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "originalist_legal_movement",
+      "victim": "unenumerated_rights_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant reading with 6-3 Supreme Court majority; highest institutional power; generates rigid constraint on judicial discretion with measurable epsilon (historical evidence requirement)"
+    },
+    {
+      "claim_id": "living_constitutionalist_reading",
+      "human_readable": "Living Constitutionalist Reading (Evolving Meaning)",
+      "structural_delta": "Constitutional meaning evolves with social values and contemporary circumstances; judicial authority grounded in applying ancient values to changing conditions and assessing material consequences",
+      "primary_observable": "Reliance on contemporary values, material consequences, evolving understanding in judicial opinions; invocation of 'ancient values' applied to modern circumstances; frequency of consequentialist reasoning in dissents",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "progressive_legal_movement",
+      "victim": "textualist_constraint_advocates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Minority reading with institutional presence (3 justices); axiom-contradictory to originalism; generates flexible constraint allowing judicial adaptation with measurable epsilon (values-evolution requirement)"
+    },
+    {
+      "claim_id": "positivist_reading",
+      "human_readable": "Positivist Reading (Formal Enactment Authority)",
+      "structural_delta": "Constitutional validity derives from formal enactment procedures (Article V) independent of moral content; law/morality distinction maintained; judicial authority constrained by procedural legitimacy",
+      "primary_observable": "Reliance on Article V amendment process as exclusive constitutional change mechanism; rejection of moral arguments as basis for constitutional validity; strict textualism indistinguishable from positivism in practice",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "originalist_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Theoretical foundation underlying originalism; axiom-contradictory to living constitutionalism; generates procedural constraint with lower epsilon (rarely invoked explicitly but structures debate); completes triadic kernel structure"
+    },
+    {
+      "claim_id": "pragmatic_originalism_drift",
+      "human_readable": "Pragmatic Originalism Drift (Post-Ratification Tradition)",
+      "structural_delta": "Originalist majority incorporates post-ratification evidence as 'tradition' to answer open questions about original meaning, expanding temporal boundary of legitimate evidence beyond ratification moment",
+      "primary_observable": "Kavanaugh/Barrett opinions citing post-ratification historical practice in Bruen/Rahimi; frequency of tradition-based arguments in originalist opinions; temporal range of cited historical evidence",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "originalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: internal drift within originalist reading rather than independent reading; captured in originalist_reading's internal_variants and drift_observations"
+    },
+    {
+      "claim_id": "selective_application_pattern",
+      "human_readable": "Selective Application Pattern (Ideological Outcome Preference)",
+      "structural_delta": "Originalist justices apply originalism selectively to achieve conservative outcomes, with claimed historical fidelity masking ideological constraint; resembles living constitutionalism in practice",
+      "primary_observable": "Fallon's empirical analysis of originalist opinion patterns; correlation between originalist methodology and conservative outcomes; instances of originalist justices reaching non-originalist conclusions when originalism would yield progressive result",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "conservative_legal_movement",
+      "victim": "originalism_as_neutral_methodology",
+      "downstream_of": [
+        "originalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-level critique of originalism's operational constraint rather than independent reading; high epsilon but structurally downstream; omega material on constraint authenticity"
+    },
+    {
+      "claim_id": "progressive_originalism_reclamation",
+      "human_readable": "Progressive Originalism Reclamation (Authority-Grounding Reversal)",
+      "structural_delta": "Progressive jurists (Jackson) reclaim originalist authority-grounding to reach progressive outcomes, particularly on Reconstruction amendments, reversing originalism's ideological valence",
+      "primary_observable": "Jackson opinions citing Reconstruction-era original public meaning for progressive ends; progressive legal scholarship adopting originalist methodology; frequency of competing originalist historical narratives",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "originalist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emerging counter-reading within originalism rather than independent reading; scaffold status (nascent institutional position); captured in drift_observations"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "originalist_reading",
+      "kernel_id": "constitutional_text_authority",
+      "reading_id": "originalist_reading"
+    },
+    {
+      "claim_id": "living_constitutionalist_reading",
+      "kernel_id": "constitutional_text_authority",
+      "reading_id": "living_constitutionalist_reading"
+    },
+    {
+      "claim_id": "positivist_reading",
+      "kernel_id": "constitutional_text_authority",
+      "reading_id": "positivist_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pragmatic_originalism_drift",
+      "structural_delta": "Post-ratification tradition incorporated into originalist evidence base",
+      "hypothesis": "piton",
+      "deferral_reason": "Internal drift within originalist reading; captured in originalist_reading's internal_variants and drift_observations rather than independent reading"
+    },
+    {
+      "claim_id": "selective_application_pattern",
+      "structural_delta": "Originalism applied selectively to achieve conservative outcomes",
+      "hypothesis": "snare",
+      "deferral_reason": "Meta-level critique of originalism's operational constraint; high epsilon but structurally downstream; omega material on whether originalism's claimed constraint is authentic or rhetorical"
+    },
+    {
+      "claim_id": "progressive_originalism_reclamation",
+      "structural_delta": "Progressive jurists reclaim originalist authority-grounding for progressive ends",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Emerging counter-reading within originalism; nascent institutional position; captured in drift_observations as future trajectory rather than present constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_originalism_authenticity",
+      "description": "Is originalism's constraint authentic (fidelity to history) or rhetorical (ideological outcome preference)? Fallon's selective application critique suggests originalist justices 'rewrite constitutional past based on logic of legal present,' resembling living constitutionalism. If true, originalism is a Snare (claimed Mountain of historical necessity masking Tangled Rope of ideological extraction) rather than genuine constraint. Deferred axis selective_application_pattern carries high epsilon on this question.",
+      "source": "Deferred axis selective_application_pattern + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_convergence_collapse",
+      "description": "Does the convergence thesis (Kagan's 'We are all originalists,' new textualism synthesis) collapse the kernel contest into one reading? If originalism becomes 'text + evolving application' and living constitutionalism adopts originalist starting points, the readings may emit the same constraint. Current evidence: rhetorical convergence but axiom contradictions persist (Brown v. Board interpretation remains contested). Monitor for full collapse vs licensed plurality.",
+      "source": "Drift observations + §1.3-K coherence signal"
+    },
+    {
+      "id": "omega_positivism_ghost",
+      "description": "Is positivism a genuine third reading or the theoretical substrate underlying both originalism and living constitutionalism? No current justice explicitly claims positivist reading; it appears as 'original law originalism' variant within originalism and as procedural constraint both readings acknowledge. May be a ghost axis (theoretical position without institutional instantiation) rather than live reading. Low epsilon reflects this ambiguity.",
+      "source": "Positivist reading low epsilon + absence of explicit institutional advocates"
+    },
+    {
+      "id": "omega_temporal_kernel_shift",
+      "description": "Do different constitutional moments (Founding 1787-1791, Reconstruction 1868, Modern 20th-21st) constitute separate kernels rather than one kernel read differently across time? Progressive originalism's focus on Reconstruction amendments suggests 14th Amendment may be distinct kernel with different authority-grounding (anti-subordination vs original Founding federalism). If so, topic may be multiple kernels rather than one contested kernel.",
+      "source": "Temporal kernel application patterns + progressive originalism reclamation"
+    },
+    {
+      "id": "omega_common_good_originalism_fracture",
+      "description": "Does Vermeule's Common Good Originalism represent internal originalist fracture or bridge to natural law tradition? Textualists call it 'living constitutionalism in conservative clothing,' suggesting it breaks originalism's positivist commitment. If Common Good Originalism gains institutional traction, may split originalist reading into positivist-textualist vs natural-law-moralist variants with axiom contradiction between them.",
+      "source": "Originalist internal variants + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_article_v_atrophy",
+      "description": "Has Article V amendment process atrophied into Piton (formal procedure without operational capacity)? Last amendment ratified 1992 (27th, congressional pay). If Article V is non-functional, positivist reading's constraint (constitutional change requires formal amendment) becomes impossible to satisfy, forcing all constitutional evolution through judicial interpretation. This would structurally favor living constitutionalism regardless of Court composition.",
+      "source": "Positivist reading procedural constraint + absence inventory (no recent Article V amendments despite major social change)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings identified with genuine axiom contradictions (originalist vs living on meaning-fixity; positivist vs living on law/morality separation). Kernel contest confirmed: no single coherent framework holds both originalism's fixed-meaning axiom and living constitutionalism's evolving-meaning axiom. Positivist reading has lower epsilon and ambiguous institutional status (omega_positivism_ghost) but provides necessary procedural foundation. Convergence thesis monitored in omega_convergence_collapse but axiom contradictions persist, confirming licensed plurality rather than collapse."
+  },
+  "_seed_id": "us_constitution_interpretive_schools"
+}

@@ -1,0 +1,269 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Economics / Political Economy / International Finance",
+  "family_id": "gold_fiat_transition_1971",
+  "topic_summary": "Analysis of the transition from gold-backed currency to fiat currency, examining whether the 1971 Nixon Shock represents a single decisive swap or an overdetermined composite of structural pressures. The research context frames this as a potential contested kernel: different readings of what the transition fundamentally was may instantiate structurally different constraints.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Bretton Woods System (1945-1971 international monetary framework)",
+      "Richard Nixon (U.S. President, unilateral decision-maker August 15, 1971)",
+      "Federal Reserve (U.S. central bank, established 1913)",
+      "International Monetary Fund (Bretton Woods institution)",
+      "Group of Ten (multilateral negotiation body, Smithsonian Agreement)",
+      "France (early converter of dollars to gold, trigger actor)",
+      "U.S. Treasury (gold reserve holder)",
+      "Vietnam War (fiscal pressure source)"
+    ],
+    "key_tensions": [
+      "Monetary rigidity (gold scarcity) vs economic flexibility (growth requirements)",
+      "Domestic policy autonomy vs international coordination obligations",
+      "Dollar overvaluation vs gold reserve adequacy",
+      "Keynesian fiscal activism vs gold standard discipline"
+    ],
+    "key_claims": [
+      "Classical gold standard operated 1870s-1930s with fixed exchange rates",
+      "Bretton Woods pegged currencies to dollar, dollar to gold at $35/oz",
+      "By 1960s, dollar circulation exceeded U.S. gold reserves at official price",
+      "Nixon Shock (August 15, 1971) suspended gold convertibility without international consultation",
+      "Smithsonian Agreement (December 1971) attempted repair, collapsed by 1973",
+      "Transition enabled in U.S. began 1930s, formalized 1971"
+    ],
+    "key_mechanisms": [
+      "Gold convertibility requirement (Bretton Woods enforcement)",
+      "Foreign central bank dollar-to-gold conversion (France, Britain as trigger)",
+      "Federal Reserve monetary expansion (constrained under gold, unconstrained under fiat)"
+    ],
+    "key_absences": [
+      "Domestic U.S. political economy (labor, creditors, debtors) not mentioned as actors",
+      "Post-1971 inflation dynamics (1970s stagflation) not addressed in transition narrative"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The monetary anchor principle: what legitimates the value of currency and constrains state monetary authority",
+    "authority_description": "Central banks and treasuries claim authority to manage currency based on either commodity backing (gold convertibility) or state fiat (legal tender laws + monetary policy credibility)",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "monetary_anchor_principle",
+    "readings": [
+      {
+        "reading_id": "punctuated_swap_reading",
+        "commitment": "The transition was a discrete institutional choice on August 15, 1971—a single swap from one monetary regime to another",
+        "authority_grounding": "Executive authority (Nixon) to suspend convertibility; state sovereignty over monetary system",
+        "sibling_readings": [
+          "overdetermined_composite_reading",
+          "triffin_inevitability_reading"
+        ],
+        "expected_structural_delta": "Constraint type: rope (coordination problem). Nixon Shock as coordination failure → unilateral defection. Beneficiary: U.S. fiscal autonomy. Victim: foreign dollar holders (expropriation via devaluation). Epsilon: moderate (institutional choice, reversible in principle)."
+      },
+      {
+        "reading_id": "overdetermined_composite_reading",
+        "commitment": "The transition was an overdetermined composite of structural pressures (Triffin dilemma, Vietnam War deficits, Keynesian policy consensus, technological capital mobility) that made gold standard collapse inevitable by late 1960s",
+        "authority_grounding": "Structural economic forces; multiple causal streams converging",
+        "sibling_readings": [
+          "punctuated_swap_reading",
+          "triffin_inevitability_reading"
+        ],
+        "expected_structural_delta": "Constraint type: tangled_rope. Multiple upstream mountains (gold scarcity, capital mobility, fiscal deficits) feeding into entangled policy space. Beneficiary: state fiscal capacity. Victim: monetary discipline (inflation constraint removed). Epsilon: high (structural overdetermination, not reversible without addressing all causal streams)."
+      },
+      {
+        "reading_id": "triffin_inevitability_reading",
+        "commitment": "The transition was structurally inevitable due to the Triffin dilemma: a reserve currency issuer under gold standard must run deficits to supply global liquidity, which eventually exhausts gold reserves and forces abandonment",
+        "authority_grounding": "Economic theory (Triffin 1960); structural contradiction in Bretton Woods design",
+        "sibling_readings": [
+          "punctuated_swap_reading",
+          "overdetermined_composite_reading"
+        ],
+        "expected_structural_delta": "Constraint type: mountain (physical/logical impossibility). Gold reserve scarcity + global liquidity demand = mathematical contradiction. No beneficiary (system-level failure). Victim: Bretton Woods institutional framework. Epsilon: very low (structural necessity, no policy choice available)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "punctuated_swap_reading",
+        "reading_b": "triffin_inevitability_reading",
+        "basis": "Punctuated swap treats August 1971 as a policy choice (rope: coordination could have been maintained with different decisions). Triffin inevitability treats it as structural necessity (mountain: no policy choice could prevent collapse given Bretton Woods design). No single framework can hold both 'this was a choice' and 'this was inevitable' as simultaneously true for the same event."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "punctuated_swap_reading",
+      "human_readable": "Punctuated Swap (August 15, 1971 as Discrete Institutional Choice)",
+      "structural_delta": "Nixon Shock as unilateral defection from Bretton Woods coordination equilibrium",
+      "primary_observable": "Executive decision timeline; absence of international consultation; Smithsonian Agreement as failed repair attempt",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "u_s_fiscal_autonomy",
+      "victim": "foreign_dollar_holders",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline institutional-choice framing"
+    },
+    {
+      "claim_id": "overdetermined_composite_reading",
+      "human_readable": "Overdetermined Composite (Multiple Structural Pressures Converging)",
+      "structural_delta": "Transition as entanglement of Triffin dilemma, Vietnam deficits, Keynesian consensus, capital mobility",
+      "primary_observable": "Dollar circulation vs gold reserves ratio; fiscal deficit trajectory; capital flow liberalization timeline; Keynesian policy adoption post-1930s",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_fiscal_capacity",
+      "victim": "monetary_discipline",
+      "downstream_of": [
+        "gold_scarcity_mountain",
+        "capital_mobility_mountain"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: highest centrality; synthesis node with multiple upstream structural dependencies"
+    },
+    {
+      "claim_id": "triffin_inevitability_reading",
+      "human_readable": "Triffin Inevitability (Structural Contradiction in Reserve Currency Design)",
+      "structural_delta": "Mathematical impossibility of maintaining gold peg while supplying global liquidity",
+      "primary_observable": "Reserve currency demand growth vs gold reserve growth; Triffin's 1960 prediction vs 1971 outcome",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "bretton_woods_framework",
+      "downstream_of": [],
+      "feeds_into": [
+        "overdetermined_composite_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: mountain providing structural necessity framing; feeds into composite reading"
+    },
+    {
+      "claim_id": "gold_scarcity_mountain",
+      "human_readable": "Gold Scarcity (Physical Constraint on Monetary Expansion)",
+      "structural_delta": "Gold supply growth (mining) slower than economic growth requirements",
+      "primary_observable": "Annual gold production vs GDP growth rates; deflationary pressure under gold standard",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "overdetermined_composite_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within Triffin reading and overdetermined composite; lower independent yield"
+    },
+    {
+      "claim_id": "capital_mobility_mountain",
+      "human_readable": "Capital Mobility (Technological Constraint on Fixed Exchange Rates)",
+      "structural_delta": "Post-WWII technological advances enabling rapid cross-border capital flows incompatible with fixed exchange rates",
+      "primary_observable": "Capital flow volumes 1960s-1970s; speculative attack frequency on pegged currencies",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "overdetermined_composite_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural upstream but lower centrality than Triffin reading; captured in composite"
+    },
+    {
+      "claim_id": "domestic_political_economy_absence",
+      "human_readable": "Domestic Political Economy (Labor/Creditor/Debtor Interests)",
+      "structural_delta": "Distributional consequences of inflation vs deflation for domestic U.S. constituencies",
+      "primary_observable": "Real wage trajectories; creditor/debtor wealth transfers; labor union positions on monetary policy",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "debtors",
+      "victim": "creditors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: identified as absence in extraction; no source material to ground constraint story; omega variable"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "punctuated_swap_reading",
+      "kernel_id": "monetary_anchor_principle",
+      "reading_id": "punctuated_swap_reading"
+    },
+    {
+      "claim_id": "overdetermined_composite_reading",
+      "kernel_id": "monetary_anchor_principle",
+      "reading_id": "overdetermined_composite_reading"
+    },
+    {
+      "claim_id": "triffin_inevitability_reading",
+      "kernel_id": "monetary_anchor_principle",
+      "reading_id": "triffin_inevitability_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "gold_scarcity_mountain",
+      "structural_delta": "Gold supply growth slower than economic growth requirements",
+      "hypothesis": "mountain",
+      "deferral_reason": "Captured within Triffin inevitability reading and overdetermined composite reading; lower independent analytical yield"
+    },
+    {
+      "claim_id": "capital_mobility_mountain",
+      "structural_delta": "Technological advances enabling rapid cross-border capital flows",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural upstream but lower centrality than Triffin reading; incorporated into overdetermined composite"
+    },
+    {
+      "claim_id": "domestic_political_economy_absence",
+      "structural_delta": "Distributional consequences for domestic U.S. labor/creditor/debtor constituencies",
+      "hypothesis": "snare",
+      "deferral_reason": "Identified as absence in extraction; insufficient source material to ground constraint story; flagged as omega variable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_domestic_political_economy",
+      "description": "Research context omits domestic U.S. political economy actors (labor unions, creditors, debtors). Inflation vs deflation has distributional consequences that may have shaped the transition. If creditor interests dominated, gold standard abandonment becomes a Snare (wealth transfer from creditors to debtors via inflation). Absence suggests either source material gap or that international pressures dominated domestic considerations.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary.key_absences"
+    },
+    {
+      "id": "omega_post_1971_inflation",
+      "description": "Research context does not address 1970s stagflation (high inflation + high unemployment post-1971). If fiat transition enabled persistent inflation, the constraint type for overdetermined_composite_reading may shift from tangled_rope to snare (beneficiary: state fiscal capacity via inflation tax; victim: currency holders). Temporal scope of analysis may obscure downstream extractiveness.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary.key_absences"
+    },
+    {
+      "id": "omega_smithsonian_repair_attempt",
+      "description": "Smithsonian Agreement (December 1971) attempted to preserve fixed exchange rates at new dollar peg ($38/oz). Collapsed by 1973. If repair was structurally feasible, punctuated_swap_reading gains credibility (coordination failure, not inevitability). If repair was doomed, triffin_inevitability_reading gains credibility. Research context does not provide sufficient detail on why Smithsonian failed.",
+      "source": "§2.2 Dark Matter Probe 3 (Beneficiary Scan) + extraction claim on Smithsonian Agreement"
+    },
+    {
+      "id": "omega_reading_collapse_test",
+      "description": "Kernel contest asks whether single-swap vs composite is a real kernel or a collapse. The three readings DO emit structurally different constraints: punctuated_swap (rope, moderate ε, coordination failure), overdetermined_composite (tangled_rope, high ε, structural entanglement), triffin_inevitability (mountain, very low ε, logical necessity). These are not merely different opinions about the same constraint—they classify the transition into different constraint types with different beneficiary/victim structures. Kernel is valid. However, if generation reveals that all three readings converge on the same observable (e.g., dollar/gold reserve ratio), the kernel may collapse post-generation.",
+      "source": "§1.3-K coherence signal + kernel/reading decomposition"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan applied (monetary economics, political economy, international relations, institutional design). Dark matter probes surfaced two absences (domestic political economy, post-1971 inflation). Kernel decomposition into three readings with axiom contradiction declared between punctuated_swap and triffin_inevitability. All three readings selected for generation per structural budget."
+  },
+  "_seed_id": "gold_to_fiat_transition"
+}

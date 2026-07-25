@@ -1,0 +1,294 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Healthcare Technology Policy / Genomic Medicine / AI Governance",
+  "family_id": "aighp_uk_healthcare_2024",
+  "topic_summary": "Assessment of AI-powered genomic health prediction (AIGHP) technology for integration into UK healthcare system. AIGHP uses AI-driven polygenic scoring to predict disease risk and drug responses from genomic data. Report examines scientific viability, potential benefits (prevention, targeted treatment, pharmacogenomics), risks (privacy, discrimination, dependency, fragility), regulatory gaps, and competing deployment visions (mass prevention vs. situational use). Based on two-year research including expert interviews, public engagement, and scenario mapping.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 7,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "AIGHP systems (AI-powered genomic health prediction technology using polygenic scoring)",
+      "NHS England and devolved health systems (primary healthcare provider and potential deployer)",
+      "UK Government / DHSC (policy authority and funding source)",
+      "Private sector technology companies (potential AIGHP developers and infrastructure providers)",
+      "Health insurance industry (potential discriminatory user of AIGHP insight)",
+      "UK public / patients (data subjects and healthcare recipients)",
+      "Genomics research community (developers of underlying science)",
+      "Data protection regime (UK GDPR, DPA 2018, consent frameworks)"
+    ],
+    "key_tensions": [
+      "Data requirements for AIGHP accuracy vs. privacy protection and meaningful consent",
+      "Prevention-focused healthcare transformation vs. maintenance of reactive capacity",
+      "Universal access to AIGHP benefits vs. risk of genomic discrimination",
+      "NHS control and public service ethos vs. private sector efficiency and vendor lock-in",
+      "Scientific uncertainty about AIGHP efficacy vs. pressure to deploy emerging technology",
+      "Individual genomic risk insight vs. environmental determinants of health outcomes",
+      "Regulatory protection vs. innovation and research flexibility"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "scientific_viability_uncertainty",
+      "human_readable": "Scientific Viability Uncertainty (Polygenic Scoring Accuracy and Portability)",
+      "structural_delta": "Fundamental disagreement in scientific community about whether polygenic scoring can achieve sufficient accuracy and portability across populations to deliver clinical utility",
+      "primary_observable": "Predictive accuracy metrics for polygenic scores across demographic groups; proportion of disease variance explained by genomic vs. environmental factors; GWAS sample diversity statistics",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "prevention_efficacy_gap",
+        "discrimination_substrate",
+        "dependency_lock_in"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream physical/scientific constraint determining whether AIGHP can work as promised; no other axis captures this irreducible uncertainty about the technology's fundamental capabilities"
+    },
+    {
+      "claim_id": "data_consent_paradox",
+      "human_readable": "Data-Consent Paradox (Scale Requirements vs. Meaningful Control)",
+      "structural_delta": "AIGHP requires population-scale genomic data collection to achieve accuracy and diversity, but meaningful consent and privacy protection make such collection difficult or impossible",
+      "primary_observable": "Consent refusal rates; data sharing participation rates; legal interpretations of 'meaningful consent' under pressure; genomic dataset size and diversity metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "aighp_developers_requiring_data",
+      "victim": "data_subjects_privacy_autonomy",
+      "downstream_of": [
+        "scientific_viability_uncertainty"
+      ],
+      "feeds_into": [
+        "structural_privacy_erosion",
+        "regulatory_adequacy_gap"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct structural tension between two legitimate requirements (data scale and consent); different observable (consent dynamics) and beneficiary structure from scientific viability"
+    },
+    {
+      "claim_id": "structural_privacy_erosion",
+      "human_readable": "Structural Privacy Erosion (De Facto Mandatory Data Sharing)",
+      "structural_delta": "Integration of AIGHP into healthcare creates structural pressures (social, health-related, financial) that make genomic data sharing de facto mandatory despite formal consent requirements",
+      "primary_observable": "Proportion of NHS patients sharing genomic data under different deployment models; narratives about 'data solidarity' in policy discourse; insurance coverage terms conditioning on data disclosure",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "healthcare_system_efficiency",
+      "victim": "patient_privacy_autonomy",
+      "downstream_of": [
+        "data_consent_paradox"
+      ],
+      "feeds_into": [
+        "discrimination_substrate"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Captures mechanism by which consent becomes meaningless; different from data_consent_paradox (which is about inherent tension) — this is about structural coercion once deployed"
+    },
+    {
+      "claim_id": "regulatory_adequacy_gap",
+      "human_readable": "Regulatory Adequacy Gap (Genomic Data Protection Ambiguities)",
+      "structural_delta": "UK data protection law contains ambiguities about when genomic/phenotype data counts as personal/special category data, and consent frameworks lack granularity to control AIGHP-specific uses",
+      "primary_observable": "Legal interpretations of 'identifiable' genomic data; ICO guidance on healthcare data definition; consent model granularity in genomic research protocols; data repurposing without re-consent rates",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "data_consent_paradox"
+      ],
+      "feeds_into": [
+        "structural_privacy_erosion",
+        "discrimination_substrate"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct from consent paradox — this is about legal infrastructure gaps, not inherent tension; different observable (regulatory interpretation) and affects both privacy and discrimination axes"
+    },
+    {
+      "claim_id": "discrimination_substrate",
+      "human_readable": "Discrimination Substrate (Genomic Risk as Unprotected Characteristic)",
+      "structural_delta": "AIGHP enables discrimination based on genomic disease risk, which is not a protected characteristic under UK equality law, and voluntary insurance code provides no statutory protection",
+      "primary_observable": "Insurance premium differentials by genomic risk score; employment/education decisions informed by genomic data; Equality Act case law on genotype discrimination; ABI Code compliance and revision history",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "insurers_employers_seeking_risk_information",
+      "victim": "high_genomic_risk_individuals",
+      "downstream_of": [
+        "structural_privacy_erosion",
+        "regulatory_adequacy_gap",
+        "scientific_viability_uncertainty"
+      ],
+      "feeds_into": [
+        "healthcare_inequality_amplification"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Central synthesis node; highest centrality; captures novel form of discrimination enabled by AIGHP; different victim set and mechanism from privacy axes"
+    },
+    {
+      "claim_id": "dependency_lock_in",
+      "human_readable": "Dependency Lock-In (NHS Reliance on Private AIGHP Providers)",
+      "structural_delta": "NHS lacks in-house capacity for AIGHP infrastructure (data, compute, AI expertise), creating dependency on private providers with proprietary systems and potential for vendor lock-in",
+      "primary_observable": "NHS procurement contracts for AIGHP services; proportion of genomic data held by private vs. public entities; ability to audit proprietary AIGHP systems; switching costs for AIGHP infrastructure",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "private_aighp_providers",
+      "victim": "nhs_autonomy_and_patients",
+      "downstream_of": [
+        "scientific_viability_uncertainty"
+      ],
+      "feeds_into": [
+        "clinical_deskilling_automation"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Distinct from privacy/discrimination axes; captures structural power transfer to private sector; different beneficiary and mechanism (procurement dynamics vs. data dynamics)"
+    },
+    {
+      "claim_id": "clinical_deskilling_automation",
+      "human_readable": "Clinical Deskilling Through Automation (Over-Reliance on AIGHP Systems)",
+      "structural_delta": "Integration of AIGHP into clinical workflows creates automation bias and long-term deskilling of medical workforce, reducing capacity to function without AIGHP systems",
+      "primary_observable": "Clinician override rates of AIGHP recommendations; medical training curriculum changes; workforce retention in AIGHP-heavy vs. traditional settings; system failure recovery capacity",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "clinical_workforce_and_patients",
+      "downstream_of": [
+        "dependency_lock_in"
+      ],
+      "feeds_into": [
+        "service_fragility_prevention_shift"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Captures workforce transformation distinct from vendor lock-in; different observable (clinician behavior) and feeds into fragility rather than discrimination"
+    },
+    {
+      "claim_id": "prevention_efficacy_gap",
+      "human_readable": "Prevention Efficacy Gap (Prevention Paradox and Behavioral Change Limits)",
+      "structural_delta": "AIGHP-driven prevention faces prevention paradox (most disease cases in low-moderate risk groups) and limited evidence that genomic risk knowledge drives behavioral change, undermining demand reduction claims",
+      "primary_observable": "Disease incidence reduction in high-risk vs. population-wide interventions; behavioral change rates following genomic risk disclosure; healthcare demand trends in AIGHP-using populations",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "scientific_viability_uncertainty"
+      ],
+      "feeds_into": [
+        "service_fragility_prevention_shift"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 8,
+      "selection_reason": "Distinct from scientific viability (which is about prediction accuracy) — this is about prevention effectiveness; different observable (population health outcomes vs. individual predictions)"
+    },
+    {
+      "claim_id": "service_fragility_prevention_shift",
+      "human_readable": "Service Fragility from Prevention Shift (Reactive Capacity Gap)",
+      "structural_delta": "NHS reallocation of resources from reactive to preventative care based on AIGHP creates service fragility if prevention fails to reduce demand as expected, leaving gap between capacity and unreduced need",
+      "primary_observable": "NHS budget allocation between prevention and reactive services; waiting times and service quality metrics; capacity to handle demand spikes; resource reallocation reversibility",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "prevention_focused_policy_narrative",
+      "victim": "patients_needing_reactive_care",
+      "downstream_of": [
+        "prevention_efficacy_gap",
+        "clinical_deskilling_automation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 9,
+      "selection_reason": "Downstream synthesis of prevention and automation risks; distinct from prevention_efficacy_gap (which is about whether prevention works) — this is about service design consequences"
+    },
+    {
+      "claim_id": "healthcare_inequality_amplification",
+      "human_readable": "Healthcare Inequality Amplification (Genomic Discrimination Compounding Existing Disparities)",
+      "structural_delta": "AIGHP-enabled discrimination interacts with existing socioeconomic and racial health inequalities, disproportionately harming already-disadvantaged groups through insurance costs, data pressure, and differential accuracy",
+      "primary_observable": "Health outcome disparities by socioeconomic status and race in AIGHP-using vs. non-using populations; insurance affordability by income and genomic risk; AIGHP accuracy differentials by ancestry",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "wealthy_low_genomic_risk_individuals",
+      "victim": "poor_high_genomic_risk_and_non_european_ancestry_groups",
+      "downstream_of": [
+        "discrimination_substrate"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 10,
+      "selection_reason": "Captures intersection of genomic discrimination with existing inequalities; different victim set (compound disadvantage) and mechanism (interaction effects) from base discrimination axis"
+    }
+  ],
+  "generation_sequence": [
+    "scientific_viability_uncertainty",
+    "data_consent_paradox",
+    "structural_privacy_erosion",
+    "regulatory_adequacy_gap",
+    "discrimination_substrate",
+    "dependency_lock_in",
+    "clinical_deskilling_automation",
+    "prevention_efficacy_gap",
+    "service_fragility_prevention_shift",
+    "healthcare_inequality_amplification"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_whole_genome_sequencing_cost",
+      "description": "Report assumes whole-genome sequencing becomes affordable for population-scale deployment. If costs remain prohibitive, AIGHP may be limited to microarray-based polygenic scoring with lower accuracy, changing the benefit-risk calculus.",
+      "source": "Scientific viability uncertainty + deployment feasibility assumption"
+    },
+    {
+      "id": "omega_ai_interpretability_breakthrough",
+      "description": "If deep learning interpretability advances allow transparent auditing of AIGHP reasoning, dependency and deskilling risks may be substantially reduced. Current opacity assumption may not hold.",
+      "source": "Dependency lock-in + clinical deskilling axes"
+    },
+    {
+      "id": "omega_private_healthcare_expansion_rate",
+      "description": "Report scenarios assume varying rates of private healthcare growth. Actual trajectory will determine whether insurance discrimination becomes widespread or remains niche concern. UK political economy may prevent US-style privatization.",
+      "source": "Discrimination substrate + healthcare inequality amplification"
+    },
+    {
+      "id": "omega_gene_environment_interaction_breakthrough",
+      "description": "If machine learning successfully models complex gene-environment interactions, prevention efficacy could exceed current evidence. Prevention paradox may be addressable through integrated risk scores combining genomic and environmental factors.",
+      "source": "Prevention efficacy gap + scientific viability uncertainty"
+    },
+    {
+      "id": "omega_public_trust_trajectory",
+      "description": "Public engagement shows conditional support for AIGHP. Whether trust increases (enabling voluntary data sharing) or decreases (requiring coercion) will determine whether data-consent paradox is resolvable or becomes structural barrier.",
+      "source": "Data consent paradox + structural privacy erosion"
+    },
+    {
+      "id": "omega_devolved_nations_divergence",
+      "description": "Report focuses on England; devolved health systems (Scotland, Wales, Northern Ireland) may adopt different AIGHP strategies. Regulatory divergence within UK could create natural experiments or coordination problems.",
+      "source": "Absence in scope (public engagement England-only) + UK federal structure"
+    },
+    {
+      "id": "omega_international_regulatory_convergence",
+      "description": "UK AIGHP governance may be constrained or enabled by international standards (EU AI Act, GDPR successor frameworks, Oviedo Convention). Report treats UK as autonomous regulatory space; actual policy space may be narrower.",
+      "source": "Regulatory adequacy gap + international governance context"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Axes drawn from multiple disciplinary lenses (bioethics, data protection law, health economics, clinical practice, public health, science and technology studies). Scientific uncertainty treated as mountain (physical constraint) rather than rope (coordination problem), which is appropriate given fundamental disagreement in genomics community. All axes traceable to source material with clear observables. Deferred axes: none — all §3 survivors selected per protocol."
+  }
+}

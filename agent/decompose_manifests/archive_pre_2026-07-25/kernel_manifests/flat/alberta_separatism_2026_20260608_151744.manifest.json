@@ -1,0 +1,265 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Federalism / Resource Governance",
+  "family_id": "alberta_separatism_2026",
+  "topic_summary": "Analysis of Alberta separatism as a political movement advocating provincial independence from Canada. The movement frames independence as a mechanism to retain resource revenues, escape federal fiscal transfers and climate policy, and maximize hydrocarbon extraction autonomy. Core tension: provincial resource sovereignty vs federal constitutional authority.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Alberta provincial government (resource jurisdiction holder)",
+      "Canadian federal government (constitutional authority, transfer administrator)",
+      "Separatist movements (Wildrose Independence Party, Alberta Prosperity Project)",
+      "Hydrocarbon sector (oil sands, natural gas industry)",
+      "Equalization transfer system (federal fiscal redistribution mechanism)",
+      "Indigenous nations (treaty holders with Crown obligations)"
+    ],
+    "key_tensions": [
+      "Provincial resource control vs federal environmental/climate authority",
+      "Net fiscal contributor status vs equalization payment obligations",
+      "Territorial sovereignty claims vs constitutional indivisibility doctrine"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy boundary of provincial autonomy within Canadian federalism — what powers provinces hold as inherent vs delegated, and whether resource sovereignty permits unilateral exit",
+    "authority_description": "Constitutional text (BNA Act 1867, Constitution Act 1982) interpreted by Supreme Court of Canada; federal government claims final authority on territorial integrity; separatists claim inherent provincial sovereignty",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "provincial_sovereignty_boundary",
+    "readings": [
+      {
+        "reading_id": "constitutional_subordination",
+        "commitment": "Provinces are creatures of federal constitution; no inherent sovereignty; exit requires federal consent",
+        "authority_grounding": "Supreme Court Reference re Secession of Quebec (1998); constitutional supremacy doctrine",
+        "sibling_readings": [
+          "compact_federalism",
+          "resource_sovereignty_primacy"
+        ],
+        "expected_structural_delta": "Federal veto over exit; equalization and climate policy are legitimate federal authority; separatism is constitutional nullity"
+      },
+      {
+        "reading_id": "compact_federalism",
+        "commitment": "Confederation was a compact among sovereign provinces; provinces retain residual sovereignty; exit negotiable under duress",
+        "authority_grounding": "Compact theory of Confederation; provincial rights tradition; Quebec sovereignty movement precedent",
+        "sibling_readings": [
+          "constitutional_subordination",
+          "resource_sovereignty_primacy"
+        ],
+        "expected_structural_delta": "Federal authority conditional on provincial consent; equalization negotiable; climate policy subject to provincial override; exit requires negotiation not permission"
+      },
+      {
+        "reading_id": "resource_sovereignty_primacy",
+        "commitment": "Provincial ownership of natural resources (s.92A Constitution Act 1982) grounds absolute sovereignty; resource control = territorial sovereignty",
+        "authority_grounding": "Natural resource amendment (1982); property rights absolutism; libertarian sovereignty theory",
+        "sibling_readings": [
+          "constitutional_subordination",
+          "compact_federalism"
+        ],
+        "expected_structural_delta": "Resource jurisdiction = full sovereignty; federal climate/fiscal policy is illegitimate extraction; unilateral exit is constitutional right"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "constitutional_subordination",
+        "reading_b": "resource_sovereignty_primacy",
+        "basis": "Constitutional subordination holds that provinces have no sovereignty independent of federal grant; resource sovereignty primacy holds that resource ownership grounds inherent sovereignty. No framework can hold both: either sovereignty derives from constitution (subordination) or from property (primacy)."
+      },
+      {
+        "reading_a": "constitutional_subordination",
+        "reading_b": "compact_federalism",
+        "basis": "Constitutional subordination holds provinces are created by and subordinate to federal authority; compact federalism holds provinces pre-existed and delegated limited powers upward. No framework can hold both: either provinces are creatures of federation or federation is creature of provinces."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "provincial_sovereignty_boundary",
+      "human_readable": "Provincial Sovereignty Boundary (Kernel: Legitimacy of Autonomy Claims)",
+      "structural_delta": "Contested kernel: what grounds provincial authority and whether resource jurisdiction permits unilateral exit",
+      "primary_observable": "Constitutional text interpretation; Supreme Court rulings; separatist movement legal arguments",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "fiscal_extraction_perception",
+        "hydrocarbon_lock_in"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with three distinct readings; upstream to all other structural axes"
+    },
+    {
+      "claim_id": "fiscal_extraction_perception",
+      "human_readable": "Fiscal Extraction Perception (Net Contributor Grievance)",
+      "structural_delta": "Perceived vs actual net fiscal contribution to federation; equalization transfers framed as extraction from Alberta",
+      "primary_observable": "Federal-provincial fiscal balance data; equalization formula calculations; public opinion on fairness",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "provincial_sovereignty_boundary"
+      ],
+      "feeds_into": [
+        "separatism_as_arbitrage"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (fiscal flows) distinct from sovereignty kernel; feeds synthesis node"
+    },
+    {
+      "claim_id": "hydrocarbon_lock_in",
+      "human_readable": "Hydrocarbon Lock-In (Structural Resource Dependence)",
+      "structural_delta": "Economic dependence on oil/gas extraction for employment, revenue, and regional identity",
+      "primary_observable": "Hydrocarbon share of provincial GDP; employment in extraction sector; public opinion on energy transition",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "provincial_sovereignty_boundary"
+      ],
+      "feeds_into": [
+        "separatism_as_arbitrage"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Physical/economic constraint distinct from sovereignty and fiscal axes; mountain providing material base"
+    },
+    {
+      "claim_id": "separatism_as_arbitrage",
+      "human_readable": "Separatism as Arbitrage (Independence as Extraction Bypass)",
+      "structural_delta": "Independence framed as mechanism to bypass federal fiscal/climate constraints and maximize resource rents",
+      "primary_observable": "Separatist movement fiscal blueprints; promised tax elimination; climate policy rejection",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "separatist_leadership",
+      "victim": "federal_social_programs",
+      "downstream_of": [
+        "provincial_sovereignty_boundary",
+        "fiscal_extraction_perception",
+        "hydrocarbon_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Downstream synthesis node; highest centrality after kernel; tangled_rope with clear beneficiary"
+    },
+    {
+      "claim_id": "indigenous_treaty_collision",
+      "human_readable": "Indigenous Treaty Collision (Crown Obligations Under Secession)",
+      "structural_delta": "Whether an independent Alberta inherits or voids Crown treaty obligations with Indigenous nations",
+      "primary_observable": "Treaty text interpretation; Indigenous nation positions on secession; international law on successor state obligations",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "indigenous_nations",
+      "downstream_of": [
+        "provincial_sovereignty_boundary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high epsilon but structurally downstream of sovereignty kernel with limited graph centrality; omega material"
+    },
+    {
+      "claim_id": "currency_sovereignty_trap",
+      "human_readable": "Currency Sovereignty Trap (Dollar Adoption vs Monetary Independence)",
+      "structural_delta": "Whether an independent Alberta adopts CAD, USD, or new currency; each choice has distinct sovereignty/stability tradeoffs",
+      "primary_observable": "Separatist currency proposals; central banking feasibility; exchange rate stability requirements",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "provincial_sovereignty_boundary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: speculative scaffold; zero outbound edges; contingent on secession success"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "constitutional_subordination",
+      "kernel_id": "provincial_sovereignty_boundary",
+      "reading_id": "constitutional_subordination"
+    },
+    {
+      "claim_id": "compact_federalism",
+      "kernel_id": "provincial_sovereignty_boundary",
+      "reading_id": "compact_federalism"
+    },
+    {
+      "claim_id": "resource_sovereignty_primacy",
+      "kernel_id": "provincial_sovereignty_boundary",
+      "reading_id": "resource_sovereignty_primacy"
+    },
+    "fiscal_extraction_perception",
+    "hydrocarbon_lock_in",
+    "separatism_as_arbitrage"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "indigenous_treaty_collision",
+      "structural_delta": "Whether independent Alberta inherits or voids Crown treaty obligations",
+      "hypothesis": "snare",
+      "deferral_reason": "High epsilon but structurally downstream of sovereignty kernel; limited graph centrality; critical omega variable"
+    },
+    {
+      "claim_id": "currency_sovereignty_trap",
+      "structural_delta": "Currency choice (CAD/USD/new) and sovereignty/stability tradeoffs",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Speculative scaffold contingent on secession success; zero graph centrality"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_treaty_obligations",
+      "description": "Does an independent Alberta maintain Crown treaty obligations with Indigenous nations? If not, the sovereignty kernel becomes a Snare for treaty holders. If yes, resource sovereignty is constrained by prior commitments.",
+      "source": "Deferred axis indigenous_treaty_collision + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_international_recognition",
+      "description": "Would an independent Alberta achieve international recognition without federal consent? Unilateral declaration may produce a non-recognized state with limited treaty/trade capacity.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_mountain_validity",
+      "description": "Is hydrocarbon_lock_in a true Mountain (geology + sunk infrastructure) or a Piton of policy choice? Global energy transition and stranded asset risk may reclassify.",
+      "source": "F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_compact_theory_validity",
+      "description": "Compact federalism reading relies on contested historical interpretation. Supreme Court rejected compact theory in 1998 Quebec reference. Is this reading legally viable or politically aspirational?",
+      "source": "Kernel reading validation"
+    },
+    {
+      "id": "omega_beneficiary_distribution",
+      "description": "Who benefits from separatism_as_arbitrage? Separatist leadership clearly benefits. Does the median Albertan benefit, or only high-income resource sector workers? Distributional analysis missing.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: hydrocarbon_lock_in classified as mountain but global energy transition may reclassify it as piton of policy choice. Generated omega_mountain_validity to bound this uncertainty. Kernel decomposition applied: provincial_sovereignty_boundary identified as contested kernel with three distinct readings passing axiom contradiction test."
+  }
+}

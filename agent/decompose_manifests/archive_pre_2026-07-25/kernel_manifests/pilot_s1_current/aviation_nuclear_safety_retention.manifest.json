@@ -1,0 +1,217 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Safety Engineering / Organizational Learning / Crisis Preparedness",
+  "family_id": "catastrophe_avoidance_competence_retention",
+  "topic_summary": "Analysis of how aviation and nuclear industries retain catastrophe-avoidance competence across decades without recurring real disasters, focusing on whether simulation exercises constitute genuine competence-sustaining practice or whether only actual catastrophes maintain the operational kernel. The kernel contest centers on what counts as 'exercise' of the competence: simulated crisis vs. lived crisis.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Aviation industry (commercial flight operations with simulator-based training)",
+      "Nuclear power industry (reactor operations with emergency drill protocols)",
+      "Simulator infrastructure (flight simulators, reactor control room mockups)",
+      "Regulatory bodies (FAA, NRC - mandate recurrent training)",
+      "Crew Resource Management doctrine (aviation safety framework)",
+      "Institutional memory (organizational knowledge retention across personnel turnover)"
+    ],
+    "key_tensions": [
+      "Simulated crisis vs. lived crisis as competence-sustaining exercise",
+      "Regulatory compliance (drill frequency) vs. actual skill retention"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that catastrophe-avoidance competence must be actively exercised to remain operational, not merely documented or remembered",
+    "authority_description": "Safety engineering consensus grounded in empirical observation of skill decay and organizational learning theory",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "exercise_as_competence_maintenance",
+    "readings": [
+      {
+        "reading_id": "simulation_sufficiency_reading",
+        "commitment": "Simulated catastrophe constitutes genuine exercise of the competence kernel; fidelity of simulation determines retention effectiveness",
+        "authority_grounding": "Aviation safety record post-CRM adoption; nuclear industry zero-meltdown record in simulator-trained facilities",
+        "sibling_readings": [
+          "lived_catastrophe_necessity_reading",
+          "hybrid_decay_reading"
+        ],
+        "expected_structural_delta": "Regulatory drill mandates treated as sufficient; competence measured by simulator performance metrics; victim set includes only those harmed by inadequate simulation fidelity"
+      },
+      {
+        "reading_id": "lived_catastrophe_necessity_reading",
+        "commitment": "Only actual catastrophe exercises the competence kernel; simulation is rehearsal but not the thing itself; competence atrophies without real-stakes activation",
+        "authority_grounding": "Organizational learning theory (Weick, Perrow); tacit knowledge literature; combat vs. training distinction in military doctrine",
+        "sibling_readings": [
+          "simulation_sufficiency_reading",
+          "hybrid_decay_reading"
+        ],
+        "expected_structural_delta": "Simulation recognized as necessary but insufficient; competence assumed to decay covertly; victim set includes all exposed to operators whose competence has not been tested under real stakes"
+      },
+      {
+        "reading_id": "hybrid_decay_reading",
+        "commitment": "Simulation exercises procedural competence but not judgment-under-stakes; the kernel has two components with different exercise requirements",
+        "authority_grounding": "Distinction between technical skill (trainable) and adaptive expertise (requires real-world variability); naturalistic decision-making research",
+        "sibling_readings": [
+          "simulation_sufficiency_reading",
+          "lived_catastrophe_necessity_reading"
+        ],
+        "expected_structural_delta": "Competence partially retained via simulation (procedures, muscle memory) but judgment/improvisation capacity decays; victim set includes those harmed by failures in the non-simulated component"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "simulation_sufficiency_reading",
+        "reading_b": "lived_catastrophe_necessity_reading",
+        "basis": "Simulation_sufficiency holds that high-fidelity simulation IS the exercise that maintains the kernel; lived_catastrophe_necessity holds that simulation is categorically not the exercise, only preparation for it. No single framework can hold both: either simulation counts as exercise or it does not."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "simulation_sufficiency_reading",
+      "human_readable": "Simulation Sufficiency (Drills as Proxy-Catastrophe)",
+      "structural_delta": "High-fidelity simulation constitutes genuine exercise of catastrophe-avoidance competence",
+      "primary_observable": "Correlation between simulator training hours and real-incident outcomes; regulatory compliance metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "regulatory_bodies",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel exercise_as_competence_maintenance"
+    },
+    {
+      "claim_id": "lived_catastrophe_necessity_reading",
+      "human_readable": "Lived Catastrophe Necessity (Real Stakes Required)",
+      "structural_delta": "Only actual catastrophe exercises the competence kernel; simulation is rehearsal not exercise",
+      "primary_observable": "Competence decay rates in zero-incident environments; performance divergence between simulated and real crises",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "populations_exposed_to_untested_operators",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel exercise_as_competence_maintenance"
+    },
+    {
+      "claim_id": "hybrid_decay_reading",
+      "human_readable": "Hybrid Decay (Procedural vs. Judgment Split)",
+      "structural_delta": "Simulation exercises procedural competence but not judgment-under-stakes; kernel has two components",
+      "primary_observable": "Performance on novel/unanticipated scenarios vs. trained scenarios; improvisation success rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "those_harmed_by_judgment_failures",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel exercise_as_competence_maintenance"
+    },
+    {
+      "claim_id": "institutional_memory_decay",
+      "human_readable": "Institutional Memory Decay (Personnel Turnover Erosion)",
+      "structural_delta": "Organizational knowledge of why procedures exist erodes with personnel turnover even when procedures are followed",
+      "primary_observable": "Correlation between workforce tenure and safety culture metrics; incident investigation findings citing 'normalization of deviance'",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "lived_catastrophe_necessity_reading",
+        "hybrid_decay_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent axis: different observable (organizational knowledge vs. individual competence); feeds into kernel readings as upstream constraint"
+    },
+    {
+      "claim_id": "regulatory_compliance_theater",
+      "human_readable": "Regulatory Compliance Theater (Drill Frequency vs. Effectiveness)",
+      "structural_delta": "Mandated drill frequency optimized for regulatory compliance rather than actual competence retention",
+      "primary_observable": "Gap between regulatory minimum drill requirements and empirically-derived optimal training intervals",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "regulated_entities",
+      "victim": "public_safety",
+      "downstream_of": [
+        "simulation_sufficiency_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream of simulation_sufficiency_reading; captured as extractive consequence within that reading's constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "simulation_sufficiency_reading",
+      "kernel_id": "exercise_as_competence_maintenance",
+      "reading_id": "simulation_sufficiency_reading"
+    },
+    {
+      "claim_id": "lived_catastrophe_necessity_reading",
+      "kernel_id": "exercise_as_competence_maintenance",
+      "reading_id": "lived_catastrophe_necessity_reading"
+    },
+    {
+      "claim_id": "hybrid_decay_reading",
+      "kernel_id": "exercise_as_competence_maintenance",
+      "reading_id": "hybrid_decay_reading"
+    },
+    "institutional_memory_decay"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "regulatory_compliance_theater",
+      "structural_delta": "Drill frequency optimized for compliance not effectiveness",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream extractive consequence of simulation_sufficiency_reading; captured within that reading's constraint story rather than requiring independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_simulation_fidelity_threshold",
+      "description": "At what fidelity level does simulation transition from 'not exercise' to 'genuine exercise'? If hybrid_decay_reading is correct, this threshold may not exist—procedural fidelity may be achievable while judgment-under-stakes remains untrainable via simulation.",
+      "source": "Kernel reading boundary condition"
+    },
+    {
+      "id": "omega_catastrophe_frequency_optimum",
+      "description": "If lived_catastrophe_necessity_reading is correct, what is the optimal catastrophe frequency for competence maintenance without unacceptable harm? This may be an unsolvable constraint: too frequent = unacceptable casualties; too rare = competence decay.",
+      "source": "Lived_catastrophe_necessity_reading extractiveness paradox"
+    },
+    {
+      "id": "omega_tacit_knowledge_transmission",
+      "description": "Can the judgment component identified in hybrid_decay_reading be transmitted via apprenticeship/mentorship in zero-catastrophe environments, or does it require personal experience of real stakes? Aviation's CRM success suggests partial transmissibility; nuclear's zero-meltdown record in new facilities is ambiguous evidence.",
+      "source": "Hybrid_decay_reading mechanism uncertainty"
+    },
+    {
+      "id": "omega_normalization_of_deviance_detection",
+      "description": "Institutional_memory_decay identifies erosion of 'why' knowledge. Can this erosion be detected before it causes incidents, or is the incident itself the only reliable signal? If the latter, the system requires periodic small failures to maintain competence—a Piton of deliberate controlled failure.",
+      "source": "Institutional_memory_decay + Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings captures the structural contest. Institutional_memory_decay passes independence test as separate observable (organizational vs. individual knowledge). Regulatory_compliance_theater deferred as downstream extractive consequence rather than independent axis."
+  },
+  "_seed_id": "aviation_nuclear_safety_retention"
+}

@@ -1,0 +1,199 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Theory / International Law / Territorial Sovereignty",
+  "family_id": "israel_palestine_legitimacy_2026",
+  "topic_summary": "Analysis of competing legitimacy claims over the same territory between Israeli and Palestinian polities. The prompt explicitly frames this as a kernel-coherence boundary test: whether territorial legitimacy is one kernel read two ways, or two incoherent kernels with no shared substrate.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "State of Israel (internationally recognized state, claims sovereignty via international law, historical connection, security necessity)",
+      "Palestinian Authority / PLO (limited autonomy entity, claims sovereignty via indigenous presence, self-determination, dispossession)",
+      "United Nations (codified partition plan 1947; ongoing resolutions on occupation, settlements, refugee return)",
+      "International Court of Justice (advisory opinions on wall, settlements; jurisdiction contested)",
+      "Israeli Settlement Enterprise (facts-on-ground mechanism; unilateral territorial transformation)",
+      "1948 Nakba / 1967 Occupation (structural rupture events defining victim/beneficiary categories)"
+    ],
+    "key_tensions": [
+      "Israeli state security vs Palestinian self-determination (zero-sum territorial control)",
+      "International law as legitimating framework vs international law as imposed constraint (both sides invoke UNSC resolutions, ICJ opinions, Geneva Conventions as support)"
+    ],
+    "key_claims": [
+      "Israeli claim: Sovereignty derives from international recognition (UN membership), historical Jewish connection to land, security necessity post-Holocaust",
+      "Palestinian claim: Sovereignty derives from indigenous majority presence pre-1948, right to self-determination, illegitimacy of displacement",
+      "Shared invocation: Both cite international law instruments (UNSC 242, Geneva IV, ICJ advisory opinions) as legitimating their exclusive claim",
+      "Temporal primacy dispute: Israeli framing privileges post-1948 international recognition; Palestinian framing privileges pre-1948 demographic majority"
+    ],
+    "key_mechanisms": [
+      "Settlement expansion (unilateral territorial transformation reducing Palestinian contiguity)",
+      "Blockade and closure regimes (control over Palestinian movement, economy, external relations)",
+      "Diplomatic recognition asymmetry (Israeli statehood universally recognized; Palestinian statehood recognized by 139 states but not by Israel, U.S., major EU powers)"
+    ],
+    "key_absences": [
+      "Third-party enforcement mechanism for international law rulings (ICJ advisory opinions non-binding; UNSC vetoes block enforcement)",
+      "Shared conception of what constitutes legitimate territorial title (no common kernel on sovereignty source)",
+      "Exit mechanism for either party (territorial overlap creates zero-sum lock-in)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Territorial sovereignty as source of legitimacy — the claim that control over specific land grounds authority to govern populations within it",
+    "authority_description": "International law framework (UN Charter, Geneva Conventions, ICJ jurisprudence) claimed by both sides as interpretive authority, but no shared reading of which principles dominate",
+    "drift_status": "absent",
+    "candidate_pattern": "pattern_1_founding_text_sacrosanct | uncertain",
+    "is_contested_kernel": false,
+    "coherence_finding": "Two distinct legitimacy kernels with minimal shared substrate, not one kernel read two ways",
+    "structural_basis": "The Israeli and Palestinian claims do not share a common commitment that they read differently — they ground legitimacy in mutually exclusive foundational axioms. Israeli legitimacy rests on post-1948 international state recognition and security necessity (state-centric sovereignty). Palestinian legitimacy rests on pre-1948 indigenous presence and anti-colonial self-determination (people-centric sovereignty). These are not two readings of 'territorial sovereignty' — they are two incompatible theories of what makes territorial control legitimate in the first place. A reading is a different interpretation of a shared text/norm; here, the texts invoked (UNSC 242 vs. UNGA 194, state sovereignty vs. self-determination) are different, and the interpretive communities (states vs. peoples as rights-holders) are different. The only overlap is tactical: both invoke 'international law' as a legitimating vocabulary, but they mean structurally different things by it (Israeli: law as state recognition; Palestinian: law as anti-colonial justice). This is not licensed plurality within one commitment system — it is two systems in collision with no shared kernel to contest."
+  },
+  "axes": [
+    {
+      "claim_id": "state_recognition_vs_indigenous_presence",
+      "human_readable": "State Recognition vs. Indigenous Presence (Legitimacy Source Incompatibility)",
+      "structural_delta": "Israeli legitimacy grounded in post-1948 international state recognition and UN membership; Palestinian legitimacy grounded in pre-1948 demographic majority and anti-colonial right to self-determination. No shared substrate — one privileges state-centric international law, the other people-centric anti-colonial norms.",
+      "primary_observable": "Diplomatic recognition patterns (139 states recognize Palestine; Israel universally recognized); invocation frequency of UNSC 242 (Israeli) vs. UNGA 194 (Palestinian) in official statements",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "Israeli state apparatus (state recognition norm) vs. Palestinian national movement (indigenous-presence norm)",
+      "victim": "Palestinian stateless population (under state-recognition norm) vs. Israeli settler population (under indigenous-presence norm)",
+      "downstream_of": [],
+      "feeds_into": [
+        "settlement_fait_accompli",
+        "international_law_instrumentalization"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest structural independence; captures the core incompatibility between two legitimacy theories with different rights-holders (states vs. peoples) and different temporal anchors (post-1948 vs. pre-1948)"
+    },
+    {
+      "claim_id": "settlement_fait_accompli",
+      "human_readable": "Settlement Expansion as Fait Accompli (Unilateral Territorial Transformation)",
+      "structural_delta": "Israeli settlement enterprise creates irreversible facts on the ground, reducing Palestinian territorial contiguity and making two-state partition structurally infeasible regardless of legal status under Geneva IV",
+      "primary_observable": "Settlement population growth (700,000+ in West Bank/East Jerusalem as of 2024); Area C land under Israeli civil administration (60% of West Bank); Palestinian territorial fragmentation (West Bank divided into non-contiguous enclaves)",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "Israeli settlement movement, right-wing coalitions dependent on settler votes",
+      "victim": "Palestinian territorial sovereignty claims, international two-state consensus",
+      "downstream_of": [
+        "state_recognition_vs_indigenous_presence"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Most measurable mechanism downstream of legitimacy incompatibility; captures extractive dynamics where one party's unilateral action forecloses the other's sovereignty claim"
+    },
+    {
+      "claim_id": "international_law_instrumentalization",
+      "human_readable": "International Law as Tactical Vocabulary (Legitimation Without Convergence)",
+      "structural_delta": "Both sides invoke 'international law' but mean structurally different things: Israeli invocations privilege state sovereignty and security exceptions (Art. 51 UN Charter, UNSC 242 territorial integrity); Palestinian invocations privilege self-determination and occupation law (UNGA 194 right of return, Geneva IV settlement prohibition, ICJ wall opinion). No shared interpretive authority — UNSC paralyzed by U.S. veto, ICJ opinions non-binding.",
+      "primary_observable": "Veto frequency in UNSC on Israel/Palestine resolutions (U.S. vetoes block enforcement of ICJ/UNGA positions); divergence in legal instruments cited (UNSC 242 vs. UNGA 194 vs. Geneva IV Art. 49 vs. ICJ advisory opinions)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "Both parties claim legitimacy via law while rejecting enforcement mechanisms that would constrain them",
+      "victim": "International law as binding normative framework (becomes rhetorical resource rather than constraint)",
+      "downstream_of": [
+        "state_recognition_vs_indigenous_presence"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Captures the meta-level entanglement: international law functions as legitimating vocabulary for incompatible claims rather than as shared adjudicative framework; different ε from settlement_fait_accompli (law as rhetoric vs. law as facts-on-ground)"
+    },
+    {
+      "claim_id": "zero_sum_territorial_lock_in",
+      "human_readable": "Zero-Sum Territorial Lock-In (No Exit Mechanism)",
+      "structural_delta": "Complete territorial overlap with no neutral third party capable of enforcing partition or adjudication; both populations territorially intermingled (settlements in West Bank, Palestinian citizens in Israel, refugees in diaspora); no path to separation that does not involve forced displacement of one population",
+      "primary_observable": "Geographic distribution of populations (settlements throughout West Bank, 20% Palestinian citizens within 1948 borders, 5+ million Palestinian refugees/diaspora); UNSC enforcement paralysis (U.S. veto blocks binding resolutions)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "settlement_fait_accompli"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Mountain constraint captured implicitly via settlement_fait_accompli and international_law_instrumentalization; lower structural distinctiveness as standalone axis"
+    },
+    {
+      "claim_id": "temporal_primacy_contest",
+      "human_readable": "Temporal Primacy Contest (Pre-1948 vs. Post-1948 as Legitimacy Anchor)",
+      "structural_delta": "Israeli legitimacy narrative privileges post-1948 international recognition and state-building (1948 Declaration of Independence, UN membership 1949); Palestinian narrative privileges pre-1948 demographic majority (67% Arab in 1947 per UN partition plan) and Ottoman/British Mandate land records",
+      "primary_observable": "Frequency of historical anchors in official discourse (Israeli: 1948 independence war as founding; Palestinian: 1948 Nakba as dispossession); textbook narratives in Israeli vs. Palestinian education systems",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "state_recognition_vs_indigenous_presence"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Temporal dimension already captured in state_recognition_vs_indigenous_presence axis (post-1948 state recognition vs. pre-1948 indigenous presence); redundant as separate axis"
+    }
+  ],
+  "generation_sequence": [
+    "state_recognition_vs_indigenous_presence",
+    "settlement_fait_accompli",
+    "international_law_instrumentalization"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "zero_sum_territorial_lock_in",
+      "structural_delta": "Complete territorial overlap with no exit mechanism or neutral enforcement",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain constraint implicitly present in selected axes; lower structural distinctiveness as standalone dimension"
+    },
+    {
+      "claim_id": "temporal_primacy_contest",
+      "structural_delta": "Competing temporal anchors for legitimacy (pre-1948 vs. post-1948)",
+      "hypothesis": "rope",
+      "deferral_reason": "Temporal dimension fully captured in state_recognition_vs_indigenous_presence axis; redundant as separate constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence_finding",
+      "description": "Prompt flagged this as kernel-coherence boundary test. Finding: NOT a contested kernel — two legitimacy systems in collision with minimal shared substrate, not two readings of one commitment. Israeli legitimacy = state-centric post-1948 recognition; Palestinian legitimacy = people-centric pre-1948 indigenous presence. No shared text/norm/practice being read differently. The only overlap is tactical: both invoke 'international law' vocabulary, but mean different things by it (state sovereignty vs. anti-colonial self-determination). This is structural incoherence, not licensed plurality.",
+      "source": "§1.3 Commitment System Recognition + user prompt instruction"
+    },
+    {
+      "id": "omega_enforcement_vacuum",
+      "description": "International law instrumentalization axis identifies law as rhetorical resource rather than binding constraint. No third-party enforcement: UNSC paralyzed by U.S. veto, ICJ opinions advisory only, no neutral military force. This suggests international law may be Scaffold (aspirational coordination norm) rather than Rope (functional coordination mechanism) in this domain. Generated constraint story will probe whether law functions as coordination device or legitimating vocabulary.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_displacement_as_extraction",
+      "description": "Settlement_fait_accompli classified as Snare (beneficiary extracts via constraint), but the 1948 Nakba (700,000+ Palestinian refugees) and 1967 occupation (300,000+ refugees) could themselves be analyzed as Snare events — population displacement as extractive mechanism. Deferred because it requires historical counterfactual analysis (what would territorial demographics be without displacement?) and opens questions of refugee return as constraint-reversal mechanism.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_religious_legitimacy_layer",
+      "description": "Extraction summary does not include religious legitimacy claims (Jewish historical/theological connection to Land of Israel; Islamic waqf status of Jerusalem holy sites; Christian holy sites as neutral third-party interest). These may constitute a third legitimacy kernel (sacred geography) distinct from state-recognition and indigenous-presence kernels. Deferred pending domain expertise check (religious studies, theology of sacred space).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F34 potential"
+    },
+    {
+      "id": "omega_one_state_vs_two_state",
+      "description": "Deferred axis zero_sum_territorial_lock_in implies that two-state partition may be structurally foreclosed by settlement facts-on-ground, but analysis does not examine one-state alternatives (binational federation, confederation, Israeli annexation with/without Palestinian citizenship). These are not separate axes but potential constraint-resolutions that change the victim/beneficiary structure. Future decomposition could treat one-state vs. two-state as competing readings of a 'resolution-pathway kernel.'",
+      "source": "§4.2 Deferred Axes + Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Extraction summary identifies religious legitimacy claims (Jewish historical connection, Islamic waqf status) as absent from decomposition. Model lacks domain expertise in theology of sacred space and religious law. Generated omega_religious_legitimacy_layer to bound this. Additionally, international law analysis (Geneva IV settlement prohibition, ICJ advisory opinions, UNSC veto dynamics) operates at the limits of model's legal training — classifications are structural hypotheses pending legal scholarship review."
+  },
+  "_seed_id": "israel_palestine_legitimacy"
+}

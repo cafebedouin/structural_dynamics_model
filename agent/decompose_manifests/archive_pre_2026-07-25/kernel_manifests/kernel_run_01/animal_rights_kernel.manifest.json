@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Legal Theory / Animal Ethics",
+  "family_id": "animal_status_kernel_2026",
+  "topic_summary": "Analysis of the animal-status kernel as read through three incompatible frameworks: welfare-regulated-use (animals as protected property whose suffering matters), abolitionist (animals as rights-bearing subjects who cannot be property), and property (animals as economic resources without moral standing). The disagreement concerns whether animals enter the victim set at all, and if so, under what conditions.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Gary Francione (abolitionist scholar, property-status critic)",
+      "Tom Regan (abolitionist philosopher, 'empty cages' advocate)",
+      "Peter Singer (utilitarian philosopher, suffering-reduction focus)",
+      "SPCA/AHA (early welfare organizations with internal welfarist-abolitionist tensions)",
+      "Animal Rising (contemporary abolitionist movement)",
+      "Agricultural industry (property framework defenders)",
+      "Mainstream animal welfare organizations (professionalized nonprofits)",
+      "U.S. legal system (property-based animal protection law)"
+    ],
+    "key_tensions": [
+      "Victim-set membership: whether animals are subjects of moral consideration or economic resources",
+      "Reform vs abolition: whether welfare improvements entrench property status or reduce suffering",
+      "Professionalized advocacy vs radical direct action: strategic divide within movement",
+      "Speciesism as ideology vs practice: whether property status or cultural attitudes are primary target"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The moral and legal status of nonhuman animals as subjects or objects — whether they possess inherent value requiring protection from use, or are resources whose treatment is constrained only by human interests in avoiding cruelty",
+    "authority_description": "Interpretive legitimacy is contested: welfare framework grounds authority in legislative/regulatory institutions and industry partnerships; abolitionist framework grounds authority in philosophical arguments about sentience and rights; property framework grounds authority in legal precedent and economic utility",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "animal_moral_status",
+    "readings": [
+      {
+        "reading_id": "welfare_regulated_use",
+        "commitment": "Animals are sentient beings whose suffering matters morally, but whose use by humans is permissible if regulated to minimize cruelty",
+        "authority_grounding": "Legislative/regulatory institutions, veterinary science, industry partnerships, utilitarian ethics (Singer)",
+        "sibling_readings": [
+          "abolitionist_rights",
+          "property_resource"
+        ],
+        "expected_structural_delta": "Animals partially in victim set (suffering counts, use does not); welfare regulations constrain but legitimize exploitation; beneficiary is human users who gain moral comfort; victim is animal welfare advocates whose reforms may entrench property status"
+      },
+      {
+        "reading_id": "abolitionist_rights",
+        "commitment": "Animals are rights-bearing subjects with inherent value who cannot be property; all use is impermissible regardless of treatment quality",
+        "authority_grounding": "Philosophical arguments about sentience and moral status (Regan, Francione, Korsgaard), human abolitionist movement precedent",
+        "sibling_readings": [
+          "welfare_regulated_use",
+          "property_resource"
+        ],
+        "expected_structural_delta": "Animals fully in victim set (both suffering and use are violations); property status itself is the constraint violation; beneficiary is animals (if paradigm shift succeeds); victim is current animal users and welfare organizations (whose legitimacy is challenged)"
+      },
+      {
+        "reading_id": "property_resource",
+        "commitment": "Animals are economic resources and legal property without inherent moral standing; human interests determine permissible treatment",
+        "authority_grounding": "Legal precedent (U.S. property law), agricultural industry, economic utility maximization",
+        "sibling_readings": [
+          "welfare_regulated_use",
+          "abolitionist_rights"
+        ],
+        "expected_structural_delta": "Animals excluded from victim set entirely (they are objects, not subjects); no constraint on use beyond economic efficiency and human aesthetic preferences; beneficiary is agricultural/research industries; victim is animals (under competing readings) or no victim (under this reading's own terms)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "abolitionist_rights",
+        "reading_b": "property_resource",
+        "basis": "Abolitionist axiom (sentient beings cannot be property) and property axiom (animals are ownable resources) are mutually exclusive — accepting one requires rejecting the other; no coherent framework holds both"
+      },
+      {
+        "reading_a": "abolitionist_rights",
+        "reading_b": "welfare_regulated_use",
+        "basis": "Abolitionist axiom (use itself is impermissible) and welfare axiom (regulated use is permissible) are mutually exclusive on the question of whether any use can be justified; welfare framework treats use as morally neutral background, abolitionist treats it as the violation"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "welfare_regulated_use",
+      "human_readable": "Welfare-Regulated-Use Reading (Suffering Reduction Within Use)",
+      "structural_delta": "Animals partially in victim set; suffering matters, use does not; welfare regulations constrain exploitation while legitimizing it",
+      "primary_observable": "Legislative animal welfare standards (cage size, transport conditions, slaughter methods); industry-welfare organization partnerships; public comfort with 'humane' animal products",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "human_users_seeking_moral_comfort",
+      "victim": "abolitionist_advocates_whose_goal_is_obscured",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with distinct structural delta; moderate extractiveness from legitimizing exploitation while claiming to oppose it"
+    },
+    {
+      "claim_id": "abolitionist_rights",
+      "human_readable": "Abolitionist-Rights Reading (Property Status as Violation)",
+      "structural_delta": "Animals fully in victim set; both suffering and use are violations; property status itself is the constraint",
+      "primary_observable": "Vegan advocacy campaigns; legal challenges to property status; philosophical arguments about sentience and rights; direct action against animal industries",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "animals_if_paradigm_shift_succeeds",
+      "victim": "current_animal_users_and_welfare_organizations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest extractiveness; challenges legitimacy of both property and welfare frameworks; distinct victim-set membership claim"
+    },
+    {
+      "claim_id": "property_resource",
+      "human_readable": "Property-Resource Reading (Animals as Economic Objects)",
+      "structural_delta": "Animals excluded from victim set; no moral standing; human interests determine treatment; economic efficiency is primary constraint",
+      "primary_observable": "U.S. property law classification; agricultural industry lobbying; absence of legal personhood for animals; economic value metrics dominating treatment decisions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Baseline reading representing legal status quo; mountain classification as it reflects entrenched property law; necessary for contrast with other readings"
+    },
+    {
+      "claim_id": "speciesism_ideology",
+      "human_readable": "Speciesism as Ideological Substrate",
+      "structural_delta": "Cultural belief system that naturalizes human supremacy and animal subordination; mutually reinforcing with property status",
+      "primary_observable": "Public attitudes toward animal use; cultural narratives about human exceptionalism; resistance to vegan advocacy framed as extremism",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "welfare_regulated_use",
+        "property_resource"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: ideological substrate feeding into property and welfare readings but lower structural distinctiveness than selected readings; captured implicitly in authority_grounding fields"
+    },
+    {
+      "claim_id": "counterproductivity_mechanism",
+      "human_readable": "Welfare Reform as Entrenchment Mechanism",
+      "structural_delta": "Welfare improvements make public comfortable with animal use, prolonging property status rather than challenging it",
+      "primary_observable": "Francione's 'new welfarist' critique; correlation between welfare victories and stable/increasing animal use rates; public perception of 'humane' products as ethical",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "animal_industries_gaining_legitimacy",
+      "victim": "abolitionist_movement_losing_urgency",
+      "downstream_of": [
+        "welfare_regulated_use"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism internal to welfare reading; captured in welfare_regulated_use's beneficiary/victim structure and expected_structural_delta"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "welfare_regulated_use",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "welfare_regulated_use"
+    },
+    {
+      "claim_id": "abolitionist_rights",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "abolitionist_rights"
+    },
+    {
+      "claim_id": "property_resource",
+      "kernel_id": "animal_moral_status",
+      "reading_id": "property_resource"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "speciesism_ideology",
+      "structural_delta": "Cultural belief system naturalizing human supremacy",
+      "hypothesis": "rope",
+      "deferral_reason": "Ideological substrate feeding into property and welfare readings; lower structural distinctiveness; captured implicitly in authority_grounding and expected_structural_delta fields of selected readings"
+    },
+    {
+      "claim_id": "counterproductivity_mechanism",
+      "structural_delta": "Welfare reforms entrench property status by providing moral comfort",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism internal to welfare_regulated_use reading; Francione's critique is captured in that reading's beneficiary/victim structure and expected structural delta"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_victim_set_observer_dependence",
+      "description": "Is victim-set membership observer-dependent (different readings see different victims) or is one reading correct and the others false? If observer-dependent, the constraint topology itself is contested — no single ε exists, only reading-specific ε values. If one reading is correct, the others are not constraints but errors.",
+      "source": "Kernel decomposition — axiom contradictions between all three readings"
+    },
+    {
+      "id": "omega_welfare_counterproductivity_empirics",
+      "description": "Francione claims welfare reforms prolong property status; Garner claims they reduce suffering and that abolitionist effectiveness is speculative. Empirical question: do welfare victories correlate with stable/increasing animal use (supporting Francione) or with gradual norm shifts toward abolition (supporting Garner)?",
+      "source": "Deferred axis counterproductivity_mechanism; research context tension between Francione and Garner"
+    },
+    {
+      "id": "omega_property_mountain_validity",
+      "description": "Is property_resource a true mountain (legal property status as physical/institutional fact) or a piton (policy choice that could be revised)? If legal personhood for animals is achievable, property status is a piton. If property law is structurally resistant to non-human persons, it is a mountain.",
+      "source": "F03 (Hasty Generalization) — property_resource classified as mountain but legal paradigm shifts (corporate personhood, river personhood precedents) suggest revisability"
+    },
+    {
+      "id": "omega_sentience_boundary",
+      "description": "All three readings assume a sentience boundary (vertebrates, or mammals, or some subset). Where that boundary is drawn determines victim-set size. Abolitionist reading's scope depends on sentience science; welfare reading's regulatory reach depends on legislative definitions; property reading's exclusions depend on what counts as 'mere resource.'",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — sentience boundary not explicitly addressed in research context but structurally load-bearing for all readings"
+    },
+    {
+      "id": "omega_strategic_complementarity",
+      "description": "Are welfare and abolitionist strategies zero-sum (welfare legitimizes use, blocking abolition) or complementary (welfare reduces immediate suffering while abolition shifts long-term norms)? If complementary, the factional divide is a coordination failure. If zero-sum, one strategy must be abandoned.",
+      "source": "Research context tension: 'factional division' between reformist and radical factions; Garner vs Francione on reform effectiveness"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: property_resource classified as mountain (legal property status as entrenched fact) but legal paradigm shifts (corporate personhood, river personhood in New Zealand/India) suggest property law may be revisable, making it a piton of policy choice rather than a mountain. Generated omega_property_mountain_validity to bound this uncertainty. Kernel decomposition confirmed: three readings emit genuinely different constraints with mutually exclusive axioms and different victim-set membership. No collapse detected."
+  },
+  "_seed_id": "animal_rights_kernel"
+}

@@ -1,0 +1,220 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Theory / Political Economy / Institutional Design",
+  "family_id": "constitutional_supermajority_requirements",
+  "topic_summary": "Analysis of constitutional supermajority amendment requirements as a contested kernel where different interpretive commitments produce structurally distinct constraints. The threshold itself (typically 2/3 or 3/4 legislative majority) is stabilized text, but readings diverge on whether it functions as democratic safeguard or minoritarian veto trap, with profound implications for institutional drift, adaptation capacity, and whose interests the amendment barrier protects.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Supermajority threshold (the textual kernel: 2/3, 3/4, or other fraction codified in constitutional text)",
+      "Founding generation (historical legitimacy anchor for threshold as original commitment)",
+      "Contemporary majority (population seeking constitutional change through normal democratic process)",
+      "Blocking minority (faction capable of preventing amendment despite majority support)",
+      "Interpretive authority (courts, constitutional scholars, political actors adjudicating threshold legitimacy)"
+    ],
+    "key_tensions": [
+      "Stability vs adaptability (preservation of foundational commitments vs capacity for democratic revision)",
+      "Majoritarianism vs counter-majoritarianism (rule of present majority vs protection of persistent principles)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Codified supermajority threshold for constitutional amendment (e.g., Article V's 2/3 + 3/4 requirement in U.S., similar thresholds in other constitutions)",
+    "authority_description": "Founding constitutional text as fixed reference; interpretive legitimacy claimed through originalist fidelity or democratic theory principles",
+    "drift_status": "absent",
+    "candidate_pattern": "ossification_trap",
+    "is_contested_kernel": true,
+    "kernel_id": "supermajority_threshold",
+    "readings": [
+      {
+        "reading_id": "consensus_safeguard_reading",
+        "commitment": "Supermajority threshold ensures constitutional changes reflect deep, persistent democratic consensus rather than transient majoritarian passion",
+        "authority_grounding": "Foundational stability; protection of minority rights; deliberative democracy theory",
+        "sibling_readings": [
+          "minoritarian_veto_reading",
+          "adaptive_gradient_reading"
+        ],
+        "expected_structural_delta": "High amendment barrier produces stability constraint with diffuse beneficiaries (constitutional continuity) and no specific victim set unless blocking occurs; barrier legitimated as democratic quality filter"
+      },
+      {
+        "reading_id": "minoritarian_veto_reading",
+        "commitment": "Supermajority threshold empowers blocking minorities to entrench status quo against majoritarian will, converting historical privilege into permanent veto",
+        "authority_grounding": "Democratic majoritarianism; generational sovereignty; anti-entrenchment principles",
+        "sibling_readings": [
+          "consensus_safeguard_reading",
+          "adaptive_gradient_reading"
+        ],
+        "expected_structural_delta": "Amendment barrier becomes snare with identifiable beneficiaries (entrenched elites, status quo beneficiaries) and victims (contemporary majorities blocked from necessary reform); threshold delegitimated as anti-democratic lock-in"
+      },
+      {
+        "reading_id": "adaptive_gradient_reading",
+        "commitment": "Supermajority threshold's legitimacy depends on calibration to actual social consensus formation rates and reversibility costs; threshold is functional tool requiring evidence-based tuning",
+        "authority_grounding": "Institutional design pragmatism; comparative constitutional analysis; systems theory",
+        "sibling_readings": [
+          "consensus_safeguard_reading",
+          "minoritarian_veto_reading"
+        ],
+        "expected_structural_delta": "Threshold produces variable constraint depending on context: too low enables instability (rope tension), too high produces ossification (snare extractiveness); legitimacy grounded in measurable performance rather than intrinsic value"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "consensus_safeguard_reading",
+        "reading_b": "minoritarian_veto_reading",
+        "basis": "Safeguard reading axiomatically holds that higher barriers improve democratic quality by filtering for deeper consensus; veto reading axiomatically holds that higher barriers undermine democratic quality by enabling minoritarian blocking. No single framework can simultaneously hold both 'higher threshold = more democratic' and 'higher threshold = less democratic' as foundational truths."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "consensus_safeguard_reading",
+      "human_readable": "Consensus Safeguard Reading (Threshold as Democratic Quality Filter)",
+      "structural_delta": "Supermajority requirement functions as quality filter ensuring constitutional changes reflect persistent, broad consensus rather than ephemeral majority preference",
+      "primary_observable": "Amendment success rate conditioned on proposal quality; correlation between threshold height and constitutional stability; minority rights protection outcomes",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "constitutional_continuity_as_public_good",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline stabilization interpretation of threshold as coordination mechanism"
+    },
+    {
+      "claim_id": "minoritarian_veto_reading",
+      "human_readable": "Minoritarian Veto Reading (Threshold as Anti-Democratic Entrenchment)",
+      "structural_delta": "Supermajority requirement empowers blocking minorities to preserve status quo against majoritarian reform, converting historical accident into permanent privilege",
+      "primary_observable": "Distribution of blocked amendments by beneficiary class; correlation between threshold height and democratic backsliding; generational sovereignty measures",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "status_quo_elites",
+      "victim": "reform_seeking_majorities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: establishes contradictory extractive interpretation of identical threshold structure"
+    },
+    {
+      "claim_id": "adaptive_gradient_reading",
+      "human_readable": "Adaptive Gradient Reading (Threshold as Calibratable Stability Parameter)",
+      "structural_delta": "Supermajority requirement's legitimacy derives from calibration to actual consensus-formation rates and reversibility costs in specific constitutional context",
+      "primary_observable": "Comparative constitutional performance data; amendment frequency vs social change velocity; threshold-adjustment mechanisms in practice",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: pragmatic synthesis offering measurable escape from axiom-contradictory pair; lower centrality but provides empirical frame for kernel contest resolution"
+    },
+    {
+      "claim_id": "founding_generation_authority",
+      "human_readable": "Founding Generation Authority (Temporal Legitimacy Decay)",
+      "structural_delta": "Authority of founding generation to bind future generations decreases over time; supermajority threshold inherits or loses legitimacy accordingly",
+      "primary_observable": "Years since constitutional founding; generational turnover rates; originalism vs living constitutionalism prevalence in jurisprudence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "minoritarian_veto_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal legitimacy decay is upstream to veto reading but structurally redundant with kernel contest itself; omega material on authority grounding"
+    },
+    {
+      "claim_id": "comparative_threshold_variance",
+      "human_readable": "Comparative Threshold Variance (Cross-National Amendment Difficulty Spectrum)",
+      "structural_delta": "Constitutional amendment difficulty varies dramatically across democracies (simple majority to near-impossibility); outcomes reveal threshold effects",
+      "primary_observable": "Cross-national amendment frequency data; Lijphart rigidity index; constitutional crisis rates by threshold height",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "adaptive_gradient_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: comparative evidence base for adaptive reading but does not change core constraint structure; available as omega context"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "consensus_safeguard_reading",
+      "kernel_id": "supermajority_threshold",
+      "reading_id": "consensus_safeguard_reading"
+    },
+    {
+      "claim_id": "minoritarian_veto_reading",
+      "kernel_id": "supermajority_threshold",
+      "reading_id": "minoritarian_veto_reading"
+    },
+    {
+      "claim_id": "adaptive_gradient_reading",
+      "kernel_id": "supermajority_threshold",
+      "reading_id": "adaptive_gradient_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "founding_generation_authority",
+      "structural_delta": "Temporal legitimacy decay of founding generation's authority to bind future populations",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream to minoritarian veto reading but redundant with kernel authority contest; deferred as omega on temporal legitimacy"
+    },
+    {
+      "claim_id": "comparative_threshold_variance",
+      "structural_delta": "Cross-national variation in amendment difficulty reveals threshold effect spectrum",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Empirical evidence base for adaptive reading but does not constitute independent constraint axis; available as omega comparative context"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_threshold_calibration",
+      "description": "What supermajority fraction optimally balances stability and adaptability for a given polity? Adaptive reading requires empirical calibration methodology not yet established. Without it, threshold choice remains arbitrary or ideological.",
+      "source": "Adaptive gradient reading; deferred axis comparative_threshold_variance"
+    },
+    {
+      "id": "omega_interpretive_drift",
+      "description": "Can courts or legislatures reinterpret threshold meaning without formal amendment (e.g., expanding Article V convention scope, judicial nullification of outdated provisions)? If interpretive drift fully compensates for amendment difficulty, the threshold becomes piton rather than rope or snare.",
+      "source": "Commitment system drift_status assessment; Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_exit_option",
+      "description": "Does secession or constitutional replacement outside Article V/equivalent framework provide de facto exit from supermajority trap? If revolutionary exit remains available, threshold extractiveness bounded by revolution cost rather than formal procedure.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); minoritarian veto reading victim set analysis"
+    },
+    {
+      "id": "omega_generational_sovereignty",
+      "description": "Do living generations possess inherent democratic authority to revise founding commitments, or does constitutional continuity trump generational sovereignty? Unresolved normative premise underlying consensus vs veto reading axiom contradiction.",
+      "source": "Axiom contradiction between consensus_safeguard and minoritarian_veto readings; deferred axis founding_generation_authority"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel identification validated: three readings produce genuinely distinct constraints from same textual kernel (rope vs snare vs piton), with axiom contradiction declared between safeguard and veto readings. Adaptive reading offers pragmatic synthesis but does not resolve underlying normative contest."
+  },
+  "_seed_id": "parliamentary_supermajority_amendment_requirements"
+}

@@ -1,0 +1,241 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "History of Technology / Religious History / Media Studies",
+  "family_id": "printing_press_reformation_causation",
+  "topic_summary": "Analysis of the relationship between Gutenberg's printing press (c.1440-1460s) and the Protestant Reformation (1517+), examining whether vernacular scripture proliferation represents technological inevitability or strategic deployment by reformers and printers as beneficiaries. The kernel contest centers on causation vs enablement and the mutual shaping of technology and agency.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Johannes Gutenberg (inventor, movable type press c.1440)",
+      "Martin Luther (reformer, strategic press user, 95 Theses 1517)",
+      "Printers/Publishers (Hans Lufft, Robert Estienne, commercial gatekeepers)",
+      "Catholic Church (institutional authority, delayed press adoption)",
+      "Vernacular Bible translators (Coverdale, Tyndale, Luther)",
+      "Lay readers (newly literate urban populations)",
+      "Print networks (Venice, Paris, London, German cities)",
+      "Reformation pamphlets (propaganda, theological debate vehicles)"
+    ],
+    "key_tensions": [
+      "Technological determinism vs strategic agency (inevitability vs beneficiary-driven)",
+      "Clerical Latin monopoly vs vernacular access (translation as power redistribution)",
+      "Commercial print incentives vs theological gatekeeping (printers as entrepreneurs vs censors)",
+      "Causation vs enablement (press as cause vs necessary condition)"
+    ],
+    "key_mechanisms": [
+      "Print capacity expansion (1440s-1517: technology matures, distribution networks form)",
+      "Strategic mobilization (reformers commission vernacular texts, printers profit from controversy)",
+      "Language standardization feedback (Luther's Bible shapes High German, translation fixes vernacular)"
+    ],
+    "key_absences": [
+      "Oral transmission networks (sermons, public readings) as parallel distribution channel",
+      "Manuscript culture persistence (handwritten texts continue alongside print)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The printing press enabled the Protestant Reformation by making vernacular scripture widely available",
+    "authority_description": "Historians of technology and religion claim interpretive legitimacy through archival evidence and causal modeling",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "press_reformation_causation",
+    "readings": [
+      {
+        "reading_id": "technological_determinism",
+        "commitment": "The printing press caused the Reformation by making censorship impossible and vernacular scripture inevitable",
+        "authority_grounding": "Media theory (McLuhan, Eisenstein); technological determinism framework",
+        "sibling_readings": [
+          "strategic_deployment",
+          "mutual_shaping"
+        ],
+        "expected_structural_delta": "Technology as upstream mountain; reformers as downstream beneficiaries of exogenous capacity; Church resistance futile"
+      },
+      {
+        "reading_id": "strategic_deployment",
+        "commitment": "Reformers and printers strategically exploited the press as a tool; technology was neutral capacity awaiting purposeful use",
+        "authority_grounding": "Social construction of technology (SCOT); actor-network theory; economic history of printing",
+        "sibling_readings": [
+          "technological_determinism",
+          "mutual_shaping"
+        ],
+        "expected_structural_delta": "Agency as upstream driver; press as rope (coordination tool); reformers/printers as beneficiaries extracting profit/power from deliberate deployment"
+      },
+      {
+        "reading_id": "mutual_shaping",
+        "commitment": "Technology and agency co-evolved; the press created new possibilities reformers exploited, which in turn shaped how printing developed",
+        "authority_grounding": "Co-production framework (STS); historical institutionalism; path dependency theory",
+        "sibling_readings": [
+          "technological_determinism",
+          "strategic_deployment"
+        ],
+        "expected_structural_delta": "Bidirectional causation; press as scaffold (enabling structure) that reformers reinforced through use; neither pure mountain nor pure rope"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "technological_determinism",
+        "reading_b": "strategic_deployment",
+        "basis": "Determinism holds technology as exogenous force with autonomous causal power; strategic deployment holds technology as inert capacity requiring human purpose. No single framework can hold both 'technology determines outcomes' and 'human agency determines outcomes' as simultaneously true for the same historical event."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "technological_determinism",
+      "human_readable": "Technological Determinism (Press as Exogenous Cause)",
+      "structural_delta": "Printing press as autonomous technological force that made Reformation inevitable by destroying information monopoly",
+      "primary_observable": "Print capacity expansion 1440-1517 independent of theological demand; geographic spread of presses preceding reform movements",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "vernacular_scripture_proliferation"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents pure technological causation pole"
+    },
+    {
+      "claim_id": "strategic_deployment",
+      "human_readable": "Strategic Deployment (Reformers/Printers as Beneficiaries)",
+      "structural_delta": "Printing press as neutral tool strategically exploited by reformers and printers for theological/commercial gain",
+      "primary_observable": "Luther's deliberate commissioning of cheap vernacular tracts; printer profit margins on controversial texts; pamphlet design for mass mobilization",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reformers_and_printers",
+      "victim": "catholic_church_authority",
+      "downstream_of": [],
+      "feeds_into": [
+        "vernacular_scripture_proliferation"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents pure agency pole; different beneficiary structure from reading 1"
+    },
+    {
+      "claim_id": "mutual_shaping",
+      "human_readable": "Mutual Shaping (Co-Evolution of Technology and Agency)",
+      "structural_delta": "Printing press created new possibilities that reformers exploited, which in turn shaped how printing technology and networks developed",
+      "primary_observable": "Feedback loops: vernacular demand drives printer specialization; printer networks enable pan-European reform coordination; Luther's Bible standardizes High German which becomes print market",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "technological_determinism",
+        "strategic_deployment"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; synthesis position; highest centrality as downstream of both poles"
+    },
+    {
+      "claim_id": "translation_as_power",
+      "human_readable": "Translation as Power Redistribution",
+      "structural_delta": "Control over vernacular translation determines who mediates scripture access; shifts from clerical Latin monopoly to reformer/printer coalition",
+      "primary_observable": "Number of vernacular editions; Church censorship attempts; language standardization effects (Luther's High German)",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "vernacular_translators",
+      "victim": "latin_clerical_monopoly",
+      "downstream_of": [
+        "strategic_deployment"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within strategic_deployment reading as mechanism; lower centrality than synthesis node"
+    },
+    {
+      "claim_id": "oral_transmission_parallel",
+      "human_readable": "Oral Transmission as Parallel Channel",
+      "structural_delta": "Sermons, public readings, and oral networks distributed Reformation ideas independently of print",
+      "primary_observable": "Illiteracy rates; sermon attendance records; public reading practices",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strategic_deployment"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence inventory item; complements print channel but lower structural centrality"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "technological_determinism",
+      "kernel_id": "press_reformation_causation",
+      "reading_id": "technological_determinism"
+    },
+    {
+      "claim_id": "strategic_deployment",
+      "kernel_id": "press_reformation_causation",
+      "reading_id": "strategic_deployment"
+    },
+    {
+      "claim_id": "mutual_shaping",
+      "kernel_id": "press_reformation_causation",
+      "reading_id": "mutual_shaping"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "translation_as_power",
+      "structural_delta": "Vernacular translation control as power redistribution mechanism",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism captured within strategic_deployment reading; lower centrality than mutual_shaping synthesis node"
+    },
+    {
+      "claim_id": "oral_transmission_parallel",
+      "structural_delta": "Oral networks as parallel distribution channel independent of print",
+      "hypothesis": "rope",
+      "deferral_reason": "Absence inventory item; complements print analysis but lower structural centrality; omega material for print-centrism bias"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_print_centrism",
+      "description": "Does focusing on print obscure the role of oral transmission (sermons, public readings) in spreading Reformation ideas? Illiterate populations accessed vernacular scripture through hearing, not reading. Deferred axis oral_transmission_parallel suggests print may be rope coordinating oral networks rather than sole causal channel.",
+      "source": "Absence Inventory (§1.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_counterfactual_instability",
+      "description": "Would the Reformation have occurred without the printing press? Technological_determinism reading says no (press as necessary cause); strategic_deployment reading says possibly (reformers would have used manuscript, oral, or other channels). Mutual_shaping reading dissolves the counterfactual as historically meaningless. No empirical test available.",
+      "source": "Axiom contradiction between readings 1 and 2"
+    },
+    {
+      "id": "omega_catholic_response_lag",
+      "description": "Why did the Catholic Church delay press adoption until decades after Luther? Was this institutional inertia (piton of manuscript authority), strategic miscalculation (underestimating print power), or rational choice (press undermined hierarchical control)? Research context notes Church 'relied on old authority' but later published vernacular Bibles. Timing and motivation unclear.",
+      "source": "Extraction anchor (Catholic Church delayed response) + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_language_standardization_feedback",
+      "description": "Does Luther's Bible standardizing High German represent technology shaping culture (mutual_shaping) or culture shaping technology (strategic_deployment chose German over Latin)? Feedback loop makes causal direction ambiguous. Translation_as_power axis deferred but this mechanism may warrant independent analysis.",
+      "source": "Mechanism extraction (language standardization) + deferred axis translation_as_power"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings captures the historiographic debate structure. Axiom contradiction between technological_determinism and strategic_deployment is genuine (no single framework holds both). Mutual_shaping reading represents synthesis position that dissolves the binary. Deferred axes (translation_as_power, oral_transmission_parallel) are mechanistic complements rather than independent structural dimensions."
+  },
+  "_seed_id": "printing_press_reformation"
+}

@@ -1,0 +1,275 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Theory / International Relations / Territorial Sovereignty",
+  "family_id": "israel_palestine_legitimacy_2024",
+  "topic_summary": "Analysis of competing legitimacy claims over the territory between the Jordan River and Mediterranean Sea. Two national movements assert mutually exclusive sovereignty claims grounded in fundamentally different temporal and normative frameworks: one rooted in ancient covenant and continuous presence, the other in modern self-determination and recent demographic majority. The dispute operates as a single territorial-legitimacy kernel read through incommensurable interpretive frames.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "State of Israel (established 1948; claims sovereignty based on historical connection and international recognition)",
+      "Palestinian Authority (West Bank governance; claims sovereignty based on self-determination and demographic presence)",
+      "Hamas (Gaza governance since 2007; rejects Israeli legitimacy entirely)",
+      "British Mandatory Palestine (1923-1948; administrative predecessor creating dual-commitment framework)",
+      "Balfour Declaration (1917; first major-power recognition of Jewish national aspirations)",
+      "1967 borders / Green Line (territorial reference point for two-state framework)",
+      "Palestinian refugees and descendants (approximately 5.9 million; right of return claim)",
+      "Israeli settlements in West Bank (approximately 700,000 settlers; facts-on-ground strategy)"
+    ],
+    "key_tensions": [
+      "Autochthony vs divine promise (first possession vs covenant-based legitimacy)",
+      "Territorialist vs existentialist framing (compromise-possible vs zero-sum)",
+      "Sovereignty as divisible vs indivisible (partition vs exclusive claim)",
+      "Historical trauma narratives (Holocaust survival vs Nakba displacement)"
+    ],
+    "key_mechanisms": [
+      "Settlement expansion (territorial facts creation; beneficiary: Israeli right; victim: Palestinian territorial continuity)",
+      "Narrative exclusion (historical record contestation; each side erases other's presence from deep history)",
+      "International legal ambiguity (disputed sovereignty status enables both sides to claim legal standing)"
+    ],
+    "key_absences": [
+      "Absence of shared temporal framework (no agreement on which historical period establishes legitimacy)",
+      "Absence of neutral arbiter with enforcement capacity (international community divided; no binding adjudication mechanism)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Territorial sovereignty over the land between the Jordan River and Mediterranean Sea, stabilized as the contested substrate both movements claim exclusive or primary rights to govern",
+    "authority_description": "Legitimacy grounded in competing temporal frameworks: ancient covenant/continuous presence (Israeli reading) vs modern self-determination/demographic majority (Palestinian reading). No shared interpretive authority exists; each movement claims its own grounding principle as foundational.",
+    "drift_status": "absent",
+    "candidate_pattern": "contested_kernel_dual_authority",
+    "is_contested_kernel": true,
+    "kernel_id": "territorial_sovereignty_legitimacy",
+    "readings": [
+      {
+        "reading_id": "covenant_continuity_reading",
+        "commitment": "Sovereignty legitimacy derives from ancient covenant (divine promise) combined with continuous Jewish presence and modern international recognition (Balfour Declaration, UN Partition Plan, 1948 establishment)",
+        "authority_grounding": "Religious/historical: Torah as founding text; modern international law as secondary validation; continuous presence despite diaspora as proof of unbroken claim",
+        "sibling_readings": [
+          "self_determination_reading",
+          "existential_matrix_reading"
+        ],
+        "expected_structural_delta": "Temporal scope extends to biblical period; legitimacy claim survives demographic absence; partition viewed as compromise of pre-existing right rather than creation of new right; settlements framed as return rather than colonization"
+      },
+      {
+        "reading_id": "self_determination_reading",
+        "commitment": "Sovereignty legitimacy derives from modern principle of self-determination applied to the Arab population with demographic majority and continuous residence in the territory during the modern period (19th-20th centuries)",
+        "authority_grounding": "International law: self-determination as foundational principle; demographic presence as factual basis; Ottoman and British administrative continuity; Nakba as dispossession requiring remedy",
+        "sibling_readings": [
+          "covenant_continuity_reading",
+          "existential_matrix_reading"
+        ],
+        "expected_structural_delta": "Temporal scope limited to modern period; legitimacy requires continuous demographic presence; partition viewed as unjust imposition by external powers; Israeli state framed as colonial project; right of return as restoration of status quo ante"
+      },
+      {
+        "reading_id": "existential_matrix_reading",
+        "commitment": "Sovereignty legitimacy is not primarily juridical but existential: each people requires territorial control as precondition for collective survival and identity expression, making the conflict fundamentally zero-sum regardless of legal or historical arguments",
+        "authority_grounding": "Existential necessity: Holocaust trauma (Israeli side) and Nakba trauma (Palestinian side) create non-negotiable survival imperatives; security and identity cannot be guaranteed without territorial sovereignty; compromise frameworks fail because they cannot satisfy existential requirements",
+        "sibling_readings": [
+          "covenant_continuity_reading",
+          "self_determination_reading"
+        ],
+        "expected_structural_delta": "Legitimacy claims are epiphenomenal; actual driver is existential fear; territorial compromise frameworks (two-state solution) structurally unstable because neither side can accept vulnerability; conflict persists regardless of legal settlements; beneficiary is whichever side achieves demographic/military dominance"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "covenant_continuity_reading",
+        "reading_b": "self_determination_reading",
+        "basis": "Covenant reading holds that ancient religious/historical connection establishes legitimacy independent of modern demographic presence; self-determination reading holds that only modern demographic majority and continuous residence establish legitimacy. No single coherent framework can hold both: accepting covenant as sufficient requires rejecting demographic presence as necessary, and vice versa. The temporal scope disagreement is foundational, not reconcilable through pluralist accommodation."
+      },
+      {
+        "reading_a": "existential_matrix_reading",
+        "reading_b": "covenant_continuity_reading",
+        "basis": "Existential reading holds that legitimacy claims are post-hoc rationalizations for survival imperatives, making juridical or historical arguments structurally irrelevant; covenant reading holds that historical/religious legitimacy is foundational and constrains acceptable outcomes. A framework accepting existential necessity as primary cannot simultaneously hold covenant legitimacy as foundational constraint—one must be epiphenomenal to the other."
+      },
+      {
+        "reading_a": "existential_matrix_reading",
+        "reading_b": "self_determination_reading",
+        "basis": "Existential reading holds that legal principles (including self-determination) cannot resolve the conflict because survival imperatives override juridical frameworks; self-determination reading holds that international law provides the authoritative framework for legitimacy. A coherent framework cannot hold both that international law is authoritative and that existential necessity renders it structurally irrelevant."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "covenant_continuity_reading",
+      "human_readable": "Covenant-Continuity Reading (Ancient Right + Modern Recognition)",
+      "structural_delta": "Legitimacy grounded in biblical covenant and continuous presence across millennia, validated by modern international recognition",
+      "primary_observable": "Invocation frequency of biblical/historical claims in sovereignty arguments; settlement patterns framed as return vs colonization; legal arguments citing Balfour/UN recognition vs self-determination",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "israeli_state_and_settlement_movement",
+      "victim": "palestinian_territorial_continuity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of three readings selected; represents Israeli legitimacy framework grounding sovereignty in ancient covenant plus modern international law"
+    },
+    {
+      "claim_id": "self_determination_reading",
+      "human_readable": "Self-Determination Reading (Modern Demographic Right)",
+      "structural_delta": "Legitimacy grounded in modern self-determination principle applied to Arab demographic majority with continuous modern-period residence",
+      "primary_observable": "Invocation frequency of self-determination and demographic presence in sovereignty arguments; framing of 1948 as Nakba vs independence; right of return claims vs security concerns",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "palestinian_national_movement",
+      "victim": "israeli_territorial_security",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second of three readings selected; represents Palestinian legitimacy framework grounding sovereignty in modern international law and demographic presence"
+    },
+    {
+      "claim_id": "existential_matrix_reading",
+      "human_readable": "Existential-Matrix Reading (Survival Imperative Overrides Juridical Claims)",
+      "structural_delta": "Legitimacy claims are epiphenomenal; actual driver is existential survival imperative making territorial control non-negotiable regardless of legal/historical arguments",
+      "primary_observable": "Persistence of zero-sum framing despite legal settlements; failure of compromise frameworks; security discourse dominating legitimacy discourse; trauma narratives (Holocaust/Nakba) as non-negotiable constraints",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "whichever_side_achieves_dominance",
+      "victim": "compromise_frameworks_and_third_party_mediators",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected; represents meta-level analysis that both legitimacy frameworks are rationalizations for existential imperatives, explaining why legal/historical arguments fail to resolve conflict"
+    },
+    {
+      "claim_id": "settlement_facts_creation",
+      "human_readable": "Settlement Expansion as Facts-on-Ground Strategy",
+      "structural_delta": "Physical territorial control through settlement construction preempts negotiated outcomes by making partition physically/politically infeasible",
+      "primary_observable": "Settlement population growth rate; geographic distribution creating territorial discontinuity; international legal responses vs domestic political support",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "israeli_settlement_movement",
+      "victim": "two_state_territorial_viability",
+      "downstream_of": [
+        "covenant_continuity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism downstream of covenant reading; captured implicitly in reading's structural delta"
+    },
+    {
+      "claim_id": "narrative_exclusion_mechanism",
+      "human_readable": "Historical Narrative Exclusion (Deep-Time Erasure)",
+      "structural_delta": "Each side erases the other's presence from historical record to delegitimize competing claims, creating mutually exclusive historical narratives",
+      "primary_observable": "Textbook content analysis; museum/memorial framing; archaeological site interpretation; public discourse on historical presence",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "nationalist_movements_on_both_sides",
+      "victim": "shared_historical_understanding",
+      "downstream_of": [
+        "covenant_continuity_reading",
+        "self_determination_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream mechanism of both readings; important but lower structural priority than readings themselves"
+    },
+    {
+      "claim_id": "international_legal_ambiguity",
+      "human_readable": "International Legal Ambiguity (Disputed Sovereignty Status)",
+      "structural_delta": "Absence of binding international adjudication creates legal vacuum where both sides claim legal standing, enabling conflict persistence",
+      "primary_observable": "UN resolutions vs enforcement; ICJ advisory opinions vs state practice; international recognition patterns; legal arguments in diplomatic forums",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "status_quo_maintenance",
+      "victim": "conflict_resolution_frameworks",
+      "downstream_of": [],
+      "feeds_into": [
+        "covenant_continuity_reading",
+        "self_determination_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold enabling both readings but not itself a reading; important structural context for omega discussion"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "covenant_continuity_reading",
+      "kernel_id": "territorial_sovereignty_legitimacy",
+      "reading_id": "covenant_continuity_reading"
+    },
+    {
+      "claim_id": "self_determination_reading",
+      "kernel_id": "territorial_sovereignty_legitimacy",
+      "reading_id": "self_determination_reading"
+    },
+    {
+      "claim_id": "existential_matrix_reading",
+      "kernel_id": "territorial_sovereignty_legitimacy",
+      "reading_id": "existential_matrix_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "settlement_facts_creation",
+      "structural_delta": "Settlement expansion preempts partition through physical territorial control",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism downstream of covenant_continuity_reading; captured implicitly in reading's structural analysis"
+    },
+    {
+      "claim_id": "narrative_exclusion_mechanism",
+      "structural_delta": "Mutual historical erasure delegitimizes competing claims",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Downstream mechanism of both primary readings; important but lower structural priority than readings themselves"
+    },
+    {
+      "claim_id": "international_legal_ambiguity",
+      "structural_delta": "Legal vacuum enables both sides to claim legal standing",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold enabling both readings but not itself a reading; structural context for omega discussion rather than independent constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_temporal_incommensurability",
+      "description": "The covenant and self-determination readings operate in fundamentally different temporal frameworks (biblical vs modern). Is there any coherent meta-framework that could adjudicate between claims grounded in different historical epochs, or is temporal scope selection itself the irreducible political choice?",
+      "source": "Axiom contradiction analysis between covenant_continuity_reading and self_determination_reading"
+    },
+    {
+      "id": "omega_existential_epiphenomenalism",
+      "description": "If existential_matrix_reading is correct that legitimacy claims are rationalizations for survival imperatives, does this mean legal/historical analysis is structurally irrelevant to conflict resolution? Or does juridical framework still constrain acceptable outcomes even when existential imperatives dominate?",
+      "source": "Axiom contradiction analysis involving existential_matrix_reading"
+    },
+    {
+      "id": "omega_partition_viability",
+      "description": "Settlement expansion (deferred axis) may have already rendered two-state partition physically infeasible. If so, does this force reversion to one-state frameworks (binational or dominant-group), and how does that interact with the three readings' legitimacy claims?",
+      "source": "Deferred axis settlement_facts_creation; structural interaction with all three readings"
+    },
+    {
+      "id": "omega_international_enforcement",
+      "description": "International legal ambiguity (deferred axis) enables both sides to claim legal standing. Could binding international adjudication resolve the kernel contest, or would enforcement failure simply reveal that legitimacy is determined by power rather than law?",
+      "source": "Deferred axis international_legal_ambiguity; scaffold status question"
+    },
+    {
+      "id": "omega_demographic_trajectory",
+      "description": "Demographic trends (Palestinian population growth, Israeli Arab citizens, settlement expansion) may eventually force resolution through demographic dominance rather than negotiated settlement. Does this vindicate existential_matrix_reading's claim that survival imperatives override juridical frameworks?",
+      "source": "Extraction absence: demographic projection not addressed in research context; interaction with existential_matrix_reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic successfully decomposed as contested kernel with three incommensurable readings. Axiom contradictions declared for all three pairwise combinations. Coherence finding: dispute is structurally coherent as demonstration of how single territorial substrate generates mutually exclusive legitimacy frameworks that cannot be reconciled through standard compromise. This is not a generation failure but a structural feature of the dispute itself."
+  },
+  "_seed_id": "israel_palestine_legitimacy"
+}

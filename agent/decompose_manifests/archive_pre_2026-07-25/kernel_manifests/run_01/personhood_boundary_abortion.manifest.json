@@ -1,0 +1,166 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Bioethics / Political Philosophy / Constitutional Law",
+  "family_id": "personhood_boundary_2026",
+  "topic_summary": "Analysis of the abortion debate as a contested kernel where different parties read the personhood-boundary commitment differently. The conception reading, viability reading, and birth reading each instantiate structurally different constraints with distinct victim sets, beneficiary structures, and authority groundings. This is not a disagreement about observer position relative to one constraint, but about which constraint exists to be observed.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Fetus/embryo (entity whose moral status is contested)",
+      "Pregnant person (rights-holder in all readings, scope varies)",
+      "State authority (enforcement mechanism for whichever reading prevails)",
+      "Medical profession (gatekeepers of viability determination)",
+      "Religious institutions (natural-law authority grounding for conception reading)",
+      "Autonomy framework (liberal rights grounding for birth reading)"
+    ],
+    "key_tensions": [
+      "Fetal moral status vs maternal autonomy (structural opposition in all readings)",
+      "Natural law vs positive law (authority grounding collision)",
+      "Biological continuity vs legal/social personhood (ontological vs constructed status)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The personhood-boundary kernel: a shared commitment that moral status begins at some point in human development, but contested as to when",
+    "authority_description": "Multiple competing authorities: religious natural-law traditions, medical profession (viability), legal positivism (birth), feminist autonomy frameworks",
+    "drift_status": "absent",
+    "candidate_pattern": "contested_present",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "conception_reading",
+        "commitment": "Moral status begins at conception; the zygote is a rights-bearing person",
+        "authority_grounding": "Natural law / religious doctrine (Catholic, evangelical Protestant traditions)",
+        "sibling_readings": [
+          "viability_reading",
+          "birth_reading"
+        ],
+        "expected_structural_delta": "Fetus enters victim set at conception; abortion becomes homicide-equivalent; high suppression of alternative readings; state becomes enforcer of fetal rights against maternal autonomy"
+      },
+      {
+        "reading_id": "viability_reading",
+        "commitment": "Moral status begins at viability (capacity for independent life outside womb)",
+        "authority_grounding": "Medical profession / Roe v. Wade framework (trimester compromise)",
+        "sibling_readings": [
+          "conception_reading",
+          "birth_reading"
+        ],
+        "expected_structural_delta": "Fetus enters victim set at ~24 weeks; pre-viability abortion permitted; post-viability restricted; state balances competing interests rather than enforcing absolute fetal rights"
+      },
+      {
+        "reading_id": "birth_reading",
+        "commitment": "Moral status begins at birth; the fetus is not a rights-bearing person",
+        "authority_grounding": "Legal positivism / feminist autonomy framework",
+        "sibling_readings": [
+          "conception_reading",
+          "viability_reading"
+        ],
+        "expected_structural_delta": "Fetus not in victim set; pregnant person is sole rights-holder; abortion is healthcare decision; no state enforcement of fetal interests"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "conception_reading",
+      "human_readable": "Conception Reading (Natural Law Personhood)",
+      "structural_delta": "Fetus as rights-bearing person from conception; abortion as homicide-equivalent",
+      "primary_observable": "Legal status of abortion (criminal vs permitted); enforcement mechanisms (prosecution rates, clinic restrictions)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "religious_authority_structures",
+      "victim": "pregnant_persons_seeking_abortion",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: highest extractiveness; clearest victim set; natural-law authority grounding"
+    },
+    {
+      "claim_id": "viability_reading",
+      "human_readable": "Viability Reading (Medical-Professional Compromise)",
+      "structural_delta": "Fetus as potential person at viability; state balances competing interests",
+      "primary_observable": "Trimester framework enforcement; viability determination protocols; gestational limits in law",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "medical_gatekeepers",
+      "victim": "both_pregnant_persons_and_fetuses_partially",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: moderate extractiveness; distinct authority structure (medical profession); compromise position"
+    },
+    {
+      "claim_id": "birth_reading",
+      "human_readable": "Birth Reading (Autonomy Framework Personhood)",
+      "structural_delta": "Pregnant person as sole rights-holder; fetus not in victim set",
+      "primary_observable": "Abortion access rates; legal status (healthcare vs crime); state non-interference",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: lowest extractiveness; autonomy-grounding; fetus outside victim set"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "conception_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "conception_reading"
+    },
+    {
+      "claim_id": "viability_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "viability_reading"
+    },
+    {
+      "claim_id": "birth_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "birth_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_quickening_reading",
+      "description": "Historical quickening reading (fetal movement as personhood marker) not analyzed. Pre-modern authority structure; largely displaced by medical/legal frameworks but may resurface in traditionalist contexts.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_gradualist_reading",
+      "description": "Gradualist reading (moral status increases continuously from conception to birth) not analyzed. Would emit variable victim set and epsilon over time; structurally distinct from discrete-boundary readings.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "Conception reading enforcement targets pregnant persons and providers, not male partners. Beneficiary structure may include patriarchal control mechanisms beyond religious authority.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_viability_drift",
+      "description": "Medical technology shifts viability earlier over time. Viability reading's epsilon may increase as the window of permitted abortion narrows, potentially collapsing toward conception reading.",
+      "source": "F03 (Hasty Generalization) + commitment system drift analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: viability_reading classified as tangled_rope but medical technology drift may reclassify it as scaffold (temporary compromise collapsing under technological pressure). Generated omega_viability_drift to bound this uncertainty. Kernel structure confirmed: three readings emit genuinely different constraints with distinct victim sets and authority groundings."
+  },
+  "_seed_id": "personhood_boundary_abortion"
+}

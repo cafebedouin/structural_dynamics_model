@@ -1,0 +1,227 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Administrative Law / Environmental Regulation / Constitutional Interpretation",
+  "family_id": "clean_air_act_interpretive_bounds_2026",
+  "topic_summary": "Analysis of the contested interpretive boundaries of the US Clean Air Act as crystallized in the Clean Power Plan litigation. The EPA's systemic, grid-wide regulation approach collided with the Supreme Court's Major Questions Doctrine reading that restricts delegated authority to point-source controls. The contest centers on whether Section 111(d) authorizes transformative energy system intervention or only traditional pollution controls at individual facilities.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Clean Air Act Section 111(d) (statutory kernel authorizing EPA regulation of existing sources)",
+      "Environmental Protection Agency (interpretive authority; systemic reading proponent)",
+      "US Supreme Court (interpretive authority; Major Questions Doctrine arbiter)",
+      "State governments (dual role: regulated entities under EPA; petitioners against EPA)",
+      "Coal-fired power sector (direct regulatory target)",
+      "Grid operators and renewable developers (indirect beneficiaries/victims depending on reading)"
+    ],
+    "key_tensions": [
+      "Chevron deference vs Major Questions Doctrine (scope of agency interpretive authority)",
+      "Systemic decarbonization vs facility-level pollution control (regulatory scope)",
+      "Delegated rulemaking vs congressional intent (separation of powers)"
+    ],
+    "key_mechanisms": [
+      "Section 111(d) standard-setting: EPA determines 'best system of emission reduction' for existing sources",
+      "Major Questions Doctrine: courts deny Chevron deference when agency claims transformative authority via ambiguous statutory language",
+      "State implementation plans: states design compliance pathways within federal performance standards"
+    ],
+    "key_absences": [
+      "Congressional climate legislation (no post-1990 CAA amendments addressing grid-wide carbon; silence treated as constraint by Court)",
+      "Exit mechanisms for states or facilities (both readings impose federal floor, but systemic reading forecloses state fossil-lock-in pathways)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Clean Air Act Section 111(d) delegation to EPA to set emission standards via 'best system of emission reduction' for existing sources",
+    "authority_description": "EPA holds interpretive authority subject to Chevron deference, but Supreme Court asserts override via Major Questions Doctrine when statutory ambiguity is invoked for transformative policy",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "caa_section_111d_delegation",
+    "readings": [
+      {
+        "reading_id": "systemic_transformation_reading",
+        "commitment": "Section 111(d) 'best system' authorizes grid-wide, generation-shifting strategies including renewable substitution and early coal retirement",
+        "authority_grounding": "Chevron deference to EPA technical expertise; 'system' read as energy system not facility system",
+        "sibling_readings": [
+          "facility_constraint_reading"
+        ],
+        "expected_structural_delta": "EPA can mandate state-level decarbonization pathways; coal sector becomes extraction victim; renewables subsidized via regulatory compliance pathways; high exit costs for fossil-locked states"
+      },
+      {
+        "reading_id": "facility_constraint_reading",
+        "commitment": "Section 111(d) 'best system' limited to measures implementable at individual facilities (heat-rate improvements, carbon capture)",
+        "authority_grounding": "Major Questions Doctrine override; textualist reading that 'system' means technological system not market/grid system; congressional silence as constraint not permission",
+        "sibling_readings": [
+          "systemic_transformation_reading"
+        ],
+        "expected_structural_delta": "EPA cannot mandate generation-shifting; coal sector protected from forced retirement; state autonomy preserved over energy mix; climate advocates become extraction victims of regulatory ceiling"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "systemic_transformation_reading",
+        "reading_b": "facility_constraint_reading",
+        "basis": "No single coherent framework of delegated authority can simultaneously hold that statutory silence grants transformative power (systemic reading) and that statutory silence withholds it (facility reading). The Major Questions Doctrine itself is the axiom that statutory ambiguity cannot authorize what Congress would have addressed explicitly if intended—accepting this axiom requires rejecting Chevron deference's permissive construction of agency authority over ambiguous terms."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "systemic_transformation_reading",
+      "human_readable": "Systemic Transformation Reading (Grid-Wide Decarbonization Authority)",
+      "structural_delta": "Section 111(d) interpreted to authorize EPA-mandated generation-shifting and state-level energy system transformation",
+      "primary_observable": "Regulatory compliance pathways that require coal retirement or renewable capacity expansion rather than facility-level technological upgrades",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "renewable_energy_sector",
+      "victim": "coal_sector",
+      "downstream_of": [],
+      "feeds_into": [
+        "state_compliance_pathway_constraint"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading with highest structural delta; authorizes transformative regulatory intervention"
+    },
+    {
+      "claim_id": "facility_constraint_reading",
+      "human_readable": "Facility Constraint Reading (Point-Source-Only Authority)",
+      "structural_delta": "Section 111(d) interpreted to limit EPA authority to measures implementable at individual facilities without generation-shifting",
+      "primary_observable": "Regulatory compliance pathways restricted to heat-rate improvements, carbon capture, or other on-site technological controls",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "fossil_fuel_sector",
+      "victim": "climate_policy_advocates",
+      "downstream_of": [],
+      "feeds_into": [
+        "state_compliance_pathway_constraint"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with inverse beneficiary structure; captures Major Questions Doctrine's constitutional constraint"
+    },
+    {
+      "claim_id": "state_compliance_pathway_constraint",
+      "human_readable": "State Compliance Pathway Constraint (Federalism Under Either Reading)",
+      "structural_delta": "Regardless of EPA authority scope, states must design implementation plans within federal performance standards",
+      "primary_observable": "State implementation plan approval/rejection rates; federal takeover instances under CAA Section 111(d)(2)",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "systemic_transformation_reading",
+        "facility_constraint_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis axis showing how either reading constrains state autonomy differently but both impose federal floor"
+    },
+    {
+      "claim_id": "congressional_silence_interpretation",
+      "human_readable": "Congressional Silence Interpretation (Permission vs Prohibition)",
+      "structural_delta": "Whether post-1990 congressional inaction on climate-specific CAA amendments constitutes implicit permission for EPA innovation or implicit prohibition",
+      "primary_observable": "Legislative history analysis; committee testimony on Section 111(d) scope; statutory amendment attempts",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "systemic_transformation_reading",
+        "facility_constraint_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: underlying interpretive methodology captured within the two primary readings' authority grounding"
+    },
+    {
+      "claim_id": "chevron_override_mechanism",
+      "human_readable": "Chevron Override Mechanism (Major Questions Doctrine Application)",
+      "structural_delta": "Court's discretionary invocation of Major Questions Doctrine to override Chevron deference when policy stakes deemed transformative",
+      "primary_observable": "Doctrinal test application: economic/political significance threshold; statutory clarity requirement",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "judicial_authority",
+      "victim": "executive_agency_autonomy",
+      "downstream_of": [],
+      "feeds_into": [
+        "facility_constraint_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism captured as authority grounding within facility_constraint_reading; independent generation would duplicate constraint structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "systemic_transformation_reading",
+      "kernel_id": "caa_section_111d_delegation",
+      "reading_id": "systemic_transformation_reading"
+    },
+    {
+      "claim_id": "facility_constraint_reading",
+      "kernel_id": "caa_section_111d_delegation",
+      "reading_id": "facility_constraint_reading"
+    },
+    {
+      "claim_id": "state_compliance_pathway_constraint",
+      "kernel_id": "caa_section_111d_delegation",
+      "reading_id": "state_compliance_pathway_constraint"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "congressional_silence_interpretation",
+      "structural_delta": "Whether congressional inaction constitutes permission or prohibition for EPA climate authority",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Interpretive methodology absorbed into the two primary readings' authority grounding; independent generation would be redundant"
+    },
+    {
+      "claim_id": "chevron_override_mechanism",
+      "structural_delta": "Court's discretionary invocation of Major Questions Doctrine to override agency deference",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism already captured as authority grounding within facility_constraint_reading; separation risks over-splitting the kernel contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_doctrine_stability",
+      "description": "Is Major Questions Doctrine itself a stable interpretive mountain or a contested rope? Post-Loper Bright elimination of Chevron may reclassify the entire kernel structure—if all statutory interpretation becomes de novo review, the 'readings' collapse into judicial policy preference rather than genuine interpretive contest.",
+      "source": "§1.3-K kernel validity check"
+    },
+    {
+      "id": "omega_state_exit_asymmetry",
+      "description": "Does the systemic reading foreclose state exit pathways that the facility reading preserves? If states under systemic reading cannot opt to preserve coal baseload (must comply with generation-shifting mandates), the victim set expands to include state energy sovereignty—but facility reading also imposes federal floor, just lower. Exit asymmetry may be difference of degree not kind.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + absence inventory"
+    },
+    {
+      "id": "omega_technological_obsolescence",
+      "description": "If renewable costs fall below coal even without regulatory forcing, does the facility reading become a piton preserving an economically obsolete sector? The constraint's extractiveness may be time-indexed: high in 2015 (Clean Power Plan era), collapsing by 2030 if market forces achieve same outcome without EPA mandate.",
+      "source": "§2.1 multi-lens scan (economic lens)"
+    },
+    {
+      "id": "omega_third_reading_dormancy",
+      "description": "Is there a dormant third reading—congressional amendment that explicitly addresses climate authority—that would dissolve the kernel contest by replacing interpretive ambiguity with statutory clarity? If Congress acts, both current readings become obsolete. This is not a current constraint but a latent state transition.",
+      "source": "Absence inventory (congressional climate legislation)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure validated: readings emit genuinely different constraints (different beneficiary/victim pairs, different exit structures, different epsilon levels for affected entities). Axiom contradiction confirmed via Major Questions Doctrine's rejection of Chevron's permissive construction. Deferred axes absorbed into reading structures rather than over-splitting. Omega_doctrine_stability flags potential kernel collapse if post-Chevron administrative law eliminates interpretive deference framework entirely."
+  },
+  "_seed_id": "clean_power_plan_reversal"
+}

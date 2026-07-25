@@ -1,0 +1,219 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional History / Political Economy / Legal Authority",
+  "family_id": "ancien_regime_remonstrance_2026",
+  "topic_summary": "Analysis of the Ancien Régime Parlements' remonstrance right as a contested constitutional kernel. Regional magistrates read the registration/remonstrance mechanism as a fundamental check preserving the realm's unwritten constitutional order, while the Crown read it as minoritarian obstruction protecting elite fiscal privileges. This authority-grounding contest preceded the regime's structural collapse.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "French Parlements (regional sovereign courts; hereditary magistrate bodies with registration authority)",
+      "French Crown (absolute monarch claiming legislative supremacy)",
+      "Noblesse de robe (hereditary office-holding magistrate class)",
+      "Estates General (dormant representative assembly, not convened 1614-1789)",
+      "Lit de justice (royal ceremony forcing edict registration over Parlement objection)"
+    ],
+    "key_tensions": [
+      "Parlement registration authority vs Crown legislative will (magistrates claim constitutional veto; Crown claims absolute sovereignty)",
+      "Fiscal privilege preservation vs state revenue extraction (magistrates defend tax exemptions; Crown seeks fiscal modernization)"
+    ],
+    "key_mechanisms": [
+      "Remonstrance procedure: Parlements could refuse edict registration, submit written objections, delay implementation",
+      "Lit de justice: Crown could compel registration by personal appearance, overriding remonstrance",
+      "Venal office system: Magistrate positions purchased as hereditary property, creating structural incentive alignment with fiscal privilege"
+    ],
+    "key_absences": [
+      "Popular representation mechanism: No institutional path for non-elite voices in constitutional disputes",
+      "Formal amendment procedure: No articulated method for legitimate constitutional revision"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "magistrate_reading",
+      "human_readable": "Magistrate Reading: Remonstrance as Constitutional Guardian",
+      "structural_delta": "Remonstrance right read as fundamental constitutional mechanism preserving ancient liberties and legal continuity against arbitrary royal innovation",
+      "primary_observable": "Parlement remonstrance frequency and content; invocation of fundamental law precedent; resistance to fiscal edicts",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "noblesse_de_robe",
+      "victim": "state_fiscal_capacity",
+      "downstream_of": [
+        "venal_office_structural_base"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "One of two core contested readings; downstream synthesis of property interest and constitutional claim"
+    },
+    {
+      "claim_id": "crown_reading",
+      "human_readable": "Crown Reading: Remonstrance as Elite Obstruction",
+      "structural_delta": "Remonstrance right read as illegitimate minoritarian veto protecting particularist tax exemptions against necessary fiscal modernization",
+      "primary_observable": "Royal lit de justice frequency; Crown theoretical writings on absolute sovereignty; fiscal reform proposals blocked",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "crown_fiscal_authority",
+      "victim": "parlement_constitutional_legitimacy",
+      "downstream_of": [
+        "venal_office_structural_base"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Second core contested reading; structurally parallel to magistrate_reading with inverted victim/beneficiary"
+    },
+    {
+      "claim_id": "venal_office_structural_base",
+      "human_readable": "Venal Office System: Property Rights in Public Authority",
+      "structural_delta": "Magistrate offices purchased as hereditary property created structural entanglement between private wealth preservation and constitutional interpretation authority",
+      "primary_observable": "Office sale prices; hereditary transmission rates; correlation between fiscal edict targeting and remonstrance intensity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "magistrate_reading",
+        "crown_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream structural base; mountain providing property-rights constraint that both readings interpret differently"
+    },
+    {
+      "claim_id": "popular_exclusion_absence",
+      "human_readable": "Popular Exclusion: Absence of Non-Elite Constitutional Voice",
+      "structural_delta": "No institutional mechanism for non-privileged subjects to participate in constitutional interpretation disputes",
+      "primary_observable": "Absence of representative assembly 1614-1789; peasant/bourgeois petition rejection rates; cahiers de doléances patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "non_elite_subjects",
+      "downstream_of": [],
+      "feeds_into": [
+        "magistrate_reading",
+        "crown_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important structural absence but both selected readings capture the elite-containment dynamic"
+    },
+    {
+      "claim_id": "revision_mechanism_absence",
+      "human_readable": "Revision Mechanism Absence: No Legitimate Constitutional Amendment Path",
+      "structural_delta": "Neither reading provided institutionally legitimate mechanism for constitutional evolution; dispute could only escalate or collapse",
+      "primary_observable": "Absence of codified amendment procedure; crisis escalation patterns 1770s-1780s; theoretical writings on constitutional stasis",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as regime-level omega; procedural gap rather than substantive constraint axis"
+    }
+  ],
+  "generation_sequence": [
+    "venal_office_structural_base",
+    {
+      "claim_id": "magistrate_reading",
+      "kernel_id": "remonstrance_authority",
+      "reading_id": "magistrate_reading"
+    },
+    {
+      "claim_id": "crown_reading",
+      "kernel_id": "remonstrance_authority",
+      "reading_id": "crown_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "popular_exclusion_absence",
+      "structural_delta": "No institutional mechanism for non-elite constitutional voice",
+      "hypothesis": "piton",
+      "deferral_reason": "Elite-containment dynamic captured by both selected readings; important absence but lower structural independence"
+    },
+    {
+      "claim_id": "revision_mechanism_absence",
+      "structural_delta": "No legitimate path for constitutional amendment",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Procedural gap rather than substantive constraint; captured as regime-level omega on collapse inevitability"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_collapse_inevitability",
+      "description": "Was structural collapse inevitable given the absence of legitimate revision mechanisms, or could alternative institutional pathways have emerged? The no-amendment-path absence suggests the kernel contest could only resolve through regime failure.",
+      "source": "Deferred axis revision_mechanism_absence + absence inventory"
+    },
+    {
+      "id": "omega_popular_legitimacy",
+      "description": "Would popular inclusion mechanisms (convened Estates General, expanded franchise) have legitimized either reading, or would the underlying fiscal extraction contest have persisted regardless of procedural form?",
+      "source": "Deferred axis popular_exclusion_absence + Dark Matter Probe 3"
+    },
+    {
+      "id": "omega_comparative_constitutionalism",
+      "description": "How generalizable is this pattern to other early-modern commitment systems facing fiscal modernization pressure? English Parliament, Polish-Lithuanian Sejm, Spanish Cortes present different resolutions to structurally similar tensions.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis conducted within French constitutional historiography lens"
+    },
+    {
+      "id": "omega_property_rights_primacy",
+      "description": "Is venal_office_structural_base correctly classified as mountain (property rights as pre-political constraint) or piton (policy choice to financialize offices)? English comparison suggests venality was contingent, not inevitable.",
+      "source": "F03 (Hasty Generalization) check on mountain classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: venal_office_structural_base classified as mountain based on property rights inviolability within Ancien Régime context, but comparative constitutional analysis suggests office venality was policy-contingent rather than structural necessity. Generated omega_property_rights_primacy to bound this uncertainty. No tunnel vision (constitutional history, political economy, fiscal sociology lenses applied). No epistemic trespass (well-documented historical domain). No premise drift (kernel contest frame maintained)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Parlements' right to register and remonstrate royal edicts before enforcement, grounded in medieval precedent and uncodified constitutional practice",
+    "authority_description": "Contested between hereditary magistrates (claiming interpretive legitimacy via legal expertise, property rights in office, and guardianship of fundamental law) and absolute monarch (claiming interpretive legitimacy via sovereignty theory and divine right)",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive_Capture",
+    "is_contested_kernel": true,
+    "kernel_id": "remonstrance_authority",
+    "readings": [
+      {
+        "reading_id": "magistrate_reading",
+        "commitment": "Remonstrance right as fundamental constitutional mechanism preserving ancient liberties against arbitrary innovation",
+        "authority_grounding": "Legal expertise, hereditary office property rights, guardianship of unwritten fundamental law",
+        "sibling_readings": [
+          "crown_reading"
+        ],
+        "expected_structural_delta": "High ε for fiscal reform edicts; Parlements enter victim set when overridden; creates beneficiary class of tax-exempt magistracy"
+      },
+      {
+        "reading_id": "crown_reading",
+        "commitment": "Remonstrance right as illegitimate minoritarian veto protecting particularist privileges",
+        "authority_grounding": "Absolute sovereignty theory, divine right, necessity of fiscal modernization for state survival",
+        "sibling_readings": [
+          "magistrate_reading"
+        ],
+        "expected_structural_delta": "High ε for royal fiscal authority; Crown enters victim set when thwarted; magistrate legitimacy suppressed as obstruction"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "magistrate_reading",
+        "reading_b": "crown_reading",
+        "basis": "Magistrate reading grounds legitimacy in preservation of ancient constitutional limits on royal power; Crown reading grounds legitimacy in absolute sovereignty unconstrained by historical precedent. No single constitutional framework can simultaneously hold that royal authority is constitutionally limited by fundamental law AND that royal authority is absolute and unlimited. Accepting one axiom as foundational requires rejecting the other."
+      }
+    ]
+  },
+  "_seed_id": "parlements_inner_container_authority"
+}

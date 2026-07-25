@@ -1,0 +1,352 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Finance / Constitutional Law / Political Economy",
+  "family_id": "debt_limit_timing_2027",
+  "topic_summary": "Analysis of when the U.S. will reach its $41.1 trillion debt limit (projected late winter to mid-summer 2027), examining the structural mechanisms (extraordinary measures, X Date), key uncertainties (Iran conflict spending, tariff refunds, economic conditions), Treasury cash management discretion, and the costs of delayed congressional action including credit downgrades and elevated borrowing costs.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Bipartisan Policy Center (analytical institution projecting debt limit timing)",
+      "U.S. Treasury Department (cash and debt management authority; extraordinary measures administrator)",
+      "Congress (legislative authority over debt limit increases)",
+      "Credit Rating Agencies (S&P, Fitch, Moody's - all have downgraded U.S. debt)",
+      "Congressional Budget Office (budget and economic projections)",
+      "Federal Courts (Supreme Court, Court of International Trade - ruling on tariff legality)",
+      "Pentagon (defense spending authority; Iran conflict cost estimator)"
+    ],
+    "key_tensions": [
+      "Statutory dollar ceiling vs date-certain suspension (2027 episode differs from 2025 structurally)",
+      "Treasury cash management discretion vs congressional legislative authority (timing control split)",
+      "Debt limit as payment authorization vs deficit control mechanism (structural confusion in public discourse)"
+    ],
+    "key_claims": [
+      "Debt limit will be reached late winter to mid-summer 2027 (BPC projection based on May 2026 data)",
+      "Extraordinary measures last 6-9 months after limit reached before X Date",
+      "Debt limit brinksmanship raises borrowing costs (2011: $1.3B; 2023: 5.84% four-week yield)",
+      "All three major rating agencies have downgraded U.S. sovereign debt",
+      "Raising debt ceiling does not increase deficit (limit is on payment of existing obligations)"
+    ],
+    "key_mechanisms": [
+      "Extraordinary measures: Treasury suspends deposits to civil service/postal retirement funds and redeems their securities to create headroom",
+      "Debt Issuance Suspension Period (DISP): declared upon reaching limit; enables extraordinary measures",
+      "Cash drawdown vs reserve building: Treasury discretion over timing tradeoff (earlier limit vs later X Date)",
+      "Credit downgrade transmission: sovereign rating cuts → investment fund rebalancing → higher borrowing costs for households/businesses"
+    ],
+    "key_absences": [
+      "Political dynamics of congressional action: no analysis of party control, negotiation leverage, or historical resolution patterns",
+      "Structural deficit drivers: debt accumulation attributed to 'structural problems' but not decomposed into specific fiscal mechanisms",
+      "International comparison: no reference to how other sovereigns manage debt ceilings or whether U.S. mechanism is unique"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "statutory_ceiling_vs_suspension",
+      "human_readable": "Statutory Dollar Ceiling vs Date-Certain Suspension",
+      "structural_delta": "Legal mechanism difference: fixed dollar limit ($41.1T) vs suspension until specified date",
+      "primary_observable": "Legislative text structure; Treasury operational constraints under each regime",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "treasury_cash_discretion",
+        "extraordinary_measures_duration"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational structural difference; upstream to multiple axes; mountain providing legal constraint base"
+    },
+    {
+      "claim_id": "treasury_cash_discretion",
+      "human_readable": "Treasury Cash Management Discretion",
+      "structural_delta": "Executive branch discretion over timing tradeoff: cash drawdown (earlier limit, later X Date) vs reserve building (later limit, earlier X Date)",
+      "primary_observable": "Treasury cash balance trajectory; TGA (Treasury General Account) levels; debt issuance patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "statutory_ceiling_vs_suspension"
+      ],
+      "feeds_into": [
+        "limit_arrival_timing",
+        "x_date_timing"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (cash management vs legal structure); coordination mechanism with measurable impact on timing"
+    },
+    {
+      "claim_id": "extraordinary_measures_duration",
+      "human_readable": "Extraordinary Measures Duration Window",
+      "structural_delta": "Time buffer between reaching limit and X Date, determined by retirement fund headroom and cash flow",
+      "primary_observable": "Civil service/postal retirement fund balances; monthly federal cash flow surplus/deficit",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "statutory_ceiling_vs_suspension"
+      ],
+      "feeds_into": [
+        "x_date_timing"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Different observable from treasury_cash_discretion (retirement fund mechanics vs TGA); structural time buffer"
+    },
+    {
+      "claim_id": "limit_arrival_timing",
+      "human_readable": "Debt Limit Arrival Timing (Late Winter to Mid-Summer 2027)",
+      "structural_delta": "When debt subject to limit reaches $41.1T ceiling, driven by deficit accumulation rate and Treasury cash choices",
+      "primary_observable": "Daily Treasury Statement debt subject to limit; monthly deficit/surplus data",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "treasury_department",
+      "victim": "congressional_budget_authority",
+      "downstream_of": [
+        "treasury_cash_discretion",
+        "iran_conflict_spending",
+        "tariff_revenue_volatility",
+        "economic_condition_uncertainty"
+      ],
+      "feeds_into": [
+        "congressional_action_window"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Highest centrality; downstream synthesis of multiple uncertainty axes; tangled_rope with clear beneficiary structure"
+    },
+    {
+      "claim_id": "x_date_timing",
+      "human_readable": "X Date Timing (6-9 Months After Limit)",
+      "structural_delta": "When Treasury exhausts extraordinary measures and cash, unable to meet obligations in full",
+      "primary_observable": "Extraordinary measures headroom depletion rate; projected cash flow under DISP",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "treasury_department",
+      "victim": "obligation_recipients",
+      "downstream_of": [
+        "extraordinary_measures_duration",
+        "treasury_cash_discretion",
+        "iran_conflict_spending",
+        "economic_condition_uncertainty"
+      ],
+      "feeds_into": [
+        "congressional_action_window"
+      ],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 8,
+      "selection_reason": "Second synthesis node; distinct from limit_arrival (different victims, different mechanisms); high centrality"
+    },
+    {
+      "claim_id": "iran_conflict_spending",
+      "human_readable": "Iran Conflict Military Spending Uncertainty",
+      "structural_delta": "Unpredictable defense outlays for weaponry replenishment and potential 42% budget increase plus supplemental",
+      "primary_observable": "Pentagon monthly obligations; supplemental appropriation size if enacted; FY2027 defense budget authority",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "fiscal_predictability",
+      "downstream_of": [],
+      "feeds_into": [
+        "limit_arrival_timing",
+        "x_date_timing"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct uncertainty source; high epsilon; feeds both timing nodes; snare structure (unpredictable extraction)"
+    },
+    {
+      "claim_id": "tariff_revenue_volatility",
+      "human_readable": "Tariff Revenue Volatility (Court-Ordered Refunds and Collection Uncertainty)",
+      "structural_delta": "Revenue uncertainty from $166B+ refunds, CIT ruling appeal, and July tariff expiration",
+      "primary_observable": "CBP refund processing rate; CIT appeal outcome; tariff renewal/replacement legislative/executive action",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "revenue_predictability",
+      "downstream_of": [],
+      "feeds_into": [
+        "limit_arrival_timing"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Distinct from iran_conflict (revenue vs spending; judicial vs executive driver); high epsilon; snare structure"
+    },
+    {
+      "claim_id": "economic_condition_uncertainty",
+      "human_readable": "Economic Condition Uncertainty (Growth, Employment, Inflation)",
+      "structural_delta": "Revenue and safety net spending volatility from energy-driven inflation and potential slowdown",
+      "primary_observable": "Individual income/payroll tax receipts; corporate tax collections; safety net outlays; CPI energy component",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "fiscal_stability",
+      "downstream_of": [],
+      "feeds_into": [
+        "limit_arrival_timing",
+        "x_date_timing"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Distinct from other uncertainties (macroeconomic vs policy-specific); feeds both timing nodes; tangled_rope (multiple feedback loops)"
+    },
+    {
+      "claim_id": "congressional_action_window",
+      "human_readable": "Congressional Action Window and Brinksmanship Costs",
+      "structural_delta": "Legislative response timing relative to limit/X Date, and associated borrowing cost increases",
+      "primary_observable": "Days between limit arrival and legislative action; short-term Treasury yield spreads during episode; credit rating actions",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "political_leverage_seekers",
+      "victim": "taxpayers",
+      "downstream_of": [
+        "limit_arrival_timing",
+        "x_date_timing"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 9,
+      "selection_reason": "Terminal synthesis node; distinct beneficiary/victim structure; high epsilon from demonstrated cost (2011: $1.3B, 2023: 5.84% yield)"
+    },
+    {
+      "claim_id": "structural_deficit_drivers",
+      "human_readable": "Structural Deficit Drivers (Long-Term Fiscal Imbalance)",
+      "structural_delta": "Underlying fiscal mechanisms causing debt-to-GDP ratio to climb from 100% to 120% over decade",
+      "primary_observable": "CBO long-term budget projections; entitlement spending growth; revenue-to-GDP ratio; interest cost trajectory",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "limit_arrival_timing"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: source material attributes debt accumulation to 'structural problems' but does not decompose mechanisms; insufficient extraction substrate for constraint story; omega material"
+    },
+    {
+      "claim_id": "political_negotiation_dynamics",
+      "human_readable": "Political Negotiation Dynamics (Party Control, Leverage, Historical Patterns)",
+      "structural_delta": "Congressional party composition and historical resolution patterns affecting action timing",
+      "primary_observable": "Party control of House/Senate; historical debt limit episode durations; negotiation leverage indicators",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "majority_party",
+      "victim": "minority_party",
+      "downstream_of": [],
+      "feeds_into": [
+        "congressional_action_window"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: conspicuous absence in source material; no extraction substrate on party dynamics or historical patterns; would require external research to construct constraint story"
+    },
+    {
+      "claim_id": "international_debt_ceiling_comparison",
+      "human_readable": "International Debt Ceiling Comparison (U.S. Mechanism Uniqueness)",
+      "structural_delta": "Whether U.S. statutory debt ceiling is unique among sovereigns or part of broader institutional pattern",
+      "primary_observable": "Comparative constitutional/statutory frameworks; OECD sovereign debt management practices",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: zero centrality; no extraction substrate in source material; comparative analysis would require external research; omega material"
+    }
+  ],
+  "generation_sequence": [
+    "statutory_ceiling_vs_suspension",
+    "treasury_cash_discretion",
+    "extraordinary_measures_duration",
+    "iran_conflict_spending",
+    "tariff_revenue_volatility",
+    "economic_condition_uncertainty",
+    "limit_arrival_timing",
+    "x_date_timing",
+    "congressional_action_window"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "structural_deficit_drivers",
+      "structural_delta": "Underlying fiscal mechanisms causing long-term debt-to-GDP growth",
+      "hypothesis": "mountain",
+      "deferral_reason": "Source attributes debt accumulation to 'structural problems' but does not decompose mechanisms; insufficient extraction substrate for constraint story"
+    },
+    {
+      "claim_id": "political_negotiation_dynamics",
+      "structural_delta": "Congressional party composition and historical resolution patterns",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Conspicuous absence in source material; no extraction substrate on party dynamics or historical patterns; would require external research"
+    },
+    {
+      "claim_id": "international_debt_ceiling_comparison",
+      "structural_delta": "U.S. statutory debt ceiling uniqueness among sovereigns",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero centrality; no extraction substrate; comparative analysis would require external research"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_structural_deficit_decomposition",
+      "description": "Source claims debt accumulation is 'primarily due to structural problems rather than events' but does not decompose what those structural problems are. Are they entitlement growth (mountain), tax policy choices (rope), or interest compounding (piton)? Without decomposition, cannot assess whether deficit drivers are constraints or policy choices.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis structural_deficit_drivers"
+    },
+    {
+      "id": "omega_political_leverage_asymmetry",
+      "description": "Congressional action window analysis identifies 'political_leverage_seekers' as beneficiaries but source provides no substrate on party control, historical negotiation patterns, or leverage distribution. Is brinksmanship a symmetric game or does party composition create asymmetric extraction? Deferred axis political_negotiation_dynamics would address this.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis political_negotiation_dynamics"
+    },
+    {
+      "id": "omega_debt_ceiling_institutional_uniqueness",
+      "description": "Is the U.S. statutory debt ceiling a unique institutional mechanism or part of a broader pattern among sovereigns? If unique, what structural features of U.S. governance produce it? If not unique, what do other implementations reveal about the mechanism's extractiveness? No comparative substrate in source.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + deferred axis international_debt_ceiling_comparison"
+    },
+    {
+      "id": "omega_treasury_cash_target_justification",
+      "description": "Treasury anticipates holding $950B cash at end of FY2026. Source notes this is 'considerable discretion' but provides no analysis of what determines optimal cash level. Is $950B a mountain (operational necessity), rope (coordination norm), or piton (legacy practice)? Cash target itself may be a constraint axis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_credit_downgrade_transmission_mechanism",
+      "description": "Source claims sovereign downgrades 'can cause some investment funds to reduce their holdings of U.S. securities, leading to higher borrowing costs' but does not specify which funds have binding rating floors or quantify the transmission magnitude. Is this a demonstrated mechanism or hypothetical risk?",
+      "source": "Extraction (mechanisms) + F03 concern"
+    },
+    {
+      "id": "omega_extraordinary_measures_exhaustion_sequence",
+      "description": "Source states extraordinary measures last '6-9 months' but does not detail the depletion sequence. Do all measures exhaust simultaneously or sequentially? Does sequence create strategic timing opportunities for Treasury? Mechanism detail missing.",
+      "source": "Extraction (mechanisms)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: statutory_ceiling_vs_suspension and extraordinary_measures_duration classified as mountains but legal/procedural mechanisms may be policy choices (ropes or pitons) rather than immutable constraints. Generated omega_debt_ceiling_institutional_uniqueness and omega_extraordinary_measures_exhaustion_sequence to bound this uncertainty. Additionally, credit_downgrade_transmission_mechanism may be overstated without quantification (omega_credit_downgrade_transmission_mechanism)."
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Federalism / Commerce Power",
+  "family_id": "commerce_clause_interpretive_contest",
+  "topic_summary": "Analysis of the Commerce Clause (Article I, Section 8) as a contested kernel where competing interpretive traditions—originalist/textualist versus living constitutionalist—read the same constitutional text to emit structurally different constraints on federal regulatory authority. The narrow reading limits federal power to interstate trade facilitation, preserving state economic autonomy; the broad reading extends federal reach to any economic activity with substantial effects on commerce, enabling comprehensive national regulation.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Commerce Clause (Article I, Section 8, Clause 3: constitutional text)",
+      "Federal Government (regulatory authority claimant)",
+      "State Governments (residual sovereignty holders under Tenth Amendment)",
+      "Supreme Court (interpretive authority over constitutional meaning)",
+      "Wickard v. Filburn (1942 precedent establishing aggregation principle)",
+      "United States v. Lopez (1995 precedent reining in unlimited Commerce Clause expansion)"
+    ],
+    "key_tensions": [
+      "Textualist constraint (original public meaning of 'regulate' and 'among') vs living constitutionalist constraint (evolved understanding responsive to industrial economy)",
+      "Enumerated powers doctrine (federalism as structural protection) vs national market integration (Commerce Clause as plenary economic authority)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article I, Section 8, Clause 3: 'To regulate Commerce with foreign Nations, and among the several States, and with the Indian Tribes.' The constitutional text itself is stabilized; its scope is contested.",
+    "authority_description": "Supreme Court holds interpretive authority via Marbury v. Madison judicial review power. Legitimacy derives from constitutional appointment (Article III) and precedent doctrine (stare decisis), but competing methodologies (originalism vs living constitutionalism) produce rival constraint sets from the same text.",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "commerce_clause_scope",
+    "readings": [
+      {
+        "reading_id": "narrow_originalist",
+        "commitment": "Commerce among states means trade crossing state lines; 'regulate' means make regular (facilitate) not restrict; federal power limited to removing state-imposed barriers to interstate trade and ensuring uniform commercial rules",
+        "authority_grounding": "Originalist/textualist methodology: original public meaning of 1787 ratifiers. Authority derives from constitutional text as fixed law requiring fidelity to founding-era semantic content.",
+        "sibling_readings": [
+          "broad_effects_test",
+          "intermediate_channels"
+        ],
+        "expected_structural_delta": "Narrow victim set (only interstate commercial transactions subject to federal regulation). High state autonomy over intrastate economic activity. Federal environmental, labor, civil rights laws that regulate non-commercial or purely local activity are unconstitutional. Low federal extractiveness from state sovereignty. Beneficiaries: state governments, local businesses, decentralized regulatory experimentation. Victims: national regulatory uniformity, civil rights enforcement in recalcitrant states."
+      },
+      {
+        "reading_id": "broad_effects_test",
+        "commitment": "Commerce includes any economic activity that substantially affects interstate commerce in the aggregate; 'regulate' includes prohibition and comprehensive control; federal power extends to intrastate activities with cumulative national economic impact",
+        "authority_grounding": "Living constitutionalist methodology: constitutional meaning evolves with societal needs. Authority derives from precedent (Wickard aggregation principle) and functional necessity of national economic regulation in integrated markets. Post-New Deal settlement.",
+        "sibling_readings": [
+          "narrow_originalist",
+          "intermediate_channels"
+        ],
+        "expected_structural_delta": "Expansive victim set (virtually all economic activity potentially subject to federal regulation via aggregation doctrine). Low state autonomy—federal authority subsumes state police powers when economic effects are claimed. High federal extractiveness from state sovereignty. Beneficiaries: federal regulators, national interest groups seeking uniform policy, civil rights enforcement. Victims: state experimentation, local economic autonomy, federalism as constraint on centralized power."
+      },
+      {
+        "reading_id": "intermediate_channels",
+        "commitment": "Federal power extends to (1) channels of interstate commerce, (2) instrumentalities and persons/things in interstate commerce, (3) activities substantially affecting interstate commerce, but subject to limiting principles: non-economic activity requires jurisdictional element, aggregation applies only to economic activity, cannot regulate via attenuated causal chains",
+        "authority_grounding": "Doctrinal compromise methodology: synthesizes originalist limits (Lopez/Morrison) with effects-test precedent (Wickard/Raich). Authority derives from stare decisis and institutional interest in coherent doctrine navigating federalism tensions.",
+        "sibling_readings": [
+          "narrow_originalist",
+          "broad_effects_test"
+        ],
+        "expected_structural_delta": "Moderate victim set (economic activity broadly defined but non-economic local conduct excluded unless channel/instrumentality nexus). Moderate state autonomy—federal power checked by categorical limits but still extensive within economic sphere. Medium federal extractiveness. Beneficiaries: federal authority over national economic issues, state authority over family law/criminal law/education. Victims: conceptual coherence (limiting principles are manipulable; economic/non-economic distinction is unstable)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "narrow_originalist",
+        "reading_b": "broad_effects_test",
+        "basis": "Narrow originalist holds that constitutional meaning is fixed at ratification and discoverable through original public meaning; judges who depart from this meaning engage in illegitimate lawmaking. Broad effects test holds that constitutional meaning must adapt to social and economic change; fidelity to fixed 1787 meaning would produce unworkable government in modern integrated economy. No single coherent framework can hold both: either meaning is fixed (originalism) or it evolves (living constitutionalism). Accepting one as normatively correct requires rejecting the other's foundational axiom about constitutional interpretation."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "narrow_originalist",
+      "human_readable": "Narrow Originalist Reading (Trade Facilitation Constraint)",
+      "structural_delta": "Commerce Clause limits federal power to facilitating interstate trade and removing state-imposed barriers; intrastate economic activity remains under state police powers",
+      "primary_observable": "Scope of federal statutes invalidated under Commerce Clause; frequency of state sovereignty defenses succeeding in litigation",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "state_governments",
+      "victim": "federal_regulatory_uniformity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "One of three readings proceeding to generation; represents most restrictive interpretation with clearest structural constraint on federal power"
+    },
+    {
+      "claim_id": "broad_effects_test",
+      "human_readable": "Broad Effects Test Reading (Plenary Economic Authority)",
+      "structural_delta": "Commerce Clause grants federal authority over any activity that substantially affects interstate commerce in aggregate; federal power subsumes state economic regulation",
+      "primary_observable": "Scope of federal statutes upheld under Commerce Clause; percentage of economic activity subject to federal preemption",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "federal_regulatory_agencies",
+      "victim": "state_economic_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "One of three readings proceeding to generation; represents maximum extractiveness endpoint with highest suppression of alternatives"
+    },
+    {
+      "claim_id": "intermediate_channels",
+      "human_readable": "Intermediate Channels-Plus-Effects Reading (Categorical Compromise)",
+      "structural_delta": "Federal power extends to channels/instrumentalities of commerce plus activities substantially affecting commerce, subject to limiting principles distinguishing economic from non-economic local activity",
+      "primary_observable": "Frequency of Commerce Clause litigation turning on economic/non-economic distinction; stability of three-category framework in Supreme Court doctrine",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "doctrinal_coherence_seekers",
+      "victim": "conceptual_clarity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "One of three readings proceeding to generation; represents institutional compromise attempting to navigate axiom contradiction, revealing tangled_rope character of doctrinal synthesis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "narrow_originalist",
+      "kernel_id": "commerce_clause_scope",
+      "reading_id": "narrow_originalist"
+    },
+    {
+      "claim_id": "broad_effects_test",
+      "kernel_id": "commerce_clause_scope",
+      "reading_id": "broad_effects_test"
+    },
+    {
+      "claim_id": "intermediate_channels",
+      "kernel_id": "commerce_clause_scope",
+      "reading_id": "intermediate_channels"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_dormant_commerce_clause",
+      "description": "The Dormant Commerce Clause doctrine (judicial prohibition on state laws discriminating against interstate commerce) is structurally independent from affirmative federal Commerce Clause power. It constrains states even absent federal legislation. This axis was not decomposed because it operates on a different constraint mechanism (negative implication vs enumerated power), but it may interact with all three readings by setting a constitutional floor that state autonomy arguments cannot breach.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_indian_commerce_ambiguity",
+      "description": "The Commerce Clause grants Congress power to regulate commerce 'with the Indian Tribes,' yet this third prong receives almost no doctrinal attention compared to interstate commerce. If the narrow originalist reading is correct for interstate commerce, does the same constraint apply to Indian commerce? Or does plenary power doctrine (from Trust Doctrine / Marshall Trilogy) create a separate extractiveness regime that would be inconsistent with originalist constraints? This asymmetry may reveal that originalism is selectively applied.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction absence"
+    },
+    {
+      "id": "omega_foreign_commerce_carveout",
+      "description": "Foreign commerce regulation receives minimal judicial scrutiny under the Commerce Clause, with courts deferring almost entirely to Congress. If the broad effects test's expansiveness is problematic for federalism, why is foreign commerce—where constitutional text is identical—treated as plenary? This suggests the real constraint is not textual interpretation but institutional coordination needs: foreign affairs require centralization, domestic federalism tolerates friction. The kernel contest may be downstream of a prior choice about coordination costs, not upstream of it.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_necessary_and_proper_entanglement",
+      "description": "All three readings assume Commerce Clause analysis can proceed independently of the Necessary and Proper Clause (Article I, Section 8, final clause). But McCulloch v. Maryland established that enumerated powers are augmented by means reasonably related to their exercise. Does this mean the narrow originalist reading is constitutionally incoherent (the Framers enacted both clauses; refusing to read them together privileges one text over another)? Or does it mean the broad effects test smuggles Necessary and Proper elasticity into Commerce Clause text, collapsing two distinct grants of authority? The two clauses may form a higher-order kernel contest about federal power scope.",
+      "source": "§3 Independence Testing (Type B overlap detection)"
+    },
+    {
+      "id": "omega_stare_decisis_override",
+      "description": "If originalism is correct, Wickard v. Filburn was wrongly decided in 1942, and Gonzales v. Raich (2005) perpetuated the error. Under stare decisis doctrine, should the Court overrule 80+ years of precedent? The narrow reading's structural delta depends on willingness to reject settled expectations. If precedent is a rope-level coordination constraint, originalist fidelity to the kernel may be defeated by a separate constitutional norm (stability). The axiom contradiction may be irresolvable within a precedent-based system.",
+      "source": "§2.2 Dark Matter Probe 3 (Beneficiary Scan) + commitment system drift_status analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings cleanly partition the interpretive space. The intermediate_channels reading is not a midpoint average but a distinct institutional compromise with its own coherence problems (economic/non-economic line is manipulable). Axiom contradiction between narrow_originalist and broad_effects_test is genuine and documented. All three readings proceed to generation."
+  },
+  "_seed_id": "us_constitution_commerce_clause"
+}

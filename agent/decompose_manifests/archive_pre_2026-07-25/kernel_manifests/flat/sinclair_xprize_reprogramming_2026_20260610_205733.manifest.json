@@ -1,0 +1,219 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Biomedical Research / Regulatory Science / Technology Governance",
+  "family_id": "sinclair_xprize_reprogramming_2026",
+  "topic_summary": "David Sinclair plans to test an oral chemical reprogramming drug (SL-100) in human trials as part of the XPrize Healthspan Competition, aiming for whole-body age reversal. The competition offers $101M for demonstrating 10-year rejuvenation in one year. This represents a shift from gene therapy (limited to eyes) to systemic chemical intervention, raising questions about safety, efficacy measurement, and regulatory pathways for aging interventions.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "David Sinclair (Harvard biologist, XPrize competitor, controversial longevity advocate)",
+      "XPrize Foundation (competition organizer, $101M prize pool, Peter Diamandis leadership)",
+      "Life Biosciences (Sinclair company, FDA-approved eye gene therapy trial ER-100)",
+      "Hevolution Foundation (Saudi Arabia, competition funder)",
+      "FDA (regulatory authority, aging measurement dialogue participant)",
+      "NewLimit (Brian Armstrong company, $435M raised, liver reprogramming focus)",
+      "Betterhumans (James Clement organization, running Sinclair's oral cocktail trials)",
+      "Vadim Gladyshev (Harvard competitor, reported chemical reprogramming toxicity)"
+    ],
+    "key_tensions": [
+      "Whole-body systemic intervention vs localized gene therapy (chemical drugs vs viral vectors)",
+      "Sinclair's promotional claims vs scientific community skepticism (credibility crisis)",
+      "Competition timeline pressure vs rigorous safety validation (1-year reversal requirement)",
+      "Aging as treatable condition vs lack of regulatory measurement framework"
+    ],
+    "key_mechanisms": [
+      "Chemical reprogramming: drug cocktails mimic Yamanaka factors (OCT4/SOX2/KLF4), reset epigenetic marks, claimed to restore youthful transcriptome without erasing cell identity",
+      "XPrize competition structure: $101M prize for 10-year improvement in immune/cognitive/muscle function after 1 year treatment, standardized aging biomarkers required",
+      "Regulatory arbitrage: using off-label prescription of approved drugs (forskolin, tranylcypromine) plus experimental compounds to bypass full FDA approval pathway"
+    ],
+    "key_absences": [
+      "Published animal data for SL-100: Sinclair claims 'extensive animal studies' but no peer-reviewed results",
+      "Tumor risk mitigation strategy: Yamanaka factors produce teratomas; no disclosure of safeguards for systemic exposure",
+      "Independent replication: Gladyshev's team found toxicity; no other lab has validated whole-body chemical reprogramming"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "reprogramming_safety_toxicity",
+      "human_readable": "Reprogramming Safety vs Toxicity (Therapeutic Window)",
+      "structural_delta": "Chemical reprogramming requires high concentrations that are toxic in animal models; no published evidence of safe systemic dosing in mammals",
+      "primary_observable": "Dose-response curves in animal models; adverse event rates in human trials; tumor incidence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "competition_timeline_pressure",
+        "regulatory_measurement_gap"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Physical/biological constraint upstream of all intervention strategies; Gladyshev's toxicity data establishes this as mountain not rope"
+    },
+    {
+      "claim_id": "regulatory_measurement_gap",
+      "human_readable": "Regulatory Measurement Gap (Aging Biomarker Validation)",
+      "structural_delta": "No FDA-accepted biomarkers for aging or age reversal; competition aims to create standards but regulatory acceptance uncertain",
+      "primary_observable": "FDA guidance documents on aging endpoints; biomarker qualification status; XPrize measurement protocol adoption rate",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "reprogramming_safety_toxicity"
+      ],
+      "feeds_into": [
+        "competition_timeline_pressure"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Coordination problem distinct from safety; affects all competitors equally; upstream to timeline pressure"
+    },
+    {
+      "claim_id": "competition_timeline_pressure",
+      "human_readable": "Competition Timeline Pressure (1-Year Reversal Requirement)",
+      "structural_delta": "XPrize requires 10-year improvement in 1 year of treatment, creating incentive to skip long-term safety validation",
+      "primary_observable": "Trial design choices (duration, safety monitoring intervals); publication timing vs competition deadlines",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "competition_organizers",
+      "victim": "trial_participants",
+      "downstream_of": [
+        "reprogramming_safety_toxicity",
+        "regulatory_measurement_gap"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; synthesis node where safety mountain and measurement rope create extractive pressure on human subjects"
+    },
+    {
+      "claim_id": "sinclair_credibility_crisis",
+      "human_readable": "Sinclair Credibility Crisis (Promotional Claims vs Scientific Rigor)",
+      "structural_delta": "Pattern of unsubstantiated public claims (dog supplement reversal, unpublished animal data) vs scientific community standards",
+      "primary_observable": "Peer-reviewed publication rate vs media appearance rate; retraction/correction frequency; institutional sanctions (Academy resignation)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "sinclair_commercial_ventures",
+      "victim": "scientific_credibility_commons",
+      "downstream_of": [],
+      "feeds_into": [
+        "competition_timeline_pressure"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high epsilon but structurally downstream effect of timeline pressure rather than independent axis; captured in omega"
+    },
+    {
+      "claim_id": "systemic_vs_localized_delivery",
+      "human_readable": "Systemic vs Localized Delivery (Whole-Body vs Organ-Specific)",
+      "structural_delta": "Oral drugs reach all tissues vs gene therapy limited to injection site; different risk/benefit profiles",
+      "primary_observable": "Biodistribution data; off-target tissue exposure; organ-specific efficacy measurements",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "reprogramming_safety_toxicity"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: subsumed by reprogramming_safety_toxicity mountain; delivery mechanism is component of toxicity constraint not independent axis"
+    },
+    {
+      "claim_id": "commercial_funding_distortion",
+      "human_readable": "Commercial Funding Distortion (Billionaire-Backed Longevity Race)",
+      "structural_delta": "NewLimit ($435M, Thiel/Armstrong), Hevolution (Saudi sovereign wealth), Life Biosciences create capital concentration in unvalidated field",
+      "primary_observable": "Funding allocation vs peer-reviewed evidence base; valuation multiples vs clinical trial stage; investor return timelines",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "longevity_startup_founders",
+      "victim": "alternative_aging_research_pathways",
+      "downstream_of": [],
+      "feeds_into": [
+        "competition_timeline_pressure"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural overlap with competition_timeline_pressure; funding source is mechanism not independent constraint"
+    }
+  ],
+  "generation_sequence": [
+    "reprogramming_safety_toxicity",
+    "regulatory_measurement_gap",
+    "competition_timeline_pressure"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "sinclair_credibility_crisis",
+      "structural_delta": "Pattern of unsubstantiated public claims vs scientific community standards",
+      "hypothesis": "snare",
+      "deferral_reason": "High epsilon but structurally downstream of timeline pressure; credibility erosion is consequence not independent constraint"
+    },
+    {
+      "claim_id": "systemic_vs_localized_delivery",
+      "structural_delta": "Oral drugs reach all tissues vs gene therapy limited to injection site",
+      "hypothesis": "mountain",
+      "deferral_reason": "Subsumed by reprogramming_safety_toxicity; delivery mechanism is component of toxicity constraint"
+    },
+    {
+      "claim_id": "commercial_funding_distortion",
+      "structural_delta": "Billionaire-backed capital concentration in unvalidated longevity field",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Structural overlap with competition_timeline_pressure; funding source is mechanism not independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_tumor_risk_silence",
+      "description": "Yamanaka factors produce teratomas in prior experiments. SL-100 composition is 'highly confidential' with no published tumor incidence data. Is tumor risk mitigated or suppressed from disclosure?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + key_absences"
+    },
+    {
+      "id": "omega_replication_crisis",
+      "description": "Gladyshev (Harvard competitor) found chemical reprogramming toxic in mice. No independent lab has replicated Sinclair's claimed whole-body reversal. Is SL-100 a genuine advance or measurement artifact?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + key_absences"
+    },
+    {
+      "id": "omega_regulatory_arbitrage",
+      "description": "Using off-label approved drugs (forskolin, tranylcypromine) plus experimental compounds may bypass full FDA approval. Is this innovation or exploitation of regulatory gaps?",
+      "source": "Dark Matter Probe 1 (Operational Medium) + mechanisms"
+    },
+    {
+      "id": "omega_credibility_extraction",
+      "description": "Sinclair's Academy resignation (2024 dog supplement claims) vs continued Harvard affiliation and XPrize participation. Does institutional prestige launder promotional claims?",
+      "source": "Deferred axis sinclair_credibility_crisis + tensions"
+    },
+    {
+      "id": "omega_hevolution_geopolitics",
+      "description": "Saudi Hevolution Foundation funds XPrize ($101M) and other longevity ventures. Is this scientific philanthropy or sovereign wealth diversification with reputational goals?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + entities"
+    },
+    {
+      "id": "omega_measurement_capture",
+      "description": "XPrize aims to create aging biomarker standards that FDA might adopt. Do competition organizers (Diamandis) and competitors (Sinclair) have aligned interests in lenient standards?",
+      "source": "Deferred axis commercial_funding_distortion + regulatory_measurement_gap"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: reprogramming_safety_toxicity classified as mountain based on Gladyshev's toxicity data, but Sinclair claims 'extensive animal studies' showing safety. If unpublished data contradicts Gladyshev, this may be rope (coordination on dosing protocols) not mountain. Generated omega_replication_crisis to bound this uncertainty. No F34 despite complex biochemistry because domain is biomedical research governance (within model competence) not molecular mechanism prediction."
+  }
+}

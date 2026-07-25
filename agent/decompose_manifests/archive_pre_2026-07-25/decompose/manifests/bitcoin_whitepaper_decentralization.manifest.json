@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Cryptocurrency Economics / Monetary Systems / Technology Governance",
+  "family_id": "bitcoin_whitepaper_interpretation",
+  "topic_summary": "Analysis of the Bitcoin whitepaper as a contested kernel where divergent readings instantiate fundamentally different constraints. The peer-to-peer cash reading prioritizes transactional utility and censorship resistance, while the digital gold reading prioritizes store of value and scarcity-driven appreciation. These readings emit constraints with different victim sets and structural extractiveness.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Satoshi Nakamoto whitepaper (founding text establishing cryptographic proof mechanism)",
+      "Peer-to-peer cash advocates (prioritize transactional utility, low fees, fast settlement)",
+      "Digital gold advocates (prioritize store of value, scarcity, institutional adoption)",
+      "Bitcoin protocol (technical implementation with fixed supply cap)",
+      "Transaction fee market (emergent mechanism for block space allocation)"
+    ],
+    "key_tensions": [
+      "Transactional throughput vs security/decentralization (block size debate)",
+      "Currency function vs asset function (spending vs holding incentive structure)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "p2p_cash_reading",
+      "human_readable": "Peer-to-Peer Cash Reading (Transactional Utility Priority)",
+      "structural_delta": "Censorship-resistant transaction medium with low fees and fast settlement as primary function",
+      "primary_observable": "Transaction fee levels, block size, merchant adoption rate",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "transactional_users",
+      "victim": "high_fee_censorship_targets",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; distinct beneficiary set and structural constraint emission"
+    },
+    {
+      "claim_id": "digital_gold_reading",
+      "human_readable": "Digital Gold Reading (Store of Value Priority)",
+      "structural_delta": "Inflation hedge and wealth preservation vehicle with scarcity as primary attribute",
+      "primary_observable": "Price appreciation, institutional custody volume, correlation with traditional stores of value",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "long_term_holders",
+      "victim": "late_entrants_priced_out",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; fundamentally different victim set and extractiveness profile"
+    },
+    {
+      "claim_id": "protocol_ossification_reading",
+      "human_readable": "Protocol Ossification Reading (Immutability as Authority)",
+      "structural_delta": "Protocol changes are illegitimate unless approaching consensus-zero threshold; stability is virtue",
+      "primary_observable": "Frequency and scope of protocol upgrades, node diversity metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "status_quo_beneficiaries",
+      "victim": "innovation_dependent_use_cases",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading addressing authority structure itself; different observable than first two readings"
+    },
+    {
+      "claim_id": "medium_of_exchange_mountain",
+      "human_readable": "Medium of Exchange Requirements (Physical Constraint Base)",
+      "structural_delta": "Monetary medium requires specific velocity, divisibility, and stability properties",
+      "primary_observable": "Transaction velocity, price volatility measures, divisibility structure",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "p2p_cash_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain upstream constraint; captured implicitly through p2p_cash_reading constraints"
+    },
+    {
+      "claim_id": "network_effect_lock_in",
+      "human_readable": "Network Effect Lock-In (First Mover Advantage)",
+      "structural_delta": "Liquidity concentration and brand recognition create path dependency independent of technical merit",
+      "primary_observable": "Market cap dominance, exchange liquidity depth, protocol upgrade difficulty",
+      "epsilon_bin": "high",
+      "hypothesis": "piton",
+      "beneficiary": "early_adopters",
+      "victim": "competing_protocols",
+      "downstream_of": [],
+      "feeds_into": [
+        "digital_gold_reading",
+        "protocol_ossification_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high extractiveness but feeds into both selected readings; covered through their constraint stories"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "p2p_cash_reading",
+      "kernel_id": "bitcoin_whitepaper",
+      "reading_id": "p2p_cash_reading"
+    },
+    {
+      "claim_id": "digital_gold_reading",
+      "kernel_id": "bitcoin_whitepaper",
+      "reading_id": "digital_gold_reading"
+    },
+    {
+      "claim_id": "protocol_ossification_reading",
+      "kernel_id": "bitcoin_whitepaper",
+      "reading_id": "protocol_ossification_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "medium_of_exchange_mountain",
+      "structural_delta": "Physical properties required for monetary medium function",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream constraint captured through p2p_cash_reading constraint story"
+    },
+    {
+      "claim_id": "network_effect_lock_in",
+      "structural_delta": "First mover liquidity concentration creates path dependency",
+      "hypothesis": "piton",
+      "deferral_reason": "High extractiveness but feeds into both digital_gold and ossification readings; structural effects captured through their constraints"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_block_size_escalation",
+      "description": "Does the block size debate represent axiom contradiction (p2p_cash vs digital_gold) or merely parameter optimization? If contradiction, it surfaces licensed plurality where both positions remain socially live despite incompatible axioms.",
+      "source": "Axiom Contradiction Declaration analysis"
+    },
+    {
+      "id": "omega_energy_consumption_reclassification",
+      "description": "Is proof-of-work energy consumption a mountain (physics of computation), rope (coordination on security budget), or snare (externalized environmental cost)? Classification changes victim set identification.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_state_capture_scenario",
+      "description": "Are nation-state adoption pressures (El Salvador, institutional custody) a scaffold toward legitimacy or a piton converting censorship resistance into selectively enforced permission? Beneficiary/victim structure inverts under regulatory capture.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_whitepaper_textual_authority",
+      "description": "Does treating the whitepaper as kernel assume interpretive authority that Satoshi's disappearance explicitly dissolved? If no legitimate interpreter exists, are all readings equally legitimate (licensed plurality) or equally suspect (interpretive vacuum)?",
+      "source": "Commitment System Recognition - authority structure ambiguity"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings exhibit structural independence with non-overlapping observables and distinct beneficiary/victim sets. Kernel recognition valid: readings emit genuinely different constraints from shared substrate."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Satoshi Nakamoto's 2008 whitepaper describing a peer-to-peer electronic cash system using cryptographic proof",
+    "authority_description": "Authority structure is fundamentally contested: peer-to-peer cash reading grounds authority in transactional utility demonstration; digital gold reading grounds authority in market price signal and institutional adoption; ossification reading grounds authority in protocol immutability and consensus conservatism. Satoshi's intentional disappearance left an interpretive vacuum.",
+    "drift_status": "partial",
+    "candidate_pattern": "Licensed Plurality (Pattern 3)",
+    "is_contested_kernel": true,
+    "kernel_id": "bitcoin_whitepaper",
+    "readings": [
+      {
+        "reading_id": "p2p_cash_reading",
+        "commitment": "Bitcoin is a censorship-resistant medium of exchange for direct electronic transactions",
+        "authority_grounding": "Whitepaper title and section 1 emphasis on 'peer-to-peer electronic cash system'; transaction utility as validation metric",
+        "sibling_readings": [
+          "digital_gold_reading",
+          "protocol_ossification_reading"
+        ],
+        "expected_structural_delta": "Low transaction fees prioritized; block size expansion legitimate; victim set includes those denied transactional access due to fee markets"
+      },
+      {
+        "reading_id": "digital_gold_reading",
+        "commitment": "Bitcoin is a scarce digital asset optimized for store of value and inflation hedging",
+        "authority_grounding": "21 million supply cap; institutional adoption signals; price appreciation as validation metric",
+        "sibling_readings": [
+          "p2p_cash_reading",
+          "protocol_ossification_reading"
+        ],
+        "expected_structural_delta": "Asset appreciation prioritized; transaction fees acceptable cost; victim set includes late entrants priced out by appreciation and fee competition"
+      },
+      {
+        "reading_id": "protocol_ossification_reading",
+        "commitment": "Bitcoin protocol changes are illegitimate unless approaching universal consensus; stability is the primary virtue",
+        "authority_grounding": "Decentralization as immutability; node operator veto power; resistance to core developer authority",
+        "sibling_readings": [
+          "p2p_cash_reading",
+          "digital_gold_reading"
+        ],
+        "expected_structural_delta": "Protocol evolution blocked; innovation occurs in higher layers; victim set includes use cases requiring base protocol changes"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "p2p_cash_reading",
+        "reading_b": "digital_gold_reading",
+        "basis": "P2P cash requires accepting transactional throughput increases that compromise settlement finality guarantees; digital gold requires accepting high transaction costs that make micropayments economically impossible. No single coherent framework holds both 'transaction utility is primary' and 'asset appreciation is primary' as simultaneous axioms when they emit incompatible fee structures and block size requirements."
+      },
+      {
+        "reading_a": "p2p_cash_reading",
+        "reading_b": "protocol_ossification_reading",
+        "basis": "P2P cash requires accepting protocol evolution to scale transaction throughput; ossification requires rejecting protocol changes to preserve immutability. No single coherent framework holds both 'scaling is legitimate evolution' and 'changes are illegitimate absent near-consensus' when throughput scaling inherently cannot achieve near-consensus in practice."
+      }
+    ]
+  },
+  "_seed_id": "bitcoin_whitepaper_decentralization"
+}

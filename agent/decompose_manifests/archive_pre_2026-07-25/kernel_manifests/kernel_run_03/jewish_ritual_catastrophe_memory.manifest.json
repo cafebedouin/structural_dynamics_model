@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Cultural Anthropology / Memory Studies",
+  "family_id": "ritual_catastrophe_memory",
+  "topic_summary": "Analysis of Jewish ritual catastrophe-memory practices (Tisha B'Av, Passover) examining whether commemorative reading preserves survival-competence (D5 claim) or only mourning-practice/boundary-norms (D1/D4 symbol-survival claim). Research indicates Tisha B'Av is purely mourning-practice preservation while Passover embeds survival-competence within celebration, but both share a common kernel of catastrophe-memory transmission.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Tisha B'Av (annual mourning day for Temple destructions and accumulated catastrophes)",
+      "Passover/Pesach (exodus commemoration with seder pedagogical structure)",
+      "Rabbinic tradition (interpretive authority grounding ritual meaning)",
+      "Temple destruction events (586 BCE First Temple, 70 CE Second Temple)",
+      "Diaspora communities (dispersed populations maintaining identity)",
+      "Haggadah/Kinnot (liturgical texts encoding ritual structure)"
+    ],
+    "key_tensions": [
+      "Mourning-practice preservation vs survival-competence transmission (D1/D4 vs D5)",
+      "Compartmentalization of grief vs year-round identity maintenance",
+      "Symbolic boundary-norms vs practical pedagogical function"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Catastrophe-memory as identity-preserving mechanism across millennia of diaspora",
+    "authority_description": "Rabbinic interpretive tradition grounding ritual meaning in theological rationalization and communal practice",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "catastrophe_memory_transmission",
+    "readings": [
+      {
+        "reading_id": "mourning_practice_reading",
+        "commitment": "Catastrophe-memory preserves identity through boundary-maintenance and grief-compartmentalization",
+        "authority_grounding": "Rabbinic tradition emphasizing temporal containment and theological rationalization",
+        "sibling_readings": [
+          "survival_competence_reading",
+          "hybrid_pedagogical_reading"
+        ],
+        "expected_structural_delta": "Ritual teaches how to mourn collectively without being consumed; boundary between mourning-day and living-days is the survival mechanism; victim set is present-day community bearing inherited trauma; high extractiveness from emotional labor of annual grief-processing"
+      },
+      {
+        "reading_id": "survival_competence_reading",
+        "commitment": "Catastrophe-memory preserves identity through transmission of adaptive capacity and cultural continuity",
+        "authority_grounding": "Pedagogical tradition emphasizing intergenerational knowledge transfer and diaspora adaptation",
+        "sibling_readings": [
+          "mourning_practice_reading",
+          "hybrid_pedagogical_reading"
+        ],
+        "expected_structural_delta": "Ritual teaches how to tell, transmit, and adapt foundational narratives; seder structure is competence-transmission vehicle; victim set is future generations deprived of survival knowledge if transmission fails; moderate extractiveness from pedagogical labor and cultural maintenance"
+      },
+      {
+        "reading_id": "hybrid_pedagogical_reading",
+        "commitment": "Catastrophe-memory preserves identity through mourning-as-vigilance, where grief-processing encodes early-warning competence",
+        "authority_grounding": "Memory-as-warning-system tradition (Amalek remembrance, vigilance against recurrence)",
+        "sibling_readings": [
+          "mourning_practice_reading",
+          "survival_competence_reading"
+        ],
+        "expected_structural_delta": "Ritual teaches both emotional processing and threat-recognition; mourning contains embedded survival knowledge; victim set is community vulnerable to future catastrophe if warning-system atrophies; extractiveness varies by whether vigilance translates to actionable competence or only symbolic awareness"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "mourning_practice_reading",
+        "reading_b": "survival_competence_reading",
+        "basis": "Mourning-practice reading holds that the ritual's survival function is purely structural (compartmentalization of grief as boundary-maintenance), while survival-competence reading holds that ritual's survival function is pedagogical (transmission of adaptive capacity). No single framework can hold both: either the ritual preserves identity by teaching how to mourn without being consumed (structural containment) OR by teaching how to transmit and adapt culture across diaspora (competence transfer). The mechanisms are mutually exclusive as primary functions."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "mourning_practice_reading",
+      "human_readable": "Mourning-Practice Reading (Grief Compartmentalization as Boundary-Maintenance)",
+      "structural_delta": "Ritual preserves identity through temporal containment of collective trauma and theological rationalization of catastrophe",
+      "primary_observable": "Tisha B'Av observance rates; fasting compliance; kinnot recitation patterns; three-week mourning period adherence",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rabbinic_interpretive_authority",
+      "victim": "present_community_bearing_inherited_trauma",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating D1/D4 symbol-survival claim; highest extractiveness from emotional labor of annual grief-processing"
+    },
+    {
+      "claim_id": "survival_competence_reading",
+      "human_readable": "Survival-Competence Reading (Pedagogical Transmission as Adaptive Capacity)",
+      "structural_delta": "Ritual preserves identity through intergenerational transmission of cultural continuity and diaspora adaptation mechanisms",
+      "primary_observable": "Passover seder participation rates; Haggadah transmission patterns; diaspora community persistence metrics; intergenerational cultural literacy",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "future_generations_deprived_of_survival_knowledge",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core reading instantiating D5 survival-competence claim; structurally distinct from mourning-practice via pedagogical function rather than boundary-maintenance"
+    },
+    {
+      "claim_id": "hybrid_pedagogical_reading",
+      "human_readable": "Hybrid Pedagogical Reading (Mourning-as-Vigilance Early-Warning System)",
+      "structural_delta": "Ritual preserves identity through mourning that encodes threat-recognition competence and vigilance against recurrence",
+      "primary_observable": "Amalek remembrance practices; Holocaust education integration; October 7 commemoration patterns; vigilance discourse in ritual contexts",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "memory_as_warning_advocates",
+      "victim": "community_vulnerable_to_future_catastrophe",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Synthesis reading bridging D1/D4 and D5 claims; tests whether mourning-practice can encode survival-competence when structured as early-warning system"
+    },
+    {
+      "claim_id": "secularization_erosion",
+      "human_readable": "Secularization Erosion (Weakening of Religious Practice Anchor)",
+      "structural_delta": "Decline in widespread religious practice weakens ritual transmission mechanisms originally anchored in observance",
+      "primary_observable": "Synagogue attendance trends; ritual observance rates across generations; secular vs religious community retention",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "mourning_practice_reading",
+        "survival_competence_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream erosion mechanism affecting all readings but not itself a reading of the catastrophe-memory kernel"
+    },
+    {
+      "claim_id": "temple_centrality_loss",
+      "human_readable": "Temple Centrality Loss (Shift from Sacrifice to Commemoration)",
+      "structural_delta": "Destruction of Temple shifted ritual focus from sacrifice-centered practice to memory-centered practice",
+      "primary_observable": "Liturgical references to Temple; Passover egg/shankbone symbolism; rabbinic reinterpretation patterns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "mourning_practice_reading",
+        "survival_competence_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical mountain providing context but not itself a contested reading of current ritual function"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "mourning_practice_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "mourning_practice_reading"
+    },
+    {
+      "claim_id": "survival_competence_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "survival_competence_reading"
+    },
+    {
+      "claim_id": "hybrid_pedagogical_reading",
+      "kernel_id": "catastrophe_memory_transmission",
+      "reading_id": "hybrid_pedagogical_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "secularization_erosion",
+      "structural_delta": "Decline in religious practice weakens ritual transmission",
+      "hypothesis": "piton",
+      "deferral_reason": "Upstream erosion mechanism affecting all readings but not itself a reading of the catastrophe-memory kernel; relevant as omega context for ritual persistence under secularization"
+    },
+    {
+      "claim_id": "temple_centrality_loss",
+      "structural_delta": "Temple destruction shifted ritual from sacrifice to commemoration",
+      "hypothesis": "mountain",
+      "deferral_reason": "Historical mountain providing context but not itself a contested reading of current ritual function; relevant as omega context for ritual evolution"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_passover_mourning_elements",
+      "description": "Passover contains mourning symbols (egg for Temple destruction, shankbone for lost sacrifice) embedded within celebration. Does this make Passover a hybrid reading or does subordination of mourning to pedagogy confirm pure survival-competence reading? The research shows mourning elements are 'embedded in a forward-looking, pedagogical structure' but does not resolve whether this embedding constitutes genuine synthesis or mere symbolic vestige.",
+      "source": "Research context noting Passover's mourning elements within celebratory structure"
+    },
+    {
+      "id": "omega_tisha_bav_competence_encoding",
+      "description": "Research suggests 'even mourning-practice (D1/D4) can encode survival-competence (D5)—but only when the ritual structure explicitly teaches how to respond to catastrophe, not merely how to feel about it.' Does Tisha B'Av's compartmentalization teach response-competence (how to survive by containing grief) or only emotional processing (how to feel collectively)? The boundary between structural survival mechanism and competence transmission may be unstable.",
+      "source": "Research conclusion on mourning-practice encoding survival-competence"
+    },
+    {
+      "id": "omega_axiom_contradiction_stability",
+      "description": "The declared axiom contradiction between mourning-practice and survival-competence readings assumes structural containment and pedagogical transmission are mutually exclusive as primary functions. But if compartmentalization itself is a transmitted competence (teaching how to survive by containing grief), the readings may collapse into one. The hybrid reading tests this boundary but does not resolve it.",
+      "source": "Axiom contradiction declaration between mourning_practice_reading and survival_competence_reading"
+    },
+    {
+      "id": "omega_secularization_differential_impact",
+      "description": "Research notes secularization weakens ritual transmission 'originally anchored in widespread religious practice.' Does secularization erode mourning-practice and survival-competence readings equally, or does pedagogical structure (Passover seder) prove more resilient than boundary-maintenance structure (Tisha B'Av fasting) under secularization? Differential erosion rates would validate the reading distinction.",
+      "source": "Deferred axis secularization_erosion + research on ritual weakening"
+    },
+    {
+      "id": "omega_memory_as_warning_actionability",
+      "description": "Hybrid reading claims mourning encodes early-warning competence (Amalek remembrance, vigilance against recurrence). But research notes this 'warns to be watchful' without specifying actionable response. Does vigilance without action constitute survival-competence (D5) or only symbolic awareness (D1/D4)? The extractiveness of this reading depends on whether warning-system translates to competence or remains purely symbolic.",
+      "source": "Research on memory-as-warning-system and hybrid_pedagogical_reading expected structural delta"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings (mourning-practice, survival-competence, hybrid-pedagogical) captures the D1/D4 vs D5 contest cleanly. Research supports distinction between Tisha B'Av (boundary-maintenance) and Passover (pedagogical transmission) while hybrid reading tests the boundary case of mourning-as-vigilance. Five omegas bound uncertainties around reading collapse, differential secularization impact, and actionability of warning-system competence."
+  },
+  "_seed_id": "jewish_ritual_catastrophe_memory"
+}

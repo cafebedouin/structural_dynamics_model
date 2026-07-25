@@ -1,0 +1,268 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Civil Rights / Law Enforcement Policy",
+  "family_id": "qualified_immunity_doctrine",
+  "topic_summary": "Analysis of the judicial doctrine of qualified immunity as a contested kernel. The doctrine, established through Supreme Court precedent (primarily Harlow v. Fitzgerald, 1982), shields government officials from civil liability unless they violated 'clearly established' constitutional rights. Law enforcement reads this as necessary protection against frivolous litigation; civil rights advocates read it as systematic insulation from accountability for constitutional violations.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Supreme Court (authoritative interpreter; created doctrine without statutory basis)",
+      "Law Enforcement Officers (primary beneficiaries under protective reading)",
+      "Civil Rights Plaintiffs (victims under accountability-blocking reading)",
+      "District Courts (gatekeepers applying 'clearly established law' standard)",
+      "Police Unions (institutional advocates for protective reading)",
+      "Civil Rights Organizations (institutional advocates for accountability reading)"
+    ],
+    "key_tensions": [
+      "Officer protection vs victim remedy (zero-sum: expanding one contracts the other)",
+      "Judicial precedent supremacy vs democratic accountability (court-created doctrine immune to legislative revision)",
+      "Clearly established law standard vs constitutional text (standard not derived from Constitution or statute)"
+    ],
+    "key_mechanisms": [
+      "Summary judgment gatekeeping: doctrine operates primarily at dismissal stage, preventing discovery and trial",
+      "Precedent factual specificity requirement: plaintiffs must cite prior case with nearly identical facts",
+      "Interlocutory appeal privilege: defendants can appeal denial of immunity immediately, creating litigation asymmetry"
+    ],
+    "key_absences": [
+      "Statutory authorization: doctrine has no legislative basis (contrast with statutory immunity provisions)",
+      "Comparative institutional analysis: no examination of alternative accountability mechanisms used in other common-law democracies"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The judicial doctrine of qualified immunity as crystallized in Harlow v. Fitzgerald (1982) and subsequent precedent, establishing that government officials are immune from civil liability unless they violated 'clearly established statutory or constitutional rights of which a reasonable person would have known'",
+    "authority_description": "Supreme Court interpretive monopoly over the scope and application of immunity, with no statutory basis or constitutional text anchoring the doctrine—authority derives solely from stare decisis and judicial institutional position",
+    "drift_status": "partial",
+    "candidate_pattern": "Doctrinal Drift Without Revision (judiciary continuously narrows plaintiff access through interpretive tightening of 'clearly established' standard while maintaining doctrinal label continuity)",
+    "is_contested_kernel": true,
+    "kernel_id": "qualified_immunity_doctrine",
+    "readings": [
+      {
+        "reading_id": "protective_scaffold_reading",
+        "commitment": "Immunity as necessary protection enabling vigorous law enforcement without fear of bad-faith litigation",
+        "authority_grounding": "Functionalist judicial interpretation prioritizing officer decisional confidence and preventing litigation chilling effects",
+        "sibling_readings": [
+          "accountability_void_reading",
+          "constitutional_fidelity_reading"
+        ],
+        "expected_structural_delta": "Officers enter beneficiary set; litigation costs externalized to victims; ε_base moderate (judicial discretion in 'clearly established' application); victim set = constitutional violation survivors denied remedy"
+      },
+      {
+        "reading_id": "accountability_void_reading",
+        "commitment": "Immunity as systematic extraction mechanism guaranteeing impunity for constitutional violations",
+        "authority_grounding": "Rights-protective interpretation grounded in constitutional text supremacy and Marbury principle (remedy follows right)",
+        "sibling_readings": [
+          "protective_scaffold_reading",
+          "constitutional_fidelity_reading"
+        ],
+        "expected_structural_delta": "Victims enter victim set with no remedy path; officers shielded from consequences; ε_base high (near-absolute bar to liability); beneficiary set = officers who would otherwise face liability for constitutional violations"
+      },
+      {
+        "reading_id": "constitutional_fidelity_reading",
+        "commitment": "Immunity as judicially fabricated doctrine lacking constitutional or statutory authorization, illegitimate regardless of policy outcomes",
+        "authority_grounding": "Originalist/textualist interpretation requiring explicit constitutional or statutory basis for any legal doctrine",
+        "sibling_readings": [
+          "protective_scaffold_reading",
+          "accountability_void_reading"
+        ],
+        "expected_structural_delta": "Entire doctrine enters 'illegitimate' category; both officers and victims denied legitimate legal framework; ε_base indeterminate (framework itself contested); beneficiary set = judiciary (institutional power expansion)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "protective_scaffold_reading",
+        "reading_b": "accountability_void_reading",
+        "basis": "Protective reading treats officer protection as lexically prior to victim remedy (officer security enables effective policing); accountability reading treats victim remedy as lexically prior to officer protection (remedy follows constitutional right). No framework simultaneously holds both as foundational—one must be subordinate consideration."
+      },
+      {
+        "reading_a": "constitutional_fidelity_reading",
+        "reading_b": "protective_scaffold_reading",
+        "basis": "Fidelity reading treats absence of constitutional/statutory authorization as dispositive (doctrine illegitimate regardless of consequences); protective reading treats functional necessity as dispositive (doctrine legitimate because necessary). No framework holds both simultaneously—either source matters or consequences matter."
+      },
+      {
+        "reading_a": "constitutional_fidelity_reading",
+        "reading_b": "accountability_void_reading",
+        "basis": "Fidelity reading rejects doctrine for lack of textual basis (would reject even if it enhanced accountability); accountability reading rejects doctrine for blocking remedies (would accept if it enhanced accountability). One treats legitimacy as formal, the other as substantive."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "protective_scaffold_reading",
+      "human_readable": "Protective Scaffold Reading (Immunity as Officer Protection Necessity)",
+      "structural_delta": "Doctrine read as essential protection enabling effective law enforcement by shielding officers from litigation chilling effects",
+      "primary_observable": "Frequency of qualified immunity grants at summary judgment; police union advocacy intensity; judicial rhetoric emphasizing officer protection in opinions",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "law_enforcement_officers",
+      "victim": "constitutional_violation_survivors_denied_remedy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents institutional law enforcement position"
+    },
+    {
+      "claim_id": "accountability_void_reading",
+      "human_readable": "Accountability Void Reading (Immunity as Systematic Impunity Guarantee)",
+      "structural_delta": "Doctrine read as extraction mechanism creating near-absolute shield against civil liability for constitutional violations",
+      "primary_observable": "Dismissal rates in §1983 cases; 'clearly established law' standard application rigor; discovery access denial frequency",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "officers_who_would_otherwise_face_liability",
+      "victim": "constitutional_violation_survivors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents civil rights advocacy position; structurally opposite victim/beneficiary set"
+    },
+    {
+      "claim_id": "constitutional_fidelity_reading",
+      "human_readable": "Constitutional Fidelity Reading (Immunity as Illegitimate Judicial Fabrication)",
+      "structural_delta": "Doctrine read as lacking any constitutional or statutory authorization, therefore illegitimate regardless of policy consequences",
+      "primary_observable": "Originalist/textualist judicial critique frequency; legislative reform proposals; academic legal criticism emphasizing lack of textual basis",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "judiciary_institutional_power",
+      "victim": "democratic_accountability_mechanisms",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; represents legitimacy critique orthogonal to policy debate; captures institutional power dimension"
+    },
+    {
+      "claim_id": "litigation_cost_asymmetry",
+      "human_readable": "Litigation Cost Asymmetry (Structural Plaintiff Disadvantage)",
+      "structural_delta": "Interlocutory appeal privilege and summary judgment timing create massive cost asymmetry favoring defendants",
+      "primary_observable": "Plaintiff attorney fee recovery rates; case duration before dismissal; interlocutory appeal frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "government_defendants",
+      "victim": "civil_rights_plaintiffs",
+      "downstream_of": [
+        "protective_scaffold_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: procedural implementation mechanism of protective scaffold reading; captured as downstream effect rather than independent axis"
+    },
+    {
+      "claim_id": "precedent_factual_hyperspecificity",
+      "human_readable": "Precedent Factual Hyperspecificity (Catch-22 Clearly Established Standard)",
+      "structural_delta": "Requirement for nearly identical prior facts creates impossible standard: rights cannot become 'clearly established' without prior case, but immunity blocks cases",
+      "primary_observable": "Ninth Circuit precedent specificity analysis; frequency of 'no prior case with sufficiently similar facts' dismissals",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "repeat_violator_officers",
+      "victim": "novel_violation_survivors",
+      "downstream_of": [
+        "accountability_void_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: core mechanism of accountability void reading; generates catch-22 but structurally captured in parent reading"
+    },
+    {
+      "claim_id": "comparative_institutional_absence",
+      "human_readable": "Comparative Institutional Absence (Missing Alternative Accountability Models)",
+      "structural_delta": "U.S. unique in providing this level of civil immunity; other common-law democracies use insurance, vicarious liability, or parliamentary oversight",
+      "primary_observable": "Cross-national police accountability mechanism comparison; insurance system prevalence in UK/Canada/Australia",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: comparative institutional analysis; omega material for institutional design alternatives"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "protective_scaffold_reading",
+      "kernel_id": "qualified_immunity_doctrine",
+      "reading_id": "protective_scaffold_reading"
+    },
+    {
+      "claim_id": "accountability_void_reading",
+      "kernel_id": "qualified_immunity_doctrine",
+      "reading_id": "accountability_void_reading"
+    },
+    {
+      "claim_id": "constitutional_fidelity_reading",
+      "kernel_id": "qualified_immunity_doctrine",
+      "reading_id": "constitutional_fidelity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "litigation_cost_asymmetry",
+      "structural_delta": "Interlocutory appeal and summary judgment timing create massive plaintiff cost disadvantage",
+      "hypothesis": "snare",
+      "deferral_reason": "Procedural implementation mechanism of protective scaffold reading; captured as downstream effect"
+    },
+    {
+      "claim_id": "precedent_factual_hyperspecificity",
+      "structural_delta": "Catch-22 standard requiring impossible precedent specificity",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Core mechanism of accountability void reading; structurally captured in parent reading"
+    },
+    {
+      "claim_id": "comparative_institutional_absence",
+      "structural_delta": "U.S. uniqueness in immunity scope; other democracies use alternative accountability mechanisms",
+      "hypothesis": "piton",
+      "deferral_reason": "Comparative institutional design question; omega material for alternative frameworks"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_legislative_reversal_feasibility",
+      "description": "Can Congress legislatively abolish qualified immunity given its judicial creation? If courts treat it as constitutional interpretation rather than common-law doctrine, legislative reversal may be constitutionally blocked.",
+      "source": "Absence Inventory (no statutory basis identified) + constitutional_fidelity_reading"
+    },
+    {
+      "id": "omega_insurance_alternative",
+      "description": "Would shifting to mandatory professional liability insurance (UK/Canada model) preserve officer protection while restoring victim remedy? Comparative institutional analysis deferred.",
+      "source": "Dark Matter Probe 2 (Absence) + deferred axis comparative_institutional_absence"
+    },
+    {
+      "id": "omega_clearly_established_operationalization",
+      "description": "Is 'clearly established law' standard administrable in principle, or does factual hyperspecificity requirement make it a disguised impossibility standard? Precedent specificity analysis deferred.",
+      "source": "Deferred axis precedent_factual_hyperspecificity"
+    },
+    {
+      "id": "omega_stare_decisis_entrenchment",
+      "description": "Does stare decisis operate differently for judicially created common-law doctrine vs constitutional interpretation? If qualified immunity is common law, lower reversal bar applies; if constitutional, higher bar.",
+      "source": "Authority structure analysis (no constitutional/statutory anchor) + drift_status partial"
+    },
+    {
+      "id": "omega_racial_disparate_impact",
+      "description": "Does immunity doctrine produce racially disparate protection patterns given policing disparate impact? Extraction identified no racial justice entities, but beneficiary/victim analysis suggests disparate burden.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + absence of racial justice entities in extraction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings cleanly decompose from shared kernel with axiom-contradictory foundations. Each reading would emit structurally distinct constraints with opposite beneficiary/victim sets. Litigation_cost_asymmetry and precedent_factual_hyperspecificity are implementation mechanisms of scaffold and void readings respectively, not independent axes. Comparative_institutional_absence properly deferred as omega (institutional design alternative)."
+  },
+  "_seed_id": "police_union_qualified_immunity"
+}

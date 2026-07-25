@@ -1,0 +1,286 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Theory / Technology History / Financial Infrastructure",
+  "family_id": "digital_money_emergence_2026",
+  "topic_summary": "Analysis of the emergence of electronic/digital money, examining the contested boundary between when digital money 'became thinkable' (1960s-1970s conceptual/infrastructure phase) versus when it was 'first held' (1990s-2000s consumer implementation, or 2009 peer-to-peer). The M4/M5 monetary aggregate collapse signals a fundamental measurement crisis as traditional categories became inadequate for capturing electronic money's structural properties.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "SWIFT (interbank messaging network, founded 1973, operational 1977)",
+      "ACH (Automated Clearing House, established 1972 for batch transactions)",
+      "Federal Reserve (monetary authority; discontinued M3 reporting)",
+      "European Monetary Institute (EMI, regulatory body proposing bank-only e-money issuance 1994)",
+      "Hayek (economist proposing competing private currencies post-Bretton Woods)",
+      "Computer scientists (initiated cryptocurrency development, surprising economists)",
+      "Barclays/Chemical Bank (first ATM deployers 1967-1969)",
+      "Bitcoin (2009, first peer-to-peer digital cash implementation)"
+    ],
+    "key_tensions": [
+      "Conceptual emergence (1960s telecommunications making digital money thinkable) vs actual consumer implementation (1990s-2000s)",
+      "Interbank infrastructure (SWIFT/ACH as institutional money movement) vs consumer-accessible digital money",
+      "Centralized institutional control (SWIFT as anti-American-monopoly measure) vs decentralized cryptocurrency vision (Hayek, Bitcoin)",
+      "Regulatory lag (EMI 1994 conceptualization vs 2000 Electronic Money Directive)",
+      "Economist vs technologist epistemology (economists surprised by crypto; forced to rethink money phenomenology)"
+    ],
+    "key_mechanisms": [
+      "Telecommunications infrastructure enabling near-instantaneous 24-hour global markets (1960s)",
+      "Batch processing via magnetic tape (ACH) vs real-time messaging (SWIFT)",
+      "Monetary aggregate measurement collapse (M3 discontinued; M4/M5 inadequacy)",
+      "Regulatory confinement to deposit-taking institutions (EMI 1994 recommendation)"
+    ],
+    "key_absences": [
+      "No clear definition of when 'money' transitions from institutional ledger entry to consumer-held asset",
+      "Missing account of how floating exchange rates (post-1971 Bretton Woods collapse) changed the structural requirements for digital money",
+      "Absence of discussion on what happens to monetary sovereignty when measurement categories (M4/M5) collapse"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that 'digital money exists' — but contested over WHEN it came into existence, which determines what counts as the authoritative origin point and thus what structural properties digital money inherently possesses.",
+    "authority_description": "Interpretive legitimacy derives from disciplinary positioning: monetary theorists privilege institutional infrastructure (SWIFT/ACH as origin), technology historians privilege consumer accessibility (1990s e-purses), cryptographers privilege peer-to-peer property (Bitcoin 2009). Each reading grounds authority in a different observable.",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Drift (Pattern 2)",
+    "is_contested_kernel": true,
+    "kernel_id": "digital_money_origin",
+    "readings": [
+      {
+        "reading_id": "infrastructure_reading",
+        "commitment": "Digital money exists when institutional infrastructure enables electronic value transfer between banks",
+        "authority_grounding": "Monetary theory / central banking perspective; privileges systemic capacity over consumer access",
+        "sibling_readings": [
+          "consumer_access_reading",
+          "peer_to_peer_reading"
+        ],
+        "expected_structural_delta": "Origin dated to 1972-1977 (ACH/SWIFT); digital money is fundamentally an interbank ledger phenomenon; M4/M5 collapse is a measurement problem, not an ontological crisis; regulatory authority remains with central banks and deposit-taking institutions"
+      },
+      {
+        "reading_id": "consumer_access_reading",
+        "commitment": "Digital money exists when individuals can hold and transact electronic value directly, not merely as bank account entries",
+        "authority_grounding": "Technology history / consumer finance perspective; privileges user agency over systemic infrastructure",
+        "sibling_readings": [
+          "infrastructure_reading",
+          "peer_to_peer_reading"
+        ],
+        "expected_structural_delta": "Origin dated to 1990s-2000s (e-purses, online banking); digital money is a consumer empowerment phenomenon; M4/M5 collapse reflects genuine ontological shift (money becomes detached from deposit institutions); regulatory gap (1994-2000) is structural, not accidental"
+      },
+      {
+        "reading_id": "peer_to_peer_reading",
+        "commitment": "Digital money exists when value can be transferred without institutional intermediaries, achieving true peer-to-peer property",
+        "authority_grounding": "Cryptography / libertarian monetary theory; privileges decentralization and censorship-resistance over institutional legitimacy",
+        "sibling_readings": [
+          "infrastructure_reading",
+          "consumer_access_reading"
+        ],
+        "expected_structural_delta": "Origin dated to 2009 (Bitcoin); prior systems are merely digitized fiat, not true digital money; M4/M5 collapse is irrelevant (state measurement categories don't capture non-state money); Hayek's competing currencies vision realized only with cryptocurrency; economists' surprise is epistemic failure to recognize non-institutional money as possible"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "infrastructure_reading",
+        "reading_b": "peer_to_peer_reading",
+        "basis": "Infrastructure reading holds that institutional intermediation is constitutive of money (money IS the ledger system); peer-to-peer reading holds that institutional intermediation is precisely what digital money eliminates (money is the cryptographic token, not the ledger). No single framework can hold both: either intermediaries are necessary or they are the problem to be solved."
+      },
+      {
+        "reading_a": "consumer_access_reading",
+        "reading_b": "infrastructure_reading",
+        "basis": "Consumer access reading holds that money must be individually controllable to exist as money (agency is constitutive); infrastructure reading holds that systemic capacity precedes and enables individual use (infrastructure is constitutive). No single framework can hold both: either individual control defines money or systemic capacity does."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "infrastructure_reading",
+      "human_readable": "Infrastructure Reading (Interbank Systems as Digital Money Origin)",
+      "structural_delta": "Digital money originates when institutional infrastructure (SWIFT/ACH) enables electronic interbank value transfer, regardless of consumer access",
+      "primary_observable": "Date of first operational interbank electronic settlement system (ACH 1972, SWIFT 1977); volume of electronic interbank transactions",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "central_banks_and_deposit_institutions",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "m4_m5_measurement_collapse"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading in kernel decomposition; establishes institutional baseline; feeds into measurement crisis"
+    },
+    {
+      "claim_id": "consumer_access_reading",
+      "human_readable": "Consumer Access Reading (Individual Control as Digital Money Origin)",
+      "structural_delta": "Digital money originates when individuals can hold and transact electronic value directly, not merely as bank account entries (1990s e-purses)",
+      "primary_observable": "Date of first consumer-accessible electronic purse or prepaid card system; regulatory frameworks distinguishing e-money from deposits",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "fintech_innovators",
+      "victim": "traditional_banking_monopoly",
+      "downstream_of": [
+        "infrastructure_reading"
+      ],
+      "feeds_into": [
+        "m4_m5_measurement_collapse"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading; structurally distinct from infrastructure (different beneficiary/victim); captures regulatory lag tension"
+    },
+    {
+      "claim_id": "peer_to_peer_reading",
+      "human_readable": "Peer-to-Peer Reading (Non-Intermediated Transfer as Digital Money Origin)",
+      "structural_delta": "Digital money originates only when value transfers without institutional intermediaries (Bitcoin 2009), achieving true peer-to-peer property",
+      "primary_observable": "Date of first operational decentralized cryptocurrency; cryptographic proof-of-work or proof-of-stake consensus mechanism",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "cryptocurrency_advocates",
+      "victim": "state_monetary_sovereignty",
+      "downstream_of": [
+        "infrastructure_reading",
+        "consumer_access_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; highest epsilon; captures economist/technologist divide and Hayek's competing currencies vision"
+    },
+    {
+      "claim_id": "m4_m5_measurement_collapse",
+      "human_readable": "M4/M5 Measurement Collapse (Monetary Aggregate Inadequacy)",
+      "structural_delta": "Traditional monetary aggregates (M3, M4, M5) become inadequate for measuring money supply as electronic money proliferates, forcing discontinuation",
+      "primary_observable": "Federal Reserve discontinuation of M3 reporting; ECB struggles with M4/M5 definitions; divergence between measured aggregates and actual liquidity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "infrastructure_reading",
+        "consumer_access_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of readings rather than independent axis; captured in omega as measurement crisis"
+    },
+    {
+      "claim_id": "bretton_woods_collapse_catalyst",
+      "human_readable": "Bretton Woods Collapse as Catalyst (Floating Rates Necessitating Digital Infrastructure)",
+      "structural_delta": "1971 end of dollar-gold convertibility and shift to floating exchange rates created structural need for real-time electronic settlement",
+      "primary_observable": "Volume increase in cross-border transactions post-1971; SWIFT founding narrative citing floating rate environment",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "infrastructure_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream historical catalyst but not a reading of the kernel itself; omega material on structural preconditions"
+    },
+    {
+      "claim_id": "regulatory_lag_extraction",
+      "human_readable": "Regulatory Lag as Extraction Window (1994-2000 Gap Enabling Fintech Capture)",
+      "structural_delta": "Six-year gap between EMI conceptualization (1994) and Electronic Money Directive (2000) created window for non-bank actors to establish market position",
+      "primary_observable": "Number of non-bank e-money issuers established 1994-2000; market share captured before regulatory confinement",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "early_fintech_entrants",
+      "victim": "late_regulatory_adopters",
+      "downstream_of": [
+        "consumer_access_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: specific regulatory arbitrage mechanism rather than core reading; omega on institutional capture dynamics"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "infrastructure_reading",
+      "kernel_id": "digital_money_origin",
+      "reading_id": "infrastructure_reading"
+    },
+    {
+      "claim_id": "consumer_access_reading",
+      "kernel_id": "digital_money_origin",
+      "reading_id": "consumer_access_reading"
+    },
+    {
+      "claim_id": "peer_to_peer_reading",
+      "kernel_id": "digital_money_origin",
+      "reading_id": "peer_to_peer_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "m4_m5_measurement_collapse",
+      "structural_delta": "Monetary aggregate inadequacy as electronic money proliferates",
+      "hypothesis": "mountain",
+      "deferral_reason": "Downstream consequence of kernel readings rather than independent axis; measurement crisis is effect, not cause; captured in omega_measurement_ontology"
+    },
+    {
+      "claim_id": "bretton_woods_collapse_catalyst",
+      "structural_delta": "Floating exchange rates necessitating real-time electronic settlement",
+      "hypothesis": "piton",
+      "deferral_reason": "Upstream historical catalyst but not a reading of the digital money origin kernel itself; structural precondition rather than contested interpretation; omega material"
+    },
+    {
+      "claim_id": "regulatory_lag_extraction",
+      "structural_delta": "1994-2000 regulatory gap enabling fintech market capture",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Specific arbitrage mechanism downstream of consumer_access_reading; lower centrality; omega on institutional capture dynamics"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_measurement_ontology",
+      "description": "Is M4/M5 collapse a measurement problem (infrastructure_reading: we need better categories) or an ontological crisis (consumer_access/peer_to_peer readings: money itself changed, categories cannot capture it)? If ontological, then central bank authority to define money supply is structurally undermined.",
+      "source": "Deferred axis m4_m5_measurement_collapse + axiom contradiction between infrastructure and peer_to_peer readings"
+    },
+    {
+      "id": "omega_hayek_vindication",
+      "description": "Does cryptocurrency vindicate Hayek's competing private currencies proposal, or does it instantiate a different phenomenon entirely (Hayek assumed issuers would be reputation-based institutions, not pseudonymous protocols)? If different, peer_to_peer_reading may misattribute theoretical lineage.",
+      "source": "Research context claim about Hayek + peer_to_peer_reading's reliance on Hayek as authority grounding"
+    },
+    {
+      "id": "omega_economist_surprise",
+      "description": "Why were economists 'completely surprised' by cryptocurrency if Hayek proposed competing currencies in the 1970s? Does this indicate that economist authority over monetary theory is itself a contested kernel (theory-driven vs empirically-driven)?",
+      "source": "Research context tension between economists and computer scientists + Dark Matter Probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_swift_centralization",
+      "description": "SWIFT was founded to prevent American monopoly control, but did it merely substitute European institutional control? If so, infrastructure_reading's claim that interbank systems are neutral coordination (rope) may misclassify them as tangled_rope with European banks as beneficiaries.",
+      "source": "Research context on SWIFT founding narrative + Dark Matter Probe 2 (absence inventory: missing analysis of who controls SWIFT)"
+    },
+    {
+      "id": "omega_atm_classification",
+      "description": "Are ATMs (1967-1969) part of digital money emergence or merely digitized cash dispensing? If the former, consumer_access_reading's 1990s origin is wrong. If the latter, what distinguishes 'digitized fiat' from 'digital money'?",
+      "source": "Research context mentions ATMs but does not classify them + consumer_access_reading's boundary problem"
+    },
+    {
+      "id": "omega_became_thinkable_collapse",
+      "description": "User's kernel contest assumes 'became thinkable' vs 'first held' is a genuine ambiguity, but all three readings agree that infrastructure preceded consumer access. The contest may collapse into a single timeline with different emphasis points rather than genuinely contested origins. If so, the kernel is not about WHEN but about WHAT COUNTS AS MONEY.",
+      "source": "User's framing + §1.3-K coherence check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied successfully. Three readings selected represent genuinely distinct structural deltas (interbank infrastructure vs consumer control vs peer-to-peer property) with different beneficiary/victim structures and epsilon bins. Axiom contradictions declared for infrastructure/peer-to-peer and consumer/infrastructure pairs. Omega_became_thinkable_collapse flags potential kernel collapse if user's framing assumes temporal contest rather than ontological contest."
+  },
+  "_seed_id": "electronic_money_emergence"
+}

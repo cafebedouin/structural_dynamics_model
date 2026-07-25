@@ -1,0 +1,250 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Speech Regulation",
+  "family_id": "free_speech_absolutism_harm_limited_2026",
+  "topic_summary": "Analysis of the constitutional and philosophical debate between free speech absolutism (near-absolute protection with minimal exceptions) and harm-limited approaches (protection conditional on absence of significant harm to others). The disagreement centers on where harm overrides speech protection, with absolutists limiting exceptions to imminent lawless action (Brandenburg) and harm-limited proponents extending boundaries to include dignitary injuries, systemic oppression, and epistemic injustice.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 7,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "First Amendment (U.S. constitutional text establishing speech protection)",
+      "Brandenburg test (legal standard: speech prohibited only if directed to and likely to produce imminent lawless action)",
+      "Mill's harm principle (philosophical foundation: power exercised only to prevent harm to others' rights)",
+      "Justices Black and Douglas (judicial absolutists interpreting 'no law' literally)",
+      "European hate speech regimes (jurisdictional contrast: coercive speech restrictions)",
+      "Minoritized communities (structural victims of unregulated harmful speech)",
+      "Elon Musk (contemporary absolutist advocate)",
+      "Lord Bhikhu Parekh (harm-limited proponent emphasizing dignity and equality)"
+    ],
+    "key_tensions": [
+      "Liberty vs equality (speech freedom vs protection from harassment and systemic harm)",
+      "Categorical vs balancing (absolutist interpretation vs weighing competing constitutional values)",
+      "Direct vs systemic harm (imminent violence vs dignitary injury and epistemic injustice)",
+      "Gatekeeper hazard vs minoritized protection (abuse risk of restriction vs aggregate harm to vulnerable groups)",
+      "U.S. vs European jurisdictional approaches (Brandenburg standard vs hate speech bans)",
+      "Coded speech evasion (dog whistles escape Brandenburg scrutiny via plausible deniability)",
+      "Individual harassment vs public interest (single victim's harm vs aggregate value of free speech)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The First Amendment speech protection clause, read as establishing either near-absolute protection (harm exception only for imminent lawless action) or harm-limited protection (harm exception extends to dignitary injuries, systemic oppression, epistemic injustice)",
+    "authority_description": "Judicial interpretation of constitutional text ('Congress shall make no law') combined with philosophical frameworks (Mill's harm principle, Meiklejohn's self-governance theory) grounding legitimacy in either textual literalism or balancing competing constitutional values",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "speech_protection_boundary",
+    "readings": [
+      {
+        "reading_id": "absolutist_reading",
+        "commitment": "Speech protection is near-absolute; harm exception limited to imminent lawless action (Brandenburg standard)",
+        "authority_grounding": "Textual literalism ('no law means no law') + Mill's narrow harm principle (only direct rights violations count)",
+        "sibling_readings": [
+          "harm_limited_reading",
+          "balancing_reading"
+        ],
+        "expected_structural_delta": "Protected set maximized; unprotected set contains only direct incitement to imminent violence; minoritized communities bear aggregate harm as externality"
+      },
+      {
+        "reading_id": "harm_limited_reading",
+        "commitment": "Speech protection conditional on absence of significant harm to dignity, equality, and freedom from harassment",
+        "authority_grounding": "Balancing approach weighing speech against competing constitutional values (equal protection, nondiscrimination) + expanded harm recognition (systemic oppression, epistemic injustice)",
+        "sibling_readings": [
+          "absolutist_reading",
+          "balancing_reading"
+        ],
+        "expected_structural_delta": "Protected set narrowed; unprotected set includes hate speech, harassment, coded dog whistles; state becomes gatekeeper with attendant abuse risk"
+      },
+      {
+        "reading_id": "balancing_reading",
+        "commitment": "Speech protection determined case-by-case through weighing First Amendment interests against other constitutional values and demonstrated harms",
+        "authority_grounding": "Traditional First Amendment jurisprudence balancing liberty against equality, context-sensitive harm assessment",
+        "sibling_readings": [
+          "absolutist_reading",
+          "harm_limited_reading"
+        ],
+        "expected_structural_delta": "Protected/unprotected boundary shifts with context; coded speech and systemic harm receive intermediate scrutiny; gatekeeper role distributed across judiciary rather than categorical rules"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "absolutist_reading",
+        "reading_b": "harm_limited_reading",
+        "basis": "Absolutist axiom holds that no competing value can override speech protection except imminent violence; harm-limited axiom holds that dignity and equality are co-equal constitutional values that can override speech. No single framework can simultaneously hold both that speech is categorically superior to dignity and that dignity can categorically override speech."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "absolutist_reading",
+      "human_readable": "Absolutist Reading (Near-Absolute Protection, Imminent Harm Only)",
+      "structural_delta": "Speech protection maximized with harm exception limited to Brandenburg standard (imminent lawless action); minoritized communities bear aggregate harm as externality",
+      "primary_observable": "Scope of protected speech under Brandenburg test; frequency of successful speech restriction challenges; aggregate harm metrics for minoritized groups (harassment rates, epistemic exclusion)",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "speakers_of_harmful_speech",
+      "victim": "minoritized_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading establishing maximalist protection boundary; highest structural distinctiveness from harm-limited reading"
+    },
+    {
+      "claim_id": "harm_limited_reading",
+      "human_readable": "Harm-Limited Reading (Protection Conditional on Dignity/Equality)",
+      "structural_delta": "Speech protection conditional on absence of dignitary injury, systemic oppression, epistemic injustice; state becomes gatekeeper with attendant abuse risk",
+      "primary_observable": "Scope of hate speech bans; gatekeeper decision patterns; minoritized community protection metrics vs censorship abuse cases",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "minoritized_communities",
+      "victim": "speakers_subject_to_restriction",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory reading establishing minimalist protection boundary; direct structural opposition to absolutist reading"
+    },
+    {
+      "claim_id": "balancing_reading",
+      "human_readable": "Balancing Reading (Context-Sensitive Weighing)",
+      "structural_delta": "Protected/unprotected boundary shifts with context through case-by-case weighing of speech against competing constitutional values; gatekeeper role distributed across judiciary",
+      "primary_observable": "Judicial balancing test application patterns; coded speech scrutiny outcomes; variance in protection across contexts",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "context_dependent",
+      "victim": "context_dependent",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Intermediate reading capturing traditional jurisprudence; addresses coded speech evasion problem neither polar reading resolves"
+    },
+    {
+      "claim_id": "jurisdictional_divergence",
+      "human_readable": "Jurisdictional Divergence (U.S. Brandenburg vs European Hate Speech Regimes)",
+      "structural_delta": "U.S. maximizes speech protection via Brandenburg; Western Europe restricts hate speech coercively; divergence reflects different constitutional value hierarchies",
+      "primary_observable": "Comparative hate speech prosecution rates; cross-jurisdictional speech restriction scope; minoritized community harm metrics across regimes",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: jurisdictional comparison is downstream application of kernel readings rather than independent structural axis"
+    },
+    {
+      "claim_id": "coded_speech_evasion",
+      "human_readable": "Coded Speech Evasion (Dog Whistles Escape Brandenburg Scrutiny)",
+      "structural_delta": "Brandenburg's imminence requirement allows coded speech (dog whistles) to evade restriction via plausible deniability despite contextual harm signals",
+      "primary_observable": "Frequency of coded speech in political discourse; minoritized community harm from dog whistles; judicial recognition of coded meaning",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "speakers_using_coded_language",
+      "victim": "minoritized_communities",
+      "downstream_of": [
+        "absolutist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural weakness of absolutist reading captured by balancing_reading's context-sensitivity; independent axis would duplicate coverage"
+    },
+    {
+      "claim_id": "gatekeeper_hazard",
+      "human_readable": "Gatekeeper Hazard (Abuse Risk of Speech Restriction Authority)",
+      "structural_delta": "Harm-limited approaches require gatekeepers to determine permissible speech; gatekeeper role is ripe for abuse, lacks clear qualification criteria",
+      "primary_observable": "Censorship abuse case frequency; gatekeeper decision bias patterns; chilling effect on legitimate speech",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "state_authorities",
+      "victim": "speakers_subject_to_arbitrary_restriction",
+      "downstream_of": [
+        "harm_limited_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural weakness of harm-limited reading captured by balancing_reading's distributed gatekeeper model; independent axis would duplicate coverage"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "absolutist_reading",
+      "kernel_id": "speech_protection_boundary",
+      "reading_id": "absolutist_reading"
+    },
+    {
+      "claim_id": "harm_limited_reading",
+      "kernel_id": "speech_protection_boundary",
+      "reading_id": "harm_limited_reading"
+    },
+    {
+      "claim_id": "balancing_reading",
+      "kernel_id": "speech_protection_boundary",
+      "reading_id": "balancing_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "jurisdictional_divergence",
+      "structural_delta": "U.S. Brandenburg vs European hate speech regimes reflect different constitutional value hierarchies",
+      "hypothesis": "rope",
+      "deferral_reason": "Jurisdictional comparison is downstream application of kernel readings rather than independent structural axis; captured by comparing absolutist_reading (U.S. Brandenburg) vs harm_limited_reading (European regimes)"
+    },
+    {
+      "claim_id": "coded_speech_evasion",
+      "structural_delta": "Brandenburg allows dog whistles to evade restriction via plausible deniability",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural weakness of absolutist_reading already captured by balancing_reading's context-sensitive scrutiny; independent axis would duplicate coverage of coded speech problem"
+    },
+    {
+      "claim_id": "gatekeeper_hazard",
+      "structural_delta": "Harm-limited approaches create gatekeeper abuse risk",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural weakness of harm_limited_reading already captured by balancing_reading's distributed judicial gatekeeper model; independent axis would duplicate coverage of abuse risk"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_systemic_harm_measurement",
+      "description": "Can systemic harms (epistemic injustice, dignitary injury, cumulative harassment) be measured with sufficient precision to ground legal standards, or does their diffuse nature make them unsuitable for categorical speech restriction? If unmeasurable, harm_limited_reading collapses to arbitrary gatekeeper discretion.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): research documents systemic harm claims but lacks operationalized measurement frameworks"
+    },
+    {
+      "id": "omega_minoritized_community_agency",
+      "description": "Do minoritized communities prefer absolutist protection (maximizing their own speech against state power) or harm-limited restriction (protecting against majority harassment)? Victim identification assumes homogeneous preference; actual preference distribution may fracture the beneficiary/victim classification.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): research frames minoritized communities as victims of absolutism but does not examine their agency as speakers"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "Are the three readings stable across technological change (social media amplification, algorithmic curation) or do they collapse when speech infrastructure shifts? Brandenburg was designed for street-corner oratory; its imminence requirement may be incoherent in viral diffusion contexts.",
+      "source": "Dark Matter Probe 1 (Operational Medium): research operates within print/broadcast medium assumptions; digital medium may destabilize all three readings"
+    },
+    {
+      "id": "omega_axiom_contradiction_scope",
+      "description": "Is the axiom contradiction between absolutist and harm-limited readings total (no hybrid framework possible) or partial (some speech categories could be absolutist while others are harm-limited)? If partial, balancing_reading may not be a third reading but a meta-framework selecting between the other two by category.",
+      "source": "§1.3-K Axiom Contradiction Declaration: declared contradiction assumes categorical mutual exclusivity; category-specific application may preserve both axioms"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan applied constitutional law, political philosophy, and empirical harm measurement lenses. Dark matter probes surfaced systemic harm measurement gap (omega_systemic_harm_measurement), minoritized community agency absence (omega_minoritized_community_agency), and medium-dependence assumption (omega_reading_stability). Kernel/reading decomposition confirmed: three readings emit structurally different constraints (different protected/unprotected boundaries, different beneficiary/victim structures, different extractiveness profiles). Axiom contradiction declared between absolutist and harm-limited readings per §1.3-K test."
+  },
+  "_seed_id": "free_speech_kernel"
+}

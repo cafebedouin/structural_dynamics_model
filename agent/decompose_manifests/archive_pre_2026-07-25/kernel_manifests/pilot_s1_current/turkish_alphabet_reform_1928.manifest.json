@@ -1,0 +1,193 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Linguistics / State Formation / Commitment Systems",
+  "family_id": "turkish_alphabet_reform_1928",
+  "topic_summary": "Analysis of Turkey's 1928 alphabet reform (Law 1353), which replaced Arabic script with Latin script via top-down imposition. The reform had effectively zero prior practitioners of Latin-script Turkish and was implemented within months, testing whether a commitment system kernel can be installed with no pre-existing occupancy of the new reading.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Mustafa Kemal Atatürk (state authority; reform architect)",
+      "Ottoman Turkish literate class (Arabic-script practitioners; displaced)",
+      "Turkish Grand National Assembly (legislative body; Law 1353 enactor)",
+      "Latin alphabet (imposed orthographic system)",
+      "Arabic script (displaced orthographic system)",
+      "Millet schools / literacy campaigns (enforcement mechanism)"
+    ],
+    "key_tensions": [
+      "State modernization authority vs. Islamic/Ottoman continuity (Kemalist state vs. traditional elites)",
+      "Orthographic accessibility vs. cultural rupture (literacy expansion vs. historical text access)"
+    ],
+    "key_mechanisms": [
+      "Legislative fiat (Law 1353 criminalized Arabic-script publication)",
+      "Mass literacy campaigns (Millet Mektepleri - Nation Schools)",
+      "Elite displacement (Arabic-literate class rendered functionally illiterate overnight)"
+    ],
+    "key_absences": [
+      "No prior Latin-script Turkish reading community (zero M-set occupancy before imposition)",
+      "No transitional biliteracy period (immediate switch, no coexistence phase)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "orthographic_legitimacy_kernel",
+      "human_readable": "Orthographic Legitimacy (Script as State Authority Marker)",
+      "structural_delta": "Contested kernel: what grounds the legitimacy of an orthographic system for a language",
+      "primary_observable": "Legal enforcement mechanisms; literacy campaign structure; elite displacement patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "enforcement_velocity",
+        "historical_continuity_severance"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with three structurally distinct readings; highest centrality; upstream to all other axes"
+    },
+    {
+      "claim_id": "enforcement_velocity",
+      "human_readable": "Enforcement Velocity (Speed of Orthographic Transition)",
+      "structural_delta": "Rate at which state apparatus enforced script transition and criminalized prior practice",
+      "primary_observable": "Timeline from law passage to full enforcement; publication ban effectiveness; literacy campaign rollout speed",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "orthographic_legitimacy_kernel"
+      ],
+      "feeds_into": [
+        "historical_continuity_severance"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (temporal dimension); distinct from kernel's legitimacy question; affects downstream severance"
+    },
+    {
+      "claim_id": "historical_continuity_severance",
+      "human_readable": "Historical Continuity Severance (Access to Pre-Reform Texts)",
+      "structural_delta": "Degree to which script change severed population's access to historical/religious texts",
+      "primary_observable": "Generational literacy gap in Arabic script; translation program scope; archival access patterns",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "orthographic_legitimacy_kernel",
+        "enforcement_velocity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Physical constraint (script incompatibility); downstream synthesis of kernel + velocity; distinct observable"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "modernist_reading",
+      "kernel_id": "orthographic_legitimacy_kernel",
+      "reading_id": "modernist_reading"
+    },
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "orthographic_legitimacy_kernel",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "instrumentalist_reading",
+      "kernel_id": "orthographic_legitimacy_kernel",
+      "reading_id": "instrumentalist_reading"
+    },
+    "enforcement_velocity",
+    "historical_continuity_severance"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_m_set_installation",
+      "description": "Does zero prior M-set occupancy invalidate the kernel framework, or does it demonstrate that kernels can be installed via pure state coercion? If the latter, what distinguishes this from non-kernel imposition?",
+      "source": "User's kernel contest flag + §1.3-K coherence check"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do the continuity and instrumentalist readings collapse into one? Both ground legitimacy in functional outcomes rather than modernist teleology. Separation depends on whether 'preserve access to tradition' and 'maximize literacy' are genuinely distinct commitments or two framings of the same utilitarian calculation.",
+      "source": "§1.3-K reading distinctness test"
+    },
+    {
+      "id": "omega_enforcement_as_kernel_component",
+      "description": "Is enforcement_velocity part of the kernel (how authority is exercised) or a separate rope axis (coordination problem)? Current decomposition treats it as independent, but high-velocity enforcement may be constitutive of the modernist reading's authority structure.",
+      "source": "§3 independence testing + §2.2 Dark Matter Probe 1"
+    },
+    {
+      "id": "omega_counter_reading_absence",
+      "description": "Is there a fourth reading grounded in Islamic jurisprudence (Arabic script as religiously mandated for Quranic language)? Absence from decomposition may reflect training data bias toward secular nationalist historiography.",
+      "source": "§2.2 Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition proceeded cleanly with three structurally distinct readings. User's M-set gap concern captured in omega_m_set_installation rather than blocking generation."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is that Turkish language requires an orthographic system with state-backed legitimacy. All parties agree a script must be chosen and enforced; they contest what grounds that choice's legitimacy.",
+    "authority_description": "State legislative and executive power (Grand National Assembly + Atatürk's personal authority). Legitimacy derives from claimed capacity to define national modernity, not from democratic mandate or scholarly consensus.",
+    "drift_status": "absent",
+    "candidate_pattern": "Type 2: Authoritarian Kernel Installation",
+    "is_contested_kernel": true,
+    "kernel_id": "orthographic_legitimacy_kernel",
+    "readings": [
+      {
+        "reading_id": "modernist_reading",
+        "commitment": "Orthographic legitimacy derives from alignment with Western/European modernity and rupture from Ottoman/Islamic past",
+        "authority_grounding": "Kemalist state's claim to define national trajectory; teleological progress narrative",
+        "sibling_readings": [
+          "continuity_reading",
+          "instrumentalist_reading"
+        ],
+        "expected_structural_delta": "High ε extraction from traditional elites (rendered illiterate); beneficiary is modernizing state apparatus; victim is Ottoman literate class and religious scholars. Script change is constitutive of national identity transformation, not merely instrumental."
+      },
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Orthographic legitimacy derives from preserving access to historical, religious, and literary tradition",
+        "authority_grounding": "Cultural custodianship; intergenerational transmission of textual heritage",
+        "sibling_readings": [
+          "modernist_reading",
+          "instrumentalist_reading"
+        ],
+        "expected_structural_delta": "Low ε (mountain-like constraint: script incompatibility is physical fact). Victim is post-reform generations severed from pre-1928 texts. No clear beneficiary unless Arabic script is retained. Emphasizes loss rather than extraction."
+      },
+      {
+        "reading_id": "instrumentalist_reading",
+        "commitment": "Orthographic legitimacy derives from maximizing literacy rates and administrative efficiency",
+        "authority_grounding": "Technocratic optimization; phonetic transparency of Latin script for Turkish phonology",
+        "sibling_readings": [
+          "modernist_reading",
+          "continuity_reading"
+        ],
+        "expected_structural_delta": "Moderate ε (rope-like coordination). Beneficiary is newly literate population; victim is Arabic-literate elite whose skills are devalued. Script choice is pragmatic tool, not identity marker. Justifies reform via literacy statistics, not civilizational narrative."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "modernist_reading",
+        "reading_b": "continuity_reading",
+        "basis": "Modernist reading holds that rupture from Ottoman/Islamic past is constitutive of legitimate Turkish nationhood; continuity reading holds that preservation of access to that past is constitutive of cultural legitimacy. No single framework can hold both 'rupture is necessary' and 'continuity is necessary' as foundational axioms."
+      }
+    ]
+  },
+  "_seed_id": "turkish_alphabet_reform_1928"
+}

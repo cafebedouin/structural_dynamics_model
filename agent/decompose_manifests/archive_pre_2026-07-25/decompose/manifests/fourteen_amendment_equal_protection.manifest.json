@@ -1,0 +1,158 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Civil Rights",
+  "family_id": "fourteenth_amendment_equal_protection",
+  "topic_summary": "Analysis of the Fourteenth Amendment's Equal Protection Clause as a contested kernel with two structurally incompatible readings: an anti-subordination/anti-caste interpretation requiring active state correction of hierarchy versus a formal equality/anticlassification interpretation limiting state action to explicit discrimination prohibitions.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Fourteenth Amendment Equal Protection Clause (constitutional kernel)",
+      "Anti-caste/anti-subordination interpretive tradition (reading authority)",
+      "Formal equality/anticlassification interpretive tradition (reading authority)",
+      "Subordinated groups (racial minorities, women, status-based groups)",
+      "State corrective action apparatus (affirmative enforcement, redistribution)",
+      "Colorblind constitutionalism (minimalist state theory)"
+    ],
+    "key_tensions": [
+      "Active correction of hierarchy vs prohibition of explicit classification",
+      "Substantive equality outcomes vs formal procedural neutrality"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Fourteenth Amendment's Equal Protection Clause text: 'nor shall any State... deny to any person within its jurisdiction the equal protection of the laws'",
+    "authority_description": "Judicial interpretive supremacy grounded in constitutional textualism, originalism, precedent, and normative constitutional theory",
+    "drift_status": "partial",
+    "candidate_pattern": "theological_schism",
+    "is_contested_kernel": true,
+    "kernel_id": "fourteenth_amendment_equal_protection",
+    "readings": [
+      {
+        "reading_id": "anti_caste_reading",
+        "commitment": "Equal Protection requires active dismantling of racial, gender, and status hierarchy through state corrective action",
+        "authority_grounding": "Substantive equality tradition; Brown v. Board lineage; anti-subordination constitutional theory",
+        "sibling_readings": [
+          "formal_equality_reading"
+        ],
+        "expected_structural_delta": "Subordinated groups enter beneficiary set; affirmative state action legitimated; structural inequality becomes state concern; high ε for remedial programs"
+      },
+      {
+        "reading_id": "formal_equality_reading",
+        "commitment": "Equal Protection prohibits explicit state racial/status classification absent compelling justification",
+        "authority_grounding": "Colorblind constitutionalism; anticlassification principle; Plessy-to-Parents Involved lineage",
+        "sibling_readings": [
+          "anti_caste_reading"
+        ],
+        "expected_structural_delta": "State corrective action enters victim set; affirmative enforcement programs constrained; structural inequality treated as pre-constitutional background; low ε for race-conscious remedies"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "anti_caste_reading",
+        "reading_b": "formal_equality_reading",
+        "basis": "Anti-caste requires the state to recognize and remedy group-based hierarchy as a constitutional mandate; formal equality forbids the state from recognizing group-based categories for remedial purposes. No coherent framework simultaneously holds that the Constitution requires race-conscious remediation and forbids race-conscious state action."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "anti_caste_reading",
+      "human_readable": "Anti-Caste Reading (Active Hierarchy Correction)",
+      "structural_delta": "State constitutionally mandated to correct racial, gender, and status hierarchy through affirmative enforcement",
+      "primary_observable": "Judicial approval rates for affirmative action, disparate impact remedies, and class-based redistribution under Equal Protection challenges",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "subordinated_groups",
+      "victim": "entrenched_privilege_holders",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: instantiates high-ε constraint requiring active state correction; beneficiary set = historically subordinated groups"
+    },
+    {
+      "claim_id": "formal_equality_reading",
+      "human_readable": "Formal Equality Reading (Anticlassification Principle)",
+      "structural_delta": "State constitutionally prohibited from explicit racial/status classification except under strict scrutiny",
+      "primary_observable": "Judicial invalidation rates for race-conscious programs; scope of colorblind doctrine in precedent",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "colorblind_state_advocates",
+      "victim": "remedial_state_programs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: instantiates moderate-ε constraint forbidding explicit classification; victim set = affirmative enforcement apparatus"
+    },
+    {
+      "claim_id": "judicial_interpretive_drift",
+      "human_readable": "Judicial Interpretive Drift (Precedent Layer Absorption)",
+      "structural_delta": "Doctrine evolves through precedent accumulation without kernel revision, absorbing political shifts as interpretive overlay",
+      "primary_observable": "Overruling frequency; precedent half-life in Equal Protection cases; doctrinal stability metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "anti_caste_reading",
+        "formal_equality_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Meta-axis: commitment system's drift-absorption mechanism; feeds both readings as upstream interpretive infrastructure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "anti_caste_reading",
+      "kernel_id": "fourteenth_amendment_equal_protection",
+      "reading_id": "anti_caste_reading"
+    },
+    {
+      "claim_id": "formal_equality_reading",
+      "kernel_id": "fourteenth_amendment_equal_protection",
+      "reading_id": "formal_equality_reading"
+    },
+    {
+      "claim_id": "judicial_interpretive_drift",
+      "kernel_id": "fourteenth_amendment_equal_protection",
+      "reading_id": "judicial_interpretive_drift"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_originalist_stabilization",
+      "description": "Could originalist methodology stabilize the kernel by appealing to Reconstruction-era intent, or does originalism itself bifurcate into anti-caste and formal equality camps based on which Framers' statements are privileged?",
+      "source": "Commitment system drift_status classification (partial drift)"
+    },
+    {
+      "id": "omega_intersectionality_collapse",
+      "description": "Does anti-caste reading handle intersectional claims (race + gender + class) coherently, or does it collapse into competing subordination hierarchies when remedy conflicts arise?",
+      "source": "Dark Matter Probe 2 (Absence Inventory: intersectional complexity)"
+    },
+    {
+      "id": "omega_substantive_due_process_bleed",
+      "description": "Substantive Due Process doctrine runs parallel to Equal Protection with overlapping constraint space. Is the kernel boundary stable, or does liberty/equality distinction erode under pressure?",
+      "source": "Dark Matter Probe 1 (Operational Medium: constitutional doctrine silos)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean scan. Kernel identification confirmed: readings instantiate genuinely incompatible constraints from shared commitment. Axiom contradiction declared per §1.3-K test. Third axis (judicial_interpretive_drift) captures CS drift mechanism as meta-constraint feeding both readings."
+  },
+  "_seed_id": "fourteen_amendment_equal_protection"
+}

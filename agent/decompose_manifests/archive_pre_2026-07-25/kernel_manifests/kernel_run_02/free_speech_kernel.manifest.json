@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Philosophy / Speech Regulation",
+  "family_id": "free_speech_absolutism_harm_limited_2026",
+  "topic_summary": "Analysis of the constitutional and philosophical debate over free speech protection boundaries. The First Amendment's scope is contested between near-absolute protection (protecting all ideas regardless of harm) and harm-limited approaches (permitting regulation when speech causes demonstrable injury). The disagreement centers on whether harm overrides protection and how to define actionable harm.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "U.S. Supreme Court (constitutional adjudicator; shifted toward absolutism 1960s-1970s)",
+      "Justice Hugo Black (absolutist advocate; literal reading of 'no law')",
+      "Justice William O. Douglas (absolutist advocate; shared Black's approach)",
+      "John Stuart Mill (harm principle theorist; 19th century philosopher)",
+      "Alexander Meiklejohn (democratic self-governance theorist)",
+      "Contemporary harm scholars (document tangible harms from bigoted speech)",
+      "Elon Musk (contemporary absolutist advocate in platform governance)",
+      "First Amendment (constitutional text; 'Congress shall make no law')"
+    ],
+    "key_tensions": [
+      "Literal text ('no law') vs contextual interpretation (harm exceptions)",
+      "Democratic self-governance value vs minority protection from systemic harm",
+      "Content-neutral doctrine vs harm-based regulation",
+      "Individual liberty maximization vs aggregate harm minimization"
+    ],
+    "key_mechanisms": [
+      "Strict scrutiny doctrine (heightens barrier to speech regulation)",
+      "Content/viewpoint discrimination test (presumptively invalidates content-based rules)",
+      "Categorical exclusions (obscenity, incitement, true threats carved out as 'unprotected')"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for harm-limited approach (who measures harm, by what standard)",
+      "Exit option for minorities bearing disproportionate costs of absolutism"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The First Amendment's speech protection clause stabilizes as the shared constitutional commitment all parties argue about",
+    "authority_description": "Supreme Court interpretive authority grounded in constitutional supremacy and stare decisis",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "first_amendment_speech_protection",
+    "readings": [
+      {
+        "reading_id": "absolutist_reading",
+        "commitment": "First Amendment text 'no law' means no law — protection is categorical except for narrow historical exclusions",
+        "authority_grounding": "Textualist originalism (Black); democratic self-governance theory (Meiklejohn)",
+        "sibling_readings": [
+          "harm_limited_reading",
+          "categorical_balancing_reading"
+        ],
+        "expected_structural_delta": "Protected speech set maximized; harm to minorities externalized as cost of liberty; beneficiary is speaker/majority; victim is targeted minorities bearing systemic oppression costs"
+      },
+      {
+        "reading_id": "harm_limited_reading",
+        "commitment": "First Amendment protection yields when speech causes demonstrable unconsented-to harm",
+        "authority_grounding": "Millian harm principle; contemporary harm scholarship documenting tangible injuries",
+        "sibling_readings": [
+          "absolutist_reading",
+          "categorical_balancing_reading"
+        ],
+        "expected_structural_delta": "Protected speech set contracts around harm boundary; regulation permitted when harm proven; beneficiary is vulnerable minorities; victim is speakers whose expression causes harm"
+      },
+      {
+        "reading_id": "categorical_balancing_reading",
+        "commitment": "First Amendment creates protected/unprotected categories via case-by-case balancing of speech value against harm",
+        "authority_grounding": "Supreme Court precedent (current doctrine); pragmatic balancing",
+        "sibling_readings": [
+          "absolutist_reading",
+          "harm_limited_reading"
+        ],
+        "expected_structural_delta": "Protected speech set defined by judicial categories (obscenity, incitement, true threats excluded); beneficiary is institutional judiciary maintaining interpretive control; victim is legal predictability and minorities in categories deemed 'protected'"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "absolutist_reading",
+        "reading_b": "harm_limited_reading",
+        "basis": "Absolutist axiom holds that 'no law' is categorical and harm is an impermissible basis for regulation; harm-limited axiom holds that demonstrable harm is the legitimate basis for regulation. No single framework can hold both: accepting harm as a valid regulatory basis requires rejecting categorical protection, and vice versa."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "absolutist_reading",
+      "human_readable": "Absolutist Reading (Categorical Protection)",
+      "structural_delta": "First Amendment protection is categorical; harm to minorities is externalized cost of liberty",
+      "primary_observable": "Scope of protected speech set; judicial invalidation rate of content-based restrictions",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "speaker_majority",
+      "victim": "targeted_minorities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest epsilon; tangled_rope with clear beneficiary/victim structure"
+    },
+    {
+      "claim_id": "harm_limited_reading",
+      "human_readable": "Harm-Limited Reading (Harm Boundary Protection)",
+      "structural_delta": "First Amendment protection yields at demonstrable harm boundary; regulation permitted when injury proven",
+      "primary_observable": "Harm threshold definition; scope of permissible regulation when harm documented",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "vulnerable_minorities",
+      "victim": "speakers_causing_harm",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; axiom-contradictory to absolutist_reading; inverts beneficiary/victim structure"
+    },
+    {
+      "claim_id": "categorical_balancing_reading",
+      "human_readable": "Categorical Balancing Reading (Judicial Category Maintenance)",
+      "structural_delta": "First Amendment creates protected/unprotected categories via case-by-case judicial balancing",
+      "primary_observable": "Number and scope of categorical exclusions; judicial discretion in boundary-drawing",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "institutional_judiciary",
+      "victim": "legal_predictability",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; current doctrinal reality; scaffold maintaining interpretive control between absolutist and harm-limited poles"
+    },
+    {
+      "claim_id": "enforcement_mechanism_absence",
+      "human_readable": "Enforcement Mechanism Absence (Who Measures Harm)",
+      "structural_delta": "Harm-limited approach lacks specified enforcement mechanism for measuring and adjudicating harm claims",
+      "primary_observable": "Institutional design for harm measurement; epistemic authority for harm determination",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "harm_limited_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: implementation detail downstream of harm_limited_reading; lower structural priority than kernel readings themselves"
+    },
+    {
+      "claim_id": "minority_exit_absence",
+      "human_readable": "Minority Exit Absence (No Escape from Absolutism Costs)",
+      "structural_delta": "Minorities bearing disproportionate costs of absolutism lack exit option from the constitutional regime",
+      "primary_observable": "Availability of jurisdictional alternatives; constitutional amendment feasibility",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "absolutist_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: constitutional structure mountain; feeds into absolutist_reading but lower priority than kernel readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "absolutist_reading",
+      "kernel_id": "first_amendment_speech_protection",
+      "reading_id": "absolutist_reading"
+    },
+    {
+      "claim_id": "harm_limited_reading",
+      "kernel_id": "first_amendment_speech_protection",
+      "reading_id": "harm_limited_reading"
+    },
+    {
+      "claim_id": "categorical_balancing_reading",
+      "kernel_id": "first_amendment_speech_protection",
+      "reading_id": "categorical_balancing_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_mechanism_absence",
+      "structural_delta": "Harm-limited approach lacks specified enforcement mechanism",
+      "hypothesis": "piton",
+      "deferral_reason": "Implementation detail downstream of harm_limited_reading; lower structural priority than kernel readings"
+    },
+    {
+      "claim_id": "minority_exit_absence",
+      "structural_delta": "Minorities lack exit option from constitutional regime costs",
+      "hypothesis": "mountain",
+      "deferral_reason": "Constitutional structure mountain feeds into absolutist_reading but lower priority than kernel readings themselves"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_harm_definition_instability",
+      "description": "What counts as 'demonstrable harm' under harm_limited_reading? Physical injury only, or psychological/systemic harm? Boundary instability may collapse harm-limited into absolutist via narrow harm definition.",
+      "source": "Kernel reading analysis; research notes 'tangible harms' vs 'systemic oppression' distinction unresolved"
+    },
+    {
+      "id": "omega_categorical_balancing_drift",
+      "description": "Is categorical_balancing_reading a stable equilibrium or drift-absorption mechanism? Current doctrine may be partial drift status masking unresolved absolutist/harm-limited conflict.",
+      "source": "Commitment system recognition; drift_status=partial suggests interpretive layer absorbing tension"
+    },
+    {
+      "id": "omega_historical_exclusions_legitimacy",
+      "description": "Absolutist reading permits 'narrow historical exclusions' (obscenity, incitement). What grounds their legitimacy if text says 'no law'? May be covert harm principle smuggled into absolutism.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); absolutist_reading internal contradiction"
+    },
+    {
+      "id": "omega_enforcement_authority_capture",
+      "description": "If harm_limited_reading implemented, who adjudicates harm claims? Risk of enforcement mechanism capture by majority to suppress minority speech under harm pretext.",
+      "source": "Deferred axis enforcement_mechanism_absence; absence inventory"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied successfully. Three readings selected represent axiom-contradictory positions (absolutist vs harm-limited) plus current doctrinal scaffold. Deferred axes document implementation gaps without diluting kernel analysis."
+  },
+  "_seed_id": "free_speech_kernel"
+}

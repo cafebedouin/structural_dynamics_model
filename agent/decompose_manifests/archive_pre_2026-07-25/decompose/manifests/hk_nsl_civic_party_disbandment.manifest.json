@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Sociology / International Relations",
+  "family_id": "hong_kong_nsl_2024",
+  "topic_summary": "Analysis of the Hong Kong National Security Law as a contested kernel where Beijing's reading (sovereign security restoration) and civic/international reading (democratic enclosure mechanism) instantiate structurally different constraints from the same legal text. The NSL criminalizes secession, subversion, terrorism, and collusion with foreign forces, with mainland-style enforcement apparatus transplanted into Hong Kong's common law system.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "National Security Law (Article 23 implementation; 66 articles)",
+      "Central People's Government (CPG) — ultimate interpretive authority via NPCSC",
+      "Hong Kong SAR Government — local enforcement apparatus",
+      "Office for Safeguarding National Security (mainland agency in HK)",
+      "Pan-democratic camp (dissolved parties, arrested legislators)",
+      "International observers (UN Human Rights Council, US/UK/EU)",
+      "One Country Two Systems framework (50-year autonomy promise, 1997-2047)"
+    ],
+    "key_tensions": [
+      "Sovereign security vs autonomy preservation (CPG vs 1C2S promise)",
+      "National security vs civil liberties (NSL enforcement vs common law tradition)",
+      "Mainland jurisdiction vs HK legal system (mainland judges in NSL cases vs local judiciary)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Hong Kong National Security Law text itself — a codified legal instrument claiming to restore order and sovereignty while maintaining One Country Two Systems",
+    "authority_description": "Dual structure: NPCSC holds final interpretive authority (mainland constitutional supremacy) while HK courts apply the law (common law tradition). Interpretive legitimacy contested between sovereignty claims and treaty/autonomy commitments.",
+    "drift_status": "absent",
+    "candidate_pattern": "dynastic_succession_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "nsl_legal_text",
+    "readings": [
+      {
+        "reading_id": "sovereignty_restoration_reading",
+        "commitment": "NSL as legitimate sovereign security instrument restoring constitutional order after 2019 unrest",
+        "authority_grounding": "Parliamentary sovereignty (NPCSC supremacy) + Westphalian territorial integrity",
+        "sibling_readings": [
+          "democratic_enclosure_reading",
+          "jurisdictional_capture_reading"
+        ],
+        "expected_structural_delta": "Protesters/activists enter victim set as security threats; CPG authority enters beneficiary set; extractiveness moderate (targets political opposition, not general population)"
+      },
+      {
+        "reading_id": "democratic_enclosure_reading",
+        "commitment": "NSL as mechanism for permanent closure of democratic space and criminalization of dissent",
+        "authority_grounding": "Human rights law + treaty obligation (Sino-British Joint Declaration) + autonomy promise",
+        "sibling_readings": [
+          "sovereignty_restoration_reading",
+          "jurisdictional_capture_reading"
+        ],
+        "expected_structural_delta": "Civil society/press/opposition enter victim set; Beijing/HK establishment enter beneficiary set; extractiveness high (suppresses entire democratic infrastructure)"
+      },
+      {
+        "reading_id": "jurisdictional_capture_reading",
+        "commitment": "NSL as vehicle for mainland legal system transplantation, eroding common law autonomy",
+        "authority_grounding": "Legal pluralism + institutional autonomy norms",
+        "sibling_readings": [
+          "sovereignty_restoration_reading",
+          "democratic_enclosure_reading"
+        ],
+        "expected_structural_delta": "HK judiciary/legal profession enter victim set; mainland security apparatus enters beneficiary set; extractiveness moderate-high (captures institutional independence)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereignty_restoration_reading",
+        "reading_b": "democratic_enclosure_reading",
+        "basis": "Sovereignty_restoration axiom: state security threats are objectively identifiable and warrant coercive suppression. Democratic_enclosure axiom: political opposition is categorically distinct from security threats and warrants protection. No framework can hold both — accepting one requires rejecting the other's threat/dissent boundary."
+      },
+      {
+        "reading_a": "democratic_enclosure_reading",
+        "reading_b": "jurisdictional_capture_reading",
+        "basis": "Democratic_enclosure focuses on political rights suppression as primary harm. Jurisdictional_capture focuses on institutional autonomy erosion. These are NOT axiom-contradictory — a pluralist framework can hold both (rights depend on institutional independence). Coexist_with edge but no contradiction declaration."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_restoration_reading",
+      "human_readable": "Sovereignty Restoration Reading (Security Scaffold)",
+      "structural_delta": "NSL read as legitimate restoration of constitutional order via security apparatus after 2019 unrest destabilization",
+      "primary_observable": "Arrests/prosecutions under NSL provisions (secession, subversion, collusion); conviction rates; mainland judge assignments",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "central_peoples_government",
+      "victim": "pro_democracy_activists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel reading: authority structure claims security necessity justifies coercion. Moderate extractiveness targeting political opposition."
+    },
+    {
+      "claim_id": "democratic_enclosure_reading",
+      "human_readable": "Democratic Enclosure Reading (Dissent Criminalization)",
+      "structural_delta": "NSL read as instrument for permanent closure of democratic space via criminalization of opposition activity",
+      "primary_observable": "Civil society dissolution rates; press closures (Apple Daily, Stand News); electoral disqualifications; emigration data",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "beijing_hk_establishment",
+      "victim": "civil_society_press_opposition",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Kernel reading: authority structure weaponizes security law to extract democratic infrastructure. High extractiveness across entire civic sector."
+    },
+    {
+      "claim_id": "jurisdictional_capture_reading",
+      "human_readable": "Jurisdictional Capture Reading (Common Law Erosion)",
+      "structural_delta": "NSL as vehicle for mainland legal system transplantation, eroding HK's institutional legal autonomy",
+      "primary_observable": "Mainland judge appointments to NSL cases; NPCSC interpretation frequency; jury trial suspensions; prosecution origin (HK DOJ vs mainland Office)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "mainland_security_apparatus",
+      "victim": "hk_judiciary_legal_profession",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Kernel reading: authority structure captures institutional independence. Moderate extractiveness targeting legal system autonomy."
+    },
+    {
+      "claim_id": "one_country_two_systems_atrophy",
+      "human_readable": "One Country Two Systems Atrophy (Autonomy Piton Collapse)",
+      "structural_delta": "1C2S framework as initially-functional scaffold now degraded to symbolic piton via NSL implementation",
+      "primary_observable": "Policy divergence index (HK vs mainland on press/assembly/rule of law metrics); functional autonomy remaining post-2020",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "hong_kong_populace",
+      "downstream_of": [
+        "sovereignty_restoration_reading",
+        "democratic_enclosure_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured implicitly by all three readings (each describes 1C2S erosion mechanism). Piton diagnosis emerges from reading comparison."
+    },
+    {
+      "claim_id": "international_signaling_extraction",
+      "human_readable": "International Signaling Extraction (External Legitimacy Cost)",
+      "structural_delta": "NSL as mechanism imposing reputational/economic costs on international actors maintaining HK ties",
+      "primary_observable": "Sanctions adoption (US/UK/EU); financial services relocation; diplomatic downgrade frequency",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "international_observers_businesses",
+      "downstream_of": [
+        "democratic_enclosure_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of enclosure reading; lower structural centrality than core kernel readings."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_restoration_reading",
+      "kernel_id": "nsl_legal_text",
+      "reading_id": "sovereignty_restoration_reading"
+    },
+    {
+      "claim_id": "democratic_enclosure_reading",
+      "kernel_id": "nsl_legal_text",
+      "reading_id": "democratic_enclosure_reading"
+    },
+    {
+      "claim_id": "jurisdictional_capture_reading",
+      "kernel_id": "nsl_legal_text",
+      "reading_id": "jurisdictional_capture_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "one_country_two_systems_atrophy",
+      "structural_delta": "1C2S framework as functional scaffold degraded to symbolic piton",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured implicitly by all three kernel readings; piton diagnosis emerges from their comparison rather than requiring separate generation."
+    },
+    {
+      "claim_id": "international_signaling_extraction",
+      "structural_delta": "NSL imposing reputational/economic costs on international actors",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of democratic_enclosure_reading with lower structural centrality; addressable in essay synthesis."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_axiom_contradiction_enforcement",
+      "description": "Can any single legal framework simultaneously hold sovereignty_restoration's 'security threat identification' axiom and democratic_enclosure's 'dissent protection' axiom? The axiom contradiction indicates NO — but both readings persist as socially live positions. This is licensed plurality: the kernel sustains contradictory interpretations without resolution mechanism.",
+      "source": "§1.3-K axiom contradiction analysis"
+    },
+    {
+      "id": "omega_reading_stability",
+      "description": "Will jurisdictional_capture_reading remain distinct from sovereignty_restoration_reading as mainland legal transplantation becomes normatively complete? If HK judiciary fully adopts mainland interpretation norms, the two readings may collapse into one.",
+      "source": "Dark Matter Probe 2 (temporal stability of reading independence)"
+    },
+    {
+      "id": "omega_victim_set_boundary",
+      "description": "Democratic_enclosure_reading identifies 'civil society/press/opposition' as victim set. Does this include ordinary citizens engaging in private dissent, or only organized opposition? Boundary ambiguity affects extractiveness classification (high vs very high).",
+      "source": "§2.3 beneficiary/victim classification"
+    },
+    {
+      "id": "omega_1c2s_mountain_validity",
+      "description": "Is the 50-year autonomy promise (1997-2047) a Mountain (treaty obligation with international law status) or a Piton (revocable political commitment)? China's position: Sino-British Joint Declaration is 'historical document' with no ongoing force. UK/international position: binding treaty. Classification uncertainty affects whether 1C2S atrophy is constraint violation or constraint reclassification.",
+      "source": "F03 (hasty generalization) + deferred axis one_country_two_systems_atrophy"
+    },
+    {
+      "id": "omega_extraction_reversibility",
+      "description": "If Beijing withdrew NSL enforcement tomorrow, would civil society/press spontaneously reconstitute? Or has 4+ years of extraction created irreversible emigration/self-censorship? Reversibility determines whether this is Snare (trapping mechanism) or Tangled_Rope (coercive coordination with exit penalty).",
+      "source": "Dark Matter Probe 3 (beneficiary scan + mechanism reversibility)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: one_country_two_systems_atrophy classified as piton but could be mountain (treaty obligation) depending on international law interpretation. Generated omega_1c2s_mountain_validity to bound this uncertainty. Also: kernel decomposition successful — three readings instantiate genuinely different victim/beneficiary structures from same legal text, meeting §1.3-K criteria."
+  },
+  "_seed_id": "hk_nsl_civic_party_disbandment"
+}

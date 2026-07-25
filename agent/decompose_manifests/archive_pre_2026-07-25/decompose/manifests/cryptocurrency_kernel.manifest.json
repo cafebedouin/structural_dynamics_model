@@ -1,0 +1,187 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Economics / Technology Governance / Political Economy",
+  "family_id": "cryptocurrency_kernel_contest_2026",
+  "topic_summary": "Analysis of cryptocurrency as a contested kernel read through three interpretive frameworks: sound-money (Austrian economics inflation hedge), speculative-asset (tradable commodity with no fundamental anchor), and decentralization-ideology (anti-state coordination substrate). The kernel contest centers on whether these are three readings of one shared commitment or three distinct kernels sharing only a name.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Bitcoin/cryptocurrency protocols (technical substrate claimed by all three readings)",
+      "Sound-money advocates (Austrian economics, inflation hedge framing)",
+      "Speculative traders (price-action participants, no fundamental commitment)",
+      "Decentralization advocates (cypherpunk tradition, anti-state coordination)",
+      "Central banks (fiat money issuers, inflation policy authority)",
+      "Securities regulators (attempting classification jurisdiction)"
+    ],
+    "key_tensions": [
+      "Fixed supply (21M BTC cap) vs price volatility (undermines medium-of-exchange function)",
+      "Censorship-resistance claims vs regulatory capture via exchange chokepoints",
+      "Store-of-value narrative vs empirical correlation with risk-on equity markets"
+    ],
+    "key_mechanisms": [
+      "Proof-of-work mining (consensus mechanism anchoring decentralization claim)",
+      "Exchange-based price discovery (market mechanism linking all three readings to USD valuation)",
+      "Regulatory arbitrage (jurisdictional shopping enabling both ideology and speculation)",
+      "Narrative contagion (how readings recruit participants and shape protocol governance)"
+    ],
+    "key_absences": [
+      "Medium-of-exchange function (conspicuously absent from all three readings despite original whitepaper framing)",
+      "Energy cost accounting (proof-of-work externality unaddressed in sound-money economic analysis)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Cryptocurrency protocols (specifically Bitcoin) as shared substrate claimed by three incompatible interpretive frameworks",
+    "authority_description": "No single authority; interpretive legitimacy contested between Austrian economists, traders, and cypherpunks; each reading attempts to claim definitional authority",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "kernel_coherence_analysis": "FAILED coherence test. The three supposed readings do NOT share a common substrate commitment. Sound-money reading grounds legitimacy in scarcity economics (21M cap as fundamental constraint). Speculative-asset reading treats protocol as price-generation mechanism with no fundamental anchor. Decentralization reading grounds legitimacy in censorship-resistance (proof-of-work consensus as irreducible substrate). These are THREE DISTINCT KERNELS sharing only a name and technical implementation. A single coherent framework cannot hold 'inflation hedge via scarcity' AND 'no fundamental value anchor' simultaneously. The supposed kernel is actually a BRANDING COLLISION of three separate commitment systems using the same technical artifact for incompatible purposes. Decomposing as three flat axes (not readings) because there is no shared interpretive substrate to contest—only a naming collision masking structural incompatibility."
+  },
+  "axes": [
+    {
+      "claim_id": "sound_money_scarcity_anchor",
+      "human_readable": "Sound Money Scarcity Anchor (Austrian Inflation Hedge)",
+      "structural_delta": "Fixed supply cap (21M BTC) as anti-inflation commitment vs fiat monetary expansion",
+      "primary_observable": "Supply schedule immutability; correlation with CPI and M2 expansion metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "austrian_economists_early_adopters",
+      "victim": "late_entrants_via_price_appreciation",
+      "downstream_of": [],
+      "feeds_into": [
+        "speculative_price_volatility"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream kernel with distinct economic commitment; highest ε structural foundation for inflation-hedge narrative"
+    },
+    {
+      "claim_id": "speculative_price_volatility",
+      "human_readable": "Speculative Price Volatility (Asset Without Fundamental Anchor)",
+      "structural_delta": "Price determined by narrative contagion and reflexive positioning, no cash-flow or commodity backing",
+      "primary_observable": "Price volatility metrics; correlation with risk-on equity indices (Nasdaq, etc.)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "exchanges_market_makers_early_positioned_traders",
+      "victim": "retail_late_entrants_seeking_inflation_protection",
+      "downstream_of": [
+        "sound_money_scarcity_anchor"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; directly contradicts sound-money medium-of-exchange function via volatility; exposes tangled-rope extraction"
+    },
+    {
+      "claim_id": "decentralization_censorship_resistance",
+      "human_readable": "Decentralization Censorship Resistance (Anti-State Coordination Substrate)",
+      "structural_delta": "Proof-of-work consensus as mechanism for transaction finality without trusted third party",
+      "primary_observable": "Hash rate distribution; government ability to censor transactions via exchange/mining regulation",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "cypherpunk_ideologues_darknet_users",
+      "victim": "energy_grid_operators_environmental_commons",
+      "downstream_of": [],
+      "feeds_into": [
+        "regulatory_capture_via_exchanges"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Structurally independent from sound-money axis; distinct beneficiary/victim pair; captures third kernel in collision"
+    },
+    {
+      "claim_id": "regulatory_capture_via_exchanges",
+      "human_readable": "Regulatory Capture Via Exchanges (Chokepoint Control)",
+      "structural_delta": "Fiat on/off-ramps concentrated in KYC-compliant exchanges enable state control despite protocol decentralization",
+      "primary_observable": "Exchange market share; regulatory enforcement actions; fiat gateway concentration",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "major_exchanges_compliance_infrastructure",
+      "victim": "decentralization_advocates_unbanked_users",
+      "downstream_of": [
+        "decentralization_censorship_resistance"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream snare of decentralization axis but lower priority than speculative_price_volatility snare which affects larger victim set"
+    },
+    {
+      "claim_id": "energy_externality_piton",
+      "human_readable": "Energy Externality (Proof-of-Work Environmental Cost)",
+      "structural_delta": "Proof-of-work mining consumes energy equivalent to small nations; cost unpriced in all three kernel framings",
+      "primary_observable": "Cambridge Bitcoin Electricity Consumption Index; carbon intensity of mining operations",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "environmental_commons_grid_operators",
+      "downstream_of": [
+        "decentralization_censorship_resistance"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: absence flagged in extraction but lower centrality than three selected axes; omega material"
+    }
+  ],
+  "generation_sequence": [
+    "sound_money_scarcity_anchor",
+    "speculative_price_volatility",
+    "decentralization_censorship_resistance"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "regulatory_capture_via_exchanges",
+      "structural_delta": "Fiat gateways enable state control despite protocol decentralization",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of decentralization axis; smaller victim set than speculative_price_volatility snare"
+    },
+    {
+      "claim_id": "energy_externality_piton",
+      "structural_delta": "Proof-of-work energy consumption unpriced in kernel framings",
+      "hypothesis": "piton",
+      "deferral_reason": "Absence flagged in extraction; lower centrality than three selected axes; suitable for omega analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The three supposed readings FAIL the coherence test. Sound-money requires fundamental scarcity anchor. Speculative-asset denies fundamental anchor exists. Decentralization treats protocol-level censorship-resistance as the fundamental anchor. These are not three readings of one kernel—they are three DISTINCT kernels in a branding collision. A framework holding 'inflation hedge via scarcity' cannot simultaneously hold 'no fundamental value exists.' The shared technical artifact (Bitcoin protocol) is just implementation detail, not shared commitment substrate.",
+      "source": "§1.3-K kernel/reading decomposition analysis; commitment_system_recognition coherence test"
+    },
+    {
+      "id": "omega_medium_of_exchange_absence",
+      "description": "Original Bitcoin whitepaper framed cryptocurrency as peer-to-peer electronic cash (medium-of-exchange function). All three axes analyzed here treat exchange function as ABSENT. Speculative volatility directly contradicts medium-of-exchange viability. Is this absence a collapsed fourth kernel or evidence that the medium-of-exchange reading was never structurally viable?",
+      "source": "Extraction absence inventory; Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_hash_rate_centralization",
+      "description": "Decentralization axis assumes proof-of-work mining remains distributed. Empirical hash rate concentration in ~5 mining pools contradicts censorship-resistance claim. Is the decentralization reading a Rope (coordination still functional) or Piton (decentralization claim atrophied, extraction via concentrated mining power)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to decentralization axis"
+    },
+    {
+      "id": "omega_tether_fiat_dependency",
+      "description": "Speculative-asset price discovery depends on Tether (USDT) stablecoin as primary trading pair. Tether claims USD backing but lacks transparent audit. If Tether is fractional-reserve or unbacked, the speculative axis collapses into a Ponzi snare with crypto exchanges as primary beneficiaries. Beyond model's audit competence but structurally critical.",
+      "source": "F34 epistemic trespass boundary; absence inventory (Tether backing not addressed in extraction)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Tether stablecoin audit status and fractional-reserve risk assessment exceed model training competence. Generated omega_tether_fiat_dependency to bound uncertainty. Also: kernel coherence test FAILED—three supposed readings are actually three distinct kernels sharing only a name. Decomposed as flat axes (not readings) and documented collapse in omega_kernel_collapse."
+  },
+  "_seed_id": "cryptocurrency_kernel"
+}

@@ -1,0 +1,225 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Comparative Religion / Japanese History",
+  "family_id": "shinbutsu_shugo_syncretism",
+  "topic_summary": "Analysis of Shinbutsu-shugo (Shinto-Buddhist syncretism) in Japan, examining whether 1,200 years of institutional coexistence represents a single fused ontological commitment or a pragmatic domain-partitioned bundle. The system persisted from the 6th century until forced separation in 1868, with over 90% of major shrines hosting affiliated Buddhist temples by the medieval period, yet the two traditions never fully merged and maintained distinct identities within an unsystematized relationship.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Jingū-ji (shrine-temple complexes, institutional form of syncretism)",
+      "Tendai and Shingon sects (Buddhist movements claiming kami-buddha unity)",
+      "Kokugaku movement (nativist reaction, Hirata Atsutane)",
+      "Meiji government (forced separation via shinbutsu bunri laws 1868+)",
+      "Kami (Shinto deities, associated with life, purity, national identity)",
+      "Buddhas (Buddhist enlightened beings, associated with death, afterlife)",
+      "Kamidana and butsudan (household shrines and altars, persistence markers)",
+      "Amaterasu Ōmikami (claimed single source in syncretic doctrines)"
+    ],
+    "key_tensions": [
+      "Ontological unity vs functional coexistence (did kami and buddhas fuse or merely cohabit?)",
+      "Life domain (Shinto) vs death domain (Buddhist) partition",
+      "Systematic integration (jingū-ji ubiquity) vs systematic separation (shinbutsu kakuri)",
+      "1,200-year persistence vs never achieving full fusion"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The ontological relationship between kami and buddhas — whether they are manifestations of a single ultimate reality or parallel but separate entities",
+    "authority_description": "Interpretive authority distributed across Buddhist sects (Tendai, Shingon claiming unity), shrine institutions (maintaining kami autonomy), imperial court (patronizing both), and later kokugaku scholars (asserting Shinto primacy). No single adjudicator; legitimacy derived from institutional practice rather than doctrinal resolution.",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "kami_buddha_ontology",
+    "readings": [
+      {
+        "reading_id": "fused_ontology_reading",
+        "commitment": "Kami and buddhas are manifestations of a single ultimate reality (honji suijaku doctrine: buddhas are original forms, kami are local traces)",
+        "authority_grounding": "Tendai and Shingon esoteric Buddhism; syncretic movements like Sannō Ichijitsu Shintō claiming Amaterasu as universal source",
+        "sibling_readings": [
+          "domain_partition_reading",
+          "parallel_entities_reading"
+        ],
+        "expected_structural_delta": "Institutional integration (jingū-ji ubiquity); doctrinal synthesis attempts; high ε suppression of separation discourse until Meiji"
+      },
+      {
+        "reading_id": "domain_partition_reading",
+        "commitment": "Kami and buddhas govern separate domains (life/purity vs death/afterlife) without ontological unity",
+        "authority_grounding": "Functional practice ('born Shinto, die Buddhist'); Shinto aversion to death pollution; shinbutsu kakuri (systematic kami exclusion from Buddhism)",
+        "sibling_readings": [
+          "fused_ontology_reading",
+          "parallel_entities_reading"
+        ],
+        "expected_structural_delta": "Compartmentalized ritual practice; life-cycle domain boundaries; persistent dual household altars (kamidana/butsudan); low ε for ontological synthesis"
+      },
+      {
+        "reading_id": "parallel_entities_reading",
+        "commitment": "Kami and buddhas are parallel but separate entities coexisting without fusion or domain partition",
+        "authority_grounding": "Historical evidence of 'difficult, largely un-systematized and tense relationship'; post-Meiji persistence of dual practice despite separation laws",
+        "sibling_readings": [
+          "fused_ontology_reading",
+          "domain_partition_reading"
+        ],
+        "expected_structural_delta": "Institutional coexistence without doctrinal resolution; relationship exists 'between particular kami and particular buddhas' rather than systems; functional coherence without ontological coherence"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "fused_ontology_reading",
+        "reading_b": "parallel_entities_reading",
+        "basis": "Fused ontology requires kami and buddhas to be ultimately identical (different manifestations of one reality); parallel entities reading requires them to be fundamentally distinct. No single framework can hold both that X and Y are the same thing and that X and Y are different things."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "fused_ontology_reading",
+      "human_readable": "Fused Ontology Reading (Honji Suijaku Synthesis)",
+      "structural_delta": "Kami and buddhas unified as manifestations of single ultimate reality via honji suijaku doctrine",
+      "primary_observable": "Prevalence of syncretic doctrines (Sannō Ichijitsu Shintō, Ryōbu Shintō); jingū-ji institutional dominance (90%+ major shrines by medieval period); suppression of separation discourse pre-Meiji",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "buddhist_sects_tendai_shingon",
+      "victim": "kami_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest institutional extractiveness; Buddhist sects gained administrative control over shrine finances and personnel via ontological synthesis claim"
+    },
+    {
+      "claim_id": "domain_partition_reading",
+      "human_readable": "Domain Partition Reading (Life vs Death Functional Divide)",
+      "structural_delta": "Kami govern life/purity domain, buddhas govern death/afterlife domain, without ontological unity",
+      "primary_observable": "Life-cycle ritual distribution (Shinto weddings, Buddhist funerals); Shinto death pollution taboos; dual household altars (kamidana for life, butsudan for ancestors); shinbutsu kakuri practices",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Different observable (functional practice vs doctrinal claims); explains 1,200-year persistence without requiring ontological resolution"
+    },
+    {
+      "claim_id": "parallel_entities_reading",
+      "human_readable": "Parallel Entities Reading (Unsystematized Coexistence)",
+      "structural_delta": "Kami and buddhas as separate entities in tense, un-systematized relationship without fusion or domain partition",
+      "primary_observable": "Post-Meiji persistence of dual practice despite separation laws; 'particular kami and particular buddhas' relationships rather than system-level integration; functional coherence without ontological coherence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Captures the 'half-break' coherence question; explains why neither fusion nor partition fully describes the system"
+    },
+    {
+      "claim_id": "meiji_separation_extraction",
+      "human_readable": "Meiji Separation as Extraction (Shinbutsu Bunri as State-Building)",
+      "structural_delta": "Forced separation of kami worship from Buddhism as mechanism for kokugaku-influenced state Shinto construction",
+      "primary_observable": "Shinbutsu bunri laws 1868+; kokugaku influence on Meiji government (Hirata Atsutane lineage); incomplete separation (stalled 1873, partial to present)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "meiji_state_builders",
+      "victim": "syncretic_institutions",
+      "downstream_of": [
+        "fused_ontology_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream political extraction; captured in omega as state-building mechanism rather than ontological reading"
+    },
+    {
+      "claim_id": "institutional_control_mechanism",
+      "human_readable": "Institutional Control Mechanism (Jingū-ji as Administrative Capture)",
+      "structural_delta": "Buddhist sects gained administrative control over shrine finances and personnel via jingū-ji complexes",
+      "primary_observable": "90%+ major shrines with affiliated temples by medieval period; Tendai/Shingon control of shrine administration; shrine-temple revenue flows",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "buddhist_sects",
+      "victim": "shrine_autonomy",
+      "downstream_of": [
+        "fused_ontology_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: institutional mechanism of fused_ontology_reading; lower structural distinctiveness than selected axes"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "fused_ontology_reading",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "fused_ontology_reading"
+    },
+    {
+      "claim_id": "domain_partition_reading",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "domain_partition_reading"
+    },
+    {
+      "claim_id": "parallel_entities_reading",
+      "kernel_id": "kami_buddha_ontology",
+      "reading_id": "parallel_entities_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "meiji_separation_extraction",
+      "structural_delta": "Forced separation as state-building mechanism via kokugaku influence",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream political extraction; captured in omega_meiji_extraction rather than as ontological reading"
+    },
+    {
+      "claim_id": "institutional_control_mechanism",
+      "structural_delta": "Buddhist administrative capture via jingū-ji complexes",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Institutional mechanism of fused_ontology_reading; lower structural distinctiveness than selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_coherence_verdict",
+      "description": "Does the 1,200-year persistence prove functional coherence sufficient for 'kernel' status, or does the failure to achieve ontological synthesis prove it was always an incoherent bundle? The three readings may collapse into 'no single kernel existed' if generation reveals they describe different phenomena rather than different interpretations of one phenomenon.",
+      "source": "§1.3-K kernel/reading decomposition; user's explicit 'D2 half-break' flag"
+    },
+    {
+      "id": "omega_meiji_extraction",
+      "description": "Was shinbutsu bunri (Meiji separation) a snare extracting shrine autonomy for state Shinto construction, or a scaffold attempting to restore a pre-syncretic 'pure' Shinto that never existed? Kokugaku influence suggests extraction; incomplete separation (stalled 1873) suggests scaffold failure.",
+      "source": "Deferred axis meiji_separation_extraction; Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_honji_suijaku_reversal",
+      "description": "Honji suijaku doctrine claimed buddhas were original forms (honji) and kami were local traces (suijaku). Did any movement reverse this (kami as original, buddhas as traces)? If so, that would be a fourth reading. Research context does not surface this; absence may be significant.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_popular_vs_elite",
+      "description": "Do the three readings map to elite (doctrinal synthesis), popular (domain partition), and scholarly (parallel entities) strata? If so, the 'kernel' may be a class-stratified bundle rather than a contested ontology. Household practice (kamidana/butsudan) suggests popular domain partition; syncretic doctrines suggest elite fusion.",
+      "source": "Dark Matter Probe 1 (Operational Medium); extraction of household vs institutional practices"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks deep expertise in Japanese religious history, esoteric Buddhist doctrine, and kokugaku scholarship. Honji suijaku doctrine classification as 'fused ontology' may oversimplify complex medieval debates. Omega_honji_suijaku_reversal flags potential missing reading. Recommend domain expert review before generation."
+  },
+  "_seed_id": "shinto_buddhist_syncretism"
+}

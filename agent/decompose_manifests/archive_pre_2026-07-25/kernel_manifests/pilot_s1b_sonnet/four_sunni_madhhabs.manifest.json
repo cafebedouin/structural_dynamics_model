@@ -1,0 +1,202 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Legal Theory / Comparative Law",
+  "family_id": "sunni_madhahib_jurisprudential_method",
+  "topic_summary": "Analysis of the four Sunni schools of jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali) as a contested kernel system where each school offers a structurally distinct reading of the shared jurisprudential-method kernel. The schools have coexisted for over a millennium without displacement, each grounding interpretive authority differently while operating within the same commitment framework.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Hanafi school (Abu Hanifa, d. 767 CE; emphasizes qiyas/analogical reasoning; dominant in Ottoman territories)",
+      "Maliki school (Malik ibn Anas, d. 795 CE; emphasizes Medinan practice; dominant in North/West Africa)",
+      "Shafi'i school (al-Shafi'i, d. 820 CE; systematized usul al-fiqh; emphasizes hadith authentication)",
+      "Hanbali school (Ahmad ibn Hanbal, d. 855 CE; textualist; minimizes qiyas; Saudi official school)",
+      "Usul al-fiqh (shared jurisprudential-method kernel: Quran, Sunnah, ijma, qiyas as source hierarchy)",
+      "Mujtahid (qualified jurist authorized to perform ijtihad/independent reasoning)",
+      "Taqlid (following established school rulings without independent derivation)",
+      "Maqasid al-Shari'ah (objectives of Islamic law: preservation of religion, life, intellect, lineage, property)"
+    ],
+    "key_tensions": [
+      "Textualist restriction (Hanbali) vs rationalist expansion (Hanafi) of analogical reasoning scope",
+      "Hadith authentication rigor (Shafi'i) vs local practice authority (Maliki)",
+      "Mujtahid independence vs madhab institutional continuity",
+      "Universal legal principles vs regional customary integration ('urf)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The usul al-fiqh framework: a shared four-source hierarchy (Quran, Sunnah, ijma/consensus, qiyas/analogy) for deriving legal rulings, with each school reading the relative weight, scope, and application method of these sources differently",
+    "authority_description": "Each school grounds interpretive legitimacy through its founder's methodology and subsequent scholarly transmission (isnad), claiming fidelity to the kernel while instantiating different constraint structures",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "usul_al_fiqh_method",
+    "readings": [
+      {
+        "reading_id": "hanafi_reading",
+        "commitment": "Qiyas (analogical reasoning) is expansively applicable when textual sources are silent; ra'y (reasoned opinion) supplements where analogy reaches limits; istihsan (juristic preference) permits departure from strict analogy for public interest",
+        "authority_grounding": "Abu Hanifa's rationalist methodology; institutional continuity through Ottoman state adoption; mujtahid competence in analogical extension",
+        "sibling_readings": [
+          "maliki_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Lowest textual restrictiveness; highest scope for jurist-driven analogical expansion; beneficiary: jurist class with rationalist training; victim: textualist claim to limit innovation"
+      },
+      {
+        "reading_id": "maliki_reading",
+        "commitment": "Medinan practice ('amal ahl al-Madina) carries independent evidentiary weight alongside hadith; maslaha mursala (public interest unrestricted by text) is valid source; 'urf (custom) integrated where not contradicting text",
+        "authority_grounding": "Malik's proximity to Prophetic Medina; regional practice as living Sunnah; institutional continuity through North African scholarly networks",
+        "sibling_readings": [
+          "hanafi_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Regional customary law elevated to source status; beneficiary: local practice and customary norms; victim: universalist textualism that would override regional variation"
+      },
+      {
+        "reading_id": "shafii_reading",
+        "commitment": "Hadith authentication is prerequisite to legal derivation; qiyas permitted only when authenticated hadith is absent; ijma restricted to Companions' consensus; systematized usul al-fiqh as meta-discipline governing source hierarchy",
+        "authority_grounding": "Al-Shafi'i's Risala as foundational usul text; hadith science (ilm al-hadith) as gatekeeping discipline; scholarly transmission of authentication methodology",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Hadith scholars gain gatekeeping authority; analogical reasoning subordinated to textual authentication; beneficiary: hadith transmission specialists; victim: jurists claiming authority through rationalist methods alone"
+      },
+      {
+        "reading_id": "hanbali_reading",
+        "commitment": "Textual sources (Quran and authenticated hadith) are maximally restrictive; qiyas minimized to cases of clear textual silence; weak hadith preferred over qiyas; blocking of innovations (sadd al-dhara'i) to preserve textual fidelity",
+        "authority_grounding": "Ahmad ibn Hanbal's resistance to Mu'tazilite rationalism; textualist epistemology; institutional continuity through Wahhabi state adoption in Saudi Arabia",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "shafii_reading"
+        ],
+        "expected_structural_delta": "Highest textual restrictiveness; lowest scope for analogical or customary expansion; beneficiary: textualist claim to limit bid'a (innovation); victim: rationalist and customary legal development"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hanafi_reading",
+        "reading_b": "hanbali_reading",
+        "basis": "Hanafi axiom (analogical reasoning is expansively valid where text is silent) and Hanbali axiom (weak hadith preferred over analogy; analogy minimized) cannot coexist in a single framework—accepting Hanbali's textualist restriction requires rejecting Hanafi's rationalist expansion as epistemically invalid"
+      },
+      {
+        "reading_a": "maliki_reading",
+        "reading_b": "shafii_reading",
+        "basis": "Maliki axiom (Medinan practice carries independent evidentiary weight) and Shafi'i axiom (only authenticated hadith, not regional practice, is valid Sunnah evidence) are mutually exclusive—accepting Shafi'i's authentication requirement rejects Maliki's elevation of unauthenticated practice to source status"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "usul_al_fiqh_method_kernel",
+      "human_readable": "Jurisprudential Method Kernel (Usul al-Fiqh Source Hierarchy)",
+      "structural_delta": "Contested readings of the shared four-source framework (Quran, Sunnah, ijma, qiyas) producing structurally different constraint systems with different beneficiary/victim structures and extractiveness levels",
+      "primary_observable": "Relative weight assigned to textual vs analogical vs customary sources in actual fatwa production; scope of permissible ijtihad; institutional authority structures",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "madhab_institutional_persistence"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested kernel; four readings instantiate structurally distinct constraints from shared commitment"
+    },
+    {
+      "claim_id": "madhab_institutional_persistence",
+      "human_readable": "Madhab Institutional Persistence (Taqlid vs Ijtihad Equilibrium)",
+      "structural_delta": "Institutional mechanisms sustaining school boundaries despite shared kernel: taqlid (following school rulings) vs ijtihad (independent derivation); madhhab loyalty as social/political identity marker; state patronage patterns",
+      "primary_observable": "Proportion of jurists practicing taqlid vs ijtihad; madhab affiliation in judicial appointments; cross-madhab marriage/prayer acceptance rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "usul_al_fiqh_method_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (institutional boundary maintenance vs kernel contestation); different structural delta; passes §3 pairwise test"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hanafi_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "hanafi_reading"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "maliki_reading"
+    },
+    {
+      "claim_id": "shafii_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "shafii_reading"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "hanbali_reading"
+    },
+    "madhab_institutional_persistence"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "state_patronage_selection",
+      "structural_delta": "Political authority selects madhab for state legitimation (Ottoman Hanafi, Saudi Hanbali, Moroccan Maliki)",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured as downstream effect in madhab_institutional_persistence; state selection is mechanism of persistence, not independent axis"
+    },
+    {
+      "claim_id": "sectarian_boundary_maintenance",
+      "structural_delta": "Sunni madhab plurality vs Shi'a rejection of madhab framework; madhab diversity as intra-Sunni identity marker against Shi'a alterity",
+      "hypothesis": "rope",
+      "deferral_reason": "Sunni-Shi'a boundary is different domain (sectarian division vs intra-Sunni methodological plurality); would require separate kernel analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_ijtihad_closure",
+      "description": "Did the 'closing of the gates of ijtihad' (10th-11th century) convert the kernel from functioning to partial drift status? If mujtahid authority is institutionally foreclosed, readings may fossilize rather than adapt.",
+      "source": "Commitment system drift status assessment; historical debate on ijtihad accessibility"
+    },
+    {
+      "id": "omega_salafi_displacement",
+      "description": "Does contemporary Salafi rejection of madhab taqlid represent a fifth reading of the kernel, or an attempt to bypass the kernel entirely by claiming direct Quran/Sunnah access? If the latter, licensed plurality may be under displacement pressure.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); Salafism absent from extraction but structurally relevant to contemporary madhab persistence"
+    },
+    {
+      "id": "omega_legal_pluralism_collapse",
+      "description": "Does nation-state legal codification (e.g., Egyptian Civil Code, Pakistani Hudood Ordinances) collapse madhab plurality into state-enforced uniformity, converting rope (coordination) into snare (extraction via state monopoly)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); modern state as unexamined beneficiary of madhab displacement"
+    },
+    {
+      "id": "omega_gender_extractiveness",
+      "description": "Do all four readings share a common extractive structure regarding women's legal status (e.g., testimony weight, inheritance shares, guardianship), making gender the true axis and madhab differences superficial? Requires separate gender-focused kernel analysis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); gender absent from extraction despite centrality to fiqh rulings"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied per §1.3-K. Four readings pass individually-holdable test (each is a coherent, historically instantiated position). Axiom contradictions declared for Hanafi-Hanbali and Maliki-Shafi'i pairs. Madhab_institutional_persistence selected as independent axis (different observable: boundary maintenance vs source-weight contestation). Deferred axes captured as downstream effects or out-of-scope sectarian boundaries."
+  },
+  "_seed_id": "four_sunni_madhhabs"
+}

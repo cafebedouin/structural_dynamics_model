@@ -1,0 +1,235 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Trade Governance / Institutional Legitimacy",
+  "family_id": "wto_dispute_settlement_2026",
+  "topic_summary": "Analysis of the World Trade Organization's dispute settlement mechanism as a contested institutional kernel. The framework is read by different actors as either a neutral, binding international referee essential for trade liberalization, or as an illegitimate supranational authority infringing on sovereign trade policy autonomy. The contest determines whether compliance mechanisms can function at all.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "WTO Dispute Settlement Body (institutional adjudicator)",
+      "WTO Appellate Body (review mechanism, currently non-functional due to U.S. blocking)",
+      "Member states claiming sovereignty infringement (U.S., China, India)",
+      "Trade liberalization coalition (EU, Japan, Canada)",
+      "Panel rulings (binding decisions under one reading, advisory under another)",
+      "Retaliation authorization mechanism (enforcement tool)"
+    ],
+    "key_tensions": [
+      "Binding international law vs sovereign trade policy autonomy",
+      "Neutral technocratic adjudication vs politicized judicial activism",
+      "Rules-based order maintenance vs great power discretion"
+    ],
+    "key_mechanisms": [
+      "Panel-and-appeal dispute resolution process with binding rulings and compliance timelines",
+      "Trade retaliation authorization as enforcement lever for non-compliance"
+    ],
+    "key_absences": [
+      "Explicit enforcement mechanism beyond authorized retaliation (no police power)",
+      "Democratic legitimacy grounding for supranational authority claims"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The WTO dispute settlement framework as an institutional structure with authority to adjudicate trade disputes and issue binding rulings",
+    "authority_description": "Claimed legitimacy derives from treaty ratification (state consent) plus technocratic expertise of panelists, but contested whether consent extends to binding authority or merely advisory coordination",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_authority_scaffold",
+    "is_contested_kernel": true,
+    "kernel_id": "wto_dsb_authority",
+    "readings": [
+      {
+        "reading_id": "binding_referee_reading",
+        "commitment": "DSB panels issue binding rulings with compliance obligations grounded in treaty law; member states surrendered policy discretion within WTO-covered domains",
+        "authority_grounding": "treaty ratification as consent to binding arbitration; technocratic neutrality of panels",
+        "sibling_readings": [
+          "advisory_coordination_reading",
+          "judicial_activism_reading"
+        ],
+        "expected_structural_delta": "High compliance pressure via retaliation authorization; sovereignty explicitly traded for market access; non-compliance becomes treaty violation rather than policy choice"
+      },
+      {
+        "reading_id": "advisory_coordination_reading",
+        "commitment": "DSB panels provide expert advisory opinions to facilitate negotiated settlements; member states retain ultimate policy discretion",
+        "authority_grounding": "treaty as coordination mechanism, not sovereignty transfer; panel expertise valued but not binding",
+        "sibling_readings": [
+          "binding_referee_reading",
+          "judicial_activism_reading"
+        ],
+        "expected_structural_delta": "Low compliance pressure; rulings treated as negotiation inputs; sovereignty preserved; enforcement depends on bilateral power dynamics rather than institutional authority"
+      },
+      {
+        "reading_id": "judicial_activism_reading",
+        "commitment": "DSB panels exceed treaty mandate by creating new obligations through interpretive drift; illegitimate judicial legislation",
+        "authority_grounding": "no authority grounding—reading denies legitimacy; claims panels usurped power never granted by treaty",
+        "sibling_readings": [
+          "binding_referee_reading",
+          "advisory_coordination_reading"
+        ],
+        "expected_structural_delta": "Active resistance to compliance; treaty interpretation itself contested; retaliation authorization viewed as illegitimate; member states withdraw from enforcement mechanisms"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "binding_referee_reading",
+        "reading_b": "advisory_coordination_reading",
+        "basis": "Binding authority requires that states surrendered policy discretion within WTO domains; advisory authority requires states retained ultimate discretion. No single coherent framework holds both that states did and did not surrender discretion through treaty ratification."
+      },
+      {
+        "reading_a": "binding_referee_reading",
+        "reading_b": "judicial_activism_reading",
+        "basis": "Binding authority requires panels operate within delegated treaty mandate; judicial activism reading asserts panels operate outside any legitimate mandate. No framework holds both that authority was legitimately delegated and that no legitimate delegation occurred."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "binding_referee_reading",
+      "human_readable": "Binding Referee Reading (Mandatory Compliance via Treaty Law)",
+      "structural_delta": "DSB authority read as binding: member states obligated to comply with panel rulings under international law; non-compliance is treaty violation subject to retaliation",
+      "primary_observable": "Compliance rates with adverse rulings; retaliation authorization filings; member state public statements affirming binding nature",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": "trade_liberalization_coalition",
+      "victim": "protectionist_domestic_industries",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading establishing institutional authority as binding; highest ε as compliance constraint on sovereign policy"
+    },
+    {
+      "claim_id": "advisory_coordination_reading",
+      "human_readable": "Advisory Coordination Reading (Expert Input, Retained Discretion)",
+      "structural_delta": "DSB authority read as advisory: rulings are expert opinions facilitating negotiation; states retain ultimate policy discretion; non-compliance is negotiating position rather than violation",
+      "primary_observable": "Frequency of non-compliance without retaliation pursuit; negotiated settlement rates; state rhetoric emphasizing sovereignty retention",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural contrast: same institutional kernel read as coordination rather than constraint; different beneficiary/victim topology"
+    },
+    {
+      "claim_id": "judicial_activism_reading",
+      "human_readable": "Judicial Activism Reading (Illegitimate Interpretive Overreach)",
+      "structural_delta": "DSB authority read as illegitimate: panels exceed treaty mandate through interpretive drift; rulings are judicial legislation without democratic consent; resistance is defense of sovereignty",
+      "primary_observable": "Appellate Body blocking actions; withdrawal from enforcement mechanisms; explicit rejection of panel jurisdiction claims",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "great_power_trade_policy_autonomy",
+      "victim": "small_state_market_access",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Active resistance reading; beneficiary structure inverted from binding_referee_reading; explains Appellate Body paralysis"
+    },
+    {
+      "claim_id": "enforcement_asymmetry",
+      "human_readable": "Enforcement Asymmetry (Retaliation Capacity as Power Gradient)",
+      "structural_delta": "Authorized retaliation as enforcement mechanism privileges large economies with market leverage; small states cannot credibly threaten retaliation against major powers",
+      "primary_observable": "Retaliation authorization size vs target economy GDP; compliance differential between small and large respondents",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "large_economy_defendants",
+      "victim": "small_economy_complainants",
+      "downstream_of": [
+        "binding_referee_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural asymmetry within enforcement mechanism; captured indirectly via binding_referee_reading's compliance constraint topology"
+    },
+    {
+      "claim_id": "appellate_body_paralysis",
+      "human_readable": "Appellate Body Paralysis (Institutional Sabotage via Appointment Blocking)",
+      "structural_delta": "U.S. blocking of Appellate Body appointments as institutional sabotage mechanism; transforms two-tier system into single-tier vulnerable to non-compliance",
+      "primary_observable": "Appellate Body member vacancy count; appeals filed to non-functional body; multi-party interim appeal arbitration arrangement adoption",
+      "epsilon_bin": "high",
+      "hypothesis": "piton",
+      "beneficiary": "judicial_activism_reading_adherents",
+      "victim": "binding_referee_reading_adherents",
+      "downstream_of": [
+        "judicial_activism_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: manifestation of judicial_activism_reading in institutional structure; piton of authority erosion"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "binding_referee_reading",
+      "kernel_id": "wto_dsb_authority",
+      "reading_id": "binding_referee_reading"
+    },
+    {
+      "claim_id": "advisory_coordination_reading",
+      "kernel_id": "wto_dsb_authority",
+      "reading_id": "advisory_coordination_reading"
+    },
+    {
+      "claim_id": "judicial_activism_reading",
+      "kernel_id": "wto_dsb_authority",
+      "reading_id": "judicial_activism_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_asymmetry",
+      "structural_delta": "Retaliation capacity as power gradient favoring large economies",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural asymmetry within enforcement mechanism captured indirectly via binding_referee_reading constraint topology; would add detail but not fundamental axis"
+    },
+    {
+      "claim_id": "appellate_body_paralysis",
+      "structural_delta": "Institutional sabotage via appointment blocking",
+      "hypothesis": "piton",
+      "deferral_reason": "Manifestation of judicial_activism_reading in practice; important historical development but mechanistically downstream of authority contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_treaty_interpretation_authority",
+      "description": "Who has legitimate authority to interpret WTO treaty obligations—panels, member states, or both in different domains? If panels, binding_referee_reading holds. If member states retain interpretive sovereignty, advisory_coordination_reading or judicial_activism_reading applies. The kernel contest itself turns on this unresolved foundational question.",
+      "source": "Dark Matter Probe 1 (Operational Medium): the model operates within assumption of treaty as fixed text, but authority contest is about who interprets that text"
+    },
+    {
+      "id": "omega_sovereignty_bundle_divisibility",
+      "description": "Can treaty ratification transfer 'some' sovereignty (trade policy within WTO scope) while retaining 'core' sovereignty, or is sovereignty indivisible? Binding_referee_reading requires divisibility; judicial_activism_reading asserts indivisibility. No neutral way to adjudicate between these metaphysical positions.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): no explicit definition of what treaty ratification transfers"
+    },
+    {
+      "id": "omega_democratic_legitimacy_gap",
+      "description": "DSB panels lack direct democratic accountability. Binding_referee_reading grounds authority in state consent (treaty ratification) as indirect legitimacy. Judicial_activism_reading rejects indirect legitimacy as sufficient for binding authority. Small states may benefit from binding authority against large states but lack voice in panel selection.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + absence of democratic legitimacy grounding"
+    },
+    {
+      "id": "omega_compliance_endogeneity",
+      "description": "Compliance rates with adverse rulings may reflect power dynamics rather than authority recognition. High compliance by small states could indicate either acceptance of binding authority OR coercive pressure from large trading partners. Observable does not cleanly separate readings.",
+      "source": "Primary observable ambiguity for binding_referee_reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings cleanly partition interpretive space around WTO DSB authority. Axiom contradictions properly identified between binding/advisory and binding/activism pairs. Deferred axes are genuine deferral (enforcement asymmetry and AB paralysis are important but downstream/manifestation rather than independent structural dimensions)."
+  },
+  "_seed_id": "wto_institutional_degradation"
+}

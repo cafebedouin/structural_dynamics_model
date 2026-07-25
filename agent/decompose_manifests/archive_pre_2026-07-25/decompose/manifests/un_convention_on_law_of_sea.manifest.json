@@ -1,0 +1,228 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Maritime Governance / Geopolitical Strategy",
+  "family_id": "unclos_maritime_rights_disputes",
+  "topic_summary": "Analysis of contested interpretations of the United Nations Convention on the Law of the Sea (UNCLOS), focusing on conflicts between strict exclusive economic zone (EEZ) enforcement and expansive historical rights claims. The substrate is UNCLOS itself as a founding legal kernel; different state readings produce structurally incompatible sovereignty and resource control regimes.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "UNCLOS (United Nations Convention on the Law of the Sea - founding legal kernel)",
+      "Coastal States (primary beneficiaries of EEZ regime)",
+      "China (expansive historical rights claimant via nine-dash line)",
+      "United States (non-ratifier enforcing freedom of navigation)",
+      "International Tribunal for the Law of the Sea (ITLOS - interpretive authority)",
+      "Philippines/Vietnam/other ASEAN claimants (competing sovereignty assertions)"
+    ],
+    "key_tensions": [
+      "EEZ exclusivity vs historical rights overlay (strict reading vs expansive reading)",
+      "Ratifier obligations vs non-ratifier enforcement (U.S. enforces rules it hasn't ratified)",
+      "Resource sovereignty vs navigational freedom (coastal control vs maritime commons)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "UNCLOS as codified maritime law establishing EEZ boundaries, territorial waters, and resource rights - the stabilized international legal framework for ocean governance",
+    "authority_description": "International Tribunal for the Law of the Sea (ITLOS) plus domestic courts of ratifying states; legitimacy grounded in treaty ratification and customary international law status",
+    "drift_status": "partial",
+    "candidate_pattern": "Contested Legitimacy Pattern - multiple authorities claim interpretive primacy over the same kernel with incompatible readings",
+    "is_contested_kernel": true,
+    "kernel_id": "unclos_sovereignty_boundary",
+    "readings": [
+      {
+        "reading_id": "strict_eez_reading",
+        "commitment": "EEZ boundaries are exclusive and enforceable per UNCLOS Article 57 200-nautical-mile limits; no overlay claims valid",
+        "authority_grounding": "ITLOS rulings (e.g., Philippines v. China 2016) plus majority coastal state practice",
+        "sibling_readings": [
+          "historical_rights_reading",
+          "non_ratifier_enforcement_reading"
+        ],
+        "expected_structural_delta": "Coastal states enter beneficiary set with exclusive resource control; overlapping claimants enter victim set (lose access); high suppression of alternative sovereignty frameworks"
+      },
+      {
+        "reading_id": "historical_rights_reading",
+        "commitment": "Historical usage and occupation create sovereign rights that predate and override UNCLOS EEZ provisions",
+        "authority_grounding": "Domestic legal frameworks of claimant states (e.g., China's 1992 Territorial Sea Law); rejection of ITLOS authority as Western-imposed",
+        "sibling_readings": [
+          "strict_eez_reading",
+          "non_ratifier_enforcement_reading"
+        ],
+        "expected_structural_delta": "Expansive claimant states enter beneficiary set; EEZ-holding coastal states enter victim set (lose exclusive control); navigational actors face constraint increase"
+      },
+      {
+        "reading_id": "non_ratifier_enforcement_reading",
+        "commitment": "Freedom of navigation principles are customary international law independent of UNCLOS ratification; enforceable by naval presence",
+        "authority_grounding": "U.S. military doctrine plus other major naval powers; legitimacy grounded in customary law and power projection capacity",
+        "sibling_readings": [
+          "strict_eez_reading",
+          "historical_rights_reading"
+        ],
+        "expected_structural_delta": "Naval powers enter beneficiary set (enforce rules without treaty obligations); coastal states attempting EEZ exclusivity enter victim set; constraint structure decouples from legal text"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "strict_eez_reading",
+        "reading_b": "historical_rights_reading",
+        "basis": "One holds that EEZ boundaries are legally exclusive and override prior claims; the other holds that historical sovereignty preexists and supersedes treaty-created boundaries. No single coherent framework can hold both - accepting historical rights as valid requires rejecting EEZ exclusivity, and vice versa."
+      },
+      {
+        "reading_a": "strict_eez_reading",
+        "reading_b": "non_ratifier_enforcement_reading",
+        "basis": "One grounds maritime law authority in ratified treaty text with tribunal adjudication; the other decouples enforcement from treaty membership via customary law claims. A framework cannot simultaneously hold that UNCLOS authority derives from ratification AND that non-ratifiers can enforce its provisions through military power."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "strict_eez_reading",
+      "human_readable": "Strict EEZ Reading (Treaty-Text Exclusivity)",
+      "structural_delta": "UNCLOS Article 57 EEZ boundaries are exclusive and legally enforceable, overriding all prior claims",
+      "primary_observable": "ITLOS rulings, coastal state domestic enforcement actions, treaty ratification compliance",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "coastal_states_with_itlos_backing",
+      "victim": "overlapping_claimants_and_historical_rights_asserters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core treaty-text reading with ITLOS institutional backing; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "historical_rights_reading",
+      "human_readable": "Historical Rights Reading (Sovereignty-Precedence Overlay)",
+      "structural_delta": "Historical occupation and usage create sovereign rights that predate and override UNCLOS EEZ provisions",
+      "primary_observable": "Nine-dash line enforcement, island-building activities, domestic legal codifications rejecting ITLOS",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "expansive_sovereignty_claimants",
+      "victim": "eez_holding_coastal_states_and_navigational_actors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory to strict_eez_reading; highest epsilon bin; generates incompatible sovereignty structure"
+    },
+    {
+      "claim_id": "non_ratifier_enforcement_reading",
+      "human_readable": "Non-Ratifier Enforcement Reading (Customary Law Decoupling)",
+      "structural_delta": "Freedom of navigation is customary international law enforceable by naval powers independent of UNCLOS ratification",
+      "primary_observable": "U.S. FONOPs frequency, non-ratifier naval exercises in contested waters, enforcement without treaty obligations",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "major_naval_powers",
+      "victim": "coastal_states_attempting_eez_exclusivity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading; axiom-contradictory to strict_eez; captures enforcement-without-ratification dynamic"
+    },
+    {
+      "claim_id": "resource_extraction_substrate",
+      "human_readable": "Resource Extraction Substrate (Hydrocarbon/Fishery Stakes)",
+      "structural_delta": "Contested areas contain high-value hydrocarbon reserves and fishing grounds, making sovereignty disputes economically self-sustaining",
+      "primary_observable": "Oil/gas reserve estimates in South China Sea, fishery catch data, resource exploration permits",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "strict_eez_reading",
+        "historical_rights_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain substrate acknowledged but reading-level analysis captures the constraint structure more directly"
+    },
+    {
+      "claim_id": "tribunal_rejection_mechanism",
+      "human_readable": "Tribunal Rejection Mechanism (Authority Erosion via Non-Compliance)",
+      "structural_delta": "Major powers rejecting ITLOS rulings erode tribunal authority, shifting maritime governance from legal adjudication to power projection",
+      "primary_observable": "Compliance rates with ITLOS rulings, China's post-2016 behavior, enforcement gap measurement",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "historical_rights_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured implicitly in historical_rights_reading's rejection of ITLOS authority grounding"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "strict_eez_reading",
+      "kernel_id": "unclos_sovereignty_boundary",
+      "reading_id": "strict_eez_reading"
+    },
+    {
+      "claim_id": "historical_rights_reading",
+      "kernel_id": "unclos_sovereignty_boundary",
+      "reading_id": "historical_rights_reading"
+    },
+    {
+      "claim_id": "non_ratifier_enforcement_reading",
+      "kernel_id": "unclos_sovereignty_boundary",
+      "reading_id": "non_ratifier_enforcement_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "resource_extraction_substrate",
+      "structural_delta": "High-value hydrocarbon and fishery resources make sovereignty disputes economically self-sustaining",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain substrate acknowledged but reading-level constraint analysis captures structure more directly; omega_resource_stakes documents"
+    },
+    {
+      "claim_id": "tribunal_rejection_mechanism",
+      "structural_delta": "Non-compliance with ITLOS rulings erodes legal authority, shifting governance to power projection",
+      "hypothesis": "piton",
+      "deferral_reason": "Implicitly captured in historical_rights_reading's authority grounding rejection; documented in omega_authority_erosion"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_resource_stakes",
+      "description": "Are contested areas' hydrocarbon reserves a Mountain (geological fact) or a Piton (overestimated to justify sovereignty claims)? Reserve estimates vary wildly; if extraction proves uneconomical, does the constraint structure collapse?",
+      "source": "Deferred axis resource_extraction_substrate + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_authority_erosion",
+      "description": "Is ITLOS authority a Rope (coordination mechanism) becoming a Piton (hollow formalism)? China's 2016 ruling rejection suggests drift toward power-based rather than law-based maritime governance.",
+      "source": "Deferred axis tribunal_rejection_mechanism + commitment_system_recognition drift_status=partial"
+    },
+    {
+      "id": "omega_us_ratification_paradox",
+      "description": "Why does the U.S. enforce UNCLOS provisions without ratifying the treaty? Is this a stable Tangled Rope (de facto customary law) or a Snare where non-ratification becomes a constraint extraction mechanism (selective enforcement without obligation)?",
+      "source": "non_ratifier_enforcement_reading + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_indigenous_maritime_rights",
+      "description": "UNCLOS framework assumes state sovereignty as the base unit; indigenous maritime peoples' customary rights are absent from all three readings. Does state-centric sovereignty structure itself become a Snare for non-state claimants?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - no indigenous entity in extraction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Kernel decomposition successful. Three readings exhibit genuine axiom contradiction per §1.3-K test. Resource substrate and tribunal erosion deferred as secondary to reading-level structure. All readings selected for generation per structural distinctiveness and axiom incompatibility."
+  },
+  "_seed_id": "un_convention_on_law_of_sea"
+}

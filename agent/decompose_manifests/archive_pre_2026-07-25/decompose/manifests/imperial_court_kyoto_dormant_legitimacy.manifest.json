@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Comparative Constitutional Systems / East Asian History",
+  "family_id": "japanese_imperial_mandate_bakufu_loyalists",
+  "topic_summary": "Analysis of the Japanese imperial mandate as a contested kernel within a lineage-based commitment system. The Tokugawa shogunate (1603-1868) and imperial loyalists read the same imperial lineage substrate differently: the bakufu as delegated authority rendering the emperor ceremonial, loyalists as direct divine mandate requiring active imperial sovereignty. This reading contest shaped the Meiji Restoration's legitimation strategy.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Imperial lineage (claimed unbroken from Jimmu, 660 BCE)",
+      "Tokugawa shogunate (military government, 1603-1868)",
+      "Imperial loyalists (sonnō jōi movement, late Edo period)",
+      "Emperor (Tennō, holder of divine mandate)",
+      "Samurai class (military-administrative stratum under bakufu)"
+    ],
+    "key_tensions": [
+      "Bakufu vs loyalists over who holds interpretive authority over imperial mandate",
+      "Ceremonial vs active sovereignty: same lineage, opposing institutional structures"
+    ],
+    "key_mechanisms": [
+      "Bakufu delegation claim: Emperor grants governing authority to shogun, remains ritually supreme but institutionally inert",
+      "Loyalist restoration claim: Any non-imperial exercise of sovereignty is usurpation; mandate requires direct imperial rule",
+      "Forbidden Gate Incident (1864): Military confrontation over physical access to emperor, crystallizing authority contest"
+    ],
+    "key_absences": [
+      "How Chinese Mandate of Heaven model (performance-based legitimacy, Heaven can withdraw mandate) differs from Japanese lineage model (descent-based legitimacy, mandate inseparable from bloodline)",
+      "What happens to samurai class structural position under each reading (bakufu: administrators under delegation; loyalists: obstacle to imperial restoration)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "bakufu_delegation_reading",
+      "human_readable": "Bakufu Delegation Reading (Ceremonial Mandate, Delegated Governance)",
+      "structural_delta": "Imperial lineage as ritual husk that delegates active governance to shogunate; mandate grants legitimacy to bakufu's administrative authority while emperor remains symbolically supreme but institutionally passive",
+      "primary_observable": "Institutional structure: shogunate holds taxation, military, diplomatic authority; emperor confined to Kyoto palace performing rituals; all official acts issued in shogun's name with pro forma imperial acknowledgment",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "tokugawa_shogunate",
+      "victim": "imperial_court_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First of two core readings; highest epsilon as it sustained 250+ years of bakufu rule",
+      "kernel_id": "imperial_mandate",
+      "reading_id": "bakufu_delegation_reading",
+      "commitment": "Divine mandate operates through institutional delegation; emperor's legitimacy-granting function separable from governing function",
+      "authority_grounding": "Historical precedent (prior shogunates), emperor's formal appointment of shogun, Confucian hierarchical order",
+      "sibling_readings": [
+        "loyalist_restoration_reading"
+      ],
+      "expected_structural_delta": "Bifurcated authority structure: emperor as ritual sovereign, shogun as administrative sovereign; samurai class as legitimate governing stratum; suppression of direct imperial political involvement"
+    },
+    {
+      "claim_id": "loyalist_restoration_reading",
+      "human_readable": "Loyalist Restoration Reading (Active Mandate, Direct Imperial Sovereignty)",
+      "structural_delta": "Imperial lineage as sole legitimate sovereign authority requiring direct rule; any intermediary governance is usurpation of divine mandate that inheres inseparably in imperial person",
+      "primary_observable": "Sonnō jōi discourse: all reforms/modernization must be initiated by emperor; rejection of bakufu diplomatic acts (e.g., unequal treaties) as illegitimate; Meiji Restoration institutional structure abolishing shogunate and declaring direct imperial rule",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "imperial_court",
+      "victim": "tokugawa_shogunate",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second core reading; drove Meiji Restoration and modern Japanese constitutional structure",
+      "kernel_id": "imperial_mandate",
+      "reading_id": "loyalist_restoration_reading",
+      "commitment": "Divine mandate requires unmediated exercise of sovereignty by emperor; legitimacy inseparable from active imperial governance",
+      "authority_grounding": "Shinto theology (emperor as living kami), Kokugaku nativist scholarship, Chinese Spring and Autumn Annals' rectification of names doctrine",
+      "sibling_readings": [
+        "bakufu_delegation_reading"
+      ],
+      "expected_structural_delta": "Unified authority structure: emperor as both ritual and administrative sovereign; samurai class demoted to commoner status or absorbed into new bureaucracy; suppression of competing governance centers"
+    },
+    {
+      "claim_id": "foreign_pressure_catalyst",
+      "human_readable": "Foreign Pressure Catalyst (Unequal Treaties as Reading Trigger)",
+      "structural_delta": "Perry's 1853 arrival and subsequent unequal treaties created legitimacy crisis: bakufu signed treaties in shogun's name, but increasing perception that only emperor could legitimately concede sovereignty to foreign powers",
+      "primary_observable": "Treaty of Kanagawa (1854), Ansei Treaties (1858) signed by bakufu without imperial ratification; imperial court's delayed approval weaponized by loyalists as proof bakufu exceeded delegated authority",
+      "epsilon_bin": "moderate",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "bakufu_delegation_reading",
+        "loyalist_restoration_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Catalytic axis showing how external shock exposed kernel ambiguity; affects both readings by forcing explicit authority claims",
+      "kernel_id": null,
+      "reading_id": null
+    },
+    {
+      "claim_id": "samurai_class_structural_position",
+      "human_readable": "Samurai Class Structural Position (Beneficiary Inversion)",
+      "structural_delta": "Under bakufu reading, samurai are legitimate administrative class; under loyalist reading, they are obstacle to direct imperial rule and must be dissolved",
+      "primary_observable": "Meiji Restoration outcomes: 1869 return of domains to emperor, 1871 abolition of han system, 1876 sword prohibition, stipend commutation; samurai class structurally eliminated",
+      "epsilon_bin": "very_high",
+      "hypothesis": "snare",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [
+        "bakufu_delegation_reading",
+        "loyalist_restoration_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Captured as downstream consequence in both reading stories; beneficiary field inverts between readings making it a second-order effect rather than independent constraint axis"
+    },
+    {
+      "claim_id": "mandate_of_heaven_comparison",
+      "human_readable": "Mandate of Heaven Comparison (Performance vs Lineage Legitimacy)",
+      "structural_delta": "Chinese Heaven's Mandate allows withdrawal based on ruler performance (dynasty can lose mandate); Japanese imperial lineage model makes mandate inseparable from bloodline (no mechanism for legitimate overthrow)",
+      "primary_observable": "Absence of Japanese dynastic cycles; all regime changes preserve imperial lineage even when emperors lack power (contrast with Chinese dynastic replacement pattern)",
+      "epsilon_bin": "very_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "bakufu_delegation_reading",
+        "loyalist_restoration_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Contextual comparison clarifying why Japanese kernel contest takes delegation/restoration form rather than dynastic replacement form; omega material on lineage vs performance legitimacy models"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "bakufu_delegation_reading",
+      "kernel_id": "imperial_mandate",
+      "reading_id": "bakufu_delegation_reading"
+    },
+    {
+      "claim_id": "loyalist_restoration_reading",
+      "kernel_id": "imperial_mandate",
+      "reading_id": "loyalist_restoration_reading"
+    },
+    "foreign_pressure_catalyst"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "samurai_class_structural_position",
+      "structural_delta": "Samurai class position inverts between readings: legitimate administrators vs obstacles to restoration",
+      "hypothesis": "snare",
+      "deferral_reason": "Second-order downstream effect captured within reading stories; beneficiary field inverts making it consequence rather than independent constraint"
+    },
+    {
+      "claim_id": "mandate_of_heaven_comparison",
+      "structural_delta": "Japanese lineage model vs Chinese performance model of legitimacy",
+      "hypothesis": "mountain",
+      "deferral_reason": "Contextual comparison explaining why contest takes delegation/restoration form; omega material on legitimacy model typology"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_lineage_performance_tension",
+      "description": "Why does Japanese lineage model (mandate inseparable from bloodline) not generate dynastic replacement pattern seen in Chinese Mandate of Heaven (performance-based)? Deferred axis mandate_of_heaven_comparison explores whether lineage model is Mountain (anthropological universal) or Piton (contingent cultural choice).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis mandate_of_heaven_comparison"
+    },
+    {
+      "id": "omega_meiji_oligarchy_paradox",
+      "description": "Meiji Restoration restored direct imperial rule in name, but governance conducted by oligarchic clique (Satsuma-Chōshū genrō) who controlled emperor. Did loyalist reading collapse back into delegation reading with different beneficiaries? If so, kernel contest may be Scaffold (rhetorical framing) rather than genuine structural alternative.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_1947_constitution_continuity",
+      "description": "Does post-1947 symbolic emperor status under US-imposed constitution represent third reading of imperial mandate, or return to bakufu delegation model with Diet substituting for shogunate? Affects whether kernel contest is historically resolved or structurally live.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis conducted within Meiji-era closure; constitution may have reopened kernel"
+    },
+    {
+      "id": "omega_forbidden_gate_centrality",
+      "description": "Was 1864 Kinmon Incident (Chōshū forces attempting to 'rescue' emperor from Aizu/Satsuma forces in Kyoto) the physical instantiation of reading contest, or merely one violent episode among many? If former, it may warrant its own axis as crystallization point where abstract authority claims became military confrontation over physical access to imperial person.",
+      "source": "§2.2 Dark Matter Probe (Absence Inventory) — mechanism noted but not decomposed into axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Both readings classified as high-epsilon tangled_ropes, but Meiji Restoration outcome (loyalist reading victory) may represent oligarchic capture rather than genuine restoration of direct imperial rule. Generated omega_meiji_oligarchy_paradox to bound uncertainty about whether loyalist reading was structurally implemented or rhetorically deployed as legitimation for new delegation pattern."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Japanese imperial lineage and divine mandate — an unbroken succession claimed from mythological origins (Emperor Jimmu, 660 BCE) grounding all legitimate sovereignty",
+    "authority_description": "Interpretive authority contested: Tokugawa shogunate claimed historical precedent and Confucian hierarchical order; imperial loyalists claimed Shinto theology and nativist Kokugaku scholarship",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_overlay_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "imperial_mandate",
+    "readings": [
+      {
+        "reading_id": "bakufu_delegation_reading",
+        "commitment": "Divine mandate operates through institutional delegation; emperor's legitimacy-granting function separable from governing function",
+        "authority_grounding": "Historical precedent (Kamakura/Ashikaga shogunates), emperor's formal appointment of shogun as sei-i taishōgun, Confucian hierarchical order imported from China",
+        "sibling_readings": [
+          "loyalist_restoration_reading"
+        ],
+        "expected_structural_delta": "Bifurcated sovereignty: emperor as ritual head granting legitimacy, shogun as administrative head exercising authority; samurai class as legitimate governing stratum; emperor's political involvement suppressed; institutional continuity through delegation across regime changes"
+      },
+      {
+        "reading_id": "loyalist_restoration_reading",
+        "commitment": "Divine mandate requires unmediated exercise of sovereignty by emperor; legitimacy inseparable from active imperial governance",
+        "authority_grounding": "Shinto theology (emperor as arahitogami, manifest kami), Kokugaku nativist scholarship rejecting Chinese influences, Spring and Autumn Annals' rectification of names applied to imperial authority",
+        "sibling_readings": [
+          "bakufu_delegation_reading"
+        ],
+        "expected_structural_delta": "Unified sovereignty: emperor as both ritual and administrative sovereign; intermediary governance structures (shogunate, samurai class) delegitimized as usurpation; institutional rupture required to restore direct rule; modernization/foreign engagement requiring explicit imperial initiative"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "bakufu_delegation_reading",
+        "reading_b": "loyalist_restoration_reading",
+        "basis": "Delegation reading holds that legitimate sovereignty is divisible (ritual authority separable from administrative authority); restoration reading holds that legitimate sovereignty is indivisible (divine mandate cannot be delegated without becoming usurpation). No single constitutional framework can simultaneously hold both axioms — either sovereignty is divisible or it is not."
+      }
+    ]
+  },
+  "_seed_id": "imperial_court_kyoto_dormant_legitimacy"
+}

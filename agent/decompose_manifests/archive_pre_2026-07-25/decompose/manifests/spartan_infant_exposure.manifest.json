@@ -1,0 +1,241 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Historical Ethics / Developmental Biology",
+  "family_id": "spartan_exposure_moral_standing",
+  "topic_summary": "Analysis of Spartan infant exposure practice as a test case for contested moral-standing boundaries across time. The historical Spartan reading (hillside exposure as legitimate population regulation) versus modern readings (categorical infanticide prohibition) instantiate structurally different constraints from a shared personhood-boundary kernel. Tests whether the Spartan reading 'dropped' (became untenable within the kernel) or 'left the space' (kernel itself transformed).",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Spartan gerousia (council of elders with infant-examination authority)",
+      "Exposed infants (victims under modern reading, non-persons under Spartan reading)",
+      "Taygetus hillside (physical exposure site, ritual boundary marker)",
+      "Modern state (authority claiming categorical prohibition)",
+      "Developmental biology (post-Spartan epistemic substrate)"
+    ],
+    "key_tensions": [
+      "State population-management authority vs infant life-protection (Spartan gerousia vs modern categorical prohibition)",
+      "Community-viability threshold vs individual-life sanctity (eugenic reading vs rights-based reading)"
+    ],
+    "key_mechanisms": [
+      "Gerousia examination ritual (determiner of fitness/personhood eligibility)",
+      "Hillside exposure (execution method framing infant as not-yet-person)",
+      "Modern prosecutorial apparatus (enforcement of categorical infanticide prohibition)"
+    ],
+    "key_absences": [
+      "Spartan maternal voice in examination process (exposure was state decision, not parental)",
+      "Developmental-continuity argument (gradual personhood acquisition vs threshold)",
+      "Cross-cultural exposure practices (Sparta not unique; Viking, Roman, Chinese parallels unaddressed)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The personhood-boundary kernel: the threshold at which a human organism acquires moral standing sufficient to trigger harm-prohibition constraints",
+    "authority_description": "Varies by reading—Spartan: gerousia ritual determination; Modern categorical: state enforcement of birth-threshold; Developmental: scientific consensus on capacity emergence",
+    "drift_status": "absent",
+    "candidate_pattern": "oracular_stabilization",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "spartan_eugenic_reading",
+        "commitment": "Personhood begins at gerousia confirmation of fitness; pre-confirmation organism is legitimately excludable",
+        "authority_grounding": "State population-management necessity via council ritual",
+        "sibling_readings": [
+          "birth_threshold_reading",
+          "developmental_capacity_reading"
+        ],
+        "expected_structural_delta": "Victim set excludes unconfirmed infants; state holds population-regulation authority; exposure is non-homicide"
+      },
+      {
+        "reading_id": "birth_threshold_reading",
+        "commitment": "Personhood begins categorically at live birth; all post-birth killing is homicide",
+        "authority_grounding": "Modern state legal codes + human rights frameworks",
+        "sibling_readings": [
+          "spartan_eugenic_reading",
+          "developmental_capacity_reading"
+        ],
+        "expected_structural_delta": "Victim set includes all live-born infants; exposure is murder; state prosecutes parents/agents"
+      },
+      {
+        "reading_id": "developmental_capacity_reading",
+        "commitment": "Personhood emerges gradually with neural capacity; no single threshold but sliding scale of moral weight",
+        "authority_grounding": "Neuroscientific consensus on sentience/self-awareness emergence",
+        "sibling_readings": [
+          "spartan_eugenic_reading",
+          "birth_threshold_reading"
+        ],
+        "expected_structural_delta": "Victim set weighted by developmental stage; neonatal harm less severe than infant harm; neither Spartan nor modern reading fully justified"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "spartan_eugenic_reading",
+        "reading_b": "birth_threshold_reading",
+        "basis": "No coherent framework can hold both 'live birth confers inviolable personhood' and 'pre-confirmation infants are legitimately excludable'—accepting either axiom requires rejecting the other's personhood threshold"
+      },
+      {
+        "reading_a": "spartan_eugenic_reading",
+        "reading_b": "developmental_capacity_reading",
+        "basis": "Eugenic reading requires binary threshold (confirmed/unconfirmed); developmental reading denies any binary threshold exists—frameworks are structurally incompatible"
+      },
+      {
+        "reading_a": "birth_threshold_reading",
+        "reading_b": "developmental_capacity_reading",
+        "basis": "Categorical birth-threshold requires discrete moral boundary; developmental reading requires continuous acquisition of moral weight—no framework holds both simultaneously without contradiction"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "spartan_eugenic_reading",
+      "human_readable": "Spartan Eugenic Reading (Gerousia-Confirmed Personhood)",
+      "structural_delta": "State authority to exclude unfit infants via ritual examination; personhood conferred by council confirmation rather than birth",
+      "primary_observable": "Gerousia examination records (if extant); Plutarch's Life of Lycurgus descriptions; absence of infanticide prosecution in Spartan law",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "spartan_military_state",
+      "victim": "exposed_infants_and_families",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary historical reading instantiating contested kernel; structurally distinct authority mechanism"
+    },
+    {
+      "claim_id": "birth_threshold_reading",
+      "human_readable": "Birth-Threshold Reading (Categorical Post-Birth Personhood)",
+      "structural_delta": "All live-born infants categorically protected; exposure reclassified as homicide; state prosecutes violations",
+      "primary_observable": "Modern criminal codes (infanticide statutes); UN Convention on Rights of Child ratification; prosecution records",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "modern_rights_regime",
+      "victim": "parents_in_resource_scarcity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Dominant modern reading; axiomatically contradicts Spartan reading; enables path-naturalization test"
+    },
+    {
+      "claim_id": "developmental_capacity_reading",
+      "human_readable": "Developmental-Capacity Reading (Gradual Personhood Acquisition)",
+      "structural_delta": "No binary threshold; moral weight scales with neural development; neither Spartan nor modern boundary justified as categorical",
+      "primary_observable": "Neuroscience literature on neonatal sentience; moral philosophy papers on gradualist personhood",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "academic_consensus_builders",
+      "victim": "legal_systems_requiring_bright_lines",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading demonstrating kernel remains contested; destabilizes both historical and modern certainty"
+    },
+    {
+      "claim_id": "viability_threshold_reading",
+      "human_readable": "Viability-Threshold Reading (Roe-Framework Personhood)",
+      "structural_delta": "Personhood begins at fetal viability (≈24 weeks gestation); pre-viability termination permissible",
+      "primary_observable": "Roe v. Wade framework (1973-2022); viability-based abortion regulations",
+      "epsilon_bin": "high",
+      "hypothesis": "scaffold",
+      "beneficiary": "reproductive_autonomy_advocates",
+      "victim": "pro_life_constituency",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Fourth reading structurally similar to developmental_capacity_reading but at earlier threshold; limited marginal yield for kernel analysis"
+    },
+    {
+      "claim_id": "conception_reading",
+      "human_readable": "Conception Reading (Zygotic Personhood)",
+      "structural_delta": "Personhood begins at fertilization; all post-conception termination is homicide",
+      "primary_observable": "Catholic moral theology; pro-life legislation (heartbeat bills, conception-protection statutes)",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "religious_authority_structures",
+      "victim": "women_facing_ectopic_pregnancy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Fifth reading; while high-centrality, structural budget exhausted and conception vs birth distinction less relevant to Spartan exposure analysis than birth vs post-birth confirmation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "spartan_eugenic_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "spartan_eugenic_reading"
+    },
+    {
+      "claim_id": "birth_threshold_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "birth_threshold_reading"
+    },
+    {
+      "claim_id": "developmental_capacity_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "developmental_capacity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "viability_threshold_reading",
+      "structural_delta": "Personhood begins at fetal viability (≈24 weeks gestation)",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Structurally similar to developmental_capacity_reading but at earlier threshold; limited marginal analytical yield within three-reading budget"
+    },
+    {
+      "claim_id": "conception_reading",
+      "structural_delta": "Personhood begins at fertilization; all post-conception termination is homicide",
+      "hypothesis": "snare",
+      "deferral_reason": "High centrality but conception vs birth distinction less relevant to post-birth Spartan exposure analysis; structural budget prioritizes birth-adjacent readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_drop_vs_departure",
+      "description": "Did the Spartan reading 'drop' (became untenable within the kernel due to new evidence/arguments) or 'leave the space' (the kernel itself transformed such that the reading no longer addresses the same question)? Developmental biology did not exist in Sparta—does its emergence change the kernel or merely add a new reading?",
+      "source": "Core topic question; tests path-naturalization"
+    },
+    {
+      "id": "omega_maternal_authority_absence",
+      "description": "Spartan exposure was state-controlled (gerousia decision), not parental. Modern frameworks assume parental authority over infant care decisions. The absence of maternal voice in Spartan practice may indicate a separate axis (parental vs state authority over children) that the personhood-boundary kernel does not capture.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_cross_cultural_convergence",
+      "description": "Exposure practices in Viking, Roman, Chinese cultures suggest the Spartan reading was not unique. If multiple independent cultures converged on similar readings, does this indicate a structural constraint (resource scarcity + pre-industrial infant mortality) that modern readings ignore? Or does convergence merely reflect shared ignorance?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred cross-cultural analysis"
+    },
+    {
+      "id": "omega_ritual_vs_outcome",
+      "description": "Spartan exposure was ritualized (Taygetus hillside, gerousia examination). Modern infanticide is prosecuted regardless of method. Does ritualization signal that Spartans recognized moral weight (hence needed ritual justification) or that they denied moral weight (ritual as bureaucratic sorting, not moral deliberation)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)—ritual may obscure extraction by military state"
+    },
+    {
+      "id": "omega_epistemic_asymmetry",
+      "description": "We possess developmental neuroscience; Spartans did not. Does this epistemic asymmetry make the Spartan reading 'unreachable' in the sense of 'no longer justifiable given available evidence' or 'no longer addressable because the question changed'? If the former, the reading dropped; if the latter, it left.",
+      "source": "Core kernel/reading decomposition question; connects to F34 concern"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Developmental neuroscience claims (sentience emergence timelines, neonatal pain capacity) exceed model's domain expertise. Classical Spartan history is within competence, but authoritative developmental-capacity reading classification requires specialist knowledge. Generated omega_epistemic_asymmetry to bound this uncertainty. Model cannot definitively adjudicate whether Spartan reading 'dropped' or 'left'—requires specialist historiography + philosophy of moral progress."
+  },
+  "_seed_id": "spartan_infant_exposure"
+}

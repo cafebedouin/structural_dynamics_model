@@ -1,0 +1,226 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Sociolinguistics / Language Revitalization / Commitment Systems",
+  "family_id": "hebrew_revival_kernel_2026",
+  "topic_summary": "Analysis of the Hebrew language revival as a contested kernel where 'Hebrew is a living language' was held under two structurally incompatible readings across two millennia. The liturgical-only reading treated preservation through sacred recitation as kernel occupation. The native-daily reading required reconstruction into intergenerational vernacular speech. The contest centers on whether symbolic preservation constitutes genuine linguistic life or whether only native generation does.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Eliezer Ben-Yehuda (linguist, lexicographer, primary revival architect)",
+      "Committee of the Hebrew Language / Academy of the Hebrew Language (standardization authority)",
+      "Ultra-Orthodox community (religious opposition to secular Hebrew use)",
+      "Yishuv (Jewish population in Mandate Palestine, adopting Hebrew as vernacular)",
+      "Diaspora communities (carriers of alternative Jewish languages: Yiddish, Ladino, Arabic)",
+      "Ben-Zion Ben-Yehuda (first native Modern Hebrew speaker)",
+      "HaZvi newspaper (Hebrew-language media institution)",
+      "Ottoman/British Mandate authorities (territorial governance context)"
+    ],
+    "key_tensions": [
+      "Sacred preservation vs secular vernacular use (ultra-Orthodox vs Zionist revivalists)",
+      "Liturgical continuity vs intergenerational native transmission (two readings of 'living language')",
+      "Linguistic diversity vs unification imperative (Yiddish/Ladino/Arabic vs Hebrew-only policy)",
+      "Biblical vocabulary vs modern lexical needs (ancient roots vs neologism generation)"
+    ],
+    "key_mechanisms": [
+      "Hebrew-only household policy (Ben-Yehuda's domestic language enforcement creating first native speaker)",
+      "Hebrew-medium education system (schools as vernacularization infrastructure)",
+      "Lexicographic expansion (systematic neologism creation: 300+ Ben-Yehuda terms, 75,000+ total modern vocabulary)"
+    ],
+    "key_absences": [
+      "Power asymmetry in language choice: immigrant communities with established languages (Yiddish, Ladino) had to abandon mother tongues; no analysis of coercion vs consent in adoption",
+      "Gender dynamics in revival: women's role in household language transmission not addressed despite Ben-Yehuda's domestic strategy depending on spousal compliance"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Hebrew is a living language — a commitment to Hebrew's status as an occupied linguistic kernel capable of sustaining Jewish identity and communication",
+    "authority_description": "Under liturgical reading: rabbinic/textual authority grounds legitimacy through preservation of sacred forms. Under native-daily reading: generational transmission and institutional standardization (Academy, schools) ground legitimacy through demonstrated vernacular use",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "hebrew_living_language",
+    "readings": [
+      {
+        "reading_id": "liturgical_preservation_reading",
+        "commitment": "Hebrew lives through sacred recitation and textual preservation across generations",
+        "authority_grounding": "Rabbinic tradition / textual fidelity / ritual practice continuity",
+        "sibling_readings": [
+          "native_vernacular_reading",
+          "hybrid_continuity_reading"
+        ],
+        "expected_structural_delta": "Kernel occupation requires only preservation of symbolic forms; no native speakers needed; victim set includes secularizers who 'profane' the sacred tongue; low extractiveness (ritual maintenance costs only)"
+      },
+      {
+        "reading_id": "native_vernacular_reading",
+        "commitment": "Hebrew lives only through intergenerational native transmission as daily speech",
+        "authority_grounding": "Sociolinguistic norms / institutional standardization (Academy) / demonstrated vernacular competence",
+        "sibling_readings": [
+          "liturgical_preservation_reading",
+          "hybrid_continuity_reading"
+        ],
+        "expected_structural_delta": "Kernel occupation requires native speakers and generational transmission; 1800-year gap is strict reachability break (D1 verdict); victim set includes diaspora language communities (Yiddish, Ladino) displaced by Hebrew-only policy; moderate extractiveness (lexicographic labor, educational infrastructure, language shift costs)"
+      },
+      {
+        "reading_id": "hybrid_continuity_reading",
+        "commitment": "Hebrew lives through unbroken textual-liturgical continuity that enables vernacular reconstruction",
+        "authority_grounding": "Historical continuity / cultural nationalism / demonstrated revival success",
+        "sibling_readings": [
+          "liturgical_preservation_reading",
+          "native_vernacular_reading"
+        ],
+        "expected_structural_delta": "Kernel occupation maintained through liturgical period, then expanded into vernacular domain; no reachability break, only domain expansion; victim set includes ultra-Orthodox who lose exclusive control of Hebrew's sacred status; moderate extractiveness (revival required massive institutional investment but claimed continuity with past)"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_preservation_reading",
+      "human_readable": "Liturgical Preservation Reading (Sacred Recitation as Kernel Occupation)",
+      "structural_delta": "Hebrew maintained as living language through 1800+ years of liturgical use, textual study, and ritual recitation without native speakers",
+      "primary_observable": "Continuity of Hebrew liturgical texts, rabbinic scholarship, and prayer practice across diaspora communities from 2nd century CE to 19th century",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": "rabbinic_authority",
+      "victim": "secularizers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes baseline claim that symbolic preservation constitutes linguistic life",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "liturgical_preservation_reading"
+    },
+    {
+      "claim_id": "native_vernacular_reading",
+      "human_readable": "Native Vernacular Reading (Intergenerational Transmission as Kernel Occupation)",
+      "structural_delta": "Hebrew became living language only through late 19th-20th century reconstruction into native daily speech with intergenerational transmission",
+      "primary_observable": "Emergence of native Hebrew speakers (Ben-Zion Ben-Yehuda 1882+), Hebrew-medium schools, vernacular use in Yishuv daily life, lexicographic expansion to 75,000+ words",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "zionist_revivalists",
+      "victim": "diaspora_language_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; directly contradicts liturgical reading by requiring native transmission; higher extractiveness due to language shift costs",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "native_vernacular_reading"
+    },
+    {
+      "claim_id": "hybrid_continuity_reading",
+      "human_readable": "Hybrid Continuity Reading (Liturgical Foundation Enabling Vernacular Reconstruction)",
+      "structural_delta": "Hebrew's liturgical preservation provided the substrate that enabled vernacular reconstruction without constituting a reachability break",
+      "primary_observable": "Documented use of liturgical Hebrew vocabulary and grammar as foundation for modern neologisms; Ben-Yehuda's method of extending biblical roots; continuity of Hebrew literacy among revival architects",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "cultural_nationalists",
+      "victim": "ultra_orthodox_exclusivists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; attempts to reconcile liturgical and vernacular readings by claiming domain expansion rather than break; moderate extractiveness from institutional investment",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "hybrid_continuity_reading"
+    },
+    {
+      "claim_id": "lexicographic_extraction",
+      "human_readable": "Lexicographic Extraction (Neologism Generation as Institutional Control)",
+      "structural_delta": "Systematic vocabulary expansion (300+ Ben-Yehuda terms, 75,000+ total) concentrated authority over Hebrew's evolution in institutional hands",
+      "primary_observable": "Academy of Hebrew Language standardization decisions; neologism adoption rates; institutional vs vernacular innovation patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "linguistic_standardizers",
+      "victim": "vernacular_innovators",
+      "downstream_of": [
+        "native_vernacular_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream mechanism of vernacular reading; captured implicitly in native_vernacular_reading's institutional infrastructure"
+    },
+    {
+      "claim_id": "diaspora_language_displacement",
+      "human_readable": "Diaspora Language Displacement (Hebrew-Only Policy as Linguistic Extraction)",
+      "structural_delta": "Hebrew-only educational and institutional policy required abandonment of established mother tongues (Yiddish, Ladino, Arabic) by immigrant communities",
+      "primary_observable": "Language shift patterns in immigrant families; Yiddish/Ladino speaker population decline in Palestine/Israel; coercion vs consent in language adoption",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "hebrew_revivalists",
+      "victim": "yiddish_ladino_arabic_speakers",
+      "downstream_of": [
+        "native_vernacular_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high extractiveness but downstream of vernacular reading; victim structure documented in native_vernacular_reading; warrants separate analysis in expansion"
+    }
+  ],
+  "generation_sequence": [
+    "liturgical_preservation_reading",
+    "native_vernacular_reading",
+    "hybrid_continuity_reading"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "lexicographic_extraction",
+      "structural_delta": "Institutional control over vocabulary expansion concentrated authority in Academy/standardizers",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream mechanism of native_vernacular_reading; institutional infrastructure already captured in vernacular reading's moderate extractiveness"
+    },
+    {
+      "claim_id": "diaspora_language_displacement",
+      "structural_delta": "Hebrew-only policy required abandonment of Yiddish/Ladino/Arabic mother tongues",
+      "hypothesis": "snare",
+      "deferral_reason": "High extractiveness but downstream of vernacular reading; victim structure (diaspora language communities) already identified in native_vernacular_reading; warrants separate deep analysis in future expansion"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reachability_break_validity",
+      "description": "Does the 1800-year liturgical period constitute a D1 strict reachability break (no native speakers = dead language) or does ritual preservation maintain reachability? The library verdict context flags D1 break, but hybrid reading contests this. If liturgical use maintains reachability, the native-vernacular reading's claim to have 'revived' Hebrew is weakened—it would be domain expansion, not resurrection.",
+      "source": "Kernel contest core; library verdict D1 vs hybrid_continuity_reading claim"
+    },
+    {
+      "id": "omega_sacred_profanation_asymmetry",
+      "description": "Ultra-Orthodox opposition to secular Hebrew use (HaZvi closure, 'profaning the holy tongue') suggests the liturgical reading's victim set (secularizers) experienced the vernacular reading as extraction. But sources do not document whether ultra-Orthodox communities successfully resisted vernacular adoption or were coerced. Power asymmetry in reading adoption is unexamined.",
+      "source": "Extraction absence: coercion vs consent in language shift"
+    },
+    {
+      "id": "omega_gender_transmission_gap",
+      "description": "Ben-Yehuda's Hebrew-only household strategy depended on spousal compliance for intergenerational transmission (his wife had to speak only Hebrew to Ben-Zion). Sources do not address women's agency in language shift decisions or whether household language enforcement was consensual. If women bore disproportionate transmission labor without authority over standardization (Academy was male-dominated), this is unexamined extraction.",
+      "source": "Extraction absence: gender dynamics in revival"
+    },
+    {
+      "id": "omega_yiddish_ladino_coercion",
+      "description": "Deferred axis diaspora_language_displacement flags high extractiveness in Hebrew-only policy requiring mother tongue abandonment. Sources note 'linguistic diversity' and 'practical need for common language' but do not document whether Yiddish/Ladino/Arabic speakers consented to shift or were institutionally coerced (e.g., Hebrew-only schools excluding non-Hebrew speakers). If coerced, victim set is larger and extractiveness higher than native_vernacular_reading currently models.",
+      "source": "Deferred axis diaspora_language_displacement; extraction absence on coercion"
+    },
+    {
+      "id": "omega_liturgical_reading_epsilon",
+      "description": "Liturgical_preservation_reading classified as v_low epsilon (ritual maintenance costs only) but this may underestimate. If maintaining liturgical Hebrew across 1800 years required suppression of vernacular alternatives (e.g., rabbinic authority blocking Yiddish liturgy), extractiveness is higher. Sources do not document active suppression vs passive preservation.",
+      "source": "F03 Hasty Generalization check on mountain classification"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: liturgical_preservation_reading classified as mountain (v_low epsilon) but may underestimate extractiveness if rabbinic authority actively suppressed vernacular alternatives to maintain Hebrew's sacred status. Sources document ultra-Orthodox opposition to secular use but not whether liturgical reading involved active suppression of competing liturgical languages (e.g., Yiddish prayer). Generated omega_liturgical_reading_epsilon to bound this uncertainty. Additionally, kernel contest itself is well-supported by sources (liturgical vs vernacular readings are structurally incompatible), but reachability break validity (D1 verdict) is contested by hybrid reading—this is the core analytical question, not a fracture."
+  },
+  "_seed_id": "modern_hebrew_revival"
+}

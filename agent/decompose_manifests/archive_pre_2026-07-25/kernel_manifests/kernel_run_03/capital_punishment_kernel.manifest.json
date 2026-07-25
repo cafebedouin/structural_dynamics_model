@@ -1,0 +1,269 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Criminal Justice / Political Philosophy / Constitutional Law",
+  "family_id": "capital_punishment_kernel_2026",
+  "topic_summary": "Analysis of capital punishment as a contested kernel where the state-killing commitment is read through three incommensurable frameworks: retributive justice (proportional desert for murder), deterrence (instrumental crime prevention), and abolition (categorical impermissibility of state killing). Each reading generates distinct beneficiary/victim structures and authority claims.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 5,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "U.S. Supreme Court (constitutional authority; victim impact statement doctrine)",
+      "National Research Council (empirical authority; deterrence research arbiter)",
+      "Prosecutors (state agents; death penalty seekers)",
+      "Victims' families (divided constituency; some pro-death penalty, some abolitionist)",
+      "Condemned persons (rights-bearers under abolition reading; forfeited rights under retribution reading)",
+      "Immanuel Kant (philosophical authority; retributive jus talionis)",
+      "Cesare Beccaria (abolitionist founding theorist; 1767 essay)",
+      "24 U.S. states retaining capital punishment (jurisdictional patchwork)"
+    ],
+    "key_tensions": [
+      "Retributive desert vs categorical impermissibility (Kant vs Beccaria; incommensurable axioms)",
+      "Empirical deterrence claims vs NRC methodological rejection (18-murders-prevented vs fundamentally-flawed studies)",
+      "Victim family agency vs prosecutorial agenda (families opposing death penalty silenced by system)",
+      "Closure myth vs actual victim healing (execution does not bring peace; diverts resources from grief services)",
+      "Channeling legitimacy vs innocence risk (official retribution prevents vigilantism but risks executing innocents)"
+    ],
+    "key_mechanisms": [
+      "Victim impact statements (1991 SCOTUS doctrine; families testify in penalty phase)",
+      "Prosecutorial discretion (death penalty seeking decision; marginalizes abolitionist families)",
+      "Retributive channeling (official punishment deters vigilante self-help)"
+    ],
+    "key_absences": [
+      "International law perspective (U.S. as outlier among Western democracies; no mention of treaty obligations or global norms)",
+      "Racial bias operationalization (mentioned as abolitionist claim but no structural mechanism extracted; how does bias manifest in prosecutorial/jury decisions?)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The state's authority to impose death as criminal punishment — a shared commitment all three readings argue about, but read as grounded in different normative foundations (desert, utility, or categorical prohibition).",
+    "authority_description": "Mixed: retributive reading grounds authority in proportional justice and victim vindication; deterrence reading grounds authority in consequentialist public benefit; abolition reading denies state authority to kill categorically, grounding legitimacy in inalienable rights.",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "state_killing_authority",
+    "readings": [
+      {
+        "reading_id": "retributive_desert",
+        "commitment": "Murderers forfeit their right to life; proportional punishment (lex talionis) requires death for death.",
+        "authority_grounding": "Kantian deontology; victim vindication; moral desert independent of consequences",
+        "sibling_readings": [
+          "deterrence_instrument",
+          "categorical_abolition"
+        ],
+        "expected_structural_delta": "Victim (murdered person) enters beneficiary set posthumously via vindication; condemned person exits rights-holder set via forfeiture; state authority grounded in proportionality norm rather than outcome."
+      },
+      {
+        "reading_id": "deterrence_instrument",
+        "commitment": "Capital punishment is justified if and only if it prevents future murders at acceptable cost.",
+        "authority_grounding": "Consequentialist utilitarianism; empirical evidence of deterrent effect (contested); public safety maximization",
+        "sibling_readings": [
+          "retributive_desert",
+          "categorical_abolition"
+        ],
+        "expected_structural_delta": "Future potential victims enter beneficiary set (lives saved via deterrence); condemned person is instrumental cost; state authority grounded in crime-prevention efficacy rather than desert or rights."
+      },
+      {
+        "reading_id": "categorical_abolition",
+        "commitment": "State killing is inherently impermissible regardless of crime or consequence; life is inalienable.",
+        "authority_grounding": "Human rights framework (Beccaria lineage); dignity as non-forfeitable; state legitimacy requires renouncing killing power",
+        "sibling_readings": [
+          "retributive_desert",
+          "deterrence_instrument"
+        ],
+        "expected_structural_delta": "Condemned person remains in rights-holder set (inalienable life); state enters potential-violator set if it executes; victims' families split (some want execution, some oppose; abolitionist families marginalized by prosecutors)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "retributive_desert",
+        "reading_b": "categorical_abolition",
+        "basis": "Retributive reading holds that murderers forfeit their right to life via their crime (rights are conditional on desert); abolition reading holds that life is inalienable and cannot be forfeited (rights are unconditional). No single coherent framework can hold both that a right is forfeitable and that the same right is inalienable."
+      },
+      {
+        "reading_a": "deterrence_instrument",
+        "reading_b": "categorical_abolition",
+        "basis": "Deterrence reading treats the condemned person as an instrumental cost in a utilitarian calculus (permissible to kill if net lives saved); abolition reading treats persons as ends-in-themselves whose lives cannot be traded off for aggregate benefit. No single coherent framework can hold both that persons may be instrumentalized for collective benefit and that persons are categorically non-instrumentalizable."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "retributive_desert",
+      "human_readable": "Retributive Desert (Proportional Justice via Lex Talionis)",
+      "structural_delta": "Murderers forfeit right to life; proportional punishment requires death for death; victim vindication independent of deterrent effect.",
+      "primary_observable": "Kantian jus talionis doctrine adoption in sentencing; victim impact statement emphasis on desert rather than prevention; judicial language of 'forfeiture' and 'proportionality'.",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "victims_families_pro_execution",
+      "victim": "condemned_person",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading with axiom contradiction to abolition; distinct beneficiary structure (posthumous victim vindication); high epsilon (execution vs life imprisonment structural difference)."
+    },
+    {
+      "claim_id": "deterrence_instrument",
+      "human_readable": "Deterrence Instrument (Utilitarian Crime Prevention)",
+      "structural_delta": "Capital punishment justified if empirically proven to prevent future murders; condemned person instrumentalized for public safety.",
+      "primary_observable": "Empirical deterrence studies (18-murders-prevented claim vs NRC methodological rejection); cost-benefit analyses in prosecutorial decisions; legislative debates citing crime-rate data.",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "future_potential_victims",
+      "victim": "condemned_person",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct from retributive reading (consequentialist vs deontological grounding); empirical evidence contest is structural (NRC vs pro-deterrence studies); moderate epsilon (deterrent effect magnitude contested but execution/no-execution binary remains)."
+    },
+    {
+      "claim_id": "categorical_abolition",
+      "human_readable": "Categorical Abolition (Inalienable Right to Life)",
+      "structural_delta": "State killing inherently impermissible; life is non-forfeitable; condemned person retains rights-holder status.",
+      "primary_observable": "Beccaria-lineage human rights doctrine adoption; abolitionist state count (23 U.S. states + international trend); victim family abolitionist testimony (marginalized by prosecutors).",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "condemned_person",
+      "victim": "victims_families_pro_execution",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Axiom contradiction to both other readings; inverts beneficiary/victim structure (condemned person becomes beneficiary); highest centrality (international law absence + victim family marginalization tensions feed into this reading)."
+    },
+    {
+      "claim_id": "closure_myth_vs_healing",
+      "human_readable": "Closure Myth vs Victim Healing (Execution Does Not Bring Peace)",
+      "structural_delta": "Post-execution research shows families do not achieve closure; death penalty process diverts resources from grief counseling and financial assistance.",
+      "primary_observable": "Post-execution family testimony; state victim services funding allocation (death penalty litigation costs vs grief counseling budgets).",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "prosecutors",
+      "victim": "victims_families_all",
+      "downstream_of": [
+        "retributive_desert"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: empirical finding that undermines retributive reading's victim-vindication claim, but structurally downstream of retributive_desert axis; lower epsilon (resource allocation rather than execution/no-execution binary); captured in omega as bounded uncertainty about retributive reading's empirical validity."
+    },
+    {
+      "claim_id": "racial_bias_mechanism",
+      "human_readable": "Racial Bias Mechanism (Systemic Discrimination in Capital Sentencing)",
+      "structural_delta": "Death penalty disproportionately imposed on racial minorities and the poor; prosecutorial discretion and jury composition as bias vectors.",
+      "primary_observable": "Death row demographic data vs general population; prosecutorial charging patterns by defendant race; jury selection voir dire records.",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "white_defendants",
+      "victim": "minority_defendants",
+      "downstream_of": [],
+      "feeds_into": [
+        "categorical_abolition"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mentioned in research context as abolitionist claim but no structural mechanism extracted; absence flagged in extraction_summary; would require additional research to operationalize (how does bias manifest in prosecutorial/jury decisions?); feeds into abolition reading but not structurally independent (abolition reading already captures rights-violation claim)."
+    },
+    {
+      "claim_id": "innocence_risk_vs_frequency",
+      "human_readable": "Innocence Risk vs Execution Frequency (Error Cost Increases with Volume)",
+      "structural_delta": "Risk of executing innocent person increases with execution frequency; irreversible error cost.",
+      "primary_observable": "Exoneration rate data; DNA evidence post-conviction reversals; execution volume by state.",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "wrongfully_convicted",
+      "downstream_of": [],
+      "feeds_into": [
+        "categorical_abolition"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural constraint (irreversibility) but very low epsilon (error rate small even if non-zero); feeds into abolition reading as supporting argument but not independent axis; piton classification (atrophied safeguard — appeals process exists but does not eliminate risk)."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "retributive_desert",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "retributive_desert"
+    },
+    {
+      "claim_id": "deterrence_instrument",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "deterrence_instrument"
+    },
+    {
+      "claim_id": "categorical_abolition",
+      "kernel_id": "state_killing_authority",
+      "reading_id": "categorical_abolition"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "closure_myth_vs_healing",
+      "structural_delta": "Post-execution research shows families do not achieve closure; death penalty process diverts resources from grief services.",
+      "hypothesis": "snare",
+      "deferral_reason": "Empirical finding undermining retributive reading's victim-vindication claim, but structurally downstream of retributive_desert axis; lower epsilon (resource allocation rather than execution binary); captured in omega as bounded uncertainty about retributive reading's empirical validity."
+    },
+    {
+      "claim_id": "racial_bias_mechanism",
+      "structural_delta": "Death penalty disproportionately imposed on racial minorities and the poor via prosecutorial discretion and jury composition.",
+      "hypothesis": "snare",
+      "deferral_reason": "Mentioned in research context as abolitionist claim but no structural mechanism extracted in source material; absence flagged in extraction_summary; would require additional research to operationalize; feeds into abolition reading but not structurally independent."
+    },
+    {
+      "claim_id": "innocence_risk_vs_frequency",
+      "structural_delta": "Risk of executing innocent person increases with execution frequency; irreversible error cost.",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural constraint (irreversibility) but very low epsilon (error rate small even if non-zero); feeds into abolition reading as supporting argument but not independent axis; piton classification (appeals process exists but does not eliminate risk)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_deterrence_empirics",
+      "description": "NRC 2012 report concludes deterrence studies are 'fundamentally flawed' and 'not informative,' yet some studies claim 18 murders prevented per execution. Is the deterrence_instrument reading empirically grounded or does it collapse into retributive_desert (deterrence belief unconsciously supporting conscious desert belief)? If deterrence effect is zero or negative, does the reading survive as independent constraint or become a rationalization?",
+      "source": "Research context tension: 'retributivists may consciously believe capital punishment is justified because offenders deserve it, but that belief is in part based on the unconscious belief that capital punishment deters.' Empirical contest unresolved."
+    },
+    {
+      "id": "omega_victim_family_heterogeneity",
+      "description": "Victims' families are divided constituency: some want execution (enter beneficiary set under retributive reading), some oppose (marginalized by prosecutors, enter victim set under categorical_abolition reading). Does prosecutorial silencing of abolitionist families constitute a snare (prosecutors benefit from homogenizing victim preferences)? Current analysis treats families as split rather than modeling the silencing mechanism as independent axis.",
+      "source": "Research context: 'families who oppose the death penalty sometimes experience discrimination within the criminal justice system from prosecutors, judges, or court-appointed victims' advocates.' Deferred as potential snare axis."
+    },
+    {
+      "id": "omega_international_law_absence",
+      "description": "U.S. as outlier among Western democracies retaining capital punishment. No mention in research context of treaty obligations, extradition complications, or global norm pressure. Is this absence structurally significant (international law as external constraint on state_killing_authority kernel) or tangential? If significant, would manifest as rope (coordination cost) or mountain (treaty obligation as physical constraint on state action).",
+      "source": "Extraction absence inventory. Dark Matter Probe 2 (Absence Inventory)."
+    },
+    {
+      "id": "omega_retribution_paradox",
+      "description": "Research context claims 'retribution considerations weigh as heavily against punishment by death as in favor of it' and 'retributive arguments serve the cause of abolition.' Is there a coherent abolitionist-retributive reading (proportional punishment forbids death because it is disproportionate cruelty) that would split retributive_desert into two sub-readings? Current analysis treats retribution as monolithic (Kantian lex talionis), but Beccaria's abolitionism may also be retributive (disproportionality argument).",
+      "source": "Research context tension. Potential fourth reading not extracted due to insufficient detail in source material."
+    },
+    {
+      "id": "omega_channeling_legitimacy_tradeoff",
+      "description": "Official retribution 'helps channel retributive public sentiment into rule-based systems, helping deter people from resorting to lynchings and vigilante self-help,' yet this legitimacy function conflicts with innocence risk. Is channeling a distinct reading (state killing as lesser evil vs vigilantism) or a supporting argument for retributive_desert? If distinct, would it have different beneficiary structure (public order as beneficiary rather than victim vindication)?",
+      "source": "Research context mechanism. Potential scaffold or rope axis not extracted due to unclear independence from retributive_desert."
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied as specified in §1.3-K. Three readings selected for generation, each with axiom contradictions to at least one sibling. Deferred axes documented with structural reasons. Omegas capture empirical uncertainties (deterrence evidence contest, victim family heterogeneity) and extraction absences (international law, racial bias operationalization)."
+  },
+  "_seed_id": "capital_punishment_kernel"
+}

@@ -1,0 +1,271 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Governance System Design / Distributed Ledger Applications / Institutional Economics",
+  "family_id": "verification_cost_paper_mechanisms_2026",
+  "topic_summary": "A mechanisms digest extracting 27 generic governance/cryptographic mechanisms from an unpublished covenant corpus, preparing paper-ready reference-design material for a verification-cost paper. The central analytical question is whether this document constitutes a genuine contested kernel about what a 'paper-ready' knowledge boundary is, or whether it decomposes into ordinary independent axes about mechanism design, citation ethics, and quarantine practice.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 27,
+    "absence_count": 3,
+    "key_entities": [
+      "the accountable member (unnamed drafter/adopter, sole signatory authority)",
+      "the covenant corpus (eleven source documents, to leave the folder upon reset)",
+      "the reference design (genericized paper-ready mechanism set, M-1 through M-27)",
+      "the public ledger substrate (Ergo chain, PoW, eUTXO, ZK-native — shipped external)",
+      "the verification-cost paper (target publication citing no unpublished corpus)",
+      "the quarantine list (§8 — named exclusions: corpus IDs, prior writing, anecdotes, persons, out-of-scope machinery, constants, successor works)"
+    ],
+    "key_tensions": [
+      "Genericized paper-ready register vs. corpus-specific doctrinal origin (the same idea must survive stripped of its name)",
+      "Full argumentative self-sufficiency ('the paper carries the full burden') vs. total non-self-citation (no corpus, no prior member writing)",
+      "Structural refusal-based design philosophy (make the wrong impossible) vs. conventional forbid-and-audit governance",
+      "Novelty claims vs. prior-art concession (M-25's Addendum A narrows novelty after admitting shipped precedent)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The stabilized shared commitment is the quarantine boundary itself: the rule (§1, §8, and the adoption clause) that defines what counts as 'paper-ready' material — i.e., what may cross from the unpublished, doctrinally-named corpus into the publicly citable paper.",
+    "authority_description": "The accountable member's signature is the sole legitimating act; adoption is stipulated to BE the act, not evidence of prior deliberation. Legitimacy is grounded in fixity of the extraction rules (§1) applied mechanically to source material, not in ongoing editorial judgment.",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "paper_ready_boundary",
+    "readings": [
+      {
+        "reading_id": "citation_purity_reading",
+        "commitment": "The boundary's purpose is strict non-self-citation: a paper is only legitimate if it defers to nothing the author privately controls. The quarantine exists to protect the paper's epistemic standing among strangers who cannot check unpublished sources.",
+        "authority_grounding": "scholarly-normative — citation ethics as the ground of credibility",
+        "sibling_readings": [
+          "ip_provenance_reading",
+          "operational_security_reading",
+          "design_philosophy_reading"
+        ],
+        "expected_structural_delta": "Under this reading, the boundary is drawn wherever a reader-verifiability gap would open — victim set is 'the paper's own credibility'; beneficiary is the reading audience. Test: would this fact require a stranger to trust the author's private archive? If yes, quarantine it, regardless of whether it is 'the member's own' or merely internal doctrine."
+      },
+      {
+        "reading_id": "ip_provenance_reading",
+        "commitment": "The boundary's purpose is protecting the member's proprietary/pseudonymous authorship claim: what is quarantined is what would out the member (byline, forum post, pseudonym) or dilute their claim to originality (novelty framing before the Addendum A concession). Citation purity is a downstream instrument of this protection, not the primary good.",
+        "authority_grounding": "proprietary/personal — the drafter's control over their own identity and priority claims",
+        "sibling_readings": [
+          "citation_purity_reading",
+          "operational_security_reading",
+          "design_philosophy_reading"
+        ],
+        "expected_structural_delta": "Under this reading, the boundary is drawn wherever de-anonymization or priority-dilution risk exists — victim set is 'the member's future pseudonymous standing'; beneficiary is the member. Test: would this fact, if disclosed, link the paper back to the member's other identity? If yes, quarantine it — this reading would ALSO quarantine some things citation_purity_reading would permit (e.g., mesh-radio anecdote is excluded even though citing it would not violate scholarly self-citation norms, because it risks lineage tracing back to the corpus's origin community)."
+      },
+      {
+        "reading_id": "operational_security_reading",
+        "commitment": "The boundary's purpose is protecting the covenant project itself (its community, its internal doctrine, its unpublished successor works) from exposure or premature scrutiny. Quarantine exists to prevent the paper from becoming a map back to a living, vulnerable institution.",
+        "authority_grounding": "institutional/protective — the corpus community's collective interest in non-enumerability, mirrored at the meta-level onto the paper project itself",
+        "sibling_readings": [
+          "citation_purity_reading",
+          "ip_provenance_reading",
+          "design_philosophy_reading"
+        ],
+        "expected_structural_delta": "Under this reading, quarantine follows the SAME non-enumerability logic as M-3 and M-25 applied reflexively to the project's own paper trail — victim set is 'the corpus community, if it exists and is real'; beneficiary is that community's safety. Test: does disclosure make the source community's existence, size, membership, or location legible? This reading would quarantine the '~500-member congregation' story and stage machinery even if fully de-anonymized and even if the member were willing to be identified, because the community's own non-enumerability (M-3's own design principle) demands it independent of authorship."
+      },
+      {
+        "reading_id": "design_philosophy_reading",
+        "commitment": "The boundary's purpose is epistemic hygiene for the reference design itself: only ideas that can be defended by 'the paper carries the full burden' (§1 rule 4) belong in paper-ready text, because anything requiring an appeal to unstated corpus authority is not actually a specified mechanism — it is an assertion resting on unshared context. The quarantine is a completeness/rigor test, not a secrecy test.",
+        "authority_grounding": "epistemic/methodological — the paper's own defense-core requirement applied recursively to the extraction process",
+        "sibling_readings": [
+          "citation_purity_reading",
+          "ip_provenance_reading",
+          "operational_security_reading"
+        ],
+        "expected_structural_delta": "Under this reading, quarantine is a NEGATIVE TEST rather than a topic-based exclusion list: anything is includable if and only if it survives being defended without reference to anything else. Under this reading, unlike the other three, quarantine is not really about categories of things (IDs, names, persons) but about whether a defense core can be written; the fact that §8 lists categories at all would be treated as a convenient proxy, not the actual test, and the paper's discipline would sometimes ADMIT category items (e.g., a corpus-internal term) if a defense core could be constructed for it in generic language, and REJECT items not on the list if no defense core survives."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "citation_purity_reading",
+        "reading_b": "ip_provenance_reading",
+        "basis": "Citation_purity holds that identity-protection is instrumental to credibility and would happily disclose provenance if it strengthened the paper's standing (e.g., citing the member's own prior public work would normally be MORE rigorous, not less); ip_provenance holds that identity-protection is the terminal value and citation purity is sacrificed to it (prior public writing is excluded even where citing it would be normal scholarly practice and would strengthen, not weaken, the paper). A framework cannot simultaneously treat self-citation-avoidance as derived-from-credibility and as prior-to-and-overriding-credibility."
+      },
+      {
+        "reading_a": "ip_provenance_reading",
+        "reading_b": "operational_security_reading",
+        "basis": "Ip_provenance grounds quarantine in protecting the member's individual claim (a personal, alienable interest that the member could waive by choosing to be identified); operational_security grounds quarantine in protecting the community's structural non-enumerability (a collective interest the member cannot waive on the community's behalf, per M-3's own logic that such protections must be structural, not policy). These generate different verdicts on a hypothetical case: if the member consented to full disclosure of their identity, ip_provenance_reading would permit publishing the pseudonym/forum-post link; operational_security_reading would still forbid it if doing so made the corpus community legible. No single framework can hold both 'the interest is personal and waivable' and 'the interest is structural and non-waivable' as foundational.'"
+      },
+      {
+        "reading_a": "citation_purity_reading",
+        "reading_b": "design_philosophy_reading",
+        "basis": "Citation_purity treats the quarantine list (§8) as the operative rule — items are excluded because they belong to named categories (corpus IDs, prior writing, anecdotes, persons). Design_philosophy treats the defense-core test as the operative rule and the category list as a mere heuristic proxy, meaning it would ADMIT a category-listed item if a generic defense core could be constructed and REJECT a non-listed item lacking one. These cannot both be the actual governing rule: one says the categories ARE the law, the other says the categories are downstream evidence of a deeper law that can override them in either direction."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "citation_purity_reading",
+      "human_readable": "Reading: Quarantine as Scholarly Citation Ethics",
+      "structural_delta": "Boundary drawn at reader-verifiability gaps; victim/beneficiary is the paper's own credibility with strangers",
+      "primary_observable": "Whether excluded items correlate with 'requires trusting an unpublished private source' rather than with topic category",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "reading_audience_and_paper_authority",
+      "victim": "none_directly",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": null,
+      "selected": true,
+      "generation_order": null,
+      "selection_reason": "Kernel reading — proceeds via commitment_system_recognition, not standalone axis scoring"
+    },
+    {
+      "claim_id": "ip_provenance_reading",
+      "human_readable": "Reading: Quarantine as Author Identity/Priority Protection",
+      "structural_delta": "Boundary drawn at de-anonymization and priority-dilution risk; victim/beneficiary is the member's pseudonymous standing",
+      "primary_observable": "Whether excluded items correlate with 'links back to member's other identity or undercuts novelty claim' independent of scholarly norms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "the_accountable_member",
+      "victim": "potential_future_disclosure_risk_to_member",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": null,
+      "selected": true,
+      "generation_order": null,
+      "selection_reason": "Kernel reading — proceeds via commitment_system_recognition, not standalone axis scoring"
+    },
+    {
+      "claim_id": "operational_security_reading",
+      "human_readable": "Reading: Quarantine as Community Non-Enumerability, Reflexively Applied",
+      "structural_delta": "Boundary drawn at whatever makes the source community's existence, size, or location legible; a collective, non-waivable interest",
+      "primary_observable": "Whether excluded items correlate with community-enumeration risk even where the member alone would consent to disclosure",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "the_covenant_corpus_community",
+      "victim": "corpus_community_if_exposed",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": null,
+      "selected": true,
+      "generation_order": null,
+      "selection_reason": "Kernel reading — proceeds via commitment_system_recognition, not standalone axis scoring"
+    },
+    {
+      "claim_id": "design_philosophy_reading",
+      "human_readable": "Reading: Quarantine as Recursive Defense-Core Rigor Test",
+      "structural_delta": "Boundary drawn wherever a generic defense core cannot be constructed, regardless of category membership; category list is a heuristic proxy, not the law",
+      "primary_observable": "Whether hypothetical edge cases (category-listed item with a constructible defense core; non-listed item without one) would flip the exclusion verdict relative to the other three readings",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "the_papers_own_rigor",
+      "victim": "none_directly",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": null,
+      "selected": true,
+      "generation_order": null,
+      "selection_reason": "Kernel reading — proceeds via commitment_system_recognition, not standalone axis scoring"
+    },
+    {
+      "claim_id": "mechanism_defensibility_burden",
+      "human_readable": "Full In-Text Defense Burden (No Deferred Specification)",
+      "structural_delta": "Because the paper cites nothing unpublished, every one of 27 mechanisms must carry its own complete argumentative defense in-text — a structural constraint independent of WHY the quarantine boundary is drawn where it is",
+      "primary_observable": "Ratio of mechanisms with an explicit 'defense core' field to total mechanisms (27/27 in the source); load this places on paper length and argument density",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Passes §3 independence test: distinct observable (defense-core completeness ratio) from the kernel's boundary-placement question; this axis holds regardless of which reading of the quarantine's PURPOSE is correct — even under all four readings, the self-sufficiency requirement is identical and separately analyzable"
+    },
+    {
+      "claim_id": "constants_deferral_discipline",
+      "human_readable": "Deliberate Non-Specification of Constants (Parameter Shape Without Value)",
+      "structural_delta": "The document names constants (issuance caps, cadence floors, bond amounts) by role/shape and structurally refuses to assign values, treating premature precision as a distinct failure mode from disclosure risk",
+      "primary_observable": "Presence of 'deployment parameter' framing versus a concrete numeric value across all constant-bearing mechanisms (M-4, M-11, M-13, M-18)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Passes §3 independence test: this is a false-precision concern, not a confidentiality concern — distinct observable (numeric value vs. parameter shape) and distinct failure mode from all four kernel readings, which are all about WHAT information crosses the boundary, not about WHEN a value is mature enough to state"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "citation_purity_reading",
+      "kernel_id": "paper_ready_boundary",
+      "reading_id": "citation_purity_reading"
+    },
+    {
+      "claim_id": "ip_provenance_reading",
+      "kernel_id": "paper_ready_boundary",
+      "reading_id": "ip_provenance_reading"
+    },
+    {
+      "claim_id": "operational_security_reading",
+      "kernel_id": "paper_ready_boundary",
+      "reading_id": "operational_security_reading"
+    },
+    {
+      "claim_id": "design_philosophy_reading",
+      "kernel_id": "paper_ready_boundary",
+      "reading_id": "design_philosophy_reading"
+    },
+    "mechanism_defensibility_burden",
+    "constants_deferral_discipline"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "non_convertibility_as_constitutional_commitment",
+      "structural_delta": "M-17's proposed-unamendable rule that money never buys franchise, considered as its own axis of institutional design",
+      "hypothesis": "mountain",
+      "deferral_reason": "Genuinely interesting but subsidiary to and largely absorbed within design_philosophy_reading and mechanism_defensibility_burden; would require its own extraction pass on the object-level governance design (a separate document-analysis task from the quarantine/kernel question this run was scoped to)"
+    },
+    {
+      "claim_id": "prior_art_concession_as_novelty_management",
+      "structural_delta": "M-25's Addendum A narrows a novelty claim after conceding shipped prior art — a distinct rhetorical/epistemic move from quarantine proper",
+      "hypothesis": "snare",
+      "deferral_reason": "Overlaps heavily with ip_provenance_reading (Type B entanglement per §3.2); the addendum IS an instance of the ip_provenance vs. citation_purity tension playing out concretely, not an independent axis"
+    },
+    {
+      "claim_id": "adoption_as_speech_act",
+      "structural_delta": "The document's claim that 'the adoption is the act' — signature constitutes legitimacy performatively rather than certifying prior deliberation",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero centrality relative to kernel readings; interesting but this run's caller-relevant scope is the quarantine/paper-ready boundary, not the adoption ceremony's speech-act structure"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_coherence_check",
+      "description": "The four readings were tested for collapse (§3.2 Type A) and found genuinely distinct: each would draw the quarantine line differently on at least one hypothetical edge case (member-consented disclosure; category-listed-item-with-defense-core; non-listed-item-without-one). No collapse detected — is_contested_kernel=true is retained.",
+      "source": "SCOPE §1.3-K coherence check"
+    },
+    {
+      "id": "omega_fifth_reading_considered_and_rejected",
+      "description": "A fifth candidate reading — 'quarantine as legal risk management' (excluding items that could create liability exposure) — was considered and rejected as a genuine reading: the source document gives no textual signal that liability avoidance (as distinct from the four identified concerns) drives any specific exclusion; adding it would be decorative rather than textually grounded.",
+      "source": "SCOPE §1.3-K lens diversity check"
+    },
+    {
+      "id": "omega_research_context_refusal_as_data",
+      "description": "The supplied research context is itself a refusal by a prior instance to treat this document as a public research topic. That refusal is consistent with ALL FOUR kernel readings (each would independently counsel against 'researching' unpublished internal material) and therefore does not itself discriminate between readings — it is corroborating context, not an axis.",
+      "source": "Extraction §1, cross-referenced against research context"
+    },
+    {
+      "id": "omega_operational_security_reading_testability",
+      "description": "operational_security_reading is the hardest reading to falsify from the text alone, since the corpus community's actual vulnerability (vs. the member's) is never independently confirmed — the digest asserts community non-enumerability as a design value (M-3, M-25) but the reflexive application to the PAPER's own quarantine is an inference, not a stated rule. Flagged as the reading most dependent on interpretive charity.",
+      "source": "F03 self-scan"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected on operational_security_reading: its claim that the quarantine reflexively protects the corpus COMMUNITY (not just the member) is a reasonable but not textually certain inference — the document's explicit stated reasons (§0, §8 preamble) center on the member's signature authority and the paper's citation purity; community protection is argued by analogy to M-3/M-25's design principles applied one level up, which is a defensible reading but weaker in direct textual support than the other three. Retained as a reading because it survives the individually-holdable test and produces genuinely different verdicts on the edge cases, but flagged as the most inferential of the four."
+  }
+}

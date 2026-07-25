@@ -1,0 +1,197 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Comparative Theology / Institutional Authority",
+  "family_id": "abrahamic_covenant_2026",
+  "topic_summary": "Analysis of the Abrahamic covenant in Genesis as a contested kernel. Jewish interpretation reads the covenant as establishing exclusive transmission through Isaac, creating religious identity constraints that preserve Jewish continuity. Islamic interpretation reads the same covenant as continuing through Ishmael, validating Islamic prophetic lineage and challenging Jewish exclusivity. Each reading instantiates structurally different authority systems and beneficiary structures.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "Genesis covenant (textual kernel - God's promise to Abraham)",
+      "Isaac lineage (Jewish continuity claim)",
+      "Ishmael lineage (Islamic continuity claim)",
+      "Jewish interpretive tradition (rabbinic authority structure)",
+      "Islamic interpretive tradition (prophetic succession authority)",
+      "Christian reading (deferred - supersessionist or inclusive variants)"
+    ],
+    "key_tensions": [
+      "Exclusive vs continuing covenant (who are the legitimate heirs)",
+      "Textual fixity vs interpretive authority (same text, incompatible readings)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "isaac_covenant_reading",
+      "human_readable": "Isaac Covenant Reading (Exclusive Transmission Through Isaac)",
+      "structural_delta": "Covenant transmitted exclusively through Isaac; creates religious identity boundary that separates Jewish community from other Abrahamic claimants",
+      "primary_observable": "Rabbinic halakhic rulings on Jewish status; synagogue membership criteria; conversion requirements",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "jewish_institutional_continuity",
+      "victim": "ishmael_lineage_claimants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes exclusivity constraint structure"
+    },
+    {
+      "claim_id": "ishmael_covenant_reading",
+      "human_readable": "Ishmael Covenant Reading (Continuing Covenant Through Ishmael)",
+      "structural_delta": "Covenant continues through Ishmael to Muhammad; validates Islamic prophetic succession and challenges Jewish exclusivity by expanding the covenant's scope",
+      "primary_observable": "Quranic textual claims; Islamic prophetic genealogy teachings; interfaith theological debates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "islamic_prophetic_legitimacy",
+      "victim": "jewish_exclusivity_claim",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; creates competing legitimacy structure"
+    },
+    {
+      "claim_id": "land_promise_constraint",
+      "human_readable": "Land Promise as Material Constraint",
+      "structural_delta": "Genesis covenant includes territorial grant (Canaan/Palestine); readings map differently onto modern geopolitical claims",
+      "primary_observable": "Israeli settlement policy; Palestinian counterclaims; religious-nationalist rhetoric",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "state_territorial_claims",
+      "victim": "displaced_populations",
+      "downstream_of": [
+        "isaac_covenant_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Material downstream consequence of reading divergence; demonstrates extractiveness"
+    },
+    {
+      "claim_id": "christian_supersessionist_reading",
+      "human_readable": "Christian Supersessionist Reading (Spiritual vs Ethnic Fulfillment)",
+      "structural_delta": "Covenant fulfilled spiritually in Christ; ethnic lineage claims superseded by faith-based inclusion",
+      "primary_observable": "Christian theological statements on Old Covenant; interfaith relations; missionary activity",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "christian_universalist_claim",
+      "victim": "jewish_and_islamic_particularism",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: third reading adds complexity but structural pattern similar to other two readings; three-axis budget prioritizes Jewish-Islamic dyad plus downstream material consequence"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "isaac_covenant_reading",
+      "kernel_id": "abrahamic_covenant",
+      "reading_id": "isaac_covenant_reading"
+    },
+    {
+      "claim_id": "ishmael_covenant_reading",
+      "kernel_id": "abrahamic_covenant",
+      "reading_id": "ishmael_covenant_reading"
+    },
+    {
+      "claim_id": "land_promise_constraint",
+      "kernel_id": "abrahamic_covenant",
+      "reading_id": "land_promise_constraint"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "christian_supersessionist_reading",
+      "structural_delta": "Covenant fulfilled spiritually in Christ; ethnic claims superseded",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Third reading of kernel; structural pattern redundant with Jewish-Islamic dyad; three-axis budget prioritizes primary contestation plus material downstream consequence"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_bahai_reading",
+      "description": "Baháʼí Faith reads Abrahamic covenant as progressively revealed through multiple manifestations. Not analyzed due to three-axis budget, but represents fourth reading with distinct authority structure (non-supersessionist universalism).",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_samaritan_reading",
+      "description": "Samaritan interpretation predates rabbinic Judaism's crystallization and contests Jewish reading's authority basis. Deferred but potentially reveals that 'Jewish reading' is itself not monolithic.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_archaeological_historicity",
+      "description": "Historical-critical scholarship questions covenant narratives' historicity. If Genesis texts are constructed rather than fixed, does the kernel itself dissolve? Archaeological findings may reclassify the kernel from 'divinely revealed text' to 'later theological construct.'",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_gender_exclusion",
+      "description": "All analyzed readings center male lineage (Isaac/Ishmael). Sarah and Hagar's roles as mothers structurally determine covenant transmission but their agency is erased. Feminist readings would surface this as a constraint axis itself.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: same Genesis substrate, incompatible readings, structurally different constraints (exclusivity vs continuity). Readings pass independence test (different beneficiary/victim pairs, different epsilon sources). Christian reading deferred due to three-axis budget, not structural invalidity."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Genesis covenant between God and Abraham - the textual promise of descendants, land, and blessing",
+    "authority_description": "Interpretive legitimacy grounded in prophetic succession (Islamic) vs rabbinic halakhic tradition (Jewish); both claim textual fidelity to Genesis while reading it incompatibly",
+    "drift_status": "partial",
+    "candidate_pattern": "doctrinal_branch_point",
+    "is_contested_kernel": true,
+    "kernel_id": "abrahamic_covenant",
+    "readings": [
+      {
+        "reading_id": "isaac_covenant_reading",
+        "commitment": "Covenant transmitted exclusively through Isaac; Ishmael explicitly excluded (Genesis 17:19-21 interpreted as limiting covenant to Isaac's line)",
+        "authority_grounding": "Rabbinic interpretive tradition; halakhic definition of Jewish status through matrilineal/patrilineal descent; synagogue institutional continuity",
+        "sibling_readings": [
+          "ishmael_covenant_reading",
+          "christian_supersessionist_reading"
+        ],
+        "expected_structural_delta": "Creates religious identity boundary with high epsilon for exclusion; benefits institutional Jewish continuity; victim set includes Ishmaelite claimants and later Islamic tradition"
+      },
+      {
+        "reading_id": "ishmael_covenant_reading",
+        "commitment": "Covenant continues through Ishmael to Muhammad; Genesis promise interpreted as inclusive rather than exclusive; Islamic prophetic succession validates broader Abrahamic lineage",
+        "authority_grounding": "Quranic revelation; prophetic hadith; Islamic theological tradition claiming direct revelation corrects/completes earlier scripture",
+        "sibling_readings": [
+          "isaac_covenant_reading",
+          "christian_supersessionist_reading"
+        ],
+        "expected_structural_delta": "Challenges Jewish exclusivity; expands beneficiary set to include Islamic community; creates competing legitimacy claim with moderate epsilon for inclusion vs exclusion"
+      },
+      {
+        "reading_id": "land_promise_constraint",
+        "commitment": "Genesis covenant includes territorial grant (Land of Canaan); readings disagree on whether promise is conditional, fulfilled, or ongoing; maps onto modern Israeli-Palestinian conflict",
+        "authority_grounding": "Religious-nationalist movements; settler theology; counterclaims based on indigenous presence or Islamic conquest",
+        "sibling_readings": [
+          "isaac_covenant_reading",
+          "ishmael_covenant_reading"
+        ],
+        "expected_structural_delta": "Material downstream consequence of covenant reading divergence; high epsilon snare structure with displaced populations as victims; beneficiary is whichever state actor can leverage covenant reading for territorial legitimacy"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "isaac_covenant_reading",
+        "reading_b": "ishmael_covenant_reading",
+        "basis": "Jewish reading holds covenant is exclusively transmitted through Isaac (Ishmael explicitly excluded); Islamic reading holds covenant continues through Ishmael (exclusion claim rejected). No single coherent framework can hold both 'Ishmael is excluded from covenant' and 'Ishmael is included in covenant' simultaneously. The contradiction is not about relative emphasis but about the logical structure of covenantal transmission itself."
+      }
+    ]
+  },
+  "_seed_id": "abrahamic_covenant"
+}

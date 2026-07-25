@@ -1,0 +1,255 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Public Health Policy / Criminal Justice / Political Economy",
+  "family_id": "drug_policy_kernel_2026",
+  "topic_summary": "Analysis of drug policy frameworks as contested readings of a substance-control kernel. Three dominant readings—prohibition, harm-reduction, and legalization—instantiate structurally different constraints with distinct victim sets, enforcement mechanisms, and extractiveness profiles. The kernel is the shared commitment to 'legitimate state authority over psychoactive substance access'; readings differ on what legitimates that authority and who bears costs.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "State enforcement apparatus (police, courts, prisons)",
+      "Substance users (criminalized under prohibition, medicalized under harm-reduction)",
+      "Medical/public health institutions (treatment providers, supervised consumption sites)",
+      "Criminal distribution networks (cartels, street dealers)",
+      "Pharmaceutical industry (legal opioid manufacturers, cannabis corporations)",
+      "Third-party victims (overdose deaths, impaired driving casualties, families)",
+      "Carceral system (prisons, probation, criminal records infrastructure)",
+      "Tax revenue apparatus (excise taxes on legal substances)"
+    ],
+    "key_tensions": [
+      "Individual autonomy vs paternalistic protection (user rights vs state intervention)",
+      "Public health framing vs criminal justice framing (treatment vs punishment)",
+      "Black market violence vs legal market extraction (cartel profits vs corporate profits)"
+    ],
+    "key_mechanisms": [
+      "Criminal prohibition enforcement (arrest, prosecution, incarceration)",
+      "Harm-reduction service provision (needle exchange, supervised consumption, naloxone distribution)",
+      "Legal market regulation (licensing, taxation, quality control)",
+      "Medical gatekeeping (prescription requirements, treatment mandates)"
+    ],
+    "key_absences": [
+      "Indigenous/traditional use frameworks (peyote, ayahuasca, coca leaf—exempted or criminalized inconsistently)",
+      "Class/race disparities in enforcement (crack vs powder cocaine sentencing, stop-and-frisk targeting)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Legitimate state authority to regulate psychoactive substance access and use",
+    "authority_description": "State claims interpretive monopoly over what constitutes 'legitimate control'—grounded variously in moral paternalism, public health expertise, or individual liberty",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "substance_control_legitimacy",
+    "readings": [
+      {
+        "reading_id": "prohibition_reading",
+        "commitment": "Substance use is inherently harmful; state authority derives from moral duty to prevent harm through criminalization",
+        "authority_grounding": "Moral paternalism / public order maintenance",
+        "sibling_readings": [
+          "harm_reduction_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users enter victim set via criminalization; high carceral extractiveness; black market violence externality"
+      },
+      {
+        "reading_id": "harm_reduction_reading",
+        "commitment": "Substance use is a public health issue; state authority derives from duty to minimize harm without criminalization",
+        "authority_grounding": "Medical/epidemiological expertise",
+        "sibling_readings": [
+          "prohibition_reading",
+          "legalization_reading"
+        ],
+        "expected_structural_delta": "Users medicalized not criminalized; moderate extractiveness via treatment mandates; persistent black market"
+      },
+      {
+        "reading_id": "legalization_reading",
+        "commitment": "Competent adults have autonomy over substance use; state authority limited to preventing third-party harm",
+        "authority_grounding": "Liberal autonomy / harm principle",
+        "sibling_readings": [
+          "prohibition_reading",
+          "harm_reduction_reading"
+        ],
+        "expected_structural_delta": "Users exit victim set; third-party harms (impaired driving, secondhand exposure) become primary constraint; corporate extractiveness via legal market"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "prohibition_reading",
+      "human_readable": "Prohibition Reading (Criminalization as Moral Duty)",
+      "structural_delta": "State criminalizes substance possession/use; users become victims of carceral system; enforcement targets supply and demand via arrest/incarceration",
+      "primary_observable": "Incarceration rates for drug offenses; arrest rates; criminal record prevalence; black market violence metrics",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "carceral_industrial_complex",
+      "victim": "substance_users_criminalized",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline constraint where users are primary victims via criminalization"
+    },
+    {
+      "claim_id": "harm_reduction_reading",
+      "human_readable": "Harm-Reduction Reading (Medicalization Without Criminalization)",
+      "structural_delta": "State decriminalizes use but maintains control via medical gatekeeping; users medicalized not criminalized; black market persists for non-medical access",
+      "primary_observable": "Overdose death rates; HIV/Hepatitis C transmission rates; supervised consumption site utilization; treatment mandate prevalence",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "public_health_institutions",
+      "victim": "users_under_treatment_mandates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: structurally distinct victim set (medicalized vs criminalized); different extractiveness profile"
+    },
+    {
+      "claim_id": "legalization_reading",
+      "human_readable": "Legalization Reading (Autonomy with Third-Party Harm Limits)",
+      "structural_delta": "State permits adult use with regulatory controls; users exit victim set; third-party harms (impaired driving, youth access) become primary constraint; corporate market replaces black market",
+      "primary_observable": "Legal market size; tax revenue; impaired driving rates; youth use prevalence; corporate consolidation metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "legal_cannabis_pharma_corporations",
+      "victim": "third_party_harm_victims",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: victim set shifts entirely to third parties; extractiveness shifts from state carceral to corporate profit"
+    },
+    {
+      "claim_id": "class_race_enforcement_disparity",
+      "human_readable": "Class/Race Enforcement Disparity (Selective Criminalization)",
+      "structural_delta": "Prohibition enforcement disproportionately targets marginalized communities despite similar use rates across demographics",
+      "primary_observable": "Arrest rates by race/class; sentencing disparities (crack vs powder cocaine); stop-and-frisk data",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "dominant_class_racial_groups",
+      "victim": "marginalized_communities",
+      "downstream_of": [
+        "prohibition_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally downstream of prohibition_reading; captured as enforcement mechanism within that reading"
+    },
+    {
+      "claim_id": "black_market_violence_externality",
+      "human_readable": "Black Market Violence Externality (Prohibition-Generated Harm)",
+      "structural_delta": "Prohibition creates lucrative black markets; violence emerges from lack of legal dispute resolution; harm-reduction partially reduces but does not eliminate",
+      "primary_observable": "Homicide rates in drug-trafficking regions; cartel revenue; turf war casualties",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "criminal_distribution_networks",
+      "victim": "communities_in_trafficking_zones",
+      "downstream_of": [
+        "prohibition_reading",
+        "harm_reduction_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important externality but captured within prohibition/harm-reduction readings as enforcement mechanism consequence"
+    },
+    {
+      "claim_id": "indigenous_traditional_use_exemption",
+      "human_readable": "Indigenous Traditional Use Exemption (Cultural Rights vs Universal Prohibition)",
+      "structural_delta": "Some jurisdictions exempt indigenous ceremonial use (peyote, ayahuasca) from prohibition; reveals cultural relativism in kernel interpretation",
+      "primary_observable": "Legal exemptions for religious/traditional use; prosecution rates for indigenous vs non-indigenous users",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: low centrality; reveals kernel instability but does not constitute independent reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "prohibition_reading",
+      "kernel_id": "substance_control_legitimacy",
+      "reading_id": "prohibition_reading"
+    },
+    {
+      "claim_id": "harm_reduction_reading",
+      "kernel_id": "substance_control_legitimacy",
+      "reading_id": "harm_reduction_reading"
+    },
+    {
+      "claim_id": "legalization_reading",
+      "kernel_id": "substance_control_legitimacy",
+      "reading_id": "legalization_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "class_race_enforcement_disparity",
+      "structural_delta": "Prohibition enforcement disproportionately targets marginalized communities",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured as enforcement mechanism within prohibition_reading; structurally downstream"
+    },
+    {
+      "claim_id": "black_market_violence_externality",
+      "structural_delta": "Prohibition creates black markets generating violence externalities",
+      "hypothesis": "snare",
+      "deferral_reason": "Important consequence but captured within prohibition/harm-reduction readings as enforcement mechanism outcome"
+    },
+    {
+      "claim_id": "indigenous_traditional_use_exemption",
+      "structural_delta": "Cultural/religious exemptions reveal kernel interpretation instability",
+      "hypothesis": "piton",
+      "deferral_reason": "Low centrality; reveals kernel contestation but does not constitute independent reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_alcohol_tobacco_inconsistency",
+      "description": "Why are alcohol and tobacco (higher mortality) legal while cannabis/psychedelics (lower mortality) prohibited? Reveals kernel is not grounded in harm metrics but in historical/cultural contingency. Prohibition reading claims universal harm principle but applies selectively.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_prescription_opioid_bridge",
+      "description": "Legal pharmaceutical opioids (OxyContin) created addiction epidemic, driving users to black market heroin/fentanyl. Legalization reading assumes legal market eliminates black market, but prescription system shows legal/illegal markets can coexist and feed each other.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_decriminalization_vs_legalization",
+      "description": "Harm-reduction reading often conflates decriminalization (no criminal penalty for possession) with legalization (legal regulated market). These are structurally distinct: decriminalization leaves black market intact, legalization replaces it. Harm-reduction may be transitional reading, not stable endpoint.",
+      "source": "§3.2 Overlap Classification (Type C: Ambiguity-Generated)"
+    },
+    {
+      "id": "omega_corporate_capture_risk",
+      "description": "Legalization reading assumes regulatory controls prevent corporate extractiveness, but tobacco/alcohol/gambling industries show regulatory capture is common. Legal cannabis market may replicate Big Tobacco playbook (youth marketing, addiction maximization, lobbying against public health measures).",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis analysis"
+    },
+    {
+      "id": "omega_psychedelic_exceptionalism",
+      "description": "Emerging fourth reading: psychedelic-assisted therapy (psilocybin, MDMA for PTSD). Medical legitimacy without recreational legalization. Potentially distinct reading with different victim set (patients denied access vs recreational users criminalized), but insufficient structural independence from harm-reduction reading to warrant separate generation.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings emit genuinely different constraints with distinct victim sets (criminalized users vs medicalized users vs third-party harm victims). Extractiveness shifts from carceral to medical to corporate across readings. Readings are structurally independent and non-collapsible."
+  },
+  "_seed_id": "drug_policy_kernel"
+}

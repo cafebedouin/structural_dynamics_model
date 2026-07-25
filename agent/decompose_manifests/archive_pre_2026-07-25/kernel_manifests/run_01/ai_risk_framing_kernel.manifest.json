@@ -1,0 +1,223 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "AI Safety / Technology Governance / Risk Assessment",
+  "family_id": "ai_risk_kernel_2026",
+  "topic_summary": "Analysis of the AI risk discourse as a contested kernel where different communities read the same commitment to 'AI safety' through fundamentally different lenses: one prioritizing existential risk from superintelligent systems, the other prioritizing near-term algorithmic harms. Each reading generates structurally distinct constraints with different victim sets, timescales, and intervention priorities.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Existential Risk (x-risk) community (academic/industry researchers focused on AGI alignment)",
+      "Algorithmic Fairness/Ethics community (researchers focused on present-day bias, discrimination, labor impacts)",
+      "AI Safety commitment (shared kernel: 'prevent AI from causing catastrophic harm')",
+      "Frontier AI labs (OpenAI, Anthropic, DeepMind - resource allocation actors)",
+      "Regulatory bodies (EU AI Act, US NIST frameworks - policy implementation)",
+      "Affected populations (present-day: gig workers, marginalized groups facing algorithmic discrimination; future: humanity under superintelligence scenarios)"
+    ],
+    "key_tensions": [
+      "Resource allocation: x-risk research funding vs fairness/accountability infrastructure",
+      "Temporal priority: speculative future catastrophe vs documented present harms",
+      "Epistemic authority: who defines 'safety' - technical alignment researchers vs social scientists/affected communities"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that 'AI systems must be made safe' - a stabilized reference point both communities claim to serve",
+    "authority_description": "Contested: x-risk community grounds authority in technical expertise and catastrophic-risk modeling; near-term-harms community grounds authority in empirical documentation of existing harms and affected-community testimony",
+    "drift_status": "absent",
+    "candidate_pattern": "interpretive_drift_pattern",
+    "is_contested_kernel": true,
+    "kernel_id": "ai_safety_commitment",
+    "readings": [
+      {
+        "reading_id": "existential_risk_reading",
+        "commitment": "AI safety means preventing extinction-level outcomes from misaligned superintelligent systems",
+        "authority_grounding": "technical expertise in machine learning, game theory, decision theory; catastrophic risk modeling",
+        "sibling_readings": [
+          "near_term_harms_reading",
+          "dual_priority_reading"
+        ],
+        "expected_structural_delta": "Victim set: all future humans (potentially infinite); beneficiary: humanity conditional on alignment success; high ε on speculative technical interventions (RLHF, interpretability, AI governance for pause/slowdown); low ε on present algorithmic accountability"
+      },
+      {
+        "reading_id": "near_term_harms_reading",
+        "commitment": "AI safety means preventing documented present-day harms from deployed systems (bias, discrimination, labor exploitation, misinformation)",
+        "authority_grounding": "empirical social science, affected-community testimony, civil rights frameworks",
+        "sibling_readings": [
+          "existential_risk_reading",
+          "dual_priority_reading"
+        ],
+        "expected_structural_delta": "Victim set: present-day marginalized populations, gig workers, communities facing algorithmic discrimination; beneficiary: tech companies avoiding regulation; high ε on transparency, auditing, labor protections; low ε on speculative alignment research"
+      },
+      {
+        "reading_id": "dual_priority_reading",
+        "commitment": "AI safety requires addressing both existential risk and near-term harms as non-competing priorities",
+        "authority_grounding": "synthesis position claiming both technical and social dimensions are necessary",
+        "sibling_readings": [
+          "existential_risk_reading",
+          "near_term_harms_reading"
+        ],
+        "expected_structural_delta": "Victim set: union of both populations; attempts to distribute resources across both intervention types; faces coherence challenge on resource allocation under scarcity"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "existential_risk_reading",
+      "human_readable": "Existential Risk Reading (X-Risk Dominant Safety Frame)",
+      "structural_delta": "Safety commitment read as preventing extinction from superintelligent misalignment",
+      "primary_observable": "Resource allocation to alignment research vs fairness infrastructure; policy focus on AGI governance vs algorithmic accountability",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "x_risk_research_community",
+      "victim": "present_day_algorithmic_harm_victims",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; structurally distinct victim set and temporal frame"
+    },
+    {
+      "claim_id": "near_term_harms_reading",
+      "human_readable": "Near-Term Harms Reading (Present-Day Safety Frame)",
+      "structural_delta": "Safety commitment read as preventing documented algorithmic discrimination and labor exploitation",
+      "primary_observable": "Funding for bias auditing, transparency requirements, labor protections vs speculative alignment work",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "tech_companies_avoiding_regulation",
+      "victim": "future_populations_under_superintelligence",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; inverts victim/beneficiary structure of first reading"
+    },
+    {
+      "claim_id": "dual_priority_reading",
+      "human_readable": "Dual Priority Reading (Both-And Safety Frame)",
+      "structural_delta": "Safety commitment read as requiring simultaneous attention to existential and near-term risks",
+      "primary_observable": "Institutional attempts to fund both research streams; policy frameworks addressing both dimensions",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading testing coherence of synthesis position; lower centrality but necessary for kernel completeness"
+    },
+    {
+      "claim_id": "resource_scarcity_constraint",
+      "human_readable": "Resource Scarcity Constraint (Finite Funding/Attention)",
+      "structural_delta": "Limited pool of AI safety funding, researcher attention, and policy bandwidth forces zero-sum allocation",
+      "primary_observable": "Total AI safety funding; researcher FTE distribution; regulatory capacity",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "existential_risk_reading",
+        "near_term_harms_reading",
+        "dual_priority_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but captured implicitly in reading competition; would add token cost without structural novelty"
+    },
+    {
+      "claim_id": "epistemic_asymmetry",
+      "human_readable": "Epistemic Asymmetry (Speculative vs Documented Harms)",
+      "structural_delta": "X-risk claims rest on speculative modeling; near-term harms rest on documented evidence",
+      "primary_observable": "Evidentiary standards in policy debates; burden of proof allocation",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "existential_risk_reading",
+        "near_term_harms_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: epistemological dimension important but lower structural priority than victim-set inversion"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "existential_risk_reading",
+      "kernel_id": "ai_safety_commitment",
+      "reading_id": "existential_risk_reading"
+    },
+    {
+      "claim_id": "near_term_harms_reading",
+      "kernel_id": "ai_safety_commitment",
+      "reading_id": "near_term_harms_reading"
+    },
+    {
+      "claim_id": "dual_priority_reading",
+      "kernel_id": "ai_safety_commitment",
+      "reading_id": "dual_priority_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "resource_scarcity_constraint",
+      "structural_delta": "Finite funding/attention forces zero-sum allocation between risk frames",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream constraint captured implicitly in reading competition; explicit treatment would add token cost without structural novelty"
+    },
+    {
+      "claim_id": "epistemic_asymmetry",
+      "structural_delta": "X-risk rests on speculation; near-term harms on documentation",
+      "hypothesis": "rope",
+      "deferral_reason": "Epistemological dimension important but lower structural priority than victim-set topology; omega material"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Do the three readings share a genuine kernel or are they two separate kernels? X-risk and near-term-harms may not share the same 'safety' substrate - one is about system capability control, the other about system deployment justice. If they are separate kernels, the 'AI safety' label is a homonym obscuring two distinct commitments.",
+      "source": "§1.3-K kernel coherence test"
+    },
+    {
+      "id": "omega_dual_priority_collapse",
+      "description": "Does the dual-priority reading survive resource scarcity? Under finite funding, 'both-and' may collapse to a weighted priority ordering, revealing it as a political compromise rather than a coherent reading. If it collapses, only two readings remain.",
+      "source": "Dual priority reading structural instability"
+    },
+    {
+      "id": "omega_victim_set_temporality",
+      "description": "Are future populations a valid victim set for present constraint analysis? X-risk reading's victim set is speculative and potentially infinite; near-term reading's is documented and finite. This asymmetry may indicate incommensurable constraint types rather than competing readings of one constraint.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - temporal scope of harm"
+    },
+    {
+      "id": "omega_beneficiary_inversion",
+      "description": "Each reading's beneficiary may be the other reading's victim. X-risk focus benefits alignment researchers while potentially neglecting present-day harm victims; near-term focus benefits affected communities while potentially increasing existential risk. This suggests tangled_rope classification for both, but the inversion may indicate they are not readings of the same kernel.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_epistemic_authority_contest",
+      "description": "Who has standing to define 'AI safety'? X-risk community claims technical expertise; near-term community claims affected-community testimony and empirical evidence. This is not just a reading difference but an authority structure contest that may fracture the kernel itself.",
+      "source": "Deferred axis epistemic_asymmetry + commitment system authority grounding"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied as specified. High omega load reflects genuine structural ambiguity about whether this is one contested kernel or two separate kernels sharing a label. Generation will test whether the readings emit structurally distinct constraints or collapse."
+  },
+  "_seed_id": "ai_risk_framing_kernel"
+}

@@ -1,0 +1,204 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Educational Psychology / Learning Theory / Epistemology",
+  "family_id": "prerequisite_knowledge_learning_2024",
+  "topic_summary": "Personal essay arguing that difficulty learning complex subjects (particularly mathematics) reflects missing prerequisite knowledge rather than innate cognitive limitation. Author reframes 'being dumb' as lacking foundational building blocks, using gaming and narrative metaphors to illustrate how knowledge gaps create comprehension barriers.",
+  "extraction_summary": {
+    "entity_count": 3,
+    "claim_count": 4,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Author (learner experiencing math difficulty, reframing ability beliefs)",
+      "School system (institutional context where initial 'dumb' belief formed)",
+      "Prerequisites (foundational knowledge units required for comprehension)"
+    ],
+    "key_tensions": [
+      "Fixed ability belief ('I am dumb at math') vs growth-oriented reframing ('I lack prerequisites')"
+    ],
+    "key_mechanisms": [
+      "Prerequisite accumulation (systematic backward traversal to fill knowledge gaps)",
+      "Belief revision (reattributing failure from innate limitation to structural knowledge debt)"
+    ],
+    "key_absences": [
+      "No discussion of institutional responsibility for prerequisite gaps (why did school system allow progression without mastery?)",
+      "No acknowledgment of differential access to remediation resources (time, tutoring, materials)",
+      "No engagement with research literature on learning hierarchies, zone of proximal development, or mastery learning"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The substrate of learning difficulty: what constitutes the 'real' barrier to understanding complex material",
+    "authority_description": "Competing epistemological frameworks for interpreting learning struggle—psychometric (ability-based), constructivist (prerequisite-based), critical (access-based)",
+    "drift_status": "functioning",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "learning_difficulty_substrate",
+    "readings": [
+      {
+        "reading_id": "ability_ceiling_reading",
+        "commitment": "Learning difficulty reflects innate cognitive capacity limits—some minds are structurally unsuited to certain domains",
+        "authority_grounding": "Psychometric tradition; IQ research; differential aptitude theory",
+        "sibling_readings": [
+          "prerequisite_debt_reading",
+          "access_barrier_reading"
+        ],
+        "expected_structural_delta": "Victim set: learners below threshold; beneficiary: meritocratic sorting systems; high ε (ability as immutable mountain)"
+      },
+      {
+        "reading_id": "prerequisite_debt_reading",
+        "commitment": "Learning difficulty reflects accumulated knowledge gaps—comprehension failure is structural debt, not capacity limit",
+        "authority_grounding": "Constructivist pedagogy; Bloom's mastery learning; Khan Academy model",
+        "sibling_readings": [
+          "ability_ceiling_reading",
+          "access_barrier_reading"
+        ],
+        "expected_structural_delta": "No inherent victim set (all learners capable given prerequisites); beneficiary: remediation industry; moderate ε (debt as rope—coordination problem)"
+      },
+      {
+        "reading_id": "access_barrier_reading",
+        "commitment": "Learning difficulty reflects differential resource access—struggle indexes material conditions (time, tutoring, institutional quality), not individual deficit",
+        "authority_grounding": "Critical pedagogy; sociology of education; Bourdieu's cultural capital",
+        "sibling_readings": [
+          "ability_ceiling_reading",
+          "prerequisite_debt_reading"
+        ],
+        "expected_structural_delta": "Victim set: under-resourced learners; beneficiary: credentialing gatekeepers; high ε (access as tangled_rope—systemic extraction)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "ability_ceiling_reading",
+        "reading_b": "prerequisite_debt_reading",
+        "basis": "Ability ceiling reading requires accepting cognitive limits as explanatory bedrock; prerequisite debt reading requires rejecting innate limits as primary explanation—no framework holds both as simultaneously true foundations"
+      },
+      {
+        "reading_a": "ability_ceiling_reading",
+        "reading_b": "access_barrier_reading",
+        "basis": "Ability ceiling locates failure in individual neurology; access barrier locates failure in social structure—accepting one as causal foundation requires rejecting the other as primary"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "ability_ceiling_reading",
+      "human_readable": "Ability Ceiling Reading (Innate Cognitive Limits)",
+      "structural_delta": "Learning difficulty as expression of fixed cognitive capacity—some minds structurally unsuited to certain domains",
+      "primary_observable": "Psychometric test score distributions; twin studies on mathematical ability heritability; neurological imaging of mathematical processing",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": "meritocratic_sorting_systems",
+      "victim": "learners_below_threshold",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel learning_difficulty_substrate"
+    },
+    {
+      "claim_id": "prerequisite_debt_reading",
+      "human_readable": "Prerequisite Debt Reading (Accumulated Knowledge Gaps)",
+      "structural_delta": "Learning difficulty as structural knowledge debt—comprehension failure reflects missing foundational units, not capacity limits",
+      "primary_observable": "Diagnostic assessment of prerequisite mastery; learning curve acceleration after remediation; mastery learning outcome data",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "remediation_industry",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel learning_difficulty_substrate"
+    },
+    {
+      "claim_id": "access_barrier_reading",
+      "human_readable": "Access Barrier Reading (Material Resource Inequality)",
+      "structural_delta": "Learning difficulty as index of differential resource access—struggle reflects time poverty, tutoring access, institutional quality, not individual deficit",
+      "primary_observable": "Correlation between SES and math achievement; tutoring expenditure by income quintile; school funding inequality metrics",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "credentialing_gatekeepers",
+      "victim": "under_resourced_learners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel learning_difficulty_substrate"
+    },
+    {
+      "claim_id": "institutional_progression_failure",
+      "human_readable": "Institutional Progression Failure (Social Promotion Without Mastery)",
+      "structural_delta": "School systems advance students without prerequisite mastery, creating compounding knowledge debt",
+      "primary_observable": "Grade-level progression policies; mastery thresholds vs actual advancement; retention rate data",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "administrative_efficiency_metrics",
+      "victim": "students_with_undetected_gaps",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally independent but outside kernel scope; would require institutional analysis beyond personal learning narrative"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "ability_ceiling_reading",
+      "kernel_id": "learning_difficulty_substrate",
+      "reading_id": "ability_ceiling_reading"
+    },
+    {
+      "claim_id": "prerequisite_debt_reading",
+      "kernel_id": "learning_difficulty_substrate",
+      "reading_id": "prerequisite_debt_reading"
+    },
+    {
+      "claim_id": "access_barrier_reading",
+      "kernel_id": "learning_difficulty_substrate",
+      "reading_id": "access_barrier_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_progression_failure",
+      "structural_delta": "School systems advance students without mastery, creating knowledge debt",
+      "hypothesis": "snare",
+      "deferral_reason": "Structurally independent axis but outside kernel scope; essay focuses on individual learner reframing, not institutional critique"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse_risk",
+      "description": "Do the three readings actually sustain distinct constraints, or does empirical evidence collapse them? If prerequisite remediation fully closes achievement gaps regardless of initial ability, ability_ceiling_reading becomes empirically void. If it doesn't, prerequisite_debt_reading is incomplete.",
+      "source": "§1.3-K kernel coherence check"
+    },
+    {
+      "id": "omega_author_reading_identification",
+      "description": "Author explicitly adopts prerequisite_debt_reading but does not engage with access_barrier_reading's critique: that 150 days of self-directed learning presumes time/resource access many learners lack. Is this a reading selection or a reading blindness?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + Absence Inventory"
+    },
+    {
+      "id": "omega_institutional_absence",
+      "description": "Essay treats prerequisite gaps as individual responsibility to remediate, not institutional failure to prevent. Why did school system allow progression without mastery? Deferred axis institutional_progression_failure addresses this but falls outside kernel scope.",
+      "source": "Absence Inventory (institutional responsibility)"
+    },
+    {
+      "id": "omega_growth_mindset_literature",
+      "description": "Essay's core claim (ability belief vs prerequisite gap) maps to Dweck's fixed/growth mindset research, but author does not cite this literature. Is the reframing novel to author or a rediscovery of established framework?",
+      "source": "Absence Inventory (research engagement)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three distinct readings with axiom contradictions. Deferred axis institutional_progression_failure is structurally independent but outside essay's individual-learner scope."
+  }
+}

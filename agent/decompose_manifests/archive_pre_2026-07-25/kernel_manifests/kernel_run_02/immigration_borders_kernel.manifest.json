@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / International Law / Migration Studies",
+  "family_id": "immigration_border_kernel_2026",
+  "topic_summary": "Analysis of the border control kernel as contested between sovereignty-primary and freedom-of-movement-primary readings. Each reading instantiates a different constraint with distinct victim sets: excluded migrants under sovereignty-primary enforcement, displaced citizens under freedom-of-movement-primary frameworks. The kernel is the legitimacy basis for border control authority itself.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "State governments (claim sovereign border control as essential to territorial integrity)",
+      "Excluded migrants (100M+ displaced persons globally; victims of sovereignty-primary enforcement)",
+      "Citizen workers (experience labor market displacement; victims of freedom-of-movement frameworks)",
+      "International human rights law (UDHR Article 13; constrains but does not eliminate state discretion)",
+      "European Union (Treaty of Rome 1957; instantiates freedom-of-movement reading within member states)",
+      "Secure Communities deportation program (U.S.; 88,000 American jobs lost per million deportations)"
+    ],
+    "key_tensions": [
+      "Sovereignty as absolute exclusion authority vs sovereignty as jurisdictional authority without border closure",
+      "Universal human rights obligations vs in-group self-rule prioritization",
+      "International protection obligations vs public anxieties about immigration in high-income states",
+      "State-level immigrant policies vs federal enforcement vs local implementation climates"
+    ],
+    "key_mechanisms": [
+      "Border enforcement apparatus (physical barriers, deportation, visa restrictions) — operates under sovereignty-primary reading",
+      "Free movement treaties (EU, bilateral labor agreements) — operate under freedom-of-movement reading",
+      "Asylum and refugee protection frameworks (international law obligations constraining sovereignty claims)"
+    ],
+    "key_absences": [
+      "Economic beneficiaries of enforcement regimes (private detention contractors, border security industry) not surfaced in source material",
+      "Climate displacement as structural driver (mentioned displacement crisis but not climate-specific mechanisms)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legitimacy basis for state authority to control cross-border human movement — what grounds the state's claim to exclude or admit non-citizens",
+    "authority_description": "Contested between state sovereignty doctrine (Westphalian territorial control) and universal human rights frameworks (UDHR, international law obligations)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift_absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "border_control_legitimacy",
+    "readings": [
+      {
+        "reading_id": "sovereignty_primary",
+        "commitment": "State territorial sovereignty entails absolute discretion to exclude non-citizens; border control is constitutive of statehood itself",
+        "authority_grounding": "Westphalian sovereignty doctrine; state practice since 20th century; national security and self-determination frameworks",
+        "sibling_readings": [
+          "freedom_of_movement_primary",
+          "jurisdictional_sovereignty"
+        ],
+        "expected_structural_delta": "Excluded migrants enter victim set; enforcement apparatus justified as sovereignty defense; human rights constraints treated as external limits on legitimate authority rather than constitutive of it"
+      },
+      {
+        "reading_id": "freedom_of_movement_primary",
+        "commitment": "Freedom of movement is a fundamental human right; territorial sovereignty does not entail border closure authority",
+        "authority_grounding": "Universal human rights law (UDHR Article 13); cosmopolitan moral philosophy; EU free movement precedent",
+        "sibling_readings": [
+          "sovereignty_primary",
+          "jurisdictional_sovereignty"
+        ],
+        "expected_structural_delta": "Displaced citizens/workers enter victim set; enforcement apparatus delegitimized; state authority limited to jurisdictional regulation (who gets what rights once present) rather than exclusion"
+      },
+      {
+        "reading_id": "jurisdictional_sovereignty",
+        "commitment": "Sovereignty is jurisdictional authority (power to regulate rights and obligations within territory) but does not necessarily include border closure authority; legitimacy requires balancing protection obligations with labor needs and public consent",
+        "authority_grounding": "Hybrid framework: international law obligations + democratic legitimacy + pragmatic governance; emerging in high-income states facing displacement crises",
+        "sibling_readings": [
+          "sovereignty_primary",
+          "freedom_of_movement_primary"
+        ],
+        "expected_structural_delta": "Dual victim sets acknowledged (both excluded migrants and displaced citizens); enforcement apparatus constrained by proportionality and necessity tests; legitimacy crisis when enforcement violates basic human rights OR when admission undermines public consent"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereignty_primary",
+        "reading_b": "freedom_of_movement_primary",
+        "basis": "Sovereignty-primary holds that territorial control authority is constitutive of statehood and thus non-negotiable; freedom-of-movement-primary holds that human rights are constitutive of legitimate authority and thus border closure is categorically impermissible. No single framework can hold both that border control is essential to statehood AND that it is categorically illegitimate."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_primary",
+      "human_readable": "Sovereignty-Primary Reading (Absolute Exclusion Authority)",
+      "structural_delta": "State authority to exclude non-citizens is absolute and constitutive of territorial sovereignty itself",
+      "primary_observable": "Enforcement apparatus scale (deportations, border barriers, visa denial rates); legal doctrine treating exclusion as plenary power",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "national_security_state_apparatus",
+      "victim": "excluded_migrants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; distinct victim set (excluded migrants); high epsilon from enforcement apparatus extractiveness"
+    },
+    {
+      "claim_id": "freedom_of_movement_primary",
+      "human_readable": "Freedom-of-Movement-Primary Reading (Human Rights Constraint)",
+      "structural_delta": "Freedom of movement is a fundamental human right that delegitimizes border closure authority",
+      "primary_observable": "Free movement treaty coverage (EU, bilateral agreements); human rights law invocations in migration litigation; cosmopolitan advocacy prevalence",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "global_displaced_populations",
+      "victim": "citizen_workers_in_receiving_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; distinct victim set (displaced citizens); axiom-contradictory to sovereignty_primary"
+    },
+    {
+      "claim_id": "jurisdictional_sovereignty",
+      "human_readable": "Jurisdictional Sovereignty Reading (Hybrid Legitimacy Framework)",
+      "structural_delta": "Sovereignty is jurisdictional authority without necessarily entailing border closure; legitimacy requires balancing protection obligations, labor needs, and public consent",
+      "primary_observable": "Proportionality tests in migration law; asylum acceptance rates vs labor visa quotas; public opinion polling on immigration levels",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": "dual_victim_set_acknowledged",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; hybrid framework attempting to resolve axiom contradiction; lower epsilon but structurally distinct observable (balancing mechanisms rather than absolute claims)"
+    },
+    {
+      "claim_id": "enforcement_apparatus_extractiveness",
+      "human_readable": "Border Enforcement as Extraction Mechanism",
+      "structural_delta": "Private detention contractors, border security industry, and state bureaucracies extract rents from enforcement regimes regardless of reading",
+      "primary_observable": "Private prison contracts for immigration detention; border security industry revenue; bureaucratic employment in immigration enforcement",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "detention_industrial_complex",
+      "victim": "detained_migrants_and_taxpayers",
+      "downstream_of": [
+        "sovereignty_primary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: extraction mechanism downstream of sovereignty_primary reading; captured implicitly in that reading's beneficiary structure; would require additional research on private detention economics"
+    },
+    {
+      "claim_id": "climate_displacement_driver",
+      "human_readable": "Climate Displacement as Structural Driver",
+      "structural_delta": "Climate-induced displacement creates migration pressure that neither reading adequately addresses; neither sovereignty-primary enforcement nor freedom-of-movement frameworks have mechanisms for climate refugee status",
+      "primary_observable": "Climate displacement estimates (IPCC projections); absence of climate refugee legal category in international law",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_primary",
+        "freedom_of_movement_primary"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but source material does not provide sufficient detail on climate-specific mechanisms; flagged as absence but not structurally decomposed in research context"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_primary",
+      "kernel_id": "border_control_legitimacy",
+      "reading_id": "sovereignty_primary"
+    },
+    {
+      "claim_id": "freedom_of_movement_primary",
+      "kernel_id": "border_control_legitimacy",
+      "reading_id": "freedom_of_movement_primary"
+    },
+    {
+      "claim_id": "jurisdictional_sovereignty",
+      "kernel_id": "border_control_legitimacy",
+      "reading_id": "jurisdictional_sovereignty"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_apparatus_extractiveness",
+      "structural_delta": "Private detention and border security industry extraction from enforcement regimes",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream of sovereignty_primary reading; beneficiary structure captured implicitly in that reading; would require additional research on detention economics not present in source material"
+    },
+    {
+      "claim_id": "climate_displacement_driver",
+      "structural_delta": "Climate-induced displacement as structural driver neither reading addresses",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain but insufficient detail in source material on climate-specific mechanisms; flagged as absence but not structurally decomposed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_eu_exceptionalism",
+      "description": "Is EU free movement a genuine instantiation of freedom-of-movement-primary reading, or a sovereignty_primary cartel that externalizes exclusion to EU borders while liberalizing internally? If the latter, it does not validate the freedom-of-movement reading but rather demonstrates sovereignty-primary enforcement at a different scale.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction anchor (Treaty of Rome 1957)"
+    },
+    {
+      "id": "omega_jurisdictional_stability",
+      "description": "Is jurisdictional_sovereignty a stable hybrid reading or an unstable compromise that collapses into one of the axiom-contradictory poles under crisis conditions? Source material shows 'legitimacy paradox' and 'public anxieties' suggesting instability, but does not resolve whether the hybrid can persist.",
+      "source": "Reading independence test + extraction anchor (legitimacy paradox)"
+    },
+    {
+      "id": "omega_victim_set_symmetry",
+      "description": "Are the victim sets (excluded migrants vs displaced citizens) structurally symmetric, or does one reading impose categorically greater harm? Sovereignty-primary creates 100M+ displaced persons; freedom-of-movement creates labor market displacement (88K jobs lost per 1M deportations suggests enforcement also harms citizens). Asymmetry unclear from source material.",
+      "source": "Axiom contradiction analysis + extraction anchors (displacement statistics)"
+    },
+    {
+      "id": "omega_enforcement_beneficiaries",
+      "description": "Source material does not surface economic beneficiaries of enforcement apparatus (private detention contractors, border security industry). If these actors capture policy regardless of reading, the kernel contest may be epiphenomenal to extraction dynamics.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis enforcement_apparatus_extractiveness"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition validated: three readings hold genuinely different axioms about what grounds border control legitimacy, emit distinct victim sets, and cannot be held simultaneously in a single coherent framework. Sovereignty-primary and freedom-of-movement-primary are axiom-contradictory; jurisdictional_sovereignty attempts hybrid resolution but stability uncertain (omega_jurisdictional_stability)."
+  },
+  "_seed_id": "immigration_borders_kernel"
+}

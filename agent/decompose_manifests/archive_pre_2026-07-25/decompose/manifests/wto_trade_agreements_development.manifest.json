@@ -1,0 +1,249 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Trade Law / Development Economics / Political Economy",
+  "family_id": "wto_development_market_access_2026",
+  "topic_summary": "Analysis of the World Trade Organization's treaty framework as a contested kernel, examining whether WTO agreements constitute a single coherent constraint system or multiple incompatible readings. The tension centers on whether special and differential treatment for developing countries represents a legitimate interpretive reading of trade liberalization principles or a structural contradiction requiring separate constraint analysis.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "WTO Agreement Framework (GATT, TRIPS, TRIMS as stabilized treaty kernel)",
+      "Dispute Settlement Body (interpretive authority grounded in treaty text + panel precedent)",
+      "Multinational Corporations (primary beneficiaries under market access reading)",
+      "Global South States (primary beneficiaries under developmental reading)",
+      "Infant Industries (protected under developmental reading, exposed under market access reading)",
+      "TRIPS Council (authority for intellectual property interpretation)",
+      "Special and Differential Treatment Provisions (Articles XVIII, XXXVI, Part IV GATT)",
+      "Doha Development Round (failed revision mechanism, 2001-present)"
+    ],
+    "key_tensions": [
+      "Treaty fidelity vs developmental flexibility (market access reading vs developmental reading)",
+      "MFN principle vs preferential treatment (non-discrimination vs S&D provisions)",
+      "IP maximalism vs technology transfer (TRIPS enforcement vs Article 66.2 obligations)"
+    ],
+    "key_mechanisms": [
+      "Dispute Settlement Mechanism (enforces treaty compliance; operationalizes dominant reading)",
+      "Special and Differential Treatment Provisions (creates carve-outs from MFN/national treatment)",
+      "TRIPS flexibilities (compulsory licensing, parallel imports; contested scope)",
+      "Graduation thresholds (mechanism for transitioning countries from S&D eligibility to full compliance)"
+    ],
+    "key_absences": [
+      "Enforcement asymmetry: DSB capacity concentrated in high-income states; developing countries lack resources to bring cases or defend against challenges, creating de facto hierarchy not explicit in treaty text",
+      "Climate-trade intersection: Paris Agreement commitments absent from WTO framework; border carbon adjustments and green subsidies create new extraction vectors not addressed by existing S&D provisions"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "market_access_reading",
+      "human_readable": "Market Access Reading (Liberalization as Universal Obligation)",
+      "structural_delta": "WTO agreements read as requiring symmetric reduction of trade barriers regardless of development status; S&D provisions treated as temporary exceptions rather than structural carve-outs",
+      "primary_observable": "DSB panel rulings on S&D invocation success rates; tariff binding coverage ratios; subsidy challenge outcomes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "multinational_corporations",
+      "victim": "infant_industries_global_south",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating high-epsilon constraint with clear beneficiary/victim structure; represents dominant enforcement paradigm"
+    },
+    {
+      "claim_id": "developmental_reading",
+      "human_readable": "Developmental Reading (S&D as Structural Right)",
+      "structural_delta": "WTO agreements read as embedding permanent right to policy space for development; S&D provisions treated as equal-status commitments to liberalization obligations",
+      "primary_observable": "Article XVIII:C invocation patterns; TRIPS Article 66.2 technology transfer compliance; graduation threshold application",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "global_south_states",
+      "victim": "export_oriented_economies",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structural alternative reading with different epsilon and victim set; captures policy space dimension"
+    },
+    {
+      "claim_id": "enforcement_asymmetry_axis",
+      "human_readable": "Enforcement Asymmetry (DSB Capacity Stratification)",
+      "structural_delta": "Effective WTO constraint varies by state capacity to utilize dispute settlement; treaty text is universal but enforcement is stratified by legal/economic resources",
+      "primary_observable": "DSB case initiation rates by GDP; panel defense success rates by legal budget; compliance with adverse rulings by power status",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "high_income_states_with_trade_lawyers",
+      "victim": "low_capacity_developing_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; orthogonal to readings (affects both); captures mechanism-level extraction independent of kernel interpretation"
+    },
+    {
+      "claim_id": "trips_flexibilities_scope",
+      "human_readable": "TRIPS Flexibilities Scope (Compulsory Licensing as Right vs. Exception)",
+      "structural_delta": "Whether TRIPS flexibilities (compulsory licensing, Bolar exception, parallel imports) constitute legitimate policy space or exceptional deviations requiring narrow interpretation",
+      "primary_observable": "DSB rulings on Doha Declaration paragraph 6 mechanism usage; bilateral pressure against CL issuance; pharmaceutical access outcomes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "pharmaceutical_multinationals",
+      "victim": "public_health_systems_global_south",
+      "downstream_of": [
+        "market_access_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: sub-domain of market_access_reading specific to IP; captured indirectly via market_access constraint story"
+    },
+    {
+      "claim_id": "graduation_mechanism",
+      "human_readable": "Graduation Mechanism (Developmental Status as Time-Bound vs. Permanent)",
+      "structural_delta": "Whether S&D eligibility is time-bound transition mechanism or permanent structural accommodation; graduation thresholds as enforcement of market_access_reading",
+      "primary_observable": "LDC graduation criteria application; GSP preference phase-out patterns; per-capita GDP thresholds for S&D loss",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "graduated_middle_income_states",
+      "victim": "newly_graduated_states_losing_policy_space",
+      "downstream_of": [
+        "market_access_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream mechanism of market_access_reading; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "climate_trade_gap",
+      "human_readable": "Climate-Trade Gap (Border Adjustments as Unaddressed Extraction)",
+      "structural_delta": "Absence of climate mitigation framework creates new extraction vector via border carbon adjustments and green subsidy challenges not covered by existing S&D provisions",
+      "primary_observable": "EU CBAM implementation vs. developing country objections; subsidy challenges to renewable energy programs; climate club proposals",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "high_income_early_movers_on_climate",
+      "victim": "carbon_intensive_developing_economies",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emerging dimension not yet institutionalized in WTO framework; speculative extraction vector; omega material"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "market_access_reading",
+      "kernel_id": "wto_treaty_framework",
+      "reading_id": "market_access_reading"
+    },
+    {
+      "claim_id": "developmental_reading",
+      "kernel_id": "wto_treaty_framework",
+      "reading_id": "developmental_reading"
+    },
+    {
+      "claim_id": "enforcement_asymmetry_axis",
+      "kernel_id": null,
+      "reading_id": null
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "trips_flexibilities_scope",
+      "structural_delta": "TRIPS flexibilities as policy space right vs. narrow exception",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Sub-domain of market_access_reading; IP-specific instantiation captured via parent reading"
+    },
+    {
+      "claim_id": "graduation_mechanism",
+      "structural_delta": "S&D eligibility as time-bound vs. permanent structural accommodation",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream enforcement mechanism of market_access_reading; lower structural independence"
+    },
+    {
+      "claim_id": "climate_trade_gap",
+      "structural_delta": "Border carbon adjustments as unaddressed extraction vector",
+      "hypothesis": "snare",
+      "deferral_reason": "Emerging dimension not yet institutionalized; speculative extraction; requires separate analysis once Paris-WTO linkage crystallizes"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_test",
+      "description": "Do market_access_reading and developmental_reading produce genuinely different constraints, or do they collapse into one constraint with contested scope? If DSB panels consistently rule against S&D invocations, the developmental reading may be a piton (atrophied authority) rather than a live structural alternative.",
+      "source": "Kernel/reading independence test; contested_kernel validity check"
+    },
+    {
+      "id": "omega_enforcement_asymmetry_type",
+      "description": "Is enforcement_asymmetry_axis a snare (deliberate exclusion via resource requirements) or a mountain (inevitable transaction cost of any legal system)? If capacity-building could eliminate the asymmetry, it is a snare; if legal complexity inherently favors resource-rich actors, it is a mountain.",
+      "source": "Dark Matter Probe 1 (Operational Medium); type classification uncertainty"
+    },
+    {
+      "id": "omega_doha_round_failure",
+      "description": "The Doha Development Round's 25-year stalemate suggests drift_status may be 'absent' rather than 'partial' — no institutional revision mechanism functions. This would reclassify the kernel from contested to fractured, requiring separate constraint analysis per reading rather than unified kernel treatment.",
+      "source": "Commitment system recognition; drift status validation"
+    },
+    {
+      "id": "omega_trips_waiver_precedent",
+      "description": "The COVID-19 TRIPS waiver debate (2020-2022) tested whether developmental_reading has interpretive authority. Outcome: waiver granted but narrowly scoped, operationally limited. This is evidence for reading collapse toward market_access dominance.",
+      "source": "Absence Inventory (extraction); reading authority validation"
+    },
+    {
+      "id": "omega_bilateral_pressure",
+      "description": "U.S. Special 301 Reports and EU bilateral trade pressure operate outside WTO framework to suppress S&D usage. Is this evidence that developmental_reading lacks enforcement authority (piton), or that market_access_reading requires extra-treaty mechanisms to maintain dominance (snare with external enforcement)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); constraint boundary uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied per §1.3-K. Independence test applied: market_access_reading and developmental_reading produce structurally different constraints (different epsilon bins, different beneficiary/victim pairs, different primary observables). Generated omega_reading_collapse_test to bound risk that readings collapse under enforcement pressure."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "WTO treaty framework (GATT Articles I, III, XI; TRIPS; TRIMS) as stabilized multilateral commitment to trade governance; Special and Differential Treatment provisions (GATT Part IV, Enabling Clause) embedded within same treaty text",
+    "authority_description": "Dispute Settlement Body panels and Appellate Body (now defunct) interpret treaty text; authority grounded in Vienna Convention treaty interpretation + panel precedent; member state consent required for amendments",
+    "drift_status": "absent",
+    "candidate_pattern": "constitutional_ambiguity",
+    "is_contested_kernel": true,
+    "kernel_id": "wto_treaty_framework",
+    "readings": [
+      {
+        "reading_id": "market_access_reading",
+        "commitment": "Trade liberalization as symmetric universal obligation; non-discrimination and market access as primary treaty purpose; S&D provisions as temporary transitional exceptions",
+        "authority_grounding": "Free trade economic theory; comparative advantage doctrine; MFN and national treatment as core GATT principles; DSB enforcement patterns favoring liberalization",
+        "sibling_readings": [
+          "developmental_reading"
+        ],
+        "expected_structural_delta": "High epsilon constraint on tariffs, subsidies, local content requirements; infant industries enter victim set; multinational corporations primary beneficiaries; policy space for industrial development compressed"
+      },
+      {
+        "reading_id": "developmental_reading",
+        "commitment": "Policy space for development as equal-status treaty commitment; S&D provisions as permanent structural accommodation recognizing asymmetric starting conditions; technology transfer obligations as core commitment",
+        "authority_grounding": "UN Development Decade declarations; NIEO advocacy; Prebisch-Singer thesis on unequal exchange; Enabling Clause as permanent legal basis; Article XVIII:C balance-of-payments exception",
+        "sibling_readings": [
+          "market_access_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon constraint preserving tariff flexibility, subsidy space, compulsory licensing authority; infant industries protected; Global South states primary beneficiaries; multinational IP rights constrained by technology transfer obligations"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "market_access_reading",
+        "reading_b": "developmental_reading",
+        "basis": "Market_access_reading holds that non-discrimination (MFN/national treatment) is lexically prior to development objectives; developmental_reading holds that development policy space is lexically prior to trade liberalization when they conflict. No single coherent framework can hold both MFN as absolute and S&D as permanent structural carve-out — one must be exception to the other."
+      }
+    ]
+  },
+  "_seed_id": "wto_trade_agreements_development"
+}

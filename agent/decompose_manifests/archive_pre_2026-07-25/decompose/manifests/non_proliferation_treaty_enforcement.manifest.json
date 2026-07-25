@@ -1,0 +1,234 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Nuclear Nonproliferation / Regime Theory",
+  "family_id": "npt_interpretive_asymmetry_2026",
+  "topic_summary": "Analysis of competing interpretations of the Treaty on the Non-Proliferation of Nuclear Weapons (NPT). Nuclear Weapon States read Article I-II as primarily horizontal proliferation prevention (maintaining nuclear oligopoly), while Non-Nuclear Weapon States read Article VI as binding immediate disarmament obligation. These readings of the same treaty kernel emit structurally incompatible constraints with different victim sets and enforcement mechanisms.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "NPT Treaty (1970 codified kernel; Articles I-II-VI interpretive contested)",
+      "Nuclear Weapon States - P5 (U.S., Russia, U.K., France, China; recognized possessors)",
+      "Non-Nuclear Weapon States - NNWS coalition (187 parties; non-possessors)",
+      "IAEA (International Atomic Energy Agency; verification authority)",
+      "NPT Review Conference (quinquennial interpretive forum)",
+      "Non-signatories (India, Pakistan, Israel, North Korea post-withdrawal; outside treaty)"
+    ],
+    "key_tensions": [
+      "Article I-II enforcement (NWS priority) vs Article VI compliance (NNWS priority)",
+      "Verification asymmetry: IAEA inspections mandatory for NNWS, voluntary for NWS",
+      "Treaty withdrawal threshold: DPRK precedent vs regime stability"
+    ],
+    "key_mechanisms": [
+      "IAEA safeguards regime: inspection authority over NNWS facilities only",
+      "Security Council enforcement: P5 veto blocks sanctions against own Article VI non-compliance",
+      "NPT Review Conference consensus requirement: any party can block final document"
+    ],
+    "key_absences": [
+      "No binding disarmament timeline or verification mechanism in Article VI",
+      "No penalty for Article VI non-compliance; enforcement asymmetry vs Articles I-II"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "oligopoly_enforcement_reading",
+      "human_readable": "NPT as Oligopoly Enforcement (NWS Reading)",
+      "structural_delta": "Treaty read as legal mechanism to freeze nuclear status hierarchy; Article I-II as primary obligation, Article VI as aspirational",
+      "primary_observable": "Enforcement resource allocation: IAEA inspection hours NNWS vs NWS; Security Council resolution patterns; NWS modernization spending vs disarmament treaty ratification",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "nuclear_weapon_states_p5",
+      "victim": "threshold_states_denied_deterrent",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading; highest structural extractiveness; distinct victim set",
+      "reading_metadata": {
+        "kernel_id": "npt_treaty_1970",
+        "interpretive_commitment": "Horizontal proliferation prevention as existential priority; vertical disarmament as contingent on strategic stability",
+        "authority_grounding": "P5 Security Council veto; depositary state status; IAEA Board of Governors composition",
+        "sibling_readings": [
+          "reciprocal_disarmament_reading",
+          "withdrawal_sovereignty_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "reciprocal_disarmament_reading",
+      "human_readable": "NPT as Reciprocal Disarmament Pact (NNWS Reading)",
+      "structural_delta": "Treaty read as bargain: NNWS forego weapons in exchange for binding NWS disarmament; Article VI as primary obligation with 'good faith' enforceability",
+      "primary_observable": "NNWS coalition voting patterns at Review Conferences; humanitarian initiative support; treaty compliance conditioned on Article VI progress metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "non_nuclear_weapon_states_coalition",
+      "victim": "nws_strategic_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with incompatible victim set; different observable (NNWS coalition behavior vs NWS enforcement resource allocation)",
+      "reading_metadata": {
+        "kernel_id": "npt_treaty_1970",
+        "interpretive_commitment": "Article VI 'good faith' obligation as legally binding with temporal urgency; horizontal and vertical obligations as reciprocal",
+        "authority_grounding": "Majority NNWS interpretation; ICJ advisory opinion on Article VI (1996); humanitarian consequences discourse",
+        "sibling_readings": [
+          "oligopoly_enforcement_reading",
+          "withdrawal_sovereignty_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "withdrawal_sovereignty_reading",
+      "human_readable": "NPT as Revocable Commitment (Withdrawal Sovereignty Reading)",
+      "structural_delta": "Treaty read as voluntary commitment terminable under Article X supreme national interest clause; DPRK withdrawal as precedent for exit without penalty",
+      "primary_observable": "Article X invocation frequency; threshold state enrichment programs not declared as withdrawal but testing exit credibility; treaty stability vs sovereignty assertion patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "threshold_states_preserving_options",
+      "victim": "regime_stability_norm",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural reading; distinct mechanism (exit threat vs interpretive contest); lower epsilon but captures regime fragility dimension",
+      "reading_metadata": {
+        "kernel_id": "npt_treaty_1970",
+        "interpretive_commitment": "Treaty obligations as contingent on security environment; Article X withdrawal as legitimate sovereign right",
+        "authority_grounding": "State sovereignty principle; DPRK precedent (2003); no treaty penalty mechanism for withdrawal",
+        "sibling_readings": [
+          "oligopoly_enforcement_reading",
+          "reciprocal_disarmament_reading"
+        ]
+      }
+    },
+    {
+      "claim_id": "verification_asymmetry",
+      "human_readable": "Verification Asymmetry (IAEA Authority Structure)",
+      "structural_delta": "IAEA inspections mandatory for NNWS, voluntary for NWS; enforcement mechanism structurally one-directional",
+      "primary_observable": "IAEA inspection hours by state category; safeguards agreement types (comprehensive vs voluntary offer); special inspection trigger patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "nuclear_weapon_states_p5",
+      "victim": "nnws_demanding_reciprocity",
+      "downstream_of": [],
+      "feeds_into": [
+        "oligopoly_enforcement_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism instantiating oligopoly_enforcement_reading rather than independent axis; captured by reading 1 constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "oligopoly_enforcement_reading",
+      "kernel_id": "npt_treaty_1970",
+      "reading_id": "oligopoly_enforcement_reading"
+    },
+    {
+      "claim_id": "reciprocal_disarmament_reading",
+      "kernel_id": "npt_treaty_1970",
+      "reading_id": "reciprocal_disarmament_reading"
+    },
+    {
+      "claim_id": "withdrawal_sovereignty_reading",
+      "kernel_id": "npt_treaty_1970",
+      "reading_id": "withdrawal_sovereignty_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "verification_asymmetry",
+      "structural_delta": "IAEA inspections mandatory for NNWS, voluntary for NWS",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism instantiating oligopoly_enforcement_reading; not structurally independent reading of kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_article_vi_enforceability",
+      "description": "Is Article VI 'good faith' obligation legally binding or hortatory? ICJ 1996 advisory opinion said binding but provided no enforcement mechanism. If non-justiciable, reciprocal_disarmament_reading collapses to moral claim rather than legal constraint.",
+      "source": "Extraction absence: no binding disarmament timeline or verification; F03 potential for reciprocal_disarmament_reading"
+    },
+    {
+      "id": "omega_p5_modernization_as_violation",
+      "description": "Do NWS nuclear modernization programs (U.S. $1.7T over 30 years, Russian hypersonic delivery, Chinese silo expansion) constitute Article VI violation? Oligopoly reading says no (modernization ≠ quantitative increase); reciprocal reading says yes (qualitative improvement defeats disarmament spirit).",
+      "source": "Beneficiary scan: NWS modernization budgets as observable contradicting disarmament commitment"
+    },
+    {
+      "id": "omega_withdrawal_cascade_risk",
+      "description": "Does DPRK precedent (withdrawal without penalty) create cascading exit incentive for threshold states? If Iran/Saudi/Japan invoke Article X citing security environment, does oligopoly_enforcement_reading survive regime dissolution?",
+      "source": "Withdrawal_sovereignty_reading structural implication + Dark Matter Probe 2 (regime stability as unexamined background)"
+    },
+    {
+      "id": "omega_non_signatory_advantage",
+      "description": "Do non-signatories (India, Pakistan, Israel) gain strategic advantage by remaining outside treaty? India achieves de facto NWS status via NSG waiver without Article VI obligation. Does external position constitute fourth reading (non-participation as optimal strategy)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): entities outside regime structure gaining advantage"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected for reciprocal_disarmament_reading: Article VI 'good faith' enforceability contested in international law scholarship. ICJ advisory opinion establishes binding status but no enforcement mechanism exists. Generated omega_article_vi_enforceability to bound this uncertainty. Classification as rope vs mountain depends on justiciability interpretation."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Treaty on the Non-Proliferation of Nuclear Weapons (1970): Articles I-II prohibit horizontal proliferation; Article VI obligates good-faith disarmament negotiation; Article X permits withdrawal",
+    "authority_description": "Interpretive authority contested: P5 claim authority via Security Council veto and depositary status; NNWS majority claim authority via numerical voting power at Review Conferences; no binding arbitration mechanism",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_legitimacy",
+    "is_contested_kernel": true,
+    "kernel_id": "npt_treaty_1970",
+    "readings": [
+      {
+        "reading_id": "oligopoly_enforcement_reading",
+        "commitment": "Articles I-II as primary binding obligation (horizontal proliferation prevention); Article VI as contingent/aspirational",
+        "authority_grounding": "P5 Security Council veto; IAEA Board composition favoring NWS; enforcement resource allocation to Articles I-II verification",
+        "sibling_readings": [
+          "reciprocal_disarmament_reading",
+          "withdrawal_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Enforcement asymmetry: NNWS inspection burden high, NWS accountability absent; threshold states enter victim set (denied deterrent); P5 beneficiaries of status hierarchy"
+      },
+      {
+        "reading_id": "reciprocal_disarmament_reading",
+        "commitment": "Article VI as binding legal obligation with temporal urgency; horizontal and vertical nonproliferation as reciprocal bargain",
+        "authority_grounding": "NNWS coalition majority voting; ICJ 1996 advisory opinion; humanitarian initiative discourse; treaty preamble reciprocity language",
+        "sibling_readings": [
+          "oligopoly_enforcement_reading",
+          "withdrawal_sovereignty_reading"
+        ],
+        "expected_structural_delta": "NWS strategic autonomy enters victim set (constrained modernization); NNWS coalition gains normative leverage; enforcement gap (no Article VI verification) becomes structural injustice rather than implementation detail"
+      },
+      {
+        "reading_id": "withdrawal_sovereignty_reading",
+        "commitment": "Article X withdrawal right as legitimate exercise of sovereignty; treaty obligations contingent on security environment",
+        "authority_grounding": "State sovereignty principle; DPRK withdrawal precedent without penalty; no treaty mechanism to block or sanction withdrawal",
+        "sibling_readings": [
+          "oligopoly_enforcement_reading",
+          "reciprocal_disarmament_reading"
+        ],
+        "expected_structural_delta": "Regime stability norm enters victim set (exit threat credibility undermines compliance incentive); threshold states gain option value from withdrawal threat; treaty obligations become revocable rather than binding"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "oligopoly_enforcement_reading",
+        "reading_b": "reciprocal_disarmament_reading",
+        "basis": "Oligopoly reading holds Article I-II as unconditionally binding and Article VI as contingent; reciprocal reading holds both as equally binding in a reciprocal bargain structure. No single legal framework can hold both 'Article VI compliance is contingent on strategic stability' (oligopoly axiom) and 'Article VI compliance is independent pre-condition for NNWS compliance with Articles I-II' (reciprocal axiom) simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "non_proliferation_treaty_enforcement"
+}

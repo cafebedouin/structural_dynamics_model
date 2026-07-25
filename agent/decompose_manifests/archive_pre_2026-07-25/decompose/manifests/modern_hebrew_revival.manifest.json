@@ -1,0 +1,263 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Sociolinguistics / Language Revitalization / Commitment Systems",
+  "family_id": "hebrew_revival_kernel",
+  "topic_summary": "Analysis of the revival of Hebrew as a living language, examining whether the transition from liturgical preservation to native daily speech represents contested readings of the commitment 'Hebrew is a living language.' The contest centers on whether reciting preserved symbols constitutes kernel occupation versus requiring native generative competence.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Hebrew Language (kernel: stabilized commitment to linguistic continuity)",
+      "Liturgical Communities (pre-19th c. authority maintaining ritual reading)",
+      "Eliezer Ben-Yehuda (revitalization architect, native speech reconstruction)",
+      "Ashkenazi/Sephardi/Mizrahi pronunciation traditions (contested phonological authority)",
+      "Modern Israeli State (institutional enforcer of nativized Hebrew)",
+      "Diaspora Orthodox Communities (maintaining liturgical-only reading)"
+    ],
+    "key_tensions": [
+      "Preservation-as-occupation vs native-generation-as-occupation (two readings of what counts as 'living')",
+      "Liturgical authority (rabbinic textual fidelity) vs secular nationalist authority (native speaker competence)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Hebrew as a living language — a continuous linguistic tradition connecting contemporary speakers to ancient texts",
+    "authority_description": "Under liturgical reading: rabbinic textual scholarship grounds interpretive legitimacy. Under native-daily reading: native speaker intuition and institutional state authority ground legitimacy.",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_kernel_occupation",
+    "is_contested_kernel": true,
+    "kernel_id": "hebrew_continuity",
+    "readings": [
+      {
+        "reading_id": "liturgical_preservation",
+        "commitment": "Hebrew lives through preserved ritual recitation and textual transmission",
+        "authority_grounding": "rabbinic scholarship; fidelity to Masoretic vocalization",
+        "sibling_readings": [
+          "native_generative",
+          "bridge_pidginized"
+        ],
+        "expected_structural_delta": "Zero native speakers required; kernel occupied through symbolic preservation; victim set = secularizing forces threatening textual tradition"
+      },
+      {
+        "reading_id": "native_generative",
+        "commitment": "Hebrew lives only through native speaker intuition and daily generative use",
+        "authority_grounding": "Ben-Yehuda revitalization framework; modern Israeli state education system",
+        "sibling_readings": [
+          "liturgical_preservation",
+          "bridge_pidginized"
+        ],
+        "expected_structural_delta": "Native child speakers required; kernel reconstructed through lexical expansion and phonological standardization; victim set = liturgical-only communities whose Hebrew deemed 'dead'"
+      },
+      {
+        "reading_id": "bridge_pidginized",
+        "commitment": "Hebrew lives as a contact language for Jewish diaspora interaction, neither purely liturgical nor fully native",
+        "authority_grounding": "merchant networks; Yeshiva intellectual exchange; pre-Zionist Haskalah literary production",
+        "sibling_readings": [
+          "liturgical_preservation",
+          "native_generative"
+        ],
+        "expected_structural_delta": "Sparse native speakers; high-register written production + marketplace pidgin; kernel occupied through instrumental utility; both prior readings dismiss this as 'not really Hebrew'"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "liturgical_preservation",
+        "reading_b": "native_generative",
+        "basis": "Accepting that preserved ritual recitation suffices for 'living language' status requires rejecting the claim that native speaker intuition is necessary; accepting that only native generation counts as 'living' requires rejecting the claim that liturgical preservation maintains life. No framework holds both."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_preservation",
+      "human_readable": "Liturgical Preservation (Symbolic Continuity as Life)",
+      "structural_delta": "Language life defined by unbroken textual transmission and ritual recitation across generations, independent of native speaker population",
+      "primary_observable": "Number of ritual contexts requiring Hebrew recitation; percentage of Jewish males maintaining daily prayer competence (18th-19th c.); textual scholarship production rate",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": "rabbinic_authority",
+      "victim": "secularizing_forces",
+      "downstream_of": [],
+      "feeds_into": [
+        "authority_collision"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: represents 2000-year baseline kernel occupation mechanism; mountain classification reflects physical persistence of texts and ritual practice"
+    },
+    {
+      "claim_id": "native_generative",
+      "human_readable": "Native Generative (Daily Speech as Life Requirement)",
+      "structural_delta": "Language life requires native child speakers with generative grammatical intuition and daily use across all domains",
+      "primary_observable": "Census data on L1 Hebrew speakers; lexical expansion rate (neologisms per decade); phonological divergence from liturgical norms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "zionist_state_builders",
+      "victim": "liturgical_only_communities",
+      "downstream_of": [],
+      "feeds_into": [
+        "authority_collision"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: represents successful 20th c. nativization; tangled_rope classification reflects political extraction via redefinition of 'authenticity'"
+    },
+    {
+      "claim_id": "bridge_pidginized",
+      "human_readable": "Bridge Pidginized (Interstitial Utility Reading)",
+      "structural_delta": "Hebrew as contact language for cross-diaspora Jewish communication, neither fully liturgical nor natively fluent",
+      "primary_observable": "18th-19th c. merchant correspondence in Hebrew; Haskalah literary production; Yiddish-Hebrew code-switching patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "liturgical_preservation"
+      ],
+      "feeds_into": [
+        "native_generative"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: captures empirical intermediate state both prior readings erase; rope classification reflects coordination function"
+    },
+    {
+      "claim_id": "authority_collision",
+      "human_readable": "Authority Collision (Competing Legitimacy Claims)",
+      "structural_delta": "Rabbinic textual fidelity vs native speaker intuition as grounds for linguistic authority",
+      "primary_observable": "Pronunciation disputes (Ashkenazi vs Sephardi adoption); liturgical vs colloquial vocabulary divergence; rabbinic rejection rate of modern neologisms",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_state_educators",
+      "victim": "diaspora_orthodox_autonomy",
+      "downstream_of": [
+        "liturgical_preservation",
+        "native_generative"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: highest centrality but structurally downstream synthesis of selected readings; captured implicitly through reading collision"
+    },
+    {
+      "claim_id": "phonological_standardization",
+      "human_readable": "Phonological Standardization (Sephardi Adoption as Extraction)",
+      "structural_delta": "State imposition of Sephardi pronunciation over Ashkenazi majority as mechanism of secular authority assertion",
+      "primary_observable": "Education ministry pronunciation mandates; generational shift in /t/ vs /s/ realization; Ashkenazi liturgical retention rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "sephardi_cultural_prestige",
+      "victim": "ashkenazi_pronunciation_tradition",
+      "downstream_of": [
+        "native_generative"
+      ],
+      "feeds_into": [
+        "authority_collision"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: important but subset of authority_collision; limited independent structural yield beyond native_generative reading"
+    },
+    {
+      "claim_id": "lexical_gap_arbitrage",
+      "human_readable": "Lexical Gap Arbitrage (Neologism Creation as Authority Seizure)",
+      "structural_delta": "Ben-Yehuda's lexical committee monopolized authority to define 'correct Hebrew' for modern concepts absent in liturgical corpus",
+      "primary_observable": "Academy of the Hebrew Language coinage adoption rates; rabbinic vs secular neologism acceptance; loanword vs calque ratios",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "secular_lexical_committee",
+      "victim": "rabbinic_textual_authority",
+      "downstream_of": [
+        "native_generative"
+      ],
+      "feeds_into": [
+        "authority_collision"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism-level detail within native_generative reading; piton classification reflects atrophied rabbinic say in modern vocabulary"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liturgical_preservation",
+      "kernel_id": "hebrew_continuity",
+      "reading_id": "liturgical_preservation"
+    },
+    {
+      "claim_id": "native_generative",
+      "kernel_id": "hebrew_continuity",
+      "reading_id": "native_generative"
+    },
+    {
+      "claim_id": "bridge_pidginized",
+      "kernel_id": "hebrew_continuity",
+      "reading_id": "bridge_pidginized"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "authority_collision",
+      "structural_delta": "Competing legitimacy claims between rabbinic fidelity and native intuition",
+      "hypothesis": "snare",
+      "deferral_reason": "Highest centrality but downstream synthesis captured through reading collision; selecting this would duplicate analysis already present in reading contrast"
+    },
+    {
+      "claim_id": "phonological_standardization",
+      "structural_delta": "Sephardi pronunciation imposition over Ashkenazi majority",
+      "hypothesis": "snare",
+      "deferral_reason": "Subset of authority_collision; limited independent yield beyond native_generative reading mechanisms"
+    },
+    {
+      "claim_id": "lexical_gap_arbitrage",
+      "structural_delta": "Ben-Yehuda lexical committee authority monopolization",
+      "hypothesis": "piton",
+      "deferral_reason": "Mechanism-level detail within native_generative; atrophied rabbinic say in vocabulary already captured in reading contrast"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_yiddish_parallel",
+      "description": "Did Yiddish undergo similar liturgical-to-native contest, or was it always natively occupied? If the latter, Hebrew's 'revival' narrative may be historiographically constructed.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): no Yiddish comparison in extraction despite parallel Jewish linguistic ecology"
+    },
+    {
+      "id": "omega_aramaic_precedent",
+      "description": "Aramaic displaced Hebrew as Jewish vernacular in Second Temple period yet maintained liturgical role. Does this precedent invalidate liturgical_preservation reading's claim to 'living' status, or validate it?",
+      "source": "Dark Matter Probe 2 (Absence Inventory): historical language shift not addressed"
+    },
+    {
+      "id": "omega_bridge_erasure",
+      "description": "Both dominant readings dismiss bridge_pidginized as 'not real Hebrew.' Is this dismissal itself a structural extraction mechanism — erasing evidence of gradual nativization to construct a revival miracle narrative?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): both liturgical and native camps benefit from erasing intermediate state"
+    },
+    {
+      "id": "omega_reachability_break",
+      "description": "Does the D1 strict-reachability break mean modern Hebrew is a constructed language merely homophonic with ancient Hebrew? If phonological/grammatical continuity broke, the 'revival' may be category error.",
+      "source": "User flag + Dark Matter Probe 1 (Operational Medium): model assumes continuity but user signals break"
+    },
+    {
+      "id": "omega_liturgical_competence_decline",
+      "description": "If 18th-19th c. liturgical competence was already declining (reduced male prayer participation, atrophied grammatical understanding), liturgical_preservation may be piton not mountain.",
+      "source": "F03 (Hasty Generalization): mountain classification assumes unbroken practice but evidence thin"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: liturgical_preservation classified as mountain assuming unbroken ritual practice, but 18th-19th c. competence decline may reclassify as piton. Generated omega_liturgical_competence_decline to bound this uncertainty. User's D1 reachability break flag not incorporated into classification pending generation step."
+  },
+  "_seed_id": "modern_hebrew_revival"
+}

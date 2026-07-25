@@ -1504,8 +1504,10 @@ def run_decompose(args):
     reading_id, siblings, summary) — NOT full stories. The no-scope generator turns the
     seeds into stories in a later step. Idempotent: decomposed kernel_ids are logged."""
     DECOMPOSE_DIR.mkdir(parents=True, exist_ok=True)
-    manifests_sidecar = DECOMPOSE_DIR / "manifests"
-    manifests_sidecar.mkdir(exist_ok=True)
+    # Tracked location (OQ-254 Step 3): the Q-choice record lives under agent/, not
+    # gitignored outputs/ (Pattern 6 — unreachable from every tracked read site).
+    manifests_sidecar = REPO_ROOT / "agent" / "decompose_manifests" / "decompose"
+    manifests_sidecar.mkdir(parents=True, exist_ok=True)
     decomposed_log = DECOMPOSE_DIR / "decomposed.txt"
 
     kernels = json.loads(Path(args.decompose).read_text(encoding="utf-8"))
@@ -1794,12 +1796,20 @@ def main():
             print(f"  [{i+1}/{len(seeds)}] SCOPE FAIL {seed['constraint_id']}: {err}")
             continue
         m["_seed_id"] = seed["constraint_id"]
+        # OQ-254: same mint+stamp+tracked-write as the batch decompose path — this
+        # legacy --scope flow also feeds flatten_manifests, so leaving it out would
+        # silently recreate the 'none' stratum here.
+        m["_generation_run_id"] = seed["constraint_id"]
+        m["_provenance"] = _scope_manifest_provenance(
+            SCOPE_MODEL, args.axes, topic=seed.get("human_readable") or seed["constraint_id"])
         manifests.append(m)
         csr = m.get("commitment_system_recognition", {}) or {}
         tag = "KERNEL" if csr.get("is_contested_kernel") else "ordinary"
         nr = len(csr.get("readings", []))
         print(f"  [{i+1}/{len(seeds)}] {seed['constraint_id']}: {tag} ({nr} readings)")
-        (manifests_dir / f"{seed['constraint_id']}.manifest.json").write_text(
+        scope_mdir = REPO_ROOT / "agent" / "decompose_manifests" / args.run_tag
+        scope_mdir.mkdir(parents=True, exist_ok=True)
+        (scope_mdir / f"{seed['constraint_id']}.manifest.json").write_text(
             json.dumps(m, indent=2, ensure_ascii=False), encoding="utf-8")
 
     gen_seeds, recovery_count = flatten_manifests(manifests)

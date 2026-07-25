@@ -1,0 +1,266 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Federalism / Migration Policy / Welfare State Theory",
+  "family_id": "eu_free_movement_2026",
+  "topic_summary": "Analysis of free movement within the EU federation, examining the structural contest between integration-primary and member-sovereignty-primary readings of the federation-membership kernel. The Treaty of Rome (1957) established free movement rights, fully implemented in 1968, with 14 million EU citizens now exercising cross-border mobility. The kernel contest centers on whether supranational market integration or national welfare state autonomy should govern labor mobility rights, with asymmetric cost-bearers (displaced local labor vs constrained mobility) and an unresolved authority-locus dispute between ECJ expansive jurisprudence and member state sovereignty.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "European Court of Justice (supranational judicial authority; teleological interpretation favoring integration)",
+      "Member States (national welfare state administrators; sovereignty claimants)",
+      "EU Commission & European Labour Authority (regulatory enforcement; anti-social-dumping mandate)",
+      "Posted Workers (low/medium-skilled labor subject to cost-competition posting)",
+      "Intra-EU Migrants (14 million citizens exercising mobility rights)",
+      "Sending States (Eastern EU members experiencing brain drain)",
+      "Receiving States (Germany, Spain, Italy hosting majority of movers)",
+      "National Welfare Systems (exclusive solidarity institutions facing equal treatment mandates)"
+    ],
+    "key_tensions": [
+      "ECJ teleological expansion vs member state welfare sovereignty (authority-locus contest)",
+      "Market logic (mobile production unit) vs social logic (human being with residence rights)",
+      "Equal treatment rights vs welfare state chauvinism (exclusionary solidarity)",
+      "Posted worker cost-competition vs local wage/social levy protection",
+      "Brain drain in sending states vs labor market pressure in receiving states"
+    ],
+    "key_mechanisms": [
+      "ECJ Article 45 TFEU interpretation (expansive worker definition; equal treatment mandate)",
+      "Transitional restrictions (7-year labor market protection for new accessions)",
+      "Posted Workers Directive enforcement (anti-social-dumping; 2-year social levy exemption)",
+      "Welfare coordination (not harmonization; member states retain system responsibility)"
+    ],
+    "key_absences": [
+      "Fiscal transfer mechanism to compensate receiving states for welfare costs (unlike federal systems with equalization)",
+      "Supranational unemployment insurance or welfare floor (solidarity remains national)",
+      "Democratic accountability mechanism for ECJ jurisprudence (politically sensitive conflicts delegated to judges)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "integration_reading",
+      "human_readable": "Integration-Primary Reading (Market Logic)",
+      "structural_delta": "Free movement as constitutive single-market element requiring supranational enforcement; worker as mobile production unit",
+      "primary_observable": "ECJ case law scope (worker definition breadth; equal treatment mandates); Commission infringement proceedings against member state restrictions",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "mobile_labor_capital_arbitrage",
+      "victim": "displaced_local_labor_receiving_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading of federation-membership kernel; highest extractiveness; ECJ authority grounding",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "integration_reading",
+      "commitment": "Free movement is a fundamental right constitutive of EU citizenship and single market completion; supranational authority (ECJ) interprets scope expansively to maximize labor mobility and equal treatment",
+      "authority_grounding": "Teleological ECJ jurisprudence; Treaty of Rome Article 45 TFEU; EU citizenship doctrine (Maastricht 1992)",
+      "sibling_readings": [
+        "member_sovereignty_reading",
+        "welfare_coordination_reading"
+      ],
+      "expected_structural_delta": "Displaced local labor enters victim set; receiving state welfare systems bear costs without fiscal compensation; sending state brain drain externalized; ECJ rulings override national labor market protections"
+    },
+    {
+      "claim_id": "member_sovereignty_reading",
+      "human_readable": "Member-Sovereignty-Primary Reading (Welfare Logic)",
+      "structural_delta": "Free movement must reconcile with national welfare state autonomy and exclusive solidarity; worker as human being with residence rights requiring social integration",
+      "primary_observable": "Member state transitional restrictions usage; welfare benefit access litigation; Brexit referendum vote correlation with free movement attitudes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "national_welfare_state_gatekeepers",
+      "victim": "constrained_mobility_sending_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with distinct authority grounding (national democratic legitimacy vs supranational judicial); different victim set (constrained mobility vs displaced labor)",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "member_sovereignty_reading",
+      "commitment": "Free movement rights must be bounded by national welfare state capacity and labor market protection; member states retain authority to exclude economically inactive migrants and protect social solidarity institutions",
+      "authority_grounding": "National democratic sovereignty; welfare state chauvinism; Brexit referendum mandate; member state transitional restriction treaties",
+      "sibling_readings": [
+        "integration_reading",
+        "welfare_coordination_reading"
+      ],
+      "expected_structural_delta": "Constrained mobility enters victim set; sending state workers face restricted access; brain drain intensifies; receiving state welfare systems protected but at cost of reduced labor market flexibility"
+    },
+    {
+      "claim_id": "welfare_coordination_reading",
+      "human_readable": "Welfare Coordination Reading (Hybrid Compromise)",
+      "structural_delta": "Free movement with coordinated (not harmonized) welfare rights; EU regulates cross-border portability while member states retain system design sovereignty",
+      "primary_observable": "Posted Workers Directive enforcement metrics; social levy exemption duration (2-year rule); welfare coordination regulation compliance",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "posted_workers_cost_competition",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Institutionalized compromise reading; lower extractiveness than pure integration/sovereignty poles; captures posted worker cost-competition mechanism as distinct structural delta",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "welfare_coordination_reading",
+      "commitment": "Free movement operates through coordination of national welfare systems rather than supranational harmonization; EU enforces anti-social-dumping rules while preserving member state welfare design autonomy",
+      "authority_grounding": "EU Commission regulatory authority; Posted Workers Directive; European Labour Authority enforcement; coordination not harmonization principle",
+      "sibling_readings": [
+        "integration_reading",
+        "member_sovereignty_reading"
+      ],
+      "expected_structural_delta": "Posted workers enter victim set via cost-competition posting (2-year social levy exemption; cabotage wage undercutting); receiving state labor markets face dual pressure (posted worker undercutting + permanent migrant displacement); sending states lose workers without fiscal compensation"
+    },
+    {
+      "claim_id": "fiscal_federalism_absence",
+      "human_readable": "Fiscal Federalism Absence (Missing Equalization Mechanism)",
+      "structural_delta": "EU lacks fiscal transfer mechanism to compensate receiving states for welfare costs or sending states for brain drain, unlike federal systems with equalization payments",
+      "primary_observable": "Absence of EU-level unemployment insurance; absence of fiscal equalization transfers; net fiscal impact studies showing receiving state costs",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "integration_reading",
+        "member_sovereignty_reading",
+        "welfare_coordination_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural absence feeding all three readings; mountain constraint (EU treaty architecture prohibits fiscal union); captured in omega rather than separate axis"
+    },
+    {
+      "claim_id": "judicial_democratic_deficit",
+      "human_readable": "Judicial Democratic Deficit (ECJ Legitimacy Gap)",
+      "structural_delta": "Politically sensitive free movement conflicts delegated to non-elected ECJ judges rather than democratic institutions, creating legitimacy gap",
+      "primary_observable": "ECJ case law volume on free movement; member state compliance with adverse rulings; political backlash correlation (Brexit)",
+      "epsilon_bin": "low",
+      "hypothesis": "snare",
+      "beneficiary": "supranational_judicial_authority",
+      "victim": "national_democratic_sovereignty",
+      "downstream_of": [
+        "integration_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of integration_reading rather than independent axis; legitimacy gap captured in integration_reading victim structure"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "integration_reading",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "integration_reading"
+    },
+    {
+      "claim_id": "member_sovereignty_reading",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "member_sovereignty_reading"
+    },
+    {
+      "claim_id": "welfare_coordination_reading",
+      "kernel_id": "federation_membership_kernel",
+      "reading_id": "welfare_coordination_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "fiscal_federalism_absence",
+      "structural_delta": "EU lacks fiscal transfer mechanism to compensate welfare costs or brain drain",
+      "hypothesis": "mountain",
+      "deferral_reason": "Structural absence feeding all three readings; EU treaty architecture constraint; captured in omega_fiscal_federalism rather than separate axis generation"
+    },
+    {
+      "claim_id": "judicial_democratic_deficit",
+      "structural_delta": "Free movement conflicts delegated to non-elected ECJ creating legitimacy gap",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of integration_reading; legitimacy gap already captured in integration_reading victim structure and authority grounding contest"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_fiscal_federalism",
+      "description": "Does the absence of EU fiscal equalization (unlike federal systems with transfer payments) make the federation-membership kernel structurally unstable? Without compensating receiving states for welfare costs or sending states for brain drain, free movement may generate unsustainable political backlash regardless of which reading prevails.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis fiscal_federalism_absence"
+    },
+    {
+      "id": "omega_posted_worker_reclassification",
+      "description": "Is the 2-year social levy exemption for posted workers a coordination Rope (temporary friction) or a Snare (permanent cost-competition extraction)? If posted workers remain indefinitely via sequential postings (transport sector cabotage), the welfare_coordination_reading collapses into integration_reading with posted workers as permanent victim class.",
+      "source": "Research context posted worker mechanism + welfare_coordination_reading structural delta"
+    },
+    {
+      "id": "omega_brexit_counterfactual",
+      "description": "Would fiscal equalization transfers have prevented Brexit? If receiving states (UK) had been compensated for net welfare costs of intra-EU migration, would member_sovereignty_reading political backlash have been defused? Absence of this mechanism may be the true upstream mountain.",
+      "source": "Brexit referendum research context + fiscal_federalism_absence deferred axis"
+    },
+    {
+      "id": "omega_axiom_contradiction_scope",
+      "description": "Do integration_reading and member_sovereignty_reading hold mutually exclusive axioms, or are they complementary considerations within a pluralist framework? If ECJ teleological interpretation (integration) and national welfare sovereignty (member_sovereignty) can coexist via welfare_coordination_reading, the axiom contradiction may be weaker than initially classified.",
+      "source": "Axiom Contradiction Declaration (§1.3-K) + welfare_coordination_reading as institutionalized compromise"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected capture integration-primary, member-sovereignty-primary, and institutionalized compromise positions. Fiscal federalism absence deferred as mountain feeding all readings. Judicial democratic deficit deferred as downstream of integration_reading."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The federation-membership kernel stabilizes the shared commitment that EU member states grant mutual free movement rights to each other's citizens, but the kernel is contested over whether this commitment is grounded in supranational market integration (ECJ authority) or national welfare state sovereignty (member state democratic authority).",
+    "authority_description": "Integration-primary reading grounds interpretive legitimacy in ECJ teleological jurisprudence and Treaty of Rome Article 45 TFEU. Member-sovereignty-primary reading grounds legitimacy in national democratic sovereignty and welfare state chauvinism. Welfare-coordination reading grounds legitimacy in EU Commission regulatory authority and Posted Workers Directive enforcement.",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Overlay (Pattern 2)",
+    "is_contested_kernel": true,
+    "kernel_id": "federation_membership_kernel",
+    "readings": [
+      {
+        "reading_id": "integration_reading",
+        "commitment": "Free movement is a fundamental right constitutive of EU citizenship and single market completion; supranational authority (ECJ) interprets scope expansively to maximize labor mobility and equal treatment",
+        "authority_grounding": "Teleological ECJ jurisprudence; Treaty of Rome Article 45 TFEU; EU citizenship doctrine (Maastricht 1992)",
+        "sibling_readings": [
+          "member_sovereignty_reading",
+          "welfare_coordination_reading"
+        ],
+        "expected_structural_delta": "Displaced local labor enters victim set; receiving state welfare systems bear costs without fiscal compensation; sending state brain drain externalized; ECJ rulings override national labor market protections"
+      },
+      {
+        "reading_id": "member_sovereignty_reading",
+        "commitment": "Free movement rights must be bounded by national welfare state capacity and labor market protection; member states retain authority to exclude economically inactive migrants and protect social solidarity institutions",
+        "authority_grounding": "National democratic sovereignty; welfare state chauvinism; Brexit referendum mandate; member state transitional restriction treaties",
+        "sibling_readings": [
+          "integration_reading",
+          "welfare_coordination_reading"
+        ],
+        "expected_structural_delta": "Constrained mobility enters victim set; sending state workers face restricted access; brain drain intensifies; receiving state welfare systems protected but at cost of reduced labor market flexibility"
+      },
+      {
+        "reading_id": "welfare_coordination_reading",
+        "commitment": "Free movement operates through coordination of national welfare systems rather than supranational harmonization; EU enforces anti-social-dumping rules while preserving member state welfare design autonomy",
+        "authority_grounding": "EU Commission regulatory authority; Posted Workers Directive; European Labour Authority enforcement; coordination not harmonization principle",
+        "sibling_readings": [
+          "integration_reading",
+          "member_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Posted workers enter victim set via cost-competition posting (2-year social levy exemption; cabotage wage undercutting); receiving state labor markets face dual pressure (posted worker undercutting + permanent migrant displacement); sending states lose workers without fiscal compensation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "integration_reading",
+        "reading_b": "member_sovereignty_reading",
+        "basis": "Integration-primary axiom (supranational market integration requires unrestricted labor mobility enforced by ECJ) and member-sovereignty-primary axiom (national welfare state autonomy requires member state authority to exclude economically inactive migrants) cannot coexist in a single coherent framework. Accepting integration-primary requires rejecting member state exclusion authority; accepting member-sovereignty-primary requires rejecting ECJ supremacy over welfare access. Brexit exemplifies this mutual exclusivity: UK exit was necessary to assert member-sovereignty axiom against integration axiom."
+      }
+    ]
+  },
+  "_seed_id": "federation_free_movement_kernel"
+}

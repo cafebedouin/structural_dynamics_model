@@ -1,0 +1,207 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Indigenous Rights / Colonial History",
+  "family_id": "treaty_of_waitangi_text_contest",
+  "topic_summary": "The Treaty of Waitangi (1840) exists in a Māori text ceding 'kāwanatanga' (governance) while guaranteeing 'tino rangatiratanga' (full chieftainship/sovereignty) and an English text ceding 'sovereignty.' The contested kernel is the treaty's substantive content itself—what authority was actually ceded. Crown-cession reading treats English as controlling, establishing full sovereignty transfer and treating subsequent land alienation as legitimate. Rangatiratanga-retention reading applies contra proferentem interpretation, treats Māori as controlling, limits cession to governance functions, and exposes retrospective extraction via mistranslation.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Treaty of Waitangi (1840 founding document; Māori and English versions)",
+      "British Crown (treaty counterparty; colonial authority)",
+      "Māori chiefs/hapū (treaty signatories; indigenous sovereignty holders)",
+      "Waitangi Tribunal (statutory body established 1975 for retrospective treaty claims)",
+      "New Zealand Parliament (successor legislative authority)",
+      "Settler colonial state (institutional beneficiary of sovereignty interpretation)"
+    ],
+    "key_tensions": [
+      "Māori text (kāwanatanga/tino rangatiratanga) vs English text (sovereignty) — textual contradiction",
+      "Treaty as partnership (ongoing negotiation) vs treaty as completed cession (constitutional settlement)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "crown_cession_reading",
+      "human_readable": "Crown-Cession Reading (English Text Controls; Full Sovereignty Transfer)",
+      "structural_delta": "English text treated as authoritative; 'kāwanatanga' read as full sovereignty; treaty interpreted as completed legal cession establishing Crown's absolute legislative and territorial authority",
+      "primary_observable": "Legal doctrine citations treating English as controlling; land alienation policies post-1840; judicial treatment of Māori customary title as extinguished or subordinate",
+      "epsilon_bin": "high",
+      "hypothesis": "wall",
+      "beneficiary": "settler_colonial_state",
+      "victim": "māori_hapū_collective_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading grounding settler state legitimacy; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "rangatiratanga_retention_reading",
+      "human_readable": "Rangatiratanga-Retention Reading (Māori Text Controls; Limited Governance Ceded)",
+      "structural_delta": "Māori text treated as authoritative via contra proferentem; 'kāwanatanga' read as limited governance (not sovereignty); 'tino rangatiratanga' retained as full chiefly authority; treaty establishes partnership requiring ongoing consent, not completed cession",
+      "primary_observable": "Waitangi Tribunal jurisprudence treating Māori text as primary; iwi/hapū assertion of tino rangatiratanga in resource management; contra proferentem doctrine application",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "retrospective_snare_exposure"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct alternative reading; different constraint type (rope vs wall); enables snare analysis"
+    },
+    {
+      "claim_id": "retrospective_snare_exposure",
+      "human_readable": "Retrospective Snare Exposure (Mistranslation as Covert Extraction Mechanism)",
+      "structural_delta": "The textual divergence itself constitutes a snare: chiefs signing Māori text could not have understood they were ceding sovereignty as English text claimed; land alienation and legislative override become retrospectively-visible extraction mechanisms operating under translation asymmetry",
+      "primary_observable": "Waitangi Tribunal findings of treaty breach; quantum of land transferred 1840-1975 under Crown preemption vs. Māori understanding; historical evidence of chiefs' stated understanding at signing",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "crown_land_purchasing_apparatus",
+      "victim": "māori_signatories_and_descendants",
+      "downstream_of": [
+        "rangatiratanga_retention_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Synthesizes extraction mechanism visible only under rangatiratanga reading; captures dynamic dimension of textual contest"
+    },
+    {
+      "claim_id": "biculturalism_reading",
+      "human_readable": "Biculturalism Reading (Treaty as Living Partnership Framework)",
+      "structural_delta": "Treaty interpreted neither as pure cession nor pure retention but as ongoing relationship requiring active bicultural negotiation; both texts valid, tension managed through institutional partnership mechanisms (co-governance, consultation rights)",
+      "primary_observable": "Co-governance arrangements (e.g., Waikato River settlement); Treaty Principles in legislation; Waitangi Tribunal as active arbiter",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "crown_cession_reading",
+        "rangatiratanga_retention_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: tertiary synthesis reading; captured implicitly via rope/snare contrast in selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "crown_cession_reading",
+      "kernel_id": "treaty_authority_cession",
+      "reading_id": "crown_cession_reading"
+    },
+    {
+      "claim_id": "rangatiratanga_retention_reading",
+      "kernel_id": "treaty_authority_cession",
+      "reading_id": "rangatiratanga_retention_reading"
+    },
+    {
+      "claim_id": "retrospective_snare_exposure",
+      "kernel_id": "treaty_authority_cession",
+      "reading_id": "retrospective_snare_exposure"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "biculturalism_reading",
+      "structural_delta": "Treaty as living partnership requiring bicultural institutional negotiation",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Tertiary synthesis reading; structural tension between wall and rope/snare captures core analytical yield; biculturalism represents attempted institutional reconciliation rather than foundational constraint"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_tribunal_authority_limits",
+      "description": "Waitangi Tribunal established 1975 with recommendation power only (not binding). Does this make Treaty redress a Scaffold (dependent on Crown willingness) rather than enforceable Rope? Parliamentary sovereignty doctrine may prevent tribunal from being more than advisory.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — Crown retains veto over redress"
+    },
+    {
+      "id": "omega_oral_vs_textual_authority",
+      "description": "Māori oral agreements and kōrero at signing may diverge from both written texts. Should oral tradition hold equal or superior authority to written Māori text? Analysis assumes textual authority but indigenous legal traditions may contest this frame.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — oral agreements not examined"
+    },
+    {
+      "id": "omega_international_law_reclassification",
+      "description": "UNDRIP (2007) and international indigenous rights norms may retrospectively reclassify treaty. Was 1840 treaty valid under contemporary sovereignty doctrine, or was it void ab initio due to power asymmetry? Contemporary international law lens might collapse Crown-cession reading entirely.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — analysis operates within domestic constitutional frame"
+    },
+    {
+      "id": "omega_non_signatory_hapū",
+      "description": "Approximately 540 chiefs signed; many hapū did not sign. Does treaty bind non-signatories? Crown-cession reading extends authority universally; rangatiratanga reading may require signed consent. Extraction extends beyond signatory victim set.",
+      "source": "§1.1 Absence — non-signatory hapū status not addressed in readings"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: readings instantiate genuinely different constraints (wall vs rope/snare) from shared substrate. Axiom contradiction confirmed between crown_cession and rangatiratanga_retention readings."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Treaty of Waitangi texts themselves — specifically the divergence between 'kāwanatanga' (Māori) and 'sovereignty' (English) — constitute the stabilized shared commitment. All parties claim to ground legitimacy in the treaty, but they read what authority was ceded differently.",
+    "authority_description": "Crown-cession: signature act + subsequent statute (parliamentary sovereignty). Rangatiratanga-retention: contra proferentem + Māori text primacy + ongoing consent requirement. Biculturalism: tribunal arbitration + co-governance negotiation.",
+    "drift_status": "partial",
+    "candidate_pattern": "deliberate_ambiguity",
+    "is_contested_kernel": true,
+    "kernel_id": "treaty_authority_cession",
+    "readings": [
+      {
+        "reading_id": "crown_cession_reading",
+        "commitment": "English text controls; 'kāwanatanga' equals full sovereignty; treaty completes legal cession",
+        "authority_grounding": "Parliamentary sovereignty doctrine; signature as consent; lex posterior principle",
+        "sibling_readings": [
+          "rangatiratanga_retention_reading",
+          "biculturalism_reading"
+        ],
+        "expected_structural_delta": "Wall enclosing land and legislative authority under Crown; Māori customary authority extinguished or subordinate; land alienation legitimate"
+      },
+      {
+        "reading_id": "rangatiratanga_retention_reading",
+        "commitment": "Māori text controls via contra proferentem; 'kāwanatanga' limited to governance; 'tino rangatiratanga' retained; treaty establishes partnership requiring ongoing consent",
+        "authority_grounding": "Contra proferentem doctrine; Māori text as language of negotiation; indigenous sovereignty continuity",
+        "sibling_readings": [
+          "crown_cession_reading",
+          "biculturalism_reading"
+        ],
+        "expected_structural_delta": "Rope of partnership requiring negotiated authority exercise; Crown acts legitimate only with hapū consent; retrospective snare visible in land alienation under translation asymmetry"
+      },
+      {
+        "reading_id": "retrospective_snare_exposure",
+        "commitment": "Textual divergence itself constitutes extraction mechanism; chiefs signing Māori text could not assent to English sovereignty claim; land transfers and legislative override become visible as extraction operating under mistranslation",
+        "authority_grounding": "Historical evidence of chiefs' stated understanding; doctrine of informed consent; Waitangi Tribunal retrospective analysis",
+        "sibling_readings": [
+          "crown_cession_reading",
+          "rangatiratanga_retention_reading"
+        ],
+        "expected_structural_delta": "Snare: extraction mechanism covert at time of operation, visible only retrospectively; beneficiary is Crown land-purchasing apparatus; victim set is Māori signatories and descendants stripped of land and authority under translation they could not have understood"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "crown_cession_reading",
+        "reading_b": "rangatiratanga_retention_reading",
+        "basis": "Crown-cession axiom (signature completes full sovereignty transfer; English controls) cannot coexist with rangatiratanga-retention axiom (Māori text controls; only limited governance ceded) in any single coherent framework. Accepting one requires rejecting the other's foundational claim about what the treaty accomplished."
+      },
+      {
+        "reading_a": "crown_cession_reading",
+        "reading_b": "retrospective_snare_exposure",
+        "basis": "Crown-cession treats land alienation as legitimate exercise of ceded sovereignty. Snare-exposure treats the same transfers as extraction operating under mistranslation constituting invalid consent. These cannot both be true; one must be false."
+      }
+    ]
+  },
+  "_seed_id": "treaty_of_waitangi_dual_text"
+}

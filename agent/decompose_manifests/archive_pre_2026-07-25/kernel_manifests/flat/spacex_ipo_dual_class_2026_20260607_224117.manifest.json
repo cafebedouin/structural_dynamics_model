@@ -1,0 +1,235 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Corporate Governance / Securities Law / Organizational Economics",
+  "family_id": "spacex_ipo_dual_class_2026",
+  "topic_summary": "Analysis of SpaceX's 2026 IPO filing (Form S-1) proposing a dual-class share structure: Class A public shares with limited voting rights and Class B founder-controlled shares with super-voting power. Elon Musk retains board control and veto power over all shareholder matters while Class A investors supply capital and bear economic risk. The company qualifies as a Nasdaq 'controlled company,' exempt from independent-board requirements. The contested commitment: whether public investment in this structure is legitimate.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Space Exploration Technologies Corp. (issuer; dual-class structure architect)",
+      "Elon Musk (founder; CEO, CTO, Chairman; Class B majority holder)",
+      "Class A public shareholders (capital providers; limited voting rights)",
+      "Nasdaq (listing exchange; controlled-company exemption grantor)",
+      "SEC (disclosure regime administrator; Securities Act enforcer)",
+      "Proxy advisory firms ISS/Glass Lewis (minority-shareholder advocates)"
+    ],
+    "key_tensions": [
+      "Capital provision vs governance rights (Class A holders supply capital but lack control)",
+      "Mission continuity vs minority protection (founder stewardship vs shareholder democracy)",
+      "Disclosure vs substantive rights (informed consent vs governance parity)"
+    ],
+    "key_mechanisms": [
+      "Dual-class share structure (10:1 or higher vote ratio; Class B concentration)",
+      "Controlled-company exemption (Nasdaq rule waiving independent-board requirements)",
+      "Securities Act disclosure regime (S-1 filing; risk factor enumeration)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Public investment in founder-controlled SpaceX is legitimate and warranted",
+    "authority_description": "Securities law disclosure regime (SEC) grants interpretive legitimacy to issuer framing; proxy advisors and minority advocates contest via governance standards; market participants vote with capital allocation",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "dual_class_legitimacy",
+    "readings": [
+      {
+        "reading_id": "founder_stewardship",
+        "commitment": "Concentrated founder control legitimately serves all shareholders by enabling long-horizon mission execution",
+        "authority_grounding": "Issuer framing in S-1; mission-aligned investor tradition; Silicon Valley founder-primacy norm",
+        "sibling_readings": [
+          "minority_extraction",
+          "disclosure_consent"
+        ],
+        "expected_structural_delta": "Control is coordination; founder as fiduciary steward; dual-class structure protects mission from short-term market pressure; Class A holders benefit indirectly via mission success"
+      },
+      {
+        "reading_id": "minority_extraction",
+        "commitment": "Minority shareholders are entitled to governance proportional to capital and risk borne",
+        "authority_grounding": "Proxy advisory standards (ISS/Glass Lewis); minority-shareholder advocacy; corporate democracy tradition",
+        "sibling_readings": [
+          "founder_stewardship",
+          "disclosure_consent"
+        ],
+        "expected_structural_delta": "Control is extraction; dual-class structure transfers governance value from public to founder; controlled-company exemptions strip mandatory protections; Class A holders bear risk without voice"
+      },
+      {
+        "reading_id": "disclosure_consent",
+        "commitment": "Legitimacy rests on informed consent under Securities Act disclosure, not on control parity",
+        "authority_grounding": "Securities law formalism; SEC disclosure regime; underwriter legal tradition",
+        "sibling_readings": [
+          "founder_stewardship",
+          "minority_extraction"
+        ],
+        "expected_structural_delta": "Structure is neither coordination nor extraction but contractual choice; S-1 disclosure satisfies regulatory duty; investors buy Class A with eyes open; governance disparity is priced into valuation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "founder_stewardship",
+        "reading_b": "minority_extraction",
+        "basis": "No single framework holds both 'concentrated founder control legitimately serves all shareholders' and 'minority shareholders are entitled to governance proportional to capital/risk.' Stewardship reading treats control as fiduciary coordination; extraction reading treats it as value transfer from minority to founder. These are mutually exclusive normative foundations."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "dual_class_legitimacy_kernel",
+      "human_readable": "Dual-Class Legitimacy (Contested Kernel)",
+      "structural_delta": "Three incompatible readings of whether founder-controlled dual-class structure legitimately serves public shareholders",
+      "primary_observable": "Governance rights distribution (vote ratio, board independence, shareholder approval thresholds) vs capital/risk distribution",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "controlled_company_exemption_mechanism",
+        "sunset_absence"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with three structurally distinct readings; highest centrality; upstream to all other structure"
+    },
+    {
+      "claim_id": "controlled_company_exemption_mechanism",
+      "human_readable": "Controlled-Company Exemption (Regulatory Coordination Mechanism)",
+      "structural_delta": "Nasdaq rule waiving independent-board requirements for companies with >50% voting control; exemption eliminates minority protections",
+      "primary_observable": "Board composition (independent vs affiliated directors); audit/compensation committee structure",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "founder_controller",
+      "victim": "class_a_minority",
+      "downstream_of": [
+        "dual_class_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (board composition vs vote distribution); regulatory mechanism that operationalizes founder control; passes independence test"
+    },
+    {
+      "claim_id": "sunset_absence",
+      "human_readable": "Sunset Clause Absence (Temporal Lock-In)",
+      "structural_delta": "Dual-class structure lacks time-based or event-based conversion trigger; founder control persists indefinitely absent voluntary conversion",
+      "primary_observable": "Certificate of incorporation provisions re: Class B conversion triggers (or absence thereof)",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "founder_controller",
+      "victim": "future_class_a_holders",
+      "downstream_of": [
+        "dual_class_legitimacy_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Temporal dimension distinct from vote ratio and board composition; absence of sunset = structural lock-in; passes independence test"
+    },
+    {
+      "claim_id": "mission_horizon_justification",
+      "human_readable": "Mission Horizon Justification (Long-Term vs Short-Term Tradeoff)",
+      "structural_delta": "Multiplanetary mission requires multi-decade capital deployment; public markets allegedly impose quarterly-earnings myopia",
+      "primary_observable": "R&D spend as % revenue; capital allocation to Mars program vs near-term profitability",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "dual_class_legitimacy_kernel"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: justification narrative rather than structural constraint; captured within founder_stewardship reading; does not pass independence test (same observable as kernel's mission-protection claim)"
+    },
+    {
+      "claim_id": "comparable_tech_ipo_precedent",
+      "human_readable": "Comparable Tech IPO Precedent (Google, Facebook, Snap Pattern)",
+      "structural_delta": "SpaceX dual-class structure follows established Silicon Valley IPO pattern (Google 2004, Facebook 2012, Snap 2017)",
+      "primary_observable": "Frequency of dual-class structures in tech IPOs 2004-2026; vote ratios; market reception",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "dual_class_legitimacy_kernel"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: precedent context rather than independent structural axis; does not change epsilon of kernel readings; informational background only"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "founder_stewardship",
+      "kernel_id": "dual_class_legitimacy",
+      "reading_id": "founder_stewardship"
+    },
+    {
+      "claim_id": "minority_extraction",
+      "kernel_id": "dual_class_legitimacy",
+      "reading_id": "minority_extraction"
+    },
+    {
+      "claim_id": "disclosure_consent",
+      "kernel_id": "dual_class_legitimacy",
+      "reading_id": "disclosure_consent"
+    },
+    "controlled_company_exemption_mechanism",
+    "sunset_absence"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "mission_horizon_justification",
+      "structural_delta": "Long-term mission requires insulation from short-term market pressure",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Justification narrative captured within founder_stewardship reading; does not pass independence test (same observable as kernel's mission-protection claim)"
+    },
+    {
+      "claim_id": "comparable_tech_ipo_precedent",
+      "structural_delta": "Dual-class structure follows Google/Facebook/Snap precedent",
+      "hypothesis": "rope",
+      "deferral_reason": "Precedent context rather than independent structural constraint; does not change epsilon of kernel readings; informational background"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_class_b_transferability",
+      "description": "Does Class B transfer to heirs/trusts, or convert to Class A on transfer? If transferable, founder control becomes dynasty control; if not, control is time-limited by founder mortality. S-1 silent on this; structural classification depends on answer.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — transfer restrictions not enumerated in extraction"
+    },
+    {
+      "id": "omega_sec_enforcement_posture",
+      "description": "Does SEC disclosure-consent reading reflect enforcement resource constraints (cannot police substantive fairness) or principled deference to market pricing? If resource constraint, disclosure_consent is piton of regulatory capacity rather than normative commitment.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — SEC as authority structure"
+    },
+    {
+      "id": "omega_mission_credibility",
+      "description": "Is 'make life multiplanetary' a genuine long-horizon mission or founder-stewardship narrative cover for control extraction? Founder_stewardship reading's legitimacy depends on mission credibility; if mission is pretextual, reading collapses into minority_extraction.",
+      "source": "§2 Multi-Lens Scan (Organizational Economics lens) — mission as coordination vs extraction signal"
+    },
+    {
+      "id": "omega_market_pricing_efficiency",
+      "description": "Does Class A market price fully reflect governance discount, or do retail investors systematically underweight control disparity? Disclosure_consent reading assumes efficient pricing; if pricing is systematically biased, consent is not truly informed.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model operates within efficient-market assumption"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied correctly: three readings pass individually-holdable test and emit structurally different constraints. Two ordinary axes (controlled_company_exemption_mechanism, sunset_absence) pass independence test with distinct observables. Deferred axes correctly identified as non-independent (mission_horizon captured in founder_stewardship; precedent is context not constraint)."
+  }
+}

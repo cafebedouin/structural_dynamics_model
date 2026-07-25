@@ -1,0 +1,236 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Theory / International Relations / Territorial Sovereignty",
+  "family_id": "israel_palestine_legitimacy_2026",
+  "topic_summary": "Analysis of competing legitimacy claims over the same territory between Israel and Palestine. The dispute presents as potentially two distinct kernels (1948 existential legitimacy vs 1967 territorial occupation) rather than one kernel read two ways. Research reveals structural incoherence: the claims operate on different temporal and conceptual registers, making single-framework resolution resistant.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "State of Israel (established 1948, claims historical continuity from ancient Hebrews)",
+      "Palestinian national movement (claims continuous Arab habitation, divided into Hamas/Fatah)",
+      "Hamas (Gaza governance since 2006, armed resistance framework)",
+      "Fatah/Palestinian Authority (West Bank governance, diplomatic framework)",
+      "British Mandate Palestine (1923-1948 administrative framework)",
+      "Balfour Declaration (1917 British commitment to Jewish national home)",
+      "1967 borders (Green Line, basis for two-state proposals)",
+      "International community (US, EU, Qatar as financial/diplomatic actors)"
+    ],
+    "key_tensions": [
+      "Existential legitimacy (right to statehood) vs territorial legitimacy (right to specific land)",
+      "1948 narrative (Jewish refuge from persecution vs Palestinian displacement/Nakba)",
+      "1967 occupation (Israeli security claims vs Palestinian territorial rights)",
+      "Narrative incompatibility (memory of survival vs memory of dispossession)"
+    ],
+    "key_claims": [
+      "Israeli claim: 3000-year historical continuity justifies statehood in ancestral homeland",
+      "Palestinian claim: Continuous Arab habitation for generations justifies territorial sovereignty",
+      "Israeli security claim: 1967 territorial retention necessary for existential security",
+      "Palestinian rights claim: Any territorial reduction from 1967 borders is severe deprivation",
+      "Religious claim (both): Territory contains holy sites central to group identity",
+      "Moderate claim (both): Disentangling 1948 from 1967 enables coexistence framework"
+    ],
+    "mechanisms": [
+      "Narrative valorization: Each side amplifies own victimization, denies other's legitimacy",
+      "Temporal conflation: Merging 1948 and 1967 grievances prevents disaggregation",
+      "Settlement expansion: Physical facts on ground alter territorial negotiation baseline"
+    ],
+    "absences": [
+      "No shared temporal framework: 1948 and 1967 operate as distinct legitimacy registers",
+      "No neutral arbiter: International actors aligned with one narrative or the other",
+      "No institutional mechanism for narrative reconciliation beyond zero-sum territorial division"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "NOT a single contested kernel. Two distinct kernels with minimal shared substrate: (1) 1948 existential legitimacy kernel (right to statehood), (2) 1967 territorial legitimacy kernel (right to specific land). The kernels operate on different conceptual registers and resist unified framework.",
+    "authority_description": "No shared interpretive authority. Each kernel has separate authority structures: (1) 1948 kernel grounded in competing historical narratives (ancient Hebrew presence vs continuous Arab habitation), (2) 1967 kernel grounded in international law (UNSC 242, Geneva Conventions) vs security doctrine.",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "coherence_finding": "The dispute is structurally incoherent as a unified bundle. Research explicitly states: 'By conflating two sets of grievances represented by 1948 and 1967, Israelis and Palestinians have been able to valorize their own victimization and deny the other's legitimacy.' The two kernels do not share sufficient substrate to constitute readings of one commitment. They are separate legitimacy claims that have been strategically conflated.",
+    "kernel_collapse_reason": "1948 kernel (existential right to statehood) and 1967 kernel (territorial boundaries) operate on different temporal registers, invoke different authority structures (historical narrative vs international law), and produce different victim sets. A framework accepting Israeli 1948 legitimacy does not logically require accepting 1967 territorial claims, and vice versa. The moderate position identified in research ('disentangle the two claims') confirms they are separable kernels, not readings of one kernel.",
+    "decomposition_strategy": "Decompose into three flat axes capturing the structural incoherence itself: (1) the 1948 existential legitimacy axis as tangled_rope, (2) the 1967 territorial occupation axis as snare, (3) the narrative conflation mechanism as scaffold that prevents disaggregation. This captures the finding that the dispute's structure is the incoherence."
+  },
+  "axes": [
+    {
+      "claim_id": "existential_legitimacy_1948",
+      "human_readable": "1948 Existential Legitimacy (Competing Right-to-Statehood Claims)",
+      "structural_delta": "Two incompatible narratives of existential legitimacy over the same territory: Jewish historical continuity (3000 years) vs Palestinian continuous habitation (generations). Each narrative grounds a claim to statehood that categorically denies the other's validity.",
+      "primary_observable": "Narrative framing in official discourse, education curricula, memorial practices; legal frameworks recognizing/denying other's statehood (e.g., Israeli law of return vs Palestinian right of return)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "nationalist_maximalists_both_sides",
+      "victim": "displaced_populations_both_narratives",
+      "downstream_of": [],
+      "feeds_into": [
+        "narrative_conflation_mechanism",
+        "territorial_occupation_1967"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream existential kernel that feeds both downstream axes; captures the core structural incoherence identified in research"
+    },
+    {
+      "claim_id": "territorial_occupation_1967",
+      "human_readable": "1967 Territorial Occupation (Security vs Rights Over Specific Land)",
+      "structural_delta": "Israeli retention of 1967-seized territories (West Bank, Gaza, East Jerusalem, Golan Heights) framed as security necessity vs Palestinian claim that any territorial reduction from 1967 borders is severe rights deprivation. Operates on international law register (UNSC 242, Geneva Conventions) rather than existential narrative register.",
+      "primary_observable": "Settlement expansion rate, Green Line border enforcement, international legal rulings on occupation status, territorial concession proposals in negotiations",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "settlement_movement_israeli_security_establishment",
+      "victim": "palestinian_territorial_sovereignty_claimants",
+      "downstream_of": [
+        "existential_legitimacy_1948"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable and temporal register from 1948 axis; captures the second kernel identified in research; downstream synthesis node"
+    },
+    {
+      "claim_id": "narrative_conflation_mechanism",
+      "human_readable": "Narrative Conflation Mechanism (Strategic Merger of 1948 and 1967 Claims)",
+      "structural_delta": "The strategic conflation of 1948 existential claims with 1967 territorial claims, preventing disaggregation. Research states: 'By conflating two sets of grievances, Israelis and Palestinians have been able to valorize their own victimization and deny the other's legitimacy.' This conflation is the mechanism that maintains zero-sum framing.",
+      "primary_observable": "Frequency of discourse merging 1948 and 1967 claims; resistance to two-stage negotiation frameworks; extremist vs moderate position distribution (moderates accept disaggregation)",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "extremists_both_sides_rejecting_coexistence",
+      "victim": "moderates_seeking_disaggregated_framework",
+      "downstream_of": [
+        "existential_legitimacy_1948"
+      ],
+      "feeds_into": [
+        "territorial_occupation_1967"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Captures the structural mechanism identified in research as the core obstacle; mediates between upstream existential claim and downstream territorial claim"
+    },
+    {
+      "claim_id": "religious_site_sovereignty",
+      "human_readable": "Religious Site Sovereignty (Holy Sites as Legitimacy Anchors)",
+      "structural_delta": "Competing claims to religious sites (Temple Mount/Haram al-Sharif, Western Wall, Al-Aqsa Mosque) as anchors for territorial legitimacy. Sites function as physical manifestations of narrative claims.",
+      "primary_observable": "Access control policies, religious practice restrictions, archaeological excavation disputes, sovereignty declarations over specific sites",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "existential_legitimacy_1948"
+      ],
+      "feeds_into": [
+        "territorial_occupation_1967"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Captured as subset of existential_legitimacy_1948 (religious dimension of narrative) and territorial_occupation_1967 (physical site control)"
+    },
+    {
+      "claim_id": "international_law_asymmetry",
+      "human_readable": "International Law Asymmetry (Selective Enforcement of Legal Frameworks)",
+      "structural_delta": "Asymmetric application of international law: UNSC resolutions on Israeli occupation vs lack of enforcement mechanism; Geneva Conventions invoked by Palestinians, security exceptions invoked by Israel. No neutral arbiter with enforcement capacity.",
+      "primary_observable": "UNSC resolution compliance rates, ICC jurisdiction disputes, international legal rulings vs ground reality divergence",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "territorial_occupation_1967"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Downstream consequence of territorial_occupation_1967 rather than independent structural axis; captured in that axis's international law register"
+    },
+    {
+      "claim_id": "palestinian_internal_fracture",
+      "human_readable": "Palestinian Internal Fracture (Hamas-Fatah Governance Split)",
+      "structural_delta": "Gaza-West Bank governance split between Hamas (armed resistance framework) and Fatah/PA (diplomatic framework). Research identifies this as 'most damaging development for Palestinians since Israel's founding.' Prevents unified Palestinian negotiating position.",
+      "primary_observable": "Governance coordination failures, policy divergence between Gaza and West Bank, negotiation framework incompatibilities",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "hamas_fatah_leadership_maintaining_separate_power_bases",
+      "victim": "palestinian_national_movement_unity",
+      "downstream_of": [
+        "existential_legitimacy_1948"
+      ],
+      "feeds_into": [
+        "territorial_occupation_1967"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Internal Palestinian dynamic rather than Israeli-Palestinian structural axis; important but orthogonal to core legitimacy contest"
+    }
+  ],
+  "generation_sequence": [
+    "existential_legitimacy_1948",
+    "narrative_conflation_mechanism",
+    "territorial_occupation_1967"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "religious_site_sovereignty",
+      "structural_delta": "Competing claims to holy sites as legitimacy anchors",
+      "hypothesis": "piton",
+      "deferral_reason": "Captured as subset of existential_legitimacy_1948 (religious narrative dimension) and territorial_occupation_1967 (physical site control); does not add independent structural yield"
+    },
+    {
+      "claim_id": "international_law_asymmetry",
+      "structural_delta": "Asymmetric application of international law frameworks",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream consequence of territorial_occupation_1967 rather than independent axis; international law register already captured in that axis"
+    },
+    {
+      "claim_id": "palestinian_internal_fracture",
+      "structural_delta": "Hamas-Fatah governance split preventing unified Palestinian position",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Internal Palestinian dynamic orthogonal to core Israeli-Palestinian legitimacy contest; important but not central to the two-kernel structure identified in research"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_incoherence",
+      "description": "The dispute is structurally incoherent as a unified bundle. Research finding: 'By conflating two sets of grievances represented by 1948 and 1967, Israelis and Palestinians have been able to valorize their own victimization and deny the other's legitimacy.' This is not a generation failure but a finding about the dispute's structure: it contains two distinct kernels (existential vs territorial) that resist single-framework resolution. The moderate position (disentangle the claims) confirms they are separable.",
+      "source": "§1.3-K kernel/reading decomposition; research coherence boundary finding"
+    },
+    {
+      "id": "omega_narrative_reconciliation_mechanism",
+      "description": "No institutional mechanism exists for narrative reconciliation beyond zero-sum territorial division. Research notes 'shaped by decades of structural disparity, open hostility, and deep-seated mistrust, the substrate to discuss tough issues had grown fragile.' Even if territorial issues were resolved, the existential legitimacy narratives remain incompatible. Is reconciliation possible without shared temporal framework?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_moderate_viability",
+      "description": "Research identifies moderates who 'understand both sides must find a way to coexist peacefully' and accept disaggregating 1948 from 1967 claims. But what is the structural basis for moderate viability when the narrative_conflation_mechanism benefits extremists on both sides? Is there a path-dependent lock-in where conflation becomes self-reinforcing?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_temporal_register_collapse",
+      "description": "The two kernels operate on different temporal registers (1948 existential, 1967 territorial), but settlement expansion physically merges them by creating facts on the ground that make 1967 borders non-viable, forcing the territorial question back into the existential register. Does this collapse the two-kernel structure over time?",
+      "source": "§2 Decomposition analysis; settlement expansion mechanism"
+    },
+    {
+      "id": "omega_international_actor_alignment",
+      "description": "Research notes 'no neutral arbiter: International actors aligned with one narrative or the other.' US financial/diplomatic investment has 'failed to resolve, narrow, contain, or even manage this conflict.' Is the absence of neutral arbiter a structural feature (no possible neutral position exists) or a contingent failure (neutral position exists but no actor occupies it)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory); international_law_asymmetry deferred axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel incoherence finding (two distinct kernels rather than one contested kernel) is a substantive analytical result, not a protocol failure. Research explicitly supports this structure: 'once we disentangle the two claims, we can separate extremists from moderates.' The three selected axes capture this structural finding: existential legitimacy as upstream tangled_rope, narrative conflation as mediating scaffold, territorial occupation as downstream snare."
+  },
+  "_seed_id": "israel_palestine_legitimacy"
+}

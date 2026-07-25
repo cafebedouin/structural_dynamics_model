@@ -1,0 +1,301 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Catholic Social Teaching / Technology Ethics / Political Theology",
+  "family_id": "magnifica_humanitas_ai_encyclical",
+  "topic_summary": "Papal encyclical Magnifica Humanitas addresses artificial intelligence through Catholic Social Doctrine, framing AI as a res nova requiring discernment between two paths: the Tower of Babel (technocratic dominance, dehumanization) versus rebuilding Jerusalem (subsidiarity, solidarity, human dignity). The document synthesizes 135 years of social teaching to evaluate AI's impact on work, truth, freedom, war, and integral human development.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 4,
+    "mechanism_count": 6,
+    "absence_count": 3,
+    "key_entities": [
+      "Catholic Church / Magisterium (authoritative teaching body interpreting Gospel for contemporary issues)",
+      "Artificial Intelligence / Digital Technologies (computational systems reshaping work, communication, warfare)",
+      "Technocratic Paradigm (efficiency-control-profit logic detached from human dignity)",
+      "Social Doctrine of the Church (living corpus of principles: common good, subsidiarity, solidarity, universal destination of goods, social justice)",
+      "Human Person (imago Dei, infinite dignity, relational nature, irreducible to data or optimization)",
+      "Private Technological Actors (transnational companies controlling platforms, data, algorithms)",
+      "State / Political Community (responsible for common good, regulation, but weakened by digital power concentration)",
+      "Transhumanism/Posthumanism (ideological currents seeking technological transcendence of human limits)"
+    ],
+    "key_tensions": [
+      "Technocratic efficiency vs human dignity (AI optimizes performance but risks treating persons as means)",
+      "Private digital power vs public accountability (platforms set conditions for participation without democratic oversight)",
+      "Technological progress vs moral-social progress (Paul VI: advances without ethical growth 'go against man')",
+      "Babel (uniformity, self-sufficiency, dominance) vs Jerusalem (subsidiarity, shared responsibility, communion)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The relationship between technological power and human flourishing — whether AI serves integral human development or subjects humanity to technocratic control",
+    "authority_description": "Magisterial interpretation of Gospel + Social Doctrine principles applied to res novae; authority grounded in continuity with Tradition and discernment of signs of the times",
+    "drift_status": "functioning",
+    "candidate_pattern": "Interpretive Tradition (living doctrine developing through successive pontificates)",
+    "is_contested_kernel": true,
+    "kernel_id": "ai_human_relationship",
+    "readings": [
+      {
+        "reading_id": "technocratic_optimization",
+        "commitment": "AI as instrument of efficiency maximization; human value measured by productivity and optimization potential",
+        "authority_grounding": "Market logic, posthumanist currents, private platform governance",
+        "sibling_readings": [
+          "instrumental_subsidiarity",
+          "incarnational_humanism"
+        ],
+        "expected_structural_delta": "Persons reduced to data profiles; exclusion of 'inefficient' populations; concentration of power in algorithmic gatekeepers; work subordinated to machine pace"
+      },
+      {
+        "reading_id": "instrumental_subsidiarity",
+        "commitment": "AI as neutral tool to be regulated; technology serves human ends when properly governed by law and ethics",
+        "authority_grounding": "Liberal regulatory frameworks, AI ethics discourse, state-centered governance models",
+        "sibling_readings": [
+          "technocratic_optimization",
+          "incarnational_humanism"
+        ],
+        "expected_structural_delta": "Technology morally neutral; responsibility lies in use-cases and regulation; subsidiarity as procedural safeguard; human dignity protected through legal frameworks and transparency requirements"
+      },
+      {
+        "reading_id": "incarnational_humanism",
+        "commitment": "AI must serve integral human development; technology ordered to common good, solidarity, and preferential option for poor; human person as imago Dei irreducible to optimization",
+        "authority_grounding": "Catholic Social Doctrine, Incarnation theology, Eucharistic solidarity",
+        "sibling_readings": [
+          "technocratic_optimization",
+          "instrumental_subsidiarity"
+        ],
+        "expected_structural_delta": "Technology evaluated by whether it makes life 'more human'; subsidiarity as empowerment of intermediary bodies; solidarity as conscious choice transforming interdependence; work as vocation not commodity; AI 'disarmed' from competitive domination"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "technocratic_optimization",
+        "reading_b": "incarnational_humanism",
+        "basis": "Technocratic reading treats efficiency as ultimate measure of value and persons as optimizable resources; incarnational reading holds human dignity infinite and inalienable, grounded in divine love, never instrumentalizable. No coherent framework can simultaneously hold both 'persons are means to efficiency' and 'persons are ends whose dignity transcends all utility calculation.'"
+      },
+      {
+        "reading_a": "instrumental_subsidiarity",
+        "reading_b": "incarnational_humanism",
+        "basis": "Instrumental reading treats technology as morally neutral substrate shaped by external regulation; incarnational reading holds technology never neutral because it embeds anthropological vision in design choices. The axiom 'technology is neutral until used' contradicts 'every technical tool embodies choices about what it measures, ignores, optimizes' (§104). A framework cannot coherently hold both neutrality and inherent value-embedding."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "ai_human_relationship",
+      "human_readable": "AI-Human Relationship (Contested Kernel)",
+      "structural_delta": "Three incompatible readings of whether AI serves human flourishing (technocratic optimization vs regulatory neutrality vs incarnational humanism)",
+      "primary_observable": "Design choices in AI systems (what is measured, optimized, excluded); governance structures (private vs public control); labor impacts (deskilling vs empowerment); treatment of vulnerable populations",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "digital_slavery_supply_chains",
+        "war_normalization_ai",
+        "truth_as_common_good"
+      ],
+      "centrality_score": 9,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel axis with three structurally distinct readings; highest centrality; all other axes downstream of this foundational interpretive choice"
+    },
+    {
+      "claim_id": "digital_slavery_supply_chains",
+      "human_readable": "Digital Slavery and Extractive Supply Chains",
+      "structural_delta": "Hidden human labor (data labeling, content moderation, rare earth extraction, trafficking via platforms) sustaining 'immaterial' AI economy",
+      "primary_observable": "Working conditions in Global South data centers; child labor in cobalt/lithium mines; trafficking networks using digital infrastructure; wages and safety standards for content moderators",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "platform_owners_consumers_in_wealthy_regions",
+      "victim": "invisible_workers_children_trafficking_victims",
+      "downstream_of": [
+        "ai_human_relationship"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct structural delta (physical exploitation hidden by digital abstraction); snare with clear beneficiary/victim structure; encyclical's apology for Church's historical slavery complicity makes this axis morally central"
+    },
+    {
+      "claim_id": "war_normalization_ai",
+      "human_readable": "War Normalization Through AI Weaponization",
+      "structural_delta": "AI lowers threshold for lethal force by automating targeting, obscuring responsibility, reducing enemy to data; paradigm shift from 'war as last resort' to 'war as optimizable process'",
+      "primary_observable": "Autonomous weapons deployment; speed of strike decisions; civilian casualty rates in AI-assisted conflicts; erosion of humanitarian law principles (proportionality, distinction)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "military_industrial_complex_states_with_AI_dominance",
+      "victim": "civilian_populations_states_without_AI_capacity",
+      "downstream_of": [
+        "ai_human_relationship"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Tangled_rope entangling just war theory erosion with algorithmic speed; encyclical declares just war theory 'outdated' (§192) — major doctrinal shift requiring constraint story"
+    },
+    {
+      "claim_id": "truth_as_common_good",
+      "human_readable": "Truth as Common Good vs Algorithmic Manipulation",
+      "structural_delta": "Truth's relational-rational nature (verification, trust, shared pursuit) vs AI-amplified disinformation, filter bubbles, and epistemic capture by platform owners",
+      "primary_observable": "Prevalence of deepfakes; algorithmic curation of information feeds; concentration of narrative-shaping power; erosion of shared factual basis for democracy",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "platform_owners_authoritarian_regimes",
+      "victim": "democratic_publics_marginalized_voices",
+      "downstream_of": [
+        "ai_human_relationship"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct observable (information ecosystem health) independent of labor/war axes; tangled_rope linking Arendt's totalitarianism warning (§134) to digital infrastructure"
+    },
+    {
+      "claim_id": "subsidiarity_vs_platform_monopoly",
+      "human_readable": "Subsidiarity Principle vs Platform Monopoly Power",
+      "structural_delta": "Social Doctrine's subsidiarity (decisions at lowest competent level, intermediary bodies empowered) vs de facto governance by transnational platforms setting participation conditions unilaterally",
+      "primary_observable": "Concentration of data/algorithmic control; ability of local communities to contest platform decisions; existence of meaningful participation mechanisms vs terms-of-service imposition",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "ai_human_relationship"
+      ],
+      "feeds_into": [
+        "digital_slavery_supply_chains",
+        "truth_as_common_good"
+      ],
+      "centrality_score": 6,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural delta captured by incarnational_humanism reading's subsidiarity emphasis; independent axis would require showing subsidiarity violation distinct from readings' divergence — fails §3 pairwise test (same observable as kernel reading contrast)"
+    },
+    {
+      "claim_id": "education_digital_formation",
+      "human_readable": "Educational Formation for Digital Discernment",
+      "structural_delta": "Encyclical's call for 'educational alliance' teaching restraint, critical use, recognition of manipulation vs current hyper-stimulation culture and early unsupervised device access",
+      "primary_observable": "Age of first device ownership; curriculum integration of digital literacy; parental capacity to resist platform business models; rates of addiction/cyberbullying",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "ai_human_relationship"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold (aspirational intervention) with low ε; encyclical's treatment is prescriptive rather than analytically distinct; captured as omega for implementation gap"
+    },
+    {
+      "claim_id": "integral_ecology_digital",
+      "human_readable": "Integral Ecology Extended to Digital Ecosystem",
+      "structural_delta": "Laudato Si's integral ecology (cry of earth + cry of poor inseparable) applied to AI's environmental cost (energy, water, e-waste) and social cost (exploitation) as unified crisis",
+      "primary_observable": "Carbon footprint of LLM training; water usage in data centers; e-waste from device turnover; overlap between environmental degradation zones and digital labor exploitation zones",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "ai_human_relationship",
+        "digital_slavery_supply_chains"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton (extension of existing Laudato Si framework to new domain); environmental ε captured within digital_slavery_supply_chains axis (rare earth extraction); independent axis would duplicate victim set"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "technocratic_optimization",
+      "kernel_id": "ai_human_relationship",
+      "reading_id": "technocratic_optimization"
+    },
+    {
+      "claim_id": "instrumental_subsidiarity",
+      "kernel_id": "ai_human_relationship",
+      "reading_id": "instrumental_subsidiarity"
+    },
+    {
+      "claim_id": "incarnational_humanism",
+      "kernel_id": "ai_human_relationship",
+      "reading_id": "incarnational_humanism"
+    },
+    "digital_slavery_supply_chains",
+    "war_normalization_ai",
+    "truth_as_common_good"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "subsidiarity_vs_platform_monopoly",
+      "structural_delta": "Subsidiarity principle vs platform monopoly governance",
+      "hypothesis": "rope",
+      "deferral_reason": "Observable (governance structure, participation mechanisms) not independent from kernel readings' divergence on subsidiarity; incarnational_humanism reading already instantiates subsidiarity constraint; §3 pairwise test failure"
+    },
+    {
+      "claim_id": "education_digital_formation",
+      "structural_delta": "Educational alliance for digital discernment vs hyper-stimulation culture",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold with v_low ε; prescriptive rather than analytically distinct; implementation gap noted in omega_educational_alliance"
+    },
+    {
+      "claim_id": "integral_ecology_digital",
+      "structural_delta": "Integral ecology extended to digital ecosystem (environmental + social cost unified)",
+      "hypothesis": "piton",
+      "deferral_reason": "Piton extending Laudato Si framework; environmental ε subsumed in digital_slavery_supply_chains (extraction); victim set overlap; low independent yield"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_church_complicity_digital",
+      "description": "Encyclical apologizes for Church's historical slavery complicity (§176). Does the Church risk analogous complicity today by using AI platforms/services built on hidden exploitation without demanding supply chain transparency? The apology's logic requires present vigilance.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + §173-179 slavery condemnation"
+    },
+    {
+      "id": "omega_educational_alliance",
+      "description": "§139-147 call for educational alliance (families, schools, states, Church) to resist platform business models and teach digital discernment. No mechanism specified for coordinating this alliance or overcoming collective action problem. Scaffold without load-bearing structure.",
+      "source": "Deferred axis education_digital_formation + §142 acknowledgment that 'parents by themselves' cannot resist"
+    },
+    {
+      "id": "omega_just_war_reversal",
+      "description": "§192 declares just war theory 'outdated' — major doctrinal shift. Does this apply only to AI-enabled warfare or to all armed conflict? If universal, what replaces just war criteria for evaluating legitimate self-defense? Encyclical does not specify scope or successor framework.",
+      "source": "war_normalization_ai axis + footnote 182 (Fratelli Tutti 258)"
+    },
+    {
+      "id": "omega_transnational_enforcement",
+      "description": "Encyclical calls for international cooperation, shared regulations, multilateral frameworks (§157, §163, §226) but acknowledges UN/multilateral system weakened (§201-202). Who enforces Social Doctrine principles against transnational platforms when states lack jurisdiction and international bodies lack teeth?",
+      "source": "§5 (private actors surpass many governments) + §201-203 (crisis of multilateralism)"
+    },
+    {
+      "id": "omega_data_commons",
+      "description": "§108 proposes managing data 'as a common or shared good' citing JPII on collective goods. No specification of governance model: public trust? Cooperative ownership? Blockchain commons? The principle is asserted but institutional form left to 'creative thinking.'",
+      "source": "§67 (universal destination of goods includes data) + §108 (data as common good)"
+    },
+    {
+      "id": "omega_transhumanism_boundary",
+      "description": "§115-117 critique transhumanism/posthumanism as devaluing human limits and promising technical 'salvation.' But encyclical also affirms technology can 'alleviate suffering and unlock new possibilities' (§126). Where is the boundary between legitimate medical intervention (e.g., prosthetics, gene therapy for disease) and illegitimate 'enhancement'? Principle of accepting limits does not yield bright line.",
+      "source": "§117-118 (transhumanism critique) + §126 (technology can alleviate suffering)"
+    },
+    {
+      "id": "omega_nehemiah_model_limits",
+      "description": "Encyclical uses Nehemiah rebuilding Jerusalem as model (§8, §241): shared responsibility, subsidiarity, each family assigned wall section. But Nehemiah had Persian king's authorization and resources (Neh 2:7-8). Who is the 'king' authorizing Christian communities to rebuild digital infrastructure? Model assumes benevolent sovereign granting permission — not present in current digital landscape.",
+      "source": "§8 (Nehemiah narrative) + §241 (Nehemiah as parable for digital age)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan applied: theological (Incarnation, Eucharist, imago Dei), social-doctrinal (subsidiarity, solidarity, common good), political-economic (labor, war, governance), historical (slavery apology, doctrinal development). Dark matter probes surfaced: Church's own complicity risk (omega_church_complicity_digital), enforcement gap in transnational context (omega_transnational_enforcement), Nehemiah model's unexamined sovereign assumption (omega_nehemiah_model_limits). Kernel/reading decomposition warranted: three genuinely distinct anthropological-technological visions with mutually exclusive axioms (technocratic efficiency-as-value vs technology-as-neutral-tool vs incarnational dignity-as-irreducible). All §3 survivors selected; deferred axes failed pairwise independence test or were low-ε scaffolds/pitons."
+  }
+}

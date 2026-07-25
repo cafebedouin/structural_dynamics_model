@@ -1,0 +1,238 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Climate Policy / Political Economy / Intergenerational Ethics",
+  "family_id": "climate_response_kernel_2026",
+  "topic_summary": "Analysis of three contested readings of the climate-response kernel: mitigation-priority (technological solutions with continued GDP growth), adaptation-priority (immediate capital investment in resilience), and degrowth (structural economic transformation rejecting growth assumptions). Each reading emits constraints with fundamentally different cost-bearer structures across generations and regions, creating irreducible intergenerational and North-South victim asymmetries.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 6,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "IPCC (Intergovernmental Panel on Climate Change - assessment authority)",
+      "Global Environment Facility (climate finance mechanism)",
+      "Integrated Assessment Model (IAM) community (mitigation scenario developers)",
+      "Developing regions (limited adaptive capacity, high climate vulnerability)",
+      "Industrialized countries (high adaptive capacity, historical emissions responsibility)",
+      "Future generations (deferred cost-bearers)",
+      "Degrowth literature community (alternative pathway advocates)",
+      "WMO/UNEP (IPCC parent organizations)"
+    ],
+    "key_tensions": [
+      "Mitigation cost distribution vs adaptation financing gap (current emissions reductions vs immediate resilience investment)",
+      "Technological optimism vs structural transformation (IAM scenarios vs degrowth pathways)",
+      "Intergenerational burden shifting (current action vs future mitigation challenge)",
+      "North-South equity (historical emitters vs vulnerable regions)",
+      "GDP growth assumption vs resource consumption limits (continued growth vs planetary boundaries)",
+      "Political feasibility vs structural necessity (incremental reform vs deep socioeconomic change)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The climate-response kernel: the shared commitment that anthropogenic climate change requires coordinated human action, but contested on what form that action takes and who bears costs across time and space",
+    "authority_description": "IPCC assessment reports, IAM modeling community, and national climate policy frameworks ground interpretive legitimacy through scientific consensus and treaty obligations (UNFCCC)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence",
+    "is_contested_kernel": true,
+    "kernel_id": "climate_response_action",
+    "readings": [
+      {
+        "reading_id": "mitigation_priority",
+        "commitment": "Climate response requires limiting temperature rise below 2°C through emissions reductions, enabled by technological innovation and carbon markets while maintaining GDP growth",
+        "authority_grounding": "IPCC Working Group III, IAM community, dominant policy frameworks (Paris Agreement NDCs)",
+        "sibling_readings": [
+          "adaptation_priority",
+          "degrowth_transformation"
+        ],
+        "expected_structural_delta": "Concentrates costs on current emissions reductions in high-emitting sectors; defers adaptation costs to vulnerable regions; assumes technological feasibility of carbon removal; benefits nations with innovation capacity; shifts residual climate impacts to future generations and Global South"
+      },
+      {
+        "reading_id": "adaptation_priority",
+        "commitment": "Climate response requires immediate investment in resilience infrastructure and adaptive capacity, accepting temperature rise as inevitable and prioritizing protection of vulnerable populations",
+        "authority_grounding": "IPCC Working Group II, adaptation finance mechanisms (GEF, Adaptation Fund), vulnerable nation coalitions",
+        "sibling_readings": [
+          "mitigation_priority",
+          "degrowth_transformation"
+        ],
+        "expected_structural_delta": "Requires upfront capital investment ($540B annually for universal protection); burdens developing nations with limited fiscal capacity; creates North-South financing gap ($350B); perpetuates inequality through protection disparities; accepts higher future warming costs"
+      },
+      {
+        "reading_id": "degrowth_transformation",
+        "commitment": "Climate response requires structural economic transformation rejecting GDP growth as organizing principle, prioritizing sufficiency, equity, and reduced resource throughput over technological substitution",
+        "authority_grounding": "Degrowth literature community, recent IPCC inclusion (AR6), ecological economics frameworks",
+        "sibling_readings": [
+          "mitigation_priority",
+          "adaptation_priority"
+        ],
+        "expected_structural_delta": "Demands deep socioeconomic restructuring (universal basic services, working time reduction, democratic firm ownership); redistributes from Global North consumption to Global South development rights; shifts burden from future generations to current wealthy populations; minimizes reliance on speculative carbon removal; faces political feasibility barriers"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "mitigation_priority",
+        "reading_b": "degrowth_transformation",
+        "basis": "Mitigation-priority axiom: GDP growth is compatible with emissions reduction through technological decoupling. Degrowth axiom: GDP growth structurally drives resource consumption and emissions, making decoupling insufficient. No single framework can hold both that growth is necessary for climate solutions AND that growth is the structural barrier to climate solutions."
+      },
+      {
+        "reading_a": "adaptation_priority",
+        "reading_b": "degrowth_transformation",
+        "basis": "Adaptation-priority axiom: Climate impacts are inevitable; response requires capital-intensive infrastructure within existing economic structures. Degrowth axiom: Existing economic structures generate the climate problem; response requires dismantling growth-dependent institutions. No framework can hold both that the current economic system is the vehicle for climate response AND that it must be fundamentally transformed."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "mitigation_priority",
+      "human_readable": "Mitigation-Priority Reading (Technological Decoupling Path)",
+      "structural_delta": "Climate response via emissions reduction through technological innovation and carbon markets, maintaining GDP growth trajectory",
+      "primary_observable": "IAM scenario reliance on carbon removal (Gt CO2/year); energy-GDP decoupling rates; mitigation cost distribution by region",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "industrialized_nations_with_innovation_capacity",
+      "victim": "future_generations_bearing_residual_impacts, global_south_adaptation_gap",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest current institutional authority (IPCC WG3, Paris NDCs); establishes baseline constraint structure for comparison"
+    },
+    {
+      "claim_id": "adaptation_priority",
+      "human_readable": "Adaptation-Priority Reading (Resilience Investment Path)",
+      "structural_delta": "Climate response via immediate capital investment in protective infrastructure, accepting temperature rise as given",
+      "primary_observable": "Adaptation financing gap ($350B annually); protection coverage disparities (1.2B protected vs 3B limited protection); GEF mitigation/adaptation funding ratio",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "developed_regions_with_fiscal_capacity",
+      "victim": "developing_regions_lacking_adaptation_capital, future_generations_facing_higher_warming",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; distinct victim structure (spatial rather than temporal primary axis); reveals North-South financing mechanism as extraction point"
+    },
+    {
+      "claim_id": "degrowth_transformation",
+      "human_readable": "Degrowth Reading (Structural Transformation Path)",
+      "structural_delta": "Climate response via rejection of GDP growth assumption, requiring deep socioeconomic restructuring and consumption reduction in wealthy nations",
+      "primary_observable": "Policy adoption of degrowth measures (UBS, maximum income, working time reduction); material/energy throughput reduction rates; political feasibility indicators",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "future_generations_avoiding_carbon_removal_dependency, global_south_development_rights",
+      "victim": "current_wealthy_populations_consumption_patterns, growth_dependent_institutions",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; inverts victim structure of mitigation-priority (current wealthy vs future/vulnerable); lowest institutional authority but highest structural coherence per research context"
+    },
+    {
+      "claim_id": "intergenerational_discount_mechanism",
+      "human_readable": "Intergenerational Discounting (Future Cost Externalization)",
+      "structural_delta": "Economic discount rates systematically devalue future climate damages, enabling current inaction",
+      "primary_observable": "Discount rates in climate-economic models (Stern 1.4% vs Nordhaus 4.3%); present value of future damages",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "current_generation_avoiding_mitigation_costs",
+      "victim": "future_generations_bearing_compounded_damages",
+      "downstream_of": [],
+      "feeds_into": [
+        "mitigation_priority",
+        "adaptation_priority"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanism underlying both mitigation and adaptation readings, but captured implicitly in their victim structures; would add fourth axis beyond structural budget"
+    },
+    {
+      "claim_id": "carbon_removal_feasibility",
+      "human_readable": "Carbon Removal Feasibility (Negative Emissions Dependency)",
+      "structural_delta": "IAM scenarios assume large-scale carbon dioxide removal (CDR) at scales never demonstrated, deferring mitigation burden",
+      "primary_observable": "Required CDR deployment (Gt CO2/year by 2050); current CDR capacity; land-use competition for BECCS",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "mitigation_priority"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: technical feasibility constraint specific to mitigation-priority reading; lower structural centrality than selected readings; omega material on technological risk"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "mitigation_priority",
+      "kernel_id": "climate_response_action",
+      "reading_id": "mitigation_priority"
+    },
+    {
+      "claim_id": "adaptation_priority",
+      "kernel_id": "climate_response_action",
+      "reading_id": "adaptation_priority"
+    },
+    {
+      "claim_id": "degrowth_transformation",
+      "kernel_id": "climate_response_action",
+      "reading_id": "degrowth_transformation"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "intergenerational_discount_mechanism",
+      "structural_delta": "Economic discount rates devalue future climate damages",
+      "hypothesis": "snare",
+      "deferral_reason": "Mechanism underlying both mitigation and adaptation readings; victim structure captured implicitly in selected readings; fourth axis beyond structural budget"
+    },
+    {
+      "claim_id": "carbon_removal_feasibility",
+      "structural_delta": "IAM scenarios assume undemonstrated large-scale CDR",
+      "hypothesis": "piton",
+      "deferral_reason": "Technical constraint specific to mitigation-priority reading; lower centrality than kernel readings; technological risk bounded in omega"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do mitigation-priority and adaptation-priority collapse into one reading if both accept GDP growth? No: they differ on temporal cost distribution (current emissions reduction vs deferred adaptation investment) and victim structure (future generations vs current Global South). Distinct constraints confirmed.",
+      "source": "§1.3-K kernel/not-kernel decision; coherence check"
+    },
+    {
+      "id": "omega_hybrid_pathway_exclusion",
+      "description": "Are hybrid pathways (e.g., mitigation + adaptation, or degrowth + adaptation) structurally distinct readings? Research context suggests IPCC treats them as scenario variations within readings, not separate readings. Excluded from kernel decomposition but noted as omega for potential expansion.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_cdr_technological_risk",
+      "description": "If large-scale CDR proves infeasible, mitigation-priority reading collapses into adaptation-priority or degrowth. Carbon removal feasibility is a piton that could reclassify the entire kernel structure. Deferred axis carbon_removal_feasibility bounds this uncertainty.",
+      "source": "Deferred axis carbon_removal_feasibility; F03 mountain validity concern"
+    },
+    {
+      "id": "omega_political_feasibility_asymmetry",
+      "description": "Research context flags degrowth political feasibility as 'substantial challenge' but does not apply same scrutiny to mitigation-priority's assumption of unprecedented technological change. Asymmetric feasibility framing may reflect institutional authority bias rather than structural analysis.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); extraction anchor on degrowth political feasibility"
+    },
+    {
+      "id": "omega_indigenous_climate_knowledge",
+      "description": "All three readings operate within Western institutional frameworks (IPCC, IAM, degrowth literature). Indigenous climate knowledge systems and governance structures absent from extraction. Potential fourth reading or cross-cutting axis not captured.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); F34 epistemic trespass boundary"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: carbon_removal_feasibility classified as piton (technical constraint) but global CDR deployment failure could reclassify entire mitigation-priority reading. Generated omega_cdr_technological_risk. F34 detected: Indigenous climate knowledge systems beyond model's domain competence; noted as omega_indigenous_climate_knowledge rather than attempting extraction."
+  },
+  "_seed_id": "climate_response_kernel"
+}

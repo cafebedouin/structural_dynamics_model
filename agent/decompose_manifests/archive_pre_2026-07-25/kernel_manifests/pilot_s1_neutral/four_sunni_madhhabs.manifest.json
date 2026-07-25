@@ -1,0 +1,266 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Islamic Jurisprudence / Legal Theory / Comparative Law",
+  "family_id": "sunni_madhahib_jurisprudential_method",
+  "topic_summary": "Analysis of the four Sunni schools of jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali) as a contested kernel where each school reads the same jurisprudential-method commitment differently, grounding interpretive authority through distinct epistemological frameworks while maintaining mutual recognition across centuries without displacement.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Hanafi school (rationalist usul al-fiqh; ra'y and qiyas emphasis)",
+      "Maliki school (Medinan practice/'amal; maslaha mursala)",
+      "Shafi'i school (systematic hadith hierarchy; rejection of istihsan)",
+      "Hanbali school (textualist; minimal qiyas; hadith primacy)",
+      "Usul al-fiqh (jurisprudential methodology kernel)",
+      "Mujtahid (qualified jurist with interpretive authority)",
+      "Taqlid (following established school authority)",
+      "Ijma' (consensus mechanism, differently scoped by schools)"
+    ],
+    "key_tensions": [
+      "Rationalist vs textualist epistemology (Hanafi/Maliki vs Hanbali)",
+      "Hadith hierarchy vs local practice primacy (Shafi'i vs Maliki)",
+      "Analogical reasoning scope (broad Hanafi qiyas vs restricted Hanbali qiyas)",
+      "Authority grounding: founder's method vs regional continuity vs hadith corpus vs text literalism"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "hanafi_reading",
+      "human_readable": "Hanafi Reading (Rationalist Usul)",
+      "structural_delta": "Jurisprudential method grounded in systematic analogical reasoning (qiyas) and juristic preference (istihsan); authority derives from Abu Hanifa's rationalist framework",
+      "primary_observable": "Frequency of qiyas deployment in fatawa; acceptance of istihsan as valid source",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "rationalist_jurists",
+      "victim": "strict_textualists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; distinct authority-grounding via rationalist epistemology"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "human_readable": "Maliki Reading (Medinan Practice Usul)",
+      "structural_delta": "Jurisprudential method grounded in Medinan customary practice ('amal) and public interest (maslaha mursala); authority derives from continuity with Prophet's city",
+      "primary_observable": "Weight given to 'amal al-Madina in legal rulings; maslaha invocations",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "regional_practice_authorities",
+      "victim": "hadith_purists",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; distinct authority-grounding via geographic/temporal continuity"
+    },
+    {
+      "claim_id": "shafii_reading",
+      "human_readable": "Shafi'i Reading (Systematic Hadith Hierarchy Usul)",
+      "structural_delta": "Jurisprudential method grounded in explicit hadith hierarchy and rejection of juristic preference; authority derives from al-Shafi'i's Risala systematization",
+      "primary_observable": "Hadith authentication requirements in fatawa; rejection rate of istihsan/maslaha arguments",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "hadith_scholars",
+      "victim": "customary_law_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; distinct authority-grounding via hadith corpus systematization"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "human_readable": "Hanbali Reading (Textualist Usul)",
+      "structural_delta": "Jurisprudential method grounded in text literalism and minimal analogical reasoning; authority derives from Ahmad ibn Hanbal's hadith primacy",
+      "primary_observable": "Qiyas restriction scope; reliance on weak hadith over qiyas",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "textualist_traditionalists",
+      "victim": "rationalist_interpreters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Fourth reading of contested kernel; distinct authority-grounding via text literalism"
+    },
+    {
+      "claim_id": "taqlid_mechanism",
+      "human_readable": "Taqlid Mechanism (School-Following as Stability)",
+      "structural_delta": "Institutionalized following of established school authority prevents interpretive chaos while preserving madhab plurality",
+      "primary_observable": "Proportion of jurists claiming mujtahid status vs muqallid status across centuries",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "hanafi_reading",
+        "maliki_reading",
+        "shafii_reading",
+        "hanbali_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Independent coordination mechanism; survives §3 test as distinct observable from kernel readings"
+    },
+    {
+      "claim_id": "political_patronage_distribution",
+      "human_readable": "Political Patronage Distribution (State Madhab Selection)",
+      "structural_delta": "State patronage of specific schools creates regional dominance without eliminating alternatives",
+      "primary_observable": "Official madhab of successive caliphates/sultanates; qadi appointment patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_aligned_ulama",
+      "victim": "non_patronized_schools",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: political overlay on kernel structure; lower centrality than taqlid mechanism"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hanafi_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "hanafi_reading"
+    },
+    {
+      "claim_id": "maliki_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "maliki_reading"
+    },
+    {
+      "claim_id": "shafii_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "shafii_reading"
+    },
+    {
+      "claim_id": "hanbali_reading",
+      "kernel_id": "usul_al_fiqh_method",
+      "reading_id": "hanbali_reading"
+    },
+    "taqlid_mechanism"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "political_patronage_distribution",
+      "structural_delta": "State patronage creates regional dominance without elimination",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Political overlay on kernel structure; captured indirectly via taqlid mechanism's coordination function"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_shiite_exclusion",
+      "description": "Why do Ja'fari and Zaydi schools not participate in the same mutual-recognition structure? Is Sunni/Shi'a split a different kernel or a foreclosure edge?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_salafi_displacement_attempt",
+      "description": "Does modern Salafism's rejection of taqlid constitute a fifth reading or an attempt to collapse the kernel itself? Authority-grounding via 'direct Quran/Sunnah access' vs madhab mediation.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_ijma_scope_variance",
+      "description": "Each school defines ijma' (consensus) scope differently. Is this a sub-kernel within usul al-fiqh or a downstream coordination mechanism?",
+      "source": "§2.2 Multi-Lens Scan (Legal Theory lens)"
+    },
+    {
+      "id": "omega_gender_jurisprudence_convergence",
+      "description": "Do the four schools converge on gender-related rulings despite methodological differences? If so, is the kernel contested on method but not on substantive outcomes in specific domains?",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: four readings share usul al-fiqh commitment but ground authority differently. Taqlid mechanism survives §3 as independent coordination axis."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Usul al-fiqh (jurisprudential methodology): the shared commitment to deriving Islamic law from foundational sources (Quran, Sunnah, ijma', qiyas) through systematic interpretive principles",
+    "authority_description": "Each school grounds interpretive legitimacy differently: Hanafi via rationalist framework, Maliki via Medinan continuity, Shafi'i via hadith systematization, Hanbali via text literalism. All claim fidelity to the same kernel while reading it through incompatible epistemological lenses.",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "usul_al_fiqh_method",
+    "readings": [
+      {
+        "reading_id": "hanafi_reading",
+        "commitment": "Jurisprudential method privileges systematic analogical reasoning (qiyas) and juristic preference (istihsan) as valid sources alongside text",
+        "authority_grounding": "Abu Hanifa's rationalist epistemology; Iraqi scholarly tradition",
+        "sibling_readings": [
+          "maliki_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Broad qiyas scope; istihsan acceptance; rationalist jurists as primary beneficiaries; strict textualists as victims"
+      },
+      {
+        "reading_id": "maliki_reading",
+        "commitment": "Jurisprudential method privileges Medinan customary practice ('amal) and public interest (maslaha mursala) as authoritative sources",
+        "authority_grounding": "Geographic/temporal continuity with Prophet's city; Malik ibn Anas's Muwatta",
+        "sibling_readings": [
+          "hanafi_reading",
+          "shafii_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Regional practice primacy; maslaha invocations; customary law practitioners as beneficiaries; hadith purists as victims"
+      },
+      {
+        "reading_id": "shafii_reading",
+        "commitment": "Jurisprudential method requires explicit hadith hierarchy and rejects juristic preference mechanisms not grounded in transmitted sources",
+        "authority_grounding": "Al-Shafi'i's Risala systematization; hadith authentication science",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "hanbali_reading"
+        ],
+        "expected_structural_delta": "Hadith corpus primacy; istihsan/maslaha rejection; hadith scholars as beneficiaries; customary practitioners as victims"
+      },
+      {
+        "reading_id": "hanbali_reading",
+        "commitment": "Jurisprudential method demands text literalism and minimal analogical reasoning; weak hadith preferred over qiyas",
+        "authority_grounding": "Ahmad ibn Hanbal's hadith primacy; anti-rationalist epistemology",
+        "sibling_readings": [
+          "hanafi_reading",
+          "maliki_reading",
+          "shafii_reading"
+        ],
+        "expected_structural_delta": "Qiyas restriction; text literalism; traditionalists as beneficiaries; rationalist interpreters as victims"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hanafi_reading",
+        "reading_b": "hanbali_reading",
+        "basis": "Hanafi epistemology holds that reason can independently generate legal rulings through qiyas/istihsan; Hanbali epistemology holds that only transmitted text can authorize rulings. No single framework can hold both: accepting reason as independent source requires rejecting text-only constraint, and vice versa."
+      },
+      {
+        "reading_a": "maliki_reading",
+        "reading_b": "shafii_reading",
+        "basis": "Maliki epistemology holds that Medinan customary practice ('amal) has independent authority even against isolated hadith; Shafi'i epistemology holds that only authenticated hadith can override other authenticated hadith. No single framework can hold both: accepting 'amal as authoritative requires rejecting hadith-only hierarchy, and vice versa."
+      },
+      {
+        "reading_a": "hanafi_reading",
+        "reading_b": "shafii_reading",
+        "basis": "Hanafi epistemology accepts istihsan (juristic preference) as a valid source; Shafi'i epistemology categorically rejects istihsan as arbitrary. No single framework can hold both: accepting istihsan as valid requires rejecting its categorical prohibition, and vice versa."
+      }
+    ]
+  },
+  "_seed_id": "four_sunni_madhhabs"
+}

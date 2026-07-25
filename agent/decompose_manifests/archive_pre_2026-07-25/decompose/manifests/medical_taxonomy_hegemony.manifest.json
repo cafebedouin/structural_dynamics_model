@@ -1,0 +1,267 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Medical Epistemology / Psychiatric Taxonomy / Social Construction of Illness",
+  "family_id": "dsm_taxonomy_contest_2026",
+  "topic_summary": "Analysis of psychiatric diagnostic taxonomy (DSM, ICD) as a contested epistemic kernel where institutional psychiatry reads the taxonomy as objective disease classification grounded in biological pathology, while neurodiversity and critical psychiatry movements read it as socially constructed boundary enforcement that pathologizes variation to serve institutional power and pharmaceutical markets.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "DSM/ICD (Diagnostic and Statistical Manual / International Classification of Diseases - authoritative taxonomies)",
+      "American Psychiatric Association (publisher and interpretive authority for DSM)",
+      "Institutional psychiatry (medical establishment claiming biological disease model)",
+      "Neurodiversity movement (autism, ADHD advocacy reading taxonomy as social construction)",
+      "Pharmaceutical industry (benefits from expanded diagnostic categories)",
+      "State coercive apparatus (involuntary commitment, treatment mandates depend on diagnostic authority)"
+    ],
+    "key_tensions": [
+      "Biological essentialism vs social construction (is ADHD a brain disorder or a mismatch with institutional norms?)",
+      "Medical authority vs lived experience (who has epistemic standing to define pathology?)",
+      "Standardization imperative vs variation tolerance (does taxonomy serve clinical utility or social control?)"
+    ],
+    "key_mechanisms": [
+      "Diagnostic expansion (each DSM revision adds categories; threshold for diagnosis lowers)",
+      "Insurance gatekeeping (reimbursement requires DSM code; no code = no treatment access)",
+      "Involuntary treatment authorization (legal coercion depends on diagnosis meeting criteria)",
+      "Pharmaceutical targeting (drug development follows DSM categories; categories shape markets)"
+    ],
+    "key_absences": [
+      "Historical contingency of categories (homosexuality removed 1973; gender dysphoria added/revised; no account of taxonomy's temporal instability)",
+      "Inter-rater reliability data (claimed objectivity vs measured diagnostic agreement rates)",
+      "Non-Western epistemic frameworks (taxonomy globalizes Euro-American psychiatric model; indigenous healing traditions excluded)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "biomedical_reading",
+      "human_readable": "Biomedical Reading (Taxonomy as Disease Discovery)",
+      "structural_delta": "DSM categories map to objective neurobiological pathology; diagnosis identifies pre-existing disease entities amenable to pharmaceutical correction",
+      "primary_observable": "Claimed: neuroimaging biomarkers, genetic correlates. Actual: diagnostic reliability coefficients (kappa), treatment response rates",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "psychiatric_establishment_pharmaceutical_complex",
+      "victim": "diagnosed_individuals_subject_to_coercion",
+      "downstream_of": [],
+      "feeds_into": [],
+      "kernel_id": "dsm_taxonomy_kernel",
+      "reading_id": "biomedical_reading",
+      "sibling_readings": [
+        "neurodiversity_reading",
+        "critical_psychiatry_reading"
+      ],
+      "expected_structural_delta": "Expands victim set (anyone meeting threshold criteria becomes pathological); high extractiveness via involuntary treatment and pharmaceutical capture",
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Dominant institutional reading; defines coercive apparatus; highest extractiveness"
+    },
+    {
+      "claim_id": "neurodiversity_reading",
+      "human_readable": "Neurodiversity Reading (Taxonomy as Normative Boundary Enforcement)",
+      "structural_delta": "DSM categories pathologize natural human variation that conflicts with institutional norms (school compliance, workplace productivity); diagnosis is social construction serving conformity",
+      "primary_observable": "Expansion of ADHD diagnosis correlating with standardized testing regimes; autism diagnosis rates vs educational accommodation access",
+      "epsilon_bin": "high",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "institutional_systems_requiring_behavioral_conformity",
+      "victim": "neurodivergent_individuals_denied_accommodation_or_coerced_into_treatment",
+      "downstream_of": [],
+      "feeds_into": [],
+      "kernel_id": "dsm_taxonomy_kernel",
+      "reading_id": "neurodiversity_reading",
+      "sibling_readings": [
+        "biomedical_reading",
+        "critical_psychiatry_reading"
+      ],
+      "expected_structural_delta": "Redefines victim set (pathologization itself is harm); extractiveness via denial of accommodation and forced normalization",
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Direct structural opposition to biomedical reading; alters victim definition; high social movement salience"
+    },
+    {
+      "claim_id": "critical_psychiatry_reading",
+      "human_readable": "Critical Psychiatry Reading (Taxonomy as Pharmaceutical Market Construction)",
+      "structural_delta": "DSM categories are reverse-engineered from drug effects; disorders defined to match available treatments; taxonomy serves pharmaceutical capital accumulation",
+      "primary_observable": "Temporal sequence of drug approval vs diagnostic category creation (e.g., social anxiety disorder and SSRI marketing); pharmaceutical industry funding of DSM task forces",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "pharmaceutical_industry",
+      "victim": "patients_subjected_to_overprescription",
+      "downstream_of": [],
+      "feeds_into": [],
+      "kernel_id": "dsm_taxonomy_kernel",
+      "reading_id": "critical_psychiatry_reading",
+      "sibling_readings": [
+        "biomedical_reading",
+        "neurodiversity_reading"
+      ],
+      "expected_structural_delta": "Victim set defined by market exposure; extractiveness via pharmaceutical profit rather than state coercion",
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct beneficiary structure (capital vs institutional authority); complements other readings by identifying economic substrate"
+    },
+    {
+      "claim_id": "insurance_gatekeeping_piton",
+      "human_readable": "Insurance Gatekeeping (Reimbursement Dependency on Taxonomy)",
+      "structural_delta": "Access to mental health treatment requires DSM diagnosis; taxonomy becomes mandatory even when clinician disputes category validity",
+      "primary_observable": "Insurance claim denial rates for non-coded vs coded services; clinician survey data on diagnostic code assignment practices",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "insurance_industry",
+      "victim": "patients_with_non-conforming_presentations",
+      "downstream_of": [
+        "biomedical_reading"
+      ],
+      "feeds_into": [
+        "critical_psychiatry_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton downstream of biomedical reading; captured in that reading's coercive infrastructure"
+    },
+    {
+      "claim_id": "cultural_imperialism_mountain",
+      "human_readable": "Cultural Imperialism (Globalization of Euro-American Psychiatric Model)",
+      "structural_delta": "DSM/ICD impose Western psychiatric epistemology globally; indigenous healing traditions delegitimized; cross-cultural validity unexamined",
+      "primary_observable": "WHO adoption of ICD categories in non-Western nations; suppression of traditional healing practices via medical licensing laws",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": "non_western_populations",
+      "downstream_of": [],
+      "feeds_into": [
+        "biomedical_reading",
+        "neurodiversity_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing background context; less structurally central than the three selected readings for this contest"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "biomedical_reading",
+      "kernel_id": "dsm_taxonomy_kernel",
+      "reading_id": "biomedical_reading"
+    },
+    {
+      "claim_id": "neurodiversity_reading",
+      "kernel_id": "dsm_taxonomy_kernel",
+      "reading_id": "neurodiversity_reading"
+    },
+    {
+      "claim_id": "critical_psychiatry_reading",
+      "kernel_id": "dsm_taxonomy_kernel",
+      "reading_id": "critical_psychiatry_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "insurance_gatekeeping_piton",
+      "structural_delta": "Reimbursement dependency forces diagnostic conformity",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream mechanism of biomedical reading's institutional power; captured in that reading's coercive infrastructure analysis"
+    },
+    {
+      "claim_id": "cultural_imperialism_mountain",
+      "structural_delta": "Globalization of Western psychiatric epistemology",
+      "hypothesis": "mountain",
+      "deferral_reason": "Background structural constraint; less central to the core epistemic contest than the three selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_inter_rater_reliability",
+      "description": "Biomedical reading claims objective disease mapping, but DSM field trials show kappa values 0.2-0.4 for many categories (poor agreement). If reliability is low, is the taxonomy functioning as a Rope (coordination device) rather than Mountain (natural kind discovery)?",
+      "source": "Dark Matter Probe 1 (Operational Medium) + Absence Inventory (inter-rater reliability data)"
+    },
+    {
+      "id": "omega_homosexuality_precedent",
+      "description": "DSM-II listed homosexuality as disorder until 1973 removal via APA vote. If a diagnostic category can be removed by committee vote rather than empirical falsification, does this validate neurodiversity reading's social construction claim? Does biomedical reading have a coherent account of this historical contingency?",
+      "source": "Absence Inventory (historical contingency of categories) + axiom contradiction test"
+    },
+    {
+      "id": "omega_pharmaceutical_causality",
+      "description": "Critical psychiatry reading claims categories reverse-engineered from drug effects. Temporal data required: for each DSM category added since DSM-III (1980), did corresponding pharmaceutical treatment exist before or after category formalization? If after, biomedical reading weakened; if before, critical reading weakened.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + primary observable for critical_psychiatry_reading"
+    },
+    {
+      "id": "omega_coexistence_paradox",
+      "description": "Can a clinician coherently hold both biomedical reading (categories are real diseases) AND use neurodiversity reading for some patients (ADHD as variation)? If yes, readings may not be axiom-contradictory despite appearing so. If no, pluralism is licensed rather than coherent.",
+      "source": "Axiom contradiction testing + §1.3-K independence constraint"
+    },
+    {
+      "id": "omega_involuntary_treatment_threshold",
+      "description": "At what diagnostic threshold does state coercive power activate? Schizophrenia diagnosis enables involuntary commitment; ADHD does not. Is there a severity gradient where biomedical and neurodiversity readings collapse into agreement (severe = disease; mild = variation)? Or does any threshold reinforce biomedical hegemony?",
+      "source": "Mechanism extraction (involuntary treatment authorization) + victim set boundary testing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel structure confirmed: three readings produce structurally distinct constraints with different beneficiary/victim sets and extractiveness profiles. Biomedical reading enables state coercion; neurodiversity reading identifies pathologization as harm; critical reading foregrounds pharmaceutical capital. All three operate on the same taxonomic kernel but instantiate genuinely different constraint structures."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Psychiatric diagnostic taxonomy (DSM/ICD) as authoritative codification of mental disorder categories",
+    "authority_description": "American Psychiatric Association (DSM) and World Health Organization (ICD) claim interpretive authority grounded in medical expertise and committee consensus process",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_tyranny",
+    "is_contested_kernel": true,
+    "kernel_id": "dsm_taxonomy_kernel",
+    "readings": [
+      {
+        "reading_id": "biomedical_reading",
+        "commitment": "DSM categories map to objective neurobiological disease entities discoverable through empirical research",
+        "authority_grounding": "medical expertise, psychiatric training, claimed biological substrate",
+        "sibling_readings": [
+          "neurodiversity_reading",
+          "critical_psychiatry_reading"
+        ],
+        "expected_structural_delta": "Victim set: anyone meeting diagnostic threshold criteria; extractiveness: high (enables involuntary treatment, pharmaceutical intervention, loss of legal capacity); beneficiary: psychiatric establishment, pharmaceutical industry, institutions requiring behavioral conformity"
+      },
+      {
+        "reading_id": "neurodiversity_reading",
+        "commitment": "DSM categories pathologize natural human neurological variation that conflicts with institutional behavioral norms",
+        "authority_grounding": "lived experience, disability rights framework, social model of disability",
+        "sibling_readings": [
+          "biomedical_reading",
+          "critical_psychiatry_reading"
+        ],
+        "expected_structural_delta": "Victim set: neurodivergent individuals subjected to coercive normalization or denied accommodation; extractiveness: high (pathologization itself as harm; denial of self-determination); beneficiary: institutional systems requiring conformity (schools, employers, carceral systems)"
+      },
+      {
+        "reading_id": "critical_psychiatry_reading",
+        "commitment": "DSM categories are reverse-engineered from available pharmaceutical treatments to construct markets for psychotropic drugs",
+        "authority_grounding": "political economy analysis, conflict-of-interest documentation, historical materialism",
+        "sibling_readings": [
+          "biomedical_reading",
+          "neurodiversity_reading"
+        ],
+        "expected_structural_delta": "Victim set: patients subjected to overprescription and adverse drug effects; extractiveness: moderate-high (profit extraction via pharmaceutical sales); beneficiary: pharmaceutical capital, psychiatrists receiving industry funding"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "biomedical_reading",
+        "reading_b": "neurodiversity_reading",
+        "basis": "Biomedical reading axiom: mental disorders are objective disease entities requiring treatment. Neurodiversity reading axiom: pathologization of variation is the harm, not the variation itself. No single coherent framework can hold both: either ADHD is a disease requiring correction, or pathologizing ADHD is an injustice to be resisted. The contradiction is definitional."
+      },
+      {
+        "reading_a": "biomedical_reading",
+        "reading_b": "critical_psychiatry_reading",
+        "basis": "Biomedical reading axiom: categories discovered through empirical research into natural disease kinds. Critical psychiatry axiom: categories constructed to match pharmaceutical product lines. No single framework holds both: either the taxonomy reflects nature or it reflects capital accumulation, but not both simultaneously. Temporal priority (drug first or category first) is dispositive."
+      }
+    ]
+  },
+  "_seed_id": "medical_taxonomy_hegemony"
+}

@@ -1,0 +1,159 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Collective Memory / Ritual Practice",
+  "family_id": "ritual_catastrophe_memory",
+  "topic_summary": "Analysis of Jewish catastrophe-commemoration rituals (Tisha B'Av, Passover) as contested kernels of mourning-practice preservation. The kernel question: does ritual transmission preserve survival-competence (adaptive capacity under persecution) or only mourning-practice itself (symbolic continuity without operational yield)?",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Tisha B'Av (annual fast commemorating Temple destructions, 586 BCE and 70 CE)",
+      "Passover (annual festival commemorating Exodus from Egypt, ~1300 BCE claimed)",
+      "Rabbinic tradition (interpretive authority grounding ritual continuity)",
+      "Diaspora communities (distributed practice-holders across 2000+ years)",
+      "Halakhic framework (legal-ritual system encoding practice-norms)",
+      "Historical catastrophes (Temple destructions, expulsions, pogroms, Shoah)"
+    ],
+    "key_tensions": [
+      "Ritual fidelity vs adaptive modification (preserve exact form vs context-responsive practice)",
+      "Mourning-as-memory vs mourning-as-preparation (symbolic continuity vs operational readiness)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "catastrophe_memory_kernel",
+      "human_readable": "Catastrophe-Memory Kernel (Ritual Transmission Function)",
+      "structural_delta": "Contested readings of what ritual catastrophe-commemoration preserves across millennia",
+      "primary_observable": "Ritual practice continuity metrics; community survival rates under persecution; adaptive capacity indicators",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested kernel with structurally distinct readings that emit different constraint types"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "symbol_continuity_reading",
+      "kernel_id": "catastrophe_memory_kernel",
+      "reading_id": "symbol_continuity_reading"
+    },
+    {
+      "claim_id": "survival_competence_reading",
+      "kernel_id": "catastrophe_memory_kernel",
+      "reading_id": "survival_competence_reading"
+    },
+    {
+      "claim_id": "trauma_encoding_reading",
+      "kernel_id": "catastrophe_memory_kernel",
+      "reading_id": "trauma_encoding_reading"
+    },
+    {
+      "claim_id": "boundary_maintenance_reading",
+      "kernel_id": "catastrophe_memory_kernel",
+      "reading_id": "boundary_maintenance_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_shoah_discontinuity",
+      "description": "Does the Shoah represent a discontinuity that invalidates pre-1945 readings? Post-Shoah theology may have generated a fifth reading (theodicy-crisis) not captured in the four-reading decomposition.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_secularization_reclassification",
+      "description": "In secularized communities, does ritual practice shift from any of the four readings to pure cultural-identity marker (D1 without D4/D5 operational content)? This would reclassify the constraint type.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_comparative_ritual",
+      "description": "Do other catastrophe-commemoration traditions (Armenian Genocide remembrance, African diaspora ritual) exhibit the same reading-structure? Cross-tradition comparison may reveal whether the four-reading decomposition is tradition-specific or structurally general.",
+      "source": "§2.2 Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four-reading decomposition derived from multi-lens scan (ritual studies, collective memory theory, diaspora survival analysis, halakhic jurisprudence). Each reading passes individually-holdable test and emits structurally distinct constraint."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Ritual catastrophe-commemoration as mechanism for transmitting collective memory across millennia of diaspora",
+    "authority_description": "Rabbinic interpretive tradition grounding ritual practice-norms; halakhic framework encoding transmission fidelity",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "catastrophe_memory_kernel",
+    "readings": [
+      {
+        "reading_id": "symbol_continuity_reading",
+        "commitment": "Ritual preserves symbolic continuity and collective identity across time",
+        "authority_grounding": "Rabbinic tradition / cultural-anthropological",
+        "sibling_readings": [
+          "survival_competence_reading",
+          "trauma_encoding_reading",
+          "boundary_maintenance_reading"
+        ],
+        "expected_structural_delta": "D1/D4 constraint: mourning-practice as identity-marker; beneficiary is tradition-continuity itself; victim is adaptive modification (ritual rigidity costs). Low extractiveness — symbolic transmission without operational survival yield."
+      },
+      {
+        "reading_id": "survival_competence_reading",
+        "commitment": "Ritual encodes and transmits adaptive capacity for persecution-survival",
+        "authority_grounding": "Diaspora survival analysis / evolutionary-cultural",
+        "sibling_readings": [
+          "symbol_continuity_reading",
+          "trauma_encoding_reading",
+          "boundary_maintenance_reading"
+        ],
+        "expected_structural_delta": "D5 constraint: mourning-practice as survival-training; beneficiary is community resilience under threat; victim is assimilation pressure (boundary-maintenance costs). Moderate extractiveness — operational competence preserved through ritual rehearsal of catastrophe-response patterns."
+      },
+      {
+        "reading_id": "trauma_encoding_reading",
+        "commitment": "Ritual encodes intergenerational trauma as warning system",
+        "authority_grounding": "Trauma studies / psychoanalytic-collective",
+        "sibling_readings": [
+          "symbol_continuity_reading",
+          "survival_competence_reading",
+          "boundary_maintenance_reading"
+        ],
+        "expected_structural_delta": "D4 constraint: mourning-practice as trauma-transmission mechanism; beneficiary is threat-vigilance (early-warning capacity); victim is psychological burden on descendants. Moderate-to-high extractiveness — trauma costs imposed on future generations for collective threat-detection."
+      },
+      {
+        "reading_id": "boundary_maintenance_reading",
+        "commitment": "Ritual enforces group boundaries through shared mourning-practice",
+        "authority_grounding": "Sociological boundary-theory / Durkheimian",
+        "sibling_readings": [
+          "symbol_continuity_reading",
+          "survival_competence_reading",
+          "trauma_encoding_reading"
+        ],
+        "expected_structural_delta": "D3 constraint: mourning-practice as boundary-enforcement; beneficiary is in-group cohesion; victim is individual autonomy and out-group relations. Moderate extractiveness — boundary-maintenance costs (exclusion, conformity pressure) for group solidarity."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "symbol_continuity_reading",
+        "reading_b": "survival_competence_reading",
+        "basis": "Symbol-continuity reading treats operational survival-yield as epiphenomenal (ritual persists because it is tradition, not because it confers adaptive advantage). Survival-competence reading treats symbolic content as instrumental (ritual persists because it encodes survival-relevant information). No single framework holds both: either tradition-continuity is the terminal value or survival-competence is."
+      },
+      {
+        "reading_a": "trauma_encoding_reading",
+        "reading_b": "symbol_continuity_reading",
+        "basis": "Trauma-encoding reading treats ritual as mechanism imposing psychological costs on descendants for collective threat-detection (extractive). Symbol-continuity reading treats ritual as cost-free identity-marker (non-extractive symbolic transmission). No single framework holds both: either the ritual extracts from future generations or it does not."
+      }
+    ]
+  },
+  "_seed_id": "jewish_ritual_catastrophe_memory"
+}

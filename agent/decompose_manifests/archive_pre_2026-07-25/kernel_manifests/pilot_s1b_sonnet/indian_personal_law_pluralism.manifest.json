@@ -1,0 +1,287 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Comparative Law / Political Theory / Religious Governance",
+  "family_id": "india_personal_law_regimes",
+  "topic_summary": "Analysis of India's parallel personal-law system where Hindu, Muslim, Christian, Parsi, and secular legal frameworks govern marriage and family matters simultaneously within one state. The system has persisted for decades without zero-sum displacement, raising the question of whether this represents one contested kernel (marriage/family authority) read through multiple traditions, or fundamentally incoherent bundles of distinct kernels that happen to coexist.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Hindu Marriage Act 1955 (codified Hindu personal law)",
+      "Muslim Personal Law (Shariat) Application Act 1937 (Islamic jurisprudence framework)",
+      "Indian Christian Marriage Act 1872 (Christian denominational law)",
+      "Parsi Marriage and Divorce Act 1936 (Zoroastrian community law)",
+      "Special Marriage Act 1954 (secular civil marriage option)",
+      "Indian Supreme Court (constitutional adjudicator; UCC debate arbiter)",
+      "All India Muslim Personal Law Board (interpretive authority for Muslim law)"
+    ],
+    "key_tensions": [
+      "Community autonomy vs uniform citizenship (personal law preservation vs Uniform Civil Code)",
+      "Religious authority vs state sovereignty (who interprets marriage validity)",
+      "Gender equality vs traditional practice (Shah Bano case; triple talaq reform)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Authority to define valid marriage, divorce, inheritance, and custody — the boundary of legitimate family formation and dissolution",
+    "authority_description": "Contested across five parallel systems: religious texts/clergy (Hindu, Muslim, Christian, Parsi) vs secular state legislature",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "family_law_authority",
+    "readings": [
+      {
+        "reading_id": "hindu_dharmashastra_reading",
+        "commitment": "Marriage as sacramental samskara governed by dharmic texts and customary practice",
+        "authority_grounding": "Vedic/Puranic scripture interpreted through regional custom; codified 1955-56 Acts as state compromise",
+        "sibling_readings": [
+          "muslim_shariat_reading",
+          "christian_canonical_reading",
+          "parsi_zoroastrian_reading",
+          "secular_contractual_reading"
+        ],
+        "expected_structural_delta": "Sacramental indissolubility (pre-1955); caste endogamy norms; joint family property rules; wife as ritual participant not autonomous contractor"
+      },
+      {
+        "reading_id": "muslim_shariat_reading",
+        "commitment": "Marriage as civil contract (nikah) governed by Quranic injunctions and hadith",
+        "authority_grounding": "Shariat courts and ulama interpretation; 1937 Act preserves pre-colonial Islamic jurisprudence",
+        "sibling_readings": [
+          "hindu_dharmashastra_reading",
+          "christian_canonical_reading",
+          "parsi_zoroastrian_reading",
+          "secular_contractual_reading"
+        ],
+        "expected_structural_delta": "Contractual dissolution (talaq); polygyny permitted; mahr (dower) obligation; gender-asymmetric divorce access (pre-2019 triple talaq ban)"
+      },
+      {
+        "reading_id": "christian_canonical_reading",
+        "commitment": "Marriage as sacrament under ecclesiastical authority (Catholic) or denominational governance (Protestant)",
+        "authority_grounding": "Canon law (Catholic) or denominational synods; 1872 Act codifies Christian practice",
+        "sibling_readings": [
+          "hindu_dharmashastra_reading",
+          "muslim_shariat_reading",
+          "parsi_zoroastrian_reading",
+          "secular_contractual_reading"
+        ],
+        "expected_structural_delta": "Sacramental permanence (Catholic no-divorce); denominational variance (Protestant divorce permitted); church authority over validity"
+      },
+      {
+        "reading_id": "parsi_zoroastrian_reading",
+        "commitment": "Marriage as community-preserving institution governed by Zoroastrian religious law",
+        "authority_grounding": "Parsi panchayats and Zoroastrian clergy; 1936 Act codifies community practice",
+        "sibling_readings": [
+          "hindu_dharmashastra_reading",
+          "muslim_shariat_reading",
+          "christian_canonical_reading",
+          "secular_contractual_reading"
+        ],
+        "expected_structural_delta": "Endogamy requirement (loss of community status for intermarriage); priestly authority over ritual validity; small-community preservation logic"
+      },
+      {
+        "reading_id": "secular_contractual_reading",
+        "commitment": "Marriage as civil contract between autonomous individuals under state law",
+        "authority_grounding": "Parliamentary legislation (Special Marriage Act 1954); Supreme Court constitutional review",
+        "sibling_readings": [
+          "hindu_dharmashastra_reading",
+          "muslim_shariat_reading",
+          "christian_canonical_reading",
+          "parsi_zoroastrian_reading"
+        ],
+        "expected_structural_delta": "No religious requirement; gender-symmetric rights; state registration as sole validity criterion; interfaith marriage permitted"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "hindu_dharmashastra_reading",
+        "reading_b": "secular_contractual_reading",
+        "basis": "Sacramental ontology (marriage as cosmic/ritual bond transcending individual will) cannot coexist with contractual ontology (marriage as revocable agreement between autonomous parties) in a single coherent framework"
+      },
+      {
+        "reading_a": "muslim_shariat_reading",
+        "reading_b": "christian_canonical_reading",
+        "basis": "Contractual dissolution as divinely permitted (Quranic talaq) contradicts sacramental indissolubility (Catholic permanence) — no framework holds both as simultaneously valid"
+      },
+      {
+        "reading_a": "christian_canonical_reading",
+        "reading_b": "secular_contractual_reading",
+        "basis": "Ecclesiastical authority as necessary for validity (sacrament requires church) contradicts state-only authority (civil registration sufficient) — mutually exclusive sovereignty claims"
+      },
+      {
+        "reading_a": "parsi_zoroastrian_reading",
+        "reading_b": "secular_contractual_reading",
+        "basis": "Community-boundary preservation (endogamy as religious duty) contradicts individual autonomy (interfaith marriage as protected right) — incompatible conceptions of legitimate choice"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "family_law_authority_kernel",
+      "human_readable": "Family Law Authority (Contested Kernel)",
+      "structural_delta": "Five mutually exclusive readings of what grounds legitimate marriage/divorce authority coexist without resolution",
+      "primary_observable": "Which legal framework governs a given marriage dispute (measured by court jurisdiction selection and community identification)",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "community_elites",
+      "victim": "women_in_patriarchal_readings",
+      "downstream_of": [],
+      "feeds_into": [
+        "gender_asymmetry_extraction",
+        "constitutional_federalism_tension"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core kernel with five distinct readings; highest centrality; upstream to all other axes"
+    },
+    {
+      "claim_id": "gender_asymmetry_extraction",
+      "human_readable": "Gender Asymmetry as Structural Extraction",
+      "structural_delta": "Personal law frameworks encode gender-asymmetric rights (divorce access, property, custody) that secular framework does not",
+      "primary_observable": "Gender disparity in divorce initiation rates, maintenance awards, custody outcomes across regimes",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "male_community_members",
+      "victim": "women_under_religious_law",
+      "downstream_of": [
+        "family_law_authority_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (gender outcomes vs authority source); distinct victim set; passes §3 test against kernel"
+    },
+    {
+      "claim_id": "constitutional_federalism_tension",
+      "human_readable": "Constitutional Federalism Tension (UCC Debate)",
+      "structural_delta": "Article 44 directive (Uniform Civil Code) vs Article 25 (religious freedom) creates unresolved constitutional tension",
+      "primary_observable": "Legislative attempts at UCC vs judicial preservation of personal law; political mobilization around reform",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "family_law_authority_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Different observable (constitutional structure vs lived outcomes); independent of gender axis; passes §3 test"
+    },
+    {
+      "claim_id": "colonial_legacy_path_dependency",
+      "human_readable": "Colonial Legacy Path Dependency",
+      "structural_delta": "British non-interference in personal law (1772 onwards) created institutional lock-in that post-independence state inherited",
+      "primary_observable": "Continuity of pre-1947 legal frameworks; resistance to reform framed as anti-colonial preservation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "family_law_authority_kernel"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical context axis with low current extractiveness; captured in kernel readings' authority_grounding"
+    },
+    {
+      "claim_id": "minority_rights_shield",
+      "human_readable": "Minority Rights Shield (Personal Law as Protection)",
+      "structural_delta": "Personal law preservation framed as protection against majoritarian Hindu nationalism",
+      "primary_observable": "Muslim community mobilization against UCC; political party positioning on reform",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "minority_political_leadership",
+      "victim": "minority_women",
+      "downstream_of": [
+        "family_law_authority_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps substantially with gender_asymmetry_extraction (same victim set, correlated observables); fails §3.1 distinctness test"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "hindu_dharmashastra_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "hindu_dharmashastra_reading"
+    },
+    {
+      "claim_id": "muslim_shariat_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "muslim_shariat_reading"
+    },
+    {
+      "claim_id": "christian_canonical_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "christian_canonical_reading"
+    },
+    {
+      "claim_id": "parsi_zoroastrian_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "parsi_zoroastrian_reading"
+    },
+    {
+      "claim_id": "secular_contractual_reading",
+      "kernel_id": "family_law_authority",
+      "reading_id": "secular_contractual_reading"
+    },
+    "gender_asymmetry_extraction",
+    "constitutional_federalism_tension"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "colonial_legacy_path_dependency",
+      "structural_delta": "British non-interference created institutional lock-in",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical context with low current extractiveness; authority_grounding in kernel readings captures this dimension"
+    },
+    {
+      "claim_id": "minority_rights_shield",
+      "structural_delta": "Personal law as protection against majoritarian pressure",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Fails §3.1 distinctness test: overlaps with gender_asymmetry_extraction (same victim set, correlated observables)"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Is this genuinely one kernel read five ways, or five incoherent kernels bundled by colonial accident? The axiom contradictions suggest the latter, but the system's 70-year persistence without collapse suggests licensed plurality may stabilize incoherence.",
+      "source": "§1.3-K kernel/reading decomposition; D2 culture-level break test"
+    },
+    {
+      "id": "omega_exit_asymmetry",
+      "description": "Special Marriage Act provides formal exit, but social costs (community ostracism, family pressure) create asymmetric exit barriers. Is this a Rope (coordination cost) or Snare (deliberate entrapment)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_judicial_drift_absorption",
+      "description": "Supreme Court interventions (Shah Bano reversal, triple talaq ban) suggest partial drift status, but unclear whether judiciary is absorbing drift or forcing kernel revision. May reclassify from licensed_plurality to contested_succession.",
+      "source": "§1.3 commitment system drift status analysis"
+    },
+    {
+      "id": "omega_ucc_as_kernel_replacement",
+      "description": "Would a Uniform Civil Code replace five kernels with one, or merely add a sixth reading? If the latter, the system's structure (licensed plurality) persists; if the former, it's a regime change not a reading addition.",
+      "source": "constitutional_federalism_tension axis; §2.2 Dark Matter Probe 1"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied per §1.3-K. Five readings selected based on distinct authority_grounding and expected_structural_delta. Two ordinary axes (gender_asymmetry_extraction, constitutional_federalism_tension) pass §3 independence test. Deferred minority_rights_shield due to overlap with gender axis."
+  },
+  "_seed_id": "indian_personal_law_pluralism"
+}

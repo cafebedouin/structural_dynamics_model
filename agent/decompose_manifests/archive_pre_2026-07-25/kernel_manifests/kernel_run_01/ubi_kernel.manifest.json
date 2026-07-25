@@ -1,0 +1,292 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Social Policy / Welfare State Theory",
+  "family_id": "universal_basic_income_2026",
+  "topic_summary": "Analysis of Universal Basic Income as a contested kernel where the same income-support commitment is read as either a freedom-floor enabling autonomy and dignity, or a dependency-trap undermining work incentives and fiscal sustainability. The empirical substrate is contested across pilot programs, with divergent employment effects by scale and measurement methodology. Cross-ideological appeal masks incompatible visions of purpose and implementation.",
+  "extraction_summary": {
+    "entity_count": 12,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Universal Basic Income (unconditional cash transfer to all citizens)",
+      "Welfare State (existing means-tested benefit programs: SNAP, EITC, Section 8)",
+      "Labor Market (employment participation and wage dynamics)",
+      "Pilot Programs (122 programs analyzed, 30 with employment data, 4 large-scale)",
+      "Cross-Ideological Coalition (left: anti-poverty; right: welfare-state replacement)",
+      "Automation/Technological Displacement (Andrew Yang's 4M manufacturing job loss claim)",
+      "Poverty Line (threshold determining full vs partial UBI adequacy)",
+      "Fiscal Constraint (5-35% GDP cost estimates)",
+      "Women/Caregivers (childcare payment, domestic violence exit capacity)",
+      "Low-Income Working Parent (Queens example: $31,100 targeted benefits vs $12,000 UBI)",
+      "Employers (wage-setting power under different income-floor regimes)",
+      "Tax Base (those funding UBI through labor force participation)"
+    ],
+    "key_tensions": [
+      "Freedom-floor (autonomy-enabling) vs Dependency-trap (work-disincentivizing) readings of same cash transfer",
+      "Universality (everyone receives) vs Targeting (concentrated on need) as distribution principle",
+      "Adequacy (sufficient to refuse work) vs Affordability (fiscally sustainable without dismantling welfare state)",
+      "Cross-ideological appeal (coalition-building) vs Political ambiguity (Trojan horse for incompatible agendas)"
+    ],
+    "key_mechanisms": [
+      "Unconditional Transfer (no means test, no work requirement, individual basis)",
+      "Welfare State Replacement (funding UBI by eliminating targeted programs)",
+      "Employment Effect Divergence (small pilots +0.8%, large pilots -3.2%, 37% average attrition)"
+    ],
+    "key_absences": [
+      "Inflation dynamics (how universal cash injection affects prices, especially housing)",
+      "Employer wage response (whether UBI becomes subsidy for low-wage employers or enables refusal)",
+      "Care work valuation (whether unpaid domestic/community labor counts as 'idleness' or productive activity)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Unconditional income support as a social commitment — the shared substrate is that society should provide some form of income floor, but readings diverge on whether this floor enables freedom or induces dependency",
+    "authority_description": "Contested between welfare-state administrators (means-testing legitimacy), market advocates (work-incentive legitimacy), and rights-based frameworks (dignity/autonomy legitimacy)",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Pluralism (licensed plurality) — both readings are socially live positions with institutional backing, but axioms are mutually exclusive",
+    "is_contested_kernel": true,
+    "kernel_id": "income_support_commitment",
+    "readings": [
+      {
+        "reading_id": "freedom_floor_reading",
+        "commitment": "Unconditional income support as enabler of autonomy, dignity, and labor market exit capacity",
+        "authority_grounding": "Human rights framework / capability approach (Sen, Nussbaum) / feminist economics (care work valuation)",
+        "sibling_readings": [
+          "dependency_trap_reading",
+          "targeting_efficiency_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: caregivers, precarious workers, abuse survivors, artists/entrepreneurs. Victims: none (universality eliminates means-test stigma). Low ε (rope) — coordination problem of funding level and tax base, but no inherent extractiveness. Employer wage-setting power constrained by exit capacity."
+      },
+      {
+        "reading_id": "dependency_trap_reading",
+        "commitment": "Unconditional income support as work-disincentive that atrophies skills and increases state dependence",
+        "authority_grounding": "Work-ethic norm / reciprocity principle (Anderson) / labor force participation imperative",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "targeting_efficiency_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: 'idle' non-workers subsidized by tax base. Victims: working taxpayers funding non-participation; poor individuals whose skills atrophy. Moderate ε (tangled_rope) — extractiveness from productive to non-productive, with beneficiary class (UBI recipients who exit labor market) distinct from victim class (remaining workers)."
+      },
+      {
+        "reading_id": "targeting_efficiency_reading",
+        "commitment": "Income support should be concentrated on demonstrated need, not universally distributed",
+        "authority_grounding": "Welfare economics / fiscal constraint / anti-poverty program design (SNAP, EITC, Section 8 as proven models)",
+        "sibling_readings": [
+          "freedom_floor_reading",
+          "dependency_trap_reading"
+        ],
+        "expected_structural_delta": "Beneficiaries: current targeted-program recipients (Queens parent with $31,100 benefits). Victims: same recipients under UBI replacement (lose $19,100 in example). High ε (snare) — UBI funded by cannibalizing targeted programs extracts from poor to fund universal distribution, with poor as both nominal beneficiaries and actual victims."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "freedom_floor_reading",
+        "reading_b": "dependency_trap_reading",
+        "basis": "Freedom-floor axiom: exit capacity from labor market is autonomy-enabling and dignifying. Dependency-trap axiom: exit capacity from labor market is skill-atrophying and parasitic. No single framework can hold both — one must accept that labor market exit is either emancipatory or degrading, not both simultaneously."
+      },
+      {
+        "reading_a": "freedom_floor_reading",
+        "reading_b": "targeting_efficiency_reading",
+        "basis": "Freedom-floor axiom: universality eliminates stigma and bureaucratic gatekeeping, making unconditional support superior. Targeting axiom: concentration on need is fiscally and morally superior to universal distribution. No single framework can hold both — one must accept either that universality's non-discrimination justifies its cost, or that targeting's efficiency justifies its means-testing."
+      },
+      {
+        "reading_a": "dependency_trap_reading",
+        "reading_b": "targeting_efficiency_reading",
+        "basis": "These readings coexist — both accept work-incentive preservation as legitimate concern. Dependency-trap opposes UBI because it removes work requirements; targeting opposes UBI because it dilutes concentration on need. A single conservative framework can hold both objections as complementary."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "freedom_floor_reading",
+      "human_readable": "Freedom-Floor Reading (Autonomy-Enabling Income Support)",
+      "structural_delta": "Unconditional income support enables labor market exit capacity, care work valuation, and escape from precarity/abuse",
+      "primary_observable": "Labor force participation rates among caregivers, domestic violence survivors, artists/entrepreneurs; wage dynamics in low-skill sectors; self-reported autonomy measures in pilot programs",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "caregivers, precarious_workers, abuse_survivors, artists_entrepreneurs",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "adequacy_affordability_paradox"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; rope hypothesis with distinct beneficiary structure; upstream to affordability paradox"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "human_readable": "Dependency-Trap Reading (Work-Disincentivizing Income Support)",
+      "structural_delta": "Unconditional income support reduces labor force participation, atrophies skills, and extracts from productive workers to subsidize non-participation",
+      "primary_observable": "Employment effects in large-scale pilots (4 programs >500 participants: -3.2%); skill depreciation among long-term UBI recipients; tax burden on remaining labor force",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "non_participating_ubi_recipients",
+      "victim": "working_taxpayers, skill_atrophying_poor",
+      "downstream_of": [],
+      "feeds_into": [
+        "adequacy_affordability_paradox"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; tangled_rope hypothesis with extractive structure; empirical substrate (large-pilot employment effects) supports distinct constraint"
+    },
+    {
+      "claim_id": "targeting_efficiency_reading",
+      "human_readable": "Targeting-Efficiency Reading (Concentrated Need-Based Support)",
+      "structural_delta": "Universal distribution funded by cannibalizing targeted programs extracts from poor (who lose concentrated benefits) to fund non-poor (who gain small universal payment)",
+      "primary_observable": "Benefit replacement calculations (Queens parent: $31,100 targeted vs $12,000 UBI); poverty rate changes under UBI-for-welfare-state swap scenarios",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "non_poor_ubi_recipients",
+      "victim": "current_targeted_program_recipients",
+      "downstream_of": [],
+      "feeds_into": [
+        "adequacy_affordability_paradox"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; highest centrality (snare with clear victim class); captures welfare-state replacement mechanism; empirical substrate (Queens example) demonstrates extraction"
+    },
+    {
+      "claim_id": "adequacy_affordability_paradox",
+      "human_readable": "Adequacy-Affordability Paradox (Martinelli's Dilemma)",
+      "structural_delta": "UBI adequate to enable labor market refusal ($1000/month) costs 5-35% GDP and requires welfare-state dismantling; affordable UBI becomes employer wage subsidy rather than freedom-floor",
+      "primary_observable": "GDP cost estimates; welfare-state replacement scenarios; employer wage responses to different UBI levels",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "freedom_floor_reading",
+        "dependency_trap_reading",
+        "targeting_efficiency_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream synthesis of all three readings; mountain (fiscal constraint) rather than novel extractive structure; captured in omega as boundary condition on all readings"
+    },
+    {
+      "claim_id": "pilot_attrition_validity",
+      "human_readable": "Pilot Attrition Validity (37% Average Dropout as Measurement Distortion)",
+      "structural_delta": "High attrition rates (37% average) in pilot programs distort reported outcomes, with selection effects favoring those who benefit most from UBI remaining in sample",
+      "primary_observable": "Attrition rates across 26 pilots; comparison of attrition-adjusted vs raw employment effects; demographic composition of dropouts vs remainers",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "freedom_floor_reading",
+        "dependency_trap_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological concern affecting empirical substrate of both freedom-floor and dependency-trap readings; piton (measurement artifact) rather than substantive constraint; omega material on epistemic limits"
+    },
+    {
+      "claim_id": "care_work_invisibility",
+      "human_readable": "Care Work Invisibility (Unpaid Labor as 'Idleness' Misclassification)",
+      "structural_delta": "Dependency-trap reading classifies unpaid care work (childcare, eldercare, community organizing) as 'idleness' rather than productive labor, obscuring gendered extraction",
+      "primary_observable": "Time-use surveys under UBI; gender distribution of labor force exits; care work valuation in national accounts",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "care_recipients",
+      "victim": "unpaid_caregivers_misclassified_as_idle",
+      "downstream_of": [
+        "dependency_trap_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured within freedom-floor reading's beneficiary structure (caregivers); distinct tangled_rope but lower centrality than selected readings; feminist economics lens surfaced in omega"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "freedom_floor_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "freedom_floor_reading"
+    },
+    {
+      "claim_id": "dependency_trap_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "dependency_trap_reading"
+    },
+    {
+      "claim_id": "targeting_efficiency_reading",
+      "kernel_id": "income_support_commitment",
+      "reading_id": "targeting_efficiency_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "adequacy_affordability_paradox",
+      "structural_delta": "Adequate UBI unaffordable; affordable UBI inadequate (Martinelli's dilemma)",
+      "hypothesis": "mountain",
+      "deferral_reason": "Downstream synthesis of all three readings; fiscal constraint (mountain) rather than novel extractive structure; boundary condition on all readings captured in omega"
+    },
+    {
+      "claim_id": "pilot_attrition_validity",
+      "structural_delta": "37% average attrition distorts pilot outcomes via selection effects",
+      "hypothesis": "piton",
+      "deferral_reason": "Methodological concern (measurement artifact) affecting empirical substrate; epistemic limit rather than substantive constraint; omega material"
+    },
+    {
+      "claim_id": "care_work_invisibility",
+      "structural_delta": "Unpaid care work misclassified as 'idleness' in dependency-trap reading",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Captured within freedom-floor reading's beneficiary structure; distinct feminist economics lens but lower centrality than selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_inflation_dynamics",
+      "description": "Does universal cash injection cause price inflation (especially housing), converting nominal income floor into real purchasing-power illusion? If landlords capture UBI via rent increases, the freedom-floor reading collapses into a subsidy for property owners rather than autonomy for tenants. Absence in extraction: no entity for housing market, no mechanism for price response.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary key_absences"
+    },
+    {
+      "id": "omega_employer_wage_response",
+      "description": "Does UBI enable labor market exit (freedom-floor) or subsidize low wages (employers reduce wages knowing workers have income floor)? Empirical substrate contested: no large-scale wage data from pilots. If employers capture UBI by reducing wages, the freedom-floor reading becomes a tangled_rope with employers as beneficiaries and workers as victims despite nominal income increase.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction_summary key_absences"
+    },
+    {
+      "id": "omega_adequacy_affordability_boundary",
+      "description": "Martinelli's paradox (adequate UBI unaffordable, affordable UBI inadequate) is a mountain constraint on all three readings. At what UBI level does the freedom-floor reading's exit capacity activate? Below that threshold, UBI may be a rope (coordination on funding) rather than freedom-enabler. Above that threshold, fiscal constraint forces welfare-state cannibalization (targeting-efficiency reading's snare). Deferred axis adequacy_affordability_paradox captures this boundary condition.",
+      "source": "Deferred axis adequacy_affordability_paradox + extraction_summary key_tensions"
+    },
+    {
+      "id": "omega_pilot_validity_limits",
+      "description": "37% average attrition across 26 pilots is a giant warning sign (research context). If dropouts are systematically those for whom UBI reduces employment, reported +0.8% average effect is upward-biased. Large-scale pilots (>500 participants) show -3.2% employment effect, supporting dependency-trap reading. But COVID-era timing, short duration (mean program length unclear), and self-reported data (some pilots) limit generalizability. Epistemic ceiling: model cannot adjudicate empirical validity without access to attrition-adjusted data and long-term follow-up. Deferred axis pilot_attrition_validity.",
+      "source": "F34 (Epistemic Trespass) + deferred axis pilot_attrition_validity + extraction_summary mechanisms"
+    },
+    {
+      "id": "omega_care_work_valuation",
+      "description": "Dependency-trap reading's 'idleness' classification obscures unpaid care work (childcare, eldercare, community organizing) as productive labor. If UBI enables exit from wage labor into care work, is this dependency or dignity? Feminist economics lens (deferred axis care_work_invisibility) reframes labor force exit as care work entry. Freedom-floor reading's beneficiary structure (caregivers, women escaping abuse) captures this, but the structural delta between 'idleness' and 'care work' is a contested classification, not an empirical fact. No time-use survey data in extraction to adjudicate.",
+      "source": "Deferred axis care_work_invisibility + extraction_summary key_entities (women/caregivers) + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_cross_ideological_trojan_horse",
+      "description": "UBI's cross-ideological appeal (left: anti-poverty; right: welfare-state replacement) is a political ambiguity problem, not a structural constraint. The same policy instrument serves incompatible agendas. If implemented by the right, UBI becomes targeting-efficiency reading's snare (welfare-state cannibalization). If implemented by the left, UBI becomes freedom-floor reading's rope (funded by progressive taxation without program replacement). The kernel is contested not just on normative grounds but on implementation pathway — which coalition captures the policy determines which reading instantiates. Extraction tension: 'Cross-ideological appeal (coalition-building) vs Political ambiguity (Trojan horse for incompatible agendas).'",
+      "source": "Extraction_summary key_tensions + research context (UBI as Trojan horse for left or right)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Pilot program validity (37% attrition, COVID-era timing, self-reported data, small sample sizes except 4 large programs) exceeds model's capacity to adjudicate empirical claims. Generated omega_pilot_validity_limits to bound epistemic ceiling. Model cannot determine whether freedom-floor or dependency-trap reading is empirically correct without access to attrition-adjusted long-term data. Structural analysis proceeds on assumption that both readings are coherent constraint hypotheses pending empirical resolution."
+  },
+  "_seed_id": "ubi_kernel"
+}

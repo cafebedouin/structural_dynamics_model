@@ -1,0 +1,231 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Philology / Intellectual History",
+  "family_id": "renaissance_latin_reconstruction",
+  "topic_summary": "Analysis of the Renaissance humanist reconstruction of Classical Latin as a contested kernel where 'correct Latin' was read as either a living drifted vernacular (medieval continuity position) or a recoverable classical form requiring textual archaeology (humanist reconstructionist position). The core question is whether the reconstructed classical form was reachable through evolutionary drift or constituted a separate kernel reoccupied from preserved symbols.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Medieval Latin users (clergy, scribes, administrators using living drifted form)",
+      "Renaissance humanists (Petrarch, Valla, Erasmus reconstructing classical form)",
+      "Classical Latin corpus (Cicero, Virgil, Quintilian as textual anchors)",
+      "Medieval Latin vernacular (living but drifted from classical norms)",
+      "Carolingian standardization (9th century reform attempt, partial success)",
+      "Educational institutions (universities, cathedral schools as transmission sites)"
+    ],
+    "key_tensions": [
+      "Living evolution vs textual reconstruction (continuity vs archaeology as legitimacy source)",
+      "Practitioner authority vs textual authority (who adjudicates correctness when no native speakers exist)"
+    ],
+    "key_mechanisms": [
+      "Textual recovery (manuscript hunting, collation, critical editing)",
+      "Pedagogical displacement (grammar schools shifting from medieval to classical norms)",
+      "Status signaling (classical proficiency as cultural capital marker)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "continuity_reading",
+      "human_readable": "Continuity Reading (Medieval Latin as Living Drift)",
+      "structural_delta": "Medieval Latin represents legitimate evolutionary drift from classical baseline, authority grounded in unbroken chain of practitioners",
+      "primary_observable": "Grammatical forms attested in medieval documents but absent from classical corpus; acceptability judgments by medieval grammarians",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "medieval_ecclesiastical_establishment",
+      "victim": "classical_corpus_fidelity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes living-language legitimacy claim"
+    },
+    {
+      "claim_id": "reconstructionist_reading",
+      "human_readable": "Reconstructionist Reading (Classical Latin as Recoverable Kernel)",
+      "structural_delta": "Classical Latin exists as fixed textual kernel recoverable through philological archaeology; medieval drift constitutes corruption requiring correction",
+      "primary_observable": "Divergence between medieval usage and forms attested in Cicero/Quintilian; humanist editorial principles privileging classical attestation",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "humanist_elite",
+      "victim": "medieval_practitioners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; establishes textual archaeology as legitimacy source"
+    },
+    {
+      "claim_id": "reoccupation_reading",
+      "human_readable": "Reoccupation Reading (Classical Latin as Separate Symbol System)",
+      "structural_delta": "Reconstructed classical form not reachable from medieval baseline via any evolutionary path; constitutes reoccupation of preserved symbol system rather than repair of drifted one",
+      "primary_observable": "Typological distance between medieval and classical phonology/syntax; impossibility of medieval speaker comprehending Cicero without explicit instruction",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading addressing D1 break question; mountain baseline constraining both other readings"
+    },
+    {
+      "claim_id": "pedagogical_extraction",
+      "human_readable": "Pedagogical Extraction (Education as Enforcement Layer)",
+      "structural_delta": "Grammar school curriculum shift from medieval to classical norms as mechanism extracting status from medieval practitioners",
+      "primary_observable": "Textbook adoption rates; employment outcomes for classically vs medieval-trained scribes",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "humanist_educators",
+      "victim": "non_reformed_practitioners",
+      "downstream_of": [
+        "reconstructionist_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism downstream of reconstructionist_reading; structurally captured by that reading's extractiveness"
+    },
+    {
+      "claim_id": "carolingian_precedent",
+      "human_readable": "Carolingian Precedent (Earlier Reform as Model or Warning)",
+      "structural_delta": "9th century standardization attempt as either successful model (showing reconstruction feasibility) or cautionary tale (showing reversion tendency)",
+      "primary_observable": "Persistence of Carolingian reforms in post-Carolingian manuscripts; geographical variation in reform adoption",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "reconstructionist_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical precedent informing reconstructionist legitimacy claims but lower structural centrality"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "continuity_reading",
+      "kernel_id": "correct_latin_kernel",
+      "reading_id": "continuity_reading"
+    },
+    {
+      "claim_id": "reconstructionist_reading",
+      "kernel_id": "correct_latin_kernel",
+      "reading_id": "reconstructionist_reading"
+    },
+    {
+      "claim_id": "reoccupation_reading",
+      "kernel_id": "correct_latin_kernel",
+      "reading_id": "reoccupation_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pedagogical_extraction",
+      "structural_delta": "Grammar school curriculum shift as extraction mechanism",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement layer downstream of reconstructionist_reading; extractiveness captured by parent reading"
+    },
+    {
+      "claim_id": "carolingian_precedent",
+      "structural_delta": "9th century reform as precedent or warning",
+      "hypothesis": "rope",
+      "deferral_reason": "Historical precedent with lower centrality than core readings; informational context for reconstructionist legitimacy"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_phonological_barrier",
+      "description": "Was post-classical phonological drift (loss of vowel length distinctions, consonant changes) reversible through pedagogical intervention, or does it represent an irreversible barrier making classical Latin genuinely unreachable from medieval baseline? If irreversible, reoccupation_reading strengthened to mountain status.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + reoccupation_reading structural delta"
+    },
+    {
+      "id": "omega_practitioner_continuity",
+      "description": "Does the existence of continuous institutional transmission (church, universities) constitute genuine living-language authority, or does the loss of native speakers before medieval period already make medieval Latin a reoccupied kernel rather than evolutionary continuation? Affects continuity_reading's rope vs piton classification.",
+      "source": "Absence Inventory (no native speakers for 500+ years before medieval period)"
+    },
+    {
+      "id": "omega_textual_variation",
+      "description": "Classical corpus itself shows diachronic variation (Plautus vs Cicero vs Seneca). Which stratum counts as 'the' classical kernel? Humanists privileged Ciceronian golden age, but this is itself an interpretive choice. If contested, the kernel becomes a meta-kernel with internal readings.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F01 (Premise Drift)"
+    },
+    {
+      "id": "omega_vernacular_displacement",
+      "description": "Did the reconstructionist project's success in education suppress development of Romance vernaculars as literary languages in 15th-16th century Italy/France? If so, extractiveness operates at population level beyond immediate practitioner victims.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred pedagogical_extraction axis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F01 detected: User prompt assumes 'correct Latin' is unitary kernel, but classical corpus itself spans 300+ years with substantial internal variation. Generated omega_textual_variation to capture this. Continuity vs reconstruction contest may be orthogonal to diachronic variation within classical period itself."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The notion of 'correct Latin' as a fixed reference point for grammatical legitimacy",
+    "authority_description": "Contested between practitioner continuity (medieval users) and textual archaeology (humanist reconstructors)",
+    "drift_status": "absent",
+    "candidate_pattern": "dual_authority_gridlock",
+    "is_contested_kernel": true,
+    "kernel_id": "correct_latin_kernel",
+    "readings": [
+      {
+        "reading_id": "continuity_reading",
+        "commitment": "Correct Latin is the living form transmitted through unbroken institutional practice, legitimately drifted from classical baseline",
+        "authority_grounding": "Practitioner continuity; institutional transmission chain through medieval church and universities",
+        "sibling_readings": [
+          "reconstructionist_reading",
+          "reoccupation_reading"
+        ],
+        "expected_structural_delta": "Medieval innovations (analytic verb forms, case syncretism) enter legitimate grammar; classical corpus becomes historical curiosity rather than normative standard; low extractiveness as drift is authorized"
+      },
+      {
+        "reading_id": "reconstructionist_reading",
+        "commitment": "Correct Latin is the classical form recoverable through textual criticism; medieval drift constitutes corruption requiring repair",
+        "authority_grounding": "Textual archaeology; philological method privileging manuscript attestation from classical period",
+        "sibling_readings": [
+          "continuity_reading",
+          "reoccupation_reading"
+        ],
+        "expected_structural_delta": "Medieval practitioners reclassified as corrupt users; humanist educational institutions gain authority to certify correctness; high extractiveness as living practice subordinated to textual standard"
+      },
+      {
+        "reading_id": "reoccupation_reading",
+        "commitment": "Classical Latin and medieval Latin are typologically distinct systems; reconstruction is reoccupation of preserved symbols, not repair of drift",
+        "authority_grounding": "Linguistic typology; mutual unintelligibility threshold between medieval and classical forms",
+        "sibling_readings": [
+          "continuity_reading",
+          "reconstructionist_reading"
+        ],
+        "expected_structural_delta": "Both continuity and reconstructionist claims weakened; 'Latin' becomes homonym for two distinct languages; D1 break confirmed as structural rather than evaluative question"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "continuity_reading",
+        "reading_b": "reconstructionist_reading",
+        "basis": "Continuity reading holds that living practice grounds legitimacy (authority derives from unbroken transmission); reconstructionist reading holds that textual fidelity grounds legitimacy (authority derives from classical attestation). No single framework can simultaneously hold that both practitioner continuity and textual archaeology are authoritative when they yield incompatible grammars for the same forms."
+      },
+      {
+        "reading_a": "reconstructionist_reading",
+        "reading_b": "reoccupation_reading",
+        "basis": "Reconstructionist reading assumes evolutionary continuity (medieval Latin is corrupt classical Latin, repairable via textual correction); reoccupation reading denies evolutionary continuity (medieval and classical are typologically distinct, separated by D1 break). No coherent framework holds both that a system is repairable via drift-reversal and that the evolutionary path is severed."
+      }
+    ]
+  },
+  "_seed_id": "classical_latin_humanist_revival"
+}

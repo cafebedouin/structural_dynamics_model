@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Political Philosophy / Human Rights Doctrine",
+  "family_id": "udhr_authority_contest_2026",
+  "topic_summary": "Analysis of the Universal Declaration of Human Rights as a contested normative kernel where the same foundational text is read differently by international tribunals (as establishing binding, enforceable individual rights superseding state sovereignty) versus sovereign states (as aspirational guidance subordinate to domestic jurisdiction). The contest centers on the document's authority grounding and coercive capacity over state actors.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "UDHR (1948 foundational text adopted by UN General Assembly)",
+      "International tribunals (ICC, ICJ, regional human rights courts)",
+      "Sovereign states (primary subjects of international law)",
+      "UN General Assembly (adopting body, non-binding resolutions)",
+      "Individual rights-holders (claimants under rights framework)",
+      "Domestic legal systems (state constitutional and statutory regimes)"
+    ],
+    "key_tensions": [
+      "Universal jurisdiction vs territorial sovereignty (tribunals asserting extraterritorial authority vs states claiming domestic supremacy)",
+      "Individual rights as juridical vs aspirational (UDHR provisions as enforceable law vs moral guidance)"
+    ],
+    "key_mechanisms": [
+      "Treaty ratification (states voluntarily bind themselves to ICCPR/ICESCR)",
+      "Customary international law formation (state practice + opinio juris creating binding norms)",
+      "Domestic incorporation (national courts applying international human rights norms)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism in original UDHR text (no tribunal, no sanctions, no compliance monitoring)",
+      "Colonial context of drafting (decolonization incomplete in 1948; non-Western state input limited)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "binding_universalism_reading",
+      "human_readable": "Binding Universalism Reading (Tribunals' Interpretation)",
+      "structural_delta": "UDHR establishes justiciable individual rights enforceable against states through international tribunals regardless of domestic consent",
+      "primary_observable": "Tribunal case law citing UDHR as binding authority; frequency of jus cogens claims; enforcement mechanisms activated",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "international_tribunals",
+      "victim": "sovereign_state_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading in kernel contest; highest structural extractiveness; tribunal authority structure"
+    },
+    {
+      "claim_id": "aspirational_sovereignty_reading",
+      "human_readable": "Aspirational Sovereignty Reading (States' Interpretation)",
+      "structural_delta": "UDHR provides moral guidance with no binding force absent explicit treaty ratification; state consent remains prerequisite for any obligation",
+      "primary_observable": "State invocations of domestic jurisdiction; non-ratification rates; sovereignty defense frequency in tribunal proceedings",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "sovereign_states",
+      "victim": "international_enforcement_regime",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading in kernel contest; opposite authority grounding from reading 1"
+    },
+    {
+      "claim_id": "customary_emergence_reading",
+      "human_readable": "Customary Emergence Reading (Evolutionary Interpretation)",
+      "structural_delta": "UDHR began as aspiration but evolved into binding customary international law through sustained state practice and opinio juris",
+      "primary_observable": "ICJ rulings recognizing UDHR provisions as custom; treaty negotiation patterns referencing UDHR as baseline",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "international_legal_academics",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural reading mediating between poles; documents authority drift mechanism"
+    },
+    {
+      "claim_id": "colonial_legitimacy_deficit",
+      "human_readable": "Colonial Legitimacy Deficit (Representation Critique)",
+      "structural_delta": "UDHR drafted during incomplete decolonization with limited non-Western input undermines its claim to universal authority",
+      "primary_observable": "State participation at 1948 drafting vs current UN membership; postcolonial state rejection rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "western_drafting_states",
+      "victim": "postcolonial_states",
+      "downstream_of": [],
+      "feeds_into": [
+        "binding_universalism_reading",
+        "aspirational_sovereignty_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural critique orthogonal to kernel readings; material for omega on authority legitimation"
+    },
+    {
+      "claim_id": "enforcement_mechanism_absence",
+      "human_readable": "Enforcement Mechanism Absence (Structural Gap)",
+      "structural_delta": "Original UDHR contains no compliance mechanism, tribunal access, or sanctions, creating interpretive space for authority contest",
+      "primary_observable": "Text analysis of UDHR articles; comparison with ECHR enforcement provisions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "binding_universalism_reading",
+        "aspirational_sovereignty_reading",
+        "customary_emergence_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: textual mountain feeding all readings but structurally less generative than readings themselves"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "binding_universalism_reading",
+      "kernel_id": "udhr_authority",
+      "reading_id": "binding_universalism_reading"
+    },
+    {
+      "claim_id": "aspirational_sovereignty_reading",
+      "kernel_id": "udhr_authority",
+      "reading_id": "aspirational_sovereignty_reading"
+    },
+    {
+      "claim_id": "customary_emergence_reading",
+      "kernel_id": "udhr_authority",
+      "reading_id": "customary_emergence_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "colonial_legitimacy_deficit",
+      "structural_delta": "Drafting during incomplete decolonization undermines universal authority claim",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural critique orthogonal to kernel readings; legitimation question for omega analysis"
+    },
+    {
+      "claim_id": "enforcement_mechanism_absence",
+      "structural_delta": "No original compliance mechanism creates interpretive space",
+      "hypothesis": "mountain",
+      "deferral_reason": "Textual mountain feeds all readings but less generative than readings themselves"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_colonial_legitimacy",
+      "description": "Does the 1948 drafting context (48 UN members, 8 postcolonial states) delegitimize universal claims? Postcolonial states may read UDHR as Western imposition rather than universal consensus.",
+      "source": "Deferred axis colonial_legitimacy_deficit + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_jus_cogens_boundary",
+      "description": "Which UDHR provisions have achieved jus cogens status (non-derogable norms)? Readings diverge on whether prohibition of torture/genocide is textually grounded in UDHR or emerges from separate custom.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — unclear boundary between UDHR provisions and separate custom"
+    },
+    {
+      "id": "omega_regional_variation",
+      "description": "Do regional human rights systems (ECHR, IACHR, African Charter) instantiate different readings of the kernel? European system enforceable, African system aspirational suggests reading selection is path-dependent.",
+      "source": "Multi-lens scan (Comparative Regional Systems) + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_state_practice_measurement",
+      "description": "How is 'state practice' measured for customary law formation? Tribunal rhetoric may claim widespread practice where observational evidence shows selective compliance.",
+      "source": "Primary observable ambiguity in customary_emergence_reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean scan. Three readings capture the kernel contest structure. Deferred axes document legitimation and textual questions without structural redundancy."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "UDHR text (1948) claiming universal authority over state treatment of individuals but lacking specified enforcement mechanism",
+    "authority_description": "Contested between international tribunals (claiming inherent binding authority) and sovereign states (claiming consent-based obligation only)",
+    "drift_status": "absent",
+    "candidate_pattern": "dual_authority_gridlock",
+    "is_contested_kernel": true,
+    "kernel_id": "udhr_authority",
+    "readings": [
+      {
+        "reading_id": "binding_universalism_reading",
+        "commitment": "UDHR establishes justiciable individual rights enforceable against states regardless of consent",
+        "authority_grounding": "Natural law / inherent human dignity / jus cogens claim",
+        "sibling_readings": [
+          "aspirational_sovereignty_reading",
+          "customary_emergence_reading"
+        ],
+        "expected_structural_delta": "Tribunals gain coercive authority over states; state sovereignty subordinated to individual rights regime; high extractiveness on state autonomy"
+      },
+      {
+        "reading_id": "aspirational_sovereignty_reading",
+        "commitment": "UDHR provides moral guidance requiring state consent for binding obligation",
+        "authority_grounding": "Positivist / consent-based / Westphalian sovereignty",
+        "sibling_readings": [
+          "binding_universalism_reading",
+          "customary_emergence_reading"
+        ],
+        "expected_structural_delta": "States retain veto over international obligations; tribunals lack coercive power absent treaty ratification; low extractiveness on state autonomy"
+      },
+      {
+        "reading_id": "customary_emergence_reading",
+        "commitment": "UDHR evolved from aspiration to binding custom through state practice and opinio juris",
+        "authority_grounding": "Empirical / evolutionary / practice-based legitimation",
+        "sibling_readings": [
+          "binding_universalism_reading",
+          "aspirational_sovereignty_reading"
+        ],
+        "expected_structural_delta": "Authority emerges gradually; ambiguous transition point creates strategic interpretive space; moderate extractiveness increases over time"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "binding_universalism_reading",
+        "reading_b": "aspirational_sovereignty_reading",
+        "basis": "Natural law grounding (rights inhere in humanity independent of state recognition) is mutually exclusive with consent-based positivism (obligations arise only through state agreement). No single coherent framework holds both that UDHR binds absent consent AND that state consent is prerequisite for obligation."
+      }
+    ]
+  },
+  "_seed_id": "udhr_1946"
+}

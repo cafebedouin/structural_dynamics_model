@@ -1,0 +1,210 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Digital Commons Governance / Knowledge Infrastructure / Platform Constitutionalism",
+  "family_id": "wikipedia_notability_2026",
+  "topic_summary": "Analysis of Wikipedia's notability guidelines (WP:N) as a contested kernel where the same codified text is read by deletionists as a necessary epistemic quality filter (coordination mechanism) versus inclusionists as a structural gatekeeping apparatus that systematically excludes marginalized knowledge. The disagreement is not about whether WP:N exists but what constraint it instantiates.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Wikipedia Notability Guidelines (WP:N) - codified practice-norm governing article inclusion",
+      "Deletionist faction - editors emphasizing strict application of notability standards",
+      "Inclusionist faction - editors advocating broader inclusion criteria",
+      "Articles for Deletion process (AfD) - enforcement mechanism for notability disputes",
+      "Reliable Sources requirement - operational criterion defining notability threshold",
+      "Wikimedia Foundation - platform authority disclaiming interpretive control"
+    ],
+    "key_tensions": [
+      "Epistemic quality vs epistemic coverage (encyclopedia purity vs knowledge pluralism)",
+      "Formal neutrality vs structural bias (guideline claims universality while systematically favoring Western/institutional sources)"
+    ],
+    "mechanisms": [
+      "AfD deletion process - peer review mechanism for notability enforcement",
+      "Reliable Sources doctrine - citation hierarchy privileging institutional publishers",
+      "Admin discretion layer - unelected editors with deletion authority interpreting guidelines"
+    ],
+    "absences": [
+      "No mechanism for measuring what knowledge is lost through deletion (victim set invisible)",
+      "No audit of systemic bias in 'reliable source' availability across cultural/economic contexts",
+      "No revision mechanism for guidelines despite documented coverage gaps (women, Global South, non-Western knowledge systems)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "deletionist_reading",
+      "human_readable": "Deletionist Reading: Quality-Preserving Coordination Rope",
+      "structural_delta": "WP:N instantiates a coordination mechanism preventing epistemic commons degradation through vanity content and promotional material",
+      "primary_observable": "Deletion rate stability; encyclopedia reliability metrics; prevention of spam/promotional content",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "wikipedia_readers",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading of kernel; rope hypothesis with coordination framing; establishes baseline constraint structure"
+    },
+    {
+      "claim_id": "inclusionist_reading",
+      "human_readable": "Inclusionist Reading: Structural Gatekeeping Snare",
+      "structural_delta": "WP:N instantiates an extractive gatekeeping mechanism systematically excluding marginalized knowledge through culturally-biased reliable source requirements",
+      "primary_observable": "Demographic coverage gaps; deletion patterns by article subject identity; reliable source availability across cultural contexts",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_knowledge_producers",
+      "victim": "marginalized_knowledge_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with structurally different constraint (different victim set, higher epsilon); snare hypothesis captures extractive framing"
+    },
+    {
+      "claim_id": "deliberative_reading",
+      "human_readable": "Deliberative Reading: Negotiated Boundary Scaffold",
+      "structural_delta": "WP:N instantiates a deliberative scaffold where notability is perpetually contested through AfD process, enabling evolutionary boundary negotiation",
+      "primary_observable": "AfD discussion length/complexity; guideline interpretation variance; revision frequency of edge cases",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position: neither quality filter nor gatekeeping but perpetual negotiation process; captures meta-level constraint on how disputes resolve"
+    },
+    {
+      "claim_id": "institutional_capture_reading",
+      "human_readable": "Institutional Capture Reading: Elite Knowledge Monopoly",
+      "structural_delta": "WP:N instantiates a tangled rope where 'reliable sources' requirement systematically privileges institutional/corporate knowledge production infrastructure",
+      "primary_observable": "Source type distribution in surviving articles; correlation between institutional affiliation and deletion survival",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "legacy_media_institutions",
+      "victim": "grassroots_knowledge_producers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps with inclusionist_reading victim set; adds institutional capture framing but structurally similar extractive mechanism"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "deletionist_reading",
+      "kernel_id": "notability_guidelines",
+      "reading_id": "deletionist_reading"
+    },
+    {
+      "claim_id": "inclusionist_reading",
+      "kernel_id": "notability_guidelines",
+      "reading_id": "inclusionist_reading"
+    },
+    {
+      "claim_id": "deliberative_reading",
+      "kernel_id": "notability_guidelines",
+      "reading_id": "deliberative_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "institutional_capture_reading",
+      "structural_delta": "WP:N as mechanism privileging legacy institutional knowledge infrastructure",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Structural overlap with inclusionist_reading; both identify extractive mechanisms favoring institutional sources over marginalized producers; institutional_capture adds elite monopoly framing but does not change fundamental victim/beneficiary topology"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_foundation_authority",
+      "description": "WMF disclaims interpretive authority over guidelines ('community decides') yet retains ultimate platform control. Is this authority structure functioning drift absorption (community can revise) or absent drift (WMF prevents structural revision)? Authority legitimacy ambiguous.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - no formal mechanism for guideline revision despite documented coverage gaps"
+    },
+    {
+      "id": "omega_reliable_source_mountain",
+      "description": "Is 'reliable sources' requirement a Mountain (epistemic necessity for verifiability) or Piton (policy choice that froze one verification method as universal)? If Mountain, inclusionist reading collapses to complaint about physics. If Piton, deletionist reading defends a chosen norm as necessary truth.",
+      "source": "F03 (Hasty Generalization) - classification instability between readings depends on underlying status of verification requirement"
+    },
+    {
+      "id": "omega_victim_measurement",
+      "description": "No mechanism exists to measure what knowledge is lost through deletion. Victim set in inclusionist/institutional_capture readings is structurally invisible. Without measurement, cannot adjudicate between 'preventing spam' and 'systematic erasure' claims.",
+      "source": "Extraction absence + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_admin_discretion_layer",
+      "description": "Unelected admin authority interprets guidelines in deletion decisions. Is this a functional governance scaffold or concealed tangled_rope where admin class benefits from interpretive monopoly? Deletion authority concentration may warrant separate axis.",
+      "source": "Dark Matter Probe 1 (Operational Medium) - analysis operates within editor/reader frame; admin power structure treated as background"
+    },
+    {
+      "id": "omega_global_south_coverage",
+      "description": "Documented coverage gaps for Global South, women, non-Western knowledge systems. Is this outcome of neutral guidelines applied to biased source availability (Mountain of information asymmetry) or outcome of guidelines designed to favor Western institutional sources (Snare)? Empirical question with classification implications.",
+      "source": "Extraction absence + inclusionist_reading hypothesis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: 'reliable sources' requirement classification as Mountain vs Piton determines whether inclusionist reading is valid critique or category error. Generated omega_reliable_source_mountain to bound uncertainty. No F34: domain is platform governance / knowledge infrastructure, within model training scope. No F14: kernel decomposition deliberately generates competing readings from same lens."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Wikipedia Notability Guidelines (WP:N) as codified practice-norm text defining when a topic merits encyclopedia inclusion",
+    "authority_description": "Community consensus model with admin enforcement layer; WMF disclaims interpretive control while retaining platform authority",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "notability_guidelines",
+    "readings": [
+      {
+        "reading_id": "deletionist_reading",
+        "commitment": "WP:N as necessary epistemic quality filter preventing commons degradation",
+        "authority_grounding": "encyclopedia purity / verifiability doctrine",
+        "sibling_readings": [
+          "inclusionist_reading",
+          "deliberative_reading"
+        ],
+        "expected_structural_delta": "Constraint is coordination Rope; beneficiary is readership (quality preservation); no victim set (spam/vanity excluded justly)"
+      },
+      {
+        "reading_id": "inclusionist_reading",
+        "commitment": "WP:N as structural gatekeeping apparatus systematically excluding marginalized knowledge",
+        "authority_grounding": "epistemic justice / knowledge pluralism",
+        "sibling_readings": [
+          "deletionist_reading",
+          "deliberative_reading"
+        ],
+        "expected_structural_delta": "Constraint is extractive Snare; beneficiary is institutional knowledge producers; victim is marginalized communities whose knowledge lacks 'reliable sources'"
+      },
+      {
+        "reading_id": "deliberative_reading",
+        "commitment": "WP:N as perpetual negotiation process where notability boundaries evolve through AfD deliberation",
+        "authority_grounding": "proceduralist / deliberative democracy",
+        "sibling_readings": [
+          "deletionist_reading",
+          "inclusionist_reading"
+        ],
+        "expected_structural_delta": "Constraint is governance Scaffold; notability is output of process not input; boundary negotiation is the mechanism"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "deletionist_reading",
+        "reading_b": "inclusionist_reading",
+        "basis": "Deletionist axiom: epistemic quality requires exclusion of non-verified content (inclusion degrades commons). Inclusionist axiom: systematic exclusion based on culturally-biased verification standards is epistemic injustice (exclusion degrades commons). No single framework can hold both 'exclusion preserves quality' and 'exclusion constitutes injustice' as simultaneously true for the same knowledge."
+      }
+    ]
+  },
+  "_seed_id": "wikipedia_notability_requirement_2026"
+}

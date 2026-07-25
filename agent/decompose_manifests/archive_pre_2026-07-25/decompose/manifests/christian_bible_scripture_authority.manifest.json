@@ -1,0 +1,182 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Theology / Religious Studies / History of Christianity",
+  "family_id": "christian_scriptural_authority",
+  "topic_summary": "Analysis of Christian scriptural authority frameworks, examining how different traditions ground interpretive legitimacy in the biblical text. The Protestant Reformation crystallized two fundamental readings of the same canonical substrate: sola scriptura (scripture alone as sufficient authority) versus scripture-plus-tradition (scripture interpreted through magisterial continuity). These readings instantiate structurally different constraints on ecclesiastical power, sacramental validity, and doctrinal development.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 1,
+    "key_entities": [
+      "Christian Bible (canonical text, Old + New Testament)",
+      "Protestant traditions (Reformed, Lutheran, Anglican communions)",
+      "Catholic Church (Roman magisterium)",
+      "Orthodox Church (Eastern conciliar tradition)",
+      "Individual believer (Protestant locus of interpretive authority)",
+      "Magisterium (Catholic/Orthodox institutional interpretive body)"
+    ],
+    "key_tensions": [
+      "Direct textual access vs mediated interpretation (individual reader vs institutional authority)",
+      "Textual sufficiency vs tradition necessity (sola scriptura vs scripture-plus-tradition)"
+    ],
+    "key_mechanisms": [
+      "Vernacular translation (enables direct access, reduces clerical gatekeeping)",
+      "Apostolic succession (grounds institutional interpretive continuity)",
+      "Sola fide justification (removes sacramental mediation requirement)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Christian Bible as canonical text grounding legitimate doctrine and practice",
+    "authority_description": "Contested: Protestant traditions ground authority in scripture-alone with individual/congregational interpretation; Catholic/Orthodox traditions ground authority in scripture-interpreted-through-tradition with magisterial/conciliar interpretation",
+    "drift_status": "partial",
+    "candidate_pattern": "Legitimation Monopoly — interpretive authority structures control which readings count as legitimate; Protestant fragmentation vs Catholic centralization represent different drift-absorption strategies",
+    "is_contested_kernel": true,
+    "kernel_id": "biblical_authority",
+    "readings": [
+      {
+        "reading_id": "sola_scriptura_reading",
+        "commitment": "Scripture alone is sufficient and self-interpreting authority for doctrine and practice",
+        "authority_grounding": "Direct textual access; priesthood of all believers; Holy Spirit illumination for individual readers",
+        "sibling_readings": [
+          "tradition_scripture_reading",
+          "conciliar_reading"
+        ],
+        "expected_structural_delta": "Low clerical extraction (congregational autonomy); high doctrinal fragmentation (no adjudicative monopoly); sacraments as ordinances not salvific channels; beneficiary is lay believer autonomy; victim is doctrinal coherence across communities"
+      },
+      {
+        "reading_id": "tradition_scripture_reading",
+        "commitment": "Scripture requires tradition for authoritative interpretation; magisterium guards deposit of faith",
+        "authority_grounding": "Apostolic succession; papal/episcopal teaching authority; continuity with early church fathers",
+        "sibling_readings": [
+          "sola_scriptura_reading",
+          "conciliar_reading"
+        ],
+        "expected_structural_delta": "High clerical extraction (sacramental mediation required); low doctrinal fragmentation (centralized adjudication); sacraments as grace-conferring; beneficiary is institutional hierarchy; victim is lay interpretive agency"
+      },
+      {
+        "reading_id": "conciliar_reading",
+        "commitment": "Scripture interpreted through ecumenical councils and patristic consensus; tradition as living continuity not magisterial decree",
+        "authority_grounding": "Conciliar authority (councils not popes); symphonia of tradition; patristic exegesis as normative",
+        "sibling_readings": [
+          "sola_scriptura_reading",
+          "tradition_scripture_reading"
+        ],
+        "expected_structural_delta": "Moderate clerical extraction (episcopal not papal); moderate fragmentation (autocephalous churches); sacraments as mysteries; beneficiary is episcopal collegiality; victim is rapid doctrinal adaptation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sola_scriptura_reading",
+        "reading_b": "tradition_scripture_reading",
+        "basis": "Sola scriptura's axiom (text is self-sufficient for doctrine) requires rejecting tradition-scripture's axiom (text requires authoritative tradition for correct interpretation). No single framework can hold both scripture-sufficiency and tradition-necessity simultaneously."
+      },
+      {
+        "reading_a": "sola_scriptura_reading",
+        "reading_b": "conciliar_reading",
+        "basis": "Sola scriptura rejects binding authority of post-apostolic tradition; conciliar reading treats ecumenical councils and patristic consensus as authoritative interpretive tradition. These are mutually exclusive claims about whether tradition binds interpretation."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sola_scriptura_reading",
+      "human_readable": "Sola Scriptura Reading (Scripture Alone Sufficiency)",
+      "structural_delta": "Scripture as sole sufficient authority; individual/congregational interpretation without required institutional mediation",
+      "primary_observable": "Presence/absence of extra-biblical tradition in doctrinal statements; congregational vs hierarchical polity structures; vernacular Bible distribution rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "lay_believers_protestant_laity",
+      "victim": "doctrinal_coherence_across_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading instantiating Protestant constraint structure; high epsilon due to elimination of sacramental extraction; establishes baseline for comparison"
+    },
+    {
+      "claim_id": "tradition_scripture_reading",
+      "human_readable": "Tradition-Scripture Reading (Magisterial Mediation)",
+      "structural_delta": "Scripture requires authoritative tradition; magisterial interpretation as necessary channel for legitimate doctrine",
+      "primary_observable": "Papal/episcopal teaching authority in practice; sacramental requirement for salvation; extra-biblical tradition (Marian dogma, purgatory) in official doctrine",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "clerical_hierarchy_institutional_authority",
+      "victim": "lay_interpretive_agency",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposed reading; same observable domain (interpretive authority) but inverted beneficiary/victim structure; axiom-contradictory to sola_scriptura_reading"
+    },
+    {
+      "claim_id": "conciliar_reading",
+      "human_readable": "Conciliar Reading (Episcopal Consensus Without Papal Monarchy)",
+      "structural_delta": "Scripture interpreted through councils and patristic tradition; episcopal collegiality without papal supremacy",
+      "primary_observable": "Conciliar decision-making vs papal decree; autocephalous church structures; weight given to church fathers vs recent magisterial teaching",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "episcopal_collegiality",
+      "victim": "rapid_doctrinal_adaptation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct position; splits difference between Protestant and Catholic on extraction axis; demonstrates that kernel admits more than binary opposition; completes triadic topology"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sola_scriptura_reading",
+      "kernel_id": "biblical_authority",
+      "reading_id": "sola_scriptura_reading"
+    },
+    {
+      "claim_id": "tradition_scripture_reading",
+      "kernel_id": "biblical_authority",
+      "reading_id": "tradition_scripture_reading"
+    },
+    {
+      "claim_id": "conciliar_reading",
+      "kernel_id": "biblical_authority",
+      "reading_id": "conciliar_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_canon_formation",
+      "description": "All three readings treat the canon (which books count as Scripture) as settled, but canon formation itself required extra-biblical tradition (councils of Hippo/Carthage). This creates a bootstrap problem for sola scriptura: using tradition to establish the text that renders tradition unnecessary. Sola scriptura reading may be internally unstable on this dimension.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): canon-selection mechanism absent from extraction"
+    },
+    {
+      "id": "omega_historical_development",
+      "description": "Does the Protestant reading instantiate a genuine alternative constraint or a secularization pathway that ultimately dissolves scriptural authority itself? 500 years of fragmentation (30,000+ denominations) may indicate that removing institutional adjudication creates runaway interpretive drift, collapsing the constraint entirely. If true, sola_scriptura is not a stable reading but a transition state.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): lay autonomy as beneficiary may be instrumental cover for dissolution of shared constraint"
+    },
+    {
+      "id": "omega_non_western_christianity",
+      "description": "Analysis assumes Western Reformation/Counter-Reformation binary. African, Asian, Latin American Christianity may instantiate readings not reducible to this topology (e.g., Pentecostal Spirit-authority, liberation theology praxis-authority). These may be fourth/fifth readings of the same kernel or evidence that 'biblical authority' itself is a Western framing.",
+      "source": "Dark Matter Probe 1 (Operational Medium): analysis operates within Western denominational categories"
+    },
+    {
+      "id": "omega_feminist_liberationist_readings",
+      "description": "Feminist and liberation theology readings challenge the kernel itself: if the text encodes patriarchal/colonial power, interpretive authority becomes a trap regardless of whether it is individual or institutional. These readings may argue for abandoning the kernel rather than selecting an interpretive framework.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): critical hermeneutics absent from extraction"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Clean scan. Three readings represent genuine structural alternatives with axiom contradictions. Canon formation bootstrap (omega_canon_formation) noted but does not invalidate reading structure. Deferred axes empty because kernel decomposition exhausts the structural space for this particular commitment system."
+  },
+  "_seed_id": "christian_bible_scripture_authority"
+}

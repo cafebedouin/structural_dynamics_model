@@ -1,0 +1,258 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal Theory / Intellectual Property / Cultural Production",
+  "family_id": "copyright_fair_use_doctrine",
+  "topic_summary": "Analysis of the fair use doctrine in copyright law as a contested kernel. The four-factor test (17 U.S.C. § 107) serves as the fixed statutory substrate, but creator-centric and user-centric interpretations read this substrate to instantiate structurally different constraints on unauthorized use, with different victim sets and base extractiveness.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "17 U.S.C. § 107 (statutory four-factor test: purpose, nature, amount, market effect)",
+      "Rights holders / content industries (copyright owners seeking enforcement)",
+      "Transformative users (remix artists, parodists, educators, archivists)",
+      "Federal courts (interpretive authority via case law accretion)",
+      "Public domain (conceptual commons outside copyright term or scope)",
+      "DMCA anti-circumvention provisions (interacting constraint on technical access)"
+    ],
+    "key_tensions": [
+      "Creator compensation vs cultural commons access (incentive structure vs public goods)",
+      "Statutory clarity vs judicial discretion (rule vs standard interpretive approach)"
+    ],
+    "key_mechanisms": [
+      "Four-factor balancing test (purpose/character, nature of work, amount/substantiality, market harm)",
+      "Transformative use doctrine (Campbell v. Acuff-Rose 1994 interpretive layer)",
+      "Ex post litigation filtering (fair use as affirmative defense, not ex ante safe harbor)"
+    ],
+    "key_absences": [
+      "Algorithmic/ML training use cases (statute predates AI training paradigm)",
+      "Cross-border enforcement asymmetries (fair use is U.S.-centric; no EU equivalent)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "17 U.S.C. § 107 four-factor test as the fixed statutory substrate for adjudicating legitimate unauthorized use",
+    "authority_description": "Federal judiciary interprets the four factors via case law; Supreme Court precedent (Campbell, Google v. Oracle) sets binding interpretive norms",
+    "drift_status": "functioning",
+    "candidate_pattern": "Interpretive Pluralism (multiple live readings coexist; no central authority enforces uniformity across circuits)",
+    "is_contested_kernel": true,
+    "kernel_id": "fair_use_four_factor_test",
+    "readings": [
+      {
+        "reading_id": "creator_centric_reading",
+        "commitment": "Fair use is narrow exception to property right; four factors weighed to preserve creator incentives",
+        "authority_grounding": "Originalist (property-rights tradition); economically grounded in incentive theory",
+        "sibling_readings": [
+          "user_centric_reading",
+          "transformative_use_reading"
+        ],
+        "expected_structural_delta": "High epsilon on unauthorized use; rights holders primary beneficiary; chilling effect on derivative works; victim set = transformative users and public domain"
+      },
+      {
+        "reading_id": "user_centric_reading",
+        "commitment": "Fair use is affirmative user right; four factors weighed to preserve public access and cultural production",
+        "authority_grounding": "Purposivist (First Amendment tradition); public-goods justification",
+        "sibling_readings": [
+          "creator_centric_reading",
+          "transformative_use_reading"
+        ],
+        "expected_structural_delta": "Low epsilon on unauthorized use; public/educational users primary beneficiary; reduced creator compensation; victim set = rights holders"
+      },
+      {
+        "reading_id": "transformative_use_reading",
+        "commitment": "Transformativeness dominates four-factor balancing; market harm subordinated when use adds new meaning",
+        "authority_grounding": "Campbell precedent (1994); judicial doctrine favoring cultural innovation",
+        "sibling_readings": [
+          "creator_centric_reading",
+          "user_centric_reading"
+        ],
+        "expected_structural_delta": "Moderate epsilon; context-dependent; beneficiary = remix culture and tech platforms enabling UGC; victim set shifts based on transformation threshold"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "creator_centric_reading",
+        "reading_b": "user_centric_reading",
+        "basis": "Creator-centric treats copyright as property requiring compensation for any value extraction; user-centric treats culture as commons requiring access for any socially valuable use. No single framework holds both axioms simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "statutory_ambiguity_substrate",
+      "human_readable": "Statutory Ambiguity as Structural Substrate",
+      "structural_delta": "The four-factor test provides no weighting formula, algorithm, or bright-line rules; judicial discretion is mandated by statute",
+      "primary_observable": "Variance in fair use outcomes across factually similar cases; circuit splits on factor interpretation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "creator_centric_reading",
+        "user_centric_reading",
+        "transformative_use_reading"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Physical constraint enabling kernel structure; all readings downstream of this ambiguity"
+    },
+    {
+      "claim_id": "creator_centric_reading",
+      "human_readable": "Creator-Centric Reading (Property Rights Maximization)",
+      "structural_delta": "Fair use as narrow exception; copyright as strong property right requiring compensation",
+      "primary_observable": "Judicial rulings emphasizing market harm (factor 4) and licensing markets; injunction grant rates",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rights_holders_content_industries",
+      "victim": "transformative_users_public_domain",
+      "downstream_of": [
+        "statutory_ambiguity_substrate"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "High epsilon reading with clear beneficiary/victim structure; structurally distinct from user-centric"
+    },
+    {
+      "claim_id": "user_centric_reading",
+      "human_readable": "User-Centric Reading (Public Access Maximization)",
+      "structural_delta": "Fair use as affirmative right; cultural production and education as trump cards over compensation",
+      "primary_observable": "Judicial rulings emphasizing transformative purpose (factor 1) and First Amendment values; dismissal rates of infringement claims",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "public_domain_advocates_remix_culture",
+      "victim": "rights_holders",
+      "downstream_of": [
+        "statutory_ambiguity_substrate"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Epsilon contrast with creator-centric; axiom contradiction declared"
+    },
+    {
+      "claim_id": "transformative_use_reading",
+      "human_readable": "Transformative Use Reading (Innovation-Centric Balancing)",
+      "structural_delta": "Campbell precedent elevates transformativeness; market harm subordinated when new meaning/message added",
+      "primary_observable": "Citation frequency of Campbell in fair use opinions; outcomes in parody/commentary/UGC cases",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "tech_platforms_remix_artists",
+      "victim": "licensing_markets",
+      "downstream_of": [
+        "statutory_ambiguity_substrate"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: hybrid position between creator/user poles; lower structural distinctiveness; captured as omega variable"
+    },
+    {
+      "claim_id": "ex_post_litigation_filter",
+      "human_readable": "Ex Post Litigation Filter (Fair Use as Affirmative Defense)",
+      "structural_delta": "Fair use determinable only after infringement lawsuit filed; no ex ante safe harbor",
+      "primary_observable": "Chilling effect metrics (self-censorship surveys, abandoned projects); litigation cost vs. licensing cost comparison",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "legal_profession_rights_holders",
+      "victim": "small_creators_educators_archivists",
+      "downstream_of": [],
+      "feeds_into": [
+        "creator_centric_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism snare; high epsilon but procedurally distinct from interpretive readings"
+    },
+    {
+      "claim_id": "algorithmic_training_absence",
+      "human_readable": "Algorithmic Training Use Absence (Statute Predates AI Paradigm)",
+      "structural_delta": "ML training on copyrighted corpora not addressed by 1976 statute or Supreme Court precedent",
+      "primary_observable": "Frequency of AI training fair use claims in litigation (2023-present); judicial uncertainty in opinions",
+      "epsilon_bin": "uncertain",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "statutory_ambiguity_substrate"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: emerging issue; statute lacks clear anchor; omega frontier"
+    }
+  ],
+  "generation_sequence": [
+    "statutory_ambiguity_substrate",
+    {
+      "claim_id": "creator_centric_reading",
+      "kernel_id": "fair_use_four_factor_test",
+      "reading_id": "creator_centric_reading"
+    },
+    {
+      "claim_id": "user_centric_reading",
+      "kernel_id": "fair_use_four_factor_test",
+      "reading_id": "user_centric_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "transformative_use_reading",
+      "structural_delta": "Campbell transformativeness as dominant factor",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Hybrid reading between creator/user poles; lower structural independence; captured in omega for third-reading expansion"
+    },
+    {
+      "claim_id": "ex_post_litigation_filter",
+      "structural_delta": "Fair use as affirmative defense requiring litigation",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism distinct from interpretive readings; chilling effect subordinated to reading-level epsilon contrast"
+    },
+    {
+      "claim_id": "algorithmic_training_absence",
+      "structural_delta": "ML training paradigm unaddressed by statute or precedent",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Emerging frontier; no settled doctrine; omega variable pending future case law"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_transformative_hybrid",
+      "description": "Transformative use doctrine may be third reading rather than hybrid. If Campbell shifts from interpretive gloss to independent constraint, expand to three-reading generation.",
+      "source": "Deferred axis transformative_use_reading"
+    },
+    {
+      "id": "omega_ai_training_frontier",
+      "description": "Algorithmic training on copyrighted corpora is statute-external. If courts create new doctrine rather than apply four-factor test, kernel structure may fracture.",
+      "source": "Deferred axis algorithmic_training_absence + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "DMCA anti-circumvention provisions bypass fair use analysis for technical access. Ex post litigation filter may be subordinate to ex ante technical constraint.",
+      "source": "Deferred axis ex_post_litigation_filter + Extraction absence (DMCA interaction)"
+    },
+    {
+      "id": "omega_international_kernel_variance",
+      "description": "Fair use is U.S.-centric; EU fair dealing / InfoSoc Directive instantiates different kernel. Cross-border enforcement may reveal fair use as piton of U.S. jurisdiction rather than mountain of copyright theory.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + Extraction absence (cross-border enforcement)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: statutory_ambiguity_substrate classified as mountain (physical constraint on judicial interpretation) but may be piton of Congressional drafting choice. If Congress could amend § 107 with algorithmic weighting, mountain collapses to rope. Generated omega_ai_training_frontier and omega_international_kernel_variance to bound this uncertainty."
+  },
+  "_seed_id": "copyright_fair_use"
+}

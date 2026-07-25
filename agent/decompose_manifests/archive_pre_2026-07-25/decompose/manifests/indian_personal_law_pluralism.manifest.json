@@ -1,0 +1,254 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal Pluralism / Constitutional Law / Comparative Family Law",
+  "family_id": "india_personal_law_coexistence",
+  "topic_summary": "Analysis of India's concurrent personal-law regime where Hindu, Muslim, Christian, Parsi, and secular codes govern marriage/family law simultaneously within one state since 1947. The kernel contest asks whether this represents one 'marriage authority' kernel read multiple ways or multiple distinct kernels coexisting without synthesis. Library verdict context identifies this as the strongest case for D2 culture-level constitutional break.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Hindu Marriage Act 1955 (codified Hindu family law with reform elements)",
+      "Muslim Personal Law (Shariat) Application Act 1937 (preserves traditional Islamic jurisprudence)",
+      "Indian Christian Marriage Act 1872 (colonial-era Christian code)",
+      "Parsi Marriage and Divorce Act 1936 (community-specific law)",
+      "Special Marriage Act 1954 (secular opt-in alternative)",
+      "Supreme Court of India (constitutional adjudicator; periodic UCC advocacy)",
+      "Constitution Article 44 (directive principle mandating eventual Uniform Civil Code)"
+    ],
+    "key_tensions": [
+      "Community religious authority vs state legislative sovereignty (each personal law vs Parliament)",
+      "Constitutional equality guarantees vs group-differentiated legal status (Article 14/15 vs personal law variation)",
+      "Secular state aspiration vs religious legal pluralism (Article 44 UCC directive vs maintained parallel codes)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "communal_autonomy_reading",
+      "human_readable": "Communal Autonomy Reading (Group Self-Governance as Constitutional Value)",
+      "structural_delta": "Marriage authority grounded in community religious tradition; state enforces but does not author norms",
+      "primary_observable": "Legislative amendments require community consent; judicial review defers to religious expertise",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "religious_leadership",
+      "victim": "intra_community_dissenters",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Represents established-equilibrium reading with highest political legitimacy and longest historical instantiation"
+    },
+    {
+      "claim_id": "secularist_reading",
+      "human_readable": "Secularist Reading (Uniform Civil Code as Constitutional Destiny)",
+      "structural_delta": "Marriage authority belongs to democratic legislature; personal law is transitional anomaly awaiting elimination",
+      "primary_observable": "Article 44 invocations in judgments; legislative movement toward UCC; Special Marriage Act uptake",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "secular_modernist_coalition",
+      "victim": "minority_religious_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; embedded in constitutional text (Article 44); represents zero-sum challenge to communal reading"
+    },
+    {
+      "claim_id": "gender_rights_reading",
+      "human_readable": "Gender Rights Reading (Personal Law as Patriarchal Entrenchment)",
+      "structural_delta": "Marriage authority contested on grounds of intra-community gender equality; reform via judicial expansion of Article 14/15",
+      "primary_observable": "Shah Bano (1985), Shayara Bano (2017) judgments; triple talaq criminalization; maintenance rights litigation",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "women_rights_advocates",
+      "victim": "women_within_patriarchal_personal_law",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; cross-cuts communal/secular divide; structural victim set distinct from other readings"
+    },
+    {
+      "claim_id": "federalist_millet_reading",
+      "human_readable": "Federalist Millet Reading (Pillarization as Stability Mechanism)",
+      "structural_delta": "Marriage authority deliberately fragmented to prevent majoritarian domination; pluralism as anti-tyranny design",
+      "primary_observable": "Absence of UCC despite Article 44; legislative paralysis on reform; consociational bargaining patterns",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "minority_communities",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural logic similar to communal_autonomy_reading but framed as elite bargain rather than normative commitment"
+    },
+    {
+      "claim_id": "judicial_harmonization_reading",
+      "human_readable": "Judicial Harmonization Reading (Common-Law Convergence Without Legislation)",
+      "structural_delta": "Marriage authority evolving via case-by-case Supreme Court review imposing constitutional floor across codes",
+      "primary_observable": "Precedent density on maintenance, property, custody rights; constitutional override frequency",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "judiciary",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: describes mechanism for managing plurality rather than distinct normative reading of kernel"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "communal_autonomy_reading",
+      "kernel_id": "marriage_authority",
+      "reading_id": "communal_autonomy_reading"
+    },
+    {
+      "claim_id": "secularist_reading",
+      "kernel_id": "marriage_authority",
+      "reading_id": "secularist_reading"
+    },
+    {
+      "claim_id": "gender_rights_reading",
+      "kernel_id": "marriage_authority",
+      "reading_id": "gender_rights_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "federalist_millet_reading",
+      "structural_delta": "Pluralism as anti-tyranny design; fragmentation prevents majoritarian domination",
+      "hypothesis": "rope",
+      "deferral_reason": "Structural overlap with communal_autonomy_reading; represents elite-bargain framing rather than distinct normative commitment"
+    },
+    {
+      "claim_id": "judicial_harmonization_reading",
+      "structural_delta": "Case-by-case Supreme Court review imposing constitutional floor across codes",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Describes institutional mechanism for managing plurality rather than distinct reading of marriage authority kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Is this genuinely one kernel ('marriage authority') read multiple ways, or are these incommensurable kernels (Hindu dharma vs Islamic fiqh) that happen to occupy the same policy space? If incommensurable, Indian federalism is not a contested-kernel system but a D2 culture-level constitutional break.",
+      "source": "§1.3-K coherence test; library verdict context (D2 strongest case)"
+    },
+    {
+      "id": "omega_ucc_reclassification",
+      "description": "If UCC legislation passes, does secularist_reading shift from tangled_rope (contested interpretation) to mountain (enforced uniformity)? The shift would reclassify minority readings from coexisting ropes to suppressed pitons.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); secularist reading epsilon projection"
+    },
+    {
+      "id": "omega_intracommunity_voice",
+      "description": "Do women within each community have standing to contest their personal law, or does communal_autonomy_reading treat community leadership as sole authorized interpreter? If the latter, gender_rights_reading operates as external challenge, not internal reform.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); extraction entity gap on intra-community reform movements"
+    },
+    {
+      "id": "omega_special_marriage_uptake",
+      "description": "Is low Special Marriage Act uptake evidence that secular reading lacks popular legitimacy, or evidence of social coercion preventing opt-out? Measurement distinguishes between weak-rope (voluntary coordination failure) and snare (suppressed exit).",
+      "source": "Primary observable ambiguity; secularist_reading epsilon bin validation"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied per §1.3-K. Five candidate readings identified; three selected for generation based on centrality and structural distinctiveness. Omega_kernel_coherence flags the meta-question from library verdict context: is this one contested kernel or multiple incommensurable kernels coexisting?"
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Marriage and family law authority — the question of who legitimately defines marriage formation, dissolution, property, custody, and maintenance obligations within the Indian state",
+    "authority_description": "Contested among religious community tradition (dharma/fiqh/canon), democratic legislature (Parliament via Article 44), and judiciary (constitutional supremacy via Articles 14/15/21)",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_pluralism_stable | uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "marriage_authority",
+    "readings": [
+      {
+        "reading_id": "communal_autonomy_reading",
+        "commitment": "Marriage authority grounded in community religious tradition; state enforces but does not author family law norms",
+        "authority_grounding": "Religious text and tradition; community leadership interpretive authority",
+        "sibling_readings": [
+          "secularist_reading",
+          "gender_rights_reading",
+          "federalist_millet_reading",
+          "judicial_harmonization_reading"
+        ],
+        "expected_structural_delta": "Personal law variation institutionalized; ε_mod rope with religious_leadership as beneficiary and intra-community dissenters as victim; legislative amendments require community consent"
+      },
+      {
+        "reading_id": "secularist_reading",
+        "commitment": "Marriage authority belongs to democratic legislature; personal law pluralism is transitional anomaly awaiting elimination via Uniform Civil Code",
+        "authority_grounding": "Constitutional text (Article 44 directive principle); secular nationalist ideology",
+        "sibling_readings": [
+          "communal_autonomy_reading",
+          "gender_rights_reading",
+          "federalist_millet_reading",
+          "judicial_harmonization_reading"
+        ],
+        "expected_structural_delta": "Zero-sum challenge to communal reading; ε_high tangled_rope with secular_modernist_coalition as beneficiary and minority_religious_communities as victim; UCC eliminates personal law variation"
+      },
+      {
+        "reading_id": "gender_rights_reading",
+        "commitment": "Marriage authority contested on grounds of intra-community gender equality; personal law reform via judicial expansion of constitutional equality guarantees",
+        "authority_grounding": "Constitutional Articles 14/15/21 (equality, non-discrimination, life/liberty); international human rights norms",
+        "sibling_readings": [
+          "communal_autonomy_reading",
+          "secularist_reading",
+          "federalist_millet_reading",
+          "judicial_harmonization_reading"
+        ],
+        "expected_structural_delta": "Cross-cuts communal/secular divide; ε_high snare with women_rights_advocates as beneficiary and women_within_patriarchal_personal_law as victim; targets specific practices (triple talaq, maintenance, property) rather than system-level structure"
+      },
+      {
+        "reading_id": "federalist_millet_reading",
+        "commitment": "Marriage authority deliberately fragmented to prevent majoritarian domination; legal pluralism as consociational anti-tyranny mechanism",
+        "authority_grounding": "Federalist political theory; minority protection doctrine; consociational democracy model",
+        "sibling_readings": [
+          "communal_autonomy_reading",
+          "secularist_reading",
+          "gender_rights_reading",
+          "judicial_harmonization_reading"
+        ],
+        "expected_structural_delta": "Structural overlap with communal_autonomy_reading but elite-bargain framing; ε_low rope with minority_communities as beneficiary; legislative paralysis as stability feature rather than bug"
+      },
+      {
+        "reading_id": "judicial_harmonization_reading",
+        "commitment": "Marriage authority evolving via case-by-case Supreme Court review imposing constitutional floor across personal law codes without formal UCC legislation",
+        "authority_grounding": "Judicial supremacy; common-law convergence; constitutional override precedent",
+        "sibling_readings": [
+          "communal_autonomy_reading",
+          "secularist_reading",
+          "gender_rights_reading",
+          "federalist_millet_reading"
+        ],
+        "expected_structural_delta": "Describes institutional mechanism rather than distinct normative reading; ε_mod scaffold with judiciary as beneficiary; convergence-without-legislation pathway"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "communal_autonomy_reading",
+        "reading_b": "secularist_reading",
+        "basis": "No single framework can simultaneously hold that religious community tradition is the legitimate source of family law (communal) AND that democratic legislature must impose uniform secular code eliminating community variation (secularist). These are mutually exclusive claims about where marriage authority properly resides."
+      },
+      {
+        "reading_a": "communal_autonomy_reading",
+        "reading_b": "gender_rights_reading",
+        "basis": "Conditional contradiction: if gender_rights_reading insists on external constitutional override of intra-community norms, it denies communal_autonomy_reading's axiom that community tradition is self-sufficient authority. But if gender_rights operates as internal reform movement within each tradition, they can coexist. Current Indian case law (Shah Bano, Shayara Bano) suggests external override path, triggering contradiction."
+      }
+    ]
+  },
+  "_seed_id": "indian_personal_law_pluralism"
+}

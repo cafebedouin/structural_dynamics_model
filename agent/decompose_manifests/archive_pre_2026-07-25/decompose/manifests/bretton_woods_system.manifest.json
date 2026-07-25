@@ -1,0 +1,186 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Political Economy / Monetary History / Institutional Design",
+  "family_id": "bretton_woods_kernel_2026",
+  "topic_summary": "Analysis of the 1944 Bretton Woods Agreement establishing the dollar-gold standard as a contested kernel. Two interpretive readings—Keynesian (capital controls for policy autonomy) and neoliberal (convertibility for capital mobility)—derive structurally different constraints from the same treaty substrate, creating distinct beneficiary/victim structures and incompatible claims about what the system was designed to constrain.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Bretton Woods Agreement 1944 (treaty substrate establishing dollar-gold peg and IMF/World Bank)",
+      "International Monetary Fund (institution enforcing convertibility obligations)",
+      "John Maynard Keynes (architect advocating bancor and capital controls)",
+      "Harry Dexter White (U.S. architect prioritizing dollar hegemony)",
+      "National governments (agents seeking domestic policy space)",
+      "International finance capital (agent seeking cross-border mobility)"
+    ],
+    "key_tensions": [
+      "Capital mobility vs policy autonomy (impossible trinity constraint)",
+      "Dollar hegemony vs multilateral symmetry (White Plan vs Keynes Plan)"
+    ],
+    "mechanisms": [
+      "Article VIII convertibility obligation (creates constraint on currency controls)",
+      "Article VI capital control permission (creates permission for flow restrictions)",
+      "Gold convertibility anchor at $35/oz (creates fixed exchange rate constraint)"
+    ],
+    "absences": [
+      "Explicit constraint on dollar creation by U.S. (Triffin dilemma not addressed)",
+      "Enforcement mechanism for developed-country capital controls (asymmetric application)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The 1944 Bretton Woods treaty text establishing dollar-gold convertibility, IMF articles, and fixed exchange rates as the shared substrate all parties reference when claiming legitimacy for their monetary policy regime",
+    "authority_description": "IMF staff and member-state central banks interpreting Articles VI (capital controls) and VIII (convertibility) to authorize their preferred policy stance, grounding legitimacy in treaty fidelity rather than performance",
+    "drift_status": "absent",
+    "candidate_pattern": "founding_text_CS",
+    "is_contested_kernel": true,
+    "kernel_id": "bretton_woods_treaty_substrate",
+    "readings": [
+      {
+        "reading_id": "keynesian_embedded_liberalism",
+        "commitment": "Bretton Woods creates constraints on international capital to protect domestic policy space",
+        "authority_grounding": "Article VI explicit permission for capital controls; Keynes's negotiating intent; trilemma resolution prioritizing policy autonomy",
+        "sibling_readings": [
+          "neoliberal_convertibility",
+          "sovereignty_defense"
+        ],
+        "expected_structural_delta": "International finance enters victim set; national governments are beneficiaries; capital controls are legitimate constraint tools not violations"
+      },
+      {
+        "reading_id": "neoliberal_convertibility",
+        "commitment": "Bretton Woods creates constraints on government intervention to enable free capital markets",
+        "authority_grounding": "Article VIII convertibility obligation; White's emphasis on dollar hegemony; IMF conditionality practice post-1970s",
+        "sibling_readings": [
+          "keynesian_embedded_liberalism",
+          "sovereignty_defense"
+        ],
+        "expected_structural_delta": "National policy autonomy enters victim set; international finance becomes beneficiary; capital controls are violations not tools"
+      },
+      {
+        "reading_id": "sovereignty_defense",
+        "commitment": "Bretton Woods creates constraints on external monetary discipline to preserve national monetary sovereignty",
+        "authority_grounding": "Dollar seigniorage critique; Triffin dilemma; French/Chinese gold convertibility challenges; reserve currency asymmetry",
+        "sibling_readings": [
+          "keynesian_embedded_liberalism",
+          "neoliberal_convertibility"
+        ],
+        "expected_structural_delta": "Non-reserve-currency states enter victim set; U.S. enters beneficiary set via exorbitant privilege; gold anchor becomes snare not stabilizer"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "keynesian_embedded_liberalism",
+        "reading_b": "neoliberal_convertibility",
+        "basis": "No coherent framework can simultaneously hold capital mobility as the protected right (neoliberal) and policy autonomy as the protected right (Keynesian) when the trilemma makes them mutually exclusive under fixed rates"
+      },
+      {
+        "reading_a": "keynesian_embedded_liberalism",
+        "reading_b": "sovereignty_defense",
+        "basis": "Sovereignty defense treats the dollar anchor itself as extractive constraint on non-reserve states, while Keynesian reading treats the anchor as legitimate mountain enabling capital control permission—incompatible views of whether the monetary hierarchy is structural or illegitimate"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "keynesian_embedded_liberalism",
+      "human_readable": "Keynesian Embedded Liberalism Reading",
+      "structural_delta": "Treaty substrate read as constraining international finance to protect national policy space via Article VI capital controls permission",
+      "primary_observable": "IMF member-state capital control incidence 1945-1971; Article VI invocation frequency; policy autonomy retention vs capital mobility",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "national_governments_social_democratic",
+      "victim": "international_finance_capital",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes baseline constraint structure where capital controls are legitimate tools not violations"
+    },
+    {
+      "claim_id": "neoliberal_convertibility",
+      "human_readable": "Neoliberal Convertibility Reading",
+      "structural_delta": "Treaty substrate read as constraining government intervention via Article VIII convertibility obligation to enable free capital markets",
+      "primary_observable": "IMF conditionality requiring capital account liberalization post-1980; convertibility enforcement vs capital control permission; Washington Consensus policy spread",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "international_finance_capital",
+      "victim": "national_policy_autonomy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: inverts beneficiary/victim structure from first reading; demonstrates axiom contradiction via incompatible trilemma resolution"
+    },
+    {
+      "claim_id": "sovereignty_defense",
+      "human_readable": "Sovereignty Defense Reading",
+      "structural_delta": "Treaty substrate read as creating extractive dollar hegemony that constrains non-reserve currency states via asymmetric adjustment burden and seigniorage capture",
+      "primary_observable": "Triffin dilemma manifestation; gold convertibility challenges (France 1960s); reserve currency composition shift attempts; dollar privilege quantification",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "united_states_seigniorage",
+      "victim": "non_reserve_currency_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: orthogonal critique of the monetary hierarchy itself rather than capital/policy tradeoff; captures French/Chinese challenge dynamic"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "keynesian_embedded_liberalism",
+      "kernel_id": "bretton_woods_treaty_substrate",
+      "reading_id": "keynesian_embedded_liberalism"
+    },
+    {
+      "claim_id": "neoliberal_convertibility",
+      "kernel_id": "bretton_woods_treaty_substrate",
+      "reading_id": "neoliberal_convertibility"
+    },
+    {
+      "claim_id": "sovereignty_defense",
+      "kernel_id": "bretton_woods_treaty_substrate",
+      "reading_id": "sovereignty_defense"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_triffin_unresolved",
+      "description": "All three readings fail to resolve Triffin dilemma: dollar as reserve currency requires U.S. deficits that eventually undermine gold peg. System collapse 1971 suggests no reading captured the structural mountain underneath—gold scarcity at fixed price was binding constraint none could interpret away.",
+      "source": "Absence Inventory (§1.1): no reading treats dollar creation limits as kernel constraint rather than policy choice"
+    },
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "Keynesian reading claims Article VI permits capital controls but provides no explanation for why IMF enforced convertibility (Article VIII) against developing countries while tolerating developed-country controls through 1970s. Suggests institutional drift favored neoliberal reading even when treaty text supported Keynesian.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): asymmetric enforcement pattern indicates capture"
+    },
+    {
+      "id": "omega_post_collapse_validity",
+      "description": "After 1971 Nixon Shock, is Bretton Woods kernel still operative? Neoliberal reading claims continuity through IMF conditionality, but substrate (gold anchor, fixed rates) destroyed. May be zombie kernel—parties invoke dead substrate to ground authority.",
+      "source": "Kernel validity temporal bounds: system design collapsed but interpretive authority persists"
+    },
+    {
+      "id": "omega_bancor_counterfactual",
+      "description": "Keynes proposed bancor (international clearing unit) to avoid dollar hegemony. Sovereignty_defense reading's critique might dissolve if bancor substrate existed. Suggests White Plan victory embedded extractive structure that no reading could escape.",
+      "source": "Dark Matter Probe 2 (Absence): path not taken might have eliminated third reading's core grievance"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Kernel structure verified: three readings share substrate (treaty text) but derive incompatible constraints. Axiom contradictions declared between Keynesian/neoliberal (trilemma resolution) and Keynesian/sovereignty (monetary hierarchy legitimacy). All three readings selected—no deferral—because each instantiates distinct constraint topology with different beneficiary/victim structure and incompatible foundational axioms."
+  },
+  "_seed_id": "bretton_woods_system"
+}

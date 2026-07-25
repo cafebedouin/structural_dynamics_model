@@ -1,0 +1,204 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Firearms Policy",
+  "family_id": "second_amendment_militia_clause",
+  "topic_summary": "Analysis of the Second Amendment's contested interpretation, focusing on the relationship between the militia clause ('A well regulated Militia, being necessary to the security of a free State') and the operative clause ('the right of the people to keep and bear Arms, shall not be infringed'). The analytical estimate identifies two structurally distinct readings: one treating militia service as conditioning the right (collective security frame), another treating individual armament as categorically protected (individual right detached from civic defense).",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Second Amendment text (constitutional kernel stabilizing interpretive contest)",
+      "State militias / National Guard (organized civic defense force)",
+      "Individual gun owners (claimed rights-holders under Reading B)",
+      "State regulatory apparatus (police power, licensing regimes)",
+      "Federal judiciary (Supreme Court as interpretive authority post-Heller)",
+      "Disarmed populations (felons, domestic abusers, mentally ill - contested victim set)"
+    ],
+    "key_tensions": [
+      "Prefatory clause (militia necessity) vs operative clause (right to bear arms) - grammatical relationship contested",
+      "State police power (public safety regulation) vs individual liberty (resistance to disarmament)"
+    ],
+    "mechanisms": [
+      "Incorporation doctrine (14th Amendment applying 2A against states, post-McDonald)",
+      "Means-end scrutiny (judicial review standard for firearms regulations)",
+      "Licensing and registration regimes (state-level permit systems)"
+    ],
+    "absences": [
+      "Standing army vs militia distinction (Founding-era military structure not addressed in contemporary debate)",
+      "Technological transformation (18th century muskets vs 21st century semi-automatic weapons - original equipment context)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "collective_security_reading",
+      "human_readable": "Collective Security Reading (Militia Clause as Conditioning Frame)",
+      "structural_delta": "Militia clause conditions the right on civic defense; state regulation of arms tied to organized militia service",
+      "primary_observable": "Judicial emphasis on prefatory clause in 2A analysis; state militia/National Guard membership as rights prerequisite",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_regulatory_apparatus",
+      "victim": "individual_gun_owners",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading proceeding to generation; high epsilon, distinct beneficiary/victim structure from sibling readings"
+    },
+    {
+      "claim_id": "individual_right_reading",
+      "human_readable": "Individual Right Reading (Armament Detached from Militia Service)",
+      "structural_delta": "Operative clause guarantees individual right independent of militia service; prefatory clause non-conditioning",
+      "primary_observable": "Post-Heller doctrine treating personal self-defense as core protected activity; resistance to permit requirements",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_gun_owners",
+      "victim": "disarmed_risk_populations",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading proceeding to generation; axiom-contradictory with collective_security_reading"
+    },
+    {
+      "claim_id": "originalist_civic_virtue_reading",
+      "human_readable": "Originalist Civic Virtue Reading (Militia as Armed Citizenry)",
+      "structural_delta": "Founding-era militia understood as universal armed citizenry; right protects citizen-soldier capacity against standing army threat",
+      "primary_observable": "Historical evidence of universal militia duty in 18th century; emphasis on anti-tyranny function",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "citizenry_qua_political_community",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; coexists with individual_right_reading but distinct observable (historical practice vs contemporary doctrine)"
+    },
+    {
+      "claim_id": "living_constitutionalism_reading",
+      "human_readable": "Living Constitutionalism Reading (Adaptive Public Safety Standard)",
+      "structural_delta": "Constitutional meaning evolves with social context; 2A permits regulation tracking contemporary public safety needs",
+      "primary_observable": "Judicial deference to legislative judgments on gun violence; technological change arguments",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": "state_regulatory_apparatus",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: methodological meta-reading rather than substantive kernel interpretation; collapses into collective_security_reading operationally"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "collective_security_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "collective_security_reading"
+    },
+    {
+      "claim_id": "individual_right_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "individual_right_reading"
+    },
+    {
+      "claim_id": "originalist_civic_virtue_reading",
+      "kernel_id": "second_amendment_text",
+      "reading_id": "originalist_civic_virtue_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "living_constitutionalism_reading",
+      "structural_delta": "Constitutional meaning evolves; regulation tracks contemporary public safety",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Methodological meta-reading that operationally collapses into collective_security_reading's regulatory permissiveness; no distinct constraint profile"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_standing_army_obsolescence",
+      "description": "Founding-era fear of standing armies (motivating militia clause) no longer structurally relevant in modern national security state. Does this reclassify originalist_civic_virtue_reading from Rope to Piton?",
+      "source": "Absence Inventory (standing army vs militia distinction)"
+    },
+    {
+      "id": "omega_technological_transformation",
+      "description": "18th century muskets vs 21st century semi-automatic weapons: does technological change transform the constraint type? Potential reclassification of all readings if equipment capabilities alter extractiveness.",
+      "source": "Absence Inventory (original equipment context)"
+    },
+    {
+      "id": "omega_victim_set_boundary",
+      "description": "Who constitutes 'disarmed_risk_populations' under individual_right_reading? Felons/domestic abusers (established exceptions) vs red-flag subjects (contested). Victim set boundary dispute may split individual_right_reading into sub-readings.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction tension"
+    },
+    {
+      "id": "omega_reading_stability_post_bruen",
+      "description": "Post-Bruen 'history and tradition' test may destabilize collective_security_reading by removing means-end scrutiny. Doctrinal shift could force reading reclassification.",
+      "source": "F03 (Hasty Generalization) - mechanism extraction incomplete"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Post-Bruen doctrinal framework (2022) not fully integrated into mechanism extraction. Living_constitutionalism_reading may be empirically obsolete rather than theoretically subordinate. Generated omega_reading_stability_post_bruen to bound this uncertainty."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Second Amendment text stabilizing the relationship between militia necessity and the right to bear arms",
+    "authority_description": "Federal judiciary (Supreme Court) holds interpretive authority; legitimacy grounded in Article III and stare decisis",
+    "drift_status": "functioning",
+    "candidate_pattern": "Interpretive Pluralism Under Fixed Text",
+    "is_contested_kernel": true,
+    "kernel_id": "second_amendment_text",
+    "readings": [
+      {
+        "reading_id": "collective_security_reading",
+        "commitment": "Militia clause conditions the right on organized civic defense; state may regulate arms to serve collective security",
+        "authority_grounding": "Grammatical precedence of prefatory clause; original public meaning of 'militia' as state-organized force",
+        "sibling_readings": [
+          "individual_right_reading",
+          "originalist_civic_virtue_reading"
+        ],
+        "expected_structural_delta": "State regulatory apparatus as beneficiary; licensing/permit regimes permissible; individual gun owners as constrained class"
+      },
+      {
+        "reading_id": "individual_right_reading",
+        "commitment": "Operative clause guarantees individual right independent of militia service; personal self-defense is core protected activity",
+        "authority_grounding": "Post-Heller precedent; individual rights tradition in constitutional interpretation",
+        "sibling_readings": [
+          "collective_security_reading",
+          "originalist_civic_virtue_reading"
+        ],
+        "expected_structural_delta": "Individual gun owners as beneficiary; disarmed populations (felons, domestic abusers) as victim set; strong resistance to permit requirements"
+      },
+      {
+        "reading_id": "originalist_civic_virtue_reading",
+        "commitment": "Founding-era militia understood as universal armed citizenry; right protects citizen-soldier capacity",
+        "authority_grounding": "Historical evidence of 18th century militia practice; anti-standing-army political theory",
+        "sibling_readings": [
+          "collective_security_reading",
+          "individual_right_reading"
+        ],
+        "expected_structural_delta": "Citizenry qua political community as beneficiary; no specific victim set; right tied to civic republican function rather than personal self-defense or state regulation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "collective_security_reading",
+        "reading_b": "individual_right_reading",
+        "basis": "Collective_security treats militia clause as grammatically and substantively conditioning the right (no militia service = no protected right); individual_right treats prefatory clause as mere recitation of purpose with no conditioning effect (right exists independent of militia participation). No single framework can hold both the conditional and unconditional versions of the same right simultaneously."
+      }
+    ]
+  },
+  "_seed_id": "second_amendment_militia_clause"
+}

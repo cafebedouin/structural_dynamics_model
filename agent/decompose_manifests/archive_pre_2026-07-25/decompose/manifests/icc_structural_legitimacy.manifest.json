@@ -1,0 +1,262 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Treaty Interpretation / Institutional Authority",
+  "family_id": "rome_statute_interpretive_legitimacy",
+  "topic_summary": "Analysis of competing interpretations of the Rome Statute's jurisdictional foundation: whether it establishes universal criminal justice authority or a conditional framework requiring sovereign consent. The interpretive contest alters the Court's authority grounding, jurisdictional scope, and legitimacy claims in practice.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Rome Statute (foundational treaty text establishing ICC jurisdiction and procedures)",
+      "International Criminal Court (institutional authority claiming jurisdiction over atrocity crimes)",
+      "State Parties (signatory states recognizing ICC jurisdiction)",
+      "Non-State Parties (states not ratifying, asserting sovereignty shield)",
+      "UN Security Council (referral mechanism under Chapter VII authority)"
+    ],
+    "key_tensions": [
+      "Universal jurisdiction claim vs sovereign consent requirement (universalist vs sovereigntist readings)",
+      "Complementarity principle vs primary jurisdiction assertion (ICC deference to national courts vs override authority)"
+    ],
+    "key_mechanisms": [
+      "Article 12 jurisdiction trigger (territorial state OR national state ratification OR UNSC referral)",
+      "Complementarity assessment (unwilling/unable test for national prosecution)",
+      "Arrest warrant enforcement (dependent on state cooperation; no independent enforcement capacity)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism independent of state cooperation (ICC has no police force or military)",
+      "Explicit hierarchy resolution between complementarity and universal mandate (Statute text does not prioritize when they conflict)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Rome Statute as stabilized reference defining ICC authority boundaries and jurisdictional legitimacy",
+    "authority_description": "Interpretive legitimacy claimed by ICC judges, contested by non-parties asserting sovereign immunity, mediated by Assembly of States Parties",
+    "drift_status": "partial",
+    "candidate_pattern": "dual_reading_legitimacy_contest",
+    "is_contested_kernel": true,
+    "kernel_id": "rome_statute_jurisdiction",
+    "readings": [
+      {
+        "reading_id": "universalist_reading",
+        "commitment": "Rome Statute establishes universal mandate for international criminal justice transcending consent",
+        "authority_grounding": "Natural law / jus cogens crimes / human rights cosmopolitanism",
+        "sibling_readings": [
+          "sovereigntist_reading",
+          "hybrid_complementarity_reading"
+        ],
+        "expected_structural_delta": "ICC jurisdiction extends to non-party nationals via territorial or UNSC triggers; victims include all persons regardless of state consent; authority claims override national sovereignty for core crimes"
+      },
+      {
+        "reading_id": "sovereigntist_reading",
+        "commitment": "Rome Statute creates conditional framework requiring strict sovereign consent for jurisdiction",
+        "authority_grounding": "Westphalian sovereignty / treaty law positivism / consent-based obligation",
+        "sibling_readings": [
+          "universalist_reading",
+          "hybrid_complementarity_reading"
+        ],
+        "expected_structural_delta": "ICC jurisdiction limited to consenting states; non-party nationals immune except via UNSC referral; national courts retain primary authority; complementarity as deference not override"
+      },
+      {
+        "reading_id": "hybrid_complementarity_reading",
+        "commitment": "Rome Statute balances universal aspiration with sovereign primacy via complementarity mechanism",
+        "authority_grounding": "Institutional pragmatism / cooperative federalism analogue / progressive realization",
+        "sibling_readings": [
+          "universalist_reading",
+          "sovereigntist_reading"
+        ],
+        "expected_structural_delta": "ICC has residual universal authority but operationally constrained by complementarity deference; jurisdiction exists but enforcement depends on state cooperation; authority grounded in hybrid of natural law aspiration and treaty consent"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "universalist_reading",
+        "reading_b": "sovereigntist_reading",
+        "basis": "No single framework can simultaneously hold that crimes against humanity create jurisdiction independent of state consent AND that state consent is prerequisite for jurisdiction; one axiom requires accepting jurisdiction as inherent to crime commission, the other requires accepting jurisdiction as derivative of treaty ratification"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "universalist_reading",
+      "human_readable": "Universalist Reading (Natural Law Mandate)",
+      "structural_delta": "Rome Statute read as establishing inherent ICC authority over jus cogens crimes transcending sovereign consent",
+      "primary_observable": "ICC jurisdictional assertions over non-party nationals via Article 12(2)(a) territorial trigger; judicial reasoning citing inherent authority",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "victims_in_non_party_states",
+      "victim": "non_party_state_sovereignty",
+      "downstream_of": [],
+      "feeds_into": [
+        "enforcement_gap_constraint"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating high-epsilon constraint via universal jurisdiction claim; produces distinct victim/beneficiary structure"
+    },
+    {
+      "claim_id": "sovereigntist_reading",
+      "human_readable": "Sovereigntist Reading (Consent-Based Treaty Framework)",
+      "structural_delta": "Rome Statute read as conditional treaty creating jurisdiction only where states consent via ratification",
+      "primary_observable": "Non-party state legal argumentation rejecting ICC jurisdiction; practice of treating ICC warrants as non-binding absent consent",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "non_party_state_elites",
+      "victim": "victims_in_non_party_states",
+      "downstream_of": [],
+      "feeds_into": [
+        "enforcement_gap_constraint"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Axiom-contradictory reading producing inverted victim/beneficiary structure; equal centrality to universalist reading"
+    },
+    {
+      "claim_id": "hybrid_complementarity_reading",
+      "human_readable": "Hybrid Complementarity Reading (Pragmatic Federalism)",
+      "structural_delta": "Rome Statute read as balancing universal aspiration with sovereign deference via complementarity mechanism",
+      "primary_observable": "ICC complementarity assessments deferring to national prosecutions; admissibility challenges on unwilling/unable grounds",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "state_parties_national_courts",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "enforcement_gap_constraint"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Operationally dominant reading in ICC practice; mediates between contradictory axioms; produces distinct epsilon from enforcement constraint interaction"
+    },
+    {
+      "claim_id": "enforcement_gap_constraint",
+      "human_readable": "Enforcement Gap (Authority Without Coercive Capacity)",
+      "structural_delta": "ICC lacks independent enforcement mechanism; arrest/detention depends entirely on state cooperation",
+      "primary_observable": "Number of outstanding arrest warrants un-executed; state non-cooperation with arrest requests",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "universalist_reading",
+        "sovereigntist_reading",
+        "hybrid_complementarity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain constraint affecting all readings equally; captured via affects_constraint edges from kernel readings; no independent epsilon variation"
+    },
+    {
+      "claim_id": "unsc_referral_bypass",
+      "human_readable": "UNSC Referral Bypass (Chapter VII Override Mechanism)",
+      "structural_delta": "Article 13(b) referrals create jurisdiction over non-parties via Security Council Chapter VII authority",
+      "primary_observable": "Sudan and Libya referral practice; non-party state challenges to UNSC-triggered jurisdiction",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "p5_geopolitical_discretion",
+      "victim": "non_party_states_targeted_by_referral",
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereigntist_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: referral mechanism is exception to consent framework but structurally subordinate to core kernel contest; lower epsilon than primary readings"
+    },
+    {
+      "claim_id": "victim_standing_asymmetry",
+      "human_readable": "Victim Standing Asymmetry (Access Conditional on State Cooperation)",
+      "structural_delta": "Victims in non-party states have no direct ICC access absent territorial state consent or UNSC referral",
+      "primary_observable": "Geographic distribution of ICC cases vs global atrocity crime incidence; victim participation rates by state party status",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "victims_in_party_states",
+      "victim": "victims_in_non_party_states_without_referral",
+      "downstream_of": [
+        "sovereigntist_reading",
+        "hybrid_complementarity_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural consequence of sovereigntist reading rather than independent axis; captured via downstream effects of selected readings"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "universalist_reading",
+      "kernel_id": "rome_statute_jurisdiction",
+      "reading_id": "universalist_reading"
+    },
+    {
+      "claim_id": "sovereigntist_reading",
+      "kernel_id": "rome_statute_jurisdiction",
+      "reading_id": "sovereigntist_reading"
+    },
+    {
+      "claim_id": "hybrid_complementarity_reading",
+      "kernel_id": "rome_statute_jurisdiction",
+      "reading_id": "hybrid_complementarity_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_gap_constraint",
+      "structural_delta": "ICC lacks independent enforcement; arrest depends on state cooperation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain constraint affecting all kernel readings equally; no independent epsilon variation; effects captured via affects_constraint edges from selected readings"
+    },
+    {
+      "claim_id": "unsc_referral_bypass",
+      "structural_delta": "Chapter VII referrals create jurisdiction over non-parties via UNSC authority",
+      "hypothesis": "rope",
+      "deferral_reason": "Exception mechanism to consent framework; structurally subordinate to core kernel contest; lower epsilon than primary readings; geopolitical discretion element adds complexity but does not alter core jurisdictional interpretive contest"
+    },
+    {
+      "claim_id": "victim_standing_asymmetry",
+      "structural_delta": "Victims in non-party states lack ICC access absent consent or referral",
+      "hypothesis": "snare",
+      "deferral_reason": "Structural consequence of sovereigntist reading rather than independent constraint axis; victim access asymmetry is downstream effect captured by selected readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_complementarity_hierarchy",
+      "description": "Does the complementarity principle (Article 17) function as constraint on ICC authority (sovereigntist implication) or as temporary deference pending national failure (universalist implication)? Statute text does not explicitly resolve hierarchy when universal mandate and complementarity conflict. Hybrid reading attempts mediation but may collapse under operational pressure.",
+      "source": "Extraction absence: no explicit hierarchy resolution in Statute text; tension between universal aspiration and sovereign primacy"
+    },
+    {
+      "id": "omega_territorial_trigger_bootstrapping",
+      "description": "Article 12(2)(a) territorial jurisdiction trigger allows prosecution of non-party nationals if crime occurs on party state territory. Does this constitute universal jurisdiction bootstrapping (universalist claim) or legitimate territorial sovereignty exercise (sovereigntist claim)? Interpretive ambiguity allows both readings to cite same provision as support.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): textual ambiguity benefits ICC institutional expansion while preserving sovereigntist challenge pathway"
+    },
+    {
+      "id": "omega_reading_stability_under_enforcement_failure",
+      "description": "If enforcement gap persists (deferred mountain constraint), does this collapse hybrid_complementarity_reading toward sovereigntist_reading over time? Inability to enforce warrants against non-cooperating states may erode universalist claims through demonstrated impotence rather than legal argument.",
+      "source": "Downstream interaction between deferred enforcement_gap_constraint and selected readings; operational reality may drive interpretive drift"
+    },
+    {
+      "id": "omega_axiom_contradiction_social_license",
+      "description": "The axiom contradiction between universalist and sovereigntist readings produces licensed plurality: both are socially live positions defended by credible authorities. Does this plurality indicate productive interpretive contest or delegitimizing foundational incoherence? Answer may depend on whether ICC institutional performance converges practice toward one reading or maintains permanent bifurcation.",
+      "source": "Axiom Contradictions declaration; readings coexist_with edge but contradictory axioms"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied as specified. Three readings selected represent genuine structural variation in constraint instantiation. Deferred axes appropriately triaged as either mountain affecting all readings equally (enforcement_gap) or downstream consequences of selected readings (unsc_referral_bypass, victim_standing_asymmetry). Omegas capture bounded uncertainties regarding complementarity hierarchy, territorial trigger interpretation, enforcement-driven reading drift, and legitimacy implications of axiom contradiction."
+  },
+  "_seed_id": "icc_structural_legitimacy"
+}

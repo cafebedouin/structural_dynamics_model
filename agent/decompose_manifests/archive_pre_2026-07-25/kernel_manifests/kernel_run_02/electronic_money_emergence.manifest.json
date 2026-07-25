@@ -1,0 +1,241 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Monetary Economics / Financial History / Technology Governance",
+  "family_id": "digital_money_emergence_2026",
+  "topic_summary": "Analysis of the emergence of electronic/digital money from the 1960s to 2000s, examining the temporal gap between conceptualization (1960s theoretical possibility), infrastructure implementation (ACH/SWIFT networks 1970s), and consumer-facing digital money holdings (1990s e-purses). The core analytical question is whether 'digital money' became thinkable when the concept emerged, when infrastructure enabled electronic transfer, or when individuals could first hold digital instruments—a distinction that destabilizes traditional monetary aggregates (M4/M5 collapse).",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "SWIFT (cross-border payment messaging network, founded 1973)",
+      "ACH systems (automated clearinghouse for batch transactions, 1960s-1970s)",
+      "David Chaum (cryptographer, formulated electronic money vision 1985)",
+      "European Monetary Institute (regulatory body, published e-money report 1994)",
+      "Barclays/Chemical Bank (first ATM deployers, 1967-1969)",
+      "Federal Reserve (monetary aggregate authority, discontinued M3 reporting)",
+      "Bank of Finland (Avant smart card issuer, 1993)",
+      "Bretton Woods system (collapsed 1971, enabling floating exchange rates)"
+    ],
+    "key_tensions": [
+      "Conceptualization vs implementation: theoretical possibility (1960s) vs actual consumer holdings (1990s)",
+      "Infrastructure vs money: SWIFT/ACH moved money electronically but were not themselves money",
+      "Definitional ambiguity: what counts as 'digital money' (bank deposits? e-purses? prepaid cards?)",
+      "Centralized control vs decentralized innovation: regulatory frameworks vs private banking networks"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The temporal boundary at which 'digital money' came into existence as a distinct monetary form",
+    "authority_description": "Central banks and monetary economists who define money supply aggregates and determine what qualifies as 'money' for regulatory and statistical purposes",
+    "drift_status": "partial",
+    "candidate_pattern": "definitional_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "digital_money_emergence_boundary",
+    "readings": [
+      {
+        "reading_id": "conceptualization_reading",
+        "commitment": "Digital money emerged when it became theoretically thinkable (1960s telecommunications advances, 1985 Chaum formalization)",
+        "authority_grounding": "Academic/cryptographic: authority derives from theoretical coherence and technical feasibility proofs",
+        "sibling_readings": [
+          "infrastructure_reading",
+          "consumer_holdings_reading"
+        ],
+        "expected_structural_delta": "Earliest boundary; includes theoretical concepts and research prototypes; M4/M5 would need to account for 'potential money' not yet in circulation; beneficiary is academic/research community establishing priority claims"
+      },
+      {
+        "reading_id": "infrastructure_reading",
+        "commitment": "Digital money emerged when infrastructure enabled electronic transfer (1967 ATMs, 1972 ACH, 1977 SWIFT)",
+        "authority_grounding": "Institutional/operational: authority derives from banking system's capacity to execute electronic transactions",
+        "sibling_readings": [
+          "conceptualization_reading",
+          "consumer_holdings_reading"
+        ],
+        "expected_structural_delta": "Middle boundary; money exists when banks can move it electronically even if consumers cannot hold it directly; M4/M5 collapse begins here as electronic bank deposits blur into new category; beneficiary is banking infrastructure providers (SWIFT, ACH operators) who control the rails"
+      },
+      {
+        "reading_id": "consumer_holdings_reading",
+        "commitment": "Digital money emerged when consumers could directly hold and transact with digital instruments (1990s e-purses, 2000 EMD)",
+        "authority_grounding": "Regulatory/consumer: authority derives from legal recognition and actual market adoption",
+        "sibling_readings": [
+          "conceptualization_reading",
+          "infrastructure_reading"
+        ],
+        "expected_structural_delta": "Latest boundary; money exists only when individuals can hold it outside traditional bank accounts; M4/M5 distinction becomes necessary to separate bank deposits from e-money; beneficiary is regulatory bodies (EMI/ECB) who define legal categories and fintech firms who issue e-money products"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "conceptualization_reading",
+        "reading_b": "consumer_holdings_reading",
+        "basis": "Conceptualization reading treats theoretical possibility as constitutive (money exists when thinkable), while consumer holdings reading treats actual possession as constitutive (money exists only when held). No single framework can hold both: either the concept creates the category or actual holdings do."
+      },
+      {
+        "reading_a": "infrastructure_reading",
+        "reading_b": "consumer_holdings_reading",
+        "basis": "Infrastructure reading locates money in the banking system's capacity (money exists when transferable), while consumer holdings reading locates it in individual possession (money exists when holdable outside banks). These are incompatible: either institutional capacity or individual control defines the boundary."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "conceptualization_reading",
+      "human_readable": "Conceptualization Reading: Digital Money as Theoretical Possibility (1960s-1985)",
+      "structural_delta": "Boundary set at theoretical formalization: digital money exists when cryptographers and economists can describe it coherently",
+      "primary_observable": "Publication dates of theoretical papers (Chaum 1985), telecommunications infrastructure enabling instant transfer (1960s)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "academic_research_community",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "infrastructure_reading",
+        "consumer_holdings_reading"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Earliest reading; establishes upstream theoretical foundation; different authority grounding (academic vs institutional vs regulatory)"
+    },
+    {
+      "claim_id": "infrastructure_reading",
+      "human_readable": "Infrastructure Reading: Digital Money as Electronic Transfer Capacity (1967-1977)",
+      "structural_delta": "Boundary set at operational infrastructure: digital money exists when banking systems can move it electronically",
+      "primary_observable": "Deployment dates of ATMs (1967), ACH (1972), SWIFT (1977); volume of electronic transactions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "banking_infrastructure_providers",
+      "victim": "cash_based_payment_systems",
+      "downstream_of": [
+        "conceptualization_reading"
+      ],
+      "feeds_into": [
+        "consumer_holdings_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Middle reading; highest centrality; captures M4/M5 collapse mechanism as electronic deposits blur categories"
+    },
+    {
+      "claim_id": "consumer_holdings_reading",
+      "human_readable": "Consumer Holdings Reading: Digital Money as Direct Individual Possession (1990s-2000)",
+      "structural_delta": "Boundary set at consumer access: digital money exists only when individuals can hold it outside traditional bank accounts",
+      "primary_observable": "E-purse deployment (Bank of Finland Avant 1993), EMD adoption (2000), prepaid card market penetration",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "regulatory_bodies_and_fintech_issuers",
+      "victim": "unbanked_populations_excluded_from_digital_access",
+      "downstream_of": [
+        "conceptualization_reading",
+        "infrastructure_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Latest reading; downstream synthesis; highest epsilon (regulatory capture of definition); axiom-contradictory with conceptualization_reading"
+    },
+    {
+      "claim_id": "bretton_woods_collapse_enabling",
+      "human_readable": "Bretton Woods Collapse as Enabling Condition (1971)",
+      "structural_delta": "Floating exchange rates and increased cross-border transaction volume created demand for electronic settlement infrastructure",
+      "primary_observable": "Cross-border transaction volume post-1971; SWIFT founding as response to Bretton Woods collapse",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "infrastructure_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but lower structural distinctiveness than conceptualization_reading; captured implicitly in infrastructure_reading's constraint story"
+    },
+    {
+      "claim_id": "monetary_aggregate_obsolescence",
+      "human_readable": "Monetary Aggregate Obsolescence (M3 Discontinuation, M5 Proposal)",
+      "structural_delta": "Traditional money supply measures (M1-M4) became inadequate as digital money blurred deposit/currency boundaries",
+      "primary_observable": "Federal Reserve M3 discontinuation (2006); academic proposals for M5 including crypto (2010s)",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "central_bank_monetary_policy_precision",
+      "downstream_of": [
+        "infrastructure_reading",
+        "consumer_holdings_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of boundary ambiguity; lower centrality than selected readings; omega material on measurement collapse"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "conceptualization_reading",
+      "kernel_id": "digital_money_emergence_boundary",
+      "reading_id": "conceptualization_reading"
+    },
+    {
+      "claim_id": "infrastructure_reading",
+      "kernel_id": "digital_money_emergence_boundary",
+      "reading_id": "infrastructure_reading"
+    },
+    {
+      "claim_id": "consumer_holdings_reading",
+      "kernel_id": "digital_money_emergence_boundary",
+      "reading_id": "consumer_holdings_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "bretton_woods_collapse_enabling",
+      "structural_delta": "Floating exchange rates created demand for electronic settlement",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream enabling condition but lower structural distinctiveness than conceptualization_reading; implicitly captured in infrastructure_reading's constraint story"
+    },
+    {
+      "claim_id": "monetary_aggregate_obsolescence",
+      "structural_delta": "M1-M4 measures became inadequate as digital money blurred categories",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream consequence of boundary ambiguity; measurement collapse is omega material rather than independent axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_m4_m5_collapse_mechanism",
+      "description": "Does the M4/M5 collapse reflect genuine monetary innovation or statistical artifact? If infrastructure_reading is correct, electronic bank deposits already constituted 'digital money' in the 1970s, making M4/M5 distinction retrospective classification rather than new phenomenon. If consumer_holdings_reading is correct, M5 is necessary category for e-money distinct from deposits.",
+      "source": "Deferred axis monetary_aggregate_obsolescence + axiom contradiction between infrastructure_reading and consumer_holdings_reading"
+    },
+    {
+      "id": "omega_chaum_implementation_gap",
+      "description": "Why did Chaum's 1985 formalization not lead to immediate implementation? 30-year gap between theoretical coherence and consumer adoption suggests missing constraint—was it regulatory resistance, technical limitations, or lack of market demand? If conceptualization_reading is valid, this gap is anomalous.",
+      "source": "Dark Matter Probe 2 (Absence Inventory): no mechanism identified for theory-to-practice translation"
+    },
+    {
+      "id": "omega_swift_money_distinction",
+      "description": "Is SWIFT's 'we send messages not money' distinction a true structural boundary or regulatory fiction? If infrastructure_reading is correct, the messaging layer IS the money (money exists when transferable). If consumer_holdings_reading is correct, SWIFT is pre-monetary infrastructure. This distinction determines whether 1977 or 1993 is the emergence boundary.",
+      "source": "Axiom contradiction between infrastructure_reading and consumer_holdings_reading + research context tension 'SWIFT did not move money directly'"
+    },
+    {
+      "id": "omega_unbanked_exclusion",
+      "description": "All three readings assume banking system access. Does 'digital money' emergence for the banked constitute emergence for the unbanked, or does exclusion from digital payment systems create a new victim class? Consumer_holdings_reading identifies this as snare victim set, but conceptualization and infrastructure readings do not address it.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan): all readings privilege banked populations"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings decompose the kernel cleanly with distinct authority groundings (academic, institutional, regulatory), different observables (publication dates, infrastructure deployment, consumer product adoption), and axiom contradictions between conceptualization/consumer and infrastructure/consumer pairs. Deferred axes are genuinely lower centrality rather than missed lenses."
+  },
+  "_seed_id": "electronic_money_emergence"
+}

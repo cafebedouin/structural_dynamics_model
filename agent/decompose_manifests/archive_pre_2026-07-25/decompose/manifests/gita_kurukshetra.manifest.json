@@ -1,0 +1,176 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Textual Hermeneutics / Ethical Philosophy",
+  "family_id": "bhagavad_gita_interpretive_pluralism",
+  "topic_summary": "Analysis of the Bhagavad Gita as a contested kernel where orthodox literal readings mandate caste-based duty (svadharma) and justify physical violence in righteous war versus allegorical readings (exemplified by Gandhi) that reinterpret the battlefield as internal spiritual struggle. The interpretive divergence determines whether the text authorizes caste hierarchy and violence or repudiates both.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Bhagavad Gita (Sanskrit scripture; Chapter 18 verses on svadharma and caste duty)",
+      "Arjuna (warrior facing moral crisis over killing kin)",
+      "Krishna (divine teacher; arbiter of dharma)",
+      "Orthodox Brahminical tradition (interprets text as caste-duty mandate)",
+      "Gandhi (allegorical interpreter; nonviolence advocate)"
+    ],
+    "key_tensions": [
+      "Literal vs allegorical hermeneutic authority (who legitimately interprets the kernel)",
+      "Caste hierarchy preservation vs egalitarian spiritual universalism"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Bhagavad Gita's discourse at Kurukshetra stabilizes as shared textual substrate across interpretive traditions",
+    "authority_description": "Legitimacy derives from claimed fidelity to the text's 'true meaning' — contested between scholastic lineages (śāstraic authority) and reformist moral intuition",
+    "drift_status": "partial",
+    "candidate_pattern": "Interpretive Drift Absorption",
+    "is_contested_kernel": true,
+    "kernel_id": "gita_kurukshetra_discourse",
+    "readings": [
+      {
+        "reading_id": "orthodox_literal_reading",
+        "commitment": "Text mandates caste-based duty and legitimates righteous violence in dharmic war",
+        "authority_grounding": "Brahminical scholastic tradition; Shankaracharya commentarial lineage; scriptural literalism",
+        "sibling_readings": [
+          "gandhian_allegorical_reading",
+          "universalist_devotional_reading"
+        ],
+        "expected_structural_delta": "Caste hierarchy enters beneficiary set (as divinely ordained social order); kshatriya warrior class justified in violence when duty-bound; Brahmins retain interpretive monopoly; victims are lower castes locked in hierarchy and those killed in 'righteous' war"
+      },
+      {
+        "reading_id": "gandhian_allegorical_reading",
+        "commitment": "Kurukshetra battlefield is metaphor for internal struggle; violence is spiritual not physical",
+        "authority_grounding": "Reformist moral intuition; appeal to broader Hindu ethical principles (ahimsa); rejection of caste as divinely fixed",
+        "sibling_readings": [
+          "orthodox_literal_reading",
+          "universalist_devotional_reading"
+        ],
+        "expected_structural_delta": "Caste hierarchy exits constraint set (no divine mandate); physical violence repudiated; interpretive authority shifts from Brahminical scholars to individual moral conscience; ahimsa elevated as supreme principle; victims are those subjected to structural violence of caste and literal war"
+      },
+      {
+        "reading_id": "universalist_devotional_reading",
+        "commitment": "Text teaches path-independent devotion (bhakti) accessible to all regardless of caste; dharma is surrender to divine will not social role",
+        "authority_grounding": "Bhakti movement; Vaishnava traditions; emphasis on Krishna's Chapter 9 promise of universal salvation",
+        "sibling_readings": [
+          "orthodox_literal_reading",
+          "gandhian_allegorical_reading"
+        ],
+        "expected_structural_delta": "Caste as spiritual barrier dissolved; duty redefined as devotional surrender not social role; violence neither mandated nor central to text's message; egalitarian access to salvation; beneficiary is universal devotee class; traditional Brahminical gatekeeping authority undermined"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "orthodox_literal_reading",
+        "reading_b": "gandhian_allegorical_reading",
+        "basis": "Orthodox reading holds caste hierarchy as divinely fixed ontological reality requiring enforcement; Gandhian reading holds caste as human construct requiring abolition. No framework can simultaneously affirm caste as divine law and repudiate it as illegitimate social construction."
+      },
+      {
+        "reading_a": "orthodox_literal_reading",
+        "reading_b": "universalist_devotional_reading",
+        "basis": "Orthodox reading grounds spiritual authority in birth-caste and ritual knowledge monopoly; universalist reading makes devotion path-independent of caste. No framework can hold both Brahminical gatekeeping and universal devotional access as simultaneously valid principles."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "orthodox_literal_reading",
+      "human_readable": "Orthodox Literal Reading (Caste Duty as Divine Mandate)",
+      "structural_delta": "Text interpreted as literal mandate for caste-based duty and justified violence in righteous war",
+      "primary_observable": "Commentarial tradition emphasis on svadharma verses; caste endogamy maintenance; scriptural authority cited for varna system",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "brahminical_interpretive_class",
+      "victim": "lower_castes_locked_in_hierarchy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading establishing maximum extractiveness (caste hierarchy plus violence justification); highest beneficiary/victim asymmetry"
+    },
+    {
+      "claim_id": "gandhian_allegorical_reading",
+      "human_readable": "Gandhian Allegorical Reading (Internal Spiritual Struggle)",
+      "structural_delta": "Battlefield reinterpreted as metaphor for internal moral struggle; violence and caste repudiated",
+      "primary_observable": "Gandhian writings on Gita; nonviolence movement rhetoric; rejection of caste as divinely sanctioned",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposed reading collapsing both caste and violence constraints; demonstrates kernel contestation"
+    },
+    {
+      "claim_id": "universalist_devotional_reading",
+      "human_readable": "Universalist Devotional Reading (Bhakti Path-Independence)",
+      "structural_delta": "Devotional surrender replaces caste-duty as primary teaching; spiritual access universalized",
+      "primary_observable": "Bhakti movement texts; Vaishnava commentaries emphasizing Chapter 9; cross-caste temple access debates",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "lower_caste_devotional_communities",
+      "victim": "brahminical_gatekeeping_authority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structurally distinct reading dissolving caste gatekeeping via alternative authority principle (devotion over birth)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "orthodox_literal_reading",
+      "kernel_id": "gita_kurukshetra_discourse",
+      "reading_id": "orthodox_literal_reading"
+    },
+    {
+      "claim_id": "gandhian_allegorical_reading",
+      "kernel_id": "gita_kurukshetra_discourse",
+      "reading_id": "gandhian_allegorical_reading"
+    },
+    {
+      "claim_id": "universalist_devotional_reading",
+      "kernel_id": "gita_kurukshetra_discourse",
+      "reading_id": "universalist_devotional_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_neo_vedanta_syncretism",
+      "description": "Neo-Vedanta readings (Vivekananda, Aurobindo) synthesize literal and allegorical elements, claiming both caste critique and dharmic duty coexist in text. Does this represent fourth reading or collapse under coherence test?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — syncretic traditions not decomposed"
+    },
+    {
+      "id": "omega_dalit_hermeneutic",
+      "description": "Dalit Buddhist and Ambedkarite readings reject Gita entirely as Brahminical oppression tool. Is rejection itself a reading or exit from kernel entirely? Affects victim-set boundaries.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — anti-caste readings that refuse engagement"
+    },
+    {
+      "id": "omega_colonial_translation_layer",
+      "description": "British colonial translations (e.g., Charles Wilkins 1785) shaped 'orthodoxy' perception in anglophone discourse. Is received 'orthodox' reading itself a colonial construction layered over pre-colonial diversity?",
+      "source": "Dark Matter Probe 1 (Operational Medium) — anglophone academic framing as unexamined interpretive layer"
+    },
+    {
+      "id": "omega_violence_disambiguation",
+      "description": "Does orthodox reading justify all violence or only dharmic war violence? Constraint scope ambiguity affects epsilon measurement. Text's own ambiguity (Krishna's vishvarupa terror) may be load-bearing for interpretive contest.",
+      "source": "F03 (Hasty Generalization) concern — violence justification scope unclear"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Orthodox reading's violence justification scope unclear — text may authorize only specific kshatriya war-duty not general violence, but 20th century Hindu nationalism expanded scope. Generated omega_violence_disambiguation. All three readings proceed to generation as structurally distinct with confirmed axiom contradictions."
+  },
+  "_seed_id": "gita_kurukshetra"
+}

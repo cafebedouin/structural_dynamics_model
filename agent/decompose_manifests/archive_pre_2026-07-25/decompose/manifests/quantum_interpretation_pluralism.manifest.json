@@ -1,0 +1,228 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Philosophy of Physics / Quantum Foundations / Interpretive Epistemology",
+  "family_id": "quantum_formalism_interpretations",
+  "topic_summary": "Analysis of quantum mechanics interpretive frameworks as a contested kernel. The mathematical formalism of quantum mechanics (Schrödinger equation, Born rule, Hilbert space structure) serves as a fixed substrate that different interpretive traditions read differently, yielding mutually exclusive ontological commitments about the nature of measurement, causality, and physical reality.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Quantum formalism (Schrödinger equation, Born rule, mathematical substrate)",
+      "Copenhagen interpretation (Bohr, Heisenberg; wavefunction collapse as epistemic boundary)",
+      "Many-Worlds interpretation (Everett; deterministic universal wavefunction)",
+      "Pilot Wave theory (de Broglie-Bohm; deterministic hidden variables)",
+      "Physics community (adjudicating legitimacy of interpretations)",
+      "Measurement apparatus (experimental interface, differently theorized across readings)"
+    ],
+    "key_tensions": [
+      "Determinism vs indeterminism (Many-Worlds/Pilot Wave vs Copenhagen)",
+      "Ontological commitment vs epistemic modesty (realist vs instrumentalist readings)",
+      "Local hidden variables vs nonlocality (Pilot Wave vs Copenhagen/Many-Worlds)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The mathematical formalism of quantum mechanics: Schrödinger equation, Born rule, Hilbert space structure, superposition principle, entanglement mathematics",
+    "authority_description": "Interpretive legitimacy derives from empirical adequacy (all interpretations must recover the formalism's predictions) combined with philosophical coherence criteria (ontological parsimony, locality preservation, determinism). No single adjudicating body; competing schools within physics and philosophy communities.",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "quantum_formalism",
+    "readings": [
+      {
+        "reading_id": "copenhagen_reading",
+        "commitment": "Wavefunction collapse is a physical process marking an absolute epistemic boundary; measurement produces irreducible indeterminism",
+        "authority_grounding": "Historical dominance (Bohr, Heisenberg); operational utility; epistemic modesty about pre-measurement reality",
+        "sibling_readings": [
+          "many_worlds_reading",
+          "pilot_wave_reading"
+        ],
+        "expected_structural_delta": "Measurement enters as a primitive ontological category; observer role non-eliminable; determinism abandoned at measurement events"
+      },
+      {
+        "reading_id": "many_worlds_reading",
+        "commitment": "Universal wavefunction evolves deterministically; measurement is decoherence-induced apparent branching; all outcomes realized in separate worlds",
+        "authority_grounding": "Ontological parsimony (no collapse postulate); determinism preservation; unification of quantum and classical",
+        "sibling_readings": [
+          "copenhagen_reading",
+          "pilot_wave_reading"
+        ],
+        "expected_structural_delta": "Measurement is derivative (emergent from decoherence); observer eliminable; determinism global; ontological extravagance (infinite worlds)"
+      },
+      {
+        "reading_id": "pilot_wave_reading",
+        "commitment": "Particles have definite positions guided by pilot wave (wavefunction as physical field); deterministic hidden variables restore classical ontology",
+        "authority_grounding": "Determinism preservation; particle ontology (classical intuition); nonlocality explicitly embraced",
+        "sibling_readings": [
+          "copenhagen_reading",
+          "many_worlds_reading"
+        ],
+        "expected_structural_delta": "Measurement reveals pre-existing particle positions; observer eliminable; determinism local (but nonlocal guidance); wavefunction ontologically real as field"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "copenhagen_reading",
+        "reading_b": "many_worlds_reading",
+        "basis": "Copenhagen's axiom that measurement collapse is a fundamental physical process requiring a special ontological category is mutually exclusive with Many-Worlds' axiom that measurement is an entirely derivative phenomenon (decoherence). No single framework can hold both: if collapse is fundamental, branching cannot be the full story; if decoherence explains measurement, collapse is eliminated."
+      },
+      {
+        "reading_a": "copenhagen_reading",
+        "reading_b": "pilot_wave_reading",
+        "basis": "Copenhagen's axiom of irreducible indeterminism at measurement (Born rule as fundamental randomness) is mutually exclusive with Pilot Wave's axiom of deterministic hidden variables. No framework can hold both: accepting deterministic particle trajectories requires rejecting measurement indeterminism as fundamental."
+      },
+      {
+        "reading_a": "many_worlds_reading",
+        "reading_b": "pilot_wave_reading",
+        "basis": "Many-Worlds' axiom that particles do not have definite positions between measurements (only relative states in branching histories) is mutually exclusive with Pilot Wave's axiom that particles always have definite positions guided by the wave. No framework holds both: if particles always have positions, branching worlds are unnecessary; if branching is universal, definite positions are denied."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "copenhagen_reading",
+      "human_readable": "Copenhagen Interpretation (Collapse as Epistemic Boundary)",
+      "structural_delta": "Measurement collapse as a fundamental physical process; observer role non-eliminable; indeterminism irreducible",
+      "primary_observable": "Methodological commitments in textbooks and pedagogy; appeal to complementarity and epistemic modesty in professional discourse",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "instrumentalist_community",
+      "victim": "ontological_realism_program",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Historical dominance; represents the interpretive orthodoxy against which others define themselves; highest pedagogical entrenchment"
+    },
+    {
+      "claim_id": "many_worlds_reading",
+      "human_readable": "Many-Worlds Interpretation (Deterministic Branching)",
+      "structural_delta": "Universal wavefunction determinism; measurement as decoherence; ontological extravagance (infinite branches)",
+      "primary_observable": "Commitment to unitary evolution without collapse; decoherence research program; ontological cost arguments in literature",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "determinism_preservation_program",
+      "victim": "ontological_parsimony_intuition",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Maximal ontological divergence from Copenhagen; represents the realist/deterministic pole"
+    },
+    {
+      "claim_id": "pilot_wave_reading",
+      "human_readable": "Pilot Wave Theory (Deterministic Hidden Variables)",
+      "structural_delta": "Particles with definite positions; wavefunction as guiding field; nonlocality embraced",
+      "primary_observable": "Commitment to particle ontology; Bohmian mechanics research program; nonlocality acceptance in foundations literature",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "classical_ontology_intuition",
+      "victim": "locality_preservation_program",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Completes the triadic structure: indeterminism (Copenhagen) vs determinism-via-branching (Many-Worlds) vs determinism-via-hidden-variables (Pilot Wave)"
+    },
+    {
+      "claim_id": "qbism_reading",
+      "human_readable": "QBism (Quantum Bayesianism)",
+      "structural_delta": "Probabilities as subjective credences; wavefunction as agent's belief state; radical subjectivism",
+      "primary_observable": "Bayesian probability interpretation in foundations papers; agent-centric language",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "subjective_probability_program",
+      "victim": "objective_reality_commitment",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Fourth interpretive pole; lower centrality than Copenhagen/Many-Worlds/Pilot Wave triad; subjective reading vs the three objective readings"
+    },
+    {
+      "claim_id": "relational_reading",
+      "human_readable": "Relational Quantum Mechanics (Rovelli)",
+      "structural_delta": "Physical properties relative to observer systems; no absolute observer-independent state",
+      "primary_observable": "Relational ontology commitments in quantum gravity literature; observer-dependence without subjectivism",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "quantum_gravity_unification_program",
+      "victim": "absolute_state_ontology",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: Lower centrality; primarily motivated by quantum gravity considerations rather than foundational interpretation"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "copenhagen_reading",
+      "kernel_id": "quantum_formalism",
+      "reading_id": "copenhagen_reading"
+    },
+    {
+      "claim_id": "many_worlds_reading",
+      "kernel_id": "quantum_formalism",
+      "reading_id": "many_worlds_reading"
+    },
+    {
+      "claim_id": "pilot_wave_reading",
+      "kernel_id": "quantum_formalism",
+      "reading_id": "pilot_wave_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "qbism_reading",
+      "structural_delta": "Radical subjectivism; probabilities as credences",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Fourth interpretive pole; lower centrality than the three canonical readings selected; represents subjective reading vs objective ontologies"
+    },
+    {
+      "claim_id": "relational_reading",
+      "structural_delta": "Properties relative to observer systems; no absolute state",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Primarily motivated by quantum gravity unification rather than foundational interpretation; lowest centrality score"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_equivalence",
+      "description": "All three readings recover identical empirical predictions. If empirical adequacy is the sole legitimacy criterion, the interpretive contest is underdetermined by physics itself. Authority structure may collapse to philosophical preference.",
+      "source": "Commitment System Recognition (functioning drift status)"
+    },
+    {
+      "id": "omega_measurement_problem_dissolution",
+      "description": "Does the measurement problem (the conflict driving interpretive plurality) dissolve under decoherence-only accounts, collapsing Many-Worlds and Copenhagen into a single reading? Or does the preferred basis problem preserve the split?",
+      "source": "Dark Matter Probe 2 (Absence Inventory: decoherence program as potential kernel-collapsing mechanism)"
+    },
+    {
+      "id": "omega_locality_constraint",
+      "description": "Bell's theorem rules out local hidden variables. Pilot Wave embraces nonlocality; Many-Worlds claims effective locality via branching; Copenhagen sidesteps via epistemic boundary. Is locality preservation itself a hidden axis structuring the interpretive space?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan: locality intuition as unexamined beneficiary)"
+    },
+    {
+      "id": "omega_qbism_subjectivity",
+      "description": "QBism's radical subjectivism (wavefunction as credence) may represent a fourth pole orthogonal to the objective ontology triad. Deferred but potentially collapses the objective/subjective boundary structuring other readings.",
+      "source": "Deferred axis: qbism_reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic is a clean contested kernel: shared mathematical substrate (quantum formalism), mutually exclusive foundational axioms (collapse vs branching vs hidden variables), and all readings emit structurally distinct constraints on what measurement, determinism, and ontology are."
+  },
+  "_seed_id": "quantum_interpretation_pluralism"
+}

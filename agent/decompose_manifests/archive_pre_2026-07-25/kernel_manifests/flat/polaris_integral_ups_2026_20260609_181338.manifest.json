@@ -1,0 +1,272 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Electrical Engineering / Power Systems / Off-Grid Infrastructure",
+  "family_id": "polaris_integral_ups_2026",
+  "topic_summary": "Technical specification for a battery-primary DC power architecture that eliminates conventional AC UPS transfer gaps by placing lithium iron phosphate batteries continuously on the load path. Two tiers (Hammerhead and Smooth Operator) differ in bus regulation sophistication, solar integration capability, and cost. The system targets deployments requiring zero transfer gap, solar compatibility, grid noise isolation, or auditable failure modes.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Hammerhead tier (unregulated 48V topology, battery always on load path)",
+      "Smooth Operator tier (regulated 41.5V via Victron MPPT, battery idles until grid loss)",
+      "HDPLEX 500W GaN DC-ATX converter (12-60V input range, all ATX rails)",
+      "MeanWell HLG series AC/DC supplies (HLG-240H-54A for Hammerhead, HLG-480H-48B for Smooth Operator)",
+      "Victron SmartSolar MPPT 100/20 (charge controller with regulated load output)",
+      "LiFePO4 battery banks (48V nominal for Hammerhead, 36V for Smooth Operator)",
+      "Schottky diode assemblies (passive transfer mechanism, thermal management critical)",
+      "Analog Power Sensor (APS, custom passive GPIO signal device)"
+    ],
+    "key_tensions": [
+      "Transfer gap elimination vs component complexity (passive diode vs relay-based UPS)",
+      "Voltage regulation vs full load capacity (Smooth Operator 430W derated vs Hammerhead 500W full)",
+      "Solar integration vs outdoor DC path risk (Smooth Operator enables solar but introduces lightning/transient exposure)",
+      "Auditable simplicity vs commercial availability (custom passive design vs black-box UPS firmware)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "transfer_gap_physics",
+      "human_readable": "Transfer Gap Physics (Relay Switching vs Passive Diode)",
+      "structural_delta": "Physical mechanism of load transfer during grid loss: mechanical relay with 4-20ms gap vs passive Schottky diode forward-bias with zero gap",
+      "primary_observable": "Oscilloscope measurement of bus voltage continuity during simulated grid loss; GPU crash rate under heavy load during transfer events",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "topology_selection",
+        "thermal_dissipation_constraint"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational physical constraint; zero inbound edges; feeds two downstream axes"
+    },
+    {
+      "claim_id": "voltage_regulation_tradeoff",
+      "human_readable": "Voltage Regulation Tradeoff (Unregulated Swing vs Regulated Bus)",
+      "structural_delta": "Bus voltage behavior: Hammerhead accepts 48-54V swing with battery SOC vs Smooth Operator maintains fixed 41.5V via Victron MPPT regulation",
+      "primary_observable": "HDPLEX input voltage variance over discharge cycle; available peak current at battery floor voltage",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "topology_selection",
+        "load_capacity_ceiling"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable from transfer_gap_physics; different structural delta; feeds topology synthesis"
+    },
+    {
+      "claim_id": "topology_selection",
+      "human_readable": "Topology Selection (Hammerhead vs Smooth Operator)",
+      "structural_delta": "Architectural choice between simple battery-always-on-path (Hammerhead) vs regulated-bus-with-idle-battery (Smooth Operator)",
+      "primary_observable": "Component count; total BOM cost; measured bus voltage stability; solar integration capability",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "integrator_discretion",
+      "victim": "deployment_without_clear_requirements",
+      "downstream_of": [
+        "transfer_gap_physics",
+        "voltage_regulation_tradeoff",
+        "solar_integration_mechanism"
+      ],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Highest centrality; downstream synthesis node with 3 inbound edges; entangles cost, complexity, and capability"
+    },
+    {
+      "claim_id": "thermal_dissipation_constraint",
+      "human_readable": "Thermal Dissipation Constraint (Schottky Diode Heat Management)",
+      "structural_delta": "Schottky diode forward voltage drop (0.5-0.6V) multiplied by load current produces continuous heat dissipation requiring thermal sandwich assembly",
+      "primary_observable": "Diode junction temperature under sustained load; thermal resistance from junction to chassis; worst-case dissipation 7.33W at 13.33A",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "transfer_gap_physics"
+      ],
+      "feeds_into": [
+        "assembly_complexity"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Physics-derived constraint from Schottky diode choice; distinct observable from voltage regulation"
+    },
+    {
+      "claim_id": "solar_integration_mechanism",
+      "human_readable": "Solar Integration Mechanism (Passive Priority via Blocking Diode)",
+      "structural_delta": "Blocking diode on MeanWell output enables passive solar priority: when solar Vmp exceeds MeanWell output, diode reverse-biases and MeanWell idles; no firmware, no switching",
+      "primary_observable": "MeanWell AC power consumption during solar-active state; blocking diode forward/reverse bias state vs solar array voltage",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "topology_selection",
+        "outdoor_dc_path_risk"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent mechanism; different observable; enables Smooth Operator solar capability"
+    },
+    {
+      "claim_id": "outdoor_dc_path_risk",
+      "human_readable": "Outdoor DC Path Risk (Lightning/Transient Exposure)",
+      "structural_delta": "Solar input introduces direct DC path from outdoor conductor to system bus; Victron MPPT input stage provides hardened filtering but does not eliminate risk",
+      "primary_observable": "Transient voltage suppression effectiveness; external surge protection deployment; documented lightning strike survival rate",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "solar_deployments_without_external_surge_protection",
+      "downstream_of": [
+        "solar_integration_mechanism"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via solar_integration_mechanism rope; external surge protection is outside specification scope"
+    },
+    {
+      "claim_id": "load_capacity_ceiling",
+      "human_readable": "Load Capacity Ceiling (500W vs 430W Derated)",
+      "structural_delta": "Hammerhead delivers full HDPLEX 500W capacity at battery operating voltage; Smooth Operator derated to ~430W at regulated 41.5V bus",
+      "primary_observable": "Maximum sustained load before HDPLEX UVLO triggers; available headroom for transient GPU spikes",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "voltage_regulation_tradeoff"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: direct consequence of voltage_regulation_tradeoff; same observable (HDPLEX input voltage); fails independence test"
+    },
+    {
+      "claim_id": "assembly_complexity",
+      "human_readable": "Assembly Complexity (Passive Components vs Verifiable Simplicity)",
+      "structural_delta": "System uses only passive components (diodes, resistors, fuses) with no firmware, enabling verification by inspection against schematic",
+      "primary_observable": "Component count; assembly time; troubleshooting time; integrator skill level required",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "thermal_dissipation_constraint"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of thermal_dissipation_constraint; scaffold with low centrality; omega material on integrator skill ceiling"
+    },
+    {
+      "claim_id": "bms_bootstrap_deadlock",
+      "human_readable": "BMS Bootstrap Deadlock (Kickstart Resistor Necessity)",
+      "structural_delta": "After full battery depletion, BMS enters protection mode and cuts output; Victron cannot start from dead battery alone; 750Ω kickstart resistor passes 24mA trickle to wake BMS on solar/AC return",
+      "primary_observable": "BMS wake current threshold; solar cold-start recovery time; grid-return recovery time without manual intervention",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: zero centrality; Smooth Operator-specific edge case; omega material on BMS protection logic"
+    }
+  ],
+  "generation_sequence": [
+    "transfer_gap_physics",
+    "voltage_regulation_tradeoff",
+    "thermal_dissipation_constraint",
+    "solar_integration_mechanism",
+    "topology_selection"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "outdoor_dc_path_risk",
+      "structural_delta": "Solar input introduces direct DC path from outdoor conductor to system bus",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured indirectly via solar_integration_mechanism rope; external surge protection is outside specification scope; omega material on lightning strike risk"
+    },
+    {
+      "claim_id": "load_capacity_ceiling",
+      "structural_delta": "Hammerhead 500W full capacity vs Smooth Operator 430W derated at 41.5V",
+      "hypothesis": "rope",
+      "deferral_reason": "Direct consequence of voltage_regulation_tradeoff; same observable (HDPLEX input voltage); fails §3 pairwise independence test"
+    },
+    {
+      "claim_id": "assembly_complexity",
+      "structural_delta": "Passive-only components enable verification by inspection against schematic",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream consequence of thermal_dissipation_constraint; low centrality scaffold; omega material on integrator skill ceiling"
+    },
+    {
+      "claim_id": "bms_bootstrap_deadlock",
+      "structural_delta": "Kickstart resistor resolves BMS protection deadlock after full depletion",
+      "hypothesis": "piton",
+      "deferral_reason": "Zero centrality; Smooth Operator-specific edge case; omega material on BMS protection logic and recovery pathways"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_lfp_cycle_life_claim",
+      "description": "Specification cites 2,000-5,000 cycle life for LiFePO4 vs 300-500 for lead-acid. Is this a Mountain (chemistry-derived physics) or a Piton (manufacturer claim dependent on depth-of-discharge and temperature management)? Hammerhead shallow-cycles daily; Smooth Operator does not. Actual cycle life may diverge significantly between tiers.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — no DOD or temperature derating curves provided"
+    },
+    {
+      "id": "omega_victron_non_isolated_topology",
+      "description": "Victron SmartSolar MPPT 100/20 is a non-isolated buck converter — PV negative and battery negative share common internal bus. Does this introduce a ground loop risk when solar array frame is earth-grounded per NEC? Specification notes outdoor DC path risk but does not address common-mode current pathways.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from omitting isolation topology discussion? Integrators unfamiliar with non-isolated buck topologies may deploy incorrectly."
+    },
+    {
+      "id": "omega_aps_wire_break_false_positive",
+      "description": "APS GPIO goes HIGH on both grid loss and wire break. Daemon secondary network check is mandatory but not specified in detail. What is the network target? What is the timeout? A broken wire during a real grid event could delay shutdown or cause false restoration signal. This is a Snare for deployments without robust secondary check implementation.",
+      "source": "§1.1 Extraction — mechanism identified but implementation unspecified"
+    },
+    {
+      "id": "omega_fuse_coordination",
+      "description": "Specification mandates 10×38mm PV DC-rated fuses at all positions but does not provide time-current curves or coordination analysis. Do upstream fuses clear before downstream fuses under fault conditions? Lack of coordination could leave fault current path active or cause nuisance trips.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — fuse ratings specified but coordination not addressed"
+    },
+    {
+      "id": "omega_integrator_skill_ceiling",
+      "description": "Specification is marked 'Integrator Eyes Only' and assumes competence with thermal sandwich assembly, Schottky diode selection, and passive component verification. What is the actual integrator skill distribution? Is this a Scaffold (enables capable integrators) or a Snare (traps less experienced integrators in thermal runaway or short-circuit faults)?",
+      "source": "Deferred axis: assembly_complexity"
+    },
+    {
+      "id": "omega_polaris_entity_status",
+      "description": "Research context reveals no public-facing 'Polaris IT Solutions' entity matching this specification. Document is marked confidential. Is this an internal project codename, a stealth product line, or a fictional specification? Absence of commercial availability may indicate prototype status or abandoned development.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model operates within assumption of real product; research contradicts"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: transfer_gap_physics classified as mountain (physics of Schottky diode forward-bias) but actual transfer gap elimination depends on correct thermal management, PEEK washer installation, and absence of mechanical stress on TO-247 package. A poorly assembled thermal sandwich could introduce new failure modes (thermal runaway, short to chassis) that conventional relay-based UPS does not have. Generated omega_integrator_skill_ceiling to bound this uncertainty. Additionally, LFP cycle life claim (omega_lfp_cycle_life_claim) may be manufacturer-dependent Piton rather than chemistry-derived Mountain."
+  }
+}

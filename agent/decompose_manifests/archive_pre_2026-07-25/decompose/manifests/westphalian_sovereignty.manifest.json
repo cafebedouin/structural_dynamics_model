@@ -1,0 +1,187 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Political Philosophy / Global Governance",
+  "family_id": "westphalia_sovereignty_kernel",
+  "topic_summary": "Analysis of the Treaty of Westphalia (1648) as a contested kernel establishing state sovereignty. Two competing readings: absolute sovereignty (non-interference principle) versus conditional sovereignty (responsibility to protect). The kernel constitutes the foundational commitment to territorial state authority, but readings diverge on whether that authority is unconditional or bounded by human rights obligations.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Treaty of Westphalia 1648 (founding document establishing territorial sovereignty)",
+      "Sovereign states (rights-holders under absolute reading; duty-bearers under conditional reading)",
+      "International intervention advocates (benefit from conditional reading)",
+      "Domestic populations under authoritarian rule (victims under absolute reading when rights violated)",
+      "United Nations Security Council (enforcement mechanism for conditional reading)",
+      "Human rights violating regimes (benefit from absolute reading)"
+    ],
+    "key_tensions": [
+      "State autonomy vs international accountability (absolute sovereignty vs R2P)",
+      "Territorial integrity vs humanitarian intervention (non-interference vs human rights enforcement)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Treaty of Westphalia establishes territorial state sovereignty as the organizing principle of international order",
+    "authority_description": "International legal interpretation grounded in treaty text, state practice, and UN Charter provisions; contested between positivist (treaty literalism) and naturalist (evolving norms) schools",
+    "drift_status": "partial",
+    "candidate_pattern": "Revision Suppression (absolute reading) vs Managed Drift (conditional reading)",
+    "is_contested_kernel": true,
+    "kernel_id": "westphalian_sovereignty",
+    "readings": [
+      {
+        "reading_id": "absolute_sovereignty",
+        "commitment": "Sovereignty grants states unconditional authority over domestic affairs; external interference categorically illegitimate",
+        "authority_grounding": "Treaty literalism / positivist international law / UN Charter Article 2(7)",
+        "sibling_readings": [
+          "conditional_sovereignty",
+          "graduated_sovereignty"
+        ],
+        "expected_structural_delta": "States benefit from non-interference shield; domestic populations under repressive regimes are victims; high ε (0.45-0.60) tangled_rope favoring authoritarian regimes"
+      },
+      {
+        "reading_id": "conditional_sovereignty",
+        "commitment": "Sovereignty entails responsibility; systematic human rights violations trigger legitimate external intervention",
+        "authority_grounding": "Evolving customary law / UN General Assembly resolutions / R2P doctrine (2005)",
+        "sibling_readings": [
+          "absolute_sovereignty",
+          "graduated_sovereignty"
+        ],
+        "expected_structural_delta": "International intervention advocates benefit; sovereign states become conditional duty-bearers; moderate ε (0.30-0.45) snare constraining state autonomy when thresholds met"
+      },
+      {
+        "reading_id": "graduated_sovereignty",
+        "commitment": "Sovereignty exists on spectrum determined by state capacity and governance legitimacy",
+        "authority_grounding": "Failed states doctrine / trusteeship models / contemporary state-building practice",
+        "sibling_readings": [
+          "absolute_sovereignty",
+          "conditional_sovereignty"
+        ],
+        "expected_structural_delta": "External interveners gain discretion to classify states; weak states become victims of reclassification; high ε (0.50-0.70) snare enabling neo-colonial extraction"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "absolute_sovereignty",
+        "reading_b": "conditional_sovereignty",
+        "basis": "Accepting sovereignty as unconditional (absolute) requires rejecting that external actors may legitimately override state authority based on internal conduct. Accepting R2P (conditional) requires rejecting that sovereignty shields states from accountability for systematic rights violations. No single framework holds both: either sovereignty is a trump or it isn't."
+      },
+      {
+        "reading_a": "absolute_sovereignty",
+        "reading_b": "graduated_sovereignty",
+        "basis": "Absolute sovereignty treats statehood as binary (you have it or you don't); graduated sovereignty treats it as continuous variable. A framework cannot simultaneously hold that sovereignty is unconditional once established AND that sovereignty strength varies with governance quality."
+      },
+      {
+        "reading_a": "conditional_sovereignty",
+        "reading_b": "graduated_sovereignty",
+        "basis": "Conditional sovereignty maintains sovereignty's binary character but adds trigger conditions; graduated sovereignty dissolves the binary entirely. The former preserves Westphalian equality-among-sovereigns unless threshold crossed; the latter abandons equality by design. Frameworks holding one must reject the other's foundational structure."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "absolute_sovereignty",
+      "human_readable": "Absolute Sovereignty (Non-Interference Principle)",
+      "structural_delta": "States possess unconditional authority over domestic affairs; external interference categorically illegitimate regardless of internal conduct",
+      "primary_observable": "State practice in opposing humanitarian interventions; invocations of Article 2(7); vetoes of Security Council resolutions authorizing intervention",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "authoritarian_regimes",
+      "victim": "populations_under_repressive_rule",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: highest centrality as foundational interpretation; tangled_rope with clear beneficiary/victim structure"
+    },
+    {
+      "claim_id": "conditional_sovereignty",
+      "human_readable": "Conditional Sovereignty (Responsibility to Protect)",
+      "structural_delta": "Sovereignty conditional on meeting human rights obligations; systematic violations trigger legitimate external intervention",
+      "primary_observable": "UN General Assembly R2P resolutions; Security Council authorization of interventions citing civilian protection; International Criminal Court prosecutions",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "intervention_advocates",
+      "victim": "targeted_sovereign_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: directly contradicts first reading; snare mechanism with moderate ε; essential for kernel contest"
+    },
+    {
+      "claim_id": "graduated_sovereignty",
+      "human_readable": "Graduated Sovereignty (Capacity-Based Hierarchy)",
+      "structural_delta": "Sovereignty strength varies with state capacity and governance legitimacy; creates formal hierarchy among states",
+      "primary_observable": "Trusteeship arrangements; state-building interventions; differential treatment in international institutions",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "external_interveners",
+      "victim": "reclassified_weak_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: introduces structural alternative to binary framework; highest ε; completes triadic kernel decomposition"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "absolute_sovereignty",
+      "kernel_id": "westphalian_sovereignty",
+      "reading_id": "absolute_sovereignty"
+    },
+    {
+      "claim_id": "conditional_sovereignty",
+      "kernel_id": "westphalian_sovereignty",
+      "reading_id": "conditional_sovereignty"
+    },
+    {
+      "claim_id": "graduated_sovereignty",
+      "kernel_id": "westphalian_sovereignty",
+      "reading_id": "graduated_sovereignty"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "All three readings face enforcement selectivity: great powers exempt themselves while applying constraints to weaker states. The kernel's authority structure may be downstream of power distribution rather than upstream normative commitment.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + Absence Inventory"
+    },
+    {
+      "id": "omega_regional_variation",
+      "description": "European Union has effectively superseded Westphalian sovereignty among members; African Union has distinct sovereignty interpretation (AU Constitutive Act Article 4h). Is this one kernel with regional readings, or multiple kernels?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_non_state_actors",
+      "description": "All readings assume state-centric international order. Transnational corporations, armed non-state actors, and tech platforms exercise authority uncaptured by any reading. Missing axis: post-Westphalian authority distribution.",
+      "source": "Absence Inventory (mechanism_count includes no non-state mechanisms)"
+    },
+    {
+      "id": "omega_colonial_origins",
+      "description": "Westphalia established European state system; global extension occurred via colonialism. Do post-colonial states inherit a kernel designed to exclude them? Authority structure may delegitimize itself for majority of current states.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_drift_acceleration",
+      "description": "Drift status marked 'partial' but R2P's 2005 codification vs Westphalia's 1648 origin suggests 357-year interpretive lag followed by rapid norm shift. Is this managed drift or authority structure collapse with replacement?",
+      "source": "Commitment System Recognition + F01 (Premise Drift)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F01 detected: User prompt framed this as A/B binary (absolute vs conditional), but graduated_sovereignty reading emerged from lens scan as structurally distinct third interpretation. Premise expanded rather than drifted; documented as omega_drift_acceleration. All three readings proceed to generation to preserve kernel structure integrity."
+  },
+  "_seed_id": "westphalian_sovereignty"
+}

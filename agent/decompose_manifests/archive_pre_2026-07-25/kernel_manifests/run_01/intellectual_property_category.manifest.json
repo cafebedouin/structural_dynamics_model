@@ -1,0 +1,189 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Legal History / Intellectual Property / Commitment System Analysis",
+  "family_id": "ip_statute_anne_kernel",
+  "topic_summary": "Analysis of the Statute of Anne (1710) as the founding moment of copyright law, examining whether intellectual property represents a contested kernel where 'became thinkable' (conceptual space emergence) and 'first held' (institutional occupation) are genuinely different readings or a spurious cut imposed by synchronic/diachronic analytical seams.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Statute of Anne (1710 English copyright statute)",
+      "Stationers' Company (pre-1710 guild monopoly holder)",
+      "Authors (newly recognized rights-holders post-1710)",
+      "Public Domain (conceptual space created by time-limited rights)",
+      "Lockean Labor Theory (philosophical substrate for property in ideas)"
+    ],
+    "key_tensions": [
+      "Guild monopoly vs author's natural right (competing legitimacy grounds)",
+      "Perpetual control vs limited term (temporal boundary of property)"
+    ],
+    "key_mechanisms": [
+      "Registration requirement (state recognition of claim)",
+      "Term expiration (automatic reversion to commons)",
+      "Infringement enforcement (state coercion backing property claim)"
+    ],
+    "absences": [
+      "Pre-1710 conceptual vocabulary for 'intellectual property' as distinct category",
+      "Mechanism for distinguishing idea (unownable) from expression (ownable)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The legal category 'intellectual property' as a distinct form of property right in intangible creative works",
+    "authority_description": "State legislative power to define property categories and grant monopoly rights",
+    "drift_status": "functioning",
+    "candidate_pattern": "legislative_founding",
+    "is_contested_kernel": false,
+    "collapse_analysis": "The 'became thinkable' vs 'first held' distinction collapses under structural analysis. Both supposed readings describe the same constraint event: the Statute of Anne simultaneously (1) created the legal category as a recognizable property form AND (2) instantiated the first claims within that category. The synchronic/diachronic seam is an observer artifact, not a structural difference in what the statute constrained. A 'thinkable space' that no one occupies is not yet a constraint (no ε to measure). An 'occupied set' requires a pre-existing category to occupy. The statute performed both operations in a single legislative act—it defined the category boundaries AND granted the first rights within those boundaries. These are not two readings of one kernel but two descriptions of one constraint-creation event from different analytical perspectives. The M4/M5 library verdict correctly identified this as a synchronic/diachronic seam collapse, not a genuine kernel contest.",
+    "structural_reason": "A contested kernel requires that different readings would emit structurally different constraints (different type, beneficiary/victim structure, or base extractiveness). Here, both supposed readings emit identical constraints: (1) authors gain time-limited monopoly rights, (2) stationers lose perpetual control, (3) works enter public domain after term expiration. The constraint topology is invariant across the supposed readings. The only difference is whether an analyst emphasizes the conceptual innovation or the institutional implementation—but both are necessary and simultaneous aspects of the same legal event. No reading can be instantiated without the other; they are not alternative interpretations but complementary facets of one constraint."
+  },
+  "axes": [
+    {
+      "claim_id": "property_category_creation",
+      "human_readable": "Property Category Creation (Legal Recognition of Intangible Ownership)",
+      "structural_delta": "State recognition of property rights in non-physical creative works as a distinct legal category",
+      "primary_observable": "Statutory text defining scope of protectable subject matter; enforcement mechanisms for infringement",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "temporal_boundary_constraint",
+        "monopoly_transfer_mechanism"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain establishing the foundational constraint—without legal category recognition, no downstream rights or limitations exist"
+    },
+    {
+      "claim_id": "temporal_boundary_constraint",
+      "human_readable": "Temporal Boundary Constraint (Time-Limited vs Perpetual Rights)",
+      "structural_delta": "Fixed term limit on monopoly rights with automatic reversion to public domain",
+      "primary_observable": "Statutory term length (14 years renewable once in Statute of Anne); expiration enforcement",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "property_category_creation"
+      ],
+      "feeds_into": [
+        "monopoly_transfer_mechanism"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from category creation—defines internal constraint topology (bounded vs unbounded property)"
+    },
+    {
+      "claim_id": "monopoly_transfer_mechanism",
+      "human_readable": "Monopoly Transfer Mechanism (Guild Control to Author Rights)",
+      "structural_delta": "Shift of monopoly control from guild (Stationers' Company) to individual authors with state enforcement",
+      "primary_observable": "Registration records showing rights-holder identity shift; litigation patterns pre/post-1710",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "authors_as_new_rights_holders",
+      "victim": "stationers_company_monopoly",
+      "downstream_of": [
+        "property_category_creation",
+        "temporal_boundary_constraint"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node capturing the extractive reallocation of control rights"
+    },
+    {
+      "claim_id": "idea_expression_boundary",
+      "human_readable": "Idea-Expression Boundary (Unownable Concept vs Ownable Instantiation)",
+      "structural_delta": "Legal distinction between abstract ideas (public domain) and specific expressions (protectable)",
+      "primary_observable": "Case law distinguishing infringement from independent creation; doctrinal tests for substantial similarity",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "property_category_creation"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold constraint not fully instantiated in 1710 statute; emerged through later case law (Baker v. Selden 1879)"
+    },
+    {
+      "claim_id": "lockean_legitimation",
+      "human_readable": "Lockean Legitimation (Labor Theory as Philosophical Substrate)",
+      "structural_delta": "Lockean labor-mixing theory as justification for property in creative works",
+      "primary_observable": "Parliamentary debates invoking natural rights; judicial opinions citing labor theory",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "property_category_creation"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: philosophical substrate rather than operational constraint; legitimation narrative not enforcement mechanism"
+    }
+  ],
+  "generation_sequence": [
+    "property_category_creation",
+    "temporal_boundary_constraint",
+    "monopoly_transfer_mechanism"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "idea_expression_boundary",
+      "structural_delta": "Legal distinction between unownable ideas and ownable expressions",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold constraint not instantiated in 1710 statute; emerged through 19th-century case law development"
+    },
+    {
+      "claim_id": "lockean_legitimation",
+      "structural_delta": "Labor theory as philosophical justification for IP rights",
+      "hypothesis": "piton",
+      "deferral_reason": "Legitimation narrative rather than operational constraint; low centrality in enforcement topology"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The 'became thinkable' vs 'first held' distinction is not a genuine kernel contest but an observer artifact. The Statute of Anne performed both operations simultaneously—it could not create the category without instantiating claims within it, and claims could not exist without the category. The M4/M5 synchronic/diachronic seam is a methodological cut, not a structural difference in constraint topology. This validates the library verdict: the supposed kernel collapses under structural analysis.",
+      "source": "§1.3-K kernel/reading decomposition; commitment_system_recognition collapse_analysis"
+    },
+    {
+      "id": "omega_guild_resistance",
+      "description": "Did the Stationers' Company attempt to preserve perpetual control through alternative legal mechanisms post-1710? If so, the monopoly_transfer_mechanism may be a tangled_rope with higher ε than currently classified—guild resistance would indicate ongoing extraction rather than clean transfer.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); historical record of Donaldson v. Beckett (1774) suggests prolonged contestation"
+    },
+    {
+      "id": "omega_public_domain_emergence",
+      "description": "The 'public domain' as a conceptual category may itself be a constraint created by the temporal boundary—before time-limited rights, there was no 'commons' to revert to, only unregulated copying. Is the public domain a mountain (pre-existing state) or a rope (coordination mechanism created by statute)?",
+      "source": "Dark Matter Probe 2 (Absence Inventory); extraction_summary notes absence of pre-1710 vocabulary for 'public domain'"
+    },
+    {
+      "id": "omega_authorship_construction",
+      "description": "The statute presumes a stable category of 'author' as rights-holder, but authorship itself may be a legal construction rather than natural fact. Collaborative works, derivative works, and works-for-hire complicate the author-as-owner model. Is 'author' a mountain or a tangled_rope?",
+      "source": "Dark Matter Probe 1 (Operational Medium); legal scholarship on authorship as social construct (Foucault, 'What is an Author?')"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel collapse analysis required careful structural examination but did not indicate methodological error. The M4/M5 seam was correctly identified as an observer artifact rather than a genuine constraint difference."
+  },
+  "_seed_id": "intellectual_property_category"
+}

@@ -1,0 +1,318 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Technology Governance / Information Epistemology / Digital Forensics",
+  "family_id": "deepfake_detection_crisis_2026",
+  "topic_summary": "Analysis of the deepfake detection crisis through the experience of Hany Farid, the world's leading digital forensics expert, who reports he can no longer trust his own eyes. The article documents the collapse of visual verification systems as generative AI advances faster than detection methods, creating an epistemic crisis where even experts cannot reliably distinguish real from fabricated media within the timeframes that matter for social propagation.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 7,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Hany Farid (digital forensics expert, UC Berkeley professor, co-founder GetReal Security)",
+      "Emily Cooper (vision scientist, UC Berkeley, Farid's wife, researches human perception)",
+      "Tech Giants (Silicon Valley companies developing generative AI systems)",
+      "Social Media Platforms (distribution infrastructure for deepfakes)",
+      "GetReal Security (Farid's company developing detection tools)",
+      "Dartmouth College (Farid's new institutional home as of July 2026)",
+      "North Korean Government Operatives (using deepfakes for employment fraud)",
+      "News Organizations (requesting verification from Farid)"
+    ],
+    "key_tensions": [
+      "Creation speed vs detection speed (deepfakes generated in seconds, analysis takes hours/days)",
+      "Social media propagation velocity vs verification timeframes (90-second post half-life vs multi-hour analysis)",
+      "Profit-driven AI development vs societal safety (tech giants' incentives vs public interest)",
+      "Expert confidence erosion vs public reliance on expertise (Farid losing trust while being consulted more)"
+    ],
+    "key_claims": [
+      "Most people can no longer distinguish real photographs from AI-generated images (Farid's research finding)",
+      "Detection is costly and difficult while creation is easy, cheap, fast and reliable (student's summary, Farid confirms)",
+      "Within 20 minutes of posting, the damage is already done regardless of later verification (Farid's observation)",
+      "The visual system will be 'utterly useless' within 1-2 years (Farid's prediction)",
+      "Tech giants will 'burn everything to the ground as long as they're making a profit' (Farid's assessment)",
+      "Cross-modal consistency checking is the detection frontier (research literature finding)",
+      "Deepfake content grew roughly 900% over the past year (quantitative claim)"
+    ],
+    "key_mechanisms": [
+      "Social media propagation dynamics (90-second half-life, 20-minute saturation window)",
+      "Detection methodology (frame-by-frame analysis, shadow geometry, blood flow measurement, cross-modal consistency)",
+      "North Korean employment fraud pipeline (AI impersonation on Zoom → remote job → nuclear weapons funding)"
+    ],
+    "key_absences": [
+      "Regulatory framework or liability structure for deepfake creation/distribution",
+      "Platform-level verification systems operating at social media speed",
+      "Institutional response to the epistemic crisis beyond individual expert consultation"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The evidentiary authority of visual/audiovisual media — the shared commitment that seeing (or hearing) constitutes a form of knowing that grounds legitimate claims about what happened",
+    "authority_description": "Historically grounded in physics (light capture, sound recording) and institutional verification (journalism, forensics, courts); authority derived from the claim that media artifacts are indexical traces of reality",
+    "drift_status": "absent",
+    "candidate_pattern": "interpretive_capture",
+    "is_contested_kernel": true,
+    "kernel_id": "visual_evidentiary_authority",
+    "readings": [
+      {
+        "reading_id": "indexical_realism",
+        "commitment": "Visual/audiovisual media retain evidentiary authority because they are indexical traces of physical reality; detection methods can restore verification capacity",
+        "authority_grounding": "Physics of light capture + forensic methodology + institutional verification practices",
+        "sibling_readings": [
+          "epistemic_collapse",
+          "distributed_verification",
+          "post_evidentiary"
+        ],
+        "expected_structural_delta": "Detection arms race is winnable; expert analysis remains authoritative; institutional verification can adapt; victims are those denied access to verification tools"
+      },
+      {
+        "reading_id": "epistemic_collapse",
+        "commitment": "Visual evidentiary authority has collapsed irreversibly; the visual system is 'utterly useless' as Farid predicts; no detection method can keep pace with generation",
+        "authority_grounding": "Empirical observation of detection failure + speed asymmetry + expert testimony of incapacity",
+        "sibling_readings": [
+          "indexical_realism",
+          "distributed_verification",
+          "post_evidentiary"
+        ],
+        "expected_structural_delta": "All visual claims become inherently contested; verification is impossible within relevant timeframes; victims are all truth-dependent institutions (journalism, courts, democracy)"
+      },
+      {
+        "reading_id": "distributed_verification",
+        "commitment": "Visual authority shifts from expert-mediated verification to distributed consensus mechanisms; blockchain provenance, cryptographic signing, multi-source corroboration replace forensic analysis",
+        "authority_grounding": "Cryptographic proof systems + decentralized trust networks + real-time authentication at capture",
+        "sibling_readings": [
+          "indexical_realism",
+          "epistemic_collapse",
+          "post_evidentiary"
+        ],
+        "expected_structural_delta": "Authority migrates from post-hoc forensics to point-of-capture authentication; experts become infrastructure designers rather than artifact analysts; victims are those outside authenticated networks"
+      },
+      {
+        "reading_id": "post_evidentiary",
+        "commitment": "Visual media never had the evidentiary authority claimed for it; the crisis reveals that social consensus, not indexicality, always grounded truth claims; we adapt by acknowledging this openly",
+        "authority_grounding": "Social constructivist epistemology + media theory + historical analysis of photographic manipulation",
+        "sibling_readings": [
+          "indexical_realism",
+          "epistemic_collapse",
+          "distributed_verification"
+        ],
+        "expected_structural_delta": "Shift from 'proving what happened' to 'negotiating shared narratives'; institutions redesign around acknowledged uncertainty; victims are those who cannot participate in consensus formation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "indexical_realism",
+        "reading_b": "epistemic_collapse",
+        "basis": "Indexical realism holds that the physics of light capture grounds recoverable truth; epistemic collapse holds that this grounding is irreversibly severed by generative AI. No framework can hold both that detection can restore verification capacity AND that the visual system is utterly useless."
+      },
+      {
+        "reading_a": "indexical_realism",
+        "reading_b": "post_evidentiary",
+        "basis": "Indexical realism grounds authority in physical indexicality; post-evidentiary denies that indexicality ever grounded authority (social consensus did). No framework can hold both that media are indexical traces AND that indexicality was never the source of evidentiary power."
+      },
+      {
+        "reading_a": "epistemic_collapse",
+        "reading_b": "distributed_verification",
+        "basis": "Epistemic collapse holds that no verification method can succeed; distributed verification holds that cryptographic/consensus methods can succeed. No framework can hold both that verification is impossible AND that distributed verification works."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "visual_evidentiary_authority_kernel",
+      "human_readable": "Visual Evidentiary Authority (Contested Kernel)",
+      "structural_delta": "Contested interpretations of whether and how visual/audiovisual media can ground legitimate truth claims in the generative AI era",
+      "primary_observable": "Expert confidence in verification outcomes; institutional reliance on visual evidence in courts/journalism; public belief in media authenticity",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "propagation_speed_asymmetry",
+        "institutional_verification_collapse"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core contested kernel with four distinct readings that cannot be collapsed; highest centrality; upstream to all other structural dynamics"
+    },
+    {
+      "claim_id": "propagation_speed_asymmetry",
+      "human_readable": "Propagation Speed Asymmetry (Verification Lag)",
+      "structural_delta": "Structural mismatch between social media propagation velocity (90-second half-life, 20-minute saturation) and verification timeframes (hours to days)",
+      "primary_observable": "Time-to-verification vs time-to-saturation metrics; percentage of debunked content that reached full propagation before verification",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "visual_evidentiary_authority_kernel"
+      ],
+      "feeds_into": [
+        "institutional_verification_collapse"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent structural constraint (physics of network propagation vs human analysis speed); mountain providing temporal constraint base; distinct from kernel (speed asymmetry exists regardless of which reading of evidentiary authority holds)"
+    },
+    {
+      "claim_id": "institutional_verification_collapse",
+      "human_readable": "Institutional Verification Collapse (Expert Consultation Saturation)",
+      "structural_delta": "Farid's caseload scaling from one case per few weeks to dozens per day while his confidence erodes; institutional reliance on individual experts becomes bottleneck",
+      "primary_observable": "Expert caseload growth rate; expert confidence scores over time; institutional verification request volumes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "deepfake_creators",
+      "victim": "truth_dependent_institutions",
+      "downstream_of": [
+        "visual_evidentiary_authority_kernel",
+        "propagation_speed_asymmetry"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Downstream synthesis node; tangled_rope capturing the institutional failure mode; distinct from both kernel (institutional structure) and speed asymmetry (human capacity limits)"
+    },
+    {
+      "claim_id": "profit_driven_acceleration",
+      "human_readable": "Profit-Driven AI Acceleration (Misaligned Incentives)",
+      "structural_delta": "Tech giants prioritize AI capability advancement and profit over societal safety; no economic incentive to slow development for verification to catch up",
+      "primary_observable": "AI model release cadence; investment in generation vs detection R&D; regulatory capture metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "tech_giants",
+      "victim": "verification_dependent_systems",
+      "downstream_of": [],
+      "feeds_into": [
+        "propagation_speed_asymmetry"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured indirectly via institutional_verification_collapse (the manifestation of misaligned incentives) and propagation_speed_asymmetry (the temporal consequence); lower structural distinctiveness than selected axes"
+    },
+    {
+      "claim_id": "human_perception_failure",
+      "human_readable": "Human Perception Failure (Cognitive Incapacity)",
+      "structural_delta": "Humans cannot distinguish real from AI-generated media; this is a cognitive limitation independent of expertise or training",
+      "primary_observable": "Human accuracy rates in deepfake detection studies; expert vs novice performance gaps",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "visual_evidentiary_authority_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: this is the empirical substrate that makes the kernel contested, not a separate axis; the kernel readings already incorporate this finding as their shared premise"
+    },
+    {
+      "claim_id": "detection_methodology_evolution",
+      "human_readable": "Detection Methodology Evolution (Technical Arms Race)",
+      "structural_delta": "Shift from single-modality artifact detection to cross-modal consistency checking and biological signal detection",
+      "primary_observable": "Detection method effectiveness over time; cross-model generalization performance",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "visual_evidentiary_authority_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: this is the technical implementation layer of the indexical_realism reading, not a structurally independent axis; methodology evolution is how one reading attempts to preserve authority"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "indexical_realism",
+      "kernel_id": "visual_evidentiary_authority",
+      "reading_id": "indexical_realism"
+    },
+    {
+      "claim_id": "epistemic_collapse",
+      "kernel_id": "visual_evidentiary_authority",
+      "reading_id": "epistemic_collapse"
+    },
+    {
+      "claim_id": "distributed_verification",
+      "kernel_id": "visual_evidentiary_authority",
+      "reading_id": "distributed_verification"
+    },
+    {
+      "claim_id": "post_evidentiary",
+      "kernel_id": "visual_evidentiary_authority",
+      "reading_id": "post_evidentiary"
+    },
+    "propagation_speed_asymmetry",
+    "institutional_verification_collapse"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "profit_driven_acceleration",
+      "structural_delta": "Tech giants prioritize profit over safety in AI development",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured indirectly via institutional_verification_collapse (manifestation) and propagation_speed_asymmetry (temporal consequence); lower structural distinctiveness"
+    },
+    {
+      "claim_id": "human_perception_failure",
+      "structural_delta": "Humans cannot distinguish real from AI-generated media",
+      "hypothesis": "mountain",
+      "deferral_reason": "Empirical substrate that makes the kernel contested, not a separate axis; kernel readings already incorporate this as shared premise"
+    },
+    {
+      "claim_id": "detection_methodology_evolution",
+      "structural_delta": "Shift from artifact detection to cross-modal consistency checking",
+      "hypothesis": "rope",
+      "deferral_reason": "Technical implementation layer of indexical_realism reading, not structurally independent; methodology evolution is how one reading attempts to preserve authority"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_regulatory_absence",
+      "description": "No liability framework or regulatory structure exists for deepfake creation/distribution. Is this a Scaffold (emerging governance) or a Snare (regulatory capture by tech giants)? Farid argues for 'going after the choke points,' but no such system exists.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary key_absences"
+    },
+    {
+      "id": "omega_platform_verification_gap",
+      "description": "Social media platforms lack verification systems operating at propagation speed. Is platform-level real-time authentication technically feasible, or does the speed asymmetry make it a structural impossibility? This determines whether distributed_verification reading is viable.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + propagation_speed_asymmetry analysis"
+    },
+    {
+      "id": "omega_farid_departure_signal",
+      "description": "Farid's move to rural Vermont (leaving Silicon Valley for 100-acre farm, seeking disconnection) is presented as personal burnout, but it may signal expert exodus from the field. If leading practitioners abandon detection work, does this validate epistemic_collapse reading or create self-fulfilling prophecy?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + article narrative arc"
+    },
+    {
+      "id": "omega_north_korean_employment_fraud",
+      "description": "Article mentions North Korean operatives using AI to impersonate Americans on Zoom for remote jobs, funding nuclear weapons program. This is presented as background color but may be a separate Snare axis (state-level deepfake weaponization for resource extraction). Deferred for scope reasons but high epsilon.",
+      "source": "Extraction anchors (mechanisms) + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_cooper_myopia_crisis",
+      "description": "Emily Cooper's research on vision science (screen time causing eyeball elongation, myopia epidemic, preventable blindness) is narratively parallel to Farid's epistemic crisis. Is this metaphorical framing or a genuine coupled crisis (physical vision failure + epistemic vision failure)? Article treats as parallel but may be structurally linked.",
+      "source": "Dark Matter Probe 1 (Operational Medium) + extraction anchors (entities)"
+    },
+    {
+      "id": "omega_iran_bombing_verification",
+      "description": "The Iran elementary school bombing video (150+ deaths, mostly children) is the article's central case study. Farid's analysis found 'no compelling evidence' of manipulation, but he remained uncertain. If the video was real, it represents a war crime; if fake, it represents successful deepfake propaganda. The article never resolves this, leaving the reader in the same epistemic uncertainty Farid experiences. This unresolved case may be the article's structural point.",
+      "source": "Article narrative structure + F01 (Premise Drift) check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Multi-lens scan drew from digital forensics, information epistemology, media theory, social constructivism, cryptography, and institutional analysis. Kernel/reading decomposition applied correctly: the topic IS a contested kernel (four distinct readings of visual evidentiary authority), not a set of independent axes. The readings pass the individually-holdable test and cannot be collapsed. Dark matter probes surfaced regulatory absence, platform verification gap, and the Cooper myopia parallel as omega material. The Iran bombing case study is deliberately unresolved in the source material, mirroring the epistemic crisis the article documents."
+  }
+}

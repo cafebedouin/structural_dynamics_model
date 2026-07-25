@@ -1,0 +1,221 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Federalism / Migration Policy",
+  "family_id": "eu_free_movement_sovereignty_2024",
+  "topic_summary": "Analysis of free movement within the European Union as a contested kernel of federation-membership commitment. The shared commitment to federation-membership is read as either integration-primary (supranational authority, labor mobility as core right) or member-sovereignty-primary (national authority, border control as residual power). Each reading instantiates a different constraint structure with divergent cost-bearers and legitimacy grounds.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "European Union (supranational federation with free movement provisions)",
+      "Member States (27 sovereign states with treaty obligations)",
+      "Schengen Area (borderless zone subset of EU)",
+      "European Court of Justice (treaty interpretation authority)",
+      "Mobile EU Citizens (workers exercising free movement rights)",
+      "Local Labor Markets (destination-state workers facing wage/employment competition)"
+    ],
+    "key_tensions": [
+      "Supranational treaty authority vs member-state constitutional sovereignty",
+      "Labor mobility rights vs local labor market protection",
+      "Integration deepening vs opt-out/exit dynamics (Brexit as revealed preference)"
+    ],
+    "key_mechanisms": [
+      "Treaty of Maastricht Article 21 (free movement as fundamental right)",
+      "ECJ preliminary ruling procedure (member court → ECJ → binding interpretation)",
+      "Emergency border control provisions (temporary Schengen suspension for public order)"
+    ],
+    "key_absences": [
+      "Fiscal transfer mechanism to compensate destination regions for public service costs",
+      "Exit cost asymmetry: high-emigration states lose tax base without treaty revision mechanism"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "integration_reading",
+      "human_readable": "Integration-Primary Reading (Supranational Authority)",
+      "structural_delta": "Federation-membership kernel read as irreversible integration commitment; supranational authority legitimate; free movement as constitutional right immune to member-state override",
+      "primary_observable": "ECJ ruling pattern (member restrictions struck down); treaty amendment threshold (unanimity); political rhetoric treating restriction as illegitimate",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "mobile_eu_citizens",
+      "victim": "local_labor_markets_destination_states",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: integration-primary interpretation; victim set includes local workers; high ε from labor market displacement"
+    },
+    {
+      "claim_id": "sovereignty_reading",
+      "human_readable": "Member-Sovereignty-Primary Reading (National Authority Retention)",
+      "structural_delta": "Federation-membership kernel read as conditional treaty; national authority retains legitimacy over borders; free movement as negotiable policy rather than constitutional right",
+      "primary_observable": "Emergency border closure frequency; political viability of unilateral restriction; Brexit as exit-right exercise; polling on national vs EU authority",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "local_labor_markets_destination_states",
+      "victim": "mobile_eu_citizens",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: sovereignty-primary interpretation; inverted victim/beneficiary structure; same observable domain (border/mobility) but opposite constraint"
+    },
+    {
+      "claim_id": "fiscal_federalism_absence",
+      "human_readable": "Fiscal Federalism Absence (No Compensatory Transfer Mechanism)",
+      "structural_delta": "EU lacks fiscal transfer mechanism to offset public service costs in high-immigration regions or tax base loss in high-emigration regions",
+      "primary_observable": "EU budget allocation; absence of formula-based regional compensation; member-state fiscal burden data",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "net_contributor_states",
+      "victim": "high_immigration_municipalities",
+      "downstream_of": [
+        "integration_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third axis: structural absence that would mediate between readings; snare that makes integration-reading costs visible; downstream of reading choice"
+    },
+    {
+      "claim_id": "exit_cost_asymmetry",
+      "human_readable": "Exit Cost Asymmetry (High-Emigration State Tax Base Loss)",
+      "structural_delta": "Eastern EU states lose skilled workers and tax base to western states without treaty mechanism for labor-export compensation",
+      "primary_observable": "Net migration flows by skill level; source-state public investment vs destination-state benefit capture",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "destination_states",
+      "victim": "source_states_eastern_eu",
+      "downstream_of": [
+        "integration_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps with fiscal_federalism_absence; lower centrality; both are downstream costs of integration reading"
+    },
+    {
+      "claim_id": "schengen_opt_out_scaffold",
+      "human_readable": "Schengen Opt-Out as Scaffold (Partial Exit Without Full Secession)",
+      "structural_delta": "Ireland/Cyprus non-participation in Schengen; UK pre-Brexit opt-out; demonstrates federation membership divisible from free movement commitment",
+      "primary_observable": "Opt-out treaty provisions; border control retention by non-Schengen members",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold supporting sovereignty_reading but adds limited structural novelty; opt-out existence already embedded in sovereignty constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "integration_reading",
+      "kernel_id": "federation_membership",
+      "reading_id": "integration_reading"
+    },
+    {
+      "claim_id": "sovereignty_reading",
+      "kernel_id": "federation_membership",
+      "reading_id": "sovereignty_reading"
+    },
+    {
+      "claim_id": "fiscal_federalism_absence",
+      "kernel_id": null,
+      "reading_id": null
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "exit_cost_asymmetry",
+      "structural_delta": "High-emigration states lose tax base without compensation mechanism",
+      "hypothesis": "snare",
+      "deferral_reason": "Overlaps with fiscal_federalism_absence; both are downstream snares of integration reading with similar victim sets"
+    },
+    {
+      "claim_id": "schengen_opt_out_scaffold",
+      "structural_delta": "Opt-out provisions demonstrate membership divisibility from free movement",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold adds limited novelty; opt-out existence embedded in sovereignty_reading constraint logic"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_brexit_reclassification",
+      "description": "Does Brexit reveal the federation-membership kernel as rope (negotiable treaty) rather than mountain (irreversible integration)? If member exit is institutionally feasible, integration_reading's claimed permanence is normative rather than structural.",
+      "source": "Tension 3 (Brexit as revealed preference) + Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_ecj_authority_foundation",
+      "description": "What grounds ECJ interpretive authority if member states retain constitutional sovereignty? Integration_reading treats ECJ as final arbiter; sovereignty_reading treats it as delegated agent revocable by principals. Authority grounding determines which reading is structurally coherent.",
+      "source": "Mechanism 2 (ECJ preliminary ruling) + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_compensatory_mechanism_feasibility",
+      "description": "Would fiscal transfer mechanism eliminate tension between readings or merely shift cost-bearer identity? If compensation is structurally feasible, fiscal_federalism_absence is piton (policy choice) not snare (structural trap).",
+      "source": "Absence 1 (Fiscal transfer mechanism) + F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_third_reading_hybrid",
+      "description": "Is there a coherent third reading that treats free movement as qualified right (neither absolute nor fully discretionary)? Proportionality doctrine in ECJ case law may instantiate hybrid reading not captured in binary framework.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + F15 (Premature Closure)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: binary reading framework may miss proportionality-based third reading visible in ECJ case law. Generated omega_third_reading_hybrid. F03 detected: fiscal_federalism_absence classified as snare but may be piton if compensation is policy choice not structural impossibility. Generated omega_compensatory_mechanism_feasibility."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Federation-membership commitment binding EU member states to supranational authority and free movement provisions",
+    "authority_description": "Contested between ECJ treaty interpretation (integration reading) and residual member-state constitutional sovereignty (sovereignty reading)",
+    "drift_status": "partial",
+    "candidate_pattern": "prophetic_tradition",
+    "is_contested_kernel": true,
+    "kernel_id": "federation_membership",
+    "readings": [
+      {
+        "reading_id": "integration_reading",
+        "commitment": "Federation-membership as irreversible integration; supranational authority legitimate; free movement as constitutional right",
+        "authority_grounding": "ECJ interpretive supremacy; treaty as constitutional document",
+        "sibling_readings": [
+          "sovereignty_reading"
+        ],
+        "expected_structural_delta": "Mobile citizens in beneficiary set; local labor markets in victim set; high ε from labor displacement; border restriction illegitimate"
+      },
+      {
+        "reading_id": "sovereignty_reading",
+        "commitment": "Federation-membership as conditional treaty; national authority retains border legitimacy; free movement as negotiable policy",
+        "authority_grounding": "Member-state constitutional sovereignty; treaty as revocable delegation",
+        "sibling_readings": [
+          "integration_reading"
+        ],
+        "expected_structural_delta": "Local labor markets in beneficiary set; mobile citizens in victim set; high ε from mobility restriction; border control legitimate"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "integration_reading",
+        "reading_b": "sovereignty_reading",
+        "basis": "Integration reading's axiom (supranational authority as constitutionally supreme) requires rejecting sovereignty reading's axiom (national sovereignty as residual and revocable). No single coherent framework holds both: either treaty binds states irrevocably (integration) or states retain exit/override authority (sovereignty)."
+      }
+    ]
+  },
+  "_seed_id": "federation_free_movement_kernel"
+}

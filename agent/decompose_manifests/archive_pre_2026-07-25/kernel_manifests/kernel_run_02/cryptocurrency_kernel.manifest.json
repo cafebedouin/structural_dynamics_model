@@ -1,0 +1,216 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Monetary Theory / Technology Governance",
+  "family_id": "cryptocurrency_kernel_contest_2026",
+  "topic_summary": "Analysis of cryptocurrency as a contested kernel with three competing interpretations: sound money (fixed-supply monetary alternative), speculative asset (volatility-driven investment vehicle), and decentralization ideology (disintermediation governance project). The research context reveals incompatible success criteria across readings, suggesting three distinct kernels sharing a name rather than three readings of one kernel.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 9,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Bitcoin/Satoshi Nakamoto (founding cryptocurrency; whitepaper October 2008)",
+      "Wall Street/Institutional Investors (validators of speculative asset reading)",
+      "Crypto Anarchist Movement (ideological foundation for decentralization reading)",
+      "Mining Pools/Large Token Holders (concentration of power despite decentralization claims)",
+      "Exchanges (centralized intermediaries in supposedly disintermediated system)",
+      "Fork Communities (BTC, BCH, ETH, ETC, BSV - governance dispute manifestations)",
+      "Warren Buffett/Nobel Laureates (critics of speculative bubble interpretation)",
+      "15% of American Adults (retail adoption base as of 2021)"
+    ],
+    "key_tensions": [
+      "Decentralization promise vs actual mining/holdings concentration",
+      "Monetary function (stability) vs investment asset (volatility)",
+      "Disintermediation ideology vs emergence of new intermediaries (exchanges, developers)",
+      "Original peer-to-peer cash vision vs institutional adoption reality",
+      "Governance legitimacy: collective validation vs democratic participation"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Cryptocurrency as shared technological substrate with contested interpretive commitments about its fundamental purpose and legitimacy criteria",
+    "authority_description": "Fragmented: Austrian economists (sound money), market participants (speculation), cryptoanarchist developers (decentralization). No unified interpretive authority.",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "Three supposed readings do not share a common substrate. Sound money reading grounds legitimacy in monetary theory (fixed supply, purchasing power). Speculative asset reading grounds legitimacy in market dynamics (volatility, narrative momentum). Decentralization ideology reading grounds legitimacy in governance structure (disintermediation, distributed control). These are three DISTINCT kernels sharing the name 'cryptocurrency' — not three interpretations of one kernel. Each has incompatible success criteria: sound money requires price stability, speculation requires volatility, decentralization requires distributed power. No single coherent framework could hold all three as complementary readings of the same commitment. The substrate is the blockchain technology itself, but the normative commitments about what makes it legitimate are orthogonal.",
+    "structural_implication": "Decompose into three independent constraint axes (one per kernel) rather than kernel/reading structure. Each axis represents a distinct extractive relationship with different beneficiaries, victims, and observables."
+  },
+  "axes": [
+    {
+      "claim_id": "sound_money_scarcity_constraint",
+      "human_readable": "Sound Money Scarcity Constraint (Fixed Supply as Monetary Legitimacy)",
+      "structural_delta": "21 million coin cap creates artificial scarcity claimed as monetary legitimacy vs fiat inflation",
+      "primary_observable": "Bitcoin supply schedule adherence; purchasing power stability vs fiat currencies; adoption as medium of exchange (not store of value)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "early_adopters_austrian_economists",
+      "victim": "late_adopters_seeking_stable_medium_of_exchange",
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_speculation_extraction"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Distinct observable (supply cap + purchasing power stability) with clear beneficiary/victim structure. Upstream to speculation axis. Represents first kernel (monetary theory)."
+    },
+    {
+      "claim_id": "institutional_speculation_extraction",
+      "human_readable": "Institutional Speculation Extraction (Volatility as Profit Mechanism)",
+      "structural_delta": "Extreme price volatility enables speculative profit extraction by sophisticated actors at expense of retail investors",
+      "primary_observable": "Price volatility metrics; retail vs institutional trading volume; bubble/bust cycle frequency; narrative-driven price movements",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_investors_exchanges_early_whales",
+      "victim": "retail_investors_late_entrants",
+      "downstream_of": [
+        "sound_money_scarcity_constraint"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality. Downstream synthesis node. Distinct observable (volatility) and beneficiary structure (institutional vs retail). Represents second kernel (speculative asset). Directly contradicts sound money reading's stability requirement."
+    },
+    {
+      "claim_id": "decentralization_concentration_paradox",
+      "human_readable": "Decentralization-Concentration Paradox (Ideology vs Actual Power Distribution)",
+      "structural_delta": "Disintermediation ideology coexists with mining concentration, exchange dominance, and technical aristocracy",
+      "primary_observable": "Mining pool concentration (Gini coefficient); exchange custody share; governance participation rates; developer influence metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "mining_pools_exchanges_core_developers",
+      "victim": "retail_users_governance_excluded",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent from first two axes (different observable: power distribution vs price/supply). Represents third kernel (decentralization ideology). Captures tension between stated ideology and structural reality."
+    },
+    {
+      "claim_id": "fork_governance_fragmentation",
+      "human_readable": "Fork Governance Fragmentation (Competing Freedom Interpretations)",
+      "structural_delta": "Major forks (BTC, BCH, ETH, ETC, BSV) instantiate incompatible governance philosophies from shared codebase",
+      "primary_observable": "Fork frequency; community size distribution across forks; governance mechanism differences",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "decentralization_concentration_paradox"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream manifestation of decentralization_concentration_paradox without independent extractive structure. Omega material on governance legitimacy."
+    },
+    {
+      "claim_id": "quantum_threat_horizon",
+      "human_readable": "Quantum Threat Horizon (Cryptographic Obsolescence Risk)",
+      "structural_delta": "Quantum computing threatens cryptographic foundation of blockchain security",
+      "primary_observable": "Quantum computing capability milestones; protocol upgrade timelines; cryptographic algorithm transitions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sound_money_scarcity_constraint",
+        "decentralization_concentration_paradox"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: physical constraint (mountain) but low current epsilon. Omega variable on long-term viability."
+    },
+    {
+      "claim_id": "institutional_adoption_legitimacy_trade",
+      "human_readable": "Institutional Adoption Legitimacy Trade (Mainstream Success vs Original Vision)",
+      "structural_delta": "Wall Street adoption validates speculative reading while undermining decentralization ideology",
+      "primary_observable": "Institutional custody share; ETF adoption; regulatory compliance requirements",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_validators_compliant_exchanges",
+      "victim": "cryptoanarchist_ideologues_privacy_advocates",
+      "downstream_of": [
+        "institutional_speculation_extraction",
+        "decentralization_concentration_paradox"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: high centrality but captured by combination of institutional_speculation_extraction (speculative mechanism) and decentralization_concentration_paradox (ideology vs reality). Would create redundancy."
+    }
+  ],
+  "generation_sequence": [
+    "sound_money_scarcity_constraint",
+    "institutional_speculation_extraction",
+    "decentralization_concentration_paradox"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "fork_governance_fragmentation",
+      "structural_delta": "Major forks instantiate incompatible governance philosophies",
+      "hypothesis": "rope",
+      "deferral_reason": "Downstream manifestation of decentralization_concentration_paradox without independent extractive structure"
+    },
+    {
+      "claim_id": "quantum_threat_horizon",
+      "structural_delta": "Quantum computing threatens cryptographic foundation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Physical constraint with low current epsilon; long-term viability omega variable"
+    },
+    {
+      "claim_id": "institutional_adoption_legitimacy_trade",
+      "structural_delta": "Wall Street adoption validates speculation while undermining decentralization",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Captured by combination of institutional_speculation_extraction and decentralization_concentration_paradox; would create redundancy"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The three supposed readings (sound money, speculation, decentralization) are not three interpretations of one kernel but three distinct kernels sharing the name 'cryptocurrency'. Each has incompatible success criteria and orthogonal normative commitments. Sound money requires stability; speculation requires volatility; decentralization requires distributed power. No coherent framework holds all three simultaneously. This is not a contested kernel but a naming collision across three separate constraint systems.",
+      "source": "§1.3 Commitment System Recognition + §1.3-K Kernel/Reading Decomposition coherence test"
+    },
+    {
+      "id": "omega_fork_legitimacy",
+      "description": "Which fork (BTC, BCH, ETH, ETC, BSV) inherits the 'true' cryptocurrency kernel? Each claims different interpretive authority (immutability, flexibility, transparency, privacy). Deferred axis fork_governance_fragmentation documents this fragmentation but does not resolve legitimacy question.",
+      "source": "Deferred axis fork_governance_fragmentation + Tension 4 (governance legitimacy)"
+    },
+    {
+      "id": "omega_quantum_reclassification",
+      "description": "Is quantum_threat_horizon a true Mountain (physics of cryptography) or a Piton (policy choice to upgrade protocols)? If quantum computing advances faster than protocol upgrades, the entire substrate collapses. If upgrades succeed, it becomes a coordination Rope. Current low epsilon may be catastrophically wrong.",
+      "source": "Deferred axis quantum_threat_horizon + F03 (Hasty Generalization) on mountain classification"
+    },
+    {
+      "id": "omega_stablecoin_bypass",
+      "description": "Do algorithmic stablecoins or CBDC (central bank digital currencies) bypass the sound money vs speculation contradiction by offering stability without decentralization? If so, they represent a fourth kernel not analyzed here.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — stablecoins and CBDCs not addressed in extraction"
+    },
+    {
+      "id": "omega_energy_externality",
+      "description": "Proof-of-work mining energy consumption is an unexamined axis. Who bears the environmental cost (victim) and who benefits (miners extracting block rewards)? This may be a high-epsilon Snare deferred due to token budget.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — energy/environmental impact absent from extraction"
+    },
+    {
+      "id": "omega_regulatory_capture",
+      "description": "Does regulatory compliance (KYC/AML requirements on exchanges) convert decentralization ideology from Tangled Rope to Snare by forcing intermediary gatekeeping? Deferred axis institutional_adoption_legitimacy_trade touches this but does not isolate the regulatory mechanism.",
+      "source": "Deferred axis institutional_adoption_legitimacy_trade + Tension 3 (disintermediation vs new intermediaries)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: quantum_threat_horizon classified as Mountain (physical constraint) but may be Piton (policy choice to upgrade protocols). Generated omega_quantum_reclassification. Also: kernel collapse finding (three distinct kernels, not one contested kernel) required §1.3-K coherence test and resulted in is_contested_kernel=false with structural_implication field documenting the collapse."
+  },
+  "_seed_id": "cryptocurrency_kernel"
+}

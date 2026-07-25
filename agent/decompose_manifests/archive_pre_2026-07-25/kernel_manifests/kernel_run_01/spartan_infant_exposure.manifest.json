@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Historical Ethics / Commitment Systems",
+  "family_id": "spartan_exposure_personhood_boundary",
+  "topic_summary": "Analysis of Spartan infant exposure as a test case for personhood-boundary kernel contestation across time. Examines whether the hillside-exposure reading (infanticide as legitimate population control) represents a dropped reading from a shared kernel or exit from the moral possibility space entirely. Tests whether moral-standing boundaries are contested kernels with multiple live readings or historical succession of incommensurable frameworks.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Spartan state (authority structure enforcing exposure practice)",
+      "Gerousia (council of elders adjudicating infant fitness)",
+      "Exposed infants (subjects of the practice)",
+      "Modern moral frameworks (contemporary personhood theories)",
+      "Hillside exposure site (Apothetae, physical mechanism)"
+    ],
+    "key_tensions": [
+      "State eugenic interest vs individual infant life (Spartan practice vs modern rights)",
+      "Fitness-based personhood vs birth-based personhood (exposure reading vs modern reading)",
+      "Historical moral possibility vs contemporary moral necessity (path-naturalization question)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The personhood-boundary kernel: what entities possess moral standing requiring protection from killing",
+    "authority_description": "Varies by reading: Spartan = state eugenic authority; modern = rights-based constitutional/philosophical consensus",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "fitness_contingent_reading",
+        "commitment": "Personhood contingent on demonstrated fitness; pre-fitness entities lack moral standing",
+        "authority_grounding": "State eugenic interest; collective survival priority over individual life",
+        "sibling_readings": [
+          "birth_threshold_reading",
+          "potential_based_reading"
+        ],
+        "expected_structural_delta": "Infants enter victim set only after passing fitness test; state authority to exclude pre-test entities from moral community"
+      },
+      {
+        "reading_id": "birth_threshold_reading",
+        "commitment": "Personhood begins at birth; all born humans possess moral standing",
+        "authority_grounding": "Rights-based framework; inherent dignity independent of capacity",
+        "sibling_readings": [
+          "fitness_contingent_reading",
+          "potential_based_reading"
+        ],
+        "expected_structural_delta": "All born infants in victim set; killing any born human is homicide; no state authority to exclude"
+      },
+      {
+        "reading_id": "potential_based_reading",
+        "commitment": "Personhood grounded in potential for rational agency; severely disabled infants may lack standing",
+        "authority_grounding": "Philosophical (Singer, McMahan) utilitarian/quality-of-life frameworks",
+        "sibling_readings": [
+          "fitness_contingent_reading",
+          "birth_threshold_reading"
+        ],
+        "expected_structural_delta": "Victim set excludes entities without potential for personhood-relevant capacities; parental/medical authority to make exclusion judgments"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "fitness_contingent_reading",
+        "reading_b": "birth_threshold_reading",
+        "basis": "No framework can simultaneously hold that personhood is contingent on demonstrated fitness AND that all born humans inherently possess it. Accepting birth-threshold axiom requires rejecting fitness-contingency as a legitimate criterion."
+      },
+      {
+        "reading_a": "birth_threshold_reading",
+        "reading_b": "potential_based_reading",
+        "basis": "No framework can hold both that birth confers inviolable moral standing AND that lack of potential for rational agency permits exclusion. Birth-threshold treats birth as sufficient; potential-based treats it as insufficient without capacity."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "fitness_contingent_reading",
+      "human_readable": "Fitness-Contingent Personhood (Spartan Exposure Reading)",
+      "structural_delta": "Personhood as earned status contingent on passing state fitness evaluation",
+      "primary_observable": "Legal/institutional mechanisms for pre-personhood exclusion; presence of exposure sites",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "spartan_military_state",
+      "victim": "disabled_infants",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core historical reading; highest extractiveness; demonstrates kernel's historical range"
+    },
+    {
+      "claim_id": "birth_threshold_reading",
+      "human_readable": "Birth-Threshold Personhood (Modern Rights Reading)",
+      "structural_delta": "Personhood as inherent status conferred at birth, independent of capacity",
+      "primary_observable": "Legal homicide definitions; constitutional rights frameworks; absence of state-sanctioned infanticide",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Dominant contemporary reading; structural contrast to fitness-contingent; tests kernel vs succession question"
+    },
+    {
+      "claim_id": "potential_based_reading",
+      "human_readable": "Potential-Based Personhood (Philosophical Utilitarian Reading)",
+      "structural_delta": "Personhood grounded in capacity for rational agency; severe disability may exclude",
+      "primary_observable": "Philosophical literature (Singer, McMahan); medical ethics debates on neonatal euthanasia",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "utilitarian_philosophers",
+      "victim": "severely_disabled_neonates",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Live contemporary reading; demonstrates kernel contestation persists; bridges historical and modern"
+    },
+    {
+      "claim_id": "conception_threshold_reading",
+      "human_readable": "Conception-Threshold Personhood (Religious/Natural Law Reading)",
+      "structural_delta": "Personhood begins at conception; all post-conception entities possess full moral standing",
+      "primary_observable": "Religious doctrine; pro-life legal frameworks; fetal homicide statutes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "religious_institutions",
+      "victim": "pregnant_women",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: extends kernel earlier than birth but does not address the Spartan case's core question (post-birth exclusion)"
+    },
+    {
+      "claim_id": "path_naturalization_mechanism",
+      "human_readable": "Path Naturalization (Historical Contingency as Necessity)",
+      "structural_delta": "Contemporary moral consensus treats historically contingent reading-selection as natural/necessary",
+      "primary_observable": "Moral philosophy treating birth-threshold as self-evident; absence of exposure-reading in Overton window",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "birth_threshold_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: meta-level mechanism; captured in omega_path_naturalization"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "fitness_contingent_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "fitness_contingent_reading"
+    },
+    {
+      "claim_id": "birth_threshold_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "birth_threshold_reading"
+    },
+    {
+      "claim_id": "potential_based_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "potential_based_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "conception_threshold_reading",
+      "structural_delta": "Personhood begins at conception",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Extends kernel earlier than birth but does not address post-birth exclusion question central to Spartan case"
+    },
+    {
+      "claim_id": "path_naturalization_mechanism",
+      "structural_delta": "Historical contingency naturalized as necessity",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Meta-level mechanism; captured in omega_path_naturalization and omega_kernel_vs_succession"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_vs_succession",
+      "description": "Core uncertainty: Is personhood-boundary a contested kernel with multiple live readings, or historical succession of incommensurable frameworks? If succession, fitness-contingent reading did not 'drop' from kernel but exited moral possibility space entirely. If kernel, modern consensus suppresses a reading that remains structurally available.",
+      "source": "Topic framing + kernel/reading decomposition"
+    },
+    {
+      "id": "omega_path_naturalization",
+      "description": "Does contemporary moral philosophy treat birth-threshold as discovered necessity or naturalized contingency? If naturalized, the 'modern window' is itself a reading-suppression mechanism. If necessity, Spartan practice was moral error, not alternative reading.",
+      "source": "Deferred axis path_naturalization_mechanism + Dark Matter Probe 3"
+    },
+    {
+      "id": "omega_exposure_reading_availability",
+      "description": "Is fitness-contingent reading genuinely unavailable from modern frameworks, or merely suppressed? Singer/McMahan potential-based reading demonstrates partial structural availability. Question: does taboo against infanticide reflect reasoned rejection or availability cascade?",
+      "source": "Independence testing between fitness_contingent and potential_based readings"
+    },
+    {
+      "id": "omega_historical_evidence_limits",
+      "description": "Spartan exposure practice known primarily through later Greek sources (Plutarch). Actual Gerousia criteria, frequency, and enforcement mechanisms uncertain. Mountain/tangled_rope classification of fitness_contingent reading depends on contested historical reconstruction.",
+      "source": "F34 epistemic trespass check + extraction absence inventory"
+    },
+    {
+      "id": "omega_disability_rights_collision",
+      "description": "Modern disability rights frameworks reject both fitness-contingent AND potential-based readings. Does this represent third reading (social model of disability) or refinement of birth-threshold reading? Affects kernel topology.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Historical evidence for Spartan exposure practice relies on later sources; Gerousia decision criteria and enforcement mechanisms uncertain. Generated omega_historical_evidence_limits. Model lacks primary source access and classical historiography expertise to definitively classify fitness_contingent reading's extractiveness or beneficiary structure."
+  },
+  "_seed_id": "spartan_infant_exposure"
+}

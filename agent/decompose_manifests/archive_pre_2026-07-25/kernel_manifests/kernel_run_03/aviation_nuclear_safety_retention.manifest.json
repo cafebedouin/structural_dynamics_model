@@ -1,0 +1,268 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Safety Engineering / Organizational Learning / Competence Retention",
+  "family_id": "catastrophe_avoidance_competence_2026",
+  "topic_summary": "Analysis of catastrophe-avoidance competence retention in aviation (stall recovery, CRM) and nuclear (meltdown-avoidance) domains, where decades-long safety records depend on simulator-based training without recurring real catastrophes. The kernel contest examines whether simulation counts as the exercise that keeps competence occupied, or whether only real catastrophe truly tests retention.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "FAA/EASA (regulatory authorities mandating simulation-based training)",
+      "Airlines and nuclear plant operators (training implementers)",
+      "Simulation technology providers (APS, CORYS, L3Harris)",
+      "Pilots and nuclear operators (competence holders)",
+      "ICATEE (international aviation safety working group post-2009 crashes)",
+      "EPRI (nuclear severe accident analysis software developer)",
+      "Colgan Air/Air France 447 crashes (triggering events for stall recovery mandate)",
+      "Fukushima disaster (triggering event for severe accident simulation)"
+    ],
+    "key_tensions": [
+      "Simulation fidelity vs. real-world irreplaceability (can drills substitute for actual catastrophe experience)",
+      "Competence decay without practice vs. decades-long safety record (does simulation prevent decay or merely mask it)",
+      "Jeopardy conditions in simulation vs. non-jeopardy line operations (assessment environment vs. operational reality)",
+      "Epistemological validation gap (cannot test adequacy without allowing catastrophe)"
+    ],
+    "key_mechanisms": [
+      "Recurrent simulator training cycles (FAA mandate: all pilots by March 2020; nuclear post-Fukushima)",
+      "Competence decay measurement (55% deficiency in 3+ skills at 18 months without practice)",
+      "Line audits under non-jeopardy conditions (CRM behavior observation in actual operations)"
+    ],
+    "key_absences": [
+      "Empirical data on optimal refresher intervals (currencies vs. proficiencies)",
+      "Direct comparison of simulation-trained vs. real-catastrophe-experienced operators (ethically impossible)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Catastrophe-avoidance competence must be continuously exercised to remain occupied; the question is what counts as valid exercise",
+    "authority_description": "Regulatory bodies (FAA, NRC) ground legitimacy in safety record and simulation fidelity standards; operators ground legitimacy in demonstrated performance under assessment",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_drift_CS",
+    "is_contested_kernel": true,
+    "kernel_id": "competence_exercise_validity",
+    "readings": [
+      {
+        "reading_id": "simulation_as_proxy",
+        "commitment": "Simulation counts as valid exercise that keeps competence occupied; drills are proxy-catastrophe",
+        "authority_grounding": "Regulatory mandate + safety record (decades without recurring catastrophe) + transfer-of-training research showing simulation improves performance",
+        "sibling_readings": [
+          "real_catastrophe_only",
+          "continuous_refresh_hybrid"
+        ],
+        "expected_structural_delta": "Competence retention validated through simulation metrics; safety record proves adequacy; regulatory compliance sufficient"
+      },
+      {
+        "reading_id": "real_catastrophe_only",
+        "commitment": "Only real catastrophe truly exercises competence; simulation is insufficient substitute",
+        "authority_grounding": "Phenomenological irreplaceability (G-forces, turbulence, psychological pressure) + competence decay evidence (55% deficiency at 18 months) + pilot testimony seeking muscle memory refreshers",
+        "sibling_readings": [
+          "simulation_as_proxy",
+          "continuous_refresh_hybrid"
+        ],
+        "expected_structural_delta": "Competence retention remains untested; safety record reflects luck or system redundancy rather than proven adequacy; simulation masks decay"
+      },
+      {
+        "reading_id": "continuous_refresh_hybrid",
+        "commitment": "Simulation is necessary but not sufficient; competence retention requires continuous drill cycles, not one-time validation",
+        "authority_grounding": "Competence decay research + recurrent training mandates + line audit findings (jeopardy vs. non-jeopardy performance gap)",
+        "sibling_readings": [
+          "simulation_as_proxy",
+          "real_catastrophe_only"
+        ],
+        "expected_structural_delta": "Competence retention is process-dependent, not state-validated; safety record proves continuous exercise works, not that simulation equals catastrophe"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "simulation_as_proxy",
+        "reading_b": "real_catastrophe_only",
+        "basis": "No single framework can hold both 'simulation is adequate validation' and 'only real catastrophe validates' — one requires accepting simulation fidelity as sufficient, the other requires rejecting it as categorically insufficient regardless of fidelity"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "simulation_as_proxy",
+      "human_readable": "Simulation as Proxy-Catastrophe (Drills Count as Valid Exercise)",
+      "structural_delta": "Simulation-based training is structurally equivalent to catastrophe for competence retention purposes",
+      "primary_observable": "Safety record (catastrophe frequency); post-simulation performance metrics; transfer-of-training effect sizes",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "regulatory_authorities",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "continuous_refresh_hybrid"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; establishes regulatory/institutional position"
+    },
+    {
+      "claim_id": "real_catastrophe_only",
+      "human_readable": "Real Catastrophe as Irreplaceable (Simulation Insufficient)",
+      "structural_delta": "Phenomenological and psychological irreplaceability of real catastrophe means simulation cannot validate competence retention",
+      "primary_observable": "Competence decay rates; pilot testimony on muscle memory; jeopardy vs. non-jeopardy performance gaps",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": null,
+      "victim": "operators_under_untested_assumption",
+      "downstream_of": [],
+      "feeds_into": [
+        "continuous_refresh_hybrid"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; highest centrality due to competence decay evidence"
+    },
+    {
+      "claim_id": "continuous_refresh_hybrid",
+      "human_readable": "Continuous Refresh Hybrid (Process-Dependent Retention)",
+      "structural_delta": "Competence retention depends on continuous drill cycles, not one-time validation; simulation works only as ongoing process",
+      "primary_observable": "Recurrent training frequency mandates; competence decay curves; line audit behavioral persistence",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "training_industry",
+      "victim": "operators_under_currency_vs_proficiency_gap",
+      "downstream_of": [
+        "simulation_as_proxy",
+        "real_catastrophe_only"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; downstream synthesis node resolving the paradox"
+    },
+    {
+      "claim_id": "epistemological_validation_gap",
+      "human_readable": "Epistemological Validation Gap (Untestable Adequacy)",
+      "structural_delta": "Cannot empirically test simulation adequacy without allowing catastrophe; safety record proves correlation not causation",
+      "primary_observable": "Absence of catastrophe; absence of direct comparison data",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "simulation_as_proxy",
+        "real_catastrophe_only",
+        "continuous_refresh_hybrid"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but structurally captured by the three readings' treatment of validation"
+    },
+    {
+      "claim_id": "competence_decay_mechanism",
+      "human_readable": "Competence Decay Mechanism (Skill Atrophy Without Practice)",
+      "structural_delta": "Complex competencies decrease over time without practice; 55% deficiency at 18 months",
+      "primary_observable": "Skill retention curves; refresher interval data; psychomotor and cognitive decay rates",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "real_catastrophe_only",
+        "continuous_refresh_hybrid"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain but evidence base already incorporated into real_catastrophe_only reading"
+    },
+    {
+      "claim_id": "jeopardy_condition_gap",
+      "human_readable": "Jeopardy Condition Gap (Assessment vs. Operational Reality)",
+      "structural_delta": "Crews demonstrate competence under jeopardy assessment but may not practice under non-jeopardy line operations",
+      "primary_observable": "Line audit findings; jeopardy vs. non-jeopardy performance deltas",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "passengers_under_operational_conditions",
+      "downstream_of": [
+        "simulation_as_proxy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream snare but structurally captured by continuous_refresh_hybrid's process-dependence claim"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "simulation_as_proxy",
+      "kernel_id": "competence_exercise_validity",
+      "reading_id": "simulation_as_proxy"
+    },
+    {
+      "claim_id": "real_catastrophe_only",
+      "kernel_id": "competence_exercise_validity",
+      "reading_id": "real_catastrophe_only"
+    },
+    {
+      "claim_id": "continuous_refresh_hybrid",
+      "kernel_id": "competence_exercise_validity",
+      "reading_id": "continuous_refresh_hybrid"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "epistemological_validation_gap",
+      "structural_delta": "Cannot test adequacy without allowing catastrophe",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain but structurally captured by the three readings' divergent treatments of validation"
+    },
+    {
+      "claim_id": "competence_decay_mechanism",
+      "structural_delta": "Skills decay without practice (55% deficiency at 18 months)",
+      "hypothesis": "mountain",
+      "deferral_reason": "Evidence base already incorporated into real_catastrophe_only reading"
+    },
+    {
+      "claim_id": "jeopardy_condition_gap",
+      "structural_delta": "Assessment performance vs. operational reality divergence",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream snare captured by continuous_refresh_hybrid's process-dependence claim"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_d5_collapse_test",
+      "description": "The D5 break tests whether the reading distinction collapses. Evidence suggests PARTIAL collapse: simulation demonstrably works (decades-long safety record) but only under continuous refresh cycles. The distinction between 'proxy-catastrophe' and 'real-catastrophe-only' does not fully collapse because competence decay evidence shows simulation alone is insufficient, yet the safety record shows continuous simulation IS sufficient. The paradox is resolved by continuous_refresh_hybrid: simulation works as ongoing process, not as one-time validation equivalent to catastrophe.",
+      "source": "Kernel contest specification + competence decay evidence + safety record data"
+    },
+    {
+      "id": "omega_optimal_refresh_intervals",
+      "description": "Objective data on optimal refresher intervals is hardly available. Current mandates focus on currencies (time-based) rather than proficiencies (performance-based). This gap means the continuous_refresh_hybrid reading cannot specify the minimum viable refresh frequency—only that some continuous cycle is necessary.",
+      "source": "Absence inventory (§1.1) + research context on currency vs. proficiency"
+    },
+    {
+      "id": "omega_line_audit_coverage",
+      "description": "Line audits under non-jeopardy conditions provide the most useful data on operational competence, but coverage and frequency are not specified in the research context. If line audits are rare, the jeopardy_condition_gap may be larger than the safety record suggests.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + jeopardy condition research"
+    },
+    {
+      "id": "omega_fukushima_counterfactual",
+      "description": "Nuclear severe accident simulation was introduced POST-Fukushima. The counterfactual (would pre-Fukushima simulation have prevented the disaster) is unknowable, but it suggests the real_catastrophe_only reading may have empirical support: the catastrophe revealed inadequacy that simulation had not addressed.",
+      "source": "Research context on Fukushima triggering severe accident simulation + epistemological validation gap"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition into three readings captures the structural contest. The D5 collapse test is addressed in omega_d5_collapse_test: partial collapse, resolved by continuous_refresh_hybrid reading."
+  },
+  "_seed_id": "aviation_nuclear_safety_retention"
+}

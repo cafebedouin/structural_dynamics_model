@@ -1,0 +1,248 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Software Licensing / Intellectual Property / Open Source Governance",
+  "family_id": "gpl_freedom_restriction_2026",
+  "topic_summary": "Analysis of the GNU General Public License (GPL) as a contested kernel where different interpretive communities read the same copyleft licensing mechanism as either preserving user freedom through reciprocity or restricting commercial flexibility through mandatory sharing requirements. The disagreement centers on whether viral licensing constitutes a freedom-preserving constraint or a freedom-limiting one.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "GNU General Public License (GPL) - copyleft license requiring derivative works to use same license",
+      "Free Software Foundation (FSF) - interpretive authority grounding copyleft-as-freedom reading",
+      "Open Source Initiative (OSI) - alternative interpretive framework emphasizing practical benefits",
+      "Proprietary software vendors - entities constrained by GPL's reciprocity requirements",
+      "Downstream users - beneficiaries of source code access guarantees",
+      "Corporate adopters - entities seeking license compatibility with proprietary models"
+    ],
+    "key_tensions": [
+      "Freedom maximization vs commercial flexibility (GPL copyleft vs permissive licensing)",
+      "Individual developer rights vs downstream user rights (authorship control vs access guarantees)"
+    ],
+    "key_mechanisms": [
+      "Viral licensing clause - derivative works inherit GPL requirements",
+      "Source code disclosure obligation - binaries must be accompanied by source",
+      "License compatibility enforcement - GPL incompatible with most proprietary licenses"
+    ],
+    "key_absences": [
+      "Enforcement asymmetry - FSF has standing but individual contributors often lack resources",
+      "Jurisdictional variance - GPL interpretation differs across legal systems (U.S. vs EU vs China)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "copyleft_as_freedom_reading",
+      "human_readable": "Copyleft as Freedom Preservation (FSF Canonical Reading)",
+      "structural_delta": "Viral licensing preserves user freedoms by preventing proprietary capture of commons",
+      "primary_observable": "Rate of GPL-licensed derivative works remaining GPL; ecosystem continuity metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "downstream_users",
+      "victim": "proprietary_integrators",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Canonical FSF reading; highest interpretive authority; generates constraint with guaranteed source access",
+      "kernel_id": "gpl_reciprocity_obligation",
+      "reading_id": "copyleft_as_freedom_reading",
+      "interpretive_commitment": "Freedom defined as user's perpetual access to source code and modification rights",
+      "authority_grounding": "FSF as license author; Stallman's four freedoms doctrine; natural rights framework",
+      "sibling_readings": [
+        "copyleft_as_restriction_reading",
+        "copyleft_as_commons_reading"
+      ],
+      "expected_structural_delta": "High suppression of proprietary forks; ecosystem lock-in to GPL family; beneficiary set = all downstream users"
+    },
+    {
+      "claim_id": "copyleft_as_restriction_reading",
+      "human_readable": "Copyleft as Commercial Restriction (Permissive License Reading)",
+      "structural_delta": "Viral licensing constrains business models by prohibiting proprietary integration",
+      "primary_observable": "Corporate license choice patterns; GPL avoidance in enterprise codebases",
+      "epsilon_bin": "mod",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "proprietary_vendors",
+      "victim": "commons_contributors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Dominant corporate reading; structural opposition to reading 1; different victim set",
+      "kernel_id": "gpl_reciprocity_obligation",
+      "reading_id": "copyleft_as_restriction_reading",
+      "interpretive_commitment": "Freedom defined as license choice flexibility for downstream integrators",
+      "authority_grounding": "Corporate counsel interpretations; permissive license advocates (MIT/BSD/Apache communities)",
+      "sibling_readings": [
+        "copyleft_as_freedom_reading",
+        "copyleft_as_commons_reading"
+      ],
+      "expected_structural_delta": "Shift to permissive licensing (MIT/Apache); proprietary forks enabled; beneficiary set = integrating firms"
+    },
+    {
+      "claim_id": "copyleft_as_commons_reading",
+      "human_readable": "Copyleft as Commons Stabilization (Ostrom Framework Reading)",
+      "structural_delta": "Viral licensing as institutional technology for sustaining cooperative production without enclosure",
+      "primary_observable": "Commons longevity metrics; fork survival rates under GPL vs permissive licenses",
+      "epsilon_bin": "low",
+      "hypothesis": "reading_of_kernel",
+      "beneficiary": "commons_as_institution",
+      "victim": "individual_exit_maximizers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position; treats GPL as commons governance mechanism rather than rights framework",
+      "kernel_id": "gpl_reciprocity_obligation",
+      "reading_id": "copyleft_as_commons_reading",
+      "interpretive_commitment": "GPL as institutional rule preventing commons tragedy through mandatory reciprocity",
+      "authority_grounding": "Commons scholarship (Ostrom, Benkler); empirical studies of open source sustainability",
+      "sibling_readings": [
+        "copyleft_as_freedom_reading",
+        "copyleft_as_restriction_reading"
+      ],
+      "expected_structural_delta": "Medium extractiveness; constrains both proprietary capture AND individual opportunism; beneficiary = commons itself as durable institution"
+    },
+    {
+      "claim_id": "enforcement_asymmetry_axis",
+      "human_readable": "GPL Enforcement Asymmetry (Standing and Resource Gap)",
+      "structural_delta": "Copyright holders have standing but individual contributors lack resources for litigation",
+      "primary_observable": "GPL violation lawsuit filings by entity type; settlement rates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "well_resourced_copyright_holders",
+      "victim": "individual_contributors",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism rather than interpretive reading; high epsilon but orthogonal to kernel contest"
+    },
+    {
+      "claim_id": "jurisdictional_variance_axis",
+      "human_readable": "GPL Jurisdictional Variance (Legal System Interpretation Divergence)",
+      "structural_delta": "GPL interpreted differently under U.S. copyright law vs EU vs Chinese IP regimes",
+      "primary_observable": "Court rulings on GPL enforceability across jurisdictions; license modification patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "jurisdictions_with_weak_copyleft_enforcement",
+      "victim": "fsf_canonical_interpretation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: modulates all readings but does not constitute independent reading; legal infrastructure variable"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "copyleft_as_freedom_reading",
+      "kernel_id": "gpl_reciprocity_obligation",
+      "reading_id": "copyleft_as_freedom_reading"
+    },
+    {
+      "claim_id": "copyleft_as_restriction_reading",
+      "kernel_id": "gpl_reciprocity_obligation",
+      "reading_id": "copyleft_as_restriction_reading"
+    },
+    {
+      "claim_id": "copyleft_as_commons_reading",
+      "kernel_id": "gpl_reciprocity_obligation",
+      "reading_id": "copyleft_as_commons_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_asymmetry_axis",
+      "structural_delta": "Copyright standing concentrated in well-resourced entities",
+      "hypothesis": "snare",
+      "deferral_reason": "Orthogonal to kernel interpretation contest; enforcement infrastructure rather than reading divergence"
+    },
+    {
+      "claim_id": "jurisdictional_variance_axis",
+      "structural_delta": "GPL meaning varies across legal systems",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Modulates all readings uniformly; legal infrastructure variable rather than independent interpretive position"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_license_proliferation",
+      "description": "Does GPL fork into incompatible versions (GPLv2 vs GPLv3) constitute kernel fragmentation or readings of a unified kernel? Current analysis treats GPL as single kernel with interpretive divergence, but version incompatibility may indicate multiple kernels.",
+      "source": "§1.3-K coherence check"
+    },
+    {
+      "id": "omega_dual_licensing_escape",
+      "description": "Is dual licensing (GPL + proprietary) a reading coexistence mechanism or kernel subversion? It allows both readings to operate simultaneously but may undermine the canonical FSF reading's structural force.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_commons_reading_authority",
+      "description": "Does the commons reading have interpretive authority or is it analytical imposition? Ostrom framework applied post-hoc to GPL may lack grounding in license author intent or community consensus.",
+      "source": "F34 (Epistemic Trespass) + §1.3 authority structure validation"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Commons reading applies Ostrom institutional analysis framework to GPL, but model lacks deep training on commons governance literature. Generated omega_commons_reading_authority to bound this uncertainty. Authority grounding for commons reading is weaker than FSF or corporate readings."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "GPL viral licensing clause requiring derivative works to adopt same license terms",
+    "authority_description": "FSF as license author holds canonical interpretive authority; corporate counsel and courts provide alternative interpretive frameworks; no single adjudicator",
+    "drift_status": "partial",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "gpl_reciprocity_obligation",
+    "readings": [
+      {
+        "reading_id": "copyleft_as_freedom_reading",
+        "commitment": "Viral licensing preserves user freedoms by preventing proprietary capture",
+        "authority_grounding": "FSF as license author; Stallman's four freedoms doctrine",
+        "sibling_readings": [
+          "copyleft_as_restriction_reading",
+          "copyleft_as_commons_reading"
+        ],
+        "expected_structural_delta": "Beneficiary = downstream users; victim = proprietary integrators; high suppression of alternative licensing"
+      },
+      {
+        "reading_id": "copyleft_as_restriction_reading",
+        "commitment": "Viral licensing constrains business models by prohibiting proprietary integration",
+        "authority_grounding": "Corporate legal interpretations; permissive license communities",
+        "sibling_readings": [
+          "copyleft_as_freedom_reading",
+          "copyleft_as_commons_reading"
+        ],
+        "expected_structural_delta": "Beneficiary = proprietary vendors; victim = commons contributors; enables proprietary forks"
+      },
+      {
+        "reading_id": "copyleft_as_commons_reading",
+        "commitment": "GPL as institutional technology preventing commons enclosure through mandatory reciprocity",
+        "authority_grounding": "Commons governance scholarship (Ostrom, Benkler)",
+        "sibling_readings": [
+          "copyleft_as_freedom_reading",
+          "copyleft_as_restriction_reading"
+        ],
+        "expected_structural_delta": "Beneficiary = commons as institution; victim = individual exit-maximizers; medium extractiveness"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "copyleft_as_freedom_reading",
+        "reading_b": "copyleft_as_restriction_reading",
+        "basis": "Freedom-as-perpetual-access (reading A) and freedom-as-license-choice (reading B) are mutually exclusive foundations; maximizing one necessarily constrains the other"
+      }
+    ]
+  },
+  "_seed_id": "open_source_licenses_gpl"
+}

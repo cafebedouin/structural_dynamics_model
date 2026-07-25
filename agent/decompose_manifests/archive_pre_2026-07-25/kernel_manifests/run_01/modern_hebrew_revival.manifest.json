@@ -1,0 +1,214 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Linguistics / Language Revitalization / Commitment Systems",
+  "family_id": "hebrew_revival_kernel",
+  "topic_summary": "Analysis of Hebrew's transformation from liturgical preservation to native daily speech (late 19th-20th century), examining whether the 'Hebrew is a living language' commitment was continuously occupied across two millennia or underwent a strict-reachability break requiring reconstruction. The kernel contest centers on whether liturgical recitation constitutes occupancy of the living-language kernel or whether only native generative competence does.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Hebrew language (liturgical corpus, Mishnaic/Biblical strata)",
+      "Eliezer Ben-Yehuda (revivalist architect, lexical expansion agent)",
+      "Haskalah movement (Enlightenment-era Hebrew literary revival)",
+      "Zionist settlement institutions (kindergartens, schools enforcing Hebrew-only)",
+      "Rabbinic authority (liturgical preservation custodians)",
+      "Yiddish/Ladino speech communities (competing vernaculars)"
+    ],
+    "key_tensions": [
+      "Liturgical preservation (symbol recitation) vs native generation (daily speech production)",
+      "Continuity claim (unbroken chain) vs reconstruction claim (strict-reachability break)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Hebrew as a living language — the claim that Hebrew occupies the status of a language with native speakers capable of generative daily use",
+    "authority_description": "Contested between rabbinic custodians (liturgical authority) and revivalist institutions (native-speaker production authority)",
+    "drift_status": "absent",
+    "candidate_pattern": "liturgical_dormancy_with_revivalist_reconstruction",
+    "is_contested_kernel": true,
+    "kernel_id": "hebrew_living_language",
+    "readings": [
+      {
+        "reading_id": "liturgical_continuity_reading",
+        "commitment": "Hebrew remains living through unbroken liturgical recitation and textual study across diaspora",
+        "authority_grounding": "Rabbinic tradition; preservation of sacred texts as sufficient occupancy",
+        "sibling_readings": [
+          "native_generation_reading",
+          "literary_revival_reading"
+        ],
+        "expected_structural_delta": "Low extractiveness (symbol preservation); no victim set (voluntary participation); continuity claim valid; no strict-reachability break"
+      },
+      {
+        "reading_id": "native_generation_reading",
+        "commitment": "Hebrew becomes living only when native speakers produce daily speech generatively, not via memorized recitation",
+        "authority_grounding": "Revivalist institutions (Ben-Yehuda, kindergartens); linguistic nativism criterion",
+        "sibling_readings": [
+          "liturgical_continuity_reading",
+          "literary_revival_reading"
+        ],
+        "expected_structural_delta": "Moderate extractiveness (suppression of Yiddish/Ladino); victim set includes non-Hebrew vernacular speakers; strict-reachability break acknowledged; reconstruction required"
+      },
+      {
+        "reading_id": "literary_revival_reading",
+        "commitment": "Hebrew lives through Haskalah literary production — written generative competence without native daily speech",
+        "authority_grounding": "Enlightenment intellectuals; written-language sufficiency criterion",
+        "sibling_readings": [
+          "liturgical_continuity_reading",
+          "native_generation_reading"
+        ],
+        "expected_structural_delta": "Very low extractiveness (elite literary practice); no victim set; partial continuity (written chain unbroken); ambiguous on strict-reachability"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_continuity_reading",
+      "human_readable": "Liturgical Continuity Reading (Preservation as Occupancy)",
+      "structural_delta": "Unbroken liturgical recitation and textual study constitute sufficient occupancy of the living-language kernel across two millennia",
+      "primary_observable": "Continuity of liturgical practice; rabbinic textual commentary production; absence of generational transmission break",
+      "epsilon_bin": "v_low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading: establishes continuity baseline against which reconstruction claim is measured"
+    },
+    {
+      "claim_id": "native_generation_reading",
+      "human_readable": "Native Generation Reading (Reconstruction as Necessity)",
+      "structural_delta": "Living-language status requires native speakers with generative daily-speech competence; liturgical recitation is insufficient; strict-reachability break occurred requiring reconstruction",
+      "primary_observable": "Presence of native speakers (first generation born into Hebrew-only households); lexical expansion for modern domains; suppression of competing vernaculars",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "revivalist_institutions",
+      "victim": "yiddish_ladino_speakers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading: highest centrality; introduces extractiveness and victim set; core analytical tension"
+    },
+    {
+      "claim_id": "literary_revival_reading",
+      "human_readable": "Literary Revival Reading (Written Competence as Intermediate)",
+      "structural_delta": "Haskalah literary production demonstrates generative written competence without native daily speech; occupies intermediate position between liturgical preservation and full revival",
+      "primary_observable": "Volume of secular Hebrew literature (18th-19th c.); lexical innovation in written form; absence of native-speaker households",
+      "epsilon_bin": "v_low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading: structural intermediate; disambiguates written vs spoken competence; completes triadic kernel decomposition"
+    },
+    {
+      "claim_id": "phonological_reconstruction_gap",
+      "human_readable": "Phonological Reconstruction Gap (Lost Pronunciation as Strict Break)",
+      "structural_delta": "Loss of native phonological intuition (vowel points, stress patterns) constitutes irreversible strict-reachability break regardless of textual continuity",
+      "primary_observable": "Divergence between Ashkenazi/Sephardi/Yemenite pronunciation traditions; modern Israeli Hebrew phonology as constructed compromise",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "native_generation_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: phonological dimension captured within native_generation_reading's reconstruction claim; independent axis would over-split"
+    },
+    {
+      "claim_id": "institutional_enforcement_mechanism",
+      "human_readable": "Institutional Enforcement Mechanism (Hebrew-Only Kindergartens as Coercion)",
+      "structural_delta": "Zionist institutions enforced Hebrew-only speech in kindergartens and schools, suppressing Yiddish/Ladino through social and institutional pressure",
+      "primary_observable": "Documented Hebrew-only policies in early Zionist schools; testimonies of Yiddish-speaking children punished for non-Hebrew speech",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "hebrew_revivalist_elite",
+      "victim": "yiddish_ladino_speaking_families",
+      "downstream_of": [
+        "native_generation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism is downstream consequence of native_generation_reading commitment; captured in that reading's extractiveness analysis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liturgical_continuity_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "liturgical_continuity_reading"
+    },
+    {
+      "claim_id": "native_generation_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "native_generation_reading"
+    },
+    {
+      "claim_id": "literary_revival_reading",
+      "kernel_id": "hebrew_living_language",
+      "reading_id": "literary_revival_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "phonological_reconstruction_gap",
+      "structural_delta": "Loss of native phonological intuition as irreversible strict-reachability break",
+      "hypothesis": "mountain",
+      "deferral_reason": "Phonological dimension subsumed within native_generation_reading's reconstruction analysis; independent axis would over-split the kernel"
+    },
+    {
+      "claim_id": "institutional_enforcement_mechanism",
+      "structural_delta": "Hebrew-only institutional policies suppressing competing vernaculars",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism is downstream implementation of native_generation_reading commitment; extractiveness captured in that reading's victim-set analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_liturgical_sufficiency",
+      "description": "Does liturgical recitation without native generative competence constitute 'living' language status? The three readings emit incompatible answers. Liturgical reading says yes (rope, no victim set). Native reading says no (tangled_rope, Yiddish speakers as victims). Literary reading occupies intermediate position (written generation without native speech). No empirical test resolves this — it is a definitional contest over what 'living' means.",
+      "source": "Kernel decomposition (§1.3-K); core analytical tension"
+    },
+    {
+      "id": "omega_strict_reachability_verdict",
+      "description": "Library verdict context flags D1 strict-reachability break. Native_generation_reading accepts this verdict (reconstruction required). Liturgical_continuity_reading rejects it (unbroken chain). Literary_revival_reading is ambiguous (written chain unbroken, spoken chain broken). The verdict itself is a reading-dependent claim, not an external fact.",
+      "source": "User-provided context; kernel decomposition"
+    },
+    {
+      "id": "omega_victim_set_scope",
+      "description": "If native_generation_reading is correct, victim set includes Yiddish/Ladino speakers suppressed by Hebrew-only policies. If liturgical_continuity_reading is correct, no victim set exists (voluntary participation). Extractiveness measurement depends on which reading is adopted as ground truth.",
+      "source": "Beneficiary scan (Dark Matter Probe 3); reading-dependent epsilon"
+    },
+    {
+      "id": "omega_haskalah_bridge",
+      "description": "Does Haskalah literary revival constitute a bridge (scaffold) between liturgical preservation and native revival, or is it a separate failed attempt at revival? Literary_revival_reading treats it as sufficient occupancy. Native_generation_reading treats it as insufficient (no native speakers produced). Structural role depends on reading.",
+      "source": "Literary_revival_reading analysis; scaffold vs rope classification ambiguity"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings with non-collapsing constraint profiles. Liturgical reading (rope, v_low ε, no victim set) vs native reading (tangled_rope, mod ε, victim set present) vs literary reading (scaffold, v_low ε, intermediate position) emit genuinely different constraints from the same kernel. User-provided strict-reachability verdict is itself reading-dependent, documented in omega_strict_reachability_verdict."
+  },
+  "_seed_id": "modern_hebrew_revival"
+}

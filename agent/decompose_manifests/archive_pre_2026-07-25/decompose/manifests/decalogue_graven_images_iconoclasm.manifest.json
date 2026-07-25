@@ -1,0 +1,221 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Theology / Religious Authority / Visual Culture",
+  "family_id": "second_commandment_iconoclasm",
+  "topic_summary": "Analysis of the Byzantine Iconoclast Controversy (726-843 CE) as a contested kernel centered on Exodus 20:4's prohibition against graven images. The iconoclast reading interpreted the commandment as an absolute ban on religious imagery, equating veneration with idolatry; the iconodule reading distinguished worship (latria) from honor (dulia), permitting veneration of icons as conduits to divine prototypes. The controversy involved imperial enforcement, theological councils, and the destruction of devotional practices.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Exodus 20:4 (Decalogue prohibition against graven images)",
+      "Byzantine Imperial Authority (Leo III, Constantine V, later restorers)",
+      "Second Council of Nicaea 787 (affirmed icon veneration)",
+      "Iconoclast party (literalist reading, imperial backing)",
+      "Iconodule party (Incarnation theology, monastic support)",
+      "Material icons (paintings, mosaics, relics as contested objects)"
+    ],
+    "key_tensions": [
+      "Literalist vs Incarnational hermeneutics (how the prohibition's scope is determined)",
+      "Imperial vs conciliar authority (who adjudicates legitimate religious practice)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Decalogue prohibition (Exodus 20:4) against making graven images or likenesses for worship, a fixed scriptural text whose interpretive scope determines permissible material mediation of the holy",
+    "authority_description": "Contested between imperial edict (iconoclast emperors claiming enforcement power) and conciliar tradition (Second Council of Nicaea 787 grounding legitimacy in Incarnation theology and patristic consensus)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_overlay",
+    "is_contested_kernel": true,
+    "kernel_id": "decalogue_image_prohibition",
+    "readings": [
+      {
+        "reading_id": "iconoclast_reading",
+        "commitment": "The prohibition covers all religious imagery; any material representation used in worship violates the commandment and constitutes idolatry",
+        "authority_grounding": "Literal textual command + imperial enforcement authority + Old Testament precedent",
+        "sibling_readings": [
+          "iconodule_reading"
+        ],
+        "expected_structural_delta": "Wall-type constraint: material mediation of the holy is categorically impermissible; victim set includes icon producers, monastic communities, devotional practices dependent on imagery; beneficiary is centralizing imperial authority monopolizing religious form"
+      },
+      {
+        "reading_id": "iconodule_reading",
+        "commitment": "The prohibition forbids worship of images (latria) but permits honor through images to their prototypes (dulia); the Incarnation sanctifies matter as a valid conduit to the divine",
+        "authority_grounding": "Incarnational theology (God became flesh, thus matter can bear holiness) + conciliar tradition (Nicaea II 787) + patristic consensus",
+        "sibling_readings": [
+          "iconoclast_reading"
+        ],
+        "expected_structural_delta": "Rope-type constraint: material mediation is permissible under specified conditions (proper intent, orthodox depiction); enables coordination between laity and divine through sanctioned visual culture; victim set under iconoclast enforcement includes destroyed artworks, suppressed practices, persecuted icon-venerators"
+      },
+      {
+        "reading_id": "moderate_iconoclast_reading",
+        "commitment": "The prohibition forbids three-dimensional statuary (higher idolatry risk) but permits two-dimensional images under strict regulation to prevent abuse",
+        "authority_grounding": "Gradational risk assessment + imperial pragmatism + Eastern Orthodox distinction from Western sculptural tradition",
+        "sibling_readings": [
+          "iconoclast_reading",
+          "iconodule_reading"
+        ],
+        "expected_structural_delta": "Snare-type constraint: permits limited material mediation but extracts compliance costs through detailed regulation and monitoring; splits the difference but imposes bureaucratic overhead on permissible practices; beneficiary is regulatory authority maintaining gatekeeping power"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "iconoclast_reading",
+        "reading_b": "iconodule_reading",
+        "basis": "Iconoclast axiom: material representation in worship is intrinsically idolatrous regardless of intent; iconodule axiom: the Incarnation sanctifies matter as a valid medium for the holy. No single framework can hold both—either matter can bear holiness or it cannot."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "iconoclast_reading",
+      "human_readable": "Iconoclast Reading (Material Mediation as Categorical Violation)",
+      "structural_delta": "All religious imagery violates Exodus 20:4; veneration equals idolatry; imperial authority enforces literal prohibition",
+      "primary_observable": "Presence/absence of religious imagery in sanctioned worship spaces; imperial edicts mandating destruction",
+      "epsilon_bin": "high",
+      "hypothesis": "wall",
+      "beneficiary": "centralizing_imperial_authority",
+      "victim": "icon_producers_monastic_communities_devotional_practices",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading with highest structural extractiveness; establishes absolute prohibition baseline"
+    },
+    {
+      "claim_id": "iconodule_reading",
+      "human_readable": "Iconodule Reading (Material Mediation as Sanctified Conduit)",
+      "structural_delta": "Distinction between worship (latria) and honor (dulia); Incarnation theology sanctions matter as conduit to divine; conciliar authority validates tradition",
+      "primary_observable": "Theological distinction enforcement in practice; icon veneration protocols; conciliar decree implementation",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "communities_practices_destroyed_under_iconoclast_enforcement",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally opposite reading; establishes permitted coordination path through material mediation"
+    },
+    {
+      "claim_id": "moderate_iconoclast_reading",
+      "human_readable": "Moderate Iconoclast Reading (Gradational Prohibition with Regulatory Overhead)",
+      "structural_delta": "Dimensional risk gradient (statuary forbidden, flat images permitted under regulation); pragmatic compromise extracting compliance costs",
+      "primary_observable": "Dimensional distinction in surviving religious art; regulatory documentation of permissible forms",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "regulatory_gatekeeping_authority",
+      "victim": "practitioners_bearing_compliance_costs",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural position; captures regulatory extraction path between absolute positions"
+    },
+    {
+      "claim_id": "hermeneutical_authority_structure",
+      "human_readable": "Hermeneutical Authority Structure (Who Interprets the Kernel)",
+      "structural_delta": "Imperial edict vs conciliar tradition as legitimate interpretive authority; determines which reading prevails",
+      "primary_observable": "Institutional enforcement patterns; council vs emperor decree outcomes",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "iconoclast_reading",
+        "iconodule_reading",
+        "moderate_iconoclast_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream mountain feeding all readings but structurally simpler than the readings themselves; omega material on authority contestation"
+    },
+    {
+      "claim_id": "incarnational_theology_substrate",
+      "human_readable": "Incarnational Theology Substrate (Matter's Capacity for Holiness)",
+      "structural_delta": "Whether the Incarnation (God becoming flesh) entails that matter can bear holiness and serve as valid medium",
+      "primary_observable": "Theological arguments invoking Christology; patristic citations on matter and spirit",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "iconodule_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: theological foundation for iconodule position but less structurally central than the reading itself; captured implicitly in iconodule_reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "iconoclast_reading",
+      "kernel_id": "decalogue_image_prohibition",
+      "reading_id": "iconoclast_reading"
+    },
+    {
+      "claim_id": "iconodule_reading",
+      "kernel_id": "decalogue_image_prohibition",
+      "reading_id": "iconodule_reading"
+    },
+    {
+      "claim_id": "moderate_iconoclast_reading",
+      "kernel_id": "decalogue_image_prohibition",
+      "reading_id": "moderate_iconoclast_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "hermeneutical_authority_structure",
+      "structural_delta": "Imperial vs conciliar authority over interpretation",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream mountain feeding all readings but structurally simpler than the readings themselves; deferred as omega material on contested interpretive authority"
+    },
+    {
+      "claim_id": "incarnational_theology_substrate",
+      "structural_delta": "Incarnation entails matter's capacity for holiness",
+      "hypothesis": "mountain",
+      "deferral_reason": "Theological foundation for iconodule position but captured implicitly within iconodule_reading constraint story; lower independent structural yield"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_authority_contestation",
+      "description": "The upstream mountain of hermeneutical authority (imperial vs conciliar) determines which reading prevails but is itself contested. If neither authority structure achieves stable dominance, the kernel oscillates between readings across dynasties (as historical record shows: 726-787 iconoclast, 787-814 iconodule, 814-843 iconoclast, 843+ iconodule). This is not a flaw in the readings but a feature of the commitment system when interpretive authority is itself unstable.",
+      "source": "Deferred axis hermeneutical_authority_structure + dark matter probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_jewish_muslim_comparison",
+      "description": "The extraction notes absence of comparative analysis with contemporaneous Jewish (Second Temple destruction, rabbinic prohibition elaboration) and Islamic (aniconism in mosque decoration, Hadith on images) readings of similar anti-iconic commitments. Do these traditions instantiate different readings of structurally similar kernels, or different kernels entirely? If different kernels, what distinguishes them?",
+      "source": "Dark matter probe 2 (absence inventory)"
+    },
+    {
+      "id": "omega_moderate_reading_historical_status",
+      "description": "The moderate iconoclast reading (dimensional gradient: statuary forbidden, flat images permitted) is structurally coherent but its historical instantiation during the controversy is uncertain. If it was not a live position, it is a structural possibility without historical realization—a 'phantom reading' that the kernel permits but the actors did not occupy. If it was live, primary sources should document the dimensional distinction in regulatory practice.",
+      "source": "Generation axis 3 (moderate_iconoclast_reading) + epistemic caution on historical evidence"
+    },
+    {
+      "id": "omega_enforcement_asymmetry",
+      "description": "Iconoclast enforcement involved physical destruction of existing icons (irreversible loss); iconodule restoration permitted recreation but could not recover destroyed works. This creates an enforcement asymmetry: the wall-type constraint (iconoclast) has higher destructive epsilon when enforced than the rope-type constraint (iconodule) has restorative epsilon when re-permitted. The kernel may not be symmetric with respect to reading enforcement.",
+      "source": "Dark matter probe 3 (beneficiary scan) + structural delta analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. The kernel/reading decomposition applies cleanly: one shared commitment (Exodus 20:4 prohibition), genuinely different readings (iconoclast vs iconodule hold mutually exclusive axioms about matter's capacity for holiness), structurally different constraints (wall vs rope vs snare types). The moderate reading is included as a third structural position but flagged in omega_moderate_reading_historical_status for uncertain historical instantiation."
+  },
+  "_seed_id": "decalogue_graven_images_iconoclasm"
+}

@@ -1,0 +1,178 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Relations / Institutional Design / Constitutional Law",
+  "family_id": "un_charter_article_27_veto",
+  "topic_summary": "Analysis of UN Charter Article 27, which grants permanent Security Council members (P5: US, UK, France, Russia, China) veto power over substantive resolutions. The article is a fixed constitutional kernel stabilizing post-WWII great-power coordination while simultaneously functioning as an extractive mechanism preventing institutional reform that would redistribute authority away from the P5.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "UN Charter Article 27 (constitutional text establishing P5 veto)",
+      "P5 nations (US, UK, France, Russia, China — permanent Security Council members)",
+      "UN General Assembly (representative body without binding enforcement power)",
+      "Global South coalition (non-P5 states advocating Security Council reform)",
+      "UN Secretariat (administrative body constrained by P5consensus)",
+      "Chapter VII enforcement mechanism (military action requiring Security Council authorization)"
+    ],
+    "key_tensions": [
+      "Great-power coordination vs multilateral legitimacy (P5 veto preserves stability vs undermines representational authority)",
+      "Treaty immutability vs adaptive governance (Article 108 amendment requiring P5 consent vs demands for reform)",
+      "Sovereign equality vs structural hierarchy (Article 2.1 formal equality vs Article 27 practical inequality)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Article 27 paragraph 3: substantive Security Council decisions require affirmative votes of nine members including concurring votes of all permanent members",
+    "authority_description": "Interpretive authority distributed across P5 (each holds unilateral blocking power), ICJ (advisory jurisdiction), and UN Charter amendment process (Article 108 requires P5 ratification)",
+    "drift_status": "absent",
+    "candidate_pattern": "Extractive Constitutionalism",
+    "is_contested_kernel": true,
+    "kernel_id": "article_27_veto_power",
+    "readings": [
+      {
+        "reading_id": "coordination_reading",
+        "commitment": "P5 veto as necessary mechanism preventing great-power war by ensuring no Security Council resolution can compel a nuclear state into military confrontation it rejects",
+        "authority_grounding": "Realist security logic; 1945 San Francisco Conference compromise recognizing only great-power consensus enables enforcement",
+        "sibling_readings": [
+          "oligopoly_reading",
+          "sovereignty_reading"
+        ],
+        "expected_structural_delta": "Veto classified as coordination Rope; ε derives from collective-action failure risk without unanimity gate; beneficiary is international system stability; no victim class (all states benefit from avoided great-power war)"
+      },
+      {
+        "reading_id": "oligopoly_reading",
+        "commitment": "P5 veto as structural entrenchment of geopolitical oligopoly, using Charter immutability to extract ongoing authority rents while blocking institutional evolution that would redistribute power",
+        "authority_grounding": "Critical institutional analysis; Article 108 amendment barrier (requires P5 ratification) makes kernel functionally un-amendable",
+        "sibling_readings": [
+          "coordination_reading",
+          "sovereignty_reading"
+        ],
+        "expected_structural_delta": "Veto classified as Snare; ε derives from blocked exit and suppressed alternatives; beneficiary is P5 (permanent authority); victim is non-P5 majority (no path to reform despite 80 years of geopolitical change)"
+      },
+      {
+        "reading_id": "sovereignty_reading",
+        "commitment": "P5 veto as instantiation of Westphalian sovereignty principle—no state can be bound by international law without consent—applied to great powers with global-reach enforcement capacity",
+        "authority_grounding": "Treaty law and state sovereignty doctrine; Article 2.1 (sovereign equality) reconciled with Article 27 via capacity-differentiation",
+        "sibling_readings": [
+          "coordination_reading",
+          "oligopoly_reading"
+        ],
+        "expected_structural_delta": "Veto classified as Mountain (structural inevitability given nuclear weapons and enforcement capacity asymmetry); ε near-zero (any global institution empowered to compel great-power action would face same coordination failure); no beneficiary/victim framing (constraint derives from physical reality of power distribution)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "coordination_reading",
+        "reading_b": "oligopoly_reading",
+        "basis": "Coordination reading holds axiom that institutional legitimacy derives from functional stability (preventing catastrophic war justifies asymmetric authority); oligopoly reading holds axiom that legitimacy derives from representational consent (un-amendable minority rule is categorically illegitimate regardless of stability benefits). No single normative framework can simultaneously hold both—accepting one requires rejecting the other."
+      },
+      {
+        "reading_a": "sovereignty_reading",
+        "reading_b": "oligopoly_reading",
+        "basis": "Sovereignty reading holds axiom that state capacity asymmetry creates morally neutral structural constraint (mountains); oligopoly reading holds axiom that institutional design choices (including Charter immutability) are moral choices subject to legitimacy critique. No framework can hold both physical inevitability and moral culpability for the same structure simultaneously."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "coordination_reading",
+      "human_readable": "Coordination Reading: Veto as War-Prevention Rope",
+      "structural_delta": "P5 veto prevents Security Council from compelling nuclear powers into rejected military action, avoiding catastrophic great-power war",
+      "primary_observable": "Frequency of P5 veto use correlated with avoided direct military confrontations between P5 members; counterfactual analysis of League of Nations collapse (no veto → great powers exit → system failure)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest-ε reading among three kernel readings; represents institutional designer intent and P5 public justification"
+    },
+    {
+      "claim_id": "oligopoly_reading",
+      "human_readable": "Oligopoly Reading: Veto as Extractive Snare",
+      "structural_delta": "P5 veto entrenches permanent geopolitical oligopoly via Charter amendment barrier (Article 108), blocking institutional evolution despite 80 years of geopolitical redistribution",
+      "primary_observable": "Failed Security Council reform attempts (1963-present); P5 share of global GDP/military capacity 1945 vs 2025; correlation between veto use and P5 national interest protection",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "p5_permanent_members",
+      "victim": "non_p5_majority",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality score; captures Global South critique and institutional-lock mechanism; highest ε (blocked exit)"
+    },
+    {
+      "claim_id": "sovereignty_reading",
+      "human_readable": "Sovereignty Reading: Veto as Capacity Mountain",
+      "structural_delta": "P5 veto reflects unavoidable structural reality that states with nuclear weapons and global-reach enforcement capacity cannot be compelled by international institutions",
+      "primary_observable": "Nuclear weapons possession + power-projection capacity correlation with veto-equivalent behavior (India/Pakistan ignore UNSC on Kashmir; Israel ignores resolutions); League of Nations collapse when great powers defected",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct structural claim (physical inevitability vs institutional design choice); lowest ε but necessary for topology completeness"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "coordination_reading",
+      "kernel_id": "article_27_veto_power",
+      "reading_id": "coordination_reading"
+    },
+    {
+      "claim_id": "oligopoly_reading",
+      "kernel_id": "article_27_veto_power",
+      "reading_id": "oligopoly_reading"
+    },
+    {
+      "claim_id": "sovereignty_reading",
+      "kernel_id": "article_27_veto_power",
+      "reading_id": "sovereignty_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_p3_defection_scenario",
+      "description": "If UK/France lost permanent seats in hypothetical reform, would they retain veto-equivalent power via NATO/nuclear capacity? Sovereignty reading predicts yes (Mountain persists); oligopoly reading predicts institutional damage (Snare broken but legitimacy crisis). Testable via comparative analysis of Israel/India effective veto behavior.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to sovereignty_reading"
+    },
+    {
+      "id": "omega_regional_veto_alternative",
+      "description": "Would rotating regional veto (Africa, Latin America, Asia slots with term-limited veto) preserve coordination benefits while reducing extraction? Oligopoly reading predicts P5 would block via Article 108; coordination reading predicts instability (regional powers lack global enforcement capacity); sovereignty reading predicts functional equivalence (nuclear states ignore regardless).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — no regional veto proposals in extraction despite 60+ years of reform debate"
+    },
+    {
+      "id": "omega_charter_customary_drift",
+      "description": "Does the 'Uniting for Peace' resolution (UNGA emergency special sessions bypassing veto) represent covert Charter revision via customary international law? If yes, drift_status should be 'partial' not 'absent'. Requires legal scholarship on UfP precedential weight.",
+      "source": "§1.3 drift_status classification uncertainty"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do all three readings reduce to one observational fact (P5 have veto) with different normative framings? If structural_delta is identical across readings, kernel may not be genuinely contested—just differently valued. Monitor generation phase: if constraint stories collapse into same ε and same beneficiary/victim structure, readings are not structurally independent.",
+      "source": "§1.3-K coherence gate"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: sovereignty_reading classifies veto as Mountain (physical inevitability) but this depends on contested empirical claim that nuclear states cannot be institutionally constrained. Counterfactual: EU states with nuclear weapons accept ECJ/ECHR binding jurisdiction. Generated omega_p3_defection_scenario and omega_charter_customary_drift to bound this uncertainty. If generation phase reveals sovereignty_reading and coordination_reading emit same ε and edge structure, kernel may collapse (omega_reading_collapse_risk)."
+  },
+  "_seed_id": "un_security_council_veto_system"
+}

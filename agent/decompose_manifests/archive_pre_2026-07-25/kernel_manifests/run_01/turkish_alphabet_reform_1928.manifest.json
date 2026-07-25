@@ -1,0 +1,213 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Linguistics / State Formation / Commitment Systems",
+  "family_id": "turkish_alphabet_reform_1928",
+  "topic_summary": "Analysis of Turkey's 1928 alphabet reform (Law 1353), which replaced Arabic script with Latin script within months via top-down imposition. The reform had effectively zero prior practitioners of Latin-script Turkish, making it the cleanest test case for whether a commitment system kernel can be installed without prior occupancy of the new reading—a potential M-set gap scenario where authority creates interpretive space ex nihilo rather than selecting among existing readings.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Mustafa Kemal Atatürk (state founder; reform architect)",
+      "Turkish Grand National Assembly (legislative body enacting Law 1353)",
+      "Ottoman Arabic script (pre-reform writing system; 600+ year tradition)",
+      "Latin alphabet (imposed replacement system; zero prior Turkish practitioners)",
+      "Turkish Language Association (post-reform authority body, est. 1932)",
+      "Literate Ottoman elite (pre-reform reading class rendered functionally illiterate)"
+    ],
+    "key_tensions": [
+      "State modernization imperative vs cultural-religious continuity (Kemalist state vs Ottoman tradition)",
+      "Linguistic accessibility (phonetic Latin fit) vs historical archive access (Arabic script corpus)",
+      "Authority legitimacy grounding: revolutionary mandate vs textual continuity (new state vs Ottoman legitimacy)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The graphemic substrate of Turkish linguistic identity—what writing system encodes legitimate Turkish and who can read/write it",
+    "authority_description": "State monopoly on literacy instruction and orthographic standardization, grounded in revolutionary founding rather than textual tradition",
+    "drift_status": "absent",
+    "candidate_pattern": "revolutionary_kernel_installation",
+    "is_contested_kernel": false,
+    "kernel_collapse_reason": "This is NOT a contested kernel. There was no prior Latin-script reading to contest with Arabic-script reading—the 'contest' is between having a kernel (Arabic script as legitimacy substrate) and destroying it to install a new one. The structural question is whether kernel installation without prior reading occupancy is possible, not which of multiple readings interprets a shared commitment. The Arabic and Latin scripts do not read the same kernel differently—they ARE different kernels for different state formations. This is kernel replacement, not kernel contestation.",
+    "structural_reframing": "The topic decomposes into three axes: (1) the mountain of phonetic mismatch between Arabic script and Turkish phonology, (2) the tangled_rope of archive severance as deliberate elite displacement, and (3) the scaffold of revolutionary authority attempting to install legitimacy without textual grounding. The M-set gap is not about readings but about whether a commitment system can function when the kernel has no prior interpretive community."
+  },
+  "axes": [
+    {
+      "claim_id": "phonetic_script_mismatch",
+      "human_readable": "Phonetic Script Mismatch (Arabic Orthography vs Turkish Phonology)",
+      "structural_delta": "Arabic script lacks vowel notation for an agglutinative vowel-harmonic language, creating systematic ambiguity in written Turkish",
+      "primary_observable": "Vowel representation density; homograph collision rate; literacy acquisition time for Turkish vs Arabic-native learners",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "archive_severance_mechanism",
+        "revolutionary_legitimacy_scaffold"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical-linguistic constraint base; highest structural distinctiveness"
+    },
+    {
+      "claim_id": "archive_severance_mechanism",
+      "human_readable": "Archive Severance as Elite Displacement (Deliberate Illiteracy Imposition)",
+      "structural_delta": "Overnight rendering of Ottoman literate class functionally illiterate, severing access to 600-year textual corpus and legal precedent",
+      "primary_observable": "Pre-1928 text accessibility post-reform; generational literacy discontinuity; legal/administrative continuity breaks",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "kemalist_revolutionary_cadre",
+      "victim": "ottoman_literate_elite",
+      "downstream_of": [
+        "phonetic_script_mismatch"
+      ],
+      "feeds_into": [
+        "revolutionary_legitimacy_scaffold"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; downstream synthesis node with clearest beneficiary/victim structure; core extractive mechanism"
+    },
+    {
+      "claim_id": "revolutionary_legitimacy_scaffold",
+      "human_readable": "Revolutionary Legitimacy Scaffold (Authority Without Textual Grounding)",
+      "structural_delta": "Attempt to ground state legitimacy in revolutionary mandate rather than continuity with textual tradition, installing a kernel with zero prior reading community",
+      "primary_observable": "Post-reform legitimacy claims in state discourse; constitutional grounding shifts; resistance/compliance patterns",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "phonetic_script_mismatch",
+        "archive_severance_mechanism"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; tests M-set gap hypothesis directly; downstream synthesis of both upstream axes"
+    },
+    {
+      "claim_id": "literacy_expansion_claim",
+      "human_readable": "Literacy Expansion Claim (Democratization vs Elite Reproduction)",
+      "structural_delta": "Claimed expansion of literacy access via simpler script vs actual reproduction of elite gatekeeping through state-controlled education",
+      "primary_observable": "Literacy rates pre/post reform; educational access distribution; state vs private literacy instruction",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "state_education_apparatus",
+      "victim": "rural_non_elite_populations",
+      "downstream_of": [
+        "phonetic_script_mismatch"
+      ],
+      "feeds_into": [
+        "revolutionary_legitimacy_scaffold"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps significantly with archive_severance_mechanism in beneficiary structure; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "religious_authority_displacement",
+      "human_readable": "Religious Authority Displacement (Quranic Script Severance)",
+      "structural_delta": "Severance of Turkish from Arabic script shared with Quran, displacing religious authority's textual monopoly",
+      "primary_observable": "Mosque vs state school literacy instruction; religious text accessibility; ulema institutional power metrics",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "religious_scholarly_class",
+      "downstream_of": [],
+      "feeds_into": [
+        "archive_severance_mechanism"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as subset of archive_severance_mechanism's elite displacement; religious authority is one component of Ottoman elite victim set"
+    },
+    {
+      "claim_id": "western_alignment_signaling",
+      "human_readable": "Western Alignment Signaling (Script as Civilizational Marker)",
+      "structural_delta": "Latin script adoption as symbolic alignment with European modernity and rejection of Ottoman/Islamic civilizational identity",
+      "primary_observable": "Diplomatic recognition patterns; trade/treaty language; European press reception of reform",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "revolutionary_legitimacy_scaffold"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: symbolic/signaling dimension with lower structural extractiveness; captured in revolutionary_legitimacy_scaffold's broader legitimacy grounding question"
+    }
+  ],
+  "generation_sequence": [
+    "phonetic_script_mismatch",
+    "archive_severance_mechanism",
+    "revolutionary_legitimacy_scaffold"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "literacy_expansion_claim",
+      "structural_delta": "Claimed literacy democratization vs actual elite gatekeeping reproduction",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Overlaps with archive_severance_mechanism in beneficiary/victim structure; lower structural distinctiveness"
+    },
+    {
+      "claim_id": "religious_authority_displacement",
+      "structural_delta": "Severance from Quranic script displacing religious textual monopoly",
+      "hypothesis": "snare",
+      "deferral_reason": "Captured as subset of archive_severance_mechanism's broader elite displacement; religious authority is component of Ottoman elite victim set"
+    },
+    {
+      "claim_id": "western_alignment_signaling",
+      "structural_delta": "Latin script as symbolic European alignment and Ottoman/Islamic identity rejection",
+      "hypothesis": "rope",
+      "deferral_reason": "Symbolic dimension with lower extractiveness; captured in revolutionary_legitimacy_scaffold's legitimacy grounding analysis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse",
+      "description": "The topic was flagged as contested kernel but collapses under §1.3-K analysis. Arabic and Latin scripts are not two readings of one kernel—they are two different kernels for two different state formations (Ottoman vs Kemalist). The structural question is kernel replacement feasibility, not reading contestation. This is a category error in the initial framing, now corrected.",
+      "source": "§1.3-K kernel/reading decomposition"
+    },
+    {
+      "id": "omega_m_set_gap_validity",
+      "description": "Does revolutionary_legitimacy_scaffold succeed as a commitment system with zero prior reading community? If the M-set (interpretive community) is empty at kernel installation, can the authority create legitimacy ex nihilo, or does the system collapse into pure coercion without commitment structure? The 1928 reform's durability (95+ years) suggests success, but the mechanism remains uncertain—was it scaffold → rope transition via generational replacement, or did it remain scaffold indefinitely?",
+      "source": "§2.2 Dark Matter Probe 2 (Absence Inventory) + revolutionary_legitimacy_scaffold analysis"
+    },
+    {
+      "id": "omega_archive_severance_reversibility",
+      "description": "Is archive_severance_mechanism a one-way ratchet or reversible via re-education? Post-1980s Ottoman script instruction in universities suggests partial reversibility, but the generational gap (1928-1980s) may have created irreversible institutional knowledge loss. If reversible, the tangled_rope classification holds; if irreversible, it may be a snare with permanent victim set expansion.",
+      "source": "§2.2 Dark Matter Probe 3 (Beneficiary Scan) + archive_severance_mechanism classification uncertainty"
+    },
+    {
+      "id": "omega_phonetic_mismatch_severity",
+      "description": "Is phonetic_script_mismatch a true mountain (Arabic script fundamentally unsuited to Turkish phonology) or a piton of Ottoman scribal practice (solvable via diacritic standardization)? Ottoman Turkish had developed some vowel notation conventions; the reform may have been politically motivated rather than linguistically necessary. If piton, the entire downstream structure reclassifies.",
+      "source": "F03 (Hasty Generalization) + phonetic_script_mismatch mountain classification"
+    },
+    {
+      "id": "omega_comparative_script_reforms",
+      "description": "How does Turkish reform compare to other top-down script changes (Mongolian Cyrillic 1941, Kazakh Latin 2017-2031, Azerbaijani Latin 1991)? Do they exhibit similar M-set gaps, or did they have prior reading communities? Comparative analysis may reveal whether zero-occupancy kernel installation is unique to Turkish or a general pattern.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium) + domain boundary question"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F03 detected: phonetic_script_mismatch classified as mountain but may be piton of scribal practice—Ottoman Turkish had developed vowel notation conventions. Generated omega_phonetic_mismatch_severity. F01 detected: initial framing assumed contested kernel (multiple readings of shared commitment), but analysis reveals kernel replacement (two different kernels for different state formations). Corrected via §1.3-K collapse recognition and structural reframing in commitment_system_recognition object."
+  },
+  "_seed_id": "turkish_alphabet_reform_1928"
+}

@@ -1,0 +1,238 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Metaethics / History of Ethics",
+  "family_id": "macintyre_after_virtue_moral_incommensurability",
+  "topic_summary": "A blog post summarizing Alasdair MacIntyre's After Virtue, arguing that modern moral discourse has lost the shared theological/social context (chiefly Catholic Christian) that once grounded moral first principles, leaving competing frameworks (utilitarian, Kantian, Christian) that generate incommensurable conclusions on issues like abortion, war, and liberty/equality. The author endorses MacIntyre's rejection of emotivism while inconsistently claiming both that no shared standard exists and that clear moral truths (e.g., child abuse is wrong) are self-evident. MacIntyre's own abortion example (three syllogistic arguments, (a)/(b)/(c)) is presented as the paradigm case of incommensurable first principles.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Alasdair MacIntyre (author of After Virtue, diagnoses moral incommensurability)",
+      "Catholic/Thomistic moral tradition (historical unifying authority, Aquinas/Augustine)",
+      "Emotivism (rival metaethical theory MacIntyre attacks)",
+      "Enlightenment thinkers: Kant, Hume, Diderot, Kierkegaard (failed replacement projects)",
+      "The blog post author (first-person commentator, PCUSA congregant)",
+      "The three abortion arguments (a)/(b)/(c) (MacIntyre's worked example of incommensurable premises)"
+    ],
+    "key_tensions": [
+      "Shared moral vocabulary vs. absence of shared moral first principles (the 'lost context' thesis)",
+      "MacIntyre's incommensurability thesis vs. the author's own claim that some things are 'just' morally true (self-undermining move)",
+      "Rights-based/bodily autonomy premise vs. innocent-life/personhood premise in the abortion syllogisms — genuinely different starting axioms yielding genuinely different victim sets"
+    ],
+    "key_absences": [
+      "No engagement with virtue ethics as MacIntyre's own proposed solution (the book's actual thesis beyond diagnosis)",
+      "No sustained treatment of non-Christian/non-Western traditions that also claim unifying kernels (e.g., natural law outside Catholicism, secular natural rights)",
+      "No acknowledgment that the author's own 'garbage people who should be shamed' move is itself an emotivist assertion, undercutting the anti-emotivism argument"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "personhood_boundary_kernel",
+      "human_readable": "The Personhood/Rights-Boundary Kernel (Abortion Argument Structure)",
+      "structural_delta": "A single shared commitment — that innocent persons/rights-holders warrant protection and that bodily autonomy matters — is read differently across the three MacIntyre arguments, producing structurally different constraints (different victim sets, different beneficiary/victim structure, different base extractiveness)",
+      "primary_observable": "Which entity is placed in the victim/beneficiary set (mother vs. embryo/fetus) and whether the argument concludes legal permission, legal neutrality, or legal prohibition",
+      "epsilon_bin": "high",
+      "hypothesis": "kernel",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel per §1.3-K: shared substrate (rights over embryonic/bodily life) read into structurally distinct constraints by autonomy-reading, consistency-reading, and personhood-reading; counts as one axis, all readings emitted"
+    },
+    {
+      "claim_id": "authority_vacuum_incommensurability",
+      "human_readable": "Loss of Adjudicating Authority (Post-Theological Moral Standard Collapse)",
+      "structural_delta": "The historical Catholic hierarchical authority that could terminate moral arguments by appeal to a fixed interpretive body has dissolved, leaving no institution capable of ruling between competing first-principle frameworks",
+      "primary_observable": "Presence/absence of an institution whose ruling is treated as terminating a moral dispute (e.g., PCUSA declining to rule on Iraq war morality vs. historical Church doctrinal rulings)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "individual_moral_autonomy",
+      "victim": "social_coordination_capacity",
+      "downstream_of": [],
+      "feeds_into": [
+        "personhood_boundary_kernel"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (institutional adjudication capacity, not the abortion argument structure itself) and distinct beneficiary/victim structure; passes §3 pairwise test against the kernel — this is the *general* mechanism of context-loss, the kernel is one *instance* where the loss becomes visible"
+    },
+    {
+      "claim_id": "emotivism_as_diagnosis_vs_practice",
+      "human_readable": "Emotivism: Theoretical Rejection vs. Practiced Instantiation",
+      "structural_delta": "The author explicitly rejects emotivism as false while performing emotivist moves ('garbage people who should be shamed and shunned') — a gap between stated metaethical commitment and revealed practice",
+      "primary_observable": "Presence of preference/attitude-expression language ('garbage people', 'shamed and shunned') co-occurring with anti-emotivist argument",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "author_self_consistency_narrative",
+      "victim": "argumentative_coherence",
+      "downstream_of": [
+        "authority_vacuum_incommensurability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (self-contradiction in the source text's own rhetorical practice) not reducible to the kernel or the authority-vacuum axis; passes independence test as a meta-level axis about the text's own performance"
+    },
+    {
+      "claim_id": "enlightenment_replacement_failure",
+      "human_readable": "Failure of Secular Replacement Projects (Kant/Hume/Diderot/Kierkegaard)",
+      "structural_delta": "Attempts to re-ground morality in reason (Kant) or passion (Hume/Diderot) or choice (Kierkegaard) each fail to reconstruct a substitute for the lost theological unity",
+      "primary_observable": "Whether a given Enlightenment framework can generate an authority capable of terminating disagreement, as MacIntyre argues none can",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "authority_vacuum_incommensurability"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: largely restates authority_vacuum_incommensurability from a historiographic angle rather than adding independent structural delta; low centrality relative to selected axes"
+    },
+    {
+      "claim_id": "inherited_context_amnesia",
+      "human_readable": "Amnesia of Inherited Concepts (Using Old Forms Without Old Justifications)",
+      "structural_delta": "Moral vocabulary and argument-forms persist as fossils of the theological context that once justified them, detached from that justification",
+      "primary_observable": "Continued use of terms like 'virtue' or 'rights' without shared metaphysical grounding for their authority",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "authority_vacuum_incommensurability"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: same observable family as authority_vacuum_incommensurability (institutional/conceptual loss of grounding); Type A overlap risk, subsumed as upstream restatement"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "autonomy_reading",
+      "kernel_id": "personhood_boundary_kernel",
+      "reading_id": "autonomy_reading"
+    },
+    {
+      "claim_id": "golden_rule_consistency_reading",
+      "kernel_id": "personhood_boundary_kernel",
+      "reading_id": "golden_rule_consistency_reading"
+    },
+    {
+      "claim_id": "personhood_continuity_reading",
+      "kernel_id": "personhood_boundary_kernel",
+      "reading_id": "personhood_continuity_reading"
+    },
+    "authority_vacuum_incommensurability",
+    "emotivism_as_diagnosis_vs_practice"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enlightenment_replacement_failure",
+      "structural_delta": "Kant/Hume/Diderot/Kierkegaard fail to replace theological moral authority",
+      "hypothesis": "rope",
+      "deferral_reason": "Overlaps observable with authority_vacuum_incommensurability; adds historiographic detail but not independent structural delta"
+    },
+    {
+      "claim_id": "inherited_context_amnesia",
+      "structural_delta": "Moral vocabulary persists detached from original theological justification",
+      "hypothesis": "piton",
+      "deferral_reason": "Type A overlap (drift-generated) with authority_vacuum_incommensurability; same underlying loss-of-grounding observable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_virtue_ethics_omission",
+      "description": "The source text summarizes MacIntyre's diagnosis (loss of context, emotivism's rise) but never reaches his actual proposed remedy: a return to Aristotelian/Thomistic virtue ethics grounded in social practices and traditions. Any essay should flag that the analyzed text is a partial reading of After Virtue.",
+      "source": "Extraction absence inventory (§1.1)"
+    },
+    {
+      "id": "omega_self_undermining_emotivism_charge",
+      "description": "The author's own rhetorical move ('garbage people who should be shamed and shunned') is itself best classified as an emotivist speech-act (expression of attitude, not argument from shared first principles) — precisely the phenomenon the author claims to reject. This is bounded as an omega rather than folded into axis classification because it may be intentional rhetorical flourish rather than a genuine metaethical claim.",
+      "source": "F03/F01 self-scan; also captured structurally in emotivism_as_diagnosis_vs_practice axis"
+    },
+    {
+      "id": "omega_third_tradition_reading",
+      "description": "The kernel decomposition draws its three readings primarily from the analytic/Anglo-American bioethics tradition (rights-based, Kantian-consistency, and traditional-sanctity-of-life readings) as MacIntyre himself frames them. A civil-law, Catholic-canonical, or non-Western customary reading of the same personhood-boundary kernel might yield a structurally distinct fourth reading (e.g., graduated-personhood readings common in some legal traditions that assign partial protection thresholds by trimester without treating the embryo as either full rights-holder or non-entity). Not generated here because MacIntyre's own text supplies only the three; flagged for possible expansion if source material is broadened.",
+      "source": "Lens diversity check (§1.3-K)"
+    },
+    {
+      "id": "omega_mountain_or_piton_theological_unity",
+      "description": "Is the historical 'unified Catholic moral context' MacIntyre describes actually as unified as the source claims (a mountain-like historical fact), or is it itself a retrospectively idealized piton (medieval Christendom had substantial internal doctrinal contestation, e.g., Aquinas vs. nominalists, Reformation schisms)? If the premise of prior unity is overstated, the entire 'loss of context' thesis weakens.",
+      "source": "F03 (Hasty Generalization) self-scan"
+    }
+  ],
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that there exists a fixed, determinate answer to when an entity acquires morally protected personhood/rights-holder status, from which legal and moral permissibility of abortion can be derived",
+    "authority_description": "Historically, Catholic doctrinal hierarchy (scripture + Aquinas/Augustine + magisterial interpretation) grounded the answer; in the post-theological context described by MacIntyre, competing secular frameworks (autonomy-rights liberalism, Kantian universalizability, traditional sanctity-of-life) each claim interpretive authority over the same underlying question with no adjudicating body",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary_kernel",
+    "readings": [
+      {
+        "reading_id": "autonomy_reading",
+        "commitment": "Rights over one's own body/person are foundational; while the embryo is 'essentially part of the mother's body,' the mother's uncoerced decision-right controls",
+        "authority_grounding": "Liberal rights-based / bodily autonomy framework",
+        "sibling_readings": [
+          "golden_rule_consistency_reading",
+          "personhood_continuity_reading"
+        ],
+        "expected_structural_delta": "Mother is sole rights-holder in the relevant window; embryo not yet in the victim set; conclusion: abortion morally permissible and should be legal"
+      },
+      {
+        "reading_id": "golden_rule_consistency_reading",
+        "commitment": "Universalizability/consistency (a Kantian-adjacent Golden Rule test) requires that one cannot coherently will a right one would deny to oneself; this constrains but does not fully foreclose the autonomy claim",
+        "authority_grounding": "Kantian universalizability / reciprocity-based reasoning",
+        "sibling_readings": [
+          "autonomy_reading",
+          "personhood_continuity_reading"
+        ],
+        "expected_structural_delta": "Produces a conditional, non-absolute constraint — general right denied but not necessarily legal prohibition; a distinct beneficiary/victim structure that is neither pure permission nor pure prohibition, occupying a structurally different middle position",
+        "note": "MacIntyre explicitly marks this reading as compatible with NOT criminalizing abortion despite denying the general moral permissibility — this is a genuinely third position, not a midpoint average of (a) and (c)"
+      },
+      {
+        "reading_id": "personhood_continuity_reading",
+        "commitment": "An embryo is an identifiable individual on a continuous developmental path to adult capacities; if infanticide is murder, abortion is murder by the same continuity logic; innocent life is categorically protected",
+        "authority_grounding": "Traditional sanctity-of-life / continuity-of-personhood framework (echoing but not identical to Catholic doctrinal grounding)",
+        "sibling_readings": [
+          "autonomy_reading",
+          "golden_rule_consistency_reading"
+        ],
+        "expected_structural_delta": "Embryo enters the victim set as a full rights-holder; mother's autonomy claim is overridden; conclusion: abortion is morally wrong and ought to be legally prohibited"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "autonomy_reading",
+        "reading_b": "personhood_continuity_reading",
+        "basis": "Autonomy_reading's axiom (the embryo is not yet a rights-holder distinct from the mother, so bodily control governs) and personhood_continuity_reading's axiom (the embryo is already a full rights-holder whose innocent life cannot be taken) cannot both be true simultaneously — accepting one's characterization of the embryo's moral status as true requires rejecting the other's."
+      },
+      {
+        "reading_a": "golden_rule_consistency_reading",
+        "reading_b": "autonomy_reading",
+        "basis": "Golden_rule_consistency_reading's axiom (one cannot coherently will for others what one could not will in one's own case, hence a general right to abortion cannot be consistently claimed) directly negates autonomy_reading's axiom (an uncoerced individual right to abortion holds in general) — a framework cannot hold both 'the general right exists' and 'the general right is inconsistent to claim' simultaneously."
+      }
+    ]
+  },
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: the source text (and MacIntyre's framing as relayed) treats pre-modern Catholic moral unity as a settled historical mountain-fact rather than a contested historiographical claim; generated omega_mountain_or_piton_theological_unity to bound this. Kernel decomposition applied per §1.3-K: verified all three MacIntyre abortion arguments share one substrate (personhood/rights-boundary determination) but read it into structurally distinct constraints (different victim-set membership and different legal conclusions), satisfying the kernel test rather than collapsing into a single flat axis. Golden_rule_consistency_reading was checked carefully against collapse into either sibling — confirmed it occupies a genuinely distinct third position (conditional moral denial without legal prohibition) rather than being a rhetorical midpoint, so retained as a full reading rather than folded in."
+  }
+}

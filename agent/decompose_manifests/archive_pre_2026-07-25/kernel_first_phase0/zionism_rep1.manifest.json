@@ -1,0 +1,208 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Philosophy / Nationalism Studies / Postcolonial Theory",
+  "family_id": "zionism_contested_kernel_2026",
+  "topic_summary": "Analysis of Zionism as a political movement and ideology concerning Jewish national self-determination in Palestine. The topic is flagged as a contested kernel where different constituencies read the same commitment to Jewish collective survival and self-determination through fundamentally incompatible interpretive frameworks, generating structurally distinct constraints with different victim sets, legitimacy grounds, and extractiveness profiles.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Zionist movement (political movement for Jewish national homeland, 1897-present)",
+      "Jewish diaspora communities (dispersed populations claiming collective right to return)",
+      "Palestinian Arab population (indigenous population displaced 1947-1949 and ongoing)",
+      "British Mandate Palestine (colonial administrative framework 1920-1948)",
+      "State of Israel (nation-state established 1948, claiming Zionist legitimacy)",
+      "International law framework (UN partition, Geneva Conventions, self-determination norms)"
+    ],
+    "key_tensions": [
+      "Jewish collective survival vs Palestinian territorial sovereignty (competing claims to same land)",
+      "Self-determination as universal right vs self-determination as zero-sum in contested territory",
+      "Zionism as decolonization (Jewish return) vs Zionism as settler-colonialism (Palestinian dispossession)"
+    ],
+    "key_mechanisms": [
+      "Aliyah and Law of Return (immigration mechanism granting automatic citizenship to Jews, excluding Palestinians)",
+      "Settlement expansion (territorial control mechanism in occupied territories, ongoing since 1967)"
+    ],
+    "key_absences": [
+      "Mizrahi/Sephardic Jewish perspectives on Zionism (non-Ashkenazi majority within Israel largely absent from founding discourse)",
+      "Internal Israeli debates on post-Zionism and binational alternatives (suppressed in dominant narrative)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Jewish collective right to self-determination and territorial sovereignty as response to persecution",
+    "authority_description": "Contested across multiple traditions: religious (divine covenant), liberal-nationalist (universal self-determination), postcolonial (indigenous return), international law (UN partition), critical race theory (settler-colonial framework)",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "jewish_self_determination",
+    "readings": [
+      {
+        "reading_id": "liberal_nationalist_reading",
+        "commitment": "Jewish people constitute a nation with equal claim to self-determination as other peoples",
+        "authority_grounding": "Wilsonian self-determination principle; liberal nationalism; UN partition resolution 181",
+        "sibling_readings": [
+          "indigenous_return_reading",
+          "settler_colonial_reading",
+          "religious_covenant_reading",
+          "diasporist_reading"
+        ],
+        "expected_structural_delta": "Constraint type: rope (coordination problem among competing national claims). Beneficiary: Jewish diaspora seeking refuge and sovereignty. Victim: none in principle (assumes territorial partition resolves competing claims). Epsilon: low-to-moderate (depends on partition feasibility and mutual recognition)."
+      },
+      {
+        "reading_id": "indigenous_return_reading",
+        "commitment": "Jewish people are indigenous to the land with unbroken connection, making Zionism decolonization not colonization",
+        "authority_grounding": "Archaeological/historical continuity; postcolonial indigenous rights framework; religious-historical narrative",
+        "sibling_readings": [
+          "liberal_nationalist_reading",
+          "settler_colonial_reading",
+          "religious_covenant_reading",
+          "diasporist_reading"
+        ],
+        "expected_structural_delta": "Constraint type: mountain (historical fact of origin) transmuted into rope (competing indigenous claims). Beneficiary: Jewish claimants to ancestral land. Victim: none (Palestinian presence reframed as later arrival or co-indigenous with subordinate claim). Epsilon: very low if accepted (indigenous status is binary), but contested classification raises epsilon to high."
+      },
+      {
+        "reading_id": "settler_colonial_reading",
+        "commitment": "Zionism is a European settler-colonial project that dispossessed indigenous Palestinians through systematic violence and legal exclusion",
+        "authority_grounding": "Settler-colonial studies (Wolfe, Veracini); postcolonial theory; Palestinian historiography; international humanitarian law on occupation",
+        "sibling_readings": [
+          "liberal_nationalist_reading",
+          "indigenous_return_reading",
+          "religious_covenant_reading",
+          "diasporist_reading"
+        ],
+        "expected_structural_delta": "Constraint type: snare (structure designed to extract from and eliminate indigenous population). Beneficiary: European Jewish settlers and Israeli state. Victim: Palestinian Arabs (displacement, occupation, legal exclusion via Law of Return asymmetry). Epsilon: high (ongoing extraction through settlement expansion, differential legal status, resource control)."
+      },
+      {
+        "reading_id": "religious_covenant_reading",
+        "commitment": "Jewish claim to the land derives from divine covenant, making territorial sovereignty a religious obligation independent of secular political frameworks",
+        "authority_grounding": "Torah/Tanakh; rabbinic tradition; religious Zionism (Kook, Gush Emunim); messianic theology",
+        "sibling_readings": [
+          "liberal_nationalist_reading",
+          "indigenous_return_reading",
+          "settler_colonial_reading",
+          "diasporist_reading"
+        ],
+        "expected_structural_delta": "Constraint type: mountain (divine command as immutable) operationalized as tangled_rope (religious authority entangled with state power). Beneficiary: religious Zionist movement and settlement enterprise. Victim: secular framework for territorial negotiation (religious claim forecloses compromise). Epsilon: very low within religious framework (divine command is absolute), but framework itself contested, raising effective epsilon to high."
+      },
+      {
+        "reading_id": "diasporist_reading",
+        "commitment": "Jewish collective survival and flourishing are best secured through diaspora pluralism and minority rights, not territorial sovereignty; Zionism is a dangerous deviation that ties Jewish fate to a militarized state",
+        "authority_grounding": "Bundist tradition; cultural Zionism (Ahad Ha'am); anti-Zionist Orthodox Judaism (Satmar); contemporary diasporist Jewish thought (Judith Butler, Tony Judt)",
+        "sibling_readings": [
+          "liberal_nationalist_reading",
+          "indigenous_return_reading",
+          "settler_colonial_reading",
+          "religious_covenant_reading"
+        ],
+        "expected_structural_delta": "Constraint type: piton (atrophied alternative; diaspora institutions weakened by Zionist hegemony). Beneficiary: diaspora Jewish communities maintaining distinct identities. Victim: Jews coerced into Zionist framework or endangered by association with Israeli state actions. Epsilon: moderate (diaspora survival depends on host-state tolerance, but Zionist monopoly on 'Jewish interest' suppresses alternatives)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "indigenous_return_reading",
+        "reading_b": "settler_colonial_reading",
+        "basis": "Indigenous return reading requires accepting Jewish presence as restoration of prior sovereignty, categorically excluding the possibility of settler-colonialism. Settler-colonial reading requires accepting Jewish immigration as European colonial displacement, categorically excluding indigenous status. No coherent framework can hold both: one must be false if the other is true."
+      },
+      {
+        "reading_a": "liberal_nationalist_reading",
+        "reading_b": "diasporist_reading",
+        "basis": "Liberal nationalist reading grounds legitimacy in the necessity of territorial sovereignty for collective survival. Diasporist reading grounds legitimacy in the rejection of territorial sovereignty as the proper form of Jewish collective life. These are mutually exclusive axioms about the necessary form of Jewish political existence."
+      },
+      {
+        "reading_a": "religious_covenant_reading",
+        "reading_b": "liberal_nationalist_reading",
+        "basis": "Religious covenant reading grounds territorial claim in divine command that supersedes secular political negotiation. Liberal nationalist reading grounds claim in universal secular principle of self-determination that requires mutual recognition and partition. One framework subordinates the other: no single coherent position can hold both as co-equal grounds."
+      },
+      {
+        "reading_a": "settler_colonial_reading",
+        "reading_b": "liberal_nationalist_reading",
+        "basis": "Settler-colonial reading identifies the structure as inherently extractive (snare), requiring dismantling or fundamental transformation. Liberal nationalist reading identifies the structure as legitimate coordination (rope), requiring mutual recognition and boundary-drawing. These diagnoses are mutually exclusive: accepting one requires rejecting the other's structural classification."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "jewish_self_determination_kernel",
+      "human_readable": "Jewish Self-Determination (Contested Kernel)",
+      "structural_delta": "Competing readings of Jewish collective right to self-determination generate structurally incompatible constraints with different victim sets and extractiveness profiles",
+      "primary_observable": "Legal frameworks (Law of Return vs. Right of Return), settlement patterns, citizenship law asymmetries, international recognition patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 10,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with five distinct, individually-holdable readings that survive axiom contradiction testing. This is the entire structural content of the topic."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liberal_nationalist_reading",
+      "kernel_id": "jewish_self_determination",
+      "reading_id": "liberal_nationalist_reading"
+    },
+    {
+      "claim_id": "indigenous_return_reading",
+      "kernel_id": "jewish_self_determination",
+      "reading_id": "indigenous_return_reading"
+    },
+    {
+      "claim_id": "settler_colonial_reading",
+      "kernel_id": "jewish_self_determination",
+      "reading_id": "settler_colonial_reading"
+    },
+    {
+      "claim_id": "religious_covenant_reading",
+      "kernel_id": "jewish_self_determination",
+      "reading_id": "religious_covenant_reading"
+    },
+    {
+      "claim_id": "diasporist_reading",
+      "kernel_id": "jewish_self_determination",
+      "reading_id": "diasporist_reading"
+    }
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_mizrahi_sephardic_absence",
+      "description": "Extraction cataloged absence of Mizrahi/Sephardic perspectives in founding Zionist discourse. All five readings derive primarily from Ashkenazi European frameworks. A sixth reading grounded in Mizrahi experience (neither European settler nor indigenous return, but intra-regional migration) may exist but is suppressed in dominant narratives. This absence may itself be a snare structure.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary"
+    },
+    {
+      "id": "omega_binational_suppression",
+      "description": "Post-Zionist and binational alternatives (Magnes, Buber, contemporary one-state proposals) are structurally suppressed in Israeli political discourse. These may constitute a sixth reading (shared sovereignty) but lack institutional authority grounding. Suppression mechanism itself may warrant separate analysis as tangled_rope.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction_summary absences"
+    },
+    {
+      "id": "omega_reading_count_uncertainty",
+      "description": "Five readings selected based on distinct authority groundings and axiom contradictions. Possible sixth reading (Mizrahi intra-regional framework) deferred due to insufficient institutional grounding in available discourse. Reading count is structural finding, not target-fitting.",
+      "source": "§1.3-K kernel decomposition + §2 multi-lens scan"
+    },
+    {
+      "id": "omega_partition_feasibility",
+      "description": "Liberal nationalist reading assumes territorial partition can resolve competing claims (low epsilon). Settler-colonial reading argues structure forecloses partition (high epsilon). This disagreement is not about measurement but about whether the observable (partition feasibility) is even the relevant metric. Epsilon bins for these readings may be incommensurable.",
+      "source": "§2.3 epsilon classification + axiom contradiction analysis"
+    },
+    {
+      "id": "omega_international_law_lens",
+      "description": "International humanitarian law framework (Geneva Conventions on occupation, UNSC resolutions on settlements) was not developed as a separate reading because it does not ground a distinct commitment about Jewish self-determination per se—it adjudicates the legality of specific practices under existing sovereignty claims. It operates as external constraint on all readings rather than a reading itself. This classification may be contested.",
+      "source": "§2.1 multi-lens scan + disciplinary lens filtering"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Topic requires deep expertise in Middle East history, postcolonial theory, religious studies, and international law. Model's training on this topic is extensive but contested across sources. All five readings are well-documented in academic literature, but the model cannot adjudicate between them—it can only catalog their structural incompatibility. Generated omega_reading_count_uncertainty and omega_partition_feasibility to bound classification uncertainties. Omega_mizrahi_sephardic_absence flags a potentially missing reading that the model lacks sufficient grounding to develop."
+  }
+}

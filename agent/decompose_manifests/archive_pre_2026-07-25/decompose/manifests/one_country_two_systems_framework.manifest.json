@@ -1,0 +1,255 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Systems / State Sovereignty",
+  "family_id": "one_country_two_systems_2026",
+  "topic_summary": "Analysis of the 'One Country, Two Systems' constitutional framework governing Hong Kong post-1997, examining competing interpretations of the Sino-British Joint Declaration and Basic Law kernel. Beijing's sovereignty-primacy reading versus Hong Kong civil society's autonomy-primacy reading emit structurally different constraints on state authority, judicial independence, and civil liberties.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "People's Republic of China / Central People's Government (sovereign authority; interprets Basic Law via NPCSC)",
+      "Hong Kong Special Administrative Region (sub-national entity; claimed autonomous legal system)",
+      "Sino-British Joint Declaration 1984 (founding treaty; international registration with UN)",
+      "Hong Kong Basic Law (mini-constitution; enacted by PRC National People's Congress 1990)",
+      "Hong Kong Judiciary (claimed independent; final interpretation power contested)",
+      "Hong Kong Civil Society / Pro-Democracy Movement (claims treaty rights; invokes international law)"
+    ],
+    "key_tensions": [
+      "Absolute sovereignty (PRC constitutional doctrine) vs treaty-bound autonomy (Joint Declaration obligations)",
+      "National security (mainland priority post-2019) vs civil liberties (Basic Law Articles 27-39)",
+      "NPCSC interpretive authority (PRC constitutional structure) vs common-law judicial independence (Hong Kong legal tradition)"
+    ],
+    "key_mechanisms": [
+      "NPCSC Standing Committee interpretations (binding constitutional amendments without HK Legislative Council approval)",
+      "National Security Law 2020 (mainland agencies operating in HK; extraterritorial jurisdiction; secret trials)",
+      "Chief Executive appointment process (Beijing approval required; democratic nomination effectively eliminated)"
+    ],
+    "key_absences": [
+      "Enforcement mechanism for Joint Declaration violations (no international arbitration clause; UK has no standing post-handover)",
+      "Democratic accountability pathway for Chief Executive selection (universal suffrage 'ultimate aim' never operationalized)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Sino-British Joint Declaration (1984) and Hong Kong Basic Law (1990) jointly establish 'One Country, Two Systems' as the constitutional framework guaranteeing Hong Kong's capitalist system and way of life for 50 years post-handover (1997-2047)",
+    "authority_description": "Beijing claims interpretive authority through NPCSC Standing Committee (PRC constitutional structure). Hong Kong civil society invokes treaty obligations and international law, but lacks enforcement mechanism post-UK withdrawal.",
+    "drift_status": "absent",
+    "candidate_pattern": "Dynastic Revision Resistance",
+    "is_contested_kernel": true,
+    "kernel_id": "one_country_two_systems_framework",
+    "readings": [
+      {
+        "reading_id": "sovereignty_primacy_reading",
+        "commitment": "One Country, Two Systems means Hong Kong autonomy is delegated by and revocable through PRC sovereign authority; national security and territorial integrity override local autonomy when they conflict",
+        "authority_grounding": "PRC constitutional hierarchy (NPCSC interpretive supremacy); Westphalian sovereignty doctrine",
+        "sibling_readings": [
+          "autonomy_primacy_reading",
+          "balanced_coexistence_reading"
+        ],
+        "expected_structural_delta": "State coercion enters Hong Kong legal system via National Security Law; mainland enforcement agents operate in HK; political speech/assembly becomes high-epsilon constraint; judiciary loses independence on national security matters"
+      },
+      {
+        "reading_id": "autonomy_primacy_reading",
+        "commitment": "One Country, Two Systems means Hong Kong retains substantive autonomy with meaningful checks on mainland interference; civil liberties and judicial independence are treaty-guaranteed and internationally enforceable",
+        "authority_grounding": "International treaty law (Joint Declaration as registered UN treaty); common-law constitutional tradition; democratic legitimacy claims",
+        "sibling_readings": [
+          "sovereignty_primacy_reading",
+          "balanced_coexistence_reading"
+        ],
+        "expected_structural_delta": "Mainland intervention is treaty violation; civil liberties remain low-epsilon for most residents; judicial review constrains executive power; democratic reform pathway remains live"
+      },
+      {
+        "reading_id": "balanced_coexistence_reading",
+        "commitment": "One Country, Two Systems requires substantive negotiation between sovereignty and autonomy; neither absolute; functional division of powers with contested boundaries resolved through political accommodation rather than legal supremacy",
+        "authority_grounding": "Pragmatic statecraft; historical compromise between incompatible constitutional traditions; de facto power-sharing",
+        "sibling_readings": [
+          "sovereignty_primacy_reading",
+          "autonomy_primacy_reading"
+        ],
+        "expected_structural_delta": "Medium-epsilon constraint regime; periodic crises trigger renegotiation; both legal systems acknowledge limits; civil society retains bargaining power through economic/international leverage"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "sovereignty_primacy_reading",
+        "reading_b": "autonomy_primacy_reading",
+        "basis": "Sovereignty primacy holds that delegated autonomy is revocable by sovereign fiat (PRC constitutional supremacy). Autonomy primacy holds that treaty-guaranteed rights create binding legal constraints on sovereign action (international law supremacy). No single coherent framework can hold both: either sovereign authority is absolute and treaties are revocable instruments, or treaties bind sovereigns and create enforceable rights. These are mutually exclusive foundational premises about the source and limits of state authority."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "sovereignty_primacy_reading",
+      "human_readable": "Sovereignty Primacy Reading (One Country Paramount)",
+      "structural_delta": "PRC sovereign authority overrides Hong Kong autonomy when national security or territorial integrity are invoked",
+      "primary_observable": "NPCSC interpretation frequency; National Security Law enforcement data; mainland agency operations in HK",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ccp_central_authority",
+      "victim": "hk_civil_society",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary contested reading; highest structural impact on constraint regime; emits high-epsilon state coercion axis"
+    },
+    {
+      "claim_id": "autonomy_primacy_reading",
+      "human_readable": "Autonomy Primacy Reading (Two Systems Protected)",
+      "structural_delta": "Treaty-guaranteed autonomy creates binding constraints on mainland intervention; civil liberties and judicial independence are enforceable",
+      "primary_observable": "International legal standing claims; judicial review decisions; civil society mobilization metrics",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing structural reading; different constraint topology from sovereignty reading; necessary to capture kernel contestation"
+    },
+    {
+      "claim_id": "balanced_coexistence_reading",
+      "human_readable": "Balanced Coexistence Reading (Negotiated Boundaries)",
+      "structural_delta": "Functional power-sharing through political accommodation rather than legal supremacy",
+      "primary_observable": "Crisis-resolution patterns; negotiated settlements; economic interdependence metrics",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third structural reading; captures pragmatic middle path; useful for understanding historical trajectory 1997-2019"
+    },
+    {
+      "claim_id": "enforcement_vacuum",
+      "human_readable": "Enforcement Vacuum (No International Arbitration)",
+      "structural_delta": "Absence of binding dispute resolution mechanism for Joint Declaration violations",
+      "primary_observable": "UK diplomatic protests without legal standing; UN registration status without enforcement",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": "beijing_authority",
+      "victim": "treaty_enforcement_regime",
+      "downstream_of": [],
+      "feeds_into": [
+        "sovereignty_primacy_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural absence captured via sovereignty_primacy reading's unilateral interpretation power; omega material on treaty design failure"
+    },
+    {
+      "claim_id": "democratic_accountability_gap",
+      "human_readable": "Democratic Accountability Gap (Electoral System Design)",
+      "structural_delta": "Chief Executive selection mechanism precludes democratic opposition candidates",
+      "primary_observable": "Election Committee composition; nomination threshold requirements; disqualification patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "pro_beijing_camp",
+      "victim": "hk_democratic_opposition",
+      "downstream_of": [
+        "sovereignty_primacy_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of sovereignty_primacy reading; captured implicitly via state coercion mechanisms"
+    },
+    {
+      "claim_id": "economic_interdependence_constraint",
+      "human_readable": "Economic Interdependence Constraint (Financial Hub Status)",
+      "structural_delta": "Hong Kong's role as international financial gateway creates mutual dependence limiting coercion",
+      "primary_observable": "Capital flows; CNY internationalization metrics; foreign firm presence",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "balanced_coexistence_reading"
+      ],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: feeds primarily into balanced_coexistence reading; structural constraint already represented; omega material on bargaining leverage"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "sovereignty_primacy_reading",
+      "kernel_id": "one_country_two_systems_framework",
+      "reading_id": "sovereignty_primacy_reading"
+    },
+    {
+      "claim_id": "autonomy_primacy_reading",
+      "kernel_id": "one_country_two_systems_framework",
+      "reading_id": "autonomy_primacy_reading"
+    },
+    {
+      "claim_id": "balanced_coexistence_reading",
+      "kernel_id": "one_country_two_systems_framework",
+      "reading_id": "balanced_coexistence_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "enforcement_vacuum",
+      "structural_delta": "Absence of binding dispute resolution for Joint Declaration violations",
+      "hypothesis": "piton",
+      "deferral_reason": "Structural absence captured via sovereignty_primacy reading's unilateral interpretation power; treaty design failure is omega material"
+    },
+    {
+      "claim_id": "democratic_accountability_gap",
+      "structural_delta": "Chief Executive selection precludes democratic opposition",
+      "hypothesis": "snare",
+      "deferral_reason": "Downstream consequence of sovereignty_primacy reading; state coercion mechanisms capture this constraint implicitly"
+    },
+    {
+      "claim_id": "economic_interdependence_constraint",
+      "structural_delta": "Financial hub status creates mutual dependence limiting coercion",
+      "hypothesis": "mountain",
+      "deferral_reason": "Feeds primarily into balanced_coexistence reading; omega material on whether economic leverage remains effective post-2020"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_treaty_enforcement_design",
+      "description": "Is the enforcement_vacuum a design flaw (should have included arbitration clause) or inherent to asymmetric power transition? If design flaw, then Joint Declaration becomes de facto non-binding memorandum rather than enforceable treaty.",
+      "source": "Deferred axis enforcement_vacuum; Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reading_transition_mechanism",
+      "description": "Did the 2019 protests trigger a discrete transition from balanced_coexistence (1997-2019) to sovereignty_primacy (2020-present), or was sovereignty_primacy always the operative reading with temporary forbearance? Affects whether current regime is deviation or revelation.",
+      "source": "Multi-reading temporal dynamics; historical interpretation uncertainty"
+    },
+    {
+      "id": "omega_economic_leverage_durability",
+      "description": "Does economic_interdependence_constraint (HK as financial gateway) remain a binding Mountain post-NSL, or has Shanghai/Shenzhen development reduced it to obsolete Scaffold? If obsolete, balanced_coexistence reading loses structural foundation.",
+      "source": "Deferred axis economic_interdependence_constraint; structural validity check"
+    },
+    {
+      "id": "omega_axiom_contradiction_resolution",
+      "description": "Can sovereignty_primacy and autonomy_primacy readings coexist as socially live positions (licensed plurality), or does one reading's victory necessarily eliminate the other through state coercion? Current trajectory suggests zero-sum competition, but international pressure may preserve autonomy_primacy as aspirational frame.",
+      "source": "Axiom contradiction declaration; social stability analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition successfully identified three structurally distinct readings. Sovereignty_primacy and autonomy_primacy readings exhibit axiom contradiction (mutually exclusive foundational premises about state authority). Balanced_coexistence reading represents pragmatic third path that may have collapsed post-2019. Deferred axes capture downstream consequences and structural conditions without redundancy."
+  },
+  "_seed_id": "one_country_two_systems_framework"
+}

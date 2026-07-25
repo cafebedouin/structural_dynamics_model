@@ -1,0 +1,233 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Religious Studies / Philosophy of Religion / Japanese History",
+  "family_id": "shinbutsu_shugo_syncretism",
+  "topic_summary": "Analysis of shinbutsu-shugo (Shinto-Buddhist syncretism) as a contested kernel problem. For approximately 1200 years (6th-19th century), Japanese religious practice integrated Shinto kami and Buddhist deities in a single ritual-institutional framework. The kernel question: was this a coherent single commitment (syncretic fusion) or an incoherent bundle maintained through domain partition (Shinto for life-cycle events, Buddhism for death/afterlife)? Meiji shinbutsu bunri (forced separation 1868) exposed the question by requiring practitioners to choose.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Shinbutsu-shugo system (centuries-long institutional framework fusing Shinto shrines and Buddhist temples)",
+      "Honji suijaku theory (doctrinal claim that kami are manifestations of Buddhist deities)",
+      "Meiji government (authority enforcing 1868 shinbutsu bunri separation decrees)",
+      "Village-level practitioners (individuals maintaining both shrine and temple affiliations simultaneously)",
+      "Ryobu Shinto tradition (esoteric Buddhist reading treating kami as skillful means)",
+      "State Shinto apparatus (post-1868 nationalist reading eliminating Buddhist elements)"
+    ],
+    "key_tensions": [
+      "Ontological coherence vs pragmatic coexistence (single fused commitment vs two parallel systems)",
+      "Elite doctrinal interpretation vs popular practice (honji suijaku theory vs village dual-affiliation patterns)"
+    ],
+    "key_mechanisms": [
+      "Honji suijaku doctrine (provides theological justification for identifying kami with Buddhist deities)",
+      "Jinguji institution (shrine-temple complexes physically embodying integration)",
+      "Shinbutsu bunri decrees (state violence forcing categorical separation, exposing prior ambiguity)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The persisting commitment to simultaneous veneration of kami (Shinto deities) and Buddhist deities within a single religious life, without categorical opposition",
+    "authority_description": "Prior to Meiji: distributed across doctrinal schools (Tendai, Shingon esoteric Buddhism), village practice norms, and jinguji institutional arrangements. Post-1868: Meiji state claims interpretive monopoly, enforces separation as 'restoration of purity'",
+    "drift_status": "functioning",
+    "candidate_pattern": "licensed_plurality",
+    "is_contested_kernel": true,
+    "kernel_id": "shinbutsu_coexistence_commitment",
+    "readings": [
+      {
+        "reading_id": "syncretic_fusion_reading",
+        "commitment": "Kami and Buddhist deities are ontologically unified through honji suijaku (kami as local manifestations of universal Buddhist truth)",
+        "authority_grounding": "Esoteric Buddhist doctrinal tradition (Tendai/Shingon) claiming kami are skillful means (hoben) for guiding beings to dharma",
+        "sibling_readings": [
+          "domain_partition_reading",
+          "incoherent_bundle_reading"
+        ],
+        "expected_structural_delta": "Single coherent ontology; high constraint on doctrinal consistency; theological elite as interpretive authority; jinguji institution as structural embodiment"
+      },
+      {
+        "reading_id": "domain_partition_reading",
+        "commitment": "Kami and Buddhist deities govern separate existential domains (kami for life/purity/harvest, Buddhas for death/salvation/afterlife) without ontological unification",
+        "authority_grounding": "Village practice norms and pragmatic ritual allocation: shrine visits for birth/marriage/harvest, temple visits for funerals/ancestor veneration",
+        "sibling_readings": [
+          "syncretic_fusion_reading",
+          "incoherent_bundle_reading"
+        ],
+        "expected_structural_delta": "Two parallel systems with boundary maintenance; low constraint on doctrinal consistency; popular practice as authority; functional coexistence without theological resolution"
+      },
+      {
+        "reading_id": "incoherent_bundle_reading",
+        "commitment": "Shinbutsu-shugo was never a coherent kernel but an incoherent bundle maintained through deliberate ambiguity and institutional power, collapsing under Meiji pressure",
+        "authority_grounding": "Meiji nationalist reading (retrospectively imposed) claiming separation 'restored' original purity; modern scholarly accounts emphasizing pragmatic drift rather than principle",
+        "sibling_readings": [
+          "syncretic_fusion_reading",
+          "domain_partition_reading"
+        ],
+        "expected_structural_delta": "No stable ontology; system sustained by avoiding categorical questions; Meiji bunri as revealing rather than creating incoherence; ambiguity as structural feature not bug"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "syncretic_fusion_reading",
+        "reading_b": "incoherent_bundle_reading",
+        "basis": "Syncretic fusion requires ontological coherence (kami genuinely are Buddhist manifestations), while incoherent bundle denies any stable ontological commitment existed. No single framework can hold both: either the honji suijaku doctrine represented genuine metaphysical unification, or the system avoided categorical commitments entirely."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "syncretic_fusion_reading",
+      "human_readable": "Syncretic Fusion Reading (Ontological Unification via Honji Suijaku)",
+      "structural_delta": "Kami and Buddhist deities unified through doctrinal theory treating kami as local manifestations of universal Buddhist truth",
+      "primary_observable": "Honji suijaku doctrinal texts; jinguji institutional arrangements physically embedding integration; esoteric Buddhist ritual manuals treating kami veneration as dharma practice",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "Buddhist ecclesiastical elite (doctrinal authority consolidated through interpretive monopoly)",
+      "victim": "Practitioners holding non-Buddhist kami ontologies (indigenous animist commitments subordinated)",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest doctrinal elaboration; represents elite interpretive framework; tangled_rope with Buddhist institutional beneficiary"
+    },
+    {
+      "claim_id": "domain_partition_reading",
+      "human_readable": "Domain Partition Reading (Functional Coexistence Without Ontological Commitment)",
+      "structural_delta": "Kami and Buddhist deities govern separate existential domains (life-cycle vs death/afterlife) without requiring ontological unification",
+      "primary_observable": "Village practice patterns: shrine visits for birth/marriage/harvest, temple visits for funerals/ancestor rites; absence of doctrinal controversy at popular level; persistence of dual affiliation without perceived contradiction",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Structurally distinct from syncretic_fusion (different observable, different beneficiary structure); represents popular practice authority vs elite doctrinal authority"
+    },
+    {
+      "claim_id": "incoherent_bundle_reading",
+      "human_readable": "Incoherent Bundle Reading (Deliberate Ambiguity Sustained by Institutional Power)",
+      "structural_delta": "Shinbutsu-shugo maintained through avoidance of categorical ontological questions rather than resolution; Meiji separation revealed rather than created incoherence",
+      "primary_observable": "Meiji shinbutsu bunri violence (forced temple destruction, priest defection); absence of coherent popular resistance narrative; speed of institutional collapse under state pressure",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "Pre-Meiji institutional elites (both Buddhist and shrine establishments benefiting from ambiguity maintenance)",
+      "victim": "Practitioners forced into categorical choice under Meiji decrees",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; meta-reading that interprets the kernel contest itself; snare structure captures extraction via ambiguity maintenance"
+    },
+    {
+      "claim_id": "meiji_nationalist_imposition",
+      "human_readable": "Meiji Nationalist Imposition (State Violence as Kernel Destruction)",
+      "structural_delta": "1868 shinbutsu bunri decrees as external state violence destroying centuries-long framework, not organic evolution",
+      "primary_observable": "Government decrees ordering separation; temple destruction statistics; priest defection rates; resistance movements (if any)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "Meiji state (consolidating nationalist ideology through shrine monopoly)",
+      "victim": "Jinguji institutions and practitioners maintaining integrated practice",
+      "downstream_of": [
+        "syncretic_fusion_reading",
+        "domain_partition_reading",
+        "incoherent_bundle_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: external force rather than internal reading of the kernel; captured in incoherent_bundle_reading's structural_delta (Meiji as revealer of incoherence)"
+    },
+    {
+      "claim_id": "ryobu_shinto_hegemony",
+      "human_readable": "Ryobu Shinto Hegemony (Esoteric Buddhist Capture of Kami Discourse)",
+      "structural_delta": "Shingon-derived Ryobu Shinto tradition as Buddhist interpretive monopoly over kami meaning",
+      "primary_observable": "Dominance of esoteric Buddhist (mikkyo) vocabulary in kami theology; jinguji ownership patterns; shrine priest training in Buddhist institutions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "Shingon/Tendai schools (institutional revenue, doctrinal authority)",
+      "victim": "Non-Buddhist kami interpretive traditions",
+      "downstream_of": [],
+      "feeds_into": [
+        "syncretic_fusion_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as the institutional beneficiary structure within syncretic_fusion_reading"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "syncretic_fusion_reading",
+      "kernel_id": "shinbutsu_coexistence_commitment",
+      "reading_id": "syncretic_fusion_reading"
+    },
+    {
+      "claim_id": "domain_partition_reading",
+      "kernel_id": "shinbutsu_coexistence_commitment",
+      "reading_id": "domain_partition_reading"
+    },
+    {
+      "claim_id": "incoherent_bundle_reading",
+      "kernel_id": "shinbutsu_coexistence_commitment",
+      "reading_id": "incoherent_bundle_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "meiji_nationalist_imposition",
+      "structural_delta": "1868 shinbutsu bunri as external state violence destroying integrated framework",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "External force rather than internal kernel reading; Meiji separation captured as evidence within incoherent_bundle_reading (collapse under pressure as revealing prior instability)"
+    },
+    {
+      "claim_id": "ryobu_shinto_hegemony",
+      "structural_delta": "Shingon-derived Ryobu Shinto as Buddhist capture of kami interpretive authority",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Institutional mechanism underlying syncretic_fusion_reading; captured as beneficiary structure (Buddhist ecclesiastical elite) within that reading"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_coherence_test",
+      "description": "Does the syncretic_fusion_reading vs incoherent_bundle_reading contest represent genuinely contradictory axioms, or can both be true simultaneously (fusion at elite doctrinal level, incoherence at popular practice level)? The constraint stories may reveal this is not a binary.",
+      "source": "§1.3-K kernel/reading decomposition + axiom_contradictions declaration"
+    },
+    {
+      "id": "omega_domain_partition_stability",
+      "description": "If domain_partition_reading is correct, why did the system collapse so rapidly under Meiji pressure? A stable functional partition should resist forced categorical choice. Rapid collapse suggests either incoherent_bundle or that Meiji violence was far more totalizing than domain_partition assumes.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + domain_partition_reading stability question"
+    },
+    {
+      "id": "omega_honji_suijaku_sincerity",
+      "description": "Was honji suijaku doctrine a sincere ontological claim or a political theology justifying institutional control? If the latter, syncretic_fusion_reading collapses into incoherent_bundle_reading (doctrine as legitimation rather than commitment).",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to syncretic_fusion_reading"
+    },
+    {
+      "id": "omega_popular_vs_elite",
+      "description": "The three readings may map to different social strata: syncretic_fusion (elite Buddhist), domain_partition (village laity), incoherent_bundle (post-Meiji retrospective). This is not kernel disagreement but observer position. The constraint stories will test whether these are genuinely different constraints or different perspectives on one constraint.",
+      "source": "§2 Multi-Lens Scan + §3 Independence Testing"
+    },
+    {
+      "id": "omega_meiji_as_revealer",
+      "description": "Incoherent_bundle_reading treats Meiji separation as revealing prior incoherence. But state violence can destroy coherent systems too (see: Qing queue-cutting edicts destroying Manchu identity markers). Rapid collapse is not proof of prior incoherence. The constraint story must distinguish destruction from revelation.",
+      "source": "§2.1 Mountain Check applied to incoherent_bundle_reading"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Three readings selected represent genuinely distinct structural commitments with different observables (doctrinal texts vs village practice vs Meiji collapse patterns), different beneficiary structures (Buddhist elite vs none vs pre-Meiji institutional elites), and potentially contradictory axioms (ontological unification vs deliberate ambiguity). Kernel decomposition executed as specified in §1.3-K."
+  },
+  "_seed_id": "shinto_buddhist_syncretism"
+}

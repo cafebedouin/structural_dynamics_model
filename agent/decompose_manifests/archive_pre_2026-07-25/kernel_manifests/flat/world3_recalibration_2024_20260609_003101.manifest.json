@@ -1,0 +1,208 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "System Dynamics / Industrial Ecology / Sustainability Science",
+  "family_id": "world3_recalibration_2024",
+  "topic_summary": "Analysis of Nebel et al.'s 2024 recalibration of the World3 model from Limits to Growth. The study uses iterative parameter optimization to fit 50 years of empirical data, finding that the recalibrated model still projects overshoot-and-collapse dynamics but with shifted timing and altered pollution trajectory. The recalibration raises industrial and population peaks while delaying pollution peak by ~50 years, maintaining resource depletion as primary collapse driver.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "World3 model (system dynamics simulation of global material flows 1900-2100)",
+      "Recalibration23 parameter set (optimized via NRMSD minimization against empirical data)",
+      "BAU scenario (original 1972 business-as-usual run, resource-depletion collapse)",
+      "BAU2 scenario (doubled resources + recycling, pollution-driven collapse)",
+      "NRMSD metric (normalized root mean square deviation, model-data fit measure)",
+      "Empirical data proxies (IIP for industrial output, CO2 for pollution, fossil fuel consumption for resources)",
+      "Parameter sensitivity (alic1 +662%, pptd +482%, uildt -95%)",
+      "Collapse timing window (2024-2030 per recalibrated model)"
+    ],
+    "key_tensions": [
+      "Model fidelity vs predictive validity (improved historical fit does not validate post-peak projections)",
+      "Proxy adequacy vs data availability (CO2 as pollution proxy omits toxics/plastics; fossil fuels omit metals)",
+      "Parameter stability vs socio-economic regime change (recalibration assumes constant relationships through collapse)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "proxy_measurement_validity",
+      "human_readable": "Proxy Measurement Validity (Empirical Data Representation Fidelity)",
+      "structural_delta": "Degree to which available empirical proxies (CO2 for pollution, IIP for industrial output, fossil fuels for all non-renewable resources) structurally represent the World3 sector aggregates they are meant to measure",
+      "primary_observable": "Sectoral coverage fraction: what percentage of World3 'pollution units' does atmospheric CO2 concentration capture; what fraction of 'resource units' does fossil fuel consumption represent",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "recalibration_interpretive_validity",
+        "collapse_timing_uncertainty"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream constraint on all model-data comparisons; structural gap between what exists to measure and what the model claims to represent"
+    },
+    {
+      "claim_id": "recalibration_interpretive_validity",
+      "human_readable": "Recalibration Interpretive Validity (Parameter Optimization as Knowledge vs Overfitting)",
+      "structural_delta": "Whether parameter changes from recalibration reflect discovered structural truths about the real system or are artifacts of fitting noise in incomplete proxies via local optimization",
+      "primary_observable": "Out-of-sample validation: does the recalibrated model predict held-out data better than BAU; do parameter changes have independent physical/economic justification beyond NRMSD reduction",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "model_validation_community",
+      "victim": "policy_decision_makers",
+      "downstream_of": [
+        "proxy_measurement_validity"
+      ],
+      "feeds_into": [
+        "collapse_timing_uncertainty"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Core analytical question: is recalibration discovery or curve-fitting; highest ε; entangles measurement quality with optimization methodology"
+    },
+    {
+      "claim_id": "collapse_timing_uncertainty",
+      "human_readable": "Collapse Timing Uncertainty (Post-Peak Projection Validity)",
+      "structural_delta": "Epistemic status of the 2024-2030 collapse window given that (a) recalibration optimized only for rising-edge fit 1970-2023, (b) model assumes constant socio-economic relationships through regime change, (c) authors explicitly state post-collapse trajectories are not valid",
+      "primary_observable": "Confidence interval width on peak timing; sensitivity of collapse date to parameter perturbations within NRMSD-equivalent range",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "collapse_preparedness_planning",
+      "downstream_of": [
+        "proxy_measurement_validity",
+        "recalibration_interpretive_validity",
+        "regime_change_structural_break"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Highest centrality; synthesis node; captures the policy-relevant question the paper appears to answer but cannot"
+    },
+    {
+      "claim_id": "regime_change_structural_break",
+      "human_readable": "Regime Change Structural Break (Socio-Economic Relationship Constancy Assumption)",
+      "structural_delta": "World3 holds feedback loop structure constant (population-birth delay, investment-capital loop) but authors acknowledge these relationships will 'rearrange and reconnect' during collapse; recalibration validity depends on this not happening before peak",
+      "primary_observable": "Historical precedent: do socio-economic feedback parameters remain stable during prior crises (2008 financial, COVID-19, 1970s oil shocks) or do they exhibit regime-dependent shifts",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "collapse_timing_uncertainty"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent upstream; authors flag this explicitly as limitation; structural assumption underlying all system dynamics models"
+    },
+    {
+      "claim_id": "pollution_delay_mechanism",
+      "human_readable": "Pollution Delay Mechanism (Transmission Delay Parameter Shift)",
+      "structural_delta": "Recalibration increases persistent pollution transmission delay (pptd) from 20 to 116 years (+482%), shifting pollution peak ~50 years into future; whether this reflects physical reality (ocean/atmosphere absorption lag) or is artifact of CO2 proxy inadequacy",
+      "primary_observable": "Independent climate science estimates of CO2 atmospheric residence time and climate impact lag; comparison with non-CO2 pollutant (plastics, toxics, nitrogen) accumulation rates",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "proxy_measurement_validity"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured as sub-mechanism within proxy_measurement_validity mountain; pptd change is consequence of CO2 proxy choice rather than independent axis"
+    },
+    {
+      "claim_id": "capital_lifetime_anomaly",
+      "human_readable": "Capital Lifetime Anomaly (Industrial Capital Durability Increase)",
+      "structural_delta": "Recalibration increases average lifetime of industrial capital (alic1) from 2 to 15.24 years (+662%), largest relative parameter change; whether this reflects real-world shift to longer-lived capital stock or compensates for other model misspecifications",
+      "primary_observable": "Empirical capital depreciation rates from national accounts; industrial equipment replacement cycles; comparison with OECD capital stock data",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: zero graph centrality; authors note parameter but do not analyze mechanism; candidate for omega uncertainty rather than constraint axis"
+    }
+  ],
+  "generation_sequence": [
+    "proxy_measurement_validity",
+    "recalibration_interpretive_validity",
+    "regime_change_structural_break",
+    "collapse_timing_uncertainty"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "pollution_delay_mechanism",
+      "structural_delta": "Pollution transmission delay parameter shift from 20 to 116 years",
+      "hypothesis": "rope",
+      "deferral_reason": "Mechanistic consequence of proxy_measurement_validity rather than independent axis; pptd change is artifact of CO2 proxy selection"
+    },
+    {
+      "claim_id": "capital_lifetime_anomaly",
+      "structural_delta": "Industrial capital lifetime increase from 2 to 15.24 years (+662%)",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Zero centrality; largest parameter change but no mechanistic analysis in paper; omega-level uncertainty about whether this is real-world shift or model compensation"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_out_of_sample_validation",
+      "description": "No held-out data validation performed. Recalibration optimized on full 1970-2023 dataset. Unknown whether parameter set predicts 2024+ data better than original BAU or is overfit to historical noise.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + recalibration_interpretive_validity axis"
+    },
+    {
+      "id": "omega_local_minimum_trap",
+      "description": "Authors acknowledge heuristic optimization may find local rather than global NRMSD minimum. Sensitivity analysis shows different initial conditions yield different parameter sets with similar NRMSD. Unknown whether Recalibration23 is best possible fit or one of many equivalent fits.",
+      "source": "Section 3.3 sensitivity analysis + F03 (Hasty Generalization) check"
+    },
+    {
+      "id": "omega_capital_lifetime_mechanism",
+      "description": "alic1 parameter increases 662% but paper provides no mechanistic explanation. Is this real-world capital durability increase (shift to services/digital economy), model compensation for other misspecifications, or optimization artifact? Deferred axis capital_lifetime_anomaly.",
+      "source": "Deferred axis capital_lifetime_anomaly + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_collapse_cause_ambiguity",
+      "description": "Authors state 'it is not entirely clear whether the collapse is caused by climate change resulting from pollution or by resource depletion.' Recalibration maintains resource depletion as primary driver but acknowledges pollution and resource sectors have highest measurement uncertainty. Collapse attribution remains unresolved.",
+      "source": "Section 4.1 discussion + proxy_measurement_validity mountain"
+    },
+    {
+      "id": "omega_regional_aggregation_loss",
+      "description": "World3 is single-region global aggregate. Authors note 'regional differences in demographic and economic terms are too great to be reduced to simple, highly aggregated variables' and cite Earth4All as successor model with regional resolution. Recalibration inherits this limitation; collapse timing may vary drastically by region.",
+      "source": "Section 4.3 + Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_crisis_shock_exclusion",
+      "description": "Model cannot reproduce short-term shocks (2008 financial crisis, COVID-19 pandemic). Empirical data includes these; recalibration fits through them. Unknown whether parameter set is robust to future shocks or optimized to smooth over historical volatility.",
+      "source": "Section 4.2 limitations + regime_change_structural_break piton"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: recalibration_interpretive_validity classified as tangled_rope but distinction between 'discovered structural truth' and 'overfitting to proxy noise' depends on out-of-sample validation not performed in paper. Generated omega_out_of_sample_validation and omega_local_minimum_trap to bound this uncertainty. Collapse_timing_uncertainty classified as snare but epistemic status of 2024-2030 window is weaker than snare typically implies—authors explicitly disclaim post-peak validity, yet policy discourse treats timing as actionable. This may warrant reclassification to scaffold (speculative projection) rather than snare (extractive constraint), but snare captures the victim structure (collapse preparedness planning misled by false precision)."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Not a commitment system. World3 is a system dynamics model, not a normative/interpretive framework grounded in a fixed kernel. The debate is about empirical adequacy and methodological validity, not contested readings of a shared commitment.",
+    "authority_description": "N/A",
+    "drift_status": "N/A",
+    "candidate_pattern": "N/A",
+    "is_contested_kernel": false
+  }
+}

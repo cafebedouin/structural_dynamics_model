@@ -1,0 +1,195 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Theology / Ecclesiastical Politics / Commitment Systems",
+  "family_id": "nicaea_homoousios_dispute",
+  "topic_summary": "Analysis of the Council of Nicaea (325 CE) Christological dispute centered on the term 'homoousios' (consubstantial). Pro-Nicene and Arian readings of Christ's relationship to the Father instantiate structurally different authority systems, victim sets, and mechanisms for enforcing orthodoxy within early Christianity.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nicene Creed (325 CE text, especially 'homoousios' term)",
+      "Pro-Nicene faction (Athanasius, Alexander of Alexandria, imperial backing)",
+      "Arian faction (Arius, Eusebius of Nicomedia, subordinationist Christology)",
+      "Constantine I (convening emperor, enforcing mechanism)",
+      "Episcopal networks (competing authority structures for doctrinal adjudication)",
+      "Laity and subordinate clergy (subjects of orthodoxy enforcement)"
+    ],
+    "key_tensions": [
+      "Consubstantial vs subordinate Christology (ontological status of Christ)",
+      "Imperial-backed hierarchical authority vs distributed episcopal networks (legitimacy grounding)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "pro_nicene_reading",
+      "human_readable": "Pro-Nicene Reading (Consubstantial Divinity)",
+      "structural_delta": "Christ fully divine, same substance as Father; generates hierarchical ecclesiastical authority enforcing creedal orthodoxy",
+      "primary_observable": "Conciliar enforcement mechanisms; anathema declarations; imperial backing",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "imperial_church_hierarchy",
+      "victim": "non_nicene_bishops_laity",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected; highest centrality; dominant reading with imperial enforcement"
+    },
+    {
+      "claim_id": "arian_reading",
+      "human_readable": "Arian Reading (Subordinate Christology)",
+      "structural_delta": "Christ subordinate, created by Father; generates distributed episcopal authority and alternative theological legitimacy claims",
+      "primary_observable": "Counter-councils; alternative episcopal networks; theological treatises resisting homoousios",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "non_nicene_episcopal_networks",
+      "victim": "pro_nicene_adherents",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected; structurally distinct authority grounding and victim set"
+    },
+    {
+      "claim_id": "semi_arian_reading",
+      "human_readable": "Semi-Arian Reading (Similar Substance - Homoiousios)",
+      "structural_delta": "Christ of similar but not identical substance; compromise position seeking to avoid subordinationism while resisting full consubstantiality",
+      "primary_observable": "Homoiousios terminology adoption; mid-4th century compromise councils",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "moderate_bishops_seeking_unity",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected; illuminates compromise space between axiom-contradictory positions"
+    },
+    {
+      "claim_id": "monarchian_reading",
+      "human_readable": "Monarchian Reading (Modalist Christology)",
+      "structural_delta": "Father and Son as modes of one divine being; rejects triadic ontology entirely",
+      "primary_observable": "Sabellianism condemnations; modalist theological frameworks",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": "modalist_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: already condemned pre-Nicaea; marginal to homoousios dispute proper"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "pro_nicene_reading",
+      "kernel_id": "homoousios_christology",
+      "reading_id": "pro_nicene_reading"
+    },
+    {
+      "claim_id": "arian_reading",
+      "kernel_id": "homoousios_christology",
+      "reading_id": "arian_reading"
+    },
+    {
+      "claim_id": "semi_arian_reading",
+      "kernel_id": "homoousios_christology",
+      "reading_id": "semi_arian_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "monarchian_reading",
+      "structural_delta": "Modalist Christology rejecting triadic ontology",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Already condemned pre-Nicaea (Sabellius); marginal to the homoousios dispute's core axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_imperial_enforcement_counterfactual",
+      "description": "Without Constantine's convening power and enforcement, does the Pro-Nicene reading collapse to one episcopal network among many? Imperial backing may be load-bearing for its high ε.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_translation_drift",
+      "description": "Does 'homoousios' mean the same thing in Greek philosophical context vs Latin 'consubstantialis'? Translation may introduce hidden drift in the kernel itself.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_laity_enforcement_asymmetry",
+      "description": "All three readings treat laity as enforcement targets, not interpretive agents. Is this a shared extraction that the kernel structure itself obscures?",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_semi_arian_collapse",
+      "description": "Does homoiousios reading collapse into Pro-Nicene after 381 CE (Constantinople I)? If so, the rope becomes a piton of failed resistance.",
+      "source": "F03 (Hasty Generalization) - rope classification may be unstable"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Semi-Arian reading classified as rope, but historical collapse into Pro-Nicene orthodoxy post-381 CE suggests potential piton reclassification. Generated omega_semi_arian_collapse to bound this uncertainty."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The term 'homoousios' in the Nicene Creed as stabilized text defining Christ's ontological relationship to the Father",
+    "authority_description": "Conciliar authority (episcopal consensus under imperial convening) claims interpretive legitimacy via apostolic succession and scriptural exegesis",
+    "drift_status": "partial",
+    "candidate_pattern": "Constitutional Ambiguity (homoousios term deliberately imprecise to secure consensus, enabling divergent readings)",
+    "is_contested_kernel": true,
+    "kernel_id": "homoousios_christology",
+    "readings": [
+      {
+        "reading_id": "pro_nicene_reading",
+        "commitment": "Christ is homoousios (consubstantial) with the Father - identical divine substance",
+        "authority_grounding": "Conciliar majority + imperial enforcement + Athanasian theological elaboration",
+        "sibling_readings": [
+          "arian_reading",
+          "semi_arian_reading"
+        ],
+        "expected_structural_delta": "Hierarchical ecclesiastical authority with high enforcement ε; anathema as exclusion mechanism; benefits imperial-church alignment"
+      },
+      {
+        "reading_id": "arian_reading",
+        "commitment": "Christ is created and subordinate - not of identical substance with the Father",
+        "authority_grounding": "Alternative episcopal networks + scriptural literalism (e.g., 'Father is greater than I')",
+        "sibling_readings": [
+          "pro_nicene_reading",
+          "semi_arian_reading"
+        ],
+        "expected_structural_delta": "Distributed authority among non-Nicene bishops; resistance to imperial enforcement; alternative theological legitimacy"
+      },
+      {
+        "reading_id": "semi_arian_reading",
+        "commitment": "Christ is homoiousios (of similar substance) - compromise position",
+        "authority_grounding": "Moderate bishops seeking unity without full consubstantiality commitment",
+        "sibling_readings": [
+          "pro_nicene_reading",
+          "arian_reading"
+        ],
+        "expected_structural_delta": "Coordination mechanism for avoiding schism; lower enforcement ε than Pro-Nicene; historically absorbed into Pro-Nicene post-381"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "pro_nicene_reading",
+        "reading_b": "arian_reading",
+        "basis": "Consubstantiality (same substance) and subordinationism (created, lesser substance) are mutually exclusive ontological claims; no coherent framework can hold both Christ as fully divine and identical in substance AND Christ as created and subordinate"
+      }
+    ]
+  },
+  "_seed_id": "nicea_homoousios_debate"
+}

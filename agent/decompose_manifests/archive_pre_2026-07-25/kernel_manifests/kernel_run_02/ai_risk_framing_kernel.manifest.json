@@ -1,0 +1,275 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "AI Governance / Technology Ethics / Risk Assessment",
+  "family_id": "ai_risk_existential_vs_nearterm_2026",
+  "topic_summary": "Analysis of the AI risk debate between existential risk (x-risk) and near-term harms framings. The existential risk narrative focuses on speculative catastrophic outcomes from advanced AI systems escaping human control, while the near-term harms narrative prioritizes current demonstrated harms including bias, misinformation, and labor displacement. Both communities claim the 'alignment' label but define it differently: safety as control problem, ethics as justice problem.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Existential Risk Community (x-risk advocates: Bostrom, Musk, Open Philanthropy, Future of Life Institute)",
+      "Near-Term Harms Community (FATE researchers, digital humanities, AI ethics scholars)",
+      "Effective Altruism Movement (funding infrastructure prioritizing tractable high-impact causes including x-risk)",
+      "AI Safety Research (adversarial red-teaming, catastrophic failure probing)",
+      "AI Ethics Research (sociotechnical audits, bias detection)",
+      "Policy Frameworks (White House EO Oct 2023, UK AI Safety Summit)",
+      "Bibliometric Network (6,442 papers, 12 ML/NLP conferences 2020-2025)",
+      "Bridging Actors (5% of papers accounting for 85% of cross-field links)"
+    ],
+    "key_tensions": [
+      "Methodological divide: adversarial red-teaming (safety) vs sociotechnical audits (ethics)",
+      "Institutional segregation: 80% of collaborations within-community, cross-field exchange depends on handful of brokers",
+      "Resource allocation: limited government/multilateral resources split between speculative vs demonstrated harms",
+      "Alignment definition: control problem (prevent x-risk) vs justice problem (prevent present harm)"
+    ],
+    "key_claims": [
+      "Existential risk defined as outcome annihilating Earth-originating intelligent life or permanently curtailing its potential",
+      "Near-term harms (bias, misinformation, deepfakes, job displacement) argued more urgent than speculative threats",
+      "Distraction hypothesis: x-risk narrative diverts resources from real present dangers",
+      "Empirical refutation: respondents more concerned with immediate risks; x-risk narratives increase catastrophic concern WITHOUT diminishing immediate harm concern",
+      "Safety-ethics divide is structural not rhetorical: separate conferences, funding, departments, empirical standards",
+      "False dichotomy claim: both risk types require integrated approach"
+    ],
+    "key_mechanisms": [
+      "Funding concentration: Effective Altruism channels tens of billions toward x-risk via Open Philanthropy (Moskovitz/Tuna)",
+      "Institutional segregation: 80% within-community collaboration, 5% of papers broker 85% of cross-field links",
+      "Policy fragmentation: governance models mirror bifurcation rather than unified human-compatible AI effort"
+    ],
+    "key_absences": [
+      "Empirical measurement of actual resource diversion (distraction hypothesis tested on public concern, not funding allocation)",
+      "Mechanism explaining WHY institutional segregation persists despite thematic overlap and shared 'alignment' goal"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "AI alignment as the shared commitment to ensure AI systems behave in accordance with human values and interests",
+    "authority_description": "Interpretive legitimacy grounded in disciplinary methodology (computer science safety vs sociotechnical ethics) and institutional position (funding bodies, academic departments, policy frameworks)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_divergence",
+    "is_contested_kernel": true,
+    "kernel_id": "ai_alignment_commitment",
+    "readings": [
+      {
+        "reading_id": "safety_control_reading",
+        "commitment": "Alignment means preventing catastrophic loss of control over advanced AI systems",
+        "authority_grounding": "Computer science safety research, adversarial red-teaming methodology, x-risk funding infrastructure",
+        "sibling_readings": [
+          "ethics_justice_reading",
+          "integrated_reading"
+        ],
+        "expected_structural_delta": "Prioritizes speculative future harms, catastrophic failure modes; victim set is humanity-as-whole including future generations; high extractiveness from present-day harm mitigation resources"
+      },
+      {
+        "reading_id": "ethics_justice_reading",
+        "commitment": "Alignment means preventing reproduction of social bias and present-day harm in AI systems",
+        "authority_grounding": "Sociotechnical ethics research, FATE community methodology, digital humanities",
+        "sibling_readings": [
+          "safety_control_reading",
+          "integrated_reading"
+        ],
+        "expected_structural_delta": "Prioritizes demonstrated current harms, marginalized populations; victim set is specific communities experiencing bias/displacement now; extractiveness from long-term safety research"
+      },
+      {
+        "reading_id": "integrated_reading",
+        "commitment": "Alignment requires simultaneous attention to control problems and justice problems as non-exclusive",
+        "authority_grounding": "Critical bridging actors, White House EO Oct 2023 dual-track approach, empirical refutation of distraction hypothesis",
+        "sibling_readings": [
+          "safety_control_reading",
+          "ethics_justice_reading"
+        ],
+        "expected_structural_delta": "Rejects false dichotomy; victim set includes both present marginalized populations and future humanity; extractiveness from siloed approaches that fragment unified effort"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "safety_control_reading",
+        "reading_b": "ethics_justice_reading",
+        "basis": "Safety reading holds that existential risk is the tractable high-impact cause (effective altruism axiom); ethics reading holds that speculative future harms divert from demonstrated present injustice (precautionary axiom). No single framework can simultaneously hold 'prioritize tractable high-impact future risk' and 'prioritize demonstrated present harm' as foundational without one subordinating the other."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "safety_control_reading",
+      "human_readable": "Safety-Control Reading (Alignment as Catastrophic Risk Prevention)",
+      "structural_delta": "Alignment interpreted as preventing loss of control over advanced AI systems; prioritizes speculative catastrophic outcomes",
+      "primary_observable": "Funding allocation to x-risk organizations (Open Philanthropy, FLI); adversarial red-teaming research output; policy frameworks addressing existential risk (UK AI Safety Summit)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "x_risk_research_community",
+      "victim": "present_day_marginalized_populations",
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_segregation_mechanism"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest epsilon; upstream to institutional mechanism"
+    },
+    {
+      "claim_id": "ethics_justice_reading",
+      "human_readable": "Ethics-Justice Reading (Alignment as Bias Prevention)",
+      "structural_delta": "Alignment interpreted as preventing reproduction of social bias and present-day harm; prioritizes demonstrated current harms",
+      "primary_observable": "FATE community research output; sociotechnical audit methodologies; policy frameworks addressing bias/discrimination (White House EO worker protections)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ai_ethics_research_community",
+      "victim": "future_generations",
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_segregation_mechanism"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; sibling to safety_control_reading; upstream to institutional mechanism"
+    },
+    {
+      "claim_id": "institutional_segregation_mechanism",
+      "human_readable": "Institutional Segregation Mechanism (Structural Siloing)",
+      "structural_delta": "80% within-community collaboration; 5% of papers broker 85% of cross-field links; separate conferences, funding, departments",
+      "primary_observable": "Bibliometric co-authorship network analysis; conference attendance patterns; funding stream segregation",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "institutional_gatekeepers",
+      "victim": "unified_alignment_effort",
+      "downstream_of": [
+        "safety_control_reading",
+        "ethics_justice_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node; captures structural consequence of kernel contest"
+    },
+    {
+      "claim_id": "integrated_reading",
+      "human_readable": "Integrated Reading (Non-Exclusive Dual-Track Alignment)",
+      "structural_delta": "Rejects false dichotomy; both risk types require simultaneous attention; empirical evidence shows no zero-sum tradeoff in public concern",
+      "primary_observable": "White House EO dual-track provisions; empirical studies showing additive rather than substitutive concern; critical bridging actor network density",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "safety_control_reading",
+        "ethics_justice_reading",
+        "institutional_segregation_mechanism"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold hypothesis with lower epsilon; captured implicitly via institutional_segregation_mechanism snare analysis"
+    },
+    {
+      "claim_id": "effective_altruism_funding_concentration",
+      "human_readable": "Effective Altruism Funding Concentration (Resource Channeling)",
+      "structural_delta": "Tens of billions channeled toward x-risk via EA movement's tractable high-impact cause prioritization",
+      "primary_observable": "Open Philanthropy grant data; EA movement resource allocation; x-risk organization funding levels vs FATE community funding",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "safety_control_reading"
+      ],
+      "feeds_into": [
+        "institutional_segregation_mechanism"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: captured via safety_control_reading beneficiary structure and institutional_segregation_mechanism"
+    },
+    {
+      "claim_id": "distraction_hypothesis_empirical_status",
+      "human_readable": "Distraction Hypothesis Empirical Status (Resource Diversion Claim)",
+      "structural_delta": "Claim that x-risk narrative diverts resources from present harms; empirically tested on public concern (shows additive not substitutive effect) but not on actual funding allocation",
+      "primary_observable": "Survey data on public concern levels; funding allocation data (absent from research corpus)",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: piton with very low epsilon; empirical gap noted in omega"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "safety_control_reading",
+      "kernel_id": "ai_alignment_commitment",
+      "reading_id": "safety_control_reading"
+    },
+    {
+      "claim_id": "ethics_justice_reading",
+      "kernel_id": "ai_alignment_commitment",
+      "reading_id": "ethics_justice_reading"
+    },
+    {
+      "claim_id": "institutional_segregation_mechanism",
+      "kernel_id": "ai_alignment_commitment",
+      "reading_id": "institutional_segregation_mechanism"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "integrated_reading",
+      "structural_delta": "Rejects false dichotomy; both risk types require simultaneous attention",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Scaffold with lower epsilon; captured implicitly via institutional_segregation_mechanism snare analysis and axiom_contradictions field"
+    },
+    {
+      "claim_id": "effective_altruism_funding_concentration",
+      "structural_delta": "Tens of billions channeled toward x-risk via EA tractable high-impact prioritization",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured via safety_control_reading beneficiary structure and institutional_segregation_mechanism downstream analysis"
+    },
+    {
+      "claim_id": "distraction_hypothesis_empirical_status",
+      "structural_delta": "X-risk narrative claimed to divert resources; tested on public concern but not funding allocation",
+      "hypothesis": "piton",
+      "deferral_reason": "Very low epsilon; empirical gap (funding allocation data absent) noted in omega_distraction_empirics"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_distraction_empirics",
+      "description": "Distraction hypothesis tested on public concern (shows additive not substitutive effect) but NOT on actual funding allocation. The structural claim requires funding flow data absent from research corpus. Is resource diversion a Rope (coordination failure) or Snare (deliberate extraction)?",
+      "source": "Absence Inventory (§1.1) + deferred axis distraction_hypothesis_empirical_status"
+    },
+    {
+      "id": "omega_broker_fragility",
+      "description": "5% of papers account for 85% of cross-field bridging links. Is this a Piton (atrophied integration capacity) or Scaffold (emerging integration infrastructure)? Removal of small number of brokers sharply increases segregation, suggesting fragility.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — mechanism explaining WHY segregation persists despite thematic overlap"
+    },
+    {
+      "id": "omega_kernel_coherence",
+      "description": "Are safety_control_reading and ethics_justice_reading genuinely two readings of one kernel, or two distinct kernels sharing a label? Empirical evidence (additive concern, White House dual-track) suggests coherence; institutional evidence (80% within-community collaboration) suggests two kernels. The axiom_contradictions field declares foundational incompatibility, but integrated_reading exists as live position.",
+      "source": "§1.3-K kernel/reading decision + axiom_contradictions analysis"
+    },
+    {
+      "id": "omega_victim_set_temporal_asymmetry",
+      "description": "Safety_control_reading's victim set (present-day marginalized populations) is observable now; ethics_justice_reading's victim set (future generations) is not. Does this temporal asymmetry make the readings incommensurable, or does it reveal that 'alignment' kernel operates across different time horizons rather than different values?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + expected_structural_delta analysis"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition applied per §1.3-K. Three readings identified; two selected for generation (safety_control_reading, ethics_justice_reading) plus downstream synthesis node (institutional_segregation_mechanism). Integrated_reading deferred as scaffold. Axiom_contradictions declared between safety and ethics readings based on effective altruism tractability axiom vs precautionary present-harm axiom."
+  },
+  "_seed_id": "ai_risk_framing_kernel"
+}

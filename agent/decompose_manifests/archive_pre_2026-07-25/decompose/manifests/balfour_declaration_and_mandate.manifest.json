@@ -1,0 +1,266 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Law / Colonial Administration / State Formation",
+  "family_id": "balfour_mandate_instruments_2026",
+  "topic_summary": "Analysis of the Balfour Declaration (1917) and League of Nations Mandate for Palestine (1922) as contested commitment kernels. Two structurally incompatible readings emerge: one prioritizing Jewish national home establishment through demographic and territorial transformation, the other prioritizing indigenous Arab civil/political rights and existing land tenure. The mandatory power's legitimacy depended on interpreting these texts, which contained both commitments without clear hierarchy.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 2,
+    "key_entities": [
+      "Balfour Declaration (1917 diplomatic commitment incorporated into Mandate text)",
+      "League of Nations Mandate for Palestine (1922 international legal instrument)",
+      "British Mandatory Administration (interpretive authority 1920-1948)",
+      "Zionist Organization / Jewish Agency (institutional beneficiary under Reading A)",
+      "Palestinian Arab leadership (institutional beneficiary under Reading B)",
+      "Jewish migrants / Yishuv (demographic beneficiary Reading A)",
+      "Palestinian Arab population (demographic victim Reading A / beneficiary Reading B)"
+    ],
+    "key_tensions": [
+      "National home establishment vs civil/religious rights protection (core textual ambiguity)",
+      "Land transfer facilitation vs existing tenure protection (mechanism-level collision)",
+      "Political representation asymmetry vs self-determination norm (legitimacy contest)"
+    ],
+    "key_mechanisms": [
+      "Jewish Agency quasi-governmental status (Article 4 of Mandate)",
+      "Land transfer regulations (shifted 1920s-1940s based on reading dominance)",
+      "Immigration quota system (demographic transformation tool vs demographic threat depending on reading)",
+      "Representative council proposals (repeatedly failed due to reading collision)"
+    ],
+    "key_absences": [
+      "No explicit hierarchy between 'Jewish national home' and 'rights of existing non-Jewish communities' in text",
+      "No defined endpoint or success criteria for 'national home' (open to maximal vs minimal readings)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "jewish_national_home_primacy",
+      "human_readable": "Jewish National Home Primacy Reading",
+      "structural_delta": "Mandate instruments read as directing demographic and territorial transformation to establish Jewish sovereignty; 'national home' interpreted as proto-state requiring land transfer, immigration facilitation, and Jewish institutional supremacy",
+      "primary_observable": "British policy decisions on land sales, immigration quotas, Jewish Agency authority; legal opinions treating 'national home' as primary obligation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "zionist_institutions_and_migrants",
+      "victim": "palestinian_arab_population",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary reading with highest structural extractiveness; reading instantiates constraint that systematically facilitates land transfer and demographic transformation"
+    },
+    {
+      "claim_id": "dual_obligation_indigenous_rights",
+      "human_readable": "Dual Obligation / Indigenous Rights Reading",
+      "structural_delta": "Same Mandate texts read as imposing equal or superior obligation to protect existing Arab civil/political rights and land tenure; 'national home' subordinated to self-determination and minority-protection norms",
+      "primary_observable": "British policy decisions favoring Arab land protection, immigration restrictions, Arab political representation; legal opinions treating civil rights as co-equal or superior obligation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "palestinian_arab_elites_and_communities",
+      "victim": "zionist_organizations_and_imperial_administrators",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Competing reading with equally high extractiveness; reading instantiates constraint that systematically blocks land transfer and demographic transformation"
+    },
+    {
+      "claim_id": "mandatory_interpretive_discretion",
+      "human_readable": "Mandatory Interpretive Discretion as Authority Structure",
+      "structural_delta": "British mandatory power's claimed authority to adjudicate between readings without external review; interpretive discretion itself becomes constraint on both communities' ability to appeal to fixed textual meaning",
+      "primary_observable": "Colonial Office policy shifts 1920-1948; White Papers as interpretive declarations; absence of international arbitration mechanisms",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "british_colonial_administrators",
+      "victim": "both_communities_seeking_textual_certainty",
+      "downstream_of": [],
+      "feeds_into": [
+        "jewish_national_home_primacy",
+        "dual_obligation_indigenous_rights"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Authority structure axis; the discretion to shift between readings is itself a constraint creating path-dependent lock-in and strategic uncertainty for both communities"
+    },
+    {
+      "claim_id": "land_regime_oscillation",
+      "human_readable": "Land Transfer Regime Oscillation",
+      "structural_delta": "Regulatory shifts between facilitation (1920s) and restriction (1940 White Paper) as manifestation of reading dominance changes",
+      "primary_observable": "Land Transfer Ordinances 1920, 1933, 1940; Supreme Court rulings on sales validity",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "both_communities_facing_legal_uncertainty",
+      "downstream_of": [
+        "mandatory_interpretive_discretion"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream mechanism of interpretive discretion axis; high empirical detail but structurally derivative"
+    },
+    {
+      "claim_id": "immigration_quota_politics",
+      "human_readable": "Immigration Quota Politics",
+      "structural_delta": "Numerical immigration limits as site of reading collision; each quota decision instantiates one reading over the other",
+      "primary_observable": "Annual immigration certificates issued; Arab Strike 1936 vs Zionist pressure campaigns; British quota adjustments",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "mandatory_interpretive_discretion"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: parallel mechanism to land regime; structurally similar dynamics captured in selected axes"
+    },
+    {
+      "claim_id": "representative_government_failure",
+      "human_readable": "Representative Government Failure Pattern",
+      "structural_delta": "Repeated proposals for legislative councils 1922-1936 failed because any representational formula instantiated one reading's demographic assumptions",
+      "primary_observable": "Samuel Commission 1922, Shaw Commission 1930, Peel Commission 1937 proposals and Arab/Zionist rejections",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "jewish_national_home_primacy",
+        "dual_obligation_indigenous_rights"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream consequence of kernel contest; omega material on coordination failure rather than independent axis"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "jewish_national_home_primacy",
+      "kernel_id": "balfour_mandate_instruments",
+      "reading_id": "jewish_national_home_primacy"
+    },
+    {
+      "claim_id": "dual_obligation_indigenous_rights",
+      "kernel_id": "balfour_mandate_instruments",
+      "reading_id": "dual_obligation_indigenous_rights"
+    },
+    {
+      "claim_id": "mandatory_interpretive_discretion",
+      "kernel_id": "balfour_mandate_instruments",
+      "reading_id": "mandatory_interpretive_discretion"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "land_regime_oscillation",
+      "structural_delta": "Land transfer regulations oscillated 1920-1940 as reading dominance shifted",
+      "hypothesis": "piton",
+      "deferral_reason": "Downstream mechanism of interpretive discretion; high empirical richness but structurally derivative of selected authority axis"
+    },
+    {
+      "claim_id": "immigration_quota_politics",
+      "structural_delta": "Immigration quotas as numerical site of kernel reading collision",
+      "hypothesis": "rope",
+      "deferral_reason": "Parallel mechanism to land regime with similar structural dynamics; captured indirectly through selected readings"
+    },
+    {
+      "claim_id": "representative_government_failure",
+      "structural_delta": "All legislative council proposals failed because representational formulas instantiated one reading",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream coordination failure; omega material rather than independent constraint axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_textual_ambiguity_vs_intentional_contradiction",
+      "description": "Was the dual commitment in the Mandate text accidental drafting ambiguity (Reading A and B coexist due to oversight) or intentional British strategy to preserve interpretive discretion? If intentional, the mandatory_interpretive_discretion snare was designed rather than emergent.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) applied to authority structure"
+    },
+    {
+      "id": "omega_self_determination_norm_strength",
+      "description": "How binding were Wilson's Fourteen Points and League minority-protection norms in 1922? If stronger than model assumes, dual_obligation_indigenous_rights reading has greater structural legitimacy. If weaker, it is retrospective projection.",
+      "source": "F34 Epistemic Trespass check on international law history"
+    },
+    {
+      "id": "omega_counterfactual_clarity",
+      "description": "Would explicit textual hierarchy (e.g., 'national home subject to existing rights' OR 'existing rights subject to national home') have prevented the kernel contest? Or would interpretive drift have created new ambiguities?",
+      "source": "Dark Matter Probe 2 (Absence Inventory) on missing textual elements"
+    },
+    {
+      "id": "omega_post_1948_relevance",
+      "description": "Does the kernel contest persist in Israeli/Palestinian legal claims post-1948, or was it closed by state formation and Nakba? If it persists, through what legal mechanisms?",
+      "source": "Deferred axis representative_government_failure + downstream implications"
+    },
+    {
+      "id": "omega_third_reading_possibility",
+      "description": "Is there a third reading treating the Mandate as temporary trusteeship toward indigenous sovereignty (neither Jewish nor Arab priority)? Not visible in 1920s-1940s British policy but potentially present in League discourse.",
+      "source": "Dark Matter Probe 1 (Operational Medium) on Palestinian nationalist historiography"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model's training on international law 1919-1922 is shallow. The relative weight of self-determination norms vs great-power treaty rights in League practice is uncertain. Generated omega_self_determination_norm_strength to bound this. The two primary readings are well-documented in historical scholarship and do not depend on deep legal expertise, but their relative legitimacy at formation does."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Balfour Declaration (1917) and League of Nations Mandate for Palestine (1922) as fixed diplomatic and legal texts containing dual commitments: establishment of Jewish national home AND protection of civil/religious rights of existing non-Jewish communities, with no explicit textual hierarchy between obligations",
+    "authority_description": "British mandatory power's interpretive authority grounded in League Council appointment and treaty law; legitimacy depended on plausible textual fidelity to Mandate instrument, but text's ambiguity granted wide discretion",
+    "drift_status": "partial",
+    "candidate_pattern": "Fork Pattern (divergent institutional crystallization) transitioning to Interpretive Monarchy (mandatory power as sole adjudicator)",
+    "is_contested_kernel": true,
+    "kernel_id": "balfour_mandate_instruments",
+    "readings": [
+      {
+        "reading_id": "jewish_national_home_primacy",
+        "commitment": "Mandate instruments direct demographic and territorial transformation to establish Jewish sovereignty; 'national home' interpreted as proto-state requiring land access, immigration facilitation, and Jewish institutional supremacy",
+        "authority_grounding": "Great-power diplomacy (Balfour Declaration as binding promise to Zionist movement); treaty obligation primacy; Herzlian state-building teleology",
+        "sibling_readings": [
+          "dual_obligation_indigenous_rights",
+          "mandatory_interpretive_discretion"
+        ],
+        "expected_structural_delta": "High epsilon tangled_rope: Jewish Agency gains quasi-governmental status (Mandate Article 4); land sales from Arab to Jewish owners systematically facilitated; immigration quotas favor demographic transformation; Arab political representation structurally downgraded. Beneficiaries: Zionist institutions, Jewish migrants. Victims: Palestinian Arab landholders and political leadership."
+      },
+      {
+        "reading_id": "dual_obligation_indigenous_rights",
+        "commitment": "Mandate instruments impose equal or superior obligation to protect existing Arab civil/political rights and land tenure; 'national home' subordinated to self-determination norms and minority-protection principles",
+        "authority_grounding": "Wilsonian self-determination discourse; League minority-protection treaties; mandatory system as trusteeship toward eventual self-governance of existing inhabitants",
+        "sibling_readings": [
+          "jewish_national_home_primacy",
+          "mandatory_interpretive_discretion"
+        ],
+        "expected_structural_delta": "High epsilon tangled_rope: Land transfer restrictions protect Arab tenure; immigration quotas capped to prevent demographic displacement; Arab majority status grounds claim to representative government and sovereignty path. Beneficiaries: Palestinian Arab elites and communities. Victims: Zionist organizations (blocked from land acquisition and demographic parity), British administrators (constrained in satisfying Zionist demands)."
+      },
+      {
+        "reading_id": "mandatory_interpretive_discretion",
+        "commitment": "British mandatory power holds authority to adjudicate between competing readings without external review; interpretive discretion itself constitutes the operational constraint system",
+        "authority_grounding": "Colonial administrative sovereignty; absence of League arbitration mechanisms for intra-Mandate disputes; mandatory's treaty obligation to League Council but discretion in implementation",
+        "sibling_readings": [
+          "jewish_national_home_primacy",
+          "dual_obligation_indigenous_rights"
+        ],
+        "expected_structural_delta": "Moderate epsilon snare: Both Arab and Zionist communities face strategic uncertainty as British policy oscillates (land regimes 1920 vs 1940; White Papers 1922/1930/1939). Discretion creates path-dependent lock-in where each policy shift alters the baseline for subsequent negotiations. Beneficiaries: British colonial administrators (policy flexibility, divide-and-rule). Victims: Both communities unable to appeal to fixed textual meaning or external arbitration."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "jewish_national_home_primacy",
+        "reading_b": "dual_obligation_indigenous_rights",
+        "basis": "No single coherent normative framework can hold both 'demographic transformation toward Jewish sovereignty is the mandate's primary purpose' (Reading A axiom) and 'existing Arab majority status grounds superior claim to self-governance' (Reading B axiom) simultaneously. Accepting A's axiom requires treating Arab political claims as subordinate; accepting B's axiom requires treating Zionist state-building as illegitimate extraction. These are mutually exclusive foundational commitments about whose sovereignty claim the mandate serves."
+      }
+    ]
+  },
+  "_seed_id": "balfour_declaration_and_mandate"
+}

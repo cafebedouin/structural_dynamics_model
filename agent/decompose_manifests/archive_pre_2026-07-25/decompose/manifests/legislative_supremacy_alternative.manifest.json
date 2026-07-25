@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Political Theory / Jurisprudence",
+  "family_id": "legislative_supremacy_readings",
+  "topic_summary": "Analysis of competing constitutional interpretations regarding the ultimate locus of interpretive authority in state legal systems. The core contest: whether elected legislatures possess final sovereignty over law (parliamentary supremacy reading) or whether courts/fundamental rights operate as superior constraints on legislative action (judicial supremacy reading). This determines who legitimately adjudicates the boundary of permissible state coercion.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Legislative/Parliamentary body (elected lawmaking institution)",
+      "Judiciary (court system with interpretive claims)",
+      "Constitutional text (written or unwritten kernel)",
+      "Popular sovereignty (democratic mandate grounding legislative authority)",
+      "Fundamental rights (claimed as pre-political constraints)"
+    ],
+    "key_tensions": [
+      "Democratic mandate (legislature as popular will) vs Rule of law (courts as rights guardians)",
+      "Written constitution as supreme law vs Legislature as ultimate interpreter of written constitution"
+    ],
+    "mechanisms": [
+      "Judicial review (courts strike down legislation as unconstitutional)",
+      "Legislative override (parliament reasserts authority via supermajority or notwithstanding clause)",
+      "Constitutional amendment process (who controls kernel revision)"
+    ],
+    "absences": [
+      "Executive branch role in interpretive contests (treated as derivative rather than independent interpreter)",
+      "Comparative empirical outcomes: do different readings produce measurably different coercion patterns or only different legitimation narratives"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The constitutional framework as a fixed reference point grounding legitimate interpretive authority over state coercion",
+    "authority_description": "Contested between legislative bodies (claiming democratic mandate) and judiciary (claiming constitutional fidelity or fundamental rights guardianship)",
+    "drift_status": "partial",
+    "candidate_pattern": "contested_authority_structure",
+    "is_contested_kernel": true,
+    "kernel_id": "constitutional_interpretive_authority",
+    "readings": [
+      {
+        "reading_id": "parliamentary_supremacy_reading",
+        "commitment": "Elected legislature possesses final interpretive authority; no judicial authority to void parliamentary acts",
+        "authority_grounding": "Democratic mandate via electoral accountability; legislative body as embodiment of popular sovereignty",
+        "sibling_readings": [
+          "judicial_supremacy_reading",
+          "coordinate_construction_reading"
+        ],
+        "expected_structural_delta": "Legislature enters beneficiary set for interpretive discretion; judiciary excluded from ultimate authority; coercion legitimated via electoral mandate rather than rights-grounding"
+      },
+      {
+        "reading_id": "judicial_supremacy_reading",
+        "commitment": "Courts possess final interpretive authority via constitutional/fundamental rights guardianship; legislative acts subject to judicial nullification",
+        "authority_grounding": "Constitutional text as supreme law OR unwritten fundamental rights as pre-political constraints; judicial expertise in rights interpretation",
+        "sibling_readings": [
+          "parliamentary_supremacy_reading",
+          "coordinate_construction_reading"
+        ],
+        "expected_structural_delta": "Judiciary enters beneficiary set for interpretive authority; legislature subordinated; coercion legitimated via rights-compliance rather than democratic will"
+      },
+      {
+        "reading_id": "coordinate_construction_reading",
+        "commitment": "No single branch possesses final interpretive authority; constitution constructed through inter-branch dialogue and political contestation",
+        "authority_grounding": "Structural ambiguity in constitutional design; interpretive authority distributed across branches via checks and balances",
+        "sibling_readings": [
+          "parliamentary_supremacy_reading",
+          "judicial_supremacy_reading"
+        ],
+        "expected_structural_delta": "Authority dispersed; interpretive contests resolved through political mechanisms (amendment, appointment, budget control) rather than singular adjudication; higher tolerance for interpretive instability"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "parliamentary_supremacy_reading",
+        "reading_b": "judicial_supremacy_reading",
+        "basis": "Cannot simultaneously hold that legislature possesses final interpretive authority (supremacy axiom) and that courts may nullify legislative acts as unconstitutional (judicial review axiom). One branch's finality requires the other's subordination."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "parliamentary_supremacy_reading",
+      "human_readable": "Parliamentary Supremacy Reading (Legislature as Final Interpreter)",
+      "structural_delta": "Constitutional framework read as granting elected legislature ultimate interpretive authority; no external constraint on parliamentary lawmaking",
+      "primary_observable": "Presence/absence of constitutional judicial review; legislative override mechanisms; explicit constitutional supremacy clauses",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "legislative_majority",
+      "victim": "rights_minorities_without_electoral_veto",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading selected: pure democratic accountability grounding; highest structural clarity; distinct epsilon from coordinate model"
+    },
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "human_readable": "Judicial Supremacy Reading (Courts as Constitutional Guardians)",
+      "structural_delta": "Constitutional framework read as establishing courts as final arbiters of constitutional meaning via judicial review power",
+      "primary_observable": "Scope of judicial review; presence of constitutional courts; enforceability of judicial nullification of legislation",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "judicial_elite_legal_profession",
+      "victim": "electoral_majorities_constrained_by_rights_doctrine",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading selected: axiom-contradictory to parliamentary supremacy; rights-grounding versus mandate-grounding; same epsilon bin but opposite beneficiary structure"
+    },
+    {
+      "claim_id": "coordinate_construction_reading",
+      "human_readable": "Coordinate Construction Reading (Distributed Interpretive Authority)",
+      "structural_delta": "Constitutional framework read as establishing no final interpreter; interpretive authority constructed through inter-branch contestation",
+      "primary_observable": "Frequency of inter-branch interpretive conflicts; use of non-judicial mechanisms (appointments, budgets, amendments) to resolve constitutional disputes",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading selected: intermediate epsilon; neither pure supremacy claim; structurally distinct mechanism (political resolution vs legal adjudication); captures hybrid/ambiguity space"
+    },
+    {
+      "claim_id": "popular_sovereignty_reading",
+      "human_readable": "Popular Sovereignty Reading (Constitution as Revocable Delegation)",
+      "structural_delta": "Constitutional authority derives from ongoing popular consent; people retain extra-institutional interpretive authority via revolution/referendum",
+      "primary_observable": "Constitutional amendment difficulty; presence of popular referendum mechanisms; revolutionary legitimacy discourse",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "parliamentary_supremacy_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream grounding for parliamentary supremacy but lower epsilon; indirect legitimation narrative rather than direct interpretive mechanism"
+    },
+    {
+      "claim_id": "fundamental_rights_reading",
+      "human_readable": "Fundamental Rights Reading (Pre-Political Constraints)",
+      "structural_delta": "Constitutional authority limited by natural/fundamental rights existing prior to and independent of constitutional text",
+      "primary_observable": "Invocation of unenumerated rights; natural law reasoning in judicial opinions; rights discourse independence from positive law",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "rights_claimants_with_judicial_access",
+      "victim": "democratic_majorities",
+      "downstream_of": [],
+      "feeds_into": [
+        "judicial_supremacy_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: specific grounding mechanism for judicial supremacy; captured within judicial_supremacy_reading authority structure; would produce near-duplicate constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "parliamentary_supremacy_reading",
+      "kernel_id": "constitutional_interpretive_authority",
+      "reading_id": "parliamentary_supremacy_reading"
+    },
+    {
+      "claim_id": "judicial_supremacy_reading",
+      "kernel_id": "constitutional_interpretive_authority",
+      "reading_id": "judicial_supremacy_reading"
+    },
+    {
+      "claim_id": "coordinate_construction_reading",
+      "kernel_id": "constitutional_interpretive_authority",
+      "reading_id": "coordinate_construction_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "popular_sovereignty_reading",
+      "structural_delta": "Constitution as revocable delegation from popular sovereign",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream legitimation narrative for parliamentary supremacy; lower epsilon; indirect rather than operational interpretive mechanism"
+    },
+    {
+      "claim_id": "fundamental_rights_reading",
+      "structural_delta": "Pre-political rights as superior constraint on positive law",
+      "hypothesis": "snare",
+      "deferral_reason": "Specific grounding for judicial supremacy; captured within judicial_supremacy_reading authority structure; would produce structurally redundant constraint story"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_empirical_outcome_divergence",
+      "description": "Do the three readings produce measurably different coercion patterns, or only different legitimation narratives for similar state behavior? If the latter, the kernel contest is performative rather than structural.",
+      "source": "Absence Inventory (§1.1): Comparative empirical outcomes not addressed in research context"
+    },
+    {
+      "id": "omega_executive_interpretive_authority",
+      "description": "Executive branch role in interpretive contests systematically absent. Does executive possess independent interpretive authority (coordinate construction variant) or is it derivative of legislative/judicial positions?",
+      "source": "Absence Inventory (§1.1): Executive treated as background rather than independent interpreter"
+    },
+    {
+      "id": "omega_amendment_control_as_meta_reading",
+      "description": "Who controls the constitutional amendment process may be the true ultimate interpreter. If legislature controls amendment but courts control current interpretation, apparent judicial supremacy may be legislative supremacy deferred.",
+      "source": "Dark Matter Probe 2: Mechanism for kernel revision itself determines reading stability"
+    },
+    {
+      "id": "omega_reading_collapse_in_practice",
+      "description": "Empirical constitutional systems may exhibit reading drift: formal judicial supremacy systems where courts defer to legislatures (Canada notwithstanding clause underuse), or parliamentary supremacy systems with de facto judicial review (UK pre-HRA common law constitutionalism). Readings may be unstable under political pressure.",
+      "source": "Dark Matter Probe 3: Beneficiary structure suggests readings are not equilibria but contested positions subject to drift"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel/reading decomposition appropriate: readings hold axiom-contradictory positions (parliamentary vs judicial finality), would emit structurally different constraints (different beneficiary/victim sets, different extractiveness mechanisms), and share a common substrate (constitutional framework as interpretive authority source). Coordinate construction reading offers intermediate position with distinct mechanism (political rather than legal resolution)."
+  },
+  "_seed_id": "legislative_supremacy_alternative"
+}

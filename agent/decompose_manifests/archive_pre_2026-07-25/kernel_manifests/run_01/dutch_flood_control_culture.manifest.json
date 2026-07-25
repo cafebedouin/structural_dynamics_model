@@ -1,0 +1,225 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Disaster Preparedness / Institutional Memory / Commitment Systems",
+  "family_id": "dutch_flood_preparedness_generational",
+  "topic_summary": "Analysis of Dutch flood-control preparedness maintenance across non-catastrophe generations following the 1953 North Sea flood. The topic examines whether post-disaster drills and dike-inspection routines constitute genuine competence retention or memorial performance—a contested kernel where different readings of 'preparedness' emit structurally different constraints on what counts as adequate institutional memory.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "1953 North Sea Flood (catastrophic event; 1,836 deaths; founding trauma)",
+      "Rijkswaterstaat (national water authority; dike inspection administrator)",
+      "Delta Works (physical infrastructure; completed 1997)",
+      "Post-1953 drill regime (annual/biannual exercises; evacuation protocols)",
+      "Non-catastrophe generations (cohorts born post-1953 without lived flood experience)"
+    ],
+    "key_tensions": [
+      "Memorial performance vs operational competence (form vs function in preparedness)",
+      "Institutional continuity vs experiential knowledge loss (bureaucratic vs embodied memory)"
+    ],
+    "mechanisms": [
+      "Dike inspection routines (scheduled physical surveys; regulatory compliance)",
+      "Evacuation drills (simulated emergency response; public participation)",
+      "Intergenerational knowledge transfer (training programs; documentation systems)"
+    ],
+    "absences": [
+      "Measurement of drill effectiveness beyond participation rates",
+      "Comparison with other disaster-preparedness regimes that experienced generational turnover"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Post-1953 preparedness routines as the stabilized commitment to 'never again' flood catastrophe",
+    "authority_description": "Rijkswaterstaat's technical authority grounded in engineering competence and disaster-prevention mandate",
+    "drift_status": "partial",
+    "candidate_pattern": "Dynastic Succession (competence-transmission across generations) with Interpretive Tradition elements (what counts as 'prepared')",
+    "is_contested_kernel": true,
+    "kernel_id": "preparedness_commitment",
+    "readings": [
+      {
+        "reading_id": "husk_reading",
+        "commitment": "Preparedness as memorial performance—routines that feel like retention but lack operational competence",
+        "authority_grounding": "Bureaucratic continuity; ritual compliance with inspection schedules",
+        "sibling_readings": [
+          "competence_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High form-compliance, low adaptive capacity; drills become theater; D5 break manifests as competence collapse under novel stress"
+      },
+      {
+        "reading_id": "competence_reading",
+        "commitment": "Preparedness as live exercised knowledge—routines that maintain operational capacity across generations",
+        "authority_grounding": "Engineering expertise; demonstrated response capability; continuous improvement",
+        "sibling_readings": [
+          "husk_reading",
+          "hybrid_reading"
+        ],
+        "expected_structural_delta": "High adaptive capacity; drills test real decision-making; generational turnover absorbed through effective training; D5 break avoided or contained"
+      },
+      {
+        "reading_id": "hybrid_reading",
+        "commitment": "Preparedness as layered system—memorial elements stabilize commitment while competence elements maintain function",
+        "authority_grounding": "Dual legitimacy: symbolic continuity + technical performance",
+        "sibling_readings": [
+          "husk_reading",
+          "competence_reading"
+        ],
+        "expected_structural_delta": "Memorial layer prevents abandonment of preparedness; competence layer prevents catastrophic failure; tension between layers creates maintenance cost"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "husk_reading",
+      "human_readable": "Husk Reading: Preparedness as Memorial Performance",
+      "structural_delta": "Routines persist as form without operational substance; compliance theater masking competence decay",
+      "primary_observable": "Drill participation rates vs demonstrated decision-making quality under novel scenarios; inspection completion vs defect detection rates",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "bureaucratic_continuity",
+      "victim": "population_at_risk",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest epsilon (snare structure); captures D5 break mechanism"
+    },
+    {
+      "claim_id": "competence_reading",
+      "human_readable": "Competence Reading: Preparedness as Live Exercised Knowledge",
+      "structural_delta": "Routines maintain operational capacity through continuous testing and adaptation",
+      "primary_observable": "Response time improvements; novel scenario handling; intergenerational knowledge transfer effectiveness",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; structural contrast to husk (rope vs snare); different beneficiary structure"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "human_readable": "Hybrid Reading: Preparedness as Layered Memorial-Competence System",
+      "structural_delta": "Memorial and competence functions coexist in tension; symbolic continuity prevents abandonment while technical layer maintains function",
+      "primary_observable": "Resource allocation between symbolic vs functional preparedness; maintenance cost of dual-layer system",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "institutional_legitimacy",
+      "victim": "efficiency_optimization",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; synthesis position; tangled_rope captures entanglement between memorial and functional imperatives"
+    },
+    {
+      "claim_id": "physical_infrastructure_decay",
+      "human_readable": "Physical Infrastructure Decay (Delta Works Maintenance)",
+      "structural_delta": "Material degradation of flood barriers independent of institutional memory",
+      "primary_observable": "Structural integrity assessments; maintenance budget vs required investment",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "husk_reading",
+        "competence_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain providing physical constraint base but lower centrality than kernel readings; feeds into all readings as upstream context"
+    },
+    {
+      "claim_id": "climate_adaptation_pressure",
+      "human_readable": "Climate Adaptation Pressure (Sea-Level Rise & Storm Intensity)",
+      "structural_delta": "Changing threat profile requiring adaptive rather than static preparedness",
+      "primary_observable": "Projected sea-level rise vs design specifications; storm frequency/intensity trends",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "competence_reading",
+        "hybrid_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain but lower structural distinctiveness; competence reading already captures adaptive capacity dimension"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "husk_reading",
+      "kernel_id": "preparedness_commitment",
+      "reading_id": "husk_reading"
+    },
+    {
+      "claim_id": "competence_reading",
+      "kernel_id": "preparedness_commitment",
+      "reading_id": "competence_reading"
+    },
+    {
+      "claim_id": "hybrid_reading",
+      "kernel_id": "preparedness_commitment",
+      "reading_id": "hybrid_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "physical_infrastructure_decay",
+      "structural_delta": "Material degradation of Delta Works independent of institutional memory",
+      "hypothesis": "mountain",
+      "deferral_reason": "Lower centrality than kernel readings; physical constraint feeds into all readings as upstream context but does not differentiate between them"
+    },
+    {
+      "claim_id": "climate_adaptation_pressure",
+      "structural_delta": "Changing threat profile from sea-level rise and storm intensification",
+      "hypothesis": "mountain",
+      "deferral_reason": "Adaptive capacity dimension already captured by competence_reading; would add mountain context without structural novelty"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_measurement_validity",
+      "description": "Can husk vs competence be empirically distinguished before catastrophe? Drill participation rates may correlate with either reading. Novel-scenario testing required but rarely conducted.",
+      "source": "Absence Inventory (§1.1) + Independence Testing (§3)"
+    },
+    {
+      "id": "omega_comparative_baseline",
+      "description": "Is Dutch preparedness exceptional or typical for wealthy disaster-prone states? Without comparison to Japan (earthquake), California (wildfire), or Bangladesh (cyclone) preparedness regimes, cannot assess whether observed patterns are Netherlands-specific or universal to generational turnover.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_d5_trigger_threshold",
+      "description": "At what point does husk reading predict D5 break? Is it gradual competence decay or sudden revelation under novel stress? The 2021 Limburg floods (riverine, not coastal) may provide partial test case but did not stress core Delta Works system.",
+      "source": "Kernel decomposition + F34 (domain boundary)"
+    },
+    {
+      "id": "omega_hybrid_stability",
+      "description": "Is hybrid_reading stable or transitional? Memorial layer may prevent abandonment but also prevent reform. If competence layer atrophies, does memorial layer lock in husk reading, or does crisis force transition to pure competence model?",
+      "source": "Tangled_rope classification + commitment system drift_status=partial"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: Model lacks direct access to Rijkswaterstaat internal training assessments, drill effectiveness studies, or comparative disaster-preparedness literature. Husk vs competence distinction is theoretically sound but empirical validation requires domain expertise beyond training data. Generated omega_measurement_validity and omega_comparative_baseline to bound uncertainty. Kernel decomposition proceeds on structural logic but empirical claims require expert review."
+  },
+  "_seed_id": "dutch_flood_control_culture"
+}

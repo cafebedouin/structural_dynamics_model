@@ -1,0 +1,242 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Sociolinguistics / Religious Studies / Nationalism Studies",
+  "family_id": "hebrew_revival_kernel_2026",
+  "topic_summary": "Analysis of the Hebrew language revival (1880s-1948) as a contested kernel where 'Hebrew is a living language' was read under fundamentally incompatible interpretive frameworks: a liturgical-preservation reading (recitation of sacred texts constitutes linguistic life) versus a native-generational reading (only daily vernacular transmission constitutes linguistic life). The contest centers on whether symbolic preservation counts as occupying the language-life kernel or whether biological transmission is definitional.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Eliezer Ben-Yehuda (linguist, revivalist leader, 1858-1922)",
+      "Orthodox rabbinical authorities (opponents of secular Hebrew use)",
+      "Va'ad Ha-Lashon / Hebrew Language Academy (standardization body, founded 1890)",
+      "Jewish immigrant communities (Yemenite, Moroccan, Russian, Kurdish, Bukharan, European waves 1880s-1930s)",
+      "Ottoman authorities (political opposition to nationalist language project)",
+      "First Hebrew-speaking schools (educational transmission mechanism, late 19th c.)"
+    ],
+    "key_tensions": [
+      "Sacred vs. secular language use (rabbinical excommunication vs. Ben-Yehuda's daily-use advocacy)",
+      "Liturgical preservation vs. native transmission (recitation-as-life vs. mother-tongue-as-life)",
+      "Linguistic diversity vs. monolingual nationalism (Yiddish/Ladino/Arabic speakers vs. Hebrew-only policy)",
+      "Religious authority vs. secular nationalist authority (who controls Hebrew's legitimate use)"
+    ],
+    "key_mechanisms": [
+      "Three-pronged revival strategy: Hebrew in Home (first native speaker 1882), Hebrew in School (curriculum replacement), Words-Words-Words (neologism coinage for modern concepts)",
+      "Excommunication enforcement (rabbinical sanction against secular Hebrew users)",
+      "Lexical expansion via committee (Va'ad Ha-Lashon filling vocabulary gaps for electricity, trains, ice cream)"
+    ],
+    "key_absences": [
+      "No discussion of whether liturgical Hebrew transmission involved native speakers (children learning prayers) or only adult recitation",
+      "No analysis of whether the 'dormancy' claim itself reflects the native-generational reading's interpretive dominance"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The commitment 'Hebrew is a living language' — a shared substrate both parties claim to occupy but read through incompatible frameworks of what constitutes linguistic life",
+    "authority_description": "Rabbinical authority grounds legitimacy in unbroken liturgical transmission from Sinai; Zionist-nationalist authority grounds legitimacy in biological mother-tongue transmission and territorial sovereignty",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Schism (Pattern 2) — two authority structures claiming the same kernel through mutually exclusive readings, with no institutional mechanism for reconciliation",
+    "is_contested_kernel": true,
+    "kernel_id": "hebrew_linguistic_life",
+    "readings": [
+      {
+        "reading_id": "liturgical_preservation_reading",
+        "commitment": "A language is alive when its sacred texts are continuously recited, studied, and transmitted in unbroken chain regardless of vernacular use",
+        "authority_grounding": "Rabbinical tradition: linguistic life = preservation of divine revelation through ritual performance",
+        "sibling_readings": [
+          "native_generational_reading",
+          "marketplace_pidgin_reading"
+        ],
+        "expected_structural_delta": "Hebrew never died (no revival needed); Ben-Yehuda's project is desecration not resurrection; victim set = sacred tradition itself"
+      },
+      {
+        "reading_id": "native_generational_reading",
+        "commitment": "A language is alive only when children acquire it as mother tongue and use it for all daily functions including secular mundane speech",
+        "authority_grounding": "Zionist-nationalist framework: linguistic life = biological transmission + territorial vernacular sovereignty",
+        "sibling_readings": [
+          "liturgical_preservation_reading",
+          "marketplace_pidgin_reading"
+        ],
+        "expected_structural_delta": "Hebrew was dead 70-1880 CE (dormancy period real); revival required; victim set = linguistic diversity (Yiddish/Ladino speakers coerced into abandonment)"
+      },
+      {
+        "reading_id": "marketplace_pidgin_reading",
+        "commitment": "A language is alive when it functions as inter-communal medium for practical coordination regardless of native speaker status or sacred function",
+        "authority_grounding": "Pragmatic-functionalist: linguistic life = communicative utility in multi-lingual contact zones",
+        "sibling_readings": [
+          "liturgical_preservation_reading",
+          "native_generational_reading"
+        ],
+        "expected_structural_delta": "Hebrew was continuously alive in Jerusalem markets pre-1880 as modified Medieval Hebrew pidgin; neither pure preservation nor pure revival but continuous adaptation"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "liturgical_preservation_reading",
+        "reading_b": "native_generational_reading",
+        "basis": "No single coherent framework can hold both 'ritual recitation constitutes linguistic life' and 'only mother-tongue transmission constitutes linguistic life' — accepting one axiom requires rejecting the other as definitionally false"
+      },
+      {
+        "reading_a": "marketplace_pidgin_reading",
+        "reading_b": "native_generational_reading",
+        "basis": "Functionalist framework (life = utility) and nativist framework (life = biological transmission) are mutually exclusive — a pidgin with no native speakers is alive under one axiom, dead under the other"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "liturgical_preservation_reading",
+      "human_readable": "Liturgical Preservation Reading (Ritual Recitation as Linguistic Life)",
+      "structural_delta": "Unbroken chain of liturgical transmission from 2nd c. CE to present constitutes continuous linguistic life; secular use is category error not revival",
+      "primary_observable": "Continuity of prayer book transmission, yeshiva enrollment, ritual Hebrew fluency rates across diaspora",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rabbinical_authority_structure",
+      "victim": "secular_nationalist_legitimacy",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading in kernel contest; establishes baseline for what counts as linguistic death/life"
+    },
+    {
+      "claim_id": "native_generational_reading",
+      "human_readable": "Native Generational Reading (Mother-Tongue Transmission as Linguistic Life)",
+      "structural_delta": "Language death occurred when last native speakers died (~200 CE); revival required deliberate reconstruction of vernacular transmission 1880-1948",
+      "primary_observable": "First native speaker birth (Ben-Zion Ben-Yehuda 1882), school curriculum adoption rates, census data on Hebrew as home language",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "zionist_nationalist_movement",
+      "victim": "linguistic_diversity_yiddish_ladino",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading in kernel contest; dominant historiographic frame; directly contradicts reading 1"
+    },
+    {
+      "claim_id": "marketplace_pidgin_reading",
+      "human_readable": "Marketplace Pidgin Reading (Functional Utility as Linguistic Life)",
+      "structural_delta": "Hebrew functioned continuously as inter-communal contact language in Jerusalem markets pre-1880; neither pure death nor pure revival but adaptive continuity",
+      "primary_observable": "19th c. traveler accounts of market Hebrew use, modified Medieval Hebrew documentation, multilingual transaction records",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading; challenges binary dead/alive framing; lower ε but structurally distinct observable (pragmatic function vs. ritual/biological)"
+    },
+    {
+      "claim_id": "lexical_expansion_mechanism",
+      "human_readable": "Lexical Expansion Mechanism (Neologism Coinage as State-Building)",
+      "structural_delta": "Deliberate vocabulary creation (electricity, train, ice cream) as mechanism to make Hebrew viable for modern statehood",
+      "primary_observable": "Va'ad Ha-Lashon neologism production rate 1890-1948, adoption rates in schools/press",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "native_generational_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream implementation detail of native_generational_reading; scaffold not constraint"
+    },
+    {
+      "claim_id": "excommunication_enforcement",
+      "human_readable": "Excommunication Enforcement (Rabbinical Sanction as Boundary Maintenance)",
+      "structural_delta": "Rabbinical excommunication of Ben-Yehuda as mechanism to enforce liturgical-only boundary",
+      "primary_observable": "Excommunication records, HaZvi newspaper closure 1893, ultra-Orthodox community size/influence",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "rabbinical_authority",
+      "victim": "secular_hebrew_users",
+      "downstream_of": [
+        "liturgical_preservation_reading"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: enforcement mechanism of liturgical_preservation_reading; captured in that reading's constraint story"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "liturgical_preservation_reading",
+      "kernel_id": "hebrew_linguistic_life",
+      "reading_id": "liturgical_preservation_reading"
+    },
+    {
+      "claim_id": "native_generational_reading",
+      "kernel_id": "hebrew_linguistic_life",
+      "reading_id": "native_generational_reading"
+    },
+    {
+      "claim_id": "marketplace_pidgin_reading",
+      "kernel_id": "hebrew_linguistic_life",
+      "reading_id": "marketplace_pidgin_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "lexical_expansion_mechanism",
+      "structural_delta": "Neologism coinage as state-building mechanism",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Implementation detail downstream of native_generational_reading; scaffold not constraint; captured in reading 2's story"
+    },
+    {
+      "claim_id": "excommunication_enforcement",
+      "structural_delta": "Rabbinical sanction as boundary enforcement",
+      "hypothesis": "snare",
+      "deferral_reason": "Enforcement mechanism of liturgical_preservation_reading; extractiveness captured in reading 1's constraint story"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_dormancy_framing",
+      "description": "Is the 'dormancy period' (70-1880 CE) itself a product of the native_generational_reading's interpretive dominance? If liturgical_preservation_reading is valid, there was no dormancy — only a category error by historians adopting nativist axioms.",
+      "source": "Absence Inventory (§1.1) + kernel contest structure"
+    },
+    {
+      "id": "omega_child_liturgical_transmission",
+      "description": "Did liturgical Hebrew involve native child acquisition (learning prayers as first language) or only adult recitation? If children learned liturgical Hebrew natively, the readings may partially collapse — ritual transmission could satisfy biological transmission criterion.",
+      "source": "Absence Inventory (§1.1) + Independence Testing (§3)"
+    },
+    {
+      "id": "omega_pidgin_native_boundary",
+      "description": "At what point does a pidgin become a native language? If marketplace Hebrew had second-generation speakers using it as primary home language, marketplace_pidgin_reading and native_generational_reading may not be structurally distinct.",
+      "source": "Independence Testing (§3.1) — potential Type A overlap"
+    },
+    {
+      "id": "omega_authority_legitimacy_grounding",
+      "description": "What grounds the authority of either reading to adjudicate 'linguistic life'? Rabbinical authority claims unbroken chain from Sinai; Zionist authority claims territorial sovereignty. Neither has neutral epistemic standing — both are political claims dressed as linguistic ones.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_strict_reachability_break",
+      "description": "User flagged 'D1 strict-reachability break' context. If this refers to a discontinuity in transmission chain, it may invalidate liturgical_preservation_reading's continuity claim — but only if 'reachability' is defined under native_generational axioms. Kernel contest may be about what counts as reachability itself.",
+      "source": "User prompt context + F01 (Premise Drift) check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": true,
+    "notes": "F01 detected: User's 'D1 strict-reachability break' context may assume native_generational_reading's axioms (transmission chain discontinuity = death). If liturgical_preservation_reading is valid, there is no reachability break — only a category error. Generated omega_strict_reachability_break to flag this interpretive dependency. Kernel contest is precisely about what 'reachability' means."
+  },
+  "_seed_id": "modern_hebrew_revival"
+}

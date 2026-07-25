@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Constitutional Law / Indigenous Rights / Post-Colonial Governance",
+  "family_id": "waitangi_sovereignty_conflict",
+  "topic_summary": "Analysis of the Treaty of Waitangi sovereignty dispute arising from textual divergences between the 1840 English and Māori versions. The English text purports to cede sovereignty (kāwanatanga) to the Crown, while the Māori text guarantees rangatiratanga (chieftainship/authority) to Māori chiefs. This generates structurally incompatible readings of constitutional authority allocation in New Zealand/Aotearoa.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Treaty of Waitangi 1840 (founding constitutional document with divergent English/Māori texts)",
+      "British Crown/New Zealand Government (constitutional authority claiming sovereignty transfer)",
+      "Māori iwi/hapū (tribal groups asserting retained rangatiratanga)",
+      "Waitangi Tribunal (statutory body adjudicating treaty breaches since 1975)",
+      "Article II Treaty guarantee (protection of tino rangatiratanga in Māori text)",
+      "Westminster parliamentary sovereignty doctrine (inherited constitutional framework)"
+    ],
+    "key_tensions": [
+      "Sovereignty/kāwanatanga (English text) vs rangatiratanga (Māori text) — incompatible authority claims",
+      "Crown prerogative vs Treaty partnership doctrine — statutory vs constitutional authority grounding"
+    ],
+    "key_mechanisms": [
+      "Waitangi Tribunal recommendations (non-binding advisory with moral/political force)",
+      "Treaty settlements process (Crown negotiates redress with iwi for historical breaches)",
+      "Judicial treaty interpretation (courts incrementally incorporate treaty principles into common law)"
+    ],
+    "key_absences": [
+      "Constitutionally entrenched treaty supremacy clause (NZ has no written constitution requiring parliamentary treaty compliance)",
+      "Māori ratification of English sovereignty transfer (signatures obtained on Māori text promising rangatiratanga retention)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "crown_sovereignty_reading",
+      "human_readable": "Crown Sovereignty Reading (Full Sovereignty Transfer via Cession)",
+      "structural_delta": "English text Article I cedes 'all rights and powers of sovereignty' to Crown, interpreted as complete constitutional authority transfer establishing Westminster parliamentary supremacy",
+      "primary_observable": "Judicial and parliamentary assertions of plenary legislative power; Crown prerogative exercise without Māori consent requirement",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "crown_settler_institutions",
+      "victim": "maori_self_governance",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Core reading instantiating centralized sovereignty constraint; establishes baseline against which partnership/rangatiratanga readings diverge"
+    },
+    {
+      "claim_id": "partnership_reading",
+      "human_readable": "Partnership Reading (Shared Sovereignty via Treaty Principles)",
+      "structural_delta": "Courts and Tribunal develop 'principles of the Treaty' doctrine bridging textual divergences, asserting Crown-Māori partnership requiring good faith consultation and active protection of Māori interests",
+      "primary_observable": "Waitangi Tribunal findings; judicial incorporation of treaty principles into statutory interpretation; consultation requirements in resource management",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": "treaty_settlement_framework",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Institutional compromise reading with moderate extractiveness; coexists with Crown reading in practice while moderating its application"
+    },
+    {
+      "claim_id": "rangatiratanga_reading",
+      "human_readable": "Rangatiratanga Reading (Retained Indigenous Authority)",
+      "structural_delta": "Māori text Article II guarantees tino rangatiratanga (full chieftainship/authority) over lands, resources, and taonga, interpreted as retained indigenous sovereignty with Crown gaining kāwanatanga (governorship) limited to settler population",
+      "primary_observable": "Māori sovereignty movement assertions; iwi-based governance structures; resistance to Crown resource allocation decisions",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "maori_self_determination",
+      "victim": "crown_resource_control",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Core oppositional reading with highest structural distinctiveness; foundational axiom incompatible with Crown sovereignty reading"
+    },
+    {
+      "claim_id": "colonial_translation_mechanism",
+      "human_readable": "Colonial Translation Mechanism (Textual Divergence as Extraction)",
+      "structural_delta": "English negotiators deliberately used 'kāwanatanga' (governorship) rather than available terms for sovereignty, obtaining Māori signatures on text promising rangatiratanga retention while claiming full sovereignty transfer in English version",
+      "primary_observable": "Missionary translator correspondence; comparative analysis of available Māori sovereignty terms; signing patterns and Māori understanding evidence",
+      "epsilon_bin": "v_low",
+      "hypothesis": "snare",
+      "beneficiary": "crown_treaty_negotiators",
+      "victim": "treaty_signing_chiefs",
+      "downstream_of": [],
+      "feeds_into": [
+        "crown_sovereignty_reading"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical mechanism axis explaining kernel divergence; captured in kernel recognition structure"
+    },
+    {
+      "claim_id": "parliamentary_supremacy_constraint",
+      "human_readable": "Parliamentary Supremacy Constraint (Westminster Constitutional Import)",
+      "structural_delta": "Inherited Westminster doctrine of unlimited parliamentary legislative power structurally incompatible with entrenched treaty obligations, preventing constitutional hierarchy that would bind Parliament to treaty terms",
+      "primary_observable": "Absence of constitutional entrenchment provisions; judicial deference to parliamentary sovereignty; failed constitutional reform proposals",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "crown_sovereignty_reading",
+        "partnership_reading"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: constitutional mountain constraining all readings; affects extractiveness of Crown reading but is not itself contested kernel dimension"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "crown_sovereignty_reading",
+      "kernel_id": "waitangi_sovereignty_allocation",
+      "reading_id": "crown_sovereignty_reading"
+    },
+    {
+      "claim_id": "partnership_reading",
+      "kernel_id": "waitangi_sovereignty_allocation",
+      "reading_id": "partnership_reading"
+    },
+    {
+      "claim_id": "rangatiratanga_reading",
+      "kernel_id": "waitangi_sovereignty_allocation",
+      "reading_id": "rangatiratanga_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "colonial_translation_mechanism",
+      "structural_delta": "Textual divergence as deliberate extraction mechanism",
+      "hypothesis": "snare",
+      "deferral_reason": "Historical mechanism explaining kernel divergence; captured in kernel recognition structure rather than requiring separate constraint story"
+    },
+    {
+      "claim_id": "parliamentary_supremacy_constraint",
+      "structural_delta": "Westminster constitutional doctrine preventing treaty entrenchment",
+      "hypothesis": "mountain",
+      "deferral_reason": "Constitutional mountain affecting all readings but not itself contested; operates as background constraint rather than reading dimension"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_tribunal_binding_status",
+      "description": "Waitangi Tribunal recommendations are non-binding. If they became legally enforceable, Partnership reading would strengthen toward Rangatiratanga reading's extractiveness profile, potentially reclassifying it from Rope to Tangled_Rope.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — institutional structure analysis"
+    },
+    {
+      "id": "omega_constitutional_entrenchment",
+      "description": "If NZ adopted a written constitution entrenching treaty supremacy over Parliament, Parliamentary Supremacy mountain would convert to Piton (policy choice), radically increasing enforceability of all readings except Crown Sovereignty.",
+      "source": "Absence Inventory (no constitutional entrenchment provision) + deferred axis parliamentary_supremacy_constraint"
+    },
+    {
+      "id": "omega_textual_reconciliation",
+      "description": "All three readings assume textual divergence is irreconcilable. If authoritative Māori-language interpretation became legally binding (e.g., contra proferentem doctrine applied consistently), Crown and Partnership readings would collapse toward Rangatiratanga reading.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from maintaining divergence as unresolved"
+    },
+    {
+      "id": "omega_international_law_evolution",
+      "description": "UNDRIP adoption and evolving indigenous rights norms may reclassify Crown Sovereignty reading from domestically legitimate to internationally illegitimate, increasing its extractiveness bin if international law enforcement mechanisms develop.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) — international indigenous rights framework"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Kernel decomposition applied successfully with three structurally distinct readings maintaining independent epsilon profiles and beneficiary/victim structures. Colonial Translation Mechanism deferred as historical explanation rather than contested reading dimension."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The Treaty of Waitangi 1840 serves as stabilized founding commitment for New Zealand constitutional authority, with textual divergence between English sovereignty-cession language and Māori rangatiratanga-retention language creating structurally incompatible authority allocations",
+    "authority_description": "Interpretive legitimacy contested between Crown (parliamentary sovereignty via English text), Waitangi Tribunal (partnership principles via reconciliation doctrine), and iwi (rangatiratanga via Māori text primacy)",
+    "drift_status": "partial",
+    "candidate_pattern": "Dual_Sovereignty_Trap",
+    "is_contested_kernel": true,
+    "kernel_id": "waitangi_sovereignty_allocation",
+    "readings": [
+      {
+        "reading_id": "crown_sovereignty_reading",
+        "commitment": "English Article I ceded complete sovereignty to Crown establishing Westminster parliamentary supremacy",
+        "authority_grounding": "Crown prerogative and parliamentary sovereignty doctrine; English text as authoritative version",
+        "sibling_readings": [
+          "partnership_reading",
+          "rangatiratanga_reading"
+        ],
+        "expected_structural_delta": "Crown exercises plenary legislative power without Māori consent requirement; unilateral resource allocation; Māori interests subordinated to parliamentary will",
+        "epsilon_estimate": "high",
+        "beneficiary": "crown_settler_institutions",
+        "victim": "maori_self_governance"
+      },
+      {
+        "reading_id": "partnership_reading",
+        "commitment": "Treaty established ongoing Crown-Māori partnership requiring good faith consultation and active protection of Māori interests despite textual ambiguity",
+        "authority_grounding": "Waitangi Tribunal principles doctrine; judicial incorporation into statutory interpretation; political negotiation framework",
+        "sibling_readings": [
+          "crown_sovereignty_reading",
+          "rangatiratanga_reading"
+        ],
+        "expected_structural_delta": "Consultation requirements moderate Crown power; Treaty settlements provide redress; principles doctrine constrains but does not override parliamentary sovereignty",
+        "epsilon_estimate": "mod",
+        "beneficiary": "treaty_settlement_framework",
+        "victim": null
+      },
+      {
+        "reading_id": "rangatiratanga_reading",
+        "commitment": "Māori text Article II retained tino rangatiratanga (full authority) over lands, resources, and taonga, with Crown gaining only kāwanatanga (governorship) over settlers",
+        "authority_grounding": "Māori text primacy (signed version); indigenous rights under international law; iwi-based governance legitimacy",
+        "sibling_readings": [
+          "crown_sovereignty_reading",
+          "partnership_reading"
+        ],
+        "expected_structural_delta": "Māori possess inherent authority over traditional territories and resources; Crown jurisdiction limited to non-Māori populations; co-governance or independent governance structures required",
+        "epsilon_estimate": "high",
+        "beneficiary": "maori_self_determination",
+        "victim": "crown_resource_control"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "crown_sovereignty_reading",
+        "reading_b": "rangatiratanga_reading",
+        "basis": "Crown reading's foundational axiom (complete sovereignty transfer extinguished indigenous authority) is mutually exclusive with Rangatiratanga reading's axiom (indigenous authority retained, Crown jurisdiction limited to settlers). No single constitutional framework can simultaneously hold both sovereignty as fully transferred and sovereignty as retained."
+      }
+    ]
+  },
+  "_seed_id": "treaty_of_waitangi"
+}

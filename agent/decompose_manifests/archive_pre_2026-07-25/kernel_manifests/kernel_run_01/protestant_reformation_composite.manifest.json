@@ -1,0 +1,211 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Historical Sociology / Religious Studies / Political Economy",
+  "family_id": "reformation_composite_event",
+  "topic_summary": "Analysis of the Protestant Reformation (1517-1648) as a composite event exhibiting simultaneous climb, drop, swap, and emergence patterns. The research context frames this as a test case for whether a single kernel with contested readings can accommodate structural overdetermination, or whether the event resists kernel decomposition entirely due to multiple independent causal chains converging without shared substrate.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 5,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Martin Luther (primary reformer, 95 Theses 1517)",
+      "John Calvin (second-generation reformer, institutional architect)",
+      "Catholic Church / Papacy (incumbent authority structure)",
+      "Holy Roman Empire (political container, Charles V)",
+      "Printing press (technological enabler)",
+      "Anabaptists (radical variant, adult baptism)",
+      "Counter-Reformation (Catholic institutional response 1545-1700)",
+      "Treaty of Westphalia 1648 (terminal boundary, cuius regio principle)"
+    ],
+    "key_tensions": [
+      "Doctrinal unity vs denominational fragmentation (reformers could not agree on fundamentals despite shared opposition)",
+      "Religious reform vs political opportunism (rulers weaponized theology for territorial control)",
+      "Scriptural authority vs papal authority (swap of legitimation source)",
+      "Centralized church governance vs local autonomy (Luther's princely model vs Calvin's presbyterian model)",
+      "Theological purity vs survival pragmatism (Anabaptist persecution, cuius regio compromises)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "NOT A SINGLE KERNEL. The Reformation exhibits structural overdetermination: multiple independent causal chains (theological dissent, printing technology, mercantile interests, nationalist fragmentation, anticlerical sentiment) converge without a shared commitment substrate that all parties read differently. The event is composite rather than contested.",
+    "authority_description": "Multiple competing authority structures emerge simultaneously: scriptural literalism (Luther), institutional presbyterianism (Calvin), princely supremacy (Henry VIII), radical congregationalism (Anabaptists). No single interpretive framework adjudicates legitimacy across all variants.",
+    "drift_status": "not_applicable",
+    "candidate_pattern": "none_composite_event",
+    "is_contested_kernel": false,
+    "collapse_analysis": "Initial hypothesis: Reformation as contested kernel with readings (papal_continuity, scriptural_primacy, radical_autonomy). Collapse detected: these are not different readings of one shared commitment but structurally independent movements with different beneficiaries, victims, and causal mechanisms. Luther's sola scriptura and Calvin's institutional presbyterianism do not interpret the same kernel—they instantiate different authority structures from different starting points. The Anabaptist rejection of infant baptism is orthogonal to both. Temporal ambiguity (1400-1750 vs 1517-1648 vs 1517-1685) signals absence of event-kernel boundary. Reformers' inability to achieve doctrinal unity despite shared opposition to Rome confirms: no shared substrate exists to be read differently. The Reformation is a composite of overlapping but structurally independent constraint transformations, not a single kernel with contested readings."
+  },
+  "axes": [
+    {
+      "claim_id": "printing_press_diffusion",
+      "human_readable": "Printing Press as Diffusion Accelerant",
+      "structural_delta": "Technological capacity to mass-produce vernacular texts bypassing clerical gatekeeping",
+      "primary_observable": "Publication counts of vernacular Bibles and pamphlets 1450-1600; literacy rates in Protestant vs Catholic regions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "scriptural_authority_swap",
+        "denominational_fragmentation",
+        "cuius_regio_extraction"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain enabling all downstream transformations; structurally independent of theological content"
+    },
+    {
+      "claim_id": "scriptural_authority_swap",
+      "human_readable": "Scriptural Authority Swap (Papal to Textual Legitimation)",
+      "structural_delta": "Shift from papal interpretive monopoly to direct scriptural access as legitimation source",
+      "primary_observable": "Frequency of sola scriptura claims in theological texts; decline in papal bull citations as authority",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "literate_laity",
+      "victim": "clerical_interpretive_monopoly",
+      "downstream_of": [
+        "printing_press_diffusion"
+      ],
+      "feeds_into": [
+        "denominational_fragmentation"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Central swap mechanism with distinct observable from fragmentation; downstream synthesis of technological and theological axes"
+    },
+    {
+      "claim_id": "denominational_fragmentation",
+      "human_readable": "Denominational Fragmentation (Doctrinal Divergence Under Shared Opposition)",
+      "structural_delta": "Inability to maintain unified Protestant movement despite shared anti-papal stance",
+      "primary_observable": "Number of distinct Protestant denominations by 1648; failed unity conferences (Luther-Erasmus 1524-25, Marburg Colloquy 1529)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "local_ecclesiastical_authorities",
+      "victim": "pan_protestant_unity",
+      "downstream_of": [
+        "scriptural_authority_swap",
+        "printing_press_diffusion"
+      ],
+      "feeds_into": [
+        "cuius_regio_extraction"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; captures the drop pattern; downstream of both selected axes with distinct victim structure"
+    },
+    {
+      "claim_id": "cuius_regio_extraction",
+      "human_readable": "Cuius Regio Eius Religio (Princely Extraction via Confessional Control)",
+      "structural_delta": "Territorial rulers weaponize religious affiliation to extract loyalty, land, and revenue from subjects",
+      "primary_observable": "Treaty of Augsburg 1555 and Westphalia 1648 provisions; frequency of forced conversions and expulsions",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "territorial_princes",
+      "victim": "religious_minorities_subjects",
+      "downstream_of": [
+        "denominational_fragmentation",
+        "printing_press_diffusion"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: political extraction axis with high epsilon but captured indirectly via denominational_fragmentation's victim structure and scriptural_authority_swap's beneficiary shift"
+    },
+    {
+      "claim_id": "counter_reformation_containment",
+      "human_readable": "Counter-Reformation as Containment Strategy",
+      "structural_delta": "Catholic institutional response (Council of Trent 1545-63) attempts to absorb reform pressure without ceding authority",
+      "primary_observable": "Jesuit expansion rates; Index Librorum Prohibitorum enforcement; reconversion statistics in contested territories",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "scriptural_authority_swap"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: reactive mechanism with moderate epsilon; structural response rather than independent causal axis"
+    },
+    {
+      "claim_id": "anabaptist_radical_margin",
+      "human_readable": "Anabaptist Radicalism as Structural Outlier",
+      "structural_delta": "Adult baptism requirement and congregational autonomy as orthogonal to magisterial Reformation",
+      "primary_observable": "Persecution rates of Anabaptists; survival of Mennonite/Hutterite communities; rejection by both Catholic and Protestant authorities",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "anabaptist_communities",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structurally independent variant with low centrality; marginal phenomenon despite theological significance"
+    }
+  ],
+  "generation_sequence": [
+    "printing_press_diffusion",
+    "scriptural_authority_swap",
+    "denominational_fragmentation"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "cuius_regio_extraction",
+      "structural_delta": "Territorial rulers weaponize religious affiliation for extraction",
+      "hypothesis": "snare",
+      "deferral_reason": "Political extraction captured indirectly via denominational_fragmentation victim structure; high epsilon but redundant with selected axes"
+    },
+    {
+      "claim_id": "counter_reformation_containment",
+      "structural_delta": "Catholic institutional response attempts absorption without authority concession",
+      "hypothesis": "rope",
+      "deferral_reason": "Reactive mechanism rather than independent causal axis; moderate epsilon but lower structural priority"
+    },
+    {
+      "claim_id": "anabaptist_radical_margin",
+      "structural_delta": "Adult baptism and congregational autonomy orthogonal to magisterial Reformation",
+      "hypothesis": "piton",
+      "deferral_reason": "Structurally independent but marginal phenomenon; low centrality despite theological distinctiveness"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_composite_not_kernel",
+      "description": "The Reformation resists kernel decomposition because it is overdetermined: multiple independent causal chains (technological, theological, political, economic) converge without a shared commitment substrate. Luther's scriptural primacy, Calvin's institutional presbyterianism, and Anabaptist congregationalism are not different readings of one kernel but structurally independent movements. The inability of reformers to achieve doctrinal unity despite shared opposition confirms absence of shared substrate. This is a composite event, not a contested kernel.",
+      "source": "§1.3-K kernel/reading test; collapse analysis in commitment_system_recognition"
+    },
+    {
+      "id": "omega_temporal_boundary",
+      "description": "Temporal ambiguity (1400-1750 vs 1517-1648 vs 1517-1685) signals absence of event-kernel boundary. If the Reformation has no agreed start/end dates, it may be a historiographic construct rather than a discrete structural transformation. The 1517-1648 framing privileges Luther and Westphalia but obscures earlier dissent (Hus, Wycliffe) and later consolidation (Edict of Nantes revocation 1685).",
+      "source": "Extraction phase temporal ambiguity; Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_mercantile_anticlerical_substrate",
+      "description": "Research context notes 'currents of nationalism, mercantilism, anticlericalism' beginning in late 14th century. These may constitute independent axes (mercantile_interest_alignment, anticlerical_sentiment) with their own epsilon values, deferred due to insufficient observables in provided research. If mercantile interests drove Reformation adoption independently of theology, the scriptural_authority_swap axis may misattribute causation.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan); extraction phase mechanism identification"
+    },
+    {
+      "id": "omega_thirty_years_war_causation",
+      "description": "Research states Thirty Years' War 'informed, though did not cause' by Protestant-Catholic tensions. If religious conflict was pretext rather than cause (political rivalry primary), then denominational_fragmentation may be downstream of cuius_regio_extraction rather than upstream. Causal arrow direction uncertain; affects constraint graph topology.",
+      "source": "Extraction phase tension identification; §3 independence testing edge ambiguity"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: printing_press_diffusion classified as mountain (technological constraint) but may be piton (policy choice to not suppress printing). Catholic Church had capacity to ban vernacular Bibles (Index Librorum Prohibitorum) but enforcement varied by region. If suppression was feasible but not executed, the axis is a rope of institutional choice rather than a mountain of technological inevitability. Generated omega_composite_not_kernel to document kernel decomposition failure. Generated omega_mercantile_anticlerical_substrate to flag under-extraction of economic causal chains."
+  },
+  "_seed_id": "protestant_reformation_composite"
+}
