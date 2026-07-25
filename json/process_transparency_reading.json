@@ -1,0 +1,333 @@
+{
+  "header": {
+    "constraint_id": "process_transparency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "24191bbc-0e81-4992-a55d-fe59719db7a2"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.31,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.45,
+    "claimed_type": "scaffold",
+    "human_readable": "Process Transparency Reading — Coupled Readable-Output + Disclosed-Process Norm",
+    "topic_domain": "epistemics_of_cooperation/signaling_theory/authorship_attribution",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "disclosure_infrastructure_operators",
+      "institutional_reviewers",
+      "credited_primary_authors"
+    ],
+    "victims": [
+      "uncredited_contributors",
+      "contexts_without_disclosure_infrastructure",
+      "authors_subject_to_gamed_provenance_records"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "disclosure_infrastructure_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build and administer the revision-history, contribution-statement, and process-log systems that constitute the 'record' half of the pair. They set the schema for what counts as an adequate trace, decide what is auditable, and their tooling becomes the de facto standard other institutions adopt. They collect authority and often licensing revenue from operating the infrastructure that legitimacy now routes through."
+    },
+    {
+      "name": "credited_primary_authors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Produce the smoothed, legible surface text and are named as primary authors in the disclosed process trace. Benefit from both the readability of the output (their work is legible and citable) and the credit-preservation function of the record (their labor is visible in the trace). Must maintain compliant revision histories to keep this benefit, which is a real but bearable cost."
+    },
+    {
+      "name": "uncredited_contributors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Provide editing, translation, ghost-drafting, or structural labor that the smoothing process erases from the surface text. In principle the parallel record is supposed to preserve their contribution, but in practice contribution-statement categories are often controlled by others, or the labor falls into categories the schema doesn't recognize (informal feedback, uncredited structural rewrites). Their exit is to stop contributing or to contest categorization after the fact, both costly."
+    },
+    {
+      "name": "institutional_reviewers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Journals, funding bodies, and hiring committees that adjudicate authorship disputes and credit allocation by consulting the disclosed trace rather than re-litigating the smoothed text. Gain a lower-cost adjudication mechanism and offload the burden of verifying authorship onto the trace's existence, without needing to verify the trace's actual fidelity in most cases."
+    },
+    {
+      "name": "contexts_without_disclosure_infrastructure",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Small labs, independent writers, informal collaborations in low-resource settings, or fast-moving contexts (breaking journalism, rapid open-source patches) that cannot afford or don't have access to the tooling that produces auditable revision histories and contribution statements. Their smoothed outputs are treated as suspect or non-legitimate by the coupled standard even when the underlying collaboration was genuinely fair, because they cannot produce the required parallel record."
+    },
+    {
+      "name": "authors_subject_to_gamed_provenance_records",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work under co-authors, supervisors, or institutions that fabricate or selectively curate contribution statements and revision histories — crediting themselves for work they didn't do or omitting others' contributions strategically. Because legitimacy is now anchored to the trace rather than direct testimony, a falsified trace is harder to contest than a falsified claim would have been under the old single-artifact regime; the coupling raises the stakes of gaming the record without proportionally raising the cost of gaming it."
+    },
+    {
+      "name": "readers_and_downstream_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Consume the smoothed, legible surface text for its intended purpose (reading, building on, citing) without needing to parse the raw authorship trace unless a dispute arises. Gain readability without losing the option to check provenance later if something looks wrong — a real coordination benefit from the decoupling."
+    },
+    {
+      "name": "auditors_and_replication_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Examine the disclosed process logs to assess whether the coupling is functioning as intended — whether traces are genuine, complete, and resistant to gaming — and can surface cases where the record itself has become theater."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the genuine tension between two goods that trade off against each other in a single artifact: readability (which requires smoothing, compression, editorial unification) and attributive fairness (which requires preserving the messy, multi-hand record of who actually did what). By splitting them into a coupled pair — smoothed surface plus disclosed process trace — both goods can be had without forcing a single document to serve both purposes badly.",
+    "transfer_function": "Moves interpretive authority and adjudicative burden from direct scrutiny of the artifact's raw text (which no longer needs to preserve every hand) to scrutiny of a separate, parallel trace. This shifts real power toward whoever controls the schema and tooling for that trace — disclosure infrastructure operators and the institutions that consult it — and shifts real risk onto contributors whose labor doesn't map cleanly onto the trace's categories, or who lack access to the tooling that produces a trace credible enough to be believed.",
+    "absent_voices": "Contributors whose labor is informal, uncategorized, or occurs in low-resource contexts without disclosure tooling are structurally underrepresented in the design of the trace schema itself — the categories were built by and for institutions that already had revision-control and contribution-statement infrastructure. They would object that the coupling, meant to protect them, instead requires them to translate their labor into a format they had no say in designing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the coupled requirement vanished, institutions would revert to either pure surface-text adjudication (legibility_primacy) or pure raw-draft preservation (authorial_primacy), each with different winners; disclosure infrastructure operators would lose their gatekeeping role, credited primary authors would lose a credit-preservation mechanism, and uncredited contributors would lose (or, depending on how bad the current gaming is, possibly regain leverage in) the only formal channel currently available to contest erasure.",
+    "founding_problem": "Two failure modes were each visible and costly on their own: purely smoothed artifacts erased real contributions (especially from junior collaborators, editors, and translators), while purely raw, unsmoothed drafts were unreadable and made legitimate authorship claims illegible to outside evaluators. The coupling was built to solve both at once without forcing institutions to choose.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Disclosure infrastructure operators and institutional reviewers attest the founding problem remains live and the coupling is functioning as designed. Independent audits by replication researchers and reporting from uncredited-contributor advocacy groups — sources outside the beneficiary set — attest that in a substantial fraction of cases the trace has become a compliance artifact: revision histories are curated post hoc, contribution statements are drafted by the credited authors themselves rather than negotiated, and contexts without tooling access are treated as presumptively less legitimate regardless of actual collaborative fairness."
+  },
+  "gain_flow": "disclosure_infrastructure_operators",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.31
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the process-transparency reading of the cooperative-artifact-legitimacy kernel: the dilemma between legible surface text and authorial-preserving raw draft is not resolved by choosing one, but dissolved by decoupling them into a smoothed artifact plus a parallel disclosed trace (revision histories, contribution statements, process logs). Legitimacy attaches to the coupled pair, not to either half alone. This is meant, structurally, as a scaffold move — it converts a standing tension into an auditable side-channel with the intent of eventually normalizing genuinely fair, low-friction disclosure practice. But it does not eliminate the underlying extraction risk; it relocates it. Whoever controls the disclosure schema and tooling becomes a new gatekeeper, and any context lacking that tooling — or any actor willing to fabricate the trace — inherits a new, harder-to-contest failure mode. The sibling readings (legibility_primacy_reading: legitimacy attaches to the smoothed surface alone; authorial_primacy_reading: legitimacy attaches to the raw, unsmoothed authored record alone) are NOT represented here; each is a separate constraint with its own ε, beneficiaries, and victims, linked via network.affects_constraints.",
+    "key_agents": [
+      "disclosure_infrastructure_operators: primary agenda_setter and gain_flow target — designs and administers the trace schema",
+      "credited_primary_authors: beneficiary of both halves of the coupling, bears compliance cost",
+      "uncredited_contributors: payer — labor erased from surface, imperfectly captured by trace categories they didn't design",
+      "institutional_reviewers: beneficiary — offload adjudication burden onto trace existence rather than trace fidelity",
+      "contexts_without_disclosure_infrastructure: payer — presumptively delegitimized for lacking tooling access, independent of actual fairness",
+      "authors_subject_to_gamed_provenance_records: payer — harder to contest a falsified trace than a falsified direct claim",
+      "auditors_and_replication_researchers: analytical observer — surfaces theater in the trace itself"
+    ],
+    "logic_rationale": "Extractiveness starts moderate-low (0.22) reflecting a genuinely functional coordination mechanism at founding, and rises to 0.42 over the interval as the disclosure infrastructure matures into a gatekeeping layer with its own rents (tooling licensing, credentialing of 'adequate' trace formats, institutional dependency on specific vendors). Theater ratio rises more sharply (0.14 to 0.38) because as the requirement institutionalizes, an increasing share of trace production becomes compliance behavior — post-hoc curated revision histories, contribution statements drafted unilaterally by the credited party rather than negotiated — rather than a genuine record of collaborative process. Suppression stays comparatively low and rises only modestly (0.20 to 0.31): the mechanism does not primarily depend on coercion to persist, it depends on institutional adoption and the switching cost of alternative adjudication norms, which is a softer form of lock-in than active suppression.",
+    "directionality_logic": "Disclosure infrastructure operators sit closest to the full-beneficiary end: they set the schema, and control over the schema is what the transfer function moves power toward. Credited primary authors are net beneficiaries with a real but bearable compliance cost. Uncredited contributors and contexts without tooling access sit closest to the full-target end: they bear the costs of a system built to protect them but designed without their input, and their exit options are trapped or constrained because opting out of the disclosure norm now reads as itself suspicious. Authors subject to gamed provenance records are a distinct victim class — their exit is constrained because contesting a fabricated trace requires exactly the kind of institutional standing the trace itself was supposed to make unnecessary.",
+    "mandatrophy_analysis": "The founding problem — smoothed artifacts erasing contribution, raw artifacts being illegible to evaluators — is only partially live. Where disclosure tooling is genuinely used and audited, the coupling still solves a real problem and the scaffold framing holds: it is transitional infrastructure toward a norm where both readability and fairness are jointly verifiable. But where the trace has become compliance theater (curated after the fact, authored unilaterally, or simply unavailable to under-resourced contexts), the founding problem has effectively gone dead for those seats while the requirement persists and even hardens — exactly the mandatrophy signature this classification exists to catch. The has_sunset_clause declaration reflects the intended scaffold design (the mechanism is meant to be superseded once genuinely fair, low-friction disclosure norms are widespread) rather than an observed sunset that has actually triggered.",
+    "perspectival_gap": "From the disclosure infrastructure operator's seat, this looks like rope: a voluntary, mutually beneficial coordination solution to a real problem, adopted because it works. From the uncredited contributor's seat or the under-resourced context's seat, the same structure looks like a tangled rope shading toward snare: a genuine coordination function exists, but it is bundled with an asymmetric cost that falls on exactly the parties least able to contest the trace's fidelity. The scaffold claim is the author's structural belief about intended design; the metrics describe what the mechanism is actually doing across seats, and the divergence between the operator's rope-experience and the excluded contributor's tangled-rope-experience is the data point, not an error to reconcile.",
+    "kernel_context": "This is the process_transparency_reading of the cooperative_artifact_legitimacy kernel — the reading that dissolves the artifact-vs-record dilemma by decoupling readable surface from disclosed process and requiring both jointly for legitimacy. Sibling readings: legibility_primacy_reading (legitimacy attaches to the smoothed surface text alone; process is not required for legitimacy, only for optional post-hoc dispute resolution) and authorial_primacy_reading (legitimacy attaches to the raw, unsmoothed, multi-hand authored draft itself; smoothing is treated as a legitimacy-degrading operation regardless of accompanying disclosure). Each sibling is authored as its own separate constraint story with its own ε, beneficiaries, and victims."
+  },
+  "omegas": [
+    {
+      "id": "trace_fidelity_verifiability",
+      "question": "Can the disclosed process trace (revision history, contribution statements, process logs) be independently verified as accurate, or does its evidentiary weight rest on trust in whoever produced it?",
+      "resolution_mechanism": "Comparative audit studies checking self-reported contribution statements against independently reconstructed authorship (e.g., version-control metadata, third-party witness accounts) across a sample of disclosed-trace artifacts.",
+      "impact": "If traces are generally verifiable, the scaffold framing holds and the mechanism is closer to genuine coordination with a manageable cost. If traces are routinely unverifiable or gamed without detection, the coupling degrades toward tangled_rope or snare, since the record half becomes theater that launders the smoothed surface's legitimacy without actually preserving attribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the disclosed trace is independently checkable or merely trusted."
+    },
+    {
+      "id": "tooling_access_inequality",
+      "question": "Does the coupling requirement systematically disadvantage contexts that cannot afford or access disclosure infrastructure, independent of whether their underlying collaborative process was fair?",
+      "resolution_mechanism": "Cross-context comparison of legitimacy outcomes for artifacts produced with versus without formal disclosure tooling, controlling for actual collaborative fairness as assessed by direct participant interview.",
+      "impact": "If access inequality drives legitimacy outcomes more than actual fairness does, the coupling functions partly as an infrastructure-gatekeeping mechanism rather than a fairness-preserving one, strengthening the victim classification for under-resourced contexts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether disclosure-tooling access, not actual fairness, drives legitimacy verdicts."
+    },
+    {
+      "id": "kernel_framing_alternative",
+      "question": "Is the artifact/record split itself the right locus for the kernel, or does the more consequential contest lie one level up — in who gets to design the disclosure schema's categories in the first place?",
+      "resolution_mechanism": "Compare classification outcomes if the kernel were reframed around 'who authors the disclosure schema' rather than 'artifact vs. record' — would beneficiary/victim assignments shift?",
+      "impact": "If the schema-authorship framing dominates, the process_transparency_reading itself may be read as a second-order instance of the same dilemma it claims to dissolve: legibility of the trace schema versus authorial input into its design. This would suggest a fourth constraint story is warranted rather than treating this reading as terminal.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the artifact/record framing itself, versus schema-authorship, is the more structurally fundamental locus of the kernel's contest."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legibility_primacy_reading",
+      "authorial_primacy_reading"
+    ],
+    "dual_formulation_note": "Member of the cooperative_artifact_legitimacy kernel family (3 readings). legibility_primacy_reading treats the smoothed surface alone as sufficient for legitimacy (lower administrative overhead, higher erasure risk for uncredited labor). authorial_primacy_reading treats the raw multi-hand draft alone as legitimate (maximal attribution fidelity, minimal readability, high friction for downstream use). This story, process_transparency_reading, attempts to capture both goods via decoupling but introduces a new dependency on disclosure infrastructure control and trace fidelity that neither sibling reading carries. Each reading is authored as a separate ε-invariant constraint; this file's affects_constraints links to both siblings per the kernel decomposition rule."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "single_artifact_undifferentiated_legitimacy",
+    "drift_state": {
+      "moment": "post_disclosure_infrastructure_maturation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "cooperative_artifact_legitimacy__legibility_primacy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "cooperative_artifact_legitimacy__authorial_primacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimacy_requires_coupled_pair_not_single_artifact",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "process_disclosure_is_separable_from_surface_readability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-25",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

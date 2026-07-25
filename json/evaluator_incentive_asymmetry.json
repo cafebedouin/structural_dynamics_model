@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "evaluator_incentive_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "213e51f3-0b6a-4133-997d-b2325c21e1c8"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Evaluator Time-Budget Bias Toward Surface Legibility Over Provenance",
+    "topic_domain": "epistemics/institutional/authorship",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "high_throughput_evaluators",
+      "volume_optimizing_institutions"
+    ],
+    "victims": [
+      "individual_contributors_with_illegible_authorship"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_throughput_evaluators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Graders, reviewers, hiring committees, and algorithmic filters processing large volumes of submissions under fixed time budgets. They use surface smoothness (consistent style, clean structure, absence of friction) as a fast proxy for quality because verifying actual provenance per-artifact is too expensive to do at scale. They are not choosing to devalue authorship maliciously; the time constraint mechanically rewards whatever is cheapest to check."
+    },
+    {
+      "name": "volume_optimizing_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Journals, employers, and platforms that design evaluation pipelines around throughput metrics (submissions processed per reviewer-hour, time-to-hire, time-to-publish). They benefit from a proxy that lets them scale evaluation without scaling verification staff, and they set the reward structure (promotion, reputation, revenue) that keeps evaluators optimizing for legibility."
+    },
+    {
+      "name": "individual_contributors_with_illegible_authorship",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Authors whose actual contribution is real but does not present as smooth single-voice prose — non-native speakers, junior collaborators whose work gets edited into someone else's voice, disabled writers using assistive tools, people whose reasoning is genuinely idiosyncratic. Their legible surface is sacrificed or smoothed by editors/collaborators to survive evaluation, or their unsmoothed work is penalized as 'rough' regardless of its underlying rigor. Exit means opting out of evaluated channels entirely, which forfeits credentialing and pay."
+    },
+    {
+      "name": "polished_single_author_submitters",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Contributors whose natural writing already matches the legible-surface proxy, or who have access to editing/ghostwriting resources that produce that surface. They pass evaluation quickly regardless of the depth of independent verification behind their work, and benefit from a system that rewards a trait they already possess."
+    },
+    {
+      "name": "provenance_verification_infrastructure",
+      "role": "excluded",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Tools and practices (version histories, contribution statements, process logs, plagiarism/AI-detection systems) that could substitute for the legibility proxy exist but are rarely funded or mandated at the scale evaluation happens. Their absence is structural, not a choice by any single actor, and no seat in the evaluation pipeline is accountable for building them."
+    },
+    {
+      "name": "researchers_of_evaluation_bias",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars of peer review, hiring bias, and algorithmic fairness who measure the correlation between quality scores and stylistic consistency, and who document time-to-evaluate as a function of surface smoothness versus provenance-verification effort. They have no power to change evaluator incentives but produce the evidence base for reform proposals."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Evaluators facing many artifacts and fixed time need SOME fast proxy to triage; surface legibility genuinely correlates with baseline editing effort and reduces evaluator cognitive load, letting large volumes of cooperative work get processed at all rather than backing up indefinitely.",
+    "transfer_function": "Moves evaluative attention and downstream reward (grades, publication, hiring, pay) away from contributors whose real work doesn't present as smooth single-voice output, and toward contributors or editorial processes that produce smooth surfaces — regardless of whether smoothness tracks the artifact's actual quality or authorship integrity.",
+    "absent_voices": "Individual contributors whose authorship gets erased by editorial smoothing, and provenance-verification infrastructure builders who are never in the room when evaluation pipelines are designed for throughput; both would argue that the proxy is measuring the wrong thing but neither has a seat at the pipeline-design table.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the time-constraint pressure vanished, evaluators claim the change would be catastrophic (queues would back up indefinitely, nothing would get processed) — world_rearranges from their seat. Contributors and provenance researchers argue the underlying evaluation function could persist fine with better-funded verification infrastructure substituting for the legibility shortcut — world_unchanged from theirs. The dispute over which reading is correct is itself the constraint's live fault line.",
+    "founding_problem": "Evaluators need to process more cooperative artifacts than they have time to individually verify; some fast, cheap heuristic is needed to triage what to reward, reject, or advance.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Peer-review-timing studies and hiring-pipeline audits conducted by researchers outside any evaluating institution corroborate that time-per-artifact has not scaled with submission volume, making the throughput problem genuinely still live rather than a pretext; the same outside research also documents that the resulting proxy systematically misweights authorship legibility relative to verified provenance, which no evaluating institution itself has funded verification infrastructure to correct."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story isolates the structural delta that holds regardless of which reading of cooperative-artifact legitimacy an author endorses: whatever an author believes about who SHOULD get credit, the evaluator on the other end faces a fixed time budget per artifact, and that time budget mechanically rewards whatever is cheapest to check — surface smoothness — over whatever is expensive to verify — causal/authorial history. This is deliberately NOT one of the three kernel readings (legibility_primacy, authorial_primacy, process_transparency); it is the shared mechanical substrate underneath all three, the reason the kernel is contested in the first place. Legibility-primacy treats this time pressure as legitimate triage; authorial-primacy treats it as the source of fraud-by-omission; process-transparency treats it as a solvable infrastructure gap. This story's claim is that the asymmetry itself is closer to genuine coordination (evaluators really cannot verify everything, and legibility really does correlate with baseline editorial effort) than to pure extraction — hence claimed_type rope — but the metrics show the coordination function has drifted toward reliably sacrificing a specific victim class (illegible-but-real contributors) as volume has grown, which is the tangled-rope pressure visible in the rising extractiveness series.",
+    "key_agents": [
+      "high_throughput_evaluators: primary beneficiary of the proxy (institutional/mobile) — collects processing efficiency",
+      "volume_optimizing_institutions: sets the reward structure that keeps evaluators using the proxy (institutional/arbitrage)",
+      "individual_contributors_with_illegible_authorship: primary target — bears the cost of the proxy in credit, pay, and credentialing (moderate/constrained)",
+      "polished_single_author_submitters: incidental beneficiary — already matches the proxy for reasons unrelated to their work's true quality",
+      "provenance_verification_infrastructure: the non-agent absent alternative — under-built, no accountable owner",
+      "researchers_of_evaluation_bias: analytical observer measuring the time-to-evaluate / smoothness correlation directly"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58 at interval end, rising from 0.42) because the proxy started as a defensible triage heuristic under light load and has drifted as volume grew — more artifacts per evaluator-hour means legibility now substitutes for verification in cases where verification was once feasible. Suppression (0.52) reflects that alternatives (slower, provenance-verifying review) are not banned, just structurally starved of the time budget needed to use them — this is soft suppression via resource scarcity, not coercive exclusion. Theater ratio rising to 0.40 reflects growing institutional rhetoric ('rigorous peer review,' 'holistic evaluation') that increasingly outpaces the actual verification effort being spent. Accessibility collapse is moderate (0.45): contributors can in principle seek venues with slower, more provenance-sensitive review, but such venues are shrinking relative to high-volume ones. Resistance (0.55) reflects active pushback from authorship-ethics advocates and provenance researchers, which keeps this well short of mountain-level naturalization.",
+    "directionality_logic": "High-throughput evaluators and volume-optimizing institutions sit near the beneficiary end: the proxy directly reduces their cost per artifact and is not something forced on them from outside. Individual contributors with illegible authorship sit near the target end: their exit options are constrained (opting out of evaluated channels forfeits credentialing), and the cost lands on them through no fault correlated with their actual work quality. Polished single-author submitters are beneficiaries by incidental fit rather than by strategic action — they did not create the proxy but are not harmed by it either, which is why they are listed separately from the institutions that set it.",
+    "perspectival_gap": "From the evaluator's seat, this looks like efficient triage under real constraints — a rope, coordination that lets a system function at scale. From the illegible-contributor's seat, the identical structure looks like systematic devaluation of real labor for reasons unrelated to merit — closer to tangled-rope or even snare-adjacent extraction. The engine should compute these different per-seat readings from the same structural data; neither seat is wrong about its own experience, and the divergence itself is the signal that the coordination function has drifted toward asymmetric cost-bearing as volume scaled.",
+    "mandatrophy_analysis": "The founding problem (evaluators cannot individually verify everything under real time constraints) remains genuinely live — this is not a zombie mandate. What has drifted is the SCOPE of what the proxy is asked to substitute for: originally a triage heuristic for initial screening, it has in many venues become the terminal quality signal, with provenance verification never happening downstream either. This is mandatrophy-adjacent but not full mandatrophy: the founding problem hasn't disappeared, but the proxy's role has expanded well past what the founding problem required, absorbing verification functions it was never designed to perform.",
+    "kernel_context": "This constraint sits BENEATH the cooperative_artifact_legitimacy kernel rather than instantiating any single reading of it. The three readings (legibility_primacy, authorial_primacy, process_transparency) all presuppose that evaluators face this time/attention asymmetry — they differ only in whether they treat it as legitimate (legibility_primacy), as the generator of fraud (authorial_primacy), or as an infrastructure gap to be closed (process_transparency). This story documents the shared mechanical substrate; each reading's own constraint story should be authored separately and linked via network.affects_constraints, since each has a different ε (legibility_primacy likely lower extraction/higher legitimacy; authorial_primacy likely frames the same mechanism as higher extraction; process_transparency frames it as a scaffold-in-progress)."
+  },
+  "omegas": [
+    {
+      "id": "proxy_legitimacy_scope_creep",
+      "question": "Is legibility-as-quality-proxy still confined to initial triage (legitimate coordination), or has it become the terminal evaluation in most high-volume venues (extraction dressed as coordination)?",
+      "resolution_mechanism": "Audit a sample of high-throughput venues for whether any provenance-verification step occurs downstream of the initial legibility-based triage, and at what rate flagged-but-illegible artifacts receive deeper review versus outright rejection.",
+      "impact": "If provenance verification genuinely occurs downstream at meaningful rates, the rope reading holds with the proxy functioning as intended triage. If legibility is functionally terminal in most cases, the constraint has drifted to tangled_rope, with institutions collecting throughput benefits while a stable victim class absorbs the cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the legibility proxy remains bounded triage or has become de facto terminal evaluation."
+    },
+    {
+      "id": "correlation_causation_smoothness_quality",
+      "question": "Does surface smoothness correlate with quality because smoothing genuinely improves communicability of good work, or because the correlation is spurious and driven by confounds (access to editing resources, native-language fluency, institutional pedigree)?",
+      "resolution_mechanism": "Controlled studies comparing blind-provenance evaluation outcomes to standard evaluation outcomes on matched artifacts, isolating whether smoothness predicts independently-verified quality or merely predicts evaluator score.",
+      "impact": "If smoothness independently predicts quality, part of the extractiveness reading overstates the harm — the proxy is doing real epistemic work. If the correlation is substantially confound-driven, the extraction reading is understated and the rope claim is weaker than authored.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the smoothness-quality correlation is causal or confounded by unequal access to editing/fluency resources."
+    },
+    {
+      "id": "infrastructure_investment_counterfactual",
+      "question": "Would evaluators and institutions actually adopt provenance-verification infrastructure if it were built and cheaply available, or does the time-constraint framing function partly as a cover story for a preference to avoid the harder work of verification regardless of cost?",
+      "resolution_mechanism": "Track adoption rates of existing low-cost provenance tools (version-history requirements, contribution statements, CRediT-style taxonomies) where they have already been introduced, and measure whether adoption is resisted even after cost is reduced.",
+      "impact": "High adoption where available would support the rope/genuine-constraint reading (time really is the binding constraint). Low adoption even when cheap would suggest the throughput benefit itself, not merely the time cost, is what evaluators and institutions are optimizing for — shifting the classification toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether time-scarcity is the true binding constraint or partly a cover story for throughput-maximizing preference."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legibility_primacy_reading",
+      "authorial_primacy_reading",
+      "process_transparency_reading"
+    ],
+    "dual_formulation_note": "This story models the shared mechanical substrate (evaluator time/attention scarcity mechanically favoring legible surface over verified provenance) that all three kernel readings of cooperative_artifact_legitimacy presuppose. It is not itself a reading of the kernel — it is the structural precondition the kernel's dispute is about. Each reading should be authored as its own constraint story with its own ε (legibility_primacy likely near-rope with lower extraction since it treats the trade-off as legitimate; authorial_primacy likely frames the identical mechanism as substantially more extractive since it treats erasure as fraud; process_transparency is scaffold-shaped, attempting to convert the tangled tension into an auditable side-channel). All three should link back to this constraint via affects_constraints, and this constraint links forward to all three."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-25",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
