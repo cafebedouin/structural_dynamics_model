@@ -196,3 +196,29 @@ baseline in place and a diff then reads byte-identical).
 
 GATE: GREEN
 ```
+
+## L. tangled_rope guard reachability (→ OQ-250)
+
+`tr_body_control` = the tangled_rope clause body MINUS the `\+ nlwb` guard. It is the positive
+control: large everywhere, so the `tr_guard_blocks=0` column is measured-empty, not didn't-look.
+
+```
+TR testsets                    tr_body_control=952   tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=0
+TR testsets_haiku              tr_body_control=5809  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=8
+TR testsets_kimi               tr_body_control=3040  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=19
+TR archives/datasets/kernel_v1 tr_body_control=5461  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=30
+TR tests/fixtures/nlwb_controls tr_body_control=0    tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=2
+```
+
+kernel_v1 `nlwb_total=30` vs §B's pre-cutover `raw_nlwb=29` — the +1 is
+`maxwell_demon_impossibility`, the predicate flip surfacing in an independent measurement.
+
+## M. MaxEnt tangled_rope mirror is LIVE (two-sided, identical metrics)
+
+```
+MIRROR nlwb_ctl_nonagent_only nlwb=true  feature_val=true   boolLL(tangled_rope)=-12.0  boolLL(snare)=-4.0
+MIRROR nlwb_ctl_agent_only    nlwb=false feature_val=false  boolLL(tangled_rope)=-8.0   boolLL(snare)=0.0
+```
+
+Deterministic guard dead, MaxEnt mirror live. The mirror is now covered in the gate's fixture pass
+(`agency_maxent_tr_mirror_inert`, asserted relatively so a penalty-weight change does not red it).

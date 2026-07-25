@@ -956,6 +956,23 @@ def _prolog_agency_gate():
             "              drl_core:classify_from_metrics(nlwb_ctl_nonagent_only, 0.80, "
             "                  0.80, 0.75, Cx, Nt) ), Nts), "
             "( memberchk(snare, Nts) -> throw(agency_flip_absent(Nts)) ; true ), "
+            # MaxEnt mirror coverage (OQ-250). The PROLOG tangled_rope guard at
+            # drl_core.pl:426 is structurally DEAD -- that clause requires
+            # requires_active_enforcement/1 and nlwb forbids exactly that, so NO
+            # fixture can exercise it (the deadness is OQ-250's subject, and it is
+            # why this gate covers the mirror instead). But the MaxEnt mirror
+            # boolean_spec(tangled_rope, nlwb, forbidden) at
+            # maxent_classifier.pl:186 is LIVE -- it evaluates the feature with no
+            # enforcement conjunct gating it. Two-sided on identical metrics: the
+            # nlwb-TRUE fixture must score strictly worse on tangled_rope than its
+            # nlwb-FALSE twin. Relative, not hardcoded, so a penalty-weight change
+            # does not turn this red spuriously.
+            "maxent_classifier:boolean_log_likelihood(nlwb_ctl_nonagent_only, "
+            "    tangled_rope, LLon), "
+            "maxent_classifier:boolean_log_likelihood(nlwb_ctl_agent_only, "
+            "    tangled_rope, LLao), "
+            "( LLon < LLao -> true "
+            "  ; throw(agency_maxent_tr_mirror_inert(LLon, LLao)) ), "
             "format(user_error, '[agency] fixture pass green: nlwb AT "
             "{no_beneficiary, nonagent_only}, snare reachable at nonagent_only, "
             "agent_only + mixed unflipped~n', [])",

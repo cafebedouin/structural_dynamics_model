@@ -66,18 +66,28 @@ The predicate's consumers, re-audited at cutover:
 | site | consumer | status |
 |---|---|---|
 | `drl_core.pl:391` | snare block (`\+ nlwb`) | in scope, exercised by the fixture leg |
-| `drl_core.pl:427` | tangled_rope block (`\+ nlwb`) | in scope, not independently exercised — see below |
+| `drl_core.pl:426` | tangled_rope block (`\+ nlwb`) | **DEAD — structurally unfireable; OQ-250** |
 | `maxent_classifier.pl:182` | `boolean_spec(snare, …, forbidden)` | in scope, measured via refit on all six legs |
-| `maxent_classifier.pl:186` | `boolean_spec(tangled_rope, …, forbidden)` | same |
+| `maxent_classifier.pl:186` | `boolean_spec(tangled_rope, …, forbidden)` | LIVE; now covered two-sided in the gate |
 | `maxent_classifier.pl:201` | `eval_boolean_feature/3` | the read path for both specs |
 | `invertibility_analysis.pl:123`, `omega1_audit.pl:128` | diagnostics | on record from the 2026-06-03 ledger; not re-measured |
 
-**Declared residue.** The fixture leg exercises the *snare* block directly. The tangled_rope block
-is covered only by the six-leg diff (zero, with a fitted MaxEnt in both arms), not by a planted
-fixture of its own — a tangled_rope-range fixture would need `requires_active_enforcement`, which
-`nlwb` forbids by construction, so the two cannot be planted in one story. The block is therefore
-protected by the same registry-membership argument as everything else, not by a dedicated control.
-Named here rather than left implicit.
+**The tangled_rope block is OPEN, not a declared residue → OQ-250.** An earlier draft of this note
+called it accepted residue. That was wrong: whether the guard can fire *at all* was unanswered, and
+the answer turns out to be **no — structurally**. `classify_from_metrics(..., tangled_rope)` requires
+`requires_active_enforcement(C)` at `drl_core.pl:435`, and `nlwb` requires its negation, so the
+`\+ nlwb` guard at `:426` can never block anything on any corpus. Witnessed with a positive control
+(FINDINGS §8): `tr_guard_blocks=0` on every leg while `tr_body_control` runs 952–5809.
+
+"Write the missing fixture" is therefore **not an available disposition** — a fixture would have to
+satisfy the contradiction itself. The gap cannot be closed by a control, only by a ruling: delete
+the dead guard, or declare it inert and monitor it (OQ-138 pattern). Opposite dispositions, so it is
+a tracked question, not an accepted cost.
+
+**Split out and already closed:** the MaxEnt mirror `boolean_spec(tangled_rope, nlwb, forbidden)`
+(`maxent_classifier.pl:186`) is **LIVE**, not dead — it evaluates the feature with no enforcement
+conjunct gating it (`-8.0 → -12.0` across identical-metric fixtures). That half needed no ruling and
+is now covered two-sided in the gate's fixture pass (`agency_maxent_tr_mirror_inert`).
 
 ## Method note — the stop point was keyed on the wrong quantity
 

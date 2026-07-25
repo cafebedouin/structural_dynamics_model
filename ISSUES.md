@@ -3401,6 +3401,78 @@ non-degenerate-fit control), `RAW_OUTPUT.md` §G.
 
 ---
 
+## OQ-250 — The tangled_rope `\+ nlwb` guard is structurally DEAD: delete it, or declare it inert and monitor it?
+
+**Ω-type:** Ω_C (design ruling — dead defensive code vs. declared-inert monitored surface).
+
+**Status:** open
+**Priority:** 4
+**Origin:** OQ-66 cutover, 2026-07-25 — surfaced when the consumer surface was re-audited and the
+tangled_rope block turned out to have no reachable fixture.
+**Files:** `prolog/drl_core.pl:425-437` (the tangled_rope clause and its guard),
+`prolog/maxent_classifier.pl:186` (the LIVE mirror), `python/run_pipeline.py` (`_prolog_agency_gate`).
+
+**The finding.** `classify_from_metrics(..., tangled_rope)` opens with
+`\+ natural_law_without_beneficiary(C)` (`:426`) and later requires
+`requires_active_enforcement(C)` (`:435`). `nlwb` requires `\+ requires_active_enforcement(C)`.
+**The two are directly contradictory, so the guard can never block anything** — whenever the rest
+of the clause could succeed, `nlwb` is necessarily false and `\+ nlwb` is necessarily true. This is
+structural, not corpus-contingent: no story, on any corpus, can satisfy both.
+
+Witnessed with a positive control (`tr_body_control` = constraints satisfying the clause body MINUS
+the guard, so the zeros are measured-empty rather than didn't-look):
+
+```
+TR testsets            tr_body_control=952   tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=0
+TR testsets_haiku      tr_body_control=5809  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=8
+TR testsets_kimi       tr_body_control=3040  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=19
+TR kernel_v1           tr_body_control=5461  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=30
+```
+
+**The snare guard is NOT affected** — the snare clause carries no enforcement conjunct, so its
+`\+ nlwb` is satisfiable and live (that is the flip the `nlwb_controls` fixture leg exercises).
+This is specifically about the tangled_rope one.
+
+**"Write the missing fixture" is NOT an available disposition.** A fixture would need `nlwb` TRUE
+and `requires_active_enforcement` simultaneously, which is the contradiction itself. The coverage
+gap cannot be closed by a control; only by a ruling.
+
+**The complication that makes this a ruling rather than a simple deletion.** The MaxEnt mirror
+`boolean_spec(tangled_rope, natural_law_without_beneficiary, forbidden)`
+(`maxent_classifier.pl:186`) is **LIVE** — it evaluates the feature with no enforcement conjunct
+gating it, and applies a real penalty. Two-sided witness on identical-metric fixtures:
+
+```
+MIRROR nlwb_ctl_nonagent_only  nlwb=true   boolLL(tangled_rope)=-12.0
+MIRROR nlwb_ctl_agent_only     nlwb=false  boolLL(tangled_rope)=-8.0
+```
+
+So the deterministic guard is dead while its MaxEnt mirror is live — and this repo has a stated
+**same-commit congruence rule** between `classify_from_metrics` clauses and their `boolean_spec`
+mirrors (see the scaffold/`constraint_captured` pair, `drl_core.pl` OQ-94 comment). Deleting the
+Prolog guard breaks the visible congruence with a live spec; keeping it leaves code that reads as a
+live protection and is not one.
+
+**The two dispositions are opposite:**
+- **(a) Delete the dead guard.** Removes misleading dead code. Risk: if a later edit drops the
+  `requires_active_enforcement` conjunct from the tangled_rope clause, the guard becomes necessary
+  again and its absence would be SILENT.
+- **(b) Keep it, declared inert + monitored.** Follow the OQ-138 residual-clause pattern already in
+  this repo (a guard whose firing is impossible today, wired to a gate that makes a future fire
+  LOUD). Costs a comment plus an inertness assertion; keeps congruence with the live mirror.
+
+**Already done, and NOT part of this ruling:** the LIVE MaxEnt mirror is now covered two-sided in
+`_prolog_agency_gate`'s fixture pass (`agency_maxent_tr_mirror_inert`). That closed the half of the
+gap that needed no ruling; this OQ is only about the dead Prolog guard.
+
+**What resolution changes:** either the dead branch goes away, or it becomes a declared-inert
+monitored surface — in both cases the consumer surface of `nlwb` stops containing a site that
+cannot be exercised and reads as though it can.
+
+**Evidence:** `audits/2026-07-25_oq66_nlwb_filter_cutover/FINDINGS.md` §8.
+
+---
+
 ## OQ-249 — (ε, theater) × type census: does a zero-extraction pure-ceremony cell exist?
 
 **Ω-type:** Ω_E (empirical — a corpus measurement).

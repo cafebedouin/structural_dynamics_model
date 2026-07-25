@@ -10,7 +10,7 @@ label — see §4 and `RELEASE_NOTE.md`.**
 Artifacts in this directory:
 
 - `nlwb_diff_harness.pl` — the repaired six-leg diff harness
-- `RELEASE_NOTE.md` — what changed, at the right quantity; consumer surface; declared residue
+- `RELEASE_NOTE.md` — what changed, at the right quantity; consumer surface; open items
 - `maxwell_shadow_probe.pl` — the first properly-fitted read of the reference constraint
 - `RAW_OUTPUT.md` — pasted tool output for every run below
 
@@ -234,7 +234,47 @@ The wider claim was not written. The narrow, true finding — *a plain `[stack]`
 MaxEnt unfitted while reads fail soft* — is what goes to KNOWN_STATE; no OQ minted for
 these sites.
 
-## 8. Verification ledger
+## 8. The tangled_rope `\+ nlwb` guard is structurally DEAD (→ OQ-250)
+
+Found while re-auditing the consumer surface for the release note. The tangled_rope clause opens
+with `\+ natural_law_without_beneficiary(C)` (`drl_core.pl:426`) and later requires
+`requires_active_enforcement(C)` (`:435`); `nlwb` requires `\+ requires_active_enforcement(C)`.
+**Contradictory — the guard can never block anything, on any corpus.**
+
+Positive control is `tr_body_control` (the clause body MINUS the guard), so the zeros below are
+measured-empty rather than didn't-look:
+
+```
+TR testsets                    tr_body_control=952   tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=0
+TR testsets_haiku              tr_body_control=5809  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=8
+TR testsets_kimi               tr_body_control=3040  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=19
+TR archives/datasets/kernel_v1 tr_body_control=5461  tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=30
+TR tests/fixtures/nlwb_controls tr_body_control=0    tr_guard_blocks=0  nlwb_and_enforcement=0  nlwb_total=2
+```
+
+`nlwb_total` is non-zero on four legs, so the zeros are not "nlwb never fires." **Corroboration of
+the predicate flip:** kernel_v1 reads `nlwb_total=30` here, against 29 in §2's pre-cutover probe —
+the +1 is `maxwell_demon_impossibility`, the same flip §4 reports, surfacing in an independent
+measurement.
+
+**The snare guard is unaffected** — no enforcement conjunct, so its `\+ nlwb` is satisfiable and
+live. That asymmetry is why the fixture leg can exercise the snare block and not this one.
+
+**The MaxEnt mirror is LIVE, not dead.** `boolean_spec(tangled_rope, nlwb, forbidden)`
+(`maxent_classifier.pl:186`) evaluates the feature with no enforcement conjunct gating it. Two-sided
+on identical-metric fixtures:
+
+```
+MIRROR nlwb_ctl_nonagent_only nlwb=true  feature_val=true   boolLL(tangled_rope)=-12.0  boolLL(snare)=-4.0
+MIRROR nlwb_ctl_agent_only    nlwb=false feature_val=false  boolLL(tangled_rope)=-8.0   boolLL(snare)=0.0
+```
+
+Deterministic guard dead, MaxEnt mirror live — against a repo convention of same-commit congruence
+between the two. That is what makes the disposition a ruling (OQ-250) rather than a deletion, and
+why "write the missing fixture" is not available: a fixture would have to satisfy the contradiction.
+The live mirror half needed no ruling and is now covered in the gate.
+
+## 9. Verification ledger
 
 | # | check | status |
 |---|---|---|

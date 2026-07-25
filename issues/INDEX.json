@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "23e68af8f9723594e9ac9eb6bf193c07bf681e0d",
+    "store_version": "ccab7c1f69bd5824cfb126a905419eac89d83bf5",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-25T01:49:40"
+    "generated_at": "2026-07-25T01:59:19"
   },
-  "issues_sha": "28012b3b96ff14c43333dfb166ca9139585d05deab722512f4cc70147967284d",
-  "n_entries": 249,
+  "issues_sha": "36fb8995fcdc29d2d9c9b89aa01c9eae2969f9599dce36f869c2232cc346842d",
+  "n_entries": 250,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 80,
+    "open": 81,
     "partial": 6
   },
   "active": [
@@ -1198,6 +1198,19 @@
         "OQ-65",
         "OQ-66",
         "OQ-90"
+      ]
+    },
+    {
+      "id": "OQ-250",
+      "status": "open",
+      "priority": 4,
+      "summary": "The tangled_rope `\\+ nlwb` guard is structurally DEAD: delete it, or declare it inert and monitor it?",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-66",
+        "OQ-94",
+        "OQ-138"
       ]
     }
   ],
