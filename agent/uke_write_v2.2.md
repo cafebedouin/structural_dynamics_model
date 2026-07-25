@@ -248,6 +248,11 @@ Every ledger row is a spot-checkable claim — it names content locatable in a s
 report file. A fabricated row is a false witness, worse than an honest `not read`
 (F-ATTESTED-CONSUMPTION names both failures).
 
+**Scope:** this section activates only when engine input exists. A draft written with no
+engine input — including the essay-first workflow where the essay is written precisely to
+BECOME engine input later — carries `Input provenance: none` and owes no ledger; nothing
+here blocks that path.
+
 ### §1.6 From Falsifier to Forecast: The Scoreable Prediction Requirement (NEW in v2.2)
 
 §1.4 requires stating what evidence would falsify a claim. That is necessary but not
@@ -826,7 +831,7 @@ per-essay voice call; the archived copy MUST retain it.]
 - Visibility mode: [A (visible) / B (invisible scaffolding)]
 - Limitations disclosed: [Yes/No/N/A for Mode B]
 
-**DR Scaffolding (REQUIRED whenever constraint stories/reports were provided as input, Mode A or B — an absent block is F-ATTESTED-CONSUMPTION by omission):**
+**DR Scaffolding (REQUIRED whenever constraint stories/reports were provided as input, Mode A or B — an absent block when input WAS provided is F-ATTESTED-CONSUMPTION by omission; with no engine input, omit the block or write `Input provenance: none`):**
 - Input provenance: [brief artifact used (path/version, or "ad-hoc chat summary", or none); reports read; reports not read]
 - Findings ledger (§1.5.6): [one row per story + a pattern-of-patterns row: finding → used (where) / declined (why) / not read; mark the beyond-the-brief row(s), or state "reports not consumed beyond the brief"]
 - Constraint stories used: [Count and IDs]

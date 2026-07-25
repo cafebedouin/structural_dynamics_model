@@ -12253,6 +12253,62 @@ manifest) gains a structured payload at the manifest end worth joining TO.
 
 ---
 
+## OQ-257 — Kernel-family verdicts lack two controls: the flat-control null baseline and a seat-coverage outlier check (both witnessed on the 2026-07-25 cooperator kernels)
+
+**Ω-type:** Ω_E (all three findings are checkable on the corpus: control-comparison is a
+report join; the coverage↔deviance association is a five-leg sweep).
+
+**Status:** open
+**Priority:** 4
+**Origin:** 2026-07-25. Hypotheses surfaced by an external summary-only review (Claude-web
+pass over the two cooperator-kernel run summaries); verified this session against the
+reports and `json/` specs before minting — each finding below carries its witness.
+**Files:** `python/enhanced_report.py` (kernel readings block), `json/` constraint specs
+(stakeholder authoring), `outputs/constraint_reports/*_flat_control_report.md`.
+
+**Deps:** bundled_with OQ-188, bundled_with OQ-186
+
+**Finding 1 — the flat control can coincide with a reading, and nothing reports it.**
+Run 1 (`cooperative_artifact_legitimacy`): the flat control's profile is IDENTICAL to
+`authorial_primacy_reading` — seat vector tangled/tangled/rope‡/tangled, signature
+`constructed_high_extraction`, purity 0.4583, extraction_blindness omega, MaxEnt deep-confirm
+(0.9973 vs 0.9835). So "the authorship branch reads honestly-entangled" carried no
+information beyond "the undecomposed default reads honestly-entangled"; the informative
+statistic was legibility's DEVIATION from control (MaxEnt-rejected toward snare P=0.994).
+Run 2's control is the counterinstance — gauge-invariant piton, unlike every sibling — so
+control-coincidence is a per-family empirical fact: it must be REPORTED, not assumed either
+way. Related: cross-reading Jaccard can be near-entailed by matching per-seat label vectors
+(audit/commitment 0.877 with identical 4-seat vectors; agree-128/diverge-9 adds little
+beyond the 3-of-4 label match) — another raw statistic that needs its baseline.
+
+**Finding 2 — in both families, the deviant-classifying reading is the seat-coverage
+outlier.** Grep counts over `json/` specs: run 1 — `legibility_primacy_reading` is the only
+reading with a `powerful`-tagged stakeholder, and the only snare. Run 2 —
+`exit_option_reading` is the only reading with ZERO `powerless`-tagged content, and the only
+snare — typed snare AT the powerless seat it never authored (audit has powerful=1 and does
+NOT go snare, so "powerful-authored → snare" anti-replicates; the outlier-column differs,
+the outlier-status does not). Since per-seat d derives from authored victim/beneficiary
+structure (OQ-188 precedence), coverage asymmetry is a live confound channel for any
+cross-reading divergence claim. n=2; the sweep decides whether it is a pattern.
+
+**Finding 3 — the extraction_blindness gap-omega family is downstream of the OQ-188
+knife-edge.** The gap is defined as extractive-at-low-seats + functional-at-institutional,
+and institutional-rope is the ‡ role-authored knife-edge seat. Every gap-omega in both
+families is therefore conditional on one authored role choice; the OQ-188 caveat currently
+stamps only the `convergent_institutional` pattern, not the gap-omegas it also generates.
+
+**Deliverables:** (a) kernel readings block reports each reading's deviation from its family
+flat control (per-seat type diff + Jaccard-vs-control) and headlines deviation, not raw
+verdicts; (b) generalize the ‡ flag: mark any cross-reading divergence whose members differ
+in authored seat coverage at the diverging seat; (c) one-off five-leg sweep: does
+seat-coverage-outlier status predict deviant classification, or is 2/2 coincidence.
+
+**What resolution changes:** "branch X is the extractive one" claims become
+control-adjusted; the 2026-07-25 external-review skepticism lands as wired checks instead
+of per-session manual audit.
+
+---
+
 *Last updated: 2026-07-25. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

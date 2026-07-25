@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "64876af6a8eecb6cd7f13e94d38053cd0220cd44",
+    "store_version": "336c42498bf9a90d91f7a575413f83d33cffe8e9",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-25T13:16:20"
+    "generated_at": "2026-07-25T14:59:01"
   },
-  "issues_sha": "770cd23b2449e579a6cbb9abc60a3845a2ff15a6d65a662fbefa9ce210833b78",
-  "n_entries": 256,
+  "issues_sha": "55573e0d9724149531c13f10c459c80cc7593b86a98f83e87398cd2916346722",
+  "n_entries": 257,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 82,
+    "open": 83,
     "partial": 7
   },
   "active": [
@@ -1240,6 +1240,21 @@
         "OQ-253",
         "OQ-254",
         "OQ-255"
+      ]
+    },
+    {
+      "id": "OQ-257",
+      "status": "open",
+      "priority": 4,
+      "summary": "Kernel-family verdicts lack two controls: the flat-control null baseline and a seat-coverage outlier check (both witnessed on the 2026-07-25 cooperator kernels)",
+      "deps": [
+        "bundled_with OQ-188",
+        "bundled_with OQ-186"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-186",
+        "OQ-188"
       ]
     }
   ],
