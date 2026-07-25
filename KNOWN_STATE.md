@@ -144,6 +144,40 @@ Follow-ons minted: **OQ-244** (scalar identity — do any two band the same quan
 
 ---
 
+## 2026-07-25 — [landed] schemas.py caught up to three producer landings; the drift warning is the only thing that noticed
+**Files:** python/shared/schemas.py, prolog/json_report.pl, python/enrich_pipeline_json.py
+**Tier:** landed
+
+`PIPELINE_FIELDS` now registers `epsilon_provenance` (OQ-205), `fingerprint_shift`
+(OQ-53/GAP-04) and `repair_transitions` (OQ-91), plus the two enriched ε-stability fields.
+**OQ-205 was already RESOLVED (build landed 2026-07-03)** — this was its missing last step.
+
+**The lag is the finding.** json_report.pl emitted all three for ~3 weeks while the schema
+contract did not list them, and the only signal was `validate_pipeline_output`'s "unexpected
+field" drift warning — firing 3× on each of 199 rows, into stderr, every enrich run, noticed
+by nobody. A drift warning that never escalates is a Pattern-6 channel: it distinguishes
+*contract-complete* from *contract-lagging* correctly and then emits both into the same
+ignored stream. **Registering a field in `python/shared/schemas.py` belongs in the same
+commit as the `json_report.pl` emit** — the contract is a consumer of the emit, and Pattern 1
+("a producer is not done until something consumes its output") covers it.
+
+**Nullability method (reusable).** A wrong NON-nullable declaration makes `enrich_pipeline_json
+.py` hard-exit — same failure class as the stale `purity_class` that broke the chain the day
+before. So each declaration was witnessed at two altitudes: emit-site structure (which branch
+can write what) AND branch coverage on the live leg. `epsilon_provenance` non-null because
+`write_epsilon_provenance/2` is a total if-then-else with both arms writing `{...}` (all four
+paths fired: 71 authored / 110 derived / 18 unknown_author); `repair_transitions` non-null
+**by construction** — the emit writes literal `[` / `]` around `write_repair_array`, so no
+corpus can make it null (196 empty / 3 non-empty); `fingerprint_shift` nullable via its
+explicit `FsList = null` arm (`json_report.pl:313`) — that arm did NOT fire here (199/199
+lists), noted because it is the permissive direction and so cannot break a consumer.
+Presence/nullability is emit-structure-determined, not corpus-determined, which is why this
+was not run across the other four legs.
+
+Witnesses (manifest 2026-07-25T05:34:25Z, commit `13877a0`, n=199): both validators 0 errors,
+and **0 unexpected-field drift warnings** on either artifact — the contract is now complete
+w.r.t. what the engine emits.
+
 ## 2026-07-24 — [landed] OQ-60 consumer sweep came due: `unknown` crashed the trajectory step; Prolog stderr reporting was masking it
 **Files:** prolog/context_profile_mining.pl, python/run_pipeline.py, python/shared/schemas.py
 **Tier:** landed
