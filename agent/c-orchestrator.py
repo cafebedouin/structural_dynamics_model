@@ -926,6 +926,49 @@ class DRAuditOrchestrator:
         if not rels:
             return StepResult(step="commit", status="skipped", data="no story files on disk")
 
+        # OQ-254 Step 3: the run's SCOPE manifest commits WITH the stories it admitted
+        # (the Q-choice record travels with the answer). Additive to the scoped
+        # pathspec only — never widens it; a manifest with no story files still skips
+        # above. "The manifest that admitted them" is CHECKED, not assumed:
+        # _last_manifest_path's first reader verifies via the join key — the manifest
+        # filename stem must equal the generation_run_id stamped on every story being
+        # committed (the stem is what the q_provenance readout resolves by, so a
+        # mismatch would commit a manifest the join can never reach). Reachability of
+        # the stale-attribute case today: one orchestrator instance per process and
+        # decompose is unconditional, so within-instance staleness cannot fire —
+        # belt-and-braces there. The check IS load-bearing on the --manifest-file
+        # frozen path: a pre-wiring frozen manifest (stories stamped 'none') or a
+        # renamed one (stem != embedded id) mismatches and is recorded, not staged.
+        # Every non-staged outcome lands in StepResult.data (never a silent narrow —
+        # the absence-presenting-as-presence shape this OQ was about).
+        lm = getattr(self, "_last_manifest_path", None)
+        if not lm:
+            manifest_note = "not_staged: no _last_manifest_path on this run"
+        elif not Path(lm).exists():
+            manifest_note = f"not_staged: manifest file missing ({lm})"
+        else:
+            name = Path(lm).name
+            stem = name[:-len(".manifest.json")] if name.endswith(".manifest.json") \
+                else Path(lm).stem
+            story_run_ids = set()
+            for cid in constraint_ids:
+                p = self._json_dir / f"{cid}.json"
+                if p.exists():
+                    try:
+                        prov = json.loads(p.read_text(encoding="utf-8")).get("provenance") or {}
+                        story_run_ids.add(prov.get("generation_run_id") or "none")
+                    except (json.JSONDecodeError, OSError):
+                        story_run_ids.add("unreadable")
+            if story_run_ids == {stem}:
+                try:
+                    rels.append(str(Path(lm).relative_to(REPO_ROOT)))
+                    manifest_note = f"staged: {stem}"
+                except ValueError:
+                    manifest_note = f"not_staged: manifest outside repo ({lm})"
+            else:
+                manifest_note = (f"not_staged: stem {stem!r} != story run_ids "
+                                 f"{sorted(story_run_ids)!r} (stale or unstamped manifest)")
+
         def _git(*a, **kw):
             return subprocess.run(["git", *a], cwd=REPO_ROOT, capture_output=True,
                                   text=True, **kw)
@@ -953,9 +996,10 @@ class DRAuditOrchestrator:
         sha = _git("rev-parse", "--short", "HEAD").stdout.strip()
         self._progress("commit",
                        f"committed {len(staged)} files for {len(constraint_ids)} stories ({sha}); "
-                       f"push stays manual")
+                       f"manifest {manifest_note}; push stays manual")
         return StepResult(step="commit", status="success",
-                          data={"sha": sha, "files": len(staged)},
+                          data={"sha": sha, "files": len(staged),
+                                "manifest": manifest_note},
                           duration_s=time.time() - t0)
 
     def _commit_message(self, constraint_ids: list[str], manifest: dict,

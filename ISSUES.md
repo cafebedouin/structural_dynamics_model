@@ -3639,9 +3639,12 @@ invocation) wired as run_pipeline Phase 9d.
 **The close records WIRED, not JOINED (second marked correction-of-scope):** at close every
 live story is `no_run_id_authored` (129 no-fact / 76 run_id `'none'`) and `joined` is
 exercised only by a planted control. Graduation = the next operator topic run producing a
-story whose run_id resolves to its manifest. One item pending operator eyes: the
-`_step_commit` extension (stage the run's manifest with its stories) is an UNCOMMITTED
-working-tree diff per the manual-approval fork ruling. Follow-up: OQ-256 (§3 foreclosure
+story whose run_id resolves to its manifest. The `_step_commit` extension landed after
+operator review, AMENDED per it: the manifest stages only when its filename stem equals the
+`generation_run_id` on every committed story (the join key as verifier — checked, not
+assumed; load-bearing on the `--manifest-file` frozen path, belt-and-braces within-instance),
+and every non-staged outcome is recorded in `StepResult.data` (no silent pathspec
+narrowing). Three-case witness: `STEP3_WITNESS.md`. Follow-up: OQ-256 (§3 foreclosure
 as structure, deliberately unbundled).
 
 ---

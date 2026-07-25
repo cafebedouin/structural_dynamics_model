@@ -66,9 +66,10 @@ never required; `'none'` = declared pre-wiring stratum, NEVER a defect and never
 `q_provenance_readout.py` + run_pipeline Phase 9d (planted two-sided controls every run;
 behavior-preservation witnessed: per_constraint byte-equal over md5-frozen corpus). Close
 records WIRED not JOINED: all 205 live stories `no_run_id_authored`; e2e join graduates at
-the next operator topic run. Pending operator eyes: `_step_commit` extension (stage the run's
-manifest with its stories) left as an uncommitted diff per the manual-approval fork ruling.
-Follow-up minted: OQ-256 (§3 foreclosure as structure; waits on first exercise of OQ-255's
+the next operator topic run. `_step_commit` extension landed after operator review, amended:
+manifest stages only on join-key match (filename stem == every committed story's
+`generation_run_id`); all non-staged outcomes recorded in `StepResult.data`. Follow-up
+minted: OQ-256 (§3 foreclosure as structure; waits on first exercise of OQ-255's
 hand-enumerated branch).
 
 ---

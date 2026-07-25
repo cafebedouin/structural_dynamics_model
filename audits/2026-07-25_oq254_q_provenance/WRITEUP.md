@@ -25,6 +25,14 @@ laptop" were indistinguishable.
 This is the second same-direction inference (from v8 prose about what the engine does)
 corrected by code contact, kin to OQ-255 §8's Q6-channel misidentification.
 
+**Number supersession (which figures are the witness).** The agent recon's counts were
+hypothesis; the Step-0 census (`manifest_census.py` in this dir) is the witness and
+supersedes them wherever they differ: deferred entries **1022** (recon said 990),
+`selection_reason` **2590/2598** (recon said 2594/2602), kernel verdict **486/515 present,
+439 true / 47 false** (recon gave no population count — only a 31/36-negatives sub-sample);
+`deferred_axes` non-empty **460/515** the recon had exactly right. A future reader citing
+this audit cites the census figures, never the recon's.
+
 ## What landed (generator-forward; no backfill)
 
 1. **Join key (the whole fix):** `generation_run_id` == manifest filename stem, minted at
@@ -48,7 +56,12 @@ corrected by code contact, kin to OQ-255 §8's Q6-channel misidentification.
   `'none'`); `joined` is exercised only by a planted control. Graduates at the next operator
   topic run (a model swap/generation-path change stays OPEN until a full run passes — the
   fixture pair is compile-side witness only).
-- **`_step_commit` extension** (stage the run's manifest with its stories): prepared as an
-  uncommitted working-tree diff, pending operator eyes per the manual-approval fork ruling.
+- **`_step_commit` extension** (stage the run's manifest with its stories): LANDED after
+  operator review, amended per the review — the manifest is appended only when its filename
+  stem equals the `generation_run_id` on every committed story (the join key as verifier;
+  checked, not assumed), and every non-staged outcome is recorded in `StepResult.data`
+  (no silent pathspec narrowing). Three-case witness in `STEP3_WITNESS.md`. Staleness
+  reachability: belt-and-braces within-instance (one instance per process, unconditional
+  decompose); load-bearing on the `--manifest-file` frozen path.
 - **§3 foreclosure as structure:** deliberately unbundled → OQ-256 (waits on a first exercise
   of OQ-255's hand-enumerated foreclosure branch — read surface must not precede its reader).

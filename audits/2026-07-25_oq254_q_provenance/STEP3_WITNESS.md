@@ -39,8 +39,32 @@ Archive at `agent/decompose_manifests/archive_pre_2026-07-25/` with README decla
 archive-not-read-surface + the `joined_archive_not_authoritative` resolver token rule.
 Originals in `outputs/` untouched.
 
-## OPEN (manual approval)
-The `_step_commit` extension (stage this run's manifest file alongside the story files)
-is prepared as an UNCOMMITTED working-tree edit — per the operator's fork ruling it lands
-only after eyes on the diff. It is the one place where a wrong edit is both expensive and
-quiet (the refusal logic stands between the pipeline and `git add -A`).
+## `_step_commit` extension — operator-amended, then landed
+
+Operator review of the first diff (2026-07-25) required two repairs before commit:
+1. **Trusted → checked:** `_last_manifest_path` was trusted; the amended version verifies
+   via the join key — the manifest filename stem must equal the `generation_run_id` stamped
+   on every story being committed; append only on match. Reachability finding for the
+   staleness case: one orchestrator instance per process + unconditional decompose means
+   within-instance staleness cannot fire today (belt-and-braces there) — but the check IS
+   load-bearing on the `--manifest-file` frozen path, where a pre-wiring manifest (stories
+   `'none'`) or a renamed one (stem ≠ embedded id, join would never resolve) mismatches and
+   is recorded, not staged.
+2. **No silent narrowing:** every non-staged outcome (no path / file missing / outside repo
+   / stem mismatch) lands in `StepResult.data["manifest"]` and the progress line — the
+   first diff's `pass` + falsy-skip was the absence-presenting-as-presence shape this OQ
+   was about, inside the fix's own commit step.
+
+### Witness — three-case drive of the amended `_step_commit` (temp git repos, real commits)
+
+```
+== A matched: status=success data={'sha': '0ed0b70', 'files': 3, 'manifest': 'staged: fam_1'}
+   committed files: ['json/s1.json', 'manifests/fam_1.manifest.json', 'testsets/s1.pl']
+== B mismatched (story 'none'): status=success data={... 'manifest': "not_staged: stem 'fam_1' != story run_ids ['none'] (stale or unstamped manifest)"}
+   committed files: ['json/s1.json', 'testsets/s1.pl']
+== C no _last_manifest_path: status=success data={... 'manifest': 'not_staged: no _last_manifest_path on this run'}
+   committed files: ['json/s1.json', 'testsets/s1.pl']
+```
+
+Matched commits the manifest; mismatched/no-path exclude it with the reason recorded —
+two-sided, and the join key is doing exactly the job it was minted for.
