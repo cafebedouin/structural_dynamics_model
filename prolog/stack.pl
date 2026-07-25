@@ -35,7 +35,8 @@
 :- use_module(drl_purity_network, []).
 :- use_module(drl_fpn, []).
 :- use_module(drl_modal_logic, []).    % facade kept for backward-compat qualified calls
-:- use_module(drl_audit_core, []).
+% drl_audit_core removed 2026-07-25 (OQ-67): legacy χ = ε × π path, unreachable and
+% thrice-duplicated. Its one unique product is declared in design_gaps.md GAP-29.
 
 % 4. Load Management & Control (NEW)
 :- use_module(scenario_manager, []).    % Lifecycle Controller

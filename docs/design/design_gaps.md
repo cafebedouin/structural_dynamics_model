@@ -1410,3 +1410,62 @@ that meets the reopening condition. A reviver must NOT read the deferral as "con
 (that is untested) nor rebuild it on the current corpus (the conjunction is empty). Related: OQ-153
 (resolved), `husk_signature_read.py` (K=0), `cs_pattern_detection.pl:336-351` (the naturalized∧forecloses
 coupling that already computes conditions 2+3).
+
+---
+
+## GAP-29 — No terminal-severity cell above `snare`: the "no-exit corner" (ε≈1 ∧ χ≈1) is inexpressible in the type lattice
+
+**Declared:** 2026-07-25 (OQ-67 close, the retirement of `drl_audit_core.pl`).
+
+**The absent capability:** a *terminal* classification cell sitting above `snare` — the corner where
+extraction and power-scaled extraction are both maximal and the agent has no remaining move. The type
+lattice cannot express it because **`snare` is unbounded above**: `drl_core.pl:389-398`
+(`classify_from_metrics/6`) gates `snare` on three *floors* (`snare_chi_floor`, `snare_epsilon_floor`,
+`snare_suppression_floor`) and no ceiling, so a constraint at ε = 0.99, χ = 1.4 and one at ε = 0.70,
+χ = 0.70 land in the same cell with no distinguishing token. Nothing downstream can say "this one is
+worse in kind, not merely in degree."
+
+**Why it is named here rather than silently dropped:** the retired `drl_audit_core.pl` carried the
+only detector in the tree that attempted this cell — `ontological_fraud_check(_, z_alert)`, the one
+export of the four that had no live duplicate (`structural_signature/3` duplicates
+`omega1_audit:determine_primary_gate/11`; `fm_alert` duplicates `drl_core:type_1_false_summit`;
+`omega_risk/4` duplicates `drl_core` + `transition_paths`). The module is deleted on *value* grounds —
+unreachable **and** thrice-duplicated — but this one product went with it, so it is declared, not
+assumed re-derivable. The retired code verbatim (`drl_audit_core.pl:65-71` at commit `ee025a0c`):
+
+```prolog
+% Zero Degrees of Freedom (Z): The absolute trap
+% Logic: epsilon -> 1.0 AND chi -> 1.0
+ontological_fraud_check(Data, z_alert) :-
+    member(suppression_score(Epsilon), Data),
+    Epsilon >= 0.90,
+    member(base_extractiveness(X_base), Data),
+    X_base >= 0.85, !.
+```
+
+**Why it must NOT simply be revived as written** (three independent defects, each disqualifying):
+1. **The comment does not describe the code.** `:66` claims "ε → 1.0 AND χ → 1.0"; `:68-71` reads
+   `suppression_score ≥ 0.90 ∧ base_extractiveness ≥ 0.85`. There is **no χ term at all** — it is an
+   ε∧suppression conjunction wearing a χ label.
+2. **It binds the wrong metric to ε.** It binds `suppression_score` to a variable *named* `Epsilon`.
+   In the canonical engine these are distinct arguments of `classify_from_metrics/6` (`BaseEps` vs
+   `Supp`); ε is `base_extractiveness`. (The same mis-binding is why the sibling `fm_alert` clause
+   diverged from `logic.md:749` Rule FM, which specifies ε and additionally requires the
+   `∃I(¬■C[I])` leg that the retired clause dropped entirely.)
+3. **Both thresholds are bare literals outside governance.** `0.90` and `0.85` appear nowhere in
+   `config.pl` / `config_schema.pl`, so they were unperturbable by the sensitivity sweeps and
+   unvalidated by `config_validation.pl`.
+
+**Spec status — there is no rule to implement against.** No "Rule Z / Zero Degrees of Freedom" exists
+in `logic.md`, `logic_extensions.md`, `logic_index.md`, or `logic_thresholds.md`. **`logic.md:3267`'s
+"Rule Z" is the *Piton* rule** (`χ ≤ 0.25 ∧ ε > 0.10 ∧ Theater ≥ 0.70`) — a letter collision, not this
+capability. A reviver must not read that rule as the spec for this cell.
+
+**What closing the gap would require:** (a) a spec decision — is the no-exit corner a new *type* (a
+lattice cell above snare, which changes the priority cascade), or a *severity annotation* on snare
+(commentary-grade, no cascade change)? That is a seat-declaration ruling, not an evidence question.
+(b) Whichever is chosen, thresholds authored into `config.pl` + `config_schema.pl`, and a χ term that
+actually reads χ. Until then the corner stays declared-absent so that an empty
+`ontological_fraud_check` result is never mistaken for "no constraint is terminal." Related: OQ-67
+(resolved), `drl_core.pl:389-398` (the unbounded snare cell), GAP-20 (the sibling
+retire-a-duplicate-fork entry).

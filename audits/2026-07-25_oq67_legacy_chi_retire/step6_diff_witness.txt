@@ -1,0 +1,19 @@
+OQ-67 Step 6 — behavior-preservation witness
+
+BEFORE run: manifest.pipeline_run_at = 2026-07-25T07:17:31Z  n_constraints = 199
+AFTER  run: manifest.pipeline_run_at = 2026-07-25T07:20:20Z  n_constraints = 199
+
+per_constraint entries BEFORE: 199
+per_constraint entries AFTER : 199
+per_constraint sha256 BEFORE : b4bd1ded318a305f2911bbb0d06465a6ce1996b1c943261af6847c6e1f981f37
+per_constraint sha256 AFTER  : b4bd1ded318a305f2911bbb0d06465a6ce1996b1c943261af6847c6e1f981f37
+BYTE-IDENTICAL (normalized, sort_keys): True
+
+Both runs: exit 0. outputs/pipeline_output.json mtime advanced 02:17:58 -> 02:20:47,
+so the diff compares two real writes, not a baseline against itself
+(swipl_load_path_and_probe_gotchas.md 5 — the gates abort BEFORE writing).
+Corpus md5 legs re-checked identical across the pair (step3_md5_before.txt ==
+step6_md5_after.txt), so the pair is valid over a frozen corpus.
+
+The full 2.8MB baseline is intentionally NOT committed: it is byte-identical to
+outputs/pipeline_output.json at per_constraint, so the hashes above are the witness.

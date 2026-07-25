@@ -61,7 +61,7 @@ Each entry maps a predicate or concept across three vocabularies:
 |---------------------|-------------------|-------------|-------|-------|
 | Parametric family | `extractiveness_for_agent/3` — constraint_indexing.pl:351 | Power-scaled extractiveness | STRUCTURAL | χ = ε × sigmoid(π(P)) × σ(S); NOT a formal adjunction |
 | Scaling function | `sigmoid_f/2` — constraint_indexing.pl:231 | Sigmoid transformation | STRUCTURAL | Monotone map on power dimension |
-| Power parameter | `power_modifier/2` — constraint_indexing.pl:198 | Power index π | STRUCTURAL | Maps power level to scaling exponent |
+| Power parameter | ~~`power_modifier/2`~~ — RETIRED 2026-07-25 (OQ-67) | Power index π | — | The discrete π dispatch is gone with the legacy χ = ε × π path; its role is now filled by `sigmoid_f/2` in the row above. The `power_modifier_*` config params survive only as calibration anchors for `canonical_d_*`. |
 | Scope parameter | `scope_modifier/2` — constraint_indexing.pl:211 | Scope scaling σ | STRUCTURAL | Maps scope level to multiplier |
 | Reform threshold | `snare_reform_threshold/2` — drl_core.pl:217 | Minimum power for reform | STRUCTURAL | Threshold in the parametric family |
 

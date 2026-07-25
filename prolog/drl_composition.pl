@@ -21,9 +21,6 @@
     % Stage 4: Audit
     possibly/1,
     necessarily/1,
-    is_snare/1,
-    is_mountain/1,
-    is_rope/1,
 
     % Statistical Helpers
     monotonic_increasing/1,
@@ -31,36 +28,21 @@
     non_monotonic_trajectory/2
 ]).
 
-:- use_module(drl_audit_core).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
 :- use_module(config).
 :- use_module(drl_purity_network).
 
-:- dynamic agent_index/2.
-:- dynamic constraint_data/2.
-
-% Scaled for the Powerless
-is_snare(C) :-
-    constraint_data(C, Data),
-    member(base_extractiveness(Base), Data),
-    drl_audit_core:effective_extraction(Base, powerless, Chi),
-    drl_audit_core:structural_signature(Chi, Data, snare).
-
-% Scaled for the Observer
-is_mountain(C) :-
-    constraint_data(C, Data),
-    member(base_extractiveness(Base), Data),
-    drl_audit_core:effective_extraction(Base, analytical, Chi),
-    drl_audit_core:structural_signature(Chi, Data, mountain).
-
-% Scaled for the Beneficiary
-is_rope(C) :-
-    constraint_data(C, Data),
-    member(base_extractiveness(Base), Data),
-    drl_audit_core:effective_extraction(Base, institutional, Chi),
-    drl_audit_core:structural_signature(Chi, Data, rope).
+% OQ-67 (2026-07-25): the legacy power-modifier χ path (χ = ε × π) is fully drained.
+% `is_snare/1`, `is_mountain/1`, `is_rope/1` and `detect_perspectival_risk/4` lived here,
+% reading drl_audit_core over the `constraint_data/2` + `agent_index/2` fact tables. Both
+% tables terminated in unconditional fail-stubs that nothing in the live tree ever asserted,
+% so the whole path was unreachable, not merely deprecated (witnessed all-fail across six
+% corpora). Its four exports were three duplicates + one unique product, which is preserved
+% as a declared absence: docs/design/design_gaps.md GAP-29. The per-seat type question these
+% answered is served canonically by drl_core:is_snare/3, is_mountain/3, is_rope/3 on the
+% sigmoid path (χ = ε × f(d) × σ(S)).
 
 /* ================================================================
    STAGE 1: COMPOSITION RULES (INDEXED)
@@ -346,31 +328,6 @@ non_monotonic_trajectory(C, Metric) :-
     \+ monotonic_increasing(Sorted),
     \+ monotonic_decreasing(Sorted).
 
-% ============================================================================
-% INDEXICAL PERSPECTIVE AUDIT
-% ============================================================================
-% Checks if two agents experience a structural conflict (Risk Gap)
-% Implements Section IV-B
-detect_perspectival_risk(ConstraintID, Agent1, Agent2, RiskLabel) :-
-    % 1. Get the base extraction score for the constraint
-    constraint_data(ConstraintID, Data),
-    member(base_extractiveness(X_base), Data),
-
-    % 2. Calculate what each agent "sees" based on their power index
-    % Uses the pi scaling function from drl_audit_core
-    agent_index(Agent1, context(Power1, _, _, _)),
-    agent_index(Agent2, context(Power2, _, _, _)),
-
-    drl_audit_core:effective_extraction(X_base, Power1, Chi1),
-    drl_audit_core:effective_extraction(X_base, Power2, Chi2),
-
-    % 3. Determine the structural type for each agent
-    drl_audit_core:structural_signature(Chi1, Data, Type1),
-    drl_audit_core:structural_signature(Chi2, Data, Type2),
-
-    % 4. Match against the Risk Table
-    drl_audit_core:omega_risk(Type1, Type2, RiskLabel, _).
-
 % possibly(C) is true if the constraint is a Rope (changeable/contingent)
 possibly(C) :-
     constraint_indexing:default_context(Ctx),
@@ -389,10 +346,6 @@ necessarily(C) :-
 % Gets the last element of a list
 last([X], X) :- !.
 last([_|Xs], Last) :- last(Xs, Last).
-
-% Provide a fail-safe default so they are "defined" even if no data is loaded
-agent_index(_, _) :- fail.
-constraint_data(_, _) :- fail.
 
 /* ================================================================
    VERSION & MIGRATION INFO

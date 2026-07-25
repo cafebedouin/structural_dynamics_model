@@ -60,12 +60,18 @@ param(power_modifier_powerful, 0.6).       % Extraction reduced
 param(power_modifier_organized, 0.4).      % Shared burden (collective)
 param(power_modifier_institutional, -0.2). % Net beneficiary
 param(power_modifier_analytical, 1.15).    % Analytical clarity: detects extraction moderate agents normalize
-%% NOTE: power_modifier_analytical (1.15) is read only by the legacy χ path
-%% (drl_composition, transition_paths, drl_audit_core). The primary classification
-%% path reads canonical_d_analytical (line ~108) whose sigmoid output is calibrated
-%% to match this value. Bifurcation sweep confirmed: perturbing this param produces
-%% zero dr_type flips [0.5x, 2.0x]. See TODO: legacy-power-modifier-migration.
-%% DEMOTION: unperturbable-by-construction — legacy chi path only, zero dr_type flips.
+%% NOTE (rewritten 2026-07-25, OQ-67): these six params now have NO READER IN THE
+%% ENGINE. Their last consumer was constraint_indexing:power_modifier/2, deleted with
+%% drl_audit_core.pl when the legacy χ = ε × π path was retired; the legacy-power-modifier
+%% migration is COMPLETE, not pending.
+%% (The prior note named drl_composition, transition_paths and drl_audit_core as legacy-path
+%% members. That was already false at HEAD for transition_paths — it computes
+%% derive_directionality_at → sigmoid_f → scope_modifier and contains no power_modifier
+%% reference at all — and is now false for all three.)
+%% They are RETAINED as the reader-free CALIBRATION ANCHORS for the canonical_d_* values:
+%% canonical_d_analytical (line ~108) is fitted so sigmoid_f/2 approximates 1.15 here, and
+%% likewise for the other five. Recalibrating the sigmoid means re-fitting against these.
+%% DEMOTION: unperturbable-by-construction — no reader at all, so zero dr_type flips.
 
 /* ================================================================
    4A. COALITION MODELING (The "Who" Extension)
@@ -249,7 +255,8 @@ param(snare_load_bearing_threshold,  0.70).  % Above this = load-bearing snare (
      ε (epsilon) = base extraction (structural property)
 
    Primary classifier (drl_core.pl) checks BOTH thresholds.
-   Audit module (drl_audit_core.pl) uses χ thresholds only.
+   (The χ-only audit module drl_audit_core.pl was retired 2026-07-25, OQ-67; the
+   surviving χ-only bander is omega1_audit:determine_primary_gate/11.)
    ================================================================ */
 
 % Rule R (Rope): χ ≤ 0.35 ∧ ε ≤ 0.45 ∧ Coord(C) ∧ Changeable(C, I.T, I.E)

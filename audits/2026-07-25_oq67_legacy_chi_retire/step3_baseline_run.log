@@ -1,0 +1,282 @@
+[AXIS-SELFTEST] PASS  negative (clean corpus): exit 0 (want 0)
+[AXIS-SELFTEST] PASS  control1 payload-widen (path b): exit 1 (want 1) :: drl_composition:detect_necessity_inheritance/2 -> cs_axiom_foreclosed/2
+[AXIS-SELFTEST] PASS  control2 nonbridge-seam (path c): exit 1 (want 1) :: drl_core:axis_control_seam/2 -> cs_kernel_id/2
+[AXIS-SELFTEST] ALL PASS
+[GRID-GATE] 102 grid stories: 102 previously ledgered, 0 newly passed.
+[pipeline] [PREP] Preparing test suite...
+Found 199 .pl files in /home/scott/bin/structural_dynamics_model/prolog/testsets
+✓ Generated /home/scott/bin/structural_dynamics_model/prolog/validation_suite.pl with 199 tests
+[pipeline] [PREP] Done.
+[pipeline] [ORBITS] Regenerating product_site_orbits.json + corpus_hash...
+[pipeline] PROLOG_DIR = /home/scott/bin/structural_dynamics_model/prolog
+[pipeline] PROLOG_DIR exists = True
+[pipeline] swipl path = /usr/bin/swipl
+[pipeline] testsets count = 199
+[pipeline] [PROLOG] reading-totality gate...
+[pipeline] [PROLOG] epsilon-declaration gate...
+[pipeline] [PROLOG] residual-signature gate...
+[pipeline] [PROLOG] agency gate...
+[pipeline] [PROLOG] Running analyses...
+[pipeline] [PROLOG] epsilon-stability sweep (OQ-205)...
+[pipeline] [PROLOG] Done (12/12 succeeded).
+[pipeline] [NORM] Normalizing orbit data IDs...
+Normalized orbit_data.json: 0 renamed, 181 unchanged, 0 collisions
+[pipeline] [NORM] Generating fingerprint_data.json...
+fingerprint_data.json: 28 families, 182 constraints
+[pipeline] [JSON] Generating structured JSON report...
+[pipeline] [SINK] Generating routing_sink.json (per-seat author↔engine diff)...
+[pipeline] [ORBIT] Exporting kernel_obstruction.json (obstruction + grounding)...
+[pipeline] [LINTER] OQ-58 referential-integrity census (non-gating)...
+  positive controls: PASS (R1 flags ghost, R2 flags short, R3 flags gradated/graduated, no over-flag)
+[pipeline] [LINTER] cs_reading_relation: 310 dangling → 305 missing readings / 121 kernels (5 id>=2 defensible) — NON-GATING
+[pipeline] [MANIFEST] Stamped pipeline_output.json + orbit_data.manifest.json: run_at=2026-07-25T07:17:31Z, commit=ee025a0, n=199, dirty=True
+[pipeline] [MANIFEST] Stamped giant_component_analysis.manifest.json (run_at=2026-07-25T07:17:31Z)
+[pipeline] [TIER1] Running Python tier 1...
+Found 16 unique Snares.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/snare_report.md...
+Report generated successfully.
+Found 10 validated Ropes.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/rope_report.md...
+Report generated successfully.
+Found 81 constraints classified as Tangled Ropes.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/tangled_rope_report.md...
+Report generated successfully.
+Found 8 unique Pitons.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/piton_report.md...
+Report generated successfully.
+No validated True Mountains found.
+Found 12 unique Scaffolds.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/scaffold_report.md...
+Report generated successfully.
+Step 1: Parsing pipeline_output.json...
+Found 99 unique False Mountains.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/false_mountain_report.md...
+Report generated successfully.
+Step 2: Calculating derived metrics...
+Step 3: Inferring missing data...
+Step 4: Loading orbit data...
+  Matched orbit data for 181/181 constraints
+
+Saved to /home/scott/bin/structural_dynamics_model/outputs/corpus_data.json
+Summary:
+  total_constraints: 199 (100.0%)
+  with_extractiveness: 181 (91.0%)
+  with_suppression: 181 (91.0%)
+  with_classifications: 0 (0.0%)
+  with_domain: 199 (100.0%)
+  with_orbit_data: 181 (91.0%)
+[pipeline] [TIER1] Done (10/10 succeeded).
+false_mountain_data.json: 99 entries
+=== w1_sheaf_join — witnesses ===
+manifest: run_at=2026-07-25T07:17:31Z n=199 commit=ee025a0 dirty=True
+same-run guard: PASS
+[C1] W1 sum=141.1922 nonzero=165/181 argmax=animal_status_kernel__property_reading W1=3.998639
+[C2] H1>0 count=113 example_manifest=ability_ceiling_reading H1=3
+[C3] emit sanity: manifest=113 vs h1>0=113 -> CONSISTENT
+[C3b] sheaf/H1 partition (OQ-51): undetermined=31 -> HOLDS
+[C4] W1-max field-identity: argmax_w1=3.998639 edge_sum=3.998638 -> CONFIRMED (wasserstein_total_fracture = 3-edge sum)
+sheaf_status counts: {'manifest_presheaf': 113, 'undetermined': 31, 'genuine_sheaf': 53, 'fragile_presheaf': 2}
+[2x2] H1=0&W1~0=34  H1=0&W1>0=52  H1>0&W1~0=0  H1>0&W1>0=113
+off-diagonal rows: 52
+    OFF  instrument_dependent_reading  W1=3.658193  H1=None  undetermined
+    OFF  institutional_trust_erosion_c0  W1=2.747129  H1=None  undetermined
+    OFF  crypto_permissionless_reading  W1=2.483196  H1=None  undetermined
+    OFF  superheavy_decay_reading  W1=2.027653  H1=None  undetermined
+    OFF  tool_reading  W1=1.948730  H1=0  genuine_sheaf
+    OFF  prerequisite_debt_reading  W1=1.861767  H1=None  undetermined
+    OFF  neutron_star_bombardment_reading  W1=1.370784  H1=0  genuine_sheaf
+    OFF  behavioral_adoption_friction  W1=1.359371  H1=0  genuine_sheaf
+    OFF  capability_endogeneity  W1=1.359371  H1=0  genuine_sheaf
+    OFF  dataset_recycling_amplification  W1=1.359371  H1=0  genuine_sheaf
+    OFF  visual_evidentiary_authority_flat_control  W1=1.359371  H1=0  genuine_sheaf
+    OFF  impression_management_reading  W1=1.213485  H1=None  undetermined
+    OFF  pragmatic_action_reading  W1=1.171985  H1=None  undetermined
+    OFF  authority_vacuum_incommensurability  W1=1.132006  H1=0  fragile_presheaf
+    OFF  womens_financial_autonomy  W1=1.066145  H1=0  genuine_sheaf
+    OFF  skills_mismatch_reading  W1=0.761354  H1=None  undetermined
+    OFF  ai_governance_legitimacy__democratic_pluralist_reading  W1=0.726396  H1=0  genuine_sheaf
+    OFF  gpl_derivative_work_trigger__interface_boundary_reading  W1=0.725732  H1=None  undetermined
+    OFF  livelihood_security_reading  W1=0.725732  H1=None  undetermined
+    OFF  maat_order_principle__reciprocity_reading  W1=0.695252  H1=None  undetermined
+    OFF  benign_dictator_reading  W1=0.576789  H1=0  genuine_sheaf
+    OFF  adjacency_reading  W1=0.489867  H1=0  genuine_sheaf
+    OFF  organization_floor_c0  W1=0.458370  H1=None  undetermined
+    OFF  genealogical_origin_reading  W1=0.316336  H1=0  fragile_presheaf
+    OFF  jewish_sovereignty_palestine__cultural_zionist_reading  W1=0.312277  H1=0  genuine_sheaf
+    OFF  installed_authorship_reading  W1=0.253689  H1=0  genuine_sheaf
+    OFF  personhood_continuity_reading  W1=0.240287  H1=0  genuine_sheaf
+    OFF  notability_guidelines__deliberative_reading  W1=0.230282  H1=0  genuine_sheaf
+    OFF  interactionist_reading  W1=0.216250  H1=0  genuine_sheaf
+    OFF  pre_public_initiative_reading  W1=0.216250  H1=0  genuine_sheaf
+join coverage: only_pipeline=18 only_orbit=0 dups=0
+
+wrote /home/scott/bin/structural_dynamics_model/outputs/w1_sheaf_join.json
+wrote /home/scott/bin/structural_dynamics_model/outputs/w1_sheaf_join.md
+
+=== top 15 rows (rank | id | W1 | H1 | sheaf | shift) ===
+  1 | animal_status_kernel__property_reading | 3.998639 | 3 | manifest_presheaf | [snare, snare, scaffold, snare]
+  2 | jewish_self_determination__indigenous_return_reading | 3.998142 | 3 | manifest_presheaf | [snare, snare, scaffold, snare]
+  3 | border_control_legitimacy__freedom_of_movement_primary | 3.908287 | 2 | manifest_presheaf | [unknown, snare, rope, snare]
+  4 | conversational_ai_consent_migration | 3.747264 | 3 | manifest_presheaf | [snare, snare, rope, snare]
+  5 | instrument_dependent_reading | 3.658193 | None | undetermined | [unknown, unknown, rope, unknown]
+  6 | epistemic_collapse | 3.162120 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+  7 | lycurgan_laws__demographic_trap_reading | 2.928577 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+  8 | institutional_trust_erosion_c0 | 2.747129 | None | undetermined | [unknown, unknown, unknown, unknown]
+  9 | instrument_capture_reading | 2.587034 | 3 | manifest_presheaf | [snare, snare, rope, snare]
+ 10 | crypto_permissionless_reading | 2.483196 | None | undetermined | [unknown, unknown, scaffold, unknown]
+[ENRICH] Loading pipeline_output.json...
+[ENRICH] Loading orbit_data.json...
+[ENRICH] Loading abductive_data.json...
+[ENRICH] Loading game-theory data...
+[ENRICH] Loading epsilon_stability_results.json...
+[ENRICH] Enriching 199 constraints...
+[ENRICH] Writing enriched_pipeline.json...
+[ENRICH] Done. Bands: {'borderline': 116, 'deep': 52, 'moderate': 13}, tangled_psi computed: 95, game_theory: 75
+[CONFIDENCE] Loading data...
+[BOOL] Loading data...
+[BOOL] Loaded 181 constraints.
+[BOOL] Phase 1: Extracting boolean feature values...
+[BOOL]   emerges_naturally: 18 true, 163 false
+[BOOL]   requires_active_enforcement: 123 true, 58 false
+[BOOL]   has_coordination_function: 180 true, 1 false
+[CONFIDENCE] Loaded 199 constraints.
+[BOOL]   has_asymmetric_extraction: 158 true, 23 false
+[BOOL]   natural_law_without_beneficiary: 0 true, 181 false
+[BOOL]   is_constructed: 181 true, 0 false
+[BOOL] Phase 2: Computing independence metrics...
+[TANGLED] Loading data...
+[BOOL]   emerges_naturally: independence = 0.000
+[BOOL]   requires_active_enforcement: independence = 0.093
+[BOOL]   has_coordination_function: independence = 0.011
+[BOOL]   has_asymmetric_extraction: independence = 0.149
+[BOOL]   natural_law_without_beneficiary: independence = 0.000
+[BOOL]   is_constructed: independence = 0.000
+[CONFIDENCE] Override distributions: 181, Raw distributions: 181.
+[CONFIDENCE] Building per-constraint confidence metrics...
+[CONFIDENCE] Built metrics for 181 constraints.
+[CONFIDENCE] Computing override vs raw comparison...
+[CONFIDENCE] Override impact: 11 band changes, 4 top-type changes.
+[CONFIDENCE] Generating report...
+[BOOL] Phase 3-4: Identifying candidates and computing diagnostics...
+[CONFIDENCE] Wrote /home/scott/bin/structural_dynamics_model/outputs/classification_confidence_report.md
+[CONFIDENCE] Done.
+[TANGLED] Loaded 199 constraints.
+[TANGLED] Running MaxEnt classifier...
+[TANGLED] Computed 199 distributions.
+[TANGLED] Found maxent_probs in pipeline_output.json for 181 constraints.
+[TANGLED] Cross-validation: 12 discrepancies, max deviation 0.939713.
+[TANGLED] Using pipeline_output.json distributions as primary source.
+[TANGLED] Parsing known distributions from maxent_report.md...
+[TANGLED] Found 16 known distributions.
+[TANGLED] Validation: 16/16 passed (tolerance 0.05).
+[TANGLED] Building tangled_rope data from enriched pipeline...
+[TANGLED] 95 tangled_rope constraints decomposed:
+  rope_leaning: 26
+  genuinely_tangled: 0
+  snare_leaning: 69
+[TANGLED] Wrote /home/scott/bin/structural_dynamics_model/outputs/tangled_rope_decomposition_report.md
+[TANGLED] Done.
+[BOOL] Phase 5: Pairwise boolean interactions...
+[BOOL] Generating report...
+[BOOL] Wrote /home/scott/bin/structural_dynamics_model/outputs/boolean_independence_report.md
+[BOOL] Writing JSON data...
+[BOOL] Wrote /home/scott/bin/structural_dynamics_model/outputs/boolean_independence_data.json
+[BOOL] Done.
+[BOUNDARY] Loading data...
+[BOUNDARY] Loaded 199 constraints.
+[BOUNDARY] Reading raw distributions from enriched_pipeline.json...
+[BOUNDARY] Raw distributions: 181.
+[BOUNDARY] Identifying boundary populations...
+[BOUNDARY]   tangled_rope->snare: 68 constraints
+[BOUNDARY]   tangled_rope->piton: 25 constraints
+[BOUNDARY]   rope->scaffold: 20 constraints
+[BOUNDARY]   snare->tangled_rope: 14 constraints
+[BOUNDARY]   rope->piton: 14 constraints
+[BOUNDARY]   mountain->rope: 13 constraints
+[BOUNDARY] Running statistical tests...
+[BOUNDARY] Running override sub-analysis for tangled_rope->snare...
+[BOUNDARY]   Override-affected: 68, Non-affected: 0
+[BOUNDARY] Loading coalition map for cross-tabulation...
+[BOUNDARY]   Coalition map: 199 entries
+[BOUNDARY]   Matched: 68, Unmatched: 0
+[BOUNDARY] Writing JSON output...
+[BOUNDARY] Wrote /home/scott/bin/structural_dynamics_model/outputs/boundary_normality_data.json
+[BOUNDARY] Generating report...
+[BOUNDARY] Wrote /home/scott/bin/structural_dynamics_model/outputs/boundary_normality_report.md
+[BOUNDARY] Done.
+ 11 | jewish_sovereignty_palestine__settler_colonial_reading | 2.457487 | 3 | manifest_presheaf | [snare, snare, rope, snare]
+ 12 | exit_suppression_mechanism | 2.448903 | 3 | manifest_presheaf | [snare, snare, naturalized, snare]
+ 13 | performance_legitimacy_flat_control | 2.448903 | 5 | manifest_presheaf | [naturalized, snare, rope, snare]
+ 14 | information_control_regime | 2.405986 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+ 15 | institutional_barrier_structure | 2.405986 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+[pipeline] [TIER2] Running Python tier 2...
+Report generated: /home/scott/bin/structural_dynamics_model/outputs/pattern_mining.md
+Report generated: /home/scott/bin/structural_dynamics_model/outputs/variance_analysis.md
+Report generated: /home/scott/bin/structural_dynamics_model/outputs/index_sufficiency.md
+[pipeline] [TIER2] Done (3/3 succeeded).
+[pipeline] [ENRICH] Producing enriched_pipeline.json...
+[pipeline] [TIER3] Running Python tier 3...
+[pipeline] [TIER3] Done (5/5 succeeded).
+[pipeline] [ENRICH] Enriching omega report...
+[pipeline] [XCON] Running cross-constraint analyses...
+[omega_cross_constraint] 11 beneficiary groups, 18 omega narrowings written to /home/scott/bin/structural_dynamics_model/outputs/omega_cross_constraint.json
+[scenario_convergence] 14 groups with convergence flags written to /home/scott/bin/structural_dynamics_model/outputs/scenario_convergence.json
+[pipeline] [XCON] Done (2/2 succeeded).
+[pipeline] [EVAL] Running evaluative convergence synthesis...
+[evaluative_convergence] 31 constraint sets written to /home/scott/bin/structural_dynamics_model/outputs/evaluative_convergence.json
+[pipeline] [EPS-READOUT] epsilon authorship readout (OQ-78)...
+[pipeline] Pipeline complete: 48/48 steps OK in 30.0s
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  prep                           ok       [0.0s]
+  regenerate_orbits              ok       [2.7s]
+  orbit                          ok       [0.8s]
+  fpn                            ok       [1.0s]
+  fingerprint                    ok       [1.3s]
+  validation                     ok       [2.1s]
+  maxent                         ok       [1.4s]
+  abductive                      ok       [2.0s]
+  covering                       ok       [1.7s]
+  coupling                       ok       [0.8s]
+  giant_comp                     ok       [1.0s]
+  commentary_census              ok       [1.2s]
+  maxent_diag                    ok       [1.5s]
+  trajectory                     ok       [3.0s]
+  orbit_norm                     ok       [0.0s]
+  fingerprint_json               ok       [0.0s]
+  json_report                    ok       [8.8s]
+  routing_sink                   ok       [0.9s]
+  kernel_orbit_export            ok       [0.7s]
+  reading_linter                 ok       [0.1s]
+  manifest_inject                ok       [0.2s]
+  type_rope                      ok       [0.0s]
+  type_snare                     ok       [0.0s]
+  type_tangled_rope              ok       [0.0s]
+  type_piton                     ok       [0.0s]
+  type_mountain                  ok       [0.0s]
+  type_scaffold                  ok       [0.0s]
+  type_false_mountain            ok       [0.0s]
+  corpus_extract                 ok       [0.1s]
+  omega                          ok       [1.0s]
+  meta_report                    ok       [1.0s]
+  false_mountain_json            ok       [0.0s]
+  w1_sheaf_join                  ok       [0.1s]
+  orbit_operator                 ok       [0.1s]
+  pattern                        ok       [0.0s]
+  variance                       ok       [0.0s]
+  sufficiency                    ok       [0.0s]
+  enrich_pipeline                ok       [0.2s]
+  classification_confidence      ok       [0.1s]
+  tangled_decomposition          ok       [0.2s]
+  boolean_independence           ok       [0.3s]
+  institutional_dissent          ok       [0.2s]
+  boundary_normality             ok       [1.2s]
+  omega_enrich                   ok       [0.0s]
+  omega_cross_constraint         ok       [0.1s]
+  scenario_convergence           ok       [0.1s]
+  evaluative_convergence         ok       [0.0s]
+  epsilon_authorship_readout     ok       [0.1s]
+
+  Total time: 30.0s

@@ -27,7 +27,6 @@
     extractiveness_for_agent/3,
     extractiveness_for_agent_d/4,   % OQ-83: chi with explicit d (per-stakeholder path)
     agent_resolved_directionality/4, % coalition-resolved d for χ AND reported d/f_d (single source)
-    power_modifier/2,
     scope_modifier/2,
 
     % Sigmoid directionality (v5.0)
@@ -239,19 +238,16 @@ effective_immutability_for_context(
 % ============================================================================
 
 % ----------------------------------------------------------------------------
-% Power Modifiers
+% Power Modifiers — REMOVED 2026-07-25 (OQ-67)
 % ----------------------------------------------------------------------------
-% More powerful agents experience less extraction from same constraint
-% Negative modifier = net beneficiary
-% Determines how much of the base extraction is "felt" by the agent.
-% Lower numbers = higher benefit/protection from the constraint.
-
-power_modifier(powerless,     Modifier) :- config:param(power_modifier_powerless, Modifier).
-power_modifier(moderate,      Modifier) :- config:param(power_modifier_moderate, Modifier).
-power_modifier(powerful,      Modifier) :- config:param(power_modifier_powerful, Modifier).
-power_modifier(organized,     Modifier) :- config:param(power_modifier_organized, Modifier).
-power_modifier(institutional, Modifier) :- config:param(power_modifier_institutional, Modifier).
-power_modifier(analytical,    Modifier) :- config:param(power_modifier_analytical, Modifier).
+% `power_modifier/2` dispatched the discrete legacy χ path (χ = ε × π). Its last
+% reader was drl_audit_core:effective_extraction/3, retired with that module; the
+% predicate is therefore gone rather than left as an unread accessor.
+% The canonical replacement is the continuous sigmoid dispatch below —
+% sigmoid_f/2 over canonical_d_*, giving χ = ε × f(d) × σ(S).
+% The six `power_modifier_*` params survive in config.pl:57-62 (specs at
+% config_schema.pl:43-48) as the reader-free CALIBRATION ANCHORS the canonical_d_*
+% values are fitted to approximate — not as a live classifier input.
 
 % ----------------------------------------------------------------------------
 % Scope Modifiers (sigma)

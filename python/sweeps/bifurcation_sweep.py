@@ -16,9 +16,14 @@ Output:
   python/bifurcation_results.json
 """
 
-# NOTE: This sweep exercises the sigmoid classification path (drl_core:dr_type/3) only.
-# The legacy power_modifier/2 path in drl_composition.pl, transition_paths.pl, and
-# drl_audit_core.pl is NOT covered by this sweep.
+# NOTE (rewritten 2026-07-25, OQ-67): this sweep exercises the sigmoid classification
+# path (drl_core:dr_type/3), which is now the ONLY χ path in the engine. The legacy
+# power_modifier/2 path was retired with drl_audit_core.pl, so there is no longer an
+# uncovered second path. (The prior note also named transition_paths.pl as a legacy-path
+# member; that was already false at HEAD — it computes sigmoid_f/2 like everything else.)
+# Residual uncovered surface: the six power_modifier_* params in config.pl are still swept
+# but now have no reader at all, so they are unperturbable by construction — a null result
+# for them means "no consumer," not "no sensitivity."
 # TODO: Extend coverage when legacy path is migrated to sigmoid. See: legacy-power-modifier-migration.
 
 import argparse
