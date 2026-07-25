@@ -271,6 +271,28 @@ class PrologError(RuntimeError):
 # Helpers
 # ---------------------------------------------------------------------------
 
+def salient_stderr(stderr: str, limit: int = 800) -> str:
+    """Pick the diagnostically useful slice of SWI-Prolog stderr.
+
+    A head-slice of this stream is all noise: SWI emits hundreds of load-time
+    warnings ("Local definition ... overrides weak import", "Clauses ... are not
+    together in the source-file") before the actual ERROR, so the failure that
+    ended the run is thousands of characters in. A head-300 slice masked an
+    OQ-60 arithmetic crash in the trajectory step behind two warning lines,
+    reporting only that a warning had occurred (Build Discipline Pattern 6 —
+    a channel that cannot distinguish its payload from its noise).
+
+    Prefer the ERROR lines (the root cause is the first one); fall back to the
+    tail of the stream, never the head.
+    """
+    lines = stderr.splitlines()
+    errors = [ln for ln in lines if ln.lstrip().startswith("ERROR")]
+    picked = "\n".join(errors) if errors else "\n".join(lines[-8:]).strip()
+    if not picked:
+        return "(no stderr)"
+    return picked if len(picked) <= limit else picked[:limit] + " ...[truncated]"
+
+
 def run_prolog(modules: list[str], goal: str, timeout: int = 300) -> subprocess.CompletedProcess:
     """Run a SWI-Prolog command and return the CompletedProcess.
 
@@ -300,7 +322,7 @@ def run_prolog(modules: list[str], goal: str, timeout: int = 300) -> subprocess.
     if result.returncode != 0:
         raise PrologError(
             f"Prolog goal '{goal}' failed (rc={result.returncode}): "
-            f"{result.stderr[:300]}"
+            f"{salient_stderr(result.stderr)}"
         )
     return result
 
