@@ -1,5 +1,5 @@
 # UKE_W v2.2 [Universal Knowledge Evaluator - Writing Protocol]
-## Revised: 2026-07-22
+## Revised: 2026-07-25
 ## Changes from v2.1: Added the Forecast Register (§1.6, §6.1) — predictions scoreable-by-construction via a machine-extractable block; scoreability gate (§5.7); F-UNSCOREABLE-PREDICTION anti-pattern; companion scoring rubric `uke_score_v0.1.md`
 
 ---
@@ -199,6 +199,54 @@ After reviewing all constraint stories and reports for a scenario, look for the 
 - What does the network graph look like? (Star topology? Chain? Independent clusters?)
 
 This meta-reading often generates the essay's thesis. The Alberta essay's thesis — "the remedy intensifies the vulnerabilities" — emerged from the pattern that three of six constraints were coordination-washed in the same direction: extraction hiding behind coordination rhetoric.
+
+#### 1.5.6 The Synthesis Brief and the Findings Ledger (NEW, 2026-07-25)
+
+**The witnessed failure this section closes.** An essay produced from a five-report run
+carried well-formed metadata, executed the discussion summary's findings faithfully — and
+showed no trace of the reports themselves. Nothing failed, because the metadata's grounding
+fields were attestations with no observable failure state: a pass that never opened the
+reports produced metadata indistinguishable from one that did. (The essay in question
+argued that a signature carrying no consequence is not accountability. The process
+instantiated the thesis.) The two rules below give consumption a failure state.
+
+**The synthesis brief is a first-class input, not chat exhaust.** In practice the writing
+pass consumes a distillation — a conversation summary, an operator's note — and not the
+report stack; one sharp page beats five 25KB reports every time, and pretending otherwise
+only makes the real interface invisible and unversioned. So formalize it:
+
+- A run that feeds an essay SHOULD ship a brief, stored with the run's outputs and named in
+  the metadata's Input-provenance line. Per constraint family it carries: the type verdicts
+  and any MaxEnt rejections, the divergence structure between readings (which pairs
+  disagree, in how many contexts, toward what type), the omega questions worth carrying
+  forward, the standing caveats the reports themselves flag (knife-edge seats,
+  low-confidence drift, vacuous grids), and — explicitly — what it left out.
+- The brief's provenance is declared: who or what wrote it, from what inputs. An ad-hoc
+  chat summary used as the brief is declared as exactly that.
+- The brief INDEXES the reports; it does not replace them. The beyond-the-brief row below
+  is what makes that distinction checkable rather than aspirational.
+
+**The Findings Ledger (REQUIRED whenever reports are provided as input, Mode A or B).**
+The §6 metadata must carry a per-finding disposition table:
+
+- Minimum coverage: one row per constraint story provided, plus one row for the §1.5.5
+  pattern-of-patterns reading.
+- Each row names a SPECIFIC diagnostic finding — a signature verdict, a MaxEnt rejection, a
+  reading-pair divergence, a named omega, a drift event — and disposes of it:
+  `used → [where in the essay it landed]` or `declined → [why]`. "Consulted" is not a
+  disposition, and a generic row ("the reports informed the analysis") is not a finding.
+- **At least one row must be beyond-the-brief:** a finding present only in the reports, not
+  in the brief or summary the pass started from. This is the positive control that the
+  reports were opened — a ledger whose every row also appears in the brief witnesses
+  consumption of the brief only.
+- Honest empty states are legal; silence is not. A report that contributed nothing gets
+  `read — nothing survived into the essay, because [reason]`. An unopened report gets
+  `not read`. A pass that worked from the brief alone writes `reports not consumed beyond
+  the brief`. The ledger's job is to make these states visible, not impossible.
+
+Every ledger row is a spot-checkable claim — it names content locatable in a specific
+report file. A fabricated row is a false witness, worse than an honest `not read`
+(F-ATTESTED-CONSUMPTION names both failures).
 
 ### §1.6 From Falsifier to Forecast: The Scoreable Prediction Requirement (NEW in v2.2)
 
@@ -686,6 +734,11 @@ If essay uses analytical models/frameworks:
 - [ ] The essay would be fully intelligible and defensible to a reader who has never heard of Deferential Realism
 - [ ] You have not cited coupling scores, purity numbers, theater ratios, χ magnitudes, or any DR metric as evidence — in a §2.4 tensegrity essay too; §2.4 is not an exception to Mode B
 
+**For either mode, whenever constraint stories/reports were provided as input (§1.5.6):**
+- [ ] Findings Ledger present: one row per provided story plus a pattern-of-patterns row, each with a `used (where)` / `declined (why)` / `not read` disposition
+- [ ] At least one ledger row is beyond-the-brief, or the ledger states `reports not consumed beyond the brief` explicitly
+- [ ] Input provenance names the brief artifact (or `ad-hoc chat summary` / `none`) and lists reports read and not read
+
 ### §5.6 The Counterfactual Completeness Check (REVISED)
 
 For major claims:
@@ -773,7 +826,9 @@ per-essay voice call; the archived copy MUST retain it.]
 - Visibility mode: [A (visible) / B (invisible scaffolding)]
 - Limitations disclosed: [Yes/No/N/A for Mode B]
 
-**DR Scaffolding (Mode B only):**
+**DR Scaffolding (REQUIRED whenever constraint stories/reports were provided as input, Mode A or B — an absent block is F-ATTESTED-CONSUMPTION by omission):**
+- Input provenance: [brief artifact used (path/version, or "ad-hoc chat summary", or none); reports read; reports not read]
+- Findings ledger (§1.5.6): [one row per story + a pattern-of-patterns row: finding → used (where) / declined (why) / not read; mark the beyond-the-brief row(s), or state "reports not consumed beyond the brief"]
 - Constraint stories used: [Count and IDs]
 - Structural signatures detected: [List findings that shaped the essay]
 - Purity gradient: [Which sections are high-confidence vs. boundary cases]
@@ -929,6 +984,18 @@ variety, which sacrifices the softest seat to the aesthetic.
 claim the seat actually made; the holder must be able to sign the whole account, concession
 included; zero snaps is structurally complete; like joints get like treatment.
 
+### F-ATTESTED-CONSUMPTION (NEW, 2026-07-25)
+Grounding metadata that attests without witnessing: "corpus consulted," "reports reviewed,"
+a filled scaffolding block — with no per-finding disposition, so a pass that never opened
+the reports produces metadata indistinguishable from one that did. Consumption claimed as a
+signature with no observable failure state; the essay-layer instance of recap-as-witness.
+The dual failure is the fabricated ledger — rows invented to satisfy the format — a false
+witness worse than an honest `not read`.
+**Fix:** §1.5.6. The Findings Ledger with per-row dispositions; the beyond-the-brief
+positive-control row; `not read` / `nothing survived` / `reports not consumed beyond the
+brief` as legal, visible entries. Ledger rows name content locatable in specific report
+files — spot-check them against the reports when in doubt.
+
 ---
 
 ## §8. THE CORE DISCIPLINE
@@ -1008,6 +1075,17 @@ This doesn't mean hedging everything. It means:
   name the same absent resolver, the absence is the spine; per-instance attribution, no
   coordinator inferred from the pattern); and "the architecture is scaffolding too" (frame
   machinery never appears to the reader; excess frames are dropped).
+- Fifth consumer-found addition (2026-07-25): the synthesis brief + the Findings Ledger
+  (§1.5.6; §5.5 either-mode checklist; §6 metadata Input-provenance and ledger lines, DR
+  Scaffolding block made required-when-input-provided; F-ATTESTED-CONSUMPTION). Witnessed
+  instance: a five-report run produced a strong essay ("The Byline Is Not a Bond") whose
+  metadata showed no trace of the reports — the pass consumed the conversation summary,
+  and nothing in the protocol could tell; the essay's own thesis (a signature carrying no
+  consequence is not accountability) described its own grounding metadata. Consumption now
+  has a failure state: the de-facto interface (the brief) is formalized as a named, stored
+  artifact with declared provenance; the reports get a per-finding disposition ledger with
+  a beyond-the-brief positive-control row; and honest `not read` / `nothing survived`
+  entries are legal while silence is not.
 
 **Lesson that prompted this revision:**
 A retrospective grading attempt over the essay archive found that scoreability is a property

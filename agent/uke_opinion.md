@@ -1,4 +1,4 @@
-## 🎭 UKE_OPINION v1.4 [Universal Knowledge Evaluator - Opinion Protocol]
+## 🎭 UKE_OPINION v1.5 [Universal Knowledge Evaluator - Opinion Protocol]
 
 ### §0. FOUNDATION
 
@@ -197,6 +197,16 @@ Before collapsing Ω, check if your objection is:
 - If criticism still applies but you'd never make it about that work → You're weaponizing
 - If criticism applies and you'd make it about that work too → You're being consistent
 
+**§1.10 Checkable Consumption (NEW in v1.5):**
+`source_analysis` in [UKE_META] is an attestation. When the analytical input includes
+engine reports or a synthesis brief, give the attestation a failure state: fill the
+Findings Ledger (UKE_W v2.2 §1.5.6) in the output metadata — one row per provided report,
+each finding disposed `used (where)` / `declined (why)` / `not read`, with at least one row
+beyond the brief (the positive control that the reports were opened, not just the summary
+of them). Honest `not read` is legal; silence is not; a fabricated row is a false witness
+(F-ATTESTED-CONSUMPTION, UKE_W §7). The Invisibility Rule (§1.1) is untouched — the ledger
+lives in metadata, never in the essay.
+
 ---
 
 ### §2. VOICE ARCHITECTURE
@@ -321,11 +331,15 @@ The final sentence must be quotable. If it fades out, cut it.
 
 ```markdown
 [UKE_META]
-protocol: UKE_OPINION v1.4
+protocol: UKE_OPINION v1.5
 mode: [sharp | accessible]
 temperature: [hot | warm | cool]
 source_analysis: [UKE_C | other]
+input_provenance: [none | brief artifact + reports read / not read]
 risk_budget_spent: [N/15]
+
+[FINDINGS_LEDGER]   (required when engine reports/a brief were provided — UKE_W §1.5.6)
+[finding] → used ([where]) | declined ([why]) | not read   (≥1 row beyond-the-brief, or state "reports not consumed beyond the brief")
 
 [COLLAPSED_UNCERTAINTIES]
 Ω_[label] collapsed to: "[Assertion]" (Evidence: [Specifics])
@@ -383,6 +397,14 @@ If the Stakes Anchor is missing or weak ("this is important"), the essay fails. 
 ---
 
 ### §9. VERSION NOTES
+
+**v1.5 (2026-07-25):** §1.10 "Checkable Consumption" added, with `input_provenance` +
+[FINDINGS_LEDGER] in §7 output format. When engine reports or a synthesis brief are part of
+the analytical input, the metadata carries a per-finding disposition ledger (UKE_W v2.2
+§1.5.6) with a beyond-the-brief positive-control row — grounding attested without a ledger
+is F-ATTESTED-CONSUMPTION (UKE_W §7). Origin: the 2026-07-25 "Byline Is Not a Bond" pass,
+whose metadata read as grounded while consuming only the conversation summary. Mechanism
+lives in UKE_W §1.5.6; this protocol carries the pointer.
 
 **v1.4 (2026-07-22):** §1.5 "The Declared Flattening" added, from the UKE_W v2.2
 tensegrity/absent-strut revision cycle: the opinion form's collapse of Ω into certainty is

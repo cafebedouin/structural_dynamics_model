@@ -1,4 +1,4 @@
-# UKE_THINK v1.2 [Universal Knowledge Evaluator — Philosophical Writing Protocol]
+# UKE_THINK v1.3 [Universal Knowledge Evaluator — Philosophical Writing Protocol]
 
 ---
 
@@ -26,6 +26,8 @@ UKE_THINK assumes UKE_DISCUSSION's craft disciplines (System Architect voice, SC
 UKE_THINK replaces UKE_W's investigative machinery (institutional actions, source quality hierarchy, Mode A/B scaffolding) with philosophical equivalents. It inherits UKE_W's adversarial spine (assume intelligent opposition, survive criticism, degrade gracefully). It inherits MCK's grounding discipline (distinguish observable from constructed) as felt practice, not displayed format.
 
 UKE_THINK does not require constraint stories, Prolog diagnostics, or multi-model synthesis. It must produce defensible, readable philosophy from a conversation and a writer's own reasoning. Everything else is optional amplification.
+
+When that amplification IS provided — engine reports or a synthesis brief — its consumption becomes checkable: UKE_W v2.2 §1.5.6 applies unchanged (Findings Ledger with per-finding `used`/`declined`/`not read` dispositions, named Input provenance, and at least one beyond-the-brief row as the positive control that the reports were opened), recorded in UKE_META. Grounding attested with no per-finding disposition is F-ATTESTED-CONSUMPTION (UKE_W §7); an honest `not read` is always legal — silence is not.
 
 ---
 
@@ -350,6 +352,7 @@ Before the essay is complete, verify:
 - [ ] **Scope:** Are extensions beyond the evidence base flagged?
 - [ ] **Concepts:** Does every novel term earn its place? Does the Parfit test pass?
 - [ ] **Craft:** Does every paragraph satisfy UKE_DISCUSSION simultaneously? (Semantic Spine, Recognition Clause, One-Inch Frame, But/Therefore, no throat-clearing)
+- [ ] **Consumption:** If engine reports or a synthesis brief were provided as input, is the Findings Ledger present in UKE_META (UKE_W §1.5.6) — per-finding dispositions, with ≥1 beyond-the-brief row or an explicit `reports not consumed beyond the brief`?
 - [ ] **Closing:** Does the final line survive the beneficiary analysis?
 
 ---
@@ -358,12 +361,13 @@ Before the essay is complete, verify:
 
 ```
 [UKE_META]
-protocol: UKE_THINK v1.2
+protocol: UKE_THINK v1.3
 voice: System Architect (with licensed first-person in prescriptive sections)
 scope: [1-sentence boundary declaration]
 complication_type: [A / B / C] — [1-sentence justification]
 confidence_gradient: [which sections are bedrock / synthetic / speculative]
 concept_budget: [count of novel terms introduced, each justified]
+input_provenance: [none | brief artifact + reports read / not read — Findings Ledger required here when engine input was provided (UKE_W §1.5.6)]
 
 [THE ONE-INCH FRAME]
 (Max 50 words. Concrete, specific, sensory. Anchors the abstraction.)
@@ -432,6 +436,20 @@ Status: [Draft complete / Ready for editing / etc.]
 
 ### §11. VERSION NOTES
 
+**v1.3 — Checkable Consumption (2026-07-25)**
+
+**Changes from v1.2:** §0 relationship note, §8 Consumption gate, §9 `input_provenance`
+UKE_META field. When the optional amplification (engine reports / synthesis brief) is
+actually provided, consumption is checkable per UKE_W v2.2 §1.5.6: Findings Ledger with
+per-finding dispositions, named Input provenance, beyond-the-brief positive-control row.
+Origin: a 2026-07-25 essay pass that consumed only the conversation summary while its
+metadata read as grounded ("The Byline Is Not a Bond" — an essay arguing that a signature
+carrying no consequence is not accountability, whose grounding metadata was exactly such a
+signature). Full mechanism and rules live in UKE_W §1.5.6 / F-ATTESTED-CONSUMPTION — this
+protocol carries the pointer, not a duplicate.
+
+---
+
 **v1.2 — Tensegrity Edition (2026-07-22)**
 
 **Changes from v1.1:**
@@ -493,10 +511,11 @@ Status: [Draft complete / Ready for editing / etc.]
 
 ---
 
-**End of UKE_THINK v1.2**
+**End of UKE_THINK v1.3**
 
 **Status:** Draft — pending field testing
 **Purpose:** Produce philosophical prose that is simultaneously defensible, readable, indexed, and self-aware about its own perspectival position
 **Core innovation (v1.0):** Debugging discipline (Type A/B/C classification) applied reflexively to the essay's own tensions, combined with beneficiary analysis on prescriptive claims and concurrent craft integration
 **Core addition (v1.1):** Classification as routing system, not merely taxonomy — declared pre-draft, defended as a first-order claim, tested against strategic reclassification
 **Core addition (v1.2):** The multi-seat architecture — tensegrity structure with position provenance for essays where the perspectival fracture is the finding, replacing forced convergence with held-apart positions and kill-conditioned disparities
+**Core addition (v1.3):** Checkable consumption of optional engine input — pointer to UKE_W §1.5.6 (Findings Ledger, Input provenance, beyond-the-brief control)
