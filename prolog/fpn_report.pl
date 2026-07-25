@@ -106,7 +106,12 @@ type_safe(C, Context, Type) :-
    PURITY ZONES
    ================================================================ */
 
+% OQ-62: one_hop_ep_safe/3 and fpn_ep_safe/3 fall back to -1.0 and nothing
+% filters the banded value (only the intrinsic is gated, :50). Fail closed to
+% `unknown` rather than banding an absence `critical`. Order is load-bearing:
+% `< 0.0` throws on the atom, so it must follow the `\+ number` clause.
 purity_zone(EP, unknown)   :- \+ number(EP), !.   % OQ-60: effective_purity can propagate `unknown` (0a)
+purity_zone(EP, unknown)   :- EP < 0.0, !.        % OQ-62: -1.0 sentinel is absence, not worst-zone
 purity_zone(EP, sound)     :- EP >= 0.70, !.
 purity_zone(EP, contested) :- EP >= 0.50, !.
 purity_zone(EP, degraded)  :- EP >= 0.30, !.

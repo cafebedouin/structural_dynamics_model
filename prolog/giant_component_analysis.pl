@@ -595,6 +595,13 @@ count_in_zone(Values, Lo, Hi, Count) :-
 
 in_float_range(Lo, Hi, V) :- V >= Lo, V < Hi.
 
+% OQ-62/OQ-60: fail closed on both absence tokens before any arithmetic. The
+% sole call site (:584-585) pre-filters with `IP >= 0.0, EP >= 0.0`, so this is
+% defense in depth — but that filter is a property of one caller, not of the
+% predicate, and `unknown` here previously threw type_error(evaluable,unknown/0).
+% Order is load-bearing: `< 0.0` throws on the atom.
+purity_zone(P, unknown) :- \+ number(P), !.
+purity_zone(P, unknown) :- P < 0.0, !.
 purity_zone(P, sound) :-
     config:param(purity_action_sound_floor, F), P >= F, !.
 purity_zone(P, borderline) :-

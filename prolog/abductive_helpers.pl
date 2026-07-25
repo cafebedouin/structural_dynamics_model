@@ -139,6 +139,13 @@ extractive_void(coercion_without_coordination).
 %  cut at .8/.6/.4/.2. `contaminated` in particular means [0.40,0.60) here but
 %  [0.30,0.50) in the canonical spec bander logical_fingerprint:purity_zone/2.
 %  Band-vocabulary convention table: docs/logic_extensions.md §2.3.
+%  OQ-62/OQ-60: fail closed on both absence tokens. `unknown` previously threw
+%  type_error(evaluable, unknown/0) here — a throw that abductive_engine.pl:145's
+%  blanket catch already swallowed, so nothing depended on it (census:
+%  audits/2026-07-25_oq62_band_vocabulary_fork/CALL_SITE_CENSUS.md §2).
+%  Order is load-bearing: `< 0.0` throws on the atom.
+fpn_zone(EP, unknown)      :- \+ number(EP), !.
+fpn_zone(EP, unknown)      :- EP < 0.0, !.
 fpn_zone(EP, pure)         :- EP >= 0.80, !.
 fpn_zone(EP, clean)        :- EP >= 0.60, !.
 fpn_zone(EP, contaminated) :- EP >= 0.40, !.

@@ -611,7 +611,13 @@ print_fingerprint(C) :-
 %  OQ-60: purity_score/2 can return the atom `unknown` (no-data). Guard the
 %  arithmetic so a non-number yields zone `unknown` rather than throwing
 %  type_error(evaluable, unknown/0). Inert until a producer emits `unknown`.
+%  OQ-62: the -1.0 epistemic-gate-fail sentinel is an ABSENCE, not a purity of
+%  -1.0 — banding it `degraded` reads a no-access constraint as the most
+%  contaminated thing in the corpus. Fail closed to `unknown` instead. The
+%  `< 0.0` clause MUST follow the `\+ number` clause: the comparison itself
+%  throws on the atom. Exactly 0.0 is a real score and still bands `degraded`.
 purity_zone(S, unknown)      :- \+ number(S), !.
+purity_zone(S, unknown)      :- S < 0.0, !.
 purity_zone(S, pristine)     :- S >= 0.90, !.
 purity_zone(S, sound)        :- S >= 0.70, !.
 purity_zone(S, borderline)   :- S >= 0.50, !.
