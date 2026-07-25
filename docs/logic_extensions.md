@@ -848,21 +848,72 @@ structural_purity(C, PurityClass) :-
     purity_test_coupling(C, T3),
     purity_test_excess(C, T4),
     Tests = [T1, T2, T3, T4],
-    include(is_failure, Tests, Failures),
-    (   Failures = []
+    (   aggregate_purity_tests(Tests, all_pass)
     ->  determine_pure_subtype(C, PurityClass)
-    ;   PurityClass = contaminated(Failures)
+    ;   aggregate_purity_tests(Tests, PurityClass)
+    ).
+
+% R3 aggregation polarity (OQ-60): a witnessed failure fires THROUGH unknown
+% members; a clean aggregate with an unknown member ABSTAINS rather than
+% certifying pure at coverage < 1.0.
+aggregate_purity_tests(Tests, Verdict) :-
+    include(is_failure, Tests, Failures),
+    (   Failures \== []
+    ->  Verdict = purity_fail(Failures)
+    ;   include([T]>>(T = unknown(_)), Tests, Unknowns),
+        (   Unknowns \== [] -> Verdict = inconclusive(no_data)
+        ;   Verdict = all_pass )
     ).
 
 % PurityClass is one of:
-%   pure_natural_law      — NL signature + all four tests pass
+%   pure_natural_law      — NL signature + all four tests pass (dead-by-range; throws)
 %   pure_coordination     — CI_Rope signature + all four tests pass
 %   pure_scaffold         — has sunset clause + all four tests pass
-%   contaminated(Reasons) — one or more tests fail (Reasons = list of failures)
-%   inconclusive          — insufficient data for reliable test
+%   purity_fail(Reasons)  — one or more tests fail (Reasons = list of failures)
+%   inconclusive(no_data) — a clean aggregate with an unknown member (OQ-60)
+%   inconclusive          — epistemic access check failed
 ```
 
-**Note:** `structural_purity/2` returns structural subtypes (not numeric purity zones). The numeric purity zones (pristine, sound, borderline, contaminated, degraded) are derived from `purity_score/2` values in `purity_scoring.pl`. The two are complementary: `purity_score/2` gives a continuous [0,1] health metric, while `structural_purity/2` gives a categorical structural diagnosis.
+**Note:** `structural_purity/2` returns structural subtypes, not numeric purity bands. The
+numeric bands above are derived from `purity_score/2` values. The two are complementary:
+`purity_score/2` gives a continuous [0,1] health metric, `structural_purity/2` a categorical
+structural diagnosis. Its failure verdict was `contaminated(Reasons)` until 2026-07-25; it was
+renamed `purity_fail(Reasons)` under OQ-62 because it does *not* mean "scalar in the
+contaminated band" — a constraint can fail a boolean structural test at any scalar value.
+
+---
+
+### 2.3.1 Band-vocabulary map (OQ-62)
+
+Four predicates band a purity scalar. They band **different quantities** with **different cut
+points**, so their outputs are not interchangeable — before OQ-62 three of them were all named
+`purity_zone/2` and three words (`contaminated`, `degraded`, `critical`) each meant two different
+ranges depending on which one you were reading. Disjoint names and namespaced atoms now make that
+impossible to do silently.
+
+| Predicate | Bands what quantity | Cuts | Atoms |
+|---|---|---|---|
+| `logical_fingerprint:purity_zone/2` | **spec purity** — the canonical `purity_score/2` scalar, §2.3 above | .9 / .7 / .5 / .3 | `pristine` `sound` `borderline` `contaminated` `degraded` |
+| `fpn_report:ep_band/2` | **effective purity** — one-hop and fixed-point EP, for the FPN report | .7 / .5 / .3 | `ep_sound` `ep_contested` `ep_low` `ep_critical` |
+| `giant_component_analysis:action_band/2` | **config action floors** — an operational escalation ladder, not a health reading | `purity_action_*` = .7 / .5 / .3 | `gc_monitor` `gc_watch` `gc_escalate` `gc_override` |
+| `abductive_helpers:fpn_band/2` | **FPN intrinsic purity**, for abductive evidence lines | .8 / .6 / .4 / .2 | `fpn_pure` `fpn_clean` `fpn_mixed` `fpn_compromised` `fpn_critical` |
+
+Only `logical_fingerprint:purity_zone/2` is the spec bander, and only it keeps the name.
+
+**`unknown` is the one deliberately shared token — do not "fix" it.** All four banders return
+`unknown` for an input that is not a purity value (the `-1.0` epistemic-gate-fail sentinel, or
+the OQ-60 no-data atom). This is a literal overlap against the disjointness rule and it is the
+correct exception: unlike the colliding words above, `unknown` means *the same thing* on every
+bander — input absent or out of range, fail closed. A reader applying disjointness strictly would
+rename these apart and thereby destroy the fail-closed guarantee Phase 1b established. The guard
+clause order is also load-bearing: `\+ number(S)` must precede `S < 0.0`, because the comparison
+itself throws on the atom.
+
+Exactly 0.0 is a real score, not an absence, and still bands worst — the guard is `< 0.0`.
+
+**Open, deliberately not settled here:** whether any two of these four legitimately band the
+*same* quantity. If they do, their differing cut points are a real defect that the renames make
+visible rather than fix. Tracked as its own OQ; the renames presuppose no answer either way.
 
 ---
 

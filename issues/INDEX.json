@@ -1,36 +1,25 @@
 {
   "manifest": {
-    "store_version": "e87f0eb9cd25a0d29cb29871882cd364545ef9f5",
+    "store_version": "13877a0ce5503ef081240e85792bb105eda2ceca",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-24T21:52:23"
+    "generated_at": "2026-07-25T00:32:44"
   },
-  "issues_sha": "2bd752c6eee0ac285070411cd83c2196b957591c649f00c1ecd666e492a9d13e",
-  "n_entries": 243,
+  "issues_sha": "37f2e0bbef6be9ed724e21410276311cffb3d1cbf8f7e3820a2ce8cabdc7ec85",
+  "n_entries": 245,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 133,
+    "resolved": 134,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 76,
+    "open": 77,
     "partial": 6
   },
   "active": [
-    {
-      "id": "OQ-62",
-      "status": "open",
-      "priority": 1,
-      "summary": "Purity band vocabulary fork: fpn_zone vs purity_zone, and sentinel→worst-zone in both banders",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-60"
-      ]
-    },
     {
       "id": "OQ-66",
       "status": "open",
@@ -1138,6 +1127,32 @@
       "mentioned_in": [
         "OQ-60"
       ]
+    },
+    {
+      "id": "OQ-244",
+      "status": "open",
+      "priority": 3,
+      "summary": "Scalar identity: do any two of the four purity banders band the *same* quantity?",
+      "deps": [
+        "splits_from OQ-62"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-62"
+      ]
+    },
+    {
+      "id": "OQ-245",
+      "status": "open",
+      "priority": 2,
+      "summary": "Is the ≤0.05 excess-extraction pass bar calibrated, or is 96.6% failure the finding?",
+      "deps": [
+        "splits_from OQ-62"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-62"
+      ]
     }
   ],
   "archive": [
@@ -1902,6 +1917,22 @@
         "OQ-239",
         "OQ-240",
         "OQ-241"
+      ]
+    },
+    {
+      "id": "OQ-62",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Purity band vocabulary fork: fpn_zone vs purity_zone, and sentinel→worst-zone in both banders",
+      "deps": [
+        "splits_from OQ-244",
+        "splits_from OQ-245"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-244",
+        "OQ-245"
       ]
     },
     {

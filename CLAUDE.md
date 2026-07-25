@@ -377,6 +377,19 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   (`diagnostic.purity_n_scored/_n_total`). Atoms sort BEFORE numbers — guard `number/1` before
   any sort/max over purity. Synthetic test constraints needing scorable purity must AUTHOR
   `coordination_type`. Provenance: KNOWN_STATE 2026-07-23; rulings R1–R4 in ISSUES OQ-60.
+- **FOUR purity banders, disjoint by design; exactly ONE is named `purity_zone/2` (OQ-62,
+  2026-07-25).** The survivor is the canonical spec bander `logical_fingerprint:purity_zone/2`
+  (.9/.7/.5/.3). The others are `fpn_report:ep_band/2` (effective purity, .7/.5/.3),
+  `giant_component_analysis:action_band/2` (config `purity_action_*` floors) and
+  `abductive_helpers:fpn_band/2` (FPN intrinsic, .8/.6/.4/.2) — **different quantities,
+  different cuts, NOT interchangeable.** Three used to share the name and three words collided
+  (`contaminated`/`degraded`/`critical` each meant two ranges); unifying them, or restoring the
+  shared name, fails SILENTLY — bands still compute, numbers are wrong by one cut-point.
+  Converse tripwire: all four return the same `unknown`, which is a DELIBERATE shared token
+  (input absent or out of range, fail closed) — do not "fix" that overlap. Guard order is
+  load-bearing (`\+ number` before `< 0.0`; the comparison throws on the atom), and exactly 0.0
+  is a real score that still bands worst. Convention table: `docs/logic_extensions.md` §2.3.1;
+  provenance: KNOWN_STATE 2026-07-25, ISSUES OQ-62.
 - **`h1_band` is NULLABLE; null = UNDETERMINED, never 0 (OQ-51, 2026-06-25).** A null `h1_band`
   (in `pipeline_output.json`, and the product-site `"h1"`/`"h0"` in `product_site_orbits.json`)
   means the cohomological obstruction is N/A — `<2` real (non-`unknown`) seats. A new reader that

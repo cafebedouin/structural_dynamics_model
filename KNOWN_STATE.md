@@ -45,6 +45,79 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-25 — [tripwire] OQ-62 CLOSED: four purity banders renamed to disjoint vocabularies; exactly one `purity_zone/2` survives
+**Files:** prolog/logical_fingerprint.pl, prolog/fpn_report.pl, prolog/giant_component_analysis.pl, prolog/abductive_helpers.pl, prolog/abductive_triggers.pl, prolog/signature_detection.pl, prolog/purity_scoring.pl, prolog/tests/test_purity_bands.pl, prolog/tests/test_purity_absence.pl, python/husk_signature_read.py, python/enhanced_report.py, docs/logic_extensions.md
+**Tier:** tripwire
+
+**The tripwire.** There is now **exactly one** bander named `purity_zone/2` and it is the
+canonical spec one (`logical_fingerprint.pl:614`, logic_extensions.md §2.3). The other three are
+`fpn_report:ep_band/2`, `giant_component_analysis:action_band/2` and
+`abductive_helpers:fpn_band/2`, and they are **not interchangeable with it or each other** —
+different quantities, different cut points. A future agent who unifies them, or who "restores"
+the shared name, reintroduces a defect that fails *silently*: the bands still compute, the
+reports still render, and the numbers are wrong by one cut-point. Convention table with the
+quantity each one bands: `docs/logic_extensions.md` §2.3.1.
+
+**Second tripwire, opposite direction.** All four banders return the SAME `unknown` token, which
+is a literal overlap against the disjointness rule and is **deliberate** — unlike the colliding
+words, `unknown` means the same thing everywhere (input absent or out of range, fail closed).
+Do not "fix" it; doing so undoes the fail-closed guarantee. The guard clause order is also
+load-bearing: `\+ number(S)` must precede `S < 0.0`, because the comparison throws on the atom.
+Exactly 0.0 is a real score, not an absence, and still bands worst.
+
+**What was wrong.** Three modules each defined `purity_zone/2`; three words collided, not the one
+OQ-62 recorded — `contaminated` ([0.30,0.50) vs [0.40,0.60)), `degraded` (<0.30 vs [0.30,0.50)),
+`critical` (<0.30 vs <0.20). With the categorical `contaminated(Reasons)` (now `purity_fail`),
+one word meant four things. All four banders also mapped the −1.0 epistemic-gate-fail sentinel to
+their WORST zone, and two threw `type_error(evaluable, unknown/0)` on the OQ-60 no-data atom.
+
+**Three premise corrections** (detail + witnesses in ISSUES OQ-62 and
+`audits/2026-07-25_oq62_band_vocabulary_fork/CALL_SITE_CENSUS.md`):
+1. *The fork was 4 banders, not 2.* The authoring audit (2026-06-03) never mentions `fpn_report`
+   or `giant_component`, and does not cite `audits/2025-05-15_recon_2/`, which had already
+   recorded three `purity_zone/2` implementations. **Predicts sibling undercounts from the same
+   audit** — treat its other counts as floors, not totals.
+2. *The sentinel path is structurally unfiltered but empirically inert.* Measured at the bander
+   INPUT, the token mix is pure `value` on all six corpora (testsets 153 rows / haiku 492 /
+   flash 668 / kimi 700 / sonnet 930 / kernel_v1 1102). Every `critical` band on every leg comes
+   from a genuinely low real value, none from a sentinel. So the guard was behavior-preserving,
+   not output-changing as expected. Do not cite a 0-`critical` count on one leg as evidence about
+   reachability — it is that leg's purity distribution.
+3. *The throw was never loud.* `abductive_engine.pl:145` wraps every trigger in
+   `catch(_, _, true)`, so the `type_error` was already being discarded. Guarding converted one
+   silent path into another.
+
+**Two method traps hit and recorded** (both produced confident wrong answers before the control
+caught them):
+- A reachability probe using the atom `default` as context, instead of
+  `constraint_indexing:default_context/1`, landed off the authored grid: `fpn_run/3` failed and
+  every accessor reported 0 successes — which reads exactly like "the path is unreachable"
+  (OQ-178 dual). The `fpn_run` success count is now the probe's positive control.
+- **In-process multi-leg iteration is unsound.** Retracting `corpus_loaded/0` and
+  `corpus_constraint/1` does NOT retract the `narrative_ontology` facts the testset files
+  asserted, so legs accumulate and `sort/2` masks it behind ID dedup. The tell was kimi and
+  sonnet returning byte-identical counts; re-run one leg per **process**, they differ (700 vs 930
+  rows). Any future multi-leg sweep must fork per leg.
+
+**Straggler class worth remembering.** `python/husk_signature_read.py` parses
+`outputs/fpn_report.md` and gated `proxy_husk` on the literal string `"critical"`. Post-rename
+that matches nothing and reports zero proxy husks — success-shaped, reads like a finding. It is
+**not wired into `run_pipeline`**, so no pipeline diff would ever have caught it; only the
+unfiltered Pass-B token sweep did. Its columns were also named `fpn_zone`/`one_hop_zone` while
+holding `fpn_report` values, i.e. named after the wrong bander.
+
+**Witnesses.** `a2ef8147` (docs) · `a1902cb1` (guard) · `295260e7` (2a renames) · `13877a0c`
+(2b categorical). `test_purity_bands.pl` RED at HEAD (7 failed / 9 passed, both throws captured)
+→ GREEN 16/16 with 7 positive controls. Pipeline exit 0 + mtime advanced at each phase;
+`per_constraint` byte-identical throughout; `fpn_report.md` byte-identical after back-substituting
+the new atoms; the other two reports byte-identical untouched. `structural_purity` verdict mix
+preserved exactly across the rename (purity_fail 151 / inconclusive 35 / inconclusive_nodata 4 /
+pure_coordination 9). purity_absence 7/7, reading-totality 10/10, `[GATE]` GREEN.
+Follow-ons minted: **OQ-244** (scalar identity — do any two band the same quantity?) and
+**OQ-245** (is the ≤0.05 excess bar calibrated, or is 96.6% failure the finding?).
+
+---
+
 ## 2026-07-24 — [landed] OQ-60 consumer sweep came due: `unknown` crashed the trajectory step; Prolog stderr reporting was masking it
 **Files:** prolog/context_profile_mining.pl, python/run_pipeline.py, python/shared/schemas.py
 **Tier:** landed

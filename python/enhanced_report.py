@@ -548,7 +548,8 @@ def build_purity_type_band_block(per_constraint, diag):
                      "expected band)")
     lines.append(
         "    Expected band by type  (REPORTING CONVENTION, not ground truth; "
-        "purity_zone vocabulary -- OQ-62 governs 'contaminated' = [0.30,0.50)):"
+        "logical_fingerprint:purity_zone vocabulary -- the SPEC bander, the one "
+        "OQ-62 left named; 'contaminated' = [0.30,0.50)):"
     )
     lines.append(
         "      mountain,rope -> pristine|sound ; tangled_rope,snare -> contaminated ; "

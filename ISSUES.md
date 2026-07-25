@@ -2938,9 +2938,11 @@ OQ's report-only scope); OQ-241 (mountain within-type under-severity → `ep_bas
 
 **Ω-type:** Ω_C (conceptual — which vocabulary wins is a design ruling; the guard is mechanical).
 
-**Status:** open — do NOT auto-unify (choice of which range wins is the units-fork resurfacing as
+**Status:** resolved — 2026-07-25, operator ruling (rename to disjoint vocabularies, 2026-07-24).
+Four banders, not two; three colliding words, not one. Guard landed uncoupled from the ruling.
+Witnesses in the resolution block below. Scalar-identity and the ≤0.05 bar split out to OQ-244/245.
 **Priority:** 1
-an implementation decision)
+**Deps:** splits_from OQ-244, splits_from OQ-245
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §4, K4/K6).
 **Files:** `abductive_helpers.pl:97-103` (`fpn_zone`: pure/clean/contaminated/compromised/critical
 at .80/.60/.40/.20), `logical_fingerprint.pl:605-611` (`purity_zone`:
@@ -2968,6 +2970,101 @@ scalar bands' 68% — three different "contaminated" cuts now live on three surf
 **What resolution changes:** One word stops meaning three things. The guard clauses convert a
 latent unknown→worst mechanism to fail-closed and can land independently of (and before) the
 vocabulary ruling if desired.
+
+**Update (2026-07-25, resolution).** The authored premises above are preserved as history; two
+of them were wrong, and the correction is the substance of this close.
+
+*1. The fork is FOUR banders, not two.* All four are live in `run_pipeline.py`, and **three** of
+them were named `purity_zone/2` — a predicate-name collision across modules, which is what
+invited the unification this OQ reserved against.
+
+| Predicate | Vocabulary | Cuts |
+|---|---|---|
+| `logical_fingerprint:purity_zone/2` | pristine / sound / borderline / **contaminated** / **degraded** | .9 / .7 / .5 / .3 |
+| `fpn_report:purity_zone/2` | sound / contested / **degraded** / **critical** | .7 / .5 / .3 |
+| `giant_component_analysis:purity_zone/2` | sound / borderline / warning / **degraded** | config `purity_action_*` = .7 / .5 / .3 |
+| `abductive_helpers:fpn_zone/2` | pure / clean / **contaminated** / compromised / **critical** | .8 / .6 / .4 / .2 |
+
+Three words collided, not one: `contaminated` ([0.30,0.50) vs [0.40,0.60) — the one this OQ
+names), plus **`degraded`** (<0.30 vs [0.30,0.50)) and **`critical`** (<0.30 vs <0.20), neither
+recorded here before. Counting the categorical `contaminated(Reasons)`, one word meant four
+things, not three.
+
+*2. The latency premise was wrong in BOTH directions.* This entry called the sentinel hazard
+"latent only because every current gating caller filters −1.0 first." `fpn_report`'s
+`one_hop_ep_safe/3` and `fpn_ep_safe/3` fall back to `-1.0` and nothing filters the banded value
+(only the intrinsic is gated) — so structurally it is *not* filtered. But measured at the bander
+input, no absence token reaches it on **any** corpus: token mix is pure `value` on all six legs
+(testsets 153 rows, haiku 492, flash 668, kimi 700, sonnet 930, kernel_v1 1102). Every `critical`
+band on every leg comes from a genuinely low real value. So the path is **structurally
+unfiltered but empirically inert**, and the guard was behavior-preserving — the reverse of the
+plan's expectation that it would be output-changing at `fpn_report`.
+
+*3. The throw was never loud.* `abductive_helpers:fpn_zone/2` and the GCA bander threw
+`type_error(evaluable, unknown/0)` on the OQ-60 atom, but `abductive_engine.pl:145` wraps every
+trigger in `catch(_, _, true)` ("silently skip constraints where trigger fails"). The exception
+was already being discarded — a Pattern-6 absorption, not a loud failure. Guarding therefore
+converted one silent path into another, not loud into silent.
+
+*4. Recon-ingestion finding (predicts sibling undercounts).* The 2026-06-03 audit that authored
+this OQ contains **zero** mentions of `fpn_report` or `giant_component`, and does not cite
+`audits/2025-05-15_recon_2/`, which had already recorded three `purity_zone/2` implementations.
+The undercount (2 of 4) is an audit-didn't-ingest-prior-recon failure, not a discovery gap —
+flagged because the same audit's other findings may undercount the same way.
+
+**Ruling and rationale.** Rename to disjoint vocabularies rather than unify. Correct under *both*
+branches of the unanswered scalar-identity question (OQ-244): if the four band different
+quantities, disjoint names are simply right; if two band the same quantity, unification would be
+right but the renames cost nothing and make the cut-point disagreement *visible* instead of
+hiding it under a shared name. The falsifier against the document-only option was standing in the
+tree: `abductive_helpers.pl:135` documented the fork and documented it **wrong**, claiming parity
+with `fpn_report.pl` across different arity, names, and cuts.
+
+`logical_fingerprint:purity_zone/2` keeps its name as the canonical spec bander (§2.3). Renamed:
+`fpn_report:purity_zone/2`→`ep_band/2`, `giant_component_analysis:purity_zone/2`→`action_band/2`
+(+`count_by_purity_zone/8`→`count_by_action_band/8`), `abductive_helpers:fpn_zone/2`→`fpn_band/2`
+(+`one_hop_zone/3`→`one_hop_band/3`), `signature_detection`'s `contaminated(Reasons)`→
+`purity_fail(Reasons)`. Atoms namespaced (`ep_*`/`gc_*`/`fpn_*`) so disjointness holds by
+construction. **`unknown` is a deliberate shared token across all four** — it means the same
+thing everywhere (absent input, fail closed), and a future reader applying disjointness strictly
+must not "fix" it; carve-out stated in `docs/logic_extensions.md` §2.3.1.
+
+**Commits.** `a2ef8147` (1a docs: the wrong `:135` comment + purity_scoring's missing `unknown`
+token) · `a1902cb1` (1b guard: `< 0.0 → unknown` at all four, ordered after `\+ number` because
+the comparison throws on the atom) · `295260e7` (2a: the three scalar-bander renames) ·
+`13877a0c` (2b: the categorical `purity_fail` rename).
+
+**Witnesses.** Call-site census taken BEFORE the guard landed:
+`audits/2026-07-25_oq62_band_vocabulary_fork/CALL_SITE_CENSUS.md` (+ the three probes).
+`prolog/tests/test_purity_bands.pl` RED at HEAD (7 failed / 9 passed, both `type_error` throws
+captured) → GREEN 16/16, with 7 positive controls including a load-chain control and a
+0.0-is-a-value boundary control. Pipeline exit 0 with mtime advanced at every phase;
+`per_constraint` byte-identical throughout; `fpn_report.md` byte-identical after reverse-mapping
+the new atoms; `giant_component_analysis.md` and `abductive_report.md` byte-identical untouched
+(their atoms never reach output text). `structural_purity` verdict mix exactly preserved across
+the 2b rename (151 / 35 / 4 / 9). purity_absence 7/7, reading-totality 10/10.
+
+**Two stragglers the plan's census missed**, both caught by the unfiltered Pass-B sweep:
+`python/husk_signature_read.py` parses `outputs/fpn_report.md` and gated `proxy_husk` on the
+literal `"critical"` — post-rename that matches nothing and reports zero proxy husks, which reads
+like a finding rather than a broken parse. It is not in `run_pipeline`, so no pipeline diff would
+have caught it. Its columns were also named `fpn_zone`/`one_hop_zone` while holding `fpn_report`
+values — named after the wrong bander.
+
+**Term-persistence question (asked and answered before 2b landed).** Nothing serialises the
+renamed terms. Two-sided: 151 of 199 live constraints carry the purity verdict, yet
+`contaminated(` appears in ZERO artifacts under `outputs/`, so the absence is genuine rather than
+an empty-table artifact; the control confirms the sweep does find serialised purity tokens
+elsewhere. `fpn_intrinsic/2` and `gc_node_purity/3` are `:- dynamic` in-memory stores with no
+disk write path. No migration or read-side alias needed.
+
+**Latent, recorded rather than fixed.** `abductive_triggers.pl:527` tests `FPNZone \= OneHopZone`.
+With the guard, an `unknown` band compares unequal to a real band and would read as a zone
+migration — absence as presence. Unreachable today because `one_hop_band/3` depends on
+`drl_modal_logic:effective_purity/3`, which succeeds 0 times on the authored grid (control: the
+4-arity `drl_purity_network:effective_purity/4` succeeds 181/181 in the same session/context, so
+this is measured-empty, not didn't-look). If that predicate is ever revived, the fix is to
+require both bands real — not to remove the guard.
 
 ---
 
@@ -11493,6 +11590,71 @@ all-clear from a probe that cannot flag a planted defect is not a result.
 statement that the remaining sites are unreachable-by-`unknown` — which would let CLAUDE.md's OQ-60
 invariant be cited as enforced rather than aspirational. Note both Priority lines here are an
 initial authoring, not the operator's seat — re-seat as needed.
+
+---
+
+## OQ-244 — Scalar identity: do any two of the four purity banders band the *same* quantity?
+
+**Ω-type:** Ω_C (design ruling on what each bander is *for*), with an Ω_E limb (measure whether
+two inputs coincide on the corpus).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-62
+**Origin:** OQ-62 resolution 2026-07-25 — explicitly split out so the rename could land without
+presupposing an answer.
+**Files:** `logical_fingerprint.pl:614` (spec purity), `fpn_report.pl:109` (`ep_band/2`,
+effective purity), `giant_component_analysis.pl:598` (`action_band/2`, config action floors),
+`abductive_helpers.pl:136` (`fpn_band/2`, FPN intrinsic).
+
+**Specific question:** OQ-62 renamed the four banders to disjoint vocabularies on the grounds that
+they band different quantities. That grounds the *naming*, but was never independently verified.
+If any two in fact band the same quantity, their differing cut points (.9/.7/.5/.3 vs .7/.5/.3 vs
+.8/.6/.4/.2) are a real defect that the renames make **visible rather than fix** — a reader would
+now see two differently-named bands over one scalar and have no way to tell which cut is intended.
+
+**Method note (needs a positive control, and a distinction-check first).** Before merging any two,
+owe a distinction-check: verify the architecture does not *mandate* their separation — shared
+dynamics over distinct objects is analogy, not identity (build_discipline → false-unification).
+The Ω_E limb: for each pair, measure whether the two inputs coincide per-constraint on a corpus
+where both are defined. Control: a pair known to differ (spec purity vs config action floors)
+must register as differing, or the comparison is not discriminating.
+
+**What resolution changes:** either a witnessed statement that four distinct quantities justify
+four vocabularies (closing the fork properly), or the identification of a genuine cut-point
+defect currently masked by disjoint naming.
+
+---
+
+## OQ-245 — Is the ≤0.05 excess-extraction pass bar calibrated, or is 96.6% failure the finding?
+
+**Ω-type:** Ω_E (calibration — measurable against the corpus).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-62
+**Origin:** OQ-62 resolution 2026-07-25 — carved out of the naming ruling because no naming
+decision can settle it.
+**Files:** `signature_detection.pl:1316-1323` (`purity_test_excess/2`), feeding
+`aggregate_purity_tests/2` → `structural_purity/2`.
+
+**Specific question:** `purity_test_excess/2` passes only at `Excess =< 0.05`. Post-bound-probe-fix
+`structural_purity` reads 96.6% contaminated (now `purity_fail`) against the scalar bands' 68% —
+and on the live leg 151 of 199 constraints carry the failure verdict. A bar that fails ~96% of
+items is either correct-and-alarming or miscalibrated, and the two are indistinguishable without
+an evidence pass. In scope for its own OQ, out of scope for OQ-62, because it feeds
+`structural_purity` → the signature layer, i.e. the **classification** path, not a report surface.
+
+**Method note:** the failure rate alone does not discriminate the two hypotheses — a genuinely
+extractive corpus and a mis-set bar produce the same headline. Discriminate on the *distribution*
+of `Excess` values, not the pass/fail count: a bar sitting inside a dense region of the
+distribution is miscalibrated in a way a bar sitting in a sparse tail is not. Sweep the bar over
+an interval and report where the verdict mix moves, rather than asserting at the single point
+0.05 (sign-opposed effects cancel at a point; flat is the cancellation signature).
+
+**What resolution changes:** either the bar is re-seated (output-changing on the classification
+path — split the commit and land under manual approval), or 96.6% becomes a citable finding about
+the corpus rather than a suspected instrument artifact.
 
 ---
 

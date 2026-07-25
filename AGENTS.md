@@ -512,11 +512,22 @@ JSON serializes BOTH as `null` (`purity_score`/`purity_band`). Consumer rules: n
 `.get("purity_score", 0)`; guard `number/1` before arithmetic OR any sort/max (atoms sort
 before numbers — silent misorder); dispositive clean verdicts (pristine/`stable`/`pure_*`)
 gate at coverage 1.0 → distinct abstention token (`inconclusive(no_data)`, `undetermined`)
-while positive existentials (contaminated/cascading) fire through unknown members;
+while positive existentials (`purity_fail`/cascading) fire through unknown members;
 descriptive stats carry `n_scored`/`n_total` (json `diagnostic.purity_n_scored/_n_total`).
 **Fixture rule:** synthetic test constraints needing scorable purity must AUTHOR
 `coordination_type` (+ `extractiveness`). Rulings R1–R4: ISSUES.md OQ-60; witnesses:
 `audits/2026-07-17_oq60_purity_absence/`.
+
+**Band vocabularies are disjoint by design (OQ-62, 2026-07-25).** Four predicates band a purity
+scalar and they are NOT interchangeable: `logical_fingerprint:purity_zone/2` is the canonical
+spec bander and the only one still called `purity_zone` (.9/.7/.5/.3); the others are
+`fpn_report:ep_band/2` (.7/.5/.3), `giant_component_analysis:action_band/2` (config
+`purity_action_*` floors) and `abductive_helpers:fpn_band/2` (.8/.6/.4/.2). Three formerly shared
+the name and three words meant two ranges each — unifying them again fails silently. All four
+return the same `unknown`, which is a deliberate shared token, not an oversight. The categorical
+verdict `structural_purity/2` emits `purity_fail(Reasons)` (was `contaminated(Reasons)`), which
+means "≥1 of four boolean tests failed" at ANY scalar value — not "scalar in the contaminated
+band." Convention table: `docs/logic_extensions.md` §2.3.1.
 
 ### Headline verdict contract (OQ-98, 2026-06-11)
 
