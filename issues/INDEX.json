@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "ccab7c1f69bd5824cfb126a905419eac89d83bf5",
+    "store_version": "6d31019ec9dcd7c0621bcd768f5be8fd1ccf182e",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-25T01:59:19"
+    "generated_at": "2026-07-25T02:10:33"
   },
-  "issues_sha": "36fb8995fcdc29d2d9c9b89aa01c9eae2969f9599dce36f869c2232cc346842d",
-  "n_entries": 250,
+  "issues_sha": "e8fb7606f185ea591c70f6886f9414ae87a9e5138693d31e0a9bd5947274e336",
+  "n_entries": 252,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,8 +16,8 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 81,
-    "partial": 6
+    "open": 82,
+    "partial": 7
   },
   "active": [
     {
@@ -1171,18 +1171,17 @@
     },
     {
       "id": "OQ-248",
-      "status": "open",
+      "status": "partial",
       "priority": 3,
-      "summary": "Did the 2026-06-03 shadow-identity read measure what it claimed? (and can any feature separate a forgery from a law?)",
+      "summary": "Shadow separability: the provenance question is ANSWERED; the discriminating-power question remains",
       "deps": [
-        "blocked_on_human oq248-gate2-rerule-after-maxwell-nonreproduction"
+        "blocked_on OQ-251"
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-60",
-        "OQ-62",
         "OQ-66",
-        "OQ-138"
+        "OQ-70",
+        "OQ-251"
       ]
     },
     {
@@ -1211,6 +1210,30 @@
         "OQ-66",
         "OQ-94",
         "OQ-138"
+      ]
+    },
+    {
+      "id": "OQ-251",
+      "status": "open",
+      "priority": 2,
+      "summary": "Post-OQ-70, is there ANY path by which a paradigm natural law certifies `natural_law`? (and did OQ-70 intend that scope?)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-70",
+        "OQ-248"
+      ]
+    },
+    {
+      "id": "OQ-252",
+      "status": "open",
+      "priority": 3,
+      "summary": "Rulings that release certifications carry no back-reference to what they license",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-66",
+        "OQ-70"
       ]
     }
   ],

@@ -421,18 +421,21 @@ has_asymmetric_extraction(ConstraintID) :-
    => default-agent => FSM keeps firing. A future revisit is a FRESH
    MEASUREMENT, not a resumption of these two records.
 
-   OPEN AGAINST THIS BLOCK (OQ-248): the gate-2 evidence recorded below for
-   entropic_universe_hypothesis does NOT re-witness. The first properly-fitted
-   read of maxwell_demon_impossibility on kernel_v1 (2026-07-25) gives shadow
-   rope 0.95 / entropy 0.156 / mountain 0.010, signature coupling_invariant_rope,
-   dr_type rope at all four canonical contexts — not the "0.990 mountain /
-   entropy 0.031" cited below. That is NOT proof the 2026-06-03 read was wrong
-   (it was taken on the then-live pre-reset corpus; MaxEnt is corpus-fitted; the
-   signature layer has changed since) — attributing the gap to corpus vs engine
-   regime needs a stage-hash diff, not yet run. Re-ruling an entry is a gate-2
-   ruling and the operator's seat. Do NOT quietly retire the entry on the
-   strength of the note below. Evidence:
-   audits/2026-07-25_oq66_nlwb_filter_cutover/FINDINGS.md §5.
+   GATE-2 FOR entropic_universe_hypothesis WAS RE-TAKEN 2026-07-25 (OQ-248).
+   The June basis is VOID and the entry now rests on a NEW, DATED ruling — not a
+   better-sourced version of the old one. Detail at the entry below; discriminator
+   evidence in audits/2026-07-25_oq66_nlwb_filter_cutover/GATE2_REWITNESS.md.
+
+   METHOD WARNING FOR ANY FUTURE GATE-2 READ — the June pass cited evidence that
+   could not discriminate. maxwell (PASS) and press_reformation_causality__
+   technological_inevitability (HELD) had IDENTICAL ε=0.08 and suppression=0.02,
+   and maxwell-identical shadows. So metrics and shadow were DECORATIVE in that
+   ruling: they appear in the pass citation but were satisfied by the case that
+   failed. Gate 2's stated procedure ("host metrics AND narrative/omegas
+   converge") overstated its own rigor — only the narrative/omega half ever did
+   work. When taking a gate-2 read, state which surface DISCRIMINATES and check
+   it against a known gate-2 FAIL; a surface shared with the failing case is
+   corroboration at best.
 
    A later constraint_vindicates/2 split (proposition-vindication as its own
    authored field) is the continuation of this view, not a rewrite.
@@ -444,9 +447,57 @@ has_asymmetric_extraction(ConstraintID) :-
 %  read (host ε/omega/narrative) — see comment block above.
 
 % Gate 1: a hypothesis (the entropic-universe worldview), proposition-kind.
-% Gate 2: host maxwell_demon_impossibility is the witnessed genuine law —
-%   MaxEnt shadow 0.990 mountain / entropy 0.031, omegas authored empty,
-%   narrative asserts the Second Law. Ruled 2026-06-03.
+%   Ruled 2026-06-03; UNCHANGED and never in question.
+%
+% Gate 2: RE-RULED 2026-07-25 (OQ-248). This is a NEW ruling on a NEW basis, not
+%   a re-citation of the June one. The entry was NOT continuously certified
+%   between those dates — the June basis expired 2026-06-05 and nobody re-checked.
+%
+%   THE JUNE BASIS IS VOID, on two independent counts:
+%     (a) "MaxEnt shadow 0.990 mountain / entropy 0.031" — the engine that
+%         produced it certified maxwell natural_law via a claimed_natural/2
+%         source that OQ-70 DELIBERATELY REMOVED two days later (72ec2cdd,
+%         2026-06-05: no signature may read a single authored perspective as a
+%         story-level claim). At HEAD natural_law_signature does not fire for
+%         maxwell; it reads coupling_invariant_rope / rope. Single-variable
+%         isolation (same kernel_v1 corpus, era engine vs HEAD engine) confirms
+%         ENGINE regime, not corpus. The digits also never reproduced: measured
+%         in-era is 0.95 / entropy 0.1557 (0.95 is the saturation ceiling).
+%     (b) "omegas authored empty" — FACTUALLY WRONG. maxwell authors 11
+%         omega_variable facts.
+%
+%   THE NEW BASIS — narrative, and DISCRIMINATING (verified against the gate-2
+%   FAIL case, which is the check the June ruling skipped):
+%     - maxwell's omegas are about the PHYSICS'S GROUNDING (is the second law
+%       fundamental or an emergent statistical property; does the
+%       information-theoretic route independently confirm it). None bears on
+%       whether an agent benefits.
+%     - the HELD case's omegas bear DIRECTLY on agency — "does deployment require
+%       intentional beneficiary strategy?", "is this a law of physics or a
+%       contingent outcome?" — which is exactly gate 2's question.
+%     So the discriminator is WHAT THE OMEGAS ARE ABOUT, not whether they exist,
+%     and not the metrics or the shadow (both identical across pass and fail).
+%
+%   ADMITTED AS HOST TESTIMONY, NOT INDEPENDENT EVIDENCE: the file's own
+%   "no human agent benefits / hypotheses are not agents with exit options" is
+%   authored by the story that gains from the release — the same authored surface
+%   the HELD case failed on. It corroborates; it does not establish.
+%
+%   KILL CONDITION: if the detector-coverage question (OQ-251) finds that a path
+%   to natural_law certification DOES exist post-OQ-70 and maxwell still fails
+%   it, this narrative basis is called into question and gate 2 returns to the
+%   operator's seat.
+%
+%   Blast radius of this ruling: zero observable. maxwell classifies rope at HEAD
+%   either way, and all five live legs carry zero registered beneficiary values.
+%
+%   Licenses: non_agent_beneficiary(entropic_universe_hypothesis) — this registry
+%     entry, and nothing else. If THIS ruling is later amended or withdrawn, that
+%     entry must be re-checked in the same change.
+%     (First forward instance of the OQ-252 convention, ruled 2026-07-25:
+%     Licenses: is added when a ruling is CREATED OR REVISITED from that date
+%     onward. It is NOT backfilled — absence on an older ruling means "predates
+%     the convention," never "licenses nothing.")
 non_agent_beneficiary(entropic_universe_hypothesis).
 
 % Gate 1: a body of norms (legal framework), proposition-kind — ":231 the IHL

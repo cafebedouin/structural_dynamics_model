@@ -3327,77 +3327,72 @@ commit `1613c3cc`, KNOWN_STATE 2026-07-25.
 
 ---
 
-## OQ-248 — Did the 2026-06-03 shadow-identity read measure what it claimed? (and can any feature separate a forgery from a law?)
+## OQ-248 — Shadow separability: the provenance question is ANSWERED; the discriminating-power question remains
 
-**Ω-type:** Ω_E (empirical — first a provenance question about a recorded measurement, then a
-discriminating-power question).
+**Ω-type:** Ω_E (empirical — discriminating power of the shadow).
 
-**Status:** open
+**Status:** partial — first question resolved 2026-07-25; second question open.
 **Priority:** 3
-**Origin:** OQ-66 gate-two record (2026-06-03), relocated and RESHAPED on OQ-66 close 2026-07-25.
-**Deps:** blocked_on_human oq248-gate2-rerule-after-maxwell-nonreproduction
-(`Deps:` edges take OQ targets only, so the GAP-19 blocker below cannot be expressed as an edge —
-it is authored in prose and is REAL)
-**Files:** `prolog/maxent_classifier.pl`, `prolog/narrative_ontology.pl:421-455` (the registry
-entries and their gate-2 provenance), `docs/design/design_gaps.md` (GAP-19).
+**Origin:** OQ-66 gate-two record (2026-06-03); relocated, reshaped, then partially resolved
+2026-07-25.
+**Deps:** blocked_on OQ-251
+**Files:** `prolog/maxent_classifier.pl`, `prolog/narrative_ontology.pl:441-505` (the re-ruled
+entry), `docs/design/design_gaps.md` (GAP-19).
 
-**BOTH LEGS OF THE ORIGINAL CLAIM ARE NOW UNAVAILABLE.** The 2026-06-03 finding was *relative*:
-`technological_inevitability_interpretation`'s shadow read was **maxwell-identical** (MaxEnt
-mountain 0.990 / entropy 0.031), therefore the shadow cannot separate a forgery from a genuine law.
-That claim needs both terms. Neither survives:
+**FIRST QUESTION — RESOLVED 2026-07-25: the 2026-06-03 read measured what it claimed, on substance.**
+The discriminator this OQ named (a same-corpus engine comparison) was RUN. Three arms, with A vs C
+as the single-variable isolation:
 
-- **The forgery is gone.** Its host is absent from all five live legs (moot-by-reset, OQ-66).
-  Unreproducible; generation is stochastic, so a regenerated story is a new draw, not the same
-  story.
-- **The anchor no longer reads as recorded.** First properly-fitted read of
-  `maxwell_demon_impossibility` on `kernel_v1`, 2026-07-25 — mountain **0.010** against a recorded
-  **0.990**. That is an **INVERSION, not drift**.
+| arm | engine | corpus | signature | `dr_type` | shadow |
+|---|---|---|---|---|---|
+| A | HEAD | `kernel_v1` (1106) | `coupling_invariant_rope` | rope | rope-0.95 |
+| B | `f600599b` | era `testsets` (1103) | `natural_law` | mountain | mountain-0.95 |
+| C | `f600599b` | `kernel_v1` (1106) | `natural_law` | mountain | mountain-0.95 |
 
-So there is no surviving *them* to ask "can anything separate them?" about. **Do not carry this as
-"an n=1 prior with an opening datum" — that phrasing implies the prior still has support. It does
-not.**
+Same corpus, different engine, opposite answer ⇒ **corpus regime REFUTED, engine regime CONFIRMED.**
+Hypothesis "wrong when recorded" is refuted on substance and survives only as mis-transcribed digits
+(recorded 0.990/0.031; measured in-era 0.95/0.1557, where 0.95 is the saturation ceiling and 0.1557
+is that shape's entropy — identical in all three arms because it is a property of the shape, not the
+winner). Cause: OQ-70 (`72ec2cdd`, 2026-06-05) removed the `claimed_natural/2` source maxwell's
+certification rode. **A deliberate ruling that expired this one's premise two days after it was
+made.** Full evidence: `audits/2026-07-25_oq66_nlwb_filter_cutover/GATE2_REWITNESS.md`.
 
-**FIRST QUESTION (before any separability work): did the 2026-06-03 read measure what it claimed?**
-Three live hypotheses, all kept open:
+**Consequent action taken (2026-07-25):** gate 2 for `non_agent_beneficiary(entropic_universe_hypothesis)`
+was **RE-RULED on a new, dated basis** — narrative/omega, verified as *discriminating* against the
+gate-2 FAIL case — with the June basis recorded VOID on two counts (the void shadow citation, and
+"omegas authored empty" which is factually wrong: maxwell authors 11). Entry KEPT. See the entry's
+comment block. Kill condition is OQ-251.
 
-1. **Corpus regime** — the read was on the then-live pre-reset corpus, which is not byte-identical
-   to the `kernel_v1` archive, and MaxEnt is corpus-fitted.
-2. **Engine regime** — the signature layer has changed repeatedly since (OQ-60, OQ-62, OQ-138
-   among others).
-3. **Wrong when recorded** — e.g. taken under an unfitted or single-context model. Live and not
-   privileged: the OQ-66 close established that the *guard* for this very predicate had a vacuous
-   MaxEnt arm from birth, so a same-era MaxEnt read is not automatically trustworthy.
+**METHOD FINDING (generalizes past this OQ).** The June gate-2 pass cited evidence that could not
+discriminate: the PASS case (maxwell) and the HELD case (tech_inevitability) had **identical**
+ε=0.08, suppression=0.02, and maxwell-identical shadows. Metrics and shadow were **decorative** —
+present in the pass citation, satisfied by the failing case. Only the narrative/omega half ever did
+work, and the discriminator is *what the omegas are about* (maxwell's bear on physics grounding;
+the held case's bear directly on whether a beneficiary exists). **Rule: a gate-2 read must state
+which surface DISCRIMINATES and check it against a known FAIL; a surface shared with the failing
+case is corroboration at best.** Recorded in the `narrative_ontology.pl` two-gate block.
 
-**The discriminator is the stage-hash diff, which has NOT been run.** That is the concrete next
-step and it is what separates (1) from (2). Until it runs, "it's the corpus" is a hypothesis where
-a witness goes.
+**SECOND QUESTION — STILL OPEN: does any available feature separate a metric-identical forgery from a
+genuine law?** Now sharper, because the metric-identity is *confirmed* (0.08/0.02 on both) and the
+shadow is confirmed *non-discriminating between them in the era regime*. **Falsifier:** find or
+construct a metric-identical pair and test whether any feature separates them.
 
-**SECOND QUESTION (only if the identity claim survives, or is reconstructed):** does *any*
-available feature separate a metric-identical forgery from a genuine law? **Falsifier:** construct
-or find a metric-identical pair and test whether any feature separates them. If yes, gate 2 gets a
-lever it currently lacks; if no, gate 2 is irreducibly a human ruling and should be documented as
-one.
+**The host is gone and cannot be reconstructed** — tech_inevitability is absent from all five live
+legs, and generation is stochastic, so a regenerated story is a new draw. Any future work needs a
+constructed pair, not a recovered one.
 
-**TWO BLOCKERS, and only one is machine-visible.** `Deps:` records the human block (the gate-2
-re-rule). The second is **GAP-19** — `maxent_boundary_analysis/3`, this question's stated first
-real witness, is built but UNWIRED. **When the human block clears, the tracker will show this OQ
-workable and it still will not be measurable until GAP-19 is wired.** Do not read a `workable_now`
-here as "ready to run."
+**BLOCKED, and only one blocker is machine-visible.** `Deps:` records OQ-251 (the detector-coverage
+question, which also gates this OQ's kill condition on the re-ruled entry). The second is **GAP-19**
+— `maxent_boundary_analysis/3`, this question's stated first real witness, is built but UNWIRED, and
+GAP cross-links cannot be `Deps:` edges. **When OQ-251 clears, the tracker will show this workable
+and it still will not be measurable until GAP-19 is wired.**
 
-**Not a GAP itself.** GAP-19 records a capability ABSENCE. This is a measured case where separation
-FAILED plus a provenance question about the measurement, both with falsifiers attached.
+**What resolution changes:** either gate 2 acquires a mechanical lever, or the two-gate principle is
+documented as irreducibly human at gate 2 — which, given the method finding above, is currently the
+better-supported reading.
 
-**Blocked on human:** whether the `entropic_universe_hypothesis` registry entry's gate-2
-justification still stands. The entry REMAINS in the registry and was deliberately not touched;
-nothing in the OQ-66 cutover depends on it (the diff is zero either way). Re-ruling it is a gate-2
-ruling, the operator's seat.
-
-**What resolution changes:** either the recorded gate-2 evidence is rehabilitated (and the
-separability question resumes with a real pair), or it is withdrawn — in which case the registry's
-existing entries need re-ruling against whatever evidence standard replaces it.
-
-**Evidence:** `audits/2026-07-25_oq66_nlwb_filter_cutover/FINDINGS.md` §5 (with the
-non-degenerate-fit control), `RAW_OUTPUT.md` §G.
+**Evidence:** `audits/2026-07-25_oq66_nlwb_filter_cutover/GATE2_REWITNESS.md`, `FINDINGS.md` §5,
+`RAW_OUTPUT.md` §G.
 
 ---
 
@@ -3470,6 +3465,109 @@ monitored surface — in both cases the consumer surface of `nlwb` stops contain
 cannot be exercised and reads as though it can.
 
 **Evidence:** `audits/2026-07-25_oq66_nlwb_filter_cutover/FINDINGS.md` §8.
+
+---
+
+## OQ-251 — Post-OQ-70, is there ANY path by which a paradigm natural law certifies `natural_law`? (and did OQ-70 intend that scope?)
+
+**Ω-type:** Ω_E (empirical — a detector-coverage measurement), with an Ω_C rider on ruling scope.
+
+**Status:** open
+**Priority:** 2
+**Origin:** OQ-248 gate-2 re-witness, 2026-07-25.
+**Files:** `prolog/signature_detection.pl` (`natural_law_signature`, `claimed_natural/2`),
+`prolog/archives/datasets/kernel_v1/maxwell_demon_impossibility.pl` (the paradigm case).
+
+**The finding that raised it.** `maxwell_demon_impossibility` is the project's reference genuine
+law — self-enforcing physics, ε=0.08, suppression=0.02, `emerges_naturally`, zero perspectival gap,
+no human beneficiary. At HEAD it does **not** certify `natural_law`:
+
+```
+HEAD all_signatures=[coupling_invariant_rope]
+HEAD natural_law_signature=does_not_fire
+```
+
+Cause established by single-variable isolation (same `kernel_v1` corpus, era engine vs HEAD engine —
+`GATE2_REWITNESS.md`): OQ-70's class fix (`72ec2cdd`, 2026-06-05) removed the `claimed_natural/2`
+source that read a single authored mountain perspective as a story-level naturality claim. Maxwell's
+certification rode exactly that source.
+
+**TWO QUESTIONS, and the second is the one that could change a ruling.**
+
+1. **Coverage (Ω_E).** Does any path remain by which a story with maxwell's shape certifies
+   `natural_law` absent an *explicit story-level* claim? **Falsifier:** construct such a story and
+   check whether the detector fires. CLAUDE.md records that OQ-70 left the detector intact with "a
+   positive control still fires via the explicit story-level claim" — so the question is precisely
+   whether anything short of an explicit declaration still works.
+2. **Ruling scope (Ω_C).** *Did OQ-70 intend this?* Removing an over-broad bait clause and
+   eliminating every route to naturality certification are DIFFERENT rulings, and the second may be
+   a side effect nobody chose. Carry OQ-70's ruling text and check the observed scope against it. Do
+   not assume the observed scope is the ruled scope.
+
+**Consumer surface — the silent part.** If `natural_law_signature` now fires only on explicit
+story-level claims, it has drifted from measuring **structural naturality** to measuring
+**authorial declaration**. Everything downstream inherits that shift without notice: FSM/FNL
+certification, the two-gate principle's gate 2 (which asks whether a host "independently deserves"
+the certification — now answerable only by asking whether the author declared it), and any
+prevalence statistic over natural-law certifications. Name the affected consumers as part of
+resolution.
+
+**Gates the OQ-248 kill condition.** If (1) finds a path exists and maxwell still fails it, the
+2026-07-25 gate-2 narrative basis for `entropic_universe_hypothesis` is called into question and
+that ruling returns to the operator's seat.
+
+**Evidence:** `audits/2026-07-25_oq66_nlwb_filter_cutover/GATE2_REWITNESS.md`.
+
+---
+
+## OQ-252 — Rulings that release certifications carry no back-reference to what they license
+
+**Ω-type:** Ω_C (process/tooling ruling).
+
+**Status:** open
+**Priority:** 3
+**Origin:** observed twice in one session, 2026-07-25.
+**Files:** `ISSUES.md` (authored-field grammar), `python/omega_resolver.py` (the checker),
+`docs/technical/omega_resolver.md`.
+
+**The pattern, witnessed twice in one session.** A ruling's premise expired and the entries it had
+licensed were never re-checked:
+
+- **Seven weeks.** The 2026-06-05 corpus reset wiped the fixtures of the OQ-66 tripwire; the guard
+  sat red-for-the-wrong-reason until 2026-07-25.
+- **Two days.** OQ-70 (`72ec2cdd`, 2026-06-05) removed the `claimed_natural/2` source that the
+  gate-2 pass for `non_agent_beneficiary(entropic_universe_hypothesis)` (2026-06-03) had rested on.
+  The entry then operated as certified for ~7 weeks on a void basis.
+
+Neither was a mistake at the time. Both are the same STRUCTURAL gap: **a ruling records what it
+decides, but not what depends on it**, so amending it cannot trigger a re-check of its dependents.
+The `Deps:` graph runs the other way (what an OQ is blocked ON), and nothing points from a ruling to
+the artifacts it licensed.
+
+**Proposed mechanism.** A `**Licenses:**` field on rulings that release a certification, naming the
+artifacts that rest on them (a registry entry, a deferral, a gate's premise). Checked when the
+ruling is amended or closed — `omega_resolver.py check` already walks authored fields and reds the
+gate on dangling ones, so the enforcement surface exists.
+
+**OPERATOR RULING 2026-07-25 — FORWARD-FACING ONLY. NO BACKWARD LICENSING.** `Licenses:` is added
+when a ruling is **created or revisited** from this date onward. It is NOT backfilled onto existing
+rulings, and there is no sweep. This settles the scope question and is what keeps the mechanism
+cheap: the field accrues on the rulings people actually touch, so it never becomes a second
+dependency graph nobody maintains. **Corollary: absence of `Licenses:` on an old ruling means
+"predates the convention," NEVER "licenses nothing"** — a checker must not read a missing field as
+an assertion of no dependents (that would be Pattern 5, absence satisfying the gate).
+
+**First forward instance (2026-07-25):** the re-ruled gate 2 for
+`non_agent_beneficiary(entropic_universe_hypothesis)` carries its `Licenses:` line in the
+`narrative_ontology.pl` two-gate block.
+
+**Design questions still to settle before building:** what counts as "licensed" (a registry entry
+and a gate's premise clearly; a deferral, less clearly); whether the field belongs on the ruling, on
+the dependent, or both; and where the check fires — `omega_resolver.py check` already walks authored
+fields, but the field must first be added to the accepted grammar or it will read as malformed.
+
+**What resolution changes:** amending a ruling stops silently orphaning what it licensed. Both
+incidents above would have been caught at the amending commit.
 
 ---
 

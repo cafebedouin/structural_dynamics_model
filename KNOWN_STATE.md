@@ -45,6 +45,58 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-25 — [correction-key] Gate 2 for `entropic_universe_hypothesis` RE-RULED; its June basis was void two days after it was made
+**Files:** prolog/narrative_ontology.pl, prolog/signature_detection.pl, ISSUES.md, audits/2026-07-25_oq66_nlwb_filter_cutover/GATE2_REWITNESS.md
+**Tier:** correction-key
+
+**Do not cite the June gate-2 note.** The provenance question OQ-248 raised was RESOLVED by running
+the discriminator (era engine extracted via `git archive`, no worktree). Three arms, A vs C being the
+single-variable isolation:
+
+| arm | engine | corpus | signature | dr_type | shadow |
+|---|---|---|---|---|---|
+| A | HEAD | kernel_v1 (1106) | `coupling_invariant_rope` | rope | rope-0.95 |
+| B | `f600599b` | era testsets (1103) | `natural_law` | mountain | mountain-0.95 |
+| C | `f600599b` | kernel_v1 (1106) | `natural_law` | mountain | mountain-0.95 |
+
+Same corpus, different engine, opposite answer ⇒ **corpus regime REFUTED, engine regime CONFIRMED.**
+The 2026-06-03 read was substantively CORRECT in its own regime. Cause of the change: **OQ-70**
+(`72ec2cdd`, 2026-06-05) removed the `claimed_natural/2` source maxwell's certification rode.
+**The gate-2 premise expired two days after it was ruled, and the entry it licensed was never
+re-checked** — it then operated as certified for ~7 weeks on a void basis.
+
+**RULED (operator, 2026-07-25): KEEP the entry, as a NEW DATED ruling — not a re-citation.** The
+entry was NOT continuously certified 2026-06-03 → 2026-07-25. Recording it as a re-citation would
+hand the next reader a pass that was never re-taken.
+
+**METHOD TRIPWIRE — gate-2 reads must name the DISCRIMINATING surface.** The June pass cited
+evidence that could not discriminate: the PASS case (maxwell) and the HELD case
+(tech_inevitability) carry **identical** ε=0.08 and suppression=0.02, and maxwell-identical shadows.
+Metrics and shadow were **decorative**. The June note's "omegas authored empty" is also factually
+wrong — maxwell authors 11. The real discriminator is **what the omegas are ABOUT**: maxwell's bear
+on physics grounding (is the second law fundamental or emergent); the held case's bear directly on
+agency (*"does deployment require intentional beneficiary strategy?"*) — which is gate 2's own
+question. **Rule now in the two-gate block: state which surface DISCRIMINATES and check it against a
+known gate-2 FAIL; a surface shared with the failing case is corroboration at best.** The host's own
+"no human agent benefits" is admitted as HOST TESTIMONY, not independent evidence — it is authored
+by the story that gains from the release.
+
+**Two OQs minted.** **OQ-251** (Priority 2): post-OQ-70, does ANY path exist by which a paradigm
+natural law certifies `natural_law` absent an explicit story-level claim — *and did OQ-70 intend
+that scope?* Removing an over-broad bait clause and eliminating every route are different rulings.
+If `natural_law_signature` now fires only on explicit declarations, it has drifted from measuring
+**structural naturality** to measuring **authorial declaration**, and every downstream consumer
+inherits that silently. Gates the OQ-248 kill condition. **OQ-252**: rulings carry no back-reference
+to what they license — witnessed twice this session (the reset at 7 weeks, OQ-70 at 2 days).
+
+**`Licenses:` is FORWARD-FACING ONLY (operator ruling, 2026-07-25).** Added when a ruling is created
+or revisited from this date onward; **never backfilled**, no sweep. **Corollary: absence on an older
+ruling means "predates the convention," NEVER "licenses nothing"** — reading a missing field as an
+assertion of no dependents is Pattern 5. First instance is on the re-ruled gate 2 in
+`narrative_ontology.pl`.
+
+---
+
 ## 2026-07-25 — [tripwire] OQ-66 CLOSED: nlwb agent-filter landed; a plain `[stack]` load leaves MaxEnt UNFITTED while reads fail soft
 **Files:** prolog/drl_core.pl, prolog/tests/test_agent_beneficiary.pl, prolog/tests/fixtures/nlwb_controls/, python/run_pipeline.py, prolog/maxent_classifier.pl, prolog/abductive_triggers.pl, prolog/narrative_ontology.pl, ISSUES.md, CLAUDE.md
 **Tier:** tripwire
