@@ -3608,24 +3608,45 @@ high-theater shadow licenses.
 
 **Ω-type:** Ω_C (design ruling — one classification formula, or a declared-separate audit path).
 
-**Status:** open
+**Status:** resolved — 2026-07-25, commit `a8ec22f0`; evidence
+`audits/2026-07-25_oq67_legacy_chi_retire/`, KNOWN_STATE 2026-07-25.
 **Priority:** 1
 **Origin:** TODO.md item 1 ("Kill the Legacy Chi Path"), inherited at tracking-surface
 consolidation 2026-06-04; the in-code TODO predates it.
-**Files:** `drl_audit_core.pl:18` ("TODO: Migrate to sigmoid pipeline. See issue:
-legacy-power-modifier-migration."), `config.pl:67` (same tag; notes zero dr_type flips at
-[0.5x, 2.0x]).
 
-**Specific question:** `drl_audit_core` still computes on the legacy power-modifier χ path
-(χ = ε × π) rather than the canonical sigmoid pipeline (χ = ε × f(d) × σ(S)). Every other
-deprecated caller was migrated 2026-05-17 (`classify_at_time/4`, `snapshot_type/3`). Is the
-audit-core path (a) the last unmigrated caller — finish the migration — or (b) deliberately
-separate by design (it is a quick-check operating on pre-computed Chi values, documented as
-"deliberately separate, different purpose")? If (b), the TODO at :18 should be replaced by a
-declared-exemption comment so the migration tag stops reading as unfinished work; if (a), the
-migration needs an old-vs-new diff per Build Discipline Pattern 3 before the legacy path is
-removed. config.pl:67's note (zero dr_type flips across [0.5x, 2.0x]) suggests low blast radius
-either way — verify, don't assume.
+**Ruling — NEITHER (a) nor (b): retired by VALUE.** The posed fork assumed the path was live. It
+was not: `stack.pl` loaded `drl_audit_core` with an empty import list, its only importer was
+`drl_composition`, and all five call sites there sat behind `constraint_data/2` / `agent_index/2`,
+both terminating in unconditional fail-stubs nothing in the live tree asserts. So (a) migrating
+would port dead code onto the canonical path, and (b) a declared-exemption comment would certify a
+path that never runs. Disposal was adjudicated on *product*, not wiring (Build Discipline
+*Unwired ≠ worthless*): 3 of 4 exports were duplicates — `structural_signature/3` ≡
+`omega1_audit:determine_primary_gate/11`; `ontological_fraud_check(_,fm_alert)` ≡
+`drl_core:type_1_false_summit`; `omega_risk/4` ≡ `drl_core` + `transition_paths`. The 4th
+(`ontological_fraud_check(_,z_alert)`, the no-exit corner) was UNIQUE and is preserved as
+**GAP-29** in `docs/design/design_gaps.md`. `power_modifier/2` lost its sole reader and went with
+it; the six `power_modifier_*` params stay in `config.pl` as reader-free calibration anchors for
+`canonical_d_*`.
+
+**Two defects recorded here because the code carrying them is deleted:** (1) `fm_alert` bound
+`suppression_score` to a variable named `Epsilon` where `logic.md:749` Rule FM specifies ε, and
+dropped Rule FM's `∃I(¬■C[I])` leg entirely; (2) `omega_risk(snare, mountain, type_vi, ...)`
+("naturalization of extraction") is MISLABELLED — `logic.md:3293` makes that **Type I** (False
+Mountain); `logic.md:3370` Type VI is Tangled Rope Mishandling. Neither propagated (the path never
+fired), but a reviver copying either forward would inherit them.
+
+**Scope note:** `omega1_audit.pl` is itself uncalled and RETAINS the surviving χ-only bander
+product. This close resolved a Pattern-2 fork (two χ-only banders, the weaker retired); it did
+**not** adjudicate `omega1_audit`, which stays open to its own value question.
+
+**Witnesses:** two pre-registered kill conditions, both discharged — (#1) three per-predicate
+positive controls fire pre-write, closing both fact-table channels; (#2) post-deletion all six
+predicates throw `existence_error`, converting silent failure to loud and thereby making the run
+pair probative against `call/N` / meta-dispatch. Plus: all-fail × 3 predicates × 6 corpora with
+per-process controls (denominators 199/960/960/1005/1001/1106 matching the loader-glob sizes);
+`run_pipeline` pair exit 0 + mtime advanced + corpus md5 legs re-checked identical +
+`per_constraint` byte-identical at n=199; `check_stack` byte-identical to a pristine HEAD extract;
+`load_warning_gate` 3/3 allowlisted 0 unexpected; `./scripts/gate.sh` GREEN.
 
 ---
 

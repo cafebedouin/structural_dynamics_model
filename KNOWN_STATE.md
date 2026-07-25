@@ -45,6 +45,58 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-25 — [correction-key] OQ-67 CLOSED: the legacy χ = ε × π path is fully drained; it was UNREACHABLE, not merely deprecated
+**Files:** prolog/drl_audit_core.pl, prolog/drl_composition.pl, prolog/stack.pl, prolog/constraint_indexing.pl, prolog/config.pl, python/sweeps/bifurcation_sweep.py, docs/design/design_gaps.md, docs/lawvere_glossary.md, ISSUES.md, audits/2026-07-25_oq67_legacy_chi_retire/
+**Tier:** correction-key
+
+Commit `a8ec22f0`. `drl_audit_core.pl` deleted; `constraint_indexing:power_modifier/2` deleted with
+it (sole reader). **The χ = ε × π path no longer exists anywhere in the engine** — every χ in the
+tree is now the canonical sigmoid χ = ε × f(d) × σ(S).
+
+**The correction this entry carries:** OQ-67 posed a two-way fork — (a) last unmigrated caller, or
+(b) deliberately-separate audit path needing a declared-exemption comment. **Both premises were
+wrong.** The path was *unreachable*: `stack.pl` loaded the module with an empty import list, its
+only importer was `drl_composition`, and all five call sites there sat behind `constraint_data/2` /
+`agent_index/2`, both ending in unconditional fail-stubs nothing in the live tree ever asserted.
+Migrating dead code, or exempting a path that never runs, would both have been wrong answers to a
+correctly-posed question. Three long-standing comments compounded this by naming
+**`transition_paths.pl`** as a legacy-path member (`config.pl`, `bifurcation_sweep.py`,
+`lawvere_glossary.md`) — already FALSE at HEAD: it computes `derive_directionality_at → sigmoid_f →
+scope_modifier` and contains zero `power_modifier` references. All three corrected.
+
+**How citations must change:** citing `power_modifier_*` as a live classifier input is now wrong.
+The six params REMAIN in `config.pl:57-62` (specs `config_schema.pl:43-48`) but have **no reader at
+all** — they survive as the calibration anchors the `canonical_d_*` values are fitted to
+approximate. Consequence for sweeps: a null/zero-flip sensitivity result for those six now means
+"no consumer," **not** "no sensitivity" — unperturbable by construction. Pre-2026-07-25 sweep
+outputs that report them as inert are describing a different (still-read) regime.
+
+**Disposal was by product, not wiring** (Build Discipline *Unwired ≠ worthless*): 3 of 4 exports
+were duplicates (`structural_signature/3` ≡ `omega1_audit:determine_primary_gate/11`; `fm_alert` ≡
+`drl_core:type_1_false_summit`; `omega_risk/4` ≡ `drl_core` + `transition_paths`). The 4th was
+unique and is preserved as **GAP-29** — the no-exit corner (ε≈1 ∧ χ≈1), inexpressible because
+`snare` is unbounded above (`drl_core.pl:389-398` gates on three floors, no ceiling). Two defects
+in the deleted code are recorded in ISSUES OQ-67 so they die with it: `fm_alert` bound
+`suppression_score` where `logic.md:749` Rule FM specifies ε (and dropped the `∃I(¬■C[I])` leg),
+and `omega_risk`'s `type_vi` label is Type **I** per `logic.md:3293`. **Out of scope:**
+`omega1_audit.pl` is itself uncalled and retains the surviving χ-only bander — not adjudicated here.
+
+**Method note worth reusing.** The load-bearing witness was the *stub removal*, not the
+reachability probe. While the fail-stubs existed, the predicates were defined-and-failing, so any
+caller built by `call/N`, `=..`, or meta-dispatch — which a `forall` probe structurally cannot see
+— failed silently. Deleting the stubs made them **undefined**, so a post-deletion exit-0 pipeline
+run is a *positive* result rather than a null diff. That property was itself witnessed (KILL #2:
+all six goals throw `existence_error`) rather than assumed. Breadth was bought on the cheap
+instrument: the probe ran against all six corpora (199/960/960/1005/1001/1106, per-process
+controls in each leg), the pipeline pair only on `testsets/`.
+
+**Witnesses:** `per_constraint` byte-identical at n=199 across the run pair (exit 0 both, mtime
+advanced 02:17:58 → 02:20:47, corpus md5 legs re-checked identical); `check_stack` byte-identical
+to a pristine HEAD extract via `git archive` (no worktree); `load_warning_gate` 3/3 allowlisted, 0
+unexpected; `./scripts/gate.sh` GREEN.
+
+---
+
 ## 2026-07-25 — [correction-key] Gate 2 for `entropic_universe_hypothesis` RE-RULED; its June basis was void two days after it was made
 **Files:** prolog/narrative_ontology.pl, prolog/signature_detection.pl, ISSUES.md, audits/2026-07-25_oq66_nlwb_filter_cutover/GATE2_REWITNESS.md
 **Tier:** correction-key

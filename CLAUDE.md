@@ -696,6 +696,15 @@ reappears, repair with sed/Python — the Edit tool fails on multi-byte mojibake
 `power_modifier` χ path (χ = ε × π, omitting σ). Replacements: `classify_at_time/4`
 (`drl_composition.pl`) and `snapshot_type/3` (`transition_paths.pl`) on the canonical sigmoid
 pipeline (χ = ε × f(d) × σ(S)). Callers `constraint_history/3` and `degradation_chain/3` updated.
+**The legacy path is now FULLY DRAINED (OQ-67, 2026-07-25):** `drl_audit_core.pl` and
+`constraint_indexing:power_modifier/2` are deleted — χ = ε × π exists nowhere, so do not cite it as
+a second live path (it was unreachable, not merely deprecated). The six `power_modifier_*` params
+REMAIN in `config.pl:57-62` with **no reader at all**, as the calibration anchors `canonical_d_*` is
+fitted to approximate — so a zero-flip / null sensitivity result for them means "no consumer," NOT
+"no sensitivity," and pre-2026-07-25 sweep outputs describe a still-read regime. The one unique
+product of the retired module (the no-exit corner, ε≈1 ∧ χ≈1) is declared absent at
+`design_gaps.md` GAP-29; `omega1_audit.pl` retains the surviving χ-only bander and was NOT
+adjudicated. Provenance: KNOWN_STATE 2026-07-25.
 
 **`site_contexts_product/1` scope exclusion is calibration-based.** The product site excludes
 `regional`, `continental`, `universal` (`constraint_indexing.pl:954–955`): those scope atoms

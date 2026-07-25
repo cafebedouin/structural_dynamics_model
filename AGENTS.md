@@ -465,7 +465,21 @@ CI_Rope-certified upstream of FCR never reaches the refinement (designed shadow)
 | `classify_snapshot/3` | `snapshot_type/3` | `transition_paths.pl` |
 
 The legacy predicates used the old `power_modifier` χ path (χ = ε × π, omitting σ).
-The replacements use the canonical sigmoid pipeline. Note: the two replacements are NOT
+The replacements use the canonical sigmoid pipeline.
+
+**That legacy path is FULLY DRAINED as of 2026-07-25 (OQ-67, commit `a8ec22f0`).** `drl_audit_core.pl`
+is deleted, and `constraint_indexing:power_modifier/2` went with it as its sole reader — χ = ε × π
+no longer exists anywhere in the engine, so there is no second χ path to compare against. It was
+*unreachable*, not merely deprecated: its call sites sat behind `constraint_data/2` / `agent_index/2`
+fail-stubs nothing ever asserted. Also deleted from `drl_composition.pl`: `is_snare/1`,
+`is_mountain/1`, `is_rope/1`, `detect_perspectival_risk/4` (the per-seat type question is served by
+`drl_core:is_snare/3`, `is_mountain/3`, `is_rope/3` on the sigmoid path — note the arity change).
+The six `power_modifier_*` config params survive with **no reader**, as calibration anchors for
+`canonical_d_*`; a null sensitivity result for them means "no consumer," not "no sensitivity."
+Retired capability declared at `design_gaps.md` GAP-29. Do not re-add `transition_paths.pl` to any
+list of legacy-path members — that was already false before the deletion.
+
+Note: the two replacements are NOT
 equivalent to each other — `snapshot_type/3` is deliberately un-threaded (static-fallback
 semantics, clears the temporal nb-globals at entry) and diverges from `classify_at_time/4`
 at points where temporal and static metrics differ; see
