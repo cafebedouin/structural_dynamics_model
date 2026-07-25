@@ -3286,45 +3286,151 @@ expectation-authored buckets.
 
 ---
 
-## OQ-66 — Agency-gate boundary ledger: gate-two holds, scoped-out twins, and the :287 deferral surface
+## OQ-66 — Agency-gate boundary ledger: gate-two holds, scoped-out twins, and the nlwb deferral surface
 
 **Ω-type:** Ω_C (taxonomy/ruling record).
 
-**Status:** open — (ledger — items graduate individually)
+**Status:** resolved — 2026-07-25. All three ledger items disposed; two findings relocated.
 **Priority:** 1
 **Origin:** FSM agency-gate session 2026-06-03; rulings recorded in KNOWN_STATE same date.
-**Files:** `narrative_ontology.pl` (registry + two-gate principle comment block),
-`prolog/tests/test_agent_beneficiary.pl` (the :287 inertness tripwire), `drl_core.pl:284-287/:333/:362`,
-`maxent_classifier.pl:173,176,191`.
+**Deps (dropped on close):** none authored; the surviving open question relocated to OQ-248.
+**Files:** `prolog/drl_core.pl:298-323`, `prolog/narrative_ontology.pl:398-447`,
+`prolog/tests/test_agent_beneficiary.pl`, `prolog/tests/fixtures/nlwb_controls/`,
+`python/run_pipeline.py` (`_prolog_agency_gate`).
 
-**Held at gate two** (two-gate principle: a NON-AGENT registry entry needs gate 1 ontology-true
-AND gate 2 host-deserves-the-released-certification; AGENT tags need gate 1 only):
-- `technological_inevitability_interpretation` (press_reformation_causality__technological_
-  inevitability): gate 1 passes (an interpretation is proposition-kind); gate 2 FAILS on authored
-  openness — metrics/shadow are maxwell-identical (MaxEnt mountain 0.990 / entropy 0.031, a
-  near-perfect forgery the shadow cannot separate), but `:215` self-describes the 4×mountain
-  uniformity as "suspicious", omegas `natural_law_vs_contingent_framework` and
-  `technology_determinism_assumption` are authored OPEN ("if deployment requires choice:
-  false_summit fires"), and the file forecloses its beneficiary_deployment sibling. Stays
-  unlisted ⇒ default-agent ⇒ FSM keeps firing. Graduation: the host's omegas close toward
-  genuine-law and the convergence read passes.
-- `constitutional_supremacy_doctrine` (statutory_debt_ceiling__constitutional_nullity_reading):
-  scoped OUT by ruling — maxwell's metric twin (NL profile identical except BC); no honest agency
-  line separates them; the separating lever is its authored `emerges_naturally` (a statute) or
-  Fix-C taxonomy work, NOT the registry. Its shadow remains the rope=1.0/entropy=0 vacuum —
-  per the OQ-65 wiring-determined-disagreement evidence (2026-06-04), that vacuum is the
-  outside-support case (no type cluster admits ε=0 ∧ theater=0.95: corpus pitons are degraded
-  snares, μ_ε=0.65 — a zero-extraction-pure-ceremony cell does not exist), so its confidence≈0
-  is not FSM-calibration evidence either way.
-- `drl_core.pl:287` (`natural_law_without_beneficiary`) deferral: semantically agency-dependent
-  ("no identifiable human beneficiary" — filtering would be correct) but witnessed behaviorally
-  inert for the current divergence set. Consumer surface ON RECORD: snare block (drl_core.pl:333),
-  tangled_rope block (drl_core.pl:362), MaxEnt shadow forbidden-features for snare AND
-  tangled_rope (maxent_classifier.pl:173,176,191), plus diagnostics (invertibility_analysis.pl:123,
-  omega1_audit.pl:128). Staleness guard: `test_agent_beneficiary:nlwb_287_inertness_direct`
-  classifies every divergence candidate raw-vs-filtered (dr_type ×4 canonical contexts +
-  maxent_top_type) and fails loudly on first divergence — when that test fails, this deferral has
-  expired; do not silently re-green it.
+**Resolution.** (1) The `natural_law_without_beneficiary/1` deferral LANDED (operator ruling Q1,
+2026-07-25): it now reads `agent_beneficiary/2`, per 63-A — it was the last unmigrated consumer of
+that class. **Zero OBSERVABLE diff on six legs** (five live + `kernel_v1`), under cache-cleared and
+MaxEnt-refitted arms with a planted-flip fixture leg — **but one PREDICATE-TRUTH flip** at
+`maxwell_demon_impossibility`, downstream-invisible because it classifies `rope` in both arms. The
+no-op is structural on the live legs (`registry_hits=0` ⇒ extensional identity), contingent on
+`kernel_v1`. Cite the forward statement, not "behaviourally free":
+`audits/2026-07-25_oq66_nlwb_filter_cutover/RELEASE_NOTE.md`. (2) Both gate-two items close
+**moot-by-reset**: `press_reformation_causality__technological_inevitability` is absent from all
+five live legs, and the `statutory_debt_ceiling__constitutional_nullity_reading` names surviving in
+`haiku`/`flash` are new draws, not the measured story — the 2026-06-03 reads cannot be re-witnessed.
+Substrate already correct (both values unlisted ⇒ default-agent ⇒ FSM keeps firing); no code change.
+A future revisit is a fresh measurement, not a resumption. (3) The tripwire's contract changed from
+inertness-watch (nothing left to watch) to **two-gate enforcement**, now wired as a pipeline gate.
+
+**Defect found in the guard itself** (of exactly the class OQ-66 existed to watch): the old
+suite's MaxEnt arm was VACUOUS since it was written. A plain `[stack]` load leaves MaxEnt unfitted,
+so every `maxent_top_type` read failed and was mapped to `no_top` in BOTH arms — comparing
+`[no_top,...]` against itself while presenting as zero-diff (Pattern 6, in the instrument). The old
+suite also sat 15/17 red for ~7 weeks post-reset, with `fsm_released_for_maxwell` passing VACUOUSLY
+as a `\+` over an absent constraint.
+
+**Relocated, not folded:** shadow separability → OQ-248; the (ε, theater) × type census → OQ-249.
+
+**Evidence:** `audits/2026-07-25_oq66_nlwb_filter_cutover/` (FINDINGS.md + harness + probes),
+commit `1613c3cc`, KNOWN_STATE 2026-07-25.
+
+---
+
+## OQ-248 — Did the 2026-06-03 shadow-identity read measure what it claimed? (and can any feature separate a forgery from a law?)
+
+**Ω-type:** Ω_E (empirical — first a provenance question about a recorded measurement, then a
+discriminating-power question).
+
+**Status:** open
+**Priority:** 3
+**Origin:** OQ-66 gate-two record (2026-06-03), relocated and RESHAPED on OQ-66 close 2026-07-25.
+**Deps:** blocked_on_human oq248-gate2-rerule-after-maxwell-nonreproduction
+(`Deps:` edges take OQ targets only, so the GAP-19 blocker below cannot be expressed as an edge —
+it is authored in prose and is REAL)
+**Files:** `prolog/maxent_classifier.pl`, `prolog/narrative_ontology.pl:421-455` (the registry
+entries and their gate-2 provenance), `docs/design/design_gaps.md` (GAP-19).
+
+**BOTH LEGS OF THE ORIGINAL CLAIM ARE NOW UNAVAILABLE.** The 2026-06-03 finding was *relative*:
+`technological_inevitability_interpretation`'s shadow read was **maxwell-identical** (MaxEnt
+mountain 0.990 / entropy 0.031), therefore the shadow cannot separate a forgery from a genuine law.
+That claim needs both terms. Neither survives:
+
+- **The forgery is gone.** Its host is absent from all five live legs (moot-by-reset, OQ-66).
+  Unreproducible; generation is stochastic, so a regenerated story is a new draw, not the same
+  story.
+- **The anchor no longer reads as recorded.** First properly-fitted read of
+  `maxwell_demon_impossibility` on `kernel_v1`, 2026-07-25 — mountain **0.010** against a recorded
+  **0.990**. That is an **INVERSION, not drift**.
+
+So there is no surviving *them* to ask "can anything separate them?" about. **Do not carry this as
+"an n=1 prior with an opening datum" — that phrasing implies the prior still has support. It does
+not.**
+
+**FIRST QUESTION (before any separability work): did the 2026-06-03 read measure what it claimed?**
+Three live hypotheses, all kept open:
+
+1. **Corpus regime** — the read was on the then-live pre-reset corpus, which is not byte-identical
+   to the `kernel_v1` archive, and MaxEnt is corpus-fitted.
+2. **Engine regime** — the signature layer has changed repeatedly since (OQ-60, OQ-62, OQ-138
+   among others).
+3. **Wrong when recorded** — e.g. taken under an unfitted or single-context model. Live and not
+   privileged: the OQ-66 close established that the *guard* for this very predicate had a vacuous
+   MaxEnt arm from birth, so a same-era MaxEnt read is not automatically trustworthy.
+
+**The discriminator is the stage-hash diff, which has NOT been run.** That is the concrete next
+step and it is what separates (1) from (2). Until it runs, "it's the corpus" is a hypothesis where
+a witness goes.
+
+**SECOND QUESTION (only if the identity claim survives, or is reconstructed):** does *any*
+available feature separate a metric-identical forgery from a genuine law? **Falsifier:** construct
+or find a metric-identical pair and test whether any feature separates them. If yes, gate 2 gets a
+lever it currently lacks; if no, gate 2 is irreducibly a human ruling and should be documented as
+one.
+
+**TWO BLOCKERS, and only one is machine-visible.** `Deps:` records the human block (the gate-2
+re-rule). The second is **GAP-19** — `maxent_boundary_analysis/3`, this question's stated first
+real witness, is built but UNWIRED. **When the human block clears, the tracker will show this OQ
+workable and it still will not be measurable until GAP-19 is wired.** Do not read a `workable_now`
+here as "ready to run."
+
+**Not a GAP itself.** GAP-19 records a capability ABSENCE. This is a measured case where separation
+FAILED plus a provenance question about the measurement, both with falsifiers attached.
+
+**Blocked on human:** whether the `entropic_universe_hypothesis` registry entry's gate-2
+justification still stands. The entry REMAINS in the registry and was deliberately not touched;
+nothing in the OQ-66 cutover depends on it (the diff is zero either way). Re-ruling it is a gate-2
+ruling, the operator's seat.
+
+**What resolution changes:** either the recorded gate-2 evidence is rehabilitated (and the
+separability question resumes with a real pair), or it is withdrawn — in which case the registry's
+existing entries need re-ruling against whatever evidence standard replaces it.
+
+**Evidence:** `audits/2026-07-25_oq66_nlwb_filter_cutover/FINDINGS.md` §5 (with the
+non-degenerate-fit control), `RAW_OUTPUT.md` §G.
+
+---
+
+## OQ-249 — (ε, theater) × type census: does a zero-extraction pure-ceremony cell exist?
+
+**Ω-type:** Ω_E (empirical — a corpus measurement).
+
+**Status:** open
+**Priority:** 4
+**Origin:** OQ-65 wiring-determined-disagreement evidence (2026-06-04), carried in the OQ-66
+gate-two record; relocated on OQ-66 close 2026-07-25.
+**Deps:** gates OQ-90
+**Files:** `prolog/drl_core.pl` (piton clauses), `prolog/maxent_classifier.pl`.
+
+**The claim to test.** Measured pre-reset on `kernel_v1`: **no type cluster admits ε=0 ∧
+theater=0.95** — corpus pitons are degraded snares (μ_ε = 0.65), so a zero-extraction /
+pure-ceremony cell does not exist. That is what made
+`statutory_debt_ceiling__constitutional_nullity_reading`'s rope=1.0 / entropy=0 shadow the
+"outside-support" case rather than FSM-calibration evidence either way.
+
+**Why it is regime-bound.** Measured on the pre-reset corpus, so it inherits every pre-2026-06-05
+caveat. It has never been run on the post-reset legs.
+
+**Falsifier:** a live cell at ε≈0 ∧ theater≈0.95. Cheap — 4,125 stories across the five live legs,
+and the measurement is a two-field census, no fit required.
+
+**Minted, not folded (deliberate).** OQ-90 (piton as a computed `false_ci_rope` refinement) and
+GAP-28 (the empty-husk conjunction) both CONSUME this census; neither CONTAINS it. Folding a
+measurement into OQ-90 would make it invisible the moment OQ-90 closes.
+
+**What resolution changes:** the piton taxonomy either keeps its "degraded snare" characterization
+post-reset or acquires a genuine pure-ceremony cell, which would change what a zero-extraction
+high-theater shadow licenses.
 
 ---
 

@@ -45,6 +45,98 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-25 — [tripwire] OQ-66 CLOSED: nlwb agent-filter landed; a plain `[stack]` load leaves MaxEnt UNFITTED while reads fail soft
+**Files:** prolog/drl_core.pl, prolog/tests/test_agent_beneficiary.pl, prolog/tests/fixtures/nlwb_controls/, python/run_pipeline.py, prolog/maxent_classifier.pl, prolog/abductive_triggers.pl, prolog/narrative_ontology.pl, ISSUES.md, CLAUDE.md
+**Tier:** tripwire
+
+**THE TRIPWIRE (the reason this is not just history).** **A plain `[stack]` + corpus load leaves
+MaxEnt UNFITTED** — `maxent_dist/3` is empty, `maxent_run_info/3` is empty — and
+**`maxent_entropy/3` / `maxent_top_type/3` FAIL rather than throw** on the missing fact. Witnessed:
+
+```
+MAXENT maxent_dist_facts_after_stack_load=0
+MAXENT sample=abrahamic_covenant__isaac_covenant_reading top=FAILED(no fit)
+ENTROPY FAILED (no exception) -- catch/3 does NOT intercept
+```
+
+Two consequences a fresh instance will otherwise hit silently:
+
+1. **`catch/3` around a MaxEnt read does not intercept the unfitted case.** It fails. A
+   `catch(maxent_entropy(...), _, (H = 0.0))` recovery goal never runs; the enclosing clause
+   just fails.
+2. **Any probe or suite that reads MaxEnt observables under `[stack]` alone measures NOTHING,
+   and a soft-failure mapped to a placeholder makes that indistinguishable from a real
+   result.** This is the defect that made the OQ-66 guard vacuous for its whole life: the old
+   `test_agent_beneficiary.pl` mapped the failure to `no_top` in BOTH arms of a raw-vs-filtered
+   diff, so it compared `[no_top,no_top,no_top,no_top]` against itself and presented as
+   zero-diff. Pattern 6, inside the instrument.
+
+**To read MaxEnt at all:** `maxent_classifier:maxent_cleanup, maxent_classifier:maxent_multi_run(Ctxs, _)`
+first, then ASSERT `maxent_dist/3` is non-empty before any read. MaxEnt is corpus-fitted state
+deliberately OUTSIDE `cache_registry`, so `clear_all_caches/0` does not touch it — a cache clear is
+not a refit. Template: `audits/2026-07-25_oq66_nlwb_filter_cutover/nlwb_diff_harness.pl`.
+
+**Scoped to the class, and the wider claim was CHECKED AND REFUTED.** The suspicion that
+`abductive_triggers.pl`'s six plausible-value fallbacks (`HNorm = 0.0` at `:86,:135,:358,:711,:771`,
+`ShadowTop = unknown` at `:188`) are a live Pattern-6 — an entropy of 0.0 reading as maximal
+certainty — **is not real, twice over.** (a) Those sites are bare `catch/3`, and the reads fail
+rather than throw, so the recovery goal never runs. (b) Every one of those clauses is gated at its
+FIRST goal by `subsystem_available(maxent)` (`:75,:126,:177,:231`), which checks `maxent_run_info/3`
+— empty under a plain `[stack]` load, so the clause fails before reaching the fallback.
+`abductive_triggers.pl` already carries the provenance guard. **No OQ minted for those sites.**
+
+**LANDED (OQ-66 resolved).** `drl_core:natural_law_without_beneficiary/1` now reads
+`narrative_ontology:agent_beneficiary/2` instead of raw `constraint_beneficiary/2` — ruling 63-A,
+operator Q1 2026-07-25. It was the last unmigrated consumer of that class.
+
+**Say the result at the right quantity — "behaviourally free" is the WRONG label and it is the
+one a later reader will reuse.** **ZERO OBSERVABLE DIFF on six legs** (five live + `kernel_v1`),
+under cache-cleared and MaxEnt-refitted arms, with a planted-flip fixture leg proving the harness
+can see a change. **But ONE PREDICATE-TRUTH FLIP** at `maxwell_demon_impossibility` (kernel_v1) —
+downstream-invisible only because it classifies `rope` in both arms. And the no-op is **STRUCTURAL
+on the five live legs** (forced by `registry_hits=0` ⇒ extensional identity) and **CONTINGENT on
+`kernel_v1`** (holds only because one constraint's metrics land in rope territory). Forward
+statement to cite: *no observable change on the checked corpora; the first live constraint carrying
+a registered non-agent beneficiary with snare-range metrics will classify differently than it would
+have pre-cutover.* Consumer surface + declared residue (the tangled_rope block has no dedicated
+fixture — `nlwb` forbids `requires_active_enforcement` by construction):
+`audits/2026-07-25_oq66_nlwb_filter_cutover/RELEASE_NOTE.md`.
+
+**METHOD NOTE (carry forward).** The plan's stop point was specced to fire on a non-zero *diff*,
+but what it protected — the operator's seat on the release note and the consumer re-audit scope —
+is triggered by a *predicate flip*. The flip happened, the trigger did not fire, and the release
+note got written after the commit instead of before. **Key a stop point on the quantity that
+carries the meaning, not the one the harness happens to emit.**
+
+New standing pipeline
+gate `_prolog_agency_gate()`; its FIXTURE pass is what makes it non-vacuous, because the live legs
+carry zero registered beneficiary values and a revert of `drl_core.pl` keeps the live-corpus suite
+GREEN. Break control witnessed: reverting throws `agency_nlwb_set([nlwb_ctl_no_beneficiary])`.
+
+**CORRECTION-KEY rider — the maxwell gate-2 evidence does not re-witness.** The registry entry for
+`entropic_universe_hypothesis` records its gate-2 justification as "MaxEnt shadow 0.990 mountain /
+entropy 0.031" (2026-06-03). The first properly-fitted read of `maxwell_demon_impossibility` on
+`kernel_v1` gives **shadow rope 0.95 / entropy 0.156 / mountain 0.010**, signature
+`coupling_invariant_rope`, `dr_type` rope at all four contexts. Controlled against a degenerate fit
+(same run spans all six shadow types, `mountain-39 … tangled_rope-641`, entropy 0.0011–0.6111).
+**Scope: this says the numbers do not reproduce on `kernel_v1` at HEAD — NOT that the 2026-06-03
+read was wrong.** That read was on the then-live pre-reset corpus, MaxEnt is corpus-fitted, and the
+signature layer has changed repeatedly since; attributing the gap to corpus vs. engine regime needs
+a stage-hash diff, not run. **Not acted on** — re-ruling a `non_agent_beneficiary/1` entry is a
+gate-2 ruling and the operator's seat. Routed to OQ-248 as its opening datum and flagged.
+
+**Ledger.** Both gate-two items close **moot-by-reset** (`technological_inevitability_interpretation`
+absent from all five live legs; the `statutory_debt_ceiling` names in `haiku`/`flash` are new draws,
+not the measured story). Findings relocated, not folded: shadow separability → **OQ-248** (Ω_E,
+GAP-19 cross-link in prose — `Deps:` edges take OQ targets only); (ε, theater) × type census →
+**OQ-249** (Ω_E, gates OQ-90).
+
+**Five live legs, not three** — see the CLAUDE.md Critical Distinctions correction in this session.
+
+Evidence: `audits/2026-07-25_oq66_nlwb_filter_cutover/FINDINGS.md`, commit `1613c3cc`.
+
+---
+
 ## 2026-07-25 — [tripwire] OQ-62 CLOSED: four purity banders renamed to disjoint vocabularies; exactly one `purity_zone/2` survives
 **Files:** prolog/logical_fingerprint.pl, prolog/fpn_report.pl, prolog/giant_component_analysis.pl, prolog/abductive_helpers.pl, prolog/abductive_triggers.pl, prolog/signature_detection.pl, prolog/purity_scoring.pl, prolog/tests/test_purity_bands.pl, prolog/tests/test_purity_absence.pl, python/husk_signature_read.py, python/enhanced_report.py, docs/logic_extensions.md
 **Tier:** tripwire

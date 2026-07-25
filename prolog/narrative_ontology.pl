@@ -409,11 +409,31 @@ has_asymmetric_extraction(ConstraintID) :-
    proposition-kind value not yet ruled keeps current FSM behavior rather than
    silently granting a natural-law certification.
 
-   Held at gate 2 (gate-1-pass, gate-2-fail — see ISSUES.md OQ):
-     - technological_inevitability_interpretation (press_reformation_causality:
-       authored-OPEN omegas, self-described "suspicious" uniformity)
-     - constitutional_supremacy_doctrine (statutory_debt_ceiling: scoped out;
-       maxwell's metric twin — separation needs a different lever)
+   CLOSED 2026-07-25 (OQ-66) — both gate-2 holds disposed MOOT-BY-RESET. The
+   2026-06-05 corpus reset removed both hosts:
+     - technological_inevitability_interpretation (press_reformation_causality)
+       is absent from all five live legs.
+     - constitutional_supremacy_doctrine (statutory_debt_ceiling) — the names
+       surviving in haiku/flash are NEW DRAWS, not the measured story
+       (generation is stochastic; a regenerated story is a new draw, not a
+       re-measurement). The 2026-06-03 reads cannot be re-witnessed.
+   Substrate was already correct and is UNCHANGED: both values stay unlisted
+   => default-agent => FSM keeps firing. A future revisit is a FRESH
+   MEASUREMENT, not a resumption of these two records.
+
+   OPEN AGAINST THIS BLOCK (OQ-248): the gate-2 evidence recorded below for
+   entropic_universe_hypothesis does NOT re-witness. The first properly-fitted
+   read of maxwell_demon_impossibility on kernel_v1 (2026-07-25) gives shadow
+   rope 0.95 / entropy 0.156 / mountain 0.010, signature coupling_invariant_rope,
+   dr_type rope at all four canonical contexts — not the "0.990 mountain /
+   entropy 0.031" cited below. That is NOT proof the 2026-06-03 read was wrong
+   (it was taken on the then-live pre-reset corpus; MaxEnt is corpus-fitted; the
+   signature layer has changed since) — attributing the gap to corpus vs engine
+   regime needs a stage-hash diff, not yet run. Re-ruling an entry is a gate-2
+   ruling and the operator's seat. Do NOT quietly retire the entry on the
+   strength of the note below. Evidence:
+   audits/2026-07-25_oq66_nlwb_filter_cutover/FINDINGS.md §5.
+
    A later constraint_vindicates/2 split (proposition-vindication as its own
    authored field) is the continuation of this view, not a rewrite.
    ========================================================================== */

@@ -702,6 +702,41 @@ section, and the report sidecar. Probe authors: took-effect guards on
 multifile and an unpinned read backtracks past a shadowing direct fact (witnessed,
 KNOWN_STATE 2026-07-03).
 
+### Run the agency suite (OQ-66 standing guard)
+
+```bash
+cd prolog && swipl -g "[stack], [tests/test_agent_beneficiary], \
+  run_tests(agent_beneficiary), halt" -t "halt(1)"
+```
+
+Enforcement for the TWO-GATE PRINCIPLE at `prolog/narrative_ontology.pl:398-419`: a
+`non_agent_beneficiary/1` entry RELEASES a natural-law certification on its host, so it
+needs both an ontology-kind gate and a host-convergence gate; an unlisted value defaults to
+AGENT (fail-open to status quo). The suite checks registry contents, that the filter is
+EXACTLY registry membership (single clause, static, no kind inference), that
+`drl_core:natural_law_without_beneficiary/1` reads the filtered `agent_beneficiary/2` view
+(landed 2026-07-25, ruling 63-A), and that the three snare floors are still config
+constants. Runs as the fourth sequential fail-fast gate in `run_pipeline.py`'s Prolog phase
+(`_prolog_agency_gate`), followed by a second swipl over the fixture corpus.
+
+**Fixture-corpus convention (shared with Control P).** A planted fixture leg lives in
+`prolog/tests/fixtures/<name>/` and is loaded through the REAL path — `corpus_path` overlay
+asserted BEFORE `load_all_testsets`, in a **FRESH process**: the `corpus_loaded/0` guard
+silently ignores an in-process overlay-after-load, and process exit is the cleanup. The
+fixture pass always carries a count guard (`NFix =:= 4`) so an empty or half-loaded leg
+cannot pass by absence. For `nlwb_controls/` the fixture pass is not a nicety — it is the
+ONLY place the gate can fail: no beneficiary fact in any of the five live legs carries a
+registered non-agent value, so raw and filtered reads are extensionally identical on the
+live corpus and a revert of `drl_core.pl` would keep the live-corpus suite GREEN. All four
+fixtures author identical metrics; the only variable is beneficiary composition, which is
+what makes the pairing two-sided (`agent_only` must still reach snare while
+`nonagent_only` must not). Fixtures that need scorable purity must AUTHOR
+`coordination_type` (OQ-60).
+
+**Do NOT read MaxEnt in this suite or any `[stack]`-loaded probe without refitting first** —
+a plain `[stack]` load leaves MaxEnt unfitted and its reads fail soft (CLAUDE.md, Running
+the System). That defect made the predecessor of this suite vacuous for its whole life.
+
 ### Run the purity-absence suite (OQ-60 standing guard)
 
 ```bash

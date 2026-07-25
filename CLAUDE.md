@@ -274,6 +274,16 @@ do not fold `trajectory` back into the parallel `tasks` list.
   `corpus_loader:load_all_testsets` in the goal (this is exactly what `run_pipeline.py`'s OQ-137
   gate runs); `test_purity_bands` → `-l stack.pl -l fpn_report.pl -l giant_component_analysis.pl`;
   `test_purity_absence` → the 8-module pipeline chain in its header.
+- **A plain `[stack]` + corpus load leaves MAXENT UNFITTED, and MaxEnt reads FAIL SOFT (OQ-66,
+  2026-07-25).** `maxent_dist/3` and `maxent_run_info/3` are empty, and `maxent_entropy/3` /
+  `maxent_top_type/3` **fail rather than throw** — so `catch/3` around them does NOT intercept,
+  and any probe or suite reading MaxEnt observables under `[stack]` alone measures NOTHING. Map
+  that soft failure to a placeholder (`no_top`, `0.0`) and the nothing becomes indistinguishable
+  from a result: this is exactly how the OQ-66 guard compared `[no_top,…]` against itself for its
+  whole life and reported zero-diff. **Refit explicitly — `maxent_cleanup, maxent_multi_run(Ctxs, _)`
+  — then ASSERT `maxent_dist/3` non-empty before any read.** MaxEnt is corpus-fitted state
+  deliberately OUTSIDE `cache_registry`, so `clear_all_caches/0` is not a refit. Template:
+  `audits/2026-07-25_oq66_nlwb_filter_cutover/nlwb_diff_harness.pl`.
 - Stack consistency check (OQ-57-class wrong-qualifier detection): `cd prolog && swipl -l check_stack.pl -g "run_check_stack, halt" -t "halt(1)"` — compare against the recorded baseline (KNOWN_STATE.md 2026-06-04); new findings are regressions. Not a pipeline gate while the baseline is non-empty.
 - In-session overlay probes: use `probe_harness:with_retracted/2` / `with_overlay/3`
   (snapshot-first, verified restore, automatic cache clearing via

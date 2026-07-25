@@ -1,36 +1,25 @@
 {
   "manifest": {
-    "store_version": "9dc8ac723128cb390989d1556d4c85d68c61eb62",
+    "store_version": "23e68af8f9723594e9ac9eb6bf193c07bf681e0d",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-25T00:50:08"
+    "generated_at": "2026-07-25T01:49:40"
   },
-  "issues_sha": "e5bb72059a6ff2f371d814ffff507052c75a35cfcf8152812366ab7c6078b6e8",
-  "n_entries": 247,
+  "issues_sha": "28012b3b96ff14c43333dfb166ca9139585d05deab722512f4cc70147967284d",
+  "n_entries": 249,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 134,
+    "resolved": 135,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 79,
+    "open": 80,
     "partial": 6
   },
   "active": [
-    {
-      "id": "OQ-66",
-      "status": "open",
-      "priority": 1,
-      "summary": "Agency-gate boundary ledger: gate-two holds, scoped-out twins, and the :287 deferral surface",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-65"
-      ]
-    },
     {
       "id": "OQ-67",
       "status": "open",
@@ -1179,6 +1168,37 @@
       "mentioned_in": [
         "OQ-62"
       ]
+    },
+    {
+      "id": "OQ-248",
+      "status": "open",
+      "priority": 3,
+      "summary": "Did the 2026-06-03 shadow-identity read measure what it claimed? (and can any feature separate a forgery from a law?)",
+      "deps": [
+        "blocked_on_human oq248-gate2-rerule-after-maxwell-nonreproduction"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-62",
+        "OQ-66",
+        "OQ-138"
+      ]
+    },
+    {
+      "id": "OQ-249",
+      "status": "open",
+      "priority": 4,
+      "summary": "(ε, theater) × type census: does a zero-extraction pure-ceremony cell exist?",
+      "deps": [
+        "gates OQ-90"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-65",
+        "OQ-66",
+        "OQ-90"
+      ]
     }
   ],
   "archive": [
@@ -2001,6 +2021,18 @@
         "OQ-63",
         "OQ-64",
         "OQ-66"
+      ]
+    },
+    {
+      "id": "OQ-66",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Agency-gate boundary ledger: gate-two holds, scoped-out twins, and the nlwb deferral surface",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-248",
+        "OQ-249"
       ]
     },
     {
