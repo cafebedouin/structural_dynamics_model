@@ -283,6 +283,12 @@ PIPELINE_FIELDS = [
     # --- Temporal trajectory ---
     ("drift_trajectory",        dict,         True),   # null/absent when no measurement/5 series
     ("temporal_residual",       dict,         True),   # Type-A observer residual (OQ-83); absent when no measurement/5 series
+    # --- ε provenance (OQ-205): loud-null provenance object riding beside the value ---
+    ("epsilon_provenance",      dict,         False),  # json_report:write_epsilon_provenance/2 — both arms emit an object ("authored" | "none_authored"), never null
+    # --- Kernel-independent 4-seat fingerprint (OQ-53/GAP-04) ---
+    ("fingerprint_shift",       list,         True),   # [powerless, moderate, institutional, analytical] atom vector; null when uncomputable (json_report.pl fingerprint_shift/2 fail arm)
+    # --- Repair transitions (OQ-91): COMMENTARY-GRADE upward runs; [] = decay-only/flat ---
+    ("repair_transitions",      list,         False),  # always a JSON array (empty on absence); never feeds classification
 ]
 
 ENRICHED_EXTRA_FIELDS = [
@@ -307,6 +313,11 @@ ENRICHED_EXTRA_FIELDS = [
     ("mixed_equilibrium_quality", str,          True),
     ("max_deviation",             (int, float), True),
     ("cover_story_type",          str,          True),
+    # --- ε-stability (OQ-205; enrich_pipeline_json from epsilon_stability_results.json) ---
+    # commentary-grade — annotate, never override a type. None = sweep artifact
+    # absent/stale or no-ε/guard-failed stratum; [] = swept, no flags (stable at r).
+    ("epsilon_stability_flags",   list,         True),
+    ("epsilon_grid_distance",     (int, float), True),
 ]
 
 _PIPELINE_FIELD_NAMES = {f[0] for f in PIPELINE_FIELDS}
