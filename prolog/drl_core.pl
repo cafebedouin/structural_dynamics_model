@@ -297,13 +297,44 @@ scaffold_temporality_check(C) :-
 
 %% natural_law_without_beneficiary(+C)
 %  True when a constraint emerges naturally, requires no enforcement,
-%  and has no identifiable human beneficiary. Such constraints are
+%  and has no identifiable AGENT-KIND beneficiary. Such constraints are
 %  Mountains regardless of metric values — asymmetric impact is not
 %  asymmetric extraction.
+%
+%  Reads agent_beneficiary/2, not raw constraint_beneficiary/2 (OQ-66,
+%  2026-07-25). This predicate is agency-dependent by its own name: it
+%  gates whether a beneficiary's presence counts as evidence of constructed
+%  extraction (snare/tangled_rope blocks at :361 and :396, plus the MaxEnt
+%  forbidden-features at maxent_classifier.pl:182,186). Ruling 63-A
+%  (2026-06-05) settled that such consumers read the filtered view; a
+%  proposition-kind beneficiary is a claim the constraint vindicates, not a
+%  party that gains, so reading it as extraction evidence is exactly what
+%  63-A prohibits. This was the last unmigrated instance of that class.
+%
+%  NOT "behaviourally free" — say it precisely. At cutover: ZERO OBSERVABLE
+%  DIFF on six legs (five live + archives/datasets/kernel_v1), under
+%  cache-cleared and MaxEnt-refitted arms, with a planted-flip fixture leg
+%  proving the harness can see a change. But ONE PREDICATE-TRUTH FLIP did
+%  occur, at maxwell_demon_impossibility (kernel_v1): its nlwb truth changes
+%  under the two views and is downstream-invisible only because it classifies
+%  rope in BOTH arms.
+%
+%  The no-op is STRUCTURAL on the five live legs (forced by registry_hits=0 —
+%  no beneficiary fact carries a registered non-agent value, so the two views
+%  are extensionally identical) and CONTINGENT on kernel_v1 (it holds because
+%  one constraint's metrics land in rope territory). Forward statement:
+%  *the first live constraint carrying a registered non-agent beneficiary with
+%  snare-range metrics will classify differently than it would have
+%  pre-cutover.* tests/fixtures/nlwb_controls/nlwb_ctl_nonagent_only is the
+%  standing proof that the engine now behaves differently under the two views.
+%
+%  Evidence: audits/2026-07-25_oq66_nlwb_filter_cutover/ (RELEASE_NOTE.md for
+%  the consumer surface). Enforced by tests/test_agent_beneficiary.pl (pipeline
+%  gate _prolog_agency_gate).
 natural_law_without_beneficiary(C) :-
     emerges_naturally(C),
     \+ requires_active_enforcement(C),
-    \+ narrative_ontology:constraint_beneficiary(C, _).
+    \+ narrative_ontology:agent_beneficiary(C, _).
 
 %% effective_theater_ratio(+C, +MetricName, -TR)
 %  Reads the temporal theater_ratio threaded by classify_at_time/4 via nb_setval;
