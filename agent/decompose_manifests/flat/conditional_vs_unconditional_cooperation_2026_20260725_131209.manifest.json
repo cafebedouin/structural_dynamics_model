@@ -1,0 +1,198 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Cooperation Theory / Institutional Economics / Evolutionary Game Theory",
+  "family_id": "conditional_vs_unconditional_cooperation_2026",
+  "topic_summary": "Analysis of two institutional solutions to the cooperation problem: conditional cooperation, which sustains cooperation through continuous monitoring and reciprocity (a permanent audit apparatus), and unconditional cooperation secured through binding, exit-restricting commitment devices. The topic asks who bears the cost of being a legible, monitorable cooperator, and what happens structurally when the price of exit becomes prohibitive.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 9,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Conditional cooperators (ACD/ACL, tit-for-tat strategies) — cooperate contingent on monitored partner behavior",
+      "Unconditional cooperators (ACC strategies) — cooperate regardless of partner behavior, exploitable by non-committing defectors",
+      "Fake/committing defectors — accept commitment devices but defect, free-riding on the appearance of legibility",
+      "Commitment devices / exit-restricting institutions (marriages, leases, platform lock-in, megaproject sunk-cost structures)"
+    ],
+    "key_tensions": [
+      "Monitoring cost borne by conditional cooperators vs. free-riding by unconditionally-behaving or exit-optioned actors",
+      "Readability/signaling cost of being a legible cooperator vs. the option value of remaining illegible",
+      "Commitment as credible bond vs. commitment as asymmetric trap when exit is priced out",
+      "Noise/error as stabilizer of conditional cooperation vs. noise as source of unwarranted punishment"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is the notion of 'credible cooperative intent' — the substrate both conditional and unconditional cooperation mechanisms claim to secure. Both regimes point to a fixed reference (a monitored behavioral record, or a binding, hard-to-reverse commitment) as the ground of legitimate trust-claims.",
+    "authority_description": "Authority to certify 'this actor is a legitimate cooperator' is distributed across whichever apparatus does the certifying: the monitoring/audit function itself (in conditional regimes) or the enforceability of the binding commitment (in unconditional regimes) — in institutional variants, courts, platforms, or reputational systems adjudicate.",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "credible_cooperator_kernel",
+    "readings": [
+      {
+        "reading_id": "audit_reading",
+        "commitment": "Credible cooperation is constituted by continuous, verifiable conformity to reciprocity rules — trust is instantiated as an ongoing monitoring relationship, not a one-time bond. Legitimacy of the cooperator claim is renewed each round by observed behavior.",
+        "authority_grounding": "Distributed peer-monitoring / reciprocal enforcement (game-theoretic tit-for-tat, indirect reciprocity with public reputation)",
+        "sibling_readings": [
+          "commitment_reading",
+          "signaling_market_reading",
+          "exit_option_reading"
+        ],
+        "expected_structural_delta": "Cooperators bear perpetual monitoring/labeling costs; the victim set is skewed toward legible, low-noise-tolerant cooperators who cannot afford the signaling overhead. Base extractiveness is moderate but continuous (a recurring tax on visibility) rather than a single catastrophic loss."
+      },
+      {
+        "reading_id": "commitment_reading",
+        "commitment": "Credible cooperation is constituted by an irreversible, self-binding act (a lease, a marriage, a vendor contract) that removes the option to defect by removing the option to exit. Legitimacy derives from the sunk, non-recoverable nature of the bond, not from ongoing verification.",
+        "authority_grounding": "Contractual/legal enforceability, sunk-cost architecture, third-party enforcement of exit penalties",
+        "sibling_readings": [
+          "audit_reading",
+          "signaling_market_reading",
+          "exit_option_reading"
+        ],
+        "expected_structural_delta": "The victim set shifts to whichever party's exit was priced out (asymmetric binding, e.g., platform lock-in); base extractiveness is discontinuous — low while the bond holds, catastrophic once the counterparty's interests diverge and exit is unavailable. This is a structurally different failure mode than the audit reading's continuous drain."
+      },
+      {
+        "reading_id": "signaling_market_reading",
+        "commitment": "Credible cooperation is neither monitoring nor binding per se, but a costly-signal market: cooperators separate themselves from defectors by paying a labeling/uniform cost that only genuine cooperators find worthwhile to sustain. Trust is a Spence-style equilibrium, not a surveillance or contractual artifact.",
+        "authority_grounding": "Market-like self-selection via differential cost-bearing capacity; no central enforcer, equilibrium sustained by relative payoff structure",
+        "sibling_readings": [
+          "audit_reading",
+          "commitment_reading",
+          "exit_option_reading"
+        ],
+        "expected_structural_delta": "Victim set is whichever cooperators cannot afford the signal (poor, novice, or low-reputation actors) rather than all cooperators uniformly; beneficiaries include established high-reputation cooperators who amortize signaling costs across many interactions. This produces a stratification structure absent from both other readings, which treat cooperators as a relatively uniform class."
+      },
+      {
+        "reading_id": "exit_option_reading",
+        "commitment": "Credible cooperation is best understood as contingent on the relative price of exit versus participation: neither monitoring nor binding creates cooperation directly — what matters is whether the exit payoff dominates. When exit is cheap, no commitment device is needed and none is credible; when exit is priced out, cooperation collapses toward strategic pretense (fake commitment) rather than genuine cooperation.",
+        "authority_grounding": "Payoff-structure equilibrium selection (evolutionary/experimental game theory) — no institutional authority, the 'kernel' is the exit-payoff parameter itself",
+        "sibling_readings": [
+          "audit_reading",
+          "commitment_reading",
+          "signaling_market_reading"
+        ],
+        "expected_structural_delta": "This reading denies that either monitoring or binding is the operative mechanism — it relocates the constraint entirely onto the exit-payoff variable. The victim set becomes anyone whose exit option is degraded (regardless of whether they audit or commit), and it predicts a qualitatively different failure: not exploitation of legible cooperators, but wholesale strategic defection dressed as commitment ('fake defectors') once exit is foreclosed."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "audit_reading",
+        "reading_b": "commitment_reading",
+        "basis": "The audit reading holds that trust must be perpetually re-earned through observable behavior (no act is ever fully binding); the commitment reading holds that trust is precisely constituted by an act that forecloses future re-evaluation. A framework that treats all trust as perpetually revisable cannot simultaneously treat any trust as irreversible by design — accepting one axiom as true requires rejecting the other."
+      },
+      {
+        "reading_a": "commitment_reading",
+        "reading_b": "exit_option_reading",
+        "basis": "The commitment reading treats binding/exit-foreclosure as the mechanism that manufactures credibility. The exit-option reading treats exit-foreclosure as corrosive to genuine cooperation, producing strategic pretense rather than real cooperative intent once exit is priced out. One framework cannot hold that removing exit both creates credible cooperation and destroys it."
+      },
+      {
+        "reading_a": "audit_reading",
+        "reading_b": "signaling_market_reading",
+        "basis": "The audit reading locates the enforcement mechanism in behavioral verification over time (a relational, dyadic monitoring cost). The signaling-market reading locates it in a market-clearing cost differential that requires no monitoring at all — signals separate types without anyone observing subsequent behavior. A single framework cannot hold that verification is necessary AND that self-selecting cost alone is sufficient, since the market reading explicitly substitutes for the audit reading's core mechanism."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "credible_cooperator_kernel",
+      "human_readable": "Contested Kernel: What Constitutes a Credible Cooperator? (Audit / Commitment / Signaling / Exit-Price readings)",
+      "structural_delta": "Four incompatible accounts of what actually secures cooperative trust — continuous verification, irreversible binding, costly self-selecting signals, or relative exit pricing — each implying a different victim set and a different failure mode.",
+      "primary_observable": "Which mechanism (monitoring frequency, contract enforceability, signal cost differential, or exit-payoff ratio) best predicts observed cooperation rates in the source experiments (optional-commitment PD, forest commons studies, indirect reciprocity models)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel counts as one axis; all four readings are individually holdable, mutually axiom-contradictory in pairs, and collectively exhaust the topic's structure — no independent non-kernel axis survives §3 as genuinely separate from this decomposition."
+    },
+    {
+      "claim_id": "boom_bust_lockin_pathdependency",
+      "human_readable": "Path-Dependent Lock-In Escalation (Megaproject / Regulator Sunk-Cost Dynamics)",
+      "structural_delta": "Distinct mechanism whereby accumulated sunk costs escalate commitment and suppress exit consideration independent of which cooperator-credibility reading is adopted",
+      "primary_observable": "Regulator/participant continuation-despite-better-alternative rate as a function of accumulated sunk investment",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "incumbent_project_sponsors",
+      "victim": "trapped_participants_regulators",
+      "downstream_of": [
+        "credible_cooperator_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Fails §3 independence: this is the commitment_reading's expected_structural_delta restated at institutional scale (megaprojects), not a structurally distinct observable — same ε source (irreversibility), same victim logic (asymmetric binding). Merged into commitment_reading as illustrative instance rather than kept as separate axis (Type A overlap)."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "audit_reading",
+      "kernel_id": "credible_cooperator_kernel",
+      "reading_id": "audit_reading"
+    },
+    {
+      "claim_id": "commitment_reading",
+      "kernel_id": "credible_cooperator_kernel",
+      "reading_id": "commitment_reading"
+    },
+    {
+      "claim_id": "signaling_market_reading",
+      "kernel_id": "credible_cooperator_kernel",
+      "reading_id": "signaling_market_reading"
+    },
+    {
+      "claim_id": "exit_option_reading",
+      "kernel_id": "credible_cooperator_kernel",
+      "reading_id": "exit_option_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "boom_bust_lockin_pathdependency",
+      "structural_delta": "Institutional-scale sunk-cost escalation (megaprojects, regulatory capture by commitment)",
+      "hypothesis": "snare",
+      "deferral_reason": "Type A overlap with commitment_reading's expected_structural_delta — same ε source (irreversibility-driven asymmetric binding), no independent observable. Retained as illustrative case within commitment_reading generation rather than separate axis."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_noise_as_fifth_reading",
+      "description": "The research emphasizes that non-zero error/noise probability is what allows conditional cooperators to become evolutionarily stable against unconditional cooperators. This suggests a possible fifth reading — 'noise_reading': credible cooperation is constituted by tolerance for erroneous defection, not by audit, commitment, signaling, or exit pricing per se. This was evaluated against the individually-holdable test and found to be a *parameter modifying* the audit_reading's stability rather than a structurally distinct account of what credibility IS — it changes audit_reading's robustness, not its definition of the kernel. Excluded from readings; flagged here as a live candidate if downstream generation reveals audit_reading is underdetermined without it."
+    },
+    {
+      "id": "omega_indirect_reciprocity_private_monitoring",
+      "description": "Research notes indirect reciprocity with private (vs. public) monitoring offers unconditional cooperators partial protection from exploitation — this may fracture audit_reading further into public-monitoring vs. private-monitoring sub-variants with different victim sets (public monitoring cost is diffused across a reputational commons; private monitoring cost is borne dyadically). Not developed into a separate reading because current evidence is insufficient to confirm the two sub-variants are axiom-contradictory rather than merely differing in implementation cost — bounded here rather than asserted."
+    },
+    {
+      "id": "omega_platform_asymmetric_binding_generality",
+      "description": "The 'platform feudalism' example (vendor lock-in, asymmetric binding) is used as the paradigm case for commitment_reading's failure mode, but it is drawn from a different institutional register (corporate platform economics) than the game-theoretic commitment literature (marriages, leases, Optional PD). Bounding this: the structural analogy is treated as sound (both instantiate exit-foreclosure-without-reciprocal-foreclosure), but the essayist should flag that empirical support for the game-theoretic mechanism does not automatically transfer to platform economics without independent verification."
+    },
+    {
+      "id": "omega_fake_defector_classification",
+      "description": "'Fake defectors' (accept commitment, then defect) are described in the source material as anchoring cooperation to commitment's presence, which structurally resembles a Snare (extracting value from the credibility apparatus itself) nested inside exit_option_reading. Whether fake-defector prevalence is better modeled as a corruption of commitment_reading or a predicted consequence of exit_option_reading is left open — both readings' generation should address this phenomenon and may produce competing claims about its origin, which is expected and appropriate for a contested kernel rather than an error to resolve here."
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Initial pass considered treating this as a flat two-axis topic (conditional-cooperation-cost vs. unconditional-commitment-lockin), which would have been premature closure — the source material contains at least four non-collapsing accounts of the underlying credibility mechanism (audit, commitment, signaling-market, exit-pricing), each with distinct victim sets and mutually exclusive foundational axioms about what 'credible cooperation' even consists of. Recognized as a genuine contested kernel rather than a single constraint viewed from four observer positions, because the readings differ in what they claim IS the mechanism, not merely in evaluative stance toward one agreed mechanism. Checked for over-fragmentation (F15 in reverse): confirmed via axiom_contradictions that at least three pairs are genuinely non-co-holdable, satisfying the selectivity test threshold for keeping all four distinct rather than merging any pair."
+  },
+  "_generation_run_id": "conditional_vs_unconditional_cooperation_2026_20260725_131209",
+  "_provenance": {
+    "scope_model": "claude-sonnet-5",
+    "scope_prompt_commit": "d179423dc12550308c604592b1d199a951739c4c",
+    "scope_schema_commit": "43ee9613b2ccba5f278157c4cbe534645e1f544e",
+    "persisted_at": "2026-07-25T13:12:09",
+    "axes_ceiling": null,
+    "topic": "conditional cooperation as a permanent audit apparatus vs unconditional cooperation as an irreversible commitment: who bears the cost of being a readable cooperator, and what happens when exit is priced out."
+  }
+}

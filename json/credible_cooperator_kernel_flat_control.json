@@ -1,0 +1,274 @@
+{
+  "header": {
+    "constraint_id": "credible_cooperator_kernel_flat_control",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "29020b18-ca34-44a9-81a7-8d521c5cee5f"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Credible Cooperative Intent Kernel (monitored record / binding commitment)",
+    "topic_domain": "cooperation_theory/institutional_economics/evolutionary_game_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "reputation_platform_operators",
+      "commitment_device_designers",
+      "established_high_reputation_cooperators"
+    ],
+    "victims": [
+      "reputation_thin_newcomers",
+      "behaviorally_erratic_but_honest_actors",
+      "actors_unable_to_afford_binding_commitments"
+    ],
+    "vindicated_propositions": [
+      "credible_signaling_theory",
+      "folk_theorem_repeated_games"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "record_vs_commitment_convergence",
+      "question": "Is 'credible cooperative intent' a single natural kind that monitored-record and binding-commitment mechanisms both approximate, or are these two structurally distinct trust-grounds that happen to share a label?",
+      "resolution_mechanism": "Formal comparison of the information content each mechanism actually secures: does a monitored record predict future cooperation independently of what a binding commitment predicts, or do they converge on the same latent variable once selection effects are controlled?",
+      "impact": "If they are one natural kind, the flat single-constraint framing is correct. If they diverge (e.g., records reward past compliance while commitments reward present sunk cost, with different failure modes), this constraint should be decomposed per the epsilon-invariance principle into two stories.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the shared label conceals two structurally distinct trust-grounding mechanisms."
+    },
+    {
+      "id": "gatekeeping_vs_coordination_ratio",
+      "question": "How much of the apparatus that verifies 'credible cooperative intent' is solving a genuine adverse-selection problem versus manufacturing a toll-gate that established actors use to exclude newcomers?",
+      "resolution_mechanism": "Compare cooperation outcomes for newcomers admitted through alternative low-cost vetting versus the incumbent monitored-record/binding-commitment gates; measure whether the incumbent gates predict cooperation better than would be expected from selection alone.",
+      "impact": "A high coordination ratio supports the tangled_rope claim as authored; a low ratio (gate outperforms cheap vetting by less than the toll it extracts) would push the classification toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether verification apparatus is proportionate to the adverse-selection problem it claims to solve."
+    },
+    {
+      "id": "binding_commitment_reversibility_asymmetry",
+      "question": "Is the 'hard-to-reverse' property of binding commitments symmetric across actors, or do wealthier/more powerful actors have quiet informal ways to unwind commitments that poorer actors lack?",
+      "resolution_mechanism": "Trace actual defection/renegotiation episodes: do powerful actors who make binding commitments ever get them softened, waived, or forgiven at lower cost than weaker actors who signed equivalent commitments?",
+      "impact": "Asymmetric reversibility means the 'binding' half of the kernel is not equally binding — it would concentrate effective extraction on actors who cannot buy their way out, sharpening the tangled_rope reading toward snare for that subgroup.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the commitment device binds all parties equally or only binds the powerless."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "Across repeated-game cooperation theory and institutional design, two families of mechanism claim to ground 'credible cooperative intent': conditional cooperation regimes that rely on a monitored behavioral record (reputation systems, credit histories, review scores, tit-for-tat memory) and unconditional/commitment regimes that rely on a binding, hard-to-reverse pledge (bonds, escrow, contractual penalty clauses, costly signaling). Both point outward to a fixed reference object — the record or the commitment instrument — as the legitimate ground on which trust-claims may be made and adjudicated. This story treats that shared substrate as ONE flat constraint: the kernel of 'credible cooperative intent' itself, prior to any decomposition into distinct readings. The kernel functions as genuine coordination infrastructure (it solves real adverse-selection and commitment problems that would otherwise make cooperation unravel) while simultaneously functioning as an extraction mechanism (incumbents with long clean records or deep pockets for binding instruments can toll-gate access, and those without a record or without capital to bind are structurally excluded from being recognized as credible cooperators at all, regardless of their actual honesty).",
+    "key_agents": [
+      "reputation_platform_operators: administer and monetize the monitored-record apparatus (institutional/arbitrage) — set verification criteria, collect fees or data rents",
+      "commitment_device_designers: design and sell binding-commitment instruments (bonds, escrow, staking mechanisms) (institutional/arbitrage) — collect fees for constructing hard-to-reverse pledges",
+      "established_high_reputation_cooperators: hold long clean records or ample capital for bonding (powerful/mobile) — benefit from low marginal cost of re-proving credibility",
+      "reputation_thin_newcomers: lack a monitored record through no fault of their own (powerless/constrained) — bear the cost of being treated as non-credible by default",
+      "behaviorally_erratic_but_honest_actors: cooperate reliably but in ways the monitoring apparatus misreads as noise (moderate/constrained) — penalized by a proxy that doesn't capture true intent",
+      "actors_unable_to_afford_binding_commitments: honest but capital-constrained (powerless/trapped) — excluded from the commitment-regime path to credibility entirely",
+      "game_theorists_and_institutional_economists: analytical observers who study whether the kernel actually predicts cooperation or merely predicts prior access to capital/data (analytical) — see the full structure but do not administer it"
+    ],
+    "logic_rationale": "Extractiveness is authored at a moderate 0.42 by interval end: real coordination value exists (both mechanisms measurably reduce defection relative to no mechanism at all — this is not fabricated), but a substantial share of what is collected (fees, access tolls, differential treatment of newcomers) tracks proximity to capital and incumbency rather than actual honesty. Suppression is lower (0.38) because exit is not fully blocked — actors can in principle build a record or accumulate capital to bind a commitment over time — but the accessibility_collapse (0.45) reflects that once the kernel is institutionally embedded (credit bureaus, professional licensing, platform reputation scores), alternative trust-grounding mechanisms (direct vouching, community-embedded trust, local reputation networks) become practically invisible to counterparties who have been trained to demand the fixed reference. Resistance (0.4) is moderate: newcomers and thin-record actors resent exclusion but usually lack the organized leverage to contest the apparatus, since contesting it requires the very credibility the apparatus withholds from them — a self-reinforcing loop.",
+    "directionality_logic": "Reputation platform operators and commitment device designers sit at the clear beneficiary end: they administer the fixed reference, extract rents (verification fees, escrow fees, data monetization) from every party who must interact with the apparatus, and face essentially no risk of being classified non-credible themselves since they define the classification criteria. Established high-reputation cooperators and capital-rich actors are secondary beneficiaries: the marginal cost of re-proving credibility is low for them, and the kernel converts their pre-existing advantage (long tenure, capital) into a durable moat against newcomers. Reputation-thin newcomers, behaviorally erratic-but-honest actors, and capital-constrained honest actors are the targets: the kernel extracts from them not through direct transfer but through exclusion from the recognized-credible category, which in cooperative games translates into being defected against preemptively, denied partnership, or priced out of cooperative surplus they would otherwise access if judged on true intent rather than proxy record.",
+    "perspectival_gap": "From the seat of an established reputation-platform operator, the kernel is unambiguously a Rope: it solves the real folk-theorem problem that without a credible signal, rational actors defect, and the apparatus makes mutually beneficial cooperation possible at scale. From the seat of a reputation-thin newcomer or a capital-constrained honest actor, the same structure is closer to a Tangled Rope or even a Snare: the coordination story is true in the aggregate but the newcomer personally is defected against not because they are untrustworthy but because the fixed reference the system demands is structurally unavailable to them. The engine should compute divergent seat classifications from these positional facts alone — no single verdict is authored as 'the' answer.",
+    "mandatrophy_analysis": "The founding problem — how do rational self-interested agents establish enough credibility to escape a defect-defect equilibrium — remains partially live: cooperation genuinely does unravel without SOME credible signaling mechanism, so this is not a pure zombie mandate. But the specific instantiations (proprietary reputation scores, expensive bonding instruments) have drifted from 'minimal viable signal of honest intent' toward 'toll infrastructure that also happens to signal intent as a byproduct.' Treating this as a single flat kernel (rather than decomposing into 'the coordination function' and 'the toll function' as separate constraints) is the deliberate choice of this story — the perturbation control — and the resulting metrics show the blended signature you would expect: moderate extraction, moderate suppression, real but partial accessibility collapse, rather than the sharp separation a decomposed pair of stories would show."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This story deliberately does NOT decompose the kernel into a monitored-record reading and a binding-commitment reading (that decomposition would be the natural next step per the epsilon-invariance principle, given omega record_vs_commitment_convergence). It is authored flat, as a construction-perturbation control, to test whether the flat single-constraint framing produces a materially different classification signature than a decomposed pair would. No sibling reading files exist for this story by design."
+  },
+  "stakeholders": [
+    {
+      "name": "reputation_platform_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and administer the monitored behavioral record — credit bureaus, platform review systems, professional licensing registries. Set the criteria by which a record counts as credible, collect fees or data rents from every party who must be scored, and face no risk of being scored themselves since they sit outside the population being classified."
+    },
+    {
+      "name": "commitment_device_designers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Construct binding, hard-to-reverse commitment instruments — bonds, escrow arrangements, staking contracts, penalty clauses. Charge fees for the design and administration of the binding mechanism, and benefit whether or not the underlying cooperative intent it signals turns out to be genuine."
+    },
+    {
+      "name": "established_high_reputation_cooperators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Already hold long clean monitored records or command enough capital to post binding commitments cheaply. Re-proving credibility costs them little; the kernel converts their existing advantage into a durable moat that makes new entrants look comparatively less credible by contrast, regardless of actual honesty."
+    },
+    {
+      "name": "reputation_thin_newcomers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lack a monitored behavioral record simply because they have not yet had the chance to accumulate one — new immigrants, young workers, first-time borrowers, new platform users. Treated as non-credible by default until they pay the time-cost of building a record, during which they are excluded from cooperative surplus they would otherwise be entitled to on the basis of actual honest intent."
+    },
+    {
+      "name": "behaviorally_erratic_but_honest_actors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Cooperate reliably in substance but in ways the monitoring apparatus misreads as inconsistency — irregular income patterns, unconventional life paths, culturally different signaling norms. The fixed reference used to ground 'credible intent' is a proxy that systematically underrates them even though their actual cooperative behavior is sound."
+    },
+    {
+      "name": "actors_unable_to_afford_binding_commitments",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Honest and willing to cooperate but lack the capital to post a bond, escrow, or other binding instrument. The commitment-regime path to being recognized as credible is closed to them not because they would defect but because they cannot afford the collateral the mechanism demands."
+    },
+    {
+      "name": "game_theorists_and_institutional_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study whether monitored-record and binding-commitment mechanisms actually predict cooperative behavior or merely predict prior access to time, capital, and institutional inclusion. Publish findings that could, in principle, inform redesign of the kernel toward proxies less correlated with pre-existing advantage, but do not themselves administer or profit from the current apparatus."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Both conditional (record-based) and unconditional (commitment-based) mechanisms solve the real folk-theorem problem: without SOME credible, verifiable signal of intent to cooperate, rational self-interested agents rationally defect, and mutually beneficial cooperation unravels. The kernel supplies a fixed, checkable reference point that lets strangers extend trust without needing repeated personal history with each specific counterparty.",
+    "transfer_function": "Moves recognized cooperative standing — and the access to cooperative surplus that standing confers — away from actors who lack a monitored record or spare capital for binding commitments, and toward actors who already possess either. Fees for constructing and verifying the fixed reference (platform charges, bonding costs, credit-check fees) flow from all participants to the operators and designers of the apparatus.",
+    "absent_voices": "Actors judged non-credible by the proxy despite being genuinely honest have no standing within the system's own terms to contest their classification — the very credibility needed to be heard is what the classification withholds. Communities that historically used non-monitored, relationship-based trust mechanisms (informal vouching networks, embedded community reputation) are not consulted when the fixed-reference apparatus displaces those mechanisms in a given market or jurisdiction.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Operators and established cooperators would say the world rearranges catastrophically: without a credible signal of intent, cooperation among strangers collapses toward mutual defection, undermining markets, lending, and platform economies built on stranger-trust. Reputation-thin newcomers and capital-constrained honest actors might say the world barely changes for them personally, since they were already excluded from cooperative surplus by the apparatus — its disappearance would remove a barrier as often as it would remove a benefit. The verdict genuinely depends on which seat is asked.",
+    "founding_problem": "In iterated and one-shot interactions among strangers, rational self-interested agents lack any basis to distinguish a genuine cooperator from an opportunistic defector, so absent some credible signal, cooperation fails to get off the ground even when mutual cooperation would benefit everyone (the classic folk-theorem / trust-game unraveling problem).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Independent game theorists and institutional economists (analytical observers with no stake in either mechanism's fee structure) corroborate that the underlying coordination problem is real and persists — cooperation among strangers genuinely does require some credible signal. However, the same independent literature increasingly documents that the SPECIFIC current instantiations (proprietary credit scoring, expensive bonding requirements) predict pre-existing capital and institutional access at least as strongly as they predict actual honest intent, which is a finding that comes from outside both the reputation-platform-operator and commitment-device-designer beneficiary groups."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "f1436bd4937f864097dabaad92b27bd9b6eec212",
+    "generated_date": "2026-07-25",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "conditional_vs_unconditional_cooperation_2026_20260725_131209"
+  }
+}
