@@ -382,8 +382,12 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   (`purity_score`/`purity_band`). Write rule: clean/dispositive purity aggregates gate at
   coverage 1.0 → abstention token (`inconclusive(no_data)`/`undetermined`); positive
   existentials fire through unknowns; descriptive stats carry `n_scored/n_total`
-  (`diagnostic.purity_n_scored/_n_total`). Atoms sort BEFORE numbers — guard `number/1` before
-  any sort/max over purity. Synthetic test constraints needing scorable purity must AUTHOR
+  (`diagnostic.purity_n_scored/_n_total`). Atoms sort BEFORE numbers and THROW in arithmetic —
+  guard `number/1` before any sort/max/compare/`is` over purity, and the guard must come FIRST:
+  in `(P =:= -1.0 ; \+ number(P))` the `=:=` throws on `unknown` before the number check is ever
+  tried (killed the trajectory step, `ab748fc6`). **The dual is silent:** `\=`/`==` do NOT throw,
+  so a `P \= -1.0` filter ADMITS `unknown` into a numeric path — a green run is evidence about
+  the throwing shape only. Synthetic test constraints needing scorable purity must AUTHOR
   `coordination_type`. Provenance: KNOWN_STATE 2026-07-23; rulings R1–R4 in ISSUES OQ-60.
 - **FOUR purity banders, disjoint by design; exactly ONE is named `purity_zone/2` (OQ-62,
   2026-07-25).** The survivor is the canonical spec bander `logical_fingerprint:purity_zone/2`

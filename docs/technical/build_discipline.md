@@ -734,6 +734,17 @@ promoted this from notes to a numbered pattern:
 2. **Channel altitude:** `grep -v Warning`. The `domain_registry` dangling-module warning
    printed at every load for four months into a universally filtered channel, until the dead
    reference crashed the validation suite at runtime (OQ-96).
+   **The dual, same altitude (2026-07-24):** *truncating to the HEAD* of a warning-heavy
+   channel. `run_pipeline.run_prolog` reported failures as `result.stderr[:300]`; SWI emits
+   load-time warnings for hundreds of lines before any ERROR, so the head-slice was
+   structurally guaranteed to be noise on EVERY failure across all 12 Prolog steps. A
+   trajectory-step crash surfaced as two "Local definition ... overrides weak import"
+   warnings cut off mid-word — the real stderr was 259,426 chars / 2,311 lines, and the
+   exception that ended the run never appeared. Filtering-out and slicing-the-head are the
+   same defect: a fixed rule applied to a channel whose payload position is not fixed. Fixed
+   by `salient_stderr()` (prefer ERROR lines, else the TAIL, never the head; commit
+   `55c8b242`). **Rule: when a channel is noise-dominated by construction, select by
+   PREDICATE (what makes a line diagnostic), never by position.**
 3. **Aggregation altitude:** `system_gradient`'s findall over levels. A constructed 8/32
    one-level grid yielded `G_sys=0.216` presented as a SYSTEM reading with a full
    `increasing_coercion` verdict beside `completeness=0.25` — missing levels contribute
@@ -1391,6 +1402,53 @@ Companions from the same review arc:
 
 Provenance: `audits/2026-07-17_oq60_purity_absence/` (PREFLIGHT / WITNESS_CLATENT /
 WITNESS_CFLOOR _2026-07-23.md).
+
+## Latent-now is not safe-later: a new token obligates a consumer sweep at INTRODUCTION (2026-07-24)
+
+The section above governs *whether* an edit is latent. This one governs what latency licenses —
+because a correct latency witness has an expiry date nobody schedules.
+
+Shape: a change introduces a NEW value into an existing domain (a token, sentinel, enum member,
+null), guards it at the introduction site, and records — accurately — that the path is *"inert
+until a producer emits it"* and the diff *byte-identical*. Both claims are true at commit time.
+Later, in an unrelated commit, a producer lands. Every pre-existing consumer that was written when
+the domain was smaller now receives a value it was never designed for, and the byte-identical
+witness on the introducing commit is exactly what made the omission feel complete.
+
+Witnessed (OQ-60 → OQ-242/243): `purity_scoring.pl:49-55` added `Score = unknown` with the
+comment *"propagate `unknown` rather than feeding it to the weighted sum (which would throw)"* and
+the note *"inert until a producer emits `unknown` (Commit 0a is byte-identical)."* A producer
+landed; `context_profile_mining.pl:434` — one level below the site that was hardened — then did
+precisely the throw that comment predicted, killing the trajectory step
+(`ERROR: =:=/2: Arithmetic: 'unknown/0' is not a function`, commit `ab748fc6`). The introducing
+commit anticipated the failure mode in prose and still shipped without the sweep.
+
+**Rule: introducing a value into a domain is a domain-widening change, and its unit of work is the
+CONSUMER SET, not the producer.** Enumerate the consumers in the same change and record the
+disposition of each (guarded / defended-downstream / unreachable). "Inert for now" is a schedule,
+not a disposition — if the sweep is deferred, the deferral is an OQ with the activation condition
+named, not a code comment.
+
+Two things that make the sweep miss, both live here:
+
+- **The loud shape bounds the search; the silent shape does not.** In Prolog, arithmetic and
+  comparison (`is`, `=:=`, `<`, `>=`) THROW on an atom, so those consumers announce themselves —
+  a green pipeline genuinely rules them out *for the paths the corpus reaches*. But `\=`, `==`,
+  and pattern-matching do not throw, so a filter written `P \= -1.0` silently ADMITS the new
+  token into a numeric path. A green run is evidence about the loud shape only; it says nothing
+  about the silent one. (Cleared instance: `json_report.pl:1347/1349` has exactly that bare
+  filter where its twin at `:1282` guards with `number/1` — defended only by
+  `write_json_number/2:2549`'s explicit `unknown → null` clause at the emit boundary. Consumers
+  with no serialization boundary downstream have no such backstop.)
+- **Config-gated and optional-path consumers are invisible to a default-config sweep.** The
+  consumer that crashed sits behind `config:param(trajectory_enabled, 1)` (checked at
+  `run_pipeline.py:544`, which returns early and writes an EMPTY report when disabled). A
+  consumer-chain injection driven by a default pipeline run reaches only the enabled path — so
+  "injected the token through the full consumer chain" means *the chain this config selects*.
+  Enumerate consumers from the CALL GRAPH (`grep` the producer predicate), not from a run.
+
+Provenance: KNOWN_STATE 2026-07-24; commits `ab748fc6` / `55c8b242`; the two declared residuals
+are OQ-242 (the absence-semantics ruling) and OQ-243 (the unswept ~50 call sites).
 
 ## Extension-touching diffs decompose into direct targets vs ensemble refit (or they read as walls)
 
