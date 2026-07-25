@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "ae9b0848b8e17e2e7bc79d82ec669604913efd8f",
+    "store_version": "e87f0eb9cd25a0d29cb29871882cd364545ef9f5",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-24T10:47:15"
+    "generated_at": "2026-07-24T21:52:23"
   },
-  "issues_sha": "0f330719abd3a5c59144cfd9820ee87fd444a60b6e021703cc21838fd69313f1",
-  "n_entries": 241,
+  "issues_sha": "2bd752c6eee0ac285070411cd83c2196b957591c649f00c1ecd666e492a9d13e",
+  "n_entries": 243,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 74,
+    "open": 76,
     "partial": 6
   },
   "active": [
@@ -1110,6 +1110,33 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-61"
+      ]
+    },
+    {
+      "id": "OQ-242",
+      "status": "open",
+      "priority": 2,
+      "summary": "`normalize_purity` fabricates 0.5 for an absent purity inside the HAC stability distance",
+      "deps": [
+        "splits_from OQ-60",
+        "blocked_on_human oq242-absence-semantics-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60"
+      ]
+    },
+    {
+      "id": "OQ-243",
+      "status": "open",
+      "priority": 3,
+      "summary": "Sweep the remaining ~50 `purity_score/2` consumers for the OQ-60 `unknown` token",
+      "deps": [
+        "splits_from OQ-60"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60"
       ]
     }
   ],

@@ -11413,6 +11413,89 @@ confirmed, documented structural property. Not report text.
 
 ---
 
+## OQ-242 — `normalize_purity` fabricates 0.5 for an absent purity inside the HAC stability distance
+
+**Ω-type:** Ω_C (conceptual — the named resolution is *specifying* the absence semantics of a
+distance component, not measuring anything). A cheap Ω_E measurement should precede the ruling
+(below), but it informs the choice rather than settling it.
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-60, blocked_on_human oq242-absence-semantics-ruling
+**Origin:** OQ-60 consumer sweep, 2026-07-24 (KNOWN_STATE 2026-07-24; commit `ab748fc6`). Fixing
+the `unknown`-throws crash in `normalize_purity/2` surfaced the question the crash was hiding: what
+*should* an absent purity contribute to a pairwise distance? The fix deliberately preserved the
+clause's evident pre-existing intent (both absence tokens → 0.5) because changing it is
+output-changing and is the operator's call.
+**Files:** `prolog/context_profile_mining.pl:434-445` (`normalize_purity/2`), consumed at
+`:426` (`PurDiff`) and weighted at `:431-432` (`0.25 * PurDiff` inside `stability_distance/3`).
+
+**Specific question:** 0.5 is a **fabricated plausible value** for a datum that is absent — Build
+Discipline Pattern 6 ("defaults-on-empty return `unknown`/OPEN, never a plausible value"), and
+CLAUDE.md's OQ-60 rule that the two absence tokens must never be coerced. Here the coercion is
+structural, not cosmetic: an unscored constraint is asserted to sit at the *midpoint* of the purity
+axis, so it reads as maximally-average rather than unmeasured, and two unscored constraints read as
+purity-identical (`PurDiff = 0.0`) when nothing is known about either. Live corpus: 46/199 unscored
+(35 gate_fail + 11 no_data), so this is ~23% of rows, not an edge case. Options: (a) keep 0.5
+(status quo, declared); (b) drop the purity component and re-weight the remaining three
+(0.30/0.25/0.20 → renormalized) when either side is absent, so the distance is computed only over
+components that were actually measured; (c) treat absence as maximal distance (1.0) — fail-open
+into "these are not comparable."
+
+**Graduation step (cheap Ω_E, run before the ruling):** re-run `run_trajectory_report` under (b)
+and diff the family partition against HEAD's `18 families / 1467 twins / 4 singletons`. If the
+partition is invariant the ruling is free; if it moves, the size of the move is the argument.
+
+**What resolution changes:** the HAC family clustering that `outputs/context_profile_report.md`
+publishes (family membership, cross-domain twin pairs) — i.e. an analysis product, not report text.
+No classification/χ effect: `stability_distance/3` feeds trajectory mining only.
+
+---
+
+## OQ-243 — Sweep the remaining ~50 `purity_score/2` consumers for the OQ-60 `unknown` token
+
+**Ω-type:** Ω_E (empirical — the named resolution is an observation over the codebase: enumerate
+the call sites and determine, per site, whether the `unknown` atom can reach an unguarded use).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-60
+**Origin:** OQ-60 consumer sweep, 2026-07-24 (KNOWN_STATE 2026-07-24). `purity_scoring.pl:49-55`
+added `Score = unknown` marked "inert until a producer emits `unknown`"; a producer has since
+landed (live corpus: 11 `no_data`), which activated the token corpus-wide. Exactly one consumer was
+found and fixed (`context_profile_mining.pl`, commit `ab748fc6`) — found because it *crashed*, not
+because anything swept for it.
+**Files:** ~50 non-test `purity_scoring:purity_score/2` call sites across ~15 modules —
+`drl_boltzmann_analysis.pl` (8), `drl_purity_network.pl` (6), `metric_drift_events.pl` (5),
+`abductive_triggers.pl` (6), `json_report.pl` (5), `network_dynamics.pl` (4),
+`maxent_diagnostic.pl` (3), `drl_fpn.pl` (2), plus `genuine_findings_query.pl`,
+`diagnostic_summary.pl`, `logical_fingerprint.pl`, `giant_component_analysis.pl`,
+`maxent_report.pl`, `grothendieck_cohomology.pl`.
+
+**Specific question:** Two distinct defect shapes, and the green pipeline only rules out one.
+(1) **Loud** — arithmetic/comparison (`is`, `=:=`, `<`, `>=`) on the atom throws. The pipeline is
+48/48, so no *reached* site throws on the current corpus; that is "didn't find it," not "isn't
+there" — a site reached only under a different corpus, config overlay, or archive leg stays latent.
+(2) **Silent** — `\=`, `==`, and pattern-matching do NOT throw, so a filter written `P \= -1.0`
+*admits* `unknown` into a numeric path. One instance was checked and cleared:
+`json_report.pl:1347/1349` (`write_one_neighbor`) has exactly this bare filter where its twin at
+`:1282` guards with `number/1`, but it is defended at the emit boundary by
+`write_json_number/2:2549`'s explicit `unknown → null` clause (verified: 26 neighbor-writes over
+`no_data` constraints, all emitting null, 0 string values). Sites *without* a serialization
+boundary downstream have no such backstop.
+
+**Method note (this is a probe, so it needs a positive control):** a grep-only pass answers "is
+there a `number/1` nearby," not "can `unknown` reach here." The control: inject `unknown` at a site
+known to be guarded and one known to be bare, and confirm the sweep separates them — an
+all-clear from a probe that cannot flag a planted defect is not a result.
+
+**What resolution changes:** either a set of guard fixes (same shape as `ab748fc6`), or a witnessed
+statement that the remaining sites are unreachable-by-`unknown` — which would let CLAUDE.md's OQ-60
+invariant be cited as enforced rather than aspirational. Note both Priority lines here are an
+initial authoring, not the operator's seat — re-seat as needed.
+
+---
+
 *Last updated: 2026-07-24. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
