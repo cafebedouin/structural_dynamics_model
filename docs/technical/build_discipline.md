@@ -187,7 +187,20 @@ only," the headline may not say "solved"; a proxy improving is not the mechanism
 `f`," not "absent in the system"; to claim the broader thing, extend the control to the other named
 sites or narrow the claim to what was probed (the `transition_path` decay-vs-repair case: the grep
 licensed "no upgrade head in the predicate"; the system-level claim needed the live-path and
-trajectory-reporter checks added before it was earned).
+trajectory-reporter checks added before it was earned). **(c) The concept→surface mapping is itself a
+claim, and a control that validates the SEARCH does not validate the MAPPING.** The (b) failure has a
+subtler twin: the control ladder is impeccable — grep shown to fire, absence real at every rung — but
+the *predicate probed* was the wrong carrier for the *concept claimed*, so a true "surface X is
+unauthored" launders a false "concept C has no live channel." Witnessed (2026-07-25, OQ-255 audit §8):
+"Q6's engine channel is authored-empty" rode a full control ladder on `coordination_vitality/2`
+(genuinely 0-authored on every live leg) while the concept's actual carrier,
+`founding_problem_status/2`, sat authored on 164/199 with wired consumers
+(`narrative_ontology.pl:168-170`) — and both branches of a pre-registered discriminator inherited the
+misidentification, so the downstream check was controlled and still aimed wrong. Rule: before any
+"concept C has no live surface," sweep the sibling surfaces (the dynamic-declaration block, the
+authored-field census, both axes — see *Two-axis classification surfaces* in memory) and cite the
+sweep, not the one-predicate ladder. The absence claim inherits the weakest link in
+concept→surface→search, and the first link is the one no grep controls.
 
 **False-unification — owe a distinction-check before merging things that share concepts.** The
 synthesis twin: two components sharing a vocabulary or a dynamics is NOT license to fold them, import
@@ -1574,6 +1587,46 @@ Instance, probe, and per-position witness: `audits/2026-07-23_oq232_falsifier_re
 tracker OQ-234. Sibling law: *A deterministic gate is buildable IFF the defect has a
 merit-independent signature* (above) governs whether the gate can exist at all; this section
 governs when its kill condition actually discriminates.
+
+---
+
+## A falsifier must be FIREABLE — and a repair that encodes the claim into the instrument owes a standing probe
+
+Two failure modes upstream and downstream of the relocating confound, both witnessed in one
+arc (2026-07-25, OQ-253/OQ-255):
+
+**1. The unfireable falsifier.** Before a pre-registered kill condition counts as a falsifier,
+ask: *what observation would satisfy it?* If the condition is contradictory under its own
+definitions, no observation can, and what shipped is hedging wearing a falsifier's costume —
+the pre-registration RITUAL performed while the epistemic content is zero, which is worse than
+no falsifier because it reads as rigor. Witnessed: "exhibit two questions with different
+foreclosure-sets and identical seat-cost" was pre-registered while seat-cost was *defined as*
+the foreclosure-set — "different sets, identical cost" was a contradiction, not an experiment
+(caught by the author on re-read, one turn later; the fireability check costs a sentence at
+pre-registration and was skipped). The repair that makes it fireable is structural, not verbal:
+the definition had to become a *function* from foreclosure-sets to a coarser ordering
+(gate + grade), at which point "both pass the gate, grades differ, difference changes the
+selection" is satisfiable-in-principle and was in fact run. Rule: a kill condition ships with
+its fireability shown — name a possible world that satisfies it. If you cannot, the definition
+under test is doing the falsifier's job by fiat.
+
+**2. The instrument that encodes the claim (falsifiability relocated to a standing probe).** A
+repair may fix the instrument by building the tested claim INTO it — after which the instrument
+can no longer vote against the theory, and every future pass through the gate is confirmation
+by construction. Witnessed: gate v1.1 admits only carriers that can terminate on cost-present
+cases, which *is* the theorem doc's claim that cost-finding questions cannot do the guard's
+job; the gate now presupposes what the discriminator tested. This is not automatically wrong —
+sometimes the claim has earned its place in the instrument — but it converts the one probe that
+checked it into the theory's ONLY remaining falsification channel. Rule: at the moment of
+adoption (not in the audit trail), record that probe as a **standing probe** — scope attached
+(what tokens, what corpus, what n), re-fire obligation named (new corpus / new question-class),
+and the failure semantics pre-committed (the gate weakens back toward its prior form; it is not
+quietly re-scoped to exclude the counterexample). Instance: seat-theorem v2.5 §6.2 carries
+exactly this block inline; the operator's rider that forced it ("if the instrument can't vote
+against the theory, the theory stops being falsifiable through it") is the general form of v8
+§5.8 one level down. Sibling: *An introduced instrument is itself a claim* (above) governs the
+instrument's own verification; this entry governs what the instrument's adoption does to the
+THEORY's falsifiability.
 
 ---
 

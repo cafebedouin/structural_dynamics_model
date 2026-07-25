@@ -555,7 +555,12 @@ the synthesis side* and *When to stop verifying*):
 - **(1) False-absence.** Before any "absent / can't / unrepresentable / no X," owe a positive
   control (grep a name you KNOW exists, or construct the case it must flag) — else tag it **OPEN**.
   The headline carries the body's caveat ("proxy only" in the body ≠ "solved" in the title); control
-  the claim at its altitude (a probe over `f` licenses "absent in `f`," not "in the system").
+  the claim at its altitude (a probe over `f` licenses "absent in `f`," not "in the system"). **And
+  the concept→surface mapping is its own claim: a perfect control ladder on the WRONG predicate
+  still yields a false absence** — before "concept C has no live channel," sweep the sibling
+  surfaces, don't ladder one (witnessed: `coordination_vitality` genuinely 0-authored while the
+  concept's real carrier `founding_problem_status` sat at 164/199 — OQ-255 audit §8;
+  `build_discipline.md` → *False-absence* sub-rule (c)).
 - **(2) False-unification.** Before merging two things that share a vocabulary or dynamics, owe a
   distinction-check — verify the architecture doesn't *mandate* their separation and cite the ruling
   (observer/committer: `deferential_realism_paper_v7.md` Theorem 7 forbids the fold). Shared dynamics
@@ -585,7 +590,13 @@ the synthesis side* and *When to stop verifying*):
   hypotheses cancel — "flat" is the cancellation signature, so assert over swept intervals, not
   points; check feasibility at the position the claim NAMES, not in aggregate; scope capability
   labels to the regimes the probe reached. Full checklist + the channel-exit repair option:
-  `build_discipline.md` → *The relocating confound*.
+  `build_discipline.md` → *The relocating confound*. Two bookends (2026-07-25, OQ-253/255):
+  **a falsifier must be FIREABLE** — before pre-registering a kill condition, name a possible
+  world that satisfies it; one contradictory under its own definitions is hedging in a
+  falsifier's costume. And **a repair that encodes the tested claim into the instrument** makes
+  the theory unfalsifiable through its own gate — record the discriminating probe as a STANDING
+  probe at adoption (scope attached, re-fire obligation, failure semantics pre-committed).
+  Both: `build_discipline.md` → *A falsifier must be FIREABLE*.
 
 ## Critical Distinctions
 
