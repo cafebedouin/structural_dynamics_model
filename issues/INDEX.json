@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "fbf303bdc7a82d9eb249effcdded3f0730823ecd",
+    "store_version": "03e57ec395003d9bc99c3d2b54a8fdb6d279d080",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-25T10:54:10"
+    "generated_at": "2026-07-25T10:58:45"
   },
-  "issues_sha": "9447ca5e84a8a15b6e9cdf91522f01801af6db86ade796e5404df0455507a355",
-  "n_entries": 254,
+  "issues_sha": "7d0b94f627748c338d8bb1864da4e99a71d1063bca6d5cb52b25bebf7282e045",
+  "n_entries": 255,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 83,
+    "open": 84,
     "partial": 7
   },
   "active": [
@@ -1233,11 +1233,13 @@
       "priority": 3,
       "summary": "Seat-theorem revision: Q is upstream of Π (relocation edits + graded interrogative seat-cost)",
       "deps": [
-        "blocked_on_human oq253-adopt-seat-theorem-q-revision"
+        "blocked_on_human oq253-adopt-seat-theorem-q-revision",
+        "blocked_on OQ-255"
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-254"
+        "OQ-254",
+        "OQ-255"
       ]
     },
     {
@@ -1251,7 +1253,23 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-205",
-        "OQ-253"
+        "OQ-253",
+        "OQ-255"
+      ]
+    },
+    {
+      "id": "OQ-255",
+      "status": "open",
+      "priority": 3,
+      "summary": "Define the seat-cost measure: a function from foreclosure-sets to gate + grade",
+      "deps": [
+        "splits_from OQ-253",
+        "gates OQ-253"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-253",
+        "OQ-254"
       ]
     }
   ],

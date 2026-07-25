@@ -3584,7 +3584,7 @@ was produced against `docs/seat-theorem-v1.md` v2.4 and `docs/deferential_realis
 only — it is a hypothesis to adjudicate, not a witnessed finding.
 **Files:** `docs/seat-theorem-v1.md` (§1 items 3–4/7, §6.2 Corollary 2b, §7, §8).
 
-**Deps:** blocked_on_human oq253-adopt-seat-theorem-q-revision
+**Deps:** blocked_on_human oq253-adopt-seat-theorem-q-revision, blocked_on OQ-255
 
 **The structural claim: Q is upstream of Π.** §8 says the framing Π partitions Φ into background
 and dials, and that Π is the deepest seat. But a partition is an answer to "what is σ here?" —
@@ -3629,22 +3629,61 @@ exemption — whether "what happened?" is genuinely unseated — stops being loa
 revision, because open interrogatives price *low* rather than *zero*. A repair that makes its own
 unresolved question non-structural is doing better than one that needs it settled.
 
-**Kill condition on the revision itself (pre-registered):** exhibit two questions with
-demonstrably different foreclosure-sets that yield identical seat-cost under the measure. That
-collapses the grading back to a type distinction, and 2b's original exemption was right after
-all. Note the sequencing: the seat-cost measure must be pinned (what counts as a foreclosure-set,
-how it is enumerated) *before* the kill condition is runnable — the measure definition is part of
-edit 3, not an afterthought.
+**Kill condition on the revision itself (pre-registered) — SUPERSEDED same day, see addendum:**
+exhibit two questions with demonstrably different foreclosure-sets that yield identical seat-cost
+under the measure. ~~That collapses the grading back to a type distinction.~~ **The source
+instance retracted this as UNFIREABLE:** if seat-cost *is* the foreclosure-set, then different
+foreclosure-sets have different seat-cost *by identity* — "different sets, identical cost" is a
+contradiction, not an experiment. A pre-registered falsifier that cannot fire is the hedger's
+move from §6.2 wearing a falsifier's costume — exactly the failure the graded form was supposed
+to fix. The repair forces the measure to be a **function** from foreclosure-sets to a coarser
+ordering, and the fight moves to that function → spun out as **OQ-255** (gate/grade shape, its
+own kill condition). This OQ's kill condition is now OQ-255's; adjudication of edit 3 is
+blocked_on OQ-255.
 
-**Amendment-provenance class (per the doc's own rule, `:218`):** edits 1–2 are relocations of an
-already-confessed seat (declaration-class, no run-witness owed); edit 3 *corrects a claim* (the
-type exemption) — it carries the pre-registered kill condition above as its falsifier in place of
-a run-witness, since the corrected property is not engine-measurable.
+**Amendment-provenance class (per the doc's own rule, `:218`) — amended by the addendum:** edits
+1–2 are relocations of an already-confessed seat (declaration-class, no run-witness owed); edit 3
+*corrects a claim* (the type exemption). Originally filed as not-engine-measurable; the source
+instance pushed back and repo verification supports it: v8 §6.3 names the engine kinships
+verbatim (`deferential_realism_paper_v8.md:803-805`: "Q3's coordination-to-transfer ratio is the
+rope/snare/tangled_rope axis in essay form; Q5's rearrangement test is mountain-versus-
+arrangement"), so for the engine-kin subset the foreclosure-set is enumerable over the engine's
+type tokens (six core types + `naturalized`/`unknown` — the source turn said "seven," the set is
+what matters) — e.g. Q5 partitions {mountain} against the rest and structurally cannot separate
+snare from tangled_rope. That is a run-witnessable foreclosure-set and the **positive control the
+measure needs** (§8-rule: an empty result licenses "absent" only when the probe is shown to
+fire). **So edit 3 may owe a run-witness after all, on the engine-kin subset.** Declared caveat
+(source's, preserved): the kinship is asserted as visible-in-the-text, not as identity — verify
+against the classifier (`drl_core.pl`, `cs_pattern_detection.pl`) before treating foreclosure-
+sets as engine-derivable; if the kinship is looser, the run-witness path collapses back to
+declaration-class.
+
+**Addendum (2026-07-25, second turn from the source instance + repo verification):**
+
+1. **The "Q6" mixup is explained and both batteries are real.** The source took the six-question
+   battery from v8 §6.3's description of `docs/the-few-seats-worth-choosing-v2.md` (where Q6 —
+   "why was this built, and is the reason still live?" — is numbered, and is the battery's
+   declared guard) and wrote it back onto the theorem doc, whose battery is Q1–Q5 with the
+   genealogical guard as unnumbered prose (`:140`). Two documents, two batteries; any adopted
+   edit must keep them distinct or reconcile them explicitly.
+2. **Edit 3's blast radius is THREE sites, not one** (repo verification, this session): the
+   type-exemption sentence appears at `docs/seat-theorem-v1.md:138` (strike target),
+   `docs/deferential_realism_paper_v8.md:796` (§6.3 restates it), and
+   `docs/the-few-seats-worth-choosing-v2.md:31` — where it takes its STRONGEST form ("a question
+   commits to nothing *the world* could refute") and is explicitly named "the load-bearing
+   distinction" of the essay's upstream move. Adopting edit 3 in the theorem doc alone leaves the
+   exemption live in two downstream documents, one of which leans on it hardest; the adoption
+   ruling must sweep all three or declare the divergence.
+3. **The honest weaker landing, stated in advance:** if OQ-255's grade turns out to carry
+   nothing (its kill condition), 2b's type exemption survives *as a gate* — not "questions are
+   free" but "questions that admit their own terminator are free enough." That is a weaker
+   revision than originally sold, and it is the pre-declared fallback, not a retreat.
 
 **What resolution changes:** if adopted, `seat-theorem-v1.md` bumps version with the three edits
-and the graded seat-cost measure; the genealogical-guard requirement in §6.2 becomes a checkable
-gate; OQ-254 inherits a ratified framing. If the kill condition fires, the type exemption is
-re-affirmed with a stronger warrant than it currently has.
+under whatever measure OQ-255 lands (and the sweep decision for the two sibling sites); the
+genealogical-guard requirement in §6.2 becomes a checkable gate; OQ-254 inherits a ratified
+framing. If OQ-255's kill condition fires, the type exemption is re-affirmed as a gate with a
+stronger warrant than it currently has.
 
 ---
 
@@ -3684,15 +3723,79 @@ can see, or exists only as the transient LLM output of step 2. If the manifest a
 it, this OQ reduces to wiring a read-surface; if not, it is a spec task in the OQ-205 mold
 (carry-the-provenance-bit, loud-null, generator-forward, no backfill).
 
-**Sequencing:** recon is workable now (it is a code read plus one manifest inspection). The spec,
-if owed, should wait on the OQ-253 ruling — the graded seat-cost measure, if adopted, is exactly
-the vocabulary for declaring what a decomposition foreclosed; specifying a Q-provenance surface
-before that ruling risks building against a frame the operator declines.
+**Sequencing (amended 2026-07-25, second turn):** recon is workable now (it is a code read plus
+one manifest inspection) — Deps deliberately do NOT hard-block this OQ so recon stays on the
+frontier. The spec, if owed, waits on BOTH the OQ-253 ruling AND the OQ-255 measure — the
+gate/grade seat-cost measure, if it lands, is exactly the vocabulary for declaring what a
+decomposition foreclosed; specifying a Q-provenance surface before those risks building against
+a frame the operator declines.
 
 **What resolution changes:** ε-dependent findings become auditable against the question that
 admitted their reading set, not only against their authoring reading; the OQ-205 discipline
 closes its upstream gap or records (in `design_gaps.md` if declined) that Q-provenance is a
 declared absence.
+
+---
+
+## OQ-255 — Define the seat-cost measure: a function from foreclosure-sets to gate + grade
+
+**Ω-type:** Ω_C (the measure is itself a declared seat — what counts as a foreclosure-set and
+which coarsening is adopted are choices, not derivations) with an Ω_E tail (the engine-kin
+positive control and the gate/grade pair-existence test are runnable).
+
+**Status:** open
+**Priority:** 3
+**Origin:** 2026-07-25, second turn from the source instance — its one-sentence flag: the
+measure was filed as a sub-part of OQ-253's edit 3 while blocking both OQ-253's kill condition
+and OQ-254's spec, "a blocker living inside the thing it blocks." Spun out on mint-day.
+**Files:** `docs/seat-theorem-v1.md` (§6.2, the edit-3 target), `docs/deferential_realism_paper_v8.md:781-805`
+(§6.3, the kinship sentence), `docs/the-few-seats-worth-choosing-v2.md` (the six-question
+battery whose foreclosure-sets are the first test data), `prolog/drl_core.pl` (the classifier
+the engine-kin verification runs against).
+
+**Deps:** splits_from OQ-253, gates OQ-253
+
+**Why a measure at all.** OQ-253's edit 3 replaces the interrogative type exemption with "a
+question's seat-cost is what it structurally cannot return." As minted, the kill condition on
+that revision was unfireable: if seat-cost IS the foreclosure-set, different sets have different
+cost by identity. So the measure must be a **function from foreclosure-sets to a coarser
+ordering** — and everything contested now lives in that function.
+
+**Proposed shape (source's, to adjudicate): gate + grade.**
+- **Gate** (binary, checkable): does the question's foreclosure-set contain the answers that
+  would terminate the battery? This is the genealogical guard made mechanical — the theorem
+  doc's unnumbered balance requirement (`seat-theorem-v1.md:140`) and the few-seats essay's Q6
+  ("can return a verdict *against* the selecting bet") become one checkable condition: **the
+  battery must admit at least one answer that terminates the battery.**
+- **Grade** (ordered): everything else the question forecloses, ordered by the coarsening.
+
+**Pre-declared concession (the honest weaker landing):** if the gate does the work and the grade
+is decorative, 2b's type exemption survives *as a gate* — "questions that admit their own
+terminator are free enough." Then edit 3 shrinks to replacing one virtue-requirement with one
+checkable condition — worth doing, but not a correction to the type exemption.
+
+**Kill condition on the gate/grade split (pre-registered, and fireable):** exhibit two questions
+that BOTH pass the gate and whose grades differ, where the grade difference **changes which seat
+a practitioner selects**. If no such pair exists, the grade is ornamental and the gate is the
+whole revision (→ the concession above).
+
+**The run-witness path (the measure's positive control).** v8 §6.3 asserts the engine kinships
+in text (verified verbatim this session, `deferential_realism_paper_v8.md:803-805`): Q3's
+coordination-to-transfer ratio ↔ the rope/snare/tangled_rope axis; Q5's rearrangement test ↔
+mountain-versus-arrangement. On that subset the foreclosure-set is enumerable over the engine's
+type tokens (six core types + `naturalized`/`unknown`): Q5 partitions {mountain} against the
+rest and structurally cannot separate snare from tangled_rope. Per the §8-rule (a probe licenses
+"absent" only when shown to fire), this enumerable case is the positive control — without it the
+measure is a clean grep. **Declared caveat (source's, preserved):** the kinship is asserted as
+visible-in-the-text, not as identity; the first execution step is verifying it against the
+classifier (`drl_core.pl` type clauses; does Q5's rearrangement test actually track the mountain
+gate's conditions?). If the kinship is looser than the text asserts, the run-witness path
+collapses and the measure falls back to declaration-class.
+
+**What resolution changes:** OQ-253's edit 3 becomes adjudicable (its kill condition is this
+OQ's, now fireable); the genealogical guard becomes a mechanical gate with a worked example; and
+OQ-254's spec inherits the vocabulary for declaring what a decomposition foreclosed. If the kill
+condition fires, the type exemption is re-affirmed as a gate and OQ-253 shrinks accordingly.
 
 ---
 
