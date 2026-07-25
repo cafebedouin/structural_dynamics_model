@@ -132,7 +132,13 @@ extractive_void(coercion_without_coordination).
    ================================================================ */
 
 %% fpn_zone(+EP, -Zone)
-%  Categorizes effective purity into zones (matching fpn_report.pl).
+%  Bands the FPN intrinsic/effective purity scalar for abductive evidence lines.
+%  NOT the same vocabulary as any other bander — the old "matching fpn_report.pl"
+%  claim here was FALSE (OQ-62): fpn_report:purity_zone/2 has 4 zones cut at
+%  .7/.5/.3 with names sound/contested/degraded/critical, while this has 5 zones
+%  cut at .8/.6/.4/.2. `contaminated` in particular means [0.40,0.60) here but
+%  [0.30,0.50) in the canonical spec bander logical_fingerprint:purity_zone/2.
+%  Band-vocabulary convention table: docs/logic_extensions.md §2.3.
 fpn_zone(EP, pure)         :- EP >= 0.80, !.
 fpn_zone(EP, clean)        :- EP >= 0.60, !.
 fpn_zone(EP, contaminated) :- EP >= 0.40, !.

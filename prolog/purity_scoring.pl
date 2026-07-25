@@ -25,7 +25,13 @@
      >=0.5 = borderline   (acceptable but watch)
      >=0.3 = contaminated (degrading coordination)
      <0.3  = degraded     (extraction-dominant; reform blocked)
-     -1.0  = inconclusive (insufficient epistemic data)
+
+   Two ABSENCE tokens, distinct causes, both serialising to JSON null (OQ-60):
+     -1.0    = epistemic-gate-fail sentinel (epistemic_access_check/2 said false)
+     unknown = no-data (no authored coordination_type, so no Boltzmann floor)
+   Neither is a purity VALUE: never coerce, average, or .get(...,0) them. Note
+   `unknown` is an atom and atoms sort BEFORE numbers — guard number/1 before any
+   sort/max over purity. Banders fail closed to zone `unknown` on both (OQ-62).
 
    Use cases:
      - Rank coordination mechanisms by structural soundness
