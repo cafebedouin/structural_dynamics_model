@@ -67,9 +67,14 @@ seat-theorem-v1.md:138, v8:796, few-seats-v2:31 — the last is the STRONGEST fo
    kernel_v1** — only the legacy `original_json` archive authors it (grep control ladder in the
    audit). The dead-coordination piton path (`drl_core.pl:354-357`, clause 1 at `:381-388`) is a
    live gate over an authored-empty table; ALL 32 live piton slots ride the theater fallback
-   (`:440-448`). Fails closed (dormant, not defective). If a drift/dead-coordination verdict is
-   ever wanted measured, re-emit the fact at the generation frontier
-   (`generate_constraint_pl.py` emit set) or declare the absence in `design_gaps.md`.
+   (`:440-448`). Fails closed (dormant, not defective). **Same-day correction (audit §8): do NOT
+   read this as "the engine has no genealogical/drift channel."** The live genealogy surfaces
+   are `founding_problem_status/2` (authored 164/199 live-leg: 89 contested/14 dead/61 live) and
+   `disappearance_verdict/2` (165/199), with the drift conjunction wired at
+   `narrative_ontology.pl:168-170` (`has_mandatrophy_declaration ← fps(dead) ∧
+   dv(world_rearranges)`). A future probe hunting "drift verdict" via `coordination_vitality`
+   alone repeats this session's channel misidentification — check fps/dv first (two-axis lesson:
+   check both surfaces before "engine has no X layer").
 
 Also of record: `per_constraint.classifications` empty corpus-wide (known OQ-148) — type
 censuses must read `per_constraint.perspectives`.

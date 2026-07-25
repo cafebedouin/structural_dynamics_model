@@ -3688,6 +3688,33 @@ declaration-class.
    question glosses — the gloss's overstatement of Q5 is itself the false-precision the measure
    prices. What remains here is purely the ruling: adopt/reject the three edits under the
    OQ-255 measure, and the three-site sweep decision (item 2).
+5. **The "guard has one live carrier and it's the wrong class" reading — discriminator run
+   same day; outcome is a THIRD branch** (audit §8). The source instance, on the audit's §5
+   finding, read the guard as formally-satisfied-but-unmanned (Pattern-6 shape: "battery
+   guarded" emits identically at 0 or 199 genealogical values) and specified the check:
+   can Q3's positive pole return the still-needed-good verdict on a case where Q3 and Q6
+   diverge? Pre-registered: can → doc's claim about cost-finding questions too strong;
+   can't → guard unmanned. **Actual outcome: the premise was the audit's channel
+   misidentification.** Q6's engine kin is `founding_problem_status/2` (authored 164/199
+   live-leg: 89 contested/14 dead/61 live), not `coordination_vitality/2` (that finding
+   stands but demotes to: the dead-coordination piton clause specifically is dormant). The
+   diverging cell is inhabited (TR×live 18, snare×live 43 slots; witness
+   `alignment_constraint_narrowing`); Q3's answer there is a non-terminator by construction
+   (`drl_core.pl:426-438`); Q6's verdict there is authored. **So the doc's structural claim
+   STANDS — cost-finding questions cannot do the guard's job — AND the guard is manned, by
+   fps.** The Q5×Q6 conjunction is already wired: `has_mandatrophy_declaration ←
+   fps(dead) ∧ disappearance_verdict(world_rearranges)` (`narrative_ontology.pl:168-170`).
+   The measure's gate was refined to v1.1 (terminator must be returnable ON cost-present
+   cases — guard-function, not terminator-admission; Q3 and Q5 provably fail it, Q6-class
+   passes) because the source's Pattern-6 worry was correct about Gate v1 as an instrument
+   even though the corpus alarm dissolved.
+6. **Source instance's recommendation on the ruling (recorded, NOT the ruling):** adopt all
+   three edits and sweep all three sites; its argument — the essay is the *necessary* strike,
+   because "commits to nothing the world could refute" (few-seats-v2:31) is now false with a
+   witness: Q5's inability to separate maintained rope from maintained snare is a world-fact
+   a question structurally cannot return. The `blocked_on_human` ruling remains the
+   operator's; this item exists so the recommendation and its warrant are on the record
+   at adjudication time.
 
 **What resolution changes:** if adopted, `seat-theorem-v1.md` bumps version with the three edits
 under whatever measure OQ-255 lands (and the sweep decision for the two sibling sites); the
@@ -3782,13 +3809,18 @@ does NOT fire:** exhibited pair (Q3, Q5), both gate-passing, grades incomparably
 all four witness cells inhabited, and the difference changes seat selection (rope-vs-snare
 candidates). The grade is load-bearing on the engine-kin subset; the pre-declared weaker landing
 (gate-only) is NOT forced. Scoped: an existence result over engine tokens, not all question
-pairs everywhere. (3) Residual finding: Q6's unique engine channel — the dead-coordination piton
-path reading authored `coordination_vitality/2` — is **authored-empty on all five live legs AND
-kernel_v1** (only legacy `original_json` authors it; grep control ladder in the writeup); all 32
-live piton slots are theater-fallback pitons. Fails closed (dormant, not defective), but the
-essay's guard question maps to a surface generation stopped feeding at the reset — re-emit at
-the generation frontier or declare in `design_gaps.md` if Q6's drift-verdict is ever wanted
-measured.
+pairs everywhere. (3) Residual finding, **inference CORRECTED same day (audit §8)**:
+`coordination_vitality/2` IS authored-empty on all live legs + kernel_v1 (grep control ladder in
+the writeup; all 32 live piton slots are theater-fallback; the dead-coordination piton clause is
+dormant, fails closed) — but the original inference "Q6's unique engine channel is authored-empty"
+misidentified the channel. Q6's genealogical kin is **`founding_problem_status/2`** (authored
+164/199 live-leg; `disappearance_verdict/2` 165/199 is Q5's richer kin; the Q5×Q6 conjunction is
+wired at `narrative_ontology.pl:168-170`). Discriminator run on the diverging cell (inhabited:
+TR×live 18, snare×live 43 slots): the theorem doc's claim stands (Q3 structurally cannot return
+the still-needed-good verdict there) and the guard is MANNED. **Gate refined to v1.1:** the
+terminator must be positively returnable ON cost-present cases (guard-function, not
+terminator-admission) — Gate v1 was Pattern-6-satisfiable by a wrong-class carrier; Q3/Q5 fail
+v1.1, Q6-class passes via fps. Full detail: OQ-253 addendum item 5.
 
 ---
 

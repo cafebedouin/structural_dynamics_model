@@ -149,3 +149,56 @@ virtue-requirement), grade is witnessed load-bearing, and the type exemption's h
 replacement is graded-with-a-positively-shaped-gate rather than gate-only. The residue the
 operator still owes a ruling on (OQ-253): adopt/reject the measure, and the three-site
 sweep decision for the exemption sentence.
+
+---
+
+## 8. Same-day addendum: §5's inference CORRECTED; the discriminator run; Gate v1.1
+
+**Trigger:** the source instance read §5 as "the guard has one live carrier (Q3) and it's
+the wrong class" and specified the discriminating check: *on a case where Q3 and Q6 should
+diverge, can Q3's positive pole return the still-needed-good verdict Q6 would have
+returned?* Pre-registered meanings: can → the doc's structural claim about cost-finding
+questions was too strong; can't → the guard is unmanned.
+
+**The correction first (set-level claim re-witnessed and falsified).** §5's *facts* stand
+— `coordination_vitality/2` is authored-empty on all live legs, the dead-coordination
+piton clause is dormant. §5's *inference* ("Q6's unique engine channel is authored-empty")
+was WRONG: I identified the wrong channel. Q6's genealogical kin is
+**`founding_problem_status/2`** (live/dead/contested — literally "is the founding reason
+still live?"), authored on **164/199** live-leg stories (89 contested / 14 dead / 61
+live), near-total on the kimi/sonnet legs, with live consumers — including the wired
+Q5×Q6 conjunction `has_mandatrophy_declaration(C) :- founding_problem_status(C, dead),
+disappearance_verdict(C, world_rearranges)` (`narrative_ontology.pl:168-170`, the OQ-83
+R5 rewire). `disappearance_verdict/2` (Q5's kin, richer than `emerges_naturally`) is
+likewise authored 165/199 (119 world_rearranges / 33 contested / 13 world_unchanged).
+
+**The discriminator, run** (join in `evidence/`; same manifest 2026-07-25T07:20:20Z,
+n=199, ee025a0):
+
+- The diverging cell — cost-present × reason-still-live — is INHABITED: tangled_rope ×
+  fps=live 18 slots, snare × live 43, naturalized × live 2 (witness:
+  `alignment_constraint_narrowing`). Full type × fps table in `evidence/census.json`
+  (fps join added).
+- Q3's answer on that cell is a non-terminator **by construction**: every cost-present
+  cell requires χ above the rope ceiling and/or `has_asymmetric_extraction`
+  (`drl_core.pl:426-438`, `:390-398`), which ejects it from Q3's all-coordination
+  terminator cell. Q3 sees the cost and structurally cannot say what the cost is buying.
+- Q6's verdict on that cell is returnable AND authored: `founding_problem_status(C, live)`
+  on those very stories.
+
+**Verdict: a third branch neither pre-registered option anticipated.** The doc's
+structural claim about cost-finding questions STANDS (Q3 cannot do the guard's job on the
+diverging case) — and the guard is NOT unmanned: it is manned by `founding_problem_status`.
+The "one live carrier, wrong class" reading was built on §5's channel misidentification.
+What §5 correctly found demotes to: the *dead-coordination piton clause specifically*
+rides a dormant surface; the genealogical guard itself rides fps and is alive.
+
+**Gate v1.1 (refinement worth keeping even though the alarm dissolved).** The source's
+Pattern-6 worry was right about Gate v1 as an instrument: "∃Q admitting a positively-shaped
+terminator anywhere" is satisfiable by Q3 alone, and would emit "battery guarded"
+identically whether the genealogical channel carried 199 values or zero. Refinement:
+**Gate v1.1 — the battery must contain a question that can positively return a terminator
+ON COST-PRESENT CASES** (the diverging region, where termination is informative). Only
+genealogical-class questions pass v1.1 (Q3 provably fails it; Q5 fails it — a one-sided
+excluder certifies nothing); live batteries pass it through Q6 via fps. The gate now
+measures guard-*function*, not terminator-*admission*.

@@ -62,5 +62,56 @@
   "archives/datasets/kernel_v1": 0,
   "archives/datasets/original_json": "AUTHORED (multiple files)",
   "grep_positive_control": "pattern fires on original_json + narrative_ontology.pl + drl_core.pl"
+ },
+ "addendum_s8_discriminator": {
+  "founding_problem_status_authored": {
+   "n": 164,
+   "values": {
+    "live": 61,
+    "contested": 89,
+    "dead": 14
+   }
+  },
+  "disappearance_verdict_authored": {
+   "n": 165,
+   "values": {
+    "contested": 33,
+    "world_rearranges": 119,
+    "world_unchanged": 13
+   }
+  },
+  "mandatrophy_wiring": "narrative_ontology.pl:168-170 fps(dead) + dv(world_rearranges)",
+  "type_x_fps_slots": {
+   "('mountain', 'live')": 6,
+   "('naturalized', 'contested')": 8,
+   "('naturalized', 'dead')": 1,
+   "('naturalized', 'live')": 2,
+   "('piton', 'contested')": 12,
+   "('piton', 'dead')": 4,
+   "('piton', 'live')": 16,
+   "('rope', 'UNAUTHORED')": 15,
+   "('rope', 'contested')": 85,
+   "('rope', 'dead')": 19,
+   "('rope', 'live')": 60,
+   "('scaffold', 'UNAUTHORED')": 12,
+   "('scaffold', 'contested')": 27,
+   "('scaffold', 'live')": 66,
+   "('snare', 'UNAUTHORED')": 20,
+   "('snare', 'contested')": 105,
+   "('snare', 'dead')": 19,
+   "('snare', 'live')": 43,
+   "('tangled_rope', 'UNAUTHORED')": 13,
+   "('tangled_rope', 'contested')": 89,
+   "('tangled_rope', 'dead')": 13,
+   "('tangled_rope', 'live')": 18,
+   "('unknown', 'UNAUTHORED')": 80,
+   "('unknown', 'contested')": 30,
+   "('unknown', 'live')": 33
+  },
+  "diverging_cell_witnesses": {
+   "('tangled_rope', 'live')": "alignment_constraint_narrowing",
+   "('snare', 'live')": "alignment_constraint_narrowing",
+   "('naturalized', 'live')": "geopolitical_settlement_competition"
+  }
  }
 }
