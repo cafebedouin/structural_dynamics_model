@@ -3573,154 +3573,33 @@ incidents above would have been caught at the amending commit.
 
 ## OQ-253 — Seat-theorem revision: Q is upstream of Π (relocation edits + graded interrogative seat-cost)
 
-**Ω-type:** Ω_C (framework-content ruling — whether to adopt the revision is the operator's seat;
-the document is the law, and edit 3 changes a claim, not merely its scope) with an Ω_E falsifier
-attached (the kill condition below is constructive).
+**Ω-type:** Ω_C (framework-content ruling) with an Ω_E falsifier tail (discharged via OQ-255).
 
-**Status:** open
+**Status:** resolved — **RULED 2026-07-25 (operator): option 1 — adopt all three edits + full
+three-site sweep, with two riders, both implemented in `fdc502ec`** (seat-theorem v2.4→v2.5;
+v8 §6.3 updated to track the priced form; few-seats-v2 site 3 REWRITTEN rather than struck,
+replacement paragraph + fourth-pass note in the essay's own idiom). **Rider 1 (the v1.1
+independence problem):** the gate encodes the doc's own claim about cost-finding questions, so
+the cost-present discriminator is recorded IN THE DOC at adoption as a **standing probe** scoped
+to its one run (engine tokens, n=199, manifest 2026-07-25) — the gate stays falsifiable only
+through that probe staying armed; if it ever lands the other way, the gate weakens back toward
+admission, not quiet re-scoping (seat-theorem §6.2 + amendment-provenance item 4 carry this).
+**Rider 2:** the essay strike owed an authored replacement, delivered. Operator's epistemic
+split, of record: the sweep argument rests on a run witness (Q5 cannot separate maintained rope
+from maintained snare, so the essay's "commits to nothing the world could refute" was
+false-with-witness); the v1.1 independence flag rests on a reading of the audit's own logic and
+was checked by no one else. Sweep witness: `grep "commits to nothing"` hits only the two strike
+records quoting the dead claim. Full history: mint + addendum items 1–6 in git (`03e57ec3`,
+`2fa3eca2`, `1ade944d`); measure + run witnesses: `audits/2026-07-25_oq255_seat_cost_measure/`
+(OQ-255).
 **Priority:** 3
-**Origin:** analysis turn handed to the repo 2026-07-25 (operator-directed minting). The proposal
-was produced against `docs/seat-theorem-v1.md` v2.4 and `docs/deferential_realism_paper_v8.md`
-only — it is a hypothesis to adjudicate, not a witnessed finding.
-**Files:** `docs/seat-theorem-v1.md` (§1 items 3–4/7, §6.2 Corollary 2b, §7, §8).
+**Origin:** analysis turn handed to the repo 2026-07-25 (operator-directed minting); proposal
+produced against seat-theorem v2.4 + v8 only.
+**Files:** `docs/seat-theorem-v1.md`, `docs/deferential_realism_paper_v8.md:781-805`,
+`docs/the-few-seats-worth-choosing-v2.md`.
 
-**Deps:** blocked_on_human oq253-adopt-seat-theorem-q-revision, blocked_on OQ-255
-
-**The structural claim: Q is upstream of Π.** §8 says the framing Π partitions Φ into background
-and dials, and that Π is the deepest seat. But a partition is an answer to "what is σ here?" —
-and the interrogative that poses it is prior. Ask for the deceleration parameter and you
-background the frame; ask whether expansion is isotropic and the frame becomes the dial. Q does
-not *fix* Π — two analysts can share a question and frame differently — but it constrains the
-admissible ones. So the chain is Q → Π → σ → liveness, and §8 stopped one link short of its own
-root. This is a **relocation, not a new section**: §8's regress argument already absorbs any
-further level for free (each ascent is confirmed, not threatened, by holding), so the tempting
-"add a §9: the framing is interrogated" is the wrong edit.
-
-**The three edits proposed:**
-
-1. **§1 item 3** (`seat-theorem-v1.md:28`) — signature becomes V = 𝔙_{Q,Π}(σ, d₁…dₙ). The actual
-   defect: Q is already in the definitions but out of the formalism — item 4 (`:30`) indexes
-   liveness to "(relative to σ, Q)" and item 7 defines content as a property of the (Q, σ) pair,
-   while the function never took Q as an argument. (§8 already made the Π half of this move:
-   "the verdict-function was therefore always 𝔙_Π" (`:166`) — the revision completes it.)
-2. **§7** (`:152`) — the proof's declared seat is currently located as Π alone ("a specific
-   object, named in §8"). It is Q *and* Π: the derivation individuates parameters, and it does so
-   under one question ("is contentful neutrality possible?", §5). Two-line edit.
-3. **§6.2 Corollary 2b** (`:138`) — the load-bearing one. Strike "a question commits to nothing a
-   later confrontation could refute, while its answer commits to everything." Replace the
-   interrogative/thetic *type* exemption with a *graded* measure: **a question's seat-cost is
-   what it structurally cannot return** (its foreclosure-set — enumerable, not felt). Q5 cannot
-   return "wrong partition"; that is its price.
-
-**Stated cost (declared, not absorbed):** 2b no longer escapes the no-seat pose by kind, only by
-degree. The battery is cheaper than a thesis, not free. The practitioner owes disclosure of what
-the battery forecloses — more work, less clean, and the document's most elegant move goes.
-
-**What it buys:** the genealogical guard (the unnumbered balance question at `:140`; the source
-turn calls it "Q6" — the doc's battery is numbered Q1–Q5) is currently a virtue-requirement ("at
-least one question pointed where the seat would prefer not to look") — exhortative and
-unfalsifiable in exactly the way §6.2 convicts the hedger. Under the graded form it becomes
-checkable: **the battery must admit at least one answer that terminates the battery.** Same
-intent, now a gate — 2a's own standard (declaration is checkable because whether a seat is shown
-is a fact about the verdict) finally reaching the selector.
-
-**Evidence for the revision (self-applied):** the previously-open kill condition on the type
-exemption — whether "what happened?" is genuinely unseated — stops being load-bearing under the
-revision, because open interrogatives price *low* rather than *zero*. A repair that makes its own
-unresolved question non-structural is doing better than one that needs it settled.
-
-**Kill condition on the revision itself (pre-registered) — SUPERSEDED same day, see addendum:**
-exhibit two questions with demonstrably different foreclosure-sets that yield identical seat-cost
-under the measure. ~~That collapses the grading back to a type distinction.~~ **The source
-instance retracted this as UNFIREABLE:** if seat-cost *is* the foreclosure-set, then different
-foreclosure-sets have different seat-cost *by identity* — "different sets, identical cost" is a
-contradiction, not an experiment. A pre-registered falsifier that cannot fire is the hedger's
-move from §6.2 wearing a falsifier's costume — exactly the failure the graded form was supposed
-to fix. The repair forces the measure to be a **function** from foreclosure-sets to a coarser
-ordering, and the fight moves to that function → spun out as **OQ-255** (gate/grade shape, its
-own kill condition). This OQ's kill condition is now OQ-255's; adjudication of edit 3 is
-blocked_on OQ-255.
-
-**Amendment-provenance class (per the doc's own rule, `:218`) — amended by the addendum:** edits
-1–2 are relocations of an already-confessed seat (declaration-class, no run-witness owed); edit 3
-*corrects a claim* (the type exemption). Originally filed as not-engine-measurable; the source
-instance pushed back and repo verification supports it: v8 §6.3 names the engine kinships
-verbatim (`deferential_realism_paper_v8.md:803-805`: "Q3's coordination-to-transfer ratio is the
-rope/snare/tangled_rope axis in essay form; Q5's rearrangement test is mountain-versus-
-arrangement"), so for the engine-kin subset the foreclosure-set is enumerable over the engine's
-type tokens (six core types + `naturalized`/`unknown` — the source turn said "seven," the set is
-what matters) — e.g. Q5 partitions {mountain} against the rest and structurally cannot separate
-snare from tangled_rope. That is a run-witnessable foreclosure-set and the **positive control the
-measure needs** (§8-rule: an empty result licenses "absent" only when the probe is shown to
-fire). **So edit 3 may owe a run-witness after all, on the engine-kin subset.** Declared caveat
-(source's, preserved): the kinship is asserted as visible-in-the-text, not as identity — verify
-against the classifier (`drl_core.pl`, `cs_pattern_detection.pl`) before treating foreclosure-
-sets as engine-derivable; if the kinship is looser, the run-witness path collapses back to
-declaration-class.
-
-**Addendum (2026-07-25, second turn from the source instance + repo verification):**
-
-1. **The "Q6" mixup is explained and both batteries are real.** The source took the six-question
-   battery from v8 §6.3's description of `docs/the-few-seats-worth-choosing-v2.md` (where Q6 —
-   "why was this built, and is the reason still live?" — is numbered, and is the battery's
-   declared guard) and wrote it back onto the theorem doc, whose battery is Q1–Q5 with the
-   genealogical guard as unnumbered prose (`:140`). Two documents, two batteries; any adopted
-   edit must keep them distinct or reconcile them explicitly.
-2. **Edit 3's blast radius is THREE sites, not one** (repo verification, this session): the
-   type-exemption sentence appears at `docs/seat-theorem-v1.md:138` (strike target),
-   `docs/deferential_realism_paper_v8.md:796` (§6.3 restates it), and
-   `docs/the-few-seats-worth-choosing-v2.md:31` — where it takes its STRONGEST form ("a question
-   commits to nothing *the world* could refute") and is explicitly named "the load-bearing
-   distinction" of the essay's upstream move. Adopting edit 3 in the theorem doc alone leaves the
-   exemption live in two downstream documents, one of which leans on it hardest; the adoption
-   ruling must sweep all three or declare the divergence.
-3. **The honest weaker landing, stated in advance:** if OQ-255's grade turns out to carry
-   nothing (its kill condition), 2b's type exemption survives *as a gate* — not "questions are
-   free" but "questions that admit their own terminator are free enough." That is a weaker
-   revision than originally sold, and it is the pre-declared fallback, not a retreat.
-4. **OQ-255 executed and resolved same day** (`audits/2026-07-25_oq255_seat_cost_measure/`):
-   the kill condition did NOT fire (witnessed pair Q3/Q5 — grade is load-bearing on the
-   engine-kin subset), so the FULL graded revision, not the weaker gate-only landing, is what
-   stands for adjudication. Kinship verdict on the addendum's conditional: looser than the
-   source's enumeration (Q5 is a one-sided mountain-excluder — its positive pole is inhabited
-   by five types on the live corpus, rope bypass `drl_core.pl:423`), but the run-witness path
-   sharpened rather than collapsed: foreclosure-sets are computed from gate structure, not
-   question glosses — the gloss's overstatement of Q5 is itself the false-precision the measure
-   prices. What remains here is purely the ruling: adopt/reject the three edits under the
-   OQ-255 measure, and the three-site sweep decision (item 2).
-5. **The "guard has one live carrier and it's the wrong class" reading — discriminator run
-   same day; outcome is a THIRD branch** (audit §8). The source instance, on the audit's §5
-   finding, read the guard as formally-satisfied-but-unmanned (Pattern-6 shape: "battery
-   guarded" emits identically at 0 or 199 genealogical values) and specified the check:
-   can Q3's positive pole return the still-needed-good verdict on a case where Q3 and Q6
-   diverge? Pre-registered: can → doc's claim about cost-finding questions too strong;
-   can't → guard unmanned. **Actual outcome: the premise was the audit's channel
-   misidentification.** Q6's engine kin is `founding_problem_status/2` (authored 164/199
-   live-leg: 89 contested/14 dead/61 live), not `coordination_vitality/2` (that finding
-   stands but demotes to: the dead-coordination piton clause specifically is dormant). The
-   diverging cell is inhabited (TR×live 18, snare×live 43 slots; witness
-   `alignment_constraint_narrowing`); Q3's answer there is a non-terminator by construction
-   (`drl_core.pl:426-438`); Q6's verdict there is authored. **So the doc's structural claim
-   STANDS — cost-finding questions cannot do the guard's job — AND the guard is manned, by
-   fps.** The Q5×Q6 conjunction is already wired: `has_mandatrophy_declaration ←
-   fps(dead) ∧ disappearance_verdict(world_rearranges)` (`narrative_ontology.pl:168-170`).
-   The measure's gate was refined to v1.1 (terminator must be returnable ON cost-present
-   cases — guard-function, not terminator-admission; Q3 and Q5 provably fail it, Q6-class
-   passes) because the source's Pattern-6 worry was correct about Gate v1 as an instrument
-   even though the corpus alarm dissolved.
-6. **Source instance's recommendation on the ruling (recorded, NOT the ruling):** adopt all
-   three edits and sweep all three sites; its argument — the essay is the *necessary* strike,
-   because "commits to nothing the world could refute" (few-seats-v2:31) is now false with a
-   witness: Q5's inability to separate maintained rope from maintained snare is a world-fact
-   a question structurally cannot return. The `blocked_on_human` ruling remains the
-   operator's; this item exists so the recommendation and its warrant are on the record
-   at adjudication time.
-
-**What resolution changes:** if adopted, `seat-theorem-v1.md` bumps version with the three edits
-under whatever measure OQ-255 lands (and the sweep decision for the two sibling sites); the
-genealogical-guard requirement in §6.2 becomes a checkable gate; OQ-254 inherits a ratified
-framing. If OQ-255's kill condition fires, the type exemption is re-affirmed as a gate with a
-stronger warrant than it currently has.
+**Deps (dropped on close):** was `blocked_on_human oq253-adopt-seat-theorem-q-revision,
+blocked_on OQ-255`; ruled, and OQ-255 resolved.
 
 ---
 
@@ -3760,12 +3639,14 @@ can see, or exists only as the transient LLM output of step 2. If the manifest a
 it, this OQ reduces to wiring a read-surface; if not, it is a spec task in the OQ-205 mold
 (carry-the-provenance-bit, loud-null, generator-forward, no backfill).
 
-**Sequencing (amended 2026-07-25, second turn):** recon is workable now (it is a code read plus
-one manifest inspection) — Deps deliberately do NOT hard-block this OQ so recon stays on the
-frontier. The spec, if owed, waits on BOTH the OQ-253 ruling AND the OQ-255 measure — the
-gate/grade seat-cost measure, if it lands, is exactly the vocabulary for declaring what a
-decomposition foreclosed; specifying a Q-provenance surface before those risks building against
-a frame the operator declines.
+**Sequencing (amended 2026-07-25, third turn): FULLY UNBLOCKED.** Both former waits are
+settled — OQ-253 ruled (adopted, `fdc502ec`: the graded seat-cost + Q → Π → σ chain are now
+doc law) and OQ-255 resolved (the gate-v1.1/grade measure is the vocabulary for declaring what
+a decomposition foreclosed). Recon first (a code read of `_step_decompose` plus one manifest
+inspection), then the spec if owed. Note for the spec: the OQ-255 audit's channel-misidentification
+lesson applies here too — before claiming the decomposition's Q-choice is uncarried, sweep ALL
+candidate surfaces (manifest fields, story_provenance, the scope-prompt output schema), not the
+first-named one.
 
 **What resolution changes:** ε-dependent findings become auditable against the question that
 admitted their reading set, not only against their authoring reading; the OQ-205 discipline

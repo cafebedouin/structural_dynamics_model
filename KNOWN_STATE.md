@@ -45,6 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-25 — [landed] Seat-theorem v2.5 ADOPTED (OQ-253 ruled): Q enters the formalism; interrogative type exemption struck at all three sites
+**Files:** docs/seat-theorem-v1.md, docs/deferential_realism_paper_v8.md, docs/the-few-seats-worth-choosing-v2.md, ISSUES.md
+**Tier:** landed
+
+Operator ruling (option 1 + two riders), commit `fdc502ec`. seat-theorem v2.4→v2.5: §1(3)
+signature V = 𝔙_Q (completed to 𝔙_{Q,Π} in §8, which now states the chain Q → Π → σ →
+liveness); §7 seat is the pair (Q, Π); §6.2 type exemption replaced by graded seat-cost
+(foreclosure-set, enumerable) with the guard requirement promoted to the v1.1 gate — carried
+WITH its scope inline as a **standing probe** (rider 1: the gate encodes the claim the
+discriminator tests; one run, engine tokens, n=199 — a future discriminator run that lands the
+other way weakens the gate back toward admission). v8 §6.3 tracks the priced form. The essay's
+site-3 sentence ("commits to nothing the world could refute" — its strongest form) was REWRITTEN
+with an authored replacement paragraph + fourth-pass note (rider 2), not struck. Sweep witness:
+`grep "commits to nothing"` over docs hits only the two strike-records quoting the dead claim.
+Tripwire for future doc cites: **the interrogative exemption is dead law** — do not quote
+"a question commits to nothing..." from memory of pre-v2.5 text; questions price low, not zero.
+Ruling record: ISSUES OQ-253 (resolved, compressed).
+
+---
+
 ## 2026-07-25 — [landed] OQ-255 seat-cost measure delivered; two corpus facts: `emerges_naturally`'s true-pole holds FIVE types, and `coordination_vitality` is authored-empty on every live leg
 **Files:** audits/2026-07-25_oq255_seat_cost_measure/, prolog/drl_core.pl, docs/seat-theorem-v1.md, docs/deferential_realism_paper_v8.md, docs/the-few-seats-worth-choosing-v2.md, ISSUES.md
 **Tier:** landed
