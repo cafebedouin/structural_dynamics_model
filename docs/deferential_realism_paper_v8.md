@@ -792,8 +792,11 @@ more than anyone carries honestly — and the candidates are the views working h
 natural. The instrument is six questions (who benefits and who pays; how does it look from the
 position you'd least want to occupy; coordination *and* transfer, in what ratio; if everyone
 agrees, who is not in the conversation; if this vanished, would the world rearrange; why was
-this built, and is the reason still live) — questions rather than findings, because a question
-commits to nothing a confrontation could refute while its answer commits to everything. The
+this built, and is the reason still live) — questions rather than findings, priced rather than
+free (seat-theorem v2.5 struck the earlier type exemption here): an answer commits to
+everything at once, while a question commits to its foreclosure-set — what it structurally
+cannot return, enumerable in advance — so the battery is cheaper than a thesis, not free, and
+owes disclosure of what it forecloses. The
 sixth question is the battery's own guard: five cost-finding questions encode a wager about
 where the costs are, and Q6 is the one that can return a verdict *against* that wager — the
 essay retracted its own earlier awake/asleep sorting as "the no-seat pose wearing a flattering

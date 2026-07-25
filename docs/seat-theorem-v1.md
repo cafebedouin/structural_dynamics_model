@@ -2,7 +2,10 @@
 
 **A derivation that contentful verdicts cannot be seat-free, and that the only coherent residue of neutrality is declaration.**
 
-**Version: v2.4**
+**Version: v2.5** *(the Q-relocation: the question enters the formalism it already governed —
+§1(3) signature, §7 seat-pair, §6.2 graded seat-cost replacing the interrogative type
+exemption; adopted by operator ruling 2026-07-25, ISSUES OQ-253, on the witnesses of
+`audits/2026-07-25_oq255_seat_cost_measure/`)*
 
 > **Cross-reference (v8 adoption, 2026-07-02).** This document is the *law*;
 > `docs/deferential_realism_paper_v8.md` operationalizes it for the DR engine (§5–§6 there:
@@ -25,7 +28,7 @@ A *seat-free* resolution of a question is one whose answer is fixed by the situa
 
 2. A **question** Q posed of σ, and a **verdict** V — the answer returned.
 
-3. The verdict is the value of a function: V = 𝔙(σ, d₁, …, dₙ), where each dᵢ is a **parameter** the answer depends on.
+3. The verdict is the value of a function: V = 𝔙_Q(σ, d₁, …, dₙ), where each dᵢ is a **parameter** the answer depends on. The subscript is owed rather than added: (4) and (7) below index liveness and content to the question, so Q was in the definitions and out of the formalism. (§8 completes the subscript — the function was always also indexed by a framing: 𝔙_{Q,Π}.)
 
 4. A parameter dᵢ is **live** (relative to σ, Q) iff varying it while holding σ fixed changes V. A parameter that is not live is *fixed by σ* — its value is read off the situation.
 
@@ -135,9 +138,11 @@ The selection rule this framework adopts — declared here as a premise, not der
 4. *If everyone agrees, who is not in the conversation?* — concealment detection by missing stakeholder.
 5. *If this vanished, would the world rearrange or stay the same?* — the **liveness test**, and it is the human form of the σ/seat distinction itself: a thing whose removal rearranges nothing has no stakeholders and is fixed-by-σ (a natural fact); a thing whose removal forces rearrangement is a live parameter with interested parties (a seat). Q5 is (4) of §1 asked in the world rather than on the page.
 
-A seat is selected for the discipline's scarce attention when these questions return interested answers — when something is being *maintained* to look inevitable (effortful upkeep is the candidate-flag) and the maintenance conceals a distribution (Q1 adjudicates what the flag found). The questions select; they do not pre-decide, because a question commits to nothing a later confrontation could refute, while its answer commits to everything.
+A seat is selected for the discipline's scarce attention when these questions return interested answers — when something is being *maintained* to look inevitable (effortful upkeep is the candidate-flag) and the maintenance conceals a distribution (Q1 adjudicates what the flag found). The questions select; they do not pre-decide. But selection is not free, and the earlier drafts' exemption here — *a question commits to nothing a later confrontation could refute* — was the no-seat pose granted to interrogatives by type; it is struck (v2.5) and replaced with a price. **A question's seat-cost is what it structurally cannot return** — its foreclosure-set, enumerable rather than felt. Q5 cannot return "wrong partition"; that is its price. An answer commits to everything at once; a question commits only to its blind spot, and the blind spot can be listed in advance. The battery is therefore cheaper than a thesis, not free, and the practitioner owes disclosure of what it forecloses.
 
 One residual seat sits a level below the questions, and 2b's honesty requires naming it. Each question is interrogative and so escapes the no-seat pose individually — but the *composition* of the battery is thetic. A set of questions has a direction: which costs it goes looking for, which it does not. A battery made only of cost-finding questions encodes a wager about where the costs are, and will confirm that wager by never asking where it might fail — falsifiable in each answer, unfalsified by construction in the aggregate. So the battery's composition must itself be declared and balanced, or 2b smuggles its premise back in through attention-allocation, which is the concealment 2a forbids relocated one level down. The minimal balance is a question that can return a verdict *against* the selecting bet — for the configured-world selector, a genealogical question (why was this built, is the reason still live?) that can surface the still-needed good the cost-finding questions structurally cannot. The requirement is general: whatever the selection-seat, the battery that operationalizes it owes at least one question pointed where the seat would prefer not to look.
+
+Under the graded seat-cost this requirement stops being a virtue and becomes a gate: **the battery must contain a question that can positively return an answer that terminates the battery — and can return it on the cases where cost is present**, because a terminator returnable only where nothing was at stake guards nothing, and an exhausted search ("found no payer") is not an answer but an absence. Scope, declared at adoption rather than absorbed: this gate encodes the claim that cost-finding questions cannot do the guard's job, so the gate cannot itself falsify that claim — the check that keeps it honest is the *cost-present discriminator* (can a cost-finding question return the still-needed good on a case where it and the genealogical question should diverge?), which is a **standing probe, not a completed check**. Its one run to date is an existence result over a single engine's type tokens at a single corpus manifest (n=199, 2026-07-25; `audits/2026-07-25_oq255_seat_cost_measure/`), where the cost-finding question failed by construction and the guard held. A future battery, corpus, or question-class where the discriminator lands the other way falsifies the gate's premise, and the gate must then be weakened back toward admission, not quietly re-scoped.
 
 The operative distinction is therefore not *seated vs. unseated* — all contentful verdicts are seated (2a) — but **declared vs. concealed**; and within the declared, *well-chosen vs. merely chosen*. The criterion for the latter is no longer deferred: a seat is well-chosen when its selection-premise is *declared* (not concealed) and has been *staked and honored* under Corollary 3 — confronted, not reabsorbed. "Well-chosen" is "declared-and-confronted," recursed up the selection lineage. This needs no new machinery; it is 2a plus Corollary 3 applied to the selector rather than the selected. What the framework cannot deliver is a seat-free *ranking* of rival selection-premises — that would be a neutral verdict among contentful claims, which it forbids. The selector stays irreducibly chosen; "chosen" now means declared-and-defended, not arbitrary.
 
@@ -149,7 +154,7 @@ One boundary on what the discipline secures. Declaration can be mandated — the
 
 Stated rather than hidden, because the conclusion permits no other move.
 
-The derivation individuates "parameter" and "content." In v1 this was confessed as an undischarged primitive — a parameter-count the proof runs on but does not audit. The companion argument of §8 locates it precisely: to individuate the parameters is to draw the partition between what is bundled as the situation and what is exposed as a dial, and that partition is the framing Π. So this argument's seat is not a loose end; it is a specific object, named in §8, that the proof sits on to draw any boundary at all. By Corollary 2a, declaring it is not a concession that weakens the result; it is the result, applied to itself.
+The derivation individuates "parameter" and "content." In v1 this was confessed as an undischarged primitive — a parameter-count the proof runs on but does not audit. The companion argument of §8 locates it precisely: to individuate the parameters is to draw the partition between what is bundled as the situation and what is exposed as a dial, and that partition is the framing Π. And the partition is drawn under one question — *is contentful neutrality possible?* (§5) — which constrains the framings admissible to it without fixing one. So this argument's seat is not a loose end, and it is not one object but a pair: the question and the framing, Q and Π, named in §5 and §8, that the proof sits on to draw any boundary at all. By Corollary 2a, declaring them is not a concession that weakens the result; it is the result, applied to itself.
 
 ---
 
@@ -163,7 +168,7 @@ Let **Φ** be the *unframed field*: every variable that could bear on V, with no
 
 > σ := the assignment over B(Π).
 
-The verdict-function was therefore always 𝔙_Π, relative to a framing it did not name. And liveness — defined in (4) as "varying it, σ fixed, changes V" — was always *framing-relative*, since "σ fixed" means "B(Π) fixed." The original theorem holds within any Π; it never examined the partition.
+The verdict-function was therefore always 𝔙_{Q,Π}, relative to a framing it did not name — and the framing is itself posed. A partition of Φ is an answer to the meta-question *"what is σ here?"*, and the interrogative that poses it is prior: ask for the deceleration parameter and you background the frame; ask whether the expansion is isotropic and the frame becomes the dial. Q does not fix Π — two analysts can share a question and frame differently — but it constrains the admissible ones. The chain is Q → Π → σ → liveness. And liveness — defined in (4) as "varying it, σ fixed, changes V" — was always *framing-relative*, since "σ fixed" means "B(Π) fixed." The original theorem holds within any Π; it never examined the partition.
 
 ### Two further premises
 
@@ -219,6 +224,20 @@ The rule this records: a run-witness is owed where an edit *corrects a claim abo
 measurable property*; an edit that *narrows a claim's scope* needs declaration, not
 run-grounding. A reader who finds one witnessed edit and two unwitnessed ones is seeing
 that rule applied, not discipline lapsing.
+
+4. **The v2.5 Q-relocation** is a mixed class under the same rule. The §1(3) and §7
+   edits are relocations of an already-confessed seat — declaration-class, no run-witness
+   owed. The §6.2 edit **corrects a claim** (the interrogative type exemption) and
+   carries its run-witnesses: the gate/grade kill-condition pair (two gate-passing
+   questions whose grade difference changes seat selection — it did not fire, so the
+   graded form stands on a witness rather than a hedge) and the cost-present
+   discriminator (the cost-finding question failed to return the still-needed good by
+   construction; the guard held via the genealogical channel). Both in
+   `audits/2026-07-25_oq255_seat_cost_measure/`; adjudication record in ISSUES OQ-253 /
+   OQ-255. The discriminator is recorded as a **standing probe** scoped to the engine
+   tokens and manifest it ran on — see §6.2 — because the v1.1 gate encodes the very
+   claim the probe tests, and an instrument that cannot vote against its theory keeps
+   the theory falsifiable only through that probe staying armed.
 
 ---
 
