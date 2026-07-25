@@ -45,6 +45,58 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-24 — [landed] OQ-60 consumer sweep came due: `unknown` crashed the trajectory step; Prolog stderr reporting was masking it
+**Files:** prolog/context_profile_mining.pl, python/run_pipeline.py, python/shared/schemas.py
+**Tier:** landed
+
+Pipeline went 47/48 → **48/48** (`python3 python/run_pipeline.py`, exit 0, 28.6s;
+`trajectory ok [3.1s]`, `outputs/context_profile_report.md` 7,125 bytes — previously
+written EMPTY because the step errored).
+
+**The crash (commit `ab748fc6`).** `context_profile_mining.pl:434` read
+`normalize_purity(P, 0.5) :- (P =:= -1.0 ; \+ number(P)), !.` Both disjuncts intend to
+map an absent purity to 0.5, but the guards are in the fatal order — `=:=` evaluates its
+args, so `P =:= -1.0` **throws** on the atom `unknown` before `\+ number(P)` is tried:
+`ERROR: =:=/2: Arithmetic: 'unknown/0' is not a function`, at
+`[trajectory] Computing 16290 pairwise distances`. Reordered (non-number guard first),
+split into two clauses so each OQ-60 token is named at its own site. This is the **OQ-60
+consumer sweep coming due, not a new defect**: `purity_scoring.pl:49-55` introduced
+`Score = unknown` with the comment "propagate `unknown` rather than feeding it to the
+weighted sum (which would throw)" and marked the path "inert until a producer emits
+`unknown`" — a producer has now landed (live corpus: `purity_class` = 153 scored / 35
+gate_fail / **11 no_data**), and this consumer one level down did exactly that throw.
+`normalize_purity/2` is the sole chokepoint (line 426 `PurDiff` is the only purity
+arithmetic in the trajectory path; swept `context_profile_mining.pl` +
+`context_profile_report.pl` for other `Pur*` arithmetic — none).
+
+**Why it was hard to see (commit `55c8b242`).** `run_prolog`'s failure path did
+`result.stderr[:300]`. SWI emits load-time warnings for hundreds of lines before the
+ERROR, so a head-slice is structurally guaranteed to be noise **on every failure across
+all 12 Prolog steps**. The real stderr here was 259,426 chars / 2,311 lines; the head-300
+showed two "Local definition ... overrides weak import" warnings and cut off mid-word, so
+the summary reported a warning and never mentioned the exception that ended the run.
+Added `salient_stderr()`: prefer ERROR lines, fall back to the **tail**, never the head
+(Build Discipline Pattern 6 — a channel that cannot tell payload from noise emits
+noise-shaped output either way).
+
+**Checked, NOT a defect.** `json_report.pl:1347/1349` (`write_one_neighbor`) filters
+neighbor purity with a bare `NP \= -1.0` — no `number/1` guard — where its twin
+`write_contamination_network:1282` uses `number(IP1), IP1 \= -1.0`. `unknown \= -1.0`
+succeeds, so the atom does pass that filter. It is **defended at the emit boundary**:
+`write_json_number/2:2549` has an explicit `unknown → null` clause plus a non-numeric
+catch-all. Verified on output, with the positive control that the site is genuinely
+reached: 26 neighbor-writes involve `no_data` constraints, and all 26 emitted `null`
+(neighbor purity values: 188 float / 28 null / **0 string**). The asymmetry is
+redundancy, not a bug — do not "fix" it expecting a behavior change.
+
+**Open (needs a ruling), not filed as an OQ yet:** `normalize_purity` maps `unknown` to
+**0.5** — a fabricated plausible value inside an HAC distance component (Pattern 6). The
+fix preserved the clause's evident pre-existing intent; excluding the purity component
+and re-weighting when either side is absent would change clustering output. Also unswept:
+~50 other `purity_score/2` call sites across ~15 modules. The loud shape (arithmetic)
+would crash and the pipeline is green, so none of the *reached* sites throw on this
+corpus — but that is "didn't find it," not "isn't there."
+
 ## 2026-07-24 — [landed] OQ-61 CLOSED: header purity/cascade three rulings (severe fraction + type×band tab + gate_fail/no_data split); "purity restates type composition" premise WITHDRAWN; residual → OQ-239/240/241
 **Files:** prolog/json_report.pl, prolog/network_dynamics.pl, python/enhanced_report.py, prolog/tests/test_purity_absence_class.pl, python/tests/test_oq61_network_render.py, ISSUES.md, python/shared/schemas.py
 **Tier:** landed
