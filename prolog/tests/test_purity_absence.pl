@@ -302,7 +302,7 @@ test(aggregation_polarity) :-
     signature_detection:aggregate_purity_tests(
         [pass(a), fail(scope_invariance, variant([x, y])), unknown(no_extraction_data)],
         V1),
-    V1 == contaminated([fail(scope_invariance, variant([x, y]))]),
+    V1 == purity_fail([fail(scope_invariance, variant([x, y]))]),   % OQ-62 rename
     signature_detection:aggregate_purity_tests(
         [pass(a), pass(b), unknown(no_extraction_data)],
         V2),

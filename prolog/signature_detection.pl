@@ -1224,14 +1224,23 @@ coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
                             it ever becomes reachable (the §9b.2 KILL tripwire).
      pure_coordination    — CI_Rope signature + all four tests pass
      pure_scaffold        — has sunset clause + all four tests pass
-     contaminated(Reasons) — one or more tests fail
+     purity_fail(Reasons) — one or more tests fail
      inconclusive         — insufficient data for reliable test
 
    Structural purity does not determine classification — it is
    a diagnostic meta-property that indicates how "clean" a
-   constraint's structure is. A contaminated constraint may still
-   be correctly classified as a Rope, but the contamination
-   signals future drift risk.
+   constraint's structure is. A purity_fail constraint may still
+   be correctly classified as a Rope, but the failure signals
+   future drift risk.
+
+   OQ-62: this verdict was `contaminated(Reasons)` until 2026-07-25. That
+   reused the word the canonical spec bander uses for a purity SCALAR in
+   [0.30,0.50) (logical_fingerprint:purity_zone/2) — a different quantity
+   entirely: this one is "at least one of four boolean structural tests
+   failed," at any scalar value. Renamed so the two cannot be conflated.
+   Not `excess(Reasons)`: only one of the four contributing tests is about
+   excess extraction (the others are factorization, scope-invariance and
+   coupling), so `excess` would name the token after a minority of its causes.
    ---------------------------------------------------------------- */
 
 %% structural_purity(+Constraint, -PurityClass)
@@ -1263,7 +1272,7 @@ structural_purity(C, PurityClass) :-
 %% aggregate_purity_tests(+Tests, -Verdict)
 %  R3 aggregation polarity (OQ-60):
 %    - A witnessed failure fires THROUGH unknown members (existential):
-%      contaminated(Failures) even when other tests are unknown.
+%      purity_fail(Failures) even when other tests are unknown.
 %    - A clean aggregate over a set with an unknown member ABSTAINS:
 %      inconclusive(no_data), the distinct abstention token — never a
 %      pure_* certificate at coverage < 1.0.
@@ -1271,7 +1280,7 @@ structural_purity(C, PurityClass) :-
 aggregate_purity_tests(Tests, Verdict) :-
     include(boltzmann_compliance:is_failure, Tests, Failures),
     (   Failures \== []
-    ->  Verdict = contaminated(Failures)
+    ->  Verdict = purity_fail(Failures)      % OQ-62: was contaminated(Failures)
     ;   include([T]>>(T = unknown(_)), Tests, Unknowns),
         (   Unknowns \== []
         ->  Verdict = inconclusive(no_data)
