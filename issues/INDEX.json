@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "578c5f85a01aa921279c5524f3d52eab1e063571",
+    "store_version": "fbf303bdc7a82d9eb249effcdded3f0730823ecd",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-25T02:25:40"
+    "generated_at": "2026-07-25T10:54:10"
   },
-  "issues_sha": "c21eca4bce2514ef35ffeea1f7b7d9cbf24ed0917fe26a2f4bdea38157e80d7c",
-  "n_entries": 252,
+  "issues_sha": "9447ca5e84a8a15b6e9cdf91522f01801af6db86ade796e5404df0455507a355",
+  "n_entries": 254,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 81,
+    "open": 83,
     "partial": 7
   },
   "active": [
@@ -1225,6 +1225,33 @@
       "mentioned_in": [
         "OQ-66",
         "OQ-70"
+      ]
+    },
+    {
+      "id": "OQ-253",
+      "status": "open",
+      "priority": 3,
+      "summary": "Seat-theorem revision: Q is upstream of Π (relocation edits + graded interrogative seat-cost)",
+      "deps": [
+        "blocked_on_human oq253-adopt-seat-theorem-q-revision"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-254"
+      ]
+    },
+    {
+      "id": "OQ-254",
+      "status": "open",
+      "priority": 4,
+      "summary": "Q-provenance: the topic decomposition is a Q-choice upstream of every ε — the OQ-205 discipline audits the answer, not the question",
+      "deps": [
+        "splits_from OQ-253"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-205",
+        "OQ-253"
       ]
     }
   ],

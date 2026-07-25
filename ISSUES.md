@@ -3571,6 +3571,131 @@ incidents above would have been caught at the amending commit.
 
 ---
 
+## OQ-253 — Seat-theorem revision: Q is upstream of Π (relocation edits + graded interrogative seat-cost)
+
+**Ω-type:** Ω_C (framework-content ruling — whether to adopt the revision is the operator's seat;
+the document is the law, and edit 3 changes a claim, not merely its scope) with an Ω_E falsifier
+attached (the kill condition below is constructive).
+
+**Status:** open
+**Priority:** 3
+**Origin:** analysis turn handed to the repo 2026-07-25 (operator-directed minting). The proposal
+was produced against `docs/seat-theorem-v1.md` v2.4 and `docs/deferential_realism_paper_v8.md`
+only — it is a hypothesis to adjudicate, not a witnessed finding.
+**Files:** `docs/seat-theorem-v1.md` (§1 items 3–4/7, §6.2 Corollary 2b, §7, §8).
+
+**Deps:** blocked_on_human oq253-adopt-seat-theorem-q-revision
+
+**The structural claim: Q is upstream of Π.** §8 says the framing Π partitions Φ into background
+and dials, and that Π is the deepest seat. But a partition is an answer to "what is σ here?" —
+and the interrogative that poses it is prior. Ask for the deceleration parameter and you
+background the frame; ask whether expansion is isotropic and the frame becomes the dial. Q does
+not *fix* Π — two analysts can share a question and frame differently — but it constrains the
+admissible ones. So the chain is Q → Π → σ → liveness, and §8 stopped one link short of its own
+root. This is a **relocation, not a new section**: §8's regress argument already absorbs any
+further level for free (each ascent is confirmed, not threatened, by holding), so the tempting
+"add a §9: the framing is interrogated" is the wrong edit.
+
+**The three edits proposed:**
+
+1. **§1 item 3** (`seat-theorem-v1.md:28`) — signature becomes V = 𝔙_{Q,Π}(σ, d₁…dₙ). The actual
+   defect: Q is already in the definitions but out of the formalism — item 4 (`:30`) indexes
+   liveness to "(relative to σ, Q)" and item 7 defines content as a property of the (Q, σ) pair,
+   while the function never took Q as an argument. (§8 already made the Π half of this move:
+   "the verdict-function was therefore always 𝔙_Π" (`:166`) — the revision completes it.)
+2. **§7** (`:152`) — the proof's declared seat is currently located as Π alone ("a specific
+   object, named in §8"). It is Q *and* Π: the derivation individuates parameters, and it does so
+   under one question ("is contentful neutrality possible?", §5). Two-line edit.
+3. **§6.2 Corollary 2b** (`:138`) — the load-bearing one. Strike "a question commits to nothing a
+   later confrontation could refute, while its answer commits to everything." Replace the
+   interrogative/thetic *type* exemption with a *graded* measure: **a question's seat-cost is
+   what it structurally cannot return** (its foreclosure-set — enumerable, not felt). Q5 cannot
+   return "wrong partition"; that is its price.
+
+**Stated cost (declared, not absorbed):** 2b no longer escapes the no-seat pose by kind, only by
+degree. The battery is cheaper than a thesis, not free. The practitioner owes disclosure of what
+the battery forecloses — more work, less clean, and the document's most elegant move goes.
+
+**What it buys:** the genealogical guard (the unnumbered balance question at `:140`; the source
+turn calls it "Q6" — the doc's battery is numbered Q1–Q5) is currently a virtue-requirement ("at
+least one question pointed where the seat would prefer not to look") — exhortative and
+unfalsifiable in exactly the way §6.2 convicts the hedger. Under the graded form it becomes
+checkable: **the battery must admit at least one answer that terminates the battery.** Same
+intent, now a gate — 2a's own standard (declaration is checkable because whether a seat is shown
+is a fact about the verdict) finally reaching the selector.
+
+**Evidence for the revision (self-applied):** the previously-open kill condition on the type
+exemption — whether "what happened?" is genuinely unseated — stops being load-bearing under the
+revision, because open interrogatives price *low* rather than *zero*. A repair that makes its own
+unresolved question non-structural is doing better than one that needs it settled.
+
+**Kill condition on the revision itself (pre-registered):** exhibit two questions with
+demonstrably different foreclosure-sets that yield identical seat-cost under the measure. That
+collapses the grading back to a type distinction, and 2b's original exemption was right after
+all. Note the sequencing: the seat-cost measure must be pinned (what counts as a foreclosure-set,
+how it is enumerated) *before* the kill condition is runnable — the measure definition is part of
+edit 3, not an afterthought.
+
+**Amendment-provenance class (per the doc's own rule, `:218`):** edits 1–2 are relocations of an
+already-confessed seat (declaration-class, no run-witness owed); edit 3 *corrects a claim* (the
+type exemption) — it carries the pre-registered kill condition above as its falsifier in place of
+a run-witness, since the corrected property is not engine-measurable.
+
+**What resolution changes:** if adopted, `seat-theorem-v1.md` bumps version with the three edits
+and the graded seat-cost measure; the genealogical-guard requirement in §6.2 becomes a checkable
+gate; OQ-254 inherits a ratified framing. If the kill condition fires, the type exemption is
+re-affirmed with a stronger warrant than it currently has.
+
+---
+
+## OQ-254 — Q-provenance: the topic decomposition is a Q-choice upstream of every ε — the OQ-205 discipline audits the answer, not the question
+
+**Ω-type:** Ω_C (spec — which Q-surfaces are declared and where they are carried is a seat choice)
+with an Ω_E recon/build tail (whether the decomposition step already records its Q-choice is a
+code fact, checkable now).
+
+**Status:** open
+**Priority:** 4
+**Origin:** [EDGE] extension in the same 2026-07-25 analysis turn that produced OQ-253.
+**Provenance caveat, preserved verbatim in force:** the claim was inferred *from the v8 document
+only* — the source turn did not read the decomposition code and explicitly declined to claim what
+it does. Recon precedes spec.
+**Files:** `agent/c-orchestrator.py:413` (`_step_decompose`, the UKE_SCOPE/primed-scope call),
+`agent/generate_kernel_corpus.py` (`_scope_user_prompt`, reused by the router), OQ-205's landed
+surfaces (`epsilon_provenance/5`, `python/epsilon_authorship_readout.py`).
+
+**Deps:** splits_from OQ-253
+
+**The claim.** OQ-205 (resolved 2026-07-03) built ε's declaration discipline: who authored each
+ε, from which reading, under which prompt/schema/model. But the reading set itself comes from
+UKE_SCOPE decomposing a topic — and that decomposition is a Q-choice upstream of every ε in the
+run (which axes get asked determines which readings exist to author ε at all). Under the OQ-253
+framing (Q → Π → σ): the ε discipline as scoped audits the *answer* and not the *question that
+admitted it*. The no-seat pose the framework must not strike about its own ε (OQ-205's closing
+line) recurses one level up to the battery that selected the readings.
+
+**Recon first (the code fact the source turn could not supply):** what does `_step_decompose`
+already record about the decomposition choice? Known partial substrate from the repo record: the
+primed scope prompt is pinned (kernel-first router, 2026-06-06), the manifest carries the axes,
+and per-story provenance carries model/prompt/schema commits (Critical Distinctions). The open
+question is whether the *question-level* choice — why these axes, what the §3-distinctness call
+foreclosed, which candidate axes were considered and dropped — is carried anywhere a read site
+can see, or exists only as the transient LLM output of step 2. If the manifest already carries
+it, this OQ reduces to wiring a read-surface; if not, it is a spec task in the OQ-205 mold
+(carry-the-provenance-bit, loud-null, generator-forward, no backfill).
+
+**Sequencing:** recon is workable now (it is a code read plus one manifest inspection). The spec,
+if owed, should wait on the OQ-253 ruling — the graded seat-cost measure, if adopted, is exactly
+the vocabulary for declaring what a decomposition foreclosed; specifying a Q-provenance surface
+before that ruling risks building against a frame the operator declines.
+
+**What resolution changes:** ε-dependent findings become auditable against the question that
+admitted their reading set, not only against their authoring reading; the OQ-205 discipline
+closes its upstream gap or records (in `design_gaps.md` if declined) that Q-provenance is a
+declared absence.
+
+---
+
 ## OQ-249 — (ε, theater) × type census: does a zero-extraction pure-ceremony cell exist?
 
 **Ω-type:** Ω_E (empirical — a corpus measurement).
