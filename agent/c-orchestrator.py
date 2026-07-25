@@ -501,11 +501,15 @@ class DRAuditOrchestrator:
         runs). Run-tagged runs write to outputs/kernel_manifests/<run_tag>/;
         flat runs to outputs/kernel_manifests/flat/.
         """
+        # OQ-254 join key: mint BEFORE the write attempt so generated stories carry the
+        # id even if persistence fails — the q_provenance readout then reports those
+        # stories run_id_authored_manifest_unreachable (loud) instead of 'none' (silent).
+        fam = manifest.get("family_id") or "manifest"
+        ts = time.strftime("%Y%m%d_%H%M%S")
+        manifest["_generation_run_id"] = f"{fam}_{ts}"  # == manifest filename stem
         try:
             mdir = self._manifests_dir or (REPO_ROOT / "outputs" / "kernel_manifests" / "flat")
             mdir.mkdir(parents=True, exist_ok=True)
-            fam = manifest.get("family_id") or "manifest"
-            ts = time.strftime("%Y%m%d_%H%M%S")
             path = mdir / f"{fam}_{ts}.manifest.json"
             path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False),
                             encoding="utf-8")
@@ -728,6 +732,13 @@ class DRAuditOrchestrator:
             kernel_id = entry.get("kernel_id") if isinstance(entry, dict) else None
             if kernel_id:
                 story_dict["_kernel_id"] = kernel_id
+
+            # OQ-254 join key (serial path): stamp the manifest identity into provenance
+            # so epsilon_provenance/5 arg 4 joins story -> SCOPE manifest. Post-validation
+            # injection of a schema-optional key; absent manifest id -> 'none' (loud-null).
+            if isinstance(story_dict.get("provenance"), dict):
+                story_dict["provenance"]["generation_run_id"] = (
+                    manifest.get("_generation_run_id") or "none")
 
             # Save to run-tagged or flat dirs
             json_path, pl_path = save_story_tagged(

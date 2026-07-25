@@ -94,7 +94,7 @@ def _git_commit_of(rel_path):
 
 
 def _provenance_stamp(model, sampling_params="unspecified", source_essay="unspecified",
-                      seeded_from="none", draw=1):
+                      seeded_from="none", draw=1, generation_run_id="none"):
     """Pipeline-authored top-level `provenance` block (schema-required since OQ-109
     Phase C, 2026-06-11). Mirrors cohort_zero_regen.stamps: the content LLM cannot know
     its own commits / model / sampling params and tends to copy the example's placeholder
@@ -114,6 +114,10 @@ def _provenance_stamp(model, sampling_params="unspecified", source_essay="unspec
         "sampling_params": sampling_params,
         "seeded_from": seeded_from,
         "draw": draw,
+        # OQ-254: SCOPE-manifest join key (= manifest filename stem). 'none' = the
+        # declared loud-null stratum (pre-wiring stories / paths with no manifest).
+        # Read by generate_constraint_pl into epsilon_provenance/5 arg 4.
+        "generation_run_id": generation_run_id,
     }
 MAX_CUSTOM_ID = 64  # Anthropic batch custom_id pattern: ^[a-zA-Z0-9_-]{1,64}$
 
@@ -291,6 +295,9 @@ def flatten_manifests(manifests):
         readings_by_id = {r.get("reading_id"): r for r in csr.get("readings", [])}
         family = m.get("family_id", "")
         domain = m.get("domain", "")
+        # OQ-254 join key: manifest identity (filename stem), minted at decompose time.
+        # 'none' = pre-2026-07-25 manifest with no id — the declared loud-null stratum.
+        run_id = m.get("_generation_run_id") or "none"
 
         for axis in m.get("generation_sequence", []):
             if isinstance(axis, str):
@@ -328,6 +335,7 @@ def flatten_manifests(manifests):
                 "sibling_reading_ids": reading.get("sibling_readings", []) if is_reading else [],
                 "expected_structural_delta": reading.get("expected_structural_delta", ""),
                 "summary": _axis_summary(axis, m),
+                "generation_run_id": run_id,
             })
 
         # --- Seed from the DECLARED reading set, not just generation_sequence ---
@@ -366,6 +374,7 @@ def flatten_manifests(manifests):
                     "sibling_reading_ids": r.get("sibling_readings", []),
                     "expected_structural_delta": delta,
                     "summary": commitment + (f"\n{delta}" if delta else ""),
+                    "generation_run_id": run_id,
                 })
 
         # --- Forced-flat control on every kernel (OQ-76, generate-both primary fix) ---
@@ -396,6 +405,7 @@ def flatten_manifests(manifests):
                     "sibling_reading_ids": [],
                     "expected_structural_delta": "",
                     "summary": substrate,
+                    "generation_run_id": run_id,
                 })
     return gen_seeds, recovery_count
 
@@ -712,7 +722,9 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         # Model is read from the API result (this writer is shared with the c-orchestrator
         # unified backend, which may use a different model than GEN_MODEL) — never hardcoded.
         result_model = getattr(result.result.message, "model", None) or GEN_MODEL
-        story["provenance"] = _provenance_stamp(result_model, sampling_params, provenance_source)
+        seed_run_id = (gen_seeds_by_id.get(cid) or {}).get("generation_run_id") or "none"
+        story["provenance"] = _provenance_stamp(result_model, sampling_params, provenance_source,
+                                                generation_run_id=seed_run_id)
         errors = validate_json(story)
 
         if errors:
@@ -728,7 +740,8 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
             # preserved-field set), which would re-introduce a spurious "provenance required"
             # error on top of the genuine one. Provenance is pipeline-authored — re-apply it
             # so only REAL post-repair errors (grid misalignment, anyOf, etc.) survive.
-            repaired["provenance"] = _provenance_stamp(result_model, sampling_params, provenance_source)
+            repaired["provenance"] = _provenance_stamp(result_model, sampling_params, provenance_source,
+                                                       generation_run_id=seed_run_id)
             retry_errors = validate_json(repaired)
 
             if not retry_errors:
@@ -951,6 +964,7 @@ def _flat_seeds_from_manifest(m):
             "_axis": axis,
             "_manifest": m,
             "downstream_of": flat_deps,
+            "generation_run_id": m.get("_generation_run_id") or "none",
         })
     return seeds
 
@@ -1514,6 +1528,7 @@ def run_decompose(args):
             scope_fail += 1
             continue
         m["_seed_id"] = kid
+        m["_generation_run_id"] = kid  # OQ-254 join key = sidecar filename stem
         csr = m.get("commitment_system_recognition", {}) or {}
         tag = "KERNEL" if csr.get("is_contested_kernel") else "collapsed"
         print(f"  {kid}: {tag} ({len(csr.get('readings', []))} readings)")

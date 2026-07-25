@@ -371,6 +371,10 @@
           "type": "integer",
           "minimum": 0,
           "description": "Replicate draw index for this seed (1-based; 0 = unseeded/hand-authored). Each draw is one sample from the generation distribution, never a re-measurement."
+        },
+        "generation_run_id": {
+          "type": "string",
+          "description": "SCOPE-manifest join key (OQ-254, 2026-07-25): the decomposition manifest's filename stem, minted at decompose time and pipeline-stamped (never model-claimed). Joins this story to the Q-choice that admitted it (axes selected/deferred, selection reasons, kernel verdict). 'none' = no manifest identity (pre-wiring stories, manifest-less generation paths) — the declared loud-null stratum, never backfilled. OPTIONAL, not required: pre-wiring stories stay valid."
         }
       }
     }
