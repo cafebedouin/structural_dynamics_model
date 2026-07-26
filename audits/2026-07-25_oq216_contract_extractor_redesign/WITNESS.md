@@ -37,6 +37,36 @@ contract never written as a carryable block). Fail-loud is the CORRECT verdict t
 R13 genuinely has nothing to thread — so 3/4 is the expected profile, not a miss:
 the redesign absorbs the recoverable drift shapes and still refuses the unrecoverable one.
 
+## Round 2 (same day): root mechanism + post-fix witness
+
+The assembled stage-2 prompt was SELF-CONTRADICTORY: `_run_stage_2`'s trailing
+instruction — the last thing the model reads — said "Output TWO sections"
+(Section 1 / Section 2), omitting SECTION 0, while stage2.md's system text mandated
+three. The drift is exact compliance with the tail. Fixed in `a5b499be` (tail names
+SECTION 0 first, Step 0 worked-silently).
+
+Post-fix draw set (same driver, same cached inputs, clause injected):
+
+| draw | tokens_out | block | verdict | first line |
+|---|---|---|---|---|
+| postfix_draw1 | 5,771 | 2,296ch | PASS | `# SECTION 0: INVARIANT CONTRACT` |
+| postfix_draw2 | 5,758 | 2,884ch | PASS | `# SECTION 0: INVARIANT CONTRACT` |
+| postfix_draw3 | 5,930 | 2,690ch | PASS | `# SECTION 0: INVARIANT CONTRACT` |
+
+3/3 pass and the drift SHAPE is absent (no Step-0 preamble at all); token spread
+tightened to 5,758–5,930 (pre-fix 6,010–9,304). n=3 — directional, not a rate.
+
+**Shape taxonomy:** Shape A = complete contract, drifted heading (prometheus
+originals; floating_city's misordering) — extractor recovers. Shape B = Step-0 notes
+visible, carryable contract never authored (ergodocity, quellcrist, draw2 — each
+missing substrate/inhabitation content entirely, so genuinely incomplete, not a third
+heading variant) — fail-loud is the only correct behavior.
+
+**floating_city downstream audit:** stage-9's INVARIANT FALSIFIER verdict is grounded
+in true contract content (the blob's head IS the contract; no constraint-table/omega
+symptoms in the adjudication); stage 10 never ran (ROUTE: STRATEGY exit). No witnessed
+threading corruption in the shipped story; dilution retroactively unmeasurable.
+
 ## Standing observations
 
 - Drift is Sonnet-5-endemic on floor-primary sources: across all prometheus draws ever

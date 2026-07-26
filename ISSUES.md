@@ -10640,17 +10640,40 @@ over-capture control, so this direction went unexercised. Redesign (extractor
 `_extract_invariant_contract_checked`): accept canonical + witnessed drift headings; bound at
 next same-or-higher heading; EOF-termination always fails (SECTION 0 is mandated first);
 negative assertion (no SECTION 1/2/OMEGA LOG in block); positive content assertion
-(invariant/falsifier/substrate/inhabitation, token-censused over all 13 known-good blocks —
-`break` deliberately excluded, it is the break_contract thread). Witnesses: fixture suite
-`python/tests/test_stage2_contract_extraction.py` 7/7; real-artifact probes (rotation_seven
-old==new byte-identical; floating_city 18,049→1,693ch bounded; prometheus 0→2,159ch extracts;
-quellcrist/ergodocity still fail loud); fresh-draw set 3/4 pass, the 1 fail being the
-no-block-at-all shape where fail-loud is correct. Evidence:
-`audits/2026-07-25_oq216_contract_extractor_redesign/`. Note for the remaining census: drift is
-Sonnet-5-endemic on floor-primary sources (~3/5 prometheus draws show a drift shape; the OQ-219
-clause amplifies but does not cause it — the founding ergodocity drift predates the clause), so
-prompt-side fixes are hygiene, not correctness; the extractor+content-guard is the load-bearing
-layer.
+(invariant/falsifier/substrate/inhabitation, token-censused over the 16 extractable known-good
+blocks — `break` deliberately excluded: spec-confirmed not a SECTION 0 component (stage2.md
+Output Format lists commitment+falsifier / substrate / inhabitation / [if present]
+missing-floor) and present in only 5/16 good blocks; it is the break_contract thread).
+Witnesses: fixture suite `python/tests/test_stage2_contract_extraction.py` 7/7; real-artifact
+probes (rotation_seven old==new byte-identical; floating_city 18,049→1,693ch bounded;
+prometheus 0→2,159ch extracts; quellcrist/ergodocity still fail loud); fresh-draw set 3/4
+pass, the 1 fail being the no-block shape where fail-loud is correct. Evidence:
+`audits/2026-07-25_oq216_contract_extractor_redesign/`.
+
+**Root mechanism found + fixed (2026-07-25, commit `a5b499be`): the assembled stage-2 prompt
+was self-contradictory.** The trailing instruction in `_run_stage_2` — the last thing the
+model reads — said "Output TWO sections" (Section 1 / Section 2), omitting SECTION 0 entirely,
+while the stage2.md system text mandated three. The witnessed drift is exact compliance with
+the tail; Sonnet-5 weighting the tail over the system text explains the model-swap onset
+(2026-07-12) and the OQ-219 clause's amplifier role (more trailing material). Fix: tail now
+names SECTION 0 first with its components, Step 0 worked-silently. Post-fix witness: 3/3
+prometheus draws pass AND open with `# SECTION 0: INVARIANT CONTRACT` as the first line (no
+Step-0 preamble); output-token spread tightened (5,758–5,930 vs 6,010–9,304 pre-fix). n=3 —
+directionally strong, not a rate measurement; pre-fix rate was 5/7 floor-primary draws
+drifted.
+
+**Drift shape taxonomy (2026-07-25):** Shape A = complete contract under a drifted heading
+(prometheus originals ×2; floating_city's misordered cousin) — recovered by the new extractor.
+Shape B = Step-0 recovery worked in visible notes but the carryable contract never authored
+(ergodocity, quellcrist, fresh draw2: each missing substrate/inhabitation components entirely,
+so not a third heading variant — content incomplete, not mislabeled) — correctly fails loud;
+re-draw is the only remedy. **floating_city downstream audit (closes the false-negative's
+impact question):** its stage-9 output's INVARIANT FALSIFIER adjudication ("HOLDS — founding
+violence never framed as correctable") is grounded in genuine contract content (the blob's
+head IS the true contract) with no table/omega-log symptoms; stage 10 never ran (ROUTE:
+STRATEGY exit). Verdict: no witnessed threading corruption in the shipped story; dilution
+effects retroactively unmeasurable. Residual, declared: the content guard checks component
+PRESENCE, not adequacy — a thin contract passes identically to a rich one.
 
 **What resolution changes:** no stage in the narrative pipeline can report success over an input
 its producer never finished writing.
