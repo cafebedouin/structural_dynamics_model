@@ -922,14 +922,36 @@ def _format_theme_inventory(inv: dict, header: str) -> str:
 # flag carried into stage 2's input.
 # ---------------------------------------------------------------------------
 
-_SECTION0_HEADER_RE = re.compile(
-    r'^\s{0,3}(?:#{1,6}\s+)?\*{0,2}SECTION 0\s*[:—–-]\s*INVARIANT CONTRACT.*$',
+# Accepts the canonical '## SECTION 0: INVARIANT CONTRACT' heading AND the
+# witnessed Sonnet-5 drift form '### Invariant Contract (carried forward
+# verbatim)' (prometheus_1785030750 ×2 draws, 2026-07-25). The header must be
+# a markdown heading or bold line — plain prose mentioning "invariant
+# contract" must not match.
+_CONTRACT_HEADER_RE = re.compile(
+    r'^\s{0,3}(?:(?P<hashes>#{1,6})\s+\*{0,2}|\*{2})'
+    r'(?:SECTION 0\s*[:—–-]\s*)?INVARIANT CONTRACT\b.*$',
     flags=re.MULTILINE | re.IGNORECASE,
 )
 _SECTION1_HEADER_RE = re.compile(
     r'^\s{0,3}(?:#{1,6}\s+)?\*{0,2}SECTION 1\b.*$',
     flags=re.MULTILINE | re.IGNORECASE,
 )
+_SECTION2_HEADER_RE = re.compile(
+    r'^\s{0,3}(?:#{1,6}\s+)?\*{0,2}SECTION 2\b.*$',
+    flags=re.MULTILINE | re.IGNORECASE,
+)
+# Content-level components of the SECTION 0 contract (stage2.md Output Format:
+# invariant commitment + falsifier, substrate, substrate inhabitation
+# sentence). Token census over all 13 known-good blocks + the drifted-but-
+# complete prometheus block (2026-07-25): every good block carries all four;
+# 'break' does NOT (the break address is the separate break_contract thread) —
+# do not add it here.
+_CONTRACT_COMPONENT_RES = [
+    ("invariant commitment", re.compile(r'invariant', re.IGNORECASE)),
+    ("falsifier", re.compile(r'falsifier', re.IGNORECASE)),
+    ("substrate", re.compile(r'substrate', re.IGNORECASE)),
+    ("inhabitation sentence", re.compile(r'inhabitation', re.IGNORECASE)),
+]
 _STAGE0_CONTRACT_RE = re.compile(
     r'<invariant_contract>.*?</invariant_contract>',
     flags=re.DOTALL | re.IGNORECASE,
@@ -969,14 +991,59 @@ def _extract_stage9_falsifier(stage_9_output: str) -> str:
     return m.group(0).strip() + "\n" if m else ""
 
 
-def _extract_invariant_contract(stage_2_output: str) -> str:
-    """Extract SECTION 0: INVARIANT CONTRACT from stage 2 output ('' if absent)."""
-    m = _SECTION0_HEADER_RE.search(stage_2_output)
+def _extract_invariant_contract_checked(stage_2_output: str) -> tuple[str, str]:
+    """Extract the stage-2 invariant contract block with bound + content checks.
+
+    Returns (block, "") on success, else (partial_or_empty, error_reason).
+
+    The old extractor checked header-string-at-position and INFERRED content
+    presence — a proxy that failed both directions (OQ-216 redesign,
+    2026-07-25): it blocked four drifted-but-complete outputs, and on
+    the_floating_city_xixi (SECTION 0 misplaced after SECTION 1's header) it
+    passed while over-capturing to EOF, shipping an 18,266-byte blob to
+    stages 9/10 as "the contract". This version checks the property:
+    - block bounded at the next heading of same-or-higher level (never at a
+      hard-coded following section name);
+    - EOF-termination is ALWAYS an error — SECTION 0 is mandated first
+      (stage2.md Output Format), so a block reaching EOF is over-capture;
+    - negative content assertion: no following-section headers / OMEGA LOG
+      inside the block;
+    - positive content assertion: the four mandated components present.
+    """
+    m = _CONTRACT_HEADER_RE.search(stage_2_output)
     if not m:
-        return ""
-    m2 = _SECTION1_HEADER_RE.search(stage_2_output, m.end())
-    end = m2.start() if m2 else len(stage_2_output)
-    return stage_2_output[m.start():end].strip() + "\n"
+        return "", (
+            "no contract heading found (neither canonical 'SECTION 0: "
+            "INVARIANT CONTRACT' nor a drifted 'Invariant Contract' heading)")
+    hashes = m.group("hashes")
+    if hashes:
+        # Bound at the next markdown heading of same-or-higher level.
+        boundary_re = re.compile(
+            r'^\s{0,3}#{1,%d}\s+\S' % len(hashes), flags=re.MULTILINE)
+    else:
+        # Bold-line header form: bound at the next SECTION N marker.
+        boundary_re = re.compile(
+            r'^\s{0,3}(?:#{1,6}\s+|\*{2})SECTION\s+\d',
+            flags=re.MULTILINE | re.IGNORECASE)
+    m2 = boundary_re.search(stage_2_output, m.end())
+    if not m2:
+        return "", (
+            "contract block terminates at EOF — SECTION 0 is mandated FIRST, "
+            "so an EOF-bounded block is always over-capture (witnessed: "
+            "the_floating_city_xixi 18,266-byte payload, 2026-07-13)")
+    block = stage_2_output[m.start():m2.start()].strip() + "\n"
+    if (_SECTION1_HEADER_RE.search(block) or _SECTION2_HEADER_RE.search(block)
+            or re.search(r'OMEGA LOG', block, flags=re.IGNORECASE)):
+        return "", (
+            "contract block contains following-section content (SECTION 1/2 "
+            "header or OMEGA LOG) — over-capture")
+    missing = [name for name, tok_re in _CONTRACT_COMPONENT_RES
+               if not tok_re.search(block)]
+    if missing:
+        return block, (
+            "contract block is missing mandated component(s): "
+            + ", ".join(missing))
+    return block, ""
 
 
 def _extract_stage0_contract(stage_0_output: str) -> str:
@@ -1776,16 +1843,20 @@ class UKEOrchestrator:
             self.skip_engine = True
             return
 
-        # gen_prompt, schema, and example are loaded for availability checks
-        # (if any is missing, engine is disabled). The actual prompt assembly
-        # delegates to story_generator_base.build_prompt() which loads its own copies.
-        # These loaded protocols are also the injection point if narrative-derived
-        # constraint stories ever need different prompts than analytical ones.
+        # Only "uke_scope" is consumed (as engine_protocols["uke_scope"] in the
+        # decompose step); actual constraint-story prompt assembly delegates to
+        # story_generator_base.build_prompt(), which loads its own example.
+        # NOTE (OQ-47, mirrors c-orchestrator.py:190-197): the former "gen_prompt"
+        # and "example" entries were dead availability-check wires. "example" pointed
+        # at json/verification_bottleneck.json (a nonexistent path — the canonical
+        # one-shot lives at agent/verification_bottleneck.json), which tripped
+        # skip_engine=True on every run and silently disabled constraint reports.
+        # Removed so the guard can't be re-broken, and so no example pointer is
+        # re-wired into a leak-sensitive file (do not re-add one without the
+        # assembled-payload band grep). "schema" is retained (file exists, harmless).
         protocol_files = {
             "uke_scope":  _REPO_ROOT / "prompts" / "uke_scope_v2_json.md",
-            "gen_prompt": _REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md",
             "schema":     _REPO_ROOT / "schemas" / "constraint_story_schema.json",
-            "example":    _REPO_ROOT / "json" / "verification_bottleneck.json",
         }
 
         for key, path in protocol_files.items():
@@ -2447,7 +2518,27 @@ class UKEOrchestrator:
 
         from agent.story_generator_base import (
             process_response, save_story, build_prompt, _SYSTEM_INSTRUCTION,
+            validate_json,
         )
+        # Provenance is pipeline-authored, not model-authored (build_prompt strips it
+        # from the schema/example and instructs the model to omit it). Every canonical
+        # generator stamps it before validate_json (generate_kernel_corpus._provenance_stamp,
+        # cohort_zero_regen.stamps); this path historically did NOT, so with the engine
+        # re-enabled every story failed "'provenance' is a required property" (OQ-109
+        # Phase C made it schema-required 2026-06-11, after this path was written).
+        from agent.generate_kernel_corpus import _provenance_stamp
+        _engine_model = self.models["stage_1"][1]
+
+        def _stamp_provenance(sd, errs):
+            """Stamp the pipeline-authored provenance block and re-validate."""
+            if sd is not None and "provenance" not in sd:
+                sd["provenance"] = _provenance_stamp(
+                    _engine_model,
+                    sampling_params="temperature=0.2,max_tokens=8192",
+                    source_essay="uke_narrative",
+                )
+                errs = validate_json(sd)
+            return sd, errs
 
         sequence = manifest.get("generation_sequence", [])
         axes_by_id = {a["claim_id"]: a for a in manifest.get("axes", [])}
@@ -2509,8 +2600,9 @@ class UKEOrchestrator:
                 self._progress("constraint_gen", f"Empty response for {claim_id}")
                 continue
 
-            # Process and validate
+            # Process and validate (stamp pipeline-authored provenance first)
             story_dict, errors = process_response(text)
+            story_dict, errors = _stamp_provenance(story_dict, errors)
 
             if story_dict is None or errors:
                 # Retry once with error feedback
@@ -2533,6 +2625,7 @@ class UKEOrchestrator:
                     total_tin += tin2
                     total_tout += tout2
                     story_dict, errors = process_response(text)
+                    story_dict, errors = _stamp_provenance(story_dict, errors)
                 except Exception as e:
                     self._progress("constraint_gen", f"Retry failed for {claim_id}: {e}")
                     continue
@@ -2745,11 +2838,21 @@ class UKEOrchestrator:
                 result.stage_outputs["invariant_contract"] = cached_contract
                 self._progress("cache", "Loaded invariant_contract from cache")
             elif "stage_2" in result.stage_outputs:
-                contract = _extract_invariant_contract(result.stage_outputs["stage_2"])
-                if contract:
+                contract, contract_err = _extract_invariant_contract_checked(
+                    result.stage_outputs["stage_2"])
+                if not contract_err:
                     result.stage_outputs["invariant_contract"] = contract
                     self._save_stage_output("invariant_contract", contract, result)
                     self._progress("cache", "Recomputed invariant_contract from cached stage_2")
+                else:
+                    # Pre-R13 run dirs legitimately lack the section; stay
+                    # warn-and-continue HERE (resume of an old run), but name
+                    # the reason so the dead threading is visible, not silent.
+                    self._progress(
+                        "cache",
+                        "WARNING: invariant_contract not recoverable from "
+                        f"cached stage_2 ({contract_err}) — R13 threading "
+                        "will run without it")
 
             cached_c0 = self._load_stage_output("invariant_contract_stage0")
             if cached_c0:
@@ -2864,22 +2967,24 @@ class UKEOrchestrator:
 
             # R13: SECTION 0 (INVARIANT CONTRACT) gets a downstream consumer
             # — extract and save it for stages 9 and 10.
-            contract = _extract_invariant_contract(step.data)
-            if contract:
+            #
+            # OQ-216 guard (founding site witnessed live 2026-07-12, run
+            # 112_ergodocity_kids_1783916200: Sonnet-5 stage 2 folded the
+            # invariant into SECTION 1 as "Step 0" and the run continued
+            # to completion with R13 threading dead — stage 9 could only
+            # report "contract not available"). Redesigned 2026-07-25 from
+            # header-proxy to content-level: the extractor accepts the
+            # witnessed drift heading, bounds the block, and asserts the
+            # mandated components — fail loud, never warn-and-continue.
+            contract, contract_err = _extract_invariant_contract_checked(
+                step.data)
+            if not contract_err:
                 result.stage_outputs["invariant_contract"] = contract
                 self._save_stage_output("invariant_contract", contract, result)
             else:
-                # OQ-216 guard (site witnessed live 2026-07-12, run
-                # 112_ergodocity_kids_1783916200: Sonnet-5 stage 2 folded the
-                # invariant into SECTION 1 as "Step 0" and the run continued
-                # to completion with R13 threading dead — stage 9 could only
-                # report "contract not available"). A full run's stage 2 MUST
-                # author the extractable SECTION 0 block; fail loud, never
-                # warn-and-continue.
-                err = ("stage_2 output has no extractable 'SECTION 0: "
-                       "INVARIANT CONTRACT' block — R13 threading would run "
-                       "UNVERIFIED downstream. The section is mandatory in "
-                       "stage2.md; re-run stage 2. See OQ-216.")
+                err = ("stage_2 invariant contract failed extraction/content "
+                       f"check: {contract_err}. R13 threading would run "
+                       "UNVERIFIED downstream; re-run stage 2. See OQ-216.")
                 self._progress("stage_2", "ERROR: " + err)
                 result.steps.append(StepResult(
                     step="stage_2_section0_guard", status="error", error=err))
