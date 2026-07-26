@@ -942,10 +942,11 @@ _SECTION2_HEADER_RE = re.compile(
 )
 # Content-level components of the SECTION 0 contract (stage2.md Output Format:
 # invariant commitment + falsifier, substrate, substrate inhabitation
-# sentence). Token census over all 13 known-good blocks + the drifted-but-
-# complete prometheus block (2026-07-25): every good block carries all four;
-# 'break' does NOT (the break address is the separate break_contract thread) —
-# do not add it here.
+# sentence). Token census (2026-07-25) over the extractable known-good blocks
+# (16 incl. the drifted-but-complete prometheus block): every good block
+# carries all four. 'break' is NOT mandated by the spec and appears in only
+# 5/16 good blocks (the break address is the separate break_contract thread)
+# — do not add it here.
 _CONTRACT_COMPONENT_RES = [
     ("invariant commitment", re.compile(r'invariant', re.IGNORECASE)),
     ("falsifier", re.compile(r'falsifier', re.IGNORECASE)),
@@ -3667,12 +3668,24 @@ class UKEOrchestrator:
                 logic_ref,
                 "\n\n",
             ])
+        # This trailing instruction is the LAST thing the model reads and
+        # previously said "Output TWO sections" (Section 1 / Section 2),
+        # contradicting stage2.md's three-section Output Format — the
+        # assembled prompt mandated SECTION 0 in the system text and then
+        # omitted it at the tail. The witnessed Sonnet-5 drift (contract
+        # folded into SECTION 1 or never authored; OQ-216, 5/7 floor-primary
+        # draws pre-fix) is exact compliance with this tail. Keep SECTION 0
+        # named FIRST here.
         prompt_parts.append(
             "Follow the naturalization protocol in your system instructions. "
             "Create a setting where these exact constraints naturally occur. "
-            "Output TWO sections:\n"
-            "Section 1: CONTEXT DESCRIPTION (clean, no Omega markers, no framework terms)\n"
-            "Section 2: OMEGA LOG (tracking & resolution record)\n\n"
+            "Output THREE sections, in this exact order:\n"
+            "SECTION 0: INVARIANT CONTRACT — the FIRST section of your output, "
+            "under that exact heading. Step 0 is worked silently; only the "
+            "finished contract (commitment + falsifier, substrate, substrate "
+            "inhabitation sentence) is printed here.\n"
+            "SECTION 1: CONTEXT DESCRIPTION (clean, no Omega markers, no framework terms)\n"
+            "SECTION 2: OMEGA LOG (tracking & resolution record)\n\n"
             "DISPLACEMENT REQUIREMENT: The setting must differ from any likely "
             "source material in at least TWO of the following: occupation/profession, "
             "century/era, culture/region, governing institution. If the constraint "
