@@ -10626,6 +10626,32 @@ caught by the existing guard, cap raised, commit `25b27343`). Remaining candidat
 fail-loud StepResult error, two-sided witness). Per Build Discipline, the guard added is itself a
 claim — each needs its positive control.
 
+**CORRECTION + redesign (2026-07-25, commit `4878df78`):** the 2026-07-13 stage-2 guard checked
+header-string-at-position — a proxy for the property (stages 9/10 receive the contract) that
+failed BOTH directions in production. False-positive direction: it blocked four
+drifted-but-complete Sonnet-5 outputs (prometheus ×2 on 2026-07-25, quellcrist, the ergodocity
+founding site) whose contract content was fully present under a drifted heading. False-negative
+direction, **worse because silent**: on `the_floating_city_xixi_1784000706` (SECTION 0 misplaced
+after SECTION 1's header) the guard passed while the extractor's end-anchor found no following
+SECTION 1 and captured to EOF — stages 9/10 consumed an 18,266-byte blob as "the contract"
+(run-dir `invariant_contract_output.md` is the witness; that run's story shipped). The
+2026-07-13 two-sided witness covered fires-on-drift and passes-on-clean but had no
+over-capture control, so this direction went unexercised. Redesign (extractor
+`_extract_invariant_contract_checked`): accept canonical + witnessed drift headings; bound at
+next same-or-higher heading; EOF-termination always fails (SECTION 0 is mandated first);
+negative assertion (no SECTION 1/2/OMEGA LOG in block); positive content assertion
+(invariant/falsifier/substrate/inhabitation, token-censused over all 13 known-good blocks —
+`break` deliberately excluded, it is the break_contract thread). Witnesses: fixture suite
+`python/tests/test_stage2_contract_extraction.py` 7/7; real-artifact probes (rotation_seven
+old==new byte-identical; floating_city 18,049→1,693ch bounded; prometheus 0→2,159ch extracts;
+quellcrist/ergodocity still fail loud); fresh-draw set 3/4 pass, the 1 fail being the
+no-block-at-all shape where fail-loud is correct. Evidence:
+`audits/2026-07-25_oq216_contract_extractor_redesign/`. Note for the remaining census: drift is
+Sonnet-5-endemic on floor-primary sources (~3/5 prometheus draws show a drift shape; the OQ-219
+clause amplifies but does not cause it — the founding ergodocity drift predates the clause), so
+prompt-side fixes are hygiene, not correctness; the extractor+content-guard is the load-bearing
+layer.
+
 **What resolution changes:** no stage in the narrative pipeline can report success over an input
 its producer never finished writing.
 

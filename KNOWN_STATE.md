@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-25 — [landed] OQ-216 stage-2 contract guard redesigned: header-proxy → content-level; floating_city false-negative corrected
+
+**Files:** agent/uke_narrative_orchestrator.py, python/tests/test_stage2_contract_extraction.py, ISSUES.md
+**Tier:** landed
+
+Commit `4878df78`; evidence `audits/2026-07-25_oq216_contract_extractor_redesign/`; full
+correction block on ISSUES OQ-216. The 2026-07-13 guard checked header-string-at-position — a
+proxy that failed both directions: blocked four drifted-but-complete Sonnet-5 stage-2 outputs
+(prometheus ×2, quellcrist, ergodocity), and on `the_floating_city_xixi_1784000706` passed while
+over-capturing to EOF — stages 9/10 consumed an 18,266-byte blob as "the contract" and the story
+shipped (run-dir `invariant_contract_output.md` is the witness). Redesign
+(`_extract_invariant_contract_checked`): canonical + drifted headings accepted; bound at next
+same-or-higher heading; EOF-termination always fails (SECTION 0 mandated first); negative
+(no SECTION 1/2/OMEGA LOG) + positive (invariant/falsifier/substrate/inhabitation,
+token-censused over 13 good blocks; `break` deliberately excluded) content assertions.
+Witnesses: 7/7 fixtures; rotation_seven old==new byte-identical; floating_city 18,049→1,693ch;
+prometheus 0→2,159ch; fresh-draw set 3/4 pass (the fail is the no-block shape where fail-loud is
+correct). Standing: drift is Sonnet-5-endemic on floor-primary sources (3/5 prometheus draws);
+OQ-219 clause amplifies, does not cause (ergodocity predates it) — extractor+content-guard is
+the load-bearing layer, prompt fixes are hygiene.
+
 ## 2026-07-25 — [landed] OQ-254 RESOLVED: Q-provenance wired (join key, self-stamp, tracked manifests, standing readout); headline corrected on close
 
 **Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py, python/generate_constraint_pl.py, schemas/constraint_story_schema.json, python/run_pipeline.py, python/q_provenance_readout.py, agent/decompose_manifests/, ISSUES.md
