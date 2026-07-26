@@ -1469,3 +1469,45 @@ actually reads χ. Until then the corner stays declared-absent so that an empty
 `ontological_fraud_check` result is never mistaken for "no constraint is terminal." Related: OQ-67
 (resolved), `drl_core.pl:389-398` (the unbounded snare cell), GAP-20 (the sibling
 retire-a-duplicate-fork entry).
+
+## GAP-30 — No externally-grounded ε: ε is author-assigned by construction, and the design declines the "real corpus, external ε" pipeline (operator ruling, 2026-07-25)
+
+**Declared:** 2026-07-25 (operator ruling, relayed in-session; question raised by an
+independent no-context review of `docs/deferential_realism_paper_v8.md` the same day).
+
+**The absent capability:** an ε-grounding pipeline against real documents — ε (and by
+extension every downstream measurement: the six-type classification, H¹ structure, drift
+terminals) sourced from externally-measured properties of real legal/doctrinal/institutional
+text rather than assigned by the authoring model during story generation. The reviewer's
+framing: until ε is externally sourced, the apparatus validates internal consistency of a
+formal model over a synthetic corpus, and the loaded vocabulary (extraction, coordination,
+snare) is earned only at the level of "a formal system with these properties exists," not
+"this tells us something about actual labor law." The v8 §9.2 ε confession and §9.4
+citation prohibitions are the existing fence around exactly this gap.
+
+**The ruling and its grounds (operator, 2026-07-25):** ruled AGAINST pursuing, on two
+grounds — (a) no known method: there is no procedure on the table that takes a real
+document and returns an ε with better provenance than an author's judgment; (b) no
+established advantage: it is not clear why a human's (or any external assigner's) ε would
+be epistemically better if you could get one. Ground (b) has a seat-theorem shape worth
+recording: under `docs/seat-theorem-v1.md` there is no seat-free ε — "external grounding"
+relocates the assigning seat (to a rater, a rubric, a market), it does not remove it; the
+honest form of the current design is that the authoring seat is *declared* (model
+provenance is recorded per story), which is the only status the law permits any ε to have.
+
+**Standing falsifier (attached per the ruling; both conjuncts required to fire):** the
+ruling reopens if someone exhibits (i) a CONCRETE, runnable grounding procedure — named
+document class in, ε value out, with the assigning seat and rubric declared — not a
+proposal or a vocabulary ("crowdsource it," "use a rater panel" unspecified do not fire);
+AND (ii) evidence that the resulting ε carries epistemic value the author-assigned ε lacks
+— e.g. inter-rater convergence on held-out documents, or predictive validity against an
+out-of-corpus outcome the author-assigned ε fails to predict. Difference alone does not
+fire it: an external ε that merely *disagrees* with the authored ε is two seats
+disagreeing, which the framework already prices. A fired falsifier routes to a new OQ; the
+gap is then a build question, not a ruling question.
+
+**Until then:** the fence holds as designed — synthetic-corpus findings are cited per the
+v8 §9.4 prohibitions, model provenance stays first-class, and a fresh instance proposing
+"ground ε in real documents" should be pointed here rather than treated as surfacing a
+novel gap. Related: v8 §9.2/§9.4, `docs/seat-theorem-v1.md` §2 (P2 defense) and §6.2 (the
+real-but-local warrant shape this ruling shares).
