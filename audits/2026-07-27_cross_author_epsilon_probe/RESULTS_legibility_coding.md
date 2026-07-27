@@ -48,3 +48,14 @@
 - Fragility: n=60 decile items, one coder per item, p = 0.023 — a couple of coding flips
   cross 0.05. The coders are themselves LLMs coding a structural property; the reader-class
   residue relocates there (declared, not closed).
+
+## Post-audit correction of mechanism status (same day → OQ-258)
+
+The channel SORT stands (channel beats topic heat), but its MECHANISM is degenerate between
+reader-position variance and **ε-referent ambiguity in the generation contract** — the two
+predict the same p on the same items, and the referent is hardest to fix exactly where no
+burden channel is stateable (the `none_apparent` 8:1 asymmetry is what under-specification
+predicts most directly). Recon confirmed the contract never fixes the referent (prompt: one
+table line; schema: bare number). Witnessed instance + pre-specified discriminator
+(fix referent → re-author decile items → remeasure spread): **ISSUES.md OQ-258**. Do not cite
+this audit as evidence for the reader-profile mechanism until OQ-258 discriminates.

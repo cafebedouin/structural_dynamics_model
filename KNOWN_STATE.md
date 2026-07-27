@@ -62,7 +62,10 @@ referent-weak items (`none_apparent` 8 vs 1). Instrument note: per-story ε on t
 referent-weak constraints is low-reliability across authors — treat cross-leg ε agreement as
 channel-conditional. Establishes variance, NOT directional bias (needs a non-LLM reference
 leg; operator ruled 2026-07-27 no human ε leg — reader-profile plan steps 2–3 dead unless
-revived). Full method, caveats, per-item codes: the audit dir.
+revived). MECHANISM is degenerate (reader-position vs ε-referent ambiguity in the generation
+contract) — see **OQ-258** (witnessed contract defect + pre-specified discriminator); do not
+cite the channel sort as reader-profile evidence until it discriminates. Full method,
+caveats, per-item codes: the audit dir.
 
 ---
 
