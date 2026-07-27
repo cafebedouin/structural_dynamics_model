@@ -12358,7 +12358,66 @@ of per-session manual audit.
 
 ---
 
-*Last updated: 2026-07-25. Add new items with sequential OQ-NN labels. Mark
+## OQ-258 — ε's referent is unfixed in the generation contract: reading-endorsed arrangement vs situation contested (witnessed 4-leg divergence; confounds the channel-legibility result)
+
+**Ω-type:** Ω_C (definitional under-specification in the generation contract — which referent
+ε names for a kernel-reading story is a design choice; the engine cannot infer it, only the
+contract can fix it. WHICH referent is the operator's seat; the discriminator below runs under
+any fixed choice.)
+
+**Status:** open
+**Priority:** 2
+**Origin:** 2026-07-27 cross-author ε probe (`audits/2026-07-27_cross_author_epsilon_probe/`);
+mechanism hypothesis from the Claude-web review of that audit; contract surfaces verified by
+recon this session.
+**Files:** `prompts/constraint_story_generation_prompt_json.md`,
+`prompts/constraint_story_generation_prompt.md`, `schemas/constraint_story_schema.json`
+
+**Deps:** splits_from OQ-26
+
+**The defect (witnessed).** The contract's entire definition of ε is one table line — "How
+much the constraint extracts from those it governs"
+(`constraint_story_generation_prompt_json.md:197`) — and the schema authors NO description
+(`base_properties.extractiveness` is a bare `{"type": "number", 0–1}`). For a kernel-READING
+story, "the constraint" is ambiguous between (a) the arrangement the reading ENDORSES and
+(b) the situation/arrangement the reading CONTESTS. Witness:
+`animal_status__abolitionist_reading` — haiku authored ε=0.00 with in-file justification
+"if animals are rights-holders, they cannot be rightfully extracted from at any rate"
+(referent a); flash 0.95 / kimi 0.88 / sonnet 0.91 (referent b). Same seed, same reading id,
+maximal spread in the 957-reading shared set. The ε-Invariance section
+(`prompt_json.md:71–75`) fixes observer-invariance and label-disambiguation but never this
+referent; OQ-26's resolution ("ε is a property of a reading, not a topic") covers
+cross-reading variation, not within-reading referent choice — hence splits_from.
+
+**Why it matters beyond one item.** It is the standing rival mechanism for the audit's
+headline result (4-author ε spread sorts by channel legibility, Fisher p=0.023): referent
+ambiguity sorts by channel exactly as reader-position would, because the referent is hardest
+to fix where no burden channel is stateable. The audit's largest (post hoc) asymmetry —
+referent-weak `none_apparent` items 8:1 into the top-spread decile, highest stratum spread
+(0.49 vs 0.17 statutory) — is what under-specification predicts most directly. Both
+mechanisms predict the same result on the same items; the legibility finding is DEGENERATE
+between them until discriminated.
+
+**Discriminator (pre-specified, cheap).** (1) Fix the referent explicitly in the contract —
+one paragraph; either ruling works for the test. (2) Re-author ε on the same tacit +
+referent-weak decile items (`testsets/` is the evolving-schema test bed; schema/prompt
+changes are encouraged there pre-rebuild). (3) Remeasure cross-author spread on those items.
+Spread collapses toward the statutory band (~0.17) ⇒ referent ambiguity owned the finding;
+stays wide ⇒ reader-position variance survives its first real test. Per the model-swap rule,
+re-authoring is generation work — serialize behind any running orchestrator and fingerprint
+corpus legs around the comparison.
+
+**What resolution changes.** (1) The rebuild's generation contract carries a fixed ε
+referent (and possibly a second authored field for the un-chosen quantity — operator ruling).
+(2) Settles whether the channel-conditional reliability note (KNOWN_STATE 2026-07-27) is a
+durable framework caveat — observer-axis quantities (H¹, type, orbit) are deterministic
+transforms of ε, so channel-conditional ε agreement makes downstream verdicts
+channel-conditional on tacit/referent-weak constraints — or an artifact a one-paragraph
+contract fix removes. A v8-paper caveat is premature until this discriminates.
+
+---
+
+*Last updated: 2026-07-27. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
