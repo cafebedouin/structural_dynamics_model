@@ -24,8 +24,13 @@ with pure calibration difference. This coding tests whether the spread SORTS by 
   author-free, no ε, no severity prose; coverage 957/957). No leg's authored file is shown
   to coders.
 - Coders: 7 parallel subagents, each coding a shuffled batch of 9–10 items. Blind: coders see
-  only id + seed description + domain + structural note; they are not told about spread
-  groups, the thesis, its direction, or ε at all.
+  only id + seed description + domain; they are not told about spread groups, the thesis,
+  its direction, or ε at all.
+  **Amendment (pre-coding, same day):** the payload originally included the seed's
+  `expected_structural_delta`; a pre-launch check found it carries ε-language on some items
+  (e.g. "Low extractiveness (rope)" on the jati control) — a direct leak of the grouped
+  quantity. Dropped from the payload before any coder ran. Amended prior to coding; the
+  batches file retains the field for the record, the prompts omit it.
 - Codes per item: `channel` ∈ {text_legible, tacit, mixed, none_apparent};
   `statable_party` ∈ {yes, no, unclear, none}; `hot_topic` ∈ {yes, no} (the rival sort
   Claude-web named: "topic heat"); one-line note.
