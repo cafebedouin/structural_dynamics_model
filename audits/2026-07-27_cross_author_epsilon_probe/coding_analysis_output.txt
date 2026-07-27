@@ -1,0 +1,99 @@
+coverage: 68/68 coded; missing: []
+
+== CONTROL GATE (need >=6/8 exact) ==
+  PASS gdpr_article_3_scope__market_access_reading: expected text_legible, got text_legible
+  PASS takings_clause_boundary__categorical_takings_reading: expected text_legible, got text_legible
+  PASS npt_treaty_1970__withdrawal_sovereignty_reading: expected text_legible, got text_legible
+  PASS licensing_statute_mandate__public_safety_coordination: expected text_legible, got text_legible
+  PASS jati_practice_norm__localized_practice_reading: expected tacit, got tacit
+  MISS feud_obligation_kernel__christianized_pacification_reading: expected tacit, got mixed
+  PASS shinbutsu_coexistence_commitment__domain_partition_reading: expected tacit, got tacit
+  PASS competence_retention_exercise__near_miss_as_bridge: expected tacit, got tacit
+controls: 7/8 -> gate PASS
+
+== H1: channel x decile (2x2 excludes mixed/none_apparent) ==
+  top30: tacit=10 text_legible=6 mixed/none=14
+  bot30: tacit=5 text_legible=16 mixed/none=9
+  Fisher two-sided p = 0.0233  (H1 direction predicted: top more tacit)
+  full channel counts:
+    top30: {'tacit': 10, 'mixed': 6, 'none_apparent': 8, 'text_legible': 6}
+    bot30: {'text_legible': 16, 'mixed': 8, 'none_apparent': 1, 'tacit': 5}
+
+== statable_party=no as tacit-proxy ==
+  top30: no=5 yes=10 other=15
+  bot30: no=4 yes=18 other=8
+
+== R1: hot_topic x decile ==
+  top30: hot=7 not=23
+  bot30: hot=12 not=18
+  Fisher two-sided p = 0.2668
+
+== per-item join (for the record) ==
+  top30   tacit         sp=no      hot=no  competence_retention_exercise__simulation_as_sufficient
+  control tacit         sp=yes     hot=yes jati_practice_norm__localized_practice_reading
+  top30   mixed         sp=yes     hot=no  hebrew_continuity__liturgical_preservation
+  top30   mixed         sp=no      hot=no  nuclear_impossibility_kernel__rational_dropout_reading
+  top30   tacit         sp=yes     hot=no  honor_violence_legitimacy__contraction_reading
+  top30   tacit         sp=no      hot=yes animal_status__abolitionist_reading
+  bot30   text_legible  sp=yes     hot=no  common_article_3_scope__icrc_customary_reading
+  top30   tacit         sp=unclear hot=no  legitimacy_of_practice_standardization__endogenous_displacement_reading
+  bot30   mixed         sp=yes     hot=yes manifesto_revolutionary_method__council_communist_reading
+  top30   none_apparent sp=none    hot=no  press_reformation_causation__technological_determinism
+  bot30   mixed         sp=unclear hot=yes ai_governance_legitimacy__technocratic_optimization_reading
+  top30   none_apparent sp=none    hot=no  dignity_kernel__imago_dei_reading
+  bot30   text_legible  sp=yes     hot=yes westphalian_sovereignty__conditional_sovereignty
+  top30   text_legible  sp=yes     hot=no  magna_carta_1215__universal_rights_reading
+  control text_legible  sp=yes     hot=no  gdpr_article_3_scope__market_access_reading
+  top30   none_apparent sp=none    hot=no  digital_money_emergence_boundary__infrastructure_reading
+  top30   mixed         sp=yes     hot=yes woman_category__intersex_accommodation_reading
+  bot30   text_legible  sp=yes     hot=no  sacrifice_commandment__study_as_performance
+  bot30   mixed         sp=yes     hot=no  price_formation_kernel__naturalist_reading
+  bot30   mixed         sp=yes     hot=yes vedic_dharmic_corpus__bhakti_devotional_reading
+  top30   text_legible  sp=yes     hot=yes state_killing_authority__retributive_desert
+  bot30   text_legible  sp=yes     hot=no  npt_article_iv_vi_pairing__nonproliferation_primary
+  top30   none_apparent sp=none    hot=no  quantum_formalism__many_worlds_reading
+  bot30   mixed         sp=unclear hot=yes dignified_death__relational_autonomy
+  top30   tacit         sp=no      hot=no  dueling_disappearance_mechanism__contraction_reading
+  bot30   none_apparent sp=none    hot=no  sacrifice_obligation_continuity__archival_preservation
+  control mixed         sp=no      hot=no  feud_obligation_kernel__christianized_pacification_reading
+  top30   tacit         sp=no      hot=no  aneyoshi_stone_commitment__commemorative_husk_reading
+  control text_legible  sp=yes     hot=no  takings_clause_boundary__categorical_takings_reading
+  bot30   text_legible  sp=unclear hot=yes fisa_702_statutory_text__incidental_collection_reading
+  top30   text_legible  sp=yes     hot=no  ost_article_ii_non_appropriation__commons_conservation
+  top30   mixed         sp=yes     hot=yes quran_ontological_status__uncreated_reading
+  bot30   tacit         sp=no      hot=no  animal_status__welfare_reading
+  bot30   mixed         sp=unclear hot=no  monetary_anchor_principle__triffin_inevitability_reading
+  bot30   text_legible  sp=yes     hot=yes fisa_702_statutory_text__foreign_target_strict_reading
+  control text_legible  sp=yes     hot=no  licensing_statute_mandate__public_safety_coordination
+  bot30   tacit         sp=no      hot=no  market_as_natural_default__beneficiary_maintained_reading
+  top30   mixed         sp=unclear hot=no  transition_causality__overdetermined_collapse_reading
+  bot30   text_legible  sp=yes     hot=no  wto_dsb_authority__judicial_activism_reading
+  top30   none_apparent sp=none    hot=no  deferential_realism_ontology__immutable_diagnostic_reading
+  top30   tacit         sp=unclear hot=no  total_war_possibility_space__space_contraction_reading
+  bot30   text_legible  sp=yes     hot=yes manifesto_revolutionary_method__democratic_gradualism_reading
+  bot30   text_legible  sp=yes     hot=no  constitutional_authority_boundary__coordinate_construction_reading
+  bot30   text_legible  sp=yes     hot=no  temple_sacrifice_obligation__messianic_suspension
+  top30   none_apparent sp=none    hot=yes genesis_creation_narrative__allegorical_ancient_near_east
+  bot30   text_legible  sp=yes     hot=no  constitutional_authority_boundary__parliamentary_primacy_reading
+  bot30   text_legible  sp=yes     hot=yes equal_protection_commitment__diversity_reading
+  top30   none_apparent sp=none    hot=yes genesis_creation_cosmology__literary_framework
+  top30   tacit         sp=unclear hot=no  competence_occupation__real_incident_necessity
+  top30   tacit         sp=unclear hot=no  hebrew_linguistic_life__liturgical_preservation_reading
+  bot30   text_legible  sp=yes     hot=no  monopoly_rulebook__tournament_orthodoxy_reading
+  bot30   mixed         sp=yes     hot=yes vedic_dharmic_corpus__reformist_egalitarian_reading
+  control text_legible  sp=yes     hot=no  npt_treaty_1970__withdrawal_sovereignty_reading
+  control tacit         sp=none    hot=no  shinbutsu_coexistence_commitment__domain_partition_reading
+  bot30   text_legible  sp=none    hot=no  temple_sacrifice_commitment__study_as_exercise
+  top30   tacit         sp=unclear hot=no  total_war_possibility_space__nuclear_taboo_reading
+  bot30   tacit         sp=no      hot=no  market_as_natural_default__hybrid_amnesia_reading
+  bot30   text_legible  sp=yes     hot=yes fisa_702_statutory_text__constitutional_floor_reading
+  bot30   tacit         sp=none    hot=no  simultaneous_veneration__pragmatic_incoherence_reading
+  bot30   text_legible  sp=yes     hot=no  nicene_creed_authority__strict_orthodox_reading
+  top30   none_apparent sp=none    hot=no  quantum_formalism__copenhagen_reading
+  top30   mixed         sp=unclear hot=no  honor_settlement_legitimacy__composite_reading
+  bot30   mixed         sp=unclear hot=yes ai_governance_legitimacy__market_libertarian_reading
+  top30   text_legible  sp=yes     hot=no  beta_designation_doctrine__severity_carve_out_reading
+  bot30   tacit         sp=no      hot=no  qwerty_persistence_mechanism__naturalization_reading
+  control tacit         sp=no      hot=no  competence_retention_exercise__near_miss_as_bridge
+  top30   text_legible  sp=yes     hot=yes vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading
+  top30   text_legible  sp=yes     hot=no  rogers_commission_findings__engineering_absolute_threshold

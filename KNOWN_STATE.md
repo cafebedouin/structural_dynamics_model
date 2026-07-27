@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-27 — [landed] Cross-author ε probe: 4-leg divergence sorts by channel legibility, not topic heat; twins never ε-harmonized; haiku exact-0.00 is authored
+
+**Files:** audits/2026-07-27_cross_author_epsilon_probe/, prolog/testsets_haiku/, prolog/testsets_flash/, prolog/testsets_kimi/, prolog/testsets_sonnet/
+**Tier:** landed
+
+Commits `90de6e91` (probe) / `bcba5d4d`+`be76062c` (pre-registration, committed BEFORE coding).
+Part 1: over the 957 readings shared by all four twin legs, ε was never harmonized at
+reconciliation (haiku~flash 3.9% identical, mean |Δε| 0.105); author-level means differ
+systematically (kimi 0.589 > haiku 0.565 > flash 0.508 > sonnet 0.490); only 1.0% of readings
+carry identical ε 4-ways. Exact-0.00 ε is an authored value, not a null (haiku 14/960 with
+in-file justification; sonnet 0). Part 2 (blind coding, 7 subagents, seed-pool substrate,
+controls 7/8): top-vs-bottom spread deciles sort by channel legibility (Fisher p=0.023,
+predicted direction), NOT topic heat (p=0.27, reversed); biggest post hoc asymmetry is
+referent-weak items (`none_apparent` 8 vs 1). Instrument note: per-story ε on tacit or
+referent-weak constraints is low-reliability across authors — treat cross-leg ε agreement as
+channel-conditional. Establishes variance, NOT directional bias (needs a non-LLM reference
+leg; operator ruled 2026-07-27 no human ε leg — reader-profile plan steps 2–3 dead unless
+revived). Full method, caveats, per-item codes: the audit dir.
+
+---
+
 ## 2026-07-25 — [landed] OQ-216 stage-2 contract guard redesigned: header-proxy → content-level; floating_city false-negative corrected
 
 **Files:** agent/uke_narrative_orchestrator.py, python/tests/test_stage2_contract_extraction.py, ISSUES.md
