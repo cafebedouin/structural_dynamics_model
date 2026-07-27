@@ -1,0 +1,393 @@
+{
+  "n_shared": 957,
+  "per_leg_n": {
+    "testsets_haiku": 960,
+    "testsets_flash": 960,
+    "testsets_kimi": 1005,
+    "testsets_sonnet": 1001
+  },
+  "parse_fail": {
+    "testsets_haiku": [],
+    "testsets_flash": [],
+    "testsets_kimi": [],
+    "testsets_sonnet": []
+  },
+  "cm_be_drift_counts": {
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0
+  },
+  "pairwise": {
+    "testsets_haiku~testsets_flash": {
+      "mean_abs_delta": 0.1047,
+      "median_abs_delta": 0.07,
+      "max_abs_delta": 0.95,
+      "share_identical": 0.0387,
+      "share_ge_0.10": 0.3469,
+      "share_ge_0.20": 0.1379,
+      "mean_signed": 0.0573
+    },
+    "testsets_haiku~testsets_kimi": {
+      "mean_abs_delta": 0.0803,
+      "median_abs_delta": 0.06,
+      "max_abs_delta": 0.88,
+      "share_identical": 0.1484,
+      "share_ge_0.10": 0.2435,
+      "share_ge_0.20": 0.0878,
+      "mean_signed": -0.0244
+    },
+    "testsets_haiku~testsets_sonnet": {
+      "mean_abs_delta": 0.0931,
+      "median_abs_delta": 0.07,
+      "max_abs_delta": 0.91,
+      "share_identical": 0.1651,
+      "share_ge_0.10": 0.4065,
+      "share_ge_0.20": 0.1275,
+      "mean_signed": 0.0749
+    },
+    "testsets_flash~testsets_kimi": {
+      "mean_abs_delta": 0.1139,
+      "median_abs_delta": 0.07,
+      "max_abs_delta": 0.68,
+      "share_identical": 0.0857,
+      "share_ge_0.10": 0.3678,
+      "share_ge_0.20": 0.1818,
+      "mean_signed": -0.0817
+    },
+    "testsets_flash~testsets_sonnet": {
+      "mean_abs_delta": 0.0903,
+      "median_abs_delta": 0.07,
+      "max_abs_delta": 0.64,
+      "share_identical": 0.0209,
+      "share_ge_0.10": 0.3197,
+      "share_ge_0.20": 0.1034,
+      "mean_signed": 0.0176
+    },
+    "testsets_kimi~testsets_sonnet": {
+      "mean_abs_delta": 0.1142,
+      "median_abs_delta": 0.1,
+      "max_abs_delta": 0.54,
+      "share_identical": 0.0794,
+      "share_ge_0.10": 0.4587,
+      "share_ge_0.20": 0.185,
+      "mean_signed": 0.0994
+    }
+  },
+  "spread": {
+    "mean": 0.1814,
+    "median": 0.15,
+    "share_zero": 0.0104,
+    "share_ge_0.20": 0.3292,
+    "share_ge_0.30": 0.1693
+  },
+  "top_divergers": [
+    {
+      "reading": "animal_status__abolitionist_reading",
+      "spread": 0.95,
+      "haiku": 0.0,
+      "flash": 0.95,
+      "kimi": 0.88,
+      "sonnet": 0.91
+    },
+    {
+      "reading": "aneyoshi_stone_commitment__commemorative_husk_reading",
+      "spread": 0.73,
+      "haiku": 0.12,
+      "flash": 0.85,
+      "kimi": 0.76,
+      "sonnet": 0.71
+    },
+    {
+      "reading": "transition_causality__overdetermined_collapse_reading",
+      "spread": 0.72,
+      "haiku": 0.82,
+      "flash": 0.1,
+      "kimi": 0.12,
+      "sonnet": 0.61
+    },
+    {
+      "reading": "deferential_realism_ontology__immutable_diagnostic_reading",
+      "spread": 0.68,
+      "haiku": 0.68,
+      "flash": 0.1,
+      "kimi": 0.78,
+      "sonnet": 0.58
+    },
+    {
+      "reading": "dueling_disappearance_mechanism__contraction_reading",
+      "spread": 0.66,
+      "haiku": 0.62,
+      "flash": 0.05,
+      "kimi": 0.71,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading",
+      "spread": 0.66,
+      "haiku": 0.19,
+      "flash": 0.85,
+      "kimi": 0.62,
+      "sonnet": 0.42
+    },
+    {
+      "reading": "competence_occupation__real_incident_necessity",
+      "spread": 0.64,
+      "haiku": 0.89,
+      "flash": 0.95,
+      "kimi": 0.65,
+      "sonnet": 0.31
+    },
+    {
+      "reading": "total_war_possibility_space__space_contraction_reading",
+      "spread": 0.63,
+      "haiku": 0.15,
+      "flash": 0.05,
+      "kimi": 0.68,
+      "sonnet": 0.18
+    },
+    {
+      "reading": "rogers_commission_findings__engineering_absolute_threshold",
+      "spread": 0.62,
+      "haiku": 0.19,
+      "flash": 0.1,
+      "kimi": 0.72,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "quran_ontological_status__uncreated_reading",
+      "spread": 0.58,
+      "haiku": 0.68,
+      "flash": 0.1,
+      "kimi": 0.65,
+      "sonnet": 0.58
+    },
+    {
+      "reading": "magna_carta_1215__universal_rights_reading",
+      "spread": 0.57,
+      "haiku": 0.31,
+      "flash": 0.15,
+      "kimi": 0.72,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "woman_category__intersex_accommodation_reading",
+      "spread": 0.57,
+      "haiku": 0.38,
+      "flash": 0.15,
+      "kimi": 0.72,
+      "sonnet": 0.42
+    },
+    {
+      "reading": "beta_designation_doctrine__severity_carve_out_reading",
+      "spread": 0.57,
+      "haiku": 0.31,
+      "flash": 0.15,
+      "kimi": 0.72,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "legitimacy_of_practice_standardization__endogenous_displacement_reading",
+      "spread": 0.56,
+      "haiku": 0.31,
+      "flash": 0.2,
+      "kimi": 0.76,
+      "sonnet": 0.22
+    },
+    {
+      "reading": "hebrew_linguistic_life__liturgical_preservation_reading",
+      "spread": 0.56,
+      "haiku": 0.62,
+      "flash": 0.15,
+      "kimi": 0.71,
+      "sonnet": 0.42
+    },
+    {
+      "reading": "competence_retention_exercise__simulation_as_sufficient",
+      "spread": 0.55,
+      "haiku": 0.61,
+      "flash": 0.2,
+      "kimi": 0.75,
+      "sonnet": 0.42
+    },
+    {
+      "reading": "dignity_kernel__imago_dei_reading",
+      "spread": 0.55,
+      "haiku": 0.58,
+      "flash": 0.15,
+      "kimi": 0.7,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "honor_settlement_legitimacy__composite_reading",
+      "spread": 0.53,
+      "haiku": 0.68,
+      "flash": 0.3,
+      "kimi": 0.15,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "hebrew_continuity__liturgical_preservation",
+      "spread": 0.53,
+      "haiku": 0.68,
+      "flash": 0.15,
+      "kimi": 0.62,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "quantum_formalism__copenhagen_reading",
+      "spread": 0.53,
+      "haiku": 0.68,
+      "flash": 0.15,
+      "kimi": 0.45,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "digital_money_emergence_boundary__infrastructure_reading",
+      "spread": 0.53,
+      "haiku": 0.68,
+      "flash": 0.15,
+      "kimi": 0.62,
+      "sonnet": 0.52
+    },
+    {
+      "reading": "genesis_creation_narrative__allegorical_ancient_near_east",
+      "spread": 0.53,
+      "haiku": 0.31,
+      "flash": 0.05,
+      "kimi": 0.58,
+      "sonnet": 0.32
+    },
+    {
+      "reading": "nuclear_impossibility_kernel__rational_dropout_reading",
+      "spread": 0.53,
+      "haiku": 0.15,
+      "flash": 0.05,
+      "kimi": 0.06,
+      "sonnet": 0.58
+    },
+    {
+      "reading": "quantum_formalism__many_worlds_reading",
+      "spread": 0.53,
+      "haiku": 0.58,
+      "flash": 0.05,
+      "kimi": 0.22,
+      "sonnet": 0.42
+    },
+    {
+      "reading": "ost_article_ii_non_appropriation__commons_conservation",
+      "spread": 0.52,
+      "haiku": 0.68,
+      "flash": 0.8,
+      "kimi": 0.7,
+      "sonnet": 0.28
+    }
+  ],
+  "most_agreed": [
+    {
+      "reading": "fisa_702_statutory_text__constitutional_floor_reading",
+      "haiku": 0.25,
+      "flash": 0.25,
+      "kimi": 0.25,
+      "sonnet": 0.25
+    },
+    {
+      "reading": "market_as_natural_default__hybrid_amnesia_reading",
+      "haiku": 0.45,
+      "flash": 0.45,
+      "kimi": 0.45,
+      "sonnet": 0.45
+    },
+    {
+      "reading": "fisa_702_statutory_text__incidental_collection_reading",
+      "haiku": 0.45,
+      "flash": 0.45,
+      "kimi": 0.45,
+      "sonnet": 0.45
+    },
+    {
+      "reading": "manifesto_revolutionary_method__democratic_gradualism_reading",
+      "haiku": 0.4,
+      "flash": 0.4,
+      "kimi": 0.4,
+      "sonnet": 0.4
+    },
+    {
+      "reading": "vedic_dharmic_corpus__bhakti_devotional_reading",
+      "haiku": 0.4,
+      "flash": 0.4,
+      "kimi": 0.4,
+      "sonnet": 0.4
+    },
+    {
+      "reading": "equal_protection_commitment__diversity_reading",
+      "haiku": 0.28,
+      "flash": 0.28,
+      "kimi": 0.28,
+      "sonnet": 0.28
+    },
+    {
+      "reading": "fisa_702_statutory_text__foreign_target_strict_reading",
+      "haiku": 0.15,
+      "flash": 0.15,
+      "kimi": 0.15,
+      "sonnet": 0.15
+    },
+    {
+      "reading": "vedic_dharmic_corpus__reformist_egalitarian_reading",
+      "haiku": 0.45,
+      "flash": 0.45,
+      "kimi": 0.45,
+      "sonnet": 0.45
+    },
+    {
+      "reading": "animal_status__welfare_reading",
+      "haiku": 0.45,
+      "flash": 0.45,
+      "kimi": 0.45,
+      "sonnet": 0.45
+    },
+    {
+      "reading": "manifesto_revolutionary_method__council_communist_reading",
+      "haiku": 0.25,
+      "flash": 0.25,
+      "kimi": 0.25,
+      "sonnet": 0.25
+    },
+    {
+      "reading": "ai_governance_legitimacy__market_libertarian_reading",
+      "haiku": 0.25,
+      "flash": 0.25,
+      "kimi": 0.25,
+      "sonnet": 0.26
+    },
+    {
+      "reading": "dignified_death__relational_autonomy",
+      "haiku": 0.38,
+      "flash": 0.38,
+      "kimi": 0.38,
+      "sonnet": 0.37
+    },
+    {
+      "reading": "common_article_3_scope__icrc_customary_reading",
+      "haiku": 0.31,
+      "flash": 0.3,
+      "kimi": 0.3,
+      "sonnet": 0.31
+    },
+    {
+      "reading": "wto_dsb_authority__judicial_activism_reading",
+      "haiku": 0.68,
+      "flash": 0.7,
+      "kimi": 0.68,
+      "sonnet": 0.68
+    },
+    {
+      "reading": "nicene_creed_authority__strict_orthodox_reading",
+      "haiku": 0.68,
+      "flash": 0.7,
+      "kimi": 0.7,
+      "sonnet": 0.68
+    }
+  ]
+}
