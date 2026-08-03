@@ -498,8 +498,9 @@ class DRAuditOrchestrator:
         per-axis hypotheses) existed only in memory, which made the
         SCOPE-hypothesis → authored-claim → computed-type three-layer trace
         unrecoverable after the run (witnessed: the 2026-06-05 first three rebuild
-        runs). Run-tagged runs write to outputs/kernel_manifests/<run_tag>/;
-        flat runs to outputs/kernel_manifests/flat/.
+        runs). Run-tagged runs write to agent/decompose_manifests/<run_tag>/;
+        flat runs to agent/decompose_manifests/flat/ (TRACKED location since
+        OQ-254 Step 3; the old outputs/kernel_manifests/ path is gitignored).
         """
         # OQ-254 join key: mint BEFORE the write attempt so generated stories carry the
         # id even if persistence fails — the q_provenance readout then reports those
