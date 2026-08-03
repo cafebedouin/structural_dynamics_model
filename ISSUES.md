@@ -12478,8 +12478,10 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    (f) verdict, do NOT expand the K-file corpus beyond meta-layer files on current
    evidence.
 3. **Deferred essay deliverable (operator-side, essay-layer ONLY, never pipeline
-   input):** `shanahan_kritik.md` mapping doc — must build on the ballot-as-forced-
-   sheafification prediction (the one falsifiable mapping), state the common-descent
+   input):** `shanahan_kritik.md` mapping doc — must build on the ballot mapping AS
+   CORRECTED by the operator (2026-08-03, recorded on OQ-261: the ballot sections
+   debater PERFORMANCE, not the topic kernel — a verdict on the debaters, not the
+   topic; the topic obstruction survives the round), state the common-descent
    limit (shared standpoint-epistemology watershed) and ballot-fitness limit (kritik
    survived persuade-a-judge selection), and correct the perm↔Theorem-8 mapping
    (competition is net-benefits, not mutual exclusivity) with the severance/intrinsicness
@@ -12542,6 +12544,84 @@ fiat manifest from the tracked set makes the scan flag it. Scope limit: pre-OQ-2
 persisted manifests to gitignored `outputs/kernel_manifests/` by design (documented
 state, not this defect) — out of this scan's scope by construction. No past uncommitted
 generation output attributable to this bug.
+
+## OQ-261 — Ballot as seat-substitution: the round forces a global section over debater performance, not the topic kernel — design the forced-gluing experiment
+
+**Ω-type:** Ω_C first (what the ballot operator IS in DR terms — which presheaf it
+sections — is a design/modeling choice), with an Ω_E tail (once modeled, the predictions
+are witnessable on corpus families).
+
+**Status:** open
+**Priority:** 3
+**Origin:** 2026-08-03 kritik ingest synthesis; **operator correction (2026-08-03,
+load-bearing):** the sheaf the ballot creates is over *how the round was debated*, not
+*what is true* — it is a verdict on the debaters, not the topic. The planning-phase
+"ballot ↔ forced sheafification" mapping is CORRECTED accordingly before any design work
+inherits it.
+**Files:** `audits/2026-08-03_kritik_ingest/`, `prolog/testsets/` (fiat family)
+
+**Deps:** splits_from OQ-259
+
+**The corrected mapping.** The ballot does not glue the topic's kernel readings — it
+RELOCATES the gluing to a performance object that always admits a global section (every
+round produces a winner), while the topic-level obstruction persists untouched. That
+makes debate an institutionalized instance of a shape DR already names: a channel that
+emits topic-shaped verdicts while measuring something else, so a consumer reading
+ballots as topic evidence cannot distinguish "resolved" from "out-performed" (the
+Pattern-6 absorption shape, at institution scale). Converges with the ballot-fitness
+limit already on record (kritik survived persuade-a-judge selection — rhetorical
+potency, not correctness).
+
+**The experiment to design (recon → proposal before any run; unguarded-axis-swap
+discipline applies).** The live corpus now holds a kernel family with authored
+cross-reading structure (fiat family, 6 readings + flat control + 30 authored edges).
+(a) Compute the family-level obstruction across readings (kernel-family/orbit machinery;
+the OQ-217 verdict⟺H¹ apparatus). (b) Model the ballot as an operator forced to emit a
+total verdict regardless of family H¹; pre-register what observation would DISTINGUISH
+"ballot = performance-seat verdict over a second presheaf" from "ballot = topic gluing"
+— that discriminator is the deliverable; without it the experiment is the mapping
+restated. (c) Check what the manufactured-consensus machinery says when a forced verdict
+is emitted over a family whose readings do not glue.
+
+**What resolution changes.** Whether the one predictive Shanahan mapping survives its
+correction as testable content; whether "verdict channels that section a substitute
+presheaf" becomes a named engine object (it likely generalizes well beyond debate:
+elections, peer review, litigation).
+
+## OQ-262 — Severance/intrinsicness as an audit on authored `coexists_with` edges: is claimed coexistence genuine or purchased by silently mutating a reading?
+
+**Ω-type:** Ω_E (once the check is defined, whether an authored coexistence survives it
+is witnessable per edge; defining the check is the work).
+
+**Status:** open
+**Priority:** 3
+**Origin:** 2026-08-03 kritik ingest synthesis — the one place debate theory offers the
+engine machinery rather than the reverse: perm-testing vocabulary (severance = dropping
+part of a reading to make the perm work; intrinsicness = adding something neither
+advocacy contains) is a mature discipline for auditing coexistence claims.
+**Files:** `prolog/cs_reading_relation_quarantine.json`, `prolog/cs_kernel_registry.pl`
+
+**Deps:** splits_from OQ-259
+
+**The audit shape.** `cs_reading_relation` edges (`coexists_with`/`influences`/
+`forecloses`) are authored and currently unaudited: nothing checks whether a claimed
+`coexists_with(A,B)` holds under both readings' own commitments, or only under a
+silently severed A (part of the commitment dropped) or an intrinsic addition (content
+neither reading carries). The debate-theory test imports as: state the minimal
+mutation of A and/or B required for joint tenability; zero mutation ⇒ genuine
+coexistence; nonzero ⇒ the edge is annotated with what was severed/added rather than
+passing as authored fact. First substrate: the fiat family's 20 `coexists_with` edges;
+second: the capital-punishment registry pairs (all 3 reading-pairs diverge, 253/468
+contexts — known-divergent positive controls). Cross-check against OQ-23 (coexists_with
+FPN recon: green-by-sparsity on `testsets/`; must be exercised where siblings co-exist).
+Practical note: the fiat edges currently sit in QUARANTINE under prefixed-vs-bare naming
+(standing OQ-58-adjacent pattern, witnessed 2026-08-03) — the audit consumer needs
+resolvable edges, so the naming join is a de-facto precondition even though no formal
+dep edge is authored here.
+
+**What resolution changes.** Authored reading-relation edges gain a validity check
+(candidate engine refinement offered BY the kritik program); OQ-23's recon gets a
+principled consumer.
 
 ---
 
