@@ -45,7 +45,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-08-03 — [landed] Kritik ingest probe: arsenal-format K-files score (f) partial recovery replicate-stable; AT Fiat K graduated (7 stories, n=225); single-voice did NOT flat-route
+## 2026-08-03 — [landed] Kritik ingest probe: arsenal-format K-files score (f) partial recovery replicate-stable; AT Fiat K graduated (7 stories, n=225)
 
 **Files:** audits/2026-08-03_kritik_ingest/, agent/analysis/originals/k_files/, agent/c-orchestrator.py, agent/decompose_manifests/flat/, prolog/testsets/
 **Tier:** landed
@@ -60,10 +60,16 @@ on the editorial block layer but populates readings from the card literature, mi
 definitional-contest kernels plus ~2 pure read-through readings per file no block names).
 Emphasis ruling (A): all claims are properties of emphasis-blind ingestion (pandoc drops
 highlight/font-size = the read/unread layer; bold survives), never of the format —
-extractor re-run is the named discriminator (OQ-259). AT Fiat K (single-voice,
-answers-only) did NOT flat-route: 6-reading grounds-contest kernel; the KNOWN_STATE
-2026-06-08 under-routing tripwire did not fire under the primed prompt (one ungrounded
-observation, not a resolution). Phase 3: AT Fiat K full run on the frozen manifest →
+extractor re-run is the named discriminator (OQ-259). **[CORRECTED same-day, operator
+review]** AT Fiat K produced a 6-reading grounds-contest kernel; the first draft of this
+entry read that as "single-voice did NOT flat-route" against the KNOWN_STATE 2026-06-08
+under-routing tripwire — wrong premise: the file is single-STANCE but multi-voice (six
+attributed authors), so the single-voice tripwire was never applicable and no-flat-route
+is expected behavior (no tripwire-regression reading is licensed; WRITEUP.md Correction 2).
+The confound also splits directionally (WRITEUP Correction 1): the scaffold half
+(precision despite 10× tag-layer dilution) is a-fortiori STRONGER than stated; the
+read-through half is confound-predicted and is what OQ-259 can kill. Phase 3: AT Fiat K
+full run on the frozen manifest →
 7 stories (`69db90a1`), pipeline 49/49, n_constraints 217→225 (+1 untracked
 `fiat_efficacy_kernel_contradictions.pl`, standing convention), ε-referent uniform over
 the defended practice (weak OQ-258 evidence — wrong specimen class, logged on the OQ).

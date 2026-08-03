@@ -117,3 +117,73 @@ Logged as evidence on OQ-258 with that caveat.
   (ballot-as-forced-gluing as the one falsifiable mapping; common-descent and
   ballot-fitness limits; corrected perm↔Theorem-8 mapping with the
   severance/intrinsicness refinement offer).
+
+## Post-review corrections and amendments (2026-08-03, same-day operator review)
+
+### CORRECTION 1 — the confound cuts one way; the two halves of the verdict are unequal
+
+The blanket "all claims bind to ruling (A)" was over-uniform. Emphasis-blindness inflates
+card-body token volume ~10× relative to the tag layer, so it works AGAINST tag recovery
+and FOR read-through. Split accordingly:
+
+- **Scaffold finding (subjects/stances track block headings) — evidence a fortiori.**
+  Precision 4/6 and 5–6/6 happened DESPITE the editorial layer being outweighed by an
+  order of magnitude. The emphasis-aware re-run should RAISE tag idiom, not overturn this
+  half.
+- **Read-through finding (2 no-block-counterpart readings per file) — confound-predicted.**
+  Pure read-through is exactly what mechanical volume dominance produces. This is the
+  half the OQ-259 discriminator can actually kill.
+
+Directional prediction registered on OQ-259: emphasis-aware re-run raises tag-idiom
+share; the falsifiable half is whether the read-through readings SURVIVE emphasis-aware
+ingestion (survive ⇒ format property; vanish ⇒ conversion artifact).
+
+### CORRECTION 2 — AT Fiat K is single-STANCE, not single-voice; the tripwire observation was mis-premised
+
+The plan (and PROPOSAL/SCORING, which inherit it) called AT Fiat K "single-voice." Wrong:
+the file is six attributed published authors (Galea; Badiou/McGee; Bagg; Mauri et al.;
+McGee & Romanelli; social-movement case studies) defending ONE stance — multi-voice,
+single-stance. The KNOWN_STATE 2026-06-08 under-routing tripwire concerns single-VOICE
+inputs, so it was never applicable here; no-flat-route is EXPECTED behavior, not an
+anomaly, and no "tripwire silently regressed" reading is licensed. The earlier framing
+("tripwire did not fire — one ungrounded observation") is retracted as N/A rather than
+weak evidence. Consequence: (c)'s exclusion of this file from arsenal weight was
+motivated partly by a wrong premise — though the exclusion itself still stands on the
+independent ground that the design contains no discriminator between its outcomes.
+
+### Amendment 3 — n_constraints +8 arithmetic, witnessed
+
+217→225 = +7 stories + `fiat_efficacy_kernel_contradictions` — and the latter is not
+merely an untracked file: it IS a `per_constraint` entry (witnessed: 225 entries in
+`pipeline_output.json`, including `fiat_efficacy_kernel_contradictions`; 21
+`*_contradictions`-named entries corpus-wide). Corpus enumeration is by filename
+(`corpus_constraint/1`), so linkage emissions load and count. The plan's "grew by the
+generated count" criterion reads correctly as +7 stories +1 linkage entry; the 217
+baseline already contained 20 such entries, so the convention is stable, not new.
+
+### Amendment 4 — which half of recall missed (from the existing scoring table, INFERRED, no new runs)
+
+Strict misses: Cap — Neg Link/Perm, Neg Impact, Neg Alt, Aff Impact---Other; Biopower —
+Neg Framework (deferred), Neg Link, Neg Impact. The advocate-vs-pre-empt hypothesis
+(SCOPE recovers what a file advocates, drops what it pre-empts) is NOT supported: the
+pre-empting Aff answer blocks surfaced WELL (Biopower: 4 of 6 selected readings are
+Aff-side answers; Cap: 2 of 5 kernel readings). The pattern is
+**position-vs-machinery**: block sections that STAKE a theoretical position (1NC thesis,
+Alt-as-advocacy, Aff answer-positions) surface as readings regardless of side; sections
+that elaborate one position's argumentative machinery (Link, Impact — 4 of the 7 strict
+misses, symmetric across both files) are absorbed into that reading's
+`expected_structural_delta` rather than surfacing as readings. SCOPE's reading
+granularity is the theoretical position, not the argumentative function — the machinery
+content is present at delta altitude, not lost. (Framework splits: selected axis in Cap,
+deferred in Biopower.)
+
+### Amendment 5 — `omega_debate_genre_distortion` is the quotable result
+
+The Biopower manifest flagged its own ingestion genre unprompted: source arguments
+"selected for strategic/competitive utility rather than truth-seeking," readings "may be
+strategically exaggerated or strawmanned versions of the underlying theory," non-debate
+consumers told to verify against primary texts. If genuine detection rather than a
+one-off, this is the strongest single result of the run — an ingestion pipeline
+annotating the epistemic genre of its input. Routed to the essay layer via OQ-259 item 3
+(quote it there); a second-specimen check (does an independent arsenal ingest produce a
+comparable genre flag?) is the cheap verification before it is quoted as detection.

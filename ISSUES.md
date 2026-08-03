@@ -12422,7 +12422,12 @@ beneficiaries/victims debate-community-internal). No within-kernel referent spli
 answers-only meta-layer file, every reading endorses the same arrangement, so referents (a)
 and (b) nearly coincide — the specimen class where the ambiguity bites (a K CONTESTING an
 arrangement) did not graduate (pre-registered (f) verdict). Does not discriminate; logged
-for completeness.
+for completeness. **Specimen SPEC for any kritik-side ε-referent test (2026-08-03):** the
+specimen must be an OBJECT-LAYER K that ATTACKS an arrangement (Biopower/Cap class — a
+story whose reading contests an external arrangement while advocating an alternative), so
+referents (a) and (b) genuinely diverge. A defending/answers file, or a meta-layer file,
+reproduces this non-result by construction — do not spend another run on that class for
+this OQ.
 
 ## OQ-259 — Kritik program continuation: emphasis-aware discriminator, second meta-layer candidate, essay deliverable
 
@@ -12444,12 +12449,21 @@ confounded with the conversion loss — the tag layer is dozens of words per blo
 hundreds in card bodies, so emphasis-blind ingestion mechanically favors card-idiom
 readings by an order of magnitude in token volume.
 
+**Directional prediction (registered 2026-08-03, operator review — the confound cuts one
+way).** Emphasis-blindness inflates card-body volume ~10× vs the tag layer, i.e. it works
+AGAINST tag recovery and FOR read-through. So the scaffold half of the (f) result
+(precision 4/6 and 5–6/6 despite the dilution) is evidence a fortiori and should SURVIVE
+the discriminator with tag idiom RAISED; the falsifiable half is the read-through
+readings (world_system, growth_process, coalition_governmentality, insurance-deferred):
+survive emphasis-aware ingestion ⇒ format property; vanish ⇒ conversion artifact. A
+result where tag idiom DROPS under emphasis-aware ingestion would falsify the whole
+framing, not just one half.
+
 **Work items, in order:**
 1. **Emphasis-aware discriminator (pre-named at Phase 0):** small extractor pulling
    `w:highlight`/`w:sz` from `document.xml`, emit emphasis markers, re-convert the three
    specimens, re-run the Phase-1 dry-runs emphasis-aware, re-score with PROPOSAL.md's
-   pinned denominators. Idiom majority flips toward tag ⇒ the mixed-idiom result was
-   conversion loss; unchanged ⇒ it is a format property.
+   pinned denominators against the directional prediction above.
 2. **Second meta-layer candidate:** `T Framework` (584K) needs its own dry-run
    (`--skip-search`; exceeds the research cap) before any graduation decision. Per the
    (f) verdict, do NOT expand the K-file corpus beyond meta-layer files on current
@@ -12462,6 +12476,10 @@ readings by an order of magnitude in token volume.
    (competition is net-benefits, not mutual exclusivity) with the severance/intrinsicness
    ≈ mutated-reading-coexistence-test refinement as a candidate OFFER to the engine.
    Feeding it to the pipeline would anchor SCOPE (make_brief neutrality principle).
+   Quote `omega_debate_genre_distortion` (Biopower manifest) as the run's headline
+   candidate — the pipeline annotating the epistemic genre of its own input — AFTER the
+   cheap verification: a second independent arsenal ingest producing a comparable genre
+   flag (one dry-run; without it, quote as a one-off observation, not detection).
 
 **What resolution changes.** Whether card files become an ingestion class (emphasis-aware
 tag-layer reading ⇒ pre-labeled reading corpora) or stay routed through hand-authored
@@ -12497,6 +12515,17 @@ check: `p = Path(lm); p = p if p.is_absolute() else (REPO_ROOT / p)` and use `p`
 for exists()/relative_to. Witness on the next `--manifest-file` full run (or a targeted
 harness around `_step_commit`): the commit's `git show --stat` must include the manifest
 file, message `staged: <stem>`.
+
+**Retroactive tail: EMPTY within scope (scanned 2026-08-03, control-witnessed).** Scan:
+every committed `json/*.json` carrying `provenance.generation_run_id` vs tracked
+manifests under `agent/decompose_manifests/`. Exactly 2 stamped run_ids exist
+(`conditional_vs_unconditional_cooperation_2026_20260725_131209`,
+`fiat_efficacy_kernel_2026_20260803_102258` — stamping began with OQ-254, 2026-07-25);
+both manifests tracked; 294/294 on-disk manifests tracked. Positive control: hiding the
+fiat manifest from the tracked set makes the scan flag it. Scope limit: pre-OQ-254 runs
+persisted manifests to gitignored `outputs/kernel_manifests/` by design (documented
+state, not this defect) — out of this scan's scope by construction. No past uncommitted
+generation output attributable to this bug.
 
 ---
 
