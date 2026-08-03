@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-03 — [landed] Kritik ingest probe: arsenal-format K-files score (f) partial recovery replicate-stable; AT Fiat K graduated (7 stories, n=225); single-voice did NOT flat-route
+
+**Files:** audits/2026-08-03_kritik_ingest/, agent/analysis/originals/k_files/, agent/c-orchestrator.py, agent/decompose_manifests/flat/, prolog/testsets/
+**Tier:** landed
+
+Pre-registered probe (`PROPOSAL.md` committed `1bd57a84` before any run) on whether SCOPE
+recovers coherent structure from debate-camp card files. Three dry-runs + fresh emotives
+control, ALL `--skip-search` (Cap K NW measured 339,501 tok — largest witnessed SCOPE
+ingest — vs the ~187.9k research cap; uniform flags required). Verdict per the
+pre-registered rule: **both arsenal replicates (f) partial recovery, replicate-stable** —
+coherent, precision/recall pass (b)'s bars, idiom MIXED (SCOPE scaffolds subjects/stances
+on the editorial block layer but populates readings from the card literature, minting
+definitional-contest kernels plus ~2 pure read-through readings per file no block names).
+Emphasis ruling (A): all claims are properties of emphasis-blind ingestion (pandoc drops
+highlight/font-size = the read/unread layer; bold survives), never of the format —
+extractor re-run is the named discriminator (OQ-259). AT Fiat K (single-voice,
+answers-only) did NOT flat-route: 6-reading grounds-contest kernel; the KNOWN_STATE
+2026-06-08 under-routing tripwire did not fire under the primed prompt (one ungrounded
+observation, not a resolution). Phase 3: AT Fiat K full run on the frozen manifest →
+7 stories (`69db90a1`), pipeline 49/49, n_constraints 217→225 (+1 untracked
+`fiat_efficacy_kernel_contradictions.pl`, standing convention), ε-referent uniform over
+the defended practice (weak OQ-258 evidence — wrong specimen class, logged on the OQ).
+Side-finding OQ-260: `_step_commit` manifest staging mislabels relative in-repo
+`--manifest-file` paths as "outside repo" and silently skips staging
+(c-orchestrator.py:965). Scoring + witnesses: `SCORING.md`/`WRITEUP.md` in the audit dir.
+
 ## 2026-07-27 — [landed] Cross-author ε probe: 4-leg divergence sorts by channel legibility, not topic heat; twins never ε-harmonized; haiku exact-0.00 is authored
 
 **Files:** audits/2026-07-27_cross_author_epsilon_probe/, prolog/testsets_haiku/, prolog/testsets_flash/, prolog/testsets_kimi/, prolog/testsets_sonnet/

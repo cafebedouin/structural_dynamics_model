@@ -12415,9 +12415,92 @@ transforms of ε, so channel-conditional ε agreement makes downstream verdicts
 channel-conditional on tacit/referent-weak constraints — or an artifact a one-paragraph
 contract fix removes. A v8-paper caveat is premature until this discriminates.
 
+**Evidence (2026-08-03, kritik ingest — weak by construction).** Observation pass over the
+7 `fiat_efficacy_kernel` stories (`audits/2026-08-03_kritik_ingest/WRITEUP.md`): ε referent
+UNIFORM across all legs — authored over the defended practice itself (ε 0.22–0.42;
+beneficiaries/victims debate-community-internal). No within-kernel referent split. Caveat:
+answers-only meta-layer file, every reading endorses the same arrangement, so referents (a)
+and (b) nearly coincide — the specimen class where the ambiguity bites (a K CONTESTING an
+arrangement) did not graduate (pre-registered (f) verdict). Does not discriminate; logged
+for completeness.
+
+## OQ-259 — Kritik program continuation: emphasis-aware discriminator, second meta-layer candidate, essay deliverable
+
+**Ω-type:** Ω_E (whether the (f)-grade partial recovery is a property of the card-file
+format or of emphasis-blind ingestion is witnessable by running the pre-named
+discriminator; no ruling needed to run it).
+
+**Status:** open
+**Priority:** 3
+**Origin:** 2026-08-03 kritik ingest probe (`audits/2026-08-03_kritik_ingest/`;
+pre-registration `PROPOSAL.md` `1bd57a84`, verdict `SCORING.md` `d7c49cdd`).
+**Files:** `agent/analysis/originals/k_files/`, `audits/2026-08-03_kritik_ingest/`
+
+**Standing result being extended.** Both arsenal replicates (Cap K NW, Biopower NW)
+scored (f) partial recovery, replicate-stable, under EMPHASIS-BLIND ingestion (operator
+ruling A, 2026-08-03): pandoc conversion drops the highlight (read-in-round) and
+font-size (minimization) layers; bold survives. The (f)/(b)/(d) boundary is therefore
+confounded with the conversion loss — the tag layer is dozens of words per block vs
+hundreds in card bodies, so emphasis-blind ingestion mechanically favors card-idiom
+readings by an order of magnitude in token volume.
+
+**Work items, in order:**
+1. **Emphasis-aware discriminator (pre-named at Phase 0):** small extractor pulling
+   `w:highlight`/`w:sz` from `document.xml`, emit emphasis markers, re-convert the three
+   specimens, re-run the Phase-1 dry-runs emphasis-aware, re-score with PROPOSAL.md's
+   pinned denominators. Idiom majority flips toward tag ⇒ the mixed-idiom result was
+   conversion loss; unchanged ⇒ it is a format property.
+2. **Second meta-layer candidate:** `T Framework` (584K) needs its own dry-run
+   (`--skip-search`; exceeds the research cap) before any graduation decision. Per the
+   (f) verdict, do NOT expand the K-file corpus beyond meta-layer files on current
+   evidence.
+3. **Deferred essay deliverable (operator-side, essay-layer ONLY, never pipeline
+   input):** `shanahan_kritik.md` mapping doc — must build on the ballot-as-forced-
+   sheafification prediction (the one falsifiable mapping), state the common-descent
+   limit (shared standpoint-epistemology watershed) and ballot-fitness limit (kritik
+   survived persuade-a-judge selection), and correct the perm↔Theorem-8 mapping
+   (competition is net-benefits, not mutual exclusivity) with the severance/intrinsicness
+   ≈ mutated-reading-coexistence-test refinement as a candidate OFFER to the engine.
+   Feeding it to the pipeline would anchor SCOPE (make_brief neutrality principle).
+
+**What resolution changes.** Whether card files become an ingestion class (emphasis-aware
+tag-layer reading ⇒ pre-labeled reading corpora) or stay routed through hand-authored
+sources; whether the kritik program gets a second graduated file.
+
+## OQ-260 — `_step_commit` manifest staging mislabels relative in-repo `--manifest-file` paths as "outside repo" and silently skips staging
+
+**Ω-type:** Ω_C (small contract defect in the OQ-254 staging check; fix shape is clear,
+needs a run witness because it is output-changing).
+
+**Status:** open
+**Priority:** 4
+**Origin:** 2026-08-03 kritik ingest Phase 3 (`audits/2026-08-03_kritik_ingest/WRITEUP.md`
+side-finding 1; run log `atfiat_fullrun.log` line "manifest not_staged: manifest outside
+repo (agent/decompose_manifests/flat/fiat_efficacy_kernel_2026_20260803_102258.manifest.json)").
+**Files:** `agent/c-orchestrator.py`
+
+**Deps:** splits_from OQ-254
+
+**The defect (witnessed).** When `--manifest-file` is passed repo-RELATIVE,
+`_step_commit`'s staging branch reaches `Path(lm).relative_to(REPO_ROOT)`
+(c-orchestrator.py:965) with a relative path; `relative_to` raises `ValueError` (a
+relative path is never relative_to an absolute root), the except-arm reports
+`not_staged: manifest outside repo` — a wrong diagnosis for an in-repo file — and the
+manifest is silently not staged. The stem==run_ids check PASSED (stories correctly
+stamped); only the path normalization is wrong. Absolute `--manifest-file` paths and the
+normal flat-run path (absolute `_last_manifest_path` from `_persist_manifest`) are
+unaffected. Harmless on 2026-08-03 only because the manifest was already committed
+separately (`47085548`).
+
+**Fix shape (not applied — output-changing, needs witness).** Normalize before the
+check: `p = Path(lm); p = p if p.is_absolute() else (REPO_ROOT / p)` and use `p`
+for exists()/relative_to. Witness on the next `--manifest-file` full run (or a targeted
+harness around `_step_commit`): the commit's `git show --stat` must include the manifest
+file, message `staged: <stem>`.
+
 ---
 
-*Last updated: 2026-07-27. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-08-03. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
