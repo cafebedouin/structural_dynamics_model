@@ -68,7 +68,16 @@ attributed authors), so the single-voice tripwire was never applicable and no-fl
 is expected behavior (no tripwire-regression reading is licensed; WRITEUP.md Correction 2).
 The confound also splits directionally (WRITEUP Correction 1): the scaffold half
 (precision despite 10× tag-layer dilution) is a-fortiori STRONGER than stated; the
-read-through half is confound-predicted and is what OQ-259 can kill. Phase 3: AT Fiat K
+read-through half is confound-predicted and is what OQ-259 can kill. Principal finding
+(WRITEUP Amendment 4, INFERRED from the scoring tables, symmetric across both
+replicates): **SCOPE's reading granularity sits at the theoretical position** —
+position-staking sections surface as readings regardless of side; Link/Impact machinery
+absorbs into the parent reading's `expected_structural_delta` (present one level down,
+not lost). Every strict recall miss was this altitude conflation in the predicted
+denominator, so read the (f) label with the WRITEUP's verdict qualifier (nearer (b) than
+the bare label; classification unchanged — the pre-registered rule stands). Granularity
+prediction registered on OQ-259 (machinery stays absorbed under emphasis-aware
+ingestion), independent of the tag-idiom prediction. Phase 3: AT Fiat K
 full run on the frozen manifest →
 7 stories (`69db90a1`), pipeline 49/49, n_constraints 217→225 (+1 untracked
 `fiat_efficacy_kernel_contradictions.pl`, standing convention), ε-referent uniform over

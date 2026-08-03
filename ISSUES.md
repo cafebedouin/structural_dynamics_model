@@ -12459,6 +12459,15 @@ survive emphasis-aware ingestion ⇒ format property; vanish ⇒ conversion arti
 result where tag idiom DROPS under emphasis-aware ingestion would falsify the whole
 framing, not just one half.
 
+**Second registered prediction — granularity, independent of the emphasis question
+(2026-08-03).** The position-vs-machinery finding (WRITEUP Amendment 4: Link/Impact
+machinery sections absorb into the parent reading's `expected_structural_delta`;
+position-staking sections surface as readings, symmetric across both replicates) claims
+a GRANULARITY property, not a weighting one. Prediction: under emphasis-aware ingestion
+the Link/Impact sections STAY absorbed at delta altitude. If they surface as readings
+instead, the granularity finding is wrong and its story needs rework — this
+discriminates independently of (and in the same re-run as) the tag-idiom prediction.
+
 **Work items, in order:**
 1. **Emphasis-aware discriminator (pre-named at Phase 0):** small extractor pulling
    `w:highlight`/`w:sz` from `document.xml`, emit emphasis markers, re-convert the three
@@ -12480,6 +12489,13 @@ framing, not just one half.
    candidate — the pipeline annotating the epistemic genre of its own input — AFTER the
    cheap verification: a second independent arsenal ingest producing a comparable genre
    flag (one dry-run; without it, quote as a one-off observation, not detection).
+   **"Comparable" is pre-specified NOW (2026-08-03), not judged post hoc:** the new
+   manifest must carry an omega or fracture-note asserting BOTH (i) that the source's
+   arguments are selected for strategic/competitive utility rather than truth-seeking,
+   AND (ii) a fidelity consequence (readings may be exaggerated/strawmanned relative to
+   the underlying literature, or an equivalent verify-against-primary-sources warning).
+   An adjacent flag (bias, one-sidedness, tunnel vision, genre NAMED without the
+   selection-pressure claim) does NOT count as reproduction.
 
 **What resolution changes.** Whether card files become an ingestion class (emphasis-aware
 tag-layer reading ⇒ pre-labeled reading corpora) or stay routed through hand-authored

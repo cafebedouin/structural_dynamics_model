@@ -31,6 +31,17 @@ pre-registered rule, applied in `SCORING.md`:
 **Prescribed action taken:** ONE meta-layer file graduated (AT Fiat K, operator go at the
 Phase-2 gate); the arsenal replicates did NOT graduate; K-file corpus not expanded further.
 
+**Verdict qualifier (2026-08-03 review; the label stands, its reading changes).** The
+(f) classification is retained — the pre-registered rule was applied as written and
+post-hoc reclassification would defeat the registration. But the recall denominator
+conflated two altitudes (see Amendment 4 → the position-vs-machinery finding): every
+strict miss in the scoring tables is a Link/Impact machinery section that SCOPE preserved
+at `expected_structural_delta` altitude rather than reading altitude — a category error
+in the predicted list, not a recovery failure. Partial recovery **at the position
+altitude with machinery preserved one level down** is nearer (b) than the bare label
+suggests; recall-as-scored measured the predicted list's altitude mixing, not SCOPE's
+coverage. Read the headline with this qualifier attached.
+
 ## (c) — AT Fiat K did NOT flat-route
 
 Pre-registered (c) (flat-routing) did not occur: the single-voice answers-only file
@@ -161,7 +172,7 @@ merely an untracked file: it IS a `per_constraint` entry (witnessed: 225 entries
 generated count" criterion reads correctly as +7 stories +1 linkage entry; the 217
 baseline already contained 20 such entries, so the convention is stable, not new.
 
-### Amendment 4 — which half of recall missed (from the existing scoring table, INFERRED, no new runs)
+### Amendment 4 — PRINCIPAL FINDING: reading granularity sits at the theoretical position (from the existing scoring table, INFERRED, no new runs)
 
 Strict misses: Cap — Neg Link/Perm, Neg Impact, Neg Alt, Aff Impact---Other; Biopower —
 Neg Framework (deferred), Neg Link, Neg Impact. The advocate-vs-pre-empt hypothesis
