@@ -1,0 +1,276 @@
+[ingest] decompose: 17,049 tok / cap 975,616 (headroom 958,567) [claude-sonnet-5]
+[decompose] Running UKE_SCOPE decomposition (kernel-first / primed)...
+[decompose] Manifest persisted: /home/scott/bin/structural_dynamics_model/agent/decompose_manifests/flat/macintyre_after_virtue_emotivism_20260803_102123.manifest.json
+[decompose] SCOPE complete — 5 axes selected
+[dry_run] Manifest assembled — dry-run stops here
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  research             skipped 
+  decompose            success  (20016→7065 tokens) [72.7s]
+
+  Total tokens: 20016→7065
+  Total time:   74.7s
+
+============================================================
+SCOPE MANIFEST
+============================================================
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Moral Philosophy / Metaethics / Political Philosophy",
+  "family_id": "macintyre_after_virtue_emotivism",
+  "topic_summary": "A blog post summarizing MacIntyre's After Virtue argument that modern moral discourse has lost the social/religious context (Catholic Christendom) that once made moral first-principles adjudicable, leaving incommensurable rival argument-schemes (utilitarian, Kantian, rights-based, natural-law) that share vocabulary but not grounding. The author illustrates this with MacIntyre's three abortion arguments (bodily rights, Golden Rule/universalizability, sanctity-of-innocent-life), which reach incompatible conclusions from equally 'logical' but incommensurable first principles, and extends the diagnosis to emotivism as the tacit, disavowed metaethics of contemporary moral culture.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Alasdair MacIntyre (philosopher, author of After Virtue)",
+      "Catholicism / Aquinas-Augustine tradition (former unifying moral authority)",
+      "Emotivism (rival metaethical doctrine MacIntyre attacks)",
+      "Enlightenment figures: Kant, Hume, Diderot, Kierkegaard (failed replacement projects)",
+      "PCUSA Church (example of contemporary doctrinal abdication)",
+      "The three MacIntyre abortion arguments (2a bodily-rights, 2b Golden-Rule, 2c sanctity-of-life)",
+      "Blog author / narrator (interposes own commitments, e.g. 'civic virtue' morality, condemnation of 'garbage people')"
+    ],
+    "key_claims": [
+      "Modern moral language is a fragment surviving the collapse of its original (Catholic/Aristotelian) context (stated_as_fact per MacIntyre)",
+      "Rival moral premises (utilitarian, Kantian, religious) are logically valid internally but incommensurable across systems (argued)",
+      "Emotivism is the de facto, disavowed metaethics of contemporary culture (argued)",
+      "The three abortion arguments instantiate genuinely different, non-adjudicable first principles (argued/stated)",
+      "Enlightenment attempts (reason, passion, leap of faith) all failed to re-ground morality (argued)",
+      "The author's own claim that 'we know shared moral principles are possible' via existing law is asserted but in tension with the kernel diagnosis (implied/contested)"
+    ],
+    "key_tensions": [
+      "Incommensurability thesis (MacIntyre) vs author's assertion of a recoverable shared/civic morality",
+      "Bodily-autonomy premise vs sanctity-of-innocent-life premise in the abortion arguments (irreducible axiom clash)",
+      "Emotivism-as-diagnosis vs emotivism-as-accusation (author uses moralized language, e.g. 'garbage people,' while diagnosing emotivism in others)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is the notion of a 'person' possessing rights and moral status that ground obligations toward it \u2014 every one of the three MacIntyre abortion arguments, and indeed the entire post-Christendom moral vocabulary MacIntyre describes, invokes this single commitment (rights, personhood, the wrongness of taking innocent life) while resolving it into structurally incompatible constraints.",
+    "authority_description": "No single authority currently adjudicates the kernel. Historically, Catholic doctrinal hierarchy (Aquinas/Augustine, Magisterium) grounded interpretive legitimacy; post-Enlightenment, competing grounds (Kantian universalizability, utilitarian calculus, bodily-autonomy liberalism, natural-law sanctity-of-life) each claim self-standing rational authority with no meta-authority to arbitrate between them.",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "personhood_boundary",
+    "readings": [
+      {
+        "reading_id": "bodily_autonomy_reading",
+        "commitment": "Moral personhood-rights are grounded in self-ownership; while the embryo is part of the mother's body, her right to control her own person is dispositive and the embryo's status does not yet trigger independent protection.",
+        "authority_grounding": "Liberal rights-theory / autonomy (Thomson-style bodily rights argument, MacIntyre's argument 2a)",
+        "sibling_readings": [
+          "golden_rule_universalizability_reading",
+          "sanctity_of_innocent_life_reading"
+        ],
+        "expected_structural_delta": "Mother is sole rights-holder during the relevant stage; embryo excluded from victim set; abortion morally permissible and should be legally allowed."
+      },
+      {
+        "reading_id": "golden_rule_universalizability_reading",
+        "commitment": "Moral personhood-claims must be universalizable: whatever right to life one claims for oneself cannot be consistently denied to a relevantly similar other (the one's own case as embryo/fetus), constraining the bodily-autonomy right without collapsing it into an absolute prohibition.",
+        "authority_grounding": "Kantian universalizability / Golden Rule consistency reasoning (MacIntyre's argument 2b)",
+        "sibling_readings": [
+          "bodily_autonomy_reading",
+          "sanctity_of_innocent_life_reading"
+        ],
+        "expected_structural_delta": "Produces a moral (not necessarily legal) constraint on the mother's right \u2014 embryo enters as a hypothetical stand-in for the reasoner, generating personal moral disapproval of general abortion-rights claims without licensing legal prohibition; a genuinely intermediate, non-reducible position distinct from both (a) and (c)."
+      },
+      {
+        "reading_id": "sanctity_of_innocent_life_reading",
+        "commitment": "Personhood/moral-status attaches at a stage prior to birth (effectively from conception/embryo formation) such that the embryo is already an 'identifiable individual' whose innocent life is protected exactly as a newborn's; abortion is therefore murder.",
+        "authority_grounding": "Natural-law / sanctity-of-life tradition descending from Catholic doctrine (Aquinas/Augustine lineage; MacIntyre's argument 2c)",
+        "sibling_readings": [
+          "bodily_autonomy_reading",
+          "golden_rule_universalizability_reading"
+        ],
+        "expected_structural_delta": "Embryo enters the victim set as a full rights-bearing person; mother's bodily-autonomy claim is overridden; abortion is both morally wrong and warrants legal prohibition."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "bodily_autonomy_reading",
+        "reading_b": "sanctity_of_innocent_life_reading",
+        "basis": "Accepting that the embryo is 'essentially part of the mother's body' with no independent standing (a) requires denying that the embryo is already an 'identifiable individual' with full innocent-life protection (c), and vice versa; no single coherent framework can hold both the embryo-as-non-person and embryo-as-full-person axioms simultaneously."
+      },
+      {
+        "reading_a": "golden_rule_universalizability_reading",
+        "reading_b": "sanctity_of_innocent_life_reading",
+        "basis": "The universalizability reading explicitly declines to conclude legal prohibition ('I am not thereby committed to the view that abortion ought to be legally prohibited'), which is incompatible with the sanctity reading's axiom that innocent-life protection entails categorical legal prohibition (murder must be prohibited); one framework treats the moral conclusion as personal/non-coercive, the other treats the identical moral conclusion as necessarily coercive/legal."
+      },
+      {
+        "reading_a": "bodily_autonomy_reading",
+        "reading_b": "golden_rule_universalizability_reading",
+        "basis": "The bodily-autonomy axiom holds that the rights-holder's self-ownership is dispositive regardless of the embryo's eventual personhood trajectory; the universalizability axiom holds that one's own present rights-claims are constrained by a consistency test applied retroactively to one's own embryonic self, which limits the very self-ownership the first axiom treats as unlimited. A framework cannot simultaneously treat present bodily self-ownership as dispositive and as constrained by hypothetical retroactive universalization without collapsing one axiom into the other."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "personhood_boundary",
+      "human_readable": "Contested Kernel: The Personhood Boundary (Three Incommensurable Abortion Arguments)",
+      "structural_delta": "One shared commitment (personhood/rights ground moral protection) resolved into three structurally distinct constraints depending on where moral personhood is read to begin and what kind of obligation (moral-only vs moral-and-legal) follows",
+      "primary_observable": "Which entities are included in the victim/beneficiary set (mother only / mother-plus-hypothetical-self / embryo-as-full-person) and whether the reading licenses legal prohibition",
+      "epsilon_bin": "high",
+      "hypothesis": "kernel",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "metaethical_grounding_collapse"
+      ],
+      "centrality_score": 9,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel per \u00a71.3-K: shared commitment (personhood), genuinely divergent readings (autonomy/universalizability/sanctity), each emitting structurally different victim-sets and legal implications. Counts as ONE axis; all three readings proceed to generation."
+    },
+    {
+      "claim_id": "metaethical_grounding_collapse",
+      "human_readable": "Metaethical Grounding Collapse (Loss of a Common Standard of Moral Adjudication)",
+      "structural_delta": "The historical mechanism by which a single institutional authority (Catholic doctrinal hierarchy) supplied a shared standard for terminating moral arguments has disappeared, leaving formally valid but mutually unadjudicable argument-systems (utilitarian, Kantian, natural-law, emotivist) with no meta-level tiebreaker",
+      "primary_observable": "Presence/absence of an institutionally recognized final-arbiter mechanism for moral disputes (e.g., a Church hierarchy issuing binding doctrine vs. contemporary pluralism of unranked ethical frameworks)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "no_single_beneficiary_diffuse_pluralism",
+      "victim": "public_moral_discourse_capacity_for_resolution",
+      "downstream_of": [],
+      "feeds_into": [
+        "personhood_boundary",
+        "emotivism_as_disavowed_practice"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Different observable than the kernel (institutional adjudication mechanism vs. personhood-boundary content); explains WHY the kernel is contested rather than settled, and is causally upstream of both the kernel's persistence and the rise of emotivism. Survives independence testing as a distinct structural axis (Type B: entangled with but not reducible to the kernel)."
+    },
+    {
+      "claim_id": "emotivism_as_disavowed_practice",
+      "human_readable": "Emotivism as Disavowed Social Practice (Preference-Contest Masquerading as Argument)",
+      "structural_delta": "A social/interactional pattern in which moral disagreement is conducted as if appealing to objective standards while functioning, in practice, as manipulation of others' attitudes \u2014 a claim about behavior and social structure, not about which first principles are correct",
+      "primary_observable": "Divergence between the discursive form of moral claims (appeals to authority, logic, 'objective' standards) and the manipulative/attitude-expressive function they actually serve in dispute resolution; observable via whether disputants shift ground when refuted or merely restate preference",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "rhetorically_skilled_disputants",
+      "victim": "possibility_of_genuine_moral_argument",
+      "downstream_of": [
+        "metaethical_grounding_collapse"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (behavioral/interactional pattern) from both the kernel (content of personhood claims) and grounding collapse (institutional mechanism); different beneficiary/victim structure (rhetorical skill vs. institutional authority). Passes pairwise independence test as a downstream but non-reducible axis \u2014 could exist without full commitment to the sanctity/autonomy dispute specifically."
+    },
+    {
+      "claim_id": "narrator_self_exemption_emotivism",
+      "human_readable": "Narrator's Self-Exempting Moralism (Practicing What Is Diagnosed)",
+      "structural_delta": "The author diagnoses emotivism in the culture while himself deploying non-argued moral condemnation ('garbage people who should be shamed and shunned') and asserting a personal civic-virtue standard as if it were shared common ground",
+      "primary_observable": "Presence of unargued moralized epithets and assumed-shared-standard language in the author's own text, contrasted with the explicit diagnostic claim that shared standards no longer exist",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": "narrator_rhetorical_authority",
+      "victim": "argumentative_consistency_of_the_post",
+      "downstream_of": [
+        "emotivism_as_disavowed_practice"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: low centrality, single-source (author's rhetorical self-contradiction) rather than a structural feature of the domain; useful as omega material but does not add independent generative yield beyond emotivism_as_disavowed_practice."
+    },
+    {
+      "claim_id": "enlightenment_replacement_failure",
+      "human_readable": "Enlightenment Replacement Project Failure (Kant/Hume/Diderot/Kierkegaard)",
+      "structural_delta": "Distinct historical attempts (reason-based, passion-based, faith-based) to re-ground morality after religious consensus collapsed, each analyzed by MacIntyre as failing on its own terms",
+      "primary_observable": "Textual/doctrinal content of each Enlightenment figure's proposed grounding and MacIntyre's specific critique of each",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "metaethical_grounding_collapse"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: largely restates historical content already captured structurally by metaethical_grounding_collapse (the absence of a working replacement mechanism); insufficient independent \u03b5 to warrant separate generation."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "bodily_autonomy_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "bodily_autonomy_reading"
+    },
+    {
+      "claim_id": "golden_rule_universalizability_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "golden_rule_universalizability_reading"
+    },
+    {
+      "claim_id": "sanctity_of_innocent_life_reading",
+      "kernel_id": "personhood_boundary",
+      "reading_id": "sanctity_of_innocent_life_reading"
+    },
+    "metaethical_grounding_collapse",
+    "emotivism_as_disavowed_practice"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "narrator_self_exemption_emotivism",
+      "structural_delta": "Author's own unargued moralism while diagnosing emotivism in others",
+      "hypothesis": "piton",
+      "deferral_reason": "Low centrality; single-source rhetorical artifact rather than domain-structural axis; captured as omega"
+    },
+    {
+      "claim_id": "enlightenment_replacement_failure",
+      "structural_delta": "Kant/Hume/Diderot/Kierkegaard's failed re-grounding attempts",
+      "hypothesis": "rope",
+      "deferral_reason": "Largely subsumed by metaethical_grounding_collapse; insufficient independent yield"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_golden_rule_reading_stability",
+      "description": "The Golden Rule/universalizability reading (2b) explicitly refuses to commit to legal prohibition even while reaching a personal moral conclusion resembling (c). Is this a genuinely stable third reading or an unstable hybrid that collapses toward either (a) or (c) under pressure? Bounded as uncertain pending deeper MacIntyre exegesis.",
+      "source": "\u00a71.3-K coherence check on readings"
+    },
+    {
+      "id": "omega_narrator_emotivism_performativity",
+      "description": "The author performs the very emotivism he condemns (unargued moral epithets, assumed shared civic virtue) \u2014 this self-undermining is structurally interesting but was deferred as a piton rather than promoted to a generation axis. Flagged for possible essay-level commentary.",
+      "source": "Deferred axis narrator_self_exemption_emotivism"
+    },
+    {
+      "id": "omega_civic_virtue_as_candidate_kernel",
+      "description": "The author's gestured-at 'civic virtue' morality is presented as a possible replacement common standard, but is never structurally developed. Does it constitute a fourth candidate reading of the personhood_boundary kernel, or an entirely separate (undeveloped) kernel of its own? Left unresolved due to insufficient source material.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_historical_causation_vs_justification",
+      "description": "The post conflates historical/material causes of Church abortion doctrine (labor needs, child mortality) with the doctrine's internal justificatory logic (sanctity of innocent life). Whether this is a genetic fallacy or a legitimate genealogical critique (MacIntyre's own method) is left ambiguous.",
+      "source": "Extraction \u00a71.1 claims (contested status)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "Kernel decomposition applied per explicit instruction. Verified personhood_boundary passes the three-part kernel test: (1) shared commitment \u2014 all three MacIntyre arguments invoke rights/personhood as the operative moral category; (2) divergent readings \u2014 bodily-autonomy, universalizability, and sanctity-of-life readings genuinely differ on where personhood begins and what obligation-type follows; (3) structurally different constraints emitted \u2014 different victim-sets (none/hypothetical-self/embryo-as-person) and different legal implications (permit/personal-disapproval-only/prohibit). Readings do not collapse into each other (no is_contested_kernel:false triggered) and axiom-contradiction test applied selectively (3 of 3 possible pairs declared contradictory on the 'could a single framework hold both' test, not merely on disagreement). Two additional non-kernel axes (metaethical_grounding_collapse, emotivism_as_disavowed_practice) survived \u00a73 pairwise independence testing against the kernel and each other on distinct observables; two further candidates deferred for low independent yield."
+  },
+  "_generation_run_id": "macintyre_after_virtue_emotivism_20260803_102123",
+  "_provenance": {
+    "scope_model": "claude-sonnet-5",
+    "scope_prompt_commit": "d179423dc12550308c604592b1d199a951739c4c",
+    "scope_schema_commit": "43ee9613b2ccba5f278157c4cbe534645e1f544e",
+    "persisted_at": "2026-08-03T10:21:23",
+    "axes_ceiling": null,
+    "topic": "Index to posts in this series\n\nIntroduction and method\n\nAlaisdair MacIntyre was a philosopher who wrote extensively on morality. His book, After Virtue: A Study In Moral Theory (1981) \u201c\u2026 is one of the most important works of Anglophone moral and political philosophy in the 20th century.\u201d Link. He wrote a prologue for the third edition in 2007 in which he confirms his thinking on the theories discussed in this work.\n\nMuch of the book is taken up with answers to questions that might be raised about his thoughts on morality and ethics. I\u2019ll skip most of that. The main ideas are unexpected and require focus.\n\nThe loss of context for morality\n\nMacIntyre begins by stating that we are confused and disoriented when it comes to discussions of morality. We have, he says \u201c\u2026 lost our comprehension, both theoretical and practical, o[f] morality.\u201d P.2; text has \u201cor\u201d. All of the words we use, all of the concepts they represent, and their coherence were developed in cultures far different from our own.\n\nMacIntyre says that we don\u2019t understand that moral structure the way it was originally understood. In particular, the justification for that moral structure arose from a vastly different social context, in which there was agreement that Christianity, and especially Catholicism, were absolutely true. It was that religious context, along with a social context that reinforced it, that gave rise to the moral principles and the forms of argument that we inherited. That context is gone.\n\nWe retain the forms of that older moral structure. One sense in which this seems true is that we want to think that other people agree with our own morality, that we all share a common morality. As any reader of the news knows, that\u2019s just not true. On almost every issue with a moral component there are people who disagree with me on moral grounds. And that\u2019s true even if we allow my idea about civic virtue as a common morality.\n\nAnother sense in which this seems true is that of the standard of judgment. What counts as an argument on the merits? What counts as an appropriate appeal to authority? Is there an objective standard by which we all agree to be bound, so that we can terminate a moral argument by recourse to that standard? For centuries in Western Europe, Catholicism was a unifying context for moral argument. There were sacred texts, approved commentary, such as those of Aquinas and Augustine, and a hierarchy to which people could turn for understanding and answers. Today there is no unity even in religion.\n\nFor example, at the start of the first invasion of Iraq I asked the senior minister at the PCUSA Church to which I belonged why the Church hadn\u2019t taken a position on the morality of that war. That\u2019s not how our Church acts, he said. Each of us was to decide that for ourselves, but apparently without doctrinal direction, and only very general guidance.\n\nWe live amidst a number of possible moral standards: utilitarianism, various strains of Christianity, and Kantian, for example. In any discussion of morality a logical argument can be constructed from first principles from each. The problem is that the first principles, the standards for judgment, are different. If the outcomes differ, it\u2019s because first principles differ. MacIntyre gives three examples, justification for war, abortion*, and liberty/equality.\n\nAbortion is a good example of the problem of loss of context. Catholic teaching on abortion originated centuries ago. The right of women to control of their bodies was not a consideration. There were practical considerations about having lots of children, including putting the kids to work, and high childhood mortality, plagues, famines and other catastrophes. Aristos wanted more workers and soldiers. The Bible and other accepted authorities offered apparent justifications. See, e.g.  Gen 1:28. Those real considerations and many others certainly contributed to the formulation of Church dogma.\n\nWe still use the old moral arguments, but the circumstances have changed, and the question becomes which of the old arguments, the old standards, should govern. I think we can see that in the arguments MacIntyre proposes*.\n\nEmotivism\n\nThe problems created by the lack of context have led some moral philosophers to adopt a theory called emotivism.\n\nEmotivism is the doctrine that all evaluative judgments and more specifically all moral judgments are nothing but expressions of preference, expressions of attitude or feeling, insofar as they are moral or evaluative in character. Pp. 11-12.\n\nMacIntyre gives a thorough beating to this idea, which it richly deserves. If morality is nothing but personal preference, whether of the outcomes or the first principles, then nothing is better than anything else. That\u2019s just not true. Some things are better than others, even if I can\u2019t prove it. Beating children is bad. You can bait me with the ancient adage, Spare the Rod, Spoil the Child, and I\u2019ll still report you for child abuse, because it\u2019s morally wrong and thankfully illegal.\n\nI reject the idea that we can\u2019t find moral principles that we all accept. We know it\u2019s possible, because we have laws that embody moral concerns, laws about harm to others, harm to property, and violations of public trust. Of course there are people who reject these laws, but they are garbage people who should be shamed and shunned\n\nMacIntyre thinks emotivism is the dominant theory for explaining our cultural understanding of morality, even though we absolutely refuse to admit it. His rejection of emotivism is detailed and thorough. He takes the important step of showing the nature of the society that would be produced if emotivism were the accepted view. It\u2019s not pretty. If we can\u2019t show our reasons and discuss morality because it\u2019s just personal preference, then interactions over moral issues become contests over who can manipulate the other. It\u2019s a society in which people\n\n \u2026 see in the social world nothing but a meeting place for individual wills, each with its own set of attitudes and preferences and \u2026 understand that world solely as an arena for the achievement of their own satisfaction, \u2026 interpret reality as a series of opportunities for their enjoyment .\u2026 P. 25.\n\nMaybe it\u2019s fortunate that we still pretend to operate under the old standards and a version of a civil virtue morality.\n\nSide note. MacIntyre makes a more general point that we often pretend that we are engaged in a dialog with thinkers of earlier times. We act as if they were addressing the same problems from the same point of view that we do. That isn\u2019t true. When Aristotle talks about virtue, he doesn\u2019t mean the same thing Aquinas does. Aquinas accepts the ideals of Christian virtue, while for Aristotle, we might think of Homeric virtue. I also think the goals of the inquiries of earlier thinkers are tied to their ideas about their cultures, and the questions that seemed important in their times.\n\nThe failure of Enlightenment to fill the void\n\nMacIntyre thinks that Enlightenment thinkers worked to replace the specifically religious justification of the inherited morality with something else. He analyses the efforts of Kant, Hume and Diderot. Kant tries to rely on reason. Hume and Diderot focus on human passions and desires. Kierkegaard recognizes that both failed, and suggests that we accept the old morality by personal choice, the \u201cleap of faith.\u201d. Kierkegaard seems to accept an early version of emotivism. None of this works for MacIntyre.\n\nAdditional discussion\n\nWe came in in the middle. When we were born, the world was up and running and we gradually began to take our part. Most of us internalized the old moral structure, along with all the other things we needed to survive and thrive. We didn\u2019t ask where any of it came from, or why those were the rules. Only later did we ask real questions and seeks alternatives. In this we are just like our ancestors.\n\nThere were always events that didn\u2019t seem to track our stated morality: in my case, very specifically, the Viet Nam War. But today it just seems worse. It seems like too many of us justify behavior that is deeply immoral under the old structure. Maybe that\u2019s emotivism at work.\n\nFeatured image: by Sean O\u2019Connor\n\n__________\n* This is MacIntyre\u201ds example of moral argumets about abortion in the US.\n\n2. (a) Everybody has certain rights over his or her own person, including his or her own body. It follows from the nature of these rights that at the stage when the embryo is essentially part of the mother\u2019s body, the mother has a right to make her own uncoerced decision on whether she will have an abortion or not. Therefore abortion is morally permissible and ought to be allowed by law.\n\n(b) I cannot will that my mother should have had an abortion when she was pregnant with me, except perhaps if it had been certain that the embryo was dead or gravely damaged. But if I cannot will this in my own case, how can I consistently deny to others the right to life that I claim for myself? I would break the so-called Golden Rule unless I denied that a mother has in general a right to an abortion. I am not of course thereby committed to the view that abortion ought to be legally prohibited.\n\n(c) Murder is wrong. Murder is the taking of innocent life. An embryo is an identifiable individual, differing from a newborn infant only in being at an earlier stage on the long road to adult capacities and, if any life is innocent, that of an embryo is. If infanticide is murder, as it is, abortion is murder. So abortion is not only morally wrong, but ought to be legally prohibited. Pp. 6-7."
+  }
+}
