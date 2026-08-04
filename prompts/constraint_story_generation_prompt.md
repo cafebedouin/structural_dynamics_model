@@ -151,7 +151,7 @@ Define the objective metrics of the constraint:
 
 * `narrative_ontology:constraint_claim(id, Type).` — The constraint's classification type, matching the analytical perspective. Values: `mountain`, `rope`, `tangled_rope`, `snare`, `scaffold`, `piton`. Must match the type declared in the `agent_power(analytical)` classification perspective. This is used by the Boltzmann compliance engine for structural analysis.
 
-* `domain_priors:base_extractiveness(id, Value).`
+* `domain_priors:base_extractiveness(id, Value).` **Referent (OQ-258, 2026-08-03): for a kernel-reading story, ε names the standing arrangement under contest (what the story is about), assessed by the reading's own lights — never the reading's endorsed alternative. Reading-indexed values over a fixed referent (OQ-26 compatible).**
 * `domain_priors:suppression_score(id, Value).` (Coercion/Lack of alternatives) **NOTE: Suppression is a structural property of the constraint. It is NOT scaled by any context dimension. Only extractiveness is scaled — by f(d) and scope σ(S) — per the formula χ = ε × f(d) × σ(S).**
 * `domain_priors:theater_ratio(id, Value).` (Piton detection: ratio of performative to functional activity)
 * `domain_priors:requires_active_enforcement(id).` (If applicable)

@@ -101,6 +101,10 @@ The confusion was in the language (the label "BGS"), not in the mathematics. The
 * Do not embed beneficiary or victim data inside stakeholder objects — roles (`beneficiary`, `payer`) declare position; the `base_properties` arrays remain the structural source through Phase B.
 * If you find yourself wanting to assign two different ε values to the same constraint — you have two constraints. Decompose.
 
+### The ε Referent for Kernel-Reading Stories (fixed)
+
+**For a kernel-reading story, ε's referent is the standing arrangement under contest — the arrangement the story is ABOUT — assessed by the reading's own lights.** The reading's endorsed alternative is NOT the referent. An abolitionist reading of animal use authors ε for the existing instrumental-use arrangement as the abolitionist sees it (high extraction), not for the rights-respecting arrangement it would put in place (which would make ε ≈ 0 for every advocacy reading). This fixes what ε is *about*, not what it *says*: values stay reading-indexed (per OQ-26, ε is a property of a reading, not a topic — a welfarist and an abolitionist reading share the referent and still author different ε). For a reading-free (flat) story the referent is the same: the standing arrangement the story describes.
+
 ---
 
 ## The Output Format: A JSON Constraint Story
@@ -194,7 +198,7 @@ Define the objective metrics of the constraint. These are the structural inputs 
 
 | Metric | JSON Field | Meaning |
 |---|---|---|
-| Base extractiveness (ε) | `base_properties.extractiveness` | How much the constraint extracts from those it governs |
+| Base extractiveness (ε) | `base_properties.extractiveness` | How much the constraint extracts from those it governs. For a kernel-reading story the referent is the standing arrangement under contest (see "The ε Referent for Kernel-Reading Stories"), never the reading's endorsed alternative |
 | Suppression | `base_properties.suppression` | Coercion / lack of alternatives |
 | Theater ratio | `base_properties.theater_ratio` | Ratio of performative to functional activity (piton detection) |
 | Accessibility collapse | `base_properties.accessibility_collapse` | How completely alternatives collapse once the constraint is understood |
