@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-04 — [correction-key] OQ-258 discriminator: referent ambiguity did NOT own the channel-legibility finding; reader-position survives; ε referent now fixed in the contract
+
+**Files:** prompts/constraint_story_generation_prompt_json.md, prompts/constraint_story_generation_prompt.md, schemas/constraint_story_schema.json, audits/2026-08-03_oq258_referent_discriminator/, audits/2026-07-27_cross_author_epsilon_probe/RESULTS_legibility_coding.md
+**Tier:** correction-key
+
+Null+fix discriminator over the 18 top-spread tacit/none_apparent items × 4 legs
+(pre-registered `74e74e35` BEFORE spend; contract fix `685ed7cf`). Old-contract redraw (Arm B)
+mean spread 0.4633 vs referent-fixed (Arm A) 0.5167, Wilcoxon p=0.328 — pinned row 3:
+**A ≈ B with B elevated. The 2026-07-27 channel-legibility finding may now be cited WITHOUT
+the OQ-258 degeneracy caveat, and the channel-conditional reliability caveat (2026-07-27
+entry) HARDENS from "artifact-or-real, undecided" to "survives its first real test."**
+The phenomenon replicates on redraw (B retains ~77% of baseline elevation, no
+regression-to-mean collapse). Named witness failed informatively: haiku re-authored ε=0.00
+on `animal_status__abolitionist_reading` under the fixed referent, rationale explicitly
+refusing the quantitative question; kimi FLIPPED 0.82→0.02 under the fix, scoring the
+reading-as-constraint itself ("the constraint itself blocks rather than extracts") —
+the live ambiguity is CONSTRAINT IDENTITY in kernel-reading stories (standing arrangement
+vs reading-as-constraint), upstream of the (a)/(b) referent choice OQ-258 posited; tracked
+as OQ-263 (three-valued declared-referent-field fallback). The referent-(b) contract fix
+STANDS regardless (ruling fixes the rebuild's contract): kernel-reading ε names the standing
+arrangement under contest, assessed by the reading's own lights (OQ-26 untouched). Do not
+expect prompt-side referent language ALONE to force cross-author ε agreement — witnessed
+insufficient. Kimi Moonshot batch stalled 0/18 ~8h → declared sync fallback used (identical
+sampling params). OQ-258 resolved; evidence archived under the audit dir (`generated/`),
+baseline legs md5-unchanged throughout.
+
+---
+
 ## 2026-08-03 — [landed] Kritik ingest probe: arsenal-format K-files score (f) partial recovery replicate-stable; AT Fiat K graduated (7 stories, n=225)
 
 **Files:** audits/2026-08-03_kritik_ingest/, agent/analysis/originals/k_files/, agent/c-orchestrator.py, agent/decompose_manifests/flat/, prolog/testsets/

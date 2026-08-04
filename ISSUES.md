@@ -12360,74 +12360,35 @@ of per-session manual audit.
 
 ## OQ-258 — ε's referent is unfixed in the generation contract: reading-endorsed arrangement vs situation contested (witnessed 4-leg divergence; confounds the channel-legibility result)
 
-**Ω-type:** Ω_C (definitional under-specification in the generation contract — which referent
-ε names for a kernel-reading story is a design choice; the engine cannot infer it, only the
-contract can fix it. WHICH referent is the operator's seat; the discriminator below runs under
-any fixed choice.)
+**Ω-type:** Ω_C (definitional under-specification in the generation contract; WHICH referent
+is the operator's seat).
 
-**Status:** open
+**Status:** resolved — discriminator ran 2026-08-03→04: referent ambiguity did NOT own the
+channel-legibility finding (pinned row 3: Arm A ≈ Arm B, B elevated); reader-position
+survives; the 2026-07-27 result may be cited without this degeneracy caveat.
 **Priority:** 2
-**Origin:** 2026-07-27 cross-author ε probe (`audits/2026-07-27_cross_author_epsilon_probe/`);
-mechanism hypothesis from the Claude-web review of that audit; contract surfaces verified by
-recon this session.
+**Origin:** 2026-07-27 cross-author ε probe; mechanism hypothesis from the Claude-web review.
 **Files:** `prompts/constraint_story_generation_prompt_json.md`,
-`prompts/constraint_story_generation_prompt.md`, `schemas/constraint_story_schema.json`
+`prompts/constraint_story_generation_prompt.md`, `schemas/constraint_story_schema.json`,
+`audits/2026-08-03_oq258_referent_discriminator/`
 
 **Deps:** splits_from OQ-26
 
-**The defect (witnessed).** The contract's entire definition of ε is one table line — "How
-much the constraint extracts from those it governs"
-(`constraint_story_generation_prompt_json.md:197`) — and the schema authors NO description
-(`base_properties.extractiveness` is a bare `{"type": "number", 0–1}`). For a kernel-READING
-story, "the constraint" is ambiguous between (a) the arrangement the reading ENDORSES and
-(b) the situation/arrangement the reading CONTESTS. Witness:
-`animal_status__abolitionist_reading` — haiku authored ε=0.00 with in-file justification
-"if animals are rights-holders, they cannot be rightfully extracted from at any rate"
-(referent a); flash 0.95 / kimi 0.88 / sonnet 0.91 (referent b). Same seed, same reading id,
-maximal spread in the 957-reading shared set. The ε-Invariance section
-(`prompt_json.md:71–75`) fixes observer-invariance and label-disambiguation but never this
-referent; OQ-26's resolution ("ε is a property of a reading, not a topic") covers
-cross-reading variation, not within-reading referent choice — hence splits_from.
+**Resolution (evidence).** Pre-registered null+fix discriminator over the 18 top-spread
+tacit/none_apparent items × 4 legs (`audits/2026-08-03_oq258_referent_discriminator/`;
+pre-registration `74e74e35`, contract fix `685ed7cf`, verdict + witness chain in WRITEUP.md;
+KNOWN_STATE 2026-08-04). Arm B (old-contract redraw) mean spread 0.4633 vs Arm A
+(referent-fixed) 0.5167, Wilcoxon p=0.328 — no collapse; phenomenon replicates on redraw.
 
-**Why it matters beyond one item.** It is the standing rival mechanism for the audit's
-headline result (4-author ε spread sorts by channel legibility, Fisher p=0.023): referent
-ambiguity sorts by channel exactly as reader-position would, because the referent is hardest
-to fix where no burden channel is stateable. The audit's largest (post hoc) asymmetry —
-referent-weak `none_apparent` items 8:1 into the top-spread decile, highest stratum spread
-(0.49 vs 0.17 statutory) — is what under-specification predicts most directly. Both
-mechanisms predict the same result on the same items; the legibility finding is DEGENERATE
-between them until discriminated.
-
-**Discriminator (pre-specified, cheap).** (1) Fix the referent explicitly in the contract —
-one paragraph; either ruling works for the test. (2) Re-author ε on the same tacit +
-referent-weak decile items (`testsets/` is the evolving-schema test bed; schema/prompt
-changes are encouraged there pre-rebuild). (3) Remeasure cross-author spread on those items.
-Spread collapses toward the statutory band (~0.17) ⇒ referent ambiguity owned the finding;
-stays wide ⇒ reader-position variance survives its first real test. Per the model-swap rule,
-re-authoring is generation work — serialize behind any running orchestrator and fingerprint
-corpus legs around the comparison.
-
-**What resolution changes.** (1) The rebuild's generation contract carries a fixed ε
-referent (and possibly a second authored field for the un-chosen quantity — operator ruling).
-(2) Settles whether the channel-conditional reliability note (KNOWN_STATE 2026-07-27) is a
-durable framework caveat — observer-axis quantities (H¹, type, orbit) are deterministic
-transforms of ε, so channel-conditional ε agreement makes downstream verdicts
-channel-conditional on tacit/referent-weak constraints — or an artifact a one-paragraph
-contract fix removes. A v8-paper caveat is premature until this discriminates.
-
-**Evidence (2026-08-03, kritik ingest — weak by construction).** Observation pass over the
-7 `fiat_efficacy_kernel` stories (`audits/2026-08-03_kritik_ingest/WRITEUP.md`): ε referent
-UNIFORM across all legs — authored over the defended practice itself (ε 0.22–0.42;
-beneficiaries/victims debate-community-internal). No within-kernel referent split. Caveat:
-answers-only meta-layer file, every reading endorses the same arrangement, so referents (a)
-and (b) nearly coincide — the specimen class where the ambiguity bites (a K CONTESTING an
-arrangement) did not graduate (pre-registered (f) verdict). Does not discriminate; logged
-for completeness. **Specimen SPEC for any kritik-side ε-referent test (2026-08-03):** the
-specimen must be an OBJECT-LAYER K that ATTACKS an arrangement (Biopower/Cap class — a
-story whose reading contests an external arrangement while advocating an alternative), so
-referents (a) and (b) genuinely diverge. A defending/answers file, or a meta-layer file,
-reproduces this non-result by construction — do not spend another run on that class for
-this OQ.
+**Still-operative ruling (referent (b), operator 2026-08-03, now IN the contract at
+`685ed7cf`):** kernel-reading ε names the standing arrangement under contest, assessed by
+the reading's own lights; reading-indexed values over a fixed referent (OQ-26 untouched).
+The typed fallback (declared per-story referent field) was not needed for THIS verdict but
+graduates to OQ-263: the named witness failed informatively (haiku re-authored ε=0.00 under
+the fix; kimi flipped 0.82→0.02 scoring the reading-as-constraint itself) — the live
+ambiguity is constraint IDENTITY (standing arrangement vs reading-as-constraint), upstream
+of the (a)/(b) choice, so prompt-side referent language alone cannot force cross-author
+agreement.
 
 ## OQ-259 — Kritik program continuation: emphasis-aware discriminator, second meta-layer candidate, essay deliverable
 
@@ -12623,9 +12584,49 @@ dep edge is authored here.
 (candidate engine refinement offered BY the kritik program); OQ-23's recon gets a
 principled consumer.
 
+## OQ-263 — Constraint-identity ambiguity in kernel-reading stories: "the constraint" reads as the standing arrangement OR as the reading's own normative principle; declared-referent-field fallback (three-valued)
+
+**Ω-type:** Ω_C (what "the constraint" denotes in a kernel-reading story is a contract
+design choice the engine cannot infer; the enum design and whether to adopt it is the
+operator's seat, the within-declaration comparison is then witnessable).
+
+**Status:** open
+**Priority:** 3
+**Origin:** OQ-258 discriminator, 2026-08-04 (`audits/2026-08-03_oq258_referent_discriminator/WRITEUP.md`
+§ mechanism diagnosis; KNOWN_STATE 2026-08-04).
+**Files:** `prompts/constraint_story_generation_prompt_json.md`,
+`schemas/constraint_story_schema.json`, `agent/generate_kernel_corpus.py`
+
+**Deps:** splits_from OQ-258
+
+**The finding.** With the ε referent FIXED to the contested arrangement (`685ed7cf`),
+authors still diverge by re-reading what "the constraint" IS: haiku re-authored ε=0.00 on
+`animal_status__abolitionist_reading` (rationale explicitly refuses the quantitative
+question: "The question is not 'how much extraction is happening' but 'is the use itself
+legitimate'"); kimi FLIPPED 0.82→0.02 under the fix, scoring the reading-as-constraint
+("the constraint itself blocks rather than extracts"). So the operative ambiguity is
+upstream of OQ-258's (a)/(b): the story-level subject can be (i) the standing arrangement,
+(ii) the reading's endorsed alternative, or (iii) the reading's normative principle itself.
+Prompt-side referent language alone is witnessed insufficient (OQ-258 Arm A ≈ Arm B).
+
+**The fallback instrument (pre-specified in the OQ-258 PROPOSAL, now three-valued).** Add a
+schema-required declared field, e.g. `base_properties.epsilon_referent ∈
+{standing_arrangement, endorsed_alternative, reading_as_constraint}`, authored per story;
+comparisons (cross-author spread, H¹ inputs, kernel-divergence reads) then condition on the
+DECLARATION instead of assuming a shared referent — disagreement within a declaration class
+is real seat-variance; disagreement across classes is referent mixing, now measurable
+instead of silent. Test bed posture applies (`testsets/` schema changes encouraged
+pre-rebuild); wire the compiler emit + a reader before claiming done (Build Discipline
+Pattern 1). Founding specimens: the two rationales above (archived in the OQ-258 audit dir).
+
+**What resolution changes.** The rebuild contract carries a declared ε-referent enum;
+cross-author ε reliability gets a conditioning variable; the channel-conditional
+reliability caveat (KNOWN_STATE 2026-07-27, hardened 2026-08-04) gains its candidate repair
+path.
+
 ---
 
-*Last updated: 2026-08-03. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-08-04. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

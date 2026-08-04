@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "fd966e03e79681defcb9ca6d1518236ec66edc53",
+    "store_version": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-03T13:55:27"
+    "generated_at": "2026-08-04T10:34:14"
   },
-  "issues_sha": "4ae0cb29ca6c78c9bb43f2be0be160531702a121df3038bd7d052852f747b41d",
-  "n_entries": 262,
+  "issues_sha": "26aaceb518981072c14512e159117c42553fc496635f6d2c0260f0a3844f2c83",
+  "n_entries": 263,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 139,
+    "resolved": 140,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
@@ -1259,19 +1259,6 @@
       ]
     },
     {
-      "id": "OQ-258",
-      "status": "open",
-      "priority": 2,
-      "summary": "ε's referent is unfixed in the generation contract: reading-endorsed arrangement vs situation contested (witnessed 4-leg divergence; confounds the channel-legibility result)",
-      "deps": [
-        "splits_from OQ-26"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-26"
-      ]
-    },
-    {
       "id": "OQ-259",
       "status": "open",
       "priority": 3,
@@ -1322,6 +1309,19 @@
         "OQ-23",
         "OQ-58",
         "OQ-259"
+      ]
+    },
+    {
+      "id": "OQ-263",
+      "status": "open",
+      "priority": 3,
+      "summary": "Constraint-identity ambiguity in kernel-reading stories: \"the constraint\" reads as the standing arrangement OR as the reading's own normative principle; declared-referent-field fallback (three-valued)",
+      "deps": [
+        "splits_from OQ-258"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-258"
       ]
     }
   ],
@@ -3618,6 +3618,20 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-253"
+      ]
+    },
+    {
+      "id": "OQ-258",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "ε's referent is unfixed in the generation contract: reading-endorsed arrangement vs situation contested (witnessed 4-leg divergence; confounds the channel-legibility result)",
+      "deps": [
+        "splits_from OQ-26"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-26",
+        "OQ-263"
       ]
     }
   ]
