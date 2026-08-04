@@ -1,0 +1,41 @@
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+  cache created: cachedContents/dmm5xolpg2rbglsjmt66lv1zmjifl9ge2kwhtqlz
+
+[attempt 1/3] submitting 1 Gemini requests (gemini-2.5-flash)...
+  batch batches/3zx2q6cnxw2vlxdv7fq0xq101kar6cbkhpkm
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_SUCCEEDED
+  FAIL hebrew_linguistic_life__liturgical_preservation_reading: 1 error(s) after repair: ["'stakeholders' is a required property"]
+  1 still failing after attempt 1
+
+[attempt 2/3] submitting 1 Gemini requests (gemini-2.5-flash)...
+  batch batches/k99fhagfvug4cvujgte8nvo3or01igd3zqst
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_SUCCEEDED
+  FAIL hebrew_linguistic_life__liturgical_preservation_reading: 1 error(s) after repair: ["'stakeholders' is a required property"]
+  1 still failing after attempt 2
+
+[attempt 3/3] submitting 1 Gemini requests (gemini-2.5-flash)...
+  batch batches/bynu6oz32u6bv9pv5dzui3mbepzxc585zaok
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_SUCCEEDED
+  FAIL hebrew_linguistic_life__liturgical_preservation_reading: 1 error(s) after repair: ["'stakeholders' is a required property"]
+  1 still failing after attempt 3
+  cache deleted: cachedContents/dmm5xolpg2rbglsjmt66lv1zmjifl9ge2kwhtqlz
+
+FAILURES: 1 after 3 attempts -> /home/scott/bin/structural_dynamics_model/outputs/no_scope_runs_flash_oq258_armb/failures.json
+
+Gemini no-scope run complete: 0/1 into prolog/testsets_flash_oq258_armb (ladder: beta_processed_flash_oq258_armb.txt).
+  token_acc: input=97,077 output=10,380 -> ~$0.0551 (flash interactive $0.30/$2.50; batch -50%)

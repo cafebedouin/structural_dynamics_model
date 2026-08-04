@@ -59,3 +59,16 @@ predicts most directly). Recon confirmed the contract never fixes the referent (
 table line; schema: bare number). Witnessed instance + pre-specified discriminator
 (fix referent → re-author decile items → remeasure spread): **ISSUES.md OQ-258**. Do not cite
 this audit as evidence for the reader-profile mechanism until OQ-258 discriminates.
+
+## Postscript — OQ-258 discriminator VERDICT (2026-08-04)
+
+The pre-specified discriminator ran (`audits/2026-08-03_oq258_referent_discriminator/`,
+pre-registered `74e74e35`, null + fix arms over the 18 top-spread tacit/none_apparent items
+× 4 legs): **referent ambiguity did NOT own this finding.** Old-contract redraw (Arm B) mean
+spread 0.4633 vs referent-fixed (Arm A) 0.5167 — A ≈ B (Wilcoxon p=0.328), B elevated
+(≥0.38 pinned boundary), pinned row 3. **The reader-position/channel-conditional reliability
+reading of this audit SURVIVES its first real test and the instrument note above hardens.**
+This audit may now be cited for the channel-legibility sort without the OQ-258 degeneracy
+caveat; the residual mechanism finding (constraint-identity ambiguity: authors can score the
+reading-as-constraint itself, witnessed kimi 0.82→0.02 flip under the fix) is tracked as
+OQ-263.

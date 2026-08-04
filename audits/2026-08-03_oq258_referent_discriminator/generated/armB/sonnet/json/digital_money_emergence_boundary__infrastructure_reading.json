@@ -1,0 +1,352 @@
+{
+  "header": {
+    "constraint_id": "digital_money_emergence_boundary__infrastructure_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "cfffe001-8058-4487-a91f-2967ffe74b7c"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Infrastructure Boundary of Digital Money Emergence (Bank Electronic Transfer Rails)",
+    "topic_domain": "monetary_economics/financial_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "swift_cooperative",
+      "ach_operators",
+      "correspondent_banking_network",
+      "central_bank_settlement_authorities"
+    ],
+    "victims": [
+      "retail_depositors",
+      "cross_border_remittance_senders",
+      "non_member_financial_institutions",
+      "developing_economy_correspondent_clients"
+    ],
+    "vindicated_propositions": [
+      "money_is_defined_by_transferability_not_holder_access"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "swift_cooperative",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operates the messaging standard that most cross-border interbank transfers rely on since 1977; sets membership rules, message formats, and compliance requirements that member banks must meet to participate. Collects fees per message and shapes what counts as a valid electronic transfer instruction."
+    },
+    {
+      "name": "ach_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "spatial_scope": "national",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "situation": "Run the domestic batch clearing systems (established 1972 in the US) that settle direct deposits, bill payments, and interbank transfers; charge participating banks per-transaction or membership fees and define settlement windows and eligibility rules that determine which institutions can move money electronically at all."
+    },
+    {
+      "name": "correspondent_banking_network",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Large money-center banks that hold nostro/vostro accounts for smaller banks, effectively brokering access to the SWIFT/ACH rails for institutions that cannot join directly. They earn spreads and fees on every transfer they intermediate and their gatekeeping position depends on the rails remaining bank-controlled rather than open."
+    },
+    {
+      "name": "central_bank_settlement_authorities",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Provide the ultimate settlement finality underlying ACH and correspondent transfers through reserve accounts; benefit from the infrastructure boundary because it keeps 'real' money creation and settlement authority anchored to licensed banks rather than to whoever can hold a digital instrument."
+    },
+    {
+      "name": "retail_depositors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold bank deposits that are electronically transferable by the bank on their behalf but cannot access the interbank rails directly; they pay indirectly through fees, float, and the bank's spread on every transfer, without a say in message standards or settlement timing that determines when their 'digital money' actually moves."
+    },
+    {
+      "name": "cross_border_remittance_senders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Send money across the correspondent banking chain and absorb multiple layers of fees and FX spread at each intermediary hop; the infrastructure boundary's dependence on chained correspondent relationships (rather than direct settlement) is the specific structural feature that generates their cost, and they have no path around it without an alternative rail."
+    },
+    {
+      "name": "non_member_financial_institutions",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Smaller banks, cooperatives, and fintechs in jurisdictions without direct SWIFT or ACH membership access must route through correspondent intermediaries; they would prefer direct settlement access but are excluded by capital, compliance, and membership requirements set by the incumbent rail operators."
+    },
+    {
+      "name": "developing_economy_correspondent_clients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Banks and their customers in economies dependent on correspondent banking for cross-border settlement bear the cost of de-risking (correspondent banks withdrawing relationships to reduce compliance exposure), which the infrastructure boundary treats as an externality of the rail-control structure rather than a cost the rail operators internalize."
+    },
+    {
+      "name": "monetary_historians_and_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze when digital money's boundary should be dated, whether by conceptual possibility, infrastructure capability, or consumer accessibility; note that the infrastructure reading is the one central bankers and BIS statisticians most often adopt when tracking M-aggregate collapse, because it tracks what banks can settle, not what theorists could imagine or consumers could hold."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Standardized electronic messaging (SWIFT) and batch clearing (ACH) solve a genuine multilateral coordination problem: without a shared format and settlement cadence, every bank pair would need bespoke bilateral transfer arrangements, making national and cross-border payments far slower and more error-prone.",
+    "transfer_function": "Moves fee income and information-control rents from every transaction routed through the rails toward the rail operators (SWIFT, ACH operators) and the correspondent banks that broker access for non-members, while transaction costs, FX spread, and de-risking exposure are moved onto depositors, remitters, and excluded institutions who have no alternative settlement path.",
+    "absent_voices": "Non-member financial institutions and their retail customers in de-risked corridors would object to membership and correspondent-access terms if given a seat, but rail governance historically sits with founding member banks and central banks, not with excluded institutions or the end customers who bear the pass-through costs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If SWIFT messaging and ACH batch clearing vanished overnight, interbank transfers would revert to slower, bilateral, largely manual settlement; cross-border payments would fragment into ad hoc correspondent arrangements without common standards, and the electronic character of 'bank money' that underlies most M2/M3 measurement would itself become uncertain — this is precisely why the infrastructure boundary is treated as consequential rather than incidental.",
+    "founding_problem": "Banks needed a reliable, standardized way to instruct each other electronically to move funds — replacing paper-based telex, mail, and manual reconciliation that were slow, error-prone, and could not scale with the growth of international trade and domestic consumer banking volume in the 1960s-70s.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Central bank payment-systems reports and BIS committee analyses (outside SWIFT's and ACH operators' own governance) corroborate that the original coordination problem (speed, standardization, reconciliation) was real and substantially solved by the 1980s; the same outside analyses increasingly describe current SWIFT/correspondent fee structures and de-risking externalities as extraction layered atop a coordination function that could now be served more cheaply by alternative settlement rails (real-time gross settlement systems, CBDCs), a claim SWIFT and correspondent banks themselves dispute."
+  },
+  "interval": {
+    "start": 1967,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1977,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1977,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1977,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This story instantiates the INFRASTRUCTURE reading of the digital_money_emergence_boundary kernel: money's digital character emerges when the banking system gains the electronic *rails* to move deposit balances between institutions (1967 ATMs enabling electronic account access, 1972 ACH enabling domestic batch clearing, 1977 SWIFT enabling standardized cross-border messaging), regardless of whether the concept was theoretically imaginable earlier (the sibling conceptualization_reading, anchored to 1960s telecom theory and Chaum's 1985 formalization) or whether consumers could directly hold digital instruments outside a bank relationship (the sibling consumer_holdings_reading, anchored to 1990s e-purses and the 2000 EMD directive). This reading is the one central banks and BIS statisticians most often operationalize, because it is the point at which M2/M3 electronic bank deposits begin functioning as transferable digital money even though no consumer-facing digital token exists yet — the point at which M4/M5 collapse (electronic deposits blurring into a genuinely new monetary category) becomes visible in the data.",
+    "narrative_context": "Between 1967 and 1977, three infrastructure milestones — ATMs giving depositors electronic account access, ACH enabling domestic batch clearing of deposits, and SWIFT standardizing cross-border interbank messaging — converted bank deposits from paper-ledger claims into electronically transferable balances. Banks, not consumers, were the primary actors who gained new transfer capability; the consumer experience of 'holding digital money' lagged by decades. The rails that emerged became durable chokepoints: SWIFT and ACH operators, and the correspondent banks that broker access for non-members, sit at the center of a coordination function (fast, standardized settlement) that has increasingly generated extraction (fees, spreads, de-risking externalities) layered on top of it.",
+    "key_agents": [
+      "swift_cooperative: rail operator / agenda_setter (institutional/arbitrage) — sets messaging standards and membership terms",
+      "ach_operators: domestic rail operator / agenda_setter (institutional/arbitrage) — sets batch clearing rules and fees",
+      "correspondent_banking_network: intermediary beneficiary (powerful/constrained) — brokers rail access for non-members at a spread",
+      "central_bank_settlement_authorities: ultimate settlement guarantor / beneficiary (institutional/analytical) — anchors finality to licensed banks",
+      "retail_depositors and cross_border_remittance_senders: payers (powerless/trapped) — bear fees and float without rail governance voice",
+      "monetary_historians_and_economists: analytical observer — dates the boundary by infrastructure capability, not concept or consumer access"
+    ],
+    "logic_rationale": "Extractiveness (0.58) sits at a moderate-high level: the coordination function (standardized, reliable electronic settlement) is real and substantial, but four decades of fee layering, correspondent-chain spreads, and de-risking externalities have accumulated on top of it — the temporal series shows extraction rising from 0.22 at the 1967 ATM introduction to 0.58 by 2024 as the rails matured from novel infrastructure into entrenched, fee-generating chokepoints. Suppression (0.42) reflects real but partial barriers: membership requirements, compliance costs, and correspondent dependency constrain exit for smaller institutions and end users, but the barriers are not absolute — alternative rails (RTGS systems, some CBDC pilots) exist even if underused. Theater ratio is modest (0.28) because most of the apparatus does real settlement work; it is not primarily performative, though a growing share of compliance overhead (KYC/AML layers) functions partly as institutional self-protection rather than pure settlement function.",
+    "directionality_logic": "SWIFT and ACH operators sit closest to the beneficiary end: they set terms, collect fees, and their exit options are effectively arbitrage-grade (they can restructure pricing or governance with little external check). Correspondent banks and central banks are secondary beneficiaries — they profit from or depend on the rail-control structure without operating it directly. Retail depositors, remittance senders, and developing-economy correspondent clients sit at the target end: trapped exit, no rail governance voice, and the costs of de-risking and correspondent spreads land on them without recourse. Non-member institutions are excluded rather than coordinated — their absence from rail membership is the specific mechanism that sustains correspondent banks' brokering rents.",
+    "mandatrophy_analysis": "The founding problem — the absence of standardized, fast electronic interbank settlement — was substantially solved by the 1980s; the coordination function has not fully disappeared (global payments still need standardized messaging), which is why founding_problem_status is authored as contested rather than dead. The classification as tangled_rope (not snare) preserves this: real coordination persists alongside real, identifiable victims and required active enforcement (membership rules, compliance gatekeeping) — collapsing this into pure extraction would erase the genuine settlement problem the rails still solve; collapsing it into pure coordination would erase the four decades of accumulating extraction the measurement series documents.",
+    "perspectival_gap": "From the rail operator's seat, the infrastructure boundary is a coordination triumph: proof that standardized rails let money move at the speed of instruction rather than the speed of paper. From the trapped depositor or remittance sender's seat, the same boundary is where their money became legible and controllable by intermediaries who take a cut at every hop they cannot avoid. The engine's per-seat computation should register this divergence directly from the declared power/exit asymmetry, not from any claim adjudicating which seat is 'right.'"
+  },
+  "omegas": [
+    {
+      "id": "infrastructure_vs_conceptualization_dating",
+      "question": "Is the infrastructure reading (banks gain transfer capability, 1967-1977) or the conceptualization reading (digital money becomes theoretically thinkable, 1960s telecom/1985 Chaum) the more structurally correct place to locate digital money's emergence?",
+      "resolution_mechanism": "There is no empirical resolution — this is a framing choice about which capability (technical/theoretical possibility vs. operational bank capability) constitutes the defining threshold. Different institutional literatures (BIS/central bank statisticians favor infrastructure; cryptography/monetary theory literatures favor conceptualization) will continue to diverge.",
+      "impact": "If the conceptualization reading is adopted instead, the beneficiary set shifts from rail operators toward theorists and early cryptographic-protocol designers, and the extraction profile drops sharply (an idea existing collects no rents) — the two readings produce very different ε values, which is exactly why they are authored as separate constraint stories rather than one story with a measurement parameter.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Framing choice between the infrastructure-capability boundary and the theoretical-possibility boundary for dating digital money's emergence."
+    },
+    {
+      "id": "infrastructure_vs_consumer_holdings_dating",
+      "question": "Is the infrastructure reading (banks can transfer electronically even though consumers cannot directly hold digital instruments) or the consumer_holdings reading (consumers can directly hold and transact digital instruments, 1990s e-purses/2000 EMD) the more structurally correct boundary?",
+      "resolution_mechanism": "Resolvable partly empirically (when did M-aggregate composition statistics actually shift in response to each milestone) but partly conceptually (whether 'money' requires direct holder access or only bank-mediated transferability) — a mixed omega.",
+      "impact": "Under the consumer_holdings reading, the beneficiary set shifts toward e-money issuers and payment processors, and the victim set shifts toward merchants and unbanked populations excluded from consumer digital instruments; the infrastructure reading's beneficiaries (rail operators) and victims (trapped depositors) would not carry over cleanly, confirming these are genuinely distinct constraints, not the same constraint measured differently.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Framing choice between bank-mediated transferability and direct consumer holding as the defining threshold."
+    },
+    {
+      "id": "correspondent_deriskng_externality_measurement",
+      "question": "How much of the extraction borne by developing_economy_correspondent_clients is attributable to the infrastructure boundary's correspondent-chain structure specifically, versus general banking regulation (AML/KYC) that would exist under any settlement architecture?",
+      "resolution_mechanism": "Comparative analysis of de-risking incidence in corridors served by direct RTGS/CBDC settlement versus corridors still dependent on multi-hop correspondent banking, controlling for regulatory regime.",
+      "impact": "If de-risking is primarily a correspondent-chain artifact, it strengthens the tangled_rope classification (identifiable structural victims of this specific rail architecture); if primarily a general regulatory artifact, the victim attribution to this constraint specifically would need softening.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether de-risking externalities are attributable to correspondent-chain architecture or general banking regulation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_money_emergence_boundary__conceptualization_reading",
+      "digital_money_emergence_boundary__consumer_holdings_reading"
+    ],
+    "dual_formulation_note": "This story is the infrastructure_reading member of the digital_money_emergence_boundary kernel family. The conceptualization_reading (theoretical possibility, negligible extraction, closer to mountain/rope) upstream-influences this reading by establishing that electronic transfer was conceivable before banks built the rails to do it. This reading in turn influences the consumer_holdings_reading downstream: once banks could move deposits electronically, the pressure to extend similar capability to consumer-held instruments (e-purses, EMD) built directly on the infrastructure this reading describes. All three stories share the digital_money_emergence_boundary kernel_id but instantiate structurally distinct constraints with different ε values, beneficiary sets, and victim sets — per the ε-invariance principle, they are linked via this network field rather than merged into one story."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "bank_mediated_settlement_primacy",
+    "drift_state": {
+      "moment": "post_cbdc_pilot_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "digital_money_emergence_boundary__conceptualization_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "digital_money_emergence_boundary__consumer_holdings_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "transferability_by_banks_constitutes_money_not_holder_access",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "settlement_finality_requires_licensed_intermediary_control",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "swift_cooperative",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "f1436bd4937f864097dabaad92b27bd9b6eec212",
+    "generated_date": "2026-08-03",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

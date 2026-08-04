@@ -1,0 +1,51 @@
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Loaded 170 threshold values from config.pl
+  cache created: cachedContents/zm22ev55t2lv5mtbs9cfwdm8trovazz1gkkbzosx
+
+[attempt 1/3] submitting 2 Gemini requests (gemini-2.5-flash)...
+  batch batches/j08kc2e1zo9mnsq6s91gglig9wmxuowh3eek
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_SUCCEEDED
+  FAIL competence_occupation__real_incident_necessity: 2 error(s) after repair: ["'stakeholders' is a required property", "'none' is not one of ['information_standard', 'attachment_coordination', 'resource_allocation', 'identity_coordination', 'enforcement_mechanism', 'global_infrastructure']"]
+  FAIL hebrew_linguistic_life__liturgical_preservation_reading: 1 error(s) after repair: ["'stakeholders' is a required property"]
+  2 still failing after attempt 1
+
+[attempt 2/3] submitting 2 Gemini requests (gemini-2.5-flash)...
+  batch batches/8n48seedrcx9l278qup830j825qged8jvcfl
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_SUCCEEDED
+  LINT competence_occupation__real_incident_necessity (3 warning(s)):
+    - MISSING_BENEFICIARY: Non-mountain constraints require narrative_ontology:constraint_beneficiary/2 for directionality derivation. Without it, the engine falls back to canonical d (power atom only).
+    - MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but base_extractiveness=0.95 exceeds the mountain threshold (0.25). Operator readout, NOT an authoring error to collapse: the authored mountain claim and the engine's metric-seat reading DIVERGE here — high authored ε makes the metric seat read snare/rope/tangled_rope, and the false_natural_law signature routes to tangled_rope where Boltzmann non-compliance is present. These readings need not collapse to one true type (OQ-74 / seat theorem); the divergence is itself the authored signal the engine measures.
+    - MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but suppression_score=0.88 exceeds the mountain suppression ceiling (0.05). Operator readout, NOT an authoring error to collapse: the authored mountain claim and the engine's metric-seat reading DIVERGE here — high authored suppression makes the metric seat read snare/rope/tangled_rope, and the false_natural_law signature routes to tangled_rope where Boltzmann non-compliance is present. These readings need not collapse to one true type (OQ-74 / seat theorem); the divergence is itself the authored signal the engine measures.
+  OK competence_occupation__real_incident_necessity
+  FAIL hebrew_linguistic_life__liturgical_preservation_reading: 1 error(s) after repair: ["'stakeholders' is a required property"]
+  1 still failing after attempt 2
+
+[attempt 3/3] submitting 1 Gemini requests (gemini-2.5-flash)...
+  batch batches/ybx2cophluzqsygepmwjke792z0zi6wjqw37
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_RUNNING
+  batch JOB_STATE_SUCCEEDED
+  FAIL hebrew_linguistic_life__liturgical_preservation_reading: 1 error(s) after repair: ["'stakeholders' is a required property"]
+  1 still failing after attempt 3
+  cache deleted: cachedContents/zm22ev55t2lv5mtbs9cfwdm8trovazz1gkkbzosx
+
+FAILURES: 1 after 3 attempts -> /home/scott/bin/structural_dynamics_model/outputs/no_scope_runs_flash_oq258_armb/failures.json
+
+Gemini no-scope run complete: 1/2 into prolog/testsets_flash_oq258_armb (ladder: beta_processed_flash_oq258_armb.txt).
+  token_acc: input=161,707 output=17,808 -> ~$0.0930 (flash interactive $0.30/$2.50; batch -50%)

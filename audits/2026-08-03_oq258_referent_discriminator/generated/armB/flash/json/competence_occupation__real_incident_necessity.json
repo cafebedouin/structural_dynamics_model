@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__real_incident_necessity",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "dbc21df6-7b7f-428c-81c3-6f191ba24d05"
+  },
+  "base_properties": {
+    "extractiveness": 0.95,
+    "suppression": 0.88,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Competence Occupation: Real Incident Necessity",
+    "topic_domain": "high_reliability_organizations/safety_training/competence_maintenance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [],
+    "victims": [
+      "high_reliability_organizations",
+      "frontline_operators",
+      "affected_public"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_reliability_organizations",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "These organizations operate complex, high-consequence systems where failure is catastrophic. They are trapped by the belief that only real incidents can truly test and maintain competence, leading to an unresolvable problem of competence decay in the absence of such incidents. They bear the cost of this epistemic trap through latent risk and the inability to certify true readiness."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "The individuals who operate the high-consequence systems. Their professional identity is often tied to their ability to perform under extreme pressure, but this reading implies their true competence can only be validated by actual catastrophe, leading to chronic anxiety and a sense of unproven readiness. They bear the psychological and professional cost of this unresolvable dilemma."
+    },
+    {
+      "name": "affected_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "The public whose safety depends on the competence of high-reliability organizations. They are the ultimate victims of any catastrophic incident that might 'occupy the competence kernel,' bearing the direct human and societal costs. They are trapped by their reliance on these systems and the implicit acceptance of this competence model."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Tasked with ensuring public safety, but constrained by the epistemic claim that only real incidents provide true competence data. They struggle to design effective training and certification regimes, often defaulting to procedural compliance rather than genuine competence assessment. They administer a system that implicitly accepts this constraint."
+    },
+    {
+      "name": "simulation_designers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Proponents of advanced simulation and training technologies. They are excluded from the core competence kernel by this reading, which devalues their offerings as 'not authentic.' They would argue for the sufficiency of high-fidelity simulation but are marginalized by the 'real incident' dogma."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "This constraint implicitly coordinates the understanding of competence within high-reliability domains, defining what 'true' readiness means, even if that definition is catastrophic.",
+    "transfer_function": "It transfers the burden of competence validation onto the occurrence of rare, catastrophic events, effectively transferring latent risk from the theoretical realm to the real world, from organizations to the public.",
+    "absent_voices": "Simulation designers and proponents of continuous, non-catastrophic competence maintenance would object, arguing that this reading creates an impossible standard and devalues proactive safety measures. They are excluded by the epistemic framing of 'authenticity' tied to real incidents.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, high-reliability organizations would be forced to fundamentally rethink competence maintenance, investing heavily in advanced simulation, continuous assessment, and alternative validation methods. The entire safety training and certification industry would reorganize around proactive, non-catastrophic competence occupation.",
+    "founding_problem": "The inherent difficulty of validating competence in systems where failure is rare but catastrophic, and where 'normal' operations do not stress the system to its limits.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem is attested by safety researchers, accident investigators, and organizational theorists who highlight the 'normalization of deviance' and the 'gap between espoused theory and theory-in-use' in high-reliability contexts. This corroboration comes from outside the direct beneficiaries of the status quo (as there are no true beneficiaries of catastrophe)."
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.92
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.93
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.94
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.88
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint posits that only actual catastrophic incidents provide the authentic conditions necessary to truly occupy the 'competence kernel' in high-reliability organizations. This reading implies that all other forms of training, simulation, or procedural reinforcement are insufficient for genuine competence maintenance. It is a 'mountain' in the sense that it describes an irreducible epistemic limit on competence validation, but one with devastating 'victims' (the organizations themselves, their operators, and the public) and no viable 'beneficiaries' (as no one benefits from catastrophe). The high extractiveness reflects the unresolvable latent risk and the cost of perpetual uncertainty.",
+    "logic_rationale": "The extractiveness is extremely high because the constraint imposes an impossible burden: true competence can only be 'occupied' through events that are, by definition, failures of the system. This creates a perpetual state of unvalidated competence and latent risk. Suppression is high because this epistemic claim is deeply embedded in some organizational cultures, making it difficult to challenge or propose alternatives without being seen as 'soft' on safety. Theater ratio is low because there's little performative maintenance; the constraint is a genuine, albeit tragic, epistemic limit.",
+    "perspectival_gap": "From the perspective of high-reliability organizations and frontline operators, this constraint is a tragic mountain: an unchangeable truth about the limits of human preparation. From an analytical observer's perspective, it's a conceptual trap that prevents effective competence maintenance by setting an unattainable and destructive standard.",
+    "directionality_logic": "High-reliability organizations, frontline operators, and the affected public are all victims, bearing the costs of latent risk and actual catastrophe. Safety regulators are agenda-setters who administer a system shaped by this constraint, struggling to find solutions within its bounds. Simulation designers are excluded, as their offerings are deemed insufficient by this reading.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as it describes an epistemic limit rather than a human-designed mandate. However, its persistence creates a 'mandatrophy of competence' where the mandate to be competent cannot be authentically fulfilled without unacceptable costs. The classification as a Mountain with high extractiveness and victims highlights the tragic nature of this epistemic trap."
+  },
+  "omegas": [
+    {
+      "id": "epistemic_vs_constructed_limit",
+      "question": "Is the necessity of real incidents for competence occupation a genuine epistemic limit (a Mountain), or a constructed belief sustained by organizational culture and a lack of imagination for alternative validation methods (a Snare)?",
+      "resolution_mechanism": "Empirical demonstration of alternative, non-catastrophic methods (e.g., advanced simulation, predictive analytics, continuous micro-assessments) that reliably predict performance in real incidents, leading to a shift in organizational belief and practice.",
+      "impact": "If a genuine epistemic limit, the classification as Mountain holds, highlighting an irreducible challenge. If constructed, it reclassifies as a Snare, revealing an extractive mechanism that perpetuates latent risk for the benefit of maintaining a particular (and flawed) understanding of competence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between a natural epistemic limit and a socially constructed belief about competence validation."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is one reading of the 'competence_occupation' kernel. What would change structurally if a sibling reading (e.g., 'simulation_sufficiency' or 'hybrid_occupation') were adopted?",
+      "resolution_mechanism": "Analysis of the structural implications of adopting a different reading, specifically how it would alter the declared beneficiaries/victims, extractiveness, and suppression of the competence maintenance system.",
+      "impact": "Adopting 'simulation_sufficiency' would likely lower extractiveness and suppression by providing a viable, non-catastrophic path to competence. Adopting 'hybrid_occupation' would introduce a more complex, multi-faceted approach, potentially reducing extractiveness but increasing coordination costs.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the competence_occupation kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_occupation__simulation_sufficiency",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_occupation__hybrid_occupation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "authenticity_requires_catastrophe",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "simulation_is_insufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "catastrophic_validation_paradigm",
+    "drift_state": {
+      "moment": "contemporary_safety_science_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "f1436bd4937f864097dabaad92b27bd9b6eec212",
+    "generated_date": "2026-08-03",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
