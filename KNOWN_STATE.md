@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-05 — [correction-key] OQ-259 item 1: emphasis discriminator HALTED by its pre-registered Arm-0 gate — per-reading presence is NOT redraw-stable within a file; "replicate-stable (f)" is cross-file only
+
+**Files:** python/audits/emphasis_extract.py, audits/2026-08-05_oq259_emphasis_discriminator/, agent/analysis/originals/k_files/, audits/2026-08-03_kritik_ingest/SCORING.md
+**Tier:** correction-key
+
+Full apparatus built and witnessed before the gate: pre-registration addendum
+`c4785da7` (per-file thresholds; quantified HALT reproduce-rate < 2/3; Arm-2
+selection rule + seed 259; commit-order blinding protocol) committed BEFORE any run;
+`python/audits/emphasis_extract.py` (raw-string docx splice — ET re-serialization
+breaks pandoc image extraction; byte-copy rezip; scramble mode) + three
+emphasis-aware conversions committed `b8a44661`, strip-restore BYTE-EXACT vs the
+`1bd57a84` baselines, marker pairs exactly as predicted (AT Fiat 208/175, Biopower
+829/1014, Cap 2535/2589). Arm 0 (same-input re-runs ×2 per payload file, inputs
+md5-pinned, `70c458f9`): **Cap K reproduce-rate 3/6 then 2/6 — HALT fired (< 2/3 in
+both; the second Cap re-run minted NO contested kernel at all); Biopower passed 4/6 +
+5/6. Read-through churn control: 3 of the 4 discriminator-target readings churned at
+byte-identical input** (world_system, growth_process, coalition_governmentality;
+only the insurance deferred axis stable 2/2) → Cap K P1 effective n=0, Biopower n=1.
+Arm 1/Arm 2 NOT run; ~884K input tok spent (4 of ≤8 calls); corpus untouched every
+run (listing-diff witness). **Citation consequences:** (1) the 2026-08-03 "(f)
+partial recovery, replicate-stable" verdict is CROSS-FILE stability — do NOT cite it
+as within-file redraw stability of any individual reading; (2) SCORING.md's one
+CONTESTABLE hit (`reformist_iatrogenic`) churned 0/2 — treat that baseline row as
+draw-fragile; (3) any future per-reading-presence design on ~100K–340K-token inputs
+needs a churn arm sized to the effect or a churn-robust observable (idiom SHARE over
+pooled redraws). Continuation is an operator ruling (options ranked in
+`ARM0_HALT_REPORT.md`; OQ-259 carries `blocked_on_human`). Extractor + conversions
+stay ready for whichever continuation is ruled.
+
+---
+
 ## 2026-08-04 — [correction-key] OQ-258 discriminator: referent ambiguity did NOT own the channel-legibility finding; reader-position survives; ε referent now fixed in the contract
 
 **Files:** prompts/constraint_story_generation_prompt_json.md, prompts/constraint_story_generation_prompt.md, schemas/constraint_story_schema.json, audits/2026-08-03_oq258_referent_discriminator/, audits/2026-07-27_cross_author_epsilon_probe/RESULTS_legibility_coding.md

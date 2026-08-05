@@ -12396,11 +12396,15 @@ agreement.
 format or of emphasis-blind ingestion is witnessable by running the pre-named
 discriminator; no ruling needed to run it).
 
-**Status:** open
+**Status:** open — item 1 executed through Arm 0 and HALTED by its pre-registered gate
+(2026-08-05); continuation is an operator ruling.
 **Priority:** 3
 **Origin:** 2026-08-03 kritik ingest probe (`audits/2026-08-03_kritik_ingest/`;
 pre-registration `PROPOSAL.md` `1bd57a84`, verdict `SCORING.md` `d7c49cdd`).
-**Files:** `agent/analysis/originals/k_files/`, `audits/2026-08-03_kritik_ingest/`
+**Files:** `agent/analysis/originals/k_files/`, `audits/2026-08-03_kritik_ingest/`,
+`audits/2026-08-05_oq259_emphasis_discriminator/`, `python/audits/emphasis_extract.py`
+
+**Deps:** blocked_on_human oq259-item1-halt-continuation-ruling
 
 **Standing result being extended.** Both arsenal replicates (Cap K NW, Biopower NW)
 scored (f) partial recovery, replicate-stable, under EMPHASIS-BLIND ingestion (operator
@@ -12437,7 +12441,12 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
 2. **Second meta-layer candidate:** `T Framework` (584K) needs its own dry-run
    (`--skip-search`; exceeds the research cap) before any graduation decision. Per the
    (f) verdict, do NOT expand the K-file corpus beyond meta-layer files on current
-   evidence.
+   evidence. **Notes (2026-08-05):** (a) its committed baseline `.md` does NOT
+   reproduce under the pinned pandoc recipe (prototype-session observation) — resolve
+   conversion provenance before any emphasis-aware variant; (b) it is cyan-dominant
+   (`{cyan: 943, yellow: 90}` highlights witnessed), so emphasis-aware conversion needs
+   `--highlight-colors cyan`; (c) any single-dry-run graduation read inherits the item-1
+   churn-floor caveat below.
 3. **Deferred essay deliverable (operator-side, essay-layer ONLY, never pipeline
    input):** `shanahan_kritik.md` mapping doc — must build on the ballot mapping AS
    CORRECTED by the operator (2026-08-03, recorded on OQ-261: the ballot sections
@@ -12460,9 +12469,35 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    An adjacent flag (bias, one-sidedness, tunnel vision, genre NAMED without the
    selection-pressure claim) does NOT count as reproduction.
 
+**Item 1 outcome (2026-08-05): HALTED at the pre-registered Arm-0 gate — Arm 1/Arm 2
+NOT run.** Full apparatus built and witnessed (`audits/2026-08-05_oq259_emphasis_discriminator/`):
+pre-registration addendum `c4785da7` (per-file thresholds, quantified HALT < 2/3,
+Arm-2 selection rule + seed, blinding protocol) committed before any run; extractor
+`python/audits/emphasis_extract.py` + three emphasis-aware conversions committed
+`b8a44661` with byte-exact strip-restore vs the `1bd57a84` baselines and marker pairs
+exactly as predicted (AT Fiat 208/175, Biopower 829/1014, Cap 2535/2589). Arm 0
+(same-input re-runs, `70c458f9`): **Cap K reproduce-rate 3/6 then 2/6 (< 2/3 both;
+second re-run minted NO contested kernel), Biopower passes 4/6 + 5/6; read-through
+churn control: 3 of 4 discriminator-target readings churn at fixed input bytes** (only
+Biopower's insurance axis stable in both) → Cap K P1 effective n=0, Biopower n=1. The
+P1 effects the discriminator would measure are inside the same-input churn floor, so
+the gate's pre-committed semantics halted Arm-1 spend (4 of ≤8 calls spent; corpus
+untouched). Standing-result impact: 2026-08-03's "(f) replicate-stable" is CROSS-FILE
+stability only — individual readings are NOT within-file redraw-stable, and the one
+2026-08-03 hit marked CONTESTABLE (`reformist_iatrogenic`) is exactly one that churned
+(0/2). **Blocked on the operator's continuation ruling — options ranked in
+`ARM0_HALT_REPORT.md`:** (1, recommended) close item 1 halted-informative and redesign
+around churn-robust observables (idiom SHARE over k>2 pooled redraws — needs no
+per-reading identity — or k>2 re-run pooling before any emphasis-aware spend);
+(2) proceed Biopower + AT Fiat only (~$1–1.5, one weak vote + manipulation check);
+(3) proceed all three under an explicit override recorded here. The conversions and
+extractor stay ready for whichever continuation is ruled.
+
 **What resolution changes.** Whether card files become an ingestion class (emphasis-aware
 tag-layer reading ⇒ pre-labeled reading corpora) or stay routed through hand-authored
-sources; whether the kritik program gets a second graduated file.
+sources; whether the kritik program gets a second graduated file. Post-Arm-0: any
+continuation design must first clear the witnessed within-file churn floor (per-reading
+presence is not a stable observable at n≈2 on the 340K-token file).
 
 ## OQ-260 — `_step_commit` manifest staging mislabels relative in-repo `--manifest-file` paths as "outside repo" and silently skips staging
 
