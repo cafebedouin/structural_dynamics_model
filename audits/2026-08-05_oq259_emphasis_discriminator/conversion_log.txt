@@ -1,0 +1,15 @@
+pandoc version: pandoc 2.9.2.1
+date: 2026-08-05T14:42:59-05:00
+extractor: python/audits/emphasis_extract.py @ post-c4785da7 worktree
+[emphasis_extract] docx regions spliced: HL=208 MIN=175
+[emphasis_extract] md marker pairs (self-check PASS): HL=208 MIN=175
+[emphasis_extract] pandoc recipe: pandoc -f docx -t gfm --wrap=none /tmp/tmp96loyltb/marked.docx -o /tmp/tmp96loyltb/raw.md
+[emphasis_extract] VERIFY: strip(output) == agent/analysis/originals/k_files/AT Fiat K - Michigan 2026 BCFP.md BYTE-EXACT (66699 bytes)
+[emphasis_extract] docx regions spliced: HL=829 MIN=1014
+[emphasis_extract] md marker pairs (self-check PASS): HL=829 MIN=1014
+[emphasis_extract] pandoc recipe: pandoc -f docx -t gfm --wrap=none /tmp/tmp3cg9j05h/marked.docx -o /tmp/tmp3cg9j05h/raw.md
+[emphasis_extract] VERIFY: strip(output) == agent/analysis/originals/k_files/Biopower K Aff And Neg - Northwestern 2026.md BYTE-EXACT (286656 bytes)
+[emphasis_extract] docx regions spliced: HL=2535 MIN=2589
+[emphasis_extract] md marker pairs (self-check PASS): HL=2535 MIN=2589
+[emphasis_extract] pandoc recipe: pandoc -f docx -t gfm --wrap=none /tmp/tmphzi7foo4/marked.docx -o /tmp/tmphzi7foo4/raw.md
+[emphasis_extract] VERIFY: strip(output) == agent/analysis/originals/k_files/Capitalism K Aff And Neg - Northwestern 2026.md BYTE-EXACT (1066322 bytes)
