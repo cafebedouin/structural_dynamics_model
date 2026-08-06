@@ -1887,4 +1887,7 @@ map) — plus reserved phase-file names (`RECON.md`, `PROPOSAL.md`, `PREREGISTRA
 spelling, frozen at spend time and never retro-edited). The evidence map is the Pattern-1
 discharge for the directory: every artifact is either named with the claim it witnesses or
 declared dead. Existing directories are point-in-time and stay as-is; the convention is
-forward-only.
+forward-only — and it is a **checked fact, not a memory** (the Pattern-2 rule discharged
+literally): `python/audit_writeup_gate.py --check` is wired into `scripts/gate.sh`, fails
+closed on malformed directory names, and runs an 8-fixture selftest (6 violation shapes must
+flag, 2 conforming shapes must pass) before every live sweep.

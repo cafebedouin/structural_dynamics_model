@@ -870,6 +870,8 @@ subdirectory. Conventions and consolidation map: `audits/README.md`.
 altitude, manifest cite, evidence map naming every artifact) with reserved phase names
 `RECON.md` / `PROPOSAL.md` / `PREREGISTRATION.md` (one spelling, frozen at spend). Template and
 rationale: `audits/README.md` → *Writeup format*; existing dirs are point-in-time, never renamed.
+Machine-checked: `python3 python/audit_writeup_gate.py --check` in `scripts/gate.sh` (selftest
+rides every run; pre-adoption dirs exempt; malformed dir names fail closed).
 
 ## Cross-Sibling Disambiguation (standard practice)
 

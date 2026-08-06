@@ -32,8 +32,14 @@ Codifies the majority practice found by the 2026-08-06 index build: 57/168 direc
 used `WRITEUP.md`/`writeup.md`, but four rival entry-point names (WRITEUP/FINDINGS/README/
 bespoke) and three pre-registration spellings left several directories mechanically
 unindexable — a Pattern-2 silent fork on the prose substrate (`build_discipline.md` → *An audit
-directory has one entry point*). Existing directories are point-in-time and are **not renamed**;
-every NEW audit follows this.
+directory has one entry point*). Existing directories are point-in-time and are **not
+renamed**; every NEW audit follows this.
+
+**Machine-checked (gate-wired):** `python3 python/audit_writeup_gate.py --check` runs in
+`scripts/gate.sh` — dirs dated >= 2026-08-06 must carry `WRITEUP.md` and no rival
+pre-registration spelling; malformed directory names fail closed; pre-adoption dirs are exempt.
+The checker runs its own 8-fixture selftest (6 violation shapes flagged, 2 conforming shapes
+clean) before every live sweep, so a green line is never a didn't-look.
 
 **One entry point: `WRITEUP.md` (uppercase), exactly one per audit directory.** It is the file
 the index reads and a cold reader opens first, and the only file that must exist — a HALT, an
