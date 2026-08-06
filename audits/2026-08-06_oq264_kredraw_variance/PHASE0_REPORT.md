@@ -8,7 +8,47 @@ mapping `e4c293d4` (blind-order evidence in git history). Full compute output be
 from `python3 python/audits/oq264_idiom_share.py compute --holdout holdout_expected.json`
 (deterministic; re-runnable from the committed artifacts). Zero API calls were made.
 
-## Headline (at its scoped altitude)
+## CORRECTION BLOCK (2026-08-06, same day, post-checkpoint operator review; registered in PROPOSAL_ADDENDUM.md, computed in DENOM_SENSITIVITY.txt — the original text below is preserved, not rewritten)
+
+1. **The headline as first written was understated; the corrected headline is:**
+   *range 0.25; PASS under the rev-2 (recalibrated) modifier, INDETERMINATE under the
+   plan's rev-1 modifier; the modifier was recalibrated in Phase A on simulation grounds
+   (CALIBRATION.txt), before any scoring and for data-independent reasons — but the
+   observed value landed exactly on the boundary the recalibration made passable.* Both
+   rule-verdicts are part of any citation of this result.
+2. **The 0.25 is a denominator artifact, not share variance.** TAG = 3, 3, 4 over
+   D = 6, 4, 6: the max-pairwise Δ (0.500 → 0.750 — the ENTIRE range) falls between two
+   draws with IDENTICAL numerator (TAG = 3). The whole measured spread is produced by
+   the unit population churning at fixed judgment. The pooled observable did not escape
+   the per-reading churn floor — its denominator (kernel readings ∪ selected axes) is
+   built from per-reading identity, so it inherited the churn with a sign flip: a draw
+   that mints FEWER readings scores as MORE tag-idiomatic. Under a fixed baseline D=6
+   (exploratory, NON-GATING — DENOM_SENSITIVITY.txt), the range drops to 0.167, the
+   max-pair moves to base↔r2, and the spread becomes judgment-driven (the one TAG
+   move). The denominator convention alone moves the "measured floor" by 0.083 (a third
+   of the committed range) and changes which pair carries it. This is a SPECIFICATION
+   question that precedes any k-sizing question; more draws of the same observable
+   measure the confounded quantity more precisely. (Selected-axes-only convention is
+   n/a for Biopower under the committed unit typing — kernel-linked axes are typed as
+   kernel readings; stated, not hidden.)
+3. **6/6 duplicate agreement is a bound, not zero.** One-sided 95% binomial upper bound
+   on the per-item disagreement rate = 1 − 0.05^(1/6) ≈ **0.393**. The clause that let
+   the sens-1 PASS stand ("measured-zero scorer variance") rests on an interval
+   consistent with an error rate up to ~39%, any of which suffices at sensitivity 1 to
+   have produced the pass. Everywhere this report says "measured scorer variance zero,"
+   read "no disagreement observed in 6 pairs; 95% upper bound 0.393."
+4. **Cap concordance check (registered drift probe):** no consistent cross-file
+   direction on any observable (share directions even oppose: Biopower +/+, Cap −/na) —
+   the cross-day drift residue is UNSUPPORTED by the cheapest available check (not
+   excluded; weak check at n=3 per file).
+5. **Consequence for the gate meaning:** "candidate instrument" is withdrawn as the
+   operative reading. What Phase B measured is closer to: *share as specified is
+   unstable, and it is unstable because of the denominator, at fixed judgment.* The
+   committed verdict PASS(sens1) stands as the pre-registered gate's output (rules were
+   followed; nothing is re-gated), but the instrument question it was built to answer
+   is superseded by the specification finding above.
+
+## Headline (at its scoped altitude) — SUPERSEDED BY CORRECTION BLOCK ITEMS 1–2 AND 5
 
 **FINAL GATE VERDICT: PASS(sens1) — PROVISIONAL at k=3 by the k-monotonicity clause.**
 The pooled idiom share on the Biopower triple spans 0.500–0.750 (range = 0.25, exactly

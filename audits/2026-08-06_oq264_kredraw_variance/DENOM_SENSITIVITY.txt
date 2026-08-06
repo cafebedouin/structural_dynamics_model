@@ -1,0 +1,22 @@
+== Denominator-convention sensitivity table (EXPLORATORY, NON-GATING) ==
+   (zero-kernel capk/r2 excluded from every range, per the committed rule)
+-- biopower --
+  A per-draw D (committed)   3/6=0.500, 3/4=0.750, 4/6=0.667              range=0.250; max-pair base<->r1 NUMERATOR-IDENTICAL
+  B fixed baseline D=6       3/6=0.500, 3/6=0.500, 4/6=0.667              range=0.167; max-pair base<->r2
+  C kernel-readings-only     3/6=0.500, 3/4=0.750, 4/6=0.667              range=0.250; max-pair base<->r1 NUMERATOR-IDENTICAL
+  D selected-axes-only       D=0 (n/a), D=0 (n/a), D=0 (n/a)              range=n/a
+  E raw TAG count            3, 3, 4                                      range=1.000; max-pair base<->r2
+-- capk --
+  A per-draw D (committed)   2/6=0.333, 1/4=0.250, 3/3=1.000 [ZK excl]    range=0.083; max-pair r1<->base
+  B fixed baseline D=6       2/6=0.333, 1/6=0.167, 3/6=0.500 [ZK excl]    range=0.167; max-pair r1<->base
+  C kernel-readings-only     1/5=0.200, 1/4=0.250, D=0 (n/a) [ZK excl]    range=0.050; max-pair base<->r1 NUMERATOR-IDENTICAL
+  D selected-axes-only       1/1=1.000, D=0 (n/a), 3/3=1.000 [ZK excl]    range=n/a
+  E raw TAG count            2, 1, 3 [ZK excl]                            range=1.000; max-pair r1<->base
+== Cap concordance check (base->r1, base->r2 directions; both files) ==
+  n_kernel_readings    biopower ('-', '0')  capk ('-', '-')  -> discordant/mixed
+  n_selected_axes      biopower ('-', '0')  capk ('+', '+')  -> discordant/mixed
+  n_deferred_axes      biopower ('0', '+')  capk ('-', '-')  -> discordant/mixed
+  share                biopower ('+', '+')  capk ('-', 'n/a')  -> discordant/mixed
+  verdict (rule fixed in PROPOSAL_ADDENDUM section 2): no consistent cross-file direction — drift UNSUPPORTED by this check (not excluded; weak check)
+== Duplicate-agreement bound (ADDENDUM section 3) ==
+  0 disagreements in 6 pairs -> one-sided 95% binomial upper bound on per-item disagreement rate = 1 - 0.05^(1/6) = 0.393

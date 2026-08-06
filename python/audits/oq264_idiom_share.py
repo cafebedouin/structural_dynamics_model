@@ -535,18 +535,116 @@ def cmd_compute(args):
     return 0
 
 
+def cmd_denom_table(_args):
+    """PROPOSAL_ADDENDUM section 1-2: EXPLORATORY, NON-GATING. Denominator-convention
+    sensitivity table + Cap concordance check, from the committed calls/mapping."""
+    calls = json.loads((AUDIT_DIR / "calls.json").read_text())["calls"]
+    mapping = json.loads((AUDIT_DIR / "mapping.json").read_text())["labels"]
+    orig_label = {}
+    for lab, info in mapping.items():
+        if info.get("dup_of") is None and not info.get("planted"):
+            orig_label[(info["source"], info["unit_index"])] = lab
+
+    def tag_over(fk, dk, kinds):
+        """(TAG, D) counting only units whose kind is in `kinds`."""
+        path = next(p for f2, d2, p, _g in MANIFESTS if (f2, d2) == (fk, dk))
+        units, zero_kernel = manifest_units(load_manifest(path))
+        tag = d = 0
+        for i, u in enumerate(units):
+            if u["kind"] in kinds:
+                d += 1
+                if calls[orig_label[(f"{fk}/{dk}", i)]]["class"] in TAG_CLASSES:
+                    tag += 1
+        return tag, d, zero_kernel
+
+    conventions = [
+        ("A per-draw D (committed)", ("kernel_reading", "selected_axis"), None),
+        ("B fixed baseline D=6", ("kernel_reading", "selected_axis"), 6),
+        ("C kernel-readings-only", ("kernel_reading",), None),
+        ("D selected-axes-only", ("selected_axis",), None),
+        ("E raw TAG count", ("kernel_reading", "selected_axis"), "raw"),
+    ]
+    print("== Denominator-convention sensitivity table (EXPLORATORY, NON-GATING) ==")
+    print("   (zero-kernel capk/r2 excluded from every range, per the committed rule)")
+    for fk, keys in (("biopower", ["base", "r1", "r2"]), ("capk", ["base", "r1", "r2"])):
+        print(f"-- {fk} --")
+        for name, kinds, fixed in conventions:
+            vals, disp = [], []
+            for dk in keys:
+                tag, d, zk = tag_over(fk, dk, kinds)
+                if fixed == "raw":
+                    v, txt = Fraction(tag), f"{tag}"
+                elif fixed:
+                    v, txt = Fraction(tag, fixed), f"{tag}/{fixed}={tag / fixed:.3f}"
+                elif d == 0:
+                    v, txt = None, "D=0 (n/a)"
+                else:
+                    v, txt = Fraction(tag, d), f"{tag}/{d}={tag / d:.3f}"
+                if zk:
+                    txt += " [ZK excl]"
+                    v = None
+                vals.append(v)
+                disp.append(txt)
+            ranged = [v for v in vals if v is not None]
+            rng = (max(ranged) - min(ranged)) if len(ranged) >= 2 else None
+            pair = ""
+            if rng is not None and len(ranged) >= 2:
+                hi = vals.index(max(ranged))
+                lo = vals.index(min(ranged))
+                th, _, _ = tag_over(fk, keys[hi], kinds)
+                tl, _, _ = tag_over(fk, keys[lo], kinds)
+                pair = (f"; max-pair {keys[lo]}<->{keys[hi]}"
+                        f"{' NUMERATOR-IDENTICAL' if th == tl and fixed != 'raw' else ''}")
+            print(f"  {name:26} {', '.join(disp):44} range="
+                  f"{('%.3f' % float(rng)) if rng is not None else 'n/a'}{pair}")
+
+    print("== Cap concordance check (base->r1, base->r2 directions; both files) ==")
+    obs_names = ("n_kernel_readings", "n_selected_axes", "n_deferred_axes")
+    concordant = []
+    for name in obs_names + ("share",):
+        dirs = {}
+        for fk in ("biopower", "capk"):
+            row = {}
+            for dk in ("base", "r1", "r2"):
+                path = next(p for f2, d2, p, _g in MANIFESTS if (f2, d2) == (fk, dk))
+                if name == "share":
+                    tag, d, zk = tag_over(fk, dk, ("kernel_reading", "selected_axis"))
+                    row[dk] = None if (zk or d == 0) else tag / d
+                else:
+                    row[dk] = mechanical_observables(load_manifest(path))[name]
+            def sgn(a, b):
+                if a is None or b is None:
+                    return "n/a"
+                return "+" if b > a else ("-" if b < a else "0")
+            dirs[fk] = (sgn(row["base"], row["r1"]), sgn(row["base"], row["r2"]))
+        match = dirs["biopower"] == dirs["capk"] and "n/a" not in dirs["biopower"] + dirs["capk"]
+        concordant.append(match)
+        print(f"  {name:20} biopower {dirs['biopower']}  capk {dirs['capk']}"
+              f"  -> {'CONCORDANT' if match else 'discordant/mixed'}")
+    print(f"  verdict (rule fixed in PROPOSAL_ADDENDUM section 2): "
+          f"{'concordant cross-file direction — cheapest drift evidence PRESENT' if all(concordant) else 'no consistent cross-file direction — drift UNSUPPORTED by this check (not excluded; weak check)'}")
+
+    ub = 1 - 0.05 ** (1 / 6)
+    print(f"== Duplicate-agreement bound (ADDENDUM section 3) ==")
+    print(f"  0 disagreements in 6 pairs -> one-sided 95% binomial upper bound on "
+          f"per-item disagreement rate = 1 - 0.05^(1/6) = {ub:.3f}")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("control")
     sub.add_parser("calibrate")
     sub.add_parser("packet")
+    sub.add_parser("denom-table")
     pc = sub.add_parser("compute")
     pc.add_argument("--holdout", default=None,
                     help="holdout_expected.json (written AFTER calls commit)")
     args = ap.parse_args()
     return {"control": cmd_control, "calibrate": cmd_calibrate,
-            "packet": cmd_packet, "compute": cmd_compute}[args.cmd](args)
+            "packet": cmd_packet, "compute": cmd_compute,
+            "denom-table": cmd_denom_table}[args.cmd](args)
 
 
 if __name__ == "__main__":

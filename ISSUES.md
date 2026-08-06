@@ -12719,6 +12719,15 @@ per its own quantization-simulation clause (CALIBRATION.txt witnesses both rules
 spend ceiling + k (3 vs 5) + AT Fiat inclusion, or standard-only closure.** Phase D
 propagation (Amendment-5 qualifier, OQ-259 items 2–3 re-scope, CLAUDE.md churn block)
 follows the ruling.
+**CORRECTION (2026-08-06, same day, operator review — see PHASE0_REPORT correction
+block + DENOM_SENSITIVITY.txt, registered `241ec42d`):** the 0.25 range is a
+DENOMINATOR artifact — the entire max-pairwise Δ falls between two draws with identical
+TAG=3; the pooled observable inherits per-reading churn through D (fewer readings raise
+share) rather than escaping it, so the instrument-candidate reading is withdrawn and
+the specification question precedes any k-sizing. Headline is dual-rule (PASS under
+rev-2, INDET under rev-1, on the boundary the Phase-A recalibration made passable);
+duplicate 6/6 is a bound (95% UB 0.393), not zero; Cap concordance check: drift
+unsupported (weak).
 
 **The finding (witnessed).** Same-input decompose re-runs (byte-identical .md, same
 flags, same model) reproduce 3/6–5/6 of a baseline manifest's readings by
