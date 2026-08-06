@@ -70,9 +70,16 @@ as within-file redraw stability of any individual reading; (2) SCORING.md's one
 CONTESTABLE hit (`reformist_iatrogenic`) churned 0/2 — treat that baseline row as
 draw-fragile; (3) any future per-reading-presence design on ~100K–340K-token inputs
 needs a churn arm sized to the effect or a churn-robust observable (idiom SHARE over
-pooled redraws). Continuation is an operator ruling (options ranked in
-`ARM0_HALT_REPORT.md`; OQ-259 carries `blocked_on_human`). Extractor + conversions
-stay ready for whichever continuation is ruled.
+pooled redraws). **Ruling landed same day (option 1, extended): item 1 CLOSED — the
+Arm-0 churn floor IS the finding; options 2/3 ruled dead (n=1 anecdote / instrument
+failure).** Sampling check witnessed with the ruling: Sonnet-5 decompose runs with
+temperature OMITTED by design (`llm_call.py:112`; 400 on non-default) and the API has
+no seed — churn is the production regime's own magnitude, not an unpinned knob.
+Program-wide propagation minted as **OQ-264** (single-draw per-reading findings carry
+unquantified error bars; k-redraw variance-floor standard; fewer-files × more-draws;
+Cap K out of scope for per-reading measurement); OQ-259 items 2–3 blocked_on OQ-264;
+item 3's genre-flag standard restated to appearance-across-k-redraws. Extractor +
+conversions stay ready for an OQ-264-compliant redesign.
 
 ---
 

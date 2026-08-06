@@ -109,3 +109,26 @@ churn-robust observable (e.g. idiom SHARE, which needs no per-reading identity).
    OQ-259.
 
 No further Phase-2/3 step executes without this ruling.
+
+## POSTSCRIPT — operator ruling (2026-08-05, same day): option 1, extended
+
+**Item 1 CLOSED; the Arm-0 result IS the finding** — bigger than the emphasis question
+was going to produce. Options 2 and 3 ruled DEAD, not weaker: option 2's evidence base
+is n=1 (one stable reading + a manipulation check that the addendum's own §2 framing
+strips of evidential weight) — "an anecdote with a pre-registration wrapper"; option 3
+adds a file whose gate reading (a re-run minting no contested kernel) is closer to
+instrument failure than noise. Precision riders: Biopower's 4/6 is a zero-margin pass
+at n=2; AT Fiat has no Arm-0 measurement at all (smallest file, proportional
+per-reading noise likely worse, untested).
+
+**Sampling check (executed with the ruling):** decompose's architect is
+`claude-sonnet-5`; `agent/llm_call.py:112` `sampling_overrides` OMITS temperature for
+that tier by design (400 on non-default) and the Anthropic API has no seed parameter.
+Churn is therefore not an unpinned-parameter artifact, and no temp-0 comparison
+regime exists — the measured magnitude is the production regime's own.
+
+**Disposition:** program-wide propagation minted as **OQ-264** (single-draw
+per-reading findings carry unquantified error bars; k-redraw variance-floor standard;
+fewer-files × more-draws cost geometry; Cap K named out of scope for per-reading
+measurement). OQ-259 items 2–3 blocked_on OQ-264; item 3's genre-flag standard
+restated to appearance-across-k-redraws on the OQ-259 entry.

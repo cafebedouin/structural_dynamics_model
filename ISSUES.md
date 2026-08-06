@@ -12396,15 +12396,15 @@ agreement.
 format or of emphasis-blind ingestion is witnessable by running the pre-named
 discriminator; no ruling needed to run it).
 
-**Status:** open — item 1 executed through Arm 0 and HALTED by its pre-registered gate
-(2026-08-05); continuation is an operator ruling.
+**Status:** open — item 1 CLOSED by operator ruling (2026-08-05, option 1 extended:
+the Arm-0 churn floor IS the finding); items 2–3 blocked on the OQ-264 redesign standard.
 **Priority:** 3
 **Origin:** 2026-08-03 kritik ingest probe (`audits/2026-08-03_kritik_ingest/`;
 pre-registration `PROPOSAL.md` `1bd57a84`, verdict `SCORING.md` `d7c49cdd`).
 **Files:** `agent/analysis/originals/k_files/`, `audits/2026-08-03_kritik_ingest/`,
 `audits/2026-08-05_oq259_emphasis_discriminator/`, `python/audits/emphasis_extract.py`
 
-**Deps:** blocked_on_human oq259-item1-halt-continuation-ruling
+**Deps:** blocked_on OQ-264
 
 **Standing result being extended.** Both arsenal replicates (Cap K NW, Biopower NW)
 scored (f) partial recovery, replicate-stable, under EMPHASIS-BLIND ingestion (operator
@@ -12467,7 +12467,13 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    AND (ii) a fidelity consequence (readings may be exaggerated/strawmanned relative to
    the underlying literature, or an equivalent verify-against-primary-sources warning).
    An adjacent flag (bias, one-sidedness, tunnel vision, genre NAMED without the
-   selection-pressure claim) does NOT count as reproduction.
+   selection-pressure claim) does NOT count as reproduction. **Standard restated
+   (operator ruling 2026-08-05, post-Arm-0):** the original one-dry-run standard was a
+   single-draw standard and is now insufficient — a flag appearing in one draw of one
+   file cannot upgrade `omega_debate_genre_distortion` from observation to detection
+   given the witnessed per-manifest churn. "Comparable" now means the pre-specified
+   (i)+(ii) flag appears **across k redraws** of the independent arsenal (k per the
+   OQ-264 variance-floor standard), not in a single manifest.
 
 **Item 1 outcome (2026-08-05): HALTED at the pre-registered Arm-0 gate — Arm 1/Arm 2
 NOT run.** Full apparatus built and witnessed (`audits/2026-08-05_oq259_emphasis_discriminator/`):
@@ -12485,13 +12491,27 @@ the gate's pre-committed semantics halted Arm-1 spend (4 of ≤8 calls spent; co
 untouched). Standing-result impact: 2026-08-03's "(f) replicate-stable" is CROSS-FILE
 stability only — individual readings are NOT within-file redraw-stable, and the one
 2026-08-03 hit marked CONTESTABLE (`reformist_iatrogenic`) is exactly one that churned
-(0/2). **Blocked on the operator's continuation ruling — options ranked in
-`ARM0_HALT_REPORT.md`:** (1, recommended) close item 1 halted-informative and redesign
-around churn-robust observables (idiom SHARE over k>2 pooled redraws — needs no
-per-reading identity — or k>2 re-run pooling before any emphasis-aware spend);
-(2) proceed Biopower + AT Fiat only (~$1–1.5, one weak vote + manipulation check);
-(3) proceed all three under an explicit override recorded here. The conversions and
-extractor stay ready for whichever continuation is ruled.
+(0/2).
+
+**Operator ruling (2026-08-05, same day — item 1 CLOSED, option 1 extended):** the
+Arm-0 result is the finding, bigger than the emphasis question would have produced.
+Options 2/3 are DEAD, not weaker: P1's evidence base collapsed to one reading (Cap K's
+pair churned to 0 on a base already discounted to ~1 vote by co-occurrence; of
+Biopower's disjoint pair only the insurance axis held), so option 2 buys n=1 — "an
+anecdote with a pre-registration wrapper" — plus a manipulation check that carries no
+evidential weight by the addendum's own framing; option 3 adds Cap K, whose gate
+reading (second re-run minted no contested kernel) is closer to instrument failure
+than noise. Precision riders recorded with the ruling: Biopower's "pass" is 4/6
+against a 2/3 threshold — zero margin at n=2; AT Fiat has NO Arm-0 measurement (never
+re-run, smallest file, proportional per-reading noise likely worse). Sampling check
+(witnessed, `agent/llm_call.py:112` `sampling_overrides`): decompose's architect is
+`claude-sonnet-5`, for which temperature is OMITTED by design (400 on non-default) and
+the API has no seed parameter — churn is not an unpinned-knob artifact and there is no
+temp-0 subset question; the measured magnitude is the production regime's own. The
+program-wide propagation (single-draw per-reading findings carry unquantified error
+bars; Amendment 4; item 3's genre-flag standard) is minted as **OQ-264** rather than
+buried here. The conversions and extractor stay ready for an OQ-264-compliant
+redesign.
 
 **What resolution changes.** Whether card files become an ingestion class (emphasis-aware
 tag-layer reading ⇒ pre-labeled reading corpora) or stay routed through hand-authored
@@ -12659,9 +12679,64 @@ cross-author ε reliability gets a conditioning variable; the channel-conditiona
 reliability caveat (KNOWN_STATE 2026-07-27, hardened 2026-08-04) gains its candidate repair
 path.
 
+## OQ-264 — Single-draw per-reading findings carry an unquantified error bar: decompose churn floor constrains audit design program-wide (k-redraw variance standard needed)
+
+**Ω-type:** Ω_E (the k-redraw variance of pooled decompose observables is measurable by
+runs; the design standard is then set from measurement, not preference).
+
+**Status:** open
+**Priority:** 2
+**Origin:** OQ-259 item-1 Arm-0 gate firing + operator ruling, 2026-08-05
+(`audits/2026-08-05_oq259_emphasis_discriminator/ARM0_HALT_REPORT.md`, commits
+`c4785da7`/`b8a44661`/`70c458f9`); ruling text: "the Arm-0 result is the finding."
+**Files:** `agent/c-orchestrator.py`, `agent/llm_call.py`,
+`audits/2026-08-05_oq259_emphasis_discriminator/`, `audits/2026-08-03_kritik_ingest/`
+
+**Deps:** splits_from OQ-259
+
+**The finding (witnessed).** Same-input decompose re-runs (byte-identical .md, same
+flags, same model) reproduce 3/6–5/6 of a baseline manifest's readings by
+subject+stance; on the 340K-token file one of two re-runs minted no contested kernel at
+all, and 3 of 4 pre-named target readings churned at fixed input. Sampling is NOT
+pinnable in this regime (witnessed `agent/llm_call.py:112`: Sonnet-5 rejects
+non-default temperature, so it is omitted by design; the API has no seed) — the churn
+is a property of the instrument-under-production-conditions, not an unpinned knob, and
+the measured magnitude is the production regime's own (no temp-0 subset question
+exists). This extends the standing "generation is stochastic" doctrine (CLAUDE.md
+Critical Distinctions) UPSTREAM of the committed-story determinism frontier with a
+measured magnitude: per-reading identity across redraws is not a stable observable at
+n≈2 on 100K–340K-token inputs.
+
+**Propagation (do not bury — this is the program-wide part).** Every per-reading or
+per-section finding derived from a SINGLE-DRAW manifest now carries an unquantified
+error bar. Named instances: (a) WRITEUP Amendment 4's position-vs-machinery granularity
+claim (2026-08-03) — a per-section observable inferred from one draw per file, which
+OQ-259 P2 was going to test with the same instrument that failed its gate; (b) OQ-259
+item 3's genre-flag replication standard — restated 2026-08-05 on that entry to
+appearance-across-k-redraws; (c) any future scoring rubric that keys on presence/absence
+of an individual manifest reading. Cross-file agreement (the 2026-08-03 (f) verdict)
+survives — the two files landed one outcome class through different manifests — but
+per-reading citations from single draws do not.
+
+**Resolution path (operator-shaped, 2026-08-05).** (1) Establish the k-redraw variance
+FLOOR of the pooled candidate observable (idiom SHARE — needs no per-reading identity)
+on ONE file before pinning any prediction thresholds — swapping an unvalidated
+per-reading observable for an unvalidated pooled one is not a repair. (2) Cost geometry
+has inverted: at ~100–340K tok/call the affordable design is FEWER FILES × MORE DRAWS
+(Biopower + AT Fiat at k=3–5 is the probable shape), not three files × one draw.
+(3) Cap K NW is named OUT OF SCOPE for per-reading measurement (too expensive to
+measure properly at its churn level) rather than quietly carried. The OQ-259
+emphasis-aware conversions + extractor remain ready for a design that clears this
+standard.
+
+**What resolution changes.** Whether any per-reading/per-section claim from a
+single-draw manifest is citable without a k-redraw qualifier; the k and the variance
+floor every future manifest-scoring audit must design against; whether OQ-259 items 2–3
+(both currently blocked_on this OQ) get a compliant instrument.
+
 ---
 
-*Last updated: 2026-08-04. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-08-05. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
