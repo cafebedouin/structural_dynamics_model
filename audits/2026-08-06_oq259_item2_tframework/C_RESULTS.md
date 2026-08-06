@@ -42,3 +42,19 @@ ingestion: actually adding T Framework stories to the K-file corpus is a separat
 operator spend decision the (f) verdict's meta-layer exception now permits but does
 not compel. Per-reading identity across the three draws was NOT adjudicated (only
 kernel-level presence); reading-level claims stay draw-level.
+
+## P1 base-rate bound (operator review, 2026-08-06 — added post-verdict, changes the
+## claim's scope, not the verdict)
+
+P1 (`is_contested_kernel`) entered the grammar without a measured churn floor of its
+own — it is the observable Cap K churned 1/2 on at byte-identical input. The bound is
+supplied by a ZERO-SPEND measured comparator that already existed: the three OQ-264
+AT Fiat k=3 manifests all carry `is_contested_kernel: true` — **the already-graduated
+meta-layer file also measures P1 3/3** (its kernel ids churned 2-of-3:
+`simulated_action_efficacy` ×2 + `fiat_value_kernel`; reading counts 7/7/6). So P1
+3/3 is consistent with a meta-layer-file-general base rate and does NOT discriminate
+T Framework specifically; the graduation rests on the conjunction (P1 3/3 AND blinded
+same-kernel presence 3/3) as pinned, with this bound now part of the verdict's scope.
+Comparator population to date: meta-layer files P1 3/3 (AT Fiat), 3/3 (T Framework);
+arsenal Cap K 1/2 with one empty-CSR draw; arsenal Biopower 3/3 (origin + 2 redraws,
+per their manifests). n is small everywhere; these are draws, not rates.

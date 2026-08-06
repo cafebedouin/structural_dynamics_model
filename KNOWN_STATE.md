@@ -61,7 +61,13 @@ rejected). Three serialized `--dry-run --skip-search` draws of the re-minted bas
 DIFFERENT 3/3 → three draws one SAME subject+stance group → **graduated per the
 frozen grammar** (prereg `4f862bee`). Scope: presence result, one file,
 emphasis-blind regime — not detection, not ingestion (a T Framework story ingest is a
-separate operator spend, permitted not compelled). Symmetric confirmatory-draw
+separate operator spend, permitted not compelled) — and P1 base-rate-bounded
+post-review: AT Fiat's existing OQ-264 draws also measure P1 3/3 (zero-spend
+comparator), so P1 3/3 is meta-layer-general, not T-Framework-specific; the
+graduation rests on the conjunction with the blinded presence call. OQ-259 CLOSED
+resolved same day (item 3 closed-as-superseded — essay carries the one-off framing,
+not the original verified-flag intent); entry compressed per the footer rule with
+operative blocks kept. Symmetric confirmatory-draw
 staging (run 2 iff run 1 mints; run 3 iff both) adopted over declared-n=1 — strictly
 dominant given the 3/3 grammar. Full record:
 `audits/2026-08-06_oq259_item2_tframework/` (WRITEUP.md, C_RESULTS.md).
@@ -86,6 +92,20 @@ stripped + commit-order + withheld-mapping md5; template
 in RECON, never a citable rate. Also the B1-closure precedent: an origin-stability
 null can retire a planned fresh-specimen spend arm whole — check the free
 origin-stability measurement BEFORE pricing a fresh-file arm.
+
+**The inverse direction (operator, 2026-08-06, post-Part-C review):** the tripwire
+above covers stability CLAIMS; the same discipline applies to instruments — **any new
+observable introduced into a verdict grammar needs a churn measurement BEFORE it can
+carry weight**, not after it produces a result you want to rely on. Witnessed: P1
+(`is_contested_kernel`) entered Part C's graduation grammar unmeasured — it is the
+observable Cap K churned 1/2 on — and its base-rate bound had to be added in
+post-verdict review; the bound's comparator (AT Fiat's existing k=3 draws, P1 3/3)
+had been sitting on disk at zero cost the whole time. Corollary: before pricing a
+comparator run for a base rate, check whether already-committed draws measure it for
+free. Program-level tally of the pattern (4 instances, one direction): item-1
+readings, B0's strict flag, Cap K's kernel mint, T Framework's kernel ids — every
+observable measured for stability came back less stable than the single-draw read
+suggested.
 
 ---
 

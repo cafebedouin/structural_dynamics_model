@@ -12403,215 +12403,72 @@ agreement.
 
 ## OQ-259 — Kritik program continuation: emphasis-aware discriminator, second meta-layer candidate, essay deliverable
 
-**Ω-type:** Ω_E (whether the (f)-grade partial recovery is a property of the card-file
-format or of emphasis-blind ingestion is witnessable by running the pre-named
-discriminator; no ruling needed to run it).
+**Ω-type:** Ω_E (each item's question was witnessable by a pre-named discriminator or
+pre-registered arm; all three ran or were ruled).
 
-**Status:** open — item 1 CLOSED by operator ruling (2026-08-05, option 1 extended:
-the Arm-0 churn floor IS the finding); items 2–3 UNBLOCKED 2026-08-06 (OQ-264 resolved:
-k=3-unanimous presence standard; see the dated notes on each item). **Free arms
-EXECUTED 2026-08-06 (plan rev 4):** item-2 note (a) RESOLVED (baseline re-minted from
-pinned recipe, `audits/2026-08-06_oq259_item2_tframework/`); item-3 B0 measured
-(STRICT 0/2, TERRITORY 2/2, origin blind STRICT — `audits/2026-08-06_oq259_item3_genreflag/`);
-P2 two-sided calibration ESCALATED (unbuildable as mechanical gate); Part D essay
-DRAFTED (`docs/drafts/shanahan_kritik.md`). **Operator rulings (2026-08-06, both
-checkpoints resolved):** (1) **B1 NOT RUN — item-3 verification arm CLOSED on B0's
-evidence** (STRICT 0/2 at the origin makes every fresh-file STRICT outcome
-uninformative; the 2026-08-03 text pre-authorized the one-off-observation framing for
-exactly this outcome; ruling recorded in the item-3 WRITEUP). Essay framing FINAL;
-location `docs/drafts/` confirmed. (2) **Part C GOES with P1-only promotion,
-draw-level language** (judged-step P2 rejected as post-hoc-licence shape); symmetric
-confirmatory-draw staging adopted (run 2 iff run 1 mints; run 3 iff both) — prereg
-frozen `4f862bee` before run 1. **Part C EXECUTED same day: GRADUATED (P1 3/3 +
-blinded presence 3/3 with valid planted control; item-2 note (g)).** All three work
-items now carry closure: item 1 (operator ruling 2026-08-05), item 2 (graduation
-verdict, this entry), item 3 (verification arm closed on B0; essay final). The OQ
-looks CLOSABLE — formal close left to the operator (the standing directional
-predictions on an emphasis-aware re-run were mooted by item 1's closure, worth
-confirming at close).
+**Status:** resolved — all three items closed 2026-08-06. Item 1 closed by operator
+ruling (2026-08-05, option 1 extended: the Arm-0 churn floor IS the finding). Item 2
+closed-as-resolved: T Framework GRADUATED second meta-layer file. Item 3
+closed-as-SUPERSEDED: the essay shipped with the one-off framing, not the originally
+intended verified-flag framing — the verification arm returned a blinded null at the
+origin itself and was closed without the fresh-file spend (partial satisfaction of the
+item's original intent, deliberate; the 2026-08-03 text pre-authorized exactly this
+fallback).
 **Priority:** 3
 **Origin:** 2026-08-03 kritik ingest probe (`audits/2026-08-03_kritik_ingest/`;
 pre-registration `PROPOSAL.md` `1bd57a84`, verdict `SCORING.md` `d7c49cdd`).
 **Files:** `agent/analysis/originals/k_files/`, `audits/2026-08-03_kritik_ingest/`,
-`audits/2026-08-05_oq259_emphasis_discriminator/`, `python/audits/emphasis_extract.py`
+`audits/2026-08-05_oq259_emphasis_discriminator/`,
+`audits/2026-08-06_oq259_item2_tframework/`,
+`audits/2026-08-06_oq259_item3_genreflag/`, `docs/drafts/shanahan_kritik.md`,
+`python/audits/emphasis_extract.py`
 
-**Standing result being extended.** Both arsenal replicates (Cap K NW, Biopower NW)
-scored (f) partial recovery, replicate-stable, under EMPHASIS-BLIND ingestion (operator
-ruling A, 2026-08-03): pandoc conversion drops the highlight (read-in-round) and
-font-size (minimization) layers; bold survives. The (f)/(b)/(d) boundary is therefore
-confounded with the conversion loss — the tag layer is dozens of words per block vs
-hundreds in card bodies, so emphasis-blind ingestion mechanically favors card-idiom
-readings by an order of magnitude in token volume.
+**Resolution note (2026-08-06).** Item 1: HALTED at the pre-registered Arm-0 gate
+(per-manifest churn floor at byte-identical input; Arms 1–2 never ran;
+`audits/2026-08-05_oq259_emphasis_discriminator/ARM0_HALT_REPORT.md`) — fed OQ-264,
+whose resolution then unblocked items 2–3. Item 2: baseline re-minted from the pinned
+pandoc recipe (md5 `a365da8a…`, cause verdict withheld), P2 found unbuildable as a
+mechanical gate (two-sided calibration, ceiling never above floor) → operator ruled
+P1-only, three dry-run draws → P1 3/3 + blinded same-kernel presence 3/3 (planted
+control valid) → GRADUATED (`audits/2026-08-06_oq259_item2_tframework/WRITEUP.md`,
+prereg `4f862bee`). Item 3: B0 blinded measurement at the origin — STRICT 0/2,
+TERRITORY 2/2, origin's own flag STRICT blind — operator closed the fresh-file arm
+without spend; essay final at `docs/drafts/shanahan_kritik.md`
+(`audits/2026-08-06_oq259_item3_genreflag/WRITEUP.md`). The registered
+directional/granularity predictions on an emphasis-aware re-run are MOOTED by item
+1's closure (no such re-run will fire; they revive only if item 1 is revived).
+KNOWN_STATE 2026-08-06 (four entries); session commits `7bba0748`…`a0cfe917` + close.
 
-**Directional prediction (registered 2026-08-03, operator review — the confound cuts one
-way).** Emphasis-blindness inflates card-body volume ~10× vs the tag layer, i.e. it works
-AGAINST tag recovery and FOR read-through. So the scaffold half of the (f) result
-(precision 4/6 and 5–6/6 despite the dilution) is evidence a fortiori and should SURVIVE
-the discriminator with tag idiom RAISED; the falsifiable half is the read-through
-readings (world_system, growth_process, coalition_governmentality, insurance-deferred):
-survive emphasis-aware ingestion ⇒ format property; vanish ⇒ conversion artifact. A
-result where tag idiom DROPS under emphasis-aware ingestion would falsify the whole
-framing, not just one half.
+**Still-operative rulings (kept intact per the compress exception):**
 
-**Second registered prediction — granularity, independent of the emphasis question
-(2026-08-03).** The position-vs-machinery finding (WRITEUP Amendment 4: Link/Impact
-machinery sections absorb into the parent reading's `expected_structural_delta`;
-position-staking sections surface as readings, symmetric across both replicates) claims
-a GRANULARITY property, not a weighting one. Prediction: under emphasis-aware ingestion
-the Link/Impact sections STAY absorbed at delta altitude. If they surface as readings
-instead, the granularity finding is wrong and its story needs rework — this
-discriminates independently of (and in the same re-run as) the tag-idiom prediction.
-
-**Work items, in order:**
-1. **Emphasis-aware discriminator (pre-named at Phase 0):** small extractor pulling
-   `w:highlight`/`w:sz` from `document.xml`, emit emphasis markers, re-convert the three
-   specimens, re-run the Phase-1 dry-runs emphasis-aware, re-score with PROPOSAL.md's
-   pinned denominators against the directional prediction above.
-2. **Second meta-layer candidate:** `T Framework` (584K) needs its own dry-run
-   (`--skip-search`; exceeds the research cap) before any graduation decision. Per the
-   (f) verdict, do NOT expand the K-file corpus beyond meta-layer files on current
-   evidence. **Notes (2026-08-05):** (a) its committed baseline `.md` does NOT
-   reproduce under the pinned pandoc recipe (prototype-session observation) — resolve
-   conversion provenance before any emphasis-aware variant; (b) it is cyan-dominant
-   (`{cyan: 943, yellow: 90}` highlights witnessed), so emphasis-aware conversion needs
-   `--highlight-colors cyan`; (c) any single-dry-run graduation read inherits the item-1
-   churn-floor caveat below; (d) **(2026-08-06, OQ-264 resolved):** any feature-level
-   claim in the graduation read requires the k=3-unanimous presence standard — one
-   dry-run yields draw-level observations only, so budget the graduation decision at
-   ~3× the file's ingest cost (~150K tok/run at 584K .md) or scope the read to
-   draw-level language. (e) **(2026-08-06, executed):** note (a) RESOLVED — pinned
-   recipe (pandoc 2.9.2.1, `-f docx -t gfm --wrap=none`) does NOT reproduce the
-   committed baseline (markup-shape diff only: underline spans + superscript encoding;
-   line counts identical; cause verdict withheld); fresh baseline MINTED from the
-   pinned recipe, md5 `a365da8aa11e5039807275bcc662f956` = Part C's pinned input;
-   superseded `51caeb36…` retained in `audits/2026-08-06_oq259_item2_tframework/`.
-   (f) **(2026-08-06, P2 escalation — BLOCKS C-prereg finalization):** the promotion
-   rule's P2 (meta-layer match-rate vs mechanical TAG inventory) was calibrated
-   TWO-SIDED across three token-strictness variants: the AT Fiat ceiling NEVER exceeds
-   the arsenal floor (v1/v2 inverted, v3 collapsed ~0) — the quantity exists only at
-   the judged level (OQ-264's blinded 6/6), so P2 is unbuildable as a mechanical gate.
-   Operator RULED same day: P1-only promotion, draw-level language (judged-step
-   rejected as post-hoc-licence shape;
-   `audits/2026-08-06_oq259_item2_tframework/P2_CALIBRATION.md`). Side finding: a
-   no-kernel draw (Cap K r2, empty CSR) fails P1 before P2 — P2-style checks, if
-   ever revived, condition on P1-passing draws.
-   (g) **(2026-08-06, Part C EXECUTED — GRADUATED):** prereg frozen `4f862bee`
-   (P1-only; symmetric confirmatory-draw staging superseding the promote-on-1
-   asymmetry); three serialized same-input dry-runs (`--dry-run --skip-search`,
-   input md5 `a365da8a…` stable around each, corpus untouched each, ~220,720
-   tok/run ≈ 662K total): **P1 PASS 3/3** (kernel ids churned 3/3:
-   `role_of_debate_kernel`/`topicality_boundary_kernel`/`legitimate_ballot_grounding`;
-   reading counts 3/6/5), and the presence clause adjudicated BLIND with a planted
-   different-subject control (AT Fiat kernel; called DIFFERENT 3/3 — instrument
-   valid): the three kernel descriptions one SAME subject+stance group → **kernel
-   presence 3/3 → "graduated second meta-layer file" per the frozen grammar**
-   (`audits/2026-08-06_oq259_item2_tframework/C_RESULTS.md`). Scope pinned:
-   presence result on one file, emphasis-blind dry-run regime; NOT detection, NOT a
-   stability constant, NOT an ingestion — adding T Framework stories to the K-file
-   corpus is a separate operator spend decision (now permitted, not compelled, by
-   the (f) verdict's meta-layer exception). Per-reading identity across draws NOT
-   adjudicated (kernel-level only).
-3. **Deferred essay deliverable (operator-side, essay-layer ONLY, never pipeline
-   input):** `shanahan_kritik.md` mapping doc — must build on the ballot mapping AS
-   CORRECTED by the operator (2026-08-03, recorded on OQ-261: the ballot sections
-   debater PERFORMANCE, not the topic kernel — a verdict on the debaters, not the
-   topic; the topic obstruction survives the round), state the common-descent
-   limit (shared standpoint-epistemology watershed) and ballot-fitness limit (kritik
-   survived persuade-a-judge selection), and correct the perm↔Theorem-8 mapping
-   (competition is net-benefits, not mutual exclusivity) with the severance/intrinsicness
-   ≈ mutated-reading-coexistence-test refinement as a candidate OFFER to the engine.
-   Feeding it to the pipeline would anchor SCOPE (make_brief neutrality principle).
-   Quote `omega_debate_genre_distortion` (Biopower manifest) as the run's headline
-   candidate — the pipeline annotating the epistemic genre of its own input — AFTER the
-   cheap verification: a second independent arsenal ingest producing a comparable genre
-   flag (one dry-run; without it, quote as a one-off observation, not detection).
-   **"Comparable" is pre-specified NOW (2026-08-03), not judged post hoc:** the new
-   manifest must carry an omega or fracture-note asserting BOTH (i) that the source's
-   arguments are selected for strategic/competitive utility rather than truth-seeking,
-   AND (ii) a fidelity consequence (readings may be exaggerated/strawmanned relative to
-   the underlying literature, or an equivalent verify-against-primary-sources warning).
-   An adjacent flag (bias, one-sidedness, tunnel vision, genre NAMED without the
-   selection-pressure claim) does NOT count as reproduction. **Standard restated
-   (operator ruling 2026-08-05, post-Arm-0):** the original one-dry-run standard was a
-   single-draw standard and is now insufficient — a flag appearing in one draw of one
-   file cannot upgrade `omega_debate_genre_distortion` from observation to detection
-   given the witnessed per-manifest churn. "Comparable" now means the pre-specified
-   (i)+(ii) flag appears **across k redraws** of the independent arsenal. **k is
-   concrete (2026-08-06, OQ-264 resolved): the (i)+(ii) flag must appear in ALL 3
-   same-input redraws of the independent arsenal (k=3 unanimous; 1–2 of 3 =
-   observation, not detection).** AT Fiat cannot serve this item (non-arsenal
-   single-voice file; its k=3 redraws produced no qualifying flag — descriptive record
-   in `audits/2026-08-06_oq264_kredraw_variance/READOUT_atfiat.md`).
-   **B0 measured (2026-08-06, blinded, pre-registered —
-   `audits/2026-08-06_oq259_item3_genreflag/`):** across the origin Biopower file's two
-   Arm-0 same-input redraws, STRICT (the (i)+(ii) bar above) reproduced **0/2**;
-   TERRITORY (genre + selection-pressure + any epistemic consequence) reproduced
-   **2/2**, name churned both times; the origin's own flag passes STRICT blind.
-   Pre-registered disclosure now attached to any rows-1–3 reading in B1: the strict
-   bar is one the origin file itself did not clear at n=2. All n=2 figures are two
-   draws, never a rate. The unblinded session hypothesis (strict 1/2–2/2) was MORE
-   generous than the blind calls — divergence on record in `B0_TALLY.md`. B1
-   (Afropessimism NW ×3, ~230–300K tok; specimen independence witnessed at 0.0000%
-   shingle overlap vs control 21.12%) was pre-registered and then CLOSED WITHOUT
-   SPEND by operator ruling (2026-08-06): B0 is decisive against the arm's purpose —
-   with STRICT 0/2 at the origin, every reachable fresh-file STRICT outcome is
-   uninformative and TERRITORY was pre-declared context-only; the verification arm
-   closes on B0's evidence and the quote takes the pre-authorized one-off framing
-   (full ruling: item-3 WRITEUP). **Omega-class floor note (cross-ref OQ-264):**
-   within one omega, the observable CLASS sets the churn floor — name churned 2/2,
-   territory content stable 2/2, strict conjunction brittle 0/2 — so redraw-stability
-   constants measured on one observable class (names, tags, presence) do NOT transfer
-   to another class on the same file; any future gate must be calibrated on the class
-   it gates. The class list extends to FIELD PRESENCE itself: Cap K r2's redraw
-   returned an EMPTY `commitment_system_recognition` at byte-identical input (its
-   siblings populated it) — whole-field emptiness is a churn-class datum, and any
-   P2-style check, if ever revived, conditions on P1-passing draws for exactly this
-   reason. Related standing tripwire: unblinded single-draw reads of manifest
-   features run GENEROUS (twice witnessed) — KNOWN_STATE 2026-08-06.
-
-**Item 1 outcome (2026-08-05): HALTED at the pre-registered Arm-0 gate — Arm 1/Arm 2
-NOT run.** Full apparatus built and witnessed (`audits/2026-08-05_oq259_emphasis_discriminator/`):
-pre-registration addendum `c4785da7` (per-file thresholds, quantified HALT < 2/3,
-Arm-2 selection rule + seed, blinding protocol) committed before any run; extractor
-`python/audits/emphasis_extract.py` + three emphasis-aware conversions committed
-`b8a44661` with byte-exact strip-restore vs the `1bd57a84` baselines and marker pairs
-exactly as predicted (AT Fiat 208/175, Biopower 829/1014, Cap 2535/2589). Arm 0
-(same-input re-runs, `70c458f9`): **Cap K reproduce-rate 3/6 then 2/6 (< 2/3 both;
-second re-run minted NO contested kernel), Biopower passes 4/6 + 5/6; read-through
-churn control: 3 of 4 discriminator-target readings churn at fixed input bytes** (only
-Biopower's insurance axis stable in both) → Cap K P1 effective n=0, Biopower n=1. The
-P1 effects the discriminator would measure are inside the same-input churn floor, so
-the gate's pre-committed semantics halted Arm-1 spend (4 of ≤8 calls spent; corpus
-untouched). Standing-result impact: 2026-08-03's "(f) replicate-stable" is CROSS-FILE
-stability only — individual readings are NOT within-file redraw-stable, and the one
-2026-08-03 hit marked CONTESTABLE (`reformist_iatrogenic`) is exactly one that churned
-(0/2).
-
-**Operator ruling (2026-08-05, same day — item 1 CLOSED, option 1 extended):** the
-Arm-0 result is the finding, bigger than the emphasis question would have produced.
-Options 2/3 are DEAD, not weaker: P1's evidence base collapsed to one reading (Cap K's
-pair churned to 0 on a base already discounted to ~1 vote by co-occurrence; of
-Biopower's disjoint pair only the insurance axis held), so option 2 buys n=1 — "an
-anecdote with a pre-registration wrapper" — plus a manipulation check that carries no
-evidential weight by the addendum's own framing; option 3 adds Cap K, whose gate
-reading (second re-run minted no contested kernel) is closer to instrument failure
-than noise. Precision riders recorded with the ruling: Biopower's "pass" is 4/6
-against a 2/3 threshold — zero margin at n=2; AT Fiat has NO Arm-0 measurement (never
-re-run, smallest file, proportional per-reading noise likely worse). Sampling check
-(witnessed, `agent/llm_call.py:112` `sampling_overrides`): decompose's architect is
-`claude-sonnet-5`, for which temperature is OMITTED by design (400 on non-default) and
-the API has no seed parameter — churn is not an unpinned-knob artifact and there is no
-temp-0 subset question; the measured magnitude is the production regime's own. The
-program-wide propagation (single-draw per-reading findings carry unquantified error
-bars; Amendment 4; item 3's genre-flag standard) is minted as **OQ-264** rather than
-buried here. The conversions and extractor stay ready for an OQ-264-compliant
-redesign.
-
-**What resolution changes.** Whether card files become an ingestion class (emphasis-aware
-tag-layer reading ⇒ pre-labeled reading corpora) or stay routed through hand-authored
-sources; whether the kritik program gets a second graduated file. Post-Arm-0: any
-continuation design must first clear the witnessed within-file churn floor (per-reading
-presence is not a stable observable at n≈2 on the 340K-token file).
+- **Emphasis-blind binding (operator ruling A, 2026-08-03):** every OQ-259-era result
+  is a property of EMPHASIS-BLIND ingestion (pandoc drops highlight/font-size
+  layers), never of the card-file format. Cite accordingly.
+- **Graduation scope + P1 base-rate bound (2026-08-06):** "graduated second
+  meta-layer file" is a k=3 presence result on one file, emphasis-blind dry-run
+  regime — NOT detection, NOT a stability constant elsewhere, NOT an ingestion
+  (adding T Framework stories to the K-file corpus is a separate operator spend,
+  permitted not compelled by the 2026-08-03 (f) verdict's meta-layer exception). P1
+  3/3 does not discriminate T Framework specifically: the already-graduated AT Fiat
+  also measures P1 3/3 on its existing OQ-264 k=3 draws (zero-spend comparator;
+  arsenal comparators: Cap K 1/2 with one empty-CSR draw, Biopower 3/3). Per-reading
+  identity across the T Framework draws was NOT adjudicated (kernel level only).
+- **Omega-class churn floor — program-level finding (three independent observations,
+  2026-08-05..06; cross-ref OQ-264):** manifest features are stable at the TERRITORY
+  level and unstable at the ITEM level. (i) Biopower genre flag: name churned 2/2,
+  territory content reproduced 2/2, strict conjunction 0/2. (ii) Cap K r2:
+  whole-field emptiness (`commitment_system_recognition` empty) at byte-identical
+  input. (iii) T Framework: kernel ids churned 3/3 and reading counts churned 3/6/5
+  while blinded subject+stance grouped SAME 3/3 (AT Fiat: ids 2-of-3, counts 7/7/6).
+  Consequences: stability constants do NOT transfer across observable classes; any
+  gate is calibrated on the class it gates; any NEW observable entering a verdict
+  grammar needs its churn measured BEFORE it carries weight (KNOWN_STATE 2026-08-06
+  tripwire, both directions); P2-style checks, if revived, condition on P1-passing
+  draws.
+- **Quote framing (item 3):** `omega_debate_genre_distortion` is citable only as a
+  one-off observation with the B0 bounds attached (strict brittle 0/2, territory
+  stable 2/2, n=2 — draws, never a rate; the origin itself did not clear the strict
+  bar across its redraws).
 
 ## OQ-260 — `_step_commit` manifest staging mislabels relative in-repo `--manifest-file` paths as "outside repo" and silently skips staging
 
