@@ -12703,7 +12703,22 @@ runs; the design standard is then set from measurement, not preference).
 **Files:** `agent/c-orchestrator.py`, `agent/llm_call.py`,
 `audits/2026-08-05_oq259_emphasis_discriminator/`, `audits/2026-08-03_kritik_ingest/`
 
-**Deps:** splits_from OQ-259
+**Deps:** splits_from OQ-259, blocked_on_human oq264-phase-c-go-or-standard-only-closure
+
+**Phase A/B executed (2026-08-06, zero spend) — checkpoint open.**
+`audits/2026-08-06_oq264_kredraw_variance/`: pre-registered PROPOSAL (`fd58d3a1`) →
+blinded pooled scoring (calls `0a28d7ca` before mapping `e4c293d4`) → PHASE0_REPORT
+(`507e21ce`). Gate on the free Biopower triple: **PASS(sens1), PROVISIONAL at k=3** —
+share range 0.25 (0.500/0.750/0.667) at the PASS-band boundary; measured scorer
+variance 0 (duplicates 6/6); variance localizes to the GENERATOR (D churned 6→4→6, a
+33% unit swing at fixed input; share-stability only, manifests NOT stable). Cap triple:
+churn-extreme contrast confirmed at every mechanical observable incl. the categorical
+kernel-minting-churn draw. Plan's rev-1 sensitivity modifier was recalibrated in Phase A
+per its own quantization-simulation clause (CALIBRATION.txt witnesses both rules).
+**Blocked on the operator ruling (PHASE0_REPORT.md checkpoint): Phase C go/no-go +
+spend ceiling + k (3 vs 5) + AT Fiat inclusion, or standard-only closure.** Phase D
+propagation (Amendment-5 qualifier, OQ-259 items 2–3 re-scope, CLAUDE.md churn block)
+follows the ruling.
 
 **The finding (witnessed).** Same-input decompose re-runs (byte-identical .md, same
 flags, same model) reproduce 3/6–5/6 of a baseline manifest's readings by
