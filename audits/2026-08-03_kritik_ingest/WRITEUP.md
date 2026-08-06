@@ -198,3 +198,19 @@ one-off, this is the strongest single result of the run — an ingestion pipelin
 annotating the epistemic genre of its input. Routed to the essay layer via OQ-259 item 3
 (quote it there); a second-specimen check (does an independent arsenal ingest produce a
 comparable genre flag?) is the cheap verification before it is quoted as detection.
+
+### Amendment 6 (2026-08-06) — OQ-264 qualifier on Amendment 4: single-draw error bar, now measured
+
+Amendment 4's position-vs-machinery granularity claim was inferred from ONE draw per
+file. OQ-264 (`audits/2026-08-06_oq264_kredraw_variance/`, resolving the churn floor
+OQ-259's Arm-0 surfaced) measured what that costs: same-input redraw stability of
+per-reading identity is file-structure-dependent — 2/6–3/6 (Cap K NW), 4/6–5/6
+(Biopower NW), 6/6 ×3 (AT Fiat) — and manifest unit populations churn even where
+identity holds. Amendment 4 therefore stands as a DRAW-LEVEL observation, not a stable
+property of either file's ingestion: which sections surface as readings vs absorb at
+delta altitude is itself inside the witnessed churn for arsenal files. Under the minted
+standard (OQ-264, k=3-unanimous presence), the granularity pattern would need to hold
+across 3 same-input redraws per file before it is citable as a property; the existing
+Arm-0 pairs already show reading-set membership shifting between draws. The (f)
+cross-file verdict is unaffected (cross-file agreement survives; per-reading and
+per-section citations from single draws do not).

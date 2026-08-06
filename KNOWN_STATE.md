@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-06 — [correction-key] OQ-264 RESOLVED (standard-only): per-reading redraw stability is file-structure-dependent (0.33–1.00); pooled share does NOT repair churn (denominator artifact); k=3-unanimous presence standard minted
+
+**Files:** ISSUES.md, CLAUDE.md, audits/2026-08-06_oq264_kredraw_variance/, audits/2026-08-03_kritik_ingest/WRITEUP.md, python/audits/oq264_idiom_share.py
+**Tier:** correction-key
+
+Full record `audits/2026-08-06_oq264_kredraw_variance/WRITEUP.md`. Pre-registered
+(PROPOSAL `fd58d3a1` before scoring; calls `0a28d7ca` before mapping `e4c293d4`) blinded
+pooled scoring of the six free kritik manifests, then an operator-review correction pass
+(`241ec42d`/`13999d9c`), then the sole spend: AT Fiat k=3 same-input redraws
+(`ac2650ae`/`b418b632`, ≈101K tok, corpus untouched every run). **How results may be
+cited:** (1) the share gate's PASS(sens1) is on record but SUPERSEDED in meaning — its
+entire 0.25 range fell between numerator-identical draws (TAG=3/6 vs 3/4), i.e.
+denominator churn at fixed judgment, with the perverse direction fewer-readings→higher-
+share; cite the specification finding, not the pass. (2) Reproduce-rates now span
+2/6–3/6 (Cap 340K arsenal), 4/6–5/6 (Biopower 103K), **6/6 ×3 (AT Fiat 34K single-voice
+— the 2026-08-05 "no Arm-0 measurement" rider closed, expectation inverted)**: no global
+churn floor exists; never cite one number as "the" floor. (3) Presence claims need k=3
+unanimous same-input redraws (1–2/3 = observation); names are never identity (kernel ids
+churned at reproduce-rate 1.0). (4) 0/n control agreement is a binomial bound (0/6 →
+95% UB 0.393), never "zero variance." (5) Plan-rule recalibration precedent: the rev-1
+sensitivity modifier was rejected in Phase A by its own quantization simulation
+(CALIBRATION.txt witnesses both rules) — gate rules must pass the stable-null
+simulation before numbers commit. Propagated: OQ-259 items 2–3 unblocked (item 3 k=3
+concrete; AT Fiat cannot serve it), Amendment 6 on the 2026-08-03 WRITEUP (plan said
+"Amendment 5"; one already existed), CLAUDE.md Generation-is-stochastic block updated.
+
+---
+
 ## 2026-08-06 — [landed] Monthly consolidation pass (2026-08): KNOWN_STATE roll-off 129 entries compressed; residues declared
 
 **Files:** KNOWN_STATE.md, CLAUDE.md, ISSUES.md

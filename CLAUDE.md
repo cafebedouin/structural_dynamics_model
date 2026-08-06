@@ -725,10 +725,18 @@ appear in no canonical context and their scope_modifier values are unvalidated. 
 **Generation is stochastic; the committed story is the determinism frontier (operator ruling,
 2026-06-12).** LLM generation NEVER reproduces — same material re-run gets different scopings,
 namings, readings, ε (OQ-26 / Axiom 2 amended in v6.13.1; the press/Reformation triple, kernel_v1).
-**Measured upstream magnitude (OQ-264, 2026-08-05): same-input decompose re-runs reproduce only
-3/6–5/6 of a manifest's readings — never score per-reading presence/absence from single-draw
-manifests without a same-input churn arm and a numeric HALT threshold; sampling is not pinnable
-(Sonnet-5 rejects temperature; no API seed), so churn is the production regime's own.**
+**Measured upstream magnitude (OQ-264 resolved 2026-08-06): same-input decompose redraw
+stability of per-reading identity is FILE-STRUCTURE-DEPENDENT — 2/6–3/6 (340K arsenal),
+4/6–5/6 (103K arsenal), 6/6 ×3 (34K single-voice) — so there is NO global churn floor; a
+manifest feature counts as replicated only if present (name-blind subject+stance) in ALL 3
+same-input redraws (k=3 unanimous; 1–2 of 3 = observation). Pooled ratios do NOT repair
+per-reading instability — a unit-built denominator inherits the churn (witnessed: a k=3
+share range fell entirely between numerator-identical draws; fewer readings raise share) —
+so report numerator/denominator ranges separately and never gate finer than the
+denominator's own churn. Names are never identity across redraws (kernel ids churned at
+reproduce-rate 1.0). Sampling is not pinnable (Sonnet-5 rejects temperature; no API seed),
+so churn is the production regime's own. Full standard:
+`audits/2026-08-06_oq264_kredraw_variance/WRITEUP.md`.**
 So do not design, test, or reason as if same-prompt → same-story: backchecking a generation says
 nothing about the next run, re-generated stories are NEW DRAWS not re-measurements, and cross-run
 "same story" identity does not exist. **Deterministic from the committed JSON onward — and that

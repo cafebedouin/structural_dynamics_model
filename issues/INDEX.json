@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "241ec42d9279a5bf67e5da11595b2f7cfdbf4a3f",
+    "store_version": "b418b632054d926e16b09a86cad91cd85cb0c398",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-06T13:58:09"
+    "generated_at": "2026-08-06T14:29:09"
   },
-  "issues_sha": "018668e8e2ec4da65773be5d2f29e00fb068a3efa6035a81e9ba9bb3493c778d",
+  "issues_sha": "37b7778efd581972577adf675557a6502082f188a5d979e7944a87ce8f3317de",
   "n_entries": 264,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 140,
+    "resolved": 141,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 89,
+    "open": 88,
     "partial": 7
   },
   "active": [
@@ -1326,20 +1326,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-258"
-      ]
-    },
-    {
-      "id": "OQ-264",
-      "status": "open",
-      "priority": 2,
-      "summary": "Single-draw per-reading findings carry an unquantified error bar: decompose churn floor constrains audit design program-wide (k-redraw variance standard needed)",
-      "deps": [
-        "splits_from OQ-259",
-        "blocked_on_human oq264-phase-c-go-or-standard-only-closure"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-259"
       ]
     }
   ],
@@ -3650,6 +3636,19 @@
       "mentioned_in": [
         "OQ-26",
         "OQ-263"
+      ]
+    },
+    {
+      "id": "OQ-264",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Single-draw per-reading findings carry an unquantified error bar: decompose churn floor constrains audit design program-wide (k-redraw variance standard needed)",
+      "deps": [
+        "splits_from OQ-259"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-259"
       ]
     }
   ]

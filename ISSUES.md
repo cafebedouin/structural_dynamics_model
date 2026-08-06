@@ -12408,7 +12408,8 @@ format or of emphasis-blind ingestion is witnessable by running the pre-named
 discriminator; no ruling needed to run it).
 
 **Status:** open — item 1 CLOSED by operator ruling (2026-08-05, option 1 extended:
-the Arm-0 churn floor IS the finding); items 2–3 blocked on the OQ-264 redesign standard.
+the Arm-0 churn floor IS the finding); items 2–3 UNBLOCKED 2026-08-06 (OQ-264 resolved:
+k=3-unanimous presence standard; see the dated notes on each item).
 **Priority:** 3
 **Origin:** 2026-08-03 kritik ingest probe (`audits/2026-08-03_kritik_ingest/`;
 pre-registration `PROPOSAL.md` `1bd57a84`, verdict `SCORING.md` `d7c49cdd`).
@@ -12457,7 +12458,11 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    conversion provenance before any emphasis-aware variant; (b) it is cyan-dominant
    (`{cyan: 943, yellow: 90}` highlights witnessed), so emphasis-aware conversion needs
    `--highlight-colors cyan`; (c) any single-dry-run graduation read inherits the item-1
-   churn-floor caveat below.
+   churn-floor caveat below; (d) **(2026-08-06, OQ-264 resolved):** any feature-level
+   claim in the graduation read requires the k=3-unanimous presence standard — one
+   dry-run yields draw-level observations only, so budget the graduation decision at
+   ~3× the file's ingest cost (~150K tok/run at 584K .md) or scope the read to
+   draw-level language.
 3. **Deferred essay deliverable (operator-side, essay-layer ONLY, never pipeline
    input):** `shanahan_kritik.md` mapping doc — must build on the ballot mapping AS
    CORRECTED by the operator (2026-08-03, recorded on OQ-261: the ballot sections
@@ -12483,8 +12488,12 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    single-draw standard and is now insufficient — a flag appearing in one draw of one
    file cannot upgrade `omega_debate_genre_distortion` from observation to detection
    given the witnessed per-manifest churn. "Comparable" now means the pre-specified
-   (i)+(ii) flag appears **across k redraws** of the independent arsenal (k per the
-   OQ-264 variance-floor standard), not in a single manifest.
+   (i)+(ii) flag appears **across k redraws** of the independent arsenal. **k is
+   concrete (2026-08-06, OQ-264 resolved): the (i)+(ii) flag must appear in ALL 3
+   same-input redraws of the independent arsenal (k=3 unanimous; 1–2 of 3 =
+   observation, not detection).** AT Fiat cannot serve this item (non-arsenal
+   single-voice file; its k=3 redraws produced no qualifying flag — descriptive record
+   in `audits/2026-08-06_oq264_kredraw_variance/READOUT_atfiat.md`).
 
 **Item 1 outcome (2026-08-05): HALTED at the pre-registered Arm-0 gate — Arm 1/Arm 2
 NOT run.** Full apparatus built and witnessed (`audits/2026-08-05_oq259_emphasis_discriminator/`):
@@ -12695,7 +12704,7 @@ path.
 **Ω-type:** Ω_E (the k-redraw variance of pooled decompose observables is measurable by
 runs; the design standard is then set from measurement, not preference).
 
-**Status:** open
+**Status:** resolved — 2026-08-06, standard-only closure (operator ruling in-session); k=3-unanimous presence standard minted
 **Priority:** 2
 **Origin:** OQ-259 item-1 Arm-0 gate firing + operator ruling, 2026-08-05
 (`audits/2026-08-05_oq259_emphasis_discriminator/ARM0_HALT_REPORT.md`, commits
@@ -12703,71 +12712,35 @@ runs; the design standard is then set from measurement, not preference).
 **Files:** `agent/c-orchestrator.py`, `agent/llm_call.py`,
 `audits/2026-08-05_oq259_emphasis_discriminator/`, `audits/2026-08-03_kritik_ingest/`
 
-**Deps:** splits_from OQ-259, blocked_on_human oq264-phase-c-go-or-standard-only-closure
+**Deps:** splits_from OQ-259
 
-**Phase A/B executed (2026-08-06, zero spend) — checkpoint open.**
-`audits/2026-08-06_oq264_kredraw_variance/`: pre-registered PROPOSAL (`fd58d3a1`) →
-blinded pooled scoring (calls `0a28d7ca` before mapping `e4c293d4`) → PHASE0_REPORT
-(`507e21ce`). Gate on the free Biopower triple: **PASS(sens1), PROVISIONAL at k=3** —
-share range 0.25 (0.500/0.750/0.667) at the PASS-band boundary; measured scorer
-variance 0 (duplicates 6/6); variance localizes to the GENERATOR (D churned 6→4→6, a
-33% unit swing at fixed input; share-stability only, manifests NOT stable). Cap triple:
-churn-extreme contrast confirmed at every mechanical observable incl. the categorical
-kernel-minting-churn draw. Plan's rev-1 sensitivity modifier was recalibrated in Phase A
-per its own quantization-simulation clause (CALIBRATION.txt witnesses both rules).
-**Blocked on the operator ruling (PHASE0_REPORT.md checkpoint): Phase C go/no-go +
-spend ceiling + k (3 vs 5) + AT Fiat inclusion, or standard-only closure.** Phase D
-propagation (Amendment-5 qualifier, OQ-259 items 2–3 re-scope, CLAUDE.md churn block)
-follows the ruling.
-**CORRECTION (2026-08-06, same day, operator review — see PHASE0_REPORT correction
-block + DENOM_SENSITIVITY.txt, registered `241ec42d`):** the 0.25 range is a
-DENOMINATOR artifact — the entire max-pairwise Δ falls between two draws with identical
-TAG=3; the pooled observable inherits per-reading churn through D (fewer readings raise
-share) rather than escaping it, so the instrument-candidate reading is withdrawn and
-the specification question precedes any k-sizing. Headline is dual-rule (PASS under
-rev-2, INDET under rev-1, on the boundary the Phase-A recalibration made passable);
-duplicate 6/6 is a bound (95% UB 0.393), not zero; Cap concordance check: drift
-unsupported (weak).
+**Resolution (2026-08-06, standard-only).** Full record:
+`audits/2026-08-06_oq264_kredraw_variance/` WRITEUP.md (pre-registration `fd58d3a1`;
+blind order calls `0a28d7ca` → mapping `e4c293d4`; corrections `241ec42d`/`13999d9c`;
+Phase C `ac2650ae`/`b418b632`; KNOWN_STATE 2026-08-06). Measured: per-reading redraw
+stability is FILE-STRUCTURE-DEPENDENT — 2/6–3/6 (Cap, 340K arsenal), 4/6–5/6 (Biopower,
+103K arsenal), **6/6 ×3 (AT Fiat, 34K single-voice — the 2026-08-05 "no Arm-0
+measurement" rider closed with its expectation inverted)** — so no global churn floor
+exists. The pooled idiom-share repair FAILS by specification: its entire k=3 range
+(0.25) fell between numerator-identical draws (denominator churn at fixed judgment;
+fewer readings perversely raise share). The pre-registered share gate's output
+(PASS(sens1) rev-2 / INDET rev-1, on the band boundary) stands on record, superseded in
+meaning by the correction block. Operator ruled: no further Biopower share draws; AT
+Fiat k=3 reproduce-rate was the sole spend (≈101K tok; corpus untouched).
 
-**The finding (witnessed).** Same-input decompose re-runs (byte-identical .md, same
-flags, same model) reproduce 3/6–5/6 of a baseline manifest's readings by
-subject+stance; on the 340K-token file one of two re-runs minted no contested kernel at
-all, and 3 of 4 pre-named target readings churned at fixed input. Sampling is NOT
-pinnable in this regime (witnessed `agent/llm_call.py:112`: Sonnet-5 rejects
-non-default temperature, so it is omitted by design; the API has no seed) — the churn
-is a property of the instrument-under-production-conditions, not an unpinned knob, and
-the measured magnitude is the production regime's own (no temp-0 subset question
-exists). This extends the standing "generation is stochastic" doctrine (CLAUDE.md
-Critical Distinctions) UPSTREAM of the committed-story determinism frontier with a
-measured magnitude: per-reading identity across redraws is not a stable observable at
-n≈2 on 100K–340K-token inputs.
-
-**Propagation (do not bury — this is the program-wide part).** Every per-reading or
-per-section finding derived from a SINGLE-DRAW manifest now carries an unquantified
-error bar. Named instances: (a) WRITEUP Amendment 4's position-vs-machinery granularity
-claim (2026-08-03) — a per-section observable inferred from one draw per file, which
-OQ-259 P2 was going to test with the same instrument that failed its gate; (b) OQ-259
-item 3's genre-flag replication standard — restated 2026-08-05 on that entry to
-appearance-across-k-redraws; (c) any future scoring rubric that keys on presence/absence
-of an individual manifest reading. Cross-file agreement (the 2026-08-03 (f) verdict)
-survives — the two files landed one outcome class through different manifests — but
-per-reading citations from single draws do not.
-
-**Resolution path (operator-shaped, 2026-08-05).** (1) Establish the k-redraw variance
-FLOOR of the pooled candidate observable (idiom SHARE — needs no per-reading identity)
-on ONE file before pinning any prediction thresholds — swapping an unvalidated
-per-reading observable for an unvalidated pooled one is not a repair. (2) Cost geometry
-has inverted: at ~100–340K tok/call the affordable design is FEWER FILES × MORE DRAWS
-(Biopower + AT Fiat at k=3–5 is the probable shape), not three files × one draw.
-(3) Cap K NW is named OUT OF SCOPE for per-reading measurement (too expensive to
-measure properly at its churn level) rather than quietly carried. The OQ-259
-emphasis-aware conversions + extractor remain ready for a design that clears this
-standard.
-
-**What resolution changes.** Whether any per-reading/per-section claim from a
-single-draw manifest is citable without a k-redraw qualifier; the k and the variance
-floor every future manifest-scoring audit must design against; whether OQ-259 items 2–3
-(both currently blocked_on this OQ) get a compliant instrument.
+**Still-operative standard (the resolution's product; full form in WRITEUP.md):**
+1. No per-reading/per-section claim from a single-draw manifest — draw-level observation only.
+2. Pooled ratios inherit unit churn through unit-built denominators: report numerator
+   and denominator ranges separately + a denominator-convention sensitivity table
+   (DENOM_SENSITIVITY.txt is the template); never gate finer than the denominator's own churn.
+3. Presence/replication = pre-specified name-blind criteria met in ALL 3 same-input
+   redraws (k=3 unanimous); 1–2 of 3 = observation, not detection.
+4. Names are never identity across redraws (kernel ids churned at reproduce-rate 1.0);
+   match by subject+stance.
+5. Cap K NW out of scope for per-reading measurement (2026-08-05 ruling, unchanged).
+6. Stability gates over judged calls carry scorer-vs-generator decomposition (seeded
+   duplicates + mechanical comparators); 0/n observed agreement is cited with its
+   binomial bound (0/6 → 95% UB 0.393), never as "zero."
 
 ---
 
