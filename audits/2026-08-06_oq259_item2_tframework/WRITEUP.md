@@ -9,6 +9,10 @@
 - `superseded_baseline_51caeb36.md` — the retired committed baseline, retained verbatim (597,374 B, md5 `51caeb36…`)
 - `pandoc_stderr.log` — empty; conversion exited 0
 - `RECON.md` — provenance narrowing (sole commit, clean worktree) with commands
+- `P2_CALIBRATION.md` — Part C prereg work: two-sided P2 calibration verdict (no
+  token-mechanical form opens a gap; ESCALATED to the C checkpoint)
+- `p2_calibration.py` + `p2_calibration_v{1,2,3}_output.txt` — the calibration script
+  and the three swept-variant outputs witnessing the inverted/collapsed ordering
 
 ## What ran
 
@@ -45,3 +49,22 @@
 - OQ-259 item-2 note (a) is RESOLVED as "confirmed non-reproduction, provenance
   re-anchored to the pinned recipe" — the note's precondition (resolve conversion
   provenance before any emphasis-aware variant) is discharged by the re-mint.
+
+## P2 two-sided calibration (Part C prereg work, executed same day — see P2_CALIBRATION.md)
+
+Swept three token-mechanical strictness variants of the reading↔TAG match-rate
+predicate over the AT Fiat k=3 triple (ceiling) and the Biopower NW + Cap K NW triples
+(floor): the ceiling NEVER exceeds the floor (v1/v2 inverted, v3 collapsed to ~0). P2
+is unbuildable as a mechanical gate on current instruments — the quantity exists only
+at the judged level (OQ-264's blinded 6/6). ESCALATED to the C checkpoint per the
+plan's pinned clause; no threshold pinned; Part C run 1 must not start until the
+operator picks the P2 form (judged step / P1-only / other). Side finding: the Cap K r2
+manifest has an empty `commitment_system_recognition` — P2 must be conditioned on
+P1-passing draws.
+
+## Part C status
+
+NOT run (staged spend, own checkpoint). Pinned so far: input md5 `a365da8a…` (this
+audit), emphasis-blind regime, TAG-inventory reference-layer method, P1 predicate
+(`is_contested_kernel` true), HALT budget rule, graduation verdict grammar — per the
+approved plan. P2's form is the open item blocking C-prereg finalization.
