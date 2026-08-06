@@ -1,8 +1,8 @@
-# OQ-259 item 3 (B0) — origin's STRICT genre-flag did not reproduce in either same-input redraw (0/2); TERRITORY tier reproduced 2/2; B1 spend arm pending operator checkpoint
+# OQ-259 item 3 — verification arm CLOSED on B0's evidence (operator ruling 2026-08-06): origin's STRICT flag 0/2 at its own source, blind; B1 not run; quote takes the pre-authorized one-off framing
 
 **Executed:** 2026-08-06
 **OQ:** OQ-259 (item 3 — genre-flag reproduction arm; standard from OQ-264's k=3-unanimous ruling)
-**Verdict:** Under blinded, pre-registered two-tier adjudication of all 14 candidate carriers across the origin Biopower manifest and its two Arm-0 same-input redraws, the strict (i)+(ii) conjunction appears ONLY in the origin (blind call: STRICT) and in neither redraw (STRICT 0/2); the weaker TERRITORY tier reproduces 2/2 — item 3's bar is one the origin file itself did not clear at n=2 (pre-registered disclosure), and the B1 fresh-file arm (Afropessimism NW, 3 redraws) awaits the operator go with this result in the checkpoint package.
+**Verdict:** Under blinded, pre-registered two-tier adjudication of all 14 candidate carriers across the origin Biopower manifest and its two Arm-0 same-input redraws, the strict (i)+(ii) conjunction appears ONLY in the origin (blind call: STRICT) and in neither redraw (STRICT 0/2) while TERRITORY reproduces 2/2 — on which evidence the operator CLOSED the verification arm without running B1 (ruling below); the quote takes the one-off-observation framing that OQ-259's 2026-08-03 text pre-authorized for exactly this outcome.
 **Substrate:** no pipeline run (manifest-text adjudication only; corpus untouched). Manifests: origin `biopower_k_nhi_debate_2026_20260803_102652` + Arm-0 redraws `…_20260805_144612` / `…_20260805_144823` (all `--dry-run --skip-search`, mode-comparable per RECON §2).
 **Evidence map:**
 - `RECON.md` — recon findings; unblinded in-session read filed as HYPOTHESIS; thin-control caveat on the shingle probe
@@ -45,10 +45,32 @@ times, each via a different non-fidelity consequence clause (coverage; structure
 - The unblinded hypothesis (strict 1/2–2/2) was MORE generous than the blind call —
   recorded in B0_TALLY.md as the divergence the blinding was declared to catch.
 
+## B1 closure (operator ruling, 2026-08-06 — arm closed WITHOUT spend)
+
+The operator reviewed the checkpoint package and ruled B1 NOT RUN: B0 is decisive
+against the arm's purpose. With STRICT 0/2 at the origin itself (byte-identical
+input), a fresh-file STRICT arm would measure a form with no demonstrated stability
+at its own source — every reachable outcome is uninformative (3/3 would demand
+explanation rather than support a claim; 1–2/3 is only "consistent with brittleness";
+0/3 repeats B0 for free), and TERRITORY was pre-declared near-saturated and
+context-only. ~250K tokens would fill a row the interpretation table already renders
+unusable. The honest close: item 3's cheap verification came back NEGATIVE, at the
+origin, blind — and OQ-259's own 2026-08-03 text pre-authorized this outcome (without
+a comparable second flag, quote as a one-off observation, not detection). B0 produced
+the stronger version of the anticipated fresh-file null. The B1 prereg sections in
+PREREGISTRATION.md (specimen, thresholds, table rows 1–8) remain frozen as the record
+of what WOULD have run; they are not executable without a new operator ruling.
+
+**General finding promoted to KNOWN_STATE (operator instruction):** the unblinded
+session read was more generous than the blind calls — the second time in this program
+that the instrument proved less stable than a single-draw read suggested (first:
+OQ-264's Arm-0 expectation inversion). Blinding protocols are earning their keep in
+one consistent direction: unblinded reads over-credit stability.
+
 ## Open / pending
 
-- **B1 (spend, ~230–300K input tok): NOT run.** Gated on the operator checkpoint
-  package (interpretation table + shingle control + two-sided P2 calibration + this
-  B0 result). Specimen and thresholds pinned in PREREGISTRATION.md.
-- Part C (T Framework graduation dry-run) separately gated; its pinned input md5 is
-  minted in `audits/2026-08-06_oq259_item2_tframework/`.
+- Part C (T Framework graduation dry-run) proceeds separately under P1-only promotion
+  (operator ruling, same day); its record lives in
+  `audits/2026-08-06_oq259_item2_tframework/`.
+- Part D essay framing is FINAL (one-off observation, B0 bounds); publication is
+  operator-side.

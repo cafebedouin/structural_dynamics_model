@@ -1,11 +1,10 @@
-# The Kritik and the Engine (DRAFT — framing finalizes after OQ-259 Part B1)
+# The Kritik and the Engine
 
-**Status: DRAFT (2026-08-06).** Essay-layer only — this document is never pipeline
-input (feeding it to the pipeline would anchor SCOPE; make_brief neutrality
-principle). Location `docs/drafts/` is proposed, operator's call. The quoted-omega
-section reads off the pre-registered interpretation table
-(`audits/2026-08-06_oq259_item3_genreflag/PREREGISTRATION.md`) and carries a
-placeholder for the B1 result; everything else is final-draft quality.
+**Status: framing FINAL (2026-08-06; operator closed the B1 verification arm on B0's
+evidence — `audits/2026-08-06_oq259_item3_genreflag/WRITEUP.md`).** Essay-layer only —
+this document is never pipeline input (feeding it to the pipeline would anchor SCOPE;
+make_brief neutrality principle). Location `docs/drafts/` confirmed by operator
+ruling. Publication is operator-side.
 
 ---
 
@@ -122,18 +121,20 @@ file, draws, never a rate):
 - Pre-registered disclosure, stated wherever this quote appears: the strict bar is one
   the origin file itself did not clear across its own two redraws.
 
-So the honest current framing is: **a one-off observation whose weaker territory form
-was redraw-stable at n=2 and whose strict form was redraw-brittle at n=2.** Not
-detection. Not a capability claim.
+So the framing is, finally: **a one-off observation whose weaker territory form was
+redraw-stable at n=2 and whose strict form was redraw-brittle at n=2.** Not detection.
+Not a capability claim.
 
-**[B1 PLACEHOLDER — do not publish with this bracket present.]** The pre-registered
-fresh-file arm (three redraws of an independent, content-disjoint arsenal; specimen
-and thresholds pinned) has not run. When it has, this section's framing is read off
-the pre-committed interpretation table — and only off it. Even its ceiling row
-licenses "the pre-specified flag reproduced on a second independent source," never
-"detection" in any general sense; its floor rows leave the quote exactly the one-off
-observation described above; any outcome outside the table's rows is reported as
-"indeterminate, no ruling" with tallies quoted and no framing beyond them.
+That framing is now closed, not provisional. A fresh-file verification arm (three
+redraws of an independent, content-disjoint arsenal) was pre-registered, and the
+operator closed it without running it — because the origin-stability measurement had
+already settled the question the arm was built to ask. With the strict form
+unreproduced at its own source under byte-identical input, no fresh-file outcome could
+have been informative: reproduction there would demand explanation rather than provide
+support, and non-reproduction would repeat what the free measurement already showed.
+The framework's own instruction, written before any of this ran, anticipated the
+outcome: without a comparable second flag, quote as a one-off observation, not
+detection. The observation stands as what it is — one striking draw, honestly bounded.
 
 ## 5. What survives
 

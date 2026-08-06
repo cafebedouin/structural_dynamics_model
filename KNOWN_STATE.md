@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-06 — [tripwire] Unblinded single-draw reads of generated-manifest features run GENEROUS: twice now the instrument was less stable than the unblinded read suggested — blind the call before citing stability
+
+**Files:** audits/2026-08-06_oq259_item3_genreflag/B0_TALLY.md, audits/2026-08-06_oq264_kredraw_variance/WRITEUP.md
+**Tier:** tripwire
+
+General finding, promoted from a B0 detail by operator instruction (2026-08-06). Two
+independent instances, same direction: (1) OQ-264 — the 2026-08-05 "no Arm-0
+measurement needed" expectation inverted when measured; (2) OQ-259 B0 — the unblinded
+session read hypothesized strict reproduction 1/2–2/2; blinded adjudication measured
+0/2 (the specific miss: an unblinded read credited a structure-import clause as a
+fidelity clause). The failure mode is not random error — unblinded reads OVER-credit
+stability/reproduction. Standing rule: before citing any stability, reproduction, or
+presence claim about generated-manifest features, run the call blind (packet with ids
+stripped + commit-order + withheld-mapping md5; template
+`audits/2026-08-06_oq259_item3_genreflag/`). An unblinded read is a hypothesis to file
+in RECON, never a citable rate. Also the B1-closure precedent: an origin-stability
+null can retire a planned fresh-specimen spend arm whole — check the free
+origin-stability measurement BEFORE pricing a fresh-file arm.
+
+---
+
 ## 2026-08-06 — [correction-key] OQ-259 items 2–3 free arms: B0 blinded measurement (STRICT 0/2, TERRITORY 2/2, origin blind STRICT), P2 unbuildable as mechanical gate (two-sided calibration inverted), essay drafted — B1 and C await operator checkpoints
 
 **Files:** ISSUES.md, audits/2026-08-06_oq259_item3_genreflag/, audits/2026-08-06_oq259_item2_tframework/P2_CALIBRATION.md, docs/drafts/shanahan_kritik.md

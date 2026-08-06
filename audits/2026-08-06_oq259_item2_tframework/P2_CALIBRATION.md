@@ -54,6 +54,16 @@ ESCALATED: the C-checkpoint options are (a) P2 as a blinded-adjudication step pe
 P1 + draw-level language, (c) another operator-specified form. No P2 threshold is
 pinned; Part C run 1 must not start with a fake gate.
 
+**RULED (operator, 2026-08-06): option (b) — P1-only promotion, draw-level language.**
+The sweep did not fail to find a threshold; it found the construct is not
+token-recoverable (ceiling below floor across all variants — an inverted
+discriminator; opposite-direction errors on one dial are not fixable by dial-turning).
+Judged-step P2 (option a) REJECTED: reintroducing a judgment gate mid-stage is the
+post-hoc-licence shape the mechanical rule was written to prevent, and OQ-264's
+machinery would need its own blinding and calibration to be trustworthy — a project,
+not a gate. Standing note on this escalation: P2-style checks, if ever revived, apply
+only to P1-passing draws (the Cap K r2 conditioning finding below).
+
 **Two-sided calibration earned its keep in the falsifying direction:** a one-sided
 (ceiling-only) calibration would have measured 0.14–0.33 on AT Fiat, pinned a low
 threshold, and the gate would then FIRE ON ARSENALS (floor 0.50–1.00 at that
