@@ -26,6 +26,53 @@ Consolidated 2026-06-04 from: `docs/*.md` audit writeups, `docs/audits/`,
 `audit_data/`, `audit_proposal/` (+ its `audit/agy/` variant), and `phase1/`
 (see KNOWN_STATE.md 2026-06-04 entry for the move map and fork notes).
 
+## Writeup format (adopted 2026-08-06; forward-only)
+
+Codifies the majority practice found by the 2026-08-06 index build: 57/168 directories already
+used `WRITEUP.md`/`writeup.md`, but four rival entry-point names (WRITEUP/FINDINGS/README/
+bespoke) and three pre-registration spellings left several directories mechanically
+unindexable — a Pattern-2 silent fork on the prose substrate (`build_discipline.md` → *An audit
+directory has one entry point*). Existing directories are point-in-time and are **not renamed**;
+every NEW audit follows this.
+
+**One entry point: `WRITEUP.md` (uppercase), exactly one per audit directory.** It is the file
+the index reads and a cold reader opens first, and the only file that must exist — a HALT, an
+abandoned probe, or an evidence dump still gets a short WRITEUP.md saying exactly that. Phase
+files keep reserved names, and WRITEUP.md links each one present:
+
+- `RECON.md` — what data exists, what is answerable (read-only pass).
+- `PROPOSAL.md` — exactly what will run and what would constitute each verdict.
+- `PREREGISTRATION.md` — this single spelling (not `PRE_REGISTRATION.md`/`PREREG.md`).
+  **Frozen at spend time**: never retro-edited; the writeup quotes it, never amends it.
+- `FINDINGS_<leg>.md` / `READOUT_<arm>.md` — per-leg or per-arm interim results in multi-phase
+  audits; at close, WRITEUP.md is written (or promoted from the final findings file) and links
+  them all.
+
+**Required WRITEUP.md header block:**
+
+```
+# <slug or OQ-NN> — <verdict-bearing headline at its scoped altitude>
+
+**Executed:** YYYY-MM-DD (= directory date)
+**OQ:** OQ-NN[, OQ-MM] — or `none` + why this ran without one
+**Verdict:** one sentence: the claim, its scope, the caveat the body carries
+**Substrate:** corpus leg(s) + pipeline-manifest cite (n_constraints, code_commit,
+  code_dirty) — or `no pipeline run`
+**Evidence map:** one line per artifact in this directory — what it is, which claim
+  it witnesses
+```
+
+Body sections are flexible; the reader contract is not: the **headline carries the verdict**
+("proxy only" in the body means "proxy only" in the title — build_discipline → *over-confident
+moves* #1), **results paste their witnesses** (paste-or-untag), and a closing **Residue**
+section names what changed in substrate (OQ status edits, KNOWN_STATE entries, next steps) so
+the cold read finds the handoff.
+
+**The evidence map is mandatory, not decorative.** Every artifact in the directory appears in
+it; an artifact no claim consumes is either deleted or declared dead there (Pattern 1 applied
+to audit dirs). Evidence-only directories whose findings live wholly in ISSUES.md/KNOWN_STATE.md
+are a legacy shape — new audits always carry the writeup, however short.
+
 ## Index (as of 2026-08-06 — 168 audits)
 
 One row per audit directory: the main writeup file and its headline. Derived by reading each

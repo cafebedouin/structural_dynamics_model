@@ -865,6 +865,12 @@ subdirectory per audit, writeup AND evidence artifacts together; date = executio
 `python/audits/` writing to `outputs/`; on completion, writeup + evidence move into the dated
 subdirectory. Conventions and consolidation map: `audits/README.md`.
 
+**Writeup format (2026-08-06, forward-only): every NEW audit dir carries exactly one
+`WRITEUP.md` entry point** (required header: executed date, OQ, one-line verdict at its scoped
+altitude, manifest cite, evidence map naming every artifact) with reserved phase names
+`RECON.md` / `PROPOSAL.md` / `PREREGISTRATION.md` (one spelling, frozen at spend). Template and
+rationale: `audits/README.md` → *Writeup format*; existing dirs are point-in-time, never renamed.
+
 ## Cross-Sibling Disambiguation (standard practice)
 
 When a per-item call about an authored field is ambiguous in one file (agent vs vindicated

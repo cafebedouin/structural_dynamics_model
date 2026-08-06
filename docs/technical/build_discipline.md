@@ -1867,3 +1867,24 @@ proxy under its default binding; a grep for a `"gaps"` render used as a proxy fo
 undetermined at a human surface." Each looked clean from outside; each was caught by attention, not a
 control. Provenance and the five instances: `docs/design/detector_calibration_omega_proposal.md`
 (Corrections log → *Named failure mode* / *Standing guard*).
+
+---
+
+## An audit directory has one entry point and an evidence map (Patterns 1+2 on the prose substrate)
+
+The 2026-08-06 `audits/` index build found the writeup layer forked the way code does: four rival
+entry-point names (`WRITEUP.md`/`FINDINGS.md`/`README.md`/bespoke), three spellings of
+pre-registration (`PRE_REGISTRATION`/`PREREGISTRATION`/`PREREG`), six directories with no writeup
+at all — and mechanical index extraction mis-picked the "main" file in several directories (a
+subagent prompt, a raw stage-2 draw output) because no fact said which file was canonical. Same
+defects, prose substrate: canonicity was a memory, not a checked fact (Pattern 2), and evidence
+artifacts sat unmapped where nothing declared which claim consumed them (Pattern 1).
+
+**The rule (full spec + header template: `audits/README.md` → *Writeup format*):** every new
+audit directory carries exactly one `WRITEUP.md` entry point — required header block (executed
+date, OQ pointer, one-line verdict at its scoped altitude, substrate/manifest cite, evidence
+map) — plus reserved phase-file names (`RECON.md`, `PROPOSAL.md`, `PREREGISTRATION.md` — one
+spelling, frozen at spend time and never retro-edited). The evidence map is the Pattern-1
+discharge for the directory: every artifact is either named with the claim it witnesses or
+declared dead. Existing directories are point-in-time and stay as-is; the convention is
+forward-only.
