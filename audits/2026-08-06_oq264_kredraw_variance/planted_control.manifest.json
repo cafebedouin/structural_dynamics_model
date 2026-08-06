@@ -1,0 +1,27 @@
+{
+  "_comment": "Planted judged-control entries for the OQ-264 pooled blinded packet. Synthetic (authored 2026-08-06, Phase A, before any scoring); constructed to be unambiguous at the TAG/non-TAG boundary the share observable uses. HALT semantics (PROPOSAL.md section 7): the blinded pass must score plant-tag on the TAG side (tag or tag-leaning) and plant-card on the NON-TAG side (mixed or card is acceptable for side purposes, expected class card); either plant landing on the wrong SIDE halts the audit before any share computation. Single-agent limitation declared in PROPOSAL.md section 3: the scorer authored these entries; the control checks that the rubric's boundary fires as written, not scorer independence.",
+  "entries": [
+    {
+      "plant_id": "plant-tag",
+      "style": "kernel_reading",
+      "name": "framework_prior_reading",
+      "text_a": "The prior question is framework: the judge should evaluate the 1AC's epistemology and method first, not simulated policy outcomes; utilitarian impact calculus is answered at the framework level before any link debate reaches the flow.",
+      "text_b": "The file's two-sided framework debate: the Neg Framework blocks (Epistemology First, AT: Utilitarianism, Micro-Sovereign) against the Aff Framework counter-block's policy-evaluation frame.",
+      "text_c": "If framework is prior, plan-outcome offense is inadmissible until the epistemology contest resolves; the round's structure shifts from link/impact weighing to method comparison.",
+      "expected_side": "TAG",
+      "expected_class": "tag",
+      "construction_note": "Phrasing and grounding are the block-heading layer near-verbatim (Framework / Epistemology First / AT: Utilitarianism are ### headings in the Biopower tag inventory); no card author is cited."
+    },
+    {
+      "plant_id": "plant-card",
+      "style": "kernel_reading",
+      "name": "enclosure_dispossession_reading",
+      "text_a": "Capitalism reproduces itself through ongoing enclosure and accumulation by dispossession: privatized health infrastructure is a continuing enclosure of the care commons, so market provision of health is continuous primitive accumulation rather than a one-time historical origin.",
+      "text_b": "Federici (Caliban and the Witch, enclosure of reproductive labor), Harvey (accumulation by dispossession), Luxemburg (ongoing primitive accumulation).",
+      "text_c": "If accumulation requires continuous enclosure, decommodified national health insurance directly interdicts the reproduction circuit; reform is not absorbed by capital but is contested terrain at the enclosure frontier.",
+      "expected_side": "NON-TAG",
+      "expected_class": "card",
+      "construction_note": "Federici/Harvey/Luxemburg and the enclosure/dispossession vocabulary appear nowhere in the Cap K NW tag inventory (no block heading names them); the position is built entirely from cited-literature vocabulary."
+    }
+  ]
+}

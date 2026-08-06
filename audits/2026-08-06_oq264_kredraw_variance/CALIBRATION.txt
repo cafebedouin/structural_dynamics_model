@@ -1,0 +1,69 @@
+# OQ-264 Phase A calibration witness (2026-08-06). Outputs of:
+#   python3 python/audits/oq264_idiom_share.py control
+#   python3 python/audits/oq264_idiom_share.py calibrate
+# Committed WITH PROPOSAL.md; gate numbers were set only after these printed.
+
+== Mechanical denominator control (pre-registered formula) ==
+  biopower/base: D=6 expected=6 -> PASS
+  biopower/r1: D=4 expected=4 -> PASS
+  biopower/r2: D=6 expected=6 -> PASS
+  capk/base: D=6 expected=6 -> PASS
+  capk/r1: D=4 expected=4 -> PASS
+  capk/r2: D=3 expected=3 -> PASS [ZERO-KERNEL fallback population]
+-- SCORING.md 2026-08-03 baseline denominators --
+  biopower/base vs SCORING.md: D=6 expected=6 -> PASS
+  capk/base vs SCORING.md: D=6 expected=6 -> PASS
+-- Model-version / provenance identity check --
+  biopower/base: model=claude-sonnet-5 prompt=d179423d schema=43ee9613
+  biopower/r1: model=claude-sonnet-5 prompt=d179423d schema=43ee9613
+  biopower/r2: model=claude-sonnet-5 prompt=d179423d schema=43ee9613
+  capk/base: model=claude-sonnet-5 prompt=d179423d schema=43ee9613
+  capk/r1: model=claude-sonnet-5 prompt=d179423d schema=43ee9613
+  capk/r2: model=claude-sonnet-5 prompt=d179423d schema=43ee9613
+  distinct (model,prompt,schema) triples: 1 -> identical across all six
+== control: ALL PASS ==
+
+== Gate draws (Biopower triple): D = [6, 4, 6] ==
+-- Achievable share lattice per draw --
+  D=4: 0/4=0.000, 1/4=0.250, 2/4=0.500, 3/4=0.750, 4/4=1.000
+  D=6: 0/6=0.000, 1/6=0.167, 2/6=0.333, 3/6=0.500, 4/6=0.667, 5/6=0.833, 6/6=1.000
+-- Achievable RANGE lattice (max-min over the triple) --
+  0/1=0.000, 1/12=0.083, 1/6=0.167, 1/4=0.250, 1/3=0.333, 5/12=0.417, 1/2=0.500, 7/12=0.583, 2/3=0.667, 3/4=0.750, 5/6=0.833, 1/1=1.000
+-- Candidate bands: PASS range<=0.25; FAIL range>=0.5; INDET between; component residual max 1.0 --
+-- Quantization simulation: null = share perfectly stable at s*, scorer makes EXACTLY ONE class flip on one uniformly-chosen unit --
+   rev1 = plan-as-drafted modifier (sens==1 -> INDET regardless of band)
+   recal = recalibrated modifier (FAIL+sens1 -> INDET; PASS+sens1 stands iff duplicates clean; clean assumed here)
+      s*   TAG_true |  zero-error verdict (rev1/recal) | one-error rev1: P/I/F | one-error recal: P/I/F
+   0.000  [0, 0, 0] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+   0.042  [0, 0, 0] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+   0.083  [0, 0, 0] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+   0.125  [1, 0, 1] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.38/0.62/0.00
+   0.167  [1, 1, 1] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.81/0.19/0.00
+   0.208  [1, 1, 1] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.81/0.19/0.00
+   0.250  [2, 1, 2] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.94/0.06/0.00
+   0.292  [2, 1, 2] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.94/0.06/0.00
+   0.333  [2, 1, 2] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.94/0.06/0.00
+   0.375  [2, 2, 2] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.62/0.38/0.00
+   0.417  [2, 2, 2] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.62/0.38/0.00
+   0.458  [3, 2, 3] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+   0.500  [3, 2, 3] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+   0.542  [3, 2, 3] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+   0.583  [4, 2, 4] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.62/0.38/0.00
+   0.625  [4, 2, 4] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.62/0.38/0.00
+   0.667  [4, 3, 4] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.94/0.06/0.00
+   0.708  [4, 3, 4] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.94/0.06/0.00
+   0.750  [4, 3, 4] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.94/0.06/0.00
+   0.792  [5, 3, 5] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.81/0.19/0.00
+   0.833  [5, 3, 5] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.81/0.19/0.00
+   0.875  [5, 4, 5] |    INDET(sens1)/PASS(sens1)  | 0.00/1.00/0.00 | 0.38/0.62/0.00
+   0.917  [6, 4, 6] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+   0.958  [6, 4, 6] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+   1.000  [6, 4, 6] |            PASS/PASS         | 0.00/1.00/0.00 | 1.00/0.00/0.00
+-- max P(FAIL) under any stable null + one flip (recal rule): 0.0000 (calibrated: FAIL unreachable under the null) --
+-- Sensitivity examples (flips to change raw verdict; final under recal, clean dups) --
+  TAG=[3, 2, 3] shares=['3/6', '2/4', '3/6'] range=0.000 raw=PASS sensitivity=2 final=PASS
+  TAG=[4, 2, 3] shares=['4/6', '2/4', '3/6'] range=0.167 raw=PASS sensitivity=1 final=PASS(sens1)
+  TAG=[4, 2, 4] shares=['4/6', '2/4', '4/6'] range=0.167 raw=PASS sensitivity=1 final=PASS(sens1)
+  TAG=[4, 1, 3] shares=['4/6', '1/4', '3/6'] range=0.417 raw=INDET sensitivity=1 final=INDET
+  TAG=[5, 1, 3] shares=['5/6', '1/4', '3/6'] range=0.583 raw=FAIL sensitivity=1 final=INDET(sens1-FAIL)
+  TAG=[6, 1, 3] shares=['6/6', '1/4', '3/6'] range=0.750 raw=FAIL sensitivity=2 final=FAIL
