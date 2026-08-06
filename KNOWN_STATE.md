@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-06 — [landed] OQ-259 item-2 Part C executed: T Framework GRADUATED second meta-layer file (P1 3/3 + blinded presence 3/3, planted control valid); B1 closed without spend (operator ruling)
+
+**Files:** audits/2026-08-06_oq259_item2_tframework/, ISSUES.md, docs/drafts/shanahan_kritik.md
+**Tier:** landed
+
+Operator rulings resolved both checkpoints: B1 NOT run (B0's STRICT 0/2 at the origin
+made every fresh-file outcome uninformative; item-3 verification arm closed on B0's
+evidence, quote takes the pre-authorized one-off framing; essay framing FINAL at
+`docs/drafts/shanahan_kritik.md`); Part C ran under P1-only promotion (P2 judged-step
+rejected). Three serialized `--dry-run --skip-search` draws of the re-minted baseline
+(`a365da8a…`, ~220,720 tok/run): P1 PASS 3/3, kernel ids churned 3/3, reading counts
+3/6/5; presence clause adjudicated blind (packet `afbaaa55…`, withheld mapping
+`e6a26bed…`, calls `7581cf98` before reveal) with planted AT Fiat control called
+DIFFERENT 3/3 → three draws one SAME subject+stance group → **graduated per the
+frozen grammar** (prereg `4f862bee`). Scope: presence result, one file,
+emphasis-blind regime — not detection, not ingestion (a T Framework story ingest is a
+separate operator spend, permitted not compelled). Symmetric confirmatory-draw
+staging (run 2 iff run 1 mints; run 3 iff both) adopted over declared-n=1 — strictly
+dominant given the 3/3 grammar. Full record:
+`audits/2026-08-06_oq259_item2_tframework/` (WRITEUP.md, C_RESULTS.md).
+
+---
+
 ## 2026-08-06 — [tripwire] Unblinded single-draw reads of generated-manifest features run GENEROUS: twice now the instrument was less stable than the unblinded read suggested — blind the call before citing stability
 
 **Files:** audits/2026-08-06_oq259_item3_genreflag/B0_TALLY.md, audits/2026-08-06_oq264_kredraw_variance/WRITEUP.md

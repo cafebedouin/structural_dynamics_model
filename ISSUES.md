@@ -12414,16 +12414,26 @@ EXECUTED 2026-08-06 (plan rev 4):** item-2 note (a) RESOLVED (baseline re-minted
 pinned recipe, `audits/2026-08-06_oq259_item2_tframework/`); item-3 B0 measured
 (STRICT 0/2, TERRITORY 2/2, origin blind STRICT — `audits/2026-08-06_oq259_item3_genreflag/`);
 P2 two-sided calibration ESCALATED (unbuildable as mechanical gate); Part D essay
-DRAFTED (`docs/drafts/shanahan_kritik.md`, location = operator's call). **Remaining
-spend arms await the operator: (1) B1 go (checkpoint package on the item-3 WRITEUP),
-(2) C run 1 go + P2-form ruling (see item-2 WRITEUP).**
+DRAFTED (`docs/drafts/shanahan_kritik.md`). **Operator rulings (2026-08-06, both
+checkpoints resolved):** (1) **B1 NOT RUN — item-3 verification arm CLOSED on B0's
+evidence** (STRICT 0/2 at the origin makes every fresh-file STRICT outcome
+uninformative; the 2026-08-03 text pre-authorized the one-off-observation framing for
+exactly this outcome; ruling recorded in the item-3 WRITEUP). Essay framing FINAL;
+location `docs/drafts/` confirmed. (2) **Part C GOES with P1-only promotion,
+draw-level language** (judged-step P2 rejected as post-hoc-licence shape); symmetric
+confirmatory-draw staging adopted (run 2 iff run 1 mints; run 3 iff both) — prereg
+frozen `4f862bee` before run 1. **Part C EXECUTED same day: GRADUATED (P1 3/3 +
+blinded presence 3/3 with valid planted control; item-2 note (g)).** All three work
+items now carry closure: item 1 (operator ruling 2026-08-05), item 2 (graduation
+verdict, this entry), item 3 (verification arm closed on B0; essay final). The OQ
+looks CLOSABLE — formal close left to the operator (the standing directional
+predictions on an emphasis-aware re-run were mooted by item 1's closure, worth
+confirming at close).
 **Priority:** 3
 **Origin:** 2026-08-03 kritik ingest probe (`audits/2026-08-03_kritik_ingest/`;
 pre-registration `PROPOSAL.md` `1bd57a84`, verdict `SCORING.md` `d7c49cdd`).
 **Files:** `agent/analysis/originals/k_files/`, `audits/2026-08-03_kritik_ingest/`,
 `audits/2026-08-05_oq259_emphasis_discriminator/`, `python/audits/emphasis_extract.py`
-
-**Deps:** blocked_on_human oq259-b1-spend-go-and-c-p2-form-ruling
 
 **Standing result being extended.** Both arsenal replicates (Cap K NW, Biopower NW)
 scored (f) partial recovery, replicate-stable, under EMPHASIS-BLIND ingestion (operator
@@ -12480,10 +12490,27 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    TWO-SIDED across three token-strictness variants: the AT Fiat ceiling NEVER exceeds
    the arsenal floor (v1/v2 inverted, v3 collapsed ~0) — the quantity exists only at
    the judged level (OQ-264's blinded 6/6), so P2 is unbuildable as a mechanical gate.
-   Operator picks at the C checkpoint: judged-step P2 / P1-only promotion / other
-   (`audits/2026-08-06_oq259_item2_tframework/P2_CALIBRATION.md`). Side finding: a
-   no-kernel draw (Cap K r2, empty CSR) fails P1 before P2 — P2 conditions on
-   P1-passing draws.
+   Operator RULED same day: P1-only promotion, draw-level language (judged-step
+   rejected as post-hoc-licence shape;
+   `audits/2026-08-06_oq259_item2_tframework/P2_CALIBRATION.md`). Side finding: a
+   no-kernel draw (Cap K r2, empty CSR) fails P1 before P2 — P2-style checks, if
+   ever revived, condition on P1-passing draws.
+   (g) **(2026-08-06, Part C EXECUTED — GRADUATED):** prereg frozen `4f862bee`
+   (P1-only; symmetric confirmatory-draw staging superseding the promote-on-1
+   asymmetry); three serialized same-input dry-runs (`--dry-run --skip-search`,
+   input md5 `a365da8a…` stable around each, corpus untouched each, ~220,720
+   tok/run ≈ 662K total): **P1 PASS 3/3** (kernel ids churned 3/3:
+   `role_of_debate_kernel`/`topicality_boundary_kernel`/`legitimate_ballot_grounding`;
+   reading counts 3/6/5), and the presence clause adjudicated BLIND with a planted
+   different-subject control (AT Fiat kernel; called DIFFERENT 3/3 — instrument
+   valid): the three kernel descriptions one SAME subject+stance group → **kernel
+   presence 3/3 → "graduated second meta-layer file" per the frozen grammar**
+   (`audits/2026-08-06_oq259_item2_tframework/C_RESULTS.md`). Scope pinned:
+   presence result on one file, emphasis-blind dry-run regime; NOT detection, NOT a
+   stability constant, NOT an ingestion — adding T Framework stories to the K-file
+   corpus is a separate operator spend decision (now permitted, not compelled, by
+   the (f) verdict's meta-layer exception). Per-reading identity across draws NOT
+   adjudicated (kernel-level only).
 3. **Deferred essay deliverable (operator-side, essay-layer ONLY, never pipeline
    input):** `shanahan_kritik.md` mapping doc — must build on the ballot mapping AS
    CORRECTED by the operator (2026-08-03, recorded on OQ-261: the ballot sections
@@ -12525,12 +12552,22 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    draws, never a rate. The unblinded session hypothesis (strict 1/2–2/2) was MORE
    generous than the blind calls — divergence on record in `B0_TALLY.md`. B1
    (Afropessimism NW ×3, ~230–300K tok; specimen independence witnessed at 0.0000%
-   shingle overlap vs control 21.12%) is pre-registered and awaits the operator
-   checkpoint. **Omega-class floor note (cross-ref OQ-264):** within one omega, the
-   observable CLASS sets the churn floor — name churned 2/2, territory content stable
-   2/2, strict conjunction brittle 0/2 — so redraw-stability constants measured on one
-   observable class (names, tags, presence) do NOT transfer to another class on the
-   same file; any future gate must be calibrated on the class it gates.
+   shingle overlap vs control 21.12%) was pre-registered and then CLOSED WITHOUT
+   SPEND by operator ruling (2026-08-06): B0 is decisive against the arm's purpose —
+   with STRICT 0/2 at the origin, every reachable fresh-file STRICT outcome is
+   uninformative and TERRITORY was pre-declared context-only; the verification arm
+   closes on B0's evidence and the quote takes the pre-authorized one-off framing
+   (full ruling: item-3 WRITEUP). **Omega-class floor note (cross-ref OQ-264):**
+   within one omega, the observable CLASS sets the churn floor — name churned 2/2,
+   territory content stable 2/2, strict conjunction brittle 0/2 — so redraw-stability
+   constants measured on one observable class (names, tags, presence) do NOT transfer
+   to another class on the same file; any future gate must be calibrated on the class
+   it gates. The class list extends to FIELD PRESENCE itself: Cap K r2's redraw
+   returned an EMPTY `commitment_system_recognition` at byte-identical input (its
+   siblings populated it) — whole-field emptiness is a churn-class datum, and any
+   P2-style check, if ever revived, conditions on P1-passing draws for exactly this
+   reason. Related standing tripwire: unblinded single-draw reads of manifest
+   features run GENEROUS (twice witnessed) — KNOWN_STATE 2026-08-06.
 
 **Item 1 outcome (2026-08-05): HALTED at the pre-registered Arm-0 gate — Arm 1/Arm 2
 NOT run.** Full apparatus built and witnessed (`audits/2026-08-05_oq259_emphasis_discriminator/`):

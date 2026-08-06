@@ -1,18 +1,32 @@
-# OQ-259 item 2 (note a) — T Framework baseline does NOT reproduce under the pinned recipe; fresh baseline minted, superseded file retained
+# OQ-259 item 2 — T Framework GRADUATED as second meta-layer file (kernel presence 3/3 blinded + P1 unanimity 3/3); baseline re-minted from pinned recipe; P2 ruled out as mechanical gate
 
 **Executed:** 2026-08-06
-**OQ:** OQ-259 (item 2, note (a) — conversion provenance precondition for the graduation dry-run)
-**Verdict:** The committed `T Framework - Michigan 2026 BCFP.md` (597,374 B, md5 `51caeb369d147849d07b45f1ba0926b6`) is not reproduced by the pinned recipe `pandoc -f docx -t gfm --wrap=none` (pandoc 2.9.2.1) on the committed docx; a fresh baseline (672,832 B, md5 `a365da8aa11e5039807275bcc662f956`) was minted from the pinned recipe and is Part C's pinned input — the diff shape is described below, but NO cause classification is claimed.
-**Substrate:** no pipeline run (file-level provenance check only; corpus untouched)
+**OQ:** OQ-259 (item 2 — conversion provenance + P2 calibration + Part C graduation dry-run)
+**Verdict:** Three staged parts, one day: (A) the committed baseline (597,374 B, `51caeb36…`) is NOT reproduced by the pinned recipe (pandoc 2.9.2.1 `-f docx -t gfm --wrap=none`; markup-shape diff only, cause withheld) — fresh baseline minted, md5 `a365da8aa11e5039807275bcc662f956`; (P2) no token-mechanical meta-layer gate is buildable (ceiling never exceeds floor across three variants) — operator ruled P1-only promotion; (C) three serialized same-input dry-runs each minted a contested kernel (P1 3/3) whose churned-id kernel descriptions were adjudicated one SAME subject+stance group under a blinded call with a passing planted control — **"graduated second meta-layer file" per the frozen grammar**; ingestion remains a separate operator decision.
+**Substrate:** no pipeline run (dry-run manifests only; corpus untouched, witnessed per run)
 **Evidence map:**
 - `tframework_repro_pandoc2921.md` — pinned-recipe output from the committed docx (672,832 B, md5 `a365da8a…`); byte-identical to the newly minted baseline at `agent/analysis/originals/k_files/T Framework - Michigan 2026 BCFP.md`
 - `superseded_baseline_51caeb36.md` — the retired committed baseline, retained verbatim (597,374 B, md5 `51caeb36…`)
 - `pandoc_stderr.log` — empty; conversion exited 0
 - `RECON.md` — provenance narrowing (sole commit, clean worktree) with commands
 - `P2_CALIBRATION.md` — Part C prereg work: two-sided P2 calibration verdict (no
-  token-mechanical form opens a gap; ESCALATED to the C checkpoint)
+  token-mechanical form opens a gap; escalated; operator RULED P1-only)
 - `p2_calibration.py` + `p2_calibration_v{1,2,3}_output.txt` — the calibration script
   and the three swept-variant outputs witnessing the inverted/collapsed ordering
+- `PREREGISTRATION.md` — Part C prereg, frozen `4f862bee` before run 1 (P1-only
+  promotion, symmetric confirmatory-draw staging, HALT, k=3 grammar)
+- `TAG_INVENTORY_TFRAMEWORK.txt` — mechanical header extraction of the pinned
+  baseline (39 lines; descriptive reference layer, non-gating)
+- `tframework_c_run{1,2,3}.log` + the three `*.manifest.json` — the staged dry-run
+  draws (P1 pass ×3; input md5 + corpus-untouched witnessed around each)
+- `PRESENCE_CALL.md` / `build_presence_packet.py` / `PRESENCE_PACKET.md` — the frozen
+  presence-clause protocol (packet md5 `afbaaa55…`, withheld mapping md5 `e6a26bed…`,
+  planted AT Fiat control, instrument-validity rule)
+- `PRESENCE_CALLS_RAW.md` — verbatim blinded calls, committed `7581cf98` before the
+  mapping
+- `presence_mapping.json` — the reveal (md5 matches pin)
+- `C_RESULTS.md` — per-run table, staged path, presence verdict, graduation verdict
+  with its pinned scope
 
 ## What ran
 
@@ -62,9 +76,17 @@ operator picks the P2 form (judged step / P1-only / other). Side finding: the Ca
 manifest has an empty `commitment_system_recognition` — P2 must be conditioned on
 P1-passing draws.
 
-## Part C status
+## Part C — EXECUTED (operator go + P1-only ruling, 2026-08-06)
 
-NOT run (staged spend, own checkpoint). Pinned so far: input md5 `a365da8a…` (this
-audit), emphasis-blind regime, TAG-inventory reference-layer method, P1 predicate
-(`is_contested_kernel` true), HALT budget rule, graduation verdict grammar — per the
-approved plan. P2's form is the open item blocking C-prereg finalization.
+Prereg frozen `4f862bee` before run 1 (P1-only promotion per the operator's P2 ruling;
+symmetric confirmatory-draw staging — run 2 iff run 1 mints, run 3 iff both — chosen
+over the declared-n=1 alternative because the 3/3 grammar makes it strictly dominant).
+Three serialized dry-runs, each witnessed (input md5 `a365da8a…` stable before/after;
+corpus snapshot diff empty; ~220,720 tok/run): P1 PASS 3/3 under three churned kernel
+ids and churned reading-set sizes (3/6/5). The presence clause was adjudicated BLIND
+per the frozen protocol (close call; unblinded-reads-run-generous tripwire): planted
+different-subject control called DIFFERENT 3/3 (instrument valid), the three draws'
+kernel descriptions one SAME group. **Verdict per the frozen grammar: graduated second
+meta-layer file.** Full detail and the claim's pinned scope: `C_RESULTS.md`.
+Ingestion (stories into the corpus) is NOT part of this verdict — separate operator
+spend decision, now permitted by the (f) verdict's meta-layer exception.
