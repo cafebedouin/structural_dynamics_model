@@ -12409,14 +12409,21 @@ discriminator; no ruling needed to run it).
 
 **Status:** open — item 1 CLOSED by operator ruling (2026-08-05, option 1 extended:
 the Arm-0 churn floor IS the finding); items 2–3 UNBLOCKED 2026-08-06 (OQ-264 resolved:
-k=3-unanimous presence standard; see the dated notes on each item).
+k=3-unanimous presence standard; see the dated notes on each item). **Free arms
+EXECUTED 2026-08-06 (plan rev 4):** item-2 note (a) RESOLVED (baseline re-minted from
+pinned recipe, `audits/2026-08-06_oq259_item2_tframework/`); item-3 B0 measured
+(STRICT 0/2, TERRITORY 2/2, origin blind STRICT — `audits/2026-08-06_oq259_item3_genreflag/`);
+P2 two-sided calibration ESCALATED (unbuildable as mechanical gate); Part D essay
+DRAFTED (`docs/drafts/shanahan_kritik.md`, location = operator's call). **Remaining
+spend arms await the operator: (1) B1 go (checkpoint package on the item-3 WRITEUP),
+(2) C run 1 go + P2-form ruling (see item-2 WRITEUP).**
 **Priority:** 3
 **Origin:** 2026-08-03 kritik ingest probe (`audits/2026-08-03_kritik_ingest/`;
 pre-registration `PROPOSAL.md` `1bd57a84`, verdict `SCORING.md` `d7c49cdd`).
 **Files:** `agent/analysis/originals/k_files/`, `audits/2026-08-03_kritik_ingest/`,
 `audits/2026-08-05_oq259_emphasis_discriminator/`, `python/audits/emphasis_extract.py`
 
-**Deps:** blocked_on OQ-264
+**Deps:** blocked_on_human oq259-b1-spend-go-and-c-p2-form-ruling
 
 **Standing result being extended.** Both arsenal replicates (Cap K NW, Biopower NW)
 scored (f) partial recovery, replicate-stable, under EMPHASIS-BLIND ingestion (operator
@@ -12462,7 +12469,21 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    claim in the graduation read requires the k=3-unanimous presence standard — one
    dry-run yields draw-level observations only, so budget the graduation decision at
    ~3× the file's ingest cost (~150K tok/run at 584K .md) or scope the read to
-   draw-level language.
+   draw-level language. (e) **(2026-08-06, executed):** note (a) RESOLVED — pinned
+   recipe (pandoc 2.9.2.1, `-f docx -t gfm --wrap=none`) does NOT reproduce the
+   committed baseline (markup-shape diff only: underline spans + superscript encoding;
+   line counts identical; cause verdict withheld); fresh baseline MINTED from the
+   pinned recipe, md5 `a365da8aa11e5039807275bcc662f956` = Part C's pinned input;
+   superseded `51caeb36…` retained in `audits/2026-08-06_oq259_item2_tframework/`.
+   (f) **(2026-08-06, P2 escalation — BLOCKS C-prereg finalization):** the promotion
+   rule's P2 (meta-layer match-rate vs mechanical TAG inventory) was calibrated
+   TWO-SIDED across three token-strictness variants: the AT Fiat ceiling NEVER exceeds
+   the arsenal floor (v1/v2 inverted, v3 collapsed ~0) — the quantity exists only at
+   the judged level (OQ-264's blinded 6/6), so P2 is unbuildable as a mechanical gate.
+   Operator picks at the C checkpoint: judged-step P2 / P1-only promotion / other
+   (`audits/2026-08-06_oq259_item2_tframework/P2_CALIBRATION.md`). Side finding: a
+   no-kernel draw (Cap K r2, empty CSR) fails P1 before P2 — P2 conditions on
+   P1-passing draws.
 3. **Deferred essay deliverable (operator-side, essay-layer ONLY, never pipeline
    input):** `shanahan_kritik.md` mapping doc — must build on the ballot mapping AS
    CORRECTED by the operator (2026-08-03, recorded on OQ-261: the ballot sections
@@ -12494,6 +12515,22 @@ discriminates independently of (and in the same re-run as) the tag-idiom predict
    observation, not detection).** AT Fiat cannot serve this item (non-arsenal
    single-voice file; its k=3 redraws produced no qualifying flag — descriptive record
    in `audits/2026-08-06_oq264_kredraw_variance/READOUT_atfiat.md`).
+   **B0 measured (2026-08-06, blinded, pre-registered —
+   `audits/2026-08-06_oq259_item3_genreflag/`):** across the origin Biopower file's two
+   Arm-0 same-input redraws, STRICT (the (i)+(ii) bar above) reproduced **0/2**;
+   TERRITORY (genre + selection-pressure + any epistemic consequence) reproduced
+   **2/2**, name churned both times; the origin's own flag passes STRICT blind.
+   Pre-registered disclosure now attached to any rows-1–3 reading in B1: the strict
+   bar is one the origin file itself did not clear at n=2. All n=2 figures are two
+   draws, never a rate. The unblinded session hypothesis (strict 1/2–2/2) was MORE
+   generous than the blind calls — divergence on record in `B0_TALLY.md`. B1
+   (Afropessimism NW ×3, ~230–300K tok; specimen independence witnessed at 0.0000%
+   shingle overlap vs control 21.12%) is pre-registered and awaits the operator
+   checkpoint. **Omega-class floor note (cross-ref OQ-264):** within one omega, the
+   observable CLASS sets the churn floor — name churned 2/2, territory content stable
+   2/2, strict conjunction brittle 0/2 — so redraw-stability constants measured on one
+   observable class (names, tags, presence) do NOT transfer to another class on the
+   same file; any future gate must be calibrated on the class it gates.
 
 **Item 1 outcome (2026-08-05): HALTED at the pre-registered Arm-0 gate — Arm 1/Arm 2
 NOT run.** Full apparatus built and witnessed (`audits/2026-08-05_oq259_emphasis_discriminator/`):

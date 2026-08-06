@@ -45,6 +45,33 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-06 — [correction-key] OQ-259 items 2–3 free arms: B0 blinded measurement (STRICT 0/2, TERRITORY 2/2, origin blind STRICT), P2 unbuildable as mechanical gate (two-sided calibration inverted), essay drafted — B1 and C await operator checkpoints
+
+**Files:** ISSUES.md, audits/2026-08-06_oq259_item3_genreflag/, audits/2026-08-06_oq259_item2_tframework/P2_CALIBRATION.md, docs/drafts/shanahan_kritik.md
+**Tier:** correction-key
+
+Full records: the two audit-dir WRITEUPs. Pre-registered blinded adjudication
+(prereg+packet `db708cc7` → calls `12ee7f55` → mapping reveal `536263bc`, md5s pinned
+forward) of all 14 candidate carriers across the origin Biopower manifest + its two
+Arm-0 redraws. **How results may be cited:** (1) `omega_debate_genre_distortion` is an
+OBSERVATION whose strict (i)+(ii) form is redraw-brittle (0/2) and whose genre-territory
+form is redraw-stable (2/2, name churned both times) — n=2 figures are two draws, never
+a rate; the pre-registered disclosure (the origin file itself did not clear the strict
+bar at n=2) attaches to any future rows-1–3 reading. (2) The unblinded hypothesis
+(strict 1/2–2/2) was MORE generous than the blind calls — cite the blind result only.
+(3) Omega-class floor: name/territory/strict are DIFFERENT observable classes with
+different churn floors on the same file; stability constants do not transfer across
+classes (cross-ref OQ-264). (4) P2: ceiling never exceeded floor across three
+token-strictness variants (v1/v2 inverted, v3 collapsed) — cite as "unbuildable as a
+mechanical gate, judged-level quantity only"; no threshold exists; Part C must not
+start with a fake gate (operator picks the P2 form at the C checkpoint). (5)
+`capitalism_kritik_ndi2026_20260805_145128.manifest.json` has an EMPTY
+`commitment_system_recognition` — a P1-fail draw, not a P2 zero. Part D draft at
+`docs/drafts/shanahan_kritik.md` (location = operator's call; B1 placeholder bracket
+must be resolved before publication).
+
+---
+
 ## 2026-08-06 — [landed] OQ-259 item-2 note (a): T Framework baseline re-minted from pinned recipe (non-reproduction confirmed, markup-shape diff, no cause verdict)
 
 **Files:** agent/analysis/originals/k_files/T Framework - Michigan 2026 BCFP.md, audits/2026-08-06_oq259_item2_tframework/
