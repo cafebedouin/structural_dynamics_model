@@ -45,6 +45,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-06 — [landed] OQ-259 item-2 note (a): T Framework baseline re-minted from pinned recipe (non-reproduction confirmed, markup-shape diff, no cause verdict)
+
+**Files:** agent/analysis/originals/k_files/T Framework - Michigan 2026 BCFP.md, audits/2026-08-06_oq259_item2_tframework/
+**Tier:** landed
+
+The committed baseline (597,374 B, md5 `51caeb369d147849d07b45f1ba0926b6`, sole commit
+`1bd57a84`, worktree clean) is NOT reproduced by the pinned recipe `pandoc -f docx -t
+gfm --wrap=none` (pandoc 2.9.2.1): repro is 672,832 B, md5
+`a365da8aa11e5039807275bcc662f956`. Diff shape is purely markup representation
+(underline `<span>` runs present in repro absent in baseline — stripping them leaves an
+8-line diff; residual is `<sup>NN</sup>` vs Unicode superscripts), line counts
+identical; cause classification deliberately withheld per plan. Fresh baseline minted
+from the pinned recipe (live `.md` now md5 `a365da8a…`); superseded file retained at
+`audits/2026-08-06_oq259_item2_tframework/superseded_baseline_51caeb36.md`. **The new
+md5 `a365da8a…` is the pinned input for any OQ-259 item-2 Part C prereg.** Full record:
+`audits/2026-08-06_oq259_item2_tframework/WRITEUP.md`.
+
+---
+
 ## 2026-08-06 — [correction-key] OQ-264 RESOLVED (standard-only): per-reading redraw stability is file-structure-dependent (0.33–1.00); pooled share does NOT repair churn (denominator artifact); k=3-unanimous presence standard minted
 
 **Files:** ISSUES.md, CLAUDE.md, audits/2026-08-06_oq264_kredraw_variance/, audits/2026-08-03_kritik_ingest/WRITEUP.md, python/audits/oq264_idiom_share.py
