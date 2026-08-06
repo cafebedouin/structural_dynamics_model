@@ -58,3 +58,55 @@ beyond noise (drift NOT excluded — the check is weak either way at n=3 per fil
   "measured-zero scorer variance" clause that lets a sens-1 PASS stand therefore rests
   on an interval consistent with an error rate up to ~39%, any of which is enough (at
   sensitivity 1) to have produced the pass. Reported as such wherever the clause is cited.
+
+## 4. Phase C pre-registration — AT Fiat k=3, REPRODUCE-RATE ONLY (operator ruling 2026-08-06)
+
+Committed BEFORE any call. Operator ruling (this session): no additional Biopower share
+draws (the share observable is denominator-confounded per §1 — more draws measure the
+confound more precisely); spend ONLY on AT Fiat reproduce-rate, closing the 2026-08-05
+ruling's standing rider ("AT Fiat has NO Arm-0 measurement"); then standard-only closure.
+
+**Runs (serial, ≤ 3 + 1 retry allowance for API failure only, never a re-roll;
+≈ 34K input tok each, ~102K total):**
+
+```bash
+python3 agent/c-orchestrator.py --dry-run --skip-search "agent/analysis/originals/k_files/AT Fiat K - Michigan 2026 BCFP.md"
+```
+
+**Per-run HALT conditions (any one halts the arm):** input md5 ≠ `8d2224c8…` (the
+`1bd57a84` baseline, re-checked immediately before each run); corpus write (listing-diff
+on `prolog/testsets/` or `json/` non-empty vs the pre-run snapshot); any `*_brief.md`
+appears beside the source; chunking/windowing in the log instead of whole-doc
+single-prompt ingest.
+
+**Observable (sole gate-relevant measurement):** per re-run reproduce-rate = (baseline
+readings with a subject+stance match among the re-run's kernel readings + selected
+axes) / 6, name-blind — the ADDENDUM §4 method verbatim. **Pinned AT Fiat baseline
+reading set** (from the frozen `fiat_efficacy_kernel_2026_20260803_102258`; D = 6, all
+kernel-linked; deferred `ethical_localism_trap` excluded):
+
+1. fiat efficacious by EMPIRICAL PRECEDENT — small student/activist actions historically
+   produced large-scale outcomes (BDS / Vietnam / Chicago School cases);
+2. fiat efficacious as KNOWLEDGE-GENERATION — research + public academic engagement
+   ("scholarship of consequence") reshape the conditions of social problems (Galea);
+3. fiat efficacious as TRUTH-PROCEDURE — axiomatic prescription ("healthcare belongs to
+   everyone") forces the State to rewrite its norms from outside its own logic
+   (Badiou/McGee);
+4. fiat efficacious as PREDICTIVE SYNTHESIS — disciplined hypothetical policy
+   imagination as political theory's proper method (Bagg / Deweyan pragmatism);
+5. fiat efficacious as EMPATHY SIMULATION — simulating/testing hypothetical policy
+   builds real empathy and attitude change in participants (Mauri / HCI);
+6. fiat efficacious as UTOPIAN FICTION / social criticism — debate as educational game,
+   debaters as budding social critics working the public agenda (McGee & Romanelli).
+
+A zero-kernel re-run is its own categorical outcome (kernel-minting churn), scored
+against the selected-axes fallback for the match count but reported categorically —
+same rule as §2 of PROPOSAL.md.
+
+**Scope (firewalls, pre-committed):** AT Fiat feeds NO share number (the share
+instrument is closed by the ruling; its D≈3–6 lattice is coarser regardless). It also
+CANNOT serve OQ-259 item 3's genre-flag replication — item 3 requires a second
+independent ARSENAL, and AT Fiat is a single-voice meta-layer answers file; any
+genre-flag-shaped omega in the re-runs is recorded descriptively, non-gating. The
+share-pooling retraction protocol (plan Phase C) is moot: no share gate is extended.
+Results land in `READOUT_atfiat.md`; closure follows in WRITEUP.md + ISSUES.md.
