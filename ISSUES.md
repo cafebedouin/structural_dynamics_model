@@ -3504,6 +3504,17 @@ certification rode exactly that source.
    a side effect nobody chose. Carry OQ-70's ruling text and check the observed scope against it. Do
    not assume the observed scope is the ruled scope.
 
+**Interaction with OQ-113 (cross-ref added 2026-08-06; undeclared at mint).** OQ-113 (resolved
+2026-06-18) witnessed `natural_law_signature/1` unsatisfiable by construction on every corpus —
+`has_viable_alternatives/2`'s builder range is `{true, unknown}` and the signature requires
+`false` (residual routed to GAP-08 §7). If that range finding still holds at HEAD, question 1's
+constructed-story falsifier is short-circuited for corpus-authored stories: none can certify,
+explicit claim or not, and maxwell's non-firing is over-determined by TWO independent blockers
+(the OQ-70 source removal AND the HasAlternatives conjunct). Resolution must attribute which
+blocker binds — re-check `has_viable_alternatives/2`'s range at HEAD before spending the
+constructed-story falsifier, and question 2's ruling-scope read must not credit OQ-70 with an
+unreachability OQ-113 already owned.
+
 **Consumer surface — the silent part.** If `natural_law_signature` now fires only on explicit
 story-level claims, it has drifted from measuring **structural naturality** to measuring
 **authorial declaration**. Everything downstream inherits that shift without notice: FSM/FNL
