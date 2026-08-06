@@ -45,6 +45,23 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-06 — [landed] Monthly consolidation pass (2026-08): KNOWN_STATE roll-off 129 entries compressed; residues declared
+
+**Files:** KNOWN_STATE.md, CLAUDE.md, ISSUES.md
+**Tier:** landed
+
+Roll-off: 129 landed/history entries in the 2026-06-05..2026-07-06 due window compressed
+in place (7,906→5,310 lines, `4e0efd5b`; headers/Files/Tier verbatim, pointers kept;
+checker 261/0 green; 51 tripwire/correction-key entries in window deliberately left —
+they need the promotion test, next pass). ISSUES compress-on-close CHECK ran: ~130
+closed entries >14 lines (worst OQ-138/153/62/219); bulk compression deferred with the
+still-operative-ruling exemption noted. Memory dir verified consistent (103 files, 0
+orphans, no merge candidates). CLAUDE.md: dates advanced (next pass ≥2026-09-06),
+residues declared in the review section, OQ-264 churn-floor tripwire promoted into the
+"Generation is stochastic" block (promotion-test hit from the 2026-08-05 finding).
+
+---
+
 ## 2026-08-05 — [correction-key] OQ-259 item 1: emphasis discriminator HALTED by its pre-registered Arm-0 gate — per-reading presence is NOT redraw-stable within a file; "replicate-stable (f)" is cross-file only
 
 **Files:** python/audits/emphasis_extract.py, audits/2026-08-05_oq259_emphasis_discriminator/, agent/analysis/originals/k_files/, audits/2026-08-03_kritik_ingest/SCORING.md

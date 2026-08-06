@@ -725,6 +725,10 @@ appear in no canonical context and their scope_modifier values are unvalidated. 
 **Generation is stochastic; the committed story is the determinism frontier (operator ruling,
 2026-06-12).** LLM generation NEVER reproduces — same material re-run gets different scopings,
 namings, readings, ε (OQ-26 / Axiom 2 amended in v6.13.1; the press/Reformation triple, kernel_v1).
+**Measured upstream magnitude (OQ-264, 2026-08-05): same-input decompose re-runs reproduce only
+3/6–5/6 of a manifest's readings — never score per-reading presence/absence from single-draw
+manifests without a same-input churn arm and a numeric HALT threshold; sampling is not pinnable
+(Sonnet-5 rejects temperature; no API seed), so churn is the production regime's own.**
 So do not design, test, or reason as if same-prompt → same-story: backchecking a generation says
 nothing about the next run, re-generated stories are NEW DRAWS not re-measurements, and cross-run
 "same story" identity does not exist. **Deterministic from the committed JSON onward — and that
@@ -839,8 +843,14 @@ resolved/stale items. The same monthly pass covers:
   premise has changed; this is the symmetric counterpart to the promotion test (promotion adds,
   this removes/refreshes).
 
-**Last review: 2026-07-05. Interval: monthly.** If today is on or after **2026-08-05**, prompt
+**Last review: 2026-08-06. Interval: monthly.** If today is on or after **2026-09-06**, prompt
 the user to run a consolidation pass before starting the requested work, then update both dates.
+**Declared residue from the 2026-08 pass (pick up next round):** (a) the 51
+tripwire/correction-key KNOWN_STATE entries in the 2026-06-05..2026-07-06 window were left
+uncompressed (each needs the promotion test, not mechanical compression); (b) the ISSUES
+compress-on-close backlog is ~130 closed entries >14 lines (census 2026-08-05; worst:
+OQ-138 219, OQ-153 180, OQ-62 176, OQ-219 137 — several carry still-operative rulings the
+footer exempts, so compress with the exception rule in hand, not in bulk).
 
 ## Audit Methodology
 
