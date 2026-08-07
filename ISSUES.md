@@ -12725,6 +12725,39 @@ lands (authored-only-terminal verdict); either way v6 §11.2 updates from open t
 
 ---
 
+## OQ-266 — `tests/test_cs_pattern_detection.pl` is silently red (13/37) AND exits 0 on failure: fixture rot from the corpus reset + UID re-key, unwitnessed by any gate
+
+**Ω-type:** Ω_E (fully decidable by construction: rebuild self-contained fixtures, assert the
+suite green, make the runner exit non-zero on failure).
+
+**Status:** open — found 2026-08-06 during the v6 touch-up witness pass.
+
+**Priority:** 3
+
+**Origin:** v6 reissue pass, 2026-08-06. Running the suite per its own header chain
+(`swipl -l stack.pl -l tests/test_cs_pattern_detection.pl -g "run_cs_tests, halt."` from
+`prolog/`) yields **13/37 passed** — byte-identical failure lists before and after the v6
+header-comment edits (so pre-existing, not introduced; witness in commit `1f360e31`). Two
+defects compound:
+
+1. **Fixture rot.** The custom harness queries fixture constraints (`test_marked_revision`
+   etc.) that nothing loads or asserts — the same rot class `test_cs_drift_engine.pl` had
+   before its 2026-07-02 self-contained-fixtures fix (its header records: "the suite has been
+   silently red since" the corpus reset). Additionally, `cs_has_fields/1` and the field
+   accessors now join through `cs_story_uid/2` (UID re-key), so name-keyed fixture facts would
+   fail even if loaded — the fixtures must be rebuilt UID-keyed.
+2. **Exit-code absorption (Build Discipline Pattern 6).** `run_cs_tests/0` formats the failure
+   table and then SUCCEEDS — `halt` exits 0 regardless, so even a runner that checks the exit
+   code reads green. The suite is not in any gate, so nothing ever read even the text.
+
+**Resolution:** rebuild as self-contained UID-keyed fixtures (template:
+`test_cs_drift_engine.pl` setup/cleanup), make the goal fail (or `halt(1)`) when Failed > 0,
+and re-witness 37/37 — or, if some cases are obsolete against the v6 taxonomy, disposition
+them explicitly rather than deleting silently. Until then, do not cite this suite as a
+witness for anything.
+
+---
+
 *Last updated: 2026-08-06. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

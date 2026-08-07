@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "01fad7509101997b0588a51e64ea2b33166c73a2",
+    "store_version": "282ca6ab940f264c3d09f5b72b879a773f7c8bdc",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-06T21:44:18"
+    "generated_at": "2026-08-06T21:48:11"
   },
-  "issues_sha": "e2577b0de96e537ef51b0c8fe2725494ce3dc122e47146612912a771f8dff6d2",
-  "n_entries": 265,
+  "issues_sha": "42f0226223c20a412411a8a14dc4d77253e56f6f386d91ac5d34e394f3931747",
+  "n_entries": 266,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 88,
+    "open": 89,
     "partial": 7
   },
   "active": [
@@ -1326,6 +1326,15 @@
       "mentioned_in": [
         "OQ-227"
       ]
+    },
+    {
+      "id": "OQ-266",
+      "status": "open",
+      "priority": 3,
+      "summary": "`tests/test_cs_pattern_detection.pl` is silently red (13/37) AND exits 0 on failure: fixture rot from the corpus reset + UID re-key, unwitnessed by any gate",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": []
     }
   ],
   "archive": [
