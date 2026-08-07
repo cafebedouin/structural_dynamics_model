@@ -358,7 +358,12 @@ debugging trifurcation, §2). The revision applies the framework's preferred ack
 to itself: kernel = the spec, authority = the revision process, drift = the silent gap,
 acknowledgment = the dated marked revision. A framework about unacknowledged drift that
 accumulated unacknowledged drift and then acknowledged it in its own terms is a small evidence
-that the categories carve something real.
+that the categories carve something real. The property has since recurred at larger scale: by
+2026-08 the same spec-vs-code drift had re-accumulated at subsystem scale (six committer-axis
+subsystems built in code with no spec section), and the v6 full reissue acknowledged it the same
+way — adding a gate-integrated spec-vs-code enumeration tripwire so a third occurrence is caught
+by a checker rather than an audit. Acknowledgment capacity extended by tooling in response to
+the drift rate is the framework's own bandwidth-extension diagnosis applied to itself.
 
 ### 4.3 Axiom 7: authored commitment structure, computed consequence
 
@@ -378,8 +383,10 @@ deontological, conventional, instrumental, or theological). From these authored 
 lands, read off an attractor table grounded in a historical case library: stable_pattern, husk,
 extinction, revival, repudiation, axiom_foreclosure); the **foreclosure status** of an axiom
 (foreclosed when its grounding is empirically-contingent AND its reading's drift is
-axiom-overriding AND unacknowledged — the configuration where a premise is structurally ruled
-out by its own evidential commitments); and the **conflict signature** of two readings (§4.4).
+axiom-overriding at non-minor magnitude AND unacknowledged — the configuration where a premise
+is structurally ruled out by its own evidential commitments; minor drift is excluded because it
+self-corrects and lacks the evidential weight for foreclosure routing); and the **conflict
+signature** of two readings (§4.4).
 
 Why authored-in/computed-out rather than asking for the verdict directly: foreclosure and
 contradiction are truth claims a well-calibrated holder correctly declines to make. Asked to mark
@@ -873,7 +880,8 @@ routes through `classify_from_metrics/6` in `drl_core.pl`, with the signature la
 inside `dr_type`), the cohomology and transport invariants (H¹, Wasserstein, spectral weight,
 contextuality), MaxEnt and Boltzmann analyses, the purity/contamination network, and the
 committer-axis modules (`cs_kernel_registry`, `cs_axiom_engine`, `cs_drift_engine`,
-`cs_pattern_detection`). A Python layer of comparable size (120 top-level scripts as of this
+`cs_pattern_detection`, `cs_trifurcation`, `cs_drift_mismatch` — the six specced in
+`commitment_systems_sketch_v6.md`). A Python layer of comparable size (120 top-level scripts as of this
 writing, discoverable via `python3 python/cli.py list`) drives orchestration, reporting, sweeps, and gates. Computed
 results are serialized to `outputs/pipeline_output.json` under a manifest (run timestamp,
 constraint count, code commit, dirty flag) — readers consume the pre-computed values rather
