@@ -1,5 +1,7 @@
 # Commitment Systems and the Architecture of Drift
 
+*Superseded by `commitment_systems_sketch_v6.md` (2026-08-06); retained as history.*
+
 Any arrangement of stabilized commitments operating in an environment that changes faster than the commitments do will eventually face a structural problem: how to acknowledge that operational practice has drifted from the commitments without dissolving the authority that grounds the commitments. This problem appears wherever the conditions hold, which is more places than is usually noticed. Religions, constitutions, scientific theories, philosophical positions, identities, marriages, employment relationships, legal systems, artificial intelligence training protocols, mathematical practice, professional standards, ideological movements — all are commitment systems. All face the same structural problem. All instantiate the same patterns of response.
 
 This is a theoretical claim, not an empirical survey. The argument is that the structural pattern is real and the framework that analyzes it is portable across the domains where the pattern obtains. The empirical work of testing the framework in specific domains is the research program this paper aims to enable, not the work this paper performs.

@@ -1,5 +1,7 @@
 # Commitment Systems and the Architecture of Drift — v5
 
+*Superseded by `commitment_systems_sketch_v6.md` (2026-08-06); retained as history.*
+
 *Revision of v4. This version makes three marked changes to the pattern taxonomy and its operationalization, all of them small and evidence-supported, and records one larger hypothesis as an explicit null. The v4 theory is otherwise carried forward unchanged; only the sections that change are reproduced here, with the rest of v4 remaining authoritative.*
 
 *A note on scope, because the path to this version matters for reading it. An extended analysis explored whether the framework needed a second axis — a "committer" or "ground" dimension distinct from the observer positions the companion Deferential Realism (DR) engine already indexes. That exploration produced an elaborate and internally coherent structure. An empirical check against the constraint corpus found essentially no support for it (see §5, the null). What remains in the body of v5 is only what the corpus backs. The discarded structure is recorded as a null rather than deleted, so that the same ground is not re-explored from scratch later without the result attached.*

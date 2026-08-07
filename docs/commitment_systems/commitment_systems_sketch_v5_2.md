@@ -1,5 +1,7 @@
 # Commitment Systems and the Architecture of Drift — v5.2
 
+*Superseded by `commitment_systems_sketch_v6.md` (2026-08-06); retained as history.*
+
 *Revision of v5.1. This version makes one marked change: it acknowledges two pattern atoms
 present in the Prolog implementation since at least v4 operationalization
 (`natural_law_constraint` and `epistemic_consensus`) that were never enumerated or
