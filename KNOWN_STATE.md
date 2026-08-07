@@ -80,6 +80,14 @@ Stale-gap corrections landed in v6 vs the old satellite surveys: `cs_displaced_b
 is `forecloses`-edge-keyed (v5.2 said `affects_constraint/2`); `predicted_terminal_state/3`
 is at `transition_paths.pl:231–256` with vocabulary {piton, snare, tangled_rope, stable}.
 
+**v8 follow-through (2026-08-07, operator-directed):** three CS-facing currency fixes in
+`deferential_realism_paper_v8.md` (`785d090e`: §4.2 self-exemplification extended to the v6
+event; §4.3 foreclosure gains the non-minor condition the code always had; module inventory
+4→6), then the **blocked-B gate absorbed into v8** on operator instruction (new §4.2 paragraph:
+fix-individuation ruling, revisable-B/blocked-B split, gate-not-type, Stage 0; forward pointer
+in §2; Stage-0 rider on §5.9's Type-B leg; three-valued gate kept PROPOSED/OQ-235). v8 cites
+v6 §3 (Position in the trifurcation) as the ruling's record.
+
 ## 2026-08-06 — [landed] OQ-259 item-2 Part C executed: T Framework GRADUATED second meta-layer file (P1 3/3 + blinded presence 3/3, planted control valid); B1 closed without spend (operator ruling)
 
 **Files:** audits/2026-08-06_oq259_item2_tframework/, ISSUES.md, docs/drafts/shanahan_kritik.md

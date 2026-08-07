@@ -112,8 +112,9 @@ stable; they dissolve under frame-fixing), **Type B** (structure-generated — c
 that arise immediately from a formal system's axioms; they persist under frame-fixing and
 require system-level revision), and **Type C** (ambiguity-generated — a grammatically singular
 question packaging multiple queries with different valid answers; they dissolve under index
-specification). Its triage is routing: Type A is a debugging task, Type B a kernel failure,
-Type C a specification error. Two of its moves became the engine's spine. First,
+specification). Its triage is routing: Type A is a debugging task, Type B a kernel failure
+(§4.2 refines this: revision presupposes a reviser with standing — the blocked-B gate), Type C
+a specification error. Two of its moves became the engine's spine. First,
 classification-by-mechanism with per-type routing — classify the thing by how it is produced,
 then send it to the fix that matches, rather than adjudicating who is right. Second, the Type C
 index parameters — observer, time-slice, reference domain, value system — are the proto-form of
@@ -349,6 +350,31 @@ is not a sixth attractor in the commitment-system taxonomy but a structural prec
 the architecture out — and why *claiming* self-enforcing status while identifiable beneficiaries
 exist (`false_natural_law_constraint`) is the standard disguise of a constructed constraint as
 natural necessity.
+
+Where commitment systems sit in §2's trifurcation was settled by adjudication (operator,
+2026-07-23; recorded in `commitment_systems_sketch_v6.md` §3, Position in the trifurcation), and
+the ruling sharpens what the committer axis *is*. **Types are individuated by their fix, not
+their generating mechanism.** Stage 2 of the trifurcation is a remedy test — does freezing the
+frame eliminate the contradiction? — so the presence of drift and time does not route commitment
+systems to Type A: frame-fixing an institution returns a trivially clean report of a plank
+replaced, because a drifting institution is not a confused reasoner. The refinement lands on
+Type B. "Revise the axioms" **silently assumed the reviser exists** — Russell got ZF and the
+Liar got Tarski because mathematics had standing to patch its own kernel and a community that
+wanted the patch. That assumption is invisible inside mathematics and false nearly everywhere
+else. Drop it and B splits: **revisable-B** (revision available and wanted — the debugging
+paper's cases) and **blocked-B** (kernel revision structurally unavailable to the only parties
+with standing). Commitment systems is the theory of the second half — the five patterns are the
+map of what blocked-B does with drift it cannot ratify, interpretive accretion its most
+successful workaround, anchored fixity without an accretion layer the case with no workaround.
+Read strictly, though, blockage is a **gate, not a type**: restoring standing is not a fix but
+the enabling condition for running one — nobody resolves Sorites by acquiring authority — so the
+split mints no fourth type and the trifurcation survives intact at three. What it adds is the
+diagnostic's implicit **Stage 0**, made precise: not "is the object a reasoning instrument?" but
+*"does an agent exist who can execute the fix and wants to?"* A remedy test that returns an
+uninformative pass against an institution is what a closed gate looks like. (A finer,
+three-valued gate — vacancy / capture / bandwidth, whose difference is prescribing
+authority-construction vs revolution vs tooling — is PROPOSED, not ruled; whether blocked-B
+admits any capability move at all is OQ-235.)
 
 The sketch is also self-exemplifying, and deliberately so: v5.2's sole revision is the
 acknowledgment that two pattern atoms had lived in the Prolog implementation for versions without
@@ -665,7 +691,10 @@ The gauge and the two faces of orientation are this framework's instance of a ge
 partition (`docs/debugging_philosophy.md`): index underspecification (Type C, resolved by naming
 the observer position — the gauge), frame drift (Type A, resolved by fixing the frame and tracing
 the snapshot series — the keeping-face's temporal axis), and axiomatic inconsistency (Type B,
-resolved by revising the premise — the committer's axiom engine). Read together the three legs
+resolved by revising the premise — the committer's axiom engine, with §4.2's Stage-0 gate
+riding the leg: "resolved by revising" presupposes an agent with standing who can execute the
+revision and wants to, and the committer axis is the theory of what happens when that gate is
+closed). Read together the three legs
 settle a question none of them settles alone: when is an apparent natural limit a genuine
 mountain, and when is it a choice that has stopped being felt as one? A single-slice probe cannot
 tell them apart; the partition is what the cross-perturbation is for — hold the axiom still and
