@@ -1961,12 +1961,19 @@ write_validation_object(S, Constraints) :-
     length(UniqueConflicts, ConflictTotal),
     format(S, '    "cs_axiom_conflict_total": ~w,~n', [ConflictTotal]),
 
+    % Edge lookups below route through cs_edge_target_member/4 (canonical
+    % target form BARE cids, legacy forms resolvable — operator ruling
+    % 2026-08-07): a raw cs_reading_relation match here would fork the
+    % resolved/unresolved boundary the registry owns (Pattern 2).
     findall(K-(UID1-C1n)-(UID2-C2n),
         (   member(K, AllKernels),
             catch(cs_axiom_engine:cs_kernel_axiom_conflict(K, UID1-C1n, UID2-C2n, _), _, fail),
-            (   catch(narrative_ontology:cs_reading_relation(UID1, C2n, forecloses), _, fail)
-            ;   catch(narrative_ontology:cs_reading_relation(UID2, C1n, forecloses), _, fail)
-            )
+            catch(cs_kernel_registry:cs_readings_for_kernel(K, PairsRC), _, fail),
+            once((   catch(( narrative_ontology:cs_reading_relation(UID1, TRC1, forecloses),
+                             cs_kernel_registry:cs_edge_target_member(K, TRC1, PairsRC, C2n) ), _, fail)
+                 ;   catch(( narrative_ontology:cs_reading_relation(UID2, TRC2, forecloses),
+                             cs_kernel_registry:cs_edge_target_member(K, TRC2, PairsRC, C1n) ), _, fail)
+                 ))
         ),
         RealClosureTuples),
     sort(RealClosureTuples, UniqueRC),
@@ -1976,9 +1983,12 @@ write_validation_object(S, Constraints) :-
     findall(K-(UID1p-C1np)-(UID2p-C2np),
         (   member(K, AllKernels),
             catch(cs_axiom_engine:cs_kernel_axiom_conflict(K, UID1p-C1np, UID2p-C2np, _), _, fail),
-            (   catch(narrative_ontology:cs_reading_relation(UID1p, C2np, coexists_with), _, fail)
-            ;   catch(narrative_ontology:cs_reading_relation(UID2p, C1np, coexists_with), _, fail)
-            )
+            catch(cs_kernel_registry:cs_readings_for_kernel(K, PairsPl), _, fail),
+            once((   catch(( narrative_ontology:cs_reading_relation(UID1p, TPl1, coexists_with),
+                             cs_kernel_registry:cs_edge_target_member(K, TPl1, PairsPl, C2np) ), _, fail)
+                 ;   catch(( narrative_ontology:cs_reading_relation(UID2p, TPl2, coexists_with),
+                             cs_kernel_registry:cs_edge_target_member(K, TPl2, PairsPl, C1np) ), _, fail)
+                 ))
         ),
         PlurTuples),
     sort(PlurTuples, UniquePlur),

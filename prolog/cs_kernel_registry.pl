@@ -38,6 +38,7 @@
     cs_kernel_obstruction_status/2,
     cs_kernel_obstruction_report/0,
     cs_reading_relation_unresolved/4,
+    cs_edge_target_member/4,
     % Cross-kernel reading-stance transpose (GAP-04/OQ-53 increment)
     declared_stance/2,
     reading_stance/2,
@@ -278,9 +279,43 @@ take_prefix([X|Xs], N, [X|Ys]) :- N > 0, N1 is N-1, take_prefix(Xs, N1, Ys).
 %
 % Edge keying matches cs_corpus_analysis.pl:131-132: source is UID-keyed,
 % target is sibling NAME-keyed. A pair (UID1-C1, UID2-C2) foreclosing means
-% cs_reading_relation(UID1, C2, forecloses) OR cs_reading_relation(UID2, C1, ...).
+% an authored edge from UID1 whose target RESOLVES to C2 (or from UID2 to C1).
+% Target resolution is cs_edge_target_member/4 (canonical form: BARE cids —
+% operator ruling 2026-08-07; both legacy authored forms stay resolvable).
 % Only INTRA-KERNEL pairs count: both endpoints are readings of K.
 % ============================================================================
+
+%% cs_edge_target_member(+K, +T, +Pairs, -C)
+%  Resolve an authored cs_reading_relation TARGET atom T to the registered
+%  member reading C it denotes within kernel K (Pairs from
+%  cs_readings_for_kernel/2). Canonical target form is BARE cids (operator
+%  ruling 2026-08-07, OQ-260/262 series); two legacy authored forms remain
+%  resolvable — this is exact atom equation modulo the kernel's own '__'
+%  prefix, never a similarity match:
+%    exact            — T is a registered member name as written;
+%    bare→prefixed    — T bare, member registered under canonical K__T
+%                       (the pre-2026-08 rescue, kernel-corpus era);
+%    prefixed→bare    — T authored K__C, member registered bare
+%                       (the generator skew this resolver absorbs; the
+%                       generator-side emit fix is generate_kernel_corpus.py
+%                       snap_sibling_id).
+%  An edge whose target resolves under NO form is dangling —
+%  cs_reading_relation_unresolved/4 is defined as this predicate's exact
+%  complement, so resolved/unresolved cannot fork.
+cs_edge_target_member(_K, T, Pairs, T) :-
+    memberchk(_-T, Pairs).
+cs_edge_target_member(K, T, Pairs, C) :-
+    atom_concat(K, '__', Pfx), atom_concat(Pfx, T, C),
+    memberchk(_-C, Pairs).
+cs_edge_target_member(K, T, Pairs, C) :-
+    atom_concat(K, '__', Pfx), atom_concat(Pfx, C, T),
+    memberchk(_-C, Pairs).
+
+%% kernel_pair_edge(+K, +Pairs, +UID, +CTarget, +Rel)
+%  An authored edge (UID, T, Rel) whose target T resolves to member CTarget.
+kernel_pair_edge(K, Pairs, UID, CTarget, Rel) :-
+    narrative_ontology:cs_reading_relation(UID, T, Rel),
+    once(cs_edge_target_member(K, T, Pairs, CTarget)).
 
 %% cs_kernel_obstruction(+K, -H1r, -ClosureN, -PluralityN)
 %  H1r = ClosureN = # of foreclosing reading-pairs in kernel K (the obstruction
@@ -290,15 +325,15 @@ cs_kernel_obstruction(K, H1r, ClosureN, PluralityN) :-
     cs_readings_for_kernel(K, Pairs),
     findall(1,
             ( member(UID1-C1, Pairs), member(UID2-C2, Pairs), UID1 @< UID2,
-              once(( narrative_ontology:cs_reading_relation(UID1, C2, forecloses)
-                   ; narrative_ontology:cs_reading_relation(UID2, C1, forecloses) )) ),
+              once(( kernel_pair_edge(K, Pairs, UID1, C2, forecloses)
+                   ; kernel_pair_edge(K, Pairs, UID2, C1, forecloses) )) ),
             FCs),
     length(FCs, H1r),
     ClosureN = H1r,
     findall(1,
             ( member(UID1c-C1c, Pairs), member(UID2c-C2c, Pairs), UID1c @< UID2c,
-              once(( narrative_ontology:cs_reading_relation(UID1c, C2c, coexists_with)
-                   ; narrative_ontology:cs_reading_relation(UID2c, C1c, coexists_with) )) ),
+              once(( kernel_pair_edge(K, Pairs, UID1c, C2c, coexists_with)
+                   ; kernel_pair_edge(K, Pairs, UID2c, C1c, coexists_with) )) ),
             COs),
     length(COs, PluralityN).
 
@@ -348,13 +383,14 @@ cs_kernel_obstruction_report :-
 %  predicate makes them LOUD for the reviewed-disposition pass. Per the OQ-58
 %  policy there is no auto-repair tier and no plausible-form tier: an unresolved
 %  edge is quarantined (surfaced here), never silently coerced or pre-classified.
+%  Defined as the EXACT complement of cs_edge_target_member/4 so the
+%  resolved/unresolved boundary is one predicate, not two drifting copies.
 cs_reading_relation_unresolved(K, SrcC, T, Rel) :-
     narrative_ontology:cs_kernel_id(SrcC, K), atom(K),
     narrative_ontology:cs_story_uid(SrcC, U),
     narrative_ontology:cs_reading_relation(U, T, Rel),
     cs_readings_for_kernel(K, Pairs),
-    \+ memberchk(_-T, Pairs),
-    \+ ( atom_concat(K, '__', P), atom_concat(P, T, Canon), memberchk(_-Canon, Pairs) ).
+    \+ cs_edge_target_member(K, T, Pairs, _).
 
 % ============================================================================
 % CROSS-KERNEL READING-STANCE TRANSPOSE (GAP-04 / OQ-53, first increment)
