@@ -943,14 +943,22 @@ class DRAuditOrchestrator:
         # Every non-staged outcome lands in StepResult.data (never a silent narrow —
         # the absence-presenting-as-presence shape this OQ was about).
         lm = getattr(self, "_last_manifest_path", None)
+        # A relative path (e.g. a --manifest-file CLI arg) is repo-anchored here so
+        # relative_to(REPO_ROOT) below can't ValueError on an in-repo manifest; the
+        # except arm is then the genuine outside-repo case only (OQ-260).
+        lmp = None
+        if lm:
+            lmp = Path(lm)
+            if not lmp.is_absolute():
+                lmp = REPO_ROOT / lmp
         if not lm:
             manifest_note = "not_staged: no _last_manifest_path on this run"
-        elif not Path(lm).exists():
+        elif not lmp.exists():
             manifest_note = f"not_staged: manifest file missing ({lm})"
         else:
-            name = Path(lm).name
+            name = lmp.name
             stem = name[:-len(".manifest.json")] if name.endswith(".manifest.json") \
-                else Path(lm).stem
+                else lmp.stem
             story_run_ids = set()
             for cid in constraint_ids:
                 p = self._json_dir / f"{cid}.json"
@@ -962,7 +970,7 @@ class DRAuditOrchestrator:
                         story_run_ids.add("unreadable")
             if story_run_ids == {stem}:
                 try:
-                    rels.append(str(Path(lm).relative_to(REPO_ROOT)))
+                    rels.append(str(lmp.relative_to(REPO_ROOT)))
                     manifest_note = f"staged: {stem}"
                 except ValueError:
                     manifest_note = f"not_staged: manifest outside repo ({lm})"
