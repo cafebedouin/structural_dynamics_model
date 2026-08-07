@@ -12675,7 +12675,57 @@ Fiat k=3 reproduce-rate was the sole spend (≈101K tok; corpus untouched).
 
 ---
 
-*Last updated: 2026-08-05. Add new items with sequential OQ-NN labels. Mark
+## OQ-265 — Do the drift terminals presuppose single-continuant-system identity? Schism and absorption as unhandled endpoint regimes
+
+**Ω-type:** Ω_E for the completeness question per candidate (a constructed schism or absorption
+case either routes to an existing `cs_terminal_attractor/4` row or falls through — decidable by
+construction), with the OQ-227 rider inherited where a candidate proves undetectable: the
+resolution then lands as a declared absence, not an added row (an authored-only terminal at
+most; the engine abstains, never self-certifies).
+
+**Status:** open — minted 2026-08-06 at the v6 spec reissue (declared-absence semantics;
+recorded in `commitment_systems_sketch_v6.md` §6.6 and §11.2).
+
+**Priority:** 3
+
+**Deps:** bundled_with OQ-227
+
+**Origin:** v6 reissue pass, 2026-08-06. Parallel to OQ-227's surviving-referent finding: the
+six terminals presuppose not only a surviving referent but **continuous single-system
+identity** — the system whose gap is authored at t1 is assumed to be the same single system
+whose terminal is computed at t2. Two endpoint regimes break the identity rather than the
+referent, and neither has a terminal:
+
+- **Schism** — one system's identity splits into two or more successors, each inheriting
+  kernel and authority claims. Currently forcible only into `repudiation` (wrong: legitimacy
+  did not collapse, it forked) or into two separately-authored systems with no relation
+  between them (losing the split event itself).
+- **Absorption/syncretism** — form and practice persist inside a successor system's frame.
+  Discriminator vs `husk`: the grounding is *transferred* to the successor's frame, not
+  hollowed. Discriminator vs `extinction`: the form survives.
+
+Also adjacent (recorded, not a candidate terminal): the v3-only lifecycle phase model
+(formation → stabilization → operation → atrophy → renewal-or-dissolution) was never
+operationalized — `commitment_systems_integration_v1.md` already flags "no formal state
+machine for system-level lifecycle"; v6 §11.3 carries it as a declared absence.
+
+**Resolution shape (per-candidate verdicts explicitly allowed — they may not resolve the same
+way):** for EACH candidate, a ruling on scope-note vs authored-only terminal — no code change
+either way (`terminal_set_pinned` stays green; adding a terminal would trip it by design, which
+is the tripwire working). **The resolution must state, per candidate, whether the endpoint is
+DETECTABLE** — detectability is what settled OQ-227 (undetectable-by-construction made
+`sealed_closure` a declared absence rather than a gap). Schism looks detectable: two successors
+each authoring acknowledgments referencing the same predecessor kernel is a searchable
+signature. Absorption may not be: from inside the successor's frame the absorbed commitment
+glues cleanly, and no authored signal currently names a predecessor frame.
+
+**What resolution changes:** whether `cs_drift_engine.pl`'s SCOPE block gains a second
+documented precondition row per candidate (scope-note verdict) or an authoring-channel design
+lands (authored-only-terminal verdict); either way v6 §11.2 updates from open to ruled.
+
+---
+
+*Last updated: 2026-08-06. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
