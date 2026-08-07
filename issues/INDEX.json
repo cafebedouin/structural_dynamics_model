@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "282ca6ab940f264c3d09f5b72b879a773f7c8bdc",
+    "store_version": "00f8cf32b53843aaa03762891ce7612b7d0b67ff",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-06T21:48:11"
+    "generated_at": "2026-08-07T18:29:38"
   },
-  "issues_sha": "42f0226223c20a412411a8a14dc4d77253e56f6f386d91ac5d34e394f3931747",
+  "issues_sha": "eb2562e78c9ee74987340a4260f0287862dc7dab5e5e2a0a693861ab79008c12",
   "n_entries": 266,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 142,
+    "resolved": 143,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 89,
+    "open": 88,
     "partial": 7
   },
   "active": [
@@ -1257,19 +1257,6 @@
       "mentioned_in": [
         "OQ-186",
         "OQ-188"
-      ]
-    },
-    {
-      "id": "OQ-260",
-      "status": "open",
-      "priority": 4,
-      "summary": "`_step_commit` manifest staging mislabels relative in-repo `--manifest-file` paths as \"outside repo\" and silently skips staging",
-      "deps": [
-        "splits_from OQ-254"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-254"
       ]
     },
     {
@@ -3655,6 +3642,19 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-264"
+      ]
+    },
+    {
+      "id": "OQ-260",
+      "status": "resolved",
+      "priority": 4,
+      "summary": "`_step_commit` manifest staging mislabels relative in-repo `--manifest-file` paths as \"outside repo\" and silently skips staging",
+      "deps": [
+        "splits_from OQ-254"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-254"
       ]
     },
     {

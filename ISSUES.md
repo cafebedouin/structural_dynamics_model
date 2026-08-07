@@ -12472,45 +12472,25 @@ KNOWN_STATE 2026-08-06 (four entries); session commits `7bba0748`…`a0cfe917` +
 
 ## OQ-260 — `_step_commit` manifest staging mislabels relative in-repo `--manifest-file` paths as "outside repo" and silently skips staging
 
-**Ω-type:** Ω_C (small contract defect in the OQ-254 staging check; fix shape is clear,
-needs a run witness because it is output-changing).
+**Ω-type:** Ω_C (small contract defect in the OQ-254 staging check).
 
-**Status:** open
+**Status:** resolved — 2026-08-07, commit `00f8cf32`.
 **Priority:** 4
 **Origin:** 2026-08-03 kritik ingest Phase 3 (`audits/2026-08-03_kritik_ingest/WRITEUP.md`
-side-finding 1; run log `atfiat_fullrun.log` line "manifest not_staged: manifest outside
-repo (agent/decompose_manifests/flat/fiat_efficacy_kernel_2026_20260803_102258.manifest.json)").
+side-finding 1; run log `atfiat_fullrun.log`).
 **Files:** `agent/c-orchestrator.py`
 
 **Deps:** splits_from OQ-254
 
-**The defect (witnessed).** When `--manifest-file` is passed repo-RELATIVE,
-`_step_commit`'s staging branch reaches `Path(lm).relative_to(REPO_ROOT)`
-(c-orchestrator.py:965) with a relative path; `relative_to` raises `ValueError` (a
-relative path is never relative_to an absolute root), the except-arm reports
-`not_staged: manifest outside repo` — a wrong diagnosis for an in-repo file — and the
-manifest is silently not staged. The stem==run_ids check PASSED (stories correctly
-stamped); only the path normalization is wrong. Absolute `--manifest-file` paths and the
-normal flat-run path (absolute `_last_manifest_path` from `_persist_manifest`) are
-unaffected. Harmless on 2026-08-03 only because the manifest was already committed
-separately (`47085548`).
-
-**Fix shape (not applied — output-changing, needs witness).** Normalize before the
-check: `p = Path(lm); p = p if p.is_absolute() else (REPO_ROOT / p)` and use `p`
-for exists()/relative_to. Witness on the next `--manifest-file` full run (or a targeted
-harness around `_step_commit`): the commit's `git show --stat` must include the manifest
-file, message `staged: <stem>`.
-
-**Retroactive tail: EMPTY within scope (scanned 2026-08-03, control-witnessed).** Scan:
-every committed `json/*.json` carrying `provenance.generation_run_id` vs tracked
-manifests under `agent/decompose_manifests/`. Exactly 2 stamped run_ids exist
-(`conditional_vs_unconditional_cooperation_2026_20260725_131209`,
-`fiat_efficacy_kernel_2026_20260803_102258` — stamping began with OQ-254, 2026-07-25);
-both manifests tracked; 294/294 on-disk manifests tracked. Positive control: hiding the
-fiat manifest from the tracked set makes the scan flag it. Scope limit: pre-OQ-254 runs
-persisted manifests to gitignored `outputs/kernel_manifests/` by design (documented
-state, not this defect) — out of this scan's scope by construction. No past uncommitted
-generation output attributable to this bug.
+**Resolution (2026-08-07).** A repo-relative `_last_manifest_path` hit
+`Path(lm).relative_to(REPO_ROOT)` unanchored, `ValueError`'d into the except-arm, and
+was mis-reported `not_staged: manifest outside repo`. Fix (`00f8cf32`): normalize once
+(absolute pass-through, relative anchored at `REPO_ROOT`); except-arm is now the genuine
+outside-repo case only. Witness: 3-case `_step_commit` harness in temp git repos —
+HEAD positive control reproduced the false `not_staged`; post-fix relative and absolute
+in-repo paths both stage (`git show --stat` lists the manifest); outside-repo control
+still refuses. Retroactive tail scanned EMPTY within scope 2026-08-03
+(control-witnessed; 294/294 on-disk manifests tracked, both stamped run_ids committed).
 
 ## OQ-261 — Ballot as seat-substitution: the round forces a global section over debater performance, not the topic kernel — design the forced-gluing experiment
 
