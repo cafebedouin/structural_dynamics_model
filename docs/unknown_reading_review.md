@@ -67,7 +67,7 @@ What this asks:
 
 ### Layer 6 — Commitment Systems as Seat Infrastructure
 
-The commitment systems sketch (`docs/commitment_systems/commitment_systems_sketch_v5_2.md`) provides the authority-grounding taxonomy. The key extension it offers: distinguishing authority groundings by whether they declare or conceal their standpoint. The nine patterns give structural vocabulary for how constraints maintain or drift from their stated basis. The new diagnostics (`cs_authority_masking/3`, `cs_cover_story_active/2`, `cs_displaced_beneficiary/1`) fire when computed structural signals disagree with asserted CS fields.
+The commitment systems sketch (`docs/commitment_systems/commitment_systems_sketch_v6.md`) provides the authority-grounding taxonomy. The key extension it offers: distinguishing authority groundings by whether they declare or conceal their standpoint. The nine patterns give structural vocabulary for how constraints maintain or drift from their stated basis. The new diagnostics (`cs_authority_masking/3`, `cs_cover_story_active/2`, `cs_displaced_beneficiary/1`) fire when computed structural signals disagree with asserted CS fields.
 
 What this asks:
 - A seat-declaration axis in the CS authority grounding: authority that claims a standpoint vs. authority that claims no standpoint while making contentful assertions.

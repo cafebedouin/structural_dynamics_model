@@ -2,7 +2,9 @@
 % CS PATTERN DETECTION
 % ============================================================================
 % Classifies constraints against commitment-system attractor patterns from
-% docs/commitment_systems/commitment_systems_sketch_v5_2.md.
+% docs/commitment_systems/commitment_systems_sketch_v6.md §4 (Pattern taxonomy)
+% and §5 (Verdict layer) — section name + number, since numbers renumber and
+% names survive.
 %
 % Architecture: LLM asserts cs_structure fields; math emits verdict atoms
 % when the assertion is inconsistent with computed structural signals.
@@ -25,11 +27,13 @@
 %   anchored_fixity_brittle | natural_law_constraint | epistemic_consensus |
 %   no_pattern_match
 %
-% Verdict atoms:
+% Verdict atoms (8 total):
 %   false_marked_revision | false_interpretive_accretion |
 %   false_diffuse_reconstruction | false_implicit_practice |
 %   false_anchored_fixity_accretion | false_anchored_fixity_brittle |
-%   false_natural_law_constraint
+%   false_natural_law_constraint | scaffold_suppression_escalating
+%   (the last is dr_type-gated commentary, OQ-39 — see its clause's
+%   placement/cut note; it was in code but missing from this list until v6)
 % ============================================================================
 
 :- module(cs_pattern_detection, [

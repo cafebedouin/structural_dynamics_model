@@ -1,3 +1,5 @@
+*Status (2026-08-06): historical — partially executed; GAPs 2/3/4 closed since. Current spec: `commitment_systems_sketch_v6.md`.*
+
 CS Wiring Audit + Reading Layer Plan                                                                            │
      │                                                                                                                 │
      │ Context                                                                                                         │

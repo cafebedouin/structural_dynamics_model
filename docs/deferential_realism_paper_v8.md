@@ -339,7 +339,7 @@ reading's declared reference frame and its current state is its **drift**.
 ### 4.2 Where it came from: commitment systems
 
 The committer axis did not begin as a classification layer; it began as an account of
-institutional drift (`docs/commitment_systems/commitment_systems_sketch_v5_2.md` and its
+institutional drift (`docs/commitment_systems/commitment_systems_sketch_v6.md` and its
 predecessors). The core structural observation: commitment systems presuppose that **kernel and
 authority are separable** — an authority *interprets* a kernel, and drift is possible precisely
 because the two can diverge. A genuinely self-enforcing constraint (gravity, Gödel

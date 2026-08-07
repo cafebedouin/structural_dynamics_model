@@ -3275,7 +3275,7 @@ def build_cs_pattern_section(constraint_id, pipeline_data):
         lines.append(f"\n  ⚠ {verdict}: {verdict_prose}")
 
     lines.append("")
-    lines.append("  See: docs/commitment_systems/commitment_systems_sketch_v5_2.md")
+    lines.append("  See: docs/commitment_systems/commitment_systems_sketch_v6.md")
     return "\n".join(lines)
 
 

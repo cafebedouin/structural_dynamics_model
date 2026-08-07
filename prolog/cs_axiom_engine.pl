@@ -8,6 +8,12 @@
 %   Atom is an opaque atom naming the axiom content.
 %
 % cs_axiom_status/2 (Atom, Status) — Status ∈ {holdable, overridden, foreclosed}.
+%   ENUM SPLIT (canonical declaration: commitment_systems_sketch_v6.md §7 (Axiom
+%   layer)): the AUTHORED vocabulary is {holdable, overridden} only
+%   (narrative_ontology.pl authoring surface; the generator refuses to author
+%   foreclosed — a truth claim it cannot certify). foreclosed is COMPUTED-ONLY,
+%   via cs_axiom_foreclosed/2 below. The three-status list here is the union of
+%   authored and computed values, kept for reader orientation.
 %   holdable:   the axiom can be coherently held given current structural data.
 %   overridden: another axiom has displaced it (still named, not active).
 %   foreclosed: the axiom is structurally incompatible with at least one

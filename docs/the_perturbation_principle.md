@@ -11,7 +11,7 @@ tightened against it. Builds on
 `debugging_philosophy.md` (the trifurcation), `cyclopean-point.md` (disparity-as-signal),
 `seat-theorem-v1.md` (verdicts are seated), `docs/design/design_discipline.md` (Axiom R, §3
 recurrence), `omega_variables.md` (the Ω types), `two_hub_architecture.md`, and
-`commitment_systems/commitment_systems_sketch_v5_2.md`. This document does not introduce new
+`commitment_systems/commitment_systems_sketch_v6.md`. This document does not introduce new
 machinery; it names the move all of that machinery already makes.
 
 ---

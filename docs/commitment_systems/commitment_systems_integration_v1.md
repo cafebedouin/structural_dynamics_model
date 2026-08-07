@@ -1,7 +1,7 @@
 # Commitment Systems → Engine Integration: Evidence Inventory and Analysis
 
 **Investigation date:** 2026-05-17
-**Sketch source:** `docs/commitment_systems_sketch_v4.md` (138 lines)
+**Sketch source:** `docs/commitment_systems/commitment_systems_sketch_v4.md` (138 lines)
 **Engine sources:** `prolog/drl_core.pl`, `prolog/constraint_indexing.pl`, `prolog/transition_paths.pl`, `prolog/narrative_ontology.pl`, `prolog/config.pl`
 **Schema source:** `python/constraint_story_schema.json`
 **Corpus data:** `outputs/corpus_profile.json`

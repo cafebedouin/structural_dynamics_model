@@ -73,6 +73,18 @@
 %   edits this table to read this scope first. Adding a 7th terminal (a
 %   `referent_dissolution` Direction → `sealed_closure`) turns it red by design. The
 %   precondition stays DOCUMENTED here; it is never machine-enforced.
+%
+% SECOND PRECONDITION (2026-08-06, OQ-265; spec: commitment_systems_sketch_v6.md
+%   §6 (Drift-terminal subsystem)): the six terminals also presuppose CONTINUOUS
+%   SINGLE-SYSTEM IDENTITY — the system whose gap is authored at t1 is the same
+%   single system whose terminal is computed at t2. Schism (identity splits into
+%   successors; currently forcible only into repudiation or two unrelated
+%   authored systems) and absorption/syncretism (form/practice persist inside a
+%   successor's frame — vs husk: grounding transferred, not hollowed; vs
+%   extinction: form survives) are unhandled endpoint regimes parallel to
+%   referent-dissolution above. Declared absence; per-candidate detectability
+%   verdicts required at resolution. Same tripwire discipline as OQ-227: adding
+%   a terminal for either trips terminal_set_pinned by design.
 % ============================================================================
 
 :- module(cs_drift_engine, [cs_drift_trajectory/3]).
