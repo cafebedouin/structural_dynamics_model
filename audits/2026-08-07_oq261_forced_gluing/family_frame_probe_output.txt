@@ -1,0 +1,115 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+corpus loaded: 225 constraints
+== A. fiat_efficacy_kernel: 6 registered readings ==
+  member scholarship_reading  (uid 13c32d00-7541-4c4f-9599-d968edf74c81)
+  member empathy_simulation_reading  (uid 2b6736c9-770c-48d9-b420-067d49ab10cc)
+  member empirical_precedent_reading  (uid 3cf9a510-9141-4143-b31b-6cbcbf1a8744)
+  member truth_procedure_reading  (uid 40b88ae3-491e-4d5a-93de-3e941a6b3a51)
+  member predictive_synthesis_reading  (uid 4d26c797-5ce7-4b60-958f-17e3e10950ce)
+  member utopian_fiction_reading  (uid 812ceb62-19c8-42aa-872c-db2417d1e093)
+-- resolved directed edges (source -> resolved target, relation) --
+  scholarship_reading -coexists_with-> empirical_precedent_reading   (authored target: fiat_efficacy_kernel__empirical_precedent_reading)
+  scholarship_reading -coexists_with-> truth_procedure_reading   (authored target: fiat_efficacy_kernel__truth_procedure_reading)
+  scholarship_reading -influences-> predictive_synthesis_reading   (authored target: fiat_efficacy_kernel__predictive_synthesis_reading)
+  scholarship_reading -coexists_with-> empathy_simulation_reading   (authored target: fiat_efficacy_kernel__empathy_simulation_reading)
+  scholarship_reading -influences-> utopian_fiction_reading   (authored target: fiat_efficacy_kernel__utopian_fiction_reading)
+  empathy_simulation_reading -coexists_with-> empirical_precedent_reading   (authored target: fiat_efficacy_kernel__empirical_precedent_reading)
+  empathy_simulation_reading -coexists_with-> scholarship_reading   (authored target: fiat_efficacy_kernel__scholarship_reading)
+  empathy_simulation_reading -coexists_with-> truth_procedure_reading   (authored target: fiat_efficacy_kernel__truth_procedure_reading)
+  empathy_simulation_reading -influences-> predictive_synthesis_reading   (authored target: fiat_efficacy_kernel__predictive_synthesis_reading)
+  empathy_simulation_reading -coexists_with-> utopian_fiction_reading   (authored target: fiat_efficacy_kernel__utopian_fiction_reading)
+  empirical_precedent_reading -coexists_with-> scholarship_reading   (authored target: fiat_efficacy_kernel__scholarship_reading)
+  empirical_precedent_reading -influences-> truth_procedure_reading   (authored target: fiat_efficacy_kernel__truth_procedure_reading)
+  empirical_precedent_reading -coexists_with-> predictive_synthesis_reading   (authored target: fiat_efficacy_kernel__predictive_synthesis_reading)
+  empirical_precedent_reading -coexists_with-> empathy_simulation_reading   (authored target: fiat_efficacy_kernel__empathy_simulation_reading)
+  empirical_precedent_reading -forecloses-> utopian_fiction_reading   (authored target: fiat_efficacy_kernel__utopian_fiction_reading)
+  truth_procedure_reading -coexists_with-> empirical_precedent_reading   (authored target: fiat_efficacy_kernel__empirical_precedent_reading)
+  truth_procedure_reading -coexists_with-> scholarship_reading   (authored target: fiat_efficacy_kernel__scholarship_reading)
+  truth_procedure_reading -coexists_with-> predictive_synthesis_reading   (authored target: fiat_efficacy_kernel__predictive_synthesis_reading)
+  truth_procedure_reading -influences-> empathy_simulation_reading   (authored target: fiat_efficacy_kernel__empathy_simulation_reading)
+  truth_procedure_reading -influences-> utopian_fiction_reading   (authored target: fiat_efficacy_kernel__utopian_fiction_reading)
+  predictive_synthesis_reading -coexists_with-> empirical_precedent_reading   (authored target: fiat_efficacy_kernel__empirical_precedent_reading)
+  predictive_synthesis_reading -influences-> scholarship_reading   (authored target: fiat_efficacy_kernel__scholarship_reading)
+  predictive_synthesis_reading -coexists_with-> truth_procedure_reading   (authored target: fiat_efficacy_kernel__truth_procedure_reading)
+  predictive_synthesis_reading -coexists_with-> empathy_simulation_reading   (authored target: fiat_efficacy_kernel__empathy_simulation_reading)
+  predictive_synthesis_reading -forecloses-> utopian_fiction_reading   (authored target: fiat_efficacy_kernel__utopian_fiction_reading)
+  utopian_fiction_reading -coexists_with-> empirical_precedent_reading   (authored target: fiat_efficacy_kernel__empirical_precedent_reading)
+  utopian_fiction_reading -coexists_with-> scholarship_reading   (authored target: fiat_efficacy_kernel__scholarship_reading)
+  utopian_fiction_reading -influences-> truth_procedure_reading   (authored target: fiat_efficacy_kernel__truth_procedure_reading)
+  utopian_fiction_reading -coexists_with-> predictive_synthesis_reading   (authored target: fiat_efficacy_kernel__predictive_synthesis_reading)
+  utopian_fiction_reading -coexists_with-> empathy_simulation_reading   (authored target: fiat_efficacy_kernel__empathy_simulation_reading)
+-- per-pair relation summary (either direction) --
+  pair scholarship_reading | empathy_simulation_reading : [coexists_with]
+  pair scholarship_reading | empirical_precedent_reading : [coexists_with]
+  pair scholarship_reading | truth_procedure_reading : [coexists_with]
+  pair scholarship_reading | predictive_synthesis_reading : [influences]
+  pair scholarship_reading | utopian_fiction_reading : [coexists_with,influences]
+  pair empathy_simulation_reading | empirical_precedent_reading : [coexists_with]
+  pair empathy_simulation_reading | truth_procedure_reading : [coexists_with,influences]
+  pair empathy_simulation_reading | predictive_synthesis_reading : [coexists_with,influences]
+  pair empathy_simulation_reading | utopian_fiction_reading : [coexists_with]
+  pair empirical_precedent_reading | truth_procedure_reading : [coexists_with,influences]
+  pair empirical_precedent_reading | predictive_synthesis_reading : [coexists_with]
+  pair empirical_precedent_reading | utopian_fiction_reading : [coexists_with,forecloses]
+  pair truth_procedure_reading | predictive_synthesis_reading : [coexists_with]
+  pair truth_procedure_reading | utopian_fiction_reading : [influences]
+  pair predictive_synthesis_reading | utopian_fiction_reading : [coexists_with,forecloses]
+
+== B. cs_kernel_obstruction(fiat_efficacy_kernel): H1r=2 ClosureN=2 PluralityN=13 status=real_closure ==
+
+== C. family H1 frame over 156 contexts, 6 readings ==
+  H1 histogram over contexts (H1-Count): [0-73,3-14,6-36,9-30,null-3]
+  contexts: glued(H0=1)=73 obstructed(H1>0)=80 undetermined(null)=3
+  spectrum check: every numeric H1 verified against H(n_real) above (silence = all in-spectrum)
+  pairwise stats rows: 15
+    scholarship_reading | empathy_simulation_reading : jaccard=0 agree=0 diverge=66
+    scholarship_reading | empirical_precedent_reading : jaccard=1 agree=30 diverge=0
+    scholarship_reading | truth_procedure_reading : jaccard=1 agree=66 diverge=0
+    scholarship_reading | predictive_synthesis_reading : jaccard=0 agree=0 diverge=66
+    scholarship_reading | utopian_fiction_reading : jaccard=0 agree=0 diverge=66
+    empathy_simulation_reading | empirical_precedent_reading : jaccard=0 agree=0 diverge=30
+    empathy_simulation_reading | truth_procedure_reading : jaccard=0 agree=0 diverge=80
+    empathy_simulation_reading | predictive_synthesis_reading : jaccard=1 agree=146 diverge=0
+    empathy_simulation_reading | utopian_fiction_reading : jaccard=1 agree=146 diverge=0
+    empirical_precedent_reading | truth_procedure_reading : jaccard=1 agree=30 diverge=0
+    empirical_precedent_reading | predictive_synthesis_reading : jaccard=0 agree=0 diverge=30
+    empirical_precedent_reading | utopian_fiction_reading : jaccard=0 agree=0 diverge=30
+    truth_procedure_reading | predictive_synthesis_reading : jaccard=0 agree=0 diverge=80
+    truth_procedure_reading | utopian_fiction_reading : jaccard=0 agree=0 diverge=80
+    predictive_synthesis_reading | utopian_fiction_reading : jaccard=1 agree=153 diverge=0
+
+== D. per-story stakeholder-frame reads (7 stories) ==
+  empirical_precedent_reading
+    consensus_provenance: manufactured_consensus_candidate_untypeable([historical_movement_participants_instrumentalized_as_evidence,communities_named_in_analogized_movements_bds_vietnam_neoliberalism])
+    agent_seats(5): [competitive_debaters_running_fiat,opposing_debaters_forced_to_engage_analogy,coaching_programs_teaching_activism_framing,debate_institutions_claiming_civic_relevance,judges_and_tournament_administrators]
+    excluded(2): [historical_movement_participants_instrumentalized_as_evidence,communities_named_in_analogized_movements_bds_vietnam_neoliberalism]
+  scholarship_reading
+    consensus_provenance: manufactured_consensus_candidate_untypeable([policy_efficacy_traditionalists])
+    agent_seats(6): [tenure_track_scholars,academic_debate_community,competitive_debaters_without_research_access,communities_studied_without_consent,future_affected_populations,debate_theory_analysts]
+    excluded(1): [policy_efficacy_traditionalists]
+  truth_procedure_reading
+    consensus_provenance: manufactured_consensus_candidate_untypeable([policy_outcome_stakeholders,material_beneficiaries_of_actual_reform])
+    agent_seats(5): [declaring_debaters,truth_procedure_theorists,competitive_debate_circuit,opposing_debaters_forced_into_frame,debate_theory_observers]
+    excluded(2): [policy_outcome_stakeholders,material_beneficiaries_of_actual_reform]
+  predictive_synthesis_reading
+    consensus_provenance: manufactured_consensus_candidate([empirical_policy_scientists])
+    agent_seats(5): [policy_debate_theorists,interdisciplinary_synthesis_researchers,competitive_debate_coaches,student_debaters,analytical_observer]
+    excluded(1): [empirical_policy_scientists]
+  empathy_simulation_reading
+    consensus_provenance: manufactured_consensus_candidate([skeptical_debate_theorists])
+    agent_seats(4): [competitive_debate_participants,debate_coaches_and_programs,fellow_citizens_encountered_in_deliberation,external_social_psychology_researchers]
+    excluded(1): [skeptical_debate_theorists]
+  utopian_fiction_reading
+    consensus_provenance: manufactured_consensus_candidate([policymakers_and_institutions,debate_critics_of_fiat])
+    agent_seats(4): [competitive_debaters,debate_coaches,debate_league_administrators,debate_theorists]
+    excluded(2): [policymakers_and_institutions,debate_critics_of_fiat]
+  fiat_efficacy_kernel_flat_control
+    consensus_provenance: manufactured_consensus_candidate([elected_officials_and_agencies])
+    agent_seats(7): [academic_debate_community,policy_scholars,activist_organizations,philosophy_departments,communities_awaiting_material_relief,novice_debaters_and_students,independent_policy_analysts]
+    excluded(1): [elected_officials_and_agencies]

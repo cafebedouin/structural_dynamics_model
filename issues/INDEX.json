@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "f724379d9b010313076bec1365e1115b1d0e115f",
+    "store_version": "4dfeb17a282c1e6920d807a7044e48f7e4d19e4f",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-07T18:46:55"
+    "generated_at": "2026-08-07T18:53:53"
   },
-  "issues_sha": "e3af04e8a758ce16e1ab63d5b04e4d388279ddc78536c302ea5c3f958fa04491",
+  "issues_sha": "7fcb17d33c24c24d21369579ffe901b890461f071e54d0ca8ff608eb38220335",
   "n_entries": 266,
   "active_token_set": [
     "investigating",
@@ -16,8 +16,9 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 88,
-    "partial": 7
+    "open": 87,
+    "partial": 7,
+    "investigating": 1
   },
   "active": [
     {
@@ -1261,11 +1262,12 @@
     },
     {
       "id": "OQ-261",
-      "status": "open",
+      "status": "investigating",
       "priority": 3,
       "summary": "Ballot as seat-substitution: the round forces a global section over debater performance, not the topic kernel — design the forced-gluing experiment",
       "deps": [
-        "splits_from OQ-259"
+        "splits_from OQ-259",
+        "blocked_on_human oq261-r2-proposal-signoff"
       ],
       "cross_refs": [],
       "mentioned_in": [

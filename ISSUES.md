@@ -12506,16 +12506,29 @@ still refuses. Retroactive tail scanned EMPTY within scope 2026-08-03
 sections — is a design/modeling choice), with an Ω_E tail (once modeled, the predictions
 are witnessable on corpus families).
 
-**Status:** open
+**Status:** investigating — C1 recon + C2 pre-registered proposal complete and FROZEN
+(`audits/2026-08-07_oq261_forced_gluing/`: RECON.md, PROPOSAL.md, in-flight WRITEUP.md);
+C3 execution blocked on R2 (operator sign-off of the frozen proposal — the freeze is the
+seat; no LLM spend in C3, compute-only probes).
 **Priority:** 3
 **Origin:** 2026-08-03 kritik ingest synthesis; **operator correction (2026-08-03,
 load-bearing):** the sheaf the ballot creates is over *how the round was debated*, not
 *what is true* — it is a verdict on the debaters, not the topic. The planning-phase
 "ballot ↔ forced sheafification" mapping is CORRECTED accordingly before any design work
 inherits it.
-**Files:** `audits/2026-08-03_kritik_ingest/`, `prolog/testsets/` (fiat family)
+**Files:** `audits/2026-08-07_oq261_forced_gluing/`, `audits/2026-08-03_kritik_ingest/`,
+`prolog/testsets/` (fiat family)
 
-**Deps:** splits_from OQ-259
+**Deps:** splits_from OQ-259, blocked_on_human oq261-r2-proposal-signoff
+
+**Recon facts the proposal rides on (2026-08-07, post edge-naming fix):** fiat family
+`real_closure` (H1r=2, Plur=13, 30/30 edges resolved); observer-frame family H¹ over 156
+contexts = 73 glued / 80 obstructed / 3 undetermined, two clean blocs (Jaccard 1/0), all
+values in-spectrum; one forecloses pair is WITHIN an observer-identical bloc (Theorem-7
+instance); all 7 stories (flat control included) read
+`manufactured_consensus_candidate[_untypeable]`; flat control is same-topic but NOT
+same-substrate (RECON §E). Discriminator: PROPOSAL.md 2×2 — Cell 1 (family ×
+performance-seat presheaf) decides H_perf; cells 2–4 are premise checks.
 
 **The corrected mapping.** The ballot does not glue the topic's kernel readings — it
 RELOCATES the gluing to a performance object that always admits a global section (every

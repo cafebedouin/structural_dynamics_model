@@ -1,0 +1,67 @@
+cid                                      eps   sup    tr coord                  kernel_id              n_seats
+empirical_precedent_reading             0.42  0.31  0.48 identity_coordination  fiat_efficacy_kernel   7
+scholarship_reading                     0.32  0.28   0.4 identity_coordination  fiat_efficacy_kernel   7
+truth_procedure_reading                 0.28  0.35  0.42 identity_coordination  fiat_efficacy_kernel   7
+predictive_synthesis_reading            0.28  0.18  0.22 identity_coordination  fiat_efficacy_kernel   6
+empathy_simulation_reading              0.28  0.15   0.4 identity_coordination  fiat_efficacy_kernel   5
+utopian_fiction_reading                 0.22  0.18   0.4 identity_coordination  fiat_efficacy_kernel   6
+fiat_efficacy_kernel_flat_control       0.38  0.24  0.42 None                   None                   8
+
+flat_control_of: [('fiat_efficacy_kernel_flat_control', 'fiat_efficacy_kernel')]
+
+titles:
+  empirical_precedent_reading: None  domain=None
+  scholarship_reading: None  domain=None
+  truth_procedure_reading: None  domain=None
+  predictive_synthesis_reading: None  domain=None
+  empathy_simulation_reading: None  domain=None
+  utopian_fiction_reading: None  domain=None
+  fiat_efficacy_kernel_flat_control: None  domain=None
+
+seat-roster overlap with flat control:
+  empirical_precedent_reading: shared=NONE
+  scholarship_reading: shared=['academic_debate_community']
+  truth_procedure_reading: shared=NONE
+  predictive_synthesis_reading: shared=NONE
+  empathy_simulation_reading: shared=NONE
+  utopian_fiction_reading: shared=NONE
+
+== subject/topic fields (header + base_properties) ==
+  empirical_precedent_reading:
+    header.constraint_id='empirical_precedent_reading' header.title=None
+    topic_domain='debate theory/political philosophy' claimed_type='tangled_rope'
+    human_readable[:140]='Fiat Efficacy Grounded in Historical Precedent (Debate Round Warrant)'
+    accessibility_collapse=0.35 resistance=0.62
+  scholarship_reading:
+    header.constraint_id='scholarship_reading' header.title=None
+    topic_domain='debate_theory/political_philosophy' claimed_type='tangled_rope'
+    human_readable[:140]='Scholarship-of-Consequence Reading of Fiat Efficacy'
+    accessibility_collapse=0.35 resistance=0.45
+  truth_procedure_reading:
+    header.constraint_id='truth_procedure_reading' header.title=None
+    topic_domain='debate_theory/political_philosophy' claimed_type='tangled_rope'
+    human_readable[:140]='Fiat Political Axiom as Truth-Procedure (Badiouian Reading)'
+    accessibility_collapse=0.4 resistance=0.55
+  predictive_synthesis_reading:
+    header.constraint_id='predictive_synthesis_reading' header.title=None
+    topic_domain='debate_theory/political_philosophy' claimed_type='rope'
+    human_readable[:140]='Predictive Synthesis Reading of Fiat Efficacy'
+    accessibility_collapse=0.35 resistance=0.45
+  empathy_simulation_reading:
+    header.constraint_id='empathy_simulation_reading' header.title=None
+    topic_domain='debate theory/political philosophy' claimed_type='rope'
+    human_readable[:140]='Simulated Policy Advocacy as Empathy-Building Practice (Fiat Efficacy: Empathy Reading)'
+    accessibility_collapse=0.3 resistance=0.35
+  utopian_fiction_reading:
+    header.constraint_id='utopian_fiction_reading' header.title=None
+    topic_domain='debate_theory/political_philosophy' claimed_type='rope'
+    human_readable[:140]='Fiat Debate as Utopian Social Criticism Practice'
+    accessibility_collapse=0.35 resistance=0.45
+  fiat_efficacy_kernel_flat_control:
+    header.constraint_id='fiat_efficacy_kernel_flat_control' header.title=None
+    topic_domain='debate_theory/political_philosophy' claimed_type='rope'
+    human_readable[:140]='Efficacy Claim of Unenacted Political Speech-Acts (Fiat/Simulation)'
+    accessibility_collapse=0.35 resistance=0.55
+
+Note: fiat_efficacy_kernel_flat_control authors NO coordination_type fact
+(the 6 readings author identity_coordination) — purity no-data stratum, OQ-60.
