@@ -8,12 +8,18 @@ affects_constraint/2 (network edges).
 Three rules run against the census, each with a synthetic positive control that
 must flag a known-dirty fixture before the rule is trusted on the corpus:
 
-  R1  dangling          target resolves to no declared reading, even kernel-qualified
-                        (the OQ-58 referential-integrity failure, generalized to
-                        both predicates).
-  R2  non-canonical     target resolves only after kernel-qualification (a short
-                        form that should be <kernel>__<short>); self-witnessing
-                        consumers under-count these.
+  R1  dangling          target resolves to no declared reading under any accepted
+                        form (the OQ-58 referential-integrity failure, generalized
+                        to both predicates).
+  R2  non-canonical     target resolves only after normalization — a legacy form.
+                        Canonical target form is BARE cids (operator ruling
+                        2026-08-07); accepted legacy forms are kernel-qualified
+                        (<kernel>__<short> where the bare file exists — "stripped")
+                        and bare-against-prefixed-corpus ("short"). Caveat: the
+                        stripped form is matched on the target's own `__` prefix;
+                        the linter has no cs_kernel_id knowledge, so it cannot
+                        verify kernel co-membership of a stripped match —
+                        acceptable for a non-gating census.
   R3  duplication       within one kernel, two declared readings with near-identical
                         stems (OQ-59) — likely one position under two names, which
                         corrupts the obstruction cover.
@@ -61,12 +67,18 @@ def declared_set(testsets_dir: pathlib.Path) -> set[str]:
 
 
 def resolution(source: str, target: str, declared: set[str]) -> str:
-    """exact | short | typo | dangling — does the target resolve to a declared name?
+    """exact | short | typo | stripped | dangling — does the target resolve?
 
-    short  — bare reading stem; <kernel>__<target> exists.
-    typo   — target carries the kernel prefix with a wrong delimiter (single _ instead
-             of __); <kernel>__<rest> exists. A non-canonical reference to an EXISTING
-             reading (a repair, not a missing reading).
+    Canonical target form is BARE cids (operator ruling 2026-08-07); the legacy
+    forms below resolve but count non-canonical.
+    short    — bare reading stem against a prefixed-cid corpus; <kernel>__<target>
+               exists (kernel taken from the SOURCE cid prefix).
+    typo     — target carries the kernel prefix with a wrong delimiter (single _
+               instead of __); <kernel>__<rest> exists.
+    stripped — target carries a `__` prefix but the corpus registers the BARE
+               stem; <bare-of-target> exists. Matched on the target's OWN prefix
+               (the linter has no cs_kernel_id knowledge, so kernel co-membership
+               of the stripped match is NOT verified — non-gating census caveat).
     dangling — resolves to no declared reading even after those normalizations (the
              upper bound on genuinely-missing readings; the narrative read splits the
              residual truncated-kernel typos from real gaps).
@@ -80,6 +92,8 @@ def resolution(source: str, target: str, declared: set[str]) -> str:
         rest = target[len(k):].lstrip("_")
         if rest and f"{k}__{rest}" in declared:
             return "typo"
+    if "__" in target and target.split("__", 1)[1] in declared:
+        return "stripped"
     return "dangling"
 
 
@@ -88,9 +102,10 @@ def rule_dangling(refs, declared):
 
 
 def rule_noncanonical(refs, declared):
-    """Non-canonical reference to an EXISTING reading (short form or delimiter typo) —
-    repairable, not missing."""
-    return [r for r in refs if resolution(r.source, r.target, declared) in ("short", "typo")]
+    """Non-canonical reference to an EXISTING reading (short form, delimiter typo,
+    or prefixed form whose bare stem is registered) — repairable, not missing."""
+    return [r for r in refs
+            if resolution(r.source, r.target, declared) in ("short", "typo", "stripped")]
 
 
 def rule_duplication(declared):
@@ -138,8 +153,16 @@ def incompleteness_rate(danglings, declared):
     missing = collections.defaultdict(set)        # kernel -> {canonical target}
     sources_per = collections.defaultdict(set)    # (kernel, canon) -> {distinct sources}
     for r in danglings:
-        k = kernel_of(r.source)
-        canon = r.target if "__" in r.target else f"{k}__{r.target}"
+        # Kernel attribution mirrors resolution(): a prefixed target carries its
+        # own kernel; only a bare target leans on the source cid (for bare-cid
+        # sources kernel_of(source) is the source cid itself — the no-cs_kernel_id
+        # caveat in the module docstring).
+        if "__" in r.target:
+            k = kernel_of(r.target)
+            canon = r.target
+        else:
+            k = kernel_of(r.source)
+            canon = f"{k}__{r.target}"
         missing[k].add(canon)
         sources_per[(k, canon)].add(r.source)
     n_edges = len(danglings)
@@ -194,19 +217,22 @@ def selftest() -> bool:
     declared = {
         "k__alpha_reading", "k__beta_reading",      # two real readings of kernel k
         "k2__gradated_reading", "k2__graduated_reading",  # near-dup pair in k2
+        "gamma_reading",                            # BARE-cid reading (live regime)
     }
     refs = [
         Ref("cs_reading_relation", "k__alpha_reading", "k__beta_reading", "forecloses"),  # exact
         Ref("cs_reading_relation", "k__alpha_reading", "beta_reading", "coexists_with"),  # short
         Ref("cs_reading_relation", "k__alpha_reading", "k_beta_reading", "influences"),    # delimiter typo -> existing
         Ref("cs_reading_relation", "k__alpha_reading", "k__ghost_reading", "forecloses"), # dangling
+        # prefixed target / bare declared file — must resolve via strip, not dangle
+        Ref("cs_reading_relation", "k__alpha_reading", "kx__gamma_reading", "coexists_with"),
     ]
     ok = True
     d = rule_dangling(refs, declared)
     if {r.target for r in d} != {"k__ghost_reading"}:
         print(f"  R1 selftest FAIL: {[r.target for r in d]}"); ok = False
     nc = rule_noncanonical(refs, declared)
-    if {r.target for r in nc} != {"beta_reading", "k_beta_reading"}:
+    if {r.target for r in nc} != {"beta_reading", "k_beta_reading", "kx__gamma_reading"}:
         print(f"  R2 selftest FAIL: {[r.target for r in nc]}"); ok = False
     dup = rule_duplication(declared)
     if not any(k == "k2" for k, _, _ in dup):
@@ -214,7 +240,7 @@ def selftest() -> bool:
     if any(k == "k" for k, _, _ in dup):
         print(f"  R3 selftest FAIL (over-flagged alpha/beta): {dup}"); ok = False
     print(f"  positive controls: {'PASS' if ok else 'FAIL'} "
-          f"(R1 flags ghost, R2 flags short, R3 flags gradated/graduated, no over-flag)")
+          f"(R1 flags ghost, R2 flags short+stripped, R3 flags gradated/graduated, no over-flag)")
     return ok
 
 

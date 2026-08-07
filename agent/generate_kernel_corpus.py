@@ -372,8 +372,9 @@ def flatten_manifests(manifests):
                 if not rid:
                     continue
                 # Bare reading_id — matches the generation_sequence claim_id convention
-                # (downstream prefixes header.constraint_id to <kernel>__<reading> and
-                # generate_constraint_pl derives kernel_id by split). Dedup on the bare
+                # (bare ids ARE the story cids in the live regime; kernel membership
+                # travels via the seed's kernel_id/_kernel_id, not a name prefix).
+                # Dedup on the bare
                 # id so readings already queued by generation_sequence are not re-emitted.
                 cid = rid
                 if cid in seen:
@@ -642,18 +643,24 @@ def _strip_reading_suffix(s):
 
 
 def snap_sibling_id(target, kernel_id, sibling_reading_ids):
-    """Fix B: normalize a model-authored cs_reading_relation sibling_id to the canonical
-    kernel-qualified declared sibling, ONLY on a unique confident match.
+    """Fix B: normalize a model-authored cs_reading_relation sibling_id to the BARE
+    declared sibling id, ONLY on a unique confident match.
 
     The declared siblings (`sibling_reading_ids` from the seed manifest) are the
     authoritative target set; the model frequently drifts (drops/adds a `_reading`
-    suffix, or omits the kernel prefix). Resolution order:
+    suffix, or adds/omits the kernel prefix). Resolution order:
       1. exact     — the authored short id IS a declared sibling
       2. suffix    — a UNIQUE declared sibling matches after stripping `_reading` both sides
-    Snap = re-qualify to `<kernel>__<declared_sibling>`. If there is no match, or the
-    match is AMBIGUOUS (more than one declared sibling normalizes equal), the authored
-    value is returned UNCHANGED — it then routes to validate_reading_relation_integrity's
-    quarantine (OQ-58), never wrong-snapped.
+    Snap = the BARE declared sibling id — the canonical target form (operator
+    ruling 2026-08-07): live cids are bare, and bare targets still resolve
+    against prefixed-cid corpora via the registry's bare→prefixed rescue
+    (cs_kernel_registry:cs_edge_target_member/4), so bare is safe in both
+    regimes. (Pre-2026-08 this emitted `<kernel>__<sibling>` while cids were
+    bare, which made every emitted edge dangle — the OQ-260-series skew.)
+    If there is no match, or the match is AMBIGUOUS (more than one declared
+    sibling normalizes equal), the authored value is returned UNCHANGED — it
+    then routes to validate_reading_relation_integrity's quarantine (OQ-58),
+    never wrong-snapped.
 
     Returns (resolved_id, snapped_bool).
     """
@@ -662,14 +669,12 @@ def snap_sibling_id(target, kernel_id, sibling_reading_ids):
     short = target.split("__", 1)[1] if "__" in target else target
     # 1. exact match against a declared sibling short id
     if short in sibling_reading_ids:
-        resolved = f"{kernel_id}__{short}"
-        return resolved, resolved != target
+        return short, short != target
     # 2. unique suffix-normalized match
     nshort = _strip_reading_suffix(short)
     matches = [s for s in sibling_reading_ids if _strip_reading_suffix(s) == nshort]
     if len(matches) == 1:
-        resolved = f"{kernel_id}__{matches[0]}"
-        return resolved, resolved != target
+        return matches[0], matches[0] != target
     # no match or ambiguous → leave as-authored (quarantine handles it)
     return target, False
 
@@ -1286,8 +1291,16 @@ def validate_reading_relation_integrity(gen_seeds, json_dir, testsets_dir):
         for rr in cs.get("reading_relations") or []:
             target = rr.get("sibling_id", "")
             rel = rr.get("relation", "")
-            canon = target if "__" in target else f"{kernel_id}__{target}"
-            if not (testsets_dir / f"{canon}.pl").exists():
+            # Three-form resolution mirroring cs_kernel_registry:cs_edge_target_member/4
+            # (canonical form BARE; both legacy forms accepted): a target resolves if
+            # <target>.pl OR <kernel>__<target>.pl OR (target = <kernel>__<bare>)
+            # <bare>.pl exists in this run's testsets_dir.
+            prefix = f"{kernel_id}__"
+            candidates = [target, f"{kernel_id}__{target}"]
+            if target.startswith(prefix):
+                candidates.append(target[len(prefix):])
+            if not any((testsets_dir / f"{c}.pl").exists() for c in candidates):
+                canon = target if "__" in target else f"{kernel_id}__{target}"
                 quarantine.append({"kernel": kernel_id, "source": cid,
                                    "target": target, "canonical": canon, "relation": rel})
 
