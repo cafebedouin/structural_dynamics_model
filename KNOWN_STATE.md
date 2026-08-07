@@ -45,6 +45,41 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-06 — [landed] CS spec v6 full reissue adopted (supersedes v4+v5+v5.1+v5.2); spec-enum tripwire in the gate; OQ-265 (identity endpoints) + OQ-266 (pattern-suite rot) minted
+
+**Files:** docs/commitment_systems/commitment_systems_sketch_v6.md, python/spec_enum_check.py, scripts/gate.sh, prolog/cs_pattern_detection.pl, prolog/cs_drift_engine.pl, prolog/cs_axiom_engine.pl, prolog/tests/test_cs_pattern_detection.pl, python/enhanced_report.py, ISSUES.md
+**Tier:** landed
+
+**v6 adoption** (commits `81d561bc` checker, `01fad750` doc, `932f577a` OQ-265, `1f360e31`
+touch-ups, `50d6ecc3` OQ-266). `commitment_systems_sketch_v6.md` is the current CS spec —
+self-contained, ends the 4-deep delta chain; v4/v5/v5.1/v5.2 carry superseded-by headers and
+stay as history. Absorbs the six post-v5.2 code-only subsystems (drift terminals, axiom layer,
+kernel obstruction, trifurcation router, cross-axis mismatch, `scaffold_suppression_escalating`)
+plus the Type-B adjudication ruling; states the versioning rule (delta = one marked revision to
+one section; reissue at >1 section or chain depth ≥3); carries a correction-lineage table.
+Axiom-enum mismatch resolved as documentation: authored vocabulary is {holdable, overridden},
+`foreclosed` computed-only (v6 §7 + comment touch-ups, no code change).
+
+**Spec-enum tripwire** (`python/spec_enum_check.py`, wired into `scripts/gate.sh` as "spec
+enums"): 8 enums (terminals, directions, magnitudes, patterns, verdicts, obstruction statuses,
+trifurcation types, normalized attractor table) in sentinel blocks, diffed against code pins;
+fails loud on a deleted sentinel; positive controls (add/remove/deleted-sentinel) ride every
+run. Witnessed RED all three ways on mutated copies, GREEN on the real doc. **If you edit any
+of these enumerations in code, the gate goes red until the v6 block is updated — by design.**
+
+**New finding (identity precondition):** the six drift terminals presuppose continuous
+single-continuant identity in addition to OQ-227's surviving referent — schism and
+absorption/syncretism are unhandled endpoint regimes. Declared absence, OQ-265 (per-candidate
+detectability verdicts required at resolution; `terminal_set_pinned` stays green).
+
+**Found defect:** `tests/test_cs_pattern_detection.pl` is silently red 13/37 AND its runner
+exits 0 on failure — pre-existing fixture rot (corpus reset + UID re-key), byte-identical
+failure lists pre/post the v6 comment edits. OQ-266. Do not cite that suite as a witness.
+
+Stale-gap corrections landed in v6 vs the old satellite surveys: `cs_displaced_beneficiary/1`
+is `forecloses`-edge-keyed (v5.2 said `affects_constraint/2`); `predicted_terminal_state/3`
+is at `transition_paths.pl:231–256` with vocabulary {piton, snare, tangled_rope, stable}.
+
 ## 2026-08-06 — [landed] OQ-259 item-2 Part C executed: T Framework GRADUATED second meta-layer file (P1 3/3 + blinded presence 3/3, planted control valid); B1 closed without spend (operator ruling)
 
 **Files:** audits/2026-08-06_oq259_item2_tframework/, ISSUES.md, docs/drafts/shanahan_kritik.md
