@@ -45,6 +45,48 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-07 — [landed] Edge-naming reconciliation: canonical cs_reading_relation target form is BARE cids (operator ruling); three-form resolver lands; 22 kernels leave `untyped`; OQ-260 resolved
+
+**Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, agent/generate_kernel_corpus.py, python/audits/reading_reference_linter.py, prolog/testsets/fiat_efficacy_kernel_contradictions.pl, agent/c-orchestrator.py
+**Tier:** landed
+
+**Still-operative ruling (operator, 2026-08-07): the canonical `cs_reading_relation`
+target form is BARE cids.** The registry resolves both legacy authored forms —
+bare-against-prefixed-corpus (old quarantine-view rescue) and prefixed-against-bare-corpus
+(the 2026-08 generator skew) — via the new exported
+`cs_kernel_registry:cs_edge_target_member/4` (exact | bare→prefixed | prefixed→bare strip;
+exact atom equation modulo the kernel's own `__` prefix, never similarity).
+`cs_kernel_obstruction/4` pair-matching and `cs_reading_relation_unresolved/4` (now the
+resolver's exact complement) route through it, as do `json_report.pl`'s two `cs_axiom_*`
+join blocks (commit `4f646665`). Generator emits bare (`snap_sibling_id`), validator and
+`reading_reference_linter.py` accept all three forms (`8d509bdc`).
+
+**Blast radius was corpus-wide, not fiat-local.** The plan hypothesized only
+fiat + visual would move; the B0 witness falsified that: 22 of 67 live-testsets kernels
+left `untyped` (11 → `real_closure`, 11 → `licensed_plurality`), engine table matching an
+independent raw-text pre-derivation 67/67. `cs_axiom_real_closure` 0→11,
+`cs_axiom_licensed_plurality` 0→28 (both joins were dead for their whole life — every
+authored target was prefixed while cids are bare). Census: n_dangling 358→139,
+n_noncanonical 0→219, defensible backlog 5→17 rows. Twins/kimi/sonnet byte-identical;
+kernel_v1 moved ONE cell (`constitutional_interpretive_authority` Plur 2→3, status
+unchanged) — a bare-target/prefixed-member edge whose rescue previously existed only in
+the quarantine view, now reaching pair-matching. Same-session frozen-corpus diff pair
+(md5-identical legs both halves; run exit 0 + mtime advanced); the pipeline diff contained
+ONLY the pre-derived paths.
+
+**OQ-260 resolved** (`00f8cf32`): `_step_commit` repo-anchors relative
+`_last_manifest_path` before `relative_to(REPO_ROOT)`; 3-case harness (HEAD positive
+control reproduced the false `not_staged: manifest outside repo`; post-fix relative +
+absolute in-repo stage; outside-repo still refuses).
+
+**Residue (declared):** `cs_pattern_detection.pl:355` and `drl_composition.pl:122` still
+raw-match edge targets (out of scope this session — noted on OQ-58/OQ-262);
+~20 sibling `testsets/*_contradictions.pl` files remain untracked (only the fiat one was
+committed, `f724379d`); pre-existing suite rot unchanged byte-identical on baseline code
+(test_cs_kernel_registry 24/25, test_contradiction_signatures 12/17, test_cs_axiom_engine
+11/14 — the axiom suite's header load chain points at fixtures removed in the 2026-06-05
+reset; OQ-266 class).
+
 ## 2026-08-06 — [landed] CS spec v6 full reissue adopted (supersedes v4+v5+v5.1+v5.2); spec-enum tripwire in the gate; OQ-265 (identity endpoints) + OQ-266 (pattern-suite rot) minted
 
 **Files:** docs/commitment_systems/commitment_systems_sketch_v6.md, python/spec_enum_check.py, scripts/gate.sh, prolog/cs_pattern_detection.pl, prolog/cs_drift_engine.pl, prolog/cs_axiom_engine.pl, prolog/tests/test_cs_pattern_detection.pl, python/enhanced_report.py, ISSUES.md

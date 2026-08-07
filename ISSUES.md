@@ -2605,6 +2605,14 @@ must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
 quarantine view `cs_kernel_registry:cs_reading_relation_unresolved/4`; linter/reporter
 `python/audits/reading_reference_linter.py`.
 
+**Naming-skew stratum RESOLVED OUT of the dangling count (2026-08-07, `4f646665`/`8d509bdc`).**
+Canonical target form is BARE cids (operator ruling); the three-form resolver
+`cs_kernel_registry:cs_edge_target_member/4` + generator bare-emit + linter strip landed.
+Live-testsets dangling dropped 358→139 (linter) / 313→145 (engine quarantine view) — the
+remainder is the GENUINE missing-sibling backlog this OQ's content decision concerns
+(singleton-sparsity artifact included, per the beta posture). Un-routed raw-match consumers
+remain at `cs_pattern_detection.pl:355` and `drl_composition.pl:122` (noted on OQ-262).
+
 **Cross-ref (2026-06-02):** the *network-layer* analog — dangling `affects_constraint/2` targets
 (1710/2548 edges, no referential-integrity guard), the 9 delimiter typos there, and the finding that
 such danglers resolve into a **bounded** structural-class space (not an open frontier) — is tracked in
@@ -12565,6 +12573,14 @@ Practical note: the fiat edges currently sit in QUARANTINE under prefixed-vs-bar
 (standing OQ-58-adjacent pattern, witnessed 2026-08-03) — the audit consumer needs
 resolvable edges, so the naming join is a de-facto precondition even though no formal
 dep edge is authored here.
+**Precondition DISCHARGED (2026-08-07, commits `4f646665`/`8d509bdc`).** Canonical target
+form is BARE cids (operator ruling); the exported resolver
+`cs_kernel_registry:cs_edge_target_member(+K, +T, +Pairs, -C)` is this audit's edge
+accessor — enumerate a kernel's resolved edges through it, never by raw
+`cs_reading_relation` target match. The fiat family's 30 edges all resolve (13
+coexists_with pairs, 2 forecloses pairs; `real_closure`, H1r=2). Residue relevant here:
+`cs_pattern_detection.pl:355` and `drl_composition.pl:122` still raw-match targets
+(un-routed consumers — fold into this audit's scope or route them when touched).
 
 **What resolution changes.** Authored reading-relation edges gain a validity check
 (candidate engine refinement offered BY the kritik program); OQ-23's recon gets a
