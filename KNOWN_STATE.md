@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-08 — [landed] c-orchestrator --close-gaps: gap-closing mode over a frozen manifest; frozen-manifest retry filter widened to json-AND-pl
+
+**Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py
+**Tier:** landed
+
+New `--close-gaps` flag (requires `--manifest-file`): regenerates ONLY the stories in
+the frozen manifest's seed set whose `json/<cid>.json` OR `prolog/testsets/<cid>.pl` is
+missing (e.g. a generation failure from a prior run), then continues into the normal
+corpus update/reports/commit; skips research (its context only feeds the bypassed
+decompose step) and exits early when nothing is missing. Composes with `--dry-run`:
+lists the gaps with zero API spend. Seed derivation and gap predicate are factored into
+one canonical trio (`_seed_set` / `_is_story_gap` / `story_gaps`,
+generate_kernel_corpus.py) shared by the pre-flight probe and the frozen-manifest retry
+filter in `generate_from_manifests` — and that filter was WIDENED: it previously skipped
+any seed whose `.json` existed, silently never retrying a json-without-`.pl` story (the
+stamp pass's PRODUCER GAP shape); both artifacts must now exist to skip. Witnessed
+this session: guard control (`--close-gaps` alone → parser error); positive control
+(c2_monetary_architecture manifest → exactly the 1 known failed reading,
+`issuance_as_endogenous_credit_multiplication`); negative controls (the 3 landed fiat
+readings not listed; "No gaps to close" early exit on 2 fully-landed manifests).
+**Caveat:** a gap census over `agent/decompose_manifests/flat/` is NOT a to-do list —
+several 08-03/08-05/08-06 manifests are decompose-only drafts whose stories were never
+generated at all, and reading names churn across redraws (OQ-264), so point
+`--close-gaps` only at the manifest of the run being completed, never at a superseded
+draft of an already-landed family (it would mint new-draw siblings into that family).
+
 ## 2026-08-08 — [landed] OQ-261 resolved: forced-gluing experiment executed (R2-signed prereg) — performance presheaf OBSTRUCTS; discard minimum is exactly one bloc; 253/468 registry record stale (live 164)
 
 **Files:** audits/2026-08-07_oq261_forced_gluing/, prolog/cs_kernel_registry.pl, prolog/stakeholder_seats.pl, ISSUES.md

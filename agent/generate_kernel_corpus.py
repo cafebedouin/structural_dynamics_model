@@ -1007,19 +1007,13 @@ def _seed_messages(seed, generated_by_id):
     return build_cached_messages(seed)
 
 
-def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
-                            model, max_tokens, system, temperature,
-                            rejections_path=None, manifest_file=None, progress=None,
-                            token_acc=None):
-    """The unified backend. Returns (succeeded_ids, failed_ids, fail_reasons).
-
-    token_acc (OQ-80): optional mutable dict forwarded to process_batch_results per wave;
-    the caller reads accumulated usage from it after the run. Out-param, not a return
-    value, so the 3-tuple stays intact for existing callers."""
+def _seed_set(manifests, progress=None):
+    """The one canonical seed derivation for a manifest set: flat axes (c-orch
+    resolution) + kernel readings/controls (flatten). Returns (all_seeds, kr_seeds);
+    all_seeds is flat-first so a pure-flat run stays order-identical to the
+    c-orchestrator item order. Shared by generate_from_manifests and story_gaps —
+    a gap probe over a different derivation would drift from what generation runs."""
     progress = progress or (lambda *a, **k: None)
-    client = get_client()
-
-    # --- Seed set: flat axes (c-orch resolution) + kernel readings/controls (flatten) ---
     flat_seeds = []
     for m in manifests:
         flat_seeds.extend(_flat_seeds_from_manifest(m))
@@ -1036,12 +1030,45 @@ def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
         kr_seeds.append(s)
     if recovery:
         progress("generate", f"RECOVERY: {recovery} kernel entries missing reading_id")
-    all_seeds = flat_seeds + kr_seeds   # flat first; pure-flat -> identical to c-orch items order
+    return flat_seeds + kr_seeds, kr_seeds
 
-    # Retry-the-gaps: a frozen-manifest run skips seeds whose story already landed.
+
+def _is_story_gap(seed, json_dir, testsets_dir):
+    """A seed is a gap unless BOTH artifacts landed — json/<cid>.json AND
+    testsets/<cid>.pl. A json without its .pl never entered the corpus (the
+    stamp pass reports exactly that shape as a PRODUCER GAP), so it retries."""
+    cid = seed["constraint_id"]
+    return (not (json_dir / f"{cid}.json").exists()
+            or not (testsets_dir / f"{cid}.pl").exists())
+
+
+def story_gaps(manifests, json_dir, testsets_dir):
+    """Pre-flight gap probe (c-orchestrator --close-gaps): sorted cids in the
+    manifests' seed set whose story has not fully landed. Same derivation and
+    same predicate as the frozen-manifest retry filter in generate_from_manifests."""
+    all_seeds, _ = _seed_set(manifests)
+    return sorted(s["constraint_id"] for s in all_seeds
+                  if _is_story_gap(s, json_dir, testsets_dir))
+
+
+def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
+                            model, max_tokens, system, temperature,
+                            rejections_path=None, manifest_file=None, progress=None,
+                            token_acc=None):
+    """The unified backend. Returns (succeeded_ids, failed_ids, fail_reasons).
+
+    token_acc (OQ-80): optional mutable dict forwarded to process_batch_results per wave;
+    the caller reads accumulated usage from it after the run. Out-param, not a return
+    value, so the 3-tuple stays intact for existing callers."""
+    progress = progress or (lambda *a, **k: None)
+    client = get_client()
+
+    all_seeds, kr_seeds = _seed_set(manifests, progress)
+
+    # Retry-the-gaps: a frozen-manifest run skips seeds whose story already fully
+    # landed (json AND pl — a json missing its .pl is still a gap; _is_story_gap).
     if manifest_file:
-        all_seeds = [s for s in all_seeds
-                     if not (json_dir / f"{s['constraint_id']}.json").exists()]
+        all_seeds = [s for s in all_seeds if _is_story_gap(s, json_dir, testsets_dir)]
 
     run_ids = {s["constraint_id"] for s in all_seeds}
     generated_by_id = {}

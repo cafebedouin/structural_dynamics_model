@@ -143,6 +143,7 @@ class DRAuditOrchestrator:
         brief_mode: str = "auto",          # auto | force | never  (size-driven briefing)
         auto_bypass_refusal: bool = False,  # opt-in, logged bypass of a content refusal
         no_commit: bool = False,            # opt-out of the gated auto-commit of new stories
+        close_gaps: bool = False,           # gap-closing mode (requires manifest_file)
     ):
         self.axes = axes
         self.serial_generate = serial_generate
@@ -158,6 +159,7 @@ class DRAuditOrchestrator:
         self.brief_mode = brief_mode
         self.auto_bypass_refusal = auto_bypass_refusal
         self.no_commit = no_commit
+        self.close_gaps = close_gaps
         # Optional explicit token cap on the raw topic (env override). When unset,
         # the ingest ceiling is MEASURED per-step (see _ingest_decision).
         import os as _os
@@ -248,10 +250,15 @@ class DRAuditOrchestrator:
                 result.total_duration_s = time.time() - t0
                 return result
 
-        # Step 1: Research
-        step = self._step_research(topic)
-        result.steps.append(step)
-        research_context = step.data or topic
+        # Step 1: Research — skipped in --close-gaps mode: research context only
+        # feeds decompose, which the (required) frozen manifest bypasses, so the
+        # grounding call would be spent on context nothing consumes.
+        if self.close_gaps:
+            research_context = topic
+        else:
+            step = self._step_research(topic)
+            result.steps.append(step)
+            research_context = step.data or topic
 
         # Step 2: Decompose (SCOPE) — or load frozen manifest if --manifest-file given
         if self.manifest_file:
@@ -310,6 +317,23 @@ class DRAuditOrchestrator:
         result.scope_manifest = manifest
         result.family_id = manifest.get("family_id", "")
         result.domain = manifest.get("domain", "")
+
+        # --close-gaps pre-flight: enumerate the manifest's unlanded stories (same
+        # seed derivation + predicate the generate backend retries on) and stop
+        # early when there is nothing to close — no generate or pipeline spend.
+        # Placed BEFORE the dry-run stop so --close-gaps --dry-run lists the gaps
+        # without generating.
+        if self.close_gaps:
+            from agent.generate_kernel_corpus import story_gaps
+            gaps = story_gaps([manifest], self._json_dir, self._testsets_dir)
+            if not gaps:
+                self._progress("close_gaps", "No gaps to close — every story in the "
+                               "manifest's seed set has landed (json + pl present)")
+                result.steps.append(StepResult(step="close_gaps", status="success"))
+                result.total_duration_s = time.time() - t0
+                self._tally_tokens(result)
+                return result
+            self._progress("close_gaps", f"{len(gaps)} gap(s) to close: {', '.join(gaps)}")
 
         if self.dry_run:
             self._progress("dry_run", "Manifest assembled — dry-run stops here")
@@ -1142,6 +1166,14 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Run SCOPE only, print manifest")
     parser.add_argument("--manifest-file", default=None,
                         help="Load frozen SCOPE manifest from file, skip decompose step")
+    parser.add_argument("--close-gaps", action="store_true",
+                        help="Gap-closing mode (requires --manifest-file): regenerate ONLY the "
+                             "stories in the frozen manifest's seed set whose json/<cid>.json "
+                             "or testsets/<cid>.pl is missing (e.g. a generation failure from "
+                             "a prior run), then continue with the normal corpus update. Skips "
+                             "research; exits early when there is nothing to close; topic "
+                             "argument optional. Combine with --dry-run to list the gaps "
+                             "without generating.")
     parser.add_argument("--no-commit", action="store_true",
                         help="Skip the gated auto-commit of new stories (default: commit "
                              "json/<cid>.json + testsets/<cid>.pl after a successful corpus update)")
@@ -1156,6 +1188,9 @@ def main():
                     help="Never size-brief (feed the topic whole; may overflow context).")
     parser.set_defaults(brief_mode="auto")
     args = parser.parse_args()
+
+    if args.close_gaps and not args.manifest_file:
+        parser.error("--close-gaps requires --manifest-file (the frozen manifest names the seed set)")
 
     # Resolve topic — positional arg can be a file path or a literal string.
     # source_name carries the originating file path (for brief naming/save-beside).
@@ -1177,6 +1212,8 @@ def main():
     elif args.input_file:
         topic = Path(args.input_file).read_text(encoding="utf-8").strip()
         source_name = args.input_file
+    elif args.close_gaps:
+        topic = ""  # unused: --close-gaps skips research AND decompose (frozen manifest)
     elif not sys.stdin.isatty():
         topic = sys.stdin.read().strip()
     else:
@@ -1195,6 +1232,7 @@ def main():
         brief_mode=args.brief_mode,
         auto_bypass_refusal=args.auto_bypass_refusal,
         no_commit=args.no_commit,
+        close_gaps=args.close_gaps,
     )
     result = orch.run(topic)
 
