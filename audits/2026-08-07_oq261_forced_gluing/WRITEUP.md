@@ -15,11 +15,16 @@ exists yet; H_perf/H_topic remain undecided.
   two clean blocs, all values in-spectrum; per-story stakeholder reads (all 7 stories
   `manufactured_consensus_candidate[_untypeable]`); flat-control fingerprint (same-topic,
   NOT same-substrate); three-frame mismatch note.
-- **C2 done** — `PROPOSAL.md`: pre-registered H_perf vs H_topic discriminator (2×2
-  cells with meanings and fireable falsifiers written before any run; frozen
-  performance-seat classification; second positive control = state_execution_authority
-  triplet; observer-blindness constraint; placement rule).
-- **C3/C4 NOT run** — blocked on **R2**: operator sign-off of the frozen proposal.
+- **C2 done, amended to v2** — `PROPOSAL.md` (v1 at `83a647ea`, v2 per operator
+  amendments 1–4 the same day): pre-registered H_perf vs H_topic discriminator with
+  blinding declared + three partition variants, pooled-level sparsity floor
+  (below-floor = NULL), a 16-family `real_closure` comparator column (mechanical
+  agent/excluded partition; corrects the session-report "11" → 13 newly typed),
+  numeric positive-control criteria (≥85/156 obstructed + exact join invariant),
+  Cell-3 probe-bug license pinned to n_real<2, engine-witness validity note
+  (registry 24/25 failure is off the pair-matching path), and a corpus-freeze
+  constraint for the duration of C3.
+- **C3/C4 NOT run** — blocked on **R2**: operator sign-off of the v2 freeze.
   On sign-off, C3 executes compute-only probes (`performance_presheaf_probe.pl`, to be
   added here) and this file is rewritten as the closing writeup quoting the frozen
   proposal.

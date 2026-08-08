@@ -63,7 +63,10 @@ join blocks (commit `4f646665`). Generator emits bare (`snap_sibling_id`), valid
 
 **Blast radius was corpus-wide, not fiat-local.** The plan hypothesized only
 fiat + visual would move; the B0 witness falsified that: 22 of 67 live-testsets kernels
-left `untyped` (11 → `real_closure`, 11 → `licensed_plurality`), engine table matching an
+left `untyped` (**13 → `real_closure`, 9 → `licensed_plurality`** — CORRECTION
+2026-08-07, same day: this entry and the session report first said "11/11", conflating
+the `cs_axiom_real_closure=11` join count with the kernel counts; 13/9 is the witnessed
+split, full `real_closure` set now 16 incl. 3 pre-existing), engine table matching an
 independent raw-text pre-derivation 67/67. `cs_axiom_real_closure` 0→11,
 `cs_axiom_licensed_plurality` 0→28 (both joins were dead for their whole life — every
 authored target was prefixed while cids are bare). Census: n_dangling 358→139,
