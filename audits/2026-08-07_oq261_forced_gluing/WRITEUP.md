@@ -99,6 +99,37 @@ derivation from it remains valid as a floor.
   future substitute-presheaf model must expect obstruction as the default, not the
   exception.
 
+## POST-HOC follow-ups (2026-08-08, operator review after close — NOT pre-registered;
+## labeled per the unguarded-axis-swap discipline)
+
+**Symmetric read — Cell 1's interpretive weight is DEMOTED.**
+`posthoc_symmetric_read_probe.pl` ran `obstruction_from_vector` over three pooled seat
+sets: performance (V_frozen), topic-community (the complement), and all agent seats.
+H¹ densities: **0.4945 / 0.60 / 0.4952** — and in EVERY set H¹ equals exactly
+(#rope)·(#scaffold): each pooled sub-vector is a pure two-token rope/scaffold split.
+The bloc structure penetrates ANY sub-vector pooled across the six readings, so **Cell
+1's obstruction carries no independent information about performance seats
+specifically — it is a restatement of the family's bloc structure through story-derived
+seat typing.** The scoped verdict stands (H_perf-as-operationalized did fail where
+decidable) but its evidential weight against the performance-presheaf CONCEPT is
+minimal: the operationalization could not have isolated it. Caveats: the topic-community
+set is itself thin (n_real=5, contrib=3 — below the symmetric floor), so the strong
+comparison is perf ≈ all (dense, 6/6 contributing, densities within 0.001); the flat
+control's glue is a single story (no cross-story structure to inherit) and fetterley is
+one case — neither demonstrates independence.
+
+**253 → 164 diagnosis (`posthoc_253_164_diagnosis.txt`): engine-regime drift.** The
+three fixture files are byte-stable since the record era (one commit ever — the
+2026-06-05 archive move); `cs_kernel_divergence/4` is edge-free and byte-identical
+through Item B (B retyped kernels via edges only — ruled out by mechanism); the live
+per-reading type sets moved substantially vs the record (snare appears in all three
+readings, unknown vanishes from retributive/deterrence; the record's specific
+naturalized witness still reproduces). Verdict: the record was correct-then and is
+engine-state-stale; 164 is the current-engine truth; **the OQ-266 re-run is a fixture
+question, not a corpus question.** Note the ≥85 floor was derived from the
+non-reproducing 253 — it passed (97), but on contested provenance; the invariant
+(rider-1-caveated) is what carried the control.
+
 ## Residue (declared)
 
 1. **Rider 1 (control non-independence):** criterion 2 compares against
@@ -111,8 +142,10 @@ derivation from it remains valid as a floor.
    observations.
 2. **Frozen-cell enumeration gap:** the realized Cell-1 shape (obstruct/obstruct/NULL)
    was not among the three named outcomes; verdict stated at scoped altitude above.
-3. **Restrictive variant undetermined:** pooled n_real=5 < 6 — round-participant seats
-   are too thin in this family to decide; not evidence either way.
+3. **Restrictive variant undetermined — and it is a BOUNDARY read:** pooled n_real=5
+   against a floor of 6, one seat short. Not a comfortable margin; a single additional
+   real round-participant seat would have decided it. Not evidence either way, and not
+   robustly NULL either.
 4. **Registry record staleness:** 253/468 → live 164 (auto-memory updated same
    session); any future consumer of the 253 figure must re-witness.
 5. **Story-derived seat typing bounds the operationalization:** with no cross-story
@@ -137,3 +170,7 @@ derivation from it remains valid as a floor.
 - `positive_control_probe.pl` / `positive_control_probe_output.txt` — C3 probe
   validity control + raw output.
 - `c3_fingerprints_before.txt` / `c3_fingerprints_after.txt` — corpus-freeze witness.
+- `posthoc_symmetric_read_probe.pl` / `posthoc_symmetric_read_probe_output.txt` —
+  POST-HOC symmetric read (Cell-1 demotion; 2026-08-08 operator follow-up).
+- `posthoc_253_164_diagnosis.txt` — POST-HOC divergence-record diagnosis
+  (engine-regime drift; fixture files stable; Item B ruled out by mechanism).

@@ -12663,6 +12663,15 @@ Fiat k=3 reproduce-rate was the sole spend (≈101K tok; corpus untouched).
    duplicates + mechanical comparators); 0/n observed agreement is cited with its
    binomial bound (0/6 → 95% UB 0.393), never as "zero."
 
+**CANDIDATE standard #7 (operator-proposed 2026-08-08, OQ-261 post-hoc; adoption
+pending):** *no pooled-across-story H¹ claim without an identity-controlled
+comparator.* Provenance: the OQ-261 comparator read 15/16 `real_closure` families
+obstructed on pooled agent-seat vectors, and the post-hoc symmetric read showed every
+pooled sub-vector of the fiat family carries H¹ = (#rope)·(#scaffold) exactly — seat
+types are story-derived with no cross-story identity, so pooled H¹ inherits bloc
+structure through its construction (the standard-#2 shape at the H¹ layer). Witness:
+`audits/2026-08-07_oq261_forced_gluing/posthoc_symmetric_read_probe_output.txt`.
+
 ---
 
 ## OQ-265 — Do the drift terminals presuppose single-continuant-system identity? Schism and absorption as unhandled endpoint regimes
@@ -12758,9 +12767,45 @@ compares against `cs_kernel_divergence/4` while that predicate's test is red, so
 OQ-261 control passed non-independently; a clean re-run hardens it retroactively, a failed
 one demotes the OQ-261 cells to draw-level observations.
 
+## OQ-267 — Ballot totality as institutional forcing over a SECOND obstructed presheaf: the sharpened OQ-261 thesis needs an identity-controlled substrate
+
+**Ω-type:** Ω_C (modeling the forcing operator and designing the substrate is a design
+choice), with an Ω_E tail once a substrate with cross-story seat identity exists.
+
+**Status:** open
+**Priority:** 3
+**Origin:** OQ-261 close, operator review 2026-08-08. The corrected OQ-261 mapping said
+the ballot relocates gluing to a performance object that *always admits a global
+section*. The C3 result says the performance presheaf is obstructed too (Cell 1,
+above-floor variants) — so the ballot's totality is not purchased by moving to an
+object that glues; it is purchased by **institutional forcing over a second obstructed
+presheaf**. Stronger than the original claim, and worse for the consumer: a ballot read
+as topic evidence cannot distinguish resolved from out-performed, and now cannot
+distinguish out-performed from forced-over-obstructed-performance either.
+**Files:** `audits/2026-08-07_oq261_forced_gluing/` (WRITEUP + post-hoc probes)
+
+**Deps:** splits_from OQ-261
+
+**The substrate constraint (load-bearing, from the post-hoc symmetric read):** in the
+current corpus, seat types are story-derived with no cross-story seat identity, so EVERY
+sub-vector pooled across a family inherits the family's bloc structure (H¹ =
+(#rope)·(#scaffold) exactly, all three seat sets) — the performance presheaf is not
+measurably distinct from the topic presheaf here. Testing the sharpened thesis therefore
+requires an **identity-controlled substrate**: per-round performance objects with seat
+identity across stories (a judge/ballot record authored once and referenced by multiple
+readings), not another pooled read. Until that exists, the thesis is design-level:
+falsifiable in principle, uncarried by this corpus. Related: the OQ-264 candidate
+standard #7 (no pooled-across-story H¹ claim without an identity-controlled comparator)
+is this constraint stated as method.
+
+**What resolution changes.** Whether "forced total verdict over an obstructed
+presheaf" becomes the named model of ballot-shaped channels (elections, peer review,
+litigation), with the discard/forcing cost (OQ-261 Cell 2's bloc-shaped discard
+minimum) as its measurable signature.
+
 ---
 
-*Last updated: 2026-08-06. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-08-08. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

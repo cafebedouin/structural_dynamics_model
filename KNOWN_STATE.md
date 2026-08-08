@@ -67,6 +67,27 @@ engine-state-stale (auto-memory annotated); (b) standing obligation on OQ-266: r
 against `cs_kernel_divergence/4` while its test is red — passed non-independently, R2
 rider 1). Corpus md5-frozen through C3, witnessed in-dir.
 
+**Post-hoc follow-ups (same day, operator review — labeled POST-HOC in the audit dir):**
+(1) **Cell-1 demotion:** symmetric read shows every pooled sub-vector of the fiat family
+(performance / topic-community / all-agent) carries H¹ = (#rope)·(#scaffold) exactly
+(densities 0.4945/0.60/0.4952) — the obstruction is bloc structure penetrating ANY
+pooled read via story-derived seat typing; Cell 1 carries no independent information
+about performance seats specifically. The scoped H_perf verdict stands; its weight
+against the performance-presheaf CONCEPT is minimal. (2) **253→164 diagnosed:**
+engine-regime drift (fixture files byte-stable since the record era; divergence
+predicate edge-free so Item B ruled out by mechanism; live type sets add `snare`, drop
+`unknown`) — the OQ-266 re-run is a fixture question, not a corpus question. (3)
+**OQ-267 minted** (sharpened successor: ballot totality = institutional forcing over a
+SECOND obstructed presheaf; needs an identity-controlled substrate with cross-story seat
+identity). (4) **Candidate OQ-264 standard #7** recorded (operator-proposed, adoption
+pending): no pooled-across-story H¹ claim without an identity-controlled comparator.
+(5) The remaining untracked `testsets/*_contradictions.pl` files committed post-C3 —
+17 files at `543e2f9a` (the earlier "~20" was an estimate; with the fiat one at
+`f724379d`, 0 contradictions files remain untracked, witnessed by `git status`).
+Git-state only; disk content unchanged, so corpus md5 fingerprints unaffected. Six
+untracked story testsets (`collective_refusal…`, `voice_without_leverage`, …) + their
+`json/` twins remain untracked — separate item, not ruled on.
+
 ## 2026-08-07 — [landed] Edge-naming reconciliation: canonical cs_reading_relation target form is BARE cids (operator ruling); three-form resolver lands; 22 kernels leave `untyped`; OQ-260 resolved
 
 **Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, agent/generate_kernel_corpus.py, python/audits/reading_reference_linter.py, prolog/testsets/fiat_efficacy_kernel_contradictions.pl, agent/c-orchestrator.py

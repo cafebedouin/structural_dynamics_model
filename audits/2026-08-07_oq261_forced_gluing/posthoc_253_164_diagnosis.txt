@@ -1,0 +1,22 @@
+POST-HOC 253->164 diagnosis (2026-08-08, operator follow-up after close)
+
+1. Fixture stability: all three kernel_test files have exactly one commit touching them:
+29889e50 refactor(layout): consolidate all previous datasets under prolog/archives/datasets/; fresh testsets/ seeds the post-de-leak rebuild
+   (the 2026-06-05 consolidation MOVE; content byte-stable since the record era)
+
+2. Mechanism: cs_kernel_divergence/4 (cs_kernel_registry.pl:83-95) reads ONLY
+   cs_readings_for_kernel + static dr_type — edge-free, byte-identical through the
+   Item-B edge-naming rewrite; B retyped kernels via EDGES only. B ruled out.
+
+3. Live type sets vs the 2026-05-25-era record:
+abolition_reading typeset=[naturalized,rope,snare,unknown] hist=[naturalized-12,rope-30,snare-81,unknown-33]
+retributive_reading typeset=[naturalized,rope,snare,tangled_rope] hist=[naturalized-31,rope-21,snare-42,tangled_rope-62]
+deterrence_reading typeset=[naturalized,rope,snare,tangled_rope] hist=[naturalized-18,rope-21,snare-52,tangled_rope-65]
+abolition @ institutional/biographical/trapped/local = naturalized (memory said naturalized)
+   Record said: abolition {naturalized,rope,unknown}; retributive/deterrence
+   {rope,tangled_rope,unknown}. Live adds snare everywhere, drops unknown from
+   retributive/deterrence. The memory's specific naturalized witness reproduces.
+
+VERDICT: engine-regime drift (2.5 months of classification changes) — record
+correct-then, stale-now; 164 is the current-engine truth; the OQ-266 re-run is a
+FIXTURE question, not a corpus question.
