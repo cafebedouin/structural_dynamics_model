@@ -1,0 +1,70 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+corpus loaded: 225 constraints
+
+CELL1 variant=frozen pooled_n=21 pooled_n_real=14 readings_contributing=5
+  empirical_precedent_reading: n=5 n_real=3 tokens=[rope,unknown,rope,rope,unknown]
+  scholarship_reading: n=3 n_real=0 tokens=[unknown,unknown,unknown]
+  truth_procedure_reading: n=4 n_real=2 tokens=[rope,rope,unknown,unknown]
+  predictive_synthesis_reading: n=3 n_real=3 tokens=[scaffold,scaffold,scaffold]
+  empathy_simulation_reading: n=2 n_real=2 tokens=[scaffold,scaffold]
+  utopian_fiction_reading: n=4 n_real=4 tokens=[scaffold,scaffold,scaffold,scaffold]
+CELL1 variant=frozen VERDICT H0=0 H1=45 (floor met) distinct_tokens=[rope,scaffold,unknown]
+
+CELL1 variant=inclusive pooled_n=23 pooled_n_real=16 readings_contributing=5
+  empirical_precedent_reading: n=5 n_real=3 tokens=[rope,unknown,rope,rope,unknown]
+  scholarship_reading: n=3 n_real=0 tokens=[unknown,unknown,unknown]
+  truth_procedure_reading: n=4 n_real=2 tokens=[rope,rope,unknown,unknown]
+  predictive_synthesis_reading: n=5 n_real=5 tokens=[scaffold,scaffold,scaffold,scaffold,scaffold]
+  empathy_simulation_reading: n=2 n_real=2 tokens=[scaffold,scaffold]
+  utopian_fiction_reading: n=4 n_real=4 tokens=[scaffold,scaffold,scaffold,scaffold]
+CELL1 variant=inclusive VERDICT H0=0 H1=55 (floor met) distinct_tokens=[rope,scaffold,unknown]
+
+CELL1 variant=restrictive pooled_n=9 pooled_n_real=5 readings_contributing=5
+  empirical_precedent_reading: n=3 n_real=1 tokens=[rope,unknown,unknown]
+  scholarship_reading: n=1 n_real=0 tokens=[unknown]
+  truth_procedure_reading: n=2 n_real=1 tokens=[rope,unknown]
+  predictive_synthesis_reading: n=1 n_real=1 tokens=[scaffold]
+  empathy_simulation_reading: n=1 n_real=1 tokens=[scaffold]
+  utopian_fiction_reading: n=1 n_real=1 tokens=[scaffold]
+CELL1 variant=restrictive VERDICT NULL (below floor: n_real=5 contrib=5)
+
+CELL2 discard_minimum=3 achieving_subsets=2
+  remove [empirical_precedent_reading,scholarship_reading,truth_procedure_reading]
+  remove [predictive_synthesis_reading,empathy_simulation_reading,utopian_fiction_reading]
+
+CELL3 variant=frozen n=2 n_real=2 H0=1 H1=0 tokens=[scaffold,scaffold]
+CELL3 variant=inclusive n=2 n_real=2 H0=1 H1=0 tokens=[scaffold,scaffold]
+CELL3 variant=restrictive n=1 n_real=1 H0=null H1=null tokens=[scaffold]
+CELL4 control pooled stakeholder vector n=7 n_real=7 H0=1 H1=0 tokens=[scaffold,scaffold,scaffold,scaffold,scaffold,scaffold,scaffold]
+
+COMPARATOR (pooled non-excluded-agent-seat vector per real_closure kernel):
+  adverse_effect_guarantee_kernel: n_readings=4 pooled_n=21 n_real=18 contrib=4 H0=0 H1=119 -> obstruct
+  authentic_preference_boundary: n_readings=3 pooled_n=20 n_real=17 contrib=3 H0=0 H1=101 -> obstruct
+  constitutional_text_authority: n_readings=3 pooled_n=19 n_real=18 contrib=3 H0=0 H1=92 -> obstruct
+  cooperative_artifact_legitimacy: n_readings=3 pooled_n=20 n_real=15 contrib=3 H0=0 H1=83 -> obstruct
+  federation_membership: n_readings=2 pooled_n=12 n_real=12 contrib=2 H0=0 H1=41 -> obstruct
+  fetterley_transfer_kernel: n_readings=2 pooled_n=8 n_real=5 contrib=2 H0=1 H1=0 -> glue
+  fiat_efficacy_kernel: n_readings=6 pooled_n=29 n_real=21 contrib=6 H0=0 H1=104 -> obstruct
+  generality_standard: n_readings=3 pooled_n=16 n_real=16 contrib=3 H0=0 H1=69 -> obstruct
+  genuine_relational_understanding: n_readings=4 pooled_n=18 n_real=17 contrib=4 H0=0 H1=100 -> obstruct
+  jewish_sovereignty_palestine: n_readings=2 pooled_n=9 n_real=9 contrib=2 H0=0 H1=28 -> obstruct
+  money_governance_coupling: n_readings=3 pooled_n=17 n_real=17 contrib=3 H0=0 H1=111 -> obstruct
+  personhood_boundary_kernel: n_readings=2 pooled_n=11 n_real=11 contrib=2 H0=0 H1=28 -> obstruct
+  polaris_document_status: n_readings=4 pooled_n=17 n_real=16 contrib=4 H0=0 H1=87 -> obstruct
+  seat_gauge_orientation_kernel: n_readings=3 pooled_n=10 n_real=10 contrib=3 H0=0 H1=36 -> obstruct
+  unsettled_claim_ontology: n_readings=4 pooled_n=18 n_real=14 contrib=4 H0=0 H1=73 -> obstruct
+  visual_evidentiary_authority: n_readings=4 pooled_n=32 n_real=32 contrib=4 H0=0 H1=292 -> obstruct
+
+MC empirical_precedent_reading: manufactured_consensus_candidate_untypeable([historical_movement_participants_instrumentalized_as_evidence,communities_named_in_analogized_movements_bds_vietnam_neoliberalism])
+MC scholarship_reading: manufactured_consensus_candidate_untypeable([policy_efficacy_traditionalists])
+MC truth_procedure_reading: manufactured_consensus_candidate_untypeable([policy_outcome_stakeholders,material_beneficiaries_of_actual_reform])
+MC predictive_synthesis_reading: manufactured_consensus_candidate([empirical_policy_scientists])
+MC empathy_simulation_reading: manufactured_consensus_candidate([skeptical_debate_theorists])
+MC utopian_fiction_reading: manufactured_consensus_candidate([policymakers_and_institutions,debate_critics_of_fiat])
+MC fiat_efficacy_kernel_flat_control: manufactured_consensus_candidate([elected_officials_and_agencies])

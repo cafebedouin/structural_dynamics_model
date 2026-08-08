@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-08 — [landed] OQ-261 resolved: forced-gluing experiment executed (R2-signed prereg) — performance presheaf OBSTRUCTS; discard minimum is exactly one bloc; 253/468 registry record stale (live 164)
+
+**Files:** audits/2026-08-07_oq261_forced_gluing/, prolog/cs_kernel_registry.pl, prolog/stakeholder_seats.pl, ISSUES.md
+**Tier:** landed
+
+OQ-261 closed via the R2-signed pre-registration (`audits/2026-08-07_oq261_forced_gluing/`,
+compute-only). Headline: **H_perf ("the ballot's performance presheaf always admits a
+global section") contradicted wherever decidable** — the fiat family's pooled
+performance-seat vector obstructs under both above-floor partition variants (H¹=45/55;
+restrictive NULL by sparsity); seat types are story-derived (no cross-story seat
+identity), so the topic's two-bloc structure penetrates the performance frame. Positive
+product: the **discard minimum for a topic-presheaf total verdict is exactly one bloc**
+(3 readings; both blocs achieve it). Base rate: 15/16 `real_closure` families obstruct on
+the mechanical agent/excluded proxy (`fetterley_transfer_kernel` glues — probe can read
+glue). No engine promotion (placement rule: "substitute-presheaf verdict channel" not
+named an engine object). **Correction-key items:** (a) the registry's capital-punishment
+divergence record 253/468 did NOT reproduce — live count 164, obstructed 97/156; 253 is
+engine-state-stale (auto-memory annotated); (b) standing obligation on OQ-266: re-run
+`positive_control_probe.pl` after the fixture-rot fix (the control's criterion 2 compares
+against `cs_kernel_divergence/4` while its test is red — passed non-independently, R2
+rider 1). Corpus md5-frozen through C3, witnessed in-dir.
+
 ## 2026-08-07 — [landed] Edge-naming reconciliation: canonical cs_reading_relation target form is BARE cids (operator ruling); three-form resolver lands; 22 kernels leave `untyped`; OQ-260 resolved
 
 **Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, agent/generate_kernel_corpus.py, python/audits/reading_reference_linter.py, prolog/testsets/fiat_efficacy_kernel_contradictions.pl, agent/c-orchestrator.py

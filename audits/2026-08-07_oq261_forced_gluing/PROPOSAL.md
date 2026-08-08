@@ -225,6 +225,29 @@ per variant; three-variant Cell-1 readout; discard-minimum computation; 16-famil
 comparator table; positive-control output with both numeric criteria; all in this dir.
 WRITEUP.md (C4) quotes this proposal verbatim in its frozen form and declares residue.
 
+## R2 sign-off riders (operator, 2026-08-08 — v2 signed AS WRITTEN; riders carried
+## without re-freeze per operator instruction, recorded before any C3 probe ran)
+
+**Rider 1 — the positive control is NOT independent of the red-test predicate.** Both
+numeric criteria trace to `cs_kernel_divergence/4`: the ≥85 floor derives from the
+253/468 registry record that machinery produced, and the join invariant compares
+against it directly. The failing fixture (`divergence_silent_at_observed_agreement_context`)
+names a silent drop at observed-agreement contexts; if the H¹ probe also reads zero
+there, the invariant holds while BOTH undercount — the control then passes on a lossy
+probe. Different code paths, so the equality still carries information, but it is not
+the definition-identical check it appears while that fixture is red. **Pre-committed:**
+C4 declares this in residue, and the control is RE-RUN once the OQ-266-class fixture
+rot is fixed. Clean re-run ⇒ the control retroactively hardens. Failed re-run ⇒ C3's
+probe validity was never established and the cells demote to draw-level observations.
+
+**Rider 2 — proxy-disagreement branch, pre-committed before running.** Fiat runs both
+the hand partition (three variants) and the mechanical non-excluded-agent-seat proxy.
+**If the two MATERIALLY DISAGREE on fiat** (different glue/obstruct/NULL verdict at or
+above floor under any variant), **the 16-family comparator column is reported as a
+proxy measurement in its own right — NOT as a base rate on the same object Cell 1
+decides.** Stated here so the disagreement cannot become an interpretive seat after
+the numbers are visible.
+
 ## Amendment log (v1 → v2, 2026-08-07, operator review)
 
 1. Blinding declared (type info was in hand at partition authoring); two adversarial

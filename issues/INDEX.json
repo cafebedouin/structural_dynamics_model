@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "4dfeb17a282c1e6920d807a7044e48f7e4d19e4f",
+    "store_version": "769edec0729646e31ae5e8af7b902757394a8cba",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-07T18:53:53"
+    "generated_at": "2026-08-08T17:04:01"
   },
-  "issues_sha": "7fcb17d33c24c24d21369579ffe901b890461f071e54d0ca8ff608eb38220335",
+  "issues_sha": "ee56e5264f651c1e089356ba045ce2fa83c44121d0667f2b71bf8524f7512af3",
   "n_entries": 266,
   "active_token_set": [
     "investigating",
@@ -12,13 +12,12 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 143,
+    "resolved": 144,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
     "open": 87,
-    "partial": 7,
-    "investigating": 1
+    "partial": 7
   },
   "active": [
     {
@@ -1261,21 +1260,6 @@
       ]
     },
     {
-      "id": "OQ-261",
-      "status": "investigating",
-      "priority": 3,
-      "summary": "Ballot as seat-substitution: the round forces a global section over debater performance, not the topic kernel — design the forced-gluing experiment",
-      "deps": [
-        "splits_from OQ-259",
-        "blocked_on_human oq261-r2-proposal-signoff"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-217",
-        "OQ-259"
-      ]
-    },
-    {
       "id": "OQ-262",
       "status": "open",
       "priority": 3,
@@ -1323,7 +1307,9 @@
       "summary": "`tests/test_cs_pattern_detection.pl` is silently red (13/37) AND exits 0 on failure: fixture rot from the corpus reset + UID re-key, unwitnessed by any gate",
       "deps": [],
       "cross_refs": [],
-      "mentioned_in": []
+      "mentioned_in": [
+        "OQ-261"
+      ]
     }
   ],
   "archive": [
@@ -3658,6 +3644,18 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-254"
+      ]
+    },
+    {
+      "id": "OQ-261",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "Ballot as seat-substitution: the round forces a global section over debater performance, not the topic kernel — design the forced-gluing experiment",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-259",
+        "OQ-266"
       ]
     },
     {

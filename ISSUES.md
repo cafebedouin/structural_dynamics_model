@@ -12506,55 +12506,36 @@ still refuses. Retroactive tail scanned EMPTY within scope 2026-08-03
 sections — is a design/modeling choice), with an Ω_E tail (once modeled, the predictions
 are witnessable on corpus families).
 
-**Status:** investigating — C1 recon + C2 pre-registered proposal complete and FROZEN
-(`audits/2026-08-07_oq261_forced_gluing/`: RECON.md, PROPOSAL.md, in-flight WRITEUP.md);
-C3 execution blocked on R2 (operator sign-off of the frozen proposal — the freeze is the
-seat; no LLM spend in C3, compute-only probes).
+**Status:** resolved — 2026-08-08, `audits/2026-08-07_oq261_forced_gluing/WRITEUP.md`
+(R2-signed pre-registration executed; compute-only, no LLM spend).
 **Priority:** 3
-**Origin:** 2026-08-03 kritik ingest synthesis; **operator correction (2026-08-03,
-load-bearing):** the sheaf the ballot creates is over *how the round was debated*, not
-*what is true* — it is a verdict on the debaters, not the topic. The planning-phase
-"ballot ↔ forced sheafification" mapping is CORRECTED accordingly before any design work
-inherits it.
+**Origin:** 2026-08-03 kritik ingest synthesis.
 **Files:** `audits/2026-08-07_oq261_forced_gluing/`, `audits/2026-08-03_kritik_ingest/`,
 `prolog/testsets/` (fiat family)
 
-**Deps:** splits_from OQ-259, blocked_on_human oq261-r2-proposal-signoff
+**Deps (dropped on close):** splits_from OQ-259; was `blocked_on_human
+oq261-r2-proposal-signoff` (R2 signed 2026-08-08).
 
-**Recon facts the proposal rides on (2026-08-07, post edge-naming fix):** fiat family
-`real_closure` (H1r=2, Plur=13, 30/30 edges resolved); observer-frame family H¹ over 156
-contexts = 73 glued / 80 obstructed / 3 undetermined, two clean blocs (Jaccard 1/0), all
-values in-spectrum; one forecloses pair is WITHIN an observer-identical bloc (Theorem-7
-instance); all 7 stories (flat control included) read
-`manufactured_consensus_candidate[_untypeable]`; flat control is same-topic but NOT
-same-substrate (RECON §E). Discriminator: PROPOSAL.md 2×2 — Cell 1 (family ×
-performance-seat presheaf) decides H_perf; cells 2–4 are premise checks.
+**Still-operative correction (operator, 2026-08-03):** the sheaf the ballot creates is
+over *how the round was debated*, not *what is true* — a verdict on the debaters, not
+the topic; a consumer reading ballots as topic evidence cannot distinguish "resolved"
+from "out-performed" (Pattern-6 absorption at institution scale).
 
-**The corrected mapping.** The ballot does not glue the topic's kernel readings — it
-RELOCATES the gluing to a performance object that always admits a global section (every
-round produces a winner), while the topic-level obstruction persists untouched. That
-makes debate an institutionalized instance of a shape DR already names: a channel that
-emits topic-shaped verdicts while measuring something else, so a consumer reading
-ballots as topic evidence cannot distinguish "resolved" from "out-performed" (the
-Pattern-6 absorption shape, at institution scale). Converges with the ballot-fitness
-limit already on record (kritik survived persuade-a-judge selection — rhetorical
-potency, not correctness).
-
-**The experiment to design (recon → proposal before any run; unguarded-axis-swap
-discipline applies).** The live corpus now holds a kernel family with authored
-cross-reading structure (fiat family, 6 readings + flat control + 30 authored edges).
-(a) Compute the family-level obstruction across readings (kernel-family/orbit machinery;
-the OQ-217 verdict⟺H¹ apparatus). (b) Model the ballot as an operator forced to emit a
-total verdict regardless of family H¹; pre-register what observation would DISTINGUISH
-"ballot = performance-seat verdict over a second presheaf" from "ballot = topic gluing"
-— that discriminator is the deliverable; without it the experiment is the mapping
-restated. (c) Check what the manufactured-consensus machinery says when a forced verdict
-is emitted over a family whose readings do not glue.
-
-**What resolution changes.** Whether the one predictive Shanahan mapping survives its
-correction as testable content; whether "verdict channels that section a substitute
-presheaf" becomes a named engine object (it likely generalizes well beyond debate:
-elections, peer review, litigation).
+**Resolution (2026-08-08).** Pre-registered H_perf/H_topic discriminator run over the
+fiat family (real_closure, H1r=2): the pooled performance-seat vector OBSTRUCTS under
+both above-floor partition variants (H¹=45/55; restrictive NULL by sparsity) — H_perf
+("performance presheaf always admits a section") contradicted wherever decidable,
+supported nowhere; seat types are story-derived (no cross-story seat identity), so the
+topic's two-bloc structure penetrates the performance frame. Positive product: the
+discard minimum for a topic-presheaf total verdict is EXACTLY one bloc (3 readings, both
+blocs achieve it) — the forced verdict's discard cost is real and computable. Base rate:
+15/16 real_closure families obstruct on the mechanical agent/excluded proxy (fetterley
+glues — probe can read glue). Positive control passed both numeric criteria (97≥85
+obstructed; ΣH¹=164==same-run divergence count; registry's 253 record did NOT reproduce
+— stale). "Substitute-presheaf verdict channel" is NOT promoted to an engine object.
+Residue (declared in WRITEUP): control re-run obligation after fixture-rot fix (logged
+on OQ-266); a corpus authoring per-round performance objects with seat identity would
+be the stronger substrate — next-experiment material, not this OQ.
 
 ## OQ-262 — Severance/intrinsicness as an audit on authored `coexists_with` edges: is claimed coexistence genuine or purchased by silently mutating a reading?
 
@@ -12764,6 +12745,18 @@ defects compound:
 and re-witness 37/37 — or, if some cases are obsolete against the v6 taxonomy, disposition
 them explicitly rather than deleting silently. Until then, do not cite this suite as a
 witness for anything.
+
+**Same rot class, wider census + a standing re-run obligation (2026-08-07/08):** the
+2026-08-07 registry rewrite found the same class in three more suites, byte-identical on
+baseline code — `test_cs_kernel_registry` 24/25 (red:
+`divergence_silent_at_observed_agreement_context`), `test_contradiction_signatures` 12/17,
+`test_cs_axiom_engine` 11/14 (header load chain points at `testsets/` fixtures removed in
+the 2026-06-05 reset; archive-fixture chain fails identically). **Pre-committed (OQ-261 R2
+rider 1): when this fixture rot is fixed, re-run
+`audits/2026-08-07_oq261_forced_gluing/positive_control_probe.pl`** — its criterion 2
+compares against `cs_kernel_divergence/4` while that predicate's test is red, so the
+OQ-261 control passed non-independently; a clean re-run hardens it retroactively, a failed
+one demotes the OQ-261 cells to draw-level observations.
 
 ---
 
