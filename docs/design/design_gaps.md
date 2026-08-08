@@ -1511,3 +1511,31 @@ v8 §9.4 prohibitions, model provenance stays first-class, and a fresh instance 
 "ground ε in real documents" should be pointed here rather than treated as surfacing a
 novel gap. Related: v8 §9.2/§9.4, `docs/seat-theorem-v1.md` §2 (P2 defense) and §6.2 (the
 real-but-local warrant shape this ruling shares).
+
+## GAP-31 — No cross-story seat identity: stakeholder seats are story-local, so no family-level seat presheaf exists to section
+
+**Declared:** 2026-08-08 (OQ-261 close + post-hoc symmetric read,
+`audits/2026-08-07_oq261_forced_gluing/`).
+
+**The absent capability:** a seat that persists ACROSS the stories of a kernel family —
+e.g. a per-round performance object (judge/ballot record) authored once and referenced by
+multiple readings, or any stakeholder identity shared between sibling stories. Every seat
+is authored per-story and typed per-story (`dr_type_for_stakeholder` is position-indexed
+within its own story; the CS identity model keys instances by per-story UID), so a seat
+name recurring across two readings is two seats, not one.
+
+**Why declared rather than a defect:** the absence is what the OQ-261 experiment ran
+into, not a broken wire. Its measurable consequence (witnessed): ANY sub-vector pooled
+across a family's stories inherits each story's typing, so pooled seat-frame H¹ reduces
+to the family's bloc structure — in the fiat family every pooled set (performance /
+topic-community / all-agent) carried H¹ = (#rope)·(#scaffold) exactly, and 15/16
+`real_closure` families "obstruct" on the pooled agent-seat read. A pooled-across-story
+H¹ is therefore not evidence about the seat set; treating it as such is the trap
+(build_discipline → *Pooled-across-story H¹ inherits story-level typing*).
+
+**What would discharge it:** authoring cross-story objects with identity — per-round
+performance records seats can share, or a seat-identity join table — which is the
+substrate OQ-267 names as required before the "ballot = forcing over a second obstructed
+presheaf" thesis is testable. A fresh instance proposing to "compute the family-level
+stakeholder H¹" should be pointed here: the quantity exists arithmetically but has no
+object under it.

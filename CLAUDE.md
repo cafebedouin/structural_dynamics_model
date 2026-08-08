@@ -412,6 +412,22 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   load-bearing (`\+ number` before `< 0.0`; the comparison throws on the atom), and exactly 0.0
   is a real score that still bands worst. Convention table: `docs/logic_extensions.md` §2.3.1;
   provenance: KNOWN_STATE 2026-07-25, ISSUES OQ-62.
+- **`cs_reading_relation` targets resolve ONLY through
+  `cs_kernel_registry:cs_edge_target_member/4` — never raw-match them (2026-08-07).**
+  Canonical target form is BARE cids (operator ruling); authored corpora carry both
+  legacy skews (bare-vs-prefixed in either direction), so a raw
+  `cs_reading_relation(UID, Target, Rel)` join silently reads dead on skewed families —
+  witnessed: the `cs_axiom_*` joins were 0 for their whole life, 22/67 kernels read
+  `untyped`. Two known un-routed sites remain (`cs_pattern_detection.pl:355`,
+  `drl_composition.pl:122` — route them when touched; noted on OQ-262). Generator emits
+  bare (`snap_sibling_id`); `cs_reading_relation_unresolved/4` is the resolver's exact
+  complement. Provenance: KNOWN_STATE 2026-08-07.
+- **A pooled-across-story seat H¹ measures its pooling convention, not the seat set
+  (2026-08-08).** Seats are story-local (no cross-story identity — GAP-31), so pooled
+  family vectors inherit story typing; 15/16 `real_closure` families "obstruct" this way,
+  and every fiat sub-vector read H¹ = (#rope)·(#scaffold) exactly. Before citing one, run
+  the symmetric read (complement + all-seats densities); detail: `build_discipline.md` →
+  *Pooled-across-story H¹ inherits story-level typing*.
 - **`h1_band` is NULLABLE; null = UNDETERMINED, never 0 (OQ-51, 2026-06-25).** A null `h1_band`
   (in `pipeline_output.json`, and the product-site `"h1"`/`"h0"` in `product_site_orbits.json`)
   means the cohomological obstruction is N/A — `<2` real (non-`unknown`) seats. A new reader that

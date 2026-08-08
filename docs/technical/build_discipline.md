@@ -1630,6 +1630,31 @@ THEORY's falsifiability.
 
 ---
 
+## Pooled-across-story H¹ inherits story-level typing (the pooled read that measures its own construction)
+
+**The trap (witnessed 2026-08-08, OQ-261 C3 + post-hoc,
+`audits/2026-08-07_oq261_forced_gluing/`):** seat types are story-derived and seats have
+no cross-story identity (GAP-31), so a type vector POOLED across the stories of a kernel
+family inherits each story's typing wholesale. Any pooled sub-vector then reduces to the
+family's story-level type structure: in the fiat family, performance seats,
+topic-community seats, and all agent seats each carried H¹ = (#rope)·(#scaffold) exactly
+(densities 0.4945/0.60/0.4952) — the partition contributed nothing; the read measured
+the family's two blocs through every window. At corpus scale the same shape read 15/16
+`real_closure` families "obstructed" on the pooled agent-seat vector. The number is
+arithmetically real and diagnostically empty about the seat SET chosen — a
+success-shaped output whose information content is the pooling convention (Pattern-6
+adjacent; the OQ-264 standard-#2 shape lifted to the H¹ layer).
+
+**Rule:** before citing a pooled-across-story H¹ (or any pooled-across-story aggregate
+over story-derived values) as evidence about the pooled SET, run the symmetric read —
+the complement set and the everything set — and compare densities; comparable density =
+the pooled read is a restatement of story-level structure, and the claim must demote to
+that altitude. **Candidate standard (operator-proposed 2026-08-08, adoption pending —
+ISSUES OQ-264 candidate #7):** no pooled-across-story H¹ claim without an
+identity-controlled comparator. Single-story reads (the control's own 7-seat vector) and
+identity-bearing substrates (GAP-31's discharge condition) are exempt — the trap is
+specifically pooling across stories that cannot share a seat.
+
 ## Cross-sibling comparison disambiguates authored-field calls (the corpus as its own control)
 
 When a per-item call about an authored field is ambiguous in one file — is this beneficiary value
