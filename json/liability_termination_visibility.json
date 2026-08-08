@@ -1,0 +1,288 @@
+{
+  "header": {
+    "constraint_id": "liability_termination_visibility",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "14acdf87-b8ab-4012-8353-751ec7f0f6bd"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Untraceable Loss Termination Through Chained Guarantees, Securitization, and Bankruptcy Discharge",
+    "topic_domain": "constitutional_political_economy/corporate_law/monetary_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parties_able_to_externalize_tail_risk_via_recursive_composition"
+    ],
+    "victims": [
+      "diffuse_uninformed_bearers_of_socialized_loss_taxpayers_junior_creditors_uninsured_third_parties"
+    ],
+    "vindicated_propositions": [
+      "limited_liability_promotes_investment",
+      "securitization_efficiently_disperses_risk"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "parties_able_to_externalize_tail_risk_via_recursive_composition",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large financial institutions, sponsors, and originators structure exposures through layered special-purpose vehicles, reinsurance treaties, credit-default swaps, and limited-liability wrappers such that any single failure's ultimate loss-bearer is obscured across multiple legal entities and jurisdictions. They collect origination fees, spread income, and upside during good years while the downside, when realized, lands several steps removed from the entity that took the risk. They retain the ability to dissolve, spin off, or discharge the liable entity through bankruptcy while continuing operations elsewhere."
+    },
+    {
+      "name": "diffuse_uninformed_bearers_of_socialized_loss_taxpayers_junior_creditors_uninsured_third_parties",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "When a bank collapses, an insurer becomes insolvent, or a chain of reinsurance counterparties fails to pay out, the loss does not vanish; it lands on taxpayers via bailout or deposit-insurance backstops, on junior creditors and policyholders left holding worthless claims after senior claims are satisfied, or on third parties (tort victims, uninsured counterparties) who discover the responsible entity has been dissolved or discharged. They had no visibility into the chain at the time risk was assumed and no standing to trace it after failure; their only recourse is post-hoc, underfunded, and often politically contingent."
+    },
+    {
+      "name": "bankruptcy_courts_and_insolvency_administrators",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer the formal discharge and priority-of-claims process. Their procedures determine which claims survive and which are extinguished, but their jurisdiction typically stops at the entity before them; they are not chartered or resourced to trace loss through parent guarantees, reinsurance treaties, or affiliated SPVs domiciled elsewhere, so the visibility gap is partly a product of jurisdictional design rather than administrative failure alone."
+    },
+    {
+      "name": "prudential_regulators_and_deposit_insurers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set capital, reinsurance-disclosure, and resolution requirements meant to make institutions' loss-absorbing capacity legible, and stand as the explicit or implicit backstop (deposit insurance funds, resolution authorities) when institutions fail. Their statutory mandate is to prevent losses from becoming untraceable, but they are structurally dependent on the disclosures of the entities they regulate and are frequently understaffed relative to the complexity of the chains they must supervise, and are politically pressured to socialize losses quickly rather than trace them fully during a crisis."
+    },
+    {
+      "name": "reinsurance_and_swap_counterparties",
+      "role": "beneficiary",
+      "secondary_role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sit further along the chain, collecting premium for assuming risk that has already been passed once or twice. They can themselves fail, retrocede, or become insolvent in a way that is not visible to the original policyholder or creditor at the base of the chain, and their own jurisdiction of domicile may shield them from the claims process the base creditor is relying on."
+    },
+    {
+      "name": "the_skolnick_auditor_analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Represents the external test proposed by the constraint: given any financial failure, can a competent auditor with subpoena power reconstruct, entity by entity and guarantee by guarantee, the specific party who ultimately bears the loss? This seat has no material stake; it exists to make visible whether the chain terminates in an identifiable claimant or diffuses into an unaccountable public backstop before any resolution or bailout occurs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Limited liability, securitization, and reinsurance genuinely solve real coordination problems: they allow risk to be pooled and diversified across many parties who could not individually bear a catastrophic loss, and they allow investors to commit capital to risky ventures without unlimited personal exposure, which mobilizes capital that would otherwise sit idle.",
+    "transfer_function": "The arrangement moves realized tail losses from the parties who assumed and were compensated for the risk (through fees, premiums, and spread income collected during solvent years) to diffuse, uninformed bearers who never priced or consented to the risk — taxpayers through bailouts, junior creditors and policyholders through discharge, and uninsured third parties through unrecoverable claims — while the origination gains remain with the risk-assuming parties.",
+    "absent_voices": "The eventual loss-bearers — future taxpayers, junior creditors, and uninsured third parties — are not present when the chain of guarantees, reinsurance treaties, and liability shields is constructed; they only enter the picture after a failure has already occurred and the chain has already been designed to obscure where the loss will land. Legislatures voting on bailout mechanisms are themselves often informationally dependent on the failing institutions for an account of who bears what.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If liability-termination opacity vanished — i.e., if every chain of guarantees, securitizations, and discharges were fully traceable to a final claimant in real time — risk would have to be priced and held by whoever the traceable chain revealed as the ultimate bearer, which would sharply raise the cost of tail-risk-bearing activities for the parties currently able to externalize it, and would make bailout politics far harder to conduct quietly. Insurance, securitization, and limited liability would not disappear, but their current capacity to terminate visibly at a point other than the true loss-bearer would.",
+    "founding_problem": "Limited liability and insurance/reinsurance were built to solve a genuine problem: without them, capital formation and risk pooling would be severely constrained because individual investors and insurers could not bear unlimited personal exposure to catastrophic loss. The constitutional traceability requirement (the Skolnick test) was proposed to solve a second, later problem — that these same mechanisms, chained together across entities and jurisdictions, had become vehicles for relocating losses to parties with no visibility or standing rather than merely pooling risk.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Central banks, deposit insurers, and post-crisis inquiry commissions (e.g., legislative and judicial post-mortems following major bank and insurer failures) have attested, from outside the beneficiary set, that loss chains were frequently untraceable in real time and that public backstops absorbed losses whose origin could not be reconstructed until years after the fact. The beneficiary institutions themselves continue to attest that the original coordination function (capital mobilization, risk pooling) remains live and justifies the current opacity; no corroborating source outside the risk-assuming institutions has affirmed that the opacity itself, as opposed to the underlying pooling function, remains necessary."
+  },
+  "gain_flow": "parties_able_to_externalize_tail_risk_via_recursive_composition",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.81,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint names the structural fact that limited liability, securitization, insurance/reinsurance chains, and bankruptcy discharge do not eliminate loss — they relocate it, often through enough intermediary layers that no external party can reconstruct, at the time of failure, who ultimately bears the cost. The claim under contest is that a constitutional system worthy of the name must make this final resting place traceable to a specific claimant (the 'Skolnick test'), rather than letting the loss diffuse into an unaccountable public backstop. This story evaluates the standing arrangement — chained guarantees without mandated end-to-end traceability — as it currently operates, not the traceability regime the constraint's advocates would install. It sits inside the broader kernel question of how a proposed future acquires present purchasing power (future_claims_present_resources); loss-termination opacity is a structural consequence of whichever issuance reading a system adopts, but is analytically distinct from any single reading — it concerns what happens after a claim on the future fails to be realized, not how the claim was issued.",
+    "key_agents": [
+      "parties_able_to_externalize_tail_risk_via_recursive_composition: primary beneficiary (institutional/arbitrage) — collects fees and spread while retaining the ability to relocate downside losses through chained entities",
+      "diffuse_uninformed_bearers_of_socialized_loss_taxpayers_junior_creditors_uninsured_third_parties: primary victim (powerless/trapped) — bears losses with no visibility into the chain and no standing to trace it",
+      "bankruptcy_courts_and_insolvency_administrators: agenda-setter with jurisdictionally bounded visibility",
+      "prudential_regulators_and_deposit_insurers: agenda-setter and nominal backstop administrator, dependent on regulated-entity disclosure",
+      "reinsurance_and_swap_counterparties: secondary beneficiary further along the opacity chain",
+      "the_skolnick_auditor_analytical_observer: analytical seat representing the proposed traceability test itself"
+    ],
+    "logic_rationale": "Extractiveness is authored high (0.81) because the structure's core function — allowing risk-assuming parties to collect origination and spread income while the eventual loss lands on parties who never priced or consented to it — is a genuine, measurable transfer, not incidental friction. Suppression is authored high (0.72) but somewhat lower than extractiveness because the opacity is maintained less by direct coercion than by structural complexity, jurisdictional fragmentation, and the genuine difficulty of auditing multi-entity chains — the suppression is partly a byproduct of legitimate legal complexity (corporate personhood, private contract, cross-border reinsurance) being available as camouflage rather than a single enforced rule. Theater ratio rises over the measured interval (0.25 to 0.58) reflecting an accumulating layer of disclosure regimes, stress tests, and resolution-planning requirements (living wills, Dodd-Frank Title II, Solvency II reporting) that increasingly perform traceability without actually closing the chain-tracing gap the Skolnick test targets — regulatory theater substituting for the underlying capability. Accessibility collapse (0.62) and resistance (0.55) reflect that alternatives to opaque chaining (mandated end-to-end traceability registries, position-level transparency requirements) are technically available and have been proposed repeatedly but have not been adopted at scale, and resistance to opacity comes mainly from post-crisis reformers and academic critics rather than from the diffuse victim class itself, who typically cannot identify their exposure until after a failure occurs.",
+    "directionality_logic": "Parties able to externalize tail risk via recursive composition sit at the low end of directionality: they are compensated during the solvent phase and retain arbitrage-grade exit (restructuring, spin-off, relocation of the liable entity) when failure approaches. The diffuse victim class sits at the high end: trapped exit options, no advance knowledge of the chain, and no standing to intervene before the loss crystallizes — this is a case where directionality derivation from beneficiary/victim declarations plus exit options should place this group very near full-target without needing an override. Reinsurance and swap counterparties occupy an intermediate beneficiary position — mobile rather than arbitrage-grade exit, since they can exit specific treaties but remain subject to counterparty and regulatory risk in ways the primary originators can better evade.",
+    "mandatrophy_analysis": "The founding coordination function — pooling catastrophic risk so that capital formation is not paralyzed by unlimited personal liability — remains genuinely live; this constraint does not classify limited liability or insurance per se as extractive. What has drifted is the traceability of the chain built on top of that legitimate function: the original problem (mobilizing capital under bounded risk) persists, but the mechanism has been recursively composed (securitization of securitizations, reinsurance of reinsurance, guarantee chains across jurisdictions) far beyond what the pooling function requires, in ways that now serve primarily to relocate losses to parties with no visibility rather than to diversify risk efficiently. Classifying this as snare rather than tangled_rope requires care: a strict tangled_rope reading is defensible (there is a real coordination function — capital mobilization — running through the same structure that produces the extraction), but this story's authored judgment is that the coordination benefit has become sufficiently decoupled from the extraction mechanism, and the victim class sufficiently unable to consent, price, or exit, that the coordination story now functions predominantly as cover rather than as a live justification for the chain's opacity specifically (as opposed to for limited liability and insurance generally, which are not what this constraint targets).",
+    "perspectival_gap": "From the agenda-setter seats (bankruptcy courts, prudential regulators) the arrangement looks like an imperfectly resourced but good-faith effort at traceability within jurisdictional limits; from the victim seat it looks like a structure specifically optimized to terminate visibly at a point other than the true loss-bearer. The engine should compute these as structurally different experiences of the same chain given the differing power, exit, and directionality inputs — the regulators' constrained exit and institutional power differ meaningfully from the victims' trapped exit and powerless standing, even though both nominally sit 'outside' the beneficiary group.",
+    "kernel_context": "This constraint is downstream of, but analytically distinct from, the future_claims_present_resources kernel. Each of the four issuance readings (deliberative judgment, endogenous credit multiplication, physical backing, market-discovered confidence) answers how a claim on the future legitimately arises; this constraint concerns what happens when such a claim fails to be honored — where the resulting loss terminates. A system adopting the endogenous-credit-multiplication reading would generate more opportunities for this constraint's opacity mechanism (since private lenders' interested judgment already the reading treats as legitimate is also the judgment that structures the chained liability), while a deliberative-judgment reading would make the Monetary Organ's visibility a partial analogy for what the Skolnick test demands of loss-termination — but this story does not adopt any one reading; it evaluates the standing arrangement's loss-traceability as such, under whichever issuance regime currently obtains."
+  },
+  "omegas": [
+    {
+      "id": "coordination_extraction_separability_in_recursive_chains",
+      "question": "Is the loss-obscuring effect of chained securitization, reinsurance, and limited-liability wrappers separable from the genuine risk-pooling function these mechanisms also perform, or is opacity a structurally necessary byproduct of pooling risk across many parties at scale?",
+      "resolution_mechanism": "Compare jurisdictions or historical periods with mandated end-to-end position-level traceability registries (e.g., certain post-2008 derivatives reporting regimes) against those without, controlling for pooling volume, to see whether traceability materially degrades capital mobilization or merely removes the opacity.",
+      "impact": "If separable, this constraint is closer to a clean snare riding on legitimate pooling infrastructure; if inseparable, the classification shifts toward tangled_rope, since the coordination and extraction functions would be running through the same structural mechanism rather than being merely co-located.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether loss-obscuring opacity is a necessary feature of large-scale risk pooling or a severable, purely extractive addition."
+    },
+    {
+      "id": "regulatory_capacity_vs_regulatory_capture",
+      "question": "Does the persistent untraceability of loss chains reflect a genuine technical/jurisdictional limit on regulators' ability to trace multi-entity, cross-border chains, or does it reflect regulatory capture in which regulators could trace the chains but choose not to press disclosure requirements that would impose costs on politically powerful institutions?",
+      "resolution_mechanism": "Examine instances where regulators were given expanded subpoena or disclosure authority (e.g., post-crisis resolution-planning mandates) and measure whether traceability improved commensurately with the expanded authority, or whether gaps persisted despite adequate legal tools.",
+      "impact": "If a genuine capacity limit, the theater_ratio trend reflects honest but insufficient effort; if capture, the rising theater_ratio indicates deliberate performance substituting for available but unexercised capability, which would strengthen the snare classification over a tangled_rope reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether opacity persistence is a capacity problem or a captured-incentive problem for regulators."
+    },
+    {
+      "id": "victim_coalition_feasibility",
+      "question": "Can the diffuse, uninformed victim class (taxpayers, junior creditors, uninsured third parties) organize into an effective coalition to demand end-to-end traceability requirements, given that each individual instance of loss-bearing is small relative to the beneficiary concentration but the aggregate is large?",
+      "resolution_mechanism": "Track post-crisis legislative reform efforts (e.g., living-will requirements, resolution authorities) to see whether diffuse public pressure following a visible failure event produced durable traceability mandates or whether reforms were captured/watered down before implementation.",
+      "impact": "If coalition formation is feasible following salient failures, the constraint may be better modeled as a scaffold-adjacent temporary imbalance correctable through periodic reform waves; if coalition formation systematically fails, the snare classification with entrenched suppression is better supported.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the powerless victim class can achieve coalition power sufficient to force traceability reform."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "future_claims_present_resources_issuance_as_deliberative_judgment",
+      "future_claims_present_resources_issuance_as_endogenous_credit_multiplication",
+      "bank_resolution_authority_backstop_design"
+    ],
+    "dual_formulation_note": "This constraint is downstream of the future_claims_present_resources kernel but is not itself a reading of that kernel — it concerns loss-termination after a claim fails, not issuance legitimacy. It is linked because the endogenous-credit-multiplication reading structurally generates more chained private liability (and hence more opportunities for opacity) than the deliberative-judgment reading, which centralizes and makes visible the quantity decision. A full decomposition would also separate 'limited liability as capital-mobilization mechanism' (likely a rope or tangled_rope in its own right, largely uncontested) from 'chained cross-entity opacity in loss termination' (this story, evaluated as snare) — these are ε-distinct claims sharing a legal-institutional substrate but should not be merged into one constraint."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-08",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "c2_monetary_architecture_2026_20260808_170220"
+  }
+}
