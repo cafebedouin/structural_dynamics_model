@@ -1,7 +1,8 @@
 # PREREGISTRATION — OQ-262 severance/intrinsicness audit
 
-**Status: DRAFT — AWAITING R2 SIGN-OFF. Frozen at the operator's signature (§K);
-after sign-off this file is never amended, only quoted.**
+**Status: SIGNED (R2, 2026-08-09) — FROZEN. Never amended after this point, only
+quoted.** Operator edits 1–3 were applied pre-signature (marked inline); the
+signature covers the document as it stands.
 
 Authored: 2026-08-09, after Phase A recon (see §G provenance declaration).
 Plan of record: `~/.claude/plans/review-oq-262-from-issues-md-ancient-stonebraker.md`
@@ -95,13 +96,24 @@ a pre-specified k=3 unanimity criterion (OQ-264 standard-#3 shape) — the sole,
 pre-registered exception to the no-rate rule (§I; amendment A4).
 
 **Outcome semantics (written before the run):**
-- 3/3 nonzero → control passes → fiat judging proceeds.
-- Any `genuine(zero_mutation)` → check miscalibrated; fiat verdicts do not stand;
-  HALT recorded; writeup as HALT (valid closure input — grammar returns for
-  redefinition under a fresh prereg).
-- Any `undetermined` → control not discharged; HALT-pending; cause classified
-  (thin-base vs grammar under-specification) per the kill-condition
-  cause-classification rule. Fail-closed either way: fiat verdicts are not produced.
+- All expected-nonzero rows nonzero → control passes → fiat judging proceeds.
+- Any `genuine(zero_mutation)` on an expected-nonzero row → check miscalibrated;
+  fiat verdicts do not stand; HALT recorded; writeup as HALT (valid closure input —
+  grammar returns for redefinition under a fresh prereg).
+- Any `undetermined` on an expected-nonzero row → cause classified (thin-base vs
+  grammar under-specification) per the kill-condition cause-classification rule, then:
+  - **grammar under-specification, anywhere → HALT** (fail-closed; fiat verdicts
+    not produced).
+  - **thin base, on a TRIPLET row, under Arm B (operator edit 2, pre-registered):
+    does NOT HALT.** The triplet's zero-axiom base was measured in recon; a
+    thin-base `undetermined` there is predicted by the substrate, not informative
+    about the grammar, and the same section already declares the triplet control
+    non-transferable. The gate is then carried by the axiom-bearing family's
+    expected-nonzero row; the triplet rows are reported as `undetermined`; the
+    writeup states the gate ran at reduced k and why. This loosening counts only
+    because it is written now, before any verdict.
+  - thin base on the axiom-bearing family's expected-nonzero row → HALT-pending
+    (that row has no thinner-substrate excuse; fail-closed).
 
 **Blind mechanism:** a clean-context read-only subagent receives ONLY the three
 kernel_test `.pl` files + the instrument text (§J) — no divergence numbers, no fiat
@@ -124,7 +136,13 @@ the fiat verdicts.
 - **Arm A** — triplet only (the plan's pinned control).
 - **Arm B (recommended)** — triplet PLUS the axiom-bearing kernel_test family
   `state_killing_authority` (found in recon §4), judged by a second blind subagent
-  under the same instrument (its three files only):
+  under the same instrument. **File set (operator edit 1): the family's three
+  reading files PLUS `state_killing_authority_contradictions.pl`** — the declared
+  `inalienable_life ↔ deterrence_empirical_efficacy` contradiction is precisely
+  what makes the fourth gate row's evidence base fiat-matched (§C names
+  contradiction-rationale prose as a RULED witness source, and the main instance
+  has the fiat contradictions file); without it the row is thinner than fiat, not
+  matched:
   - categorical_abolition | deterrence_instrument (mutual coexists + declared
     contradiction): expected **NONZERO**, joining the gate → k=4 unanimity.
   - deterrence_instrument | retributive_desert (mutual coexists, no declared
@@ -157,6 +175,14 @@ Under arm B, the §E expected-genuine CP row partially lifts this: if it passes,
 writeup language is pre-committed as "`genuine` calibrated on the CP substrate,
 uncalibrated on fiat"; if it fails or is undetermined, `genuine` stays uncalibrated
 everywhere.
+
+**The other side (operator edit 3, pre-registered):** the expected-genuine row
+pairs a desert claim against an efficacy claim; a judge may find SUBORDINATE
+required where they conflict, so this row failing is not remote. If the
+expected-genuine row returns nonzero or undetermined AND the fiat table is
+uniformly nonzero (the likely shape), the writeup states plainly that an
+oversensitive grammar and a genuinely mutation-laden corpus are not distinguished
+by this audit, and the fiat annotations stand as annotations only.
 
 ## G. Provenance declaration (amendment A2 — declare, don't launder)
 
@@ -229,8 +255,14 @@ besides the file contents)
 The operator signs BEFORE any verdict is produced. The freeze is the seat — the
 criterion is fixed before the instance defining it sees which verdicts it yields.
 
-- [ ] Arm A (CP triplet only) or [ ] **Arm B (triplet + state_killing_authority,
-  recommended)** — select one.
-- [ ] Signed as written (any edit before signing is fine; after signing, none):
+- [ ] Arm A (CP triplet only) or [x] **Arm B (triplet + state_killing_authority,
+  recommended)** — selected: Arm B.
+- [x] Signed as written plus operator edits 1–3 (applied pre-signature, above).
 
-**R2 sign-off:** ____________________ (operator, date)
+**R2 sign-off:** operator (cafebedouin), 2026-08-09 — "Arm B, as written plus
+edits 1–3. Proceed to Phase C." Recorded verbatim from the operator's R2 message
+by the executing instance; additional operator rulings taken at R2 (console
+witness accepted for `cs_corpus_analysis` with conditions; A5 operator-side pass
+with the §J-omits-miscoded_asymmetry note; live-leg unresolved/orphan census →
+Residue) are recorded in PROPOSAL.md and WRITEUP.md, not here — this document
+froze at the signature.

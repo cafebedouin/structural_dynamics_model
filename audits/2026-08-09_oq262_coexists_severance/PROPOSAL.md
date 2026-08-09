@@ -47,10 +47,11 @@ Phase-A census before each edit; the diff must match it.
    `json_report.pl:1964–1990` routed-consumer pattern). Witness: same-session
    clean-vs-edited pipeline diff (exit 0 + output mtime advanced + per-constraint
    compare + corpus md5 identical across both halves).
-2. `cs_corpus_analysis.pl:131–149`: same routing. Output is console-only — witness
-   via before/after console capture over the same frozen corpus. **If no
-   witnessable surface exists, DROP the edit** (operator condition) and record as
-   declared residue.
+2. `cs_corpus_analysis.pl:131–149`: same routing. Output is console-only —
+   **operator ruled at R2 (2026-08-09): the console witness is ACCEPTED** ("a
+   before/after console capture over a fingerprint-identical corpus is an
+   observable output"). Conditions: prediction written first, both captures
+   diffed and pasted, corpus md5 identical across the pair. Route it.
 3. `drl_composition.pl:122` (`detect_necessity_inheritance/2`): NO edit. Mint a new
    OQ (authored Priority + Deps): raw-match + `Source` bound to a constraint id
    where `cs_reading_relation/3` is UID-keyed — the predicate can essentially never
