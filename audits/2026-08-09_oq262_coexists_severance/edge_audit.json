@@ -1,0 +1,142 @@
+{
+  "audit": "oq262_coexists_severance",
+  "judged_at": "2026-08-09",
+  "kernel": "fiat_efficacy_kernel",
+  "corpus_leg": "prolog/testsets/",
+  "corpus_fingerprint": "13529c36efd03f499a80a8a605bdbe43 (235 .pl files, see corpus_fingerprints.txt)",
+  "grammar": "PREREGISTRATION.md (frozen at R2 sign-off 2026-08-09, Arm B)",
+  "interpretive_convention": "axiom atom + in-file prose gloss; atom-only flips noted per row; convention-dependent rows are INFERRED",
+  "altitude": "READING-OF-TEXT (prereg SH branch fired: RULED minority 3/13) — annotations are interpretive, not audit results",
+  "genuine_class_calibration": "UNCALIBRATED (Branch 2; the Arm-B expected-genuine CP control failed against its pre-registration)",
+  "control_gate": "PASSED 4/4 expected-nonzero (READOUT_cp_blind.md)",
+  "rows": [
+    {
+      "pair": ["scholarship_reading", "empathy_simulation_reading"],
+      "relations": {"scholarship_reading->": "coexists_with", "empathy_simulation_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "severed",
+      "severed_what": "empathy_simulation prose exclusivity 'entirely' (RESTRICT to 'a locus among others')",
+      "mutation_text": "EMP glosses its foundational axiom as locating the payoff 'entirely' in participant psychology, excluding SCH's knowledge-production locus; one RESTRICT of 'entirely' suffices. Atom-only reading yields genuine.",
+      "witness_quotes": ["EMP: 'locates the payoff entirely in the psychological transformation of the participant'", "SCH: 'Efficacy is located in knowledge production and circulation'"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["scholarship_reading", "empirical_precedent_reading"],
+      "relations": {"scholarship_reading->": "coexists_with", "empirical_precedent_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "genuine",
+      "mutation_text": "EPR authors a requirement (documented causal chain), not a rival location; SCH's efficacy claim is itself empirically grounded, so both axiom sets are jointly assertable as written. Uncontrolled-class outcome (genuine is uncalibrated this audit).",
+      "witness_quotes": ["EPR axiom efficacy_requires_documented_causal_chain", "SCH: 'directly reshapes the conditions of the social problems under discussion' (grounding: empirically_contingent)"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["scholarship_reading", "truth_procedure_reading"],
+      "relations": {"scholarship_reading->": "coexists_with", "truth_procedure_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "intrinsic",
+      "intrinsic_what": "success-criterion partition (fidelity governs subject-constitution; outcomes govern scholarship consequence) — neither file authors it",
+      "mutation_text": "TRU's success criterion excludes outcomes; SCH's efficacy is discourse-outcome-shaped; holding both requires an ADDed partition. Alternative single-mutation route: SUBORDINATE one criterion (severed). Atom-only reading yields genuine.",
+      "witness_quotes": ["TRU: 'success is measured in fidelity to the axiom, not in outcomes'", "SCH: 'directly reshapes the conditions of the social problems under discussion'"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["empathy_simulation_reading", "empirical_precedent_reading"],
+      "relations": {"empathy_simulation_reading->": "coexists_with", "empirical_precedent_reading->": "coexists_with"},
+      "mechanical_flags": ["severance_candidate(M1)"],
+      "verdict": "severed",
+      "severed_what": "one efficacy criterion SUBORDINATEd (either side) — the contradictions file authors the requirement in terms",
+      "mutation_text": "The kernel's contradictions file declares the foundational axioms contradictory and states 'one must subordinate the other'; the coexists edge holds only under that authored subordination (licensed plurality with a declared price).",
+      "witness_quotes": ["contradictions file: 'A framework holding that only external material outcomes count as evidence of efficacy cannot simultaneously hold that purely internal attitude change is sufficient efficacy on its own terms - one must subordinate the other'", "cs_axiom_contradiction(efficacy_requires_documented_causal_chain, efficacy_located_in_participant_psychology_not_enactment)"],
+      "footing": "RULED"
+    },
+    {
+      "pair": ["empathy_simulation_reading", "utopian_fiction_reading"],
+      "relations": {"empathy_simulation_reading->": "coexists_with", "utopian_fiction_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "genuine",
+      "mutation_text": "UTO's bracket is prose-scoped to political efficacy; EMP likewise disclaims enactment-efficacy; both locate value inside participants and neither exclusion targets the other's locus. Load-bearing scope calls are unauthored. Uncontrolled-class outcome (genuine is uncalibrated this audit).",
+      "witness_quotes": ["UTO: 'explicitly without any claim that the activity is, or needs to be, politically efficacious in the world formal institutions inhabit'", "EMP: 'independent of whether the policy itself has any chance of being enacted'"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["empirical_precedent_reading", "predictive_synthesis_reading"],
+      "relations": {"empirical_precedent_reading->": "coexists_with", "predictive_synthesis_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "intrinsic",
+      "intrinsic_what": "efficacy-kind partition (world-causal vs methodological) — neither file authors it",
+      "mutation_text": "EPR's evidential requirement quantifies over efficacy claims without restriction; PRE's process-rigor efficacy cannot carry a documented outcome chain by design. ADD a kind-partition, or alternatively RESTRICT EPR's requirement to material-outcome claims (severed).",
+      "witness_quotes": ["EPR axiom efficacy_requires_documented_causal_chain", "PRE: 'locates efficacy in the RIGOR of the predictive-synthesis process' (atom ..._not_outcome_realism)"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["truth_procedure_reading", "predictive_synthesis_reading"],
+      "relations": {"truth_procedure_reading->": "coexists_with", "predictive_synthesis_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "intrinsic",
+      "intrinsic_what": "plural-location bridge (efficacy in both the ontological break and process rigor) — neither file authors it",
+      "mutation_text": "Two positive location claims whose exclusion clauses each target a third locus; holding both requires an unauthored plural-location meta-principle. Atom-only reading yields genuine.",
+      "witness_quotes": ["TRU: 'efficacy is not located in empirical state responsiveness but in the truth-procedure it constitutes'", "PRE: 'locates efficacy in the RIGOR of the predictive-synthesis process'"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["scholarship_reading", "utopian_fiction_reading"],
+      "relations": {"scholarship_reading->": "influences", "utopian_fiction_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "severed",
+      "severed_what": "one efficacy stance DROPped: UTO's bracket axiom or SCH's discourse-shift-as-political-action axiom",
+      "mutation_text": "SCH's secondary axiom asserts political efficacy; UTO's second foundational holds the question bracketed. Asserting one un-brackets/contradicts the other; a single DROP of either resolves. Verdict stable under both conventions.",
+      "witness_quotes": ["atoms: public_discourse_shift_constitutes_political_action vs efficacy_question_bracketed_not_answered", "UTO: 'explicitly without any claim that the activity is, or needs to be, politically efficacious'"],
+      "footing": "RULED"
+    },
+    {
+      "pair": ["empathy_simulation_reading", "truth_procedure_reading"],
+      "relations": {"empathy_simulation_reading->": "coexists_with", "truth_procedure_reading->": "influences"},
+      "mechanical_flags": [],
+      "verdict": "severed",
+      "severed_what": "empathy_simulation prose exclusivity 'entirely' (RESTRICT)",
+      "mutation_text": "With TRU's 'not in outcomes' clause read as scoped to policy uptake (its own context), the remaining obstacle is EMP's 'entirely' excluding TRU's ontological-break locus; one RESTRICT suffices. Scope call unauthored; atom-only reading yields genuine.",
+      "witness_quotes": ["EMP: 'locates the payoff entirely in the psychological transformation'", "TRU: 'a subjective, ontological event... independent of policy uptake'"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["empathy_simulation_reading", "predictive_synthesis_reading"],
+      "relations": {"empathy_simulation_reading->": "influences", "predictive_synthesis_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "severed",
+      "severed_what": "empathy_simulation prose exclusivity 'entirely' (RESTRICT)",
+      "mutation_text": "PRE's exclusion targets outcome realism, EMP's targets enactment — neither hits the other; only EMP's 'entirely' gloss excludes PRE's rigor-locus. One RESTRICT; atom-only reading yields genuine.",
+      "witness_quotes": ["EMP: 'locates the payoff entirely in the psychological transformation'", "PRE: 'locates efficacy in the RIGOR of the predictive-synthesis process'"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["empirical_precedent_reading", "truth_procedure_reading"],
+      "relations": {"empirical_precedent_reading->": "influences", "truth_procedure_reading->": "coexists_with"},
+      "mechanical_flags": [],
+      "verdict": "intrinsic",
+      "intrinsic_what": "efficacy-kind partition — neither file authors it",
+      "mutation_text": "EPR's unrestricted evidential requirement sweeps TRU's break-efficacy, which by construction supplies no documented causal chain; ADD a kind-partition, or alternatively RESTRICT EPR's requirement (severed).",
+      "witness_quotes": ["EPR axiom efficacy_requires_documented_causal_chain", "TRU: 'success is measured in fidelity to the axiom, not in outcomes'"],
+      "footing": "INFERRED"
+    },
+    {
+      "pair": ["empirical_precedent_reading", "utopian_fiction_reading"],
+      "relations": {"empirical_precedent_reading->": "forecloses", "utopian_fiction_reading->": "coexists_with"},
+      "mechanical_flags": ["miscoded_asymmetry(M2)"],
+      "verdict": "severed",
+      "severed_what": "one efficacy stance DROPped: UTO's bracket axiom or EPR's precedent-warrant axiom",
+      "mutation_text": "EPR's secondary axiom asserts a positive political-efficacy analogy; UTO's axiom brackets exactly that question; one DROP of either resolves. The judged severance is consistent with the authored forecloses direction — the coexists claim survives only under mutation. Verdict stable under both conventions.",
+      "witness_quotes": ["atoms: historical_analogy_licenses_present_action_warrant vs efficacy_question_bracketed_not_answered", "EPR: 'in-round fiat advocacy is not merely academic but analogous to efficacious real-world action'", "UTO: 'wins its ground by conceding the most'"],
+      "footing": "RULED"
+    },
+    {
+      "pair": ["predictive_synthesis_reading", "utopian_fiction_reading"],
+      "relations": {"predictive_synthesis_reading->": "forecloses", "utopian_fiction_reading->": "coexists_with"},
+      "mechanical_flags": ["miscoded_asymmetry(M2)"],
+      "verdict": "intrinsic",
+      "intrinsic_what": "genre partition (methodological guard governs predictive argument; utopian license governs criticism practice) — neither file authors it",
+      "mutation_text": "PRE's second foundational mandates methodological realism; UTO's practice is defined by utopian license; joint tenability needs an ADDed genre partition, or alternatively RESTRICT PRE's guard to non-utopian genres (severed). Judged verdict consistent with the authored forecloses direction.",
+      "witness_quotes": ["PRE atom reckless_experimentation_must_be_methodologically_guarded_against", "UTO: 'imagining, defending, and attacking visions of policy as a species of utopian and critical literature performed live'"],
+      "footing": "INFERRED"
+    }
+  ]
+}
