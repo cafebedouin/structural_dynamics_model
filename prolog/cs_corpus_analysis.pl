@@ -32,6 +32,18 @@ all_cs_patterns([marked_revision, interpretive_accretion, diffuse_reconstruction
                  anchored_fixity_brittle, natural_law_constraint, epistemic_consensus,
                  no_pattern_match]).
 
+%% cs_conflict_pair_edge(+K, +UID1, +C2n, +UID2, +C1n, +Rel)
+%  Either direction of a conflict pair carries a Rel edge, with the authored
+%  target resolved through cs_kernel_registry:cs_edge_target_member/4
+%  (canonical bare cids; legacy prefixed skews absorbed — OQ-262 routing).
+cs_conflict_pair_edge(K, UID1, C2n, UID2, C1n, Rel) :-
+    cs_kernel_registry:cs_readings_for_kernel(K, Pairs),
+    (   narrative_ontology:cs_reading_relation(UID1, T1, Rel),
+        cs_kernel_registry:cs_edge_target_member(K, T1, Pairs, C2n)
+    ;   narrative_ontology:cs_reading_relation(UID2, T2, Rel),
+        cs_kernel_registry:cs_edge_target_member(K, T2, Pairs, C1n)
+    ).
+
 %% cs_corpus_distribution(-Dist)
 %  Dist = list of N-Pattern pairs sorted by count descending.
 %  Operates on the currently loaded KB — caller must have loaded testsets.
@@ -126,27 +138,27 @@ cs_trifurcation_profile :-
             ConflictRaw),
     sort(ConflictRaw, ConflictUniq),
     length(ConflictUniq, NConflict),
+    % Edge lookups route through cs_kernel_registry:cs_edge_target_member/4
+    % (canonical target form BARE cids, legacy skews resolvable — OQ-262):
+    % a raw cs_reading_relation target match here read 40/40 live-corpus
+    % conflicts as "no typed edge" for the predicate's whole life.
     findall(K-(UID1-C1n)-(UID2-C2n),
             (member(K-(UID1-C1n)-(UID2-C2n), ConflictUniq),
-             once((narrative_ontology:cs_reading_relation(UID1, C2n, forecloses)
-                  ;narrative_ontology:cs_reading_relation(UID2, C1n, forecloses)))),
+             once(cs_conflict_pair_edge(K, UID1, C2n, UID2, C1n, forecloses))),
             ClosureRaw),
     sort(ClosureRaw, ClosureUniq),
     length(ClosureUniq, NClosure),
     findall(K-(UID1p-C1np)-(UID2p-C2np),
             (member(K-(UID1p-C1np)-(UID2p-C2np), ConflictUniq),
-             once((narrative_ontology:cs_reading_relation(UID1p, C2np, coexists_with)
-                  ;narrative_ontology:cs_reading_relation(UID2p, C1np, coexists_with)))),
+             once(cs_conflict_pair_edge(K, UID1p, C2np, UID2p, C1np, coexists_with))),
             PluralityRaw),
     sort(PluralityRaw, PluralityUniq),
     length(PluralityUniq, NPlurality),
     % "neither" = no forecloses AND no coexists_with edge
     findall(K-(UID1q-C1nq)-(UID2q-C2nq),
             (member(K-(UID1q-C1nq)-(UID2q-C2nq), ConflictUniq),
-             \+ (narrative_ontology:cs_reading_relation(UID1q, C2nq, forecloses)
-                ;narrative_ontology:cs_reading_relation(UID2q, C1nq, forecloses)),
-             \+ (narrative_ontology:cs_reading_relation(UID1q, C2nq, coexists_with)
-                ;narrative_ontology:cs_reading_relation(UID2q, C1nq, coexists_with))),
+             \+ cs_conflict_pair_edge(K, UID1q, C2nq, UID2q, C1nq, forecloses),
+             \+ cs_conflict_pair_edge(K, UID1q, C2nq, UID2q, C1nq, coexists_with)),
             NeitherRaw),
     sort(NeitherRaw, NeitherUniq),
     length(NeitherUniq, NNeither),
