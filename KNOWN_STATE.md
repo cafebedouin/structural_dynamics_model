@@ -66,6 +66,8 @@ of acknowledgment ≈ spec v6 ~line 141; drift-rate vs acknowledgment-capacity �
 ~247); the drift/ending-generator tables = spec §6 attractor table. The bible's
 Module 5 §3 architectures and Module 11 §2 seat/gauge are direct applications.
 
+## 2026-08-09 — [landed] OQ-262 resolved: severance/intrinsicness audit executed (R2-signed prereg, Arm B); two raw-match edge consumers routed — cs_corpus_analysis had read 40/40 live conflicts as "no typed edge"; OQ-268/OQ-269 minted
+
 **Files:** prolog/cs_pattern_detection.pl, prolog/cs_corpus_analysis.pl, prolog/reading_registry.pl, prolog/drl_composition.pl
 **Tier:** landed
 
