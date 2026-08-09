@@ -12542,52 +12542,26 @@ be the stronger substrate — next-experiment material, not this OQ.
 **Ω-type:** Ω_E (once the check is defined, whether an authored coexistence survives it
 is witnessable per edge; defining the check is the work).
 
-**Status:** open
+**Status:** resolved — 2026-08-09, `audits/2026-08-09_oq262_coexists_severance/WRITEUP.md`
 **Priority:** 3
-**Origin:** 2026-08-03 kritik ingest synthesis — the one place debate theory offers the
-engine machinery rather than the reverse: perm-testing vocabulary (severance = dropping
-part of a reading to make the perm work; intrinsicness = adding something neither
-advocacy contains) is a mature discipline for auditing coexistence claims.
-**Files:** `prolog/cs_reading_relation_quarantine.json`, `prolog/cs_kernel_registry.pl`
+**Origin:** 2026-08-03 kritik ingest synthesis (perm-testing severance/intrinsicness
+imported as an edge-validity check; machinery: `docs/drafts/shanahan_kritik.md` §3).
 
-**Deps:** splits_from OQ-259, blocked_on_human oq262-r2-grammar-signoff
+**Deps:** splits_from OQ-259
 
-**R2 gate (2026-08-09):** Phases A–B executed —
-`audits/2026-08-09_oq262_coexists_severance/` (RECON.md committed `7de8e5f9`;
-PROPOSAL.md + PREREGISTRATION.md await the operator's R2 sign-off, prereg §K). The
-verdict grammar is frozen at the signature; execution (mechanical tier, blind CP
-control, 13 fiat pair verdicts, consumer routing) runs only after. R2 also decides
-Arm A vs Arm B (recon found the planned CP-triplet control authors zero axioms;
-an axiom-bearing sibling family `state_killing_authority` is offered as a
-supplementary control arm — PROPOSAL.md "R2 decision points").
-
-**The audit shape.** `cs_reading_relation` edges (`coexists_with`/`influences`/
-`forecloses`) are authored and currently unaudited: nothing checks whether a claimed
-`coexists_with(A,B)` holds under both readings' own commitments, or only under a
-silently severed A (part of the commitment dropped) or an intrinsic addition (content
-neither reading carries). The debate-theory test imports as: state the minimal
-mutation of A and/or B required for joint tenability; zero mutation ⇒ genuine
-coexistence; nonzero ⇒ the edge is annotated with what was severed/added rather than
-passing as authored fact. First substrate: the fiat family's 20 `coexists_with` edges;
-second: the capital-punishment registry pairs (all 3 reading-pairs diverge, 253/468
-contexts — known-divergent positive controls). Cross-check against OQ-23 (coexists_with
-FPN recon: green-by-sparsity on `testsets/`; must be exercised where siblings co-exist).
-Practical note: the fiat edges currently sit in QUARANTINE under prefixed-vs-bare naming
-(standing OQ-58-adjacent pattern, witnessed 2026-08-03) — the audit consumer needs
-resolvable edges, so the naming join is a de-facto precondition even though no formal
-dep edge is authored here.
-**Precondition DISCHARGED (2026-08-07, commits `4f646665`/`8d509bdc`).** Canonical target
-form is BARE cids (operator ruling); the exported resolver
-`cs_kernel_registry:cs_edge_target_member(+K, +T, +Pairs, -C)` is this audit's edge
-accessor — enumerate a kernel's resolved edges through it, never by raw
-`cs_reading_relation` target match. The fiat family's 30 edges all resolve (13
-coexists_with pairs, 2 forecloses pairs; `real_closure`, H1r=2). Residue relevant here:
-`cs_pattern_detection.pl:355` and `drl_composition.pl:122` still raw-match targets
-(un-routed consumers — fold into this audit's scope or route them when touched).
-
-**What resolution changes.** Authored reading-relation edges gain a validity check
-(candidate engine refinement offered BY the kritik program); OQ-23's recon gets a
-principled consumer.
+**Resolution.** Grammar pre-registered and frozen at operator R2 (Arm B + edits 1–3);
+blind CP control gate PASSED 4/4 expected-nonzero; 13 fiat pairs annotated
+(`edge_audit.json`: 6 severed / 5 intrinsic / 2 genuine) — at the pre-registered
+DOWNGRADED altitude "reading of the authored text under a frozen grammar" (RULED
+minority 3/13), with the `genuine` class UNCALIBRATED (expected-genuine control failed
+against its prereg). Two raw-match consumers routed with exact-prediction witnesses
+(`d849db0b` cs_pattern_detection — was dark on the live corpus; `c26a5b69`
+cs_corpus_analysis — had read 40/40 live conflicts as "no typed edge"; now 11/28/9).
+Third consumer NOT routed → OQ-268; census residue (orphan-source edges) → OQ-269.
+Stale premises corrected in the writeup (OQ-23 was RESOLVED-with-active-leak not
+green-by-sparsity; quarantine JSON is per-generation-run, all 30 fiat edges resolve;
+CP divergence 253/468 → live 164; un-routed consumers were 3, not 2). Commits
+`7de8e5f9`→`c26a5b69`; KNOWN_STATE 2026-08-09.
 
 ## OQ-263 — Constraint-identity ambiguity in kernel-reading stories: "the constraint" reads as the standing arrangement OR as the reading's own normative principle; declared-referent-field fallback (three-valued)
 
@@ -12812,9 +12786,77 @@ presheaf" becomes the named model of ballot-shaped channels (elections, peer rev
 litigation), with the discard/forcing cost (OQ-261 Cell 2's bloc-shaped discard
 minimum) as its measurable signature.
 
+## OQ-268 — `detect_necessity_inheritance/2` can essentially never fire: raw-match target + Source bound to a constraint id against UID-keyed `cs_reading_relation/3`
+
+**Ω-type:** Ω_C (what `Source` should bind to — and whether mountain→derived
+entailment edges should key on UID or constraint id — is an engine-design decision;
+once decided, the fix and its firing behavior are witnessable).
+
+**Status:** open
+**Priority:** 4
+**Origin:** OQ-262 Phase D (2026-08-09): the third raw-match `cs_reading_relation`
+consumer, deliberately NOT routed (operator ruling: fixing the binding is engine
+design, not a mechanical routing).
+**Files:** `prolog/drl_composition.pl` (:120–126), `prolog/axis_boundary_allowlist.txt` (:29)
+
+**Deps:** splits_from OQ-262
+
+**The defect (two layers).** `drl_composition.pl:122` calls
+`narrative_ontology:cs_reading_relation(Source, Derived, influences)` with `Source`
+bound by `drl_core:dr_type(Source, mountain)` — a constraint id — while
+`cs_reading_relation/3` is UID-keyed (first arg = `cs_story_uid`), so the join can
+essentially never fire on real corpus data (layer 1: wrong key). Even re-keyed, the
+target `Derived` would need resolver routing (`cs_edge_target_member/4`), the OQ-262
+pattern (layer 2). Resolution requires deciding what Source should bind to (join via
+`cs_story_uid/2` like the `cs_pattern_detection` accessors, or re-key the predicate's
+contract); then route the target; then decide whether a mountain-entailment edge
+firing anywhere on the live corpus is even expected (the predicate also requires both
+ends ≤0.05 suppression). Allowlisted at `axis_boundary_allowlist.txt:29` — revisit
+the allowlist entry when fixed.
+
+**What resolution changes.** Either a live mountain-entailment detector (composition
+stage 1 gains its only cross-constraint inheritance edge) or a documented retirement
+via the unwired-≠-worthless adjudication (its product may be duplicated by
+`kernel_pair_edge(K, Pairs, _, _, influences)` consumers).
+
+## OQ-269 — Live-leg edge-resolution census residue: 48 orphan-source `cs_reading_relation` edges (and a large unresolved tail) confined to `testsets/`
+
+**Ω-type:** Ω_E (whether each orphan edge's source is a missing `cs_kernel_id`, a
+deliberate non-kernel CS story, or a generation-era artifact is witnessable per story;
+the census exists, the diagnosis does not).
+
+**Status:** open
+**Priority:** 4
+**Origin:** OQ-262 Phase A census + operator R2 rider (2026-08-09): "a live-leg-only
+unresolved population that large is either a generation-era artifact or a second skew
+class the resolver doesn't cover."
+**Files:** `prolog/testsets/`, `prolog/cs_kernel_registry.pl`,
+`audits/2026-08-09_oq262_coexists_severance/RECON.md` (§1 census table)
+
+**Deps:** splits_from OQ-262
+
+**The residue.** As-of the 235-file live leg (RECON §1): 336 kernel-owned edges — 14
+exact, 168 prefixed_to_bare, 154 unresolved — PLUS 48 orphan-source edges (source UID
+belongs to no registered kernel member). All four twin legs: 0 orphans, ≤127
+unresolved; kernel_test: 20 orphans, 45 unresolved. The unresolved-in-kernel tail is
+plausibly the documented OQ-58 singleton-sparsity artifact (lone readings dangle edges
+to never-generated siblings) but was not verified per-edge; the 48 orphan-source edges
+are UNDIAGNOSED — sources carrying `cs_reading_relation` without `cs_kernel_id` are
+invisible to `cs_readings_for_kernel/2`, `kernel_pair_edge/5`, and every routed
+consumer, a possible second skew class the resolver does not cover. Also noted here:
+`cs_corpus_analysis`'s standalone header chain (`[cs_corpus_analysis],
+run_cs_corpus_analysis`) crashes at `cs_cover_story_active` because
+`metric_drift_events` is unloaded outside `[stack]` — pre-existing short-chain defect
+found during the OQ-262 console witness; fix is a load-graph touch, unwitnessed here.
+
+**What resolution changes.** Either the orphan class is ruled by-design (non-kernel CS
+stories legitimately carry edges → document the contract and give them a resolver
+path) or it is a generation defect (missing `cs_kernel_id` emission → generator fix +
+backfill decision under the test-bed posture).
+
 ---
 
-*Last updated: 2026-08-08. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-08-09. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

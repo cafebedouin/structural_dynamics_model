@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-09 — [landed] OQ-262 resolved: severance/intrinsicness audit executed (R2-signed prereg, Arm B); two raw-match edge consumers routed — cs_corpus_analysis had read 40/40 live conflicts as "no typed edge"; OQ-268/OQ-269 minted
+
+**Files:** prolog/cs_pattern_detection.pl, prolog/cs_corpus_analysis.pl, prolog/reading_registry.pl, prolog/drl_composition.pl
+**Tier:** landed
+
+Full record: `audits/2026-08-09_oq262_coexists_severance/WRITEUP.md` (commits
+`7de8e5f9`→`c26a5b69`). Judged tier: 13 fiat coexists pairs annotated under a frozen
+grammar (`edge_audit.json`; 6 severed / 5 intrinsic / 2 genuine) at the
+pre-registered DOWNGRADED altitude "reading of the authored text" (RULED minority);
+blind CP gate passed 4/4; expected-genuine control FAILED → `genuine` class
+uncalibrated. **Behavior changes (output-changing, console/detection surfaces only —
+pipeline_output.json byte-identical, witnessed):**
+- `cs_pattern_detection:cs_displaced_beneficiary/1` now routes its forecloses target
+  through `cs_kernel_registry:cs_edge_target_member/4` (`cs_resolve_edge_target/3`,
+  raw fallback for non-kernel sources). Was dark on the live corpus for its whole
+  life; now fires (first: `textualist_severability_reading`). reading_registry note
+  updated from "dark on the live corpus".
+- `cs_corpus_analysis` trifurcation conflict split routes through the resolver
+  (`cs_conflict_pair_edge/6`): live corpus closure/plurality/neither moved
+  0/0/40 → 11/28/9. Any prior citation of that console section's closure/plurality
+  numbers is regime-bound to the raw-match era (they measured the naming skew, not
+  the corpus).
+- NOT routed: `drl_composition.pl:122` `detect_necessity_inheritance/2` → OQ-268
+  (wrong-key Source binding + raw target; can essentially never fire). Census
+  residue (48 live-leg orphan-source edges, undiagnosed) → OQ-269, which also
+  records the pre-existing standalone-chain crash in `run_cs_corpus_analysis`
+  (`metric_drift_events` unloaded outside `[stack]`).
+Prereg discipline notes for future audits: a pinned mechanical control failed
+AS WRITTEN by over-scoping its quantifier beyond its recon basis (scoped witness
+pasted separately, prereg not amended — gate-spec class); the live corpus moved
+mid-phase twice (235→240; every witness pair md5-bracketed, fiat substrate
+blob-identical to HEAD across the judged tier).
+
 ## 2026-08-08 — [landed] c-orchestrator --close-gaps: gap-closing mode over a frozen manifest; frozen-manifest retry filter widened to json-AND-pl
 
 **Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py

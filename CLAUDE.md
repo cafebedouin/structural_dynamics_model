@@ -419,10 +419,12 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   legacy skews (bare-vs-prefixed in either direction), so a raw
   `cs_reading_relation(UID, Target, Rel)` join silently reads dead on skewed families —
   witnessed: the `cs_axiom_*` joins were 0 for their whole life, 22/67 kernels read
-  `untyped`. Two known un-routed sites remain (`cs_pattern_detection.pl:355`,
-  `drl_composition.pl:122` — route them when touched; noted on OQ-262). Generator emits
-  bare (`snap_sibling_id`); `cs_reading_relation_unresolved/4` is the resolver's exact
-  complement. Provenance: KNOWN_STATE 2026-08-07.
+  `untyped`. `cs_pattern_detection` and `cs_corpus_analysis` were routed 2026-08-09
+  (OQ-262; the latter had read 40/40 live conflicts as "no typed edge"); ONE un-routed
+  site remains — `drl_composition.pl:122`, which also has a wrong-key Source binding
+  and can essentially never fire (OQ-268; do not route without the re-key ruling).
+  Generator emits bare (`snap_sibling_id`); `cs_reading_relation_unresolved/4` is the
+  resolver's exact complement. Provenance: KNOWN_STATE 2026-08-07 + 2026-08-09.
 - **A pooled-across-story seat H¹ measures its pooling convention, not the seat set
   (2026-08-08).** Seats are story-local (no cross-story identity — GAP-31), so pooled
   family vectors inherit story typing; 15/16 `real_closure` families "obstruct" this way,

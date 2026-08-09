@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "7de8e5f913532a2a8b5ffb3a452a1121d00bea12",
+    "store_version": "c26a5b6940266398e10ba79edf1de7986f805591",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-09T10:43:58"
+    "generated_at": "2026-08-09T14:15:50"
   },
-  "issues_sha": "c958000d5314b726da5ecd08bd9f26a609c5fc8de8492f87b363725235b29813",
-  "n_entries": 267,
+  "issues_sha": "8c442f506ace3a515c879cc8362b22145539fd181ce5a6a99a40b41978e65cc1",
+  "n_entries": 269,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 144,
+    "resolved": 145,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 88,
+    "open": 89,
     "partial": 7
   },
   "active": [
@@ -1260,22 +1260,6 @@
       ]
     },
     {
-      "id": "OQ-262",
-      "status": "open",
-      "priority": 3,
-      "summary": "Severance/intrinsicness as an audit on authored `coexists_with` edges: is claimed coexistence genuine or purchased by silently mutating a reading?",
-      "deps": [
-        "splits_from OQ-259",
-        "blocked_on_human oq262-r2-grammar-signoff"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-23",
-        "OQ-58",
-        "OQ-259"
-      ]
-    },
-    {
       "id": "OQ-263",
       "status": "open",
       "priority": 3,
@@ -1324,6 +1308,33 @@
       "mentioned_in": [
         "OQ-261",
         "OQ-264"
+      ]
+    },
+    {
+      "id": "OQ-268",
+      "status": "open",
+      "priority": 4,
+      "summary": "`detect_necessity_inheritance/2` can essentially never fire: raw-match target + Source bound to a constraint id against UID-keyed `cs_reading_relation/3`",
+      "deps": [
+        "splits_from OQ-262"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-262"
+      ]
+    },
+    {
+      "id": "OQ-269",
+      "status": "open",
+      "priority": 4,
+      "summary": "Live-leg edge-resolution census residue: 48 orphan-source `cs_reading_relation` edges (and a large unresolved tail) confined to `testsets/`",
+      "deps": [
+        "splits_from OQ-262"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-58",
+        "OQ-262"
       ]
     }
   ],
@@ -3671,6 +3682,22 @@
       "mentioned_in": [
         "OQ-259",
         "OQ-266"
+      ]
+    },
+    {
+      "id": "OQ-262",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "Severance/intrinsicness as an audit on authored `coexists_with` edges: is claimed coexistence genuine or purchased by silently mutating a reading?",
+      "deps": [
+        "splits_from OQ-259"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-23",
+        "OQ-259",
+        "OQ-268",
+        "OQ-269"
       ]
     },
     {
