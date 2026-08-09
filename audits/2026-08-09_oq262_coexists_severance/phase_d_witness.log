@@ -1,0 +1,16 @@
+corpus md5 (pre-probe): c511457c68b30f96cb5f6e1adbc29609
+corpus: 240 constraints
+-- 1. cs_displaced_beneficiary --
+  CURRENT (raw) firings: [] 
+  ROUTED firings: [textualist_severability_reading]
+  predicted movement: gained=[textualist_severability_reading] lost=[]
+-- 2. cs_corpus_analysis conflict split --
+  current_raw: conflicts=40 closure=0 plurality=0 neither=40
+  routed: conflicts=40 closure=11 plurality=28 neither=9
+-- 3. pipeline prediction: per_constraint byte-identical (no surface consumes either predicate)
+corpus md5 (pair start): c511457c68b30f96cb5f6e1adbc29609
+== pipeline clean-vs-edited diff (manifest-normalized) ==
+clean manifest: {'n_constraints': 240, 'code_commit_short': '1cd8ad1', 'code_dirty': True}
+edited manifest: {'n_constraints': 240, 'code_commit_short': '1cd8ad1', 'code_dirty': True}
+per_constraint byte-identical: True
+non-manifest non-per_constraint sections identical: True
