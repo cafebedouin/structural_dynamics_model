@@ -12550,7 +12550,16 @@ part of a reading to make the perm work; intrinsicness = adding something neithe
 advocacy contains) is a mature discipline for auditing coexistence claims.
 **Files:** `prolog/cs_reading_relation_quarantine.json`, `prolog/cs_kernel_registry.pl`
 
-**Deps:** splits_from OQ-259
+**Deps:** splits_from OQ-259, blocked_on_human oq262-r2-grammar-signoff
+
+**R2 gate (2026-08-09):** Phases A–B executed —
+`audits/2026-08-09_oq262_coexists_severance/` (RECON.md committed `7de8e5f9`;
+PROPOSAL.md + PREREGISTRATION.md await the operator's R2 sign-off, prereg §K). The
+verdict grammar is frozen at the signature; execution (mechanical tier, blind CP
+control, 13 fiat pair verdicts, consumer routing) runs only after. R2 also decides
+Arm A vs Arm B (recon found the planned CP-triplet control authors zero axioms;
+an axiom-bearing sibling family `state_killing_authority` is offered as a
+supplementary control arm — PROPOSAL.md "R2 decision points").
 
 **The audit shape.** `cs_reading_relation` edges (`coexists_with`/`influences`/
 `forecloses`) are authored and currently unaudited: nothing checks whether a claimed
