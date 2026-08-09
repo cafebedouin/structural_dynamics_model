@@ -159,7 +159,7 @@ aggregatable_reading(cs_pattern_detection:cs_authority_masking/3, corpus_constra
 aggregatable_reading(cs_pattern_detection:cs_cover_story_active/2, corpus_constraint,
     partial_by_design('detection')).
 aggregatable_reading(cs_pattern_detection:cs_displaced_beneficiary/1, corpus_constraint,
-    partial_by_design('detection; dark on the live corpus')).
+    partial_by_design('detection; edge targets routed via cs_edge_target_member (OQ-262) — fires on the live corpus since routing')).
 aggregatable_reading(cs_pattern_detection:cs_grounding_mismatch/3, corpus_constraint,
     partial_by_design('detection')).
 aggregatable_reading(cs_axiom_engine:cs_has_axioms/1, story_uid,

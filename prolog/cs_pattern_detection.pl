@@ -352,9 +352,21 @@ cs_displaced_beneficiary(C) :-
     signature_detection:constraint_signature(C, Sig),
     \+ memberchk(Sig, [natural_law, coupling_invariant_rope, coordination_scaffold]),
     narrative_ontology:cs_story_uid(C, UID),
-    narrative_ontology:cs_reading_relation(UID, Sibling, forecloses),
+    narrative_ontology:cs_reading_relation(UID, Target, forecloses),
+    cs_resolve_edge_target(C, Target, Sibling),
     cs_has_fields(Sibling),
     cs_authority_grounding(Sibling, extraction).
+
+%% cs_resolve_edge_target(+C, +Target, -Sibling)
+%  Edge targets resolve through cs_kernel_registry:cs_edge_target_member/4 when
+%  C is kernel-registered (canonical target form is BARE cids; both legacy skews
+%  absorbed — a raw target match reads dead on prefixed families, OQ-262).
+%  Non-kernel stories keep the raw target (their edges carry direct constraint ids).
+cs_resolve_edge_target(C, Target, Sibling) :-
+    narrative_ontology:cs_kernel_id(C, K), !,
+    cs_kernel_registry:cs_readings_for_kernel(K, Pairs),
+    once(cs_kernel_registry:cs_edge_target_member(K, Target, Pairs, Sibling)).
+cs_resolve_edge_target(_, Target, Target).
 
 /* ================================================================
    GENERALIZED GROUNDING MISMATCH: cs_grounding_mismatch/3
