@@ -1539,3 +1539,32 @@ substrate OQ-267 names as required before the "ballot = forcing over a second ob
 presheaf" thesis is testable. A fresh instance proposing to "compute the family-level
 stakeholder H¹" should be pointed here: the quantity exists arithmetically but has no
 object under it.
+
+## GAP-32 — No outcome surface for cost redistribution at constant terminal ("the structure holds, and the cost changes")
+
+**Declared:** 2026-08-09 (world-bible review; `agent/narrative_transform/THE-GRAIN-world-bible.md`
+Module 11 §4, "a seventh ending the table does not produce").
+
+**The absent capability:** an outcome descriptor for a commitment system whose institutional
+fate is unchanged — same terminal attractor, same drift state — while the *per-position cost
+distribution* under it changes. The bible names the shape exactly: nothing repaired, the
+arrangement outlasts everyone, and it takes less out of the people in one position than it did
+before. The attractor table's codomain is institution-fates only (`stable_pattern` / `husk` /
+`extinction` / `revival` / `repudiation` / `axiom_foreclosure`); nothing on the CS axis can
+express "terminal constant, incidence redistributed." Observer-axis per-position reads (χ,
+extraction, per-context type) exist synchronically per story, but nothing joins them to CS
+drift as a *within-terminal trajectory of who bears the cost*.
+
+**Why declared rather than a defect:** nothing is broken — the taxonomy was built to type
+institutional fates, and cost-incidence-over-time was never in its codomain. Declared so a
+fresh instance proposing "the attractor table misses an ending" is pointed here rather than
+bolting a seventh terminal onto the table: it is not a terminal, it is orthogonal to the
+terminal axis, and adding it as a row would corrupt the enumeration (which is gate-pinned by
+`spec_enum_check.py`).
+
+**What would discharge it:** a per-position cost/incidence series joined to the drift state.
+Substrate honestly stated: positional extraction is authored synchronically per story, so a
+within-terminal redistribution claim needs either snapshot-series positional data or a
+cross-story comparison with seat identity — the latter runs directly into GAP-31's
+no-cross-story-seat-identity wall. Any build proposal routes through the OQ-37-style "does it
+earn its keep" trial on `testsets/` (the evolving-schema leg), not through a spec change first.

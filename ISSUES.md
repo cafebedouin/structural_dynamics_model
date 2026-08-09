@@ -12854,6 +12854,186 @@ stories legitimately carry edges → document the contract and give them a resol
 path) or it is a generation defect (missing `cs_kernel_id` emission → generator fix +
 backfill decision under the test-bed posture).
 
+## OQ-270 — Seat-indexed acknowledgment: does the attractor table conflate inside-acknowledgment with acknowledgment-from-standing? (appropriation-kills hypothesis)
+
+**Ω-type:** Ω_E (whether formal recognition from a standing position destroys
+implicit practices is witnessable by historical case — the spec's own case-library
+standard; the taxonomy change is downstream of the case, not decidable without it).
+
+**Status:** open
+**Priority:** 6
+**Origin:** 2026-08-09 review of `agent/narrative_transform/THE-GRAIN-world-bible.md`
+(Module 11 §4, "The exception") against v8 + CS spec v6 — the one candidate from that
+review that names a variable the engine already computes over.
+**Files:** `docs/commitment_systems/commitment_systems_sketch_v6.md`,
+`prolog/cs_drift_engine.pl`, `agent/narrative_transform/THE-GRAIN-world-bible.md`
+
+**The hypothesis.** The engine's `Acknowledged` is a bare boolean
+(`prolog/cs_drift_engine.pl:100-104` — `cs_terminal_attractor(Direction, Magnitude,
+Acknowledged, Terminal)`), and the spec carries only the inside half of
+position-dependence ("acknowledgment that changes the system requires standing within
+the system" — v4 principle, now the blocked-B gate premise, spec ~line 392). The world
+bible claims a destructive third case the boolean cannot express: acknowledgment *from
+a position of standing* over a practice that survives by being outside institutional
+categories (the implicit-practice architecture) does not rescue and does not merely
+fail — it converts the practice into an institutional object and ends it ("from
+inside: stable; from above: extinction; the words can be identical"). If real, the
+rescue effect of the acknowledged bit is conditioned on acknowledger-gauge ×
+architecture, and the table is silently wrong for implicit-practice systems
+acknowledged from above.
+
+**Provenance caveat (applies to OQ-270–274).** The bible is a downstream artifact
+built *from* the framework — its own Appendix A §1b warns that running derived
+material back through its source reads as confirmation while establishing nothing.
+Hypothesis-grade until independently grounded; this one graduates only on a
+documented historical case where formal recognition/credentialing demonstrably ended
+an implicit practice (Scott-legibility literature is the obvious hunting ground).
+
+**What resolution changes.** Either the attractor table gains an
+acknowledger-position argument for implicit-practice systems — spec + engine in the
+SAME change, since the CS enumerations are gate-tripwired by `spec_enum_check.py` and
+a changed/new enumeration needs its sentinel block and checker-manifest entry
+together — or the boolean is documented as deliberately position-blind with this
+hypothesis recorded as the known out-of-scope case.
+
+## OQ-271 — Evidence-kind-indexed acknowledgment capacity: operational revises fast, constitutive hardens
+
+**Ω-type:** Ω_C (whether "acknowledgment capacity" is a scalar or is split by what
+the evidence touches — a refinement question against the spec's existing
+capacity-vs-drift-rate law; a weak Ω_E corpus probe exists, confound named below).
+
+**Status:** open
+**Priority:** 6
+**Origin:** same 2026-08-09 world-bible review (Module 9 §6, "Two kinds of
+evidence").
+**Files:** `docs/commitment_systems/commitment_systems_sketch_v6.md`,
+`agent/narrative_transform/THE-GRAIN-world-bible.md`
+
+**Deps:** bundled_with OQ-270
+
+**The hypothesis.** The spec treats acknowledgment capacity as a scalar rate matched
+against environmental drift rate (spec ~lines 378-381). The bible splits it by
+evidence kind: *operational* evidence (practice-level — a failed procedure, a bad
+reading) is incorporated fast because competence requires it; *constitutive* evidence
+(premise-level — the reference is parochial, the founding sacrifice unnecessary) is
+narrowed, referred for review, and converted into a reason for stricter control.
+"Same people, same week, both responses competent." Offered mechanism: public
+irreversible commitment inverts disconfirmation (Festinger), which would also supply
+a *mechanism* for the spec's law of acknowledgment (~line 141) rather than just the
+observation. Corpus-facing corollary: practice-facing drift directions should carry
+`Acknowledged=true` more often than premise/axiom-facing directions at fixed
+magnitude. Confound named up front: the bit is AUTHORED (OQ-126 Gap 1), so that
+cross-tab measures author/generator acknowledgment conventions, not institutional
+behavior — a skew is hypothesis-grade, never a witness.
+
+**What resolution changes.** A refinement paragraph in the spec's acknowledgment
+section (evidence-kind split + mechanism) or a documented rejection. No enumeration
+change, so no `spec_enum_check` ripple.
+
+## OQ-272 — Consensus rate / disagreement frequency as the husk's temporal trace
+
+**Ω-type:** Ω_E (whether a disagreement-frequency series discriminates husk from
+stable/mountain is witnessable — IF the substrate exists; the substrate check is
+itself step 1).
+
+**Status:** open
+**Priority:** 5
+**Origin:** same 2026-08-09 world-bible review (Module 5 §4b, "Agreement arrives
+faster as things thin").
+**Files:** `docs/deferential_realism_paper_v8.md` (§9.4),
+`docs/commitment_systems/commitment_systems_sketch_v6.md`,
+`agent/narrative_transform/THE-GRAIN-world-bible.md`
+
+**The hypothesis.** v8 §9.4 declares the husk-vs-mountain distinction synchronically
+invisible (a real mountain and a naturalized husk "byte-identical at the
+cohomological layer"; the difference temporal, recoverable only from a trace longer
+than the practice) — but names no observable for the trace. The bible proposes one:
+as an institution hollows, the content that generated disagreement disappears, so
+consensus arrives *faster* and the consensus is real — harmony is a symptom,
+indistinguishable from health at any single moment, visible only as a series
+("when did we last argue about this?"). Candidate discriminator: falling
+disagreement frequency at rising surface consensus → husk-direction flag; a healthy
+rich arrangement stays slow to agree with itself.
+
+**Step 1 is a substrate check, stated as a task not an assertion:** whether any
+authored corpus surface carries a time-indexed disagreement signal at all. Snapshot
+series carry per-story metric trajectories, not cross-reading disagreement over
+time; H¹ over seats is synchronic and per §9.4's citation rule may NOT be cited as
+touching this distinction. If no surface exists, this becomes a schema/authoring
+question for the test bed (`testsets/` is the evolving-schema leg; the OQ-37-style
+"does the metric earn its keep" trial is the sanctioned route).
+
+**What resolution changes.** The paper's declared limit (§9.4) gains a named
+temporal discriminator and the engine a candidate detector — or the observable is
+shown underivable and the limit stands as stated, with this recorded as the
+attempted route.
+
+## OQ-273 — Cross-axis formation bridge: does accretion architecture over-produce naturalized/false-mountain observer types?
+
+**Ω-type:** Ω_E (corpus-testable correlation, substrate permitting; any causal
+reading is a further, separately-gated step).
+
+**Status:** open
+**Priority:** 5
+**Origin:** same 2026-08-09 world-bible review (Module 2 §2, "How false terrain gets
+made": every false mountain made by *correct maintenance* — a competent
+recalibration absorbing an anomaly into the baseline, no concealment event, no
+locatable decision — i.e. accretion as the production mechanism of false terrain).
+**Files:** `docs/deferential_realism_paper_v8.md` (§4.4 Theorem 7),
+`docs/commitment_systems/commitment_systems_sketch_v6.md`,
+`agent/narrative_transform/THE-GRAIN-world-bible.md`
+
+**The hypothesis.** Theorem 7 establishes the two axes' *detection* independence
+(disjoint inputs). A *formation* bridge is a compatible, distinct, causal claim the
+framework does not currently make: committer-axis accretion architecture
+(principle-anchored lineage, each link reasonable, no decision to locate) is the
+characteristic production mechanism of observer-axis `naturalized` /
+false-natural-law-class readings. Prediction: accretion-typed systems over-produce
+naturalized-class observer types relative to marked-revision systems.
+
+**Step 1 is a substrate check:** whether the five commitment-holding architectures
+(marked revision / anchored fixity / implicit practice / diffuse reconstruction /
+accretion) are an authored corpus surface at all, or only a spec taxonomy — if
+unauthored, the test needs a declared proxy or is blocked on authoring. **Standing
+confound, named before any run:** both axes are LLM-authored under shared generation
+conventions, so a correlation is regime-evidence first (the OQ-70 FNL history is the
+witnessed precedent for convention masquerading as detection); any hit owes the
+convention/counterfactual discipline before being read as structure. A null is also
+informative: the axes' independence would extend from inputs to production
+statistics on this corpus.
+
+**What resolution changes.** The framework's first cross-axis formation claim (v8
+currently has detection independence only), or a documented null extending
+independence — either lands in the v8 successor's committer-axis section.
+
+## OQ-274 — Ω taxonomy: is resolution policy an orthogonal dimension the Ω_E/Ω_C/Ω_P typing needs?
+
+**Ω-type:** Ω_C (whether the taxonomy is missing an orthogonal sort; adoption is an
+operator ruling, but the orthogonality analysis is workable now).
+
+**Status:** open
+**Priority:** 7
+**Origin:** same 2026-08-09 world-bible review (Module 11 §10, the Ω ledger).
+**Files:** `docs/omega_variables.md`,
+`agent/narrative_transform/THE-GRAIN-world-bible.md`
+
+**The observation.** `omega_variables.md` types Ωs by dependency kind (Ω_E/Ω_C/Ω_P).
+The bible's working Ω ledger independently evolved a second sort by *resolution
+policy*: structurally undecidable (never resolve, anywhere) / decide-per-story, may
+vary (local answers; the variation is the texture) / craft preference (settle once,
+for yourself) / load-bearing (settle first; the logic bends around it) — plus the
+rule "a story may settle an open one locally; none may settle one globally," a
+local-vs-global settlement distinction the taxonomy does not carry. The tracker
+already gestures at policy informally (`future` status ≈ real-but-not-slated; the
+deferred-Ω_E typing note in CLAUDE.md's over-claim rule 5), which is exactly the
+question: is policy already adequately carried by status grammar + prose, or does
+each Ω want type × policy so "resolvable but deliberately held open" stops being
+conflated with "structurally undecidable"?
+
+**What resolution changes.** Either `omega_variables.md` gains the policy axis (and
+OQ authors a vocabulary for held-open vs undecidable) or the redundancy with the
+status grammar is documented and the bible's sort noted as a local convention.
+
 ---
 
 *Last updated: 2026-08-09. Add new items with sequential OQ-NN labels. Mark
