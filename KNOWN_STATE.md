@@ -45,7 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-08-09 — [landed] OQ-262 resolved: severance/intrinsicness audit executed (R2-signed prereg, Arm B); two raw-match edge consumers routed — cs_corpus_analysis had read 40/40 live conflicts as "no typed edge"; OQ-268/OQ-269 minted
+## 2026-08-09 — [landed] World-bible back-flow review: OQ-270..274 + GAP-32 minted; negative results recorded (which bible claims are already in v8/spec)
+
+**Files:** agent/narrative_transform/THE-GRAIN-world-bible.md, ISSUES.md, docs/design/design_gaps.md
+**Tier:** landed
+
+Reviewed `agent/narrative_transform/THE-GRAIN-world-bible.md` (1,941 lines, now
+committed as tracked provenance, `33a2a156`) against `deferential_realism_paper_v8.md`
+and CS spec v6 for reverse flow (bible → theory). Four extension candidates + one
+taxonomy note minted as OQ-270..274; the cost-redistribution-at-constant-terminal
+absence declared as GAP-32 (orthogonal to the terminal axis — NOT a seventh attractor
+row). All hypothesis-grade: the bible is a downstream artifact of the framework, so
+every entry carries the confirmation-loop caveat (bible Appendix A §1b).
+
+**Negative results (checked, already present — do not re-derive or re-mint):** the
+bible's "no synchronic signature" ≈ v8 §9.4 (lines 1141–1152); "measurement and
+commitment are the same act" ≈ v8 §5.9 adaptive-preference argument (~726–741); law
+of acknowledgment ≈ spec v6 ~line 141; drift-rate vs acknowledgment-capacity ≈ spec
+~378–381; cast-size disagreement quantization = the OQ-195 H(n) partition law (v8
+~247); the drift/ending-generator tables = spec §6 attractor table. The bible's
+Module 5 §3 architectures and Module 11 §2 seat/gauge are direct applications.
 
 **Files:** prolog/cs_pattern_detection.pl, prolog/cs_corpus_analysis.pl, prolog/reading_registry.pl, prolog/drl_composition.pl
 **Tier:** landed
