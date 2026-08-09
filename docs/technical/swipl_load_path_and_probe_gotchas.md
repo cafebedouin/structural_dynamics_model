@@ -438,3 +438,22 @@ passing were the new suites, 2026-07-12). (3) Load-order corollary: a suite that
 corpus INSIDE a test (an `ensure_corpus_loaded` vacuity guard) changes which units a bare
 `run_tests` even sees, depending on whether the corpus loaded before or during the run — another
 reason the scoped form is the only stable invocation.
+
+## 15. A file header's OWN advertised load chain can be broken — `cs_corpus_analysis` is the standing instance
+
+The load-chain rule says each suite's correct chain is in its file header; this is the
+known case where the header LIES. `cs_corpus_analysis.pl`'s header advertises
+`swipl -g "[cs_corpus_analysis], run_cs_corpus_analysis, halt"` — that chain runs most
+of its sections, then crashes at `cs_cover_story_active` with
+`Unknown procedure: metric_drift_events:metric_trend/3` (the module is loaded by
+`stack.pl`, not by this file's own `use_module` list). The trap has the §1 shape plus a
+nastier read: the crash lands AFTER pages of valid output, so a partial capture can
+pass as a complete run. Working chain (validated 2026-08-09, OQ-262 Phase D):
+
+    swipl -l stack.pl -g "use_module(cs_corpus_analysis), \
+        corpus_loader:load_all_testsets, \
+        cs_corpus_analysis:cs_trifurcation_profile, halt" -t "halt(1)"
+
+(`run_cs_corpus_analysis`'s internal testset consult is also redundant under this chain
+— `corpus_loader` is canonical.) Fixing the header/load graph is tracked on OQ-269; do
+not cite a header-chain run of this file as a witness until it lands.

@@ -1630,6 +1630,50 @@ THEORY's falsifiability.
 
 ---
 
+## A judged-tier grammar is an instrument, and inherits the instrument discipline
+
+Judged/blind verdict tiers are now a recurring audit shape (OQ-258, OQ-259, OQ-264,
+OQ-262 all carried one), and their failure modes are Pattern-6-silent: a one-sided
+control gate passes a grammar that fires on everything, and the output still reads as a
+finding. Five riders, each closing a channel by which a frozen-looking pre-registration
+silently pre-decides its outcome (first full application:
+`audits/2026-08-09_oq262_coexists_severance/PREREGISTRATION.md` — use it as the template):
+
+1. **Two-sided calibration.** An expected-POSITIVE control alone ("the grammar finds the
+   defect on known-bad cases") passes a grammar that finds the defect in *everything*.
+   Pre-register at least one expected-NEGATIVE case, chosen before verdicts exist; if no
+   credible candidate exists, declare that verdict class **UNCALIBRATED** rather than
+   letting it fire uncontrolled. (Witnessed both ways in one audit: OQ-262's
+   expected-`genuine` control FAILED against its pre-registration, and the `genuine`
+   class stayed scoped as uncalibrated instead of being quietly trusted.)
+2. **Declare grammar-post-recon — don't launder.** The freeze fixes the criterion before
+   *verdicts*, not before *substrate knowledge*. If the grammar was authored after
+   reading the per-item inventory, the prereg says so; controls whose named fire/no-fire
+   targets were specified against items already known to satisfy them test
+   IMPLEMENTATION, not discrimination — the prereg says that too.
+3. **Pre-commit the interpretive-downgrade branch** before any verdict table exists: if
+   the in-file-witnessed (RULED) rows come back a minority, the deliverable's altitude
+   drops to "a reading of the text under a frozen grammar," not an audit result.
+   Writing the branch after seeing the table is the laundering it exists to prevent.
+   (Witnessed: the OQ-262 branch FIRED at 3/13 RULED and the altitude dropped honestly.)
+4. **No-rate rule vs unanimity gate — state the distinction.** "No shares/percentages
+   over the deliverable table" and "k=N unanimity control gate" coexist legitimately
+   only when the prereg and writeup explicitly distinguish them; otherwise the writeup
+   reads as violating its own rule.
+5. **Blinding leaks through the instrument.** The grammar text handed to a blind judge
+   is itself a channel: before launch, read the LITERAL prompt the judge receives and
+   confirm no control-item name, expected direction, or verdict-class distribution
+   survives in it — and paste that check.
+
+Corollary (gate-spec class): **a pinned control clause must quantify over exactly its
+recon basis.** OQ-262's "M2 fires nowhere on kernel_test" control FAILED AS WRITTEN
+because the clause swept the whole archive while its stated basis covered two families —
+the frozen prereg was not amended; the fail stood on the record with the correctly-scoped
+claim witnessed separately. The honest handling of a mis-scoped frozen control is
+record-fail + cause-classify + scoped re-witness, never a quiet rewrite.
+
+---
+
 ## Pooled-across-story H¹ inherits story-level typing (the pooled read that measures its own construction)
 
 **The trap (witnessed 2026-08-08, OQ-261 C3 + post-hoc,

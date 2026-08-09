@@ -1568,3 +1568,28 @@ within-terminal redistribution claim needs either snapshot-series positional dat
 cross-story comparison with seat identity — the latter runs directly into GAP-31's
 no-cross-story-seat-identity wall. Any build proposal routes through the OQ-37-style "does it
 earn its keep" trial on `testsets/` (the evolving-schema leg), not through a spec change first.
+
+## GAP-33 — Edge-validity (severance/intrinsicness) annotations are audit-artifact-only: no authored in-corpus field exists
+
+**Declared:** 2026-08-09 (OQ-262 close;
+`audits/2026-08-09_oq262_coexists_severance/WRITEUP.md` → Residue).
+
+**The absent capability:** a per-edge validity annotation surface in the corpus itself.
+The OQ-262 audit produced per-pair severance/intrinsicness verdicts with mutation text
+for every fiat-family `coexists_with` pair, but the annotations live in the audit
+artifact `edge_audit.json` only — no schema slot, no authored fact, no generator
+emission. A consumer wanting per-edge validity reads that file, fiat family only, at
+its recorded altitude ("reading of the authored text under a frozen grammar," RULED
+minority, `genuine` class uncalibrated).
+
+**Why declared rather than a defect:** promotion into an authored in-corpus field is a
+schema change, which routes through the test-bed posture (exercise on `testsets/`
+first) and is the operator's seat — explicitly deferred at OQ-262 close, not
+forgotten. A fresh instance should neither hunt the schema for the field nor propose
+building it unaware the deferral was deliberate.
+
+**What would discharge it:** an operator adoption decision, then a schema slot (e.g. a
+`cs_edge_validity/4`-shaped fact or a JSON sidecar the generator emits), a re-judgment
+path (the annotations survive re-judgment by a different instrument — that was the
+design condition), and registration/gating per the reading-registry and spec-enum
+opt-in rules (both are silent-escape shapes if skipped).
