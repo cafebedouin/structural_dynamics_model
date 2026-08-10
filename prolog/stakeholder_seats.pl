@@ -268,6 +268,14 @@ consensus_provenance(C, Verdict) :-
 % unanimous_verdict(+NReal, +NSeats, +Excl, -Verdict): one real type over
 % >=2 real seats. The token carries BOTH provenance bits: the excluded set
 % (manufactured-consensus candidacy) and untypeable-seat presence (OQ-217).
+%
+% CANDIDACY IS EXISTENCE-GATED, NOT TYPED (OQ-151, 2026-08-09): the mcc token
+% fires on the MERE EXISTENCE of an excluded seat — the chair is never typed
+% here. The typed refinement is empty_chair_state/2 (below): measured across
+% the five legs at close, 219/613 candidates had NO chair deriving a real type
+% and only 9/613 carried genuine typed dissent (~1.5%;
+% audits/2026-08-09_oq151_dual_gauge/). A consumer asking "does the absent
+% seat actually dissent?" must read empty_chair_state/2, never this token.
 unanimous_verdict(NReal, NSeats, Excl, Verdict) :-
     (   Excl \= [], NReal < NSeats
     ->  Verdict = manufactured_consensus_candidate_untypeable(Excl)

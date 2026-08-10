@@ -8354,7 +8354,13 @@ OQ-72 to include the committer-axis dimensions honestly.
   corpus scale), 385 concurs**; Σ identity exact and all structurally-impossible cells zero on every
   leg. The one genuine case from the original 4/5 hand-check
   (`employment_boundary__substantive_employment_reading`) is independently recovered by the shipped
-  detector.
+  detector. **CITATION CEILING on these numbers:** n=9 supports existence of the phenomenon and
+  OQ-199's validation stratum — never a rate, distribution, or comparative claim about
+  manufactured consensus (five non-mergeable legs, GAP-31). And the 385 concurring chairs are NOT
+  a "exclusion doesn't predict disagreement" finding: per-seat type derivation is coarse (chairs
+  share the story's metrics and the excluded role's d; type-uniform per metric level at
+  fixture-probe), so real disagreement below the type vocabulary's resolution would read as
+  concurrence — nothing in this arc distinguishes the two readings.
 - (iv) **Vocabulary mapping (recorded so future readers don't search for names that were never
   there):** the OQ's site `[beneficiary, victim, excluded, analytical]` maps to the live 5-atom role
   vocabulary as `victim ≡ payer`, `analytical ≡ observer` (the authored observer seat; the canonical

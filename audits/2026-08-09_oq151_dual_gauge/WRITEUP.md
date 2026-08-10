@@ -32,6 +32,15 @@ in `audit_log.md`): testsets n=240 @2026-08-10T04:09:52Z; haiku n=960
 - `refinement_census_<leg>.log` ×5 — full `empty_chair_state` histogram, mcc
   partition, `SIGMA_IDENTITY ... ok`, `EXPECTED_ZERO ... ok` ×3, and
   `DISSENT_ITEM` per-item re-derivations (harness: `refinement_census.sh`).
+  **Trim provenance:** the committed logs are MECHANICALLY FILTERED views of
+  the raw swipl output — filter applied in place before commit:
+  `grep -E '^(CENSUS|HIST|MCC_N|MCC_PARTITION|SIGMA_IDENTITY|EXPECTED_ZERO|DISSENT_ITEM)|Loaded .* testsets'`
+  (raw logs were ~0.3–2.2 MB each, dominated by module-load noise; the raw
+  files were overwritten by the trim, so their md5s were NOT captured — a
+  declared gap, not an oversight discovered later). The filter keeps every
+  analysis-bearing line class the harness emits; re-running
+  `refinement_census.sh <leg>` at the same corpus/engine state reproduces the
+  same witness lines.
 - `per_item_verification.log` — 47 off-diagonal members re-derived in swipl
   (harness: `per_item_offdiag.sh`); checked-consistent count below.
 - `consumer_sweep.txt` — the amendment-1 sweep of
@@ -142,3 +151,15 @@ from `prolog/`.
 - The role-gauge H¹ itself was DECLINED (operator ruling; grounds in the
   OQ-151 close entry — this crosstab is the dual-gauge deliverable that
   replaces it).
+- **n=9 is a CEILING on use (do not cite past it):** the genuine typed-dissent
+  stratum supports (a) the phenomenon is non-empty and (b) OQ-199's candidate
+  validation stratum — and nothing more. No rate, distribution, or comparative
+  claim about manufactured consensus is supportable from nine cases across
+  five non-mergeable legs.
+- **The 385 concurring chairs are NOT yet a finding.** "Exclusion doesn't
+  predict disagreement" is one reading; the other is that per-seat type
+  derivation is coarse (chairs share the story's metrics and the excluded
+  role's d, and within a leg derive from a small type set — witnessed at
+  fixture-probe time: chairs were type-uniform per metric level), so real
+  disagreement may be washed out below the type vocabulary's resolution.
+  Nothing in this arc distinguishes the two readings.

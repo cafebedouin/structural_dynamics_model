@@ -65,7 +65,9 @@ Three-commit arc (`e07fba7b` detector / `3607086f`+`9f7f6f85` audit / this close
   (~36%, the old false-positive class) / 385 concurs; Σ identity exact + expected-zero cells zero
   on every leg; crosstab off-diagonals realized, 47/47 sampled per-item re-derivations clean.
   `radiative_levitation_stratification` (OQ-136's text-ruled FP) now machine-reads
-  `excluded_concurs(scaffold)`.
+  `excluded_concurs(scaffold)`. **Citation ceiling: n=9 dissent supports existence + the OQ-199
+  stratum only — no rate/distribution/comparative claims; the 385 concurs is equally readable as
+  type-derivation coarseness washing out sub-type-resolution disagreement (undistinguished).**
 - **Declined:** the full role-gauge H¹ (operator ruling; config-forced geometry / coarsening of
   `h1_stakeholder` / OQ-56 tripwire) — decline does NOT cite 0.245.
 - **Correction-key ripple:** the 0.245 twin-agreement in design_discipline §0.1 + OQ-56/OQ-150
