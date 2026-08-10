@@ -900,6 +900,14 @@ rationale: `audits/README.md` → *Writeup format*; existing dirs are point-in-t
 Machine-checked: `python3 python/audit_writeup_gate.py --check` in `scripts/gate.sh` (selftest
 rides every run; pre-adoption dirs exempt; malformed dir names fail closed).
 
+**Catch bit (2026-08-10, forward-only): every NEW WRITEUP.md also carries one `**Fired:**`
+line** — `live` (a control fired / a claim flipped / a consumer-visible verdict changed) |
+`latent` (real defect, conditional on an unproduced input) | `no` (pure confirmation). This is
+the apparatus's own instrument: the rolling live/latent/no rate is the falsifier for the
+verification ritual itself (reported by `python3 python/apparatus_instrument.py --check` in
+`scripts/gate.sh`, which also enforces the memory feedback-channel cap; the rate is reported,
+never gated — reading it is the operator's seat). Spec: `audits/README.md` → *The Fired: bit*.
+
 ## Cross-Sibling Disambiguation (standard practice)
 
 When a per-item call about an authored field is ambiguous in one file (agent vs vindicated

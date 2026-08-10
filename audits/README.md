@@ -70,9 +70,22 @@ files keep reserved names, and WRITEUP.md links each one present:
 **Verdict:** one sentence: the claim, its scope, the caveat the body carries
 **Substrate:** corpus leg(s) + pipeline-manifest cite (n_constraints, code_commit,
   code_dirty) — or `no pipeline run`
+**Fired:** live — <what fired/flipped> | latent — <hazard found, conditional on
+  unproduced input> | no
 **Evidence map:** one line per artifact in this directory — what it is, which claim
   it witnesses
 ```
+
+**The `Fired:` bit (adopted 2026-08-10, forward-only; dirs dated > 2026-08-10).** The
+apparatus's own catch-rate instrument (operator ruling 2026-08-10; the "one-fix-bite"
+question from `build_discipline.md` → *Don't answer "does the apparatus pay for itself?"
+by producing more apparatus*, installed in substrate). `live` = a control fired, a claim
+flipped, or a verdict a consumer actually saw changed; `latent` = a real defect found but
+conditional on an input the system does not currently produce; `no` = pure confirmation.
+Machine-checked by `python3 python/apparatus_instrument.py --check` in `scripts/gate.sh`
+(selftest rides every run); the rolling rate is REPORTED, never gated — reading it is the
+operator's seat. Pre-adoption dirs are exempt; a voluntarily backfilled `Fired:` line still
+counts toward the rate.
 
 Body sections are flexible; the reader contract is not: the **headline carries the verdict**
 ("proxy only" in the body means "proxy only" in the title — build_discipline → *over-confident
