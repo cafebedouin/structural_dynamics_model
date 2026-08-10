@@ -124,6 +124,16 @@ aggregatable_reading(stakeholder_seats:stakeholder_agent_seats/2, corpus_constra
 aggregatable_reading(stakeholder_seats:stakeholder_type_vector/2, corpus_constraint, total_on_domain).
 aggregatable_reading(stakeholder_seats:stakeholder_obstruction/5, corpus_constraint, total_on_domain).
 
+% OQ-151 empty-chair detector (registered in the same change that added them).
+% empty_chair_state/2 ARGUMENT ASYMMETRY (also stated at the clause): in
+% empty_chair_dissent*(T, DissentTypes, AllTypedExNames), DissentTypes is
+% dissent-filtered but AllTypedExNames names EVERY typed chair, including
+% concurring ones — never read it as "the chairs that dissented".
+aggregatable_reading(stakeholder_seats:excluded_seat_names/2,  corpus_constraint, total_on_domain).
+aggregatable_reading(stakeholder_seats:excluded_type_tokens/2, corpus_constraint, total_on_domain).
+aggregatable_reading(stakeholder_seats:role_type_sets/2,       corpus_constraint, total_on_domain).
+aggregatable_reading(stakeholder_seats:empty_chair_state/2,    corpus_constraint, total_on_domain).
+
 % Partial-by-design (relational; off-domain silence is the domain, not a
 % defect). The doc-named case from OQ-137's scope discriminator:
 aggregatable_reading(stakeholder_seats:in_contention/3, corpus_constraint,
@@ -134,6 +144,8 @@ aggregatable_reading(stakeholder_seats:chi_for_stakeholder/3, seat,
     partial_by_design('raw per-seat chi, same shape as dr_type_for_stakeholder/3; no totalized wrapper yet — first candidate if an aggregate ever consumes per-seat chi')).
 aggregatable_reading(stakeholder_seats:power_witness_count/3, corpus_constraint,
     partial_by_design('per-power-atom expansion (6 solutions per C); power_witness_map/2 is the exactly-one surface')).
+aggregatable_reading(stakeholder_seats:role_type_set/3, corpus_constraint,
+    partial_by_design('per-role expansion (5 solutions per C); role_type_sets/2 is the exactly-one surface')).
 aggregatable_reading(stakeholder_seats:extraction_reading/2, corpus_constraint,
     partial_by_design('fires exactly on extraction_fired; total surface = extraction_state/2')).
 aggregatable_reading(signature_detection:false_natural_law/2, corpus_constraint,
@@ -186,3 +198,4 @@ aggregatable_reading(narrative_ontology:epsilon_provenance/5, corpus_constraint,
 census_source_backing(q6,                 stakeholder_seats:q6_crosscheck/3).
 census_source_backing(extraction_reading, stakeholder_seats:extraction_state/2).
 census_source_backing(consensus,          stakeholder_seats:consensus_provenance/2).
+census_source_backing(empty_chair,        stakeholder_seats:empty_chair_state/2).

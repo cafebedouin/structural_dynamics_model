@@ -77,6 +77,7 @@
 commentary_source(q6).
 commentary_source(extraction_reading).
 commentary_source(consensus).
+commentary_source(empty_chair).
 
 % ----------------------------------------------------------------------------
 % PER-CONSTRAINT CELL HOOK  commentary_cell(+Source, +C, -Bucket)
@@ -130,6 +131,24 @@ consensus_bucket(unanimous_no_excluded_seats,          unanimous_no_excluded_sea
 consensus_bucket(unanimous_with_untypeable_seats,      unanimous_with_untypeable_seats).
 consensus_bucket(plural(_),                            plural).
 
+% empty_chair (OQ-151) — typed refinement of the mcc candidate set. Reads the
+% TOTAL empty_chair_state/2 (registry-proven exactly-one). Compound states are
+% FLATTENED to their functor (per-chair name/type detail stays queryable on
+% the predicate). ALL 8 map clauses land in the same edit as the tokens — a
+% missed clause under-counts the Σ==n_corpus check.
+commentary_cell(empty_chair, C, Bucket) :-
+    stakeholder_seats:empty_chair_state(C, State),
+    empty_chair_bucket(State, Bucket).
+
+empty_chair_bucket(no_excluded_seat,                      no_excluded_seat).
+empty_chair_bucket(excluded_untyped(_),                   excluded_untyped).
+empty_chair_bucket(included_insufficient,                 included_insufficient).
+empty_chair_bucket(included_plural(_),                    included_plural).
+empty_chair_bucket(excluded_concurs(_),                   excluded_concurs).
+empty_chair_bucket(excluded_concurs_untypeable(_),        excluded_concurs_untypeable).
+empty_chair_bucket(empty_chair_dissent(_, _, _),          empty_chair_dissent).
+empty_chair_bucket(empty_chair_dissent_untypeable(_, _, _), empty_chair_dissent_untypeable).
+
 % ----------------------------------------------------------------------------
 % OUT-OF-DOMAIN BUCKETS  commentary_out_of_domain_bucket(+Source, ?Bucket)
 %   Buckets meaning "the reading does not APPLY here". Excluded from the coverage
@@ -145,6 +164,10 @@ commentary_out_of_domain_bucket(extraction_reading, extraction_out_of_domain).
 % bucket is kept as the honest surface that CAUGHT the artifact. Post-OQ-202
 % its count should shrink toward genuine residue on newly generated stories.
 commentary_out_of_domain_bucket(consensus, no_agent_seats).
+% empty_chair: the detector question ("does the chair dissent?") applies only
+% where a chair was authored — no excluded seat is out-of-domain by the
+% predicate's own semantics.
+commentary_out_of_domain_bucket(empty_chair, no_excluded_seat).
 
 % ----------------------------------------------------------------------------
 % ABSENCE BUCKETS  commentary_absence_bucket(+Source, ?Bucket)
@@ -159,6 +182,11 @@ commentary_absence_bucket(q6, q6_signature_unknown).  % computed side absent
 % measured state (clear / unnameable / fired); coverage is 1.0 over its domain by
 % construction (a total predicate has no "didn't look" gap on its domain).
 commentary_absence_bucket(consensus, seats_untyped).  % seats present, none typed
+% empty_chair: excluded_untyped = chair(s) present, NONE derives a real type —
+% "didn't look" on the chair side (the derivation gave no reading to compare).
+% included_insufficient / included_plural are MEASURED (facts about the room,
+% not about the probe — same rationale as insufficient_real_seats above).
+commentary_absence_bucket(empty_chair, excluded_untyped).
 
 % ----------------------------------------------------------------------------
 % PREVALENCE BUCKET  commentary_prevalence_bucket(+Source, ?Bucket)
@@ -187,6 +215,15 @@ commentary_coverage_decidable(consensus).            % consensus_provenance/2 is
                                                      % partition, test_seat_totality +
                                                      % test_reading_totality) — the bucket
                                                      % sets above are ruled complete.
+commentary_coverage_decidable(empty_chair).          % empty_chair_state/2 is TOTAL with an
+                                                     % exhaustive 8-token partition (registry-
+                                                     % proven exactly-one; tests/test_empty_chair)
+                                                     % — the ood/absence sets above are ruled
+                                                     % complete.
+% empty_chair: NO prevalence bucket (mirrors the consensus source's declared
+% choice): empty_chair_dissent* is a structural-footprint CANDIDATE (OQ-203
+% caveat at the clause), not a positive finding — headlining its rate would
+% counterfeit a verdict the predicate does not give.
 
 % ----------------------------------------------------------------------------
 % CENSUS  commentary_census(+Source, -Census)

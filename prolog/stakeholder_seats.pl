@@ -32,6 +32,11 @@
     stakeholder_agent_seats/2,
     stakeholder_type_vector/2,
     stakeholder_obstruction/5,
+    excluded_seat_names/2,
+    excluded_type_tokens/2,
+    role_type_set/3,
+    role_type_sets/2,
+    empty_chair_state/2,
     q6_crosscheck/3,
     extraction_reading/2,
     extraction_state/2,
@@ -346,6 +351,157 @@ stakeholder_obstruction(C, H0, H1, NSeats, NReal) :-
         length(RealVector, NReal),
         obstruction_from_vector(Vector, H0, H1),
         assertz(cached_stakeholder_obstruction(C, H0, H1, NSeats, NReal))
+    ).
+
+% ============================================================================
+% EMPTY-CHAIR DETECTOR (OQ-151) — typed refinement of the mcc candidate set
+% ============================================================================
+% consensus_provenance/2's manufactured_consensus_candidate* fires on MERE
+% EXISTENCE of an excluded seat — the chair is never typed, dissent never
+% checked. empty_chair_state/2 is the typed refinement: it derives each
+% excluded seat's own reading (dr_type_for_stakeholder/3 works on excluded
+% seats; a reading, never an override — R3) and asks whether any typed chair
+% actually DISSENTS from the room's unanimous type. Commentary-grade (R3):
+% annotates, never feeds classification. Census-only serialization (operator
+% ruling 2026-08-09): the verdict lives on this predicate + the
+% commentary_census empty_chair source; pipeline_output.json is untouched
+% (OQ-204 one-verdict-one-site; empty_chair_state/2 is OQ-204's refinement
+% source).
+%
+% OQ-203 CAVEAT (carried at the clause because the predicate is exported): a
+% typed dissenting chair is a structural-footprint CANDIDATE only — the
+% authored vocabulary cannot yet distinguish structural exclusion (kept out)
+% from evidential exclusion (not consulted). No consumer may read
+% empty_chair_dissent* as a manufactured-consensus VERDICT.
+
+%% excluded_seat_names(+C, -Ns)
+%  The excluded seats of C, by name. TOTAL ([] when none). MIRRORS the Excl
+%  findall inside consensus_provenance/2 (:245) — deliberately NOT extracted
+%  from it: that predicate is frozen under the OQ-217 exact biconditional, so
+%  the mirror is pinned by test instead (tests/test_empty_chair.pl
+%  mcc_excl_mirror — forall corpus C, mcc verdicts' Excl == this list).
+%  Deliberately NO stakeholder_non_agent filter, matching the mirrored clause
+%  (parity witnessed at Step 0, 2026-08-09).
+excluded_seat_names(C, Ns) :-
+    findall(X, narrative_ontology:constraint_stakeholder(C, X, excluded, _, _, _, _), Ns).
+
+%% excluded_type_tokens(+C, -Pairs)
+%  Name-Token pairs for every excluded seat, via the kernel-facing
+%  seat_type_token/3 (failed derivation -> `unknown`; the two-absence-token
+%  discipline is unchanged — is_real_type/1 is the only downstream filter).
+%  TOTAL ([] when no excluded seat).
+excluded_type_tokens(C, Pairs) :-
+    excluded_seat_names(C, Ns),
+    findall(N-T, ( member(N, Ns), seat_type_token(C, N, T) ), Pairs).
+
+%% role_type_set(+C, ?Role, -Set)
+%  Set-valued per-role projection of seat type tokens over the 5-atom primary
+%  role vocabulary (enumerated via role_base_d/2 — no forked role list,
+%  Pattern 2). A non-singleton Set is intra-role fracture, SURFACED not washed
+%  (OQ-151's set-valued aggregation requirement). Non-excluded roles apply the
+%  stakeholder_non_agent filter (matching stakeholder_agent_seats/2); the
+%  excluded role does not (matching excluded_seat_names/2 — the mirror above).
+%  5 solutions per C; role_type_sets/2 is the exactly-one aggregate surface.
+role_type_set(C, Role, Set) :-
+    role_base_d(Role, _),                       % the 5 role atoms, one solution each
+    (   Role == excluded
+    ->  excluded_seat_names(C, Ns)
+    ;   findall(N, ( narrative_ontology:constraint_stakeholder(C, N, Role, _, _, _, _),
+                     \+ narrative_ontology:stakeholder_non_agent(C, N) ), Ns)
+    ),
+    findall(T, ( member(N, Ns), seat_type_token(C, N, T) ), Ts),
+    sort(Ts, Set).
+
+%% role_type_sets(+C, -Pairs)
+%  Pairs = [Role-Set, ...] over the 5-atom vocabulary — the exactly-one
+%  surface (registered total_on_domain). TOTAL: always succeeds once.
+role_type_sets(C, Pairs) :-
+    findall(Role-Set, role_type_set(C, Role, Set), Pairs).
+
+%% empty_chair_state(+C, -State)
+%  TOTAL (OQ-121: single ordered ladder into a FRESH var, unified with the
+%  caller's State only at the end — an unguarded catch-all cannot spuriously
+%  succeed when State is pre-bound). The included room is
+%  stakeholder_agent_seats/2 under the SAME tokens consensus_provenance/2 and
+%  the stakeholder H¹ consume (stakeholder_type_vector/2 — Pattern-2 no-fork;
+%  agenda_setter/observer are settled by construction: in the room as
+%  themselves). ≥2-real-included threshold carried from OQ-217.
+%
+%  Exhaustive 8-token set, in dispatch order (order is load-bearing — the
+%  included-room checks precede chair typing, so a typed chair beside an
+%  insufficient/plural room reports the ROOM, pinned by tests 5/7):
+%    no_excluded_seat        : no excluded seat authored (out-of-domain).
+%    included_insufficient   : chair present, <2 real-typed included seats —
+%                              no room consensus to test the chair against.
+%    included_plural(Ts)     : chair present, room already disagrees (>=2
+%                              distinct real types) — no consensus to test.
+%    excluded_untyped(ExNames): room unanimous, but NO excluded seat derives
+%                              a real type (ALL chairs `unknown`). Fires IFF
+%                              no chair derives real — a partially-typed
+%                              chair set NEVER lands here: untyped chairs are
+%                              dropped and the typed ones drive the verdict.
+%    excluded_concurs(T)     : ALL typed chairs derive the room's type T
+%                              (every included seat real).
+%    excluded_concurs_untypeable(T) : as above, untypeable seats beside the
+%                              agreeing included reals (OQ-217 universal-claim
+%                              principle — the caveat rides in the token).
+%    empty_chair_dissent(T, DissentTypes, AllTypedExNames) : DISSENT WINS —
+%                              any typed chair whose type differs from T
+%                              produces this verdict, however many chairs
+%                              concur.
+%    empty_chair_dissent_untypeable(T, DissentTypes, AllTypedExNames) : the
+%                              same with untypeable included seats.
+%
+%  ARGUMENT ASYMMETRY (stated here AND at the registry entry): DissentTypes
+%  is DISSENT-FILTERED (only types outside the included type T, sorted);
+%  AllTypedExNames is EVERY typed chair's name, INCLUDING concurring chairs —
+%  in the mixed case a concurring chair's name appears while its type does
+%  not. Named AllTypedExNames precisely so an OQ-204 consumer cannot read it
+%  as "the chairs that dissented".
+%
+%  Fail-open: absent chair -> no_excluded_seat; all-untyped chairs ->
+%  excluded_untyped — never dissent, never consensus (the 4/5-false-positive
+%  trap of the retired probe_mc_cases prototype, which skipped the
+%  is_real_type filter). No memoization (matches consensus_provenance/2;
+%  cache pattern at cached_stakeholder_obstruction if profiling ever demands).
+empty_chair_state(C, State) :-
+    excluded_seat_names(C, ExNames),
+    (   ExNames == []
+    ->  State0 = no_excluded_seat
+    ;   stakeholder_type_vector(C, Vector),     % SAME tokens the H¹/mcc consume
+        include(is_real_type, Vector, RealVector),
+        length(Vector, NSeats),
+        length(RealVector, NReal),
+        sort(RealVector, RealTypes),
+        (   NReal < 2
+        ->  State0 = included_insufficient
+        ;   RealTypes = [T]
+        ->  empty_chair_verdict(C, T, NReal, NSeats, ExNames, State0)
+        ;   State0 = included_plural(RealTypes)
+        )
+    ),
+    State = State0.
+
+% empty_chair_verdict(+C, +T, +NReal, +NSeats, +ExNames, -State0): the room
+% is unanimous on real type T over >=2 real seats — type the chairs.
+empty_chair_verdict(C, T, NReal, NSeats, ExNames, State0) :-
+    excluded_type_tokens(C, Pairs),
+    findall(N-Tok, ( member(N-Tok, Pairs), is_real_type(Tok) ), TypedPairs),
+    (   TypedPairs == []
+    ->  State0 = excluded_untyped(ExNames)
+    ;   findall(N, member(N-_, TypedPairs), AllTypedExNames),
+        findall(Tok, ( member(_-Tok, TypedPairs), Tok \== T ), Dis0),
+        sort(Dis0, DissentTypes),
+        (   DissentTypes == []
+        ->  (   NReal < NSeats
+            ->  State0 = excluded_concurs_untypeable(T)
+            ;   State0 = excluded_concurs(T)
+            )
+        ;   (   NReal < NSeats
+            ->  State0 = empty_chair_dissent_untypeable(T, DissentTypes, AllTypedExNames)
+            ;   State0 = empty_chair_dissent(T, DissentTypes, AllTypedExNames)
+            )
+        )
     ).
 
 %% q6_crosscheck(+C, -Cell, -Daylight)
