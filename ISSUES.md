@@ -10529,7 +10529,50 @@ consumer requiring the role gauge).
 
 ---
 
-*Last updated: 2026-08-09. Add new items with sequential OQ-NN labels. Mark
+## OQ-276 — Apparatus catch-rate readout: the standing kill-question on the verification ritual (Fired: bit + feedback-channel cap adopted 2026-08-10)
+
+**Ω-type:** Ω_P at the read (whether the ritual's cost is worth the catch rate is the
+operator's value ruling); the rate itself is Ω_E (mechanically computed).
+
+**Status:** open
+**Priority:** 5
+**Deps:**
+**Origin:** Operator ruling 2026-08-10, from the session-opening assessment "is the
+confirmatory apparatus earning its keep or is it LLM make-work?" Verdict there: the
+apparatus demonstrably fires (44% of audit dirs document a silent defect; kills and
+retractions throughout the July–Aug commit log), but the discipline stack accretes
+monotonically with no catch-rate accounting — the ritual was unfalsifiable by its own
+standards. This OQ installs the kill-question in substrate per `build_discipline.md` →
+*Don't answer "does the apparatus pay for itself?" by producing more apparatus*
+(honest move 4).
+
+**What was built (commit `bfee1b06`):** `python/apparatus_instrument.py` in
+`scripts/gate.sh`. (1) **Catch bit** — every audit dir dated > 2026-08-10 must carry
+`**Fired:** live | latent | no` in WRITEUP.md (spec: `audits/README.md` → *The Fired:
+bit*; live = control fired / claim flipped / consumer-visible verdict changed; latent
+= real defect conditional on unproduced input; no = pure confirmation). (2) **Channel
+cap** — MEMORY.md Feedback sections ≤ 33 entries (end state of the 2026-08-10 prune,
+113→53 files); admitting a rule requires retiring one (gated exchange). Selftest
+(planted violations + conforming twins) rides every gate run.
+
+**Standing obligation (the readout):** at each monthly consolidation pass (CLAUDE.md
+→ Memory Consolidation Review), read the rolling live/latent/no tally the gate line
+prints and record it in the pass notes. The rate is REPORTED, never gated — the gate
+enforces only that the bit exists; reading the rate is the operator's seat.
+
+**What resolution would change:** a sustained live-rate decay toward zero (window and
+floor are the operator's to set at first reading — deliberately not pre-committed
+here, since no bits exist yet and pinning a floor before the lattice of achievable
+values is known is the OQ-264 quantization mistake) licenses downgrading tiers of the
+ritual (lighter apparatus for claims no consumer reads); a healthy live rate closes
+the "make-work" question with data. Either way the answer stops being asserted and
+starts being measured. Falsifier for the instrument itself: if audits start gaming
+the bit (everything tagged `latent` to look useful), the per-entry one-line
+justification is the audit trail — spot-check at consolidation time.
+
+---
+
+*Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
