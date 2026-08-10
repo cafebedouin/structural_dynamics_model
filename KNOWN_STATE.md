@@ -50,8 +50,10 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 **Tier:** landed
 
 Session opened with the operator's question "is the confirmatory apparatus earning its keep
-or is it LLM make-work?" Assessment verdict: the apparatus FIRES — 77/175 audit dirs document
-a silent/never-fired defect; the July–Aug commit log carries kills, retractions, and
+or is it LLM make-work?" Assessment verdict: the apparatus FIRES — 73/175 audit dirs document
+a silent/never-fired defect (CORRECTED same day: first stated 77/175, a `cut -d/ -f2` unit
+error counting unique filenames not directories; caught discharging the v0.3 numbers
+manifest); the July–Aug commit log carries kills, retractions, and
 corrections of the apparatus's own headlines — but the discipline stack accreted monotonically
 with no catch-rate accounting, making the ritual unfalsifiable by its own standards. Operator
 ruled: run the monthly compression, then instrument the apparatus with a finite channel +

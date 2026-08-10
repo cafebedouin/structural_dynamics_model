@@ -10539,7 +10539,10 @@ operator's value ruling); the rate itself is Ω_E (mechanically computed).
 **Deps:**
 **Origin:** Operator ruling 2026-08-10, from the session-opening assessment "is the
 confirmatory apparatus earning its keep or is it LLM make-work?" Verdict there: the
-apparatus demonstrably fires (44% of audit dirs document a silent defect; kills and
+apparatus demonstrably fires (42% of audit dirs — 73/175 — document a silent defect
+[CORRECTED 2026-08-10: originally stated 77/175 = 44%; that run's `cut -d/ -f2` counted
+unique FILENAMES, not directories — a unit error caught while discharging the v0.3
+numbers manifest; exact command in `docs/amnesiac_institution_v0.3.md` Appendix B]; kills and
 retractions throughout the July–Aug commit log), but the discipline stack accretes
 monotonically with no catch-rate accounting — the ritual was unfalsifiable by its own
 standards. This OQ installs the kill-question in substrate per `build_discipline.md` →

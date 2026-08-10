@@ -1,5 +1,9 @@
 # The Amnesiac Institution: An Epistemic Development Model for Research Conducted with Stateless Language Models
 
+*Superseded by `docs/amnesiac_institution_v0.3.md` (2026-08-10). This v0.1 draft is kept as
+history; its 77/175 (44%) incidence figure was corrected to 73/175 (42%) in v0.3 §4.5 (unit
+error), and several of its claims were downgraded in v0.2 review. Do not cite from this file.*
+
 **cafebedouin@gmail.com**
 
 *Status: DRAFT v0.1 (2026-08-10). PROPOSED throughout — no operator ruling has adopted this
