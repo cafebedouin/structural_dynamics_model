@@ -10233,6 +10233,15 @@ candidate set (dissent / untyped-chair / concurs, `_untypeable` variants), alrea
 typing; measured base rates (five legs, 2026-08-09): 613 candidates → 9 typed-dissent (~1.5%) /
 219 excluded_untyped (~36%) / 385 concurs. Read the `empty_chair_dissent*` argument asymmetry note
 at the clause (DissentTypes is dissent-filtered; AllTypedExNames includes concurring chairs).
+**Channel constraint (RULING BOUNDARY, not a preference):** the census-only serialization ruling
+(operator ruling 2, OQ-151 close 2026-08-09) closed the JSON chain — the verdict lives on the
+predicate + census only, `pipeline_output.json` untouched — so for a per-constraint report
+surface the ONLY compliant channel is the `report_generator.pl` swipl path
+(`enhanced_report.py`'s per-constraint Prolog call); a build reaching for
+`enriched_pipeline.json`/`pipeline_output.json` is REOPENING that ruling, not making a new
+decision. **Layering constraint:** the family surfaces AS A UNIT or not at all — base consensus
+verdict before (or with) the `empty_chair_state/2` refinement; a report line showing
+`excluded_concurs` without its mcc context cannot be told apart from "chair never in scope".
 
 **What resolution changes.** The first census bucket promoted from honest count to first-class corpus statistic — the seated-reporting precedent for any later bucket promotion.
 
