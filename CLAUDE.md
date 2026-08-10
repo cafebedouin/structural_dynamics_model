@@ -874,14 +874,19 @@ resolved/stale items. The same monthly pass covers:
   premise has changed; this is the symmetric counterpart to the promotion test (promotion adds,
   this removes/refreshes).
 
-**Last review: 2026-08-06. Interval: monthly.** If today is on or after **2026-09-06**, prompt
+**Last review: 2026-08-10. Interval: monthly.** If today is on or after **2026-09-10**, prompt
 the user to run a consolidation pass before starting the requested work, then update both dates.
-**Declared residue from the 2026-08 pass (pick up next round):** (a) the 51
-tripwire/correction-key KNOWN_STATE entries in the 2026-06-05..2026-07-06 window were left
-uncompressed (each needs the promotion test, not mechanical compression); (b) the ISSUES
-compress-on-close backlog is ~130 closed entries >14 lines (census 2026-08-05; worst:
-OQ-138 219, OQ-153 180, OQ-62 176, OQ-219 137 — several carry still-operative rulings the
-footer exempts, so compress with the exception rule in hand, not in bulk).
+The 2026-08-10 pass was the major prune (memory 113→53 files; KNOWN_STATE window residue
+drained 52/52; ISSUES backlog drained 100/139) and installed the apparatus instrument:
+**the memory Feedback channel is capped at 33 entries (gated exchange — retire one to admit
+one) and every consolidation pass reads the rolling Fired: catch rate (OQ-276)**, both
+enforced/reported by `python3 python/apparatus_instrument.py --check` in the gate.
+**Declared residue (pick up next round):** (a) 40 borderline ISSUES entries left uncompressed
+(30 pre-compressed 16–33-line pointer-blocks; 7 fresh Aug-2026 closes — OQ-151/258/259/260/
+261/262/264 — whose bodies are still-operative rulings; revisit once aged); (b) one headerless
+tripwire block in KNOWN_STATE under the 2026-06-27 OQ-124/OQ-149 header (a lost `##` header —
+one-line restore); (c) first OQ-276 catch-rate reading, and set its decay floor once enough
+Fired: bits exist to see the value lattice.
 
 ## Audit Methodology
 

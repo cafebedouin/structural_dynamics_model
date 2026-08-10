@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-10 — [landed] Monthly consolidation MAJOR PRUNE + apparatus instrument: memory 113→53 files (Feedback channel capped at 33, gated exchange), KNOWN_STATE window residue 52/52 drained, ISSUES backlog 100/139 drained, Fired: catch bit adopted — OQ-276 minted
+**Files:** CLAUDE.md, KNOWN_STATE.md, ISSUES.md, python/apparatus_instrument.py, scripts/gate.sh, audits/README.md, python/check_gap_status_surfaces.py
+**Tier:** landed
+
+Session opened with the operator's question "is the confirmatory apparatus earning its keep
+or is it LLM make-work?" Assessment verdict: the apparatus FIRES — 77/175 audit dirs document
+a silent/never-fired defect; the July–Aug commit log carries kills, retractions, and
+corrections of the apparatus's own headlines — but the discipline stack accreted monotonically
+with no catch-rate accounting, making the ritual unfalsifiable by its own standards. Operator
+ruled: run the monthly compression, then instrument the apparatus with a finite channel +
+gated exchange sized by the prune's end state.
+
+- **Memory prune** (out-of-repo, `~/.claude/projects/.../memory/`): 113 content files → 53.
+  ~25 deleted as promoted-to-repo-docs or stale (incl. `invariant_analysis`, which still
+  stated the retired χ=ε×π law); ~35 merged into 11 cluster files (biggest: 12 prereg/gate
+  rider files from the 2026-08 arc). Dominant excess: DUPLICATION-AFTER-PROMOTION (rules
+  promoted into repo docs whose memory copy was never retired) + per-OQ rider accretion.
+  Pre-prune backup beside the memory dir. Feedback end state = 33 entries = the channel cap.
+- **Apparatus instrument** (commit `bfee1b06`): `python/apparatus_instrument.py` in
+  `scripts/gate.sh` — per-audit `**Fired:** live|latent|no` catch bit (dirs > 2026-08-10;
+  spec in `audits/README.md`), feedback-channel cap 33 (gated exchange), selftest rides every
+  run; rate reported never gated. Standing readout: OQ-276.
+- **KNOWN_STATE roll-off residue** (commit `011fc2bb`): all 52 window tripwire/correction-key
+  entries promotion-tested and compressed (5,710→4,796 lines, token-preservation checked);
+  2 promoted first — moderate-cap re-rule trigger → CLAUDE.md Architecture Invariants;
+  gap-renderer add-here obligation → `check_gap_status_surfaces.py` docstring.
+- **ISSUES compress-on-close drain** (commit `ed45ada5`): 100/139 backlog entries compressed
+  (13,142→10,563 lines), still-operative rulings kept verbatim per footer exception, statuses
+  byte-identical before/after, router regenerated, all checks green. 40 skipped with reasons
+  (declared residue in CLAUDE.md Memory Consolidation Review).
+
 ## 2026-08-09 — [landed] OQ-151 resolved: typed empty-chair detector + dual-gauge crosstab; role-gauge H¹ declined; 0.245 label corrected (was power-keyed) — OQ-275 minted
 
 **Files:** prolog/stakeholder_seats.pl, prolog/reading_registry.pl, prolog/commentary_census.pl, prolog/tests/test_empty_chair.pl, python/audits/oq151_dual_gauge_crosstab.py, docs/design/design_discipline.md, ISSUES.md
