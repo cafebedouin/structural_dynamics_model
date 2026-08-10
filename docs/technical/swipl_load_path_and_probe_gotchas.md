@@ -153,7 +153,14 @@ still returns a plausible value (the session-scope version of §2's trap).
   `audits/2026-07-17_oq60_purity_absence/clatent_witness.py`); a probe whose baseline rides a
   census/TSV must re-run that census same-session on the live leg before joining. Also serialize
   behind any running orchestrator (`ps` for `c-orchestrator|run_pipeline`) — its `run_pipeline`
-  step races yours (OQ-77).
+  step races yours (OQ-77). **And fingerprints are METHOD-RELATIVE — compare only same-method,
+  same-session brackets.** `ls *.pl | sort | xargs md5sum | md5sum` (hashes filenames + contents)
+  and a digest-of-digests over contents give DIFFERENT values for the identical corpus; a
+  cross-method or cross-session comparison reads as mutation when nothing moved — or, the silent
+  dual, trains you to shrug off a mismatch that IS a mutation. Witnessed near-miss 2026-08-09
+  (OQ-151 audit): the plan session's haiku fingerprint and the audit's regen-bracket fingerprint
+  differed by method alone; the valid witness was the same-method before/after pair, and the log
+  states its method inline for exactly this reason.
 - **The diff is only valid if the run REWROTE the file — the aborted-gate stale-output false pass.**
   `run_pipeline.py` runs its gates (load-warning gate, ISSUES status-grammar gate) and aborts
   *non-zero BEFORE* the json write. On an abort, `outputs/pipeline_output.json` keeps its PRIOR

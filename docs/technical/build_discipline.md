@@ -1877,6 +1877,29 @@ premise here may not be cited as settled without re-witnessing at its rung at po
 
 ---
 
+## A correction is not done until the old value's consumers are swept
+
+The citation-time rule above governs *re-using* a witnessed fact; this is its dual for
+*correcting* one. When a number, label, or detector semantics is found wrong, fixing the source
+site is half the job: the old value may be load-bearing anywhere it was ever cited, and each such
+site silently re-asserts it after your fix. **Rule: a correction ships with a sweep of the old
+value's consumers** — grep the token/number/predicate across `prolog/`, `python/`, `audits/`,
+`ISSUES.md`, `docs/`; give each hit a per-claim verdict (*rests-on-the-old-semantics* → its own
+correction line or OQ; *anchored-to-its-own-witness* → record why it stands); commit the sweep as
+an artifact, not a session claim. A "zero corrections owed" conclusion needs the sweep pasted.
+
+Witnessed instance (OQ-151 close, 2026-08-09): the `seat_role_vector` twin-agreement 0.245 was
+measured on the power-keyed vector, and because nobody swept its spenders at mint, the mis-keyed
+number propagated into `design_discipline.md` §0.1 and two ISSUES entries *as a decline ground* —
+"finding the number and not checking who spent it is how the 0.245 got where it is" (operator).
+The corrective arc then ran the sweep as an audit artifact
+(`audits/2026-08-09_oq151_dual_gauge/consumer_sweep.txt`, per-claim verdicts in its WRITEUP §3)
+and corrected all three citation sites in one commit. The durable form of a sweep is a pointer at
+the corrected clause itself (the `unanimous_verdict/4` comment naming its typed refinement) — a
+sweep is a snapshot; the clause comment is where the next reader will actually be standing.
+
+---
+
 ## The spine: every defect here is an absence that presents as a presence
 
 The five patterns are one shape seen in five places. In each, something is **missing** — a

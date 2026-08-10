@@ -50,6 +50,12 @@ files keep reserved names, and WRITEUP.md links each one present:
 - `PROPOSAL.md` — exactly what will run and what would constitute each verdict.
 - `PREREGISTRATION.md` — this single spelling (not `PRE_REGISTRATION.md`/`PREREG.md`).
   **Frozen at spend time**: never retro-edited; the writeup quotes it, never amends it.
+  **And the freeze must be WITNESSABLE, not narrated** (operator, 2026-08-09): record the
+  file's md5 into the audit log BEFORE the first run, so the md5 line sits physically above
+  the first result line — a prereg file merely sitting next to results doesn't witness the
+  ordering. If the prereg is amended after a first run, log the new md5 at its position;
+  that history is the honest record. Template:
+  `audits/2026-08-09_oq151_dual_gauge/audit_log.md`.
 - `FINDINGS_<leg>.md` / `READOUT_<arm>.md` — per-leg or per-arm interim results in multi-phase
   audits; at close, WRITEUP.md is written (or promoted from the final findings file) and links
   them all.

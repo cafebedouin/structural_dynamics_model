@@ -1593,3 +1593,33 @@ building it unaware the deferral was deliberate.
 path (the annotations survive re-judgment by a different instrument — that was the
 design condition), and registration/gating per the reading-registry and spec-enum
 opt-in rules (both are silent-escape shapes if skipped).
+
+---
+
+## GAP-34 — No role-projected obstruction gauge: the role-site H¹ is DECLINED by ruling, not unbuilt by accident
+
+**Declared:** 2026-08-09 (OQ-151 close, operator ruling;
+`audits/2026-08-09_oq151_dual_gauge/WRITEUP.md`).
+
+**The absent capability:** an H¹/disagreement measure computed over the role-projected
+site `[beneficiary, payer, excluded, observer]` (OQ-151's "six-questions gauge"). The
+engine deliberately does not have one. What exists instead: the per-role SET projection
+`stakeholder_seats:role_type_set/3` / `role_type_sets/2` (intra-role fracture surfaced,
+no obstruction number), the seat-frame `h1_stakeholder`
+(`stakeholder_obstruction/5` — the role site's refinement), and the typed empty-chair
+detector `empty_chair_state/2`.
+
+**Why declared rather than a defect (three independent grounds, OQ-151 close):** (a)
+the role-gauge geometry is config-forced (role→d + exit is the only live seat dial —
+GAP-27; seat-χ ordering fixed by role→d — GAP-14), so a role-H¹ would largely measure
+config, not the story; (b) a role projection is a coarsening of the seat vector
+`h1_stakeholder` already measures — a coarsening cannot outperform its refinement; (c)
+OQ-56 recorded the reopen tripwire for exactly this gauge and no live consumer needs
+it. The decline deliberately does NOT rest on the 0.245 twin-agreement (mis-keyed;
+OQ-275).
+
+**What would discharge it:** the OQ-151/OQ-56-aligned reopen condition — a live
+consumer that requires per-role disagreement structure `role_type_sets/2` +
+`h1_stakeholder` cannot express. Re-evaluated by a human at consumer-build time;
+nothing arms it automatically. A fresh instance proposing a role-projected H¹ should
+route through this entry and OQ-151's close, not build it as a missing feature.
