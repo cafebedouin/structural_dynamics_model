@@ -12,6 +12,11 @@ no_gap, one undetermined). Includes a SELF-TEST positive control: a degenerate r
 collapses the two states MUST be flagged, else this check is vacuous (an introduced instrument
 is itself a claim).
 
+ADD-HERE OBLIGATION: this gate covers ONLY the renderers imported below. A NEW human-facing
+gap/omega renderer is UNGUARDED until it is added to the surface list in main() in the same
+change — the gate silently under-covers it otherwise (same opt-in escape shape as
+reading-registry registration; KNOWN_STATE 2026-07-01).
+
 Run: python3 python/check_gap_status_surfaces.py   (exit 0 green / 1 red). Wired into scripts/gate.sh.
 """
 import os

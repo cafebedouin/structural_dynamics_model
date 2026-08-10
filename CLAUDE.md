@@ -385,7 +385,11 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   `diagnostic_summary:verdict_join/3` (base verdict + severity-floored alerts + grid/measurement
   provenance) and serialized as a sibling of `diagnostic_verdict` — any new report/consumer
   surface must headline the join; rendering `diagnostic_verdict.verdict` as a summary recreates
-  the GREEN-over-severe-alerts defect. Provenance: KNOWN_STATE 2026-06-11.
+  the GREEN-over-severe-alerts defect. **The moderate→yellow cap for correction-grade signatures
+  is confirmed-but-never-stressed** (zero moderate caps have ever shipped): the FIRST
+  correction-grade firing on a base-GREEN constraint IS the deferred re-rule evidence — re-run
+  `audits/2026-06-11_oq98_verdict_join/histogram_gate.pl` and surface the transition to the
+  operator before trusting the new headline. Provenance: KNOWN_STATE 2026-06-11.
 - **Purity carries TWO absence tokens; JSON null covers both — never coerce, average, or
   `.get(...,0)` (OQ-60, 2026-07-23).** Engine: `unknown` (no-data — e.g. no authored
   `coordination_type`, so no Boltzmann floor; the old fabricated `boltzmann_floor_default` is
