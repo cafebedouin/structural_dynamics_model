@@ -1,0 +1,262 @@
+{
+  "header": {
+    "constraint_id": "persona_as_valid_proxy_flat_control",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "f92d1932-e546-4f3f-ac6f-c1b71cc3a933"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.47,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Persona-Record-as-Valid-Human-Proxy Substitution Commitment",
+    "topic_domain": "ai_evaluation_infrastructure/research_methodology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "matraix_infrastructure_developers",
+      "platform_researchers_publishing_under_deadline",
+      "llm_vendors_selling_evaluation_capacity",
+      "conference_reviewers_needing_tractable_submissions"
+    ],
+    "victims": [
+      "underrepresented_user_populations_poorly_modeled_by_personas",
+      "human_crowdworkers_displaced_from_evaluation_pipelines",
+      "downstream_product_teams_relying_on_persona_validated_findings",
+      "end_users_of_systems_tuned_against_synthetic_proxies"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "matraix_infrastructure_developers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Built and maintain the persona-generation schema and the LLM-driven enactment pipeline. They decide what counts as a valid persona record, what the responsible-use section permits, and what future-work items get deferred rather than resolved now. They benefit from every downstream adoption citing the infrastructure, and bear none of the cost if a persona-based finding later fails to generalize to real users."
+    },
+    {
+      "name": "platform_researchers_publishing_under_deadline",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Use persona-based evaluation because recruiting, compensating, and screening human participants is slow and expensive relative to publication and product cycles. They get faster iteration and larger nominal sample sizes. They also inherit the risk: if the substitution claim is later shown unsound for their domain, their published results and shipped features are implicated, but by then attribution is diffuse."
+    },
+    {
+      "name": "llm_vendors_selling_evaluation_capacity",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell the compute and API access that personas run on. Every persona-based evaluation is billable inference volume. They have no stake in whether the substitution is methodologically sound, only in whether it is adopted; their commercial interest and the infrastructure's adoption interest point the same direction."
+    },
+    {
+      "name": "conference_reviewers_needing_tractable_submissions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Evaluate submissions under time pressure and reward papers that produce clean, large-N, reproducible-looking results. Persona-based studies are easier to review favorably than small human studies with messy variance. Reviewers who insist on human validation slow the pipeline for everyone and face pushback from authors citing the infrastructure's own responsible-use framing as sufficient."
+    },
+    {
+      "name": "underrepresented_user_populations_poorly_modeled_by_personas",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are statistically thin or absent in the categorical attribute schemas the personas are instantiated from — schemas built from convenience demographics and existing survey taxonomies. Findings validated against persona populations that underweight them get built into products they then have to use, with no seat in the validation loop and no mechanism to flag mismatch after deployment."
+    },
+    {
+      "name": "human_crowdworkers_displaced_from_evaluation_pipelines",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Previously paid (poorly, but paid) to provide the human-evaluation data the substitution claim is designed to replace. As persona-based evaluation is adopted, this income stream and the associated data-labor relationship shrinks. They have no formal role in the substitution debate and no compensation for the training data their prior labor contributed to the models now standing in for them."
+    },
+    {
+      "name": "downstream_product_teams_relying_on_persona_validated_findings",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Consume research findings produced via persona-based evaluation to make product decisions, trusting the paper's validation methodology because re-deriving it with human subjects is not in their budget or timeline. They benefit from cheap, fast evidence but bear the cost of decisions built on a substitution claim they did not independently verify."
+    },
+    {
+      "name": "end_users_of_systems_tuned_against_synthetic_proxies",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Interact with products whose design and tuning decisions were validated against LLM-driven personas rather than against people like them. Where the persona's behavior diverges from theirs, the mismatch surfaces only as a degraded product experience with no visible causal chain back to the substitution claim that produced it."
+    },
+    {
+      "name": "methodology_auditors_and_replication_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Independent researchers who could, in principle, run parallel human studies against persona-based findings to test whether the substitution holds. Currently a small, underfunded community relative to the volume of persona-based publication; their capacity to corroborate or refute the substitution claim lags far behind the rate at which the claim is being operationalized into products and papers."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a common schema and enactment pipeline so that researchers across labs and institutions can run comparable, reproducible, low-cost user-behavior evaluations without each lab independently recruiting, screening, and compensating human panels — a genuine coordination problem when human-subject evaluation at the needed scale and speed would otherwise be prohibitively expensive or simply not attempted.",
+    "transfer_function": "Moves evaluation cost and labor away from paid human participants and crowdworkers toward compute providers and infrastructure maintainers, while moving epistemic risk (the chance that persona behavior does not track real user behavior) onto whoever is thinly represented in the persona schema and onto downstream consumers of the resulting findings, who bear the cost of any mismatch without having had a voice in the substitution.",
+    "absent_voices": "The populations the personas are meant to stand in for — especially those underrepresented in the categorical schema — have no seat in deciding what counts as a valid persona, what the responsible-use section permits, or what future-work items get deferred. Displaced crowdworkers, whose prior labor and data underwrote the LLMs now enacting personas, are similarly absent from the substitution debate despite being its most direct economic casualty.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the substitution commitment were withdrawn — if personas were no longer accepted as valid stand-ins for human evaluation — the entire fast-iteration research and product pipeline built on MatrAIx-style infrastructure would need to revert to slower, costlier human-subject studies. Publication timelines would lengthen, some lines of research would become infeasible at current budgets, and LLM vendors would lose a category of billable usage. The rearrangement would be substantial, which is exactly why the commitment is defended rather than merely assumed.",
+    "founding_problem": "Human-subject user evaluation is slow, expensive, hard to scale, and hard to reproduce across labs — a real bottleneck on iterating and validating systems that need to be tested against diverse simulated user behavior before or in place of costly live deployment testing.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The infrastructure developers and adopting researchers attest the bottleneck is real and still binding — human evaluation remains expensive and slow. Independent methodology auditors and a minority of the reviewer community attest that the bottleneck, while real, does not establish that persona-based substitution actually solves it faithfully rather than merely appearing to at publication speed; no population external to the beneficiary set (the represented-and-modeled users, the crowdworkers, or the poorly-modeled populations) has been asked to corroborate that the substitution tracks their behavior, and the paper's own future-work section defers this validation rather than resolving it now."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.47
+    }
+  ],
+  "commentary": {
+    "narrative_context": "MatrAIx-style infrastructure formalizes a substitution claim already implicit across much of contemporary simulated-user research: a schema-instantiated persona record, enacted by an LLM, is treated as a legitimate proxy for a human user whose costly participation it replaces. The paper's organizers, its validation methodology, its responsible-use disclaimers, and its deferred future-work agenda all take the substitution as given and argue only about scope and licensing conditions — what conclusions the substitution can support, under what caveats. This flat story authors that shared, undisputed commitment as a single constraint rather than decomposing it into separate readings, since no reading set was supplied; the contestation appears instead as sharp perspectival divergence across stakeholder seats and as named omegas about where the substitution's validity actually holds.",
+    "logic_rationale": "Extraction is authored as moderate-to-substantial and rising (0.35 to 0.58 over the interval) because the primary cost — the risk that findings validated on personas do not generalize to real users, and the labor displacement of human evaluators — is structurally externalized onto powerless, poorly-represented, or entirely absent parties, while the infrastructure developers, LLM vendors, and time-pressured researchers capture the efficiency gains. Theater ratio is authored as rising in parallel (0.20 to 0.47) because the responsible-use section and the deferred future-work agenda increasingly function as a compliance gesture — a place to name the substitution's limits in prose without actually resolving them empirically before further adoption proceeds. Suppression (0.42) is moderate rather than severe: no one is coercively barred from running parallel human studies, but the incentive gradient (speed, cost, publication tractability) makes the alternative practically unavailable to most actors in the pipeline, which is a softer but real form of alternative-foreclosure.",
+    "directionality_logic": "Beneficiaries — infrastructure developers, LLM vendors, deadline-pressured researchers, reviewers seeking tractable submissions — sit near the low end of the directionality scale: the substitution subsidizes their throughput and revenue. Victims sit near the high end: underrepresented populations bear silent mismatch risk with no exit (trapped, powerless, global scope compounding the difficulty of ever tracing a harm back to its source); displaced crowdworkers lose income with no seat in the debate; downstream product teams and end users inherit epistemic risk they did not choose and cannot easily audit. The auditor/replication seat is analytical and structurally underpowered relative to the volume of persona-based output it would need to check.",
+    "perspectival_gap": "From the infrastructure developer and LLM vendor seats, the constraint reads as pure coordination — a shared standard solving a real cost-and-scale bottleneck, exactly the rope framing the paper's own language invites. From the seat of underrepresented populations and displaced crowdworkers, the same structure reads as extraction: their exclusion or displacement is the mechanism by which the coordination gain is realized, and the active maintenance of the substitution claim (through responsible-use framing that permits rather than restricts continued use) is what tangled-rope enforcement looks like from underneath. The engine's per-seat computation should surface this divergence rather than requiring the story to average it into one verdict.",
+    "mandatrophy_analysis": "The founding problem — human evaluation is slow and expensive — remains genuinely live; this is not a pure zombie mandate. But the paper's future-work section defers the actual test of whether personas validly substitute for humans, rather than resolving it, which means the infrastructure's continued expansion outruns its own evidentiary licensing. Classifying this as tangled_rope rather than rope or snare prevents two mislabelings: treating it as pure coordination would erase the externalized risk borne by unrepresented and displaced parties; treating it as pure extraction would erase the genuine and increasingly binding cost problem that motivated the infrastructure in the first place. The tangled_rope label holds both facts open simultaneously, which is what the founding-problem-status of 'contested' is meant to reflect."
+  },
+  "omegas": [
+    {
+      "id": "persona_behavioral_fidelity_ambiguity",
+      "question": "Does an LLM-enacted persona record, however carefully schema-instantiated, actually reproduce the behavioral distribution of the human population it claims to represent, or does it reproduce the LLM's own priors about that population filtered through the schema's categorical attributes?",
+      "resolution_mechanism": "Systematic parallel studies comparing persona-driven evaluation outcomes against matched human-subject studies across multiple domains and demographic strata, with particular attention to populations thinly represented in the persona schema's training and design data.",
+      "impact": "If fidelity is high and broadly uniform across populations, the coordination function dominates and the constraint drifts toward rope; if fidelity is low or systematically worse for underrepresented populations, the extraction function dominates and the constraint drifts toward snare, with the coordination language serving primarily as cover.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether persona enactment tracks real human behavioral distributions or only the model's priors about them."
+    },
+    {
+      "id": "responsible_use_section_as_licensing_vs_limiting",
+      "question": "Does the paper's responsible-use section function to genuinely limit the scope of claims the substitution can support, or does it function to license broader adoption by pre-empting the objection that validation is incomplete?",
+      "resolution_mechanism": "Track citation patterns: do downstream papers and products cite the responsible-use caveats to restrict their own claims, or cite the existence of a responsible-use section as evidence the methodology has already addressed validity concerns?",
+      "impact": "If citations show restriction, the section functions as intended coordination infrastructure; if citations show pre-emptive licensing without restriction, the theater ratio is understated and the section is functioning as compliance theater masking accelerating adoption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the responsible-use framing genuinely constrains claims or licenses their expansion."
+    },
+    {
+      "id": "displaced_labor_compensation_question",
+      "question": "Is the displacement of human crowdworkers from evaluation pipelines a genuine efficiency gain (the task is now better done by cheaper automated means) or a transfer that should trigger some compensation obligation given that crowdworker-generated data trained the LLMs now performing the substitution?",
+      "resolution_mechanism": "This is fundamentally a normative and policy question about data-labor provenance and compensation, not resolvable by further technical measurement alone, though technical work could establish how directly current persona behavior traces to specific historical human-labeled datasets.",
+      "impact": "If a compensation obligation is recognized, the extraction framing strengthens considerably and victim status for crowdworkers becomes harder to dispute even by the infrastructure's defenders; if not, the displacement is framed as ordinary technological substitution outside the constraint's extraction accounting.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether crowdworker displacement constitutes uncompensated extraction or ordinary technological substitution."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This is a flat (undecomposed) construction of the persona-as-valid-proxy substrate, authored per instruction without a reading set. Should a decomposition later be authored (e.g., separating a 'persona validity for low-stakes UI testing' reading from a 'persona validity for high-stakes policy or safety evaluation' reading), those stories should link back to this one via affects_constraints and document the ε divergence explicitly, per the ε-invariance principle."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-10",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "matraix_persona_simulation_2026_20260810_114056"
+  }
+}

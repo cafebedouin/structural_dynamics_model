@@ -1,0 +1,294 @@
+{
+  "header": {
+    "constraint_id": "behavioral_mechanism_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "7846093b-7a8a-44a8-8a37-8055d23eeb02"
+  },
+  "base_properties": {
+    "extractiveness": 0.44,
+    "suppression": 0.31,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Persona-as-Steerability-Mechanism Reading of Simulated-User Evaluation",
+    "topic_domain": "AI evaluation infrastructure / simulated-user research methodology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eval_infrastructure_teams",
+      "model_vendors_citing_steerability_metrics",
+      "persona_conditioning_researchers"
+    ],
+    "victims": [
+      "downstream_product_decision_makers",
+      "policy_readers_of_eval_reports"
+    ],
+    "vindicated_propositions": [
+      "persona_assignment_causally_shifts_output",
+      "steerability_is_measurable_independent_of_ground_truth"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "eval_infrastructure_teams",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Designs and runs the controlled adherence probe, builds the cited-evidence audit trail (Table 17), and sets the standard by which persona-conditioning success is measured. Chooses to report steerability comparisons (Opus 91.5% vs GPT-5.6-sol 79.2%) as the headline finding, insulating the methodology from correspondence-theory objections by redefining what the persona claim is about."
+    },
+    {
+      "name": "model_vendors_citing_steerability_metrics",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Cites cross-model steerability numbers as evidence of controllability and alignment robustness in marketing and safety documentation. Benefits from a narrower, more defensible claim that cannot be falsified by disputes over whether personas represent real users, since the claim is about conditioning, not correspondence."
+    },
+    {
+      "name": "persona_conditioning_researchers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Builds career and publication capital on steerability and conditioning as a legitimate, well-scoped research object. The behavioral mechanism reading protects this research program from population-validity critiques by explicitly disclaiming any correspondence-to-real-users claim."
+    },
+    {
+      "name": "downstream_product_decision_makers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives eval reports and steerability tables but is structurally positioned to misread 'persona shifts output in declared direction' as 'persona reliably predicts population behavior' unless the report's scope disclaimer is read carefully. Bears the cost when product decisions (paid-plan rate assumptions, purchase-intent forecasts) are made on findings this reading explicitly places outside its own scope."
+    },
+    {
+      "name": "policy_readers_of_eval_reports",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Regulators, auditors, or internal governance reviewers who consume the same report and may treat headline adherence percentages as safety assurances about real-world deployment risk, when this reading's own boundary condition is that no claim about real users is being made."
+    },
+    {
+      "name": "cog_verbosity_and_politeness_failure_cases",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "The 0/5 cog-verbosity failure under GPT-5.6-sol and the 0/5 OS-App politeness suppression failure are the reading's own central findings — boundary cases where persona conditioning fails against alignment priors — yet they receive little visibility outside the methodology audience because the report's headline framing foregrounds success percentages, not failure boundaries."
+    },
+    {
+      "name": "methodology_auditors",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Independent reviewers assessing whether the audit trail in Table 17 actually supports the steerability claim, and whether the reading's scope discipline (no ground-truth claim) is maintained in how the report is actually used downstream."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a narrower, more defensible evaluation claim — persona assignment causally and traceably shifts LLM output in a declared direction, legibly and reproducibly — that can be tested and audited without resolving the much harder question of whether personas correspond to real people. This lets model builders and researchers make falsifiable, auditable claims about conditioning without overclaiming population validity.",
+    "transfer_function": "Moves interpretive authority from the harder, contestable claim (persona validity as population proxy) to the narrower, defensible claim (persona as steerability mechanism), and moves attention and citation credit toward the audit-trail and cross-model comparison results (Table 17, Opus vs GPT-5.6-sol) while product-level outcomes are explicitly demoted to out-of-scope noise — a cost that lands on whoever downstream still needs an answer to the product question and receives this report instead.",
+    "absent_voices": "End users whose simulated personas are used in the probes are not consulted about whether the mechanism-only framing changes how the results will be used; product teams who commissioned the study for population-level insight are structurally present as report recipients but not as co-authors of the reading's scope boundary, so their expectations and the reading's actual claim frequently diverge without correction.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If this narrower behavioral-mechanism reading disappeared and only the population-proxy or screening-tool framings remained, the underlying steerability data (Table 17, cross-model percentages) would still exist, but the field would lose its most defensible way of talking about what persona conditioning demonstrates — forcing every citation of these results back into the correspondence-theory dispute this reading was built to sidestep. Methodology researchers say the world rearranges (the defensible claim vanishes and disputes return); product-facing consumers of the reports say the world stays unchanged (they were already misreading the results as population claims regardless of the reading's official scope).",
+    "founding_problem": "Simulated-user personas were being defended and attacked using validity criteria borrowed from survey sampling and psychometrics (does this persona correspond to a real population segment?), a standard the personas could not meet and were never designed to meet, which stalled methodological progress and invited blanket dismissal of persona-based evaluation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent methodology reviewers outside the eval infrastructure teams (cited in the omega on correspondence-vs-steerability conflation) corroborate that population-proxy critiques of persona evaluation remain unresolved and unresolvable on current evidence, which is precisely why a narrower, mechanism-only claim has argumentative value; however, no corroboration exists from the downstream product decision makers who are the ones bearing the cost of scope confusion — they were not asked whether the narrower reading actually reaches them intact."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the 'behavioral mechanism' reading of the contested kernel persona_as_valid_proxy: the claim that what matters about a simulated-user persona is not whether it correspondingly represents a real person, but whether assigning it causally and traceably shifts an LLM's output in the declared direction, legibly, auditably, and reproducibly. Under this reading the load-bearing evidence is the controlled adherence probe's cited-evidence audit trail (Table 17) and the cross-model steerability comparison (Opus 91.5% vs GPT-5.6-sol 79.2%). Population-level product outcomes (paid-plan conversion rates, purchase intent) are explicitly out of this reading's scope — they are downstream noise, not evidence for or against the mechanism claim. This is a narrower and more defensible claim than either the instrumentalist screening-tool reading or the representational correspondence reading of the same underlying persona-assignment kernel; it trades ambition for auditability. The two documented failure boundaries this reading foregrounds as central findings, not embarrassments, are the cog-verbosity 0/5 failure under GPT-5.6-sol and the OS-App politeness 0/5 suppression failure — cases where persona conditioning failed to override the model's alignment priors, which under this reading is exactly the kind of boundary-of-steerability data the methodology exists to surface.",
+    "key_agents": [
+      "eval_infrastructure_teams: designs and runs the probe, sets the scope of the claim",
+      "model_vendors_citing_steerability_metrics: benefits from a defensible, narrower controllability claim",
+      "persona_conditioning_researchers: builds a legitimate research program insulated from correspondence-validity attacks",
+      "downstream_product_decision_makers: receives the report but risks misapplying scoped findings to product questions",
+      "policy_readers_of_eval_reports: may read adherence percentages as safety assurances beyond the claim's actual scope",
+      "methodology_auditors: analytical observer checking whether the audit trail supports the claim and whether scope discipline holds downstream"
+    ],
+    "logic_rationale": "Extractiveness is authored moderate (0.44) and rising slowly over the interval: the reading itself is not extractive by design — it is a genuine methodological narrowing that makes weaker claims more defensible — but its downstream use as a substitute for population-level validity evidence (a use this reading explicitly disclaims) creates real cost for product decision-makers and policy readers who consume the same reports without absorbing the scope boundary. Suppression (0.31) is moderate: there is no coercive enforcement preventing people from reading the disclaimers, but the framing effect of headline steerability percentages (91.5% vs 79.2%) does functionally suppress attention to the scope boundary and to the failure-case findings (cog-verbosity, politeness suppression) that this reading's own methodology treats as central. Theater ratio (0.28, rising to 0.28 by interval end) captures a modest and growing gap between the rigor of the audit trail and the selective headline framing used when citing it externally.",
+    "directionality_logic": "Eval infrastructure teams and persona conditioning researchers are structural beneficiaries: they get a defensible, citable, career-sustaining claim that survives correspondence-theory attacks by explicitly declining to make a correspondence claim. Model vendors benefit similarly by citing steerability numbers as controllability evidence. Downstream product decision-makers and policy readers are structural payers: they receive reports whose headline framing (cross-model percentages) invites exactly the population-level inference the reading's own text disclaims, and they bear the cost when decisions are made on that inference. The failure-case findings (cog-verbosity, politeness suppression) are marked as a non-agent excluded entity because they are the reading's own central evidence yet are structurally deprioritized in how results are surfaced to non-methodology audiences.",
+    "mandatrophy_analysis": "The founding problem — that persona evaluation was being judged by an unattainable correspondence standard — remains live: no resolution of the population-proxy validity question exists, so the narrower steerability claim continues to do real work. This blocks a mandatrophy reading in the strict sense (the mandate has not obviously outlived its function), but it does not resolve the scope-confusion cost this reading imposes when the narrower claim is packaged and cited in ways that let audiences infer the broader one.",
+    "kernel_context": "This constraint instantiates the behavioral_mechanism_reading of the kernel persona_as_valid_proxy. Sibling readings not modeled here: instrumentalist_screening_reading (personas justified purely as a filtering/screening tool regardless of mechanism or correspondence), representational_correspondence_reading (personas justified as approximating real population segments — the reading this one explicitly declines to make), and sociotechnical_risk_reading (personas evaluated for downstream deployment risk to real institutions and users). This reading is narrower than all three: it makes no population claim (unlike representational_correspondence_reading), it grounds legitimacy in causal traceability and auditability rather than pure utility (unlike instrumentalist_screening_reading), and it deliberately brackets deployment-risk questions as out of scope (unlike sociotechnical_risk_reading). The cog-verbosity and politeness-suppression failure cases are this reading's own central findings, not incidental footnotes — they mark the boundary of what persona conditioning can override."
+  },
+  "omegas": [
+    {
+      "id": "steerability_claim_boundary_erosion",
+      "question": "Does the narrower steerability claim (persona shifts output legibly and reproducibly) stay narrow in practice, or does its citation in vendor and policy documents functionally collapse back into a population-validity claim the reading explicitly disclaims?",
+      "resolution_mechanism": "Trace citations of the cross-model steerability comparison (Opus 91.5% vs GPT-5.6-sol 79.2%) in downstream product and policy documents; code each citation for whether it is used to support a mechanism claim (in-scope) or a population/real-user claim (out-of-scope, scope violation).",
+      "impact": "If citations systematically drift toward population-level use, the reading's disclaimed scope is not actually load-bearing in practice — the defensibility the reading buys is theoretical only, and the extractiveness score should be revised upward.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the narrow mechanism claim's scope boundary survives downstream citation practice."
+    },
+    {
+      "id": "failure_case_visibility_asymmetry",
+      "question": "Are the cog-verbosity 0/5 and politeness-suppression 0/5 failure cases genuinely treated as central findings by report authors, or do they function as buried caveats beneath headline success percentages?",
+      "resolution_mechanism": "Compare document structure and emphasis (page placement, executive summary inclusion, abstract mention) of the failure cases against the headline steerability percentages across multiple report versions or audiences.",
+      "impact": "If failure cases are structurally marginalized despite being methodologically central, the theater_ratio understates the actual gap between the reading's stated epistemics and its practiced communication.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stated centrality of failure-boundary findings matches actual report emphasis."
+    },
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Is the choice to read persona-as-valid-proxy through the behavioral-mechanism lens (rather than the correspondence, screening, or sociotechnical-risk lens) itself a defensible methodological narrowing, or a motivated retreat to the most defensible claim available once the harder claims came under attack?",
+      "resolution_mechanism": "Examine the historical sequence: was the mechanism framing adopted before or after correspondence-based critiques of persona validity gained traction? A framing adopted in direct response to critique, without independent methodological motivation, would support the motivated-retreat reading.",
+      "impact": "If the framing was adopted reactively rather than independently motivated, the reading's claim to represent a principled methodological advance (rather than a defensive narrowing) weakens, though the underlying audit-trail evidence remains valid on its own terms.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the mechanism-reading's adoption was independently motivated or a defensive response to correspondence-validity critique."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "instrumentalist_screening_reading",
+      "representational_correspondence_reading",
+      "sociotechnical_risk_reading"
+    ],
+    "dual_formulation_note": "This story is one of four linked readings of the kernel persona_as_valid_proxy. behavioral_mechanism_reading claims the narrowest, most defensible scope (causal steerability only, no ground-truth or population claim). representational_correspondence_reading claims the broadest scope (personas approximate real population segments) and would carry substantially higher epsilon under this reading's own lights, since correspondence claims invite direct falsification by population data this reading never attempts. instrumentalist_screening_reading and sociotechnical_risk_reading occupy intermediate positions. Each reading is authored as its own constraint with its own epsilon per the epsilon-invariance principle; they share only the underlying persona-assignment kernel and the empirical steerability data (Table 17, cross-model comparison), not a classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "instrumentalist_screening_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "representational_correspondence_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "sociotechnical_risk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "steerability_is_the_load_bearing_claim",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "no_ground_truth_claim_is_made_or_needed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "correspondence_theory_validity_standard",
+    "drift_state": {
+      "moment": "post_steerability_audit_publication",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-10",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "matraix_persona_simulation_2026_20260810_114056"
+  }
+}

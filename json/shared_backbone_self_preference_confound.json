@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "shared_backbone_self_preference_confound",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "2bc8ad5e-1ddd-4126-ac1b-8ab8d6df2961"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.71,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "piton",
+    "human_readable": "Uncrossed Persona-Model/System-Model Design in Simulated-User Evaluation",
+    "topic_domain": "ai_evaluation_methodology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "model_providers_whose_agents_score_well_under_same_family_evaluation"
+    ],
+    "victims": [
+      "product_teams_who_might_deploy_matched_backbone_evaluations_unknowingly"
+    ],
+    "vindicated_propositions": [
+      "persona_conditioning_is_measurable_and_reproducible"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "model_providers_whose_agents_score_well_under_same_family_evaluation",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Provide the backbone models used both as persona agents and as systems under test in benchmarking studies conducted by partners and downstream users. Favorable results attributable to shared-backbone self-recognition accrue to their models' apparent performance without anyone having to argue for it; they neither designed the confound nor need to defend it, because the paper's methodology section never forces the crossed comparison that would surface it. They administer nothing here and pay nothing — the ambiguity simply resolves in their favor by default."
+    },
+    {
+      "name": "product_teams_who_might_deploy_matched_backbone_evaluations_unknowingly",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Adopt the persona-agent evaluation infrastructure to screen product decisions cheaply before human studies. If they happen to run persona agents on the same backbone family as the system under test (a natural default, since many teams standardize on one vendor's models for both roles), any favorable outcome is uninterpretable — they cannot tell whether the product performed well or the model simply preferred itself. They have no way to detect this from the paper's reported results because the crossed design was never run; discovering the confound requires re-implementing the ablation the authors declined to do."
+    },
+    {
+      "name": "infrastructure_authors_and_maintainers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Designed and validated the MatrAIx persona infrastructure, chose which ablations to run, and explicitly deferred the persona-model × system-model crossing to future work. They control the validation apparatus (adherence rates, judge-agreement figures, Cramer's V checks) that certifies the tool's adequacy, and they are the ones who could add the crossed design at comparatively low engineering cost — the omission is a scoping choice, not a technical barrier."
+    },
+    {
+      "name": "human_evaluation_subjects_displaced_by_persona_substitution",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Real users whose costly, slower human-panel studies are the thing persona-agent evaluation is meant to substitute for or de-prioritize. They have no seat in the methodology debate and no way to object that a same-family evaluation might be measuring model self-preference rather than anything resembling their own preferences, because the studies that would have surfaced this run on synthetic personas instead of them."
+    },
+    {
+      "name": "downstream_researchers_and_auditors",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Read the published methodology, notice the absence of a crossed persona-model/system-model design, and can in principle re-run the missing ablation. They bear no direct cost from the confound but are positioned to name it, which is how the ambiguity could eventually be resolved into a measured self-preference bias rather than remaining an open question the paper declines to close."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The infrastructure genuinely solves a real coordination problem: pre-deployment screening of product and interface decisions is expensive and slow with human panels, and a validated persona-agent layer lets many trials run in parallel at low marginal cost, surfacing corner cases before committing to costly human studies.",
+    "transfer_function": "Interpretive confidence moves from anyone who would need to distrust same-family evaluation results toward model providers whose backbones happen to be used on both sides of an uncrossed comparison — a transfer of unearned credibility, not money or labor, from downstream evaluators' epistemic position to upstream model reputation.",
+    "absent_voices": "Product teams who will actually deploy matched-backbone evaluations in practice were not consulted on whether the crossed ablation should be a precondition for trusting the results; the paper's own future-work section acknowledges the gap exists but treats it as deferred rather than as a live methodological requirement before the tool is used for comparative claims.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the confound were closed tomorrow (i.e., the crossed design were run and self-preference bias measured and corrected for), the infrastructure's core coordination function — cheap parallel screening — would be unchanged. What would rearrange is any comparative claim about which system performed better under same-family evaluation; those claims would either be validated, discounted by a measured bias term, or retracted. Model providers who benefit from the current ambiguity would contest that anything needs to change; auditors would say the world already should have rearranged upon publication.",
+    "founding_problem": "Human-subject evaluation of AI product and interface decisions is slow, expensive, and hard to parallelize across many attribute-conditioned scenarios; the infrastructure was built to generate scalable behavioral trials that approximate or substitute for that costly process.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The infrastructure authors themselves attest the screening problem remains live (it motivates the entire paper). No source outside the authors and their funding partners has independently corroborated that the specific crossed-design omission is an acceptable resolution of the self-preference question rather than an unaddressed validity gap; downstream auditors and product teams who might detect the confound have not been asked and have not weighed in in the published record."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.63
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The MatrAIx-style simulated-user evaluation infrastructure pairs persona records with LLMs to produce scalable stand-ins for human evaluation subjects. The methodology never crosses the persona-agent model against the system-under-test model on the same task, so when a same-family pairing produces favorable outcomes, the result is structurally ambiguous between the system genuinely satisfying a simulated user and the persona-agent model simply recognizing and preferring output from its own model family. The paper's own future-work section acknowledges this ablation is missing rather than closing it. This is authored as a piton: the confound extracts diffusely from anyone who trusts same-family comparative results, no single agenda-setter profits enough from the omission to be called a captured beneficiary in the concentrated sense, and the gap persists through inertia (scoping choices, deferred ablations, validation theater around adherence rates) rather than through active enforcement or coercion.",
+    "logic_rationale": "Extractiveness (0.58) reflects that misinterpreted same-family results can materially mislead product decisions, but the extraction is diffuse and unintentional rather than a concentrated rent. Suppression (0.42) is moderate — nothing actively prevents someone from running the crossed ablation, but the absence of the design in the flagship methodology normalizes not running it, which functions as a soft barrier. Theater ratio (0.71) is high and rising across the measured interval: adherence rates, judge-agreement percentages, and Cramer's V checks are real validation work, but an increasing share of that validation activity substitutes for the one ablation that would actually test the self-preference question, rather than addressing it directly. Accessibility collapse (0.35) is low-moderate — the alternative (running the crossed design) remains straightforward and undertaken by anyone motivated to do it; this is not a constraint that has foreclosed its alternatives, which is part of why piton (inertial, not enforced) fits better than snare.",
+    "directionality_logic": "Model providers whose backbones populate both the persona-agent role and the system-under-test role in common deployment patterns are the structural beneficiaries: they collect reputational credit from ambiguous results without any need to defend the ambiguity, and their exit options are effectively arbitrage-grade — they are not implicated by name in any single study. Product teams who deploy matched-backbone evaluations are the targets: they bear the interpretive cost of an ambiguity they likely cannot detect from published results alone, and their exit is constrained by the fact that standardizing on one vendor's models across roles is often the path of least resistance, not a mistake they'd recognize as risky.",
+    "perspectival_gap": "From the infrastructure authors' seat, the missing ablation is a scoping decision, one item on a long future-work list, and no different in kind from any other unrun experiment. From a product team's seat that has unknowingly run a matched-backbone evaluation, the same omission is the entire difference between a trustworthy screening signal and a self-congratulating model artifact. The engine should compute these as structurally different experiences of the same missing design choice, not as disagreement about facts.",
+    "mandatrophy_analysis": "The founding problem (cheap, parallelizable pre-deployment screening) remains live — this prevents the constraint from being mislabeled as pure extraction with no coordination function at all. But the specific omission (declining to isolate self-preference) has no sunset, no active defender, and no concentrated profiteer large enough to justify calling it a snare; it persists because closing it costs someone effort and no single actor is hurt enough, yet, to force the fix. That asymmetry — administrable at low cost, but not costly enough to any one actor to compel action — is the piton signature: diffuse, inertial, performatively validated around the edges."
+  },
+  "omegas": [
+    {
+      "id": "self_preference_magnitude_unmeasured",
+      "question": "What is the actual direction and magnitude of self-preference bias when persona-agent and system-under-test share a backbone, once measured directly?",
+      "resolution_mechanism": "Run the crossed design: hold the task fixed and vary persona-agent model and system-under-test model independently (same-family vs. cross-family pairings), then compare outcome distributions.",
+      "impact": "If the measured bias is small, the current uncrossed design is a defensible simplification and the piton reading weakens toward a rope with an unaddressed edge case. If the bias is large, undisclosed same-family evaluations become materially misleading and the constraint moves toward a tangled_rope or snare reading for teams who rely on them without knowing the risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether same-family self-preference bias is large enough to invalidate comparative claims."
+    },
+    {
+      "id": "omission_intentionality_ambiguity",
+      "question": "Is the uncrossed design a genuine oversight/resource-scoping decision, or a structurally convenient omission that avoids surfacing a result unfavorable to the infrastructure's own credibility and to its model-provider funding partners?",
+      "resolution_mechanism": "Compare the cost of running the crossed ablation against the infrastructure's other reported ablations; examine whether funding or partnership relationships with model providers correlate with which ablations were prioritized versus deferred.",
+      "impact": "If genuinely a resourcing oversight, this remains a piton (inertial, no concentrated beneficiary orchestrating the gap). If the omission tracks funding-partner interests, the classification should move toward tangled_rope or snare, since a beneficiary would then be actively (if quietly) served by the gap persisting.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the missing ablation is inertial neglect or a structurally convenient avoidance."
+    },
+    {
+      "id": "kernel_reading_correspondence_vs_mechanism",
+      "question": "Does the legitimacy of the persona-as-proxy infrastructure depend on population-level correspondence (which the self-preference confound would undermine directly, since it contaminates the very outcomes claimed to reflect user response) or on narrower behavioral-mechanism claims (steerability, traceable conditioning) that the confound leaves largely untouched?",
+      "resolution_mechanism": "Determine which reading the paper's actual comparative claims rely on: if claims are framed as 'users preferred X,' correspondence framing applies and the confound is damaging; if claims are framed as 'the model was steered toward X,' mechanism framing applies and the confound is a narrower internal-validity question.",
+      "impact": "Under the representational_correspondence_reading, the shared-backbone confound compounds an already-low-fidelity validation picture, pushing the constraint toward snare for downstream trust. Under the behavioral_mechanism_reading, the confound matters only for cross-model comparative claims, not for single-model conditioning claims, leaving more of the infrastructure's core contribution intact.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which kernel reading of persona-as-proxy governs how damaging the self-preference confound is."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "persona_fidelity_correspondence_gap",
+      "responsible_use_disclosure_scaffolding"
+    ],
+    "dual_formulation_note": "This story addresses one specific structural delta within the broader MatrAIx commitment-system contest: the presence/absence of a persona-model x system-model crossed design and its consequences for interpreting favorable outcomes. It is downstream of the representational_correspondence_reading and behavioral_mechanism_reading disagreement documented in the kernel context (persona_as_valid_proxy) — under the correspondence reading this confound is a compounding failure; under the mechanism reading it is a narrower comparative-claims caveat. It is deliberately NOT the same constraint as the general persona-fidelity correspondence gap (median kappa ~0.000 across joinable fields), which has its own ε and its own story, linked here rather than merged, per the ε-invariance principle."
+  },
+  "gain_flow": "model_providers_whose_agents_score_well_under_same_family_evaluation",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-10",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "matraix_persona_simulation_2026_20260810_114056"
+  }
+}
