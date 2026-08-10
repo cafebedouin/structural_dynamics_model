@@ -1,0 +1,24 @@
+[corpus] Loaded 1005 testsets successfully.
+CENSUS leg=testsets_kimi n=1005
+HIST empty_chair_dissent 2
+HIST excluded_concurs 62
+HIST excluded_concurs_untypeable 2
+HIST excluded_untyped 19
+HIST included_insufficient 16
+HIST included_plural 542
+HIST no_excluded_seat 362
+MCC_N 85
+MCC_PARTITION empty_chair_dissent 2
+MCC_PARTITION empty_chair_dissent_untypeable 0
+MCC_PARTITION excluded_untyped 19
+MCC_PARTITION excluded_concurs 62
+MCC_PARTITION excluded_concurs_untypeable 2
+MCC_PARTITION included_plural 0
+MCC_PARTITION included_insufficient 0
+MCC_PARTITION no_excluded_seat 0
+SIGMA_IDENTITY sum=85 mcc_n=85 ok
+EXPECTED_ZERO included_plural 0 ok
+EXPECTED_ZERO included_insufficient 0 ok
+EXPECTED_ZERO no_excluded_seat 0 ok
+DISSENT_ITEM animal_status_kernel__welfare_reading state=empty_chair_dissent(naturalized,[tangled_rope],[abolitionist_advocates]) consensus=manufactured_consensus_candidate([abolitionist_advocates]) h=(1,0,4,4)
+DISSENT_ITEM magna_carta_1215__baronial_privilege_reading state=empty_chair_dissent(rope,[tangled_rope],[commoners,women,non_landowners]) consensus=manufactured_consensus_candidate([commoners,women,non_landowners]) h=(1,0,2,2)

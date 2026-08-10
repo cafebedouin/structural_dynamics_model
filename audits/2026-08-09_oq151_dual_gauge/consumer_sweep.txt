@@ -1,0 +1,70 @@
+prolog/stakeholder_seats.pl:223:%    - manufactured_consensus_candidate(Excl)            : unanimous (all
+prolog/stakeholder_seats.pl:226:%    - manufactured_consensus_candidate_untypeable(Excl) : mcc with
+prolog/stakeholder_seats.pl:273:    ->  Verdict = manufactured_consensus_candidate_untypeable(Excl)
+prolog/stakeholder_seats.pl:275:    ->  Verdict = manufactured_consensus_candidate(Excl)
+prolog/stakeholder_seats.pl:359:% consensus_provenance/2's manufactured_consensus_candidate* fires on MERE
+prolog/commentary_census.pl:127:consensus_bucket(manufactured_consensus_candidate(_),  manufactured_consensus_candidate).
+prolog/commentary_census.pl:128:consensus_bucket(manufactured_consensus_candidate_untypeable(_),
+prolog/commentary_census.pl:129:                 manufactured_consensus_candidate_untypeable).
+prolog/commentary_census.pl:200:% manufactured_consensus_candidate is a CANDIDATE flag, not a positive finding
+prolog/tests/test_h1_stakeholder_spectrum.pl:128:coherence_case(manufactured_consensus_candidate(_), H0, H1, NS, NR) :-
+prolog/tests/test_h1_stakeholder_spectrum.pl:130:coherence_case(manufactured_consensus_candidate_untypeable(_), H0, H1, NS, NR) :-
+prolog/tests/test_h1_stakeholder_spectrum.pl:301:        manufactured_consensus_candidate([ghost])),
+prolog/tests/test_h1_stakeholder_spectrum.pl:304:    coherence_case(manufactured_consensus_candidate([ghost]), H0, H1, NS, NR).
+prolog/tests/test_h1_stakeholder_spectrum.pl:320:        manufactured_consensus_candidate_untypeable([ghost])),
+prolog/tests/test_h1_stakeholder_spectrum.pl:323:    coherence_case(manufactured_consensus_candidate_untypeable([ghost]),
+prolog/tests/test_empty_chair.pl:110:        manufactured_consensus_candidate([chair])),
+prolog/tests/test_empty_chair.pl:204:        manufactured_consensus_candidate_untypeable([chair])).
+prolog/tests/test_empty_chair.pl:249:          ( V0 = manufactured_consensus_candidate(_)
+prolog/tests/test_empty_chair.pl:250:          ; V0 = manufactured_consensus_candidate_untypeable(_) ) ),
+prolog/tests/test_empty_chair.pl:255:             ( V = manufactured_consensus_candidate(Excl)
+prolog/tests/test_empty_chair.pl:256:             ; V = manufactured_consensus_candidate_untypeable(Excl) ) ),
+prolog/tests/test_empty_chair.pl:284:allowed_triple(excluded_untyped,       manufactured_consensus_candidate,            zero).
+prolog/tests/test_empty_chair.pl:285:allowed_triple(excluded_untyped,       manufactured_consensus_candidate_untypeable, zero).
+prolog/tests/test_empty_chair.pl:286:allowed_triple(excluded_concurs,       manufactured_consensus_candidate,            zero).
+prolog/tests/test_empty_chair.pl:287:allowed_triple(excluded_concurs_untypeable, manufactured_consensus_candidate_untypeable, zero).
+prolog/tests/test_empty_chair.pl:288:allowed_triple(empty_chair_dissent,    manufactured_consensus_candidate,            zero).
+prolog/tests/test_empty_chair.pl:289:allowed_triple(empty_chair_dissent_untypeable, manufactured_consensus_candidate_untypeable, zero).
+python/audits/oq136_bucket_provenance.py:52:    "manufactured_consensus_candidate": "consensus",
+python/audits/oq136_bucket_provenance.py:77:             manufactured_consensus_candidate(Excl)) ),
+python/audits/oq136_bucket_provenance.py:358:                mcc_excl.get(c, "") if b == "manufactured_consensus_candidate" else "",
+python/audits/oq207_stakeholder_h1_census.py:113:verdict_fields(manufactured_consensus_candidate(_),
+python/audits/oq207_stakeholder_h1_census.py:114:               manufactured_consensus_candidate, null).
+python/audits/oq207_stakeholder_h1_census.py:115:verdict_fields(manufactured_consensus_candidate_untypeable(_),
+python/audits/oq207_stakeholder_h1_census.py:116:               manufactured_consensus_candidate_untypeable, null).
+python/audits/oq207_stakeholder_h1_census.py:123:UNANIMOUS_ALL_REAL = {'unanimous_no_excluded_seats', 'manufactured_consensus_candidate'}
+python/audits/oq207_stakeholder_h1_census.py:125:                        'manufactured_consensus_candidate_untypeable'}
+KNOWN_STATE.md:1771:`manufactured_consensus_candidate_untypeable/1` extension (ruled in session, distinct from the
+KNOWN_STATE.md:1774:`unanimous_with_untypeable_seats`, `manufactured_consensus_candidate_untypeable/1`.
+KNOWN_STATE.md:1784:bare `manufactured_consensus_candidate` token silently drops the larger untypeable stratum
+ISSUES.md:7552:**Resolution (2026-07-02; PROPOSAL frozen `0ba48b4c` BEFORE any join; execution `2b66dedc`; evidence `audits/2026-07-02_oq136_census_bucket_provenance/` — PROPOSAL/RECON/membership.tsv/contingency_tables/stats_output/HANDREAD/WRITEUP; all controls fired; Holm family BY RULE = 4 powered buckets × 2 artifact axes = 8).** Findings at n=119: **q6_unmeasured (26) + no_agent_seats (26) = authoring artifact** (clustered on model AND prompt_commit, p_holm=8e-4; strata: haiku 16/28 each + ALL 9 provenance-less `*_contradictions`; 25/26 overlap = ONE generation-path gap — the prose plans the seats/fields the fact layer never emits). **q6_signature_unknown (16) = kept as genuine config-variant** — **one-legged verdict** (statistical leg only; the pre-registered hand-read leg was not run for this bucket — operator-flagged, ruled knowing that). **manufactured_consensus_candidate (9) = genuine** (8/9 hand-read RULED with in-file witnesses; 1/9 radiative_levitation false-positive BY ITS OWN TEXT → excluded-role vocabulary gap). **extraction_unnameable (3, unpowered) = compound** (seat limb = the haiku artifact; victim limb genuine-to-the-reading 2/3 RULED).
+ISSUES.md:10206:## OQ-204 — Surface manufactured_consensus_candidate as a first-class census/report statistic (operator GO, 2026-07-02)
+ISSUES.md:10222:**OQ-217 landed (2026-07-13, commits `871e69ac`/`cb60bd0a`) — two facts this surface build must carry:** (1) **the mcc candidate set is now TWO tokens** — `manufactured_consensus_candidate(Excl)` (all seats real) and `manufactured_consensus_candidate_untypeable(Excl)` (untypeable seats beside the agreeing reals; heavily live: 12/50/39 across the legs) — a surface reading only the bare token silently drops the larger untypeable stratum; decide jointly whether the promoted statistic merges or splits them, and say which. (2) **Pre-registered kill condition for the annotated tokens (operator, 2026-07-12):** if this surface ends up carrying NReal/NSeats inseparably alongside the verdict token everywhere it is displayed, the `_with_untypeable`/`_untypeable` annotation is redundant and collapses back to plain filtering (option 1) — check it against the built surface when this lands.
+ISSUES.md:10720:`manufactured_consensus_candidate_untypeable/1` (the last HEAVILY LIVE at 12/50/39, not
+audits/2026-07-12_oq207_stakeholder_h1/census_input_testsets_flash.json
+audits/2026-08-07_oq261_forced_gluing/RECON.md
+audits/2026-07-12_oq207_stakeholder_h1/census_input_testsets.json
+audits/2026-07-12_oq207_stakeholder_h1/census_input_testsets_haiku.json
+audits/2026-07-12_oq217_consensus_tightening/oq207_dump.pl
+audits/2026-07-12_oq207_stakeholder_h1/census_input_testsets.DOCTORED.json
+audits/2026-08-07_oq261_forced_gluing/family_frame_probe_output.txt
+audits/2026-07-12_oq207_stakeholder_h1/README.md
+audits/2026-07-02_oq136_census_bucket_provenance/RECON.md
+audits/2026-08-07_oq261_forced_gluing/performance_presheaf_probe_output.txt
+audits/2026-07-02_oq136_census_bucket_provenance/contingency_tables.md
+audits/2026-07-12_oq217_consensus_tightening/census_input_testsets_flash.json
+audits/2026-07-12_oq217_consensus_tightening/predicted_movement.v1_underdetermined.json
+audits/2026-07-02_oq136_census_bucket_provenance/PROPOSAL.md
+audits/2026-07-02_oq136_census_bucket_provenance/stats_output.json
+audits/2026-07-12_oq217_consensus_tightening/predicted_movement.json
+audits/2026-07-02_oq136_census_bucket_provenance/WRITEUP.md
+audits/2026-07-12_oq217_consensus_tightening/movement_diff.v1_flagged.json
+audits/2026-08-07_oq261_forced_gluing/PROPOSAL.md
+audits/2026-07-12_oq217_consensus_tightening/movement_diff.json
+audits/2026-07-02_oq136_census_bucket_provenance/extract_raw.log
+audits/2026-07-12_oq217_consensus_tightening/README.md
+audits/2026-07-12_oq217_consensus_tightening/census_input_testsets.DOCTORED.json
+audits/2026-07-12_oq217_consensus_tightening/census_input_testsets.json
+audits/2026-07-02_oq136_census_bucket_provenance/membership.tsv
+audits/2026-07-02_oq136_census_bucket_provenance/HANDREAD.md
+audits/2026-07-12_oq217_consensus_tightening/census_input_testsets_haiku.json
