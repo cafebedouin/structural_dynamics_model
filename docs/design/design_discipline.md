@@ -86,10 +86,18 @@ record), not a remembered convention.
 The seat is **owned, not neutral**, and it is **contestable**. The natural rival — making the
 semantically-aligned key `seat_role_vector` (the [beneficiary, payer, excluded, analytical]
 vector that SEAT_SWEEP foregrounds) canonical — is the one a reader who wants the vocabulary to
-*name the political stance directly* would prefer. I **decline it, I do not refute it.** It is
-declined on a stated ground: on this corpus that key is draw-fragile (twin-agreement 0.245, well
-below the baseline floor), so canonizing it would put a model-relative artifact at the center of
-a vocabulary meant to travel across kernels. The decline is conditional and carries its own kill
+*name the political stance directly* would prefer. I **decline it, I do not refute it.**
+**[CORRECTION 2026-08-09 (OQ-151 close): the 0.245 twin-agreement previously stated here as this
+key's draw-fragility was measured on the POWER-keyed vector — `orbit_operator.py`
+`_k_seat_role_vector` keys on `SEATS`, the four power positions, not the role slots (both gauges
+carry an `analytical`-named 4th slot, which is plausibly how the mis-keying survived review). The
+role-keyed twin-agreement has never been measured; OQ-275 owns the re-measurement, with the
+pre-registered disqualifier that a near-unity role-keyed agreement is a config-forcing artifact,
+not draw-robustness.]** The decline stands on its remaining grounds: the role vector's content is
+largely config-forced (role→d; GAP-27/GAP-14), it is a coarsening of the seat vector
+`h1_stakeholder` already measures, and no live consumer requires it — canonizing it would still
+put a config-echo at the center of a vocabulary meant to travel across kernels. The decline is
+conditional and carries its own kill
 condition (ISSUES OQ-56): **if a live downstream consumer ever *requires* the semantic stance
 label inside the canonical vocabulary to function** — not merely to display it — the ground for
 declining is gone and the seat flips to canonizing `seat_role_vector` despite its fragility, on
@@ -101,7 +109,9 @@ This produces the honest empirical finding the vocabulary choice half-hides, rec
 result and not buried under the ruling: **OQ-56's motivating question — name the semantic stances
 (naturalizing / coordination / power-revealing) comparably across kernels — has no draw-robust
 answer on this corpus.** The reproducible keys are structural and coarse; the one
-semantically-aligned key is draw-fragile. The semantic-stance transpose is therefore
+semantically-aligned key remains UNMEASURED on its own keying (the 0.245 belongs to the
+power-keyed vector — correction above; OQ-275) and its content is config-forced either way. The
+semantic-stance transpose is therefore
 *foreclosed-as-draw-robust* — available model-relative only. That is a finding about this corpus
 (an Ω_E, witnessable later by a more reproducible extraction), not a permanent fact about the
 engine; a corpus or extraction that lifted the role-vector above the baseline would reopen it.

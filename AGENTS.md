@@ -690,6 +690,22 @@ insufficiency/annotated-unanimity), and the fixture-pinned boundary cases. **Tri
 shown: a bare `run_tests` after corpus load also sweeps the testset-embedded units
 (pre-existing failures unrelated to these suites).
 
+### Run the empty-chair detector suite (OQ-151)
+
+```bash
+cd prolog && swipl -g "[stack], [tests/test_empty_chair], \
+  run_tests(empty_chair), halt" -t "halt(1)"
+```
+
+`stakeholder_seats:empty_chair_state/2` (typed refinement of the mcc candidate set; census
+source `empty_chair`): 8-token partition, dissent-wins multi-chair semantics, the
+excluded_untyped fail-open, the mcc-Excl anti-fork mirror, and live refinement coherence
+against (consensus verdict × h1_stakeholder). **Tripwire: in
+`empty_chair_dissent*(T, DissentTypes, AllTypedExNames)` the third argument includes
+CONCURRING chairs** (stated at the clause + registry entry) — never read it as "the chairs
+that dissented". Corpus-facing vacuity guards fail by design on chairless corpora (e.g. a
+kernel_v1 overlay) — that is the negative-domain control firing, not a regression.
+
 ### Run the ε-declaration suite (OQ-205 standing guard)
 
 ```bash

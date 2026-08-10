@@ -2517,7 +2517,10 @@ not auto-detected).
 
 **The Ω_P ruling (operator, 2026-06-20).** The canonical cross-kernel reading-stance vocabulary =
 the two Tier-1 draw-robust keys: `observer_signature` (reading-unit, twin-agreement 0.722) +
-`obstruction_class` (kernel-unit, 0.734). The six Tier-2 keys (incl. `seat_role_vector`, 0.245) are
+`obstruction_class` (kernel-unit, 0.734). The six Tier-2 keys (incl. `seat_role_vector`, 0.245 —
+**CORRECTION 2026-08-09 (OQ-151 close): that 0.245 was measured on the POWER-keyed vector;
+`orbit_operator.py` `_k_seat_role_vector` keys on `SEATS`, the power gauge — the role-keyed
+twin-agreement was never measured; see OQ-275. OQ-56's decline stands on its other grounds.**) are
 carried **report-only, model-relative**, twin-agreement inline — NOT canonical. Recorded as a **checked
 fact, not a memory** (Build Discipline Pattern 2): `CANONICAL_VOCABULARY` in `orbit_operator.py`,
 surfaced as `canonical` on every orbit record (witness: `canonical=true` on exactly the 2 Tier-1 keys,
@@ -2527,7 +2530,9 @@ false on the 6 others). Declared first-person, decline-not-refute the seat-role-
 **The Ω_E finding (recorded as the real result, not buried under the ruling).** OQ-56's motivating
 question — name the semantic stances (naturalizing / coordination / power-revealing) comparably across
 kernels — has **NO draw-robust answer on this corpus**: the reproducible keys are structural/coarse, and
-the one semantically-aligned key (`seat_role_vector`) is draw-fragile (0.245). The semantic-stance
+the one semantically-aligned key (`seat_role_vector`) is draw-fragile (0.245 — **CORRECTION
+2026-08-09: measured on the POWER-keyed vector, not the role vector; OQ-275 owns the role-keyed
+re-measurement**). The semantic-stance
 transpose is **foreclosed-as-draw-robust**, available model-relative only. This is an Ω_E
 (corpus-conditional), reopenable by a more reproducible extraction — not a permanent engine fact.
 
@@ -8257,7 +8262,9 @@ extraction baseline (~0.72 — the substrate's own reproducibility), the keys sp
   4-way verdict) and `observer-signature` (R1, 0.722).
 - **Tier 2 — above-chance but membership-fragile (below baseline):** terminal-observer (0.566),
   apparatus `cs_pattern` (0.487), terminal-committer (0.300), axiom-grounding-profile (0.272),
-  seat-role-vector (0.245), kernel structure-signature (0.134).
+  seat-role-vector (0.245 — **CORRECTION 2026-08-09 (OQ-151 close): the `_k_seat_role_vector`
+  extractor keys on the POWER gauge (`SEATS`), so this row measured the power-keyed vector;
+  role-keyed re-measurement is OQ-275**), kernel structure-signature (0.134).
 
 **Two substantive Ω_E findings:** (1) **the committer axis is fragile in its FINE signatures but
 reproducible when COARSENED** — apparatus/grounding are model-relative, yet the 4-way obstruction
@@ -8311,96 +8318,75 @@ OQ-72 to include the committer-axis dimensions honestly.
 
 **Ω-type:** Ω_C (design — what to build + the declared slot definitions; a diagnostic method, NOT a theorem of social reality).
 
-**Status:** open
+**Status:** resolved — 2026-08-09 — H¹ half superseded by OQ-207/OQ-217; full role-gauge H¹ DECLINED
+(operator ruling); typed empty-chair detector + dual-gauge crosstab built and audited. Compressed on close.
 **Priority:** 2
-**Deps:** bundled_with OQ-51
-**Origin:** stakeholder/cohomology thread off OQ-56 (2026-06-19), sharpened by a three-model
-review (Gemini / Perplexity / Claude Code web). Evidence: `outputs/pipeline_output.haiku.json`
-(n=960, `8126231`) + `grothendieck_cohomology.pl`; witnessed probes this session.
+**Deps (dropped on close):** was `bundled_with OQ-51`.
+**Origin:** stakeholder/cohomology thread off OQ-56 (2026-06-19), sharpened by a three-model review.
 
-**The instrument.** Re-base the per-constraint obstruction onto a **canonical 4-role site** —
-`[beneficiary, victim, excluded, analytical]` — instead of (or alongside) the fixed power-gauge
-`[powerless, moderate, institutional, analytical]`. The role site *is the six-questions made into
-a base space* (Q1 who-benefits/who-pays → beneficiary+victim; Q4 who's-not-in-the-room →
-excluded; the observer → analytical), so it is **cross-constraint comparable by construction** (same
-semantic axes every time) while reading the *authored parties*. Witnessed value: the role-gauge
-makes the cover story legible — `abrahamic_covenant__ishmael` reads
-`[ben:naturalized, pay:snare, excl:snare, obs:snare]` (beneficiary sees natural law, everyone else
-sees extraction); the power-gauge scrambles this across power positions.
+**Resolution (operator rulings 2026-08-09; commits `e07fba7b`/`3607086f`/`9f7f6f85`; evidence
+`audits/2026-08-09_oq151_dual_gauge/` — PREREGISTRATION md5-logged pre-run, five manifests at shared
+`code_commit=3607086f`):**
+- (i) **H¹ half superseded by OQ-207/OQ-217** (cross-refs added both directions at close):
+  `stakeholder_seats.pl` already measures per-seat disagreement over the named agent seats via the pure
+  kernel `grothendieck_cohomology:obstruction_from_vector/3` — the honest primitive (H⁰ + disagreement
+  tally) this entry demanded, inherited rather than rebuilt.
+- (ii) **Full role-gauge H¹ DECLINED, three independent grounds:** (a) the role-gauge geometry is
+  forced by config (role→d + exit is the only live seat dial — GAP-27; seat-χ ordering fixed by
+  role→d — GAP-14; the SEAT_SWEEP 1-vs-4 geometry is mechanism, not finding); (b) a role projection
+  is a COARSENING of the seat vector `h1_stakeholder` already measures — a coarsening cannot
+  outperform its refinement; (c) OQ-56 recorded the reopen tripwire for exactly this gauge and no
+  live consumer needs it. **Reopen condition: build iff a live consumer requires per-role
+  disagreement structure that `role_type_sets/2` + `h1_stakeholder` cannot express** (aligned with
+  OQ-56's recorded-not-armed convention).
+- (iii) **Deliverables.** (A) Typed empty-chair detector `stakeholder_seats:empty_chair_state/2`
+  (TOTAL, 8-token partition of the mcc candidate set; dissent-wins multi-chair semantics;
+  `excluded_untyped` fires iff NO chair derives real — the fail-open that closes the 4/5 trap below
+  at source; census-only serialization, `pipeline_output.json` untouched per OQ-204
+  one-verdict-one-site; suite `prolog/tests/test_empty_chair.pl`, mirror-pin against
+  `consensus_provenance/2`). Set-valued per-role aggregation ships as `role_type_set/3` /
+  `role_type_sets/2` (non-singleton set = intra-role fracture, surfaced not washed). (B) Dual-gauge
+  crosstab h1_band × h1_stakeholder over the five legs: both pre-registered off-diagonal cells
+  REALIZED ((0,>0) = observer glues while authored parties fracture — the realizable form of this
+  entry's role-H¹>0 ∧ power-H¹=0; (>0,0) = observer fracture over seated consensus), 47/47 sampled
+  members per-item re-derived, 0 mismatches. **Headline refinement census: 613 mcc candidates across
+  the legs → 9 typed-dissent (~1.5%), 219 `excluded_untyped` (~36% — the old false-positive class at
+  corpus scale), 385 concurs**; Σ identity exact and all structurally-impossible cells zero on every
+  leg. The one genuine case from the original 4/5 hand-check
+  (`employment_boundary__substantive_employment_reading`) is independently recovered by the shipped
+  detector.
+- (iv) **Vocabulary mapping (recorded so future readers don't search for names that were never
+  there):** the OQ's site `[beneficiary, victim, excluded, analytical]` maps to the live 5-atom role
+  vocabulary as `victim ≡ payer`, `analytical ≡ observer` (the authored observer seat; the canonical
+  analytical CONTEXT remains the power gauge's 4th point), and `agenda_setter` is an addition this
+  entry's "exactly four" omitted. There is no `victim` role atom (config.pl:171-175).
+- (v) The detector does NOT trip OQ-56's reopen condition: it consumes per-seat types grouped by
+  role, never the `seat_role_vector` orbit key.
+- **Label correction shipped at close:** the 0.245 twin-agreement previously cited (OQ-56/OQ-150/
+  `design_discipline.md` §0.1) as the ROLE vector's draw-fragility was measured on the POWER-keyed
+  vector (`orbit_operator.py` `_k_seat_role_vector` keys on `SEATS`, the power gauge) — the decline
+  in (ii) deliberately does NOT rest on that number. Role-keyed re-measurement: OQ-275.
 
-**Build = Option-2 hybrid + Option-3 dual-gauge diff.**
-- **Hybrid coverage:** synthesize `beneficiary`/`victim` slots from `base_properties` directionality
-  (low-d/high-d), near-universal (haiku 942/960, 841/960); `analytical` = the canonical analytical
-  context (100%); **`excluded` is stakeholder-only (~60%, coverage-carried).** The excluded seat is
-  the *irreducible* contribution — base_properties has no who's-not-in-the-room array, so it cannot
-  be synthesized. It is the entire information gain.
-- **Dual-gauge diff:** keep power-gauge AND role-gauge; the diff is signal — `power-H¹>0 ∧
-  role-H¹=0` = fracture is about authority/power-placement; `role-H¹>0 ∧ power-H¹=0` = fracture is
-  about who-benefits, invisible to the power orbit.
+**FOUNDATIONAL CORRECTION — do not repeat the counterfeit rigor (witnessed 2026-06-19; STILL
+OPERATIVE).** The engine's "H1" is NOT a cohomology rank. `grothendieck_cohomology:
+count_disagreeing_pairs` is, by its own comment, a *"Cech 1-cocycle proxy"* — a tally of disagreeing
+context-pairs. Witness: Abrahamic role-gauge `[naturalized,snare,snare,snare]` gives tally **3**, but
+the genuine first Betti number of that disagreement graph (star K₁,₃) is **E−V+C = 3−4+1 = 0**. So
+**H⁰ (global section ⟺ all agree) is legitimate; "H1" is a contextuality/disagreement count, not
+dim H¹.** Claim Grothendieck cohomology ONLY if a real nerve+cochain is constructed. The existing
+naming (`cohomological_obstruction`, `contextuality_fraction`, `sheaf_status`) overclaims — pairs
+with **OQ-51**.
 
-**The headline value (the inversion):** the find is NOT visible disagreement (it documents itself).
-It is **manufactured consensus** — apparent agreement that holds only because the dissenting seat
-was never seated: `included-roles agree ∧ a genuinely-typed excluded seat dissents`. *Consensus is
-more suspect than conflict; the ideological load of a constraint is measured by how empty the room
-had to be for it to look agreed.*
+**FAIL-OPEN on absence (witnessed-necessary; now ENFORCED AT SOURCE).** Per-item check of the 5 raw
+mcc candidates found 4/5 false positives — the excluded seat was `unknown` and `unknown ∉
+included-types` was counted as dissent (Pattern-5 absence-as-presence one level up). The shipped
+detector requires the chair genuinely typed (`is_real_type/1`); corpus-scale confirmation of the
+trap's size: 219/613 candidates are `excluded_untyped` (2026-08-09 audit).
 
-**Corpus seat-sweep result (the OQ-56 question answered; `SEAT_SWEEP.md` in the audit dir,
-2026-06-19).** Holding each position fixed and sweeping the corpus (% extractive): beneficiary
-15.5/14.6 (haiku/flash) vs payer 90.0/81.0, excluded 80.9/72.2, observer 81.6/72.3, analytical
-82.6/71.7 — a **1-vs-4 geometry** (beneficiary vs a tight not-beneficiary cluster), not a spectrum.
-The benign↔extractive swing is **FORCED** by `role→d` (mechanism, not finding; twin-replication is
-only a stability check since both runs share the config), and **excluded≈payer is forced** (config
-+ coverage dilution). **Two residuals survive substrate kill-conditions:** (1) `naturalized` is
-ε/χ-gated not d-fixed (`drl_core.pl:416`: ε>0.45 ∧ χ<0.35 — the cover-story type), so it is the
-beneficiary seat's reading of high-ε constraints; (2) the **analytical seat sits at the payer's
-pole** (82.6/71.7, exact, vs a ~53% midpoint) — it carries no `role→d`, only a declared
-`context→(d,σ)`, so **"no view from nowhere": the declared analytical seat is positioned at the
-extraction pole, beside the parties who pay.** That is the publishable claim (Seat Theorem as
-measurement); the cover-story result is forced/old.
-
-**FOUNDATIONAL CORRECTION — do not repeat the counterfeit rigor (witnessed 2026-06-19).** The
-engine's "H1" is NOT a cohomology rank. `grothendieck_cohomology:count_disagreeing_pairs` is, by
-its own comment, a *"Cech 1-cocycle proxy"* — a tally of disagreeing context-pairs (range 0..6).
-Witness: Abrahamic role-gauge `[naturalized,snare,snare,snare]` gives tally **3**, but the genuine
-first Betti number of that disagreement graph (star K₁,₃) is **E−V+C = 3−4+1 = 0**. Claude Code
-web's kill condition resolves: replacing "H1" with "count of seats differing from the modal" changes
-nothing downstream — because that IS what it computes. So **H⁰ (global section ⟺ all agree) is
-legitimate; "H1" is a contextuality/disagreement count, not dim H¹.** Build this detector on the
-honest primitive (H0 + disagreement tally + coverage); claim Grothendieck cohomology ONLY if a real
-nerve+cochain (overlapping cover, e.g. reading_diff's vantage alignment) is constructed. This also
-flags the *existing* engine naming (`cohomological_obstruction`, `contextuality_fraction`,
-`sheaf_status`) as overclaiming — pairs with **OQ-51**.
-
-**Set-valued aggregation (forced — never modal).** Modal-per-role silences the lone dissenter (it is
-exactly the signal). Define each role-slot's reading as the **SET** of its seats' types.
-`H0 = global section ⟺ the UNION of all seats' types (every role) is a singleton` — any single
-dissenter in any role breaks it and can never be averaged away. A non-singleton role-set is *intra-
-role fracture* (a lone dissenter inside a role), surfaced, not washed. Manufactured-consensus flag =
-included-roles' union is low-disagreement AND the excluded set carries a **genuinely-typed** type
-outside it.
-
-**FAIL-OPEN on absence (witnessed-necessary).** Per-item check of the 5 raw manufactured-consensus
-candidates found **4/5 were false positives**: the excluded seat was `unknown` (untyped), and
-counting `unknown ∉ included-types` as dissent is the Pattern-5 absence-as-presence trap one level
-up. Only `employment_boundary__substantive_employment_reading` was genuine (ben:naturalized /
-pay:snare / excl:tangled_rope). ⇒ the detector MUST require the excluded seat **genuinely typed**;
-absent/`unknown` excluded → `unknown`, never "consensus." And every count is per-item-verified
-before it ships (count-as-witness is the failure mode).
-
-**Failure modes to carry (method, not theorem — Perplexity):** (1) `unknown`-as-dissent (above);
-(2) modal-washes-the-dissenter (→ set-valued); (3) Option-2's high coverage is *partly synthetic* —
-beneficiary/victim are the analyst's directionality priors, not data density, so "comparable by
-construction" restates a declared seat (Seat Theorem); carry that caveat to the read site; (4)
-excluded coverage-gap (fail-open); (5) slot definitions must be defensible/stable, not post-hoc
-labels. **agenda_setter** (the 5th role, ~604 facts) is omitted by "exactly four" — fold into
-beneficiary (institutional-side) or keep as a 5th slot; dropping it loses the piton "administrator
-who profits" signal (a declared choice).
-
-**What resolution changes:** gives a comparable, party-aware obstruction with a built-in manufactured-
-consensus / no-seat-pose detector (pairs with the v8 showing-face guard) — OR concludes the honest
-instrument is "a four-seat empty-chair coverage check," with the cohomology dropped as decoration.
-Either is a real outcome; the kill condition (cochain reconstruction) decides which. Relates OQ-51
-(H1/W1 obstruction + the naming correction), OQ-150 (orbits could key on the role-vector), OQ-56.
+**Relates:** OQ-51 (naming correction), OQ-203 (evidential-vs-structural exclusion caveat rides at
+the `empty_chair_state/2` clause), OQ-204 (`empty_chair_state/2` is its refinement source), OQ-199
+(the `empty_chair_dissent*` set is a candidate validation stratum), OQ-275 (role-keyed
+re-measurement), OQ-56, OQ-150.
 
 ---
 
@@ -8413,7 +8399,7 @@ Either is a real outcome; the kill condition (cochain reconstruction) decides wh
 **Origin:** suppression/scaffold thread off OQ-56 (operator, 2026-06-19); the temporal half is
 `design_gaps.md` GAP-14 (this OQ is its commentary-grade static cross-section).
 
-**Specific question:** `naturalized` (`drl_core.pl:416`: `ε > rope_epsilon_ceiling(0.45) ∧ χ <
+**Specific question:** `naturalized` (`drl_core.pl:453-457`: `ε > rope_epsilon_ceiling(0.45) ∧ χ <
 tangled_rope_chi_floor(0.35)`) is the engine's cover-story type — high real extraction compressed
 below detection — and the seat-sweep (`SEAT_SWEEP.md`) shows it is structurally the *beneficiary*
 seat's reading. The Litany says visible suppression contradicts naturalness ("heavy enforcement →
@@ -8562,7 +8548,7 @@ coordination hollowing, *should have* dissolved and couldn't) are the two tempor
 husk is the **failed scaffold — the temporary that claimed to be eternal and then couldn't admit it
 was temporary.** QWERTY was literally a scaffold (it solved typebar-jamming) that should have
 dissolved when the constraint lifted and instead locked into a piton; it did *not* husk only because
-it never naturalized. The engine surfaces are: the cover-story type `naturalized` (`drl_core.pl:416`,
+it never naturalized. The engine surfaces are: the cover-story type `naturalized` (`drl_core.pl:453-457`,
 high real ε compressed below the χ floor), FNL/`false_natural_law` (a constructed support reading a
 naturality claim — the likely witness surface), and the committer husk attractor
 (`cs_drift_engine.pl:64,70,80`). What the engine can *currently* witness of the five conditions is
@@ -10057,6 +10043,12 @@ spectrum-validated instrument — per-constraint `h1_stakeholder` (+ `_n_seats`/
 `pipeline_output.json`, 0 out-of-spectrum values across all legs (`audits/2026-07-12_oq207_stakeholder_h1/`).
 The validation design (scoring divergences against an independent structural check) remains this OQ's open
 work; the instrument gives it its measured variable.
+**Instrument note (2026-08-09, OQ-151 close):** the `empty_chair_dissent*` set
+(`stakeholder_seats:empty_chair_state/2`, commit `e07fba7b`) is a natural CANDIDATE VALIDATION
+STRATUM for this OQ's design: 9 stories across the five legs where a typed excluded seat dissents
+from a unanimous typed room (per-item lines in `audits/2026-08-09_oq151_dual_gauge/`) — small
+enough to hand-score each against independent structural evidence, and enriched for exactly the
+authored-seat-disagreement signal whose reliability this OQ questions.
 **Files:** `prolog/report_generator.pl` (`seat_type_reading/2` stakeholder clause), `prolog/stakeholder_seats.pl`
 (`dr_type_for_stakeholder/3`), `narrative_ontology:constraint_stakeholder/7` authored facts.
 
@@ -10199,6 +10191,13 @@ queried on its authored grid (not a synthetic time).
 
 **The question.** Give the authoring vocabulary a way to distinguish "excluded from the room" (structural — the mcc-relevant kind) from "participates fully but loses on evidence" (evidential — not an absent seat). Candidates: an exclusion-kind qualifier alongside the role; a distinct role atom (e.g. `dissenting`); or routing evidential exclusion through `secondary_role`. Consumers to update once ruled: `consensus_provenance/2`'s Excl set (and anything reading role=excluded as absence). Interaction: OQ-204's first-class mcc surfacing should re-read membership from the predicate, so this fix flows through automatically.
 
+**Instrument note (2026-08-09, OQ-151 close):** the caveat is now CARRIED AT THE CLAUSE —
+`stakeholder_seats:empty_chair_state/2`'s header states that a typed dissenting chair is a
+structural-footprint CANDIDATE only, because this vocabulary gap is unfixed. Convergent evidence:
+the detector reads `radiative_levitation_stratification` (this entry's motivating false positive)
+as `excluded_concurs(scaffold)` — machine-readable agreement with the hand-read
+(`audits/2026-08-09_oq151_dual_gauge/per_item_verification.log`).
+
 **What resolution changes.** mcc flag precision (the known false-positive class disappears at the source); the `excluded` role stops conflating two exclusion kinds the corpus's own prose already distinguishes.
 
 ---
@@ -10220,6 +10219,14 @@ queried on its authored grid (not a synthetic time).
 **Instrument note (2026-07-12, OQ-207 close):** the graded generalization is built — `stakeholder_seats:stakeholder_obstruction/5` + per-constraint `h1_stakeholder`/`_n_seats`/`_n_real` in `pipeline_output.json`; the verdict×H¹ coherence table (incl. divergence cells) is at the `consensus_provenance/2` clause header, per-leg cell counts in `audits/2026-07-12_oq207_stakeholder_h1/`. **Sequencing:** OQ-217 (obligatory tightening — cell (b) fired) changes mcc membership; land it before or with this surface build (membership is read live, so it flows through, but the promoted statistic should never ship the wrong-verdict members).
 
 **OQ-217 landed (2026-07-13, commits `871e69ac`/`cb60bd0a`) — two facts this surface build must carry:** (1) **the mcc candidate set is now TWO tokens** — `manufactured_consensus_candidate(Excl)` (all seats real) and `manufactured_consensus_candidate_untypeable(Excl)` (untypeable seats beside the agreeing reals; heavily live: 12/50/39 across the legs) — a surface reading only the bare token silently drops the larger untypeable stratum; decide jointly whether the promoted statistic merges or splits them, and say which. (2) **Pre-registered kill condition for the annotated tokens (operator, 2026-07-12):** if this surface ends up carrying NReal/NSeats inseparably alongside the verdict token everywhere it is displayed, the `_with_untypeable`/`_untypeable` annotation is redundant and collapses back to plain filtering (option 1) — check it against the built surface when this lands.
+
+**Instrument note (2026-08-09, OQ-151 close):** **`stakeholder_seats:empty_chair_state/2` (commit
+`e07fba7b`) is this surface's REFINEMENT SOURCE** — the typed 8-token partition of the live mcc
+candidate set (dissent / untyped-chair / concurs, `_untypeable` variants), already censused as the
+`empty_chair` commentary source. A surface build should read it rather than re-deriving chair
+typing; measured base rates (five legs, 2026-08-09): 613 candidates → 9 typed-dissent (~1.5%) /
+219 excluded_untyped (~36%) / 385 concurs. Read the `empty_chair_dissent*` argument asymmetry note
+at the clause (DissentTypes is dissent-filtered; AllTypedExNames includes concurring chairs).
 
 **What resolution changes.** The first census bucket promoted from honest count to first-class corpus statistic — the seated-reporting precedent for any later bucket promotion.
 
@@ -10276,6 +10283,11 @@ queried on its authored grid (not a synthetic time).
 **Deps:** splits_from OQ-195
 
 **Origin:** 2026-07-02, the operator's pre-check on the OQ-195 plan: the cohomology was built on the four OBSERVER contexts, but the schema/generation (OQ-83/OQ-109) author a second frame — named stakeholder seats at variable cardinality (live census 3–12 seats/story; kernel_v1 has zero); nothing aggregated the per-seat types into a disagreement measure. Minted per the OQ-195 plan's embedded ruling 5.
+
+**Cross-ref (added 2026-08-09, OQ-151 close):** this build SUPERSEDED the H¹ half of OQ-151's
+role-projected gauge (the seat frame is the role site's refinement); OQ-151's empty-chair detector
+(`empty_chair_state/2`, commit `e07fba7b`) is the typed refinement of the mcc candidate set this
+entry's `consensus_provenance/2` coherence work left as mere-existence.
 
 ## OQ-208 — CA-2: committer framing-dependence is UNTESTED — the OQ-119 0/5 lacks a framing-sensitive positive control (or a proof none can exist)
 
@@ -10708,6 +10720,11 @@ its producer never finished writing.
 **Priority:** 2
 
 **Deps:** splits_from OQ-207
+
+**Cross-ref (added 2026-08-09, OQ-151 close):** the exact verdict⟺H¹ biconditional this tightening
+delivered is what let OQ-151's H¹ half close as superseded; the mcc candidate set it left
+existence-gated is now typed-refined by `empty_chair_state/2` (commit `e07fba7b`,
+`audits/2026-08-09_oq151_dual_gauge/` — 613 candidates → 9 dissent / 219 untyped-chair / 385 concur).
 
 **Origin:** 2026-07-12, the OQ-207 census fired the pre-committed D4 kill condition (cell (b) —
 all-`unknown` seats read unanimous — live population 4). Evidence: `audits/2026-07-12_oq207_stakeholder_h1/`.
@@ -13033,6 +13050,46 @@ conflated with "structurally undecidable"?
 **What resolution changes.** Either `omega_variables.md` gains the policy axis (and
 OQ authors a vocabulary for held-open vs undecidable) or the redundancy with the
 status grammar is documented and the bible's sort noted as a local convention.
+
+---
+
+## OQ-275 — Re-measure twin-agreement on the ROLE-keyed seat vector (the 0.245 was measured on the power-keyed vector)
+
+**Ω-type:** Ω_E (empirical — a measurement never actually taken; corpus-conditional).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-151
+**Origin:** OQ-151 close-out (2026-08-09). Evidence contamination found during the
+OQ-151 exploration: `orbit_operator.py` `_k_seat_role_vector` (:128-130) keys on the
+POWER gauge (`SEATS`, :42 — the four power positions), but
+`docs/design/design_discipline.md` §0.1 and the OQ-56/OQ-150 entries cited its
+0.245 twin-agreement as the ROLE vector's draw-fragility. The 0.245 is a real
+measurement of the WRONG vector: the role-keyed `[beneficiary, payer, excluded,
+observer/analytical]` twin-agreement has never been measured. Label corrections
+shipped in the OQ-151 close commit; this OQ owns the actual re-measurement.
+
+**PRE-REGISTERED DISQUALIFIER (operator, 2026-08-09 — verbatim):** *a near-unity
+role-keyed twin-agreement is expected as a config-forcing artifact and must not be
+read as draw-robustness or grounds to reopen the OQ-151 decline.* (The role→d map
+plus the 1-vs-4 seat geometry force most of the vector's content from config —
+GAP-27/GAP-14 — so agreement between twins largely measures the shared config, not
+the draw.)
+
+**Shared-token trap (how the mis-keying survived review):** the power gauge and the
+role vector BOTH carry an `analytical`-named 4th slot — a partial vector read
+visually is ambiguous between the two gauges. The re-measurement must confirm which
+gauge it keyed PROGRAMMATICALLY (assert on the key-construction code path or the
+slot-source fields), never by visual inspection of a partial vector.
+
+**Scoped here (not the OQ-151 arc):** whether to rename the `seat_role_vector` code
+key in `orbit_operator.py` (e.g. → `power_seat_vector`) — output-changing on the
+orbit artifacts, so it needs its own diff-witnessed change if taken.
+
+**What resolution changes:** replaces a mis-keyed number with a real one in the
+OQ-56 tier table; either way the OQ-151/OQ-56 declines stand on their other grounds
+(forced-by-config echo; coarsening cannot outperform its refinement; no live
+consumer requiring the role gauge).
 
 ---
 

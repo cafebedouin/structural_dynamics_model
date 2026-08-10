@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "aabfd2579e3c0300230f3e24e007425685c4beed",
+    "store_version": "9f7f6f8511b9ea240b09540f1bd2d900382c59f2",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-09T16:41:45"
+    "generated_at": "2026-08-09T23:18:51"
   },
-  "issues_sha": "7b2b36683af2712eefce70b0e25b5286c2f2464c6a301056d0c67d234dcdfdc9",
-  "n_entries": 274,
+  "issues_sha": "88b65055a7da817d70318e3054e2056252002990f55fae188c122877f602f933",
+  "n_entries": 275,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 145,
+    "resolved": 146,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
@@ -292,21 +292,6 @@
         "OQ-72",
         "OQ-123",
         "OQ-124"
-      ]
-    },
-    {
-      "id": "OQ-151",
-      "status": "open",
-      "priority": 2,
-      "summary": "Role-projected (\"six-questions\") gauge + empty-chair detector — built on the honest primitive",
-      "deps": [
-        "bundled_with OQ-51"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-51",
-        "OQ-56",
-        "OQ-150"
       ]
     },
     {
@@ -663,6 +648,7 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-151",
         "OQ-197",
         "OQ-207"
       ]
@@ -721,6 +707,7 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-136",
+        "OQ-151",
         "OQ-204"
       ]
     },
@@ -737,6 +724,7 @@
       "mentioned_in": [
         "OQ-134",
         "OQ-136",
+        "OQ-151",
         "OQ-203",
         "OQ-207",
         "OQ-217"
@@ -1390,6 +1378,21 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-275",
+      "status": "open",
+      "priority": 3,
+      "summary": "Re-measure twin-agreement on the ROLE-keyed seat vector (the 0.245 was measured on the power-keyed vector)",
+      "deps": [
+        "splits_from OQ-151"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-56",
+        "OQ-150",
+        "OQ-151"
+      ]
     }
   ],
   "archive": [
@@ -2092,7 +2095,9 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-150"
+        "OQ-150",
+        "OQ-151",
+        "OQ-275"
       ]
     },
     {
@@ -3179,7 +3184,27 @@
         "OQ-56",
         "OQ-72",
         "OQ-118",
-        "OQ-151"
+        "OQ-151",
+        "OQ-275"
+      ]
+    },
+    {
+      "id": "OQ-151",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Role-projected (\"six-questions\") gauge + empty-chair detector — built on the honest primitive",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-56",
+        "OQ-150",
+        "OQ-199",
+        "OQ-203",
+        "OQ-204",
+        "OQ-207",
+        "OQ-217",
+        "OQ-275"
       ]
     },
     {
@@ -3509,6 +3534,7 @@
         "OQ-83",
         "OQ-109",
         "OQ-137",
+        "OQ-151",
         "OQ-195",
         "OQ-199",
         "OQ-202",
@@ -3563,6 +3589,7 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-151",
         "OQ-207"
       ]
     },

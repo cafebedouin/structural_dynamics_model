@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-09 — [landed] OQ-151 resolved: typed empty-chair detector + dual-gauge crosstab; role-gauge H¹ declined; 0.245 label corrected (was power-keyed) — OQ-275 minted
+
+**Files:** prolog/stakeholder_seats.pl, prolog/reading_registry.pl, prolog/commentary_census.pl, prolog/tests/test_empty_chair.pl, python/audits/oq151_dual_gauge_crosstab.py, docs/design/design_discipline.md, ISSUES.md
+**Tier:** landed
+
+Three-commit arc (`e07fba7b` detector / `3607086f`+`9f7f6f85` audit / this close).
+- **Detector:** `stakeholder_seats:empty_chair_state/2` — TOTAL 8-token typed refinement of the
+  mcc candidate set (dissent-wins multi-chair semantics; `excluded_untyped` fires iff NO chair
+  derives real, closing OQ-151's 4/5 false-positive trap at source). Census-only serialization
+  (`empty_chair` source; `pipeline_output.json` untouched — per_constraint byte-identical
+  clean-vs-edited pair over fp-frozen corpus). +5 registry entries; suite 14/14 + totality 10/10
+  on all five legs; kernel_v1 overlay = 100% no_excluded_seat with the two corpus-facing vacuity
+  guards firing (negative-domain control live). **Argument-asymmetry tripwire:** in
+  `empty_chair_dissent*(T, DissentTypes, AllTypedExNames)` the third arg includes CONCURRING
+  chairs — stated at clause + registry; do not read it as "the chairs that dissented".
+- **Audit** (`audits/2026-08-09_oq151_dual_gauge/`, prereg md5-logged pre-run, five manifests at
+  shared commit `3607086f`): 613 mcc candidates → 9 typed-dissent (~1.5%) / 219 excluded_untyped
+  (~36%, the old false-positive class) / 385 concurs; Σ identity exact + expected-zero cells zero
+  on every leg; crosstab off-diagonals realized, 47/47 sampled per-item re-derivations clean.
+  `radiative_levitation_stratification` (OQ-136's text-ruled FP) now machine-reads
+  `excluded_concurs(scaffold)`.
+- **Declined:** the full role-gauge H¹ (operator ruling; config-forced geometry / coarsening of
+  `h1_stakeholder` / OQ-56 tripwire) — decline does NOT cite 0.245.
+- **Correction-key ripple:** the 0.245 twin-agreement in design_discipline §0.1 + OQ-56/OQ-150
+  was measured on the POWER-keyed vector (`_k_seat_role_vector` keys on `SEATS`); corrected at
+  all three sites; OQ-275 owns the role-keyed re-measurement with the operator's pre-registered
+  disqualifier (near-unity = config-forcing artifact, not draw-robustness).
+- Untracked prototypes `probe_mc_cases.pl`/`probe_seat_sweep.pl` retired into the audit dir with
+  defect headers.
+
+---
+
 ## 2026-08-09 — [landed] World-bible back-flow review: OQ-270..274 + GAP-32 minted; negative results recorded (which bible claims are already in v8/spec)
 
 **Files:** agent/narrative_transform/THE-GRAIN-world-bible.md, ISSUES.md, docs/design/design_gaps.md
