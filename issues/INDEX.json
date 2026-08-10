@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "a100f3d04b87a2a2133c6f28b79e299d94dbb0e4",
+    "store_version": "011fc2bbe56bef27e53e09a25b653bfddc87d9d2",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-10T01:38:56"
+    "generated_at": "2026-08-10T12:16:38"
   },
-  "issues_sha": "3f31cd1ffc9198595fef97213e4b2dea24c50925b7e698093b5b7105d91a8717",
+  "issues_sha": "3b9361daa58ac1705f16d7501cef9001f3f73729bb7fa6998f987cda48a69852",
   "n_entries": 275,
   "active_token_set": [
     "investigating",
@@ -2547,8 +2547,10 @@
       "summary": "`constraint_beneficiary/2` reads as benign coordination engine-wide; once the gain-flow surface lands, the same fact-family makes opposite-direction calls on captured constraints",
       "deps": [],
       "cross_refs": [
+        "OQ-86",
         "OQ-90",
-        "OQ-92"
+        "OQ-92",
+        "OQ-93"
       ],
       "mentioned_in": [
         "OQ-83",
@@ -2830,7 +2832,7 @@
       "id": "OQ-115",
       "status": "resolved",
       "priority": 1,
-      "summary": "signature_grade/2 references abductive_helpers under [stack] where the module is a PHANTOM (load-path-dependent; check_stack regression vs the 2026-06-04 baseline; pre-dates Phase B)",
+      "summary": "signature_grade/2 references abductive_helpers under [stack] where the module is a PHANTOM (load-path-dependent; check_stack regression vs the 2026-06-04 baseline)",
       "deps": [],
       "cross_refs": [],
       "mentioned_in": [
@@ -2857,10 +2859,7 @@
       "priority": "–",
       "summary": "Claim/metric co-authoring at SCOPE manufactures claimed-vs-computed concordance: a validity condition on the divergence machinery wherever the manifest path feeds both sides",
       "deps": [],
-      "cross_refs": [
-        "OQ-119",
-        "OQ-120"
-      ],
+      "cross_refs": [],
       "mentioned_in": [
         "OQ-33",
         "OQ-70",
@@ -3033,7 +3032,8 @@
       "priority": 3,
       "summary": "Corpus-wide Q6 crosscheck census (cell distribution as report commentary)",
       "deps": [
-        "bundled_with OQ-86"
+        "bundled_with OQ-86",
+        "bundled_with OQ-83"
       ],
       "cross_refs": [],
       "mentioned_in": [
@@ -3253,7 +3253,9 @@
       "summary": "Author \"the mint\" as a testset (the essay→engine loop, first deliberate instance)",
       "deps": [],
       "cross_refs": [],
-      "mentioned_in": []
+      "mentioned_in": [
+        "OQ-69"
+      ]
     },
     {
       "id": "OQ-172",
@@ -3261,8 +3263,6 @@
       "priority": "–",
       "summary": "Injection-suppression lives in the backend, not the corpus: a resurrected orchestrator could re-inject",
       "deps": [
-        "splits_from OQ-82",
-        "blocked_on OQ-81",
         "splits_from OQ-82",
         "blocked_on OQ-81"
       ],
@@ -3696,6 +3696,7 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-205",
         "OQ-253",
         "OQ-255",
         "OQ-256"

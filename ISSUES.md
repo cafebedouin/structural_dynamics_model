@@ -15,24 +15,15 @@ Statuses: **open** | **investigating** | **mitigated** | **resolved**
 **Status:** resolved — bypass ratified as intentional modeling content; no guard. Operator ruling 2026-06-18.
 **Priority:** 1
 **Origin:** alt_power_transform corrected T2 run, Arm A/B range sweep, May 2026.
-**File:** `prolog/drl_core.pl:378–387` (rope clause; bypass at :384, `(Chi =< 0 -> true ; ... BaseEps =< EpsCeil)`).
+**File:** `prolog/drl_core.pl:378–387` (rope clause; bypass at :384).
 
-**Question:** Is `Chi =< 0 → true` intentional modeling content (χ ≤ 0 ⇒ net beneficiary ⇒
-ε-magnitude no longer distinguishes rope from extraction, ceiling irrelevant) or an
-implementation artifact?
-
-**Resolution (2026-06-18):** Intentional. (1) Intent is recorded in `docs/logic.md` §rope
-("Negative-chi epsilon bypass (v6.0)") and `drl_core.pl:381`, both predating the sweep; the
-net-beneficiary theory is coherent. (2) The motivating worry — the Arm A3 presheaf collapse
-(Jaccard 0.864→0.319, ~1,417 spurious presheaves) — was **falsified as a property of the
-clause** by re-grounding on the post-reset live twins: A3 does NOT collapse on
-`testsets_haiku` (0.904) or `testsets_flash` (0.897), and on flash the no-sign-flip B3
-(0.820) drifts MORE than the sign-flip A3 — ruling out sign-flip as the causal variable. The
-collapse was a `prolog_v5` ε/d-distribution artifact. No guard added (path b rejected on
-evidence). Boundary note added to `logic.md`. Witness:
-`audits/2026-06-18_oq01_rope_bypass_twins/` (WRITEUP.md, evidence/summary.json,
-ground_rope_bypass.py). Residual ("which ε/d distributions re-enter the collapse band") →
-OQ-22.
+**Resolution (2026-06-18):** `Chi =< 0 → true` is intentional (net-beneficiary theory; intent
+pre-recorded in `docs/logic.md` §rope and `drl_core.pl:381`). The motivating Arm A3 presheaf
+collapse was falsified as a property of the clause on the post-reset twins (haiku 0.904 / flash
+0.897; no-sign-flip B3 drifts MORE than A3) — a `prolog_v5` ε/d-distribution artifact. No guard
+added; boundary note added to `logic.md`. Witness: `audits/2026-06-18_oq01_rope_bypass_twins/`
+(WRITEUP.md, evidence/summary.json, ground_rope_bypass.py). Residual (which ε/d distributions
+re-enter the collapse band) → OQ-22.
 
 ---
 
@@ -75,16 +66,14 @@ first solution is always correct.
 **Status:** resolved — (2026-07-03, operator seat-declaration completes 03a; 03b mooted by the same ruling)
 **Priority:** 5
 **Deps:** blocked_on OQ-135
-**Origin:** `docs/deferential_realism_paper_v7.md` §6 open questions; reinforced by
-`docs/seat-theorem-v1.md` §7–§8.
+**Origin:** `docs/deferential_realism_paper_v7.md` §6 open questions; `docs/seat-theorem-v1.md` §7–§8.
 
-**Resolution.** 03a (constitutive) resolved by operator seat-declaration 2026-06-18, extended
-2026-07-03 (below). 03b (empirical) MOOTED by operator ruling 2026-07-03: where DR sits is not
-an empirical fact a redraw could measure — "it doesn't matter how many times we reran this" —
-it is the declared seat itself. (The redraw doctrine, v8 §7.2, still governs any *empirical*
-claim about what a given authored draw returns; it is the *location* question the ruling
-removes from the empirical register.) Evidence + full ruling text:
-`audits/2026-07-03_oq03_self_application/`; KNOWN_STATE 2026-07-03.
+**Resolution.** 03a resolved by operator seat-declaration 2026-06-18, extended 2026-07-03. 03b
+MOOTED (operator, 2026-07-03): where DR sits is not an empirical fact a redraw could measure — it
+is the declared seat itself (the redraw doctrine, v8 §7.2, still governs empirical claims about
+authored draws). Evidence + full ruling text: `audits/2026-07-03_oq03_self_application/` (ledger +
+5 reports; demonstration run through `c-orchestrator` at commit `72ab7663`, manifest n=128 —
+seat-indexed per-reading verdicts, a demonstration, never a location claim); KNOWN_STATE 2026-07-03.
 
 **The declared seat (operative ruling — kept intact per compress-on-close exception).**
 2026-06-18: **base-layer skepticism** — we cannot know Truth as a base layer, and yet a seat
@@ -100,15 +89,6 @@ extraction-seeking focus shapes what it can see — which is exactly what makes 
 limit, witnessed: the outside seat cannot read some internal dynamics
 (`essays/2026-06/the_same_paper.md`).
 
-**Illustrative seated datum (2026-07-03 run — a demonstration, never a location claim).** v8
-paper through `c-orchestrator` (5 stories at commit `72ab7663`, manifest n=128): the engine
-returned reading-relative, seat-indexed verdicts, no single type — the
-`seat_gauge_orientation_kernel` sibling readings diverged (snare-family with an
-`extraction_blindness` powerless=snare/institutional=rope mismatch vs all-scaffold with
-`false_ci_rope` commentary), flat control unknown/scaffold. Inputs LLM-drawn, single draw, not
-pre-registered — reads as "DR-authored-as-drawn classifies per-reading, seated on those draws."
-Snapshot: `audits/2026-07-03_oq03_self_application/` (ledger + 5 reports).
-
 ---
 
 ## OQ-04 — Cyclopean-point kernel: 1:N reading structure not encodable in current schema
@@ -118,35 +98,20 @@ Snapshot: `audits/2026-07-03_oq03_self_application/` (ledger + 5 reports).
 **Status:** resolved — (2026-06-23, design-cut ruling)
 **Priority:** 1
 **Origin:** `docs/unknown_reading_review.md` audit; `docs/altar-to-the-unknown-reading.md`;
-`agent/analysis/essays/cyclopean_point_epistemic_synthesis.md` [path corrected — item
-originally cited docs/; file is in agent/analysis/essays/].
-**Files (archive-only — corrected 2026-06-23):**
-`prolog/archives/datasets/kernel_test/disparity_as_depth_signal.pl`,
-`prolog/archives/datasets/kernel_test/cyclopean_point_as_manufactured_center.pl`,
-`prolog/archives/datasets/kernel_test/power_asymmetry_in_legibility.pl`;
-`prolog/archives/datasets/kernel_test/autonomy_reading.pl` (template). All four are
-kernel_v1-regime and were dropped from the live `prolog/testsets/` by the 2026-06-05 reset
-(witness: `ls prolog/testsets/<each>` → no such file; `git ls-files | grep` → only
-`archives/` paths). The original `prolog/testsets/...` `Files:` paths were stale.
+`agent/analysis/essays/cyclopean_point_epistemic_synthesis.md`. Files are archive-only
+(`prolog/archives/datasets/kernel_test/` — dropped from live `testsets/` by the 2026-06-05 reset).
 
-**Resolution (schema cut — defer 1:N, accept 1:1):** Decline the 1:N reading-object
-predicate (`cs_reading_covers/2` and `cs_reading_enumeration_status/2` — both ABSENT,
-`grep -rn` empty; positive control: `cs_reading_relation` found in 5 files, so the
-absence is real). The schema stays 1:1. Grounded on **reversibility + N=1 + asymmetry**:
-a 1:N predicate justified by a single archived case is a predicate with exactly one user
-woven through four surfaces (ontology decls, generator emission, registry validation,
-report rendering) that cannot be cheaply un-shipped; the cost is asymmetric — 1:1→1:N is a
-clean promotion when a *second* case appears, but un-weaving schema is not. The existing
-`cs_kernel_id/2` + `cs_reading_relation/3` apparatus already expresses "N constraints of
-one kernel" as sibling readings, adequate for any case the live (singleton) corpus carries.
-The deferred 1:N capability is logged as a **trigger** in `docs/design/design_gaps.md`
-(promote to a gap when a SECOND kernel needs it).
+**Resolution (schema cut — defer 1:N, accept 1:1):** decline `cs_reading_covers/2` /
+`cs_reading_enumeration_status/2` (both ABSENT; positive control: `cs_reading_relation` found in 5
+files). Grounded on reversibility + N=1 + asymmetry: 1:1→1:N is a clean promotion when a SECOND
+case appears; un-weaving shipped schema is not. `cs_kernel_id/2` + `cs_reading_relation/3` already
+express sibling readings. Deferred 1:N capability logged as a **trigger** in
+`docs/design/design_gaps.md` (promote when a second kernel needs it).
 
-**Left open by design (NOT adjudicated):** the one-reading-vs-three *ontology*. The two
-source docs contradict — `docs/altar-to-the-unknown-reading.md` reads the three constraints
-as ONE analytical-observer reading (→ would want 1:N); `docs/unknown_reading_review.md`
-Gap A reads them as THREE sibling readings (→ 1:1, already expressible). This closure rules
-only the *schema* cut; it does not pick a side on the ontology, which stays explicitly open.
+**Left open by design (NOT adjudicated):** the one-reading-vs-three *ontology*. The two source
+docs contradict (`altar-to-the-unknown-reading.md` reads ONE analytical-observer reading → 1:N;
+`unknown_reading_review.md` Gap A reads THREE sibling readings → 1:1). This closure rules only the
+schema cut; the ontology stays explicitly open.
 
 ---
 
@@ -165,28 +130,22 @@ load-bearing only in tangled_rope (T4 gap +0.21 vs +0.014 in snare+rope, 14.6×)
 
 ## OQ-06 — cs_drift_unacknowledged / cs_axiom_foreclosed: off-case fixtures missing
 
-**Status:** resolved — (2026-06-23, off-case absence witness + matched-pair matrix). All
-four conjuncts now witnessed in BOTH directions. Phase A searched all four real corpuses
-(`testsets`, `testsets_haiku`, `testsets_flash`, `archives/datasets/kernel_v1`), each
-off-bucket gated by a two-sided planted control (sensitivity+specificity, all PASS) and a
-per-corpus overlay fingerprint. Result: drift-C4, axiom-C2, axiom-C4 have **live** corpus
-off-cases (closed on real UIDs `0b5146c6…`, `e0fb873f…`, `b65e1d35…`); drift-C3
-(stable+non-minor+unacknowledged) is a **structural absence** in all four corpuses
-(unacknowledged stable drifts are always minor; non-minor stable drifts are always
-acknowledged) and is closed via a transient `with_asserted` single-conjunct probe — no
-synthetic fixture written to `testsets/`. Phase C matched-pair matrix: all 8 SILENT/FIRED
-rows PASS, plus real-corpus fire controls (drift 46, axiom 12/182). Evidence:
-`audits/2026-06-23_oq06_offcase_fixtures/` (search.pl, probe.pl, raw outputs, WRITEUP.md).
-Scoped to the four named conjuncts; the presumed off-cases for the remaining conjuncts
-(drift C1/C2, axiom C1/C3) are tracked as **OQ-177** (`splits_from` OQ-06). drift-C3 re-open
-trigger: a future authored unacknowledged stable non-minor drift.
+**Status:** resolved — (2026-06-23, off-case absence witness + matched-pair matrix). All four
+conjuncts witnessed in BOTH directions across all four real corpora (`testsets`, `testsets_haiku`,
+`testsets_flash`, `archives/datasets/kernel_v1`), each off-bucket gated by a two-sided planted
+control. drift-C4, axiom-C2, axiom-C4 closed on live UIDs (`0b5146c6…`, `e0fb873f…`,
+`b65e1d35…`); drift-C3 (stable+non-minor+unacknowledged) is a **structural absence** in all four
+corpora, closed via a transient `with_asserted` single-conjunct probe — no synthetic fixture
+written. Phase C matched-pair matrix: 8/8 SILENT/FIRED rows PASS + real-corpus fire controls
+(drift 46, axiom 12/182). Evidence: `audits/2026-06-23_oq06_offcase_fixtures/` (search.pl,
+probe.pl, raw outputs, WRITEUP.md). Remaining conjuncts (drift C1/C2, axiom C1/C3) → **OQ-177**
+(`splits_from` OQ-06). drift-C3 re-open trigger: a future authored unacknowledged stable
+non-minor drift.
 **Priority:** 1
 **Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.
-**Files:** `prolog/cs_pattern_detection.pl:412–416` (`cs_drift_unacknowledged/2`) and
-`prolog/cs_axiom_engine.pl:137–141` (`cs_axiom_foreclosed/2`) — predicates (the original
-`cs_drift_engine.pl` pointer was **stale**: that file only references the predicate in a
-comment at lines 34–35); `prolog/cs_corpus_analysis.pl:158–162` (callers);
-`prolog/json_report.pl:531–533` (report emission).
+**Files:** `prolog/cs_pattern_detection.pl:412–416`, `prolog/cs_axiom_engine.pl:137–141` (the
+original `cs_drift_engine.pl` pointer was stale); callers `prolog/cs_corpus_analysis.pl:158–162`;
+emission `prolog/json_report.pl:531–533`.
 
 ---
 
@@ -244,37 +203,16 @@ any ≥2-reading kernel; demonstrated on the live twin `end_of_life_decision_aut
 (`reading_robustness` object), `python/enhanced_report.py` (`build_kernel_reading_section`),
 `prolog/tests/test_cs_kernel_registry.pl`.
 
-**Resolution.** The "no predicate, script, or report section performs this comparison" premise
-was STALE. The comparison *engine* already fired live: `cs_kernel_divergence/4` runs
-`classify_at_time/4` across the 156 product-site contexts per reading pair, and
-`write_kernel_comparison_entry` / `build_kernel_reading_section` already rendered a per-kernel
-comparison block (reading_count, diverging_pair_count, axiom conflicts, trifurcation verdict,
-per-reading CS metadata). Step-1 evidence pass (full-pipeline load via
-`classify_corpus('testsets_haiku',…)`): the engine yields **166 context-level divergences** on
-this kernel, matching the direct probe; each of the 3 readings carries its **own** `h1_band` in
-`per_constraint`, so H¹-across-readings is a data join, not an engine change (Step-1(b)
-falsifier did not fire; H¹ instance-blindness UNCHANGED).
-
-What was MISSING — and what this change ADDED — is the summary/verdict layer:
-- `compare_kernel_readings/3` (generalizes `cs_kernel_divergence/4`, kept as-is): a per-context
-  `agree(Type)` / `diverge(TypeMap)` profile over the SAME `classify_at_time/4` evaluations
-  (join, not new compute) + per-pair stats. Positive control (also a corpus-independent unit
-  test `compare_join_consistency_with_divergence_engine`): Σ per-pair DivergeN ==
-  #`cs_kernel_divergence` solutions — witnessed 166==166 on the twin, and again on the archived
-  `state_execution_authority` triplet.
-- JSON `reading_robustness` object: robust/specific context counts; per-pair **context-aligned
-  Jaccard** `AgreeN/(2·NCtx−AgreeN)` over presheaf section graphs (global-vocabulary Jaccard was
-  rejected — it scores ~1 when two readings merely permute which type lands where, mislabeling
-  divergence as robustness); per-reading H¹ + headline `h1_band_robust` (fail-closed to `null`
-  on a missing H¹).
-- `enhanced_report.py`: robustness summary + Jaccard table in the existing kernel section.
-
-Witness (twin `end_of_life_decision_authority`, 3 readings): 156 contexts → **73 reading-robust
-/ 83 reading-specific**; H¹ robust (all band 5); Jaccard sanctity↔autonomy 0.63, autonomy↔vuln
-0.53, sanctity↔vuln 0.31. Two-sided control passed (known-divergence ctx → diverge bucket; agree
-ctx → 0 divergence solutions). Spawned **OQ-176** (`cohomological_obstruction/3` returns H¹=0 for
-an absent constraint — Pattern-5 measured-flat-vs-didn't-look; out of scope here, readings are
-always real).
+**Resolution note.** The "no comparison exists" premise was STALE — `cs_kernel_divergence/4` +
+the per-kernel report block already fired live (166 context-level divergences on the twin via
+`classify_corpus('testsets_haiku',…)`). ADDED: the summary/verdict layer —
+`compare_kernel_readings/3` (join over the same `classify_at_time/4` evaluations; unit test
+`compare_join_consistency_with_divergence_engine`, 166==166 witnessed twice); JSON
+`reading_robustness` (context-aligned Jaccard — global-vocabulary Jaccard rejected as mislabeling
+permuted divergence as robustness; per-reading H¹ + `h1_band_robust`, fail-closed null);
+report robustness summary. Twin witness: 156 contexts → 73 robust / 83 specific; Jaccard
+0.63/0.53/0.31; two-sided control passed. Spawned **OQ-176** (`cohomological_obstruction/3`
+returns H¹=0 for an absent constraint — Pattern-5).
 
 ---
 
@@ -339,155 +277,63 @@ phrasing; the mediator added to "Open by deferral" with OQ-08/OQ-17 cross-refs.
 **Deps:** bundled_with OQ-135 (machine-enforced one-seat invariant; the v8-§8 reading of this layer)
 **Origin:** Tranche 2 cross-axis surface inventory, May 2026.
 
-[Compressed 2026-07-05; full history in git.] Phase 0a read-only census
-(`audits/2026-06-23_oq15_crossaxis_witnesses/`): call-site form is MIXED (transitive reads ⇒
-grep/import checks blind; the taint guard is load-bearing); `influences` is the entailment-typed
-committer→observer carrier — single-bridge is principled in KIND, guard-enforced in CARDINALITY
-("exactly one forever" is convention-not-theorem); the guard is corpus-independent (same 8 edges
-under all three live legs); `constraint_bridge.pl` is NOT a cross-axis surface (must not enter the
-guard whitelist); runtime back-channel re-witnessed NONE engine-wide (`bc_rewitness.txt` — static
-witness over source; runtime WRITES are covered by that enumeration, not the guard). Phase 1
-LANDED (commit `fd1ee561`): `prolog/check_axis_boundary.pl` walks the loaded call graph;
-`python/check_axis_boundary.py` diffs edges against `prolog/axis_boundary_allowlist.txt`,
-fail-closed, with two positive controls; wired into `scripts/gate.sh`. Census: 8 boundary edges,
-only two observer-verdict reads (the `influences` bridge + the bucket-3 `cs_kernel_id` exclusion)
-— v8's "exactly one forward bridge" confirmed in place. Invariant text lives in AGENTS.md
-("Cross-axis one-seat invariant — machine-enforced").
+**Resolution note.** Phase 0a census (`audits/2026-06-23_oq15_crossaxis_witnesses/`): call-site
+form MIXED (transitive reads ⇒ grep/import checks blind — the taint guard is load-bearing);
+`influences` is the entailment-typed committer→observer carrier (single-bridge principled in KIND,
+guard-enforced in CARDINALITY); guard corpus-independent (same 8 edges, all legs);
+`constraint_bridge.pl` is NOT a cross-axis surface (must not enter the whitelist). Phase 1 LANDED
+(commit `fd1ee561`): `prolog/check_axis_boundary.pl` + `python/check_axis_boundary.py` diff edges
+against `prolog/axis_boundary_allowlist.txt`, fail-closed, two positive controls, wired into
+`scripts/gate.sh`. Invariant text in AGENTS.md ("Cross-axis one-seat invariant — machine-enforced").
 
-**Phase 2 — RULED policed-in-place (v8); load-bearing core CLOSED (2026-06-24).** Operator ruling on the
-named reading of "structural": **a green gate is sufficient — the boundary need not be legible in the
-source tree today.** The taint guard *is* the resolution; v8 (policed-in-place) governs. W1 made the guard
-mandatory under *every* architecture (transitive reads ⇒ relocation buys legibility, NOT
-grep-checkability), so building the architecture-neutral guard first was correct regardless; that is
-banked. The W2 kind-witness (entailment-typed `influences` is the structurally privileged carrier;
-cardinality "exactly one" is convention-not-theorem) is why the guard polices the *contingent* half.
-- **Synthesis (v7 named mediator enforced by the guard) is PRESERVED, not foreclosed — v7 is
-  unbuilt-but-available.** The upgrade trigger is **falsifiable and witness-tied: a SECOND
-  committer→observer bridge is proposed** (the cardinality-convention breaking — the one event under which
-  the type-segregation principle must be re-argued and a named layer earns its cost). NOT the
-  unfalsifiable "first legibility failure." The trigger is **mechanically wired**: such a bridge makes the
-  guard fire RED (a new un-allowlisted edge), routing the contributor to `axis_boundary_allowlist.txt` →
-  this OQ → the synthesis decision. The guard firing IS the trigger event.
-- **The guard is now the SOLE enforcement of a convention-not-theorem, so its positive controls are
-  load-bearing and run in BOTH recurring gates** (shown-firing, not assumed): `scripts/gate.sh`
-  (`--selftest`, ritual) AND `python/run_pipeline.py` (axis-boundary gate beside the load-warning gate,
-  automatic every pipeline). A guard that silently stopped discriminating turns both RED.
-- Vocabulary/seat-gauge migration (v8 §8 item 4) remains human-gated under OQ-135.
+**Phase 2 ruling (operator, 2026-06-24 — still-operative):** a green gate is sufficient — the
+boundary need not be legible in the source tree today; the taint guard *is* the resolution.
+**Synthesis (v7 named mediator) is PRESERVED, not foreclosed.** Upgrade trigger, falsifiable and
+mechanically wired: a SECOND committer→observer bridge proposed makes the guard fire RED (a new
+un-allowlisted edge), routing the contributor to `axis_boundary_allowlist.txt` → this OQ → the
+synthesis decision. The guard is the SOLE enforcement of a convention-not-theorem, so its positive
+controls run in BOTH recurring gates (`scripts/gate.sh --selftest` AND `python/run_pipeline.py`).
+Vocabulary/seat-gauge migration (v8 §8 item 4) remains human-gated under OQ-135.
 
 ---
 
 ## OQ-16 — Temporal vocabulary rename pass deferred
 
-**Ω-type:** Ω_C (design choice — naming-convention cut: self-identifying `metric_*`/`context_profile_*` names over `dr_*`/status-quo; ruled this session 2026-06-25).
+**Ω-type:** Ω_C (design choice — naming-convention cut: self-identifying `metric_*`/`context_profile_*` names over `dr_*`/status-quo; ruled 2026-06-25).
 
 **Status:** resolved — 2026-06-25: all five renames executed name-only across three commits (predicate `0a204af1`; file/module + pipeline/dashboard `1d861cee`; doc references `1bcc07c5`). No logic, algorithm, or threshold moved.
 **Priority:** 1
-**Deps:** splits_from OQ-15 (sequenced out of the May 2026 temporal excavation as a separate name-only pass; independent of the human-gated OQ-135 v8 vocabulary wave)
-**Origin:** Temporal excavation audit, May 2026.  
-**Files:** `prolog/metric_drift_events.pl`, `prolog/metric_drift_report.pl`,
-`prolog/context_profile_mining.pl`, `prolog/context_profile_report.pl`,
-`prolog/network_dynamics.pl` (`detect_network_contamination/3`)
+**Deps:** splits_from OQ-15 (name-only pass; independent of the human-gated OQ-135 v8 vocabulary wave)
+**Origin:** Temporal excavation audit, May 2026.
 
-**Specific question:** The temporal excavation found that "drift" and
-"trajectory" name two structurally different concepts on opposite axes
-(committer-drift in `cs_drift_engine` vs. network-contamination /
-metric-rate-of-change in `drift_events`/`network_dynamics`; CS commitment-
-trajectory vs. observer-context-profile in `trajectory_mining`). The word
-collision is the source of much of the cross-axis confusion that drove the
-mediator-layer work. Renames were proposed but explicitly not executed,
-sequenced as a separate pass. When does the rename pass run?
-
-**Evidence so far:** Proposed renames recorded:
-- `drift_events.pl` → `metric_drift_events.pl` (or `dr_drift_events.pl`)
-- `drift_report.pl` → `metric_drift_report.pl`
-- `trajectory_mining.pl` → `context_profile_mining.pl`
-- `trajectory_report.pl` → `context_profile_report.pl`
-- `detect_network_drift/3` → `detect_network_contamination/3`
-
-All five are same-word-different-concept findings (network/metric drift ≠ CS
-commitment drift; observer-context "trajectory" ≠ CS commitment trajectory).
-Each is a name-only change — no logic moves, no algorithm changes. The pass
-touches import lines across 5+ files plus `stack.pl` load order plus test
-files.
-
-**What resolution changes:** Eliminates a recurring source of confusion that
-showed up at every layer of the temporal excavation (and arguably contributed
-to `cs_drift_mismatch`'s original miswiring, since the word collision made the
-cross-axis boundary harder to see). Cosmetic relative to behavior, but
-disambiguating naming is the same hygiene that the UUID surrogate work applied
-to identity collisions — the analog at the vocabulary layer. Low risk, ~30
-minutes per module if done deliberately (one rename + load-check at a time, per
-the `stack.pl` discipline established during Phase A of the UUID work).
-
-**Resolution (2026-06-25):** All five renames landed (name-only):
-
-| Old | New | Kind |
-|-----|-----|------|
-| `drift_events.pl` (mod `drift_events`) | `metric_drift_events.pl` (mod `metric_drift_events`) | file + module |
-| `drift_report.pl` (mod `drift_report`) | `metric_drift_report.pl` (mod `metric_drift_report`) | file + module |
-| `trajectory_mining.pl` (mod `trajectory_mining`) | `context_profile_mining.pl` (mod `context_profile_mining`) | file + module |
-| `trajectory_report.pl` (no module decl) | `context_profile_report.pl` | file only |
-| `network_dynamics:detect_network_drift/3` | `network_dynamics:detect_network_contamination/3` | predicate only (file unchanged) |
-
-Operator rulings folded in: `metric_*` over `dr_*` (no `dr_` scheme exists today; `cs_` is a
-concept marker, not a general file-prefix convention); one complete pass (`.pl` sources +
-generated `.md` output + genuine doc references) to avoid manufacturing a fresh half-renamed
-mismatch. Witness: `[stack]` loads ok; `current_predicate(detect_network_contamination/3)` true
-and `detect_network_drift/3` absent; `[abductive_triggers]` loads through the `drl_lifecycle`
-reexport facade; `check_stack.pl` clean (no renamed-module qualifier in its undefined-predicate
-set — positive control for a missed call site); full `run_pipeline.py` exit 0 writing
-`outputs/context_profile_report.md` (old `trajectory_report.md` gone); dashboard reads the
-renamed path. Left untouched (out of scope, logged not missed): JSON output field `drift_events`
-(`json_report.pl`, python schemas), internal predicate `run_trajectory_report`, doc *filenames*
-(e.g. `trajectory_implementation_notes.md` keeps its name though its body now describes
-`context_profile_mining`), and dated recon/essay docs where the old filename is the subject of a
-historical narrative (`recon_2_scope*.md`, `when_frame_isnt_foreground.md`). The plan
-under-enumerated both the predicate call sites (completed in `1d861cee`) and the doc set
-(completed in `1bcc07c5`). Pre-existing latent `dirac_classification:standard_context/1` error in
-the production-disabled (`trajectory_enabled=0`) report path is rename-independent (usage
-byte-identical pre/post) — tracked separately if it surfaces.
+**Resolution note.** Same-word-different-concept renames: `drift_events.pl`→`metric_drift_events.pl`,
+`drift_report.pl`→`metric_drift_report.pl`, `trajectory_mining.pl`→`context_profile_mining.pl`,
+`trajectory_report.pl`→`context_profile_report.pl`, `network_dynamics:detect_network_drift/3`→
+`detect_network_contamination/3`. Operator rulings: `metric_*` over `dr_*`; one complete pass
+(sources + generated output + genuine doc references). Witness: `[stack]` loads; old predicate
+absent, new present; `check_stack.pl` clean (positive control for missed call sites); full
+`run_pipeline.py` exit 0 writing `outputs/context_profile_report.md`; dashboard reads renamed path.
+**Left untouched by design (logged, not missed):** JSON field `drift_events` (`json_report.pl`,
+python schemas), internal `run_trajectory_report`, doc *filenames* (e.g.
+`trajectory_implementation_notes.md`), dated recon/essay docs where the old name is the subject.
+Pre-existing latent `dirac_classification:standard_context/1` error in the production-disabled
+(`trajectory_enabled=0`) report path is rename-independent.
 
 ---
 
 ## OQ-17 — `testsets_3000/` quarantined from loader: abandoned or unwired?
 
 **Status:** disposed — superseded by the 2026-06-05 archive consolidation
-**Origin:** Temporal excavation, May 2026.  
-**Files:** `prolog/corpus_loader.pl` (flat `testsets/*.pl` glob);
-`prolog/cs_drift_mismatch.pl:113` and `prolog/cs_corpus_analysis.pl:194`
-(hardcoded `expand_file_name('testsets/*.pl', Files)`)
+**Origin:** Temporal excavation, May 2026.
+**Files:** `prolog/corpus_loader.pl` (flat `testsets/*.pl` glob); `prolog/cs_drift_mismatch.pl:113`
+and `prolog/cs_corpus_analysis.pl:194` (hardcoded flat globs).
 
-**Specific question:** `testsets_3000/` contains 3,380 constraint-story files,
-97% with rich multi-timepoint `measurement/5` data (3–7 distinct timepoints per
-constraint), and the corpus has zero `cs_drift_state/3` (it's pure DR-
-measurement). The current loader globs flat `testsets/*.pl` only and never
-ingests the subdirectory. Two `cs_*` modules hardcode the same flat path. Is
-`testsets_3000/` an abandoned generation run that should be archived or
-deleted, or is it the corpus you intend to eventually load and have not yet
-wired in?
-
-**Evidence so far:** Audit run on the directory confirmed: 3,287 files meet
-the >2-timepoint trajectory criterion (the headline data the dormant temporal
-machinery would need), max 7 timepoints, zero `cs_drift_state`. The contrast
-with `testsets/` is sharp: `testsets/` has the smaller measurement corpus *and*
-all 103 `cs_drift_state` facts (the committer-axis layer). The two corpora
-appear to have been built around different temporal regimes — `testsets_3000`
-as a pure DR-measurement corpus, `testsets/` as where the CS layer was added
-on top. The hardcoded flat-path globs in two CS modules suggest the quarantine
-is by intent, but it's never been recorded as such.
-
-**What resolution changes:** Either (a) `testsets_3000/` becomes an archive/
-delete decision (the same way `testsets_archive_20260525/` already is) and
-disappears from the working tree, removing 3,380 files of latent
-"is-this-loaded" confusion, or (b) it gets wired into the loader and the
-pipeline runs against a 10× larger corpus — which is a corpus-scope decision
-with substantial downstream consequences (every report figure, every
-distribution, every "X% of corpus" claim recomputes). One of those decisions
-should be on the record; "sitting there ignored" is the unmarked state.
+**Disposition (2026-06-05):** `testsets_3000/` (3,380 files, 3,287 with >2 timepoints, zero
+`cs_drift_state`) moved to `prolog/archives/datasets/original_v6/` in the corpus-reset
+reorganization (commit `29889e50`); the loader-quarantine question is moot — archived corpora load
+only via explicit `corpus_path` overlay.
 
 ---
-
-**Disposition (2026-06-05):** `testsets_3000/` moved to `prolog/archives/datasets/original_v6/` in the corpus-reset reorganization (commit `29889e50`); the loader-quarantine question is moot — all archived corpora load only via explicit `corpus_path` overlay.
 
 ## OQ-18 — `metric_delta/5` first/last reduction: safe-as-event-gate, latent if reused
 
@@ -508,85 +354,23 @@ should be on the record; "sitting there ignored" is the unmarked state.
 ## OQ-19 — Temporal-shape trigger thresholds are corpus-specific magic numbers
 
 **Status:** resolved — thresholds hoisted to named `_DRIFT_*` constants keyed to
-`_DRIFT_MEASUREMENT_GRANULARITY`; runtime guard `_series_granularity` flags
-finer-than-floor series at the read site; positive-control test added
-(`python/tests/test_drift_trajectory_granularity.py`). Witness below (2026-06-25).
+`_DRIFT_MEASUREMENT_GRANULARITY`; runtime guard `_series_granularity` flags finer-than-floor
+series at the read site; positive-control test added
+(`python/tests/test_drift_trajectory_granularity.py`). 2026-06-25.
 **Priority:** 1
-**Origin:** Temporal-shape report section build, May 2026.  
-**File:** `python/enhanced_report.py` (build_drift_trajectory section,
-trigger logic)
+**Origin:** Temporal-shape report section build, May 2026.
+**File:** `python/enhanced_report.py` (build_drift_trajectory section).
 
-**Specific question:** The `drift_trajectory` report section in
-`enhanced_report.py` fires on three triggers with corpus-specific magic
-numbers: non-monotone reversal ≥ 0.04, cross-metric divergence ≥ 0.06 both
-metrics, plateau requires sustained negative acceleration + last-rate < 20%
-of first-rate + total rise ≥ 0.05. Each threshold is justified against the
-current corpus's 2-decimal-place measurement granularity (0.04 = 4× the
-minimum representable movement, etc.). If the corpus is ever regenerated at
-3-decimal precision, do these thresholds silently become too coarse?
-
-**Evidence so far:** Thresholds were calibrated and validated: floor sweep
-showed trigger B (divergence) stable across 0.04–0.10 (16→14 constraints),
-confirming it sits in a gap not a cluster; trigger A's 0.04 is 4× the 0.01
-granularity floor; trigger C's parameters were tuned to fire only on genuine
-ceiling approaches (24 metrics across 20 constraints). Result: 48 distinct
-constraints triggered, 142 silent, all four spot-checks correct. The
-calibration is sound for *this* corpus. The thresholds are embedded in the
-trigger logic with comments justifying each value against the granularity
-argument.
-
-**What resolution changes:** Either the thresholds are recorded somewhere
-durable (a config param, a comment block tying each value to the assumption
-that makes it valid, a regeneration-time check that asserts measurement
-granularity ≤ assumed) or they become silent assumptions the moment the
-measurement precision changes. The recurring pattern from this engagement —
-"currently-justified constant becomes unmarked assumption when the thing that
-justified it changes" — applies. Cheap insurance: each threshold carries its
-own rationale in code, with a one-line "if measurement granularity changes,
-recalibrate" marker.
-
-**Resolution (2026-06-25, `python/enhanced_report.py`):** The defect was never
-the *values* (calibration witnessed sound for this corpus) — it was that the
-granularity assumption was silent. Fix, single-file, behavior-preserving:
-1. Hoisted the 6 thresholds (7 occurrences) into a documented module-constant
-   block above `build_drift_trajectory_section`, keyed to
-   `_DRIFT_MEASUREMENT_GRANULARITY = 0.01`. Trigger A is encoded *derived*
-   (`_DRIFT_REVERSAL_FLOOR = 4 * _DRIFT_MEASUREMENT_GRANULARITY`) so it auto-
-   rescales; B/C stay literals with rationale (they are empirically tuned, not
-   granularity-derived) and the guard is their backstop.
-2. Added `_series_granularity(dt)` (str-repr decimal-count, not arithmetic) and a
-   `[CALIBRATION WARNING]` line prepended to the section when the actual series
-   are finer than the floor. Prose commits only to "re-run the floor sweep" (a
-   premise moved, not a measured miscalibration).
-
-**Premise correction (the finding that contradicts the original entry):** the live
-corpus is *no longer uniformly 2-decimal*. 4 constraints carry **authored**
-3-decimal values (`longevity_mismatch` 0.115, `propagation_speed_asymmetry`,
-`protein_anabolic_resistance`, `validation_judgment_separation`; measurement_
-provenance authored, not projected). **None of the 4 currently fire a trigger**, so
-the section never renders for them and the guard stays **inert on rendered output**
-— but the guarded-against finer-granularity regime is already partly present in
-authored data, which strengthens, not weakens, the case for making the assumption
-loud. If a 3-decimal constraint ever fires a trigger, the warning fires with it.
-
-**Witnesses (2026-06-25):**
-- Float kill-condition: `4*0.01==0.04` and `5*0.01==0.05` both `True` (IEEE-754) —
-  derived form byte-identical to the literal, behavior-preserving to the last ULP.
-- Grep completeness: pre-refactor function body holds all 7 bare literals (positive
-  control); post-refactor holds **0** (every site migrated, not just exercised ones).
-- Behavior-preserving per-trigger diff (HEAD vs working tree, live pipeline data):
-  Trigger A `doomsday_clock_metric__hybrid_legitimacy_reading`, B
-  `jewish_sovereignty_palestine__settler_colonial_reading`, C
-  `animal_status_kernel__property_reading` — all three render and are **byte-identical**.
-- Guard alive + inert: positive-control test renders `[CALIBRATION WARNING]` on a
-  synthetic 3-decimal firing section and none on the 2-decimal one; full live corpus
-  = 29 sections rendered, **0** warnings.
-- Test: `python3 python/tests/test_drift_trajectory_granularity.py` → ALL PASS.
-
-**Out of scope (stays open):** OQ-18/OQ-183 (`metric_drift_events:metric_trend/3`
-net-change-vs-trend seat, the ±0.05 cut) is `bundled_with` OQ-19 only by magic-number
-adjacency; it is a Prolog-engine seat (operator ruling, output-changing) and this
-close does not touch it.
+**Resolution note.** The defect was never the values (calibration witnessed sound) — the
+granularity assumption was silent. Fix: 6 thresholds hoisted into a documented constant block
+(`_DRIFT_MEASUREMENT_GRANULARITY = 0.01`; trigger A derived `_DRIFT_REVERSAL_FLOOR = 4×`, B/C
+literals with rationale); `[CALIBRATION WARNING]` prepended when series are finer than the floor.
+**Premise correction:** the live corpus is no longer uniformly 2-decimal — 4 constraints carry
+authored 3-decimal values (none currently fire a trigger, guard inert on rendered output).
+Witnesses: IEEE-754 kill-condition (`4*0.01==0.04` True); grep completeness 7 literals → 0;
+per-trigger byte-identical diff on three live sections; guard alive-and-inert control (synthetic
+3-decimal fires, live corpus 29 sections/0 warnings); test ALL PASS. Out of scope: OQ-18/OQ-183
+(`metric_trend/3` net-change-vs-trend seat, a Prolog-engine seat) untouched by this close.
 
 ---
 
@@ -598,48 +382,19 @@ top-type moved. Audit `audits/2026-06-22_oq20_dr_baseline_diff/` (2026-06-22).
 **Origin:** Tranche 2 correctness pass, May 2026.
 **Files:** git tag `v3-dev-baseline` (`3e75f90b`); `prolog/json_report.pl`
 
-**Question (answered):** Did CS-era code perturb DR output vs the pre-CS tag?
-The literal mechanism in the original entry (checkout tag, byte-diff) is
-confounded — the tag carries a different corpus (corpus reset 2026-06-05). The
-audit instead held the **corpus fixed** and varied **only code** (cells A/B on
-`original_json`, C/D on `original_v6_csfree`; cross-code within corpus), with an
-empty noise floor (all cells byte-identical across repeats).
-
-**Verdict: PERTURBED — and replicated across both pre-CS corpora.** CS-era code
-*did* change DR output, with a sharp structure. (Code-vs-noise attribution is
-witnessed: noise floor empty AND positive-controlled — repeats are fresh
-processes that independently recompute, and a warm in-process 2nd run is
-byte-identical to cold, so the empty floor is real, not a cache shadow; #5's
-non-determinism is session-overlay/Python-phase, both bypassed by the
-`run_json_report`-only path. Buckets exhaust the 30-field intersection.)
-- **Priority-cascade classification BYTE-STABLE** (identical 13-field zero-diff
-  set on both corpora; this is the cascade surface, NOT the MaxEnt top-type
-  below): `claimed_type`, `classifications`, `base_extractiveness`,
-  `suppression`, `theater_ratio`, `victims`, `beneficiaries`, `topic_domain`,
-  `human_readable`, `emerges_naturally`, `requires_active_enforcement`,
-  `resistance`, `resolution_strategy`. The χ/ε/d/f_d metric *values* are also
-  identical (`perspective_chi` "changes" only by adding `f1_d`/`f2_d` sub-keys).
-- **Per-constraint `id` relabeled** (132/1151), commit `801390a5` swapped
-  enumeration `known_constraint/1` (in-file id) → `corpus_constraint/1`
-  (filename base) — near-bijective relabel + two correctness gains
-  (digit-leading-atom recovery `8k_tv_limit_2026`; demo exclusion
-  `catholic_church_1200`). NOT the UUID migration.
-- **Genuinely changed**: `signature` (~85%); MaxEnt distribution recalibrated
-  (`raw_maxent_probs`/`maxent_probs`). The MaxEnt argmax (`maxent_top_type`) is a
-  separate classification surface and is NOT mostly stable — flips 297/1017 (29%)
-  on original_json, **2448/3373 (73%)** on original_v6, dominated by
-  `tangled_rope→snare` (enumerated in `analysis.json`); the priority-cascade
-  verdict (`claimed_type`) stays stable while the MaxEnt top-type recalibrates.
-- **Intentional/added (not regressions)**: `domain` null→computed, `coupling`
-  +violations, and **`gaps` list→null = OQ-109 B3 coverage-bit (2026-06-12) +
-  the 2026-06-14 `detect_gap_pattern` rebuild** (probed: `gap_coverage/1` emits
-  null=didn't-look vs []=examined-no-gap; the predicate still fires — Pattern-6
-  fix, not dark code). Other downstream fields (`diagnostic_verdict`, `omegas`,
-  `perspectives`, `h1_band`, `purity_*`) trail the signature/maxent changes.
-  Mint a child-OQ only if a specific field's change is later questioned.
-
-Witness/evidence: `audits/2026-06-22_oq20_dr_baseline_diff/{WRITEUP.md,analysis.json,corpus_hashes.json}`;
-raw cell outputs in `outputs/oq20/` (gitignored, reproducible from pinned corpora + commit).
+**Resolution note.** The literal tag-checkout byte-diff was confounded (tag carries a pre-reset
+corpus); the audit held the corpus fixed and varied only code (cells on `original_json` +
+`original_v6_csfree`, empty positive-controlled noise floor). Verdict: **PERTURBED, replicated on
+both pre-CS corpora** — priority-cascade classification BYTE-STABLE (identical 13-field zero-diff
+set incl. `claimed_type`, `classifications`, χ/ε/d/f_d values); per-constraint `id` relabeled
+132/1151 (commit `801390a5`, `known_constraint/1`→`corpus_constraint/1`, near-bijective + two
+correctness gains); genuinely changed: `signature` (~85%) + MaxEnt recalibration —
+`maxent_top_type` flips 297/1017 (29%) / 2448/3373 (73%), dominated by `tangled_rope→snare`;
+intentional adds (not regressions): `domain`, `coupling`, `gaps` list→null = OQ-109 B3
+coverage-bit + the 2026-06-14 `detect_gap_pattern` rebuild (Pattern-6 fix, not dark code).
+Mint a child-OQ only if a specific trailing field's change is later questioned. Witness:
+`audits/2026-06-22_oq20_dr_baseline_diff/{WRITEUP.md,analysis.json,corpus_hashes.json}`; raw
+cells in `outputs/oq20/` (gitignored, reproducible).
 
 ---
 
@@ -772,44 +527,21 @@ starved subset is Hub-2 decisions reported as two-hub. Follow-up provenance fiel
 **Priority:** 1
 **Deps:** bundled_with OQ-01
 **Ω-type:** Ω_E (empirical corpus-distribution question)
-**Origin:** alt_power_transform first T2 run (compressed variants), May 2026 — diagnosed during the
-H1 investigation, deferred once the corrected Arm A/B sweep resolved H1. Original question: under what
-conditions does Hub-1 (χ-gates) disengage and classification fall through to Hub-2 (effective
-immutability), for which constraints/contexts, under the default transform; is there a boundary?
+**Origin:** alt_power_transform first T2 run (compressed variants), May 2026.
 
-**Resolution (audit `audits/2026-06-28_oq22_hub_starvation/`, FINDINGS.md; read-only, no engine
-behavior change).** 4-leg census + (observer×immutability) grid under the DEFAULT sigmoid.
-**Verdict B — starvation IS present:** a constraint is starved when its observer-χ span sits within
-ONE same-type band of its realized per-constraint χ→type map, so Hub-1 cannot move the type by
-changing observer and any cross-observer type variation is Hub-2-sourced. Grid-confirmed Hub-2-sourced
-(subset a — every member carries a grid witness; the immutability pin collapses its cross-observer
-variation; **zero** reclassified to Hub-1): **testsets 5/109, haiku 23/960, flash 100/960, kernel_v1
-49/1106** (band-screen starved 26/148/233/145; the larger non-starved type-varying "contrast" set is
-normal two-hub with Hub-1 range, and matches the grid's persists-under-pin count exactly — the
-false-halt guard routed persistence to Hub-1, never halt).
-- **Scope:** the stamped per-leg CONTENT hashes (`content_hash_*.txt`: testsets f50cf9b, haiku
-  b9cf33c, flash 74bf36b, kernel_v1 a5e9bae — the id-set `corpus_hash` collides across the matched
-  twins, so cite content_hash). Counts are per-generation, NOT claimed as expected prevalence.
-- **B kill condition:** a re-generation in which a flagged member STOPS starving falsifies that member
-  (B is an existence claim, discharged by ≥1 witnessed instance; four legs witnessed — re-generation
-  cannot unmake the measured counts). The symmetric Verdict-A falsifier ("a clean corpus flips to
-  starved") is moot — A did not hold.
-- **Boundary (gate geometry).** Min non-degenerate single-type χ-band over swept configs ≈ 0.099 (the
-  piton band (0.35,0.45]); realized bands run far wider per constraint, and although band cutpoints sit
-  AT the config values {0.35,0.45,0.66,0.90}, a single threshold owns 4–5 different types across
-  constraints — so the χ→type map is per-constraint, never the config partition. This floor is
-  **sigmoid-driven Hub-1 disengagement only**: χ = ε·f(d)·σ(scope) has a SECOND, compression-immune
-  span source σ(scope) (observers span local 0.8 / national 1.0 / global 1.2) — sigmoid-only
-  compression starved 46/109, +σ-flat 101/109 (Phase-3). Positive controls both fired (global
-  compression → widespread; single injected ε=0.02 member individually resolved). The originally-
-  witnessed extreme regime (χ ceiling 0.15) is now VALIDATOR-FORBIDDEN (`config_schema.pl:74`
-  `sigmoid_upper∈[0.5,3.0]` + `L<midpoint<U`).
-- **Engine doc fix (comment-only):** mountain is a PURE Hub-2 type (no χ gate) — code + canonical spec
-  `docs/logic.md:644` agree; the stale inline comment `drl_core.pl:205` ("requires BOTH low χ AND
-  immutability") was corrected to match. No other engine change (audit pre-committed to none).
-- **OQ-01 link:** the A3 collapse was a `prolog_v5` artifact (resolved 2026-06-18, does not reproduce
-  on live twins); this resolves the sharpened residual — *which ε/d distributions enter the band* — as
-  Verdict B with the subset enumerated above.
+**Resolution note (audit `audits/2026-06-28_oq22_hub_starvation/`, FINDINGS.md; read-only).**
+4-leg census + (observer×immutability) grid, DEFAULT sigmoid. Starved = observer-χ span within one
+same-type band of the realized per-constraint χ→type map (grid-confirmed, every member carries a
+grid witness): testsets 5/109, haiku 23/960, flash 100/960, kernel_v1 49/1106 (band-screen
+26/148/233/145). Scope: per-leg CONTENT hashes stamped (`content_hash_*.txt` — testsets f50cf9b,
+haiku b9cf33c, flash 74bf36b, kernel_v1 a5e9bae; cite content_hash, id-set `corpus_hash` collides
+across twins); counts per-generation, never expected prevalence. B is an existence claim,
+discharged. Boundary: min non-degenerate single-type χ-band ≈ 0.099; the χ→type map is
+per-constraint, never the config partition; σ(scope) is a compression-immune second span source
+(sigmoid-only 46/109 vs +σ-flat 101/109); the extreme regime (χ ceiling 0.15) is now
+VALIDATOR-FORBIDDEN (`config_schema.pl:74`). Engine doc fix (comment-only): stale
+`drl_core.pl:205` corrected — mountain is a PURE Hub-2 type (`docs/logic.md:644` agrees).
+OQ-01 link: A3 collapse was a `prolog_v5` artifact; this resolves the sharpened residual.
 
 ---
 
@@ -817,32 +549,30 @@ false-halt guard routed persistence to Hub-1, never halt).
 
 **Ω-type:** Ω_C (design choice — loud documentation vs mechanical guard).
 
-**Status:** resolved — (2026-06-29). Narrow contamination-local fix: a same-kernel-donor guard added as the first clause of `compute_edge_contamination/7` (`drl_purity_network.pl`) — a same-kernel sibling edge contributes ZERO contamination. Sibling readings are linked by `affects_constraint` only to document ε-distinctness (DP-001), not as a contamination conduit; the FPN was label-blind and treated them as downward purity contamination. **Witness:** canary census `leaked` 2→0 on testsets/ (and 1→0 forecloses); `effective_purity` for the two testsets leaking pairs returns to intrinsic (press 0.851→0.928, jewish 0.793→0.972, totalContam→0); cross-leg post-fix census `leaked=0` (`census_postfix_*.log`); plunit regression gate `no_coexists_or_forecloses_leak_on_loaded_corpus` GREEN. Sited at the contamination computation (NOT `constraint_neighbors_existing/2`) deliberately, so giant_comp topology is UNCHANGED (zero-change control: testsets 66/12 baseline unchanged) — the giant-component 334→70 reinterpretation is **deferred to the OQ-193 child** (operator ruling option 3, 2026-06-29: narrow now, giant_comp later). Discriminant `same-kernel` (every same-kernel edge connects two readings empirically; 0 non-sibling). Provenance: `audits/2026-06-29_oq23_coexists_fpn_canary/` (WRITEUP + HOLD_FINDINGS); KNOWN_STATE 2026-06-29.
+**Status:** resolved — (2026-06-29). Narrow contamination-local fix: same-kernel-donor guard added
+as the first clause of `compute_edge_contamination/7` (`drl_purity_network.pl`) — a same-kernel
+sibling edge contributes ZERO contamination. Provenance:
+`audits/2026-06-29_oq23_coexists_fpn_canary/` (WRITEUP + HOLD_FINDINGS); KNOWN_STATE 2026-06-29.
 **Priority:** 1
-**Origin:** FPN convergence-test run, Branch E verdict, May 2026.  
-**Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors_existing/2` — the real side-channel admission point, line 91–110; tripwire comment 59–67); `prolog/tests/test_forecloses_fpn_injection.pl` (Case 2 — coexists_with_label_blindness); `prolog/tests/test_coexists_fpn_canary.pl` (the OQ-23 canary + controls, 2026-06-29)
+**Origin:** FPN convergence-test run, Branch E verdict, May 2026.
+**Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors_existing/2` :91–110; guard at
+`compute_edge_contamination/7`); `prolog/tests/test_forecloses_fpn_injection.pl`;
+`prolog/tests/test_coexists_fpn_canary.pl`.
 
-**Specific question:** The architecture note's claim that coexists_with's contamination weight is "zero by definition" is an unimplemented design intent, not a mathematical property. The FPN is label-blind. ~~excluded only by the fact that nothing currently routes it into constraint_neighbors/3~~ — **FALSE premise, retired 2026-06-29 (see Evidence).** The exclusion is *not* latent: the generation template authors an `affects_constraint` edge between sibling readings, that edge IS routed into `constraint_neighbors_existing/2`, and the intra-kernel filter (`drl_purity_network.pl:105`) covers only shared-agent edges — so coexists_with siblings already contaminate each other via the parallel `affects_constraint` side channel. The decision is no longer "loud documentation vs guard" but "**close the active leak vs accept dual-channel authoring and retire the claim**."
-
-**Evidence:**
-- (May 2026) The FPN injection test (Case 2) ran an identical injection to forecloses_1b and got identical scalar flow — label-blindness confirmed at the predicate level.
-- **(2026-06-29) Positive-controlled canary measures the leak as ACTIVE on the corpus, not latent** (`audits/2026-06-29_oq23_coexists_fpn_canary/`). Census of co-present coexists_with sibling pairs, leak = `effective_purity` attributes Contam>0 via the `affects_constraint` edge:
-
-  | leg | denom | eligible (purity≥0, Δ>0) | coupled (affects_constraint) | **leaked** |
-  |---|---|---|---|---|
-  | `testsets/` (live) | 3 | 2 | 3 | **2** |
-  | `testsets_haiku/` | 770 | 181 | 762 | **178** |
-  | `testsets_flash/` | 776 | 461 | 590 | **361** |
-  | `kernel_v1` | 695 | 676 | 680 | **662** |
-
-  Every populated leg leaks. testsets/ leaking pairs: `press_reformation_causation` (mutual_shaping↔strategic_deployment, Contam=0.256) and `jewish_sovereignty_palestine` (cultural_zionist↔settler_colonial, Contam=0.199) — both same-kernel siblings, contaminating edge `source=explicit` (the authored `affects_constraint` side channel; shared-agent edges correctly stripped by the line-105 intra-kernel filter). Positive control (fact-level injection), two negative controls (equal-purity; sentinel-donor short-circuit), and a direct-typed-edge tripwire all green — the probe SEES leaks (Pattern 5 discharged).
-- The OQ-23 entry's earlier "held on testsets/ by sparsity" recon sampled ONE kernel (`basic_law…parliamentary_sovereignty`, sibling ungenerated); other live kernels DO have co-present siblings and leak. The exclusion held only by two Pattern-5 absences (singleton sparsity, `-1.0` purity sentinel) — neither is a coexists_with filter.
-
-**What resolution changes (operator's Ω_C ruling):** Either **(1)** extend the intra-kernel filter in `constraint_neighbors_existing/2` to strip `affects_constraint` edges between same-kernel typed-relation siblings (a real engine change with its own old-vs-new pipeline diff; makes "zero by definition" true and flips the canary green), or **(2)** accept dual-channel authoring — siblings DO contaminate via authored `affects_constraint` — and retire the "zero contamination weight by definition" language from the architecture as wrong. The canary (`run_coexists_census/0` + the saved census logs) is the standing witness either way. Ruling (a+) [documented-only] is NOT available: the gap is active, not latent, so "documented-only" would assert a false world-fact.
-
-**Investigation outcome (2026-06-29, operator ruled HOLD then option-4 investigate; see `audits/2026-06-29_oq23_coexists_fpn_canary/HOLD_FINDINGS.md`):** the sibling `affects_constraint` edges are the LLM faithfully following the DP-001 ε-invariance instruction ("link ε-distinct constraints via affects_constraint/2"); the relation is OVERLOADED (ε-linkage / UKE dependency / generic). A reversible load-time strip + per-consumer diff **falsified the "redundant / no info loss" premise**: stripping same-kernel sibling edges changes **4 of 5** reachable consumers — FPN (the leak), composition `detect_extraction_dominance` (737 sibling pairs flagged as `embedded_snare` on kernel_v1), counterfactual `dependency_chain` (1516 sibling "dependencies"), inferred_coupling; only `has_viable_alternatives` is inert (`constraint_bridge`/`uke_dr_bridge` are recommendation-source-gated → unreachable by sibling edges). So an **FPN-local filter would leave the same sibling-as-component/dependency conflation live in composition + counterfactual** — it is not a localized FPN issue. Discriminant precision is corpus-dependent: kernel_v1 1516/1516 same-kernel edges are typed-sibling, but testsets only 6/64 (58 are sibling pairs whose `cs_reading_relation` dangles, OQ-58) — so `cs_reading_relation` is NOT a complete substitute on the live leg. Re-escalated; operator ruled per-consumer (correction-vs-loss), first step = reachability witness. **Reachability table (does each sibling-edge read SHIP?):** FPN `effective_purity` → YES (`pipeline_output.json contamination_network`) = ships+wrong → **fix**; coupling `inferred_coupling` baseline → YES (`coupling_protocol.md` edge count) = wrong by the module's own OQ-84 logic → **fix candidate**; composition `detect_extraction_dominance` → NO (zero callers) and counterfactual `dependency_chain` → NO (`simulate_cut` has no live caller) = **inert-wrong → log, no engine change**; signature inert → drop. So only 2 of 4 ship. Fix = consumer-local `same-kernel` guard in `constraint_neighbors_existing/2` (mirrors line-105 shared-agent guard; same-kernel==sibling empirically, 0 non-sibling found) — but that site is shared by 5 contamination-topology consumers (fpn/network_dynamics/giant_comp/json_report), so it is contamination-topology-local (giant_comp ripple), output-changing → needs old-vs-new pipeline diff + manual go. OQ-58 DECOUPLED (typed edge is a label, consumers read structure). OQ-24/forecloses rides the FPN fix. STILL OPEN pending the go on the output-changing fix.
-
-**Cross-link (OQ-24 reopening candidate, flag-don't-fix):** the same `affects_constraint` side channel is label-blind to `forecloses` too — on `testsets/` the forecloses census is denom=1/eligible=1/coupled=1/**leaked=1**. OQ-24's doc-only close ("forecloses excluded by gradient-orthogonality") protects only the *typed* channel; the authored side door carries contamination in the causation-inverted direction the OQ-24 argument relied on being inert. Logged as an OQ-24 reopening candidate; not folded into the OQ-23 change.
+**Resolution note.** The "exclusion held by sparsity" premise was FALSE — the positive-controlled
+canary measured the leak ACTIVE on every populated leg (testsets leaked 2, haiku 178, flash 361,
+kernel_v1 662) via the authored DP-001 `affects_constraint` side channel (FPN is label-blind).
+Investigation (HOLD_FINDINGS.md): the relation is OVERLOADED; a reversible strip falsified the
+"redundant" premise (4/5 consumers change), but the reachability table showed only 2 of 4 SHIP
+(FPN effective_purity = ships+wrong → fixed; `inferred_coupling` → fix candidate per its own OQ-84
+logic; composition `detect_extraction_dominance` + counterfactual `dependency_chain` = inert-wrong
+→ logged, no engine change). Fix sited at the contamination computation (NOT
+`constraint_neighbors_existing/2`) so giant_comp topology is UNCHANGED (zero-change control:
+66/12 baseline) — the 334→70 giant-component reinterpretation deferred to child OQ-193 (operator
+ruling option 3, 2026-06-29). Witness: canary `leaked` 2→0 (+ forecloses 1→0); effective_purity
+returns to intrinsic (press 0.851→0.928, jewish 0.793→0.972); cross-leg post-fix `leaked=0`;
+plunit gate `no_coexists_or_forecloses_leak_on_loaded_corpus` GREEN. OQ-58 decoupled (typed edge
+is a label; consumers read structure). OQ-24 forecloses side-channel rides the same guard.
 
 ---
 
@@ -850,120 +580,77 @@ false-halt guard routed persistence to Hub-1, never halt).
 
 **Ω-type:** Ω_C (design choice — is within-kernel sibling connectivity inflation a correction to make or legitimate topology).
 
-**Status:** resolved — RULED (c) additive provenance split (operator, 2026-07-02). Same-kernel sibling edges
-STAY in the topology for all 5 `constraint_neighbors/3` consumers (this is a topology ruling, not zero-cost —
-it declares siblings intended topology); giant_comp additionally reports BOTH the pooled count AND the
-cross-kernel stratum. The report-surface build is OWED, not started (recorded below). Not option (a): the
-per-consumer probe confirms FPN is unaffected (OQ-23 guard already zeroes sibling contamination) and the
-changed consumers (json_report neighbor lists, network_dynamics hub degrees/severity — 15/282 hub flips) feed
-nothing that re-classifies, so an engine-wide guard buys correctness in surfaces nobody classifies on. Witness:
-`audits/2026-07-02_oq193_giant_comp_ruling/RULING_EVIDENCE.md`. **Report-surface build LANDED 2026-07-04**
-(note at end of entry).
+**Status:** resolved — RULED (c) additive provenance split (operator, 2026-07-02); report-surface
+build LANDED 2026-07-04. Same-kernel sibling edges STAY in the topology for all 5
+`constraint_neighbors/3` consumers (siblings ARE intended topology; the OQ-84 shared-agent
+asymmetry accepted, `drl_purity_network.pl:60–74,:289–294` rationale stands); giant_comp reports
+BOTH the pooled count AND the cross-kernel stratum. Witness:
+`audits/2026-07-02_oq193_giant_comp_ruling/RULING_EVIDENCE.md`.
 **Priority:** 3
-**Origin:** OQ-23 giant-comp ripple witness, 2026-06-29 (operator ruling option 3: narrow-now-giant_comp-later).
+**Origin:** OQ-23 giant-comp ripple witness, 2026-06-29 (operator ruling option 3).
 **Deps:** splits_from OQ-23
-**Files:** `prolog/giant_component_analysis.pl`; `prolog/drl_purity_network.pl` (`constraint_neighbors_existing/2` lines 91–110); `audits/2026-06-29_oq23_coexists_fpn_canary/giant_ripple_*.log`; `audits/2026-07-02_oq193_giant_comp_ruling/`
+**Files:** `prolog/giant_component_analysis.pl`; `prolog/drl_purity_network.pl`;
+`audits/2026-06-29_oq23_coexists_fpn_canary/giant_ripple_*.log`;
+`audits/2026-07-02_oq193_giant_comp_ruling/` (incl. `probe_giant_ripple.pl`, a declared frozen
+snapshot).
 
-**Specific question:** `giant_component_analysis` builds its contamination/coupling graph from `constraint_neighbors/3`, which admits same-kernel sibling `affects_constraint` edges (the DP-001 ε-linkage edges — see OQ-23). **Witnessed fact:** those sibling edges are heavily load-bearing for connectivity — stripping them collapses the giant component **334→70** and triples components **276→789** on kernel_v1 (testsets 66→87 / 12→9); positive control passed (raw `affects_constraint` dropped by exactly the strip count). So giant_comp's headline "the constraint network forms a giant component of N" currently counts within-kernel reading-plurality as cross-kernel coupling. Is that a **correction** to make (the true cross-kernel giant is ~70; same-kernel siblings are not a coupling signal — the engine already says so for shared-agent edges at `drl_purity_network.pl:105` and the `inferred_coupling` OQ-84 guard) or a **loss** to avoid (authored sibling edges are legitimate topology and 334 is intended)?
-
-**Why deferred, not folded into the OQ-23 fix:** the OQ-23 FPN purity leak was *witnessed wrong and shipping*; this giant_comp change is *not witnessed either way* (genuine correction-vs-loss). Resolving it by precedent-analogy (OQ-84 shared-agent → explicit) is the same analogy-across-consumers move that the OQ-23 per-consumer diff already falsified once. The OQ-23 fix was sited at `compute_edge_contamination/7` (contamination-local) precisely so giant_comp topology stays UNCHANGED (zero-change control witnessed) and this question can be ruled on its own evidence rather than as a side effect. A 334→70 reinterpretation of a shipped headline metric deserves its own witness + ruling.
-
-**What resolution changes:** if **correction** — extend the intra-kernel guard to the explicit-edge channel in the topology path (e.g. `constraint_neighbors_existing/2`, mirroring line 105), with an old-vs-new diff of every `constraint_neighbors` consumer (5 sites: fpn/network_dynamics/giant_comp/json_report) and the giant_comp headline restated to the cross-kernel value. If **loss** — document that giant_comp counts authored sibling edges as topology by design, and the OQ-84 shared-agent guard is NOT extended to explicit edges (record the asymmetry rationale).
-
-**RULING (operator, 2026-07-02): (c) additive provenance split — a THIRD option the binary missed.**
-Evidence (`audits/2026-07-02_oq193_giant_comp_ruling/RULING_EVIDENCE.md`): 3-leg ripple re-witnessed at HEAD
-(giant testsets 12→9, haiku 549→47, kernel_v1 334→70; positive control exact per leg). Per-consumer price probe
-(same-kernel `cs_kernel_id` strip discriminant): **FPN effective_purity NO DIFF both legs** (the OQ-23
-`compute_edge_contamination/7` guard already zeroes sibling contamination — two-sided controlled: a planted
-cross-kernel strip DOES move purity on testsets, `PC_FPN_DETECTS ok`; haiku has 0 contaminating cross-edges so
-its NO-DIFF is vacuous-but-consistent, stated as such); json_report neighbor sets, network_dynamics degree/hub
-(15/282 hub-status flips), and drift severity all CHANGE. giant_comp headline has ZERO downstream consumers.
-So (c): leave topology untouched (siblings ARE intended topology — the OQ-84 shared-agent asymmetry is
-accepted, `drl_purity_network.pl:60–74,:289–294` rationale stands), and fix the misleading single count at the
-one surface that is read by making `giant_component_analysis` report both the pooled number and the cross-kernel
-stratum. **Report-surface build OWED (not started):** giant_comp emits both counts; the strip computation is
-already in `probe_giant_ripple.pl`. This is (b)-plus-a-report-fix — the topology decision (siblings stay) is
-the substance; the report split fixes presentation at zero engine-behavior change.
-
-**BUILT + RESOLVED (2026-07-04).** The owed report-surface build landed at **zero engine-behavior change**
-(`pipeline_output.json` `per_constraint` byte-identical, sha256 match, before/after a full pipeline run;
-`constraint_neighbors_existing/2` untouched; `drl_purity_network.pl` sibling warnings stand). Two surfaces:
-(1) **`giant_component_analysis.pl`** gains a `## Provenance split (OQ-193)` md section + a same-run
-`giant_component_analysis.raw.json` co-product (pooled vs sibling-stripped stratum {edges, components, giant,
-giant-fraction} + per-constraint membership/degree in both strata). Method = **retract-recompute** adapted from
-the frozen probe (`audits/2026-07-02_oq193_giant_comp_ruling/probe_giant_ripple.pl`, unchanged — a declared
-frozen snapshot expected to diverge from production), placed **dead-last** so the strip is never restored and
-nothing downstream reads stripped topology. (2) **`python/enhanced_report.py`** per-constraint "NETWORK POSITION
-(OQ-193)" L1 section + additive `network_position` sidecar, four-branch interpretation (cross-kernel coupled /
-within-kernel-plurality / peripheral / UNDETERMINED), same-run guard on the manifest sidecar (stale/missing/
-unparseable → NOT ASSESSED). **Commit-Gate-1 outcome:** `same_kernel_edges_surviving = 0` on `testsets/`
-(dedup-resurfaced 0, never-stripped 0) → the **`cross_kernel` label is HONEST**; the dedup subtlety did not bite;
-**no operator escalation triggered.** Witnessed values (testsets, 2026-07-04): 68 sibling edges stripped, pooled
-giant 12/72-components → stratum giant 9/95-components, positive control ok (raw `affects_constraint` 241→173,
-dropped 68 = strip count). Node set = `all_corpus_constraints/1` = **119** (extractiveness-bearing), a subset of
-the 128-constraint corpus; the 9 excluded are all `*_contradictions` stories (no extractiveness metric), surfaced
-by enhanced_report as "not in node set." Files: `prolog/giant_component_analysis.pl`, `python/run_pipeline.py`
-(run-scoped raw.json binding + gated sidecar stamp), `python/enhanced_report.py`. Provenance: KNOWN_STATE
+**Resolution note.** Ripple re-witnessed at HEAD (giant testsets 12→9, haiku 549→47, kernel_v1
+334→70; positive control exact per leg). Per-consumer price probe: FPN effective_purity NO DIFF
+both legs (OQ-23 guard already zeroes sibling contamination; two-sided controlled); json_report
+neighbor sets, network_dynamics degree/hub (15/282 hub flips), drift severity all change;
+giant_comp headline has ZERO downstream consumers — so (c), not an engine-wide guard. Build
+(2026-07-04, zero engine-behavior change; `per_constraint` sha256-identical): `## Provenance split
+(OQ-193)` md section + same-run `giant_component_analysis.raw.json` co-product (retract-recompute,
+dead-last); `enhanced_report.py` "NETWORK POSITION (OQ-193)" section + `network_position` sidecar
+with same-run manifest guard (stale → NOT ASSESSED). Commit-Gate-1: `same_kernel_edges_surviving
+= 0` → `cross_kernel` label HONEST, no escalation. Witnessed (testsets, 2026-07-04): 68 sibling
+edges stripped; pooled giant 12/72 → stratum 9/95; node set = `all_corpus_constraints/1` = 119
+(9 `*_contradictions` stories excluded, surfaced as "not in node set"). Provenance: KNOWN_STATE
 2026-07-04.
 
 ---
 
 ## OQ-194 — 21 embedded validation tests fail on the tracked corpus (meant-to-pass or WIP?)
 
-**Ω-type:** Ω_E (empirical — what is the actual intended-green state of these validation units; witnessable by inspecting validation intent + history).
+**Ω-type:** Ω_E (empirical — what is the actual intended-green state of these validation units).
 
 **Status:** resolved — meant-to-pass-vs-WIP answered (operator ruling, 2026-06-30): the 20
 embedded failures are **neither** — they are **correct apparatus commentary**, conditional on the
-embedded tests staying **non-gating** (not in `gate.sh`). The 21st failure was an unrelated
-fixture-rot defect (fixed, separate commit).
+embedded tests staying **non-gating** (not in `gate.sh`). The 21st was an unrelated fixture-rot
+defect (fixed, separate commit).
 **Priority:** 3
-**Origin:** surfaced incidentally during the OQ-23 fix (2026-06-29), while regression-checking `tests/test_phantom_neighbor_filter`.
-**Files:** `prolog/tests/test_phantom_neighbor_filter.pl`; the 16 tracked claim=mountain testsets carrying the embedded `mountain_threshold_validation` / `nl_profile_validation` units (e.g. `animal_status_kernel__property_reading.pl`).
+**Origin:** surfaced during the OQ-23 fix (2026-06-29), regression-checking `tests/test_phantom_neighbor_filter`.
+**Files:** `prolog/tests/test_phantom_neighbor_filter.pl`; the 16 claim=mountain testsets carrying
+embedded `mountain_threshold_validation` / `nl_profile_validation` units.
 
-**Resolution.** Live run (verbatim, 2026-06-29): `cd prolog && swipl -g "[stack], [tests/test_phantom_neighbor_filter], run_tests, halt"` → **21 fail / 93 pass**. The 21 are two unrelated things:
+**Resolution note.** 21 fail / 93 pass: 20 = the apparatus correctly commenting that
+mountain-CLAIMING stories lack true-mountain metrics (claim ≠ actual working as designed; generator
+emits both tests only on claim=mountain with hardcoded bars E≤0.25/S≤0.05/AC≥0.85/R≤0.15; 12/32
+assertions PASS on clean mountains; OQ-116 corroborates, invoking OQ-74/seat theorem). All 20 are
+`: failed`, zero `: error`. 1 = the OQ-95 harness's rotted positive-control fixture, fixed.
+**Operative condition:** red-as-signal holds ONLY while non-gating — it breaks the moment anything
+gates on these tests. Landed: explanatory comment emitted from the generator + backfilled into all
+16 testsets; header signpost; KNOWN_STATE 2026-06-30. Bar calibration deferred to **OQ-48**
+(standing post-rebuild recalibration ledger — Bucket-B near-misses fail only the tight S/AC bars).
 
-- **20 embedded failures** = 13 `mountain_threshold_validation` + 7 `nl_profile_validation` (the 7 files are a strict subset of the 13). These are the apparatus **correctly commenting** that stories which *claim* mountain (`constraint_claim(C, mountain)` — the SURFACE claim; `data_verification.pl:178` labels it "Claimed type") do **not** have true-mountain metrics. DR's core is claim ≠ actual, so a mountain-claim with extractive/contested metrics is the disguised-constraint phenomenon working as designed. **Not regressions, not WIP**; the tight bars are intentional (failure marks contention). **Conditional on staying non-gating:** a failing *assertion* conventionally reads as defect, so the red-as-signal interpretation holds only because these are not wired into `gate.sh` — it breaks the moment anything gates on them.
-- **1 `phantom_neighbor_filter:real_target_edge_fires` failure** — an unrelated **fixture-rot defect** (the OQ-95 harness's own positive control); fixed in a separate commit (self-selecting fixture + loud throw).
-
-**Structural evidence (self-contained; holds even if no OQ existed).** The generator (`python/generate_constraint_pl.py`, `_generate_tests`, the `if bp["claimed_type"]=="mountain"` block) emits both embedded tests **only** on claim=mountain, with **hardcoded** bars (E≤0.25, S≤0.05, AC≥0.85, R≤0.15) — not derived from the story. 12 of the 32 embedded assertions PASS (3 mountain + 9 nl; protein/radiative/actinide are clean mountains) — green-by-design probes, not all-fail WIP. **OQ-116 corroborates** with a prior ruling on the same shape: its `MOUNTAIN_METRIC_CONFLICT` linter's claim-vs-metric divergence "is authored signal the engine measures by computing a different SEATED reading — and per OQ-74 / the seat theorem these readings need not collapse to one true type (the mountain claim and the metric reading both stand; the divergence is the signal)." The embedded `mountain_threshold_validation` test is the test-form analog. (Quoting OQ-116's body, re-read this session; OQ-74 / the seat theorem are cited only as OQ-116 invokes them, not independently.)
-
-**3-bucket triage (evidence):**
-- **A — claim=mountain but extractive:** animal_status (E=0.88), jewish (0.78), institutional_trust (0.68), secession (0.62), organization_floor (0.42); 4 of 5 also carry the contradictory `extraction_signature` test (E≥0.46). → engine correctly says "not a mountain."
-- **B — low-E but contested/near-miss:** neutron_star, demographic_resource, architectural, longevity, validation_judgment, scale_ceiling, propagation_speed, demographic_skill (E≤0.25 but S≈0.08–0.22, or AC just under 0.85). → tight thresholds intentionally fail contested stories.
-- **C — phantom:** the rotted fixture, split out (the code fix).
-
-**Per-item commitment witness (live run, 2026-06-29 / re-confirmed 2026-06-30).** All 20 embedded failures are plunit `: failed` assertions, **zero `: error`** exceptions (no crash hiding in the bucket); and all 13 failing units' files declare `constraint_claim(_, mountain)` (verified by grep against the live run's failing-unit list).
-
-**Landing (so the failures don't re-read as defects).** Explanatory one-line comment emitted from the generator (every future mountain testset carries it) **and** backfilled into all **16** current claim=mountain testsets (`grep -lE 'constraint_claim\([a-z0-9_]+, mountain\)' testsets/*.pl` → 16, all carry the embedded test; empty `comm -3` diff); a signpost note in the `test_phantom_neighbor_filter.pl` header; a dated KNOWN_STATE.md entry.
-
-**Deferred calibration → OQ-48 (no new OQ minted).** The hardcoded embedded-test bars (E≤0.25, S≤0.05, AC≥0.85, R≤0.15) are added to **OQ-48** (the standing post-rebuild recalibration ledger) as additional deferred targets — the Bucket-B near-misses are genuine low-E mountains failing only the tight `S≤0.05`/`AC≥0.85` bars. Revisit lands on the queryable frontier at regen time, not in a human's memory.
-
-**Evidence:** live `run_tests` output (2026-06-29; re-run 2026-06-30); `python/generate_constraint_pl.py` `_generate_tests`; KNOWN_STATE 2026-06-30; OQ-116 (corroborating authority); OQ-48 (calibration deferral); phantom fix in `prolog/tests/test_phantom_neighbor_filter.pl` (code commit).
 ---
 
 ## OQ-24 — forecloses requires no FPN representation, but the absence is undocumented in the engine
 
 **Ω-type:** Ω_C (design choice — whether to record the structural-exclusion rationale in code).
 
-**Status:** resolved — (2026-06-04). The comment now exists at
-`drl_purity_network.pl:compute_edge_contamination/7` — structural exclusion stated
-(gradient-orthogonality, inert-or-inverting), witness pointer to
-`prolog/tests/test_forecloses_fpn_injection.pl`, and an explicit "absent BY THIS DECISION, not by
-omission" tripwire. Note: a pointer at `drl_purity_network.pl:63` citing that comment had been
-written EARLIER without the comment it cited — a dangling doc-pointer (produced-but-not-consumed
-in documentation form); the comment now makes the pointer true. Module load verified post-edit.
+**Status:** resolved — (2026-06-04; reopened and re-resolved on a stronger basis 2026-06-29).
 **Origin:** FPN convergence-test run, May 2026.
-*(Body compressed 2026-06-04 per footer rule.)*
 
-**Reopened then re-resolved via the OQ-23 narrow fix (2026-06-29):** the OQ-23 canary found
-`forecloses` siblings ALSO leaked via the authored `affects_constraint` side channel (testsets/
-forecloses census: denom=1/eligible=1/coupled=1/leaked=1; kernel_v1 leaked 198/212).
-Gradient-orthogonality protects only the *typed* channel; the original close did not consider the
-parallel side door (causation-inverted contamination the OQ-24 argument relied on being inert).
-**Now fixed:** the same-kernel-donor guard in `compute_edge_contamination/7` is relation-agnostic, so
-it zeroes the forecloses side-channel leak too (forecloses census `leaked` 1→0 on testsets/ post-fix).
-OQ-24 stays resolved on this stronger basis (typed channel inert by gradient-orthogonality + side
-channel closed by the same-kernel guard). Evidence: `audits/2026-06-29_oq23_coexists_fpn_canary/`.
+**Resolution note.** Structural-exclusion comment landed at
+`drl_purity_network.pl:compute_edge_contamination/7` (gradient-orthogonality, inert-or-inverting;
+witness pointer `prolog/tests/test_forecloses_fpn_injection.pl`; "absent BY THIS DECISION"
+tripwire — also repaired the earlier dangling doc-pointer at `:63`). Reopened 2026-06-29: the
+OQ-23 canary found forecloses siblings ALSO leaked via the authored `affects_constraint` side
+channel (testsets leaked=1; kernel_v1 198/212) — gradient-orthogonality protects only the typed
+channel. Re-resolved: the OQ-23 same-kernel-donor guard is relation-agnostic and zeroes the side
+channel too (forecloses `leaked` 1→0 post-fix). Evidence:
+`audits/2026-06-29_oq23_coexists_fpn_canary/`.
 
 ---
 
@@ -1005,21 +692,18 @@ yields genuinely different readings with different ε under different SCOPE deco
 
 **Ω-type:** Ω_C (design choice — definitional: which orbit H¹ measures).
 
-**Status:** resolved — 2026-06-30: **DISCLOSURE, not redefinition.** The engine already
-computes H¹ over the signature-resolved `dr_type` orbit; the only gap was that no doc/comment
-said so. **Append-versioning ruling:** `v6.13.md` + v6.8–v6.12 left frozen; precision landed in
-`docs/deferential_realism_paper_v6.13.1.md` (dated OQ-27 amendment + two inline "signature-resolved"
-qualifications at the intro and §5.1) and an engine comment at `prolog/grothendieck_cohomology.pl`
-(`orbit_vector/2` + `type_at_context/3`). v7 §Thm 7 already carried the precision (no-op). Path
-disclosed: `cohomological_obstruction → orbit_vector → type_at_context → dr_type`; inside `dr_type`,
-`metric_based_type_indexed` (raw `classify_from_metrics`) **then** `integrate_signature_with_modal`.
-**Witnesses (manifest `2026-06-30T00:08:22Z`, n=116), distinct denominators:** 65 of 86 four-real-seat
-constraints at H¹>0 (discrimination witness); *separately* 116/116 reproduction of stored `h1_band`
-from the serialized `perspectives` orbit (orbit-reproduction control). The unproven **general-n** gap
-spectrum (W4 surfaced it) split out as **OQ-195** so it does not gate this close.
-**Origin:** Theorem 7 anchor verification, May 2026 (the precision note that changed v7's H¹=0 phrasing).
-**Files:** `prolog/grothendieck_cohomology.pl` (orbit_vector/type_at_context comment + :158 stale-range
-flag → OQ-195); `docs/deferential_realism_paper_v6.13.1.md` (OQ-27 amendment); `docs/deferential_realism_paper_v7.md` (already correct). Successor: **OQ-195**.
+**Status:** resolved — 2026-06-30: **DISCLOSURE, not redefinition.** The engine already computes
+H¹ over the signature-resolved `dr_type` orbit; the only gap was documentation. Append-versioning
+ruling: `v6.13.md` + v6.8–v6.12 frozen; precision landed in
+`docs/deferential_realism_paper_v6.13.1.md` (dated OQ-27 amendment + two inline qualifications)
+and an engine comment at `prolog/grothendieck_cohomology.pl` (`orbit_vector/2` +
+`type_at_context/3`); v7 §Thm 7 already carried it. Path disclosed: `cohomological_obstruction →
+orbit_vector → type_at_context → dr_type` (raw `classify_from_metrics` THEN
+`integrate_signature_with_modal`). Witnesses (manifest `2026-06-30T00:08:22Z`, n=116): 65/86
+four-real-seat constraints at H¹>0 (discrimination); 116/116 reproduction of stored `h1_band`
+from the serialized orbit. Unproven general-n gap spectrum split out as **OQ-195** (successor;
+also owns the `:158` stale-range flag).
+**Origin:** Theorem 7 anchor verification, May 2026.
 
 ---
 
@@ -1041,98 +725,32 @@ asymmetry being named. *(body compressed at close per footer rule)*
 
 ## OQ-29 — Results stale against a moved corpus (general form of OQ-25 §5.11 scope)
 
-**Status:** resolved — 2026-06-18: `corpus_hash` single-sourced (`python/corpus_hash.py`); 14 live producers self-stamp; consumers fail-closed (orbits match-guard, persistence + Fisher report guards); existing data dispositioned (2 deleted, test-artifacts excluded-as-class, pre-reset citations annotated). Threads A–E + the 4-producer residual, all witnessed. The audit-script ruling was settled by probe — `metric_audit`/`sheaf_audit` load live `pipeline_output.json`/`orbit_data.json`, so they stamp like any live producer (not the archive wrong-identity case). **Follow-up 2026-06-20:** orbit regeneration wired into the pipeline as Phase-1b (`regenerate_orbits` step) so the orbits the match-guard reads are always fresh — the fail-closed `check_orbits_corpus_hash` is kept as the backstop, not removed (KNOWN_STATE 2026-06-20).
+**Status:** resolved — 2026-06-18: `corpus_hash` single-sourced (`python/corpus_hash.py`); 14 live
+producers self-stamp; consumers fail-closed (orbits match-guard, persistence + Fisher report
+guards); existing data dispositioned (2 deleted, test-artifacts excluded-as-class, pre-reset
+citations annotated). **Follow-up 2026-06-20:** orbit regeneration wired into the pipeline as
+Phase-1b (`regenerate_orbits`), with fail-closed `check_orbits_corpus_hash` kept as backstop
+(KNOWN_STATE 2026-06-20).
 **Priority:** 1
 **Origin:** Sweep-consolidation audit, 2026-05-29.
-**Files:** `python/corpus_hash.py` (single-source fingerprint, 2026-06-18); `python/run_pipeline.py` (match guard); `python/enhanced_report.py` (persistence consumer guard); the 10 stamped producers; `python/bifurcation_results.json` (confirmed stale instance); 19 `*_results.json` files total (full list below).
+**Files:** `python/corpus_hash.py`; `python/run_pipeline.py` (match guard);
+`python/enhanced_report.py` (persistence + Fisher consumer guards); the stamped producers.
 
-**Specific question:** All 19 `*_results.json` files carry no record of which corpus they were computed against (no `corpus_hash` or `manifest.code_commit` field — grep confirmed: 0/19 have either). How many are stale against the current `testsets/` corpus (corpus_path='testsets', 223 constraints)? Is it possible to tell from the file contents alone?
-
-**Mechanism (grep-confirmed):**
-`bifurcation_results.json` reports flip findings for 7 constraints:
-`autonomy_as_character_ideal`, `conformity_extraction`, `distributed_memory_as_counter_disposal`,
-`epistemic_authority_erosion_through_unresolvable_anomaly`, `meritocratic_ideology_as_error_propagation`,
-`role_capture_through_cost_asymmetry`, `solidarity_mirror_trap`.
-All 7 are absent from `prolog/testsets/` (empty grep) and present only in `prolog/testsets_3000/` (archive). The file reads authoritative but describes a corpus that no longer exists. The sweep-consolidation audit initially proposed using these flips as detection witnesses before discovering the file is stale.
-
-This defect class is NOT produced-but-not-consumed (most files have consumers) and NOT silent-fork (one canonical location per file). It is **produced-against-a-substrate-that-moved**: a result outliving the corpus it describes. OQ-25's staleness concern scoped to a single ε-number in a chimera scenario; OQ-29 is the general form across all result files.
-
-**Population (run-confirmed, 2026-05-29):** 19 results files, 0 with corpus_hash:
-`axiom_reachability_results.json`, `epsilon_sensitivity_results.json`,
-`metric_audit_results.json`, `sheaf_audit_results.json`,
-`alt_power_transform_results.json`, `alt_power_transform_results_3k.json`,
-`bifurcation_results.json`, `cognitive_displacement_results.json`,
-`config_sensitivity_results.json`, `config_sensitivity_results_test.json`,
-`config_sensitivity_results_v3.json`, `directionality_sensitivity_results.json`,
-`oracle_gap_results.json`, `persistence_results.json`, `product_site_delta_results.json`,
-`representation_robustness_results.json`, `structural_config_sensitivity_results.json`,
-`structural_config_sensitivity_results_original.json`, `test_battery_results.json`.
-
-*Disposition update (2026-06-18): reconciled 19→14 on disk (2 in `outputs/` gitignored,
-2 relocated to `audits/`, `alt_power_transform_results.json` plain already deleted). Of the
-14, `config_sensitivity_results_test.json` and `structural_config_sensitivity_results_original.json`
-were **deleted** (dead orphans). The 12 in-tree result files now carry `corpus_hash` on next
-producer run; the 4 `outputs/`+`audits/` producers are the RESIDUAL above.*
-
-Confirmed stale: `bifurcation_results.json` (constraint-level grep). Others unverified — they may be stale (if run against testsets_3000/) or current, but the file itself cannot tell you which.
-
-**What resolution changes:** Every `*_results.json` producer stamps a `corpus_hash` field (sha256 of the sorted list of loaded `.pl` filenames, or the git HEAD of `prolog/testsets/` at run time). The new `perturb()` primitive (`python/sweeps/perturb.py`) stamps `baseline_hash` at the orbit level — extend this pattern to all producers. Consumers check staleness: if current testsets hash ≠ stored hash, flag stale rather than read as authoritative. This is the file-level analogue of the Step-2 coverage gate in the sweep-consolidation primitive: a result computed against a dead corpus is the file-level cousin of a verdict computed with zero coverage.
-
-**Resolution (2026-06-18) — Threads A–D (all witnessed; commits `b6aefb5a`, `4ab980ff`, `7b016978`):**
-- **Thread A (single-source):** the corpus fingerprint lived in **four** byte-identical copies
-  (`perturb.py`, `run_pipeline.py`, `census_sweep.py` + the perturb-imported copies in
-  `regenerate_orbits.py`/`demotion_pass.py`) — the Pattern-2 silent fork that lets stamp and check
-  drift. Consolidated into **`python/corpus_hash.py`** (`compute_corpus_hash` +
-  fail-closed `assert_corpus_current`); all callers repointed (private name kept as alias). Identity
-  witness: every path = `d2b3ec9429f1` on current `testsets/`, byte-identical to the pre-merge
-  baseline. (Plan said 2 copies; grep found the 3rd — `census_sweep.py`.)
-- **Thread B (producers self-stamp at write time):** `config_sensitivity_sweep`,
-  `directionality_sensitivity_sweep`, `cognitive_displacement_sweep`, `oracle_gap_analysis`,
-  `game_theory_stability`, `product_site_delta_sweep`, `representation_robustness_sweep`,
-  `structural_config_sensitivity`, `bifurcation_sweep` — **plus `persistence_sweep`** (a 10th the
-  plan's 9-list missed: it produces `persistence_results.json`, consumed by `enhanced_report`).
-  `perturb`/`demotion_pass`/`regenerate_orbits` already stamped. Witness: 10/10 carry the stamp
-  (static); runtime control `game_theory_stability.json` freshly written with `corpus_hash`.
-  (Also fixed `persistence_sweep.py:32` standalone-import crash — `parents[2]`→`parents[1]`.)
-- **Thread C (consumers fail-closed):** `assert_corpus_current` requires the field AND matches it;
-  raises on mismatch/absence (never pass-open on a possibly-dead corpus). The OLD known weakness —
-  `run_pipeline.check_orbits_corpus_hash` was **presence-only**, so a stale-but-stamped orbits file
-  passed — is **closed**: upgraded to a match-check (the `_stamp_orbits_corpus_hash` post-hoc stamp
-  is already gone; `regenerate_orbits.py` is atomic — swipl export + stamp in one invocation).
-  `enhanced_report.build_persistence_section` now surfaces STALE/WARNING instead of silently
-  rendering a dead-corpus persistence file; `persistence_sweep` warns when its bifurcation input is
-  stale. Three-sided witness: match=pass, mismatch=raise, absent=raise, no-file=pass.
-- **Thread D (existing data):** a **set-level** doc-citation probe (positive control: flags v3 +
-  bifurcation) corrected the plan's "5 dead orphans, none cited":
-  - **Deleted** (genuinely producerless + uncited beyond this list): `config_sensitivity_results_test.json`,
-    `structural_config_sensitivity_results_original.json`.
-  - **Kept, excluded as a class** — `alt_power_transform_results_3k.json`, `test_battery_results.json`
-    have LIVE test producers in `python/tests/` (write-only; no reader anywhere). They are test
-    artifacts, not authoritative analysis results. `alt_power_transform_test_3k` runs vs the **3k
-    archive**, so a testsets-keyed stamp would be **affirmatively wrong** — the named reason
-    blanket-stamping is unsound (a producer must stamp ITS OWN corpus, archive or live).
-  - **Kept + annotated** — `config_sensitivity_results_v3.json` is doc-cited (`config_sensitivity_v3.md`).
-  - **Pre-reset annotations** on the live-framed citations: `project_orientation.md`,
-    `config_sensitivity_v3.md`, `CONFIG_SENSITIVITY.md`, and **`AGENTS.md`** (the set-probe caught
-    this third live-framed site the plan's "only two" missed).
-- content hash (not filename-only): detects in-place edits; does NOT detect changes in
-  `testsets/<run_tag>/` subdirs (unchanged limit).
-
-**Residual CLEARED (2026-06-18, commit pending):** the four producers scoped out as "reconciled
-away" now stamp — `axiom_reachability.py`, `sweeps/epsilon_sensitivity.py`, `audits/metric_audit.py`,
-`audits/sheaf_audit.py` (runtime control: `sheaf_audit_results.json` freshly written with
-`corpus_hash=d2b3ec9429f1`). The **Fisher consumer** at `enhanced_report.py:1903` is now guarded —
-a stale/absent-hash `epsilon_sensitivity_results.json` surfaces STALE instead of rendering pre-reset
-Fisher numbers (four-sided witness: current+present→render, current+absent→"not computed",
-mismatch→STALE, absent-hash→STALE). The **audit-script ruling** was settled by probe, not defaulted:
-`metric_audit.py:115` and `sheaf_audit.py:146–147` load the LIVE `pipeline_output.json` /
-`orbit_data.json` (corpus-derived), so a `compute_corpus_hash(testsets)` stamp is the correct
-identity — they are live producers, not the archive wrong-identity case. (Surfaced separately while
-exercising: `sheaf_audit.py:515` ZeroDivisionError when the working set is empty — first read as
-"small post-reset corpus" but later WITNESSED (2026-06-18) to be the `classifications` producer
-regression, NOT corpus size: OQ-147 (crash floor, resolved) / OQ-148 (regression, open) — and
-`oracle_gap_analysis.py:143` `entry["contexts"]` on a string — pre-existing bugs, not OQ-29.) Test-artifact class (`alt_power_transform_results_3k`, `test_battery_results`)
-stays excluded-as-class.
+**Resolution note.** Defect class: produced-against-a-substrate-that-moved (19 `*_results.json`,
+0 stamped; `bifurcation_results.json` confirmed stale — all 7 flip constraints existed only in the
+archive). Threads A–D witnessed (commits `b6aefb5a`, `4ab980ff`, `7b016978`): A — fingerprint had
+FOUR byte-identical copies (Pattern-2 fork), consolidated into `corpus_hash.py`, identity witness
+`d2b3ec9429f1` on all paths; B — 10 producers self-stamp at write time (incl. `persistence_sweep`,
+which the plan's 9-list missed; also fixed its `parents[2]`→`parents[1]` import crash); C —
+`assert_corpus_current` fail-closed (presence-only orbit check upgraded to match; three-sided
+witness); D — 2 dead orphans deleted, test-artifact class kept-excluded (a producer must stamp ITS
+OWN corpus, archive or live), pre-reset citations annotated in 4 docs (incl. AGENTS.md, caught by
+the set-probe). Residual CLEARED: `axiom_reachability.py`, `sweeps/epsilon_sensitivity.py`,
+`audits/metric_audit.py`, `audits/sheaf_audit.py` now stamp (probe settled: they load LIVE
+pipeline outputs, so a testsets stamp is the correct identity); Fisher consumer guarded
+(four-sided witness). Limit unchanged: content hash does not see `testsets/<run_tag>/` subdirs.
+Surfaced separately (pre-existing, not OQ-29): `sheaf_audit.py:515` ZeroDivisionError →
+OQ-147 (resolved) / OQ-148; `oracle_gap_analysis.py:143` string-index bug. Cross-ref OQ-25.
 
 ---
 
@@ -1481,54 +1099,24 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 ## OQ-35 — G1: authored fields the engine never consumes (or consumes only inertly)
 
 **Status:** resolved — adjudicated 2026-06-21 (`audits/2026-06-21_oq35_field_counterfactual/`).
-All 6 rows ruled with witnesses below; row 1's fact-strip executed on the operator's go
-(2026-06-21, output-neutral diff-proven).
+All 6 rows ruled with witnesses; row 1's fact-strip executed on the operator's go (2026-06-21,
+output-neutral diff-proven).
 **Priority:** 1
 
-- **Rows 2–3 `accessibility_collapse`/`resistance` — RETAIN (load-bearing router inputs), committed.**
-  The census's "cosmetic (T.1)" was NL-override-specific and was superseded by the routing-sink
-  conversion (OQ-128/OQ-138): these fields feed `false_summit_mountain`/`false_ci_rope`@routed/
-  `constructed_high_extraction` (`signature_detection.pl:155,157,180,182,1462,1466`), which post-OQ-138
-  **route** — they revert `dr_type` to the metric type and carry their effect in
-  `verdict_join.{verdict,alerts,signature_grade}`. So `dr_type` alone is the WRONG diff variable (it
-  shows a false 0-diff). Counterfactual probe (`probe_oq35_field_counterfactual.pl`, full observation
-  tuple `obs(dr_type, signatures, verdict, alerts, signature_grade)`, three controls — presence /
-  routing-aware positive / null) over 5 corpora: **load-bearing in every presence>0 corpus** (treatment
-  diff: testsets 55/92, haiku 691/960, flash 537/960, kernel_v1 26/44, original_v6 421/3380; null
-  control clean=0 everywhere; positive control passes everywhere). Witness example (live): a constraint
-  whose `dr_type` stays `snare` in both arms while its signature flips `constructed_high_extraction →
-  unknown` and verdict drops `yellow → green`. **Kill condition (single statement):** a clean 0-diff on
-  the full observation tuple in *every corpus where presence>0 AND the positive control passes there*
-  (presence==0 corpora cannot witness "cosmetic" — recorded "field absent here"). Not met anywhere.
-
-- **Row 1 `is_mandatrophy_resolved/1` — dead facts → STRIPPED (operator go, 2026-06-21).** The 2 facts
-  + their comment were removed from `narrative_ontology.pl` (retirement note left in place); the strip is
-  output-neutral, **diff-proven** (validation-suite output byte-identical bar `[ELAPSED]` timing jitter;
-  pre-existing lycurgan interval warning unchanged). Zero goal-body/meta-call readers in non-archive code
-  (grep witness) made this safe. The only
-  mandatrophy analytical surface, `format_mandatrophy_gap/3` → `compute_chi_v6/6`
-  (`report_generator.pl:476`), computes `delta_chi` from base_extractiveness·f(d)·scope and is
-  **independent** of the facts (code-read) — so the strip is output-neutral by construction. That surface
-  is *itself* dead on the live corpus (0 `MANDATROPHY GAP` lines; its gate needs powerless≠institutional
-  via `constraint_classification/3`, which holds 0 powerless facts live) → logged as a dangling consumer
-  in `design_gaps.md`, separate from the fact strip. D6's escape hatch partly collapsed: OQ-109 retired
-  `detect_omega`, so revival now also requires rebuilding the consumer — higher revival cost favors
-  strip-now. (The strip was the operator's seat — executed on the 2026-06-21 go.)
-
-- **Row 4 `cs_reference_frame/2` — RETAIN on the OQ-133 bet, kill condition attached.** NOT a clean
-  RETAIN: it is **inert consumption** — serialized to committer JSON at `json_report.pl:590` but **no
-  join is computed** (offline t0→t1→t2 reconciliation deferred to OQ-133). Retain as the authored t0
-  anchor the deferred tier needs; **kill condition:** when OQ-133 ships, the join either materializes
-  (vindicates retain) or is cut (then strip the emission). Stripping now would destroy the t0 anchor and
-  remove it from the serialized committer output. Cross-link: OQ-133.
-
-- **Rows 5–6 `uke_scope.*`, `commentary.*` — by-design, no action.** `uke_scope.*` is schema-only
-  provenance (`schema:719-737`, not emitted/read); `commentary.*` is `.pl` comment text + a
-  `perspectival_gap` plunit (no facts read). Confirmed; closed.
-
-**Resolution changed:** rows 2–3 are now recorded **load-bearing** (not cosmetic — census reversed);
-row 4 is **inert-consumption-retained-on-bet** (not "zero readers" — `json_report.pl:590` is a real
-read site); row 1 facts are **dead** with the strip staged on the operator. See OQ-38 correction below.
+**Resolution note.** Rows 2–3 `accessibility_collapse`/`resistance` — **RETAIN, load-bearing
+router inputs** (census "cosmetic" REVERSED): they feed the OQ-128/OQ-138 routed signatures
+(`signature_detection.pl:155,157,180,182,1462,1466`); `dr_type` alone is the WRONG diff variable —
+counterfactual probe (`probe_oq35_field_counterfactual.pl`, full observation tuple, three
+controls) shows load-bearing in every presence>0 corpus (testsets 55/92, haiku 691/960, flash
+537/960, kernel_v1 26/44, original_v6 421/3380; null control 0 everywhere). **Kill condition
+(operative):** a clean 0-diff on the full observation tuple in every corpus where presence>0 AND
+the positive control passes — not met anywhere. Row 1 `is_mandatrophy_resolved/1` — dead facts
+STRIPPED from `narrative_ontology.pl` (operator go; diff-proven output-neutral; its own dangling
+consumer `format_mandatrophy_gap/3` logged in `design_gaps.md`; revival cost rose after OQ-109
+retired `detect_omega`). Row 4 `cs_reference_frame/2` —
+RETAIN on the OQ-133 bet: **inert consumption** (serialized at `json_report.pl:590`, no join);
+**kill condition:** when OQ-133 ships, the join materializes or the emission is cut. Rows 5–6
+`uke_scope.*`/`commentary.*` — by-design, closed. See OQ-38 correction (tool confirms row 4 LIVE).
 
 ## OQ-36 — G2: the `intent_*` subsystem (7 predicates) is read but never authored
 
@@ -1555,32 +1143,22 @@ delete `intent_engine` and its readers. **High-judgment.**
 **Priority:** 1
 **Deps:** bundled_with OQ-48
 
-[Compressed 2026-07-05; full history in git.] Census rows 8–12: `inevitability`,
-`internalization_depth`, `resistance_to_change`, `accumulation_speed`, `sunset_time` + compound
-`accessibility_collapse/stakes_inflation/suppression(Level)` — engine-read, 0/0 authored. Root:
-the fixed compiler emit set (`generate_constraint_pl.py:608-635`); the confound lives at the
-generation front, not the read site. Per-name disposition (2026-06-30, cross-corpus fact census
-0 facts on 3,142 stories, positive controls fired;
-`audits/2026-06-30_oq37_census_redispose/recon_evidence.md`):
-- `inevitability` — read already removed; capability superseded structurally by
-  `false_natural_law` → GAP-23 not-a-gap note.
-- `resistance_to_change` — distinct referent from live `resistance` (OQ-64 morphology trap);
-  vacuous piton check removed (`1eacd2fc`), `data_validation.pl:320` member dropped (`5b7a8b95`),
-  honest print/null/label sites ruled KEEP; repoint→`resistance` DECLINED.
-- `accumulation_speed` — zero-caller helper → OQ-38 dead-code (do not blind-strip).
-- `sunset_time` — non-redundant declared-expiry violation tell → GAP-23 liven (highest priority).
-- `internalization_depth` — `psych_bridge.pl` never loaded + input never emitted → GAP-23 liven
-  (highest cost); dies if `suppression_requirement` alone separates manufactured from genuine consent.
-- compound leveled grid — RESOLVED by OQ-93 (authorable via `measurement/5`; census was stale).
-
-Residuals routed: χ-partition gap CLOSED (`3ab3ace4`, `tangled_rope_chi_floor` 0.40→0.35);
-supp/ε-floor recalibration → OQ-48; Part D masked-unknowns MOOT post-reset. Standing rulings kept:
-(1) the Surface-2 holdouts were diagnosed **honest band-gap fall-through** (4 taxonomy holes /
-1 authoring gap / 0 compute bugs) — the `unknown` is honest; (2) the "never preserve unknown"
-override was REMOVED (commit `c90c5482`, `ModalType == unknown` guards in
-`signature_detection.pl`) — do NOT reinstate it; laundering an honest `unknown` into tangled_rope
-was the defect; (3) downstream, surfaced `unknown` is N/A for H¹, never a disagreeing type (ruled
-in OQ-51). Cross-refs: OQ-48, OQ-38, OQ-64, OQ-93, OQ-51, GAP-23.
+**Resolution note.** Census rows 8–12 (`inevitability`, `internalization_depth`,
+`resistance_to_change`, `accumulation_speed`, `sunset_time`, compound leveled grid) — engine-read,
+0/0 authored; root cause is the fixed compiler emit set (`generate_constraint_pl.py:608-635`).
+Per-name (cross-corpus fact census, 0 facts on 3,142 stories, positive controls fired;
+`recon_evidence.md`): `inevitability` → GAP-23 not-a-gap (superseded by `false_natural_law`);
+`resistance_to_change` → distinct referent from `resistance` (OQ-64 morphology trap), vacuous
+piton check removed (`1eacd2fc`), validator member dropped (`5b7a8b95`), repoint DECLINED;
+`accumulation_speed` → OQ-38 dead-code; `sunset_time` + `internalization_depth` → GAP-23 liven;
+compound grid → resolved by OQ-93 (census was stale). χ-partition gap CLOSED (`3ab3ace4`,
+`tangled_rope_chi_floor` 0.40→0.35); supp/ε-floor recalibration → OQ-48; Part D moot post-reset.
+**Standing rulings kept (operative):** (1) the Surface-2 holdouts are honest band-gap fall-through
+(4 taxonomy holes / 1 authoring gap / 0 compute bugs); (2) the "never preserve unknown" override
+was REMOVED (commit `c90c5482`, `ModalType == unknown` guards in `signature_detection.pl`) — do
+NOT reinstate it; laundering an honest `unknown` into tangled_rope was the defect; (3) surfaced
+`unknown` is N/A for H¹, never a disagreeing type (ruled in OQ-51). Cross-refs: OQ-48, OQ-38,
+OQ-64, OQ-93, OQ-51, GAP-23.
 
 ---
 
@@ -1594,48 +1172,23 @@ replaced by a tool-native funnel; the held-out remainder is routed to **OQ-196**
 **Priority:** 1
 **Deps:** splits_from OQ-37, gates OQ-196
 
-**What was built (commits `c9be12ca`/`736783e4`/`6a3acf1d`):**
-- `prolog/orphan_xref.pl` — `library(prolog_xref)` clause-head-vs-body separator, mirrors
-  `check_stack.pl` (load-path-independent diagnostic, NOT a pipeline gate). Per defined
-  `Name/Arity`: file, exported?, static-caller set (module-stripped), class (`LIVE` /
-  `ENTRYPOINT_CLI` / `STATIC_ORPHAN`). Caller matching is conservative (global `Name/Arity`,
-  biases LIVE — the only dangerous error for an orphan tool is a false orphan).
-- `python/audits/oq38_orphan_sweep.py` — runs the core, builds the dynamic-reachability surface
-  (Python/shell goal-strings + Prolog name-construction prefixes), masks static orphans, emits the
-  funnel.
-
-**Tool-native funnel** (`outputs/oq38_orphan_funnel.json`, 121 sources, pre-strip): tool exports
-**614** (prior grep claim 528, delta **+86 — a FINDING: the grep undercounted exports**) →
-zero-static-caller 255 (201 `STATIC_ORPHAN` + 54 `ENTRYPOINT_CLI`) → N = **201 `STATIC_ORPHAN`**
-(prior grep candidate 217, delta **−16**) → dynamic-masked 29 → **M = 172** real-orphan upper bound.
-**[EDGE]** M is still an upper bound: "statically uncalled" ≠ "dead" for anything reachable via a
-Python goal-string or Prolog name-construction (the axis `prolog_xref` is blind to).
-
-**Stage-1 hard gate PASSED** (the tool earned trust before any positive flag): `cs_reference_frame/2`
-reported `LIVE` (caller `json_report.pl:write_per_constraint_entry/4` — the adversarial OQ-35 case
-the stale grep blew); `non_monotonic_trajectory/2` reported `LIVE` (caller
-**`metric_drift_report.pl:generate_drift_report/1`** — confirming the prior cite `drift_report.pl:164`
-was stale; that file is absent). All five name-construction positive controls fire
-(`=..`, `atom_concat`, `atomic_list_concat`, `format(atom(...))`, `term_to_atom`).
-
-**The four calibration orphans stripped** (each `STATIC_ORPHAN` & absent from the dynamic surface,
-re-witnessed via the trusted tool; behavior-preserving witnesses — load gate exit 0, validation
-suite byte-identical timing-normalized, pipeline `per_constraint` sha256 unchanged `d9c85bec…` with
-mtime advanced):
-- **Commit A** `736783e4` — slope-pair `linear_slope/2` + `slope_accum/3` (`drl_composition.pl`);
-  cascade tail of the `1eacd2fc` `predict_transformation/3` strip. xref settled `slope_accum/3`'s
-  only caller was `linear_slope/2` itself.
-- **Commit B** `6a3acf1d` — safe_get-pair `safe_get_all_metrics/2` + `safe_get_profile_components/2`
-  (`utils.pl`). The "harvester invokes safe_get by name" worry was a labeled risk-flag, not a fact —
-  downgraded by witness: zero literal refs, no `safe_get_` construction across any class.
-- **Cascade finding:** Commit B newly orphaned **one** predicate — `safe_get_category/3` (its sole
-  caller `safe_get_all_metrics/2` is gone). Per the scope ruling it is NOT stripped here; it routes
-  to OQ-196 (with the pre-existing `safe_get_extractiveness/2` / `safe_get_suppression/2` orphans).
-
-**OQ-35 context retained:** `cs_reference_frame/2` is NOT dead — `json_report.pl:590` is a real
-read site (inert *consumption*, serialized not joined — OQ-133); the tool independently confirms it
-`LIVE`. Same `1eacd2fc` removed the vacuous `resistance_to_change`-keyed piton sub-check in
-`validate_edge_cases/0` (`data_validation.pl`), superseded by OQ-90.
+**Resolution note (commits `c9be12ca`/`736783e4`/`6a3acf1d`).** Built: `prolog/orphan_xref.pl`
+(`library(prolog_xref)`, mirrors `check_stack.pl`, conservative caller matching — biases LIVE) +
+`python/audits/oq38_orphan_sweep.py` (dynamic-reachability mask, funnel). Funnel
+(`outputs/oq38_orphan_funnel.json`, 121 sources): exports 614 (prior grep 528 — the grep
+UNDERCOUNTED) → 201 `STATIC_ORPHAN` → dynamic-masked 29 → **M = 172 upper bound**. **[EDGE]
+(operative):** M is an upper bound — "statically uncalled" ≠ "dead" for anything reachable via a
+Python goal-string or Prolog name-construction. Stage-1 hard gate PASSED before any strip:
+`cs_reference_frame/2` LIVE (caller `json_report.pl` — the adversarial OQ-35 case the stale grep
+blew; inert consumption, OQ-133), `non_monotonic_trajectory/2` LIVE
+(`metric_drift_report.pl:generate_drift_report/1`); all five name-construction positive controls
+fire. Stripped (behavior-preserving: load exit 0, validation suite byte-identical
+timing-normalized, `per_constraint` sha256 unchanged `d9c85bec…` mtime advanced): Commit A
+`736783e4` `linear_slope/2`+`slope_accum/3` (cascade tail of the `1eacd2fc` strip); Commit B
+`6a3acf1d` `safe_get_all_metrics/2`+`safe_get_profile_components/2`. Cascade finding: Commit B
+newly orphaned `safe_get_category/3` — NOT stripped here, routed to OQ-196 (with the pre-existing
+`safe_get_extractiveness/2`/`safe_get_suppression/2`). Same `1eacd2fc` removed the vacuous
+`resistance_to_change` piton sub-check (`data_validation.pl`), superseded by OQ-90.
 
 ## OQ-39 — G4: prompt rules with no engine enforcer
 
@@ -1644,129 +1197,68 @@ read site (inert *consumption*, serialized not joined — OQ-133); the tool inde
 **Status:** resolved — Census rows 14–18 all disposed (2026-06-25). Row 14 via a commentary verdict
 (NOT a gate/drop); rows 15–18 closed with witnessed dispositions.
 **Priority:** 1
-- **Row 14 scaffold "suppression must decline over time" — RESOLVED via COMMENTARY (operator ruling,
-  2026-06-25; NOT gate-vs-drop).** Reclassifying a rising-suppression scaffold to rope/tangled_rope
-  would assert *coercion* the evidence does not show — it only shows the decline rule is violated. So
-  the engine annotates instead: new clause `cs_verdict(C, scaffold_suppression_escalating)` in
-  `cs_pattern_detection.pl` (commentary-grade, annotate-only — flows to the `cs_verdicts` output field,
-  touches no classification/override path). Fires when a constraint certifies `scaffold` at any standard
-  context AND its authored `suppression_requirement` *series* is rising (`drift_events:metric_trend`).
-  **14 live constraints fire.** **Cross-leg finding:** rising:falling ≈ 5–6:1 in every leg
-  (testsets/ 13:2, haiku 53:7, flash 43:9 @ institutional) — the two reconciled legs share one
-  generation prompt, so this rules out one model's idiosyncrasy (not prompt-independence). Since the
-  rule *is* a generation-prompt rule, the sharp reading is: **the prompt's own "suppression declines"
-  instruction is systematically not honored by generation**, which strengthens the commentary case
-  (the engine annotates exactly where the prompt contradicts its own output). A strict "require
-  decline" gate would deny 18/20 institutional scaffolds; "deny on rising" 13–14/20 — both large
-  reclassifications the ruling rejects. **Doc-conflict resolved:** `metric_trend/3` reads the
-  `measurement/5` series directly via `metric_delta` (earliest→latest); its consumers
-  (`drift_events`, `transition_paths`, `logical_fingerprint`) do **not** route through
-  `classify_at_time`, so the commentary check is time-independent and **moot to OQ-178's off-grid
-  Time=0 wrinkle**. Cut/placement gotcha: the clause MUST be the first `cs_verdict/2` clause and use
-  `once/1` (no trailing `!`) — it is gated on `dr_type=scaffold`, orthogonal to the `cs_pattern`-gated
-  siblings, so a trailing cut or below-placement would silently prune a co-firing verdict (cut-regression
-  control in `tests/test_oq39_scaffold_escalation.pl` proves a dual-verdict constraint carries BOTH).
-- **Row 15 "final measurement = base extractiveness" — CLOSE, no engine action.** No validator checks
-  latest-time extractiveness == authored `base_extractiveness` scalar (`drl_composition.pl:235–237`
-  reads temporal-else-flagged-0.5; no equality check). Negative claim positive-controlled: grep for an
-  equality validator surfaced `linter.py:227` (metric *extraction* for mandatrophy `ext_val > 0.7`, not
-  an equality validator) and DID match real validators — absence witnessed, not a blind miss. The scalar
-  is the authored baseline (OQ-46 sanctioned). **Low-stakes.**
-- **Row 16 "piton atrophy" — CLOSE, enforcer exists.** `coordination_dead/1` (`drl_core.pl:317–320`)
-  wired into the piton pre-check of `classify_from_metrics/6` (`:344–351`), fired by authored
-  `coordination_vitality(C, dead|degrading)`.
-- **Row 17 "Goodhart / metric substitution" — CLOSE, leave diagnostic-only** (operator confirmed).
-  `detect_metric_substitution/1` (`drift_events.pl:103–110`) is report-path only (`drift_report.pl`,
-  `transition_paths.pl`), not a classification gate — by design.
-- **Row 18 "perspective-min" — CLOSE, no engine action.** Linter `MISSING_PERSPECTIVE`/`ROLE_COVERAGE`
-  (`linter.py:144–181`). Per operator: the linter is an *operator-evaluation* tool, not an authoring
-  gate constraints must pass and not an engine enforcer — the rule lives correctly at the eval surface.
 
-**Resolution:** the prompt's temporal/structural rules are dispositioned per row — row 14 gets engine
-*commentary* (not enforcement, not a drop); rows 15–18 need no engine action (the enforcer already
-exists, or the rule correctly lives at the linter/report surface). Code: `cs_pattern_detection.pl`
-(new `scaffold_suppression_escalating` clause), `tests/test_oq39_scaffold_escalation.pl` (3-case
-positive control). See KNOWN_STATE 2026-06-25.
+**Resolution note.** Row 14 scaffold "suppression must decline" — COMMENTARY (operator ruling,
+2026-06-25): new clause `cs_verdict(C, scaffold_suppression_escalating)` in
+`cs_pattern_detection.pl` (annotate-only; 14 live firings; cross-leg rising:falling ≈ 5–6:1 — the
+prompt's own decline instruction is systematically not honored by generation, which strengthens
+the commentary case; a strict gate would deny 13–18/20 institutional scaffolds). `metric_trend/3`
+reads the series directly, not via `classify_at_time` — moot to OQ-178's Time=0 wrinkle.
+**Cut/placement gotcha (operative build spec):** the clause MUST be the first `cs_verdict/2`
+clause and use `once/1` (no trailing `!`) — it is gated on `dr_type=scaffold`, orthogonal to the
+`cs_pattern`-gated siblings; a trailing cut or below-placement silently prunes a co-firing verdict
+(cut-regression control in `tests/test_oq39_scaffold_escalation.pl` proves dual-verdict carriage).
+Row 15 final-measurement==scalar — CLOSE, no validator exists (absence positive-controlled via
+`linter.py:227`); scalar is the authored baseline (OQ-46). Row 16 piton atrophy — enforcer exists
+(`coordination_dead/1`, `drl_core.pl:317–320` wired at `:344–351`). Row 17 Goodhart — CLOSE,
+diagnostic-only by design (`detect_metric_substitution/1`). Row 18 perspective-min — CLOSE, lives
+correctly at the linter eval surface (operator). See KNOWN_STATE 2026-06-25.
 
 ## OQ-40 — G5: scalar-vs-temporal representation splits
 
 **Ω-type:** Ω_C (design choice — authoritative representation per metric, or document the axis split as intended).
 
-**Status:** resolved — (2026-07-01) representation split RULED INTENDED (2026-06-24) and now
-LIFTED into a canonical design doc (`docs/design/two_axis_architecture_v7.md` §"Representation
-grounding: which store is authoritative per metric (OQ-40)"): `constraint_metric/3` = authoritative
-scalar/observer store (read by `drl_core`, e.g. `base_extractiveness/2` at `drl_core.pl:85`);
-`measurement/5` = temporal/committer store (read by `classify_at_time`/`drift_events`); split
-intended per metric, with the temporal-only-authoring off-grid correctness obligation recorded
-(OQ-83/OQ-195). Census row-22 (`compute_temporal_stability` reads the scalar store, not
-`measurement/5`) SPUN OUT to **OQ-201** with its coverage witness
-(`audits/2026-07-01_oq41_row26_expansion/probe_row22_coverage.pl`), per operator ruling (close on the
-doc lift; do NOT repoint row-22 now — that would repeat the rows 24–25 off-grid trap inverted).
-Rows 19–20 origin below.
+**Status:** resolved — (2026-07-01) representation split RULED INTENDED (2026-06-24) and LIFTED
+into `docs/design/two_axis_architecture_v7.md` §"Representation grounding (OQ-40)":
+`constraint_metric/3` = authoritative scalar/observer store; `measurement/5` =
+temporal/committer store; split intended per metric, with the temporal-only-authoring off-grid
+correctness obligation recorded (OQ-83/OQ-195). Census row-22 SPUN OUT to **OQ-201** with its
+coverage witness (`audits/2026-07-01_oq41_row26_expansion/probe_row22_coverage.pl`), per operator
+ruling (do NOT repoint row-22 now — the rows 24–25 off-grid trap inverted).
 **Priority:** 1
-Census rows 19–22. `extractiveness`, `base_extractiveness`,
-`suppression_requirement` each read as scalar `constraint_metric` (observer `drl_core`) **and** as
-`measurement/5` (committer `drl_composition`/`drift_events`) — the two representations can carry
-different values per axis. Plus `compute_temporal_stability` (`signature_detection`) folds scalar
-`constraint_metric` as a pseudo-time-series instead of `measurement/5` (→ OQ-201). **Decision (taken):**
-document the axis split as intended.
-**Cross-axis-live — see census cross-axis subset.**
 
-**`suppression_requirement` sub-split CLOSED (2026-05-31, side-effect of Commit A / OQ-41 row 23).**
-Inside the temporal path there was a *second*, silent G5 split: `classify_at_time` (drl_composition)
-fabricated `Supp=0.5` on absent temporal series, while `snapshot_type/3` (transition_paths) already
-fell back to the authored **scalar** via `drift_events:safe_metric` — so the two temporal classifiers
-disagreed on every constraint lacking a temporal suppression series (650/656 rows). The row-23
-scalar-fallback fix **converges them** (both now: temporal → authored scalar → floor). The
-convergence is now permanent: OQ-46 (resolved 2026-06-11) ruled the scalar fallback SANCTIONED —
-it is not removed, so the split stays closed. (`snapshot_type`/`degradation_chain` additionally
-have zero consumers — witnessed grep with positive control, `audits/2026-06-11_oq46_close/`.)
-The `extractiveness`/`base_extractiveness` sub-splits (rows 19–20) remain open.
-
-**Rows 19–20 `base_extractiveness` — split RULED INTENDED, with a live correctness edge
-(2026-06-24).** The scalar-vs-temporal split is the v7 two-axis design: the observer axis
-(`drl_core`) reads scalar `constraint_metric`; the committer/temporal axis (`classify_at_time`,
-`drift_events`) reads `measurement/5`. NOT a defect — document as intended. **But the same
-audit (`audits/2026-06-24_oq41_basex_t0/`) showed the edge has teeth:** 15 live constraints
-author `base_extractiveness` TEMPORALLY ONLY (no scalar), so the temporal series is their *only*
-authoritative ε. Off-grid temporal queries are therefore not an edge case but the **main path**
-for the whole temporal-only family — a live correctness surface. (Its original instance, the
-`cs_kernel_registry` Time=0 probe, is now moot: that comparator reverted to static `dr_type/3`,
-commit `5b069ae1`. The off-grid obligation persists for genuine DR-temporal callers —
-`drift_trajectory`/`degradation_chain`, OQ-83 family.) So the doc records both halves:
-split is intended AND temporal-only authoring makes off-grid reads a correctness obligation.
+**Resolution note.** Census rows 19–22. `suppression_requirement` sub-split CLOSED 2026-05-31
+(OQ-41 row 23 side-effect): `classify_at_time` and `snapshot_type/3` converged on temporal →
+authored scalar → floor; permanent since OQ-46 ruled the scalar fallback SANCTIONED
+(`snapshot_type`/`degradation_chain` additionally have zero consumers — witnessed grep with
+positive control, `audits/2026-06-11_oq46_close/`). Rows 19–20 `base_extractiveness` — RULED
+INTENDED (the v7 two-axis design), but `audits/2026-06-24_oq41_basex_t0/` showed the edge has
+teeth: 15 live constraints author ε TEMPORALLY ONLY, so off-grid temporal reads are the main path
+for that family — a live correctness surface (original `cs_kernel_registry` Time=0 instance moot:
+comparator reverted to static `dr_type/3`, commit `5b069ae1`; obligation persists for genuine
+DR-temporal callers, OQ-83 family).
 
 ## OQ-41 — G6: fabricated defaults for absent data (fail-closed vs impute)
 
 **Ω-type:** Ω_C (design choice — fail-closed vs impute; subsumed by the OQ-44 satisfy-on-absence policy).
 
-**Status:** resolved — (2026-07-01, row-26 expansion, `audits/2026-07-01_oq41_row26_expansion/`) row 23 FIXED (Commit A); rows 24–25 SUPERSEDED (commit `5b069ae1`); **row 26 CLOSED** with the five sites' per-site verdicts (below); row 27 by-design. All census rows 23–27 disposed. (Prior `partial`: row 26 NEUTRAL for 3 of 6 sites, 4 OPEN.)
+**Status:** resolved — (2026-07-01, row-26 expansion, `audits/2026-07-01_oq41_row26_expansion/`) row 23 FIXED (Commit A); rows 24–25 SUPERSEDED (commit `5b069ae1`); row 26 CLOSED per-site; row 27 by-design. All census rows 23–27 disposed.
 **Priority:** 1
 
-[Compressed 2026-07-05; full history in git.] G6 = a silent fixed default (`0.5`, `0.0`)
-substitutes for absent authored data. Per-row dispositions:
-- **Row 23** (`classify_at_time` `Supp=0.5`) FIXED: temporal measurement → else authored scalar →
-  else `unknown`; 268 rows corrected vs the fabricated 0.5. The scalar fallback was a labeled
-  STOPGAP until OQ-46 ruled it SANCTIONED (scalar-as-constant is legitimate authoring for
-  static-enforcement stories); the clause is permanent.
-- **Rows 24–25** (`BaseX=0.5`): the "dormant" read was FALSIFIED
-  (`audits/2026-06-24_oq41_basex_t0/` — live at t=0 via `cs_kernel_registry`), but **OQ-44 does not
-  apply: there is no absence** — all 15 affected stories author ε as a temporal series at real
-  years; the t0 default was OFF-GRID PROBING, and fail-closing it ERASES real signal (the
-  settler_colonial/cultural_zionist divergence collapsed to false-agreement; the OQ-178 dual).
-  SUPERSEDED at the root by commit `5b069ae1` (2026-06-25): `cs_kernel_divergence` classifies with
-  static `dr_type/3`, never calls `classify_at_time` — OQ-178/OQ-179 dissolved with it.
-- **Row 26** (analysis-path `0.5` cluster) CLOSED, no fail-close landed (none LIVE-CLASSIFYING):
-  `covering_analysis:490`, `gap_diagnostic:120`, `omega1_audit:102` (+sibs) DORMANT/LOCKED
-  (0 pipeline callers; covered by the OQ-44 once-for-class dormant ruling); `drl_fpn:206`
-  Immunity=0.5 NEUTRAL-by-corpus (0 natural fires on testsets+kernel_v1, positive control fires;
-  sink never feeds `dr_type`); `drl_fpn:197` CARVED OUT — a negative no-purity-data sentinel, not
-  a fabricated default (corrects a prior :197/:206 conflation). Method note: the 999.9 tripwire is
-  the sound reachability test — the guard-falsity count shortcut was caught vacuous by its control.
-- **Row 27** by-design.
-Witnesses: `outputs/tripwire_row26_results.json`, `audits/2026-06-24_oq41_basex_t0/`,
-`audits/2026-07-01_oq41_row26_expansion/`. Cross-refs: OQ-44 (statute), OQ-46 (scalar sanction),
-OQ-178/OQ-179 (off-grid), OQ-40 (G5 representation split).
+**Resolution note.** G6 = a silent fixed default (`0.5`, `0.0`) substitutes for absent authored
+data. Row 23 (`classify_at_time` `Supp=0.5`) FIXED: temporal → authored scalar → `unknown`; 268
+rows corrected; the scalar fallback was ruled SANCTIONED at OQ-46 (permanent clause). Rows 24–25
+(`BaseX=0.5`): the "dormant" read was FALSIFIED (`audits/2026-06-24_oq41_basex_t0/` — live at t=0
+via `cs_kernel_registry`), but OQ-44 does not apply — no absence: all 15 affected stories author ε
+temporally; the t0 default was OFF-GRID PROBING, and fail-closing ERASES real signal (the OQ-178
+dual); SUPERSEDED at the root by `5b069ae1` (static `dr_type/3`; OQ-178/OQ-179 dissolved). Row 26
+(analysis-path `0.5` cluster) CLOSED, none LIVE-CLASSIFYING: `covering_analysis:490`,
+`gap_diagnostic:120`, `omega1_audit:102` DORMANT/LOCKED (OQ-44 once-for-class ruling);
+`drl_fpn:206` Immunity=0.5 NEUTRAL-by-corpus (positive control fires); `drl_fpn:197` CARVED OUT —
+a no-purity-data sentinel, not a fabricated default. Method note: the 999.9 tripwire is the sound
+reachability test — the guard-falsity shortcut was caught vacuous by its control. Witnesses:
+`outputs/tripwire_row26_results.json` + the two audit dirs. Cross-refs: OQ-44, OQ-46,
+OQ-178/OQ-179, OQ-40.
 
 ---
 
@@ -1783,23 +1275,21 @@ conflated `affects_constraint/2` with the genuinely-empty `intent_*` tables (OQ-
 **Ω-type:** Ω_C (design choice — one fail-closed-vs-vacuous-pass policy across the class; generalized by OQ-44).
 
 **Status:** resolved — the class policy was made once at OQ-44 (operator ruling 2026-06-11; see
-that entry's ruling block). **Fifth-instance disposition recorded here: FAIL-CLOSED, output-changing,
-un-certification accepted.** `has_viable_alternatives/2` default `false`→`unknown` (commit
-`8b5a34b8`): the empty `intent_viable_alternative/3` table (GAP-08) no longer satisfies
-`natural_law_signature`'s `HasAlternatives == false`, so `thermal_dissipation_constraint` lost its
-NL certification (signature → `ambiguous`; the NL→mountain modal override dropped, surfacing
-rope at moderate/institutional and a `perspectival_incoherence` red verdict). NL certifications
-return when the intent layer or an authored alternatives table exists. Witnesses:
+that entry's ruling block). Fifth-instance disposition recorded here: FAIL-CLOSED,
+output-changing, un-certification accepted — `has_viable_alternatives/2` default
+`false`→`unknown` (commit `8b5a34b8`); the empty `intent_viable_alternative/3` table (GAP-08) no
+longer satisfies `natural_law_signature`, so `thermal_dissipation_constraint` lost its NL
+certification (signature → `ambiguous`; NL→mountain override dropped; `perspectival_incoherence`
+red). NL certs return when the intent layer or an authored alternatives table exists. Witnesses:
 `audits/2026-06-11_oq44_policy_close/`.
 
 **Origin (compressed; full history in git).** Named the class — gates satisfied by data-absence
-reading as positive findings — across four then five instances: G6 fabricated defaults (OQ-41),
-empty `intent_*` consumers (OQ-36/OQ-37), `get_metric_average` 0.5, the NL `BeneficiaryCount == 0`
-gate over empty `intent_power_change` (re-sourced to `agent_beneficiary`, D3 fail-close), and
-`has_viable_alternatives` (above). Kernel_v1-regime evidence (404 NL certs = "no beneficiary
-authored," not "none exists") and the FSM-is-the-only-beneficiary-screen correction are preserved
-in git history. **Still-operative pointer:** auditing whether any NL constraint hides a real winner
-is a content re-audit — OQ-45, not engine maintenance.
+reading as positive findings — across five instances: G6 fabricated defaults (OQ-41), empty
+`intent_*` consumers (OQ-36/OQ-37), `get_metric_average` 0.5, the NL `BeneficiaryCount == 0` gate
+(re-sourced to `agent_beneficiary`, D3 fail-close), and `has_viable_alternatives` (above).
+Kernel_v1-regime evidence (404 NL certs = "no beneficiary authored") in git history.
+**Still-operative pointer:** auditing whether any NL constraint hides a real winner is a content
+re-audit — OQ-45, not engine maintenance.
 
 ## OQ-44 — Engine-wide audit: no gate may be satisfied by absence (authored-zero vs absent)
 
@@ -1813,10 +1303,7 @@ is a content re-audit — OQ-45, not engine maintenance.
 confirmation only.** Five independent conversions went fail-closed on real data and none was
 reverted: `count_power_beneficiaries` re-source (D3), `get_metric_average` → `unknown` sentinel
 (2026-06-08), `classify_at_time` row-23 fail-close + bucketed Backed (OQ-41/OQ-46),
-`verify_vector_at` witness-carrying pass (OQ-96), the piton vacuity line (OQ-37). The common-law
-phase converged; the instance-counter condition from adjudication instance #1 (gate-type +
-report-type spanned, next instance arrived 2026-06-10) is satisfied, but it is the *confirmation*
-the jurisprudence ran its course — not the ground of the ruling. The ruling:
+`verify_vector_at` witness-carrying pass (OQ-96), the piton vacuity line (OQ-37). The ruling:
 
 - **Statute for new or modified gates:** a gate over a possibly-empty table or a defaulted metric
   **fails closed on absence** — establish the datum was authored before the gate may pass;
@@ -1831,60 +1318,23 @@ the jurisprudence ran its course — not the ground of the ruling. The ruling:
 - **Common-law for existing gates:** ruled per-instance with their witness, prioritized by
   success-shapedness of the vacuous pass (a green checkmark or certification outranks an
   annotation). CARRY-with-provenance remains an available per-instance verdict (instance #1's two
-  CARRYs were CLOSED 2026-06-11 by the OQ-93 migration — see the closure note below; full
-  text in git history at this entry).
+  CARRYs were CLOSED 2026-06-11 by the OQ-93 migration; full text in git history).
 
-**Dispositions of the three open sites (2026-06-11, all witnessed in
-`audits/2026-06-11_oq44_policy_close/`):**
-1. **`get_raw_suppression` `Supp=0` → CONVERTED** (commit `966d53c8`): `unknown` sentinel +
-   `number/1` guard clause at `classify_from_metrics/6`. The witness corrected the pre-derivation:
-   the fabricated 0 WAS consumed — the two non-story `cs_axiom_contradiction` files exported
-   `suppression: 0` and each carried a `fingerprint_voids` agreement computed on it; both now
-   honest (null / agreement absent). Classification output unchanged for all 46 stories;
-   `shared/schemas.py` marks suppression nullable (null = no authored scalar).
-2. **`report_generator`/`utils` 0.0 defaults → CONFORMING as-is**, no change: they print
-   `MISSING (using default 0.0)` — the pass already carries its witness. (Instance #2's
-   conditional-verdict caveat stands; sibling sites :481/:500 same status.)
-3. **`has_viable_alternatives` → FAIL-CLOSED** (ruled; commit `8b5a34b8`, output-changing, landed
-   alone): default `false`→`unknown`; the empty `intent_viable_alternative` table no longer
-   satisfies NL's `HasAlternatives == false`. **Un-certification of
-   `thermal_dissipation_constraint` ACCEPTED** — a known-vacuous certification is tolerated rather
-   than undetected; NL certs return when the intent layer or an authored alternatives table exists
-   (GAP-08). Witnessed consequence: signature → `ambiguous`, the NL→mountain modal override
-   dropped (rope at moderate/institutional), diagnostic verdict green→red with a
-   `perspectival_incoherence` alert; all 277 pipeline diffs attribute to this single cause
-   (thermal's own fields + corpus-relative wasserstein/arakelov/signature_pressure aggregates).
-
-**Class members in the DR-trajectory (observer) subsystem — DORMANT/LOCKED, not live
-(witnessed 2026-06-08; merged from the `sdm-temporal-records` review).** Flagged here so the
-once-for-class ruling covers them, NOT so they are fixed per-site: (i) `drl_composition.pl:201`
-`BaseX = 0.5` — reachable-but-locked (OQ-41 rows 24–25; fires only via the dormant
-`constraint_history` sweep); (ii) `transition_paths.pl` `snapshot_type/3` fabricated
-`default_extractiveness=0.10` / `default_suppression=0.10` (`config.pl:300–301`) — entirely
-inside the dormant trajectory classifier (`snapshot_type`/`degradation_chain` consumed by
-nothing, positive-controlled). These are the same fail-closed-vs-impute decision as the live
-sites; reviving the surface that would make them live is the coupled rebuild ruling (KNOWN_STATE
-2026-06-08 "three deferred temporal threads = one ruling"; since adjudicated in part — OQ-83
-resolved 2026-06-11, D-fork ruled NO-OPEN at OQ-110; revive-or-gap of the dormant
-`transition_paths`/`snapshot_type` repair-direction classifier is OQ-91's candidate-home
-question — the *separate* dormant HAC structural-family / cross-domain-twin module
-`context_profile_mining.pl` is owned by **OQ-182** (revive + validate as commentary-grade), bundled
-with this thread but not gated by it).
-
-**Origin (compressed; full audit scaffolding, gate-shape taxonomy, instance #1/#2 texts in git
-history).** Premise: zero-because-measured and zero-because-missing collapse to one value at a
-comparison site, so a gate that cannot tell them apart tests nothing when its table is empty.
-The 2026-06-11 evidence pass (probe1 census with per-process positive controls) found most of the
-named class already fail-closed by accretion and the remainder enumerated as the three sites
-above. Pattern-5/Pattern-6 candidate-site census across the wider engine remains OQ-97's scope.
-Connects to OQ-43 (class naming, resolved with this ruling), OQ-41, OQ-36/OQ-37, OQ-45 (content
-re-audit, still open), OQ-93 (the CARRY instances' gate), OQ-97.
-
-**OQ-93 fork ruled + migration landed (2026-06-11): the two CARRY instances are CLOSED** —
-`verify_vector_at` reports absence OPEN per slot-group (pass carries its witness), the
-`[INTENT]` line prints OPEN on absence with authored-or-absent inputs (`coercion_grid`), and
-the dead intent top verdict moved to OQ-106. Witnesses:
-`audits/2026-06-11_oq93_grid_migration/`.
+**Dispositions (2026-06-11, witnessed in `audits/2026-06-11_oq44_policy_close/`):** (1)
+`get_raw_suppression` `Supp=0` → CONVERTED (commit `966d53c8`, `unknown` sentinel + `number/1`
+guard at `classify_from_metrics/6`; the fabricated 0 WAS consumed — two `cs_axiom_contradiction`
+exports now honest; `shared/schemas.py` suppression nullable). (2) `report_generator`/`utils` 0.0
+defaults → CONFORMING as-is (they print `MISSING (using default 0.0)` — pass carries its witness).
+(3) `has_viable_alternatives` → FAIL-CLOSED (commit `8b5a34b8`, output-changing;
+`thermal_dissipation_constraint` un-certification ACCEPTED; all 277 pipeline diffs attribute to
+this single cause). Dormant class members flagged for the once-for-class ruling (NOT per-site
+fixes): `drl_composition.pl:201` `BaseX=0.5` (OQ-41 rows 24–25), `transition_paths.pl`
+`snapshot_type/3` defaults (`config.pl:300–301`) — revival is the coupled rebuild ruling
+(KNOWN_STATE 2026-06-08; OQ-83 resolved, D-fork NO-OPEN at OQ-110; `snapshot_type` revive-or-gap →
+OQ-91's candidate-home; `context_profile_mining.pl` owned by OQ-182). OQ-93 fork ruled + migration
+landed 2026-06-11 (the two CARRY instances CLOSED; dead intent top verdict → OQ-106; witnesses
+`audits/2026-06-11_oq93_grid_migration/`). Wider Pattern-5/6 census remains OQ-97's scope.
+Cross-refs: OQ-43, OQ-41, OQ-36/OQ-37, OQ-45, OQ-93, OQ-96, OQ-97.
 
 ## OQ-45 — Content audit: do any of the 404 NL constraints hide asymmetric winners?
 
@@ -1920,82 +1370,45 @@ Full evidence: `audits/2026-07-01_oq45_oq52_hidden_winners/` (WRITEUP.md).
 
 **Status:** resolved — operator ruling 2026-06-11: **the scalar fallback is SANCTIONED, not a stopgap; the premise was wrong.** Full evidence + ruling: `audits/2026-06-11_oq46_close/`.
 
-**Why the premise was wrong:** the generation prompt has instructed since 2026-05-30 (commit
-`220739b8`, predating the live corpus): "Do NOT author `suppression_requirement` measurements
-unless the story's narrative specifically tracks enforcement-capacity change"
-(`constraint_story_generation_prompt_json.md:457`); the schema requires neither `measurements`
-nor suppression among them. The 7 scalar-only live constraints are prompt-conformant
-static-enforcement stories, not template failures — the wait-state never terminates by design.
-Second unrecorded load: 21 of 47 fallback rows were time-grid misalignment inside 10
-series-authoring constraints (suppression sampled coarser than other metrics), so universal
-series-authoring alone would not have retired the clause. Deletion counterfactual: 16/46
-timelines change, 7 collapse to `[unknown]`, 9 gain phantom transitions in `drift_trajectory`.
+**Why the premise was wrong (compressed):** the generation prompt has instructed since 2026-05-30
+(commit `220739b8`) not to author suppression series unless the narrative tracks
+enforcement-capacity change (`constraint_story_generation_prompt_json.md:457`); the 7 scalar-only
+live constraints are prompt-conformant static-enforcement stories. 21/47 fallback rows were
+time-grid misalignment, so universal series-authoring would not have retired the clause. Deletion
+counterfactual: 16/46 timelines change, 7 collapse to `[unknown]`, 9 gain phantom transitions.
 
 **Still-operative ruling:** `classify_at_time`'s read ladder — temporal `measurement/5` at T →
 authored scalar `constraint_metric` as constant → fail-closed `unknown` — is the **permanent,
 sanctioned** representation policy for suppression (D4 ruled: scalar = static enforcement is
-legitimate authoring; the series is authored only when enforcement capacity changes). Do not
-delete the scalar clause. A future Surface-3 temporal-suppression primitive is gated on
-per-constraint `Backed` coverage, not on corpus-wide series universality.
+legitimate authoring). Do not delete the scalar clause. A future Surface-3 temporal-suppression
+primitive is gated on per-constraint `Backed` coverage, not corpus-wide series universality.
 
-**Backed semantics BUCKETED (same-day follow-on ruling, 2026-06-11; evidence:
-`audits/2026-06-11_oq46_backed_reconciliation/`).** The close above left `Backed=false` on ALL
-scalar-supplied rows; the follow-on evidence pass split them and the operator ruled bucketed,
-keyed on an EXPLICIT sanction, never emptiness-inference (OQ-44 Pattern 5):
-- **Sanctioned static scalar backs:** `suppression_profile(C, static)` — compiler-stamped
-  (`generate_constraint_pl.py` section 8) only on positive-control absence (other series
-  authored, suppression deliberately omitted) — plus no series anywhere → `SuppBacked=true`.
-  The scalar IS the story's authoring for every Time. Zero flip/fab_adjacent delta witnessed
-  (59/20 unchanged; only `backed_times` rises, 7 constraints × 4 contexts).
-- **Misalignment substitution stays excluded** (series exists, off-grid Time): `SuppBacked=false`.
-  Spun off as **OQ-105** — the substitution is anti-causal (scalar ≈ series endpoint, 37/39
-  exact) and currently sets flip TIMING in 2 witnessed timelines.
-- **Unmarked seriesless fails closed** (`SuppBacked=false`): a missing series without the
-  marker (partial regen, generation bug) is excluded, not silently sanctioned.
-- **Blanket rejected with witness:** counting all scalars as backed graduates the 20
-  `fab_adjacent` transitions into the real-flip count (59→79) that decides the OQ-83 D-fork —
-  laundering substitution-dated motion.
-The earlier "do not add a scalar/temporal equivalence check — nothing to reconcile by
-definition" rationale is RETIRED in favor of a witnessed basis: a one-time endpoint-membership
-query (2026-06-11) found 0 violations (39 dual-rep constraints: 37 exact scalar==endpoint,
-2 within 0.05), so the lint question is closed-no-demonstrated-content — no standing lint;
-re-run the query (`audits/2026-06-11_oq46_backed_reconciliation/`) before re-opening.
+**Backed semantics BUCKETED (follow-on ruling, 2026-06-11; evidence:
+`audits/2026-06-11_oq46_backed_reconciliation/`)** — keyed on an EXPLICIT sanction, never
+emptiness-inference (OQ-44 Pattern 5): compiler-stamped `suppression_profile(C, static)` (positive-
+control inference at compile time) → `SuppBacked=true` (zero flip/fab_adjacent delta witnessed);
+misalignment substitution stays excluded (`SuppBacked=false`; spun off as **OQ-105** —
+anti-causal, sets flip timing in 2 timelines); unmarked seriesless fails closed; blanket-backed
+rejected with witness (it would graduate 20 `fab_adjacent` transitions into the real-flip count
+59→79 deciding the OQ-83 D-fork). Scalar/temporal equivalence lint: closed-no-demonstrated-content
+(39 dual-rep constraints: 37 exact, 2 within 0.05) — re-run the query before re-opening.
 
 ## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
 
-**Status:** resolved — superseded by the 2026-06-05 de-leak + corpus reset; the confirmed example-file leak path is removed The behavior-preserving prompt/schema
-changes (D5 row-14 strip, D7 schema-gate strip) only take effect on **regenerated** stories. Sequencing:
-- **De-stamp A/B is the FIRST regeneration batch** (the D7 schema-gate strip + row-14 removal, run as
-  an A/B against current stories) and it **gates batch two** — do not bulk-regenerate until the A/B
-  confirms the prompt fixes land as intended.
-- **Audit the SCOPE→seed seam first.** UKE_SCOPE writes the seed/manifest (`uke_scope.*`, census row 5);
-  if SCOPE re-injects the stripped gate language or fields downstream, it **silently undoes the prompt
-  fix** — the upstream leak. Verify the seam carries no stripped-field provenance before regenerating.
-Connects to OQ-46 (the regen that retires the row-23 stopgap) and D7/D5 (the prompt changes regen propagates).
+**Status:** resolved — superseded by the 2026-06-05 de-leak + corpus reset; the confirmed
+example-file leak path is removed.
 
-**Path-resolution audit (2026-05-31) — the leak is the EXAMPLE file, not SCOPE.** Both generators
-(`agent/generate_kernel_corpus.py`, `agent/c-orchestrator.py`) import path constants from
-`agent/story_generator_base.py`. Findings:
-- **Schema: no regen-path fork.** Every schema resolution — `SCHEMA_PATH` (prompt-text + `load_schema`
-  validation), `generate_constraint_pl._load_schema` (kernel strip/validate), c-orchestrator's
-  `load_schema` — resolves to the canonical `python/constraint_story_schema.json` (env `DR_SCHEMA`
-  overrides). **B4 lands in both pipelines.** `agent/data/constraint_story_schema.json` is referenced
-  ONLY by `commitment_corpus/apply_schema_patch.py` (orphan w.r.t. generation), not a regen fork.
-- **Prompt: canonical.** Generation prompt → `prompts/constraint_story_generation_prompt_json.md`
-  (env `DR_GEN_PROMPT`); SCOPE prompt → `prompts/uke_scope_v2_json.md`. **B3 lands in both.** The SCOPE
-  prompt does NOT carry the stripped gate fields (only an unrelated "net-zero resistance" phrase).
-- **CONFIRMED LEAK — the few-shot example file.** `c-orchestrator` injects `json/antifragility.json`
-  as its example, which hard-codes **`accessibility_collapse: 0.9` and `resistance: 0.08`** — the exact
-  mountain-gate pattern B4 stripped from the schema. The model will pattern-match and reproduce it,
-  **silently undoing B3+B4** for the c-orchestrator path. (The kernel pipeline's example,
-  `agent/verification_bottleneck.json`, is clean — 0 occurrences.) The two generators also use
-  DIFFERENT example files (divergence). **The de-stamp A/B MUST scrub `json/antifragility.json`'s
-  accessibility_collapse/resistance exemplar values, not just the prompt+schema** — else the leak
-  re-injects the stripped gate. This is the upstream leak this OQ anticipated; it is the example file.
-
----
-
-**Resolution (2026-06-05):** the seam audit this OQ demanded ran as the de-leak's assembled-payload witnesses (prompt, schema-in-prompt, example all grepped at the build_prompt boundary). The confirmed leak — `json/antifragility.json` (accessibility_collapse 0.9 / resistance 0.08) injected by c-orchestrator — turned out to be a DANGLING LOAD by 2026-06-05 (`protocols["example"]`/`["gen_prompt"]` loaded, never consumed; generation uses story_generator_base.build_prompt with the clean verification_bottleneck example). Dangling entries deleted with a do-not-rewire comment. The de-stamp A/B regeneration arc itself is mooted by the corpus reset: the live corpus is born under the de-leaked pipeline.
+**Resolution note.** The seam audit ran as the de-leak's assembled-payload witnesses (prompt,
+schema-in-prompt, example all grepped at the build_prompt boundary). Path-resolution audit
+(2026-05-31): no regen-path fork — schema resolves to canonical
+`python/constraint_story_schema.json` and prompts to `prompts/constraint_story_generation_prompt_json.md`
+/ `prompts/uke_scope_v2_json.md` in both generators (B3/B4 land in both); SCOPE carries no
+stripped-field provenance. The CONFIRMED LEAK was the few-shot example `json/antifragility.json`
+(hard-coded `accessibility_collapse: 0.9` / `resistance: 0.08` — the exact stripped mountain-gate
+pattern), which by 2026-06-05 was a DANGLING LOAD (`protocols["example"]` loaded, never consumed;
+generation uses the clean `verification_bottleneck` example) — deleted with a do-not-rewire
+comment. The de-stamp A/B regeneration arc is mooted by the reset: the live corpus is born under
+the de-leaked pipeline. Connects to OQ-46.
 
 ## OQ-48 — Classification thresholds never recalibrated against the live (post-rebuild) corpus
 
@@ -2092,110 +1505,46 @@ Recalibrate these alongside the `config.pl` cuts; do not move them now to rescue
 The (a)/(b) escalation dissolves: the dominant FNL→tangled_rope effect collapsed by construction
 (OQ-70) and the residual is two-seat signal handed to OQ-74. Read-only; no clause removed or edited.
 
-[Compressed 2026-07-05; full history in git.] The original (a)/(b) ruling was un-answerable as
-posed: `testsets_3000` (`original_v6`) died at the 2026-06-05 reset and the FNL bait driver was
-deleted (OQ-70, commit `72ec2cdd`). Re-measured on live (testsets 57 / haiku 960 / flash 960;
-probe `python/audits/oq49_override_remeasure.py`, read-only, positive controls passed):
-(1) every FNL firing on all three corpora tags source-1 (`constraint_claim(_,mountain)`), zero
-source-2/unaccounted — the 827 bait-driven firings are gone BY CONSTRUCTION (the raw 1661→≤8 drop
-is size-confounded color, not the witness; cite `72ec2cdd` + the reset); (2) the inert clauses
-(`signature_detection.pl:867`, `:877`) are working-as-designed, 0 firings; FCR→TR leads FNL→TR
-~10× on the twins; (3) the FNL override-effective residual (14 across both twins) is 14/14
-coord+asym — the clean-laundering coord=0 pure-extraction subset is EMPTY on live, so the
-human-stakes escalation dissolves; the 14 are two-seat signal (the snare/scaffold clause is
-coordination-blind) handed to OQ-74; (4) FNL collapse holds on both twins (model-invariant);
-per-id override-effective sets diverge 81 shared / 87 haiku-only / 100 flash-only
-(generator-convention analogue, OQ-26/OQ-78 class). Any witness-not-verdict engine change is
-OQ-74's gated pass, not OQ-49's.
-
-Provenance notes kept: the archived testsets_3000 analysis (1730 override-effective, 100%
-confident-overwrite, 0 unknown-fill; :749 partition 43 coord=0 vs 1598 coord+asym) is pre-reset,
-regime-bound — full tables in git history. The :749 predicate-identity run corrected the PAPER
-(v6.13.1→v6.13.2 errata, commit `6ca6ca2b`: FNL yields tangled_rope, never naturalized —
-`naturalized` comes from the metric cascade `classify_from_metrics:388`). Standing latent-hazard:
-the `tangled_rope_chi_floor` ↔ naturalized-ceiling coupling is LIVE (3 naturalized readings on
-testsets_3000, ε>0.45 ∧ χ<0.24) — decouple is REQUIRED-BEFORE any OQ-48 recalibration that moves
-the χ-floor across the naturalized χ-range. Cross-refs: OQ-70 (bait deletion), OQ-74 (hand-off),
-OQ-37 (unknown-surfacing), OQ-30, OQ-43, the cyclopean cluster (OQ-50/116/122).
+**Resolution note.** The original ruling was un-answerable as posed (testsets_3000 died at the
+reset; the FNL bait driver deleted — OQ-70, commit `72ec2cdd`). Re-measured live (probe
+`python/audits/oq49_override_remeasure.py`, positive controls passed): every FNL firing tags
+source-1, zero source-2 — the 827 bait firings gone BY CONSTRUCTION; inert clauses
+(`signature_detection.pl:867`, `:877`) working-as-designed; FNL override-effective residual 14/14
+coord+asym (the clean-laundering coord=0 subset is EMPTY live → escalation dissolves; handed to
+OQ-74); collapse model-invariant on both twins; per-id sets diverge (OQ-26/OQ-78 class).
+Pre-reset tables regime-bound, in git history. The :749 predicate-identity run corrected the PAPER
+(v6.13.1→v6.13.2 errata, commit `6ca6ca2b`: FNL yields tangled_rope, never naturalized).
+**Standing latent-hazard (operative):** the `tangled_rope_chi_floor` ↔ naturalized-ceiling
+coupling is LIVE — decouple is REQUIRED-BEFORE any OQ-48 recalibration that moves the χ-floor
+across the naturalized χ-range. Cross-refs: OQ-70, OQ-74, OQ-37, OQ-30, OQ-43, OQ-50/116/122.
 
 ---
 
 ## OQ-50 — False-summit forensic: explainer/detector coherence + sibling-clause bound-Context latent trap (post-repair follow-ups)
 
-**Ω-type:** OPEN-1 is Ω_C (design choice — what "false summit" explains against). OPEN-2 is an
-engine-hardening question, not a design Omega.
+**Ω-type:** OPEN-1 was Ω_C; OPEN-2 engine-hardening.
 
-**Status:** resolved — both follow-ups closed 2026-06-14 (OPEN-1 + OPEN-2; see RESOLUTION below).
-The core detector bug was RESOLVED earlier — see KNOWN_STATE.md
-2026-06-02 "False-summit forensic detector repaired." Summary of what was fixed (do not re-open):
-`drl_core.pl:548` `type_1_false_summit` used `is_mountain(C, Context, fail)`, which matches the
-unconditional catch-all clause `is_mountain(_,_,fail)` (`:123`) and never ran a test; with the cut it
-returned the first mountain-claimer with `Context` unbound. Now negates `dr_type/3` over
-`standard_context` (no cut). `report_generator.pl:445` queried the never-produced atom
-`type_1_false_mountain` (→ always "all validated"); `:447` counted (C,Context) pairs as constraints.
-All three fixed. Live result: 4 false summits (papal, press, statutory, total_war) across 14
-observer-context instances; 4 genuine mountains correctly excluded.
+**Status:** resolved — both follow-ups closed 2026-06-14. Core detector bug RESOLVED earlier
+(KNOWN_STATE.md 2026-06-02 "False-summit forensic detector repaired" — do not re-open):
+`drl_core.pl:548` `type_1_false_summit` matched the `is_mountain(_,_,fail)` catch-all and never
+ran a test; now negates `dr_type/3` over `standard_context`; `report_generator.pl:445/:447` fixed.
+Live result: 4 false summits across 14 observer-context instances; 4 genuine mountains excluded.
 
-**OPEN-1 — explainer disagrees with the (now-correct) detector.** `forensic_explain_false_mountain`
-(`report_generator.pl:459+`) re-derives its verdict from raw `suppression_requirement` /
-`base_extractiveness` heuristics (suppression-vs-mountain-ceiling), **independent of `dr_type`**. It
-printed FORENSIC VERDICT "AMBIGUOUS (review data)" for `papal_temporal_authority_mountain` even
-though the detector flagged it correctly because `dr_type=scaffold ≠ mountain` at the
-moderate/institutional contexts. The detection layer and the explanation layer now use **different
-notions of "is a mountain"** (post-signature `dr_type` vs pre-signature raw metrics), so the
-explanation can contradict a correct flag. **What resolution changes:** rebase the explainer on
-`dr_type` (report the actual per-context `ActualType` and why it departs from the claim), or
-explicitly state the two-layer split in the output. Until then, treat the explainer's verdict as a
-**metric-level annotation, not the detector's reason**. This is the same metric-vs-`dr_type` seam
-the detector fix turned on.
+**Resolution note.** OPEN-1 (explainer disagreed with detector) — explainer rebased on
+post-signature `dr_type` (`forensic_explain_false_mountain/2`, commit on `oq122-oq50-oq74`); the
+raw-metric heuristic relabeled a non-headline METRIC-LEVEL ANNOTATION; fail-closed guard prints
+`dr_type: unbound` (totality witnessed 0/44 but not calcified into an invariant). OPEN-2
+(type_3/type_5 bound-Context trap) — both given the per-context `standard_context(Context)`
+enumeration, trailing cut dropped (uniformly per-context); multiplicity falsifier cleared by full
+caller census (all collect or negate). Regression: `test_contradiction_signatures` identical to
+baseline; `validation_suite` 57/0.
 
-**OPEN-2 — sibling claim-mismatch clauses share the bound-Context latent trap.**
-`type_3_snare_as_rope` (`drl_core.pl:555`, `is_snare(C, Context, snare)`) and `type_5_piton_as_snare`
-(`:562`, `is_piton(C, Context, piton)`) require `Context` **bound** — clause 1 of `is_snare`/`is_piton`
-computes Chi via `extractiveness_for_agent(C, Context, _)`. Unlike the old `type_1`, they are **not**
-vacuous: they ask for the positive type atom, so clause-head unification selects the real-test clause
-1, not the `(_,_,fail)` catch-all. But if either is ever called with `Context` unbound (as the report
-called `type_1` via `dr_mismatch/4` with an unbound `Ctx`), they would silently **no-op / mis-bind**
-rather than enumerate. Currently both are only reached with bound Context (via `dr_mismatch/3` →
-`default_context`, or `genuine_findings_query.pl:157` with C bound and Ctx2 collected). **What
-resolution changes:** either give them the same `standard_context(Context)` enumeration `type_1` now
-has (so they locate the break per context and survive unbound-Ctx callers), or assert a bound-Context
-precondition. Decide alongside whether claim-mismatch detection is uniformly per-context.
+**Out of OQ-50 scope (operative warning):** the mid-power-mountain→`rope` power-scaling phenomenon
+(`drl_core.pl:605-613`) is NOT an OQ-50 item — it is **OQ-128** (cross-ref'd from OQ-122). Do not
+write "the OQ-50 power-scaling fix" anywhere; no such settled artifact exists.
 
-**RESOLUTION (2026-06-14, both follow-ups closed — engineering, no design ruling needed):**
-- **OPEN-1 CLOSED — explainer rebased on `dr_type`** (`report_generator.pl` `forensic_explain_false_mountain/2`,
-  commit on `oq122-oq50-oq74`). The FORENSIC VERDICT now headlines the post-signature `dr_type`
-  ActualType (the detector's own notion), and the suppression/extractiveness heuristic is relabeled a
-  non-headline **METRIC-LEVEL ANNOTATION** — took BOTH prongs of the fork (rebase + keep annotation),
-  so it removed a detector/explainer disagreement rather than adjudicating a live design choice (the
-  detector was already rebased on `dr_type` at the OQ-50 core repair; the explainer is downstream
-  coherence, evidence-settled). Fail-closed no-solution guard prints `dr_type: unbound` rather than
-  going silent; `dr_type/3` is **total** over the audit's reached set (0/44 reached (C,Ctx) pairs lack
-  a solution; returns `unknown` even on a malformed context), so the guard is defense-in-depth — the
-  comment forbids calcifying totality into an invariant. Witness: `actinide_…_flat_control` AMBIGUOUS →
-  `dr_type` tangled_rope/scaffold across its seats.
-- **OPEN-2 CLOSED — type_3/type_5 given the per-context enumeration** (`drl_core.pl:622,629`, same
-  commit cluster). Both now lead with `standard_context(Context)` and drop the trailing cut (matching
-  type_1 — answers the design micro-decision: **yes, uniformly per-context**). The bound-Context trap
-  is gone: an unbound-Ctx call previously mis-bound type_3 to a single non-standard context
-  (`time_horizon(immediate)`); it now returns the per-seat list (live: 1 phantom-context solution → 4
-  standard-seat solutions; type_5 0→0, no theater≥0.70 claimers). Multiplicity falsifier cleared by a
-  full caller census — every `dr_mismatch`/`dr_claim_mismatch` caller collects (setof/findall) or is
-  `\+`-negation: `report_generator.pl:72/480/520`, `genuine_findings_query.pl:157`,
-  `diagnostic_summary.pl:665`, `abductive_triggers.pl:296`; no first-solution/per-solution-side-effect
-  caller. The `/3` legacy path (Context=default_context == analytical seat) stays single-solution.
-  Regression: `test_contradiction_signatures` 5 fail/12 pass identical to baseline; `validation_suite` 57/0.
-
-**Out of OQ-50 scope (do NOT fold in):** the mid-power-mountain→`rope` power-scaling phenomenon
-(`drl_core.pl:605-613`) is **not** an OQ-50 item — it is a separate design-laden Ω_C minted as
-**OQ-128** and cross-referenced from OQ-122. Do not write "the OQ-50 power-scaling fix" anywhere; no
-such settled artifact exists.
-
-**Cross-refs:** the original `type_1` defect is a **Pattern-5 sibling** — a gate satisfied by
-*absence of a real test* via clause-head unification (the `(_,_,fail)` catch-all), distinct from
-OQ-44's empty-table satisfy-on-absence but the same spine ("absence presents as presence"). Connects
-to OQ-44 (engine-wide no-gate-satisfied-by-absence), build_discipline Pattern 5. Item 3 of the
-2026-06-02 orbit-work recon (false-mountain orbit) depends on this detector being correct.
+**Cross-refs:** the original `type_1` defect is a Pattern-5 sibling (gate satisfied by absence of
+a real test via clause-head unification) — connects to OQ-44, build_discipline Pattern 5.
 
 ---
 
@@ -2204,80 +1553,39 @@ to OQ-44 (engine-wide no-gate-satisfied-by-absence), build_discipline Pattern 5.
 **Ω-type:** Ω_C (design choice — whether/how to reconcile two obstruction measures the framework
 calls complements).
 
-**Status:** resolved — (both off-diagonal cells probed and explained, 2026-06-02). 2×2 at n=563:
-430 / **36** (H1=0∧W1>0) / **22** (H1>0∧W1≈0) / 76. **The 22 = `unknown`-driven** — MaxEnt
-distributions byte-identical across all 4 seats while `dr_type` returns `unknown` at ≥1 seat;
-`count_disagreeing_pairs` counts the abstention as a disagreeing type (absence-as-presence), so
-these manifest classifications have zero distributional support. **The 36 = chain-conditional
-MaxEnt movement under a constant type label** — real for ~6 constraints, threshold-dust (W1<0.06)
-for ~30. Root cause: **two classifiers, not one** (H1 reads `dr_type`, W1 reads MaxEnt); the
-"continuous complement" framing (`json_report.pl:389`) is inexact. Evidence:
-`outputs/w1_sheaf_join.{json,md}` (n=563, commit b5ccee0); probe narratives in git history.
+**Status:** resolved — (both off-diagonal cells probed and explained, 2026-06-02; ruled spec BUILT
+2026-06-25). 2×2 at n=563: 430 / 36 (H1=0∧W1>0) / 22 (H1>0∧W1≈0) / 76. The 22 = `unknown`-driven
+(abstention counted as a disagreeing type — absence-as-presence); the 36 = chain-conditional
+MaxEnt movement under a constant label (~6 real, ~30 threshold-dust). Root cause: two classifiers,
+not one (H1 reads `dr_type`, W1 reads MaxEnt). Evidence: `outputs/w1_sheaf_join.{json,md}`
+(n=563, commit b5ccee0).
 
-**RULED 2026-06-02 (design decision, human) — decided, NOT yet built (output-changing task):**
-`unknown` is N/A, not a disagreeing type. `count_disagreeing_pairs` counts only real-type pairs;
-**<2 real seats ⇒ H1=N/A (never 0)** — else an all-unknown constraint reads `genuine_sheaf`
-(Pattern 5). `sheaf_status/2` gains a 4th value (`undetermined`/`insufficient_data`); H1 emits
-`null`, not `0`; `contextuality_fraction` = H1/comparable-pairs. Projected impact (n=771): 741
-unaffected, 26 manifest→genuine/fragile, 5 →N/A. ~30 consumers + paper figures move together
-under output-changing discipline, positive control = all-unknown constraint reaches
-`undetermined`. **Second absence route (2026-06-04):** the fragile clause reads
-`arakelov_height/2`, which fails on unauthored ε ⇒ falls through to `genuine_sheaf` by absence —
-the 4th-value build must also fail-N/A on uncomputable height, not only on RealSeats < 2.
-(`diagnostic.arakelov_threshold` now emitted for run-level provenance.)
+**RULED 2026-06-02 (operative rule, now built):** `unknown` is N/A, not a disagreeing type;
+<2 real seats ⇒ H1=N/A (never 0); `sheaf_status/2` gains the 4th value `undetermined`; H1 emits
+`null`, not `0`; second absence route — fail-N/A on uncomputable `arakelov_height/2`, not only on
+RealSeats < 2.
 
-**Standing gates:** W1 is chain-conditional only (off-chain mass invisible — join
+**Standing gates (operative):** W1 is chain-conditional only (off-chain mass invisible — join
 `wasserstein_incomparable_mass` to see it) and corpus-relative (~100× swings between n=563 and
 n=771, an OQ-26 instance) — **never rank/select on inherited W1**; recompute on the analysis
 snapshot with a real threshold (≥~0.05), and state W1/H1 as readings of two different
-classifiers. Related: OQ-37 (do not re-suppress `unknown`), OQ-52 (false-mountain cross gated by
-the W1 rules above).
+classifiers. Related: OQ-37 (do not re-suppress `unknown`), OQ-52 (gated by these W1 rules).
 
-**Build-extension — RESOLVED 2026-06-25 (cs_kernel_comparison site).** `cs_kernel_registry`'s
-`compare_kernel_readings/3` (`ctx_reading_verdict`, `pair_reading_agreement`) counted
-`unknown==unknown` as agreement/robustness (an all-`unknown` context scored `agree`, inflating
-`robust_context_count`) — the SAME family as the ruled `count_disagreeing_pairs` defect, at a
-site the original OQ-51 build did not enumerate. **Applied the ruling:** `unknown` ⇒ N/A;
-verdict trichotomy `agree(Type,NUnk)`/`diverge(TypeMap,NUnk)`/`undetermined(NReal,NUnk)` (lenient
-— ≥2 real ⇒ verdict over the real readings); `cs_kernel_divergence/4` + `pair_reading_agreement/7`
-require both types real (join invariant preserved); Jaccard `null` on zero-comparable; JSON
-`specific_context_count`→`divergent_context_count` + new `undetermined`/`abstaining`/
-`divergence_patterns` (deliverable ii — the report now ENUMERATES the disagreement, not just
-counts). Two null-path footguns fixed (HOLE A `~6f`-on-null abort; HOLE B `:.3f`-on-None).
-**Witness:** unit 20/20 (6 synthetic N/A controls + join invariant), dynamic 0 errors, pipeline
-exit 0, partition invariant 9/9, `cs_kernel_divergence_count` 20→16, JSP report enumerates
-settler=snare/cultural=scaffold. Commit on branch `oq51-unknown-na-cs-kernel-comparison`;
-KNOWN_STATE 2026-06-25. **Scope:** ONLY `cs_kernel_comparison` — the original OQ-51 ruled-not-built
-spec for `count_disagreeing_pairs`/`sheaf_status` 4th value/H1-emits-null (lines above) was the
-main build item, **now BUILT 2026-06-25** (next paragraph).
+**Builds (both 2026-06-25, KNOWN_STATE 2026-06-25).** (1) cs_kernel_comparison site:
+`compare_kernel_readings/3` had counted `unknown==unknown` as agreement — ruling applied
+(trichotomy `agree`/`diverge`/`undetermined`; Jaccard null on zero-comparable; report enumerates
+divergence; two null-path footguns fixed); witness 20/20 unit + partition invariant 9/9;
+`cs_kernel_divergence_count` 20→16; branch `oq51-unknown-na-cs-kernel-comparison`. (2) Main
+build (canonical sheaf/H1 path + product-site H1), commits `f8ae0c9c` + `15cca7ed` on branch
+`oq51-sheaf-na-canonical`: `is_real_type/1`; both-real-different pairs only; H0/H1 null on <2
+real; `sheaf_undetermined_reason` (`insufficient_seats|uncomputable_height` — the provenance bit,
+do not collapse); nullable schema + `h1_band_or_raise` loud containment on the 13 live readers;
+product-site H1 same rule. Witness: `test_sheaf_na` 10/10 + live route-1=15; pipeline exit 0 +
+mtime advanced; 26 h1_band / 22 sheaf_status moves; 0 partition violations on haiku(960),
+flash(960), kernel_v1(1106); route 2 live-dormant (witnessed synthetically). Residuals minted:
+**OQ-180** (bare-`\=` diagnostics + audit-dir silent sites), **OQ-181** (per-site undetermined
+semantics for the 13 readers). **Priority:** 1.
 
-**Main build — RESOLVED 2026-06-25 (canonical sheaf/H1 path + product-site H1).** The ruled spec
-(lines above) is built. `grothendieck_cohomology`: `is_real_type/1`; `count_disagreeing_pairs`
-counts only both-real-different pairs; `obstruction_from_vector/3` (pure, synthetic-testable) emits
-**H0=null, H1=null** on <2 real seats; `contextuality_*` exclude undetermined from numerator AND
-denominator (`number/1` guards stop `sum_list` throwing on the null atom); `descent_status` gains an
-`undetermined` clause. `sheaf_analysis:sheaf_status/2` gains the 4th regime `undetermined` via BOTH
-ruled routes — route 1 (<2 real seats) and route 2 (H1=0 but `arakelov_height/2` uncomputable, the
-second absence route) — and a sibling `sheaf_undetermined_reason/2` carries
-`insufficient_seats|uncomputable_height` (the provenance bit; the two routes resolve under different
-added data — do not collapse). JSON/schema: `h1_band` nullable, `sheaf_status` enum + `undetermined`,
-new `sheaf_undetermined_reason` field with the present-IFF-undetermined cross-field invariant.
-Containment (operator-ruled loud, in core commit): per-site `h1_band_or_raise` guard
-(`shared/loader.py`) on the 13 live `h1_band` readers — a null read silently-as-0 now fails LOUD,
-distinguishing key-absent (stale artifact) from null (undetermined). Commit 2 applied the same N/A
-rule to `product_site_export.pl`'s own H1 (separate file `product_site_orbits.json`, disjoint
-consumers `range_sweep`/`product_site_delta_sweep` made null-aware). **Witness:** `test_sheaf_na`
-10/10 synthetic controls + live route-1=15; dynamic suite 0 errors; pipeline exit 0 + mtime advanced;
-schema gate green; per-constraint diff 26 h1_band / 22 sheaf_status moves, 15 undetermined
-(insufficient_seats), 0 null-h1-not-undetermined; w1 `partition_ok=True`; containment trips loud on
-`run_drift_mismatch`+`game_theory_nash`; None-aware readers stay green; cold==warm cache null. **Cross-
-corpus (engine change):** 0 partition violations on `testsets_haiku`(960), `testsets_flash`(960),
-`kernel_v1`(1106). Route 2 is **live-dormant in the pipeline** (witnessed synthetically; `arakelov`
-needs MaxEnt absent in a bare load). Commits `f8ae0c9c` (core) + `15cca7ed` (product) on branch
-`oq51-sheaf-na-canonical`; KNOWN_STATE 2026-06-25. **Priority:** 1. Residual surfaces minted as
-**OQ-180** (sibling bare-`\=` diagnostics + 3 audit-dir silent h1_band sites) and **OQ-181** (per-site
-undetermined *semantics* for the 13 readers — containment makes them loud, OQ-181 makes them correct).
-*(Investigation narratives compressed 2026-06-04 per footer rule; full probes in git history.)*
 ## OQ-52 — False-mountain cross: do the naturalized→snare manifest rows have an authored beneficiary?
 
 **Ω-type:** Ω_C (design choice — what the false-mountain read is *for*, and whether the beneficiary
@@ -2315,93 +1623,35 @@ landed here.
 **Ω-type:** Ω_C (design choice — is the kernel/reading axis first-class?).
 
 **Status:** resolved — 2026-06-20 — both legs closed. Within-kernel SATISFIED (OQ-55 router);
-transpose WITNESSED-LIVE on the OQ-56 canonical vocabulary. See resolution note.
+transpose WITNESSED-LIVE on the OQ-56 canonical vocabulary.
 **Priority:** 1
-**Deps (dropped on close):** was `blocked_on OQ-56`; OQ-56 ruled 2026-06-20 — transpose runs on the
-canonical `observer_signature`/`obstruction_class` vocabulary.
-**Origin:** Kernel/reading review, 2026-06-02 (first kernel/reading corpus landed this day).
-**Files:** `cs_kernel_registry.pl`, `logical_fingerprint.pl`, `json_report.pl`; readings as
-`kernel__reading_name` sibling files.
+**Deps (dropped on close):** was `blocked_on OQ-56`; ruled 2026-06-20.
+**Origin:** Kernel/reading review, 2026-06-02 (manifest `ae10e7e`, n=772: 542 readings under 183
+multi-reading kernels). Pairs **GAP-04**.
+**Files:** `cs_kernel_registry.pl`, `logical_fingerprint.pl`, `json_report.pl`.
 
-**Specific question:** Should "hold a kernel fixed and compare its readings as a set" — and its
-transpose, "hold a reading-stance fixed and sweep across kernels" — be a first-class engine operation,
-distinct from the observer (power×scope) pipeline that currently classifies each reading independently?
+**Resolution note.** Recon (`audits/2026-06-20_kernel_reading_orbits/RECON.md`) found a SPLIT, not
+flat prefix-opacity: kernel is first-class in `cs_kernel_registry.pl` + `json_report.pl`
+(`cs_kernel_comparison` firing on 328 haiku kernels); prefix-opaque ONLY in
+`logical_fingerprint.pl` (per-reading fingerprint kernel-blind BY DESIGN) — close is
+(a-restricted). Within-kernel leg: readings compared as a set; *why* they disagree routed by
+`cs_trifurcation:cs_reading_trifurcation/3` (OQ-55); same-kernel diff = `reading_diff`/
+`axiom_diff` (OQ-59). Transpose leg (commit `0c488468`): `python/orbit_operator.py` +
+`prolog/kernel_orbit_export.pl` → `outputs/{reading,kernel}_orbits.json`; on the canonical Tier-1
+keys the transpose finds multi-kernel orbits live (`constructed_high_extraction` spans 25 kernels,
+`false_ci_rope` 11; positive control passed); Tier-2 keys report-only, model-relative (OQ-150 /
+OQ-56). KNOWN_STATE 2026-06-20.
 
-**Evidence so far:** Manifest `ae10e7e` (run 2026-06-02T18:54:31Z, n=772): 542 readings under 183
-multi-reading kernels; 231 standalone constraints. Readings differentiate within a kernel (ε in 176/183,
-victim-set in 183/183, `claimed_type` in 113/183) but the kernel is only an implicit string prefix and
-the two axes are not distinguished by the classifier. Pairs **GAP-04**.
-
-**Report-path witness (2026-06-20, `audits/2026-06-20_kernel_reading_orbits/RECON.md`) — surprises
-the earlier assumption.** Code-read of the three conflation-locus files shows a SPLIT, not a flat
-prefix-opacity: the kernel is a **first-class queryable object** in `cs_kernel_registry.pl`
-(`cs_readings_for_kernel/2`, `cs_kernel_obstruction/4`) AND in `json_report.pl` (enumerates
-`cs_kernel_id(_,K)`, emits the `cs_kernel_comparison` C3 array + `cs_kernel_divergence_count` B3);
-it is **prefix-opaque only in `logical_fingerprint.pl`** (0 kernel mentions — a per-reading
-fingerprint is kernel-blind by design). Firing witnessed on the haiku twin: 328 multi-reading
-kernels feed `cs_kernel_comparison` (non-empty array; via the Phase-1b probe's 331
-`cs_readings_for_kernel` firings). So the same-kernel leg is best closed **(a-restricted):
-first-class in the registry/operator AND report layers; prefix-opaque only in the per-reading
-fingerprint** — not the flat "(b) report prefix-opaque" earlier expected.
-
-**What resolution changes:** The same-kernel leg is effectively built (registry + report
-first-class; same-kernel diff = `reading_diff`/`axiom_diff`, OQ-59). The **transpose leg**
-("hold a reading-stance fixed, sweep across kernels") is gated on the OQ-56 vocabulary pick. The
-OQ-150 measurement (2026-06-20) shows only the Tier-1 keys (observer-signature, obstruction-class)
-are draw-robust; a transpose over a Tier-2 key would be model-relative. **Reserved (operator's
-call, NOT pre-closed here):** whether to build a knowingly-model-relative committer-axis transpose
-or restrict the transpose to the draw-robust observer axis. The empty-menu kill did not fire
-(Tier 1 is non-empty), so this is present-and-escalate, not foreclosed-by-finding.
-
-**Transpose surface BUILT (operator ruling 2026-06-20; commit `0c488468`).** The cross-kernel
-orbit operator (`python/orbit_operator.py` + `prolog/kernel_orbit_export.pl`, wired into
-`run_pipeline.py`) materializes `outputs/{reading,kernel}_orbits.json`: readings grouped across
-kernels by each declared key, kernels grouped by structure/obstruction. Tier-1
-(observer-signature, obstruction-class) is the declared transpose surface; Tier-2 committer-side
-keys are emitted as report-only with their twin-agreement numbers inline. The transpose query
-("hold a reading-orbit fixed, sweep across kernels") is now answerable over these artifacts. Live
-orbits are sparse (3 multi-reading kernels) — the discovery substrate is the twins. Same-kernel
-leg = (a)-for-json_report (witnessed).
-
-**Resolution (2026-06-20) — both legs closed.**
-- **Within-kernel leg SATISFIED.** Kernel is first-class in `cs_kernel_registry.pl` + `json_report.pl`;
-  readings compared as a set; *why* they disagree routed by `cs_trifurcation:cs_reading_trifurcation/3`
-  (live in `cs_kernel_comparison` as `reading_trifurcation`, `scope:within_kernel`, commentary-grade,
-  all four A/B/C/unknown branches firing — OQ-55 resolved).
-- **Transpose leg WITNESSED-LIVE (Branch 1).** With OQ-56 ruled (canonical vocabulary =
-  `observer_signature` + `obstruction_class`), the transpose query — hold `observer_signature` fixed,
-  sweep across kernels — runs on the live corpus and finds multi-kernel orbits:
-  `constructed_high_extraction` spans **25 genuine multi-reading kernels**, `false_ci_rope` spans **11**
-  (positive control: 89 distinct kernels present across members, query detects 5 multi-kernel orbits —
-  not byte-identical to an empty read). The semantic-stance transpose (`seat_role_vector`) is
-  **model-relative only** (OQ-56 Ω_E foreclosure), not part of this close.
-- `logical_fingerprint.pl` stays prefix-opaque by design (per-reading fingerprint is kernel-blind), so
-  the close is **(a-restricted)**, not flat.
-
-**Evidence pointers:** `python/orbit_operator.py` + `prolog/kernel_orbit_export.pl` →
-`outputs/{reading,kernel}_orbits.json`; OQ-55 (`cs_trifurcation.pl`);
-`audits/2026-06-20_kernel_reading_orbits/`; KNOWN_STATE 2026-06-20; orbit canonical-fact commit (this session).
-
-**Addendum (2026-06-26) — the RESERVED semantic-stance transpose is now built, with its
-model-relativity surfaced (not claimed away).** The 2026-06-20 close ran the transpose on the
-draw-robust *observer-signature* key and explicitly RESERVED the semantic-stance/seat-role
-transpose as "model-relative only." That reserved surface is now built as a GAP-04 increment:
+**Addendum (2026-06-26):** the RESERVED semantic-stance transpose built as a GAP-04 increment —
 `cs_kernel_registry:cross_kernel_stance_profile/2` (+ `reading_stance/2`, `stance_cohort/2` over
-the `declared_stance/2` seat) holds a declared reading-STANCE fixed and sweeps it across kernels,
-keyed on the kernel-independent `logical_fingerprint:fingerprint_shift/2` (now serialized into
-`pipeline_output.json`). Consumer: `python/cross_kernel_stance_report.py` →
-`outputs/cross_kernel_stance.{json,md}` over the live twins. It does NOT violate the model-relativity
-ruling — it READS the result as a σ/seat partition (draw-stable vs draw-variant), not a fixed label,
-and surfaces it: abolition converges on `shift(*,snare,rope,snare)` 5/7 on BOTH twins (draw-stable),
-deterrence flips convergent(haiku 4/1)↔divergent(flash 2/3) (draw-variant), originalist is
-kernel-divergent. The cohort is a DECLARED seat (Seat-Theorem Cor 2b): morphology only suggests
-candidates (witnessed: exact-stem catches 4/7 of the abolition cohort; a substring rule over-admits
-the anti-abolition `dharmasastra_corpus__abolitionist_rejection`), so each member + the verdict carry
-morphology-suggested-vs-hand-declared provenance. **Remaining under GAP-04/here:** kernel as a
-first-class queryable object, the kernel-fixed↔transpose pair as a formal paired operation, and the
-FULL curated stance vocabulary (this increment seeds an initial declared table for the exercised
-stances only). Pins: `prolog/tests/test_cs_kernel_registry.pl` (transpose_* consensus-spine tests);
-KNOWN_STATE 2026-06-26.
+the `declared_stance/2` seat), keyed on `logical_fingerprint:fingerprint_shift/2` (now
+serialized); consumer `python/cross_kernel_stance_report.py` → `outputs/cross_kernel_stance.{json,md}`.
+Model-relativity SURFACED, not claimed away (reads results as a σ/seat partition: abolition
+draw-stable 5/7 both twins; deterrence draw-variant). The cohort is a DECLARED seat (Seat-Theorem
+Cor 2b) — morphology only suggests candidates; each member carries
+morphology-suggested-vs-hand-declared provenance. Remaining under GAP-04: kernel as first-class
+queryable object; the paired operation; the full curated stance vocabulary. Pins:
+`prolog/tests/test_cs_kernel_registry.pl` (transpose_* tests); KNOWN_STATE 2026-06-26.
 
 ---
 
@@ -2452,53 +1702,29 @@ or a third axis?
 
 **Ω-type:** Ω_C (design — adopt the debugging-philosophy trifurcation as the disagreement router).
 
-**Status:** resolved — within-kernel A/B/C router built + wired 2026-06-20; controls 8/8 green; all
-four branches fire on the live corpus. Re-scoped off OQ-56 (within-kernel router needs no cross-kernel
-vocabulary). See resolution note.
+**Status:** resolved — within-kernel A/B/C router built + wired 2026-06-20; controls green; all
+four branches fire on the live corpus. Re-scoped off OQ-56 (within-kernel router needs no
+cross-kernel vocabulary).
 **Priority:** 1
-**Deps (dropped on close):** was `blocked_on OQ-56`, dropped on the 2026-06-20 re-scope; OQ-56 now
-gates only OQ-53's cross-kernel transpose leg, not this within-kernel router. No remaining dependency.
 **Origin:** Kernel/reading review, 2026-06-02.
 **Files:** `prolog/cs_trifurcation.pl` (`cs_reading_trifurcation/3`), `prolog/json_report.pl`
-(`write_kernel_comparison_entry` → `reading_trifurcation` field), `prolog/tests/test_cs_trifurcation.pl`;
-spec `docs/debugging_philosophy.md` §6.
-**Post-resolution cross-ref (2026-07-23):** an upstream diagnostic-vs-erroneous pre-filter candidate
-(the three-feature test) is recorded in `design_gaps.md` GAP-06, from
-`blog/2026-05_or_before/diagnostic_value_of_perspectival_gaps.md` — design note only, no reopen.
+(`reading_trifurcation` field), `prolog/tests/test_cs_trifurcation.pl`; spec
+`docs/debugging_philosophy.md` §6.
+**Post-resolution cross-ref (2026-07-23):** upstream diagnostic-vs-erroneous pre-filter candidate
+recorded in `design_gaps.md` GAP-06 (from
+`blog/2026-05_or_before/diagnostic_value_of_perspectival_gaps.md`) — design note only, no reopen.
 
-**Resolution (2026-06-20).** New module `cs_trifurcation.pl` maps a kernel's reading-set onto
-{Type A drift, Type B structure, Type C ambiguity, unknown} by dispatching on the authored obstruction
-edge (`cs_kernel_obstruction_status/2`) refined by two computed within-kernel diagnostics:
-- `real_closure` (a reading `forecloses` another) → **Type B**; `cs_axiom_foreclosed` on a member
-  confirms (`confirmed`) but does not gate (`edge_only`).
-- `licensed_plurality` (`coexists_with`) → **Type C**.
-- `untyped` + `cs_drift_unacknowledged` on a member → **Type A** (sole computed branch).
-- `untyped` + no drift → **`unknown`** — Pattern-5 fail-closed, an emitted verdict, NOT a default type.
-- `singleton` → no verdict (predicate fails → JSON `null`).
-
-§6 mapping confirmed against the *definitions* (not the table paraphrase): Type B = "impossible by
-definition"/axiomatic inconsistency = `forecloses`; Type C = stable coexisting frames = `coexists_with`;
-Type A = unmarked mutation treated-as-stable = the `false` (unacknowledged) drift gap. **Commentary-grade**
-(annotates `cs_kernel_comparison`; never overrides `classify_from_metrics/6`); `scope:within_kernel`
-stamped inline so it cannot be misread cross-kernel.
-
-**Re-scope (operator ruling 2026-06-20).** OQ-55's operational core is the *within-kernel* router; every
-input is per-kernel/per-member-reading and draw-robust within a kernel. The former `blocked_on OQ-56` was
-a soft block — OQ-56 vocabulary only gates *cross-kernel* disagreement-labeling (OQ-53's transpose leg).
-Re-scope witness = input-boundary trace: every input is gated by `cs_kernel_id(_,K)`, no cross-kernel fact
-enters the verdict (`audits`/KNOWN_STATE 2026-06-20).
-
-**Witness.** Controls `test_cs_trifurcation.pl` 9/9 green, incl. the Type-A two-twin (obstruction held at
-`untyped`, drift proven the discriminator), a **single-bit** twin (`tk_drift` vs `tk_drift_ack`: direction
-+ magnitude held identical via in-test unification, only the `acknowledged` flag flips false→true →
-verdict flips `type_a_drift`→`unknown` — isolates the unacknowledged bit, not direction/magnitude), and a
-cross-kernel-leak negative control. Live corpus: all four
-branches fire (`type_a_drift`×5, `type_b_structure`×1, `type_c_ambiguity`×2, `unknown`×1 =
-`polaris_document_status`) — the fail-closed `unknown` fires on real data, not a synthetic case.
-
-**Canonical question (provenance):** When two readings of a kernel disagree, can the engine classify
-*why* (Type C index ambiguity / Type A frame drift / Type B structure)? **Answered: yes, within-kernel,
-commentary-grade.**
+**Resolution note.** Maps a kernel's reading-set onto {Type A drift, Type B structure, Type C
+ambiguity, unknown} by dispatching on `cs_kernel_obstruction_status/2` refined by within-kernel
+diagnostics: `real_closure`→B; `licensed_plurality`→C; `untyped`+`cs_drift_unacknowledged`→A;
+`untyped`+no drift→`unknown` (Pattern-5 fail-closed, an emitted verdict, NOT a default);
+singleton→null. §6 mapping confirmed against the definitions. **Commentary-grade**, never
+overrides `classify_from_metrics/6`; `scope:within_kernel` stamped inline. Re-scope (operator,
+2026-06-20): OQ-56 vocabulary gates only OQ-53's cross-kernel transpose leg; re-scope witness =
+input-boundary trace (every input gated by `cs_kernel_id(_,K)`; KNOWN_STATE 2026-06-20). Witness:
+`test_cs_trifurcation.pl` 9/9 green incl. the single-bit twin (only the `acknowledged` flag flips
+→ verdict flips) + a cross-kernel-leak negative control; live corpus fires all four branches
+(A×5, B×1, C×2, unknown×1 = `polaris_document_status`).
 
 ---
 
@@ -2506,50 +1732,34 @@ commentary-grade.**
 
 **Ω-type:** Ω_P (preference/stakeholder — a declared, contestable selection premise, not derivable).
 
-**Status:** resolved — 2026-06-20 — operator Ω_P ruling given; vocabulary pick made. Compress-on-close;
-the kill condition below is a recorded reopen condition (NOT an armed tripwire — re-evaluated by a human,
-not auto-detected).
+**Status:** resolved — 2026-06-20 — operator Ω_P ruling given; vocabulary pick made. The kill
+condition below is a recorded reopen condition (NOT an armed tripwire — re-evaluated by a human).
 **Priority:** 1
-**Deps (dropped on close):** was `blocked_on_human oq56-vocabulary-pick-from-OQ-150-menu`; the pick is made.
 **Origin:** Kernel/reading review, 2026-06-02.
 **Files:** `python/orbit_operator.py` (`CANONICAL_VOCABULARY`, `canonical` stamp),
-`docs/design/design_discipline.md` §0.1; readings (`kernel__reading_name`), `cs_kernel_registry.pl`.
+`docs/design/design_discipline.md` §0.1; `cs_kernel_registry.pl`.
 
-**The Ω_P ruling (operator, 2026-06-20).** The canonical cross-kernel reading-stance vocabulary =
-the two Tier-1 draw-robust keys: `observer_signature` (reading-unit, twin-agreement 0.722) +
+**The Ω_P ruling (operator, 2026-06-20).** Canonical cross-kernel reading-stance vocabulary = the
+two Tier-1 draw-robust keys: `observer_signature` (reading-unit, twin-agreement 0.722) +
 `obstruction_class` (kernel-unit, 0.734). The six Tier-2 keys (incl. `seat_role_vector`, 0.245 —
 **CORRECTION 2026-08-09 (OQ-151 close): that 0.245 was measured on the POWER-keyed vector;
 `orbit_operator.py` `_k_seat_role_vector` keys on `SEATS`, the power gauge — the role-keyed
-twin-agreement was never measured; see OQ-275. OQ-56's decline stands on its other grounds.**) are
-carried **report-only, model-relative**, twin-agreement inline — NOT canonical. Recorded as a **checked
-fact, not a memory** (Build Discipline Pattern 2): `CANONICAL_VOCABULARY` in `orbit_operator.py`,
-surfaced as `canonical` on every orbit record (witness: `canonical=true` on exactly the 2 Tier-1 keys,
-false on the 6 others). Declared first-person, decline-not-refute the seat-role-vector rival, in
-`design_discipline.md` §0.1.
+twin-agreement was never measured; see OQ-275. OQ-56's decline stands on its other grounds.**)
+carried report-only, model-relative, twin-agreement inline — NOT canonical. Recorded as a checked
+fact (`CANONICAL_VOCABULARY`; `canonical=true` on exactly the 2 Tier-1 keys). The Ω_E finding: the
+motivating semantic-stance question has NO draw-robust answer on this corpus — the semantic-stance
+transpose is foreclosed-as-draw-robust, available model-relative only (corpus-conditional,
+reopenable by a more reproducible extraction).
 
-**The Ω_E finding (recorded as the real result, not buried under the ruling).** OQ-56's motivating
-question — name the semantic stances (naturalizing / coordination / power-revealing) comparably across
-kernels — has **NO draw-robust answer on this corpus**: the reproducible keys are structural/coarse, and
-the one semantically-aligned key (`seat_role_vector`) is draw-fragile (0.245 — **CORRECTION
-2026-08-09: measured on the POWER-keyed vector, not the role vector; OQ-275 owns the role-keyed
-re-measurement**). The semantic-stance
-transpose is **foreclosed-as-draw-robust**, available model-relative only. This is an Ω_E
-(corpus-conditional), reopenable by a more reproducible extraction — not a permanent engine fact.
+**Kill condition (reopen condition RECORDED, not automatically detected — reopens as Option 2).**
+If a live downstream consumer ever *requires* the semantic-stance label (`seat_role_vector`)
+inside the *canonical* vocabulary to **function** (not merely display), the ruling flips to
+canonizing it despite fragility. As of 2026-06-20 no such consumer exists (two-pronged grep with
+positive controls). **Detection is manual** — re-run the Step 0 grep when the orbit-artifact
+consumer surface changes; do not trust an automatic guard that was never built.
 
-**Kill condition (reopen condition RECORDED, not automatically detected — reopens as Option 2).** If a
-live downstream consumer ever *requires* the semantic-stance label (`seat_role_vector`) inside the
-*canonical* vocabulary to **function** (not merely to display it), the ruling flips to canonizing it
-despite its fragility ("a model-relative answer to the real question beats a robust answer to a different
-one"). As of 2026-06-20 no such consumer exists — witnessed two-pronged grep (named-key +
-generic-`canonical`, run both pre- and post-`canonical`-stamp), each with an `observer_signature`
-positive control proving the search fires. **Detection is manual:** nothing arms this — a future session
-that builds such a consumer trips no check, so the condition must be re-evaluated by hand (re-run the
-Step 0 grep) when the orbit-artifact consumer surface changes. It is a documented reopen trigger, not a
-live tripwire; do not trust an automatic guard that was never built.
-
-**Evidence pointers:** OQ-150 measurement `audits/2026-06-18_oq56_twin_within_kernel_perturbation/` +
-`audits/2026-06-20_kernel_reading_orbits/`; orbit_operator canonical-fact commit (this session);
-KNOWN_STATE 2026-06-20. *(Body compressed 2026-06-20 per footer rule; menu/clustering history in git.)*
+**Evidence pointers:** `audits/2026-06-18_oq56_twin_within_kernel_perturbation/` (OQ-150
+measurement) + `audits/2026-06-20_kernel_reading_orbits/`; KNOWN_STATE 2026-06-20.
 
 ---
 
@@ -2558,38 +1768,24 @@ KNOWN_STATE 2026-06-20. *(Body compressed 2026-06-20 per footer rule; menu/clust
 **Ω-type:** Ω_E (empirical — data-completeness defect; run the corpus, find the gap).
 
 **Status:** resolved — 2026-06-04 — wrong-module qualifier fixed at `drift_events.pl:230`
-(`narrative_ontology:` → `domain_priors:`). Witnesses: before = direct call throws
-`existence_error` (both working tree and HEAD worktree); after = kodashim fires
-`evidence(extraction,0.08,theater,0.85)`; corpus-wide emitter set derived pre-edit then
-confirmed = exactly {kodashim_obligation__memorial_archival,
-statutory_debt_ceiling__constitutional_nullity_reading}; `run_dynamic_suite` completes
-(0 [FAIL] / Errors: 0); pipeline re-run diff = 0 per_constraint rows.
+(`narrative_ontology:` → `domain_priors:`). Witnesses: pre-fix direct call throws
+`existence_error`; post-fix kodashim fires `evidence(extraction,0.08,theater,0.85)`; emitter set
+= exactly {kodashim_obligation__memorial_archival,
+statutory_debt_ceiling__constitutional_nullity_reading}; `run_dynamic_suite` 0 fail / 0 err;
+pipeline diff 0 rows.
 
-**Resolution finding — the bug had TWO behaviors, one per load path (keep):** suite/REPL path
-threw (no definition under `narrative_ontology:`); the PIPELINE path was **correct by
-accident** — `json_report.pl` is a non-module file, its `use_module(drl_core)` imports into
-`user`, and modules inherit from `user`, so the wrong-qualified call silently resolved to
-drl_core's bridge. General tripwire: **a wrong-module-qualified call can throw on one load path
-and silently resolve through user-inheritance on another whenever any non-module file imports
-the predicate's home module — REPL behavior is not pipeline behavior.** Diagnose on the
-consumer's exact `-l` chain (see `docs/technical/swipl_load_path_and_probe_gotchas.md`).
-*(Body compressed 2026-06-04 per footer rule; investigation history in git.)*
+**Resolution finding (kept — the general tripwire):** the bug had TWO behaviors, one per load
+path — suite/REPL threw; the PIPELINE was correct by accident (`json_report.pl` is a non-module
+file, its imports land in `user`, and modules inherit from `user`). **A wrong-module-qualified
+call can throw on one load path and silently resolve through user-inheritance on another —
+REPL behavior is not pipeline behavior.** Diagnose on the consumer's exact `-l` chain
+(`docs/technical/swipl_load_path_and_probe_gotchas.md`).
 
-**Re-witnessed 2026-06-10 (post-reset; original witnesses were pre-reset/corpus-specific).** The
-2026-06-04 behavioral witnesses ran on the corpus reset 2026-06-05; re-verified across live +
-archives. (a) Fix durable in source (`drift_events.pl:236`). (b) **Diagnostic positive control:**
-the PRE-FIX qualifier `narrative_ontology:requires_active_enforcement/1` still throws
-`existence_error`; the FIXED `domain_priors:` qualifier resolves — qualifier change is load-bearing,
-probe not vacuously clean. (c) **Original emitter set reproduced exactly** on `kernel_v1` (1,106):
-`{kodashim_obligation__memorial_archival, statutory_debt_ceiling__constitutional_nullity_reading}`
-both fire CLEAN, `kodashim` → `evidence(extraction,0.08,theater,0.85)` byte-identical to the record
-above. (d) **Corpus-independent synthetic positive control** proves the clause fires when reached
-regardless of corpus content (`evidence(extraction,0.05,theater,0.85)`, no throw). (e) Full
-`drift_event/3` scan threw on none of 4,525 constraints across live(39)+kernel_v1(1,106)+
-original_v6(3,380); `run_dynamic_suite` live = 39 pass / 0 fail / 0 err. **Caveat carried:** the
-`internalized_piton` clause is currently UNREACHED on the live 39-constraint corpus
-(correct-but-dormant) — a future "no drift throw on live" read must not be mistaken for "exercised."
-Witnesses: `audits/2026-06-10_oq57_live_rewitness/` (FINDINGS.md + raw probe outputs).
+**Re-witnessed 2026-06-10** (post-reset; `audits/2026-06-10_oq57_live_rewitness/`): fix durable
+(`drift_events.pl:236`); diagnostic positive control (pre-fix qualifier still throws); emitter set
+reproduced exactly on kernel_v1; corpus-independent synthetic control; full scan threw on none of
+4,525 constraints. **Caveat carried:** the `internalized_piton` clause is UNREACHED on the live
+corpus (correct-but-dormant) — "no drift throw on live" must not be read as "exercised".
 
 ---
 
@@ -2837,32 +2033,22 @@ is no "wrong corpus" to resolve.
 decision once sized).
 
 **Status:** disposed — **(2026-06-03): preserve-and-diff, not merge** — all four follow-ons done.
-The user ruled against merging near-doctrine readings (averaging two readings is the cyclopean
-move; the disparity *is* the depth); near-named readings are usually DISTINCT positions
-(gradated=governance-values vs graduated=state-capacity; nws/nnws; homoousios/homoiousios), so
-the linter's R3 is a review-trigger, never a verdict. Rename for de-confusion where needed
+Operator ruled against merging near-doctrine readings (averaging two readings is the cyclopean
+move; the disparity *is* the depth); near-named readings are usually DISTINCT positions, so the
+linter's R3 is a review-trigger, never a verdict. Rename for de-confusion where needed
 (`gradated_reading` → `governance_quality_reading`, witnessed clean), never auto-merge.
 
-**Disposition record (#1–#4, all witnessed 2026-06-03):**
-- **#1 edge-repair:** 4 dangling `absolutist_reading` edges retargeted → `absolute_sovereignty`
-  (alias ruled); R1 dangling 89→87, affects_constraint 1668→1666.
-- **#2 operator:** `prolog/reading_diff.pl` + `report_pair/3` (authored-cells-only,
-  kernel-agnostic, order-independent stability verdict). See KNOWN_STATE.md 2026-06-03 +
-  `tests/test_reading_diff.pl`.
-- **#3 census:** `prolog/reading_diff_census.pl`, 615 within-kernel pairs → 53.7% key_fragile /
-  39.5% robustly_binocular / 6.8% undersampled — the alignment seat governs the verdict
-  corpus-wide. Results: `audits/2026-06-03_reading_diff_census/`.
-- **#4 axiom diff:** `prolog/axiom_diff.pl` — 0 of 935 reading-pairs share an axiom NAME;
-  alignment requires a DECLARED `axiom_concept/2` map (empty by default, never baked); demo
-  found a grounding INVERSION on the westphalian absolute pair. `tests/test_axiom_diff.pl`.
-
-**Residue (content pass, not tracked here):** prose at `governance_quality_reading.pl:226`
-names the old alias AND mis-characterizes it vs `absolute_sovereignty`'s authored cells.
-**Cross-refs:** westphalia vs westphalian = distinct sibling kernels (user ruling), so those
-pairs are cross-kernel probes; OQ-58 repair progress that was logged here (2 delimiter typos;
-5 naming-variant edges, 16→8 dangling after never-generated generation; quarantine
-`prolog/cs_reading_relation_quarantine.json`) is OQ-58's record — see OQ-58 and GAP-07.
-*(Body compressed 2026-06-04 per footer rule; sizing/comparison narratives in git history.)*
+**Disposition record (#1–#4, witnessed 2026-06-03):** #1 edge-repair (4 dangling
+`absolutist_reading` edges → `absolute_sovereignty`; R1 dangling 89→87); #2 operator
+`prolog/reading_diff.pl` + `report_pair/3` (authored-cells-only; KNOWN_STATE.md 2026-06-03;
+`tests/test_reading_diff.pl`); #3 census `prolog/reading_diff_census.pl` — 615 within-kernel pairs
+→ 53.7% key_fragile / 39.5% robustly_binocular / 6.8% undersampled
+(`audits/2026-06-03_reading_diff_census/`); #4 `prolog/axiom_diff.pl` — 0/935 pairs share an axiom
+NAME; alignment requires a DECLARED `axiom_concept/2` map (empty by default, never baked);
+`tests/test_axiom_diff.pl`. Residue (content pass): prose at `governance_quality_reading.pl:226`
+names the old alias and mis-characterizes it. Cross-refs: westphalia vs westphalian = distinct
+sibling kernels (user ruling); OQ-58 repair records (quarantine
+`prolog/cs_reading_relation_quarantine.json`) live at OQ-58 and GAP-07.
 
 ---
 
@@ -2902,48 +2088,25 @@ aggregate remains OQ-62.
 
 **Status:** resolved — 2026-07-24, three operator rulings implemented (commit `ae9b0848`),
 report/aggregation only; **the Q1 pre-registered decision rule's "no residual signal beyond type
-composition" premise is WITHDRAWN** (falsified — see below); the header change stands on
-saturation grounds alone. Follow-ups minted OQ-239/240/241. **Priority:** 1
+composition" premise is WITHDRAWN** (falsified — below); the header change stands on saturation
+grounds alone. Follow-ups minted OQ-239/240/241. **Priority:** 1
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §6, K1/K2/K7).
 **Build audit:** `audits/2026-07-24_oq61_header_purity_cascade/`.
 
-**What landed (three rulings, all report-text/aggregation — no classification path touched):**
-- **Q1** (cascade saturation, witnessed 633/643 severe at absolute threshold 3, 211×): header
-  shows the **severe fraction** (`N/M drifting are severe (pct%)`, four fail-closed branches from
-  clause order); JSON `network_stability` categorical **byte-identical**; new siblings
-  `network_n_severe`/`_drifting`/`network_cascade_count_threshold`/`severity_by_type` (backstop
-  tab, drifting subset, severe total == `network_n_severe` asserted). Shared helpers
-  `network_drifting_constraints/2`, `network_severe_constraints/3` extracted (behavior-preserving).
-- **Q2** (type-composition restatement): raw bands kept **and** a type×band cross-tab
-  headlining the off-diagonal residual (cover-story / fragile-rope candidates); render-only,
-  marginal-asserted; convention table cites `purity_zone` + OQ-62; new per-row `purity_class`.
-- **Q3** (hidden no-access count): unscored split into the two existing tokens
-  `gate_fail`(−1.0)/`no_data`(`unknown`); `malformed` is a fail-closed guard-class (emit halts on
-  it, **NOT a fifth vocabulary token**) + cross-source enumeration check. Reproduces the census
-  sentinel+flip split exactly on all four target legs (testsets 46=35+11, haiku 468=466+2, flash
-  292=212+80, kernel_v1 4=2+2); kimi/sonnet measured fresh.
-
-**Escalated call (operator, 2026-07-24 — ruling stands, rationale corrected).** The plan
-pre-registered a decision rule gating Q1 on "the corpus-stability line has no residual signal
-beyond type composition." Evaluated across all six legs it **FAILS**: rule (b) off-diagonal severe
-mass (severe rope+mountain / n_drifting) exceeds 5% on **all six legs** under the drifting
-denominator and **five of six** under the scored denominator (only kimi passes, 3.3%; kernel_v1
-6.2%, flash 24.0%); rule (a)'s mountain under-severity (~68–72% vs ~91–96% overall) is a genuine
-within-type deviation on the large-n legs (flash mountain n=51, haiku 22, sonnet 19), arithmetic
-only where n is single-digit (testsets 3, kimi 1). **This does not reverse anything implemented:**
-Q1's header change was justified by *saturation* (633/643 is information-free whether or not type
-explains it), not by the residual premise — and a residual beyond type composition *strengthens*
-the ruling's forward half (severity is informative **per-component**, the categorical's declared
-future home). The premise sentence is withdrawn; the two rule defects (no minimum-cell n-floor;
-the 5% threshold had no provenance) are recorded in OQ-239 so the next pre-registration inherits
-the fix, not the number. The residual is now **visible** in the report (Q2 off-diagonal tab + Q1
-backstop tab), not concealed.
-
-**Follow-ups (the escalation split, not bundled):** OQ-239 (per-component severity home — Ω_C,
-reporting surface, continuous with this OQ; carries the rule-defect record); OQ-240 (the
-off-diagonal severe cover-story population — a *classification*/calibration question, out of this
-OQ's report-only scope); OQ-241 (mountain within-type under-severity → `ep_base_severity` fixed
-0.70 cut — touches a threshold this OQ put out of scope).
+**Resolution note (all report-text/aggregation — no classification path touched).** Q1 (cascade
+saturation, 633/643 severe): header shows the severe fraction; `network_stability` categorical
+byte-identical; new siblings `network_n_severe`/`_drifting`/`network_cascade_count_threshold`/
+`severity_by_type`. Q2: raw bands kept AND a type×band cross-tab headlining the off-diagonal
+residual; render-only; cites `purity_zone` + OQ-62. Q3: unscored split into `gate_fail`(−1.0)/
+`no_data`(`unknown`); `malformed` is a fail-closed guard-class, NOT a fifth token; reproduces the
+census split exactly on all four target legs. **Correction (operative):** the pre-registered rule
+"no residual signal beyond type composition" FAILS on all six legs (off-diagonal severe mass >5%
+under the drifting denominator; mountain under-severity genuine on large-n legs) — premise
+withdrawn, ruling stands on saturation; the two rule defects (no minimum-cell n-floor; the 5%
+threshold had no provenance) are recorded in OQ-239 so the next pre-registration inherits the fix.
+The residual is now VISIBLE in the report. Follow-ups: OQ-239 (per-component severity home),
+OQ-240 (off-diagonal severe cover-story population), OQ-241 (mountain under-severity →
+`ep_base_severity` 0.70 cut).
 
 ---
 
@@ -2953,174 +2116,40 @@ OQ's report-only scope); OQ-241 (mountain within-type under-severity → `ep_bas
 
 **Status:** resolved — 2026-07-25, operator ruling (rename to disjoint vocabularies, 2026-07-24).
 Four banders, not two; three colliding words, not one. Guard landed uncoupled from the ruling.
-Witnesses in the resolution block below. Scalar-identity and the ≤0.05 bar split out to OQ-244/245.
+Scalar-identity and the ≤0.05 categorical bar split out to OQ-244/245.
 **Priority:** 1
 **Deps:** splits_from OQ-244, splits_from OQ-245, splits_from OQ-246, splits_from OQ-247
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §4, K4/K6).
-**Files:** `abductive_helpers.pl:97-103` (`fpn_zone`: pure/clean/contaminated/compromised/critical
-at .80/.60/.40/.20), `logical_fingerprint.pl:605-611` (`purity_zone`:
-pristine/sound/borderline/contaminated/degraded at .9/.7/.5/.3 — matches canonical spec
-logic_extensions.md §2.3).
 
-**Specific question:** Two band vocabularies over the same scalar share the word "contaminated"
-for different ranges — [0.3,0.5) via `purity_zone` (reports, purity_summary) vs [0.4,0.6) via
-`fpn_zone` (abductive evidence lines). Unify, rename one, or document the fork? Separately: both
-banders map the −1.0 sentinel to their worst zone when fed directly (witnessed:
-`fpn_zone(-1.0)=critical`, `purity_zone(-1.0)=degraded`) — latent only because every current
-gating caller filters −1.0 first. Should both get an explicit `< 0.0 → unknown` guard clause
-(mechanical, fail-closed) independent of the vocabulary ruling?
-**Update (2026-07-23, OQ-60 close):** `purity_zone(unknown)=unknown` since 0a (non-number
-clause); the −1.0→worst-zone hazard above is UNCHANGED and remains this OQ. −1.0-in-aggregate
-exposure (unfiltered propagation via `fpn_intrinsic`/`gc_node_purity` stores) also stays here —
-per the OQ-60 python witness, −1.0 never reaches JSON (emitter routes it to null), so the live
-exposure is engine-internal caches + direct-fed banders only.
+**Resolution note.** The fork was FOUR live banders, not two — three of them named `purity_zone/2`
+— colliding on `contaminated`, `degraded`, AND `critical`. Ruling: rename to disjoint vocabularies
+rather than unify (correct under both branches of the scalar-identity question, OQ-244). Survivor:
+canonical spec bander `logical_fingerprint:purity_zone/2`; renamed `fpn_report`→`ep_band/2`,
+`giant_component_analysis`→`action_band/2`, `abductive_helpers:fpn_zone/2`→`fpn_band/2`,
+categorical `contaminated(Reasons)`→`purity_fail(Reasons)`; atoms namespaced (`ep_*`/`gc_*`/`fpn_*`).
+**`unknown` stays a DELIBERATE shared token across all four — do not "fix" that overlap**; carve-out
++ convention table: `docs/logic_extensions.md` §2.3.1 (also promoted to CLAUDE.md Architecture
+Invariants, KNOWN_STATE 2026-07-25). Sentinel guard `< 0.0 → unknown` landed at all four, ordered
+AFTER `\+ number` (the comparison throws on the atom) — behavior-preserving on all six legs: the
+−1.0 path is structurally unfiltered but unexercised (token mix pure `value` at every bander input;
+the 28≡28 set-equality on `testsets` is a property of the data, not a traced code guarantee;
+leg-accumulation defect → OQ-246). The old throw was never loud (`abductive_engine.pl:145` catch-
+all — Pattern-6 absorption). Commits: `a2ef8147` (docs), `a1902cb1` (guard), `295260e7` (renames),
+`13877a0c` (purity_fail). Witnesses: `audits/2026-07-25_oq62_band_vocabulary_fork/` —
+CALL_SITE_CENSUS.md (pre-guard census) + trigger6_control.pl (T6 reach-depth probe closing the
+rename-broke-the-only-consumer hole, where byte-identity alone proved nothing);
+`test_purity_bands.pl` RED 7-fail → GREEN 16/16 with 7 positive controls; per_constraint
+byte-identical throughout. Stragglers fixed: `python/husk_signature_read.py` literal-"critical"
+parse + wrong-bander column names. Recon-ingestion lesson: the 2026-06-03 audit never cited
+`audits/2025-05-15_recon_2/` (which had already recorded three implementations) — its sibling
+findings may undercount the same way. Cross-ref OQ-60 (`unknown` atom; 2026-07-23 update folded in).
 
-**Evidence so far:** Audit doc §4. The categorical needle's cut also differs from both:
-post-bound-probe-fix `structural_purity` says 96.6% contaminated (excess ≤ 0.05 pass bar) vs the
-scalar bands' 68% — three different "contaminated" cuts now live on three surfaces. Whether the
-≤0.05 categorical bar is intended is part of this ruling.
-
-**What resolution changes:** One word stops meaning three things. The guard clauses convert a
-latent unknown→worst mechanism to fail-closed and can land independently of (and before) the
-vocabulary ruling if desired.
-
-**Update (2026-07-25, resolution).** The authored premises above are preserved as history; two
-of them were wrong, and the correction is the substance of this close.
-
-*1. The fork is FOUR banders, not two.* All four are live in `run_pipeline.py`, and **three** of
-them were named `purity_zone/2` — a predicate-name collision across modules, which is what
-invited the unification this OQ reserved against.
-
-| Predicate | Vocabulary | Cuts |
-|---|---|---|
-| `logical_fingerprint:purity_zone/2` | pristine / sound / borderline / **contaminated** / **degraded** | .9 / .7 / .5 / .3 |
-| `fpn_report:purity_zone/2` | sound / contested / **degraded** / **critical** | .7 / .5 / .3 |
-| `giant_component_analysis:purity_zone/2` | sound / borderline / warning / **degraded** | config `purity_action_*` = .7 / .5 / .3 |
-| `abductive_helpers:fpn_zone/2` | pure / clean / **contaminated** / compromised / **critical** | .8 / .6 / .4 / .2 |
-
-Three words collided, not one: `contaminated` ([0.30,0.50) vs [0.40,0.60) — the one this OQ
-names), plus **`degraded`** (<0.30 vs [0.30,0.50)) and **`critical`** (<0.30 vs <0.20), neither
-recorded here before. Counting the categorical `contaminated(Reasons)`, one word meant four
-things, not three.
-
-*2. The latency premise was wrong, and so was the correction first drafted for it.* This entry
-called the sentinel hazard "latent only because every current gating caller filters −1.0 first."
-The 2026-07-24 plan replaced that with "`fpn_report`'s −1.0 path is unfiltered and live-shaped,"
-reasoning from the 0-`critical` count on `testsets`. **That replacement is also falsified** —
-measuring at the bander input rather than at the report output settles it the other way. Three
-claims, kept separate because their warrants differ:
-
-- **(a) Structurally unfiltered — code read.** `one_hop_ep_safe/3` and `fpn_ep_safe/3`
-  (`fpn_report.pl:93,99`) fall back to `-1.0`; only the intrinsic is gated (`IP >= 0.0`, `:50`).
-  Nothing filters the two banded values. This much of the original reading is right.
-- **(b) No leg exercises the path — WITNESSED, six corpora.** Token mix at the bander input is
-  pure `value` on every leg: testsets 153 rows, haiku 492, flash 668, kimi 700, sonnet 930,
-  kernel_v1 1102. Every `critical` band on every leg comes from a genuinely low real value, none
-  from a sentinel. Measured per-process (see the leg-accumulation defect, OQ-246).
-- **(c) *Why* no leg exercises it — DATA, not a code guarantee, and NOT traced.** On `testsets`
-  the set of constraints with an absent intrinsic and the set with an absent one-hop EP are
-  **equal by membership** (28 ≡ 28, verified as set equality rather than matching cardinality;
-  `trigger6_control.pl` PART C). So the `IP >= 0.0` filter is co-extensive with EP-absence *here*.
-  It is **not** established that the filter structurally *guarantees* exclusion — that would
-  require tracing `drl_fpn:fpn_intrinsic/2` against `drl_purity_network:effective_purity/4`, which
-  was not done. Until it is, (c) is a property of the current data on one leg, not of the code.
-
-The distinction matters for the guard's justification, which is (c)-independent and worth stating
-plainly: **the guard converts a data-dependent property into a code-guaranteed one.** Under (c)
-the path is merely *unexercised*; only a traced structural filter would make it *unreachable*.
-Either way the guard was behavior-preserving on all six legs — the reverse of the plan's
-expectation that it would be output-changing at `fpn_report`.
-
-*3. The throw was never loud.* `abductive_helpers:fpn_zone/2` and the GCA bander threw
-`type_error(evaluable, unknown/0)` on the OQ-60 atom, but `abductive_engine.pl:145` wraps every
-trigger in `catch(_, _, true)` ("silently skip constraints where trigger fails"). The exception
-was already being discarded — a Pattern-6 absorption, not a loud failure. Guarding therefore
-converted one silent path into another, not loud into silent.
-
-*4. Recon-ingestion finding (predicts sibling undercounts).* The 2026-06-03 audit that authored
-this OQ contains **zero** mentions of `fpn_report` or `giant_component`, and does not cite
-`audits/2025-05-15_recon_2/`, which had already recorded three `purity_zone/2` implementations.
-The undercount (2 of 4) is an audit-didn't-ingest-prior-recon failure, not a discovery gap —
-flagged because the same audit's other findings may undercount the same way.
-
-**Ruling and rationale.** Rename to disjoint vocabularies rather than unify. Correct under *both*
-branches of the unanswered scalar-identity question (OQ-244): if the four band different
-quantities, disjoint names are simply right; if two band the same quantity, unification would be
-right but the renames cost nothing and make the cut-point disagreement *visible* instead of
-hiding it under a shared name. The falsifier against the document-only option was standing in the
-tree: `abductive_helpers.pl:135` documented the fork and documented it **wrong**, claiming parity
-with `fpn_report.pl` across different arity, names, and cuts.
-
-`logical_fingerprint:purity_zone/2` keeps its name as the canonical spec bander (§2.3). Renamed:
-`fpn_report:purity_zone/2`→`ep_band/2`, `giant_component_analysis:purity_zone/2`→`action_band/2`
-(+`count_by_purity_zone/8`→`count_by_action_band/8`), `abductive_helpers:fpn_zone/2`→`fpn_band/2`
-(+`one_hop_zone/3`→`one_hop_band/3`), `signature_detection`'s `contaminated(Reasons)`→
-`purity_fail(Reasons)`. Atoms namespaced (`ep_*`/`gc_*`/`fpn_*`) so disjointness holds by
-construction. **`unknown` is a deliberate shared token across all four** — it means the same
-thing everywhere (absent input, fail closed), and a future reader applying disjointness strictly
-must not "fix" it; carve-out stated in `docs/logic_extensions.md` §2.3.1.
-
-**Commits.** `a2ef8147` (1a docs: the wrong `:135` comment + purity_scoring's missing `unknown`
-token) · `a1902cb1` (1b guard: `< 0.0 → unknown` at all four, ordered after `\+ number` because
-the comparison throws on the atom) · `295260e7` (2a: the three scalar-bander renames) ·
-`13877a0c` (2b: the categorical `purity_fail` rename).
-
-**Witnesses.** Call-site census taken BEFORE the guard landed:
-`audits/2026-07-25_oq62_band_vocabulary_fork/CALL_SITE_CENSUS.md` (+ the three probes).
-`prolog/tests/test_purity_bands.pl` RED at HEAD (7 failed / 9 passed, both `type_error` throws
-captured) → GREEN 16/16, with 7 positive controls including a load-chain control and a
-0.0-is-a-value boundary control. Pipeline exit 0 with mtime advanced at every phase;
-`per_constraint` byte-identical throughout; `fpn_report.md` byte-identical after reverse-mapping
-the new atoms; `giant_component_analysis.md` and `abductive_report.md` byte-identical untouched
-(their atoms never reach output text). `structural_purity` verdict mix exactly preserved across
-the 2b rename (151 / 35 / 4 / 9). purity_absence 7/7, reading-totality 10/10.
-
-**Two stragglers the plan's census missed**, both caught by the unfiltered Pass-B sweep:
-`python/husk_signature_read.py` parses `outputs/fpn_report.md` and gated `proxy_husk` on the
-literal `"critical"` — post-rename that matches nothing and reports zero proxy husks, which reads
-like a finding rather than a broken parse. It is not in `run_pipeline`, so no pipeline diff would
-have caught it. Its columns were also named `fpn_zone`/`one_hop_zone` while holding `fpn_report`
-values — named after the wrong bander.
-
-**Term-persistence question (asked and answered before 2b landed).** Nothing serialises the
-renamed terms. Two-sided: 151 of 199 live constraints carry the purity verdict, yet
-`contaminated(` appears in ZERO artifacts under `outputs/`, so the absence is genuine rather than
-an empty-table artifact; the control confirms the sweep does find serialised purity tokens
-elsewhere. `fpn_intrinsic/2` and `gc_node_purity/3` are `:- dynamic` in-memory stores with no
-disk write path. No migration or read-side alias needed.
-
-**Rename-broke-the-only-consumer check (the one surface where byte-identity proved nothing).**
-`fpn_band/2`'s only consumer is T6 `trigger_accelerating_pathology/3`, which fires 0 on the live
-leg — and `abductive_engine.pl:145` wraps every trigger in `catch(_, _, true)`. So a missed call
-site would have thrown, been swallowed, left the firing count at 0, left `abductive_report.md`
-byte-identical and `gate.sh` green: every 2a witness was consistent with both "rename correct" and
-"rename broke the only consumer," and the plunit suite does not close it either (it calls the
-banders directly, not through the trigger path). Closed by
-`audits/2026-07-25_oq62_band_vocabulary_fork/trigger6_control.pl`:
-- PART A — T6 called directly on all 181 constraints **outside** the catch wrapper: 0 exceptions.
-- PART B — reach-depth, because "no throw" is worthless if control never reached the renamed
-  goals: `:522 subsystem_available → true`, `:524 fpn_ep → -1.0`, **`:525 fpn_band/2 → unknown`**,
-  **`:526 one_hop_band/3 → failed cleanly`**. A missing predicate raises existence_error rather
-  than failing, so a goal that fails cleanly is a goal that resolved. The byte-identity is
-  load-bearing retroactively.
-- `:534`'s `evidence_line(fpn, fpn_band, _)` key is TERM data, not a goal — a missed rename there
-  cannot throw, and T6 emits nothing, so it is read-verified only.
-
-Incidental: `:525` returning `unknown` is the Phase-1b guard firing **live in the real trigger
-path** — pre-guard it returned `fpn_critical`. So the guard does change an intermediate value at
-the 28 constraints whose `fpn_ep` is `-1.0`; it is output-invisible only because `:526` fails
-immediately after. "Guard inert" is exact about *output*, not about *evaluation*.
-
-**Latent, recorded rather than fixed.** `abductive_triggers.pl:527` tests `FPNZone \= OneHopZone`.
-With the guard, an `unknown` band compares unequal to a real band and would read as a zone
-migration — absence as presence. Unreachable today because `one_hop_band/3` depends on
-`drl_modal_logic:effective_purity/3`, which resolves by import to the **static**
-`drl_purity_network:effective_purity/3` (`drl_purity_network.pl:249`) and succeeds 0 times on the
-authored grid — measured-empty, not didn't-look (control: the 4-arity sibling
-`drl_purity_network:effective_purity/4` succeeds 181/181 in the same session and context). Being
-static, it also cannot be overlaid in-session, so a forced full-body T6 run is not available as a
-witness — hence the reach-depth probe above. If that predicate is ever revived, the fix is to
-require both bands real — not to remove the guard.
+**Latent, recorded rather than fixed (still-operative):** `abductive_triggers.pl:527` tests
+`FPNZone \= OneHopZone`; with the guard, an `unknown` band compares unequal to a real band and would
+read as a zone migration — absence as presence. Unreachable today: the static
+`drl_purity_network:effective_purity/3` succeeds 0 times on the authored grid (measured-empty —
+control: the 4-arity sibling succeeds 181/181 in the same session). If that predicate is ever
+revived, the fix is to require both bands real — NOT to remove the guard.
 
 ---
 
@@ -3159,46 +2188,21 @@ Status line; wrong-on-lag risk (total_war control row) noted at ruling time. Cro
 
 **Ω-type:** Ω_C (schema design).
 
-**Status:** resolved — operator ruled 64-A (2026-06-05): schema split. `vindicated_propositions` array added to base_properties; compiler emits `narrative_ontology:constraint_vindicates/2` (feeds NO metric or gate); prompt rule: propositions are never beneficiaries (commit `e5fbc2e8`, witnesses in message: schema+pattern guard+compiler+engine+negative control). The non-agent hand registry stays as legacy defense for archived corpora. Live-20 referent scan: born clean (20/20 agent-shaped).
+**Status:** resolved — operator ruled 64-A (2026-06-05): schema split. `vindicated_propositions` array added to base_properties; compiler emits `narrative_ontology:constraint_vindicates/2` (feeds NO metric or gate); prompt rule: propositions are never beneficiaries (commit `e5fbc2e8`, witnesses: schema+pattern guard+compiler+engine+negative control). The non-agent hand registry stays as legacy defense for archived corpora. Live-20 referent scan: born clean (20/20 agent-shaped).
 **Origin:** FSM agency-gate session 2026-06-03, Steps 1–2 calibration reads.
-**Files:** `narrative_ontology.pl` (agent_beneficiary/2 + non_agent_beneficiary/1 registry — the
-split's forerunner; see its comment block), generation templates (`agent/generate_*`).
+**Files:** `narrative_ontology.pl` (agent_beneficiary/2 + non_agent_beneficiary/1 registry).
 
-**Specific question:** `constraint_beneficiary/2` is authored with at least three distinct
-intents: (i) actual agent beneficiaries; (ii) propositions the constraint vindicates
-(maxwell's `entropic_universe_hypothesis`, debt-ceiling's `constitutional_supremacy_doctrine`,
-press_reformation's `technological_inevitability_interpretation`); (iii) detector-bait /
-adjudication-expectation entries written so FSM would "evaluate" them (see OQ-65). Should (ii)
-get its own authored field `constraint_vindicates/2` so generation stops overloading the
-beneficiary slot?
-
-**Evidence so far (authored text, witnessed 2026-06-03):**
-- total_war_winnability_post1945 `:212`: beneficiary "included to trigger false-summit (FSM)
-  evaluation only … FSM will correctly identify the lack of true beneficiary extraction and
-  confirm the Mountain classification" — explicit bait + the misconception.
-- maxwell_demon: "The beneficiary declaration … is included to evaluate whether this genuine
-  natural law might contain a false-summit candidate" — the flagship case is also bait.
-- environmental_instability `:193/:196` + omega `false_summit_beneficiary_ambiguity`: author
-  expects FSM to adjudicate beneficiary-vs-less-victimized empirically; FSM is presence-only.
-All share one misconception: **FSM-as-extraction-evaluator** (it is a presence trigger).
-
-**The MIRROR direction (2026-06-04 ruling): proposition-shaped name, agent referent.**
-`institutional_continuity_narrative` (preparedness_commitment__husk_reading :142) and
-`bureaucratic_continuity` (preparedness_transmission__husk_reading :151) carry vindication-shaped
-NAMES but agent-kind REFERENTS: the files' own directionality logic names the institution as the
-experiencer of benefit (commitment :225 "the institution itself … (legitimacy, resource
-justification)"; transmission :103 "preserves its organizational identity, budget lines, and
-staff roles"). The maxwell/total_war cases are proposition referents in the agent-shaped field;
-these are agent referents under proposition-shaped names — together they prove **the value
-string's morphology is orthogonal to the referent's kind in BOTH directions** (which is why the
-suffix heuristic had to be abandoned twice). The disambiguator is the authored directionality/
-gain logic, never the name. When the `constraint_vindicates/2` split lands, the migration
-tooling must classify by referent text, not value naming.
-
-**What resolution changes:** the registry (non_agent_beneficiary/1) becomes a migration shim:
-proposition-kind values move to `constraint_vindicates/2` facts at generation time; the agency
-predicate stops needing per-value rulings for new corpus. Ruling 2026-06-03 stands meanwhile:
-authorial purpose NEVER flips an agency tag.
+**Resolution note.** `constraint_beneficiary/2` was authored with three intents: (i) agent
+beneficiaries; (ii) vindicated propositions (maxwell's `entropic_universe_hypothesis`,
+debt-ceiling's `constitutional_supremacy_doctrine`, press_reformation's
+`technological_inevitability_interpretation`); (iii) detector-bait (OQ-65; the shared
+misconception was FSM-as-extraction-evaluator — it is a presence trigger). **Operative rule
+(proved in BOTH directions, 2026-06-04):** value-name morphology is orthogonal to referent kind —
+proposition referents appear in agent-shaped fields AND agent referents under proposition-shaped
+names (`institutional_continuity_narrative`/`bureaucratic_continuity` in the preparedness husk
+pair) — classify by the authored directionality/gain text, never the value string; the suffix
+heuristic lied twice. Migration/authorship: propositions → `constraint_vindicates/2` at
+generation time; authorial purpose NEVER flips an agency tag (ruling 2026-06-03).
 
 ---
 
@@ -3305,38 +2309,26 @@ expectation-authored buckets.
 
 **Status:** resolved — 2026-07-25. All three ledger items disposed; two findings relocated.
 **Priority:** 1
-**Origin:** FSM agency-gate session 2026-06-03; rulings recorded in KNOWN_STATE same date.
-**Deps (dropped on close):** none authored; the surviving open question relocated to OQ-248.
+**Origin:** FSM agency-gate session 2026-06-03; rulings in KNOWN_STATE same date.
+**Deps (dropped on close):** none authored; surviving open question relocated to OQ-248.
 **Files:** `prolog/drl_core.pl:298-323`, `prolog/narrative_ontology.pl:398-447`,
 `prolog/tests/test_agent_beneficiary.pl`, `prolog/tests/fixtures/nlwb_controls/`,
 `python/run_pipeline.py` (`_prolog_agency_gate`).
 
-**Resolution.** (1) The `natural_law_without_beneficiary/1` deferral LANDED (operator ruling Q1,
-2026-07-25): it now reads `agent_beneficiary/2`, per 63-A — it was the last unmigrated consumer of
-that class. **Zero OBSERVABLE diff on six legs** (five live + `kernel_v1`), under cache-cleared and
-MaxEnt-refitted arms with a planted-flip fixture leg — **but one PREDICATE-TRUTH flip** at
-`maxwell_demon_impossibility`, downstream-invisible because it classifies `rope` in both arms. The
-no-op is structural on the live legs (`registry_hits=0` ⇒ extensional identity), contingent on
-`kernel_v1`. Cite the forward statement, not "behaviourally free":
-`audits/2026-07-25_oq66_nlwb_filter_cutover/RELEASE_NOTE.md`. (2) Both gate-two items close
-**moot-by-reset**: `press_reformation_causality__technological_inevitability` is absent from all
-five live legs, and the `statutory_debt_ceiling__constitutional_nullity_reading` names surviving in
-`haiku`/`flash` are new draws, not the measured story — the 2026-06-03 reads cannot be re-witnessed.
-Substrate already correct (both values unlisted ⇒ default-agent ⇒ FSM keeps firing); no code change.
-A future revisit is a fresh measurement, not a resumption. (3) The tripwire's contract changed from
-inertness-watch (nothing left to watch) to **two-gate enforcement**, now wired as a pipeline gate.
-
-**Defect found in the guard itself** (of exactly the class OQ-66 existed to watch): the old
-suite's MaxEnt arm was VACUOUS since it was written. A plain `[stack]` load leaves MaxEnt unfitted,
-so every `maxent_top_type` read failed and was mapped to `no_top` in BOTH arms — comparing
-`[no_top,...]` against itself while presenting as zero-diff (Pattern 6, in the instrument). The old
-suite also sat 15/17 red for ~7 weeks post-reset, with `fsm_released_for_maxwell` passing VACUOUSLY
-as a `\+` over an absent constraint.
-
-**Relocated, not folded:** shadow separability → OQ-248; the (ε, theater) × type census → OQ-249.
-
-**Evidence:** `audits/2026-07-25_oq66_nlwb_filter_cutover/` (FINDINGS.md + harness + probes),
-commit `1613c3cc`, KNOWN_STATE 2026-07-25.
+**Resolution note.** (1) `natural_law_without_beneficiary/1` deferral LANDED (operator Q1): now
+reads `agent_beneficiary/2` per 63-A. Zero OBSERVABLE diff on six legs (cache-cleared,
+MaxEnt-refitted, planted-flip fixture leg) but one PREDICATE-TRUTH flip at
+`maxwell_demon_impossibility` (downstream-invisible; `rope` both arms) — the no-op is structural
+on live legs, contingent on kernel_v1. **Cite the forward statement, not "behaviourally free":
+`audits/2026-07-25_oq66_nlwb_filter_cutover/RELEASE_NOTE.md`.** (2) Both gate-two items
+moot-by-reset (the 2026-06-03 reads cannot be re-witnessed; substrate already correct; a future
+revisit is a fresh measurement). (3) Tripwire contract changed to two-gate enforcement, wired as a
+pipeline gate. **Defect found in the guard itself:** the old suite's MaxEnt arm was VACUOUS its
+whole life — `[stack]` leaves MaxEnt unfitted, every `maxent_top_type` read failed soft to
+`no_top` in BOTH arms (Pattern 6 in the instrument; promoted to CLAUDE.md); the suite sat 15/17
+red ~7 weeks with a `\+`-vacuous pass. Relocated, not folded: shadow separability → OQ-248;
+(ε, theater) × type census → OQ-249. Evidence: `audits/2026-07-25_oq66_nlwb_filter_cutover/`
+(FINDINGS.md + harness + probes), commit `1613c3cc`, KNOWN_STATE 2026-07-25.
 
 ---
 
@@ -3600,76 +2592,55 @@ incidents above would have been caught at the amending commit.
 **Ω-type:** Ω_C (framework-content ruling) with an Ω_E falsifier tail (discharged via OQ-255).
 
 **Status:** resolved — **RULED 2026-07-25 (operator): option 1 — adopt all three edits + full
-three-site sweep, with two riders, both implemented in `fdc502ec`** (seat-theorem v2.4→v2.5;
-v8 §6.3 updated to track the priced form; few-seats-v2 site 3 REWRITTEN rather than struck,
-replacement paragraph + fourth-pass note in the essay's own idiom). **Rider 1 (the v1.1
-independence problem):** the gate encodes the doc's own claim about cost-finding questions, so
-the cost-present discriminator is recorded IN THE DOC at adoption as a **standing probe** scoped
-to its one run (engine tokens, n=199, manifest 2026-07-25) — the gate stays falsifiable only
-through that probe staying armed; if it ever lands the other way, the gate weakens back toward
-admission, not quiet re-scoping (seat-theorem §6.2 + amendment-provenance item 4 carry this).
-**Rider 2:** the essay strike owed an authored replacement, delivered. Operator's epistemic
-split, of record: the sweep argument rests on a run witness (Q5 cannot separate maintained rope
-from maintained snare, so the essay's "commits to nothing the world could refute" was
-false-with-witness); the v1.1 independence flag rests on a reading of the audit's own logic and
-was checked by no one else. Sweep witness: `grep "commits to nothing"` hits only the two strike
-records quoting the dead claim. Full history: mint + addendum items 1–6 in git (`03e57ec3`,
+three-site sweep, with two riders, both implemented in `fdc502ec`** (seat-theorem v2.4→v2.5; v8
+§6.3 tracks the priced form; few-seats-v2 site 3 REWRITTEN with an authored replacement, Rider 2).
+**Rider 1 (still-operative standing probe):** the gate encodes the doc's own claim about
+cost-finding questions, so the cost-present discriminator is recorded IN THE DOC at adoption as a
+**standing probe** scoped to its one run (engine tokens, n=199, manifest 2026-07-25) — the gate
+stays falsifiable only through that probe staying armed; if it ever lands the other way, the gate
+weakens back toward admission, not quiet re-scoping (seat-theorem §6.2 + amendment-provenance item
+4 carry this). Operator's epistemic split of record: the sweep argument rests on a run witness
+(Q5 cannot separate maintained rope from maintained snare); the v1.1 independence flag rests on a
+reading checked by no one else. Full history: mint + addendum items 1–6 in git (`03e57ec3`,
 `2fa3eca2`, `1ade944d`); measure + run witnesses: `audits/2026-07-25_oq255_seat_cost_measure/`
 (OQ-255).
 **Priority:** 3
-**Origin:** analysis turn handed to the repo 2026-07-25 (operator-directed minting); proposal
-produced against seat-theorem v2.4 + v8 only.
+**Origin:** analysis turn handed to the repo 2026-07-25 (operator-directed minting).
 **Files:** `docs/seat-theorem-v1.md`, `docs/deferential_realism_paper_v8.md:781-805`,
 `docs/the-few-seats-worth-choosing-v2.md`.
-
-**Deps (dropped on close):** was `blocked_on_human oq253-adopt-seat-theorem-q-revision,
-blocked_on OQ-255`; ruled, and OQ-255 resolved.
+**Deps (dropped on close):** ruled, and OQ-255 resolved.
 
 ---
 
 ## OQ-254 — Q-provenance: the topic decomposition is a Q-choice upstream of every ε — the OQ-205 discipline audits the answer, not the question
 
-**Ω-type:** Ω_C (spec — which Q-surfaces are declared and where they are carried is a seat choice)
-with an Ω_E recon/build tail (whether the decomposition step already records its Q-choice is a
-code fact, checkable now).
+**Ω-type:** Ω_C (spec — which Q-surfaces are declared and where carried) with an Ω_E recon/build tail.
 
 **Status:** resolved — recon + minimal wiring, one pass (operator-scoped); audit
-`audits/2026-07-25_oq254_q_provenance/` (STEP0–STEP4 witnesses); commits `01d503aa`
-(re-witnessed census), `f1436bd4` (join key), `2d7432a0` (self-stamp), `7f29bfea`
-(tracked location + 515-manifest archive), `c200fcd2` (standing readout + Phase 9d).
+`audits/2026-07-25_oq254_q_provenance/` (STEP0–STEP4 witnesses); commits `01d503aa` (census),
+`f1436bd4` (join key), `2d7432a0` (self-stamp), `7f29bfea` (tracked location + 515-manifest
+archive), `c200fcd2` (standing readout + Phase 9d).
 **Priority:** 4
-**Origin:** [EDGE] extension in the same 2026-07-25 analysis turn that produced OQ-253.
+**Origin:** [EDGE] extension in the same 2026-07-25 analysis turn as OQ-253.
 
-**Correction marked on close (operator flag — not folded silently):** the headline above is
-FALSE AS WRITTEN. Step-0 census (515 manifests): the question IS audited — richly
-(`selection_reason` 2596/2598 axes counting schema variants; `deferral_reason` 1022/1022
-deferred entries; kernel verdict 486/515) — just not JOINABLY: the whole surface sat under
-gitignored `outputs/` with no self-provenance and no story-side link (`epsilon_provenance/5`
-arg 4 `'none'` in 71/71 live emissions). The defect is Pattern 6 (declaration unreachable
-from the verdict), not concealment. This is the second same-direction inference (reasoning
-from v8 prose about what the engine does) corrected by code contact, kin to the OQ-255 §8
-Q6-channel misidentification, and marked the same way.
+**Correction marked on close (operator flag — not folded silently):** the headline was FALSE AS
+WRITTEN. The question IS audited — richly (`selection_reason` 2596/2598; `deferral_reason`
+1022/1022; kernel verdict 486/515) — just not JOINABLY: the surface sat under gitignored
+`outputs/` with no self-provenance and no story-side link. Pattern 6 (declaration unreachable from
+the verdict), not concealment. Second same-direction inference (reasoning from v8 prose about the
+engine) corrected by code contact, kin to the OQ-255 §8 misidentification.
 
-**What landed:** `generation_run_id` join key (schema-optional Provenance field; minted at
-decompose = manifest filename stem; threaded through all three scope-manifest write paths into
-`epsilon_provenance/5` arg 4); manifest `_provenance` self-stamp (scope model/prompt-commit/
-schema-commit/timestamp/axes-ceiling/topic); tracked location `agent/decompose_manifests/`
-(515 pre-existing manifests archived there under `archive_pre_2026-07-25/`,
-declared archive-not-read-surface); standing `python/q_provenance_readout.py` (four
-loud-null-obliged tokens incl. the Pattern-6 `run_id_authored_manifest_unreachable` and the
-archive's own `joined_archive_not_authoritative`; planted two-sided controls every
-invocation) wired as run_pipeline Phase 9d.
-
-**The close records WIRED, not JOINED (second marked correction-of-scope):** at close every
-live story is `no_run_id_authored` (129 no-fact / 76 run_id `'none'`) and `joined` is
-exercised only by a planted control. Graduation = the next operator topic run producing a
-story whose run_id resolves to its manifest. The `_step_commit` extension landed after
-operator review, AMENDED per it: the manifest stages only when its filename stem equals the
-`generation_run_id` on every committed story (the join key as verifier — checked, not
-assumed; load-bearing on the `--manifest-file` frozen path, belt-and-braces within-instance),
-and every non-staged outcome is recorded in `StepResult.data` (no silent pathspec
-narrowing). Three-case witness: `STEP3_WITNESS.md`. Follow-up: OQ-256 (§3 foreclosure
-as structure, deliberately unbundled).
+**What landed:** `generation_run_id` join key threaded into `epsilon_provenance/5` arg 4;
+manifest `_provenance` self-stamp; tracked `agent/decompose_manifests/` (515 pre-existing archived
+under `archive_pre_2026-07-25/`, declared archive-not-read-surface); standing
+`python/q_provenance_readout.py` (loud-null tokens incl. `run_id_authored_manifest_unreachable`;
+planted two-sided controls every invocation) as run_pipeline Phase 9d. **The close records WIRED,
+not JOINED (second marked correction-of-scope):** at close every live story is
+`no_run_id_authored`; graduation = the next operator topic run producing a story whose run_id
+resolves to its manifest. `_step_commit` extension AMENDED per operator review (manifest stages
+only when its filename stem equals the run_id on every committed story; non-staged outcomes
+recorded — no silent pathspec narrowing; three-case witness `STEP3_WITNESS.md`). Follow-up:
+OQ-256 (§3 foreclosure as structure, deliberately unbundled). Cross-ref OQ-205.
 
 ---
 
@@ -3679,15 +2650,12 @@ as structure, deliberately unbundled).
 
 **Status:** resolved — candidate measure delivered, kinship verified against the classifier,
 kill condition answered; full audit `audits/2026-07-25_oq255_seat_cost_measure/WRITEUP.md`
-(census evidence + controls in `evidence/census.json`; manifest 2026-07-25T07:20:20Z, n=199,
-ee025a0). **Adoption of the measure is NOT self-certified here — it rides OQ-253's
-blocked_on_human ruling.**
+(census + controls in `evidence/census.json`; manifest 2026-07-25T07:20:20Z, n=199, ee025a0).
+**Adoption is NOT self-certified here — it rides OQ-253's ruling.**
 **Priority:** 3
-**Origin:** 2026-07-25, second turn from the source instance — the measure was a blocker living
-inside OQ-253's edit 3; spun out and executed same day.
+**Origin:** 2026-07-25, spun out of OQ-253's edit 3.
 **Files:** `docs/seat-theorem-v1.md`, `docs/deferential_realism_paper_v8.md:781-805`,
 `prolog/drl_core.pl:364-459`, `audits/2026-07-25_oq255_seat_cost_measure/`.
-
 **Deps:** splits_from OQ-253, gates OQ-253
 
 **The measure (still-operative build spec, kept per compress-on-close exception):**
@@ -3697,29 +2665,17 @@ otherwise**; **Gate(Q)** = Q admits ≥1 *positively-shaped* answer landing in t
 {mountain, justified rope} (negative existentials do not pass — Build Discipline Pattern 5
 imported; Q3/Q5/Q6 pass, Q1/Q2/Q4 fail); **Grade(Q)** = foreclosure(Q) under set-inclusion
 partial order (cardinality coarsening rejected — it destroys witnessed incomparability).
+**Gate refined to v1.1 (operative):** the terminator must be positively returnable ON
+cost-present cases (guard-function, not terminator-admission) — Gate v1 was Pattern-6-satisfiable
+by a wrong-class carrier; Q3/Q5 fail v1.1, Q6-class passes via fps. Detail: OQ-253 addendum item 5.
 
-**Resolution findings:** (1) v8 §6.3's kinship is REAL but looser than the source's enumeration
-— `emerges_naturally` is necessary for mountain but its true-pole is inhabited by FIVE types on
-the live corpus (rope bypass `drl_core.pl:423`; mountain 6 / rope 32 / scaffold 18 / snare 8 /
-unknown 8 slots), so Q5 is a one-sided excluder, not a certifier; snare↮tangled_rope foreclosure
-confirmed; Q3 ↔ χ-band+boolean pair confirmed. The run-witness path did NOT collapse — it
-sharpened: foreclosure-sets are computed from gates, not question glosses. (2) **Kill condition
-does NOT fire:** exhibited pair (Q3, Q5), both gate-passing, grades incomparably different with
-all four witness cells inhabited, and the difference changes seat selection (rope-vs-snare
-candidates). The grade is load-bearing on the engine-kin subset; the pre-declared weaker landing
-(gate-only) is NOT forced. Scoped: an existence result over engine tokens, not all question
-pairs everywhere. (3) Residual finding, **inference CORRECTED same day (audit §8)**:
-`coordination_vitality/2` IS authored-empty on all live legs + kernel_v1 (grep control ladder in
-the writeup; all 32 live piton slots are theater-fallback; the dead-coordination piton clause is
-dormant, fails closed) — but the original inference "Q6's unique engine channel is authored-empty"
-misidentified the channel. Q6's genealogical kin is **`founding_problem_status/2`** (authored
-164/199 live-leg; `disappearance_verdict/2` 165/199 is Q5's richer kin; the Q5×Q6 conjunction is
-wired at `narrative_ontology.pl:168-170`). Discriminator run on the diverging cell (inhabited:
-TR×live 18, snare×live 43 slots): the theorem doc's claim stands (Q3 structurally cannot return
-the still-needed-good verdict there) and the guard is MANNED. **Gate refined to v1.1:** the
-terminator must be positively returnable ON cost-present cases (guard-function, not
-terminator-admission) — Gate v1 was Pattern-6-satisfiable by a wrong-class carrier; Q3/Q5 fail
-v1.1, Q6-class passes via fps. Full detail: OQ-253 addendum item 5.
+**Resolution findings (compressed):** v8 §6.3 kinship REAL but looser than enumerated (Q5 is a
+one-sided excluder — `emerges_naturally` true-pole inhabited by FIVE types, rope bypass
+`drl_core.pl:423`); kill condition does NOT fire (pair (Q3, Q5) grades incomparably, difference
+changes seat selection — grade load-bearing on the engine-kin subset); residual inference
+CORRECTED same day (audit §8): `coordination_vitality/2` IS authored-empty everywhere, but Q6's
+genealogical kin is `founding_problem_status/2` (164/199 authored; `disappearance_verdict/2`
+165/199 is Q5's kin; conjunction wired at `narrative_ontology.pl:168-170`) — the guard is MANNED.
 
 ---
 
@@ -3763,42 +2719,26 @@ high-theater shadow licenses.
 **Status:** resolved — 2026-07-25, commit `a8ec22f0`; evidence
 `audits/2026-07-25_oq67_legacy_chi_retire/`, KNOWN_STATE 2026-07-25.
 **Priority:** 1
-**Origin:** TODO.md item 1 ("Kill the Legacy Chi Path"), inherited at tracking-surface
-consolidation 2026-06-04; the in-code TODO predates it.
+**Origin:** TODO.md item 1, inherited at tracking-surface consolidation 2026-06-04.
 
-**Ruling — NEITHER (a) nor (b): retired by VALUE.** The posed fork assumed the path was live. It
-was not: `stack.pl` loaded `drl_audit_core` with an empty import list, its only importer was
-`drl_composition`, and all five call sites there sat behind `constraint_data/2` / `agent_index/2`,
-both terminating in unconditional fail-stubs nothing in the live tree asserts. So (a) migrating
-would port dead code onto the canonical path, and (b) a declared-exemption comment would certify a
-path that never runs. Disposal was adjudicated on *product*, not wiring (Build Discipline
-*Unwired ≠ worthless*): 3 of 4 exports were duplicates — `structural_signature/3` ≡
-`omega1_audit:determine_primary_gate/11`; `ontological_fraud_check(_,fm_alert)` ≡
-`drl_core:type_1_false_summit`; `omega_risk/4` ≡ `drl_core` + `transition_paths`. The 4th
-(`ontological_fraud_check(_,z_alert)`, the no-exit corner) was UNIQUE and is preserved as
-**GAP-29** in `docs/design/design_gaps.md`. `power_modifier/2` lost its sole reader and went with
-it; the six `power_modifier_*` params stay in `config.pl` as reader-free calibration anchors for
+**Ruling — NEITHER migrate nor exempt: retired by VALUE.** The path was never live (empty import;
+all five call sites behind unconditional fail-stubs). Adjudicated on product (Build Discipline
+*Unwired ≠ worthless*): 3 of 4 exports were duplicates of live predicates; the 4th
+(`ontological_fraud_check(_,z_alert)`, the no-exit corner ε≈1 ∧ χ≈1) was UNIQUE → preserved as
+**GAP-29** in `docs/design/design_gaps.md`. `power_modifier/2` deleted with it; the six
+`power_modifier_*` params stay in `config.pl` as reader-free calibration anchors for
 `canonical_d_*`.
 
-**Two defects recorded here because the code carrying them is deleted:** (1) `fm_alert` bound
-`suppression_score` to a variable named `Epsilon` where `logic.md:749` Rule FM specifies ε, and
-dropped Rule FM's `∃I(¬■C[I])` leg entirely; (2) `omega_risk(snare, mountain, type_vi, ...)`
-("naturalization of extraction") is MISLABELLED — `logic.md:3293` makes that **Type I** (False
-Mountain); `logic.md:3370` Type VI is Tangled Rope Mishandling. Neither propagated (the path never
-fired), but a reviver copying either forward would inherit them.
-
-**Scope note:** `omega1_audit.pl` is itself uncalled and RETAINS the surviving χ-only bander
-product. This close resolved a Pattern-2 fork (two χ-only banders, the weaker retired); it did
-**not** adjudicate `omega1_audit`, which stays open to its own value question.
-
-**Witnesses:** two pre-registered kill conditions, both discharged — (#1) three per-predicate
-positive controls fire pre-write, closing both fact-table channels; (#2) post-deletion all six
-predicates throw `existence_error`, converting silent failure to loud and thereby making the run
-pair probative against `call/N` / meta-dispatch. Plus: all-fail × 3 predicates × 6 corpora with
-per-process controls (denominators 199/960/960/1005/1001/1106 matching the loader-glob sizes);
-`run_pipeline` pair exit 0 + mtime advanced + corpus md5 legs re-checked identical +
-`per_constraint` byte-identical at n=199; `check_stack` byte-identical to a pristine HEAD extract;
-`load_warning_gate` 3/3 allowlisted 0 unexpected; `./scripts/gate.sh` GREEN.
+**Two defects recorded because the carrying code is deleted (reviver warning):** (1) `fm_alert`
+bound `suppression_score` to a variable named `Epsilon` where `logic.md:749` Rule FM specifies ε,
+and dropped Rule FM's `∃I(¬■C[I])` leg; (2) `omega_risk(snare, mountain, type_vi, ...)` is
+MISLABELLED — `logic.md:3293` makes that **Type I**; `logic.md:3370` Type VI is Tangled Rope
+Mishandling. Neither propagated; a reviver copying either forward would inherit them.
+**Scope note (operative):** `omega1_audit.pl` is itself uncalled and RETAINS the surviving χ-only
+bander product — NOT adjudicated by this close. Witnesses: two pre-registered kill conditions
+discharged (pre-write positive controls; post-deletion loud `existence_error` making the run pair
+probative); all-fail × 3 predicates × 6 corpora with per-process controls; `run_pipeline` pair
+exit 0 + `per_constraint` byte-identical at n=199; `check_stack` byte-identical; gate GREEN.
 
 ---
 
@@ -3839,45 +2779,38 @@ other stateful modules: purity caches, fingerprint stores).
 **Priority:** 1
 
 **Origin:** Tracking-surface consolidation 2026-06-04: AGENDA.md, AUDIT.md, TODO.md reviewed
-item-by-item against the substrate and deleted (Pattern 2: ISSUES.md is the single tracker). Items
-were verified STILL UNTRACKED and still live at consolidation; everything else in those files was
-verified shipped (maxent_profile/4; OQ-59 #1–#4; never-generated #1), already tracked (regen-polish
-backlog + 4 hard-fails in OQ-58), or moot (UNRESOLVED_MANDATROPHY count from the pre-rebuild corpus;
-"scope has zero classification effect" — σ(S) is now in the canonical χ).
+item-by-item against the substrate and deleted (Pattern 2: ISSUES.md is the single tracker);
+everything else there was verified shipped (maxent_profile/4; OQ-59 #1–#4; never-generated #1),
+already tracked (regen-polish backlog + 4 hard-fails in OQ-58), or moot. Drain executed 2026-06-20 with three pre-write witnesses (δ perturbation probe — δ is
+live-but-zeroed, correcting OQ-162's inherited text; close-vs-keep-open ruled from
+`omega_resolver.py`'s dangling-detection source; the four PARTIAL scope floors re-witnessed).
 
-**Resolution — provenance map (each ledger item → its individually-tracked OQ).** Drain executed
-2026-06-20 with three pre-write witnesses: (1) δ load-bearing **perturbation probe** (no-op negative
-control + δ:=0.3 flip on δ's own sink → δ is live-but-zeroed, correcting OQ-162's inherited text);
-(2) close-vs-keep-open **ruled from `omega_resolver.py`'s dangling-detection source** (authority set
-is all parsed OQs incl. resolved, and no inbound Deps edge points at OQ-69 → safe to close, not keep
-open as a thin parent); (3) the four PARTIAL **scope floors re-witnessed against the files** (157,
-160, 163, 164). Splitting rule applied: split iff a real Deps edge exists between an item's parts.
+**Provenance map (each ledger item → its individually-tracked OQ) — kept per the CLAUDE.md
+pointer:**
 
 | Ledger item | Becomes | Note |
 |---|---|---|
-| Engine-hardening pair, leg a — scope-design validator on `site_contexts/N` | **OQ-154** | independent of b/c |
-| Engine-hardening pair, leg b — MaxEnt parameterization for arbitrary sites | **OQ-155** | gates OQ-156 |
-| Engine-hardening pair, leg c — Arakelov fragility on 10-slice contexts | **OQ-156** | blocked_on OQ-155 |
-| Spec-encoding D-1 tests | **OQ-157** | PARTIAL: 1/5 shipped (`test_maxent_profile_indexing.pl`); scopes remaining 4 |
+| Engine-hardening leg a — scope-design validator on `site_contexts/N` | **OQ-154** | independent |
+| Engine-hardening leg b — MaxEnt parameterization for arbitrary sites | **OQ-155** | gates OQ-156 |
+| Engine-hardening leg c — Arakelov fragility on 10-slice contexts | **OQ-156** | blocked_on OQ-155 |
+| Spec-encoding D-1 tests | **OQ-157** | PARTIAL: 1/5 shipped |
 | Cover-story detector enrichments (Pkg B) | **OQ-158** | |
 | Scaffold/renewal audit (Pkg D) | **OQ-159** | |
-| Cluster-level analysis → report (Pkg F) | **OQ-160** | PARTIAL: computed in `cluster_space_phase*.py`, not wired into `enhanced_report.py`; gates OQ-170 |
-| Cluster systematic exploration (Pkg G) | **OQ-170** | blocked_on OQ-160 (the real F→G edge; split per operator ruling 2026-06-20) |
+| Cluster-level analysis → report (Pkg F) | **OQ-160** | PARTIAL; gates OQ-170 |
+| Cluster systematic exploration (Pkg G) | **OQ-170** | blocked_on OQ-160 |
 | Empirical 2nd/3rd cases (Pkg C) | **OQ-161** | |
-| δ → baseline-deviation reframe (Pkg E) | **OQ-162** | description CORRECTED — δ is live-but-zeroed, not "not load-bearing" (witnessed) |
-| Python toolset consolidation | **OQ-163** | RESOLVED: `cli.py` dispatcher shipped (1-prime, no moves); physical move → OQ-191 |
-| Parameterize directionality constants | **OQ-164** | PARTIAL: 6 `canonical_d` done; `power_role_heuristic/4` + `exit_modulation/2` remain |
+| δ → baseline-deviation reframe (Pkg E) | **OQ-162** | δ live-but-zeroed (witnessed) |
+| Python toolset consolidation | **OQ-163** | RESOLVED: `cli.py`; physical move → OQ-191 |
+| Parameterize directionality constants | **OQ-164** | PARTIAL |
 | framing_notes invitation calibration | **OQ-165** | |
-| Incremental tabling (`as incremental`) | **OQ-166** | |
+| Incremental tabling | **OQ-166** | |
 | Output write-path anchoring | **OQ-167** | |
-| Author "the mint" testset | **OQ-168** | queued, not authored |
-| T4 confirmed_liminal 2nd-case | **OQ-169** | dormant; trigger-deferred |
-| check_stack baseline → pipeline gate | **OQ-142–145** | graduated earlier (2026-06-18) |
+| Author "the mint" testset | **OQ-168** | queued |
+| T4 confirmed_liminal 2nd-case | **OQ-169** | dormant |
+| check_stack baseline → pipeline gate | **OQ-142–145** | graduated 2026-06-18 |
 
-The 16 ledger bullets became **17 new OQs** (154–170): the engine-hardening pair is three legs and
-the cluster item splits F/G. Provenance/witnesses: KNOWN_STATE 2026-06-20;
-`audits/2026-06-20_oq69_ledger_drain/`. Priorities on all 17 are **provisional — operator to rule**
-(the declared seat).
+16 bullets → 17 new OQs (154–170). Provenance/witnesses: KNOWN_STATE 2026-06-20;
+`audits/2026-06-20_oq69_ledger_drain/`. Priorities on all 17 provisional — operator's seat.
 
 ---
 
@@ -3885,88 +2818,29 @@ the cluster item splits F/G. Provenance/witnesses: KNOWN_STATE 2026-06-20;
 
 **Ω-type:** Ω_E (corpus measurement), with an Ω_C committer-axis edge (same family as OQ-65).
 
-**Status:** resolved — operator ruled option A as the CLASS (2026-06-05): no signature may read a single authored perspective as a story-level claim. claimed_natural source 2 AND appears_as_rope's sibling clause removed (commit `72ec2cdd`). Witness on the live 20: FCR 16→5 (remaining are low-ε profile-driven), FNL 3→1; POSITIVE CONTROL manpower_exhaustion_trap (explicit claim-mountain, non-compliant) still fires FNL via source 1 — wrong path removed, detector intact. Signature prevalence is citable as a claims statistic from the rebuild's story 1.
+**Status:** resolved — operator ruled option A as the CLASS (2026-06-05): no signature may read a single authored perspective as a story-level claim. claimed_natural source 2 AND appears_as_rope's sibling clause removed (commit `72ec2cdd`). Witness on the live 20: FCR 16→5, FNL 3→1; POSITIVE CONTROL manpower_exhaustion_trap (explicit claim-mountain, non-compliant) still fires FNL via source 1 — wrong path removed, detector intact. Signature prevalence is citable as a claims statistic from the rebuild's story 1.
 **Statistics reset No. 2 (2026-06-11, OQ-109 Phase B2):** the one-shot example cut over from
-`verification_bottleneck.json` (the bait-template source) to the stakeholder-surface
-`agent/example_platform_commission.json` at the commit landing this note — signature-prevalence
-statistics reset AGAIN at that commit. The example-inherited signature list (what post-reset
-prevalence must discount as copied-from-example vs pre-existing) is
+`verification_bottleneck.json` (the bait-template source) to
+`agent/example_platform_commission.json` — prevalence statistics reset AGAIN at that commit;
+example-inherited signature list:
 `audits/2026-06-11_oq109_phase_b/EXAMPLE_INHERITED_SIGNATURES.md`.
-**Origin:** 2026-06-04 session: "is the ~95% disguise-signature dominance substantive or a
-generator artifact?" (older-evaluation question re-examined on the live corpus). Probes 0–5;
-raw artifacts: `audits/2026-06-04_fnl_bait_confound/fnl_probe0_file_constraint_map.json`,
-`audits/2026-06-04_fnl_bait_confound/fnl_probe0_reconciliation.json`, `audits/2026-06-04_fnl_bait_confound/fnl_probe1_attribution.{pl,jsonl}`,
-`audits/2026-06-04_fnl_bait_confound/fnl_probe2_counterfactual.{pl,jsonl}`, `audits/2026-06-04_fnl_bait_confound/fnl_probe3_coupling_by_band.json`.
+**Origin:** 2026-06-04 session. Probes 0–5; raw artifacts under
+`audits/2026-06-04_fnl_bait_confound/` (fnl_probe0–3 files).
 
-**Specific question:** FNL (827/1106 readings) is supposed to detect constraints that *claim
-naturality* and fail Boltzmann independence. All 827 firings ride `claimed_natural/2` source 2
-(`constraint_classification(C, mountain, _)` — any single authored perspective), and that
-perspective is a generation-template convention (the one-shot example
-`agent/verification_bottleneck.json` contains "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL
-LAW VIEW (MOUNTAIN)" at (analytical, analytical); 908/1106 constraints author one at exactly
-that tuple, 922 at some context). Which remediation lever applies — and until one is ruled,
-**no FNL prevalence figure may be cited as a detection result**.
-
-**Evidence (all witnessed 2026-06-04, denominator 1106 = testset constraints, 1:1 with files;
-per_constraint's 1107th entry is `catholic_church_1200`, an engine demo in
-`constraint_instances.pl`, excluded — the extra is NON-testset and no testset constraint is
-missing from per_constraint: only_pc = {catholic_church_1200}, only_files = ∅):**
-- **Probe 0 (funnel, exact):** FNL ⟺ (≥1 authored mountain perspective) ∧ Boltzmann
-  non_compliant, with zero exceptions both directions. 922 mountain-authoring → 827 FNL +
-  {48 FCR, 26 NL, 11 CI, 10 FSM} (the 95 non-FNL are exactly the 93 compliant + 2
-  inconclusive). 184 complement → 0 FNL. FNL ∩ inconclusive = ∅ (asserted).
-- **Probe 1 (attribution):** `fnl_evidence` Claim slot = `indexed_mountain_classification`
-  for **827/827**. Sources 1 (explicit claim, 41 files) and 3 (NL profile) contribute zero.
-  Controls: source-1 dispatch proven live; no natural_law id in the FNL set. In-session
-  signatures reproduce the pipeline 1106/1106.
-- **Probe 2 (counterfactual, the load-bearing witness):** retracting the 915 tuple-T
-  mountain FACTS (= 908 constraints holding ≥1; clearing
-  `cached_coupling`/`cached_classification`) gives the destination histogram FNL→FCR **809**,
-  FNL→FNL 14 (every one holds a non-T mountain perspective — set-equal; 922−908 = 14, the
-  plan's "~7" was a files-minus-facts subtraction; 13 hold only non-T mountains, 1 held both
-  and the non-T fact kept source 2 alive), FNL→constructed_high_extraction 4 (no rope
-  perspective, ε ≥ 0.62), FNL→{genuine natural_law, CI_rope} **0**. 809+14+4 = 827, closed. Sensitivity control flipped to its pre-named prediction
-  (`abrahamic_covenant__land_promise_constraint` → false_ci_rope); specificity control: 41
-  explicit-claim constraints unchanged; collateral: 0. **Read as bait fungibility, NOT
-  substance:** the disguise aggregate barely moves (1046→1042) because the ex-FNL mass lands
-  in FCR via the *other* template perspective (`appears_as_rope` source 2 — 1063/1106 files
-  author a rope perspective, the prompt's Mandatory Perspective #2). An aggregate FNL+FCR
-  delta is the wrong observable; the histogram is the witness.
-- **Probe 1b (FCR is the same gate pattern, attribution-level):** FCR appearance source:
-  indexed_rope_classification 174 / explicit_rope_claim 45 / low_extraction_profile 0.
-  No FCR counterfactual was run — conclusions about the combined "94.5% disguise" figure are
-  NOT licensed by this session's witnesses.
-- **Probe 5 (the detector did ZERO discriminating work on FNL):** of the 189 FNL firings that
-  overrode a non-tangled_rope authored claim (snare 166, rope 13, scaffold 5, piton 5), the
-  discriminating subset {override} ∩ {source 1 or 3} = **∅**; 188/189 were metrically
-  consistent with their own claimed type's context-free gates — the lock steamrolled
-  consistent claims. The single gate-inconsistent case
-  (`decalogue_image_prohibition__moderate_iconoclast_reading`: snare claim, supp 0.58 vs the
-  0.60 floor — a 0.02 miss; ε 0.52 passes) ALSO fired via source-2 bait
-  (`fnl_claim_source: indexed_mountain_classification`, probe1 jsonl; bait perspective at
-  `.pl:181`) — a coincidental landing on a marginally mislabeled file, credit to author
-  error, not detection. Substantive yield of 827 firings: 0 detected, 1 coincidental. Second
-  bait witness: `acceptable_risk_energy__catastrophic_tail_reading.pl:186` ("Engine will flag
-  this as false summit").
-- **Probe 3 (context, confounded run):** non-compliance ≥ 85% for every ε band ≥ 0.3 (100%
-  at 0.3 and ≥ 0.6); compliance lives almost entirely at ε < 0.2. Mid-ε constraints fail the
-  4×3 grid essentially by construction.
-- Downstream stakes: the tangled_rope ~70% dominance is inherited from authored
-  `claimed_type` (779/1106 tangled_rope; 638/827 FNL were already claimed tangled_rope — the
-  FNL→tangled_rope lock confirms the authored claim). Any paper text citing the trifurcation
-  / tangled_rope dominance / "95% disguised" inherits the artifact.
-
-**What resolution changes:** Three levers, mutually compatible, ruling is the user's:
-(1) narrow `claimed_natural` source 2 / `appears_as_rope` source 2 (engine change; reshapes
-current-corpus statistics and cascades into papers); (2) de-bait the generation example/prompt
-(`agent/verification_bottleneck.json`, `prompts/constraint_story_generation_prompt_json.md`
-mandatory perspectives — future generation only); (3) adopt the OQ-65 framing corpus-wide
-(bait as committer-axis signal; bucket FNL statistics into bait-driven vs substantive in all
-reporting). Cross-links: OQ-65 (same phenomenon, FSM, n=12), OQ-43/OQ-44 (gate-quality
-family), OQ-48 (threshold recalibration would change Probe 3's bands), OQ-49 (override
-prevalence at 3000-scale).
-
-**Post-de-leak persistence check (2026-06-05, live-corpus first 20):** the bait convention SURVIVES at reduced rate — 5/20 stories author a mountain perspective, and all 5 put it at the (analytical, *) bait tuple (pre-de-leak: 908/1106 ≈ 82%). The assembled payload still ships the one-shot example containing the ANALYTICAL OBSERVER mountain perspective. The remediation ruling (claimed_natural source-2 semantics, and/or example de-baiting) is now a PRE-CORPUS-BUILD item: every story generated before it inherits the confound.
+**Resolution note (kernel_v1, n=1106; full probe detail in git history).** All 827 FNL firings
+rode `claimed_natural/2` source 2 (any single authored mountain perspective — a template
+convention: 908/1106 author one at the exact bait tuple; sources 1 and 3 contributed zero).
+Probe 2 counterfactual (the load-bearing witness): retracting the bait perspectives migrated
+FNL→FCR 809, FNL→FNL 14, →constructed 4, →{genuine NL, CI_rope} **0** — bait fungibility (the
+ex-FNL mass lands in FCR via the sibling `appears_as_rope` source 2), so the histogram is the
+witness, never the aggregate. Probe 5: substantive yield of 827 firings = 0 detected, 1
+coincidental. Downstream: the tangled_rope ~70% dominance inherited authored `claimed_type` —
+papers citing trifurcation/dominance/"95% disguised" inherit the artifact. Per_constraint note:
+pre-2026-06-04 outputs carry the non-corpus `catholic_church_1200` demo entry. Post-de-leak
+persistence (2026-06-05, live first 20): bait convention survives at reduced rate (5/20, all at
+the bait tuple) — which made the class ruling a PRE-CORPUS-BUILD item, executed as `72ec2cdd`.
+Cross-links: OQ-65 (FSM analog), OQ-43/OQ-44 (gate-quality family), OQ-48 (Probe 3 bands),
+OQ-49 (override prevalence), OQ-109 (example cutover).
 
 ## OQ-71 — Depth-lineage probe: does kernel-nesting depth re-open structural-class discovery, or saturate like breadth?
 
@@ -4025,63 +2899,30 @@ mixed haiku/live 10-kernel pilot substrate. NOT resolved as "the axiom axis now 
 auditable ontology on the corpus OQ-75(b) will cite" — that claim is earned only by the live
 scale-up spend-go below.
 **Priority:** 1
-**Origin:** 2026-06-05 generation-pipeline audit (brief F5). Evidence: `axiom_diff.pl:49-72` —
-`exact_name` alignment is structurally all-blind (0 of 935 within-kernel reading-pairs share an
-axiom NAME), so all non-trivial alignment required the hand-authored `axiom_concept/2` declared
-seat (empty everywhere but the westphalia test fixture).
+**Origin:** 2026-06-05 generation-pipeline audit (brief F5). `axiom_diff.pl:49-72` `exact_name`
+alignment is structurally all-blind (0/935 pairs share an axiom NAME).
 
-**Resolution (2026-07-04; audit `audits/2026-07-03_oq72_concept_key_pilot/`; commits `5494cbee`
-→ `046233a0` + close commit).** Built and witnessed: per-axiom label assignment against
-operator-ratified kernel-scoped vocabularies (blind to pairing — fresh subagents, one reading
-file + ratified vocabulary each), alignment unchanged as the existing concept-equality join;
-baked into the new canonical `prolog/axiom_concept_registry.pl` (71 facts, tranche 1) by the
-fail-closed `python/axiom_concept_bake.py`, loaded from `stack.pl`. Checkpoints R1/R2/R3 all
-operator-ratified. All six pre-registered controls passed with pasted witnesses: C1 within-kernel
-positive 3/3 named contradiction pairs aligned under blind assignment; C2 3/3 contained live
-pairs surfaced in real `axiom_diff` output (digital_money as the westphalia-shape DISPARITY cell
-`[conventional,deontological]|[conventional]`); C3 conversion floor 10/10 kernels (bar ≥7/10);
-C4 lexical adversary fired with its own planted-pair control; C5 westphalia join/regression green
-(re-frozen as fixture substrate — see build note below); C6 baker refused a planted unratified
-row fail-closed. False-merge rate 0/71 (bar ≤10%). Both kill-condition legs NOT tripped.
-**Epistemic reframe (operator ruling, R1):** the key does NOT move the axiom axis to "discovered"
-footing — the pre-close "what resolution changes" line claiming same-discovered-footing was
-WRONG. The key relocates the ruling from per-pair hand-authoring to vocabulary granularity and
-swaps a silent seat for an explicit RATIFIED one (operator author of record): an auditable
-ontology instead of an invisible one. OQ-75(b) accordingly correlates a discovered observer leg
-against a ratified axiom leg (asymmetry note + pending ruling logged in OQ-75).
-**Criterion-scope observation (pre-registered before the sweep, R2_RULING):**
-`cs_axiom_contradiction` does not universally mean same-subject — 2 of visual_evidentiary's 3
-pairs oppose ACROSS subjects (feasibility × warrant-source) and cannot align under any
-assignment; scale-up must not assume contradiction⟹same-subject.
-**Scale-up recipe (separate operator spend-go):** Haiku-batch proposer over the remaining
-multi-reading kernels (~321 haiku + ~10 live; the twins carry zero contradiction facts, so the
-criterion's discriminating case stays live-leg-only), reusing the same PROPOSAL → R2 vocabulary
-ratification → blind assignment → R3 row ratification → bake path; R2/R3 remain human seats —
-batch only the proposer.
-**SCOPE-time drop-in (recorded, not built):** concept label as an optional per-axiom
-generation-schema field, ratification-gated, flips on by config at rebuild — declared absence
-logged in `docs/design/design_gaps.md`.
-**Report surface (landed post-close, 2026-07-04, operator-directed):** kernel-level "Axiom
-concept alignment" section in `python/tensions_ledger.py` (the OQ-101 deterministic ledger —
-a disparity cell IS a tension), computed fresh each run by swipl over the live corpus + registry
-(no stale sidecar); coverage three-valued per kernel (RATIFIED cells / NOT-YET-RATIFIED / no
-pair exists) so unratified never reads "no shared subjects" (OQ-197 pattern). Baker also emits
-`axiom_concept_tranche_kernel/1` coverage facts (concept facts byte-identical across the regen).
-Per-constraint `enhanced_report.py` deliberately NOT wired — wrong altitude (the product is
-cross-reading); revisit only if a per-kernel report family ever exists. The section carries an
-in-run TWO-SIDED join control (known same-concept pair must align, known distinct pair must
-not; halt(3) otherwise, fired-status rendered into the section) so a zero-cell kernel is
-"looked and found none," never a clean-empty registry rendering as no-tensions. **Scope note
-for citers:** the pilot's C1/C2 "3/3" scored the PRE-REGISTERED pairs only — the key surfaces
-MORE structure than the controls sampled (first ledger run immediately found an unsampled
-`moral_causation_locus__accountability_intervention_locus` disparity, deontological vs
-instrumental). The ledger is the fuller running witness; the pilot was the seed — do not cite
-3/3 as the ceiling of what the key finds.
-**Build note:** closing this OQ surfaced and fixed two pre-existing test defects
-(`tests/test_axiom_diff.pl`): the westphalia tests froze pre-regime-swap corpus content and had
-been silently unrunnable-green since 2026-06-20 (no leg carries the 4 mapped names — now
-fixture-local), and their cleanup's blanket `retractall(axiom_concept(_,_))` would have wiped the
-baked registry mid-session (now scoped to the 4 fixture names; post-run count witnessed 71).
+**Resolution note (audit `audits/2026-07-03_oq72_concept_key_pilot/`; commits `5494cbee` →
+`046233a0` + close commit).** Built: blind per-axiom label assignment against operator-ratified
+kernel-scoped vocabularies; baked into canonical `prolog/axiom_concept_registry.pl` (71 facts,
+tranche 1) by fail-closed `python/axiom_concept_bake.py`, loaded from `stack.pl`. All six
+pre-registered controls passed; false-merge 0/71; kill conditions not tripped. **Epistemic
+reframe (operator ruling, R1 — operative):** the key does NOT move the axiom axis to "discovered"
+footing; it relocates the ruling from per-pair hand-authoring to vocabulary granularity and swaps
+a silent seat for an explicit RATIFIED one (OQ-75(b) correlates a discovered observer leg against
+a ratified axiom leg). **Criterion-scope (pre-registered, operative for scale-up):**
+`cs_axiom_contradiction` does not universally mean same-subject — scale-up must not assume
+contradiction⟹same-subject. **Scale-up recipe (separate operator spend-go):** Haiku-batch
+proposer over remaining multi-reading kernels (~321 haiku + ~10 live), same PROPOSAL → R2
+vocabulary ratification → blind assignment → R3 row ratification → bake path; R2/R3 stay human
+seats. SCOPE-time drop-in recorded as declared absence in `design_gaps.md`. **Report surface
+(landed 2026-07-04):** kernel-level "Axiom concept alignment" section in
+`python/tensions_ledger.py` (OQ-101 ledger), fresh each run, three-valued coverage (OQ-197
+pattern), in-run TWO-SIDED join control (halt(3) otherwise). **Scope note for citers
+(operative):** the pilot's 3/3 scored the PRE-REGISTERED pairs only — the ledger is the fuller
+running witness; do not cite 3/3 as the ceiling. Build note: closing surfaced + fixed two
+pre-existing `tests/test_axiom_diff.pl` defects (silently-unrunnable-green westphalia fixtures;
+a blanket `retractall` that would have wiped the baked registry — now scoped, count witnessed 71).
 
 ## OQ-73 — Cross-cultural frame probe: does the reading-set move when the generation frame moves?
 
@@ -4103,60 +2944,29 @@ instruction is already live and is itself a frame-diversity lever.
 
 ## OQ-74 — coordination_type: kernel-intrinsic or reading-relative? (55% sibling disagreement awaits a ruling)
 
-**Ω-type:** Ω_C (what KIND of fact coordination_type is), with an Ω_P edge (the ruling is the operator's, not the evidence's).
+**Ω-type:** Ω_C (what KIND of fact coordination_type is), with an Ω_P edge (the ruling is the operator's).
 
 **Status:** resolved — core RULED reading-relative 2026-06-14; OQ-49 hand-up limb moot (positive-controlled)
-**Origin:** 2026-06-05 generation-pipeline audit (brief F9 + §3). Re-witnessed on the live corpus:
-158 of 286 kernels with ≥2 coordination-typed readings have siblings DISAGREEING on
-coordination_type (55%; e.g. `border_normative_status` spans enforcement_mechanism /
-identity_coordination / resource_allocation). coordination_type is signature-layer-ACTIVE via the
-complexity offset (OQ-30: 48 type flips), so the disagreement is not cosmetic.
+**Origin:** 2026-06-05 generation-pipeline audit (brief F9 + §3). Live re-witness: 158/286
+kernels with ≥2 coordination-typed readings have siblings disagreeing (55%);
+signature-layer-ACTIVE via the complexity offset (OQ-30: 48 type flips).
 
-**Specific question (the operator's ruling):** if coordination_type is constraint-intrinsic, the
-158 disagreements are authored contradictions needing adjudication; if genuinely reading-relative,
-it is a seventh authored field (each reading legitimately sees a different coordination function)
-and the disagreement is signal. **Do not promote coordination_type into `classify_from_metrics` as
-an authored input before this ruling** — it would add authored control over the computed output
-(the de-leak principle, in reverse). No-regret items already done 2026-06-05: linter 4→6 fix +
-canonical 6-value table + offset-active/floor-inactive asymmetry recorded in
-`docs/logic_extensions.md` (commit `29cd45d4`).
+**RULED 2026-06-14 (operator, Ω_C/Ω_P — still-operative):** coordination_type is
+**READING-RELATIVE** — a seventh authored field; the 55% sibling disagreement is **signal, not
+authored contradiction** (no adjudication owed). **The standing guard HOLDS: do NOT promote
+coordination_type into `classify_from_metrics` as an authored input** (authored control over the
+computed output — the de-leak principle in reverse). It stays signature-layer-active via the
+complexity offset only. No-regret items done 2026-06-05: linter 4→6 fix + canonical 6-value table
++ offset-active/floor-inactive asymmetry in `docs/logic_extensions.md` (commit `29cd45d4`).
 
-**RULED 2026-06-14 (operator, Ω_C/Ω_P) — coordination_type is READING-RELATIVE.** It is a
-**seventh authored field**: each reading legitimately sees a different coordination function, so the
-158/286 (55%) sibling disagreement is **signal, not authored contradiction** — no adjudication of the
-disagreements is owed. **The standing guard HOLDS:** do NOT promote coordination_type into
-`classify_from_metrics` as an authored input (it would add authored control over the computed output —
-the de-leak principle in reverse). coordination_type stays signature-layer-active via the complexity
-offset (OQ-30), which is the reading-relative effect, not a metric-classification input. The
-`docs/logic_extensions.md` 6-value table + offset-active/floor-inactive note already frame it this way.
-
-**Hand-up FROM OQ-49 (2026-06-14, `audits/2026-06-14_oq49_remeasure/`) — characterized, not raw.**
-OQ-49's split-close re-measured the signature-override layer on live and dispositioned its residual
-here under the seat frame. The residual is the **full FNL override-effective union = 14** across the
-twins (testsets 0 / haiku 6 / flash 8; snare→TR 0/4/4 + scaffold→TR 0/2/4; ids in
-`fnl_survivor_coordination.txt`). It arrives **already characterized: 14/14 carry coord+asym**
-(coordination-function AND asymmetric-extraction present), positive-controlled (the coord=0 arm fires
-elsewhere — haiku 18 `no_coord` — so the empty coord=0 subset is a fact about the union, not a dead
-probe). **What the tag means for the witness-not-verdict pass: these are genuine metric-vs-signature
-seat divergence, not laundering** — the structure (coord+asym) is present, the metric clause labeled
-it lower (snare/scaffold) by cascade precedence + coordination-blindness, and FNL→TR supplies the
-omitted coordination-awareness. The clean-laundering coord=0 pure-extraction subset is **empty** on
-live (the human-stakes sub-population the (a)/(b) ruling was reserved for — there is none to rule).
-Carry the coord+asym tag across; do not re-derive it. *(Distinct from OQ-74's coordination_type
-core — shares the seat frame, lands as a metric/signature-seat residual.)*
-
-**OQ-49 hand-up limb — MOOT (positive-controlled 2026-06-14).** The "coord=0 clean-laundering subset
-is empty" claim drops a *reserved human-stakes (a)/(b) sub-ruling* on a 0-count, so it required a
-positive control before the limb could be tagged moot ("I didn't find it ≠ it isn't there"). The
-README's original control fired the coord=0 and asym arms *separately*; the **conjunction** probe
-(`clean_laundering(C) :- has_asymmetric_extraction(C), \+ has_coordination_function(C)`, asserting the
-base `constraint_victim`/`constraint_beneficiary` facts since the rule heads are static) is now
-positive-controlled on **both twins**: a synthetic coord=0+asym row **is returned** (PC ok), a
-coord+asym row is **excluded** (NC ok), and clean_laundering over the FNL override-effective union
-returns **0** (haiku 6 ids, flash 8 ids). The empty subset is a real fact about the corpus, not a dead
-probe ⇒ the (a)/(b) limb is **moot**. Witness:
-`audits/2026-06-14_oq49_remeasure/coord0_conjunction_positive_control.txt`. The 14 coord+asym
-override-effective readings remain two-seat metric/signature signal under the OQ-74 core ruling above.
+**OQ-49 hand-up (2026-06-14, `audits/2026-06-14_oq49_remeasure/`):** the FNL override-effective
+residual (14 across the twins) arrived already characterized 14/14 coord+asym — genuine
+metric-vs-signature seat divergence, not laundering (FNL→TR supplies the coordination-awareness
+the metric cascade omits). The reserved (a)/(b) human-stakes limb is MOOT, positive-controlled:
+the coord=0 clean-laundering conjunction probe returns a planted synthetic row (PC ok), excludes
+coord+asym (NC ok), and returns 0 over the union on both twins — a real fact about the corpus,
+not a dead probe. Witness:
+`audits/2026-06-14_oq49_remeasure/coord0_conjunction_positive_control.txt`.
 
 ## OQ-75 — Stage-2 corpus rebuild under the de-leaked pipeline: diff distribution + cross-axis invariance correlation
 
@@ -4596,50 +3406,27 @@ the author; ADDITIONALLY no tightening of bin boundaries toward config threshold
 
 ## OQ-79 — c-orchestrator recognizes kernels but silently drops their readings; flat-entry topics never engage the kernel question
 
-**Ω-type:** Ω_E (the loss is witnessed and counted) + an Ω_P design call (should the flat-entry path hold the kernel-vs-flat perturbation at all, or delegate).
+**Ω-type:** Ω_E (the loss is witnessed and counted) + an Ω_P design call.
 
-**Status:** resolved — both mechanisms closed. mechanism-1 (recognized-then-dropped): c-orchestrator generates recognized kernel readings via the unified backend (P3, commit a7d56a14; witnessed: Zionism's 3 readings land with cs_kernel_id). mechanism-2 (never-engaged / flat-miss): the **kernel-first router** (2026-06-06) makes `_step_decompose` use the PRIMED scope prompt — reused from gkc `_scope_user_prompt` (single source, both front-ends share uke_scope_v2_json.md §1.3-K) — so EVERY topic now engages the kernel question, replacing the old unprimed §3-independence prompt that never asked. Witnessed end-to-end via the front-end (`--dry-run --skip-search`): magnifica → `is_contested_kernel=true`, 3 readings, where the unprimed path flattened it to 12 axes; flat topic → `is_contested_kernel=false` (reasoned rejection: "kernel hypothesis tested and correctly rejected"). Phase 0 (`outputs/kernel_first_phase0/PHASE0_READOUT.md`) characterized the primed verdict as **KERNEL-LIBERAL**: routes to kernel whenever a foundational reading is *constructible* (= the topic is contentful, `docs/seat-theorem-v1.md` Coupling Theorem), flat only when the situation settles it (ISO-8601 / drive-on-right held flat by reasoning; loud means-disputes reading-wars/nuclear routed kernel). Operator ruling **LIBERAL** (2026-06-06), two conditions: (1) kernel-positive label **DEMOTED** to "admits a foundational construction" — dominance UNJUDGED, never "certified dominant kernel" (a downstream count/headline/essay reading it as dominant commits the seat-theorem no-seat pose, since no seat-free dominance ranking exists — §6); (2) promotion policy = **ACCRUE UNCURATED** (a *seated* dominance stage is permitted but DEFERRED — design it against a witnessed pile, not blind). A3 grounding-leg **DROPPED**: Phase 0 showed it's the wrong instrument (over-routed readings have real constituencies → grounding confirms, not flags). The eyeball (`coherence_eyeball`) is the **liveness** backstop (catch a contentless topic fabricated as contentful), NOT a dominance gate. gkc `--scope` unification still partial (OQ-82).
-**Origin:** 2026-06-06 n=91 corpus review. Operator observed that fed topics with obvious kernel
-structure (Zionism, germline editing) came out flat. The persisted flat-run manifests
-(`outputs/kernel_manifests/flat/`) split this into TWO mechanisms:
-
-1. **Recognized-then-dropped (a bug).** Zionism: SCOPE returned `is_contested_kernel=True`,
-   `kernel_id=zionist_legitimacy_basis`, 3 readings (national_liberation / settler_colonial /
-   religious_restoration), and emitted all three into `generation_sequence`. But kernel readings
-   live in `commitment_system_recognition.readings`, NOT `manifest["axes"]`, and
-   `_step_generate` resolves only `axes` → the 3 readings hit "Axis … not found, skipping" and
-   were **silently discarded**. The 6 flat supplementary axes landed (`british_mandate_scaffolding`,
-   `transfer_doctrine`, … are in the corpus); the contested readings — the point of reading Zionism
-   structurally — evaporated while the run reported success. Absence-presenting-as-presence at the
-   generate seam.
-2. **Never-engaged (OQ-76 in the wild).** 13/15 flat manifests have NO `csr` block at all — the
-   kernel question never fired. germline editing, debt limit, healthcare, embryo: all plausibly
-   contestable, all flattened without the gate engaging. This is OQ-76's measured salience-driven
-   under-firing, now observed on real topics.
-
-**Design frame:** kernel-vs-flat is itself a seat — the same topic admits both constructions and the
-diff between them is signal (`the_perturbation_principle.md` §7.1, one level up from the within-kernel
-flat control). The flat-entry path (c-orchestrator) currently neither holds that perturbation (it
-under-engages it, mechanism 2) nor handles the kernel branch when it does engage (mechanism 1).
-Generate-both (OQ-76) covers the within-kernel direction only; the flat-miss / dropped-kernel
-direction — the unrecoverable one — is uncovered.
-
-**Mitigation landed:** mechanism-1 silent loss → a LOUD, distinct, ledgered signal
-(`KERNEL_RECOGNIZED_BUT_UNDELIVERABLE` in `generation_failures.jsonl`; the persisted manifest makes
-it recoverable via `generate_kernel_corpus --scope`). The "skipping" line no longer reads as benign.
-
-**Open (the operator's design call):**
-- **Mechanism 1 fix — deliver vs delegate.** Either (a) c-orchestrator generates kernel readings
-  itself (ports gkc's KERNEL CONTEXT prompt + flat-control + integrity machinery — risks the
-  silent-fork, Pattern 2), or (b) on `is_contested_kernel`, c-orchestrator auto-delegates the
-  topic to gkc's `--scope` flow (reuse, no fork; needs the free-text topic → kernel-seed bridge).
-  Recommend (b).
-- **Mechanism 2 — curate vs improve the gate.** Near-term: for topics the operator judges to be
-  kernels, assert via `kernel_seeds.json` + `--scope` rather than trusting the gate (it is
-  measured-unreliable, K1). Longer: K2 (phrasing-sensitivity, OQ-76) diagnoses why it under-fires.
-- **Recoverable now:** the dropped Zionism kernel's readings are in its persisted manifest — re-run
-  that topic through gkc to capture them; the 6 flat Zionism axes already in the corpus can stay
-  (they are a legitimate flat construction — keeping both IS the topic-level construction pair).
+**Status:** resolved — both mechanisms closed. Mechanism-1 (recognized-then-dropped, the Zionism
+readings silently discarded at the generate seam): c-orchestrator generates recognized kernel
+readings via the unified backend (P3, commit a7d56a14; witnessed: Zionism's 3 readings land with
+cs_kernel_id); the silent loss is also a LOUD ledgered signal
+(`KERNEL_RECOGNIZED_BUT_UNDELIVERABLE` in `generation_failures.jsonl`). Mechanism-2
+(never-engaged, 13/15 flat manifests had no csr block — OQ-76 in the wild): the **kernel-first
+router** (2026-06-06) makes `_step_decompose` use the PRIMED scope prompt, reused from gkc
+`_scope_user_prompt` (single source, `uke_scope_v2_json.md` §1.3-K) — every topic engages the
+kernel question. Witnessed end-to-end: magnifica → kernel with 3 readings (unprimed path
+flattened it to 12 axes); flat topic → reasoned rejection. Phase 0
+(`outputs/kernel_first_phase0/PHASE0_READOUT.md`) characterized the primed verdict as
+**KERNEL-LIBERAL**; operator ruling LIBERAL (2026-06-06) with two conditions (still-operative,
+also in CLAUDE.md Critical Distinctions): (1) kernel-positive label DEMOTED to "admits a
+foundational construction" — dominance UNJUDGED, never "certified dominant kernel"; (2)
+promotion policy = ACCRUE UNCURATED (a *seated* dominance stage permitted but DEFERRED). A3
+grounding-leg DROPPED (wrong instrument); the eyeball is the liveness backstop, NOT a dominance
+gate. gkc `--scope` unification remainder → OQ-82.
+**Origin:** 2026-06-06 n=91 corpus review; flat-run manifests `outputs/kernel_manifests/flat/`.
+Design frame: kernel-vs-flat is itself a seat (`the_perturbation_principle.md` §7.1).
 
 ## OQ-80 — generate-step token totals are unthreaded through the unified backend: reports 0, meaning "not measured"
 
@@ -4674,36 +3461,17 @@ absence presenting as a measured zero (Build-Discipline spine).
 
 **Status:** resolved — injection-governance premise falsified by code-read (2026-06-21); the
 remaining one-path/waves cleanliness is deferred-known, relocated to `design_gaps.md` GAP-15
-under the alpha→beta posture. NOT a `--scope` rewire — none was done; the disposition is "this is
-no longer an open question."
+under the alpha→beta posture. NOT a `--scope` rewire — none was done.
 
-**Origin:** 2026-06-06 backend merge. The BUG (c-orch dropping kernels) was fixed (OQ-79 mech-1).
-Two manifest-capable generation paths still coexist: the unified backend `generate_from_manifests`
-(waves + the OQ-81 suppression `_flat_seeds_from_manifest`, called only by c-orchestrator) and the
-legacy `--scope` flow (gkc `main()` → `build_batch_requests` → one batch, no waves →
-`process_batch_results`). OQ-81 raised this to Priority 1 on the worry that `--scope` was the only
-generation route the injection-suppression predicate did not govern ("probably never injected
-verdicts… a code-read away from confirmed never").
-
-**Resolution (the code-read, witnessed 2026-06-21):** the `--scope` path is **structurally
-injection-free** — confirmed never, not probably. `build_batch_requests`→`build_cached_messages`
-(gkc.py:419) never calls `upstream_context` (single call site :963, inside `_seed_messages` →
-invoked only at :1034 within `generate_from_manifests`); the injection-carrier dict
-`generated_by_id` is constructed only inside the unified backend (:1010, populated :1056) and the
-`--scope` `main()` never builds it; indirection ruled out (no `globals()`/dispatch/alias to
-`upstream_context`; the four `getattr` hits are jsonschema/usage/model/args). `build_cached_messages`
-injects only the kernel's own authored substrate (sibling reading IDs, structural delta), never a
-computed sibling verdict — exactly what OQ-81 rules safe ("kernel substrate reaches the prompt via
-CSR"). So the last injection-governance gap was never a gap; the urgency that raised this to P1 is
-gone.
-
-**Disposition (operator ruling, 2026-06-21):** close. What remained after the premise died is not
-an open *question* but a backlog task with a known disposition — pure one-path cleanliness + a
-waves *enhancement* on a working, injection-safe, currently-dormant legacy path (live corpus has
-zero kernels; the rewire can't be witnessed end-to-end now). That work folds into the eventual
-rebuild and is recorded as a deferred-known design gap → **`design_gaps.md` GAP-15**. The genuinely
-still-open sliver — the Streamlit-era app orchestrators could re-inject if resurrected, since the
-suppression lives in the backend not the corpus — is carved out as its own entry → **OQ-172**.
+**Resolution note.** The `--scope` path is **structurally injection-free** — confirmed never, not
+probably: `build_batch_requests`→`build_cached_messages` (gkc.py:419) never calls
+`upstream_context` (single call site :963, reached only via `generate_from_manifests`); the
+injection-carrier `generated_by_id` is built only inside the unified backend; indirection ruled
+out. It injects only the kernel's own authored substrate — exactly what OQ-81 rules safe. So the
+last injection-governance gap was never a gap. Disposition (operator, 2026-06-21): what remained
+is a backlog task with a known disposition (one-path cleanliness + a waves enhancement on a
+dormant injection-safe path) → GAP-15, folds into the rebuild. The still-open sliver — the
+Streamlit-era app orchestrators could re-inject if resurrected — carved out as **OQ-172**.
 
 **Deps:** splits_from OQ-79, splits_from OQ-81; spawned OQ-172.
 
@@ -4712,61 +3480,32 @@ suppression lives in the backend not the corpus — is carved out as its own ent
 ## OQ-83 — Stakeholder-layer migration: replace the four-tuple authoring surface via the five/six-questions interview (the engine's first framing-perturbation)
 
 **Ω-type:** Ω_C (role-set-as-declared-frame — A4-settled with residue ledger) + Ω_E (cross-framing
-independence) + Ω_P (Type C vs B — transferred, see close note).
+independence) + Ω_P (Type C vs B — transferred).
 
 **Status:** resolved — measurement close-out (operator-scoped, 2026-06-11). All three Ω-types
 answered or relocated; engineering follow-through spun off: **OQ-109** (Phase B cutover + Phase C
 regen/retire), **OQ-110** (offline residual join + author-vs-derive D-fork). Evidence:
 `audits/2026-06-07_stakeholder_layer_migration/` (Phase A steps 1–4, AUDIT.md, MIGRATION_PLAN.md,
-STEP4C_PARTITION.md, TWO_AXIS_NOTE.md) + `audits/2026-06-11_oq83_close/` (Step-1 classifier-sync
-witness; close session). Full investigation narrative: git history of this entry.
+STEP4C_PARTITION.md, TWO_AXIS_NOTE.md) + `audits/2026-06-11_oq83_close/`. Full narrative: git
+history of this entry.
 
-**Close note (per Ω):**
-- **Ω_C SETTLED:** role-set-as-declared-frame ruled at A4 (85.0% alignment, middle band,
-  proceed + residue ledger; contender 6.3% stays in the ledger as declared evidence that the
-  frame treats contention relationally — contention is DERIVED, never authored).
-- **Ω_E MEASURED:** the straitjacket WAS escaped for everything `in_contention` exists to detect
-  (the 4b gate fired on a non-problem; OQ-85 silence-is-correct). Computed classification
-  survived every same-grain comparison in the 4c pilot (n=6, ε-pinned, bin-blind: 2 survived /
-  2 flipped / 2 unevaluable; both flips dissolved per-flip into victim-count ×
-  `critical_mass_threshold` resolution, not framing). Robust separate signal: claim-layer
-  framing effect 3/3 (stakeholder arm claims rope, four-tuple claims tangled_rope; the engine
-  corrects both to snare) — model-stable (3/3 under Sonnet, identical to Gemini).
-- **Ω_P TRANSFERRED, not answered:** observer-axis Type-B is architecturally foreclosed
-  (`TWO_AXIS_NOTE.md`, `two_axis_witness.py`: byte-identical observer orbit, different committer
-  verdict). The genuine C/B detection-independence question lives on the committer axis →
-  **OQ-87**. The deferred Type-C/B ruling did not evaporate; it relocated.
+**Close note (per Ω, compressed):** Ω_C settled at A4 (85.0% alignment; contention is DERIVED,
+never authored). Ω_E measured: the straitjacket WAS escaped for everything `in_contention` detects
+(OQ-85 silence-is-correct); computed classification survived every same-grain comparison in the 4c
+pilot; robust separate signal = claim-layer framing effect 3/3, model-stable. Ω_P transferred:
+observer-axis Type-B architecturally foreclosed (TWO_AXIS_NOTE, byte-identical observer orbit /
+different committer verdict); the genuine C/B question lives on the committer axis → **OQ-87**.
+R4 ruled SATISFIED (n=6 pilot diff preserved; corpus-scale census DECLINED-WITH-REASON; any
+re-open governed by the pre-registered extended (b) criterion — ε-pinned, bin-blind, two clean
+separately-generated arms). Classifier-sync resolved 2026-06-11
+(`audits/2026-06-11_oq83_close/STEP1_REPORT.md`; nb_setval hypothesis confirmed; milblogger
+mismatch graduated CLEAN on current code — OQ-90/OQ-44 moved the piton path; determinism fix
+in `transition_paths.pl`; flag inheritance → OQ-110).
 
-**R4 ruling (operator, 2026-06-11): SATISFIED.** The n=6 pilot diff satisfies "produced and
-preserved" — preservation witness: 18 tracked pilot-arm JSONs + `STEP4C_PARTITION.md`
-(the plan's earlier "20" reconciled: grep over `pilot` also caught 2 `phase_a_pilot_*` demo
-files). **Corpus-scale census: DECLINED-WITH-REASON** — TWO_AXIS gutted its payoff to
-generation-resolution characterization with no current consumer. What a re-open would buy is
-the untested STRUCTURE PASS (bin membership predicted by ε/signature/type; the pilot had no
-evaluable low-ε topic). Any re-opened census is governed by the pre-registered extended (b)
-criterion: same `(HasB,HasV)` boolean profile AND victim-count same-side-of-
-`critical_mass_threshold`, ε-pinned, bin-blind, two clean separately-generated arms (the live
-dual-surface prompt cannot serve as the framing perturbation).
-
-**Classifier-sync (entry item 5) RESOLVED 2026-06-11**
-(`audits/2026-06-11_oq83_close/STEP1_REPORT.md`): the nb_setval hypothesis CONFIRMED at
-clinical_deskilling_automation T=0 (set-manipulation closes the mismatch; controls pass);
-milblogger_legitimacy_erosion T=18 no longer mismatches on current code (OQ-90/OQ-44 moved the
-piton path) → graduates CLEAN; new ε-sourcing mismatch `challenge_as_commons_maintenance` T=5
-(grid-misalignment class, touches no counted flip, unflagged). Operator-ruled determinism fix
-landed (`transition_paths.pl`: snapshot_type clears the globals at entry; order-dependence
-witnessed before/after; the mismatch persists honestly — full snapshot_type ≡ classify_at_time
-remains FALSE with the semantic ε-sourcing divergence documented, by design). Flag inheritance
-→ OQ-110: clinical 0→2 documented exclusion; milblogger 12→18 clean.
-
-**Where each surviving obligation went (cold-reader index):**
-- **Consumer-side `Backed` verification** (the OQ-33 and OQ-46 closes both deposit it "with
-  OQ-83") → **OQ-110** — the offline residual join is the consumer that exercises the bit.
-- Phase B cutover, Phase C regen/retire, CLAUDE.md mandatrophy-note retirement, AUDIT OPEN-1/2
-  → **OQ-109**.
-- Author-vs-derive D-fork (time-varying role/d; C1/C2 pair) → **OQ-110** (operator ruling).
-- Type-C/B → **OQ-87** (committer axis). v7 §4.5 bridge census (item 4): LANDED 2026-06-11,
-  seams grep-witnessed (commit `5822c242`).
+**Where each surviving obligation went (cold-reader index):** consumer-side `Backed` verification
+(deposited by OQ-33 + OQ-46) → **OQ-110**; Phase B cutover / Phase C regen-retire / AUDIT
+OPEN-1/2 → **OQ-109**; author-vs-derive D-fork → **OQ-110**; Type-C/B → **OQ-87**; v7 §4.5
+bridge census LANDED 2026-06-11 (commit `5822c242`).
 
 **Rulings of record (still operative — kept per the compress-on-close exception; OQ-109 builds
 against these):** R1 drop authored per-seat perception (KEEP the computed perceived-vs-real
@@ -4775,41 +3514,27 @@ bundling stated. R3 `excluded` commentary-grade only; consumer = consensus-prove
 R4 preserve the A/B perturbation pair — ruled satisfied above; the pair stays preserved (audit
 dir now; Phase C archives the arm corpora with manifests). R5 sixth question
 (genealogy/obsolescence); mismatch consumer only; rewires the mandatrophy apparatus per A7
-(recovery, not net-new scope — abandonment was a dropped seam at the format migration,
-witnessed against git history). Contender: NO sixth role — contention is a structural RELATION
+(recovery, not net-new scope). Contender: NO sixth role — contention is a structural RELATION
 between seats, derived from opposed roles, never authored. Static roles now; time-varying
 role/d is OQ-110's fork.
 
-**Phase A landed surface (one line each; witnesses in the audit dir):** step 1 schema (7/7
-witness suite incl. negative controls); step 2 compiler (0/100 additivity diff; stakeholder/7 +
-secondary_role/3 + non_agent/2 + disappearance_verdict/2 + founding_problem_status/2;
-role-derived beneficiary/victim, excluded derives NOTHING); step 3 engine layer
-(`stakeholder_seats.pl`: per-(C,Name) d, `in_contention/3`, `seat_perceived_vs_real/4`,
-`consensus_provenance/2`, `zombie_piton_crosscheck/2` — all commentary-grade; name-keyed
-0.12/0.85 d-split causally located in the role params); 4b RENAMED-NOT-ESCAPED → OQ-85
-resolved silence-is-correct → 4c pilot partition (above). OQ-84 resolved in-pass. Stage C
-(OQ-92) made the live prompt dual-surface additively; the R4 control arm stayed intact.
+**Phase A landed surface (compressed; witnesses in the audit dir):** schema (7/7 suite);
+compiler (0/100 additivity; stakeholder/7 + secondary_role/3 + non_agent/2 +
+disappearance_verdict/2 + founding_problem_status/2; excluded derives NOTHING); engine layer
+`stakeholder_seats.pl` (per-(C,Name) d, `in_contention/3`, `seat_perceived_vs_real/4`,
+`consensus_provenance/2` — all commentary-grade). OQ-84 resolved in-pass; Stage C (OQ-92) made
+the live prompt dual-surface additively.
 
-**Follow-through landing (2026-06-16): R5 Q6 synchronic crosscheck COMPLETED.** The A7-recovered
-`zombie_piton_crosscheck/2` (dead × piton only, single confrontation) was replaced by
-`stakeholder_seats:q6_crosscheck/3` — the full status×computed-signature matrix, commentary-grade
-(NEVER overrides dr_type; sole caller `report_generator.pl:r5_zombie_crosscheck_line/1`). Four
-distinct non-verdict buckets kept separate (`q6_unmeasured` authored-absent / `q6_signature_unknown`
-computed-absent / `q6_unclassified` present-fell-through / out-of-domain → lint fail-loud). Cell
-names commit only to the synchronic mismatch — no trajectory or orientation vocabulary (the
-tier cannot witness Ω_P). Daylight qualifier axis (`founding_problem_corroboration_class/2`,
-authored atom; lint-gated) SHIPS INERT — all with-block stories read `daylight(unstated)` until a
-bounded R5 backfill authors the class; **the backfill is the OPEN graduation step for the daylight
-axis** (the status×signature matrix is fully live without it). Load-bearing witness settled:
-`dr_type/2` resolves at `default_context` = analytical perspective (constraint_indexing.pl:156–161),
-closing the proxy gap — `q6_unclassified` is WITNESSED 0 on the live corpus (no mountain/scaffold/
-naturalized at analytical) but corpus-REACHABLE on the twins (haiku=1, flash=5, all `live × mountain`)
-so the catch-all is real, not synthetic-only. Determinism (1 solution/story) + mode-robustness
-(bound-Cell census returns the genuine set, not all stories) witnessed on all 3 corpora.
-Audit + witnesses: `audits/2026-06-16_q6_crosscheck_completion/`. Deferred diachronic tier → **OQ-133**.
+**R5 Q6 synchronic crosscheck COMPLETED (2026-06-16):** `stakeholder_seats:q6_crosscheck/3` —
+full status×computed-signature matrix, commentary-grade (never overrides dr_type); four distinct
+non-verdict buckets kept separate; cell names commit only to the synchronic mismatch. Daylight
+qualifier axis SHIPS INERT (`daylight(unstated)` until a bounded R5 backfill authors the class —
+**the backfill is the OPEN graduation step for the daylight axis**). `q6_unclassified` witnessed
+0 live but corpus-reachable on the twins (haiku=1, flash=5). Audit:
+`audits/2026-06-16_q6_crosscheck_completion/`. Deferred diachronic tier → **OQ-133**.
 
-**Origin:** 2026-06-06/07 (feasibility → five-model review → operator mountain-and-frame
-re-read → audit-then-plan). Closed 2026-06-11.
+**Origin:** 2026-06-06/07 (feasibility → five-model review → operator re-read → audit-then-plan).
+Closed 2026-06-11.
 
 ---
 
@@ -4818,107 +3543,41 @@ re-read → audit-then-plan). Closed 2026-06-11.
 **Ω-type:** Ω_E (engine-hygiene; the edge-set difference is directly witnessable).
 
 **Status:** resolved — guard added at `inferred_coupling_protocol.pl` `compute_baseline_edges`
-(2026-06-07, OQ-83 step 3, same pass as the projection per the operator pin). Branch settled by
-git history BEFORE the edit (operator-required read): the coupling module was frozen 2026-02-18,
-three months before kernels existed; the guard arrived 2026-05-25 (`622d8ece`) at only the
-purity-network consumer; the coupling file never contained `cs_kernel_id` in its entire history —
-never-updated-when-kernels-arrived (bug), NOT deliberate divergence. Witnesses (audit dir
-`step3_guard_zombie.txt`): live corpus guarded=72 = unguarded=72 (zero kernels live — guard is a
-no-op today, fail-closed for kernel-bearing corpora); synthetic same-kernel control (consulted
-multifile facts; note `cs_kernel_id/2` is STATIC — assert throws, consult is the overlay tool):
-unguarded sees the pair (1), guarded filters it (0). Sole consumer `run_coupling_protocol` →
-`outputs/coupling_protocol.md` (run_pipeline.py:430).
+(2026-06-07, OQ-83 step 3, same pass as the projection per the operator pin).
 **Origin:** 2026-06-07, `audits/2026-06-07_stakeholder_layer_migration/AUDIT.md` §A6.
 
-The intra-kernel filter on `shared_agent_link/4` (`\+ (cs_kernel_id(C,K), cs_kernel_id(Other,K))`)
-exists at the contamination-network consumer (`drl_purity_network.pl:96–98`) but NOT at the second
-consumer: `inferred_coupling_protocol.pl:218–222` consumes `shared_agent_link(C1, C2, _, _)` raw
-(only `C2 \= C1`). Same-kernel shared agent names are filtered from contamination but DO enter
-`run_coupling_protocol`'s edge set. Live-corpus baseline (witnessed): 504 distinct agent atoms, 25
-shared across ≥2 constraints, 38 cross-constraint pairs; live corpus currently has zero kernels,
-so the path is latent, not firing — it goes live with the first same-kernel sibling readings
-sharing agent names (kernel generation re-enabled, or OQ-83 Phase A).
-
-**Resolution shape:** either add the guard at the second site (mirroring :96–98), or rule the
-asymmetry intentional (components analysis may WANT same-kernel edges) — operator call. Either
-way: enumerate `run_coupling_protocol` output consumers first (= AUDIT OPEN-3) and witness the
-edge-set diff with/without the guard on a kernel-bearing corpus overlay. Sequencing: resolve or
-rule BEFORE OQ-83 Phase A lands sibling readings, but do not gate it on the migration.
+**Resolution note.** Branch settled by git history BEFORE the edit: the coupling module was
+frozen 2026-02-18, three months before kernels existed; the guard arrived 2026-05-25 (`622d8ece`)
+at only the purity-network consumer (`drl_purity_network.pl:96–98`) — never-updated-when-kernels-
+arrived (bug), NOT deliberate divergence. Witnesses (`step3_guard_zombie.txt` in the audit dir):
+live corpus guarded=72 = unguarded=72 (zero kernels live — no-op today, fail-closed for
+kernel-bearing corpora); synthetic same-kernel control (consulted multifile facts —
+`cs_kernel_id/2` is STATIC, assert throws, consult is the overlay tool): unguarded sees the pair,
+guarded filters it. Sole consumer `run_coupling_protocol` → `outputs/coupling_protocol.md`.
 
 ---
 
 ## OQ-85 — Generated contention arrives as same-role co-administrators, which derived-contention cannot see (the 4b renamed-not-escaped finding)
 
-**Ω-type:** Ω_P (author-vs-derive contention — operator's to rule) + Ω_E (the generation
-behaviour is measurable and model-conditional).
+**Ω-type:** Ω_P (author-vs-derive contention — operator's) + Ω_E (generation behaviour,
+model-conditional).
 
 **Status:** resolved — silence-is-correct (operator-ruled 2026-06-07, against the read-only
 decomposition audit). `in_contention`'s scope was already right; the asymmetric-only escape is
-correct, not a limitation. Reports: `STEP4_4b_RENAMED_NOT_ESCAPED.md` (origin) +
-`OQ85_DECOMPOSITION_AUDIT.md` (audit) in `audits/2026-06-07_stakeholder_layer_migration/`.
+correct, not a limitation. Reports: `STEP4_4b_RENAMED_NOT_ESCAPED.md` +
+`OQ85_DECOMPOSITION_AUDIT.md` in `audits/2026-06-07_stakeholder_layer_migration/`.
 **Origin:** 2026-06-07, OQ-83 step-4 4b gate.
 
-**THE WITNESS (load-bearing, leads the record): `in_contention` feeds NO classifier.** Grep:
-zero consumers outside its definition site; `dr_type` / `classify_from_metrics` /
-`signature_detection` read neither `in_contention` nor `constraint_stakeholder`. It is a
-relational ANNOTATION — so its silence on co-equal antagonists cannot be a classification blind
-spot, regardless of any other argument. This is the fact that resolves OQ-85; everything below
-corroborates.
-
-**THE GENERAL RESULT (not corpus-contingent): the type is metric-driven and stays correct even
-with no anchor.** The constructed worst case `oq85_blindspot` — two co-equals both agenda_setter,
-ZERO victims, no powerless anchor — STILL computes `dr_type=snare` from ε/supp alone. So the
-silence is correct because classification doesn't need the pairwise relation *even when the
-anchor is absent* — a general property, not "correct on this corpus because real stories happen
-to carry a powerless payer."
-
-**CORROBORATION (the anchor argument — defensible, but not load-bearing):** both real stories DO
-carry a powerless structured anchor (streaming `independent_artists`, hospital `insured_patients`),
-making the between-setter rivalry second-order. This explains *why it's also defensible* but would
-hold even if false, because the two facts above already settle it.
-
-**Supporting (audit detail):** 1a — the only structured per-agent directional referent is
-role-derived `constraint_beneficiary/victim` (/2, per-constraint-global); multi-constraint,
-per-metric, pairwise `(C,A,B)` ABSENT. 1b dual-level — (TYPE) both stories compute `snare`
-(ε=0.7/supp=0.8), not claimed `rope`, engine already sees it; (PAIR) between-antagonist asymmetry
-is prose-only. Positive controls: W1 clean asymmetric pair → `in_contention` + d-split 0.25/0.85;
-blind-spot located+real yet type correct. A6 multi-constraint branch did not land → coupling
-recount not due.
-
-**Right-sizing (honest accounting):** the 4b gate did its job (stopped a run, surfaced a
-structural fact) but the fact was smaller than the gate's framing — an annotation predicate's
-scope matching what it's for, NOT "the migration re-imposed the straitjacket for half the cases."
-The cheap probe that would have right-sized this at the 4b gate, before the disentanglement
-reasoning, was the consumer grep ("does anything read `in_contention`") — it came three turns
-late. The excursion still banked the 1a inventory ceiling and the dual-level distinction, but the
-fastest path to the verdict was a consumer grep, not a feasibility audit.
-
-**Residual (filed standalone, NOT folded into the migration): OQ-86** — surface the pairwise
-who-extracts-from-whom as commentary for the rare no-anchor case. Unblocked, do-whenever; the
-migration neither needs nor carries it.
-
-The cross-framing experiment's gate revealed that, under the neutral stakeholder prompt,
-gemini-2.5-pro authors the canonical contention (two co-equal institutional players over a
-split) as **two `agenda_setter`s at the same power** — the opposition lives in the situation
-prose, not in any role-difference. `in_contention` and the per-(C,Name) d-split (OQ-83 step 3)
-only separate **agenda_setter/beneficiary vs payer**, so opposed co-administrators are
-structurally invisible; the one contention topic that did author opposed roles drifted the
-antagonists' power atoms apart instead. Net: the straitjacket is escaped for asymmetric-role
-opposition (step-3 mechanism, re-witnessed firing) and **re-imposed for co-equal-administrator
-opposition**, which is the shape the contention topics actually contained. This is the A4
-contender-residue (6.3%, "the dial-set backgrounds contention between co-equals") resurfacing at
-the generation layer with evidence — directly bearing on the operator's A4 ruling (no contender
-role; derive contention from opposed roles), whose premise (opposition shows up as
-role-difference) this evidence challenges.
-
-**Operator decision (candidates; none self-resolved):** (a) re-examine the derive-don't-author
-ruling against this evidence; (b) add an opposed-co-administrator case to `in_contention`/the
-d-model — but two agenda_setters share a role and nothing structured marks them opposed, so this
-needs a NEW authored opposed-pair signal, reopening author-vs-derive; (c) scope the migration's
-straitjacket-escape claim to asymmetric-role opposition only. Prompt-craft is NOT a default
-(would manufacture the finding); if pursued it must avoid contention-directive language.
-Gemini-conditional (single-model pilot; the 2×2 model×framing Ω under OQ-83 is unmeasured).
-**Phase B and 4c remain gated until this is ruled.**
+**Resolution note.** Load-bearing witness: **`in_contention` feeds NO classifier** (zero
+consumers outside its definition; `dr_type`/`classify_from_metrics`/`signature_detection` read
+neither it nor `constraint_stakeholder`) — an annotation predicate's silence cannot be a
+classification blind spot. General result (not corpus-contingent): the constructed worst case
+(`oq85_blindspot`, two co-equal agenda_setters, zero victims, no anchor) STILL computes
+`dr_type=snare` from ε/supp alone. Corroboration: both real stories carry a powerless structured
+anchor. Right-sizing lesson: the consumer grep was the fastest path to the verdict and came three
+turns late. Residual filed standalone as **OQ-86** (pairwise who-extracts-from-whom commentary
+for the rare no-anchor case). The gemini co-equal-administrator generation observation and the
+A4 contender-residue narrative are preserved in git history.
 
 ---
 
@@ -4928,35 +3587,22 @@ Gemini-conditional (single-model pilot; the 2×2 model×framing Ω under OQ-83 i
 
 **Status:** resolved — (2026-06-16) shipped as R3 commentary: `stakeholder_seats:extraction_reading/2`
 **Priority:** 1
-(+ `extractive_type/1`, `authored_victim/1`), the CID-anchored `report_generator:extraction_reading_line/1`
-(Section 7, beside the q6 crosscheck line), and the `extraction_reading` sidecar field
-(`enhanced_report:extract_extraction_reading`). Mirrors the q6 anchored-line→extractor→sidecar shape.
-Guard = constraint-level `dr_type(C) ∈ {snare,tangled_rope}` ∧ no **authored** victim ∧ ≥1
-beneficiary-side agent seat; names the beneficiary-side seats, flags the cost-bearer as prose-only.
-Per-seat-extractive deliberately NOT the key (it names the victim, not the extractor — plan W1/W2).
+(+ `extractive_type/1`, `authored_victim/1`), `report_generator:extraction_reading_line/1`, and
+the `extraction_reading` sidecar field. Guard = `dr_type(C) ∈ {snare,tangled_rope}` ∧ no
+**authored** victim ∧ ≥1 beneficiary-side agent seat.
 **Origin:** 2026-06-07, OQ-85 decomposition audit.
 
-**Witnesses & findings (plunit + cross-corpus census this session):**
-- **Calibration measured, not inherited:** ε=0.82/supp=0.91 + blindspot structure → `dr_type=snare`
-  (derived, not stubbed). Controls in `prolog/tests/test_oq86_extraction_commentary.pl` (24/24): positive
-  fires with both co-equals; channel-line witness; three single-variable negatives (type/victim/non-vacuity).
-- **Plan correction #1 — the data-repair bridge defeats a naive guard.** `data_repair.pl:153` (OQ-93
-  shim-family) FABRICATES `constraint_victim(C, inferred_subject)` whenever E>0.46 ∧ S>0.40 and no victim
-  is authored — i.e. on the EXACT blindspot metric profile. A literal `\+ constraint_victim(C,_)` guard is
-  therefore INERT on every real report (Build Discipline P5/P6: a success-shaped fabricated token fills the
-  no-victim hole). Fix: `authored_victim/1` excludes the fixed sentinel `inferred_subject`. Locked by a
-  regression test + an end-to-end channel witness (real `enhanced_report.run_prolog_report` path emits the
-  line + sidecar only WITH the exclusion).
-- **Plan correction #2 — NOT silent on the live corpus (plan predicted 0).** Fires on **3 live** constraints
-  (all `tangled_rope`, all no authored victim) — genuine blindspots, the feature working. Cross-corpus census:
-  testsets_haiku 10/960, testsets_flash 34/960 (all `tangled_rope`, all `[]`); **0** across kernel_v1/v5/v6/sotu
-  (~5,377 stories) — guard C correctly fail-closes there (those pre-stakeholder archives have 0 seat facts; 62
-  kernel_v1 constraints pass guards A+B but cannot name extractors → silence, not a fabricated value). EVERY
-  real firing is `tangled_rope`; omitting it from `extractive_type/1` would make the feature 100% inert on real
-  corpora.
-- **OQ-134 table-setting:** emitted through the same anchored-line→extractor→sidecar shape as q6_crosscheck,
-  so a future corpus-wide census (its `bundled_with` sibling) can aggregate it with one generic
-  per-constraint-commentary-sidecar exporter (coverage/denominator; buckets separate per P6), not a special one.
+**Witnesses & findings (compressed).** Controls `prolog/tests/test_oq86_extraction_commentary.pl`
+24/24. **Plan correction #1 (operative trap):** `data_repair.pl:153` (OQ-93 shim-family)
+FABRICATES `constraint_victim(C, inferred_subject)` on the exact blindspot metric profile, so a
+literal `\+ constraint_victim(C,_)` guard is INERT on every real report (Pattern 5/6) — fix:
+`authored_victim/1` excludes the fixed sentinel `inferred_subject`; locked by regression test +
+end-to-end channel witness. Plan correction #2: NOT silent live — fires on 3 live constraints
+(all tangled_rope, genuine blindspots); census haiku 10/960, flash 34/960, 0 across
+pre-stakeholder archives (~5,377 — correct fail-close, silence not fabrication); every real
+firing is tangled_rope, so `extractive_type/1` must include it. OQ-134 table-setting: emitted
+through the same anchored-line→extractor→sidecar shape as q6_crosscheck for a future generic
+census exporter.
 
 ---
 
@@ -5333,111 +3979,45 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 **Status:** resolved — built + witnessed 2026-06-26 (close-state 1: repair observed in real corpus, commentary-grade detector + report surface landed, asymmetry closed). Theory note: `docs/repair_dynamics.md` §8.
 **Priority:** 1
 
-**Finding (verified this session).** The type space is a dynamics, not a static taxonomy
-(coordination is maintained, not achieved — same content as commitment-systems' "drift is
-intrinsic"). `transition_paths.pl:transition_path/4` encodes **eight transitions, all downward / lateral-into-worse,
-none upward** (rope→tangled_rope, tangled_rope→snare, rope→piton, scaffold→{piton,snare,tangled_rope},
-snare→{piton,false_mountain}) — verified by full enumeration; positive control is that the eight decay
-paths are present, so an upward head would have surfaced beside them. The predicate is consumed by
-`drift_report.pl` (lifecycle) and **0 times in `run_pipeline.py`** — the live classification path
-carries no transition concept at all (static per-constraint). So the engine registers how a constraint
-falls, not how a scaffold lifts it. Mirrors (analogy) the five-questions-without-the-sixth bias: a
-decay/cost-finding apparatus that structurally cannot see repair.
+**Finding.** `transition_paths.pl:transition_path/4` encoded eight transitions, all
+downward/lateral-into-worse — the engine registered how a constraint falls, never how a scaffold
+lifts it. B1-scan: real corpora DO contain upward runs surfaced by the existing
+direction-neutral `degradation_chain`/`snapshot_type` instrument (testsets 2, kernel_v1 30 incl.
+multi-step homoousios/versailles snare→tangled_rope→rope; positive-controlled,
+`b1scan_finding.md`) — no new authored atom needed.
 
-**Three separations to hold when building (constraints, not preferences):**
-1. **Metaphors unwelded.** Repair ops on the rope (maintain / splice / replace) are the rigging
-   metaphor; the **scaffold** is the construction metaphor — the temporary alternative load-path
-   required to take a *load-bearing* constraint offline for repair (logic.md Thm 3, Supp ≥ 0.70),
-   struck on success / ossifies to piton if not. They are not the same operation; the type
-   vocabulary is multi-metaphor and does not compose.
-2. **Axes decoupled.** The repair dynamics rhymes with the committer/CS axis (drift / acknowledgment
-   / atrophy) but v7 Theorem 7 (Detection Independence) makes non-unification mandatory. Build the
-   observer-axis repair in observer-axis terms; do NOT import committer-axis machinery (analogy, not
-   bridge; only v7 §4.5 couples, citation at fixed-ε only).
-3. **Persistence mechanisms distinct.** Scaffold-cost (load-bearing, high-Supp — snare/rope register)
-   ≠ piton persistence (diffuse benefit / rational inaction, low-Supp). Do not collapse; piton
-   `fixing_cost` is OQ-90's open question, not scaffold-cost.
+**Operative rulings (kept):** (1) structural home = dedicated repair-named `repair_transition/4`
+in `transition_paths.pl`, separate from decay-only `transition_path/4` (metaphors unwelded:
+rigging repair ops ≠ the scaffold construction metaphor; axes decoupled per v7 Theorem 7 — build
+observer-axis repair in observer-axis terms, no committer-machinery import; scaffold-cost ≠ piton
+persistence). (2) **Commentary-grade, never correction-grade** — must not feed
+`classify_from_metrics/6`, the signature layer, or `verdict_join`. (3) `maintain/splice/replace`
+ARE named ops (4th arg), `scaffold_struck` the distinct construction-metaphor op.
 
-**Candidate home (operator to rule the structure).** The type-trajectory *reporter*
-`degradation_chain`/`snapshot_type` is **direction-neutral** (it reports the `snapshot_type`
-sequence over the measurement series — would surface an upward run if one occurred); it is dormant,
-off the live path. The transition *detector* `transition_path/4` is decay-only and would need upward
-heads. So whether to extend a decay-*named* detector or build a dedicated upward structure is a
-design decision, not a settled home — unfinished, not cruft (build_discipline "Unwired ≠ worthless").
-Sub-question: do `maintain`/`splice`/`replace` warrant named engine operations or stay descriptive?
-
-**Resolution (operator-ruled + built + witnessed, 2026-06-26; evidence
-`audits/2026-06-26_oq91_repair/`, theory `docs/repair_dynamics.md` §8).**
-- **Close-branch = state 1** (operator-approved after the read-only B1-scan): real
-  corpora DO contain upward runs surfaced by the existing direction-neutral
-  `degradation_chain`/`snapshot_type` instrument — testsets/ 2, kernel_v1 30 (incl.
-  multi-step homoousios/versailles snare→tangled_rope→rope); scan logic
-  positive-controlled (`b1scan_finding.md`). **No new authored atom needed** ⇒
-  repair value is NOT rebuild-deferred (close-state 3 did not fire).
-- **Operative rulings (kept):** (1) structural home = dedicated repair-named
-  `repair_transition/4` in `transition_paths.pl`, separate from decay-only
-  `transition_path/4` (metaphors unwelded); reuses `degradation_chain/3` as the
-  series source. (2) **commentary-grade, never correction-grade** — must not feed
-  `classify_from_metrics/6`, the signature layer, or `verdict_join`. (3)
-  `maintain/splice/replace` ARE named ops (4th arg), `scaffold_struck` the distinct
-  construction-metaphor op; selection is a function of from/to + chain prefix.
-- **Witnesses:** B2 standalone (lycurgan→replace, shinbutsu→replace; decay-only
-  apoe4 yields none); op tally on kernel_v1 maintain-11/splice-1/replace-18 (a
-  bound-Op clause-selection bug found + fixed — `repair_op` now a true function).
-  B3 report surface (`enhanced_report.py:build_repair_section`, single data
-  direction Prolog→field→Python). **B4 invariant PASS**: `pipeline_output.json`
-  classification fields byte-identical with vs without the surface (only the new
-  `repair_transitions` field added; `b4_invariant_diff.log`). Suite green (0 errors),
-  snapshot-migration 10/10, warning gate 3/3 allowlisted.
-- **What changed:** the engine now registers repair (a constraint lifted back up the
-  ordering), not only decay — the one-way ratchet is closed. Cross-refs: OQ-90 (piton
-  fixing_cost, still open), OQ-83 (committer axis), v7 Theorem 7, `docs/six_questions.md`
-  (Q6). OQ-182 (bundled sibling) is independent — its A4 gate-flip remains the operator's
-  call and is not affected by this close.
+**Witnesses (`audits/2026-06-26_oq91_repair/`):** B2 standalone (lycurgan/shinbutsu→replace;
+decay-only apoe4 none); kernel_v1 op tally maintain-11/splice-1/replace-18 (a bound-Op
+clause-selection bug found + fixed); B3 report surface (`enhanced_report.py:build_repair_section`);
+B4 invariant PASS (classification fields byte-identical; only `repair_transitions` added). Suite
+green. Cross-refs: OQ-90 (piton fixing_cost), OQ-83 (committer axis), OQ-182 (bundled sibling,
+independent — its A4 gate-flip stays the operator's call).
 
 ## OQ-92 — No authored gain-flow / receipt surface: capture is not computed-representable (gates OQ-90)
 
-**Ω-type:** Ω_C (design choice — whether to add an authored surface; the operator's ruling, not the
-engine's to settle).
+**Ω-type:** Ω_C (design choice — whether to add an authored surface; the operator's ruling).
 
-**Status:** resolved — all four stages LANDED + witnessed 2026-06-10 (one day, prototype to
-wiring; evidence: `audits/2026-06-10_gain_flow_prototype/` + `audits/2026-06-10_oq92_step3_
-preregistration/`). Stage A schema (8/8 witness, two-sided additivity); Stage B compiler
-(0-diff 134/134, ghost-seat REJECTED both paths, swipl fact queryability); Stage C prompt
-(stakeholders + receipt surface promoted additively into the live prompt; 6-story gfbatch1
-generated — 6/6 author both fields, 0 diffuse, referential integrity clean end-to-end);
-diffuse audit at K=0 against the pre-ruled criterion: **0/0 observed — vacuous pass, stated
-as vacuous** (`diffuse_audit_batch1.md`; 6/6 named-capture prevalence flagged as
-authoring-convention-until-checked, matters for OQ-90's piton side, not these gates); Stage D
-wiring: `narrative_ontology:constraint_captured/1` (computed positively; absent/diffuse never
-block) + the three OQ-94 benignity gates (drl_core scaffold clause, signature CI_Rope +
-pure_coordination) + maxent scaffold spec same-commit. Two-sided controls
-(`stage_d_controls.out`): uncaptured→scaffold vs captured-twin→rope; captured→pure_scaffold
-not pure_coordination; CI_Rope deterministic intervention with verified restore
-(certified → constructed_low_extraction under asserted capture → certified again).
-Fabrication-ban grep witness: data_repair.pl returns only the ban comment. Suite green;
-warning gate green (one deliberate allowlist line-drift update, gate fired on it correctly).
-**Consequences: OQ-90 Steps 2–4 UNBLOCKED on a built surface; GAP-10 CLOSED. The Rulings
-block below is kept intact per compress-on-close (operative rulings: tri-valued provenance,
-fabrication ban, diffuse-audit criterion + K=0 parameters, benignity-gate semantics).**
-
-**Origin.** OQ-90 ruled the snare/piton split turns on *capture* (snare = a seat captures the
-extraction; piton = uncaptured) and that the no-capture test must be **computed, not authored-absence**
-(OQ-83 R3 / Pattern 5). The proposed computed proxy `has_computed_capturer/1` (beneficiary-side seat
-with favorable `dr_type_for_stakeholder`) was put to its pre-registered discriminating control
-(plan `jaunty-juggling-wozniak`, build_discipline rule #3). **It HALTED at Outcome 2.**
-
-
-[Compressed 2026-07-05; full history in git.] The proposed computed proxy `has_computed_capturer/1`
-HALTED at its pre-registered control (Outcome 2): χ is extraction-from-seat, not gain-to-seat, so
-every beneficiary-side seat reads favorable whether or not extraction accrues to it — witnessed
-`audits/2026-06-09_capture_axis_cut_control/`. That forced the authored surface. A proposed
-gain_flow/fixing_cost unification into one scalar was SUPERSEDED by ruling (b) below (the
-"distinct scalars" caution is what the ruling upholds). All four build stages (A schema, B
-compiler, C prompt, D wiring + OQ-94 benignity gates) landed 2026-06-10 with witnesses in
+**Status:** resolved — all four stages LANDED + witnessed 2026-06-10 (prototype to wiring in one
+day). Stage A schema (8/8, two-sided additivity); B compiler (0-diff 134/134, ghost-seat
+REJECTED); C prompt (dual-surface additive; 6-story gfbatch1 6/6 author both fields; diffuse
+audit at K=0: 0/0 observed — **vacuous pass, stated as vacuous**; 6/6 named-capture prevalence
+flagged authoring-convention-until-checked); D wiring (`constraint_captured/1` computed
+positively + the three OQ-94 benignity gates + maxent scaffold spec same-commit; two-sided
+controls `stage_d_controls.out`; fabrication-ban grep witness). Evidence:
 `audits/2026-06-10_gain_flow_prototype/` + `audits/2026-06-10_oq92_step3_preregistration/`
-(+ `audits/2026-06-10_oq94_row2_cirope_reachability/` for the row-2 control). OQ-90 Steps 2–4
-unblocked; GAP-10 closed.
+(+ `audits/2026-06-10_oq94_row2_cirope_reachability/`). OQ-90 Steps 2–4 UNBLOCKED; GAP-10
+CLOSED. Origin: OQ-90's computed proxy `has_computed_capturer/1` HALTED at its pre-registered
+control (Outcome 2: χ is extraction-from-seat, not gain-to-seat —
+`audits/2026-06-09_capture_axis_cut_control/`), forcing the authored surface. **The Rulings
+block below is kept intact per compress-on-close (operative).**
 
 **Rulings (operator 2026-06-10).**
 
@@ -5448,13 +4028,10 @@ unblocked; GAP-10 closed.
 - **(b) ONE authoring surface, TWO distinct fields (gain-flow + fixing_cost) — never one scalar or
   merged enum.** Justification (design grounds): (i) accrual-of-gain and cost-to-fix are
   semantically independent axes authored about the same seats; (ii) the fourth cell — captured +
-  cheap fix — is live and the engine must be able to say so (witnessed by battery control 6, so
-  this justification cites no cell the battery never witnesses); (iii) a merged enum would weld
-  provenance to value, re-introducing exactly what the tri-valued design below unwelds. A rejected
-  draft justification is recorded here to prevent re-citation: "one scalar can't encode two
-  independent cuts" is FALSE as an information claim (a four-valued scalar encodes two bits; a
-  three-valued enum covers three cells) — it establishes only that one *binary* bit can't. The
-  design grounds, not the information argument, carry the ruling.
+  cheap fix — is live and the engine must be able to say so (witnessed by battery control 6);
+  (iii) a merged enum would weld provenance to value. A rejected draft justification is recorded
+  to prevent re-citation: "one scalar can't encode two independent cuts" is FALSE as an
+  information claim — the design grounds, not the information argument, carry the ruling.
 - **Tri-valued provenance design (the R3/Pattern-5 reconciliation).** `gain_flow` is authored as:
   gain-to-a-NAMED-seat (capturer; the named seat must exist in `stakeholders[]` — a checkable
   witness) | explicit `diffuse` (the author affirmatively asserts no seat captures — piton
@@ -5462,33 +4039,24 @@ unblocked; GAP-10 closed.
   constraint stays FCR-subsumed). Trap named at ruling time: once the surface is authored, NAF over
   "any seat has authored gain" is authored-absence in disguise — uncaptured must be authored
   positively (`diffuse`), never inferred from a missing capturer entry.
-- **Malformed-gain default (DECIDED 2026-06-10, not left to be discovered).** `gain_flow` naming a
-  NONEXISTENT seat fails the capture read (no `role_of` join) and is not `diffuse`, so at runtime
-  it absorbs into the fail-closed register — a fourth condition collapsing into the third. Decided
-  as the runtime default (fail-closed is the safe absorption) and witnessed by battery control 8.
-  Step-3 validation item: the schema/compiler must REJECT a `gain_flow` value naming a seat not in
-  `stakeholders[]` at authoring time, so the runtime absorption never silently hides a data error.
-- **Fabrication ban (settled by the OQ-90 ruling; recorded 2026-06-10 — names the door, asks no
-  question).** `gain_flow` is NEVER synthesized: absent stays absent, fail-closed — no repair,
-  bridge, or imputation clause may infer it from metrics. The named door is `data_repair.pl`
-  (`:124-131` already fabricates `constraint_beneficiary(C, inferred_institutional)` from
-  E>0.46 ∧ S>0.40 on the DR-AUDIT path): a repair that "fixes" missing gain_flow from extraction
-  metrics is structurally the `has_computed_capturer` counterfeit re-entering through a side door
-  — a capture-adjacent fact synthesized from the metrics it feeds back into, on the path where it
-  is least visible. OQ-90's HALT already ruled that route witnessed-broken. Step-3 precondition
-  alongside the schema rejection and the diffuse gate; `data_repair.pl` is the enforcement site.
-- **Step-3 gate (generated-diffuse audit), recorded now.** Authored-`diffuse` is an authored
-  universal negative with no checkable witness (gain-to-seat verifies against `stakeholders[]`;
-  diffuse verifies against nothing) and is the cheapest token for a generation model to emit
-  without checking the seats. Hand-authored prototypes cannot surface this risk — controls pass by
-  construction. GATE, not suggestion: before `gain_flow` drives classification on corpus data,
-  hand-audit a pre-stated-size sample of generated `diffuse` claims for obvious capturing seats,
-  with a pre-stated tolerance (size + tolerance pinned in the step-3 preregistration). OQ-70 is
-  the precedent for a one-shot example value becoming a template convention; prevalence statistics
-  on this field are authoring-convention until this audit passes. **Tolerance and sample size are
-  RESERVED as an operator ruling at preregistration time** — the number arrives as a question to
-  the operator, not a drafted value approved by momentum: it is a judgment about how much
-  generation-side dishonesty the corpus can carry, with no evidence-settled default.
+- **Malformed-gain default (DECIDED 2026-06-10).** `gain_flow` naming a NONEXISTENT seat fails the
+  capture read and absorbs into the fail-closed register (witnessed by battery control 8); the
+  schema/compiler must REJECT such a value at authoring time so the runtime absorption never
+  silently hides a data error.
+- **Fabrication ban (settled by the OQ-90 ruling).** `gain_flow` is NEVER synthesized: absent
+  stays absent, fail-closed — no repair, bridge, or imputation clause may infer it from metrics.
+  The named door is `data_repair.pl` (`:124-131` already fabricates
+  `constraint_beneficiary(C, inferred_institutional)`): a repair that "fixes" missing gain_flow
+  from extraction metrics is the `has_computed_capturer` counterfeit re-entering through a side
+  door. `data_repair.pl` is the enforcement site.
+- **Step-3 gate (generated-diffuse audit).** Authored-`diffuse` is an authored universal negative
+  with no checkable witness and the cheapest token for a generation model to emit. GATE, not
+  suggestion: before `gain_flow` drives classification on corpus data, hand-audit a
+  pre-stated-size sample of generated `diffuse` claims for obvious capturing seats, with a
+  pre-stated tolerance pinned in the step-3 preregistration. **Tolerance and sample size are
+  RESERVED as an operator ruling at preregistration time.** OQ-70 is the precedent for a one-shot
+  example value becoming a template convention; prevalence statistics on this field are
+  authoring-convention until this audit passes.
 
 **Cross-refs:** OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3
 authored-absence rule), OQ-94 (beneficiary coordination-read interference), GAP-10,
@@ -5502,62 +4070,46 @@ build_discipline rule #3 + Pattern 5.
 
 **Status:** resolved — migration LANDED end-to-end 2026-06-11 (stages A–D + coverage-carrying
 read + shim retirement), every stage same-commit witnessed:
-`audits/2026-06-11_oq93_grid_migration/` (PREREGISTRATION.md incl. the operator-ruled split
-κ gate + per-stage witness scripts/outputs); KNOWN_STATE 2026-06-11; branch `oq93-grid-migration`.
-Executed: authored `coercion_grid` schema block (enums disjoint from MeasurementMetric;
-stakes_inflation grid-side only) → compiler emission with fail-loud integrity (endpoints ==
-interval, duplicate-slot REJECT = the once/1 contract; not bypassed by --no-validate) →
-coverage-carrying read (`system_gradient/4`; []→0.0 KILLED; 8/32 one-level grid flips
-increasing_coercion→OPEN while all five probe stories hold exact pins) → κ-gated N=10 generated
-batch (PASS 0/10 excluded; bug rider found+fixed: scalar-series times poisoned gradient
-next-points — compound(Metric) guard) → Stage-D wiring of `level_gradient_divergence/2` into
-FCR/FSM/extraction-blindness omega (two-sided control witnessed; kappa CONDITIONAL 16/32 tag
-FIRED; moderate-cap why-not recorded: 0 correction-grade carriers); injection/imputation killed
-permanently (shim + flag retired → closes OQ-96). Ruling (a) stands: `structural_coercive_intent`
-unwired — sub-fork filed as OQ-106. **FLIP RULED (operator,
-2026-06-11): flip now, gate converted one-time → FIRST-CONTACT** — every grid-authoring story
-gets the three-indicator audit once before any consumer read
-(`python/grid_first_contact_gate.py` + tracked ledger, wired into run_pipeline; C-echo in any
-new story halts and reverts the flip); live prompt carries the opt-in grid section; the 10
-gate-passed stories PROMOTED to the corpus (n_constraints 48→58; every standing 0-diff baseline
-re-pins to the post-promotion corpus). Promotion found and fixed two latent defects with
-witnesses (flip_promotion_witness.txt, flip_promotion_suite.txt): grid_provenance read
-interval-ANONYMOUS (56/58 cross-constraint leakage — build-unit-1 class, latent while only one
-loaded interval ever had grid facts) and the suite generator's unanchored interval regex matched
-prose (three phantom test_case IDs '18'/'0'/'from' ran green against injected anchors while the
-real intervals never got their suite pass).
-Cross-refs: OQ-44 (Pattern-5 instance — the completeness gate now reads authored-or-absent),
-OQ-96, OQ-102 (riders landed with the stages), OQ-105 (the grid block shares t0/tn by
-construction, so it cannot create that misalignment class), OQ-106.
+`audits/2026-06-11_oq93_grid_migration/` (PREREGISTRATION.md incl. the operator-ruled split κ
+gate + per-stage witness scripts/outputs); KNOWN_STATE 2026-06-11; branch `oq93-grid-migration`.
 
+**Resolution note.** Authored `coercion_grid` schema block → compiler emission with fail-loud
+integrity (endpoints == interval; duplicate-slot REJECT; not bypassed by --no-validate) →
+coverage-carrying read (`system_gradient/4`; the `[]→0.0` fallback KILLED; 8/32 one-level grids
+flip increasing_coercion→OPEN while five probe stories hold exact pins) → κ-gated N=10 generated
+batch (PASS 0/10 excluded; scalar-series-times bug rider found+fixed) → Stage-D wiring of
+`level_gradient_divergence/2` into FCR/FSM/extraction-blindness omega (two-sided control;
+kappa CONDITIONAL tag fired). Injection/imputation killed permanently (shim + flag retired →
+closes OQ-96). **FLIP RULED (operator, 2026-06-11): flip now, gate converted one-time →
+FIRST-CONTACT** — every grid-authoring story gets the three-indicator audit once before any
+consumer read (`python/grid_first_contact_gate.py` + tracked ledger, wired into run_pipeline;
+a C-echo in any new story halts and reverts the flip); 10 gate-passed stories PROMOTED
+(n_constraints 48→58; standing 0-diff baselines re-pinned). Promotion found + fixed two latent
+defects (flip_promotion_witness.txt, flip_promotion_suite.txt): grid_provenance read
+interval-ANONYMOUS (56/58 cross-constraint leakage, latent) and the suite generator's unanchored
+interval regex matched prose (three phantom test_case IDs ran green). Ruling (a) stands:
+`structural_coercive_intent` unwired — sub-fork filed as OQ-106. Cross-refs: OQ-44 (Pattern-5
+instance), OQ-96, OQ-102 (riders landed with the stages), OQ-105 (the grid block shares t0/tn by
+construction), OQ-106.
 
 ## OQ-94 — `constraint_beneficiary/2` reads as benign coordination engine-wide; once the gain-flow surface lands, the same fact-family makes opposite-direction calls on captured constraints
 
 **Ω-type:** Ω_C (design choice — what the legacy beneficiary fact may evidence once an authored
 receipt surface exists; operator's ruling).
 
-**Status:** resolved — 2026-06-10/11. The fight is defused: the per-site decision rule was RULED
-(positive control passed — real sites sorted into BOTH buckets: `separability_factor` FORBIDDEN,
-`natural_law_without_beneficiary` + NL gates SOUND), and the escalated benignity family (Q2, three
-rows) was RULED **GATE** and the gates landed in live code with two-sided Stage-D controls. Closed
-via the OQ-92 Stage-D landing (OQ-92 resolved). The former `blocked_on_human`
-operator-benignity-certification gate is DISCHARGED — all three rows ruled. **Witnesses:**
-`audits/2026-06-10_oq92_step3_preregistration/` (Q2 ruling in `PREREGISTRATION.md:152-180`;
-`stage_d_controls.out`: CI_Rope certified → constructed_low_extraction under asserted capture →
-certified, verified restore = the row-2 captured-stops-certifying witness),
-`audits/2026-06-10_oq94_readsite_pass/` (12-file/33-site census + per-site sort),
-`audits/2026-06-10_oq94_row2_cirope_reachability/` (row-2 reachability control, 7/7 on a fully
-beneficiary-bearing live-corpus population — interception affirmatively killed). **Gates in code,
-each tagged to its OQ-94 row:** `drl_core.pl:373` (scaffold `\+ constraint_captured`),
+**Status:** resolved — 2026-06-10/11. Per-site decision rule RULED (positive control: real sites
+sorted into BOTH buckets — `separability_factor` FORBIDDEN; `natural_law_without_beneficiary` +
+NL gates SOUND); the escalated benignity family (Q2, three rows) RULED **GATE** and landed with
+two-sided Stage-D controls; closed via the OQ-92 Stage-D landing. Witnesses:
+`audits/2026-06-10_oq92_step3_preregistration/` (Q2 ruling `PREREGISTRATION.md:152-180`;
+`stage_d_controls.out`), `audits/2026-06-10_oq94_readsite_pass/` (12-file/33-site census),
+`audits/2026-06-10_oq94_row2_cirope_reachability/` (7/7 — interception affirmatively killed).
+Gates in code: `drl_core.pl:373` (scaffold `\+ constraint_captured`),
 `signature_detection.pl:1112/1235/1334` (CI_Rope + `pure_coordination`),
-`maxent_classifier.pl:175/194` (`boolean_spec(scaffold, constraint_captured, forbidden)` mirror).
-The capture read consumes authored `gain_flow` (fabrication-banned, `data_repair.pl:122-131`,
-fail-closed), NOT the fabricated `constraint_beneficiary` — so the no-op-on-current-corpus state is
-the designed fail-closed behaviour (Pattern 5), not absence-satisfies-gate. Residual
-`data_repair.pl:140` beneficiary fabrication is OQ-93/OQ-86 shim-family ("do not extend it"), NOT
-OQ-94 debt. Compress-on-close: the operative per-site rule + benignity disposition are kept below;
-the investigation narrative (read-site pass mechanics, probe-scope truncation lesson, the
-witnessed-twice scaffold misfire) is in git history.
+`maxent_classifier.pl:175/194` (forbidden mirror). The capture read consumes authored `gain_flow`
+(fabrication-banned, fail-closed), NOT the fabricated `constraint_beneficiary` — the
+no-op-on-current-corpus state is designed fail-closed, not absence-satisfies-gate. Residual
+`data_repair.pl:140` beneficiary fabrication is OQ-93/OQ-86 shim-family ("do not extend it").
 **Priority:** 1
 
 **Operative ruling — the per-site decision rule (RULED 2026-06-10).** No global exclusion between
@@ -5566,26 +4118,19 @@ capture and coordination. `has_coordination_function/1` (one clause: `constraint
 mountain-likeness ("holds without enforcement"); gating is FORBIDDEN where the read needs
 coordination-despite-extraction (the tangled_rope/snare-adjacent cell — `separability_factor`,
 `drl_boltzmann_analysis.pl:110-125`). The rule derives from tangled_rope's definition (capture and
-coordination co-occur by construction), independent of the inverted Boltzmann anchor that provoked
-it. Classification-path adjudication is RULE-APPLICATION over the read-site pass output, not open
-judgment.
+coordination co-occur by construction). Classification-path adjudication is RULE-APPLICATION over
+the read-site pass output, not open judgment.
 
-**Operative disposition — the benignity family (Q2, three rows, all GATE).**
-- Row 1 `drl_core.pl` scaffold clause: GATE — misfire-witnessed (the step-2 prototype split
-  capturer seats to scaffold), two-sided control pinned, maxent mirror same-commit. The P≠NP
-  precedent does NOT apply: the gate reads authored `gain_flow` capture, not beneficiary presence.
-- Row 2 `signature_detection.pl:1019` CI_Rope: GATE after the reachability control — reachability
-  witnessed (gate runs on an all-beneficiary population, interception killed) + the misfire witness
-  produced in the Stage-D two-sided control. Fail-closed posture: gating now means the worst case is
-  a no-op clause; NOT gating would fail-open on the highest-stakes read during the least-trusted
-  data's first pass.
-- Row 3 `signature_detection.pl:1122` `pure_coordination` subtype: GATE, riding with row 1
-  (commentary-grade, consistency-with-row-1).
+**Operative disposition — the benignity family (Q2, three rows, all GATE):** Row 1 `drl_core.pl`
+scaffold clause (misfire-witnessed; maxent mirror same-commit; reads authored `gain_flow`
+capture, not beneficiary presence — the P≠NP precedent does not apply); Row 2
+`signature_detection.pl:1019` CI_Rope (reachability witnessed; fail-closed posture — worst case
+a no-op clause vs failing open on the highest-stakes read); Row 3 `pure_coordination` subtype
+(commentary-grade, rides with row 1).
 
-**Cross-refs:** OQ-92 (gain_flow build + Stage-D landing that closes this), OQ-90 (snare/piton
-capture split, unblocked on the built surface), OQ-93/OQ-86 (`data_repair` beneficiary fabrication
-— separate hazard), GAP-10 (closed), OQ-83 (role-derived beneficiary emission). XPrize who-bears-vs-
-who-benefits residue: `audits/2026-06-10_external_review_xprize/`.
+**Cross-refs:** OQ-92, OQ-90, OQ-93/OQ-86 (`data_repair` fabrication — separate hazard), GAP-10
+(closed), OQ-83. XPrize who-bears-vs-who-benefits residue:
+`audits/2026-06-10_external_review_xprize/`.
 
 ## OQ-95 — giant_component network counts phantom nodes: dangling `affects_constraint/2` targets enter the component BFS (118.9% of network on the live corpus; 259.9% on original_v6)
 
@@ -5638,46 +4183,27 @@ OQ-96, OQ-44, OQ-98 (banner site struck as witnessed join), OQ-112 (successor).
 
 **Status:** resolved — 2026-06-11; commits `e8ab707b` (plumbing) / `170db693` (histogram gate) / `ce9a26ec` (output-changing, schema_version 1→2); evidence `audits/2026-06-11_oq98_verdict_join/`; KNOWN_STATE 2026-06-11.
 
-**Origin:** filed 2026-06-10, first external-review batch (`audits/2026-06-10_external_review_vote_market/`): `scale_ceiling_report.md` printed `VERDICT: GREEN / 12/12 subsystems — no tensions` over a 0%-authored grid and beside `! ALERT [severe]: type_1_false_summit`; correction-grade signature findings carried no severity tag.
+**Origin:** filed 2026-06-10, first external-review batch
+(`audits/2026-06-10_external_review_vote_market/`): GREEN banner over a 0%-authored grid beside a
+severe alert.
 
-**Resolution.** Headline verdict is now a join computed at the Prolog producer
-(`diagnostic_summary:verdict_join/3`) and serialized WITH its raw inputs as a sibling of
-`diagnostic_verdict`: joined = max-badness(base, severity floors severe→red, moderate→yellow,
-informational→no floor) with a `cap_applied` token; correction-grade signatures alert at
-moderate (`signature_detection:signature_grade/2` — correction iff an override signature
-actually rewired the type at default context; commentary never alerts). **Operative rulings:**
-(1) grid provenance does NOT gate the headline — probe P1 witnessed BRANCH A (0/48 summaries
-changed under full synthetic 32-slot grids; positive control 46/46 `classify_interval` shifts),
-so grid-fed findings (Pattern/Confidence, kappa) carry `[CONDITIONAL: grid authored A/T]` tags
-instead, the banner ALWAYS prints the grid line, and `enhanced_report.py` headlines
-`verdict_join.verdict` with stale artifacts rendering `[UNJOINED verdict — regenerate pipeline
-(OQ-98)]`; **if any of the 12 subsystems ever becomes grid-fed, revert to strict fail-closed**
-(authored<total ⇒ headline conditional). (2) severity=moderate for correction grade, confirmed
-at the pre-output histogram gate: 8/48 headlines changed (6 green→red, 2 yellow→red, all via
-severe claim-mismatch), zero moderate caps (all 13 correction carriers already base ≥ yellow).
-Witnesses W1–W4 + 2 falsifiers pasted in the audit dir (RED-capped scale_ceiling banner;
-CONDITIONAL tags firing on the live 0-authored regime; clean-green A/B additive-only; 4/4
-sidecar==banner; injected mountain claim caps yellow→red, restore byte-verified; 13/13
-correction-grade carry the join alert). Closes resolution sketch (a)-as-conditional-tags, (b),
-(c) = reviewer items 1, 2, and the conditional-marking half of 5. Known edge: the kappa
-CONDITIONAL branch is unreachable on the live all-absent-grid regime (kappa prints
-DATA_INSUFFICIENT); it fires when a partially-authored grid first exists. Cross-refs: OQ-97
-(banner site now a witnessed join; census stays open), OQ-102 (banner-side inversion fixed;
-per-time-point provenance open), OQ-101 (ledger gains `verdict_join` as a ready-made source).
-
-**Post-close substrate check (2026-06-11, operator-directed).** This OQ's motivating example
-for sketch (c) was misdescribed by the report's own template prose: "an extraction mechanism
-that **metrics failed to classify** as snare" (agenda_conditioning) is UNCONDITIONAL text in
-`explain_signature(C, constructed_high_extraction, …)` (`signature_detection.pl:667`), printed
-whenever that signature fires regardless of what the metric layer returned. Probed against the
-code: `metric_based_type_indexed` == `dr_type` for agenda_conditioning at ALL four standard
-contexts (powerless tangled_rope, moderate snare, institutional rope, analytical snare — the
-signature never rewired anywhere), so metrics DID classify it snare and its commentary grade
-is correct; possibility (b) — grade predicate excluding the divergence by context choice — is
-ruled out at every altitude the report uses. Witness:
-`audits/2026-06-11_oq98_verdict_join/agenda_conditioning_grade_probe.txt`; a code comment at
-the template clause now flags the prose as an unchecked assertion (`signature_grade/2` is the
-checked rewire fact).
+**Resolution (operative — also promoted to CLAUDE.md Architecture Invariants).** Headline verdict
+= `diagnostic_summary:verdict_join/3`, serialized WITH its raw inputs as a sibling of
+`diagnostic_verdict`: joined = max-badness(base, severity floors severe→red / moderate→yellow) +
+`cap_applied` token; correction-grade signatures alert at moderate (`signature_grade/2` —
+correction iff an override actually rewired the type at default context; commentary never
+alerts). **Operative rulings:** (1) grid provenance does NOT gate the headline (probe P1
+witnessed BRANCH A: 0/48 summaries changed under full synthetic grids, positive control 46/46) —
+grid-fed findings carry `[CONDITIONAL: grid authored A/T]` tags; the banner always prints the
+grid line; stale artifacts render `[UNJOINED verdict — regenerate pipeline (OQ-98)]`; **if any of
+the 12 subsystems ever becomes grid-fed, revert to strict fail-closed** (authored<total ⇒
+headline conditional). (2) severity=moderate for correction grade, confirmed at the pre-output
+histogram gate (8/48 headlines changed, 6 green→red, zero moderate caps). Witnesses W1–W4 + 2
+falsifiers pasted in the audit dir. Known edge: the kappa CONDITIONAL branch is unreachable on
+the live all-absent-grid regime. Post-close substrate check (operator-directed): the motivating
+"metrics failed to classify" prose was an unchecked template assertion — probed,
+`metric_based_type_indexed == dr_type` at all four contexts for agenda_conditioning; comment now
+flags the prose (`agenda_conditioning_grade_probe.txt`). Cross-refs: OQ-97, OQ-102, OQ-101.
 
 ## OQ-99 — Omega resolution-scenario generator: unbound constraint name prints `Constraint: unknown`; identical N=30 five-step template across all empirical omegas
 
@@ -5760,216 +4286,97 @@ bucket).
 
 ## OQ-103 — Contamination/purity-network edges: provenance bit serialized but inert at the read site, and no salience floor — RESOLVED
 
-**Ω-type:** Ω_E (defect witnessed and attributed; title/scope corrected at close — see Scope correction).
+**Ω-type:** Ω_E (defect witnessed and attributed; title/scope corrected at close).
 
 **Status:** resolved — read-site fix landed 2026-06-12 (worktree `oq103-readsite-provenance`); the
 synthesis-step enforcement half stays with OQ-101.
 
-**The witness (filed 2026-06-10, `audits/2026-06-10_external_review_xprize/`).** The
-`digital_colonialism_data_extraction | snare | shared_beneficiary | 0.30` edge
-(`reprogramming_safety_toxicity_report.md`, Δpurity −0.0554) is a corpus-topology
-`shared_beneficiary` computation, **not** authored in
-`prolog/testsets/reprogramming_safety_toxicity.pl`. The article says nothing about biobanks; the
-auto-essay spun a whole section off the edge (`sinclair_xprize_reprogramming_2026.md:176-180`).
-Load-bearing escalation (2026-06-11, Pew review exchange): the trust↔representation
-`shared_victim | 0.30` edge IS the relocation thesis of the parent essay in graph form
-(`institutional_trust_erosion_report.md`, reciprocal at `representation_legitimacy_gap_report.md`)
-— a corpus-derived edge carrying an essay's central claim, where authored-vs-derived is the
-difference between "the source material asserts this connection" and "our corpus does."
-
-**Scope correction at close (2026-06-12).** The filed title ("carry no provenance bit") was
-wrong: the bit was already there. `constraint_neighbors/3` tags every edge with a `Source`
-(`explicit | shared_beneficiary | shared_victim | inferred_coupling`); `json_report.pl`
-serializes it as `edge_type`; `enhanced_report.py` already printed it in the Edge column.
-`edge_type == explicit` IS the story-authored-vs-corpus-derived bit. The real defects were
-(1) the bit was **inert** — renderer and synthesis step gave all edge types equal interpretive
-weight, with no legend telling a consumer that `shared_beneficiary` means "the corpus computed
-this, the source did not"; (2) **no salience floor** — a strength-0.30 single-shared-agent edge
-headlined contamination identically to a strength-1.0 authored one. A theorized dedup-mislabel
-(an `explicit` edge surfacing relabeled `shared_*` because `deduplicate_neighbors` keeps `MaxS`
-strength but the first-sorted source) was CHECKED on the one live overlap pair
-(`hybrid_security_reading ↔ formalist_employment_reading`, both name `platform_companies`) and
-**NOT witnessed** — it surfaces correctly as `explicit 1.0`. So `edge_type` is a reliable
-provenance bit in practice and no separate `authored` flag was added.
-
-**Resolution (read-site; no engine classification change).**
-- `json_report.pl`: each neighbor now serializes `shared_agent_count` — distinct agents shared on
-  the edge's link type (null for `explicit`/`inferred_coupling`). This is the principled salience
-  input: `edge_strength = 0.3 × count` capped at 1.0, so reading the count (not back-deriving from
-  a literal 0.3) survives any edge-strength recalibration. Witnessed across all 106 live edges:
-  explicit→null (22), shared_*→count 1 (82) or 2 (2); `strength == 0.3 × count` exact.
-- `enhanced_report.py`: neighbor table gains **Provenance** (`authored`/`corpus-derived`) and
-  **Salience** (`salient`/`low`) columns + a legend paragraph; the "primarily X" sentence now
-  ranks over SALIENT edges only. Floor: authored always salient; corpus-derived agent edge salient
-  iff `shared_agent_count ≥ 2`; `inferred_coupling` (zero live coverage) falls back to
-  `strength ≥ 0.6`. **Empty-above-floor is explicit**: when a real negative Δ is carried entirely
-  by floored edges, the sentence says "contamination is carried entirely by low-salience
-  corpus-derived edges … No connection here is asserted by this case's source material" rather
-  than promoting a weak edge.
-- Floor demotes **82/106 (77%)** of live edges to low-salience — the network IS mostly weak
-  corpus scaffolding. Both filed witnesses now render `corpus-derived | low` with the no-headline
-  sentence (pipeline run `2026-06-12T04:29:38Z`, n=62).
-- Unit fixture `python/tests/test_contamination_provenance_salience.py` (5/5 pass) pins the
-  partition, the count-based floor, empty-above-floor, the still-headlines-when-salient path, and
-  the live-uncovered `inferred_coupling` branch.
-
-**Back-propagation declined (operator, 2026-06-11).** Post-fix the relocation-thesis edge renders
-low-salience, retroactively weakening the parent essay's graph support — but no re-audit of
-existing essays is owed: this corpus exists to fix these defects and is then rebuilt from scratch;
-no looking backward.
-
-**Remaining (OQ-101).** The synthesis step reading past the now-load-bearing provenance/salience
-tags is enforced by the live-synthesis checklist (OQ-101), not here. Distinct from OQ-95 (phantom
-BFS nodes = node membership; this is edge provenance + salience). Cross-refs: OQ-95, OQ-101.
+**Resolution note.** Filed 2026-06-10 (`audits/2026-06-10_external_review_xprize/`): corpus-derived
+`shared_beneficiary`/`shared_victim` edges headlined essay claims as if source-asserted. Scope
+correction at close: the provenance bit already existed (`edge_type`, serialized and printed) —
+the real defects were (1) the bit was INERT (no interpretive weighting, no legend) and (2) no
+salience floor (a 0.30 single-shared-agent edge headlined like a 1.0 authored one). A theorized
+dedup-mislabel was CHECKED on the one live overlap pair and NOT witnessed. Fix (read-site, no
+engine classification change): `json_report.pl` serializes `shared_agent_count` (the principled
+salience input — `strength = 0.3 × count`, witnessed exact across all 106 live edges);
+`enhanced_report.py` gains Provenance + Salience columns, legend, salient-only ranking, and an
+explicit empty-above-floor sentence ("No connection here is asserted by this case's source
+material"). Floor demotes 82/106 (77%) live edges — the network IS mostly weak corpus
+scaffolding; both filed witnesses render `corpus-derived | low`. Unit fixture
+`python/tests/test_contamination_provenance_salience.py` 5/5. **Back-propagation declined
+(operator, 2026-06-11):** no re-audit of existing essays — this corpus exists to fix these
+defects and is then rebuilt. Cross-refs: OQ-95 (node membership, distinct), OQ-101 (synthesis
+checklist).
 
 ## OQ-104 — Audit-citation integrity has no checker: paths cited from audit writeups can be untracked, gitignored, or nonexistent with nothing failing
 
 **Status:** resolved — 2026-06-26 (SCOPED), operator ruled **gate the danger class**; the
 frozen-evidence route now gates in `scripts/gate.sh` (empty/GREEN today, RED on recurrence).
-Two residual routes named below stay non-gating by ruling, each with a kill condition. Filed
-2026-06-11 (OQ-33 close session; operator-flagged class); checker built 2026-06-18 (ungated).
+Filed 2026-06-11; checker built 2026-06-18 (ungated); gated 2026-06-26.
 **Priority:** 1
-**Origin:** Two same-class instances in one session: `tripwire_fabricated_defaults_results.json`
-cited by its 2026-05-30 audit from gitignored `outputs/` (relocated at the OQ-33 close), and
-`audits/2026-02-25_spectral_laplacian/outputs/` — 25 evidence files cited by that audit's
-writeup but swallowed by the unanchored `.gitignore` `outputs/` rule since creation (fixed by
-the 2026-06-11 anchor, commit `09390f0f`). The anchor fixed the *mechanism* of these two
-instances, not the invariant: typo'd paths, evidence left in a worktree, or the next ignore
-rule arrive by different routes and read identically (writeup cites it, fresh clone lacks it).
-**Candidate fix:** a cheap checker — every path cited from `audits/*/writeup.md` (and the
-audit-dir READMEs) exists AND is tracked (`git ls-files --error-unmatch`); sibling of
-`issues_status.py` / `known_state_status.py`, runnable standalone and at the location-mandate
-seam. Open design point: citation-extraction grammar (backtick-quoted repo-relative paths is
-probably enough; measure false-positive rate on the existing audits/ corpus before gating
-anything). Not wired into run_pipeline until its false-positive rate is witnessed.
+**Origin:** two same-class instances in one session (a gitignored `outputs/` citation relocated
+at the OQ-33 close; `audits/2026-02-25_spectral_laplacian/outputs/` — 25 evidence files swallowed
+by the unanchored `.gitignore` rule, fixed by the 2026-06-11 anchor, commit `09390f0f`).
 
-**Built 2026-06-18 (stays open, ungated) — `python/audit_citation_status.py`.** Standing,
-re-runnable, sibling of `issues_status.py`/`known_state_status.py`; **NOT in `scripts/gate.sh`**
-(ungated until the FP rate is ruled). Invariant: a cited path **exists AND is git-tracked, OR is
-allowlisted-ephemeral**; missing and untracked-not-allowlisted are one class. WARN stages by
-three sublabels, three destinies: `untracked-pending` (real `outputs/*` evidence ref;
-`--promote-untracked` lifts to ERROR when the set is empty-or-allowlisted on a fresh clone),
-`missing-pending-M` (`--promote-missing` lifts when every survivor is classified, not when the
-set is empty), `grammar-ambiguous` (globs/ellipsis/descriptive dir mentions — **never promotes**).
-A gitignored path inside the repo root is **never allowlisted** (it IS the OQ-104 signature);
-allowlist = `~/`, `/tmp/`, paths escaping repo root, decided AFTER normalization.
+**Resolution note.** Built `python/audit_citation_status.py` (sibling of `issues_status.py`):
+invariant = a cited path exists AND is git-tracked OR is allowlisted-ephemeral; a gitignored path
+inside the repo root is NEVER allowlisted (it IS the OQ-104 signature). Census
+(`audits/2026-06-18_oq104_citation_checker/`): 1224 citations over 85 audit dirs;
+untracked-pending 35 (all descriptive refs to regenerable `outputs/` artifacts — copy-into-audit
+rejected as Pattern-3, allowlist forbidden); missing-pending-M 66, every survivor classified, no
+live broken citation. Controls 25/25 incl. rot-flip. Gating split (2026-06-26): danger iff the
+untracked path does NOT start with top-level `outputs/` → `untracked-frozen-evidence` (GATING,
+7th `run` line in `scripts/gate.sh`, base rate zero today) vs `untracked-regenerable`
+(non-gating WARN); matched-pair frozen-vs-regenerable control + end-to-end RED/GREEN witnessed
+(KNOWN_STATE 2026-06-26).
 
-**Witnessed census (`audits/2026-06-18_oq104_citation_checker/`):** 1224 path-citations over 85
-audit dirs. **untracked-pending = 35 distinct, ALL `outputs/*`** (plan projected ~32; +3 is
-witness-corrects-projection); reading every context, all 35 are **descriptive references to
-canonical regenerable `outputs/` artifacts** (schema docs, data-flow, CLI defaults, command
-lines), **none the dangerous frozen-evidence origin class** (those were remediated at the
-2026-06-11 anchor `09390f0f`). **Disposition (operator ruling 2026-06-18):** (i) copy-into-audit-dir
-inapplicable (`outputs/` is regenerated → today's file ≠ historical snapshot → copying = Pattern-3
-faith-merge); (ii) allowlist forbidden (OQ-104 signature); → **leave flagged, non-gating;
-`--promote-untracked` deferred.** **missing-pending-M = 66 distinct** (drove 278 plan-upper-bound →
-66 via the four-plus FP-class rules); every survivor classified — relocation/rename,
-illustrative/proposed-structure, archive-directory shorthand, deleted-gitignored-output — **no live
-broken citation hides in the bucket**, so `--promote-missing` stays deferred. Controls: `controls.py`
-23/23 (one positive control per new exclusion + a `/etc/passwd` field-list bug it caught),
-`controls_run.sh` idempotence + rot-sensitivity (tracked cited file → `git rm --cached` →
-flips pass→flag). **Two promotion conditions and the brace/glob + descriptive-outputs seats are
-recorded as the wiring triggers; `scripts/gate.sh` unchanged.**
-
-**Resolved (scoped) 2026-06-26 — gate the danger class.** Operator ruling: the real OQ-104
-danger (a frozen, unique evidence file a fresh clone needs and lacks — the spectral_laplacian
-origin) is **distinguishable** from the benign class. An untracked cited path is dangerous **iff
-it does not start with top-level `outputs/`** (repo-root `outputs/` is rebuilt by every
-`run_pipeline`; an `audits/.../outputs/` evidence file or any other gitignored frozen ref is
-*not*). Implementation: the single `untracked-pending` sublabel split in
-`audit_citation_status.py:classify()` by `c.startswith("outputs/")` into
-`untracked-frozen-evidence` (**GATING** — intrinsic ERROR, no flag) and `untracked-regenerable`
-(non-gating WARN). `--check` exits 1 iff frozen-evidence non-empty OR parse `problems`; wired as
-the 7th `run` line in `scripts/gate.sh` (`audit cites`). **Witnessed base rate zero today:** all
-39 distinct untracked paths are under `outputs/` → `untracked-frozen-evidence:0` → gate GREEN;
-fires only on a genuine recurrence. Controls now 25/25 (matched-pair frozen-vs-regenerable
-isolating the prefix as the deciding variable + a dotted `./outputs/` post-normalization control);
-end-to-end RED-on-frozen / GREEN-on-removal and rot-flip both witnessed. Evidence + the gate run:
-KNOWN_STATE 2026-06-26; the amended `audits/2026-06-18_oq104_citation_checker/` (FINDINGS gating note).
-
-**Scope of "resolved" — one of two origin routes mechanized; do not over-read.** The gate fires
-iff a new untracked **non-`outputs/`** cited file appears; it does NOT automate the per-item
-regenerability/benignity reading the 2026-06-18 hand audit did. Two residuals stay non-gating by
-ruling (both defensible at base rate zero, both with kill conditions):
-- **Route gated:** worktree/ignore-rule frozen evidence (exists-locally, gitignored, not under
-  top-level `outputs/`) — the spectral_laplacian origin. **Now RED on recurrence.**
-- **Residual — typo'd path (NOT gated):** a typo'd evidence path doesn't exist → lands in
-  `missing-pending-M` → non-gating, because a typo is checker-indistinguishable from a benign
-  relocation reference (gating `missing` would FP on all 70). *Kill condition:* a typo'd evidence
-  citation lands in `missing-pending-M` and ships GREEN.
-- **Residual — convention-not-invariant (NOT gated):** `startswith("outputs/")` encodes
-  "regenerated by `run_pipeline`" but tests the *prefix*. A frozen artifact parked in top-level
-  `outputs/` (gitignored → exactly where one parks gitignored things) reads `untracked-regenerable`
-  → silent. *Open sub-decision:* if `run_pipeline`'s output set is enumerable, tighten the predicate
-  to membership in that set (closes the hole); else accept the named residual. *Kill condition:* a
-  non-`run_pipeline` file under top-level `outputs/`, cited and untracked, ships GREEN.
-
-`untracked-regenerable` (39) + `missing-pending-M` (70) stay non-gating standing surfaces
-(promotions deferred, by the 2026-06-18 ruling).
+**Residuals non-gating BY RULING, each with a kill condition (operative):** (1) typo'd path lands
+in `missing-pending-M` and ships GREEN (checker-indistinguishable from benign relocation —
+gating would FP on all 70); (2) convention-not-invariant — a frozen artifact parked in top-level
+`outputs/` reads `untracked-regenerable` and ships GREEN (open sub-decision: tighten the prefix
+test to membership in `run_pipeline`'s output set if enumerable). Promotions
+(`--promote-untracked`/`--promote-missing`) stay deferred by the 2026-06-18 ruling.
 
 ## OQ-105 — Suppression grid-misalignment rows: the scalar substitution sets flip TIMING in classify_at_time timelines
 
-**Ω-type:** Ω_C (design choice — grid alignment at generation vs labeled interpolation at read; a narrow representation ruling spun off the OQ-46 close).
+**Ω-type:** Ω_C (design choice — grid alignment at generation vs labeled interpolation at read; spun off the OQ-46 close).
 
 **Status:** resolved — 2026-06-12, operator ruled fix-fork option (a) ALONE (grid alignment at
 generation; no read-side interpolation machinery); implementation landed same day
-(`audits/2026-06-12_oq105_alignment_gate/`). Filed 2026-06-11 (OQ-46 Backed-reconciliation
-session).
+(`audits/2026-06-12_oq105_alignment_gate/`). Filed 2026-06-11.
 
-**Resolution note.** Evidence chain: mechanism + 23-row/11-constraint census
-(`audits/2026-06-11_oq46_backed_reconciliation/`, OQ-110 cross-read); per-row interpolation
-counterfactual over ALL misaligned rows (`audits/2026-06-11_oq105_row_sweep/`) — 4/23 rows
-type-diverge (181/3588 cells across 156 contexts), every divergent cell the one snare-floor
-mechanism (endpoint scalar ≥ 0.60 while the local series interpolates below → snare dated early);
-19/23 robust at every context — *robust relative to LINEAR INTERPOLATION: the sweep enumerated
-(b)'s payoff under (b)'s own semantics, not ground truth about suppression at those times.*
-Containment held throughout: misaligned rows are `Backed=false`, OQ-110 witnessed 0 counted flips
-on/adjacent. The OQ-109 Phase C cohort-zero swap (`7ca48e0b`, 2026-06-12) then retired ALL 11 host
-constraints to `kernel_v2_test2` — live misaligned rows = 0 on the 5-story cohort-zero corpus
-(every `_c0` story authors one shared grid; the ratified time-bound "regen the 11 within Phase C
-or by a named date" was discharged by that retirement; its successor clock — alignment rule lands
-BEFORE cohort-one generation — is met by this close).
-
-**Implementation (landed 2026-06-12, witnesses in the audit dir):** prompt rule "One time grid
-per story" (`prompts/constraint_story_generation_prompt_json.md`, Temporal Measurements) + the
-fail-closed compiler gate `_grid_alignment_errors` in `python/generate_constraint_pl.py`'s
-`validate_json` (both jsonschema and fallback paths; every generation driver imports it).
-Witnesses: W1 synthetic misalignment fires; W2 all 5 live `_c0` JSONs clean; W3 the gate over the
-60 archived pre-cohort-zero JSONs flags EXACTLY the 11 known hosts, zero false positives.
-
-**Operative ruling + densification trade (recorded so it cannot resurface as a discovered
-defect):** (a) trades (b)'s labeled read-side interpolation for unlabeled generation-side value
-assertion at shared time-points the model didn't organically choose. Defense: model-authored-at-
-generation carries the same epistemics as every other authored point — the defect was *code*
-injecting endpoints post hoc, which (a) does not reproduce. The prompt rule therefore frames the
-union grid as a first-class authoring requirement (assert each value, or thin to a sparser shared
-grid, or drop the series — never backfill); the OQ-46 scalar-only-static rule stays orthogonal.
-
-**Reopen conditions for (b)** (`interpolated` bucket on the `measurement_basis/2` spine — the
-extension point stays alive via OQ-107's `witnessed` bucket): (1) a misaligned story reaches the
-live corpus despite the gate; (2) the densification cost turns real on cohort-one generation
-(grids thinned below drift-detection usefulness, or evidence of fabricated rather than thinned
-values); (3) a Backed-blind consumer of raw `classify_at_time`/`constraint_history` timelines
-becomes load-bearing over a corpus still containing misaligned rows (archive overlays qualify).
-Cross-refs: OQ-46, OQ-44, OQ-102, OQ-107, OQ-109 (Phase C swap), OQ-110.
-
+**Resolution note.** Evidence: 23-row/11-constraint census
+(`audits/2026-06-11_oq46_backed_reconciliation/`); per-row interpolation counterfactual
+(`audits/2026-06-11_oq105_row_sweep/`) — 4/23 rows type-diverge, every divergent cell the one
+snare-floor mechanism; 19/23 robust *relative to linear interpolation only*. Containment held
+(misaligned rows `Backed=false`; OQ-110 witnessed 0 counted flips on/adjacent). The OQ-109 Phase
+C cohort-zero swap (`7ca48e0b`) retired all 11 host constraints → live misaligned rows = 0.
+Implementation: prompt rule "One time grid per story" + fail-closed compiler gate
+`_grid_alignment_errors` in `validate_json` (both paths). Witnesses: synthetic misalignment
+fires; 5/5 live `_c0` clean; the gate over 60 archived JSONs flags EXACTLY the 11 known hosts,
+zero FPs. **Operative ruling + densification trade (recorded so it cannot resurface as a
+discovered defect):** (a) trades labeled read-side interpolation for generation-side value
+assertion at shared time-points — model-authored-at-generation carries the same epistemics as
+every other authored point; the defect was CODE injecting endpoints post hoc; assert, thin, or
+drop — never backfill. **Reopen conditions for (b)** (the `interpolated` bucket on the
+`measurement_basis/2` spine, extension point alive via OQ-107's `witnessed` bucket): (1) a
+misaligned story reaches the live corpus despite the gate; (2) densification cost turns real on
+cohort-one; (3) a Backed-blind consumer of raw timelines becomes load-bearing over a corpus
+still containing misaligned rows (archive overlays qualify). Cross-refs: OQ-46, OQ-44, OQ-102,
+OQ-107, OQ-109, OQ-110.
 
 ## OQ-106 — `structural_coercive_intent`: redesign-vs-retire sub-fork (range-dead threshold + producerless evidence tables)
 
-**Ω-type:** Ω_C (design choice deferred by OQ-93 ruling (a), operator 2026-06-10 — must not evaporate).
+**Ω-type:** Ω_C (design choice deferred by OQ-93 ruling (a), operator 2026-06-10).
 
-**Status:** resolved — RETIRE ruled and landed (operator, 2026-06-12). Top verdict deleted
-from `intent_engine.pl` (clause + `collect_intent_evidence/1` + dead helpers) with its five
-config params/specs (`system_gradient_strong_threshold`, `beneficiary_gain_min`,
-`structural_suppression_min`, `structural_resistance_min`, docs-only `loser_loss_max_gain`);
-lower verdicts and the OQ-93 open() passthrough untouched. Intent_* tables and all
-non-intent_engine readers (incl. the OQ-43 fail-closed NL gate) preserved as GAP-08
-substrate. Witness: `audits/2026-06-12_oq106_retire/` (suite diff byte-identical on
-substantive lines; warning-attribution residue positive-controlled as same-code run-noise).
-Evidence basis: `audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md` §C3 (1.00 strict
-vs 0.98 max reachable), GAP-08 (producerless tables), plus the deciding-pass finding that
-the verdict token had NO consumer even if it fired (`report_generator.pl:22` imports
-intent_engine `except([classify_interval/3])`).
+**Status:** resolved — RETIRE ruled and landed (operator, 2026-06-12). Top verdict deleted from
+`intent_engine.pl` with its five config params/specs; lower verdicts and the OQ-93 open()
+passthrough untouched; intent_* tables and all non-intent_engine readers (incl. the OQ-43
+fail-closed NL gate) preserved as GAP-08 substrate. Witness: `audits/2026-06-12_oq106_retire/`
+(suite diff byte-identical on substantive lines; warning-attribution residue positive-controlled).
+Evidence basis: `audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md` §C3 (1.00 strict vs
+0.98 max reachable), GAP-08, and the deciding-pass finding that the verdict token had NO consumer
+even if it fired (`report_generator.pl:22` imports except `classify_interval/3`).
 
 **Still-operative ruling block (kept per compress-on-close exception).** The fork closed on
 ruling (i) of the 2026-06-12 web-review exchange: **capture-as-design ratified as the piton
@@ -5981,10 +4388,10 @@ proxy and intuition split — capture holds but the extraction is plainly emerge
 design even ex post, or design is documented (authored alternative-rejection evidence) but
 capture is absent, AND the operator wants those cases sorted differently. Such a case
 falsifies the proxy and becomes the consuming research question that arms GAP-08's revival
-condition (until then revival stays GENERIC: armed-not-scheduled was explicitly declined —
-naming piton as standing candidate consumer was option (ii), not taken, to avoid an OQ-36
-"build mid-baseline" license misread). Any revival = fresh preregistration (schema →
-producer → threshold re-derivation → wiring), OQ-44 fail-closed on the tables.
+condition (until then revival stays GENERIC: armed-not-scheduled was explicitly declined, to
+avoid an OQ-36 "build mid-baseline" license misread).
+Any revival = fresh preregistration (schema → producer → threshold re-derivation → wiring),
+OQ-44 fail-closed on the tables.
 
 ## OQ-107 — Survey-wave witness adapter: no path from external instrument data to metrics, so every time series stays authored-or-derived and drift events are self-consistency checks, not measurements
 
@@ -6030,75 +4437,54 @@ report this adapter would feed), OQ-83 (drift-event consumers).
 
 ## OQ-108 — Per-position witness coverage: the perspectival grid cannot report which positions are evidence-dense and which are inference-only
 
-**Ω-type:** Ω_C (design choice — a reporting surface over existing grid data; second of the three
-2026-06-11 review-exchange improvements).
+**Ω-type:** Ω_C (design choice — a reporting surface over existing grid data).
 
 **Status:** resolved — 2026-06-15: shipped the standalone authored-witness version (the
-"full" OQ-107-dependent version is moot now that OQ-107 is `future`; the witness is the authored
-stakeholder, not a survey wave, so OQ-107 dependence was wrong — dep dropped). `stakeholder_seats:
-power_witness_count/3` + `power_witness_map/2` count named stakeholders authored at each power
-atom; serialized as `perspective_witness` in `json_report.pl` (pipeline output, 64/64) and
-rendered in `python/tensions_ledger.py`. A 0 = that perspective is inference-only, NOT
-measured-absent — zeros are SHOWN with coverage carried to the read site (Pattern 6). Witnessed:
-`geopolitical_settlement_competition` reports `powerless=tangled_rope moderate=snare` with
-`powerless=0 moderate=0` authored — the argued-not-evidenced legs made visible. Originally filed
-2026-06-11 (Pew political-typology review exchange). Evidence: KNOWN_STATE 2026-06-15.
+OQ-107-dependent "full" version is moot now that OQ-107 is `future`; the witness is the authored
+stakeholder, not a survey wave — dep dropped). `stakeholder_seats:power_witness_count/3` +
+`power_witness_map/2`; serialized as `perspective_witness` in `json_report.pl` (64/64) and
+rendered in `python/tensions_ledger.py`. A 0 = inference-only, NOT measured-absent — zeros are
+SHOWN with coverage carried to the read site (Pattern 6). Witnessed:
+`geopolitical_settlement_competition` reports typed legs with `powerless=0 moderate=0` authored.
+Filed 2026-06-11 (Pew review exchange). Evidence: KNOWN_STATE 2026-06-15.
 
-**Key finding (why coverage is over 6, not the 4 perspective columns).** The witness axis is the
-full 6-atom power vocabulary (powerless/moderate/powerful/organized/institutional/analytical,
-docs/logic.md:293) — the AUTHORING vocabulary — which is DISTINCT from the 4-position observer
-fingerprint (`logical_fingerprint:fingerprint_shift/2` probes 4 canonical observer seats;
-`powerful`/`organized` have π and canonical-d but no `standard_context_for_power`, so no
-perspective column). Reporting witness over the 6 needs no seat-decision collapse and loses no
-stakeholders. Cross-ref: OQ-101 (the ledger surface), OQ-107 (the dropped dep, now `future`).
+**Key finding (kept):** the witness axis is the full 6-atom power vocabulary (the AUTHORING
+vocabulary, docs/logic.md:293), DISTINCT from the 4-position observer fingerprint — reporting
+over the 6 needs no seat-decision collapse and loses no stakeholders. Cross-ref: OQ-101,
+OQ-107.
 
 ---
 
 ## OQ-109 — Stakeholder-layer migration completion: Phase B cutover + Phase C regen/retire (spun off the OQ-83 measurement close)
 
-**Ω-type:** Ω_E (engineering follow-through with witnessable cutover effects; one embedded
-re-witnessing obligation — the FNL regime resets at the example cutover).
+**Ω-type:** Ω_E (engineering follow-through with witnessable cutover effects).
 
-**Status:** resolved — 2026-06-13 (operator ruling). The Phase C MIGRATION is complete and
-witnessed (archive / schema removal / cohort-zero swap / battery / analytical-tail instruments;
-population corrected to n=5). The σ/seat residual was **DISCHARGED TO A SUCCESSOR (OQ-118), not
-answered**: the gated replicate spend RAN (15 draws, batch `msgbatch_01UbfPq13BcHgJKxcsqK549i`,
-commit `dcfaea97`), the partition test executed, and the frozen σ/seat prediction (`5f2a626c`) was
-**falsified-as-tested on exact-match fields** (Fisher two-sided p=0.649) — the structured finding
-and its two graded re-test conditions live in OQ-118. The `reading_diff` re-point remains
-COHORT-ONE-gated (no live stakeholder-cell story; `constraint_stakeholder/7` Unknown procedure) —
-forward dependency carried into OQ-118's cohort-one scope. Filed 2026-06-11 at the OQ-83 close; R4
-ruled SATISFIED (operator, 2026-06-11); corpus-scale census recorded declined-with-reason in the
-OQ-83 close.
+**Status:** resolved — 2026-06-13 (operator ruling). Phase C MIGRATION complete and witnessed
+(archive / schema removal / cohort-zero swap / battery / analytical-tail instruments; n=5). The
+σ/seat residual was **DISCHARGED TO A SUCCESSOR (OQ-118), not answered**: the gated replicate
+spend RAN (15 draws, batch `msgbatch_01UbfPq13BcHgJKxcsqK549i`, commit `dcfaea97`), and the
+frozen σ/seat prediction (`5f2a626c`) was falsified-as-tested on exact-match fields (Fisher
+p=0.649) — the structured finding + graded re-test conditions live in OQ-118. The `reading_diff`
+re-point remains COHORT-ONE-gated (carried into OQ-118). Filed 2026-06-11 at the OQ-83 close.
 
-**Origin:** 2026-06-11, OQ-83 measurement close-out (this entry is the Phase B/C half of the
-spin-off; the join half is OQ-110).
+**Resolution note.** Phase B: prompt cutover (new one-shot example replacing
+`agent/verification_bottleneck.json` — FNL statistics reset a second time, OQ-70), A3-table
+consumer migration, unanimity-guard conditional dispatch
+(`audits/2026-06-11_oq109_phase_b/UNANIMITY_ADJUDICATION.md`), empty-table census
+(`b3_empty_table_census.md`), presence gates + emission seam (commit `8e71faa4`), R5 zombie
+consumer. Phase C reframed as cohort-zero seeding: archive-before-removal, schema retirement of
+`perspectives[]` + `mandatrophy_resolved`, regen under the schema-REQUIRED fail-closed provenance
+growth rule; witnessed `audits/2026-06-12_cohort_zero/WRITEUP.md` + `battery_witnesses.out`.
 
-[Compressed 2026-07-05; full history in git.] Phase B landed the prompt cutover (new one-shot
-example replacing `agent/verification_bottleneck.json` — FNL statistics reset a second time, OQ-70),
-the A3-table consumer migration, the unanimity-guard conditional dispatch
-(`audits/2026-06-11_oq109_phase_b/UNANIMITY_ADJUDICATION.md`), the empty-table census (6 silent +
-3 loud members, `audits/2026-06-11_oq109_phase_b/b3_empty_table_census.md`), presence gates +
-emission seam (commit `8e71faa4`), and the R5 zombie consumer. Phase C was reframed as cohort-zero
-seeding: archive-before-removal, schema retirement of `perspectives[]` + `mandatrophy_resolved`,
-regen as cohort zero under the schema-REQUIRED fail-closed provenance growth rule (prompt/schema
-commits, model string, sampling params, `seeded_from`, `draw` index), snapshot rule — witnessed
-`audits/2026-06-12_cohort_zero/WRITEUP.md` + `battery_witnesses.out` (NL trio FILTERS on the new
-regime: 1/4 mountain-claimed stories certifies; the archive C≡claim-mountain finding was an
-old-regime artifact).
-
-Standing correction-keys: (1) the Iran-essay pair is a separate cohort
-(`prolog/archives/datasets/iran_essay_2026-06-11/`, commit `d26d04a2`) — NEVER mix into cohort-zero
-denominators; (2) `corroborated_zombie = 0` semantics are witnessed only by the overlay control,
-never cite the live diff for that bucket; (3) identity across regen is KIND-level only — never
-name-/signature-key a per-story mechanism across a regen boundary
-(`audits/2026-06-12_signature_identity_witness/`; promoted to CLAUDE.md "Generation is
-stochastic"); (4) "determinism-as-desideratum is part of the problem" is scoped to GENERATION —
-behind the committed-JSON frontier, non-determinism stays a bug (the OQ-112 class). Homogeneity
-falsifier (checkable at cohort two): cross-cohort signature drift despite identical
-prompt/schema/example provenance ⇒ era homogeneity was not binding; shift to n-per-cohort
-averaging. Cross-refs: OQ-83 (rulings R1–R5 of record remain operative), OQ-110 (join half),
-OQ-114 (C-arm extension ruling), OQ-118 (σ/seat residual), OQ-70 (FNL regime resets).
+**Standing correction-keys (operative):** (1) the Iran-essay pair is a separate cohort
+(`prolog/archives/datasets/iran_essay_2026-06-11/`, commit `d26d04a2`) — NEVER mix into
+cohort-zero denominators; (2) `corroborated_zombie = 0` semantics are witnessed only by the
+overlay control — never cite the live diff for that bucket; (3) identity across regen is
+KIND-level only (`audits/2026-06-12_signature_identity_witness/`; promoted to CLAUDE.md);
+(4) determinism-as-desideratum is scoped to GENERATION — behind the committed-JSON frontier,
+non-determinism stays a bug (OQ-112 class). Homogeneity falsifier (checkable at cohort two):
+cross-cohort signature drift despite identical provenance ⇒ shift to n-per-cohort averaging.
+Cross-refs: OQ-83 (R1–R5 stay operative), OQ-110, OQ-114 (C-arm ruling), OQ-118, OQ-70.
 
 ---
 
@@ -6136,93 +4522,63 @@ spin-off; the Phase B/C half is OQ-109).
 
 **Status:** resolved — 2026-06-18. RETIRED (not fixed): operator ruled `prolog/archives/datasets/*`
 out of scope (no backward-compat), which closes the bridge's only genuine consumer.
-
 **Priority:** 1
 
-**Diagnosis (confirmed).** `data_repair:bridge_omega_variables_pure/3` guarded its module lookup on
-the BARE interval id, but testsets declare their facts in module `constraint_<id>`, so the guards
-always missed and the predicate returned `[]` — it imported zero omegas on every report run (Build
-Discipline Pattern 6: success-shaped absence; OQ-99's wrong-module twin). Live path:
-`scenario_manager.pl:114` → `repair_interval/1` → `bridge_v34_data/2` → the bridge. Authored omegas
-already reach reports WITHOUT it: testsets author `narrative_ontology:omega_variable/3` directly
-(`report_generator.pl:709`) and the 5-arity protocol renders at `:776-794` (the OQ-99 fix). The
-bridge's only genuine purpose — synthesizing the 3-arity fact for v3.4-legacy UNPAIRED testsets —
-has no in-scope input (live corpus 100% paired; unpaired inputs are archive-only).
-
-**Resolution.** Removed `bridge_omega_variables_pure/3` + its `bridge_v34_data/2` call + the
-now-dead `persist_single(omega_variable(...))` dispatch clause, with tombstones in `data_repair.pl`.
-The deferred capability is logged as **GAP-13** (`docs/design/design_gaps.md`) with the
-re-introduction recipe (re-key on `constraint_<id>` per the OQ-99 template, both positive controls,
-a non-fabricated type). A secondary defect retired with it: the /5 branch fabricated type
-`empirical` for a typeless 5-arity fact.
-
-**Witness (paste-or-untag).** Pre-removal probe on
-`border_control_legitimacy__freedom_of_movement_primary`: `bare_module_FALSE` /
-`constraint_module_TRUE` / `five_arity_in_constraint_module_TRUE` / `bridge imported 0 omegas` (the
-no-op fired — not a didn't-run zero). Removal is behavior-preserving: ZERO DIFF on three
-omega-authoring reports (border_control, catastrophe_memory_kernel__boundary_maintenance_reading,
-animal_status_kernel__property_reading) across both raw `run_scenario` output and
-`enhanced_report.py`. Dynamic suite GREEN (80 passed, 0 failed, 0 errors). Provenance:
-KNOWN_STATE 2026-06-18.
+**Resolution note.** `data_repair:bridge_omega_variables_pure/3` guarded on the BARE interval id
+while testsets declare `constraint_<id>` — it imported zero omegas on every report run (Pattern
+6; OQ-99's wrong-module twin). Authored omegas already reach reports without it. Removed the
+predicate + `bridge_v34_data/2` call + dead `persist_single` dispatch with tombstones; the
+deferred capability logged as **GAP-13** with the re-introduction recipe (re-key per the OQ-99
+template). Secondary defect retired with it: the /5 branch fabricated type `empirical`. Witness:
+pre-removal probe (`bare_module_FALSE` / `constraint_module_TRUE` / `bridge imported 0` — the
+no-op fired, not a didn't-run zero); removal behavior-preserving (ZERO DIFF on three
+omega-authoring reports, both raw and enhanced); suite GREEN 80/0/0. KNOWN_STATE 2026-06-18.
 
 ## OQ-112 — Pattern-6 confirmed-candidate batch from the OQ-97 census: 8 classes, member-level sort and per-class disposition
 
-**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + item 2 + item 7 + item 4 fixed; items 3,5,6,8 witnessed-latent across all three live legs, declared-not-landed).
+**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + items 2/4/7 fixed; items 3/5/6/8 witnessed-latent, declared-not-landed).
 
 **Status:** resolved — 2026-06-23 (close-out, witness `audits/2026-06-23_oq112_closeout/`).
-Combined witness pass (Part A bite-check on 1/2/4/7 + Part B kill-conditions on 3/5/6/8 +
-cross-corpus check on both twins) → **DECLARE-AND-STOP**: only item 1 touched live output
-(13/92 abductive `agrees`→`unavailable`, **headline-neutral**); items 2/4/7 latent-hardened;
-items 3/5/6/8 do NOT fire as live bites on `testsets` (92), `testsets_haiku` (960), or
-`testsets_flash` (960) — the absence-gates are masked **upstream** (epistemic/sufficiency guards
-require the same metric family the downstream gate needs; structural, not 92-sparsity). No headline
-ever flipped on any live leg from any OQ-112 fix. Fix-shapes for 3/5/6/8 recorded in the writeup,
-not landed (latent-hardening judged not to earn its spend pre-rebuild). **Declared scope boundary:**
-the pre-de-leak archives (`kernel_v1`/`original_v6`/…) were not swept (retrospective-audit breadth,
-OQ-89 pattern; re-runnable). Resolution history below.
-
+Combined witness pass (bite-check + kill-conditions + cross-corpus on both twins) →
+**DECLARE-AND-STOP**: only item 1 touched live output (13/92 abductive `agrees`→`unavailable`,
+headline-neutral); items 2/4/7 latent-hardened; items 3/5/6/8 do NOT fire live on `testsets`(92)
+/ `testsets_haiku`(960) / `testsets_flash`(960) — absence-gates masked UPSTREAM (structural, not
+sparsity). Fix-shapes recorded, not landed. **Declared scope boundary:** pre-de-leak archives
+not swept (OQ-89 pattern; re-runnable).
 **Priority:** 1
 
-[Compressed 2026-07-05; full history in git.] Filed 2026-06-11 at the OQ-97 close. Rounds:
-item 1 (C4a) `audits/2026-06-22_oq112_round1/`; items 2+7 `audits/2026-06-22_oq112_round2/`
-(commits `d69d5d39`, `4ee4ce08`, `0ef5bf6d`); item 4 `audits/2026-06-23_oq112_round3/`;
-item-4 sentinel trace `audits/2026-06-11_oq112_item4_sentinel_trace/`. Full class tables with
-member lists: `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
+Filed 2026-06-11 at the OQ-97 close. Rounds: item 1 `audits/2026-06-22_oq112_round1/`; items 2+7
+`audits/2026-06-22_oq112_round2/` (commits `d69d5d39`, `4ee4ce08`, `0ef5bf6d`); item 4
+`audits/2026-06-23_oq112_round3/`; sentinel trace `audits/2026-06-11_oq112_item4_sentinel_trace/`.
+Full member lists: `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
 
-**The class table (new sites sort against this — cited by `build_discipline.md` Pattern 6):**
-1. **C4a — `; Signal = agrees` on absent probe input** (`diagnostic_summary.pl`, 13 sites). FIXED
-   (commit `4e6cf6e9`): `:198`/`:212`/`:163` `agrees`→`unavailable`; `agrees` is sound only after
-   the probe predicate *succeeded* with a positive no-tension result, a defect when reached from
-   the `catch(_,_,fail)` else (data-absence). 10 sound sites left as-is.
-2. **A10 widened — exception/failure absorbed at consumer boundary** (`json_report.pl:72,76`;
-   `trajectory_mining.pl:912`; `maxent_report.pl:211`; `maxent_diagnostic.pl:395`). FIXED via
-   per-stage completion witnesses (`maxent_run_info` / NEW `maxent_indexed_run_info`) + attempt
-   markers + `verdict_join` fail-closed on `maxent_void_alerts/1` per-attempted-stage (severity
-   moderate/yellow, operator 2026-06-23). AGENTS.md "completion-witness-or-fail-closed" invariant.
-3. **A6 — absence-certifies-cleanliness** (`purity_scoring.pl:71,80,88`;
-   `drl_boltzmann_analysis.pl:302`; `drl_fpn.pl:206`; `covering_analysis.pl:137`;
-   `signature_detection.pl:1090`) — witnessed-latent, fix-shape recorded, NOT landed.
-4. **A4/A3 — fabricated `0.5`/`0.0` fallbacks in maxent accessors**. FIXED (Round 3, Commit 1
-   alone): maxent-local accessors return the `unknown` sentinel (OQ-44 pattern); dead `;Supp=0.0`
-   branches removed; `maxent_threshold_proximity/4` `number/1` guard. Commit 2 DROPPED and
-   Commit 3 DISSOLVED (premises falsified by Round 0; `boltzmann boundary_analysis` = GAP-19).
-5. **C4b — blind=stable trend family** (`drift_events.pl:92,437`; `intent_engine.pl:80`;
-   `pattern_analysis.pl:37`; `logical_fingerprint.pl:338`) — witnessed-latent, not landed.
-6. **A2 — statistic-on-empty → 0.0** (~40 sites, WRITEUP §4) — witnessed-latent, not landed.
-7. **A10 catch→0.0 (wasserstein, `json_report.pl:438–442`)**. FIXED: `wm_token/3`/`wm_emit/3`
-   (float | null | `"errored"`); 344/344 live cells genuine float; `0.0` stays a legal measured value.
-8. **Low tier: C4c `pass(no_*_data)` defaults; A7 zero-contamination-on-untyped (needs a design
-   ruling); B2 collectors over build-stage caches** — witnessed-latent/benign, not landed.
+**The class table (kept — new sites sort against this; cited by `build_discipline.md` Pattern 6):**
+1. C4a — `; Signal = agrees` on absent probe input (`diagnostic_summary.pl`). FIXED `4e6cf6e9`
+   (`agrees`→`unavailable` at 3 sites reached from the catch-else; 10 sound sites as-is).
+2. A10 widened — exception/failure absorbed at consumer boundary. FIXED via per-stage completion
+   witnesses (`maxent_run_info`/`maxent_indexed_run_info`) + `verdict_join` fail-closed on
+   `maxent_void_alerts/1` (moderate/yellow, operator 2026-06-23); AGENTS.md
+   completion-witness-or-fail-closed invariant.
+3. A6 — absence-certifies-cleanliness (purity_scoring, boltzmann, drl_fpn, covering,
+   signature_detection sites) — witnessed-latent, NOT landed.
+4. A4/A3 — fabricated `0.5`/`0.0` maxent fallbacks. FIXED (Round 3 Commit 1: `unknown` sentinel,
+   dead branches removed, `number/1` guard); Commit 2 DROPPED, Commit 3 DISSOLVED (premises
+   falsified; `boltzmann boundary_analysis` = GAP-19).
+5. C4b — blind=stable trend family — witnessed-latent, not landed.
+6. A2 — statistic-on-empty → 0.0 (~40 sites) — witnessed-latent, not landed.
+7. A10 catch→0.0 (wasserstein). FIXED: `wm_token/3`/`wm_emit/3` (float | null | `"errored"`);
+   344/344 live cells genuine float.
+8. Low tier: C4c `pass(no_*_data)`; A7 zero-contamination-on-untyped (needs a design ruling);
+   B2 collectors over build-stage caches — witnessed-latent/benign, not landed.
 
-Standing items: (1) **Zero-legal ruling RULED (B) defer** under TWO live falsifiers — any stage
-emits `maxent_run_info(_,0,_)` on a live corpus (re-check via Round-0 W3
+**Standing items (operative):** (1) zero-legal ruling RULED (B) defer under TWO live falsifiers —
+any stage emits `maxent_run_info(_,0,_)` on a live corpus (re-check via Round-0 W3
 `probe_reachability_and_zero_92.pl`), or any claim-bearing story lacking `suppression_requirement`
-appears (re-check via the item-4 reachability probe W2b, NOT W3). "Defer-B safe" ≠ "hazard absent".
-(2) **Correction-key:** the item-2 gate and item-7 widening are verified against FORCED controls,
-live-UNEXERCISED on the 92 — do not cite them as "gate proven live". (3) **Methodological yield:**
-a guard-predicate count over-reports Pattern-6 firing; consumed-output reachability, checked on
-more than the sparsest corpus, is the witness. Cross-refs: OQ-97 (census), OQ-44 (statute),
-OQ-98 (join), OQ-43 (A6 semantics), OQ-93/OQ-96 (pattern provenance), OQ-110 (A4 lineage).
+appears (re-check via item-4 W2b, NOT W3); "defer-B safe" ≠ "hazard absent". (2) Correction-key:
+the item-2 gate and item-7 widening are verified against FORCED controls, live-UNEXERCISED — do
+not cite as "gate proven live". (3) Methodological yield: consumed-output reachability on more
+than the sparsest corpus is the witness, not guard-predicate counts. Cross-refs: OQ-97, OQ-44,
+OQ-98, OQ-43, OQ-93/OQ-96, OQ-110.
 
 ---
 
@@ -6230,52 +4586,25 @@ OQ-98 (join), OQ-43 (A6 semantics), OQ-93/OQ-96 (pattern provenance), OQ-110 (A4
 
 **Ω-type:** Ω_E (witnessed, mechanical; Pattern-5 absence-gate stack).
 
-**Status:** resolved — 2026-06-18. Fork (b) ruled (document builder-unreachability;
-no logic change) — and (a)/(c) DISSOLVED by evidence, not preference (below). Limb-2
-honesty defect FIXED (silent dead clause → loud throw tripwire). The residual capability
-gap is routed to **GAP-08 §7 author-independent immovability signal**, not a standing
-defect. Compressed on close per the footer rule.
+**Status:** resolved — 2026-06-18. Fork (b) ruled (document builder-unreachability; no logic
+change) — and (a)/(c) DISSOLVED by evidence. Limb-2 honesty defect FIXED (silent dead clause →
+loud throw tripwire). Residual capability gap routed to **GAP-08 §7 author-independent
+immovability signal**.
 
-**The witness (limb 1, detector dead-by-range).** `has_viable_alternatives/2`'s range is
-exactly `{true, unknown}`; `false` is builder-unreachable. `natural_law_signature/1`
-requires `HasAlternatives == false`, so the predicate is unsatisfiable on every corpus.
-Probe (2026-06-18) across all three live-era corpora — live `testsets` (79) + twins
-`testsets_haiku` (960) + `testsets_flash` (960) = 1,999 stories, each loaded with the
-overlay-took-effect witness (`corpus_count` = 79/960/960, not silently the default):
-positive control `natural_law_signature(profile(0.92, 0.02, 0.04, 0, false, stable, _))` →
-`control_fires` on every corpus; live `natural_law_signature` → `live_firings=0` on every
-corpus; `has_viable_alternatives` returning `false` → `hva_false_count=0` on every corpus.
-Locked as regression: `prolog/tests/test_oq113_dead_natural_law.pl` (3/3 green).
-
-**The witness (limb 2, subtype unreachable).** `determine_pure_subtype/2`'s
-`pure_natural_law` branch gates on the dead detector → 0-firing. Converted to
-`throw(unreachable_pure_natural_law(C))` — behavior-neutral today (witnessed:
-`structural_purity` over all 1,999 live-era constraints — `testsets` 79 + `testsets_haiku`
-960 + `testsets_flash` 960 — → `structural_purity_all_ok_no_throw` on every corpus),
-loud the day a corpus/schema powers the detector (doubles as the §9b.2 KILL).
-
-**Why (a) — extend the builder to emit `false` — is not available now (dissolves, by
-absence of signal).** (1) The metrics are non-diagnostic: clean and contested mountains
-degrade byte-identically `[mountain,rope,rope,mountain]`
-(`audits/2026-06-17_mountain_authoring_sweep/universal_degradation_witness.txt`), so an
-opened gate rides burned metrics (§9a(iii)). (2) The only reliable discriminator is absent
-live: the strong leg is a non-mountain `constraint_classification` seat (caught 161/370
-contested in v6); the **live corpus authors 0 `constraint_classification` facts**
-(it authors the CS/committer-axis schema instead — `cs_axiom_contradiction`,
-reading-relation edges), while kernel_v1 authors ~9,000. (3) The remaining `false`-sources
-are falsified — prose/omega-`false` is the contaminated source GAP-08 rejects (370/627
-engine-mountains carry "impossible alternative" prose AND a contested reading). So (a)
-collapses into "first build the GAP-08 §7 author-independent immovability signal," which
-does not exist. **(c) — retire the leg — is killed by §9a(iii):** removing the detector's
-only discriminating leg makes it fire non-discriminatingly on the burned metrics. **(b) is
-forced.**
-
-**Cross-refs / closure.** OQ-43 (sibling `BeneficiaryCount==0` leg) and OQ-44 (gate-class
-policy) are both **resolved** — the sibling/policy legs are closed. OQ-128 retired the
-`resolve_modal_signature_conflict(_, natural_law, mountain)` override (0/3843 behavior-
-neutral), demoting the detector to a wired-but-dark router socket. OQ-37 (`unknown` sentinel
-discipline — the sentinel works correctly; the consumer's `== false` test is what can never
-see it). Residual capability → GAP-08 §7 (author-independent immovability signal) +
+**Resolution note.** Limb 1: `has_viable_alternatives/2`'s range is exactly `{true, unknown}` —
+`false` is builder-unreachable, so `natural_law_signature/1` (requires `HasAlternatives ==
+false`) is unsatisfiable on every corpus. Probed across all three live-era corpora (1,999
+stories, overlay-took-effect witnesses; positive control fires everywhere, live firings 0
+everywhere); locked as regression `prolog/tests/test_oq113_dead_natural_law.pl` 3/3. Limb 2:
+`determine_pure_subtype/2`'s `pure_natural_law` branch converted to
+`throw(unreachable_pure_natural_law(C))` — behavior-neutral today (witnessed 1,999/1,999
+no-throw), loud the day a corpus powers the detector (doubles as the §9b.2 KILL). Why (a) —
+extend the builder — dissolves: clean and contested mountains degrade byte-identically
+(`audits/2026-06-17_mountain_authoring_sweep/universal_degradation_witness.txt`); the only
+reliable discriminator (a non-mountain `constraint_classification` seat) is absent live (0
+authored vs ~9,000 in kernel_v1); prose/omega-`false` is the contaminated source GAP-08 rejects.
+(c) — retire the leg — killed by §9a(iii). Cross-refs: OQ-43, OQ-44 (both resolved), OQ-128
+(retired the NL override — detector is a wired-but-dark router socket), OQ-37;
 `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md` §9a(i)/§7.
 
 **Deps:** blocked_on_human GAP-08 §7 author-independent immovability signal (a residual capability gap routed to a design gap, not an OQ edge)
@@ -6288,119 +4617,75 @@ see it). Residual capability → GAP-08 §7 (author-independent immovability sig
 operator ruled the live 3 SPLIT: `organization_floor` + `demographic_skill_mismatch` IN
 (benign/artifact-shaped dissent; the C arm's FIRST LIVE DECISIONS — flagged BY NAME for
 individual inspection at the Phase C re-witness, never absorbed into the aggregate diff);
-`institutional_trust_erosion` OUT (substantive snare/piton dissent converging with the live
-FCR firing — two independent instruments agreeing in the fail-open direction).
-**Exclusion kill conditions (both directions, pinned at ruling):** flips IN if the
-snare/piton dissent resolves (seat-dissent traced to a mechanism the instruments discount
-— e.g. its duplicate-seat pairs shown to be authoring noise — or the FCR firing shown
-spurious by its own witness); becomes PERMANENT-WITH-REASON if the dissent confirms as a
-genuine non-mountain reading (at which point "why does C certify it" feeds the
-general-mechanism build item). **Exclusion mechanism (Phase C build item): per-story
-exclusion list read at dispatch time, FAIL-CLOSED — list present + story listed → old-guard
-semantics; list absent/unreadable → halt or old behavior, NEVER silent C (the seam class
-does not get instance three built into the fix for instance one). Phase C witnesses owed:
-trust_erosion shown excluded + two-sided control (a non-listed story shown reaching the C
-arm).** **Rider verdict (recorded so the conjunct is not re-proposed): option 4's
-no-beneficiary conjunct was WRONG, not merely over-restrictive — unanimous (both-cell)
-mountains declare beneficiaries too (7/32 kernel_v1, 12/411 v6), and beneficiary-carrying
-C-only stories read as mountains under every named instrument; beneficiary-presence is an
-FSM routing signal, not a mountain disqualifier (it correlates with seat-disagreement —
-56%/32% vs 22%/3% — but does not separate substantive from artifact dissent).**
-Evidence: `audits/2026-06-12_oq114_archive_probe/` (WRITEUP.md; four-cell tables kernel_v1
-41→32/0/9/0, v6 430→411/0/19/0; all 28 C-only inspected; NL trio filters NOTHING on
-archives — C ≡ claim-mountain there). Filed 2026-06-12 at the OQ-109 unanimity ruling. **Exposure-window correction:**
-the first bridge (disjunction, commit `790bb009`) accidentally made C's extension LIVE on
-main until the same-day dispatch commit — the un-fire and downstream effects (3 signature/
-pool changes, 3 maxent_top_type flips, regulatory_measurement_gap verdict_join yellow→red,
-57-story ensemble shift) WERE in pipeline output during that window; enumerated in
-UNANIMITY_ADJUDICATION.md §Spec correction for tracing any consumer. The dispatch commit
-reverted main to the old extension byte-identically; this question is NOT pre-answered.
+`institutional_trust_erosion` OUT (substantive snare/piton dissent converging with the live FCR
+firing). Evidence: `audits/2026-06-12_oq114_archive_probe/` (WRITEUP.md; four-cell tables
+kernel_v1 41→32/0/9/0, v6 430→411/0/19/0; all 28 C-only inspected; NL trio filters NOTHING on
+archives — C ≡ claim-mountain there). Filed 2026-06-12 at the OQ-109 unanimity ruling.
 
-[Compressed 2026-07-05; full history in git.] The question: does the bridge guard
-(authored-cells ∨ nl_certification_chain) rightly extend FCR mountain-protection to the 3
-mountain-claimed NL-certified non-unanimous stories? Probe ran under a PINNED, frozen criterion
-(population/comparator traps pinned, four-cell table with direction asymmetry, named instruments,
-outcome meanings written before any number, zero-divergence amendment) — full criterion text in
-git history and `audits/2026-06-12_oq114_archive_probe/WRITEUP.md`. Outcome 3 (mixed) → operator
-split ruling above. Cross-refs: OQ-109 (unanimity guard / Phase C), OQ-70 (bait regime), OQ-25
-(chimera caveat), OQ-89 (overlay pattern).
+**Operative blocks (kept):**
+- **Exclusion kill conditions (both directions, pinned at ruling):** trust_erosion flips IN if
+  the snare/piton dissent resolves (seat-dissent traced to a mechanism the instruments discount,
+  or the FCR firing shown spurious by its own witness); becomes PERMANENT-WITH-REASON if the
+  dissent confirms as a genuine non-mountain reading (then "why does C certify it" feeds the
+  general-mechanism build item).
+- **Exclusion mechanism (Phase C build item):** per-story exclusion list read at dispatch time,
+  FAIL-CLOSED — list present + story listed → old-guard semantics; list absent/unreadable → halt
+  or old behavior, NEVER silent C. Phase C witnesses owed: trust_erosion shown excluded +
+  two-sided control (a non-listed story shown reaching the C arm).
+- **Rider verdict (so the conjunct is not re-proposed):** option 4's no-beneficiary conjunct was
+  WRONG — unanimous mountains declare beneficiaries too (7/32 kernel_v1, 12/411 v6);
+  beneficiary-presence is an FSM routing signal, not a mountain disqualifier.
+- **Exposure-window correction:** the first bridge (commit `790bb009`) accidentally made C's
+  extension LIVE on main until the same-day dispatch commit — effects enumerated in
+  UNANIMITY_ADJUDICATION.md §Spec correction; the dispatch commit reverted main byte-identically.
+
+Cross-refs: OQ-109 (unanimity guard / Phase C), OQ-70 (bait regime), OQ-25 (chimera caveat),
+OQ-89 (overlay pattern).
 
 ---
 
-## OQ-115 — signature_grade/2 references abductive_helpers under [stack] where the module is a PHANTOM (load-path-dependent; check_stack regression vs the 2026-06-04 baseline; pre-dates Phase B)
+## OQ-115 — signature_grade/2 references abductive_helpers under [stack] where the module is a PHANTOM (load-path-dependent; check_stack regression vs the 2026-06-04 baseline)
 
 **Ω-type:** Ω_E (witnessed, mechanical, OQ-57 class).
 
 **Status:** resolved — fixed 2026-06-18 by side-loading `abductive_helpers` in `stack.pl`;
-check_stack returns to the 4-finding 2026-06-04 baseline (no abductive line). Filed
-2026-06-12 by the B4 gauntlet reconciliation (the one check_stack divergence not on the
-expected-divergence manifest).
-
+check_stack returns to the 4-finding 2026-06-04 baseline. Filed 2026-06-12 by the B4 gauntlet
+reconciliation.
 **Priority:** 1
 
-**The phantom.** Under bare `[stack]`, `signature_detection:signature_grade/2`
-(`signature_detection.pl:1624`) calls `abductive_helpers:known_override_signature/1` but the
-module was a phantom (`current_module` TRUE, `module_property(_, file(_))` FAILS) — the call
-threw existence_error. Pipeline unaffected (loads it via json_report → diagnostic_summary),
-so the green B4 gauntlet hid the gap.
-
-**Resolution.** Option 1 (import in signature_detection) REJECTED by evidence — it cycles
-tighter than the in-file comment documented: `abductive_helpers → maxent_classifier →
-signature_detection:constraint_signature/2` (`maxent_classifier.pl:60`) back into
-signature_detection, plus the grothendieck→drl_core arm. Option 2 (`stack.pl` side-load
-`use_module(abductive_helpers, [])`) is the safe fix; the falsified `:1611-1617` comment was
-corrected. **Witness (cold `[stack]`, corpus-free):** before → `THREW`
-(`existence_error(procedure, abductive_helpers:known_override_signature/1)`); after →
-`RETURNS`. check_stack before: 5 findings (incl. abductive); after: 4 (baseline). Provenance:
-KNOWN_STATE 2026-06-18; commit at close. The other 4 baseline findings → **OQ-142** (class
-sweep: one unguarded bite, OQ-115; the rest guarded/dead — phantom×guarded×reachable
-discriminator). Lineage: OQ-57 (wrong-qualifier class), OQ-98 (the alert path that minted
-the reference).
+**Resolution note.** Under bare `[stack]`, `signature_detection:signature_grade/2`
+(`signature_detection.pl:1624`) called `abductive_helpers:known_override_signature/1` on a
+phantom module (`current_module` TRUE, no file) — threw existence_error; pipeline unaffected
+(loads it via json_report), so the green gauntlet hid the gap. Option 1 (import) REJECTED by
+evidence — cycles tighter than documented (`abductive_helpers → maxent_classifier →
+signature_detection` + the grothendieck arm); option 2 (`stack.pl` side-load
+`use_module(abductive_helpers, [])`) landed; the falsified `:1611-1617` comment corrected.
+Witness: cold `[stack]` before THREW / after RETURNS; check_stack 5→4 findings. The other 4
+baseline findings → **OQ-142** (class sweep). Lineage: OQ-57, OQ-98. KNOWN_STATE 2026-06-18.
 
 ## OQ-116 — Two linter rules unmigrated for the cohort-zero authoring regime: SCAFFOLD_DANGER_ZONE calibration; MOUNTAIN_METRIC_CONFLICT contradicts the claim/metric-independence doctrine
 
 **Ω-type:** Ω_E (advisory-lint calibration; witnessed on the cohort-zero pilot).
 
 **Status:** resolved — MOUNTAIN_METRIC_CONFLICT half split-closed 2026-06-14; the
-SCAFFOLD_DANGER_ZONE calibration half is refiled as **OQ-127** (open; status honesty — a
-resolved+promotable principle and a live calibration call cannot share one status field).
-Original filing 2026-06-12 at the pilot witness (`audits/2026-06-12_cohort_zero/pilot_witness.out`):
-5/7 fired SDZ, 1/7 fired MMC (claim=mountain, ε=0.68); driver-owned pilot checks were 7/7 PASS.
+SCAFFOLD_DANGER_ZONE calibration half refiled as **OQ-127**. Filed 2026-06-12 at the pilot
+witness (`audits/2026-06-12_cohort_zero/pilot_witness.out`).
 
-**Ruling (operator, 2026-06-14): the linter is for the operator, not the engine — linting
-stories would be orchestrated bias; lint never gates generation; threshold-coupled codes never
-reach the authoring LLM (de-leak-in-reverse; the OQ-74 mirror).** Landed as a single chokepoint
-(`linter.build_author_feedback`, the SSOT for `THRESHOLD_COUPLED_LINT`) through which every
-feedback→prompt path is routed, and as a principle in `docs/design/design_discipline.md`.
+**Ruling (operator, 2026-06-14 — operative, recorded in `docs/design/design_discipline.md`):
+the linter is for the operator, not the engine — linting stories would be orchestrated bias;
+lint never gates generation; threshold-coupled codes never reach the authoring LLM (the de-leak
+in reverse; the OQ-74 mirror).** Landed as a single chokepoint (`linter.build_author_feedback`,
+SSOT for `THRESHOLD_COUPLED_LINT`) through which every feedback→prompt path routes.
 
 **MMC resolves** because the claim-vs-metric divergence it flags is authored signal the engine
-measures by computing a different SEATED reading — and per **OQ-74 / the seat theorem these
-readings need not collapse to one true type** (the mountain claim and the metric reading both
-stand; the divergence is the signal). Its only defect was message-text leakage (the authoring
-imperative "reduce extractiveness / reclassify"); reworded this session to an operator readout
-framed as a non-collapsing seat divergence, kept as an offline diagnostic, stripped from author
-prompts.
-
-**Correction to THIS entry's own premise (audit discipline — doc-contradicting, treated):** the
-original text said "the engine MEASURES that divergence (FSM exists for it)." **FSM is the wrong
-signal** — `false_summit_mountain/2` (`signature_detection.pl:1503–1517`) requires metrics WITHIN
-mountain range (ε ≤ 0.25) plus a beneficiary; the firing had ε=0.68 ABOVE it. The engine analog
-is the **metric classifier** (high ε → snare/rope/tangled_rope) with **FNL** a Boltzmann-gated
-signature override. Engine-witnessed over **all 9** live-corpus MMC firings
-(`audits/2026-06-14_oq116_mmc_engine_witness/`): the metric seat diverges from the mountain claim
-9/9 (snare ×4, rope ×3, tangled_rope ×1, unknown ×1); FNL fires only **1/9** (Boltzmann-gated).
-The named cohort-zero story `institutional_trust_erosion_c0` → snare, FNL=no. So: metric-seat
-primary, FNL secondary; "FNL is the analog" is right in kind but FNL is the minority route.
-
-**Bar discrepancy (was "recorded, not amended") — AMENDED 2026-06-14:** `pilot_witness.py` now
-filters threshold-coupled codes through the centralized set before the "lint clean" assertion, so
-operator-readout codes no longer flip PASS→FAIL.
-
-**Evidence/build (commit `3587782b` + 2026-06-14 turn):** `linter.py` MMC reword + de-leak SSOT
-chokepoint; `regenerate_stories.py`/`agent/cohort_zero_regen.py` routed through it;
-`python/tests/test_deleak_chokepoint.py` (non-circular end-to-end + census tripwire guard);
-`pilot_witness.py` bar fix; `docs/design/design_discipline.md` linter principle;
-`audits/2026-06-14_oq116_mmc_engine_witness/`. SDZ half → **OQ-127**.
+measures by computing a different SEATED reading — per OQ-74 / the seat theorem these readings
+need not collapse to one true type; only defect was message-text leakage (reworded to an
+operator readout, stripped from author prompts). **Correction to this entry's own premise:**
+"FSM exists for it" was WRONG — FSM requires metrics WITHIN mountain range; the engine analog is
+the metric classifier with FNL a minority Boltzmann-gated route. Engine-witnessed over all 9
+live MMC firings (`audits/2026-06-14_oq116_mmc_engine_witness/`): metric seat diverges 9/9, FNL
+1/9. Bar discrepancy AMENDED (`pilot_witness.py` filters threshold-coupled codes before the
+"lint clean" assertion). Build: commit `3587782b` + `python/tests/test_deleak_chokepoint.py`.
 
 ## OQ-117 — Claim/metric co-authoring at SCOPE manufactures claimed-vs-computed concordance: a validity condition on the divergence machinery wherever the manifest path feeds both sides
 
@@ -6409,67 +4694,32 @@ at SCOPE vs document-as-condition).
 
 **Status:** resolved — (c) RULED **document-as-condition**, seat-framed (operator, 2026-06-13);
 decouple withdrawn as an ε-layer artifact; two forward items filed (OQ-119 join-diff, OQ-120
-rope/snare). Ruling block at the foot of this entry. Originally escalated 2026-06-12 out of OQ-78's evidence pass (operator-directed: own
-entry, not a paragraph inside OQ-78's resolution). Same-day rulings: free-gate re-weighting
-principle added at filing (below); the (c) design call is SEQUENCED AFTER OQ-78's fate-2 read
-(now the OQ-109 Phase C cross-arm read — the bin-withdrawal probe was HALTED pre-spend).
-**Same-day mechanism CORRECTION (see block below): the live co-authoring channel is
-HYPOTHESIS-feeding, not bin-feeding — epsilon_bin never reaches the generation prompt on any
-production path** (`audits/2026-06-12_oq78_dead_bin_channel/`).
+rope/snare). Escalated 2026-06-12 out of OQ-78's evidence pass; the (c) design call was
+sequenced after OQ-78's fate-2 read (the OQ-109 Phase C cross-arm read; bin-withdrawal probe
+HALTED pre-spend). **Same-day mechanism
+CORRECTION: the live co-authoring channel is HYPOTHESIS-feeding, not bin-feeding — epsilon_bin
+never reaches the generation prompt on any production path**
+(`audits/2026-06-12_oq78_dead_bin_channel/`).
 
-[Compressed 2026-07-05; full history in git.] The problem: SCOPE co-authors `hypothesis`
-(→ `claimed_type`) and `epsilon_bin` (→ `base_properties.extractiveness`) upstream of generation,
-so claim/metric independence at the generation seat cannot be assumed for manifest-fed stories —
-low claimed-vs-computed divergence partly measures hypothesis-echo, not authoring honesty (OQ-70's
-shape). Correction-keys that stand: (1) the live channel is the HYPOTHESIS token, not the bin —
+**Correction-keys that stand (operative):** (1) the live channel is the HYPOTHESIS token;
 `epsilon_bin` is a Pattern-1 dangling wire, default NOT re-wire (wiring would create the numeric
-instruction channel this OQ interrogates); (2) divergence evidence is discounted by what the CLAIM
-side was fed; no numeric disclosure to any authoring stage (OQ-78 discipline). Evidence arc:
-within-arm proxy + Spend A (mountain 0/15 on non-naturalization kernels — claim is
-structure-tracking, selection confound killed) + Spend B (fed-arm ε moved only at divergent cells,
-B3-ambiguous by frozen headline) in `audits/2026-06-13_oq117_within_arm_proxy/RESULTS.md`; engine
-adjudication 0/30 ratified as mountain on both arms
-(`audits/2026-06-13_oq117_within_arm_proxy/ENGINE_ADJUDICATION.md`).
+instruction channel this OQ interrogates); (2) divergence evidence is discounted by what the
+CLAIM side was fed; no numeric disclosure to any authoring stage (OQ-78 discipline).
 
-**(c) RULING — document-as-condition, seat-framed (operator, 2026-06-13).** The ε-layer spends and
-the engine run together resolve (c):
-
-- **Seat-theoretic re-register (operator correction, `docs/seat-theorem-v1.md`).** The engine does
-  not adjudicate whether a claim is "really" a mountain — by the Coupling Theorem a contentful
-  verdict cannot be seat-free. The multi-perspective × multi-axiom × multi-temporal machinery's
-  purpose is to **show the seat** (Q5 liveness = the σ/seat test: maintained-with-a-beneficiary = a
-  live parameter = a seat; removal-rearranges-nothing-no-for-whom = mountain). So "0/30 ratified" is
-  NOT "30 false mountains caught"; it is: from the engine's seats these structures read non-mountain
-  because they carry the liveness flags (maintained extraction, beneficiary, coupling) a mountain
-  claim conceals. `false_natural_law` = concealment-detection (Corollary 2a), not truth-rejection.
-- **Why feeding can't manufacture concordance (the (c) core worry, answered).** The authored claim
-  **label** is not a live parameter of the seat-constituted type — the constituting parameters are
-  ε/coupling/beneficiary/timeline. The engine reads the seat off the **structure**, not the label;
-  feeding moved ε only between *rejecting* gates (free_market_fed_d2 FNL→FCR), never to a mountain
-  reading. 0/30 both arms. **Decouple is WITHDRAWN** — it would do surgery (sever SCOPE→hypothesis→
-  claim) to fix a manufactured-concordance that does not occur at the layer the engine decides types;
-  the Spend-B "real-but-bounded decouple rationale" was an ε-layer artifact the engine catches on
-  both arms.
-- **The documented condition (sharper than the ε version).** Manifest-fed stories have the claim
-  instructed, but that does not bias the seat-constituted classification — the claim-coupling lives
-  at the authored-ε layer and is *shown* downstream (Corollary 2a concealment-detection), not
-  ratified. No provenance-bit code change is forced (the worry it would address does not materialize
-  at the type layer); the condition is the record itself, here.
-- **Scope bound.** Established for the **mountain / false-foundational** case — exactly the case (c)
-  named (manufactured concordance = a concealed seat ratified as σ-fixed). The rope/snare ε boundary
-  is a separate, lower-stakes question (both non-mountain; the dangerous direction is false
-  foundational-ness) → OQ-120.
-- **NOT funded (positive-control instinct, same as the matched-fed-arm gap).** The join-structure
-  fed-vs-withheld diff is the proper *engine-characterization* test, but it is **not cleanly
-  computable on this corpus**: the axiom axis no-opped (`cs_kernel_id` absent), the temporal axis is
-  thin (grid 32/32 absent OQ-93; `classify_at_time` OQ-33 fabrication; confidence low) — only the
-  observer axis is non-vacuously instrumented. A diff over a join measured on ~1.5/3 axes is
-  grid-absent vacuity in a richer outfit. Filed → OQ-119, blocked on a three-axis-instrumented
-  corpus (witness all three non-vacuous before running).
-
-**Cross-refs:** OQ-119 (join-diff, engine-characterization, blocked), OQ-120 (rope/snare boundary),
-OQ-118 (cast-instability — printing_press's metric-side ε wobble), `docs/seat-theorem-v1.md`,
-`audits/2026-06-13_oq117_within_arm_proxy/ENGINE_ADJUDICATION.md`.
+**(c) ruling (compressed).** Evidence arc: within-arm proxy + Spend A (mountain 0/15 on
+non-naturalization kernels — the claim is structure-tracking; selection confound killed) +
+Spend B (fed-arm ε moved only at divergent cells) in
+`audits/2026-06-13_oq117_within_arm_proxy/RESULTS.md`; engine adjudication 0/30 ratified as
+mountain on BOTH arms (`ENGINE_ADJUDICATION.md`). Seat-theoretic re-register (operator,
+`docs/seat-theorem-v1.md`): "0/30 ratified" is NOT "30 false mountains caught" — the engine
+reads the seat off the STRUCTURE (ε/coupling/beneficiary/timeline), not the claim label;
+`false_natural_law` = concealment-detection (Corollary 2a), not truth-rejection. Feeding cannot
+manufacture concordance at the layer the engine decides types → **decouple WITHDRAWN**; the
+documented condition is the record itself. Scope bound: established for the
+mountain/false-foundational case only; rope/snare boundary → OQ-120. The join-structure
+fed-vs-withheld diff NOT funded here (only ~1.5/3 axes instrumented on this corpus) → OQ-119,
+blocked on a three-axis-instrumented corpus. Cross-refs: OQ-119, OQ-120, OQ-118
+(cast-instability), OQ-70 (shape), OQ-93/OQ-33 (temporal thinness at filing).
 
 ---
 
@@ -6581,84 +4831,31 @@ substrate witness `audits/2026-06-21_oq119_gate0/`). Filed 2026-06-13 from the O
 **Priority:** 1
 **Deps:** blocked_on_human spend-go
 
-**ANSWER (96 Sonnet generations, 5 kernels × 16 readings × {withheld,fed} × 3 draws; per-axis rule
-`median(D_A) > max(F_A)`, generation-stochasticity floor measured per axis, observer de-weighted):**
-**Feeding moves the join at the DIAGNOSTIC VERDICT layer and leaves the COMMITTER structure invariant.**
-- **verdict layer MOVES (4/5 kernels):** feeding the mountain claim — with parties held fixed, so the
-  authored ε/suppression stay high — forces the `MOUNTAIN_METRIC_CONFLICT` seat divergence and
-  escalates the `false_natural_law` signature from **commentary → correction** grade (+1 alert),
-  witnessed e.g. acceptable_risk withheld `yellow/commentary/1` → fed `yellow/correction/2`. The
-  cross-examination responds to the fed claim *without* moving the broad type (the sharper-than-OQ-117
-  effect). Honest caveat: this is substantially the *claim-gated* FNL path, so semi-expected.
-- **committer obstruction/divergence INVARIANT (0/5): Theorem-7 detection-independence HOLDS,
-  measured not assumed.** Feeding an observer-side claim does not re-author which sibling readings
-  foreclose. The honest form is "no effect beyond generation noise" — withheld redraws already flip
-  `real_closure↔licensed_plurality` (committer floor nonzero on 4/5); on the one clean-floor kernel
-  (ai_governance, F=[0,0,0]) feeding moves it exactly zero. NO violation.
-- **observer + temporal-rate move SOFTLY (2/5, 3/5):** labile, low-information, as predicted; the
-  de-weighting kept them from carrying the headline.
+**ANSWER (96 Sonnet generations, 5 kernels × 16 readings × {withheld,fed} × 3 draws; per-axis
+rule `median(D_A) > max(F_A)`, generation-stochasticity floor measured per axis, observer
+de-weighted):** feeding moves the join at the DIAGNOSTIC VERDICT layer and leaves the COMMITTER
+structure invariant. Verdict layer MOVES (4/5 kernels: fed mountain claim forces the
+`MOUNTAIN_METRIC_CONFLICT` divergence and escalates `false_natural_law` commentary → correction,
++1 alert — substantially the claim-gated FNL path, so semi-expected). Committer
+obstruction/divergence INVARIANT (0/5): **Theorem-7 detection-independence HOLDS, measured not
+assumed** — honest form "no effect beyond generation noise" (withheld redraws already flip
+`real_closure↔licensed_plurality` on 4/5; the one clean-floor kernel moves exactly zero).
+Observer + temporal-rate move softly (2/5, 3/5), de-weighted.
 
-**Method hardening that made the answer trustworthy** (all pre-draw, committed):
-- substrate re-witnessed open (Gate 0): 325 kernels clear all three axes on `testsets_haiku` — the
-  2026-06-13 blocker text was pinned to the stale 5-kernel OQ-117 probe corpus.
-- generator corrected: single-story `cohort_replicate_batch` authors NO `cs_` facts (committer dead);
-  the **kernel-regen path** (`generate_kernel_corpus` no-scope) authors `cs_reading_relation` —
-  committer axis live in both arms.
-- confound closed: bare "mountain" overlaps the schema's no-parties exemption (OQ-149 `allOf[0]`);
-  **fed framing holds parties fixed** so fed-arm coverage loss can't masquerade as the effect.
-- Sonnet override (Haiku dropped schema-required `stakeholders[]` → OQ-149 gate fired loud, 2/5
-  coverage; Sonnet → 5/5). Schema/prompt UNTOUCHED (OQ-149/OQ-83 exemption is deliberate).
-- k frozen pre-draw (median-vs-max), observer de-weighted (the headline cannot ride observer wobble).
+**Method hardening (all pre-draw, committed):** Gate-0 re-witnessed the substrate OPEN (325
+kernels clear all three axes on `testsets_haiku`; the 2026-06-13 blocker text was pinned to the
+stale 5-kernel OQ-117 probe corpus; its cited sub-blockers OQ-93 + OQ-33 were both resolved
+2026-06-11); generator corrected (kernel-regen path authors `cs_reading_relation` — committer
+live in both arms); bare-"mountain"/no-parties confound closed (fed framing holds parties
+fixed, OQ-149 `allOf[0]`); Sonnet override after Haiku dropped schema-required `stakeholders[]`
+(OQ-149 gate fired loud); k frozen pre-draw; comparator `python/audits/oq119_join_diff.py`
+validated (self-diff=0; the binding floor is the withheld-redraw generation-variance floor,
+OQ-26). Frozen prediction: `audits/2026-06-21_oq119_gate0/PREDICTION.md` (a moved
+`obstruction_status` under feeding would be a Theorem-7 violation — did not occur).
 
-**Second-order thread (NOT resolved here):** the committer axis is **generation-noisy** (withheld
-obstruction flips across redraws) — consistent with **OQ-149** (committer/CS the most model-divergent
-layer). Whether a larger draw budget resolves a sub-noise committer effect is open; route to OQ-149.
-
-**The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
-the mountain claim does not change the engine's *type* verdict (0/30 both arms). A sharper question
-remains: does feeding move the **join structure** — which observer seats disagree, which axioms
-dissent, how the drift trajectory runs — even when the final type holds? That is whether feeding
-shifts the cross-examination the engine performs (perspective × axiom × temporal), per the seat
-theorem (`docs/seat-theorem-v1.md`).
-
-**Substrate gate — WITNESSED OPEN on `testsets_haiku` (2026-06-21, `audits/2026-06-21_oq119_gate0/`).**
-The original blocker text below was pinned to the stale 5-kernel OQ-117 probe corpus; the haiku twin
-moved past it. Witnessed (engine queries, not greps):
-- **observer** — live; 4-seat χ spreads non-degenerate; `extractiveness_for_agent` fails to
-  `null`, no 0.5 fabrication path. *Caveat:* per-power stakeholder authoring is sparse
-  (`power_witness_map` ≈ 0 on many roster stories) — the spread is a real engine computation
-  (context-driven) but not per-seat authored; a moved seat = moved ε/directionality, not a
-  re-authored stakeholder (recorded for the spend).
-- **axiom** — DISCHARGED. The "`cs_kernel_id` absent" claim is stale: 327/328 multi-reading kernels
-  carry a typed obstruction status (220 real_closure / 107 licensed_plurality / 1 untyped);
-  `cs_kernel_divergence` fires (readings classify differently at some context); status is
-  fail-closed on absence (no agreement fabrication).
-- **temporal** — DISCHARGED. Its cited sub-blockers **OQ-93** (grid) and **OQ-33** (fabricated
-  suppression) are both **resolved (2026-06-11)**. The `Backed` bit separates known-rich (pass) from
-  known-thin (fail) and is reachable in both states (positive control). NB: the engine reads
-  `measurement/5` series, NOT the prose token `coercion_grid` (not a predicate).
-- **joint cell**: **325 kernels** clear all three axes simultaneously (kill condition was <3).
-
-**Comparator built + validated (Phase 1, `python/audits/oq119_join_diff.py`).** Self-diff=0,
-cross-kernel-diff>0 with named moved fields, within-kernel shift resolvable (≈0.27), numerical
-resolution linear to ~5e-4. The binding floor is the **withheld-redraw generation-variance floor**
-(OQ-26), measurable only with spend — the pre-registration mandates ≥3 withheld redraws/story to
-establish it.
-
-**Next move = the operator's spend-go.** The discriminating metric + per-axis prediction + spend
-spec are FROZEN pre-draw in `audits/2026-06-21_oq119_gate0/PREDICTION.md` (≈30 draws, ~$2 — same
-draw count as the OQ-117 spend that ran; reuses the `oq117_spend_driver.py` structure; draws are
-probe artifacts, none join the live corpus).
-A notable frozen sub-prediction: `obstruction_status` moving under feeding would be a
-**detection-independence (Theorem 7) violation** and a finding in its own right. **Do not run the
-fed arm without the ruling.** The Ω_E question itself stays OPEN — this session opened the substrate
-gate and built the instrument; it did not answer whether feeding moves the join.
-
-**Original blocker text (superseded 2026-06-21, kept for provenance):** *"On the OQ-117 probe corpus
-the join is instrumented on only ~1.5 of its 3 axes … committer/CS vantage no-opped (`cs_kernel_id`
-absent) … temporal thin-to-vacuous (grid 32/32 absent OQ-93; `classify_at_time` carries the OQ-33
-fabricated-suppression issue). Graduation: a corpus where observer + axiom + temporal are each
-witnessed non-vacuous — then the diff is clean."*
+**Second-order thread (NOT resolved here):** the committer axis is generation-noisy — whether a
+larger draw budget resolves a sub-noise committer effect is open; route to OQ-149. Cross-refs:
+OQ-117 ((c) parent), OQ-83 (exemption deliberate).
 
 ---
 
@@ -6682,75 +4879,58 @@ numeric disclosure to authoring).
 
 ## OQ-121 — Totalization convention for the commentary family + domain-relative census coverage (the `extraction_silent` collapse)
 
-**Ω-type:** Ω_E (the fix is mostly MECHANICAL — the domain gate `extractive_type(dr_type)` is already computed; totalizing the predicate just stops throwing it away on non-fire) + a small Ω_C residue (two declared seats: report prevalence alongside coverage; classify the unnameable-blindspot case as covered).
+**Ω-type:** Ω_E (mostly mechanical) + a small Ω_C residue (two declared seats).
 
-**Status:** resolved — 2026-06-16. The census-honesty core is built: `extraction_reading` totalized to the never-fail family shape, census coverage made domain-relative, prevalence separated from coverage. Witnesses below. Residual (remaining family members) folded into the extension point, not a standing defect.
-
+**Status:** resolved — 2026-06-16. Census-honesty core built: `extraction_reading` totalized to
+the never-fail family shape, census coverage made domain-relative, prevalence separated from
+coverage. Residual family members folded into the extension point.
 **Priority:** 4
+**Deps:** bundled_with OQ-134, bundled_with OQ-86
 
-**Deps:** bundled_with OQ-134 (the generic census this hardens), bundled_with OQ-86 (the `extraction_reading` source totalized here)
-
-**Origin:** 2026-06-16, building OQ-134 + a closer look the operator asked for. The census shipped `extraction_reading` coverage as `null` because its silence was unruled — but the closer look found a bigger, structural issue than a missing ruling.
-
-**The bigger issue (two layers).**
-1. **A totalization debt in the commentary family.** The engine already encodes the discipline "no verdict ⇒ an EXPLICIT token, never a silent failure" where it matters most: `signature_detection.pl:136` makes correction-grade `constraint_signature/2` never fail (explicit `unknown` fallback, "instead of a default-fabricated verdict"); `q6_crosscheck/3` carries explicit absence buckets. But the rest of the R3 family never got it — `extraction_reading/2` **failed silently**, and `consensus_provenance/2` is silent on `Ns=[]`. A silently-failing predicate destroys the provenance bit AT THE SOURCE, so no downstream aggregate can reconstruct it (Build Discipline Pattern 6 in its purest form: the absence is total). The fix is mostly mechanical — guard A (`extractive_type(dr_type)`) already computes the domain; the predicate just discarded it on failure.
-2. **Census coverage was corpus-relative, but domains aren't.** `coverage = (n_corpus − Σ absence) / n_corpus` is only correct when a reading's domain == the corpus (true for q6, false for extraction, whose domain is the 50/72 extractive-typed constraints). With no absence buckets that formula gives 1.0 over ALL 72 — falsely claiming coverage of the 22 out-of-domain constraints. And coverage ≠ prevalence ≠ corpus-fraction — one silent bucket collapsed all three.
-
-**What was built.**
-- `stakeholder_seats:extraction_state/2` — TOTAL (mirrors `q6_cell/2`): every constraint reaches exactly one of `out_of_domain` / `extraction_clear` / `extraction_unnameable` / `extraction_fired(Es)`. `extraction_reading/2` now rides on `extraction_fired` so its fire-or-silent report contract is UNCHANGED (oq86 14/14 still green).
-- `extraction_unnameable` (extractive ∧ no victim ∧ no nameable extractor) is its OWN bucket — the starkest blindspot, previously swallowed whole by the silent failure. **5 such constraints surfaced on the live corpus** that were entirely dark before. Counts as MEASURED/covered (the question was answered) — a declared operator seat, revisable.
-- `commentary_census.pl` gains three bucket KINDS (out-of-domain / absence / measured) and computes `coverage = (n_in_domain − Σ absence)/n_in_domain` (domain-relative) + `prevalence = fired/n_in_domain` as a DISTINCT number. q6 unchanged (universal domain → 0.611); extraction now `coverage 1.0` over 50 in-domain, `prevalence 0.06`.
-
-**The general form (the convention, now the gate).** Any new `commentary_cell/3` source must be TOTAL and declare its out-of-domain / absence / prevalence buckets; the census refuses a coverage RATIO unless `commentary_coverage_decidable/1` flags the bucket sets ruled-complete. **Follow-up (2026-06-16): the two partial-silent family members `consensus_provenance/2` and `seat_perceived_vs_real/4` were totalized** to the same never-fail shape — `consensus_provenance` now always returns an explicit verdict (`no_agent_seats` out-of-domain / `seats_untyped` absence added; 21 live constraints that silently failed now report `no_agent_seats`), and `seat_perceived_vs_real` returns `Computed = untyped` instead of failing on an existing-but-underivable seat (total over 370 live seats; the `untyped` branch is a defensive guard with 0 live triggers). Regression: `prolog/tests/test_seat_totality.pl` (8/8). `mandatrophy_gap` is the last unconverted member — convert if/when censused.
-
-**RESOLUTION witnesses (2026-06-16).** `audits/2026-06-16_oq121_totalization/`. plunit `test_commentary_census.pl` **40/40** (per-state positive controls for all four `extraction_state` outcomes; contract-preserved silence on clear/unnameable/ood; domain-split `n_in_domain = n_corpus − Σood`; coverage decidable for both sources). oq86 contract **14/14** (extraction_reading firing unchanged). Pipeline `commentary_census` + `json_report` ok; classification untouched (extraction_state/extraction_reading are not on the dr_type path — structural witness). Census: extraction `{clear 42, out_of_domain 22, unnameable 5, fired 3}`, coverage 1.0/50, prevalence 0.06.
-
-**Open seats (declared, revisable).** (a) report both coverage and prevalence — taken; (b) `extraction_unnameable` = covered — taken. Override either by re-declaring the bucket (e.g. make `extraction_unnameable` an absence bucket) and re-running. Cross-ref: OQ-134, OQ-86, `prolog/stakeholder_seats.pl` (`extraction_state/2`), `prolog/commentary_census.pl`.
+**Resolution note.** Two-layer issue: (1) a totalization debt — `extraction_reading/2` FAILED
+silently, destroying the provenance bit at the source (Pattern 6 in its purest form); (2) census
+coverage was corpus-relative while domains aren't (a silent bucket collapsed coverage ≠
+prevalence ≠ corpus-fraction). Built: `stakeholder_seats:extraction_state/2` TOTAL (mirrors
+`q6_cell/2`: `out_of_domain`/`extraction_clear`/`extraction_unnameable`/`extraction_fired`);
+`extraction_unnameable` its own bucket — 5 live constraints surfaced that were entirely dark;
+`commentary_census.pl` computes domain-relative coverage + prevalence as distinct numbers.
+**The convention, now the gate (operative):** any new `commentary_cell/3` source must be TOTAL
+and declare its out-of-domain / absence / prevalence buckets; the census refuses a coverage
+RATIO unless `commentary_coverage_decidable/1` flags the bucket sets ruled-complete. Follow-up
+same day: `consensus_provenance/2` + `seat_perceived_vs_real/4` totalized to the same shape
+(regression `prolog/tests/test_seat_totality.pl` 8/8); `mandatrophy_gap` is the last unconverted
+member — convert if/when censused. Witnesses: `audits/2026-06-16_oq121_totalization/`;
+`test_commentary_census.pl` 40/40; oq86 contract 14/14; census extraction {clear 42, ood 22,
+unnameable 5, fired 3}, coverage 1.0/50, prevalence 0.06. **Open seats (declared, revisable):**
+(a) report both coverage and prevalence; (b) `extraction_unnameable` = covered. Cross-ref:
+OQ-134, OQ-86.
 
 ---
 
 ## OQ-122 — Control inversion: `type_1_false_summit` RED-caps on the type-CLAIM alone, independent of extraction magnitude — does RED track concealment or tax every authored hypothesis?
 
-**Ω-type:** Ω_E (the discriminating test is a measurable single-field intervention) + Ω_C (whether
-claim-only RED-capping is the intended semantics is a design ruling).
+**Ω-type:** Ω_E (measurable single-field intervention) + Ω_C (whether claim-only RED-capping is
+intended semantics).
 
 **Status:** resolved — 2026-06-18 (physics-RED fixed by OQ-128; FSM victim-discriminant handed to OQ-138; the `oq122-fsm-victim-gate` branch is DROPPED, not merged)
 **Priority:** 1
 **Deps:** bundled_with OQ-128
+**Origin:** 2026-06-13, Przybylski's-star engine stress test + web-Claude report read.
 
-**Origin:** 2026-06-13, Przybylski's-star engine stress test + web-Claude report read; structural
-claims re-witnessed against drl_core.pl:614, the five testsets' `constraint_claim/2`, and the report
-verdict boxes.
-
-**RESOLUTION (2026-06-18) — the bundled OQ-128 resolution discharged this entry; the FSM gate is superseded, NOT merged.**
-- **Physics-RED FIXED by OQ-128, not by the FSM gate.** The type_1 cap was *discriminated*
-  (degrade→snare = severe / degrade→other = informational; `drl_core.pl:629–638`). On live (commit
-  `2172d55`, manifest 2026-06-18) both physics false-positives now read
-  `verdict_join.verdict = yellow`, `cap_applied: none`, `type_1_false_summit = informational` at every
-  seat. The RED that filed this OQ is gone.
-- **FSM victim-gate (`oq122-fsm-victim-gate`, `ab1e9b26`) — DROPPED, superseded by the engine-ROUTES-
-  never-RECLASSIFIES architecture (OQ-128/AGENTS.md).** The gate is a *suppress-the-detector*
-  reclassification — exactly the shape OQ-128 removed. The branch's single-clause diff lives at commit
-  `ab1e9b26` (recoverable) and the gate's load-bearing witness — the clean `testsets_flash` partition
-  **40 FSM-firings = 18 `vic=0` + 22 `vic>0`** (`audits/2026-06-13_oq122_retype_discriminator/breadth_sweep_results.txt`)
-  — is **handed to OQ-138** as the discriminant for the FSM clause.
-- **The victim INSIGHT survives, re-shaped for OQ-138.** "A mountain-claim with no victim has nothing
-  to conceal" is correct; apply it the OQ-128 way — **discriminate the FSM signature's severity**
-  (`false_summit_mountain ∧ vic=0 → informational/route`; `∧ vic>0 → moderate/floor`), the exact
-  analogue of the type_1 ε-split, NOT a detector gate.
-- **neutron_star / FCR** stays under **OQ-70** (bait-confound).
-
-[Compressed 2026-07-05; full history in git.] Arc: the two flat-control calibration stories landed
-inverted (pristine actinide RED, contaminated performance_legitimacy YELLOW); probe
-(`audits/2026-06-13_oq122_retype_discriminator/` FINDINGS.md) showed the RED was
-beneficiary-driven not extraction-driven, OVERDETERMINED (only not-claiming-mountain clears the
-cap), and ruled false-positive on the 2 zero-victim physics cases; the no-victim principle is
-FSM-local (FCR/superheavy positive control — it must NOT reach FCR). Fixture blocker re-measured
-STALE 2026-06-14 (`audits/2026-06-14_oq122_fixture_triage/` — 36-fixture cost was pre-existing
-corpus drift, gate's live effect a clean 2→0). Standing correction-key: do NOT attribute the
-physics-RED residual to "the OQ-50 power-scaling fix" (no such settled artifact existed — it was
-the open Ω_C that became OQ-128). Cross-refs: OQ-128 (resolution), OQ-138 (FSM disposition),
-OQ-50 (detector), OQ-70 (neutron_star/FCR), OQ-117 (false-foundational gates), OQ-93 (grid vacuity).
+**Resolution note.** Physics-RED FIXED by OQ-128's discriminated type_1 cap (degrade→snare =
+severe / degrade→other = informational, `drl_core.pl:629–638`): on live (commit `2172d55`) both
+physics false-positives read yellow, `cap_applied: none`. The FSM victim-gate branch
+(`ab1e9b26`) DROPPED — a suppress-the-detector reclassification, exactly the shape OQ-128's
+routes-never-reclassifies architecture removed; its load-bearing witness (the clean
+`testsets_flash` partition 40 FSM-firings = 18 `vic=0` + 22 `vic>0`,
+`audits/2026-06-13_oq122_retype_discriminator/breadth_sweep_results.txt`) handed to OQ-138 as
+the FSM severity discriminant. The victim INSIGHT survives re-shaped: discriminate the
+signature's severity, never gate the detector. neutron_star/FCR stays under OQ-70. Arc detail
+(probe FINDINGS.md; fixture blocker re-measured STALE 2026-06-14,
+`audits/2026-06-14_oq122_fixture_triage/`) in git history. **Standing correction-key:** do NOT
+attribute the physics-RED residual to "the OQ-50 power-scaling fix" — no such settled artifact
+existed (it was the open Ω_C that became OQ-128). Cross-refs: OQ-128, OQ-138, OQ-50, OQ-70,
+OQ-117, OQ-93.
 
 ---
 
@@ -6850,85 +5030,54 @@ RESULTS.md `signature` disparity exemplars).
 **Ω-type:** Ω_E (a pre-registered conditional-permutation test with a named decision rule).
 
 **Status:** resolved — 2026-07-04: **value-invariance CONFIRMED beyond H1** over the 4 typed χ
-seats (the pre-registered conditioned colocation test, `audits/2026-07-04_twin_conditioned/`);
-`theater_ratio` stays exploratory (no seat type to condition on — headline is 4/5, per the
-frozen scope rule).
+seats (conditioned colocation test, `audits/2026-07-04_twin_conditioned/`); `theater_ratio`
+stays exploratory (headline is 4/5, per the frozen scope rule).
 **Priority:** 1
-Filed 2026-06-13: the H2 DRIFT test FAILED all 5 continuous fields and the opposite tail fired
-(observed mean|Δχ| BELOW band5 — true pairs more similar than chance), but that tail carried no
-committed falsifier and might be threshold-colocation **entailed by H1** (same side of the
-decision threshold ≠ same value).
 
-**RESOLUTION.** Same-side operationalized as same seat TYPE (raw-χ cut rejected: dual-threshold +
-priority cascade make it ill-defined). Observed AND permutation band both recomputed from the SAME
-same-side id set (the make-or-break; id-set hashes stamped side-by-side). All four typed seats
-land BELOW their conditioned band5 — powerless 0.0920 < 0.2605 (n=378), moderate 0.0754 < 0.2676
-(n=566), institutional 0.0129 < 0.0188 (n=664), analytical 0.0879 < 0.3095 (n=546) — so the
-below-band tail SURVIVES conditioning: real continuous value-invariance beyond H1, per the
-pre-registered literal. Reach controls informative at all 4 (conditioned observed would register
-inside every disagreeing-subset band); report-only extra: 3/4 disagreeing subsets are themselves
-below-band (value proximity survives type disagreement — the opposite of colocation-only).
-Substrate: `bbf5c92` twins, n=960. Scope: haiku-vs-flash HERE, not "in general."
-
-**Precondition — `abductive_data.json` provenance (settled 2026-06-14):** it is
-**committed-derivable**, not a carried-with-no-generator artifact — generator is
-`abductive_report.pl` (`run_abductive_report`), run as the `_prolog_abductive` pipeline step
-(`run_pipeline.py:469`), computed from the corpus. CAVEAT for "fresh corpus": `classify_corpus`
-runs only `_json_report`, which READS `abductive_data.json` on-disk and does NOT regenerate it
-for the target corpus — so a classify-only reproduce carries whatever corpus last ran the full
-pipeline. **This does NOT affect OQ-125:** the file's `abd_triggers/2` are read only by
-`diagnostic_summary.pl:191` (→ `verdict`) and `post_synthesis.pl:37` (→ flags); χ
-(`perspective_chi`), signature, perspectives, and claimed_type are computed independently of it
-(witnessed: the `drl_core`/`signature_detection` "abductive" hits are comments + a *different*
-static helper `abductive_helpers:known_override_signature`, not `abd_triggers`). Since OQ-125
-conditions on χ thresholds, the carried file is irrelevant to this test. (It can perturb the
-`verdict` field, but both twins read the SAME on-disk copy, so that comparison stays symmetric.)
-If a future fresh-corpus run wants `verdict` to be target-matched too, regenerate
-`abductive_data.json` against the target corpus first (full pipeline with `corpus_path` overlaid).
-
-**Origin:** 2026-06-13 twin-comparison audit (FINDINGS.md "[EDGE]" H2 disposition); operator review
-sharpening (colocation decomposition over residualization; abductive-provenance precondition).
+**Resolution note.** Filed 2026-06-13 (twin comparison: H2 DRIFT failed all 5 continuous fields
+and the below-band tail fired with no committed falsifier). Same-side operationalized as same
+seat TYPE (raw-χ cut rejected — dual-threshold + priority cascade make it ill-defined); observed
+AND permutation band recomputed from the SAME same-side id set (hashes stamped side-by-side).
+All four typed seats land BELOW their conditioned band5 (powerless 0.0920<0.2605 n=378; moderate
+0.0754<0.2676 n=566; institutional 0.0129<0.0188 n=664; analytical 0.0879<0.3095 n=546) — real
+continuous value-invariance beyond H1. Reach controls informative at all 4; 3/4 disagreeing
+subsets are themselves below-band. Substrate: `bbf5c92` twins, n=960. Scope: haiku-vs-flash
+HERE, not "in general". **Precondition finding (operative for fresh-corpus runs):**
+`abductive_data.json` is committed-derivable (generator `abductive_report.pl` via
+`run_pipeline.py:469`), but `classify_corpus` does NOT regenerate it for the target corpus — a
+classify-only reproduce carries whatever corpus last ran the full pipeline; irrelevant to
+OQ-125's χ conditioning (both twins read the same copy) but regenerate it first if `verdict`
+must be target-matched. Origin: 2026-06-13 twin-comparison audit
+(`audits/2026-06-13_twin_comparison/`).
 
 ---
 
 ## OQ-126 — Temporal accountability (commitment-systems T0→T1→T2→T3 / seat-theorem Cor 3): how much of the theory the engine can carry is UNKNOWN
 
 **Ω-type:** Ω_C (design) + Ω_E (engine coverage, witnessed) + an **Ω_P core that does not
-reduce** — the honor/reabsorb verdict is seated, never engine-certifiable; closed as
-DECLARED, not solved.
+reduce** — the honor/reabsorb verdict is seated, never engine-certifiable; closed as DECLARED,
+not solved.
 
 **Status:** resolved — 2026-07-02. T0→T3 vocabulary fully in-engine (witnessed at filing);
-"Gap 2" was retracted the same day by operator CORRECTION (engine = context of DISCOVERY;
-the Cor-3 accountability bite lives in PUBLICATION — cafebedouin.org — not the engine; that
-still-operative ruling is now promoted to `docs/design/design_discipline.md` §9/§10, and
-OQ-107 is a discovery-side *input* enhancement, never the accountability gate). Gap 1 fixed
-as witness-not-verdict provenance labeling (commit `ee51cdff`): `cs_drift_terminal_basis:
-"authored_ack"` + `cs_drift_ack_witness` (whose `confrontation_path: "none_exists"` is a
-NO-PATH sentinel — no external instrument exists, OQ-107 unbuilt — not "checked, none
-found") at every terminal emission site including the no-CS-UID default branch;
-`enhanced_report.py` renders the terminal as conditional on the authored ack bit. Item (c)
-promoted: the external-anchoring tier ladder (Tier 1 external/dated/numeric; Tier 2
-retained-record with the NORMATIVE declared record-boundary MUST; Tier 3 no temporal
-handle; the declared stop) → `design_discipline.md` §10.
+"Gap 2" retracted same day by operator CORRECTION (engine = context of DISCOVERY; the Cor-3
+accountability bite lives in PUBLICATION — cafebedouin.org — not the engine; that
+still-operative ruling is promoted to `docs/design/design_discipline.md` §9/§10, with the
+external-anchoring tier ladder at §10; OQ-107 is a discovery-side *input* enhancement, never
+the accountability gate). Gap 1 fixed as witness-not-verdict provenance labeling (commit
+`ee51cdff`): `cs_drift_terminal_basis: "authored_ack"` + `cs_drift_ack_witness` (whose
+`confrontation_path: "none_exists"` is a NO-PATH sentinel, not "checked, none found") at every
+terminal emission site; report renders the terminal as conditional on the authored ack bit.
 **Priority:** 1
-**Origin:** filed 2026-06-13 (CC session; doctrine thread with two worked-instance essays);
-same-day operator CORRECTION retracted Gap 2 as a category error (it located the Cor-3 bite
-inside the engine).
+**Origin:** filed 2026-06-13 (doctrine thread with two worked-instance essays).
 
-**Resolution pointers.** Engine fix `ee51cdff` (json_report.pl 4 sites, shared/schemas.py,
-enhanced_report.py, cs_drift_engine.pl provenance comment, tests/test_cs_drift_engine.pl
-new `cs_drift_ack_witness` unit incl. RED control + no-UID control; 24/24 green,
-test_cs_trifurcation 19/19 intact — OQ-55 single-bit twin untouched). Scale witness:
-clean-vs-edited pipeline diff n=119 additive-only (0 pre-existing value changes, warning
-sets byte-identical); twins `testsets_haiku`/`testsets_flash` n=960 each at `5d6f219`-dirty,
-0 missing/unfaithful fields. KNOWN_STATE 2026-07-02. Stale cross-refs corrected at close:
-OQ-74 RULED reading-relative 2026-06-14 (entry had said "pending operator ruling");
-OQ-49/50/55/116/122 resolved; OQ-107 `future`. Line anchors at close:
-cs_pattern_detection.pl:423–438 (was :404–412); cs_drift_engine.pl:67–99 attractor table
-(row-disjoint since OQ-137 fix 2026-07-02). Worked instances:
+**Resolution pointers.** Engine fix `ee51cdff` (4 json_report sites, schemas, report, tests
+24/24 green; test_cs_trifurcation 19/19 intact — OQ-55 single-bit twin untouched). Scale
+witness: clean-vs-edited pipeline diff n=119 additive-only; twins n=960 each at `5d6f219`-dirty,
+0 missing/unfaithful. KNOWN_STATE 2026-07-02. Stale cross-refs corrected at close: OQ-74 RULED
+reading-relative 2026-06-14; OQ-49/50/55/116/122 resolved; OQ-107 `future`; attractor table
+row-disjoint since the OQ-137 fix. Worked instances:
 `essays/2026-05_or_before/columbia_falsification_matrix.md`,
 `essays/2026-06/the_vote_market/the_vote_market_draft3.md`.
-
 
 ## OQ-127 — SCAFFOLD_DANGER_ZONE lint calibration: 5/7 fire rate on a shape the de-leaked prompt authors legitimately
 
@@ -7462,67 +5611,35 @@ follow-through landing note, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Ω-type:** Ω_C (a reporting/annotation feature; commentary-grade, never classification — same genre as OQ-86).
 
-**Status:** resolved — 2026-06-16. Built as a GENERIC commentary census (operator ruling:
-build the generic exporter + wire it into `run_pipeline.py`, not a q6-special one).
-`prolog/commentary_census.pl` (module + multifile `commentary_cell/3` hook + absence-bucket +
-coverage-decidability declarations + `run_commentary_census/0`) computes per-source bucket
-histograms over `corpus_loader:corpus_constraint/1`; `python/run_pipeline.py`
-(`_prolog_commentary_census`, registered in the Phase-2 `tasks`) transports the `CENSUS*` lines
+**Status:** resolved — 2026-06-16. Built as a GENERIC commentary census (operator ruling: generic
+exporter wired into `run_pipeline.py`, not a q6-special one). `prolog/commentary_census.pl`
+(module + multifile `commentary_cell/3` hook + absence-bucket + coverage-decidability
+declarations + `run_commentary_census/0`) computes per-source bucket histograms over
+`corpus_loader:corpus_constraint/1`; `_prolog_commentary_census` transports the `CENSUS*` lines
 into `outputs/commentary_census.{json,md}` with a corpus-identity manifest. q6 is source #1; the
-OQ-86 `extraction_reading` census is source #2 (delivers OQ-86's noted census follow-on in the
-same mechanism). Witnesses: see RESOLUTION below.
-
+OQ-86 `extraction_reading` census is source #2.
 **Priority:** 3
+**Deps:** bundled_with OQ-86, bundled_with OQ-83 (the `q6_crosscheck/3` source).
+**Origin:** 2026-06-16, the Q6 sidecar wiring (`extract_q6_crosscheck` in `enhanced_report.py`).
 
-**Deps:** bundled_with OQ-86 (sibling commentary-reporting feature: surface an existing engine
-computation as report commentary, never a classifier input); bundled_with OQ-83 (the `q6_crosscheck/3`
-source this would aggregate).
+**Resolution witnesses (`audits/2026-06-16_oq134_commentary_census/`).** Hand-census cross-check:
+automated q6 histogram matches the by-hand census
+(`audits/2026-06-16_q6_crosscheck_completion/WRITEUP.md`) on every named cell (only diff = the +1
+corpus growth). plunit `tests/test_commentary_census.pl` 20/20 (sum invariant; distinct absence
+keys; per-cell positive controls; determinism). Cross-corpus self-labeling: twins reach
+`q6_unclassified` (haiku=1, flash=5) — the live 0 is corpus-specific; pre-stakeholder archives
+(kernel_v1 1106, original_v5 702, original_v6 3380, testsets_sotu 189) route 100% to
+`q6_unmeasured`, zero named cells — no verdict fabricated from absence (Pattern 6 honored).
+Pipeline task `ok`; q6 coverage 0.611; extraction coverage was `null` at close (absence semantics
+unruled → spun out as **OQ-121**, now RESOLVED: totalized, coverage 1.0/50, prevalence 0.06).
+Census runs as its own read-only swipl process — not on the `dr_type`/json_report path.
 
-**RESOLUTION (2026-06-16, witnesses).** Audit + raw output:
-`audits/2026-06-16_oq134_commentary_census/`.
-- **Hand-census cross-check (multiset, not byte):** automated q6 histogram matches the by-hand
-  census in `audits/2026-06-16_q6_crosscheck_completion/WRITEUP.md` on EVERY named cell; the only
-  diff is `q6_unmeasured` 19→20 and `n_corpus` 71→72 — exactly the +1 corpus growth since
-  2026-06-16 (the new story authors no `founding_problem_status` → unmeasured; verified
-  corpus_constraint=72, with_founding_status=52, without=20). `q6_unclassified=0` confirmed-empty
-  on live.
-- **plunit `tests/test_commentary_census.pl`: 20/20 pass** (`run_tests(commentary_census)`) — sum
-  invariant Σ buckets == n_corpus AND n_corpus>0 (both sources); `q6_unclassified` ≠
-  `q6_signature_unknown` (distinct keys, side-absent precedence); per-cell positive controls
-  (fixtures land in dead/live/contested cells + both absence buckets); `commentary_cell` is
-  deterministic; absence-bucket + coverage-decidability declarations; extraction_reading bivalues.
-- **Cross-corpus self-labeling (fresh swipl/process per corpus):** twins reach `q6_unclassified`
-  (haiku=1, flash=5, n=960 each) — the live 0 is corpus-specific, not universal; pre-stakeholder
-  archives are the fail-closed control: `kernel_v1`(1106), `original_v5`(702), `original_v6`(3380),
-  `testsets_sotu`(189) route 100% to `q6_unmeasured`, **zero named cells** — the census fabricates
-  no verdict from absence (Pattern 6 honored).
-- **Pipeline integration:** `python3 python/run_pipeline.py` → `commentary_census` task `ok`,
-  `outputs/commentary_census.{json,md}` written; q6 coverage=0.611 (44/72), extraction_reading
-  coverage=`null` at OQ-134 close (N/A — absence semantics UNRULED → spun out as **OQ-121**, now RESOLVED: extraction totalized, coverage 1.0 over its 50-constraint domain, prevalence 0.06). Classification
-  byte-identical by construction: the census runs as its own swipl process, reads only, asserts
-  nothing — not on the `dr_type`/json_report path (structural witness, same grade as the q6 audit).
-
-**Extension point (for the OQ-86 census sibling and beyond).** A new commentary source is a
-one-clause add to multifile `commentary_cell/3` (+ `commentary_source/1`, optionally
-`commentary_absence_bucket/2` and `commentary_coverage_decidable/1`). The rest of the R3
-commentary-grade family (`consensus_provenance/2`, `seat_perceived_vs_real/4`,
-`mandatrophy_gap`) is future-cheap but no open OQ requests aggregating them today.
-
-**Origin:** 2026-06-16, the Q6 sidecar wiring (`extract_q6_crosscheck` landed in `enhanced_report.py`
-the same day).
-
-**The question.** Per-constraint `q6_crosscheck` now reaches the report as a structured sidecar field
-(`extract_q6_crosscheck`, `python/enhanced_report.py`). What is still missing is a **corpus-wide
-census**: counts per named cell (`live_claim_vs_snare_present`, `dead_claim_vs_piton_present`, …) plus
-the four non-verdict buckets kept SEPARATE (`q6_unmeasured` / `q6_signature_unknown` / `q6_unclassified`
-/ out-of-domain), each with its denominator (N authored / with-block / corpus). This is the synchronic
-plan's step-4 "coverage to the read site" at corpus scale; `report_generator` only does a per-constraint
-`forall`, so a corpus-level aggregator/exporter is needed. **Hard constraints:** commentary-grade only
-(never a classification input); report `q6_unclassified` and `q6_signature_unknown` as separate counts
-(do not collapse — Build Discipline Pattern 6); `q6_unclassified: 0` on the live corpus is witnessed-0
-(dr_type default_context = analytical surfaces no mountain/scaffold/naturalized) but corpus-reachable on
-the twins — label it confirmed-empty for live only. Cross-ref: OQ-86 (sibling), OQ-83, the q6 sidecar
-commit, `audits/2026-06-16_q6_crosscheck_completion/`.
+**Extension point (operative).** A new commentary source is a one-clause add to multifile
+`commentary_cell/3` (+ `commentary_source/1`, optionally `commentary_absence_bucket/2` and
+`commentary_coverage_decidable/1`); hard constraints: commentary-grade only; report
+`q6_unclassified` and `q6_signature_unknown` as separate counts (never collapse — Pattern 6);
+`q6_unclassified: 0` is witnessed-0 for live only. Remaining R3 family members
+(`consensus_provenance/2`, `seat_perceived_vs_real/4`, `mandatrophy_gap`) future-cheap.
 
 ---
 
@@ -7598,7 +5715,7 @@ control). Runtime guard prevents silent manufacture; a fail-fast pipeline gate
 reopens **OQ-225** loud on any future fire (the fire-time discriminant ruling). Abstain target is
 `unknown` (is_real_type-filtered — cannot inflate H¹), NEVER `untyped` (footgun controlled:
 `tests/test_residual_signature_guard.pl`). Witness: `audits/2026-07-14_oq138_residual_rewitness/`.
-**Per-clause RULINGS** (operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (evidence-settled);
+**Per-clause RULINGS** (operator): CI-rope KEEP (evidence-settled);
 CI-rope route-purity KEEP + CLOSED (2026-07-02); FCR-9 CONVERT + piton-3 carved out (OQ-90);
 constructed-3 CONVERT (built 2026-06-21); FNL CONVERT (built 2026-07-03); residual seven ABSTAIN-guard
 (built 2026-07-14, fire-time discriminant → OQ-225). piton-3 remains on OQ-90. Split from OQ-128
@@ -7612,190 +5729,39 @@ clause: convert (FSM/FCR-9/constructed-3/FNL), keep (CI-rope), or abstain-guard 
 one deferred remainder is the residual fire-time discriminant, split out as OQ-225 and gated on an
 actual fire, not on OQ-138.)*
 
-**Gate-expiry annotation (2026-07-02, OQ-70 premise-rot correction pass).** The OQ-70 gate
-named above and in the Origin/per-clause lines **expired before it was authored**: OQ-70 was
-resolved 2026-06-05 (option A class ruling, `72ec2cdd`), the defers here were written
-2026-06-17/21, and the OQ-70 body contains no residual limb a member could wait on (full-entry
-read + repo census witnessed at the correction pass, KNOWN_STATE 2026-07-02). The
-`false_natural_law` member is therefore **rulable-once-witnessed like its siblings** — witness
-= before/after diff + routing-adequacy positive control per the FCR-9 precedent; NB only 1
-live firing, so breadth comes from the twins/archives sweep. The route-vs-keep ruling itself
-stays in this entry's existing `blocked_on_human` per-clause queue.
+**Origin:** 2026-06-17, OQ-128 residual. The whole `resolve_modal_signature_conflict` table was
+OVERWRITES that FIRE and CHANGE `dr_type` (66/288 live seats; 524/3840 haiku, 637/3840 flash) —
+so none retired free; each needed its own before/after diff and routing-adequacy positive control.
+Gate-expiry annotation (2026-07-02 premise-rot correction): the OQ-70 gate the FNL defer waited on
+expired before it was authored — OQ-70 resolved 2026-06-05 (option A class ruling, `72ec2cdd`);
+full-entry read + repo census at KNOWN_STATE 2026-07-02.
 
-**Origin:** 2026-06-17, OQ-128 residual. The whole `resolve_modal_signature_conflict` table (lines 885–932) is OVERWRITES (rewrite `dr_type` by signature) — the same architecture as the retired `:867` and the discriminated type_1 cap. Unlike natural_law (0 fires → free retirement), these FIRE and CHANGE `dr_type`: witnessed on current main the signature layer changes the metric type at **66/288 live seats** (524/3840 haiku, 637/3840 flash); per-signature firing `constructed_high_extraction 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 / false_natural_law 1`. So NONE retires free — each needs its own before/after diff and a routing-adequacy positive control. **SPLIT:** FCR / FSM / constructed are rulable-once-witnessed (mechanical gathering); `false_natural_law` is deferrable-pending-OQ-70.
-
-**What resolution changes.** A per-clause ruling (route / discriminate / keep-as-correction) with each clause's before/after verdict diff as the witness, consistent with the engine-ROUTES-never-RECLASSIFIES architecture (AGENTS.md). The type_1 discriminated-severity build (`drl_core.pl` `dr_claim_mismatch`) is the precedent pattern. Cross-ref: OQ-128 (parent), OQ-70 (FNL gate), OQ-98.
-
-**FSM clause — proposed disposition INHERITED from OQ-122 (closed 2026-06-18): DISCRIMINATE on victim presence, do not gate.** OQ-122's FSM victim-gate (suppress `false_summit_mountain` when `vic=0`) is superseded by this family's route-not-reclassify architecture, but its discriminant is sound and pre-witnessed. Apply the type_1 pattern: `false_summit_mountain ∧ vic=0 → informational` (route via the sink — a mountain-claim with no victim has nothing to conceal, the non-diagnostic case) / `∧ vic>0 → moderate` (concealment floor stays). Live now: FSM fires 2 seats, both `vic=0`, currently graded `signature_correction/moderate` (holds the two physics cases at YELLOW) — under the discriminant they would route as informational. **Pre-witnessed discriminant value (the gate's load-bearing partition):** `testsets_flash` 40 FSM-firings = **18 `vic=0` + 22 `vic>0`** (`audits/2026-06-13_oq122_retype_discriminator/breadth_sweep_results.txt`); the adversarial `vic>0` cell is non-empty in 4/5 corpora. Build = the discriminated-severity change + per-seat before/after `verdict_join` diff (expect the 2 physics YELLOWs to drop their signature floor; `vic>0` FSM-firings unchanged). Still `blocked_on_human` for the route-vs-keep go, but the discriminant and its witness are in hand. Cross-ref: OQ-122 (origin of the discriminant), OQ-50 (FSM detector).
-
-**FSM BUILD RECORD (RESOLVED 2026-06-21, operator go).** Full witness:
-`audits/2026-06-21_oq138_fsm_route_conversion/FINDINGS.md`. Shipped: (a) FSM stops overwriting —
-`config:param(false_summit_override_target)` default `tangled_rope→mountain` (the mountain-input
-clause's `Result=Target=mountain=ModalType`, so the existing hook neutralizes the overwrite and stays
-an ablation lever); unknown-input clause `tangled_rope→unknown` (OQ-37 abstain, **0 live fires —
-unverified-in-commit**). (b) Shared template: `signature_detection:converted_signature/1` +
-`signature_diagnostic_severity/3`; `signature_grade/2`+`signature_severity/2` grade converted
-signatures on the victim discriminant (`vic>0→moderate/correction`, `vic=0→informational/commentary`),
-NOT on the (now-zero) type delta — the `dr_claim_mismatch/4` precedent. Legacy signatures
-byte-identical. (c) **Consumer fix found by code-read (not in the plan):** FSM removed from
-`abductive_helpers:known_override_signature/1`+`override_target/2`, else `probe_signature/3` emits a
-spurious `override_mismatch` tension post-revert; P1/P7 then go vacuous.
-**Two divergences from the plan, both material:** (1) the live corpus grew 57→**92**, so it now has
-**3** FSM seats incl. one **vic>0** (`protein_anabolic_resistance`) — the kill condition is on live
-main, not just flash. (2) At the report surface the 3 seats go **yellow→RED**, NOT the plan's expected
-green: the override was MASKING dirac(`second_class`)+cohomology(`fails_descent`)+abductive tensions by
-setting the type to tangled_rope (where they're "expected"); reverting to mountain unmasks them as
-genuine contradictions. **Operator ruling 2026-06-21:** *the engine adds commentary, does not change
-classifications, and it is OK for diagnostics to render different verdicts* — Position A (let the
-subsystems speak; red is honest) over Position B (suppress dirac/cohomology to force green base).
-`claimed_type=mountain` preserved (route ≠ reclassify); the victim discriminant lives in the
-commentary layer (`signature_grade`/alert severity, serialized). Evidence for the ruling:
-**82 FSM seats across 5 corpora** (≈6,500 stories) ALL carry cohomology/dirac → 0 where the discriminant
-would be headline-visible; the structural tensions are invariants of false summits, so Position B would
-blanket-suppress an always-firing signal. Witness: full-pipeline diff = **only the 3 FSM seats change,
-89 byte-identical**; `severity_floor/2` two-sided control discharged; trap (silent green) averted
-(headline red; protein keeps `correction` via the discriminant despite zero type-delta — a naive revert
-would have dropped it to commentary). `validation_suite` 92/0/0; `check_stack` baseline-clean;
-`test_contradiction_signatures` 5-fail is pre-existing CS-axis fixture (identical OLD vs NEW). Subtlety
-recorded: `constraint_signature/2` BOUND-arg query bypasses the cascade cuts (the build uses the unbound
-form, correct).
-
-**DEFERRED-CLAUSE EVIDENCE PASS 2026-06-21 (read-only; no conversion). Full:
-`audits/2026-06-21_oq138_fsm_route_conversion/DEFERRED_CLAUSE_EVIDENCE.md`.** True (unbound) cascade-winner
-counts on live (92) — the "N fires" framing overstated blast radius; most overrides are INERT or
-load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling is the operator's seat.
-- **coupling_invariant_rope — KEEP on the merits; NOT a partition the evidence settles**
-  (`audits/2026-06-21_oq138_fsm_route_conversion/cirope_genuine_vs_washed.md`). The genuine-vs-washed
-  discriminant is the CI-rope detector ITSELF, already run: FCR (`appears_as_rope` ∧ fails ≥1 Boltzmann test
-  = WASHED) fires first in the cascade; CI-rope (Boltzmann-compliant ∧ scope-invariant ∧
-  has_coordination_function ∧ `\+ constraint_captured`, OQ-94 gate = GENUINE) certifies what survives. The 6
-  winners are uniform genuine passes (all compliant/invariant/coord/uncaptured; excess 0.03–0.10, non-gating
-  by design; **positive control: 52 live seats FAIL boltzmann** so the test discriminates). No sub-partition —
-  forcing one would convert a test-backed cert on a distinction the engine already ruled. Companion gate
-  (constructed-#2 lesson, consumer side): `dr_type='rope'` is load-bearing downstream — `dirac:287`
-  rope⇒**first_class**, purity immunity 1.0, cohomology rank, boltzmann, maxent — so reverting `rope→scaffold`
-  would make the engine read genuinely-coordinating seats as constructed scaffold. CI-rope is categorically
-  unlike FSM/FCR/constructed (which MANUFACTURE a contested verdict): it is a CORRECT certification. **Operator's
-  seat:** keep, or pay the consumer-rewire cost (5 consumers read `dr_type='rope'`, not the signature) for
-  route-purity. Evidence frames it; the merits ruling is the operator's.
-- **false_ci_rope — route + victim-discriminate, SAME unmask story as FSM (milder).** 25 winners, 12 CHANGE
-  (scaffold→tangled_rope ×8, scaffold→piton ×3, snare→tangled_rope ×1), 13 inert. Hook ablation
-  (`fcr_override_enabled` 0): changed seats revert to scaffold, base green→YELLOW — routing ALSO unmasks
-  tensions (the "scaffold stays green" guess was refuted), so the discriminant lives in the commentary layer.
-  Victim split present (6 vic=0 + 6 vic>0). **Piton sub-case (3, scaffold→piton, all vic>0):** OQ-90
-  FCR-branch refinement — needs separate handling, cannot blind-revert to scaffold.
-- **constructed-3 — CONVERTED (RESOLVED 2026-06-21, seat-aware + CLAIM discriminant).** Build record:
-  `audits/2026-06-21_oq138_fsm_route_conversion/CONSTRUCTED3_FINDINGS.md`. Routed the 3 constructed_high
-  unknown→snare seats to the honest abstain `unknown`; the NEW **claim discriminant** (mountain→severe,
-  else→informational; victim doesn't distinguish — all 3 vic>0) keeps #2's floor by replacing the lost
-  `type_1_false_summit(severe)` with the signature severe. **Kill condition MET (witnessed):** #2
-  (institutional_trust_erosion, claimed mountain) keeps RED byte-identical; #1/#3 route to yellow/commentary;
-  47 inert + all non-constructed byte-identical; 5-corpus `mountain-routed→severe` holds (mtn-no-severe=0
-  everywhere). `constructed_routed/1` keyed on the UNBOUND cascade winner + dr_type=unknown outcome (a bound-arg
-  query tripped on the detector and wrongly caught `superheavy_decay`, an FCR seat — §1 gotcha; **same
-  bound→unbound fix applied to `fcr_routed/1`, behavior-preserving**). **Residual RESOLVED → OQ-173 (2026-06-21):**
-  the maxent boost (`maxent_classifier:341`) was made seat-aware (skip at `constructed_routed/1`). NB the
-  "flips #1/#3's maxent_top to tangled_rope" framing was imprecise: on the CLASSICAL path #1/#3's
-  maxent_top was already the raw argmax (the ×3 boost never flips a classical top — positive control:
-  only 2 corpus-wide flips, both non-converted unconditional overrides); the real boost-driven flip lived
-  on the INDEXED path (#3 `shinbutsu` tangled_rope→snare, now corrected). Benign by outcome (headline
-  yellow, subsumed; #2 red via severe) — verdict_join byte-identical. `audits/2026-06-21_maxent_seat_aware/`.
-  Scope was constructed_high unknown-input only; mountain-input + constructed_low/constraint have 0 live changers (sub-item).
-  ORIGINAL EVIDENCE — **constructed_* override INERT on 94%; the 3 real changes are NON-uniform (bare abstain was wrong).**
-  constructed_high 50 winners but only **3** CHANGE (all `unknown→snare`); 47 inert (metric already snare).
-  constructed_low 1 inert; constructed_constraint / coordination_scaffold 0 live. No config hook → ablated via
-  a temporary one-clause edit + pipeline (floor-source decomposition, report surface incl. abductive;
-  `audits/2026-06-21_oq138_fsm_route_conversion/constructed3_floor_source.md`). **Refuted "convert + abstain,
-  no downstream change":** bare revert-to-unknown moves all 3 headlines in DIFFERENT directions — the 2
-  tangled_rope-claimed seats (equal_protection, shinbutsu) ESCALATE yellow→RED (cohomology unmask, the FSM
-  pattern); the mountain-claimed seat (institutional_trust_erosion_c0) DE-ESCALATES RED→yellow because its
-  `type_1_false_summit` SEVERE alert was riding on the override-manufactured snare and drops to informational
-  once dr_type=unknown. So a bare type-layer abstain silently drops #2's severe "mountain-claim over probable
-  extraction" flag ⇒ constructed inherits the **FSM discriminated-severity template** (signature carries the
-  diagnostic), NOT bare abstain. 47 inert seats byte-identical; behavior change is 3 (2 up, 1 down).
-- **false_natural_law** — RULED CONVERT (operator, 2026-07-02); **BUILT + RESOLVED 2026-07-03**
-  (commits `d248a6b1` route + severity, `82aa372e` consumer wiring). Census (4 legs,
-  `audits/2026-07-02_oq138_fnl_evidence/FNL_EVIDENCE.md`): 22 firings, all source-1 `explicit_mountain_claim`,
-  14 type-changers repeating the FSM/FCR shape. **Build as landed (departures from the owed sketch, both
-  witnessed):** `:925` route gated by NEW lever `false_natural_law_override_enabled` (0=route default,
-  1=legacy); `fnl_routed/1` outcome-keyed seat predicate (non-circularity of `dr_type/3` traced at HEAD,
-  152-pred closure + 3 positive controls); VICTIM discriminant (vic>0→moderate, else informational — claim
-  discriminant degenerate, all firings mountain-claimed); **consumers keyed on the LEVER, not `fnl_routed`**
-  (operator condition: `fnl_routed/1` is default-context-keyed while the overwrite was ORBIT-wide —
-  `organization_floor_c0` routes tangled_rope→scaffold at institutional while default-unknown; at lever=0 NO
-  seat overwrites, so seat_overrides/maxent-boost = lever state, orbit-safe by construction). **Witnesses:**
-  5-corpus generality sweep routed 0/6/8/0/0, three must-be-0 invariants incl. routed∩piton positive control
-  (`fnl_generality_sweep_results.log`); twin pipeline diff — 8/14 routed seats render RED, reconciled honest
-  (type_1_false_summit informational→severe on routed snare + h1 0→3: the overwrite flattened the whole orbit
-  into a manufactured global section; `FNL_CONVERSION_DIFF.md`); determinism control NEW-vs-NEW2 0/960;
-  live leg 0 verdict changes (89 records move in ensemble-relative fields only, attributed); per-context
-  consumer probe with org_floor_c0@institutional named line = scaffold + no_boost + probe agrees
-  (`fnl_consumer_state_*.log`); two-sided ablation lever=1 restores legacy at every context
-  (`fnl_ablation_control.log`). Maxent arm EXTENDS the OQ-173 seat-aware pattern to the third signature
-  (OQ-173 unchanged in its own scope). **Known census-scope correction recorded:** the census "type-inert"
-  column was default-context-scoped; org_floor_c0's institutional-only route is the witnessed instance.
-
-**PER-CLAUSE RULINGS (operator, 2026-06-21).** Verdict → witness → kill condition. Two are evidence-settled
-(commitments); two are operator-merits seats (OPEN/conditional — the evidence frames but does not settle them,
-so phrasing them as ruled would counterfeit a witness).
-
-**STANDING GATE (record once; the arc's generalization).** Before converting ANY override, decompose TWO
+**STANDING GATE (still-operative; the arc's generalization).** Before converting ANY override, decompose TWO
 things, not one: (1) where the seat's OWN floor is sourced after revert (FSM lesson — a dropped floor reads as
 silent green); (2) what OTHER diagnostics consume the type the override manufactures (constructed-#2: a severe
 `type_1_false_summit` rode the manufactured snare and vanished on revert; CI-rope: a certified type is
 load-bearing for 5 downstream subsystems). An override's blast radius is everything downstream that reads the
 type it writes, not just the seat's own verdict. (Reusable form in `docs/technical/signature_detection_wiring.md` §4.)
 
-- **CI-rope — KEEP, out of conversion frame (evidence-settled).** CI-rope is the certification arm of the
-  FCR/CI-rope Boltzmann battery, not a manufacturing override: FCR fires on washed (fails ≥1 structural test),
-  CI-rope certifies what survives. Route-not-reclassify governs manufacturing; CI-rope writes a verdict the
-  structural tests EARNED, so it is mis-grouped by the inherited "N fires" framing. Witness: 6 uniform genuine
-  passes (excess 0.03–0.10, non-gating; positive control 52 live seats fail boltzmann, so the passes
-  discriminate); no sub-partition forced. **Kill:** a downstream consumer found to treat `dr_type='rope'` as
-  contested-rather-than-certified ⇒ CI-rope re-enters the frame.
-- **CI-rope route-purity — RULED KEEP-as-written, LIMB CLOSED (operator, 2026-07-02).** The 5 consumers
-  (dirac→first_class, purity immunity 1.0, cohomology, boltzmann, maxent) read `dr_type='rope'`; route-purity
-  would repoint them at the CI-rope signature. Ruling: do NOT rewire — `dr_type='rope'` is the more stable
-  contract than a signature predicate's internal shape; the certification is correct either way, and the rewire
-  buys route-purity only in surfaces nobody re-classifies on. Convert only if route-purity is enforced
-  engine-wide for a reason beyond this clause. **Kill (stays live):** a downstream consumer found to treat
-  `dr_type='rope'` as contested-rather-than-certified re-opens the limb. Witness (HEAD re-witness of the 5
-  consumers, staleness-ladder): `audits/2026-06-21_oq138_fsm_route_conversion/CIROPE_RED_ADJUDICATION.md` §1.
-  *Inherited `neutron_star`/FCR RED sub-item — RESOLVED MOOT (2026-07-02).* The parked item was a RED cap
-  flattening the ε=0.12-vs-0.68 gap against superheavy; at HEAD neither seat is RED — OQ-128 discriminated
-  severity (mountain→scaffold is informational, no floor) AND FCR-9 conversion (neutron_star is routed) each
-  independently removed the cap. neutron_star = YELLOW/cap=none; superheavy = FCR-inert/unknown-surfaced/
-  verdict-absent (documented FCR-inert seat per CONSTRUCTED3_FINDINGS.md:21; 0-hit in FCR9_live_diff; absence
-  discriminated by neutron_star's present verdict in the same dump). Only a report-layer confidence/magnitude
-  flattening remains, tracked elsewhere if wanted. Witness: `CIROPE_RED_ADJUDICATION.md` §2.
-- **constructed — CONVERTED (RESOLVED 2026-06-21, seat-aware + CLAIM discriminant).** [Bullet reconciled
-  2026-07-14 to its built state — the earlier "conditional / owes a conversion commit" phrasing was stale
-  (a summary-vs-substrate divergence: the build had already landed).] 47/50 winners are snare→snare (inert;
-  convert byte-identical); behavior change is 3. Bare abstain-to-unknown was refuted (it drops a severe
-  `type_1_false_summit` on #2, institutional_trust_erosion, RED→yellow), so constructed took the FSM
-  discriminated-severity template with a CLAIM discriminant (mountain→severe keeps #2's floor). **Witnessed
-  (the kill condition MET):** #2 keeps RED byte-identical (floor moved type_1→signature severe); #1/#3 route
-  to yellow/commentary; 47 inert + all non-constructed byte-identical; 5-corpus `mountain-routed→severe`
-  holds (`constructed_routed = 3/63/11/0/0`). Build: `signature_detection.pl:992` route + `constructed_routed/1`
-  + claim discriminant (`:1782`); record `audits/2026-06-21_oq138_fsm_route_conversion/CONSTRUCTED3_FINDINGS.md`
-  (content-read 2026-07-14). Scoped to constructed_high unknown-input; mountain-input + low/constraint are the
-  RESIDUAL (now guarded — see the residual disposition in Status).
-- **FCR-9 — CONVERTED (RESOLVED 2026-06-21, seat-aware); piton-3 carved out.** Build record:
-  `audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md`. The FSM template did NOT transfer directly:
-  false_ci_rope is seat-split (9 routed / 3 piton / 13 inert, one signature), so signature-level keying would
-  flip the inert seats' grade and disturb the piton-3. Built seat-aware: `fcr_routed/1` (keyed on the stable
-  dispatch gates + the dr_type OUTCOME, NOT a metric proxy — an earlier proxy diverged from ModalType on 2
-  haiku+4 flash seats, caught by the 5-corpus generality sweep), `converted_at_seat/2` (signature-level FSM,
-  seat-level FCR), `seat_overrides/2` threaded through `probe_signature`/P1/P7. Witness: 9 seats route
-  tangled_rope→scaffold/snare, 6 verdicts change (discriminated: vic>0 correction/moderate, vic=0
-  commentary/informational, sig=AGREE, milder than FSM — mostly yellow), piton-3 TYPES unchanged + 13 inert +
-  all non-FCR byte-identical; 5-corpus invariants pass; validation_suite 92/0/0. **Carve-out relaxed:**
-  `statutory_debt` (piton) shifts yellow→red via the corpus-relative maxent ENSEMBLE (entropy_flag) — type
-  unchanged, OQ-90 not relitigated (Position-A-acceptable). **Residual RESOLVED → OQ-173 (2026-06-21):** the maxent FCR boost
-  (`maxent_classifier.pl:331`) was made seat-aware (skip at `fcr_routed/1`) — confirmed benign for the 9
-  (all classical tops already == raw argmax; the indexed boost had no tangled_rope mass to amplify at these
-  seats; verdict_join byte-identical). Same fix covers the constructed shape at :341.
-  `audits/2026-06-21_maxent_seat_aware/`. piton-3 still held on OQ-90.
+**Live kill condition (CI-rope KEEP + route-purity limb, stays live):** a downstream consumer found
+to treat `dr_type='rope'` as contested-rather-than-certified re-opens the limb.
+
+**Evidence map (per-clause build records + rulings narrative in git history of this entry):**
+`audits/2026-06-21_oq138_fsm_route_conversion/` — FINDINGS.md (FSM build incl. the operator ruling
+2026-06-21 *"the engine adds commentary, does not change classifications, and it is OK for
+diagnostics to render different verdicts"* — Position A, red is honest), FCR9_FINDINGS.md,
+CONSTRUCTED3_FINDINGS.md, DEFERRED_CLAUSE_EVIDENCE.md, cirope_genuine_vs_washed.md,
+constructed3_floor_source.md, CIROPE_RED_ADJUDICATION.md;
+`audits/2026-07-02_oq138_fnl_evidence/` (FNL_EVIDENCE.md, FNL_CONVERSION_DIFF.md,
+fnl_generality_sweep_results.log, fnl_consumer_state_*.log, fnl_ablation_control.log);
+`audits/2026-07-14_oq138_residual_rewitness/`; `audits/2026-06-21_maxent_seat_aware/` (maxent
+FCR/constructed boosts made seat-aware — residual → OQ-173); FSM victim-discriminant breadth
+witness `audits/2026-06-13_oq122_retype_discriminator/` breadth_sweep_results.txt (OQ-122 origin
+of the discriminant). Cross-refs: OQ-128 (parent), OQ-70, OQ-98, OQ-122, OQ-50 (FSM detector),
+OQ-37 (abstain convention), OQ-90 (piton-3 still held there), OQ-94 (CI-rope gate), OQ-173,
+OQ-225 (residual fire-time discriminant).
+
+---
 
 ## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
 
@@ -8007,28 +5973,16 @@ Cross-ref OQ-86 (the data_repair sentinel-minting bridge).
 **Ω-type:** Ω_E (mechanical, latent existence_error).
 
 **Status:** resolved — fixed 2026-06-18; one-token qualifier fix at `drift_events.pl:175`.
-
 **Priority:** 5
-
 **Deps:** splits_from OQ-142
 
-**Origin:** `detect_is_piton/1` (`drift_events.pl:175`) called
-`\+ narrative_ontology:requires_active_enforcement(C)` with the WRONG qualifier — the predicate
-lives in `domain_priors` (`domain_priors.pl:30,139`). OQ-57 fixed the sibling `:236`, missed
-`:175`; inside `\+` it THREW if `detect_is_piton/1` was reached. **Reachability (witnessed, with
-positive control):** static external = 0 callers (control: `drift_event` → 19 refs, so the grep
-DOES find callers — the 0 is real); static internal = export/comment/head only, no goal-position
-call (file dispatches detectors elsewhere at `:401,:407`); runtime-constructed (`call/N`/meta-call)
-= unverified by static grep. So unreached on every checkable path, latent on the rest — the fix is
-correct regardless.
-
-**Resolution.** `narrative_ontology:` → `domain_priors:` at `:175`, mirroring `:236`. **Witness
-(cold `[stack]`, synthetic constraint with extractiveness 0.05 / theater_ratio 0.80 to reach
-`:175`):** before → THREW
-`error(existence_error(procedure, narrative_ontology:requires_active_enforcement/1), context(drift_events:detect_is_piton/1,_))`;
-after → `SUCCEEDED_CLEAN` (prints "Drift: Internalized Piton"). check_stack baseline drops 4 → 3
-(the `requires_active_enforcement` finding is gone). Provenance: KNOWN_STATE 2026-06-18; commit at
-close. Lineage: OQ-57, OQ-115.
+**Resolution note.** `detect_is_piton/1` called `\+ narrative_ontology:requires_active_enforcement(C)`
+with the wrong qualifier (predicate lives in `domain_priors`); OQ-57 fixed the sibling `:236`,
+missed `:175`. Reachability witnessed with positive control: 0 static callers (the grep DOES find
+callers elsewhere), latent on runtime-constructed paths — fix correct regardless. Fix mirrors
+`:236`. Witness: cold `[stack]` synthetic constraint — before THREW existence_error, after
+`SUCCEEDED_CLEAN` ("Drift: Internalized Piton"); check_stack baseline 4 → 3. KNOWN_STATE
+2026-06-18. Lineage: OQ-57, OQ-115.
 
 ---
 
@@ -8037,80 +5991,43 @@ close. Lineage: OQ-57, OQ-115.
 **Ω-type:** Ω_E (mechanical; latent type_error armed by an upstream stamp).
 
 **Status:** resolved — fixed 2026-06-18; single-source partition-and-assert loader + 6 consumers repointed.
-
 **Priority:** 4
-
 **Deps:** splits_from OQ-29
 
-**Origin:** OQ-29 made `corpus_hash` stamping standard, including a **top-level `corpus_hash` key
-inside `outputs/product_site_orbits.json`** (flat `{id: {h0,h1,contexts,…}}` dict, no namespace
-separating metadata from constraints). Any consumer iterating the top-level keys *as if each were a
-constraint* now hits `corpus_hash` (a `str`) and crashes — "worked before" because un-stamped orbits
-had no such key. Surfaced as the `oracle_gap_analysis.py:143` crash (`entry["contexts"]` on a str),
-first patched with an **inline** filter (`7b5801f0`). A set-level census found it systemic. **Census
-+ positive control:** `git grep -ln product_site_orbits` → per file grep iteration idioms; the
-control re-found all five known exposures **and** surfaced `structural_config_sensitivity.py:529`
-(missed by an `.items()`-only grep) — so empty hits elsewhere are looked-and-absent, not never-looked.
-Exposed: `product_site_delta_sweep.py:117`, `structural_config_sensitivity.py:363/529`,
-`alt_power_transform_test{,_3k}.py:~96`, `game_theory_nash.py:158` (only `--input
-product_site_orbits.json`), `oracle_gap_analysis.py:143`.
-
-**Resolution.** One canonical, fail-loud predicate `shared.loader.load_orbits_constraints` —
-**partition-and-assert**: keep dict-with-`contexts` as constraints, drop only affirmatively-named
-metadata (`_ORBITS_METADATA_KEYS = {"corpus_hash"}`), **raise** on any unclassifiable top-level key
-(a malformed constraint or a new metadata key fails loud, never silent-undercount). Rejected: silent
-shape-filter (undercount reads as success), inline-per-consumer (forks the predicate — Pattern 2),
-schema re-namespace (breaks every OQ-29 guard + the swipl exporter), sidecar (re-adds drift surface).
-All 6 consumers repointed to the helper (the inline `7b5801f0` filter replaced too). **Crash-over-drop
-is safe by producer construction** (RULED, not empty-grepped): `product_site_export.pl:80–96`
-`write_one_entry` emits `"contexts"` **unconditionally** for every constraint, and the context key set
-is a static Cartesian product (`constraint_indexing.pl:1052 site_contexts_product/1`) that never reads
-the corpus → every entry in the live corpus **and every archive** carries `contexts`; a top-level
-entry lacking it can only be post-export metadata or corruption — exactly what should raise.
-
-**Witnesses (set-level, 2026-06-18).** (1) PRIMARY set-equality (RHS hardcodes the literal, NOT via
-`_ORBITS_METADATA_KEYS`): `set(load_orbits_constraints(P)) == set(json.load(P)) − {"corpus_hash"}` →
-True (75 vs raw 76). (2) Partition-assert RAISES naming `junk` on injected `{"junk":{"h1":0.5}}` (the
-dict-without-`contexts` shape a silent filter would have eaten). (3) `orbit_data.json` no-op witnessed
-directly: raw len 75, zero non-constraint-shaped keys, helper len 75. (4) Per-consumer two-sided: each
-of the 5 accesses RAISES on raw, yields exactly **75** via helper; `oracle_gap_analysis.py` completes;
-`game_theory_nash.py --input outputs/product_site_orbits.json` TypeError→completes (75). (5) All 6
-files resolve `from shared.loader import load_orbits_constraints`. Provenance: KNOWN_STATE 2026-06-18;
-commit at close. Out of scope (separate bug, not this class): `sheaf_audit.py:515` ZeroDivisionError
-— first read as a corpus-size bug, actually the `classifications` producer regression (WITNESSED
-2026-06-18, sparsity ruled out): OQ-147 (crash floor, resolved) / OQ-148 (regression, open).
-Lineage: OQ-29.
+**Resolution note.** OQ-29's top-level `corpus_hash` stamp inside `outputs/product_site_orbits.json`
+crashed any consumer iterating top-level keys as constraints; first patched inline (`7b5801f0`),
+then a set-level census (with a positive control that re-found all five known exposures AND
+surfaced a sixth) showed it systemic across 6 files. Fix: one canonical fail-loud
+`shared.loader.load_orbits_constraints` — partition-and-assert (keep dict-with-`contexts`; drop
+only affirmatively-named metadata; RAISE on any unclassifiable key — silent shape-filter,
+inline-forks, re-namespace, and sidecar all rejected with reasons). **Crash-over-drop is safe by
+producer construction (RULED, not empty-grepped):** `product_site_export.pl:80–96` emits
+`"contexts"` unconditionally from a static Cartesian product, so an entry lacking it can only be
+metadata or corruption. Witnesses: set-equality with hardcoded RHS (75 vs raw 76);
+partition-assert raises naming `junk` on the injected dict-without-contexts; per-consumer
+two-sided (raw RAISES / helper yields 75); all 6 imports resolve. Out of scope (separate bug):
+`sheaf_audit.py:515` → OQ-147/OQ-148. KNOWN_STATE 2026-06-18. Lineage: OQ-29.
 
 ---
 
 ## OQ-147 — sheaf_audit.py:515 ZeroDivisionError on empty working set; fail closed (null rates + explicit verdict) across md/console/JSON, not fabricated PRESERVED
 
-**Ω-type:** Ω_E (mechanical; latent arithmetic on an empty table; the fabricated-PRESERVED /
-false-flat-JSON risk is a Pattern-5/6 success-shaped-absorption instance).
+**Ω-type:** Ω_E (mechanical; latent arithmetic on an empty table; fabricated-PRESERVED risk is
+Pattern-5/6).
 
 **Status:** resolved — fixed 2026-06-18; fail-closed floor on all three surfaces, fixture pass pasted.
-
 **Priority:** 5
-
 **Deps:** splits_from OQ-29
 
-**Origin.** `sheaf_audit.py:515` divides by `n_total` (working set = constraints with ≥2 of the 10
-Tier-1 slice contexts), which is **0** on the current corpus because `classifications` is empty
-corpus-wide (the *upstream* cause is OQ-148; the crash floor is correct regardless). A naive
-`if n_total else 0.0` is wrong: `crossing_rate = 0.0` hits the `== 0.0 → "PRESERVED (zero
-crossings)"` branch (sheaf_audit.py:464), making an empty set indistinguishable from measured-flat
-(Build Discipline Pattern 5/6).
-
-**Resolution.** One `insufficient = (working_set_size == 0)` predicate, reused on three surfaces:
-(1) markdown early-returns `_insufficient_data_markdown` (zero corpus-count arithmetic); (2) console
-prints a one-line INSUFFICIENT-DATA message instead of the rate block; (3) results JSON sets
-`crossing_rate`/`preservation_rate` to **null** (not 0.0) and adds `verdict: insufficient_data`.
-Verdict single-sourced via `_verdict(crossing_rate, insufficient)` (JSON + markdown can't drift;
-happy-path bands byte-identical to the old 464–471 strings). Exit 0 (an empty working set is not an
-error). **Witnesses (2026-06-18):** pre-fix `ZeroDivisionError` at :515; post-fix exit 0 with JSON
-`crossing_rate: null` / `verdict: insufficient_data`; fixture `python/audits/tests/test_sheaf_audit.py`
-4/4 PASS (covers the empty-case markdown + the non-self-witnessing `_verdict` string swap at line
-483). Provenance: KNOWN_STATE 2026-06-18; commit at close. Lineage: OQ-29; upstream OQ-148.
+**Resolution note.** `:515` divided by a working set that is 0 because `classifications` is empty
+corpus-wide (upstream cause = OQ-148; the crash floor correct regardless). A naive `if n_total
+else 0.0` would hit the `== 0.0 → "PRESERVED (zero crossings)"` branch — empty indistinguishable
+from measured-flat. Fix: one `insufficient` predicate reused on three surfaces (markdown early
+return; console INSUFFICIENT-DATA line; JSON `crossing_rate`/`preservation_rate` **null** +
+`verdict: insufficient_data`), verdict single-sourced via `_verdict/2`; exit 0. Witnesses:
+pre-fix ZeroDivisionError / post-fix null+verdict; fixture
+`python/audits/tests/test_sheaf_audit.py` 4/4. KNOWN_STATE 2026-06-18. Lineage: OQ-29; upstream
+OQ-148.
 
 ---
 
@@ -8403,57 +6320,27 @@ re-measurement), OQ-56, OQ-150.
 **Status:** disposed — answered-reframed (negative), 2026-07-24: the specified deliverable (a per-seat suppression-collapse curve) is NOT built; the cross-section is unfingerprintable under baseline calibration. No instrument. Evidence: `audits/2026-07-24_oq152_seat_crosssection/`.
 **Priority:** 3
 **Origin:** suppression/scaffold thread off OQ-56 (operator, 2026-06-19); the temporal half is
-`design_gaps.md` GAP-14 (this OQ is its commentary-grade static cross-section).
+`design_gaps.md` GAP-14 (this OQ was its commentary-grade static cross-section). The
+COMMENTARY-not-gate correction (operator 2026-06-19) stands: do NOT add a suppression term to
+`classify_from_metrics` — the 2026-06-05 de-leak deliberately removed those maxima; divergence is
+the signal (surface it, never re-gate `naturalized` on suppression).
 
-**Specific question:** `naturalized` (`drl_core.pl:453-457`: `ε > rope_epsilon_ceiling(0.45) ∧ χ <
-tangled_rope_chi_floor(0.35)`) is the engine's cover-story type — high real extraction compressed
-below detection — and the seat-sweep (`SEAT_SWEEP.md`) shows it is structurally the *beneficiary*
-seat's reading. The Litany says visible suppression contradicts naturalness ("heavy enforcement →
-snare, not mountain"), and the sharp form (operator) is **per-seat and ordered**: as suppression
-rises, the cover story breaks seat by seat — payer/excluded first (they feel it), observer/analytical
-next, **beneficiary last, if ever.** The deliverable is a **diagnostic the engine runs and attaches
-as commentary**: for each seat, at what suppression level would its `naturalized` reading flip to a
-*visible* snare — and the verdict is the **ordering** (monotone, beneficiary highest/→∞).
+**Resolution note (two witnessed grounds).** (1) Suppression is a constraint-level GATE, not a
+seat dial: seat χ (`extractiveness_for_agent_d/4` = `ε·f(d)·σ`) carries no suppression term;
+`naturalized` invariant under supp 0.0→0.95 (snare appears as a step at the 0.60 floor) — the
+curve is not computable. (2) Seat-χ ordering is fixed by `role→d` config: under δ=0 (live;
+authored `agent_power` inert for seat χ) the per-seat channels (`exit_modulation`,
+`scope_modifier`) cannot bridge the beneficiary/high-d gap (bound 3.75×; 0/158 within-constraint
+crossings) — a seat-ordering diagnostic restates config. Substrate finding: `naturalized`
+concentrates on the beneficiary seat by *band membership*, not lowest-χ (modal 65/128); the
+12/158 "agenda out-naturalizes beneficiary" stratum is 12/12 config, 0 seat-relative — seat
+identity carries no information here (the OQ-153 handoff keys condition (3) on band membership at
+ANY seat, seat as attribute).
 
-**Why COMMENTARY-grade, NOT a classification gate (the load-bearing correction, operator
-2026-06-19):** do **not** add a suppression term to `classify_from_metrics`. The de-leak of
-2026-06-05 *deliberately removed* the extractiveness/suppression maxima "so the authored claim and
-the authored metrics stay independent — the engine computes the type; **divergence is the signal**"
-(schema `allOf` block 0 comment). Re-gating `naturalized` on suppression would re-introduce exactly
-that removed maximum and suppress the signal. The right move is the opposite: leave the type alone
-and **surface the divergence** (type=`naturalized` while suppression is high, seat-resolved) as
-commentary — the cover-story-collapse ordering is the annotation. This joins the existing
-commentary-grade stakeholder diagnostics (`seat_perceived_vs_real`, `consensus_provenance`,
-`q6_crosscheck`, `cs_authority_masking`) — it does not touch `drl_core` classification (verdict-grade
-distinction: correction-grade overrides, commentary-grade annotates).
-
-**Resolution (2026-07-24) — disposed, answered with a negative; no instrument.** The per-seat
-suppression-collapse cross-section is unfingerprintable under the baseline calibration, on two
-witnessed grounds (evidence + decompositions: `audits/2026-07-24_oq152_seat_crosssection/`):
-1. **Suppression is a constraint-level GATE, not a seat dial.** Seat χ (`extractiveness_for_agent_d/4`
-   = `ε·f(d)·σ`) carries no suppression term; suppression enters only `classify_from_metrics/6` via
-   `get_raw_suppression(C,_)`, keyed on C (identical across seats), and the `naturalized` clause
-   ignores it. Sweep witness: `naturalized` invariant under supp 0.0→0.95; `snare` appears as a
-   *step* at the 0.60 floor. So no per-seat suppression ordering exists — the curve is not computable.
-2. **Seat-χ ordering is fixed by `role→d` config.** Under δ=0 (live: `cognitive_displacement=0.0`
-   and all `positional_displacement=0.0`; the authored `agent_power` atom is therefore inert for seat
-   χ), the only per-seat channels are `exit_modulation∈[−0.03,+0.05]` and `scope_modifier∈[0.8,1.2]`,
-   which cannot bridge the beneficiary(d≤0.30)/high-d(d≥0.69) gap across the affine sigmoid
-   `f∈[−0.20,1.50]` (bound 3.75×; empirical 0/158 within-constraint crossings). A seat-ordering
-   diagnostic restates config; a band-membership one reads ε back.
-
-**Substrate finding (what the leg produced):** `naturalized` concentrates on the beneficiary seat
-by *band membership*, not lowest-χ (modal 65/128: agenda_setter→`rope` below the band, beneficiary→
-`naturalized`). The 12/158 "agenda out-naturalizes beneficiary" stratum is **12/12 config, 0
-seat-relative** — role→d ordering inside the naturalized band; which sub-floor seat reads
-`naturalized` and their order is ε + role→d + cascade, not seat structure.
-
-**Revival class (config-only; no corpus authoring pass revives this):** (i) a positional-δ
-calibration (would also make `agent_power` live for seat χ), (ii) the `role→d` map itself, (iii) the
-`exit_modulation`/`scope_modifier` ranges. The static cross-section stays empty; the full temporal
-feedback stays in GAP-14 (see its cross-ref). Downstream: OQ-153 condition (3) keys on `naturalized`
-band membership *at any seat* (seat as attribute, not test) — seat identity carries no information
-here (witnessed 12/12 config).
+**Revival class (operative — config-only; no corpus authoring pass revives this):** (i) a
+positional-δ calibration (would also make `agent_power` live for seat χ), (ii) the `role→d` map
+itself, (iii) the `exit_modulation`/`scope_modifier` ranges. The static cross-section stays
+empty; the full temporal feedback stays in GAP-14.
 
 ---
 
@@ -8465,42 +6352,38 @@ attractor; a framework-direction question, not a code fix).
 
 **Status:** resolved — 2026-07-24: `update_authority` field built + validated (assignable, tense-
 correct, reliable), but the five-condition husk annotation is NOT warranted (the husk conjunction is
-empty under enrichment; condition-5 independence untested for corpus-scarcity reasons). Full close
-below. Evidence: `audits/2026-07-24_oq153_step3_blind_pass/`.
+empty under enrichment; condition-5 independence untested for corpus-scarcity reasons). Evidence:
+`audits/2026-07-24_oq153_step3_blind_pass/`.
 **Priority:** 3
 **Deps:** bundled_with OQ-152
 
-**Resolution (2026-07-24).** Condition 5 (frozen update-authority) was the one husk condition with no
-authored field (the others map to `naturalized`/FNL, `cs_reading_relation`, `founding_problem_status`).
-It was built as `update_authority ∈ {licensed_revisable, frozen, absent_diffuse}` (+ authoring token
-`unauthored`) with a rubric (`docs/design/update_authority_rubric.md`) and a blind-authored quality
-test (three passes, sealed pre-registration + addenda). The field is **validated**: assignable on
-institutional grounds, the tense defect found in pass 1 was fixed and the fix **generalizes** (an
-un-enumerated superseded shape read `unauthored`), and non-modal replicates are reliable.
-**But the five-condition annotation does not earn its build:**
-- **`dead ∧ frozen = 0/8`** — in a sample deliberately enriched for BOTH halves (8 dead-founding
-  items + `frozen` supply), the husk conjunction (dead founding-problem ∧ live-foreclosed amendment)
-  was **empty**. The annotation would fire on nothing — a *mechanism* for `husk_signature_read.py`'s
-  synchronic K=0, not a restatement of it.
-- **Condition-5 independence is UNTESTED (not disproven).** A shape test to check whether `frozen`
-  carries information beyond conditions 2+3 could not be assembled: keyword search across all legs
-  surfaced too few structural non-canon `frozen` candidates (a live kernel with foreclosed amendment,
-  outside closed canon), and 3/4 attempted items failed to instantiate the shape. Do **not** record
-  this as "condition 5 is a proxy for 2+3."
-- **Reduced-annotation-on-2+3 rejected:** that is `naturalized ∧ forecloses`, already computed and
-  coupled at `cs_pattern_detection.pl:336-351` — a new surface with no new information.
+**Origin:** operator framing, 2026-06-19 ("a husk is a naturalized scaffold that locked instead of
+dissolving"; scaffold ascending/meant to dissolve, husk descending/couldn't dissolve). Pairs with
+`design_gaps.md` GAP-02 (removed observer-axis husk trajectory read) and GAP-14 (temporal
+grip-decay); static seat cross-section OQ-152 (disposed — seat identity carries no information,
+12/12 config-explained; `audits/2026-07-24_oq152_seat_crosssection/`).
 
-**`update_authority` field disposition:** kept as a **validated standalone institutional field**,
-decoupled from the husk five-condition claim. Surface = `narrative_ontology.pl` (dynamic fact) +
-`data_validation.pl` (enum/uniqueness/orphan validators + measure-only `inconsistent_update_authority/2`).
-**Authored-on-demand only** (audit passes); **no generation-schema emission and no consumer until one
-is warranted** — it is not dead schema, it is a declared-dormant field (this note is its provenance so
-it is not read as unused-therefore-removable). Zero authored facts in any live corpus (verified).
+**Resolution note.** Of the original fork (five-condition annotation / 4-condition / decline),
+landed on **(c) decline** plus the validated standalone `update_authority` field. `dead ∧ frozen =
+0/8` even in a sample enriched for both halves — the annotation would fire on nothing (a mechanism
+for `husk_signature_read.py`'s synchronic K=0). Condition-5 independence UNTESTED, not disproven —
+do **not** record "condition 5 is a proxy for 2+3". Reduced 2+3 annotation rejected (=
+`naturalized ∧ forecloses`, already computed at `cs_pattern_detection.pl:336-351`). Rubric:
+`docs/design/update_authority_rubric.md`. Naturalization condition tested as band membership at
+*any* seat, never "the beneficiary seat naturalizes" (OQ-152 handoff). Data point for OQ-228:
+conditions 3+4 in-stratum rate is model-dependent, 11.6% (`testsets`) → 34% (`testsets_kimi`)
+(`audits/2026-07-24_oq153_step3_blind_pass/PREREGISTRATION.md`) — never cite a husk prevalence
+without naming the leg. The full five-condition theory (QWERTY/canon discriminating control,
+legitimacy-trap definition, de-naturalization death mechanism, update theorem, authored falsifier
+incl. `[UNVERIFIED]` Vatican II, IQ/AI candidate instances) lives in the git history of this entry.
 
-**Against OQ-153's original fork** (build the five-condition annotation / partial 4-condition
-annotation + logged gap / decline), this resolution lands on **(c) decline** — plus the
-`update_authority` field (condition 5), a validated standalone deliverable the fork did not
-contemplate. The 4-condition option was already ruled wrong (it false-flags living traditions).
+**`update_authority` field disposition (still-operative):** kept as a **validated standalone
+institutional field**, decoupled from the husk five-condition claim. Surface =
+`narrative_ontology.pl` (dynamic fact) + `data_validation.pl` (enum/uniqueness/orphan validators +
+measure-only `inconsistent_update_authority/2`). **Authored-on-demand only** (audit passes); **no
+generation-schema emission and no consumer until one is warranted** — it is not dead schema, it is
+a declared-dormant field (this note is its provenance so it is not read as unused-therefore-
+removable). Zero authored facts in any live corpus (verified).
 
 **REOPENING CONDITION (documentation for a reviver, NOT a monitored trigger):** a corpus containing
 **≥3 live-kernel-foreclosed-amendment instances outside closed canon** — on which the shape test
@@ -8508,133 +6391,6 @@ becomes valid and condition-5 independence can be tested. This is UNFIREABLE as 
 be checked by authoring the dormant no-consumer field, i.e. by someone already doing the work it would
 prompt); the occasion that surfaces it is a **corpus-expansion / generation-scope decision** adding
 live standards-body or entrenched-clause material, not a query. Recorded as `design_gaps.md` **GAP-28**.
-
-**Origin:** operator framing, 2026-06-19 ("a husk is a naturalized scaffold that locked instead of
-dissolving"; the clarifier: scaffold and husk are the two *temporal* categories — scaffold on the
-way **up** (temporary, increasing coordination, meant to dissolve), husk on the way **down**
-(terminal, coordination hollowing, should have dissolved and couldn't)). Pairs with
-`design_gaps.md` GAP-02 (the removed observer-axis husk trajectory-shape read, born-vs-glide) and
-GAP-14 (temporal grip-decay); the static seat cross-section is OQ-152. **Sharpened 2026-06-19**
-(operator): the five-condition structural definition, the legitimacy-trap correction, the QWERTY/
-canon discriminating pair, the de-naturalization death mechanism, and the falsifier below.
-
-**The cut (corrects an earlier draft of this OQ): husk neighbors `naturalized`, not `piton`.** The
-discriminator between a constraint that can husk and one that cannot is *not* the piton-ness they
-may share — it is **naturalization plus a reading layer**. The canonical pair: QWERTY and a stale
-canon are *both* suboptimal Lindy-locked **pitons** (extracting below the fix-threshold), but they
-diverge precisely at the husk question. QWERTY **cannot husk** — a pure coordination lock with no
-interpretive layer (kernel = "this key layout," practice = typing, no reading between them), its
-suboptimality fully visible (everyone knows Dvorak exists), so it cannot naturalize and cannot rot;
-it sits as a stable piton until switching-cost falls or a coordinated jump fires. A canon **can
-husk**, because it has the reading layer QWERTY lacks — and that machinery is what kills it.
-
-**Five necessary conditions for husking (the structural test / the discriminating control):** (1) a
-**kernel**; (2) a **reading layer** thick enough to absorb drift; (3) **naturalization** staking
-legitimacy on the kernel's fixity; (4) a **frozen update-authority**; (5) a **moving world**. QWERTY
-has (1) and (5) only → stable piton, immune. A canon has all five → husks. The **reading layer is
-the pivot**: it simultaneously *enables* naturalization (treat the text as fixed while interpretation
-adapts), *absorbs* drift (practice changes, the reading reinterprets, the kernel is declared
-untouched), and *hides* drift (where the rot accumulates). No reading layer → no husk.
-
-**Sharpened definition of the husk:** *not* "a kernel that cannot be updated" (a logical lock) but
-**a kernel that cannot be updated without destroying the legitimacy the update was meant to serve**
-— a **legitimacy trap**. Internal structure is **three layers coming apart**, not two: the **kernel
-freezes** (naturalization forbids editing it), the **reading drifts** (the world moves, so it must),
-**practice rides the reading**. For a while the growing reading-layer bridges the kernel→practice
-gap — this is how every living tradition adapts, by reinterpreting rather than editing scripture.
-The husk is the **terminal state of that bridging**: when the kernel↔reading gap is total, the
-kernel constrains practice in *nothing* and is retained only as a **legitimacy-token** — pointed at,
-never load-bearing. A rope (or snare) wearing a mountain's costume, the costume now empty.
-
-**Placement, restated with the cut:** **husk ≈ scaffold-origin ∩ naturalized ∩ failed-sunset**, but
-the *discriminator from a plain piton* is the reading-layer-plus-naturalization, not the
-sunset-failure (which piton and husk share). The temporal pairing holds: **scaffold** (ascending —
-temporary, coordination rising, *meant* to dissolve) and **husk** (descending — terminal,
-coordination hollowing, *should have* dissolved and couldn't) are the two temporal categories; the
-husk is the **failed scaffold — the temporary that claimed to be eternal and then couldn't admit it
-was temporary.** QWERTY was literally a scaffold (it solved typebar-jamming) that should have
-dissolved when the constraint lifted and instead locked into a piton; it did *not* husk only because
-it never naturalized. The engine surfaces are: the cover-story type `naturalized` (`drl_core.pl:453-457`,
-high real ε compressed below the χ floor), FNL/`false_natural_law` (a constructed support reading a
-naturality claim — the likely witness surface), and the committer husk attractor
-(`cs_drift_engine.pl:64,70,80`). What the engine can *currently* witness of the five conditions is
-**partial** and itself a finding to map: kernel (`cs_kernel_id` ✓), reading layer
-(`cs_reading_relation` edges, multiple readings/kernel ✓ partial), naturalization (FNL / `naturalized`
-✓), moving world (`founding_problem_status` dead/live, `disappearance_verdict` ✓ partial), **frozen
-update-authority (no obvious authored field — a gap).**
-
-**Reading the naturalization condition (3) — OQ-152 handoff (2026-07-24):** test it as `naturalized`/
-FNL **band membership at *any* seat**, recording *which* seat as an attribute, not as the test. Do
-**not** phrase it as "the beneficiary seat naturalizes": the beneficiary is only the *modal*
-naturalized seat by band membership, and seat identity carries **no information** here — the per-seat
-cross-section is config-fixed (`role→d`), including a 12/158 stratum where the agenda_setter
-out-naturalizes the beneficiary, **12/12 explained by config**, 0 seat-relative (OQ-152 disposed;
-`audits/2026-07-24_oq152_seat_crosssection/`). Keying condition (3) on a named seat would inherit
-"the beneficiary naturalizes" as though it were observed — the mislabel one level up.
-
-**Husk conditions 3+4 (naturalized∧forecloses) are substantially MODEL-DEPENDENT (data point,
-2026-07-24).** The in-stratum rate — constraints computing a `naturalized` seat AND authoring a
-`forecloses` reading relation — runs **11.6% (`testsets`) → 34% (`testsets_kimi`)** across the five
-legs by authoring model alone (`audits/2026-07-24_oq153_step3_blind_pass/PREREGISTRATION.md`). So any
-eventual five-condition husk *rate* is model-relative, not a corpus constant — a data point for OQ-228
-(cross-model regime confound). Do not cite a husk prevalence without naming the leg.
-
-**How a husk ends (two refinements to "eventually disappears"):** husks do **not** die from drift —
-they can carry a total kernel↔reading gap for centuries looking healthy, because the reading absorbs
-everything and the token still clears. They die from **de-naturalization**: a *phase change* when
-enough observers stop reading the kernel as a mountain, at which point the empty costume is seen as
-empty and the legitimacy-token stops clearing (gradual hidden drift, *sudden* collapse — why husks
-look fine right up to the end). The second exit is not death but **schismatic re-anchoring**: the
-Reformation as husk-reversal (`sola scriptura` — drag practice back to the kernel, burn the drifted
-reading), reversible only by a new authority declaring the old one hollow, which de-naturalizes it
-for everyone watching and produces a fork. So: **a husk ends only by de-naturalization — collapse
-when belief is withdrawn, or re-anchoring by a schism that withdraws belief deliberately.**
-
-**The update theorem (no comfortable exit):** there is **no costless update of a naturalized
-kernel**. Three paths, two of which are the disease: **(i) override by authority fiat** reveals
-updatability and fractures the naturalization (deuterocanon/schism); **(ii) silent reading-drift**
-preserves the premium short-term and *is* the husking mechanism long-term; **(iii) relocate
-legitimacy from the kernel's fixity to the update-process's integrity** — the only non-husking path,
-but itself a one-time **de-naturalization** that costs the naturalization premium (the extra
-coordination from people believing it couldn't change). Survivors did (iii) *early*, building a
-**licensed, revisable interpretive authority into the kernel itself** so updating is canonical rather
-than betrayal (rabbinic interpretation, common law, openly-revisable science). The cure feels like
-the loss, so most systems keep the premium and husk.
-
-**Authored falsifier (commit-plus-falsifier):** a naturalized constraint that **edited its kernel by
-open fiat and *kept* its mountain-status** — observers watched it change and went on reading it as
-invariant. Claim: this does not happen; watching a mountain be edited converts it to a rope in the
-observer's eye, irreversibly. Test case to audit: **Vatican II** (open update, attempt to retain
-mountain-legitimacy, result a traditionalist fracture — reads as partial husking, not retained
-naturalization) — `[UNVERIFIED]`, asserted from memory by the operator, not yet audited.
-
-**Candidate live instances (authored, NOT yet witnessed against the corpus):** **IQ** — all five
-conditions, mid-husk now (kernel = fixed biological *g*; naturalized as culture-free natural measure;
-reading drifting via renorming + accreting caveats; practice riding the reading; frozen authority
-that cannot say "we are revising the construct" without forfeiting the natural-law claim sorting
-institutions bank on — the per-generation renorming *is* the silent reading-drift). **AI handed
-codifying authority while its outputs are presented as objective** = manufacturing naturalization at
-machine speed (= building husks fast; model-collapse is the fast death, husking the slow one; the
-non-husking path is the same — legitimacy in a transparent, Lindy-grounded, revisable *process*,
-never in claimed objectivity). These are authored exemplars motivating the type, not corpus results.
-
-**What resolution changes:** A ruling on whether the scaffold↔husk pairing is elevated to a named
-temporal axis, and which axis carries husk. Three options in increasing cost: **(a) commentary-only**
-— surface a `husk`-shaped *annotation* when the five-condition signature co-occurs (`naturalized`/FNL
-∧ scaffold-origin ∧ reading-layer present ∧ failed-sunset), mirroring OQ-152's commentary-grade move;
-**no** `classify_from_metrics` change, **no** re-introduction of the de-leaked suppression maximum.
-**(b) revive the observer trajectory-shape read** (GAP-02 born-vs-glide), disciplined to the committer
-axis per `two_axis_architecture_v7.md`'s no-cross-axis-reduction rule. **(c) decline** — rule that
-piton + the committer husk attractor already cover the space (then close `future` with the ruling
-recorded). The deliverable for (a) needs the **QWERTY/canon discriminating control made concrete**: a
-positive witness (all five conditions, flagged husk) separated from (i) a plain **piton** with a
-reading layer but no naturalization — the QWERTY case, must *not* flag — and (ii) a plain
-**naturalized** cover story with no scaffold origin/reading layer — must *not* flag. All three must
-come apart on real constraints before the annotation earns its name. **Do not** add a husk type to
-the priority cascade without that control; an undischarged axis-relabel is the silent failure mode
-(Build Discipline: unguarded axis-swap). A prerequisite sub-finding: **does the corpus author the
-frozen-update-authority condition at all?** If not, the five-condition signature is unfingerprintable
-as-is and (a) is itself blocked on a schema gap (route to `design_gaps.md`).
 
 ---
 
@@ -8786,34 +6542,18 @@ facts = 0.0), so `D_eff = D + 0.0 = D` and δ contributes nothing to live pipeli
 
 **Status:** resolved — 1-prime shipped 2026-06-27 (operator ruling); discoverability value
 delivered, physical move deferred to OQ-191.
-
 **Priority:** 1
 
-**Resolution (1-prime — dispatcher, no file moves).** Shipped `python/cli.py`: one discoverable
-entry point (`python3 python/cli.py list` to discover, `<group> <name> [args]` to run) that groups
-every tool logically (grouping is a property of the command tree, not the directory layout) and
-dispatches by subprocess everywhere — own interpreter, own `sys.path[0]`, forwarded argv, propagated
-exit code, so it cannot change any script's behavior. Positive-controlled `cli selftest` wired into
-`scripts/gate.sh` (N>0 per physical group, known-path resolution, synthetic ambiguity catch, misc-
-count visibility); gate GREEN. Witness: this section + `cli.py` + gate row.
-
-**Why the move was NOT needed (carry the paths.py finding).** OQ-163's Ω_E justification rested on
-the **OQ-32 path-resolution regression class** (the last reorg silently broke 6 scripts' path
-resolution). That risk class is **already dead at the root:** `paths.py` provides a depth-agnostic,
-`pyproject.toml`-marker-based repo-root finder, ending the inline-root-derivation fork OQ-32 was
-about. So moving ~73 files would re-incur that risk to buy only discoverability — which the
-dispatcher already delivers. The move is therefore deferred (OQ-191), not abandoned.
-
-**Kill condition (recorded in the weaker-true wording, NOT "genuine zero").** The operator condition
-was: 1-prime substitutes for the move only if nothing consumes the directory structure itself. Honest
-reading of the probe (2026-06-27): the condition strictly **fired** — one genuine consumer exists,
-`verify_reorg.py`, which globs `python/{tests,sweeps,audits}/*.py`. It is **inert under deferral**:
-1-prime moves no paths, so it stays green on the status quo and would only need its `DIRS` list
-updated *if the physical move ever ran*. Probe sensitivity was shown **independently** (a synthetic
-`glob.glob("python/audits/*.py")` line fires; a corpus-dir glob does not — specific, not a catch-all).
-Every other glob/walk enumerates corpus/data dirs, not python *script* subdirs. So the discharge is
-the sufficient weaker claim — the move buys nothing **now** — not a false "nothing consumes the
-structure." Drained from OQ-69.
+**Resolution note.** Shipped `python/cli.py`: one discoverable entry point (`list` / `<group>
+<name> [args]`), grouping in the command tree not the directory layout, subprocess dispatch
+everywhere (cannot change any script's behavior); positive-controlled `cli selftest` wired into
+`scripts/gate.sh`. The physical move was NOT needed: the OQ-32 path-resolution risk class is dead
+at the root (`paths.py` marker-based repo-root finder), so moving ~73 files would re-incur risk
+to buy only discoverability. **Kill condition recorded in the weaker-true wording:** the
+"nothing consumes the directory structure" condition strictly FIRED — one genuine consumer
+exists, `verify_reorg.py` (globs `python/{tests,sweeps,audits}/*.py`), inert under deferral but
+its `DIRS` list must update if the physical move (OQ-191) ever runs; probe sensitivity shown
+independently. Drained from OQ-69.
 
 ## OQ-164 — Parameterize the remaining directionality constants (AUDIT W2/E1)
 
@@ -8875,30 +6615,20 @@ provisional — operator to rule.**
 
 ## OQ-168 — Author "the mint" as a testset (the essay→engine loop, first deliberate instance)
 
-**Ω-type:** Ω_P (decide-to-author program act) — **resolved as not-actionable**; the imagined Ω_E
-discharge ("engine resistance") reduces to a consistency check, below.
+**Ω-type:** Ω_P (decide-to-author program act) — **resolved as not-actionable**.
 
-**Status:** resolved — closed 2026-06-27 (operator ruling). Nothing to author. The "essay → engine
-resistance → sharper essay" loop over-described what the engine does: it evaluates an LLM-authored
-constraint story and reports whether the authored fields are internally consistent with the authored
-type-claim. There is no oracle on whether a real-world regime "is" a mountain — only contradiction
-detection. So "let the engine fight an honest prior" has no content beyond "the engine flags when
-your numbers contradict your label," and there is no further work item here.
-
-**Origin (kept for trace):** 2026-06-11 Pew-typology exchange proposed authoring the information
-regime ("the mint") as its own constraint and letting the engine "fight" an honest `mountain` prior
-the way it refused `institutional_trust_erosion`'s mountain claim (`design_discipline.md` §4).
+**Status:** resolved — closed 2026-06-27 (operator ruling). Nothing to author: the "essay →
+engine resistance → sharper essay" loop over-described the engine — it evaluates whether authored
+fields are internally consistent with the authored type-claim; there is no oracle on whether a
+real-world regime "is" a mountain, only contradiction detection.
 
 **Witness that closes it (2026-06-27, `enhanced_report.py institutional_trust_erosion_c0`):** the
-"refusal" is just a claim/data contradiction, and mountains are invariant by definition.
-`institutional_trust_erosion_c0` claims `mountain` (`:118` + `emerges_naturally` `:122`) while
-authoring non-invariant data: `base_extractiveness 0.68` (`:104`), `suppression_score 0.52` (`:105`,
-vs the 0.05 mountain ceiling), and a **rising** ε-series 0.38→0.68 over t=0..60 (`:315–:327`). The
-report's FALSE-MOUNTAINS forensic fires (`dr_type: unknown` at all 4 seats; signature
-`constructed_high_extraction`; MaxEnt favors `snare` 0.64; `verdict_join=red`,
-`type_1_false_summit`). The engine did not adjudicate the world — it caught a mislabeled story. That
-is the whole mechanism, and it needs no new constraint to demonstrate. Corollary: the essay→engine
-loop's value, if any, is bounded to coherence-auditing an authored encoding, never thesis-validation.
+"refusal" is a claim/data contradiction — the story claims `mountain` while authoring ε 0.68,
+suppression 0.52, and a rising ε-series; the FALSE-MOUNTAINS forensic fires (`verdict_join=red`,
+`type_1_false_summit`). The engine caught a mislabeled story, not adjudicated the world.
+**Corollary (operative):** the essay→engine loop's value is bounded to coherence-auditing an
+authored encoding, never thesis-validation. Origin: 2026-06-11 Pew-typology exchange
+(`design_discipline.md` §4). Drained from OQ-69.
 
 ## OQ-169 — T4 (confirmed_liminal) one-case category (dormant; trigger-deferred)
 
@@ -8953,39 +6683,26 @@ from OQ-69 (**operator ruling 2026-06-20:** the cluster item splits F/G; minted 
 
 ## OQ-172 — Injection-suppression lives in the backend, not the corpus: a resurrected orchestrator could re-inject
 
-**Ω-type:** Ω_P (one-path / where-policy-lives design) + Ω_E (witnessable by code-read of any orchestrator that gets resurrected).
+**Ω-type:** Ω_P (one-path / where-policy-lives design) + Ω_E (witnessable by code-read).
 
 **Status:** resolved — retire-the-path executed (operator ruling, 2026-06-21). The live injection
 site is deleted, not relocated.
 
-**Origin:** OQ-81 placed injection-suppression in a *backend predicate*
-(`generate_kernel_corpus._flat_seeds_from_manifest`), not a corpus/schema invariant. OQ-82's close
-confirmed every live generation route is injection-safe; the sliver was the **legacy
-`agent/orchestrator.py`** (`DRAuditOrchestrator`, driven by the dormant Streamlit apps
-`agent/app.py` + `agent/c-app.py`): its `_step_generate` (:343–358) threaded the upstream story's
-`claimed_type` into the downstream `build_prompt` over **all** `downstream_of` deps, with no
-suppression filter — the OQ-81 channel, live in code, only its drivers dormant.
+**Resolution note.** The sliver from OQ-82's close: legacy `agent/orchestrator.py`
+(`DRAuditOrchestrator`, driven by dormant Streamlit apps `agent/app.py` + `agent/c-app.py`)
+threaded upstream `claimed_type` into downstream prompts with no suppression filter — the OQ-81
+channel live in code. All three files deleted (import grep cleared with a positive control on
+`story_generator_base`'s 10+ importers); orphaned `streamlit` dep removed; stale docstring lines
+fixed.
 
-**Resolution (witnessed):** the operator chose **retire-the-path** over hoist-the-policy. The three
-files were deleted (`git rm agent/orchestrator.py agent/app.py agent/c-app.py`) — a closed,
-superseded cluster: `orchestrator.py` (the Gemini-era orchestrator, replaced by `c-orchestrator.py`)
-was imported only by the two Streamlit apps; the apps were imported by nothing; no test / shell
-script / packaging entry-point referenced any of the three (import grep cleared with a positive
-control on `story_generator_base`'s 10+ importers). Orphaned `streamlit` dep removed from
-`requirements.txt` + AGENTS.md (kept `google-*`, still used by ~8 live files); stale
-`agent/orchestrator.py` usage lines in `c-orchestrator.py`'s docstring fixed. The injection site no
-longer exists, so the policy-location question is moot for the retired path.
-
-**Standing tripwire (the gate survives the close):** injection-suppression still lives in a backend
-predicate, not a bypass-proof invariant. **Before adding or reviving ANY generation front-end,
-code-read its generation step:** if it threads an upstream computed verdict (`claimed_type`) into a
-downstream prompt over `downstream_of` deps AND does not route through `_flat_seeds_from_manifest`,
-it re-opens the OQ-81 channel. Route every new generation path through the unified backend
-`generate_from_manifests`, never a hand-rolled prompt-assembly loop.
+**Standing tripwire (the gate survives the close):** injection-suppression still lives in a
+backend predicate, not a bypass-proof invariant. **Before adding or reviving ANY generation
+front-end, code-read its generation step:** if it threads an upstream computed verdict
+(`claimed_type`) into a downstream prompt over `downstream_of` deps AND does not route through
+`_flat_seeds_from_manifest`, it re-opens the OQ-81 channel. Route every new generation path
+through the unified backend `generate_from_manifests`, never a hand-rolled prompt-assembly loop.
 
 **Deps:** splits_from OQ-82, blocked_on OQ-81 (the suppression predicate it governed).
-
-**Deps:** splits_from OQ-82, blocked_on OQ-81 (the suppression predicate it governs).
 
 ---
 
@@ -8996,72 +6713,42 @@ it re-opens the OQ-81 channel. Route every new generation path through the unifi
 **Status:** resolved — 2026-06-21 (seat-aware skip shipped + witnessed; 21-corpus generality sweep;
 `audits/2026-06-21_maxent_seat_aware/FINDINGS.md`). Repoints the two OQ-138 maxent residuals
 (constructed-3 `:341`, FCR-9 `:331`).
-
-**Origin:** OQ-138's type-layer conversions (FSM/FCR-9/constructed-3) made `dr_type` and the
-diagnostic consumers seat-aware, but `maxent_classifier.pl`'s parallel override
-(`apply_override_for_sig`, signature-level, no `C`) still boosted the **routed** seats toward the
-override target — the MaxEnt layer manufacturing where the type layer stopped. Verdict-capable
-(feeds `probe_maxent`), so treated as an output-changing conversion with its own witness.
-
-**Resolution (witnessed).** Threaded `C` through `apply_override_for_sig/3→/4` (single call site,
-maxent_classifier.pl:318); skip the boost at routed seats reusing the existing
-`signature_detection:fcr_routed/1` + `constructed_routed/1` (verbatim, unbound-cascade keyed — no
-new predicate, no bound-arg mis-key). Non-converted clauses ignore `C` (byte-identical). FSM has no
-MaxEnt boost path (catch-all no-op — confirmed against substrate, scope holds). Witness
-(`diff_witness.out`): exactly the **12 routed seats** (9 fcr + 3 constructed) revert to their raw
-distribution; **0** non-routed seats move on any maxent surface (negative half byte-clean — raw-probs
-discriminator); **1** categorical flip — `shinbutsu` indexed top tangled_rope→snare (the one
-genuinely-manufactured verdict; classical tops unchanged because the conditional boost never flipped
-a classical argmax — refines OQ-138's "flips maxent_top" framing); **0** `verdict_join` changes.
-21-corpus sweep: `routed_STILL_boosted=0` everywhere; non-converted boosts intact;
-`original_v5` PARTIAL (pre-existing `maxent_run` failure, NOT a regression — stash-confirmed).
-`validation_suite` 92/0/0; `check_stack` baseline-clean; `gate.sh` GREEN. Incidental: pruned a stale
-`maxent_classifier.pl:852 [C2]` load-warning allowlist entry (singleton renamed `_`).
-
 **Priority:** 4
-
 **Deps:** splits_from OQ-138
-*(Workable-now at mint — `fcr_routed`/`constructed_routed` already existed; no human ruling owed,
-the design seat was ruled with OQ-138. Resolved same day.)*
+
+**Resolution note.** `maxent_classifier.pl`'s signature-level override boost still boosted ROUTED
+seats after OQ-138's type-layer conversions. Fix: threaded `C` through
+`apply_override_for_sig/3→/4`; skip at routed seats reusing `signature_detection:fcr_routed/1` +
+`constructed_routed/1` verbatim (unbound-cascade keyed — no new predicate, no bound-arg mis-key);
+FSM has no MaxEnt boost path (confirmed). Witness (`diff_witness.out`): exactly the 12 routed
+seats revert to raw; 0 non-routed seats move; 1 categorical flip (`shinbutsu` indexed top
+tangled_rope→snare — the one genuinely-manufactured verdict; classical tops unchanged); 0
+`verdict_join` changes. 21-corpus sweep `routed_STILL_boosted=0` everywhere (`original_v5`
+PARTIAL = pre-existing failure, stash-confirmed). Suite 92/0/0; gate GREEN.
 
 ---
 
 ## OQ-174 — `cs_reading_relation` feeds `contamination_network` explicit edges: shared-input, Theorem-7 intact (Ω_C)
 
-**Status:** resolved — benign carve-out (shared authored input, not
-detection-dependence). OQ-20 audit Arm 2, 2026-06-22.
+**Status:** resolved — benign carve-out (shared authored input, not detection-dependence). OQ-20
+audit Arm 2, 2026-06-22.
 **Priority:** 3
-**Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors/3`, ~67/92/257);
-`prolog/json_report.pl` (`write_contamination_network`)
+**Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors/3`); `prolog/json_report.pl`
+(`write_contamination_network`).
 
-**Finding:** Arm 2 (strip all `cs_*` from kernel_v1, HEAD code, E vs F, empty
-floor) found the DR observer core fully detection-independent (`claimed_type`,
-`perspective_chi`, `signature`, `maxent_*`, `classifications`, `purity` all
-unchanged) — the sole moving DR field is `contamination_network` (180 stories:
-152 cs-bearing + 28 cs-free neighbours, semantic neighbour-set changes, 0/180
-ordering-only), because `constraint_neighbors/3` reads `cs_reading_relation` into
-its `explicit` edges.
+**Resolution note.** Arm 2 (strip all `cs_*` from kernel_v1) found the DR observer core fully
+detection-independent; the sole moving field is `contamination_network` (180 stories), because
+`constraint_neighbors/3` reads `cs_reading_relation` into its `explicit` edges. Ruled benign:
+`cs_reading_relation` is an AUTHORED corpus fact (never asserted by any engine pass — read-only
+guards throughout), so this is a shared-input dependency like `shared_victim`/`shared_beneficiary`
+— not detection feeding detection; Theorem 7 intact. The plan's cs-free negative control "fails"
+precisely because the authored relational edge couples cs-free neighbours — a feature of the
+finding. Witness: `audits/2026-06-22_oq20_dr_baseline_diff/WRITEUP.md` §Arm 2.
 
-**Ruling (the crux was empirical, settled by substrate):** `cs_reading_relation`
-is an **authored corpus fact** — `narrative_ontology:cs_reading_relation('uuid',
-other_reading, coexists_with|forecloses)` written into the testset files at
-generation time, **never asserted by any engine pass** (no `assert`/`dynamic`;
-cs-analysis files use it only inside `once(...)`/`\+(...)` read guards). It exists
-independent of whether anything was *classified* cs. So contamination_network
-reading it is a **shared-input dependency**, the same pattern as its
-`shared_victim`/`shared_beneficiary` edges — **not** detection output feeding
-back into detection. Theorem 7 forbids the latter; the former is intact. The
-plan's "200 cs-free byte-identical" negative control "fails" precisely because
-the authored relational edge couples cs-free neighbours — a feature of the
-finding, not a strip bug or a leak. Residual design note (optional): the FPN
-could gate `cs_`-prefixed authored edges for axis tidiness; not a correctness
-issue. Witness: `audits/2026-06-22_oq20_dr_baseline_diff/WRITEUP.md` §Arm 2.
-
-**Reopen condition (kill-switch):** this resolution holds *because*
-`cs_reading_relation` is authored, not detected. If any future commit makes a
-pass **assert/asserta/assertz `cs_reading_relation`** (produce it from the
-cs-detection pass rather than load it from testsets), the shared-input argument
-collapses into detection→detection feedback — reopen and re-rule.
+**Reopen condition (kill-switch, operative):** this holds *because* `cs_reading_relation` is
+authored. If any future commit makes a pass **assert `cs_reading_relation`** (produce it from the
+cs-detection pass), the shared-input argument collapses into detection→detection feedback —
+reopen and re-rule.
 
 ---
 
@@ -9164,74 +6851,29 @@ matched-pair probe in the same audit style.
 
 **Status:** resolved — SUPERSEDED. The latest-snapshot probe-fix (`9fde36c9`) was itself reverted
 to static `dr_type/3` (operator ruling 2026-06-25, commit `5b069ae1`); the static path dissolves
-both OQ-178 and OQ-179 at the root. See **Supersession** below; the interim resolution is kept for
-provenance.
+both OQ-178 and OQ-179 at the root.
 **Priority:** 1
-**Deps (dropped on close):** was `blocked_on_human oq178-probe-fix-vs-classifier-semantics-ruling`;
-ruled 2026-06-25 — first the latest-snapshot probe-fix, then superseded by static `dr_type/3`
-(same seat, re-ruled the same day on the principle below).
+**Deps (dropped on close):** ruled 2026-06-25.
 
-**Supersession (2026-06-25, commit `5b069ae1`).** `cs_kernel_divergence/4` and the
-`compare_kernel_readings/3` JOIN now classify with static `dr_type/3` (time-neutral), mirroring
-`perspectival_incoherence`. **The principle (independent of any one constraint):** binding ANY DR
-measurement time into a `cs_*` cross-reading comparator is a category intrusion — the moving axis is
-reading/perspective, not time. And *latest*-snapshot specifically reads a COLLAPSING constraint at
-its terminus, where the latest authored ε can be 0 → DR-type `unknown`; `unknown==unknown` then
-reads as agreement and MASKS a real divergence. Static reads the representative authored ε. The
-`reading_snapshot_time/2` helper is dropped (no external users); the OQ-51 `is_real_type` N/A filter
-is preserved (load-bearing for the join invariant). **Output-changing, witnessed against regenerated
-`json_report`** (probe == json: 16/8 before, 18/8 after): live corpus (n=97)
-`cs_kernel_divergence_count` 16→18, kernels 8→8; the +2 recovered pairs are both
-`visual_evidentiary_authority` (`post_evidentiary` × `indexical_realism` / × `distributed_verification`),
-genuine type≠type (`snare ≠ tangled_rope`/`naturalized`), **zero unknown-pairings** (the OQ-37
-artifact did NOT occur). Twin corpora corroborate the recovery direction at scale: `testsets_haiku`
-861→893 pairs (+32, +3 kernels), `testsets_flash` 813→846 (+33, +4). **NB:** `shinbutsu` — the
-motivating collapse exemplar that drove the interim audit's larger numbers — is now a SINGLETON
-reading in the live corpus and produces no live pair; the reversal stands on the principle, not on
-that constraint's ε=0. (The plan predicted 22/9 on an earlier corpus snapshot; corpus drift since
-makes it 18/8.)
+**Supersession principle (operative):** binding ANY DR measurement time into a `cs_*`
+cross-reading comparator is a category intrusion — the moving axis is reading/perspective, not
+time. Latest-snapshot specifically reads a collapsing constraint at its terminus (latest ε can be
+0 → `unknown`; `unknown==unknown` reads as agreement and MASKS real divergence). Static reads the
+representative authored ε; `reading_snapshot_time/2` dropped; the OQ-51 `is_real_type` N/A filter
+preserved. Output-changing, witnessed against regenerated json_report: live
+`cs_kernel_divergence_count` 16→18 (+2 genuine `visual_evidentiary_authority` pairs, zero
+unknown-pairings — the OQ-37 artifact did not occur); twins corroborate (haiku 861→893, flash
+813→846).
 
-**Resolution — INTERIM, now superseded (2026-06-25).** Falsifier resolved against a shared probe time: `cs_kernel_divergence`'s
-output carries **no time field** and **no consumer keys on time** (counts → `json_report` only;
-OQ-119 exports key on `spatial_scope`; `cross_reading_diff`/`enhanced_report` on kernel/context) —
-so the comparison is per-CONTEXT, not time-aligned, and each reading may be read at its OWN valid
-time (no common-floor needed). New `reading_snapshot_time/2` = max authored `base_extractiveness`
-time (fallback 0); applied to BOTH `cs_kernel_divergence/4` and the `compare_kernel_readings/3`
-JOIN (invariant preserved 42/42). **Operator ruling: LATEST authored time** (current/most-developed
-state; earliest under-detects divergence, which accretes along the trajectory). Witness:
-`cs_kernel_divergence_count` 17→20, JSP divergence preserved (1→1, now correct types), all 15
-off-grid readings on-grid (0 hit the 0.5 default), 32 readings re-based T=0→latest ALL from authored
-ε (no fabrication by construction), validation 0/1/1. NB the single-snapshot is lossy (9/15 readings
-change type across grids; `shinbutsu` de-differentiates) and `max(T)` is chronologically-earliest for
-BC-encoded stories (`lycurgan`; OQ-105) — both carried into **OQ-179**.
-
-**Finding (2026-06-24, audit `audits/2026-06-24_oq41_basex_t0/`).** `cs_kernel_registry`
-(`cs_kernel_divergence/4`, `compare_kernel_readings/3`) classifies every reading at a fixed
-**Time=0** to compare them ("baseline comparison across readings" — code comment line 61; a
-synthetic SENTINEL, not a shared historical origin — falsifier resolved). But 15 live-corpus
-constraints author `base_extractiveness` ONLY as a temporal `measurement/5` series at real years
-(1450, 1700, 480 BC…), none at Time=0 — so the Time=0 probe is **off every story's grid**. There
-`classify_at_time_with_supp` falls to the `BaseX=0.5` impute (OQ-41 rows 24–25) and classifies off
-a value nobody authored. This is NOT OQ-44 absence (0/15 genuinely ε-absent) — it is an ill-posed
-off-grid query. Witnessed harm: `jewish_sovereignty_palestine` reads `settler_colonial`=snare vs
-`cultural_zionist`=scaffold at every authored time (true divergence), but the Time=0 probe rode the
-0.5 accidentally-preserving it; fail-closing to `unknown` (OQ-44 reflex) instead ERASES it
-(both→unknown, `robust_context_count` 0→156). So both impute-0.5 and fail-closed-unknown are wrong
-at Time=0.
-
-**The design seat (split, operator recommendation 2026-06-24):**
-- **Probe fix (substrate correction, settle-now class):** `cs_kernel_registry` should probe at a
-  story-VALID time, not the synthetic Time=0. Wrinkle to rule: readings in one kernel can have
-  different grid starts (JSP: 1917 vs 1900), so no single on-grid time is shared — candidates are
-  *latest-common* (JSP: both have 2024) or per-reading-nearest. This is the small choice to settle.
-- **Classifier semantics (separate, genuine OQ-105 seat):** what should `classify_at_time(C, T, …)`
-  return for an off-grid `T`? (nearest-authored / constant-extrapolate / `unknown`). Recurs anywhere
-  off-grid times are queried, so do NOT fold it into the probe fix to paper over one caller.
-
-**What resolution changes:** restores correct kernel-divergence verdicts for temporal-series
-constraints; unblocks OQ-41 rows 24–25 (re-pointed here) and OQ-39 row 14 (trajectory gate shares
-the off-grid wrinkle). The `unknown==unknown`-as-agreement absorption it exposed is tracked as an
-OQ-51 build-extension (independent, can land in parallel).
+**Finding provenance (compressed; audit `audits/2026-06-24_oq41_basex_t0/`).** The Time=0 probe
+was off every temporal-series story's grid (15 live constraints author ε only as `measurement/5`
+at real years), riding the `BaseX=0.5` impute (OQ-41 rows 24–25) — NOT OQ-44 absence but an
+ill-posed off-grid query; fail-closing would have ERASED the true settler_colonial/cultural_zionist
+divergence (both→unknown) — the OQ-44 dual now in Build Discipline Pattern 5. The interim
+latest-snapshot fix (17→20, operator-ruled LATEST) and its known losses (9/15 readings change
+type across their own grids; `max(T)` chronologically-earliest for BC-encoded stories, OQ-105)
+were carried into OQ-179, which dissolved with the same revert. Cross-refs: OQ-179, OQ-41,
+OQ-44, OQ-37, OQ-51, OQ-105, OQ-39 (row 14 shared the wrinkle, moot), OQ-119.
 
 ---
 
@@ -9241,49 +6883,21 @@ OQ-51 build-extension (independent, can land in parallel).
 
 **Status:** resolved — MIS-PREMISED (operator ruling 2026-06-25). Its "trajectory" conflated two
 distinct temporal elements; `cs_kernel_divergence` reverted to static `dr_type/3` (commit
-`5b069ae1`, the OQ-178 supersession), removing the snapshot entirely and dissolving the question at
-the root.
+`5b069ae1`, the OQ-178 supersession), removing the snapshot entirely and dissolving the question.
 **Priority:** 2
-**Deps (dropped on close):** was `blocked_on OQ-178` (OQ-178 superseded; this OQ dissolved with it).
+**Deps (dropped on close):** was `blocked_on OQ-178` (superseded; dissolved with it).
 
-**Resolution — mis-premised (2026-06-25).** OQ-179 asked `cs_kernel_divergence` to become
-trajectory-aware over the DR `measurement/5` series. That conflates **two distinct temporal
-elements**: the DR measurement series (`classify_at_time`) and the CS lifecycle trajectory
-(`cs_reference_frame`→`cs_drift_state`→`cs_drift_trajectory`, role-indexed). A `cs_*` cross-reading
-comparator should be NEITHER — its moving axis is reading, not time (see OQ-178 Supersession). The
-revert to static `dr_type/3` removes the single snapshot, so there is no chosen moment left to make
-"trajectory-aware." **Re-homing the genuine signal:** the affirmative observation — sibling readings
-can classify to different DR-types at different points of their OWN measurement grids (9/15 in the
-old audit) — is a real question, but it belongs to the **DR temporal subsystem**
-(`drift_trajectory`/`temporal_residual`/`degradation_chain`; OQ-110 family), measured on the DR
-axis, NOT bolted into the CS-layer comparator. It is deferred there: the live corpus is
-singleton-sparse (no kernel has two temporal-series sibling readings), so sibling-trajectory
-divergence is only measurable on the twin corpora. **OQ-105 BC-encoding fold is now moot for this
-path** — static `dr_type/3` never takes `max(T)`, so the numeric-vs-chronological-time mismatch does
-not arise here.
-
-**Origin (OQ-178 close, 2026-06-25).** OQ-178 fixed the off-grid bug by reading each kernel reading
-at its LATEST authored time. But that is still a SINGLE snapshot, and the same audit witnessed that
-the snapshot is lossy by construction: **9 of the 15 off-grid readings change type across their own
-grids** (e.g. `settler_colonial` tangled_rope@1917→snare@2024; `shinbutsu` tangled_rope@1603→rope@1868
-— **de-differentiating**, the opposite direction), and corpus-wide **32 readings shift type T=0→latest**.
-Two readings identical at their latest time can diverge for the entire prior century; a latest-snapshot
-reports them as agreeing. The honest signal is "do the readings' TRAJECTORIES ever diverge," not "do
-they classify differently at one chosen moment."
-
-**The design question.** Is `cs_kernel_divergence` a *point* comparison or a *trajectory* comparison?
-The 9/15 (and 32 corpus-wide) type-instability is affirmative evidence for trajectory: a kernel could
-diverge if its readings classify differently at any shared/overlapping authored time, or over the
-union of their trajectories. Larger redesign of `cs_kernel_divergence`/`compare_kernel_readings` than
-the OQ-178 probe-time swap — its own produce-then-gate.
-
-**Also fold in here:** the `max(T)`-is-chronologically-earliest issue for **BC-encoded stories**
-(`lycurgan` 480..330 positive-descending; OQ-105 encoding family) — a trajectory measure that reads
-the authored series in order sidesteps the numeric-vs-chronological-time mismatch a single `max(T)`
-snapshot inherits.
-
-**What resolution changes:** replaces a lossy single-moment divergence verdict with one faithful to
-the temporal model the corpus authors; removes the inherited BC-encoding snapshot artifact.
+**Resolution note.** The ask conflated the DR measurement series (`classify_at_time`) with the CS
+lifecycle trajectory (`cs_reference_frame`→`cs_drift_state`→`cs_drift_trajectory`); a `cs_*`
+cross-reading comparator should be NEITHER — its moving axis is reading, not time. The revert
+removes the single snapshot, so there is no chosen moment left to make trajectory-aware.
+**Re-homing the genuine signal (operative):** sibling readings classifying to different DR-types
+at different points of their OWN grids (9/15 in the old audit; 32 corpus-wide T=0→latest shifts;
+`shinbutsu` de-differentiating) is a real question belonging to the **DR temporal subsystem**
+(`drift_trajectory`/`temporal_residual`/`degradation_chain`; OQ-110 family) — deferred there; the
+live corpus is singleton-sparse, so sibling-trajectory divergence is measurable only on the
+twins. The `max(T)`-is-chronologically-earliest BC-encoding issue (`lycurgan`; OQ-105 family) is
+moot for this path — static `dr_type/3` never takes `max(T)`.
 
 ## OQ-180 — Sibling bare-`\=` diagnostic surfaces + audit-dir silent h1_band sites (residual OQ-51 N/A)
 
@@ -9580,28 +7194,28 @@ deferred at the 2026-07-16 checkpoint. `audits/2026-07-16_oq221_meter_partition/
 
 ## OQ-186 — Contamination-network convergence does not distinguish independent constraints from common-cause re-descriptions: a clique of co-authored slices reads as mutual corroboration
 
-**Ω-type:** Ω_C (design choice — what an independence/common-cause caveat on convergence should be, and where it lands). The empirical leg (does the machinery in fact ignore node independence?) was Ω_E — witnessed by the pre-registered A/B probe.
+**Ω-type:** Ω_C (design choice — what an independence/common-cause caveat on convergence should be,
+and where it lands); the empirical leg was Ω_E, witnessed by the pre-registered A/B probe.
 
 **Status:** resolved — 2026-07-11, outcome (a): read-site common-cause caveat landed. A/B probe
 (pre-registered before any run, `PREREG.md` commit `57159a36`): co-authored slices form the full
 3-clique, distinct-agent topic forms zero edges — the machinery has no node-independence notion;
 the defect was the corroboration READ. Discriminator `shared/independence.py` (shared ≥1
-beneficiary AND ≥1 victim AND |Δε|≤0.02; ε clause KEPT by census — 9/21=42.9% of non-both-sides
-live pairs inside margin, not a majority; the one live both-sides pair IS the witnessed
-`moral_causation_locus` family). Outcome (b) (un-computable from authored fields) was FORECLOSED
-by recon, not silently dropped: beneficiary/victim lists + ε verified serialized
-(`json_report.pl:386-396`). Read sites landed: enhanced_report Independence column + legend +
-≥2-common-cause summary; `evaluative_convergence.py` `members_common_cause_clique` +
-`all_members_knife_edge` (OQ-188) booleans, and `build_defensibility` no longer emits the
-witnessed false-cartel ruling ("coordinated rather than independent operation",
-`dispositional_reading_report.md:396,428`) on artifact-channel sets — downgraded to a caveated
-constrained position; XCON elevation suppressed likewise; tensions_ledger edge marker. OQ-103
-salience floor and OQ-174 ruling untouched (orthogonal bits). Evidence:
+beneficiary AND ≥1 victim AND |Δε|≤0.02; ε clause KEPT by census — 9/21 non-both-sides live pairs
+inside margin, not a majority; the one live both-sides pair IS the witnessed
+`moral_causation_locus` family). Outcome (b) FORECLOSED by recon, not silently dropped
+(beneficiary/victim + ε verified serialized, `json_report.pl:386-396`). Read sites landed:
+enhanced_report Independence column + legend + summary; `evaluative_convergence.py`
+`members_common_cause_clique` + `all_members_knife_edge` (OQ-188), `build_defensibility` no
+longer emits the witnessed false-cartel ruling on artifact-channel sets (downgraded to caveated
+constrained position; XCON elevation suppressed); tensions_ledger edge marker. OQ-103 salience
+floor + OQ-174 ruling untouched (orthogonal bits). Evidence:
 `audits/2026-07-11_oq186_oq188_readsite/`; regressions
 `prolog/tests/test_oq186_common_cause_clique.pl` + `python/tests/test_role_flip_flag.py`.
 **Priority:** 2
-**Deps:** bundled_with OQ-188 (joint read-site fix — shared audit + false-cartel defect), bundled_with OQ-78 (ε-mode confound on the Δε clause — censused; clause kept)
-**Origin:** essay-review triage 2026-06-26 (gray_divorce draft, comment #5). Sibling of OQ-103 (salience floor) / OQ-174 (cs-edge shared-input) — both addressed edge STRENGTH/PROVENANCE; this added node INDEPENDENCE.
+**Deps:** bundled_with OQ-188 (joint read-site fix), bundled_with OQ-78 (ε-mode confound on the Δε clause — censused; clause kept)
+**Origin:** essay-review triage 2026-06-26 (gray_divorce draft, comment #5). Sibling of OQ-103 /
+OQ-174 (edge strength/provenance); this added node INDEPENDENCE.
 
 ---
 
@@ -9750,17 +7364,14 @@ class, drained by `paths.py`).
 **Priority:** 3
 **Deps:** splits_from OQ-22
 
-**Resolution:** The OQ-22-witnessed distinction (Hub-2-decided vs genuine two-hub) is carried by
-documentation, not a new engine field: OQ-22's resolution note + the corrected two-hub comment at
-`drl_core.pl:205–211` ("a PURE Hub-2 type … does NOT check χ", cites `logic.md:644`). No current
-consumer keys on the hub, and document-only is consistent with mark-drift-not-armor. The
-discriminator stays available as a prototype (`python/audits/oq22_grid.py`) for any future audit.
-**Reopen condition:** if a downstream consumer ever reads per-observer type variation AS two-hub
-signal (a live mis-read at flash 100/960 ≈ 10%, kernel_v1 49/1106, testsets 5/109), revisit option
-(a) — emit per-observer `deciding_hub ∈ {hub1_chi, hub2_immutability, both, neither}` as a
-`perspective_chi` sibling, anchored to the audit's grid-confirmed per-leg counts.
-**Evidence:** `audits/2026-06-28_oq22_hub_starvation/` (`grid_*.tsv`, `FINDINGS.md`). Declared-absence
-twin: **GAP-22** (`docs/design/design_gaps.md`).
+**Resolution note.** The OQ-22-witnessed distinction (Hub-2-decided vs genuine two-hub) is carried
+by documentation: OQ-22's resolution note + the corrected comment at `drl_core.pl:205–211` (cites
+`logic.md:644`). No current consumer keys on the hub; the discriminator stays available as
+`python/audits/oq22_grid.py`. **Reopen condition (operative):** if a downstream consumer ever
+reads per-observer type variation AS two-hub signal (a live mis-read at flash ~10%), revisit
+option (a) — emit per-observer `deciding_hub` as a `perspective_chi` sibling, anchored to the
+audit's grid-confirmed per-leg counts. Evidence: `audits/2026-06-28_oq22_hub_starvation/`.
+Declared-absence twin: **GAP-22** (`docs/design/design_gaps.md`).
 
 ---
 
@@ -10249,21 +7860,17 @@ verdict before (or with) the `empty_chair_state/2` refinement; a report line sho
 
 ## OQ-205 — Build ε's declaration discipline (the v8 §6.4 handed-forward artifact)
 
-**Ω-type:** Ω_C (design task — which provenance and stability surfaces ε carries is a declared-seat spec, not a measurement) with an Ω_E build/verification tail (the surfaces, once specced, are mechanical to land and control).
+**Ω-type:** Ω_C (design task — which provenance and stability surfaces ε carries is a declared-seat spec) with an Ω_E build/verification tail.
 
-**Status:** resolved — **build landed 2026-07-03, all five §9 graduation criteria met**: `audits/2026-07-03_oq205_build/` (README maps units U1–U11 to commits `e9041905`…`006f1d04` + close). (1) `epsilon_provenance/5` landed loud-null (operator ruling same day: NO backfill of any `testsets*` leg — generator-forward, corpus-complete at rebuild; the four provenance-poor strata named in the audit README, incl. the OQ-89 0.5-neutral stratum and the ~94/116 legacy under-vectored `json/` class); (2) both §3 fabrication fallbacks fixed in own output-changing commits with all-four-corpora byte-identical witnesses (U1 `get_true_metric` 0.0; U2 boltzmann 0.5/0); every §4 surface carries/surfaces the bit (emission `"authored"`/`"none_authored"` object, enriched join, report E5 section, sidecar; interior sites audited fail-closed); (3) r=0.02 stability sweep (`python/sweeps/epsilon_stability.py`) runs per-corpus (all four legs in the audit dir; `on_threshold_grid` matches the census exactly-at column on every leg — flash's 218 rides the grid class, `near_threshold`=0 there, the R3 two-class design working); Controls P (fixture corpus through the real load path, second gate swipl) and S (4-plant selftest incl. the shadow catch, first + fail-closed on every invocation) green THROUGH the recurring gate (`_prolog_epsilon_declaration_gate` + the sweep's pipeline slot), deliberate-break controls witnessed both; (4) OQ-78 standing readout `python/epsilon_authorship_readout.py` per-stratum, cross-checks the census prototype exactly (0.68×46/110=41.8%, .x8/.x2 rail); (5) v8 §9.5 leg 2 annotated built. Spec: rulings R2–R4 ratified + no-backfill amendment recorded (§3/§9). New corpus-level finding surfaced by the sweep: `unstable_off_grid` (χ-gate crossings, ε band-interior) is the LARGEST flag class on every leg (43/110 live) — ε-sensitivity is mostly not ε-threshold proximity; routed to OQ-78/OQ-48 consumers via the audit README. Prior spec-phase history: spec landed + census `audits/2026-07-03_oq205_epsilon_census/`; R2–R4 ratified with two amendments (three-site equality; two-class flag); R4 promotion trigger stands (a commentary-grade flag shown to have concealed a flip that mattered promotes to verdict-grade).
-
+**Status:** resolved — **build landed 2026-07-03, all five §9 graduation criteria met**: `audits/2026-07-03_oq205_build/` (README maps units U1–U11 to commits `e9041905`…`006f1d04` + close). (1) `epsilon_provenance/5` landed loud-null (operator ruling: NO backfill of any `testsets*` leg — generator-forward, corpus-complete at rebuild; four provenance-poor strata named incl. the OQ-89 0.5-neutral stratum); (2) both §3 fabrication fallbacks fixed in own output-changing commits with all-four-corpora byte-identical witnesses (U1 `get_true_metric` 0.0; U2 boltzmann 0.5/0); every §4 surface carries the bit (emission, enriched join, report E5 section, sidecar; interior sites fail-closed); (3) r=0.02 stability sweep (`python/sweeps/epsilon_stability.py`) per-corpus, `on_threshold_grid` matches the census exactly-at column on every leg; Controls P + S green THROUGH the recurring gate (`_prolog_epsilon_declaration_gate`), deliberate-break controls witnessed; (4) OQ-78 standing readout `python/epsilon_authorship_readout.py` cross-checks the census prototype exactly; (5) v8 §9.5 leg 2 annotated built. Rulings R2–R4 ratified + no-backfill amendment recorded. New corpus-level finding: `unstable_off_grid` (χ-gate crossings, ε band-interior) is the LARGEST flag class on every leg (43/110 live) — ε-sensitivity is mostly not ε-threshold proximity; routed to OQ-78/OQ-48. Spec-phase history: `audits/2026-07-03_oq205_epsilon_census/`. **R4 promotion trigger stands (operative):** a commentary-grade flag shown to have concealed a flip that mattered promotes to verdict-grade.
 **Priority:** 2
-
 **Deps:** splits_from OQ-135
-
-**Origin:** 2026-07-02, minted at the operator's direction after the OQ-135 close left the obligation homeless: OQ-03 had said the ε-discipline work is "the same task tracked at OQ-135," and OQ-135 resolved without a successor. v8 §6.4 hands it forward as the framework's main owed artifact.
-
-**The obligation (v8 §6.4; v7 §6 l.147 is the confession it answers).** ε is the framework's least-grounded and most load-bearing primitive — authored by judgment, not computed from anything beneath it. The Coupling Theorem settles the world-anchor question *negatively* (a world-anchored ε would be a seat-free seat), so what is owed is not grounding but **declaration**: (a) **ε provenance** — who/what authored each ε, from which reading, under which prompt/schema/model — carried with the value and surfaced at read sites (the same carry-the-provenance-bit rule Build Discipline applies everywhere else); (b) **ε stability** — whether conclusions anchored on an ε survive small perturbation, generalized from the existing cross-axis-anchor requirement (v7 §6) to a checked, surfaced fact rather than a per-anchor manual discipline. *The no-seat pose the framework detects in its constraints is one it must not strike about its own ε.*
-
-**Scope notes.** (1) Spec before build: the design pass enumerates the read sites that must carry the bits (reports, pipeline output, census surfaces) and the perturbation protocol (radius, which conclusions count as "anchored"), each with a pre-registered positive control — a planted provenance-less ε must fail loud, a planted threshold-proximate anchor must flag. (2) First empirical customer: the OQ-78 ε authoring idiom (0.68 mode, 8/2 last-digit grid) — an authoring-convention fingerprint the provenance surface should make visible rather than a separate one-off finding. (3) Existing partial substrate: per-story model provenance already exists (Critical Distinctions: model provenance is a feature); this OQ adds the ε-specific reading-level declaration and the stability check, not a new provenance system from scratch.
-
-**What resolution changes.** v8 §9.5's second falsifiability leg ("owed and unbuilt") becomes built; ε-dependent findings carry their authorship and stability with them at every read site; OQ-03's 03b (if ever run) and any future cross-axis anchor inherit a checked discipline instead of a manual one.
+**Origin:** 2026-07-02, minted at the operator's direction after the OQ-135 close left the v8 §6.4
+obligation homeless (ε is the framework's least-grounded, most load-bearing primitive; the
+Coupling Theorem settles the world-anchor question negatively, so what is owed is DECLARATION —
+provenance carried with the value + stability checked and surfaced). First empirical customer:
+the OQ-78 ε authoring idiom (0.68 mode, 8/2 last-digit grid). Cross-ref OQ-03 (03b inherits the
+checked discipline).
 
 ---
 
@@ -10390,29 +7997,15 @@ coverage) — fold the two sites into the OQ-97 candidate-site census.
 **Status:** resolved — 2026-07-04, both explanation branches softened in `signature_detection.pl`
 (769, 772); behavior-preserving (display atom only; grep-verified no code parses the string).
 Witness: `git diff prolog/signature_detection.pl`.
-
 **Priority:** 4
 
-**Origin:** 2026-07-04, drone-report audit. The `coupling_invariant_rope` explanation
-(`signature_detection.pl:769`) read "Certified true coordination mechanism … Passes all structural
-purity tests — this is genuine coordination, not low-extraction construction." But the signature
-gates ONLY on Boltzmann compliance + scope invariance; excess extraction (`ExcessEps`) is *reported,
-not tested*. procurement_inertia was certified with **excess_extraction=0.580** — which the same
-report's drift section flags as `excess_above_floor(0.58)` alongside two *critical* drift events
-(theater 0.38→0.71, extraction 0.45→0.68) and a predicted transition to tangled_rope. "Passes ALL
-purity tests" is a snapshot overclaim the report's own drift/excess signals contradict. (Contrast
-weaponization_accessibility: `false_ci_rope` at excess 0.13 — the discriminator between the two is
-Boltzmann *coupling*, not excess, so the certification is coupling-clean, never excess-clean.)
-
-**Resolution detail.** Softened to "coupling-clean coordination (snapshot) … Passes the
-coupling/scope-invariance tests (NOT an excess-extraction or drift gate) … check lifecycle drift and
-excess extraction for trajectory."
-
-**What resolution changes.** A reader who stops at the signature line no longer reads "certified
-genuine, passes all tests" over a constraint carrying high excess extraction and critical drift.
-Deeper design question left OPEN elsewhere if pursued: should `coupling_invariant_rope` gate on
-excess/drift at all, or is coupling-only certification correct-by-design? (Not opened here — the
-reported defect was the wording.)
+**Resolution note.** The signature gates ONLY on Boltzmann compliance + scope invariance; excess
+extraction is reported, not tested — procurement_inertia was certified at excess 0.580 beside two
+critical drift events (the discriminator vs `false_ci_rope` is Boltzmann *coupling*, not excess).
+Softened to "coupling-clean coordination (snapshot) … Passes the coupling/scope-invariance tests
+(NOT an excess-extraction or drift gate) … check lifecycle drift and excess extraction for
+trajectory." Deeper design question (should CI-rope gate on excess/drift at all?) deliberately
+NOT opened here. Origin: 2026-07-04 drone-report audit.
 
 ---
 
@@ -10567,31 +8160,22 @@ self-certifiable.
 
 **Ω-type:** Ω_E (empirical: pre-registered runs against a witnessed baseline).
 
-**Status:** resolved — 2026-07-12, closed on operator read of all three arms (two Claude-web
-comments + in-session ruling). No kill condition fired. Verdict: counting genuinely dissolved —
-arm-3 stage-8 densities 0.0/0.12/0.0/0.47/0.0 vs anchored baseline 47.6, with R2 confirmed LIVE
-(arm 3 was R2's first real exercise; arm 1's 0.48/1000 was achieved without R2 reaching stage 4 —
-stage-3 truncation, see OQ-216). Invariant held strongly 4/5, partially-via-ending on rev6; the
-arm-1 valence flinch was withdrawn as systematic on operator read; D9-adversarial conforming 4/4
-(zero bare-5s). The battery is verified against the defect it was built for.
-`NUMERIC_DENSITY_THRESHOLD` 25.0 → 10.0, variance-calibrated (improved ceiling ~0.5/1000 across
-six improved runs; defect band 37.6–47.6). **Run↔rev correction:** the five arm-3 runs are
-rev3–rev7 (rev6 = "The Platform Knows" = run 4,
-`agent/narrative_transform/uke/the_empty_pan_1783872143/`); rev2 is the arm-1 story — the close
-comments' "rev2, rev3, rev5, rev6, rev7" enumeration was off by one run; no verdict changes.
-**rev6 stage-9 HOLDS hand-checked at close: genuine** — the correctable-reading pressure (Kiran's
-representative-sample template rebuild) is foreclosed by the ending (Sokol's compliance reframe;
-"It exists. But it changes nothing"), matching the partial-via-ending call; the verdict does not
-rest on the forbidden correctable-value reading. Evidence:
-`audits/2026-07-12_oq215_arm3_variance/READOUT.md` (+ PROPOSAL.md pre-registration),
-`audits/2026-07-12_oq215_arm2_d9_control/READOUT.md`, arm-1 run `the_empty_pan_1783838645`.
-
-**Carried flags (not blockers):** (1) rev6 is the scored-Snare watch-case → OQ-218 (its Ω_E1
-gating control: rev6 through UKE_STORY v0.2, Path B); (2) density-green ≠ invariant-alive —
-density measures counting only, invariant survival is adjudicated by blind stage-9 + operator
-read; 0.0 is not evidence the invariant held → standing caveat wired into the orchestrator's
-inventory/gate output + `agent/uke_narrative_architecture_v0_3.md` (this close, same commit
-series).
+**Status:** resolved — 2026-07-12, closed on operator read of all three arms. No kill condition
+fired. Verdict: counting genuinely dissolved — arm-3 stage-8 densities 0.0/0.12/0.0/0.47/0.0 vs
+anchored baseline 47.6, with R2 confirmed LIVE (arm 3 was R2's first real exercise; arm 1's
+0.48/1000 achieved without R2 reaching stage 4 — stage-3 truncation, OQ-216). Invariant held 4/5,
+partially-via-ending on rev6 (stage-9 HOLDS hand-checked genuine at close); arm-1 valence flinch
+withdrawn on operator read; D9-adversarial conforming 4/4. `NUMERIC_DENSITY_THRESHOLD` 25.0 →
+10.0, variance-calibrated (improved ceiling ~0.5/1000; defect band 37.6–47.6). Run↔rev
+correction: the five arm-3 runs are rev3–rev7 (rev6 = "The Platform Knows" = run 4,
+`agent/narrative_transform/uke/the_empty_pan_1783872143/`); rev2 is the arm-1 story
+(`the_empty_pan_1783838645`). Evidence: `audits/2026-07-12_oq215_arm3_variance/READOUT.md`
+(+ PROPOSAL.md pre-registration), `audits/2026-07-12_oq215_arm2_d9_control/READOUT.md`.
+Carried flags (not blockers): rev6 scored-Snare watch-case → OQ-218; density-green ≠
+invariant-alive (0.0 is not evidence the invariant held — standing caveat wired into the
+orchestrator gate output + `agent/uke_narrative_architecture_v0_3.md`). Close outcome: R1–R14
+verified against the defect they were built for; R3(b) held conditionally (fate rides OQ-218);
+posture ruled assisted-by-design (`docs/design/design_discipline.md`).
 
 **Still-operative rulings (kept intact per the compress exception):**
 
@@ -10627,15 +8211,7 @@ series).
 
 **Deps:** blocked_on_human operator-cold-read
 
-**Origin:** 2026-07-11. The full R1–R14 plan (instruments R6/R7, witness rule R5, invariant
-threading R13/R14, counting-incentive prompt changes R1–R4, scope budget R8) was implemented with
-kill conditions pre-registered; arms run + operator-read 2026-07-12.
-
-**What resolution changed:** the R1–R14 changes graduated from "landed with offline wiring
-witnesses" to "verified against the defect they were built for"; R3(b) held conditionally (the
-hard-ban fallback now rides OQ-218's Ω_E1 outcome); the density threshold graduated from
-provisional two-point calibration to variance-run calibration; posture ruled assisted-by-design
-(recorded in `docs/design/design_discipline.md`).
+**Origin:** 2026-07-11; arms run + operator-read 2026-07-12.
 
 ---
 
@@ -10728,32 +8304,29 @@ its producer never finished writing.
 
 ## OQ-217 — Tighten consensus_provenance/2: unanimity requires ≥2 real-typed seats (OQ-207 kill condition fired)
 
-**Ω-type:** Ω_E (output-changing one-predicate tightening on an already-taken ruling; witnesses pre-specified) with an Ω_C tail (the mixed `plural([T,unknown])` cell's semantics — RULED, see resolution).
+**Ω-type:** Ω_E (output-changing one-predicate tightening on an already-taken ruling) with an Ω_C
+tail (the mixed `plural([T,unknown])` cell's semantics — RULED).
 
 **Status:** resolved — built + censused 2026-07-12/13; commits `871e69ac` (tightening) + `cb60bd0a` (movement census)
-
 **Priority:** 2
-
 **Deps:** splits_from OQ-207
+**Origin:** 2026-07-12, the OQ-207 census fired the pre-committed D4 kill condition (cell (b) —
+all-`unknown` seats read unanimous — live population 4). Evidence:
+`audits/2026-07-12_oq207_stakeholder_h1/`.
 
 **Cross-ref (added 2026-08-09, OQ-151 close):** the exact verdict⟺H¹ biconditional this tightening
 delivered is what let OQ-151's H¹ half close as superseded; the mcc candidate set it left
 existence-gated is now typed-refined by `empty_chair_state/2` (commit `e07fba7b`,
 `audits/2026-08-09_oq151_dual_gauge/` — 613 candidates → 9 dissent / 219 untyped-chair / 385 concur).
 
-**Origin:** 2026-07-12, the OQ-207 census fired the pre-committed D4 kill condition (cell (b) —
-all-`unknown` seats read unanimous — live population 4). Evidence: `audits/2026-07-12_oq207_stakeholder_h1/`.
-
 **Resolution (operator ruling 2026-07-12, option 3 + in-session mcc extension):** verdicts compute
-over `is_real_type/1` seats only via the shared `stakeholder_type_vector/2` — verdict ⟺ H¹ is now an
-EXACT biconditional (divergence cells (a)/(b)/mixed retired; rationale — unanimity is universal so
-untypeable presence rides in the token; plurality is existential — at the `consensus_provenance/2`
-header). New tokens: `insufficient_real_seats`, `unanimous_with_untypeable_seats`,
-`manufactured_consensus_candidate_untypeable/1` (the last HEAVILY LIVE at 12/50/39, not
-predicted-zero — most former `plural([T,unknown])` stories carry excluded seats). Witnesses: plunit
-37/37+19/19+20/20; census PASS ×4 legs w/ retired-cells gate + all controls; per-id movement diff =
-prediction exactly (0 mismatches; 4 cell-(b) + 1 cell-(a) → insufficiency); pipeline per_constraint
-byte-identical. Full movement table + the v1 authored-zero `n_excluded` finding (Pattern 5):
+over `is_real_type/1` seats only via the shared `stakeholder_type_vector/2` — verdict ⟺ H¹ is an
+EXACT biconditional (divergence cells retired; rationale at the `consensus_provenance/2` header).
+New tokens: `insufficient_real_seats`, `unanimous_with_untypeable_seats`,
+`manufactured_consensus_candidate_untypeable/1` (HEAVILY LIVE at 12/50/39, not predicted-zero).
+Witnesses: plunit 37/37+19/19+20/20; census PASS ×4 legs with retired-cells gate; per-id movement
+diff = prediction exactly; pipeline per_constraint byte-identical. Full movement table + the v1
+authored-zero `n_excluded` finding (Pattern 5):
 `audits/2026-07-12_oq217_consensus_tightening/README.md`, KNOWN_STATE 2026-07-13.
 
 ---
@@ -10762,12 +8335,11 @@ byte-identical. Full movement table + the v1 authored-zero `n_excluded` finding 
 
 **Ω-type:** Ω_E (pre-registered probe; decision rules authored before any run).
 
-**Status:** resolved — 2026-07-13, operator ruling below (both legs in hand; the condition on the
-class ruling — the correctable-vocabulary sweep with fired positive control — discharged same
-day). Evidence: `audits/2026-07-12_oq218_scored_snare/` (PROPOSAL.md + PROPOSAL_STAGE2.md
-pre-registrations, STAGE1_ADJUDICATION.md, READOUT_STAGE2.md + addenda, per-run manifests,
-blind-arm outputs ×8, A/B keys, OPERATOR_LEG_BUNDLE.md). Full investigation narrative in git
-history of this entry.
+**Status:** resolved — 2026-07-13, operator ruling below (both legs in hand; the
+correctable-vocabulary sweep condition discharged same day). Evidence:
+`audits/2026-07-12_oq218_scored_snare/` (PROPOSAL.md + PROPOSAL_STAGE2.md pre-registrations,
+STAGE1_ADJUDICATION.md, READOUT_STAGE2.md + addenda, per-run manifests, blind-arm outputs ×8, A/B
+keys, OPERATOR_LEG_BUNDLE.md). Full investigation narrative in git history of this entry.
 
 **OPERATOR RULING — OQ-218 close (2026-07-13), kept verbatim per the D9-ruling precedent:**
 
@@ -10813,27 +8385,23 @@ history of this entry.
 >   PUBLICATION of arc outputs (Clean Small Song first), not this close.
 > - The improved stories are audit artifacts; publication is a separate per-story decision
 >   (rev6-improved carries the Cliffside 806-812 flag).
-
 **Standing instrument rules (compression survivors, alongside the scope line and reopen
 condition above):** blind payloads carry a "these may be identical — say so" escape; any arm
 factual claim is grep-adjudicated before filing; improver ≠ blind reader (F-PROCESS-VOUCH).
 Q4 is the discrimination instrument; Q1 stays as-phrased; Q2 alone never adjudicates keeps
 (residue-inversion). v0.2's decision tree is fully walked: Path A ×3, Path B ×1,
 reject-and-regenerate ×1 (label-primed rewrite, OQ-220 pilot), null-deformation ×1.
-
 **Priority:** 2
 
 **Deps:** blocked_on_human operator-adjudication
 
-**Origin:** 2026-07-12, the OQ-215 close; reframed per operator ruling from "does the gate let a
-rev6 through" to "can UKE_STORY v0.2 repair a Type-B seed?"; Stage 1 run same day under
-pre-registration committed before the pass; Stage 2 released by the Stage-1 ruling and run
-4.5-pinned (operator instruction, dissolving the Sonnet-5 migration confound).
-
-**What resolution changed:** R3(b) standing (hard-ban fallback documented, not armed); the rev6
-watch closed with a travelling reopen condition; v0.2 verified as a Type-B repair instrument
-(possibility, not guarantee; §5 excluded); the pipeline's residual defect class reassigned to
-OQ-214; the human gold arm bound to publication, not to this close.
+**Origin:** 2026-07-12, the OQ-215 close; reframed per operator ruling to "can UKE_STORY v0.2
+repair a Type-B seed?"; Stage 1 run same day under pre-registration committed before the pass;
+Stage 2 released by the Stage-1 ruling and run 4.5-pinned (dissolving the Sonnet-5 migration
+confound). Close outcome: R3(b) standing (hard-ban fallback documented, not armed); rev6 watch
+closed with a travelling reopen condition; v0.2 verified as a Type-B repair instrument
+(possibility, not guarantee; §5 excluded); residual defect class reassigned to OQ-214; the human
+gold arm bound to publication, not this close.
 
 ---
 
@@ -10855,62 +8423,21 @@ Full record: `audits/2026-07-13_oq219_missing_floor/`.
 
 **Deps:** blocked_on_human operator-spend-go
 
-**Origin:** 2026-07-12, the OQ-215 close. R14's floor-contract is confirmed AUTHORED (arm 3:
-floor authored 5/5) but never confirmed LOAD-BEARING in output — every arm-3 source led with a
-Detector-A grain; no run has tested whether the floor element does narrative work. Runs against
-the seed→UKE_STORY chain (same posture as OQ-218).
+**Origin:** 2026-07-12, the OQ-215 close. R14's floor-contract confirmed AUTHORED (arm 3: 5/5) but
+never confirmed LOAD-BEARING in output; runs against the seed→UKE_STORY chain (same posture as
+OQ-218).
 
-**Pre-registration (authored at mint, before the run; dated
-`audits/<date>_oq219_missing_floor/PROPOSAL.md` at spend time):** one source whose PRIMARY
-invariant is Detector-B (missing floor). Two questions: (1) does the seed dramatize it? (2) if
-not, can UKE_STORY v0.2 dramatize a contract-only invariant? **"Load-bearing" is pre-registered
-as:** blind stage-9 names the floor unprompted, AND erasure of the floor element weakens the
-story (the §4-style erasure test). A floor authored in the contract but only decorative in the
-text = NOT load-bearing.
-
-**Executor note (2026-07-13): model-agnostic — an Opus (or other) session can run this cold
-from this entry.** Pre-registration is complete in-entry; standing rules travel (improver ≠
-blind reader; arms = fresh instances, ≥2 model families, identical-escape payloads,
-grep-adjudicated claims). PIPELINE STAGES STAY ON PRODUCTION DEFAULTS (the runs double as the
-Sonnet-5 re-baseline — putting the executor's model into the stage flags would recreate the R12
-confound). Operator legs and spend-go are the operator's regardless of executor.
-
-**Step-0 triage + reframe (2026-07-13, operator ruling).** The pre-registration
-(`audits/2026-07-13_oq219_missing_floor/PROPOSAL.md`, committed `90631e4e` before any run) carried
-operator sharpenings #1–#5 and made **leg B (pure Detector-B) the naming probe's POSITIVE CONTROL**
-— the arm that proves the probe can flag a floor at all, without which a dual-grain leg-A null is
-uninterpretable (#2). Step-0 leg-B triage (`TRIAGE.md`, committed `6ff9f480`; ~$0.06, 2 Stage-0
-`--dry-run`s, exit 0) found **NO corpus-drawn pure-Detector-B source**: prose pre-screen across 11
-sources + engine certs on the two best shots (`rift3` "Insufficient", `rift2` "Load-Bearing") ALL
-certify `untranslatable_real present="yes"`. **The UKE originals corpus is architected dual-grain**
-— every source authored for the detector schema pairs a Detector-B instrument with a live
-untranslatable-real, which is almost certainly WHY every OQ-215 arm-3 source led with a Detector-A
-grain. So the pure-B positive control cannot be sourced corpus-drawn, and (operator ruling: corpus-
-drawn-only, no authoring) the graded existence-run is retired.
-
-**Reframed question (the finding IS the answer to the old question):** R14's floor is a
-**co-presence grain** in this corpus — never authored standalone-primary — so "does the pipeline
-GENERATE a load-bearing floor" is not answerable corpus-drawn. The live question becomes the OQ's
-own alternative: **can UKE_STORY v0.2 dramatize a contract-only floor (the §4 repair pass)?** —
-a v0.2-*repair* question, not a pipeline-generation existence claim. That run is still spend-gated
-(`blocked_on_human operator-spend-go`); leg A (`the_datum_stone`, dual-grain) remains available as a
-co-presence supplement if the operator later wants it.
-
-**What resolution changes (reframed):** whether v0.2 can dramatize a contract-only floor (a repair
-capability), NOT whether the pipeline generates one. The general "R14's floor does narrative work"
-claim is retired here as unanswerable from this corpus; establishing floor-carrying existence would
-need a pure-B source the operator authors (off unless the corpus-drawn-only ruling is lifted).
-
-**PILOT (2026-07-13) — v0.2-repair on "The Margins" (existence-at-n=1, split preserved):** applied
-v0.2 to a clean contract-only-floor seed (`the_empty_pan_1783870196`, grain-dominant) targeting the
-floor; §6 blind read, 2 cold arms. **SPLIT 1/2:** Gemini recovered the floor cleanly ("the injustice
-*of* the system of measurement… by design… foundational"); Sonnet read the same beats as
-grain/normalization. **Verdict (operator-held, Ω_C2): v0.2 CAN dramatize a contract-only floor —
-EXISTENCE at n=1, FRAGILE / reader-dependent.** Not decorative (clean blind recovery +
-capability-adding §4 erasure); not robust (rides the grain/floor seam; v0.2 has no native floor
-concept, floor enters as a break-rider). Filed as the OQ-219 pilot (cf. ergodicity pilot under
-OQ-220); both arms preserved, never averaged. Evidence: `audits/2026-07-13_oq219_missing_floor/`
-(MANIFEST/ERASURE/READOUT_v02repair + arms). Cost ~a few cents.
+**Resolution trail (all in `audits/2026-07-13_oq219_missing_floor/`):** pre-registration
+PROPOSAL.md committed `90631e4e` before any run; Step-0 triage TRIAGE.md committed `6ff9f480`
+(11 sources, all `untranslatable_real present="yes"` — retired the graded existence-run under the
+operator's corpus-drawn-only ruling); Margins pilot on `the_empty_pan_1783870196` (SPLIT 1/2 —
+existence at n=1, FRAGILE/reader-dependent; MANIFEST/ERASURE/READOUT_v02repair + arms); Datum
+Stone staged + certified `434ec74d`, run `the_datum_stone_1783889757` (READOUT_datum_stone.md —
+cold recovery ≈2.5/3 vs 1/2 grain-primary; decisive datum: Sonnet FLIPPED with dominance);
+dominance clause impl + fixture `83ecf045` (`python/tests/test_stage2_dominance_gate.py` 5/5;
+no-clause control `a02246f7`; READOUT_dominance_clause.md; gate `_contract_marks_floor_primary`
+structural, never model-inferred, INERT on legacy contracts). Existence n=2 across dominance
+regimes. The general "R14's floor does narrative work" claim retired as unanswerable corpus-drawn.
 
 **TAXONOMY RULING (operator, 2026-07-13, STANDING — settled by the pilot):** the floor is the
 **grain's structural sibling, not a break-species** — different mechanism (presupposition vs
@@ -10920,58 +8447,9 @@ instrument's *honest operation* vs a character's *knowing*). The break-rider (§
 floor-recovery runs BELOW grain-recovery in blind arms by nature (the neutrality prior is
 presuppositional) — so cold recovery is MEASURED-AND-REPORTED, not required, in the load-bearing bar.
 
-**SPEND-GO GRANTED + routing pre-committed (2026-07-13).** The pilot cannot assign the fragility's
-cause (protocol / seed / reader). The isolating instrument is **The Datum Stone** (floor-PRIMARY,
-staged + certified `434ec74d`): if floor-recovery tracks dominance (clean at floor-primary), fault =
-dual-grain competition → **seed-side Stage-2 dominance clause, NO v0.3**; if it collapses cold even
-at floor-primary → **v0.3 executes** (spec pre-committed); if the floor is absent from the generated
-seed → **pipeline-side (stages 2/3)**. Routing table + v0.3 spec + label-delta leg pre-registered in
-`PROPOSAL.md` ADDENDUM before the run. Datum Stone run: resume stage_1→10 (Sonnet-5 defaults), §6
-with THREE cold arms + primed(stage-9)-vs-cold label-delta.
-
-**RESULT — Datum Stone (floor-PRIMARY) → ROUTING OUTCOME (a) (2026-07-13).** Run: stages 1–10,
-exit 0, ~$1.65, generated "The Long Breath" (`the_datum_stone_1783889757/stage_8_output.md`); the
-floor is dramatized **primary and in the text** ("The stake's where a man named Corliss Rade put
-it, for a sum"; "no place at all for whose ground this was"). **Label-delta:** primed stage-9
-recovers the floor; **cold recovery ≈ 2.5/3** (Sonnet + Gemini clean floor incl. the parameter-
-irreducibility falsifier "not a fairer official / better instrument / corrected record"; Haiku
-grain-led but names it) — vs **1/2 at grain-primary** (Margins pilot). **Decisive datum: Sonnet
-FLIPPED** — grain on grain-primary Margins, floor on floor-primary Datum Stone. **Floor-recovery
-tracks dominance**, so the Margins fragility was **dual-grain competition, NOT a missing protocol
-socket and NOT craft failure.** Per the pre-committed table → **OUTCOME (a): NO v0.3.** Fix is
-**seed-side**: a **Stage-2 dominance-ordering clause** — when the contract marks the floor primary
-(C1 foundational), Stage 2 subordinates the other real on-screen (the §1a two-reals machinery
-applied to floor-vs-grain), carrying the floor's contract-dominance into the seed's reader-facing
-read. Evidence: `audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md` + 3 arm files.
-**Existence now n=2 across dominance regimes** (robust when floor-primary, fragile when a break-
-rider on a grain-dominant seed).
-
-**Status → MITIGATED (2026-07-13):** the reframed question is answered (v0.2 CAN dramatize a
-contract-only floor; fragility localized to dual-grain dominance; v0.3 not indicated; taxonomy
-ruling standing). **Forward step (implementation-pending, seed-side):** author the **Stage-2
-dominance-ordering clause** in `agent/narrative_transform/stage2.md` (when the invariant contract
-marks the floor primary, subordinate the grain on-screen) and re-test on a floor-primary seed.
-Gated behind: operator go on a generation-protocol change. The floor's fragility on **grain-
-dominant** seeds is filed as a **known seam** (expected, per the presuppositional-prior legibility
-handicap). Human-read gate (OQ-218 standing) still gates publication of any output.
-
-**RESOLVED (2026-07-13) — clause IMPLEMENTED + VALIDATED.** stage0.md authors a `primary="yes/no"`
-flag on the invariant contract; the orchestrator injects the dominance-ordering clause into the
-Stage-2 prompt IFF `missing_floor present="yes" primary="yes"` (structural gate
-`_contract_marks_floor_primary`, never model-inferred; R3(b) third application). Behavior-preserving
-on all committed contracts (none carry `primary=` → INERT). **(1) Free negative-control fixture**
-`python/tests/test_stage2_dominance_gate.py` 5/5 PASS (clause iff floor-primary; INERT on
-grain-primary/legacy/absent — over-fire structurally impossible). **(2) Paired re-run** (control =
-no-clause Datum Stone `a02246f7`; clause = same contract, floor authored primary): gate-fire
-witnessed; met ALL pre-registered criteria — subordination beat nameable (§IV grain given away
-while §VI floor stands), **cold recovery 3/3** (Sonnet+Gemini+Haiku all clean floor) ≥ 2.5/3
-baseline, **Haiku rescued partial→full floor** (the predicted sensitive indicator), **grain
-preserved** (kill condition not triggered). **(3) Kill condition** unmet (grain vivid). Confound
-stated (clause run is a different stochastic surface; clean signals = subordination beat + Haiku
-rescue + grain-preservation + fixture). Commits: impl+fixture `83ecf045`, clause run + READOUT
-(this). Evidence: `audits/2026-07-13_oq219_missing_floor/READOUT_dominance_clause.md`. **Residue
-filed:** Margins-class (grain-primary) fragility is accepted structural residue (INERT by design),
-never a bug awaiting a pass; the floor term stays dead (no v0.3); OQ-218 human-read gates publication.
+**Residue filed (operative):** Margins-class (grain-primary) fragility is accepted structural
+residue (INERT by design), never a bug awaiting a pass; the floor term stays dead (no v0.3); the
+OQ-218 human-read gate still gates publication of any output. Cf. the ergodicity pilot under OQ-220.
 
 ---
 
@@ -11386,102 +8864,45 @@ ruling extends to it.
 
 ## OQ-227 — Does the commitment-drift terminal set miss a regime? Deep-time referent-dissolution surfaces `sealed_closure` (+ an `acknowledgment_collapse` standing terminal) — fiction test-rig
 
-**Ω-type:** Ω_E for the completeness question — a constructed referent-dissolution case either
-routes to an existing `cs_terminal_attractor/4` row or falls through, decidable by construction —
-with a rider: the leading candidate is undetectable-in-principle (an authored-only terminal, like
-the `cs_drift` acknowledged bit; the commitment-scale analog of the essay's terminal fox and of
-`h1_band=null`), so part of the resolution is Ω_P-adjacent (the engine abstains / records an
-undetermined terminal, never self-certifies it).
+**Ω-type:** Ω_E for the completeness question, with an Ω_P-adjacent rider (the leading candidate
+is undetectable-in-principle — an authored-only terminal; the engine abstains, never
+self-certifies).
 
-**Status:** resolved — 2026-07-24 on C1+C2, with the `sealed_closure` row recorded OPEN (a declared
-absence, not added). C1: surviving-referent precondition made structural as a tripwire
-(`test_cs_drift_engine.pl terminal_set_pinned`). C2: `acknowledgment_collapse` routed to the standing
-trigger. C3: reduction *argument* fails (orthogonal axes — authored conclusion, not a probe) and the
-near-miss is *unsearchable* (no authored referent-dissolution signal to search on) — the row is not
-added on fiction alone; it would counterfeit a finding (no possible positive control). The open row is
-reviver documentation, not a tracked item. Full C-leg record below. Surfaced 2026-07-18 from *Hearts of Glass* (`blog/2026-07/`), the eon-scale fiction test rig;
-zero live-corpus instances — thought-experiment only, like the self-consuming-standing trigger in
-`design_gaps.md`.
-
+**Status:** resolved — 2026-07-24 on C1+C2, with the `sealed_closure` row recorded OPEN (a
+declared absence, not added). Surfaced 2026-07-18 from *Hearts of Glass* (`blog/2026-07/`), the
+eon-scale fiction test rig; zero live-corpus instances.
 **Priority:** 3
-
 **Deps:** bundled_with OQ-153
+**Origin:** operator, 2026-07-18. The six `cs_terminal_attractor/4` terminals each presuppose a
+**surviving referent**; the story runs drift past the point where the referent itself dissolves
+while the commitment's internal form and grounding are perfectly preserved — unreached
+state-space.
 
-**Origin:** operator, 2026-07-18. The six `cs_terminal_attractor/4` terminals (`stable_pattern`,
-`husk`, `extinction`, `revival`, `repudiation`, `axiom_foreclosure`) each presuppose a **surviving
-referent** — a Temple to be hollow about (husk/Kodashim), a cosmology to be foreclosed
-(Aristotelian), a text for practice to depart from — and their examples are all time-bounded. The
-story runs the drift past the point where the **referent itself dissolves** while the commitment's
-internal form and grounding are perfectly preserved (Ito, the ties, the world, the star all gone;
-the marriage/joke/roster fully warm). That is unreached state-space.
+**Reviver documentation (kept — the open row).** Candidates: **`sealed_closure`** (commitment
+axis — internally complete ∧ referentially empty ∧ undetectable-as-such; discriminator from
+`husk` is *recognizability*, not referent-presence — husk/Kodashim is a RECOGNIZED hollowing;
+the commitment-scale terminal fox, `blog/2026-07/no-four-oclock-v8.md`, v8 §5.9), fed by a new
+gap-direction **`referent_dissolution`** (`cs_drift_state/3`); **`acknowledgment_collapse`**
+(standing axis — terminal form of the `design_gaps.md` self-consuming-standing trigger, never a
+commitment terminal). The honest complication: `sealed_closure` is by construction the state
+where detection fails (glues from every synchronic angle, H¹=0; no authored pre-closure
+snapshot) — at most an authored-only/undetermined terminal, same shape as OQ-51's
+ruled-not-yet-built 4th sheaf value.
 
-**Candidate additions:**
-- **`sealed_closure`** (commitment axis) — subjectively complete, grounding fully present (the love
-  is real, unlost), but the external referent has decayed to nothing: it "checks against nothing, a
-  closed circle warming itself." The discriminator from `husk` is *recognizability, not
-  referent-presence*: `husk`/Kodashim is a **recognized** hollowing (the community knows the Temple
-  is gone and studies the form as memorial), whereas `sealed_closure` is **unrecognizable by any
-  standing observer, the keeper included** — grounding warm, referent gone, no vantage from which
-  the gap shows. It is the commitment-scale instance of the terminal fox
-  (`blog/2026-07/no-four-oclock-v8.md`, v8 §5.9). Mark: internally complete ∧ referentially empty ∧
-  undetectable-as-such.
-- **`referent_dissolution`** — a candidate new **gap-descriptor direction** (`cs_drift_state/3`)
-  feeding `sealed_closure`: the reference frame's external referent decays while
-  codification/practice/grounding persist. None of the existing directions (`authority_erosion`,
-  `codification_collapse`, `axiom_overriding`, `practice_drift`, the pressures) names it.
-- **`acknowledgment_collapse`** (standing axis, NOT a commitment terminal) — the ratifying authority
-  (the Keeper) "can no longer tell its faith from the perfect performance of its faith." This is the
-  **terminal form of the self-consuming-standing trigger** (`design_gaps.md`): the keeper spends the
-  faith-vs-forgery distinction in the act of exercising it. Route it to the standing trigger, not
-  the commitment table.
-
-**The honest complication (why this may not become a *computed* terminal):** `sealed_closure` is by
-construction the state where detection fails — it glues from every synchronic angle (H¹=0, per the
-§9.4 synchronic-invariant prohibition), has no authored pre-closure snapshot, and no referent to
-check against. The engine cannot *detect* it; at most it carries it as an **authored-only /
-undetermined terminal** (drift analog of `h1_band=null`, sibling of the acknowledged bit's authored
-basis). This is the same shape as OQ-51's ruled-not-yet-built 4th sheaf value: a real terminal the
-apparatus can name but not measure.
-
-**What resolution changes:** either (a) add `referent_dissolution` + `sealed_closure` to
-`cs_drift_state/3` / `cs_terminal_attractor/4` as an authored-only region with a
-`cs_drift_terminal_basis` value marking it undetectable-in-principle, routing `acknowledgment_collapse`
-to the standing trigger; or (b) rule the referent-dissolution regime out-of-scope for a corpus with
-no eon-scale cases, keeping this as the recorded reasoning a reviver would need. Either way the
-finding stands: the current six are complete only under a **surviving-referent precondition**, which
-belongs in the `cs_drift_engine.pl` header. Adjacent: OQ-153 (husk/naturalized temporal-axis
-taxonomy, bundled), OQ-126 (T0→T3 temporal accountability), GAP-02 (husk trajectory-shape), and the
-`design_gaps.md` self-consuming-standing trigger.
-
-**Leg C record (2026-07-24) — RESOLVED on C1+C2; the `sealed_closure` row is the declared-open part:**
-- **C1 DONE (precondition made structural as a TRIPWIRE, not a guard).** The surviving-referent
-  scope is now in the `cs_drift_engine.pl` header (`:59–67`), and the terminal SET is pinned by
-  `tests/test_cs_drift_engine.pl` `terminal_set_pinned`: any added/removed terminal fires RED,
-  forcing a reader to the scope before editing the table. It is CHANGE-DETECTED, not ENFORCED — a
-  test cannot verify a precondition about what is out of scope. Adding a 7th terminal (a
-  `referent_dissolution` → `sealed_closure`) trips it by design.
-- **C2 DONE (routing confirmed + cross-linked).** `acknowledgment_collapse` is standing-axis, routed
-  to the `design_gaps.md` self-consuming-standing trigger, never a commitment terminal. "Declined,
-  not gapped" status kept. Bidirectional cross-link with the trigger.
-- **C3 RUN — the `sealed_closure` row stays OPEN (2026-07-24).** Two amendments to how the gates
-  are recorded (the arc's own rule, landing on its last item):
-  - **Reduction — an AUTHORED CONCLUSION, not a probe run:** the reduction *argument* fails —
-    `update_authority` tracks the kernel-amendment axis (live jurisdiction to amend the kernel),
-    while `sealed_closure` is on the orthogonal referent-dissolution axis (the referent decays while
-    form/grounding persist); the Keeper is a *compromised observer*, not an *absent amending
-    authority*, so `sealed_closure` is not a degenerate `update_authority` value. No probe was run —
-    this is reasoning, do not cite it as a measurement.
-  - **Near-miss — UNSEARCHABLE, not empty:** there is no authored referent-dissolution signal to
-    search on (that absence *is* the gap), so the probe *could not have found* a near-miss if one
-    existed — it can only surface ordinary husks (the 2 dead-founding proxy hits `epistemic_collapse`
-    / `vedic_corpus…` are correctly-assigned husks, surviving referent). The search is **pending an
-    authoring channel**, not concluded negative. A reviver must not read "empty" and skip re-running.
-  - So the row is NOT added — it stays OPEN, C1's tripwire is the honest form, and an unreachable
-    enum row with no possible positive control would counterfeit a finding.
-  **OQ-227 now reads `resolved` and drops off the active frontier while carrying this genuinely open
-  row — the row is REVIVER DOCUMENTATION, nothing watches it (same as GAP-28); its openness is not
-  tracked.** Reviver trigger: an authoring channel for referent-dissolution (a generation-scope
-  decision), not a query.
+**Leg C record (2026-07-24):** C1 — surviving-referent precondition made structural as a
+TRIPWIRE (`cs_drift_engine.pl:59–67` header + `tests/test_cs_drift_engine.pl`
+`terminal_set_pinned`: any added/removed terminal fires RED; change-detected, not enforced;
+adding a 7th terminal trips it by design). C2 — `acknowledgment_collapse` routed to the standing
+trigger, bidirectionally cross-linked; "declined, not gapped" kept. C3 — the row NOT added:
+the reduction *argument* fails (orthogonal axes — `update_authority` tracks kernel-amendment;
+the Keeper is a compromised observer, not an absent amending authority; an AUTHORED CONCLUSION,
+not a probe — do not cite as measurement), and the near-miss search is **UNSEARCHABLE, not
+empty** (no authored referent-dissolution signal exists to search on — a reviver must not read
+"empty" and skip re-running; the 2 dead-founding proxy hits are correctly-assigned husks). An
+unreachable enum row with no possible positive control would counterfeit a finding. **The open
+row is reviver documentation; nothing watches it (same as GAP-28).** Reviver trigger: an
+authoring channel for referent-dissolution (a generation-scope decision), not a query.
+Adjacent: OQ-153 (bundled), OQ-126, GAP-02.
 
 ---
 
