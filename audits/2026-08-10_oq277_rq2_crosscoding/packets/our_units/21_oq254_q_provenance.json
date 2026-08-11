@@ -1,0 +1,38 @@
+{
+  "source_dir": "2026-07-25_oq254_q_provenance",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": false,
+  "files_read": [
+    "WRITEUP.md (full)",
+    "STEP0_EVIDENCE.md (full)",
+    "STEP1_WITNESS.md (full)",
+    "STEP2_WITNESS.md (full)",
+    "STEP3_WITNESS.md (full)",
+    "STEP4_WITNESS.md (full)",
+    "manifest_census.py (targeted scan: population definition, discriminator)",
+    "manifest_census_output.json (targeted scan: totals)"
+  ],
+  "symptom": "A standing claim in the issue tracker held that the process records why it chose each answer but never why it chose each question. The rationale for the question choice turned out to be recorded, and recorded thoroughly — 2596 of 2598 choices carry an authored reason, every one of 1022 deferrals carries a reason, and a further verdict is present on 486 of 515 records. None of it was reachable from any place that would read it, so at every such place the rich record and no record at all looked identical.",
+  "mechanism_as_described": "The rationale lives in files written to a directory excluded from version control — zero of them tracked — so a fresh copy of the repository contains none of it. The files carry no stamp of their own origin: no record of which model, prompt, or schema produced them, and no timestamp of their own. And there is no link from the items they explain back to them: the field on each item that would carry the producing run's identifier holds the literal string for absent in all 71 live emissions, and the one variable in the orchestration code that holds the path of the file just written is assigned in two places and read in none. Nothing consumes the deferral list at all except two audit probes, one of them an archived copy. Each of the three gaps is individually mild — an untracked output directory, an unstamped file, an unpopulated optional field — and together they make the record unaddressable, so a reader at any downstream point sees the same thing whether the rationale was never written or is sitting on a machine they do not have. What was actually wrong was therefore the opposite of the standing claim: not that the choice went undeclared, but that its declaration could not be gotten to.",
+  "detection_path": "A recon that treated an earlier agent's summary as hypothesis and re-witnessed every load-bearing claim with pasted output and a positive control beside it: a census script written for this audit rather than reusing the earlier counts, a tracked-and-non-empty sibling directory as the control for the untracked one, an exhaustive rather than sampled classification of both shortfall strata, and a planted two-sided fixture proving the classifier could emit the other verdict — which is what makes the zero in that stratum a measured zero rather than a branch that never fires. The re-witnessing changed several of the earlier numbers, and the writeup states which figures supersede which.",
+  "consequence": "A characterization of the system's own discipline had stood in the tracker and was false as written; it was corrected explicitly rather than quietly amended. The fix is a join identifier minted at choice time and threaded through all three write paths — the third of which was found only while implementing — plus a self-stamp on each file, a tracked location, and a standing readout with a four-way token that names which of the failure states obtains. The readout is declared wired but not yet joined: all 205 live items still report no identifier authored, and the joined state is exercised only by a planted control, so the fix graduates on the next real run rather than now.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is exactly this question, so the incident and the subject coincide; the unit describes the defect found, not the recon method.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. The selected incident is the directory's own finding and is described down to the three separate reachability gaps; the alternatives are smaller instances caught during the audit's own execution.",
+    "alternatives_not_extracted": [
+      {
+        "what": "Three probes inside this audit each returned a clean absence that was an artifact of how they looked, and each was caught by a different check: a text search with an unquoted pattern returned zero matches and was caught by pasting a sample of the data it searched; a key probe looked at the top level for a value that is nested one block down and reported it missing; and two files were pulled into the population that are a different kind of record entirely, caught because they lacked a field every real member has.",
+        "why_not": "Three real instances of the same shape, but each is reported in one clause as a self-correction during execution rather than developed as a mechanism, and none reached a reader. Recorded together because the recurrence within a single audit is itself informative."
+      },
+      {
+        "what": "The repair landed as wired but not exercised: every live item still reports the absent state, and the successful state is reached only by a planted control, so the fix's own success path has no real witness yet.",
+        "why_not": "Declared openly at close with a graduation step attached, so it is a known open rather than a reported incident."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
+  }
+}

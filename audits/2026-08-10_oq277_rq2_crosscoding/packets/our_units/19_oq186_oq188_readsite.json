@@ -1,0 +1,42 @@
+{
+  "source_dir": "2026-07-11_oq186_oq188_readsite",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": true,
+  "files_read": [
+    "README.md (full)",
+    "PREREG.md (full)",
+    "probe_oq186.log",
+    "census_oq188.log",
+    "census_eps_clause.log",
+    "probe_oq186.pl (targeted scan: fixture construction)",
+    "census_oq188.py (targeted scan: bucket rules)"
+  ],
+  "symptom": "A rendered report stated that a set of items showed 'coordinated rather than independent operation.' Neither half of that reading survives inspection: the uniformity it rests on comes from a shared configuration constant rather than from the items, and the links that made the set look mutually corroborating connect co-authored slices of a single underlying fact.",
+  "mechanism_as_described": "Two independent mechanisms arrive at the same read site. First, the position a given seat is assigned depends on an authored role label, and each role label maps to a fixed numeric constant. Two of the five constants, 0.12 and 0.25, sit on opposite sides of the sign root of the curve the verdict is computed from — the root falls at about 0.164 — and they are each other's nearest alternative. So a seat whose author picked either of those two roles has a verdict that flips outright if the author had picked the other. In the live data 101 of the seats carry one of them and 2 carry the other: 103 of 105 comparable seats, 98%, are in this state. Uniformity across such items therefore reports which role most authors reached for, not anything measured about the situations. Second, the link structure feeding the same read joins any two items that share a beneficiary or share a victim, and has no notion of node independence at all — three slices of one fact form a complete triangle that is indistinguishable in kind from a triangle of genuinely distinct items. A deduplication step compounds this by collapsing a pair's two links into one label, so 'these two share both sides' cannot even be expressed at that layer. The read site above them then treats the triangle as three corroborating observations, when it is one observation described three times.",
+  "detection_path": "Criteria fixed and committed before any run, with each outcome's meaning written down in advance. For the link structure, a synthetic fixture of six items: three co-authored slices of one fact with matched parties and near-identical magnitudes, and three pairwise-distinct extractive items. The first three formed the complete triangle and the second three formed no links at all — which makes the first group the positive control for the second, so the empty lists are a filter result rather than a probe that never ran. The fixture's magnitudes were chosen to sit safely inside the margin rather than on it, because a value on the boundary would have passed on rounding alone. For the seat verdicts, a census over the live output computed the sign root from the serialized parameters of that same output rather than from a copied constant, pasted all five role constants because the nearest-alternative claim depends on every one of them, and reported every bucket separately — including the seats whose value matches no role constant and the seats with no value at all, which shrink the denominator and are counted rather than quietly dropped.",
+  "consequence": "A published report asserted coordination among items where the shared property was a configuration constant. The repair is at the read sites rather than the constants: an independence column and a legend that names a link between items sharing both a beneficiary and a victim at near-identical magnitude as re-description rather than corroboration; a mark on any seat verdict that flips under a single authored role change; and a replacement for the coordination sentence that names both alternative explanations. One pre-registered detail was extended during implementation rather than followed literally: the census turned up a firing of the same predicate at a seat the design had not scoped, and suppressing it would have unflagged a witnessed firing, so the flag is computed per seat.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is whether two read sites should carry caveats; the unit is the joint defect the two questions were opened about, witnessed in a specific rendered report.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. The selected incident is stated with both producing mechanisms, the numeric root, the per-bucket census, and the specific rendered sentence it produced; the alternatives are execution-side findings from the audit's own review.",
+    "alternatives_not_extracted": [
+      {
+        "what": "A rendering defect in which link lines were read with the wrong serialized keys, so every such line printed placeholder question marks in place of the item identity and the strength. Fixed on sight, but the fix was folded into an unrelated commit; a review caught it, and the history was split so the fix carries its own before-and-after witness, with a byte-empty difference against the pre-split state as the equivalence check.",
+        "why_not": "A real defect with a visible symptom, but the document reports the commit-hygiene repair rather than the defect's mechanism, and it was caught in the same session. The commit-hygiene half is also a process finding rather than a system one."
+      },
+      {
+        "what": "One commit swept in an unrelated pre-existing uncommitted change that had been sitting in the working tree since before the session, discovered while splitting the history. It was left in place because it is accurate and topically adjacent, and disclosed rather than unpicked.",
+        "why_not": "Disclosed housekeeping, no consequence at a read site."
+      },
+      {
+        "what": "An absence claim — a phrase greps zero times in a regenerated report — was controlled by running the identical pattern against places the phrase must appear: an artifact saved before the fix (13 hits, one of them in the exact affected set), the current artifact (2 hits), and a sibling report rendered by the same path (1 hit). The zero is therefore the fix discriminating and not a dead search.",
+        "why_not": "A control working as designed, not an incident."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1).",
+    "overlap_note": "Floor-only unit: quarantined from the matrices, extracted at full quality per the pre-registered cell accounting. Extracted without reading the other extractor's version of this directory."
+  }
+}
