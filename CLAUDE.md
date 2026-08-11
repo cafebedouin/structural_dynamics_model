@@ -550,7 +550,14 @@ Concretely: wire-or-fail-loud, checked-canonicity, let the engine dispatch, retu
 of `[]`, a count of `0`, an "I found it nowhere" each can mean "nothing there" or "didn't
 dispatch / queried wrong / never ran." This holds for *reasoning*, not just shell: "X appears
 nowhere / is unique" is an unfalsified diagnostic until run against a case you know it must flag.
-**And the control you ADD is itself a claim:** a positive control, canary, fallback, or
+**And a check that CANNOT fail witnesses nothing while looking exactly like one that passed** —
+before reporting any check, ask *what value would make this line fail?*; if none exists (sums
+that balance by construction, a partition built by set-difference, a total recomputed from its
+own parts) it is a *consistency* check, not verification, and the discriminating control is
+still owed (`build_discipline.md` → *A consistency check is not a discrimination check*;
+witnessed 2026-08-10 — "73 + 101 = 174, partition exact" concealed an uncontrolled census that
+proved to be a positional parse, so **pin `/usr/bin/grep`, not `grep`, in any script computing
+a reported count**). **And the control you ADD is itself a claim:** a positive control, canary, fallback, or
 perturbation harness introduced to discharge this discipline inherits it — same-path, two-sided,
 riskiest-shape, substrate-anchored, write-free-if-pre-write (the confound reopens at the level of
 the tool you closed it with). Full table: `docs/technical/build_discipline.md` → *The spine*,

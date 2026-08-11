@@ -984,6 +984,61 @@ rename wave (the OQ-135 v8 seat/gauge/orientation vocabulary migration will hit 
 
 ---
 
+## A consistency check is not a discrimination check (the tautological witness)
+
+**A check that cannot fail witnesses nothing, and it looks exactly like a check that passed.**
+This is the positive-control rule one turn earlier: the probe above at least *could* return the
+wrong answer. Here the reported check is an identity — true by construction, whatever the
+instrument did.
+
+Witnessed 2026-08-10 (OQ-277, `audits/2026-08-10_oq277_rq2_crosscoding/frame/`). A sampling
+frame was frozen and reported as **"174 dirs = 73 incident-bearing + 101 non-census, partition
+exact."** The partition line reads as verification. It is not: the two strata were built by
+`comm -23` against the same population, so the counts sum by construction and **no possible
+miscount of the census could make that line fail.** Every figure downstream inherited an
+unverified instrument while displaying a green check.
+
+Building the actual control (six planted directories with known-correct classifications, each
+asserted two-sided) took minutes and immediately found two live defects in the same command:
+
+1. **The census is a positional parse of tool output.** `grep -rl … audits/ | cut -d/ -f2`
+   extracts the *directory* only because the target carries an `audits/` prefix. Run from
+   inside `audits/` with an unprefixed target, the same command extracts **filenames and
+   subdirectory names** instead — the exact unit error that produced the `77/175` figure later
+   corrected to `73/175`. The field index is never checked against the path shape.
+2. **`grep` is a shell FUNCTION in the interactive harness shell**, not `/usr/bin/grep`, and
+   the two disagree on emitting a `./` prefix — which shifts `cut`'s field by one. A figure's
+   value therefore depended on *which shell ran it*. Pin the binary (`/usr/bin/grep`) in any
+   script that computes a reported count.
+
+**Rules.**
+- Before reporting a check as a witness, ask **"what value of the underlying quantity would
+  make this line fail?"** If no such value exists — sums that balance by construction, a
+  partition from a set-difference, a total recomputed from its own parts, a round-trip through
+  the code that produced it — it is a **consistency** check. Report it as arithmetic, never as
+  verification, and build the discriminating control separately.
+- **Never positionally parse another tool's output for a reported figure** without pinning the
+  shape that makes the index correct. (This is the same mechanism a peer taxonomy independently
+  names as its own class: positional parsing of a generator's output is a latent failure,
+  because the generator's shape is a distribution, not a contract.)
+- **A control whose verdict depends on ambient environment is not a control.** Pin binaries,
+  not names.
+- Corollary for the control itself: the first two versions of the control above *failed on
+  their own fixtures* — one used a target shape that shifted the field back, one asserted an
+  over-narrow property (`all names end in .md`, false for a nested hit yielding a subdirectory
+  name). Both were left recorded in the file. A control that fails on a fixture you constructed
+  is the control being wrong; fix it, and keep the failure visible so the next reader knows the
+  fixtures are load-bearing rather than decorative.
+
+**Related shape — the instrument inside its own population.** The same audit's sampling frame
+initially included *the audit's own directory*: it was dated that day, so it entered the
+population, and it landed in precisely the stratum the audit sampled from. Drawing it would
+have asked a blind coder to classify the experiment classifying it. Whenever a probe samples a
+population it is itself a member of, exclude by an explicit **pre-sample** rule and record the
+exclusion **as a count** in the manifest, so the exclusion can never be silent.
+
+---
+
 ## Existence questions are closed by adversarial coverage, not random samples
 
 "Do ANY of the N have property X?" is a different question from "what fraction of the N have X?",
