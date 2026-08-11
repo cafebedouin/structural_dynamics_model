@@ -636,3 +636,74 @@ existed that instantiated both scopes simultaneously.
 for a taxonomy that names composition-layer defects.** Worth the line it costs in the writeup: the
 architecture reproduced the failure class it was built to detect, at the level where the classes
 compose, which is where its own taxonomy says to look.
+
+---
+
+# Addendum (operator, 2026-08-11) — the twins pass: an instrument's error profile belongs to its role
+
+## Q. Control (c)'s selection metric measured a different taxonomy
+
+Full evidence, options and ruling: `controls/redaction_pair_selection_defect.md`. Ruled **option
+C** — the declared three pairs are kept and the two the corrected metric picks are added, reported
+as two separate sets, with the **corrected set carrying the both-residue row** and the declared set
+reported alongside as the pre-declared comparison. Fixed before either number exists, so the row
+cannot acquire a choice at writeup time.
+
+### Q.1 The mechanism, which is new and is not a coding bug
+
+The direction-(ii) banned lexicon was built and validated as a **detector**. In that role a false
+positive is *conservative*: it fires H2, you investigate, you clear it, nothing is lost — and this
+arc already banked exactly that outcome as catch #3 ("permission *class b*y default").
+
+The same matcher was then reused as a **density metric to select on**. In that role the identical
+false positive is **silently decisive**, and it ranked first the one sampled directory with nothing
+in it to measure (`five_leg_twin_comparison`: 21 of 21 hits are `P1`/`P2`/`P3` used as that
+directory's own probe names).
+
+**An instrument's error profile is a property of its ROLE, not of the instrument.** Validating it
+in one role licenses nothing about the other. This belongs in §6.4 beside the three worked
+examples, and it is the one that is *not* a coding bug — **the matcher was correct; the reuse was
+the defect.** The three existing examples all show an instrument being wrong; this shows a right
+instrument in a wrong job, which no amount of testing the instrument would have caught.
+
+**The shape it would have produced, stated because it is the reason this is the sharpest defect of
+the arc:** a floor of zero, reported as "redaction costs nothing," clearing the both-residue row to
+be read as a finding. **The control designed to protect that row would have flattered it.**
+
+### Q.2 The §1 instruction was correct in prose and wrong in force — corrected form
+
+`HANDOFF_TWINS_AND_DRIVER.md` §1 said "do not re-derive them 'to check'." It was written to prevent
+**reselection** and it landed as a prohibition on **verification** — two different things collapsed
+into one sentence. **Third time in this arc a rule has been correct in prose and wrong in force**
+(§I.2 the cell-accounting field; §J.1 the ruling-as-artifact; this).
+
+**Corrected form, adopted:** checking is *permitted and expected*; reselecting is *mechanically
+prevented*. `controls/recheck_predeclared_counts.py` is the shape — it recomputes the stated numbers,
+reports whether the pre-declared selection is invariant, and **exits non-zero if the selection ever
+moves**, which routes the move to the operator instead of letting a script make it.
+
+**General principle, for §J beside the git channel:** *an instruction that forbids checking a
+control's stated numbers makes a defect in them unfalsifiable by construction — a strictly worse
+failure than the reselection it prevents.* §J already holds two surfaces the design treated as
+neutral substrate (the memory system; the operator's own instruction). This is the third: **a
+blinding rule that blinds the verifier as well as the coder.**
+
+### Q.3 §L gets a summary line, not a fourth row
+
+The stated-versus-counted table now has four entries (22/18 cells, 74/73 directories, 8/2 max-run,
+~15/10 exemplars), plus 3 of 9 direction-(ii) density counts that did not reproduce. Four is enough
+that the list is no longer the point. **The summary line: every one of them was found by counting
+what a rule claims to produce, and not one by reading the rule.** Re-reading had already passed all
+of them.
+
+### Q.4 A direction-(ii) source cites the orphaned fork branch — an OQ-278 datum from outside the fork pass
+
+Pair 1's source names the pattern for its own incident in its own voice:
+
+> "**Verdict: the existing mandatrophy authoring surface is a Build-Discipline Pattern-1 dangling
+> wire.**" — `audits/2026-06-07_stakeholder_layer_migration/AUDIT.md:144`
+
+That is a source citing the **orphaned fork branch**, and it arrives from *outside* the
+fork-residue pass that was built to measure the fork. Flag it separately in the writeup: the
+fork-residue row is fed by a pre-registered instrument, and this is unsolicited evidence of the
+same kind arriving by another route, which is worth more than a row it did not come from.

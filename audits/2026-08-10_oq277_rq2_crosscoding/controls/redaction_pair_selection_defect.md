@@ -114,6 +114,70 @@ something real, which is what makes it the operator's seat and not mine.**
 where the pre-declaration is preserved *and* a real taxonomy floor exists, and the marginal spend is
 small relative to the run. But this is a ruling, not a fix.
 
+---
+
+# RULED — option C, with the row-assignment fixed now (operator, 2026-08-11)
+
+**Ruled: keep the declared three AND add the corrected two, reported as two separate sets.**
+Option A ships the both-residue row's floor resting on a single pair, "which is not a floor";
+option B buys a real measurement by selecting after the defect was visible, "precisely the move
+the pre-declaration existed to prevent." C pays ~2 pairs at k=3 to keep both, and the difference
+between the two selections becomes readable data rather than a discarded branch.
+
+**The addition, fixed before either number exists:** the **corrected set carries the both-residue
+row**; the declared set is reported alongside as the pre-declared comparison. Reason, stated so it
+is not re-opened at writeup: the declared set measures something real, but it is not the taxonomy
+floor the row needs, and **a row must be fed by the instrument that measures its own quantity.**
+Without this, the row acquires a choice at writeup time with both numbers already in hand.
+
+| set | pairs | feeds |
+|---|---|---|
+| **corrected** | `stakeholder_layer_migration` (9), `oq97_pattern6_census` (4), `oq93_grid_viability_probe` (2) | **the both-residue row's floor** |
+| **declared** | `stakeholder_layer_migration` (9), `oq138_fsm_route_conversion` (2), `five_leg_twin_comparison` (0) | reported alongside, as the pre-declared comparison |
+
+`stakeholder_layer_migration` is in both sets and is coded once, serving both.
+**Net new direction-(ii) pairs: 2** (`oq97_pattern6_census` → unit `07`, `oq93_grid_viability_probe`
+→ unit `05`). Direction (i)'s three pairs are unchanged and unaffected.
+
+## The oq93 collision check, run before the pair was written
+
+**It collides, and the collision is role-appropriate — the pair is safe to write.**
+
+`05_oq93_grid_viability` is the `system_gradient` `[] → 0.0` incident, i.e. the *same incident* as
+the published P6 exemplar that `controls/anchors.json` disqualified from the direction-(i) anchor
+set. Checked directly rather than inferred: the unit's symptom is "a system-level gradient metric
+read exactly 0.0 on every input it had ever been given … 0.0 is what a genuinely flat input should
+produce," and the `_disqualified` record names the collision with this unit explicitly.
+
+**Why it disqualifies an anchor but not a twin — the requirement is opposite in the two roles.**
+An anchor must be an incident the coder has *not* otherwise seen as a unit; collision destroys it.
+A twin's redacted arm **is** the unit — collision with the unit is the definition of the control,
+not a contamination of it. The dropped candidate is not in the run at all, so no live instrument
+compares unit `05` against itself across two roles.
+
+**One residue, declared:** the P6 exemplar is also entry #9 of the (iii′) population and is marked
+DISQUALIFIED there on the anchors.json precedent (`RULING_2026-08-11_freeze_scope.md` §2.1). With
+unit `05` now serving as a twin, that (iii′) disqualification is *conservative rather than
+required* — different label spaces, different runs. It stands as declared and n=10 is unchanged;
+noted so a reader does not later read it as a second, independent collision.
+
+`oq97_pattern6_census` (unit `07`) was checked the same way and is **clean**: its incident is the
+census finding that a repair applied at one site was never swept to the others, which is none of
+the three published P6 exemplars.
+
+## Cell accounting under 5 pairs — derived from the existing §I ruling, not a new one
+
+A twin's **redacted arm doubles as its matrix cell**; only the **unredacted arm** is extra and
+quarantined. This is not an inference from prose — it is entailed by the operator's standing
+ruling of **22 matrix units** (§I, mechanism corrected in §I.2), and it is machine-checked today:
+`verify_controls.py` [8] passes with `matrix units == 22` and "every sampled directory contributes
+exactly ONE cell" while units `04`, `10`, `20` all carry `matrix_unit: true`. Were twins quarantined
+from the matrices, cells would read 19 and the §I ruling would be contradicted.
+
+Consequence: adding units `05` and `07` as pairs **leaves cells at 22**. The driver's expected-call
+count rises by the new unredacted arms only (2 arms × k=3 = **6 calls**), and quarantined calls still
+count toward the payload-capture assertion (§E *Accounting*).
+
 ## Regardless of the ruling
 
 `recheck_predeclared_counts.py` is a **standing check** — re-run it after any change to the lexicon,
