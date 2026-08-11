@@ -181,6 +181,26 @@ answers in (P1–P6) is direction (i)'s, but the vocabulary that must not reach 
 python3 python/audits/oq277_lexicon.py --sweep audits/2026-08-10_oq277_rq2_crosscoding/packets/iii_prime_units/NN_x.json --direction ii
 ```
 
+> **REVISION 2026-08-11 (operator ruling) — this command now works as written; it did not
+> before.** Until commit `3e16a1d8` the sweep could not consume a single-object unit file: it
+> died on `KeyError: 'units'` and **exited 1, which is also the leaks-found code**, while
+> printing no `LEAK` lines. A caller reading stdout for leaks saw a clean sweep. **Two
+> extractors were sent this command and both hit it**, working around it by bundling units into
+> a list; the second reported it as an instruction that is correct in prose and wrong when
+> executed, which is the refusal that got it fixed.
+>
+> The corrected tool accepts a bare single unit object, a `{"units": [...]}` wrapper, and a
+> list; **exit 3 now means "did not sweep"**, distinct from `1` = swept and found hits, and an
+> abort prints `SWEEP-ABORTED — no verdict was produced` **on stdout**. A units file it cannot
+> recognise raises rather than sweeping zero.
+>
+> **If you are reading this brief as a receiver: the command above is verified, but the
+> instruction preceding it was wrong for two full extractions. Run the tool's `--check` first
+> — the seven `input-shape` cases are the proof this specific breakage is gone.** Marked in
+> place rather than silently corrected, because the brief was frozen when both receivers hit
+> it and the record of a specification that read correctly and executed wrong is worth more
+> than a clean page.
+
 Strip from the four coder-facing fields:
 
 - every pattern name, nickname and index — `Pattern 1`, `P1`, `dangling wire`, `silent fork`,

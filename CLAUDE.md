@@ -611,8 +611,13 @@ is executed by someone who did not write it, which makes amnesia the instrument 
 cost. Scope is narrow — *executed as written, this produces what the design forbids* — not "hard,
 unclear, or I'd do it differently" (that is the *one-sentence flag*, which proceeds; this does not).
 **State the license in the handoff prompt** — an unstated license is not exercised. Five refusals in
-the OQ-277 arc, none caught by a sender re-reading. Detail: `docs/technical/build_discipline.md` →
-*The receiver's license to refuse*.
+the OQ-277 arc, none caught by a sender re-reading. **Corollary — a running receiver holding
+`file:line` pins LOCKS that file: clearance means checking the whole PIN SET, not the pins you happen
+to know about.** Shifting a pin under a live receiver does not error — the receiver locates by content
+and records a correction with both line numbers, which is now a fabricated provenance note about churn
+that never happened. *One writer at a time* does not cover this: it protects shared trackers, not files
+under active reference, and a writer can obey it completely and still corrupt the receiver's record.
+Detail: `docs/technical/build_discipline.md` → *The receiver's license to refuse*.
 
 **Unwired ≠ worthless — judge a subsystem by its contribution, not its consumers.** Pattern 1 is a
 *build-time* rule (finish the wire you create); it does NOT license the audit reflex of calling an

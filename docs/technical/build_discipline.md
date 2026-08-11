@@ -2048,6 +2048,37 @@ is itself a claim*: it is a control on the thing you control with. It also inher
 a refusal that turns out to be wrong costs one round-trip; a compliance that turns out to be wrong
 costs the artifact and everything built on it.
 
+### Corollary — a receiver holding pins on a file LOCKS that file, and clearance means checking the pin set
+
+**Operator ruling, 2026-08-11, from a live instance of the mistake.** A handoff brief that cites
+`file:line` hands the receiver a set of **pins**. For as long as that receiver is running, the file
+is under active reference, and any parallel writer editing it can shift a pin underneath them.
+
+**The failure is silent and it corrupts the record rather than breaking the run.** A receiver that
+finds a cited line no longer holding its content does the right thing — locates by content and
+*records a correction with both line numbers*. If the drift was caused by a parallel writer rather
+than by real churn, that correction is a fabricated provenance note: it documents a discrepancy that
+did not exist when the brief was written. Nothing errors, and the extraction notes now contain a
+false fact with a witness attached.
+
+**The rule.** Before editing a file a running receiver holds pins on, check **the pin set**, not the
+pins you happen to know about. And the pin set has to be *discoverable*: a brief that cites eleven
+line numbers while nothing in the repository says "these lines are held" makes the check impossible
+to perform correctly, which makes the omission a defect in the **handoff**, not in the writer.
+
+**The witnessed instance.** A parallel instance verified two cited lines (473, 486), reported that as
+clearance, and edited `CLAUDE.md` — the pin set was eleven lines, 473–527. The edit was an insertion
+at line 598 and moved nothing, so the outcome was clean; **the clearance was narrower than the
+confidence attached to it, and the safety was luck.** This is the arc's own recurring shape — a sound
+measurement licensing a claim wider than its coverage — committed while documenting that shape.
+
+**Scope note against over-reading the one-writer rule.** *One writer at a time* (CLAUDE.md → *How the
+operator works*) is about **shared trackers** — `ISSUES.md`, `KNOWN_STATE.md` — colliding across
+instances. It says nothing about a file that is merely *referenced* by a parallel receiver, and a
+file under active reference is not protected by it: the writer holds the only write, obeys the rule
+completely, and still corrupts the receiver's record. The two constraints are independent, and only
+one of them is currently enforced by anything.
+
 ---
 
 ## Commit-as-you-go: a witnessed unit of work is committed when witnessed, not at session end

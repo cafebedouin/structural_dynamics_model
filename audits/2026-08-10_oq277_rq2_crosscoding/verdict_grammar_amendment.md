@@ -1023,3 +1023,67 @@ written, `--check` was GREEN at md5 `c1040cd04815c206791b5ab3192697be`, matching
 liveness witness — it confirms the check is wired and still bidirectional at HEAD; it **adds nothing
 to the discrimination grade above**, which rests entirely on the unplanted fire. Output pasted in
 `audit_log.md` under the 2026-08-11 amendment entry.
+
+### L.9 The eighth vacuous check — the first one at an INTERFACE rather than in a check's logic
+
+**Recorded 2026-08-11 at the operator's ruling; repaired the same day at commit `3e16a1d8`,
+before the freeze.**
+
+`oq277_lexicon.py --sweep` — the leak gate, the instrument the blindness of the entire experiment
+rests on — could not consume the single-object unit file that the (iii′) brief's own prescribed
+command passes it. It died on `KeyError: 'units'` because `isinstance(data, dict)` is true of a
+single unit object as well as of a wrapper.
+
+**That is the visible half and it is the boring one.** The sharp half is what the failure looked
+like from outside:
+
+| | crash | leak found |
+|---|---|---|
+| exit code | `1` | `1` |
+| `LEAK` lines on stdout | none | one per hit |
+| what a stdout-reading wrapper concludes | **clean sweep** | leaks, reported |
+
+**A crash and a leak were indistinguishable at the interface, and the crash produced the *quieter*
+of the two outputs.** A caller could reasonably read exit 1 as "leak found and reported" and find
+nothing reported; or grep stdout, find no `LEAK`, and record a clean sweep. Both readings are
+wrong in the direction that lets a contaminated packet through.
+
+**Why this is the eighth instance and not a repeat of the previous seven.** The first seven were
+checks whose *logic* could not return the failure they looked for — a `forall` over an empty table,
+a prose match for a marker that did not exist, a comparison of a placeholder against itself. **This
+one's logic is sound. The instrument works.** `scan()` matches correctly, the selftest's controls
+all fire, and on a well-formed input the sweep is exactly right. The vacuity is entirely in the
+**boundary where a caller reads the result** — the same information (`exit 1`, no `LEAK` lines)
+carries two incompatible meanings and nothing in the channel distinguishes them.
+
+> **The distinguishing feature, stated for §6.4: a check can be correct and still unreadable.**
+> Every prior instance was repaired by fixing the check. This one is repaired by fixing what the
+> check *says* — a distinct exit code (`3` = did not sweep), and an abort marker printed on
+> **stdout**, because a caller that greps stdout and never reads stderr must still see it. Auditing
+> a verification stack for vacuity therefore has to include its interfaces, not only its
+> predicates, and *"the instrument is correct"* does not answer the question.
+
+**Two receivers, and the refusal is what surfaced it.** The escape extractor reported the crash;
+the brief still carried the broken command verbatim; the (iii′) extractor hit it again and reported
+it a second time. Neither was caught by a reader. Both were caught by an instance made to *execute*
+the instruction — the receiver's-license mechanism (`build_discipline.md` → *The receiver's license
+to refuse*), firing on the arc that minted it. **A third receiver might not have read the
+traceback**, which is the operator's stated reason for repairing a frozen instrument rather than
+carrying the defect into the run.
+
+**The repair's own control, since an introduced instrument is itself a claim.** Seven `input-shape`
+cases run through a real file and the real `json.load`, not a dict handed to the normaliser — the
+defect lived on the file path, and a control that skips the path it protects witnesses nothing.
+Two-sided by construction: *"consumed without raising"* is paired with *"a planted leak in a
+single-object file IS caught,"* because a repair that returned `[]` would satisfy the first and be
+**worse than the crash it replaced**. Negative control: reverting only the normaliser turns 5 of
+the 7 cases FAIL and leaves the list and wrapper cases PASS — it discriminates rather than failing
+everything.
+
+**Declared, because it is the same shape one level in:** the first attempt at that negative control
+went red on an `IndentationError` in the scratch copy and therefore tested nothing; and the
+selftest as first written *aborted* partway through the reverted run instead of reporting FAIL,
+reproducing the crash-vs-result confusion inside the fix for the crash-vs-result confusion. Both
+were caught and repaired (`check_call` marks FAIL on a raised exception); they are recorded rather
+than smoothed because §6.4's claim is that the recursion terminates in someone counting, and this
+is what that looks like when it happens twice in one repair.
