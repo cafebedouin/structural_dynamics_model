@@ -3,10 +3,20 @@
 **Assembled:** 2026-08-11 · **Scope:** every item flagged forward to *The Amnesiac Institution*
 across the OQ-277 arc and its predecessors.
 
-**This is an inventory. No prose, no argument, no restructuring.** It exists because the paper is
-a consumer that has not run: ~20 producers wrote flagged items into 12 files under a one-writer
+**This is an inventory. No prose, no argument, no restructuring.** It exists because the paper is a
+consumer that has not run: items were written into **8 repository files** (13 matched the search
+patterns; 5 excluded with reasons, §5) plus **one non-file producer** (§4b), under a one-writer
 boundary that correctly prevented anyone from consolidating them. Its purpose is to make v0.4
 writable in one pass rather than an archaeology expedition.
+
+> **This sentence was wrong on first write and is the manifest's second self-inflicted counting
+> defect** (§7.5–7.6). It read *"~20 producers wrote flagged items into 12 files."* Neither figure
+> survived §6: there are **8** producer files, not 12, and *"~20"* was an uncorrected estimate.
+> The instructive part is the mechanism — **12 was the correction to ~20**, the corrected quantity
+> was *files*, and it landed in the header **alongside** the number it replaced rather than in
+> place of it. The sentence preserved both the error and its correction in different grammatical
+> roles, and read as complete. **Every figure in this header is now derived from §6, and §7.6's
+> check enforces that.**
 
 ---
 
@@ -116,6 +126,32 @@ as above it, because the amendment could not take these.*
 
 ---
 
+## 4b. The non-file producer — the operator's working conversation
+
+**Added 2026-08-11 by the second reader.** §1–4 inventory items flagged forward **in repository
+files**. The working conversation is also a producer, and items generated there went into
+`build_discipline.md` or `CLAUDE.md` — or nowhere — **without ever acquiring a needs-to-land note
+that the search would find**. They are therefore invisible to the frame, not absent from the arc.
+
+**All seven are grade U: none has been adjudicated as paper content.** Three (29, 30, 33) would
+change **what a section claims**, not merely what it cites — flagged **‡**.
+
+| # | item | current home | target | grade |
+|---|---|---|---|---|
+| 29 ‡ | **The instrument stratum.** §4.3's patterns are illustrated by *substrate* incidents, but nearly every defect this arc caught was in an **instrument**, with a different failure signature — a plausible number about the *wrong object*. §4.5's 42% is a rate over **one stratum**, and the other has never been measured | conversation only | §4.3, §4.5 | **U** |
+| 30 ‡ | **Restraint efficacy.** §9.3's four efficacies are all about controls *firing*. Nothing represents **a plausible escalation declined on evidence**, and this arc declined at least eight. The `Fired:` bit has **no encoding** for a decline | conversation only | §9.3, §8.2 | **U** |
+| 31 | **Differential amnesia.** The operator forgets detail and retains shape; instances forget everything and retain nothing. Reorganizes §5's mechanism inventory **by which kind of forgetting each tool addresses**, and identifies **git as the cross-type one** | conversation only | §5 | **U** |
+| 32 | **Imposed forgetting.** §7.6 frames consolidation as damage control. The monthly pass is the operation that **produces** the general instruction set, the recent history and the frontier — not cleanup after them. Unbounded retention is not memory, it is a pile | conversation only | §7.6 | **U** |
+| 33 ‡ | **The second jurisdiction.** §8.2 confines the human to *value* decisions. Noticing the same check red three times across sessions is **evidential, not value-laden**, and structurally unavailable to any instance | conversation only | §8.2 | **U** |
+| 34 | **A positive control demonstrates DISCRIMINATION, not detection**, with the role-dependence corollary (an instrument validated in one role is a new instrument in another) | `build_discipline.md` — landed, **unflagged to the paper** | §6.3 | **U** |
+| 35 | **Gate the output, not only the input**, and *a gate row never seen red is a row, not a check* | `build_discipline.md`, `CLAUDE.md` — landed, **unflagged** | §6.3 / §6.4 | **U** |
+
+**Items 34–35 are findable; 29–33 are not.** The first pair reached repository files and can be
+re-read at source. The other five exist only in a conversation, which makes their exposure the same
+as the ⧉ frozen stratum's for the opposite reason: not *unamendable*, but *unlocated*.
+
+---
+
 ## 5. Excluded, with reasons — checked, not skipped
 
 The hypothesis that 2026-02 → 2026-07 audits carry lost forward-flags **was tested and did not
@@ -135,13 +171,16 @@ hold.** Those files matched only on broad patterns, for these reasons:
 
 | quantity | value |
 |---|---|
-| producer files with genuine forward-flags | **8** (5 OQ-277 arc + literature memo + A5_leak_check + audit_log) |
+| producer **files** with genuine forward-flags | **8** (5 OQ-277 arc + literature memo + A5_leak_check + audit_log) |
+| **non-file** producers | **1** — the working conversation (§4b) |
 | files matching the flag patterns | 13 (5 excluded above, with reasons) |
-| **distinct items** | **28** |
+| **distinct items** | **35** (28 from files, 7 from §4b) |
 | raw flag lines across all sources | ~48 — **never used as an item count** |
-| ⧉ frozen-stratum items (single point of failure) | **11** |
-| grade **W** / **R** / **U** | **19 / 5 / 4** (= 28, recomputed from the numbered rows) |
+| ⧉ frozen-stratum items (unamendable; manifest is their only channel) | **11** |
+| §4b items **unlocated** outside this manifest (29–33) | **5** |
+| grade **W** / **R** / **U** | **19 / 5 / 11** (= 35, recomputed from the numbered rows) |
 | **U items that BLOCK v0.4** | **1** — item 17, the P3 ruling (Ω_C, operator's seat) |
+| **‡ items that change what a section CLAIMS** (not what it cites) | **3** — 29, 30, 33 |
 
 **Total asserted by enumeration**, not by summing per-file greps. The per-file sum would read 39+
 because the amendment is counted at two addresses and multi-line items counted per line.
@@ -158,8 +197,45 @@ because the amendment is counted at two addresses and multi-line items counted p
    the spine — but §4.5 cannot cite it.
 3. **Items 14 and 15 cite entries by name rather than line**, because `audit_log.md` is
    append-only and its line numbers move.
-4. This manifest was assembled by one instance in one pass. **It has had no second reader**, which
-   under §4.2's own standard makes it a producer whose consumer has not yet run.
+4. ~~This manifest has had no second reader.~~ **Discharged 2026-08-11**: the operator read it and
+   returned two findings — the header/totals contradiction (§7.6) and the excluded producer (§4b).
+   Independently recomputed and holding: 28 file-derived numbered rows, grades 19/5/4 over them,
+   frozen stratum 11, and the eight source files matching §6's parenthetical breakdown exactly.
+
+5. **A COMPLETENESS CLAIM IS SCOPED TO ITS SEARCH FRAME, AND THE FRAME IS A SELECTION RULE NOBODY
+   STATES.** This manifest's frame was *"repository files carrying forward-flags."* A producer that
+   wrote into the **operator's context** rather than into a file is invisible to it — not missing,
+   *unreachable* — and the inventory reads as complete because **every item in it belongs**.
+
+   **This is the same species as the genre-based pin rule** (`SPEC_next_preregistration.md` §1):
+   a defensible criterion, applied by everyone, never articulated, producing a manifest whose
+   omission has no shape. Three instances now — the pin manifest (texts, not executables), the
+   experiment design (before data lands, not after), and this manifest (files, not conversations).
+   **State the frame; the omission is only visible from outside it.**
+
+6. **Two self-inflicted counting defects, both in this document, both in a summary about the set
+   below it** — instances eight and nine of the arc's signature:
+
+   | # | where | claimed | actual | caught by |
+   |---|---|---|---|---|
+   | 8 | totals row | `18 / 6 / 4` | `19 / 5 / 4` | a script recounting the grade column |
+   | 9 | prose header | `~20 producers … 12 files` | 8 files, 1 non-file | **the second reader** |
+
+   **The script that caught the eighth could not catch the ninth**: it checks the grade column and
+   the item count against the table, and **nothing checked the prose header against the table
+   below it.** A check is scoped to what it reads, and a document's summary sentence is a claim
+   like any other.
+
+   **Re-run after ANY edit** — the second command is the one added in response to the ninth:
+
+   ```bash
+   # item count and grades, from numbered rows ONLY.
+   # Trap: the legend's own W/R/U rows match a naive grade regex and inflate the total by 3.
+   grep -cE '^\| [0-9]+ \|' V04_CONSOLIDATION_MANIFEST.md
+
+   # header-vs-table: every figure in the header must be derived from §6.
+   # There is no automatic check for this. Read the header and §6 side by side.
+   ```
 5. **Its own totals row was wrong on first write** and was caught by a script that recounted the
    grades from the numbered rows: the header claimed `18 / 6 / 4`, the enumerated set is
    `19 / 5 / 4`. A summary line disagreeing with the set it summarises — in the totals row of a
