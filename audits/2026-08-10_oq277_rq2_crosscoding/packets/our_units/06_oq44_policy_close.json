@@ -1,0 +1,13 @@
+{
+  "source_dir": "2026-06-11_oq44_policy_close",
+  "extractor": "A",
+  "role": "primary",
+  "files_read": ["writeup.md"],
+  "symptom": "Two items exported a numeric field as 0, and a derived diagnostic agreement was computed from that 0 and published. The underlying quantity had never been authored for either item. Nothing in the export, the diagnostic, or any consumer distinguished the published 0 from a measured 0.",
+  "mechanism_as_described": "A reader returned 0 when its underlying datum was missing, rather than reporting that it was missing. The 0 then flowed into the export layer and into a derived agreement computed on top of it. An earlier analysis had concluded the fabricated value was never consumed anywhere; that analysis was correct for the classification path it examined and did not cover the export path, so a true statement about one consumer had been read as a statement about all consumers. The scope of the check and the scope of the claim came apart without anyone noticing, because both were phrased as 'it is never consumed'.",
+  "detection_path": "Replacing the fabricated 0 with an explicit absence marker made a downstream schema check fail loudly, because that consumer required the field to be present. The failure was itself the proof of prior consumption: the absence became visible only when the thing concealing it was removed.",
+  "consequence": "Two items carried an exported value and a published derived diagnostic computed on a quantity that never existed. The repair also required marking the field nullable downstream, since the honest answer is now representable where before it was not.",
+  "extraction_notes": {
+    "note": "The directory reports a sibling change in the same session whose consequence was a previously-masked disagreement becoming visible (a verdict flipping once a certification was withdrawn). That is the repair working as intended, not a second incident."
+  }
+}
