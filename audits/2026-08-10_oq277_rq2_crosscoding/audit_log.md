@@ -202,6 +202,70 @@ earlier unplanted fire.
 after the units land and the item/call totals are recomputed from disk. Until then `--check` is
 expected RED and that RED is correct — the document genuinely does not match its sources.
 
+## 2026-08-11 — (iii′) hand-back received; unit 11 collision check DISCHARGED; totals hold at 73/219
+
+**No model call has been made in this audit.** Units landed at `5ce2c37e`, pathspec-scoped to
+`packets/iii_prime_units/` (8 files, 575 insertions, nothing else touched).
+
+### The escalation the extractor could not resolve, resolved here
+
+The extractor wrote unit `11_partial_grid_system_verdict` under a **declared, unresolved collision
+risk** against extracted unit `our_units/05_oq93_grid_viability` — `our_units/` was on its
+do-not-open list. Its stated premise was that rows 9 and 11 are "two instances in the same construct
+from the same probe on the same day." **Checked against both unit texts and the source directory:
+no collision, and the premise is also wrong.**
+
+| | `our_units/05_oq93_grid_viability` (row 9's incident) | `iii_prime_units/11` (row 11) |
+|---|---|---|
+| symptom | a gradient metric read exactly `0.0` on every input, including ones built to be non-zero | an aggregate over 8 of 32 cells, all on one level, published as a whole-system directional verdict |
+| mechanism | enumerator silently semidet (cut) → collection always **empty** → **fabricated default** `0.0` | collection **non-empty but unrepresentative**; coverage 0.25 was computed and printed, and **no consumer required it** |
+| failure | absence rendered as a plausible measured value | partiality not carried to the read site |
+| source | `audits/2026-06-10_oq93_grid_viability_probe/` (FINDINGS.md, PREREGISTRATION.md) | `CLAUDE.md:527-528` + `build_discipline.md:761-765` |
+
+**The directory check, run because "same probe" was the load-bearing claim.** `2026-06-10_oq93_grid_viability_probe/`
+contains **no** `8/32`, no `8 of 32`, and no `findall`. Its three `increasing_coercion` hits are
+verdict labels in the gradient probe's own results table, not the partial-grid incident. Positive
+control on the same grep path: `gradient` occurs 7× in `FINDINGS.md`, so the empty results are
+measurements, not a grep that failed to read the file. **Same day (2026-06-10, the three Pattern-6
+instances CLAUDE.md groups together), different probe.**
+
+**Verdict: unit 11 stands.** Row 9's disqualification was incident-level and remains correct on its
+own facts; it does not reach row 11. **Totals are unchanged — 73 items, 219 calls.** The §4.1
+contingency (72/216) does not fire. *The operator may still overturn this on conservatism grounds —
+it is an evidence call, not a ruling, and it is recorded here so the reversal has something to
+attach to.*
+
+### Standing hazard for the assembler, second sighting, NOT repaired here
+
+`oq277_lexicon.py --sweep <one-unit>.json --direction ii` — the command the (iii′) brief prescribes
+— **cannot consume the single-object format the same brief specifies** (`KeyError: 'units'`,
+exit 1). The escape extractor reported this; the brief still carries it verbatim; this extractor hit
+it again and worked around it by bundling into a list, tool unmodified.
+
+**Why it is worse than a broken command.** Exit 1 is *also* the leak-found code, and the crash
+prints no `LEAK` lines — so **a wrapper that reads stdout for leaks sees a clean sweep**. That is a
+success-shaped absorption inside the leak gate itself. Both extractors caught it only because they
+read the traceback. Not repaired here: the lexicon is a frozen pre-registered instrument and the
+brief is a frozen handoff, both above the fix-on-sight threshold. **Escalated to the operator.**
+
+### Verified independently at hand-back (not taken on the extractor's word)
+
+- 7 units on disk, gaps intact at `03`/`04`/`07`/`09`, `matrix_unit: false` on all 7.
+- `CLAUDE.md` at `9d9e62c1`: 998 lines, md5 `01084bd81a969da9c40a464ce29cfbb4` — matches what the
+  extractor reported. **Now stale at HEAD** (1017 lines, md5 `a8597d83…`): this instance committed an
+  unrelated CLAUDE.md insertion at line 598 (`03fda56e`) *while the extractor was running*. All 11
+  cited lines are 473–527, so **no pin moved** — verified, not assumed. Recorded because the substrate
+  was mutated under a running receiver, which is the frozen-substrate rule and it was luck that the
+  insertion landed below every pin.
+- The extractor's second OQ-278 datum, re-checked with a control: `build_discipline.md`'s numbered
+  patterns are 1 produced-but-not-consumed, 2 silent-fork, **3 bound-probe-bypasses-clause-order**,
+  **4 fabricated-default**, 5 absence-satisfies-gate, 6 success-shaped-absorption — so **the indices
+  3 and 4 name different patterns in the two documents**, and CLAUDE.md's P3 (destructive-replace)
+  and P4 (recap-as-witness) have **no worked section** in `build_discipline.md`. Control: the string
+  `recap-as-witness` occurs 4× in that file as prose, so the heading probe would have found a section
+  had one existed. This is OQ-278 seen from a third angle and it explains the (iii′) P3 row's
+  emptiness mechanically: the published P3 has no worked mechanism to extract from.
+
 Everything above this line is design. Everything below it is result.
 
 <!--OQ277-FIRST-CODING-RESULT-->
