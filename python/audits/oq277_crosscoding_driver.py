@@ -51,7 +51,7 @@ Usage:
   python3 python/audits/oq277_crosscoding_driver.py --selftest
 """
 from __future__ import annotations
-import argparse, glob, hashlib, json, os, pathlib, re, shutil, sys
+import argparse, glob, hashlib, json, os, pathlib, re, shutil, sys, tempfile
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import oq277_lexicon as LEX
@@ -481,19 +481,71 @@ def selftest() -> int:
         check("a NON-EMPTY canonical payloads/ REFUSES — the stub can never write there",
               fired)
 
-    print("\nlive-path refusal — the freeze ordering must be structural, not remembered:")
-    unbuilt = [leg for leg, (stem, *_r) in LEGS.items()
-               if not (AUDIT / "packets" / "run" / f"{stem}.json").exists()]
-    check(f"--live refuses while a leg is unbuilt (currently unbuilt: {unbuilt or 'none'})",
-          bool(unbuilt))
-    prereg = AUDIT / "PREREGISTRATION.md"
-    log = AUDIT / "audit_log.md"
+    # live-path refusal. REWRITTEN 2026-08-11, before the live run, on an operator ruling.
+    #
+    # What was here asserted `bool(unbuilt)` under the label "--live refuses while a leg is
+    # unbuilt". It never called assert_spend_go(). So it passed for its entire life because
+    # legs happened to be unbuilt — an ambient precondition, not a verified refusal — and it
+    # inverted to permanently-RED at exactly the moment every leg was built, which is the
+    # moment the system becomes ready to run. A check that could not PASS, wearing the label
+    # of a test never performed: the mirror of the vacuous checks that cannot FAIL.
+    #
+    # Beside it, a second one: `stamped` was computed and then discarded, with `True` passed
+    # as the condition. It could not fail either.
+    #
+    # The general shape, worth more than either instance: a gate that only fires under a
+    # condition the system has never reached is UNTESTED BY CONSTRUCTION until the system
+    # reaches it. assert_spend_go()'s fail-closed path existed unexercised through this whole
+    # arc and was first exercised on the day it was first needed. A vacuity audit therefore
+    # has to cover checks whose PRECONDITIONS have never been satisfied, not only checks
+    # whose logic cannot fail.
+    #
+    # The replacement constructs each bad state in a throwaway AUDIT root and calls the real
+    # assert_spend_go(), catching its SystemExit. Two-sided: four refusals AND the converse.
+    print("\nlive-path refusal — assert_spend_go() called against constructed states:")
+    real_audit = globals()["AUDIT"]
+    body = "frozen prereg body"
+    want = md5(body)
+
+    def spend_go_under(state) -> str:
+        """Return 'refused' | 'passed', with AUDIT pointed at a throwaway root."""
+        d = pathlib.Path(tempfile.mkdtemp())
+        (d / "packets" / "run").mkdir(parents=True)
+        state(d)
+        globals()["AUDIT"] = d
+        try:
+            assert_spend_go()
+            return "passed"
+        except SystemExit:
+            return "refused"
+        finally:
+            globals()["AUDIT"] = real_audit
+            shutil.rmtree(d, ignore_errors=True)
+
+    def all_legs(d):
+        for stem, *_r in LEGS.values():
+            (d / "packets" / "run" / f"{stem}.json").write_text("{}")
+
+    def prereg_at(d, log_text):
+        all_legs(d)
+        (d / "PREREGISTRATION.md").write_text(body)
+        (d / "audit_log.md").write_text(log_text)
+
+    for label, state in [
+        ("a leg unbuilt", lambda d: None),
+        ("legs built but no PREREGISTRATION.md", all_legs),
+        ("prereg md5 absent from audit_log.md", lambda d: prereg_at(d, "no stamp here")),
+        ("md5 stamped but NO sentinel", lambda d: prereg_at(d, f"stamp {want}")),
+        ("md5 stamped BELOW the sentinel", lambda d: prereg_at(d, f"{SENTINEL}\nstamp {want}")),
+    ]:
+        check(f"REFUSES: {label}", spend_go_under(state) == "refused")
+    check("CONVERSE — a correctly frozen state is ALLOWED (the gate is not stuck closed)",
+          spend_go_under(lambda d: prereg_at(d, f"stamp {want}\n{SENTINEL}\n")) == "passed")
+
+    prereg, log = AUDIT / "PREREGISTRATION.md", AUDIT / "audit_log.md"
     stamped = prereg.exists() and md5(prereg.read_text()) in (
         log.read_text() if log.exists() else "")
-    check("the current PREREGISTRATION.md md5 is recorded in audit_log.md "
-          f"({'yes' if stamped else 'not yet'})", True)
-    print("        (assert_spend_go() exits non-zero on the unbuilt-leg branch; it is not "
-          "called\n         here because it would terminate the selftest process)")
+    check("THIS repository's current prereg md5 is stamped in audit_log.md", stamped)
 
     print(f"\n{'GREEN — every driver gate discriminates' if ok else 'RED — a gate cannot fail'}")
     return 0 if ok else 1
