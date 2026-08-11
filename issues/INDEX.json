@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "e9aac0abb9628276e20f1dc2dba0f5f6b6a381df",
+    "store_version": "74044b59ee386b264140b835626246d46e247baa",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-10T23:02:52"
+    "generated_at": "2026-08-10T23:08:14"
   },
-  "issues_sha": "72be656f23f9bfab95506a673476f3de267e6f83cc53c9b531a71952b58605ef",
-  "n_entries": 281,
+  "issues_sha": "a7aa126240270b3394d7e90c1f8a0665c589ba68d02f1d5e2798b7d0b1d55a06",
+  "n_entries": 282,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 100,
+    "open": 101,
     "partial": 6
   },
   "active": [
@@ -1459,6 +1459,20 @@
       "mentioned_in": [
         "OQ-78"
       ]
+    },
+    {
+      "id": "OQ-282",
+      "status": "open",
+      "priority": 2,
+      "summary": "Consumer sweep: text still citing ε compression as a live limit, after the point mass fell to 7.3%",
+      "deps": [
+        "splits_from OQ-78"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-78",
+        "OQ-188"
+      ]
     }
   ],
   "archive": [
@@ -2432,7 +2446,8 @@
         "OQ-109",
         "OQ-117",
         "OQ-188",
-        "OQ-281"
+        "OQ-281",
+        "OQ-282"
       ]
     },
     {

@@ -3269,12 +3269,18 @@ dissolved** — archive 30.0% → sonnet-5 **7.3%**, distinct ε values **13 →
 
 **This retires the ε-axis compression caveat as originally stated.** "A third of the corpus shares
 one ε value, so the ε axis is low-variance and χ is f(d)/σ(S)-driven" was true at 30–34%; at 7.3%
-with 52 distinct values it is **no longer the operative constraint**. Any downstream text still
-citing ε compression as a live limit on ε-keyed denominators should be re-read against this
-number. What survives is the *bin-resolution* limit from component (1), which is a construction
-fact, not a prevalence one. (`shared/role_flip.py` / OQ-188's read-site straddle flag consumed the
-f(d)-dominance this OQ measured — `audits/2026-07-11_oq186_oq188_readsite/`; that consumer's
-premise is now leg-and-model-indexed, not global.)
+with 52 distinct values it is **no longer the operative constraint**. What survives is the
+*bin-resolution* limit from component (1), which is a construction fact, not a prevalence one.
+**The consumer sweep this obliges is tracked as OQ-282, NOT here** — an obligation left inside a
+resolved entry does not get read. First known consumer: `shared/role_flip.py` / OQ-188's read-site
+straddle flag, whose premise is now leg-and-model-indexed rather than global.
+
+**Empirical basis for the split (R3).** The two components are not merely moving differently, they
+are made of **different material**: if the `.x2` arm were the vacated point mass spreading to its
+neighbours its gain would sit at 0.62/0.72, and in sonnet-5 — the stratum where the point mass
+dissolved most — only **14.1%** does; its `.x2` mass sits at **0.42 (175) and 0.52 (70)**. This is
+what makes the split a finding rather than a bookkeeping decision, and it is why a later reader
+should not re-absorb the two into "one idiom, complicated."
 
 ### Operative rulings retained (do not drop on compression)
 
@@ -10925,9 +10931,11 @@ rewriting.
 **Ω-type:** Ω_E (a prevalence/boundary question, witnessable by measuring further model legs).
 
 **Status:** open — split out of OQ-78 on 2026-08-10 when the idiom half's two components proved to
-have opposite trajectories (point mass dissolved, rail held). **Re-scoped:** the original question
-("is the `.x8` rail *this model's* own idiom?") is ANSWERED — no, sonnet-5 inherits it. The live
-question is the boundary of the sharing family.
+have opposite trajectories (point mass dissolved, rail held) **and were then shown to be made of
+different material** (R3 below), which is what makes the split an empirical finding rather than a
+bookkeeping decision. **Re-scoped:** the original question ("is the `.x8` rail *this model's* own
+idiom?") is ANSWERED — no, sonnet-5 inherits it. The live question is the boundary of the sharing
+family.
 
 **Priority:** 3
 **Deps:** splits_from OQ-78, blocked_on_human oq281-null-licensing-precommit (what does a null
@@ -10950,6 +10958,27 @@ result license? see PRE-COMMIT REQUIRED below — settle before any instrument r
   p99**; **kimi × sonnet-5 excess exactly +0.000**; haiku × kimi +0.028, not significant. So arm
   choice carries seed-level signal *within* the family and none across it. Magnitude is modest
   (56.5% vs a 51.0% baseline) — real, not strong.
+  - **The result is the CONTRAST STRUCTURE, not the effect size.** The **+0.000 on kimi × sonnet-5
+    against a null p50 of 0.4906 is the sharper fact** and the **calibration point** for anything
+    built on this channel: it is the leg that could most easily have shown spurious excess through
+    residual composition, and it showed none. Cite the zero, not the positive pair, when arguing
+    the channel is clean.
+  - **The positive pair is a SINGLE-THRESHOLD result and NOT YET AN INSTRUMENT.** n=547 with excess
+    just above p99. Before this becomes OQ-281's primary channel it needs the treatment condition
+    (i) got: a **floor as a pre-committed magnitude** (not an α), and a **stability check that
+    +0.055 is not a boundary artefact**. Exploratory-unpinned is the correct status today.
+    **Settle this in the SAME pass as the null-licensing pre-commit above** — both are
+    "what would this instrument be allowed to conclude", and answering them separately invites
+    pinning a threshold against data already seen.
+  - **SINGLE-PAIR BASIS — verified, not assumed (2026-08-10).** "One inherited habit within family"
+    rests on **exactly one within-family pair** (haiku × sonnet-5), and **a second is NOT
+    recoverable from data on disk**: every other Claude-family population shares **zero** story ids
+    with the Claude legs (default-leg derived sonnet-4.5 n=64, authored sonnet-4.5 n=11, sonnet-4
+    n=7, archive n=60 — all 0 shared). The sole non-zero case is default-leg haiku-4.5 × the sonnet
+    leg at 28 shared ids / **20 both-on-rail**, far below the 50 floor. Note the tension: the
+    **disjointness that made the marginal known-positive strong** (archive vs sonnet-4.5 at zero
+    intersection, both landing on 8) is exactly what **forecloses a paired arm check**. A second
+    within-family pair therefore requires a NEW matched-seed Claude leg, not a re-read.
 - **The `.x2` arm is NOT the dissolved point mass spreading.** If it were, its gain would sit at
   0.62/0.72; for sonnet-5 only **14.1%** does — its `.x2` mass sits at 0.42 (175) and 0.52 (70).
 
@@ -10990,6 +11019,53 @@ what already varied.
 family, or a training lineage — which sets the scope of every "the model authors ε on a grid"
 statement in the paper sequence, and determines whether a future corpus rebuilt on a new model
 inherits the rail or resets it.
+
+
+## OQ-282 — Consumer sweep: text still citing ε compression as a live limit, after the point mass fell to 7.3%
+
+**Ω-type:** Ω_E (a bounded consumer sweep with a checkable endpoint).
+
+**Status:** open — filed 2026-08-10 out of the OQ-78 close. **Filed as its own entry deliberately:
+the finding lives in a RESOLVED entry, and resolved entries stop being read** — leaving this as a
+flag inside OQ-78 would have buried the obligation under the close that created it.
+
+**Priority:** 2
+**Deps:** splits_from OQ-78
+
+**The stale premise.** OQ-78's ε-axis compression caveat — "a third of the corpus sits at one ε
+value, so the ε axis is low-variance and claimed-vs-computed divergence / χ are driven by f(d) and
+σ(S) more than by ε" — was measured at **30–34%**. It is now **7.3%** with **52 distinct values**
+(OQ-78 close, `audits/2026-08-10_oq78_idiom_close/`). The prevalence premise is retired. What
+survives is the **bin-resolution** limit from OQ-78's designed-quantization half (~4 levels where
+the manifest path feeds a bin) — a **construction** fact that does not decay with the corpus, and
+which any consumer may still rely on.
+
+**The task.** Find every place that spends the *prevalence* claim and re-read it against 7.3%;
+leave every place that spends the *construction* claim alone. Correct, don't delete: several
+consumers are still right for the bin-resolution reason even where the point-mass reason has gone.
+
+**Known consumer (start here, already identified).** OQ-188's read-site role-flip / straddle flag
+(`shared/role_flip.py`, standing legend + glyph; `audits/2026-07-11_oq186_oq188_readsite/`) consumes
+the f(d)-dominance OQ-78 measured — the straddle fires on 98.1% of matched institutional seats. Its
+premise is now **leg-and-model-indexed, not global**. Whether the flag's calibration survives the
+new ε spread is the first thing to check, and it is a live read-site, not prose.
+
+**FAILURE MODE, named at filing — a grep for "ε compression" WILL UNDER-FIND.** The caveat is
+paraphrased in places that never use the phrase: "the ε axis is low-variance", "χ is
+directionality-driven", "ε-binned statistics are sparse and lumpy", "ε-stratified statistics are
+claimed_type statistics in disguise", "a third of the corpus", "0.68". OQ-188's consumer was caught
+**only because it cross-references OQ-78** — consumers that cite the *fact* without citing the *OQ*
+are exactly the ones a citation-following sweep misses. So the sweep must be **semantic, not
+lexical**: search the paraphrases and the numbers (0.68 / 31/91 / 34% / 30%) as well as the phrase,
+and sweep `docs/` prose, the paper sequence, `python/` comments, and read-site legends — not just
+files that mention OQ-78. A clean grep for the phrase is **not** a witness of completion; the
+positive control is finding at least one consumer that never names the OQ.
+
+**What resolution would change:** every ε-keyed statistic in the paper sequence currently inherits a
+caveat that is no longer true at its stated magnitude, which either overstates a limitation the
+engine no longer has or, worse, licenses treating the ε axis as uninformative when it now carries 52
+distinct values. Resolution replaces a retired prevalence premise with the surviving construction
+one, per consumer.
 
 ---
 
