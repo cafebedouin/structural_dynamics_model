@@ -1,0 +1,223 @@
+{
+  "_extraction": {
+    "direction": "(i) — Wu's incidents, to be coded against our published six + other",
+    "n_units": 22,
+    "extractor": "instance-2 (fresh extractor per HANDOFF.md); units 1-11 of the 22 are this extractor's half under the split ruling, see _split",
+    "extracted": "2026-08-10",
+    "sources_frozen": {
+      "catalog": {"path": "packets/wu_source/failure_modes_catalog.md", "md5": "f854454ed2be5bf489f2c5ee133ce013", "verified_at_extraction": true},
+      "dataset": {"path": "packets/wu_source/llm_observer_ground_truth.yaml", "md5": "f26359b2d9f98b6b310aed9b473a1395", "verified_at_extraction": true}
+    },
+    "unit_rule": "Unit = INCIDENT (one independent case document), never manifestation. Class-level sub-events with no independent case document are NOT units: the 6 environment quirks, the 5 path-assumption sub-events, the auto-batch and monitor-self-silence sub-events, and the fabricated-release sub-event are all excluded by this rule. Pinned in HANDOFF.md and frozen with the prereg.",
+    "index_rule": "catalog_class is the PRIMARY row index; dataset_class is the ROBUSTNESS index. Both recorded per unit, never collapsed. Neither is coder-facing.",
+    "manifestations_rule": "manifestations = the number of distinct defect sites or sub-issues THE CATALOG ROW ITSELF enumerates for that incident, with the enumerating phrase quoted in manifestations_basis. null where the row enumerates none. Defined mechanically so the count carries no extractor judgement; it is metadata and never enters a coder payload.",
+    "translation_note": "The catalog is Chinese with English technical terms. Units are faithful translations into the pinned unit format; the MECHANISM is what gets coded, so mechanism_as_described is the field translated most carefully. Where the catalog and the dataset describe the same incident, mechanism is taken from the catalog (the primary index) and detection_path/silence interval from the dataset's discovery_channel/silence_span fields, which the catalog does not carry per-row. Field provenance is recorded per unit.",
+    "redaction_status": "NOT YET REDACTED-VERIFIED. These units were written free of Wu's taxonomy vocabulary at composition time (no class letters or class names, no 'fail-plausible', no 'gray failure', no trigger/amplifier/concealer, no MR-N or INV-* identifiers), but the banned-list sweep of step 2 has NOT been run over this file yet. Nothing here is coder-facing until that sweep passes and the redacted file is written.",
+    "extractor_never_codes": "No unit carries, or implies, an assignment to our six patterns. catalog_class/dataset_class are Wu's own labels read out of his frozen files, not extractor judgement."
+  },
+  "_split": {
+    "ruling": "operator, 2026-08-10 — split extraction at 11 units per extractor; each extractor independently re-extracts 2 of the other's units, quarantined from all matrices, to yield an extraction-churn floor on the currently-unmeasured upstream step.",
+    "this_file_covers": "all 22 direction-(i) units (the Wu rebuild is context-cheap: 29 KB catalog + 29 KB dataset, both read in full by one extractor). The 11/11 split applies to direction (ii), where the 754 KB of audit prose is the binding constraint.",
+    "boundary_declaration": "The direction-(ii) boundary unit IDs go into PREREGISTRATION.md before any coding, so a late/early asymmetry in the matrices can be checked against the boundary rather than discovered post hoc."
+  },
+  "units": [
+    {
+      "id": "whatsapp_client_display_folding",
+      "symptom": "A single outbound message of 8,131 characters appeared to the recipient as two separate chat bubbles carrying the same timestamp.",
+      "mechanism_as_described": "The recipient's client application folds messages above roughly 4,000 characters at display time. The folding happens in the client rendering layer — not in the transport protocol, and not in any sending-side splitting code, which is where the team looked first. The sending system had been built against a documented 1,400-character limit that had never been measured against production behaviour, so both the assumed limit and the assumed location of the splitting were wrong.",
+      "detection_path": "A person read the delivered message in the recipient application. No automated check reported anything.",
+      "consequence": "Message presentation diverged from what the sending system believed it had sent, with no error raised anywhere in the pipeline. Reported silent interval: hours to weeks.",
+      "metadata": {"catalog_class": "A", "dataset_class": "A", "agreeing": true, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "whatsapp_client_display_folding_case.md", "catalog_row": "failure_modes_catalog.md:71", "dataset_row": "llm_observer_ground_truth.yaml:445", "field_provenance": {"symptom": "catalog", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span + catalog"}}
+    },
+    {
+      "id": "preflight_cascading_fix",
+      "symptom": "A deployment synchronization problem was diagnosed as a missing configuration file. Five successive rounds of repair followed, adding four layers of new complexity, when a single file copy was what the situation actually required.",
+      "mechanism_as_described": "No diagnostic step separated the observed symptom from its cause before repair began. The first repair was reflexive — it addressed the surface presentation rather than the mismatch that produced it — and each subsequent round then had to address the presentation produced by the previous round. The cascade is a property of starting repair before understanding, not of any one of the five changes.",
+      "detection_path": "Surfaced by a pre-deployment check on the development side, not by runtime behaviour.",
+      "consequence": "Four layers of unnecessary complexity entered the system while the actual defect — a file that was never copied to the target — remained. Reported silent interval: not applicable (development side).",
+      "metadata": {"catalog_class": "B", "dataset_class": "E", "agreeing": false, "manifestations": 5, "manifestations_basis": "catalog row: '触发 5 轮连锁、4 层新复杂度' (five chained rounds)"},
+      "sources": {"case_file": "preflight_cascading_fix_case.md", "catalog_row": "failure_modes_catalog.md:97", "dataset_row": "llm_observer_ground_truth.yaml:355", "field_provenance": {"symptom": "catalog", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "catalog + dataset silence_span"}}
+    },
+    {
+      "id": "ontology_sources_positional_parser_cascade",
+      "symptom": "Pushed user-facing messages showed the title field containing a literal separator string, with username and star-count values landing in the wrong slots.",
+      "mechanism_as_described": "A parser consumed generated output by fixed line offsets — reading index i, i+1, i+2 and advancing by three — on the assumption that the generator emits exactly N lines per record. The generator intermittently omitted a line. Every subsequent field then shifted by one position, and the shift propagated through the entire remaining record set rather than failing at the point of the omission. Every shifted record still parsed successfully.",
+      "detection_path": "A person read the pushed message and saw the wrong content in the title slot.",
+      "consequence": "Corrupted field content was delivered to users while the parse itself reported success throughout. Reported silent interval: days.",
+      "metadata": {"catalog_class": "B", "dataset_class": "B", "agreeing": true, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "ontology_sources_positional_parser_cascade_case.md", "catalog_row": "failure_modes_catalog.md:98", "dataset_row": "llm_observer_ground_truth.yaml:186", "field_provenance": {"symptom": "catalog + dataset observable_artifact", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "v37_9_92_observer_path_blood",
+      "symptom": "A monitoring component's path resolver missed on all three of its candidate locations for five days. Its status file recorded nothing, while the component reported itself functioning.",
+      "mechanism_as_described": "The automated deployment file map did not copy the configuration file to the home-directory location on the target machine, and the resolver's three candidate paths did not include the location the file actually occupied there. Every lookup therefore missed and the component fell through to a fallback path without raising anything. The status file that was supposed to close the loop was never written — so the only available signal was the absence of a file, and nothing was reading for it.",
+      "detection_path": "The component's own self-critique surfaced it; not a user report and not an external check.",
+      "consequence": "Five days of silent fallback, during which the component's own health reporting promised a closed loop it had never delivered. Reported silent interval: 5 days.",
+      "metadata": {"catalog_class": "B", "dataset_class": "E", "agreeing": false, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "v37_9_92_observer_path_blood_case.md", "catalog_row": "failure_modes_catalog.md:99", "dataset_row": "llm_observer_ground_truth.yaml:391", "field_provenance": {"symptom": "catalog + dataset observable_artifact", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "dream_map_budget_overflow",
+      "symptom": "A two-stage batch job timed out at 60 minutes repeatedly, and its second (reduce) stage never executed at all.",
+      "mechanism_as_described": "The cache key was sensitive to file modification times and to sort order, both of which drift between runs. As the workload grew past a threshold, cache hits stopped occurring, the first stage recomputed everything from scratch, and the reduce stage never received budget within the timeout. The cache was assumed to be stable under that drift and was not; the downstream stage was written not to trust the cache, which removed the remaining margin.",
+      "detection_path": "Log forensics — reconstructed from run logs after the fact.",
+      "consequence": "The job produced no output at all; no content artifact reached any user, so there was nothing for a reader to find wrong. Reported silent interval: hours.",
+      "metadata": {"catalog_class": "B", "dataset_class": "A", "agreeing": false, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "dream_map_budget_overflow_case.md", "catalog_row": "failure_modes_catalog.md:100", "dataset_row": "llm_observer_ground_truth.yaml:265", "field_provenance": {"symptom": "catalog + dataset title", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset observable_artifact + silence_span"}}
+    },
+    {
+      "id": "governance_silent_error",
+      "symptom": "An internal audit summary line reported that all invariants held, while checks underneath it were erroring out rather than passing.",
+      "mechanism_as_described": "The summary counted only records whose status equalled 'fail'. It did not count records whose status was 'error'. A scoping error inside a dynamically-executed check raised an exception, which produced 'error' records — exactly the ones the count skipped. The result was an affirmative all-clear computed over checks that had not actually run. The auditing layer could not see its own execution.",
+      "detection_path": "Self-observation — the audit apparatus examining itself, not an external report.",
+      "consequence": "67 checks were vacuous for months while the summary reported success over them. Reported silent interval: months.",
+      "metadata": {"catalog_class": "C", "dataset_class": "C", "agreeing": true, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "governance_silent_error_case.md", "catalog_row": "failure_modes_catalog.md:116", "dataset_row": "llm_observer_ground_truth.yaml:247", "field_provenance": {"symptom": "catalog", "mechanism": "catalog + dataset title", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span + notes"}}
+    },
+    {
+      "id": "kb_content_and_sources_dedup",
+      "symptom": "Stored note titles contained language-native dictionary syntax; source files accumulated duplicate second-level headings.",
+      "mechanism_as_described": "Two defects in one incident. First, a multimodal content list was serialized with a language-native repr call, so the literal list-of-dictionaries text was written into the store and then read back as input by a downstream generation stage. Second, fourteen scheduled jobs each appended to the source files through a raw shell redirect instead of a shared write helper, so each run re-appended headings that were already present and nothing deduplicated them.",
+      "detection_path": "A routine check, not a user report.",
+      "consequence": "Stored content was structurally corrupted in a way that still parsed and still looked like content to every downstream consumer. Reported silent interval: days.",
+      "metadata": {"catalog_class": "C", "dataset_class": "C", "agreeing": true, "manifestations": 2, "manifestations_basis": "catalog row enumerates '(P0-1)' and '(P0-2)' as two distinct defects"},
+      "sources": {"case_file": "kb_content_and_sources_dedup_case.md", "catalog_row": "failure_modes_catalog.md:117", "dataset_row": "llm_observer_ground_truth.yaml:166", "field_provenance": {"symptom": "dataset observable_artifact", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "kb_evening_fallback_quota_chain",
+      "symptom": "Users received a redundant 'HTTP 502' alert two days running, carrying nothing they could act on.",
+      "mechanism_as_described": "Three layers each discarded part of the cause. The upstream adapter returned a 502. The proxy captured only the string form of the exception — 'HTTP 502' — without reading the response body that carried the detail. The client then raised its own error and dropped the body a second time. The real cause was an upstream quota exhaustion (a 429) present at the first hop and completely invisible by the third. Nothing was swallowed outright; the cause was thinned at each boundary until only a transport code survived.",
+      "detection_path": "A person received the alerts and noticed they were unactionable.",
+      "consequence": "Two days of alerts naming a symptom nobody could act on, while the actual cause went unnamed. Reported silent interval: 2 days.",
+      "metadata": {"catalog_class": "C", "dataset_class": "C", "agreeing": true, "manifestations": 3, "manifestations_basis": "catalog row: 'adapter→proxy→client 三跳' (three hops, each losing cause)"},
+      "sources": {"case_file": "kb_evening_fallback_quota_chain_case.md", "catalog_row": "failure_modes_catalog.md:118", "dataset_row": "llm_observer_ground_truth.yaml:227", "field_provenance": {"symptom": "dataset observable_artifact", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "rsync_helper_set_e_regression",
+      "symptom": "Twenty caller scripts began dying part-way through execution every day; a field missing from a last-run record was misdiagnosed as the callers being outdated scripts.",
+      "mechanism_as_described": "A retry helper was changed to propagate the underlying transfer command's exit code. Every caller ran under a shell option that terminates the script on any non-zero return, so a transfer failure that had previously been contained inside the helper now killed the calling script at that line. The repair for one silent failure produced a deeper one: the callers stopped mid-script leaving no record of why, and the resulting partial records were read as a different problem entirely.",
+      "detection_path": "A routine check, which then misattributed the cause before the real one was found.",
+      "consequence": "An eight-day gap in backups. The failure presented as stale or odd records rather than as an error. Reported silent interval: 8 days.",
+      "metadata": {"catalog_class": "C", "dataset_class": "E", "agreeing": false, "manifestations": 20, "manifestations_basis": "catalog row: '20 个 set -e caller 每天被杀 mid-script' (20 affected caller sites)"},
+      "sources": {"case_file": "rsync_helper_set_e_regression_case.md", "catalog_row": "failure_modes_catalog.md:119", "dataset_row": "llm_observer_ground_truth.yaml:373", "field_provenance": {"symptom": "catalog + dataset title", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "dream_quota_blast_radius",
+      "symptom": "A front-page digest push delivered five bullet points that were all the same hard-coded placeholder string, with titles left untranslated.",
+      "mechanism_as_described": "One model provider went down. The adapter's fallback fired thirty-plus calls at a second provider in response, exhausting that provider's quota as well. With both unavailable, the code path emitted its hard-coded placeholder string for every bullet and completed normally. A single job's failure propagated across unrelated jobs through the shared quota, and the output kept the exact shape of a successful run.",
+      "detection_path": "A person read the delivered digest and saw five identical placeholder bullets.",
+      "consequence": "A push with the precise form of a normal digest and none of its content. Reported silent interval: hours.",
+      "metadata": {"catalog_class": "C", "dataset_class": "D", "agreeing": false, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "dream_quota_blast_radius_case.md", "catalog_row": "failure_modes_catalog.md:120", "dataset_row": "llm_observer_ground_truth.yaml:104", "field_provenance": {"symptom": "dataset title + observable_artifact", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "dream_self_referential",
+      "symptom": "A scheduled analysis push presented users with a warning about a platform crisis at a named company. No such crisis existed.",
+      "mechanism_as_described": "An error page — carrying text like 'Error code: 400', 'Bad JSON' and 'Waiting Ns before retry' — was written to standard output by a shell function. The caller captured that stream via command substitution into a signals variable and wrote it to the cache. The downstream synthesis stage read the cache, treated the error text as an external market signal, and composed a plausible narrative explaining it. Sending the function's output to standard error instead of standard output breaks the entire chain at its first link.",
+      "detection_path": "A person read the push the same night it was delivered.",
+      "consequence": "A fabricated analysis delivered to users in the system's normal reporting format, indistinguishable in form from a real one. Reported silent interval: hours (same-night push).",
+      "metadata": {"catalog_class": "D", "dataset_class": "D", "agreeing": true, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "dream_self_referential_hallucination_case.md", "catalog_row": "failure_modes_catalog.md:137", "dataset_row": "llm_observer_ground_truth.yaml:64", "field_provenance": {"symptom": "dataset title + observable_artifact", "mechanism": "catalog + dataset notes", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "pa_alert_contamination",
+      "symptom": "A user asked a question about ontology, randomness and Bayesian reasoning. The assistant replied that it had received a system alert follow-up task, and supplied operating-system permission-granting steps for a scheduled job.",
+      "mechanism_as_described": "Alert pushes were written into the conversation session file under the assistant role. The proxy's truncation window retained them. The next user turn was therefore evaluated against a context whose most recent assistant content was an operational alert, so a new and unrelated question was read as follow-up to that alert. The answer was internally coherent and confidently delivered; it answered a question nobody had asked.",
+      "detection_path": "A person noticed, after pressing the point three times, that the replies did not match the question.",
+      "consequence": "A well-formed, confident answer to a substituted question. Reported silent interval: a 36-minute window between the alert and the user's question.",
+      "metadata": {"catalog_class": "D", "dataset_class": "D", "agreeing": true, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "pa_alert_contamination_case.md", "catalog_row": "failure_modes_catalog.md:138", "dataset_row": "llm_observer_ground_truth.yaml:125", "field_provenance": {"symptom": "dataset observable_artifact", "mechanism": "catalog", "detection_path": "dataset silence_span note", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "kb_review_silent_degradation",
+      "symptom": "A knowledge-review push contained container headings — the wrapper titles of a digest — instead of the entities the review was meant to summarize, while the status file recorded a successful model run every time.",
+      "mechanism_as_described": "Six defects overlapped, each masking the symptoms the others would otherwise have produced: an ordering problem in shell exports, a hard-coded source enumeration that silently omitted newly added sources, and a mechanical fallback that emitted leftover container-title text whenever the model call failed. The status file wrote its success flag unconditionally, so the record of success was computed independently of whether anything had succeeded.",
+      "detection_path": "A person read the pushes and recognized the content as wrapper titles.",
+      "consequence": "Weeks of pushes with the form of a review and none of its content, with a status record affirming success throughout. Reported silent interval: weeks.",
+      "metadata": {"catalog_class": "D", "dataset_class": "D", "agreeing": true, "manifestations": 6, "manifestations_basis": "catalog row: '6 issue 相互掩护' (six mutually masking defects)"},
+      "sources": {"case_file": "kb_review_silent_degradation_case.md", "catalog_row": "failure_modes_catalog.md:139", "dataset_row": "llm_observer_ground_truth.yaml:84", "field_provenance": {"symptom": "dataset title + observable_artifact", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "pa_echo_chamber",
+      "symptom": "The assistant linked a user's own model to an unrelated stored note as though the two were equivalent, and claimed it had permanently saved the material to the knowledge store without having invoked any tool.",
+      "mechanism_as_described": "The assistant's guidance file contained no rule licensing disagreement, so its default posture toward user statements was accommodation. The user's expressed doubt was reflected back as agreement, the user then cited that reflection as support, and the loop amplified across turns. The claim of having saved the material was ungrounded in a second way: the model does not call the write tool on its own initiative, so nothing was written.",
+      "detection_path": "A person recognized the association as strained during the exchange itself.",
+      "consequence": "A false claim of persistence plus a strained association presented as insight. Reported silent interval: a single reply (caught in the same exchange).",
+      "metadata": {"catalog_class": "D", "dataset_class": "D", "agreeing": true, "manifestations": 3, "manifestations_basis": "catalog row: '三环反馈陷阱' (three-loop feedback structure)"},
+      "sources": {"case_file": "pa_echo_chamber_case.md", "catalog_row": "failure_modes_catalog.md:140", "dataset_row": "llm_observer_ground_truth.yaml:145", "field_provenance": {"symptom": "dataset title + observable_artifact", "mechanism": "catalog + dataset notes", "detection_path": "dataset silence_span", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "kb_deep_dive_cron_unregistered",
+      "symptom": "A new scheduled job was implemented, tested and entered in the registry, but its scheduler line was never written. It never ran once.",
+      "mechanism_as_described": "Three checks each failed to catch it, and each failed for its own reason. The pre-flight check grepped only for interval drift, so a job absent from the scheduler matched nothing to complain about. The schedule-editing wrapper did not inspect its own exit code. And a count comparison of 35 against 35 used a strict less-than test, so an unchanged count returned a success mark. The job existed in the registry and not in the scheduler, and nothing in the system compared those two records against each other.",
+      "detection_path": "A person noticed the job's output was never arriving.",
+      "consequence": "The job's output was simply absent, and the absence was reported as healthy by three separate checks. Reported silent interval: 1+ days.",
+      "metadata": {"catalog_class": "E", "dataset_class": "E", "agreeing": true, "manifestations": 3, "manifestations_basis": "catalog row: '三层 silent 协同' (three cooperating silent layers)"},
+      "sources": {"case_file": "kb_deep_dive_cron_unregistered_case.md", "catalog_row": "failure_modes_catalog.md:155", "dataset_row": "llm_observer_ground_truth.yaml:463", "field_provenance": {"symptom": "dataset title", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "heartbeat_md_pa_self_silencing",
+      "symptom": "The assistant stopped answering entirely for 13 hours, replying to every incoming message with content the gateway then stripped to nothing.",
+      "mechanism_as_described": "The assistant's file-write tool wrote a 'task complete' line into a reserved control file. Writing to that file activates a mechanism that makes the assistant answer all incoming messages with a fixed acknowledgement token, and the gateway strips that token before delivery. The assistant had write permission on the file that governs whether it can speak at all, so a routine write disabled it.",
+      "detection_path": "A person noticed the absence of replies.",
+      "consequence": "13 hours of total silence, presenting to the user as the assistant simply not replying. Reported silent interval: 13h.",
+      "metadata": {"catalog_class": "E", "dataset_class": "E", "agreeing": true, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "heartbeat_md_pa_self_silencing_case.md", "catalog_row": "failure_modes_catalog.md:156", "dataset_row": "llm_observer_ground_truth.yaml:283", "field_provenance": {"symptom": "catalog + dataset title", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "whatsapp_silent_death",
+      "symptom": "One messaging channel was completely dead for nine hours while a second channel continued working normally.",
+      "mechanism_as_described": "A restart script caused the gateway to crash quickly after coming up. Three separate alerting paths then failed at the same time: an overnight quiet-hours rule suppressed three critical alerts, a keepalive check wrote its findings to a log without raising any alert, and the restart script did not verify health after restarting. Every one of the three alerting paths ran through the component that had died.",
+      "detection_path": "A person noticed one channel had gone quiet while the other still worked.",
+      "consequence": "Nine hours of channel death with all three alarms silent. Reported silent interval: 9h.",
+      "metadata": {"catalog_class": "E", "dataset_class": "E", "agreeing": true, "manifestations": 3, "manifestations_basis": "catalog row: '三放大器同时失效' (three simultaneous failures in the alerting path)"},
+      "sources": {"case_file": "whatsapp_silent_death_case.md", "catalog_row": "failure_modes_catalog.md:157", "dataset_row": "llm_observer_ground_truth.yaml:427", "field_provenance": {"symptom": "dataset title + observable_artifact", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "finance_news_syndication_zombie",
+      "symptom": "Three upstream accounts had stopped publishing between 420 and 3,364 days earlier. Fetches against them returned HTTP 200 with parseable content the entire time.",
+      "mechanism_as_described": "The syndication endpoint returns a stale cached snapshot for dormant accounts rather than an error or an empty result. The health check tested transport success — a 200 status and parseable markup — which the dead accounts satisfied indefinitely. A 72-hour window yielding zero items raised no alarm either, because zero items is a valid parse of a well-formed response. Freshness was never tested; only retrievability was.",
+      "detection_path": "A person noticed the downstream output had become sparse.",
+      "consequence": "Stale content delivered as fresh, and thin output that no check treated as anomalous. Reported silent interval: days.",
+      "metadata": {"catalog_class": "E", "dataset_class": "B", "agreeing": false, "manifestations": 3, "manifestations_basis": "catalog row: '3 个 X handle 改成僵尸账号' (three affected upstream accounts)"},
+      "sources": {"case_file": "finance_news_syndication_zombie_case.md", "catalog_row": "failure_modes_catalog.md:158", "dataset_row": "llm_observer_ground_truth.yaml:206", "field_provenance": {"symptom": "dataset title", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset observable_artifact + silence_span"}}
+    },
+    {
+      "id": "finance_zombie_closure",
+      "symptom": "The staleness detector written to close the previous incident missed two edge cases: a feed 99% aged but not entirely aged, and a stub returning zero items.",
+      "mechanism_as_described": "The question of what the minimal repair should be was answered as 'strict equality is enough'. The resulting test compared aged count against total count for exact equality, which passed anything short of complete staleness, including a feed 99% dead. A separate guard requiring a positive total then skipped the zero-item stub entirely. The repair for a detection gap left two narrower gaps of the same kind, in the detector built to close it.",
+      "detection_path": "An end-to-end run the same evening surfaced it.",
+      "consequence": "The detector reported healthy for precisely the feeds it had been written to catch. Reported silent interval: not applicable (caught same evening).",
+      "metadata": {"catalog_class": "E", "dataset_class": "B", "agreeing": false, "manifestations": 2, "manifestations_basis": "catalog row enumerates two missed cases: 'old==total 放过 99% 老化' and 'total>0 漏 0-tweet stub'"},
+      "sources": {"case_file": "zombie_detection_edge_case_closure.md", "catalog_row": "failure_modes_catalog.md:159", "dataset_row": "llm_observer_ground_truth.yaml:409", "field_provenance": {"symptom": "dataset title", "mechanism": "catalog", "detection_path": "dataset discovery_channel + silence_span", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "movespeed_exfat_silent_backup_failure",
+      "symptom": "Backups to an external volume failed for six days without producing any signal.",
+      "mechanism_as_described": "The filesystem returned transient permission errors under load. Eighteen or more copy-pasted sites across the scripts ended with a redirect discarding the error stream followed by a forced success return, so each site individually converted a real failure into a clean exit. No single site was remarkable; together they guaranteed that no failure anywhere on that path could reach a log or an alert. Monitoring did not cover the gap the pattern created.",
+      "detection_path": "Log forensics, after the gap was noticed downstream.",
+      "consequence": "Six days with no backup and no signal of any kind. Reported silent interval: 5-6 days.",
+      "metadata": {"catalog_class": "E", "dataset_class": "C", "agreeing": false, "manifestations": 18, "manifestations_basis": "catalog row: '18 处反模式协同' (18+ copy-pasted suppression sites)"},
+      "sources": {"case_file": "movespeed_exfat_silent_backup_failure_case.md", "catalog_row": "failure_modes_catalog.md:160", "dataset_row": "llm_observer_ground_truth.yaml:319", "field_provenance": {"symptom": "dataset title", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "movespeed_noowners_uid_mismatch",
+      "symptom": "After a repair that corrected file ownership, the permission-error rate was exactly unchanged.",
+      "mechanism_as_described": "A user-ID mismatch, masked by a mount option that suppresses ownership enforcement, was a real defect and was correctly fixed. It was not the cause of the permission errors. The flat before-and-after rate is what established this: the repair was right and the diagnosis was wrong, and the only reason that became visible is that the rate was measured after the fix rather than assumed to have improved.",
+      "detection_path": "Log forensics — comparing error rates across the repair boundary.",
+      "consequence": "A correct repair consumed a diagnostic cycle without moving the failure it was meant to address, and would have been recorded as a fix had the rate not been re-measured. Reported silent interval: weeks.",
+      "metadata": {"catalog_class": "E", "dataset_class": "A", "agreeing": false, "manifestations": null, "manifestations_basis": null},
+      "sources": {"case_file": "movespeed_noowners_uid_mismatch_case.md", "catalog_row": "failure_modes_catalog.md:161", "dataset_row": "llm_observer_ground_truth.yaml:337", "field_provenance": {"symptom": "catalog", "mechanism": "catalog", "detection_path": "dataset discovery_channel", "consequence": "dataset silence_span"}}
+    },
+    {
+      "id": "movespeed_tcc_sandbox",
+      "symptom": "Backups to an external volume returned permission errors for 60 days. Six successive hypotheses about the cause were each falsified.",
+      "mechanism_as_described": "The operating system's privacy subsystem denies processes spawned by the scheduling daemon access to external volumes, because that daemon holds no full-disk access by default. The reason it took 60 days to find is separate from the cause: the diagnostic collectors used to investigate — file-handle listing, access-control listing — were themselves denied by the same subsystem and returned empty output. Empty output was read as 'nothing anomalous here' rather than 'this instrument was blocked'. The system-log query that finally exposed the denial had never been run in those 60 days.",
+      "detection_path": "Log forensics, once a system-log query with an explicit predicate was finally run.",
+      "consequence": "60 days of silent backup failure — the longest interval in the corpus — with six wrong hypotheses each consuming an investigation cycle. Reported silent interval: 60 days.",
+      "metadata": {"catalog_class": "E", "dataset_class": "A", "agreeing": false, "manifestations": 6, "manifestations_basis": "catalog row: '60 天 6 假说全证伪' (six falsified hypotheses)"},
+      "sources": {"case_file": "movespeed_tcc_sandbox_blood_case.md", "catalog_row": "failure_modes_catalog.md:162", "dataset_row": "llm_observer_ground_truth.yaml:301", "field_provenance": {"symptom": "catalog + dataset title", "mechanism": "catalog", "detection_path": "catalog", "consequence": "dataset silence_span + catalog"}}
+    }
+  ]
+}
