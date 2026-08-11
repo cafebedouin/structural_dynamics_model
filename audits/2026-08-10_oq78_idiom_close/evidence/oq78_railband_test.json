@@ -1,0 +1,1491 @@
+{
+  "phase": "test",
+  "rng_seed": 20260810,
+  "min_type_n": 5,
+  "manifests": {
+    "default": {
+      "pipeline_run_at": "2026-08-10T16:43:14Z",
+      "n_constraints": 249,
+      "n_sotu_constraints": 0,
+      "code_commit": "820ba021172310171ec0c487bb3997cce3f305fb",
+      "code_commit_short": "820ba02",
+      "code_dirty": true,
+      "schema_version": 2
+    },
+    "leg_haiku": {
+      "pipeline_run_at": "2026-08-10T16:32:05Z",
+      "n_constraints": 960,
+      "n_sotu_constraints": 0,
+      "code_commit": "820ba021172310171ec0c487bb3997cce3f305fb",
+      "code_commit_short": "820ba02",
+      "code_dirty": true,
+      "schema_version": 2,
+      "corpus_path": "testsets_haiku"
+    },
+    "leg_flash": {
+      "pipeline_run_at": "2026-08-10T16:33:08Z",
+      "n_constraints": 960,
+      "n_sotu_constraints": 0,
+      "code_commit": "820ba021172310171ec0c487bb3997cce3f305fb",
+      "code_commit_short": "820ba02",
+      "code_dirty": true,
+      "schema_version": 2,
+      "corpus_path": "testsets_flash"
+    },
+    "leg_kimi": {
+      "pipeline_run_at": "2026-08-10T16:34:21Z",
+      "n_constraints": 1005,
+      "n_sotu_constraints": 0,
+      "code_commit": "820ba021172310171ec0c487bb3997cce3f305fb",
+      "code_commit_short": "820ba02",
+      "code_dirty": true,
+      "schema_version": 2,
+      "corpus_path": "testsets_kimi"
+    },
+    "leg_sonnet": {
+      "pipeline_run_at": "2026-08-10T16:35:30Z",
+      "n_constraints": 1001,
+      "n_sotu_constraints": 0,
+      "code_commit": "820ba021172310171ec0c487bb3997cce3f305fb",
+      "code_commit_short": "820ba02",
+      "code_dirty": true,
+      "schema_version": 2,
+      "corpus_path": "testsets_sonnet"
+    }
+  },
+  "leg_attribution": {
+    "haiku": {
+      "claude-haiku-4-5-20251001": 960
+    },
+    "flash": {
+      "gemini-2.5-flash": 960
+    },
+    "kimi": {
+      "kimi-k2.6": 1005
+    },
+    "sonnet": {
+      "claude-sonnet-5": 1001
+    }
+  },
+  "archive": {
+    "n": 60,
+    "source": "prolog/archives/datasets/kernel_v2_test2/json"
+  },
+  "default_leg_strata": [
+    {
+      "kind": "authored",
+      "author": "claude-sonnet-5",
+      "n": 100,
+      "claimed_type_counts": {
+        "tangled_rope": 64,
+        "rope": 17,
+        "scaffold": 8,
+        "snare": 8,
+        "piton": 3
+      }
+    },
+    {
+      "kind": "derived",
+      "author": "claude-sonnet-4-5-20250929",
+      "n": 64,
+      "claimed_type_counts": {
+        "tangled_rope": 30,
+        "rope": 16,
+        "mountain": 12,
+        "snare": 6
+      }
+    },
+    {
+      "kind": "derived",
+      "author": "claude-haiku-4-5-20251001",
+      "n": 28,
+      "claimed_type_counts": {
+        "tangled_rope": 13,
+        "rope": 6,
+        "mountain": 3,
+        "snare": 3,
+        "scaffold": 3
+      }
+    },
+    {
+      "kind": "derived",
+      "author": "gemini-2.5-flash",
+      "n": 11,
+      "claimed_type_counts": {
+        "tangled_rope": 5,
+        "rope": 2,
+        "snare": 2,
+        "scaffold": 2
+      }
+    },
+    {
+      "kind": "authored",
+      "author": "claude-sonnet-4-5-20250929",
+      "n": 11,
+      "claimed_type_counts": {
+        "tangled_rope": 3,
+        "rope": 3,
+        "snare": 2,
+        "mountain": 2,
+        "piton": 1
+      }
+    },
+    {
+      "kind": "derived",
+      "author": "claude-sonnet-4-20250514",
+      "n": 7,
+      "claimed_type_counts": {
+        "tangled_rope": 5,
+        "mountain": 1,
+        "rope": 1
+      }
+    },
+    {
+      "kind": "authored",
+      "author": "kimi-k3",
+      "n": 5,
+      "claimed_type_counts": {
+        "tangled_rope": 4,
+        "rope": 1
+      }
+    }
+  ],
+  "test_side_inventory": {
+    "sonnet_leg_n": 1001,
+    "default_leg_sonnet5_n": 100,
+    "overlap_ids": [
+      "ai_governance_legitimacy__democratic_pluralist_reading",
+      "gpl_derivative_work_trigger__interface_boundary_reading",
+      "notability_guidelines__deliberative_reading",
+      "qualified_immunity_doctrine__protective_scaffold_reading",
+      "statute_of_anne_ip_foundation__entangled_event_reading"
+    ],
+    "overlap_n": 5,
+    "secondary_unique_n": 95,
+    "secondary_claimed_type_counts": {
+      "tangled_rope": 62,
+      "rope": 17,
+      "snare": 8,
+      "scaffold": 5,
+      "piton": 3
+    },
+    "note": "the secondary NEVER enters the pinned conditions (operator ruling 2026-08-10); a divergence there is a caveat on the close's SCOPE, not a condition failure \u2014 weak instrument at this n"
+  },
+  "id_intersections": {
+    "calibration_default_vs_archive": 0,
+    "calibration_default_n": 126,
+    "archive_n": 60,
+    "cross_leg": {
+      "haikuxflash": 960,
+      "haikuxkimi": 960,
+      "haikuxsonnet": 957,
+      "flashxkimi": 960,
+      "flashxsonnet": 957,
+      "kimixsonnet": 1001
+    }
+  },
+  "band_grid": {
+    "n_values": 76,
+    "values": [
+      0.0,
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.08,
+      0.1,
+      0.12,
+      0.15,
+      0.16,
+      0.18,
+      0.19,
+      0.2,
+      0.22,
+      0.23,
+      0.25,
+      0.28,
+      0.3,
+      0.31,
+      0.32,
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.4,
+      0.41,
+      0.42,
+      0.44,
+      0.45,
+      0.46,
+      0.48,
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.95,
+      0.96
+    ],
+    "digit_support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "uniform_expectation": 0.1,
+    "sources": [
+      "default-leg non-sonnet-5 strata",
+      "twin legs haiku/flash/kimi",
+      "archive"
+    ]
+  },
+  "archive_bands": {
+    "bands": {
+      "snare": {
+        "n": 17,
+        "p10": 0.68,
+        "p90": 0.78,
+        "median": 0.68,
+        "distinct": 3
+      },
+      "tangled_rope": {
+        "n": 23,
+        "p10": 0.48,
+        "p90": 0.68,
+        "median": 0.58,
+        "distinct": 5
+      },
+      "mountain": {
+        "n": 9,
+        "p10": 0.02,
+        "p90": 0.15,
+        "median": 0.12,
+        "distinct": 4
+      },
+      "rope": {
+        "n": 10,
+        "p10": 0.14300000000000002,
+        "p90": 0.68,
+        "median": 0.28,
+        "distinct": 6
+      }
+    },
+    "excluded_below_min_n": {
+      "piton": 1
+    },
+    "comparator_types": [
+      "rope",
+      "tangled_rope",
+      "snare"
+    ],
+    "types_present": [
+      "rope",
+      "tangled_rope",
+      "snare"
+    ],
+    "worst_pair_auc": 0.813,
+    "pairwise_auc": {
+      "rope<tangled_rope": 0.813,
+      "tangled_rope<snare": 0.9194
+    },
+    "auc_types_present": [
+      "rope",
+      "tangled_rope",
+      "snare"
+    ],
+    "bootstrap_auc_threshold_p05": 0.6347,
+    "bootstrap_auc_quantiles": {
+      "p05": 0.6347,
+      "p10": 0.6696,
+      "p50": 0.8196,
+      "p95": 0.9233
+    },
+    "bootstrap_draws": 2000,
+    "retired_measure_p10_p90_max_overlap": 1.0,
+    "retired_measure_note": "p10\u2013p90 max-overlap scored 1.0 on the comparator ITSELF, so its threshold calibrated to 1.0 and every banding passed \u2014 vacuous; retained as a descriptive only, never as the (ii) criterion",
+    "condition_ii_role": "PRECONDITION \u2014 confirms band structure has not collapsed so the rail reading is interpretable; NOT a falsifier (operator ruling 2026-08-10)"
+  },
+  "banding_across_legs": {
+    "leg_haiku": {
+      "worst_pair_auc": 0.8391,
+      "pairwise_auc": {
+        "rope<tangled_rope": 0.9408,
+        "tangled_rope<snare": 0.8391
+      },
+      "types_present": [
+        "rope",
+        "tangled_rope",
+        "snare"
+      ],
+      "bands": {
+        "tangled_rope": {
+          "n": 587,
+          "p10": 0.48,
+          "p90": 0.76,
+          "median": 0.68,
+          "distinct": 26
+        },
+        "snare": {
+          "n": 91,
+          "p10": 0.68,
+          "p90": 0.89,
+          "median": 0.81,
+          "distinct": 18
+        },
+        "rope": {
+          "n": 175,
+          "p10": 0.15,
+          "p90": 0.58,
+          "median": 0.35,
+          "distinct": 24
+        },
+        "mountain": {
+          "n": 72,
+          "p10": 0.0,
+          "p90": 0.68,
+          "median": 0.18,
+          "distinct": 21
+        },
+        "piton": {
+          "n": 23,
+          "p10": 0.28600000000000003,
+          "p90": 0.766,
+          "median": 0.62,
+          "distinct": 12
+        },
+        "scaffold": {
+          "n": 12,
+          "p10": 0.317,
+          "p90": 0.58,
+          "median": 0.48,
+          "distinct": 6
+        }
+      },
+      "excluded_below_min_n": {}
+    },
+    "leg_flash": {
+      "worst_pair_auc": 0.9079,
+      "pairwise_auc": {
+        "rope<tangled_rope": 0.9782,
+        "tangled_rope<snare": 0.9079
+      },
+      "types_present": [
+        "rope",
+        "tangled_rope",
+        "snare"
+      ],
+      "bands": {
+        "snare": {
+          "n": 175,
+          "p10": 0.65,
+          "p90": 0.9,
+          "median": 0.85,
+          "distinct": 13
+        },
+        "tangled_rope": {
+          "n": 416,
+          "p10": 0.45,
+          "p90": 0.7,
+          "median": 0.65,
+          "distinct": 14
+        },
+        "rope": {
+          "n": 236,
+          "p10": 0.15,
+          "p90": 0.4,
+          "median": 0.3,
+          "distinct": 15
+        },
+        "mountain": {
+          "n": 104,
+          "p10": 0.022000000000000026,
+          "p90": 0.3,
+          "median": 0.1,
+          "distinct": 11
+        },
+        "piton": {
+          "n": 21,
+          "p10": 0.15,
+          "p90": 0.85,
+          "median": 0.45,
+          "distinct": 11
+        },
+        "scaffold": {
+          "n": 8,
+          "p10": 0.23500000000000001,
+          "p90": 0.519,
+          "median": 0.4,
+          "distinct": 5
+        }
+      },
+      "excluded_below_min_n": {}
+    },
+    "leg_kimi": {
+      "worst_pair_auc": 0.8845,
+      "pairwise_auc": {
+        "rope<tangled_rope": 0.9671,
+        "tangled_rope<snare": 0.8845
+      },
+      "types_present": [
+        "rope",
+        "tangled_rope",
+        "snare"
+      ],
+      "bands": {
+        "tangled_rope": {
+          "n": 753,
+          "p10": 0.48,
+          "p90": 0.78,
+          "median": 0.65,
+          "distinct": 53
+        },
+        "snare": {
+          "n": 75,
+          "p10": 0.72,
+          "p90": 0.88,
+          "median": 0.82,
+          "distinct": 17
+        },
+        "rope": {
+          "n": 100,
+          "p10": 0.06,
+          "p90": 0.4020000000000002,
+          "median": 0.18,
+          "distinct": 28
+        },
+        "scaffold": {
+          "n": 17,
+          "p10": 0.24000000000000002,
+          "p90": 0.562,
+          "median": 0.42,
+          "distinct": 10
+        },
+        "mountain": {
+          "n": 39,
+          "p10": 0.018000000000000002,
+          "p90": 0.6560000000000001,
+          "median": 0.12,
+          "distinct": 23
+        },
+        "piton": {
+          "n": 21,
+          "p10": 0.15,
+          "p90": 0.76,
+          "median": 0.48,
+          "distinct": 16
+        }
+      },
+      "excluded_below_min_n": {}
+    },
+    "archive_kernel_v2_test2": {
+      "worst_pair_auc": 0.813,
+      "pairwise_auc": {
+        "rope<tangled_rope": 0.813,
+        "tangled_rope<snare": 0.9194
+      },
+      "types_present": [
+        "rope",
+        "tangled_rope",
+        "snare"
+      ],
+      "bands": {
+        "snare": {
+          "n": 17,
+          "p10": 0.68,
+          "p90": 0.78,
+          "median": 0.68,
+          "distinct": 3
+        },
+        "tangled_rope": {
+          "n": 23,
+          "p10": 0.48,
+          "p90": 0.68,
+          "median": 0.58,
+          "distinct": 5
+        },
+        "mountain": {
+          "n": 9,
+          "p10": 0.02,
+          "p90": 0.15,
+          "median": 0.12,
+          "distinct": 4
+        },
+        "rope": {
+          "n": 10,
+          "p10": 0.14300000000000002,
+          "p90": 0.68,
+          "median": 0.28,
+          "distinct": 6
+        }
+      }
+    }
+  },
+  "banding_note": "All three twin legs band BETTER than the archive comparator (archive is the WEAKEST bander in the set), so the p05 threshold is a LOW BAR \u2014 a pass must not be read as 'banding is strong'. Four independent models banding stably under the same feeding path is positive evidence the band-half is hypothesis-driven rather than model-mediated, which lowers the prior on outcome cells 3 and 4.",
+  "family_map_unpaired": {
+    "leg_haiku": {
+      "pooled": {
+        "n": 960,
+        "n_on_grid": 960,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.6229,
+        "concentration": 0.5229,
+        "digit_histogram": {
+          "0": 16,
+          "1": 83,
+          "2": 190,
+          "5": 31,
+          "6": 7,
+          "7": 15,
+          "8": 598,
+          "9": 20
+        },
+        "share_at_8": 0.6229
+      },
+      "by_type": {
+        "tangled_rope": {
+          "n": 587,
+          "n_on_grid": 587,
+          "off_grid_share": 0.0,
+          "argmax_digit": 8,
+          "argmax_share": 0.7002,
+          "concentration": 0.6002,
+          "digit_histogram": {
+            "0": 1,
+            "1": 36,
+            "2": 112,
+            "5": 6,
+            "6": 4,
+            "7": 11,
+            "8": 411,
+            "9": 6
+          },
+          "share_at_8": 0.7002
+        },
+        "snare": {
+          "n": 91,
+          "n_on_grid": 91,
+          "off_grid_share": 0.0,
+          "argmax_digit": 8,
+          "argmax_share": 0.4396,
+          "concentration": 0.3396,
+          "digit_histogram": {
+            "0": 1,
+            "1": 13,
+            "2": 21,
+            "6": 1,
+            "7": 4,
+            "8": 40,
+            "9": 11
+          },
+          "share_at_8": 0.4396
+        },
+        "rope": {
+          "n": 175,
+          "n_on_grid": 175,
+          "off_grid_share": 0.0,
+          "argmax_digit": 8,
+          "argmax_share": 0.5657,
+          "concentration": 0.4657,
+          "digit_histogram": {
+            "0": 5,
+            "1": 22,
+            "2": 35,
+            "5": 12,
+            "6": 2,
+            "8": 99
+          },
+          "share_at_8": 0.5657
+        },
+        "mountain": {
+          "n": 72,
+          "n_on_grid": 72,
+          "off_grid_share": 0.0,
+          "argmax_digit": 8,
+          "argmax_share": 0.3889,
+          "concentration": 0.2889,
+          "digit_histogram": {
+            "0": 9,
+            "1": 8,
+            "2": 11,
+            "5": 13,
+            "8": 28,
+            "9": 3
+          },
+          "share_at_8": 0.3889
+        }
+      },
+      "excluded_below_min_n": {
+        "piton": 23,
+        "scaffold": 12
+      }
+    },
+    "leg_flash": {
+      "pooled": {
+        "n": 960,
+        "n_on_grid": 960,
+        "off_grid_share": 0.0,
+        "argmax_digit": 5,
+        "argmax_share": 0.624,
+        "concentration": 0.524,
+        "digit_histogram": {
+          "0": 326,
+          "1": 2,
+          "2": 5,
+          "5": 599,
+          "8": 28
+        },
+        "share_at_8": 0.0292
+      },
+      "by_type": {
+        "snare": {
+          "n": 175,
+          "n_on_grid": 175,
+          "off_grid_share": 0.0,
+          "argmax_digit": 5,
+          "argmax_share": 0.7657,
+          "concentration": 0.6657,
+          "digit_histogram": {
+            "0": 33,
+            "2": 3,
+            "5": 134,
+            "8": 5
+          },
+          "share_at_8": 0.0286
+        },
+        "tangled_rope": {
+          "n": 416,
+          "n_on_grid": 416,
+          "off_grid_share": 0.0,
+          "argmax_digit": 5,
+          "argmax_share": 0.6707,
+          "concentration": 0.5707,
+          "digit_histogram": {
+            "0": 118,
+            "5": 279,
+            "8": 19
+          },
+          "share_at_8": 0.0457
+        },
+        "rope": {
+          "n": 236,
+          "n_on_grid": 236,
+          "off_grid_share": 0.0,
+          "argmax_digit": 0,
+          "argmax_share": 0.5297,
+          "concentration": 0.4297,
+          "digit_histogram": {
+            "0": 125,
+            "1": 1,
+            "2": 1,
+            "5": 106,
+            "8": 3
+          },
+          "share_at_8": 0.0127
+        },
+        "mountain": {
+          "n": 104,
+          "n_on_grid": 104,
+          "off_grid_share": 0.0,
+          "argmax_digit": 5,
+          "argmax_share": 0.6346,
+          "concentration": 0.5346,
+          "digit_histogram": {
+            "0": 36,
+            "1": 1,
+            "2": 1,
+            "5": 66
+          },
+          "share_at_8": 0.0
+        }
+      },
+      "excluded_below_min_n": {
+        "piton": 21,
+        "scaffold": 8
+      }
+    },
+    "leg_kimi": {
+      "pooled": {
+        "n": 1005,
+        "n_on_grid": 1005,
+        "off_grid_share": 0.0,
+        "argmax_digit": 2,
+        "argmax_share": 0.3811,
+        "concentration": 0.2811,
+        "digit_histogram": {
+          "0": 71,
+          "1": 11,
+          "2": 383,
+          "3": 9,
+          "4": 20,
+          "5": 188,
+          "6": 36,
+          "7": 5,
+          "8": 278,
+          "9": 4
+        },
+        "share_at_8": 0.2766
+      },
+      "by_type": {
+        "tangled_rope": {
+          "n": 753,
+          "n_on_grid": 753,
+          "off_grid_share": 0.0,
+          "argmax_digit": 2,
+          "argmax_share": 0.3918,
+          "concentration": 0.2918,
+          "digit_histogram": {
+            "0": 49,
+            "1": 8,
+            "2": 295,
+            "3": 5,
+            "4": 13,
+            "5": 136,
+            "6": 22,
+            "7": 4,
+            "8": 217,
+            "9": 4
+          },
+          "share_at_8": 0.2882
+        },
+        "snare": {
+          "n": 75,
+          "n_on_grid": 75,
+          "off_grid_share": 0.0,
+          "argmax_digit": 2,
+          "argmax_share": 0.52,
+          "concentration": 0.42,
+          "digit_histogram": {
+            "0": 2,
+            "2": 39,
+            "3": 2,
+            "4": 4,
+            "5": 8,
+            "6": 3,
+            "8": 17
+          },
+          "share_at_8": 0.2267
+        },
+        "rope": {
+          "n": 100,
+          "n_on_grid": 100,
+          "off_grid_share": 0.0,
+          "argmax_digit": 2,
+          "argmax_share": 0.34,
+          "concentration": 0.24,
+          "digit_histogram": {
+            "0": 11,
+            "2": 34,
+            "3": 1,
+            "4": 1,
+            "5": 24,
+            "6": 5,
+            "7": 1,
+            "8": 23
+          },
+          "share_at_8": 0.23
+        }
+      },
+      "excluded_below_min_n": {
+        "scaffold": 17,
+        "mountain": 39,
+        "piton": 21
+      }
+    },
+    "default_derived_claude-sonnet-4-5-20250929": {
+      "pooled": {
+        "n": 64,
+        "n_on_grid": 64,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.7656,
+        "concentration": 0.6656,
+        "digit_histogram": {
+          "2": 13,
+          "3": 2,
+          "8": 49
+        },
+        "share_at_8": 0.7656
+      },
+      "by_type": {},
+      "excluded_below_min_n": {
+        "tangled_rope": 30,
+        "mountain": 12,
+        "snare": 6,
+        "rope": 16
+      }
+    },
+    "default_derived_claude-haiku-4-5-20251001": {
+      "pooled": {
+        "n": 28,
+        "n_on_grid": 28,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.5357,
+        "concentration": 0.4357,
+        "digit_histogram": {
+          "1": 3,
+          "2": 9,
+          "7": 1,
+          "8": 15
+        },
+        "share_at_8": 0.5357
+      },
+      "by_type": {},
+      "excluded_below_min_n": {
+        "mountain": 3,
+        "tangled_rope": 13,
+        "rope": 6,
+        "snare": 3,
+        "scaffold": 3
+      }
+    },
+    "default_derived_gemini-2.5-flash": {
+      "pooled": {
+        "n": 11,
+        "n_on_grid": 11,
+        "off_grid_share": 0.0,
+        "argmax_digit": 0,
+        "argmax_share": 0.5455,
+        "concentration": 0.4455,
+        "digit_histogram": {
+          "0": 6,
+          "5": 5
+        },
+        "share_at_8": 0.0
+      },
+      "by_type": {},
+      "excluded_below_min_n": {
+        "tangled_rope": 5,
+        "rope": 2,
+        "snare": 2,
+        "scaffold": 2
+      }
+    },
+    "default_authored_kimi-k3": {
+      "pooled": {
+        "n": 5,
+        "n_on_grid": 5,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.6,
+        "concentration": 0.5,
+        "digit_histogram": {
+          "2": 1,
+          "5": 1,
+          "8": 3
+        },
+        "share_at_8": 0.6
+      },
+      "by_type": {},
+      "excluded_below_min_n": {
+        "tangled_rope": 4,
+        "rope": 1
+      }
+    },
+    "default_derived_claude-sonnet-4-20250514": {
+      "pooled": {
+        "n": 7,
+        "n_on_grid": 7,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.8571,
+        "concentration": 0.7571,
+        "digit_histogram": {
+          "2": 1,
+          "8": 6
+        },
+        "share_at_8": 0.8571
+      },
+      "by_type": {},
+      "excluded_below_min_n": {
+        "mountain": 1,
+        "rope": 1,
+        "tangled_rope": 5
+      }
+    },
+    "default_authored_claude-sonnet-4-5-20250929": {
+      "pooled": {
+        "n": 11,
+        "n_on_grid": 11,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.8182,
+        "concentration": 0.7182,
+        "digit_histogram": {
+          "2": 2,
+          "8": 9
+        },
+        "share_at_8": 0.8182
+      },
+      "by_type": {},
+      "excluded_below_min_n": {
+        "snare": 2,
+        "tangled_rope": 3,
+        "mountain": 2,
+        "piton": 1,
+        "rope": 3
+      }
+    },
+    "archive_kernel_v2_test2": {
+      "pooled": {
+        "n": 60,
+        "n_on_grid": 60,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.7667,
+        "concentration": 0.6667,
+        "digit_histogram": {
+          "2": 9,
+          "5": 5,
+          "8": 46
+        },
+        "share_at_8": 0.7667
+      },
+      "by_type": {},
+      "excluded_below_min_n": {
+        "snare": 17,
+        "tangled_rope": 23,
+        "mountain": 9,
+        "rope": 10,
+        "piton": 1
+      }
+    }
+  },
+  "kind_check_sonnet45": {
+    "authored": {
+      "n": 11,
+      "n_on_grid": 11,
+      "off_grid_share": 0.0,
+      "argmax_digit": 8,
+      "argmax_share": 0.8182,
+      "concentration": 0.7182,
+      "digit_histogram": {
+        "2": 2,
+        "8": 9
+      },
+      "share_at_8": 0.8182
+    },
+    "derived": {
+      "n": 64,
+      "n_on_grid": 64,
+      "off_grid_share": 0.0,
+      "argmax_digit": 8,
+      "argmax_share": 0.7656,
+      "concentration": 0.6656,
+      "digit_histogram": {
+        "2": 13,
+        "3": 2,
+        "8": 49
+      },
+      "share_at_8": 0.7656
+    },
+    "same_argmax": true,
+    "criterion": "DIVERGENCE requires different argmax AND both legs above the effect-size floor; anything less is concordant-or-inconclusive, recorded, non-blocking"
+  },
+  "unpaired_known_negative": {
+    "haiku": {
+      "n_on_grid": 960,
+      "null_p50": 0.0146,
+      "null_p95": 0.026,
+      "null_p99": 0.0302,
+      "null_max": 0.0417
+    },
+    "flash": {
+      "n_on_grid": 960,
+      "null_p50": 0.0156,
+      "null_p95": 0.026,
+      "null_p99": 0.0312,
+      "null_max": 0.0406
+    },
+    "kimi": {
+      "n_on_grid": 1005,
+      "null_p50": 0.0154,
+      "null_p95": 0.0254,
+      "null_p99": 0.0303,
+      "null_max": 0.0433
+    }
+  },
+  "paired": {
+    "legs": [
+      "haiku",
+      "flash",
+      "kimi",
+      "sonnet"
+    ],
+    "statistic": {
+      "n_matched": 957,
+      "models": [
+        "haiku",
+        "flash",
+        "kimi",
+        "sonnet"
+      ],
+      "tv_model_digit": 0.3654,
+      "all_agree_rate": 0.0125,
+      "per_model": {
+        "haiku": {
+          "argmax_digit": 8,
+          "argmax_share": 0.6249,
+          "concentration": 0.5249,
+          "tv_vs_pooled": 0.3354,
+          "share_at_8": 0.6249,
+          "digit_histogram": {
+            "0": 16,
+            "1": 82,
+            "2": 189,
+            "5": 31,
+            "6": 6,
+            "7": 15,
+            "8": 598,
+            "9": 20
+          }
+        },
+        "flash": {
+          "argmax_digit": 5,
+          "argmax_share": 0.6228,
+          "concentration": 0.5228,
+          "tv_vs_pooled": 0.6403,
+          "share_at_8": 0.0293,
+          "digit_histogram": {
+            "0": 326,
+            "1": 2,
+            "2": 5,
+            "5": 596,
+            "8": 28
+          }
+        },
+        "kimi": {
+          "argmax_digit": 2,
+          "argmax_share": 0.3804,
+          "concentration": 0.2804,
+          "tv_vs_pooled": 0.181,
+          "share_at_8": 0.2727,
+          "digit_histogram": {
+            "0": 68,
+            "1": 11,
+            "2": 364,
+            "3": 9,
+            "4": 18,
+            "5": 181,
+            "6": 36,
+            "7": 5,
+            "8": 261,
+            "9": 4
+          }
+        },
+        "sonnet": {
+          "argmax_digit": 8,
+          "argmax_share": 0.4274,
+          "concentration": 0.3274,
+          "tv_vs_pooled": 0.3049,
+          "share_at_8": 0.4274,
+          "digit_histogram": {
+            "0": 5,
+            "1": 125,
+            "2": 338,
+            "3": 13,
+            "4": 10,
+            "5": 14,
+            "6": 27,
+            "7": 10,
+            "8": 409,
+            "9": 6
+          }
+        }
+      }
+    },
+    "known_negative_label_permutation": {
+      "n_perm": 2000,
+      "null_p50": 0.02612,
+      "null_p95": 0.03481,
+      "null_p99": 0.03814,
+      "null_max": 0.04252
+    },
+    "residue_check": {
+      "haiku": {
+        "n_matched": 957,
+        "n_residue": 3,
+        "matched_type_share": {
+          "tangled_rope": 0.6113,
+          "rope": 0.1829,
+          "snare": 0.094,
+          "mountain": 0.0752,
+          "piton": 0.024,
+          "scaffold": 0.0125
+        },
+        "residue_type_share": {
+          "tangled_rope": 0.6667,
+          "snare": 0.3333
+        },
+        "max_share_delta": 0.2393
+      },
+      "flash": {
+        "n_matched": 957,
+        "n_residue": 3,
+        "matched_type_share": {
+          "tangled_rope": 0.4326,
+          "rope": 0.2466,
+          "snare": 0.1818,
+          "mountain": 0.1087,
+          "piton": 0.0219,
+          "scaffold": 0.0084
+        },
+        "residue_type_share": {
+          "tangled_rope": 0.6667,
+          "snare": 0.3333
+        },
+        "max_share_delta": 0.2466
+      },
+      "kimi": {
+        "n_matched": 957,
+        "n_residue": 48,
+        "matched_type_share": {
+          "tangled_rope": 0.7513,
+          "rope": 0.1014,
+          "snare": 0.0752,
+          "mountain": 0.0397,
+          "piton": 0.0219,
+          "scaffold": 0.0104
+        },
+        "residue_type_share": {
+          "tangled_rope": 0.7083,
+          "scaffold": 0.1458,
+          "snare": 0.0625,
+          "rope": 0.0625,
+          "mountain": 0.0208
+        },
+        "max_share_delta": 0.1354
+      },
+      "sonnet": {
+        "n_matched": 957,
+        "n_residue": 44,
+        "matched_type_share": {
+          "tangled_rope": 0.698,
+          "rope": 0.163,
+          "snare": 0.0575,
+          "mountain": 0.0355,
+          "piton": 0.0293,
+          "scaffold": 0.0167
+        },
+        "residue_type_share": {
+          "tangled_rope": 0.5,
+          "rope": 0.2045,
+          "scaffold": 0.1818,
+          "snare": 0.0909,
+          "piton": 0.0227
+        },
+        "max_share_delta": 0.198
+      }
+    }
+  },
+  "unpaired_mde_at_floor": {
+    "59": 0.24,
+    "60": 0.25,
+    "95": 0.23,
+    "165": 0.21,
+    "690": 0.2,
+    "957": 0.2,
+    "1001": 0.2
+  },
+  "unpaired_mde_note": "smallest excess share above uniform detectable with power>=0.80 at the pre-committed floor 0.25; cells below n=50 are excluded from scoring entirely and are not tabulated here",
+  "test_read": {
+    "test_stratum": "testsets_sonnet (claude-sonnet-5)",
+    "n": 1001,
+    "bands": {
+      "tangled_rope": {
+        "n": 690,
+        "p10": 0.4180000000000001,
+        "p90": 0.71,
+        "median": 0.58,
+        "distinct": 34
+      },
+      "snare": {
+        "n": 59,
+        "p10": 0.58,
+        "p90": 0.88,
+        "median": 0.79,
+        "distinct": 17
+      },
+      "rope": {
+        "n": 165,
+        "p10": 0.08,
+        "p90": 0.38,
+        "median": 0.22,
+        "distinct": 23
+      },
+      "scaffold": {
+        "n": 24,
+        "p10": 0.28,
+        "p90": 0.46199999999999997,
+        "median": 0.41000000000000003,
+        "distinct": 10
+      },
+      "mountain": {
+        "n": 34,
+        "p10": 0.04,
+        "p90": 0.5319999999999998,
+        "median": 0.11,
+        "distinct": 17
+      },
+      "piton": {
+        "n": 29,
+        "p10": 0.18,
+        "p90": 0.71,
+        "median": 0.48,
+        "distinct": 12
+      }
+    },
+    "excluded_below_min_n": {},
+    "types_present_in_comparator_set": [
+      "rope",
+      "tangled_rope",
+      "snare"
+    ],
+    "worst_pair_auc": 0.8858,
+    "pairwise_auc": {
+      "rope<tangled_rope": 0.9597,
+      "tangled_rope<snare": 0.8858
+    },
+    "sep_threshold": 0.6347,
+    "retired_measure_p10_p90_max_overlap": 0.4452,
+    "localization_pooled": {
+      "n": 1001,
+      "n_on_grid": 993,
+      "off_grid_share": 0.008,
+      "argmax_digit": 8,
+      "argmax_share": 0.431,
+      "concentration": 0.331,
+      "digit_histogram": {
+        "0": 6,
+        "1": 132,
+        "2": 355,
+        "3": 11,
+        "4": 8,
+        "5": 14,
+        "6": 26,
+        "7": 7,
+        "8": 428,
+        "9": 6
+      },
+      "share_at_8": 0.431
+    },
+    "localization_by_type": {
+      "tangled_rope": {
+        "n": 690,
+        "n_on_grid": 685,
+        "off_grid_share": 0.0072,
+        "argmax_digit": 8,
+        "argmax_share": 0.4161,
+        "concentration": 0.3161,
+        "digit_histogram": {
+          "0": 2,
+          "1": 96,
+          "2": 272,
+          "3": 2,
+          "4": 4,
+          "5": 7,
+          "6": 13,
+          "7": 1,
+          "8": 285,
+          "9": 3
+        },
+        "share_at_8": 0.4161
+      },
+      "snare": {
+        "n": 59,
+        "n_on_grid": 57,
+        "off_grid_share": 0.0339,
+        "argmax_digit": 1,
+        "argmax_share": 0.4386,
+        "concentration": 0.3386,
+        "digit_histogram": {
+          "1": 25,
+          "2": 5,
+          "6": 3,
+          "7": 5,
+          "8": 16,
+          "9": 3
+        },
+        "share_at_8": 0.2807
+      },
+      "rope": {
+        "n": 165,
+        "n_on_grid": 165,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.5273,
+        "concentration": 0.4273,
+        "digit_histogram": {
+          "0": 2,
+          "1": 3,
+          "2": 53,
+          "3": 7,
+          "5": 4,
+          "6": 8,
+          "7": 1,
+          "8": 87
+        },
+        "share_at_8": 0.5273
+      }
+    },
+    "localization_excluded": {
+      "scaffold": 24,
+      "mountain": 34,
+      "piton": 29
+    },
+    "condition_i_pooled_below_floor": false,
+    "condition_i_per_type_fires": {
+      "tangled_rope": true,
+      "snare": true,
+      "rope": true
+    },
+    "condition_ii_near_separable": true,
+    "paired_primary": {
+      "tv_model_digit": 0.3654,
+      "floor": 0.15,
+      "fires": true,
+      "null_p99": 0.03814,
+      "model_bound": true,
+      "per_model": {
+        "haiku": {
+          "argmax_digit": 8,
+          "argmax_share": 0.6249,
+          "concentration": 0.5249,
+          "tv_vs_pooled": 0.3354,
+          "share_at_8": 0.6249,
+          "digit_histogram": {
+            "0": 16,
+            "1": 82,
+            "2": 189,
+            "5": 31,
+            "6": 6,
+            "7": 15,
+            "8": 598,
+            "9": 20
+          }
+        },
+        "flash": {
+          "argmax_digit": 5,
+          "argmax_share": 0.6228,
+          "concentration": 0.5228,
+          "tv_vs_pooled": 0.6403,
+          "share_at_8": 0.0293,
+          "digit_histogram": {
+            "0": 326,
+            "1": 2,
+            "2": 5,
+            "5": 596,
+            "8": 28
+          }
+        },
+        "kimi": {
+          "argmax_digit": 2,
+          "argmax_share": 0.3804,
+          "concentration": 0.2804,
+          "tv_vs_pooled": 0.181,
+          "share_at_8": 0.2727,
+          "digit_histogram": {
+            "0": 68,
+            "1": 11,
+            "2": 364,
+            "3": 9,
+            "4": 18,
+            "5": 181,
+            "6": 36,
+            "7": 5,
+            "8": 261,
+            "9": 4
+          }
+        },
+        "sonnet": {
+          "argmax_digit": 8,
+          "argmax_share": 0.4274,
+          "concentration": 0.3274,
+          "tv_vs_pooled": 0.3049,
+          "share_at_8": 0.4274,
+          "digit_histogram": {
+            "0": 5,
+            "1": 125,
+            "2": 338,
+            "3": 13,
+            "4": 10,
+            "5": 14,
+            "6": 27,
+            "7": 10,
+            "8": 409,
+            "9": 6
+          }
+        }
+      },
+      "all_agree_rate": 0.0125
+    },
+    "secondary_default_leg_sonnet5": {
+      "n": 95,
+      "read": "pooled only",
+      "why_pooled_only": "per-type cells ~55/10/5; uniform-digit null p50 is 0.300 at n=5 and 0.200 at n=10 \u2014 below the floor, so per-type cells would fire on noise",
+      "pooled": {
+        "n": 95,
+        "n_on_grid": 95,
+        "off_grid_share": 0.0,
+        "argmax_digit": 8,
+        "argmax_share": 0.4421,
+        "concentration": 0.3421,
+        "digit_histogram": {
+          "1": 20,
+          "2": 29,
+          "4": 3,
+          "6": 1,
+          "8": 42
+        },
+        "share_at_8": 0.4421
+      },
+      "concordant_with_test_stratum": true
+    },
+    "conflict_rule": "PAIRED GOVERNS the verdict; a paired/unpaired disagreement is a headline WRITEUP finding, pinned before the read (operator ruling 2026-08-10)"
+  }
+}
