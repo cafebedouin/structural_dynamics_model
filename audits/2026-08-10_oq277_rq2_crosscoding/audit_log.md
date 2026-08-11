@@ -438,6 +438,77 @@ uncorrelated with the cost. **A verification stack audited by following its red 
 systematically miss every defect whose signature is silence** — which is the class that takes whole
 runs.
 
+## 2026-08-11 — EVIDENCE for the stamp ruling (the ruling itself is the operator's, PENDING)
+
+The operator asked whether a second run goes under the existing stamp or needs a new one, noting
+the circularity: the answer determines what a path enumeration is *for*, but the enumeration is
+what one would want in hand to rule. **Most of the circularity dissolves — the question turns on
+three facts that are available now.**
+
+### Fact 1 — the driver was NEVER pinned by the preregistration
+
+`oq277_crosscoding_driver.py` appears **0 times** in the builder's `PINNED` manifest. The freeze
+pins `CLAUDE.md`, `build_discipline.md`, Wu's two sources, **the lexicon**, both prompts, the
+amendment, six control files and two rulings — and **not the instrument that executes the run**.
+
+So "the prereg was frozen against a driver that could not retain its output" *understates* it. The
+freeze made **no claim about the driver at all**. A green freeze check was therefore fully
+compatible with an instrument that could not produce data — which is exactly what happened, and it
+is not a coincidence that no check caught it.
+
+### Fact 2 — the ANALYSIS half does not exist, in code or in specification
+
+| artifact | status | witness |
+|---|---|---|
+| H5 scorer (agree / FLIP / uninformative over the 4 overlap pairs) | **does not exist** | no OQ-277 file contains `FLIP`/`INSIDE FLOOR`/`uninformative`; the 8 repo hits are unrelated (`g_channel_flip_audit`, the sweeps, `tensions_ledger`) |
+| matrix construction | **does not exist** | only four `oq277_*` scripts exist: `build_prereg`, `crosscoding_driver`, `lexicon`, `make_coder_packets` |
+| `matrices/` | **empty** since it was created 2026-08-10 | directory listing |
+| a specified mechanism/phase for producing either | **not in the frozen design** | the document fixes the verdict *grammar* and §E's thresholds, and names no phase, script or procedure that computes them; "Phase 3" occurs once and refers to the calls |
+
+*Controls: `FLIP` occurs 3× in the frozen document, so the term is real and the probe reads; the
+same greps return the files they should for `matrix_unit`.*
+
+**Consequence, which is larger than the stamp question:** even a *perfect* capture run would have
+produced 219 scoreable answers that **nothing in the repository can score**. Pattern 1 — a producer
+with no consumer — was sitting one stage downstream of the stage that just failed, and would have
+fired next. The capture failure hid it.
+
+**Stated precisely, because the design is silent rather than wrong:** scoring was either to be done
+by hand at writeup, or it was an unnoticed gap. **The frozen text does not distinguish these**, and
+this entry does not guess. What is certain is that no mechanism exists and none is named.
+
+### Fact 3 — two pinned sources have already drifted, with material derived from the failed run
+
+`CLAUDE.md` and `docs/technical/build_discipline.md` have moved since the freeze, both carrying the
+*Gate the output* discipline the failure produced. Not fatal for a re-run — the coder prompts are
+pinned separately and are unchanged — but the stamp already describes a repository state that no
+longer exists.
+
+### The recommendation, and the strongest case against it
+
+**Recommendation: NEW STAMP** — agreeing with the operator's stated prior, on a stronger basis.
+The prior was "frozen against a defective driver"; the evidence is that the freeze **did not reach
+the driver**, and that the analysis half is absent from both the code and the design. A new
+preregistration should pin the driver and specify the scorer, which is precisely what the existing
+one cannot be made to do without being rewritten.
+
+**The strongest case for keeping the stamp, stated fairly:** the *design* is intact and unchanged —
+what is coded, by whom, in what order, every threshold, every declared residue. A preregistration's
+job is to pin the design, not the plumbing; the plumbing failed, so repair it and re-run under the
+same design. That is coherent, and it is the position to beat.
+
+**Why it loses:** "the plumbing is not part of the preregistration" is the assumption that allowed a
+defective instrument to run under a valid freeze. If the stamp does not cover the instrument, then a
+GREEN freeze check carries no information about whether the run can produce data. Widening what the
+stamp pins is the repair, and widening it *is* a new stamp.
+
+**What this does to the enumeration.** Under a new stamp it stops being an audit of a frozen design
+and becomes a **specification**: what the next preregistration must pin (driver and scorer included),
+and what must be built and two-sidedly witnessed before it is frozen. That is the more useful
+artifact, and it is the one that would have prevented this run.
+
+**PENDING: the ruling is the operator's.** Recorded as evidence, not as a decision.
+
 ### CORRECTION, same day — commit `f0e91cc0`'s message is WRONG, and it is instance six
 
 That commit's message states *"Freeze md5 4118f64e unaffected — audit_log.md is not an incorporated
