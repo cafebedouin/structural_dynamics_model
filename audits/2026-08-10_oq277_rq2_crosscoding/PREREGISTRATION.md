@@ -217,12 +217,12 @@ Computed from the assembled packets, not asserted:
 |---|---|---|
 | direction (i) — 22 units + 3 anchors + 2 decoys + 3 twin arms | 30 | 90 |
 | direction (ii) — 26 units + 3 anchors + 2 decoys + 5 twin arms | 36 | 108 |
-| (iii') — 7 new units (3 anchor members reuse their direction-(i) calls) | **not built** | **0** |
+| (iii') — 7 new units (3 anchor members reuse their direction-(i) calls) | 7 | 21 |
 | escape units | **0** | **0** |
-| **assembled total** | **66** | **198** |
+| **assembled total** | **73** | **219** |
 | **design total** | **73** | **219** |
 
-> **INCOMPLETE.** ['iii_prime'] not built. The assembled total is a PARTIAL, not the expected call count. The freeze completes only when the assembled total equals the design total of 73 items / 219 calls.
+> Assembled total equals the design total. The call-count precondition for the freeze is satisfied.
 
 **The live path is structurally gated.** `--live` refuses unless PREREGISTRATION.md exists AND
 its md5 is recorded in `audit_log.md` above the first result line AND every leg is built.
@@ -303,14 +303,14 @@ Every artifact this preregistration depends on, pinned so a reader can verify th
 
 | artifact | md5 | what it is |
 |---|---|---|
-| `CLAUDE.md` | `01084bd81a969da9c40a464ce29cfbb4` | the published six; Build Discipline block, lines 472-540 |
-| `docs/technical/build_discipline.md` | `694161aaacb4908d050be0c713366f1f` | mechanism text behind the six |
+| `CLAUDE.md` | `743349c6e88104744778316d86c10718` | the published six; Build Discipline block, lines 472-540 |
+| `docs/technical/build_discipline.md` | `8501d448c03e77f5013aaff7a9d22ebe` | mechanism text behind the six |
 | `packets/wu_source/failure_modes_catalog.md` | `f854454ed2be5bf489f2c5ee133ce013` | Wu's A-E, as fetched |
 | `packets/wu_source/llm_observer_ground_truth.yaml` | `f26359b2d9f98b6b310aed9b473a1395` | Wu's dataset rows |
-| `python/audits/oq277_lexicon.py` | `692c5b92df9e244294a9c60b768e44a9` | the single leak matcher, both pinned versions |
+| `python/audits/oq277_lexicon.py` | `dbb7440a86b9eaf98256b1d02ebea229` | the single leak matcher, both pinned versions |
 | `prompts/direction_i.md` | `c2d8c9bf65fac64460305c9fbacb0a34` | coder prompt: directions (i) and (iii') |
 | `prompts/direction_ii.md` | `4fb7ceeb17aa1dab472c048b698a3b7f` | coder prompt: direction (ii) |
-| `verdict_grammar_amendment.md` | `d1256d032696c941abdb1dfc1f35fbf6` | incorporated verbatim as Appendix D |
+| `verdict_grammar_amendment.md` | `96ca8dba5429ad7be116f3f6b70f83d0` | incorporated verbatim as Appendix D |
 | `controls/anchors.json` | `470be752cdfeed9c366f66ea909ada00` | anchor set, both directions |
 | `controls/decoys.json` | `7bc88644ff18a1df722f68c04a091bb1` | decoys |
 | `controls/planted.json` | `68477df87f2f1e53474f2733ab2b0034` | planted leak fixtures + planted broken unit |
@@ -639,7 +639,7 @@ Usage:
     python3 python/audits/oq277_lexicon.py --sweep <units.json> --direction {i,ii}
 """
 from __future__ import annotations
-import argparse, json, re, sys
+import argparse, json, os, re, sys, tempfile
 
 # ---------------------------------------------------------------------------
 # Direction (i): Wu's incidents, coded against OUR six. Strip WU's vocabulary.
@@ -876,10 +876,46 @@ def scan(text: str, direction: str, lexicon: dict | None = None):
     return hits
 
 
+class UnitsFormatError(Exception):
+    """A units file whose shape cannot be resolved. Raised rather than swept as empty."""
+
+
+def load_units(path: str):
+    """Resolve a units file to a list of unit objects. THREE shapes are accepted.
+
+    1. a JSON list of unit objects
+    2. a dict wrapper carrying them under "units"
+    3. a SINGLE unit object (a bare dict, no "units" key)
+
+    Shape 3 is why this function exists. The original test was
+    `data["units"] if isinstance(data, dict) else data`, and a single unit object IS a
+    dict, so a one-unit file took the wrapper branch and died on KeyError: 'units'. Two
+    extractors were told to sweep single-object files by a brief that specified this
+    exact call, and both hit it (OQ-277, 2026-08-11).
+
+    Fail-closed: a dict that is neither a wrapper nor a recognisable unit raises rather
+    than resolving to []. Sweeping zero units and reporting "0 hits" is the shape this
+    whole experiment is about.
+    """
+    if isinstance(data := json.load(open(path)), list):
+        return data
+    if not isinstance(data, dict):
+        raise UnitsFormatError(f"{path}: top level is {type(data).__name__}, expected list or object")
+    if "units" in data:
+        if not isinstance(data["units"], list):
+            raise UnitsFormatError(f"{path}: 'units' is {type(data['units']).__name__}, expected list")
+        return data["units"]
+    if any(f in data for f in CODER_FACING_FIELDS) or "id" in data:
+        return [data]                      # shape 3 — a single unit object
+    raise UnitsFormatError(
+        f"{path}: object has no 'units' key and no coder-facing field "
+        f"({', '.join(CODER_FACING_FIELDS)}) or 'id' — cannot tell a wrapper from a unit. "
+        f"Refusing to sweep 0 units.")
+
+
 def scan_units(path: str, direction: str):
     """Sweep the coder-facing fields of a units file. Returns [(unit_id, field, *hit)]."""
-    data = json.load(open(path))
-    units = data["units"] if isinstance(data, dict) else data
+    units = load_units(path)
     out = []
     for u in units:
         for f in CODER_FACING_FIELDS:
@@ -971,6 +1007,68 @@ def selftest() -> bool:
     print("\nmatcher-integrity control — a matcher that never fires must fail this:")
     check("scan() is capable of returning hits at all",
           len(scan("Class A fail-plausible MR-4", "i")) >= 3)
+
+    # ---- input-shape controls (added 2026-08-11 after the second receiver hit the
+    # single-object KeyError). These go through a REAL file and the real json.load, not
+    # a dict handed straight to the normaliser: the defect was on the file path, and a
+    # control that skips the path it is protecting witnesses nothing.
+    print("\ninput-shape controls — all three accepted shapes, on the real file path:")
+    unit_clean = {"id": "shape-probe", "symptom": "a value was read as measured.",
+                  "mechanism_as_described": "an empty collection acquired a plausible default.",
+                  "detection_path": "two metrics disagreed over one input.",
+                  "consequence": "the reading stood for its whole life."}
+    unit_leaky = dict(unit_clean, id="shape-probe-leak",
+                      symptom="this is a P6 instance, textbook success-shaped absorption.")
+    with tempfile.TemporaryDirectory() as td:
+        def written(name, obj):
+            p = os.path.join(td, name)
+            with open(p, "w") as fh:
+                json.dump(obj, fh)
+            return p
+
+        def check_call(label, fn, want):
+            """FAIL on a raised exception instead of dying. A selftest that aborts
+            partway is the same crash-vs-result confusion this block exists to fix —
+            the run ends, the remaining cases never report, and the exit code is
+            shared with an ordinary RED."""
+            try:
+                check(label, want(fn()))
+            except Exception as exc:                                      # noqa: BLE001
+                check(f"{label}  [raised {type(exc).__name__}]", False)
+
+        single, single_leak = written("single.json", unit_clean), written("leak.json", unit_leaky)
+        as_list, wrapped = written("list.json", [unit_clean]), written("wrap.json", {"units": [unit_clean]})
+        junk = written("junk.json", {"note": "no units key, no coder-facing field"})
+
+        # (a) it CONSUMES a single object rather than raising — the reported defect
+        try:
+            n_single, raised = len(load_units(single)), None
+        except Exception as exc:                                          # noqa: BLE001
+            n_single, raised = -1, exc
+        check("single unit OBJECT file is consumed, not KeyError", raised is None)
+        check("single unit object resolves to exactly 1 unit", n_single == 1)
+
+        # (b) and the sweep over it actually LOOKS — "consumed" must not mean "swept nothing".
+        #     Without this pair, a fix that returned [] would pass (a) and be worse than
+        #     the crash it replaced.
+        check_call("planted leak in a single-object file IS caught",
+                   lambda: scan_units(single_leak, "ii"), lambda h: len(h) > 0)
+        check_call("clean single-object file yields no hits",
+                   lambda: scan_units(single, "ii"), lambda h: not h)
+
+        # (c) the two pre-existing shapes are unchanged
+        check_call("list form still resolves", lambda: load_units(as_list), lambda u: len(u) == 1)
+        check_call("{'units': [...]} wrapper still resolves",
+                   lambda: load_units(wrapped), lambda u: len(u) == 1)
+
+        # (d) fail-closed: an unrecognisable object must RAISE, never sweep 0 units
+        try:
+            load_units(junk); junk_ok = False
+        except UnitsFormatError:
+            junk_ok = True
+        except Exception:                                                 # noqa: BLE001
+            junk_ok = False
+        check("unrecognisable object RAISES rather than sweeping 0 units", junk_ok)
     return ok
 
 
@@ -993,20 +1091,36 @@ def main():
         if not a.direction:
             print("--sweep requires --direction", file=sys.stderr)
             return 2
+        units = load_units(a.sweep)
         hits = scan_units(a.sweep, a.direction)
         for uid, field, group, pat, txt, ctx in hits:
             print(f"  LEAK {uid}.{field}  [{group}] {pat} -> {txt!r}\n       ...{ctx}...")
-        n = json.load(open(a.sweep))
-        n = len(n["units"] if isinstance(n, dict) else n)
-        print(f"\nswept {n} units x {len(CODER_FACING_FIELDS)} fields, direction ({a.direction}): "
-              f"{len(hits)} hits")
+        print(f"\nswept {len(units)} units x {len(CODER_FACING_FIELDS)} fields, "
+              f"direction ({a.direction}): {len(hits)} hits")
         return 1 if hits else 0
     ap.print_help()
     return 2
 
 
+# Exit codes are part of this tool's interface and a caller MAY branch on them.
+#   0  swept, no hits          2  usage error
+#   1  swept, HITS FOUND       3  did not sweep — aborted before producing a verdict
+#
+# 3 exists because 1 used to double as "leaks found" and "crashed on load", and the
+# crash printed no LEAK lines — so a wrapper reading stdout for leaks saw a clean sweep
+# with a failure exit. A crash and a leak were indistinguishable at the interface, and
+# the crash produced the QUIETER of the two outputs. The stdout marker below is
+# deliberate: a caller that greps stdout and never reads stderr must still see it.
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except SystemExit:
+        raise
+    except BaseException as exc:                      # noqa: BLE001 — deliberate catch-all
+        print("SWEEP-ABORTED — no verdict was produced. This is NOT a clean sweep.")
+        print(f"  {type(exc).__name__}: {exc}", file=sys.stderr)
+        import traceback; traceback.print_exc(file=sys.stderr)
+        sys.exit(3)
 
 `````
 
@@ -1667,6 +1781,44 @@ fact that every anchor sits in the 12 and none in the 10.
 *unambiguity* and unambiguity is exactly what the hard stratum lacks. An anchor set is a sample of
 easy cases by construction, and both gaps are that fact showing up where it costs something.
 
+### O.3 The P6 gap is ONE incident showing up in three instruments, not three residues
+
+**Recorded 2026-08-11 at the operator's reading, before the (iii′) extraction ran.**
+
+`system_gradient`'s `[] → 0.0` fallback — the incident where a system-level gradient metric read
+exactly `0.0` on every input it had ever been given, because every computation had silently failed
+and the fallback was indistinguishable from measured-flat — appears at three separate places in
+this run's apparatus:
+
+| # | instrument | how the incident appears | consequence |
+|---|---|---|---|
+| 1 | direction-(i) anchor set | **disqualified** — the published P6 exemplar's incident is already an extracted unit (`controls/anchors.json` `_disqualified`) | §O.1: no P6 anchor; any direction-(i) P6 result is UNCALIBRATED |
+| 2 | (iii′) population, row 9 | **disqualified** on the anchors.json precedent (`RULING_2026-08-11_freeze_scope.md` §2.1) | the strongest (iii′) P6 exemplar is out; n=10 eligible, 7 written |
+| 3 | direction-(ii) twins, unit `05` | **used** — as the redacted arm of the `oq93_grid_viability_probe` pair, where collision with the unit is the definition of the control | the corrected set's third pair; role-appropriate, checked before writing (`controls/redaction_pair_selection_defect.md` → *The oq93 collision check*) |
+
+**Why this is worth a section rather than three separate declarations.** Read as three entries, the
+P6 situation looks like ordinary attrition — an anchor lost here, an exemplar lost there. Read as
+one incident, it is a **single point of failure sitting under the pattern that carries the most
+conceptual load**: P6 is the composition-layer pattern, it is what R5's pre-registered directional
+expectation concerns, and it is our side of the E↔P6 correspondence the writeup emits as a PROPOSED
+Ω_C mapping. Every instrument that could have calibrated P6 independently is drawing on the same
+underlying incident, so the residues are **correlated, not additive**, and no amount of accumulating
+them produces coverage.
+
+**What it does NOT change.** Nothing here is a new defect and nothing is repaired by recording it.
+Instrument 3 remains role-appropriate (an anchor must be an incident the coder has not otherwise
+seen; a twin's redacted arm *is* the unit). Instrument 2's disqualification remains *conservative
+rather than required* — different label spaces, different runs — and stands as declared. The
+correction is to the **reading**: §O.1's "no P6 anchor," the (iii′) row-9 disqualification, and the
+twin-pair collision check must be reported as three faces of one incident, and any writeup sentence
+that totals them as independent residues is over-counting the evidence against P6 coverage while
+under-stating its concentration.
+
+**The corpus fact underneath, stated so the gap is not read as an oversight.** There are three
+published P6 exemplars. The one strong enough to anchor on is the one that collides; constructing a
+new one would require the extractor to assign a pattern, which is the boundary the entire design
+rests on. **Declared, not repaired** — as in §O.1, and for the same reason.
+
 ## P. The self-comparison family — one section, not three catches
 
 Three times in this arc a **self-comparison** was caught before it landed, each in a different
@@ -1958,6 +2110,117 @@ the probe `OQ-93`; `PREREGISTRATION.md:6` names the `OQ-96` shim interim, which 
 already referenced). The check did not force a retraction — it forced the arm to become what its
 own provenance block already claimed.
 
+### L.8 The second unplanted fire in the arc — and the mirror image of L.7's grade profile
+
+**Recorded 2026-08-11 at the operator's reading. Logged beside §L.7 deliberately: these are the
+arc's only two controls that fired on real, unplanted material, and their evidence profiles are
+opposite.**
+
+`python/audits/oq277_build_prereg.py --check` asserts that `PREREGISTRATION.md` is byte-identical to
+a fresh assembly of its canonical sources. On 2026-08-11 it went **RED** — not on a planted fixture,
+but because `verdict_grammar_amendment.md` had gained §L.6 and §L.7 at operator grading and the
+assembled document still carried the pre-amendment text. The drift was real, the cause was ordinary
+work, and nothing about the run was constructed to test the check. Recorded at the time in
+`audit_log.md`; graded here.
+
+**Had that RED occurred one step later it would have been the freeze invalidation notice** — which
+is the whole reason the check exists, observed operating rather than asserted.
+
+**The grade, and why it is not L.7's grade.** Under *a positive control demonstrates DISCRIMINATION,
+not detection*, the fire is the cheap half and the declines are what license the reading. This check
+has the reverse profile from §L.7, and the difference should not be smoothed over:
+
+| | §L.7 (`verify_redaction_twins.py`, the no-overstatement check) | §L.8 (`oq277_build_prereg.py --check`) |
+|---|---|---|
+| fire | 1, on real material, caught its own author | 1, on real material, unplanted |
+| declines | **4, on four distinct pairs** — genuinely different inputs | **3, all the same comparison re-run** — low variety |
+| decline quality | each pair a real near-miss the check had to let pass | one was taken immediately after `--write`, comparing a file to a fresh assembly of the sources that had just produced it — **near-tautological, close to a check that cannot fail** |
+| net | discrimination evidenced on both sides | **fire side strong, decline side weak** |
+
+So the honest statement is: **one unplanted fire on genuine drift, with a decline set that carries
+little information.** That is the strongest *fire*-side evidence available short of the instrument's
+own history containing a hard negative, and it is materially weaker than §L.7 overall. Recording it
+as "the second naturally-fired control" is correct; recording it as evidence of the same strength as
+§L.7 would not be.
+
+**Scope, stated so the grade is not over-read.** The check discriminates on **byte-identity between
+the assembled document and its sources**, and on nothing else. It cannot detect an assembly that is
+internally consistent and wrong, a source that is itself mistaken, or a missing source that was
+never registered for incorporation — an unregistered appendix drifts freely and the check stays
+GREEN. Its record entitles it to "detects incorporated-source drift, evidenced by one unplanted fire
+on real drift," and to nothing wider. The record lapses if the source manifest changes.
+
+**Liveness re-witnessed at this recording, and labelled as what it is.** Before this section was
+written, `--check` was GREEN at md5 `c1040cd04815c206791b5ab3192697be`, matching the DRAFT stamp in
+`audit_log.md`. Writing §O.3 and this section turned it RED. That pair is a **planted** two-sided
+liveness witness — it confirms the check is wired and still bidirectional at HEAD; it **adds nothing
+to the discrimination grade above**, which rests entirely on the unplanted fire. Output pasted in
+`audit_log.md` under the 2026-08-11 amendment entry.
+
+### L.9 The eighth vacuous check — the first one at an INTERFACE rather than in a check's logic
+
+**Recorded 2026-08-11 at the operator's ruling; repaired the same day at commit `3e16a1d8`,
+before the freeze.**
+
+`oq277_lexicon.py --sweep` — the leak gate, the instrument the blindness of the entire experiment
+rests on — could not consume the single-object unit file that the (iii′) brief's own prescribed
+command passes it. It died on `KeyError: 'units'` because `isinstance(data, dict)` is true of a
+single unit object as well as of a wrapper.
+
+**That is the visible half and it is the boring one.** The sharp half is what the failure looked
+like from outside:
+
+| | crash | leak found |
+|---|---|---|
+| exit code | `1` | `1` |
+| `LEAK` lines on stdout | none | one per hit |
+| what a stdout-reading wrapper concludes | **clean sweep** | leaks, reported |
+
+**A crash and a leak were indistinguishable at the interface, and the crash produced the *quieter*
+of the two outputs.** A caller could reasonably read exit 1 as "leak found and reported" and find
+nothing reported; or grep stdout, find no `LEAK`, and record a clean sweep. Both readings are
+wrong in the direction that lets a contaminated packet through.
+
+**Why this is the eighth instance and not a repeat of the previous seven.** The first seven were
+checks whose *logic* could not return the failure they looked for — a `forall` over an empty table,
+a prose match for a marker that did not exist, a comparison of a placeholder against itself. **This
+one's logic is sound. The instrument works.** `scan()` matches correctly, the selftest's controls
+all fire, and on a well-formed input the sweep is exactly right. The vacuity is entirely in the
+**boundary where a caller reads the result** — the same information (`exit 1`, no `LEAK` lines)
+carries two incompatible meanings and nothing in the channel distinguishes them.
+
+> **The distinguishing feature, stated for §6.4: a check can be correct and still unreadable.**
+> Every prior instance was repaired by fixing the check. This one is repaired by fixing what the
+> check *says* — a distinct exit code (`3` = did not sweep), and an abort marker printed on
+> **stdout**, because a caller that greps stdout and never reads stderr must still see it. Auditing
+> a verification stack for vacuity therefore has to include its interfaces, not only its
+> predicates, and *"the instrument is correct"* does not answer the question.
+
+**Two receivers, and the refusal is what surfaced it.** The escape extractor reported the crash;
+the brief still carried the broken command verbatim; the (iii′) extractor hit it again and reported
+it a second time. Neither was caught by a reader. Both were caught by an instance made to *execute*
+the instruction — the receiver's-license mechanism (`build_discipline.md` → *The receiver's license
+to refuse*), firing on the arc that minted it. **A third receiver might not have read the
+traceback**, which is the operator's stated reason for repairing a frozen instrument rather than
+carrying the defect into the run.
+
+**The repair's own control, since an introduced instrument is itself a claim.** Seven `input-shape`
+cases run through a real file and the real `json.load`, not a dict handed to the normaliser — the
+defect lived on the file path, and a control that skips the path it protects witnesses nothing.
+Two-sided by construction: *"consumed without raising"* is paired with *"a planted leak in a
+single-object file IS caught,"* because a repair that returned `[]` would satisfy the first and be
+**worse than the crash it replaced**. Negative control: reverting only the normaliser turns 5 of
+the 7 cases FAIL and leaves the list and wrapper cases PASS — it discriminates rather than failing
+everything.
+
+**Declared, because it is the same shape one level in:** the first attempt at that negative control
+went red on an `IndentationError` in the scratch copy and therefore tested nothing; and the
+selftest as first written *aborted* partway through the reverted run instead of reporting FAIL,
+reproducing the crash-vs-result confusion inside the fix for the crash-vs-result confusion. Both
+were caught and repaired (`check_call` marks FAIL on a raised exception); they are recorded rather
+than smoothed because §6.4's claim is that the recursion terminates in someone counting, and this
+is what that looks like when it happens twice in one repair.
+
 `````
 
 ---
@@ -1983,8 +2246,10 @@ Opaque ids as assembled, in emitted order. Non-coder-facing detail (role, true l
 
 ### (iii') — 7 new units (3 anchor members reuse their direction-(i) calls)
 
-**NOT BUILT** — pending hand-back. Declared as ABSENT, never emitted as an empty packet: an empty packet written without comment is the absence-satisfies-the-gate shape, and a downstream expected-call total computed from it would be smaller and self-consistent.
-
+- items: **7** · matrix cells: **0** · quarantined: **7** · unit-sweep direction: **(ii)**
+- leak-exempt: none
+- emitted order: `iii-01 iii-02 iii-03 iii-04 iii-05 iii-06 iii-07`
+- packet md5: `75ff29fcc793065b639747297a77ae9a` · map md5: `d2b2556b28a8634c931ffdbcff3c65a9`
 
 ---
 

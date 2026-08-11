@@ -266,6 +266,61 @@ brief is a frozen handoff, both above the fix-on-sight threshold. **Escalated to
   had one existed. This is OQ-278 seen from a third angle and it explains the (iii′) P3 row's
   emptiness mechanically: the published P3 has no worked mechanism to extract from.
 
+## 2026-08-11 — PREREGISTRATION **FROZEN**. This is the freeze stamp.
+
+**No model call has been made in this audit.** `payloads/` and `responses/` verified **0 files
+each** at the moment of stamping. The only payloads that exist are the 219 stub dumps in
+`payloads_stub/`, which were never sent.
+
+| artifact | md5 | status |
+|---|---|---|
+| `PREREGISTRATION.md` (2256 lines, assembled) | `4118f64ecaab06260c2b30841121e7b2` | **FROZEN — this is the stamp** |
+
+*Supersedes DRAFT `c1040cd04815c206791b5ab3192697be` (1991 lines) and the earlier
+`95e1fc00368a6b7bf4d2886cf02e4c65` (1908 lines). Both are recorded rather than overwritten; each
+was invalidated by an incorporated source changing, and `--check` went RED on exactly that both
+times.*
+
+### The freeze sequence, discharged step by step
+
+| step | witness |
+|---|---|
+| 1. (iii′) units handed back | 7 files at `packets/iii_prime_units/`, commit `5ce2c37e`; gaps at `03`/`04`/`07`/`09` intact |
+| 2. `oq277_make_coder_packets.py --build-run` | **73 items · 219 calls at k=3**, no `INCOMPLETE` banner; all build gates passed |
+| 3. `oq277_crosscoding_driver.py --stub --dry-run` | **`captured = 219   expected = 219`**, printed **above** the grep output; fixtures 2/2 fired, 8 exempt twin arms fired, everything else clean |
+| 4. `oq277_build_prereg.py --write` then `--check` | **GREEN**, md5 `4118f64e…`, every verbatim appendix matches its canonical source |
+| 5. stamp recorded here, above the sentinel | this entry |
+| 6. spend-go | **NOT GIVEN — the operator's seat. No live call may be made.** |
+
+### The total was RECOMPUTED, not carried — and it agrees
+
+`198 + 21 = 219` was stated in this log and in three handoff messages. It was **not** used to satisfy
+any step. Step 2's total comes from the builder counting the packets it just wrote; step 3's from the
+driver's own `expected`, computed from those packets; the extractor independently recomputed 73 from
+units globbed off disk. **Three independent derivations, all 219, none consulting the carried
+figure** — and the (iii′) leg genuinely could have come back at 6 or 8 (one exemplar was written under
+a declared collision risk that would have made it 72/216 had it been upheld; it was checked and
+discharged, see the hand-back entry above). **The agreement is the finding; had any derivation
+disagreed, that would have been a finding to report rather than a discrepancy to reconcile.**
+
+### Changed between the DRAFT and this freeze — the audit trail for the md5 delta
+
+1. **The 7 (iii′) units landed** (`5ce2c37e`) — the leg that made the DRAFT a draft. Packets went
+   66 → 73 items, 198 → 219 calls.
+2. **`verdict_grammar_amendment.md` gained §O.3, §L.8 and §L.9** (`51f74622`, `142a3c33`) — the P6
+   concentration, the second unplanted fire, and the eighth vacuous check.
+3. **`oq277_lexicon.py` was repaired** (`3e16a1d8`) — the leak gate's crash and its leak verdict were
+   indistinguishable at the interface. The tool is incorporated verbatim into the prereg, so the
+   repair is inside the frozen document. **This is the one change to a frozen instrument in this
+   sequence, made on an explicit operator ruling after two receivers hit it**, and it is recorded
+   here so the freeze is not read as covering an unmodified toolchain.
+
+### What the stamp does and does not bind
+
+It binds the design: what is coded, by whom, in what order, what each outcome means, and every
+declared residue. **It does not license a call.** `oq277_crosscoding_driver.py --live` still refuses
+until spend-go, and the first coding result may not be appended above the sentinel below.
+
 Everything above this line is design. Everything below it is result.
 
 <!--OQ277-FIRST-CODING-RESULT-->
