@@ -101,6 +101,53 @@ unreachable.
 - Result lands as a dated section appended to this file, with the primary-side seed, the presentation
   order, any declared location mismatch, and all four verdicts recorded together.
 
+## Amendment 1 (2026-08-11, BEFORE any run) — the judge does not have to be a model
+
+Operator question: is a live instance required because the conventions are tacit, or are they
+written? **They are written**, so a model judge is not required on the knowledge axis.
+
+- The boundary rule was fixed in writing before extraction (`verdict_grammar_amendment.md` §H.1,
+  "Boundary rule — fixed NOW, before the remaining units are extracted"), and my own handoff carries
+  it verbatim along with the selection rule (fullest described mechanism, alternatives recorded) and
+  the redaction rule. A judge needs the written clause and four short units; nothing tacit is in
+  play. I established this from section headers and my own handoff — I did not read, and did not
+  need to read, any primary unit.
+- **The binding axis is recognition, not knowledge, and it is the one that argues for care.** An
+  operator judge removes model variance, the spend, and the same-family confound outright. It adds
+  one risk a fresh instance does not carry: the operator has read the primary sample and may
+  **recognize** the two primaries under stripped labels — at which point the calibration arm is
+  circular, because the primaries come back extract for being known primaries rather than for
+  clearing a threshold. A fresh instance is genuinely blind to them, and pays for it in variance
+  and in judging its own family.
+
+**Recommendation: the operator judges, under three conditions.** All three are pre-committed here,
+before any item is assembled.
+
+1. **The other instance assembles and holds the key.** It draws the primary side, strips labels,
+   randomizes presentation order with a stated seed, and does not tell the judge the composition —
+   not the assignment, not the 2+2 split, not that two strata exist.
+2. **A recognition flag per item, recorded WITH the verdict and BEFORE the key is revealed:** *did
+   you recognize this item's provenance?* Pre-commit: **any item flagged recognized voids the
+   calibration arm**, and that pass falls back to a fresh instance, at which point spend-go applies.
+   This is a self-report where no witness is available, and it is admissible only because it errs
+   safe — it can void a pass, never validate one.
+3. **Judge before any §H.2 confirmation of the two drawn candidates.** Blindness protects the
+   confirmation as well as the probe: while blind, the judge cannot know which two items are escape
+   candidates, so this pass cannot anchor the later confirmation of those same two. Reveal the key
+   only after all four verdicts and all four recognition flags are written down.
+
+If any condition cannot hold, the fallback is a fresh instance plus spend-go, and the same-family
+confound is **declared, not repaired**.
+
+## Amendment 2 (2026-08-11, same turn) — what the frame audit changed under this probe
+
+`FRAME_AUDIT_prose_visibility.md` (this directory) removes 4 unseeable directories from the frame,
+two of which are in my sample and are exactly my two NO-UNITs. **In-frame, the escape result is 6
+candidates from 6 directories, not 6 from 8.** This does not change the probe's design, its draw, or
+its outcome semantics. It changes the stakes: there is no longer a NO-UNIT in my slice that could be
+read as the threshold behaving conservatively somewhere.
+
 ## Result
 
-*(empty — nothing has been run. Do not fill this in from a pass whose calibration arm failed.)*
+*(empty — nothing has been run. Do not fill this in from a pass whose calibration arm failed, or
+from a pass in which any item was flagged recognized.)*

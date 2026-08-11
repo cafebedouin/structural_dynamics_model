@@ -210,9 +210,14 @@ themselves (`operator_ruling_2026_08_11` keys) so a cold reader hits them at the
    A prose-searching census can neither hit nor miss a directory with no prose, so counting it as an
    ordinary NO-UNIT would inflate the precision denominator with a directory the proxy was never
    able to see. Not a defect in the figure — a defect in the frame. Carried in the unit file as
-   `metadata.frame_status = outside_frame_no_prose`, with an explicit do-not-pool note. **Open
-   consequence for whoever computes the row:** if others of the 101 are prose-free, the frame is
-   weaker than its n suggests, and the escape denominator needs the same audit.
+   `metadata.frame_status = outside_frame_no_prose`, with an explicit do-not-pool note. **The open
+   consequence is now MEASURED, not open** — see `FRAME_AUDIT_prose_visibility.md` in this
+   directory: 4 of 101 directories are unseeable (effective population 97), 12 more carry the
+   proxy's own keywords in files its filter never opens, and the two blind spots are independent.
+   **Both of my NO-UNITs are among the 4**, so in-frame this stratum reads 6 candidates from 6
+   directories, not 6 from 8 — removing the out-of-frame directories removes the only two that were
+   making the result look softer. The remaining 14 escape directories need the same census run
+   against them, which I cannot do and should not.
 2. **Reference to an incident recorded elsewhere.** RULED: does NOT count as reporting one. The
    boundary rule was fixed against the census's own line, and a pointer to another directory's
    incident would double-count it — the frame partitions directories, not incidents. My
@@ -305,8 +310,13 @@ number is not lost; it still needs to land in §6.4.
 
 ## Handoff back
 
-Packet assembly, the driver, and the arc prereg are the other instance's. Four things travel with
-these units: the six quarantined candidates and their asymmetric cost; the threshold-comparability
+Packet assembly, the driver, and the arc prereg are the other instance's. **Two items are queued on
+parties that are not me:** the primary-side draw for the calibration probe (I must not see those
+units), and the frame census over the other 14 escape directories
+(`frame_audit_prose_census.py`, in this directory, run against the full escape sample rather than my
+slice — the count must not be extrapolated from mine, which drew 2 of the 4 unseeable at p ≈ 0.031).
+
+Four things travel with these units: the six quarantined candidates and their asymmetric cost; the threshold-comparability
 probe, pre-registered in `PREREGISTRATION_threshold_calibration.md` with its escape-side draw
 executed and its outcome semantics fixed — **it needs a primary-side draw I must not make, and an
 operator spend-go if the judge is a live instance**; the tooling defect in the sweep command
