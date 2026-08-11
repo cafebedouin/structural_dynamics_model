@@ -1,5 +1,38 @@
 # HANDOFF — extractor B's 13 units (direction (ii))
 
+> ## ✅ CLOSED 2026-08-11 — B's half landed 13/13; extraction (direction (ii)) is COMPLETE
+>
+> | | |
+> |---|---|
+> | B's units | **13 of 13** — `packets/our_units/{14..26}_*.json` (numbered in `extraction_split.json` order) |
+> | All direction-(ii) units | **26** (A 13 + B 13). Matrix cells = 22 (A 13 + B 9); B's four `overlap_source: true` extractions are floor-only |
+> | Leak sweep | run after every unit; final `swept 26 units, direction (ii): 0 hits` |
+> | `role` / `overlap_source` | `primary` on all 13; `overlap_source` written EXPLICITLY on all 13, true on exactly the four floor directories |
+> | **NO-UNIT proposals from B** | **ZERO** — all 13 directories reported an incident. With A's zero, **k = 0** for the §H.2 row across the whole n=22 primary sample, subject to the operator's own read (the extractor may not self-certify either direction) |
+> | `incident_location` (B's 13) | `subject` 7 / `self_audit_subsection` 4 / `incidental` 2. **Pooled over all 26** (A's 10/1/2 + B's): `subject` 17 / `self_audit_subsection` 5 / `incidental` 4 |
+> | Blind-overlap rule | **HELD.** `our_units/01`, `06`, `12`, `13` were never opened, by any route; no `git log`/`git show` on the commits landing them; the leak sweep loads units programmatically and prints only hits. No comparison is VOID |
+>
+> **B's selection rule, stated so it is a rule and not a preference** (same as A's, adopted for
+> continuity): fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states —
+> tiebroken by realized consequence over caught-before-it-mattered.
+>
+> **Recording-threshold divergence, flagged rather than smoothed.** All **13 of 13** B units carry
+> a non-empty `alternatives_not_extracted` (2–4 entries each, 38 total), against A's **6 of 13**.
+> Do NOT read that as B's directories carrying more defects. B recorded every candidate it
+> considered and rejected, *including* ones it judged not to be defects at all (a control working
+> as designed, a declared scope limit, a stale comment) with the reason for rejection; A's
+> convention may have been to record only genuine competing defects. The two halves' alternative
+> counts are therefore **not comparable as a defect-density measure**, and no row should be built
+> on them. The four floor comparisons are where extractor divergence is measured; this is a note
+> about a field, not a finding.
+>
+> **Next step (unchanged, from §"After both halves land" below):** controls — anchors 3/direction,
+> decoys 2, the PRE-DECLARED redaction pairs in `controls/redaction_pairs_predeclared.json` (do NOT
+> choose them) — then the driver, then `PREREGISTRATION.md` with `verdict_grammar_amendment.md`
+> incorporated verbatim and its md5 in `audit_log.md` ABOVE the first result line, then spend-go.
+> **Before Phase 3, assert the driver's payload-capture count EQUALS the expected call count, then
+> grep.** Count first.
+
 **Written:** 2026-08-11 by extractor A2, on completing A's 13 of 13.
 **Read first:** this file, then `frame/extraction_split.json`, then `HANDOFF.md` for the carried
 rulings / pre-spend catches / writeup obligations. `HANDOFF_EXTRACTOR_A2.md` is A's file and is
