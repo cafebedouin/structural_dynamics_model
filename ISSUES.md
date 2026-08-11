@@ -10673,8 +10673,21 @@ names where. Either way §4.3 acquires the first coded corpus behind it (OQ-280)
 PREREG FREEZE, not at plan approval — the md5 of `PREREGISTRATION.md` must sit in
 `audit_log.md` physically ABOVE the first result line before any coding call is made. The
 staged extension to all 73 is gated on H5 passing and is NOT authorized in advance.
+**Scope grew 2026-08-11 (operator ruling, `RULING_2026-08-11_freeze_scope.md`):** direction
+**(iii′)** and the **n=8 escape check** are IN this freeze — both were in the frozen design and
+scheduled by no handoff, and freezing a table pre-registered as *total* with two designed rows
+silently absent is the experiment enacting its own subject. (iii′) is **n=10, not ~15** — the
+population was enumerated and the design's figure does not survive the count; **P3 has ZERO
+exemplars**, so that row's coverage is P1/P2/P4/P5/P6 only. Control (c) direction (ii) now runs
+**five pairs in two sets** after its selection metric was found to be counting a different
+taxonomy (bare `P1`/`P2`/`P3` = other directories' own local numbering; the top-ranked pick had
+**0** taxonomy vocabulary): the **corrected set carries the both-residue row**, the declared set
+is reported alongside (`controls/redaction_pair_selection_defect.md`). Escape extraction is a
+**separate instance** under blindness condition C1 (`HANDOFF_ESCAPE_EXTRACTOR.md`).
+
 **START AT `audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF_TWINS_AND_DRIVER.md`** (current entry
-point as of 2026-08-11; extractor A's half is 13 of 13 COMPLETE and `HANDOFF_EXTRACTOR_A2.md`
+point as of 2026-08-11, now carrying a STATE UPDATE banner — read it, the file is amended not
+superseded; extractor A's half is 13 of 13 COMPLETE and `HANDOFF_EXTRACTOR_A2.md`
 carries a CLOSED banner — its task list must not be re-run, though its conventions bind B).
 The original `HANDOFF.md` likewise carries a superseded-banner and its "Your next step" section
 is stale — steps 1 and 2 are DONE and must not be re-run — but still

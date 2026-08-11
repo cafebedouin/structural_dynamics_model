@@ -1,5 +1,37 @@
 # HANDOFF — redaction twins, then the driver, then the freeze
 
+> ## ⚠ STATE UPDATE 2026-08-11 — still the entry point; four things below have MOVED
+>
+> This file is **not** superseded — its conventions, §2 driver spec, §2.5 no-live-call rule and
+> §3 freeze order all still bind. Four changes since it was written, each operator-ruled:
+>
+> | # | change | authority |
+> |---|---|---|
+> | 1 | **Scope grew.** Direction **(iii′)** (n=10, not ~15) and the **n=8 escape check** are IN this freeze. Both were in the frozen design and scheduled by no handoff. | `RULING_2026-08-11_freeze_scope.md` |
+> | 2 | **Control (c) direction-(ii) now has FIVE pairs, in two sets.** The declared three stand; two more added. The **corrected set carries the both-residue row**; the declared set is reported alongside. | `controls/redaction_pair_selection_defect.md` (RULED section) |
+> | 3 | **§1's "do not re-derive to check" is CORRECTED.** Checking is permitted and expected; *reselecting* is mechanically prevented (`controls/recheck_predeclared_counts.py` exits non-zero if the selection moves). The original wording collapsed verification into reselection. | amendment §Q.2 |
+> | 4 | **Escape extraction is a separate instance** under operator condition C1. | `HANDOFF_ESCAPE_EXTRACTOR.md` |
+>
+> **DONE since:** direction-(i) twins (3 arms, `controls/redaction_twins_direction_i.json`, 9/9
+> two-sided checks pass via `controls/verify_redaction_twins.py`); the ruling + defect artifacts;
+> amendment §Q.
+>
+> **NEXT, in order:**
+> 1. **Direction-(ii) twins — 5 unredacted arms.** Units `04` (declared+corrected), `10`, `20`
+>    (declared), `05`, `07` (corrected). `verify_redaction_twins.py` is RED until they land.
+>    **Pairs 2 and 3 have ZERO taxonomy vocabulary in their `files_read`** — their arms restore
+>    only source-identifying vocabulary, and that is the honest outcome, not a reason to write in
+>    an attribution the source does not make. Unit `04` alone has a source naming the pattern for
+>    its own incident (`AUDIT.md:144`).
+> 2. **(iii′) units — 10 exemplar incidents**, enumerated with line numbers in
+>    `RULING_2026-08-11_freeze_scope.md` §2.1. **P3 has ZERO exemplars** — that row's coverage is
+>    P1/P2/P4/P5/P6 only, declared in advance.
+> 3. Packets, driver (stub transport ONLY), prompts, prereg, then **stop for spend-go**.
+>
+> **Still true and unchanged: no model call has ever been made.** `payloads/` and `responses/`
+> are empty by design.
+
+
 **Written:** 2026-08-11, by the instance that closed extractor A's half and built the controls.
 **Read first:** this file, then `verdict_grammar_amendment.md` **in full** (it is binding
 pre-registration content and is incorporated into `PREREGISTRATION.md` verbatim), then
