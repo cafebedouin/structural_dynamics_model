@@ -1,0 +1,26 @@
+{
+  "source_dir": "2026-06-21_maxent_seat_aware",
+  "extractor": "A",
+  "role": "primary",
+  "files_read": [
+    "FINDINGS.md",
+    "PRE_REGISTRATION.md",
+    "report_regeneration.md"
+  ],
+  "symptom": "One stage of the classifier declines to apply a signature to an item at particular observer positions, having routed that position elsewhere. A later stage applies a multiplicative boost derived from the same signature at every position regardless, including the ones the earlier stage declined. The result is a recorded probability distribution that assigns mass to a category the item had already been routed away from — with no error, and with the headline category unchanged at every position, so nothing in the ordinary output shows the two stages disagreeing.",
+  "mechanism_as_described": "The routing decision is per position; the boost is per item. The boost predicate was written with no access to the position at all — it received the item's winning signature and nothing else — so it could not have consulted the routing even in principle, and its unconditional application looked correct at the site because the site had no second argument to check. The distortion then stayed invisible for a specific reason: at all twelve affected positions the boosted distribution's highest-probability category was already the same as the unboosted one, so the headline reading never moved. What moved was the distribution's mass, and a second serialization of the same computation whose highest-probability category was taken after the boost — there the boost had lifted the target category above the true winner at one position, producing a recorded category that was the boost's product rather than the data's. Downstream, the item's headline verdict is a join that takes its severity from other inputs, so even the flipped category changed no verdict — the defect was verdict-capable but happened to be benign on that position, which is why nothing raised it.",
+  "detection_path": "Threading the item identifier into the boost predicate so the question 'was this position routed away?' could be asked at all, then comparing the post-boost distribution against the pre-boost one at every position on both serializations, rather than comparing only the highest-probability category. The check was run with both halves stated in advance: the twelve routed positions must move and the eighty non-routed ones must not, with a rule fixed beforehand for what a non-routed move would mean. It was paired with a control establishing the comparison could see movement at all — a corpus-wide count found exactly two positions whose recorded category differed from the unboosted one, both from a different, unconditional boost, confirming the comparison was capable of returning a difference where one existed.",
+  "consequence": "For every position the earlier stage had routed away from a signature, the recorded distribution still carried mass attributed to that signature's target category, and a rendered per-item report displayed it as an ordinary probability — in one case a category shown at 0.068 that should have been 0.000. On the serialization whose category was read after the boost, one item's recorded category was manufactured outright. Because the highest-probability category on the primary path never flipped, no consumer of that path could distinguish a boosted distribution from an unboosted one, and the disagreement between the two stages was reported nowhere.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The unit describes the defect the work corrected, not the correction.",
+    "alternatives_not_extracted": [
+      "An allowlist entry for an expected load-time warning was keyed by source LINE NUMBER, so any edit above that line silently drifted the key off its target. Fixed incidentally in the same change. A genuine silent defect, but the source describes it in two sentences with no account of what the drift produced, so its mechanism would be thin.",
+      "In the twenty-one-corpus generality sweep, one archived corpus's fitting step failed, leaving twelve of nineteen positions with no distribution to compare, and six further corpora could not be loaded at all. Both were declared as unswept rather than counted as clean. NOT extracted because the source reports these as caught and correctly declared at the time — an absence that was named, not one that passed as a result.",
+      "The work's own plan stated a mechanism for the defect that the substrate contradicted (the boost was said to flip the headline category; it never does so at any affected position). Surfaced rather than absorbed. NOT extracted because it is a corrected premise in the plan, not an incident in the system."
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
+  }
+}
