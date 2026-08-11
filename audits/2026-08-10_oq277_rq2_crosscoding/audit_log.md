@@ -90,3 +90,50 @@ six candidates proceeding to §H.2. Reordering cures the first and cannot touch 
 construction, so this pass cannot separate "shares the threshold" from "extracts everything." It
 cannot be repaired from existing material — §M records k = 0, so no known-negative exists to draw.
 The arm is **one-sided by construction**. Full reasoning in the prereg's Result section.
+
+## 2026-08-11 — cross-coding PREREGISTRATION assembled; DRAFT stamp, freeze NOT yet complete
+
+**No model call has been made in this audit.** `payloads/` and `responses/` verified empty
+(0 files each) at the time of writing.
+
+### The stamp
+
+| artifact | md5 | status |
+|---|---|---|
+| `PREREGISTRATION.md` (1908 lines, assembled) | `95e1fc00368a6b7bf4d2886cf02e4c65` | **DRAFT — not the freeze** |
+
+**Why this is a draft and not the freeze.** One designed leg is not built: the **7 (iii′)
+exemplar units** are the pending hand-back from `HANDOFF_IIIPRIME_EXTRACTOR.md`. The assembled
+packets hold **66 of the designed 73 items**; expected calls stand at **198 of 219**.
+
+A freeze stamp over an incomplete design would be a success-shaped token — it would look
+exactly like a freeze, and every check below it would pass. So the ordering is enforced
+structurally rather than by this label: `oq277_crosscoding_driver.py --live` **refuses while any
+leg is unbuilt**, before it even looks at the md5, because an md5 over a subset would silently
+re-pre-register a smaller experiment as though it were the designed one.
+
+### Completing the freeze — the exact sequence
+
+1. (iii′) extractor hands back 7 units to `packets/iii_prime_units/`.
+2. `python3 python/audits/oq277_make_coder_packets.py --build-run` → confirm **73 items**, no
+   `INCOMPLETE` banner.
+3. `python3 python/audits/oq277_crosscoding_driver.py --stub --dry-run` → confirm
+   `captured == expected == 219`, printed **above** the grep output.
+4. `python3 python/audits/oq277_build_prereg.py --write` → new md5; `--check` must be GREEN.
+5. Record that md5 in this file, **above the sentinel below**, as the FREEZE stamp.
+6. Request spend-go. Do not code before it is given.
+
+### The first-result boundary, marked explicitly
+
+The rule is that the preregistration md5 must sit physically **above the first coding result**.
+That boundary is now a machine-checkable sentinel rather than a matter of reading. It is marked
+this way because the driver's first version searched the log for a line saying "first result",
+this file contained no such line, and the check therefore **passed vacuously** — a gate
+satisfied by the absence of its own input, which is the defect class this experiment exists to
+study. The sentinel now **fails closed**: no marker, no live call.
+
+Everything above this line is design. Everything below it is result.
+
+<!--OQ277-FIRST-CODING-RESULT-->
+
+*(No coding results yet. Nothing may be appended below this marker until spend-go is granted.)*

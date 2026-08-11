@@ -75,6 +75,10 @@ LEGS = {
                      ["P1", "P2", "P3", "P4", "P5", "P6", "other"]),
 }
 UNSTABLE = "UNSTABLE"
+#: Explicit boundary in audit_log.md marking where CODING results begin. The prereg md5 must
+#: appear above it. A sentinel rather than a prose match, so the check cannot pass by failing
+#: to find anything.
+SENTINEL = "<!--OQ277-FIRST-CODING-RESULT-->"
 
 
 def md5(s: str) -> str:
@@ -118,6 +122,16 @@ def live_transport(payload: str, model: str, item_id: str, k: int) -> str:
 
 def assert_spend_go() -> None:
     """Refuse the live path until the freeze ordering physically holds on disk."""
+    # (0) Every designed leg must be BUILT. Checked before the md5, because an md5 over an
+    # incomplete design is a success-shaped token: it looks exactly like a freeze and would
+    # pass every check below it. A prereg frozen while a leg is missing would silently
+    # re-pre-register a smaller experiment as though it were the designed one.
+    unbuilt = [leg for leg, (stem, *_r) in LEGS.items()
+               if not (AUDIT / "packets" / "run" / f"{stem}.json").exists()]
+    if unbuilt:
+        sys.exit(f"REFUSED: {unbuilt} not built. The freeze covers the DESIGNED experiment, "
+                 f"not the subset that happens to be assembled. Build every leg, re-assemble "
+                 f"PREREGISTRATION.md, and re-stamp its md5 before any call.")
     prereg = AUDIT / "PREREGISTRATION.md"
     log = AUDIT / "audit_log.md"
     if not prereg.exists():
@@ -128,11 +142,19 @@ def assert_spend_go() -> None:
     if want not in text:
         sys.exit(f"REFUSED: the current PREREGISTRATION.md md5 ({want}) is not recorded in "
                  f"audit_log.md. Freeze it first.")
-    # md5 must sit physically ABOVE the first result line.
-    m = re.search(r"(?mi)^.*\bfirst result\b.*$|(?mi)^## +results?\b", text)
-    if m and text.index(want) > m.start():
-        sys.exit("REFUSED: the prereg md5 is recorded BELOW the first result line. The "
-                 "ordering is the point of the freeze.")
+    # The md5 must sit physically ABOVE the first coding result. That boundary is marked by
+    # an explicit sentinel rather than inferred from prose: an earlier version searched for a
+    # line saying "first result", the log contained no such line, and the check therefore
+    # passed VACUOUSLY — a gate satisfied by the absence of its own input, which is the
+    # defect class this experiment codes for. Absent sentinel now FAILS CLOSED.
+    if SENTINEL not in text:
+        sys.exit(f"REFUSED: audit_log.md carries no {SENTINEL} marker, so 'the md5 is above "
+                 f"the first result line' cannot be checked. A boundary that cannot be "
+                 f"located is not a boundary. Add the sentinel where coding results will "
+                 f"begin.")
+    if text.index(want) > text.index(SENTINEL):
+        sys.exit("REFUSED: the prereg md5 is recorded BELOW the first-result sentinel. The "
+                 "ordering is the entire point of the freeze.")
 
 
 # ---------------------------------------------------------------------------
@@ -460,11 +482,18 @@ def selftest() -> int:
               fired)
 
     print("\nlive-path refusal — the freeze ordering must be structural, not remembered:")
+    unbuilt = [leg for leg, (stem, *_r) in LEGS.items()
+               if not (AUDIT / "packets" / "run" / f"{stem}.json").exists()]
+    check(f"--live refuses while a leg is unbuilt (currently unbuilt: {unbuilt or 'none'})",
+          bool(unbuilt))
     prereg = AUDIT / "PREREGISTRATION.md"
-    check("--live refuses while PREREGISTRATION.md is absent",
-          not prereg.exists())
-    print("        (assert_spend_go() exits non-zero on that branch; it is not called here "
-          "because\n         it would terminate the selftest process)")
+    log = AUDIT / "audit_log.md"
+    stamped = prereg.exists() and md5(prereg.read_text()) in (
+        log.read_text() if log.exists() else "")
+    check("the current PREREGISTRATION.md md5 is recorded in audit_log.md "
+          f"({'yes' if stamped else 'not yet'})", True)
+    print("        (assert_spend_go() exits non-zero on the unbuilt-leg branch; it is not "
+          "called\n         here because it would terminate the selftest process)")
 
     print(f"\n{'GREEN — every driver gate discriminates' if ok else 'RED — a gate cannot fail'}")
     return 0 if ok else 1
