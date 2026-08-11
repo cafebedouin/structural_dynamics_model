@@ -164,7 +164,33 @@ against expected calls, and a quarantined call is still a call).
 
 ---
 
-## F. Two writeup obligations added by this amendment
+## F. Training-exposure leak — the source-identifying ban belongs to the registered confound
+
+The source-identifying terms banned in both directions (`openclaw` / `Wu` / `arxiv` one way,
+`OQ-\d+` / `CLAUDE.md` / `deferential realism` the other) are **not a new design element and need
+no separate ruling.** They are the direct consequence of the confound already registered.
+
+The same-family confound says: our writeups are Claude-authored and the coder is Claude, so
+direction (ii) agreement may be inflated by prose-convention familiarity. The identical mechanism
+runs one level deeper — **a Claude coder that recognises Wu's paper can recall his five classes
+from training rather than reasoning from the definitions in its prompt.** That is not a leak
+*through the payload*, which the grep catches; it is a leak *through the weights*, which nothing
+else in this design catches. Filed under the existing confound accordingly.
+
+**The ban reduces the channel and does not close it, stated plainly so nobody reads it as
+discharged.** If the model recognises the *incidents themselves* — a production agent runtime
+with a distinctive fingerprint, a 60-day sandbox denial, a specific reserved-file self-silencing —
+no amount of vocabulary stripping helps. Redaction operates on names; recognition operates on
+situations. A clean leak-grep is therefore evidence about the payload channel **only**, and no
+writeup sentence may promote it to evidence about training exposure.
+
+**The falsifier is unchanged and now does double duty.** The named tier falsifier for the
+same-family confound is a **different-family model re-code**. It falsifies *both* channels at once
+— prose familiarity and training exposure — because a different family has neither our conventions
+nor, plausibly, the same exposure to Wu's artifacts. That raises its value against its cost, and
+the writeup should say so when it records the falsifier as named-but-not-bought this run.
+
+## G. Writeup obligations added by this amendment
 
 1. **`movespeed_tcc_sandbox` is a worked P2 instance inside Wu's own artifact.** One canonical
    labeling became two; no queryable fact says which governs; and the row's own `paper_class_ref`
@@ -174,12 +200,28 @@ against expected calls, and a quarantined call is still a call).
    noticed his own.** The corpus in which our pattern is instantiated has no stake in either
    taxonomy, which is what makes it evidence rather than self-application.
 
-2. **The regex undercount is the arc's second control-level worked example**, and its shape is
-   nastier than a miscount. My first pass at the secondary-class predictor returned **6** rows
-   where the truth was **8** — and 6 **agreed with the conclusion 8 supports**. This is §6.3's
-   `identical: True because both empty` case *inverted*: there, two failed measurements agreed
-   with each other; here, a **failed measurement agreed with a sound one**, so the agreement was
-   actively **reassuring**. No error signal exists anywhere in that loop — not in the output, not
-   in the direction, not in the plausibility. It sits beside the fixture bug (the control that
-   encoded the assumption it existed to test) as the second worked instance of a control-level
-   failure in this arc, and §6.4 currently has neither.
+2. **Three dated instrument defects from one arc, written up ONCE as a set, not three times.**
+   §6.4's recursion — controls need controls — is currently argued from a *hypothetical* no-op
+   harness. Three instances from a single pre-spend arc is a stronger section than the argument it
+   replaces, and the set has one shared property that no individual instance shows:
+
+   | # | instrument | what it returned | the wrong object it measured |
+   |---|---|---|---|
+   | 1 | frame-census control, v2 | assertion passed | asserted every extracted name ends in `.md` — **encoding the very assumption the control existed to test**; false for a nested hit, which yields a subdirectory name |
+   | 2 | secondary-class predictor, first pass | **6** rows (truth: 8) | regex over structured YAML under-read a multi-line field — **and 6 agreed with the conclusion 8 supports** |
+   | 3 | de-blocking witness | baseline max-run **2** (truth: 8) | `sum(1 for _ in g)` over `groupby` counted the `(key, grouper)` **tuple** — reported a fully blocked baseline as already unblocked |
+
+   **The shared property: each returned a well-formed, plausible number about the wrong object,
+   from inside the witness for the claim it supported.** Not one produced an error, an exception,
+   an implausible value, or a result pointing the wrong way. #2 is the sharpest — it is §6.3's
+   `identical: True because both empty` **inverted**: there, two failed measurements agreed with
+   each other; here a **failed measurement agreed with a sound one**, so the agreement was actively
+   *reassuring*. The error had no signal anywhere in the loop: not in the output, not in the
+   direction, not in the plausibility.
+
+   **The honest limit on detection, recorded beside them.** *All three were caught by hand-checking
+   a number that looked fine — none by any control.* The control architecture this project runs
+   caught zero of the three defects that occurred inside its own instruments. That is the most
+   uncomfortable available datum about the apparatus and it belongs in §6.4 with the instances,
+   not softened. It also sharpens what the `Fired:` bit can and cannot measure (OQ-276): a catch
+   rate computed over controls does not see catches that arrive by suspicion.

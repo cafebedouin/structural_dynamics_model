@@ -1,0 +1,52 @@
+{
+  "ruling": "operator 2026-08-10 \u2014 split at 11 units/extractor; 2 overlap units each, quarantined from all matrices, to measure the currently-unmeasured EXTRACTOR churn (k=3 measures the coder's).",
+  "seed": 20260810,
+  "ordering": "frame/sample.json primary_sample order (date-sorted), frozen before the split",
+  "extractor_A": {
+    "id": "A",
+    "primary": [
+      "2025-05-15_recon_2",
+      "2026-04-14_blocking_gate",
+      "2026-06-06_kernel_first_phase0",
+      "2026-06-07_stakeholder_layer_migration",
+      "2026-06-10_oq93_grid_viability_probe",
+      "2026-06-11_oq44_policy_close",
+      "2026-06-11_oq97_pattern6_census",
+      "2026-06-15_oq131_six_observer",
+      "2026-06-21_maxent_seat_aware",
+      "2026-06-21_oq138_fsm_route_conversion",
+      "2026-06-25_oq182_trajectory_revive"
+    ],
+    "overlap_from_B": [
+      "2026-06-27_oq124_oq149_committer_convention_control",
+      "2026-07-11_oq186_oq188_readsite"
+    ],
+    "total_units": 13
+  },
+  "extractor_B": {
+    "id": "B",
+    "primary": [
+      "2026-06-27_oq124_oq149_committer_convention_control",
+      "2026-07-01_oq45_oq52_hidden_winners",
+      "2026-07-02_oq136_census_bucket_provenance",
+      "2026-07-03_oq03_self_application",
+      "2026-07-04_oq75b_grain_probe",
+      "2026-07-11_oq186_oq188_readsite",
+      "2026-07-20_five_leg_twin_comparison",
+      "2026-07-25_oq254_q_provenance",
+      "2026-07-25_oq67_legacy_chi_retire",
+      "2026-08-06_oq259_item3_genreflag",
+      "2026-08-07_oq261_forced_gluing"
+    ],
+    "overlap_from_A": [
+      "2025-05-15_recon_2",
+      "2026-06-11_oq44_policy_close"
+    ],
+    "total_units": 13
+  },
+  "boundary_declared_before_extraction": true,
+  "why_declared": "so a late/early asymmetry in the matrices is checked against the boundary rather than discovered post hoc",
+  "overlap_units_total": 4,
+  "overlap_accounting": "quarantined from matrices; calls still count toward the driver's expected payload-capture count",
+  "thresholds": "see verdict_grammar_amendment.md SS E \u2014 4/4 agree = INSIDE FLOOR; >=2 flips = LIVE; 1 flip or >=2 uninformative = INDETERMINATE, fail-closed"
+}
