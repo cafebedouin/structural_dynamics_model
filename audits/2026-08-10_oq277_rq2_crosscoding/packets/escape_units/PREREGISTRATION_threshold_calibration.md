@@ -183,6 +183,30 @@ test in both directions (unavoidable — they designed it; what stays hidden is 
 not *that* controls exist). **Not adopted unless the operator rules it in; the five-item design
 stands as pre-registered either way.**
 
+## Amendment 4 (extractor, 2026-08-11, before any run) — what the judge sees, pinned
+
+Found while writing the assembler's instructions: the design above says *what is judged* and never
+says *what is shown*, which leaves the assembler to decide it — and the choice changes the result.
+Pinned now rather than at assembly time.
+
+**Shown, for every one of the five items, identically:** the four coder-facing fields only —
+`symptom`, `mechanism_as_described`, `detection_path`, `consequence` — verbatim, in that order,
+under a neutral item number.
+
+**Not shown, for any item:** `extraction_notes` (its `boundary_rule_applied` argues the case for
+extraction and would supply the verdict it is meant to test), `metadata` (`incident_location` is one
+of the two strata's matching keys), `source_dir`, `extractor`, `role`, `files_read`, filenames, and
+field ordering or formatting that differs between items.
+
+**The question put to the judge, fixed wording:** *does this meet the boundary rule's REPORTS
+clause — extract or no-extract?* The written clause (§H.1) is supplied with the packet; nothing else
+is.
+
+Rationale, in one line each: showing the extractor's reasoning would test whether the judge finds
+that reasoning persuasive rather than whether they share the threshold; showing `incident_location`
+would hand over the stratification key; and any formatting difference between strata is a label the
+stripping was supposed to remove.
+
 ## Queue for the assembler (the other instance)
 
 1. **Primary-side draw** — two extracted primary units, matched on `incident_location` to the escape
