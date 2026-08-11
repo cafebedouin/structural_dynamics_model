@@ -1985,6 +1985,64 @@ screen is unblinded before the pass begins, and no downstream control recovers i
 
 ---
 
+## Gate the output, not only the input
+
+**Operator ruling, 2026-08-11, priced at 219 model calls.**
+
+> **A pipeline verified end-to-end on what it CONSUMES can produce nothing and report green
+> on every check.**
+
+**The instance.** The OQ-277 cross-coding driver had three gates, and they were good ones:
+count captured payloads against expected calls *before* grepping; keep planted fixtures in their
+own subdirectory so they cannot inflate the count; only then sweep for leaks. Every one is an
+**input** gate. Nothing counted responses — and the driver had no code path that wrote them. A live
+run made 219 calls, passed every gate, printed its expected totals, and persisted **nothing**. The
+answers were computed in memory, aggregated into four printed lines, and discarded at process exit.
+The whole run was unrecoverable.
+
+**Why no check caught it.** Each gate was individually sound and the composition had a hole where
+none of them looked. This is Pattern 1 (produced-but-not-consumed) one layer up — a producer whose
+output has no *destination at all* — presenting as Pattern 6, because the aggregate that reported
+success was computed from data that was never retained.
+
+**The exact shape is worth its own line, because it is not quite any of the six.** The driver's
+`--dry-run` flag advertised *"do not write responses/"* and printed *"responses NOT written.
+responses/ left empty."* Both statements are **true**, and both describe a distinction the code does
+not implement — there was no writer in either mode. The flag was **documentation of an intended
+architecture wearing a switch's clothes**. Absence presenting as presence, where the
+presence-token is a correct sentence. A reader checking whether responses are persisted would find
+two pieces of evidence saying the question had been considered, and no persistence.
+
+**The rule, in four parts:**
+
+1. **Persist the raw datum first, and make it primary.** Write each response the moment it returns
+   — before parsing, normalising, aggregating or resolving. Labels are derived; text is the datum.
+   A parse bug, an adjudication bug, or a later capture bug then degrades to *recoverable* instead
+   of *total*.
+2. **Write-then-verify per unit, not per run.** Assert the artifact landed and is non-empty before
+   the next unit issues. A run that dies at call 140 leaves 140 recoverable answers instead of zero;
+   verifying at the end has the same failure profile as not verifying at all for everything that
+   never got made.
+3. **The mirror gate is necessary and not sufficient.** *Captured outputs == expected outputs* still
+   passes when every file is written empty. Assert count **and** non-emptiness **and** that each
+   parses to a value in the expected vocabulary. Out-of-vocabulary results are *reported, never
+   coerced*, and the gate runs after everything is on disk so a failure is a finding with its
+   evidence retained rather than a second loss.
+4. **Count from the artifact, never from the loop.** Reporting `len(results)` as the persisted count
+   is a claim about persistence sourced from the thing that is not persistence. Count the files.
+
+**The attention asymmetry, which is the transferable part.** In the same session, the driver's
+*refusal* path got the strongest control in the arc — five constructed bad states plus a converse —
+and the *capture* path got nothing. Both were untested by construction. The difference was that the
+refusal path had a **red light** on it (a mis-written control that had inverted to permanently-red)
+and the capture path emitted **no signal at all**, because a writer that does not exist produces no
+error, no warning, and no output to inspect. **Attention went to the failure that announced itself.**
+A verification stack audited by following its red lights will systematically miss every defect whose
+signature is silence — and those are the ones that cost whole runs. Enumerate what a spend *depends
+on* and mark each path tested or untested; do not infer the list from which lights are lit.
+
+---
+
 ## The receiver's license to refuse: the same construction from the other side
 
 **Operator ruling, 2026-08-11 (OQ-277 arc).** *Write the receiver's prompt* is the sender's half. The

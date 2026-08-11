@@ -243,6 +243,75 @@ def gate_count(out_dir: pathlib.Path, expected: int, errors: list) -> int:
     return len(captured)
 
 
+def write_response(resp_dir: pathlib.Path, leg: str, item_id: str, k: int, raw: str) -> pathlib.Path:
+    """Persist ONE raw response and verify it landed, BEFORE the next call issues.
+
+    Raw text is the datum; the resolved label is derived. This writes the text with no
+    parsing, no normalisation and no aggregation in front of it, so a parse bug, an
+    adjudication bug or a later capture bug degrades to RECOVERABLE rather than total.
+
+    Write-then-verify is per CALL, not per run: a run that dies at call 140 leaves 140
+    recoverable answers instead of zero. Verifying at the end would have the same failure
+    profile as not verifying at all for every call that never got made.
+    """
+    d = resp_dir / leg
+    d.mkdir(parents=True, exist_ok=True)
+    p = d / f"{item_id}__k{k}.json"
+    p.write_text(json.dumps(
+        {"leg": leg, "item_id": item_id, "k": k, "raw": raw}, ensure_ascii=False) + "\n")
+    if not p.exists() or p.stat().st_size == 0:
+        sys.exit(f"ABORT: response for {item_id} k={k} did not land at {p}. Halting before "
+                 f"the next call — a run that cannot persist must not keep spending.")
+    return p
+
+
+def gate_responses(resp_dir: pathlib.Path, expected: int, errors: list) -> None:
+    """The mirror of gate 1, on the OUTPUT side. Gate 1 counts payloads — inputs. Nothing
+    counted responses, so a run could (and did, 2026-08-11) spend 219 calls, pass every
+    gate, and persist nothing.
+
+    Count alone is NOT sufficient: it passes if every file is written empty. So this
+    asserts three things — the file is there, it is non-empty, and its answer parses to a
+    token in that leg's fixed vocabulary. The third is what makes it a check on the datum
+    rather than on the filesystem.
+
+    Out-of-vocabulary answers are reported, never coerced, and this gate runs AFTER every
+    response is on disk — so a failure here is a finding with its evidence retained, not a
+    second loss.
+    """
+    print(f"\n  [gate 4] OUTPUT SIDE — persisted responses vs expected calls")
+    files = glob.glob(str(resp_dir / "*" / "*.json"))
+    print(f"           persisted = {len(files)}   expected = {expected}")
+    if len(files) != expected:
+        errors.append(f"gate 4: persisted {len(files)} responses, expected {expected}. "
+                      f"Gate the output, not only the input — a pipeline verified end-to-end "
+                      f"on what it CONSUMES can produce nothing and report green.")
+    empty, bad_vocab = [], []
+    for f in files:
+        leg = os.path.basename(os.path.dirname(f))
+        if os.path.getsize(f) == 0:
+            empty.append(os.path.basename(f))
+            continue
+        try:
+            rec = json.loads(open(f).read())
+            raw = (rec.get("raw") or "").strip()
+        except Exception:                                                  # noqa: BLE001
+            empty.append(os.path.basename(f))
+            continue
+        if not raw:
+            empty.append(os.path.basename(f))
+        elif leg in LEGS and raw not in LEGS[leg][3]:
+            bad_vocab.append(f"{os.path.basename(f)}={raw!r}")
+    if empty:
+        errors.append(f"gate 4: {len(empty)} response file(s) empty or unparseable "
+                      f"({empty[:5]}). A file count alone passes on zero-byte writes.")
+    if bad_vocab:
+        errors.append(f"gate 4: {len(bad_vocab)} response(s) outside the fixed vocabulary "
+                      f"({bad_vocab[:5]}). Reported, never coerced; the raw text is on disk.")
+    if not (len(files) != expected or empty or bad_vocab):
+        print(f"           OK — every call left a non-empty, in-vocabulary answer on disk")
+
+
 def gate_fixtures(out_dir: pathlib.Path, n_fixtures: int, errors: list) -> None:
     fx = glob.glob(str(out_dir / "_fixtures" / "*.json"))
     print(f"\n  [gate 2] fixtures in their own subdirectory, counted separately")
@@ -326,6 +395,24 @@ def matrix_membership(leg: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
+def assert_live_response_dir_untouched(live: pathlib.Path | None = None) -> None:
+    """Same invariant as the payload directory, on the output side: the stub writes to
+    `responses_stub/` and must never touch canonical `responses/`.
+
+    Added 2026-08-11 with the capture path itself. The output side had no directory
+    discipline because it had no writer at all — every protection in this driver was built
+    for inputs. `live` is a parameter for the same reason as its sibling: so the selftest
+    can witness the refusal without dirtying the directory whose emptiness is the invariant.
+    """
+    live = live or (AUDIT / "responses")
+    stray = [p for p in live.rglob("*") if p.is_file()] if live.exists() else []
+    if stray:
+        raise SystemExit(
+            f"REFUSED: {live} is NOT empty ({len(stray)} files, e.g. "
+            f"{stray[0].name}). The stub must never write to the canonical response "
+            f"directory, and a live run must not mix with a prior run's data.")
+
+
 def assert_live_capture_dir_untouched(live: pathlib.Path | None = None) -> None:
     """The canonical `payloads/` is empty BY DESIGN and stays that way until spend-go.
 
@@ -394,12 +481,45 @@ def run(stub: bool, dry_run: bool) -> int:
             print(f"    {e}")
         return 1
 
+    resp_dir = AUDIT / ("responses_stub" if stub else "responses")
+    if stub:
+        assert_live_response_dir_untouched()
+    if not stub and glob.glob(str(resp_dir / "*" / "*.json")):
+        print(f"\n  ABORT — {resp_dir.name}/ already holds responses. Refusing to overwrite "
+              f"or mix a prior run's data; move it aside first.")
+        return 1
+    shutil.rmtree(resp_dir, ignore_errors=True)
+    resp_dir.mkdir(parents=True, exist_ok=True)
+
     transport = stub_transport if stub else live_transport
     results = []
     for p in payloads:
-        results.append({**{k: p[k] for k in ("leg", "item_id", "k")},
-                        "answer": transport(p["payload"], p["model"], p["item_id"], p["k"])})
+        raw = transport(p["payload"], p["model"], p["item_id"], p["k"])
+        # PERSIST FIRST, verify, and only then let the next call issue. Nothing is parsed,
+        # aggregated or resolved ahead of the write — the 2026-08-11 loss was labels
+        # computed in memory from text that was never written down.
+        write_response(resp_dir, p["leg"], p["item_id"], p["k"], raw)
+        results.append({**{k: p[k] for k in ("leg", "item_id", "k")}, "answer": raw})
+    # Count from DISK, never from len(results). Reporting the in-memory count here would be
+    # a claim about persistence sourced from the thing that is not persistence — the same
+    # substitution that let the 2026-08-11 run report its totals while writing nothing.
+    on_disk = len(glob.glob(str(resp_dir / "*" / "*.json")))
+    print(f"\n  persisted {on_disk} raw response file(s) to {resp_dir.name}/ "
+          f"(counted on disk; written and verified per call, before the next call issued)")
 
+    gate_responses(resp_dir, expected, errors)
+    if errors:
+        kept = len(glob.glob(str(resp_dir / "*" / "*.json")))
+        print(f"\n  {len(errors)} OUTPUT-GATE failure(s); {kept} response file(s) on disk"
+              + (" — recoverable\n" if kept else " — NOTHING WAS RETAINED\n"))
+        for e in errors:
+            print(f"    {e}")
+        return 1
+
+    # Resolution reads back from the PERSISTED files, not from the in-memory list, so the
+    # aggregate cannot succeed over data that failed to land.
+    results = [json.loads(open(f).read()) | {"answer": json.loads(open(f).read())["raw"]}
+               for f in sorted(glob.glob(str(resp_dir / "*" / "*.json")))]
     resolved = resolve_labels(results)
     n_unstable = sum(1 for v in resolved.values() if not v["unanimous"])
     print(f"\n  k={K} bookkeeping: {len(resolved)} items resolved, "
@@ -416,7 +536,12 @@ def run(stub: bool, dry_run: bool) -> int:
               f"excluded from cells)")
 
     if dry_run:
-        print(f"\n  --dry-run: responses NOT written. responses/ left empty.")
+        # NOTE (2026-08-11): this flag used to print exactly this line while the driver had
+        # no response writer in EITHER mode. Both the message and the --help text were true
+        # sentences describing a distinction the code did not implement — documentation of
+        # an intended architecture wearing a switch's clothes. The writer now exists, and
+        # --dry-run means what it says: assembly, gates and capture run; nothing is sent.
+        print(f"\n  --dry-run: no transport was invoked; no responses were requested.")
     if missing:
         print(f"\n  *** INCOMPLETE — {missing} not built. The totals above are a PARTIAL, "
               f"not the expected call count. ***")
@@ -480,6 +605,83 @@ def selftest() -> int:
             fired = True
         check("a NON-EMPTY canonical payloads/ REFUSES — the stub can never write there",
               fired)
+
+    # output-side capture. ADDED 2026-08-11, after a live run spent 219 calls and persisted
+    # nothing. Every gate in this driver was an INPUT gate; the output side had no writer,
+    # so there was nothing to gate and no signal that anything was missing.
+    print("\noutput capture — gate 4 must fail on each way a response can be lost:")
+
+    def responses_under(build) -> list:
+        """Build a response tree, run gate 4 over it, return its error list."""
+        d = pathlib.Path(tempfile.mkdtemp())
+        try:
+            build(d)
+            errs: list = []
+            gate_responses(d, 3, errs)
+            return errs
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    def resp(d, leg, item, k, raw, blank=False):
+        (d / leg).mkdir(parents=True, exist_ok=True)
+        f = d / leg / f"{item}__k{k}.json"
+        f.write_text("" if blank else json.dumps(
+            {"leg": leg, "item_id": item, "k": k, "raw": raw}) + "\n")
+
+    def complete(d):
+        for k in (1, 2, 3):
+            resp(d, "direction_i", "i-01", k, "P4")
+
+    check("REFUSES: a response file is MISSING (2 of 3 present)",
+          bool(responses_under(lambda d: [resp(d, "direction_i", "i-01", k, "P4")
+                                          for k in (1, 2)])))
+    check("REFUSES: all files present but one is ZERO-BYTE — count alone would pass",
+          bool(responses_under(lambda d: (complete(d),
+                                          resp(d, "direction_i", "i-01", 3, "", blank=True)))))
+    check("REFUSES: a response outside the leg's fixed vocabulary",
+          bool(responses_under(lambda d: (complete(d),
+                                          resp(d, "direction_i", "i-01", 3, "Pattern Four")))))
+    check("REFUSES: a file that exists and is non-empty but does not parse",
+          bool(responses_under(lambda d: (complete(d),
+                                          (d / "direction_i" / "i-01__k3.json")
+                                          .write_text("not json")))))
+    check("CONVERSE — a complete, in-vocabulary capture PASSES (gate not stuck closed)",
+          not responses_under(complete))
+    def write_response_lands() -> bool:
+        d = pathlib.Path(tempfile.mkdtemp())
+        try:
+            p = write_response(d, "direction_i", "i-99", 1, "P1")
+            return p.exists() and p.stat().st_size > 0 and json.loads(p.read_text())["raw"] == "P1"
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    def dirty_response_dir_refuses() -> bool:
+        d = pathlib.Path(tempfile.mkdtemp())
+        try:
+            (d / "direction_i").mkdir(parents=True)
+            (d / "direction_i" / "x__k1.json").write_text("{}")
+            assert_live_response_dir_untouched(d)
+            return False
+        except SystemExit:
+            return True
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    def clean_response_dir_allowed() -> bool:
+        d = pathlib.Path(tempfile.mkdtemp())
+        try:
+            assert_live_response_dir_untouched(d)
+            return True
+        except SystemExit:
+            return False
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    check("write_response() persists the raw text and verifies it landed", write_response_lands())
+    check("the stub NEVER writes to canonical responses/ — refusal fires on a dirty dir",
+          dirty_response_dir_refuses())
+    check("CONVERSE — an empty response dir is allowed (not stuck closed)",
+          clean_response_dir_allowed())
 
     # live-path refusal. REWRITTEN 2026-08-11, before the live run, on an operator ruling.
     #
@@ -557,7 +759,8 @@ def main() -> int:
     ap.add_argument("--live", action="store_true",
                     help="real transport; refuses unless the prereg md5 is frozen above "
                          "the first result line")
-    ap.add_argument("--dry-run", action="store_true", help="do not write responses/")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="assemble, gate and dump payloads; do not call the transport")
     ap.add_argument("--selftest", action="store_true")
     a = ap.parse_args()
     if a.selftest:

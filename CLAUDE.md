@@ -595,6 +595,26 @@ the design blinds (an assembler working in the judge's terminal), the prompt mus
 PRINTED, not only what may be done. Detail + instances: `docs/technical/build_discipline.md` →
 *Write the receiver's prompt*.
 
+**Gate the output, not only the input (operator ruling, 2026-08-11, priced at 219 model calls).**
+**A pipeline verified end-to-end on what it CONSUMES can produce nothing and report green on every
+check.** Witnessed: a driver with three sound gates — count captured payloads before grepping,
+fixtures counted separately, then sweep — all of them **input** gates, and no code path that wrote
+responses at all; a live run made 219 calls, passed everything, printed its expected totals, and
+persisted nothing. **Persist the raw datum first** (before parsing/aggregating — labels are derived,
+text is the datum), **write-then-verify per unit** (a run dying at call 140 leaves 140 recoverable,
+not zero), and note the mirror gate is **necessary but not sufficient** — *captured == expected*
+passes when every file is written empty, so assert count AND non-emptiness AND parses-to-expected-
+vocabulary, reporting out-of-vocabulary values rather than coercing. **Count from the artifact, never
+from the loop** (`len(results)` as a persisted count is a claim about persistence sourced from the
+thing that is not persistence). Sub-shape worth its own tripwire: the driver's `--dry-run` help said
+*"do not write responses/"* and its console line said *"responses/ left empty"* — both **true
+sentences describing a distinction the code never implemented**, so a reader checking for persistence
+found two pieces of evidence that the question had been considered, and no persistence. **And audit
+by enumerating what a spend DEPENDS ON, not by following red lights** — in the same session the
+refusal path got the arc's strongest control because it was red, while the capture path got nothing
+because a writer that does not exist emits no signal. Detail:
+`docs/technical/build_discipline.md` → *Gate the output, not only the input*.
+
 **The receiver's license to refuse — the same construction from the other side (operator ruling,
 2026-08-11).** If an instruction is **correct in prose and wrong when executed**, say so rather than
 comply: "the prompt said to" is not a witness, and a compliant receiver's output looks exactly like
