@@ -62,6 +62,37 @@ def hits(directory: str, *, drop_source_identifying: bool = True) -> int:
     return n
 
 
+BARE_P_TOKEN = r"\bP[1-6]\b"
+
+
+def hits_split(directory: str) -> tuple[int, int, list[str]]:
+    """(ambiguous, unambiguous, terms) — split the density metric by whether a hit can
+    only mean OUR taxonomy.
+
+    `\\bP[1-6]\\b` is AMBIGUOUS: audit directories use P1/P2/P3 for their own local
+    numbering (probe names, field arms) with no relation to the six patterns. That is
+    harmless for a leak-grep, where a false positive is conservative — you investigate and
+    clear it. It is NOT harmless for a density metric used to SELECT, where a false
+    positive silently determines the choice. Same matcher, two roles, opposite failure
+    direction.
+
+    Unambiguous = `Pattern N`, the pattern names, the nicknames, the taxonomy phrases.
+    """
+    amb = unamb = 0
+    terms: list[str] = []
+    for f in sorted(glob.glob(os.path.join(directory, "*.md"))):
+        text = open(f, encoding="utf-8", errors="replace").read()
+        for group, pat, matched, _c in L.scan(text, "ii"):
+            if group == "source_identifying":
+                continue
+            if pat == BARE_P_TOKEN:
+                amb += 1
+            else:
+                unamb += 1
+                terms.append(matched)
+    return amb, unamb, terms
+
+
 def main() -> int:
     OVERLAP_DIRS = _overlap_dirs()
     pre = json.load(open(HERE / "redaction_pairs_predeclared.json"))
@@ -95,6 +126,26 @@ def main() -> int:
         print(f"\n{len(mismatches)} of {len(rows)} stated counts do not reproduce:")
         for d, stated, counted in mismatches:
             print(f"  {d}: stated {stated}, counted {counted}")
+    # ---- second table: is the density metric measuring taxonomy vocabulary at all? ----
+    print("\n\ndensity split by whether a hit can ONLY mean our taxonomy")
+    print(f"{'directory':<46}{'bare P#':>8}{'taxonomy':>10}   terms")
+    split = {d: hits_split(str(REPO / "audits" / d)) for d, _s, _c in rows}
+    for d, (amb, unamb, terms) in sorted(split.items(), key=lambda kv: -kv[1][1]):
+        mark = "  <-- SELECTED" if d in declared_sel else ""
+        print(f"{d:<46}{amb:>8}{unamb:>10}   {sorted(set(terms))[:4]}{mark}")
+
+    elig2 = [(d, split[d][1]) for d, _s, _c in rows if d not in OVERLAP_DIRS]
+    corrected = [d for d, _c in sorted(elig2, key=lambda r: (-r[1], r[0]))[:3]]
+    print(f"\nselection under taxonomy-only density: {sorted(corrected)}")
+    empty = [d for d in declared_sel if split[d][1] == 0]
+    if empty:
+        print(f"\nPRE-DECLARATION PREMISE FAILS for {len(empty)} of {len(declared_sel)} pairs:")
+        for d in empty:
+            print(f"  {d}: 0 taxonomy-vocabulary hits — nothing to un-redact")
+        print("  The declared rationale ('non-empty by construction rather than by luck')")
+        print("  does not hold for these. OPERATOR RULING REQUIRED — see")
+        print("  redaction_pair_selection_defect.md. Do not reselect without it.")
+
     if ok:
         print("\nSELECTION INVARIANT — the pre-declared pairs are the ones the rule produces.")
         print("The pairs are used AS DECLARED. The stated counts are corrected in the prereg,")
