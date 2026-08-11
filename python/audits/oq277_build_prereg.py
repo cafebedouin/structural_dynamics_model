@@ -226,7 +226,7 @@ def drifted_sources(shipped: str) -> list[tuple[str, str]]:
     return out
 
 
-def check() -> int:
+def check_core() -> int:
     """Verify the shipped preregistration — with the POST-FREEZE case separated out.
 
     ADDED 2026-08-11. The original check asked one question, "is the shipped document
@@ -311,15 +311,35 @@ def check() -> int:
     return 0
 
 
-def selftest() -> int:
+def check() -> int:
+    """Gate entry point: selftest, then the real verification, then a ONE-LINE summary.
+
+    The summary must be printed LAST — scripts/gate.sh's run() shows only the final line of
+    a check's output, so a check whose last line is an INFO detail reports that detail as
+    its verdict. Bundling the selftest here follows spec_enum_check: one gate row states
+    both whether the check passed and whether it is still red-capable."""
+    st_ok = selftest(verbose=False) == 0
+    rc = check_core()
+    state = "RED" if (rc or not st_ok) else "GREEN"
+    print(f"prereg freeze: {state} — {'stamp verified' if rc == 0 else 'STAMP MISMATCH'}; "
+          f"selftest {'7/7' if st_ok else 'FAILED'}")
+    return 0 if (rc == 0 and st_ok) else 1
+
+
+def selftest(verbose: bool = True) -> int:
     """Two-sided controls on the mode split. Relaxing a check owes a demonstration that
     what remains still bites — the whole point is that the fatal case stayed fatal."""
     ok = True
 
     def chk(label, cond):
         nonlocal ok
-        print(f"  {'PASS' if cond else 'FAIL'}  {label}")
+        if verbose:
+            print(f"  {'PASS' if cond else 'FAIL'}  {label}")
         ok = ok and cond
+
+    def say(*a):
+        if verbose:
+            print(*a)
 
     import tempfile, shutil
     global AUDIT, OUT
@@ -332,14 +352,14 @@ def selftest() -> int:
             globals()["OUT"] = d / "PREREGISTRATION.md"
             (d / "PREREGISTRATION.md").write_text(doc_text)
             (d / "audit_log.md").write_text(log_text)
-            return check()
+            return check_core()
         finally:
             globals()["AUDIT"], globals()["OUT"] = real_audit, real_out
             shutil.rmtree(d, ignore_errors=True)
 
     doc = "a frozen preregistration\n"
     doc_md5 = hashlib.md5(doc.encode()).hexdigest()
-    print("freeze-mode controls — the fatal case must stay fatal:\n")
+    say("freeze-mode controls — the fatal case must stay fatal:\n")
     chk("FROZEN + document matches its stamp -> GREEN",
         under(f"{FREEZE_MARK} {doc_md5} -->\n", doc) == 0)
     chk("FROZEN + document ALTERED -> RED (the case that must never be relaxed)",
@@ -350,7 +370,7 @@ def selftest() -> int:
         under("", doc) != 0)
     # Drift-list accuracy. Added after the first implementation reported 12 drifted sources
     # when 2 had changed; a list padded with false positives trains the reader to skip it.
-    print("\ndrift-list controls — must name the moved source and ONLY the moved source:")
+    say("\ndrift-list controls — must name the moved source and ONLY the moved source:")
     real = PINNED[0][1]                                   # any pinned file that exists
     label0 = PINNED[0][0]
     doc_ok = f"| `{label0}` | `{md5_file(real)}` | why |\n"
@@ -363,7 +383,7 @@ def selftest() -> int:
     chk("a source absent from the pin table is flagged as NOT PINNED",
         any(d[0] == label0 and "NOT PINNED" in d[1] for d in drifted_sources(doc_absent)))
 
-    print(f"\n{'GREEN — the mode split discriminates' if ok else 'RED'}")
+    say(f"\n{'GREEN — the mode split discriminates' if ok else 'RED'}")
     return 0 if ok else 1
 
 

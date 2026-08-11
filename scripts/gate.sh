@@ -30,6 +30,16 @@ run "audit writeup"  python3 python/audit_writeup_gate.py --check
 run "apparatus"      python3 python/apparatus_instrument.py --check
 run "gap surfaces"   python3 python/check_gap_status_surfaces.py
 run "cli selftest"   python3 python/cli.py selftest
+# RETIRE WHEN OQ-277 CLOSES (added 2026-08-11, operator ruling; expiry is deliberate).
+# Standing detection that OQ-277's FROZEN preregistration has not been altered — a run was
+# made under md5 4118f64e, so if the document changes, the stamp stops naming what is on
+# disk and every result loses its pre-registration. Gated rather than checked on request
+# because "when someone remembers to look" is the failure mode this arc is about.
+# It also fails if the check stops being red-capable (its own selftest rides along).
+# This is the one audit-specific entry here: when OQ-277 closes, delete this line and the
+# tool, or promote it to a general frozen-artifact check if a second audit needs one.
+# Next consolidation pass owns the call — see CLAUDE.md "Memory Consolidation Review".
+run "oq277 freeze"   python3 python/audits/oq277_build_prereg.py --check
 echo
 if [ "$fail" = 0 ]; then echo "GATE: GREEN"; else echo "GATE: RED"; fi
 exit "$fail"
