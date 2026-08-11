@@ -648,6 +648,44 @@ fact that every anchor sits in the 12 and none in the 10.
 *unambiguity* and unambiguity is exactly what the hard stratum lacks. An anchor set is a sample of
 easy cases by construction, and both gaps are that fact showing up where it costs something.
 
+### O.3 The P6 gap is ONE incident showing up in three instruments, not three residues
+
+**Recorded 2026-08-11 at the operator's reading, before the (iii′) extraction ran.**
+
+`system_gradient`'s `[] → 0.0` fallback — the incident where a system-level gradient metric read
+exactly `0.0` on every input it had ever been given, because every computation had silently failed
+and the fallback was indistinguishable from measured-flat — appears at three separate places in
+this run's apparatus:
+
+| # | instrument | how the incident appears | consequence |
+|---|---|---|---|
+| 1 | direction-(i) anchor set | **disqualified** — the published P6 exemplar's incident is already an extracted unit (`controls/anchors.json` `_disqualified`) | §O.1: no P6 anchor; any direction-(i) P6 result is UNCALIBRATED |
+| 2 | (iii′) population, row 9 | **disqualified** on the anchors.json precedent (`RULING_2026-08-11_freeze_scope.md` §2.1) | the strongest (iii′) P6 exemplar is out; n=10 eligible, 7 written |
+| 3 | direction-(ii) twins, unit `05` | **used** — as the redacted arm of the `oq93_grid_viability_probe` pair, where collision with the unit is the definition of the control | the corrected set's third pair; role-appropriate, checked before writing (`controls/redaction_pair_selection_defect.md` → *The oq93 collision check*) |
+
+**Why this is worth a section rather than three separate declarations.** Read as three entries, the
+P6 situation looks like ordinary attrition — an anchor lost here, an exemplar lost there. Read as
+one incident, it is a **single point of failure sitting under the pattern that carries the most
+conceptual load**: P6 is the composition-layer pattern, it is what R5's pre-registered directional
+expectation concerns, and it is our side of the E↔P6 correspondence the writeup emits as a PROPOSED
+Ω_C mapping. Every instrument that could have calibrated P6 independently is drawing on the same
+underlying incident, so the residues are **correlated, not additive**, and no amount of accumulating
+them produces coverage.
+
+**What it does NOT change.** Nothing here is a new defect and nothing is repaired by recording it.
+Instrument 3 remains role-appropriate (an anchor must be an incident the coder has not otherwise
+seen; a twin's redacted arm *is* the unit). Instrument 2's disqualification remains *conservative
+rather than required* — different label spaces, different runs — and stands as declared. The
+correction is to the **reading**: §O.1's "no P6 anchor," the (iii′) row-9 disqualification, and the
+twin-pair collision check must be reported as three faces of one incident, and any writeup sentence
+that totals them as independent residues is over-counting the evidence against P6 coverage while
+under-stating its concentration.
+
+**The corpus fact underneath, stated so the gap is not read as an oversight.** There are three
+published P6 exemplars. The one strong enough to anchor on is the one that collides; constructing a
+new one would require the extractor to assign a pattern, which is the boundary the entire design
+rests on. **Declared, not repaired** — as in §O.1, and for the same reason.
+
 ## P. The self-comparison family — one section, not three catches
 
 Three times in this arc a **self-comparison** was caught before it landed, each in a different
@@ -938,3 +976,50 @@ list, because both are genuinely attached to that incident in the source (`FINDI
 the probe `OQ-93`; `PREREGISTRATION.md:6` names the `OQ-96` shim interim, which the arm's mechanism
 already referenced). The check did not force a retraction — it forced the arm to become what its
 own provenance block already claimed.
+
+### L.8 The second unplanted fire in the arc — and the mirror image of L.7's grade profile
+
+**Recorded 2026-08-11 at the operator's reading. Logged beside §L.7 deliberately: these are the
+arc's only two controls that fired on real, unplanted material, and their evidence profiles are
+opposite.**
+
+`python/audits/oq277_build_prereg.py --check` asserts that `PREREGISTRATION.md` is byte-identical to
+a fresh assembly of its canonical sources. On 2026-08-11 it went **RED** — not on a planted fixture,
+but because `verdict_grammar_amendment.md` had gained §L.6 and §L.7 at operator grading and the
+assembled document still carried the pre-amendment text. The drift was real, the cause was ordinary
+work, and nothing about the run was constructed to test the check. Recorded at the time in
+`audit_log.md`; graded here.
+
+**Had that RED occurred one step later it would have been the freeze invalidation notice** — which
+is the whole reason the check exists, observed operating rather than asserted.
+
+**The grade, and why it is not L.7's grade.** Under *a positive control demonstrates DISCRIMINATION,
+not detection*, the fire is the cheap half and the declines are what license the reading. This check
+has the reverse profile from §L.7, and the difference should not be smoothed over:
+
+| | §L.7 (`verify_redaction_twins.py`, the no-overstatement check) | §L.8 (`oq277_build_prereg.py --check`) |
+|---|---|---|
+| fire | 1, on real material, caught its own author | 1, on real material, unplanted |
+| declines | **4, on four distinct pairs** — genuinely different inputs | **3, all the same comparison re-run** — low variety |
+| decline quality | each pair a real near-miss the check had to let pass | one was taken immediately after `--write`, comparing a file to a fresh assembly of the sources that had just produced it — **near-tautological, close to a check that cannot fail** |
+| net | discrimination evidenced on both sides | **fire side strong, decline side weak** |
+
+So the honest statement is: **one unplanted fire on genuine drift, with a decline set that carries
+little information.** That is the strongest *fire*-side evidence available short of the instrument's
+own history containing a hard negative, and it is materially weaker than §L.7 overall. Recording it
+as "the second naturally-fired control" is correct; recording it as evidence of the same strength as
+§L.7 would not be.
+
+**Scope, stated so the grade is not over-read.** The check discriminates on **byte-identity between
+the assembled document and its sources**, and on nothing else. It cannot detect an assembly that is
+internally consistent and wrong, a source that is itself mistaken, or a missing source that was
+never registered for incorporation — an unregistered appendix drifts freely and the check stays
+GREEN. Its record entitles it to "detects incorporated-source drift, evidenced by one unplanted fire
+on real drift," and to nothing wider. The record lapses if the source manifest changes.
+
+**Liveness re-witnessed at this recording, and labelled as what it is.** Before this section was
+written, `--check` was GREEN at md5 `c1040cd04815c206791b5ab3192697be`, matching the DRAFT stamp in
+`audit_log.md`. Writing §O.3 and this section turned it RED. That pair is a **planted** two-sided
+liveness witness — it confirms the check is wired and still bidirectional at HEAD; it **adds nothing
+to the discrimination grade above**, which rests entirely on the unplanted fire. Output pasted in
+`audit_log.md` under the 2026-08-11 amendment entry.

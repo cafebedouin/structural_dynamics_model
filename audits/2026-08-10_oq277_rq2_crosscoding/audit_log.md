@@ -154,6 +154,54 @@ this file contained no such line, and the check therefore **passed vacuously** �
 satisfied by the absence of its own input, which is the defect class this experiment exists to
 study. The sentinel now **fails closed**: no marker, no live call.
 
+## 2026-08-11 — amendment gains §O.3 and §L.8; DRAFT stamp INVALIDATED, re-stamp owed at freeze step 4
+
+**No model call has been made in this audit.** The (iii′) extraction is in flight; the driver still
+refuses while that leg is unbuilt.
+
+Two operator-flagged records were written into `verdict_grammar_amendment.md`, which is incorporated
+verbatim into `PREREGISTRATION.md`:
+
+- **§O.3** — the P6 calibration gap is ONE incident (`system_gradient` `[] → 0.0`) appearing in three
+  instruments (direction-(i) anchor: disqualified; (iii′) row 9: disqualified; direction-(ii) twin
+  unit `05`: used, role-appropriate), not three independent residues. The residues are correlated,
+  not additive. No new defect; the correction is to the reading.
+- **§L.8** — `oq277_build_prereg.py --check`'s RED on the §L.6/§L.7 drift, graded as the arc's second
+  unplanted fire and explicitly graded BELOW §L.7: one real fire, but a decline set of three re-runs
+  of one comparison, one of them taken immediately after `--write` and therefore near-tautological.
+
+### The DRAFT md5 is now stale — recorded, not overwritten
+
+| | md5 |
+|---|---|
+| shipped `PREREGISTRATION.md` (the DRAFT stamp above) | `c1040cd04815c206791b5ab3192697be` |
+| fresh assembly after the amendment edits | `029a063cd0be390d17edd651e2836920` |
+
+`--check` was **GREEN** immediately before the edits and **RED** immediately after:
+
+```
+GREEN — PREREGISTRATION.md is byte-identical to a fresh assembly
+        md5 c1040cd04815c206791b5ab3192697be
+        every verbatim appendix matches its canonical source
+EXIT=0
+
+RED — shipped PREREGISTRATION.md differs from a fresh assembly.
+      A source changed after the document was built. Re-run --write, and if an md5
+      is already recorded in audit_log.md, the freeze is INVALIDATED and must be re-stamped.
+      shipped md5 c1040cd04815c206791b5ab3192697be
+      fresh   md5 029a063cd0be390d17edd651e2836920
+EXIT=1
+```
+
+**This pair is a PLANTED liveness witness, not a discrimination witness.** It shows the check is
+wired and bidirectional at HEAD. It adds nothing to §L.8's grade, which rests entirely on the
+earlier unplanted fire.
+
+**No re-`--write` was run here, deliberately.** Rebuilding now would produce a third md5 that the
+(iii′) hand-back invalidates again. The rebuild belongs at **step 4 of the freeze sequence above**,
+after the units land and the item/call totals are recomputed from disk. Until then `--check` is
+expected RED and that RED is correct — the document genuinely does not match its sources.
+
 Everything above this line is design. Everything below it is result.
 
 <!--OQ277-FIRST-CODING-RESULT-->
