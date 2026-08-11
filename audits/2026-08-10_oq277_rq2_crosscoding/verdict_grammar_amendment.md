@@ -772,3 +772,86 @@ corrected redaction-pair set, fixed in `controls/redaction_pair_selection_defect
 either floor is measured**. This closes the last place in the design where a choice could be made
 with results in hand — the failure mode is not dishonesty but a writer holding two defensible
 numbers and no pre-committed rule for which one feeds the row.
+
+### L.4 A ruling made on evidence that had not been gathered — a different entry from a count that did not reproduce
+
+**Recorded 2026-08-11, by the instance that then gathered the evidence.**
+
+Every entry in §L's table so far has the same shape: *a number was stated, the number was counted,
+they disagreed.* This one does not. Here the number was **right**, and the entry is about **when it
+was available**.
+
+`controls/redaction_pair_selection_defect.md`'s corrected set — `04` (9), `07` (4), `05` (2) — was
+selected on **directory-level** taxonomy-vocabulary counts, and the operator's option-C ruling put
+that set under the both-residue row on the strength of them. But a twin restores vocabulary from the
+unit's **own sources**, so the load-bearing denominator is `files_read`, not the directory. The
+defect document measured `files_read` for the *declared* set only (3 / 0 / 0, which is what exposed
+the defect); **for the corrected set it was never measured before the ruling.**
+
+It was measured this session, before any arm was written:
+
+| unit | directory-level (ruled on) | `files_read`-level (measured after) |
+|---|---|---|
+| `04_stakeholder_layer_migration` | 9 | **3** |
+| `07_oq97_census` | 4 | **3** (4 hits, 3 distinct) |
+| `05_oq93_grid_viability` | 2 | **2** |
+
+**It came out clean.** All three are non-empty at the denominator that matters, so the corrected set
+is exactly what the ruling intended it to be, and nothing is retracted. The ordering compresses
+(9 > 4 > 2 becomes 3 ≈ 3 > 2) but membership does not move, and membership is all the ruling used.
+
+**Why it is logged anyway, and logged separately.** A correct decision made on evidence that had not
+been gathered is not the same event as a stated count that failed to reproduce, and the arc has now
+seen both. The failure mode it belongs to is invisible from the outcome: had `07` or `05` come back
+at 0 — as `10` and `20` did at this same denominator — the row would have been fed by an instrument
+with nothing to measure, and the ruling would have read as sound right up until the floor was
+reported. **The check that would have falsified it cost one script and ran in seconds; what made it
+skippable was that the decision already looked right.** That is the same asymmetry §L.3 keeps: the
+entries worth most are the ones that produce nothing citable.
+
+Sharpened form for §6.4, alongside *count what the rule claims to produce*: **ask at what
+denominator the decision is load-bearing, and check whether the number in hand was measured at that
+denominator or at a convenient one.** Directory-level and `files_read`-level are both real
+quantities; only one of them is the one the twin's floor depends on.
+
+### L.5 The second matcher defect — and both were found by re-deriving a control's own numbers
+
+**Recorded 2026-08-11.** §Q.3 ruled that the stated-versus-counted list gets a summary line rather
+than more rows. This is that line, extended by one observation the arc has now earned.
+
+The direction-(ii) leak lexicon joined its multiword patterns with a **literal space**, so every
+hyphen-joined variant escaped it. Three are attested in the repository's own prose, and they are the
+three that matter most:
+
+| escaping form | where |
+|---|---|
+| `Build-Discipline Pattern-1` | `audits/2026-06-07_stakeholder_layer_migration/AUDIT.md:144` |
+| `Build-discipline spine` | `audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md:22` |
+| `Pattern-6 success-shaped-absorption` | `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md:1` |
+
+A leak-grep that catches `Pattern 1` and misses `Pattern-1` is a **false absence in the instrument
+that certifies H2** — the sweep returns clean and the cleanliness is a fact about the matcher, not
+about the payload.
+
+**This is the second defect in this arc whose locus was a MATCHER rather than a count** (the first
+being §Q's density metric, where `\bP[1-6]\b` fired on local probe names). Both were found the same
+way: **by someone re-deriving a control's own numbers** — which is precisely the practice the
+original §1 prohibited and the corrected §1 permits (§Q.2). The prohibition would have left both
+defects unfalsifiable by construction, and the record now shows the permission paying for itself
+twice.
+
+**The resolution is the role split, not a wider list** (operator ruling, 2026-08-11; the module
+carries it as `LEXICON_DETECT` and the frozen `LEXICON_SELECTION_20260811`). Detection false
+positives are conservative — you investigate and clear them — so the detector must be as wide as the
+evidence supports. Selection false positives are silently decisive, and the pre-declaration's entire
+value is that it was fixed before content was seen. Widening moves the declared rule's top-3
+(`oq97_pattern6_census` 4 → 9 overtakes `oq138` at 5), **and it moves TOWARD the corrected set — the
+direction that flatters the row.** That the movement is convenient is exactly why re-declaring under
+the widened list was refused rather than adopted. Same principle as §Q's: *an instrument's error
+profile is a property of its ROLE, not of the instrument.*
+
+**What made the split available was a measurement, not an argument:** across all 54 coder-facing
+texts (units, anchors, decoys, planted fixtures), the widening changes **zero** hit sets. Without
+that number, widening a live instrument mid-arc would have been an unmeasured change to the thing
+every leak claim depends on. It is logged here because "the change is safe" is the sentence this
+arc has learned to distrust unless a count sits behind it.

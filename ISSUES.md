@@ -11006,7 +11006,7 @@ disagrees with itself, and the catalog sides with the row's citation over its la
 
 ---
 
-## OQ-278 — The pattern taxonomy is FORKED: CLAUDE.md's six vs build_discipline.md's six (a worked P2 instance on the discipline's own substrate)
+## OQ-278 — The pattern taxonomy is INDEX-COLLIDED: CLAUDE.md's six vs build_discipline.md's six — and the collision is in the INCIDENT RECORD, not only in the two specifications (a worked P2 instance on the discipline's own substrate)
 
 **Ω-type:** Ω_C — which set is canonical is a design ruling with no seat-free fact
 (both sets are internally coherent, both have real dated exemplars, and they sort the
@@ -11078,10 +11078,81 @@ count; pass churn >1/3 ⇒ row OPEN. (d) **Narrow license** — recovering BD's 
 exemplar shows the pass is not broken, never that it detects orphan patterns in unfamiliar
 material; the writeup may not over-read the anchor.
 
-**What resolution would change:** one canonical pattern list, with the losing members either
-merged in (making it eight) or demoted with a recorded rationale — and the always-loaded file
-stops disagreeing with its own detail doc. Until ruled, any document citing "the six patterns"
-must name WHICH six.
+---
+
+### RESTATED 2026-08-11 — it is an INDEX COLLISION, and its blast radius is wider than this entry assumed
+
+Two corrections, both raising the stakes. Neither retracts the fork table above; both change what
+resolving it means and where the damage already is.
+
+**1. Collision, not fork (`RULING_2026-08-11_freeze_scope.md` §2.6).** Two patterns sharing an index
+is not one pattern that diverged. **A fork resolves by choosing a branch; a collision resolves by
+RENUMBERING** — because both members may be real and merely mis-addressed.
+`bound-probe-bypasses-clause-order` and `destructive-replace` are plausibly both genuine mechanisms,
+so "resolve toward the published set" would **retire a real pattern for the wrong reason.** The
+resolution options below are restated on that basis. Note also §2.5's finding: the published P3
+branch (*destructive-replace*) has **no dated record of the pattern FIRING** anywhere — the only
+dated record, `audits/2026-06-12_oq106_retire/`, records the discipline being *followed*. The branch
+that won publication is the one with the least behind it in the operational record, which suggests
+the collision was not divergence under pressure but **an index reused because nothing was firmly
+attached to it.**
+
+**2. THIRD INDEPENDENT SIGHTING — and the first that produces a WRONG LABEL rather than an
+ambiguous pointer.** Found 2026-08-11 while authoring OQ-277's direction-(ii) redaction twins, from
+outside any instrument built to measure the collision:
+
+> "**Build-discipline spine, twice over:** the 0.0 fallback is a fabricated default
+> **(Pattern 4)** that made a failed computation indistinguishable from a flat result at every read
+> site" — `audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md:22-23`
+
+`build_discipline.md`'s Pattern 4 **is** *fabricated default*. `CLAUDE.md`'s published P4 is
+*Recap-as-witness substitution*. So a source document in our own corpus, **written before the
+collision was known, attributes its own incident to the orphan branch's numbering** — and under the
+published six that index names a different pattern than the incident instantiates.
+
+The three sightings, ordered by severity, because they are not the same event:
+
+| # | sighting | member | what it shows |
+|---|---|---|---|
+| 1 | the two specifications disagree (2026-08-10, this entry's origin) | P3, P4 | the collision exists |
+| 2 | `AUDIT.md:144` "Build-Discipline Pattern-1" (§Q.4) | P1 — **shared** | incident records cite indices *by the orphan-bearing document's name*; the label happens to be unambiguous |
+| 3 | `FINDINGS.md:23` "fabricated default (Pattern 4)" | P4 — **disjoint** | an incident record carries a label that is **wrong under the published set** |
+
+**The blast radius this entry assumed was too small.** The collision is not confined to the two
+specification documents. It is in the **incident record**, which means: **any historical reference
+to "Pattern 3" or "Pattern 4" anywhere in this repository is AMBIGUOUS until dated against the
+collision** — and, worse, may be *confidently wrong* rather than merely unclear, because the author
+had a coherent six in view and simply had the other one. Documents, audits, KNOWN_STATE entries and
+commit messages are all in scope. A reader cannot resolve such a reference from the index alone;
+they must recover which document the author was reading.
+
+**Immediate consequence, already applied (OQ-277).** Unit `05`'s unredacted twin arm restores
+`fabricated default` and `success-shaped zero` but **OMITS the bare `(Pattern 4)` index**, with the
+omission declared in place and machine-checked absent
+(`controls/redaction_twins_direction_ii.json` → `declared_omission`). Restoring it would not
+un-redact vocabulary — it would inject a **wrong label** into a control whose entire job is to
+measure what redaction costs. Operator ruling, 2026-08-11.
+
+**What resolution would change — RESTATED as a collision.** Not "which branch wins" but **which
+member keeps the index and which is renumbered**, with both retained unless one is independently
+shown not to be a real mechanism. Candidate shapes: renumber the orphans to P7/P8 (making it eight);
+or keep both sets but give every index a namespace so a bare "Pattern 4" cannot be written. Either
+way the always-loaded file stops disagreeing with its own detail doc, and — the part this restatement
+adds — **the historical record needs a dating rule**, since existing references cannot be repaired
+by fiat: a citation's meaning depends on which document its author had open, and that is recoverable
+from dates only if the divergence date is established. Until ruled, any document citing "the six
+patterns" must name WHICH six, and any citing a bare `Pattern 3`/`Pattern 4` must be treated as
+unresolved.
+
+**Graduation step for the dating rule:** establish when the two lists diverged (git log on both
+files' pattern-heading blocks), then sweep `audits/`, `docs/`, `KNOWN_STATE.md` for bare
+`Pattern [34]` / `P[34]` references and bucket each by whether it predates or postdates the
+divergence. Not started; not blocking the fork-residue row, which measures something else.
+
+**Note on the fork-residue row's scope, given the above.** The row was designed against the *fork*
+reading — it asks which branch carries load. **A row built to measure "which branch" cannot answer
+"were these ever the same question"** (§2.6). Its result stays valid as evidence about whether the
+orphaned mechanisms are load-bearing; it must not be read as adjudicating the index.
 
 **v0.4 queue note (§11 amendment, independent of the experiment):** §2.3's original
 classification, whatever informal form it took, may straddle the fork boundary and be
