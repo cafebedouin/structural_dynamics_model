@@ -10544,6 +10544,27 @@ raw responses, matrices, WRITEUP); `python/audits/oq277_crosscoding_driver.py`;
 reuses `agent/llm_call.py` (`call`, `count_tokens`), the OQ-264 k-redraw standard, and
 the prereg-md5 convention (`audits/2026-08-09_oq151_dual_gauge/audit_log.md` template).
 
+**Evidence 2026-08-11 — the escape check's threshold-comparability probe ran and the row does NOT
+fire; its calibration arm is CLOSED UNRESOLVED as structurally one-sided.** Pass 1 (fresh blind judge,
+4-item packet, all seeds and md5s in `audits/2026-08-10_oq277_rq2_crosscoding/audit_log.md`) returned
+AGREE — but the judge returned `extract` on **all four** items, and an all-`extract` response passes
+the calibration arm **by construction**, so the pass cannot separate "shares the primary threshold"
+from "extracts everything." **Operator ruling: do NOT mint a known-negative** — an item authored to be
+declined tests decoy-detection, not threshold agreement; the arm needs a NO-UNIT that *arose* under the
+primary conventions, and §M's k = 0 says the corpus contains none. **The six escape candidates stay
+quarantined and unconfirmed.** The entire licensed output is the bounded claim: *six directories
+outside the keyword proxy contain material an independent extractor judged silent-failure-shaped, under
+conventions whose comparability to the primary sample could not be established* — no numerator, no miss
+rate, no completeness sentence. **Graduation condition (what would reopen it): the first NO-UNIT
+arising naturally in EITHER stratum**, at which point a two-sided arm is drawable without authorship.
+Until then the question is unanswerable from this corpus by construction, because **neither stratum has
+produced an extract/no-extract boundary** (0 NO-UNITs across 22 primary dirs; 6-of-6 in-frame candidates
+across the escape slice) — no threshold has been demonstrated on either side to compare. Two corrections
+landed with it: there is **no 22-directory escape sample** (n_escape = 8; the frozen frame's 22 is the
+primary draw), and the 0-of-22-unseeable census is **vacuous by construction** (that stratum is defined
+by a grep over `*.md`) — both in `verdict_grammar_amendment.md` §L.2. Record:
+`packets/escape_units/PREREGISTRATION_threshold_calibration.md` → *Result — pass 1*.
+
 **Design (frozen at prereg; every element below is pre-registered before any result):**
 
 - **Three comparisons.** (i) Wu's 22 incidents → P1–P6 + other; the coder prompt carries

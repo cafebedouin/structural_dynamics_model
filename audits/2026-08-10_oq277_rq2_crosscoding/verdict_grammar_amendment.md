@@ -542,6 +542,21 @@ excludes it, the check is a definition restated.** (Enumeration as the fifth in 
 operator's count, recorded as theirs; the two instances verified in-file here are the §E floor
 self-comparison and the `73 + 101 = 174` partition that concealed a positional parse.)
 
+### L.3 The anti-misreading entries, counted because they are invisible by design
+
+**Fourth instance this arc (operator's count, 2026-08-11):** something written down *specifically to
+stop a future reader promoting it*. The latest is the threshold probe's item 3 — the blind judge
+returned the same verdict §H.1's redacted paragraph asserts, and the coincidence was recorded together
+with the reason it is worth almost nothing (the judge returned `extract` on all four, so agreement
+there is what a judge extracting everything produces anyway).
+
+**Why the count is worth keeping.** These entries produce nothing citable. They add no finding, move
+no number, and a reader encountering one learns only that a tempting inference was already considered
+and declined. That is exactly why they are the entries most likely to be dropped for brevity — and
+why their presence is the reason the rest of the record can be trusted. Same discipline as recording
+predictions that failed: the value is in the asymmetry between what was kept and what could have been
+quietly omitted.
+
 ## M. §H.2 residue — k = 0 confirms the null AND leaves the mechanism untested
 
 **Operator, 2026-08-11: the null is confirmed and the row stays OPEN.** k = 0 across the full n=22

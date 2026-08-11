@@ -25,6 +25,26 @@ directory, pre-registered before either party has seen a result. Its escape-side
 and recorded there. Until it runs, nothing in this file licenses a numerator, a miss rate, or a
 sentence about the proxy's completeness.
 
+**2026-08-11 — the probe ran, and the row still does not fire.** Pass 1 returned AGREE, but its
+calibration arm **did not discriminate**: the judge returned `extract` on all four items, which passes
+the arm by construction. The arm is now **closed unresolved as structurally one-sided** — a two-sided
+arm needs a NO-UNIT that *arose* under the primary conventions, and §M's k = 0 says none exists.
+Operator ruling: **do not mint one**, because an item authored to be declined tests decoy-detection,
+not threshold agreement. **The six candidates stay quarantined and unconfirmed.** The entire licensed
+output of this file is now:
+
+> Six directories outside the keyword proxy contain material an independent extractor judged
+> silent-failure-shaped, under conventions whose comparability to the primary sample could not be
+> established.
+
+The extractor's own worry above — "the one thing I cannot check, by construction, is whether my
+reading of the boundary rule matches the primary sample's" — was **correct, and is now known to be
+uncheckable rather than merely unchecked.** Neither stratum has produced an extract/no-extract
+boundary (zero NO-UNITs across 22 primary directories, 6-of-6 in-frame candidates across the escape
+slice), so there is no demonstrated threshold on either side to compare. Graduation condition: **the
+first NO-UNIT arising naturally in either stratum.** Full record:
+`PREREGISTRATION_threshold_calibration.md` → *Result — pass 1*.
+
 ## Conventions applied (declared before extraction, overridable by the operator)
 
 - **C-1 (prose in directories that have none).** Two frame directories carry no prose document

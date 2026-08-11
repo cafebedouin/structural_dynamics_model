@@ -452,10 +452,67 @@ was coded wrong in either. **Recorded as the arc's sixth instance**, on the oper
 - **Unchanged:** each of the six still needs §H.2 individually, and §H.2 is the operator reading the
   source directory. This probe was never able to confirm a candidate and did not.
 
-**Open, with its graduation step named:** an AGREE that discriminates would need a packet containing at
-least one item a threshold-sharing judge must decline. Until such an item exists, re-firing this packet
-at a new order tests order sensitivity only — worth doing, but it cannot convert this AGREE into
-evidence of threshold agreement. That decision is the operator's, with the number now in hand.
+### CLOSED UNRESOLVED — the arm is structurally one-sided (operator ruling, 2026-08-11)
+
+**Do not mint a known-negative.** The ruling, and its reasoning, because the reasoning is the finding:
+
+**A minted negative cannot do the job.** An item constructed now, by a party who knows what the arm
+needs and which direction failure lies in, is **an item authored to be declined**. A judge declining
+it shows that the judge can decline authored decoys — which the main design's decoys already
+establish — not that it shares a threshold with the primary conventions. What the arm needs is a
+negative that **arose** under those conventions, and §M's k = 0 says the population contains none.
+
+**So this is not a gap in the packet; it is a property of the corpus.** No directory in the primary
+sample was ever ruled NO-UNIT, so no natural known-negative exists to draw. The arm is closed
+**unresolved**, not satisfied and not failed.
+
+**And that makes the finding larger than the probe would have been.** The threshold-comparability
+question is **unanswerable from this corpus by construction** — and it is unanswerable *because the
+primary extraction never declined anything either*. Two extraction passes, 22 directories and 8:
+**zero NO-UNITs on one side, 6-of-6 in-frame candidates on the other.** Nobody in this arc has yet
+produced an extract/no-extract boundary in **either** stratum. The probe went looking for a threshold
+*difference* and found that neither party has demonstrated a threshold *at all*.
+
+**Graduation condition — not a minted item.** The arm becomes constructible **without authorship** at
+**the first NO-UNIT that arises naturally in either stratum**. At that point a two-sided packet can be
+drawn rather than written. Until then this stays open, and re-firing the existing packet at a new
+order tests order sensitivity only.
+
+### Consequence for the escape check's status
+
+**The six candidates stay quarantined and unconfirmed. The row does not fire.** §H.2 requires the
+operator's confirmation, and the calibration that would have licensed reading the row is structurally
+unavailable.
+
+**The bounded claim that survives, in the form it should be written:**
+
+> Six directories outside the keyword proxy contain material an independent extractor judged
+> silent-failure-shaped, under conventions whose comparability to the primary sample could not be
+> established.
+
+That is weaker than "42% is an undercount" and stronger than nothing, and it is the honest form. No
+numerator, no miss rate, no sentence about the proxy's completeness follows from it.
+
+### A datum about the judge, not only about the arm
+
+A fresh instance, given four items and a written clause, **extracted all four**. Read as a finding
+about the arm that is a non-discrimination; read as a finding about naive LLM judges under this task
+it is **directional**: the default behaviour was to extract, not to weigh.
+
+**[UNVERIFIED — operator-supplied cite, not pinned by me]** The operator connects this to Advani's
+result that judges anchor on completion-shaped surface features. Recorded as supplied. Whoever writes
+§9.3 must pin the reference before it ships, or drop the connection; I did not verify it and did not
+search for it. The observation stands on its own without the cite; it is one instance and is a line
+in a writeup, not evidence.
+
+## For the arc writeup (§9.3), flagged forward not written here
+
+`WRITEUP.md` at the audit root is the other instance's file and is untouched from here. Three items:
+
+1. The bounded claim above, verbatim, as the escape check's entire licensed output.
+2. Neither stratum has produced an extract/no-extract boundary — the reason the comparability question
+   is unanswerable from this corpus, and the graduation condition that would change it.
+3. The all-extract judge datum, with the cite pinned or dropped.
 
 ### One small item, under-claimed deliberately
 
