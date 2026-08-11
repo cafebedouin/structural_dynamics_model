@@ -389,7 +389,78 @@ Two consequences for `FRAME_AUDIT_prose_visibility.md`, which assumed the larger
    1 − 0.05^(1/6) ≈ **39.3%**. That is a **looser** bound, i.e. a null is *less* reassuring — the
    one-way direction the frame audit already declared. Moot while six candidates are proposed.
 
-## Result
+## Result — pass 1, 2026-08-11
 
-*(empty — nothing has been run. Do not fill this in from a pass whose calibration arm failed, or
-from a pass in which any item was flagged recognized.)*
+Judge: a fresh instance, no history of this arc, blind to composition. Packet md5
+`d72b28b4a99c4d755338784981d74e64`; verdicts committed at `32228a4a` **before** `KEY.md` was opened.
+Primary-side seed `20260811`; presentation-order seed `20260811`; **location mismatch: none**.
+
+| item | stratum | verdict |
+|---|---|---|
+| 1 | primary (known-positive) | extract |
+| 2 | escape (candidate) | extract |
+| 3 | primary (known-positive) | extract |
+| 4 | escape (candidate) | extract |
+
+Presentation order alternated `primary, escape, primary, escape` — so the length tell separated the
+packet into `{1,3}` short and `{2,4}` long, exactly along the stratum boundary.
+
+**Table row reached: row 1 — both primaries extract and both candidates extract → AGREE.** No
+abstention, no refusal, every answer inside the grammar. The recognition row could not fire
+(Amendment 3 retired). So the row is scored **AGREE**, and then immediately braked twice, both brakes
+pre-registered before the pass:
+
+1. **The model-judge clause.** One pass is a draw, not a measurement; an AGREE owes a re-fire at a
+   different presentation order before it licenses scoring. **Not yet run.**
+2. **The length-tell ruling.** AGREE was the direction the confound pointed. It does not license
+   scoring at face value, and **the six candidates do not proceed individually to §H.2 on it alone.**
+   Reordering does not cure this one, so brake 1 cannot discharge brake 2.
+
+### The finding that matters more than the row — the calibration arm did not discriminate
+
+**All four came back `extract`, and a response of all-`extract` passes the calibration arm by
+construction.** The arm fails only if a primary returns `no-extract`. A judge with a permissive
+threshold — one that extracts anything placed in front of it — passes the arm *and* extracts the
+candidates, producing exactly this result. So this pass **cannot distinguish "the judge shares the
+primary threshold" from "the judge extracts everything."** The AGREE is consistent with both, and the
+data contain no evidence separating them.
+
+This is not the design failing to anticipate a possible world: the prereg's fireability check named
+the discriminating world ("a judge who extracts both primaries and declines a candidate as *a caveat,
+not an instance*") and it was genuinely constructible. It is the **realized** response carrying no
+discriminating information. The distinction matters — the falsifier was fireable, it just did not fire,
+and that is a weaker result than a fired falsifier, not an equivalent one.
+
+**Why it cannot be repaired from existing material — and this is structural.** The fix would be a
+**known-negative**: an item the primary conventions ruled NO-UNIT, which a threshold-sharing judge
+must decline. **There is none. §M records k = 0 across the full n=22 primary sample** — zero
+operator-confirmed NO-UNIT directories. The calibration arm is therefore **one-sided by construction**,
+and no re-draw, re-order, or re-fire can make it two-sided, because the material does not exist. A
+two-sided arm would require minting a known-negative, which is a new spend and a new ruling.
+
+**Same shape as §L.2, and the origin is again the population rather than the code.** A check whose
+pass is guaranteed by the state of the sample it draws from is a definition restated. §L.2's vacuity
+came from the frame's sampling rule; this one comes from the primary sample's realized k = 0. Nothing
+was coded wrong in either. **Recorded as the arc's sixth instance**, on the operator's running count.
+
+### What this pass does and does not license
+
+- **Does:** the escape row is not VOID. Nothing here shows the two thresholds differ.
+- **Does not:** license scoring the escape row, license any of the six candidates, or support any
+  sentence about the keyword proxy's completeness or miss rate. It does not even establish that the
+  judge applied a threshold, as against extracting by default.
+- **Unchanged:** each of the six still needs §H.2 individually, and §H.2 is the operator reading the
+  source directory. This probe was never able to confirm a candidate and did not.
+
+**Open, with its graduation step named:** an AGREE that discriminates would need a packet containing at
+least one item a threshold-sharing judge must decline. Until such an item exists, re-firing this packet
+at a new order tests order sensitivity only — worth doing, but it cannot convert this AGREE into
+evidence of threshold agreement. That decision is the operator's, with the number now in hand.
+
+### One small item, under-claimed deliberately
+
+Item 3 is the directory §H.1's redacted paragraph adjudicates as a UNIT. The blind judge, never shown
+that paragraph, returned `extract` — the same verdict. **This is worth almost nothing as
+corroboration:** the judge returned `extract` on all four, so agreement with §H.1 here is what a
+judge extracting everything would produce anyway. Recorded so a later reader does not find the
+coincidence and promote it.

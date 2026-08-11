@@ -69,3 +69,24 @@ so the stratification key is not disclosed by it.
 
 Two controls, both fired: a string known to be in the packet matched, and a planted forbidden string
 changed the hit set — so an empty-ish result here is a measurement, not a matcher that never ran.
+
+## 2026-08-11 — pass 1 run; ordering constraints discharged in full
+
+| step | witness |
+|---|---|
+| KEY.md committed before the packet was shown | `b49fd273`, packet shown to no one at that commit |
+| judge's verdicts committed before KEY.md opened | `32228a4a`, md5 `bcce03a51669c5e6375e4258881beee9` |
+| neither artifact edited after the other was seen | md5s re-verified against the freeze table at each step, no drift |
+
+`packets/judging/VERDICTS.md` — pass 1, four `extract`, one tool call total (the isolated Read), no
+self-reported breach. Judge blindness rested on instruction plus single-file isolation, backed by the
+harness tool-call count; **not mechanically enforced — declared, not repaired.**
+
+**Outcome: AGREE, braked twice and not scorable.** Both brakes were pre-registered before the pass:
+the re-fire owed by any model judge, and the length-tell ruling under which AGREE does not license the
+six candidates proceeding to §H.2. Reordering cures the first and cannot touch the second.
+
+**The sharper result: the calibration arm did not discriminate.** All-`extract` passes the arm by
+construction, so this pass cannot separate "shares the threshold" from "extracts everything." It
+cannot be repaired from existing material — §M records k = 0, so no known-negative exists to draw.
+The arm is **one-sided by construction**. Full reasoning in the prereg's Result section.
