@@ -216,3 +216,44 @@ in OQ-277.
 
 **No model call has been made and none will be made before the freeze and the spend-go**, including
 to test the driver (`HANDOFF_TWINS_AND_DRIVER.md` §2.5). `payloads/` and `responses/` stay empty.
+
+### 2.5 P3's instance — first pass run, result is OPEN and leans to the second horn
+
+**Positive control FIRED** (a probe that only returns silence proves nothing): P1's published
+exemplar `w1_sheaf_join` is found in `KNOWN_STATE.md`, `ISSUES.md`, `build_discipline.md` and
+`sheaf_status_maxent_ordering.md` — a dated exemplar IS findable by this search.
+
+**P3 search result:** the only dated record is `audits/2026-06-12_oq106_retire/` — titled
+*"destructive-replace witness"*, §"Pattern 3: destructive-replace owes the diff". **It records the
+discipline being FOLLOWED, not the pattern FIRING**: an old-vs-new diff produced before a retire.
+No dated record of the *failure* — a destructive replace trusted without the diff — was found in
+`KNOWN_STATE.md`, `ISSUES.md`, `docs/` or `audits/`.
+
+**Verdict: OPEN, leaning to the second horn** — §4.3 illustrating P3 with a *description* rather
+than an incident. Not asserted: one search at one altitude, run at the end of a session, is not the
+adversarial coverage an existence claim needs. **Graduation step:** sweep for the failure shape
+(a retire/consolidation with no paired old-vs-new output) rather than for the vocabulary, since a
+defect nobody named will not carry the words. **Owed before v0.4 restates §4.3** — the correction
+differs by answer: a missing *witness* means the exemplar gets found or the pattern is marked
+uninstanced; a missing *incident* means the published taxonomy's third member rests on a
+hypothetical.
+
+**If the second horn holds it is the phantom-coding shape one layer down** — §2.3 described a
+coding procedure that produced no artifact; §4.3 would describe an instance that has no record.
+Same absence, different layer, found by two routes three weeks apart.
+
+### 2.6 OQ-278 is an INDEX COLLISION, not a fork — resolution options must be restated
+
+Two patterns sharing an index is not one pattern that diverged. **A fork resolves by choosing a
+branch; a collision resolves by RENUMBERING**, because both members may be real and merely
+mis-addressed. `bound-probe-bypasses-clause-order` and `destructive-replace` are plausibly both
+genuine mechanisms, so "resolve toward the published set" would **retire a real pattern for the
+wrong reason.**
+
+**Restate OQ-278's resolution options on that basis BEFORE the fork-residue row feeds it** — the
+row was designed against the fork reading, and a row built to measure "which branch" cannot answer
+"were these ever the same question."
+
+**And note what §2.5 says about the collision's origin:** the branch that won publication is the
+one with the least behind it in the operational record. That suggests the collision was not a
+divergence under pressure but **an index reused because nothing was firmly attached to it.**
