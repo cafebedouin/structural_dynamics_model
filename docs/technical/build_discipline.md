@@ -909,6 +909,36 @@ This conversation supplied four instances, all the same shape:
   measured") and the sibling notes, correcting the claim. This section exists because its own
   positive control fired.
 
+**Sub-rule: evaluate a measure on the COMPARATOR ITSELF, at the actual cell sizes, before freezing
+it (operator, 2026-08-10; OQ-78).** A separability, concentration, or overlap statistic is not a
+pinned condition until it has been run on the known-positive and known-negative populations *at the
+cell sizes the design will actually apply it to*. **Until then it is a name for a condition, not a
+condition** — and because it will emit a number either way, a vacuous one reads exactly like a
+working one.
+
+The check is mechanical, costs one pre-freeze pass, and runs before any test datum is visible. It
+caught two live defects in a single pass on OQ-78, each of which would have produced a
+success-shaped close:
+
+- **The measure scored its own pass-value on the comparator.** The pinned p10–p90 interval-overlap
+  separability measure returned **1.0 on the archive comparator itself** (rope's p90 dragged to 0.68
+  by three documented exceptions), so its bootstrap threshold calibrated to 1.0 and *every possible
+  banding would have passed*. Its obvious repair, p25–p75, was vacuous in the opposite direction —
+  **0.000 on all four non-test legs**, no variance to threshold. Only the third candidate
+  (worst-pair AUC) varied across legs, which is what made it the only one carrying information.
+- **The floor sat below the null median at the smallest admitted cell.** A concentration floor of
+  0.10 against a uniform-digit null whose p50 is **0.300 at n=5** and 0.200 at n=10 does not
+  measure localization at those cells — it fires on noise. Fixed by raising the minimum scored cell
+  until the null p99 cleared the floor, and by setting the floor to *just admit the weakest true
+  positive* (so the headroom is visible rather than assumed).
+
+Diagnostic questions, in order: does the measure discriminate *between* my known populations (not
+merely return a number)? Does the criterion exceed the null's upper tail at the **smallest** cell it
+will be applied to? Is the floor's headroom over the weakest true positive stated, rather than
+assumed comfortable? A "no" to any of them means the condition is unpinned. Related: *An introduced
+instrument is itself a claim* — the repair measure inherits this discipline too, which is why the
+AUC replacement was itself evaluated on all four non-test legs before it was pinned.
+
 **The rule:** every diagnostic — grep, query, *or a reasoning claim of the form "X appears nowhere /
 happens never / is unique"* — must be run against a **positive control**: a case you know in advance
 it must flag. If it does not fire on the known-positive, its clean result on the real question is

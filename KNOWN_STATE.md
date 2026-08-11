@@ -86,6 +86,38 @@ worst-pair AUC — the only candidate that varies across legs. (b) The pinned mi
 **below the uniform null median** (p50 0.300 at n=5, 0.200 at n=10), so small cells fire on noise;
 raised to 50, with the floor set to just admit the weakest true positive (kimi 0.281 vs floor 0.25).
 
+**SPLIT RULING (operator, same day) — OQ-78 closes, the rail moves to OQ-281.** The idiom half was
+tracking **two objects with opposite trajectories** under one name, so it splits rather than closing
+whole. **(a) The point-mass component is RESOLVED** — tracking question (a) answered in the
+direction the OQ posed it: the 0.68 mode **diluted, not entrenched**. **This retires the ε-axis
+compression caveat as originally stated**: "a third of the corpus shares one ε value, so the axis is
+low-variance and χ is f(d)/σ(S)-driven" was true at 30–34% and is **not** the operative constraint
+at 7.3% with 52 distinct values. Text still citing ε compression as a live limit on ε-keyed
+denominators must be re-read against that number; what survives is the *bin-resolution* limit, a
+construction fact rather than a prevalence one. **(b) The rail component is OQ-281**, re-scoped from
+"is this rail the model's own?" (answered: no, inherited) to "where is the boundary of the family
+that shares it?" — held open because the family map contains **no Claude model off 8**, so
+family-sharing is consistent with the data and un-falsified by it; closing there would be a close on
+an absence.
+
+**Arm-structure characterization (exploratory, no falsifier).** `python/audits/oq78_rail_arm_structure.py`.
+The `.x2` arm is **not** the dissolved point mass spreading — if it were, its gain would sit at
+0.62/0.72, and for sonnet-5 only 14.1% does (its `.x2` mass is at 0.42 and 0.52). Arm concordance on
+matched seeds, **restricted to same-claimed_type seeds and shuffled within type** to partial out the
+type channel: **haiku × sonnet-5 excess +0.055, above p99**; **kimi × sonnet-5 excess exactly
++0.000**. So arm choice carries seed-level signal *within* the Claude family and none across
+families — modest in size (56.5% vs a 51.0% baseline), and to be reported as real, not strong.
+
+**GENERALIZABLE CHECK (operator, 2026-08-10) — evaluate a measure on the comparator itself before
+freezing it.** Both Pattern-5 catches this session came from the same move: running the candidate
+measure on the known-positive/known-negative populations **at the actual cell sizes** before the
+freeze. **A separability or concentration measure that has not been evaluated that way is not a
+pinned condition yet — it is a name for one.** It caught two live defects in one pass: a measure
+that scored its own pass-value on the comparator (so every input would have passed) and a floor
+sitting below the null median at the smallest admitted cell (so noise would have fired it). Cheap,
+mechanical, and it runs before any test datum is visible. Detail:
+`docs/technical/build_discipline.md` → *Every diagnostic needs a positive control*.
+
 **Method notes for a re-run.** All four twin legs were classified zero-spend via serialized
 `classify_corpus` (~60–90s each; they share the raw artifact — do not parallelize). Leg-model
 attribution is verified from `story_provenance` and `classify_corpus`'s fingerprint refusal, **never

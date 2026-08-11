@@ -3245,242 +3245,75 @@ the computed layer (tangled_rope ×4 seats, both constructions), divergent at th
 
 **Ω-type:** Ω_E (a measurement caveat on the corpus, quantifiable and trackable as it grows).
 
-**Status:** partial — **idiom half READ 2026-08-10, pre-registered and zero-spend; CELL 2 fired, no
-close licensed** (`audits/2026-08-10_oq78_idiom_close/`, prereg md5 `384e68bbac80e0959dba1294a6f6ee87`,
-commit `bfbe52ea`). Condition (ii) HOLDS (worst-pair AUC 0.886 vs threshold 0.635); **condition (i)
-FAILS** — sonnet-5 concentrates on `.x8` *within* its claimed_type bands (pooled concentration 0.331
-vs pre-committed floor 0.25), on all three scored types independently (rope 0.427, tangled_rope 0.316,
-snare 0.339-at-digit-1-with-28.1%-at-8). **The rail is FAMILY-bound, not model-bound**, so the
-condition — pinned to ask "is the `.x8` rail *sonnet-5's own*?" — fails at a coarser grain than it was
-written to detect. Escalated for a close-semantics ruling (see BLOCKED ON HUMAN below).
-**Standing readout LANDED 2026-07-03 (OQ-205 U10)**: `python/epsilon_authorship_readout.py`
-(pipeline Phase 9c; per-Author/Route stratum mode fraction, distinct values, last-digit histogram,
-exactly-at-threshold count from the `epsilon_provenance` emission — the one-off census is now a per-run
-surface; live-leg run cross-checks the 2026-07-03 census exactly: 0.68×46/110=41.8%, .x8/.x2 rail, and
-the rail is model-specific — flash sits on .x5/.x0). "Re-baseline on cohort zero" lands here for free.
-Three-fate split RATIFIED 2026-06-12 (one amendment: free-gate residual → OQ-117 at filing):
-quantization half CLOSED working-as-designed for SCOPE-stage statistics
-(ε-bin is 4-level by construction THERE); idiom half OPEN, re-baselined on cohort zero;
-independence circularity ESCALATED to OQ-117. **Probe HALTED pre-spend same day (greenlit, then
-killed in pre-flight recon): the epsilon_bin channel is DEAD at the generation interface — no
-production path feeds the bin to the authoring model, so the withheld arm ≡ production and the
-contrast cannot run as designed** (witnesses W1–W3:
-`audits/2026-06-12_oq78_dead_bin_channel/`). Fate-2 graduation RE-ROUTED to the zero-spend
-cross-arm read over OQ-109 Phase C (see probe block). Original "NOT a leak" claim REVISED — the
-historical leak was the PRE-de-leak prompt's numeric type-bands (scrubbed at b6c4e113,
-2026-06-05); the SCOPE bin-boundary disclosure survives but reaches generation only indirectly
-(via hypothesis co-authoring). Boundary-ancestry question ruled ARCHAEOLOGY — not chased.
-**Origin:** n=91 build assessment (2026-06-06, commit `0fd22ea`, manifest run 03:50Z — coherent
-snapshot, 91 .pl = 91 .json = manifest n). Flagged as a watch at n=20 (`0.58` interior anchor gone,
-new `0.68` mode emerging); escalated to a finding at n=91.
+**Status:** resolved — 2026-08-10. All three components are now disposed, the last two on the same
+day: **(1) designed-quantization half** closed working-as-designed 2026-06-12 (ruling below, still
+operative); **(2) point-mass component CLOSED 2026-08-10** — tracking question (a) answered in the
+direction the OQ posed it: the 0.68 mode **diluted, not entrenched**; **(3) rail component SPLIT OUT
+to OQ-281** — re-scoped from "is the `.x8` rail this model's own?" (answered: no, inherited) to
+"where is the boundary of the family that shares it?". Independence circularity was escalated to
+OQ-117 at filing. Evidence: `audits/2026-08-10_oq78_idiom_close/` (prereg md5
+`384e68bbac80e0959dba1294a6f6ee87`; commits `bfbe52ea` + this one); KNOWN_STATE 2026-08-10.
 
 **Priority:** 1
-**Deps:** blocked_on_human oq78-close-semantics-ruling (family-bound idiom: close or hold open; see BLOCKED ON HUMAN 2026-08-10)
+**Origin:** n=91 build assessment (2026-06-06, commit `0fd22ea`, manifest run 03:50Z — coherent
+snapshot, 91 .pl = 91 .json = manifest n). Flagged as a watch at n=20 (`0.58` interior anchor gone,
+new `0.68` mode emerging); escalated to a finding at n=91. Original observation: 31/91 at exactly
+ε=0.68, only 13 distinct values, last-digit grid 8:78 / 5:7 / 2:6.
 
-### CORRECTION (2026-08-10) — the pinned graduation was DEAD-PREMISED
+### Resolution of the point-mass component (2026-08-10) — it DILUTED
 
-The fate-2 graduation below ("zero-spend cross-arm read over OQ-109 Phase C") rested on Phase C's
-**60-seed** regen supplying a withheld arm on matched seeds. **That regen was descoped to a 5-seed
-pilot** (OQ-109 resolved 2026-06-13, n corrected to 5). The graduation step as written no longer
-exists; the paragraph below is retained as provenance, **not as a live plan**. It is replaced by
-the 2026-08-10 pre-registered observational read. **OQ-117's "design call remains SEQUENCED AFTER
-this read" is therefore DISCHARGED** — the read has run.
+Measured across five live legs + the archive, zero-spend (WRITEUP §3). **The 0.68 point mass
+dissolved** — archive 30.0% → sonnet-5 **7.3%**, distinct ε values **13 → 52** — while the
+`.x8`/`.x2` rail **held** (91.7% → 78.2%). The two things this OQ tracked under one name have
+**opposite trajectories**, which is why the entry splits rather than closing whole.
 
-### FINDING (2026-08-10) — the idiom half's two components came apart
+**This retires the ε-axis compression caveat as originally stated.** "A third of the corpus shares
+one ε value, so the ε axis is low-variance and χ is f(d)/σ(S)-driven" was true at 30–34%; at 7.3%
+with 52 distinct values it is **no longer the operative constraint**. Any downstream text still
+citing ε compression as a live limit on ε-keyed denominators should be re-read against this
+number. What survives is the *bin-resolution* limit from component (1), which is a construction
+fact, not a prevalence one. (`shared/role_flip.py` / OQ-188's read-site straddle flag consumed the
+f(d)-dominance this OQ measured — `audits/2026-07-11_oq186_oq188_readsite/`; that consumer's
+premise is now leg-and-model-indexed, not global.)
 
-Measured across five live legs + the archive, all zero-spend (`WRITEUP.md` §3). **Post-hoc
-descriptive, not a pinned condition** — but it answers this OQ's own tracking question (a):
+### Operative rulings retained (do not drop on compression)
 
-| population | n | `.x8` | `.x2` | `.x8`+`.x2` | ε=0.68 | distinct ε |
-|---|---|---|---|---|---|---|
-| archive `kernel_v2_test2` | 60 | 76.7% | 15.0% | 91.7% | **30.0%** | **13** |
-| default derived sonnet-4.5 | 64 | 76.6% | 20.3% | 96.9% | 50.0% | 12 |
-| `testsets_haiku` | 960 | 62.3% | 19.8% | 82.1% | 31.8% | 42 |
-| `testsets_sonnet` (TEST) | 1001 | 42.8% | 35.5% | **78.2%** | **7.3%** | **52** |
-| `testsets_kimi` | 1005 | 27.7% | 38.1% | 65.8% | 5.3% | 68 |
-| `testsets_flash` | 960 | 2.9% | 0.5% | **3.4%** | 1.6% | 30 |
-
-**The 0.68 point mass DISSOLVED** (30% → 7.3%; distinct ε 13 → 52) while **the `.x8`/`.x2` rail
-HELD** (91.7% → 78.2%), with mass shifting *between its arms*. So sonnet-5's marginal is a
-**flattening within the rail, not a rail absence** — the two things this OQ framed as one
-("a 0.68 mode + 8/2 grid") now have opposite trajectories and should be tracked separately.
-
-**Model-boundedness is measured, not inferred.** On **957 matched seeds** (one seed set re-authored
-per model, so topic and claimed_type mix are held fixed by construction): four models, three argmax
-digits — Claude→**8**, kimi→**2**, flash→**5**; `tv_model_digit` 0.365 against a label-permutation
-null max of 0.045; **all-agree rate 1.25%**. Every Claude-family population lands on 8, including
-two with a **zero-story id intersection** (archive 0.767 / sonnet-4.5 derived 0.766). Only flash
-leaves the rail; kimi sits on its `.x2` arm.
-
-**Two instrument defects caught pre-freeze** (both Pattern 5 — a gate passing because its input is
-degenerate): condition (ii)'s originally-pinned p10–p90 interval-overlap measure scored **1.0 on the
-comparator itself**, so every possible banding would have passed (replaced by worst-pair AUC, the
-only candidate that varies across legs); and the pinned minimum cell n=5 sits **below the uniform
-null median** (p50 0.300 at n=5), so small cells would have fired on noise (raised to 50).
-
-### BLOCKED ON HUMAN (2026-08-10) — close-semantics ruling
-
-> **Is "the `.x8` rail is a Claude-family idiom, relocating across model families" a close of the
-> idiom half, or does the half stay open?**
-
-For closing: the model-dependence is measured on matched seeds with both known-negatives silent.
-For holding open: condition (i) *was* the pinned falsifier and it failed; and the point-mass/rail
-split above is a new two-part structure the original framing treated as one. **Sharpening read
-available zero-spend:** measure the rail on additional Claude-family models — the family map
-currently has **no Claude model off 8**, and that absence is what makes family-sharing un-falsified
-rather than confirmed. **NOT the remedy:** the matched-seed-across-models arm (it isolates the
-model, and the model is what already varied).
-
-**Carry-forward caveats (operative regardless of the ruling):**
-- **ε-keyed denominators are per-Author stratum, NEVER pooled.** Pooling regimes inside one model
-  is the same failure one level down — witnessed here: default-leg sonnet-5 and `testsets_sonnet`
-  are different generation regimes and were kept separate (they proved concordant at 0.342 vs
-  0.331, but that was measured, not assumed).
-- **A model swap is a re-baseline event on the ε axis.** Every prevalence figure above is
-  leg-and-model-indexed; none transfers across a model change.
-- **The hypothesis-withholding contrast stays UNPURCHASED, typed Ω_E**, activation = cells 3/4
-  (neither fired). This read was **matched-seed ACROSS MODELS** — seed fixed, model varied, feeding
-  constant on all four legs. It removes the topic/claimed_type composition confound and nothing
-  more. Never call it a "matched-seed arm."
-- **Leg-model attribution is verified from `story_provenance`, never the directory name** — the
-  kimi twin leg is `kimi-k2.6` while the default leg's kimi stratum is `kimi-k3`.
-
-**Cross-ref (2026-07-11):** OQ-188's read-site role-flip flag (`shared/role_flip.py`, standing
-legend + glyph) is now a live read-site CONSUMER of the f(d)-dominance this OQ measures — ε
-compression is why f(d) carries χ variance and why the straddle flag fires on 98.1% of matched
-institutional seats (`audits/2026-07-11_oq186_oq188_readsite/`).
-
-**The observation:** authored `base_extractiveness` clusters hard. At n=91: **31/91 stories sit at
-exactly ε=0.68**; the mode stack is 0.68(31), 0.58(12), 0.48(11), 0.28(10), 0.08(6) — only 13
-distinct values over 91 stories; the last-digit grid is **8: 78, 5: 7, 2: 6** (86% end in 8). The
-model authors ε on a coarse 0.1-spaced grid biased to the `.x8` rail, with a strong central mode.
-
-**Why it matters (and why it is not a defect):** ε is one of the perturbation axes. A third of the
-corpus sharing one ε value makes the ε axis **low-variance**, so claimed-vs-computed divergence and
-χ are driven by directionality f(d) and scope σ(S) **more than by ε**. Any ε-binned Stage-2 statistic
-(the digit-grid health check, ε-stratified divergence rates) inherits this compression — bins will be
-sparse and lumpy. It is the AUTHORING regularity the perturbation principle expects to read off, not
-an engine fault: the engine recomputes correctly on whatever ε is authored. But it is a standing
-caveat on every ε-keyed denominator, and a candidate signal in its own right (does the model's ε mode
-track topic, claimed-type, or nothing?).
-
-**Distinguish from OQ-26 (ε reading-relative across runs):** OQ-26 is about ε varying for the SAME
-topic across generation runs; OQ-78 is about ε CLUSTERING across DIFFERENT topics within one run.
-Orthogonal.
-
-**What would resolve / act on it:** (a) track the mode fraction and distinct-value count as the
-corpus grows — does 0.68's share fall toward a spread (idiom diluting) or hold (idiom entrenched)?
-(b) cross-tab ε-mode against claimed_type and topic to see whether the clustering is structural
-(0.68 = "the model's default extractive value") or carries signal; (c) if entrenched and signal-free,
-it bounds the usable resolution of the ε axis — report ε-based statistics at grid resolution, not
-continuous. Do NOT "fix" it by disclosing target ε values to the author (that is the de-leak in
-reverse — re-collapses the diff). If anything is steered, it is via topic/source-domain selection.
-
-**Evidence update (2026-06-12, kernel_v2_test2 n=60 + live cohort-zero n=5; ruling PENDING — operator's call):**
-
-- **(a) trajectory:** 0.68 share 34% (n=91) → 30% (n=60); distinct values 13 → 13; last-digit-8
-  86% → 77%. Stable — but the n=60 set is the curated *survivor* of the n=91 corpus (dispositions/
-  OQ-105 archivals), not growth, and the cohort-zero swap (2026-06-11) retired the whole series.
-  No true growth datapoint exists; the watch needs RE-BASELINING on the cohort-zero regime (live
-  n=5: 0.68×1, .x8 rail 4/5 — too small to read).
-- **(b) cross-tab — ANSWERED, and it reframes the OQ:** ε tracks claimed_type in nearly separable
-  bands: mountain (n=9) 0.02–0.15, 0/9 at 0.68; rope (n=10) 0.08–0.28 (3 exceptions at 0.48/0.68
-  are kernel-reading stories — flat_control, techno_optimist_reading, post_1998_convergence —
-  authored perspectival divergence, not noise); tangled_rope (n=23) 0.42–0.68; snare (n=17)
-  0.68–0.78, only 3 distinct values; piton (n=1, regime_change_structural_break) 0.28. Denominator
-  reconciled: 9+10+23+17+1 = 60. 0.68 = "the model's number for a high-extraction type," not a
-  free default. The GENERATION prompt is clean of all threshold numbers (grep for
-  0.68/0.55/0.56/0.45/0.46, positive control fired on a known number) — but see the leak re-check
-  below: the SCOPE surface is not clean.
-- **Mechanism found — the compression is two-layer:** (1) PIPELINE-DESIGNED quantization: SCOPE
-  co-authors `epsilon_bin` ∈ {v_low, low, mod, high} (numeric boundaries disclosed at the SCOPE
-  stage only, `prompts/uke_scope_v2_json.md:292`) alongside `hypothesis` (→ claimed_type); the
-  generation prompt maps bin → `base_properties.extractiveness`
-  (`prompts/constraint_story_generation_prompt_json.md:756`). Where a bin is recorded: conformance
-  15/15; within "high", 8/13 at exactly 0.68. (2) MODEL IDIOM on top: the in-bin point mass and the
-  .x8 just-under-round-number rail (0.08|0.10, 0.28|0.30, 0.48|0.50, 0.78|0.80) — no surface
-  discloses these. CAVEAT: 41/60 stories carry NO recorded bin yet show the same grid (0.68 at
-  22%); the `uke_scope` block is informational/optional, so bin-conditioning is unrecoverable for
-  them (absence of record ≠ absence of conditioning — the provenance bit is missing). Side finding:
-  4 stories carry free-text bin tokens (`moderate_high`, `moderate`, `negligible`) outside the
-  schema enum — the informational block is unvalidated.
-- **Implications:** ε-stratified statistics are claimed_type statistics in disguise (within-type ε
-  variance is 2–5 values); claimed-vs-computed divergence is f(d)/σ(S)-driven — now with mechanism,
-  not just observation. The generation prompt's "Claim/Metric Independence" checklist item is
-  structurally undermined whenever SCOPE feeds both `hypothesis` and `epsilon_bin` (co-authored
-  upstream, both received by the generator). Never cite the ε↔claimed_type correlation as a
-  detection result — it is authoring convention (OQ-70-analog).
-
-**Leak status REVISED (re-check 2026-06-12, against the new mechanism):** "NOT a leak" no longer
-holds as stated. Two of the three interior bin boundaries disclosed at
-`prompts/uke_scope_v2_json.md:292` coincide EXACTLY with config classifier thresholds: **0.10 =
-`piton_epsilon_floor`** (Rule Z, `config.pl:293`) and **0.30 = `tangled_rope_epsilon_floor`**
-(`config.pl:270`). The third boundary (0.55) matches nothing — `grep 0.55 config.pl` is empty
-(control: the same grep family found 0.45/0.46/0.30/0.10 lines), so the rope/snare split
-(`rope_epsilon_ceiling` 0.45 / `snare_epsilon_floor` 0.46) is NOT transmitted: the "mod" bin
-(0.31–0.55) straddles it and that decision boundary remains free. Consequence for bin-conformant
-stories: a "low" assignment guarantees ε > 0.10 (Rule Z pre-satisfied); "mod"/"high" guarantees
-ε > 0.30 (tangled floor pre-satisfied) — concordance on those two gates is manufactured by
-construction (→ OQ-117). Derivation direction (config-copying vs shared ancestry with the
-logic.md zone structure) ruled ARCHAEOLOGY 2026-06-12 — not chased: the disclosure's effect is
-identical either way, and it reaches the SCOPE bin-assigner only — generation still sees just the
-token.
-
-**Ruling (RATIFIED 2026-06-12, operator; one amendment: free-gate residual added to OQ-117 at
-filing) — a SPLIT, not one status:**
-
-1. **Designed-quantization half — close as working-as-designed.** ε resolution is ~4 levels by
-   construction wherever the manifest path feeds a bin (and ~2 levels conditional on
-   claimed_type). Report ε-keyed statistics at bin resolution; sub-bin precision is unsupported.
+1. **Designed-quantization half — closed working-as-designed (RATIFIED 2026-06-12).** ε resolution
+   is ~4 levels by construction wherever the manifest path feeds a bin (~2 conditional on
+   claimed_type). **Report ε-keyed statistics at bin resolution; sub-bin precision is unsupported.**
    Provenance hardening rides along: `uke_scope.epsilon_bin` mandatory-when-manifest-fed +
-   schema-validate its enum (4 free-text tokens in the wild).
-2. **Idiom half — stays OPEN, re-baselined on the cohort-zero regime.** The within-bin point mass
-   at 0.68 and the .x8 rail are disclosed nowhere and persist into the new regime UNTESTED (live
-   n=5: rail 4/5). The old regime's tight bands do NOT carry forward automatically — the live
-   corpus already band-breaks (institutional_trust_erosion_c0: claim=mountain, ε=0.68 — the same
-   story behind OQ-116's MOUNTAIN_METRIC_CONFLICT firing; the old regime had mountain 0/9 at
-   0.68). Graduation step = the bin-withdrawal probe below.
-3. **Independence circularity — ESCALATED to OQ-117** (own entry, not a paragraph here): SCOPE
-   co-authoring `hypothesis` + `epsilon_bin` is a validity condition on the divergence machinery,
-   not a measurement caveat on this axis.
+   schema-validate its enum (4 free-text tokens were in the wild).
+2. **Leak status REVISED — "NOT a leak" does not hold as stated.** Two of three interior bin
+   boundaries at `prompts/uke_scope_v2_json.md:292` coincide EXACTLY with config thresholds:
+   **0.10 = `piton_epsilon_floor`** (`config.pl:293`) and **0.30 = `tangled_rope_epsilon_floor`**
+   (`config.pl:270`). The third (0.55) matches nothing (control: the same grep family found
+   0.45/0.46/0.30/0.10), so the rope/snare split is NOT transmitted. Consequence: for bin-conformant
+   stories a "low" assignment guarantees ε > 0.10 and "mod"/"high" guarantees ε > 0.30 —
+   **concordance on those two gates is manufactured by construction** (→ OQ-117). Derivation
+   direction ruled ARCHAEOLOGY 2026-06-12, not chased.
+3. **Direction-of-fix discipline.** No disclosure of target ε values to the author (that is the
+   de-leak in reverse), and **no tightening of bin boundaries toward config thresholds** (moving
+   0.55 to 0.45/0.46 would sharpen the very transmission channel item 2 interrogates). If anything
+   is steered, it is via topic/source-domain selection.
+4. **Never cite the ε↔claimed_type correlation as a detection result** — it is authoring convention
+   (OQ-70-analog). ε-stratified statistics are largely claimed_type statistics in disguise.
+5. **ε-keyed denominators are per-Author stratum, NEVER pooled** — and not across generation regimes
+   within one model either. Witnessed 2026-08-10: default-leg sonnet-5 (c-orchestrator topic runs)
+   and `testsets_sonnet` (bulk kernel build) were kept separate and proved concordant (0.342 vs
+   0.331) — *measured*, not assumed. **A model swap is a re-baseline event on the ε axis.**
+6. **Distinguish from OQ-26:** OQ-26 is ε varying for the SAME topic across runs; OQ-78 was ε
+   CLUSTERING across DIFFERENT topics within one run. Orthogonal.
 
-**Bin-withdrawal probe: HALTED PRE-SPEND 2026-06-12 (greenlit at 15/arm, killed in pre-flight
-recon; zero API calls).** The pinned design assumed production generation feeds `epsilon_bin`
-and the withheld arm isolates it. Pre-flight witness: NO generation path passes the bin — the
-unified backend (`story_generator_base.py:203` axis_source_desc), the gkc kernel path
-(`generate_kernel_corpus.py:380` build_cached_messages), and the c-orchestrator inline path
-(`c-orchestrator.py:607`) all feed `Hypothesis type` (the CLAIM side) and never the bin; the
-only `epsilon_bin` consumers are two streamlit display lines; the prompt's UKE_SCOPE mapping
-table is instruction-without-data. The historical numeric channel was the PRE-de-leak prompt's
-type-band table (ε ≤ 0.25 mountain / ≥ 0.46 snare / ≥ 0.30 tangled — the config thresholds
-verbatim), scrubbed at commit b6c4e113 (2026-06-05); every post-reset story was authored with
-NO numeric ε instruction and NO bin token. The recorded uke_scope blocks are MODEL-FABRICATED
-(no code writes them; free-text bin tokens; fabricated generated_date values incl. a future
-date), so the earlier 15/15 bin-conformance is self-labeling, not instruction compliance.
-Full witnesses W1–W3: `audits/2026-06-12_oq78_dead_bin_channel/README.md`. Halt-and-escalate
-applied per the pre-registration discipline: a wrongly-premised pinned probe is halted, never
-inline-amended into a different experiment.
+### Superseded (provenance only — not live plans)
 
-**Fate-2 graduation, RE-ROUTED (zero marginal spend): cross-arm read over OQ-109 Phase C.**
-The cohort-zero regen re-authors the SAME 60 archive seeds from title/domain/summary ONLY (no
-hypothesis, no metrics — the declared seed spec in `agent/cohort_zero_regen.py`). That is a
-withheld arm on matched seeds BY CONSTRUCTION; the kernel_v2_test2 archive (n=60,
-hypothesis-fed) is the fed arm and the COMPARATOR (per the operator's correction: the archive
-shares are context for magnitude — labeled: rail 86% at n=91 / 77% at n=60; exact-0.68 ~30% at
-both — the test is cross-arm on matched seeds). Endpoints unchanged: rail share, exact-0.68
-share. Outcome semantics carry over with one widening, stated honestly: Phase C withdraws MORE
-than hypothesis (structural_delta, beneficiary/victim, CSR too — full-manifest withdrawal), so
-PERSISTENCE there establishes idiom a fortiori; COLLAPSE leaves hypothesis-vs-rest unresolved
-and would motivate a finer hypothesis-only arm (new design, new spend, operator call then —
-that narrower contrast is what the halted probe should have been). Pre-noted partial signature
-unchanged: institutional_trust_erosion_c0 (claim=mountain, ε=0.68; OQ-116's lint firing) breaks
-the type-coupling while LANDING on the rail — n=1 of 5, hypothesis-pointer, recorded before the
-Phase C read so it cannot be promoted to confirmation after. OQ-117's design call remains
-SEQUENCED AFTER this read.
-
-**Direction-of-fix discipline (carried + extended):** still no disclosure of target ε values to
-the author; ADDITIONALLY no tightening of bin boundaries toward config thresholds (e.g. moving
-0.55 to 0.45/0.46 would sharpen the very transmission channel the leak re-check interrogates).
+The **bin-withdrawal probe** was HALTED PRE-SPEND 2026-06-12 (greenlit at 15/arm, killed in
+pre-flight recon, zero API calls): no generation path passes `epsilon_bin`, so the withheld arm ≡
+production. The historical numeric channel was the PRE-de-leak prompt's type-band table, scrubbed
+at `b6c4e113`; recorded `uke_scope` blocks are MODEL-FABRICATED, so the 15/15 bin-conformance was
+self-labeling. Witnesses W1–W3: `audits/2026-06-12_oq78_dead_bin_channel/README.md`. The
+replacement **fate-2 graduation (cross-arm read over OQ-109 Phase C) was DEAD-PREMISED** — that
+regen was descoped to a 5-seed pilot (OQ-109, 2026-06-13) — and is superseded by the 2026-08-10
+pre-registered read. **OQ-117's "design call remains SEQUENCED AFTER this read" is DISCHARGED.**
 
 ## OQ-79 — c-orchestrator recognizes kernels but silently drops their readings; flat-entry topics never engage the kernel question
 
@@ -11085,6 +10918,78 @@ gains a real coded corpus with a measured churn floor to cite instead.
 The correction's honest form depends on whether the experiment produces a usable coded corpus
 (consequence 3); writing it first forces a purely subtractive edit that would then need
 rewriting.
+
+
+## OQ-281 — Where is the boundary of the model family that shares the `.x8` ε rail?
+
+**Ω-type:** Ω_E (a prevalence/boundary question, witnessable by measuring further model legs).
+
+**Status:** open — split out of OQ-78 on 2026-08-10 when the idiom half's two components proved to
+have opposite trajectories (point mass dissolved, rail held). **Re-scoped:** the original question
+("is the `.x8` rail *this model's* own idiom?") is ANSWERED — no, sonnet-5 inherits it. The live
+question is the boundary of the sharing family.
+
+**Priority:** 3
+**Deps:** splits_from OQ-78, blocked_on_human oq281-null-licensing-precommit (what does a null
+result license? see PRE-COMMIT REQUIRED below — settle before any instrument runs)
+
+**What is established** (`audits/2026-08-10_oq78_idiom_close/`, prereg md5
+`384e68bbac80e0959dba1294a6f6ee87`, commit `bfbe52ea`; zero-spend, pre-registered):
+
+- **The rail is model-bound, measured on 957 matched seeds** (one seed set re-authored per model,
+  so topic and claimed_type mix are held fixed by construction): four models, three argmax digits —
+  **Claude→8, kimi-k2.6→2, flash→5**; `tv_model_digit` 0.365 against a label-permutation null max
+  of 0.045; **all-agree rate 1.25%**.
+- **Every Claude-family population lands on 8** — sonnet-5 0.427, haiku 0.625, sonnet-4.5 derived
+  0.766, sonnet-4.5 authored 0.818, sonnet-4 0.857, pre-reset archive 0.767 — including two with a
+  **zero-story id intersection** (archive vs sonnet-4.5 derived). Only flash leaves the rail; kimi
+  sits on its `.x2` arm.
+- **Within-family arm structure exists and is not a type artefact** (ADDENDUM, exploratory): arm
+  (`.x8` vs `.x2`) concordance on matched seeds, restricted to seeds where both models assigned the
+  SAME claimed_type and shuffled within type — **haiku × sonnet-5 excess +0.055 over null, above
+  p99**; **kimi × sonnet-5 excess exactly +0.000**; haiku × kimi +0.028, not significant. So arm
+  choice carries seed-level signal *within* the family and none across it. Magnitude is modest
+  (56.5% vs a 51.0% baseline) — real, not strong.
+- **The `.x2` arm is NOT the dissolved point mass spreading.** If it were, its gain would sit at
+  0.62/0.72; for sonnet-5 only **14.1%** does — its `.x2` mass sits at 0.42 (175) and 0.52 (70).
+
+**Why this is not closeable today.** The family map contains **no Claude model off 8**, so
+"Claude-family idiom" is *consistent with* the data and *un-falsified by* it. Closing on it would
+be a close on an absence — the grade the OQ-78 pre-registration built cell 1b to mark and cell 2 to
+avoid.
+
+**PRE-COMMIT REQUIRED before any instrument runs (operator's seat, 2026-08-10).** The obvious
+sharpening — measure more Claude-family models — has **asymmetric and thin** falsification power: a
+fifth Claude model on 8 adds almost nothing to a pattern already at four, and the read only pays if
+one lands **off** 8, which there is no prior reason to expect. **Write down what a null licenses
+first:** if three more Claude models all land on 8, does this close, or stay open indefinitely
+waiting for a falsifier that may not exist in the available model set? **If the answer is "stays
+open," the read is NOT a graduation step and must be run only as corpus documentation, labelled as
+such.** Settle this before spending session time.
+
+**Better-teeth alternative, readable on data already on disk.** The arm-level structure above is a
+sharper object than the argmax digit: it is a *within-family* signal with a measured cross-family
+zero. A boundary test built on arm concordance would discriminate family membership on a channel
+that already shows contrast, rather than on a digit where every Claude model agrees by
+construction. Cost is a leg classification (~60–90s each, serialized), no API spend.
+
+**NOT the remedy:** the matched-seed-across-models arm. It isolates the model, and the model is
+what already varied.
+
+**Carry-forward (inherited from OQ-78, operative here):**
+- **This was matched-seed ACROSS MODELS, never a "matched-seed arm."** Seed fixed, model varied,
+  **feeding constant on all four legs**. It removes the topic/claimed_type composition confound and
+  nothing more. The **hypothesis-withholding falsifier stays UNPURCHASED, typed Ω_E**.
+- **Leg-model attribution is verified from `story_provenance` / `classify_corpus`'s fingerprint
+  refusal, never the directory name** — `testsets_kimi` is `kimi-k2.6` while the default leg's kimi
+  stratum is `kimi-k3`; `testsets_sonnet` is `claude-sonnet-5` and is therefore TEST data for any
+  sonnet-5 question.
+- **ε-keyed statistics are per-Author stratum, never pooled across legs.**
+
+**What resolution would change:** it would fix whether the ε rail is a fact about a model, a model
+family, or a training lineage — which sets the scope of every "the model authors ε on a grid"
+statement in the paper sequence, and determines whether a future corpus rebuilt on a new model
+inherits the rail or resets it.
 
 ---
 

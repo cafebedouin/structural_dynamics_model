@@ -1,23 +1,23 @@
 {
   "manifest": {
-    "store_version": "bfbe52ea484169bb001f0142d9ac323dd9d35c7a",
+    "store_version": "e9aac0abb9628276e20f1dc2dba0f5f6b6a381df",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-10T22:54:42"
+    "generated_at": "2026-08-10T23:02:52"
   },
-  "issues_sha": "6ae0f95927c2d8a9f5e463deb97a8475419950bf0c0d471be992fb66b740a549",
-  "n_entries": 280,
+  "issues_sha": "72be656f23f9bfab95506a673476f3de267e6f83cc53c9b531a71952b58605ef",
+  "n_entries": 281,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 146,
+    "resolved": 147,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 99,
-    "partial": 7
+    "open": 100,
+    "partial": 6
   },
   "active": [
     {
@@ -64,26 +64,6 @@
         "OQ-109",
         "OQ-117",
         "OQ-178"
-      ]
-    },
-    {
-      "id": "OQ-78",
-      "status": "partial",
-      "priority": 1,
-      "summary": "The ε authoring idiom: a 0.68 mode + 8/2 last-digit grid compresses the ε perturbation axis",
-      "deps": [
-        "blocked_on_human oq78-close-semantics-ruling (family-bound idiom: close or hold open; see BLOCKED ON HUMAN 2026-08-10)"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-26",
-        "OQ-70",
-        "OQ-105",
-        "OQ-109",
-        "OQ-116",
-        "OQ-117",
-        "OQ-188",
-        "OQ-205"
       ]
     },
     {
@@ -1465,6 +1445,20 @@
         "OQ-277",
         "OQ-278"
       ]
+    },
+    {
+      "id": "OQ-281",
+      "status": "open",
+      "priority": 3,
+      "summary": "Where is the boundary of the model family that shares the `.x8` ε rail?",
+      "deps": [
+        "splits_from OQ-78",
+        "blocked_on_human oq281-null-licensing-precommit (what does a null"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-78"
+      ]
     }
   ],
   "archive": [
@@ -2423,6 +2417,22 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-95"
+      ]
+    },
+    {
+      "id": "OQ-78",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "The ε authoring idiom: a 0.68 mode + 8/2 last-digit grid compresses the ε perturbation axis",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-26",
+        "OQ-70",
+        "OQ-109",
+        "OQ-117",
+        "OQ-188",
+        "OQ-281"
       ]
     },
     {
