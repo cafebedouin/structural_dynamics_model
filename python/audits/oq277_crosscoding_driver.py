@@ -594,6 +594,59 @@ def run(stub: bool, dry_run: bool) -> int:
     return 0
 
 
+def orphaned_controls(src: str | None = None) -> list[str]:
+    """Guarded functions that NOTHING outside the selftest calls.
+
+    Added 2026-08-11 after four green control lines were found exercising two functions
+    `run()` had stopped calling. The controls worked: the code was correct, the assertions
+    would have fired, the selftests were real. They were simply not wired to anything.
+
+    That is worse than a check that cannot fail, in one specific respect: a red light
+    recruits attention, while green lines from a disconnected control are indistinguishable
+    from green lines from a connected one — and they ADD to the control count, so the
+    apparatus looks stronger for containing them. Control count can rise while coverage
+    falls.
+
+    So: the selftest exercises the function; THIS exercises the wiring. A control must
+    witness that it is CALLED, not only that it works.
+
+    Orphaning arrives through repairs. When the capture-dir invariant was relaxed from
+    emptiness to provenance, run() switched to the new assertions and nobody removed the
+    old ones, because removal was not part of the fix. Minting has a constituency;
+    retirement does not. This function is the forcing mechanism.
+    """
+    import ast
+    tree = ast.parse(src if src is not None else pathlib.Path(__file__).read_text())
+    guarded_prefixes = ("gate_", "assert_", "write_response", "load_units", "dir_run_id",
+                        "stamp_run", "run_id_for")
+    # `orphaned_controls` itself is deliberately NOT guarded: it is a selftest instrument by
+    # design, and its wiring witness is that --selftest fails without it, not that a
+    # production path calls it. Stated rather than silently excluded — an exemption nobody
+    # wrote down is how the genre-based pin rule happened.
+    top = [n for n in tree.body if isinstance(n, ast.FunctionDef)]
+    guarded = [n.name for n in top if n.name.startswith(guarded_prefixes)]
+
+    def calls_within(node) -> set:
+        out = set()
+        for sub in ast.walk(node):
+            if isinstance(sub, ast.Call) and isinstance(sub.func, ast.Name):
+                out.add(sub.func.id)
+        return out
+
+    callers: dict = {}
+    for fn in top:
+        for callee in calls_within(fn):
+            callers.setdefault(callee, set()).add(fn.name)
+    # module-level calls count as production wiring too
+    for node in tree.body:
+        if not isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+            for callee in calls_within(node):
+                callers.setdefault(callee, set()).add("<module>")
+
+    return sorted(name for name in guarded
+                  if callers.get(name, set()) <= {"selftest", "orphaned_controls"})
+
+
 def selftest() -> int:
     ok = True
 
@@ -704,6 +757,27 @@ def selftest() -> int:
     # "it must hold no data from THIS run". Emptiness became permanently unsatisfiable once
     # a live run happened; the spent run's files are a permanent artifact. Three cases,
     # because relaxing an assertion owes a demonstration that what remains still bites.
+    print("\ncontrol wiring — a control must witness that it is CALLED, not only that it works:")
+    live_orphans = orphaned_controls()
+    chk_w = f"no guarded function is called ONLY from the selftest (found: {live_orphans or 'none'})"
+    check(chk_w, not live_orphans)
+    planted = """
+def gate_planted_orphan(x):
+    return x
+
+def run(a):
+    return 1
+
+def selftest():
+    return gate_planted_orphan(1)
+"""
+    check("CONTROL — a planted selftest-only guarded function IS detected",
+          orphaned_controls(planted) == ["gate_planted_orphan"])
+    wired = planted.replace("def run(a):\n    return 1",
+                            "def run(a):\n    return gate_planted_orphan(a)")
+    check("CONVERSE — the same function called from run() is NOT flagged",
+          orphaned_controls(wired) == [])
+
     print("\ncapture-dir provenance — keyed on run id, not on emptiness:")
 
     def contamination_case(stamp_with: str | None, run_id: str) -> bool:

@@ -595,6 +595,19 @@ the design blinds (an assembler working in the judge's terminal), the prompt mus
 PRINTED, not only what may be done. Detail + instances: `docs/technical/build_discipline.md` →
 *Write the receiver's prompt*.
 
+**A control must witness that it is CALLED, not only that it works (operator ruling, 2026-08-11).**
+The selftest exercises the function; **something has to exercise the wiring** — a guarded function
+called only from the selftest is an ORPHAN and gets removed or re-wired, never left green.
+Witnessed: two assertions kept **four green selftest lines** after `run()` stopped calling them —
+code correct, assertions would have fired, selftests real, wired to nothing. **Worse than a red
+light**: a red light recruits attention, while green lines from a disconnected control are
+indistinguishable from connected ones AND *add to the control count*, so **control count rises
+while coverage falls**. **Orphaning arrives through REPAIRS** — a replacement lands, the old
+control stays because removal was not part of the fix (minting has a constituency; retirement does
+not), so treat every replacement as an orphaning event and retire in the same change. Forcing
+mechanism + its discrimination record (fires at the commit that created the defect, declines at the
+one before): `docs/technical/build_discipline.md` → *A control must witness that it is CALLED*.
+
 **Gate the output, not only the input (operator ruling, 2026-08-11, priced at 219 model calls).**
 **A pipeline verified end-to-end on what it CONSUMES can produce nothing and report green on every
 check.** Witnessed: a driver with three sound gates — count captured payloads before grepping,

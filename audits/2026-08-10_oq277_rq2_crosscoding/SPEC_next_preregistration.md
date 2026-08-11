@@ -71,8 +71,10 @@ the table.
 | # | path | what is missing |
 |---|---|---|
 | 12 | packet assembly (`--build-run`) | its build gates ran and passed on real data; **no negative control** — nothing demonstrates the frozen-order / content-md5 / coder-surface gates can fail |
-| 13 | live transport | exercised exactly once, by the run that produced 219 answers. That is an existence proof, not a control: no witness for retry behaviour, truncation, refusal, or a malformed reply |
 | 14 | anchor recovery scoring (H3, ≥2/3 over {P1,P2,P5}) | thresholds are pre-registered; **no code, and no control** |
+
+**Row 13 — live transport — was moved OUT of this table** to §3.2, on the operator's weighting
+(2026-08-11): it is the heaviest row here and does not ship as a declared residue.
 
 ### 2.3 DOES NOT EXIST — neither code nor specified mechanism
 
@@ -106,6 +108,29 @@ have produced 219 scoreable answers that nothing in the repository can score.
 4. **The freeze-integrity check covers the new stamp** (the gate entry generalises or is
    re-pointed; it carries a retirement note tied to OQ-277's close).
 5. **The scorer's control density is stated, not assumed.** See §3.1.
+
+### 3.2 Live transport — negative controls BEFORE the spend request, not as a residue
+
+**Operator weighting, 2026-08-11: the heaviest row in the enumeration.**
+
+Live transport has been exercised **exactly once**, by the run that failed. It returned 219
+answers, so it works in the nominal case — and that is an **existence proof at n=1**, not a
+control. Nothing witnesses what happens when it does not go nominally, and **the next run will hit
+at least one non-nominal case across 219 calls.**
+
+Required before the next spend request, each two-sided:
+
+| condition | required behaviour | why it is not hypothetical |
+|---|---|---|
+| **retry** | a transient failure retries and the eventual answer is captured **once**, not twice | `call_with_retry` is the wrapper; nothing has observed a retry, and a retry that double-writes corrupts the k=3 bookkeeping |
+| **truncation** | a reply cut short by `max_tokens` is detected, not silently coerced | `max_tokens=16`; a truncated `"P"` or `""` must fail gate 4's vocabulary assertion rather than resolve |
+| **refusal / non-answer** | a refusal is captured raw and reported out-of-vocabulary | already covered by gate 4 *if it reaches capture*; unwitnessed on the live path |
+| **malformed reply** | whitespace, casing, punctuation, extra prose | `extract_text(...).strip()` is the only normalisation; nothing has tested what a chatty answer does |
+| **hard failure mid-run** | the run halts with the answers so far **on disk** | the per-call write-then-verify is built and stub-witnessed; **not witnessed against a real mid-run transport failure** |
+
+**These are testable without spending**, by substituting a transport that raises, truncates,
+refuses and rambles on schedule — the driver already parameterises `transport`, so the fixture
+costs nothing. **A transport-fault fixture is the specific artifact owed.**
 
 ### 3.1 The silence at the stage where the findings get made
 

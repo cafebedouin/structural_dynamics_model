@@ -1985,6 +1985,60 @@ screen is unblinded before the pass begins, and no downstream control recovers i
 
 ---
 
+## A control must witness that it is CALLED, not only that it works
+
+**Operator ruling, 2026-08-11.** The same lesson as *gate the output, not only the input*, one
+level up: **you verified the instrument and not its consumption.**
+
+**The instance.** Two assertions in the OQ-277 driver — `assert_live_capture_dir_untouched` and
+`assert_live_response_dir_untouched` — kept four green selftest lines after `run()` had stopped
+calling them. Every prior vacuous check in that arc was a check that **could not fail**, **could
+not pass**, or **could not be read**. These were none of those. **The code was correct, the
+assertions would have fired, the selftests were real.** They simply were not wired to anything:
+four green lines proving a guarantee no production path requested.
+
+**Why this is worse than a red light, in one specific respect.** A red light recruits attention.
+Green lines from a disconnected control are **indistinguishable** from green lines from a
+connected one — and they *add to the control count*, so the apparatus looks **stronger** for
+containing them. **Control count can rise while coverage falls**, and nothing in the stack
+measures the difference.
+
+**How they were orphaned — the mechanism, which is the transferable part.** A *repair* did it.
+When the capture-dir invariant was relaxed from emptiness to provenance keying, `run()` switched
+to the new assertions and nobody deleted the old ones, **because removal was not part of the
+fix**. This is produced-but-not-consumed arriving in the *control layer*, via the same asymmetry
+that drives memory accretion: **minting has a constituency and retirement does not.** Every
+replacement is an orphaning event unless something forces the retirement.
+
+> **The rule.** The selftest exercises the function; **something has to exercise the wiring.**
+> A guarded function called only from the selftest is an orphan, and orphans are removed or
+> re-wired — never left green.
+
+**The forcing mechanism, since a rule with no instrument is the thing this arc keeps finding.**
+`oq277_crosscoding_driver.py:orphaned_controls()` parses its own module AST and returns every
+guarded function (`gate_*`, `assert_*`, the capture and provenance helpers) whose only caller is
+the selftest. It runs as a selftest control, two-sided: a planted selftest-only function IS
+detected, and the same function called from `run()` is NOT flagged.
+
+**Its discrimination record is the strongest grade available**, because it is drawn from the
+instrument's own history rather than from a plant:
+
+| driver at commit | state of the world | detector says |
+|---|---|---|
+| `cb1b33e5` — before the relaxation | both assertions wired into `run()` | `[]` — **declines** |
+| `4e0d8725` — after the relaxation, before the removal | both orphaned, four green controls | `['assert_live_capture_dir_untouched', 'assert_live_response_dir_untouched']` — **fires**, naming exactly the two |
+
+A naturally-arising positive *and* a naturally-arising negative, on real historical material, with
+no plant involved. It fires at exactly the commit that created the defect and declines at the one
+before.
+
+**One exemption, stated rather than silently taken:** `orphaned_controls` does not guard itself.
+It is a selftest instrument by design, and its wiring witness is that `--selftest` fails without
+it. An exemption nobody writes down is how the genre-based pin rule happened
+(`audits/2026-08-10_oq277_rq2_crosscoding/SPEC_next_preregistration.md` §1).
+
+---
+
 ## Gate the output, not only the input
 
 **Operator ruling, 2026-08-11, priced at 219 model calls.**
