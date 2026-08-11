@@ -56,3 +56,16 @@ precedes the disclosure it gates:
   tells). Unrepairable without breaking the verbatim pin; biases toward AGREE, the expensive outcome.
 - **The probe is n=4 and detects only a gross threshold mismatch.** An AGREE must be re-fired at a
   different presentation order before it licenses scoring; a VOID stands at k=1.
+
+### Leak sweep on PACKET.md, run after freeze
+
+255 forbidden strings checked (every unit's `source_dir`, filename, `extractor`,
+`incident_location`, `files_read`, and every `extraction_notes` value, across both strata,
+length > 6). **1 hit, localized and benign:** the token `subject` occurs 3× in the retained §H.1
+rationale ("is the incident the *subject*?") and **0× inside the four items** — including 0× in any
+shown field of any unit. It is the rule's own wording, which Amendment 4 mandates shipping; the
+paragraph that *defines* `subject` as an `incident_location` value is one of the two redacted ones,
+so the stratification key is not disclosed by it.
+
+Two controls, both fired: a string known to be in the packet matched, and a planted forbidden string
+changed the hit set — so an empty-ish result here is a measurement, not a matcher that never ran.
