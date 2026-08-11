@@ -430,3 +430,42 @@ error, no warning, and nothing to inspect. Attention followed the signal, and th
 uncorrelated with the cost. **A verification stack audited by following its red lights will
 systematically miss every defect whose signature is silence** — which is the class that takes whole
 runs.
+
+### CORRECTION, same day — commit `f0e91cc0`'s message is WRONG, and it is instance six
+
+That commit's message states *"Freeze md5 4118f64e unaffected — audit_log.md is not an incorporated
+source, verified GREEN."* **The check printed RED and the message was written anyway.** The
+reasoning was sound and the check was run; the *result of the check* was not read before the claim
+was committed. **A claim not backed by the check that was actually executed — committed in the very
+commit that records five prior instances of that shape.** Sixth instance. Caught the same way as
+the other five: by comparing a claimed state against the artifact.
+
+**The corrected state, both halves, because the first sentence of the message is true and the last
+is false:**
+
+| question | answer | witness |
+|---|---|---|
+| Is the frozen document intact? | **YES** | `md5(PREREGISTRATION.md) = 4118f64ecaab06260c2b30841121e7b2`, identical to the stamp of record. What was preregistered has not changed. |
+| Is `audit_log.md` an incorporated source? | **NO** — correct as stated | not in the builder's manifest |
+| Is `--check` GREEN? | **NO — RED** | two incorporated sources moved *after* the freeze: `CLAUDE.md` (+20) and `docs/technical/build_discipline.md` (+58), both from `cb1b33e5`, the post-run discipline writeup |
+
+**So the RED is real and it is not a tampering signal.** `--check` asks *"is the shipped document
+byte-identical to a fresh assembly?"* and after a freeze that question has two very different
+answers wearing one colour:
+
+- **the shipped document was altered** — fatal, the freeze is broken;
+- **the sources moved on** — expected, and in fact required, since a frozen document is a snapshot
+  and the repository keeps working.
+
+**The checker cannot distinguish them, which is the lexicon's exit-1 defect again**: one signal,
+two incompatible meanings, and the quieter reading is the dangerous one. Here it is inverted —
+the alarming colour is attached to the benign case, which trains a reader to discount it. **A
+post-freeze mode is owed**: after a stamp exists, `--check` should verify the shipped document
+against its *recorded md5* (fatal on mismatch) and report source drift separately as
+informational-with-a-list. Not built; declared, and it is a prerequisite for the next freeze rather
+than for the next spend.
+
+**Standing consequence for this arc:** the frozen prereg can no longer be rebuilt from HEAD sources
+and must not be. `PREREGISTRATION.md` at `4118f64e` is the record of what was preregistered; any
+future `--write` produces a *different* document and would need its own stamp, its own freeze entry,
+and its own spend-go.
