@@ -10739,6 +10739,53 @@ flag would be caught; it says nothing about a grep over EMPTY input. A capture b
 payloads yields a clean grep and a green H2 — success-shaped absence, the exact Pattern-6 shape
 this experiment studies.
 
+**Direction (i) COMPLETE at n=22 (2026-08-10, commit `4f5a3d45`).** `packets/wu_units.json`
+carries all 22 incidents in the pinned unit format; both indexes recomputed from the frozen
+files rather than inherited (catalog A1/B4/C5/D4/E8, dataset A4/B3/C4/D5/E6, 12 agreeing, and
+the 10 disagreeing rows reproduce R2's table row for row). Preliminary vocabulary sweep: 0 hits,
+positive control 4/4, substring false-positive still dead.
+
+**Extraction split, and the extraction-churn floor it buys (operator ruling, 2026-08-10).**
+Direction (ii) splits at **11 units per extractor**, and each extractor independently
+re-extracts **2 of the other's directories** (4 extra units, quarantined from all matrices).
+Rationale beyond context: k=3 measures the CODER's churn and nothing currently measures the
+EXTRACTOR's, even though extraction is the lossier step and its variance lands in every cell.
+**The boundary unit IDs are declared in PREREGISTRATION.md**, so a late/early asymmetry in the
+matrices is checked against the boundary rather than discovered post hoc.
+
+**Extension pricing is 7x, not 3.3x — measured BEFORE H5, per operator ruling
+(`frame/volume_measurement.md`).** The pinned rule "the extension changes n and NOTHING else"
+invites pricing by n (22 → 73 = 3.3x). By the quantity that binds the extractor it is **7.0x**:
+737 KB of prose in the sample, **5,176 KB in the full 73**. The frame is heavy-tailed and the
+seeded sample missed the tail — medians are near-identical (23.8 vs 23.9 KB, so the draw was
+fair) but the full frame's top 5 dirs hold 58% of all prose, the largest at 1,540 KB, itself
+larger than a quarter of the entire sample. **Collision flagged for the H5 gate:** at ~1.3M
+tokens the full 73 is not extractable by one instance or by the 11-unit split, so extending
+would need a different extraction protocol — and a different protocol is NOT "changes n and
+nothing else," i.e. it would be a new experiment under the pinned rule. Operator's ruling at
+the gate, surfaced now rather than at the point of spend.
+
+**`Fired: latent` in the HANDOFF instrument itself.** The handoff estimated direction (ii) at
+"~184 KB of audit prose"; measured 737 KB — **wrong by 4.0x, in the direction that made the
+handoff look smaller**, written by an instance running low on context about work it was
+shedding. Nothing downstream was corrupted (the receiver measured before planning), so it is
+latent, not live. **Rider, general:** *a handoff's volume estimate is a claim, and the receiver
+measures it before planning against it* — it has the weakest provenance of anything in a
+handoff and is the number most likely to be planned against unexamined.
+
+**OBSERVATION (not a finding), filed 2026-08-10:** rows Wu himself annotated as multi-class
+(`次类` in notes, or a `paper_class_ref` citing another class) are disproportionately the rows
+his two records disagree on — 6/8 and 5/6 against a 10/22 base rate, nominal p 0.048 / 0.043.
+If it survived a blind test it would say the disagreement is the predictable trace of genuine
+multi-class membership (R3 showing up as R2, one phenomenon not two). It ships as an OBSERVATION
+with three defeaters stated first — non-blind, post-hoc predictor selection, n=22 — and the
+blind test that would make it a finding is specified but **NOT proposed for this run: it is a
+third coding direction and the extension rule forbids it without a new prereg.** Sharpest single
+row needs no statistics: `movespeed_tcc_sandbox`, the 60-day §5.1 headline incident, is assigned
+A by the dataset while that same row's own `paper_class_ref` cites §4.5 E and only E — the row
+disagrees with itself, and the catalog sides with the row's citation over its label. Detail:
+`packets/wu_source/observation_secondary_class_predicts_disagreement.md`.
+
 ---
 
 ## OQ-278 — The pattern taxonomy is FORKED: CLAUDE.md's six vs build_discipline.md's six (a worked P2 instance on the discipline's own substrate)
