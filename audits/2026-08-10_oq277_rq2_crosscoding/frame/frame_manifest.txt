@@ -1,0 +1,17 @@
+# OQ-277 sampling frame — FROZEN
+as_of_local_date: 2026-08-10
+repo_commit: 8d7e5aba9e592a5f26ecf47edc551fe459f5fa32
+repo_dirty: yes
+n_dirs_on_disk: 175
+n_self_excluded: 1  # want exactly 1 (2026-08-10_oq277_rq2_crosscoding)
+n_all_dirs: 174
+n_incident_bearing: 73
+n_non_census: 101
+
+# integrity: the two strata must partition the population exactly
+partition_check: 174 == 174
+
+# md5 of each frozen listing (these are what the sampler reads)
+c8404319681e68eee636698391a3ded4  audits/2026-08-10_oq277_rq2_crosscoding/frame/all_dirs.txt
+57149263fef05f1439d9ed98e755a363  audits/2026-08-10_oq277_rq2_crosscoding/frame/incident_bearing_dirs.txt
+ecc91562c0888aeb246d90fa6dd56da2  audits/2026-08-10_oq277_rq2_crosscoding/frame/non_census_dirs.txt
