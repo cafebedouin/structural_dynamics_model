@@ -1,0 +1,43 @@
+{
+  "source_dir": "2026-06-27_oq124_oq149_committer_convention_control",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": true,
+  "files_read": [
+    "RECON.md (full)",
+    "FINDINGS.md (full)",
+    "PRE_REGISTRATION.md (targeted scan: decision rules, pinned thresholds, phase-0 gate)",
+    "reclassify.log",
+    "retraction_control.log",
+    "execute_AB.json (targeted scan)",
+    "recon_reproduce.json (targeted scan)"
+  ],
+  "symptom": "One field of a three-field comparison turned out to be unanswerable, and not for lack of data: the stored values are there, complete, with no gaps and no out-of-range entries. The problem is that a value an author supplied and a value the tooling substituted for a rejected one are the same bytes in the same slot, and no surviving artifact says which is which.",
+  "mechanism_as_described": "A repair step sits between generation and storage. It holds a fixed map from two rejected values onto one accepted value, applies it, and returns with no logging at all along that path — the most likely substitution leaves no trace by construction. Four channels that could each have carried the distinction are each silent for a different reason. The generator writes no raw output: the batch result is consumed in memory and discarded after repair, and its only file write is the list of items still unprocessed. The repair step's own statistics are aggregate — a global count and a flat list of substituted values, with no per-item key — and, as it turned out, no committed file anywhere contains that counter at all. The parallel serialization written alongside the stored facts is produced after repair from the same object, so its distribution matches the stored facts exactly, including zero missing and zero out-of-range, and cannot reveal what was there before. And the accepted-value distribution, seen after the fact, looks like clean authored data precisely because the substitution normalized it. The one thing that saved the headline was a different property, established by reading the code rather than the artifacts: the other accepted value cannot be produced or removed by any substitution path, and an absent value fails generation outright instead of quietly defaulting — so the headline asymmetry between the two sources is real, and only the fine interpretation of the substituted side is lost.",
+  "detection_path": "A gate run before the comparison began, asking not whether the field's numbers reproduce but whether the distinction the planned decision rule depends on could be recovered at all from anything on disk. The check went channel by channel — generator artifacts, repair statistics, the substitution path's own logging, the parallel serialization — and included a search of every committed file for the repair counter's name, which came back empty. Because the answer was negative, the field was declared out of scope for the pass rather than answered with a weaker substitute, and the recovery cost was stated exactly: regenerating that corpus with instrumentation added.",
+  "consequence": "A pre-registered decision clause for that field can never be evaluated on existing data; answering it requires paying the generation cost again, which had already been ruled out. Everything downstream that reads those values reads a mixture of authored and substituted entries with no way to separate them, and the mixture presents as a clean, fully-populated field with no invalid entries — the substitution's success is what makes it invisible. The graduation step is recorded: log the per-item identifier at the substitution site in the next generation run, then re-run the decision rule.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is whether three cross-source divergences are authoring convention or real signal; the unit is the provenance loss discovered while checking whether one of the three was answerable.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. The selected incident is described channel by channel with the site of each silence named, and its consequence is realized and permanent for existing data.",
+    "alternatives_not_extracted": [
+      {
+        "what": "The two stored outputs about to be compared had been produced at different code states weeks apart, and two changes landing between those states converted exactly the two categories the comparison was about from one handling route to another — so the stored outputs were not comparable for that field, and any difference would have read as a source difference. Caught at the first recon step and repaired by re-deriving both at one code state, with the originals preserved.",
+        "why_not": "Strong and squarely on point, but caught before the comparison ran, so the tiebreak sends it here. Its own note is worth keeping: the discrepancy first presented as a cosmetic file-timestamp oddity."
+      },
+      {
+        "what": "The study's two independent-looking checks on the dominant direction are noted as agreeing by construction, so their agreement is not evidence of either being right.",
+        "why_not": "A one-line honesty note about the design rather than a reported incident; no wrong reading followed from it."
+      },
+      {
+        "what": "Where the two sources agree on a relation the call tracks the underlying quantity, and where they disagree — the majority of slots — it does not; the disagreeing calls are a source-specific default rather than a detected property.",
+        "why_not": "This is the study's finding, not a defect in the system; it is what the comparison was built to determine."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "incidental",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1).",
+    "incident_location_reasoning": "The defect is in the generation-and-repair pipeline that produced the substrate, reported in a scope gate rather than as one of the directory's three questions.",
+    "overlap_note": "Floor-only unit: quarantined from the matrices, extracted at full quality per the pre-registered cell accounting. Extracted without reading the other extractor's version of this directory."
+  }
+}

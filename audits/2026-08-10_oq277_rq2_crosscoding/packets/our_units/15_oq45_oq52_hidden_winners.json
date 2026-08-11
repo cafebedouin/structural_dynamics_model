@@ -1,0 +1,45 @@
+{
+  "source_dir": "2026-07-01_oq45_oq52_hidden_winners",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": false,
+  "files_read": [
+    "WRITEUP.md (full)",
+    "b3_rubric_and_strata_registration.md (targeted scan: rubric v1 vs v2, pre-flight, strata)",
+    "a3_false_mountain_w1_ranking.md (targeted scan)",
+    "b1_probe_witness_lines.txt",
+    "b2_flagged_members.json",
+    "b5_nl_members_*.txt (line counts and membership)"
+  ],
+  "symptom": "A control that was supposed to re-derive an earlier selection of sixteen items could not be run at all: the sixteen were recorded only as a count, and the list of which items they were was never written down. Re-running the same selection procedure over the same unchanged data now yields two hundred and ninety-three, out of a base that has itself moved from ninety-eight to nine hundred and forty-four. Nothing in either number says why.",
+  "mechanism_as_described": "The earlier result was a selection computed by the classifying machinery, and what was preserved from it was the size of the selection plus five member names quoted in passing. The machinery kept changing over the following four weeks. Because a count carries no record of the rules that produced it, the new count and the old count are not comparable and the difference cannot be attributed: from the two numbers alone, a selection growing from sixteen to two hundred and ninety-three is equally consistent with more data having arrived and with the selection rules having loosened, and here it is the second — the underlying data set is the same archived one throughout. A count over machine-computed selections is relative to the machine's state at the time, and the state was not recorded alongside it. What survived the drift is exactly the part that was written as identities rather than as a total: all five recorded names still select, and their individual computed values match to the digit. The lesson is stated in the close: save member lists, not population counts.",
+  "detection_path": "An attempt to run a pre-planned control. The plan required the new selection to recover the earlier thirteen strict and three loose members; the attempt failed at the first step, because there was nothing to recover against. The audit then re-derived the selection on the same archived data at the current machine state, cross-witnessed the new base figure against an independent acceptance check recorded elsewhere at the same state, and compared against the current working data set as a third point — which is what established that the movement is in the machinery and not in the data. The control was recorded as retired-as-impossible rather than as passed, and the resulting ranking was relabelled as a current-state selection anchored by three named members rather than as a recovery of the earlier sixteen.",
+  "consequence": "One planned control cannot be run, now or ever, for this result. The earlier finding survives only as the handful of members someone happened to name in prose, and any later reader comparing the two population figures without the machine state would read a nineteen-fold difference as a change in the data. The same exposure applies to every other result in the record that was preserved as a count over a computed selection.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is a pair of content questions about items certified as naturally arising; the unit is the reproduction failure reported in its control section.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. This directory reports five separable defects; the selected one is stated with three comparison points, the surviving anchors, and its own stated lesson, and its consequence is realized (a control permanently unrunnable) rather than averted.",
+    "alternatives_not_extracted": [
+      {
+        "what": "The content rubric's first version was pre-flighted against three cases known to be positive and flagged none of them: in those files the naturalness claim is contested in the narrator's voice while being depicted as a live in-frame reading, and the first rubric required an uncontested claim. Had it been used as written, a run returning no flags would have been read as evidence that the phenomenon does not occur, and nothing in the run would have distinguished that from the instrument being unable to fire.",
+        "why_not": "Excellent mechanism and arguably the sharpest instrument finding here, but the pre-flight caught it before any run, so the consequence is averted rather than realized; the tiebreak sends it here. Recorded in full because the averted consequence is the informative part."
+      },
+      {
+        "what": "The machine-side screen that examined all 404 certified items reads the same authored quantities that produced the certification, so any item whose text hides a winner while its quantities stay faithful passes the screen. Declared as a known blindness before the screen ran, which is why a separate content read exists.",
+        "why_not": "Declared in advance as a scope limit rather than reported as an instance; no misreading is attributed to it."
+      },
+      {
+        "what": "The pre-registered notion of which items are suspicious did not bound the phenomenon: one of the six confirmed cases came from the seeded random calibration draw rather than the adversarial stratum, so the phenomenon appears in ordinary draws too.",
+        "why_not": "A finding about the design's reach rather than a defect with a mechanism; and the document explicitly declines to quantify it."
+      },
+      {
+        "what": "The certification gate examines only one side of a relationship, so items that author the other side can still certify; and a channel the gate consults holds zero entries across the entire data set, so that leg of the gate has never distinguished anything.",
+        "why_not": "Reported as two one-line confirmations of previously registered conditions rather than as newly witnessed instances with a described mechanism."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "self_audit_subsection",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1).",
+    "incident_location_reasoning": "Reported in the control-outcome section, where the audit reports on its own attempt to reproduce an earlier result, rather than in either of the two questions the directory is about."
+  }
+}
