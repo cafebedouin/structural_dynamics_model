@@ -10773,6 +10773,23 @@ latent, not live. **Rider, general:** *a handoff's volume estimate is a claim, a
 measures it before planning against it* — it has the weakest provenance of anything in a
 handoff and is the number most likely to be planned against unexamined.
 
+**Direction (ii) IN PROGRESS — extractor A has landed 7 of its 13 units (2026-08-11).**
+Per-unit files at `packets/our_units/`, 0 leak hits, split boundary declared before extraction
+(`frame/extraction_split.json`). A stopped at 7 and handed off (`HANDOFF_EXTRACTOR_A2.md`) rather
+than extract the two largest dirs in a depleted context — thin units bias toward `other` and
+confound control (c). **Remaining for A: 6 dirs, 263.1 KB MEASURED** (incl. both overlap units,
+which are the extraction-churn floor and must be extracted without reading B's version).
+
+**Possible finding, surfaced by extraction and NOT yet measured: the §4.5 keyword proxy's
+PRECISION is unaudited.** `2026-06-15_oq131_six_observer` nearly yielded no unit — a
+positive-result measurement study whose only incident sits in a self-audit subsection, not in its
+subject. **The escape check measures the proxy's RECALL (dirs it missed); nothing measures its
+PRECISION (dirs it admitted whose incident is incidental).** If NO-UNIT dirs turn up in the
+primary sample, that is evidence the 73 numerator is an OVERCOUNT — the opposite direction from
+the escape check's undercount. The convention is fixed: a dir with no incident gets a NO-UNIT file
+with its reason, never a manufactured unit, and the count is reported rather than averaged away.
+Third defect in a statistic that has now survived two denominator corrections at 42%.
+
 **Step 2 DONE — both lexicons frozen; direction-(i) coder packet built (2026-08-10).**
 `python/audits/oq277_lexicon.py` is the CANONICAL banned-list + matcher, imported by both the
 redaction sweep and (later) the driver's leak-grep — one matcher, since a second copy would be a

@@ -1,0 +1,14 @@
+{
+  "source_dir": "2026-06-15_oq131_six_observer",
+  "extractor": "A",
+  "role": "primary",
+  "files_read": ["FINDINGS.md", "PRE_REGISTRATION.md"],
+  "symptom": "A measurement arm reported results over 57 items where the working set held 64. The run completed normally, every gate passed, and the per-item outputs were correct for the 57 it saw. Only the count disagreed with the expected count.",
+  "mechanism_as_described": "The probe ran from an isolated checkout created off the committed tree. Seven items existed only as uncommitted files, so the isolated checkout did not contain them and the enumeration returned 57. Nothing in the path could report the difference: the enumerator faithfully lists what exists where it looks, and 57 items each processed correctly is a well-formed result. The gates were all written to check the quality of what was measured, not whether the substrate was the intended one, so the substrate divergence passed through every one of them.",
+  "detection_path": "Comparing the arm's item count against the working set's count and refusing to treat the difference as noise — then identifying the missing seven by name and confirming they were exactly the uncommitted ones, rather than assuming a processing drop.",
+  "consequence": "One arm of a three-arm comparison measured a different population than intended. Here the consequence was bounded and was reported: the seven would not have moved a verdict on which all three arms already agreed in sign. The mechanism is not bounded — the same divergence in a run whose result depended on the missing items would have produced a confident answer about the wrong population.",
+  "extraction_notes": {
+    "alternatives_not_extracted": "The same file declares a LATENT defect: an added schema validator rejects a wrongly-typed value but passes a well-typed value with garbage contents, so a malformed triplet loads silently and surfaces only as junk types downstream. It is declared with its limit stated rather than discovered in production, so it has not fired; the substrate-divergence incident was chosen as the one that actually occurred. Recorded so the choice is auditable.",
+    "frame_note": "This directory nearly yielded NO unit: it is a positive-result measurement study whose gates all passed. The incident is in its self-audit section, not its headline. Worth flagging for the frame's precision - the keyword proxy admits dirs whose incident is incidental to their subject."
+  }
+}
