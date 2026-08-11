@@ -1,0 +1,36 @@
+{
+  "source_dir": "2026-06-11_oq44_policy_close",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": true,
+  "files_read": [
+    "writeup.md (full)",
+    "evidence/commitB_pipeline_diff.txt (targeted scan: the single-cause attribution and the 277 leaf diffs)",
+    "evidence/commitC_pipeline_diff.txt (full)",
+    "evidence/probe_c_sentinel_witness.pl",
+    "evidence/probe_c_sentinel_witness_output.txt (targeted scan: sentinel, guard, positive control)"
+  ],
+  "symptom": "One item classified identically from all four observer positions and carried a clean headline verdict. The unanimity was manufactured by a default: the field deciding whether alternatives to the constraint exist defaulted to the negative when nothing had been authored, that negative satisfied a certification, and the certification overrode the per-position readings. Once the field was made to require authored evidence for the negative, the certification lapsed, two of the four positions read differently, and the headline verdict went from clean to alarming with an incoherence flag.",
+  "mechanism_as_described": "The absence of an authored value was represented as one of the two real values rather than as absence, and the value chosen was the one that satisfies the gate. Downstream that gate issues a certification, and the certification is applied as an override on top of the per-position classification, replacing what each position computed with a single value. So a chain that begins with nothing having been authored ends with four positions in apparent agreement and a clean verdict, and every intermediate step reports normally. Nothing in the output marks the difference between four positions that agree and four positions overridden into agreeing. The repair changes the default from the satisfying value to an explicit unknown, so the negative must be authored; the certification then falls back to its honest inconclusive label. The consequences were pre-registered before the change ran — the count of certifications was predicted to drop from one to zero — and the resulting output difference was attributed to a single cause: of 277 changed leaf values, one is the item's own reclassification and the rest are corpus-relative statistics that move whenever the distribution of certifications moves. The gate's other consumers, which look for the positive value, were confirmed unaffected: they had never fired on an empty table and still do not.",
+  "detection_path": "A policy pass that had already accumulated five conversions of the same shape on real data, none of them reverted, and was being generalized into a rule; the two remaining sites in the engine were dispositioned individually as part of closing it. For this site the expected effect was written down before the change, the before and after outputs were kept in full alongside the difference, and each of the 277 changed values was accounted for rather than the summary being trusted.",
+  "consequence": "A disagreement between observer positions had been invisible for as long as the default was in place, hidden behind a certification that only existed because no one had authored the field. The item's headline verdict was clean for the same reason. Making absence explicit surfaced the disagreement, and the write-up records the flip from clean to alarming as the accepted cost of the change rather than as a regression.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is a policy ruling and the disposition of two engine sites; the unit is the defect at the first of those sites.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. Both dispositioned sites are realized; the selected one is described as a complete chain from absent field to headline verdict, and its consequence reaches the headline.",
+    "alternatives_not_extracted": [
+      {
+        "what": "The second site: a lookup returned a fabricated zero when no value was authored. The standing claim that this fabrication was never consumed on the live data turned out to be scoped to the classification path only and wrong for the export path — the first run after the fabrication was replaced by an explicit absence token failed loudly at a schema check demanding a non-null value, which is what proved that two files had been exporting the fabricated zero all along, and that each carried a diagnostic agreement computed from it. The repair marks the field nullable at the consumer and adds a guard that refuses rather than computing on the substitute; the two fabrication-backed agreements disappear from the output, and classification is unchanged for all 46 items.",
+        "why_not": "Equally realized and arguably richer in one respect — a previously asserted absence claim falsified by the repair's own failure — but its consequence stops at two diagnostic entries, where the selected incident's reaches the headline verdict and the observer-position readings. Recorded in full so the choice is visible."
+      },
+      {
+        "what": "A third site prints a substituted default inline at the point of use, so the substitution travels with the value; ruled conforming as-is with no change.",
+        "why_not": "Explicitly ruled not a defect."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1).",
+    "overlap_note": "Floor-only unit: quarantined from the matrices, extracted at full quality per the pre-registered cell accounting. Extracted without reading the other extractor's version of this directory."
+  }
+}

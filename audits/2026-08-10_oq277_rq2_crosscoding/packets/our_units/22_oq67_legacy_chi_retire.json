@@ -1,0 +1,40 @@
+{
+  "source_dir": "2026-07-25_oq67_legacy_chi_retire",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": false,
+  "files_read": [
+    "WRITEUP.md (full)",
+    "step1_results.txt (full)",
+    "step0_controls.pl (targeted scan)",
+    "step1_reachability.pl (targeted scan)",
+    "step5_loud_failure.pl (targeted scan)",
+    "step6_diff_witness.txt"
+  ],
+  "symptom": "A module was tracked as a second, older way of computing a central quantity, and the open question about it was framed as a choice between finishing its migration onto the current formula and declaring it a deliberate exception. Both framings assume it runs. It never ran, and had not for as long as the marker had been sitting on it.",
+  "mechanism_as_described": "Three layers of unreachability stack, each of which individually looks like ordinary code. The module is loaded with an empty import list, so no unqualified call can resolve into it. Its single importer routes all five of its call sites through two lookup predicates. Both of those lookups are unconditional failure stubs — clauses whose bodies are just fail — over tables nothing in the live tree ever populates. The result is that every entry point is defined and failing rather than absent, which is the state that produces no signal at all: a caller gets a clean failure indistinguishable from a legitimate no-match, and the code reads as live in every static sense — it is loaded, it is imported, it has callers. Two genuine defects sat inside it undisturbed: a rule that binds one quantity to a variable named for a different one, against the written specification, and dropped one leg of that specification's condition; and a risk label carrying the wrong type index, naming a category that the specification assigns to something else entirely. Neither ever propagated, for the same reason nobody noticed the path was dead.",
+  "detection_path": "The disposal work started by asking whether the path executes rather than which of the two proposed dispositions to take, and answered it with an exhaustive failure check over every corpus rather than a code read: three predicates across six data sets, each run with its own positive controls re-established per process, denominators matching the loader's own file counts exactly on all six. The load-bearing witness, though, is not that check — a check that enumerates facts structurally cannot see a call assembled at runtime. So the stubs were deleted, which turns those predicates from defined-and-failing into undefined; the argument that a hidden dynamic call would now raise an error instead of failing quietly was itself treated as a claim and witnessed, by running six goals under an error handler and confirming all six raise. Behaviour preservation was then witnessed on a run pair, with the note that a pipeline aborting on its own gates never rewrites its output, so a comparison taken afterwards would compare a file against itself and read identical — exit code and modification time were both confirmed before the comparison was trusted.",
+  "consequence": "The question as posed had no correct answer: finishing the migration would have moved unreachable code onto the live path, and declaring an exception would have certified a path that never executes. Two defects that had lived in the code for its whole life were recorded rather than silently deleted with it. One capability really was lost — a detector with no equivalent anywhere else — so it was written up as a declared absence, with its own separate witness, before the deletion landed. And the disposal changed the failure mode of anything that might still reach that code from silent to loud, which is what makes a subsequent clean run informative rather than vacuous.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is the disposal of a legacy computation path; the unit is the state that disposal uncovered — a path presenting as live while structurally unable to execute.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. The selected incident names all three unreachability layers, the defined-and-failing state that makes them invisible, and the two defects it sheltered.",
+    "alternatives_not_extracted": [
+      {
+        "what": "Three comments in three different files named a module as a member of the legacy path; the claim was already false at the current code state, since that module computes entirely on the current formula and contains no reference to the retired one. One of the three also cited a line number that would have dangled after the deletion.",
+        "why_not": "Stale comments corrected on sight, with no consequence beyond misdirection; no mechanism beyond not having been updated."
+      },
+      {
+        "what": "A general trap noted in the witness list: the pipeline aborts on its own gates before writing its output, so a before-and-after comparison taken across an aborted run compares the baseline against itself and reads identical — a clean result that means the run never happened.",
+        "why_not": "Stated as a known trap being guarded against here rather than as an instance of it firing in this work."
+      },
+      {
+        "what": "A set of parameters was deliberately kept after its only reader was deleted, because they serialize into the output and removing them would have made an otherwise behaviour-preserving change output-changing. They now have no reader at all.",
+        "why_not": "A declared and reasoned retention, not a defect — though it creates the condition where a sensitivity result for those parameters would read as no sensitivity rather than as no consumer."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "source_dir": "2026-07-04_oq75b_grain_probe",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": false,
+  "files_read": [
+    "WRITEUP.md (full)",
+    "PROPOSAL.md (full)",
+    "pairs_A0.tsv / pairs_A3.tsv (targeted scan: per-row composition)",
+    "registry_A3.pl (targeted scan: split construction)",
+    "run_A3_testsets.log (targeted scan: control lines)"
+  ],
+  "symptom": "A summary table reported one item as unchanged under a perturbation — same number of cells before and after — while every cell in it had in fact been replaced. In the same summary, a conversion figure of nine out of ten concealed that the tenth was a pure loss with nothing gained in exchange, and a per-item view concealed that nine of the ten items had lost cells, making the effect substrate-wide rather than one fragile case.",
+  "mechanism_as_described": "The reported observable is a count. The perturbation both destroys and creates cells, so an item whose composition turns over completely can net to zero and print as stable: in the witnessed row, three agreements and one disagreement became four agreements and none — the disagreement died and a new agreement appeared in a freshly split slot — and the count says nothing happened. The same arithmetic hides direction elsewhere: a conversion figure that fell by one reads like a small perturbation, when the set relationship is strict loss rather than substitution. And the count is not even monotone in the thing it is supposed to track: a coarsening move that can only increase alignment, by a stated theorem, reduced the cell count from 47 to 42, because merging vantages consolidates two cells into one. A statistic built on the count would therefore read a strict increase in alignment as a decrease in it — wrong in sign, not just in magnitude — and its fixed points are not fixed either.",
+  "detection_path": "Not by the probe's own controls, which fired as designed: the perturbation was verified to have taken effect per arm and per corpus by comparing in-image fact counts against the arm file, the perturbed atom set was checked to be exactly the ten expected atoms, a known-changer case was verified to change, and the baseline arm's cell count was cross-checked at 47 against an independent instrument over the same substrate. The masking was found because a reviewer asked for the per-item rows behind the aggregates; the table was then built and the three facts fell out of it. The document also records a limit on one of the controls: a per-run line that prints a fact count cannot distinguish a perturbed arm from the baseline, because every arm maps the same number of items, so the discriminating controls are the atom-set assertion and the known-changer, not that line.",
+  "consequence": "Three facts about the probe's own result were invisible in the form the result was first reported, and would have stayed invisible had the disaggregated table not been requested. The finding carried forward is a constraint on a statistic not yet built: it may not be a raw cell or vantage count, because such a count is non-monotone in the quantity of interest and its unchanged rows do not mean unchanged. Anything downstream that aggregates these verdicts across differently-partitioned inputs needs the partition stamped alongside, since the verdicts are not stable across partitions.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is how sensitive a partition layer is to how finely it is cut; the unit is the reporting defect the probe found in its own aggregates.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. The selected incident is stated with the specific row, its before-and-after composition, and two further masked facts; the alternatives are stated as single observations.",
+    "alternatives_not_extracted": [
+      {
+        "what": "A line printed once per run, showing a fact count, reads as a per-arm confirmation that the perturbation was applied — and cannot be: every arm maps the same number of items, so the line is identical whether the perturbation took effect or not. Disclosed in a control-honesty note naming the two controls that actually discriminate.",
+        "why_not": "A check that cannot fail, disclosed rather than instanced; no reading was drawn from it. Closely related to the selected incident and would have been my second choice."
+      },
+      {
+        "what": "The perturbation that can only lose structure is the maximally arbitrary one, so its effect is an upper bound on what a merit-based version would do; the document adopts that framing rather than treating the measured swing as the expected swing.",
+        "why_not": "A scoping correction adopted on review, not a defect."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "self_audit_subsection",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1).",
+    "incident_location_reasoning": "Reported in the section added on a reviewer's request, which examines what the probe's own aggregate reporting concealed rather than the substrate the probe measured."
+  }
+}
