@@ -136,11 +136,20 @@ patterns.
 1. 8 files in `packets/escape_units/`, one per directory, UNIT or NO-UNIT, each naming the boundary
    clause applied.
 2. Leak sweep clean over every coder-facing field.
-3. A short `packets/escape_units/EXTRACTION_NOTES.md`: the UNIT/NO-UNIT split, which clause fired
+3. **An ORDERED LIST of every file you opened, written AS YOU GO, not reconstructed at the end**
+   (operator ruling, 2026-08-11), in `EXTRACTION_NOTES.md`. A declared slip is a self-report, and
+   this design does not accept self-reports where a witness is available; the list is auditable
+   against the do-not-open table above.
+   **Its limit, stated so nobody treats it as closing the question:** the list is authored by the
+   party it constrains, so it converts an assurance into a *checkable* assurance, not into proof.
+   **The independent instrument already exists** — the four floor comparisons collapse toward zero
+   if blindness broke, so the churn floor is what actually tests this and the file list is the cheap
+   corroborating one.
+4. A short `packets/escape_units/EXTRACTION_NOTES.md`: the UNIT/NO-UNIT split, which clause fired
    for each, any directory you found genuinely ambiguous (escalate rather than decide), and an
    explicit statement of whether the blindness rule held — **by what route you know it held**, not
    an assurance.
-4. **No model call.** `payloads/` and `responses/` stay empty until the operator's spend-go at
+5. **No model call.** `payloads/` and `responses/` stay empty until the operator's spend-go at
    prereg freeze. If you think a live call is required, **stop and ask** — do not decide it.
 
 Then hand back. Packet assembly, the driver, and the prereg are the other instance's.

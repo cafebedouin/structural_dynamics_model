@@ -16,6 +16,17 @@
 > two-sided checks pass via `controls/verify_redaction_twins.py`); the ruling + defect artifacts;
 > amendment §Q.
 >
+> **READ THIS BEFORE THE LIST.** The remaining items look like execution. They are not uniformly
+> so — **three still contain a live design decision**, and the failure mode from here is treating
+> the whole list as mechanical and discovering the difference at freeze:
+>
+> | item | kind |
+> |---|---|
+> | direction-(ii) twins | **live** — carries the corrected-vs-declared set assignment (§Q) |
+> | escape units | **live** — rides an untested quarantine gate (C3; §M k=0) |
+> | coder prompts | **live** — still the only authored artifact in the design with NO witness (C4/C5) |
+> | (iii′) units, packets, driver, prereg assembly | mechanical, against specs already fixed |
+>
 > **NEXT, in order:**
 > 1. **Direction-(ii) twins — 5 unredacted arms.** Units `04` (declared+corrected), `10`, `20`
 >    (declared), `05`, `07` (corrected). `verify_redaction_twins.py` is RED until they land.

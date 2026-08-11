@@ -257,3 +257,24 @@ row was designed against the fork reading, and a row built to measure "which bra
 **And note what §2.5 says about the collision's origin:** the branch that won publication is the
 one with the least behind it in the operational record. That suggests the collision was not a
 divergence under pressure but **an index reused because nothing was firmly attached to it.**
+
+### 2.7 What `oq106_retire` actually says — carry this, it is the sharper half
+
+P3's only dated record is the discipline being **followed**: an old-vs-new diff produced *before* a
+retire — the pattern's **prevention**, not its occurrence. So the published taxonomy's third member
+may be **the one pattern the institution never actually suffered**, published because the control
+for it was built early enough that nothing got through. That is coherent and interesting, and it is
+the **opposite** of "uninstanced by oversight."
+
+**It makes a prediction, which is what makes it testable:** the shape-sweep (§2.5) will return
+**prevention records, not failures.** If it does, the honest v0.4 statement is that **P3 is a
+pattern the discipline anticipated rather than one it learned from** — which sits oddly in §5.2's
+convergence argument, since that argument runs on *failures forcing structures*.
+
+**Pre-registered NOW, before the sweep runs, so the zero cannot be interpreted with its result in
+hand.** P3's `no members — uncalibrated` cell in the (iii′) row has two possible contents:
+- **reading A (current):** "no exemplar was **named**" — an authoring gap in the published section.
+- **reading B (second horn):** "there was **nothing to name**" — the pattern was never instanced.
+
+Same cell, different content, different consequence for §4.3 and §5.2. The sweep selects between
+them; neither may be written in afterwards.
