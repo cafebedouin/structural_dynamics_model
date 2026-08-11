@@ -595,6 +595,21 @@ the design blinds (an assembler working in the judge's terminal), the prompt mus
 PRINTED, not only what may be done. Detail + instances: `docs/technical/build_discipline.md` →
 *Write the receiver's prompt*.
 
+**When a defect is found, its BEFORE-COMMIT is a free negative control (operator ruling,
+2026-08-11).** Planted fixtures license only *"authored drift gets rejected"* — the top of the
+discrimination ladder is **a real defect and a real clean state, neither authored to be found**, and
+git already holds both: **the defect's commit is a naturally-arising POSITIVE, its parent a
+naturally-arising NEGATIVE.** So a detector built in response to a defect is not done when its
+fixture passes — run it against `N` and `N−1` and record *fires at N, declines at N−1* as its
+discrimination record (witnessed: `orphaned_controls()` names exactly the two orphaned assertions at
+`4e0d8725` and returns `[]` at `cb1b33e5`). **Availability is not automatic — CHECK, don't assume**
+(of five OQ-277 defects, three had pairs and two did not). **The tension:** the two missing pairs
+were missing *because the defect was caught before commit* — better engineering that destroys the
+free control; catching early is still right, so when a detector will be built in response, preserve
+the defective state deliberately (scratch copy or diff in the commit message). Detail:
+`docs/technical/build_discipline.md` → *When a defect is found, its before-commit is a free negative
+control*.
+
 **A control must witness that it is CALLED, not only that it works (operator ruling, 2026-08-11).**
 The selftest exercises the function; **something has to exercise the wiring** — a guarded function
 called only from the selftest is an ORPHAN and gets removed or re-wired, never left green.

@@ -40,6 +40,29 @@ not a weak check; it is a different check wearing the name.
 default.** It is the kind of omission that is only visible once, from the far side of a
 failure.
 
+### 1.1 The genre error has a SECOND face, and §2.3 is it
+
+**Operator observation, 2026-08-11.** The five artifacts that do not exist (§2.3) are **all
+analysis stages** — scorer, pair identification, matrix construction, redaction-floor scoring,
+the (iii′) row. That is not five independent omissions. It is **the same selection rule as the
+pin manifest, on a different axis**:
+
+| axis | what got specified | what did not |
+|---|---|---|
+| pin manifest | artifacts that read like **specifications** (texts) | artifacts that **run** (executables) |
+| experiment design | everything **up to the point where data lands** | everything **after** it |
+
+**The design specified the production of data and not its consumption.** Extraction, redaction,
+blinding, packet assembly, ordering, capture, unanimity, leak sweeps — all pinned, all
+controlled. Scoring, the stage the findings are actually made at — absent, in code and in text.
+
+**Consequence for this criterion:** stating "pin every executable" is not sufficient, because
+when the scorer is built it will *become* an executable and the same instinct will treat it as
+downstream plumbing rather than as part of the design. **The pin criterion must reach the
+analysis stages explicitly, or the next freeze pins a scorer that a later instance can silently
+replace** — which would put the numbers in the writeup one substitution away from unpinned,
+with a GREEN freeze check throughout. That is this arc's failure with a different noun.
+
 ---
 
 ## 2. The path enumeration
@@ -103,6 +126,13 @@ have produced 219 scoreable answers that nothing in the repository can score.
    - a fixture where a pair is UNSTABLE **must** score `uninformative`, and must not be
      silently counted as agreement.
 2. **§2.2 gets its negative controls**, or ships with its status declared in the prereg text.
+2b. **Every detector built for §2.3 is graded against its historical commit pair where one
+   exists**, not only against its fixture. Available pairs, verified 2026-08-11: control
+   orphaning (`cb1b33e5` / `4e0d8725`), capture-path absence (`cb1b33e5~1`), lexicon
+   single-object `KeyError` (`3e16a1d8~1`). Unavailable: drift-list false positives and the
+   crashes-logged-as-leaks baseline, both caught before commit. **Where no pair exists, the
+   detector ships at fixture grade and says so.** Rule:
+   `build_discipline.md` → *When a defect is found, its before-commit is a free negative control*.
 3. **The manifest is rebuilt under §1's criterion** — every executable in the path, plus its
    fixtures.
 4. **The freeze-integrity check covers the new stamp** (the gate entry generalises or is

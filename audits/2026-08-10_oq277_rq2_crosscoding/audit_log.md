@@ -438,6 +438,31 @@ uncorrelated with the cost. **A verification stack audited by following its red 
 systematically miss every defect whose signature is silence** — which is the class that takes whole
 runs.
 
+### The most compact statement §6.4 has — the detector reported ITSELF
+
+**Operator ruling, 2026-08-11.** `orphaned_controls()` was written to find controls that nothing
+calls. **On its first run it named itself**, because nothing called it yet.
+
+That is the whole recursion in one line, and it is better than the five-instance table above
+because it needs no narrative: **the detector for a defect class is a member of that defect
+class.** Not analogously, not as a cautionary framing — literally, by its own criterion, on its
+first execution.
+
+**And the handling is the transferable part, not the anecdote.** The exemption is real:
+`orphaned_controls` genuinely is a selftest instrument, its wiring witness genuinely is that
+`--selftest` fails without it, and guarding it against its own rule would be incoherent. So the
+exemption is correct. **The only thing separating a legitimate exemption from an invisible one is
+whether someone wrote it down** — and the arc has a worked example of the alternative: the
+genre-based pin rule (`SPEC_next_preregistration.md` §1) was also a real, defensible selection
+rule, applied by everyone including the operator, and it cost 219 calls **because nobody stated
+it**. Same species. One was written into the source as an exemption with its reason; the other
+was never articulated and therefore never examined.
+
+> **§6.4 should end here rather than on the five-instance table.** The recursion is not resolved
+> by a deeper instrument and not by a better rule. What terminates it is someone writing down the
+> exemption they just took — which is an act of documentation, not of verification, and is why the
+> apparatus's honest limit is a person and not a gate.
+
 ## 2026-08-11 — EVIDENCE for the stamp ruling (the ruling itself is the operator's, PENDING)
 
 The operator asked whether a second run goes under the existing stamp or needs a new one, noting

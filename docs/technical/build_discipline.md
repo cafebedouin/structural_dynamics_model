@@ -1985,6 +1985,50 @@ screen is unblinded before the pass begins, and no downstream control recovers i
 
 ---
 
+## When a defect is found, its before-commit is a free NEGATIVE control
+
+**Operator ruling, 2026-08-11.** Every control in this repository was validated on **planted
+fixtures**, and under *a positive control demonstrates DISCRIMINATION, not detection* that licenses
+only the weakest claim: *authored drift gets rejected*. There is a stronger grade sitting unused in
+git.
+
+> **A defect's commit is a naturally-arising POSITIVE case; the commit before it is a naturally-
+> arising NEGATIVE case. Neither was authored to be found. When you build a detector in response
+> to a defect, grade it against that pair before you grade it against a fixture.**
+
+**The instance that revealed it.** `orphaned_controls()` was built after two assertions were found
+unwired. Run against the driver at `4e0d8725` (after the relaxation orphaned them) it names exactly
+those two; at `cb1b33e5` (before, both wired) it returns `[]`. A real defect and a real clean state,
+neither constructed. **Nothing else in that arc reaches this grade**, and it cost nothing — the
+defect had already happened and git held both states.
+
+**Availability is NOT automatic, and the count must be checked rather than assumed.** Of five
+defects in the OQ-277 arc with this shape, **three have usable pairs and two do not** — verified,
+not estimated:
+
+| defect | before-state in history? | witness |
+|---|---|---|
+| control orphaning | **yes** — `cb1b33e5` / `4e0d8725` | detector declines then fires |
+| capture path absent | **yes** — `cb1b33e5~1` has no `write_response` | `grep -c "def write_response"` → 0 |
+| lexicon single-object `KeyError` | **yes** — `3e16a1d8~1` holds the defective normaliser | `grep -c` → 1 |
+| drift-list false positives | **no** | `git log -S` finds 0 commits containing the defective test |
+| baseline logging crashes as leaks | **no** | a reasoning artifact in scratch output, never repo code |
+
+**The tension worth naming, because it cuts against the rule.** The two unavailable pairs are
+unavailable *because the defect was caught before commit* — which is better engineering, and which
+**destroys the free control**. Catching earlier is still right; the cost is simply real and should
+be recognised rather than discovered. Two partial mitigations: **commit-as-you-go** shortens the
+window in which a defect can live and die uncommitted, and a defect caught pre-commit can have its
+defective state **preserved deliberately** (a scratch copy, or the diff quoted in the commit
+message) when a detector is going to be built in response.
+
+**Standing practice.** A detector built in response to a defect is not done when its fixture
+passes. Locate the defect's commit and its parent, run the detector against both, and record the
+pair — *fires at N, declines at N−1* — as its discrimination record. If no pair exists, say so, and
+the detector ships at fixture grade with that stated.
+
+---
+
 ## A control must witness that it is CALLED, not only that it works
 
 **Operator ruling, 2026-08-11.** The same lesson as *gate the output, not only the input*, one
