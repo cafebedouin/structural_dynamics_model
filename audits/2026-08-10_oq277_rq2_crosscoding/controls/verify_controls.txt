@@ -1,26 +1,53 @@
-=== CONTROL VERIFICATION (extractor, pre-driver) ===
+=== OQ-277 CONTROL VERIFICATION (extractor, pre-driver) ===
 
-[1] DECOYS must be CLEAN under both lexicons (they are coder-facing in both directions)
-   decoy_1_loud             want=other  clean under BOTH lists
-   decoy_2_institutional    want=other  clean under BOTH lists
-   -> decoy leak hits: 0
+[1] ANCHORS — clean under BOTH lexicons, and every label re-derived from its frozen source
+        PASS  anchor anchor_i_1 (true_label P1) clean under both lists
+        PASS  anchor anchor_i_2 (true_label P2) clean under both lists
+        PASS  anchor anchor_i_3 (true_label P5) clean under both lists
+        PASS  anchor anchor_ii_1 label C == BOTH frozen class fields, agreeing=True
+        PASS  anchor anchor_ii_1 text clean under both lists
+        PASS  anchor anchor_ii_2 label D == BOTH frozen class fields, agreeing=True
+        PASS  anchor anchor_ii_2 text clean under both lists
+        PASS  anchor anchor_ii_3 label E == BOTH frozen class fields, agreeing=True
+        PASS  anchor anchor_ii_3 text clean under both lists
 
-[2] PLANTED LEAK fixtures must be FLAGGED (positive control: a matcher that never fires witnesses nothing)
-   direction_i_payload_fixture: 9 hits under direction (i) -> FLAGGED
-      [('class_letters', '\\bClass\\s+[A-E]\\b', 'Class B', 'roring rather than passing — a textbook Class B positional-parse failure, and a fail-pl'), ('root_cause_structure', '\\bamplifier\\b', 'amplifier', 'concealer here was the status file; the amplifier was the retry loop. Compare the gray fa'), ('root_cause_structure', '\\bconcealer\\b', 'concealer', ', and a fail-plausible one at that. The concealer here was the status file; the amplifier'), ('rule_ids', '\\bINV-[A-Z]', 'INV-O', 'ure described under meta-rule MR-12 and INV-ONTOLOGY-001, logged in the openclaw repo'), ('rule_ids', '\\bMR-\\d+\\b', 'MR-12', ' gray failure described under meta-rule MR-12 and INV-ONTOLOGY-001, logged in the ope'), ('rule_ids', '\\bmeta[- ]rule\\b', 'meta-rule', 'ompare the gray failure described under meta-rule MR-12 and INV-ONTOLOGY-001, logged in t'), ('source_identifying', '\\bopenclaw\\b', 'openclaw', '-12 and INV-ONTOLOGY-001, logged in the openclaw repo.'), ('taxonomy_terms', '\\bfail[- ]plausible\\b', 'fail-plausible', 'Class B positional-parse failure, and a fail-plausible one at that. The concealer here was the'), ('taxonomy_terms', '\\bgr[ae]y failure\\b', 'gray failure', 'plifier was the retry loop. Compare the gray failure described under meta-rule MR-12 and INV')]
-   direction_ii_payload_fixture: 11 hits under direction (ii) -> FLAGGED
-      [('p_tokens', '\\bP[1-6]\\b', 'P6', 'This is a P6 instance and a textbook success-shaped '), ('p_tokens', '\\bP[1-6]\\b', 'P6', 'angling wire above it is Pattern 1, and P6 is parasitic on the others because it i'), ('p_tokens', '\\bPattern\\s+[1-6]\\b', 'Pattern 1', 'sorption: the dangling wire above it is Pattern 1, and P6 is parasitic on the others beca'), ('pattern_names', '\\bsuccess[- ]shaped absorption\\b', 'success-shaped absorption', 'This is a P6 instance and a textbook success-shaped absorption: the dangling wire above it is Pattern '), ('pattern_nicknames', '\\bdangling wire\\b', 'dangling wire', 'textbook success-shaped absorption: the dangling wire above it is Pattern 1, and P6 is parasi'), ('r5_framing', '\\bcross[- ]cutting\\b', 'cross-cutting', 's parasitic on the others because it is cross-cutting rather than sitting at one level. Our s'), ('r5_framing', '\\blayer column\\b', 'layer column', ' sort by system layer, which is why the layer column matters here. Tracked as OQ-97.'), ('r5_framing', '\\bparasitic\\b', 'parasitic', 'g wire above it is Pattern 1, and P6 is parasitic on the others because it is cross-cutti'), ('r5_framing', '\\bsorts? by (?:system )?layer\\b', 'sort by system layer', 'ther than sitting at one level. Our six sort by system layer, which is why the layer column matters '), ('source_identifying', '\\bOQ-\\d+\\b', 'OQ-97', 'e layer column matters here. Tracked as OQ-97.'), ('taxonomy_phrases', '\\bsuccess[- ]shaped\\b', 'success-shaped', 'This is a P6 instance and a textbook success-shaped absorption: the dangling wire above it ')]
+[2] DECOYS — coder-facing in both directions, so clean under both lexicons
+        PASS  decoy decoy_1_loud clean, want=other
+        PASS  decoy decoy_2_institutional clean, want=other
 
-[3] LAYER SCOPING: collocations must fire, the BARE word must not (over-redaction destroys codeability)
-   'sorts by system layer'      -> [('r5_framing', '\\bsorts? by (?:system )?layer\\b', 'sorts by system layer', 'our six sorts by system layer')]
-   'the reporting layer was silent' -> NO HIT (correct — bare word preserved)
+[3] PLANTED LEAK — must FIRE (a matcher that never fires witnesses nothing)
+        PASS  direction_i_payload_fixture: 9 hits under direction (i)
+        PASS  direction_ii_payload_fixture: 11 hits under direction (ii)
+        PASS  R5 framing term 'parasitic' caught (must never reach a coder)
+        PASS  R5 framing term 'cross-cutting' caught (must never reach a coder)
+        PASS  a layer COLLOCATION caught
 
-[4] PLANTED BROKEN UNIT: must be well-formed, clean, and NOT resident in packets/our_units/
-   fields present: True | leak hits: 0 | matrix_unit: False | resident in our_units: NO (correct)
+[4] LAYER SCOPING — collocation fires, bare word survives (over-redaction biases to 'other')
+        PASS  'sorts by system layer' FIRES
+        PASS  bare 'layer' NOT flagged
 
-[5] DISJOINTNESS: no control incident is any extracted unit's incident
-   decoy_1 (interface rejects a parameter outright)     -> DISJOINT
-   decoy_2 (published report delayed)                   -> DISJOINT
-   anchor_i_1 (stale post-process)                      -> DISJOINT
-   anchor_i_2 (two copies)                              -> DISJOINT
-   anchor_i_3 (empty-table count gate)                  -> DISJOINT
+[5] PLANTED BROKEN UNIT — well-formed, clean, and never a member of our_units/
+        PASS  all four coder-facing fields present
+        PASS  clean under direction (ii)
+        PASS  matrix_unit=False (can never enter a cell)
+        PASS  not resident in packets/our_units/
+
+[6] DISJOINTNESS — no control incident is any extracted unit's incident
+    (tested over UNIT TEXT, not source directories: the coder reads units)
+        PASS  decoy_1 interface rejects a parameter -> DISJOINT
+        PASS  decoy_2 published report delayed -> DISJOINT
+        PASS  anchor_i_1 stale post-process -> DISJOINT
+        PASS  anchor_i_2 two copies -> DISJOINT
+        PASS  anchor_i_3 empty-table count gate -> DISJOINT
+
+[7] DISQUALIFIED-ANCHOR CONTROL — the probe that forced the anchor set must still FIRE
+    (a probe that only returns silence cannot distinguish clean from never-looked)
+        PASS  published P6 exemplar still collides with exactly one unit -> ['2026-06-10_oq93_grid_viability_probe']
+        PASS  no P6 anchor is present (the collision is respected, not merely noted)
+
+[8] CELL ACCOUNTING — quarantine on matrix_unit, never on overlap_source alone
+        PASS  matrix units == 22 (got 22)
+        PASS  every sampled directory contributes exactly ONE cell
+        PASS  overlap_source alone would give 18 — recorded so the wrong field is never used
+
+ALL CONTROLS PASS

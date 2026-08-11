@@ -18,8 +18,9 @@ CLOSED. Their conventions still bind; their task lists are done.
 | Decoys | **DONE** — `controls/decoys.json`, 2, clean under both lists |
 | Planted leak | **DONE** — `controls/planted.json`, fires 9 hits (i) / 11 (ii) |
 | Planted broken unit | **DONE** — `controls/planted.json`, meaning-inverted, ground truth recorded |
-| Control verification | `controls/verify_controls.txt` — re-run it, do not trust this table |
+| Control verification | **`controls/verify_controls.py`** — re-run it, do not trust this table. Currently ALL CONTROLS PASS, exit 0; output in `controls/verify_controls.txt`. It is a STANDING check: re-run after any change to units, controls, or the lexicon |
 | **Redaction twins** | **NOT DONE — your first task** |
+| **Coder packets** | **NOT ASSEMBLED — see §1.5.** `packets/coder_direction_i.json` predates the controls and contains NO anchors and NO decoys; direction (ii) has no assembled packet at all |
 | Driver | NOT DONE |
 | `PREREGISTRATION.md` + md5 | NOT DONE |
 | Spend-go | NOT REQUESTED (operator gate, at freeze) |
@@ -56,6 +57,32 @@ not clean) and the redacted arm MUST pass it. A pair where both arms pass is a p
 not actually un-redact anything, and it would report a floor of zero — "redaction costs nothing" —
 by construction. Assert both directions of that before moving on.
 
+## 1.5 Assemble the coder packets — a task the earlier handoffs did not name
+
+`packets/coder_direction_i.json` was frozen at step 2, **before the controls existed**: it holds
+Wu's 22 redacted units and contains **no anchors and no decoys**. Direction (ii) has **no assembled
+packet at all** — its units are 26 per-file JSONs, of which only the 22 with `matrix_unit: true`
+are cells.
+
+Decide and RECORD where interleaving happens — packet or driver — and keep it in one place:
+
+- **If the driver interleaves at send time**, say so in the prereg, because a later reader
+  auditing "what was sent" will otherwise open the packet and get an incomplete picture. The
+  payload dump is then the authoritative record and the packet is only a unit source.
+- **If you assemble full packets**, the packet is the record and the driver just sends it.
+
+Either is defensible; leaving it implicit is not. Whichever you choose, the direction-(ii) packet
+must be built from `matrix_unit: true` units **plus** anchors, decoys and — separately labelled and
+quarantined — the redaction twins.
+
+**Declared and checked overlap, so you do not rediscover it as a surprise:** the three Wu units
+serving as direction-(ii) anchors (`governance_silent_error`, `dream_self_referential`,
+`heartbeat_md_pa_self_silencing`) are ALSO three of the 22 units coded in direction (i). That is
+intended and clean — different label spaces, different runs, a stateless coder, and the anchors are
+quarantined from direction-(ii) cells — but it means those three texts appear in both runs. Do not
+"fix" it by dropping them from direction (i); that would shrink the coded set to tidy up an overlap
+that costs nothing.
+
 ## 2. Driver — `python/audits/oq277_crosscoding_driver.py`
 
 - Wrap `call_with_retry` (the single choke point) and **dump every assembled payload BEFORE send**,
@@ -73,6 +100,25 @@ by construction. Assert both directions of that before moving on.
    payloads yields a clean leak-grep and a green H2 — success-shaped absence, the exact failure
    this experiment studies. **Count first.**
 2. Then grep. Overlap and quarantined units' calls still count toward the expected total.
+
+## 2.5 STOP — do not make a live model call, including to test the driver
+
+**No model call has ever been made in this audit. `payloads/` and `responses/` are empty BY
+DESIGN, and they stay empty until the operator says otherwise.**
+
+The hazard is not that you would decide to run the experiment early. It is that **building a driver
+and smoke-testing it with one real call is the most natural thing in the world**, and it would
+break two things at once: it spends against a gate the operator holds, and it puts a result on disk
+before `PREREGISTRATION.md`'s md5 sits above the first result line — which is the whole point of
+that ordering. A single "just checking the transport works" call is a prereg violation, not a
+warm-up.
+
+**Test the driver against a STUBBED transport** — a fake `call_with_retry` returning canned
+responses. That exercises everything that can actually be wrong at this stage: payload assembly,
+the pre-send dump, the capture count, the leak-grep over dumped files, k=3 bookkeeping, unanimity
+and UNSTABLE routing, and the quarantine on `matrix_unit`. None of that needs the network.
+
+If you believe a live call is genuinely required before freeze, **stop and ask** — do not decide it.
 
 ## 3. Freeze, then ask
 
