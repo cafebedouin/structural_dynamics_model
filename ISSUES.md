@@ -10773,6 +10773,35 @@ latent, not live. **Rider, general:** *a handoff's volume estimate is a claim, a
 measures it before planning against it* — it has the weakest provenance of anything in a
 handoff and is the number most likely to be planned against unexamined.
 
+**Step 2 DONE — both lexicons frozen; direction-(i) coder packet built (2026-08-10).**
+`python/audits/oq277_lexicon.py` is the CANONICAL banned-list + matcher, imported by both the
+redaction sweep and (later) the driver's leak-grep — one matcher, since a second copy would be a
+P2 fork inside the experiment measuring P2. Selftest GREEN: 13 positive controls, 4 false-positive
+controls (including the `permission class by default` H2 phantom, kept permanently), 20
+shared-vocabulary controls asserting PRESERVED terms are unmatched by BOTH lists — which makes
+"we did not strip shared subject matter" a checked fact rather than an intention — and a
+matcher-integrity control so a matcher that never fires cannot pass. Direction-(i) sweep: 0 hits
+over 22 units × 4 fields. **`python/audits/oq277_make_coder_packets.py` builds the coder packet
+with OPAQUE IDS in a seeded-shuffled order** — Wu's own ids name their subject, and catalog order
+is contiguous class blocks (max run 8), which would hand a coder the class grouping with no class
+name present; emitted max run is 3. The packet is leak-swept BEFORE it is written and a hit aborts
+the build.
+
+**R5's `layer` ban is SCOPED, and the deviation is measured not argued.** R5 lists `parasitic`,
+`cross-cutting`, `layer`. Bare `layer` appears **48 times in 27 of 89** direction-(ii) source
+files while the taxonomy-framing collocations (`six layers`, `layer column`, `sorts by system
+layer`, ...) appear **0 times**. Banning the bare word would fire on a third of the source files,
+catch zero real leaks, and strip vocabulary real mechanisms need ("three layers each discarded
+part of the cause" describes an incident, it does not hint at our taxonomy) — over-redaction
+biases units toward `other`, corrupting the very control (c) exists to measure. The collocations
+are banned instead, at zero measured cost. Frozen in `LAYER_SCOPING_NOTE`.
+
+**One ADDITION to the design's ban lists, flagged not folded in silently:** source-identifying
+terms are banned in both directions (`openclaw`/`Wu`/`arxiv` one way, `OQ-\d+`/`CLAUDE.md`/
+`deferential realism` the other), on the reasoning that a coder recognising the source could
+recall the published taxonomy from training data, defeating the blind exactly as a class name
+would. Operator may strike it; it is not in the original frozen design.
+
 **VERDICT GRAMMAR AMENDED + EXTENSION MADE CONDITIONAL (operator, 2026-08-10) — binding
 pre-registration content in `audits/2026-08-10_oq277_rq2_crosscoding/verdict_grammar_amendment.md`,
 which `PREREGISTRATION.md` incorporates VERBATIM.** That file is the canonical location for these
