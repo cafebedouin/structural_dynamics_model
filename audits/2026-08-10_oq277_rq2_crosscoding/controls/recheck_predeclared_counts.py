@@ -24,6 +24,23 @@ that group excluded (24 with it), so the artifact evidences its own basis. The g
 flagged in oq277_lexicon.py as an ADDITION to the original design's ban list, so excluding it
 from a *density* metric is consistent with how it was introduced.
 
+WHICH LEXICON, AND WHY IT IS PINNED (operator ruling, 2026-08-11). This script reads
+`oq277_lexicon.LEXICON_SELECTION_20260811` — the FROZEN snapshot of the lists in force when
+redaction_pairs_predeclared.json was written — and NOT the live detector.
+
+The detector was widened on 2026-08-11 to catch hyphen-joined forms, because three real leak
+forms escaped it ("Build-Discipline Pattern-1", "Build-discipline spine", "Pattern-6
+success-shaped-absorption"). Widening is a strengthening for DETECTION and is inadmissible
+for SELECTION: under the widened lists this script's recomputed top-3 changes —
+oq97_pattern6_census rises 4 -> 9 and overtakes oq138 at 5 — and it moves TOWARD the
+corrected set, i.e. in the direction that flatters the both-residue row. Re-declaring the
+selection under a lexicon widened after the counts were visible is reselection with an extra
+step, and the fact that the movement is convenient is precisely why it cannot be taken.
+
+So: two roles, two pinned versions, one module. This script reproduces a PAST selection and
+must therefore use the instrument that selection was made under. A defect found in the frozen
+lists is a finding to report, never an edit to make.
+
 Run:  python3 controls/recheck_predeclared_counts.py      (exit 0 iff selection is invariant)
 """
 from __future__ import annotations
@@ -50,12 +67,18 @@ def _overlap_dirs() -> set[str]:
     return out
 
 
+# The pinned selection instrument. See "WHICH LEXICON" above — this is deliberately NOT
+# the live detector, and swapping it for L.LEXICON_DETECT silently changes a pre-declared
+# selection into a post-hoc one.
+SELECTION_LEXICON = L.LEXICON_SELECTION_20260811
+
+
 def hits(directory: str, *, drop_source_identifying: bool = True) -> int:
     """Declared basis: all *.md in the directory, non-recursive, source_identifying dropped."""
     n = 0
     for f in sorted(glob.glob(os.path.join(directory, "*.md"))):
         text = open(f, encoding="utf-8", errors="replace").read()
-        for group, _pat, _m, _c in L.scan(text, "ii"):
+        for group, _pat, _m, _c in L.scan(text, "ii", SELECTION_LEXICON):
             if drop_source_identifying and group == "source_identifying":
                 continue
             n += 1
@@ -82,7 +105,7 @@ def hits_split(directory: str) -> tuple[int, int, list[str]]:
     terms: list[str] = []
     for f in sorted(glob.glob(os.path.join(directory, "*.md"))):
         text = open(f, encoding="utf-8", errors="replace").read()
-        for group, pat, matched, _c in L.scan(text, "ii"):
+        for group, pat, matched, _c in L.scan(text, "ii", SELECTION_LEXICON):
             if group == "source_identifying":
                 continue
             if pat == BARE_P_TOKEN:

@@ -17,12 +17,31 @@ of zero, and a floor of zero is what BOTH one-sided checks report as healthy.
 A pair is also required to actually DIFFER in restored vocabulary, not merely in hit count:
 the restored terms are printed so the reader can see what the delta is made of.
 
+RESTORATION-KIND CHECK (added 2026-08-11 with the direction-(ii) arms). "The arm produced
+hits" is NOT the same claim as "the arm restored taxonomy vocabulary", and collapsing the
+two is the exact defect controls/redaction_pair_selection_defect.md found one level up:
+a matcher whose bare `P[1-6]` fires on local probe names was reused as a density metric,
+and it ranked FIRST the one directory with nothing taxonomic to restore. The same
+collapse at this level would let a source-identifying-only arm pass as a taxonomy floor
+and feed the both-residue row a number that measures OQ ids.
+
+So every direction-(ii) pair must DECLARE a `restoration_kind`, and the declaration is
+checked in both directions:
+
+    taxonomy               -> at least one UNAMBIGUOUS taxonomy hit is required
+    source_identifying_only -> ZERO unambiguous taxonomy hits are permitted
+
+Bare `P[1-6]` is deliberately excluded from "unambiguous" — it is the token that caused
+the original defect. A declared omission (`omitted_literal`) is checked for real absence,
+so "we omitted it" is a fact rather than an intention.
+
 Run:  python3 controls/verify_redaction_twins.py
 Exit: 0 iff every declared pair exists and satisfies both directions.
 """
 from __future__ import annotations
 import json
 import pathlib
+import re
 import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -52,6 +71,24 @@ def terms(text: str, direction: str) -> list[str]:
     return sorted({m for _g, _p, m, _c in L.scan(text, direction)})
 
 
+# Groups whose every pattern can ONLY mean our taxonomy.
+TAXONOMY_GROUPS = {"pattern_names", "pattern_nicknames", "taxonomy_phrases"}
+# The token that caused the original selection defect: audit dirs use P1/P2/P3 for their
+# own local probe numbering. A hit on this is NOT evidence of taxonomy vocabulary.
+AMBIGUOUS_PATTERNS = {r"\bP[1-6]\b"}
+
+
+def taxonomy_terms(text: str, direction: str) -> list[str]:
+    """Restored vocabulary that can only mean our six — bare P# deliberately excluded."""
+    out = set()
+    for group, pat, m, _c in L.scan(text, direction):
+        if pat in AMBIGUOUS_PATTERNS:
+            continue
+        if group in TAXONOMY_GROUPS or group == "p_tokens":
+            out.add(m)
+    return sorted(out)
+
+
 def verify_direction(direction: str, twins_path: pathlib.Path, redacted_lookup) -> None:
     print(f"\n[{direction}] redaction twins — {twins_path.name}")
     if not twins_path.exists():
@@ -77,6 +114,46 @@ def verify_direction(direction: str, twins_path: pathlib.Path, redacted_lookup) 
               f"{uid}: all four coder-facing fields present and non-empty")
         if un_hits:
             print(f"          restored: {un_hits[:12]}{' …' if len(un_hits) > 12 else ''}")
+
+        # --- restoration-kind check: what the floor MEASURES, not merely that it is > 0 ---
+        if direction == "ii":
+            kind = p.get("restoration_kind")
+            check(kind in ("taxonomy", "source_identifying_only"),
+                  f"{uid}: declares a restoration_kind (got {kind!r})")
+            tax = taxonomy_terms(un, direction)
+            if kind == "taxonomy":
+                check(len(tax) > 0,
+                      f"{uid}: kind=taxonomy — restored UNAMBIGUOUS taxonomy vocabulary "
+                      f"({len(tax)} terms{': ' + str(tax) if tax else ', got NONE'})")
+            elif kind == "source_identifying_only":
+                check(len(tax) == 0,
+                      f"{uid}: kind=source_identifying_only — restored NO taxonomy vocabulary "
+                      f"(got {tax if tax else 'none, as declared'})")
+                print(f"          [source-identifying floor — hits are OQ ids / filenames / "
+                      f"ambiguous probe names, NOT taxonomy]")
+
+        # --- restored_from_source must not OVERSTATE what the arm carries ---
+        # A provenance block that lists vocabulary the arm never restored is a
+        # recap-as-witness substitution INSIDE the control: the reader audits the list,
+        # not the text. OQ ids are the checkable class, so they are checked. Bullets may
+        # say "NOT restored: OQ-nn" to record a deliberate exclusion; that phrasing is
+        # honoured rather than counted against the arm.
+        claimed = set()
+        for bullet in p.get("restored_from_source", []):
+            head, _, tail = str(bullet).partition("NOT restored")
+            claimed |= set(re.findall(r"\bOQ-\d+\b", head))
+            # ids named only in the NOT-restored tail are declared absences, not claims
+        missing = sorted(o for o in claimed if o not in un)
+        check(not missing,
+              f"{uid}: every OQ id claimed in restored_from_source is really in the arm"
+              f"{' — MISSING ' + str(missing) if missing else f' ({len(claimed)} claimed)'}")
+
+        # --- declared omissions must actually be absent ---
+        omission = p.get("declared_omission")
+        if omission and omission.get("omitted_literal"):
+            lit = omission["omitted_literal"]
+            check(lit.lower() not in un.lower(),
+                  f"{uid}: declared omission {lit!r} is genuinely ABSENT from the arm")
 
 
 def main() -> int:
