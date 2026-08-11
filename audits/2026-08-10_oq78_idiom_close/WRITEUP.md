@@ -191,6 +191,16 @@ way.
   recorded as descriptives only. Archive per-type localization is not licensed (cells 9–23).
 - **Model-name trap.** The kimi twin leg is `kimi-k2.6`; the default leg's kimi stratum is
   `kimi-k3`. Different models, never pooled.
+- **The paired statistic's join basis is a filename convention, not an authored identity
+  (declared GAP-35).** The 957-way matched set is a `constraint_id` equality join. The project's
+  standing rule is that names are not identity across a regeneration boundary; `cs_story_uid`, the
+  field that looks like it should serve, **deliberately does not join** (0/956 across twins), and
+  `seeded_from` is not emitted. The pairing is real for the twin legs — they were built by
+  re-authoring one seed set, and spot-checks show same subject with different `human_readable` —
+  but it rests on convention plus spot-check rather than on a field, and that is a limitation of
+  the instrument, not a defect in the result. The kernel-level join (`cs_kernel_id`, 331/331 across
+  twins) does not generalize either: 0 shared with default-leg sonnet-4.5, and the archive has no
+  kernel ids at all.
 - **Corpus motion.** The default leg moved 243 → 249 mid-session under an operator topic run
   while all four twin-leg md5s stayed byte-identical. The default leg feeds null construction, so
   it was frozen as a slim slice; the audit reads that copy, never the live file.

@@ -123,6 +123,12 @@ existed at all. **Check the id intersection FIRST when designing any paired prob
 legs a paired design is dead on arrival, and a new matched-seed leg is a generation spend, never a
 re-read. (This corrected a live recommendation mid-session: the OQ-281 arm route was proposed as
 "readable on data already on disk," true of the characterization and false of the strengthening step.)
+**Declared as GAP-35** in `docs/design/design_gaps.md`, which also records the join basis: the twins'
+pairing is a `constraint_id` filename join; `cs_story_uid` deliberately does NOT join (0/956 across
+twins); `seeded_from` is unemitted; and the kernel-level `cs_kernel_id` join reaches 331/331 across
+twins but **0** against every non-twin population (default-leg sonnet-4.5 8 kernel ids / 0 shared;
+archive `kernel_v2_test2` has no kernel ids at all). Pairing fails at BOTH join levels outside the
+twins, which is why OQ-281's arm route needs a generation spend rather than a re-read.
 
 **GENERALIZABLE CHECK (operator, 2026-08-10) — evaluate a measure on the comparator itself before
 freezing it.** Both Pattern-5 catches this session came from the same move: running the candidate

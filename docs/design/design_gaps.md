@@ -1623,3 +1623,69 @@ consumer that requires per-role disagreement structure `role_type_sets/2` +
 `h1_stakeholder` cannot express. Re-evaluated by a human at consumer-build time;
 nothing arms it automatically. A fresh instance proposing a role-projected H¹ should
 route through this entry and OQ-151's close, not build it as a missing feature.
+
+## GAP-35 — No authored cross-corpus seed identity: matched-seed pairing exists only as a filename convention on the twin legs
+
+**Declared:** 2026-08-10 (OQ-78 idiom close + the OQ-281 single-pair verification,
+`audits/2026-08-10_oq78_idiom_close/`). **Drives:** OQ-281.
+
+**The absent capability:** a first-class authored relation asserting *"this story instantiates the
+same seed as that story,"* stable across regeneration and across corpus legs. Paired / matched-seed
+designs — the only designs that hold topic and claimed_type mix fixed by construction — require it.
+
+**What exists, and why none of it serves:**
+
+| field | status | joins across legs? |
+|---|---|---|
+| `cs_kernel_id` | authored, present | **yes at KERNEL level** — 331/331 kernel ids shared across the twin legs |
+| `cs_story_uid` | authored, present (960/1000) | **no, by design** — a per-story surrogate UUID; **0/956** match across twins |
+| `seeded_from` | **not emitted** | n/a — 0/960 haiku, 0/1001 sonnet |
+| `constraint_id` (filename) | authoring convention, not a declared identity | **de facto yes** — 957 four-way matched ids |
+
+So the only *reading-level* pairing mechanism is **filename equality**, and the project's own standing
+rule holds that **names are not identity across a regeneration boundary** (`CLAUDE.md` Critical
+Distinctions; OQ-264 — kernel ids churned at reproduce-rate 1.0; `seeded_from` is explicitly
+generation-time plumbing, never identity recovered backward). The field that most looks like it
+should serve, `cs_story_uid`, specifically does not.
+
+**And the kernel-level join does not rescue the general case (verified 2026-08-10):** the twin legs
+share 331/331 kernel ids, but default-leg derived sonnet-4.5 (64 stories → 8 kernel ids) shares
+**0** with the sonnet leg, and the archive `kernel_v2_test2` carries **0 kernel ids at all** (it
+predates the CS schema). Pairing fails at *both* join levels outside the twins.
+
+**Why declared rather than a defect:** nothing is broken. The twin legs were genuinely built by
+re-authoring one seed set, and their pairing is real (spot-checked: same `constraint_id`, different
+`human_readable`, same subject matter re-authored per model). The absence bites only when a design
+*assumes* pairing is generally available — which is invisible until the id intersection comes back
+zero, typically a session in.
+
+**The structural consequence — the reason this earns a ledger entry.** Outside the twin legs,
+**marginal-independence and paired-comparability are MUTUALLY EXCLUSIVE.** A population independent
+enough to serve as a clean *marginal* known-positive is, by that same independence, **unusable for a
+paired read.** Witnessed in both directions in a single pass (OQ-78): the archive (n=60) and
+default-leg derived sonnet-4.5 (n=64) landing on the same ε digit at nearly the same concentration
+from a **zero-story-id intersection** was the strongest evidence in the calibration pass — and that
+same zero forecloses any paired within-family check between them. This is a property of how the
+corpus was built, not a shortage of data, so no amount of further authoring *into existing legs*
+relieves it.
+
+**`testsets_haiku|flash|kimi|sonnet` are therefore the ONLY matched-seed structure in the project**
+(957 four-way matched ids) — and the only reason OQ-78's primary paired statistic could exist at all.
+
+**What closing the gap would require:** emit a **seed/lineage id at generation time** — a stable
+token naming the seed a story was authored from, distinct from both the per-story UUID and the
+kernel id, carried into every leg built from that seed pool. It is **cheap at generation time and
+impossible to add afterward**: it records an authoring *event*, not a property of the artifact, so
+it is not recoverable by inspection — and per the OQ-264 redraw standard it is not recoverable by
+signature matching either. **This is the entry to weigh whenever the rebuild question comes up**
+(`CLAUDE.md` Critical Distinctions, FIVE LIVE LEGS / beta posture): matched-seed structure is a
+generation-time decision that a later session cannot reverse.
+
+**Interim discipline:** check the **id intersection FIRST** when designing any paired probe — outside
+the twin legs there is nothing to pair, and a paired design over any other population pair is dead on
+arrival. Report matched-seed joins as *filename-convention* joins and say so. A new matched-seed leg
+is a **generation spend, never a re-read**.
+
+**Related:** GAP-31 (no cross-story *seat* identity — the seat-level analogue of this gap), GAP-25
+(cross-model differences are dispositional fingerprints), OQ-281 (whose branch (B) costing rests on
+this entry), OQ-78 (close), `CLAUDE.md` Critical Distinctions.

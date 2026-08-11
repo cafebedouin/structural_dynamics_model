@@ -10978,7 +10978,19 @@ result license? see PRE-COMMIT REQUIRED below — settle before any instrument r
     leg at 28 shared ids / **20 both-on-rail**, far below the 50 floor. Note the tension: the
     **disjointness that made the marginal known-positive strong** (archive vs sonnet-4.5 at zero
     intersection, both landing on 8) is exactly what **forecloses a paired arm check**. A second
-    within-family pair therefore requires a NEW matched-seed Claude leg, not a re-read.
+    within-family pair therefore requires a NEW matched-seed Claude leg, not a re-read. **Declared
+    as GAP-35** (`docs/design/design_gaps.md`) — the absence is structural, so this cost does not
+    decay with further authoring into existing legs.
+  - **JOIN BASIS of the paired statistic — declared.** The 957-way pairing is a **filename
+    (`constraint_id`) equality join**, an authoring convention rather than an authored identity;
+    the project's own rule holds that names are not identity across a regeneration boundary. The
+    field that looks like it should serve, `cs_story_uid`, **deliberately does not** (0/956 match
+    across twins); `seeded_from` is not emitted at all. The pairing is nonetheless real for the twin
+    legs (built by re-authoring one seed set; spot-checked same-subject, different `human_readable`)
+    — but it rests on convention plus spot-check, not on a field. Verified 2026-08-10: the
+    **kernel-level** join (`cs_kernel_id`, 331/331 across twins) does **not** rescue the general
+    case either — default-leg derived sonnet-4.5 shares 0 kernel ids with the sonnet leg, and the
+    archive carries 0 kernel ids at all. Pairing fails at **both** join levels outside the twins.
 - **The `.x2` arm is NOT the dissolved point mass spreading.** If it were, its gain would sit at
   0.62/0.72; for sonnet-5 only **14.1%** does — its `.x2` mass sits at 0.42 (175) and 0.52 (70).
 

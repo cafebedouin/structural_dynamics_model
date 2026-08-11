@@ -691,6 +691,10 @@ legs (sole exception: default-leg haiku-4.5 × sonnet leg, 28 ids). **So: before
 paired/matched-seed probe, check the id intersection FIRST** — outside `testsets_haiku|flash|kimi|
 sonnet` (957 four-way matched) there is nothing to pair, and a paired design over any other pair of
 populations is dead on arrival. A new matched-seed leg is a generation spend, never a re-read.
+Declared as **GAP-35** (`docs/design/design_gaps.md`), which also records that the twins' pairing is
+a `constraint_id` (filename) join — `cs_story_uid` deliberately does NOT join and `seeded_from` is
+unemitted — so **matched-seed structure is a generation-time decision a later session cannot
+reverse** (the entry to weigh when the rebuild question comes up).
 **Test bed, not backfill target (operator clarification, 2026-06-24).** `testsets/` is the
 **evolving-schema test bed**: schema/prompt/scope changes are *encouraged* pre-rebuild and
 exercised HERE (the twins stay the stable matched-pair baseline). A change that breaks a
