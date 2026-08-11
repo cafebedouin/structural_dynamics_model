@@ -595,6 +595,25 @@ the design blinds (an assembler working in the judge's terminal), the prompt mus
 PRINTED, not only what may be done. Detail + instances: `docs/technical/build_discipline.md` →
 *Write the receiver's prompt*.
 
+**The receiver's license to refuse — the same construction from the other side (operator ruling,
+2026-08-11).** If an instruction is **correct in prose and wrong when executed**, say so rather than
+comply: "the prompt said to" is not a witness, and a compliant receiver's output looks exactly like
+work while carrying the sender's authority into the substrate. Report the refusal at the volume of a
+completion, and route it back to the sender — silently repairing the instruction leaves the defect in
+the DESIGN, where it fires on the next receiver. **The finding both halves share: enumeration catches
+what recognition doesn't.** Re-reading a design exercises recognition (prose-correct passes every
+time); the receiver must *enumerate* the concrete actions to comply at all, which is where the gap
+shows — so the two constructions are just the two places to force enumeration, before the handoff
+(sender writes the prompt) and at it (receiver refuses). A handoff with neither is two recognitions in
+a row. Corollary: **the receiver's ignorance is load-bearing** — a receiver holding the sender's
+context supplies the missing halves silently and catches nothing; the handoff is the only place a spec
+is executed by someone who did not write it, which makes amnesia the instrument here, not only the
+cost. Scope is narrow — *executed as written, this produces what the design forbids* — not "hard,
+unclear, or I'd do it differently" (that is the *one-sentence flag*, which proceeds; this does not).
+**State the license in the handoff prompt** — an unstated license is not exercised. Five refusals in
+the OQ-277 arc, none caught by a sender re-reading. Detail: `docs/technical/build_discipline.md` →
+*The receiver's license to refuse*.
+
 **Unwired ≠ worthless — judge a subsystem by its contribution, not its consumers.** Pattern 1 is a
 *build-time* rule (finish the wire you create); it does NOT license the audit reflex of calling an
 unwired or zero-firing subsystem cruft. "Has a consumer / is wired into `run_pipeline` / fires on

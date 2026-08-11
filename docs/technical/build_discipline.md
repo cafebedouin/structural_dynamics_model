@@ -1985,6 +1985,71 @@ screen is unblinded before the pass begins, and no downstream control recovers i
 
 ---
 
+## The receiver's license to refuse: the same construction from the other side
+
+**Operator ruling, 2026-08-11 (OQ-277 arc).** *Write the receiver's prompt* is the sender's half. The
+receiver's half had been operating unnamed for the whole arc, and is the half that actually caught
+things.
+
+**The rule.** An instance executing a handoff holds a standing **license — and an obligation — to
+refuse an instruction that is correct in prose and wrong when executed**, and to say so rather than
+comply. "The prompt said to" is not a witness. The refusal is reported at the same volume as a
+completion, because a receiver who complies with a prose-correct/execution-wrong instruction produces
+work that looks exactly like work, and the defect lands in the substrate with the sender's authority
+on it.
+
+**Why it works: the same mechanism as the sender's half, from the other end.** The sender re-reading
+their own design exercises **recognition**, and a rule correct in prose passes recognition every time.
+The receiver, in order to comply at all, must **enumerate** — produce the concrete actions the
+instruction licenses — and the gap surfaces the moment the enumeration is attempted. **Enumeration
+catches what recognition doesn't.** That single sentence is the finding; the two constructions are
+just the two places to force enumeration to happen: *before* the handoff (the sender writes the
+prompt) and *at* it (the receiver refuses instead of complying). **A handoff with neither is two
+recognitions in a row**, and neither party ever occupies the position from which the defect is
+visible.
+
+**The inversion worth stating plainly: the receiver's ignorance is load-bearing.** A receiver who
+shares the sender's context supplies the missing halves silently and catches nothing — which is the
+same reason the sender's half "does not work on a receiver who is yourself" (above). The handoff
+boundary is **the only place in this working form where a specification is executed by someone who
+did not write it**, which is the one condition under which underspecification becomes visible at all.
+So worker amnesia — the central liability of the whole arrangement, the thing every memory document
+exists to compensate for — is *also* the mechanism that makes specification defects detectable. It is
+not only a cost being paid; at the handoff it is the instrument.
+
+**Witnessed.** The operator's count is **five refusals in this arc, every one catching a real defect,
+and none of them caught by a sender re-reading** (2026-08-11). *Recorded as the operator's count, not
+one this document has itemized* — three are written up in the section above (the prereg that pinned
+what is judged and never what is shown; the prose ruling confounded once written as an executable
+draw; the self-check command that could not consume its own specified format). **The remaining two are
+unitemized**; a future session that finds them should list them here rather than let the figure stand
+on memory (this is the *stated-versus-counted* rung applied to this very entry).
+
+**How it fails: the compliant receiver.** The default disposition of a fluent instance is to comply,
+and compliance is *most* likely exactly where the instruction reads well — a smooth prompt suppresses
+the enumeration that would break it. Two consequences:
+
+- **The license must be stated in the prompt, not assumed.** An unstated license is not exercised. A
+  handoff prompt should carry it explicitly, in the sender's own words, alongside the standing rules.
+- **The refusal must be routed to the sender, not resolved in place.** A receiver who silently repairs
+  the instruction and proceeds has converted a design defect into a local fix that no one else learns
+  about — the defect stays in the design and fires again on the next receiver.
+
+**Scope — what this is not.** It is *not* licence to refuse work that is merely hard, ambiguous,
+tedious, or disagreeable; not licence to substitute a better plan; and not a general veto. The
+trigger is narrow and checkable: **executed as written, this instruction produces something the design
+means to forbid.** Everything else routes through the existing channels — a genuine ruling escalates
+(the operator's seat), a better implementation gets the *one-sentence flag* and then proceeds. The
+distinction from the flag is the disposition: the flag says *"there is a better way, proceeding
+anyway"*; the refusal says *"executing this as written is wrong, not proceeding."*
+
+**Family.** Same family as *Every diagnostic needs a positive control* and *An introduced instrument
+is itself a claim*: it is a control on the thing you control with. It also inherits their asymmetry —
+a refusal that turns out to be wrong costs one round-trip; a compliance that turns out to be wrong
+costs the artifact and everything built on it.
+
+---
+
 ## Commit-as-you-go: a witnessed unit of work is committed when witnessed, not at session end
 
 **Operator ruling (2026-06-09): standing permission to commit without asking.** The repo is CC0,
