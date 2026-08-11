@@ -225,3 +225,74 @@ the writeup should say so when it records the falsifier as named-but-not-bought 
    uncomfortable available datum about the apparatus and it belongs in §6.4 with the instances,
    not softened. It also sharpens what the `Fired:` bit can and cannot measure (OQ-276): a catch
    rate computed over controls does not see catches that arrive by suspicion.
+
+---
+
+## H. NO-UNIT row — the census proxy's PRECISION, and the boundary rule that makes it countable
+
+**The hole, named as the operator's own (2026-08-11).** The escape check audits the §4.5 keyword
+proxy's **recall** — directories it missed. **Nothing audits its precision** — directories it
+admitted whose keywords matched something other than a reported incident. A proxy has two error
+rates; one had an instrument and one did not.
+
+**Asymmetric cost, which is why this is not a footnote.** A confirmed escape-check hit relabels
+42% as a *lower bound* — a bounded correction in a known direction. NO-UNIT directories attack the
+**numerator** directly and can move the point estimate either way depending on how the two rates
+compare. **So 42% is currently a figure with one measured error direction and one unmeasured one,
+and the writeup must say exactly that rather than reporting the escape check as though it closed
+the question.**
+
+### H.1 Boundary rule — fixed NOW, before the remaining units are extracted
+
+A category that will be counted needs its boundary fixed before its members arrive; deciding
+per-directory as they show up is how a category silently acquires an extractor's preference — the
+same failure the multi-defect directories are already documenting.
+
+> **A directory yields a UNIT if its prose REPORTS a silent-defect incident, anywhere in the
+> document, regardless of whether that incident is the directory's subject. A directory is
+> NO-UNIT only if its prose DISCUSSES the concept without reporting an instance.**
+
+**Why this line and not "is the incident the subject?"** Because it is the line the census itself
+draws. §4.5's numerator counts *incident-bearing directories* by searching **prose**; the claim
+being audited is that the prose describes an incident, not that the directory's topic is one.
+Adopting a stricter subject-level rule would measure a different quantity than the figure under
+audit and the correction would not apply to it.
+
+**Consequence for `2026-06-15_oq131_six_observer`: it is a UNIT**, and its unit stands. Its
+incident (a measurement arm silently running against a 57-item substrate where the working set
+held 64) is *reported*, not merely discussed; it simply sits in a self-audit subsection rather
+than in the headline.
+
+**New mandatory field, applied retroactively to all units: `incident_location`** — `subject` |
+`self_audit_subsection` | `incidental`. This costs nothing and buys a second measurement free: if
+the 73 are heavily weighted toward `self_audit_subsection`, the numerator counts directories that
+noticed their own incidental defects, which supports a *weaker* claim than "73 audits were about
+incidents." Report the distribution; do not collapse it.
+
+### H.2 Pre-registered row and thresholds, fixed before the remaining six are extracted
+
+Let **k** = operator-confirmed NO-UNIT directories in the primary sample (n=22).
+
+| outcome | condition | licensed reading |
+|---|---|---|
+| **null** | k = 0 | **ONLY** "keyword-proxy false-positive rate ≤ **12.7%** at 95% confidence" (1 − 0.05^(1/22)). **NEVER** "the proxy is precise." Deliberately phrased to mirror the escape check's one-sided licence word for word. |
+| **fired** | k ≥ 1 | the 73 numerator is an **OVERCOUNT**. Report the corrected figure as a RANGE combining this precision bound with the escape check's recall bound — never as a new point estimate — and mint a re-census OQ, mirroring the escape check's confirmed-hit consequence. |
+
+**Operator confirmation is required per NO-UNIT, exactly as escape-check hits are quarantined.**
+The extractor proposing NO-UNIT is the same party whose *thin extraction* is the competing
+explanation for finding no incident. Self-certification here would let an extractor convert a hard
+directory into a data point. The coder proposes, the operator rules — same rule, opposite
+direction.
+
+### H.3 Provenance belongs in the row
+
+State in the row itself: **recall and precision were audited at different times, by different
+mechanisms, and the precision audit arrived by accident** — an extractor noticing that one
+directory nearly yielded nothing. It was not designed, pre-registered, or budgeted.
+
+That provenance is not a confession, it is the argument: **the census needed a positive control it
+never had.** A census whose output is a count of directories cannot distinguish "matched an
+incident" from "matched the word" without one — the identical structure the frame control found
+from the other direction, where "174 = 73 + 101, partition exact" is an arithmetic identity that
+witnesses nothing about whether the census *classifies* correctly. Two independent routes to the
+same missing control, one from the denominator and one from the numerator.

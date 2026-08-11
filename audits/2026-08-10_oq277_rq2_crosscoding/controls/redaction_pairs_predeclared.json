@@ -1,0 +1,41 @@
+{
+  "_status": "PRE-DECLARED BEFORE THE REMAINING UNITS ARE EXTRACTED (operator instruction, 2026-08-11). Frozen into PREREGISTRATION.md verbatim.",
+  "_why_predeclared": "Choosing redaction-bias pairs AFTER seeing which units came out thin selects the control on the outcome it measures. The pairing is therefore fixed by a mechanical rule, applied now, to directories and units whose content is in some cases not yet extracted.",
+  "_role": "Control (c). Each pair is coded BOTH redacted and unredacted, k=3 each, QUARANTINED from all matrices and EXEMPT from H2's leak rule (an unredacted unit necessarily contains source vocabulary — that is the point). Report delta('other' rate) = the redaction floor.",
+
+  "direction_i": {
+    "rule": "Top by banned-term (direction-i lexicon) count in the unit's SOURCE rows — its catalog row plus its dataset row in the two md5-pinned files — computed mechanically, ties broken by unit id ascending. STRATIFIED: 2 from the agreeing stratum + 1 from the disagreeing stratum.",
+    "why_stratified": "The unstratified top 3 all fall in the agreeing stratum (13/7/6 hits, all agreeing). Since the amendment gives the two strata DIFFERENT verdict grammars, a redaction floor measured only on single-class units would not transfer to the multi-membership stratum where a two-pattern split is the expected result. The stratification was chosen because of that structural asymmetry, before any coding.",
+    "selected": [
+      {"unit": "kb_evening_fallback_quota_chain", "source_hits": 13, "class": "C", "stratum": "agreeing"},
+      {"unit": "whatsapp_silent_death", "source_hits": 7, "class": "E", "stratum": "agreeing"},
+      {"unit": "movespeed_tcc_sandbox", "source_hits": 4, "class": "E", "stratum": "disagreeing"}
+    ],
+    "selection_note": "movespeed_tcc_sandbox is also the row that disagrees with itself (dataset assigns A while that row's own paper_class_ref cites E and only E). It was NOT selected for that reason — it is the top-density disagreeing unit under the mechanical rule, tied at 4 hits with v37_9_92_observer_path_blood and taken by the pre-declared id-ascending tiebreak. Recorded because a reader would otherwise reasonably suspect selection on interestingness."
+  },
+
+  "direction_ii": {
+    "rule": "Top 3 sampled directories by pattern-vocabulary hit count in their source prose, EXCLUDING the 4 overlap directories, ties broken by earliest directory date.",
+    "why_exclude_overlap": "Overlap dirs already carry a different quarantined role (the extraction-churn floor). Using one for both would tangle the accounting of two independent controls and make a flip in either unreadable.",
+    "measured_hit_counts_all_sampled_dirs": {
+      "2026-07-20_five_leg_twin_comparison": 21,
+      "2025-05-15_recon_2": 7,
+      "2026-06-21_oq138_fsm_route_conversion": 5,
+      "2026-06-07_stakeholder_layer_migration": 4,
+      "2026-06-11_oq97_pattern6_census": 4,
+      "2026-08-06_oq259_item3_genreflag": 2,
+      "2026-06-10_oq93_grid_viability_probe": 1,
+      "2026-06-21_maxent_seat_aware": 1,
+      "2026-07-02_oq136_census_bucket_provenance": 1
+    },
+    "selected": [
+      {"dir": "2026-07-20_five_leg_twin_comparison", "hits": 21, "half": "B", "extracted": false},
+      {"dir": "2026-06-21_oq138_fsm_route_conversion", "hits": 5, "half": "A", "extracted": false},
+      {"dir": "2026-06-07_stakeholder_layer_migration", "hits": 4, "half": "A", "extracted": false}
+    ],
+    "excluded_by_rule": "2025-05-15_recon_2 (7 hits) is the second-densest sampled dir but is an OVERLAP dir, excluded per the rule above. 2026-06-11_oq97_pattern6_census ties at 4 hits with stakeholder_layer_migration and loses the earliest-date tiebreak (2026-06-11 vs 2026-06-07).",
+    "note": "None of the three is extracted yet. That is deliberate: the declaration binds before the content exists, which is the strongest available form of pre-registration for this control."
+  },
+
+  "reproduction": "python3 python/audits/oq277_lexicon.py provides the matcher; direction-(i) counts are over each unit's catalog row + dataset row in packets/wu_source/ (md5s in FETCH_MANIFEST.txt); direction-(ii) counts are over all *.md in each sampled directory."
+}

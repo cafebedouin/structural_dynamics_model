@@ -106,3 +106,48 @@ Per `HANDOFF.md` §4 and the amendment:
 **Before Phase 3: assert the driver's payload-capture count EQUALS the expected call count, then
 grep.** A capture bug writing zero payloads yields a clean leak-grep and a green H2. Count first.
 Overlap units are quarantined from matrices but their calls still count in that total.
+
+---
+
+## Added 2026-08-11 (operator) — read these two before you start
+
+### 1. The blind-overlap rule: NOT EVEN ONCE, and the likely violation is accidental
+
+You will be tempted to open A's version of an overlap unit "just to check the format." **Do not.
+Not once, not partially, not for the schema.** The format is fully specified above and in any
+non-overlap unit — `packets/our_units/02_blocking_gate.json` is a fine template and is *not* an
+overlap unit.
+
+Reading A's version silently converts the extraction-churn floor into a self-comparison: the two
+"independent" extractions are then one extraction and its echo, they agree by construction, and the
+measurement reports 4/4 INSIDE FLOOR no matter what the truth is. **The H5-gate extension decision
+rides on that number** (§E of `verdict_grammar_amendment.md`), so the failure would not stop at the
+control — it would license a scope decision on a fabricated basis.
+
+This is the instruction most likely to be broken by accident rather than by choice, which is
+exactly why it is stated this bluntly. The overlap dirs are
+`2026-06-27_oq124_oq149_committer_convention_control` and `2026-07-11_oq186_oq188_readsite`.
+
+### 2. Redaction-bias pairs are ALREADY PRE-DECLARED — do not choose them
+
+`controls/redaction_pairs_predeclared.json`, fixed **before** the remaining units exist, by a
+mechanical rule. Choosing pairs after seeing which units came out thin would select the control on
+the outcome it measures.
+
+Two of the three direction-(ii) pairs are **in A's unextracted half** —
+`2026-06-21_oq138_fsm_route_conversion` and `2026-06-07_stakeholder_layer_migration`. Extract them
+exactly as you extract any other unit. **Do not write them "more carefully" because you know they
+are control units** — that would inflate the unredacted arm and shrink the measured floor toward
+zero, which reads as "redaction costs nothing" and would retire a control by flattering it.
+
+### 3. NO-UNIT has a boundary rule now — apply it, do not re-decide it
+
+`verdict_grammar_amendment.md` §H.1: **a directory yields a UNIT if its prose REPORTS an incident
+anywhere in the document**, whether or not it is the subject; **NO-UNIT only if the prose DISCUSSES
+the concept without reporting an instance.** Every unit carries a new mandatory
+`metadata.incident_location` field: `subject` | `self_audit_subsection` | `incidental`.
+
+A NO-UNIT call is **operator-confirmed, never self-certified** — you proposing NO-UNIT and you
+having extracted thinly are the two competing explanations for the same observation, and you cannot
+adjudicate between them. Write the NO-UNIT file with your reason and the files you read; the
+operator rules.

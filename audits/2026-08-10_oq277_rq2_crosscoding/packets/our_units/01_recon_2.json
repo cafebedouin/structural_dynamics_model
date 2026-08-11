@@ -2,7 +2,9 @@
   "source_dir": "2025-05-15_recon_2",
   "extractor": "A",
   "role": "primary+overlap",
-  "files_read": ["recon_2_patterns.md"],
+  "files_read": [
+    "recon_2_patterns.md"
+  ],
   "symptom": "The documented classification path states that every constraint is typed by a two-stage pipeline: a metric stage followed by a signature stage that may override it. Reading the canonical entry point confirms this — both stages run on every call. Three specific constraints never reach that entry point at all.",
   "mechanism_as_described": "A separate module adds clauses to the lookup predicate that the canonical path consults first. For three hardcoded historical constraints those clauses match and return a type directly, so the pipeline is never entered; some of them call a first-stage helper internally and thus receive metric typing with no signature stage at all. The clauses predate the two-stage architecture and were written to validate specific scenarios. Nothing in the code or the documentation marks them as an exception, so a reader who checks the canonical path — which is correct — concludes the invariant holds universally, and the check confirms exactly what it was pointed at.",
   "detection_path": "A structured verification pass that enumerated every module against the claimed invariants rather than reading the canonical path and confirming it.",
@@ -10,5 +12,9 @@
   "extraction_notes": {
     "alternatives_not_extracted": "The same file reports a second defect: a stage-9 module mutates the config database at runtime (restoring afterwards), which violates the single-source-of-truth boundary although the specific parameter is not read by the classifier, so its current effect is zero. One unit per directory is the rule; the bypass was chosen as the more incident-shaped of the two. Recorded so the choice is auditable rather than invisible.",
     "unit_is_incident_not_audit": "The unit describes the defect the audit found, not the audit."
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
   }
 }

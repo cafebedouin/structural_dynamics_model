@@ -2,12 +2,19 @@
   "source_dir": "2026-06-06_kernel_first_phase0",
   "extractor": "A",
   "role": "primary",
-  "files_read": ["PHASE0_READOUT.md", "outcome_table.md"],
+  "files_read": [
+    "PHASE0_READOUT.md",
+    "outcome_table.md"
+  ],
   "symptom": "A topic carrying a genuine foundational disagreement was routed and processed as an ordinary topic with no such disagreement. The run completed, produced well-formed output of the expected shape, and gave no indication that a distinction had been dropped.",
   "mechanism_as_described": "The orchestrating pipeline's decomposition step used a prompt that never posed the question whose answer determines the routing. The classifier was capable of the distinction the whole time: putting the same topic to the same classifier with the question explicitly asked flips the verdict on three of three redraws. So the loss was in the calling path, not in the component that would have caught it. Because the unprimed path returns a valid decomposition either way, a dropped distinction and an absent distinction produce the same output, and the run cannot report a loss it never detected.",
   "detection_path": "A deliberate comparison: the same topics put to the same classifier twice, once through the production path and once with the question posed explicitly, and the two verdicts compared. Not a failure report from the pipeline, which had none to give.",
   "consequence": "For as long as the unprimed path was in use, topics admitting a foundational reading were flattened into ordinary ones without trace. The output shape is identical in both cases, so no downstream consumer could have distinguished them, and no count of runs would show it.",
   "extraction_notes": {
     "scope_note": "The readout also records a deliberately-declared limit: one clean negative on a hard case witnesses that the classifier held on THAT case, not on all. That is a limit on the fix's evidence, not a second incident, so it is not extracted as a unit."
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
   }
 }

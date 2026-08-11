@@ -2,12 +2,19 @@
   "source_dir": "2026-06-10_oq93_grid_viability_probe",
   "extractor": "A",
   "role": "primary",
-  "files_read": ["FINDINGS.md", "PREREGISTRATION.md"],
+  "files_read": [
+    "FINDINGS.md",
+    "PREREGISTRATION.md"
+  ],
   "symptom": "A system-level gradient metric read exactly 0.0 on every input it had ever been given, including inputs deliberately constructed to produce a large non-zero value. The verdict derived from it was correspondingly always the same one. Nothing errored, and the value was plausible: 0.0 is what a genuinely flat input should produce.",
   "mechanism_as_described": "A helper that enumerates time points ended with a cut annotated as an optimization, which made it return only its first solution instead of enumerating. Its single caller used a set-builder to collect points later than a given time; with only the first point ever offered, no later point was ever found, so every gradient computation failed. The aggregating caller mapped the resulting empty collection to 0.0 as a fallback. A failed computation and a measured-flat series therefore produced the identical value at every read site, for the entire life of the construct. Two conditions were needed and both held: the enumerator silently became single-solution, and the aggregate had a plausible value to emit when it got nothing.",
   "detection_path": "A pre-registered probe with five hand-authored inputs whose correct outputs were computed in advance, including non-flat ones. The break localized because a sibling metric read its authored data correctly on the very same runs while this one returned 0.0 — the disagreement between two metrics over one input was the signal, not any error.",
   "consequence": "Every gradient the construct ever computed had failed, and the failure was indistinguishable from a real measurement of flatness at every consumer. A control input authored to be genuinely flat could not be distinguished from total blindness until the enumerator was repaired. After repair the five inputs reproduce their pre-computed values exactly.",
   "extraction_notes": {
     "note": "Two defects compose here (enumerator silently semidet; aggregate with a fabricated default on empty). The directory treats them as one incident with two necessary conditions, and they are extracted as one unit accordingly."
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
   }
 }
