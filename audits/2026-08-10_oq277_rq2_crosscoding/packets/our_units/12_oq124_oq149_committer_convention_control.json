@@ -1,0 +1,28 @@
+{
+  "source_dir": "2026-06-27_oq124_oq149_committer_convention_control",
+  "extractor": "A",
+  "role": "overlap_from_B",
+  "files_read": [
+    "RECON.md",
+    "FINDINGS.md",
+    "PRE_REGISTRATION.md"
+  ],
+  "symptom": "A stored field is uniformly valid across an entire generated corpus: every record carries one of the two permitted values, none missing, none out of range. A mirrored copy of the same records, written by a different step, agrees with it exactly. That is consistent with the generator having produced clean values, and equally consistent with a repair step having overwritten every deviation before either artifact was written — and no surviving artifact separates the two.",
+  "mechanism_as_described": "Between generation and storage sits a normalizer that maps unpermitted values onto permitted ones. Two of the values the model actually produces are both mapped onto the same permitted value, and that mapping returns without recording anything: no per-record note, no flag on the record, no log line. An aggregate counter does exist, but it counts replacements globally and keeps only a flat list of the values it replaced, with no record key to attach them to — and no committed file anywhere contains that counter, so even the aggregate is gone. The raw model output that carried the original values is consumed in memory during processing and discarded; the only artifact the generation run writes is the list of inputs it did not reach. The mirrored copy is written after repair from the same in-memory record, so the artifact a reader would naturally reach for as the pre-repair witness is post-repair too — and because its counts match the stored ones exactly, that comparison returns agreement and reads as confirmation.",
+  "detection_path": "Asking what one specific downstream question would require, and then tracing backwards through the writers to see whether any artifact still holds it — before spending anything on the analysis that needed it. Four candidate sites were checked in turn rather than assumed: the normalizer (no per-record write), the aggregate statistic (no record key, and a search for its name across every committed file returned nothing), the raw model output (discarded in memory), and the mirrored copy (written after repair). Each is individually a plausible place for the information to survive; the finding is that none of them is.",
+  "consequence": "One asymmetry between two models on this field — fifty-one against four — is real and settled, but the far larger group cannot be interpreted, because a value the model authored and a value assigned to it on the model's behalf are byte-identical in every surviving artifact. The information was not corrupted or lost through an error; it was never written, and everything that remains is well-formed and mutually consistent. Recovering it requires regenerating the corpus with the normalizer instrumented, converting a question that reads existing data into one that costs a generation run. In the meantime any validity check over the stored field returns clean, which is what it would return in either case.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The unit describes a defect in the generation and repair path, found while checking whether a required witness survived — not the audit's own subject (whether three fields carry signal or convention).",
+    "alternatives_not_extracted": [
+      "The two corpora being compared had been classified at different code states, and between those two states the very two categories under study had been converted from one behaviour to another — so comparing the outputs as they sat on disk would have measured a code change and reported it as a difference between models. Both files are well-formed and differ visibly only in a version stamp. NOT extracted because it was caught before use, by re-running both at one state; the extracted defect had already destroyed the evidence.",
+      "A per-record relational field agrees between the two models on 39% of slots. Where they agree, the value tracks a settled underlying measurement; where they disagree, it does not — the split is one model's authoring default. Any consumer reading that field as detected structure is partly reading a default. NOT extracted because this is the audit's own verdict on the question it set out to answer, and the unit rule takes the incident over the subject.",
+      "The plan hypothesized that the asymmetry was an artifact of an optional field being dropped and defaulted. The code shows the opposite: a missing value fails generation outright rather than defaulting, so that mechanism does not exist for this field. A corrected premise, not an incident."
+    ],
+    "overlap_note": "This directory is one of the four overlap units measuring extraction churn. Extracted from the source documents only. No other extractor's unit for this directory was read, sought, or listed at any point — none exists in the packet at time of writing (only extractor A's units 01-11 are present)."
+  },
+  "metadata": {
+    "incident_location": "incidental",
+    "incident_location_note": "Surfaced inside a recoverability gate run before spend, as the reason one of three questions could not be answered; the defect itself lives in a generation path the directory was not auditing.",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
+  }
+}
