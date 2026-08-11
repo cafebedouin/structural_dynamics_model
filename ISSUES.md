@@ -10773,6 +10773,24 @@ latent, not live. **Rider, general:** *a handoff's volume estimate is a claim, a
 measures it before planning against it* — it has the weakest provenance of anything in a
 handoff and is the number most likely to be planned against unexamined.
 
+**VERDICT GRAMMAR AMENDED + EXTENSION MADE CONDITIONAL (operator, 2026-08-10) — binding
+pre-registration content in `audits/2026-08-10_oq277_rq2_crosscoding/verdict_grammar_amendment.md`,
+which `PREREGISTRATION.md` incorporates VERBATIM.** That file is the canonical location for these
+thresholds; they are deliberately NOT restated here, so there is one place to change them. In
+outline: (a) the 12-unit stratum keeps its frozen selection rule but is re-declared as plausibly
+the SINGLE-CLASS stratum and now carries the PRIMARY expressibility read — **this supersedes
+`RECON.md` §R2 point 3's "robustness only, never a headline" clause**, with the full 22 becoming
+the robustness read; (b) the 10 disagreeing units become a MULTI-MEMBERSHIP stratum where a
+two-pattern split is the EXPECTED outcome and a one-pattern `collapse` is first-class evidence
+that our six do not resolve a distinction Wu's records disagree about; (c) the ambiguous "partial"
+row is split into two named readings — **R-map** (genuine one-to-two mapping) vs **R-churn**
+(coder instability) — with the tiebreaker fixed in advance (class-level UNSTABLE rate against the
+direction's overall rate; <4 unanimous members ships OPEN); (d) the H5-gate extension decision is
+now CONDITIONAL ON THE OVERLAP-UNIT CHURN with thresholds fixed now and the indeterminate band
+failing closed — converting a scope argument into a measurement. **The re-declaration inherits the
+observation's status and does NOT upgrade it to a finding**; the pre-registered reversal if the
+observation is disconfirmed (headline returns to the full 22) is recorded in the same file.
+
 **OBSERVATION (not a finding), filed 2026-08-10:** rows Wu himself annotated as multi-class
 (`次类` in notes, or a `paper_class_ref` citing another class) are disproportionately the rows
 his two records disagree on — 6/8 and 5/6 against a 10/22 base rate, nominal p 0.048 / 0.043.
