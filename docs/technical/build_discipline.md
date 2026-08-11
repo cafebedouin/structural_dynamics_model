@@ -1866,6 +1866,59 @@ a correct recap is exactly what makes the unverified artifact feel safe to ship.
 
 ---
 
+## Write the receiver's prompt: a handoff is a specification test (stated-versus-instructed)
+
+**The construction (operator ruling, 2026-08-11 — minted from OQ-277, where it fired at least three
+times in one session).** Before declaring a design, plan, pre-registration, or ruling *done*, write
+the prompt the next instance would need in order to execute it. **The act of writing that prompt
+surfaces underspecification that re-reading the design does not.** This is a control, not a
+courtesy — and it belongs to the same family as *Every diagnostic needs a positive control* and *An
+introduced instrument is itself a claim*: it verifies the thing you verify with.
+
+**Why it works — the mechanism, which is the transferable part.** Re-reading a rule exercises
+*recognition*: you check that the text still says what you remember, and a rule that is correct in
+prose passes every time. Writing an instruction exercises *enumeration*: you must produce the
+operational form — every input the receiver needs, every artifact they must produce, every decision
+they would otherwise have to make for you. Gaps live exactly where the design named a decision but
+never named its operational half, and those gaps are invisible to recognition and unavoidable under
+enumeration. The operator relates it to the arc's *stated-versus-counted* table (`§L` of the OQ-277
+amendment ledger — a rule correct in prose and wrong once you count what it produces); this is the
+same shape one layer up, **stated-versus-instructed**: the defect appears when you write what the
+rule *makes someone do* rather than read what it *says*.
+
+**Witnessed instances, one session (OQ-277 escape stratum, 2026-08-11):**
+- Writing the assembler's prompt surfaced that a pre-registration had pinned *what is judged* and
+  never *what is shown* — leaving the item-presentation decision (whether the judge sees the
+  extractor's own reasoning, and the stratification key) to the assembler, where it would have
+  changed the result. Fixed as prereg Amendment 4, before assembly.
+- Converting a prose ruling ("two candidates and two primaries") into an executable draw procedure
+  surfaced that at n=2 an unstratified draw could return two items of the same kind, making
+  placement indistinguishable from the threshold under test. Fixed by stratifying before the draw.
+- Running the handoff's own stated self-check command surfaced that it could not consume the file
+  format the same handoff specified. (This one is the adjacent rung — *stated-versus-executed* —
+  and it is why the two are worth naming together: reading caught neither.)
+
+**The operative clause, and the way this fails.** The prompt must **enumerate the receiver's
+actions concretely**. A prompt that says *"read the design document and execute it"* performs no
+enumeration and catches nothing — it is a pointer wearing an instruction's clothes, and writing one
+will feel like discharging this rule while discharging none of it. The check is: *could a receiver
+who has read only my prompt take a wrong-but-reasonable action that the design intends to
+forbid?* Every yes is a gap in the design, not in the prompt.
+
+**Scope and cost.** Cheap by construction — the prompt is a thing you were going to write anyway;
+the discipline is only that you write it **before** calling the design done, and treat what it
+surfaces as a design defect rather than a prompt defect. It does not work on a receiver who is
+yourself (no enumeration pressure — you supply the missing halves silently), which is the reason
+it is a *handoff* rule and not a general review rule. And it finds underspecification, not
+wrongness: a design that is fully specified and wrong will produce a clean prompt.
+
+**Corollary — the terminal is a channel.** When the receiver's output is visible to a party the
+design blinds (the common case: an assembler working in the judge's terminal), the prompt must say
+what may be *printed*, not only what may be *done*. A packet assembled correctly and echoed to the
+screen is unblinded before the pass begins, and no downstream control recovers it.
+
+---
+
 ## Commit-as-you-go: a witnessed unit of work is committed when witnessed, not at session end
 
 **Operator ruling (2026-06-09): standing permission to commit without asking.** The repo is CC0,

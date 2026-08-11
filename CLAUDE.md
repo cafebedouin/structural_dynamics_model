@@ -563,6 +563,22 @@ riskiest-shape, substrate-anchored, write-free-if-pre-write (the confound reopen
 the tool you closed it with). Full table: `docs/technical/build_discipline.md` → *The spine*,
 *Every diagnostic needs a positive control*, and *An introduced instrument is itself a claim*.
 
+**Write the receiver's prompt before calling a design done — a handoff is a specification test
+(operator ruling, 2026-08-11).** Before declaring a plan, pre-registration, ruling, or design
+finished, write the prompt the next instance would need to execute it. Enumerating what a receiver
+must DO surfaces underspecification that re-reading the design does not: re-reading exercises
+*recognition* (a rule correct in prose passes every time), instructing forces the operational half
+the design never named. Witnessed 3× in one session (OQ-277): a prereg that pinned what is *judged*
+and never what is *shown*; a prose ruling that was confounded once written as an executable draw; a
+stated self-check command that could not consume its own specified format. **It only works if the
+prompt enumerates concrete actions** — "read the design and execute it" is a pointer wearing an
+instruction's clothes and catches nothing. Test: *could a receiver who read only my prompt take a
+wrong-but-reasonable action the design means to forbid?* — every yes is a gap in the DESIGN, not the
+prompt. Corollary: **the terminal is a channel** — when the receiver's output is visible to a party
+the design blinds (an assembler working in the judge's terminal), the prompt must say what may be
+PRINTED, not only what may be done. Detail + instances: `docs/technical/build_discipline.md` →
+*Write the receiver's prompt*.
+
 **Unwired ≠ worthless — judge a subsystem by its contribution, not its consumers.** Pattern 1 is a
 *build-time* rule (finish the wire you create); it does NOT license the audit reflex of calling an
 unwired or zero-firing subsystem cruft. "Has a consumer / is wired into `run_pipeline` / fires on

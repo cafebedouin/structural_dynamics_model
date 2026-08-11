@@ -45,6 +45,45 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-11 — [tripwire] "Write the receiver's prompt" minted as a construction: a handoff is a specification test (stated-versus-instructed)
+**Files:** `CLAUDE.md`, `docs/technical/build_discipline.md`, `audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/PREREGISTRATION_threshold_calibration.md`
+**Tier:** tripwire
+
+**Ruling (operator, 2026-08-11).** Asking the outgoing instance to write the incoming one's prompt
+is a **control, not a habit** — minted rather than left as one instance's personal practice, because
+it is transferable and was undocumented. Before declaring a plan, prereg, ruling, or design done,
+write the prompt the next instance would need to execute it.
+
+**Mechanism (the transferable part).** Re-reading a rule exercises *recognition* — a rule correct in
+prose passes every time. Writing an instruction exercises *enumeration* — it forces the operational
+half the design never named. Same shape as the OQ-277 ledger's §L *stated-versus-counted* table, one
+layer up: **stated-versus-instructed**.
+
+**Fired 3× in one session** (OQ-277 escape stratum): (1) writing the assembler prompt surfaced a
+pre-registration that pinned *what is judged* and never *what is shown*, leaving item presentation —
+including whether the judge sees the extractor's own reasoning and the stratification key — to the
+assembler, where it would have changed the result (fixed as prereg Amendment 4, before assembly);
+(2) converting the prose ruling "two candidates and two primaries" into an executable draw exposed
+that at n=2 an unstratified draw could make placement indistinguishable from the threshold under
+test (fixed by stratifying); (3) running the handoff's own stated self-check command showed it could
+not consume the format that same handoff specified (the adjacent rung, *stated-versus-executed*).
+
+**The way it fails silently:** a prompt that says "read the design and execute it" performs no
+enumeration and catches nothing, while feeling like the rule was discharged. The operative test is
+*could a receiver who read only my prompt take a wrong-but-reasonable action the design forbids?* —
+every yes is a DESIGN gap. Does not work when the receiver is yourself (no enumeration pressure),
+which is why it is a handoff rule; and it finds underspecification, never wrongness.
+
+**Corollary — the terminal is a channel.** When the receiver's output is visible to a party the
+design blinds (an assembler working in the judge's terminal), the prompt must state what may be
+PRINTED, not only what may be done; a correctly assembled blind packet echoed to the screen is
+unblinded before the pass starts, and no downstream control recovers it.
+
+Full exposition + witnessed instances: `docs/technical/build_discipline.md` → *Write the receiver's
+prompt*. Tripwire promoted to CLAUDE.md Build Discipline.
+
+---
+
 ## 2026-08-10 — [correction-key] OQ-78 idiom half read (pre-registered, zero-spend): CELL 2, no close — the `.x8` rail is FAMILY-bound not model-bound; the 0.68 point mass dissolved while the rail held
 **Files:** `ISSUES.md`, `issues/INDEX.md`, `issues/INDEX.json`, `audits/2026-08-10_oq78_idiom_close/`, `python/audits/oq78_railband_crosstab.py`, `outputs/pipeline_output.json`, `prolog/testsets_haiku/`, `prolog/testsets_flash/`, `prolog/testsets_kimi/`, `prolog/testsets_sonnet/`, `prolog/archives/datasets/kernel_v2_test2/`
 **Tier:** correction-key
