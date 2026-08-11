@@ -10575,6 +10575,348 @@ justification is the audit trail — spot-check at consolidation time.
 
 ---
 
+## OQ-277 — RQ2 two-directional blind cross-coding: Wu's five silent-failure classes vs our published six patterns
+
+**Ω-type:** Ω_E for the matrices, churn, and controls (mechanically computed);
+**Ω_C** for the taxonomy-mapping semantics ("is Wu-D our P4+P6?"), for the residue
+reading (deficiency vs different-valid-cuts — layer-sort vs mechanism-sort), and for
+the fork-resolution direction. The writeup emits a PROPOSED mapping table awaiting
+operator ruling; it does not rule.
+
+**Status:** open
+**Priority:** 2
+**Deps:** blocked_on_human oq277-spend-go-at-prereg-freeze, blocked_on_human oq277-omega-c-mapping-rulings-at-close, bundled_with OQ-278
+**Origin:** RQ2 of `docs/amnesiac_institution/amnesiac_institution_v0.3.md` §13
+(taxonomy generality) gained an external comparison set: Wu, arXiv:2606.14589 — a
+methodological near-twin (one production LLM runtime, 22 incidents, five-class
+silent-failure taxonomy A–E). `docs/amnesiac_institution/literature_verification_memo.md`
+rates blind cross-coding the cheapest available conversion of an RQ into a result.
+All literature is LOCAL (`docs/amnesiac_institution/*.pdf`) — no network dependency.
+**Disagreement is the result, not a problem.**
+
+**Files:** `audits/2026-08-10_oq277_rq2_crosscoding/` (prereg, packets, payload dumps,
+raw responses, matrices, WRITEUP); `python/audits/oq277_crosscoding_driver.py`;
+reuses `agent/llm_call.py` (`call`, `count_tokens`), the OQ-264 k-redraw standard, and
+the prereg-md5 convention (`audits/2026-08-09_oq151_dual_gauge/audit_log.md` template).
+
+**Design (frozen at prereg; every element below is pre-registered before any result):**
+
+- **Three comparisons.** (i) Wu's 22 incidents → P1–P6 + other; the coder prompt carries
+  ONLY the published six (+ "other"). (ii) Our sampled incidents → Wu's A–E + other.
+  (iii′) Blind P-coding of ALL ~15 named-exemplar anchor incidents (redacted), giving the
+  inter-rater row at n≈15. (iii′ replaces the briefed (iii): no original coding dataset
+  exists — see OQ-280 — so this experiment produces the repo's first.)
+- **Frame (staged).** n=22 seeded-random from the 73 incident-bearing dirs first; measure
+  the churn floor; on H5 passing, EXTEND to all 73 (the 6×5 grid is too sparse at n=22;
+  unit-matching to Wu is not a statistical requirement). The full directory LISTING is
+  pinned as a frozen artifact alongside seed + command (175 will have become 176+).
+  **Extension rule, pinned:** the extension changes n and NOTHING else — byte-identical
+  prompts, lexicons, verdict grammar, k, model. Any other change is a NEW experiment with
+  a new prereg. Interpretation runs on POOLED data (stage 1 + extension) as the primary
+  read, with stage-1-only cells reported alongside as robustness.
+- **Escape check (operator-gated).** n=8 seeded-random from the non-census dirs (~102) is a
+  named pre-registered outcome row auditing §4.5's incidence figure. Any coder-proposed hit
+  is QUARANTINED; the row fires only after the operator reads the source audit directory and
+  confirms a real silent-defect incident — the coder proposes, the operator rules. At n=8
+  with threshold ≥1, a single coder false positive would otherwise relabel the paper's
+  central statistic. Confirmed hit ⇒ 42% is an UNDERCOUNT (lower bound) + re-census OQ minted.
+  **One-sided in both senses, pre-registered so the null can never be read as "the proxy is
+  complete": zero confirmed hits at n=8 licenses only "keyword-proxy miss rate ≤ ~31% at
+  95%" (1 − 0.05^(1/8)).**
+  **Denominator note (witnessed 2026-08-10, during this OQ's own step 1).** Appendix B's
+  §4.5 denominator is `ls -d audits/*/ | wc -l` = 175, which counted
+  `audits/2026-08-10_oq78_idiom_close/` — an **empty, untracked placeholder directory**
+  (0 files; created as an output path by `python/audits/oq78_railband_crosstab.py:450`,
+  never populated). It was removed here because it turned `audit_writeup_gate.py` RED;
+  the census is now 73/174 = 42.0% (was 41.7%). **The published headline is unchanged**,
+  and the numerator was never affected (an empty dir has no prose to match). But this is a
+  SECOND unit-level defect in the same statistic v0.3 already corrected once (77→73): the
+  denominator is a *directory* count that admits directories which are not audits. v0.4
+  queue: state the denominator's inclusion rule (a directory counts iff it contains at
+  least one file), and note that the count moves under ordinary gate hygiene.
+- **Coder: Sonnet 5 only**, via `agent/llm_call.py`. **Same-family confound pre-registered:**
+  our writeups are Claude-authored and the coder is Claude — direction (ii) agreement may be
+  inflated relative to direction (i) by prose-convention familiarity, masquerading as a
+  coverage difference. Falsifier tier is therefore a DIFFERENT-FAMILY model re-code (not
+  Haiku). Named, not bought, this run.
+- **Structural blindness (the mechanism).** Subagents CANNOT be coders: CLAUDE.md (containing
+  P1–P6) is injected into every harness instance and no settings override exists. Coding is
+  raw SDK calls via `llm_call.call(prompt, model, system=...)` — single user turn, no context.
+  On Sonnet 5 `llm_call` disables thinking and passes NO temperature (model-gated overrides,
+  `llm_call.py:112–126`) — sampling is the production regime's own; churn is measured, not
+  pinned (OQ-264 posture). `llm_call` has NO payload logging, so the driver captures every
+  exact assembled payload caller-side (wrapping `call_with_retry`, the single choke point;
+  precedent `audits/2026-06-04_oq71_depth_lineage/gate2_capture.py`) and writes it to the
+  audit dir BEFORE sending. Both sides' units are REDACTED extracts — our writeups cite
+  pattern vocabulary constantly and Wu's prose carries his class labels; redaction is part
+  of extraction.
+- **Roles (three-party independence).** Extractor (one instance, never codes) → Coder
+  (stateless SDK calls) → Adjudicator/assembler (separate instance; computes unanimity,
+  churn, matrices; fidelity spot-checks 5 units/side against sources including one planted
+  meaning-inverted unit it must flag). Operator: spend-go at freeze; Ω_C rulings at close.
+- **Churn (OQ-264 standard).** k=3 same-input redraws per unit per direction; label =
+  unanimous 3/3, else UNSTABLE (own row, excluded from cells). Per-cell churn reported
+  BEFORE interpretation; disagreement inside the floor is noise and is reported as such.
+- **Wu unit granularity, pinned at extraction:** the unit is Wu's INCIDENT (n=22), NOT the
+  manifestation (Wu reports ≥28 manifestations across them). A multi-manifestation incident
+  is coded on its primary mechanism as Wu presents it, with the manifestation count recorded
+  as unit metadata, never as extra units. This rule sets every per-class MDE and is frozen
+  with the prereg.
+
+**Controls (each pre-registered with want=fire / want=pass):**
+- (a) **Anchors, interleaved source-blind.** Direction (i) carries 3 of OUR redacted exemplar
+  incidents with agreed P-labels (e.g. `w1_sheaf_join` freeze → P1; `generate_kernel_corpus`
+  fork → P2; 0/404 vacuous gate → P5; `system_gradient` `[]→0.0` → P6); direction (ii) carries
+  3 Wu incidents whose A–E label Wu states unambiguously. Recovery ≥2/3 unanimous per
+  direction, else H3. **H3's license, stated narrowly:** the anchors are the taxonomy's own
+  published exemplars — recovering them is an easier task than coding novel material. H3
+  passing licenses "the coder is not broken," NEVER "the coder classifies unfamiliar
+  incidents reliably." The writeup may not over-read calibration.
+- (b) **Decoys → "other".** (1) A LOUD failure mechanically adapted from a real incident
+  (thrown error, fixed same day, no silent interval); (2) a non-software institutional
+  failure with no absence/presence structure. Construction rule frozen in the prereg.
+  Unanimous non-"other" on any decoy → H4.
+- (c) **Redaction-bias control (two-sided; the both-residue row's own floor).** Redaction can
+  strip the mechanism detail that makes a unit codeable, biasing units toward "other" — and
+  the both-residue headline row points exactly that way; the fidelity spot-check covers
+  meaning inversion, not codeability loss. 3 units per direction are coded BOTH redacted and
+  unredacted (k=3 each), QUARANTINED from all matrices, and explicitly EXEMPT from H2's leak
+  rule (unredacted units necessarily contain source vocabulary — that is the point; the
+  exemption is per-payload, pre-listed in the prereg, and exempt payloads can never enter
+  cells). Report Δ("other" rate) = the redaction floor.
+- **Leak-grep over dumped payloads.** Direction-(i) payloads must not contain Wu class
+  names/definitions/"fail-plausible"; direction-(ii) payloads must not contain the P-lexicon.
+  Banned lists frozen in the prereg. Positive control: one planted-leak payload the grep must
+  flag. Any real-payload hit → H2 (direction VOID, not patched mid-run).
+
+**Numeric HALTs:** H1 local-extraction integrity fails (PDF unreadable AND pandoc fallback
+fails) → HALT, operator. H2 leak-grep real hit → that direction VOID. H3 anchor recovery
+<2/3 → direction VOID. H4 decoy unanimous non-other → direction VOID. H5 >1/3 of a
+direction's units UNSTABLE → churn floor IS the finding; no matrix interpretation; the
+staged extension does NOT run. H6 fidelity spot-check fail or planted-broken-unit missed →
+HALT extraction, re-extract.
+
+**Interpretation table (total, pre-registered).** Rows: high mutual expressibility;
+**asymmetric (i)-vs-(ii) row — SHIPS AS TYPED OPEN this run, never a verdict** (the
+same-family confound is registered but unmeasured and explains asymmetry as well as any
+coverage difference does; *registering a confound does not license reading through it*; the
+row awaits the different-family re-code); both-residue (≥25% unanimous "other" in BOTH
+directions AND clearing control (c)'s redaction floor ⇒ both taxonomies incomplete, a
+first-class finding; inside the floor ⇒ reported as redaction artifact); fork-residue row
+(OQ-278's evidence feed, both branches, threshold ≥3 across both directions, VOID if its own
+anchor fails); escape-check row (operator-confirmed hits only); NULL composites (one
+direction void / both void / cells churn-voided while margins survive / fork-residue pass
+void while primaries survive); (iii′) anchor-agreement row (n≈15 — calibration data, not a
+verdict). **Verdict grammar at the effect-size floor:** a class is "expressible" iff ≥2/3 of
+its unanimous members land in ONE pattern; a two-pattern split is "partial" (Ω_C row); ≥1/3
+to "other" is "inexpressible." MDE stated beside every per-class figure (~4–5 units/class at
+n=22 ⇒ one unit ≈ 20–25%).
+
+**Declared stopping point.** Every verdict names its tier falsifier: expressibility →
+different-family re-code (named, not bought); churn verdicts → larger k; frame-scoped
+coverage → the escape-check row and, if fired, the re-census OQ. No tier falsifier
+available ⇒ ships as typed OPEN.
+
+**What resolution would change:** RQ2 stops being a research question and becomes a result
+with a measured churn floor. A high-mutual-expressibility outcome is external corroboration
+that the six patterns cut the phenomenon at joints an independent investigator also found; a
+both-residue outcome (clearing the redaction floor) says both taxonomies are incomplete and
+names where. Either way §4.3 acquires the first coded corpus behind it (OQ-280) and §2.3's
+"no inter-rater measurement" limitation is discharged with a number rather than removed.
+
+**Sequencing (what a cold reader most easily gets wrong):** the operator spend-go is at
+PREREG FREEZE, not at plan approval — the md5 of `PREREGISTRATION.md` must sit in
+`audit_log.md` physically ABOVE the first result line before any coding call is made. The
+staged extension to all 73 is gated on H5 passing and is NOT authorized in advance.
+
+---
+
+## OQ-278 — The pattern taxonomy is FORKED: CLAUDE.md's six vs build_discipline.md's six (a worked P2 instance on the discipline's own substrate)
+
+**Ω-type:** Ω_C — which set is canonical is a design ruling with no seat-free fact
+(both sets are internally coherent, both have real dated exemplars, and they sort the
+phenomenon on different axes). The *residue measurement* that feeds the ruling is Ω_E.
+
+**Status:** open
+**Priority:** 3
+**Deps:** bundled_with OQ-277, blocked_on_human oq278-fork-resolution-ruling
+**Origin:** Surfaced 2026-08-10 while designing OQ-277, when the question "which set do
+we code against?" forced a comparison nobody had run. **Fired: live at plan stage** — the
+fork was found by the experiment's design, not by the experiment.
+
+**The fork, witnessed 2026-08-10** (`grep -nE '^#{2,4} ' docs/technical/build_discipline.md`
+against CLAUDE.md → Build Discipline):
+
+| # | CLAUDE.md (the set v0.3 §4.3 publishes) | `docs/technical/build_discipline.md` |
+|---|---|---|
+| P1 | Produced-but-not-consumed | Produced-but-not-consumed — SHARED |
+| P2 | One-canonical-thing-became-two | One-canonical-thing-became-two — SHARED |
+| **P3** | **Destructive-replace without proof (the faith merge)** | **Bound-probe bypasses clause-order (`build_discipline.md:486`)** |
+| **P4** | **Recap-as-witness substitution** | **Fabricated default (`build_discipline.md:571`)** |
+| P5 | Absence satisfies the gate | Absence satisfies the gate — SHARED |
+| P6 | Success-shaped absorption | Success-shaped absorption — SHARED |
+
+Four shared, **two disjoint per side**, all four disjoint members carrying real exemplars.
+The always-loaded file and the file it points to as "the full patterns" have disagreed on
+one third of the taxonomy, undetected, for as long as both have existed. **This is Pattern 2
+(one-canonical-thing-became-two) instantiated on the pattern list itself: no queryable fact
+of canonicity, and both copies "parse" — each reads as a complete, coherent six.** It is the
+sharpest available instance of the paper's own thesis and is queued for v0.4 §4.4 per
+operator.
+
+**Operator ruling received (binding on OQ-277):** code against **the published six**
+(CLAUDE.md / v0.3 §4.3), with the definitions frozen VERBATIM in the prereg with file +
+commit hash. Rationale: the coder is out-of-harness and takes the taxonomy from the prompt,
+so a by-reference definition would leave it unpinned in exactly the way that caused the fork.
+**This ruling scopes the experiment only — it does not resolve the fork.**
+
+**Evidence feed (pre-registered, from OQ-277).** The fork-residue row is a SECOND CODING
+PASS, its own instrument (operator ruling: option b). Post-hoc, run by the adjudication
+phase: fresh out-of-harness SDK calls whose prompt carries ONLY the two orphaned
+`build_discipline.md` definitions (bound-probe-bypasses-clause-order; fabricated-default) +
+the unit — never the published six, never the first-pass label, never Wu's classes. Verdict
+vocabulary: matches-BD-P3 / matches-BD-P4 / neither. It owes everything a coding pass owes:
+k=3 unanimity; its own churn report; its own anchor (one agreed fork-expressible unit — the
+`classify_at_time` Supp=0.5 fabricated-default exemplar, redacted — interleaved, which the
+pass must recover, else the fork-residue row is VOID, not the experiment); its own leak-grep
+(banned: published-six lexicon, Wu lexicon) with a planted-leak control.
+
+**Read in BOTH directions, both branches pre-registered:** near-zero fork-expressible
+residue ⇒ the orphaned BD patterns are not load-bearing (argues resolving the fork toward the
+published set); substantial residue ⇒ §4.3 under-covers. **Wu incidents routing to BD's
+orphaned P3/P4 is independent evidence the orphans are real** — a corpus with no stake in our
+fork. Threshold: ≥3 unanimous fork-expressible items across both directions = "substantial."
+
+**Power block (BLOCKING amendment — two serial unanimity gates must not manufacture the
+null).** The pass sits behind first-pass unanimity and adds its own; filtering can produce
+near-zero residue with the orphans present, and the near-zero branch would then retire two
+witnessed patterns on a P5-shaped null — inside the experiment that studies P5. Guards:
+(a) **input strata** — the pass receives BOTH first-pass-unanimous "other" items AND
+first-pass-UNSTABLE items where any redraw returned "other" (the churning-between-other-and-P3
+item is the strongest residue candidate); coded identically, reported separately; the ≥3
+threshold counts only the unanimous stratum, the unstable stratum is supporting data (and had
+exclusion been chosen instead, that would be a declared blind spot — it is not excluded).
+(b) **Power floor** — if fewer than 5 unanimous-"other" items reach the pass, the near-zero
+branch is UNDERPOWERED and ships as typed OPEN, never as evidence for fork resolution.
+(c) **Pass churn beside residue** — the pass's own churn rate is reported next to the residue
+count; pass churn >1/3 ⇒ row OPEN. (d) **Narrow license** — recovering BD's own published
+exemplar shows the pass is not broken, never that it detects orphan patterns in unfamiliar
+material; the writeup may not over-read the anchor.
+
+**What resolution would change:** one canonical pattern list, with the losing members either
+merged in (making it eight) or demoted with a recorded rationale — and the always-loaded file
+stops disagreeing with its own detail doc. Until ruled, any document citing "the six patterns"
+must name WHICH six.
+
+**v0.4 queue note (§11 amendment, independent of the experiment):** §2.3's original
+classification, whatever informal form it took, may straddle the fork boundary and be
+heterogeneous across an unrecorded line. Add to Limitations.
+
+---
+
+## OQ-279 — Transcript-derived false-success arm: residual false-success under discipline (RQ1-complement, NOT the RQ1 historical control)
+
+**Ω-type:** Ω_E for any measured false-success rate; **Ω_P for PUBLICATION of anything
+transcript-derived** — the transcripts are the operator's own working sessions, and whether
+any of it leaves the repository is the operator's ruling, not an evidential question. Typed
+at mint so no future instance treats publication as settled.
+
+**Status:** open
+**Priority:** 4
+**Deps:** blocked_on_human oq279-omega-p-publication-ruling
+**Origin:** Plan-time determination 2026-08-10: Advani (arXiv:2606.09863,
+`docs/amnesiac_institution/2606.09863v1.pdf`) operationalizes silent failure in a way that
+IS applicable here — to the Claude Code session transcripts, which pair completion assertions
+with text-independent ground truth (`toolUseResult` payloads, file-history snapshots, and a
+replayable `scripts/gate.sh` at recorded commits). Deliberately NOT bundled into OQ-277: it
+is two new instruments, each owing its own controls.
+
+**Snapshot taken (step 0, 2026-08-10 — time-critical, executed BEFORE anything else):**
+`~/.claude/projects/-home-scott-bin-structural-dynamics-model/transcript_snapshot_20260810.tar.gz`
+— 90 `.jsonl` members (tar member count 90 == live glob count 90), 29,709,550 bytes from a
+148 MB live store, md5 `289534248baeae333db49c5d00ef185d`; manifest sidecar
+`transcript_snapshot_20260810.manifest.txt`. Earliest content timestamp
+**2026-07-03T16:50:22.746Z**; latest 2026-08-11T02:46:55.135Z. Not committed to the repo
+(size + privacy).
+
+**The scope constraint, and why it is load-bearing:** the earliest surviving transcript
+(2026-07-03) POST-DATES CLAUDE.md (2026-02-28), so the store holds **no discipline-off
+period**. Any arm run on it measures *residual false success under discipline* — an
+RQ1-complement — and **cannot** serve as RQ1's historical control. A future instance that
+reads this store as a before/after comparison is reading a within-discipline window as if it
+spanned the intervention.
+
+**v0.4 queue note (§11, unrecoverable-loss):** the store demonstrably rotates (~5-week
+retention). The pre-2026-02-28 discipline-off period is **permanently gone** — RQ1's
+within-repository historical control cannot be reconstructed, at any price. Two consequences:
+(1) §11 gains an unrecoverable-loss note; (2) **snapshot-as-step-0 becomes standing practice
+for every future transcript-dependent arc** — the observation window for this class of
+question is bounded by a rotation the project does not control.
+
+**What resolution would change:** the first text-independent measurement of how often a
+completion assertion in this repository is false *while the discipline is running* — the
+number §9's self-instrumentation currently has no channel for. It would also give the 42%
+(§4.5) a companion figure computed on a genuinely different unit (turns, not audit dirs).
+
+---
+
+## OQ-280 — §2.3 describes a coding that produced no artifact: the paper's own evidence base is a described-but-unperformed procedure
+
+**Ω-type:** Ω_E — whether an artifact exists is a matter of fact, and it was checked.
+
+**Status:** open
+**Priority:** 2
+**Deps:** blocked_on OQ-277
+**Origin:** Found 2026-08-10 while scoping OQ-277 direction (iii), which as briefed required
+comparing the blind coding against the original coding. **Fired: live** — and per the
+operator, the larger of the two plan-stage findings, bigger than the fork (OQ-278).
+
+**The finding.** v0.3 §2.3 ("How incidents were classified") states: *"Classification into
+Patterns 1–6 was retrospective and single-coder: performed by LLM instances reading the audit
+record at the operator's direction, with the operator ruling on disputed cases."* **That
+procedure produced no output.** Witnessed 2026-08-10 by two searches over the whole repo:
+(1) no file assigns a P1–P6 label to an audit directory, an OQ, or an incident as a data row
+— the only multi-P files are the taxonomy's own definitional prose (v0.3 §4.3,
+`build_discipline.md` headers) plus three unrelated vocabularies (`audits/2026-07-24_oq153_step3_blind_pass/key.json`
+where `P11`/`P5` are blind-pass *position roles*; `audits/2026-06-16_seat_invariant_vs_prolog/REPORT.md`
+where `P1–P9` are numbered *predictions*; a 2026-05-02 trifurcation audit's own "Pattern 1/2/3");
+(2) the only quantified pass over the audit record — Appendix B's §4.5 row — is a **keyword
+proxy** (`grep -rl 'for its whole life\|never fired\|…' audits/`) yielding a silent-defect
+yes/no per directory. **It assigns no pattern.** Positive control for the absence claim: the
+same searches DO fire on P-labelled content where it exists (v0.3 §4.3 returns 6 distinct
+labels over 20 occurrences), so "found nothing" here is a fact about the repository, not
+about the probe.
+
+**Why this is P4-adjacent (a described procedure standing in for an unperformed one).** §2.3
+is a methods section describing a coding whose output does not exist — an **absence
+presenting as a presence in the paper's own account of its evidence base**, in a paper whose
+central thesis is that absences present as presences. The success-shaped token is the methods
+paragraph itself: it reads exactly as a completed procedure would read. It is not fabrication
+— informal reading certainly occurred — but nothing was recorded, so nothing is checkable,
+and §4.3's six patterns in fact rest on **named exemplars, not a coded corpus**.
+
+**Consequences (all three tracked here):**
+1. **v0.4 correction queued (§2.3).** State plainly that §4.3's six patterns rest on named
+   exemplars, not a coded corpus, and that the retrospective classification left no artifact.
+   Per the corrections-marked-on-close rule this is marked visibly, not silently fixed —
+   the same treatment §4.5 gave the 77→73 unit error.
+2. **Direction (iii) as briefed is impossible.** OQ-277 substitutes (iii′): blind P-coding of
+   all ~15 named-exemplar anchor incidents, giving the inter-rater row at n≈15.
+3. **OQ-277 produces the repository's first P1–P6 coded corpus.** That is what unblocks the
+   correction from being purely subtractive.
+
+**What resolution would change:** §2.3 stops describing a phantom procedure; §4.3's evidential
+status becomes accurate (illustrative exemplars, per §2.4's own illustrative/quantified
+split, which §2.3 currently contradicts by implying a classification pass); and the paper
+gains a real coded corpus with a measured churn floor to cite instead.
+
+**Sequencing note for a cold reader:** do NOT write the §2.3 correction before OQ-277 lands.
+The correction's honest form depends on whether the experiment produces a usable coded corpus
+(consequence 3); writing it first forces a purely subtractive edit that would then need
+rewriting.
+
+---
+
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

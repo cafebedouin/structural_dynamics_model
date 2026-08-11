@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "40cdd526a4a910e4a71ad31f3f55aad1c875a0ec",
+    "store_version": "9b3bb3c9eae560f95ea0586e8566c1a0566655b1",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-10T18:51:20"
+    "generated_at": "2026-08-10T21:52:52"
   },
-  "issues_sha": "e263279d879b7127bbb2827c4de0c777dbb11bd8bed1c72d6b7c8513746f03d8",
-  "n_entries": 276,
+  "issues_sha": "b9384fadf797aea9f89f2f8c4442004315f097a9207a8da7ccc2f81db1d6c342",
+  "n_entries": 280,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 95,
+    "open": 99,
     "partial": 7
   },
   "active": [
@@ -1403,6 +1403,64 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-264"
+      ]
+    },
+    {
+      "id": "OQ-277",
+      "status": "open",
+      "priority": 2,
+      "summary": "RQ2 two-directional blind cross-coding: Wu's five silent-failure classes vs our published six patterns",
+      "deps": [
+        "blocked_on_human oq277-spend-go-at-prereg-freeze",
+        "blocked_on_human oq277-omega-c-mapping-rulings-at-close",
+        "bundled_with OQ-278"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-264",
+        "OQ-278",
+        "OQ-280"
+      ]
+    },
+    {
+      "id": "OQ-278",
+      "status": "open",
+      "priority": 3,
+      "summary": "The pattern taxonomy is FORKED: CLAUDE.md's six vs build_discipline.md's six (a worked P2 instance on the discipline's own substrate)",
+      "deps": [
+        "bundled_with OQ-277",
+        "blocked_on_human oq278-fork-resolution-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-277"
+      ]
+    },
+    {
+      "id": "OQ-279",
+      "status": "open",
+      "priority": 4,
+      "summary": "Transcript-derived false-success arm: residual false-success under discipline (RQ1-complement, NOT the RQ1 historical control)",
+      "deps": [
+        "blocked_on_human oq279-omega-p-publication-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-277"
+      ]
+    },
+    {
+      "id": "OQ-280",
+      "status": "open",
+      "priority": 2,
+      "summary": "§2.3 describes a coding that produced no artifact: the paper's own evidence base is a described-but-unperformed procedure",
+      "deps": [
+        "blocked_on OQ-277"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-277",
+        "OQ-278"
       ]
     }
   ],
