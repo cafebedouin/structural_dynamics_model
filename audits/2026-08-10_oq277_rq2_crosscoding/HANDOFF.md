@@ -96,6 +96,43 @@ exact Pattern-6 shape this experiment studies. Count first, then grep.
 
 ---
 
+### 5. Carry R5's leak-ban additions into the driver
+`RECON.md` §R5 records a **pre-registered directional expectation** that our own instability
+should concentrate on P6 (the pattern doing mechanism work in a layer-sorted set). It is
+extractor-facing and scored by a rule fixed in advance. **It must never reach a coder
+payload** — add `parasitic`, `cross-cutting`, and `layer` to the direction-(ii) banned lexicon
+so a leaked hint is *caught* rather than assumed absent, and include one planted-leak payload
+carrying those terms.
+
+---
+
+## The frame command now has a positive control — run it, don't assume it
+
+`frame/control_frame_command.py` (operator amendment, 2026-08-10). "174 = 73 + 101, partition
+exact" is an arithmetic identity `comm -23` cannot violate — it witnesses nothing about whether
+the census *classifies* correctly. The control plants 6 directories with known correct
+classifications and asserts each lands in its bucket and stays out of the other, reproduces the
+empty-directory defect, and keeps the 77/175 unit error live as a regression check.
+**Currently PASSES (6/6 + both regression controls).** Re-run it if the census command, the
+keyword list, or the directory layout changes.
+
+Two things it surfaced that you must not undo:
+
+- **The census is a positional parse.** `cut -d/ -f2` extracts the directory only because the
+  pinned target is `audits/` (yielding `audits/dir/file.md`). From inside `audits/` with an
+  unprefixed target it extracts filenames and subdirectory names instead. **Always use the
+  explicit `audits/` target from the repository root; never `.`.** This is the same mechanism
+  Wu's Class B names — positional parsing of tool output — sitting inside the instrument that
+  measures our own incidence rate. Worth a line in the writeup.
+- **`grep` is a shell FUNCTION in the interactive harness shell**, not `/usr/bin/grep`, and the
+  two differ on whether a `./` prefix is emitted — which moves `cut`'s field by one. The
+  control pins `/usr/bin/grep` explicitly for this reason. **Any script computing a census
+  figure should pin the binary**, or its answer depends on which shell happened to run it.
+  (The frozen frame is unaffected and was verified: both greps return the same 74 → 73 after
+  self-exclusion, and the frozen listing matches. The pinned `audits/` target is what saves it.)
+
+---
+
 ## Carried rulings you must not re-litigate
 
 - **Code against the published six** (`CLAUDE.md` / v0.3 §4.3), definitions frozen VERBATIM in
@@ -123,3 +160,14 @@ exact Pattern-6 shape this experiment studies. Count first, then grep.
   exists.**
 - **PROPOSED Ω_C mapping table** awaiting operator ruling — including the tempting but
   unasserted E-hub ↔ P6 correspondence.
+- **R5's directional expectation, scored against its pre-registered rule** — including the
+  "uninformative" branch if the unstable row has fewer than 4 units. If it is disconfirmed,
+  say so as plainly as the C/D guess was.
+- **The census-as-positional-parse finding** (above): the instrument measuring our
+  silent-failure incidence carries the mechanism Wu's Class B names, and it took building a
+  positive control to see it.
+- **Freeze-time vs run-time catches (ISSUES OQ-276).** All four of this arc's catches fired
+  at *freeze* time, before any measurement existed to contaminate — which is the cleanest
+  available evidence for §9.3's *epistemic* efficacy, the one it can least instrument. The
+  `Fired:` bit cannot currently express the distinction; a candidate `at-freeze | at-run |
+  post-hoc` axis is recorded in OQ-276 as NOT adopted, pending the first catch-rate reading.

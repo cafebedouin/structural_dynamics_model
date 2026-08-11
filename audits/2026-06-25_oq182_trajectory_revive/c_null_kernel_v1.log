@@ -22,3 +22,27 @@ FIDELITY: PASS (P0 == RealPartition; |S0-RealSil|=0.000000e+00; families=30)
 JOINT-TOOTHLESS: PASS (S_joint=0.312602 ~= RealSil; |diff|=4.440892e-16; families=30; relabel-match=yes)
   => joint shuffle relabels intact vectors => the false-PASS the per-component design avoids
 
+TIE-BREAK CONFIRM: PASS (overlay regime sigma-pure; 31 families both runs)
+
+---- STAGE B: per-component null, N=200 ----
+null draws: 200 total, 200 defined, 0 degenerate (single-family)
+null silhouette (defined): min=-0.133770  mean=-0.024912  median=-0.022833  max=0.043872  sd=0.031142
+null family-count: min=30  mean=33.550  median=33.000  max=40   (real=30)
+
+TEETH (per-component null, read off the full distribution):
+  RealSil=0.312602  null_mean=-0.024912  null_median=-0.022833  standardized_gap=(RealSil-mean)/sd=10.8379
+  => TEETH PASS (null_median < RealSil: per-component shuffle centered the null BELOW real => teeth)
+
+degenerate draws: 0/200 (0.000) <= 5%% threshold
+
+================================================================
+VERDICT
+  RealSil = 0.312602    P95(null, per-component) = 0.020951
+  RealSil > P95 AND TEETH passed => PASS.
+  OQ-182: family product VALIDATED as meaning-bearing.
+
+TWIN-VACUITY PARALLEL (NOT a family gate; twin product stays OPEN regardless):
+  cross_domain_twins=68730  clustered_pairs=611065  twin_fraction=0.1125
+================================================================
+wrote c_null_distribution.json (200 null draws + real)
+VERDICT_TOKEN: pass

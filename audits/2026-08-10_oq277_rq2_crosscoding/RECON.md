@@ -186,6 +186,48 @@ coder call. Class A ships as VERDICT-INELIGIBLE regardless of outcome. (Under th
 index Class A has 4 members — another way R2 bites: a class is verdict-ineligible under one
 index and not the other.)
 
+## R5 — PRE-REGISTERED DIRECTIONAL EXPECTATION about OUR taxonomy (operator, before direction (ii) runs)
+
+Recorded **before** any of our units are coded, so it can be wrong on the record the way the
+C/D guess just was.
+
+**The mechanism R2a exposes, stated generally.** Wu's E hubs because it is defined on a
+*different axis* from its siblings — declared-vs-runtime, where A/B/C/D sort by failure
+mechanism. A cross-cutting axis has no stable boundary against classes sorted on another axis:
+any incident with a declaration mismatch also has a mechanism, so it can be coded either way
+depending on which axis the coder reaches for first. D is stable for the mirror reason —
+unique mechanism, no axis competition.
+
+**Why this predicts something about us.** Our six sort by **system layer** (production,
+identity, replacement, reporting, gating, composition — v0.3 §4.3's own layer column). §4.6
+then runs a *second* cut by **generative mechanism** (the trifurcation), explicitly kept as a
+parallel scheme on the argument that the two license different repairs. **Wu's E is what
+happens when those two cuts are mixed inside one taxonomy instead of kept parallel.**
+
+**The expectation, falsifiable:**
+
+> If our layer cut is clean, our patterns should be internally stable under blind coding, and
+> any instability should **concentrate on whichever pattern is doing mechanism work rather
+> than layer work**. P6 is the named candidate — §4.3 already concedes it is "by construction
+> parasitic on the others," which is the same self-description Wu's E earns.
+
+**How it gets scored (fixed now, not after seeing results):**
+- **Confirmed** if P6 is the modal pattern in the UNSTABLE row of direction (ii), or is a
+  member of the modal disagreeing pair, at a margin exceeding one unit.
+- **Disconfirmed** if instability is diffuse across patterns (no pair occupying more than its
+  share), or concentrates on a pattern other than P6.
+- **Uninformative** if the direction (ii) unstable row is too small to have a mode (fewer than
+  4 unstable units) — declared in advance so a thin result is not read as confirmation.
+
+**Two warnings attached to this expectation, because it is an inviting story:**
+1. It is a prediction about *our* internal stability. It is **not** the E↔P6 mapping claim,
+   which stays Ω_C and PROPOSED. Confirming R5 would show P6 behaves like a cross-cutting
+   member; it would not establish that P6 *is* Wu's E.
+2. The prediction is attractive enough to bias an extractor who knows it. It is recorded in
+   RECON/HANDOFF (extractor-facing) and **must not enter any coder payload** — the P-lexicon
+   ban already excludes it, and the leak-grep's banned list must include `parasitic`,
+   `cross-cutting`, and `layer` so a leaked hint is caught rather than assumed absent.
+
 ## Revised per-class MDE (replaces the plan's estimate)
 
 The plan assumed "~4–5 units/class at n=22, one unit ≈ 20–25%." The real distribution makes

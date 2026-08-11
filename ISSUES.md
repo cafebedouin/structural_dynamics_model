@@ -10563,6 +10563,34 @@ cap** — MEMORY.md Feedback sections ≤ 33 entries (end state of the 2026-08-1
 prints and record it in the pass notes. The rate is REPORTED, never gated — the gate
 enforces only that the bit exists; reading the rate is the operator's seat.
 
+**The bit does not record WHEN in the arc a catch fired, and that distinction is the
+one §9.3 needs (operator, 2026-08-10, from the OQ-277 pre-spend arc).** OQ-277 produced
+three catches **before any measurement existed to contaminate**: (a) the experiment's own
+directory sat in its own sampling stratum; (b) an empty placeholder directory sat in the
+§4.5 denominator; (c) a substring leak-matcher would have voided a direction on the phrase
+"permission *class b*y default". A fourth landed the same day — the §4.5 census command had
+never had a positive control, and building one showed it is a **positional parse
+(`cut -d/ -f2`) whose correct field index depends on the target's path shape**, i.e. the
+instrument measuring our silent-failure incidence carries the very mechanism Wu's Class B
+names (`audits/2026-08-10_oq277_rq2_crosscoding/frame/control_frame_command.py`, 6 fixtures
++ 2 regression controls, PASSED).
+
+All four were caught by the **pre-registration discipline itself**, not by the experiment —
+the freeze forced questions ("which taxonomy do we code against?", "what population are we
+sampling?", "would this grep flag a real leak?") whose answers exposed defects with no
+measurement in hand to be biased by. §9.3 distinguishes four efficacies and can instrument
+only two; **catches that fire at freeze time are the cleanest available evidence for the
+epistemic one**, because no result existed yet for the apparatus to rationalize.
+
+The `Fired:` bit as currently specified cannot express this: `live` covers "a control fired
+/ a claim flipped / a consumer-visible verdict changed" without recording whether that
+happened at design time or at read time. **Candidate refinement (NOT adopted — the operator's
+call at the first catch-rate reading): a second axis on the bit, `at-freeze | at-run |
+post-hoc`.** Deliberately not built now: the same OQ-264 quantization argument that left the
+decay floor unpinned applies here — pinning a taxonomy for the bit before enough bits exist
+to see the value lattice is the mistake this OQ was minted to avoid. Recorded so the first
+reading has the question in hand.
+
 **What resolution would change:** a sustained live-rate decay toward zero (window and
 floor are the operator's to set at first reading — deliberately not pre-committed
 here, since no bits exist yet and pinning a floor before the lattice of achievable

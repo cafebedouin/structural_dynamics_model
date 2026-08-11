@@ -26,6 +26,21 @@ Consolidated 2026-06-04 from: `docs/*.md` audit writeups, `docs/audits/`,
 `audit_data/`, `audit_proposal/` (+ its `audit/agy/` variant), and `phase1/`
 (see KNOWN_STATE.md 2026-06-04 entry for the move map and fork notes).
 
+## Citing third-party sources (operator ruling, 2026-08-10)
+
+**Do not track third-party PDFs.** Cite an external paper by its **permanent identifier**
+(arXiv id, DOI) — never by a repository path to a local convenience copy. `*.pdf` is
+gitignored, so a path citation is unresolvable for anyone who clones: a citation that does
+not carry its own retrieval path is not a citation. `python/audit_citation_status.py`
+gates on exactly this (`untracked-frozen-evidence`), and it is right to.
+
+If offline access genuinely matters for reproducibility, the answer is **a fetch script
+carrying the identifier and a checksum**, not the binary. Material actually *analysed*
+(extracted tables, fetched catalogs, datasets) is different: freeze it inside the audit
+directory, tracked, with md5s — that is evidence, not a reference. Worked example:
+`audits/2026-08-10_oq277_rq2_crosscoding/` cites the paper as `arXiv:2606.14589v1` while
+freezing the two artifacts it codes under `packets/wu_source/` with `FETCH_MANIFEST.txt`.
+
 ## Writeup format (adopted 2026-08-06; forward-only)
 
 Codifies the majority practice found by the 2026-08-06 index build: 57/168 directories already
