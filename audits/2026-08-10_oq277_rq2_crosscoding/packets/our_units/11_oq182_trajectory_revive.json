@@ -1,0 +1,29 @@
+{
+  "source_dir": "2026-06-25_oq182_trajectory_revive",
+  "extractor": "A",
+  "role": "primary",
+  "files_read": [
+    "c2_domain_finding.md",
+    "c0_finding.md",
+    "c_gen_successor_finding.md",
+    "c_prov_kernel_v1_finding.md"
+  ],
+  "symptom": "A finder reported 448 pairs of items satisfying a criterion that requires the two members to come from different subject areas. The pairs were well-formed, the count was stable across runs, and the report was read as a structural result. The subject area each item was compared on was not read from any recorded field: it was the text of the item's own identifier up to the first separator character. With almost as many distinct values as there were items, the requirement that two items differ was satisfied by nearly every pair.",
+  "mechanism_as_described": "The gate asks for two items whose subject areas are unequal. The predicate supplying the subject area is named as though it reads the recorded one, and a recorded field does exist and is populated for 97 of 104 items — but the predicate ignores it and derives the value by parsing the identifier string instead. Identifiers are per-item, so the derived value is nearly unique: 86 distinct values over 104 items. An inequality test on a nearly-unique key is true for almost every pair, so the gate rejects almost nothing and its output is not a selection at all — it is the pair set, relabelled with a property it did not test for. Nothing in the output distinguishes the two cases: a pair list from a vacuous filter has exactly the shape of one from a discriminating filter, the counts are plausible, and they scale with the corpus the way a real result would. The derived value and the recorded one were shown to disagree item by item; and the recorded field is itself compound and granular, so exact-string inequality over it would have been over-permissive too.",
+  "detection_path": "Not by reading the finder, but by counting the distinct values its subject-area predicate returns over the working corpus and comparing that count against the item count. The near-equality is the diagnosis: a key with nearly one value per item cannot support an inequality gate, whatever the gate is called. Only then was the predicate's definition read, to locate where the value came from, and individual items listed beside their recorded subject area to show the two disagree.",
+  "consequence": "Every pair the finder had ever emitted carried a claim it never tested — 'these come from different subject areas' meant only 'their identifiers begin with different words.' On a larger corpus the same gate produced 68,730 pairs. It also disabled a planned check: the design intended to use known-matching pairs as a positive control, and those pairs share identifiers and therefore derive the same subject area, so the gate would reject exactly the cases that were supposed to prove it works — the control could not be run through the finder at all. Because the subsystem emits two products from one run, a clean result on the other product would have been read as validating both; the two had to be separated explicitly in the reporting so that several passing checks could not be summarized as 'subsystem validated' while half of it was known broken.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The unit describes the defect found in the subsystem under validation, not the validation.",
+    "alternatives_not_extracted": [
+      "The stability half of the validation battery would be passed by a fixed-seed clustering of pure noise: it establishes that the partition is well-defined and reproducible, not that it means anything, and a raw size distribution is not measured against any null. Recognized in the same document and closed by running a null comparison (which passed at five standard deviations). NOT extracted because it was declared and discharged in the same arc rather than producing a wrong result.",
+      "A pre-registered positive control failed literally: it assumed items in one family share a structural value within a run, and eleven of thirty-four families violate this because the clustering merges across those groups. The guard was over-stated rather than the result being wrong, and the finding it protected was confirmed by the outcome itself. Surfaced to the operator as a mis-specification instead of being amended inline into a silent pass. NOT extracted because it is a defect in a control's specification, and the extracted unit is a defect in the system.",
+      "A frozen protocol document described a mechanism that was mechanically wrong about which value a grouping step keys on; the harness did the right thing regardless and quantities were unchanged. Recorded as an erratum against the frozen document.",
+      "The first attempt at one run stalled past ten minutes and was killed, consistent with memory pressure from running the clustering stage concurrently with a stage already known to fail that way. NOT extracted because it announced itself — a stalled run is not a silent failure."
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_note": "The defect is in the subsystem the directory set out to validate, surfaced during recon before any spend, and reported as its own document.",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
+  }
+}
