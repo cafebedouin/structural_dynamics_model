@@ -45,6 +45,57 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-10 — [landed] OQ-277..280 minted + RQ2 cross-coding Phase 1: taxonomy fork and phantom §2.3 coding verified; Wu's own taxonomy fails to reproduce against itself (55%)
+**Files:** `ISSUES.md`, `issues/INDEX.md`, `issues/INDEX.json`, `audits/2026-08-10_oq277_rq2_crosscoding/`, `docs/amnesiac_institution/amnesiac_institution_v0.3.md`, `docs/technical/build_discipline.md`, `CLAUDE.md`
+**Tier:** landed
+
+Executed step 0, step 1, and Phase 1 direction (i) of the RQ2 blind cross-coding plan
+(Wu, arXiv:2606.14589v1 × our published P1–P6). **No model call was made; the experiment
+is pre-spend.** Handoff to a fresh extractor at
+`audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF.md` — direction (ii) needs ~184 KB of
+audit prose read carefully, and skimming to fit would thin the units, biasing them toward
+`other` and confounding the very redaction-bias control (c) that exists to measure it.
+
+**Two plan-stage findings VERIFIED before minting** (not restated from the plan):
+- **OQ-278, the taxonomy is FORKED.** `CLAUDE.md` and `docs/technical/build_discipline.md`
+  share P1/P2/P5/P6 but disagree on P3 and P4 (destructive-replace + recap-as-witness vs
+  bound-probe-bypasses-clause-order + fabricated-default). Four disjoint members, all with
+  dated exemplars. v0.3 §4.3 publishes the CLAUDE.md set. Pattern 2 on the pattern list.
+- **OQ-280, §2.3 describes a coding that produced nothing.** No file assigns a P-label to
+  an audit dir / OQ / incident as a data row; the only multi-P files are the taxonomy's own
+  prose plus three unrelated vocabularies (blind-pass position roles, numbered predictions,
+  a 2026-05 trifurcation audit). Appendix B's §4.5 row is a keyword proxy assigning no
+  pattern. Positive control: the same searches fire on §4.3's own P-table (6 labels / 20
+  occurrences), so the null is about the repository, not the probe.
+
+**Three catches before any spend** (this is why the audit's `Fired:` bit is `live`):
+(1) the audit's own directory landed in the escape-check sampling stratum — the coder
+would have been asked to code the experiment coding it, and the payload could never have
+passed its own leak-grep; (2) an empty untracked placeholder directory sat in Appendix B's
+§4.5 DENOMINATOR (73/175 → 73/174; headline 42% unchanged); (3) the leak-matcher's first
+pass fired a false positive — "permission *class b*y default" matched banned `Class B` by
+substring — fixed to word-boundary regex, positive control 4/4 on a planted leak.
+
+**R2 (the result, and it did not need the experiment).** Wu's `failure_modes_catalog.md`
+and `llm_observer_ground_truth.yaml` carry the SAME 22 incident ids and assign different
+classes to 10 — **55% self-agreement**, single author, own system, own taxonomy, complete
+postmortems in hand. Per-class totals diverge on every class, both summing to 22. The
+disagreement is **systematic, not noise**: only 5 of 10 possible class pairs are occupied,
+**E is the hub at 8/10** (bidirectional — absorbs 3, sheds 5), B/E modal at 4/10, D most
+stable at 1/10. A pre-registered guess that C/D would be the seam was WRONG and is recorded
+as wrong. Mechanism: E is defined by *declared ≠ runtime*, which cross-cuts the
+failure-mechanism axis the other four sort on. **Consequence for v0.4:** §12 rests on
+institutional novelty because Wu was the near-twin threatening the taxonomy claim; if Wu's
+taxonomy does not reproduce against itself, the twin is far less threatening — not because
+our six are better, but because neither set is stable enough to support a priority contest.
+That supports the §5.3 convergence framing from an unexpected direction. Scoped honestly:
+the two records' relative authority is unstated, so the claim is *two records that each
+assign one class per incident, over an identical set, agree on 55%*.
+
+Frame frozen (174 dirs = 73 + 101, partition exact, md5-asserted sampler, self-excluded);
+seed 20260810; Wu catalog + dataset frozen under `packets/wu_source/` with md5s. Gate GREEN
+13/13 at close. Commits `8d7e5aba`, `ced94432`, `9df378ad`.
+
 ## 2026-08-10 — [landed] Monthly consolidation MAJOR PRUNE + apparatus instrument: memory 113→53 files (Feedback channel capped at 33, gated exchange), KNOWN_STATE window residue 52/52 drained, ISSUES backlog 100/139 drained, Fired: catch bit adopted — OQ-276 minted
 **Files:** CLAUDE.md, KNOWN_STATE.md, ISSUES.md, python/apparatus_instrument.py, scripts/gate.sh, audits/README.md, python/check_gap_status_surfaces.py
 **Tier:** landed

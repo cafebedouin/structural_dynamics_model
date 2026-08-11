@@ -8,8 +8,12 @@ frozen and the operator spend-go has not been requested. Any reader arriving her
 `PREREGISTRATION.md` carries an md5 line in `audit_log.md` should treat every file present as
 input material, not evidence.
 **Substrate:** no pipeline run — this audit's substrate is the audit record itself
-(`audits/`, 174 directories as of 2026-08-10) plus Wu, arXiv:2606.14589
-(`docs/amnesiac_institution/2606.14589v1.pdf`, local).
+(`audits/`, 174 directories as of 2026-08-10) plus Wu, **arXiv:2606.14589v1**. The paper is
+cited by its permanent arXiv identifier, not by a repository path: a local convenience copy
+sits under `docs/amnesiac_institution/` but `*.pdf` is gitignored, so a fresh clone would not
+have it and a path citation would be unreproducible. The material this audit actually codes —
+Wu's failure-modes catalog and his labeled incident dataset — is frozen inside this directory
+under `packets/wu_source/` with md5s, and IS tracked.
 **Fired:** live — two plan-stage findings were independently verified before any spend and
 are already minted: the pattern taxonomy is FORKED between `CLAUDE.md` and
 `docs/technical/build_discipline.md` (OQ-278), and v0.3 §2.3 describes a P1–P6 classification

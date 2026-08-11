@@ -81,11 +81,91 @@ Pre-registration must therefore fix:
 3. **High-confidence stratum = the 12 agreeing units**, reported separately. A verdict that
    holds only on the full 22 but not on the agreeing 12 is inherited ambiguity, not signal.
 
+   **Selection rule FROZEN, with its cost declared (operator amendment 3).** The stratum is
+   defined as: *the units whose catalog class equals their dataset class* — computed
+   mechanically from the two frozen files by `packets/wu_source/` md5, before any coding, and
+   listed explicitly in PREREGISTRATION.md so it cannot be redrawn after seeing results.
+
+   **Declared cost, pre-registered so the stratum can never be read as the better number:**
+   selecting on inter-source agreement **selects for incidents both sources found easy to
+   classify**. That is a codeability filter — the *same* bias control (c) measures for
+   redaction, arriving through a different door. Direction (i) run on the 12 will therefore
+   show **higher expressibility than the full 22 partly for that reason alone**, and the gap
+   between the two is NOT evidence that the stratum is a cleaner measurement. It is the
+   easier measurement. Any writeup sentence preferring the stratum's numbers on cleanliness
+   grounds is a pre-registered error. The stratum's legitimate use is narrow: as a check that
+   a full-22 verdict is not being *driven* by the ambiguous 10 — direction of robustness,
+   never a headline.
+
 **And it reframes the headline.** The experiment asks whether Wu's classes are expressible in
 our patterns. Wu's own two records reach 55% agreement with each other on the same incidents.
 Judging our cross-coding agreement against an implicit 100% ceiling would be measuring against
 a standard the source taxonomy does not meet internally. The 55% figure is the natural
 reference line and is pre-registered as such.
+
+### R2b — R2 is a FINDING about the comparison set, independent of the cross-coding (operator amendment 1)
+
+**This must not be filed only as a row-index nuisance.** Wu is a single author, coding his own
+incidents, from his own system, against his own five classes, with complete postmortems in
+hand — the most favourable conditions a taxonomy will ever be scored under. **55% self-agreement
+under those conditions is evidence that incident taxonomies in this domain are constitutively
+unstable**, and it is the strongest available support for the §5.3 convergence framing. It
+belongs in the writeup **whatever the cross-coding produces**, including if the experiment
+HALTs — it is already measured, from two frozen files, and does not depend on a single model
+call.
+
+It also does something specific to the paper's §12 (*What Appears to Be New*). §12 currently
+rests on institutional novelty, because Wu was the near-twin threatening the taxonomy claim.
+**If Wu's own taxonomy does not reproduce against itself, the twin is far less threatening —
+not because our six are better, but because neither set is stable enough to support a priority
+contest at all.** That is an argument *for* the §5.3 convergence framing, reached from an
+unexpected direction: the threat to novelty dissolves into evidence for the convergence thesis.
+Queue for v0.4 alongside the OQ-280 §2.3 correction.
+
+Honest limit on this finding: 55% is agreement between two artifacts of *unstated* relative
+authority. If Wu intended the dataset purely as an Observer-scope annotation and never as a
+taxonomy assignment, the figure measures cross-purpose labelling rather than instability. We
+cannot settle intent from the artifacts, so the claim ships scoped: *two records that both
+assign one class per incident, over an identical incident set, agree on 55%.* That is
+defensible without any claim about what Wu meant.
+
+### R2a — the disagreement is SYSTEMATIC, and E is the hub (operator amendment 2)
+
+Pre-registered guess before the check: the disagreements would concentrate on C/D, since
+error-swallowing and chained-hallucination overlap where a swallowed error gets narrated.
+**That guess was wrong, and is recorded as wrong.** C/D is the *rarest* tie.
+
+| class pair | n | | class | involved in |
+|---|---|---|---|---|
+| **B/E** | **4** | | **E** | **8 / 10** |
+| C/E | 2 | | B | 5 / 10 |
+| A/E | 2 | | A | 3 / 10 |
+| A/B | 1 | | C | 3 / 10 |
+| C/D | 1 | | D | **1 / 10** |
+
+Only **5 of the 10 possible class pairs** are occupied, so this is concentration, not scatter
+— the disagreement is structural, not coding noise. The structure is that **E is a hub**: it
+appears in 8 of 10 disagreements, and **bidirectionally** — the catalog moves 3 incidents into
+E that the dataset places elsewhere, and moves 5 out of E that the dataset places in E's
+neighbours. This is not one-way drift between two vintages of a label set; it is a genuinely
+unstable boundary.
+
+**Why E, mechanistically.** Wu defines E by *declared state ≠ runtime state* (plus the
+forensic-blind-spot sub-mechanism). That is a claim about the relation between what a system
+asserts and what it does — which is **orthogonal to the failure-mechanism axis the other four
+classes sort on**, not a sibling of it. Almost any A/B/C incident is *also* describable as a
+divergence between declared and actual. A category that cross-cuts its siblings will absorb
+and shed members depending on which question the labeller was answering, which is exactly the
+bidirectional pattern observed. D, by contrast, is defined by a mechanism nothing else has
+(an LLM transforming polluted context into confident output) and is correspondingly the most
+stable class at 1/10.
+
+**Mapping to our side is Ω_C and is NOT asserted here.** The tempting read is that Wu's E-hub
+is the analogue of our P6, which §4.3 already concedes is "by construction parasitic on the
+others" — i.e. both taxonomies carry exactly one cross-cutting member that destabilises
+assignment. The next instance must carry this to the writeup as a **PROPOSED** mapping row
+awaiting operator ruling, never as a finding. What *is* Ω_E and may be stated: both taxonomies
+contain a member their own authors describe as cross-cutting rather than parallel.
 
 ## Finding R3 — the classes are not mutually exclusive at incident granularity
 

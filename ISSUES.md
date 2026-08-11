@@ -10728,6 +10728,71 @@ names where. Either way §4.3 acquires the first coded corpus behind it (OQ-280)
 PREREG FREEZE, not at plan approval — the md5 of `PREREGISTRATION.md` must sit in
 `audit_log.md` physically ABOVE the first result line before any coding call is made. The
 staged extension to all 73 is gated on H5 passing and is NOT authorized in advance.
+**START AT `audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF.md`** — it carries the done/not-done
+table, the carried rulings, and the exact next step. Do not re-derive from this entry alone.
+
+**Phase 1 status, 2026-08-10 (step 0 + step 1 + direction-(i) source COMPLETE; direction (ii)
+OPEN).** Frame frozen (174 dirs = 73 incident-bearing + 101 non-census, partition exact,
+per-listing md5s); seeded samples drawn (seed 20260810, n=22 + n=8); Wu source fetched and
+frozen. **No model call has been made; `payloads/` and `responses/` are empty by design.**
+
+**Three catches BEFORE any spend (the Fired: bit is already earned):** (1) this audit's own
+directory landed in the escape-check stratum — the coder would have been asked to code the
+experiment coding it, and the payload could never have passed its own leak-grep; excluded by a
+named pre-sample rule, exclusion counted in the manifest so it cannot be silent. (2) An empty
+untracked placeholder directory sat in Appendix B's §4.5 DENOMINATOR (73/175 → 73/174; headline
+42% unchanged). (3) The leak-matcher's first pass fired a FALSE POSITIVE — "permission *class
+b*y default" matched banned `Class B` by substring; fixed to word-boundary regex, whose positive
+control fires 4/4 on a planted leak. A substring matcher would have voided a direction on a
+phantom.
+
+**R2 — the comparison taxonomy does not reproduce against itself (findings feed OQ-278's
+question from outside).** Wu's `ontology/docs/failure_modes_catalog.md` and his
+`docs/llm_observer_ground_truth.yaml` carry the SAME 22 incident ids and assign DIFFERENT
+classes to 10 of them — **55% self-agreement**, single author, own system, own taxonomy,
+complete postmortems in hand. Per-class totals diverge on every class (catalog A1/B4/C5/D4/E8
+= paper Table 1 exactly; dataset A4/B3/C4/D5/E6), both summing to 22. **Consequences, all
+pre-registered:** primary row index = the catalog (paper §3.2 names it the canonical index the
+taxonomy is built from); robustness index = the dataset, as a second matrix; high-confidence
+stratum = the 12 agreeing units, **with its selection cost declared** (selecting on inter-source
+agreement selects for easily-classified incidents — higher expressibility there is partly a
+codeability artifact, never "the cleaner number"). 55% is the pre-registered reference line:
+judging our cross-coding against an implicit 100% ceiling would measure against a bar the source
+taxonomy does not clear internally.
+
+**R2a — the disagreement is SYSTEMATIC, not noise.** Only 5 of 10 possible class pairs are
+occupied. **E is the hub (8/10 disagreements), bidirectionally** (absorbs 3, sheds 5); B/E is
+the modal pair at 4/10; D is the most stable class at 1/10. Mechanistically E is defined by
+*declared ≠ runtime*, which cross-cuts the failure-mechanism axis the other four sort on, so it
+absorbs and sheds depending on which question the labeller was answering. A pre-registered guess
+that C/D would be the seam was **WRONG and is recorded as wrong** (C/D is the rarest tie). The
+tempting E-hub ↔ P6 correspondence (our §4.3 already calls P6 "parasitic on the others") is
+**Ω_C and must ship as a PROPOSED mapping row, never as a finding**.
+
+**R2b — this is a result about the comparison set, independent of the cross-coding, and it
+changes the paper.** It is already measured from two frozen files and survives even a HALT.
+§12 currently rests on institutional novelty because Wu was the near-twin threatening the
+taxonomy claim; if Wu's own taxonomy does not reproduce against itself, the twin is far less
+threatening — **not because our six are better, but because neither set is stable enough to
+support a priority contest**. That is an argument FOR the §5.3 convergence framing reached from
+an unexpected direction. Queue for v0.4 with the OQ-280 §2.3 correction. Scoped honestly: the
+two records' relative authority is unstated, so the claim ships as *two records that each assign
+one class per incident, over an identical incident set, agree on 55%* — defensible without any
+claim about intent.
+
+**Direction (i) reachability, resolved.** The PDF narrates only 17 of the 22 incidents
+("full per-incident detail is in the public catalog"); the plan's "all literature is LOCAL"
+held for the paper but not its catalog. Operator ruled fetch; the catalog + labeled dataset are
+frozen under `packets/wu_source/` with md5s, so n=22 is reachable **with Wu's own class labels**
+— the extractor never infers a class, preserving three-party independence. Class A is
+VERDICT-INELIGIBLE under the catalog index (n=1; the ≥2/3 rule would be decided by one call).
+Revised per-class MDE: only class E resolves better than 20% under either index.
+
+**Standing check for Phase 3:** assert the driver's payload-capture count EQUALS the expected
+call count before running the leak-grep. The grep's positive control proves a grep that fails to
+flag would be caught; it says nothing about a grep over EMPTY input. A capture bug writing zero
+payloads yields a clean grep and a green H2 — success-shaped absence, the exact Pattern-6 shape
+this experiment studies.
 
 ---
 
