@@ -1,0 +1,36 @@
+{
+  "source_dir": "2026-08-06_oq259_item3_genreflag",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": false,
+  "files_read": [
+    "WRITEUP.md (full)",
+    "RECON.md (full)",
+    "B0_TALLY.md (full)",
+    "PREREGISTRATION.md (targeted scan: rubric, tally rule, disclosure rule)",
+    "B0_CALLS.md (targeted scan)",
+    "shingle_probe_output.txt"
+  ],
+  "symptom": "A feature was believed to reproduce when the same source material was regenerated: an in-session read of the two regenerations put the reproduction rate at one to two out of two. Adjudicated blind against the same rubric, the rate is zero out of two. The regenerations do carry something that looks like the feature — same topic, same shape, a near-identical name — and it fails the definition's second clause both times.",
+  "mechanism_as_described": "The feature is defined as a conjunction of two clauses. Each regeneration produced an item satisfying the first clause and satisfying something in the neighbourhood of the second: one failed on a coverage clause, the other on a structure-import clause, where the definition requires a fidelity clause. A reader who already knows which output is the original, and who is looking for a feature they expect to find, scores those neighbouring clauses as satisfied — the item is recognisably the same kind of thing, and the difference lives one level down in which clause of the conjunction it satisfies. The names reinforce the error from the other side: the regenerations name their item almost as the original does, so a name-level check reports a match while the defined conjunction fails. The divergence between the two ways of reading is one-directional, and this is the second time in the same programme that it has run that way: the read that knows the answer credits more stability than the blinded measurement supports.",
+  "detection_path": "A blinded adjudication designed in advance for exactly this comparison. All fourteen candidate items across the original and both regenerations were pooled into one packet with the labels stripped; the packet's checksum and the withheld label-to-item mapping's checksum were both pinned in a design document frozen before any scoring; a fresh adjudicator with no access to the repository or to which item came from where scored every item against the rubric; the calls were committed before the mapping file entered the tree; then the mapping was revealed and its checksum verified against the pin. The unblinded reading had been filed in advance, explicitly as a hypothesis rather than a measurement, so that the size and direction of any divergence would be recorded rather than reconstructed.",
+  "consequence": "Without the blinded arm, a claim of one-to-two-out-of-two stability would have been published for a form whose measured stability at its own source is zero out of two, and a downstream verification stage would have been run to test a feature already known to be unstable — an estimated quarter of a million tokens spent filling a row the design's own interpretation table would have rendered unreadable. The result also fires a pre-registered disclosure that must be carried into every later reading of this feature. The general residue is stated plainly: a reading that knows the answer over-credits stability, in one consistent direction, twice now.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is whether a specific feature reproduces across same-input regenerations; the unit is the defect the blinding caught in how the same material had been read unblinded.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. The selected incident names both readings, the specific clause each regeneration failed, the direction of the divergence, and the prior occurrence; the alternative is a declared limit on an instrument with no instance attached.",
+    "alternatives_not_extracted": [
+      {
+        "what": "An overlap probe's positive control establishes only that the probe detects overlap where the overlap is very large (21% against a threshold of 0.1%); it does not establish the smallest overlap the probe would resolve. The threshold in use is therefore a conservative pinned bound read against a two-hundred-fold separation, not a measured detection floor — so a small real overlap could sit under it and be reported as zero.",
+        "why_not": "Declared as a caveat and pinned before use; no instance of it misleading a read is reported in this document. The selected incident has a measured, realized divergence."
+      },
+      {
+        "what": "The regenerated items carry a name almost identical to the original's, so any name-level check reports reproduction while the defined form fails.",
+        "why_not": "Reported as a confirmation of an existing standing rule rather than as a new incident, and it is one channel of the selected incident rather than a separate defect. Folded in above."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
+  }
+}

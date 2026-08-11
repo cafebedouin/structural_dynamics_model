@@ -1,0 +1,45 @@
+{
+  "source_dir": "2026-08-07_oq261_forced_gluing",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": false,
+  "files_read": [
+    "WRITEUP.md (full)",
+    "RECON.md (full)",
+    "PROPOSAL.md (targeted scan: frozen cells, floor rule, riders)",
+    "posthoc_symmetric_read_probe_output.txt",
+    "posthoc_253_164_diagnosis.txt",
+    "positive_control_probe_output.txt"
+  ],
+  "symptom": "A measure run over one selected set of positions returned a large definite number — 45 under the frozen selection, 55 under a wider one — and that number was read as a property of the selected set. Run afterwards over the complement set and over the whole set, the measure returned densities of 0.4945, 0.60 and 0.4952: the selected set and the whole set agree to within 0.001, and in every set the raw number equals exactly the product of the counts of the two labels present.",
+  "mechanism_as_described": "The positions being pooled have no identity across the documents they come from; each document assigns its own labels to its own positions. The six documents fall into two groups, and each group labels its positions with a single word — one word in one group, a different word in the other. The measure counts disagreeing pairs across the pooled set, so over a pooled vector containing exactly two distinct words it is the product of the two counts by arithmetic. Which positions were selected cannot change that shape, only the two counts. The number therefore reports the pooling convention and the group split, not anything about the property the selection was made to test. Nothing at the read site distinguishes the two: the measure emits an ordinary count in both cases, in range, with no marker that it was determined by the way the set was assembled. The exact product identity is what makes it visible — a value that cannot come out any other way — and it holds in all three sets, including the one the experiment was not about.",
+  "detection_path": "Not by the experiment's own controls, which passed: a same-family comparator produced the contrary outcome, a single-document control produced zero, and a validity probe cleared both of its numeric criteria — all of which were read as showing the measure was not vacuous. It was found by a symmetric read requested in review after the experiment had closed: run the identical measure over the complement of the selected set and over every position, and compare. The three-way comparison is what exposed the identity; the two-way design could not have, because the contrary outcomes came from sets with no group split to inherit.",
+  "consequence": "The experiment's headline cell was demoted after close. The scoped conclusion survives only at the altitude of what was actually operationalized; its weight against the idea it was built to test is minimal, because the construction could not have isolated that idea from the group structure. Had the complement never been run, a number that measures how a set was assembled would have entered the record as a substantive finding about the positions selected — and the controls that did run would have been cited as evidence it was not.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is an experiment on whether a substitute structure holds together; the unit is the defect found in that experiment's own measurement, reported in its post-close section.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. The selected incident is stated down to the arithmetic identity, the three measured densities, and the specific demotion it caused; the nearest alternative is stated as a diagnosis without a comparable read-site consequence.",
+    "alternatives_not_extracted": [
+      {
+        "what": "A recorded figure of 253 out of 468, cited as a stable property, did not reproduce: the live count is 164. The three input files are byte-stable since the record was made (one commit ever, an archive move), and the derived quantity is computed by a path that is itself byte-identical, so nothing at the file level would have shown the drift; what moved was the classification regime underneath. The record was correct when made and had silently stopped describing the current system. A numeric floor used by this experiment's validity control had been derived from the non-reproducing figure, so that criterion passed on contested provenance.",
+        "why_not": "Strong and fully described, but its consequence is a control passing on a floor derived from a stale number rather than a reported result being wrong; the selected incident demoted the directory's headline. Recorded so the choice is visible."
+      },
+      {
+        "what": "The validity control's second criterion compares against a quantity whose own test fixture is currently red on a case named for a silent-drop shape, so the invariant the control relies on is not definition-identical while that fixture is red; a re-run is pre-committed against fixing it.",
+        "why_not": "A declared and pre-committed residue rather than a realized instance; no wrong value was read."
+      },
+      {
+        "what": "The realized outcome shape was not among the three outcomes enumerated in the frozen design, so the pre-registered label could not be applied and the verdict had to be stated at an intermediate altitude.",
+        "why_not": "A gap in the design's enumeration, not an incident in the system under examination."
+      },
+      {
+        "what": "One variant came out undetermined by sparsity at exactly one unit below the floor, which is a boundary read rather than a robust abstention.",
+        "why_not": "Declared residue about a margin, no mechanism."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "self_audit_subsection",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1).",
+    "incident_location_reasoning": "The incident is in the document's post-close follow-up section, which examines the experiment's own measurement rather than the system the experiment was about."
+  }
+}

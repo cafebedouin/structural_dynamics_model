@@ -1,0 +1,40 @@
+{
+  "source_dir": "2026-07-20_five_leg_twin_comparison",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": false,
+  "files_read": [
+    "WRITEUP.md (full)",
+    "DEEPER_CUTS.md (full)",
+    "PARITY_WRITEUP.md (full)",
+    "BATTERY_WRITEUP.md (targeted scan)",
+    "five_leg_twin_comparison.py (targeted scan)"
+  ],
+  "symptom": "An experiment ran two conditions of one generator, labelled heavy and reduced, to test whether the amount of internal reasoning explains a difference in output quality. The reduced condition consumed more internal reasoning than the heavy one — 4617 against 3864 on one probe, 4942 against 3955 on the other. The flag that was supposed to disable the reasoning was accepted without complaint and did nothing.",
+  "mechanism_as_described": "The request carries a boolean asking the generator not to reason. The service accepts the request and returns normally; nothing in the response says the setting was ignored. The one observable that would show it — the count of reasoning units actually consumed — sits in the response metadata and is not part of the result the experiment reads, so an arm can be labelled reduced on the strength of the request rather than of the behaviour. Belief that the flag worked came from a single earlier probe where the count fell from 972 to 292; that generator's reasoning volume varies widely between draws, so one before-and-after pair is not distinguishable from noise, and the drop was read as the flag taking effect. The consequence propagates quietly: two conditions that were meant to differ on the manipulated variable are in fact two independent draws of the same condition, and any contrast between them measures draw-to-draw variation while carrying the name of the manipulation. The parallel arm on a second generator, where the same kind of setting did take effect, produced a clean contrast — 0 units against roughly one to three thousand — which is what made the failure visible by comparison rather than in isolation.",
+  "detection_path": "The write-up opens with a table of what actually varied: intended condition against the measured count of reasoning units consumed, per probe, per generator. Filling that table is what exposed it — the second generator's row confirms the instrument reads the quantity correctly and that a working setting shows up as a zero, so the first generator's rising counts cannot be dismissed as a reporting artifact. The earlier single probe was then re-read as a draw from a noisy distribution rather than as a manipulation check.",
+  "consequence": "The arm the experiment was built around did not exist. Reported honestly, its verdict is carried entirely by the other generator's arm plus a replication across two same-condition draws, and the specific question the arm was designed to answer — whether that generator stays sharp when its reasoning is suppressed — is recorded as not tested. Had the counts not been tabulated, the study would have reported a manipulation that never happened and attributed a null result to it; the two conditions would have differed slightly, as independent draws do, and the difference would have been read as an effect of the variable that never moved.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is a cross-generator comparison of five corpora; the unit is the instrument failure reported inside its follow-up parity study.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. This directory reports at least four separable defects; the selected one is the only one whose producing site (a setting accepted and ignored), the observable that would reveal it, the reason it was believed to work, and the effect on the conclusion are all stated.",
+    "alternatives_not_extracted": [
+      {
+        "what": "Two per-item counters were read as two independent signals of richness. Their means are identical to the digit on every one of the four corpora, because each item of one mints exactly one of the other; and the underlying event is the same disagreement structure already reported as the headline routing finding. One phenomenon was counted three times, twice as corroboration of itself. Corrected in the document from a first read that scored it as a positive.",
+        "why_not": "Very close second and it has a realized consequence within the document. Not selected because its mechanism is stated in two sentences where the selected one is stated with per-condition measurements; the identity of the two means is the whole of its evidence."
+      },
+      {
+        "what": "A published claim that one corpus was dramatically the cleanest, at a rate of 0.3%, was computed over the first 334 items of a pool rather than a random sample; at full size the rate is 2.7% and the claim does not hold. The paired agreement rates computed from the same partial were stable across the two sizes, so the partial looked trustworthy in one respect while being unrepresentative in the other.",
+        "why_not": "Realized — the claim was published in a first version and retracted in the second — but the mechanism is a non-random slice, stated without further structure. The selected incident's mechanism is deeper."
+      },
+      {
+        "what": "A distinctive-looking output shape was nearly reported as a property of one generator; a control showed the shape is near-universal inside that band across three of four generators, so what is generator-specific is only how much output is routed there, not the shape itself.",
+        "why_not": "A control working as intended and preventing a claim, rather than an incident. Recorded because the near-miss is informative."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "self_audit_subsection",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1).",
+    "incident_location_reasoning": "Reported in the follow-up study's opening instrumentation section, which audits whether the study's own manipulation happened, not in its subject matter."
+  }
+}
