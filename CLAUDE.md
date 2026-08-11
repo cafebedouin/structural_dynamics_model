@@ -668,6 +668,17 @@ rebuild** when accumulated schema/wiring changes seem to warrant it, but should 
 lightly or treat the singleton working set as something to fix. (Resolves the OQ-58 corpus-identity
 flag; the regime swap that produced the original three legs is witnessed in
 `audits/2026-06-20_oq58_cross_corpus_incompleteness/`; the kimi/sonnet legs were added afterward.)
+**A leg's MODEL is not its directory name — verify from `story_provenance` (or `classify_corpus`'s
+fingerprint refusal) before attributing or pooling (OQ-78, 2026-08-10).** `testsets_kimi/` is
+`kimi-k2.6` while the default leg's kimi stratum is `kimi-k3`, and `testsets_sonnet/` is
+`claude-sonnet-5` — the same model the default leg's largest stratum uses, so it is TEST data for
+any sonnet-5 question, not a neutral comparison leg. Pooling on the directory name fails silently.
+The four twin legs are ONE seed set re-authored per model (957 four-way matched ids), so a cross-leg
+contrast is *matched-seed across models* — topic and claimed_type mix held fixed, feeding constant —
+never a withheld-input arm. **Corollary: ε-keyed statistics are per-Author stratum and are NEVER
+pooled across legs** — the last-digit rail is model-bound (Claude→`.x8`, kimi→`.x2`, flash→`.x5`),
+so a pooled ε aggregate averages three different idioms into a number that looks fine and means
+nothing.
 **Test bed, not backfill target (operator clarification, 2026-06-24).** `testsets/` is the
 **evolving-schema test bed**: schema/prompt/scope changes are *encouraged* pre-rebuild and
 exercised HERE (the twins stay the stable matched-pair baseline). A change that breaks a

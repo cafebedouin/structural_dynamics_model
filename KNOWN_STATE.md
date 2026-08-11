@@ -45,6 +45,57 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-10 — [correction-key] OQ-78 idiom half read (pre-registered, zero-spend): CELL 2, no close — the `.x8` rail is FAMILY-bound not model-bound; the 0.68 point mass dissolved while the rail held
+**Files:** `ISSUES.md`, `issues/INDEX.md`, `issues/INDEX.json`, `audits/2026-08-10_oq78_idiom_close/`, `python/audits/oq78_railband_crosstab.py`, `outputs/pipeline_output.json`, `prolog/testsets_haiku/`, `prolog/testsets_flash/`, `prolog/testsets_kimi/`, `prolog/testsets_sonnet/`, `prolog/archives/datasets/kernel_v2_test2/`
+**Tier:** correction-key
+
+**Verdict.** Condition (ii) HOLDS (worst-pair AUC 0.886 vs threshold 0.635); **condition (i) FAILS**
+— sonnet-5 concentrates on `.x8` *within* its claimed_type bands (pooled concentration 0.331 vs
+pre-committed floor 0.25) on all three scored types. Cell 2 fired: **no close licensed**, OQ-78 stays
+`partial` and now routes BLOCKED ON YOU for a close-semantics ruling. Prereg md5
+`384e68bbac80e0959dba1294a6f6ee87`; commit `bfbe52ea`.
+
+**How ε-prevalence figures may now be cited.**
+- **Never pool ε statistics across author strata, and never across generation regimes within one
+  model.** Witnessed: default-leg sonnet-5 (c-orchestrator topic runs) and `testsets_sonnet` (bulk
+  kernel build) were kept separate and proved concordant (0.342 vs 0.331) — that was *measured*, not
+  assumed, and is the only reason the pooling question is settled for this pair.
+- **A model swap is a re-baseline event on the ε axis.** Every figure below is leg-and-model-indexed
+  and transfers across nothing.
+- **The idiom half is TWO things with opposite trajectories** — cite them separately from now on. The
+  0.68 point mass **dissolved** (archive 30.0% → sonnet-5 **7.3%**; distinct ε 13 → 52); the
+  `.x8`/`.x2` rail **held** (91.7% → 78.2%) with mass shifting between its arms (`.x8` 76.7→42.8,
+  `.x2` 15.0→35.5). sonnet-5's marginal is a **flattening within the rail, not a rail absence**.
+- **Model-boundedness is measured, not inferred**, on 957 matched seeds (one seed set re-authored per
+  model — topic and claimed_type mix held fixed by construction): four models, three argmax digits —
+  Claude→8, kimi→2, flash→5; `tv_model_digit` 0.365 vs label-permutation null max 0.045; all-agree
+  rate 1.25%. Every Claude-family population lands on 8, incl. two with a **zero-story id
+  intersection** (archive 0.767 / sonnet-4.5 derived 0.766). Only flash leaves the rail.
+- **This was matched-seed ACROSS MODELS, never a "matched-seed arm."** Seed fixed, model varied,
+  feeding constant on all four legs. The hypothesis-withholding falsifier (Ω_E) stays **unpurchased**.
+- **Dead premise corrected:** OQ-78's pinned graduation (zero-spend cross-arm read over OQ-109 Phase
+  C) assumed a 60-seed regen that was **descoped to a 5-seed pilot** (OQ-109, 2026-06-13). OQ-117's
+  "SEQUENCED AFTER this read" is discharged.
+
+**Two instrument defects caught pre-freeze (both Pattern 5 — gate passes because its input is
+degenerate).** (a) Condition (ii)'s originally-pinned p10–p90 interval-overlap measure scored **1.0
+on the comparator itself** (archive rope p90 = 0.68, dragged by the three documented kernel-reading
+exceptions), so its bootstrap threshold calibrated to 1.0 and *every possible banding would have
+passed*; the p25–p75 variant is vacuous the other way (0.000 on all four non-test legs). Replaced by
+worst-pair AUC — the only candidate that varies across legs. (b) The pinned minimum cell n=5 sits
+**below the uniform null median** (p50 0.300 at n=5, 0.200 at n=10), so small cells fire on noise;
+raised to 50, with the floor set to just admit the weakest true positive (kimi 0.281 vs floor 0.25).
+
+**Method notes for a re-run.** All four twin legs were classified zero-spend via serialized
+`classify_corpus` (~60–90s each; they share the raw artifact — do not parallelize). Leg-model
+attribution is verified from `story_provenance` and `classify_corpus`'s fingerprint refusal, **never
+the directory name**: `testsets_kimi` is `kimi-k2.6` while the default leg's kimi stratum is
+`kimi-k3` — different models, never pooled. The default leg moved **243 → 249 mid-session** under an
+operator topic run while all four twin-leg md5s stayed byte-identical, so it was frozen as a slim
+slice (`evidence/pipeline_output.frozen.slim.json`) before it could shift the band grid.
+
+---
+
 ## 2026-08-10 — [landed] OQ-277..280 minted + RQ2 cross-coding Phase 1: taxonomy fork and phantom §2.3 coding verified; Wu's own taxonomy fails to reproduce against itself (55%)
 **Files:** `ISSUES.md`, `issues/INDEX.md`, `issues/INDEX.json`, `audits/2026-08-10_oq277_rq2_crosscoding/`, `docs/amnesiac_institution/amnesiac_institution_v0.3.md`, `docs/technical/build_discipline.md`, `CLAUDE.md`
 **Tier:** landed

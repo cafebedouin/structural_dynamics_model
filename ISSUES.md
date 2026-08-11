@@ -3245,14 +3245,21 @@ the computed layer (tangled_rope ×4 seats, both constructions), divergent at th
 
 **Ω-type:** Ω_E (a measurement caveat on the corpus, quantifiable and trackable as it grows).
 
-**Status:** partial — **standing readout LANDED 2026-07-03 (OQ-205 U10)**: `python/epsilon_authorship_readout.py`
+**Status:** partial — **idiom half READ 2026-08-10, pre-registered and zero-spend; CELL 2 fired, no
+close licensed** (`audits/2026-08-10_oq78_idiom_close/`, prereg md5 `384e68bbac80e0959dba1294a6f6ee87`,
+commit `bfbe52ea`). Condition (ii) HOLDS (worst-pair AUC 0.886 vs threshold 0.635); **condition (i)
+FAILS** — sonnet-5 concentrates on `.x8` *within* its claimed_type bands (pooled concentration 0.331
+vs pre-committed floor 0.25), on all three scored types independently (rope 0.427, tangled_rope 0.316,
+snare 0.339-at-digit-1-with-28.1%-at-8). **The rail is FAMILY-bound, not model-bound**, so the
+condition — pinned to ask "is the `.x8` rail *sonnet-5's own*?" — fails at a coarser grain than it was
+written to detect. Escalated for a close-semantics ruling (see BLOCKED ON HUMAN below).
+**Standing readout LANDED 2026-07-03 (OQ-205 U10)**: `python/epsilon_authorship_readout.py`
 (pipeline Phase 9c; per-Author/Route stratum mode fraction, distinct values, last-digit histogram,
 exactly-at-threshold count from the `epsilon_provenance` emission — the one-off census is now a per-run
 surface; live-leg run cross-checks the 2026-07-03 census exactly: 0.68×46/110=41.8%, .x8/.x2 rail, and
 the rail is model-specific — flash sits on .x5/.x0). "Re-baseline on cohort zero" lands here for free.
-Three-fate split RATIFIED 2026-06-12 (one amendment: free-gate residual →
-**Priority:** 1
-OQ-117 at filing): quantization half CLOSED working-as-designed for SCOPE-stage statistics
+Three-fate split RATIFIED 2026-06-12 (one amendment: free-gate residual → OQ-117 at filing):
+quantization half CLOSED working-as-designed for SCOPE-stage statistics
 (ε-bin is 4-level by construction THERE); idiom half OPEN, re-baselined on cohort zero;
 independence circularity ESCALATED to OQ-117. **Probe HALTED pre-spend same day (greenlit, then
 killed in pre-flight recon): the epsilon_bin channel is DEAD at the generation interface — no
@@ -3266,6 +3273,77 @@ historical leak was the PRE-de-leak prompt's numeric type-bands (scrubbed at b6c
 **Origin:** n=91 build assessment (2026-06-06, commit `0fd22ea`, manifest run 03:50Z — coherent
 snapshot, 91 .pl = 91 .json = manifest n). Flagged as a watch at n=20 (`0.58` interior anchor gone,
 new `0.68` mode emerging); escalated to a finding at n=91.
+
+**Priority:** 1
+**Deps:** blocked_on_human oq78-close-semantics-ruling (family-bound idiom: close or hold open; see BLOCKED ON HUMAN 2026-08-10)
+
+### CORRECTION (2026-08-10) — the pinned graduation was DEAD-PREMISED
+
+The fate-2 graduation below ("zero-spend cross-arm read over OQ-109 Phase C") rested on Phase C's
+**60-seed** regen supplying a withheld arm on matched seeds. **That regen was descoped to a 5-seed
+pilot** (OQ-109 resolved 2026-06-13, n corrected to 5). The graduation step as written no longer
+exists; the paragraph below is retained as provenance, **not as a live plan**. It is replaced by
+the 2026-08-10 pre-registered observational read. **OQ-117's "design call remains SEQUENCED AFTER
+this read" is therefore DISCHARGED** — the read has run.
+
+### FINDING (2026-08-10) — the idiom half's two components came apart
+
+Measured across five live legs + the archive, all zero-spend (`WRITEUP.md` §3). **Post-hoc
+descriptive, not a pinned condition** — but it answers this OQ's own tracking question (a):
+
+| population | n | `.x8` | `.x2` | `.x8`+`.x2` | ε=0.68 | distinct ε |
+|---|---|---|---|---|---|---|
+| archive `kernel_v2_test2` | 60 | 76.7% | 15.0% | 91.7% | **30.0%** | **13** |
+| default derived sonnet-4.5 | 64 | 76.6% | 20.3% | 96.9% | 50.0% | 12 |
+| `testsets_haiku` | 960 | 62.3% | 19.8% | 82.1% | 31.8% | 42 |
+| `testsets_sonnet` (TEST) | 1001 | 42.8% | 35.5% | **78.2%** | **7.3%** | **52** |
+| `testsets_kimi` | 1005 | 27.7% | 38.1% | 65.8% | 5.3% | 68 |
+| `testsets_flash` | 960 | 2.9% | 0.5% | **3.4%** | 1.6% | 30 |
+
+**The 0.68 point mass DISSOLVED** (30% → 7.3%; distinct ε 13 → 52) while **the `.x8`/`.x2` rail
+HELD** (91.7% → 78.2%), with mass shifting *between its arms*. So sonnet-5's marginal is a
+**flattening within the rail, not a rail absence** — the two things this OQ framed as one
+("a 0.68 mode + 8/2 grid") now have opposite trajectories and should be tracked separately.
+
+**Model-boundedness is measured, not inferred.** On **957 matched seeds** (one seed set re-authored
+per model, so topic and claimed_type mix are held fixed by construction): four models, three argmax
+digits — Claude→**8**, kimi→**2**, flash→**5**; `tv_model_digit` 0.365 against a label-permutation
+null max of 0.045; **all-agree rate 1.25%**. Every Claude-family population lands on 8, including
+two with a **zero-story id intersection** (archive 0.767 / sonnet-4.5 derived 0.766). Only flash
+leaves the rail; kimi sits on its `.x2` arm.
+
+**Two instrument defects caught pre-freeze** (both Pattern 5 — a gate passing because its input is
+degenerate): condition (ii)'s originally-pinned p10–p90 interval-overlap measure scored **1.0 on the
+comparator itself**, so every possible banding would have passed (replaced by worst-pair AUC, the
+only candidate that varies across legs); and the pinned minimum cell n=5 sits **below the uniform
+null median** (p50 0.300 at n=5), so small cells would have fired on noise (raised to 50).
+
+### BLOCKED ON HUMAN (2026-08-10) — close-semantics ruling
+
+> **Is "the `.x8` rail is a Claude-family idiom, relocating across model families" a close of the
+> idiom half, or does the half stay open?**
+
+For closing: the model-dependence is measured on matched seeds with both known-negatives silent.
+For holding open: condition (i) *was* the pinned falsifier and it failed; and the point-mass/rail
+split above is a new two-part structure the original framing treated as one. **Sharpening read
+available zero-spend:** measure the rail on additional Claude-family models — the family map
+currently has **no Claude model off 8**, and that absence is what makes family-sharing un-falsified
+rather than confirmed. **NOT the remedy:** the matched-seed-across-models arm (it isolates the
+model, and the model is what already varied).
+
+**Carry-forward caveats (operative regardless of the ruling):**
+- **ε-keyed denominators are per-Author stratum, NEVER pooled.** Pooling regimes inside one model
+  is the same failure one level down — witnessed here: default-leg sonnet-5 and `testsets_sonnet`
+  are different generation regimes and were kept separate (they proved concordant at 0.342 vs
+  0.331, but that was measured, not assumed).
+- **A model swap is a re-baseline event on the ε axis.** Every prevalence figure above is
+  leg-and-model-indexed; none transfers across a model change.
+- **The hypothesis-withholding contrast stays UNPURCHASED, typed Ω_E**, activation = cells 3/4
+  (neither fired). This read was **matched-seed ACROSS MODELS** — seed fixed, model varied, feeding
+  constant on all four legs. It removes the topic/claimed_type composition confound and nothing
+  more. Never call it a "matched-seed arm."
+- **Leg-model attribution is verified from `story_provenance`, never the directory name** — the
+  kimi twin leg is `kimi-k2.6` while the default leg's kimi stratum is `kimi-k3`.
 
 **Cross-ref (2026-07-11):** OQ-188's read-site role-flip flag (`shared/role_flip.py`, standing
 legend + glyph) is now a live read-site CONSUMER of the f(d)-dominance this OQ measures — ε
