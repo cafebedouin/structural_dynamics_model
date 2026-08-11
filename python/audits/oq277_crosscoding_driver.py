@@ -1,9 +1,26 @@
 #!/usr/bin/env python3
 """OQ-277 cross-coding driver — payload capture, leak gate, k=3 bookkeeping.
 
-NO MODEL CALL HAS EVER BEEN MADE IN THIS AUDIT. `payloads/` and `responses/` are empty
-by design and stay that way until the operator's spend-go at preregistration freeze.
-This driver is written, tested and shipped against a STUBBED transport only.
+STATUS 2026-08-11 — one live run has been made (219 calls, spend-go granted at prereg
+freeze md5 4118f64e). `payloads/` holds its 221 files permanently. `responses/` is EMPTY
+because that run had no capture path: it computed labels in memory and persisted nothing.
+The run is unrecoverable; the repair is below.
+
+This header previously read "NO MODEL CALL HAS EVER BEEN MADE ... `payloads/` and
+`responses/` are empty by design." Every word was true when written and every word was
+false the moment the run happened — the same defect this file now guards against, in the
+file that guards against it. If you change this driver's spend state, change this header
+in the same commit.
+
+--------------------------------------------------------------------------------------
+GATE THE OUTPUT, NOT ONLY THE INPUT
+--------------------------------------------------------------------------------------
+Gates 1-3 are INPUT gates. They all passed on the run that persisted nothing, because
+nothing counted responses. Gate 4 is their mirror, and is deliberately stronger than a
+count: a count alone passes when every file is written empty. Responses are written raw,
+one per call, verified on landing, BEFORE the next call issues — so a run that dies at
+call 140 leaves 140 recoverable answers instead of zero, and label resolution reads back
+from disk rather than from the in-memory list.
 
 --------------------------------------------------------------------------------------
 WHY THE ORDER OF THE GATES IS THE CONTROL
@@ -51,7 +68,8 @@ Usage:
   python3 python/audits/oq277_crosscoding_driver.py --selftest
 """
 from __future__ import annotations
-import argparse, glob, hashlib, json, os, pathlib, re, shutil, sys, tempfile
+import argparse, glob, hashlib, json, os, pathlib, re, shutil, sys, tempfile, time
+from datetime import datetime, timezone
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import oq277_lexicon as LEX
@@ -395,6 +413,63 @@ def matrix_membership(leg: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
+def run_id_for(mode: str) -> str:
+    """A per-run identifier. Stable within a run, distinct across runs."""
+    prereg = AUDIT / "PREREGISTRATION.md"
+    base = md5(prereg.read_text()) if prereg.exists() else "no-prereg"
+    return f"{mode}-{base[:8]}-{md5(str(time.time_ns()))[:8]}"
+
+
+def stamp_run(d: pathlib.Path, run_id: str, mode: str, expected: int) -> None:
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "_run.json").write_text(json.dumps(
+        {"run_id": run_id, "mode": mode, "expected": expected,
+         "stamped_utc": datetime.now(timezone.utc).isoformat()}, indent=2) + "\n")
+
+
+def dir_run_id(d: pathlib.Path) -> str | None:
+    """The run that owns a capture directory, or None if it holds no run's data."""
+    p = d / "_run.json"
+    if not p.exists():
+        return None
+    try:
+        return json.loads(p.read_text()).get("run_id")
+    except Exception:                                                      # noqa: BLE001
+        return "UNREADABLE"
+
+
+def assert_no_self_contamination(live: pathlib.Path, run_id: str) -> None:
+    """PRESERVED GUARANTEE — the reason the old assertion existed: a STUB run must never
+    write into the canonical live capture directory.
+
+    RELAXED 2026-08-11 from emptiness to PROVENANCE, in its own change. The old form
+    demanded the canonical directory be empty, which was correct in a pre-spend world and
+    became permanently wrong the moment a live run happened: the spent run's 221 payload
+    files are a permanent artifact of this arc, and an invariant that treats their existence
+    as an error can never pass again.
+
+    What is dropped is the ACCIDENTAL guarantee (the directory is empty). What is kept is
+    the one that was ever load-bearing (this run's stub output is not in there). A later
+    reader seeing "assertion relaxed" should read it as narrowing to the real invariant,
+    not as a gate loosened to make something pass.
+    """
+    if run_id and dir_run_id(live) == run_id:
+        raise SystemExit(
+            f"REFUSED: {live} carries THIS run's id ({run_id}) — a stub run has written "
+            f"into the canonical live capture directory. The stub writes to *_stub/; a "
+            f"path constant has changed or a mode flag was lost.")
+
+
+def assert_no_foreign_run(target: pathlib.Path, run_id: str) -> None:
+    """A LIVE run must not mix with a prior run's data in its own capture directory."""
+    other = dir_run_id(target)
+    if other is not None and other != run_id:
+        raise SystemExit(
+            f"REFUSED: {target} already holds data from run {other}, and this is run "
+            f"{run_id}. Two runs' captures in one directory make the count meaningless "
+            f"and the provenance unrecoverable. Move the prior run aside first.")
+
+
 def assert_live_response_dir_untouched(live: pathlib.Path | None = None) -> None:
     """Same invariant as the payload directory, on the output side: the stub writes to
     `responses_stub/` and must never touch canonical `responses/`.
@@ -461,15 +536,21 @@ def run(stub: bool, dry_run: bool) -> int:
 
     gate_same_input(payloads, errors)
 
-    if stub:
-        assert_live_capture_dir_untouched()
+    run_id = run_id_for("stub" if stub else "live")
     out_dir = AUDIT / ("payloads_stub" if stub else "payloads")
+    if stub:
+        # Provenance, not emptiness: the canonical dirs legitimately hold the spent run.
+        assert_no_self_contamination(AUDIT / "payloads", run_id)
+        assert_no_self_contamination(AUDIT / "responses", run_id)
+    else:
+        assert_no_foreign_run(out_dir, run_id)
     dump_payloads(payloads, fixtures, out_dir)
+    stamp_run(out_dir, run_id, "stub" if stub else "live", expected)
     print(f"\n  dumped {expected} payloads + {len(fixtures)} fixtures to {out_dir.name}/ "
           f"BEFORE any send")
     if stub:
-        print(f"  (canonical payloads/ asserted EMPTY and left untouched — no call has "
-              f"ever been made)")
+        print(f"  (canonical payloads/ checked by PROVENANCE, not emptiness: it holds no "
+              f"data from this run)")
 
     gate_count(out_dir, expected, errors)
     gate_fixtures(out_dir, len(fixtures), errors)
@@ -482,14 +563,11 @@ def run(stub: bool, dry_run: bool) -> int:
         return 1
 
     resp_dir = AUDIT / ("responses_stub" if stub else "responses")
-    if stub:
-        assert_live_response_dir_untouched()
-    if not stub and glob.glob(str(resp_dir / "*" / "*.json")):
-        print(f"\n  ABORT — {resp_dir.name}/ already holds responses. Refusing to overwrite "
-              f"or mix a prior run's data; move it aside first.")
-        return 1
+    if not stub:
+        assert_no_foreign_run(resp_dir, run_id)
     shutil.rmtree(resp_dir, ignore_errors=True)
     resp_dir.mkdir(parents=True, exist_ok=True)
+    stamp_run(resp_dir, run_id, "stub" if stub else "live", expected)
 
     transport = stub_transport if stub else live_transport
     results = []
@@ -676,6 +754,53 @@ def selftest() -> int:
             return False
         finally:
             shutil.rmtree(d, ignore_errors=True)
+
+    # Provenance keying — RELAXED 2026-08-11 from "the canonical dir must be EMPTY" to
+    # "it must hold no data from THIS run". Emptiness became permanently unsatisfiable once
+    # a live run happened; the spent run's files are a permanent artifact. Three cases,
+    # because relaxing an assertion owes a demonstration that what remains still bites.
+    print("\ncapture-dir provenance — keyed on run id, not on emptiness:")
+
+    def contamination_case(stamp_with: str | None, run_id: str) -> bool:
+        """True if assert_no_self_contamination REFUSES."""
+        d = pathlib.Path(tempfile.mkdtemp())
+        try:
+            if stamp_with:
+                stamp_run(d, stamp_with, "stub", 3)
+                (d / "direction_i").mkdir()
+                (d / "direction_i" / "x__k1.json").write_text("{}")
+            assert_no_self_contamination(d, run_id)
+            return False
+        except SystemExit:
+            return True
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    check("REFUSES: canonical dir carries THIS run's id (the stub leaked into live)",
+          contamination_case("run-A", "run-A"))
+    check("PROCEEDS: dir holds a DIFFERENT run's data — the spent run is a permanent artifact",
+          not contamination_case("run-A", "run-B"))
+    check("PROCEEDS: an empty dir still passes",
+          not contamination_case(None, "run-B"))
+    def foreign_run_case(stamp_with: str | None, run_id: str) -> bool:
+        """True if assert_no_foreign_run REFUSES."""
+        d = pathlib.Path(tempfile.mkdtemp())
+        try:
+            if stamp_with:
+                stamp_run(d, stamp_with, "live", 3)
+            assert_no_foreign_run(d, run_id)
+            return False
+        except SystemExit:
+            return True
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    check("REFUSES: a live run would mix with a PRIOR run's capture",
+          foreign_run_case("run-A", "run-B"))
+    check("PROCEEDS: the same run re-entering its own capture dir",
+          not foreign_run_case("run-A", "run-A"))
+    check("PROCEEDS: an unstamped (fresh) capture dir",
+          not foreign_run_case(None, "run-B"))
 
     check("write_response() persists the raw text and verifies it landed", write_response_lands())
     check("the stub NEVER writes to canonical responses/ — refusal fires on a dirty dir",
