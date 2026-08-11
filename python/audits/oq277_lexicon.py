@@ -32,7 +32,7 @@ Usage:
     python3 python/audits/oq277_lexicon.py --sweep <units.json> --direction {i,ii}
 """
 from __future__ import annotations
-import argparse, json, re, sys
+import argparse, json, os, re, sys, tempfile
 
 # ---------------------------------------------------------------------------
 # Direction (i): Wu's incidents, coded against OUR six. Strip WU's vocabulary.
@@ -269,10 +269,46 @@ def scan(text: str, direction: str, lexicon: dict | None = None):
     return hits
 
 
+class UnitsFormatError(Exception):
+    """A units file whose shape cannot be resolved. Raised rather than swept as empty."""
+
+
+def load_units(path: str):
+    """Resolve a units file to a list of unit objects. THREE shapes are accepted.
+
+    1. a JSON list of unit objects
+    2. a dict wrapper carrying them under "units"
+    3. a SINGLE unit object (a bare dict, no "units" key)
+
+    Shape 3 is why this function exists. The original test was
+    `data["units"] if isinstance(data, dict) else data`, and a single unit object IS a
+    dict, so a one-unit file took the wrapper branch and died on KeyError: 'units'. Two
+    extractors were told to sweep single-object files by a brief that specified this
+    exact call, and both hit it (OQ-277, 2026-08-11).
+
+    Fail-closed: a dict that is neither a wrapper nor a recognisable unit raises rather
+    than resolving to []. Sweeping zero units and reporting "0 hits" is the shape this
+    whole experiment is about.
+    """
+    if isinstance(data := json.load(open(path)), list):
+        return data
+    if not isinstance(data, dict):
+        raise UnitsFormatError(f"{path}: top level is {type(data).__name__}, expected list or object")
+    if "units" in data:
+        if not isinstance(data["units"], list):
+            raise UnitsFormatError(f"{path}: 'units' is {type(data['units']).__name__}, expected list")
+        return data["units"]
+    if any(f in data for f in CODER_FACING_FIELDS) or "id" in data:
+        return [data]                      # shape 3 — a single unit object
+    raise UnitsFormatError(
+        f"{path}: object has no 'units' key and no coder-facing field "
+        f"({', '.join(CODER_FACING_FIELDS)}) or 'id' — cannot tell a wrapper from a unit. "
+        f"Refusing to sweep 0 units.")
+
+
 def scan_units(path: str, direction: str):
     """Sweep the coder-facing fields of a units file. Returns [(unit_id, field, *hit)]."""
-    data = json.load(open(path))
-    units = data["units"] if isinstance(data, dict) else data
+    units = load_units(path)
     out = []
     for u in units:
         for f in CODER_FACING_FIELDS:
@@ -364,6 +400,68 @@ def selftest() -> bool:
     print("\nmatcher-integrity control — a matcher that never fires must fail this:")
     check("scan() is capable of returning hits at all",
           len(scan("Class A fail-plausible MR-4", "i")) >= 3)
+
+    # ---- input-shape controls (added 2026-08-11 after the second receiver hit the
+    # single-object KeyError). These go through a REAL file and the real json.load, not
+    # a dict handed straight to the normaliser: the defect was on the file path, and a
+    # control that skips the path it is protecting witnesses nothing.
+    print("\ninput-shape controls — all three accepted shapes, on the real file path:")
+    unit_clean = {"id": "shape-probe", "symptom": "a value was read as measured.",
+                  "mechanism_as_described": "an empty collection acquired a plausible default.",
+                  "detection_path": "two metrics disagreed over one input.",
+                  "consequence": "the reading stood for its whole life."}
+    unit_leaky = dict(unit_clean, id="shape-probe-leak",
+                      symptom="this is a P6 instance, textbook success-shaped absorption.")
+    with tempfile.TemporaryDirectory() as td:
+        def written(name, obj):
+            p = os.path.join(td, name)
+            with open(p, "w") as fh:
+                json.dump(obj, fh)
+            return p
+
+        def check_call(label, fn, want):
+            """FAIL on a raised exception instead of dying. A selftest that aborts
+            partway is the same crash-vs-result confusion this block exists to fix —
+            the run ends, the remaining cases never report, and the exit code is
+            shared with an ordinary RED."""
+            try:
+                check(label, want(fn()))
+            except Exception as exc:                                      # noqa: BLE001
+                check(f"{label}  [raised {type(exc).__name__}]", False)
+
+        single, single_leak = written("single.json", unit_clean), written("leak.json", unit_leaky)
+        as_list, wrapped = written("list.json", [unit_clean]), written("wrap.json", {"units": [unit_clean]})
+        junk = written("junk.json", {"note": "no units key, no coder-facing field"})
+
+        # (a) it CONSUMES a single object rather than raising — the reported defect
+        try:
+            n_single, raised = len(load_units(single)), None
+        except Exception as exc:                                          # noqa: BLE001
+            n_single, raised = -1, exc
+        check("single unit OBJECT file is consumed, not KeyError", raised is None)
+        check("single unit object resolves to exactly 1 unit", n_single == 1)
+
+        # (b) and the sweep over it actually LOOKS — "consumed" must not mean "swept nothing".
+        #     Without this pair, a fix that returned [] would pass (a) and be worse than
+        #     the crash it replaced.
+        check_call("planted leak in a single-object file IS caught",
+                   lambda: scan_units(single_leak, "ii"), lambda h: len(h) > 0)
+        check_call("clean single-object file yields no hits",
+                   lambda: scan_units(single, "ii"), lambda h: not h)
+
+        # (c) the two pre-existing shapes are unchanged
+        check_call("list form still resolves", lambda: load_units(as_list), lambda u: len(u) == 1)
+        check_call("{'units': [...]} wrapper still resolves",
+                   lambda: load_units(wrapped), lambda u: len(u) == 1)
+
+        # (d) fail-closed: an unrecognisable object must RAISE, never sweep 0 units
+        try:
+            load_units(junk); junk_ok = False
+        except UnitsFormatError:
+            junk_ok = True
+        except Exception:                                                 # noqa: BLE001
+            junk_ok = False
+        check("unrecognisable object RAISES rather than sweeping 0 units", junk_ok)
     return ok
 
 
@@ -386,17 +484,33 @@ def main():
         if not a.direction:
             print("--sweep requires --direction", file=sys.stderr)
             return 2
+        units = load_units(a.sweep)
         hits = scan_units(a.sweep, a.direction)
         for uid, field, group, pat, txt, ctx in hits:
             print(f"  LEAK {uid}.{field}  [{group}] {pat} -> {txt!r}\n       ...{ctx}...")
-        n = json.load(open(a.sweep))
-        n = len(n["units"] if isinstance(n, dict) else n)
-        print(f"\nswept {n} units x {len(CODER_FACING_FIELDS)} fields, direction ({a.direction}): "
-              f"{len(hits)} hits")
+        print(f"\nswept {len(units)} units x {len(CODER_FACING_FIELDS)} fields, "
+              f"direction ({a.direction}): {len(hits)} hits")
         return 1 if hits else 0
     ap.print_help()
     return 2
 
 
+# Exit codes are part of this tool's interface and a caller MAY branch on them.
+#   0  swept, no hits          2  usage error
+#   1  swept, HITS FOUND       3  did not sweep — aborted before producing a verdict
+#
+# 3 exists because 1 used to double as "leaks found" and "crashed on load", and the
+# crash printed no LEAK lines — so a wrapper reading stdout for leaks saw a clean sweep
+# with a failure exit. A crash and a leak were indistinguishable at the interface, and
+# the crash produced the QUIETER of the two outputs. The stdout marker below is
+# deliberate: a caller that greps stdout and never reads stderr must still see it.
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except SystemExit:
+        raise
+    except BaseException as exc:                      # noqa: BLE001 — deliberate catch-all
+        print("SWEEP-ABORTED — no verdict was produced. This is NOT a clean sweep.")
+        print(f"  {type(exc).__name__}: {exc}", file=sys.stderr)
+        import traceback; traceback.print_exc(file=sys.stderr)
+        sys.exit(3)
