@@ -161,6 +161,16 @@ unit `05` now serving as a twin, that (iii′) disqualification is *conservative
 required* — different label spaces, different runs. It stands as declared and n=10 is unchanged;
 noted so a reader does not later read it as a second, independent collision.
 
+**Third instance of the same shape (2026-08-11, found at packet assembly).** §H.1 — the *authoritative
+statement of the boundary rule* — contains a worked adjudication of a directory that is in the sample,
+and that directory came up in the threshold probe's primary draw, so the clause could not ship
+verbatim to a blind judge without supplying one item's verdict. Same collision as the disqualified P6
+anchor and the oq93 twin: **the richest exemplar is the one that cannot be used, because it is already
+in the run.** The recurring cause is that a specification and its own test case keep sharing an
+artifact — the exemplar that makes a rule legible is drawn from the same population the rule is being
+measured against. Resolved there by redaction-with-declared-omissions rather than by re-drawing
+(`packets/escape_units/PREREGISTRATION_threshold_calibration.md` → *Assembly record*).
+
 `oq97_pattern6_census` (unit `07`) was checked the same way and is **clean**: its incident is the
 census finding that a repair applied at one site was never swept to the others, which is none of
 the three published P6 exemplars.

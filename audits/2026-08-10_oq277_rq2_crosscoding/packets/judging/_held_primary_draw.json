@@ -1,0 +1,13 @@
+{
+  "seed": 20260811,
+  "method": "random.Random(SEED); sorted pool per incident_location; r.choice(subject) then r.choice(self_audit_subsection)",
+  "pool_sizes": {
+    "subject": 17,
+    "self_audit_subsection": 5
+  },
+  "location_match": "EXACT \u2014 both escape-side incident_location values present in the primary stratum; no substitution",
+  "drawn": {
+    "subject": "02_blocking_gate.json",
+    "self_audit_subsection": "08_oq131_six_observer.json"
+  }
+}

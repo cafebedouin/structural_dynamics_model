@@ -145,6 +145,25 @@ the operator's instruction as a design contribution rather than a side effect: j
 to composition is what prevents this probe from anchoring the later §H.2 confirmation of the same
 two candidates, closing a circularity the confirmation would otherwise have walked into.
 
+### RETIRED (operator, 2026-08-11, at assembly, before any judging) — **not satisfied**
+
+**Amendment 1 is RETIRED.** The operator is not the judge; the judge is a fresh instance with no
+history of this arc. Amendment 1's entire content was *the operator judges, under three conditions*,
+and with the operator out of the seat there is nothing left for the three conditions to govern.
+
+This is the amendment's own declared fallback taken, and its declared cost comes with it:
+**the same-family confound now applies to the calibration arm, and it is DECLARED, NOT REPAIRED.**
+A fresh instance judging these units is a party from the same family as the party whose threshold is
+under test. Amendment 1 priced this exactly ("a fresh instance is genuinely blind to them, and pays
+for it in variance and in judging its own family") and no repair is available: the third convention
+holder it would take does not exist. **Any outcome of this probe — AGREE or VOID — is read under
+that confound.** Retirement is not satisfaction: nothing here shows the confound is absent or small.
+
+Condition 3's substance survives on its own footing and is NOT retired with the rest: the judge is
+still blind to composition and still judges before any §H.2 confirmation of the two drawn
+candidates, which is what stops this pass anchoring that confirmation. It now holds by construction
+(a fresh instance cannot know the composition) rather than by the operator's undertaking.
+
 ## Amendment 3 (operator, 2026-08-11, still before any run) — the recognition flag gets its own control
 
 The recognition flag is a self-report from the party it constrains — the same structure as the
@@ -183,13 +202,39 @@ test in both directions (unavoidable — they designed it; what stays hidden is 
 not *that* controls exist). **Not adopted unless the operator rules it in; the five-item design
 stands as pre-registered either way.**
 
+### RETIRED (operator, 2026-08-11, at assembly, before any judging) — **not satisfied**
+
+**Amendment 3 is RETIRED, and the fifth item with it, together with the recognition flag it
+controlled.** Ground: **the judge no longer has history.** Recognition was a risk only because the
+operator had read the primary sample; a fresh instance has read none of it, so recognition is
+impossible by construction and the control is **vacuous rather than merely expensive**. Retired on
+that ground — not on cost, and not because the control was ever satisfied.
+
+The assembler separately found the fifth item unbuildable as specified: extracting a fresh unit means
+reading source prose, every tool result lands in the operator's terminal, so requirement 2 ("never
+shown to the judge") was unachievable without a spend-go'd blind subagent. Recorded as the *weaker*
+reason. The governing one is vacuity.
+
+**What retirement does NOT close.** Amendment 3 existed to make *false* recognition checkable, and
+its own text already declared that *silent* recognition — the direction that would actually make the
+arm circular — stayed open. Both channels are now out of scope rather than closed: with no flags
+collected, neither is measured. The sixth-item completing arm is moot and is not re-offered.
+
+**Consequently there are no recognition flags in this pass**, and the fifth row of the pre-committed
+outcome table ("recognition flagged on the unseen fifth item → arm VOID") **cannot fire**. It must
+not be read as having passed: it is a row with no instrument behind it.
+
 ## Amendment 4 (extractor, 2026-08-11, before any run) — what the judge sees, pinned
 
 Found while writing the assembler's instructions: the design above says *what is judged* and never
 says *what is shown*, which leaves the assembler to decide it — and the choice changes the result.
 Pinned now rather than at assembly time.
 
-**Shown, for every one of the five items, identically:** the four coder-facing fields only —
+> **Amended 2026-08-11 at assembly:** "five items" below now reads **four**, Amendment 3 having been
+> retired above. Nothing else in Amendment 4 changes — the pin on *what is shown* is what governed
+> the assembly, and it is the reason §H.1 shipped redacted (see the assembly record).
+
+**Shown, for every one of the ~~five~~ four items, identically:** the four coder-facing fields only —
 `symptom`, `mechanism_as_described`, `detection_path`, `consequence` — verbatim, in that order,
 under a neutral item number.
 
@@ -211,7 +256,12 @@ stripping was supposed to remove.
 
 1. **Primary-side draw** — two extracted primary units, matched on `incident_location` to the escape
    draws where available, mismatch declared if not, seed recorded before anything is shown.
-2. **Fifth item** — the unseen recognition control, per Amendment 3's four requirements.
+2. ~~**Fifth item** — the unseen recognition control, per Amendment 3's four requirements.~~
+   **STRUCK 2026-08-11 (operator), not merely superseded.** Amendment 3 is retired above; this line
+   was stale text the retirement failed to strike, and the assembler surfaced the contradiction
+   rather than picking a side. Struck explicitly here because a stale instruction sitting beside a
+   live one is two copies parsing — Build Discipline Pattern 2, the same shape the §1 edit already
+   corrected once this arc. **Do not build a fifth item.**
 3. **Assembly** — strip labels, randomize order with a stated seed, hold the key, tell the judge
    nothing about composition.
 4. **Frame census across all 22 escape directories** — `frame_audit_prose_census.py` in this
@@ -225,6 +275,88 @@ two of which are in my sample and are exactly my two NO-UNITs. **In-frame, the e
 candidates from 6 directories, not 6 from 8.** This does not change the probe's design, its draw, or
 its outcome semantics. It changes the stakes: there is no longer a NO-UNIT in my slice that could be
 read as the threshold behaving conservatively somewhere.
+
+## Assembly record (assembler, 2026-08-11) — written before the packet was shown to anyone
+
+Two operator clarifications were taken during assembly. Both sit inside this prereg's existing
+grammar, so neither is an amendment: the retirements above, and the §H.1 redaction below.
+
+### Queue 1 — primary-side draw
+
+Seed **`20260811`**, method identical to the escape-side draw (`random.Random(SEED)`, sorted pool per
+`incident_location`, `subject` first then `self_audit_subsection`), executed by
+`packets/judging/draw_primary.py` and recorded before anything was assembled.
+
+- **Location match: EXACT. Nothing to declare.** Both escape-side `incident_location` values are
+  present in the primary stratum (`subject` n=17, `self_audit_subsection` n=5 across 26 units); the
+  script fails closed rather than substituting, so no undeclared substitution is possible.
+- **Rule 1 (known-positives) checked, not assumed:** all 26 pool members assert non-empty on all four
+  coder-facing fields. There is no NO-UNIT in the pool that a draw could have landed on.
+
+### Queue 3 — assembly, and the §H.1 collision found while doing it
+
+Presentation order seed **`20260811`** (`random.Random(SEED).shuffle`) over a canonical
+`(stratum, path)` sort. Packet, key, and verdict template are separate files; the key was committed
+with the packet and before the packet was shown to any judge, both md5s recorded in `audit_log.md`.
+
+**§H.1 could not ship fully verbatim.** Its text adjudicates one specifically named directory as a
+UNIT — and that directory is **one of the two primary draws** — and it separately defines the
+`incident_location` values, which Amendment 4 forbids showing. Verbatim shipping would have handed
+the judge one calibration item's verdict plus the stratification key.
+
+**Operator ruling: redact and declare** (2026-08-11). The boundary-rule blockquote and its "why this
+line" rationale ship verbatim; the two offending paragraphs are omitted, **each marked in place with
+its reason and the total count stated**, never silently shortened, with path and commit `4360fcdc` so
+the full text is recoverable. The rejected alternative was re-drawing the primary side to dodge the
+collision — that would have traded a declared redaction for an undeclared selection effect and broken
+the no-re-roll rule. The packet also tells the judge that if the rule cannot be applied without the
+omitted paragraph, they should say so rather than guess: that would be a finding about §H.1's
+self-sufficiency, which Amendment 1 asserted when it argued a model judge was unnecessary.
+
+**A residual label the stripping did not remove — declared, not repaired.** In the realized draw,
+**total field length separates the two strata perfectly**: the two primaries total 1,420 and 1,529
+characters, the two candidates 3,331 and 3,472, an 1,802-character gap with nothing between. Internal
+formatting is uniform (no field in any item contains a newline) and a scan for lexical tells
+(`escape`, `quarantin`, `candidate`, `no-unit`, `incident_location`, `self_audit`, …) returns **zero
+hits in all four items**, so this is the only surviving discriminator. It cannot be repaired without
+breaking Amendment 4's *verbatim* pin or re-rolling the draw. **Direction of the bias, stated because
+it cuts the expensive way:** the candidates are the items supplying more described mechanism, and more
+described mechanism makes `extract` easier to reach — so the residue pushes toward **AGREE**, the
+outcome this probe treats as costly, not toward the cheap VOID. This upgrades the pre-registered limit
+"length … uncontrolled" to *length is confounded with stratum in this specific draw*.
+
+### Queue 4 — frame census
+
+`frame_audit_prose_census.py` run at commit-time state; listing md5 `ecc91562…` **MATCH** against the
+frozen manifest; two-sided control **GREEN**.
+
+| population | seeable (≥1 `.md`, recursive) | unseeable (zero `.md`) |
+|---|---|---|
+| all 101 non-census dirs (the escape stratum's full frame) | 97 | 4 |
+| the drawn escape sample | 6 | **2** |
+| the drawn primary sample | 22 | **0** |
+
+Partition check 97 + 4 = 101. Of the 97 seeable, 0 have `.md` totalling zero bytes.
+
+**The instruction said "all 22 escape directories"; there is no such population, and this is a
+correction rather than a completion.** The frozen frame draws **n_escape = 8** and **n_primary = 22**
+(`frame/draw_sample.py`, `frame/sample.json`, seed `20260810`). The "22" is the primary draw. The
+census over all 101 is a superset of any escape subset, so the number the frame audit wanted is
+computed here rather than left open — and it is **2 of 8**, exactly the count the escape extractor
+already reported from its own slice. There are no "other 14" escape directories to visit.
+
+Two consequences for `FRAME_AUDIT_prose_visibility.md`, which assumed the larger population:
+
+1. Its "the count must be done over all 22 drawn directories" resolves to **0 unseeable**, and
+   **necessarily so**: the primary sample is drawn from the *incident-bearing* stratum, which is
+   defined by a grep over `--include='*.md'`, so every member has an `.md` by construction. That
+   arithmetic could not have come out any other way — a consistency check, not a discrimination
+   check, and it licenses no reassurance.
+2. The n it actually loosens is therefore **n=8, not n=22**. The 12.7% figure is §H.2's *primary-side
+   false-positive* bound and is untouched by unseeable directories. The escape side's own licence is
+   the ~31% recall bound at n=8, and with 2 of 8 out of frame the effective n is **6**, giving
+   1 − 0.05^(1/6) ≈ **39.3%**. That is a **looser** bound, i.e. a null is *less* reassuring — the
+   one-way direction the frame audit already declared. Moot while six candidates are proposed.
 
 ## Result
 
