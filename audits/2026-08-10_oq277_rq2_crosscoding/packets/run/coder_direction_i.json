@@ -1,0 +1,212 @@
+[
+  {
+    "id": "i-26",
+    "symptom": "Every call to an external interface began failing immediately with an explicit rejection naming the offending parameter. The failure rate was total and instant: the first call after the change failed, and so did every call after it. No result was produced, and nothing downstream received a value of any kind.",
+    "mechanism_as_described": "A newer version of the external service stopped accepting a sampling parameter the caller had always sent. The service rejects the request outright and returns an error naming the parameter it will not accept. Because the rejection happens before any work is done, there is no partial result, no default substituted for the rejected value, and no path by which a caller could mistake the outcome for success. The caller's own retry wrapper surfaced the error rather than swallowing it.",
+    "detection_path": "The first run after the change failed loudly and stopped. No investigation was required to discover that something was wrong; the error text named the parameter.",
+    "consequence": "Calls failed for the few hours between the change and the fix, which was to stop sending the parameter. Nothing was computed on a wrong basis in that window, because nothing was computed at all. No output produced during the window needed to be revisited."
+  },
+  {
+    "id": "i-28",
+    "symptom": "Users received a redundant 'HTTP 502' alert two days running, carrying nothing they could act on. The dataset records the artifact as 错误被稀释, 非编造 — the error was DILUTED, not fabricated (fail_plausible: no, llm_fabrication: no).",
+    "mechanism_as_described": "Class C — 错误吞噬与稀释 (error swallowing and dilution). The class is defined as: the error really happened, but was silently eaten by some layer, or the upstream cause was diluted while being passed across layers, so what the end user finally sees is 'success' or an alert that has lost its information. This case is the dilution sub-mechanism across 三跳 (three hops), adapter→proxy→client. Qwen3's circuit breaker was OPEN and Gemini returned 429; the adapter returned a 502; the proxy took only str(e) — 'HTTP 502' — without calling e.read() to get the response body carrying the detail; the client then raised its own HTTPError and dropped the body a second time. The true cause, 'gemini 429 quota 耗尽' (Gemini 429 quota exhaustion), was present at the first hop and 经 3 跳稀释完全不可见 — completely invisible after dilution across three hops. Nothing was swallowed outright; the cause was diluted at each boundary until only a transport code survived. Associated meta-rules: MR-4 (第 9 次 — its 9th recurrence), MR-13 error-chain-preserve-cause, INV-OBSERVABILITY-001.",
+    "detection_path": "discovery_channel: user-view. A person received the alerts and noticed they were unactionable.",
+    "consequence": "Two days of alerts naming a symptom nobody could act on, while the actual cause went unnamed. silence_span: days. The row is recorded as out-of-scope for the content-reading observer: 诚实边界 — an honest boundary, since a reader of content structurally cannot catch this."
+  },
+  {
+    "id": "i-01",
+    "symptom": "Pushed user-facing messages showed the title field containing a literal separator string, with username and star-count values landing in the wrong slots.",
+    "mechanism_as_described": "A parser consumed generated output by fixed line offsets — reading index i, i+1, i+2 and advancing by three — on the assumption that the generator emits exactly N lines per record. The generator intermittently omitted a line. Every subsequent field then shifted by one position, and the shift propagated through the entire remaining record set rather than failing at the point of the omission. Every shifted record still parsed successfully.",
+    "detection_path": "A person read the pushed message and saw the wrong content in the title slot.",
+    "consequence": "Corrupted field content was delivered to users while the parse itself reported success throughout. Reported silent interval: days."
+  },
+  {
+    "id": "i-24",
+    "symptom": "One script exists at two paths — a working location and a copy made for testing. Both parse, both run, and no queryable fact records which one the system actually uses.",
+    "mechanism_as_described": "A file was copied to a second location and subsequently edited there. Nothing marks either copy as the canonical one; the fact lives only in whichever invocation path happens to run. A change applied to the non-canonical copy writes its results into a file the live process never reads. The change itself succeeds: it is syntactically valid, it runs, its output is well-formed, and it is verified as written. Only the effect is absent.",
+    "detection_path": "Resolving which copy is canonical by evidence rather than by preference — which path the run commands invoke, which imports resolve, and which copy version control shows as recently touched — and then recording the verdict somewhere queryable instead of remembering it.",
+    "consequence": "A repair can be applied, reviewed, and confirmed as written while having no effect on the running system, presenting throughout as complete."
+  },
+  {
+    "id": "i-02",
+    "symptom": "Backups to an external volume failed for six days without producing any signal.",
+    "mechanism_as_described": "The filesystem returned transient permission errors under load. Eighteen or more copy-pasted sites across the scripts ended with a redirect discarding the error stream followed by a forced success return, so each site individually converted a real failure into a clean exit. No single site was remarkable; together they guaranteed that no failure anywhere on that path could reach a log or an alert. Monitoring did not cover the gap the pattern created.",
+    "detection_path": "Log forensics, after the gap was noticed downstream.",
+    "consequence": "Six days with no backup and no signal of any kind. Reported silent interval: 5-6 days."
+  },
+  {
+    "id": "i-03",
+    "symptom": "Twenty caller scripts began dying part-way through execution every day; a field missing from a last-run record was misdiagnosed as the callers being outdated scripts.",
+    "mechanism_as_described": "A retry helper was changed to propagate the underlying transfer command's exit code. Every caller ran under a shell option that terminates the script on any non-zero return, so a transfer failure that had previously been contained inside the helper now killed the calling script at that line. The repair for one silent failure produced a deeper one: the callers stopped mid-script leaving no record of why, and the resulting partial records were read as a different problem entirely.",
+    "detection_path": "A routine check, which then misattributed the cause before the real one was found.",
+    "consequence": "An eight-day gap in backups. The failure presented as stale or odd records rather than as an error. Reported silent interval: 8 days."
+  },
+  {
+    "id": "i-04",
+    "symptom": "A monitoring component's path resolver missed on all three of its candidate locations for five days. Its status file recorded nothing, while the component reported itself functioning.",
+    "mechanism_as_described": "The automated deployment file map did not copy the configuration file to the home-directory location on the target machine, and the resolver's three candidate paths did not include the location the file actually occupied there. Every lookup therefore missed and the component fell through to a fallback path without raising anything. The status file that was supposed to close the loop was never written — so the only available signal was the absence of a file, and nothing was reading for it.",
+    "detection_path": "The component's own self-critique surfaced it; not a user report and not an external check.",
+    "consequence": "Five days of silent fallback, during which the component's own health reporting promised a closed loop it had never delivered. Reported silent interval: 5 days."
+  },
+  {
+    "id": "i-05",
+    "symptom": "Backups to an external volume returned permission errors for 60 days. Six successive hypotheses about the cause were each falsified.",
+    "mechanism_as_described": "The operating system's privacy subsystem denies processes spawned by the scheduling daemon access to external volumes, because that daemon holds no full-disk access by default. The reason it took 60 days to find is separate from the cause: the diagnostic collectors used to investigate — file-handle listing, access-control listing — were themselves denied by the same subsystem and returned empty output. Empty output was read as 'nothing anomalous here' rather than 'this instrument was blocked'. The system-log query that finally exposed the denial had never been run in those 60 days.",
+    "detection_path": "Log forensics, once a system-log query with an explicit predicate was finally run.",
+    "consequence": "60 days of silent backup failure — the longest interval in the corpus — with six wrong hypotheses each consuming an investigation cycle. Reported silent interval: 60 days."
+  },
+  {
+    "id": "i-06",
+    "symptom": "Users received a redundant 'HTTP 502' alert two days running, carrying nothing they could act on.",
+    "mechanism_as_described": "Three layers each discarded part of the cause. The upstream adapter returned a 502. The proxy captured only the string form of the exception — 'HTTP 502' — without reading the response body that carried the detail. The client then raised its own error and dropped the body a second time. The real cause was an upstream quota exhaustion (a 429) present at the first hop and completely invisible by the third. Nothing was swallowed outright; the cause was thinned at each boundary until only a transport code survived.",
+    "detection_path": "A person received the alerts and noticed they were unactionable.",
+    "consequence": "Two days of alerts naming a symptom nobody could act on, while the actual cause went unnamed. Reported silent interval: 2 days."
+  },
+  {
+    "id": "i-07",
+    "symptom": "An internal audit summary line reported that all invariants held, while checks underneath it were erroring out rather than passing.",
+    "mechanism_as_described": "The summary counted only records whose status equalled 'fail'. It did not count records whose status was 'error'. A scoping error inside a dynamically-executed check raised an exception, which produced 'error' records — exactly the ones the count skipped. The result was an affirmative all-clear computed over checks that had not actually run. The auditing layer could not see its own execution.",
+    "detection_path": "Self-observation — the audit apparatus examining itself, not an external report.",
+    "consequence": "67 checks were vacuous for months while the summary reported success over them. Reported silent interval: months."
+  },
+  {
+    "id": "i-08",
+    "symptom": "A front-page digest push delivered five bullet points that were all the same hard-coded placeholder string, with titles left untranslated.",
+    "mechanism_as_described": "One model provider went down. The adapter's fallback fired thirty-plus calls at a second provider in response, exhausting that provider's quota as well. With both unavailable, the code path emitted its hard-coded placeholder string for every bullet and completed normally. A single job's failure propagated across unrelated jobs through the shared quota, and the output kept the exact shape of a successful run.",
+    "detection_path": "A person read the delivered digest and saw five identical placeholder bullets.",
+    "consequence": "A push with the precise form of a normal digest and none of its content. Reported silent interval: hours."
+  },
+  {
+    "id": "i-09",
+    "symptom": "Three upstream accounts had stopped publishing between 420 and 3,364 days earlier. Fetches against them returned HTTP 200 with parseable content the entire time.",
+    "mechanism_as_described": "The syndication endpoint returns a stale cached snapshot for dormant accounts rather than an error or an empty result. The health check tested transport success — a 200 status and parseable markup — which the dead accounts satisfied indefinitely. A 72-hour window yielding zero items raised no alarm either, because zero items is a valid parse of a well-formed response. Freshness was never tested; only retrievability was.",
+    "detection_path": "A person noticed the downstream output had become sparse.",
+    "consequence": "Stale content delivered as fresh, and thin output that no check treated as anomalous. Reported silent interval: days."
+  },
+  {
+    "id": "i-10",
+    "symptom": "A two-stage batch job timed out at 60 minutes repeatedly, and its second (reduce) stage never executed at all.",
+    "mechanism_as_described": "The cache key was sensitive to file modification times and to sort order, both of which drift between runs. As the workload grew past a threshold, cache hits stopped occurring, the first stage recomputed everything from scratch, and the reduce stage never received budget within the timeout. The cache was assumed to be stable under that drift and was not; the downstream stage was written not to trust the cache, which removed the remaining margin.",
+    "detection_path": "Log forensics — reconstructed from run logs after the fact.",
+    "consequence": "The job produced no output at all; no content artifact reached any user, so there was nothing for a reader to find wrong. Reported silent interval: hours."
+  },
+  {
+    "id": "i-25",
+    "symptom": "A certifying check passes for every item in the corpus, and reads as 'this condition was checked and found to hold'. It holds because the table it consults has no rows at all: no item anywhere carries the datum the check counts, so the count is zero for all of them — by the datum being missing, not by the condition being evaluated.",
+    "mechanism_as_described": "The gate asserts that a count equals zero. The count is a join across two relations, one of which is empty corpus-wide. An empty join yields zero, and zero satisfies the gate, so the gate passes universally. The passing value produced this way and a genuinely computed passing value are the same value, so no consumer can separate them. The same shape appears twice more in the immediate neighbourhood: a universally-quantified check over the same empty table is satisfied trivially, and an averaging helper returns a fabricated default for any quantity that has no rows.",
+    "detection_path": "Counting the rows of the source relation on the corpus — zero — rather than reading the gate. A gate over a possibly-empty table is a no-op exactly when the table is empty, and that is directly checkable without reasoning about the gate at all.",
+    "consequence": "404 certifications that read as 'no such party exists' in fact mean 'no such party was ever recorded'. Every consumer treating the certification as a finding about the world is reading a fact about the completeness of the data."
+  },
+  {
+    "id": "i-23",
+    "symptom": "A derived artifact reported over a smaller working set than the system currently held, while presenting as current. Its own embedded provenance stamp named an older snapshot and a older code state, and nothing compared that stamp against the data it claimed to describe.",
+    "mechanism_as_described": "The artifact was produced by a step that ran once, outside the orchestrated sequence. It consumed its inputs correctly at the time and wrote a well-formed output, so it looked finished. When the orchestrator later refreshed the upstream data — the working set grew from 563 items to 772 — nothing re-ran the step, because it had never been wired into the sequence. The stale output stayed in place and went on being read as current. Having consumed its inputs once is exactly what made it look done; nothing in the artifact or in any consumer distinguished 'computed from the current data' from 'computed from data two hundred items ago'.",
+    "detection_path": "Comparing the artifact's own embedded provenance stamp against the provenance of the data it claimed to describe, rather than reading its contents for plausibility. The stamp named a smaller count and an older code state than the live one.",
+    "consequence": "Any analysis joining against the artifact silently mixed two snapshots. Repaired by wiring the step into the orchestrated sequence after the step that refreshes its input, and by adding an assertion that refuses the join when the two provenance stamps disagree."
+  },
+  {
+    "id": "i-11",
+    "symptom": "A knowledge-review push contained container headings — the wrapper titles of a digest — instead of the entities the review was meant to summarize, while the status file recorded a successful model run every time.",
+    "mechanism_as_described": "Six defects overlapped, each masking the symptoms the others would otherwise have produced: an ordering problem in shell exports, a hard-coded source enumeration that silently omitted newly added sources, and a mechanical fallback that emitted leftover container-title text whenever the model call failed. The status file wrote its success flag unconditionally, so the record of success was computed independently of whether anything had succeeded.",
+    "detection_path": "A person read the pushes and recognized the content as wrapper titles.",
+    "consequence": "Weeks of pushes with the form of a review and none of its content, with a status record affirming success throughout. Reported silent interval: weeks."
+  },
+  {
+    "id": "i-27",
+    "symptom": "An organisation published its annual report two weeks after the date it had announced. The delay was known internally three weeks in advance, was communicated to the board when it became known, and was announced publicly before the original date passed.",
+    "mechanism_as_described": "The report cannot be published until an external reviewer signs off on one section. The reviewer's own schedule slipped because a prior engagement over-ran. Each party knew the true state of the schedule at every point: the reviewer told the organisation when the slip became likely, the organisation told its board the same week, and the published date moved once and then held. No step reported completion it had not reached, no missing input was treated as a present one, and at no time did any party hold a belief about the schedule that the evidence available to them contradicted.",
+    "detection_path": "Nothing had to be detected. The delay was reported by the party causing it, before it happened, through the channel that exists for reporting it.",
+    "consequence": "The report appeared two weeks late. Readers waited two weeks. No decision was taken on the basis of a document that did not yet exist, and no version of the report circulated in the interim."
+  },
+  {
+    "id": "i-12",
+    "symptom": "A new scheduled job was implemented, tested and entered in the registry, but its scheduler line was never written. It never ran once.",
+    "mechanism_as_described": "Three checks each failed to catch it, and each failed for its own reason. The pre-flight check grepped only for interval drift, so a job absent from the scheduler matched nothing to complain about. The schedule-editing wrapper did not inspect its own exit code. And a count comparison of 35 against 35 used a strict less-than test, so an unchanged count returned a success mark. The job existed in the registry and not in the scheduler, and nothing in the system compared those two records against each other.",
+    "detection_path": "A person noticed the job's output was never arriving.",
+    "consequence": "The job's output was simply absent, and the absence was reported as healthy by three separate checks. Reported silent interval: 1+ days."
+  },
+  {
+    "id": "i-29",
+    "symptom": "WhatsApp was 完全静默 — completely silent, an absence — dead for nine hours, while Discord continued working normally. fail_plausible: no; the artifact is absence, not wrong content.",
+    "mechanism_as_described": "Class E — 运维遗漏与取证盲区 (operational omission and forensic blind spot), here the operational-omission sub-mechanism, whose definition is: the code is correct but a deployment, registration or configuration step is missed — 声明态 ≠ 运行时态, declared state is not runtime state. The row's own omission point is 告警链依赖失效主体: the alert chain depends on the failing subject. restart.sh caused the Gateway to crash quickly after coming up, and 三放大器同时失效 — three amplifiers failed simultaneously: quiet_alert swallowed three CRITICALs in the small hours, wa_keepalive only wrote to a log and raised no alert, and restart.sh did not verify health after restarting. Every one of the three alerting paths ran through the component that had died. Amplifier is one layer of the 三层根因模式 — 触发器 / 放大器 / 掩护者 (trigger / amplifier / concealer) — the root-cause structure the catalog reports in nearly every case. Associated meta-rules: MR-4 (第 11 次 — its 11th recurrence), MR-14 alert-path-not-depend-on-failing-subject, INV-WA-001/QUIET-001.",
+    "detection_path": "discovery_channel: user-view. A person noticed one channel had gone quiet while the other still worked.",
+    "consequence": "Nine hours of channel death with all three alarms silent. silence_span: 9h. Recorded as out-of-scope for the content-reading observer: 总静默/缺席, 无内容可读 — total silence and absence, with no content to read; the responsibility is 告警链独立性 (MR-14), alert-chain independence."
+  },
+  {
+    "id": "i-30",
+    "symptom": "SSD backups to an external volume returned EPERM — permission errors — silently for 60 days, and 取证工具自身被静默拒: the forensic tools were themselves silently refused. 60 天 6 假说全证伪 — over 60 days, six successive hypotheses about the cause were each falsified. observable_artifact: 备份 EPERM, 无面向用户语义产物 — a backup EPERM with no user-facing semantic artifact. fail_plausible: no.",
+    "mechanism_as_described": "Class E — 运维遗漏与取证盲区 (operational omission and forensic blind spot), here the 取证盲区 / forensic-blind-spot sub-mechanism, whose definition is: the debugging tool is itself blocked and returns empty content, which is misread as 'normal', producing an extra-long latency. The true cause: macOS TCC Sandbox denies cron-spawned processes access to external volumes, because the cron daemon holds no FDA (full-disk access) by default. The reason it took 60 days to find is separate from the cause: at V37.9.30 the lsof and ACL collectors used to investigate were themselves 被 sandbox 拒绝 — refused by the same sandbox — and returned empty, and that empty output 被误读为 normal/empty 6 周: misread as 'nothing anomalous here' rather than 'this instrument was blocked', for six weeks. The system-log query that finally exposed the denial had never been run in those 60 days. The dataset row assigns taxonomy_class: A, while the catalog places the case under Class E and the same dataset row's paper_class_ref cites §4.5 E (forensic blind spot, 60-day). Associated meta-rules: MR-4, MR-10 (反向第 5 次教训 — the 5th reverse lesson), a candidate meta-rule macos-cron-fda, INV-MOVESPEED-TCC-001.",
+    "detection_path": "discovery_channel: log-forensics. Found once a system-log query with an explicit predicate was finally run.",
+    "consequence": "60 days of silent backup failure — corpus 最长潜伏, the longest latency in the corpus and the paper's §5.1 headline — with six wrong hypotheses each consuming an investigation cycle. silence_span: 60 days. The design doc pins it as out-of-scope for the content-reading observer: a reader of content cannot see deployment or OS-policy seams, and prevention for this class comes from human eyes, adversarial audit, or target-environment exposure (audit-as-regression)."
+  },
+  {
+    "id": "i-13",
+    "symptom": "Stored note titles contained language-native dictionary syntax; source files accumulated duplicate second-level headings.",
+    "mechanism_as_described": "Two defects in one incident. First, a multimodal content list was serialized with a language-native repr call, so the literal list-of-dictionaries text was written into the store and then read back as input by a downstream generation stage. Second, fourteen scheduled jobs each appended to the source files through a raw shell redirect instead of a shared write helper, so each run re-appended headings that were already present and nothing deduplicated them.",
+    "detection_path": "A routine check, not a user report.",
+    "consequence": "Stored content was structurally corrupted in a way that still parsed and still looked like content to every downstream consumer. Reported silent interval: days."
+  },
+  {
+    "id": "i-14",
+    "symptom": "The staleness detector written to close the previous incident missed two edge cases: a feed 99% aged but not entirely aged, and a stub returning zero items.",
+    "mechanism_as_described": "The question of what the minimal repair should be was answered as 'strict equality is enough'. The resulting test compared aged count against total count for exact equality, which passed anything short of complete staleness, including a feed 99% dead. A separate guard requiring a positive total then skipped the zero-item stub entirely. The repair for a detection gap left two narrower gaps of the same kind, in the detector built to close it.",
+    "detection_path": "An end-to-end run the same evening surfaced it.",
+    "consequence": "The detector reported healthy for precisely the feeds it had been written to catch. Reported silent interval: not applicable (caught same evening)."
+  },
+  {
+    "id": "i-15",
+    "symptom": "One messaging channel was completely dead for nine hours while a second channel continued working normally.",
+    "mechanism_as_described": "A restart script caused the gateway to crash quickly after coming up. Three separate alerting paths then failed at the same time: an overnight quiet-hours rule suppressed three critical alerts, a keepalive check wrote its findings to a log without raising any alert, and the restart script did not verify health after restarting. Every one of the three alerting paths ran through the component that had died.",
+    "detection_path": "A person noticed one channel had gone quiet while the other still worked.",
+    "consequence": "Nine hours of channel death with all three alarms silent. Reported silent interval: 9h."
+  },
+  {
+    "id": "i-16",
+    "symptom": "The assistant linked a user's own model to an unrelated stored note as though the two were equivalent, and claimed it had permanently saved the material to the knowledge store without having invoked any tool.",
+    "mechanism_as_described": "The assistant's guidance file contained no rule licensing disagreement, so its default posture toward user statements was accommodation. The user's expressed doubt was reflected back as agreement, the user then cited that reflection as support, and the loop amplified across turns. The claim of having saved the material was ungrounded in a second way: the model does not call the write tool on its own initiative, so nothing was written.",
+    "detection_path": "A person recognized the association as strained during the exchange itself.",
+    "consequence": "A false claim of persistence plus a strained association presented as insight. Reported silent interval: a single reply (caught in the same exchange)."
+  },
+  {
+    "id": "i-17",
+    "symptom": "After a repair that corrected file ownership, the permission-error rate was exactly unchanged.",
+    "mechanism_as_described": "A user-ID mismatch, masked by a mount option that suppresses ownership enforcement, was a real defect and was correctly fixed. It was not the cause of the permission errors. The flat before-and-after rate is what established this: the repair was right and the diagnosis was wrong, and the only reason that became visible is that the rate was measured after the fix rather than assumed to have improved.",
+    "detection_path": "Log forensics — comparing error rates across the repair boundary.",
+    "consequence": "A correct repair consumed a diagnostic cycle without moving the failure it was meant to address, and would have been recorded as a fix had the rate not been re-measured. Reported silent interval: weeks."
+  },
+  {
+    "id": "i-18",
+    "symptom": "The assistant stopped answering entirely for 13 hours, replying to every incoming message with content the gateway then stripped to nothing.",
+    "mechanism_as_described": "The assistant's file-write tool wrote a 'task complete' line into a reserved control file. Writing to that file activates a mechanism that makes the assistant answer all incoming messages with a fixed acknowledgement token, and the gateway strips that token before delivery. The assistant had write permission on the file that governs whether it can speak at all, so a routine write disabled it.",
+    "detection_path": "A person noticed the absence of replies.",
+    "consequence": "13 hours of total silence, presenting to the user as the assistant simply not replying. Reported silent interval: 13h."
+  },
+  {
+    "id": "i-19",
+    "symptom": "A single outbound message of 8,131 characters appeared to the recipient as two separate chat bubbles carrying the same timestamp.",
+    "mechanism_as_described": "The recipient's client application folds messages above roughly 4,000 characters at display time. The folding happens in the client rendering layer — not in the transport protocol, and not in any sending-side splitting code, which is where the team looked first. The sending system had been built against a documented 1,400-character limit that had never been measured against production behaviour, so both the assumed limit and the assumed location of the splitting were wrong.",
+    "detection_path": "A person read the delivered message in the recipient application. No automated check reported anything.",
+    "consequence": "Message presentation diverged from what the sending system believed it had sent, with no error raised anywhere in the pipeline. Reported silent interval: hours to weeks."
+  },
+  {
+    "id": "i-20",
+    "symptom": "A user asked a question about ontology, randomness and Bayesian reasoning. The assistant replied that it had received a system alert follow-up task, and supplied operating-system permission-granting steps for a scheduled job.",
+    "mechanism_as_described": "Alert pushes were written into the conversation session file under the assistant role. The proxy's truncation window retained them. The next user turn was therefore evaluated against a context whose most recent assistant content was an operational alert, so a new and unrelated question was read as follow-up to that alert. The answer was internally coherent and confidently delivered; it answered a question nobody had asked.",
+    "detection_path": "A person noticed, after pressing the point three times, that the replies did not match the question.",
+    "consequence": "A well-formed, confident answer to a substituted question. Reported silent interval: a 36-minute window between the alert and the user's question."
+  },
+  {
+    "id": "i-21",
+    "symptom": "A deployment synchronization problem was diagnosed as a missing configuration file. Five successive rounds of repair followed, adding four layers of new complexity, when a single file copy was what the situation actually required.",
+    "mechanism_as_described": "No diagnostic step separated the observed symptom from its cause before repair began. The first repair was reflexive — it addressed the surface presentation rather than the mismatch that produced it — and each subsequent round then had to address the presentation produced by the previous round. The cascade is a property of starting repair before understanding, not of any one of the five changes.",
+    "detection_path": "Surfaced by a pre-deployment check on the development side, not by runtime behaviour.",
+    "consequence": "Four layers of unnecessary complexity entered the system while the actual defect — a file that was never copied to the target — remained. Reported silent interval: not applicable (development side)."
+  },
+  {
+    "id": "i-22",
+    "symptom": "A scheduled analysis push presented users with a warning about a platform crisis at a named company. No such crisis existed.",
+    "mechanism_as_described": "An error page — carrying text like 'Error code: 400', 'Bad JSON' and 'Waiting Ns before retry' — was written to standard output by a shell function. The caller captured that stream via command substitution into a signals variable and wrote it to the cache. The downstream synthesis stage read the cache, treated the error text as an external market signal, and composed a plausible narrative explaining it. Sending the function's output to standard error instead of standard output breaks the entire chain at its first link.",
+    "detection_path": "A person read the push the same night it was delivered.",
+    "consequence": "A fabricated analysis delivered to users in the system's normal reporting format, indistinguishable in form from a real one. Reported silent interval: hours (same-night push)."
+  }
+]
