@@ -1,0 +1,88 @@
+{
+  "_role": "Control (c) — redaction-bias pairs, direction (i). Each pair is the SAME incident coded twice, redacted and unredacted, k=3 each, QUARANTINED from all matrices and EXEMPT from H2's leak rule. Report Delta('other' rate) = the redaction floor.",
+
+  "_pairs_are_predeclared": "controls/redaction_pairs_predeclared.json, direction_i. The three units were fixed by a mechanical rule (top by banned-term count in each unit's SOURCE rows, stratified 2 agreeing + 1 disagreeing) before this file existed. Nothing here selects.",
+
+  "_direction_i_is_unaffected_by_the_selection_defect": "controls/redaction_pair_selection_defect.md found that direction (ii)'s density metric counted a different taxonomy (bare P1/P2/P3 used as local probe names). Direction (i) was checked, not assumed: its three selected units carry 6, 6 and 3 UNAMBIGUOUS hits in their catalog rows (MR-4, MR-13, MR-14, MR-10, INV-*, 稀释, 放大器), and the generic-English bans (trigger/amplifier/dilution) contributed 1 ambiguous hit across all three. These arms have real vocabulary to restore.",
+
+  "_authoring_rule_held": "The unredacted arm preserves the vocabulary THE SOURCE ITSELF USES, at the points the source uses it, and ADDS NOTHING. This is un-stripping, not labelling. Every restored term below is quoted or directly translated from an md5-pinned source row cited per field. Writing in an attribution the source does not make would make the floor measure the extractor's labelling instead of redaction's cost.",
+
+  "_translation_note": "Wu's catalog is Chinese with English technical terms. Restored vocabulary is given as the source's own term with a faithful English rendering, because the coder reads English — the same convention the redacted units were extracted under. Where a term is a proper name of Wu's taxonomy (class names, meta-rule ids) the original is carried alongside.",
+
+  "_sanity_check_required": "Both directions of the check, asserted by verify_redaction_twins.py: every unredacted arm here MUST FAIL the direction-(i) leak sweep (it is exempt, not clean) and its redacted twin in packets/wu_units.json MUST PASS. A pair where both arms pass is a pair where nothing was un-redacted, and it would report a floor of zero by construction.",
+
+  "pairs": [
+    {
+      "pair_id": "twin_i_1",
+      "unit_id": "kb_evening_fallback_quota_chain",
+      "redacted_arm": "packets/wu_units.json -> units[id=kb_evening_fallback_quota_chain]",
+      "source_rows": {
+        "catalog_row": "packets/wu_source/failure_modes_catalog.md:118 (under the Class C table, header :110)",
+        "dataset_row": "packets/wu_source/llm_observer_ground_truth.yaml:227"
+      },
+      "restored_from_source": [
+        "Class C / 错误吞噬与稀释 (error swallowing and dilution) — the table this row sits under, :110",
+        "the class definition sentence at :112",
+        "稀释 / diluted — the catalog row's own word for this mechanism ('经 3 跳稀释完全不可见')",
+        "三跳 / three hops; adapter→proxy→client",
+        "MR-4 (第 9 次 / 9th occurrence), MR-13 error-chain-preserve-cause, INV-OBSERVABILITY-001",
+        "taxonomy_class: C, fail_plausible: no, llm_fabrication: no (dataset row)",
+        "the concrete system names the redaction stripped: Qwen3 circuit breaker OPEN, Gemini 429"
+      ],
+      "unredacted": {
+        "symptom": "Users received a redundant 'HTTP 502' alert two days running, carrying nothing they could act on. The dataset records the artifact as 错误被稀释, 非编造 — the error was DILUTED, not fabricated (fail_plausible: no, llm_fabrication: no).",
+        "mechanism_as_described": "Class C — 错误吞噬与稀释 (error swallowing and dilution). The class is defined as: the error really happened, but was silently eaten by some layer, or the upstream cause was diluted while being passed across layers, so what the end user finally sees is 'success' or an alert that has lost its information. This case is the dilution sub-mechanism across 三跳 (three hops), adapter→proxy→client. Qwen3's circuit breaker was OPEN and Gemini returned 429; the adapter returned a 502; the proxy took only str(e) — 'HTTP 502' — without calling e.read() to get the response body carrying the detail; the client then raised its own HTTPError and dropped the body a second time. The true cause, 'gemini 429 quota 耗尽' (Gemini 429 quota exhaustion), was present at the first hop and 经 3 跳稀释完全不可见 — completely invisible after dilution across three hops. Nothing was swallowed outright; the cause was diluted at each boundary until only a transport code survived. Associated meta-rules: MR-4 (第 9 次 — its 9th recurrence), MR-13 error-chain-preserve-cause, INV-OBSERVABILITY-001.",
+        "detection_path": "discovery_channel: user-view. A person received the alerts and noticed they were unactionable.",
+        "consequence": "Two days of alerts naming a symptom nobody could act on, while the actual cause went unnamed. silence_span: days. The row is recorded as out-of-scope for the content-reading observer: 诚实边界 — an honest boundary, since a reader of content structurally cannot catch this."
+      }
+    },
+    {
+      "pair_id": "twin_i_2",
+      "unit_id": "whatsapp_silent_death",
+      "redacted_arm": "packets/wu_units.json -> units[id=whatsapp_silent_death]",
+      "source_rows": {
+        "catalog_row": "packets/wu_source/failure_modes_catalog.md:157 (under the Class E table, header :148)",
+        "dataset_row": "packets/wu_source/llm_observer_ground_truth.yaml:427"
+      },
+      "restored_from_source": [
+        "Class E / 运维遗漏与取证盲区 (operational omission and forensic blind spot) — the table this row sits under, :148",
+        "the two sub-mechanism definitions at :150-151",
+        "放大器 / amplifier — the catalog row's own word ('三放大器同时失效'), a layer of Wu's 触发器/放大器/掩护者 (trigger/amplifier/concealer) root-cause model at :194",
+        "告警链依赖失效主体 — 'the alert chain depends on the failing subject', the row's own omission-point label",
+        "MR-4 (第 11 次 / 11th occurrence), MR-14 alert-path-not-depend-on-failing-subject, INV-WA-001/QUIET-001",
+        "taxonomy_class: E, fail_plausible: no",
+        "the concrete names the redaction stripped: Gateway, WhatsApp, Discord, quiet_alert, wa_keepalive, restart.sh"
+      ],
+      "unredacted": {
+        "symptom": "WhatsApp was 完全静默 — completely silent, an absence — dead for nine hours, while Discord continued working normally. fail_plausible: no; the artifact is absence, not wrong content.",
+        "mechanism_as_described": "Class E — 运维遗漏与取证盲区 (operational omission and forensic blind spot), here the operational-omission sub-mechanism, whose definition is: the code is correct but a deployment, registration or configuration step is missed — 声明态 ≠ 运行时态, declared state is not runtime state. The row's own omission point is 告警链依赖失效主体: the alert chain depends on the failing subject. restart.sh caused the Gateway to crash quickly after coming up, and 三放大器同时失效 — three amplifiers failed simultaneously: quiet_alert swallowed three CRITICALs in the small hours, wa_keepalive only wrote to a log and raised no alert, and restart.sh did not verify health after restarting. Every one of the three alerting paths ran through the component that had died. Amplifier is one layer of the 三层根因模式 — 触发器 / 放大器 / 掩护者 (trigger / amplifier / concealer) — the root-cause structure the catalog reports in nearly every case. Associated meta-rules: MR-4 (第 11 次 — its 11th recurrence), MR-14 alert-path-not-depend-on-failing-subject, INV-WA-001/QUIET-001.",
+        "detection_path": "discovery_channel: user-view. A person noticed one channel had gone quiet while the other still worked.",
+        "consequence": "Nine hours of channel death with all three alarms silent. silence_span: 9h. Recorded as out-of-scope for the content-reading observer: 总静默/缺席, 无内容可读 — total silence and absence, with no content to read; the responsibility is 告警链独立性 (MR-14), alert-chain independence."
+      }
+    },
+    {
+      "pair_id": "twin_i_3",
+      "unit_id": "movespeed_tcc_sandbox",
+      "redacted_arm": "packets/wu_units.json -> units[id=movespeed_tcc_sandbox]",
+      "source_rows": {
+        "catalog_row": "packets/wu_source/failure_modes_catalog.md:162 (under the Class E table, header :148)",
+        "dataset_row": "packets/wu_source/llm_observer_ground_truth.yaml:301"
+      },
+      "stratum_note": "This is the DISAGREEING-stratum member of the pre-declared pair set: the catalog places it under Class E while the dataset row assigns taxonomy_class: A, and that same row's own paper_class_ref cites '§4.5 E (forensic blind spot, 60-day)' — E and only E. The unredacted arm restores BOTH assignments as the source states them, and does not adjudicate between them; adjudicating would be coding.",
+      "restored_from_source": [
+        "Class E / 运维遗漏与取证盲区 — the catalog table this row sits under, :148",
+        "取证盲区 / forensic blind spot — the second sub-mechanism definition at :151, which is this case",
+        "taxonomy_class: A (dataset row) AND paper_class_ref '§4.5 E (forensic blind spot, 60-day)' (same row) — both, unadjudicated",
+        "MR-4, MR-10 (反向第 5 次教训 / the 5th reverse lesson), macos-cron-fda 候选元规则 (candidate meta-rule), INV-MOVESPEED-TCC-001",
+        "60 天 6 假说全证伪 — 60 days, six hypotheses all falsified; 采集器自身被 sandbox 拒绝 — the collectors were themselves refused by the sandbox",
+        "the concrete names the redaction stripped: macOS TCC Sandbox, cron daemon, FDA (full-disk access), lsof/ACL, SSD, EPERM"
+      ],
+      "unredacted": {
+        "symptom": "SSD backups to an external volume returned EPERM — permission errors — silently for 60 days, and 取证工具自身被静默拒: the forensic tools were themselves silently refused. 60 天 6 假说全证伪 — over 60 days, six successive hypotheses about the cause were each falsified. observable_artifact: 备份 EPERM, 无面向用户语义产物 — a backup EPERM with no user-facing semantic artifact. fail_plausible: no.",
+        "mechanism_as_described": "Class E — 运维遗漏与取证盲区 (operational omission and forensic blind spot), here the 取证盲区 / forensic-blind-spot sub-mechanism, whose definition is: the debugging tool is itself blocked and returns empty content, which is misread as 'normal', producing an extra-long latency. The true cause: macOS TCC Sandbox denies cron-spawned processes access to external volumes, because the cron daemon holds no FDA (full-disk access) by default. The reason it took 60 days to find is separate from the cause: at V37.9.30 the lsof and ACL collectors used to investigate were themselves 被 sandbox 拒绝 — refused by the same sandbox — and returned empty, and that empty output 被误读为 normal/empty 6 周: misread as 'nothing anomalous here' rather than 'this instrument was blocked', for six weeks. The system-log query that finally exposed the denial had never been run in those 60 days. The dataset row assigns taxonomy_class: A, while the catalog places the case under Class E and the same dataset row's paper_class_ref cites §4.5 E (forensic blind spot, 60-day). Associated meta-rules: MR-4, MR-10 (反向第 5 次教训 — the 5th reverse lesson), a candidate meta-rule macos-cron-fda, INV-MOVESPEED-TCC-001.",
+        "detection_path": "discovery_channel: log-forensics. Found once a system-log query with an explicit predicate was finally run.",
+        "consequence": "60 days of silent backup failure — corpus 最长潜伏, the longest latency in the corpus and the paper's §5.1 headline — with six wrong hypotheses each consuming an investigation cycle. silence_span: 60 days. The design doc pins it as out-of-scope for the content-reading observer: a reader of content cannot see deployment or OS-policy seams, and prevention for this class comes from human eyes, adversarial audit, or target-environment exposure (audit-as-regression)."
+      }
+    }
+  ]
+}
