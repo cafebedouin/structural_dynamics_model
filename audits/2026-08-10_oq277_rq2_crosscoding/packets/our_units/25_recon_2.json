@@ -1,0 +1,43 @@
+{
+  "source_dir": "2025-05-15_recon_2",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": true,
+  "files_read": [
+    "recon_2_predictions_check.md (full)",
+    "recon_2_concepts.md (full)",
+    "recon_2_patterns.md (full)",
+    "recon_2_inventory.md (targeted scan: facade chain, exists-but-unnamed, purpose-mismatch, scope-boundary sections)"
+  ],
+  "symptom": "A named quantity is reported as one of a small set of words — sound, borderline, degraded — and the same word denotes a different numeric range depending on which module produced it. Three modules each define a predicate of the identical name and arity, none of them calls or imports another, and nothing in an emitted value records which one produced it.",
+  "mechanism_as_described": "One concept, three self-contained definitions of the same predicate name, and no authoritative one. The first bands a score into five names at cut points 0.90 / 0.70 / 0.50 / 0.30; the second bands into four different names at 0.70 / 0.50 / 0.30; the third bands into four further names at floors read from configuration rather than hardcoded. No two of the three share a complete set of names, so the sets are not interchangeable — and worse than plain disagreement, they partially overlap: one word appears in two of the three but at different positions in the ordering (third band of five in one, second band of four in the other), so the same word denotes two different score ranges. A second word appears in all three with the same intended meaning but a different cut point behind it in each. A fourth site describes three bands in a header comment at yet another set of cut points, with no predicate at all, so a reader looking for the definition can land on a description that governs nothing. The audit also records a near neighbour that must not be folded in: a differently-named predicate in a fifth module returns an atom that collides with one of the band words but is a different quantity entirely, so counting it as a fourth definition would compound the error rather than complete the inventory.",
+  "detection_path": "A scoped code-versus-documentation reconnaissance that enumerated, for each concept the documentation names, every predicate implementing it, and classified the result as unified (one definition, others import), convergent (several, same output), or divergent (several, different output). The verdict criteria were fixed before the enumeration ran, and this concept was carried forward from an earlier reconnaissance that had flagged the same three-implementation state, so the finding is a confirmation on re-examination rather than a first sighting.",
+  "consequence": "A band word read anywhere downstream cannot be interpreted without knowing which module emitted it, and the value does not carry that. Two of the three vocabularies can produce the same word for scores that the other would band differently, so a comparison across modules, or any consolidation onto a single name, would keep computing bands and get them wrong by one cut point without any read failing. The state had already been reported once and persisted to this second examination unchanged.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory is a reconnaissance whose subject is exactly this class of divergence; the unit is the specific divergence it reports, not the reconnaissance method.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. This directory reports at least five separable defects; the selected one is the only one the prose specifies down to the numeric cut points and the specific word collisions, and its consequence is a wrong value rather than a navigation cost.",
+    "alternatives_not_extracted": [
+      {
+        "what": "Three of the six module names the documentation uses as implementation locations are empty wrappers that re-export other modules; the documentation attributes specific named predicates to a wrapper containing no logic, and three modules that hold the real implementations are named nowhere in the documentation at all. One consequence landed inside this reconnaissance: a module labelled a reporter was initially placed out of scope and turned out to contain a logic-bearing implementation.",
+        "why_not": "Strong candidate and arguably the directory's headline. Not selected because its consequence is that a reader is sent to the wrong file, whereas the selected incident produces a wrong value at a read site. Recorded here so the choice is visible as a choice."
+      },
+      {
+        "what": "A late-stage analysis module temporarily retracts and re-asserts a configuration fact at runtime, replacing a threshold with a low value during a computation and restoring it afterwards, in a subsystem whose stated boundary is that it must not mutate the state the classifier reads.",
+        "why_not": "The prose states the current effect is exactly zero — the mutated parameter is not among those the classifier reads — so no consequence is realized, and the tiebreak goes to the realized one."
+      },
+      {
+        "what": "Classification for three hardcoded historical items is produced by rules that return a type directly, or call only the first of two required stages, bypassing the canonical path; the bypass is marked as an exception in neither the code nor the documentation.",
+        "why_not": "Mechanism stated but with less specificity than the selected one; the affected items are three named demonstration instances rather than general data."
+      },
+      {
+        "what": "A module header states a count of ten event types where eleven are implemented, and seven further indexed variants are implemented but described nowhere; the header was already stale at the previous reconnaissance and is still stale.",
+        "why_not": "A count that disagrees with the code, with no mechanism beyond the header not being updated."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1).",
+    "overlap_note": "Floor-only unit: quarantined from the matrices, extracted at full quality per the pre-registered cell accounting. Extracted without reading the other extractor's version of this directory."
+  }
+}

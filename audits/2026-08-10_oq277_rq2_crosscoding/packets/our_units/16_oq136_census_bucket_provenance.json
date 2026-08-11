@@ -1,0 +1,39 @@
+{
+  "source_dir": "2026-07-02_oq136_census_bucket_provenance",
+  "extractor": "B",
+  "role": "primary",
+  "overlap_source": false,
+  "files_read": [
+    "WRITEUP.md (full)",
+    "RECON.md (full)",
+    "HANDREAD.md (full)",
+    "PROPOSAL.md (targeted scan: pre-registered semantics, powered-bucket rule, hand-read protocol)",
+    "contingency_tables.md (targeted scan: per-bucket model and prompt-commit tables)"
+  ],
+  "symptom": "A census reports two absence categories — this item has no measurable founding condition, this item has no party occupying a position — over 26 items each. Both read as statements about the situations described. Neither is: they are statements about which sampler wrote the file, and 25 of the 26 members are the same items in both categories.",
+  "mechanism_as_described": "One generation path writes the narrative and one summary record, and never emits the structured records the census counts. The narrative is not silent about the missing parties — it names them, describes their positions, and in one item assigns them numeric position values in a range, i.e. it plans exactly the records it then fails to produce. Downstream nothing distinguishes 'this item's record layer is empty because the generator stopped short' from 'this item's record layer is empty because nothing occupies these positions in the world it describes', because the absence is represented the same way in both cases: no records. A census that counts the empty ones therefore produces a number that looks like a measurement of the subject matter and is a measurement of the writing path. A second path in the same family emits neither kind of record and additionally stamps no generation-provenance record at all, so its items are blank on the very axis this examination used to detect the problem. The two affected categories overlap almost entirely because they are one gap counted twice, and a fix at the generator would move every member of a third, smaller category into a different category entirely.",
+  "detection_path": "A pre-registered join, frozen before any join ran, of category membership against each item's per-item generation provenance, testing for concentration on two writing-side axes (which sampler, which prompt revision) with a family-wide multiple-comparison correction and a descriptive subject-matter axis declared in advance as non-discriminating. Two categories concentrated on both writing-side axes at corrected significance and on neither subject-matter axis. A hand-read of the two smallest categories quoted an in-file witness per member and split each member's two absence limbs separately, which is what showed one limb to be the writing gap and the other to be the item's genuine structure. Three controls ran alongside: a membership-sum check fired on a dropped member and on a duplicated member; a statistic pair flagged a planted single-stratum category and did not flag a seeded uniform draw; and a cross-check of the record layer against its parallel serialization matched on all 110 items with provenance.",
+  "consequence": "Two published absence counts, 26 items each, were reading as properties of the subject matter and were properties of the writing path; a third small category is entirely artifact on one of its two limbs. The concentration is stark — one sampler contributes 16 of the members of each category while the majority sampler contributes 1 of 64 and 0 of 64 — so anyone comparing categories across the corpus would have been reading a sampler difference as a subject-matter difference. The items written by the path that stamps no provenance are unreadable on this axis in any future examination, not only this one.",
+  "extraction_notes": {
+    "unit_is_incident_not_audit": "The directory's subject is a designed join between census categories and generation provenance; the unit is the defect that join found.",
+    "selection_rule": "Fullest DESCRIBED mechanism — a unit can only carry the mechanism the prose states — tiebroken by realized consequence over caught-before-it-mattered. The selected incident is the only one whose producing site, representation, read site, and quantified effect are all stated; the alternatives are stated as conditions or as single-member findings.",
+    "alternatives_not_extracted": [
+      {
+        "what": "The nine items produced by one generation path carry no per-item provenance record at all, so every provenance axis is blank for them in this and every later examination of those files.",
+        "why_not": "Real and separately consequential, but the prose treats it as a component of the same generation gap (it is the same family of paths under-emitting), and its mechanism is stated in one clause. Folded into the selected unit as a named second site rather than extracted separately."
+      },
+      {
+        "what": "A role vocabulary too coarse for what the writers distinguish: one member is flagged by a category whose defining role atom cannot express the difference between an evidential and a structural exclusion, and the item's own prose explicitly disavows the structural reading the atom asserts, making it a false positive by its own text.",
+        "why_not": "One member, and the defect is a declared vocabulary gap rather than an absence passing as a measurement. Smaller realized consequence."
+      },
+      {
+        "what": "One category was ruled a genuine category on the statistical leg alone, where the rule fixed in advance required both no concentration and a hand-read confirming diffuseness; the hand-read protocol had covered only two other categories, and the asymmetry was noticed at review rather than at design.",
+        "why_not": "A defect in this examination's own evidence base rather than in the system examined. Recorded because it is the kind of thing that would otherwise disappear: the verdict reads identically whether it rests on one leg or two."
+      }
+    ]
+  },
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_rule": "UNIT iff the prose REPORTS an incident anywhere in the document, regardless of whether it is the subject; NO-UNIT only if the prose DISCUSSES the concept without reporting an instance. Fixed 2026-08-11 before the remaining units were extracted (verdict_grammar_amendment.md SS H.1)."
+  }
+}
