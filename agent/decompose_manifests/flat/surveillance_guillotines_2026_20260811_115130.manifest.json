@@ -1,0 +1,249 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Surveillance Studies / Democratic Theory",
+  "family_id": "surveillance_guillotines_2026",
+  "topic_summary": "Doctorow argues that Piketty's r>g inequality dynamic and Snowden's surveillance revelations describe two faces of one phenomenon: oligarchic wealth concentration generates political illegitimacy and instability, which is suppressed at ever-lower cost by digital surveillance productivity gains. The essay traces this from Stasi-era guard-labor ratios through NSA mass surveillance to Trump-era Palantir/Flock/ICE infrastructure, arguing the arrangement is a collective-action trap: any individual oligarch who stops extracting is simply replaced by one who doesn't, so guard labor and guillotine-risk both mount together.",
+  "extraction_summary": {
+    "entity_count": 9,
+    "claim_count": 6,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Thomas Piketty (economist; r > g thesis)",
+      "Edward Snowden (whistleblower; NSA mass surveillance revelations)",
+      "Bill Gates / Liliane Bettencourt (contrast case: entrepreneur vs rentier)",
+      "The Stasi / GDR (historical guard-labor baseline)",
+      "NSA / Palantir / Peter Thiel (contemporary surveillance infrastructure)",
+      "Trump administration / DOGE / Musk (accelerant case study)",
+      "Data center opponents / AI critics (contemporary dissent target)"
+    ],
+    "key_tensions": [
+      "Owning capital (Bettencourt) vs producing value (Gates) as competing routes to reward",
+      "Cost of redistribution (hospitals, schools) vs cost of repression (guards, prisons, surveillance) as competing stabilization strategies",
+      "Individual oligarch's incentive to defect (keep extracting) vs collective oligarchic interest in restraint (Tragedy of the Commons framing)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is 'political stability requires the ruled to accept the legitimacy of the rulers' distribution of resources' — a stability-legitimacy kernel that every actor in the essay (GDR leadership, Piketty, Trump, data-center opponents) argues about but does not abandon.",
+    "authority_description": "Contested: legitimacy is claimed variously via market outcomes (orifice lottery winners), electoral mandate (democratic theory), or coercive capacity (guard labor/Stasi/Palantir) — the essay's central move is showing these are substitutes for one another rather than independent grounds.",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "stability_legitimacy_kernel",
+    "readings": [
+      {
+        "reading_id": "redistributive_stabilization_reading",
+        "commitment": "Stability is purchased cheaply through redistribution (Piketty's hospitals-and-schools argument): legitimacy is manufactured by material sufficiency and adherence to r ≈ g norms enforced via wealth taxation.",
+        "authority_grounding": "Technocratic/economic — legitimacy flows from demonstrated fairness of outcomes, measured by inequality metrics.",
+        "sibling_readings": [
+          "repressive_stabilization_reading",
+          "collapse_inevitability_reading",
+          "democratic_legitimacy_reading"
+        ],
+        "expected_structural_delta": "Elites and citizens both become beneficiaries; no victim class required; the constraint is a rope (coordination problem solvable by policy) with low extractiveness once adopted."
+      },
+      {
+        "reading_id": "repressive_stabilization_reading",
+        "commitment": "Stability is purchased through guard labor: surveillance, policing, and incarceration substitute for redistribution, allowing r > g to persist indefinitely because the cost of suppressing dissent is falling faster than the inequality it must suppress is rising.",
+        "authority_grounding": "Coercive/technical — legitimacy is irrelevant; what matters is enforcement capacity and its marginal cost curve (Stasi ratio vs NSA ratio).",
+        "sibling_readings": [
+          "redistributive_stabilization_reading",
+          "collapse_inevitability_reading",
+          "democratic_legitimacy_reading"
+        ],
+        "expected_structural_delta": "Oligarchs/security-state apparatus as beneficiary; surveilled populations and dissidents as victim; constraint is a tangled_rope/snare with rising extractiveness as digital productivity lowers the marginal cost of each additional unit of repression."
+      },
+      {
+        "reading_id": "collapse_inevitability_reading",
+        "commitment": "Neither redistribution nor repression can be sustained by an unfit, undisciplined elite (the essay's 'three more who lack the executive function to stop cheating') — stability is not actually purchasable at any price because the collective-action trap guarantees defection; collapse (guillotines) is deferred, not prevented, by surveillance productivity gains.",
+        "authority_grounding": "Structural/game-theoretic — legitimacy claims are epiphenomenal; the kernel is read as a prisoner's-dilemma with no cooperative equilibrium among elites.",
+        "sibling_readings": [
+          "redistributive_stabilization_reading",
+          "repressive_stabilization_reading",
+          "democratic_legitimacy_reading"
+        ],
+        "expected_structural_delta": "No stable beneficiary — even elites are eventually victims of the dynamic they ride; constraint is closest to a mountain (structural, non-negotiable feature of the incentive landscape) rather than a policy choice; treats both Piketty's remedy and Thiel's Palantir as temporary drag-reduction, not solutions."
+      },
+      {
+        "reading_id": "democratic_legitimacy_reading",
+        "commitment": "Stability properly requires neither redistribution-as-bribe nor repression-as-deterrent but democratic accountability itself — the essay's data-center-protest and 'arrested for clapping' examples suggest legitimacy is read as procedural (consent, voice, recallability) rather than material or coercive.",
+        "authority_grounding": "Political/procedural — legitimacy is grounded in the ruled's ability to eject rulers (the essay's explicit 'not voted into power and can't be voted out' framing), independent of whether material conditions are good or surveillance is effective.",
+        "sibling_readings": [
+          "redistributive_stabilization_reading",
+          "repressive_stabilization_reading",
+          "collapse_inevitability_reading"
+        ],
+        "expected_structural_delta": "Victim set is defined by exclusion from voice (data center towns, surveilled dissidents, disenfranchised citizens) rather than by material deprivation; constraint behaves as a snare specifically when procedural legitimacy is denied while material/coercive substitutes are substituted in its place."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "redistributive_stabilization_reading",
+        "reading_b": "repressive_stabilization_reading",
+        "basis": "Redistributive stabilization holds that legitimacy is manufacturable through material fairness and treats guard labor as an avoidable expense; repressive stabilization holds that material fairness is optional and irrelevant to elite interest as long as enforcement costs stay low — a framework cannot simultaneously treat wealth-sharing as necessary-and-sufficient and treat it as dispensable."
+      },
+      {
+        "reading_a": "repressive_stabilization_reading",
+        "reading_b": "collapse_inevitability_reading",
+        "basis": "Repressive stabilization asserts that falling surveillance costs can indefinitely offset rising inequality (a sustainable equilibrium exists); collapse inevitability asserts no such equilibrium exists because elite defection is structurally guaranteed — one framework requires a stable fixed point the other denies exists."
+      },
+      {
+        "reading_a": "redistributive_stabilization_reading",
+        "reading_b": "democratic_legitimacy_reading",
+        "basis": "Redistributive stabilization locates legitimacy in material outcomes achievable by a benevolent (even undemocratic) technocratic elite dispensing wealth taxes; democratic legitimacy locates it exclusively in procedural accountability regardless of material outcome — accepting that material sufficiency alone can legitimate rule forecloses the claim that only removability can."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "surveillance_productivity_dividend",
+      "human_readable": "The Surveillance Productivity Dividend (Guard-Labor Efficiency Curve)",
+      "structural_delta": "The ratio of surveillers to surveilled has collapsed by roughly three orders of magnitude (Stasi: 1:80; digital-era NSA/Palantir: 1:1000+), independent of what political ends the surveillance serves.",
+      "primary_observable": "Personnel-per-surveilled-capita ratio across surveillance regimes over time; contract/budget scaling vs population coverage.",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "surveillance_infrastructure_operators_and_patrons",
+      "victim": "surveilled_populations_and_dissidents",
+      "downstream_of": [],
+      "feeds_into": [
+        "stability_legitimacy_kernel"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Independent observable (personnel/cost ratios) distinct from any single kernel reading; supplies the falling-marginal-cost mechanism that all four readings reference but none is reducible to."
+    },
+    {
+      "claim_id": "stability_legitimacy_kernel",
+      "human_readable": "Contested Kernel: What Purchases Political Stability? (Redistribution / Repression / Inevitable Collapse / Democratic Voice)",
+      "structural_delta": "Four incompatible accounts of what stabilizes rule under wealth concentration — material sufficiency, coercive capacity, structural inevitability of collapse, or procedural legitimacy — each reading the same stability-legitimacy kernel differently and each emitting a different beneficiary/victim structure.",
+      "primary_observable": "Which lever (tax policy, guard-labor spend, protest/collapse indicators, electoral/procedural access) a given actor treats as the operative stabilizer.",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [
+        "surveillance_productivity_dividend"
+      ],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Contested kernel; carries all four readings forward as a single axis per budget rule. Highest centrality — every other candidate axis in the source (r>g, Bettencourt/Gates, DOGE, data centers) is an instance argued from within one of these four readings."
+    },
+    {
+      "claim_id": "elite_collective_action_defection",
+      "human_readable": "Elite Collective-Action Defection (The 'Three More Who Lack Executive Function' Problem)",
+      "structural_delta": "Even an individual oligarch who recognizes the r>g/guillotine trade-off and would rationally restrain extraction cannot unilaterally stabilize the system, because peer defection guarantees the trap persists — a distinct game-theoretic structure from the stability-legitimacy question itself.",
+      "primary_observable": "Rate of elite defection from voluntary restraint (e.g., wealth tax opposition despite acknowledged instability risk) vs modeled cooperative equilibrium.",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "no_stable_beneficiary_first_mover_disadvantaged",
+      "victim": "restrained_elites_and_general_population",
+      "downstream_of": [],
+      "feeds_into": [
+        "stability_legitimacy_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: substantially absorbed by collapse_inevitability_reading within the kernel; independent generation would largely duplicate that reading's structural delta rather than adding a distinct observable."
+    },
+    {
+      "claim_id": "r_greater_than_g_mechanism",
+      "human_readable": "r > g as Physical/Mathematical Mountain (Piketty's Core Finding)",
+      "structural_delta": "The empirical claim that capital returns structurally exceed growth rates over long time horizons, independent of any actor's intent — a claimed mountain, not a policy choice.",
+      "primary_observable": "300-year global capital flow dataset; comparative r vs g time series across nations.",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "stability_legitimacy_kernel"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: functions as shared premise underlying all four kernel readings rather than an independently contestable axis; treating it separately would duplicate content already carried by the kernel's beneficiary/victim variation."
+    }
+  ],
+  "generation_sequence": [
+    "surveillance_productivity_dividend",
+    {
+      "claim_id": "redistributive_stabilization_reading",
+      "kernel_id": "stability_legitimacy_kernel",
+      "reading_id": "redistributive_stabilization_reading"
+    },
+    {
+      "claim_id": "repressive_stabilization_reading",
+      "kernel_id": "stability_legitimacy_kernel",
+      "reading_id": "repressive_stabilization_reading"
+    },
+    {
+      "claim_id": "collapse_inevitability_reading",
+      "kernel_id": "stability_legitimacy_kernel",
+      "reading_id": "collapse_inevitability_reading"
+    },
+    {
+      "claim_id": "democratic_legitimacy_reading",
+      "kernel_id": "stability_legitimacy_kernel",
+      "reading_id": "democratic_legitimacy_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "elite_collective_action_defection",
+      "structural_delta": "Game-theoretic defection dynamic among elites regarding voluntary restraint",
+      "hypothesis": "snare",
+      "deferral_reason": "Largely subsumed by collapse_inevitability_reading; independent generation would duplicate structural content"
+    },
+    {
+      "claim_id": "r_greater_than_g_mechanism",
+      "structural_delta": "Empirical mountain: capital returns exceed growth over long horizons",
+      "hypothesis": "mountain",
+      "deferral_reason": "Functions as shared premise across all kernel readings rather than an independently contestable axis; carried implicitly by the kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse_check",
+      "description": "Considered whether redistributive_stabilization_reading and democratic_legitimacy_reading might collapse into one (both anti-repression). Retained as distinct because their axiom bases diverge sharply: material sufficiency vs procedural removability are logically independent — a materially generous but unaccountable technocracy satisfies one and violates the other. No collapse found.",
+      "source": "SCOPE §1.3-K coherence check"
+    },
+    {
+      "id": "omega_stasi_analogy_validity",
+      "description": "The essay's Stasi:NSA productivity ratio (1:80 vs 1:1000+) is a rhetorically powerful but methodologically loose comparison — 'surveilling' meant something categorically different (active human informant networks vs passive bulk metadata collection). This may overstate the productivity dividend's comparability across eras.",
+      "source": "F03 (Hasty Generalization)"
+    },
+    {
+      "id": "omega_ecofascism_tangent",
+      "description": "The essay's closing Tragedy-of-the-Commons/Hardin critique is a genuine and important absence-correction but is not structurally load-bearing for the surveillance/inequality argument — it's included as moral framing rather than as a generative constraint. Flagged as omega rather than axis.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_ai_labor_displacement_scope",
+      "description": "The essay gestures at AI-driven labor displacement (white-collar job cuts, agentic AI) as a related but distinct phenomenon from surveillance-AI (Palantir/Flock). These may deserve separate future axis treatment; here they are compressed into surveillance_productivity_dividend as an extension of guard-labor efficiency rather than examined as a labor-market mountain/rope in their own right.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected regarding the Stasi/NSA productivity-ratio comparison (omega_stasi_analogy_validity) — the two surveillance modalities differ categorically, not just quantitatively, which may inflate the apparent cleanness of the 'productivity dividend' mountain. Kernel decomposition (stability_legitimacy_kernel) was tested for collapse per §1.3-K and confirmed genuinely contested: the four readings emit different beneficiary/victim structures and fail the single-framework test pairwise (see axiom_contradictions), satisfying all three kernel criteria (shared commitment, divergent reading, structurally distinct constraints)."
+  },
+  "_generation_run_id": "surveillance_guillotines_2026_20260811_115130",
+  "_provenance": {
+    "scope_model": "claude-sonnet-5",
+    "scope_prompt_commit": "d179423dc12550308c604592b1d199a951739c4c",
+    "scope_schema_commit": "43ee9613b2ccba5f278157c4cbe534645e1f544e",
+    "persisted_at": "2026-08-11T11:51:30",
+    "axes_ceiling": null,
+    "topic": "Surveillance vs guillotines (permalink)\nIn the summer of 2013, two esoteric, technical, incredibly important texts were published within weeks of one another: the first is the Snowden leaks, which revealed a system of global, pervasive digital surveillance; the second was Thomas Piketty's Capital in the 21st Century, a book about the economic inevitability (and political instability) of oligarchy:\n\nhttps://memex.craphound.com/2014/06/24/thomas-pikettys-capital-in-the-21st-century/\n\nIf you'd like an essay-formatted version of this thread to read or share, here's a link to it on pluralistic.net, my surveillance-free, ad-free, tracker-free blog:\n\nhttps://pluralistic.net/2026/08/11/tragedy-of-the-commoners/#piketty-snowden\n\nIn 2013, it wasn't immediately apparent how these two works connected with one another, but in the years since, I've grown increasingly convinced that Snowden and Piketty can only be properly understood as describing two aspects of the same phenomenon.\n\nPiketty's landmark volume was grounded in a detailed analysis of 300 years' (!) worth of global capital flows, painstakingly compiled by a large team of grad students from a massive set of heterogeneous records. The book's conclusion is the statement that \"returns to capital exceed the rate of growth over the long term\" (abbreviated as \"r > g\").\n\nThis may sound innocuous, but it is explosive. If r > g, then the most wealth will inevitably accumulate in the hands of people who start with the most wealth, irrespective of whether they do anything productive with that money. This means that the alleged heroes of the market system – the entrepreneurs who found and manage the firms that increase public prosperity – are doomed to play second fiddle to the mere plumbers of money, people who \"contribute\" by accumulating.\n\nThe starkest example of this in Capital 21C is Piketty's contrast between L'Oreal heiress Liliane Bettencourt (then the richest woman in the world) and Bill Gates, founder of Microsoft (then the most successful corporation in the world). Piketty compares the growth in the fortunes of Bettencourt and Gates over two periods: first, the period between Microsoft's founding and Gates' retirement as CEO; and second, the period after Gates's retirement from his executive role, when he became a mere investor, no longer an entrepreneur.\n\nDuring that first period, in which Gates was founding and running the most successful corporation in the world, he accumulated less wealth than did Liliane Bettencourt, who did precisely nothing of value over that period. Bettencourt didn't even manage her investments – that was all handled by some very clever financial planners, lawyers and accountants. In other words: for Bettencourt, doing nothing at all produced more wealth as founding the most successful corporation in the world did for Gates. Bettencourt, a person who owned things, did better than Gates, a person who did things.\n\nAnd then Gates retired. He stopped doing things and started owning things. He became an investor, whereupon he out-earned both Bettencourt and Gates-the-entrepreneur. Again, the market system allocated fewer rewards to the most successful person in the doing things business than it allocated to that same person once he quit that job and got into the owning things business.\n\nPiketty shows that this holds true across markets and nations and eras: all other things being equal, the market system produces a class of hereditary aristocrats who command the world's capital and direct its deployment, despite never having done anything. The market's most lavish rewards do not go to its most productive participants, but rather, to those participants who have the good fortune to emerge from the luckiest of orifices.\n\nWorse: winning the orifice lottery in no way qualifies you to direct the capital you've inherited. Liliane Bettencourt had no revolutionary new business ideas, invented no miraculous new materials or processes, produced no brilliant art. She merely accumulated, thanks to the professional services of skilled technicians whose job description includes hiring their own successors to ensure that another generation of winners of the Bettencourt orifice lottery could continue to accumulate, commanding more capital and power in society.\n\nPerhaps if these orifice winners were content to allow their bloodless Renfields to allocate their capital while consuming bonbons and attending yacht parties, this could yield a stable politics. But inevitably, people who win the orifice lottery observe that they come from a long line of wealthy people, a line that will continue with their own descendants, and conclude that they have some kind of special, heritable virtue – magic blood – that the system has recognized with their great fortunes and the power those fortunes confer.\n\nThat's when things get dangerous: when aristocrats grow bored with their leisure and mobilize their inherited capital to change the way the rest of us live. Billionaire dilettantes are weapons of mass destruction, and their special projects have a wide blast radius and inflict a lot of collateral damage.\n\nTake Bill Gates: his ideological projects have been a catastrophe. A patent maximalist, he funded the lobbyists who successfully blocked South Africa from producing its own AIDS drugs under an IP waiver program, and then deployed them again to stop the Global South from making their own covid vaccines:\n\nhttps://pluralistic.net/2021/04/13/public-interest-pharma/#gates-foundation\n\nCloser to home, Gates's hatred of public institutions led him to allocate millions to dismantling public schools and replacing them with charter schools, particularly for poor and racialized kids, with disastrous results:\n\nhttps://pluralistic.net/2026/03/09/autocrats-of-trade-2/#witness-the-firepower-of-this-fully-armed-and-operational-battle-station\n\nAnd of course, Gates supported and empowered Jeffrey Epstein and his rape island:\n\nhttps://en.wikipedia.org/wiki/Bill_Gates#Connection_with_Jeffrey_Epstein\n\nCapital's tendency to accumulate in the hands of the already wealthy (r > g) means that these aristocrats end up setting an ever-larger proportion of our societal agenda, despite their manifest unfitness to govern and their absence of any kind of democratic legitimacy.\n\nPiketty argues that inequality is inherently politically destabilizing. A society ruled over fools and monsters who were not voted into power and can't be voted out of power is a doomed society. Eventually – the French Revolution, the World Wars – these societies grow so unstable that they collapse altogether.\n\nThis is where Piketty and Snowden converge. When the Snowden leaks broke, there was a lot of talk about the mechanics and the legality of the NSA's global digital surveillance, but precious little consideration was given to the reason for all this surveillance. In 2013, the idea that this spying was about \"security\" was so obvious as to be self-evident. The questions at the time were whether spying could produce security. We weren't asking why things were so insecure.\n\nIn retrospect, the answer is to be found in Piketty. Piketty's Capital includes a long, impassioned plea to both lawmakers and aristocrats to consider redistributive policies (like a wealth tax) as the most affordable way to achieve political stability. Fundamentally, Piketty argues that the cheapest way to stop people from building a guillotine on your lawn is to build hospitals and schools; this is cheaper than paying for guards and prisons to lock up would-be guillotine builders.\n\nToday's AI debates swirl around the question of whether AI can truly make us more productive – that is, if chatbots will allow one person to do the work of two, or three, or four – or 100. But when it comes to surveillance, the digital revolution unquestionably produced a massive productivity dividend.\n\nConsider the spying apparatus of the former East Germany (\"the GDR\") widely considered the most surveilled society in human history. When the Berlin Wall collapsed, there were about 16m people in the country. Of those East Germans, about 90,000 worked directly for the Stasi (the secret police), aided by another 100-200,000 paid informants:\n\nhttps://www.dw.com/en/east-germany-spy-agency-stasi-surveillance/\n\nCall it 200,000 people to spy on 16m. In other words, it took one spy to watch 80 of their neighbors. Contrast this with NSA spying: they accumulated detailed surveillance dossiers on about 6 billion internet users using a staff of no more than 5 million spooks (in 2013, about 5 million Americans were eligible for security clearance). If every single person with security clearance in the USA was working on the NSA's surveillance program, that would mean that by 2013, computers had made it possible for a spy to keep tabs on more than a thousand people.\n\nOrders of magnitude improvements in a mere generation! This is the kind of productivity lift that economists dream of when they fantasize about the dividends from automation.\n\nBut why? Why spy?\n\nEast Germany spied on its people because the system was so unjust and cruel that its beneficiaries understood that their neighbors forever on the brink of rising up against them. East Germany's leaders were right about that – but if anything, they didn't put enough people onto the spying project. We can tell, because the Berlin Wall fell in 1989!\n\nOf course, the GDR was already paying more than 1.2% of its population to spy on everyone else. It's likely that East Germany's leaders believed that their society simply lacked the fiscal space to hire more spies, even if short-staffing the Stasi risked societal collapse. Now, if Piketty is right, East Germany's leaders could have solved this problem by giving people fewer reasons to want to overthrow the state. They could have taken their hands out of the cookie jar, could have instituted democratic reforms – they could have made a bid for democratic legitimacy and public material comfort. But that would have come at the leaders' own power and wealth, and, lacking the stomach for this sacrifice, they lost everything.\n\nEnter the NSA: the digitization of human civilization has drastically reduced the cost of surveillance, and – again, per Piketty – this vastly increases the amount of inequality the world can sustain before the illegitimacy, incompetence and cruelty of rule by the neoaristocratic winners of the orifice lottery brings the whole thing crashing down.\n\nThe Trump years are proof of this. We've reached a high-water mark for rule by illegitimate billionaire dilettantes. The second Trump admin began with DOGE's Bonfire of the Stupidities, where Musk cultists dismantled vast swathes of the American administrative state. Musk didn't just attack foreign aid – though the fact that the world's richest man murdered hundreds of thousands of the world's poorest children for the lulz isn't merely cruel, but also massively destabilizing in a way that will shake the world's politics for generations – but also domestic institutions. It was a DOGE cultist who fed the part of the NIH that tracks cyclosporin outbreaks into the wood-chipper:\n\nhttps://truthout.org/articles/disease-researchers-blame-doge-cuts-for-spiraling-cyclospora-outbreak/\n\nToday, tens of thousands of Americans are experiencing the literal enshittification of the American state, and this isn't just a human tragedy (though it is), it's also an economic tragedy, with massive knock-on effects for the businesses that rely on those sickened Americans and for the agricultural sector whose outputs are now being shunned by millions. Whether it's letting Bill Gates decide how your schools will work or letting Elon Musk decide how your public health system runs, the result is political chaos and a societal nudge away from the rule of law and towards guillotines.\n\nWhich brings me back to Snowden. The Snowden revelations did spur a global conversation about digital surveillance, with the result that the majority of the world's digital traffic is encrypted today. That's not nothing.\n\nBut the American state found new ways to conduct mass-scale, global surveillance, often by collaborating directly with tech giants. Billionaires like Peter Thiel capitalized on Big Tech's conflicted feelings about openly participating in surveillance by founding Palantir, with the express mission of murdering the political opponents of oligarchy:\n\nhttps://www.thecanary.co/trending/2026/01/07/palantir-kill-communists/\n\nOver the past decade, the steady march of digital technology, dominated by a cartel of giant global firms who collude with the US government's system of political repression in exchange for tax breaks, antitrust forbearance and fat federal contracts has yielded more mass surveillance productivity gains than the previous 25 years:\n\nhttps://apnews.com/article/trump-inauguration-tech-billionaires-zuckerberg-musk-wealth-0896bfc3f50d941d62cebc3074267ecd\n\nThe Trump administration is the most unpopular in more than a century. Trump has stolen more money in office than any president in history. Trump presides over spiraling greedflation and collapsing buying power. The Trump administration has also presided over a titanic increase in state-aligned, privatized surveillance. The Trump years are the Flock years:\n\nhttps://newrepublic.com/article/206992/flock-safety-cameras-alpr-deflock-resistance-nationwide\n\nThe Trump years are the Palantir years:\n\nhttps://www.nytimes.com/2025/05/30/technology/trump-palantir-data-americans.html\n\nThe Trump years are the facial recognition years:\n\nhttps://www.aclu.org/news/privacy-technology/ice-face-recognition\n\nTrump's authoritarianism is a function of his misrule, and his misrule is enabled by his authoritarianism. The more he steals, the more he destroys with wars of choice, and incoherent tariff policies, and official pronouncements linking autism and vaccinations, the more he needs spy cameras, internet surveillance, vehicle tracking, and facial recognition. Every time Trump talks about a third term in office, or canceling elections, or suppressing the vote, he creates demand for mass surveillance to catch and imprison the people this drives into the streets. The more mass surveillance there is, the safer it is for him to commit unpopular, corrupt acts. It's the world's worst self-licking ice-cream cone.\n\nIt's not just Trump, of course. Trump is the vanguard of a movement of orifice lottery winners whose delight in stealing, cheating, maiming and despoiling gives rise to political instability and requires them to divert some of their yacht money to mercenaries:\n\nhttps://theintercept.com/2026/06/25/police-luigi-mangione-wealthy-ceos-threat/\n\nTake AI: the Trump years are also the AI years. This is the time in which a wildly unpopular technology is being shoved into every part of every app we rely on:\n\nhttps://pluralistic.net/2025/05/02/kpis-off/#principal-agentic-ai-problem\n\nIt's an era where corporate bosses can't stop gloating about how many jobs they're planning to destroy and how many paycuts they plan on imposing on the surviving workers:\n\nhttps://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic\n\nAI can't do your job, but an AI salesman can reliably convince your boss to fire you and replace you with an AI that can't do your job:\n\nhttps://pluralistic.net/2025/03/18/asbestos-in-the-walls/#government-by-spicy-autocomplete\n\nAnd – most visibly – it's an era in which people's cities and towns are being despoiled by data centers they don't want, by local governments operating in the most extreme secrecy, who silence and even arrest citizens who demand a democratically legitimate process for deciding whether they will have to give up their power and water and land and peace:\n\nhttps://www.404media.co/city-that-arrested-person-for-clapping-at-data-center-meeting-moves-to-virtual-townhalls-for-public-safety/\n\nAn economist would tell you that there's an equilibrium being sought here: between the cost of bribing a town council to ram through data center approvals, the cost of building a more modest and palatable data center, and the cost of mollifying public critics. The cost of bribing towns to foist a data center on the townsfolk is low, because there are lots of towns that fit the bill, so data center barons can shop around.\n\nBut as data center protests grow larger and better organized (oligarchy is destabilizing), the cost of dealing with public opposition is mounting. Which is why the Trump administration is teaming up with its preferred tech and military contractors to engage in detailed surveillance of data center and AI critics:\n\nhttps://prospect.org/2026/08/10/private-intelligence-firms-selling-dossiers-on-ai-data-center-critics/\n\nThese corporate spooks aren't just spying on data center critics: they've got a whole portfolio of oligarchy-stabilizing surveillance services, targeting \"antifa,\" immigrants' rights and anti-ICE groups.\n\nThey're joined by hardware vendors who offer corporations, the wealthy, and enclaves where both are to be found on literal robocops, the ultimate in cheap guard labor (alas, the robots suck):\n\nhttps://www.404media.co/the-roboguard-revolution-is-short-circuiting/\n\nTrump and his orifice-winning army are caught in the same trap as the leaders of the GDR. Every gain in guard-labor efficiency creates the space for more of them to stick more of their hands even further into the cookie jar. Every time they do, American society grows more unstable, demanding more guard labor.\n\nAs we saw in Minneapolis, guard labor – be it mass surveillance, robocops or ICE chuds – is itself destabilizing. Police states make the people who live in them want to overthrow the state, requiring yet more cops, creating more partisans for tearing the whole thing down.\n\nIn theory, the orifice class could decide to stop stealing, cheating and maiming. The problem is that for every plute who realizes that the cheapest way to keep the guillotines off his lawn is to play fair, there are three more who lack the executive function to stop cheating. That means that you might as well keep on cheating, since the instability – and the guard labor bills – are coming no matter what.\n\nIn the tale of the \"Tragedy of the Commons,\" a common pasture is grazed to dust by shepherds who each understand that if they don't graze their flock until everything is gone, some other shepherd will do so. The original \"Tragedy of the Commons\" paper was a racist hoax perpetrated by an academic fraud who wanted to make the case for the expulsion of black and Brown people from America and their mass extermination abroad:\n\nhttps://memex.craphound.com/2019/10/01/the-tragedy-of-the-commons-how-ecofascism-was-smuggled-into-mainstream-thought/\n\nIn reality, commons need not be tragic and many of our most important resources have been managed as commons for hundreds of years:\n\nhttps://archive.org/details/governing-the-commons/page/4/mode/2up\n\nBut when it comes to the commons that is \"a stable society,\" the orifice class is caught in an inescapable tragedy, certain of the knowledge that if they don't cheat us, the next American aristo will. Thus the demand for guard labor continues to mount…as does the demand for guillotines."
+  }
+}
