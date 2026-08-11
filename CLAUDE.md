@@ -679,6 +679,18 @@ never a withheld-input arm. **Corollary: ε-keyed statistics are per-Author stra
 pooled across legs** — the last-digit rail is model-bound (Claude→`.x8`, kimi→`.x2`, flash→`.x5`),
 so a pooled ε aggregate averages three different idioms into a number that looks fine and means
 nothing.
+**THE TWIN LEGS ARE THE ONLY MATCHED-SEED STRUCTURE IN THE PROJECT, and marginal-independence vs
+paired-comparability are MUTUALLY EXCLUSIVE across every other population (OQ-78/OQ-281,
+2026-08-10).** A population independent enough to serve as a clean *marginal* known-positive is, by
+that same independence, **unusable for a paired read** — and this is a structural property of how
+the corpus was built, not a gap to be filled. Witnessed: the archive (n=60) and default-leg derived
+sonnet-4.5 (n=64) landing on the same ε digit from a **zero-story-id intersection** was the
+strongest evidence in the OQ-78 calibration pass, and that same zero forecloses any paired
+within-family check between them; every non-twin Claude population shares **0** ids with the twin
+legs (sole exception: default-leg haiku-4.5 × sonnet leg, 28 ids). **So: before designing any
+paired/matched-seed probe, check the id intersection FIRST** — outside `testsets_haiku|flash|kimi|
+sonnet` (957 four-way matched) there is nothing to pair, and a paired design over any other pair of
+populations is dead on arrival. A new matched-seed leg is a generation spend, never a re-read.
 **Test bed, not backfill target (operator clarification, 2026-06-24).** `testsets/` is the
 **evolving-schema test bed**: schema/prompt/scope changes are *encouraged* pre-rebuild and
 exercised HERE (the twins stay the stable matched-pair baseline). A change that breaks a

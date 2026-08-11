@@ -10987,20 +10987,37 @@ result license? see PRE-COMMIT REQUIRED below — settle before any instrument r
 be a close on an absence — the grade the OQ-78 pre-registration built cell 1b to mark and cell 2 to
 avoid.
 
-**PRE-COMMIT REQUIRED before any instrument runs (operator's seat, 2026-08-10).** The obvious
-sharpening — measure more Claude-family models — has **asymmetric and thin** falsification power: a
-fifth Claude model on 8 adds almost nothing to a pattern already at four, and the read only pays if
-one lands **off** 8, which there is no prior reason to expect. **Write down what a null licenses
-first:** if three more Claude models all land on 8, does this close, or stay open indefinitely
-waiting for a falsifier that may not exist in the available model set? **If the answer is "stays
-open," the read is NOT a graduation step and must be run only as corpus documentation, labelled as
-such.** Settle this before spending session time.
+**PRE-COMMIT REQUIRED before any instrument runs (operator's seat, 2026-08-10) — THREE branches,
+not two.** All three are on the table explicitly; branch C is a live option, **not** what happens
+if A and B stall.
 
-**Better-teeth alternative, readable on data already on disk.** The arm-level structure above is a
-sharper object than the argmax digit: it is a *within-family* signal with a measured cross-family
-zero. A boundary test built on arm concordance would discriminate family membership on a channel
-that already shows contrast, rather than on a digit where every Claude model agrees by
-construction. Cost is a leg classification (~60–90s each, serialized), no API spend.
+- **(A) Model sweep — measure more Claude-family models.** Zero-spend, and **near-zero
+  falsification power**: a fifth Claude model on 8 adds almost nothing to a pattern already at
+  four, and the read pays only if one lands **off** 8, which there is no prior reason to expect.
+  **Write down what a null licenses first:** if three more Claude models all land on 8, does this
+  close, or stay open indefinitely waiting for a falsifier that may not exist in the available
+  model set? **If the answer is "stays open," this is NOT a graduation step and must be run only as
+  corpus documentation, labelled as such.**
+- **(B) Arm route — a boundary test on arm concordance.** The genuinely open falsifier: arm choice
+  already shows within-family contrast against a measured cross-family **zero**, so unlike (A) the
+  outcome is not foreknown. **REAL SPEND, corrected 2026-08-10:** this was first described as
+  "readable on data already on disk," which was true of the *characterization* and **false of the
+  strengthening step**. Per SINGLE-PAIR BASIS above, a second within-family pair requires a **NEW
+  matched-seed Claude leg** — a generation spend, not a leg re-classification. The earlier
+  recommendation of (B) over (A) was made under the wrong cost assumption and must be re-weighted,
+  not inherited.
+- **(C) Accept the family boundary as un-falsified and file the question as Ω_E.** Defensible on
+  the merits: **nothing downstream is blocked on the answer**, and the honest state — "the rail is
+  model-bound and every measured Claude population shares it; the boundary is un-probed" — is
+  already recorded and citable. This entry can sit at low priority indefinitely at no cost. Choose
+  (C) unless (B) is worth its generation spend for reasons beyond this OQ.
+
+**Kind-of-item note (operator, 2026-08-10):** OQ-281 and its sibling OQ-282 are different *kinds*.
+OQ-282 corrects a claim actively being spent in live text — every citation of the compression
+caveat at 30% prevalence when the number is 7.3% is a small ongoing misstatement, so it should not
+wait. OQ-281 asks a question whose answer changes nothing downstream, and can wait indefinitely.
+The Priority 3-vs-2 ordering captures the sequence; this note captures why the gap should not be
+closed by promoting OQ-281.
 
 **NOT the remedy:** the matched-seed-across-models arm. It isolates the model, and the model is
 what already varied.
@@ -11060,6 +11077,25 @@ lexical**: search the paraphrases and the numbers (0.68 / 31/91 / 34% / 30%) as 
 and sweep `docs/` prose, the paper sequence, `python/` comments, and read-site legends — not just
 files that mention OQ-78. A clean grep for the phrase is **not** a witness of completion; the
 positive control is finding at least one consumer that never names the OQ.
+
+**THE STOPPING PROBLEM — define completion BEFORE sweeping.** The positive control above (find at
+least one consumer that never names the OQ) proves the **method works**; it does **not** prove the
+sweep is **done**. A semantic sweep has **no natural termination witness** — "I found no more" is
+the false-absence shape this project already fails on, and it is unfalsifiable here because the
+target set is defined by meaning, not by a string. **So completion is a statement about COVERAGE OF
+A DECLARED SURFACE, never about absence of remaining instances.** Pick one and write it down before
+starting:
+
+- **(i) Declared-surface enumeration.** Name the surfaces searched and the reading pass applied to
+  each — which directories, which files, read-in-full vs pattern-scanned — and close on *that
+  surface*, explicitly leaving un-enumerated surfaces open. The close line reads "swept X, Y, Z by
+  method M," never "the caveat is gone."
+- **(ii) Seeded consumer.** Plant a known consumer in advance (or nominate one already known but
+  set aside unread), run the method blind to it, and confirm the method surfaces it. Completion is
+  then "the method that found the seeded consumer was applied to surface S."
+
+Either way the close is scoped to a surface. A close phrased as "no remaining instances" is
+**refused** — it is exactly the un-witnessable absence claim the discipline exists to prevent.
 
 **What resolution would change:** every ε-keyed statistic in the paper sequence currently inherits a
 caveat that is no longer true at its stated magnitude, which either overstates a limitation the

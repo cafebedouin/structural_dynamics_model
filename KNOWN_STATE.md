@@ -108,6 +108,22 @@ type channel: **haiku × sonnet-5 excess +0.055, above p99**; **kimi × sonnet-5
 +0.000**. So arm choice carries seed-level signal *within* the Claude family and none across
 families — modest in size (56.5% vs a 51.0% baseline), and to be reported as real, not strong.
 
+**CORPUS PROPERTY (2026-08-10) — marginal-independence and paired-comparability are MUTUALLY
+EXCLUSIVE outside the twin legs.** Promoted to CLAUDE.md Critical Distinctions; provenance here. A
+population independent enough to be a clean **marginal** known-positive is, by that same
+independence, **unusable for a paired read** — a structural property of how the corpus was built,
+not a gap to fill. Witnessed both directions in one pass: archive (n=60) and default-leg derived
+sonnet-4.5 (n=64) landing on the same ε digit at nearly the same concentration from a **zero-story-id
+intersection** was the strongest evidence in the OQ-78 calibration pass, and that same zero
+forecloses any paired within-family check between them. Every non-twin Claude population shares **0**
+ids with the twin legs (sole exception: default-leg haiku-4.5 × sonnet leg, 28 ids / 20 both-on-rail,
+under the n=50 floor). **`testsets_haiku|flash|kimi|sonnet` (957 four-way matched) are the ONLY
+matched-seed structure in the project** — which is the only reason OQ-78's primary paired statistic
+existed at all. **Check the id intersection FIRST when designing any paired probe;** outside the twin
+legs a paired design is dead on arrival, and a new matched-seed leg is a generation spend, never a
+re-read. (This corrected a live recommendation mid-session: the OQ-281 arm route was proposed as
+"readable on data already on disk," true of the characterization and false of the strengthening step.)
+
 **GENERALIZABLE CHECK (operator, 2026-08-10) — evaluate a measure on the comparator itself before
 freezing it.** Both Pattern-5 catches this session came from the same move: running the candidate
 measure on the known-positive/known-negative populations **at the actual cell sizes** before the
