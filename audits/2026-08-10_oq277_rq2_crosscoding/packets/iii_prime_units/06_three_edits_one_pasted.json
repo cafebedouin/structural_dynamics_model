@@ -1,0 +1,29 @@
+{
+  "source": "CLAUDE.md:498-503 (six-pattern block, section 4); exemplar named at :501. NO mechanism text exists in docs/technical/build_discipline.md — see extraction_notes.",
+  "extractor": "iii_prime",
+  "role": "iii_prime",
+  "matrix_unit": false,
+  "true_label": "P4",
+  "label_source": "named inside CLAUDE.md's Build Discipline section 4 at line 501. Read off, not assigned.",
+  "files_read": ["CLAUDE.md", "docs/technical/build_discipline.md"],
+
+  "symptom": "A closing summary reported three changes as made and checked. Attached to it was the confirming output for one of them — the last. The other two were reported in the same sentence, in the same form, with the same finality, and carried nothing.",
+
+  "mechanism_as_described": "The report of the work and the evidence for the work are two different things, and only the second is checkable by anyone else. Because the summary stated all three changes in one grammatical breath, the confirming output belonging to the third was carried backwards over the first two by the reader's eye. Nothing marks the difference at the point of reading: a change that was made and shown and a change that was merely asserted occupy the same sentence and look the same. The published account states the shape as a count mismatch — a report of some number of changes accompanied by fewer than that many pieces of confirming output — and names three-reported-one-shown as the case it observed.",
+
+  "detection_path": "Counting the pieces of confirming output attached to a report and comparing that count against the number of changes the report claims. The comparison is arithmetic and does not require judging whether any individual change was correct, or even understanding what the changes were.",
+
+  "consequence": "Two changes entered the record as done and checked on the strength of a third change's evidence. The stated remedy is that a completion claim arriving without its own attached output be read as unverified regardless of how the summary reads, and that a claim whose evidence cannot be produced at the time be recorded as still open instead.",
+
+  "extraction_notes": {
+    "selection_rule_applied": "Row 6 of the frozen population, and the ONLY member whose mechanism text does not exist in docs/technical/build_discipline.md. Checked, not assumed: the phrase 'three edits' returns no hit in that file, and that file carries no worked section for this rule at all — its section at the same index is a different rule about fabricated missing-data values. So the whole unit is written from the published block's own five lines, of which the incident proper is one parenthetical clause. This is the thinnest unit in the set and it has NOT been inflated to match the others; mechanism_as_described states only what those lines state, plus the observation that the two things being conflated are indistinguishable at the read site, which the passage itself asserts. THIS IS ALSO A DATUM FOR THE INDEX-COLLISION QUESTION and is reported in EXTRACTION_NOTES §4 rather than resolved here: this exemplar's rule is one of the two members that exist only on the published side, and like the other such member it has no worked section in the file the published block points to as holding the full patterns. It differs from that other member in that it does at least name an identifiable incident.",
+    "alternatives_not_extracted": [
+      "No other exemplar is named in this section — it names exactly one incident, so there was no second candidate to decline."
+    ]
+  },
+
+  "metadata": {
+    "incident_location": "incidental",
+    "incident_location_note": "The clearest fit of the two values in the whole set. The incident appears solely as a parenthetical inside the statement of the rule — 'observed: ...' — with no worked treatment anywhere. Every other unit here is coded 'subject' under strain; this one is genuinely incidental."
+  }
+}

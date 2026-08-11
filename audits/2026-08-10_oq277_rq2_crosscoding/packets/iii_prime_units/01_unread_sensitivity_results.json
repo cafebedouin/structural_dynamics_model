@@ -1,0 +1,31 @@
+{
+  "source": "CLAUDE.md:473 (six-pattern block, section 1); mechanism text docs/technical/build_discipline.md:51-53, stated diagnostic at :92-100",
+  "extractor": "iii_prime",
+  "role": "iii_prime",
+  "matrix_unit": false,
+  "true_label": "P1",
+  "label_source": "named inside CLAUDE.md's Build Discipline section 1 at line 473. Read off, not assigned.",
+  "files_read": ["CLAUDE.md", "docs/technical/build_discipline.md"],
+
+  "symptom": "A family of sweep runs writes a result file to disk on every run. The files are well-formed, current, and correct. Nothing anywhere reads them: the quantities they hold are computed, serialised, and never enter any later calculation, report, or decision.",
+
+  "mechanism_as_described": "The sweeps vary the system's own tuning constants one at a time and record how much its outputs move in response. Producing that record is the entire point of the runs, and the producing side is complete — the runs execute, the files are written, the numbers in them are right. What was never built is the reading side. No report, no check and no later stage opens the files, so the measurement is taken and then discarded. Nothing fails, because nothing depended on the values, and the only outward sign is that the files exist while no code names them.",
+
+  "detection_path": "Listing every result file on disk and searching the whole source tree for any reference to each filename. A file that one script writes and no other script mentions anywhere is unread by construction, and that is checkable without knowing anything about what the file contains.",
+
+  "consequence": "The system measures how tightly its own results depend on its tuning constants and then throws the answer away. No wrong value is emitted and no output is corrupted; what is lost is that a question was answered and the answer never reached anyone. The published account states the loss in exactly that form and records no repair for this instance.",
+
+  "extraction_notes": {
+    "selection_rule_applied": "Row 1 of the frozen population. The exemplar is named at CLAUDE.md:473 and its mechanism is the first bullet of the corresponding worked section. The source gives this instance two sentences and no instance-specific detection account, so detection_path is taken from the DIAGNOSTIC the same section states for the class (the orphaned-output search at build_discipline.md:92-100), not reconstructed from my own knowledge of the codebase. The unit is thin because the source is thin; it has not been padded.",
+    "alternatives_not_extracted": [
+      "The grouping-manifest linkage gap in the same bullet list — it is row 2 of the population and is written as its own unit (02).",
+      "The frozen post-process artifact in the same bullet list — row 3, an existing direction-(i) anchor, referenced not re-extracted.",
+      "The fourth bullet in the same section ('the manifest convention exists so audits can cite provenance, but nothing enforces that an audit does') — NOT named in the published block, so it is outside the frozen population boundary, and it names an unenforced obligation rather than an identifiable incident."
+    ]
+  },
+
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_note": "Strained, as the brief anticipates. The two available values classify position within a report; this exemplar sits as a named bullet inside the worked section for its own rule, which is neither a report subject nor a parenthetical. Coded 'subject' because the section is the incident's own worked treatment and it is named there in its own right; the strain is that the treatment is two sentences long."
+  }
+}

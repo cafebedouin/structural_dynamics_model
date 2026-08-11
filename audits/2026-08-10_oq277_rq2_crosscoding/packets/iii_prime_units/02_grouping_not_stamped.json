@@ -1,0 +1,31 @@
+{
+  "source": "CLAUDE.md:474 (six-pattern block, section 1); mechanism text docs/technical/build_discipline.md:54-58, stated diagnostic at :102-105",
+  "extractor": "iii_prime",
+  "role": "iii_prime",
+  "matrix_unit": false,
+  "true_label": "P1",
+  "label_source": "named inside CLAUDE.md's Build Discipline section 1 at line 474. Read off, not assigned.",
+  "files_read": ["CLAUDE.md", "docs/technical/build_discipline.md"],
+
+  "symptom": "Generated records carry their own individual identifier and no group identifier. The grouping that says which records belong together does exist — it was computed and written to a manifest beside them, and it is also recoverable from the file-naming convention — but it is not present as a fact inside the records, which is the only place the query machinery looks.",
+
+  "mechanism_as_described": "The generation step computes the grouping and writes it out as a manifest alongside the records it describes. Writing the manifest completed the producing side, so the step read as finished. The separate act of stamping each record with its group identifier was never done. About eighty-three records were emitted carrying an individual identifier and no group identifier. Every later query that needs to gather all the records of one group asks the records, not the manifest — so the grouping is unavailable to it. The information exists in two places, and neither of them is the place that gets consulted.",
+
+  "detection_path": "Scanning the generated records for those that carry the individual identifier and lack the group identifier, and counting them. It is a two-term test on each file and requires no understanding of what the grouping means or of what the manifest says.",
+
+  "consequence": "The machinery that operates across all the records of one group could not gather a group's members at all. The grouping was correct and current throughout; it simply was not a fact that anything could ask for.",
+
+  "extraction_notes": {
+    "selection_rule_applied": "Row 2 of the frozen population, named at CLAUDE.md:474. Mechanism is the second bullet of the corresponding worked section and is unusually full for a bullet — it states the producer, the omitted step, the count of affected records, and the downstream capability that was lost. detection_path is taken from the section's own stated diagnostic for this instance (build_discipline.md:102-105), which is instance-specific here rather than generic. No mechanism was added from outside the two source files.",
+    "alternatives_not_extracted": [
+      "The unread sweep results in the same bullet list — row 1, written as unit 01.",
+      "The frozen post-process artifact in the same bullet list — row 3, an existing anchor, referenced not re-extracted.",
+      "The unenforced provenance-citation obligation in the same bullet list — not named in the published block, outside the population boundary."
+    ]
+  },
+
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_note": "Same strain as unit 01: a named bullet inside its rule's worked section, not a report subject. Coded 'subject' on the stronger ground here that the source gives it a full mechanism, a count, and its own diagnostic."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "source": "CLAUDE.md:527-528 (six-pattern block, section 6); exemplar named across :527-528. Mechanism text docs/technical/build_discipline.md:761-765",
+  "extractor": "iii_prime",
+  "role": "iii_prime",
+  "matrix_unit": false,
+  "true_label": "P6",
+  "label_source": "named inside CLAUDE.md's Build Discipline section 6, beginning at line 527 and completing at 528. Read off, not assigned.",
+  "files_read": ["CLAUDE.md", "docs/technical/build_discipline.md"],
+
+  "symptom": "An aggregate computed over a grid that was a quarter populated — eight cells of thirty-two, every one of them on a single level — was reported as a reading for the whole system, with a confident directional verdict beside it. A completeness figure of 0.25 was printed alongside, and nothing consulted it.",
+
+  "mechanism_as_described": "The aggregate is assembled by collecting every value the grid can supply and combining what comes back. A level holding no values supplies nothing — it contributes silence rather than a mark saying it was not measured — so the collection simply returns a shorter list and the combination proceeds over it normally. The result is well formed and numerically unobjectionable; what it does not carry is how much of the grid it stands for. A reading taken over one level and a reading taken over four arrive at the consumer in the same shape, and the consumer that renders it as a system-wide verdict never asks which it is holding. The directional verdict was issued on the strength of a single level.",
+
+  "detection_path": "Comparing the number of cells that actually fed the aggregate against the number the grid holds when full, and making the aggregate carry that ratio to wherever it is read. Here the ratio had already been computed and printed; what was missing was any consumer that required it, so the check is to have the consumer state what it needs and refuse when the ratio does not meet it.",
+
+  "consequence": "A one-level measurement was published as a whole-system finding, carrying a directional verdict that a single level cannot support. The stated remedy is that adequacy is a property of the question being asked rather than of the data — one level is fine for a one-level question and worthless for a verdict that needs two — so the requirement has to be named by the consumer and cannot be set as one global threshold.",
+
+  "extraction_notes": {
+    "selection_rule_applied": "Row 11 of the frozen population, named across CLAUDE.md:527-528 (the exemplar's name begins on 527 and its mechanism completes on 528; the cited line holds the name, so the citation stands). Mechanism from the source's third numbered instance in the corresponding worked section. COLLISION RISK DECLARED, NOT RESOLVED: this instance and the DISQUALIFIED row 9 are two different defects found by the same probe in the same construct, and row 9 was disqualified for colliding with an already-extracted unit that I am forbidden to open. Whether this one collides with that same unit cannot be checked from where I sit. It is written because the frame is frozen and names it a write row; the check that would settle it is stated in EXTRACTION_NOTES §4 and is owed by the assembling instance BEFORE this unit enters a packet.",
+    "alternatives_not_extracted": [
+      "The failed-gradient fall-through named first in the same section — row 9, DISQUALIFIED. Not written. It is a distinct defect from this one (a value-level fall-through after a computation failed, versus an aggregate assembled over a partially populated grid), and the source presents them as two instances at two different altitudes.",
+      "The filtered-channel instance named second in the same section — row 10, written as its own unit (10).",
+      "The head-truncation dual worked in the same section — not named in the published block, outside the frozen population boundary."
+    ]
+  },
+
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_note": "A numbered, titled instance inside the rule's worked section. Same strain as unit 10; the treatment here is five lines, the shortest of the section's three."
+  }
+}

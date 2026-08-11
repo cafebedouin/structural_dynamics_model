@@ -1,0 +1,31 @@
+{
+  "source": "CLAUDE.md:486 (six-pattern block, section 2); mechanism text docs/technical/build_discipline.md:427-429",
+  "extractor": "iii_prime",
+  "role": "iii_prime",
+  "matrix_unit": false,
+  "true_label": "P2",
+  "label_source": "named inside CLAUDE.md's Build Discipline section 2 at line 486. Read off, not assigned.",
+  "files_read": ["CLAUDE.md", "docs/technical/build_discipline.md"],
+
+  "symptom": "Four separate documents were all in use as the place where outstanding work was recorded. Each was maintained, each read as a legitimate list, and none of them stated that it was the list. The routine that updated them at the end of a working session named only some of the four.",
+
+  "mechanism_as_described": "The four documents accumulated over time, each added when a need for it arose and none of them retiring the others. Nothing recorded which one was the one to consult, so that fact lived only with whoever happened to be writing. Because the end-of-session routine named a subset, the documents it named stayed current and the ones it did not name drifted, with no moment at which anything failed — each document on its own remained internally coherent and perfectly readable, and a drifted one is indistinguishable from a current one by inspection. One of the unnamed documents held a live outstanding work item that the routine never reconciled, and it sat there unreconciled.",
+
+  "detection_path": "Comparing the set of documents actually serving as recording surfaces against the set the update routine names, rather than reading any one of them. Reading a drifted document does not reveal the drift, because there is nothing inside it to reveal; the discrepancy is only visible between the inventory and the routine.",
+
+  "consequence": "Work recorded in an unnamed document could sit indefinitely without being carried forward, while the act of recording it read as having been done. The resolution taken was to consolidate onto a single recording surface and delete the rest.",
+
+  "extraction_notes": {
+    "selection_rule_applied": "Row 5 of the frozen population. Its exemplar shares CLAUDE.md line 486 with row 4 — verified by reading the line, which names both exemplars in one parenthetical; this is not a citation error (see EXTRACTION_NOTES §3, pre-check 1). Mechanism from the second bullet of the corresponding worked section, which is three lines and prefixed 'Historically'. TWO DISCREPANCIES RECORDED RATHER THAN SMOOTHED: (a) the exemplar and its mechanism bullet both name FOUR surfaces, while the resolution note elsewhere in the same published document names FIVE consolidated surfaces — the unit says four, following the exemplar as named; (b) the consequence's closing sentence (consolidation and deletion) is stated in that other part of the same published document, not at the exemplar line or in the mechanism bullet. Both source files remain within the population boundary, but the reader should know the last sentence travelled further than the rest.",
+    "alternatives_not_extracted": [
+      "The duplicated generator script in the same bullet list — row 4, an existing direction-(i) anchor, referenced not re-extracted.",
+      "The stale 'required' comment describing a gate that had been removed — a sub-case worked in the same section, but not named in the published block, so outside the frozen population boundary.",
+      "The scattered-audit-writeups instance worked at the end of the same section — likewise not named in the published block, outside the boundary."
+    ]
+  },
+
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_note": "Strained in the same way as 01 and 02. Coded 'subject' because it is a named instance in the rule's own worked section; the weaker case here is that the bullet is three lines and prefixed as history rather than treated as a live case."
+  }
+}

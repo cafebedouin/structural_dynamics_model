@@ -1,0 +1,31 @@
+{
+  "source": "CLAUDE.md:526-527 (six-pattern block, section 6); exemplar named at :526. Mechanism text docs/technical/build_discipline.md:747-749",
+  "extractor": "iii_prime",
+  "role": "iii_prime",
+  "matrix_unit": false,
+  "true_label": "P6",
+  "label_source": "named inside CLAUDE.md's Build Discipline section 6 at line 526. Read off, not assigned.",
+  "files_read": ["CLAUDE.md", "docs/technical/build_discipline.md"],
+
+  "symptom": "A component's load output was routed through a filter that dropped every line containing the word warning. One such line — a reference to a module that no longer existed — was printed on every single load for four months and was seen by nobody. It ended when the dead reference was reached at run time and brought down the test suite.",
+
+  "mechanism_as_described": "The filter was installed deliberately, because the channel was noisy and the noise was not interesting. It removes lines by one fixed rule applied to every line, and it cannot tell a routine noisy line from a line reporting a genuinely broken reference — both contain the word. So a channel that was quiet because there was nothing to report and a channel that was quiet because everything it reported was being discarded produced the same output: nothing. Each part was individually sound. The load really did emit the line; the filter really did what it was written to do; the reader really did see a clean channel. The loss happens where the three meet, which is why no check at any one of them would have caught it.",
+
+  "detection_path": "Reading the channel unfiltered, or replacing the blanket removal with a list of the specific lines that are permitted to be dropped, so that anything not on the list survives to the reader. Under that arrangement the dead-reference line has nowhere to go and appears on the first load.",
+
+  "consequence": "A broken reference stayed live and invisible for four months and then failed at run time, in the suite, at the point where it was most expensive. The stated remedy is that a channel must carry an explicit list of what its silence is allowed to mean, rather than a blanket rule for what to throw away.",
+
+  "extraction_notes": {
+    "selection_rule_applied": "Row 10 of the frozen population, named at CLAUDE.md:526. Mechanism from the source's second numbered instance in the corresponding worked section — three lines, giving the filter, the suppressed content, the four-month duration and the terminal failure. The literal filter command is quoted verbatim in the published block; it has been rendered as a description here rather than reproduced, on the same de-identification principle the finished anchors follow, because these exemplars sit inside the document that assigns their labels and a verbatim identifier is a lookup key straight to the answer. The 'each part was individually sound' sentence is the source's own claim about this instance, not my gloss.",
+    "alternatives_not_extracted": [
+      "The failed-gradient fall-through named first in the same section — row 9, DISQUALIFIED in the frozen population as colliding with an already-extracted unit. Not written.",
+      "The partial-grid aggregate named third in the same section — row 11, written as its own unit (11), with a collision risk declared in EXTRACTION_NOTES §4.",
+      "The head-truncation dual worked immediately below this instance (a failure channel reported by slicing its first 300 characters) — a genuinely distinct incident with a full mechanism, but NOT named in the published block, so outside the frozen population boundary. Recorded here because it is the strongest candidate the boundary excludes."
+    ]
+  },
+
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_note": "A numbered, titled instance inside the rule's worked section, with its own dual worked below it. Strained only in that the section is a rule statement rather than a report."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": "CLAUDE.md:513-518 (six-pattern block, section 5, 'the dual'); exemplar named at :515. Mechanism text docs/technical/build_discipline.md:634-652",
+  "extractor": "iii_prime",
+  "role": "iii_prime",
+  "matrix_unit": false,
+  "true_label": "P5",
+  "label_source": "named inside CLAUDE.md's Build Discipline section 5 at line 515, within that section's stated dual. Read off, not assigned.",
+  "files_read": ["CLAUDE.md", "docs/technical/build_discipline.md"],
+
+  "symptom": "A comparison routine reported that a quantity was unrecorded for a set of records and, on that basis, treated them as having nothing to compare. The quantity was in fact recorded for those records — as a series of values at real dates — and the routine had asked for it at one fixed index that none of those series contains.",
+
+  "mechanism_as_described": "The comparison asked each record for the quantity at a single synthetic index chosen as a common baseline. Fifteen records carry the quantity only as a dated series, at points such as 1900, 1450 and 480 BC, and none of them holds an entry at the chosen index. The lookup therefore fell through to its no-data branch, and the caller read the result as 'not recorded'. Both available corrections went wrong, in opposite directions. The fall-through branch had been supplying an invented middle value, which fed a real-looking number into the comparison. Replacing that with a refusal removed the invented number, but it also discarded the recorded series along with it, and the comparison then reported full agreement between two readings that genuinely disagree — a robustness count moved from 0 to 156 and a real divergence between two categories was erased. Neither branch was the defect. The defect was that the question had been asked at an index the data was never recorded on.",
+
+  "detection_path": "For every record the routine called unrecorded, enumerating the source entries at any index rather than only at the queried one. If entries exist elsewhere, the emptiness belongs to the query and not to the data, and that is directly countable without reasoning about the routine at all.",
+
+  "consequence": "A genuine disagreement between two readings was reported as robust agreement across the board — the more damaging of the two outcomes, and the one produced by the repair rather than by the original defect. The stated correction is to establish, before treating an emptiness as real, whether a query on the data's own index would find the value; if it would, the query is what gets fixed.",
+
+  "extraction_notes": {
+    "selection_rule_applied": "Row 8 of the frozen population, named at CLAUDE.md:515. Mechanism from the source's own worked sub-section, which is full: it states the probe, the affected count, the shape of the recorded data, both failed corrections, and the measured harm. PRE-CHECK RUN BEFORE WRITING, AND IT CAME BACK NEGATIVE: this incident and a separate published exemplar of the fabricated-missing-value rule live in the SAME routine and both involve a 0.5 fall-through, but they are two different incidents — different datum, different code branch, different date, opposite corrective direction. Full working in EXTRACTION_NOTES §3, pre-check 2. A related but weaker observation IS carried there: this incident's first step is itself a fabricated-value event, so the incident spans two rules while being published under one.",
+    "alternatives_not_extracted": [
+      "The certifying-check-over-an-empty-table exemplar in the main body of the same section — row 7, an existing direction-(i) anchor, referenced not re-extracted.",
+      "The two siblings named beside that one (a universally-quantified check over the same empty table; an averaging helper returning a default for a quantity with no rows) — they are named as 'same class' companions rather than as exemplars in their own right, and both are already carried inside the referenced anchor's own mechanism text, so extracting either would duplicate an anchor."
+    ]
+  },
+
+  "metadata": {
+    "incident_location": "subject",
+    "incident_location_note": "The least strained 'subject' in the set: the incident has its own titled sub-section with a full worked mechanism, rather than a bullet or a parenthetical."
+  }
+}
