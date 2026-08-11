@@ -17,6 +17,14 @@ rule matches the primary sample's, because I have not seen the primary sample. T
 live exercise of the quarantine mechanism (previously k=0), and it is arriving at six times the
 volume anyone designed it for.
 
+**Operator ruling, 2026-08-11: §H.2 confirmation WITHHELD — six of eight is not usable as an escape-check
+result, and the extractor is right about why.** Two explanations survive and blindness is what makes
+them indistinguishable; that is the design working, not failing. The row is not scored until the
+threshold-comparability probe runs: **`PREREGISTRATION_threshold_calibration.md`**, in this
+directory, pre-registered before either party has seen a result. Its escape-side draw is executed
+and recorded there. Until it runs, nothing in this file licenses a numerator, a miss rate, or a
+sentence about the proxy's completeness.
+
 ## Conventions applied (declared before extraction, overridable by the operator)
 
 - **C-1 (prose in directories that have none).** Two frame directories carry no prose document
@@ -192,7 +200,28 @@ primary conventions and ask whether they would have extracted it — before any 
 corrected numerator, not a miss-rate estimate. Zero *confirmed* hits would have licensed only
 "miss rate ≤ 31.2% at 95%"; six *proposed* hits license nothing at all until they are ruled.
 
-## Genuinely ambiguous — escalated, not decided
+## Genuinely ambiguous — escalated, and now RULED (operator, 2026-08-11)
+
+All three escalations below were ruled the same day. The rulings are recorded in the unit files
+themselves (`operator_ruling_2026_08_11` keys) so a cold reader hits them at the unit, not only here.
+
+1. **Directory 3 — no prose, defect present only as a machine-written artifact.** RULED: NO-UNIT
+   stands, and it is recorded as a **third category — outside the frame**, not an in-frame NO-UNIT.
+   A prose-searching census can neither hit nor miss a directory with no prose, so counting it as an
+   ordinary NO-UNIT would inflate the precision denominator with a directory the proxy was never
+   able to see. Not a defect in the figure — a defect in the frame. Carried in the unit file as
+   `metadata.frame_status = outside_frame_no_prose`, with an explicit do-not-pool note. **Open
+   consequence for whoever computes the row:** if others of the 101 are prose-free, the frame is
+   weaker than its n suggests, and the escape denominator needs the same audit.
+2. **Reference to an incident recorded elsewhere.** RULED: does NOT count as reporting one. The
+   boundary rule was fixed against the census's own line, and a pointer to another directory's
+   incident would double-count it — the frame partitions directories, not incidents. My
+   non-extraction in directory 4 stands, and this now governs both strata.
+3. **Directory 5, one incident or two.** RULED: one unit, as extracted. The standing rule is
+   fullest-described-mechanism with alternatives recorded; making an exception now would be a
+   convention change mid-stratum.
+
+## Superseded — the original escalation text, kept for provenance
 
 1. **Directory 3 is a third case the boundary rule does not name.** It carries a defect only as a
    machine-written artifact (a quarantine list of unresolvable edge targets, one of them a
@@ -253,11 +282,35 @@ control that direction (c) exists to measure.
 
 No slip to declare. Had there been one I would have written it here rather than continued.
 
+## For the record (operator, 2026-08-11)
+
+Two entries the operator dictated on reading this extraction. Both are apparatus findings, not
+findings about the eight directories.
+
+1. **The `scan_units` KeyError is a handoff specifying a format its own check cannot consume.** It
+   is the **fifth stated-versus-executed defect** in this arc, and the **first where the rule and
+   the checker disagree** rather than the rule and the count. The earlier four were quantity
+   mismatches; this one is a category mismatch between two authored artifacts that were supposed to
+   describe the same object.
+2. **The leak in unit 06 was caught by the sweep**, which matters against §6.4's honest limit. The
+   running tally: the control architecture has now caught **two untracked paths and one real leak,
+   and zero of five instrument defects.** The split still isn't random — the controls catch what
+   flows *through* the instruments and miss what is *wrong with* them, which is the same asymmetry
+   §6.4 declares and has not yet closed.
+
+**Where entry 2's tally belongs:** the running §6.4 count lives in the other instance's amendment
+ledger, not in this file. I have not edited that document — it is another writer's, and this repo's
+one-writer rule is exactly what prevents me from appending to it mid-arc. Recorded here so the
+number is not lost; it still needs to land in §6.4.
+
 ## Handoff back
 
-Packet assembly, the driver, and the prereg are the other instance's. Three things travel with
-these units: the six quarantined candidates and their asymmetric cost; the tooling defect in the
-sweep command (above, unfixed by me — the extractor does not code); and the calibration question,
-which is the one I would want answered before any of the six is scored.
+Packet assembly, the driver, and the arc prereg are the other instance's. Four things travel with
+these units: the six quarantined candidates and their asymmetric cost; the threshold-comparability
+probe, pre-registered in `PREREGISTRATION_threshold_calibration.md` with its escape-side draw
+executed and its outcome semantics fixed — **it needs a primary-side draw I must not make, and an
+operator spend-go if the judge is a live instance**; the tooling defect in the sweep command
+(unfixed by me — the extractor does not code); and the §6.4 tally above, which needs to land in the
+amendment ledger.
 
 **No model call was made.** `payloads/` and `responses/` were not touched.
