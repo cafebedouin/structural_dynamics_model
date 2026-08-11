@@ -10789,10 +10789,39 @@ extraction (`frame/extraction_split.json`). A stopped at 7 mid-half and handed o
 extract the two largest dirs in a depleted context — thin units bias toward `other` and confound
 control (c); the remaining 6 (263.1 KB MEASURED, incl. both of A's overlap units) landed on a
 fresh instance. **Final state of A's half: 13 units × 4 fields swept, 0 leak hits; 0 schema gaps;
-`incident_location` subject 10 / incidental 2 / self_audit_subsection 1; 6 of 13 dirs carried
-more than one defect and recorded `alternatives_not_extracted` with a stated selection rule.**
+`incident_location` subject 10 / incidental 2 / self_audit_subsection 1; **8** of 13 units
+recorded `alternatives_not_extracted` (21 entries) with a stated selection rule.** (The 8 is a
+correction: a stated "6" counted only the six the A2 instance wrote itself and omitted two from
+the first A instance — §I.3.)
 **ZERO NO-UNIT proposals from A's half** — every directory reported an incident, so §H.2's `k`
 stays open until B's half lands and A's zero must not be read as the answer.
+
+**DIRECTION (ii) EXTRACTION COMPLETE, 2026-08-11 — 26 units, both halves.** B landed 13 of 13
+(`packets/our_units/14–26`), largest-dir-first over 410 KB measured. **Verified independently by
+the dispatching instance, not taken on report:** `swept 26 units × 4 fields, direction (ii):
+0 hits`; 0 schema/field problems; `role: "primary"` and an explicit `overlap_source` on all 26;
+22 sampled dirs covered, exactly 4 extracted twice (the floor dirs). **Pooled `incident_location`:
+subject 17 / self_audit_subsection 5 / incidental 4** (B's own: 7/4/2). **Blind-overlap rule HELD**
+— B opened none of `our_units/01, 06, 12, 13` by any route, and its commit messages state
+explicitly that no overlap directory is summarized in them; **no floor comparison is VOID.**
+**k = 0 NO-UNIT across the full n=22 primary sample** (A 0 + B 0) — but §H.2 requires operator
+confirmation in BOTH directions, so the row is NOT closed by the extractors' report; the k=0 null
+licenses only "keyword-proxy false-positive rate ≤ 12.7% at 95%", never "the proxy is precise".
+
+**Recording-threshold divergence between the halves — flagged by B, NOT smoothed (§I.3).** All
+13 B units carry `alternatives_not_extracted` (38 entries) against A's 8 (21 entries), because B
+recorded every candidate it considered and rejected — including ones it judged not to be defects
+at all (a control working as designed, a declared scope limit, a stale comment) — while A recorded
+only competing defects. **The two halves' alternative counts are therefore NOT comparable as a
+defect-density measure and no outcome row may be built on them.** Correct handling: the convention
+differed, and a pooled count would have concealed that a convention differed at all.
+
+**B's residual, carried for the adjudicator:** several multi-defect selections were close under
+the stated rule (`2026-07-01_oq45_oq52`, `2026-08-07_oq261`, `2026-06-11_oq44`), each loser
+recorded with its reason so the call is auditable. **Two of those are floor-participating dirs**,
+where a different extractor's inversion would show up in the churn measurement as extractor
+disagreement when it is really a selection difference — a known, declared limit on what the floor
+measures, not a defect in it.
 
 **Overlap accounting RULED (operator, 2026-08-11; `verdict_grammar_amendment.md` §I).** `role` was
 encoding two independent facts — matrix membership (a *sampling* fact, fixed by the seeded draw)
@@ -10800,8 +10829,10 @@ and floor participation (a *control* fact, fixed by the overlap design) — and 
 carry both without ambiguity, which is what produced the inconsistency (`01` was
 `"primary+overlap"`, `06` was `"primary"`, both the same kind of thing). **A's 01 and 06 STAY
 matrix units.** All 13 A units now carry `role: "primary"` plus an explicit
-`overlap_source` boolean, true on the four floor-participating dirs; **the driver quarantines on
-`overlap_source`, never on `role`.** Excluding the four would drop seeded-sample units from a
+`overlap_source` boolean, true on the four floor-participating dirs, plus a `matrix_unit` boolean
+(§I.2, added when B's half landed — `overlap_source` is a DIRECTORY property, so both extractions
+carry it and quarantining on it alone yields 18 cells, not 22); **the driver quarantines on
+`matrix_unit`, never on `role`.** Excluding the four would drop seeded-sample units from a
 stratum already thin at n=22 to guard a contamination that does not exist — A's 01 is not
 contaminated by B's later independent extraction of the same dir. **The comparison is quarantined,
 not the units; B's four overlap-dir extractions are the ones that never enter cells.** Accounting:

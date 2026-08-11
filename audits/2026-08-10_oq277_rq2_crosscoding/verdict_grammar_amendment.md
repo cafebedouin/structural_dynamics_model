@@ -310,7 +310,8 @@ Written after extractor A's half closed at 13/13, before extractor B started. In
 the overlap relationship moves to its own boolean, `overlap_source`, true on the four
 floor-participating directories (`2025-05-15_recon_2`, `2026-06-11_oq44_policy_close`,
 `2026-06-27_oq124_oq149_committer_convention_control`, `2026-07-11_oq186_oq188_readsite`).
-**The driver quarantines on `overlap_source`, never on `role`.**
+**The driver quarantines on `matrix_unit`, never on `role`** — see §I.2, which corrects this
+clause as originally written.
 
 **Why the field split, stated as the defect it removes.** `role` was being asked to encode two
 independent facts: whether a unit enters the matrices, and whether it participates in a floor
@@ -385,3 +386,50 @@ Recorded the same way the pre-registered C/D disagreement guess was recorded as 
 §R2a). **This is the second directional guess of this arc that the data declined.** Both are kept
 in the record at the same volume as the confirmations; a design that only remembers its correct
 priors is measuring its own memory.
+
+
+### I.2 Correction to §I, found when B's half landed — `overlap_source` cannot answer the driver's question
+
+§I as written said the driver quarantines on `overlap_source`. **Measured, that yields 18 cells,
+not 22:**
+
+```
+quarantine on overlap_source alone -> 18 cells  (RULING SAYS 22)
+quarantine on matrix_unit         -> 22 cells   (A 13 + B 9)
+```
+
+`overlap_source` is a property of the **directory** (is it floor-participating?), so BOTH
+extractions of each overlap directory carry it — 8 units, not 4. Quarantining on it drops the
+A-side extraction too, and the four overlap directories vanish from the matrices entirely: exactly
+the outcome §I ruled against, arrived at by following §I.
+
+**This is the same defect §I diagnosed, one level down.** A boolean was again being asked a
+question it cannot answer, because there is a THIRD independent fact: not "does this directory
+participate in a floor comparison" (control) and not "was this directory sampled" (sampling), but
+**"of the two extractions of this directory, is this the one that enters cells."**
+
+**Fix, implementing the ruling rather than extending it:** a third explicit field, `matrix_unit`,
+on all 26 units. `true` for all 13 of A's and for B's 9 non-overlap extractions; `false` for B's
+four overlap-directory extractions — which is precisely §I's "B's versions are the ones that never
+enter cells," made machine-checkable instead of left as a rule a driver author has to remember.
+Checked property, not an intention: **every one of the 22 sampled directories contributes exactly
+one cell unit** (verified `set(counts)=={1}` over the 22).
+
+**Operator: overrule if you would rather redefine `overlap_source` to mean the extraction-level
+fact instead of adding a field.** Both work; a third field was chosen because collapsing the
+directory-level and extraction-level facts back into one boolean is what produced this.
+
+### I.3 Correction to two stated counts
+
+- **A's units carrying `alternatives_not_extracted` is 8 of 13, not 6.** The 6 was written into
+  `HANDOFF_EXTRACTOR_B.md` and this OQ's ISSUES entry by the A2 instance, which counted only the
+  six it extracted itself and omitted the two recorded by the first A instance before the handoff.
+  Corrected wherever stated. Per-unit entry totals: **A 21 entries over 8 units; B 38 over 13.**
+- **B's recording-threshold flag stands, at the corrected magnitude.** B recorded every candidate
+  it considered and rejected — including ones it judged not to be defects at all (a control working
+  as designed, a declared scope limit, a stale comment); A recorded only competing defects. **The
+  two halves' `alternatives_not_extracted` counts are therefore NOT comparable as a defect-density
+  measure and no outcome row may be built on them.** The divergence is 8/13 vs 13/13, not 6/13 vs
+  13/13 — smaller than reported, and real. Flagged by B rather than smoothed, which is the correct
+  handling: the convention differed, and a pooled count would have concealed that a convention
+  differed at all.

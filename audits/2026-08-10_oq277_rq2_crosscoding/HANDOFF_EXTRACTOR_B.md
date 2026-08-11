@@ -104,7 +104,9 @@ extraction confounds the control meant to catch it.
    `extraction_notes.alternatives_not_extracted`, each with why. **State your selection rule**, so
    it is visible as a rule rather than a preference. A's rules, for continuity, not obligation:
    fullest DESCRIBED mechanism (a unit can only carry the mechanism the prose states), tiebroken by
-   realized consequence over caught-before-it-mattered. 6 of A's 13 needed this.
+   realized consequence over caught-before-it-mattered. **8** of A's 13 recorded alternatives
+   (corrected 2026-08-11 from a stated 6 — the A2 instance counted only the six it wrote itself
+   and omitted two from the first A instance; §I.3).
 6. **`metadata.incident_location`** is mandatory: `subject` | `self_audit_subsection` |
    `incidental` (`verdict_grammar_amendment.md` §H.1). A's distribution: 10 / 1 / 2.
 7. **Compose free of the P-lexicon, then sweep.** Never write freely and redact after — that
@@ -151,7 +153,10 @@ split them (`verdict_grammar_amendment.md` §I, now part of the prereg):
   `2026-06-11_oq44_policy_close`, `2026-06-27_oq124_oq149_committer_convention_control`,
   `2026-07-11_oq186_oq188_readsite`. **False on the other nine. Write the field explicitly on all
   thirteen** — absent-means-false is the same two-tokens-one-slot collapse this fixed.
-- **The driver quarantines on `overlap_source`, never on `role`.**
+- **`matrix_unit: true|false`** — a THIRD fact, added 2026-08-11 (§I.2): of the two extractions of
+  an overlap directory, which one enters cells. `false` on B's four overlap-directory extractions,
+  `true` on the other 22. **The driver quarantines on `matrix_unit`, never on `role`, and never on
+  `overlap_source` alone — the latter yields 18 cells, not 22.**
 
 **Cell accounting (do not drift from it):** each of the 22 sampled directories contributes exactly
 ONE unit to the matrices. A contributes 13; **you contribute 9**; your four overlap-directory
