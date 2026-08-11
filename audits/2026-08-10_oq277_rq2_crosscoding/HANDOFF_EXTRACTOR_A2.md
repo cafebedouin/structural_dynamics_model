@@ -1,5 +1,21 @@
 # HANDOFF — extractor A's second half (direction (ii), units 8–13 of A's 13)
 
+> ## ✅ CLOSED 2026-08-11 — A's half is 13 of 13. Entry point is now `HANDOFF_EXTRACTOR_B.md`.
+>
+> All six remaining units landed (`packets/our_units/04, 09, 10, 11, 12, 13`), commits
+> `959a1596`, `6c625274`, `3c976d12`. Final sweep: **13 units × 4 fields, direction (ii),
+> 0 leak hits**. Schema check: 0 gaps; `incident_location` = subject 10 / incidental 2 /
+> self_audit_subsection 1. **Zero NO-UNIT proposals** — every directory in A's half reported an
+> incident, so §H.2's `k` is not closed until B's half lands.
+>
+> **Do not work from this file's task list.** It is retained for the conventions in
+> *"Conventions established"* (which bind B) and for the record of why A split at 7.
+>
+> **⚠ The blind-overlap rule in §1 below now has teeth.** When it was written, no overlap unit
+> existed anywhere, so it could not be violated. Four unit files now exist that extractor B must
+> not open (`01`, `06`, `12`, `13`), and `git show` on the commits above prints their bodies.
+> The prohibition list and the two leak channels are in `HANDOFF_EXTRACTOR_B.md`.
+
 **Written:** 2026-08-11 by extractor A after landing 7 of its 13 units.
 **Read first:** `HANDOFF.md` (original), then `frame/extraction_split.json`, then this file.
 **You are the EXTRACTOR. You never code.** Assigning a pattern to a unit breaks the experiment.

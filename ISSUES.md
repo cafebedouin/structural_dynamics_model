@@ -10673,11 +10673,18 @@ names where. Either way §4.3 acquires the first coded corpus behind it (OQ-280)
 PREREG FREEZE, not at plan approval — the md5 of `PREREGISTRATION.md` must sit in
 `audit_log.md` physically ABOVE the first result line before any coding call is made. The
 staged extension to all 73 is gated on H5 passing and is NOT authorized in advance.
-**START AT `audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF_EXTRACTOR_A2.md`** (current entry
-point as of 2026-08-11; the original `HANDOFF.md` carries a superseded-banner and its "Your next
-step" section is stale — steps 1 and 2 are DONE and must not be re-run). The original still
+**START AT `audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF_EXTRACTOR_B.md`** (current entry
+point as of 2026-08-11; extractor A's half is 13 of 13 COMPLETE and `HANDOFF_EXTRACTOR_A2.md`
+carries a CLOSED banner — its task list must not be re-run, though its conventions bind B).
+The original `HANDOFF.md` likewise carries a superseded-banner and its "Your next step" section
+is stale — steps 1 and 2 are DONE and must not be re-run — but still
 carries the done/not-done
-table, the carried rulings, and the exact next step. Do not re-derive from this entry alone.
+table, the carried rulings, and the writeup obligations. Do not re-derive from this entry alone.
+**Blind-overlap prohibition is now LIVE:** four unit files exist that extractor B must not open
+(`packets/our_units/01, 06, 12, 13`), and `git show` on the landing commits prints their bodies;
+list and channels in `HANDOFF_EXTRACTOR_B.md`. Reading one does not merely dirty a control — it
+makes the H5-gate extension decision (`verdict_grammar_amendment.md` §E) ride on a
+self-comparison that reports INSIDE FLOOR by construction.
 
 **Phase 1 status, 2026-08-10 (step 0 + step 1 + direction-(i) source COMPLETE; direction (ii)
 OPEN).** Frame frozen (174 dirs = 73 incident-bearing + 101 non-census, partition exact,
@@ -10776,12 +10783,24 @@ latent, not live. **Rider, general:** *a handoff's volume estimate is a claim, a
 measures it before planning against it* — it has the weakest provenance of anything in a
 handoff and is the number most likely to be planned against unexamined.
 
-**Direction (ii) IN PROGRESS — extractor A has landed 7 of its 13 units (2026-08-11).**
-Per-unit files at `packets/our_units/`, 0 leak hits, split boundary declared before extraction
-(`frame/extraction_split.json`). A stopped at 7 and handed off (`HANDOFF_EXTRACTOR_A2.md`) rather
-than extract the two largest dirs in a depleted context — thin units bias toward `other` and
-confound control (c). **Remaining for A: 6 dirs, 263.1 KB MEASURED** (incl. both overlap units,
-which are the extraction-churn floor and must be extracted without reading B's version).
+**Direction (ii) IN PROGRESS — extractor A COMPLETE at 13 of 13; extractor B's 13 NOT STARTED
+(2026-08-11).** Per-unit files at `packets/our_units/01–13`, split boundary declared before
+extraction (`frame/extraction_split.json`). A stopped at 7 mid-half and handed off rather than
+extract the two largest dirs in a depleted context — thin units bias toward `other` and confound
+control (c); the remaining 6 (263.1 KB MEASURED, incl. both of A's overlap units) landed on a
+fresh instance. **Final state of A's half: 13 units × 4 fields swept, 0 leak hits; 0 schema gaps;
+`incident_location` subject 10 / incidental 2 / self_audit_subsection 1; 6 of 13 dirs carried
+more than one defect and recorded `alternatives_not_extracted` with a stated selection rule.**
+**ZERO NO-UNIT proposals from A's half** — every directory reported an incident, so §H.2's `k`
+stays open until B's half lands and A's zero must not be read as the answer.
+
+**Accounting flag for the operator (NOT self-resolved).** `role` labelling is inconsistent
+across A's half in a way that touches quarantine: `01_recon_2.json` is `"primary+overlap"`,
+`06_oq44_policy_close.json` is `"primary"` — both are A's primary AND the source dirs for B's two
+overlap units. A driver quarantining on `role != "primary"` drops 01 and keeps 06, silently
+moving n by one. The real question underneath is a design call: the four floor COMPARISONS are
+`{A01×B, A06×B, A12×B, A13×B}`, and whether A's 01/06 are matrix units as well as floor inputs is
+the operator's to rule. Picking a label would be answering it, so it is flagged, not fixed.
 
 **Possible finding, surfaced by extraction and NOT yet measured: the §4.5 keyword proxy's
 PRECISION is unaudited.** `2026-06-15_oq131_six_observer` nearly yielded no unit — a
