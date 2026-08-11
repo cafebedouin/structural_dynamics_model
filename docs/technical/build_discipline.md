@@ -944,7 +944,11 @@ happens never / is unique"* — must be run against a **positive control**: a ca
 it must flag. If it does not fire on the known-positive, its clean result on the real question is
 worthless. This applies to reasoning about the code, not only to shell commands: an analyst
 asserting "this is stated only once" is running an unfalsified diagnostic on the document, and "I
-didn't find it" is not "it is not there" until the finder is shown to find.
+didn't find it" is not "it is not there" until the finder is shown to find. **And firing on the
+known-positive is the floor, not the discharge** — a plant proves the instrument *can* fire; the
+witness that its firing carries information is a case it *declined*. Grades of decline, the
+record-not-per-run rule, and the role-reuse failure: *A positive control demonstrates
+DISCRIMINATION, not detection*, below.
 
 **Chains: every verdict-producing instrument gets its OWN control — screen-controlled ≠
 rubric-controlled.** In a multi-stage audit (screen → content read; finder → judge), controlling
@@ -1011,6 +1015,68 @@ high count can't distinguish a real survivor from a renamed site. The discipline
 oracle rule: the probe must discriminate on the exact dimension it could be wrong on (here, the prefix
 boundary), or its verdict (pass *or* fail) carries no information. Forward-relevant to any future
 rename wave (the OQ-135 v8 seat/gauge/orientation vocabulary migration will hit this directly).
+
+---
+
+## A positive control demonstrates DISCRIMINATION, not detection (the grades of control; operator ruling, 2026-08-11)
+
+**Planting the target shows the instrument can fire. Only a case it DECLINED shows that its firing
+carries information.** This is the standing failure mode of the rule above — the demand for a
+positive control is heard, and satisfied with a plant: construct the thing the probe must flag,
+watch it flag, declare the instrument controlled. But an instrument that fires on everything also
+fires on the plant. **A control with no decline available is one-sided and licenses nothing, however
+well the plant worked** — the plant proves detection (the instrument *can* fire), and the claim being
+made rests on discrimination (this firing *distinguishes*). The two are as different as a clean read
+and a read that never looked, and they look identical in the transcript: both end in "positive
+control fired."
+
+**Grades of control, strongest first:**
+
+1. **A case the instrument declined in its own history.** The instrument, unprompted and on real
+   input, returned *no*. Strongest because the decline was not designed to be declinable — nobody
+   built it to be rejectable, so it cannot be tuned to the instrument's known weaknesses.
+2. **A naturally-arising negative drawn from the population.** A member of the actual corpus that
+   should not fire, selected before the run. Weaker than (1) because you chose it, but it carries the
+   population's real shape — including the near-misses an author would never think to write.
+3. **An authored decoy.** Weakest, and specifically: **a decoy shows only that the instrument can
+   reject authored decoys.** The author of the decoy already knows the discrimination the instrument
+   claims to make, and writes to the near side of it — so the decoy tests the author's model of the
+   boundary, not the boundary. Report a decoy-only control at that altitude; it is a floor, not a
+   pass.
+
+**The control attaches to the instrument's discrimination RECORD, not to each run.** Once an
+instrument has declined — grade (1) or (2) — that decline is a standing property of it. The
+obligation at each use is then **cite the record and show that this application is in distribution
+for it** (same input shape, same population, same role), not re-plant a target every turn.
+Re-planting per run is busywork that keeps re-proving detection while the discrimination question
+goes unasked. Corollary, and the live part of the rule: **when the application drifts out of the
+record's distribution, the record lapses** — a new population, a new input shape, or a changed
+engine token (see *Instrument vocabulary rots*, below) puts a fresh decline back on the bill.
+
+**If no decline is available anywhere in the population, the question is unanswerable from THIS
+corpus** — that is the verdict, not "the control is merely absent, noted, proceeding." Absent-control
+reads as a caveat and ships the finding; unanswerable-from-this-corpus is a *result*: declare it and
+route it to a typed Ω (`docs/omega_variables.md`) or to `design_gaps.md`. **And if no positive
+control could exist even in principle, that is a verdict on whether the category may be added at
+all** — not a limitation to note and work around. A category nothing could fail to be admits every
+member and routes nothing; it is the liveness test applied to the taxonomy
+(`docs/design/design_discipline.md` §5 → *A category whose positive control cannot exist*).
+
+**The silent failure: an instrument validated in one ROLE, then reused in another.** *The error
+profile is a property of the role, not the instrument.* A matcher validated as a **detector** — where
+false positives are conservative, because they widen a net a human then reads — becomes **silently
+decisive** when reused as a **selection metric**, where those same false positives now *choose*, with
+no downstream reader to catch them. Nothing about the matcher changed; its discrimination record was
+earned under an error profile the new role does not have, and the reuse looks like thrift rather than
+a new claim. **Rule: a reuse across roles is a NEW instrument and owes its own decline under the new
+role's error profile** — ask, at every reuse, *which direction of error is cheap here?*, and if the
+answer differs from the validation context, the record does not transfer. (The pipeline-local form of
+this is *Chains: every verdict-producing instrument gets its OWN control*, above — screen-controlled ≠
+rubric-controlled. Role-reuse is the same defect displaced in time instead of in the pipeline.)
+
+**Why it belongs to the spine:** "the instrument fired" is a success-shaped token filling the absence
+of "the instrument can tell these apart." Same shape as a fabricated `0.5`, a vacuous `forall`, and a
+byte-identical stale diff — a presence standing where a missing thing should be visible.
 
 ---
 

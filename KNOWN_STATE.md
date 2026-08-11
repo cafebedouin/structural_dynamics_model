@@ -45,6 +45,57 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-11 — [tripwire] A positive control demonstrates DISCRIMINATION, not detection — the grades of decline, the record-not-per-run rule, and the role-reuse silent failure
+**Files:** `CLAUDE.md`, `docs/technical/build_discipline.md`, `docs/design/design_discipline.md`
+**Tier:** tripwire
+
+**Ruling (operator, 2026-08-11).** Named as a consistent failure mode of Claude models (and likely
+not only them): the demand for a positive control is *heard* and then discharged with a **plant** —
+construct the case the probe must flag, watch it flag, declare the instrument controlled. But
+planting the target shows only that the instrument **can fire**; the claim being made rests on
+discrimination. **Only a case the instrument DECLINED shows that its firing carries information.** A
+control with no decline available is one-sided and licenses nothing, however well the plant worked.
+
+**Grades of control, strongest first** (the operative part — a control is reported at its grade, not
+as a binary "controlled"):
+1. a case the instrument **declined in its own history** (not designed to be declinable, so it cannot
+   be tuned to the instrument's known weaknesses);
+2. a **naturally-arising negative** drawn from the population (carries the real near-misses);
+3. an **authored decoy** — weakest, and precisely bounded: *a decoy shows only that the instrument
+   can reject authored decoys*, because its author writes to their own model of the boundary.
+
+**Attachment point (changes what is owed per run).** The control attaches to the instrument's
+**discrimination record**, not to each run: cite the record and show the current application is *in
+distribution* for it (same input shape, population, role), rather than re-planting every turn.
+Re-planting is busywork that re-proves detection. The record **lapses** when the application drifts
+out of distribution — new population, new input shape, changed engine tokens (cf. *Instrument
+vocabulary rots*), or a changed role.
+
+**Two verdicts that were previously handled as caveats.** No decline available anywhere in the
+population ⇒ **the question is unanswerable from this corpus** — declare it / route to a typed Ω or
+`design_gaps.md`, do not ship the finding under a noted-absence caveat. No positive control possible
+**even in principle** ⇒ a verdict on **whether the category may be added at all**, not a limitation
+to work around (a category nothing could fail to be routes nothing — the liveness test applied to the
+taxonomy; landed as `design_discipline.md` §5 → *A category whose positive control cannot exist is
+not admissible*).
+
+**Silent failure — validated in one ROLE, reused in another.** *The error profile is a property of
+the role, not the instrument.* A matcher validated as a **detector** (false positives conservative:
+they widen a net a human then reads) becomes **silently decisive** as a **selection metric**, where
+the same false positives now choose with no downstream reader. Nothing about the instrument changed;
+the reuse looks like thrift rather than a new claim. A cross-role reuse is a NEW instrument owing its
+own decline under the new role's error profile — the time-displaced twin of the pipeline-local
+*screen-controlled ≠ rubric-controlled* rule. Repo-side instance to watch: commentary-grade →
+correction-grade promotion in the override layer.
+
+**Landed:** full section in `build_discipline.md` (*A positive control demonstrates DISCRIMINATION,
+not detection*, placed between *Every diagnostic needs a positive control* and *A consistency check
+is not a discrimination check*, with a forward pointer from the former); compact tripwire promoted
+into the `CLAUDE.md` Build Discipline "Diagnostics are not exempt" paragraph; admissibility clause in
+`design_discipline.md` §5. No code touched.
+
+---
+
 ## 2026-08-11 — [tripwire] "Write the receiver's prompt" minted as a construction: a handoff is a specification test (stated-versus-instructed)
 **Files:** `CLAUDE.md`, `docs/technical/build_discipline.md`, `audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/PREREGISTRATION_threshold_calibration.md`
 **Tier:** tripwire

@@ -550,6 +550,21 @@ Concretely: wire-or-fail-loud, checked-canonicity, let the engine dispatch, retu
 of `[]`, a count of `0`, an "I found it nowhere" each can mean "nothing there" or "didn't
 dispatch / queried wrong / never ran." This holds for *reasoning*, not just shell: "X appears
 nowhere / is unique" is an unfalsified diagnostic until run against a case you know it must flag.
+**A control demonstrates DISCRIMINATION, not detection (operator ruling, 2026-08-11):** planting the
+target only shows the instrument CAN fire — the witness that its firing carries information is a case
+it **DECLINED**; a control with no decline available is one-sided and licenses nothing, however well
+the plant worked. Grades, strongest first: a decline in the instrument's **own history** > a
+**naturally-arising negative** drawn from the population > an **authored decoy** (which shows only
+that authored decoys get rejected — a floor, report it at that altitude). The control attaches to the
+instrument's **discrimination record, not to each run** — cite the record and show this application is
+in distribution for it, rather than re-planting every turn (the record lapses when population, input
+shape, engine tokens, or role drift). **No decline available anywhere in the population ⇒ the question
+is UNANSWERABLE from this corpus** (a verdict — declare it / route to a typed Ω), not a caveat to ship
+under; **no possible control even in principle ⇒ a verdict on whether the CATEGORY may be added at
+all** (`design_discipline.md` §5). **Silent failure — an instrument validated in one ROLE and reused
+in another:** a matcher whose false positives were conservative as a *detector* becomes silently
+decisive as a *selection metric*; the error profile belongs to the role, not the instrument, so a
+cross-role reuse is a NEW instrument owing its own decline.
 **And a check that CANNOT fail witnesses nothing while looking exactly like one that passed** —
 before reporting any check, ask *what value would make this line fail?*; if none exists (sums
 that balance by construction, a partition built by set-difference, a total recomputed from its
@@ -561,7 +576,8 @@ a reported count**). **And the control you ADD is itself a claim:** a positive c
 perturbation harness introduced to discharge this discipline inherits it — same-path, two-sided,
 riskiest-shape, substrate-anchored, write-free-if-pre-write (the confound reopens at the level of
 the tool you closed it with). Full table: `docs/technical/build_discipline.md` → *The spine*,
-*Every diagnostic needs a positive control*, and *An introduced instrument is itself a claim*.
+*Every diagnostic needs a positive control*, *A positive control demonstrates DISCRIMINATION, not
+detection*, and *An introduced instrument is itself a claim*.
 
 **Write the receiver's prompt before calling a design done — a handoff is a specification test
 (operator ruling, 2026-08-11).** Before declaring a plan, pre-registration, ruling, or design

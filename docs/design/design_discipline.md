@@ -564,6 +564,30 @@ is error, and it is the **liveness test** (the seat theorem's Q5 / the seed's in
 a thing whose removal rearranges nothing is fixed-by-situation; a thing whose asserted property is
 absent fails the test, and claiming it is concealment.
 
+### A category whose positive control cannot exist is not admissible (operator ruling, 2026-08-11)
+
+The liveness test above, applied to the **taxonomy** rather than to a single verdict. A positive
+control demonstrates *discrimination*, not detection: the witness is not a planted case the
+instrument flags, but a case it **declined** (`docs/technical/build_discipline.md` → *A positive
+control demonstrates DISCRIMINATION, not detection*). Read that as a design constraint on adding a
+type, band, verdict token, signature, or pattern atom:
+
+- **No decline available in the corpus ⇒ the question is unanswerable from this corpus** — a
+  result to declare (typed Ω per `docs/omega_variables.md`, or an entry in `design_gaps.md`), not a
+  caveat to ship the category under. The category may be *correct* and still not be *answerable
+  here*; those are different verdicts and only one of them licenses adding a routing token.
+- **No decline possible even in principle ⇒ do not add the category.** A category nothing could
+  fail to be admits every member, and by §5 a type assignment is a **routing decision** — a token
+  that routes everything routes nothing, so its verdict is contentless in exactly the way Corollary
+  1 names (a seat-free "true" type is the neutrality-triviality point). This is a ruling on
+  admissibility, not a limitation to note and work around; the honest move is to say the category
+  cannot be given content and leave it unbuilt.
+- **Corollary for reuse:** a category's discrimination record is earned in a **role**, and the error
+  profile belongs to the role. A marker validated as a wide *detector* (false positives conservative,
+  a human reads the hits) is not thereby licensed as a *selector* (false positives decide). Promoting
+  a commentary-grade annotation to a correction-grade override is exactly this move and owes a fresh
+  decline under the new role — see *Verdict grade distinction* in the override-layer subsection below.
+
 ### Typed absence — a reading's silence is itself a declaration (corollary of S2 / Corollary 2a)
 
 A reading is a **total function over its domain**: it returns a typed token — `out_of_domain`
