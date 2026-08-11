@@ -276,6 +276,13 @@ each** at the moment of stamping. The only payloads that exist are the 219 stub 
 |---|---|---|
 | `PREREGISTRATION.md` (2256 lines, assembled) | `4118f64ecaab06260c2b30841121e7b2` | **FROZEN — this is the stamp** |
 
+<!--OQ277-FREEZE-STAMP: 4118f64ecaab06260c2b30841121e7b2 -->
+
+*The line above is the machine-readable form of this stamp, added 2026-08-11. `--check`
+previously had to infer "frozen" from prose in the table, which it could not do, so it treated
+post-freeze source drift as a fatal error and prescribed a re-write that would have destroyed
+this record. A DRAFT stamp deliberately carries no such marker.*
+
 *Supersedes DRAFT `c1040cd04815c206791b5ab3192697be` (1991 lines) and the earlier
 `95e1fc00368a6b7bf4d2886cf02e4c65` (1908 lines). Both are recorded rather than overwritten; each
 was invalidated by an incorporated source changing, and `--check` went RED on exactly that both
