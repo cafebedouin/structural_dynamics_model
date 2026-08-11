@@ -11133,9 +11133,48 @@ omission declared in place and machine-checked absent
 un-redact vocabulary — it would inject a **wrong label** into a control whose entire job is to
 measure what redaction costs. Operator ruling, 2026-08-11.
 
-**What resolution would change — RESTATED as a collision.** Not "which branch wins" but **which
-member keeps the index and which is renumbered**, with both retained unless one is independently
-shown not to be a real mechanism. Candidate shapes: renumber the orphans to P7/P8 (making it eight);
+**3. FOURTH SIGHTING — and it removes an assumption the resolution options were resting on.**
+Found 2026-08-11 at the (iii′) extraction hand-back, from outside any instrument built to measure
+the collision (the extractor hit it while writing a P4 unit and reported it unprompted; re-checked
+independently with controls).
+
+**CLAUDE.md's published P3 and P4 have no worked section in `build_discipline.md` at all**, while
+the orphan members holding those indices do:
+
+| index | `CLAUDE.md` (published six) | worked section in `build_discipline.md`? | `build_discipline.md`'s own member at that index |
+|---|---|---|---|
+| P3 | destructive-replace / the faith merge | **NO — and 0 occurrences of the term anywhere in the file** | `## Pattern 3 — Bound-probe bypasses clause-order` (:486) |
+| P4 | recap-as-witness substitution | **NO worked section**; 4 prose mentions, none a heading | `## Pattern 4: Fabricated default` (:571) |
+
+*Controls, because this is a false-absence-shaped claim:* the heading probe demonstrably matches —
+it returns `## Pattern 3` and `## Pattern 4` from the same file — so "no heading" is a measurement,
+not a failed search; and `recap-as-witness` returns 4 hits as prose, so the string probe reads the
+file. The published P3's **0** is therefore a genuine total absence, not an unworked mention.
+
+**What this changes.** §2.5 recorded that the published P3 has no dated record of *firing*. This is
+the stronger fact one level up: **it has no operational specification either.** The two
+published-only members are not symmetric — P4 has an incident named in `CLAUDE.md` and no mechanism
+text; **P3 has neither.** So of the six published patterns, one is a name and an index with no
+mechanism document behind it anywhere in the repository.
+
+**And it answers a question that had been open since the (iii′) P3 row was written.** That row's
+entry is `no members — uncalibrated`. The reason is now mechanical rather than an accident of
+sampling: **the published P3 has no mechanism text to extract an exemplar from.** Not "nobody got
+around to it" — there is nothing to extract.
+
+**What resolution would change — RESTATED as a collision, and now constrained by sighting 4.**
+Not "which branch wins" but **which member keeps the index and which is renumbered**, with both
+retained unless one is independently shown not to be a real mechanism. **Renumbering assumes both
+members are specified, and one of them is not** — the published P3 has no mechanism document, so
+"renumber the orphans to P7/P8 and keep all eight" would mint an index for a pattern that has never
+been operationally defined. The option set therefore gains a prior question, which must be answered
+before any renumbering: **is the published P3 a pattern at all, or a name that acquired an index?**
+Three dispositions, and this is a ruling (Ω_C), not a measurement: specify it (write the mechanism
+section and let it keep or take an index), demote it (it is a *discipline* — "prove before you
+replace" — rather than a defect pattern, and disciplines do not belong in a defect taxonomy),
+or retire it. **Do not renumber before this is ruled**, or the taxonomy acquires a permanent index
+whose referent was never written down. Candidate shapes for the renumbering itself, unchanged:
+renumber the orphans to P7/P8 (making it eight);
 or keep both sets but give every index a namespace so a bare "Pattern 4" cannot be written. Either
 way the always-loaded file stops disagreeing with its own detail doc, and — the part this restatement
 adds — **the historical record needs a dating rule**, since existing references cannot be repaired
