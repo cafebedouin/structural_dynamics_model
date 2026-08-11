@@ -98,6 +98,15 @@ not thin** — no amount of n buys it. If you find yourself wanting to write a P
 looks complete, that impulse is the finding, not a gap to fill: record it in your notes and write
 nothing.
 
+> **⚠ DO NOT SMOOTH THIS LINE.** Of everything in this brief, `no members — uncalibrated` is the
+> phrase a well-intentioned instance is most likely to improve into something that reads better —
+> "no disagreement observed," "P3: n/a," "P3: consistent," or simply a blank cell. **Every one of
+> those is wrong, and wrong in the same direction:** each is the shape a cell takes when coder and
+> publication AGREED, so each converts *we could not measure this* into *this came out fine*. That
+> substitution is the exact defect the (iii′) row is being run to detect, performed on the row
+> itself. Write the phrase as given, in the row and in your notes. If a downstream reader finds it
+> ugly, that is the phrase doing its job.
+
 > **`anchor_i_1` (`w1_sheaf_join`) is already extracted and is taken AS-IS, not re-extracted.**
 > Two extractions of one source would silently become an unplanned floor pair. Same for
 > `anchor_i_2` and `anchor_i_3` — 3 of the 10 are existing direction-(i) anchors, so the extractor

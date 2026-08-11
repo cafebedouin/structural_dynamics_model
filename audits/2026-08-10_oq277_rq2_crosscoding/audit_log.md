@@ -100,7 +100,14 @@ The arm is **one-sided by construction**. Full reasoning in the prereg's Result 
 
 | artifact | md5 | status |
 |---|---|---|
-| `PREREGISTRATION.md` (1908 lines, assembled) | `95e1fc00368a6b7bf4d2886cf02e4c65` | **DRAFT — not the freeze** |
+| `PREREGISTRATION.md` (1991 lines, assembled) | `c1040cd04815c206791b5ab3192697be` | **DRAFT — not the freeze** |
+
+*Supersedes draft `95e1fc00368a6b7bf4d2886cf02e4c65` (1908 lines), invalidated the same day when
+`verdict_grammar_amendment.md` gained §L.6 and §L.7. Recorded rather than overwritten: the
+document's md5 changed because an incorporated source changed, and
+`oq277_build_prereg.py --check` went RED on exactly that — a naturally-arising fire of the
+byte-identity check, not a planted one. Had this been the real freeze, that RED would have been
+the invalidation notice.*
 
 **Why this is a draft and not the freeze.** One designed leg is not built: the **7 (iii′)
 exemplar units** are the pending hand-back from `HANDOFF_IIIPRIME_EXTRACTOR.md`. The assembled
@@ -122,6 +129,21 @@ re-pre-register a smaller experiment as though it were the designed one.
 4. `python3 python/audits/oq277_build_prereg.py --write` → new md5; `--check` must be GREEN.
 5. Record that md5 in this file, **above the sentinel below**, as the FREEZE stamp.
 6. Request spend-go. Do not code before it is given.
+
+> **RECOMPUTE 219, DO NOT CARRY IT.** `198 + 21 = 219` is stated in this file and in the handoff
+> messages, and it is exactly the kind of premise this arc keeps catching: an arithmetic that is
+> almost certainly right, sourced from a partial view, reaching a consumer with no way to check
+> it (§L.1). At step 2 the total must come from **units on disk** — the builder counts the
+> packets it just wrote — and at step 3 from the driver's own `expected`, computed from those
+> packets. **Neither may be satisfied by matching the number written here.**
+>
+> Two ways the carried figure could be wrong, both cheap to miss: the extractor hands back a
+> number other than 7 (an exemplar found ambiguous and escalated, or two exemplars discovered to
+> be one incident — the brief's closing flag), or one of the 7 fails the leak sweep and does not
+> enter the packet. In either case `73` and `219` are the wrong targets, and a step-2 check that
+> confirms "73, as expected" would pass by agreeing with a stale message rather than by counting.
+> **If the recomputed total is not 73/219, that is a finding to report, not a discrepancy to
+> reconcile.**
 
 ### The first-result boundary, marked explicitly
 

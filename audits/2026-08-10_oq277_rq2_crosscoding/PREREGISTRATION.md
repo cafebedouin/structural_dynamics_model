@@ -310,7 +310,7 @@ Every artifact this preregistration depends on, pinned so a reader can verify th
 | `python/audits/oq277_lexicon.py` | `692c5b92df9e244294a9c60b768e44a9` | the single leak matcher, both pinned versions |
 | `prompts/direction_i.md` | `c2d8c9bf65fac64460305c9fbacb0a34` | coder prompt: directions (i) and (iii') |
 | `prompts/direction_ii.md` | `4fb7ceeb17aa1dab472c048b698a3b7f` | coder prompt: direction (ii) |
-| `verdict_grammar_amendment.md` | `f9a52531058f66ebefbb74d9b955367f` | incorporated verbatim as Appendix D |
+| `verdict_grammar_amendment.md` | `d1256d032696c941abdb1dfc1f35fbf6` | incorporated verbatim as Appendix D |
 | `controls/anchors.json` | `470be752cdfeed9c366f66ea909ada00` | anchor set, both directions |
 | `controls/decoys.json` | `7bc88644ff18a1df722f68c04a091bb1` | decoys |
 | `controls/planted.json` | `68477df87f2f1e53474f2733ab2b0034` | planted leak fixtures + planted broken unit |
@@ -1874,6 +1874,89 @@ texts (units, anchors, decoys, planted fixtures), the widening changes **zero** 
 that number, widening a live instrument mid-arc would have been an unmeasured change to the thing
 every leak claim depends on. It is logged here because "the change is safe" is the sentence this
 arc has learned to distrust unless a count sits behind it.
+
+### L.6 The seventh vacuous check — and the first one inside the instrument built to prevent vacuous checks
+
+**Found 2026-08-11, by the instance that had written the gate, while stamping the preregistration.
+Operator ruling: this belongs in §6.4 beside the other worked examples, because it is the one that
+closes the argument.**
+
+`oq277_crosscoding_driver.py` exists to enforce one ordering: **assert the payload-capture count
+BEFORE running the leak-grep**, so that a clean grep over zero captured payloads cannot read as a
+green H2. That is its purpose; §Q.5 already names it as one of the arc's three green-on-empty
+catches.
+
+Its freeze-ordering check searched `audit_log.md` for a prose line saying *"first result"*, in
+order to assert the preregistration md5 sat above it. **The file contained no such line.** The
+regex matched nothing, the guard fell through, and the check reported success — **satisfied by the
+absence of its own input.**
+
+| | |
+|---|---|
+| what the check claimed | "the prereg md5 is above the first result line" |
+| what it measured | nothing; no boundary existed to locate |
+| what it returned | pass |
+| what a real failure would have looked like | pass |
+
+**Why this instance is the one for §6.4.** The previous six are defects in instruments that measure
+*the corpus* or *the apparatus*. This one is a defect in the instrument built **specifically to stop
+this defect class**, written by someone holding the rule in mind, in the same file whose docstring
+explains why counting must precede grepping. Every available layer of prevention was present and
+none of them fired.
+
+**So the recursion is not resolved by another gate, and this is the closing move of the
+controls-need-controls argument.** Adding a control to check the control reproduces the problem one
+level up — the checking control can be vacuous in exactly the same way, and nothing in the
+construction stops it. What actually terminated the regress here was not a better gate but **a
+person asking, of a specific line, what value would make it fail** — and finding there was none.
+The recursion terminates in someone counting, not in a deeper instrument. §6.4 should say that
+plainly rather than leaving the reader to infer that enough layers eventually suffice.
+
+**The repair, and its shape.** The prose match was replaced by an explicit sentinel
+(`<!--OQ277-FIRST-CODING-RESULT-->`) that **fails closed**: no marker, no live call. The
+distinction that matters is not "regex versus sentinel" — it is that the old form's failure mode
+was *silence* and the new form's is *refusal*. **A boundary that cannot be located is not a
+boundary**, and a check whose input may be absent must treat absence as red.
+
+### L.7 A control that declined on four real cases and fired on its author — the arc's best-evidenced control
+
+**Recorded 2026-08-11 at the operator's grading.**
+
+`controls/verify_redaction_twins.py` gained a check that every OQ id claimed in a pair's
+`restored_from_source` block is really present in that arm's coder-facing text. The rationale is
+that a provenance block listing vocabulary the arm never restored is a **recap-as-witness
+substitution inside the control**: the reader audits the list instead of the text.
+
+On its first run it **failed** — on unit `05`, an arm written minutes earlier by the instance that
+had just written the check, which claimed `OQ-93` and `OQ-96` the arm did not carry.
+
+**Why this is graded above a planted-fixture validation.** Under *a positive control demonstrates
+DISCRIMINATION, not detection*, planting the target shows only that the instrument CAN fire; the
+witness that its firing carries information is a case it **DECLINED**. This check's first run
+produced both, on real material, in one pass:
+
+| grade available | what this run produced |
+|---|---|
+| authored decoy (weakest) | not used |
+| naturally-arising negative | **four** — pairs `ii_1`, `ii_2`, `ii_4`, `ii_5` each declined |
+| decline in the instrument's own history | **this IS its own history** — first run, four declines and one fire |
+
+Four real declines and one real catch, with no planted case anywhere in the run. **It also caught
+its author**, which removes the usual worry about a control tuned to pass the material it was
+written against.
+
+**Scope, stated so the grade is not over-read.** The check discriminates on the class of claim it
+covers — **OQ ids**, the machine-checkable subset of `restored_from_source`. Prose claims in the
+same block ("the section's own title", "the source's own positive-control sentence") are NOT
+covered and remain unwitnessed. The record entitles the check to "discriminates on OQ-id claims,
+evidenced by 4 declines and 1 catch on real material," and to nothing wider. Its discrimination
+record lapses if the block's format changes or if it is reused in a different role.
+
+**The disposition on the catch.** Both ids were restored into the arm rather than struck from the
+list, because both are genuinely attached to that incident in the source (`FINDINGS.md:1` titles
+the probe `OQ-93`; `PREREGISTRATION.md:6` names the `OQ-96` shim interim, which the arm's mechanism
+already referenced). The check did not force a retraction — it forced the arm to become what its
+own provenance block already claimed.
 
 `````
 
