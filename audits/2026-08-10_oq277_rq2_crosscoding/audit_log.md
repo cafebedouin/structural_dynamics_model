@@ -392,3 +392,41 @@ one had a red light on it.
 **Not retried.** A second run is a second spend and is the operator's ruling, not this instance's —
 and the tool must be repaired and its capture path controlled *before* any such run is proposed.
 Recorded here, below the sentinel, because this is a result: the run happened.
+
+## 2026-08-11 — FOR §6.4: the recursion is not a worry, it is the observed behaviour of every repair in this arc
+
+**Operator ruling, 2026-08-11.** Recorded here rather than in `verdict_grammar_amendment.md`
+because that file is incorporated verbatim into the **frozen** `PREREGISTRATION.md`
+(`4118f64e`), and a run has already been made under that stamp. Editing an incorporated source
+now would invalidate the freeze retrospectively — post-hoc editing of a preregistration after
+results exist, which is the precise thing the freeze ordering exists to make impossible.
+**§6.4 must take this from the results section, not from the amendment.** Anyone assembling
+§6.4 should read below the sentinel as well as above it.
+
+**The claim §6.4 should make.** *Controls need controls* is currently argued as a structural
+worry — that adding a gate to check a gate reproduces the problem one level up. This arc supplies
+something stronger and less comfortable: **it is not a hypothetical. It is what every repair in
+this arc actually did**, and the pattern is now dense enough to be a signature rather than a
+coincidence.
+
+| # | the repair | the same defect, committed inside it | how it was caught |
+|---|---|---|---|
+| 1 | measuring the lexicon's crash-vs-leak confusion | the baseline table logged four `KeyError` crashes as "leaks found" | a **number moved** — those rows changed exit 1 → exit 3 in the post-fix diff |
+| 2 | the negative control on that repair | went red on an `IndentationError`, testing nothing | reading the output instead of the exit code |
+| 3 | the same selftest | **aborted** partway instead of reporting FAIL — crash-vs-result confusion inside the fix for crash-vs-result confusion | running it against the reverted copy |
+| 4 | the capture repair | printed `persisted 219` from `len(results)` while **zero** files existed | **comparing the printed number against disk** |
+| 5 | the same repair | failure banner promised responses were "ON DISK and recoverable" when none were | the same comparison |
+
+**The load-bearing observation: not one of these was caught by a gate.** Every one was caught by
+someone comparing a claimed number against the artifact it claimed to describe — a diff, a
+directory listing, a file count. The recursion does not terminate in a deeper instrument, and the
+arc now has five instances showing what it terminates in instead.
+
+**And the asymmetry that decides where to look.** In the same session the driver's *refusal* path
+received the strongest control in the arc — five constructed bad states plus a converse — while
+its *capture* path received nothing. Both were untested by construction. The refusal path had a
+**red light**; the capture path had **no writer at all**, and a writer that does not exist emits no
+error, no warning, and nothing to inspect. Attention followed the signal, and the signal was
+uncorrelated with the cost. **A verification stack audited by following its red lights will
+systematically miss every defect whose signature is silence** — which is the class that takes whole
+runs.
