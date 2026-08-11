@@ -310,8 +310,14 @@ number is not lost; it still needs to land in §6.4.
 
 ## Handoff back
 
-Packet assembly, the driver, and the arc prereg are the other instance's. **Two items are queued on
-parties that are not me:** the primary-side draw for the calibration probe (I must not see those
+Packet assembly, the driver, and the arc prereg are the other instance's. **The full queue for the
+assembler is in `PREREGISTRATION_threshold_calibration.md` → *Queue for the assembler*: the
+primary-side draw, the unseen fifth item for the recognition check, the assembly, and the frame
+census across all 22.** Two further items belong to whoever holds those documents, not to me: the
+§4.5 reading (in `FRAME_AUDIT_prose_visibility.md`, destined for the paper) and the 2-of-4 draw for
+the arc writeup's §9.3 efficacy discussion.
+
+Of those, the two I am structurally barred from: the primary-side draw (I must not see those
 units), and the frame census over the other 14 escape directories
 (`frame_audit_prose_census.py`, in this directory, run against the full escape sample rather than my
 slice — the count must not be extrapolated from mine, which drew 2 of the 4 unseeable at p ≈ 0.031).

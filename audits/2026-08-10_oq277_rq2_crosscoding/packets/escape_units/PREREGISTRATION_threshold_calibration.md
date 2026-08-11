@@ -66,6 +66,7 @@ for whoever assembles the packet:
 | both primaries extract **and** ≥1 candidate no-extract | thresholds differ; the strata are not comparable | **the escape row is VOID, not positive** (operator ruling) |
 | ≥1 primary no-extract | the judge is not applying the primary conventions — instrument failure | discard **all four** verdicts, including the candidates'. A candidate verdict from a pass whose calibration arm failed is not evidence in either direction. Re-run with a different holder. |
 | abstention, refusal, or any answer not of the form extract/no-extract | inconclusive | void |
+| recognition flagged on the unseen fifth item (Amendment 3) | the recognition instrument reports false positives | **arm VOID regardless of all four verdicts** — this row overrides every row above it |
 
 **Fireability check** (a kill condition that cannot fire is hedging in a falsifier's costume — each
 row needs a possible world): *agree* — a judge who extracts all four; *differ* — a judge who
@@ -138,6 +139,60 @@ before any item is assembled.
 
 If any condition cannot hold, the fallback is a fresh instance plus spend-go, and the same-family
 confound is **declared, not repaired**.
+
+**Accepted by the operator 2026-08-11, all three conditions as written.** Condition 3 is recorded at
+the operator's instruction as a design contribution rather than a side effect: judging while blind
+to composition is what prevents this probe from anchoring the later §H.2 confirmation of the same
+two candidates, closing a circularity the confirmation would otherwise have walked into.
+
+## Amendment 3 (operator, 2026-08-11, still before any run) — the recognition flag gets its own control
+
+The recognition flag is a self-report from the party it constrains — the same structure as the
+extractor's declared-slip problem, where the fix was to make the assurance *checkable* rather than
+to trust it. So:
+
+**A fifth item is added, drawn from NEITHER stratum: a unit the judge demonstrably has not seen.**
+Pre-committed: **if the judge flags recognition on it, the recognition reporting is miscalibrated
+and the arm VOIDS regardless of what was said about the other four.** One extra item converts an
+assurance into a check.
+
+Assembler requirements, so "demonstrably unseen" is a fact rather than a hope:
+
+1. **Freshly extracted after this ruling**, from a directory in neither the primary sample nor the
+   escape sample, by a party that is not the judge. Freshness is what makes unseen-ness
+   demonstrable: the item did not exist when the judge last read anything.
+2. **Never shown to the judge before the pass**, and its identity held with the key.
+3. **In distribution with the other four** — same format, same redaction, comparable length. An item
+   that visibly stands out gets flagged as *unfamiliar* rather than *recognized*, and a null
+   recognition on an obvious outlier witnesses nothing.
+4. **Its extract/no-extract verdict is NOT scored.** It comes from neither stratum, so it carries no
+   threshold information, and it must not enter the 2+2 arithmetic. It gates the arm; it is not
+   evidence in it.
+
+**The exact limit of what this closes, stated so nobody overreads it.** The fifth item makes
+**false recognition** checkable — flagging something never seen. It does **not** make **silent
+recognition** checkable — failing to flag something that was in fact recognized, which is the
+direction that would actually make the calibration arm circular. The control closes one channel and
+the confound relocates to the other.
+
+**The completing arm, offered for a ruling and not assumed:** a **sixth** item that the judge
+demonstrably HAS seen recently and would be expected to recognize, with the pre-commitment that
+failing to flag it means the recognition instrument under-reports and the arm voids on that ground.
+That is the two-sided version. Cost: one more item, and the judge knowing that recognition is under
+test in both directions (unavoidable — they designed it; what stays hidden is *which* item is which,
+not *that* controls exist). **Not adopted unless the operator rules it in; the five-item design
+stands as pre-registered either way.**
+
+## Queue for the assembler (the other instance)
+
+1. **Primary-side draw** — two extracted primary units, matched on `incident_location` to the escape
+   draws where available, mismatch declared if not, seed recorded before anything is shown.
+2. **Fifth item** — the unseen recognition control, per Amendment 3's four requirements.
+3. **Assembly** — strip labels, randomize order with a stated seed, hold the key, tell the judge
+   nothing about composition.
+4. **Frame census across all 22 escape directories** — `frame_audit_prose_census.py` in this
+   directory, run against the full escape sample. Not extrapolated from the extractor's slice, which
+   drew 2 of the 4 unseeable directories at p = 0.031.
 
 ## Amendment 2 (2026-08-11, same turn) — what the frame audit changed under this probe
 

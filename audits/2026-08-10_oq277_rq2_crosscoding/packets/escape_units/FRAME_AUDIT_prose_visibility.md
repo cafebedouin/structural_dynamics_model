@@ -116,6 +116,35 @@ Two riders. First, the bound is moot while six candidates are proposed — it pr
 the null is not currently the live hypothesis. Second, the direction is one-way: a weaker frame
 makes the bound **looser** than stated, which makes a null **less** reassuring, never more.
 
+## What this means for §4.5 (operator, 2026-08-11)
+
+The 42% figure has now been corrected **twice on its denominator**, found to rest on a **positional
+parse**, and shown to have **three independent blind spots in its selection filter**. It has
+survived all of that at 42%, and that survival keeps being read as reassurance.
+
+**It should be read as a number nobody has yet measured properly.** Surviving repeated correction is
+evidence about the number's stability under revision, not about its accuracy — and every correction
+so far has been to the machinery *around* the count rather than to the count itself, which is
+exactly the pattern that makes a figure look robust while its measurement remains untested.
+
+Note what this audit is, structurally: **a positive control on a frame audit** — the census's own
+grep, reproduced exactly on the opposite stratum before being trusted on this one. §4.5 never had
+that at any point in its life. The two blind spots are not new defects introduced by this arc; they
+are properties the figure has always had and that nothing had been built to detect.
+
+**The paper is another writer's file.** `docs/amnesiac_institution/amnesiac_institution_v0.3.md`
+§4.5 is not edited here. This section is where the finding lives until whoever holds that document
+places it.
+
+## For the arc writeup (§9.3), flagged forward not written here
+
+The operator's instruction: the 2-of-4 draw is to survive into the writeup's efficacy discussion.
+The extractor drew 2 of the 4 out-of-frame directories at p = 0.031, and removing them removes
+precisely the two that made its own result look softer — 6 candidates from 6 in-frame directories
+rather than 6 from 8. The number that damages the extractor's position is reported by the extractor,
+with the arithmetic that does the damage. `WRITEUP.md` at the audit root is the other instance's
+file and is untouched here.
+
 ## The class this belongs to
 
 Third arrival in the same statistic's frame, after the empty untracked directory and the positional
