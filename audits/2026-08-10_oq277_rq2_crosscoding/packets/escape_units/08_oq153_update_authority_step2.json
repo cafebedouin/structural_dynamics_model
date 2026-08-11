@@ -1,0 +1,20 @@
+{
+  "source_dir": "2026-07-24_oq153_update_authority_step2",
+  "extractor": "escape",
+  "role": "escape",
+  "matrix_unit": false,
+  "escape_candidate": false,
+  "files_read": [
+    "enum_controls.pl (full — the only file in the directory, verified by listing including dotfiles)"
+  ],
+  "extraction_notes": {
+    "boundary_rule_applied": "NO-UNIT — clause 2. The directory contains one control script and nothing else. Its comments and its six labelled checks DISCUSS the failure modes the checks exist to exclude — a validator that flags an orphan when the corpus is defined but empty, a validator that imputes a default when nothing is authored, a valid value mis-flagged as invalid or vice versa, a file that could run itself if something globbed it — but not one of them is reported as having occurred. The script states expectations ('expect []; no default imputed') and prints pass/fail markers at runtime; it does not record any run. Under the rule as written, discussing a failure mode by constructing a control against it is discussion, not an instance.",
+    "selection_rule_applied": "Not applicable — no incident extracted.",
+    "near_misses_recorded": "(1) The header comment says the file is script-only entry specifically so that a stray consult or glob CANNOT run it or hit its halt — a hazard named and designed against, with no instance of it having happened. (2) Control (F) exists to check that an orphan is not falsely flagged when the corpus predicate is defined but empty, and control (C) to check that absence yields no imputed default: both are exactly the shape of defect this escape check is looking for, constructed as guards rather than reported as events. (3) No output artifact is stored in the directory, so the outcomes of these controls are not recoverable from it — the pass/fail markers exist only in code. That absence is why the directory cannot be a UNIT even on a generous reading: there is no report of a run at all, favourable or otherwise.",
+    "escalation": "Not escalated as ambiguous. Unlike the other prose-free directory in this sample, this one does contain human-written narrative — the header comment and the check labels — so the boundary rule applies cleanly and returns NO-UNIT via clause 2. Recorded here only because the two prose-free directories reach the same verdict by different routes, and pooling them would hide that."
+  },
+  "metadata": {
+    "incident_location": null,
+    "incident_location_note": "No incident extracted, so no location."
+  }
+}
