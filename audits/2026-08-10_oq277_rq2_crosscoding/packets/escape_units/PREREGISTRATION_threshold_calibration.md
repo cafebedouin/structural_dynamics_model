@@ -325,6 +325,37 @@ described mechanism makes `extract` easier to reach — so the residue pushes to
 outcome this probe treats as costly, not toward the cheap VOID. This upgrades the pre-registered limit
 "length … uncontrolled" to *length is confounded with stratum in this specific draw*.
 
+### RULING on the length tell (operator, 2026-08-11) — pre-registered BEFORE the pass
+
+Derived from the licensing asymmetry already registered above; it adds no new asymmetry.
+
+**What the tell actually gives the judge.** Two items at ~1,450 characters and two at ~3,400 lets a
+judge partition the packet into two pairs **without reading a word**. It cannot tell which pair is
+which — and it does not need to. Length correlates with described mechanism, described mechanism is
+what the REPORTS clause turns on, so the longer pair reads as more clearly extractable. The
+candidates are the longer pair. The tell therefore pushes toward candidates clearing the bar: the
+**AGREE** direction, which is the outcome that opens the gate to §H.2.
+
+**Why the existing control does not cover it.** The pre-registered re-fire — an AGREE owes a second
+pass at a different presentation order — was designed against **order** effects. **A length tell
+survives reordering intact.** Shipping without saying so would leave an AGREE looking better
+controlled than it is.
+
+**The ruling:**
+
+| verdict | how the tell bears | licence |
+|---|---|---|
+| **VOID** | confound points the other way | **strengthened.** A void reached *despite* a confound pushing toward agreement is stronger evidence than the design anticipated. Stands at **k = 1**, as already written. |
+| **AGREE** | confound points at it | **weakened. Does NOT license scoring at face value.** It ships as a weaker verdict than designed, and **the six candidates do NOT proceed individually to §H.2 on it alone.** |
+
+If AGREE comes back, what additional evidence it would take is decided **then** — with the number in
+hand and this limit already declared. That order is deliberate: the limit is pre-committed, the
+remedy is not pre-guessed.
+
+**Do not repair the tell.** Truncating or padding the fields would break Amendment 4's *verbatim*
+pin, and that pin is load-bearing for a different reason than this confound is costly. The confound
+is priced, not removed.
+
 ### Queue 4 — frame census
 
 `frame_audit_prose_census.py` run at commit-time state; listing md5 `ecc91562…` **MATCH** against the

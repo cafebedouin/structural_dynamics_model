@@ -490,6 +490,7 @@ with a stated intent**:
 | cell accounting (§I.2) | 22 matrix units | **18** |
 | §4.5 denominator (step 1) | 74 audit directories | **73** after an empty placeholder was excluded |
 | de-blocking harness (§G.3) | baseline max-run 8 | **2** |
+| frame-census rider (§L.2, 2026-08-11) | census "across all 22 drawn directories" | **n_escape = 8**; there is no 22-directory escape sample |
 
 **Counting the thing the rule claims to produce catches rule defects that reading the rule does
 not.** Each of these took seconds and each caught something a careful re-read had already passed.
@@ -510,6 +511,36 @@ as a property of the whole half, omitting two written by the prior instance befo
 is the arc's own recurring shape once more — **a plausible number, sourced from a partial view,
 reaching consumers with no way to check it** — this time inside the apparatus rather than inside
 the corpus it audits.
+
+### L.2 A check that could not return the failure it looked for — and where the vacuity came from
+
+Found while executing the threshold probe's frame census (2026-08-11).
+
+**The rider, and its correction.** The operator's rider directed the census "across all 22 drawn
+directories." The escape stratum is **n = 8**; the 22 is the *primary* draw. The number was accepted
+uncounted, and **it was wrong in the direction that made the bound look tighter**: with the 2
+unseeable directories removed, the escape side's effective n is 6 and its one-sided recall licence
+loosens from ~31% to **~39.3%** (1 − 0.05^(1/6)). Moot while six candidates stand — the bound prices
+the null and the null is not the live hypothesis — but recorded here with the other stated-vs-counted
+witnesses rather than left in the probe's own file. **Self-reported by the party whose number it was.**
+
+**The vacuity, which is the sharper item.** Run as directed, the census over the 22 primary
+directories returns **0 unseeable** — and it could not have returned anything else. The primary
+stratum is *defined* by a grep over `--include='*.md'`, so every member has an `.md` **by
+construction**. The check looks exactly like a passing check and measures nothing: the same shape as
+a clean read from a probe that never looked.
+
+**What makes this instance different from the earlier four — the origin.** In this arc's previous
+catches the vacuity came from a **coding or harness defect**: something compared an extraction
+against its own echo, or a control's own stated numbers made a defect in them unfalsifiable. Those
+are things a careful implementer could have written differently. Here **the vacuity is inherited from
+the frame's definition**. Nothing was coded wrong; the population was *specified* such that the
+question has one reachable answer. That origin is why re-reading the script would never have caught
+it — the script is correct — and why the diagnostic has to be applied to the *population*, not the
+code: **ask what value of the input would make this line fail, and if the sampling rule already
+excludes it, the check is a definition restated.** (Enumeration as the fifth in the arc is the
+operator's count, recorded as theirs; the two instances verified in-file here are the §E floor
+self-comparison and the `73 + 101 = 174` partition that concealed a positional parse.)
 
 ## M. §H.2 residue — k = 0 confirms the null AND leaves the mechanism untested
 
