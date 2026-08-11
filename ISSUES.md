@@ -10673,7 +10673,7 @@ names where. Either way §4.3 acquires the first coded corpus behind it (OQ-280)
 PREREG FREEZE, not at plan approval — the md5 of `PREREGISTRATION.md` must sit in
 `audit_log.md` physically ABOVE the first result line before any coding call is made. The
 staged extension to all 73 is gated on H5 passing and is NOT authorized in advance.
-**START AT `audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF_EXTRACTOR_B.md`** (current entry
+**START AT `audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF_TWINS_AND_DRIVER.md`** (current entry
 point as of 2026-08-11; extractor A's half is 13 of 13 COMPLETE and `HANDOFF_EXTRACTOR_A2.md`
 carries a CLOSED banner — its task list must not be re-run, though its conventions bind B).
 The original `HANDOFF.md` likewise carries a superseded-banner and its "Your next step" section
@@ -10857,6 +10857,41 @@ as neutral substrate rather than as a channel.** Three surfaces to name in the w
 dir and prints what it loads. Pre-committed response, fixed in advance rather than negotiated at
 discovery (the second time this arc): **declare it and VOID that pair's floor comparison**, never
 patch and continue.
+
+**CONTROLS BUILT AND VERIFIED, pre-spend (2026-08-11).** Anchors 3/direction
+(`controls/anchors.json`), decoys 2, planted leak, planted broken unit; verification transcript
+`controls/verify_controls.txt`. Every anchor label is READ OFF a frozen source and cited to it —
+direction (i) from the published section naming the exemplar, direction (ii) from Wu's two frozen
+records and only where both agree — so the extractor-never-codes boundary is checkable rather than
+promised. **New construction rule (§P.1): an anchor is redacted against BOTH lexicons** — it is by
+construction the one artifact belonging to both directions at once, so it fell between two
+per-direction rules that were each locally complete; a compositional gap in the control
+architecture, found while building controls for a taxonomy that names compositional defects.
+
+**DECLARED CALIBRATION RESIDUE (§O), fixed before any coding — two gaps, same shape, opposite
+directions.** (a) **Direction (i) has NO P6 anchor:** the published P6 exemplar's incident is the
+incident extracted unit 05 describes, so using it would have put a unit and its own anchor in one
+run — self-comparison at the control level. Disqualification was forced by a two-sided probe (fires
+on exactly that one, silent on the other three). **Consequence: H3 over {P1,P2,P5} licenses "the
+coder is not broken" across three patterns and says NOTHING about P6 — the composition-layer
+pattern, the one R5's expectation concerns, and our side of the E↔P6 correspondence. Any P6 result
+in direction (i) is UNCALIBRATED, and the E↔P6 row lacks anchor support on our side on top of being
+PROPOSED.** Not repairable without the extractor assigning a pattern, which is the boundary the
+design rests on. (b) **Direction (ii) has NO multi-membership anchor:** "unambiguously stated"
+requires both of Wu's records to concur, so all three anchors sit in the agreeing 12 and none in
+the complement 10 (verified mechanically). **H3 there is calibrated on single-class incidents only**
+— the stratum whose grammar §B had to be amended for, where a two-pattern split is the EXPECTED
+result, has no anchor. In both, the anchor rule selected for UNAMBIGUITY, and unambiguity is exactly
+what the hard stratum lacks: an anchor set is a sample of easy cases by construction.
+
+**THE SELF-COMPARISON FAMILY (§P) — one writeup section, not three catches.** Three times this arc
+an apparatus was about to measure agreement between two things that are not independent, and would
+have reported it at full confidence because agreement is what a working version produces too:
+(1) the churn floor via reading the other extractor's unit; (2) the same floor via a commit message
+read through `git log`; (3) direction-(i) anchors via a published exemplar that is an extracted
+unit's incident. **They differ in the DOOR, which is the transferable part — a rule, a piece of
+infrastructure nobody registered as a channel, and a correct selection rule that selected a
+duplicate. A blinding protocol naming only the first is two-thirds blind.**
 
 **Second directional guess declined by the data (§K).** `incident_location` over A's completed 13
 is subject 10 / incidental 2 / self_audit_subsection 1. The interim reading at A's first 7 (6

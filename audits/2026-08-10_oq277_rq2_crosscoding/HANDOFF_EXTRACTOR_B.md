@@ -2,6 +2,10 @@
 
 > ## ✅ CLOSED 2026-08-11 — B's half landed 13/13; extraction (direction (ii)) is COMPLETE
 >
+> **Entry point has moved on again: `HANDOFF_TWINS_AND_DRIVER.md`.** Controls (anchors,
+> decoys, planted leak, planted broken unit) are also DONE and verified; what remains is the
+> redaction twins, the driver, the prereg freeze, and spend-go.
+>
 > | | |
 > |---|---|
 > | B's units | **13 of 13** — `packets/our_units/{14..26}_*.json` (numbered in `extraction_split.json` order) |
@@ -17,7 +21,9 @@
 > tiebroken by realized consequence over caught-before-it-mattered.
 >
 > **Recording-threshold divergence, flagged rather than smoothed.** All **13 of 13** B units carry
-> a non-empty `alternatives_not_extracted` (2–4 entries each, 38 total), against A's **6 of 13**.
+> a non-empty `alternatives_not_extracted` (2–4 entries each, 38 total), against A's **8 of 13**
+> (21 entries) — corrected 2026-08-11 from a stated 6; see §I.3. The divergence is real at the
+> corrected magnitude, and A's convention IS the narrower one (competing defects only).
 > Do NOT read that as B's directories carrying more defects. B recorded every candidate it
 > considered and rejected, *including* ones it judged not to be defects at all (a control working
 > as designed, a declared scope limit, a stale comment) with the reason for rejection; A's

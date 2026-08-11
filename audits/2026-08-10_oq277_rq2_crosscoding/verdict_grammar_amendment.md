@@ -556,3 +556,83 @@ the directory is about. That is enough that §4.5's phrasing still matters: "73 
 **Status: a declared OBSERVATION with its own row, not a finding.** It has no pre-registered
 threshold, was not designed for, and the distinction it turns on (subject vs reported-anywhere) is
 the §H.1 boundary rule's own — so it can be reported and cannot be scored.
+
+## O. Declared calibration residue — what the anchors do NOT cover, both directions
+
+Fixed before any coding. Both gaps are consequences of anchor-selection rules that were correct
+and mechanical; neither is a defect in the rules. They are stated because H3 is a narrow licence
+and the two places it does not reach are the two places the experiment most wants to read.
+
+### O.1 Direction (i) has no P6 anchor
+
+The anchor set is **{P1, P2, P5}**. The published P6 exemplar was disqualified because its incident
+is the incident an extracted unit already describes (§ anchors, `controls/anchors.json`).
+
+**P6 is the pattern carrying the most conceptual load** — it is the composition-layer pattern, it
+is what R5's pre-registered directional expectation concerns, and it is our side of the E↔P6
+correspondence the writeup emits as a PROPOSED Ω_C mapping. So:
+
+> **H3 at ≥2/3 over {P1, P2, P5} licenses "the coder is not broken" across three patterns and says
+> NOTHING about the coder's handling of P6. Any P6 result in direction (i) is UNCALIBRATED and must
+> be reported as such. The E↔P6 row additionally lacks anchor support on OUR side of the mapping,
+> on top of already being PROPOSED rather than ruled.**
+
+Fixing it is not available without cost: the only published P6 exemplar strong enough to anchor on
+is the one that collides, and constructing a new P6 anchor would mean the extractor assigning a
+pattern — which is the boundary the whole design rests on. **Declared, not repaired.**
+
+### O.2 Direction (ii) has no multi-membership anchor — same shape, opposite direction
+
+The direction-(ii) anchors are drawn **exclusively from the agreeing 12**, because "unambiguously
+stated by Wu" requires both frozen records to concur; **none comes from the complement 10.**
+Verified mechanically, not assumed.
+
+Under the amendment's own naming the agreeing 12 is the single-class stratum — **with §A's status
+caveat carried, not laundered**: reading (ii) is an observation with three live defeaters and is
+not asserted here. The gap holds under either reading, because it rests only on the mechanical
+fact that every anchor sits in the 12 and none in the 10.
+
+> **H3 for direction (ii) is calibrated on single-class incidents only. The multi-membership
+> stratum — the one whose verdict grammar §B had to be amended for, where a two-pattern split is
+> the EXPECTED result rather than a degraded one — has no anchor. Recovery on unambiguous
+> single-class incidents does not license reading the coder's behaviour where a unit legitimately
+> carries two labels.**
+
+**The two gaps are the same shape in opposite directions:** in each, the anchor rule selected for
+*unambiguity* and unambiguity is exactly what the hard stratum lacks. An anchor set is a sample of
+easy cases by construction, and both gaps are that fact showing up where it costs something.
+
+## P. The self-comparison family — one section, not three catches
+
+Three times in this arc a **self-comparison** was caught before it landed, each in a different
+instrument, each arriving through a different door. Write them as a family; individually each reads
+as a lucky catch, together they show a mechanism with a stable shape.
+
+| # | instrument | the self-comparison it would have produced | door it came through |
+|---|---|---|---|
+| 1 | extraction-churn floor | two "independent" extractions that are one extraction and its echo — 4/4 INSIDE FLOOR whatever the truth | reading the other extractor's unit "just for the schema" |
+| 2 | the same floor, again | same outcome, reached without opening a file | a commit message summarising the unit, read via `git log` |
+| 3 | direction-(i) anchors | a unit and its own anchor drawn from ONE incident — recovery measuring whether the coder can match a text against a near-copy of itself in the same run | the published exemplar happening to be an extracted unit's incident |
+
+**The shared shape: an apparatus measuring agreement between two things that are not independent,
+and reporting the agreement at full confidence** — because agreement is exactly what a working
+version of each instrument produces. None of the three would have errored, and all three would have
+produced the reassuring number.
+
+**They differ in the door, and that is the transferable part.** One was a rule everyone knew and
+could break by accident; one was infrastructure nobody had registered as a channel (§J); one was a
+selection rule that was correct and still selected a duplicate. **A blinding protocol that names
+only the first is two-thirds blind.**
+
+### P.1 The anchor redaction rule was a compositional gap
+
+Both redaction rules were written per-direction, and each was locally complete. **An anchor is by
+construction the one artifact belonging to both directions at once** — a unit from taxonomy X
+interleaved into a run coding taxonomy Y — so it fell between two rules neither of which was wrong.
+The fix (redact anchors against BOTH lexicons) is one line; the gap was invisible until an artifact
+existed that instantiated both scopes simultaneously.
+
+**That is a composition-layer defect in the control architecture — found while building controls
+for a taxonomy that names composition-layer defects.** Worth the line it costs in the writeup: the
+architecture reproduced the failure class it was built to detect, at the level where the classes
+compose, which is where its own taxonomy says to look.
