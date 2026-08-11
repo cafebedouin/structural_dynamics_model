@@ -228,6 +228,52 @@ happens when those two cuts are mixed inside one taxonomy instead of kept parall
    ban already excludes it, and the leak-grep's banned list must include `parasitic`,
    `cross-cutting`, and `layer` so a leaked hint is caught rather than assumed absent.
 
+## R6 — READER-SIDE CONTAMINATION, logged as a known prior (operator, 2026-08-10)
+
+**The experiment's answer arrived early, from outside the experiment.** Direction (ii) exists
+to test whether Wu's classes cover our incidents. Before any coding, the frame control found
+that **our own census instrument fails by positional parsing of tool output whose field index
+depends on invocation shape** — which is Wu's **Class B** (his §4.2 generalization: *any
+positional parse of a generator's output is a latent Class B failure*), instantiated in our
+measurement apparatus rather than in the system under study. **An external taxonomy expressed
+one of our defects before our own six did, and it happened outside the experiment designed to
+test exactly that.**
+
+**The cost, declared.** This does **not** contaminate the coder: the coder is stateless, and
+the instrument is not a unit in the sample. It contaminates the **reader** — whoever writes the
+direction-(ii) interpretation now knows that at least one confirmed B-expressible incident
+exists in our record, and will read a B-heavy column as confirming something already believed.
+Logged here on the interpretation side **exactly as the same-family confound is logged**, and
+carrying the same discipline: *registering a prior does not license reading through it.* Any
+direction-(ii) sentence about B-expressibility must state that the writer held this prior
+before the matrix existed.
+
+**Noted for the writeup, because the pair is instructive:** the string `permission class by
+default` matching banned `Class B` was a **phantom** B, caught by a leak-matcher bug. This is a
+**real** one. Two mechanisms, days apart, one produced a false instance and one a true instance
+of the same class — which is a compact argument for why a matcher's positive control and a
+finding's positive control are different obligations.
+
+## R7 — Appendix B sweep: does the manifest share the census's shape? (operator question)
+
+Asked because "if the census had this, the manifest's other rows were written by the same hands
+under the same assumptions." Swept every Appendix B command cell for field-index and
+line-position parses. **Bounded answer: the family recurs, but only one row is currently
+wrong-capable, and it is the one already found.**
+
+- **Field-index parses (`cut -d/ -fN`): exactly one row — the §4.5 census.** No second instance.
+- **Line-position parses: two rows.** `git log --reverse … | head -1` is safe (first line is
+  well-defined). **`wc -l prolog/*.pl | tail -1` is LATENT**: `tail -1` takes the `total` line,
+  which `wc` emits **only when n ≥ 2**. At n = 1 it silently returns that single file's count
+  instead — witnessed on a fixture: `3 total` at n=2 versus `2 x.pl` at n=1, both plausible
+  numbers. Correctness depends on an unchecked shape property, the same family as the census.
+  Currently satisfied (n = 123), so this is `latent`, not `live`.
+
+**Read:** the hypothesis is partially borne out — the *shape* recurs across rows written by the
+same hands — but the sweep does not turn up a second live defect. The honest statement is that
+Appendix B contains one corrected defect and one latent one of the same family, not that the
+manifest is compromised. Re-run this sweep if any Appendix B row is edited or added.
+
 ## Revised per-class MDE (replaces the plan's estimate)
 
 The plan assumed "~4–5 units/class at n=22, one unit ≈ 20–25%." The real distribution makes

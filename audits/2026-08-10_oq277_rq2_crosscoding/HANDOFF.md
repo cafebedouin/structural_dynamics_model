@@ -165,7 +165,18 @@ Two things it surfaced that you must not undo:
   say so as plainly as the C/D guess was.
 - **The census-as-positional-parse finding** (above): the instrument measuring our
   silent-failure incidence carries the mechanism Wu's Class B names, and it took building a
-  positive control to see it.
+  positive control to see it. **Price it as the arc's main result, not as colour** — an
+  external taxonomy expressed one of our defects before our own six did, *outside* the
+  experiment built to test that. Carry `RECON.md` §R6 (the reader-side prior it creates) and
+  §R7 (the bounded Appendix B sweep: one latent same-family instance at
+  `wc -l … | tail -1`, no second live one).
+- **The second control bug, quoted VERBATIM.** The control's second version asserted that
+  every name the broken census extracts ends in `.md` — a fixture **encoding the very
+  assumption the control existed to test** (it is false for a nested hit, which yields a
+  *subdirectory* name). The control fell into the instrument's own error while checking for
+  it. This is §6.4's recursion with a concrete instance instead of a hypothetical no-op
+  harness, and §6.4 currently has no worked example. Quote the assertion and its failure
+  directly; do not paraphrase it into a general remark about controls needing controls.
 - **Freeze-time vs run-time catches (ISSUES OQ-276).** All four of this arc's catches fired
   at *freeze* time, before any measurement existed to contaminate — which is the cleanest
   available evidence for §9.3's *epistemic* efficacy, the one it can least instrument. The
