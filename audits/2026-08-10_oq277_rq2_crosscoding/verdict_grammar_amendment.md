@@ -707,3 +707,22 @@ That is a source citing the **orphaned fork branch**, and it arrives from *outsi
 fork-residue pass that was built to measure the fork. Flag it separately in the writeup: the
 fork-residue row is fed by a pre-registered instrument, and this is unsolicited evidence of the
 same kind arriving by another route, which is worth more than a row it did not come from.
+
+### Q.5 Two constructions worth naming, because both close a door this arc found open
+
+**A check must not go green on an empty input.** `controls/verify_redaction_twins.py` reports
+`redaction_twins_direction_ii.json exists — NOT WRITTEN YET` as a **FAILURE** rather than passing
+over a file that is not there, and asserts **both** directions per pair (unredacted arm must fail
+the sweep, redacted arm must pass). One-sided checking would pass a pair whose redacted arm was
+never redacted, or one whose unredacted arm restored nothing — and **a floor of zero is exactly
+what both one-sided checks report as healthy.** The arc has now caught green-on-empty in three
+instruments (`system_gradient`'s `[] → 0.0`; the OQ-66 MaxEnt soft-failure comparing `[no_top,…]`
+against itself; the payload-capture count that would clear a leak-grep by writing zero payloads).
+Naming the construction, not just the catches: **a gate whose input is absent must be RED, and a
+check that cannot distinguish measured-empty from didn't-look is not a check.**
+
+**A row's instrument is assigned before its number exists.** The both-residue row is fed by the
+corrected redaction-pair set, fixed in `controls/redaction_pair_selection_defect.md` **before
+either floor is measured**. This closes the last place in the design where a choice could be made
+with results in hand — the failure mode is not dishonesty but a writer holding two defensible
+numbers and no pre-committed rule for which one feeds the row.

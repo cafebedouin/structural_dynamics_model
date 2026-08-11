@@ -9,7 +9,7 @@
 > |---|---|---|
 > | 1 | **Scope grew.** Direction **(iii′)** (n=10, not ~15) and the **n=8 escape check** are IN this freeze. Both were in the frozen design and scheduled by no handoff. | `RULING_2026-08-11_freeze_scope.md` |
 > | 2 | **Control (c) direction-(ii) now has FIVE pairs, in two sets.** The declared three stand; two more added. The **corrected set carries the both-residue row**; the declared set is reported alongside. | `controls/redaction_pair_selection_defect.md` (RULED section) |
-> | 3 | **§1's "do not re-derive to check" is CORRECTED.** Checking is permitted and expected; *reselecting* is mechanically prevented (`controls/recheck_predeclared_counts.py` exits non-zero if the selection moves). The original wording collapsed verification into reselection. | amendment §Q.2 |
+> | 3 | **§1's "do not re-derive to check" is CORRECTED — and the correction is IN §1 itself**, as a marked revision with the struck original. This banner row is a pointer, **not** the authoritative form; the rule governs at its own address. | §1 below; rationale in amendment §Q.2 |
 > | 4 | **Escape extraction is a separate instance** under operator condition C1. | `HANDOFF_ESCAPE_EXTRACTOR.md` |
 >
 > **DONE since:** direction-(i) twins (3 arms, `controls/redaction_twins_direction_i.json`, 9/9
@@ -60,9 +60,28 @@ CLOSED. Their conventions still bind; their task lists are done.
 
 ## 1. Redaction twins — 3 per direction
 
-The pairs are **PRE-DECLARED** in `controls/redaction_pairs_predeclared.json`. **Do not choose
-them**, and do not re-derive them "to check" — they were fixed by a mechanical rule before the
-units existed, which is the strongest available form of pre-registration for this control.
+The pairs are **PRE-DECLARED** in `controls/redaction_pairs_predeclared.json`. ~~**Do not choose
+them**, and do not re-derive them "to check" —~~ **Do not choose them. CHECKING the declared
+counts is permitted and expected; RESELECTING is prohibited** — they were fixed by a mechanical
+rule before the units existed, which is the strongest available form of pre-registration for this
+control. Run `controls/recheck_predeclared_counts.py` to verify: it recomputes the stated numbers
+and **exits non-zero if the pre-declared selection ever stops being what the declared rule
+produces**, which routes the move to the operator instead of letting a script — or a reader —
+make it.
+
+> **Revised in place 2026-08-11 (operator).** The struck clause read: *"and do not re-derive them
+> 'to check'."* It was written to prevent **reselection** and it landed as a prohibition on
+> **verification** — two different things collapsed into one sentence. It was corrected here, at
+> the read site, rather than annotated from `verdict_grammar_amendment.md` §Q.2: a correction that
+> only takes effect if the reader reaches §Q is a rule whose authoritative form lives at a
+> different address than the rule itself, which is **P2 in the instruction layer**, with the
+> banner as its "both copies parse" token. **An instruction that forbids checking a control's
+> stated numbers makes a defect in them unfalsifiable by construction — strictly worse than the
+> reselection it prevents.** Under the original wording, 3 of 9 declared counts would have stayed
+> wrong and the direction-(ii) selection metric would never have been found to be counting a
+> different taxonomy (`controls/redaction_pair_selection_defect.md`). The strike-through stands
+> rather than a silent replacement per §10: an operational layer absorbing a change while the
+> record pretends nothing happened is interpretive accretion.
 
 Each pair = the SAME incident coded twice, **redacted** and **unredacted**, k=3 each,
 QUARANTINED from all matrices, EXEMPT from H2's leak rule (an unredacted unit necessarily

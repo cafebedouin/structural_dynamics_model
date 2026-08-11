@@ -157,9 +157,51 @@ disagreeing with the counted one, caught in seconds by counting rather than by r
    would have to be **assigned rather than read off** — which is coding, and the extractor may not
    do it. **Recommendation: accept n=10 and state the boundary in the prereg.** Not decided here.
 
----
+### 2.3 P3 reconciliation — two populations, stated rather than picked (operator, 2026-08-11)
 
-## 3. Work order this ruling sets
+The "P3 has zero exemplars" finding in §2.1 sits against OQ-278's fork verification, which records
+*"Four shared, two disjoint per side, all four disjoint members carrying real exemplars"*
+(`ISSUES.md`, OQ-278 fork table). **Both claims stand; they range over different populations.**
+
+| claim | population it ranges over | verdict |
+|---|---|---|
+| §2.1 — "P3 has zero exemplars" | **named-as-exemplar in the published section**: an identifiable incident named inside `CLAUDE.md`'s six-pattern block, the boundary `controls/anchors.json` already uses for `label_source` | holds — CLAUDE.md's P3 paragraph (*Destructive-replace without proof*) states a rule and names no incident; the paper's §4.3 P3 line ("Old deleted in favor of new on a claim of equivalence") names none either |
+| OQ-278 — "all four disjoint members carry real exemplars" | **dated-instance-anywhere across the two forked documents** | holds for the other three disjoint members |
+
+**They are not the same P3.** The fork's disjoint members are `CLAUDE.md` P3 *Destructive-replace*
+versus `build_discipline.md` Pattern 3 *Bound-probe bypasses clause-order* — two different patterns
+sharing an index. Exemplars for the **bound-probe** branch are not exemplars for the
+**destructive-replace** branch, and only the latter is in (iii′)'s population, because (iii′) codes
+against **the published six** (carried ruling).
+
+**Not resolved by picking, and one residue is left open deliberately.** Checked and stated, not
+inferred: `build_discipline.md` contains **no destructive-replace / faith-merge section at all**
+(`grep -i "destructive.replace\|faith merge"` → no hits). So the published branch of the fork has
+no exemplar in *either* place exemplars are named. Whether OQ-278's "all four carry real
+exemplars" is therefore (a) ranging over a wider population than the exemplar-naming sections, or
+(b) wrong for that one member, **is not settled here** — it is a claim in another OQ's record and
+the two readings differ in what they say about the fork.
+
+**This is a datum for OQ-278, and a different one than it already has.** "The published fork branch
+has no exemplar in the place exemplars are named" is a distinct fact from "P3 has an exemplar
+somewhere": the first says the branch that *won* the publication is the one with nothing behind it,
+which bears on which branch the fork should resolve toward. Carried to OQ-278 rather than decided
+in OQ-277.
+
+### 2.4 The (iii′) row, re-pre-registered at n=10
+
+- **MDE at n=10:** one unit is **10%** of the row. Agreement is reportable as a whole-row rate;
+  **per-pattern agreement is not** — at 1–3 members per pattern a single label moves a per-pattern
+  figure by 33–100%. The row stays what the frozen design already called it: **calibration data,
+  not a verdict.** Any sentence reading a per-pattern (iii′) figure as a finding is a
+  pre-registered error.
+- **Coverage:** P1 (3), P2 (2), P4 (1), P5 (2), P6 (2) — **P3 = 0**.
+- **Pre-registered now, before any number exists: a pattern with zero members contributes NOTHING
+  to the row.** It is **not** read as agreement, not counted in the denominator, and not reported
+  as "no disagreement observed." An empty cell and a cell where coder and publication agreed are
+  the same shape at the read site, and collapsing them is the Pattern-6 absorption this experiment
+  studies. **P3's row entry is `no members — uncalibrated`,** the same declared-residue treatment
+  §O gives the missing anchors.
 
 | # | task | who | state |
 |---|---|---|---|
