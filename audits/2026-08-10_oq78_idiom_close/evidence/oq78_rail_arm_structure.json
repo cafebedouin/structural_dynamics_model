@@ -1,0 +1,599 @@
+{
+  "note": "EXPLORATORY characterization, not a pinned condition; reads the frozen 2026-08-10 leg artifacts only",
+  "rng_seed": 20260810,
+  "arm_split": {
+    "haiku": {
+      "n": 960,
+      "n_on_rail": 788,
+      "rail_share": 0.8208,
+      "share_x8_within_rail": 0.7589,
+      "by_claimed_type_share_x8": {
+        "mountain": {
+          "n_on_rail": 39,
+          "share_x8": 0.7179
+        },
+        "rope": {
+          "n_on_rail": 134,
+          "share_x8": 0.7388
+        },
+        "snare": {
+          "n_on_rail": 61,
+          "share_x8": 0.6557
+        },
+        "tangled_rope": {
+          "n_on_rail": 523,
+          "share_x8": 0.7859
+        }
+      }
+    },
+    "flash": {
+      "n": 960,
+      "n_on_rail": 33,
+      "rail_share": 0.0344,
+      "share_x8_within_rail": 0.8485,
+      "by_claimed_type_share_x8": {}
+    },
+    "kimi": {
+      "n": 1005,
+      "n_on_rail": 661,
+      "rail_share": 0.6577,
+      "share_x8_within_rail": 0.4206,
+      "by_claimed_type_share_x8": {
+        "rope": {
+          "n_on_rail": 57,
+          "share_x8": 0.4035
+        },
+        "snare": {
+          "n_on_rail": 56,
+          "share_x8": 0.3036
+        },
+        "tangled_rope": {
+          "n_on_rail": 512,
+          "share_x8": 0.4238
+        }
+      }
+    },
+    "sonnet": {
+      "n": 1001,
+      "n_on_rail": 783,
+      "rail_share": 0.7822,
+      "share_x8_within_rail": 0.5466,
+      "by_claimed_type_share_x8": {
+        "rope": {
+          "n_on_rail": 140,
+          "share_x8": 0.6214
+        },
+        "tangled_rope": {
+          "n_on_rail": 557,
+          "share_x8": 0.5117
+        }
+      }
+    },
+    "default_derived_sonnet4.5": {
+      "n": 64,
+      "n_on_rail": 62,
+      "rail_share": 0.9688,
+      "share_x8_within_rail": 0.7903,
+      "by_claimed_type_share_x8": {
+        "tangled_rope": {
+          "n_on_rail": 30,
+          "share_x8": 0.9667
+        }
+      }
+    },
+    "archive_kernel_v2_test2": {
+      "n": 60,
+      "n_on_rail": 55,
+      "rail_share": 0.9167,
+      "share_x8_within_rail": 0.8364,
+      "by_claimed_type_share_x8": {}
+    }
+  },
+  "matched_seed_arm_concordance": {
+    "haikuxflash": {
+      "n_both_on_rail": 26,
+      "skipped": "fewer than 50 seeds on the rail in both"
+    },
+    "haikuxkimi": {
+      "n_both_on_rail": 528,
+      "observed_arm_concordance": 0.4716,
+      "shuffle_null_p50": 0.4527,
+      "shuffle_null_p95": 0.483,
+      "shuffle_null_p99": 0.4981,
+      "excess_over_null_p50": 0.0189,
+      "exceeds_null_p99": false
+    },
+    "haikuxsonnet": {
+      "n_both_on_rail": 644,
+      "observed_arm_concordance": 0.5761,
+      "shuffle_null_p50": 0.5171,
+      "shuffle_null_p95": 0.5419,
+      "shuffle_null_p99": 0.5543,
+      "excess_over_null_p50": 0.059,
+      "exceeds_null_p99": true
+    },
+    "flashxkimi": {
+      "n_both_on_rail": 23,
+      "skipped": "fewer than 50 seeds on the rail in both"
+    },
+    "flashxsonnet": {
+      "n_both_on_rail": 16,
+      "skipped": "fewer than 50 seeds on the rail in both"
+    },
+    "kimixsonnet": {
+      "n_both_on_rail": 493,
+      "observed_arm_concordance": 0.4929,
+      "shuffle_null_p50": 0.4888,
+      "shuffle_null_p95": 0.5254,
+      "shuffle_null_p99": 0.5416,
+      "excess_over_null_p50": 0.0041,
+      "exceeds_null_p99": false
+    }
+  },
+  "arm_concordance_partialled_by_type": {
+    "haikuxflash": {
+      "n_same_type_both_on_rail": 23,
+      "skipped": "fewer than 50 usable seeds"
+    },
+    "haikuxkimi": {
+      "n_same_type_both_on_rail": 434,
+      "types": {
+        "tangled_rope": 349,
+        "rope": 39,
+        "snare": 26,
+        "piton": 10,
+        "scaffold": 5,
+        "mountain": 5
+      },
+      "observed_arm_concordance": 0.4793,
+      "within_type_shuffle_null_p50": 0.4516,
+      "within_type_shuffle_null_p99": 0.4977,
+      "excess_over_null_p50": 0.0276,
+      "exceeds_null_p99": false
+    },
+    "haikuxsonnet": {
+      "n_same_type_both_on_rail": 547,
+      "types": {
+        "tangled_rope": 419,
+        "rope": 84,
+        "piton": 14,
+        "snare": 14,
+        "mountain": 8,
+        "scaffold": 8
+      },
+      "observed_arm_concordance": 0.5649,
+      "within_type_shuffle_null_p50": 0.5101,
+      "within_type_shuffle_null_p99": 0.5539,
+      "excess_over_null_p50": 0.0548,
+      "exceeds_null_p99": true
+    },
+    "flashxkimi": {
+      "n_same_type_both_on_rail": 20,
+      "skipped": "fewer than 50 usable seeds"
+    },
+    "flashxsonnet": {
+      "n_same_type_both_on_rail": 13,
+      "skipped": "fewer than 50 usable seeds"
+    },
+    "kimixsonnet": {
+      "n_same_type_both_on_rail": 424,
+      "types": {
+        "tangled_rope": 350,
+        "rope": 43,
+        "snare": 11,
+        "piton": 10,
+        "scaffold": 6,
+        "mountain": 4
+      },
+      "observed_arm_concordance": 0.4906,
+      "within_type_shuffle_null_p50": 0.4906,
+      "within_type_shuffle_null_p99": 0.5425,
+      "excess_over_null_p50": 0.0,
+      "exceeds_null_p99": false
+    }
+  },
+  "partial_reading": "excess surviving the WITHIN-TYPE shuffle is arm signal proper; excess that vanishes here was claimed_type agreement, not a shared arm habit",
+  "concordance_reading": "excess over the shuffle null > 0 and above p99 => R1 (arm choice carries seed-level signal, one habit applied per story); concordance at the null => R2 (independent per-model arm preferences, two co-occurring habits)",
+  "x2_mass_location": {
+    "haiku": {
+      "n": 190,
+      "top": [
+        [
+          0.62,
+          98,
+          0.5158
+        ],
+        [
+          0.82,
+          28,
+          0.1474
+        ],
+        [
+          0.42,
+          25,
+          0.1316
+        ],
+        [
+          0.12,
+          11,
+          0.0579
+        ],
+        [
+          0.52,
+          10,
+          0.0526
+        ],
+        [
+          0.72,
+          6,
+          0.0316
+        ]
+      ],
+      "share_adjacent_to_068": 0.5474
+    },
+    "flash": {
+      "n": 5,
+      "top": [
+        [
+          0.92,
+          3,
+          0.6
+        ],
+        [
+          0.02,
+          1,
+          0.2
+        ],
+        [
+          0.12,
+          1,
+          0.2
+        ]
+      ],
+      "share_adjacent_to_068": 0.0
+    },
+    "kimi": {
+      "n": 383,
+      "top": [
+        [
+          0.62,
+          126,
+          0.329
+        ],
+        [
+          0.72,
+          109,
+          0.2846
+        ],
+        [
+          0.82,
+          63,
+          0.1645
+        ],
+        [
+          0.52,
+          21,
+          0.0548
+        ],
+        [
+          0.42,
+          18,
+          0.047
+        ],
+        [
+          0.12,
+          12,
+          0.0313
+        ]
+      ],
+      "share_adjacent_to_068": 0.6136
+    },
+    "sonnet": {
+      "n": 355,
+      "top": [
+        [
+          0.42,
+          175,
+          0.493
+        ],
+        [
+          0.52,
+          70,
+          0.1972
+        ],
+        [
+          0.62,
+          39,
+          0.1099
+        ],
+        [
+          0.32,
+          20,
+          0.0563
+        ],
+        [
+          0.22,
+          20,
+          0.0563
+        ],
+        [
+          0.12,
+          15,
+          0.0423
+        ]
+      ],
+      "share_adjacent_to_068": 0.1408
+    },
+    "default_derived_sonnet4.5": {
+      "n": 13,
+      "top": [
+        [
+          0.42,
+          7,
+          0.5385
+        ],
+        [
+          0.12,
+          5,
+          0.3846
+        ],
+        [
+          0.82,
+          1,
+          0.0769
+        ]
+      ],
+      "share_adjacent_to_068": 0.0
+    },
+    "archive_kernel_v2_test2": {
+      "n": 9,
+      "top": [
+        [
+          0.62,
+          3,
+          0.3333
+        ],
+        [
+          0.42,
+          2,
+          0.2222
+        ],
+        [
+          0.02,
+          2,
+          0.2222
+        ],
+        [
+          0.72,
+          1,
+          0.1111
+        ],
+        [
+          0.12,
+          1,
+          0.1111
+        ]
+      ],
+      "share_adjacent_to_068": 0.4444
+    }
+  },
+  "x8_mass_location": {
+    "haiku": {
+      "n": 598,
+      "top": [
+        [
+          0.68,
+          305,
+          0.51
+        ],
+        [
+          0.58,
+          88,
+          0.1472
+        ],
+        [
+          0.38,
+          73,
+          0.1221
+        ],
+        [
+          0.78,
+          37,
+          0.0619
+        ],
+        [
+          0.18,
+          25,
+          0.0418
+        ],
+        [
+          0.48,
+          25,
+          0.0418
+        ]
+      ],
+      "share_adjacent_to_068": 0.0
+    },
+    "flash": {
+      "n": 28,
+      "top": [
+        [
+          0.68,
+          15,
+          0.5357
+        ],
+        [
+          0.78,
+          9,
+          0.3214
+        ],
+        [
+          0.88,
+          1,
+          0.0357
+        ],
+        [
+          0.38,
+          1,
+          0.0357
+        ],
+        [
+          0.28,
+          1,
+          0.0357
+        ],
+        [
+          0.08,
+          1,
+          0.0357
+        ]
+      ],
+      "share_adjacent_to_068": 0.0
+    },
+    "kimi": {
+      "n": 278,
+      "top": [
+        [
+          0.78,
+          67,
+          0.241
+        ],
+        [
+          0.58,
+          65,
+          0.2338
+        ],
+        [
+          0.68,
+          53,
+          0.1906
+        ],
+        [
+          0.48,
+          34,
+          0.1223
+        ],
+        [
+          0.88,
+          17,
+          0.0612
+        ],
+        [
+          0.28,
+          15,
+          0.054
+        ]
+      ],
+      "share_adjacent_to_068": 0.0
+    },
+    "sonnet": {
+      "n": 428,
+      "top": [
+        [
+          0.58,
+          145,
+          0.3388
+        ],
+        [
+          0.68,
+          73,
+          0.1706
+        ],
+        [
+          0.28,
+          73,
+          0.1706
+        ],
+        [
+          0.38,
+          39,
+          0.0911
+        ],
+        [
+          0.18,
+          38,
+          0.0888
+        ],
+        [
+          0.78,
+          20,
+          0.0467
+        ]
+      ],
+      "share_adjacent_to_068": 0.0
+    },
+    "default_derived_sonnet4.5": {
+      "n": 49,
+      "top": [
+        [
+          0.68,
+          32,
+          0.6531
+        ],
+        [
+          0.38,
+          5,
+          0.102
+        ],
+        [
+          0.78,
+          3,
+          0.0612
+        ],
+        [
+          0.18,
+          3,
+          0.0612
+        ],
+        [
+          0.08,
+          2,
+          0.0408
+        ],
+        [
+          0.28,
+          2,
+          0.0408
+        ]
+      ],
+      "share_adjacent_to_068": 0.0
+    },
+    "archive_kernel_v2_test2": {
+      "n": 46,
+      "top": [
+        [
+          0.68,
+          18,
+          0.3913
+        ],
+        [
+          0.78,
+          7,
+          0.1522
+        ],
+        [
+          0.58,
+          7,
+          0.1522
+        ],
+        [
+          0.48,
+          5,
+          0.1087
+        ],
+        [
+          0.28,
+          5,
+          0.1087
+        ],
+        [
+          0.08,
+          3,
+          0.0652
+        ]
+      ],
+      "share_adjacent_to_068": 0.0
+    }
+  },
+  "r3_reading": "if .x2 were the dissolved point mass spreading to its neighbours, share_adjacent_to_068 (0.62 + 0.72) would dominate the .x2 arm in the legs where the point mass fell; a broadly spread .x2 arm falsifies R3"
+}

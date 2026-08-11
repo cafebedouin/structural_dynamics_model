@@ -217,3 +217,49 @@ un-falsified rather than confirmed.
 
 **Not the remedy:** the matched-seed-across-models arm. It isolates the model, and the model is
 what already varied.
+
+---
+
+## ADDENDUM (same day, operator-directed) — the rail's arm structure
+
+**Status: EXPLORATORY characterization, no falsifier attached.** Run after the cell-2 read, on
+data already on disk, to make the re-scoped rail question concrete before anything is
+pre-registered against it. Instrument: `python/audits/oq78_rail_arm_structure.py`; evidence:
+`evidence/oq78_rail_arm_structure.json`. Nothing here is a pinned condition.
+
+The rail held while the point mass dissolved, and mass moved *between* the rail's arms. Three
+readings were separable on data in hand: **R1** one habit, seed-driven; **R2** two independent
+per-model habits; **R3** the `.x2` arm is just the vacated 0.68 point mass spreading to its
+neighbours.
+
+**Arm split within the rail (`.x8` share):** archive 83.6%, sonnet-4.5 79.0%, haiku 75.9%,
+sonnet-5 **54.7%**, kimi 42.1%. (flash is on the rail at only 3.4%, so its 84.9% is 28 stories
+and carries nothing.)
+
+**R3 is falsified where it mattered most.** If `.x2` were the dissolved point mass spreading, its
+gain would sit at 0.62/0.72. It does for kimi (61.4% adjacent) and haiku (54.7%) — but for
+**sonnet-5 only 14.1%**: its `.x2` mass sits at **0.42 (175 stories) and 0.52 (70)**, a different
+region entirely. The model whose point mass dissolved most is precisely the one whose `.x2` growth
+is *not* the vacated neighbourhood. The two components are independent, not one artefact.
+
+**R1 vs R2 — and the type confound partialled out.** Arm choice tracks claimed_type, and two
+models on one seed often agree on the type, so raw concordance could be type agreement in a shared
+habit's costume. Restricting to seeds where both models assigned the **same** claimed_type and
+shuffling **within** that type removes the channel:
+
+| pair | n (same type, both on rail) | observed | within-type null p50 | null p99 | excess | above p99 |
+|---|---|---|---|---|---|---|
+| haiku × sonnet-5 | 547 | 0.5649 | 0.5101 | 0.5539 | **+0.0548** | **yes** |
+| haiku × kimi | 434 | 0.4793 | 0.4516 | 0.4977 | +0.0276 | no |
+| kimi × sonnet-5 | 424 | 0.4906 | 0.4906 | 0.5425 | **+0.0000** | no |
+
+**Within the Claude family, arm choice carries genuine seed-level signal that survives the type
+partial; across families it is exactly zero.** So the rail behaves as **one inherited habit applied
+per story within the family** (R1), not two independent co-occurring habits (R2) — while remaining
+wholly absent across families. The magnitude is **modest**: 56.5% against a 51.0% baseline, real
+but a 5.5-point excess, and it should not be reported as a strong effect.
+
+**What this changes for the re-scoped question.** "Family-bound" is no longer only a statement
+about *which digit* each family lands on; there is within-family shared structure at the finer
+arm level that no cross-family pair shows. That is a sharper object to test a family boundary
+against than the argmax digit alone, and it is measurable on corpora already on disk.
