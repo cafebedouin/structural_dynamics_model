@@ -10794,13 +10794,45 @@ more than one defect and recorded `alternatives_not_extracted` with a stated sel
 **ZERO NO-UNIT proposals from A's half** — every directory reported an incident, so §H.2's `k`
 stays open until B's half lands and A's zero must not be read as the answer.
 
-**Accounting flag for the operator (NOT self-resolved).** `role` labelling is inconsistent
-across A's half in a way that touches quarantine: `01_recon_2.json` is `"primary+overlap"`,
-`06_oq44_policy_close.json` is `"primary"` — both are A's primary AND the source dirs for B's two
-overlap units. A driver quarantining on `role != "primary"` drops 01 and keeps 06, silently
-moving n by one. The real question underneath is a design call: the four floor COMPARISONS are
-`{A01×B, A06×B, A12×B, A13×B}`, and whether A's 01/06 are matrix units as well as floor inputs is
-the operator's to rule. Picking a label would be answering it, so it is flagged, not fixed.
+**Overlap accounting RULED (operator, 2026-08-11; `verdict_grammar_amendment.md` §I).** `role` was
+encoding two independent facts — matrix membership (a *sampling* fact, fixed by the seeded draw)
+and floor participation (a *control* fact, fixed by the overlap design) — and one string cannot
+carry both without ambiguity, which is what produced the inconsistency (`01` was
+`"primary+overlap"`, `06` was `"primary"`, both the same kind of thing). **A's 01 and 06 STAY
+matrix units.** All 13 A units now carry `role: "primary"` plus an explicit
+`overlap_source` boolean, true on the four floor-participating dirs; **the driver quarantines on
+`overlap_source`, never on `role`.** Excluding the four would drop seeded-sample units from a
+stratum already thin at n=22 to guard a contamination that does not exist — A's 01 is not
+contaminated by B's later independent extraction of the same dir. **The comparison is quarantined,
+not the units; B's four overlap-dir extractions are the ones that never enter cells.** Accounting:
+each of the 22 dirs contributes exactly ONE matrix unit — A 13 + B 9 = 22.
+
+**Pre-registered limit (§I.1, fixed BEFORE the floor is measured):** only those four dirs will
+have an independently measured extraction error bar; the other nine do not. **Four measured units
+do NOT license a claim about thirteen or twenty-two** — any reliability statement is scoped to the
+four unless a separate representativeness argument is made and stated. Written now rather than at
+close because a limit chosen after seeing the floor is a limit chosen against a known result.
+
+**NEW CATCH, pre-spend — the memory system is itself a leak channel (`verdict_grammar_amendment.md`
+§J; writeup obligation).** A commit message landing A's two overlap units summarized both incidents
+in one line each — and those two dirs are extractor B's PRIMARY assignments, so a `git log` read by
+B would have anchored B's independent extraction on A's selection, collapsing the churn floor into a
+self-comparison that reports INSIDE FLOOR by construction while §E rides the extension decision on
+it. Caught before push; message amended to state why the content is absent. **Every leak control in
+this design targets what reaches the CODER (payload greps, banned lexicons, redaction, planted
+leak); this one reached the EXTRACTOR, through version control — infrastructure the design treats
+as neutral substrate rather than as a channel.** Three surfaces to name in the writeup: `git log`,
+`git show` on the landing commits (prints unit bodies verbatim), and any sweep that globs the unit
+dir and prints what it loads. Pre-committed response, fixed in advance rather than negotiated at
+discovery (the second time this arc): **declare it and VOID that pair's floor comparison**, never
+patch and continue.
+
+**Second directional guess declined by the data (§K).** `incident_location` over A's completed 13
+is subject 10 / incidental 2 / self_audit_subsection 1. The interim reading at A's first 7 (6
+subject / 1 self-audit) raised a possible skew toward dirs that merely noticed their own incidental
+defects — which would support a weaker claim than "73 audits were about incidents" (§H.1). **The
+completed half does not show that skew; recorded as NOT HELD**, at the same volume as the
+confirmations, exactly as the pre-registered C/D guess was recorded as wrong (R2a).
 
 **Possible finding, surfaced by extraction and NOT yet measured: the §4.5 keyword proxy's
 PRECISION is unaudited.** `2026-06-15_oq131_six_observer` nearly yielded no unit — a

@@ -106,17 +106,35 @@ reason and files read; the operator rules.
 §H.2 the row is `k` = operator-confirmed NO-UNIT dirs across the whole n=22 primary sample, so the
 count is not closed until your half lands. Do not read A's zero as the answer.
 
-## Two things for the operator, not for you to resolve
+## `role` and `overlap_source` — RULED 2026-08-11, apply it, do not re-decide it
 
-1. **`role` labelling is inconsistent in A's half and it touches the quarantine accounting.**
-   `01_recon_2.json` is `"primary+overlap"`; `06_oq44_policy_close.json` is `"primary"` — both are
-   A's primary AND the source directories for your two overlap units. A driver that quarantines on
-   `role != "primary"` would drop 01 from the matrices and keep 06, silently changing n by one.
-   The underlying question is genuinely the operator's: the four floor COMPARISONS are
-   `{A01×B, A06×B, A12×B, A13×B}`, and whether A's 01/06 are also matrix units (they are A's
-   primary) or quarantined as floor inputs is a design call, not a typo. **Flagged, not fixed** —
-   fixing it by picking a label would be answering it.
-2. **After both halves land:** controls (anchors 3/direction, decoys 2, the PRE-DECLARED redaction
+`role` was encoding two independent facts and produced an inconsistency in A's half. The operator
+split them (`verdict_grammar_amendment.md` §I, now part of the prereg):
+
+- **`role: "primary"` on every unit — all thirteen of yours, as with all thirteen of A's.** Matrix
+  membership is a *sampling* fact, fixed by the seeded draw. It is not what `role` decides.
+- **`overlap_source: true|false`** — a *control* fact, fixed by the overlap design. Set it **true**
+  on your four floor-participating directories: `2025-05-15_recon_2`,
+  `2026-06-11_oq44_policy_close`, `2026-06-27_oq124_oq149_committer_convention_control`,
+  `2026-07-11_oq186_oq188_readsite`. **False on the other nine. Write the field explicitly on all
+  thirteen** — absent-means-false is the same two-tokens-one-slot collapse this fixed.
+- **The driver quarantines on `overlap_source`, never on `role`.**
+
+**Cell accounting (do not drift from it):** each of the 22 sampled directories contributes exactly
+ONE unit to the matrices. A contributes 13; **you contribute 9**; your four overlap-directory
+extractions are floor-only and never enter cells. 13 + 9 = 22. Your four are quarantined, not
+discarded — they are half of every floor comparison, so extract them at full quality. Writing them
+thinly because they "don't count" would shrink the measured floor toward zero, which reads as
+"extraction is reliable" and would retire the control by flattering it.
+
+**One consequence, pre-registered before the floor is measured** (§I.1): only the four overlap
+directories will have a measured extraction error bar. Four measured units do not license a claim
+about thirteen or twenty-two. Do not write, and do not let a later reader infer, that the overlap
+units are representative of extraction quality generally.
+
+## After both halves land
+
+1. **The rest of the sequence:** controls (anchors 3/direction, decoys 2, the PRE-DECLARED redaction
    pairs in `controls/redaction_pairs_predeclared.json` — do NOT choose them), then the driver, then
    `PREREGISTRATION.md` with `verdict_grammar_amendment.md` incorporated verbatim and its md5 in
    `audit_log.md` ABOVE the first result line, then request spend-go. **Before Phase 3, assert the

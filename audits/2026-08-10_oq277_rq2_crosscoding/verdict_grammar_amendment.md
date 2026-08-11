@@ -296,3 +296,92 @@ incident" from "matched the word" without one — the identical structure the fr
 from the other direction, where "174 = 73 + 101, partition exact" is an arithmetic identity that
 witnesses nothing about whether the census *classifies* correctly. Two independent routes to the
 same missing control, one from the denominator and one from the numerator.
+
+---
+
+# Addendum (operator, 2026-08-11) — overlap accounting, and the channel nobody modelled
+
+Written after extractor A's half closed at 13/13, before extractor B started. Incorporated into
+`PREREGISTRATION.md` verbatim with the rest of this file.
+
+## I. Overlap accounting — `role` stops encoding two facts
+
+**Ruling: A's 01 and 06 STAY matrix units.** All thirteen of A's units carry `role: "primary"`;
+the overlap relationship moves to its own boolean, `overlap_source`, true on the four
+floor-participating directories (`2025-05-15_recon_2`, `2026-06-11_oq44_policy_close`,
+`2026-06-27_oq124_oq149_committer_convention_control`, `2026-07-11_oq186_oq188_readsite`).
+**The driver quarantines on `overlap_source`, never on `role`.**
+
+**Why the field split, stated as the defect it removes.** `role` was being asked to encode two
+independent facts: whether a unit enters the matrices, and whether it participates in a floor
+comparison. Matrix membership is a **sampling** fact, fixed by the seeded draw; floor
+participation is a **control** fact, fixed by the overlap design. They vary independently, and one
+string cannot say both without ambiguity — which is exactly what produced the inconsistency
+(`01` labelled `primary+overlap`, `06` labelled `primary`, both the same kind of thing).
+
+**Why not exclude them.** Excluding the four would drop seeded-sample units from a stratum already
+thin at n=22, to protect against a contamination that does not exist. A's extraction of `01` is
+not contaminated by B's later independent extraction of the same directory. **The comparison is
+quarantined, not the units** — and it is B's versions of the four overlap directories that never
+enter cells.
+
+**Cell accounting, so it cannot drift:** each of the 22 sampled directories contributes exactly
+ONE unit to the matrices. A contributes 13, B contributes 9, and B's four
+overlap-directory extractions are floor-only. 13 + 9 = 22.
+
+### I.1 Pre-registered limit on what the floor licenses
+
+**Four units now have an independently measured extraction error bar. The other nine do not.**
+If the floor comes out non-trivial, those four are the only units whose extraction quality is
+known.
+
+> **Pre-registered NOW, before the floor is measured:** the four overlap units may NOT be treated
+> as representative of extraction quality generally. Any statement about the reliability of the
+> unit set is scoped to the four measured directories unless a separate argument for
+> representativeness is made and stated. **Four measured units do not license a claim about
+> thirteen, or about twenty-two.**
+
+Stated here rather than at close because a limit written after seeing the floor is a limit chosen
+against a known result. If the floor is trivial (4/4 INSIDE FLOOR), this clause costs nothing; if
+it is not, this clause is the difference between a scoped finding and an implicit claim.
+
+## J. Writeup obligation — the memory system is a leak channel
+
+**The catch.** A commit message landing the two overlap units summarized both incidents in one
+line each. Those two directories are extractor B's PRIMARY assignments. A `git log` read by B
+would have anchored B's independent extraction on A's selection, converting the extraction-churn
+floor into a self-comparison that reports INSIDE FLOOR by construction — and §E rides the
+extension decision on that number. Caught by the author before anything was pushed; the message
+was amended to state, in place of the content, why the content is absent.
+
+**Why it generalizes, and why it is the sharpest catch of the arc.** Every leak control in this
+design targets what reaches the **coder**: payload greps, banned lexicons, redaction, the planted
+leak. This one reached the **extractor**, through **version control** — infrastructure the design
+treats as neutral substrate rather than as a channel. In an institution whose memory IS a git
+repository, the memory system is itself a leak channel, and a blinding protocol has to name it
+explicitly, because it is the one surface everyone reads and nobody registers as an input.
+
+**Carry all three surfaces to the writeup, not just the commit message:** `git log`, `git show`
+on the landing commits (which prints the unit bodies verbatim), and any sweep that globs the unit
+directory and prints what it loads.
+
+**Second-order note for the same section.** This is the second time in this arc that a leak
+response was **fixed in advance rather than negotiated at discovery** — the first being the
+quarantine rule for escape-check hits. The pre-committed response here is *declare it and VOID
+that pair's floor comparison*, never patch and continue: a voided comparison is recoverable, a
+silently contaminated one licenses a scope decision on a fabricated basis.
+
+## K. Second directional guess declined by the data
+
+`incident_location` over A's 13: **subject 10 / incidental 2 / self_audit_subsection 1.**
+
+The operator's reading at the interim boundary (A's first 7, which stood at 6 subject / 1
+self-audit) raised the possibility that the numerator is weighted toward directories that merely
+noticed their own incidental defects — which would support a weaker claim than "73 audits were
+about incidents" (§H.1). **The completed half does not show that skew**, and the reading is
+recorded as **not held**.
+
+Recorded the same way the pre-registered C/D disagreement guess was recorded as wrong (`RECON.md`
+§R2a). **This is the second directional guess of this arc that the data declined.** Both are kept
+in the record at the same volume as the confirmations; a design that only remembers its correct
+priors is measuring its own memory.
