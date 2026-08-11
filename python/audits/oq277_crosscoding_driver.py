@@ -470,47 +470,6 @@ def assert_no_foreign_run(target: pathlib.Path, run_id: str) -> None:
             f"and the provenance unrecoverable. Move the prior run aside first.")
 
 
-def assert_live_response_dir_untouched(live: pathlib.Path | None = None) -> None:
-    """Same invariant as the payload directory, on the output side: the stub writes to
-    `responses_stub/` and must never touch canonical `responses/`.
-
-    Added 2026-08-11 with the capture path itself. The output side had no directory
-    discipline because it had no writer at all — every protection in this driver was built
-    for inputs. `live` is a parameter for the same reason as its sibling: so the selftest
-    can witness the refusal without dirtying the directory whose emptiness is the invariant.
-    """
-    live = live or (AUDIT / "responses")
-    stray = [p for p in live.rglob("*") if p.is_file()] if live.exists() else []
-    if stray:
-        raise SystemExit(
-            f"REFUSED: {live} is NOT empty ({len(stray)} files, e.g. "
-            f"{stray[0].name}). The stub must never write to the canonical response "
-            f"directory, and a live run must not mix with a prior run's data.")
-
-
-def assert_live_capture_dir_untouched(live: pathlib.Path | None = None) -> None:
-    """The canonical `payloads/` is empty BY DESIGN and stays that way until spend-go.
-
-    The stub therefore writes to `payloads_stub/`, never to `payloads/`. This is not
-    tidiness: 198 stub files sitting in the canonical capture directory would misrepresent
-    the audit's state to every later reader — the escape extractor is told those
-    directories are empty and to keep them that way — and a subsequent live run's capture
-    count could be contaminated by leftovers from a test. The invariant is ASSERTED on
-    every stub run rather than trusted, because "the stub does not write there" is exactly
-    the kind of claim that stays true until someone changes a path constant.
-
-    Takes `live` as a parameter ONLY so --selftest can point it at a temp directory and
-    witness the refusal firing. Testing it against the real path would require writing a
-    file into the directory whose emptiness is the invariant."""
-    live = live or (AUDIT / "payloads")
-    stray = [p for p in live.rglob("*") if p.is_file()]
-    if stray:
-        raise SystemExit(
-            f"REFUSED: {live} is NOT empty ({len(stray)} files, e.g. "
-            f"{stray[0].name}). No model call has been made in this audit and that "
-            f"directory is empty by design. Investigate before running anything.")
-
-
 def run(stub: bool, dry_run: bool) -> int:
     errors: list[str] = []
     payloads, notes = build_payloads(LEGS)
@@ -552,6 +511,11 @@ def run(stub: bool, dry_run: bool) -> int:
         print(f"  (canonical payloads/ checked by PROVENANCE, not emptiness: it holds no "
               f"data from this run)")
 
+    if stub:
+        # Post-write, not only pre-write: the pre-check cannot catch a mis-path made by
+        # THIS run, because the contaminating write happens after it. The old emptiness
+        # assertion could not either. Cheap, so do both.
+        assert_no_self_contamination(AUDIT / "payloads", run_id)
     gate_count(out_dir, expected, errors)
     gate_fixtures(out_dir, len(fixtures), errors)
     gate_grep(out_dir, exempt_ids(), errors)
@@ -585,6 +549,8 @@ def run(stub: bool, dry_run: bool) -> int:
     print(f"\n  persisted {on_disk} raw response file(s) to {resp_dir.name}/ "
           f"(counted on disk; written and verified per call, before the next call issued)")
 
+    if stub:
+        assert_no_self_contamination(AUDIT / "responses", run_id)
     gate_responses(resp_dir, expected, errors)
     if errors:
         kept = len(glob.glob(str(resp_dir / "*" / "*.json")))
@@ -662,28 +628,6 @@ def selftest() -> int:
                         {"leg": "t", "item_id": "b", "k": 3, "answer": "P2"}])
     check(f"k=3 split resolves to {UNSTABLE}", r[("t", "b")]["label"] == UNSTABLE)
 
-    print("\ncapture-directory invariant — two-sided:")
-    import tempfile
-    with tempfile.TemporaryDirectory() as td:
-        empty = pathlib.Path(td) / "empty"
-        empty.mkdir()
-        try:
-            assert_live_capture_dir_untouched(empty)
-            clean_ok = True
-        except SystemExit:
-            clean_ok = False
-        check("an EMPTY canonical payloads/ passes", clean_ok)
-        dirty = pathlib.Path(td) / "dirty"
-        (dirty / "direction_i").mkdir(parents=True)
-        (dirty / "direction_i" / "i-01__k1.json").write_text("{}")
-        try:
-            assert_live_capture_dir_untouched(dirty)
-            fired = False
-        except SystemExit:
-            fired = True
-        check("a NON-EMPTY canonical payloads/ REFUSES — the stub can never write there",
-              fired)
-
     # output-side capture. ADDED 2026-08-11, after a live run spent 219 calls and persisted
     # nothing. Every gate in this driver was an INPUT gate; the output side had no writer,
     # so there was nothing to gate and no signal that anything was missing.
@@ -736,9 +680,10 @@ def selftest() -> int:
     def dirty_response_dir_refuses() -> bool:
         d = pathlib.Path(tempfile.mkdtemp())
         try:
+            stamp_run(d, "run-A", "stub", 3)
             (d / "direction_i").mkdir(parents=True)
             (d / "direction_i" / "x__k1.json").write_text("{}")
-            assert_live_response_dir_untouched(d)
+            assert_no_self_contamination(d, "run-A")
             return False
         except SystemExit:
             return True
@@ -748,7 +693,7 @@ def selftest() -> int:
     def clean_response_dir_allowed() -> bool:
         d = pathlib.Path(tempfile.mkdtemp())
         try:
-            assert_live_response_dir_untouched(d)
+            assert_no_self_contamination(d, "run-A")
             return True
         except SystemExit:
             return False
@@ -803,7 +748,7 @@ def selftest() -> int:
           not foreign_run_case(None, "run-B"))
 
     check("write_response() persists the raw text and verifies it landed", write_response_lands())
-    check("the stub NEVER writes to canonical responses/ — refusal fires on a dirty dir",
+    check("the stub NEVER writes to canonical responses/ — fires when it carries this run",
           dirty_response_dir_refuses())
     check("CONVERSE — an empty response dir is allowed (not stuck closed)",
           clean_response_dir_allowed())
