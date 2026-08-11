@@ -19,6 +19,7 @@ primary units, by an extractor who has not seen the primary sample's results.*
 | `controls/anchors.json`, `controls/decoys.json`, `controls/planted.json` | control units, several quoting incidents |
 | `controls/redaction_twins_direction_i.json` | unredacted twin arms |
 | `responses/`, `matrices/` | coding results (currently empty — keep it that way) |
+| `RULING_2026-08-11_freeze_scope.md` §2.3 onward, and `controls/redaction_pair_selection_defect.md` | **these two QUOTE primary unit bodies** — the oq93 collision check states unit `05`'s symptom verbatim and unit `07`'s in summary. Added 2026-08-11 by their author, who wrote unit content into a rulings document and only noticed when briefing you. Read their §1 / headline verdict if you need the scope ruling; stop at the collision sections. |
 
 The prior instance read one primary unit in full and disqualified itself in writing rather than
 claim the condition on its wording. Do the same if you slip: **declare it, do not quietly
