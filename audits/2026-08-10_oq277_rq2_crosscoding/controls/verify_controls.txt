@@ -1,0 +1,26 @@
+=== CONTROL VERIFICATION (extractor, pre-driver) ===
+
+[1] DECOYS must be CLEAN under both lexicons (they are coder-facing in both directions)
+   decoy_1_loud             want=other  clean under BOTH lists
+   decoy_2_institutional    want=other  clean under BOTH lists
+   -> decoy leak hits: 0
+
+[2] PLANTED LEAK fixtures must be FLAGGED (positive control: a matcher that never fires witnesses nothing)
+   direction_i_payload_fixture: 9 hits under direction (i) -> FLAGGED
+      [('class_letters', '\\bClass\\s+[A-E]\\b', 'Class B', 'roring rather than passing — a textbook Class B positional-parse failure, and a fail-pl'), ('root_cause_structure', '\\bamplifier\\b', 'amplifier', 'concealer here was the status file; the amplifier was the retry loop. Compare the gray fa'), ('root_cause_structure', '\\bconcealer\\b', 'concealer', ', and a fail-plausible one at that. The concealer here was the status file; the amplifier'), ('rule_ids', '\\bINV-[A-Z]', 'INV-O', 'ure described under meta-rule MR-12 and INV-ONTOLOGY-001, logged in the openclaw repo'), ('rule_ids', '\\bMR-\\d+\\b', 'MR-12', ' gray failure described under meta-rule MR-12 and INV-ONTOLOGY-001, logged in the ope'), ('rule_ids', '\\bmeta[- ]rule\\b', 'meta-rule', 'ompare the gray failure described under meta-rule MR-12 and INV-ONTOLOGY-001, logged in t'), ('source_identifying', '\\bopenclaw\\b', 'openclaw', '-12 and INV-ONTOLOGY-001, logged in the openclaw repo.'), ('taxonomy_terms', '\\bfail[- ]plausible\\b', 'fail-plausible', 'Class B positional-parse failure, and a fail-plausible one at that. The concealer here was the'), ('taxonomy_terms', '\\bgr[ae]y failure\\b', 'gray failure', 'plifier was the retry loop. Compare the gray failure described under meta-rule MR-12 and INV')]
+   direction_ii_payload_fixture: 11 hits under direction (ii) -> FLAGGED
+      [('p_tokens', '\\bP[1-6]\\b', 'P6', 'This is a P6 instance and a textbook success-shaped '), ('p_tokens', '\\bP[1-6]\\b', 'P6', 'angling wire above it is Pattern 1, and P6 is parasitic on the others because it i'), ('p_tokens', '\\bPattern\\s+[1-6]\\b', 'Pattern 1', 'sorption: the dangling wire above it is Pattern 1, and P6 is parasitic on the others beca'), ('pattern_names', '\\bsuccess[- ]shaped absorption\\b', 'success-shaped absorption', 'This is a P6 instance and a textbook success-shaped absorption: the dangling wire above it is Pattern '), ('pattern_nicknames', '\\bdangling wire\\b', 'dangling wire', 'textbook success-shaped absorption: the dangling wire above it is Pattern 1, and P6 is parasi'), ('r5_framing', '\\bcross[- ]cutting\\b', 'cross-cutting', 's parasitic on the others because it is cross-cutting rather than sitting at one level. Our s'), ('r5_framing', '\\blayer column\\b', 'layer column', ' sort by system layer, which is why the layer column matters here. Tracked as OQ-97.'), ('r5_framing', '\\bparasitic\\b', 'parasitic', 'g wire above it is Pattern 1, and P6 is parasitic on the others because it is cross-cutti'), ('r5_framing', '\\bsorts? by (?:system )?layer\\b', 'sort by system layer', 'ther than sitting at one level. Our six sort by system layer, which is why the layer column matters '), ('source_identifying', '\\bOQ-\\d+\\b', 'OQ-97', 'e layer column matters here. Tracked as OQ-97.'), ('taxonomy_phrases', '\\bsuccess[- ]shaped\\b', 'success-shaped', 'This is a P6 instance and a textbook success-shaped absorption: the dangling wire above it ')]
+
+[3] LAYER SCOPING: collocations must fire, the BARE word must not (over-redaction destroys codeability)
+   'sorts by system layer'      -> [('r5_framing', '\\bsorts? by (?:system )?layer\\b', 'sorts by system layer', 'our six sorts by system layer')]
+   'the reporting layer was silent' -> NO HIT (correct — bare word preserved)
+
+[4] PLANTED BROKEN UNIT: must be well-formed, clean, and NOT resident in packets/our_units/
+   fields present: True | leak hits: 0 | matrix_unit: False | resident in our_units: NO (correct)
+
+[5] DISJOINTNESS: no control incident is any extracted unit's incident
+   decoy_1 (interface rejects a parameter outright)     -> DISJOINT
+   decoy_2 (published report delayed)                   -> DISJOINT
+   anchor_i_1 (stale post-process)                      -> DISJOINT
+   anchor_i_2 (two copies)                              -> DISJOINT
+   anchor_i_3 (empty-table count gate)                  -> DISJOINT

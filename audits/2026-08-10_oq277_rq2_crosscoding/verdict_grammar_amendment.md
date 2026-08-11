@@ -433,3 +433,126 @@ directory-level and extraction-level facts back into one boolean is what produce
   13/13 — smaller than reported, and real. Flagged by B rather than smoothed, which is the correct
   handling: the convention differed, and a pooled count would have concealed that a convention
   differed at all.
+
+### I.4 Floor asymmetry — pre-registered BEFORE the number exists
+
+B's selection residual is accepted as recorded (three multi-defect directories where the stated
+rule left the call close, each loser recorded with its reason). **Two of the three are
+floor-participating directories.** So the floor conflates two things: extraction churn (what it is
+built to measure) and selection difference (which of several genuine defects an extractor chose).
+
+**The conflation has a SIGN, and that is what makes it usable.** A selection difference inflates
+apparent disagreement; it can never deflate it — two extractors who chose different defects from
+the same directory cannot thereby agree. Therefore:
+
+| floor result | reading, fixed now |
+|---|---|
+| **4/4 INSIDE FLOOR** | **clean regardless.** Selection difference could only have pushed away from agreement, so agreement despite it is agreement. |
+| **anything below 4/4** | **ambiguous between churn and selection, and must be read as an UPPER BOUND on extraction churn** — never as a churn point estimate. |
+
+This bites directly on §E: the H5 extension conditional uses the floor to decide whether a
+multi-extractor protocol is "changes n and nothing else." Under a sub-4/4 floor, §E may not treat
+the measured disagreement as extraction variance without first separating the two — so the
+conditional fails CLOSED (extension not licensed) rather than resolving against an inflated number.
+
+Pre-registered now, before the floor is computed, because an asymmetry stated after the number
+exists is an asymmetry chosen to suit it.
+
+### J.1 The ruling is an artifact under the same discipline — and it needed a positive control
+
+§I was **correct in prose and wrong in machine-checkable form**: following it faithfully produced
+the outcome it prohibited (18 cells where it ruled 22). That is spec-vs-implementation drift where
+**the spec is the operator's ruling** — a category this project's discipline had not previously
+named, because rulings were treated as the thing implementations are checked *against*, not as
+artifacts that are themselves checkable.
+
+**The positive control turned out to be the cell count.** Reading the rule does not catch it; the
+rule reads correctly. Counting what the rule claims to produce does. Record alongside the git
+channel (§J) for the same reason: both are surfaces the design treated as neutral substrate — one
+the memory system, one the operator's own instruction — and neither was registered as something
+that could carry a defect.
+
+**A rule that yields its own negation when executed is a defect in the rule, not in the execution.**
+The check is cheap and general: after any accounting ruling, compute the quantity the ruling names
+and compare it to the number the ruling states.
+
+## L. The recurring shape, stated once for the writeup
+
+**A boolean acquires a third question and answers it by silently privileging one reading.** Twice
+in two turns: `role` carrying matrix-membership and floor-participation (§I), then
+`overlap_source` carrying directory-level and extraction-level participation (§I.2). Both times
+the collapse was invisible in the field's own terms — each boolean returned a well-formed answer to
+the question it *could* answer — and both times **the tell was an arithmetic check disagreeing
+with a stated intent**:
+
+| witness | stated | counted |
+|---|---|---|
+| cell accounting (§I.2) | 22 matrix units | **18** |
+| §4.5 denominator (step 1) | 74 audit directories | **73** after an empty placeholder was excluded |
+| de-blocking harness (§G.3) | baseline max-run 8 | **2** |
+
+**Counting the thing the rule claims to produce catches rule defects that reading the rule does
+not.** Each of these took seconds and each caught something a careful re-read had already passed.
+This belongs in §6.4 next to the controls-need-controls argument: it is the cheap general form of
+that recursion, and unlike the recursion it terminates.
+
+### L.1 The propagation instance, recorded because the flag survived by luck
+
+The corrected count (A's units recording alternatives: 8, not 6) **reached two downstream
+artifacts — `HANDOFF_EXTRACTOR_B.md` and this OQ's ISSUES entry — before anyone re-derived it**,
+and B's recording-threshold flag was built partly on the wrong figure. The flag survived correction
+because the divergence was large enough to hold at either magnitude (8/13 vs 13/13 as against
+6/13 vs 13/13). **That is luck, not design.** Had the true figure been 12, the flag would have been
+a finding about nothing and would have shipped.
+
+Provenance of the error: an instance counted the units *it* had extracted and reported the number
+as a property of the whole half, omitting two written by the prior instance before the handoff. It
+is the arc's own recurring shape once more — **a plausible number, sourced from a partial view,
+reaching consumers with no way to check it** — this time inside the apparatus rather than inside
+the corpus it audits.
+
+## M. §H.2 residue — k = 0 confirms the null AND leaves the mechanism untested
+
+**Operator, 2026-08-11: the null is confirmed and the row stays OPEN.** k = 0 across the full n=22
+primary sample (A 0 + B 0). The row licenses **"keyword-proxy false-positive rate ≤ 12.7% at 95%
+confidence"** and **nothing more** — never "the proxy is precise."
+
+**Declared residue, recorded explicitly rather than left as an absence:** because zero NO-UNIT
+proposals were made, **the operator-confirmation gate never fired**. §H.2's quarantine mechanism —
+extractor proposes, operator rules — is therefore **UNTESTED. It has no positive control and we do
+not know that it would work.** It has never been exercised end to end even once.
+
+This is the same structure as the escape check's own quarantine, and the same warning applies: an
+unfired gate is not a passed gate. If the extension to n=73 runs, the first NO-UNIT proposal will
+be the mechanism's first execution as well as its first use — and it will be carrying a decision
+at that moment. **Not a closed row; a declared absence with a named graduation step** (exercise the
+gate once on a constructed proposal, or accept that its first real firing is also its test).
+
+## N. Pooled `incident_location` — third declined guess, and the observation that survives it
+
+Pooled over all 26 units: **subject 17 / self_audit_subsection 5 / incidental 4.**
+
+**The skew reading is dead at the pooled level too, and is recorded as NOT HELD — the third
+directional guess this arc that the data declined** (after the C/D disagreement guess and the
+interim-boundary skew reading). Kept at the same volume as the confirmations.
+
+**But the framing question does not vanish with it.** Non-subject counts, both denominators stated
+because they differ and the difference is easy to slide over:
+
+| set | n | subject | self_audit_subsection | incidental | **non-subject** |
+|---|---|---|---|---|---|
+| all extraction units | 26 | 17 | 5 | 4 | **9 of 26** |
+| **matrix units** (the ones that enter cells) | 22 | 14 | 5 | 3 | **8 of 22** |
+
+*(Recorded as its own instance of §L: this row was first written as "9 of 22" — the numerator from
+the 26-unit set against the 22-unit denominator — and was caught by counting it before the
+pre-registration froze, not by re-reading it. The correct figure for the matrix set is 8 of 22.
+Same shape as everything else in §L, inside the sentence that was pre-registering the shape.)*
+
+Either way the incident is real and reported in roughly a third of directories without being what
+the directory is about. That is enough that §4.5's phrasing still matters: "73 incident-bearing directories" is defensible,
+"73 audits *about* incidents" is not, and the two are easy to conflate in a sentence.
+
+**Status: a declared OBSERVATION with its own row, not a finding.** It has no pre-registered
+threshold, was not designed for, and the distinction it turns on (subject vs reported-anywhere) is
+the §H.1 boundary rule's own — so it can be reported and cannot be scored.

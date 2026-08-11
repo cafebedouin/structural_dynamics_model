@@ -1,0 +1,64 @@
+{
+  "_role": "Control (a) — anchors, interleaved source-blind, 3 per direction. Recovery >= 2/3 unanimous per direction, else H3.",
+  "_h3_license_restated": "H3 passing licenses 'the coder is not broken', NEVER 'the coder classifies unfamiliar incidents reliably'. Anchors are each taxonomy's OWN published exemplars, which is an easier task than coding novel material. The writeup may not over-read calibration.",
+
+  "_extractor_role_boundary": "The extractor NEVER assigns a label. Every true_label below is READ OFF a frozen source and cited to it: direction-(i) anchors take their pattern from the published statement that names the exemplar inside that pattern's own section; direction-(ii) anchors take their class from Wu's two frozen records, and only where BOTH records agree. If a label required judgement, the candidate was dropped rather than decided.",
+
+  "_redaction_rule": "An anchor is a unit from taxonomy X interleaved into a coding run for taxonomy Y. It is redacted against BOTH lexicons: X's labels would give away the answer, Y's are banned for that direction anyway. Every anchor below is swept with oq277_lexicon under BOTH 'i' and 'ii' and must return 0 hits.",
+
+  "direction_i": {
+    "_what": "Direction (i) codes WU's incidents into P1-P6. Its anchors are OUR incidents whose pattern is published, so a known-correct P answer exists.",
+    "_selection_rule": "Candidates are the published exemplars named in the design. An exemplar is DISQUALIFIED if the incident it describes is the incident an extracted UNIT describes — contamination is a property of the units (what the coder reads), not of the source directories (which cross-cite exemplars constantly and which the coder never sees). Applied mechanically over all 26 units with incident-level probes; the probe fired on exactly one candidate and stayed silent on three, so it discriminates rather than merely returning silence.",
+    "_disqualified": [
+      {"exemplar": "system_gradient [] -> 0.0 fallback", "published_pattern": "P6", "reason": "COLLIDES with extracted unit 05_oq93_grid_viability, which describes this same incident. Dropping it was forced by the evidence, not chosen — it also happens to be the richest published exemplar, which is exactly why the rule had to be mechanical."}
+    ],
+    "anchors": [
+      {
+        "id": "anchor_i_1",
+        "true_label": "P1",
+        "label_source": "CLAUDE.md Build Discipline section 1 names this exemplar inside that section (line 479); mechanism text at docs/technical/build_discipline.md:61-66. Read off, not assigned.",
+        "symptom": "A derived artifact reported over a smaller working set than the system currently held, while presenting as current. Its own embedded provenance stamp named an older snapshot and a older code state, and nothing compared that stamp against the data it claimed to describe.",
+        "mechanism_as_described": "The artifact was produced by a step that ran once, outside the orchestrated sequence. It consumed its inputs correctly at the time and wrote a well-formed output, so it looked finished. When the orchestrator later refreshed the upstream data — the working set grew from 563 items to 772 — nothing re-ran the step, because it had never been wired into the sequence. The stale output stayed in place and went on being read as current. Having consumed its inputs once is exactly what made it look done; nothing in the artifact or in any consumer distinguished 'computed from the current data' from 'computed from data two hundred items ago'.",
+        "detection_path": "Comparing the artifact's own embedded provenance stamp against the provenance of the data it claimed to describe, rather than reading its contents for plausibility. The stamp named a smaller count and an older code state than the live one.",
+        "consequence": "Any analysis joining against the artifact silently mixed two snapshots. Repaired by wiring the step into the orchestrated sequence after the step that refreshes its input, and by adding an assertion that refuses the join when the two provenance stamps disagree."
+      },
+      {
+        "id": "anchor_i_2",
+        "true_label": "P2",
+        "label_source": "CLAUDE.md Build Discipline section 2 names this exemplar inside that section (line 486); instance text at docs/technical/build_discipline.md:424-426. Read off, not assigned.",
+        "symptom": "One script exists at two paths — a working location and a copy made for testing. Both parse, both run, and no queryable fact records which one the system actually uses.",
+        "mechanism_as_described": "A file was copied to a second location and subsequently edited there. Nothing marks either copy as the canonical one; the fact lives only in whichever invocation path happens to run. A change applied to the non-canonical copy writes its results into a file the live process never reads. The change itself succeeds: it is syntactically valid, it runs, its output is well-formed, and it is verified as written. Only the effect is absent.",
+        "detection_path": "Resolving which copy is canonical by evidence rather than by preference — which path the run commands invoke, which imports resolve, and which copy version control shows as recently touched — and then recording the verdict somewhere queryable instead of remembering it.",
+        "consequence": "A repair can be applied, reviewed, and confirmed as written while having no effect on the running system, presenting throughout as complete.",
+        "note_on_instance_status": "The published instance is stated as LATENT — the two copies exist and the wrong-copy write is described as what a targeting change WOULD do, not as something that fired. Recorded because an anchor's job is recovery of the published label, and the class membership is what is published; the coder is not told either way."
+      },
+      {
+        "id": "anchor_i_3",
+        "true_label": "P5",
+        "label_source": "CLAUDE.md Build Discipline section 5 names this exemplar inside that section (lines 505-512); mechanism text at docs/technical/build_discipline.md:660-671. Read off, not assigned.",
+        "symptom": "A certifying check passes for every item in the corpus, and reads as 'this condition was checked and found to hold'. It holds because the table it consults has no rows at all: no item anywhere carries the datum the check counts, so the count is zero for all of them — by the datum being missing, not by the condition being evaluated.",
+        "mechanism_as_described": "The gate asserts that a count equals zero. The count is a join across two relations, one of which is empty corpus-wide. An empty join yields zero, and zero satisfies the gate, so the gate passes universally. The passing value produced this way and a genuinely computed passing value are the same value, so no consumer can separate them. The same shape appears twice more in the immediate neighbourhood: a universally-quantified check over the same empty table is satisfied trivially, and an averaging helper returns a fabricated default for any quantity that has no rows.",
+        "detection_path": "Counting the rows of the source relation on the corpus — zero — rather than reading the gate. A gate over a possibly-empty table is a no-op exactly when the table is empty, and that is directly checkable without reasoning about the gate at all.",
+        "consequence": "404 certifications that read as 'no such party exists' in fact mean 'no such party was ever recorded'. Every consumer treating the certification as a finding about the world is reading a fact about the completeness of the data."
+      }
+    ]
+  },
+
+  "direction_ii": {
+    "_what": "Direction (ii) codes OUR incidents into Wu's A-E. Its anchors are WU's incidents whose class is stated unambiguously in his own frozen records, so a known-correct A-E answer exists.",
+    "_selection_rule": "MECHANICAL, fixed before the units were pulled: (1) eligible = the AGREEING stratum only (catalog row and dataset row concur), because the two records disagree on 45% of assignments and a class taken from a disagreeing row is not 'unambiguously stated'; (2) exclude Class A as VERDICT-INELIGIBLE under the carried ruling (n=1); (3) exclude the 3 units already committed to control (c) as direction-(i) redaction pairs — one unit serving two controls tangles their accounting and makes a flip in either unreadable, the same reason the pre-declared file excludes overlap directories; (4) take one anchor from each class having >= 2 eligible units after exclusions, which yields exactly three classes (C, D, E) with no further choice; (5) within a class, lowest manifestation count, then id ascending.",
+    "_eligible_after_exclusions": {"B": 1, "C": 2, "D": 4, "E": 2, "_note": "B has 1 eligible unit and is excluded by rule (4); A is excluded by rule (2). C/D/E fall out as the only classes with >= 2, so the class spread was forced by the rule rather than chosen for coverage."},
+    "anchors": [
+      {"id": "anchor_ii_1", "wu_unit_id": "governance_silent_error", "true_label": "C",
+       "label_source": "Wu frozen records, catalog_class C and dataset_class C, agreeing (packets/wu_units.json; sources md5-pinned in packets/wu_source/FETCH_MANIFEST.txt). Read off, not assigned.",
+       "text_source": "Verbatim from the already-redacted unit in packets/wu_units.json — not re-extracted, so the anchor and the direction-(i) packet cannot drift apart."},
+      {"id": "anchor_ii_2", "wu_unit_id": "dream_self_referential", "true_label": "D",
+       "label_source": "Wu frozen records, catalog_class D and dataset_class D, agreeing. Read off, not assigned.",
+       "text_source": "Verbatim from packets/wu_units.json.",
+       "tiebreak_note": "Tied with pa_alert_contamination on manifestation count (both unrecorded); taken by the pre-declared id-ascending tiebreak."},
+      {"id": "anchor_ii_3", "wu_unit_id": "heartbeat_md_pa_self_silencing", "true_label": "E",
+       "label_source": "Wu frozen records, catalog_class E and dataset_class E, agreeing. Read off, not assigned.",
+       "text_source": "Verbatim from packets/wu_units.json."}
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "_role": "Control (b) — decoys. Each is interleaved into BOTH directions and must code 'other'. Unanimous non-'other' on any decoy => H4, that direction VOID.",
+  "_what_they_test": "That 'other' is reachable. A coder that never returns 'other' makes the both-residue row unmeasurable in the direction that matters, and would do so while producing a full, plausible matrix. The decoys are the positive control for the residue category itself.",
+
+  "_construction_rule_frozen": {
+    "decoy_1": "A LOUD failure taken from a real documented incident: it throws immediately, is noticed on the spot, and is fixed the same day, so there is no interval during which a wrong state is presented as a right one. Built from an ALREADY-loud real incident rather than by inverting a silent one. The inversion route was considered and rejected: inverting an incident that is in the coded corpus would entangle the decoy with a unit, and inverting one that is not still requires the extractor to decide which properties constitute silence — a judgement the decoy exists to avoid making.",
+    "decoy_2": "A non-software institutional failure with no absence/presence structure at all: every party knows the true state at every moment, nothing reports success while failing, and no missing input is standing in for a present one. It is a failure, and it is not this kind of failure.",
+    "disjointness": "Neither decoy's incident is described by any extracted unit, and neither is an anchor. Checked over the coder-facing text of all 26 units, not over source directories."
+  },
+
+  "decoys": [
+    {
+      "id": "decoy_1_loud",
+      "want": "other",
+      "source_of_material": "A real documented interface change in this repository's own tooling; loudness properties are the incident's own, not added.",
+      "symptom": "Every call to an external interface began failing immediately with an explicit rejection naming the offending parameter. The failure rate was total and instant: the first call after the change failed, and so did every call after it. No result was produced, and nothing downstream received a value of any kind.",
+      "mechanism_as_described": "A newer version of the external service stopped accepting a sampling parameter the caller had always sent. The service rejects the request outright and returns an error naming the parameter it will not accept. Because the rejection happens before any work is done, there is no partial result, no default substituted for the rejected value, and no path by which a caller could mistake the outcome for success. The caller's own retry wrapper surfaced the error rather than swallowing it.",
+      "detection_path": "The first run after the change failed loudly and stopped. No investigation was required to discover that something was wrong; the error text named the parameter.",
+      "consequence": "Calls failed for the few hours between the change and the fix, which was to stop sending the parameter. Nothing was computed on a wrong basis in that window, because nothing was computed at all. No output produced during the window needed to be revisited."
+    },
+    {
+      "id": "decoy_2_institutional",
+      "want": "other",
+      "source_of_material": "Constructed. A generic institutional-process failure, deliberately carrying no software mechanism and no concealment structure.",
+      "symptom": "An organisation published its annual report two weeks after the date it had announced. The delay was known internally three weeks in advance, was communicated to the board when it became known, and was announced publicly before the original date passed.",
+      "mechanism_as_described": "The report cannot be published until an external reviewer signs off on one section. The reviewer's own schedule slipped because a prior engagement over-ran. Each party knew the true state of the schedule at every point: the reviewer told the organisation when the slip became likely, the organisation told its board the same week, and the published date moved once and then held. No step reported completion it had not reached, no missing input was treated as a present one, and at no time did any party hold a belief about the schedule that the evidence available to them contradicted.",
+      "detection_path": "Nothing had to be detected. The delay was reported by the party causing it, before it happened, through the channel that exists for reporting it.",
+      "consequence": "The report appeared two weeks late. Readers waited two weeks. No decision was taken on the basis of a document that did not yet exist, and no version of the report circulated in the interim."
+    }
+  ]
+}

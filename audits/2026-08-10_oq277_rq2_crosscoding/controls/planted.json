@@ -1,0 +1,45 @@
+{
+  "_role": "Two planted controls with opposite jobs. The planted LEAK proves the driver's leak-grep fires over real dumped payload files; the planted BROKEN UNIT proves the adjudicator's fidelity spot-check can catch a unit that contradicts its source.",
+
+  "planted_leak": {
+    "_want": "FLAGGED by the driver's leak-grep, in both directions.",
+    "_why_it_is_not_redundant_with_the_lexicon_selftest": "The frozen selftest proves the MATCHER fires on planted strings. It says nothing about the DRIVER's grep running over the actual dumped-payload path — a capture bug that writes zero payloads yields a clean grep and a green H2 over empty input. These fixtures are payload-shaped and are written into the payload dump alongside real payloads, so the grep is exercised on the same path, from the same directory listing, as the payloads it must police. Assert the capture COUNT first, then grep; a clean grep over nothing is the exact shape this experiment studies.",
+    "_leak_exempt": true,
+    "_quarantined_from_matrices": true,
+
+    "direction_i_payload_fixture": {
+      "must_be_flagged_because": "carries Wu's taxonomy vocabulary, which a direction-(i) payload may never contain",
+      "unit_text": "The check reported success while the records underneath it were erroring rather than passing — a textbook Class B positional-parse failure, and a fail-plausible one at that. The concealer here was the status file; the amplifier was the retry loop. Compare the gray failure described under meta-rule MR-12 and INV-ONTOLOGY-001, logged in the openclaw repo."
+    },
+
+    "direction_ii_payload_fixture": {
+      "must_be_flagged_because": "carries the P-lexicon INCLUDING the three R5 framing terms, which must never reach a coder — R5's directional expectation is extractor-facing and scored by a rule fixed in advance, so a leaked hint has to be CAUGHT rather than assumed absent",
+      "unit_text": "This is a P6 instance and a textbook success-shaped absorption: the dangling wire above it is Pattern 1, and P6 is parasitic on the others because it is cross-cutting rather than sitting at one level. Our six sort by system layer, which is why the layer column matters here. Tracked as OQ-97."
+    },
+
+    "_expected_hits": "Non-zero in BOTH fixtures. The direction-(ii) fixture must in particular hit `parasitic`, `cross-cutting`, and the layer COLLOCATIONS (`sorts by system layer`, `layer column`) while leaving the bare word `layer` alone — the scoping frozen in the lexicon. Verified in verify_planted.txt."
+  },
+
+  "planted_broken_unit": {
+    "_want": "FLAGGED by the adjudicator's fidelity spot-check (H6: missed => HALT extraction, re-extract).",
+    "_construction": "A meaning-INVERTED unit: well-formed, internally coherent, in the correct format, carrying the correct source_dir and a plausible files_read — and asserting the OPPOSITE of what its source document says. It is inverted on the load-bearing facts (what the gate consulted, whether it discriminated, what the numbers showed), not on incidental detail, so that only a comparison against the source can catch it. Reading it for plausibility will not.",
+    "_why_this_source": "Its real unit rests on a specific arithmetic relationship — a near-unique key making an inequality gate vacuous — which is exactly the kind of claim a fidelity check can verify or refute against the source in one step. An inversion that could only be caught by judgement would test the adjudicator's opinion instead of its procedure.",
+    "_quarantined_from_matrices": true,
+    "_must_not_be_committed_into_our_units": "It lives here, in controls/, and is handed to the adjudicator interleaved with real units at spot-check time. It is never a member of packets/our_units/ and can never enter a cell.",
+
+    "unit": {
+      "source_dir": "2026-06-25_oq182_trajectory_revive",
+      "extractor": "PLANTED",
+      "role": "primary",
+      "overlap_source": false,
+      "matrix_unit": false,
+      "files_read": ["c2_domain_finding.md"],
+      "symptom": "A finder reported 448 pairs of items meeting a criterion requiring the two members to come from different subject areas. An audit of the finder confirmed the criterion was doing real work: the subject area was read from the recorded field authored for each item, and the gate rejected the large majority of candidate pairs before they reached the output.",
+      "mechanism_as_described": "The gate compares the two items' recorded subject areas and requires them to differ. The predicate supplying the value reads the authored field directly, and that field is populated for every item in the working corpus. Because the recorded subject areas are coarse — a small number of broad values shared across many items — the inequality test is genuinely selective: most candidate pairs share a value and are discarded. The 448 surviving pairs are the minority that cross a real subject boundary.",
+      "detection_path": "Counting the distinct values the predicate returns over the working corpus and comparing that count against the item count. The ratio was small, which confirms the key is coarse enough for an inequality gate to discriminate.",
+      "consequence": "The pair product was confirmed as a real selection and shipped as a structural result. The audit's remaining question was about the OTHER product of the same subsystem, not this one."
+    },
+
+    "_ground_truth_the_adjudicator_must_recover": "Every load-bearing claim above is inverted. The source says the predicate does NOT read the authored field (it parses the item identifier up to the first separator); the derived key is NEAR-UNIQUE, not coarse (86 distinct values over 104 items); the gate therefore rejects almost NOTHING rather than the large majority; and the pair product was ruled OPEN with its value deferred, not confirmed and shipped. The inverted unit is also self-consistent, which is the point — it can only be refuted against c2_domain_finding.md."
+  }
+}
