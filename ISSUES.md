@@ -10673,7 +10673,10 @@ names where. Either way §4.3 acquires the first coded corpus behind it (OQ-280)
 PREREG FREEZE, not at plan approval — the md5 of `PREREGISTRATION.md` must sit in
 `audit_log.md` physically ABOVE the first result line before any coding call is made. The
 staged extension to all 73 is gated on H5 passing and is NOT authorized in advance.
-**START AT `audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF.md`** — it carries the done/not-done
+**START AT `audits/2026-08-10_oq277_rq2_crosscoding/HANDOFF_EXTRACTOR_A2.md`** (current entry
+point as of 2026-08-11; the original `HANDOFF.md` carries a superseded-banner and its "Your next
+step" section is stale — steps 1 and 2 are DONE and must not be re-run). The original still
+carries the done/not-done
 table, the carried rulings, and the exact next step. Do not re-derive from this entry alone.
 
 **Phase 1 status, 2026-08-10 (step 0 + step 1 + direction-(i) source COMPLETE; direction (ii)

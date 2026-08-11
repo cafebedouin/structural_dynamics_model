@@ -1,5 +1,25 @@
 # OQ-277 HANDOFF — read this, then `RECON.md`, then start at "Your next step"
 
+> ## ⚠ PARTIALLY SUPERSEDED (2026-08-11) — DO NOT START FROM "Your next step" BELOW
+>
+> **Current entry point: `HANDOFF_EXTRACTOR_A2.md`.** This file remains authoritative for the
+> carried rulings, the four pre-spend catches, the frame-command findings, and the writeup
+> obligations. Its **"Your next step"** section is STALE:
+>
+> | step | status |
+> |---|---|
+> | 1. Rebuild direction (i) at n=22 | **DONE** — `packets/wu_units.json`, commit `4f5a3d45` |
+> | 2. Redact both directions | **DONE** — lexicons frozen in `python/audits/oq277_lexicon.py`, coder packet at `packets/coder_direction_i.json`, commit `787fe389` |
+> | 3. Direction (ii) units | **IN PROGRESS** — 7 of extractor A's 13 landed; see `HANDOFF_EXTRACTOR_A2.md` |
+> | 4. Controls / driver / prereg | NOT DONE — redaction pairs now PRE-DECLARED in `controls/redaction_pairs_predeclared.json` |
+>
+> Also added since this file was written and BINDING on the work:
+> `verdict_grammar_amendment.md` (verdict grammar amended for multi-membership; extension made
+> conditional on overlap-unit churn; NO-UNIT boundary rule and the census-precision row).
+>
+> **Do not re-run step 1 or step 2.** Both produced committed artifacts; redoing them would
+> overwrite a frozen packet and a seeded shuffle.
+
 **Written:** 2026-08-10, by the instance that executed step 0, step 1, and Phase 1 direction (i).
 **Why a handoff:** direction-(ii) extraction needs ~184 KB of audit prose read *carefully*.
 Skimming to fit a full context window would produce thin units — and thin units bias toward
