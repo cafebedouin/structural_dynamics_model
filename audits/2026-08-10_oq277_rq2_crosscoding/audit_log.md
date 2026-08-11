@@ -325,4 +325,70 @@ Everything above this line is design. Everything below it is result.
 
 <!--OQ277-FIRST-CODING-RESULT-->
 
-*(No coding results yet. Nothing may be appended below this marker until spend-go is granted.)*
+## 2026-08-11 — LIVE RUN EXECUTED. 219 calls spent. **THE ANSWERS WERE NOT PERSISTED.**
+
+Spend-go granted by the operator (scope: 219 calls, Sonnet 5, k=3, directions (i), (ii), (iii′);
+no extension, no escape coding, no re-runs). `--live` ran once, after the pre-run control repair
+at `bdd93fe2`. The gate order held and every gate passed.
+
+**The calls were made. The results are gone.**
+
+`oq277_crosscoding_driver.py` has **no code path that writes `responses/`** — verified by direct
+grep over every write in the file: the only writes are the payload dump and the selftest's own
+fixtures. `run()` builds `results`, computes `resolved`, prints aggregate counts, and returns. The
+per-item answers are local variables and were discarded when the process exited.
+
+**`--dry-run` asserts a distinction that does not exist.** Its help text reads *"do not write
+responses/"* and its console line reads *"--dry-run: responses NOT written. responses/ left
+empty."* Both imply the non-dry-run path writes them. Neither path does. The flag controls a print
+statement.
+
+### What the spend bought, in full
+
+```
+k=3 bookkeeping: 73 items resolved, 69 unanimous, 4 UNSTABLE
+  direction_i    22 cells (matrix_unit & unanimous) ·  8 quarantined ·  0 UNSTABLE
+  direction_ii   19 cells (matrix_unit & unanimous) · 14 quarantined ·  4 UNSTABLE
+  iii_prime       0 cells (matrix_unit & unanimous) ·  7 quarantined ·  0 UNSTABLE
+```
+
+That is the entire retained product of 219 calls. **The console output was complete, not
+truncated** — the run's first line was visible inside the captured tail, so nothing was lost to the
+pipe. There is no per-item label anywhere: not on disk, not in the transcript.
+
+### What is therefore NOT recoverable
+
+- **Every matrix cell.** 41 unanimous matrix items resolved to *some* label; which label each got
+  is gone. Neither matrix can be filled.
+- **The H5 churn floor.** §E defines it on the 4 overlap **pairs** in direction (ii)
+  (`2026-06-11_oq44_policy_close` = ii-01/ii-02; `2026-07-11_oq186_oq188_readsite` = ii-11/ii-20;
+  `2026-06-27_oq124_oq149_committer_convention_control` = ii-19/ii-24; `2025-05-15_recon_2` =
+  ii-21/ii-23), and it needs each member's resolved label. **The floor cannot be computed.** The
+  global `4 UNSTABLE` is not the floor and must not be substituted for it — §E's floor is
+  agree/FLIP/uninformative over pairs, and the four unstable items have not even been identified.
+- **The (iii′) row**, the fork-residue row, and every downstream verdict.
+
+### The gate architecture had a hole exactly where it was not looking
+
+Gate 1 is *"COUNT FIRST — captured payloads vs expected calls."* It counts **payloads** — inputs.
+Nothing anywhere counts **responses**. The driver verifies that every call has an input on disk and
+never that any call left an output on disk. Every gate in the run is oriented toward not leaking
+and not miscounting inputs; **there is no gate on retaining the product**, and the run reported
+GREEN on all of them while producing nothing.
+
+**This is the experiment's own subject matter, executed on the experiment.** A success-shaped
+run: every gate green, the expected totals printed, the failure invisible at every check because
+no check looked at the output side.
+
+### The pre-flight asymmetry, which is mine
+
+Before spending, this instance exhaustively controlled the **refusal** path — five constructed bad
+states plus the converse, because a red selftest was not going to be spent through. It never
+checked the **capture** path. The gate that stops a spend was verified to the strongest available
+standard; the gate that keeps the spend's product was never asked to exist. *Both* were untested by
+construction before today; only one of them got tested, and the choice of which was driven by which
+one had a red light on it.
+
+**Not retried.** A second run is a second spend and is the operator's ruling, not this instance's —
+and the tool must be repaired and its capture path controlled *before* any such run is proposed.
+Recorded here, below the sentinel, because this is a result: the run happened.
