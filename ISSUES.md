@@ -10530,7 +10530,12 @@ operator ruling; it does not rule.
 
 **Status:** open
 **Priority:** 2
-**Deps:** blocked_on_human oq277-spend-go-at-prereg-freeze, blocked_on_human oq277-omega-c-mapping-rulings-at-close, bundled_with OQ-278
+**Deps:** blocked_on_human oq277-spend-go-at-new-stamp, blocked_on_human oq277-omega-c-mapping-rulings-at-close, bundled_with OQ-278
+
+**Blocker restated 2026-08-11 (the old `oq277-spend-go-at-prereg-freeze` is DISCHARGED and
+CONSUMED — it was given, spent, and produced nothing):** the next spend-go is at a NEW stamp, and
+is not requestable until `SPEC_next_preregistration.md` §3 is discharged. See the 2026-08-11
+blocks at the end of this entry.
 **Origin:** RQ2 of `docs/amnesiac_institution/amnesiac_institution_v0.3.md` §13
 (taxonomy generality) gained an external comparison set: Wu, arXiv:2606.14589 — a
 methodological near-twin (one production LLM runtime, 22 incidents, five-class
@@ -11004,6 +11009,63 @@ A by the dataset while that same row's own `paper_class_ref` cites §4.5 E and o
 disagrees with itself, and the catalog sides with the row's citation over its label. Detail:
 `packets/wu_source/observation_secondary_class_predicts_disagreement.md`.
 
+**THE SPEND HAPPENED AND PRODUCED NOTHING (2026-08-11, commit `edc90409`) — read this before
+anything above, which is all pre-spend.** Spend-go was given at the freeze (`a7327e33`, md5
+`4118f64e`, 73 items / 219 calls); the live run **made all 219 calls and persisted zero answers.**
+The driver had no code path that wrote responses at all. Every gate in the run was an **input**
+gate — count captured payloads, count fixtures, sweep for leaks — all green, expected totals
+printed, nothing on disk. The pre-flight asymmetry is the mechanism: the *refusal* path got the
+arc's strongest control (5 constructed bad states + converse) because it had a red light; the
+*capture* path got nothing because a writer that does not exist emits no signal. Discipline minted
+from it: `CLAUDE.md` / `build_discipline.md` → *Gate the output, not only the input* (`cb1b33e5`).
+**Not retried — a second run is a second spend and is the operator's ruling.**
+
+**Repairs landed, with their controls (2026-08-11).** Capture path + output gate (`cb1b33e5`):
+raw text persisted per call before parsing, write-then-verify per unit, gate 4 asserting count AND
+non-emptiness AND parses-to-expected-vocabulary. Capture-dir invariant relaxed from EMPTINESS to
+run-id PROVENANCE (`4e0d8725`). Two dead controls removed (`a3deae1d`) — four green selftest lines
+survived `run()` no longer calling the functions they tested; discipline minted: *A control must
+witness that it is CALLED* (`46ba44ce`), and its detector `orphaned_controls()` **named itself on
+its first run**. Freeze checker gained a POST-FREEZE mode (`508222ab`) — pre-fix, expected source
+drift and actual tampering both printed RED. Driver selftest now **27 controls, 0 failures**.
+
+**OPERATOR RULING: NEW STAMP (2026-08-11).** The next run does **not** go under `4118f64e`.
+Evidence (`59e5bab5`), three facts: (1) the driver appears **0 times** in the freeze's PINNED
+manifest — the freeze made no claim about the instrument, so its GREEN carried no information
+about whether the run could produce data; (2) **the analysis half does not exist** — no H5 scorer,
+no overlap-pair identification, no matrix construction, no redaction-floor scoring, no (iii′) row,
+in code *or* in the frozen design; even a perfect capture run would have produced 219 answers
+nothing in the repo can score (Pattern 1, one stage downstream, hidden by the capture failure);
+(3) two pinned sources have already drifted. **`4118f64e` is retained, not superseded** — the
+record of a design that could not produce its own result; the next stamp must cite it by md5.
+`oq277_build_prereg.py --write` now refuses while the shipped document matches a recorded stamp,
+and the frozen document must never be rebuilt from HEAD sources.
+
+**GATING ARTIFACT — `audits/2026-08-10_oq277_rq2_crosscoding/SPEC_next_preregistration.md`
+(`d4946b90`). No spend is requested by it; the next request comes when its §3 is discharged.**
+What §3 requires, and a cold reader should not re-derive: the five §2.3 artifacts built, pinned
+and two-sidedly witnessed **before** the stamp (with the four fixture outcomes pre-registered
+there); §2.2's two rows get negative controls or ship declared; **every detector graded against its
+historical commit pair where one exists** (available: `cb1b33e5`/`4e0d8725`, `cb1b33e5~1`,
+`3e16a1d8~1`); the manifest rebuilt under the causal pin criterion (**every executable in the path
+plus its fixtures** — the old manifest pinned sixteen artifacts, all of them texts, because the
+selection rule was *genre* and nobody wrote it down; that unstated rule is what cost 219 calls);
+and **live transport's five non-nominal conditions witnessed against a fault-injecting transport
+fixture before the spend request** (operator weighting: the heaviest row — transport has been
+exercised exactly once, by the run that failed, which is an existence proof at n=1, not a control).
+§1.1 carries the trap: when the scorer is built it becomes an executable and the genre instinct
+will treat it as plumbing — the pin criterion must reach the analysis stages explicitly.
+
+**For paper §6.4 (`f0e91cc0`, corrected by `19bc3418`):** the recursion is observed, not
+hypothetical — six instances in this arc where a repair committed the same defect it was
+repairing, **not one caught by a gate**; every one caught by comparing a claimed number against
+the artifact it described. Instance six is `f0e91cc0`'s own commit message, which claimed
+"verified GREEN" when the check it ran printed RED. The compact statement is the self-naming
+detector; the transferable part is that what terminates the recursion is **writing down the
+exemption you just took** — documentation, not verification. Read below the sentinel in
+`audit_log.md`, not `verdict_grammar_amendment.md`, which is incorporated verbatim into the
+frozen document and must not be edited now that results exist.
+
 ---
 
 ## OQ-278 — The pattern taxonomy is INDEX-COLLIDED: CLAUDE.md's six vs build_discipline.md's six — and the collision is in the INCIDENT RECORD, not only in the two specifications (a worked P2 instance on the discipline's own substrate)
@@ -11014,7 +11076,7 @@ phenomenon on different axes). The *residue measurement* that feeds the ruling i
 
 **Status:** open
 **Priority:** 3
-**Deps:** bundled_with OQ-277, blocked_on_human oq278-fork-resolution-ruling
+**Deps:** bundled_with OQ-277, blocked_on_human oq278-fork-resolution-ruling, blocked_on_human oq278-p3-prediscipline-scope-ruling
 **Origin:** Surfaced 2026-08-10 while designing OQ-277, when the question "which set do
 we code against?" forced a comparison nobody had run. **Fired: live at plan stage** — the
 fork was found by the experiment's design, not by the experiment.
@@ -11196,6 +11258,34 @@ orphaned mechanisms are load-bearing; it must not be read as adjudicating the in
 **v0.4 queue note (§11 amendment, independent of the experiment):** §2.3's original
 classification, whatever informal form it took, may straddle the fork boundary and be
 heterogeneous across an unrecorded line. Add to Limitations.
+
+**P3 FAILURE-SHAPE SWEEP EXECUTED (2026-08-11, `d0c3c5fb`) — the search the disposition ruling
+was waiting on. `audits/2026-08-10_oq277_rq2_crosscoding/P3_FAILURE_SHAPE_SWEEP.md`; Fired: live.**
+Branches were pre-registered by the operator BEFORE the sweep ran (witnessed failure instance →
+*specify*; only prevention records → *demote*; nothing found and search shown able to find →
+*demote with residue declared*; **retire off the table in all branches**). The prior search was a
+vocabulary search; this one searched the failure SHAPE by two independent probes over git history,
+with the discipline boundary at `7af6b945` (2026-05-29, the commit that first wrote the words).
+**Probe A** — 19 destructive commits, 5 post-discipline: four prevention records, one non-deletion
+(`29889e50`, a move the rename detector missed). **Probe B** — deletions later restored: 135 files
+collapsing to **3 episodes, all pre-discipline**; post-discipline delete→restore episodes **ZERO**.
+Controls are two-sided and mostly naturally-arising (Probe A declines on genuine proof ×2 and fires
+on a witness-stripped variant; Probe B returns 3 real episodes and correctly excludes the move) —
+so *"I didn't find it"* is a fact about the world here, for the post-discipline window.
+
+**Result: branch 2 on the post-discipline population — but the ruling is NOT discharged, and the
+gap is a scope question that is the operator's seat.** The pre-registered branches do not say
+whether **pre-discipline** instances count. If they do not → *demote* follows outright. If they do
+→ the 133-file Feb 2026 episode (`2726506e` → `828ad085`; 166 deleted, 133 restored to identical
+paths, the undone-mistake signature) is a witnessed instance of the shape and *specify* is live —
+with the complication that P3's authoring cites no incident. The sweep deliberately declines to
+resolve this, since deciding it there would be an instance answering the question it was sent to
+gather evidence for. **One datum that bears on the ruling:** P3's text, at authoring and today,
+cites **no dated instance** — alone among the six; if the Feb episode had motivated it, the
+citation was available and unused. One close call recorded rather than rounded: `ef92a61d` carries
+no witness vocabulary, justifies its single difference (which P3's text permits) but pastes no
+old-vs-new output (which P3's own "the diff is proof" clause asks for) — classified prevention
+record in the weaker permitted form, not a failure.
 
 ---
 

@@ -759,7 +759,7 @@ lets the operator exercise the engine *while building it* (running it surfaces m
 `prolog/testsets_haiku/` + `prolog/testsets_flash/` are the reconciled multi-reading **twins**, kept
 as the comparison baseline; `prolog/testsets_kimi/` + `prolog/testsets_sonnet/` are two additional
 model-named legs added later (postdate the 2026-07-23 OQ-60 census). **File counts (disk-verified
-2026-07-24, cite the manifest not these for any run): testsets 199, testsets_haiku 960,
+2026-08-12, cite the manifest not these for any run): testsets 259, testsets_haiku 960,
 testsets_flash 960, testsets_kimi 1005, testsets_sonnet 1001.** All five are live. **`testsets/`'s
 singleton sparsity is INTENDED, not a defect or a half-finished
 rebuild** — do not "complete," flatten, or rebuild it on sight; its high OQ-58 dangling rate is the

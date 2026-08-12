@@ -45,6 +45,67 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-11 — [landed] OQ-277 live run SPENT 219 CALLS AND PERSISTED NOTHING; capture path built, two orphaned controls removed, NEW-STAMP ruling; OQ-278 P3 sweep executed; paper v0.4 assembled
+**Files:** `ISSUES.md`, `CLAUDE.md`, `docs/technical/build_discipline.md`, `python/audits/oq277_crosscoding_driver.py`, `python/audits/oq277_build_prereg.py`, `scripts/gate.sh`, `audits/2026-08-10_oq277_rq2_crosscoding/`, `docs/amnesiac_institution/amnesiac_institution_v0.4.md`, `docs/amnesiac_institution/V04_CONSOLIDATION_MANIFEST.md`
+**Tier:** landed
+
+**The event.** Spend-go was given at the frozen prereg (`a7327e33`, md5 `4118f64e`, 73 items /
+219 calls). The live run (`edc90409`) made **all 219 calls and wrote zero answers** — the driver
+had no response-writing code path at all. All three gates it passed were **input** gates (count
+captured payloads, count fixtures, leak-sweep); the run printed its expected totals and reported
+green throughout. Two true sentences described a distinction the code never implemented (the
+`--dry-run` help said "do not write responses/"; the console said "responses/ left empty"), so a
+reader checking for persistence found evidence the question had been considered and no persistence.
+
+**Repairs, all witnessed.** `cb1b33e5` capture path + output gate (raw text persisted per call
+before parsing, write-then-verify per unit, gate 4 asserts count AND non-emptiness AND
+parses-to-vocabulary); `4e0d8725` capture-dir invariant relaxed from emptiness to run-id
+provenance; `a3deae1d` removed two controls whose functions `run()` no longer called — **four
+green selftest lines wired to nothing**; `508222ab` post-freeze mode for the prereg checker (before
+it, expected source drift and actual tampering both printed RED); `c2304218` gate row detecting
+that the frozen prereg is unaltered (expires at OQ-277's close). Driver selftest: **27 controls,
+0 failures**. Gate GREEN including `oq277 freeze` (stamp verified, selftest 7/7).
+
+**Three disciplines minted into `CLAUDE.md` + `build_discipline.md` from this arc** — *Gate the
+output, not only the input* (`cb1b33e5`, priced at 219 calls); *A control must witness that it is
+CALLED* (`46ba44ce`); *When a defect is found, its before-commit is a free negative control*
+(`ea936d2c`). Also `03fda56e` *The receiver's license to refuse* and `f95fc857` *A positive control
+demonstrates DISCRIMINATION, not detection*, both with their own entries below.
+
+**Operator ruling — NEW STAMP (`d4946b90`).** Evidence in `59e5bab5`: the driver appears 0 times in
+the freeze's PINNED manifest (the freeze never reached the instrument, so its GREEN carried no
+information about whether the run could produce data); the analysis half — H5 scorer, overlap-pair
+identification, matrix construction, redaction-floor scoring, (iii′) row — **does not exist in code
+or in the frozen design**, so even a perfect capture run would have produced 219 unscoreable
+answers; two pinned sources have drifted. `4118f64e` is **retained, not superseded**, as the record
+of a design that could not produce its own result, and the next stamp must cite it by md5. The
+gating artifact is `SPEC_next_preregistration.md`; **no spend is requested until its §3 is
+discharged.** Its §1 names the mechanism: the old manifest pinned sixteen artifacts, every one a
+text, because the unstated selection rule was **genre** — pin what reads like a specification, not
+what runs.
+
+**Correction, same day (`19bc3418`):** commit `f0e91cc0`'s message claimed "verified GREEN" when
+the check it ran printed RED. The reasoning was sound, the check was run, and the *result* was not
+read before the claim was committed — in the very commit recording five prior instances of that
+shape. Sixth instance; caught the same way as the other five, by comparing a claimed state against
+the artifact.
+
+**OQ-278 (`d0c3c5fb`).** P3 failure-shape sweep, branches pre-registered before the run: 19
+destructive commits (5 post-discipline, 4 prevention records, 1 non-deletion), 3 delete→restore
+episodes **all pre-discipline**, zero post-discipline. Lands on branch 2 for the post-discipline
+population, but the disposition ruling stays **open** — the branches never said whether
+pre-discipline instances count, which is decision-relevant (the 133-file Feb episode is a witnessed
+instance of the shape if they do). Tracked as `blocked_on_human oq278-p3-prediscipline-scope-ruling`.
+
+**Paper.** `docs/amnesiac_institution/amnesiac_institution_v0.4.md` assembled (`acdd1b73`) off a
+consolidation manifest (`eeab8a33` 28 items / 8 producers, second-reader pass `ede866c7` → 35 items
+after the frame was found to exclude a producer). §6.4 takes the recursion from the **results**
+section of `audit_log.md`, never from `verdict_grammar_amendment.md` — that file is incorporated
+verbatim into the frozen prereg and editing it now that results exist would invalidate the freeze
+retrospectively.
+
+---
+
 ## 2026-08-11 — [tripwire] A positive control demonstrates DISCRIMINATION, not detection — the grades of decline, the record-not-per-run rule, and the role-reuse silent failure
 **Files:** `CLAUDE.md`, `docs/technical/build_discipline.md`, `docs/design/design_discipline.md`
 **Tier:** tripwire
