@@ -14,6 +14,14 @@ amnesia, with nobody posing. Claim types are declared in Appendix A and govern
 how each claim may be discharged. Historical cases in §7–§8 were verified against public sources on
 2026-08-12; the companion paper is the source of the undated institutional examples.*
 
+> **CANONICITY MARKER (added 2026-08-12; provisional pending an authorial ruling, ISSUES OQ-287).**
+> The §2 derivation this paper develops **also** still sits in
+> `docs/amnesiac_institution/amnesiac_institution_v0_6.md` §2, whose §13 names it as *that* paper's
+> contribution. Two live documents, one contribution, no queryable fact of canonicity — Build
+> Discipline Pattern 2 on the paper substrate. **Working disposition pending the ruling:** this
+> paper is canonical for the **derivation**; v0.6 is canonical for the **institution** (case study,
+> differential amnesia, memory economy, organizational form). Cite accordingly until OQ-287 closes.
+
 ---
 
 ## Preface: what kind of claims these are

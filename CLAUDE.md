@@ -142,8 +142,10 @@ test-local predicate swaps or retract/re-assert probes, writing goal-TEMPLATE pr
 (`Key-m:g(...)` / `V^m:g(...)` parse wrong — `:` is priority 600 — and the probe passes
 VACUOUSLY, §13), running an in-session corpus sweep or
 overlay counterfactual (validated signature-sweep recipe; Boltzmann memo caches read stale unless
-cleared), or interpreting a pipeline_output.json diff. `build_discipline.md` documents the six
-defect patterns (summarized in Build Discipline below) with diagnostics; it also carries the
+cleared), or interpreting a pipeline_output.json diff. `build_discipline.md` documents the
+defect patterns (summarized in Build Discipline below — **five live, index 3 vacated 2026-08-11
+and never reused**; the two documents' numbering still collides at index 4, ISSUES OQ-278) with
+diagnostics; it also carries the
 **citation-time / staleness-ladder** rule (a witnessed fact has a shelf life: reusing it as a
 premise re-asserts it, so rung it — pointer / as-of stamp / gate — by mutable-state ×
 cost-of-acting-on-stale) and the **triage list** of premises that may not be cited as settled
@@ -489,11 +491,27 @@ a CI check), not a memory.** Prefer a branch over a test copy. Resolve found for
 (which path run-commands invoke, which imports resolve, git recency) — not preference — and
 record the verdict in KNOWN_STATE.md.
 
-**3. Destructive-replace without proof (the faith merge).** Before deleting, retiring, or
-overwriting any script, sweep, data file, or generator that something relies on: run old and new,
-paste both outputs, diff them, show identity or justify every difference in the same change.
-"Structurally equivalent" is a code-read, not proof — the diff is proof. Consolidating N into one
-is N separate old-vs-new diffs, each before its standalone is retired.
+**3. — VACATED 2026-08-11 (operator ruling). Index deliberately left EMPTY; do not reuse or
+renumber.** *Destructive-replace without proof* was demoted from a defect pattern to a **witness
+rule** (below) on four converging lines: no mechanism text in `build_discipline.md`; no dated
+exemplar in any version (alone among the six); a shared index (the number 3 named a *different*
+mechanism in the detail doc); and **no instance on a search built to find one** — the failure-shape
+sweep returned five post-discipline destructive commits, four prevention records, one non-deletion,
+and **zero** deletions that had to be undone, with the sweep's ability to find established
+independently (three real delete→restore episodes before the rule existed; fires when witness
+language is stripped). A loud failure is not a member of a taxonomy of absences-that-present-as-
+presences: **a deletion that gets undone announced itself — the restoration is the notice.** The
+index is not reused because every dated audit citing P4/P5/P6 would become ambiguous against its own
+history: *a visible gap is a checked fact; a silent renumber is a fork* (Pattern 2 applied to the
+numbering). Provenance: `amnesiac_institution_v0_6.md` §5.2, `d0c3c5fb`, ISSUES OQ-278.
+
+> **The rule itself survives intact, as a WITNESS RULE — prove before you replace.** Before
+> deleting, retiring, or overwriting any script, sweep, data file, or generator that something
+> relies on: run old and new, paste both outputs, diff them, show identity or justify every
+> difference in the same change. "Structurally equivalent" is a code-read, not proof — the diff is
+> proof. Consolidating N into one is N separate old-vs-new diffs, each before its standalone is
+> retired. It is a *discipline* (a thing one does), not a *defect shape* (a way systems fail
+> silently) — which is the whole content of the demotion.
 
 **4. Recap-as-witness substitution.** A turn-end recap or any "done / verified / working /
 complete" in prose is a CLAIM; only the pasted output (diff, run, validation result, count)

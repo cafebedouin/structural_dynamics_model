@@ -45,6 +45,56 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-12 — [tripwire] P3 VACATED from the defect taxonomy (index 3 empty, never reused) — the ruling lived only in the paper for a day while CLAUDE.md published the old six; OQ-286/287/288 minted from the v0.6 review
+**Files:** `CLAUDE.md`, `ISSUES.md`, `docs/amnesiac_institution/amnesiac_institution_v0_6.md`, `docs/concealment/concealment_without_a_concealer_v0_4.md`, `docs/technical/build_discipline.md`
+**Tier:** tripwire
+
+**THE TRIPWIRE — the taxonomy is FIVE patterns and index 3 is deliberately EMPTY.**
+*Destructive-replace without proof* was demoted by operator ruling **2026-08-11** from a defect
+pattern to a **witness rule** (*prove before you replace*, which survives intact — it is a
+discipline, a thing one does, not a way systems fail silently). Four converging lines: no mechanism
+text in `build_discipline.md`; no dated exemplar in any version, alone among the six; a shared
+index; and **zero instances on a search built to find one** (`d0c3c5fb`). **Do not reuse or
+renumber index 3** — every dated audit citing P4/P5/P6 would become ambiguous against its own
+history; a visible gap is a checked fact, a silent renumber is a fork. `CLAUDE.md:492` now carries
+the vacated marker; the §145 pointer reads "five live, index 3 vacated."
+
+**The ruling also settles the scope question the OQ-278 sweep left open, on better grounds.**
+Pre-discipline delete→restore episodes are excluded **independently of date**: *a deletion that gets
+undone announced itself — the restoration IS the notice*, so a loud failure is not a member of a
+taxonomy of absences-that-present-as-presences. Scoping to the post-discipline window would have
+been circular; this is not. Per v0.6 §2.9 the account's exclusion and the ruling were reached
+independently, before the account was written.
+
+**WHY THIS IS A TRIPWIRE AND NOT JUST HISTORY.** The ruling lived **only in
+`amnesiac_institution_v0_6.md` §5.2** for a day. `CLAUDE.md` — the file every instance loads — went
+on publishing six patterns with P3 as a defect shape. Two documents, one taxonomy, no queryable fact
+of canonicity, both internally coherent: **Pattern 2, committed by the ruling that resolved a
+Pattern-2 instance.** The standing lesson: **a ruling recorded in a paper is not recorded.** Papers,
+`ISSUES.md`, and the always-loaded rules are separate read sites; a ruling has to land at each, and
+the always-loaded one is the one that changes behavior.
+
+**Left un-acted, needs one line from the operator.** Vacating CLAUDE.md's index 3 leaves
+`build_discipline.md`'s Pattern 3 (*Bound-probe bypasses clause-order*, a different mechanism with
+worked text) as the sole claimant at that index — so "Pattern 3" arguably now resolves
+unambiguously to bound-probe. **That is an inference from the ruling, not part of it**, and it was
+not acted on. Index 4 remains genuinely collided (two claimants). Both in OQ-278, now `partial`.
+
+**Minted from the v0.6 review.** **OQ-286** (Priority 1, edge-free, runnable today) — the canary
+test: the always-loaded set may be silently truncated at load time, and the party positioned to
+notice is the one that structurally cannot; v0.6 §3.5 carries it `[UNWITNESSED]`. Enlarging
+CLAUDE.md makes it *more* likely the tail is dropped, which makes rule ORDER a design variable.
+**OQ-287** — two live papers claim the same contribution (v0.6 §2 and the concealment paper, whose
+v0.1 was extracted from it); canonicity markers added to both headers pending the split ruling.
+**OQ-288** — Prediction 4 / the instrument stratum, with RQ-d folded in rather than minted twice.
+
+**One correction landed in v0.6 §14.** RQ2 called blind cross-coding *"a weekend of work"*. That is
+OQ-277: 219 calls spent, nothing persisted, new stamp required, scorer nonexistent. Corrected in
+place — an agenda item priced before the attempt and never re-priced after is a staleness-ladder
+instance in the paper that teaches the staleness ladder.
+
+---
+
 ## 2026-08-12 — [landed] Concealment papers committed; OQ-283 control returns SEPARATION (scoped); OQ-284/285 minted; CS sketch §2.5 formalization claim corrected; v8 gains Oracle-Gap Corollary 4.1
 **Files:** `docs/concealment/`, `docs/amnesiac_institution/amnesiac_institution_v0_5.md`, `docs/amnesiac_institution/amnesiac_institution_v0_6.md`, `ISSUES.md`, `docs/commitment_systems/commitment_systems_sketch_v6.md`, `docs/deferential_realism_paper_v8.md`, `audits/2026-08-12_oq283_framing_boundary_discrimination/`, `audits/README.md`
 **Tier:** landed

@@ -14,6 +14,18 @@ repository's.*
 
 ---
 
+> **CANONICITY MARKER (added 2026-08-12; provisional pending an authorial ruling, ISSUES OQ-287).**
+> This paper and `docs/concealment/concealment_without_a_concealer_v0_4.md` currently **both** carry
+> the §2 derivation, and both name it as their contribution — that paper's v0.1 was extracted from
+> this paper's §2, and §13 below still claims it here. Two live documents, one contribution, no
+> queryable fact of canonicity: **Build Discipline Pattern 2, on the substrate of the papers that
+> document Pattern 2.** Recorded rather than silently resolved, since resolving it is editorial
+> surgery on a draft and *prove before you replace* (§7.7) applies. **Working disposition pending the
+> ruling:** the concealment paper is canonical for the **derivation** (it is narrower, has been
+> through six model reviews, and carries the historical cases that make it travel); this paper is
+> canonical for the **institution** — the case study, differential amnesia, the memory economy, the
+> organizational form, self-instrumentation. Cite accordingly until OQ-287 closes.
+
 ## Construction note: one exemption discharged, one debt paid
 
 The paper's own §7.7 rule — *prove before you replace* — requires that a replacement paste both
@@ -2005,8 +2017,22 @@ before. Blind-code Wu's five mechanism classes against the five patterns **in bo
 report the confusion matrix; separately, apply Advani's false-success operationalization to the audit
 record where trajectories permit. Disagreement is the result, not a problem: a defect shape one
 taxonomy expresses and the other cannot is a finding about both — §6.2 already names one (Wu's class
-A). This is a weekend of work and converts RQ2 from a proposal into a result. *Falsifier:
-silent-failure classes dominated by shapes the taxonomy cannot express.*
+A). *Falsifier: silent-failure classes dominated by shapes the taxonomy cannot express.*
+
+> **[COST CORRECTED 2026-08-12 — this item was priced before the attempt and the estimate did not
+> survive it.]** Earlier drafts called this *"a weekend of work"* that *"converts RQ2 from a proposal
+> into a result."* It was attempted (ISSUES OQ-277). The preregistration alone runs to 73 items and
+> 219 planned calls; the live run **made all 219 calls and persisted nothing**, because every gate in
+> the driver was an input gate and no code path wrote responses; the instrument has since been
+> repaired and now carries 27 controls; and the run cannot be repeated under the original stamp,
+> because the freeze pinned sixteen texts and **no executable**, and because the **analysis half —
+> scorer, overlap-pair identification, matrix construction — exists in neither code nor design.** A
+> perfect capture run would have produced 219 answers nothing in the repository can score. The item
+> is still worth doing and is still the highest-value external comparison available; it is not a
+> weekend. Gating artifact:
+> `audits/2026-08-10_oq277_rq2_crosscoding/SPEC_next_preregistration.md`. Recorded in place rather
+> than silently re-estimated, because an agenda item priced before the attempt and never re-priced
+> after is a staleness-ladder instance in a paper that teaches the staleness ladder.
 
 **RQ3 — Transfer.** Can the model be adopted cold? Method: a stepped design — the same operator on a
 green-field project; then a fresh operator (human, without a software team) and a fresh instance

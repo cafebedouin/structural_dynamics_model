@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "34d8f422b6f5c0298e91263822d86f5eb087c6e7",
+    "store_version": "a2ea7548e5d1ab327b6583f42d3347494f4431c5",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-12T02:24:51"
+    "generated_at": "2026-08-12T02:39:34"
   },
-  "issues_sha": "7ce600c31525a3eff952a9585fee4923ec4fa0e19d64b5797b0121202b083f04",
-  "n_entries": 285,
+  "issues_sha": "9864adbd689ba789a3f0474b6585c632ceed9498b28a482f3714a56f8675ab4a",
+  "n_entries": 288,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,8 +16,8 @@
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 103,
-    "partial": 6
+    "open": 105,
+    "partial": 7
   },
   "active": [
     {
@@ -1407,13 +1407,12 @@
     },
     {
       "id": "OQ-278",
-      "status": "open",
+      "status": "partial",
       "priority": 3,
       "summary": "The pattern taxonomy is INDEX-COLLIDED: CLAUDE.md's six vs build_discipline.md's six — and the collision is in the INCIDENT RECORD, not only in the two specifications (a worked P2 instance on the discipline's own substrate)",
       "deps": [
         "bundled_with OQ-277",
-        "blocked_on_human oq278-fork-resolution-ruling",
-        "blocked_on_human oq278-p3-prediscipline-scope-ruling"
+        "blocked_on_human oq278-p4-index-ruling"
       ],
       "cross_refs": [],
       "mentioned_in": [
@@ -1509,6 +1508,42 @@
         "OQ-277",
         "OQ-283",
         "OQ-284"
+      ]
+    },
+    {
+      "id": "OQ-286",
+      "status": "open",
+      "priority": 1,
+      "summary": "The always-loaded instruction set may be silently truncated at load time, and the party positioned to notice is the one that structurally cannot (the canary test, owed before circulation)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": []
+    },
+    {
+      "id": "OQ-287",
+      "status": "open",
+      "priority": 2,
+      "summary": "Two live papers now claim the same contribution: the derivation is in both `amnesiac_institution_v0_6.md` §2 and `concealment_without_a_concealer_v0_4.md` (Pattern 2 on the paper substrate)",
+      "deps": [
+        "blocked_on_human oq287-paper-split-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-277"
+      ]
+    },
+    {
+      "id": "OQ-288",
+      "status": "open",
+      "priority": 2,
+      "summary": "Prediction 4 / the instrument stratum: do residual silent failures concentrate in the instruments, and are they caught by re-derivation rather than by gates?",
+      "deps": [
+        "bundled_with OQ-276"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-276",
+        "OQ-277"
       ]
     }
   ],

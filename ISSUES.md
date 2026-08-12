@@ -11074,9 +11074,47 @@ frozen document and must not be edited now that results exist.
 (both sets are internally coherent, both have real dated exemplars, and they sort the
 phenomenon on different axes). The *residue measurement* that feeds the ruling is Ω_E.
 
-**Status:** open
+**Status:** partial — **index 3 SETTLED 2026-08-11 (operator ruling: DEMOTE); index 4 still
+collided.** The entry stays full-bodied because the live half is the P4 collision.
 **Priority:** 3
-**Deps:** bundled_with OQ-277, blocked_on_human oq278-fork-resolution-ruling, blocked_on_human oq278-p3-prediscipline-scope-ruling
+**Deps:** bundled_with OQ-277, blocked_on_human oq278-p4-index-ruling
+
+**RULING RECEIVED — INDEX 3 DEMOTED, and it reached the trackers LATE (recorded 2026-08-12).**
+*Destructive-replace without proof* is demoted from a defect pattern to a **witness rule**; the
+index is **vacated and never reused**. Four converging lines (`amnesiac_institution_v0_6.md` §5.2):
+no mechanism text in `build_discipline.md`; no dated exemplar in any version, alone among the six;
+a shared index; and **zero instances on a search built to find one** (`d0c3c5fb`, the OQ-278
+failure-shape sweep). The rule survives intact as a discipline — the question was which layer it
+lives at, and the evidence says *a thing one does*, not *a way systems fail silently*.
+
+**This answers the scope question the sweep deliberately left open, and on better grounds than the
+sweep had.** The sweep asked whether *pre-discipline* delete→restore episodes count, and declined to
+rule. The ruling makes the question moot: they are excluded on **independent** grounds — *a deletion
+that gets undone announced itself; the restoration IS the notice* — so a loud failure is not a member
+of a taxonomy of absences-that-present-as-presences, whatever its date. Scoping to the
+post-discipline window would have been circular; this argument is not. Per
+`amnesiac_institution_v0_6.md` §2.9, the account's exclusion and the operator's ruling were reached
+**independently and before the account was written**, which makes them mutually corroborating.
+The `oq278-p3-prediscipline-scope-ruling` dep is therefore DISCHARGED, not deferred.
+
+**THE DIVERGENCE THIS EXPOSED, which is the entry's own subject one level up.** The ruling lived
+**only in the paper** for a day: `CLAUDE.md` — the always-loaded file every instance reads — went on
+publishing six patterns with P3 as a defect shape, while the paper published five with index 3
+deliberately empty. Two documents, one taxonomy, no queryable fact of canonicity, both internally
+coherent: **Pattern 2, committed by the ruling that resolved a Pattern-2 instance.** Repaired
+2026-08-12 (`CLAUDE.md:492` now carries the vacated-index marker + the surviving witness rule, and
+the §145 pointer reads "five live, index 3 vacated"). The general lesson is the standing one: **a
+ruling recorded in a paper is not recorded** — trackers and always-loaded rules are separate read
+sites and a ruling has to land at each.
+
+**WHAT THE RULING DID NOT SETTLE, flagged because vacating index 3 changed the collision state and
+nobody stated the consequence.** `build_discipline.md`'s Pattern 3 is *Bound-probe bypasses
+clause-order* — a different mechanism, with worked text, untouched by this ruling. With CLAUDE.md's
+claimant vacated there is now exactly **one** claimant at index 3, so "Pattern 3" arguably resolves
+unambiguously to bound-probe. **That is an inference from the ruling, not part of it**, and it is
+left un-acted: a bare `Pattern 3` citation dated before 2026-08-11 is still ambiguous as to which
+document its author had open, and the dating rule below still applies. Needs one line from the
+operator: *does "Pattern 3" now name bound-probe, or does index 3 read as vacant in both documents?*
 **Origin:** Surfaced 2026-08-10 while designing OQ-277, when the question "which set do
 we code against?" forced a comparison nobody had run. **Fired: live at plan stage** — the
 fork was found by the experiment's design, not by the experiment.
@@ -11804,6 +11842,147 @@ reviewer who reads the code first is the cheap check on that.
 **What resolution would change:** today a consumer reading a null/undetermined H¹ cannot tell
 "fewer than two positions produced a reading" from "a position exists that structurally cannot
 express this question" — and the second is the phenomenon the CS sketch says the framework is about.
+
+---
+
+## OQ-286 — The always-loaded instruction set may be silently truncated at load time, and the party positioned to notice is the one that structurally cannot (the canary test, owed before circulation)
+
+**Ω-type:** Ω_E — a cheap, named, decisive test. It is unrun, not unanswerable.
+
+**Status:** open — minted 2026-08-12 from `amnesiac_institution_v0_6.md` §3.5, which carries the
+hazard as **`[UNWITNESSED]`**.
+**Priority:** 1
+
+*No `Deps:` line: this OQ is deliberately edge-free — runnable today, blocked on nothing, gating
+nothing. It therefore defaults to `workable_now` in the frontier, which is correct here rather than
+an artifact of missing edges.*
+
+**The hazard.** The always-loaded instruction set is delivered into a context window. Where it
+exceeds a limit — the tool's, the harness's, or the model's — it is **truncated or compacted at load
+time**. The instance sees no gap, because gaps have no positive form (this repo's own A3); the
+operator reads the file on disk, not the delivered context. **The record is intact where it is
+stored and incomplete where it is read.** This is absence/presence collapse performed on the memory
+system itself, and it inverts the usual remedy: **enlarging CLAUDE.md makes it MORE likely that the
+rules at the end are the ones silently dropped.** It also makes the §8.5 channel cap load-bearing
+twice — attention economics, and an uncapped channel eventually exceeding a limit nobody watches.
+
+**Status of the claim: operator-reported condition plus a mechanism argument. No dated instance in
+this repository has been recorded in which a truncated instruction set caused a defect.** It is
+stated rather than omitted because an unstated hazard and an absent one are indistinguishable.
+
+**The test, which is the whole OQ.** *Witness the delivered context, not the file on disk.* Place a
+canary token at the **end** of the always-loaded set; have instances report whether it arrived;
+record the result. Design notes so the first run is not wasted:
+- **Two-sided, or it witnesses nothing.** A canary that always arrives is consistent with "no
+  truncation" AND with "the canary is being read from a file the harness re-reads." Pair it with a
+  token near the **start**, and treat *both arrived* as the only clean negative.
+- **Vary the payload size** — a canary that arrives at today's CLAUDE.md size says nothing about the
+  size at which truncation begins, which is the decision-relevant number.
+- **Report the token verbatim**, never "yes I see it" — a model that infers what a canary must say
+  is the false positive this test exists to avoid.
+
+**Outcomes, pre-registered here:** arrives at all sizes tested → the hazard is **retracted** to a
+declared non-issue at those sizes, with the sizes named. Fails to arrive at any size → the hazard is
+**witnessed**, the channel cap gains a second and harder justification, and rule ORDER inside
+CLAUDE.md becomes a live design variable rather than an editorial one.
+
+**What resolution would change:** every promotion decision assumes the promoted rule is delivered.
+If the tail is being dropped, the promotion economy has been optimizing a channel whose capacity it
+never measured — and the most recently promoted rules, which sit at the end, are the ones at risk.
+
+---
+
+## OQ-287 — Two live papers now claim the same contribution: the derivation is in both `amnesiac_institution_v0_6.md` §2 and `concealment_without_a_concealer_v0_4.md` (Pattern 2 on the paper substrate)
+
+**Ω-type:** Ω_C — which document owns the derivation is an authorial ruling with no seat-free fact.
+The *existence* of the duplication is Ω_E and is settled below.
+
+**Status:** open — minted 2026-08-12.
+**Priority:** 2
+**Deps:** blocked_on_human oq287-paper-split-ruling
+
+**The fork, witnessed.** `concealment_without_a_concealer_v0_4.md` states in its own header that
+v0.1 *"was extracted from §2 of The Amnesiac Institution v0.6"*. But v0.6 §2 still carries the
+derivation, and v0.6 §13 still names it *"Derivational novelty: **this is the contribution**, and it
+is ANALYTIC."* **Both documents are committed, both are current, and neither says which is
+canonical.** A reviewer of either finds the other and cannot tell which is the original — the exact
+shape of Build Discipline Pattern 2, on the substrate of the papers that document Pattern 2.
+
+**The recommended split (recommendation, not ruling).** v0.6 keeps **the institution** — the case
+study, differential amnesia (§3.3), the five records (§3.4), the memory economy, the organizational
+form, self-instrumentation, Θ-7. That is the material with no external counterpart and it is a
+metascience paper. The concealment paper keeps **the derivation** — it is narrower, has been through
+six model reviews, and carries the historical cases (Fogbank, scurvy, the hunger stones) that make
+the argument travel outside this repository. v0.6 §2 then compresses to a statement plus a pointer,
+and §13's derivational-novelty claim moves with it. **Splitting is what makes each placeable**: as
+one document it is 2,380 lines making two arguments to two audiences.
+
+**Canonicity must become a CHECKED FACT, not a memory** (Pattern 2's own rule). Marked 2026-08-12 in
+both papers' headers pending the ruling; the editorial work — compressing v0.6 §2, relocating §13 —
+is what this OQ tracks. **Do not do the editorial work before the ruling**: it is destructive
+replacement on a document, and *prove before you replace* now applies to it as a witness rule.
+
+**One correction owed to v0.6 §14 regardless of the split, and it is not cosmetic.** RQ2 describes
+blind cross-coding as *"a weekend of work"* that *"converts RQ2 from a proposal into a result."*
+That work is **OQ-277**, which has spent **219 model calls, persisted nothing, been repaired, and
+now requires a new preregistration stamp plus a scorer that exists in neither code nor design.** The
+paper's research agenda under-prices its own cheapest item by more than an order of magnitude, and a
+reader who attempts it on that estimate gets the paper's experience rather than its promise.
+Corrected in place 2026-08-12; recorded here because the general failure — an agenda item priced
+before the attempt and never re-priced after — is a staleness-ladder instance in a document that
+teaches the staleness ladder.
+
+---
+
+## OQ-288 — Prediction 4 / the instrument stratum: do residual silent failures concentrate in the instruments, and are they caught by re-derivation rather than by gates?
+
+**Ω-type:** Ω_E — the repository is an unusually good substrate for it and the data is already
+accumulating.
+
+**Status:** open — minted 2026-08-12.
+**Priority:** 2
+**Deps:** bundled_with OQ-276
+
+**The claim under test** (`concealment_without_a_concealer_v0_4.md` P3/Prediction 4; the same result
+reached independently as a **negative-control finding** at `amnesiac_institution_v0_6.md` §2.9(b)):
+mature carriage discipline does not eliminate silent failure, it **relocates the frontier upward**,
+from the substrate into the instruments — manifests, gates, checkers, controls. *Falsifier: residual
+failures distributed evenly across strata, or caught predominantly by gates.*
+
+**Why this repository is close to an ideal substrate, and why it is the cheapest real test available:**
+- The `Fired:` bit is already accumulating (`3L/0l/0n` at 2026-08-12) with
+  `python/apparatus_instrument.py` reporting the rolling rate.
+- 177 audit directories, dated, with an enforced writeup header.
+- **The predicted signature is already sitting in the evidence base**: OQ-277's arc recorded nine
+  defects committed *inside* the repairs meant to address this class, **not one caught by a gate** —
+  every one caught by someone comparing a claimed number against the artifact it described.
+
+**The trap, named before anyone starts.** That nine-instance record is *suggestive and unusable as
+the result*: it is one arc, selected because it was legible, scored by the instance that lived it.
+Using it as the measurement would be selection on the outcome variable. The test needs the
+**stratum assignment made from the audit record under a rule fixed in advance** — substrate vs
+instrument, and caught-by-gate vs caught-by-re-derivation — applied to all 177 dirs, not to the arc
+that produced the hypothesis. §5.4's three known defects in the incidence instrument apply here too,
+and the yield-vs-prevalence caveat is inherited wholesale.
+
+**RQ-d folded in (it is the same experiment as the paper's Prediction 1, minted once rather than
+twice).** `amnesiac_institution_v0_6.md` §14 RQ-d arm 2 and the concealment paper's Prediction 1 both
+specify: matched reviewers, same artifact, **recognition** protocol (read and confirm) vs
+**enumeration** protocol (write the instruction a receiver would need to execute it), compare
+omission-detection rates. *Falsifier: no separation, or separation on both omission and
+present-but-wrong content.* Running it here would convert claim **A3** — currently carried by five
+in-repo rulings that were correct in prose and defective in execution — from an existence proof into
+a rate.
+
+**Sequencing.** The stratum census is the cheap half and needs no new spend; the recognition/
+enumeration arm needs matched reviewers and is a real cost. Do the census first: if residual failures
+are *not* concentrated in the instruments, P3/Prediction 4 is falsified and the second arm is
+answering a question about a mechanism that did not appear.
+
+**What resolution would change:** OQ-276 exists to falsify the verification ritual and currently has
+no stated hypothesis about *where* the ritual fails. This supplies one, with a direction and a
+falsifier — which is the difference between an instrument that reports a rate and an instrument that
+can be wrong.
 
 ---
 
