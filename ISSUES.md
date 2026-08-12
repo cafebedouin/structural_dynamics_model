@@ -10528,9 +10528,78 @@ reading (deficiency vs different-valid-cuts — layer-sort vs mechanism-sort), a
 the fork-resolution direction. The writeup emits a PROPOSED mapping table awaiting
 operator ruling; it does not rule.
 
-**Status:** open
+**Status:** future — **CLOSED 2026-08-12 by operator ruling: the pre-registered cross-coding is
+RETIRED, not deferred-pending-resources.** Kept full-bodied and searchable so it revives cleanly if
+the substrate changes (see *Revival conditions* below). Methods writeup:
+`docs/comparing_incident_taxonomies.md`.
 **Priority:** 2
-**Deps:** blocked_on_human oq277-spend-go-at-new-stamp, blocked_on_human oq277-omega-c-mapping-rulings-at-close, bundled_with OQ-278
+
+*No `Deps:` line: cleared at close. The two `blocked_on_human` gates
+(`oq277-spend-go-at-new-stamp`, `oq277-omega-c-mapping-rulings-at-close`) are moot — no spend will
+be requested and the mapping rulings are deliberately unmade — and the OQ-278 bundle is dissolved.
+See* Disposals *below.*
+
+### CLOSE (2026-08-12) — the instrument cannot answer the question it was built for
+
+**Not a sunk-cost retreat, and not a resource deferral.** The 219 calls are spent on either branch
+and are not an argument in either direction (F18). The reason for closing is that **the comparison
+set is unstable under its own author's hand**: 55% catalog-vs-dataset self-agreement, single author,
+own incidents, own five classes, full system knowledge. A confusion matrix against a
+55%-self-agreeing reference **cannot separate "our taxonomy disagrees with Wu's" from "Wu's
+disagrees with itself"** — which is exactly the ambiguity RQ2 existed to resolve. No sample size
+repairs it; the reference is the problem, and the frozen design pre-registered no effect-size floor
+against observed self-agreement.
+
+**What was gained instead, and it is more than the matrix would have been.** The self-agreement
+finding generalizes past both taxonomies; the structured-disagreement diagnosis (one class defined
+on a *declared-vs-runtime* axis that cross-cuts the mechanism axis of the other four) is a claim
+about incident taxonomies in general; and the arc produced the pin-criterion failure, the missing
+analysis half, and the output-gate rule. All are banked and none depended on the run happening.
+
+**The publication need is already met:** `amnesiac_institution_v0_6.md` §13 withdrew the
+systematization claim and recorded the convergence as the finding. The experiment would have refined
+a claim that no longer stands.
+
+**Remaining cost was disproportionate:** SPEC §3 required five artifacts that do not exist (H5
+scorer, overlap-pair identification, matrix construction, redaction-floor scoring, the (iii′) row),
+each built/pinned/two-sidedly-controlled *before* a new stamp, plus a fault-injection transport
+fixture, plus a new preregistration — to produce an uninterpretable number.
+
+### Disposals (stated so they are not discovered later)
+
+1. **The Ω_C mapping rulings are UNMADE, deliberately.** *"Is Wu-D our P4+P6?"* and the residue
+   reading (deficiency vs different-valid-cuts) were deferred to close and are now not being made:
+   they would be semantic adjudications over a mapping whose empirical half was never measured, and
+   ruling them on prose alone is the pose the whole arc exists to avoid. Recorded as unmade rather
+   than passed over in silence.
+2. **The OQ-278 bundle is DISSOLVED.** Its live half (the P4 index collision) never depended on the
+   cross-coding; `bundled_with OQ-277` is removed from that entry.
+3. **OQ-280 UNBLOCKS and is the sharper successor** — the paper's §2.3 describes a classification
+   procedure that produced no artifact, which the operator called the larger of the two plan-stage
+   findings. It was blocked only because direction (iii) was to supply the comparison. It is now
+   free-standing and cheaper than anything in the cross-coding: either perform the coding, or amend
+   §2.3 to state what actually happened.
+4. **`SPEC_next_preregistration.md` is RETAINED and re-scoped** — no longer a gate on this OQ, now a
+   reusable artifact. It is the repository's best statement of what a preregistration must pin, and
+   it applies to the next one whatever its subject. **Do not delete it with this close.**
+5. **The frozen stamp `4118f64e` stands** as the record of a design that could not produce its own
+   result; the retention rationale in the 2026-08-11 blocks below is unchanged.
+
+### Revival conditions (what would reopen this)
+
+Any one of: (a) Wu resolves which of his two artifacts is canonical, or publishes a reconciliation —
+the reference becomes stable and the matrix becomes interpretable; (b) a scorer and matrix builder
+exist for another reason, collapsing the build cost; (c) a *third* comparison set appears whose
+self-agreement is measured and adequate. Absent one of those, **do not re-propose the spend** — the
+blocker is not resources.
+
+### The successor question, which is cheaper and needs nobody's cooperation
+
+**Does OUR six-pattern taxonomy reproduce against itself?** OQ-278 already established that the two
+published versions disagreed on two of six. 177 audit directories carry pattern assignments. This is
+the symmetric half of what the letter asked of Wu, it is runnable without a prereg-scale spend, and
+it is the honest RQ2 result. **Not minted as an OQ here** — it belongs with the taxonomy work in
+OQ-278, and minting a third entry for it would fragment one question across three.
 
 **Blocker restated 2026-08-11 (the old `oq277-spend-go-at-prereg-freeze` is DISCHARGED and
 CONSUMED — it was given, spent, and produced nothing):** the next spend-go is at a NEW stamp, and
@@ -11105,7 +11174,16 @@ phenomenon on different axes). The *residue measurement* that feeds the ruling i
 **Status:** partial — **index 3 SETTLED 2026-08-11 (operator ruling: DEMOTE); index 4 still
 collided.** The entry stays full-bodied because the live half is the P4 collision.
 **Priority:** 3
-**Deps:** bundled_with OQ-277, blocked_on_human oq278-p4-index-ruling
+**Deps:** blocked_on_human oq278-p4-index-ruling
+
+**Bundle with OQ-277 DISSOLVED 2026-08-12** at that OQ's close: this entry's live half (the P4
+index collision) never depended on the cross-coding. **The successor question lands here rather
+than as a new entry** — *does our own six-pattern taxonomy reproduce against itself?* That is the
+symmetric half of what the Wu letter asked (`docs/comparing_incident_taxonomies.md` §3, §7): 177
+audit directories carry pattern assignments, it needs nobody's cooperation, it is runnable without a
+prereg-scale spend, and it is the honest RQ2 result now that the cross-coding is retired. It sits
+with the taxonomy work because splitting one question across three entries is how the index
+collision happened in the first place.
 
 **RULING RECEIVED — INDEX 3 DEMOTED, and it reached the trackers LATE (recorded 2026-08-12).**
 *Destructive-replace without proof* is demoted from a defect pattern to a **witness rule**; the
@@ -11407,7 +11485,16 @@ number §9's self-instrumentation currently has no channel for. It would also gi
 
 **Status:** open
 **Priority:** 2
-**Deps:** blocked_on OQ-277
+*No `Deps:` line: UNBLOCKED 2026-08-12, blocked on nothing and gating nothing.*
+
+**UNBLOCKED at OQ-277's close.** This was blocked only because cross-coding direction (iii) was to
+supply the comparison against the original coding; that direction is retired with the experiment,
+and the finding here never depended on it — whether the artifact exists was checked and answered in
+2026-08. It is now free-standing and is **the sharper successor to OQ-277**: cheaper than anything
+in the cross-coding and load-bearing for the paper's own evidence base. Two dispositions, and the
+choice is the operator's: **perform** the coding and produce the artifact §2.3 describes, or
+**amend** §2.3 to state what actually happened. Doing neither leaves the paper asserting a procedure
+that produced nothing.
 **Origin:** Found 2026-08-10 while scoping OQ-277 direction (iii), which as briefed required
 comparing the blind coding against the original coding. **Fired: live** — and per the
 operator, the larger of the two plan-stage findings, bigger than the fork (OQ-278).

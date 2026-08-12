@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "1dc009945294e8c512c3a0b81fa0a4428ba62aa4",
+    "store_version": "46d49dd928f702d41b6fbefa5c49803da9efad67",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-12T16:19:51"
+    "generated_at": "2026-08-12T16:25:24"
   },
-  "issues_sha": "31c7407d568958a2491164f1a0b4e7df6fac9ad292451946f1fd02ac618c8bab",
+  "issues_sha": "cafbdc72e827daadbce0e15b53a98d572935f1f76c51ccef86ca8ce3c2ab15bd",
   "n_entries": 291,
   "active_token_set": [
     "investigating",
@@ -15,8 +15,8 @@
     "resolved": 148,
     "mitigated": 18,
     "disposed": 6,
-    "future": 5,
-    "open": 107,
+    "future": 6,
+    "open": 106,
     "partial": 7
   },
   "active": [
@@ -1389,29 +1389,11 @@
       ]
     },
     {
-      "id": "OQ-277",
-      "status": "open",
-      "priority": 2,
-      "summary": "RQ2 two-directional blind cross-coding: Wu's five silent-failure classes vs our published six patterns",
-      "deps": [
-        "blocked_on_human oq277-spend-go-at-new-stamp",
-        "blocked_on_human oq277-omega-c-mapping-rulings-at-close",
-        "bundled_with OQ-278"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-264",
-        "OQ-278",
-        "OQ-280"
-      ]
-    },
-    {
       "id": "OQ-278",
       "status": "partial",
       "priority": 3,
       "summary": "The pattern taxonomy is INDEX-COLLIDED: CLAUDE.md's six vs build_discipline.md's six — and the collision is in the INCIDENT RECORD, not only in the two specifications (a worked P2 instance on the discipline's own substrate)",
       "deps": [
-        "bundled_with OQ-277",
         "blocked_on_human oq278-p4-index-ruling"
       ],
       "cross_refs": [],
@@ -1437,9 +1419,7 @@
       "status": "open",
       "priority": 2,
       "summary": "§2.3 describes a coding that produced no artifact: the paper's own evidence base is a described-but-unperformed procedure",
-      "deps": [
-        "blocked_on OQ-277"
-      ],
+      "deps": [],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-277",
@@ -4001,6 +3981,19 @@
       "mentioned_in": [
         "OQ-259",
         "OQ-261"
+      ]
+    },
+    {
+      "id": "OQ-277",
+      "status": "future",
+      "priority": 2,
+      "summary": "RQ2 two-directional blind cross-coding: Wu's five silent-failure classes vs our published six patterns",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-264",
+        "OQ-278",
+        "OQ-280"
       ]
     },
     {
