@@ -33,6 +33,18 @@ them.
   pairs. Each carries its pre-registered want=fire / want=pass.
 - `matrices/` — confusion matrices and churn tables (Phase 4 output; absent until then).
 - `PREREGISTRATION.md` — frozen at spend. `audit_log.md` — its md5, above the first result line.
+- `LETTER_2026-08-11_wu.md` — outbound correspondence to the source author, reporting the
+  direction-(i) reconstruction's incidental finding: his failure-modes catalog and his labeled
+  dataset assign **different classes to 10 of the same 22 incidents** (55% self-agreement, single
+  author, own incidents, own taxonomy — the most favorable conditions a taxonomy will ever face).
+  Witnesses that the comparison set is **unstable under its own author's hand**, which scopes every
+  cross-coding claim this audit can make: a confusion matrix against a 55%-self-agreeing reference
+  cannot separate *our taxonomy disagrees with Wu's* from *Wu's disagrees with itself*, and any
+  effect-size floor here must be set against that, not against the published Table 1. Carries a
+  repository annotation header (not part of the letter) recording reply status. **Not a
+  dependency** — OQ-277 does not block on a reply.
+- `SPEC_next_preregistration.md` — the specification governing the next stamp (see §"WHAT THIS
+  AUDIT IS BLOCKED ON" in ISSUES OQ-277); no spend is requested by it.
 
 *This file is rewritten at close with the real verdict. Its current content is the honest
 state: extraction underway, nothing measured.*

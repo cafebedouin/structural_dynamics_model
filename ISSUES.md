@@ -11056,6 +11056,34 @@ exercised exactly once, by the run that failed, which is an existence proof at n
 §1.1 carries the trap: when the scorer is built it becomes an executable and the genre instinct
 will treat it as plumbing — the pin criterion must reach the analysis stages explicitly.
 
+**THE COMPARISON SET IS UNSTABLE UNDER ITS OWN AUTHOR'S HAND, and this scopes every claim this
+audit can make (letter sent 2026-08-11; filed 2026-08-12 as
+`audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md`).** Rebuilding the direction-(i)
+units from Wu's published artifacts rather than his prose surfaced that his failure-modes catalog
+and his labeled dataset **assign different classes to 10 of the same 22 incidents — 55%
+agreement**, single author, own incidents, own five classes, full system knowledge. The
+disagreement is structured, not scattered: **8 of the 10 involve class E** bidirectionally, only 5
+of 10 possible class pairs are occupied, **D is the most stable** (1 of 10), and the predicted C/D
+seam was the *rarest* tie — **recorded as a wrong prediction**. Sharpest single row:
+`movespeed_tcc_sandbox`, Wu's §5.1 headline incident, is labeled **A** by the dataset while that
+row's own `paper_class_ref` cites **§4.5 class E and only E** — the row disagrees with itself.
+
+**Consequence for the experiment, which is a scoping constraint and not a criticism of Wu** (the
+five classes are good and are still the comparison set): **a confusion matrix against a
+55%-self-agreeing reference cannot separate "our taxonomy disagrees with Wu's" from "Wu's
+disagrees with itself."** Every per-class effect-size floor must be set against the observed
+self-agreement, not against the published Table 1, and the next preregistration must say which of
+the two artifacts it codes against and why. This was **not** in the frozen design.
+
+**A reply is a FACT TO RECORD, NOT A GATE (operator, 2026-08-12).** OQ-277 does not block on Wu
+answering, and no future instance should read silence as a pending dependency. *He has all the
+information he needs* — the letter's function is to enable a **re-derivation**, not to request an
+adjudication, and re-derivation is what settles things here (§2.9(b)/§9.2: what terminates a loop
+is an operation not closed over the artifact, and a reply *about* the artifact is not one). Of the
+letter's three readings, only (3) artifact provenance is genuinely Wu-exclusive; (1) and (2) are
+separated by a blind test the letter itself specifies — available, costly, and forbidden inside the
+current stamp as a third coding direction.
+
 **For paper §6.4 (`f0e91cc0`, corrected by `19bc3418`):** the recursion is observed, not
 hypothetical — six instances in this arc where a repair committed the same defect it was
 repairing, **not one caught by a gate**; every one caught by comparing a claimed number against
@@ -11937,9 +11965,10 @@ persist**, whose distinguishing feature is that it is **machine-enforced rather 
 on the memory channel cap and catch rate. A reader can clone it and watch it go red. The five
 patterns demote from *the result* to *evidence that the architecture catches things*.
 
-**Two artifacts owed to the reframe.** (a) **The Wu letter (2026-08-11) is not in the repository** —
-the findings live in `audits/2026-08-10_oq277_rq2_crosscoding/`, the letter as sent is nowhere.
-Commit it and use it as the appendix: it demonstrates the practice on an **external** object a
+**Two artifacts owed to the reframe.** (a) **The Wu letter — LANDED 2026-08-12** at
+`audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md` (filed with the evidence it
+reports; wired into that audit's evidence map; carries a repository-annotation header recording
+reply status and the one over-statement in its body). Use it as the appendix: it demonstrates the practice on an **external** object a
 reader can evaluate without repo access (pre-registration before comparison, a prediction recorded
 as wrong, defeaters stated before the numbers, reciprocal disclosure of this project's own index
 collision and uncontrolled statistic, and per-claim provenance typing). Sharpest line for a methods
