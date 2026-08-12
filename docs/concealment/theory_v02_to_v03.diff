@@ -1,0 +1,273 @@
+--- theory_v02.md	2026-08-12 03:46:36.427270417 +0000
++++ theory_v03.md	2026-08-12 03:56:50.991903377 +0000
+@@ -2,10 +2,12 @@
+ 
+ **cafebedouin@gmail.com**
+ 
+-*Status: DRAFT v0.2 (2026-08-12). v0.1 was extracted from §2 of `The Amnesiac Institution` v0.6;
++*Status: DRAFT v0.3 (2026-08-12). v0.1 was extracted from §2 of `The Amnesiac Institution` v0.6;
+ this revision incorporates six independent model reviews, narrows the universal claims those reviews
+ found brittle, adds the historical record (§7), the deep-time limiting case (§8), and a third mode of
+-concealment (§5.3) that v0.1 could not express. Claim types are declared in Appendix A and govern
++concealment (§5.3) that v0.1 could not express. v0.3 adds §7.5 (the institutions built to prevent
++this failure, read as carriage technologies) and §8.2–§8.3 (the societal-scale case, and framing
++monoculture). Claim types are declared in Appendix A and govern
+ how each claim may be discharged. Historical cases in §7–§8 were verified against public sources on
+ 2026-08-12; the companion paper is the source of the undated institutional examples.*
+ 
+@@ -469,12 +471,90 @@
+ explicit hypotheses. The failures cluster exactly where framing was left to the reader's
+ reconstruction.
+ 
++### 7.5 The institutions that exist to prevent this
++
++The failure is old enough that societies have built institutions against it, and those institutions
++are more legible under this account than under the ones usually offered. Each is a **carriage
++technology**: a rule about what must accompany a thing when it crosses a boundary, backed by
++something other than the goodwill of the producer. And each embeds, explicitly or otherwise, a bet
++about the future consumer's reconstructability.
++
++**The patent bargain is a carriage rule with a legal enforcement mechanism.** In exchange for a
++time-limited monopoly, the applicant must publish a description sufficient to enable a practitioner
++to make and use the invention. That is precisely §9.1's second clause, made a condition of the
++grant. What makes it remarkable for this paper is the standard of sufficiency: enablement is
++assessed against a *person having ordinary skill in the art*, which is to say **patent law contains
++an explicit, declared parameter for reconstructability.** The specification need not carry what a
++competent practitioner of the period could reconstruct; it must carry the rest.
++
++Two consequences follow, and both are predictions this account makes and patent practice confirms.
++First, the standard is *time-indexed and drifts*: a specification that was enabling when filed can
++become non-enabling as the surrounding practice it relied on decays, because the reconstruction it
++assumed is no longer available. The document does not change; the reader does. Second, the
++enablement requirement is systematically weakest exactly where §7.3 says the danger is — process
++knowledge, tacit skill, and uncontrolled inputs. A patent lists what the inventor controlled. It
++does not list the impurity.
++
++**Trade secrecy is the opposite bet, and it is the Fogbank bet.** Retain Mode 1, decline carriage,
++and rely on the corpus — continuous production, living practitioners — to preserve what the document
++does not. It works indefinitely while the practice runs continuously and fails catastrophically at
++the first discontinuity. Formulations that have survived centuries under secrecy have survived
++because they were *never* discontinued; Fogbank was discontinued for eleven years.
++
++**Open source publishes the corpus rather than a compression**, which is a different move from
++carriage and stronger where it applies: re-derivation becomes available to any party, without
++permission, which is §9.2's requirement made a property of the artifact rather than of the
++institution. But source availability is not framing carriage, and the gap shows up in exactly the
++predicted places. Reproducible-build efforts are a re-derivation discipline in the strict sense —
++recompute the binary from the source under an independently specified procedure and compare —
++existing because "the source is public" does not establish that the shipped artifact came from it.
++And abandoned projects preserve corpus while losing framing: the code survives, and why *this*
++constant, and what depends on it, does not.
++
++Software has independently derived §7.3's law, under a different name. **Hyrum's Law** — with a
++sufficient number of users, every observable behaviour of a system will be depended upon by
++somebody, regardless of what was promised — is the load-bearing background variable stated as an
++engineering regularity. Fogbank's impurity is Hyrum's Law in a purification plant: a property nobody
++specified, nobody controlled, and something downstream relied on.
++
++**Metrology is the case where the repair was actually completed, and it took 130 years.** Until 2019
++the kilogram was defined by a platinum–iridium artifact in a vault near Paris. Its official copies
++are called *témoins* — **witnesses** — which is either a coincidence or evidence that the vocabulary
++is forced. The system had the defect this paper describes, in its purest possible form: <cite index="44-1">the prototype "has not so far changed relative to itself"</cite>, so no measurement made within the system could detect its drift. Drift was visible only as **divergence among the copies**, <cite index="42-1">averaging on the order of 50 μg over a century</cite>, and even then the direction was undecidable from inside — one cannot say whether the prototype lost mass or the witnesses gained it, because the framing under which "one kilogram" was defined was the artifact itself.
++
++<cite index="41-1">The 2019 revision replaced it with a definition fixing the numerical value of the Planck constant, taking effect on 20 May 2019</cite>, and the significance for this paper is not precision. It is that a **corpus-anchored standard was replaced with a fully carried framing**: the definition now travels complete, and any sufficiently equipped laboratory can re-derive the unit without consulting an artifact or trusting a custodian. That is the §7.4 mathematics repair applied to measurement, and the cost of achieving it — a century of divergence, decades of preparatory work, an international apparatus — is the honest price of moving a standard from corpus to carriage.
++
++**Archives, seed banks, type specimens, and version control are the corpus half of the same
++strategy**, and their rationale is precisely §3.4: because a lost capability has no positive form,
++you cannot enumerate what you will need. The type specimen exists so a classification can be
++re-derived rather than trusted; the seed vault exists because nobody can list the cultivars a future
++climate will require. These institutions do not carry framing. They preserve the substrate against
++which framing can later be reconstructed, which is the only available hedge against Mode 3.
++
++Read together, the family sorts cleanly:
++
++| Institution | Strategy | Bet about the consumer | Fails when |
++|---|---|---|---|
++| Patent | Carriage, legally enforced, against a declared reconstructability standard | A skilled practitioner of roughly this period | The practice the standard assumed decays; the load-bearing term was uncontrolled |
++| Trade secret | No carriage; corpus preserved by continuous practice | There will be no discontinuity | There is a discontinuity |
++| Open source | Corpus published; carriage optional | Anyone, given the substrate, can re-derive | The framing (why, and what depends on it) was never written |
++| Metrological constants | Carriage total; corpus eliminated | Any competent lab, indefinitely | The constants themselves are misdetermined |
++| Archive, seed bank, type specimen | Corpus preserved without carriage | Someone later will know what to ask | The substrate degrades, or nobody knows it exists |
++| Classification | Deliberate reconstructability destruction | The knowledge will be needed only while the programme runs | The programme pauses (§7.1) |
++
++The general statement: **an institution of this kind is a bet about the framing distance and
++reconstructability of a consumer who does not yet exist.** Where the bet is stated — the PHOSITA
++standard, the enablement requirement, the definition of a unit — the institution is auditable. Where
++it is implicit, the institution is running §5.4's manifest at civilizational scale.
++
+ ---
+ 
+-## 8. The limiting case: long-term thinking
++## 8. The limiting case: long horizons
+ 
+-Deep-time problems are this paper's parameters taken to their limits, and the field that has thought
+-hardest about them supplies an independent test of the repair.
++Deep-time problems are this paper's parameters taken to their limits, and two literatures — one
++about messages, one about societies — supply independent tests of the repair.
++
++### 8.1 Carriage at zero reconstructability
+ 
+ When the receiver is separated from the producer by ten thousand years, reconstructability is not low
+ but **zero**, and framing distance is unbounded: the receiver shares no language, no institutions, no
+@@ -496,11 +576,79 @@
+ enforced by anyone with standing, and the only remaining check is a party in the present who has
+ deliberately taken the absent seat — which is a choice, not a control.
+ 
+-This is the honest terminus of the long-term case, and it generalizes downward: **the institution
++This is the honest terminus of the message case, and it generalizes downward: **the institution
+ must maintain a position from which the not-yet-existing consumer's framing can be represented, or
+ that consumer's framing is simply absent from every artifact.** Long-term thinking, on this reading,
+ is not a virtue of temperament. It is the practice of occupying a seat nobody is standing in.
+ 
++### 8.2 Societies compress their capability portfolios, and cannot enumerate the loss
++
++The second literature is about what societies stop being able to do.
++
++Specialization is compression. A society's portfolio of capabilities — what its members can make,
++grow, repair, navigate, and survive — is selected under a framing, and the framing is *the current
++environment*: what is worth knowing given present climate, present trade, present energy. The
++capabilities that fall outside the selection are not deleted by decision. They lapse, because nobody
++is doing them, in the same way and for the same reason that a specification omits an uncontrolled
++input.
++
++The archaeology of the American Southwest supplies the mechanism in one sentence, from the work on
++the Ancestral Puebloan abandonments: as the society aggregated and grew more dependent on
++agriculture and on itself, *"these parts are no longer redundant. They are part of an integrated
++whole"* — one could no longer peel off a lineage here and a lineage there and have them go their own
++way. Redundancy is the uncompressed corpus. Integration is the compression ratio rising.
++
++And here the account makes a prediction that the historical record repeatedly confirms: **a society
++has no register of the capabilities it has lost.** A lost capability has no positive form (§3.4).
++There is no inventory of skills nobody practises, because an inventory is built from what is
++present, and what is absent supplies no entry. So capability loss is exactly the failure this paper
++describes at civilizational scale: frame-complete reads as complete, the portfolio looks adequate
++because every item in it belongs, and the omission is discovered only when the environment moves and
++something is required that nobody can do.
++
++Which means §6.2 holds here in its strongest form. The measurement and the failure are the same
++event. Drought is the re-derivation run against the agricultural portfolio; the collapse is the
++result being returned. Nobody was notified when the last generation that could live off the
++periphery stopped doing it, because nothing changed in any record on the day it happened.
++
++The contemporary version, from a case in which the compression is recent enough to watch: Bedouin
++who lived at the edge of the Rub' al Khali for millennia now largely live in state-built settlements
++and hire others to herd. The skills required to survive there are the corpus; the settled portfolio
++is the compression, framed by a subsidy that is finite. Whether those skills can be re-derived when
++the framing changes is an open empirical question of exactly the Fogbank kind — recoverable
++expensively if the practice or its practitioners survive somewhere, and not at all if they do not.
++The essay that prompted this section ends on the reconstructability statement, correctly: *the
++difference between us and the Bedouin is that we do not know how to survive in that climate.*
++
++### 8.3 Framing monoculture removes the position from which re-derivation is possible
++
++There is a second, less obvious systemic result, and it is the one this account contributes that
++resilience arguments usually do not state.
++
++Interconnection reduces **framing distance**. A globally integrated system converges on shared
++units, shared standards, shared practices, shared models of what matters — and by §6.1 that should
++*reduce* exposure, since producer and consumer increasingly carve the world the same way. Handoffs
++get easier. Translation costs fall. This is real and it is why integration is chosen.
++
++But re-derivation requires a party positioned **outside** the artifact's framing (§9.2), and Mode-3
++blind cells are discoverable only by contact with a vocabulary that carves differently (§5.3). So
++convergence buys smoother handoffs at the cost of the only instrument that detects framing failure:
++
++> **A monoculture of framings has no outside. It reduces the cost of every handoff and eliminates
++> the position from which any handoff could be checked.**
++
++This reframes what is lost when an alternative way of living, measuring, or knowing disappears.
++Under a diversity argument, the loss is of options. Under this account it is of **instrumentation**:
++each surviving alternative framing is a probe for a class of defect the dominant framing is
++constitutionally unable to detect in itself. The Bedouin, on this reading, are not only a
++population; they are an occupied position from which the settled portfolio's omissions are visible,
++and their assimilation removes both the way of life and the only party who could have re-derived it.
++
++The design consequence is uncomfortable and, I think, correct: **maintaining alternative framings is
++not sentimentality or hedging against taste. It is maintaining verification capacity**, and it
++should be budgeted as such — which is the same argument as §7.5's for seed banks and type specimens,
++extended from substrate to standpoint.
++
+ ---
+ 
+ ## 9. The repair: boundary carriage and external re-derivation
+@@ -654,6 +802,14 @@
+ list does not. *Falsifier: high overlap, which would mean introspection suffices and Mode 3 collapses
+ into Mode 2.*
+ 
++**Prediction 6 (tests §7.5).** Processes that were disclosed under an enablement requirement should
++be cheaper to re-derive after a production discontinuity than otherwise-comparable processes held as
++trade secrets, and open-corpus processes cheaper still — with the advantage concentrated in cases
++where the discontinuity exceeded the working life of the original practitioners. *Falsifier:
++re-derivation cost independent of disclosure regime once discontinuity length is controlled.* This
++is a historical-record study, not an experiment, and the confound to beat is that firms choose the
++regime partly on how tacit the process already is.
++
+ ---
+ 
+ ## 12. Related work
+@@ -687,9 +843,22 @@
+ probes. This account provides one explanation for why such devices generalize beyond their home
+ fields and why they feel expensive.
+ 
+-**Organizational memory and deep time.** The nuclear-semiotics literature (§8) is the extreme case of
+-carriage design, and the knowledge-loss cases of §7 are its natural history. The account offered here
+-is that these are one problem at different values of one parameter.
++**Organizational memory and deep time.** The nuclear-semiotics literature (§8.1) is the extreme case
++of carriage design, and the knowledge-loss cases of §7 are its natural history. The account offered
++here is that these are one problem at different values of one parameter.
++
++**Intellectual-property and disclosure institutions.** The patent bargain, trade-secret doctrine, and
++open-source licensing are usually analysed as incentive mechanisms. §7.5 reads them additionally as
++carriage technologies with declared reconstructability standards, which is a complementary rather
++than a rival account: the incentive analysis explains why a producer discloses, and this one explains
++what disclosure has to contain to be worth anything decades later.
++
++**Collapse and resilience.** Work on societal collapse — the Bronze Age horizon, the Ancestral
++Puebloan abandonments, and the general efficiency-versus-redundancy tradeoff — supplies §8.2's
++material. The contribution offered here is narrow: not a theory of collapse, but the observation that
++capability loss is undetectable by self-inventory for the same structural reason an omission is
++undetectable in a compression, and that framing monoculture removes the external position on which
++re-derivation depends (§8.3).
+ 
+ ---
+ 
+@@ -711,6 +880,7 @@
+ | E1 | Parties checking an artifact default to recognition and enumerate only when forced | Model evidence under tested conditions; four rulings in one institution (embedded case material) | Prediction 1 |
+ | E2 | Silence scales inversely with reconstructability, and reconstructability is unobservable to the institution relying on it | Fogbank; the scurvy episode; argued in §6 | Prediction 2 |
+ | E3 | Mode-3 blind cells are not discoverable from inside a representational system | The scurvy episode; one census against a foreign source | Prediction 5 |
++| E4 | A society cannot enumerate its lost capabilities; capability loss is measured only by the event that requires them | Historical collapse and knowledge-loss cases (§8.2) | A society maintaining an accurate register of what it can no longer do |
+ 
+ **PROPOSED — design consequences.**
+ 
+@@ -719,6 +889,8 @@
+ | P1 | The remedy must be an artifact discipline rather than an honesty norm | Honesty-norm interventions reducing Mode-2 failures comparably |
+ | P2 | Carriage is necessary and not sufficient; termination requires re-derivation from outside the framing | A carriage discipline terminating without external re-derivation |
+ | P3 | Mature carriage relocates the silent-failure frontier into the instruments rather than eliminating it | Prediction 4's falsifier |
++| P4 | Disclosure institutions (patent, open corpus) lower post-discontinuity re-derivation cost relative to secrecy regimes | Prediction 6's falsifier |
++| P5 | Diversity of framings is verification capacity, not merely optionality; monoculture removes the external position re-derivation requires | A demonstrated re-derivation performed entirely from inside a single framing on a Mode-3 defect |
+ 
+ ---
+ 
+@@ -772,7 +944,13 @@
+ $69M–~$100M. Scurvy: contemporary accounts of the lemon-to-lime substitution, copper-vessel
+ processing, and the 1918 potency trials; Ceglowski's *Scott and Scurvy* for the polar sequence.
+ Nuclear semiotics: Human Interference Task Force (1981–1984); Sandia National Laboratories marker
+-studies (1992–1993); WIPP permanent-markers planning.
++studies (1992–1993); WIPP permanent-markers planning. Metrology: International Prototype of the
++Kilogram and its *témoins*; divergence on the order of 50 μg per century among prototypes; CIPM
++redefinition in terms of the Planck constant, effective 20 May 2019. Southwestern archaeology: the
++Ancestral Puebloan aggregation-and-abandonment sequence, Kohler's redundancy remark as quoted in
++Johnson, *Vanished: A Pueblo Mystery*, New York Times, 8 April 2008. Rub' al Khali: Webster, *The
++Empty Quarter*, National Geographic, February 2005, and cafebedouin, *The Bedouin Way of Life in Rub'
++al Khali* (2017), which prompted §8.2–§8.3.
+ 
+ `seat-theorem-v1.md` — Premise 2's strong form. `the_perturbation_principle.md` — the control
+ requirement discharged in §10. `The Amnesiac Institution` v0.6 — the worked institution.
+@@ -786,4 +964,6 @@
+ mechanistic reframing of Prediction 3, and the promotion of the frontier-relocation result. Not
+ taken: full formalization of the exposure relation; removal of Premise 2 (retained in a strong and a
+ weak form, with the argument resting on the weak); and the several suggestions to open with the claim
+-table, which is now Appendix A.*
++table, which is now Appendix A. v0.3 was produced as targeted edits against a byte-identical copy of
++v0.2; the diff is the witness. New: §7.5, §8.2, §8.3, Prediction 6, claims E4/P4/P5, and the related-work
++paragraphs on disclosure institutions and collapse. Everything else is unchanged by construction.*
