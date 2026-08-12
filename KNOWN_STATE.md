@@ -95,6 +95,35 @@ not the world. Euclid was already there as the formal instance (§5.9); scurvy i
 empirical one, where the failure to glue was misread as *the claim was never true* rather than *we
 found the boundary of a local section*. No prior claim revised.
 
+**Ω_C RULING TAKEN SAME DAY — EXTERIOR.** Boundary framing-loss is **not** a third axis; it is
+exterior to seat/gauge/orientation. Recorded at v8 §5.2 **with its reason**, because that section
+pre-committed the exterior declaration *"cannot later be invoked only to dismiss an inconvenient
+axis"* — and the order is the point: exterior was chosen only **after** OQ-283's control
+disqualified the easy dismissal. Reason: a boundary is an **edge between read-sites**, not a
+position over content; the audit-direction discriminator returns nothing on it. **Two precisions a
+later instance will get wrong without them:** exterior is a **category, not a location** — this
+does NOT place framing-loss in `affects_constraint` or the contamination network (the exterior now
+has two members of one kind: relations between *constraints*, relations between *read-sites*, and
+wiring the second into the first is a category error with a plausible implementation); and
+exterior ≠ unimportant — it means outside this ontology's jurisdiction.
+
+**The seam is now documented AT THE READ SITE, not only in the tracker.**
+`concealment_without_a_concealer_v0_4.md` §5.3 carries a marked editorial note: the three-mode
+table sorts by *who could state it* (datum-possession) while Mode 2 defines itself by *"no channel
+existed at the boundary"* (channel-existence), and the two come apart on the paper's own `0.0`
+case. Repairs differ — a tagged union fixes held-but-no-channel, only stepping outside the
+operation fixes held-by-nobody — so one cell routes two prices to one budget. Two candidate
+dispositions offered, **neither adopted**; disposition is the author's.
+
+**OQ-285's code half is GATED (operator ruling).** No code — not the reason token — until (1) a
+**fresh instance** reviews the evidence and produces a *recommendation*, (2) the operator checks it
+against **Claude web** (independent, no repo access, which is the instrument not a formality), (3)
+only then the code question opens. The receiver's prompt is written out in the OQ with six
+enumerated actions and the **license to refuse** stated, per *Write the receiver's prompt* and *The
+receiver's license to refuse*. A fresh instance is required because the one that wrote the entry
+read the paper before the code and arrived holding the paper's categories — the concept→surface
+mapping is the most likely thing to be wrong.
+
 **Process defect, instance seven.** A result block was written into the audit log **before any
 instance was classified** — a prediction in a finding's costume. Caught pre-commit, struck, and
 preserved in `audit_log.md` (catching early destroys the free before-commit control, so the text

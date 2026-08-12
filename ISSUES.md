@@ -11611,14 +11611,27 @@ OQ-277's design specifying production and not consumption), **2 DECLINES** (`f0e
 (§below). Two-sided on a population the criterion did not select, including both decline shapes the
 prereg required to exist.
 
-**WHAT THIS DOES NOT LICENSE, per the frozen §5 — read before editing any paper.** Separation from
-Corollary 2a is **not** the existence of a third axis. **v8 §5.2's declared exterior** (the
-relational network layer — *"relations between constraints are a different kind of object, neither
-audited nor audited-against a single seat"*) is at least as good a home, since a boundary is an
-**edge between positions**, not a position. v8 §5.2 also pre-committed that the exterior declaration
-*"cannot later be invoked only to dismiss an inconvenient axis"* — so that clause now binds, and the
-choice is a live Ω_C ruling, **not** something a later instance may settle by reading. **Any edit to
-v8 §5 or the CS sketch's axis sections is gated on that ruling.**
+**WHAT THIS DOES NOT LICENSE, per the frozen §5.** Separation from Corollary 2a is **not** the
+existence of a third axis. That was left as a live Ω_C ruling, and it has since been taken:
+
+**Ω_C RULING RECEIVED — EXTERIOR (operator, 2026-08-12), recorded at `deferential_realism_paper_v8.md`
+§5.2 with its reason.** Boundary framing-loss is **not** a third axis; it is exterior to the
+seat/gauge/orientation ontology. Reason, stated rather than defaulted because §5.2 pre-committed
+that the exterior declaration *"cannot later be invoked only to dismiss an inconvenient axis"*: a
+boundary is an **edge between read-sites**, not a position over content — seat/gauge/orientation
+all answer *where does this verdict stand*, while framing-loss answers *what survived the trip*,
+which presupposes two positions and a transport. The audit-direction discriminator returns nothing
+on it: a boundary is neither audited nor audited-against a single seat. **The order matters and is
+the point** — the exterior was chosen only *after* this control disqualified the easy dismissal, so
+the pre-commitment was honored rather than spent.
+
+**Two precisions carried into v8 §5.2, repeated here because this entry is what a router hit
+resolves to.** (1) **Exterior is a category, not a location** — this does NOT place framing-loss in
+`affects_constraint` or the contamination network. The exterior has two members of one kind:
+relations between *constraints* and relations between *read-sites*. Wiring the second into the
+first is a category error with a plausible-looking implementation. (2) **Exterior ≠ unimportant** —
+it means outside this ontology's jurisdiction, so one-seat and the audit-direction discriminator
+neither govern the material nor are threatened by it.
 
 **Correction owed to the PAPER, not the engine (the seam, and the audit's only novel finding).**
 `system_gradient`'s `[] → 0.0` classifies HELD under this criterion (someone held *"this is a
@@ -11684,9 +11697,11 @@ the absence as an oversight and "fixing" it.
 **Ω-type:** Ω_E for the token behavior (mechanically checkable); **Ω_C** for whether the gauge axis
 should carry an *expressive-capacity* predicate distinct from a verdict.
 
-**Status:** open — minted 2026-08-12 out of OQ-283's SEPARATION branch.
+**Status:** open — minted 2026-08-12 out of OQ-283's SEPARATION branch. **The doc half is DONE**
+(CS sketch §2.5 corrected in place, v6.1); **the code half is GATED** behind the fresh-instance
+review + operator/Claude-web check below — no code lands before it.
 **Priority:** 3
-**Deps:** blocked_on OQ-283, bundled_with OQ-284
+**Deps:** blocked_on OQ-283, bundled_with OQ-284, blocked_on_human oq285-measurement-arm-recommendation-check
 
 **The mechanism, read off the code.** `stakeholder_seats.pl:337-341` maps a seat whose type
 derivation FAILS to `unknown`; `is_real_type/1` (`T \== unknown`) filters it; the header states the
@@ -11720,6 +11735,71 @@ repair is the foreign-vocabulary probe — and this repository's only such instr
 legs and the OQ-277 cross-coding, both bounded by **GAP-35** (outside `testsets_haiku|flash|kimi|
 sonnet`'s 957 four-way matched ids there is nothing to pair). So the *measurement* arm may be
 unavailable, and the honest outcome could be a declared gap.
+
+### THE GATE ON ANY CODE (operator ruling, 2026-08-12): decide whether the measurement arm EXISTS before building the surface
+
+**No code lands for this OQ — not the reason token, not a predicate, not a schema field — until the
+sequence below completes.** The reason token beside `NSeats`/`NReal` is small, idiomatic, and
+therefore *exactly* the tempting move: building it first would produce a surface that reports a
+distinction nothing in this repository can measure, which is Pattern 1 with a philosophical
+justification attached. Sequence:
+
+1. **A FRESH INSTANCE reviews the evidence and produces a RECOMMENDATION** — not a decision, not an
+   implementation. Brief below.
+2. **The operator checks that recommendation against Claude web** (independent read, no repo
+   access — which is the point: a reviewer holding this context supplies the missing halves
+   silently, so the outside read is the instrument here, not a formality).
+3. **Only then** does the code question open, and it opens with the recommendation's verdict
+   attached.
+
+**Why a fresh instance and not a continuation.** The instance that wrote this entry read the
+concealment paper first and the code second, so it arrived at the code already holding the paper's
+categories — the concept→surface mapping is exactly the thing most likely to be wrong (`false-absence`
+sub-rule (c): a perfect control ladder on the WRONG predicate still yields a false absence). A
+reviewer who reads the code first is the cheap check on that.
+
+#### The receiver's prompt (enumerated, per *Write the receiver's prompt* — do not replace with "read OQ-285 and advise")
+
+> **Task: recommend whether the Mode-3 "measurement arm" exists in this repository. Produce a
+> recommendation; do not implement anything, and do not edit `ISSUES.md`.**
+>
+> Concrete actions, all of them:
+> 1. Read `prolog/stakeholder_seats.pl` `stakeholder_type_vector/2` + `seat_type_token/3` +
+>    `stakeholder_obstruction/5`, and `grothendieck_cohomology.pl` `is_real_type/1`. State in your
+>    own words what is and is not distinguishable at the H¹ read site. **Do not take this entry's
+>    characterization on trust — it is the thing you are checking.**
+> 2. **Count, on the live corpus, how often each absence condition actually occurs**: seats where
+>    `dr_type_for_stakeholder/3` FAILS versus seats deriving a literal `unknown`. If the second is
+>    empty, or the first is, the distinction this OQ proposes has no population and the answer is
+>    already "no arm." Paste the counts and name the corpus leg + manifest.
+> 3. **Sweep for the sibling surfaces before concluding anything is absent.** `untyped`
+>    (`seat_perceived_vs_real/4`), `sheaf_undetermined_reason/2`, `sheaf_status`'s `undetermined`,
+>    `h1_stakeholder_n_seats`/`_n_real`, `purity_n_scored`/`_n_total`. The question is not "does a
+>    reason token exist for H¹" but "does this repository already carry the blind-vs-absent
+>    distinction *somewhere*, under another name?"
+> 4. **Answer the arm question directly**: is there any instrument here that could distinguish *a
+>    position that cannot express the question* from *a position that produced no reading*? Check
+>    the twin legs and OQ-277 cross-coding as candidates, and check them against **GAP-35** —
+>    matched-seed structure exists only across `testsets_haiku|flash|kimi|sonnet` (957 four-way
+>    matched ids); a paired design over any other population is dead on arrival, and the id
+>    intersection is checked FIRST, not assumed.
+> 5. **Recommend exactly one** of: **(A)** the arm exists — name it, name its two-sided control, and
+>    name the population; **(B)** no arm exists — the honest outcome is a declared absence in
+>    `design_gaps.md`, and say what the entry should assert; **(C)** the arm could be built — state
+>    what generation spend it needs and why it is not a re-read.
+> 6. **Say what would change your recommendation.** If nothing would, say that, and treat it as a
+>    warning about the recommendation rather than a strength.
+>
+> **Your license to refuse (stated, because an unstated license is not exercised).** If this brief
+> is correct in prose and wrong when executed — a step that cannot be carried out as written, a
+> count with no population, a predicate that is not where it is claimed to be — **say so and route
+> it back, at the volume of a completion.** "The OQ said to" is not a witness. Scope is narrow:
+> *executed as written, this produces what the design forbids* — not "hard" or "I'd do it
+> differently."
+>
+> **Deliverable:** a recommendation document, `audits/<date>_oq285_mode3_measurement_arm/WRITEUP.md`
+> (the audit-writeup gate enforces that name and its header block; carry the `Fired:` bit). No code,
+> no `ISSUES.md` edit — the operator lands the disposition after step 2.
 
 **What resolution would change:** today a consumer reading a null/undetermined H¹ cannot tell
 "fewer than two positions produced a reading" from "a position exists that structurally cannot

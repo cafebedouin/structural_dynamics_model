@@ -373,6 +373,36 @@ system is constitutionally unable to detect in itself.
 Mode 1 interacts with Mode 2 in a way §7 makes concrete: a secrecy regime is institutionalized
 destruction of the conditions under which non-carriage is survivable.
 
+> **[EDITORIAL NOTE, added 2026-08-12 — an inconsistency in the table above, found by an external
+> control and NOT resolved here.]** The table sorts by *who could state it*, which is a claim about
+> **datum-possession**. Mode 2's cell then defines itself by *"no channel existed for it at the
+> boundary"*, which is a claim about **channel-existence**. **These come apart, and §1.2's own
+> worked case is where they do.** For the `0.0` fallback, someone *did* hold the framing as a datum
+> — whoever wrote the fallback held *"this is a default, not a measurement"* — so on possession it
+> is Mode 1, while on channel it is the Mode 2 the paper files it under. §5.2 half-concedes this
+> already (*"a tagged union or an out-of-band token would have preserved the distinction at
+> negligible cost"*): a repair that cheap is available precisely because someone held the thing.
+>
+> The distinction is not cosmetic, because **the repairs differ**. *Held by a party, no channel at
+> the boundary* is fixed by widening the channel — a tagged union, a status token, an out-of-band
+> field — and needs nobody to step outside their operation. *Held by nobody* (the Fogbank impurity;
+> the unstated genre rule) cannot be fixed by widening a channel, because there is no datum to put
+> in it; it needs someone to step outside the operation, which is the expensive move §3.3 says
+> exhortation does not produce. A three-mode table that routes both to one cell routes two prices
+> to one budget.
+>
+> Candidate dispositions, neither adopted: split Mode 2 into **2a (held, no channel)** and **2b
+> (held by nobody)**, or restate the sort column as *channel* throughout and let possession fall
+> out as a sub-property. The second is cheaper and loses the repair distinction; the first keeps it
+> and makes the table four rows.
+>
+> Provenance: `audits/2026-08-12_oq283_framing_boundary_discrimination/WRITEUP.md` §4, a
+> discriminating control run against `seat-theorem-v1.md` Corollary 2a on a six-instance in-repo
+> population. The finding is the control's only correction to this paper. **Recorded here rather
+> than in the tracker alone, because a reader of this section would otherwise have no way to know
+> the table has a seam — which is this paper's own subject applied to this paper.** Disposition is
+> the author's; ISSUES OQ-283 carries the evidence.
+
 ### 5.4 The surface signature
 
 The way this is usually first met, in any of the three modes:

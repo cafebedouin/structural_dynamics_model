@@ -3,12 +3,14 @@
 **A Framework for Systems Where What You See Depends on Where You Stand, Which Commitment You
 Are Looking At, and How Its Holder Stands Toward It**
 
-**Version: v8.0.1** *(2026-08-12: one addition — Corollary 4.1, the local-section masquerade,
-under Theorem 4 §3.4, incorporating `docs/concealment/concealment_without_a_concealer_v0_4.md`
-§3.6/E5 and its scurvy exemplar. Addition only; no prior claim revised. The concealment paper's
-larger question — whether boundary framing-loss is a third axis or lives in §5.2's declared
-exterior — is OPEN and gated on an operator ruling; see ISSUES OQ-283, whose control established
-separation from seat-theorem Corollary 2a and explicitly did **not** settle the axis question.)*
+**Version: v8.0.1** *(2026-08-12, two changes, both additive; no prior claim revised. (1)
+Corollary 4.1 under Theorem 4 §3.4 — the local-section masquerade — incorporating
+`docs/concealment/concealment_without_a_concealer_v0_4.md` §3.6/E5 and its scurvy exemplar. (2)
+§5.2 records the **operator ruling of 2026-08-12**: boundary framing-loss is **exterior**, with its
+reason stated as §5.2's own pre-commitment requires, and the exterior now has two members of one
+kind — relations between constraints, and relations between read-sites. The ruling was taken only
+after OQ-283's pre-registered control showed the material is NOT reducible to seat-theorem
+Corollary 2a, so the exterior was chosen rather than used as a dismissal.)*
 
 ---
 
@@ -605,6 +607,36 @@ hence either face or seat. It does **not** range over the relational network lay
 different kind of object, neither audited nor audited-against a single seat. The network layer is
 a declared **exterior** to the v8 ontology, not a candidate third role inside it. The limit is
 declared up front so it cannot later be invoked only to dismiss an inconvenient axis.
+
+**The exterior receives its first candidate, and the pre-commitment above is honored rather than
+spent (operator ruling, 2026-08-12; v8.0.1).**
+`docs/concealment/concealment_without_a_concealer_v0_4.md` describes *concealment without a
+concealer* — an artifact formed under one framing Π, consumed under another, with Π not carried
+across the boundary. It arrived as a candidate **third axis** alongside gauge and orientation.
+OQ-283's pre-registered control established that it is **not reducible to seat-theorem Corollary
+2a** (three of six in-repo instances had no party who held the framing as a datum, so "declare your
+seat" has no addressee) — which is what disqualified the easy dismissal. **It is nonetheless ruled
+EXTERIOR, and the reason is stated, because the clause above forbids ruling it exterior by
+default:**
+
+> A boundary is an **edge between read-sites**, not a position over content. Seat, gauge and
+> orientation are three answers to *where does this verdict stand*; framing-loss answers *what
+> survived the trip*, which presupposes two positions and a transport, and is therefore a relation
+> rather than a role. Applying the audit-direction discriminator to it returns nothing: a boundary
+> is neither audited nor audited-against a single seat — it is where the audit's own reference gets
+> mislaid. That is the exterior's defining property, reached by the same test that put the network
+> layer there.
+
+Two precisions a later instance will otherwise get wrong. **(1) Exterior is a category, not a
+location.** This does *not* place framing-loss in `affects_constraint` or the contamination
+network. The exterior now has **two members of one kind**: relations between *constraints* (the
+network layer) and relations between *read-sites* (boundaries). Wiring the second into the first
+would be a category error with a plausible-looking implementation. **(2) Exterior does not mean
+unimportant.** It means outside the seat/gauge/orientation ontology's jurisdiction — so the
+one-seat invariant and the audit-direction discriminator neither govern the material nor are
+threatened by it. [EDGE] The honest effect of this ruling is that it *lowers* the stakes for v8 and
+raises them elsewhere: the phenomenon is real and expensive, it is simply not this ontology's to
+adjudicate, and OQ-284/OQ-285 carry what remains.
 
 ### 5.3 What this retires
 
