@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-12 — [tripwire] New protocol `agent/uke_referee.md` — do NOT name it UKE_AUDIT; OQ-277 evidence completed (Wu letter, empty-by-defect marker, stub run)
+**Files:** `agent/uke_referee.md`, `agent/analysis/uke_audit.md`, `audits/2026-08-10_oq277_rq2_crosscoding/`
+**Tier:** tripwire
+
+**THE TRIPWIRE — two protocols, nearly one name.** `agent/uke_referee.md` (UKE_REFEREE) referees
+**someone else's** substantive work — a paper or program not in our publication pipeline — and ends
+in a letter to its author. `agent/analysis/uke_audit.md` (UKE_AUDIT v1.4) verifies **our own**
+artifact's protocol adherence and grounding integrity against a UKE_G metadata block, and ends in a
+compliance verdict. **Different objects; do not merge, and do not reuse the name.** The referee
+protocol was first written *as* `uke_audit_architecture.md` and renamed on discovering the
+collision — the OQ-278 shape, nearly minted inside a review protocol. It routes findings to the
+canonical F01–F36 matrix in `uke_audit.md` Appendix A and mints no rival codes; §0.1 of the referee
+file carries the comparison table. The wider suite (`agent/analysis/`: grounding → editing →
+reality → audit → review) is a pipeline on our own artifacts; the referee protocol sits outside it.
+
+**Validation posture, recorded once so it is not re-litigated (operator, 2026-08-12):** a protocol
+is proven by the next person who finds it useful, not by an accumulated evidence base. No
+provenance/outcome file is kept for it, deliberately — that would be apparatus about apparatus
+(`build_discipline.md` → *Don't answer "does the apparatus pay for itself?" by producing more
+apparatus*). Expect churn; its §11 carries only what changed and where it is thin.
+
+**OQ-277 evidence completed** (detail in that entry and the audit dir, not repeated here): the
+2026-08-11 letter to Wu filed with the evidence it reports and wired into the WRITEUP evidence map
+— its **55% catalog-vs-dataset self-agreement** finding is a scoping constraint on the whole
+experiment, since a confusion matrix against a 55%-self-agreeing reference cannot separate *our
+taxonomy disagrees with Wu's* from *Wu's disagrees with itself*. `responses/EMPTY_BY_DEFECT.md`
+added because **git does not track empty directories** — without it the 219-call failure vanished
+from a fresh clone and became indistinguishable from "never reached this phase." The full-scale
+**stub** run committed as the witness for SPEC §2.1 row 6, with a fail-closed requirement rather
+than a warning label: any scorer must read the sibling `_run.json` and assert `mode == "live"`,
+refusing on `stub` and on a missing/unparseable file.
+
+---
+
 ## 2026-08-12 — [tripwire] P3 VACATED from the defect taxonomy (index 3 empty, never reused) — the ruling lived only in the paper for a day while CLAUDE.md published the old six; OQ-286/287/288 minted from the v0.6 review
 **Files:** `CLAUDE.md`, `ISSUES.md`, `docs/amnesiac_institution/amnesiac_institution_v0_6.md`, `docs/concealment/concealment_without_a_concealer_v0_4.md`, `docs/technical/build_discipline.md`
 **Tier:** tripwire
