@@ -260,7 +260,7 @@ write path.**
 
 ## 11. Prior art — cited, because the earlier "no prior art" claim was false
 
-The three-arm `--add-dir` test run 2026-08-12 (fixture `scratchpad/adddir_test/`) is a
+The three-arm `--add-dir` test run 2026-08-12 (fixture preserved at `python/audits/oq289_prior_art_adddir/`) is a
 `claude`-spawning harness on this same delivery channel: a decline arm (`--add-dir`, no
 var → NONE) and two fire arms (shell var; `settings.json` env block → `ZARQUON-7741`),
 file tools disallowed so the token could not be read off disk, verbatim echo required.
