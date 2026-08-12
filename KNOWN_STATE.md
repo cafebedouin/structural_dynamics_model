@@ -59,7 +59,12 @@ mistyping §8.4 names. **OQ-289 demoted to Priority 6 background; no transport i
 
 **The method was tested at the read site, because "self-sufficient" is an authorial claim.** First
 4,096 B of the rewritten `feedback_prereg_review_riders.md` → 3 fresh instances, no other context,
-tools off: **13/13 topics, 3/3 instances, zero misses**, `turns=1` throughout.
+tools off: **13/13 topics, 3/3 instances, zero misses**, `turns=1` throughout. **Verdict carries its
+asymmetry: *self-sufficient by unanimous instance report, NO DECLINE ARM.* ** One-sided positive —
+nothing in the design separates a genuinely sufficient block from an instance reconstructing
+plausible topics from an incomplete one. The negative arm (same probe over a deliberately
+insufficient prefix) was not built, deliberately; a future campaign claiming the method *generally*
+owes it.
 
 **TRANSFERABLE DESIGN RULE from that `turns=1`:** the block's pointer is **descriptive** ("you can
 act correctly on this block alone"), not **instruction-shaped** ("consult it whenever asked about
@@ -85,6 +90,24 @@ should reopen it rather than be absorbed.
 
 **Remaining: 14 files at 43–89% delivered, staged not abandoned**, threshold declared (everything
 below ~45% is done; the rest goes to the monthly pass).
+
+**CLAUDE.md SCANNED for the same defect on the largest channel (read-only, 2026-08-12).** The
+pointer-wording rule generalizes past memory files to any always-loaded instruction, so `CLAUDE.md`
+was checked for constructions that send a reader to fetch instead of letting them act. **Result:
+substantially clean — the dominant pattern is the correct one.** The exemplar is the `[stack]`
+load-chain tripwire: it says *"Each suite's correct chain is in its own file header — read it
+first,"* **and then lists the three known extended chains**, so an instance that never opens a
+header can still act. Tripwire-plus-pointer, as the file's own lean-docs rule requires.
+
+**One weak instance, reported and NOT changed — it is a standing session-start directive and that
+is the operator's seat.** *"Both are living documents — consult at session start, amend as decisions
+are recorded"* (`## Project Context`, design-intent paragraph) is a fetch directive carrying **no
+operative content of its own**. It has half the smoke-run-2 shape: a pointer with nothing actionable
+attached. It lacks the other half — it fires at session start, when there is no task to displace,
+whereas the punishing case competed with a specific request (*"consult it whenever asked about X"*).
+So it is a **weaker instance, not the same defect**, and the honest reading is an attention cost
+(two large documents unconditionally, most sessions will not need them) rather than a suppression
+hazard. Named here so a future consolidation can weigh it; no edit made.
 
 ---
 

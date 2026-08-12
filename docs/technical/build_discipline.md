@@ -1359,6 +1359,36 @@ Corollary, and it is the load-bearing one: **an instrument that agrees with the 
 evidence the correction is incomplete, not evidence the correction is wrong.** The reflex on
 finding a mismatch is to re-check the new claim; check the instrument first.
 
+### The sharper sibling: a metric whose MEANING changed under it, caught by wiring
+
+The instance above was a stale *formula*. The same edit produced a second and less obvious one: a
+metric that stayed arithmetically correct while **its meaning silently changed underneath it.**
+
+The OQ-290 ruling front-loads memory files — the first 4 KB becomes a self-sufficient summary.
+Front-loading **grows the file and does not grow the delivered prefix**, so it *lowers* delivered
+fraction by construction. The readout, which had been built to motivate exactly this fix, would
+therefore have reported **the ruling's own correct execution as a worsening** (the first file went
+16% → 15%), and pushed two files past a line cap, raising a raw exposure count 1 → 3. Every number
+true; every number now meaning something different from what it meant when the metric was designed.
+
+**This is the same shape as the gate that could not pass — a metric that can only report badly —
+with one difference worth keeping: it was caught by WIRING, not by a freeze.** Nothing was red.
+Nobody re-derived anything. It surfaced because someone was adding an adjacent feature and looked at
+the output. That is not a procedure, which is why the rule below is about *when a fix lands* rather
+than about diligence:
+
+> **When a decision changes what an existing metric MEASURES, the metric owes a discriminator in
+> the same change.** Here it is a declared `front_loaded:` stamp: the readout labels those files
+> and states, in its own output, that delivered fraction is *not* a health metric for them. Without
+> the stamp the instrument argues against the fix it exists to motivate.
+
+**And the discriminator is itself a claim** (*An introduced instrument is itself a claim*, below).
+Its first version tested `"front_loaded:" in text[:600]` and **false-positived on a body mention** —
+caught immediately by the two-sided control written alongside it, which required an unstamped file
+carrying the phrase in its body to stay quiet. Fixed to parse the actual frontmatter block. **The
+discipline fired twice inside one edit**: once to notice the metric had changed meaning, once to
+catch the flaw in the thing added to fix it.
+
 ---
 
 ## An introduced instrument is itself a claim (the recursion, generalized past diagnostics)

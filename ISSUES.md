@@ -12225,6 +12225,17 @@ rewritten `feedback_prereg_review_riders.md` was given to **3 fresh instances wi
 compound rules — over-enumeration, not loss; k=2 and k=3 returned exactly 13). Evidence:
 `python/audits/oq290_frontload_check/`.
 
+**VERDICT STATED WITH ITS ASYMMETRY, per this repository's own standard applied to its own remedy:
+*self-sufficient by unanimous instance report, NO DECLINE ARM.* ** The test is a one-sided positive.
+Nothing in its design distinguishes a genuinely self-sufficient block from an instance
+**reconstructing plausible topics from an incomplete one** — the prompt supplies the domain, and a
+fluent worker can enumerate prereg riders it was never shown. The obvious negative arm (the same
+probe over a deliberately *insufficient* prefix, which must return a materially shorter or wrong
+list) was **not built, deliberately**: it would cost more than being wrong here, because the failure
+mode is recoverable by the monthly pass and the claim is scoped to one file. **Recorded rather than
+fixed** — the result stands at the altitude claimed and no higher, and a future front-load campaign
+that wants to claim the method generally owes the decline arm.
+
 **`turns=1` on all three — no instance deferred to a fetch**, despite the block carrying a `Read`
 pointer. That is the OQ-292 suppression mode NOT firing, and the reason is a transferable design
 rule: the block's pointer is **descriptive** ("you can act correctly on this block alone") rather
