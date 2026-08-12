@@ -12019,7 +12019,7 @@ small false absence this program is about). The three-arm `--add-dir` test run 2
 a decline arm (`--add-dir`, no var → NONE) and two fire arms (shell var; `settings.json` env block →
 `ZARQUON-7741`), file tools disallowed so the token could not be read off disk, verbatim echo
 required. **It discharges nothing** — self-report only, non-hex token, no slope instrument, k=1 —
-but it **de-risks smoke item 3** (a live call lands and parses) and **partially pre-witnesses
+but it **de-risks the smoke item 'a live call lands and parses'** and **partially pre-witnesses
 INJECT** (the model does echo a context-only token verbatim under tools-disallowed).
 
 **Isolation hazard the driver must handle: `--add-dir` is now an instruction-injection channel, by

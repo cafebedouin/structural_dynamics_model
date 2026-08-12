@@ -30,6 +30,29 @@ honest move (4) of that section; operator ruling 2026-08-10).
    the exchange message. If the memory index is absent (fresh machine), the
    check SKIPS with a declared line — never a silent pass posing as a check.
 
+3. DELIVERY FRACTION — **REPORTING ONLY, DELIBERATELY NOT ENFORCING** (2026-08-12,
+   ISSUES OQ-289/OQ-290). The channel cap above is an ATTENTION cap: it bounds
+   what a fresh instance must hold. The memory files it produces are delivered
+   through a second channel with a per-file DELIVERY cap, and the two pull in
+   opposite directions — consolidating for attention is what created exposure to
+   the delivery limit (amnesiac_institution_v0_6.md §8.5).
+
+   This prints the delivered-fraction table beside the channel cap. It does NOT
+   gate, for two reasons and both are load-bearing:
+
+     (a) WHICH CAP BINDS IS UNSETTLED. The harness carries two candidate constant
+         pairs, and they disagree by a factor of nineteen about how many files are
+         affected. Enforcing either would encode an unwitnessed prediction into an
+         instrument. OQ-289 is the run that settles it.
+     (b) A CHECK RED BY CONSTRUCTION AT INTRODUCTION TEACHES THE INSTITUTION TO
+         ROUTE AROUND IT. Enforcing today would go red on nineteen files the moment
+         it landed and stay red until an Ω_P ruling nobody has scheduled — §2.6's
+         green check inverted, and no better.
+
+   PROMOTE TO ENFORCING WHEN OQ-290 LANDS, with the cap OQ-289 witnessed. Until
+   then this is a readout, and it is labelled as one everywhere it prints.
+   No spend-bearing probe belongs in scripts/gate.sh; this reads the filesystem.
+
 --check runs the fixture selftest FIRST, then the live sweep (probe carries its
 positive controls on every invocation). Wired into scripts/gate.sh.
 """
@@ -47,9 +70,18 @@ from paths import AUDITS  # noqa: E402
 # Dirs dated strictly after this date must carry the Fired: bit.
 CATCH_ADOPTION = date(2026, 8, 10)
 FEEDBACK_CAP = 33  # end state of the 2026-08-10 memory prune (78 -> 33)
-MEMORY_MD = Path.home() / (
-    ".claude/projects/-home-scott-bin-structural-dynamics-model/memory/MEMORY.md"
+MEMORY_DIR = Path.home() / (
+    ".claude/projects/-home-scott-bin-structural-dynamics-model/memory"
 )
+MEMORY_MD = MEMORY_DIR / "MEMORY.md"
+
+#: Candidate per-file DELIVERY caps for recalled memory (OQ-289). REPORTING ONLY —
+#: which pair binds is exactly what OQ-289 runs to settle, so both are printed and
+#: neither is enforced. Recorded as (bytes, lines), harness 2.1.229.
+DELIVERY_CAPS = {"NSp": (4096, 200), "kae": (25000, 200)}
+#: How many rows of the over-cap table to print. The count is ALWAYS printed in full;
+#: only the per-file listing is capped, and the elision is stated rather than silent.
+DELIVERY_ROWS = 5
 
 NAME_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})_.+$")
 FIRED_RE = re.compile(r"^\*\*Fired:\*\*\s+(live|latent|no)\b", re.MULTILINE)
@@ -122,6 +154,45 @@ def check_channel(memory_path: Path) -> tuple[list[str], str]:
     return [], f"channel {n}/{FEEDBACK_CAP}"
 
 
+def delivery_report(memory_dir: Path) -> tuple[dict, list[str]]:
+    """Per-file delivered fraction against each CANDIDATE cap. REPORTING ONLY.
+
+    Returns ({cap_name: [(name, bytes, lines, delivered_fraction), ...]}, lines_to_print).
+    Returns no problems by construction — this is a readout, not a gate, and it says so
+    in its own output. See module docstring item 3 for why that is deliberate and what
+    would license promoting it.
+
+    MEMORY.md is excluded from the sibling census: it is the always-loaded index and
+    travels the other path. Counting it as a sibling is how "20 of 54" got reported for
+    what is 19 of 53 siblings — a small conflation, and exactly the kind this instrument
+    exists to stop repeating.
+    """
+    if not memory_dir.is_dir():
+        return {}, [f"delivery SKIPPED (no memory dir at {memory_dir})"]
+    sibs = sorted(p for p in memory_dir.glob("*.md") if p.name != "MEMORY.md")
+    out: dict = {}
+    for cap_name, (cap_bytes, cap_lines) in DELIVERY_CAPS.items():
+        rows = []
+        for p in sibs:
+            b = p.stat().st_size
+            n = p.read_text(encoding="utf-8", errors="replace").count("\n") + 1
+            if b > cap_bytes or n > cap_lines:
+                rows.append((p.name, b, n, min(1.0, cap_bytes / b) if b else 1.0))
+        out[cap_name] = sorted(rows, key=lambda r: r[3])
+    printed = [f"delivery (REPORTING ONLY, not gated — OQ-289 settles which cap binds; "
+               f"promote to enforcing when OQ-290 lands): {len(sibs)} sibling files"]
+    for cap_name, rows in sorted(out.items()):
+        cb, cl = DELIVERY_CAPS[cap_name]
+        printed.append(f"  under {cap_name} ({cb} B / {cl} lines): "
+                       f"{len(rows)} of {len(sibs)} over cap")
+        for name, b, n, frac in rows[:DELIVERY_ROWS]:
+            printed.append(f"    {frac:5.0%}  {b:6d} B  {n:4d} ln  {name}")
+        if len(rows) > DELIVERY_ROWS:
+            printed.append(f"    ... and {len(rows) - DELIVERY_ROWS} more "
+                           f"(listing capped at {DELIVERY_ROWS}; the COUNT above is full)")
+    return out, printed
+
+
 def selftest() -> int:
     """Positive controls: each check must FIRE on a planted violation and stay
     quiet on a conforming twin. want=fail/pass pairs per check."""
@@ -175,6 +246,41 @@ def selftest() -> int:
         if probs or "SKIPPED" not in summary:
             failures.append("channel control: absent index must SKIP declaredly")
 
+    # -- delivery readout: must SELECT the over-cap files and EXCLUDE MEMORY.md ---
+    # Two-sided per cap: a file over the small cap but under the large one must appear
+    # in exactly one of the two tables. A readout that reported the same set under both
+    # would look like a working instrument while measuring nothing cap-specific.
+    with tempfile.TemporaryDirectory() as td:
+        d = Path(td)
+        (d / "MEMORY.md").write_text("x" * 90_000)          # must be EXCLUDED
+        (d / "small.md").write_text("x" * 1_000)            # under both caps
+        (d / "mid.md").write_text("x" * 10_000)             # over NSp, under kae
+        (d / "big.md").write_text("x" * 30_000)             # over both
+        (d / "longlines.md").write_text("y\n" * 300)        # over both LINE caps
+        tables, printed = delivery_report(d)
+        nsp = {r[0] for r in tables["NSp"]}
+        kae = {r[0] for r in tables["kae"]}
+        if "MEMORY.md" in nsp | kae:
+            failures.append("delivery control: MEMORY.md must be EXCLUDED from the "
+                            "sibling census (it travels the always-loaded path)")
+        if "small.md" in nsp | kae:
+            failures.append("delivery control: an under-cap file false-fired")
+        if "mid.md" not in nsp:
+            failures.append("delivery control: a file over NSp did NOT appear")
+        if "mid.md" in kae:
+            failures.append("delivery control: a file UNDER kae appeared in the kae "
+                            "table — the two caps are not being applied separately")
+        if not ({"big.md", "longlines.md"} <= nsp & kae):
+            failures.append("delivery control: files over BOTH caps must appear in both")
+        if "longlines.md" not in kae:
+            failures.append("delivery control: the LINE cap is not being applied")
+        if not any("REPORTING ONLY" in ln for ln in printed):
+            failures.append("delivery control: the readout must label itself "
+                            "REPORTING ONLY wherever it prints")
+        _, skipped = delivery_report(d / "nonexistent")
+        if not any("SKIPPED" in ln for ln in skipped):
+            failures.append("delivery control: an absent memory dir must SKIP declaredly")
+
     for f in failures:
         print(f"SELFTEST FAIL: {f}")
     return 1 if failures else 0
@@ -203,6 +309,11 @@ def main() -> int:
     )
     for p in problems:
         print(f"PROBLEM: {p}")
+    # Reporting-only readout. Contributes NOTHING to the return code by design —
+    # see module docstring item 3.
+    _, delivery_lines = delivery_report(MEMORY_DIR)
+    for ln in delivery_lines:
+        print(ln)
     print(f"apparatus: {rate}; {chan_summary}; "
           + ("RED" if problems else "GREEN"))
     return 1 if problems else 0
