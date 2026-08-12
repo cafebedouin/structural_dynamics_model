@@ -11908,6 +11908,56 @@ is ANALYTIC."* **Both documents are committed, both are current, and neither say
 canonical.** A reviewer of either finds the other and cannot tell which is the original — the exact
 shape of Build Discipline Pattern 2, on the substrate of the papers that document Pattern 2.
 
+**OPERATOR'S ORIGINAL INTENT, stated 2026-08-12 and recorded because it is decision-relevant for the
+split and was living only in conversation.** The document set out to describe
+`build_discipline.md` / `design_discipline.md` / `ISSUES.md` / `KNOWN_STATE.md` / `CLAUDE.md`
+**as a development practice** — motivated by the gap between that and what is discussed as "prompt
+engineering" or as the frontier of AI research — on the ground that much of what happens in this
+repository is not software development. **That intent is the thing v0.2's genre recast displaced**,
+and it was never restored. The recast was made on a reviewing instance's *suspicion* of duplication
+with no comparison run (construction note: the paper's own rule violated at the level of the paper,
+standing through three drafts). When the comparison was finally run it split: taxonomy claims
+duplicated and properly withdrawn, theory claims not. **The practice claim was never the claim Wu
+duplicated** — Wu observed failures in a production runtime; this repository built an apparatus that
+makes failures visible, a memory economy deciding what a future worker knows, and an organizational
+form, then instrumented its own catch rate. Different objects, not competing results. Treat the
+§13 systematization withdrawal as correct *for the claim it was about* and as collateral for
+everything else.
+
+**Consequence for the split ruling:** the recommendation below is not merely a tidier packaging —
+it is the restoration of the document's original subject. v0.6 minus the derivation is
+substantially the practice paper already.
+
+**Reframe carried with it (operator-endorsed direction, 2026-08-12).** The paper is **not** a
+failure taxonomy — that is the weakest part, the part Wu owns, and the part that keeps attracting
+the duplication objection. It is **an epistemic architecture for research whose workers do not
+persist**, whose distinguishing feature is that it is **machine-enforced rather than described**:
+14 gate checks each carrying its own selftest, `spec_enum_check` reddening on spec/code divergence,
+`omega_resolver check` on dangling deps, `audit_writeup_gate` on the header, `apparatus_instrument`
+on the memory channel cap and catch rate. A reader can clone it and watch it go red. The five
+patterns demote from *the result* to *evidence that the architecture catches things*.
+
+**Two artifacts owed to the reframe.** (a) **The Wu letter (2026-08-11) is not in the repository** —
+the findings live in `audits/2026-08-10_oq277_rq2_crosscoding/`, the letter as sent is nowhere.
+Commit it and use it as the appendix: it demonstrates the practice on an **external** object a
+reader can evaluate without repo access (pre-registration before comparison, a prediction recorded
+as wrong, defeaters stated before the numbers, reciprocal disclosure of this project's own index
+collision and uncontrolled statistic, and per-claim provenance typing). Sharpest line for a methods
+audience: the `次类` regex returned **6 where the truth was 8, and 6 still produced a plausible
+correlation in the same direction** — a wrong number agreeing with the right number's conclusion,
+no error signal anywhere in the loop. (b) **OQ-286 should run before publication**: the architecture's
+own delivery mechanism may be silently truncating, and publishing the architecture without knowing
+whether it arrives would be the paper's subject committed by the paper.
+
+**Standing hazard for this document, which has now fired twice: GENRE DRIFT, not competition.** Four
+genre changes, each argued as though the document were one kind of thing. §0's claim typing is the
+structural fix and is in. The behavioral rule is already ours: **a suspicion is not a run**, and
+*prove before you replace* applies to documents. If a reviewer says "isn't this just X" — run the
+comparison, then decide. That is what produced the Wu letter, which is worth more than the recast
+ever was. **And bound the recursion**: describe the apparatus as of a stated date; do not grow new
+apparatus in order to describe it (`build_discipline.md` → *Don't answer "does the apparatus pay for
+itself?" by producing more apparatus*).
+
 **The recommended split (recommendation, not ruling).** v0.6 keeps **the institution** — the case
 study, differential amnesia (§3.3), the five records (§3.4), the memory economy, the organizational
 form, self-instrumentation, Θ-7. That is the material with no external counterpart and it is a
