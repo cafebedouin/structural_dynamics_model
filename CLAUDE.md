@@ -1035,7 +1035,24 @@ spoken in chat and not written to substrate is a handoff that did not happen.
 The auto-memory directory (`~/.claude/projects/-home-scott-bin-structural-dynamics-model/memory/`)
 accretes one file per session finding. Periodically consolidate: merge same-principle clusters,
 delete memories since promoted into repo docs, trim MEMORY.md to one-line index entries, prune
-resolved/stale items. The same monthly pass covers:
+resolved/stale items.
+
+**TRIPWIRE — MERGING TRADES AN ATTENTION CAP FOR A DELIVERY CAP, AND NOTHING GOES RED (2026-08-12,
+OQ-289/OQ-290).** `MEMORY.md` is always-loaded, but the ~53 sibling files arrive as per-turn
+`relevant_memories` attachments under a **per-file** cap two-to-three orders of magnitude smaller
+than the always-loaded path's. The 2026-08-10 consolidation is what pushed files over it: **19 of 53
+now exceed 4,096 B** (delivered fractions 16–89%) — or **1 of 53**, if the other documented constant
+(25,000 B) binds instead; which one is unsettled and is exactly what OQ-289 runs. An over-limit file
+arrives truncated with a `Read` pointer appended, and whether an instance follows that pointer is
+also unwitnessed. So: **when merging, prefer front-loading each cluster file with a self-sufficient
+summary in its first 4 KB** over producing a large file whose tail may never be delivered, and do
+not treat "merged, index shorter" as finished. `python3 python/apparatus_instrument.py --check`
+prints the delivered-fraction table (**reporting only** — do not promote it to enforcing until
+OQ-290 rules). Full provenance: KNOWN_STATE 2026-08-12; the retracted always-loaded version of this
+hazard is OQ-286 (`CLAUDE.md` itself has 46× headroom and is skipped *whole*, never tail-truncated —
+do not re-mint that claim).
+
+The same monthly pass covers:
 
 - **KNOWN_STATE.md roll-off** — entries older than ~30 days get the promotion test once more,
   then compress in place per the roll-off rule in its header. Verify with

@@ -45,6 +45,109 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-12 — [correction-key] OQ-286 RETRACTED (carrier misidentified): `CLAUDE.md` is not truncated — it is SKIPPED WHOLE above 4 MB, at 46× headroom. The recall channel is where a limit plausibly binds (OQ-289/OQ-290)
+**Files:** `ISSUES.md`, `docs/amnesiac_institution/amnesiac_institution_v0_6.md`, `python/audits/oq289_recall_canary.py`, `python/audits/oq289_prereg_draft.md`, `python/apparatus_instrument.py`
+**Tier:** correction-key
+
+**What is corrected, and how any prior claim about it may now be cited.** OQ-286 asked whether the
+always-loaded instruction set is silently truncated at load time. It is not, and the mechanism was
+wrong as well as the margin:
+
+| Path | Constant | Behaviour above it | Today |
+|---|---|---|---|
+| `CLAUDE.md` ("Project" read) | `R9o` = 4,194,304 B | **file SKIPPED WHOLE** + debug log + `context_claude_md_load` / `file_skipped_special_or_oversize` telemetry; **no partial content** | 91,029 B = **2.17%**, 46× headroom |
+| `WEr(content, tag)` memory branch | `kae` = 25,000 B / `iJ` = 200 lines | truncated, `contentDiffersFromDisk: true` | `MEMORY.md` 9,906 B / 83 lines; **1 of 53** siblings over |
+| `relevant_memories` (`QSp` → `PIe(…,{truncateOnByteLimit:true})`) | `NSp` = 4,096 B / `Npa` = 200 lines | truncated + appended notice + a `Read` pointer | **19 of 53** siblings over |
+
+**There is no regime in which the rules at the end of `CLAUDE.md` are dropped while the rest
+arrives** — the failure is all-or-nothing and it is *logged*, i.e. loud, i.e. not this program's
+subject matter. Delivered always-loaded set measured at **102,695 B** ≈ 27.0k tokens (CLAUDE.md
+91,029 / MEMORY.md 9,906 / global 718 / SessionStart hook 1,042), CLI **2.1.229**,
+`~/.claude/settings.json` md5 `bc56274c`.
+
+**Two arithmetic corrections to the Phase-0 read that produced this** (both found on re-witness,
+both recorded because the numbers were about to enter the record): the delivered total is
+**102,695 B, not 101,695** (the share column already implied the larger denominator), and the
+sibling exposure is **19 of 53 siblings**, not "20 of 54" — that figure counted `MEMORY.md` as a
+sibling, and `MEMORY.md` travels the *always-loaded* path, not the recall path.
+
+**THE FINDING THAT SHARPENED THE QUESTION, and it is why OQ-289 refuses to close on a code-read.**
+`WEr` has a **non-index call site** — `WEr(s.content,"memory")` — so the 25,000/200 pair has a
+memory-*content* branch and not only an index one. **The two candidate pairs disagree by a factor
+of nineteen about live exposure.** Which binds is unsettled, and the disposition of nineteen live
+files rides on it.
+
+**The asymmetry, recorded so it does not read as budget rationalization.** OQ-286 closes on a
+code-read; OQ-289 refuses one. Justified by **consequence, not cost**: a code-read error at 46×
+headroom must be wrong by a factor of forty-six to change the verdict, while a code-read error on
+the memory channel misdirects the disposition of nineteen live files.
+
+**How to cite this going forward.** "The always-loaded set may be truncating" is **retracted** —
+do not repeat it, in the papers or anywhere else. "Recalled memory files may be arriving truncated"
+is **`[UNWITNESSED]` with a named test** (OQ-289). The binary constants are **predictions to be
+falsified**, not findings: they witness shipped code, not the path taken. Any verdict from the run
+carries its altitude — *"truncates at N bytes per file, model M, CLI 2.1.229"* — because **five CLI
+versions shipped in six days.**
+
+**Credit, reduced and load-bearing.** The catch came from a **substrate read — observation from
+outside the frame — not from the method.** The method's contribution was the `[UNWITNESSED]` tag
+that got the read scheduled. *"Our discipline caught us"* is the Θ-7 sentence and is not available
+here.
+
+Landed: `c573fa0c` (ISSUES: retraction + OQ-289 + OQ-290), `76f96ecc` (paper §3.5 / §8.5 / §7.4.1
+corrections and the dependent-site sweep), `17c4a599` (driver + staged prereg + reporting-only
+delivery readout). Gate GREEN at each.
+
+---
+
+## 2026-08-12 — [tripwire] `python/audits/oq289_recall_canary.py` has spent NOTHING; the pre-registration is STAGED outside `audits/` and must be MOVED, not copied
+**Files:** `python/audits/oq289_recall_canary.py`, `python/audits/oq289_prereg_draft.md`, `python/apparatus_instrument.py`
+**Tier:** tripwire
+
+**THE TRIPWIRE — three ways a fresh instance silently gets this wrong.**
+
+1. **The prereg is at `python/audits/oq289_prereg_draft.md`, NOT in `audits/`.** A post-adoption
+   audit dir with no `WRITEUP.md` turns `audit_writeup_gate` **red**, and a check red by
+   construction at introduction teaches the institution to route around it. On run day, **`git mv`
+   it** into `audits/<date>_oq289_recall_canary/PREREGISTRATION.md` — *do not copy*.
+   `assert_spend_go()` refuses to spend while the staging file still exists, because two live
+   copies of a frozen document with no queryable fact of canonicity is Pattern 2 performed on the
+   freeze itself.
+2. **The driver's header says NO MODEL CALL HAS EVER BEEN MADE. If that stops being true, change
+   the header in the same commit.** The predecessor driver's header read exactly that for a week
+   after a 219-call run — every word true when written, every word false the moment the run
+   happened, in the file that guards against it.
+3. **The delivery readout in `apparatus_instrument.py` is REPORTING ONLY and must stay that way
+   until OQ-290 lands.** It contributes nothing to the return code by design. Promoting it to
+   enforcing today would go red on 19 files and stay red until an Ω_P ruling nobody has scheduled.
+
+**Isolation fact a fresh instance will not guess: `--add-dir` is an instruction-injection channel,
+by default.** `CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1` is in `~/.claude/settings.json` as
+of 2026-08-12 (verified by a three-arm before/after test) and gates `.claude/CLAUDE.md` and
+`.claude/rules/` in the added directory as well as the top-level `CLAUDE.md`. Under a token-slope
+instrument that is an uncontrolled payload landing **in the exact quantity being measured**.
+**Context assembly is now a function of TWO files and only one of them was being watched** — hence
+the settings md5 is pinned per unit on the same footing as the live `CLAUDE.md` guard. Do **not**
+relocate `CLAUDE_CONFIG_DIR`: `~/.claude/.credentials.json` lives there and moving it likely breaks
+auth, producing a failure unrelated to the hypothesis. A fresh scratch **cwd** is sufficient — the
+harness keys the memory dir off the cwd, so a scratch cwd gets its own **empty** memory dir.
+
+**Four defects were found in the driver by the controls built to catch them, and all four are the
+reason the control set is what it is** (each now has a two-sided test): `orphaned_controls()` named
+`classify`/`slope`/`slope_band` on its first run (verdict assignment had been deferred to the
+writeup, leaving the instrument unwired **and** letting the analyst assign verdicts after seeing
+data — fixed by wiring, not exempting); the isolation guard compared dicts of different shapes so
+one clause **could never pass**, visible only to its converse control, which it did not have;
+gate 0 caught the filler generator unable to hit an exact byte target at high line counts — i.e.
+exactly the rungs that de-confound `Npa` from `NSp`; and a full run minted one
+`~/.claude/projects/<key>` per unit and removed none.
+
+Witnesses: driver selftest **70 PASS / 0 FAIL**; stub run 36/36 responses persisted, scratch dirs
+cleaned to 0, live memory dir intact at 54 files; `apparatus selftest GREEN`; `./scripts/gate.sh`
+**GATE: GREEN** (13 checks). Commit `17c4a599`.
+
+---
+
 ## 2026-08-12 — [tripwire] New protocol `agent/uke_referee.md` — do NOT name it UKE_AUDIT; OQ-277 evidence completed (Wu letter, empty-by-defect marker, stub run)
 **Files:** `agent/uke_referee.md`, `agent/analysis/uke_audit.md`, `audits/2026-08-10_oq277_rq2_crosscoding/`
 **Tier:** tripwire

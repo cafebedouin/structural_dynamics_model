@@ -93,9 +93,9 @@ structural_dynamics_model/
 │   ├── shared/                       # utility package (loader, constants, maxent,
 │   │                                 #   role_flip + independence read-site flags OQ-188/186)
 │   ├── reports/                      # report query subpackage
-│   ├── tests/                        # standalone test scripts (16 files, count 2026-07-11)
-│   ├── sweeps/                       # parameter variation scripts (12 files)
-│   └── audits/                       # audit, diagnostic, probe scripts (19 files)
+│   ├── tests/                        # standalone test scripts (21 files, count 2026-08-12)
+│   ├── sweeps/                       # parameter variation scripts (23 files, count 2026-08-12)
+│   └── audits/                       # audit, diagnostic, probe scripts (76 files, count 2026-08-12)
 ├── agent/
 │   ├── c-orchestrator.py         # Primary authoring entry point (7-step chain; step 7 = gated auto-commit)
 │   ├── llm_call.py               # Canonical Anthropic call path (ModelCallError, count_tokens) —
