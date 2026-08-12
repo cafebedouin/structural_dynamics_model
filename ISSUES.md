@@ -12244,6 +12244,49 @@ can be wrong.
 
 ---
 
+## OQ-291 — `retracted` has no status token, so "the question was misaimed" is indistinguishable from "the question was answered" in every machine view
+
+**Ω-type:** Ω_C — what the token set should be is a naming ruling with no seat-free fact. That a
+retraction currently has nowhere to land is Ω_E and is settled below.
+
+**Status:** open — minted 2026-08-12 from the OQ-286 close.
+**Priority:** 5
+**Deps:** blocked_on_human oq291-status-token-ruling
+
+**The gap, witnessed.** The status grammar admits `{open, investigating, mitigated, partial,
+resolved, disposed, future}`. OQ-286 was **retracted** — its carrier was misidentified, so the
+question was never answered and never will be in the form it was asked. The only available
+landing was `disposed — retracted, carrier misidentified`, and **the reason lives in prose after
+the em-dash, where the router cannot see it.** `issues/INDEX.md` shows OQ-286 as `disposed`,
+which is the same token used for won't-build (OQ-152), superseded (OQ-01), and
+answered-reframed-negative — four different epistemic situations sharing one machine-readable
+label.
+
+**Why this is worth a token rather than a convention.** A retraction is the one closing move that
+says *the instrument was pointed at the wrong thing* — which is the highest-value signal in the
+tracker for anyone auditing whether the apparatus works, and it is exactly what
+`amnesiac_institution_v0_6.md` §7.4.1 now reports as a **pattern** (two instances: the
+sixteen-texts manifest, the always-loaded canary). **Carrier misidentification will recur** — it
+is a structural consequence of pre-registering tests against an unexamined choice of channel — and
+each recurrence currently degrades to `disposed` plus prose.
+
+**What resolution would change.** `python3 python/apparatus_instrument.py --check` reports the
+`Fired:` catch rate as the apparatus's own falsifier (OQ-276). A **retraction count is the
+complementary instrument**: `Fired:` measures *did the apparatus catch something*; retractions
+measure *was the apparatus aimed at something*. The second is not currently countable, so the
+OQ-288 stratum census cannot use it either.
+
+**Options for the ruling (not a recommendation set — the naming is the operator's):**
+1. Add `retracted` to the token set (touches `issues_status.py`, `omega_resolver.ACTIVE`, the
+   footer grammar, `issues/INDEX.md` regeneration, and the checker's selftest).
+2. Keep `disposed` and add a machine-readable **reason** sub-field, so all four situations stay
+   distinguishable without growing the token set.
+3. Declare the conflation acceptable and record it as a design gap, since the prose is greppable.
+
+*Not a blocker for OQ-289 or OQ-290; minted so the gap is a checked fact rather than a memory.*
+
+---
+
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

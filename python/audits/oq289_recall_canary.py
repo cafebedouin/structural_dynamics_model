@@ -175,6 +175,30 @@ BASELINE_EPS_TOKENS = 50.0
 CANARY_RE = re.compile(r"\b[0-9a-f]{16}\b")
 IMPORT_RE = re.compile(r"@[A-Za-z0-9_./-]+")
 
+#: SECONDARY DISCRIMINATOR, added 2026-08-12 after reading the full `WEr` body.
+#: The two truncation paths append DIFFERENT notices, so a truncated file SAYS which
+#: path cut it. That is a direct, self-identifying answer to underdetermined question
+#: (a) — far stronger than inferring the governing pair from where a threshold lands.
+#:
+#:   WEr  -> "\n\n> WARNING: this memory file is <what> . Only part of it was loaded.
+#:            Keep each memory file focused on one topic."          NO Read pointer.
+#:   PIe  -> "This memory file was truncated (<N> byte limit | first <N> lines).
+#:            Use the Read tool to view the complete file at: <path>"   HAS a pointer.
+#:
+#: The asymmetry is load-bearing for OQ-290: **under WEr there is no pointer at all**,
+#: so "accept truncate-plus-pointer" is not an available disposition on that branch,
+#: and Arm A′'s question (does an instance follow the pointer?) is only well-posed on
+#: the PIe branch. Recorded here so the run cannot quietly answer a question that does
+#: not arise.
+NOTICE_WER = "Only part of it was loaded"
+NOTICE_PIE = "This memory file was truncated"
+#: WEr's notice also names the AXIS that fired: byte-only, line-only, or both.
+NOTICE_AXIS = {
+    "line_only": re.compile(r"\d+ lines \(limit: \d+\)"),
+    "byte_only": re.compile(r"\(limit: [^)]+\) — its lines are too long"),
+    "both": re.compile(r"\d+ lines and "),
+}
+
 LIVE_PROJECT_KEY = "-home-scott-bin-structural-dynamics-model"
 LIVE_MEMORY_DIR = pathlib.Path.home() / ".claude" / "projects" / LIVE_PROJECT_KEY / "memory"
 LIVE_CLAUDE_MD = REPO_ROOT / "CLAUDE.md"
@@ -185,6 +209,11 @@ LIVE_SETTINGS = pathlib.Path.home() / ".claude" / "settings.json"
 #: frozen document with no queryable fact of canonicity, which is Pattern 2 on the
 #: freeze itself. assert_spend_go() refuses if the staging file still exists.
 PREREG_STAGING = pathlib.Path(__file__).resolve().parent / "oq289_prereg_draft.md"
+#: Smoke's own scope declaration. Smoke deliberately does NOT require the frozen prereg
+#: — it runs first, by ruling — but "no freeze" must not mean "no stated scope". This
+#: file states what smoke may and may not conclude, and its md5 is persisted with every
+#: smoke artifact, so the scope is on the record BEFORE the probe rather than after.
+SMOKE_SCOPE = pathlib.Path(__file__).resolve().parent / "oq289_smoke_scope.md"
 AUDIT_SLUG = "oq289_recall_canary"
 SENTINEL = "<!--OQ289-FIRST-RESULT-->"
 
@@ -351,6 +380,86 @@ def build_ladder() -> list[dict]:
     units.append({"arm": "LEAK", "rung": "no_payload", "cap": None,
                   "axis": "control", "side": None, "bytes": 0, "lines": 0, "batch": 0})
     return units
+
+
+#: Smoke payload size. Chosen to be FAR under every candidate constant on both axes
+#: (4,096 / 25,000 bytes; 200 lines) so the probe cannot carry threshold information.
+SMOKE_BYTES = 512
+SMOKE_LINES = 10
+#: A distinct marker prefix so smoke artifacts can never be confused with run canaries.
+SMOKE_PREFIX = "SMOKE-MARKER"
+
+
+def build_smoke_units() -> list[dict]:
+    """The feasibility probe. IT IS NOT A RUNG OF THE LADDER, and that is deliberate.
+
+    ORDERING (operator ruling 2026-08-12): smoke runs BEFORE the pre-registration is
+    frozen, because smoke settles whether Arm A is runnable at all. Freezing a prereg
+    that names an unrunnable test forces an amendment, and an amended freeze is a weaker
+    instrument than one frozen a day later.
+
+    That reordering is only legitimate if smoke carries NO INFORMATION ABOUT THE
+    HYPOTHESIS, so:
+
+      - the payload is 512 B / 10 lines — far under every candidate constant on both
+        axes, so nothing about it bears on WHERE truncation begins;
+      - it carries ONE marker with a distinct prefix, not a START/MIDDLE/END triple, so
+        there is no position signal to read;
+      - the question asked is **does the attachment arrive**, never **how much of it**.
+
+    Without that discipline, §7.5's seeded-draw problem eats the first real run: a
+    prompt written after seeing a threshold result is a seeded draw, and "run it again"
+    is unavailable in its usual form.
+
+    THE TOOLS/NO-TOOLS PAIR IS ONE DISCRIMINATOR. If the no-tools arm declines while the
+    tools arm fires, `--tools ""` suppresses the recall attachment and Arm A as designed
+    would return a null that means nothing.
+
+    THREE ARMS AS OF THE 2026-08-12 RE-DESIGN. The first smoke ran two arms and returned
+    0/3 on BOTH — a null that, as run, was UNINTERPRETABLE, because nothing in it showed
+    the memory channel could deliver anything at all. "I didn't find it" is a fact about
+    the search until the search is shown to find. Two confounds were live:
+
+      - the scratch memory dir contained ONLY the sibling file, with **no `MEMORY.md`
+        index**, while the live dir has one. Recall is plausibly index-driven (`WEr`'s
+        own default tag is "index"), so there may have been nothing to select FROM;
+      - `relevant_memories` is relevance-selected per turn, and the smoke prompt had no
+        semantic overlap with the payload's filler.
+
+    SMOKE_INDEX is the positive control that makes a 0 mean something. Its marker goes
+    in the scratch `MEMORY.md` itself — the ALWAYS-LOADED path, not the attachment path
+    — at a size far under every candidate constant, so it still carries no threshold
+    information. It splits the null that was previously unreadable:
+
+        INDEX fires, siblings do not  -> the ATTACHMENT path specifically is the problem
+        INDEX also does not fire      -> the memory subsystem is not engaging under -p;
+                                         the transport is wrong, not the flag
+    """
+    common = {"cap": None, "axis": "smoke", "side": None,
+              "bytes": SMOKE_BYTES, "lines": SMOKE_LINES, "batch": 1}
+    return [
+        {"arm": "SMOKE_NOTOOLS", "rung": "smoke_notools", **common},
+        {"arm": "SMOKE_TOOLS", "rung": "smoke_tools", **common},
+        {"arm": "SMOKE_INDEX", "rung": "smoke_index", **common},
+    ]
+
+
+#: Mirrors the live memory dir's structure. Without an index the recall system may have
+#: nothing to select from — the confound that made the first smoke's null unreadable.
+SMOKE_INDEX_TEMPLATE = """# Scratch Memory Index
+
+One line per memory; content lives in the files.
+
+## Feedback — scratch
+- [{stem}]({stem}.md) — scratch probe file for OQ-289 feasibility
+"""
+
+
+def build_smoke_file(nbytes: int, nlines: int, marker: str) -> str:
+    """One marker, one small file. No position structure to read."""
+    head = f"{SMOKE_PREFIX} {marker}"
+    body = build_filler(nbytes - len(head) - 1, nlines - 1)
+    return head + "\n" + body
 
 
 def expected_calls(units: list[dict]) -> int:
@@ -545,6 +654,28 @@ def assert_spend_go(audit: pathlib.Path) -> None:
 # ---------------------------------------------------------------------------
 # Transport
 # ---------------------------------------------------------------------------
+def assert_smoke_go() -> str:
+    """Smoke's gate. Weaker than the freeze BY RULING, not by omission — and it still
+    requires a stated scope on disk before the probe, whose md5 is persisted with the
+    artifacts. Returns that md5.
+
+    Smoke must NOT require PREREGISTRATION.md: the whole point of the reordering is that
+    smoke settles whether the prereg's Arm A is runnable. Requiring the freeze here would
+    reinstate exactly the ordering the ruling removed.
+    """
+    if not SMOKE_SCOPE.exists():
+        sys.exit(f"REFUSED: {SMOKE_SCOPE} does not exist. Smoke runs without the freeze "
+                 f"by ruling, but 'no freeze' is not 'no stated scope' — write what this "
+                 f"probe may and may not conclude BEFORE running it.")
+    text = SMOKE_SCOPE.read_text()
+    for required in ("feasibility", "may NOT conclude"):
+        if required not in text:
+            sys.exit(f"REFUSED: {SMOKE_SCOPE} does not state {required!r}. The scope "
+                     f"declaration is the only thing separating a feasibility probe from "
+                     f"an unregistered first look at the hypothesis.")
+    return md5(text)
+
+
 def build_argv(unit: dict, scratch_cwd: pathlib.Path, prompt: str,
                session_id: str, budget: float) -> list[str]:
     """The exact command line. Built here so the selftest can assert its shape without
@@ -556,9 +687,10 @@ def build_argv(unit: dict, scratch_cwd: pathlib.Path, prompt: str,
             "--session-id", session_id,
             "--no-session-persistence",
             "--max-budget-usd", str(budget)]
-    if unit["arm"] == "A_PRIME":
+    if unit["arm"] in ("A_PRIME", "SMOKE_TOOLS"):
         # A' MUST re-enable Read: the canary sits where only a pointer-follow reaches it,
         # and the measurement is the observed tool call, not the answer.
+        # SMOKE_TOOLS is the paired arm that makes SMOKE_NOTOOLS' decline readable.
         argv += ["--tools", "Read"]
     else:
         argv += ["--tools", ""]
@@ -638,6 +770,28 @@ def parse_usage(stdout: str) -> dict | None:
     vals = {k: u.get(k, 0) for k in keys}
     vals["delivered"] = sum(int(v or 0) for v in vals.values())
     return vals
+
+
+def notice_path(text: str) -> str | None:
+    """Which truncation path cut this file, read off its own appended notice.
+
+    Returns "WEr" | "PIe" | None. None means NO truncation notice was seen, which is
+    NOT the same as "not truncated" — the notice may simply not have been echoed by the
+    model. Never coerce None to "untruncated"; it is reported as its own value.
+    """
+    if NOTICE_PIE in text:
+        return "PIe"
+    if NOTICE_WER in text:
+        return "WEr"
+    return None
+
+
+def notice_axis(text: str) -> str | None:
+    """Which AXIS fired, per WEr's own message. Only meaningful when path == 'WEr'."""
+    for axis, rx in NOTICE_AXIS.items():
+        if rx.search(text):
+            return axis
+    return None
 
 
 def observed_tool_calls(stdout: str) -> int | None:
@@ -794,8 +948,22 @@ HALTS = {
                      "(the reporting channel is broken; every ABSENT is uninterpretable)",
     "FABRICATED": "a unit emitted a regex-matching token that was never minted -> run VOID "
                   "(self-report channel broken, and the breakage is not local)",
-    "CACHE_READ_NONZERO": "cache_read_input_tokens > 0 -> that rung VOID (isolation failed, "
-                          "the delivered count is corrupt)",
+    #: REPLACED 2026-08-12 by the first smoke. `cache_read_input_tokens == 0` is
+    #: UNSATISFIABLE under this transport: the CLI caches the system prompt, and all six
+    #: smoke units returned cache_read of 3,289 / 4,479 with input_tokens = 2. As
+    #: specified, that HALT would have voided EVERY rung of the real run — a gate that
+    #: cannot pass, which is as uninformative as one that cannot fail.
+    #:
+    #: The isolation worry it encoded was cross-unit contamination of `delivered`. The
+    #: smoke supplies a satisfiable and strictly better check for that: with the payload
+    #: held identical across k, `delivered` must be IDENTICAL across k. It was, exactly
+    #: (9,002 x3 and 10,262 x3, zero variance), and the 1,260-token gap between the two
+    #: arms is precisely the Read tool definitions — so the instrument is demonstrably
+    #: sensitive at the scale the run needs. cache_read is legitimately delivered context
+    #: and stays inside `delivered`; it is reported, not gated.
+    "DELIVERED_UNSTABLE_ACROSS_K": "delivered varies across k for an IDENTICAL payload -> "
+                                   "that rung VOID (the count is not a function of the "
+                                   "payload, so no slope over it means anything)",
     "CLAUDE_MD_CHANGED": "live CLAUDE.md md5 changed -> hard abort",
     "SETTINGS_CHANGED": "~/.claude/settings.json md5 changed -> hard abort",
     "STRAY_INSTRUCTION_FILE": "CLAUDE.md/.claude/CLAUDE.md/.claude/rules under a scratch or "
@@ -867,13 +1035,22 @@ def check_halts(reports: list[dict], minted: set) -> list[str]:
         seen = set(r.get("seen", []))
         if arm == "LEAK" and seen:
             fired.append("LEAK_FIRED")
-        if arm != "A_PRIME" and (r.get("tool_calls") or 0) > 0:
+        # A_PRIME and SMOKE_TOOLS have tools ON by design — there a tool call is the
+        # measurement (A_PRIME) or the paired condition (SMOKE_TOOLS), not a violation.
+        if arm not in ("A_PRIME", "SMOKE_TOOLS") and (r.get("tool_calls") or 0) > 0:
             fired.append("TOOL_CALL_ON_SUPPRESSED_ARM")
-        if (r.get("cache_read_input_tokens") or 0) > 0:
-            fired.append("CACHE_READ_NONZERO")
         for tok in r.get("tokens_emitted", []):
             if tok not in minted:
                 fired.append("FABRICATED")
+    # Stability of `delivered` across k, per rung, at identical payload. Replaces the
+    # unsatisfiable cache_read==0 assertion; see the HALTS entry for why.
+    by_rung: dict = {}
+    for r in reports:
+        if r.get("delivered") is not None:
+            by_rung.setdefault(r["rung"], []).append(r["delivered"])
+    for rung, vals in by_rung.items():
+        if len(vals) > 1 and len(set(vals)) > 1:
+            fired.append("DELIVERED_UNSTABLE_ACROSS_K")
     inject = [r for r in reports if r.get("arm") == "INJECT"]
     if inject and sum(1 for r in inject if "end" not in set(r.get("seen", []))) >= 1:
         fired.append("INJECT_SILENT")
@@ -938,6 +1115,12 @@ PROMPT_DELIVERY = (
     "reconstruct, and do not describe what such a token would look like — only report "
     "tokens actually present."
 )
+PROMPT_SMOKE = (
+    "Report VERBATIM any token you can see in your context that appears after the label "
+    "SMOKE-MARKER. Output exactly one line, in the form MARKER=<token>. If you can see "
+    "none, output exactly NONE. Do not guess and do not reconstruct — only report a "
+    "token actually present."
+)
 PROMPT_POINTER = (
     "Your recalled memory may include a file that was truncated, with a note pointing at "
     "the full file on disk. Answer this question completely: what does the memory file "
@@ -948,13 +1131,23 @@ PROMPT_POINTER = (
 
 def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
     """mode in {dry, stub, smoke, live}. Only `live` and `smoke` spend."""
-    # The freeze is checked BEFORE any work, not just before the first call. Building a
-    # ladder and smoke-testing it with one real call is the most natural thing in the
-    # world, and it would put a result on disk before the prereg md5.
-    if mode in ("live", "smoke"):
+    # ORDERING (operator ruling 2026-08-12): SMOKE RUNS BEFORE THE FREEZE, because smoke
+    # settles whether Arm A is runnable at all; a prereg naming an unrunnable test would
+    # have to be amended, and an amended freeze is weaker than one frozen a day later.
+    # `live` still checks the freeze BEFORE any work — building a ladder and spending on
+    # it is the most natural thing in the world and would put a result on disk first.
+    smoke_scope_md5 = None
+    if mode == "live":
         assert_spend_go(audit_dir_for(datetime.now(timezone.utc).strftime("%Y-%m-%d")))
+    if mode == "smoke":
+        smoke_scope_md5 = assert_smoke_go()
+        print(f"  smoke scope md5 = {smoke_scope_md5} "
+              f"({SMOKE_SCOPE.relative_to(REPO_ROOT)})")
 
-    units = build_ladder()
+    if mode == "smoke":
+        units = build_smoke_units()
+    else:
+        units = build_ladder()
     exp_calls = expected_calls(units)
     payload_dir, resp_dir = outdir / "payloads", outdir / "responses"
     payload_dir.mkdir(parents=True, exist_ok=True)
@@ -977,6 +1170,14 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
         d.mkdir(parents=True, exist_ok=True)
         u["canaries"] = []
         for b in range(u["batch"]):
+            if u["arm"].startswith("SMOKE"):
+                # ONE marker, no position structure. See build_smoke_units().
+                marker = mint_canary()
+                minted.add(marker)
+                u["canaries"].append({"smoke": marker})
+                (d / f"mem_{b:02d}.md").write_text(
+                    build_smoke_file(u["bytes"], u["lines"], marker))
+                continue
             cans = {slot: mint_canary() for slot in ("start", "middle", "end")}
             minted.update(cans.values())
             u["canaries"].append(cans)
@@ -1001,7 +1202,7 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
         return 0
 
     transport = stub_transport if mode == "stub" else live_transport
-    todo = units if mode != "smoke" else units[:1]
+    todo = units
     reports: list = []
     minted_project_dirs: list = []
     for u in todo:
@@ -1019,10 +1220,29 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
             if u["arm"] not in ("INJECT", "LEAK"):
                 memdir.mkdir(parents=True, exist_ok=True)
                 minted_project_dirs.append(memdir.parent)
+                stems = []
                 for b in range(u["batch"]):
+                    stem = f"scratch_{u['rung']}_{b:02d}"
+                    stems.append(stem)
                     shutil.copy(payload_dir / u["rung"] / f"mem_{b:02d}.md",
-                                memdir / f"scratch_{u['rung']}_{b:02d}.md")
-            prompt = PROMPT_POINTER if u["arm"] == "A_PRIME" else PROMPT_DELIVERY
+                                memdir / f"{stem}.md")
+                if u["arm"] == "SMOKE_INDEX":
+                    # POSITIVE CONTROL: the marker rides the ALWAYS-LOADED index itself,
+                    # not the attachment path. If this does not arrive either, the memory
+                    # subsystem is not engaging at all and a sibling miss says nothing.
+                    (memdir / "MEMORY.md").write_text(
+                        (payload_dir / u["rung"] / "mem_00.md").read_text())
+                else:
+                    # Every other unit gets an index NAMING its siblings — the live dir
+                    # has one, and recall is plausibly index-driven. Its absence is what
+                    # made the first smoke's null unreadable.
+                    (memdir / "MEMORY.md").write_text(
+                        "".join(SMOKE_INDEX_TEMPLATE.format(stem=s) for s in stems[:1])
+                        + "".join(f"- [{s}]({s}.md) — scratch probe file\n"
+                                  for s in stems[1:]))
+            prompt = (PROMPT_POINTER if u["arm"] == "A_PRIME"
+                      else PROMPT_SMOKE if u["arm"].startswith("SMOKE")
+                      else PROMPT_DELIVERY)
             sid = f"{secrets.token_hex(4)}-{secrets.token_hex(2)}-4{secrets.token_hex(2)[1:]}" \
                   f"-a{secrets.token_hex(2)[1:]}-{secrets.token_hex(6)}"
             argv = build_argv(u, scratch, prompt, sid, budget)
@@ -1039,6 +1259,10 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
                 "tool_calls": observed_tool_calls(rec["stdout"]),
                 "tokens_emitted": emitted,
                 "seen": [slot for slot, tok in cans.items() if tok in emitted],
+                # Secondary discriminator: a truncated file SAYS which path cut it.
+                # None means no notice was seen, which is NOT "untruncated".
+                "notice_path": notice_path(rec["stdout"]),
+                "notice_axis": notice_axis(rec["stdout"]),
             })
 
     gate_3_responses(resp_dir, len(todo) * K, errors)
@@ -1050,17 +1274,50 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
     for h in fired:
         print(f"    {h}: {HALTS[h]}")
 
-    # Verdicts are computed HERE, from persisted data against the frozen table — not
-    # assigned by hand in the writeup after the numbers are visible.
-    summary = analyze(reports, units)
-    print(f"\n  BASELINE (LEAK arm) = {summary['baseline']}  eps = {summary['eps']}")
-    for rung, v in sorted(summary["verdicts"].items()):
-        print(f"    {rung:28s} {v}")
+    if mode == "smoke":
+        # SMOKE RENDERS NO VERDICT AGAINST THE OUTCOME TABLE, deliberately. The table
+        # is about thresholds; smoke has no threshold in it. Reporting one here would
+        # be the seeded draw the reordering exists to avoid.
+        summary = {"feasibility": {}, "smoke_scope_md5": smoke_scope_md5}
+        print("\n  FEASIBILITY READOUT (no verdict — smoke carries no threshold "
+              "information; see oq289_smoke_scope.md):")
+        for arm in ("SMOKE_NOTOOLS", "SMOKE_TOOLS"):
+            rs = [r for r in reports if r["arm"] == arm]
+            hits = sum(1 for r in rs if r["seen"])
+            deliv = [r["delivered"] for r in rs if r.get("delivered") is not None]
+            summary["feasibility"][arm] = {
+                "marker_verbatim": f"{hits}/{len(rs)}",
+                "usage_present": f"{len(deliv)}/{len(rs)}",
+                "mean_delivered": (sum(deliv) / len(deliv)) if deliv else None,
+                "tool_calls": [r.get("tool_calls") for r in rs],
+            }
+            print(f"    {arm:16s} marker {hits}/{len(rs)}   usage {len(deliv)}/{len(rs)}"
+                  f"   mean delivered "
+                  f"{(sum(deliv) / len(deliv)) if deliv else 'n/a'}")
+        a = summary["feasibility"]["SMOKE_NOTOOLS"]["marker_verbatim"]
+        b = summary["feasibility"]["SMOKE_TOOLS"]["marker_verbatim"]
+        print(f"\n    The PAIR is the discriminator: no-tools {a} vs tools {b}.")
+        print("    no-tools 0/n WHILE tools n/n  => --tools \"\" suppresses recall; "
+              "Arm A as designed returns a null that means nothing.")
+        print("    BOTH 0/n                      => recall may not fire under -p at all; "
+              "the transport, not the flag, is the problem.")
+        print("    BOTH n/n                      => attachment arrives under both; "
+              "Arm A is runnable as designed.")
+    else:
+        # Verdicts are computed HERE, from persisted data against the frozen table — not
+        # assigned by hand in the writeup after the numbers are visible.
+        summary = analyze(reports, units)
+        print(f"\n  BASELINE (LEAK arm) = {summary['baseline']}  eps = {summary['eps']}")
+        for rung, v in sorted(summary["verdicts"].items()):
+            print(f"    {rung:28s} {v}")
+    paths = {r["rung"]: r.get("notice_path") for r in reports if r.get("notice_path")}
+    if paths:
+        print(f"\n  truncation-notice path (secondary discriminator): {paths}")
     (outdir / "reports.json").write_text(json.dumps(reports, indent=2) + "\n")
     (outdir / "summary.json").write_text(json.dumps(
-        {**summary, "halts": fired, "cli_version": cli_version(),
+        {**summary, "mode": mode, "halts": fired, "cli_version": cli_version(),
          "settings_md5": md5_file(LIVE_SETTINGS) if LIVE_SETTINGS.exists() else None,
-         "at": now()}, indent=2) + "\n")
+         "notice_paths": paths, "at": now()}, indent=2) + "\n")
     if errors:
         print("\nGATES RED after the run — evidence retained:")
         for e in errors:
@@ -1111,6 +1368,52 @@ def selftest() -> int:
     except AssertionError:
         fired = True
     check("(2) CONVERSE — a missing canary slot FIRES", fired)
+
+    print("\nsmoke — the probe must carry NO threshold information (operator ruling):")
+    su = build_smoke_units()
+    check("(2s) smoke is THREE arms — the tools pair, plus the always-loaded positive "
+          "control that makes a 0 mean anything at all",
+          {u["arm"] for u in su} == {"SMOKE_NOTOOLS", "SMOKE_TOOLS", "SMOKE_INDEX"})
+    check("(2s) smoke payload is far under EVERY candidate byte cap",
+          all(u["bytes"] < min(c[0] for c in CAPS.values()) / 4 for u in su))
+    check("(2s) smoke payload is far under EVERY candidate line cap",
+          all(u["lines"] < min(c[1] for c in CAPS.values()) / 4 for u in su))
+    check("(2s) smoke is NOT a rung of the ladder — no ladder rung shares its name",
+          not ({u["rung"] for u in su} & {u["rung"] for u in build_ladder()}))
+    sf = build_smoke_file(SMOKE_BYTES, SMOKE_LINES, "a" * 16)
+    check("(2s) smoke file carries exactly ONE marker — no position signal to read",
+          sf.count(SMOKE_PREFIX) == 1
+          and not any(s in sf for s in ("CANARY-START", "CANARY-MIDDLE", "CANARY-END")))
+    check("(2s) smoke file hits its declared byte length", len(sf.encode()) == SMOKE_BYTES)
+    check("(2s) smoke arms differ ONLY in the tools flag — the pair is the discriminator",
+          build_argv(su[0], pathlib.Path("/tmp/x"), "p", "s", 1.0)[
+              build_argv(su[0], pathlib.Path("/tmp/x"), "p", "s", 1.0).index("--tools") + 1] == ""
+          and build_argv(su[1], pathlib.Path("/tmp/x"), "p", "s", 1.0)[
+              build_argv(su[1], pathlib.Path("/tmp/x"), "p", "s", 1.0).index("--tools") + 1] == "Read")
+    check("(2s) a tool call on SMOKE_TOOLS does NOT fire the suppressed-arm HALT",
+          "TOOL_CALL_ON_SUPPRESSED_ARM" not in check_halts(
+              [{"arm": "SMOKE_TOOLS", "tool_calls": 1}], set()))
+    check("(2s) a tool call on SMOKE_NOTOOLS DOES fire it",
+          "TOOL_CALL_ON_SUPPRESSED_ARM" in check_halts(
+              [{"arm": "SMOKE_NOTOOLS", "tool_calls": 1}], set()))
+    check("(2s) the scope file exists and states what smoke may NOT conclude",
+          SMOKE_SCOPE.exists() and "may NOT conclude" in SMOKE_SCOPE.read_text())
+
+    print("\nnotice discriminator — a truncated file SAYS which path cut it:")
+    check("(2n) the PIe notice is recognised", notice_path(
+        "This memory file was truncated (4096 byte limit). Use the Read tool") == "PIe")
+    check("(2n) the WEr notice is recognised", notice_path(
+        "> WARNING: this memory file is 359 lines (limit: 200). "
+        "Only part of it was loaded.") == "WEr")
+    check("(2n) PIe wins when BOTH strings appear — it is the more specific claim",
+          notice_path("This memory file was truncated ... Only part of it was loaded")
+          == "PIe")
+    check("(2n) no notice returns None, NOT 'untruncated' — absence is its own value",
+          notice_path("MARKER=deadbeefdeadbeef") is None)
+    check("(2n) WEr's line-only axis is read off its own message",
+          notice_axis("is 359 lines (limit: 200). Only part") == "line_only")
+    check("(2n) WEr's both-axes message is distinguished from line-only",
+          notice_axis("is 359 lines and 25.4KB. Only part") == "both")
 
     print("\nisolation — the guard must fire on each way the live substrate can be touched:")
     errs: list = []
@@ -1317,9 +1620,18 @@ def selftest() -> int:
     check("(10) CONVERSE — a minted emitted token does NOT fire FABRICATED",
           "FABRICATED" not in check_halts(
               [{"arm": "A", "tokens_emitted": ["0123456789abcdef"]}], {"0123456789abcdef"}))
-    check("(10) nonzero cache_read fires CACHE_READ_NONZERO",
-          "CACHE_READ_NONZERO" in check_halts(
-              [{"arm": "A", "cache_read_input_tokens": 12}], set()))
+    check("(10) delivered varying across k at identical payload fires",
+          "DELIVERED_UNSTABLE_ACROSS_K" in check_halts(
+              [{"arm": "A", "rung": "r", "delivered": 100.0},
+               {"arm": "A", "rung": "r", "delivered": 105.0}], set()))
+    check("(10) CONVERSE — delivered IDENTICAL across k does NOT fire (this is the "
+          "shape the first smoke actually produced: 9002 x3, zero variance)",
+          "DELIVERED_UNSTABLE_ACROSS_K" not in check_halts(
+              [{"arm": "A", "rung": "r", "delivered": 9002.0} for _ in range(3)], set()))
+    check("(10) nonzero cache_read does NOT fire — it is delivered context, and the "
+          "old cache_read==0 HALT was unsatisfiable under this transport",
+          not check_halts([{"arm": "A", "rung": "r",
+                            "cache_read_input_tokens": 3289}], set()))
     check("(10) a tool call on a --tools '' arm fires",
           "TOOL_CALL_ON_SUPPRESSED_ARM" in check_halts(
               [{"arm": "A", "tool_calls": 1}], set()))

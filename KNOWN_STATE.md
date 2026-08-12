@@ -121,6 +121,42 @@ delivery readout). Gate GREEN at each.
    until OQ-290 lands.** It contributes nothing to the return code by design. Promoting it to
    enforcing today would go red on 19 files and stay red until an Ω_P ruling nobody has scheduled.
 
+**SMOKE RUN 1 IS SPENT (6 calls, 2026-08-12) AND DID NOT DISCHARGE ITS ITEM.** 0/3 on both arms,
+replies well-formed. **The null was uninterpretable and the fault was in the probe**: it had no
+positive control showing the memory channel could deliver anything, so "the marker did not arrive"
+could not be separated from "we never gave the recall system anything to find" — the scratch memory
+dir had **no `MEMORY.md` index** while the live dir has one, and `relevant_memories` is
+relevance-selected per turn. Run 2 adds `SMOKE_INDEX`, the always-loaded positive control. Evidence
+retained at `python/audits/oq289_smoke_run1/` **because it is the naturally-arising negative for
+that control** — *fires at run 2, declined at run 1*, drawn from this project's own history rather
+than an authored decoy. Two things run 1 did establish, both about the instrument:
+- **`cache_read_input_tokens == 0` is UNSATISFIABLE under this transport** (all six units: 3,289 /
+  4,479, with `input_tokens = 2` — the CLI caches the system prompt). Frozen as written that HALT
+  would have voided **every rung** of the real run. Replaced by `DELIVERED_UNSTABLE_ACROSS_K`.
+- **The token-slope instrument is sound and sensitive**: `delivered` perfectly stable across k=3
+  within arm (9,002 ×3, 10,262 ×3, zero variance), inter-arm gap 1,260 tokens = the `Read` tool
+  definitions exactly.
+
+**Also from the full `WEr` body (read 2026-08-12) — two facts that change the kae branch:**
+`WEr` applies the **line cut FIRST**, then the byte cut to the result. So
+`feedback_prereg_review_riders.md` (25,373 B, **359 lines**) is bound by the 200-line cap, not the
+373-byte overage: it delivers **15,451 B = 60.9% by bytes / 55.7% by lines**, losing ~39%. **Not a
+hairline case.** And **`WEr` appends NO `Read` pointer** (only `PIe` does) — so on that branch
+OQ-290's "accept truncate-plus-pointer" option **does not exist**, and Arm A′'s question is not
+well-posed. Both are pre-registered as an interpretation commitment in
+`python/audits/oq289_prereg_draft.md` §2b, written before the data.
+
+**THE DRIVER'S CONTROLS FOUND FOUR DEFECTS IN THE DRIVER, and that is the strongest evidence in
+this arc** — each fixed by wiring rather than exempting, each now two-sided:
+(1) `orphaned_controls()` named `classify`/`slope`/`slope_band` on its first run — verdict
+assignment had been deferred to the writeup, which left the instrument unwired **and** would have
+let the analyst assign verdicts after seeing data; (2) the isolation guard compared dicts of
+different shapes, so one clause **could never pass** — visible only to a converse control it did
+not have; (3) gate 0 caught the filler generator unable to hit an exact byte target at high line
+counts, i.e. exactly the rungs that de-confound `Npa` from `NSp`; (4) a full run minted one
+`~/.claude/projects/<key>` per unit and removed none. **This belongs here and not in the paper —
+the §3.5 credit claim is already correctly reduced and must not creep back.**
+
 **Isolation fact a fresh instance will not guess: `--add-dir` is an instruction-injection channel,
 by default.** `CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1` is in `~/.claude/settings.json` as
 of 2026-08-12 (verified by a three-arm before/after test) and gates `.claude/CLAUDE.md` and
@@ -142,9 +178,17 @@ gate 0 caught the filler generator unable to hit an exact byte target at high li
 exactly the rungs that de-confound `Npa` from `NSp`; and a full run minted one
 `~/.claude/projects/<key>` per unit and removed none.
 
-Witnesses: driver selftest **70 PASS / 0 FAIL**; stub run 36/36 responses persisted, scratch dirs
-cleaned to 0, live memory dir intact at 54 files; `apparatus selftest GREEN`; `./scripts/gate.sh`
-**GATE: GREEN** (13 checks). Commit `17c4a599`.
+**Ordering ruling (operator, 2026-08-12): SMOKE RUNS BEFORE THE FREEZE.** Smoke settles whether
+Arm A is runnable at all; freezing a prereg that names an unrunnable test forces an amendment, and
+an amended freeze is weaker than one frozen a day later. Legitimate only because smoke carries no
+threshold information — 512 B / 10 lines, far under every candidate constant, one marker, no
+position structure, scope declared in advance at `python/audits/oq289_smoke_scope.md` (md5
+persisted with every artifact; `assert_smoke_go()` refuses without it), and **no verdict from the
+outcome table is computed in `--smoke` mode**. Order is: smoke → resolve §10 → freeze → sweep.
+
+Witnesses: driver selftest **88 PASS / 0 FAIL**; stub run 36/36 responses persisted, scratch dirs
+cleaned to 0, live memory dir intact at 54 files; smoke run 1 6/6 persisted with usage blocks;
+`apparatus selftest GREEN`; `./scripts/gate.sh` **GATE: GREEN**. Commits `17c4a599`, `e1c53d93`.
 
 ---
 

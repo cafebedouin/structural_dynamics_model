@@ -21,6 +21,36 @@
 write path, the slope instrument, or the recall attachment. The first live call of *this*
 driver is where those get witnessed, and that is worth one pair of eyes.
 
+## 0. ORDERING — smoke before freeze (operator ruling, 2026-08-12)
+
+**THE FREEZE WAS SCHEDULED BEFORE THE THING IT DEPENDS ON.** §10's smoke item — does
+`--tools ""` also suppress the `relevant_memories` attachment, and does recall fire under
+`-p` at all — **determines whether Arm A is runnable at all.** Freezing a prereg that names
+an unrunnable test forces an amendment, and **an amended freeze is a weaker instrument than
+one frozen a day later.**
+
+So the order is: **smoke → resolve §10 → freeze → sweep.** Smoke's scope is declared
+separately and in advance at `python/audits/oq289_smoke_scope.md`, whose md5 is persisted
+with every smoke artifact; `assert_smoke_go()` refuses without it. Smoke renders **no
+verdict** from §6's table and the driver structurally does not compute one in `--smoke`
+mode.
+
+**Smoke run 1 is spent and did NOT discharge the item** (evidence:
+`python/audits/oq289_smoke_run1/`). It returned 0/3 on both arms with no positive control
+distinguishing "the marker did not arrive" from "we never gave the recall system anything to
+find." Two amendments to THIS document descend from it, and both are the reason the ordering
+ruling was right:
+
+- **§5's `cache_read_input_tokens == 0` assertion is UNSATISFIABLE and is replaced.** All six
+  units returned `cache_read` of 3,289 / 4,479 with `input_tokens = 2` — the CLI caches the
+  system prompt. Frozen as originally written, that HALT would have voided **every rung**.
+- **§10's smoke gains a third arm**, `SMOKE_INDEX`, the always-loaded positive control that
+  makes a zero readable at all.
+
+Run 1 also **validated the primary instrument**: `delivered` was perfectly stable across k=3
+within each arm (9,002 ×3, 10,262 ×3, zero variance), and the 1,260-token inter-arm gap is
+exactly the `Read` tool definitions.
+
 ---
 
 ## 1. The question
@@ -35,6 +65,28 @@ Three things are underdetermined by the code and are what this run settles:
 - **(a) which pair governs at all** — or whether both apply at different stages;
 - **(b) per-file vs per-recall-batch** application;
 - **(c) pre- vs post-processing** application.
+
+## 1b. Phase 0 — the measurement this all descends from, DATED AND CONFIG-LABELLED
+
+**Measured 2026-08-12, CLI 2.1.229, `~/.claude/settings.json` md5 `bc56274c` (6 keys,
+**including** the `env` block), no `--add-dir` in play.** The config label is not decoration:
+the `env` block — `CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1` — **postdates the plan's
+original Phase 0 measurement**, and a reader reconciling this table against a fresh
+measurement would otherwise find a discrepancy with no recorded cause.
+
+| Source | Bytes | Share |
+|---|---|---|
+| `CLAUDE.md` (project) | **91,029** (1,107 lines, flat, no `@import`s) | 88.6% |
+| `memory/MEMORY.md` | 9,906 (83 lines) | 9.6% |
+| `~/.claude/CLAUDE.md` (global) | 718 | 0.7% |
+| SessionStart hook `additionalContext` | 1,042 | 1.0% |
+| **delivered total** | **102,695 B ≈ 27.0k tokens @ 3.8 B/tok** | |
+
+**This table is already stale in one cell, by our own hand, and that is recorded rather than
+silently refreshed.** `CLAUDE.md` is **92,351 B** as of the OQ-289 documentation pass, which
+promoted a memory-consolidation tripwire into it. Headroom against `R9o` = 4,194,304 B moved
+**46.1× → 45.4×**. Nothing in the retraction turns on the difference; the point of recording
+it is that a witnessed fact has a shelf life and this one aged inside a single day.
 
 ## 2. Stated priors, recorded here because the freeze must cover them
 
@@ -57,6 +109,64 @@ demoted it from an assumption to a prior — and it is recorded so that a result
 is not read as stronger confirmation than it is.
 
 **No expected verdict is written into the deliverable template.**
+
+## 2b. INTERPRETATION COMMITMENT — what each branch does to §8.5, written BEFORE the data
+
+**The bracket is already in the design, so the run settles WHICH pair governs. The EXPOSURE
+is what it does not settle, and the two branches do very different things to
+`amnesiac_institution_v0_6.md` §8.5.** Committing now, because otherwise the kae branch
+arrives looking like a refutation, gets argued about after the data is visible, and the
+section's weight is set by whoever argues better — **which is the discretion the freeze
+exists to remove.** This is the same defect `orphaned_controls()` caught in the driver, one
+level up: an instrument that computes a verdict after seeing the numbers.
+
+**Common to both branches — the structural claim is NOT falsified either way.** A merged file
+exceeds a per-file delivery limit, and the 2026-08-10 consolidation is what created that
+exposure. What the branches change is the **weight** §8.5 may give it.
+
+### Branch NSp — `NSp`/`Npa` govern (19 of 53 exposed)
+
+§8.5 **stands as written.** The two-caps tension carries the weight the section gives it:
+nineteen merged files delivering 16–89%, with a `Read` pointer whose following is itself
+unwitnessed (Arm A′). OQ-290's ballot is a real ruling over a triaged population.
+
+*§8.5 edit: none beyond removing the `[UNWITNESSED]` tag and naming the count.*
+
+### Branch kae — `kae`/`iJ` govern (1 of 53 exposed)
+
+**CORRECTED 2026-08-12 against the full `WEr` body, and the correction matters.** The
+one-file characterisation was *"over by 373 B, delivering ~98.5% — a hairline case at n=1."*
+**It is not a hairline case.** `WEr` applies the **line** cut FIRST and the byte cut to the
+result:
+
+```js
+let a = i ? r.split("\n").slice(0, iJ).join("\n") : r;   // LINE cut first
+if (a.length > kae) { ... }                              // THEN bytes, on the result
+```
+
+`feedback_prereg_review_riders.md` is 25,373 B **and 359 lines**. The 200-line cap binds
+first, yielding **15,451 B — 60.9% delivered by bytes, 55.7% by lines.** The 373-byte
+overage never applies, because the line cut already brought the file under `kae`. **The
+single most-cited feedback memory loses ~39% of itself.**
+
+*§8.5 edit on this branch:* keep the structural claim and **re-scope the emphasis from a
+population to a mechanism** — the tension is real and demonstrated at n=1 with a 39% loss,
+rather than being a property of nineteen files. Delete any phrasing implying breadth; keep
+"consolidating for attention created exposure to a delivery cap," which is exactly as true
+at n=1. **Do not upgrade it to a general finding, and do not retract it as a near-miss.**
+
+### Both branches — a consequence for OQ-290 that only the code-read reveals
+
+**`WEr` appends NO `Read` pointer.** Its notice is `> WARNING: this memory file is <what>.
+Only part of it was loaded. Keep each memory file focused on one topic.` — no path, no tool.
+Only the `PIe` path emits *"Use the Read tool to view the complete file at: <path>"*.
+
+Therefore: **on the kae branch, OQ-290's option 2 ("accept truncate-plus-pointer as the
+contract") DOES NOT EXIST** — there is no pointer to accept — and **Arm A′'s question is not
+well-posed**, because there is nothing to follow. Pre-registered here so the run cannot
+quietly answer a question that does not arise on the branch it lands in. On that branch the
+ballot reduces to split / front-load / do-nothing, and front-loading gets stronger, because
+a truncated `WEr` file is simply *silently short*.
 
 ## 3. Arms
 
@@ -140,8 +250,33 @@ ladder.
 | `PLATEAU` | slope < 0.10 |
 | `undefined` | Δbytes = 0 — **never rendered as 0.0**, because a plateau is a verdict |
 
-`cache_read_input_tokens == 0` is asserted per unit. Nonzero means isolation failed and
-the delivered count is corrupt: **that rung is VOID rather than reported.**
+**REPLACED after smoke run 1.** The original assertion — `cache_read_input_tokens == 0` per
+unit — is **unsatisfiable under this transport**: the CLI caches the system prompt, and all
+six smoke units returned `cache_read` of 3,289 / 4,479 with `input_tokens = 2`. Frozen as
+written it would have voided **every rung**, which is a gate that cannot pass, as
+uninformative as one that cannot fail.
+
+The isolation worry it encoded was cross-unit contamination of `delivered`. The replacement
+is satisfiable and strictly better at that worry: **with the payload held identical across k,
+`delivered` must be IDENTICAL across k** (`DELIVERED_UNSTABLE_ACROSS_K`). Smoke run 1 shows
+it passing with **zero variance** (9,002 ×3, 10,262 ×3). `cache_read` is legitimately
+delivered context, stays inside `delivered`, and is **reported, not gated**.
+
+## 5b. SECONDARY DISCRIMINATOR — a truncated file says which path cut it
+
+Found on re-reading the full `WEr` body, and it is stronger than inferring the governing pair
+from where a threshold lands, because it is **self-identifying**:
+
+| Path | Appended notice | Read pointer? |
+|---|---|---|
+| `WEr` (kae/iJ) | `> WARNING: this memory file is <what>. Only part of it was loaded. Keep each memory file focused on one topic.` | **NO** |
+| `PIe` (NSp/Npa) | `This memory file was truncated (<N> byte limit \| first <N> lines). Use the Read tool to view the complete file at: <path>` | **YES** |
+
+`WEr`'s notice further names **which axis fired** — `<N> lines (limit: <N>)` (line only),
+`… (limit: <N>) — its lines are too long` (byte only), or `<N> lines and <N>` (both).
+
+Recorded per unit as `notice_path` / `notice_axis`. **No notice observed returns `None`, which
+is NOT "untruncated"** — the model may simply not have echoed it — and is never coerced.
 
 `BASELINE` = the mean `delivered` of the **LEAK** arm (the unit with no memory payload).
 `ε = 50 tokens`. `elevated` means `delivered > BASELINE + ε`. **BASELINE is a
@@ -186,7 +321,7 @@ row's condition is mutually exclusive with those above it.** Assigned by
 | Leak arm reports any canary | ≥1 unit | run **VOID** |
 | Inject arm fails to echo its canary verbatim | ≥1 of 3 | run **VOID** (reporting channel broken) |
 | **`FABRICATED`** — a regex-matching token emitted that was never minted | ≥1 | run **VOID** |
-| `cache_read_input_tokens > 0` | ≥1 unit | that rung **VOID** |
+| `DELIVERED_UNSTABLE_ACROSS_K` — `delivered` varies across k at identical payload | ≥1 rung | that rung **VOID** |
 | Live `CLAUDE.md` md5 changes | any | **hard abort** |
 | `~/.claude/settings.json` md5 changes | any | **hard abort** |
 | Live memory-dir manifest changes | any | **hard abort** |
@@ -241,6 +376,15 @@ same footing as the live `CLAUDE.md` guard.
 
 Every verdict is stated at its scoped altitude: *"truncates at N bytes per file, model
 `claude-sonnet-5`, CLI 2.1.229."*
+
+## 9b. THE FOUR CONFIRMATIONS OWED BEFORE FREEZE (operator, 2026-08-12)
+
+| # | Confirmation | Status |
+|---|---|---|
+| 1 | `~/.claude/settings.json` md5 recorded here **and asserted per unit**, on the same footing as the live `CLAUDE.md` guard — context assembly is a function of two files now | **DONE** — md5 `bc56274c` in §9; `assert_isolation()` asserts both per unit, two-sided in the selftest |
+| 2 | Phase 0's 102,695 B table **dated and labelled with the config it was measured under** — the `env` block postdates it | **DONE** — §1b, which also records the one cell that has since gone stale by our own hand (91,029 → 92,351) |
+| 3 | `FABRICATED` present **in the HALT table** at ≥1 → run VOID, not only in the verdict table — a minted-token mismatch discredits every ABSENT in the run, not just its own unit | **DONE** — §7 row 3; §6 states its deliberate absence from the verdict table; two-sided in the selftest |
+| 4 | `claude --version` checked **now and again immediately before the sweep** — the gate pins it, but drift between freeze and execution is the case the pin is for | **PARTIAL** — checked at approval (2.1.229) and asserted by gate 0b on every invocation including smoke. **The pre-sweep re-check is owed on run day and is not dischargeable in advance.** |
 
 ## 10. Settle in `--smoke`, do not assume
 
