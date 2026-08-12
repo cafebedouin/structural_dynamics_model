@@ -12196,6 +12196,31 @@ one-file branch this is a live disposition, not a rounding error — though the 
 re-scopes from a population to a mechanism (pre-registered in
 `python/audits/oq289_prereg_draft.md` §2b).
 
+**LINE-CAP CENSUS, 2026-08-12 — run because `Npa` = `iJ` = 200, so the LINE cap is
+BRANCH-INDEPENDENT. THE HYPOTHESIS IT TESTED DID NOT SURVIVE.** If a substantial fraction of the 19
+were over 200 lines, exposure would stop depending on the NSp/kae determination. **Measured: 1 of
+53.** Only `feedback_prereg_review_riders.md` (359 lines) exceeds it; the next largest is 185, with
+4 files in 150–200 (one edit from crossing) and 14 under 150.
+
+So the branch determination **still fully controls the exposure count — 19 vs 1** — and
+proportionality is *not* settled by the line cap. Recorded because the measurement was cheap,
+read-only, and went against the expectation that motivated it.
+
+**BUT FRONT-LOAD DOMINATES ON EVERY BRANCH, AND THE EXPOSED SETS NEST.** Option 3 works whether the
+cut is at 4,096 B or 15,451 B, whether the binding constant is lines or bytes, and whether or not a
+pointer is appended — a self-sufficient summary in the first 4 KB sits inside the first ~50 lines,
+so it survives a 200-line cut too. And **the NSp-exposed set (19) is a strict superset of the
+kae-exposed set (1)**, so front-loading the 19 is correct on both branches *without knowing which
+binds*. The marginal 18 rewrites are not wasted work either — a self-sufficient first-4-KB summary
+is what the read site wants regardless of any cap.
+
+**Consequence for sequencing: OQ-289's branch determination is NOT a decision input for this
+ballot.** It buys exactly one thing — knowing whether 18 of the 19 rewrites were strictly necessary.
+That is a cost-proportionality question, not an option-selection one. **Recommend OQ-289 drop from
+Priority-1 blocker to a background measurement** (the passive tripwire in
+`python/apparatus_instrument.py`, which needs no designed trigger and no spend). *Recommendation,
+not a ruling — the disposition is the operator's.*
+
 **The ballot, triaged by delivered fraction first** — a file at 16% and one at 89% are not the same
 object and should not take the same disposition:
 
@@ -12420,6 +12445,65 @@ OQ-288 stratum census cannot use it either.
 3. Declare the conflation acceptable and record it as a design gap, since the prose is greppable.
 
 *Not a blocker for OQ-289 or OQ-290; minted so the gap is a checked fact rather than a memory.*
+
+---
+
+## OQ-292 — ABSENCE-SHAPED SUCCESS: a prompt can suppress the report of content the worker can plainly see, so every ABSENT-scored probe result is provisional until its prompt is checked
+
+**Ω-type:** Ω_E — a bounded, mechanical retro-audit over an enumerable set. What to do about any
+hit is a separate question; the census is not.
+
+**Status:** open — minted 2026-08-12 from the OQ-289 smoke run 2 finding.
+**Priority:** 2
+**Deps:** blocked_on_human oq292-retro-audit-scope-confirm
+
+**The witnessed defect** (`python/audits/oq289_smoke_run2/`, raw text retained). A canary was placed
+in a memory file; an index entry describing that file was worded — for unrelated reasons, to make it
+*relevant* to the probe's question — as *"consult it whenever asked about delivery-check tokens."*
+**That reads as an INSTRUCTION, and the models obeyed it.** They went to fetch the referenced file
+and their turns ended having never reported a token on **line 1 of the file they were reading from**.
+The probe scored **ABSENT**.
+
+It was not absent. The models emitted, verbatim, the **absolute path of their own scratch memory dir
+and the sibling filename** — strings present nowhere but inside the file whose arrival was being
+scored as a miss. **The content was delivered, visible, and unreported.**
+
+**Why this is a class defect and not a probe bug.** This repository's core instrument is *ask a
+worker to report what it can see, verbatim*. Paste-or-untag, every canary, every "report the token"
+probe, the OQ-289 design itself. That instrument has an unexamined failure mode: **the prompt
+competes with itself.** Any wording that gives the worker something to *do* can outrank the
+instruction to *report*, and the result is a clean, well-formed negative.
+
+**This is the exact inverse of the programme's founding concern.** Build Discipline's spine is
+*absence that presents as presence* — a success-shaped token filling the hole where something is
+missing. Here a **failure**-shaped token (a well-formed `NONE`) filled the hole where something was
+**present**. Same collapse, opposite direction, and nothing in the discipline was pointed at it.
+
+**The retro-audit, bounded.** Enumerate probe/canary results scored ABSENT / NONE / not-found, and
+for each check whether its prompt contained instruction-shaped wording that could have redirected
+the worker rather than eliciting a report. Sources: `audits/*/` writeups reporting a negative
+self-report result; `python/audits/*.py` prompts; the `[UNWITNESSED]`/false-absence claims listed
+under the *False-absence* rule in `build_discipline.md`. **Mint it NOW rather than after OQ-289
+resolves, because the set only grows** and every new probe added before the rule exists inherits the
+defect.
+
+**Pre-committed reading, so a clean census is not read as vindication.** A negative result whose
+prompt is instruction-free is **not** thereby confirmed — this audit can only downgrade confidence,
+never raise it. A hit means the original ABSENT is **withdrawn to OPEN**, not inverted to "the
+content was present."
+
+**The repair, for any probe going forward:** a self-report probe owes a **second channel** —
+behavioural evidence that the content was or was not present (did the worker act on knowledge only
+the payload could supply?). In OQ-289 that second channel is what overturned the metric, and it was
+available only because the raw text was persisted before parsing (*Gate the output, not only the
+input*). **Persisting raw text is what made this finding possible at all.**
+
+**What resolution would change:** the `Fired:` catch-rate instrument (OQ-276) and the §5.4 incidence
+census both rest on results that were, in part, self-reports. If instruction-shaped prompts are
+common in the probe corpus, an unknown share of the record's negatives are unsafe, and the direction
+of the error is *toward under-reporting real presence* — the opposite of the direction every existing
+control is calibrated for. Recorded in the paper at `amnesiac_institution_v0_6.md` §5.4 as the fourth
+defect in the incidence instrument.
 
 ---
 

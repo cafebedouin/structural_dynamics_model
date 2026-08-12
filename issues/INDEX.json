@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "921995fd89931d5f1faef78369f718171ac2a0dc",
+    "store_version": "655f9dedfad6ea2280f12abbac7afd06d5854fa4",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-12T16:38:12"
+    "generated_at": "2026-08-12T16:59:15"
   },
-  "issues_sha": "227c9ce8a83e822e347e5c84225aba426599d50b1bc929099d14b3daf290a536",
-  "n_entries": 291,
+  "issues_sha": "078dce4b3b36c7746e0630197bdff1f4b3149960936937e2acd7ac8cb5421e40",
+  "n_entries": 292,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 6,
     "future": 6,
-    "open": 106,
+    "open": 107,
     "partial": 7
   },
   "active": [
@@ -1562,6 +1562,20 @@
         "OQ-288",
         "OQ-289",
         "OQ-290"
+      ]
+    },
+    {
+      "id": "OQ-292",
+      "status": "open",
+      "priority": 2,
+      "summary": "ABSENCE-SHAPED SUCCESS: a prompt can suppress the report of content the worker can plainly see, so every ABSENT-scored probe result is provisional until its prompt is checked",
+      "deps": [
+        "blocked_on_human oq292-retro-audit-scope-confirm"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-276",
+        "OQ-289"
       ]
     }
   ],

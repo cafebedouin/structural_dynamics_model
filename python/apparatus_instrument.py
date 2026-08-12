@@ -154,6 +154,30 @@ def check_channel(memory_path: Path) -> tuple[list[str], str]:
     return [], f"channel {n}/{FEEDBACK_CAP}"
 
 
+def delivered_fraction(text: str, cap_bytes: int, cap_lines: int) -> float:
+    """Fraction of a file that survives truncation. LINE CUT FIRST, THEN BYTES.
+
+    The order is not cosmetic and getting it wrong is not a rounding error. `WEr` does:
+
+        a = lineCount > iJ ? first-iJ-lines : text
+        if (a.length > kae) a = a[:kae]
+
+    so a file over BOTH caps is cut to `cap_lines` first, and the byte cap then applies to
+    the RESULT -- frequently never binding at all. A byte-only estimate reported
+    `feedback_prereg_review_riders.md` (25,373 B, 359 lines) as delivering ~98.5%; it
+    actually delivers 60.9%, because the 200-line cap binds and the 373-byte overage never
+    applies. This instrument reproduced that exact error until 2026-08-12.
+    """
+    if not text:
+        return 1.0
+    total = len(text.encode())
+    lines = text.split("\n")
+    cut = "\n".join(lines[:cap_lines]) if len(lines) > cap_lines else text
+    if len(cut.encode()) > cap_bytes:
+        cut = cut.encode()[:cap_bytes].decode("utf-8", errors="ignore")
+    return len(cut.encode()) / total
+
+
 def delivery_report(memory_dir: Path) -> tuple[dict, list[str]]:
     """Per-file delivered fraction against each CANDIDATE cap. REPORTING ONLY.
 
@@ -175,9 +199,10 @@ def delivery_report(memory_dir: Path) -> tuple[dict, list[str]]:
         rows = []
         for p in sibs:
             b = p.stat().st_size
-            n = p.read_text(encoding="utf-8", errors="replace").count("\n") + 1
+            txt = p.read_text(encoding="utf-8", errors="replace")
+            n = txt.count("\n") + 1
             if b > cap_bytes or n > cap_lines:
-                rows.append((p.name, b, n, min(1.0, cap_bytes / b) if b else 1.0))
+                rows.append((p.name, b, n, delivered_fraction(txt, cap_bytes, cap_lines)))
         out[cap_name] = sorted(rows, key=lambda r: r[3])
     printed = [f"delivery (REPORTING ONLY, not gated — OQ-289 settles which cap binds; "
                f"promote to enforcing when OQ-290 lands): {len(sibs)} sibling files"]
@@ -191,6 +216,45 @@ def delivery_report(memory_dir: Path) -> tuple[dict, list[str]]:
             printed.append(f"    ... and {len(rows) - DELIVERY_ROWS} more "
                            f"(listing capped at {DELIVERY_ROWS}; the COUNT above is full)")
     return out, printed
+
+
+#: PASSIVE TRUNCATION TRIPWIRE (2026-08-12, OQ-289). The two delivery paths append
+#: DIFFERENT notices, so any truncated memory file that ever arrives ANNOUNCES which path
+#: cut it. That needs no designed trigger and no spend — it needs capture during ordinary
+#: work, which is the production transport, free and cumulative. It is the passive
+#: alternative to building an interactive harness to drive a stochastic relevance selector.
+NOTICE_WER = "Only part of it was loaded"          # WEr / kae=25000 / iJ=200 — NO pointer
+NOTICE_PIE = "This memory file was truncated"      # PIe / NSp=4096 / Npa=200 — HAS pointer
+TRUNCATION_SIGHTINGS = Path(__file__).resolve().parents[1] / "audits" / "truncation_sightings.md"
+
+
+def check_truncation_tripwire(path: Path) -> tuple[list[str], str]:
+    """Report any recorded sighting of a delivery-truncation notice.
+
+    REPORTING ONLY, and it is HALF AN INSTRUMENT BY CONSTRUCTION — stated here because a
+    quiet tripwire is exactly the shape that reads as reassurance.
+
+    **No sighting is UNINFORMATIVE.** Smoke run 2 proved that harder than assumed: a
+    report can be suppressed by prompt wording even when the content is plainly visible
+    (OQ-292, absence-shaped success). So silence here is not evidence that nothing
+    truncates. The standing POSITIVE that makes this quiet meaningful is the static
+    delivery-fraction readout below — it says how many files are over cap on disk, which
+    is a fact about the substrate rather than about anyone's search.
+
+    The pair is the instrument: static readout says *exposure exists*; the tripwire says
+    *a truncation was actually observed, and by which path*. Neither alone licenses a
+    conclusion.
+    """
+    if not path.is_file():
+        return [], ("truncation tripwire: no sightings file (no truncation notice has been "
+                    "recorded; NOT evidence that none occurred — see OQ-292)")
+    text = path.read_text(encoding="utf-8", errors="replace")
+    wer, pie = text.count(NOTICE_WER), text.count(NOTICE_PIE)
+    if not (wer or pie):
+        return [], ("truncation tripwire: sightings file present, 0 notices recorded "
+                    "(NOT evidence that none occurred — see OQ-292)")
+    return [], (f"truncation tripwire: {pie} PIe-path (NSp=4096) / {wer} WEr-path "
+                f"(kae=25000) sighting(s) recorded — OQ-289 is answerable from these")
 
 
 def selftest() -> int:
@@ -277,9 +341,53 @@ def selftest() -> int:
         if not any("REPORTING ONLY" in ln for ln in printed):
             failures.append("delivery control: the readout must label itself "
                             "REPORTING ONLY wherever it prints")
+        # LINE-CUT-FIRST arithmetic. A byte-only estimate reported the real over-cap
+        # file as ~98.5% delivered when it actually delivers 60.9%; this instrument
+        # carried that same error until 2026-08-12.
+        long_file = "x" * 60 + "\n"
+        long_file = long_file * 400            # 400 lines, ~24,400 B
+        f_kae = delivered_fraction(long_file, 25000, 200)
+        if not (0.49 < f_kae < 0.51):
+            failures.append(f"delivery control: line-cut-first arithmetic wrong "
+                            f"(400 lines under a 200-line cap should deliver ~50%, "
+                            f"got {f_kae:.1%})")
+        if delivered_fraction("a" * 10000, 25000, 200) != 1.0:
+            failures.append("delivery control: an under-cap file must deliver 100%")
+        f_b = delivered_fraction("a" * 10000, 4096, 200)
+        if not (0.40 < f_b < 0.42):
+            failures.append(f"delivery control: byte cap must bind when lines do not "
+                            f"(got {f_b:.1%})")
         _, skipped = delivery_report(d / "nonexistent")
         if not any("SKIPPED" in ln for ln in skipped):
             failures.append("delivery control: an absent memory dir must SKIP declaredly")
+
+    # -- truncation tripwire: must distinguish the two paths, and must NEVER report a
+    # -- quiet channel as reassurance. Two-sided plus a wording check on the silence.
+    with tempfile.TemporaryDirectory() as td:
+        d = Path(td)
+        _, quiet = check_truncation_tripwire(d / "absent.md")
+        if "NOT evidence" not in quiet:
+            failures.append("tripwire control: a quiet tripwire must SAY it is not "
+                            "evidence of absence (OQ-292) -- silence reads as "
+                            "reassurance otherwise")
+        empty = d / "empty.md"; empty.write_text("# sightings\n")
+        _, s = check_truncation_tripwire(empty)
+        if "0 notices" not in s or "NOT evidence" not in s:
+            failures.append("tripwire control: an empty sightings file must report 0 AND "
+                            "disclaim")
+        hit = d / "hit.md"
+        hit.write_text(f"seen: {NOTICE_PIE} (4096 byte limit). Use the Read tool\n")
+        _, s = check_truncation_tripwire(hit)
+        if "1 PIe-path" not in s:
+            failures.append("tripwire control: a PIe notice did not register")
+        if "0 WEr-path" not in s:
+            failures.append("tripwire control: a PIe notice must NOT register as WEr -- "
+                            "the whole value is that the paths are distinguishable")
+        hit2 = d / "hit2.md"
+        hit2.write_text(f"> WARNING: this memory file is 359 lines. {NOTICE_WER}.\n")
+        _, s = check_truncation_tripwire(hit2)
+        if "1 WEr-path" not in s or "0 PIe-path" not in s:
+            failures.append("tripwire control: a WEr notice did not register cleanly")
 
     for f in failures:
         print(f"SELFTEST FAIL: {f}")
@@ -314,6 +422,10 @@ def main() -> int:
     _, delivery_lines = delivery_report(MEMORY_DIR)
     for ln in delivery_lines:
         print(ln)
+    # The tripwire's PAIR. Printed immediately after the static readout deliberately:
+    # the readout is the standing positive that makes a quiet tripwire mean anything.
+    _, trip = check_truncation_tripwire(TRUNCATION_SIGHTINGS)
+    print("  " + trip)
     print(f"apparatus: {rate}; {chan_summary}; "
           + ("RED" if problems else "GREEN"))
     return 1 if problems else 0

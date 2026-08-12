@@ -99,7 +99,13 @@ and these are the exceptions. All three descend from one retraction and none is 
   and which constant binds stay `[UNWITNESSED]` pending OQ-289, and the disposition is OQ-290 (§9.2,
   operator jurisdiction).
 - **§7.4.1 gains a second instance of the unstated-selection-rule shape**, from a different arc.
-  Two instances is a pattern; one was an anecdote.
+  Two instances is a pattern; one was an anecdote. A *third* candidate from the same arc is
+  explicitly **held out**, with the reason recorded: a pattern that fits every finding in the arc
+  that coined it has stopped being falsifiable.
+- **§5.4 gains a FOURTH defect in the incidence instrument, and it is the inverse of this paper's
+  subject.** A probe's own prompt suppressed the report of a canary the worker could plainly see —
+  *absence-shaped success*, where a well-formed negative filled the hole where content was present.
+  Witnessed, dated, raw text retained; retro-audit minted as ISSUES OQ-292.
 
 ## ABSTRACT
 
@@ -1168,6 +1174,34 @@ failure the dominant failure class. Both are withdrawn.
 > underpowered probe) and one that was never audited at all until an extractor noticed a precision
 > failure by accident. A fourth check should be assumed to exist.
 
+> **A FOURTH DEFECT, AND IT IS THE INVERSE OF THIS PAPER'S SUBJECT (added 2026-08-12, witnessed,
+> raw text retained).** The three above are defects in *this census's* instrument. This one is in the
+> **instrument class the whole programme uses to witness anything**: the probe that asks a worker to
+> report what it can see.
+>
+> In a delivery probe (ISSUES OQ-289, evidence `python/audits/oq289_smoke_run2/`), a canary token was
+> placed in a file, and an index entry describing that file was worded — for unrelated reasons, to
+> make the file relevant to the probe's own question — as *"consult it whenever asked about
+> delivery-check tokens."* **That wording reads as an instruction, and the workers obeyed it.** They
+> went to fetch the referenced file and their turns ended having never reported a token sitting on
+> line 1 of the file they were reading from. The probe scored the canary **ABSENT**.
+>
+> It was not absent. The workers emitted, verbatim, the **absolute path of their own memory directory
+> and the referenced filename** — strings that existed nowhere but in the very file whose arrival was
+> being scored as a miss. The content was delivered, visible, and unreported.
+>
+> **This is absence-shaped success, and the programme is built almost entirely against its mirror.**
+> §2's spine says a success-shaped token fills the hole where something is missing. Here a
+> *failure*-shaped token — a clean, well-formed `NONE` — filled the hole where something was
+> **present**. The same collapse, running the other way, produced by the probe's own prompt.
+>
+> Two consequences, and the first is not local. **(a) A class of past results is suspect, not just
+> this one:** any probe result scored ABSENT is provisional until its prompt has been checked for
+> instruction-shaped wording that could have redirected the worker instead of eliciting a report.
+> That retro-audit is bounded and is minted as ISSUES **OQ-292**. **(b) A self-report probe now owes a
+> second channel** — behavioural evidence that the content was or was not present — because the
+> report and the presence came apart here under a prompt nobody thought was doing anything.
+
 The defensible statement:
 
 > Within the audited incident record, silent or never-fired defects were common enough to motivate
@@ -1546,6 +1580,18 @@ The corrective in both cases came from the same place and it is not a gate: some
 substrate directly — the binary, the artifact list — from **outside the frame the manifest
 defined**. That is not a procedure this paper can prescribe on a schedule, which is precisely §10.5's
 admission arriving with a second instance attached.
+
+> **A third candidate was offered and is DELIBERATELY HELD OUT — recorded because the reason is the
+> finding.** The same arc produced a transport mismatch: delivery was measured under `claude -p`
+> while the channel of interest is the interactive session, and the criterion *"the non-interactive
+> transport is an acceptable proxy"* was never articulated by anyone. That fits the shape exactly.
+> **It is not counted, because a pattern that fits every finding in its own arc has stopped being
+> falsifiable** — and the discipline that catches *that* is the one that caught the check which
+> could not fail (`build_discipline.md` → *A gate that CANNOT PASS is a false-positive gate*). Two
+> instances drawn from two independent arcs is a pattern; a third drawn from the arc that coined the
+> pattern is confirmation-shaped, and the honest move is to hold it until an unrelated arc supplies
+> one. **The count stays at two, and the reason it is not three is written down** — which is itself
+> the section's own rule about unstated criteria, applied to the section.
 
 > **The honest limit of this apparatus is therefore not a depth of verification but an act of
 > documentation: an unstated exemption is indistinguishable from an unnoticed one, and no gate can
