@@ -4319,10 +4319,10 @@ improvements in the operator's 2026-06-11 Pew-typology review exchange).
 external-instrument adapter is work the operator does not see ever getting done; closed as
 `future` (closed-but-searchable, revive if the substrate changes — full body kept below for
 that reviver). Originally filed 2026-06-11 (Pew political-typology review exchange; source instrument
-**Priority:** 1
 `agent/analysis/originals/Pew_2026.5.10_political-typology_topline.txt`; the four story files it
 grounded — `institutional_trust_erosion`, `representation_legitimacy_gap`,
 `intra_party_fragmentation`, `generational_value_divergence` — untracked as of filing).
+**Priority:** 1
 
 **The gap.** Story omegas carry `resolution_mechanism` prose (cross-national comparisons,
 longitudinal tracking, meta-analyses — generic future-evidence text; witnessed in
