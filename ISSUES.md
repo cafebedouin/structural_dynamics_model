@@ -1415,13 +1415,13 @@ the de-leaked pipeline. Connects to OQ-46.
 **Ω-type:** Ω_E (design-relevant — closeable by recalibration; deferred by policy until the corpus is worth calibrating against).
 
 **Status:** future — (deferred by policy to the post-rebuild recalibration; marked future 2026-07-13 at operator request — kept full-bodied as the standing recalibration ledger, revive when the rebuild lands). The χ / ε / suppression classification
-**Priority:** 1
 thresholds (`config.pl` §5B + §5) are documented as **"Calibrated: Derived from 691-constraint
 corpus analysis (2024–2026)"** (`logic_thresholds.md:15`), with the known limitation that the
 calibration corpus is **Western/WEIRD** and needs non-WEIRD validation (`logic_thresholds.md:58–59`,
 the §Known Issues block). That 691-constraint corpus **predates the rebuild** — the live `testsets/`
 is now ~194–226 readings (a single coherent run; see Critical Distinctions). **The thresholds were
 never recalibrated against the live corpus.**
+**Priority:** 1
 
 **Why this is logged now (OQ-37 Move 1, 2026-06-01).** Move 1 closed the (0.35,0.40) χ-partition
 gap *structurally* (corpus-independent: 0 transitions, commit `3ab3ace4`). It deliberately did
@@ -3503,11 +3503,11 @@ A4 contender-residue narrative are preserved in git history.
 **Ω-type:** Ω_C (a reporting/annotation feature; commentary-grade, never classification).
 
 **Status:** resolved — (2026-06-16) shipped as R3 commentary: `stakeholder_seats:extraction_reading/2`
-**Priority:** 1
 (+ `extractive_type/1`, `authored_victim/1`), `report_generator:extraction_reading_line/1`, and
 the `extraction_reading` sidecar field. Guard = `dr_type(C) ∈ {snare,tangled_rope}` ∧ no
 **authored** victim ∧ ≥1 beneficiary-side agent seat.
 **Origin:** 2026-06-07, OQ-85 decomposition audit.
+**Priority:** 1
 
 **Witnesses & findings (compressed).** Controls `prolog/tests/test_oq86_extraction_commentary.pl`
 24/24. **Plan correction #1 (operative trap):** `data_repair.pl:153` (OQ-93 shim-family)
@@ -4902,7 +4902,6 @@ full paired leg; the N-way partition emits the `signature` odd-leg tally {haiku 
 sonnet 59} over the 957 triple — now-decidable INPUT to "is the CHE↔FCR lean a stable model
 fingerprint?", not a verdict (one triple does not localize). The spend the resolution called
 "WARRANTED" is now runnable against a live third vote. Witness: `audits/2026-07-06_oq213a_twin_sonnet_leg/`.
-**Priority:** 1
 (`audits/2026-06-13_twin_comparison/`). The recurring `signature` disparity over matched ids is
 `constructed_high_extraction` (haiku side) ↔ `false_ci_rope` (flash side), in BOTH directions
 across many constraints — the two models systematically foreground different structural codings of
@@ -4910,6 +4909,7 @@ the same authored substrate. Per OQ-70 this is STRUCTURAL-coding disagreement, N
 claim (signature prevalence is bait-confounded). Open question: which authored fields drive the
 fork (extractiveness magnitude? the CI-rope gate inputs?), and is the lean a stable model
 fingerprint (re-test on a third model / a fresh twin draw). Cross-ref OQ-70.
+**Priority:** 1
 
 **RESOLUTION — Field A ruled SIGNAL (2026-06-27, convention control).** Both twins re-classified at
 one commit (`bbf5c92`; the existing outputs straddled the OQ-138 ROUTE conversion of `false_ci_rope`
