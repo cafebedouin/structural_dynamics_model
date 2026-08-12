@@ -1,6 +1,6 @@
-# UKE_REFEREE v0.2 [Universal Knowledge Evaluator — Structural Referee Report on Another Author's Work]
+# UKE_REFEREE v0.3 [Universal Knowledge Evaluator — Structural Referee Report on Another Author's Work]
 
-**Status:** Draft, one worked instance
+**Status:** Working draft, under active revision
 **License:** CC0-1.0
 **Parent Suite:** UKE Protocol Suite
 
@@ -8,246 +8,233 @@
 
 ### §0. FOUNDATION
 
-**Purpose:** Referee a substantive artifact **that this practitioner did not write and is not publishing** — a paper, prospectus, framework, or research program — so its author learns where the load actually sits. Not "is this right?" but **"what is holding this up, and what happens if it isn't there?"**
-
-**Origin:** Two review failures bracket this protocol. The **objection list**: twenty true criticisms, correctly stated, leaving the author with no idea which one matters. The **deference failure**: an instrument fires, and the reviewer reports the firing instead of adjudicating it against the source. Both look like review and transfer nothing. A referee report's value is concentrated in *localization* and *ranking* — finding the one break the other nineteen symptoms are, and naming the single move that would convert the work.
+**Purpose:** Referee a substantive artifact **that you did not write and are not publishing** — a paper, prospectus, framework, or research program — so its author learns where the load sits and what to do next. Not "is this right?" but **"what is holding this up, what happens if it isn't there, and which single move settles it fastest?"**
 
 **Core Invariants:**
 
-* **Localization > Enumeration.** Twenty objections with no spine is worse than one break with nineteen instances hanging off it.
+* **Localization > Enumeration.** Twenty true objections with no spine is worse than one break with nineteen instances hanging off it. Assume the author has already reached most of your objections independently — **the ranking is the deliverable, not the list.**
+* **Sequencing > Comprehensiveness.** The most valuable thing a referee produces is usually *what to do first and what not to spend on yet.* A cheap question that forecloses an expensive one is worth more than a complete critique.
 * **Adjudication > Deference.** Any instrument's output — engine signatures, omegas, this protocol — is a *hypothesis about the artifact*, contestable by reading the artifact.
-* **Convertibility > Completeness.** Rank asks by what each converts from narrative into result. "Do all seven steps" is not a recommendation.
 * **Verified skeleton > Assumed skeleton.** Recompute what is recomputable. It decides whether the weak points are structural or computational, and those get different reports.
-* **Declared incapacity > Bluffed expertise.** State what you cannot supply. A report that names its ceiling is usable; one that conceals it is a hazard. (This is **F34 Epistemic Trespass**, and it is the referee's characteristic failure.)
+* **Declared incapacity > Bluffed expertise.** State what you cannot supply. A report naming its ceiling is usable; one concealing it is a hazard. (**F34 Epistemic Trespass** — the referee's characteristic failure.)
 
 **The Core Discipline:**
 
-Referee the work the way `docs/technical/build_discipline.md` audits a build. Absence presents as presence. A gate that passes on missing input has checked nothing. A protective assumption is itself a claim and inherits the burden. Find the place where the artifact could have come out wrong and did not — and if there is no such place, that is the finding.
+Referee the work the way `docs/technical/build_discipline.md` audits a build. Absence presents as presence. A gate that passes on missing input has checked nothing. A protective assumption is itself a claim and inherits the burden. Find the place where the artifact could have come out wrong — and if there is none, that is the finding.
 
 ---
 
-### §0.1 PIPELINE POSITION — READ THIS BEFORE USING
+### §0.1 PIPELINE POSITION
 
-This protocol is **outside** the UKE publication pipeline, and the distinction is the reason it exists separately:
+This protocol is **outside** the UKE publication pipeline, which is the reason it exists separately:
 
 ```
 own work:      Draft → UKE_G → UKE_E → UKE_D → UKE_REALITY → UKE_A → UKE_R → publish
-another's work:            [source artifact] + [optional engine output] → UKE_REFEREE → letter to author
+another's work:          [source artifact] + [optional instrument output] → UKE_REFEREE → letter to author
 ```
 
-| | operates on | asks | terminates in |
+| | operates on | asks | ends in |
 |---|---|---|---|
-| **UKE_A** (`analysis/uke_audit.md`) | *our* artifact + its metadata block | did the generator do what it claimed? | a compliance verdict + Ω routing |
-| **UKE_R** (`analysis/uke_review.md`) | *our* artifacts + audit reports | promote / salvage / archive / contain? | a governance decision |
-| **UKE_REFEREE** (this) | *someone else's* artifact | what is load-bearing, and what would convert it? | a report addressed to its author |
+| **UKE_A** (`analysis/uke_audit.md`) | *our* artifact + metadata block | did the generator do what it claimed? | compliance verdict + Ω routing |
+| **UKE_R** (`analysis/uke_review.md`) | *our* artifacts + audit reports | promote / salvage / archive / contain? | governance decision |
+| **UKE_REFEREE** | *someone else's* artifact | what is load-bearing, what converts it? | report addressed to its author |
 
-**Do not merge these.** UKE_A requires a UKE_G metadata block and audits protocol adherence; this protocol has no metadata block to check and audits an argument's structure. UKE_A's independence rule bars participation in *generation*; here the practitioner never had any. The overlap is real but it is in the **shared fracture vocabulary**, not in the object.
-
-**Shared vocabulary, not a second copy.** Findings route to the **F01–F36 fracture codes and the Fracture ↔ Omega matrix in `agent/analysis/uke_audit.md` Appendix A**, which is canonical. This protocol mints **no new F-codes**; §11 lists only the *referee-specific* patterns that the matrix does not name, and maps each to its nearest matrix entry. A second fracture taxonomy would be Pattern 2 committed inside a review protocol.
+**Shared vocabulary, not a second copy.** Findings route to the F01–F36 codes and the Fracture ↔ Omega matrix in `agent/analysis/uke_audit.md` Appendix A, which is canonical. This protocol mints no new F-codes; §11 lists only *referee-specific* patterns the matrix does not name. **If that file is unavailable, say so and route by Ω type instead** — do not invent codes.
 
 ---
 
 ### §1. INTAKE
 
-#### §1.1 The two inputs, and their standing
+#### §1.1 Two inputs, two standings
 
-You may receive **(a)** the source artifact and **(b)** instrument output about it — `enhanced_report.py` signatures, omegas, classifications, or another reader's notes.
+**(a) the source artifact** — evidence. **(b) instrument output about it** (engine signatures, omegas, another reader's notes) — a *hypothesis*. Read the source. Where a firing does not survive contact with it, say so, name the section that refutes it, and rule against it.
 
-> **(a) is evidence. (b) is a hypothesis.** Read the source. Where a firing does not survive contact with it, say so, name the section that refutes it, and rule against it.
+**Independence** means no participation in producing the artifact — **not** information isolation. Read the source, the cited literature, and the generation context if available.
 
-The instrument earns its place by *directing attention*, not by supplying verdicts. Its highest-value output is often the firing that turns out to be wrong, because adjudicating it forces a reading nothing else would have prompted.
+#### §1.2 No-instrument mode (the common case)
 
-**Independence, defined as in UKE_A §0:** independence means no participation in producing the artifact — **not** information isolation. The referee should read the source, the cited literature, and the generation context if available. A referee who withholds reading in the name of independence has confused the two.
+When (b) is absent, **say so in one line and skip §1.3–§1.4 entirely.** Do not emit empty ledger blocks. Substitute this control, which is what §1.4 exists to provide:
 
-#### §1.2 The two-loci rule
+> **Two-sided skeleton check.** Recompute what is recomputable (§2) and report both the values that held and the values that did not. A referee who reports only failures has not shown the check could pass; one who reports only successes has not shown it could fail.
 
-When an instrument over-fires, the defect has **at least two locations**, and a source-vs-report comparison cannot separate them:
+#### §1.3 The two-loci rule *(instrument runs only)*
+
+When an instrument over-fires the defect has at least two locations, and a source-vs-report comparison cannot separate them:
 
 * **Instrument defect** — the signature does not discriminate, and would misfire on a faithful representation too.
-* **Upstream defect** — the representation the instrument read had already dropped what the source contains, and the instrument classified it correctly.
+* **Upstream defect** — the representation the instrument read had already dropped what the source contains.
 
-**If the intermediate artifact exists, put it in the comparison. If it does not, declare the ambiguity rather than resolving it by assumption.**
+Put the intermediate artifact in the comparison if it exists; declare the ambiguity if it does not.
 
-#### §1.3 Instrument ledger
+#### §1.4 Instrument ledger *(instrument runs only)*
 
-Record per finding: `upheld` / `overruled` / `not reached`, with the deciding source location and, where overruled, the locus per §1.2. At least one row must be a finding **the instrument did not surface** — the positive control that you read the artifact rather than the report. Attested reading with no per-finding disposition is **F19 Protocol Skip**.
-
----
-
-### §2. CREDIT FIRST — AND IT DECIDES THE GENRE
-
-Establish what works **before** the critique, and not for politeness. The credit determines what kind of report this is.
-
-* **The skeleton.** Recompute what is recomputable — arithmetic, units, dates, internal cross-references, cited values. Report either way. *Sound skeleton ⇒ the weak points are structural and the report must not read as "too speculative." Broken skeleton ⇒ that is the report, and the structural analysis waits.* (Failure to run this is **F35 Faux Rigor**, detected rather than committed.)
-* **The disciplines the author already keeps.** A status table separating established from conjectural, an explicit kill list, a declared scope, a question answered in advance. **An artifact that flags its own weakness has pre-empted the objection that names it**, and raising it anyway is reporting a firing rather than reading.
-* **The genre.** What is the artifact *for*? A prospectus asking whether an idea is worth pursuing is not a submission claiming a result. **Analytic vocabularies carry unstated preconditions** — an extraction vocabulary presupposes a program with something to defend; a reproducibility vocabulary presupposes a claimed result. Applying one whose precondition the artifact does not meet is a defect *in the report* (nearest matrix entry: **F20 Specification Drift**, applied to the reviewer).
+Per finding: `upheld` / `overruled` / `not reached`, with the deciding source location and, where overruled, the locus. **At least one row must be a finding the instrument did not surface** — the control that you read the artifact rather than the report.
 
 ---
 
-### §3. THE SPINE: ONE BREAK, LOCALIZED
+### §2. CREDIT, GENRE, AND THE AUTHOR'S OWN STANDARDS
 
-**§3.1 Build the dependency chain.** Write the artifact's own chain of dependence in its order, using its section numbers: what must be established for the next thing to mean anything.
+Do this before the critique. It decides what kind of report this is.
 
-**§3.2 Find the break and state it in one sentence.** Locate the earliest link asserted rather than established. Compress it to a sentence a reader could repeat — *"the document specifies consequences before it specifies a theory"* — then show the remaining weaknesses as that break localized, section by section. **If you cannot compress it, you have a list, not a spine. Keep reading.**
+**§2.1 Verify the skeleton.** Recompute the recomputable — arithmetic, units, dates, internal cross-references, cited values. **Report three states, not two:** *sound where checkable* (say what fraction was checkable), *broken*, or *unverifiable*. Sound ⇒ the weak points are structural and the report must not read as "too speculative." Broken ⇒ that is the report, and the structural analysis waits. **Give the successful checks a home** — they are usually the most load-bearing evidence you have.
 
-**§3.3 The unestablished-object test.** Distinguish an **unknown value** — a quantity whose number we await — from an **unestablished object** — a thing whose existence, sign, or type decides whether the downstream discussion describes anything at all. An artifact treating the second as the first reads as incomplete while being structurally empty. Name every parameter whose *sign or type*, not magnitude, gates the argument.
+**§2.2 Check citation integrity.** References listed but never cited; citations to works that do not carry what they are invoked for; a bound attributed to a source the artifact never actually consults. For work whose warrant is "I have read the literature," this is first-order.
 
-**§3.4 Sequencing is a finding.** A list of parallel next steps usually is not parallel. Name the **gate** — the item whose absence makes the others uninstantiable.
+**§2.3 Honour pre-emptions.** An artifact that flags its own weakness has **pre-empted the objection that names it.** Read the status table, the kill list, and the scope declaration *first*. Raising a pre-empted objection is reporting a firing rather than reading.
+
+**§2.4 Harvest the author's own standards.** Find where the artifact states how it should be judged — a stated criterion, a declared discipline, a sentence like *"this should be judged by whether one parameter set survives all five constraints."* **Grade against that first.** It is the highest-yield move in the protocol: it makes the central finding structural rather than adversarial, because the standard is theirs. If they wrote the sentence, quote it and hold them to it.
+
+**§2.5 Identify the genre.** A prospectus asking whether an idea is worth pursuing is not a submission claiming a result. **Analytic vocabularies carry unstated preconditions** — extraction language presupposes a program with something to defend; reproducibility language presupposes a claimed result. Applying one whose precondition the artifact does not meet is a defect *in the report*.
 
 ---
 
-### §4. THE ABSENCE BATTERY
+### §3. THE SPINE
 
-Each is a way to pass a check never taken. Run all; report which were run.
+**§3.1 Build the dependency chain.** Write the artifact's own chain of dependence, in its order, using its section numbers: what must be established for the next thing to mean anything.
 
-* **Survival-condition test.** A constraint derived from the fact that nothing has gone wrong yet is **not a result about the mechanism** — it states the condition under which the model would survive, and supplies no evidence until the mechanism is computed. (`build_discipline.md` Pattern 5.)
-* **Free-function test.** If every difficulty has an available answer of the same shape, something uncalculated is absorbing all of them. Name it, then ask: **can one parameter set satisfy every consumer at once?** List each consumer's demand and check the overlap. *If the windows do not overlap, breadth is a tension, not a virtue* (**F04 Cherry-Picking** at the level of the whole argument).
-* **Could-it-come-out-wrong test.** Find one operation that could have failed and did not. If there is none, the finding is that the artifact is not yet the kind of thing that can be wrong — stated as a description of stage, not of quality.
+**§3.2 Find the break; state it in one sentence.** Two candidate criteria exist and they can point at different links: the **earliest** link asserted rather than established, and the **load-bearing** one — the link whose failure explains the most other symptoms. **Prefer load-bearing, and name the earliest separately if they differ.** Compress the break to a sentence a reader could repeat, then show the remaining weaknesses as that break localized. *If you cannot compress it, you have a list. Keep reading.*
+
+**§3.3 Unknown value vs unestablished object.** Distinguish a quantity whose *number* we await from a thing whose *existence, sign, or type* decides whether the downstream discussion describes anything at all. An artifact treating the second as the first reads as incomplete while being structurally empty. Name every parameter whose sign or type — not magnitude — gates the argument.
+
+---
+
+### §4. SEQUENCING — WHAT TO DO FIRST, AND WHAT NOT TO SPEND ON
+
+**This section is the protocol's highest-yield output. Treat it as the point of the report, not as a closing remark.**
+
+A list of "next steps" is almost never parallel. The author cannot see this from inside, because each item looks independently tractable.
+
+**Method:**
+
+1. **Take the artifact's own program** — its future-work list, its §12, its open problems.
+2. **For each item, ask what it presupposes.** An item requiring a well-defined object that another item is supposed to establish is *downstream*, not parallel.
+3. **Name the gate** — the item whose absence makes the others uninstantiable. State it flatly: *"nobody can put the two-body spectrum on a lattice before you've said what theory is going on the lattice."*
+4. **Say what not to spend on yet.** This is the part authors act on. An expensive computation deferred until a cheap question returns is a concrete saving, and it is frequently the whole value of the report.
+5. **Check for the cheap decisive question.** Is there a question answerable in days whose answer could foreclose months? If yes, it leads §6.2 regardless of where it sits in the artifact's own ordering.
+
+---
+
+### §5. THE ABSENCE BATTERY
+
+Each is a way to pass a check never taken. Run all; **report which fired and which did not** — a battery item that finds nothing is a result, not an omission.
+
+* **Imported-phenomenology test.** When an artifact explores *the same mechanism in a new domain*, separate what is **derived** from what is **presupposed to carry over**. Shared laws do not license shared emergent behavior. List the phenomena the artifact expects by analogy — bound states, saturation density, stable composites, a spectrum, an equilibrium — and for each ask whether anything establishes that *this* domain produces them at all. **The tell is a rich phenomenology available before the theory that would generate it.** This sits upstream of §3.3: not merely "is the object established" but "is the object's *kind* imported."
+* **Survival-condition test.** A constraint derived from the fact that nothing has gone wrong yet is **not a result about the mechanism** — it states the condition under which the model would survive, and supplies no evidence until the mechanism is computed.
+* **Free-function test.** If every difficulty has an available answer of the same shape, something uncalculated is absorbing all of them. Name it, then ask whether **one parameter set can satisfy every consumer at once.** List each consumer's demand and check the overlap — and **distinguish two outcomes that license different reports**: *the windows do not overlap* (a finding against the artifact) versus *the windows cannot be located* (a finding about its stage).
+* **Could-it-come-out-wrong test.** Look for an operation the artifact performs that **could have come out either way**. An operation that came out *against* the author and was reported anyway is the strongest form — credit it. If no such operation exists anywhere, the finding is that the artifact is not yet the kind of thing that can be wrong: a description of stage, not of quality.
+* **Failure-propagation test.** Where the artifact *does* record a negative result, trace whether the sections downstream of it were revised. A concession in §2 that §4 proceeds past unchanged is a local wrong with no propagation mechanism — and it is invisible to every other item here.
 * **Open-window test.** Not being excluded is not evidence. Second edge: a window is often open *because* objects there are hard to detect, which fights using them to produce visible effects. **The same property cannot be load-bearing for both invisibility and visibility.**
-* **Uncalibrated-template test.** A borrowed functional form works at home because coefficients were fit to a measured corpus. Imported where neither fitting data nor a first-principles route exists, it is not an under-determined parameterization — it is a template with nothing behind it (**F25 Arbitrary Threshold**).
+* **Uncalibrated-template test.** A borrowed functional form works at home because its coefficients were fitted to a measured corpus. Imported where neither fitting data nor a first-principles route exists, it is a template with nothing behind it. **This test cannot report its own failure to fire** — if you do not recognize the borrowed form, it returns silence indistinguishable from a clean result. Name the templates you checked.
 * **Analogy-load test.** When a neighbouring formalism is cited as evidence of tractability, check what makes *that* formalism tractable. If the enabling structure has no analogue here, the citation reads as a route to calculability and is not one.
 
 ---
 
-### §5. PROTECTIVE POSTULATES
+### §6. PROTECTIVE POSTULATES, ROUTING, AND THE ASKS
 
-> **The protective mechanism must be derived from the same microphysics that generates the effect.**
+**§6.1 Protective postulates.** *The protective mechanism must be derived from the same microphysics that generates the effect.* When one uncalculated quantity must be *large* for the phenomenology and *small* for safety or survival, the artifact has stated one requirement twice in opposite directions about something nobody has computed.
 
-When one uncalculated quantity must be *large* for the phenomenology and *small* for safety or survival, the artifact has stated one requirement twice in opposite directions about something nobody has computed.
+**Find the comparison class.** Most fields have a prior episode where an ambitious proposal met the same demand, and the standard the community actually applied beats your opinion. Report which condition was closed by *calculation* and which empirical reassurance was later shown incomplete. **If you cannot name a comparison class, say which of two things is true** — *"I don't know of one"* or *"the field has no precedent."* They are different claims and only the second is a finding.
 
-**Method: find the comparison class.** Most fields have a prior episode where an ambitious proposal met the same demand, and the standard the community actually applied beats the referee's opinion. Report what that field did — which condition was closed by *calculation*, which empirical reassurance was later shown logically incomplete, and in what order.
+**§6.2 Route every finding.** **Error** — fixable within the artifact's frame → `route_to_fix`. **Boundary** — a missing constraint or unestablished object → `elevate_to_omega`. A report routing everything to fix has not found the structure; one routing everything to omega has not done the reading. Number your findings so routing can reference them.
 
----
+**§6.3 What would change my assessment.** Three to five **ranked single moves**, each converting one piece from narrative into result.
 
-### §6. THE FIX/BOUNDARY SPLIT AND THE ASKS
-
-**§6.1 Route every finding** (adopted from UKE_A §5). For each, decide:
-
-* **Error** — fixable within the artifact's own frame → `route_to_fix`.
-* **Boundary** — a missing constraint or unestablished object → `elevate_to_omega`, using the matrix formulation from `uke_audit.md` Appendix A where an F-code applies, or an Ω_E/Ω_C/Ω_P typing where none does.
-
-A referee report that routes everything to `fix` has not found the structure. One that routes everything to `omega` has not done the reading.
-
-**§6.2 What would change my assessment.** Close with **three to five ranked single moves**, each converting one piece from narrative into result.
-
-* Each is one move, not a program. If it reads like a research agenda, it belongs in the body.
-* Each says what it converts — not "compute X" but "computing the sign of X moves it from postulate to result."
-* **At least one must be cheap.** A model-independent number checkable in an afternoon beats the perfect experiment, because it will actually get done.
+* One move, not a program. If it reads like a research agenda it belongs in the body.
+* Say what it converts — not "compute X" but "computing the sign of X moves it from postulate to result."
+* **State a rough cost** for each. The author cannot sequence without it.
+* **At least one must be cheap.** An afternoon-sized check beats the perfect experiment, because it will actually get done.
 * Rank by conversion, not by difficulty or by your interest.
+
+**§6.4 Answer the question the author asked.** If the artifact states what it wants decided — *inconsistent, calculable, or fertile?* — **give the verdict, or say precisely why you cannot and what would settle it.** A report that produces a spine and never answers the author's own question has done analysis instead of refereeing.
 
 ---
 
 ### §7. WHAT THE REFEREE MAY NOT CLAIM
 
-* **State incapacity up front, concretely.** *"You asked for a proof of inconsistency. I can't give you one. What I can give you is where the proof would have to start, and why the attempt would stall in a specific place — which is itself information."* This tells the author how to weight everything after it.
-* **Scope every claim to what your evidence licenses.** Where a conclusion depends on choices the artifact has not made, say so. Resist the strong form; hand the burden back as an unmet obligation rather than a defeat.
-* **Correct yourself in place, marked, mid-document.** If a point turns out wrong, write the correction where the point would have gone and say why. A report showing one self-correction is more trustworthy on all its other claims.
-* **Separate verified from assessed.** Claim exactly the arithmetic you checked and the structure you audited, and no domain authority beyond it.
+* **State incapacity up front, concretely.** *"You asked for a proof of inconsistency. I can't give you one. What I can give you is where the proof would have to start, and why the attempt would stall in a specific place."* This tells the author how to weight everything after it.
+* **Scope claims to what your evidence licenses.** Where a conclusion depends on choices the artifact has not made, say so, and hand the burden back as an unmet obligation rather than a defeat.
+* **Separate verified from assessed.** Claim the arithmetic you checked and the structure you audited, and no domain authority beyond it.
+* **Correct yourself in place, marked.** If a point turns out wrong, write the correction where the point would have gone. Do not manufacture one for credibility; do not silently drop one that occurred.
+* **Keep the report shorter than the artifact.** A referee report that outruns what it reviews has failed its reader regardless of content.
 
 ---
 
-### §8. CONTROL ARTIFACTS AND THE REFEREE'S OWN CALIBRATION
+### §8. BEFORE YOU SEND
 
-Adopted from UKE_A §4, because a referee protocol with no positive control is an instrument that has never been shown able to fire.
-
-**Before a formal or contested report**, run the referee against:
-
-* **Type 1 — deliberate flaws.** A version of the artifact (or a comparable one) with a known structural defect planted. *The report must find it.*
-* **Type 2 — known clean.** A comparable artifact whose structure is sound. *The report must decline* — and this is the load-bearing half. A referee that produces a spine for everything has produced no information, since the spine is the deliverable.
-
-```
-[CALIBRATION]
-detection: [found planted defect: yes/no]
-decline:   [declined on clean artifact: yes/no/not run]
-sensitivity: [high | medium | low]
-```
-
-**Grades, strongest first** (`build_discipline.md` → *A positive control demonstrates DISCRIMINATION, not detection*): a decline in the referee's **own history** > a **naturally-arising** clean artifact > an **authored** clean one. A calibration with no decline available is one-sided and licenses nothing.
-
----
-
-### §9. SELF-APPLICATION, AND WHERE RECURSION STOPS
-
-**Recursion termination** (as UKE_A §0): referee reports are not themselves refereed by this protocol. The chain terminates at the author's and practitioner's judgment. §9 is a **pre-flight check on the referee**, not a recursive audit:
+**Recursion terminates here.** Referee reports are not themselves refereed. These are pre-flight checks on you, not a recursive audit.
 
 * **Am I reporting firings?** If the spine is the instrument's output rather than the artifact's structure, restart at §1.1.
 * **Is my spine a spine, or a list with a heading?** Remove the first section — do the others still read as instances of the same break?
-* **Is my most confident objection the one I can least verify?** That correlation is the tell for **F34**. Re-scope (§7) or cut.
-* **Have I told the author which single thing to do?** If §6.2 is unranked or longer than five, the ranking has been offloaded onto the person who needed it done.
+* **Is my most confident objection the one I can least verify?** That correlation is the tell for F34. Re-scope or cut.
+* **Have I said what to do first and what not to spend on?** (§4.) If not, the report is a critique, not a referee report.
+* **What would have made me decline?** Write one paragraph naming the artifact that would have gotten a clean report from you. **A referee who can produce a spine for anything has produced no information** — the spine is the deliverable, so it has to be withholdable. If you cannot describe the declining case, say so; that is a fact about this report's weight.
 
 ---
 
-### §10. OUTPUT FORMAT
+### §9. OUTPUT FORMAT
+
+Adapt freely — the blocks below are what the author needs, not a schema to satisfy. **Omit any block that would be empty and say why in one line.**
 
 ```
 [UKE_META]
-protocol: UKE_REFEREE v0.2
-artifact: [title, date, genre — prospectus / submission / framework / program]
-inputs: [source read: full/partial] [instrument output: source + version, or none]
-referee_position: [verified vs assessed; domain expertise claimed: none/partial/full]
+protocol: UKE_REFEREE v0.3
+artifact: [title, date, genre]
+inputs: [source: full/partial] [instrument output: none | source + version]
+verified: [what you actually recomputed, and the fraction checkable]
+assessed: [what you judged structurally]
+expertise_claimed: [none | partial | full]
 spine: [the break, in one sentence]
 
-[VERIFICATION-LIMITS]
-{what could not be checked and why — sources unavailable, domain competence, access}
+[WHAT HOLDS]
+{skeleton verification incl. successful checks; disciplines the author keeps;
+ pre-empted objections not raised; the author's own standard, quoted}
 
-[REPORT BODY]
-{Addressed to the author, second person:
- 1. What holds, and what kind of report this therefore is (§2)
- 2. The dependency chain and where it breaks (§3)
- 3. The break localized, section by section
- 4. Protective postulates and comparison class (§5)
- 5. Constraints to confront, ordered (§3.4)
- 6. Smaller points, labelled as such
- 7. What would change my assessment (§6.2)}
+[THE BREAK, LOCALIZED]
+{numbered findings F1..Fn, each an instance of the spine}
 
-[INSTRUMENT LEDGER]
-finding → upheld | overruled | not reached — deciding location — [locus: instrument / upstream / ambiguous]
-(≥1 row must be a finding the instrument did not surface)
+[SEQUENCING]
+{the gate; what not to spend on yet; the cheap decisive question}
+
+[BATTERY]
+{per item: fired / did not fire / could not run — one line each}
 
 [ROUTING]
-{per finding} → route_to_fix | elevate_to_omega
-Ω: [Label] — [Question] (Source: FXX from uke_audit.md Appendix A, or Ω_E/Ω_C/Ω_P)
+F1 → route_to_fix | elevate_to_omega — Ω: [Label] — [Question]
 
-[CALIBRATION]
-{from §8, or "not run" with reason}
+[WHAT WOULD CHANGE MY ASSESSMENT]
+{3–5 ranked moves, each with what it converts and a rough cost, ≥1 cheap}
 
-[QUALITY GATES]
-Adjudication / Two loci / Skeleton / Credit / Genre / Spine / Objects / Battery /
-One-spectrum / Protection / Sequencing / Routing / Asks / Incapacity: [Pass/Fail each]
+[THE AUTHOR'S QUESTION]
+{their question, answered — or why it cannot be, and what would settle it}
+
+[LIMITS]
+{what could not be checked and why; what would have made me decline}
 ```
 
 ---
 
-### §11. REFEREE-SPECIFIC PATTERNS
+### §10. REFEREE-SPECIFIC PATTERNS
 
-**Only patterns the Appendix A matrix does not name.** Everything else routes to F01–F36.
+Only patterns the Appendix A matrix does not name — it types defects in artifacts, not in reports about them.
 
-**F-OBJECTION-LIST.** N true criticisms with no spine; the author cannot tell which matters. *Nearest matrix entry: none — the matrix types defects in an artifact, not in a report about one.* Fix: §3.
+**F-OBJECTION-LIST.** N true criticisms, no spine; the author cannot tell which matters. Fix: §3.
 
-**F-ENGINE-DEFERENCE.** Reporting an instrument's firings as findings. Fix: §1.1. *Related: F08 Appeal to Authority, with the instrument as the authority.*
+**F-NO-SEQUENCE.** A complete critique that never says what to do first. The most common way a technically correct report delivers nothing. Fix: §4.
 
-**F-LOCUS-CONFLATION.** Concluding "the instrument over-fires" from a comparison that skipped the intermediate artifact. Fix: §1.2. *Related: F05 Correlation/Causation.*
+**F-ENGINE-DEFERENCE.** Reporting an instrument's firings as findings. Fix: §1.1.
 
-**F-PREEMPTION-BLINDNESS.** Raising an objection the artifact already states about itself. Fix: §2 — read the status table, kill list and scope declaration *first*; they retire whole classes of objection. *Related: F10 Straw Man.*
+**F-LOCUS-CONFLATION.** "The instrument over-fires," concluded from a comparison that skipped the intermediate artifact. Fix: §1.3.
 
-**F-UNRANKED-ASKS.** Closing with the artifact's own to-do list rather than ranked converting moves. Fix: §6.2.
+**F-PREEMPTION-BLINDNESS.** Raising an objection the artifact already states about itself. Fix: §2.3.
 
-**F-CONTEMPT.** Treating stage as quality — "this is not yet a research program" written as a verdict on the author rather than a description of where the work sits. Fix: the finding is structural, and belongs in the author's own vocabulary wherever they supplied one. If they already wrote the sentence, quote them and hold them to it.
+**F-CONTEMPT.** Treating stage as quality — "this is not yet a research program" as a verdict on the author rather than a description of where the work sits. Fix: §2.4. Grade against their standard, in their words.
 
 ---
 
-### §12. VERSION NOTES
+### §11. VERSION NOTES
 
-**v0.2 — Suite reconciliation (2026-08-12)**
+Kept short and forward-facing: what changed, and where the protocol is still thin. This document is expected to churn with use.
 
-Written as `uke_audit_architecture.md` and **renamed**, because `agent/analysis/uke_audit.md` v1.4 already holds the name `UKE_AUDIT` — a different protocol (protocol-adherence and grounding verification on *our own* artifacts, requiring a UKE_G metadata block). Two documents named UKE_AUDIT with different referents is the index collision this repository tracks as OQ-278, and minting it inside a review protocol would have been the joke telling itself. Renamed to UKE_REFEREE: refereeing another author's manuscript, which is what it does.
+**v0.3.** Sequencing promoted from a subsection to §4, its own section with a method — it is what authors act on, and a complete critique that omits it delivers little. Battery gains **imported-phenomenology** (shared laws do not license shared emergent behavior; the tell is a rich phenomenology available before the theory that would generate it) and **failure-propagation** (a recorded negative result whose downstream sections were never revised). *Could-it-come-out-wrong* was worded backwards — it rewarded a passing check when an operation that came out **against** the author and was reported anyway is the stronger signal. §2 gains the author's-own-standards harvest (highest-yield single move), citation integrity, and a third skeleton state. §6 gains cost estimates, the comparison-class fallback, and **answer the author's question**. No-instrument mode added: §1.3–§1.4 are skipped rather than emitted empty, since a control satisfied by absence is Pattern 5. Calibration block replaced by the *what would have made me decline* paragraph — always available, and it carries the same information.
 
-**Absorbed from `analysis/uke_audit.md` v1.4:** the F01–F36 fracture matrix as the **canonical** vocabulary (v0.1 minted a rival set — Pattern 2, now retired: §11 keeps only referee-specific patterns and maps each to its nearest matrix entry); the `route_to_fix` / `elevate_to_omega` split (§6.1), which is sharper than v0.1's flat Ω typing; **control artifacts (§8)**, the largest gap in v0.1 — a referee protocol with no positive control is an instrument never shown able to fire, and the *decline* half is load-bearing; the structured `[VERIFICATION-LIMITS]` block, replacing v0.1's prose incapacity statement; the independence definition (no participation in generation ≠ information isolation); and recursion termination, which v0.1's self-application section contradicted and §9 now reconciles.
-
-**v0.1 — Extraction (2026-08-12)**
-
-Formalized from a worked instance: a review of a speculative physics prospectus produced by feeding `enhanced_report.py` output plus the source to a model outside the engine's framing, whose result a domain physicist engaged with. The protocol is the *architecture* of that review, not its physics.
-
-Provenance, recorded because it is the claim to check: the review's moves are this repository's existing disciplines pointed at a foreign domain. The survival-condition test is Pattern 5; the same-microphysics rule is *an introduced instrument is itself a claim*; the open-window test is the governing stance (*"I didn't find it" is a fact about the search*); could-it-come-out-wrong is *a check that cannot fail witnesses nothing*. **Nothing here is new discipline — it is the build discipline pointed outward at someone else's artifact.**
-
-**Known gaps, declared:** n = 1 domain, 1 referee, 1 author's judgment of value. §1.2's two-loci rule has never been exercised with the intermediate artifact in hand. §5's comparison-class method assumes a field with documented precedent. §8's calibration has **never been run** — the protocol currently has detection evidence and no decline. §2's genre-precondition premise is asserted, not established.
+**Still thin.** §5's comparison class depends on referee knowledge the protocol cannot check for and offers only a declaration when it is missing. The uncalibrated-template test cannot report its own failure to fire. §1.3's two-loci rule has never been exercised with the intermediate artifact in hand. The genre-precondition premise in §2.5 is asserted, not established.
