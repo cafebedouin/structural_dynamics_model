@@ -45,6 +45,15 @@ them.
   dependency** — OQ-277 does not block on a reply.
 - `SPEC_next_preregistration.md` — the specification governing the next stamp (see §"WHAT THIS
   AUDIT IS BLOCKED ON" in ISSUES OQ-277); no spend is requested by it.
+- `responses/EMPTY_BY_DEFECT.md` — **the empty `responses/` directory IS the artifact of the live
+  run.** Git does not track empty directories, so without this marker the directory vanishes from a
+  fresh clone and "made 219 calls, persisted nothing" becomes indistinguishable from "never reached
+  this phase." Witnesses the failure that `edc90409` records.
+- `payloads_stub/`, `responses_stub/`, `STUB_RUN_README.md` — the **synthetic** full-scale stub run
+  (`mode: stub`, 219 units, stamped 34 minutes AFTER the failed live run). Witnesses §2.1 row 6 of
+  the SPEC — that gate 4, the output-side gate, is built and closes write-then-verify at production
+  scale — which is otherwise a claim a cold reader cannot check. **Not results**; the README states
+  the fail-closed `mode == "live"` requirement now carried as SPEC §3 item 6.
 
 *This file is rewritten at close with the real verdict. Its current content is the honest
 state: extraction underway, nothing measured.*

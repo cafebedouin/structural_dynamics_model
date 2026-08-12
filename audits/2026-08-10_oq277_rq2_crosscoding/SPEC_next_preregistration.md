@@ -138,6 +138,17 @@ have produced 219 scoreable answers that nothing in the repository can score.
 4. **The freeze-integrity check covers the new stamp** (the gate entry generalises or is
    re-pointed; it carries a retirement note tied to OQ-277's close).
 5. **The scorer's control density is stated, not assumed.** See §3.1.
+6. **The scorer refuses stub data, fail-closed (added 2026-08-12).** Before scoring any response
+   set it **reads the sibling `_run.json` and asserts `mode == "live"`** — refusing on
+   `mode == "stub"`, and refusing on a missing or unparseable `_run.json` rather than proceeding.
+   Rationale: the repository now holds a full 219-unit **stub** response set
+   (`responses_stub/`, `mode: stub`, run-id `stub-4118f64e-…`; see `STUB_RUN_README.md`), retained
+   because it is the evidence for §2.1 row 6. A scorer pointed at it would emit a clean 219-unit
+   result computed entirely from fabricated tokens — success-shaped output from a run that
+   measured nothing, i.e. Pattern 6 carrying this audit's own name. The guard is one line because
+   `mode` was made machine-readable for exactly this; **it is a requirement rather than a warning
+   label because a label is not a check.** Its two-sided control: point the scorer at
+   `responses_stub/` (must refuse) and at a fixture with `mode: live` (must proceed).
 
 ### 3.2 Live transport — negative controls BEFORE the spend request, not as a residue
 
