@@ -289,7 +289,26 @@ are **downstream**, and offering them as the answer is the same move again.
    the system and every warrant you reach for lives outside it, you are escalating a concession
    rather than checking a claim.
 2. **The self-instance is available and unused.** Ask whether the thing under question happened
-   during the exchange in which it was raised. It usually did.
+   during the exchange in which it was raised. It usually did. **This is the tell that will
+   actually fire, because it is checkable without judgment** — a grep against the transcript, not
+   an assessment. The witnessed case is literal: the position moved four times in the conversation
+   that asked whether a path for moving existed.
+
+**Why this one, and not its sibling, earns an always-loaded slot — the visibility asymmetry.**
+Moves (4) and (7) are both register preferences, but they fail differently under a channel cap.
+**Hedging is visible in the output**: a reader can see the refused commitment sitting there. **This
+one is not** — the output is a well-formed question with a procedure attached, and it reads as
+diligence. Whatever the relative firing rates, the harder-to-see failure has the better claim on a
+capped channel, because the visible one has a second line of defence (any reader) and the invisible
+one has none.
+
+> **FALSIFIER, ATTACHED AT ADOPTION (owed under *A falsifier must be FIREABLE*).** This entry is
+> load-bearing **iff the instances found between 2026-08-12 and the September consolidation pass are
+> ones nobody flagged in conversation.** Every instance behind the minting was operator-caught —
+> which is the correct provenance for *minting* it and the wrong evidence for *keeping* it. **A
+> register preference that only ever gets named by the operator is documentation of the operator's
+> attention, not a working control.** At the pass: if the only instances on the ledger are
+> operator-named, demote or retire — do not renew on the strength of the founding case.
 
 **The substrate check that ends it fastest — and it is why this repository is a bad place to run
 the move.** Before asking whether X *can* happen, check whether **X is what the last commit did.**

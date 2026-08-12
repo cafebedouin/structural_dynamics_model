@@ -780,7 +780,13 @@ the synthesis side* and *When to stop verifying*):
   which physical line is a fact). Not an epistemic error but a **register preference**, so noticing
   it does not dissolve it — it re-derives one level up as "but does it move *creditably*." Concede in
   the register the point was made in; downstream questions get raised as downstream, never in place
-  of the concession.
+  of the concession. **The self-instance tell is the one that fires, because it needs no judgment —
+  it is a grep against the transcript.** Unlike (4), this failure is **invisible in the output** (a
+  well-formed question reads as diligence), which is why it holds a capped slot: the visible sibling
+  has any reader as a second line of defence, this one has none. **Falsifier, attached at adoption:**
+  load-bearing iff instances found before the September consolidation pass are ones **nobody flagged
+  in conversation** — every founding instance was operator-caught, which is right for minting and
+  wrong for keeping; if the ledger holds only operator-named instances at the pass, demote or retire.
 
 ## Critical Distinctions
 

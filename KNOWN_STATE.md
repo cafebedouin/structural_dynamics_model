@@ -109,6 +109,18 @@ So it is a **weaker instance, not the same defect**, and the honest reading is a
 (two large documents unconditionally, most sessions will not need them) rather than a suppression
 hazard. Named here so a future consolidation can weigh it; no edit made.
 
+**RE-RUN 2026-08-12 with a POSITIVE CONTROL, after the file gained two more entries** (the memory
+tripwire and synthesis move (7)) — the first scan used a hand heuristic with no control, and a
+different hand heuristic in the same session had already produced a false negative (the Priority
+splice: "exactly 1" was really 4). Detector separates **fetch-on-question** (the smoke-run-2 defect:
+`consult X whenever asked about Y`) from **action-gated fetch** (the correct shape: `read X before
+modifying Y`). **All four controls passed** — fires on the literal smoke-run-2 string, declines on a
+known-good gate, declines on a bare pointer, and fires on a gate whose path contains dots (that last
+control caught the detector's own first version, where `[^.\n]` excluded dotted paths and the gate
+arm silently under-fired). **Result: 0 fetch-on-question, 6 action-gated.** CLAUDE.md is clean on
+this defect, including both new entries — each states operative content with a trailing provenance
+pointer rather than sending the reader to fetch.
+
 ---
 
 ## 2026-08-12 — [correction-key] OQ-286 RETRACTED (carrier misidentified): `CLAUDE.md` is not truncated — it is SKIPPED WHOLE above 4 MB, at 46× headroom. The recall channel is where a limit plausibly binds (OQ-289/OQ-290)
