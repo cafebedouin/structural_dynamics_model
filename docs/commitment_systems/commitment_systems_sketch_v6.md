@@ -92,6 +92,7 @@ spec layer — absorbed corrections with the marks sanded off.
 | Committer/ground axis recorded as a bundle null | v5 §5 | The possibility-space exploration | Superseded by the v5.1 split (below) |
 | Bundle null split: beneficiary/victim bit graduated (ε-independent, bounded); everything else standing null on sharper grounds | v5.1 §§5.1–5.5 | v5's single undifferentiated null | Carried — §10 |
 | `natural_law_constraint` + `epistemic_consensus` promoted from unspecced to acknowledged | v5.2 §2 | Seven-atom spec enumeration vs nine-atom code | Carried — §4 |
+| Positional-blindness formalization claim corrected: the presheaf/H¹ machinery formalizes disagreement between positions that each produced a reading, **not** the inability to see — a non-reading seat maps to `unknown` and `is_real_type/1` filters it out before H¹ | v6.1 §2.5 | v4→v6's implied "the framework formalizes this," which read as covering both claims of the paragraph | Live — the unable-to-see claim is now marked UNFORMALIZED; build question is OQ-285 |
 
 ---
 
@@ -255,7 +256,7 @@ interpretive layer can no longer plausibly absorb.
 These are structural predictions, not contingent observations. The pattern plus the
 environmental rate plus the authority structure's incentives produce the failure mode.
 
-### 2.5 Different positions see different things — [CARRIED from v4; one citation updated to the v8 paper]
+### 2.5 Different positions see different things — [CARRIED from v4; citation updated to the v8 paper; **v6.1 (2026-08-12): the formalization claim CORRECTED — see the marked paragraph**]
 
 Within any commitment system, participants at different positions see different things.
 Insiders, external observers, beneficiaries, victims, reformers, conservatives — each position
@@ -274,11 +275,32 @@ easily acknowledge that their commitments have shifted operationally.
 
 The disagreement between positions is data, not problem. Different perspectives on the same
 system produce unreconcilable accounts because the structural mechanisms they pass through
-differ across positions. The framework formalizes this through presheaf machinery developed in
-companion work (the Deferential Realism engine; entry point
+differ across positions. The framework formalizes **this** through presheaf machinery developed
+in companion work (the Deferential Realism engine; entry point
 `docs/deferential_realism_paper_v8.md`) — observer positions form a category, classification
 data forms a presheaf that often fails the sheaf gluing axiom. The technical detail is not
-necessary to use the framework. The structural insight is that disagreement between positions
+necessary to use the framework.
+
+> **[CORRECTED v6.1, 2026-08-12 — the formalization covers the disagreement, NOT the blindness.]**
+> The paragraph above this one makes a second claim — that some positions are *systematically
+> unable to see* drift they participate in producing — and the sentence just above appeared to
+> offer the presheaf machinery as its formalization. **It is not one, and the code is explicit
+> about why.** H¹ measures disagreement among positions that each **produced a reading**. A
+> position that cannot produce one is filtered out *before* H¹ is computed: a seat whose type
+> derivation fails maps to `unknown` (`stakeholder_seats.pl:337-341`), and
+> `is_real_type/1` removes it, so the obstruction — in that predicate's own words — "counts it as
+> neither agreeing nor disagreeing." The same token also carries a seat that derives a literal
+> `unknown`; both are collapsed as "untypeable for pair-counting purposes." **So the engine's
+> disagreement measure is silent exactly where a position is blind, and cannot distinguish a blind
+> position from an absent reading.** What survives is the *count* — `stakeholder_obstruction/5`
+> carries `NSeats`/`NReal` in-band — never the *kind*.
+>
+> The unable-to-see claim therefore stands as this document's own structural assertion, presently
+> **unformalized**, not as a described output of the engine. Whether the gauge axis should carry
+> an "expressible-from-here" predicate distinct from "types-to-X-from-here" is **OQ-285**;
+> `design_discipline.md` §5 governs whether the category is addable at all, since Mode-3 blind
+> cells are by construction undetectable from inside the system that has them. Background:
+> `docs/concealment/concealment_without_a_concealer_v0_4.md` §5.3 (mode 3, positional blindness). The structural insight is that disagreement between positions
 can be a measurable feature of the system rather than evidence that someone is wrong.
 
 The framework's analytical position is also a position. The analyst sees patterns participants

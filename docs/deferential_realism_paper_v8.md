@@ -3,7 +3,12 @@
 **A Framework for Systems Where What You See Depends on Where You Stand, Which Commitment You
 Are Looking At, and How Its Holder Stands Toward It**
 
-**Version: v8.0**
+**Version: v8.0.1** *(2026-08-12: one addition — Corollary 4.1, the local-section masquerade,
+under Theorem 4 §3.4, incorporating `docs/concealment/concealment_without_a_concealer_v0_4.md`
+§3.6/E5 and its scurvy exemplar. Addition only; no prior claim revised. The concealment paper's
+larger question — whether boundary framing-loss is a third axis or lives in §5.2's declared
+exterior — is OPEN and gated on an operator ruling; see ISSUES OQ-283, whose control established
+separation from seat-theorem Corollary 2a and explicitly did **not** settle the axis question.)*
 
 ---
 
@@ -298,6 +303,45 @@ level's canonical reading across its block of contexts) capture about 93% of the
 product-site structure.
 The remaining gap is irreducible from any single stance — the quantitative form of "you must
 actually consult the other positions."
+
+**Corollary 4.1 — the local-section masquerade (added v8.0.1, 2026-08-12).** Theorem 4 is usually
+read forward: a single position under-predicts the orbit. It has a converse with sharper
+operational bite, and stating it is what the corollary adds:
+
+> **A local section masquerades as a global one whenever the positions have not varied enough.
+> Apparent universality is evidence about the range of positions sampled, not about invariance,
+> and no artifact reports which of the two it is.**
+
+The engine's own form of this: **H¹ = 0 is a statement about the site, not about the world.** A
+global section over the four canonical contexts is a *local* section over the product site, and
+Theorem 4's own numbers say how much room that leaves — a single vantage predicts ~88%, the
+canonical four plus the block rule ~93%. The residual is exactly where an apparent invariant can
+be hiding a framing that never varied. §5.9 gives the formal instance: the parallel postulate sat
+invariant for two millennia, and non-Euclidean geometry demoted it not by finding drift but by
+widening the site until H¹ went positive.
+
+**The empirical instance, which the formal one does not supply.** Euclid's widened site was
+another axiom system; the scurvy episode's was the world. *"Citrus cures scurvy"* glued across
+every position the Royal Navy occupied for roughly a century — a local section over a framing
+that held fixed the fruit, the processing, the vessel, and the voyage length. When the positions
+varied (West Indian limes, copper vessels, steam-shortened voyages, polar conditions) the gluing
+failed, **and the failure was read as *the claim was never true* rather than *we have found the
+boundary of a local section*** — which is how a working cure was lost rather than refined. The
+misreading, not the gluing failure, is the expensive part, and it is the one the corollary is
+meant to forestall.
+
+Why this belongs to the seat rather than to ordinary induction: framing-invariant content is
+**prohibitive, not selective** — a claim holding from every position tells you what cannot be the
+case, never which locally available action to take, because selecting among them needs exactly
+the parameters that vary between positions. So a global section is *not visible from any single
+position*; seeing an invariant requires varying the parameter and observing that nothing moves,
+which is an operation across positions rather than within one. The view from nowhere is not a
+vantage but an expensive practice. Source and full argument:
+`docs/concealment/concealment_without_a_concealer_v0_4.md` §3.6 and E5; the corollary is
+incorporated here rather than cited in passing because it is a property of the Oracle Gap, not a
+new result. **What it does not license:** any claim that a given H¹ = 0 *is* a masquerade — that
+is a per-constraint question answerable only by widening the site, and OQ-283's declared scope
+limit applies (separation from Corollary 2a is not a third axis).
 
 ### 3.5 The meter, and the boundary of the meter
 

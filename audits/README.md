@@ -291,3 +291,4 @@ hold raw artifacts with no markdown writeup (their findings live in ISSUES.md / 
 | `2026-08-03_oq258_referent_discriminator` | `WRITEUP.md` | OQ-258 referent discriminator — WRITEUP (executed 2026-08-03 → 2026-08-04) |
 | `2026-08-05_oq259_emphasis_discriminator` | `ARM0_HALT_REPORT.md` | Arm 0 result: pre-registered HALT rule FIRED — no Arm-1 spend |
 | `2026-08-09_oq262_coexists_severance` | `WRITEUP.md` | OQ-262 — severance/intrinsicness on coexists edges: 18 pairs judged under a frozen grammar; 2 raw-match consumers routed |
+| `2026-08-12_oq283_framing_boundary_discrimination` | `WRITEUP.md` | OQ-283 — boundary framing-loss SEPARATES from seat-theorem Corollary 2a (3 NOT-HELD / 2 declines / 1 seam); explicitly NOT a third-axis result |

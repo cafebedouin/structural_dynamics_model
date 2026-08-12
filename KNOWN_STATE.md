@@ -45,6 +45,64 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-12 — [landed] Concealment papers committed; OQ-283 control returns SEPARATION (scoped); OQ-284/285 minted; CS sketch §2.5 formalization claim corrected; v8 gains Oracle-Gap Corollary 4.1
+**Files:** `docs/concealment/`, `docs/amnesiac_institution/amnesiac_institution_v0_5.md`, `docs/amnesiac_institution/amnesiac_institution_v0_6.md`, `ISSUES.md`, `docs/commitment_systems/commitment_systems_sketch_v6.md`, `docs/deferential_realism_paper_v8.md`, `audits/2026-08-12_oq283_framing_boundary_discrimination/`, `audits/README.md`
+**Tier:** landed
+
+**Step zero.** `docs/concealment/` was entirely untracked (4 versions + 2 diffs, 0 files in the
+index), as were amnesiac v0.5/v0.6 — so any OQ citing them would have pointed a cold reader at
+nothing. Committed `1265d0c1`. The operative document is
+`concealment_without_a_concealer_v0_4.md`.
+
+**OQ-283 (the gate on everything else).** The concealment material reads as a candidate third axis,
+but `seat-theorem-v1.md` **§8 already makes framing Π a seat** and **Corollary 2a** already makes
+declared-vs-concealed the operative distinction — so the unguarded-axis-swap rule owed a
+pre-registered discriminating control before any relabel. Criterion frozen (md5
+`f060250f6b6f22745809963b86eb727b`) before any classification: *at production time, did any party
+hold the framing as a datum they could have written down?* Six naturally-arising in-repo instances
+→ **3 NOT-HELD, 2 declines, 1 seam**. **Verdict SEPARATION**, scoped: 2a's imperative has no
+addressee when the framing *was* the operation.
+
+**The scope limit is load-bearing and a cold reader will get it wrong.** SEPARATION is separation
+from Corollary 2a — **NOT** the existence of a third axis. **v8 §5.2's declared exterior** (the
+relational layer) is at least as good a home, since a boundary is an *edge between positions*, not
+a position; and §5.2 pre-committed that the exterior declaration *"cannot later be invoked only to
+dismiss an inconvenient axis,"* so that clause now binds. **Any edit to v8 §5 or the CS sketch's
+axis sections is gated on an operator Ω_C ruling.**
+
+**Correction owed to the PAPER (the audit's only novel finding).** `system_gradient`'s `[] → 0.0`
+classifies HELD under the criterion (someone held "this is a default") but sits in Mode 2 in the
+paper's §5.3, defined as *"no channel existed at the boundary."* Datum-possession and
+channel-existence come apart; the paper draws its Mode 1/2 line on the first and defines Mode 2 by
+the second. Filed in OQ-283, not applied — the paper is the operator's document.
+
+**Engine finding, now tracked as OQ-285.** `stakeholder_seats.pl:337-341` maps a seat whose type
+derivation fails to `unknown`; `is_real_type/1` filters it, so the H¹ *"counts it as neither
+agreeing nor disagreeing"* — and the same token carries a seat deriving a literal `unknown`, both
+collapsed as *"untypeable for pair-counting purposes."* **The disagreement measure is silent
+exactly where a position is blind.** Coverage survives (`NSeats`/`NReal` in-band); the *kind* of
+non-reality does not. Repair pattern already exists one layer over:
+`sheaf_undetermined_reason/2`.
+
+**CS sketch corrected in place (v6.1 delta, one section + a lineage row, per its own §1.2 rule).**
+§2.5 asserted that positions are *"systematically unable to see"* drift and cited presheaf
+machinery as the formalization. It is not one — H¹ measures disagreement among positions that each
+produced a reading. The unable-to-see claim is now marked **UNFORMALIZED**.
+
+**v8 → v8.0.1, addition only.** Corollary 4.1 under Theorem 4: *a local section masquerades as a
+global one whenever the positions have not varied enough* — H¹ = 0 is a statement about the site,
+not the world. Euclid was already there as the formal instance (§5.9); scurvy is added as the
+empirical one, where the failure to glue was misread as *the claim was never true* rather than *we
+found the boundary of a local section*. No prior claim revised.
+
+**Process defect, instance seven.** A result block was written into the audit log **before any
+instance was classified** — a prediction in a finding's costume. Caught pre-commit, struck, and
+preserved in `audit_log.md` (catching early destroys the free before-commit control, so the text
+is kept deliberately). It was wrong in the informative direction: it claimed 3 clean declines where
+the evidence gave 2 and a seam — and the seam is the audit's only correction to the source paper.
+
+---
+
 ## 2026-08-11 — [landed] OQ-277 live run SPENT 219 CALLS AND PERSISTED NOTHING; capture path built, two orphaned controls removed, NEW-STAMP ruling; OQ-278 P3 sweep executed; paper v0.4 assembled
 **Files:** `ISSUES.md`, `CLAUDE.md`, `docs/technical/build_discipline.md`, `python/audits/oq277_crosscoding_driver.py`, `python/audits/oq277_build_prereg.py`, `scripts/gate.sh`, `audits/2026-08-10_oq277_rq2_crosscoding/`, `docs/amnesiac_institution/amnesiac_institution_v0.4.md`, `docs/amnesiac_institution/V04_CONSOLIDATION_MANIFEST.md`
 **Tier:** landed

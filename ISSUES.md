@@ -11582,6 +11582,151 @@ one, per consumer.
 
 ---
 
+## OQ-283 — Does boundary framing-loss separate from Π-as-seat? (the pre-registered discriminating control the concealment material owed before any axis relabel) — **RESOLVED 2026-08-12: SEPARATION, scoped to Corollary 2a**
+
+**Ω-type:** Ω_E for the classification; the downstream *where does it live* question is **Ω_C** and
+is explicitly NOT resolved here.
+
+**Status:** resolved — 2026-08-12, `audits/2026-08-12_oq283_framing_boundary_discrimination/`
+(PREREGISTRATION md5 `f060250f6b6f22745809963b86eb727b`, frozen before any instance was classified;
+freeze line above first result in `audit_log.md`).
+**Priority:** 1
+**Deps:** gates OQ-284, gates OQ-285
+
+**Origin.** `docs/concealment/concealment_without_a_concealer_v0_4.md` (committed 2026-08-12,
+extracted from `amnesiac_institution_v0_6.md` §2) reads as a candidate third axis alongside the
+observer and committer axes. The unguarded-axis-swap rule (`CLAUDE.md` → *over-confident moves* #3)
+requires a pre-registered discriminating control before any relabel, because `seat-theorem-v1.md`
+**§8 already makes the framing Π a seat** and **Corollary 2a** already makes declared-vs-concealed
+the operative distinction — so "third axis" risked minting machinery the law already had.
+
+**Result: SEPARATION.** Frozen criterion — *at production time, did any party hold the framing as a
+datum they could have written down?* (HELD → 2a covers it; NOT-HELD → 2a's imperative has no
+addressee). Six naturally-arising in-repo instances: **3 NOT-HELD** (OQ-277's genre pin rule,
+*"nobody wrote that rule down and everybody applied it"*; the V04 manifest's *"repository files
+carrying forward-flags"* frame, which made the working conversation invisible as a producer;
+OQ-277's design specifying production and not consumption), **2 DECLINES** (`f0e91cc0`/`19bc3418`
+— the check WAS run and its result held, so declaration was fully dischargeable; and
+`pipeline_output.json`'s manifest — framing carried across the boundary, no failure), **1 SEAM**
+(§below). Two-sided on a population the criterion did not select, including both decline shapes the
+prereg required to exist.
+
+**WHAT THIS DOES NOT LICENSE, per the frozen §5 — read before editing any paper.** Separation from
+Corollary 2a is **not** the existence of a third axis. **v8 §5.2's declared exterior** (the
+relational network layer — *"relations between constraints are a different kind of object, neither
+audited nor audited-against a single seat"*) is at least as good a home, since a boundary is an
+**edge between positions**, not a position. v8 §5.2 also pre-committed that the exterior declaration
+*"cannot later be invoked only to dismiss an inconvenient axis"* — so that clause now binds, and the
+choice is a live Ω_C ruling, **not** something a later instance may settle by reading. **Any edit to
+v8 §5 or the CS sketch's axis sections is gated on that ruling.**
+
+**Correction owed to the PAPER, not the engine (the seam, and the audit's only novel finding).**
+`system_gradient`'s `[] → 0.0` classifies HELD under this criterion (someone held *"this is a
+default"*) but sits in **Mode 2** in the paper's §5.3, whose definition is *"no channel existed for
+it at the boundary."* **Datum-possession and channel-existence come apart**, and the paper draws its
+Mode 1/2 line on the first while defining Mode 2 by the second. Repairs differ — a tagged union
+fixes held-but-no-channel; only stepping outside the operation fixes held-by-nobody. The paper is
+the operator's document, so this is filed as evidence for a revision, never as one.
+
+**Process defect recorded, instance seven of the arc's signature:** a result block (*"3 NOT-HELD, 3
+HELD/carried"*) was written into `audit_log.md` **before any instance was classified** — a
+prediction in a finding's costume. Caught pre-commit and struck; the struck text is preserved in
+the log rather than in a commit pair (deliberate preservation per *When a defect is found, its
+before-commit is a free negative control*, which catching-early destroys). It is worth its space
+because it was **wrong in the informative direction**: it claimed 3 clean declines where the
+evidence gave 2 and a seam, and the seam is the one correction this audit produces.
+
+---
+
+## OQ-284 — No framing carriage in the CORPUS schema (only in the apparatus): a constraint story cannot state the selection rule its reading was formed under
+
+**Ω-type:** Ω_C for whether to author it at all (a schema/generation change is the operator's seat,
+and the honest alternative is a declared absence in `design_gaps.md`); Ω_E for the churn rider.
+
+**Status:** open — minted 2026-08-12 out of OQ-283's SEPARATION branch.
+**Priority:** 3
+**Deps:** blocked_on OQ-283, blocked_on_human oq284-author-vs-declare-gap-ruling, bundled_with OQ-285
+
+**The asymmetry, witnessed.** This repository implements framing carriage **well, on the apparatus
+side** — the pipeline manifest convention (`pipeline_run_at`, `n_constraints`, `code_commit`,
+`code_dirty`, `schema_version`), coverage-in-band (`purity_n_scored`/`_n_total`,
+`stakeholder_obstruction/5`'s `NSeats`/`NReal`), the dual absence tokens of OQ-60, the
+audit-writeup manifest-cite requirement, and the staleness ladder. **The modeled domain has none of
+it.** No authored field on a constraint story states the selection rule under which its reading was
+produced. The nearest existing thing is `cs_reference_frame/2` — an authored t0 reference state that
+is serialized (`json_report.pl:720`) and **never joined** (GAP-17).
+
+**Why this is not obviously worth building, stated so the entry does not read as a proposal.** The
+engine's job is to classify authored constraint stories, not to audit its own authorship; a framing
+field could easily be apparatus discipline smuggled into the corpus, where it would be authored by
+the same generation pass whose framing it purports to declare — a self-certification. **The
+alternative disposition is a declared absence in `design_gaps.md`**, and that may be the right
+answer. This entry exists so the choice is made rather than defaulted.
+
+**RIDER — the determinism frontier entangles with this exactly where the field would live.** The
+concealment paper's §10 excludes stochastic variation as a *different* failure family, but in this
+corpus a redraw **changes the reading's framing**: OQ-264 measured same-input decompose redraw
+stability of per-reading identity at **2/6–3/6 (340K), 4/6–5/6 (103K), 6/6 ×3 (34K)** — no global
+churn floor. So any authored framing field inherits per-reading churn, and pooled ratios do not
+repair it (a unit-built denominator inherits the churn). **Any implementation must report at the
+denominator's own churn and never finer**, and a framing field claimed as replicated needs the k=3
+unanimous standard. Pin this before writing a schema field, not after.
+
+**What resolution would change:** either the corpus gains a channel for the one thing the apparatus
+already knows to carry, or `design_gaps.md` gains an entry saying plainly that constraint stories do
+not declare their framing and that this is a decision — which stops a future instance from reading
+the absence as an oversight and "fixing" it.
+
+---
+
+## OQ-285 — Mode 3 (positional blindness) has no engine surface: H¹ filters out the position that cannot see, and the CS sketch claims a formalization the machinery does not provide
+
+**Ω-type:** Ω_E for the token behavior (mechanically checkable); **Ω_C** for whether the gauge axis
+should carry an *expressive-capacity* predicate distinct from a verdict.
+
+**Status:** open — minted 2026-08-12 out of OQ-283's SEPARATION branch.
+**Priority:** 3
+**Deps:** blocked_on OQ-283, bundled_with OQ-284
+
+**The mechanism, read off the code.** `stakeholder_seats.pl:337-341` maps a seat whose type
+derivation FAILS to `unknown`; `is_real_type/1` (`T \== unknown`) filters it; the header states the
+consequence plainly — the H¹ *"counts it as neither agreeing nor disagreeing"* — and then declares
+the collapse: *"It lands on the same token as a seat that derives literal `unknown` … **both are
+untypeable for pair-counting purposes**."* For H¹'s own purpose that is locally correct, which is
+exactly the concealment paper's thesis: a compression perfectly faithful to the rule that produced
+it. **At the read site "was this position blind, or merely absent?", the distinction is gone** —
+Mode 2 and Mode 3 become extensionally identical at the interface.
+
+**Note what is already right, because the gap is small and the fix is idiomatic.**
+`stakeholder_obstruction/5` carries coverage IN-BAND (`NSeats`, `NReal`), so the *count* of non-real
+seats survives; what is lost is the *kind* of non-reality. And the repository already has the exact
+repair pattern one layer over: **`sheaf_undetermined_reason/2`** (`sheaf_analysis.pl:23`, serialized
+at `json_report.pl:509`) carries `insufficient_seats` / `uncomputable_height` alongside the
+undetermined verdict. A reason token beside the H¹ coverage counts is the same move.
+
+**The documentation half (cheap, and independent of any build).**
+`commitment_systems_sketch_v6.md` §2.5 asserts *"Some positions are systematically unable to see
+drift they participate in producing"* and then cites presheaf machinery as the formalization. **It
+is not one.** H¹ measures disagreement among positions that each PRODUCED a reading; a position
+that cannot see is filtered out before H¹ is computed. The prose foregrounds inexpressibility; the
+cited machinery measures disagreement. Corrected in the sketch 2026-08-12 (see the §2.5 amendment);
+this entry keeps the build question open.
+
+**The Ω_C question, and its control problem.** Does the gauge axis need *"expressible-from-here"* as
+a first-class predicate distinct from *"types-to-X-from-here"*? Before minting the category,
+`design_discipline.md` §5 applies: **a category whose blind cells are by construction undetectable
+from inside the system may not be addable at all on an in-system control.** The paper's own Mode-3
+repair is the foreign-vocabulary probe — and this repository's only such instruments are the twin
+legs and the OQ-277 cross-coding, both bounded by **GAP-35** (outside `testsets_haiku|flash|kimi|
+sonnet`'s 957 four-way matched ids there is nothing to pair). So the *measurement* arm may be
+unavailable, and the honest outcome could be a declared gap.
+
+**What resolution would change:** today a consumer reading a null/undetermined H¹ cannot tell
+"fewer than two positions produced a reading" from "a position exists that structurally cannot
+express this question" — and the second is the phenomenon the CS sketch says the framework is about.
+
+---
+
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
