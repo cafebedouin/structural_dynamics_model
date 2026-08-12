@@ -12147,9 +12147,15 @@ as wrong, defeaters stated before the numbers, reciprocal disclosure of this pro
 collision and uncontrolled statistic, and per-claim provenance typing). Sharpest line for a methods
 audience: the `次类` regex returned **6 where the truth was 8, and 6 still produced a plausible
 correlation in the same direction** — a wrong number agreeing with the right number's conclusion,
-no error signal anywhere in the loop. (b) **OQ-286 should run before publication**: the architecture's
-own delivery mechanism may be silently truncating, and publishing the architecture without knowing
-whether it arrives would be the paper's subject committed by the paper.
+no error signal anywhere in the loop. (b) **~~OQ-286 should run before publication~~ — SUPERSEDED
+2026-08-12. Publication now DECOUPLES from that spend.** OQ-286 is retracted (carrier misidentified:
+the always-loaded set has 46× headroom and is skipped whole rather than tail-truncated), and its
+successor **OQ-289** re-aims the hazard at the per-turn recall channel. The paper's §3.5 now carries
+the *corrected mechanism* plus a declared, named, pointer-bearing residual — which is the contract
+§0 sets, not a relaxation of it. **The blocker does not wait for the canary.** Note the shape for the
+record: the pre-publication gate here was itself an instance of the §7.4.1 unstated-selection-rule
+pattern — a well-specified test aimed at an unexamined choice of channel, which would have run green
+and cleared the blocker while carrying no information.
 
 **Standing hazard for this document, which has now fired twice: GENRE DRIFT, not competition.** Four
 genre changes, each argued as though the document were one kind of thing. §0's claim typing is the

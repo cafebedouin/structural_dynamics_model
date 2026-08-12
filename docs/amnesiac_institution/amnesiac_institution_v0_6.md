@@ -83,6 +83,24 @@ proof.
   is prior art **inside this repository** (`deferential_realism_paper_v8.md` §8), not a contribution
   of this paper.
 
+**In-place corrections to v0.6 (2026-08-12, after first circulation of the draft).** Recorded here
+because the construction note above claims every unlisted section is unchanged *by construction*,
+and these are the exceptions. All three descend from one retraction and none is cosmetic.
+
+- **§3.5 retracts its carrier.** The always-loaded corollary — *enlarging the file drops the rules at
+  the end* — is false: 46× headroom, and above the limit the harness skips the file whole rather than
+  tail-truncating. The general form of the hazard survives and is **re-aimed** at the per-turn recall
+  channel, where a limit is plausibly binding today (ISSUES **OQ-289**; the retracted carrier is
+  **OQ-286**). The §3.5 credit claim is reduced with it: the catch came from a substrate read, not
+  from the method.
+- **§8.5 gains the tension it did not know it had.** Consolidating for the attention cap is what
+  created exposure to a per-file *delivery* cap. §3.5 had claimed the channel cap was load-bearing
+  twice; corrected, its second effect cuts against the first. Structural claim landed; the file count
+  and which constant binds stay `[UNWITNESSED]` pending OQ-289, and the disposition is OQ-290 (§9.2,
+  operator jurisdiction).
+- **§7.4.1 gains a second instance of the unstated-selection-rule shape**, from a different arc.
+  Two instances is a pattern; one was an anecdote.
+
 ## ABSTRACT
 
 This paper is a case study of an under-described organizational form and an attempt to state the
@@ -800,26 +818,56 @@ excluded. It is the only artifact in the institution whose content is entirely s
 
 ### 3.5 The silently truncated channel
 
-There is a fifth amnesia, and it belongs to the delivery mechanism rather than to any party.
+There is a fifth amnesia, and it belongs to the delivery mechanism rather than to any party. The
+general form survives; **the carrier this section named in drafts through v0.6 was wrong, and the
+correction is recorded here rather than edited away** (§7.7, and §8.6's rule against quietly moving
+a commitment to the superseded side).
 
-The always-loaded instruction set is delivered into a context window. Where it exceeds a limit — the
-tool's, the harness's, or the model's — it is **truncated or compacted at load time**, and the party
-best positioned to notice is the one §2.3 says cannot: the instance, which sees no gap because
-gaps have no positive form. The operator does not read the delivered context, only the file on
-disk. The record is intact where it is stored, and incomplete where it is read.
+**The general form.** An instruction set is delivered into a context window. Where it exceeds a
+limit — the tool's, the harness's, or the model's — it is truncated, dropped, or compacted at load
+time, and the party best positioned to notice is the one §2.3 says cannot: the instance, which sees
+no gap because gaps have no positive form. The operator does not read the delivered context, only
+the file on disk. **The record is intact where it is stored, and incomplete where it is read.** That
+is absence/presence collapse performed on the memory system itself, and it is why the check has to
+witness the *delivered context* rather than the file.
 
-This is absence/presence collapse performed on the memory system itself, and it inverts the usual
-remedy: enlarging the always-loaded file makes it *more* likely that the rules at the end are the
-ones silently dropped. The channel cap of §8.5 is therefore load-bearing twice — once for attention
-economics, and once because an uncapped channel eventually exceeds a limit nobody is watching.
+**RETRACTED: the always-loaded corollary.** Earlier drafts drew a corollary — *enlarging the
+always-loaded file makes it more likely that the rules at the end are the ones silently dropped* —
+and made the §8.5 channel cap load-bearing twice on the strength of it. A read of the harness
+(2026-08-12, CLI 2.1.229) retracts it on two counts:
 
-**Status: `[UNWITNESSED]`.** This is an operator-reported condition and a mechanism argument. No
-dated instance in this repository has yet been recorded in which a truncated instruction set caused
-a defect, and the check that would produce one is cheap and unrun: **witness the delivered context,
-not the file on disk** — have an instance report back a canary token placed at the end of the
-always-loaded set, and record whether it arrives. Until that runs, this section is a hypothesis
-with a named test, and it is stated here rather than omitted because an unstated hazard and an
-absent one are indistinguishable (§10.5).
+1. **The headroom is 46×.** The delivered always-loaded set is ≈102,700 B, of which `CLAUDE.md` is
+   91,029 B. The limit on that read path is 4,194,304 B. The file is at 2.17% of it.
+2. **The mechanism is wrong, not merely the margin.** Above that limit the harness does not
+   tail-truncate. It **skips the file whole**, and emits a debug line and a telemetry event. There is
+   no regime in which the rules at the end are dropped while the rest arrives; the failure is
+   all-or-nothing, and it is *logged*. A loud failure is not a member of this paper's subject matter.
+
+**And for the channel where a limit is plausibly binding today, the corollary runs backwards.**
+Memory files recalled per-turn are subject to a **per-file** limit two to three orders of magnitude
+smaller. It was not growth that pushed files against it — it was the **2026-08-10 consolidation**,
+the merge pass §8.5 reports as the institution's central act of forgetting. Under one candidate
+constant 19 of 53 files now exceed it; under another, 1 does. **Consolidating for attention
+economics is what created the exposure to a delivery limit**, which is the opposite of "an uncapped
+channel eventually exceeds a limit nobody is watching." §8.5 is corrected accordingly.
+
+**Status: `[UNWITNESSED]`, re-aimed** (ISSUES **OQ-289**; the retracted carrier is **OQ-286**). Two
+things remain unwitnessed and they are different in kind. The *delivery* question — which constant
+governs, per-file or per-batch, pre- or post-processing — is settled by a canary in a live delivery,
+and binary strings do not settle it: they witness shipped code, not the path actually taken. The
+*behavioural* question is the one that decides what to do about it: a truncated file arrives with an
+appended notice and a pointer to read the rest, so **does an instance follow the pointer, or does the
+truncated fragment read as complete guidance?** That is §2.4 — frame-completeness reading as
+completeness — applied to the memory system, and it must be measured as an observed tool call, never
+as a self-report. Until both run, this section is a mechanism with a named test, stated rather than
+omitted because an unstated hazard and an absent one are indistinguishable (§10.5).
+
+**Credit, at the altitude it is owed.** It would be convenient to report that the apparatus caught
+this. It did not. **The catch came from a substrate read — an observation from outside the frame —
+and the method's contribution was the `[UNWITNESSED]` tag that got that read scheduled.** That is a
+real contribution and a smaller one than the available sentence. *"Our discipline caught us"* is the
+Θ-7 sentence (§3.6): a system whose every reading confirms the frame it is inside. The weaker claim
+is the true one, and it is the one that survives contact.
 
 ### 3.6 The emblem
 
@@ -1476,6 +1524,29 @@ manifest.
 
 Both are exemptions. One was stated, one was not, and the difference is the entire outcome.
 
+**The unstated one has now recurred, in a different arc, on this paper's own hazard — and the
+recurrence is what makes it reportable.** §3.5 named a test: place a canary in the always-loaded
+instruction set and check whether it arrives. The test was well-specified, two-sided, pre-registered
+with an outcome table, and cheap. It was also pointed at a channel with 46× headroom, on a read path
+that does not truncate at all. The selection criterion — ***the always-loaded file is the delivery
+channel worth instrumenting*** — was **never articulated by anyone**, including the operator and
+including the reviewing instances that improved the test's design several times. A canary ladder
+would have run green under a perfectly valid freeze, discharged an `[UNWITNESSED]` tag, and carried
+**no information whatever** about the channel that was plausibly truncating. The failure is not in
+the test; it is one level up, in the unexamined step that chose what the test would be a test *of*.
+
+Set beside the sixteen-texts manifest — *things that read like specifications get pinned* — the
+shape is identical: a defensible criterion, universally applied, never stated, and invisible to
+every downstream check because **the manifest is what the checks are computed over.** Both times the
+apparatus performed correctly on the thing it was given and had no way to ask whether it was given
+the right thing. **Two instances is a pattern; one was an anecdote**, and the difference matters
+because it moves the claim from "this happened once" to "this is where the apparatus is thin."
+
+The corrective in both cases came from the same place and it is not a gate: someone read the
+substrate directly — the binary, the artifact list — from **outside the frame the manifest
+defined**. That is not a procedure this paper can prescribe on a schedule, which is precisely §10.5's
+admission arriving with a second instance attached.
+
 > **The honest limit of this apparatus is therefore not a depth of verification but an act of
 > documentation: an unstated exemption is indistinguishable from an unnoticed one, and no gate can
 > separate them, because the gate is downstream of the exemption.**
@@ -1652,6 +1723,33 @@ retiring or merging one. Promotion of a rule into repository documents now creat
 that forces its memory copy's retirement — the mechanism that produced the excess drains it. The cap
 is a pragmatic number, not an optimum: it is what survived one pruning pass. Whether 33 is correct
 and whether it must grow are open (§14, RQ-a).
+
+**There are two caps, they are in tension, and this section was written as though there were one.**
+The 33-entry channel cap is an **attention** cap: it bounds what a fresh instance must hold. It is
+enforced, it is watched, and the consolidation pass is how it is met. But the merged files it
+produces are delivered through a second channel with a **delivery** cap — a per-file byte and line
+limit on recalled memory, orders of magnitude smaller than the always-loaded path's, applied
+per-file rather than per-index. **Merging 45 files into 10 clusters halved the index and pushed the
+clusters against the per-file limit.** The operation that satisfies the attention cap is the
+operation that creates exposure to the delivery cap.
+
+This is not a cross-reference repair. §3.5 previously claimed this cap was load-bearing *twice* —
+attention economics, plus an uncapped channel eventually exceeding a limit. Corrected, the second
+effect **cuts against the first**: consolidation does not protect the delivery channel, it loads it.
+The two caps pull in opposite directions and the trade between them was never priced, because
+nobody knew the second cap was there.
+
+Two things follow, and only one of them is available now. **Structurally: an institution that
+compresses for the read site must know which read site it is compressing for**, and "always-loaded"
+and "recalled on demand" are different sites with different budgets. A compression tuned for one can
+degrade the other silently, and *silently* is the operative word — a truncated recall arrives
+looking like a complete file. **Empirically: how many files, and by how much, is not yet settled** —
+the exposure is 19 files or 1 depending on which of two documented constants binds, and whether
+truncation is even lossy depends on whether an instance follows the pointer it is handed. Both are
+`[UNWITNESSED]` and both are ISSUES **OQ-289**; the disposition — which cap gets sacrificed, or
+whether front-loading each file dissolves the trade instead of deciding it — is an operator ruling
+under §9.2 and is **OQ-290**. It is left open here rather than resolved in the direction this
+section's argument would prefer.
 
 ### 8.6 The record boundary
 
@@ -2068,9 +2166,16 @@ Secondary, in the order they become tractable:
   protocol (write the instruction that would execute it) and compare omission-detection rates.
   *Falsifier: no difference in either arm.*
 
-And one owed immediately, before circulation: **the canary test of §3.5** — place a token at the end
-of the always-loaded set and have instances report whether it arrived, converting a mechanism
-argument into a witnessed fact or a retracted hazard.
+And one that was owed immediately, **now re-aimed and no longer a circulation blocker**: the canary
+test of §3.5. As originally specified — a token at the end of the always-loaded set — it would have
+run green and told us nothing, because that channel has 46× headroom and does not tail-truncate
+(§3.5, retracted). The live version places canaries in **per-turn recalled memory files** at
+just-over and just-under the candidate limits, requires them reported verbatim, and pairs the
+self-report with a harness-side delivered-token slope so *truncated* and *never attached* do not
+collapse into one plateau. A second arm measures the behavioural half — whether an instance handed a
+truncated fragment plus a `Read` pointer follows the pointer — as an observed tool call. ISSUES
+**OQ-289**; the disposition it feeds is **OQ-290**. Circulation clears on the corrected mechanism
+plus this declared-and-named residual, which is the contract §0 sets, not a relaxation of it.
 
 ---
 
@@ -2207,7 +2312,8 @@ directionally fallible (success-shaped absence), recursively applicable.
 **The four amnesias:** coding instance (loses everything between sessions, and middle-of-context
 detail within them); orchestrator (keeps shape, loses executable detail); operator (keeps months,
 loses which figure was corrected); records (lose nothing, and therefore become unholdable). Plus a
-fifth belonging to the channel: silent truncation at load time.
+fifth belonging to the channel: silent truncation at delivery — on the **recall** path, not the
+always-loaded one (§3.5, carrier corrected).
 
 **The one principle:** no epistemically meaningful value crosses a boundary without its status — and
 no compression crosses without the scope it was formed at.
@@ -2402,5 +2508,6 @@ externally-verified literature check. Successor drafts should treat §14 RQ1 and
 queue, §2.2's identification and §2.9's control as the passages most in need of adversarial reading,
 and Appendix B as the blocker.
 Remaining declared residue: the manifest pass; the sessions/instances denominators; the standing-gate
-catch series; the `[OPERATOR]` slots in §1.2; §6.5's unverified rows; the §3.5 canary; the severity
-weighting §4.2 notes is unrecorded; and index 4's unresolved claimants (§5.2).*
+catch series; the `[OPERATOR]` slots in §1.2; §6.5's unverified rows; the §3.5 canary **re-aimed at
+the recall channel** (OQ-289) and its disposition (OQ-290); the severity weighting §4.2 notes is
+unrecorded; and index 4's unresolved claimants (§5.2).*
