@@ -701,6 +701,25 @@ unsure, preserve and adjudicate. Full version + instances (the 8 zero-firing sig
 `snapshot_type`/`degradation_chain` type-path vs `drift_trajectory` metric-series):
 `docs/technical/build_discipline.md` → *Unwired ≠ worthless*.
 
+**Nobody reads a hammer's changelog — name the reader before you keep the record (operator,
+2026-08-12).** The standing question this project keeps asking — **is this history, this audit,
+this new idea load-bearing?** — belongs at *creation* time, where it is cheapest. Before minting any
+record about our own work (changelog, evidence base, provenance note, audit dir, outcome file),
+**name the reader and the decision it changes for them; if you cannot name both, it is cost that
+looks like diligence.** Records EARN their place when a future decider consults them before acting —
+KNOWN_STATE entries passing the promotion test, an audit's re-checkable witness, an ISSUES
+resolution note, amendment provenance in a *derivation* (load-bearing for a proof, academic for a
+tool). They earn NOTHING when the subject is validated by **use**: a tool's changelog, a provenance
+file for something whose proof is that it works, an outcome record justifying apparatus. **The proof
+of a tool is that it works when someone wants to use it** — whoever picks up a `uke_*` protocol or a
+Prolog module has a problem now and will test it on that problem, not read its history. Exception
+that looks like the ban: *forward-facing* version notes (what changed, where it is thin) serve the
+reader deciding whether to trust a section — the test is tense, not length. **This governs MINTING
+only** — *Unwired ≠ worthless* still governs removal, so the posture is reluctant to mint AND
+reluctant to delete. Tell: "provenance matters" / "for the record" with no named reader is the
+phrase doing a reason's work; often the honest home is the commit message. Full version:
+`docs/technical/build_discipline.md` → *Nobody reads a hammer's changelog*.
+
 **Over-confident moves on the synthesis side — errors of *claiming*, each owes a witness before it
 ships** (full version + instances: `docs/technical/build_discipline.md` → *Over-confident moves on
 the synthesis side* and *When to stop verifying*):

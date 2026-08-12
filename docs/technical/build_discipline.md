@@ -413,6 +413,57 @@ where the value lives. The **read pass killing a write** before it touches the e
 recon falsifying a pre-registered commit) is the arc's real transferable product — escalate the
 premise-falsification, don't build around it.
 
+### Nobody reads a hammer's changelog — name the reader before you keep the record (operator, 2026-08-12)
+
+This project mints artifacts fast, and the ones it mints *about its own work* are the least
+examined, because producing them feels like diligence. The standing question — **is this history,
+this audit, this new idea load-bearing?** — is cheapest to ask at creation time, and that is where
+it goes.
+
+> **Before creating any record — a changelog, an evidence base, a provenance note, an audit
+> directory, an outcome file, a version history — name the reader and the decision it changes for
+> them. If you cannot name both, you are producing cost that looks like diligence.**
+
+**This is a rule about MINTING, not about deletion, and the asymmetry is deliberate.** *Unwired ≠
+worthless* still governs removal: judge an existing thing by its product, never by whether anything
+consumes it. Creating is cheap, continuous and unexamined; retiring is destructive and owes a diff.
+So the correct posture is **reluctant to mint and reluctant to delete** — the pressure applies at
+the moment of creation, not to the accumulated record.
+
+**Records that earn their place** serve a *future decider* who consults them before acting, and the
+repo's provenance discipline is exactly this and is not weakened by the rule:
+
+- `KNOWN_STATE.md` entries that pass the promotion test — a cold reader makes a **silent** mistake
+  without them.
+- Audit directories: a claim's witness has to be re-checkable, or the claim was never discharged.
+- `ISSUES.md` resolution notes: someone will re-open the question and needs to know what settled it.
+- Amendment provenance in a **derivation** (`seat-theorem-v1.md`) — showing how a conclusion was
+  reached is what lets a reader disagree at the right point. That is load-bearing for a proof and
+  academic for a tool; the same content is not the same artifact in the two places.
+
+**Records that earn nothing** have a subject validated by *use*:
+
+- **A tool's changelog.** Whoever picks up `uke_referee.md`, a Prolog module, or a `python/` script
+  has a problem now and will test it against that problem. They will not read how it got here, and
+  no accumulated evidence base makes it likelier to work for them. **The proof of a tool is that it
+  works when someone wants to use it** (operator, 2026-08-12).
+- **A provenance file for an artifact whose proof is that it works.**
+- **An outcome record built to justify apparatus** — apparatus about apparatus, the sibling rule
+  above.
+
+**The exception worth stating, because it looks like the thing being banned:** a tool's *version
+notes* earn their place when they are **forward-facing and short** — what changed, and where the
+tool is still thin — because that serves the person deciding whether to trust a section right now.
+That is not a history. The test is tense: a note about what a reader should expect *from here* is
+usable; a record of how we got here is not.
+
+**The tell.** When the justification for keeping something is *"provenance matters"* or *"for the
+record"* with no named reader and no decision attached, the phrase is doing the work a reason should
+do. Ask who, and what changes for them. Frequently the honest answer is that the thing belongs in a
+commit message, which is already the record and costs no attention.
+
+---
+
 ## Pattern 2 — One-canonical-thing-became-two (the silent fork)
 
 **Shape:** a file or record is copied to a scratch/test location, possibly edited, and now
