@@ -1325,6 +1325,42 @@ the one about whether the test is runnable at all.
 
 ---
 
+## A correction landed in PROSE is not landed until every instrument encoding the same assumption is checked (2026-08-12)
+
+Correcting a document feels like completing the fix. It is not: the same assumption is usually
+**also compiled into something that computes**, and the instrument keeps emitting the old answer
+with none of the prose's caveats attached.
+
+**Witnessed.** The `WEr` truncation path applies its **line** cut first and its byte cut to the
+result, so a file over both caps is bound by lines and the byte overage frequently never applies.
+That was found by a code-read, corrected in the prereg, in `ISSUES.md`, and in `KNOWN_STATE.md` —
+three documents, all right. Meanwhile `apparatus_instrument.py`'s delivery readout still computed
+`min(1.0, cap_bytes / size)`, and printed **99% delivered for a file that delivers 61%** — a green
+readout on precisely the one file the disposition turned on. Nothing was red. It was found only
+because someone was wiring an adjacent feature.
+
+**This is §2.6's compression-whose-selection-rule-is-attention, one level down.** The instrument was
+never wrong about *what it measured* (a byte ratio); it was wrong about *what it was assumed to
+measure* (delivered fraction). That gap is invisible at the read site, because a percentage looks
+like a percentage.
+
+**Three instances in one arc, all the same shape** — a check that could not pass (`cache_read == 0`),
+a check that could not fire (`observed_tool_calls` under `json` output), and a check computing the
+superseded formula (the byte-only delivered fraction). None was a coding error. Each was a correct
+computation of the wrong quantity, and each was invisible while it stayed inside its own frame.
+
+> **The rule: when a correction lands in prose, grep for every consumer of the corrected
+> assumption before calling it done — and re-derive the instrument's output by hand for at least
+> one case the correction changes.** If the hand-derivation and the instrument disagree, the
+> correction had not landed. The document is the cheap half of the fix; the compiled half is where
+> it keeps being wrong silently.
+
+Corollary, and it is the load-bearing one: **an instrument that agrees with the OLD prose is
+evidence the correction is incomplete, not evidence the correction is wrong.** The reflex on
+finding a mismatch is to re-check the new claim; check the instrument first.
+
+---
+
 ## An introduced instrument is itself a claim (the recursion, generalized past diagnostics)
 
 The positive-control rule and its "one level up" sibling both say a probe's clean null is worthless

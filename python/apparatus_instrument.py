@@ -178,6 +178,25 @@ def delivered_fraction(text: str, cap_bytes: int, cap_lines: int) -> float:
     return len(cut.encode()) / total
 
 
+def is_front_loaded(text: str) -> bool:
+    """True if the file declares a front_loaded: stamp in its frontmatter.
+
+    NEEDED THE MOMENT THE OQ-290 RULING LANDED, because front-loading DEPRESSES the
+    delivered fraction (the file grows; the delivered prefix does not). Without this
+    flag the readout reports a successful front-load as a WORSE number than the raw
+    file it replaced -- an instrument that inverts the sign of the fix it was built to
+    motivate. The declared stamp is the discriminator; a low fraction on a stamped file
+    is the design working.
+    """
+    s = text.lstrip()
+    if not s.startswith("---"):
+        return False
+    end = s.find("\n---", 3)          # close of the frontmatter block
+    if end == -1:
+        return False
+    return "front_loaded:" in s[3:end]
+
+
 def delivery_report(memory_dir: Path) -> tuple[dict, list[str]]:
     """Per-file delivered fraction against each CANDIDATE cap. REPORTING ONLY.
 
@@ -202,16 +221,25 @@ def delivery_report(memory_dir: Path) -> tuple[dict, list[str]]:
             txt = p.read_text(encoding="utf-8", errors="replace")
             n = txt.count("\n") + 1
             if b > cap_bytes or n > cap_lines:
-                rows.append((p.name, b, n, delivered_fraction(txt, cap_bytes, cap_lines)))
+                rows.append((p.name, b, n, delivered_fraction(txt, cap_bytes, cap_lines),
+                             is_front_loaded(txt)))
         out[cap_name] = sorted(rows, key=lambda r: r[3])
-    printed = [f"delivery (REPORTING ONLY, not gated — OQ-289 settles which cap binds; "
-               f"promote to enforcing when OQ-290 lands): {len(sibs)} sibling files"]
+    n_fl = sum(1 for p in sibs if is_front_loaded(
+        p.read_text(encoding="utf-8", errors="replace")))
+    printed = [f"delivery (REPORTING ONLY, not gated): {len(sibs)} sibling files, "
+               f"{n_fl} front-loaded per the OQ-290 ruling"]
+    if n_fl:
+        printed.append("  NOTE: for a [front-loaded] file the delivered FRACTION is not a "
+                       "health metric — the delivered prefix is self-sufficient by "
+                       "construction, so a low number is the design working, not a loss. "
+                       "Front-loading LOWERS this percentage on purpose.")
     for cap_name, rows in sorted(out.items()):
         cb, cl = DELIVERY_CAPS[cap_name]
         printed.append(f"  under {cap_name} ({cb} B / {cl} lines): "
                        f"{len(rows)} of {len(sibs)} over cap")
-        for name, b, n, frac in rows[:DELIVERY_ROWS]:
-            printed.append(f"    {frac:5.0%}  {b:6d} B  {n:4d} ln  {name}")
+        for name, b, n, frac, fl in rows[:DELIVERY_ROWS]:
+            printed.append(f"    {frac:5.0%}  {b:6d} B  {n:4d} ln  "
+                           f"{'[front-loaded] ' if fl else ''}{name}")
         if len(rows) > DELIVERY_ROWS:
             printed.append(f"    ... and {len(rows) - DELIVERY_ROWS} more "
                            f"(listing capped at {DELIVERY_ROWS}; the COUNT above is full)")
@@ -357,6 +385,14 @@ def selftest() -> int:
         if not (0.40 < f_b < 0.42):
             failures.append(f"delivery control: byte cap must bind when lines do not "
                             f"(got {f_b:.1%})")
+        # front-load stamp: the readout must not report a successful front-load as a
+        # worse number than the raw file it replaced.
+        if not is_front_loaded("---\nname: x\nmetadata:\n  front_loaded: 2026-08-12\n---\nbody"):
+            failures.append("front-load control: a stamped file was not detected")
+        if is_front_loaded("---\nname: x\n---\nbody mentioning front_loaded: later"):
+            failures.append("front-load control: the stamp must be in FRONTMATTER, not body")
+        if is_front_loaded("no frontmatter at all"):
+            failures.append("front-load control: an unstamped file false-fired")
         _, skipped = delivery_report(d / "nonexistent")
         if not any("SKIPPED" in ln for ln in skipped):
             failures.append("delivery control: an absent memory dir must SKIP declaredly")

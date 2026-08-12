@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "655f9dedfad6ea2280f12abbac7afd06d5854fa4",
+    "store_version": "a3697c14fd6ae85580cbc37d13e762575a2eda22",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-12T16:59:15"
+    "generated_at": "2026-08-12T17:07:56"
   },
-  "issues_sha": "078dce4b3b36c7746e0630197bdff1f4b3149960936937e2acd7ac8cb5421e40",
+  "issues_sha": "c802fc2f9076c7cdf576804ee89b6b94964d84753a47bfb3446570e2fd4a2abd",
   "n_entries": 292,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 148,
+    "resolved": 149,
     "mitigated": 18,
     "disposed": 6,
     "future": 6,
-    "open": 107,
+    "open": 106,
     "partial": 7
   },
   "active": [
@@ -1522,27 +1522,13 @@
     {
       "id": "OQ-289",
       "status": "open",
-      "priority": 1,
+      "priority": 6,
       "summary": "Which constant governs recalled memory files, and does an over-limit file arrive truncated? (the canary test, re-aimed at the channel that is plausibly truncating today)",
       "deps": [],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-286",
         "OQ-290"
-      ]
-    },
-    {
-      "id": "OQ-290",
-      "status": "open",
-      "priority": 2,
-      "summary": "Disposition of the over-limit memory files: which cap gets sacrificed (Ω_P, operator jurisdiction)",
-      "deps": [
-        "blocked_on OQ-289",
-        "blocked_on_human oq290-memory-cap-disposition"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-289"
       ]
     },
     {
@@ -4037,6 +4023,20 @@
         "OQ-287",
         "OQ-289",
         "OQ-290"
+      ]
+    },
+    {
+      "id": "OQ-290",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Disposition of the over-limit memory files: which cap gets sacrificed (Ω_P, operator jurisdiction)",
+      "deps": [
+        "blocked_on_human oq290-memory-cap-disposition"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-289",
+        "OQ-292"
       ]
     }
   ]

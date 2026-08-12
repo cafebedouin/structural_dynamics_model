@@ -1,0 +1,65 @@
+---
+name: feedback-prereg-review-riders
+description: "Prereg/gate-design review riders (12 merged): HALT thresholds, churn/variance floors, judged-grammar calibration, NULL-composite rows, table totality, kill-condition cause classification, effect-size floor, interactive recon gates, failed-metric handling, prereg md5 ordering, tolerance by indicator kind"
+metadata:
+  node_type: memory
+  type: feedback
+  consolidated: 2026-08-10 (12 files merged; see provenance at end)
+  front_loaded: 2026-08-12 (ISSUES OQ-290 ruling — first 4 KB is self-sufficient)
+---
+
+# Prereg / gate-design review riders
+
+> **THIS BLOCK IS SELF-SUFFICIENT. If you are seeing only part of this file, every operative
+> rule is above the cut.** Recalled memory files are truncated per-file (~4 KB or 200 lines);
+> what follows the block is provenance, worked instances, and the `Why:` for each rule. Use
+> `Read` on this file's path for that detail — but you can act correctly on this block alone.
+
+**Scope: reviewing or writing a pre-registration, HALT gate, kill condition, or outcome table
+before spend.**
+
+1. **Numeric HALT thresholds, committed before spend** — never "reassess if it looks bad."
+2. **Same-input churn arm with a numeric floor**, whenever a design scores per-item
+   presence/absence across LLM redraws. *"The effect is inside the churn floor"* is a
+   first-class outcome, not a failure. n=1 drift runs are anti-conservative; n=2 gives a
+   FLOOR, not an estimate — say so.
+3. **Outcome tables must be TOTAL and the rows must PARTITION.** Walk the whole outcome space
+   and ask: total? two-sided? n-consistent? non-degenerate at this n?
+4. **Write NULL-composite rows explicitly** wherever an arm can read NULL (e.g. "decidable arms
+   unanimous + k NULL ⇒ …"). An unenumerated null is decided after the data.
+5. **Two-sided calibration on every gate** — plant the violation (does it fire?) AND run the
+   clean case (does it stay quiet?). A gate that cannot pass fabricates a finding; a gate that
+   cannot fire witnesses nothing.
+6. **Pre-register selection rules for controls, with the RNG seed**, before the arm they select
+   on runs, plus an explicit skip-as-moot branch.
+7. **Kill conditions: classify the CAUSE.** If the failure being counted has more than one cause
+   with different correct responses, write the cause-classification step into the prereg.
+8. **Effect-size floor, not α.** Pin a magnitude (share above uniform expectation) before any
+   grid value is computed; report the small stratum's MDE beside it. If the MDE does not clear
+   the floor, the condition is **not a falsifier** — stop.
+9. **A failed locked metric is reported as failed, full stop.** Then ask a NEW pre-registered
+   question keyed on a quantity unobserved at lock time. Never retro-fit a metric that passes.
+10. **Recon gates fire INTERACTIVELY** — surface each to the operator at fire time, with its
+    witness and pre-committed branch, not post-hoc in the writeup.
+11. **Freeze ordering is witnessable:** write `PREREGISTRATION.md` → `md5sum` it into
+    `audit_log.md` ABOVE the first result → run. On amendment the log shows both md5s with
+    their positions.
+12. **Split tolerance by indicator KIND** — what it certifies (consumer safety vs process
+    quality) and whether firing is systemic or idiosyncratic. An aggregate tolerance is a
+    property of the batch; safety is a property of the item.
+13. **Payload coverage:** a churn/discount rule must cover every payload-carrying file, not one
+    file standing in for all.
+
+**Related:** [[experiment-plan-review-bar]], [[plan-structure]], [[verification-design-discipline]],
+[[control-validity]], [[probe-positive-controls]].
+
+---
+
+*Everything below is detail: per-rider `Why:`, worked instances, and merge provenance.*
+
+# ── from feedback_halt_gates_earn_their_keep.md
+
+The OQ-259 item-1 plan went through two operator review rounds (extends
+[[experiment-plan-review-bar]]). The riders they added, all of which proved load-bearing:
+
+- **Payload coverage of discount rules:** the Arm-0 churn floor must cover every

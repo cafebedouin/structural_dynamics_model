@@ -12008,8 +12008,16 @@ Paper corrections landed in `amnesiac_institution_v0_6.md` §3.5 / §7.4.1 / §8
 they *do* to a live delivery is not.
 
 **Status:** open — minted 2026-08-12 as the successor to **OQ-286** (retracted: carrier
-misidentified).
-**Priority:** 1
+misidentified). **DEMOTED to a BACKGROUND MEASUREMENT 2026-08-12**: OQ-290 ruled front-load by
+*dominance*, so the branch determination is no longer a decision input for any disposition. It buys
+one thing only — whether ≤18 of the 19 rewrites were strictly necessary, a cost-proportionality
+question. **No transport is to be built for it.** The passive tripwire in
+`python/apparatus_instrument.py` answers it for free if a truncated sibling ever arrives during
+ordinary work; the interactive-harness and multi-turn options are both rejected (a large build whose
+output is one number, and a half-built one is the declared-but-unfed apparatus §3.4 says to remove).
+**Smoke run 2 stands: Arm A as designed is not runnable, and this OQ does not become runnable by
+being demoted.**
+**Priority:** 6
 
 *No `Deps:` line — deliberately edge-free, exactly as OQ-286 was. The disposition (OQ-290) depends on
 this run, not the reverse; a `blocked_on_human` edge here would show OQ-289 as blocked and the run
@@ -12172,9 +12180,88 @@ disposition itself is not this OQ's to make — it is OQ-290, Ω_P.**
 `amnesiac_institution_v0_6.md` §9.2. OQ-289 resolves the empirical half only; **the ruling must not
 be allowed to look like a finding.**
 
-**Status:** open — minted 2026-08-12 alongside OQ-289.
+**Status:** resolved — **RULED 2026-08-12: FRONT-LOAD (option 3), on both branches, by
+DOMINANCE.** Operator ruling, Ω_P jurisdiction retained.
 **Priority:** 2
-**Deps:** blocked_on OQ-289, blocked_on_human oq290-memory-cap-disposition
+**Deps:** blocked_on_human oq290-memory-cap-disposition
+
+**THE RULING, AND THE TYPE OF ARGUMENT THAT PRODUCED IT.** Front-load every over-cap sibling: make
+the first 4,096 B of each a self-sufficient summary plus a pointer to the rest.
+
+**This is a DOMINANCE argument, not an evidence-driven one, and the distinction is load-bearing.**
+Nothing about which constant binds was measured; **OQ-289 is NOT discharged by this close** and is
+not cited as support for it. What decided the ballot is structural, and it is checkable by anyone:
+
+1. **Front-load survives every branch.** A self-sufficient summary in the first 4 KB sits inside the
+   first ~50 lines, so it survives a 200-line cut as well as a 4,096-B or 25,000-B byte cut, with or
+   without an appended `Read` pointer.
+2. **The exposed sets NEST.** The `NSp` set (19 files) is a strict superset of the `kae` set (1), so
+   acting on the 19 is correct on both branches without knowing which binds.
+3. **The marginal work is not waste.** A self-sufficient first-4-KB summary is what the read site
+   wants regardless of any cap, so the ≤18 possibly-unnecessary rewrites are lower-value, not
+   negative-value.
+
+Option 1 (split) reverses the consolidation; option 2 does not exist on the `kae` branch (no
+pointer); option 4 accepts a known loss. Only option 3 is correct under every branch, which is what
+*dominance* means. **A ruling that reads as evidence-driven while its evidence is still pending is
+the mistyping `amnesiac_institution_v0_6.md` §8.4 names** — and it would let a future reader believe
+OQ-289 was answered. It was not; it dropped to a background measurement (the passive tripwire in
+`python/apparatus_instrument.py`).
+
+**EXECUTION ORDER: by delivered fraction, worst first — and the FIRST FILE IS THE METHOD'S OWN
+TEST.** `feedback_prereg_review_riders.md` is exposed on **both** branches, is the most-cited
+feedback memory, and is the only file the line cap binds. It is rewritten first, and then its first
+4 KB is checked against a fresh instance with no other context — because **"self-sufficient summary"
+is an authorial claim, and this repository's own discipline says an authorial claim about a read
+site is not witnessed by the author.** That check gates whether the remaining 18 are worth doing.
+
+**EXECUTION RECORD, 2026-08-12 — 5 of 19 front-loaded; the method PASSED its own test.**
+
+*The test, run because "self-sufficient summary" is an authorial claim and this repo's discipline
+says an authorial claim about a read site is not witnessed by the author.* The first 4,096 B of the
+rewritten `feedback_prereg_review_riders.md` was given to **3 fresh instances with no other context**
+(`--tools ""`, scratch cwd, no memory dir) and each was asked to enumerate the actionable rules.
+**Result: 13/13 topics covered, 3/3 instances, zero misses** (k=1 enumerated 19 by decomposing
+compound rules — over-enumeration, not loss; k=2 and k=3 returned exactly 13). Evidence:
+`python/audits/oq290_frontload_check/`.
+
+**`turns=1` on all three — no instance deferred to a fetch**, despite the block carrying a `Read`
+pointer. That is the OQ-292 suppression mode NOT firing, and the reason is a transferable design
+rule: the block's pointer is **descriptive** ("you can act correctly on this block alone") rather
+than **instruction-shaped** ("consult it whenever asked about X"), which is precisely the wording
+that suppressed reports in OQ-289 smoke run 2. **Front-load blocks must state that the reader may
+act on the block, not that they should go read the rest.**
+
+Front-loaded so far, worst-loss first: `feedback_prereg_review_riders` (was 16% delivered),
+`feedback_probe_positive_controls` (27%), `feedback_close_honesty` (32%), `feedback_control_validity`
+(36%), `feedback_verification_design_discipline` (41%). Each verified: the block's LAST rule and its
+`Related:` footer both survive the 4,096-B cut.
+
+**DECLARED SIDE EFFECT: front-loading raised the raw `kae`-branch count from 1 to 3.** Adding a
+~50-line summary pushes a file past the 200-line cap. Those files remain healthy — the summary sits
+in the first ~55 lines, so it survives a 200-line cut too — but the raw count moved in the direction
+that looks like regression. `apparatus_instrument.py` now stamps and labels `[front-loaded]` files
+and states in its own output that **for a front-loaded file the delivered FRACTION is not a health
+metric**; front-loading LOWERS that percentage on purpose. Without that flag the readout would have
+reported the ruling's own execution as a worsening.
+
+**REMAINING: 14 files at 43–89% delivered** (`project_perturbation_primitives` 43% is the worst;
+nine are at ≥72%). Deliberately **staged, not abandoned** — the ruling says triage by delivered
+fraction, and the five done carry the great majority of the loss. **Threshold declared: everything
+below ~45% delivered is done; the remainder is scheduled for the monthly consolidation pass**, which
+already owns tail health and is the right place for authoring work on files losing ≤1 KB.
+
+**DECLARED COST — THE TAIL-ROT REGRESSION, stated because an undeclared one is an unstated
+exemption at exactly the point the fix lands.** Front-loading rewards putting the summary first and
+lets the tail rot unread. That **reproduces the accretion the 2026-08-10 consolidation cleared** —
+no longer spread across many files, but hidden below a cut line inside each one. **The standing
+readout will not catch it: every file will be compliant.** Compliance with a delivery cap is not
+evidence of a healthy tail, and the readout cannot tell a well-curated 25 KB file from a
+front-loaded husk. This is **accepted as a declared cost, not mitigated**, on the ground that the
+monthly consolidation pass (CLAUDE.md → *Memory Consolidation Review*) already owns tail health and
+is the right owner for it; a second automated check would be an instrument measuring what a human
+pass already reads. **If a future consolidation finds rotted tails below the cut line, that is the
+falsifier for this decision, and it should reopen the ruling rather than be absorbed.**
 
 **The trade.** §8.5's channel cap consolidates for **attention economics** — the read-side budget of
 a fresh instance. That consolidation is what created exposure to a **per-file delivery limit** on the

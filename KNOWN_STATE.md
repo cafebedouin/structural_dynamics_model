@@ -45,6 +45,49 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-12 — [landed] OQ-290 RULED front-load by DOMINANCE (not by evidence); OQ-289 demoted to background; 5 of 19 memory files front-loaded and the method passed its own read-site test
+**Files:** `ISSUES.md`, `python/apparatus_instrument.py`, `docs/technical/build_discipline.md`, `python/audits/oq290_frontload_check/`
+**Tier:** landed
+
+**The ruling and its TYPE.** Front-load every over-cap sibling memory file: first 4,096 B is a
+self-sufficient summary plus a pointer. **Decided by DOMINANCE, not by evidence — OQ-289 is NOT
+discharged and is not cited as support.** Front-load survives every branch (a summary in the first
+4 KB sits inside the first ~50 lines, so it survives a 200-line cut too, pointer or no pointer), and
+the exposed sets NEST (`NSp` 19 ⊃ `kae` 1), so acting on the 19 is correct without knowing which
+constant binds. A ruling that reads as evidence-driven while its evidence is pending is the
+mistyping §8.4 names. **OQ-289 demoted to Priority 6 background; no transport is to be built for it.**
+
+**The method was tested at the read site, because "self-sufficient" is an authorial claim.** First
+4,096 B of the rewritten `feedback_prereg_review_riders.md` → 3 fresh instances, no other context,
+tools off: **13/13 topics, 3/3 instances, zero misses**, `turns=1` throughout.
+
+**TRANSFERABLE DESIGN RULE from that `turns=1`:** the block's pointer is **descriptive** ("you can
+act correctly on this block alone"), not **instruction-shaped** ("consult it whenever asked about
+X") — and instruction-shaped wording is exactly what suppressed reports in OQ-289 smoke run 2
+(OQ-292). **Front-load blocks must tell the reader they may act, never send them to fetch.**
+
+**Two instrument corrections, both found only while wiring something adjacent:**
+- The delivery readout computed delivered fraction from the **byte cap alone**, reporting **99% for
+  a file delivering 61%** — the same byte-only error we had just corrected in three documents, still
+  compiled into the instrument. Now line-cut-first, with arithmetic controls. Class recorded at
+  `build_discipline.md` → *A correction landed in PROSE is not landed until every instrument
+  encoding the same assumption is checked* (third instance of the same shape in one arc).
+- Front-loading **lowers** delivered fraction (file grows, prefix does not) and pushed two files past
+  200 lines, raising raw `kae` exposure 1 → 3. Without a flag the readout would have reported the
+  ruling's own execution as a worsening. Files now carry a `front_loaded:` frontmatter stamp and the
+  readout labels them and says the fraction is not a health metric for them.
+
+**Declared cost, not mitigated:** front-loading rewards a good first 4 KB and lets the tail rot
+unread — the accretion the 2026-08-10 consolidation cleared, now hidden below a cut line instead of
+spread across files. **The readout cannot catch it: every file will be compliant.** Owned by the
+monthly consolidation pass. If a future pass finds rotted tails, that is this ruling's falsifier and
+should reopen it rather than be absorbed.
+
+**Remaining: 14 files at 43–89% delivered, staged not abandoned**, threshold declared (everything
+below ~45% is done; the rest goes to the monthly pass).
+
+---
+
 ## 2026-08-12 — [correction-key] OQ-286 RETRACTED (carrier misidentified): `CLAUDE.md` is not truncated — it is SKIPPED WHOLE above 4 MB, at 46× headroom. The recall channel is where a limit plausibly binds (OQ-289/OQ-290)
 **Files:** `ISSUES.md`, `docs/amnesiac_institution/amnesiac_institution_v0_6.md`, `python/audits/oq289_recall_canary.py`, `python/audits/oq289_prereg_draft.md`, `python/apparatus_instrument.py`
 **Tier:** correction-key
