@@ -121,6 +121,34 @@ delivery readout). Gate GREEN at each.
    until OQ-290 lands.** It contributes nothing to the return code by design. Promoting it to
    enforcing today would go red on 19 files and stay red until an Ω_P ruling nobody has scheduled.
 
+**SMOKE RUN 2 IS SPENT (9 calls) AND ANSWERED THE FEASIBILITY QUESTION: NO.** Pre-registered row
+fired — **`index n/n, sibling 0/n`: the recall ATTACHMENT path does not deliver sibling memory
+files under `claude -p`.** `--tools ""` is not the cause; sibling content failed on every arm, and
+on the `Read`-enabled arm it arrived only because the model **fetched it with a tool call**. **Arm A
+as designed is NOT RUNNABLE and the pre-registration is NOT ready to freeze** — which is the
+ordering ruling (smoke before freeze) paying for itself exactly as intended. Evidence:
+`python/audits/oq289_smoke_run2/`.
+
+**THE PROOF IS BEHAVIOURAL AND THE NUMERIC METRIC READ IT BACKWARDS — carry this one, it is the
+inverse of our usual defect.** The readout printed `index 0/3`. The raw text has models emitting the
+**exact absolute path of their own scratch memory dir and the sibling filename** — strings present
+only inside the `MEMORY.md` we wrote, which a model cannot emit unless it was shown them. The index
+WAS delivered. The metric scored a false ABSENT because the index entry's relevance wording
+("consult it whenever asked about delivery-check tokens") reads as an **instruction**: models obeyed
+it, went to fetch, and never reported the marker on line 1 of the file they were reading from.
+**A prompt can suppress the report of canaries the model can plainly see.** We spend most of our
+discipline on success-shaped absence; this is **absence-shaped success**, and it would have scored
+as `DROPPED` in the outcome table.
+
+**Two more instrument defects, both pre-freeze:** `observed_tool_calls()` returned **0 for every
+unit including the three that demonstrably called a tool**, because `--output-format json` carries
+no message stream — **a check that could not fire**, the exact converse of the `cache_read` gate
+that could not pass, in the same driver on the same day (now returns `None` = UNMEASURED, with
+`num_turns` as a declared proxy). And **Arm A′ is unimplementable as specified** — "measured as an
+observed tool call" has no referent under `json`; `stream-json` is now a precondition of the arm.
+Confirmed for free: `project_key()` is character-for-character correct, echoed back by the
+harness's own naming.
+
 **SMOKE RUN 1 IS SPENT (6 calls, 2026-08-12) AND DID NOT DISCHARGE ITS ITEM.** 0/3 on both arms,
 replies well-formed. **The null was uninterpretable and the fault was in the probe**: it had no
 positive control showing the memory channel could deliver anything, so "the marker did not arrive"

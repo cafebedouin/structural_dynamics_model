@@ -46,32 +46,88 @@ both in scope:**
   satisfiable, strictly better at the isolation worry it encoded, and which run 1 shows
   passing cleanly.
 
-## Run 2 design — THREE arms, and the third is the control that was missing
+## Run 2 (2026-08-12) — EXECUTED. The feasibility question is answered: **Arm A is not runnable as designed.**
 
-| Arm | Marker location | Path exercised |
+9 calls, scope md5 `d0b9f31f`. Full evidence and reasoning: `python/audits/oq289_smoke_run2/`.
+
+**Row fired: `index n/n, sibling 0/n` — the ATTACHMENT path specifically does not deliver under
+`-p`.** The `--tools ""` flag is not the cause: sibling content failed to arrive on every arm,
+including the `Read`-enabled one, where it arrived only because the model **fetched it with a tool
+call** — a different channel.
+
+**The evidence is behavioural and the numeric metric got it backwards.** The readout printed
+`index 0/3`; the raw text shows models emitting the exact absolute path of their own scratch memory
+dir and the sibling filename — **strings present only inside the `MEMORY.md` we wrote**. The index
+was delivered. The metric scored a false ABSENT because the index entry's relevance wording
+("consult it whenever asked about delivery-check tokens") is an **instruction**, and the models
+obeyed it: they went to fetch instead of reporting the marker on line 1 of the file they were
+reading from. **Arm A's prompt can suppress the report of canaries the model can plainly see** —
+an absence-shaped success, and a live hazard for the sweep.
+
+**Per this document's own rule, that outcome is the finding, not a probe defect to tune away:**
+*if the sibling cannot be made reliably relevant, Arm A needs a triggering mechanism designed
+BEFORE the sweep, not during it.* That is now the state, and the sweep is not designed.
+
+Three instrument defects landed pre-freeze — `observed_tool_calls()` returning 0 under
+`--output-format json` for units that **did** call tools (a check that could not fire, the converse
+of the `cache_read` gate that could not pass); Arm A′'s "observed tool call" measurement being
+**unimplementable** without `stream-json`; and `--tools ""` not preventing tool-call-shaped output.
+One thing confirmed for free: `project_key()` is character-for-character correct, echoed back by
+the harness's own naming.
+
+---
+
+## Run 2 design — THREE arms, and the control is PAIRED
+
+| Arm | Marker(s) | Path exercised |
 |---|---|---|
 | `SMOKE_NOTOOLS` | sibling file, `--tools ""` | attachment |
 | `SMOKE_TOOLS` | sibling file, `--tools Read` | attachment |
-| **`SMOKE_INDEX`** | **the scratch `MEMORY.md` itself** | **always-loaded — the positive control** |
+| **`SMOKE_INDEX`** | **`SMOKE-INDEX` in the scratch `MEMORY.md` + `SMOKE-SIBLING` in a small sibling file** | **always-loaded AND attachment** |
 
-Every arm now also gets a `MEMORY.md` index naming its siblings, mirroring the live dir.
+**`SMOKE_INDEX` is paired, and the pairing is the operator's constraint (2026-08-12).** A
+marker in the scratch `MEMORY.md` alone witnesses the **always-loaded** path — exactly the
+path Phase 0 already separated out, and **not** the one Arm A rides. A positive there is
+consistent with "recall works" *and* with "recall never fired but the index arrived," which
+is run 1's ambiguity moved up a level rather than removed. So the arm carries two distinctly
+labelled markers on the two different paths, and the index entry describes the sibling in the
+**probe prompt's own words** ("delivery-check token") so relevance selection has a handle.
 
-`SMOKE_INDEX` still carries no threshold information: its payload is the same 512 B / 10
-lines, far under every candidate constant, and it rides the always-loaded path, which
-OQ-286 already retracted as a truncation site. It exists solely to make a zero readable.
+Every arm also gets a `MEMORY.md` index naming its siblings, mirroring the live dir.
+
+Both markers still carry no threshold information: 512 B / 10 lines each, far under every
+candidate constant on both axes.
 
 ## What this probe may conclude
 
-| INDEX | no-tools | tools | Reading |
-|---|---|---|---|
-| 3/3 | 0/3 | 3/3 | `--tools ""` suppresses the attachment. **Arm A as designed returns a null that means nothing** and must be redesigned before the freeze. |
-| 3/3 | 0/3 | 0/3 | The always-loaded path works; **the attachment path specifically does not fire under `-p`.** Arm A needs a different transport. |
-| 3/3 | 3/3 | 3/3 | The attachment arrives under both. **Arm A is runnable as designed.** |
-| 0/3 | 0/3 | 0/3 | The memory subsystem is not engaging under `-p` at all. **The transport is wrong, not the flag** — and no arm of the run is currently runnable. |
-| any other split | | | Inconclusive at k=3; report the split, conclude nothing, do not average it away. |
+| index | sibling | no-tools | tools | Reading |
+|---|---|---|---|---|
+| 3/3 | 3/3 | 3/3 | 3/3 | Recall works end to end. **Arm A is runnable as designed.** |
+| 3/3 | 3/3 | 0/3 | 3/3 | `--tools ""` suppresses the attachment. **Arm A as designed returns a null that means nothing** and must be redesigned before the freeze. |
+| 3/3 | 0/3 | 0/3 | 0/3 | The always-loaded path works; **the ATTACHMENT path specifically does not deliver under `-p`.** **Arm A needs a triggering mechanism designed BEFORE the sweep, not during it.** |
+| 0/3 | 0/3 | 0/3 | 0/3 | The memory subsystem is not engaging under `-p` at all. **The transport is wrong, not the flag** — no arm of the run is currently runnable. |
+| any other split | | | | Inconclusive at k=3; report the split, conclude nothing, do not average it away. |
+
+**If the sibling cannot be made reliably relevant, that IS the finding**, not a probe defect
+to be tuned away. Relevance selection is per turn and not under our control; discovering that
+Arm A needs a triggering mechanism is a legitimate and decision-relevant outcome.
 
 Secondary, and free: whether the response carries a parseable `usage` block at all — the
 primary instrument of the real run has no input without one. (Run 1: 6/6 did.)
+
+## The notice discriminator is STRUCTURALLY UNTESTABLE here, and that is stated rather than skipped
+
+The two truncation paths append different notices, which makes a truncated file
+self-identifying (prereg §5b). **It cannot be confirmed in smoke.** A notice only appears
+when a file truncates, and truncation only happens at a threshold — so any probe capable of
+testing it would carry exactly the threshold information this scope forbids. There is no
+version of smoke that both stays in scope and exercises it.
+
+**It is therefore an OWED CONFIRMATION at the first truncating rung of the sweep**, with the
+reading pre-committed here: if a unit's self-report shows truncation (START present, END
+absent) but **no notice string arrives in the delivered text**, the notice is being stripped
+during attachment assembly and the discriminator is **unavailable** — record that, and do not
+infer the governing path from thresholds alone as though the discriminator had worked.
 
 ## What this probe may NOT conclude
 

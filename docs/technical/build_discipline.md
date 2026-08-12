@@ -1284,6 +1284,47 @@ extraction works); the second sentence is not licensed by a propaganda transcrip
 
 ---
 
+## A gate that CANNOT PASS is a false-positive gate — and it fabricates a finding (2026-08-12)
+
+The orphaned-control rule covers a check that is **green and wired to nothing**. This is its exact
+converse: a check that is **red and caused by nothing**. Both are why gate calibration is
+*two-sided*, and the second is worse than it looks, because a check that cannot fail merely
+witnesses nothing while a check that cannot pass **manufactures a positive**.
+
+**Witnessed, and it was pre-registered.** OQ-289's driver carried a numeric HALT —
+`cache_read_input_tokens == 0` per unit, "nonzero means isolation failed and the delivered count is
+corrupt." It was principled, it had a stated rationale, and it was **unsatisfiable under the
+transport the run actually uses**: the CLI caches the system prompt, so every one of smoke run 1's
+six units returned `cache_read` of 3,289 / 4,479 with `input_tokens = 2`. Frozen as written it
+would have **voided every rung of a fully valid sweep and been read as evidence of isolation
+failure** — a fabricated finding, not merely a missing one, and one the freeze would have
+protected from revision. A second instance landed in the same file the same day: an isolation
+clause compared a dict against a differently-shaped dict, so it fired unconditionally; only its
+CONVERSE control could see it, and it did not have one until it was added. **Two instances is a
+pattern.**
+
+**The rule.** Every gate owes **both** calibrations, and they are different questions:
+
+| Direction | Question | Failure it catches |
+|---|---|---|
+| Can it fire? | plant the violation — does it fire? | a check that cannot fail (witnesses nothing) |
+| **Can it pass?** | **run the clean case — does it stay quiet?** | **a check that cannot pass (fabricates a finding)** |
+
+**And a replacement gate inherits the old one's status until it carries its own satisfiability
+witness.** Swapping an unsatisfiable HALT for a better-reasoned one is not a fix; it is the same
+move with a new name, unless the replacement is *witnessed passing on real data*.
+`DELIVERED_UNSTABLE_ACROSS_K` replaced the assertion above and is admissible **only** because smoke
+run 1 shows `delivered` identical across k=3 twice — 9,002 ×3 and 10,262 ×3, zero variance
+(`python/audits/oq289_smoke_run1/`). State that witness next to the gate, in the gate.
+
+**Where it bites hardest: pre-registration.** A freeze is designed to prevent post-hoc revision, so
+an unsatisfiable gate inside one is *protected* from the correction it needs. **A numeric HALT owes
+a satisfiability witness BEFORE the freeze, on the real transport** — which is a second, independent
+argument for running the feasibility probe before freezing (operator ruling, 2026-08-12), beyond
+the one about whether the test is runnable at all.
+
+---
+
 ## An introduced instrument is itself a claim (the recursion, generalized past diagnostics)
 
 The positive-control rule and its "one level up" sibling both say a probe's clean null is worthless

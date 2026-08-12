@@ -12073,6 +12073,38 @@ from the file's *first* section, grep 0; the `~/.claude/file-history/` hits are 
 instance's report is the only channel** — which is why a canary is the only instrument and why none
 of this settles by reading a file.
 
+**SMOKE IS SPENT (2 runs, 15 calls) AND THE SWEEP IS BLOCKED ON A DESIGN DECISION, 2026-08-12.**
+Ordering ruling (operator): smoke runs BEFORE the freeze, because smoke settles whether Arm A is
+runnable. It does not. **Pre-registered row fired: `index n/n, sibling 0/n` — the recall ATTACHMENT
+path does not deliver sibling memory files under `claude -p`.** `--tools ""` is not the cause:
+sibling content failed on every arm, and on the `Read`-enabled arm it arrived only because the
+model **fetched it with a tool call**. Evidence: `python/audits/oq289_smoke_run1/`,
+`python/audits/oq289_smoke_run2/`.
+
+**The proof is BEHAVIOURAL and the numeric metric read it backwards** — worth carrying because it
+is the inverse of this repo's usual defect. The readout printed `index 0/3`; the raw text has
+models emitting the **exact absolute path of their own scratch memory dir and the sibling
+filename**, strings present only inside the `MEMORY.md` we wrote. The index WAS delivered. The
+metric scored a false ABSENT because the index entry's relevance wording read as an *instruction*,
+so models went to fetch instead of reporting the marker on line 1 of the file they were reading
+from. **A prompt can suppress the report of canaries the model can plainly see — an absence-shaped
+success.** Any Arm A design must handle it or §6's table will score delivered content as `DROPPED`.
+
+**Four instrument findings, all pre-freeze, which is the ordering ruling paying for itself:**
+(a) `cache_read_input_tokens == 0` is **unsatisfiable** under this transport — frozen as written it
+would have voided every rung and been read as isolation failure (a *fabricated* finding; class
+recorded at `build_discipline.md` → *A gate that CANNOT PASS is a false-positive gate*). Replaced by
+`DELIVERED_UNSTABLE_ACROSS_K`, which is **two-sided witnessed in one run** (zero variance on two
+arms, fires on the third). (b) `observed_tool_calls()` returns 0 under `--output-format json` for
+units that **did** call tools — a check that could not fire; `stream-json` is now a precondition,
+and the function returns `None` = UNMEASURED. (c) **Arm A′ is unimplementable as specified** —
+"observed tool call" has no referent under `json`. (d) `project_key()` confirmed correct,
+character-for-character, echoed back by the harness's own naming.
+
+**Blocked on:** a triggering mechanism for Arm A — how a single-turn `-p` call causes the recall
+attachment to fire on a target sibling — designed **before** the sweep, not during it. Until that
+exists, §3's Arm A is not runnable and the pre-registration is not ready to freeze.
+
 **The run.** `python/audits/oq289_recall_canary.py`, shaped on `python/audits/oq277_crosscoding_driver.py`.
 Arms, instrument, spend gates, numeric HALTs, and the partitioning outcome table are frozen in the
 audit's `PREREGISTRATION.md` — see `audits/<execution-date>_oq289_recall_canary/`. Headlines:
@@ -12154,14 +12186,31 @@ which constant pair governs (OQ-289's table), and Arm A′ decides whether trunc
 if instances reliably follow the `Read` pointer, option 2 is nearly free and the trade largely
 dissolves. Ruling before the run would be ruling on a factor-of-nineteen uncertainty.
 
+**The n=1 branch is NOT a near-miss, corrected 2026-08-12 by a code-read.** `WEr` applies the
+**line cut FIRST**, then the byte cut to the result. `feedback_prereg_review_riders.md` is 25,373 B
+**and 359 lines**, so the **200-line** cap binds — not the 373-byte overage — yielding 15,451 B:
+**60.9% delivered by bytes, 55.7% by lines.** The single most-cited feedback memory loses ~39% of
+itself. An earlier characterization of this branch as "over by 373 B, delivering ~98.5%, a hairline
+case" reasoned from the byte constant alone without the order of operations. So even on the
+one-file branch this is a live disposition, not a rounding error — though the §8.5 emphasis
+re-scopes from a population to a mechanism (pre-registered in
+`python/audits/oq289_prereg_draft.md` §2b).
+
 **The ballot, triaged by delivered fraction first** — a file at 16% and one at 89% are not the same
 object and should not take the same disposition:
 
 1. **Split** every over-limit file under the governing cap. Reverses part of the 2026-08-10
    consolidation — trades the attention cap against the delivery cap, explicitly, in that direction.
 2. **Accept truncate-plus-pointer** as the contract, recorded where a cold reader finds it.
-   *Contingent on what Arm A′ measures* — this option is only honest if pointer-following is
-   witnessed, not assumed.
+   **BRANCH-CONTINGENT — amended 2026-08-12, BEFORE the run, because an option retired in
+   light of results looks like an option retired because of them.** This option exists
+   **only on the `PIe`/`NSp` branch.** Reading the full `WEr` body established that the
+   `kae`/`iJ` path appends **no `Read` pointer at all** — its notice is
+   `> WARNING: this memory file is <what>. Only part of it was loaded.`, with no path and no
+   tool; only `PIe` emits *"Use the Read tool to view the complete file at: &lt;path&gt;"*.
+   **On the kae branch there is no pointer to accept, so this is not a choice that exists.**
+   Where it does exist it is still contingent on Arm A′ witnessing pointer-following rather
+   than assuming it.
 3. **Front-load** — make the first `NSp` bytes of each over-limit file a self-sufficient summary plus
    the pointer. Truncation stops being lossy for the recall use case, the consolidation stands, and
    **the trade dissolves instead of being decided.** Costs an authoring pass per file.

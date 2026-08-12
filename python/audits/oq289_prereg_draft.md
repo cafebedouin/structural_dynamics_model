@@ -51,6 +51,36 @@ Run 1 also **validated the primary instrument**: `delivered` was perfectly stabl
 within each arm (9,002 ×3, 10,262 ×3, zero variance), and the 1,260-token inter-arm gap is
 exactly the `Read` tool definitions.
 
+### SMOKE RUN 2 IS SPENT AND THE ANSWER IS NO — **THIS DOCUMENT IS NOT READY TO FREEZE**
+
+9 calls, scope md5 `d0b9f31f`, evidence `python/audits/oq289_smoke_run2/`. Pre-registered row
+fired: **`index n/n, sibling 0/n` — the ATTACHMENT path specifically does not deliver under
+`-p`.** `--tools ""` is not the cause; sibling content failed on every arm, and on the
+`Read`-enabled arm it arrived only because the model **fetched it with a tool call**.
+
+**Arm A as designed in §3 is NOT RUNNABLE.** Per the smoke scope's own pre-committed rule,
+that is the finding rather than a probe defect to tune away: **Arm A needs a triggering
+mechanism designed before the sweep, not during it.** Freezing this document today would
+freeze an unrunnable Arm A — which is precisely the outcome the ordering ruling existed to
+prevent, and it worked.
+
+**Three further amendments are owed before any freeze, all found by run 2:**
+
+1. **§5's zero-tool-call verification must actually use `--output-format stream-json`.**
+   Under `json` the message stream is absent, so `observed_tool_calls()` returned **0 for
+   every unit including the three that demonstrably called a tool** — `TOOL_CALL_ON_SUPPRESSED_ARM`
+   was **a check that could not fire**, the exact converse of the `cache_read` gate that could
+   not pass, in the same driver on the same day. (Now returns `None` = UNMEASURED, with
+   `num_turns` wired as a declared proxy.)
+2. **§3's Arm A′ is UNIMPLEMENTABLE as specified.** "Measured as an observed tool call, never
+   a self-report" has no referent under `json`. It requires `stream-json`, and that is now a
+   precondition of the arm rather than a formatting preference.
+3. **§4/§6 must account for a new false-ABSENT mode.** Run 2's index entry used relevance
+   wording that reads as an *instruction*; models obeyed it, went to fetch, and never reported
+   a marker sitting on line 1 of the file they were reading from. **A prompt can suppress the
+   report of canaries the model can plainly see** — an absence-shaped success, and it would
+   have scored as `DROPPED` or `ATTACHMENT_NEVER_FIRED` in §6's table.
+
 ---
 
 ## 1. The question
@@ -155,18 +185,35 @@ rather than being a property of nineteen files. Delete any phrasing implying bre
 "consolidating for attention created exposure to a delivery cap," which is exactly as true
 at n=1. **Do not upgrade it to a general finding, and do not retract it as a near-miss.**
 
+**Provenance of this correction, recorded because the asymmetry cuts both ways.** The
+~98.5% figure was **operator-supplied**, and it was corrected by a **code-read** — reasoning
+from the byte constant alone without the order of operations. The OQ-286 close justifies
+trusting a code-read where the error budget is wide (46× headroom) and refusing one where it
+is narrow; **this is the same ruling running in the other direction**, and it is the
+direction that does not usually get written down. Recorded so the asymmetry reads as a rule
+about consequence rather than a rule about whose reading wins.
+
 ### Both branches — a consequence for OQ-290 that only the code-read reveals
 
 **`WEr` appends NO `Read` pointer.** Its notice is `> WARNING: this memory file is <what>.
 Only part of it was loaded. Keep each memory file focused on one topic.` — no path, no tool.
 Only the `PIe` path emits *"Use the Read tool to view the complete file at: <path>"*.
 
-Therefore: **on the kae branch, OQ-290's option 2 ("accept truncate-plus-pointer as the
-contract") DOES NOT EXIST** — there is no pointer to accept — and **Arm A′'s question is not
-well-posed**, because there is nothing to follow. Pre-registered here so the run cannot
-quietly answer a question that does not arise on the branch it lands in. On that branch the
-ballot reduces to split / front-load / do-nothing, and front-loading gets stronger, because
-a truncated `WEr` file is simply *silently short*.
+Therefore, **committed before the run rather than after — because an option retired in light
+of results looks like an option retired because of them:**
+
+**OQ-290's ballot is amended.** Options **1 (split)**, **3 (front-load)** and **4 (do
+nothing, cost named)** stand on **both** branches. Option **2 (accept truncate-plus-pointer
+as the contract)** is now **BRANCH-CONTINGENT and must be labelled so**: it exists only on
+the `PIe`/NSp branch. On the kae branch there is no pointer to accept, so option 2 is not a
+choice that exists, and front-loading gets stronger — a truncated `WEr` file is simply
+*silently short*.
+
+**Arm A′ is gated on the branch determination, and a kae outcome makes it MOOT, NOT FAILED.**
+Its question — does an instance follow the `Read` pointer — is well-posed only on the NSp
+branch. Keep the arm; run it only after the branch is determined. **A skipped A′ on a kae
+outcome is a correctly-scoped run, not an incomplete one**, and the writeup must say so in
+those words, because a silently absent arm reads as a gap in coverage.
 
 ## 3. Arms
 
@@ -277,6 +324,18 @@ from where a threshold lands, because it is **self-identifying**:
 
 Recorded per unit as `notice_path` / `notice_axis`. **No notice observed returns `None`, which
 is NOT "untruncated"** — the model may simply not have echoed it — and is never coerced.
+
+**IT IS UNCONFIRMED, AND IT CANNOT BE CONFIRMED IN SMOKE.** A notice only appears when a file
+truncates, and truncation only happens at a threshold — so any probe able to exercise it would
+carry exactly the threshold information smoke's scope forbids. There is no version of smoke
+that both stays in scope and tests this.
+
+**Owed confirmation, at the first truncating rung of the sweep, reading pre-committed here:**
+a differing notice string is a discriminator only if it *arrives in the delivered text* rather
+than being stripped during attachment assembly. If a unit's self-report shows truncation
+(START present, END absent) but **no notice string arrives**, the discriminator is
+**UNAVAILABLE** — record that plainly, and **do not fall back to inferring the governing path
+from thresholds alone as though it had worked.**
 
 `BASELINE` = the mean `delivered` of the **LEAK** arm (the unit with no memory payload).
 `ε = 50 tokens`. `elevated` means `delivered > BASELINE + ε`. **BASELINE is a

@@ -426,14 +426,29 @@ def build_smoke_units() -> list[dict]:
       - `relevant_memories` is relevance-selected per turn, and the smoke prompt had no
         semantic overlap with the payload's filler.
 
-    SMOKE_INDEX is the positive control that makes a 0 mean something. Its marker goes
-    in the scratch `MEMORY.md` itself — the ALWAYS-LOADED path, not the attachment path
-    — at a size far under every candidate constant, so it still carries no threshold
-    information. It splits the null that was previously unreadable:
+    SMOKE_INDEX IS A PAIRED ARM, NOT A SINGLE MARKER (operator constraint, 2026-08-12).
+    A marker in the scratch `MEMORY.md` alone witnesses the ALWAYS-LOADED path — the very
+    path Phase 0 already separated out, and NOT the one Arm A rides. A positive there is
+    consistent with "recall works" AND with "recall never fired but the index arrived",
+    which is run 1's ambiguity moved up one level rather than removed.
 
-        INDEX fires, siblings do not  -> the ATTACHMENT path specifically is the problem
-        INDEX also does not fire      -> the memory subsystem is not engaging under -p;
-                                         the transport is wrong, not the flag
+    So the arm carries TWO markers:
+
+        SMOKE-INDEX   <tok>  in the scratch MEMORY.md      (always-loaded path)
+        SMOKE-SIBLING <tok>  in a small sibling file       (attachment path)
+
+    and the index entry DESCRIBES the sibling in the probe prompt's own terms
+    ("delivery-check token"), so relevance selection has something to match. Readings:
+
+        both fire                      -> recall works end to end; Arm A is runnable
+        INDEX fires, SIBLING does not  -> the ATTACHMENT path specifically is the problem
+                                          (a readable result, not a repeat of run 1)
+        neither fires                  -> the memory subsystem is not engaging under -p;
+                                          the transport is wrong, not the flag
+
+    **If the sibling cannot be made reliably relevant, THAT IS THE FINDING** — relevance
+    selection is per turn and not under our control — and it means Arm A needs a
+    triggering mechanism designed BEFORE the sweep, not during it.
     """
     common = {"cap": None, "axis": "smoke", "side": None,
               "bytes": SMOKE_BYTES, "lines": SMOKE_LINES, "batch": 1}
@@ -446,20 +461,43 @@ def build_smoke_units() -> list[dict]:
 
 #: Mirrors the live memory dir's structure. Without an index the recall system may have
 #: nothing to select from — the confound that made the first smoke's null unreadable.
+#: The entry text deliberately uses the probe prompt's own words ("delivery-check
+#: token") so relevance selection has something to match. If that is not enough to make
+#: the sibling reliably relevant, that IS the finding: Arm A then needs a triggering
+#: mechanism designed before the sweep, not during it.
 SMOKE_INDEX_TEMPLATE = """# Scratch Memory Index
 
 One line per memory; content lives in the files.
 
-## Feedback — scratch
-- [{stem}]({stem}.md) — scratch probe file for OQ-289 feasibility
+## Feedback — delivery check
+- [{stem}]({stem}.md) — holds the OQ-289 **delivery-check token**; consult it whenever
+  asked about delivery-check tokens
 """
+SMOKE_SIBLING_PREFIX = "SMOKE-SIBLING"
+SMOKE_INDEX_PREFIX = "SMOKE-INDEX"
+#: The sibling file's stem on the SMOKE_INDEX arm. Named for what the index says it is.
+SMOKE_SIBLING_STEM = "scratch_delivery_check"
 
 
-def build_smoke_file(nbytes: int, nlines: int, marker: str) -> str:
+def build_smoke_file(nbytes: int, nlines: int, marker: str,
+                     prefix: str = SMOKE_PREFIX) -> str:
     """One marker, one small file. No position structure to read."""
-    head = f"{SMOKE_PREFIX} {marker}"
+    head = f"{prefix} {marker}"
     body = build_filler(nbytes - len(head) - 1, nlines - 1)
     return head + "\n" + body
+
+
+def payload_files_for(unit: dict) -> int:
+    """How many payload FILES a unit writes. Not the same as its batch size.
+
+    SMOKE_INDEX writes two per batch item — the index marker and the sibling marker ride
+    different delivery paths, so they cannot share a file. Derived from the arm rather
+    than hardcoded, because gate 1 compares against this and a hardcoded count would
+    have had to be edited (and could have been edited WRONG) every time an arm changed.
+    """
+    if unit["arm"] in ("INJECT", "LEAK"):
+        return 0
+    return unit["batch"] * (2 if unit["arm"] == "SMOKE_INDEX" else 1)
 
 
 def expected_calls(units: list[dict]) -> int:
@@ -801,12 +839,53 @@ def observed_tool_calls(stdout: str) -> int | None:
     verified, and an unsuppressed Read could have fetched the canary off disk.
     On A_PRIME a tool call is THE MEASUREMENT: pointer-following observed rather than
     self-reported.
+
+    BROKEN UNDER `--output-format json`, WITNESSED IN SMOKE RUN 2 — and it failed in the
+    direction that looks fine. `json` returns ONLY the final result object; the
+    intermediate assistant messages that carry `tool_use` blocks are not in it. So this
+    returned 0 for every unit INCLUDING the three that demonstrably made a real tool call
+    (SMOKE_TOOLS: `num_turns` = 2, and it came back with the sibling file's marker it
+    could not otherwise have had).
+
+    Consequences, both pre-freeze:
+      - `TOOL_CALL_ON_SUPPRESSED_ARM` was A CHECK THAT COULD NOT FIRE — the converse of
+        the cache_read gate that could not pass, in the same driver, found the same day.
+      - **Arm A′'s measurement is UNIMPLEMENTABLE as specified** under this output
+        format. Its whole design is "measured as an observed tool call, never a
+        self-report", and there is no observed tool call in `json` output.
+
+    The fix is `--output-format stream-json` (which §5 of the prereg already required for
+    the zero-tool-call verification, and which was not implemented). Until that lands,
+    `num_turns` is the only available signal and it is a PROXY, so it is reported under
+    its own key and never as a tool-call count.
     """
     try:
         obj = json.loads(stdout)
     except Exception:                                                   # noqa: BLE001
         return None
-    return json.dumps(obj).count('"type": "tool_use"') + json.dumps(obj).count('"type":"tool_use"')
+    blob = json.dumps(obj)
+    n = blob.count('"type": "tool_use"') + blob.count('"type":"tool_use"')
+    if n == 0 and not _is_stream_json(obj):
+        return None      # UNMEASURED, not zero. Never let "didn't look" read as "none".
+    return n
+
+
+def _is_stream_json(obj: object) -> bool:
+    """True only for a capture that actually contains the message stream."""
+    return isinstance(obj, list) or (isinstance(obj, dict) and "messages" in obj)
+
+
+def turns(stdout: str) -> int | None:
+    """`num_turns` — the PROXY for tool use available under `--output-format json`.
+
+    1 = the model answered without a tool round-trip. >1 = at least one tool call was
+    made AND returned. Reported under its own key precisely so it is never mistaken for
+    the real tool-call count that only stream-json can provide.
+    """
+    try:
+        return json.loads(stdout).get("num_turns")
+    except Exception:                                                   # noqa: BLE001
+        return None
 
 
 # ---------------------------------------------------------------------------
@@ -961,9 +1040,24 @@ HALTS = {
     #: arms is precisely the Read tool definitions — so the instrument is demonstrably
     #: sensitive at the scale the run needs. cache_read is legitimately delivered context
     #: and stays inside `delivered`; it is reported, not gated.
+    #:
+    #: THE CLASS, NAMED, BECAUSE THIS IS NOT MERELY A HALT SWAP (operator, 2026-08-12):
+    #: a pre-registered guard that NO UNIT COULD EVER SATISFY is a FALSE-POSITIVE GATE.
+    #: It would have voided a fully valid sweep and been read as evidence of isolation
+    #: failure — a FABRICATED finding, not merely a missing one. It is the exact converse
+    #: of the orphaned control: that one was green and wired to nothing; this one is red
+    #: and caused by nothing. Both are what two-sided gate calibration is for.
+    #:
+    #: SATISFIABILITY WITNESS FOR THE REPLACEMENT — the only thing making it admissible
+    #: rather than the same mistake under a new name: smoke run 1 shows `delivered`
+    #: IDENTICAL across k=3, twice — 9,002 x3 and 10,262 x3, zero variance
+    #: (python/audits/oq289_smoke_run1/). A replacement gate with no such witness
+    #: inherits the old one's status.
     "DELIVERED_UNSTABLE_ACROSS_K": "delivered varies across k for an IDENTICAL payload -> "
                                    "that rung VOID (the count is not a function of the "
-                                   "payload, so no slope over it means anything)",
+                                   "payload, so no slope over it means anything). "
+                                   "SATISFIABLE: witnessed passing at zero variance in "
+                                   "smoke run 1 (9,002 x3, 10,262 x3)",
     "CLAUDE_MD_CHANGED": "live CLAUDE.md md5 changed -> hard abort",
     "SETTINGS_CHANGED": "~/.claude/settings.json md5 changed -> hard abort",
     "STRAY_INSTRUCTION_FILE": "CLAUDE.md/.claude/CLAUDE.md/.claude/rules under a scratch or "
@@ -1037,8 +1131,14 @@ def check_halts(reports: list[dict], minted: set) -> list[str]:
             fired.append("LEAK_FIRED")
         # A_PRIME and SMOKE_TOOLS have tools ON by design — there a tool call is the
         # measurement (A_PRIME) or the paired condition (SMOKE_TOOLS), not a violation.
-        if arm not in ("A_PRIME", "SMOKE_TOOLS") and (r.get("tool_calls") or 0) > 0:
-            fired.append("TOOL_CALL_ON_SUPPRESSED_ARM")
+        if arm not in ("A_PRIME", "SMOKE_TOOLS"):
+            # tool_calls is None when UNMEASURED (json output carries no message
+            # stream). Fall back to the num_turns proxy rather than treating an
+            # unmeasured channel as a clean zero -- that collapse is the whole
+            # defect class this run exists to study.
+            tc = r.get("tool_calls")
+            if (tc or 0) > 0 or (tc is None and (r.get("turns") or 1) > 1):
+                fired.append("TOOL_CALL_ON_SUPPRESSED_ARM")
         for tok in r.get("tokens_emitted", []):
             if tok not in minted:
                 fired.append("FABRICATED")
@@ -1121,6 +1221,17 @@ PROMPT_SMOKE = (
     "none, output exactly NONE. Do not guess and do not reconstruct — only report a "
     "token actually present."
 )
+#: SMOKE_INDEX's prompt. It names "delivery-check token" — the same words the scratch
+#: index uses to describe the sibling — so relevance selection has a handle. Naming the
+#: SMOKE-SIBLING label is safe: a fresh 16-hex token cannot be fabricated at 2^-64, and
+#: FABRICATED is a run-VOIDing HALT if one ever is.
+PROMPT_SMOKE_INDEX = (
+    "Report VERBATIM every delivery-check token you can see in your context. These "
+    "appear after the labels SMOKE-INDEX and SMOKE-SIBLING. Output one line per token, "
+    "in the form LABEL=<token>, using the label it appeared under. If you can see none, "
+    "output exactly NONE. Do not guess and do not reconstruct — only report tokens "
+    "actually present."
+)
 PROMPT_POINTER = (
     "Your recalled memory may include a file that was truncated, with a note pointing at "
     "the full file on disk. Answer this question completely: what does the memory file "
@@ -1170,6 +1281,20 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
         d.mkdir(parents=True, exist_ok=True)
         u["canaries"] = []
         for b in range(u["batch"]):
+            if u["arm"] == "SMOKE_INDEX":
+                # PAIRED: one marker on the always-loaded path, one on the attachment
+                # path. A positive on the index alone cannot distinguish "recall works"
+                # from "recall never fired but the index arrived".
+                idx_tok, sib_tok = mint_canary(), mint_canary()
+                minted.update((idx_tok, sib_tok))
+                u["canaries"].append({"index": idx_tok, "sibling": sib_tok})
+                (d / f"mem_{b:02d}.md").write_text(
+                    build_smoke_file(u["bytes"], u["lines"], idx_tok,
+                                     SMOKE_INDEX_PREFIX))
+                (d / f"sibling_{b:02d}.md").write_text(
+                    build_smoke_file(u["bytes"], u["lines"], sib_tok,
+                                     SMOKE_SIBLING_PREFIX))
+                continue
             if u["arm"].startswith("SMOKE"):
                 # ONE marker, no position structure. See build_smoke_units().
                 marker = mint_canary()
@@ -1186,7 +1311,10 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
 
     gate_0_ladder(units, payload_dir, errors)
     gate_0b_environment(errors)
-    gate_1_payloads(payload_dir, sum(u["batch"] for u in units), errors)
+    # SMOKE_INDEX writes TWO payload files per batch item — the index marker and the
+    # sibling marker ride different paths, so they are separate files. Expectation is
+    # derived from the arm, never hardcoded; gate 1 caught this before any spend.
+    gate_1_payloads(payload_dir, sum(payload_files_for(u) for u in units), errors)
     gate_2_clean(payload_dir, minted, errors)
 
     if errors:
@@ -1227,11 +1355,15 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
                     shutil.copy(payload_dir / u["rung"] / f"mem_{b:02d}.md",
                                 memdir / f"{stem}.md")
                 if u["arm"] == "SMOKE_INDEX":
-                    # POSITIVE CONTROL: the marker rides the ALWAYS-LOADED index itself,
-                    # not the attachment path. If this does not arrive either, the memory
-                    # subsystem is not engaging at all and a sibling miss says nothing.
+                    # PAIRED POSITIVE CONTROL. The index marker rides the ALWAYS-LOADED
+                    # path; the sibling marker rides the ATTACHMENT path. The index text
+                    # names the sibling in the probe prompt's own words so relevance
+                    # selection has something to match.
                     (memdir / "MEMORY.md").write_text(
-                        (payload_dir / u["rung"] / "mem_00.md").read_text())
+                        (payload_dir / u["rung"] / "mem_00.md").read_text()
+                        + "\n" + SMOKE_INDEX_TEMPLATE.format(stem=SMOKE_SIBLING_STEM))
+                    (memdir / f"{SMOKE_SIBLING_STEM}.md").write_text(
+                        (payload_dir / u["rung"] / "sibling_00.md").read_text())
                 else:
                     # Every other unit gets an index NAMING its siblings — the live dir
                     # has one, and recall is plausibly index-driven. Its absence is what
@@ -1241,6 +1373,7 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
                         + "".join(f"- [{s}]({s}.md) — scratch probe file\n"
                                   for s in stems[1:]))
             prompt = (PROMPT_POINTER if u["arm"] == "A_PRIME"
+                      else PROMPT_SMOKE_INDEX if u["arm"] == "SMOKE_INDEX"
                       else PROMPT_SMOKE if u["arm"].startswith("SMOKE")
                       else PROMPT_DELIVERY)
             sid = f"{secrets.token_hex(4)}-{secrets.token_hex(2)}-4{secrets.token_hex(2)[1:]}" \
@@ -1257,6 +1390,7 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
                 "delivered": (usage or {}).get("delivered"),
                 "cache_read_input_tokens": (usage or {}).get("cache_read_input_tokens"),
                 "tool_calls": observed_tool_calls(rec["stdout"]),
+                "turns": turns(rec["stdout"]),
                 "tokens_emitted": emitted,
                 "seen": [slot for slot, tok in cans.items() if tok in emitted],
                 # Secondary discriminator: a truncated file SAYS which path cut it.
@@ -1281,7 +1415,7 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
         summary = {"feasibility": {}, "smoke_scope_md5": smoke_scope_md5}
         print("\n  FEASIBILITY READOUT (no verdict — smoke carries no threshold "
               "information; see oq289_smoke_scope.md):")
-        for arm in ("SMOKE_NOTOOLS", "SMOKE_TOOLS"):
+        for arm in ("SMOKE_NOTOOLS", "SMOKE_TOOLS", "SMOKE_INDEX"):
             rs = [r for r in reports if r["arm"] == arm]
             hits = sum(1 for r in rs if r["seen"])
             deliv = [r["delivered"] for r in rs if r.get("delivered") is not None]
@@ -1294,15 +1428,29 @@ def run(mode: str, outdir: pathlib.Path, budget: float) -> int:
             print(f"    {arm:16s} marker {hits}/{len(rs)}   usage {len(deliv)}/{len(rs)}"
                   f"   mean delivered "
                   f"{(sum(deliv) / len(deliv)) if deliv else 'n/a'}")
+        # The paired control, split by which PATH each marker rode.
+        ix = [r for r in reports if r["arm"] == "SMOKE_INDEX"]
+        n_idx = sum(1 for r in ix if "index" in r["seen"])
+        n_sib = sum(1 for r in ix if "sibling" in r["seen"])
+        summary["feasibility"]["SMOKE_INDEX"]["index_path"] = f"{n_idx}/{len(ix)}"
+        summary["feasibility"]["SMOKE_INDEX"]["sibling_path"] = f"{n_sib}/{len(ix)}"
         a = summary["feasibility"]["SMOKE_NOTOOLS"]["marker_verbatim"]
         b = summary["feasibility"]["SMOKE_TOOLS"]["marker_verbatim"]
-        print(f"\n    The PAIR is the discriminator: no-tools {a} vs tools {b}.")
-        print("    no-tools 0/n WHILE tools n/n  => --tools \"\" suppresses recall; "
-              "Arm A as designed returns a null that means nothing.")
-        print("    BOTH 0/n                      => recall may not fire under -p at all; "
-              "the transport, not the flag, is the problem.")
-        print("    BOTH n/n                      => attachment arrives under both; "
+        print(f"\n    CONTROL (paired): always-loaded index {n_idx}/{len(ix)}   "
+              f"attachment sibling {n_sib}/{len(ix)}")
+        print(f"    ARMS: no-tools {a}   tools {b}")
+        print("\n    index n/n AND sibling n/n  => recall works end to end; "
               "Arm A is runnable as designed.")
+        print("    index n/n, sibling 0/n     => the ATTACHMENT path specifically does "
+              "not deliver under -p. Arm A needs a triggering mechanism designed BEFORE "
+              "the sweep, not during it.")
+        print("    index 0/n AND sibling 0/n  => the memory subsystem is not engaging "
+              "under -p at all; the transport is wrong, not the flag.")
+        print("    no-tools 0/n WHILE tools n/n => --tools \"\" suppresses recall; "
+              "Arm A as designed returns a null that means nothing.")
+        print("\n    NOTE: no smoke unit truncates (every payload is far under every "
+              "candidate cap), so the notice discriminator is UNTESTED here — see "
+              "oq289_smoke_scope.md. It cannot be tested without threshold information.")
     else:
         # Verdicts are computed HERE, from persisted data against the frozen table — not
         # assigned by hand in the writeup after the numbers are visible.
@@ -1398,6 +1546,34 @@ def selftest() -> int:
               [{"arm": "SMOKE_NOTOOLS", "tool_calls": 1}], set()))
     check("(2s) the scope file exists and states what smoke may NOT conclude",
           SMOKE_SCOPE.exists() and "may NOT conclude" in SMOKE_SCOPE.read_text())
+
+    # SMOKE_INDEX is PAIRED. An index-only marker witnesses the always-loaded path --
+    # the path Phase 0 already separated out -- so a positive there cannot separate
+    # "recall works" from "recall never fired but the index arrived".
+    idx = build_smoke_file(SMOKE_BYTES, SMOKE_LINES, "a" * 16, SMOKE_INDEX_PREFIX)
+    sib = build_smoke_file(SMOKE_BYTES, SMOKE_LINES, "b" * 16, SMOKE_SIBLING_PREFIX)
+    check("(2s) SMOKE_INDEX's two markers carry DISTINCT labels — index vs sibling must "
+          "be separable in the reply",
+          SMOKE_INDEX_PREFIX in idx and SMOKE_SIBLING_PREFIX in sib
+          and SMOKE_INDEX_PREFIX not in sib and SMOKE_SIBLING_PREFIX not in idx)
+    entry = SMOKE_INDEX_TEMPLATE.format(stem=SMOKE_SIBLING_STEM)
+    check("(2s) the index entry names the sibling FILE, so recall has a target",
+          f"{SMOKE_SIBLING_STEM}.md" in entry)
+    check("(2s) the index entry uses the PROMPT'S OWN WORDS, so relevance has a handle",
+          "delivery-check token" in entry
+          and "delivery-check token" in PROMPT_SMOKE_INDEX)
+    check("(2s) the SMOKE_INDEX prompt asks for BOTH labels",
+          all(lbl in PROMPT_SMOKE_INDEX
+              for lbl in (SMOKE_INDEX_PREFIX, SMOKE_SIBLING_PREFIX)))
+    check("(2s) payload-file count is DERIVED from the arm — SMOKE_INDEX writes two, "
+          "and gate 1 caught the hardcoded expectation before any spend",
+          payload_files_for({"arm": "SMOKE_INDEX", "batch": 1}) == 2
+          and payload_files_for({"arm": "SMOKE_TOOLS", "batch": 1}) == 1
+          and payload_files_for({"arm": "LEAK", "batch": 0}) == 0)
+    check("(2s) the sibling payload is still far under every candidate cap — pairing "
+          "must not smuggle threshold information back in",
+          len(sib.encode()) < min(c[0] for c in CAPS.values()) / 4
+          and sib.count("\n") + 1 < min(c[1] for c in CAPS.values()) / 4)
 
     print("\nnotice discriminator — a truncated file SAYS which path cut it:")
     check("(2n) the PIe notice is recognised", notice_path(
@@ -1635,6 +1811,18 @@ def selftest() -> int:
     check("(10) a tool call on a --tools '' arm fires",
           "TOOL_CALL_ON_SUPPRESSED_ARM" in check_halts(
               [{"arm": "A", "tool_calls": 1}], set()))
+    check("(10) an UNMEASURED tool count (None) with turns>1 STILL fires — an unmeasured "
+          "channel must not read as a clean zero",
+          "TOOL_CALL_ON_SUPPRESSED_ARM" in check_halts(
+              [{"arm": "A", "tool_calls": None, "turns": 2}], set()))
+    check("(10) CONVERSE — unmeasured with turns==1 does NOT fire",
+          "TOOL_CALL_ON_SUPPRESSED_ARM" not in check_halts(
+              [{"arm": "A", "tool_calls": None, "turns": 1}], set()))
+    check("(11n) observed_tool_calls returns None (UNMEASURED) on json output, not 0 — "
+          "witnessed broken in smoke run 2 on units that DID call a tool",
+          observed_tool_calls(json.dumps({"result": "x", "num_turns": 2})) is None)
+    check("(11n) turns() reads the num_turns proxy",
+          turns(json.dumps({"result": "x", "num_turns": 2})) == 2)
     check("(10) CONVERSE — a tool call on A_PRIME does NOT fire (there it is the "
           "MEASUREMENT, not a violation)",
           "TOOL_CALL_ON_SUPPRESSED_ARM" not in check_halts(
