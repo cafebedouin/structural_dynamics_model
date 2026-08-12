@@ -768,6 +768,19 @@ the synthesis side* and *When to stop verifying*):
   the theory unfalsifiable through its own gate — record the discriminating probe as a STANDING
   probe at adoption (scope attached, re-fire obligation, failure semantics pre-committed).
   Both: `build_discipline.md` → *A falsifier must be FIREABLE*.
+- **(7) A conceded point is not a research question (operator, 2026-08-12).** Distinct from (4):
+  hedging refuses a commitment it *could* make; this takes a fact that is **already the operating
+  condition** and converts it into a question requiring evidence. **Tell: every warrant you reach
+  for is shaped like an OUTSIDE** (an independent author, a losing prediction, a resolved OQ, a rare
+  pattern) while the fact is true *inside* the system — plus a self-instance that is available and
+  unused (the thing under question usually happened during the exchange that raised it). **Substrate
+  check that ends it fastest: before asking whether X *can* happen, check whether X is what the last
+  commit did** — here, moving a seat is the day's work (clause order changes what a predicate
+  returns; `once/1` vs a trailing cut leaves different siblings reachable; a `^...$` anchor decides
+  which physical line is a fact). Not an epistemic error but a **register preference**, so noticing
+  it does not dissolve it — it re-derives one level up as "but does it move *creditably*." Concede in
+  the register the point was made in; downstream questions get raised as downstream, never in place
+  of the concession.
 
 ## Critical Distinctions
 

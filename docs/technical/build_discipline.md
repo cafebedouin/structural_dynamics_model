@@ -261,6 +261,51 @@ output (the review round's measurable effect was one claim with two hedges → t
 three clocks); (b) when triaging multi-reviewer feedback, **weight reviewers' questions over their
 line edits** — edits propose substitutions inside your frame; questions force synthesis across it.
 
+**A conceded point is not a research question — and the tell is that every warrant you reach for is
+shaped like an OUTSIDE (operator diagnosis, 2026-08-12).** A third sibling of the two moves above,
+and the one that is hardest to see because its output is well-formed. Hedging refuses a commitment
+it *could* make. This one takes a fact that is **already the operating condition** and converts it
+into a question requiring evidence — reframing a concession as a programme.
+
+**Witnessed, and the diagnosis is the operator's own.** The question was whether a seat can be moved
+by a later seat. The answer is trivially yes: it is the condition the whole apparatus runs in, not a
+capability to be built. Across one exchange the position moved four times —
+*independence-of-authorship*, then *does one of them lose*, then *does OQ-107 resolve it*, then *is
+OQ-286 distinctive* — each a well-formed question with a procedure attached, none of them the
+answer. **The asker's own seat had moved four times while they were asking whether a path for moving
+existed, and none of those moves required an adapter.**
+
+**Why it is not an epistemic error, which is why pointing at it does not dissolve it.** A question
+with a procedure attached is the register where you are holding an instrument; a conceded fact is
+not. The pull is toward the register, not toward a wrong belief — so the move survives being
+noticed, and re-derives itself one level up as *"but does it move CREDITABLY / is there a mechanism
+to ingest the move / is the census that counts moves calibrated."* Those are real questions. They
+are **downstream**, and offering them as the answer is the same move again.
+
+**Two tells, in order of cheapness:**
+
+1. **Every candidate warrant is shaped like an outside** — an independent author, a losing
+   prediction, a resolved OQ, a rare pattern, an external instrument. If the fact is true *inside*
+   the system and every warrant you reach for lives outside it, you are escalating a concession
+   rather than checking a claim.
+2. **The self-instance is available and unused.** Ask whether the thing under question happened
+   during the exchange in which it was raised. It usually did.
+
+**The substrate check that ends it fastest — and it is why this repository is a bad place to run
+the move.** Before asking whether X *can* happen, check whether **X is what the last commit did.**
+In this engine, moving a seat is what the day's work consists of: a clause-order change moves what a
+predicate returns; `once/1` versus a trailing cut leaves different siblings reachable; a `^...$`
+anchor decides which physical line counts as a fact (witnessed this session — `issues_status`'s
+`CANON` validates one physical line, which is why a spliced `**Priority:**` was invisible). Those
+are seats in the substrate, moved by edits nobody would file as philosophical. **A question about
+whether seats change does not survive contact with an engine where changing them is the work.**
+
+**The rule: concede in the register the point was made in.** If the fact is settled, say so plainly
+and stop. Downstream questions get raised *as downstream*, after the concession and labelled as
+such — never in place of it. Sibling: *Don't answer "does the apparatus pay for itself?" by
+producing more apparatus* (§below) is the same swap — well-formed output in the instrument register
+substituting for an answer — triggered by a worth question rather than by a conceded fact.
+
 **Reconciling two surfaces owes the full product table, not the named cells.** A special case of
 false-unification's demand for a distinction-check, with its own trigger: when two predicates
 measure "the same" thing (a flag and its graded generalization; a verdict and its metric), the
