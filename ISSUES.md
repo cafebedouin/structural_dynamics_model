@@ -11873,50 +11873,223 @@ express this question" — and the second is the phenomenon the CS sketch says t
 
 ---
 
-## OQ-286 — The always-loaded instruction set may be silently truncated at load time, and the party positioned to notice is the one that structurally cannot (the canary test, owed before circulation)
+## OQ-286 — The always-loaded instruction set may be silently truncated at load time, and the party positioned to notice is the one that structurally cannot (the canary test, owed before circulation) — **RETRACTED 2026-08-12: carrier misidentified. Successor: OQ-289 (recall channel).**
 
-**Ω-type:** Ω_E — a cheap, named, decisive test. It is unrun, not unanswerable.
+**Ω-type:** Ω_E — it was a cheap, named, decisive test. It stays one; it was aimed at the wrong
+channel. The successor inherits the design, not the carrier.
 
-**Status:** open — minted 2026-08-12 from `amnesiac_institution_v0_6.md` §3.5, which carries the
-hazard as **`[UNWITNESSED]`**.
+**Status:** disposed — retracted 2026-08-12, **carrier misidentified**, not answered. The pre-registered
+outcome table was written over the always-loaded set; that set is not where truncation lives.
 **Priority:** 1
 
-*No `Deps:` line: this OQ is deliberately edge-free — runnable today, blocked on nothing, gating
-nothing. It therefore defaults to `workable_now` in the frontier, which is correct here rather than
-an artifact of missing edges.*
+**Origin:** minted 2026-08-12 from `amnesiac_institution_v0_6.md` §3.5 (carried there as
+`[UNWITNESSED]`); edge-free by design. Pre-publication blocker via OQ-287 — **cleared by this
+retraction plus the declared residual**, not by the canary.
 
-**The hazard.** The always-loaded instruction set is delivered into a context window. Where it
-exceeds a limit — the tool's, the harness's, or the model's — it is **truncated or compacted at load
-time**. The instance sees no gap, because gaps have no positive form (this repo's own A3); the
-operator reads the file on disk, not the delivered context. **The record is intact where it is
-stored and incomplete where it is read.** This is absence/presence collapse performed on the memory
-system itself, and it inverts the usual remedy: **enlarging CLAUDE.md makes it MORE likely that the
-rules at the end are the ones silently dropped.** It also makes the §8.5 channel cap load-bearing
-twice — attention economics, and an uncapped channel eventually exceeding a limit nobody watches.
+**The retracting evidence** (measured 2026-08-12, CLI **2.1.229**, `~/.claude/settings.json`
+md5 `bc56274c` — 6 keys incl. `env`; no `--add-dir`). Delivered always-loaded set = **102,695 B**
+≈ 27.0k tokens at 3.8 B/tok: `CLAUDE.md` 91,029 B (1,107 lines, flat, **no `@import`s**, 88.6%),
+`memory/MEMORY.md` 9,906 B / 83 lines (9.6%), `~/.claude/CLAUDE.md` 718 B (0.7%), SessionStart hook
+`additionalContext` 1,042 B (1.0%). Harness constant on the `CLAUDE.md` ("Project" type) read path:
+**`R9o` = 4,194,304 B**, and above it the file is **SKIPPED WHOLE** — debug log plus a
+`context_claude_md_load` / `file_skipped_special_or_oversize` telemetry event, no partial content.
+At 91,029 B that is **2.17% of the limit, 46× headroom**, and the failure mode is not tail-truncation
+at all. `MEMORY.md` arrived whole because it is under `kae` = 25,000 (the `WEr` branch), not because
+it is under 4,096 — the control that separates always-loaded from recall.
 
-**Status of the claim: operator-reported condition plus a mechanism argument. No dated instance in
-this repository has been recorded in which a truncated instruction set caused a defect.** It is
-stated rather than omitted because an unstated hazard and an absent one are indistinguishable.
+**Why this closes on a code-read while OQ-289 refuses one — asymmetry by consequence, not by cost,
+recorded so it does not read as budget rationalization.** A code-read error here must be wrong by a
+factor of forty-six to change the verdict. A code-read error on the *recall* channel misdirects the
+disposition of live memory files, and the two candidate constant pairs disagree about how many
+(**19 files** under `NSp`=4,096 vs **1 file** under `kae`=25,000). Same evidence class, incomparable
+error budgets.
 
-**The test, which is the whole OQ.** *Witness the delivered context, not the file on disk.* Place a
-canary token at the **end** of the always-loaded set; have instances report whether it arrived;
-record the result. Design notes so the first run is not wasted:
-- **Two-sided, or it witnesses nothing.** A canary that always arrives is consistent with "no
-  truncation" AND with "the canary is being read from a file the harness re-reads." Pair it with a
-  token near the **start**, and treat *both arrived* as the only clean negative.
-- **Vary the payload size** — a canary that arrives at today's CLAUDE.md size says nothing about the
-  size at which truncation begins, which is the decision-relevant number.
-- **Report the token verbatim**, never "yes I see it" — a model that infers what a canary must say
-  is the false positive this test exists to avoid.
+**Not stretched to cover the recall channel.** Relocating a commitment so it can still be discharged
+is the move `amnesiac_institution_v0_6.md` §8.6 names. The hazard is real and now lives at **OQ-289**
+with its own carrier; the disposition it implies is **OQ-290**.
 
-**Outcomes, pre-registered here:** arrives at all sizes tested → the hazard is **retracted** to a
-declared non-issue at those sizes, with the sizes named. Fails to arrive at any size → the hazard is
-**witnessed**, the channel cap gains a second and harder justification, and rule ORDER inside
-CLAUDE.md becomes a live design variable rather than an editorial one.
+**Evidence:** constants + code context re-witnessed this session against
+`/home/scott/.local/share/claude/versions/2.1.229` (positive control: the same grep method returned
+the message strings the constants interpolate into). KNOWN_STATE.md 2026-08-12.
+Paper corrections landed in `amnesiac_institution_v0_6.md` §3.5 / §7.4.1 / §8.5.
 
-**What resolution would change:** every promotion decision assumes the promoted rule is delivered.
-If the tail is being dropped, the promotion economy has been optimizing a channel whose capacity it
-never measured — and the most recently promoted rules, which sit at the end, are the ones at risk.
+---
+
+## OQ-289 — Which constant governs recalled memory files, and does an over-limit file arrive truncated? (the canary test, re-aimed at the channel that is plausibly truncating today)
+
+**Ω-type:** Ω_E — cheap, named, decisive, and unrun. The constants are legible in the binary; what
+they *do* to a live delivery is not.
+
+**Status:** open — minted 2026-08-12 as the successor to **OQ-286** (retracted: carrier
+misidentified).
+**Priority:** 1
+
+*No `Deps:` line — deliberately edge-free, exactly as OQ-286 was. The disposition (OQ-290) depends on
+this run, not the reverse; a `blocked_on_human` edge here would show OQ-289 as blocked and the run
+would never be scheduled, discarding the edge-free property that made the question workable at all.*
+
+**The channel.** Memory files under
+`~/.claude/projects/-home-scott-bin-structural-dynamics-model/memory/` are delivered two different
+ways, and only one of them is the always-loaded index. `MEMORY.md` is always-loaded; the **53 sibling
+files** arrive as `relevant_memories` attachments, selected per turn.
+
+**Three paths, three limits** (binary `2.1.229`, re-witnessed 2026-08-12):
+
+| Path | Constants | Behaviour above the limit | Today |
+|---|---|---|---|
+| `CLAUDE.md` read (`"Project"` type) | `R9o` = 4,194,304 B | file **SKIPPED WHOLE** + debug log + telemetry; no partial content | 91,029 B = 2.17%, 46× headroom → **OQ-286 retracted** |
+| `WEr(content, tag)` — memory branch | `kae` = 25,000 B / `iJ` = 200 lines | truncated, `contentDiffersFromDisk: true` | `MEMORY.md` 9,906 B / 83 lines; **1 of 53** siblings over |
+| `relevant_memories` attachment (`QSp` → `PIe(n,0,Npa,NSp,…,{truncateOnByteLimit:true})`) | `NSp` = 4,096 B / `Npa` = 200 lines | truncated + appended notice + a `Read` pointer | **19 of 53** siblings over |
+
+```js
+// CLAUDE.md — skipped whole, never tail-truncated
+if (o===null) { A(`[CLAUDE.md] skipping ${e}: not a regular file or exceeds ${R9o} byte limit`),
+  ke("context_claude_md_load","file_skipped_special_or_oversize"); return {info:null, includePaths:[]} }
+
+// WEr — and its call sites: WEr(e,t="index") AND WEr(s.content,"memory")
+function WEr(e,t="index"){let{trimmed:r,lineCount:n,byteCount:o}=E3t(e),i=n>iJ,s=o>kae; ... }
+
+// relevant_memories
+a = s ? i.content + `\n> This memory file was truncated (${i.truncatedByBytes?`${NSp} byte limit`:`first ${Npa} lines`}). Use the ${na} tool to view the complete file at: ${n}` : i.content;
+
+Npa = 200, NSp = 4096, kae = 25000, iJ = 200, R9o = 4194304
+```
+
+**The underdetermination, which is the whole OQ — and it got sharper on re-witness.** The earlier
+read assumed `NSp`/`Npa` govern the siblings. But `WEr` has a **non-index call site**,
+`WEr(s.content,"memory")`, so the 25,000/200 pair has a memory-*content* branch too. The two pairs
+disagree by a factor of nineteen about how many live files are affected:
+
+| Governing pair | Siblings over limit | Files |
+|---|---|---|
+| `NSp` = 4,096 B / `Npa` = 200 lines | **19 of 53** | `feedback_prereg_review_riders.md` (25,373 B, 16% delivered), `feedback_probe_positive_controls.md` (15,281, 27%), `feedback_close_honesty.md` (13,001, 32%), `feedback_control_validity.md` (11,426, 36%), `feedback_verification_design_discipline.md` (10,064, 41%), + 14 more at 4,595–9,574 B (43–89%) |
+| `kae` = 25,000 B / `iJ` = 200 lines | **1 of 53** | `feedback_prereg_review_riders.md` only (25,373 B / **358 lines** — over on both) |
+
+Three things the constants underdetermine and a live run settles: **(a) which pair governs the
+siblings at all** (or whether both apply, at different stages); **(b) per-file vs
+per-recall-batch**; **(c) pre- vs post-processing**. The just-over/just-under pair converts a
+constant into a witnessed threshold.
+
+**These are the files the 2026-08-10 consolidation MERGED.** The pass that reduced the always-loaded
+index by 43% is the same pass that pushed sibling files over a per-file delivery limit. That is the
+§8.5 tension, and it is the reason this is not a tidy-up.
+
+**Altitude caveat, standing:** binary strings witness *shipped code*, not a *live delivery*. **The
+constants above are recorded as PREDICTIONS TO BE FALSIFIED, not as findings** — if the run
+contradicts them the run wins. It witnesses delivered context; the strings witness a code path that
+may not be the one taken.
+
+**There is no substrate record of what was delivered.** Session transcripts under
+`~/.claude/projects/.../*.jsonl` do **not** contain the system prompt (positive control: a user
+prompt greps 5 hits in the session transcript; three distinct `CLAUDE.md` strings, including one
+from the file's *first* section, grep 0; the `~/.claude/file-history/` hits are edit backups). **An
+instance's report is the only channel** — which is why a canary is the only instrument and why none
+of this settles by reading a file.
+
+**The run.** `python/audits/oq289_recall_canary.py`, shaped on `python/audits/oq277_crosscoding_driver.py`.
+Arms, instrument, spend gates, numeric HALTs, and the partitioning outcome table are frozen in the
+audit's `PREREGISTRATION.md` — see `audits/<execution-date>_oq289_recall_canary/`. Headlines:
+- **Arm A (threshold)** — scratch memory files just-over/just-under each candidate cap, fresh 16-hex
+  canaries at START / MIDDLE / END, `claude -p --tools ""`, tokens required **verbatim**. *The
+  just-over/just-under pair is the discrimination record*: same instrument, same path, one fires and
+  one declines, the decline forced by a documented constant rather than authored. Line count varied
+  independently of bytes (separates `Npa` from `NSp`); batch size varied (per-file vs per-batch);
+  both the 4,096 and 25,000 brackets run (settles which pair governs).
+- **Arm A′ (behavioural)** — canary in the **truncated tail** of a scratch copy of a real over-limit
+  file, `Read` re-enabled, canary placed where only a pointer-follow reaches it. Measured as an
+  observed tool call, never a self-report. *This is the arm that decides OQ-290*: does an instance
+  follow the `Read` pointer, or does the truncated 4 KB read as complete guidance?
+- **Arm INJECT (reporting-channel control)** — END canary delivered via `--append-system-prompt`
+  with none in the file. Without it an all-ABSENT run is ambiguous between "the harness dropped the
+  payload" and "the model won't echo a random-looking token," and that ambiguity voids the verdict.
+- **Arm LEAK (restated purpose)** — it does **not** guard the OQ's named false positive: a fresh
+  16-hex token forecloses inference at 2⁻⁶⁴, so it cannot fire on the threat usually cited. Its real
+  function is to witness an **unintended payload path** — the canary reaching context via
+  environment, prompt assembly, or a tool call `--tools ""` did not actually suppress. Kept and
+  labelled for that.
+- **Arm B (`CLAUDE.md` size ladder) is dropped** — 46× headroom; that is OQ-286's retraction.
+- **Primary instrument is harness-side token slope, not the model's word.**
+  `delivered = input_tokens + cache_creation_input_tokens + cache_read_input_tokens`;
+  `slope = Δdelivered / (Δbytes/3.8)` → `PASS_THROUGH ≥ 0.80` / `PARTIAL 0.10–0.80` / `PLATEAU < 0.10`.
+  Assert `cache_read_input_tokens == 0` per unit — nonzero means isolation failed and the count is corrupt.
+
+**Prior art exists and is cited** (an earlier "no prior art" claim was false, which is exactly the
+small false absence this program is about). The three-arm `--add-dir` test run 2026-08-12
+(fixture `scratchpad/adddir_test/`) is a `claude`-spawning harness on this same delivery channel:
+a decline arm (`--add-dir`, no var → NONE) and two fire arms (shell var; `settings.json` env block →
+`ZARQUON-7741`), file tools disallowed so the token could not be read off disk, verbatim echo
+required. **It discharges nothing** — self-report only, non-hex token, no slope instrument, k=1 —
+but it **de-risks smoke item 3** (a live call lands and parses) and **partially pre-witnesses
+INJECT** (the model does echo a context-only token verbatim under tools-disallowed).
+
+**Isolation hazard the driver must handle: `--add-dir` is now an instruction-injection channel, by
+default, for every unit.** `CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1` was added to
+`~/.claude/settings.json` 2026-08-12 and verified by the three-arm test above. It is **on, globally**,
+and gates `.claude/CLAUDE.md` and `.claude/rules/` in the added directory as well as the top-level
+`CLAUDE.md`. Under a token-slope primary instrument that is an uncontrolled payload landing **in the
+exact quantity being measured** — so the driver asserts per unit that no such file exists under any
+scratch or added directory, and `~/.claude/settings.json`'s md5 is pinned in the prereg and asserted
+unchanged per unit, on the same footing as the live `CLAUDE.md` guard. **Context assembly is now a
+function of two files and only one of them was being watched.** Do not relocate `CLAUDE_CONFIG_DIR`
+(`~/.claude/.credentials.json` lives there; moving it likely breaks auth and produces a failure
+unrelated to the hypothesis) — use a fresh scratch cwd.
+
+**Version pinning is load-bearing: five CLI versions shipped in six days.** A result attributed to
+2.1.229 but produced by 2.1.230 is unattributable and unnoticeable after the fact. `claude --version`
+must match the pre-registration; refuse otherwise. Verdicts are stated at their scoped altitude —
+*"truncates at N bytes per file, model M, CLI 2.1.229"*.
+
+**What resolution would change:** the memory economy of §8.5 assumes a promoted or merged rule is
+delivered when recalled. If 19 files are arriving at 16–89% with a pointer nobody follows, the
+2026-08-10 consolidation traded an attention cap for a delivery cap and nobody priced the trade.
+If instead `kae` governs, the exposure is one file and the disposition is nearly free. **The
+disposition itself is not this OQ's to make — it is OQ-290, Ω_P.**
+
+---
+
+## OQ-290 — Disposition of the over-limit memory files: which cap gets sacrificed (Ω_P, operator jurisdiction)
+
+**Ω-type:** Ω_P — choosing which cap to sacrifice is a ruling with no seat-free fact, under
+`amnesiac_institution_v0_6.md` §9.2. OQ-289 resolves the empirical half only; **the ruling must not
+be allowed to look like a finding.**
+
+**Status:** open — minted 2026-08-12 alongside OQ-289.
+**Priority:** 2
+**Deps:** blocked_on OQ-289, blocked_on_human oq290-memory-cap-disposition
+
+**The trade.** §8.5's channel cap consolidates for **attention economics** — the read-side budget of
+a fresh instance. That consolidation is what created exposure to a **per-file delivery limit** on the
+recall channel. The two caps are in tension and §8.5 does not currently know it. Sacrificing either
+is a ruling: neither "keep the merges" nor "split them back" is derivable from the measurement.
+
+**Blocked on OQ-289 for a reason, not for tidiness.** The exposure is 19 files or 1 file depending on
+which constant pair governs (OQ-289's table), and Arm A′ decides whether truncation is even lossy —
+if instances reliably follow the `Read` pointer, option 2 is nearly free and the trade largely
+dissolves. Ruling before the run would be ruling on a factor-of-nineteen uncertainty.
+
+**The ballot, triaged by delivered fraction first** — a file at 16% and one at 89% are not the same
+object and should not take the same disposition:
+
+1. **Split** every over-limit file under the governing cap. Reverses part of the 2026-08-10
+   consolidation — trades the attention cap against the delivery cap, explicitly, in that direction.
+2. **Accept truncate-plus-pointer** as the contract, recorded where a cold reader finds it.
+   *Contingent on what Arm A′ measures* — this option is only honest if pointer-following is
+   witnessed, not assumed.
+3. **Front-load** — make the first `NSp` bytes of each over-limit file a self-sufficient summary plus
+   the pointer. Truncation stops being lossy for the recall use case, the consolidation stands, and
+   **the trade dissolves instead of being decided.** Costs an authoring pass per file.
+4. **Do nothing**, having named the cost. A legitimate option once the cost is on the record.
+
+**Durable residue ships REPORTING-ONLY until this lands.** A ≤`NSp`/`Npa` check in
+`python/apparatus_instrument.py` would go red on nineteen files the moment it landed and stay red
+until this ruling — and **a check red by construction at introduction teaches the institution to
+route around it**, which is §2.6's green check inverted and no better. It lands printing the
+delivered-fraction table beside the existing channel cap; **promote to enforcing when OQ-290 lands.**
+Do not put a spend-bearing probe in `scripts/gate.sh`.
+
+**What resolution would change:** whether the 33-entry channel cap (§8.5) is one constraint or two,
+and whether "promoted into repository docs, memory copy retired" leaves the surviving memory entry
+actually deliverable.
 
 ---
 

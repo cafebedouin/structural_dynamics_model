@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "41ec7f96f933ff4bc1625dc80403ea95da2246a9",
+    "store_version": "d7d179479b59f75d3f960a41e180cd9fe3c25ad1",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-12T02:51:56"
+    "generated_at": "2026-08-12T15:42:59"
   },
-  "issues_sha": "e53859efabb22bc62857e3146793b5f60c4dfb5f2c5f25d824281008bd10efbc",
-  "n_entries": 288,
+  "issues_sha": "1e65b127450ebebcbcb71da60114bd202949bafbee7b15472e89308208812458",
+  "n_entries": 290,
   "active_token_set": [
     "investigating",
     "open",
@@ -14,9 +14,9 @@
   "per_status": {
     "resolved": 148,
     "mitigated": 18,
-    "disposed": 5,
+    "disposed": 6,
     "future": 5,
-    "open": 105,
+    "open": 106,
     "partial": 7
   },
   "active": [
@@ -1511,15 +1511,6 @@
       ]
     },
     {
-      "id": "OQ-286",
-      "status": "open",
-      "priority": 1,
-      "summary": "The always-loaded instruction set may be silently truncated at load time, and the party positioned to notice is the one that structurally cannot (the canary test, owed before circulation)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": []
-    },
-    {
       "id": "OQ-287",
       "status": "open",
       "priority": 2,
@@ -1545,6 +1536,32 @@
       "mentioned_in": [
         "OQ-276",
         "OQ-277"
+      ]
+    },
+    {
+      "id": "OQ-289",
+      "status": "open",
+      "priority": 1,
+      "summary": "Which constant governs recalled memory files, and does an over-limit file arrive truncated? (the canary test, re-aimed at the channel that is plausibly truncating today)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-286",
+        "OQ-290"
+      ]
+    },
+    {
+      "id": "OQ-290",
+      "status": "open",
+      "priority": 2,
+      "summary": "Disposition of the over-limit memory files: which cap gets sacrificed (Ω_P, operator jurisdiction)",
+      "deps": [
+        "blocked_on OQ-289",
+        "blocked_on_human oq290-memory-cap-disposition"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-289"
       ]
     }
   ],
@@ -3980,6 +3997,19 @@
         "OQ-277",
         "OQ-284",
         "OQ-285"
+      ]
+    },
+    {
+      "id": "OQ-286",
+      "status": "disposed",
+      "priority": 1,
+      "summary": "The always-loaded instruction set may be silently truncated at load time, and the party positioned to notice is the one that structurally cannot (the canary test, owed before circulation) — **RETRACTED 2026-08-12: carrier misidentified. Successor: OQ-289 (recall channel).**",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-287",
+        "OQ-289",
+        "OQ-290"
       ]
     }
   ]
