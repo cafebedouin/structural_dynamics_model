@@ -45,6 +45,62 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-13 — [tripwire] KNOWN_STATE tripwires are now DELIVERED at edit time by a PreToolUse hook — the `Tier:` you author decides whether an editor ever sees your warning
+**Files:** `python/pretooluse_tripwires.py`, `python/known_state_status.py`, `.claude/settings.json`, `scripts/gate.sh`
+**Tier:** tripwire
+
+**What changed.** A `PreToolUse` hook on `Edit|Write` (`.claude/settings.json`) runs
+`python/pretooluse_tripwires.py`, which injects the KNOWN_STATE entries whose `Files:` line
+names the file about to be edited. `known_state_status.py --file` had existed since the
+`Files:` grammar landed with only `gate.sh` and `audit_citation_status.py` as consumers — a
+worker had to *remember* to run it, which is the one thing a non-persistent worker cannot be
+relied on to do. The query was right; its delivery time was wrong.
+
+**THE SILENT MISTAKE THIS CREATES, and why it is a tripwire.** The hook delivers **only
+`tripwire` and `correction-key`** tiers. So **authoring a genuine warning at `landed` tier now
+means no editor is ever shown it** — the entry looks filed, the file looks covered, and the
+delivery never happens. Before this change the tier was a sorting convenience; it is now a
+routing decision. Tier a standing do-not as `tripwire`, not `landed`, or it is invisible where
+it matters. (Live example of the filter: `scripts/gate.sh` has 6 entries, 1 passes.)
+
+**Hook silence means EXACTLY "queried, matched nothing."** A query that cannot run emits a loud
+`DELIVERY FAILED` context instead — never silence. Do not read an absent injection as "this file
+has no KNOWN_STATE entries" without that guarantee in mind, and do not "simplify" the failure
+path to a bare `except: pass`: a broken instrument that emits nothing is byte-identical at the
+read site to a working one that found nothing, and nobody ever sees the injection that did not
+happen (Pattern 6, on a channel where it would never be noticed).
+
+**Matching is canonical, not copied.** `known_state_status.entries_for_file` was extracted from
+`main()` and is now called by BOTH `--file` and the hook; a second copy of the predicate would
+be a silent fork of the matching rule (Pattern 2). Refactor witnessed byte-identical across 7
+files (md5 `5d00a10f` before and after) and `--check` green at 286 entries.
+
+**Discrimination record (2026-08-13).** Selftest `--selftest` runs 5 controls, wired into
+`scripts/gate.sh` as `tripwire hook` so the control is *called*, not merely correct: fires on
+`signature_detection.pl` (17 of 38 matched entries pass the filter); declines on `python/cli.py`
+(no entry names it); declines on `python/spec_enum_check.py` **by the tier filter with
+matched=1** — the discriminating case, since a path miss and a filter decline look identical at
+the output; emits loud failure when the scan raises; and the emitted payload parses as
+`PreToolUse` hook JSON. Harness-level witness: two `Write` calls, sentinel recorded **2**
+invocations, **1** injection — the wiring fires on both and the filter declines on one.
+
+**Not covered.** CLAUDE.md's own tripwires are NOT delivered by this — they have no `Files:`
+index to query. Building one is the open follow-on (per-rule "name the tool call this must fire
+before"); until then CLAUDE.md tripwires still ride the always-loaded path.
+
+**THE WIRING DOES NOT TRAVEL — awaiting an operator ruling.** `.gitignore:47` blanket-ignores
+`.claude/`, so `.claude/settings.json` is **untracked**. A fresh clone gets the script and the
+gate check but **no hook**: the selftest passes and nothing is delivered. This is pre-existing
+and larger than this change — the `SessionStart` hook that prints the activation menu is
+unversioned by the same line, so `CLAUDE.md`'s documented `[NEXT]`/`[GATE]`/`[PUSH]` surface is
+also machine-local (it degrades rather than breaks: the model still honours the tokens from
+CLAUDE.md, it just loses the auto-printed menu). The blanket ignore covers three unlike things
+— `settings.json` (project config, *should* be versioned), `settings.local.json` (personal
+overrides, should not), and `worktrees/` (definitely not). Candidate fix, NOT applied because
+committing project config is the operator's call and a careless narrowing would commit personal
+settings: replace `.claude/` with `.claude/*` + `!.claude/settings.json`. Until ruled, treat
+this hook as machine-local and re-wire by hand on any new clone.
+
 ## 2026-08-12 — [landed] OQ-290 RULED front-load by DOMINANCE (not by evidence); OQ-289 demoted to background; 5 of 19 memory files front-loaded and the method passed its own read-site test
 **Files:** `ISSUES.md`, `python/apparatus_instrument.py`, `docs/technical/build_discipline.md`, `python/audits/oq290_frontload_check/`
 **Tier:** landed

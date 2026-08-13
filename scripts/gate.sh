@@ -30,6 +30,7 @@ run "audit writeup"  python3 python/audit_writeup_gate.py --check
 run "apparatus"      python3 python/apparatus_instrument.py --check
 run "gap surfaces"   python3 python/check_gap_status_surfaces.py
 run "cli selftest"   python3 python/cli.py selftest
+run "tripwire hook"  python3 python/pretooluse_tripwires.py --selftest
 # RETIRE WHEN OQ-277 CLOSES (added 2026-08-11, operator ruling; expiry is deliberate).
 # Standing detection that OQ-277's FROZEN preregistration has not been altered — a run was
 # made under md5 4118f64e, so if the document changes, the stamp stops naming what is on

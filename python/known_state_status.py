@@ -65,6 +65,20 @@ def scan():
     return entries, problems
 
 
+def entries_for_file(entries, target):
+    """Entries whose **Files:** line names `target`. THE canonical match rule.
+
+    Substring in both directions, so an absolute path from a tool payload
+    ('/repo/prolog/config.pl') matches a repo-relative Files: entry
+    ('prolog/config.pl') and vice versa. Deliberately loose: over-delivery on
+    this channel is noise, under-delivery is a missed tripwire. Any consumer
+    (--file, the PreToolUse hook) calls THIS — a second copy of the predicate
+    would be a silent fork of the matching rule (Build Discipline Pattern 2).
+    """
+    return [e for e in entries if e["files"]
+            and any(target in f or f in target for f in e["files"])]
+
+
 def _close(entry, problems):
     where = f"{entry['date']} \"{entry['title'][:50]}\" (line {entry['lineno']})"
     if entry["files"] is None:
@@ -87,8 +101,7 @@ def main():
         except IndexError:
             print("usage: known_state_status.py --file <path>", file=sys.stderr)
             sys.exit(2)
-        hits = [e for e in entries if e["files"]
-                and any(target in f or f in target for f in e["files"])]
+        hits = entries_for_file(entries, target)
         for e in hits:
             print(f"line {e['lineno']}\t{e['date']}\t{e['tier']}\t{e['title']}")
         print(f"--- {len(hits)} entries mention {target!r}", file=sys.stderr)
