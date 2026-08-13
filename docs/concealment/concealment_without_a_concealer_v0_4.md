@@ -912,6 +912,20 @@ instruction a receiver would need to execute it). Omission-detection rates shoul
 detection of *present but wrong* content should not. *Falsifier: no separation, or separation on
 both.*
 
+> **[ATTEMPTED 2026-08-13; the attempt does not count.]** Run at 60 pre-registered units
+> (`audits/2026-08-13_rqd_recognition_vs_enumeration/`, ISSUES OQ-293). Frozen rule returned no
+> separation on omissions (Δ −0.07 pooled, +0.08 informative, floor +0.20). **Withdrawn as a test
+> of E1:** subjects named ~8 gaps per response (488 across 60) while scoring credited the single
+> authored omission, so the measure was selection among many real gaps rather than detection.
+> **The prediction as written above is what permitted that** — it says rates "should separate" and
+> never says against what inventory detection is scored, which is this paper's own §2 defect
+> (an artifact faithful under its producing selection rule, consumed under a different one) landing
+> in the paper's own falsifier. **Repair the prediction, not just the experiment:** score each
+> arm's *recall over a frozen exhaustive gap inventory per artifact*, so both arms share a
+> denominator. What survived: enumeration produced 27% more text and found fewer of **both**
+> defect kinds, and omissions were harder than present-but-wrong content in **both** arms — the
+> §4 asymmetry, observed but not attributable to the protocol.
+
 **Prediction 2 (tests E2).** Hold compression constant and vary shared history between producer and
 consumer — same team, adjacent team, stranger, non-persistent worker. Silent-failure incidence,
 measured per handoff, should track reconstructability rather than compression ratio alone.

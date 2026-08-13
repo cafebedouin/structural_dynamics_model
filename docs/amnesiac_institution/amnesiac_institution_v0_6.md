@@ -108,6 +108,14 @@ that stopped tracking the list it summarises, corrected here rather than silentl
   subject.** A probe's own prompt suppressed the report of a canary the worker could plainly see —
   *absence-shaped success*, where a well-formed negative filled the hole where content was present.
   Witnessed, dated, raw text retained; retro-audit minted as ISSUES OQ-292.
+- **§14 RQ-d gains an ATTEMPTED box (2026-08-13).** Arm 2 was run — 60 pre-registered units — and
+  the attempt does not count: the measure was selection among ~8 named gaps rather than detection,
+  so the frozen REFUTED verdict has no bearing on A3. Recorded here for the same reason RQ2 carries
+  a `[COST CORRECTED]` box: an agenda item that reads as unattempted after it has been attempted is
+  a staleness-ladder instance in the paper that teaches the staleness ladder. **The finding indicts
+  the sentence, not only the run** — "compare omission-detection rates" pins what is judged and never
+  what is shown, which is §7.4's own defect shape appearing in this paper's specification of the
+  experiment meant to test it. `audits/2026-08-13_rqd_recognition_vs_enumeration/`, ISSUES OQ-293.
 - **The ABSTRACT no longer carries the incidence scalar.** It carried the number *and* its framing —
   yield-not-prevalence, one stratum, corrections survived — which was faithful at the production site
   and had no channel across the boundary: the number travels and the four qualifying clauses do not.
@@ -2226,6 +2234,32 @@ Secondary, in the order they become tractable:
   reviewers the same artifact under a recognition protocol (read and confirm) and an enumeration
   protocol (write the instruction that would execute it) and compare omission-detection rates.
   *Falsifier: no difference in either arm.*
+
+  > **[ARM 2 ATTEMPTED 2026-08-13 — the attempt does not count, and the reason is a defect in the
+  > sentence above.]** 60 units (10 authored designs × both protocols × 3 replicates,
+  > `claude-sonnet-5`), pre-registered, scorer built and controlled before the spend.
+  > `audits/2026-08-13_rqd_recognition_vs_enumeration/`, ISSUES **OQ-293**. Under the frozen rule
+  > the omission Δ was **−0.07** pooled / **+0.08** on informative items against a +0.20 floor —
+  > REFUTED. **It is not carried forward.** Subjects named **488 gaps across 60 responses (~8
+  > each)**; scoring credited the **1 authored omission** per response. The measure was therefore
+  > *which gaps a subject ranks into its top ~8* — selection, not detection — and selection noise
+  > of that size plausibly swamps a 0.20 effect. The flaw damages nulls more than positives, which
+  > is the direction that would let an unwelcome result be discarded; it is recorded against the
+  > frozen verdict rather than in place of it.
+  >
+  > **The defect is in the specification, not only in the run.** "Compare omission-detection
+  > rates" pins what is *judged* and never what is *shown* to the scorer — the same shape as
+  > §7.4's prereg that pinned what is judged and never what is shown, and as §5.4's census whose
+  > headline did not carry its unit. An RQ stated at this altitude hands its receiver a scoring
+  > rule to invent. **Redesign:** freeze an exhaustive gap inventory per artifact, then score each
+  > arm's **recall over that inventory**, so both arms share a denominator and ~8 flags become ~8
+  > scoreable events instead of 1.
+  >
+  > **Two observations survive.** Enumeration produced **27% more text and found fewer of both**
+  > defect kinds — verbosity is not detection. And absences were harder than present-but-wrong
+  > content **in both arms** (0.33/0.27 vs 0.57/0.43), the direction A3 predicts about the
+  > difficulty asymmetry; an observation only, since the two key sets differ in matchability as
+  > well as in what they denote. A3 remains **ANALYTIC with its kill condition unrun**.
 
 And one that was owed immediately, **now re-aimed and no longer a circulation blocker**: the canary
 test of §3.5. As originally specified — a token at the end of the always-loaded set — it would have
