@@ -12546,6 +12546,51 @@ OQ-288 stratum census cannot use it either.
 
 ---
 
+## OQ-293 — RQ-d attempt 1 was SELECTION-limited, not a test of A3: score recall over an exhaustive gap inventory, not detection of one authored omission
+
+**Ω-type:** Ω_E — witnessable by a better instrument at the same call cost; the redesign is
+specified and mechanical. NOT Ω_P: nothing here needs a seat, only a denominator.
+
+**Status:** open — minted 2026-08-13 at the close of `audits/2026-08-13_rqd_recognition_vs_enumeration/`.
+**Priority:** 3
+
+**What ran.** 60 units (10 authored design docs × recognition/enumeration × 3 reps,
+`claude-sonnet-5`), testing A3 — *a party holding a compression can perform recognition but not
+enumeration*. Frozen outcome rules, scorer written and controlled before the spend, output gate
+GREEN, 0/60 protocol failures.
+
+**The frozen verdict, which stands in the record:** omission Δ (enum − recog) **−0.07** pooled,
+**+0.08** on informative items, against a pre-registered +0.20 floor ⇒ REFUTED HERE.
+
+**Why it cannot be carried forward.** Subjects named **488 gaps across 60 responses (~8 each)**;
+scoring credited the **1 authored omission** per response (18 hits). A ~200-word design
+underspecifies far more than one thing, so the measure is *which gaps a subject ranks into its
+top ~8* — selection, not detection, and selection noise of that size plausibly swamps a 0.20
+effect. Witnessed: a floor-scoring response wrote *"rolling over last N writeups?"* — asking for
+the denominator — while the key set said *"how many writeups"*.
+
+**The asymmetry is stated, not claimed away.** The flaw damages nulls more than positives (a
+positive would still have shown enumeration shifts attention toward that gap class), which is the
+direction that lets an unwelcome result be discarded. It is recorded *against* the frozen verdict,
+not in place of it.
+
+**The redesign (the next step).** Before the run, build an **exhaustive gap inventory** per
+artifact — every substantive underspecification, enumerated by an independent pass, frozen — and
+score each arm's **recall over that inventory**. Both arms then share a denominator, ~8 flags
+become ~8 scoreable events instead of 1, and per-item power rises ~8× at the same call count.
+Second change: shorter artifacts, so the inventory can genuinely be exhaustive. Instruments are
+reusable and pinned (`python/audits/rqd_*.py`); only the scorer and materials change.
+
+**Spillover finding, for the papers.** `amnesiac_institution_v0_6.md` §14 RQ-d and
+`concealment_without_a_concealer_v0_4.md` §11 Prediction 1 both specify this experiment in the
+selection-limited form and **neither says how detection is scored** — the same defect shape as
+`judged_not_shown`, item 1 of the materials. The papers specify what is judged and not what is
+shown. Flagged, not edited.
+
+**What would change:** a run under the recall design either supplies A3's first empirical witness
+in this workforce or refutes it informatively. Until then A3 stays ANALYTIC with its kill
+condition unrun, and §14 should record that attempt 1 happened and why it does not count.
+
 ## OQ-292 — ABSENCE-SHAPED SUCCESS: a prompt can suppress the report of content the worker can plainly see, so every ABSENT-scored probe result is provisional until its prompt is checked
 
 **Ω-type:** Ω_E — a bounded, mechanical retro-audit over an enumerable set. What to do about any

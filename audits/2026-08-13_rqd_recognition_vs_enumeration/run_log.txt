@@ -1,0 +1,63 @@
+units: 60  model: claude-sonnet-5  dry_run: False
+  ok judged_not_shown           recognition  r2  out=1202  chars=3826
+  ok judged_not_shown           recognition  r3  out=1311  chars=3972
+  ok judged_not_shown           enumeration  r2  out=1353  chars=4145
+  ok judged_not_shown           enumeration  r3  out=1549  chars=4763
+  ok production_not_consumption recognition  r2  out=1302  chars=4015
+  ok production_not_consumption recognition  r3  out= 963  chars=3016
+  ok production_not_consumption enumeration  r2  out=1419  chars=4203
+  ok production_not_consumption enumeration  r3  out=1595  chars=4955
+  ok input_gates_only           recognition  r1  out=1166  chars=3601
+  ok input_gates_only           recognition  r2  out= 924  chars=2839
+  ok input_gates_only           recognition  r3  out= 757  chars=2372
+  ok input_gates_only           enumeration  r1  out=1364  chars=3996
+  ok input_gates_only           enumeration  r2  out=1399  chars=4313
+  ok input_gates_only           enumeration  r3  out=1277  chars=3841
+  ok selfcheck_format           recognition  r1  out=1106  chars=3426
+  ok selfcheck_format           recognition  r2  out=1121  chars=3328
+  ok selfcheck_format           recognition  r3  out=1264  chars=3893
+  ok selfcheck_format           enumeration  r1  out=1241  chars=3629
+  ok selfcheck_format           enumeration  r2  out=1479  chars=4471
+  ok selfcheck_format           enumeration  r3  out=1297  chars=3748
+  ok failure_semantics          recognition  r1  out= 893  chars=2848
+  ok failure_semantics          recognition  r2  out=1015  chars=3167
+  ok failure_semantics          recognition  r3  out= 876  chars=2797
+  ok failure_semantics          enumeration  r1  out=1351  chars=4314
+  ok failure_semantics          enumeration  r2  out=1421  chars=4489
+  ok failure_semantics          enumeration  r3  out=1280  chars=3984
+  ok empty_case                 recognition  r1  out=1204  chars=3792
+  ok empty_case                 recognition  r2  out= 816  chars=2575
+  ok empty_case                 recognition  r3  out= 815  chars=2640
+  ok empty_case                 enumeration  r1  out=1227  chars=3937
+  ok empty_case                 enumeration  r2  out=1489  chars=4597
+  ok empty_case                 enumeration  r3  out=1519  chars=4837
+  ok ordering                   recognition  r1  out= 883  chars=2821
+  ok ordering                   recognition  r2  out= 946  chars=2956
+  ok ordering                   recognition  r3  out= 706  chars=2168
+  ok ordering                   enumeration  r1  out= 861  chars=2557
+  ok ordering                   enumeration  r2  out= 897  chars=2722
+  ok ordering                   enumeration  r3  out= 889  chars=2591
+  ok retire_predecessor         recognition  r1  out= 918  chars=2952
+  ok retire_predecessor         recognition  r2  out= 788  chars=2580
+  ok retire_predecessor         recognition  r3  out=1018  chars=3302
+  ok retire_predecessor         enumeration  r1  out=1030  chars=3402
+  ok retire_predecessor         enumeration  r2  out=1337  chars=4430
+  ok retire_predecessor         enumeration  r3  out=1272  chars=4033
+  ok denominator                recognition  r1  out=1091  chars=3414
+  ok denominator                recognition  r2  out= 949  chars=2876
+  ok denominator                recognition  r3  out= 984  chars=3094
+  ok denominator                enumeration  r1  out=1000  chars=2873
+  ok denominator                enumeration  r2  out=1233  chars=3692
+  ok denominator                enumeration  r3  out=1262  chars=3785
+  ok owner_unspecified          recognition  r1  out= 878  chars=2714
+  ok owner_unspecified          recognition  r2  out= 794  chars=2511
+  ok owner_unspecified          recognition  r3  out=1083  chars=3345
+  ok owner_unspecified          enumeration  r1  out=1347  chars=4012
+  ok owner_unspecified          enumeration  r2  out=1186  chars=3542
+  ok owner_unspecified          enumeration  r3  out=1266  chars=3662
+
+issued=56 skipped=4 failed=0
+
+[output gate] files on disk: 60  expected: 60
+[output gate] empty=0 unparseable=0 no_response_text=0
+[output gate] GREEN — every unit on disk is non-empty and parses

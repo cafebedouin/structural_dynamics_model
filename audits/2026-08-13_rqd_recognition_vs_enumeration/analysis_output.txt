@@ -1,0 +1,35 @@
+units scored: 60
+  protocol_failure recognition  0/30 = 0.00
+  protocol_failure enumeration  0/30 = 0.00
+  mean chars recognition      3114   mean tokens_out     997
+  mean chars enumeration      3947   mean tokens_out    1294
+
+spec                             OMISSION rec->enum       ERROR rec->enum  note
+judged_not_shown                 0.33 -> 0.33         0.00 -> 1.00     
+production_not_consumption       0.33 -> 0.33         0.67 -> 1.00     
+input_gates_only                 0.00 -> 0.00         0.33 -> 0.00     floor (both<0.10) — uninformative for Delta
+selfcheck_format                 0.00 -> 0.33         0.67 -> 0.67     
+failure_semantics                1.00 -> 0.67         1.00 -> 0.33     ceiling (recog>0.80) — uninformative for Delta
+empty_case                       0.67 -> 0.67         1.00 -> 0.67     
+ordering                         0.00 -> 0.00         0.33 -> 0.00     floor (both<0.10) — uninformative for Delta
+retire_predecessor               1.00 -> 0.33         0.33 -> 0.33     ceiling (recog>0.80) — uninformative for Delta
+denominator                      0.00 -> 0.00         1.00 -> 0.33     floor (both<0.10) — uninformative for Delta
+owner_unspecified                0.00 -> 0.00         0.33 -> 0.00     floor (both<0.10) — uninformative for Delta
+
+=== ALL ITEMS  (n_items=10) ===
+  omission  recognition 0.33  enumeration 0.27   Delta -0.07
+  error     recognition 0.57  enumeration 0.43   Delta -0.13
+  VERDICT [frozen rule, floor +0.20]: REFUTED HERE — enumeration does not surface omissions better on these shapes
+
+=== INFORMATIVE ONLY  (n_items=4) ===
+  omission  recognition 0.33  enumeration 0.42   Delta +0.08
+  error     recognition 0.58  enumeration 0.83   Delta +0.25
+  VERDICT [frozen rule, floor +0.20]: REFUTED HERE — enumeration does not surface omissions better on these shapes
+
+=== Amendment 1 effect (hits added by the scorer repair, per arm) ===
+  recognition  omission  added  1  lost  0  of 30  (+0.03 rate)
+  recognition  error     added  0  lost  0  of 30  (+0.00 rate)
+  enumeration  omission  added  0  lost  0  of 30  (+0.00 rate)
+  enumeration  error     added  0  lost  0  of 30  (+0.00 rate)
+
+  [sensitivity] lenient omission  recog 0.50  enum 0.37  Delta -0.13   (not the headline)
