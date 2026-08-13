@@ -108,6 +108,14 @@ that stopped tracking the list it summarises, corrected here rather than silentl
   subject.** A probe's own prompt suppressed the report of a canary the worker could plainly see —
   *absence-shaped success*, where a well-formed negative filled the hole where content was present.
   Witnessed, dated, raw text retained; retro-audit minted as ISSUES OQ-292.
+- **§10.5 and §13 qualify the catch bit (2026-08-13).** The instrument has **no discrimination
+  record** — 4 live, 0 declines — and `no` is close to structurally unreachable: audit dirs are
+  created on suspicion (0 of 53 writeups conclude pure confirmation) and the bit is self-assigned.
+  So the rate is a **yield over audits-that-got-written**, which is the sentence §5.4 spends three
+  paragraphs establishing about 73/174 and which §10 had not inherited — **the apparatus that
+  instruments the apparatus reproduced the defect it was built to measure, one level up.** §13's
+  novelty claim is narrowed to the construction; the repair is registration of investigations, not
+  more apparatus. ISSUES OQ-276.
 - **§14 RQ-d gains an ATTEMPTED box (2026-08-13).** Arm 2 was run — 60 pre-registered units — and
   the attempt does not count: the measure was selection among ~8 named gaps rather than detection,
   so the frozen REFUTED verdict has no bearing on A3. Recorded here for the same reason RQ2 carries
@@ -1989,6 +1997,31 @@ The instrument closes one loop, not all. The catch bit can be gamed. The channel
 not quality. It cannot see restraint. And the deepest question has no instrument because it is an
 Ω_P.
 
+> **[ADDED 2026-08-13 — the catch bit has NO DISCRIMINATION RECORD, and this is structural.]** The
+> readout stands at **4 live / 0 latent / 0 no**. §7.3 requires that a control's licence come from a
+> case it **declined**; this instrument has never declined, and it is the apparatus's own falsifier —
+> so a falsifier that has never fired in the falsifying direction is precisely the shape it exists to
+> catch. Two mechanisms, neither of them small-n. **(a) Population selection — the effect §5.4
+> already concedes for 73/174, unstated here.** Audit directories are created *on suspicion*, so the
+> population is investigations that found something; measured, **0 of 53 writeups conclude pure
+> confirmation.** Nulls that *overturn* a belief are written up ("condition (i) fails", "NOT repro",
+> "inert at the default config") but those score `live` by definition; `no` needs an investigation
+> that found nothing **and still got written up**. **(b) Self-assignment** — the bit is written by the
+> author of the work it evaluates, with no separation between auditor and scorer.
+>
+> **So the figure is a yield over audits-that-got-written, not a catch rate** — the same sentence
+> §5.4 spends three paragraphs establishing about the incidence statistic, which this section did not
+> inherit. The apparatus that instruments the apparatus reproduced the defect it was built to
+> measure, one level up.
+>
+> **The repair is registration, not more apparatus** (§10.2's own rule). The audit record has
+> **publication bias**, and the catch rate is its impact factor: register the *decision to look*
+> independently of the *outcome of looking* — a one-line investigations ledger opened when an inquiry
+> starts, its bit attached at close regardless of outcome. That is §12's preregistration applied to
+> this institution's own instrument, at one line per investigation. **Until it exists the readout is
+> reported and not interpreted**, and `apparatus_instrument.py` now prints that refusal in place of a
+> rate. ISSUES OQ-276.
+
 **The sharper limit is not about depth.** Every apparatus of this kind runs on **exemptions** — cases
 where a rule correctly does not apply. They are unavoidable and often right. The arc supplied one of
 each kind, and the difference in outcome was total:
@@ -2157,7 +2190,13 @@ enforced at a boundary regardless of intent.
    than total loss.
 3. **Self-instrumentation of the verification apparatus**, with a catch-rate readout whose
    interpretation is reserved to a human seat, a channel cap that forces retirement, and a declared
-   blind spot for restraint (§10.3).
+   blind spot for restraint (§10.3). **Claimed for the CONSTRUCTION, not for its readings
+   (2026-08-13):** the catch bit has no discrimination record — 4 live, 0 declines — and `no` is
+   close to structurally unreachable, because audit dirs are created on suspicion and the bit is
+   self-assigned (§10.5). The novel thing is an institution installing a falsifier for its own
+   verification ritual; **the rate it currently reports is a yield over audits-that-got-written and
+   is not yet interpretable.** A reading is owed once investigations are registered independently of
+   their outcomes.
 4. **The organizational form** — one operator without a software team; staged plans; blind
    implementation; serial write-lock at the institutional-memory boundary; **two** human
    jurisdictions, one created by amnesia rather than by authority (§9.2), and now given a

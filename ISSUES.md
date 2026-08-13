@@ -10454,6 +10454,39 @@ operator's value ruling); the rate itself is Ω_E (mechanically computed).
 **Status:** open
 **Priority:** 5
 **Deps:**
+
+**FINDING 2026-08-13 — the instrument has NO DISCRIMINATION RECORD, and `no` is close to
+structurally unreachable.** The readout stands at **4L / 0l / 0n**. By the operator's own
+2026-08-11 ruling, *an instrument with no decline in its record licenses nothing* — and this
+instrument is the apparatus's own falsifier, so a falsifier that has never fired in the
+falsifying direction is the exact shape it exists to catch. Two mechanisms, both structural
+rather than small-n:
+
+1. **Population selection — the same effect the 73/174 figure already concedes.** Audit
+   directories are *created on suspicion*, so the population is investigations that found
+   something. Measured 2026-08-13: **0 of 53 WRITEUPs conclude pure confirmation** (search
+   demonstrated firing on planted null language; the verdict surface was read directly rather
+   than laddering one phrase list). Nulls that *overturn* a belief do get written — "condition
+   (i) **fails**", "**NOT** repro", "inert at the default config" — but those are `live` by
+   definition. `no` requires an investigation that found nothing AND still got written up.
+2. **Self-assignment.** The bit is written by the author of the work it evaluates; there is no
+   separation between the party doing the audit and the party scoring whether it caught anything.
+
+**Consequently the rate is a yield over audits-that-got-written, not a catch rate**, and §13 of
+`amnesiac_institution_v0_6.md` lists self-instrumentation as institutional novelty #3 without
+carrying that caveat — the *same* omission the paper corrects for 73/174 two sections earlier.
+**Landed 2026-08-13:** `apparatus_instrument.py` now carries the coverage to the read site
+(`4 of 53 writeups`) and prints `NO DECLINE EVER RECORDED: readout not yet interpretable`
+whenever `no` is 0.
+
+**The fix, which is registration and not more apparatus.** The audit record has **publication
+bias**, and the Fired: rate is its impact factor. To make `no` reachable, register the *decision
+to look* independently of the *outcome of looking*: a one-line investigations ledger opened when
+an inquiry starts, with the Fired: bit attached at close **regardless of outcome**. That is
+preregistration applied to the apparatus's own instrument — the same device §12 already credits
+for framing-fixing in metascience — and it costs one line per investigation rather than a new
+subsystem. Until it exists, the readout is reported and **not** interpreted.
+
 **Origin:** Operator ruling 2026-08-10, from the session-opening assessment "is the
 confirmatory apparatus earning its keep or is it LLM make-work?" Verdict there: the
 apparatus demonstrably fires (42% of audit dirs — 73/175 — document a silent defect

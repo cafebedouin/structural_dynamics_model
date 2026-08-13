@@ -447,10 +447,25 @@ def main() -> int:
     chan_problems, chan_summary = check_channel(MEMORY_MD)
     problems += chan_problems
     n_bits = sum(tally.values())
-    rate = (
-        f"catch-rate {tally['live']}L/{tally['latent']}l/{tally['no']}n of {n_bits}"
-        if n_bits else "catch-rate: no Fired: bits yet"
-    )
+    # COVERAGE CARRIED TO THE READ SITE (2026-08-13). "of {n_bits}" alone reads as
+    # though the bits were the population; they are 4 of 53 writeups of 178 dirs.
+    # And the one-sided-record warning is printed whenever no `no` has EVER been
+    # recorded: by the 2026-08-11 ruling an instrument with no decline in its
+    # record licenses nothing, and this instrument is the apparatus's own
+    # falsifier — a falsifier that has never fired in the falsifying direction is
+    # the exact shape it exists to catch. Audit dirs are created on suspicion, so
+    # `no` is close to structurally unreachable here: 0 of 53 writeups conclude
+    # pure confirmation. Provenance: ISSUES OQ-276.
+    n_writeups = sum(1 for d in sorted(AUDITS.iterdir())
+                     if d.is_dir() and (d / "WRITEUP.md").is_file())
+    if n_bits:
+        rate = (f"catch-rate {tally['live']}L/{tally['latent']}l/{tally['no']}n "
+                f"of {n_bits} bits ({n_bits} of {n_writeups} writeups carry one; "
+                f"forward-only from 2026-08-10)")
+        if tally["no"] == 0:
+            rate += " — NO DECLINE EVER RECORDED: readout not yet interpretable (OQ-276)"
+    else:
+        rate = "catch-rate: no Fired: bits yet"
     for p in problems:
         print(f"PROBLEM: {p}")
     # Reporting-only readout. Contributes NOTHING to the return code by design —
