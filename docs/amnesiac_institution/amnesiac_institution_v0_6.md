@@ -85,7 +85,9 @@ proof.
 
 **In-place corrections to v0.6 (2026-08-12, after first circulation of the draft).** Recorded here
 because the construction note above claims every unlisted section is unchanged *by construction*,
-and these are the exceptions. All three descend from one retraction and none is cosmetic.
+and these are the exceptions. The first two descend from one retraction; none is cosmetic. (The
+count in this sentence read "All three" against four bullets at first circulation — an aggregate
+that stopped tracking the list it summarises, corrected here rather than silently.)
 
 - **§3.5 retracts its carrier.** The always-loaded corollary — *enlarging the file drops the rules at
   the end* — is false: 46× headroom, and above the limit the harness skips the file whole rather than
@@ -106,6 +108,14 @@ and these are the exceptions. All three descend from one retraction and none is 
   subject.** A probe's own prompt suppressed the report of a canary the worker could plainly see —
   *absence-shaped success*, where a well-formed negative filled the hole where content was present.
   Witnessed, dated, raw text retained; retro-audit minted as ISSUES OQ-292.
+- **The ABSTRACT no longer carries the incidence scalar.** It carried the number *and* its framing —
+  yield-not-prevalence, one stratum, corrections survived — which was faithful at the production site
+  and had no channel across the boundary: the number travels and the four qualifying clauses do not.
+  **§2's thesis applied to §5.4's figure at the one boundary this document controls.** The abstract now
+  carries the qualitative finding and names the reason. Nothing downstream moved: the scalar stays in
+  §0's W2 row (framing adjacent in the Status column), in Appendix B's manifest row with its extraction
+  command, and in §2's two uses of 42% as a worked example — the three sites where carriage is cheapest
+  and a reader cannot pick the number up without it.
 
 ## ABSTRACT
 
@@ -155,10 +165,15 @@ meaningful value crosses a boundary without its status*, extended here to *no co
 without the framing it was formed at* — comprising witnessed claims in three tiers, positive
 controls on every probe, pre-registered outcome rules, curated institutional memory under an
 explicit promotion and decay economy, a serial write-lock, and human rulings confined to declared
-jurisdictions. We report internal indicators, notably that 73 of 174 audit directories document at
-least one silent or never-fired defect (as of 2026-08-10), and state at length why this figure is a
-yield rather than a prevalence, why it is a rate over one stratum only, and why its survival across
-three corrections is evidence of stability under revision rather than of accuracy.
+jurisdictions. The principal internal indicator — the share of audit directories documenting at
+least one silent or never-fired defect — is **withheld from this abstract by design**. It is a yield
+over a single stratum, measured by an instrument with known recall and precision defects, and an
+abstract is a boundary in this paper's own sense: a scalar that crosses it arrives stripped of the
+selection rule that produced it, and is cited as a prevalence within one hop. The figure is reported
+in §5.4 with the framing that makes it readable. What survives at this altitude is qualitative:
+within the audited incident record, silent defects were common enough to motivate the discipline's
+standing cost — which is not an estimate of repository-wide prevalence, of severity, or of the
+discipline's causal effect.
 
 Concurrent work published inside the measurement window independently reports the same failure class
 from a production agent runtime and measures it at benchmark scale; the paper's systematization
