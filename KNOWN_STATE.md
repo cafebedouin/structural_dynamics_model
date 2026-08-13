@@ -46,7 +46,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-08-13 — [tripwire] KNOWN_STATE tripwires are now DELIVERED at edit time by a PreToolUse hook — the `Tier:` you author decides whether an editor ever sees your warning
-**Files:** `python/pretooluse_tripwires.py`, `python/known_state_status.py`, `.claude/settings.json`, `scripts/gate.sh`
+**Files:** `python/pretooluse_tripwires.py`, `python/known_state_status.py`, `.claude/settings.json`, `scripts/gate.sh`, `.gitignore`, `CLAUDE.md`
 **Tier:** tripwire
 
 **What changed.** A `PreToolUse` hook on `Edit|Write` (`.claude/settings.json`) runs
@@ -88,18 +88,43 @@ invocations, **1** injection — the wiring fires on both and the filter decline
 index to query. Building one is the open follow-on (per-rule "name the tool call this must fire
 before"); until then CLAUDE.md tripwires still ride the always-loaded path.
 
-**THE WIRING DOES NOT TRAVEL — awaiting an operator ruling.** `.gitignore:47` blanket-ignores
-`.claude/`, so `.claude/settings.json` is **untracked**. A fresh clone gets the script and the
-gate check but **no hook**: the selftest passes and nothing is delivered. This is pre-existing
-and larger than this change — the `SessionStart` hook that prints the activation menu is
-unversioned by the same line, so `CLAUDE.md`'s documented `[NEXT]`/`[GATE]`/`[PUSH]` surface is
-also machine-local (it degrades rather than breaks: the model still honours the tokens from
-CLAUDE.md, it just loses the auto-printed menu). The blanket ignore covers three unlike things
-— `settings.json` (project config, *should* be versioned), `settings.local.json` (personal
-overrides, should not), and `worktrees/` (definitely not). Candidate fix, NOT applied because
-committing project config is the operator's call and a careless narrowing would commit personal
-settings: replace `.claude/` with `.claude/*` + `!.claude/settings.json`. Until ruled, treat
-this hook as machine-local and re-wire by hand on any new clone.
+**RULED (2026-08-13, operator delegated the call): `.claude/settings.json` is VERSIONED; all
+other `.claude/` contents stay machine-local.** The three hooks are apparatus, not preference —
+`CLAUDE.md` documents behaviour that depends on them, so they belong in the repo the way
+`scripts/gate.sh` does. `settings.local.json` (70 personal permission rules) and `worktrees/`
+stay ignored: permissions are a machine-specific trust decision a fresh clone must not silently
+inherit. Scope audit at the time of the ruling found nothing misplaced — `~/.claude/settings.json`
+holds only personal preferences and defines **no** hooks; the local file defines none either.
+
+**TRIPWIRE — the obvious `.gitignore` fix is SILENTLY INERT.** `.gitignore` now reads `.claude/*`
+plus `!.claude/settings.json`. **The trailing `/*` is load-bearing:** git does not descend into an
+excluded *directory*, so a negation written under a bare `.claude/` is never consulted. Witnessed
+2026-08-13 — with `!.claude/settings.json` added under `.claude/`, `git check-ignore -v` still
+returned the `.claude/` rule as the winner and the file stayed ignored. Nothing errors, `git
+status` shows no new file, and the `.gitignore` reads exactly like a working one. If you ever
+re-tighten this, verify with `git add -An .claude/` — it must print exactly
+`add '.claude/settings.json'` and nothing else. That dry run is the output-level gate; inspecting
+the rules is only the input-level one.
+
+**DEFECT FOUND AND FIXED WHILE WIRING THIS — backticked `Files:` tokens were invisible to
+ABSOLUTE paths.** `**Files:** \`python/x.py\`` parsed with the backticks retained. The match rule
+is substring-both-ways, so a **relative** target (`--file CLAUDE.md`) still matched — the plain
+name is a substring of the ticked token — and `--file` looked perfectly healthy. An **absolute**
+path, which is what a tool payload carries and therefore all the hook ever sees, matched
+nothing. The backtick style entered around 2026-08-10 and had silenced **every entry written
+since**: 61 tokens across 11 entries, 4 of them `tripwire` tier. Fixed at parse
+(`known_state_status.scan` strips backticks). Witnessed A/B on absolute paths, delivered
+entries: `build_discipline.md` 2→5, `CLAUDE.md` 9→13, `apparatus_instrument.py` **0→2**,
+`issues/INDEX.md` **0→1** — the last two had been delivering *nothing at all*. **The general
+shape, worth more than the fix:** the healthy-looking call and the broken one differed only in
+path form, so the query that a human runs by hand (relative) and the query the machine runs
+(absolute) were not the same query, and only the hand-run one was ever observed. Guarded by a
+red-capable selftest control (#6).
+
+**Pre-existing scope of the gap.** The same blanket line had left the `SessionStart`
+activation-menu hook unversioned since it was written, so `CLAUDE.md`'s `[NEXT]`/`[GATE]`/`[PUSH]`
+surface was machine-local too (degrading rather than breaking — the tokens still work from
+CLAUDE.md, only the auto-printed menu was lost). Fixed by the same ruling.
 
 ## 2026-08-12 — [landed] OQ-290 RULED front-load by DOMINANCE (not by evidence); OQ-289 demoted to background; 5 of 19 memory files front-loaded and the method passed its own read-site test
 **Files:** `ISSUES.md`, `python/apparatus_instrument.py`, `docs/technical/build_discipline.md`, `python/audits/oq290_frontload_check/`

@@ -191,6 +191,23 @@ def _selftest():
         good = False
     check("emitted payload is valid PreToolUse hook JSON", good)
 
+    # 6. NORMALIZATION — `Files:` tokens must carry no markdown backticks after
+    #    scan. A backticked token still matches a RELATIVE target (the plain name
+    #    is a substring of the ticked one), so `--file CLAUDE.md` looked fine
+    #    while the hook — which passes an ABSOLUTE path — matched nothing. The
+    #    style entered ~2026-08-10 and silenced every entry after it; two files
+    #    went from 0 delivered entries to non-zero when it was fixed. Red-capable:
+    #    the same assertion is run against a tick-retaining parse and must FAIL
+    #    there, or it is a check that cannot fail.
+    import known_state_status as kss
+    entries, _ = kss.scan()
+    live_ticks = sum(1 for e in entries for f in (e["files"] or []) if "`" in f)
+    seeded = [{"files": ["`python/x.py`", "plain/y.py"]}]
+    seeded_ticks = sum(1 for e in seeded for f in e["files"] if "`" in f)
+    check("Files: tokens carry no backticks after scan (absolute-path blindness)",
+          live_ticks == 0 and seeded_ticks > 0,
+          f"live={live_ticks}, red-capable control detects {seeded_ticks}")
+
     print("SELFTEST", "GREEN" if ok else "RED")
     return 0 if ok else 1
 

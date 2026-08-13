@@ -133,6 +133,18 @@ determinism-boundary "floor" (priority/type stay a declared seat), and the gotch
   documentation-currency check); (3) if both hold, `git push origin main`, else report what is
   blocking. Always show the gate output as the witness — never push on an unverified claim.
 
+**Hooks are versioned project apparatus — `.claude/settings.json` is COMMITTED; everything else
+under `.claude/` is machine-local** (`.gitignore` uses `.claude/*` + a negation; the bare
+`.claude/` form makes the negation silently inert — the comment there explains why). Three hooks
+fire on their own, so expect them rather than being surprised: `SessionStart` prints the
+activation menu; `PostToolUse` re-runs the `ISSUES.md` grammar gate whenever you edit that file;
+`PreToolUse` injects the KNOWN_STATE `tripwire`/`correction-key` entries naming any file you are
+about to `Edit`/`Write` (`python/pretooluse_tripwires.py`, selftest in the gate). **Consequence
+when you author a KNOWN_STATE entry: `Tier:` is now a ROUTING decision — a standing warning filed
+as `landed` is never delivered to an editor.** Hook silence means "queried, matched nothing"; a
+query that cannot run says so loudly. To add or change one, edit `.claude/settings.json` and
+commit it with the change it serves.
+
 **Implementation wiring notes:** `docs/technical/` holds file-level notes on non-obvious wiring,
 operator-precedence bugs, fact-adapter patterns, and query gotchas — things that caused real bugs,
 not general architecture. Read the relevant file before modifying `config_validation.pl`,

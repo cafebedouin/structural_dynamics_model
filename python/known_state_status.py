@@ -51,7 +51,16 @@ def scan():
             continue
         fm = FILES.match(line)
         if fm and cur["files"] is None:
-            cur["files"] = [f.strip() for f in fm.group(1).split(",")]
+            # Strip markdown backticks: `path/to/x.py` is decoration, not part of
+            # the path. Without this the token never matches a real path in
+            # entries_for_file, and the entry is silently invisible to --file and
+            # to the PreToolUse hook. Witnessed 2026-08-13: the backtick style
+            # entered around 2026-08-10 and had silenced EVERY entry since —
+            # 61 tokens across 11 entries, 4 of them tripwire tier, i.e. exactly
+            # the newest and most load-bearing warnings. Nothing errored; the
+            # query just returned fewer rows.
+            cur["files"] = [f.strip().strip("`").strip()
+                            for f in fm.group(1).split(",")]
             continue
         tm = TIER.match(line)
         if tm and cur["tier"] is None:

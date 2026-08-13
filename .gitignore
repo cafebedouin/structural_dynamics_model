@@ -44,7 +44,14 @@ testsets_backup_*/
 testsets_failed_*/
 json_backup_*/
 json_failed_*/
-.claude/
+# `.claude/*` NOT `.claude/` — git does not descend into an excluded DIRECTORY, so a
+# `!.claude/settings.json` negation under a bare `.claude/` is silently inert (witnessed
+# 2026-08-13: check-ignore still named the `.claude/` rule; the file reads as fixed and
+# nothing changes). The trailing `/*` is load-bearing.
+# settings.json is versioned project apparatus (the three hooks CLAUDE.md depends on);
+# settings.local.json (personal permissions) and worktrees/ stay local.
+.claude/*
+!.claude/settings.json
 
 # Run-tagged pilot story dirs: intentionally untracked + glob-isolated + disposable (OQ-87).
 # Canonical json/ stories live flat at json/*.json; other run-tagged subdirs (e.g. a live
