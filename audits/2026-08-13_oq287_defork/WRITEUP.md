@@ -26,7 +26,10 @@ at each landing.
 | A3 re-pointing | `7ecb56b3` | `checks.sh row4` green **by conforming**, twice red first |
 | A4 + A5 | `96db0124` | `checks.sh row2` (9 assertions); all four rows green |
 
-**Pass A is complete.** Still open: A6 (this record), and **Pass B** (`EXTRACTION_PROMPT.md`).
+**Pass A is complete, and Pass B is SPECIFIED rather than promised** — `EXTRACTION_PROMPT.md` is
+written and executes later, which was the plan's mitigation for its own named risk (that the
+intermediate state becomes permanent). Stopping at a written specification rather than an authored
+draft is deliberate: the next session can be adversarial about it.
 
 ## Evidence map
 
@@ -36,6 +39,7 @@ at each landing.
 | `A2_DRAFT_section2.md` | the reviewed §2 replacement, revisions 1→2. Its pins are **superseded** and wrapped in `PIN-RECORD` sentinels — a record of a past state, not a claim about a present one |
 | `checks.sh` | **all four rows** of the verification table, executable, with 6 selftest controls |
 | `claim_digest.sh` | **the definition** of a claim digest. Carries the whole-row rationale and the declared stopping point |
+| `EXTRACTION_PROMPT.md` | **Pass B's receiver's prompt — written, not executed.** Gates (incl. OQ-278 as a checked gate), destination, salvage map, the sub-item redirect table, the acceptance condition **with its deletion test**, IV's candidate material with a scope bound, the unguarded residuals, and the receiver's licence to refuse |
 | `A3_MAPPING_RULE.md` | what a re-pointed reference must say, fixed BEFORE the re-pointing so row 4 checks conformance rather than non-absence |
 | `../../python/claim_cite_check.py` | the gate-wired checker. Carries the corpus-scope rationale and the aptness residual |
 
