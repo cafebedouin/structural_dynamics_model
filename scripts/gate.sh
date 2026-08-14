@@ -23,6 +23,8 @@ run "omega check"    python3 python/omega_resolver.py check
 run "omega selftest" python3 python/omega_resolver.py selftest
 run "omega index"    python3 python/omega_resolver.py index --check
 run "spec enums"     python3 python/spec_enum_check.py --check
+run "claim cites"    python3 python/claim_cite_check.py --check
+run "claim cites st" python3 python/claim_cite_check.py --selftest
 run "known_state"    python3 python/known_state_status.py --check
 run "axis boundary"  python3 python/check_axis_boundary.py --selftest
 run "audit cites"    python3 python/audit_citation_status.py --check

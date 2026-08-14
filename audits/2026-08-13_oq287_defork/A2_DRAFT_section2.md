@@ -1,5 +1,14 @@
 # A2 draft — proposed replacement for `amnesiac_institution_v0_6.md` §2
 
+<!-- PIN-RECORD-BEGIN: revision-1 and revision-2 digests, superseded -->
+> **PIN RECORD — the digests below are SUPERSEDED and are recorded, not asserted.** `C1` was
+> `d0922f3d` when this draft was written and is `8475dc95` in the landed text: its kill condition
+> was repaired (it restated A1–A4 rather than falsifying C1 independently) *before* any citation
+> existed, and the whole-row digest correctly moved. Every pin between these sentinels is a record
+> of a past state — the thing `claim_cite_check` must be able to tell apart from a claim about a
+> present one. The live pins are in `docs/`, and in this file's own "What changed" table below.
+<!-- PIN-RECORD-END -->
+
 **REVISION 2.** Still NOT APPLIED to `docs/amnesiac_institution/`. The upstream half *has* landed
 (see below), because it had to precede the citation.
 
@@ -7,7 +16,7 @@
 
 | # | your correction | disposition |
 |---|---|---|
-| 1 | the canonical short form is v0.6's own sentence, cited as concealment's | **fixed upstream** — added to `CWC` §3.5 as **C1**, digested `C1@d0922f3d`; the notice now quotes it *from* upstream with a pin, and acyclicity holds |
+| 1 | the canonical short form is v0.6's own sentence, cited as concealment's | **fixed upstream** — added to `CWC` §3.5 as **C1**, digested `C1@d0922f3d` <!-- PIN-RECORD-INLINE: superseded, now 8475dc95 -->; the notice now quotes it *from* upstream with a pin, and acyclicity holds |
 | 2 | strike the glosses (unpinned paraphrase beside a pinned row) | struck, all four |
 | 3 | 2.B and §13 both state the contribution boundary | §13 is canonical; 2.B keeps the prior-art disclosure and points at §13 in a clause |
 | 4 | the opt-in hazard scales at A3, not Pass B | `claim_cite_check` moves to **between A2 and A3** |
@@ -26,9 +35,12 @@ trailing newline, once via `printf '%s'` without — and the two disagreed on ev
 recipe, two readings, no error anywhere. The pinned form is **no trailing newline**, which is what
 revision 1's numbers happened to use, so those were right and the *comparison harness* was wrong.
 
+<!-- PIN-RECORD-BEGIN: digest set as of revision 2; C1 since moved -->
     A1 e858a33d   A2 31548228   A3 fe7890db   A4 62d54b18   A5 519a4c85   C1 d0922f3d
     E1 884ea0b6   E2 3524a541   E3 afcb38cb   E4 ad4ef383   E5 775f6ce0
     P1 f778dd4d   P2 539e1206   P3 f9ca4f26   P4 33ae71f9   P5 ca92fd8c
+
+<!-- PIN-RECORD-END -->
 
 `./claim_digest.sh --selftest` — 7 controls, green: an absent label exits 4 rather than returning
 `e3b0c442` (sha256 of nothing, which is how the first harness reported a brand-new row as "MOVED");
@@ -39,6 +51,8 @@ case the scheme exists for; a duplicated label is refused rather than silently t
 ---
 
 ## The draft
+
+<!-- PIN-RECORD-BEGIN: draft body; pins here are as-proposed, not as-landed -->
 
 ### Heading
 
@@ -157,6 +171,8 @@ case the scheme exists for; a duplicated label is refused rather than silently t
 > §10 pointer and loses nothing.
 
 ---
+
+<!-- PIN-RECORD-END -->
 
 ## Sequencing consequence of correction 4
 
