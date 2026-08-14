@@ -658,6 +658,47 @@ python3 python/cli.py <group> <name> [args] # run a tool (argv forwarded verbati
 wherever they physically sit (no file moves). `cli.py report ...` delegates to the reports package;
 `cli.py menu` delegates to `omega_resolver.py menu`. `cli selftest` is wired into `scripts/gate.sh`.
 
+### Check cross-document claim citations (OQ-287 standing guard)
+
+```bash
+python3 python/claim_cite_check.py --check      # gate mode
+python3 python/claim_cite_check.py --selftest   # 10 red-capable controls
+python3 python/claim_cite_check.py --list --unpinnable
+```
+
+Both run in `scripts/gate.sh`. `docs/amnesiac_institution/amnesiac_institution_v0_6.md` cites the
+derivation it used to carry from `docs/concealment/concealment_without_a_concealer_v0_4.md`
+(canonical; see each directory's `README.md`), and every citation is pinned to the **content** of
+the Appendix A row it names, not merely to its label:
+
+```
+CWC:A2@31548228        # namespace : claim label : 8-hex digest of the whole row
+```
+
+Four things that bite:
+
+- **The digest covers the WHOLE row, kill condition included.** Editing a row's kill condition moves
+  the pin and fires every citing site even though the quoted claim is untouched. **That is the
+  mechanism working. On a fire, RE-READ the site and decide — never bump the hex.** (Witnessed
+  2026-08-14: one row's `Owed` cell was corrected, six sites fired, all six were re-read and one
+  improved; the other fifteen digests recomputed identical.)
+- **Get digests from the script, never by hand or by copying one out of a document:**
+  `audits/2026-08-13_oq287_defork/claim_digest.sh <label>`. It is *the* definition of the recipe —
+  a prose version was implemented two incompatible ways in one turn (trailing newline) and every
+  digest was wrong. Do not reimplement it.
+- **Opt-in, same silent-escape shape as `reading_registry` registration above:** a NEW citation is
+  unguarded until its digest lands in the same change. The label class set is **open** (`A`, `E`,
+  `P`, and the corollary `C1`) — never hardcode `[AEP]`. Concealment §5.1/§5.4/§9.1/§3.2 have no
+  Appendix A row and are **unpinnable by construction**; write them `` `CWC` §5.4 ``, and do not
+  mint rows to make citations checkable.
+- **It verifies pin-matches-row and is BLIND TO APTNESS** — whether the cited row is the *right* one.
+  A green tick over 60+ citations reads as verification of the citation set and is not; treat it as
+  a hazard, not a caveat (`audits/2026-08-13_oq287_defork/EXTRACTION_PROMPT.md` §8 R2).
+
+`amnesiac_institution_v0_6.md` §2.1–2.7 are **vacated and their numbers never reused**; §2.8/§2.9
+keep their numbers and are marked declared-temporary. Structure is asserted by
+`audits/2026-08-13_oq287_defork/checks.sh all`.
+
 ### Run the reading-totality suite (OQ-137 standing guard)
 
 ```bash
