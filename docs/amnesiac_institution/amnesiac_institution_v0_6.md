@@ -223,9 +223,9 @@ amount of repository data confirms or refutes these; they are refuted by exhibit
 | # | Claim | Premises | Kill condition |
 |---|---|---|---|
 | A1 | Any party acting on a corpus larger than its working set must abstract; substrate-independent | Working-set finitude | An institution operating at scale with no compression at any boundary |
-| A2 | Every abstraction is formed at a framing Π, and Π is a live parameter not recoverable from the artifact's form | Seat theorem §8 (P3: the field does not self-partition); Coupling Theorem | A general artifact form that carries its own selection criterion without an author declaring it — or a successful denial of P3, which localizes rather than kills (§2.2) |
+| A2 | Every abstraction is formed at a framing Π, and Π is a live parameter **not entailed by the compressed content** — where a framing is present it is present as additional authored content, not as something recoverable from the compression itself | Seat theorem §8 (P3: the field does not self-partition); Coupling Theorem | A general artifact form that carries its own selection criterion without an author declaring it — or a successful denial of P3, which localizes rather than kills (§2.2) |
 | A3 | A party holding a compression can perform recognition but not enumeration; absences have no form to recognize | A1, A2; the definition of compression | Recognition-based review detecting omissions at rates comparable to forced enumeration (testable: §14, RQ-d) |
-| A4 | Under A1–A3 a compression asserts content while carrying no standpoint — the seat theorem's *no-seat pose*, produced structurally rather than by an agent | A2, A3; Corollary 2a | A compression whose bare form is not read as a claim about the consumer's scope |
+| A4 | Under A1–A3, a compression **accepted as sufficient warrant at a new read site** receives the operational authority of a claim whose scope was settled elsewhere and is no longer inspectable — the seat theorem's *no-seat pose*, produced structurally rather than by an agent. The defect is in **warrant transfer**, not in the artifact's semantic form | A2, A3; Corollary 2a | A compression whose bare form is not read as a claim about the consumer's scope |
 
 **WITNESSED — measured in this institution. Owes a manifest row (Appendix B) and an as-of date.**
 
@@ -427,10 +427,32 @@ artifact issued under a framing that co-determines it and is not fixed by the si
 
 Two consequences follow immediately, and both are the seat theorem's rather than this paper's.
 
-**The framing is not recoverable from the artifact's form.** A compressed form has fewer degrees of
+**The framing is not entailed by the compressed content.** A compressed form has fewer degrees of
 freedom than the corpus, and Π is among the things dropped — because the producer did not need it.
-The producer *was* the framing. So an abstraction arrives at the read site looking exactly as it
-would look had it been formed at the reader's framing rather than the producer's.
+The producer *was* the framing. Where a framing *is* present, it is present as **additional authored
+content** — a denominator, an as-of date, a coverage fraction, a declared residue — and not as
+something recoverable from the compression itself. Absent that authoring, an abstraction arrives at
+the read site looking exactly as it would look had it been formed at the reader's framing rather
+than the producer's.
+
+<!-- CLAIM-CORRECTION-BEGIN: framing-recoverability -->
+*The stronger form — "not recoverable from the artifact's form" — is false as stated, since a report
+may say "all transactions 1–31 January exceeding $10,000"; the narrowing is
+`docs/concealment/concealment_without_a_concealer_v0_4.md` §3.3, and it is what makes carriage a
+consequence rather than a paradox: carriage works precisely because framing is additional
+information, and someone has to author it.*
+<!-- CLAIM-CORRECTION-END: framing-recoverability -->
+
+<!-- Sentinel rationale: the superseded form is QUOTED in the block above in order to be killed, so
+     an absence-count check over that string is unsatisfiable alongside this note. The check is
+     instead CONTAINMENT: every occurrence of the superseded string falls inside a CLAIM-CORRECTION
+     block; a re-assertion outside one fires. Run it via
+     `audits/2026-08-13_oq287_defork/checks.sh row1`. Two consequences for whoever edits nearby:
+     (1) do not anchor the check on a line number — A2 and A3 move every line here; (2) this
+     comment deliberately does not spell the superseded string, because prose ABOUT the check
+     would otherwise register as an occurrence of the thing checked. That is not hypothetical:
+     the first draft of this comment quoted it in full and turned the check red. -->
+
 
 **An abstraction is therefore not false.** It is *lossy in a direction chosen by whoever compressed,
 at a framing they did not have to state* — valid where it was formed and silently invalid elsewhere.
