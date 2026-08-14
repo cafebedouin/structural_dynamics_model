@@ -226,6 +226,17 @@ which is what compression means, but that
 
 so the consumer cannot tell which interpretation it is licensed to make.
 
+A1–A4 now yield one statement, given its own label because it is the form downstream work should
+cite rather than re-author:
+
+> **C1 — absence/presence collapse.** An absence presents as a presence when an abstraction is read
+> at a framing other than the one it was formed at.
+
+Nothing further is needed to get there: the producer's artifact was accurate about what the producer
+looked at (A1, A2), the receiver cannot enumerate what the framing excluded (A3), and the receiver
+nonetheless takes the artifact as sufficient warrant (A4). No party did anything wrong at any step,
+and no channel carried the difference.
+
 ### 3.6 Why neutrality is not the alternative to carriage (A5)
 
 An obvious objection to everything above is that the repair is unnecessary: rather than carrying the
@@ -1044,6 +1055,7 @@ re-derivation depends (§8.3).
 | A3 | No procedure operating only on the compressed content can enumerate omissions not positively represented by the artifact or its declared provenance | Such a procedure |
 | A4 | When accepted as sufficient warrant at a new read site, a compression receives the operational authority of a claim whose scope was settled elsewhere and is not inspectable | A boundary protocol under which unscoped artifacts do not transfer warrant |
 | A5 | Framing-invariant content is prohibitive rather than selective; therefore neutrality is not an alternative to carriage, and utility and transportability are inversely related | A framing-invariant claim that selects among locally available actions without any seated premise |
+| C1 | **Corollary of A1–A4** (§3.5). Absence/presence collapse: an absence presents as a presence when an abstraction is read at a framing other than the one it was formed at | An artifact form under which a receiver at a different framing reliably distinguishes measured-and-empty from not-looked-at, without additional authored framing |
 
 **EMPIRICAL — measured; currently supported unevenly.**
 
