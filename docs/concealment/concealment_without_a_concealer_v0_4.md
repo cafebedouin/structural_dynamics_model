@@ -27,10 +27,12 @@ how each claim may be discharged. Historical cases in §7–§8 were verified ag
 ## Preface: what kind of claims these are
 
 The argument mixes three kinds of claim, and conflating them is how an account of this shape gets
-both overclaimed and overcorrected. **Analytic** claims (A1–A4) are derived from stated premises and
-are refuted by exhibit, not by data. **Empirical** claims (E1–E3) are generalizations about how
-parties behave, and are currently supported unevenly. **Proposed** claims (P1–P3) are design
-consequences with falsifiers. The full table, with kill conditions, is Appendix A. A reader who
+both overclaimed and overcorrected. **Analytic** claims (A1–A5, and the corollary C1) are derived
+from stated premises and are refuted by exhibit, not by data. **Empirical** claims (E1–E5) are
+generalizations about how parties behave, and are currently supported unevenly. **Proposed** claims
+(P1–P5) are design consequences with falsifiers. The full table, with kill conditions, is Appendix A,
+**which is authoritative for the label set — this sentence is a summary of it and has already been
+stale once.** A reader who
 wants the argument rather than the bookkeeping can proceed; a reader who wants to attack it should
 start there, because the table says which attacks would land.
 
@@ -1055,7 +1057,7 @@ re-derivation depends (§8.3).
 | A3 | No procedure operating only on the compressed content can enumerate omissions not positively represented by the artifact or its declared provenance | Such a procedure |
 | A4 | When accepted as sufficient warrant at a new read site, a compression receives the operational authority of a claim whose scope was settled elsewhere and is not inspectable | A boundary protocol under which unscoped artifacts do not transfer warrant |
 | A5 | Framing-invariant content is prohibitive rather than selective; therefore neutrality is not an alternative to carriage, and utility and transportability are inversely related | A framing-invariant claim that selects among locally available actions without any seated premise |
-| C1 | **Corollary of A1–A4** (§3.5). Absence/presence collapse: an absence presents as a presence when an abstraction is read at a framing other than the one it was formed at | An artifact form under which a receiver at a different framing reliably distinguishes measured-and-empty from not-looked-at, without additional authored framing |
+| C1 | **Corollary of A1–A4** (§3.5). Absence/presence collapse: an absence presents as a presence when an abstraction is read at a framing other than the one it was formed at | **Inherits A1–A4's; no independent falsifier.** The corollary adds no premise, so it is refuted only by refuting one of them. The nearest exhibit — an artifact form at which a receiver reliably distinguishes measured-and-empty from not-looked-at without additional authored framing — is A2's and A3's kill conditions jointly, not a further one. Stated rather than left blank: a blank reads as an oversight, and this is a decision |
 
 **EMPIRICAL — measured; currently supported unevenly.**
 

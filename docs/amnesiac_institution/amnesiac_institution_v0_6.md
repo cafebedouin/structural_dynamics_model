@@ -375,252 +375,69 @@ act as one that retained nothing.
 
 ---
 
-## 2. Abstraction, Scope, and the Shape of the Failure
+## 2. The derivation this paper uses, and the two controls on its use
 
-This section is **ANALYTIC** (§0). It derives the paper's failure spine from a law the research
-program already holds, rather than proposing a theory the case study then confirms. That
-distinction is load-bearing and was lost for three drafts: a derivation is refuted by exhibit, not
-by data, and the repository evidence in Parts II and III bears on whether the derived failure mode
-*occurs and is common here* — a different question, differently discharged.
+**§2.1–§2.7 are vacated.** The derivation that stood here is carried, in one place, by
+`docs/concealment/concealment_without_a_concealer_v0_4.md`. This paper uses its conclusion and does
+not restate its argument. That conclusion, stated there as `CWC:C1@8475dc95`:
 
-One element in what follows is not in the program's existing law and is marked where it appears
-(§2.5). The rest is relocation, and saying so is cheaper than being caught at it.
+> **Absence/presence collapse.** An absence presents as a presence when an abstraction is read at a
+> framing other than the one it was formed at.
 
-### 2.1 Abstraction is compulsory (A1)
+It follows from `CWC:A1@e858a33d`, `CWC:A2@31548228`, `CWC:A3@fe7890db` and `CWC:A4@62d54b18`, with
+the operational asymmetry at `CWC:E1@884ea0b6`. Numbers 2.1–2.7 are not reused: *a visible gap is a
+checked fact; a silent renumber is a fork* (§5.2).
 
-**Abstraction is what makes an idea small enough to manipulate, whatever the substrate is.**
+*Why the vacation: two live documents carried this derivation and each named it as its own
+contribution — Pattern 2 on the substrate of the paper that documents Pattern 2 (ISSUES OQ-287).*
 
-A fresh instance cannot hold the audit record, so it holds `CLAUDE.md`. The operator cannot hold
-1,500 lines of draft, so he holds a shape. A reader cannot hold nine million volumes, so a
-discipline produces a companion volume — an edited compression, authored by people judging what a
-non-specialist must know. A model cannot attend uniformly across 200,000 tokens, so its own
-attention performs a compression the model does not report (§3.1).
+### 2.A What the derivation looks like here
 
-The constraint is not a property of language models. It is a property of **anything that must act on
-a corpus larger than its working set**, and the response is always the same: someone, or something,
-decides what may be dropped. Where the working set is small relative to the corpus, the compression
-ratio is high and the decision is consequential. That ratio is the quantity this paper is really
-about, and it is moving in the direction that matters (§2.7).
+These are instances of `CWC:A2@31548228` observed in this repository. They are what the vacated
+subsections held that the cited paper does not, and they are cited *as* instances — the general form
+is that paper's, the instances are this one's, and neither is the other's evidence.
 
-The corollary the memory economy of §8 is built on: **unbounded retention is not memory; it is a
-pile.** A record no reader can hold has not retained the knowledge in it. Retention is necessary for
-retrievability and is not itself the operation the institution needs performed.
-
-### 2.2 Scope is the framing Π, and the framing is a seat (A2)
-
-Here is the step that makes this a derivation rather than an observation, and it is not new
-machinery — it is `seat-theorem-v1.md` §8, quoted in its own terms.
-
-The seat theorem's Coupling Theorem establishes that a verdict is seat-free if and only if it is
-contentless: any parameter that co-determines an answer without being fixed by the situation is an
-index of evaluation, a standpoint. Its §8 then pushes the result one level down. The situation σ is
-**not given but framed**: the partition of the total field into "background" and "free parameters"
-is itself a live parameter, hence a seat. There is no neutral situation-description beneath a
-verdict for neutrality to retreat to. Liveness is framing-relative; the framing is never given; and
-a system cannot certify the neutrality of its own framing from within, because each ascent produces
-a richer system with its own uncertifiable framing.
-
-**What this paper adds is only an identification.** The *scope* at which a compression is formed —
-what it ranged over, what it excluded, under what selection rule, during what interval — **is** the
-framing Π. A summary, a count, a green check, a status line, a verdict: each is a verdict-shaped
-artifact issued under a framing that co-determines it and is not fixed by the situation.
-
-Two consequences follow immediately, and both are the seat theorem's rather than this paper's.
-
-**The framing is not entailed by the compressed content.** A compressed form has fewer degrees of
-freedom than the corpus, and Π is among the things dropped — because the producer did not need it.
-The producer *was* the framing. Where a framing *is* present, it is present as **additional authored
-content** — a denominator, an as-of date, a coverage fraction, a declared residue — and not as
-something recoverable from the compression itself. Absent that authoring, an abstraction arrives at
-the read site looking exactly as it would look had it been formed at the reader's framing rather
-than the producer's.
-
-<!-- CLAIM-CORRECTION-BEGIN: framing-recoverability -->
-*The stronger form — "not recoverable from the artifact's form" — is false as stated, since a report
-may say "all transactions 1–31 January exceeding $10,000"; the narrowing is
-`docs/concealment/concealment_without_a_concealer_v0_4.md` §3.3, and it is what makes carriage a
-consequence rather than a paradox: carriage works precisely because framing is additional
-information, and someone has to author it.*
-<!-- CLAIM-CORRECTION-END: framing-recoverability -->
-
-<!-- Sentinel rationale: the superseded form is QUOTED in the block above in order to be killed, so
-     an absence-count check over that string is unsatisfiable alongside this note. The check is
-     instead CONTAINMENT: every occurrence of the superseded string falls inside a CLAIM-CORRECTION
-     block; a re-assertion outside one fires. Run it via
-     `audits/2026-08-13_oq287_defork/checks.sh row1`. Two consequences for whoever edits nearby:
-     (1) do not anchor the check on a line number — A2 and A3 move every line here; (2) this
-     comment deliberately does not spell the superseded string, because prose ABOUT the check
-     would otherwise register as an occurrence of the thing checked. That is not hypothetical:
-     the first draft of this comment quoted it in full and turned the check red. -->
-
-
-**An abstraction is therefore not false.** It is *lossy in a direction chosen by whoever compressed,
-at a framing they did not have to state* — valid where it was formed and silently invalid elsewhere.
-This is gauge relativity applied to summaries instead of to verdicts: a classification cited without
-its position is Type-C-ambiguous, and a summary cited without its scope is the same defect wearing
-friendlier clothes.
-
-*The premise this rests on is contestable and is declared here rather than assumed.* The seat
-theorem's §8 is conditional on P3 — that the field does not self-partition into a privileged
-framing. A direct realist about the given denies P3 and holds that some framings are joint-carving.
-Against that reader §2 is **local**: it binds those who grant P3, which by the theorem's own logic
-is the only status a contentful claim can have. What survives P3's denial is weaker and still
-sufficient for everything Parts II–IV do: even a joint-carving realist must concede that *these*
-artifacts — a grep's output, a manifest's totals row, a monthly memory prune — were framed by
-somebody with a budget, and their framings are not in them.
-
-Three ordinary examples from this repository, which look like three kinds of mistake and are one:
+Two that look like two kinds of mistake and are one:
 
 - A count of "open questions" correct at the `open`-status framing, correct at the workable-frontier
   framing, correct at the not-resolved framing, and wrong as an uncited composite (§1.1).
 - An incidence figure of 42% accurate over the substrate stratum it was computed on and silent about
   the instrument stratum nobody has measured (§5.4).
-- A completeness check that reported complete over items flagged in files and could not see items
-  produced in conversation (§2.4).
 
-### 2.3 Recognition and enumeration (A3)
+The paper's own headline is the second of these. `CWC:A2@31548228` and that paper's §5.4 state the
+general form; **42% is the instance this paper is answerable for**, accurate at the framing it was
+formed at and silent about the instrument stratum until someone asked what the denominator ranged
+over.
 
-The mechanism by which an unstated framing becomes a *silent* failure rather than a visible one is
-the following asymmetry, which the practice reached from the other direction
-(`build_discipline.md`, *write the receiver's prompt*) and which is the derivation's load-bearing
-step.
+The same shape in three phrasings this repository actually produces: *"tests pass"* without a date is
+a compression over an expired interval; *"no occurrences found"* without a positive control is a
+compression over a search whose reach is unknown; *"all addressed"* over a review list is a
+compression whose selection rule is the reviewer's attention.
 
-> **Re-reading a rule exercises recognition. Writing the instruction that would execute it exercises
-> enumeration. Gaps live exactly where a design named a decision but never named its operational
-> half, and those gaps are invisible to recognition and unavoidable under enumeration.**
+### 2.B Prior art, stated so this paper does not claim it
 
-Recognition operates on shape: it checks that the artifact still says what the reader remembers, and
-a summary correct in prose passes every time. Enumeration operates on detail: it requires producing
-the operational form — every input the receiver needs, every artifact they must produce, every
-decision they would otherwise make on the author's behalf.
+`deferential_realism_paper_v8.md` §8 already states the rule — **claims carry their scope**: "a
+witness earned on one corpus, one regime, one seat-count licenses a claim about that corpus, that
+regime, that seat-count" — and already identifies the classifier's honesty about absence and the
+build's honesty about absence as the same invariant. The *derivation* of that rule is
+`CWC:A1@e858a33d`–`CWC:A4@62d54b18`, cited above. This paper claims neither; **what it does claim is
+accounted at §13**, which is where the novelty accounting lives and is the only place it is stated.
 
-Combine with §2.1. A party holding a compression **holds the shape and not the detail** — that is
-what a compression is. Such a party can perform recognition and cannot perform enumeration, not
-through lack of care but through lack of the material enumeration needs. And an absence has no
-positive form to recognize: it is precisely what is not in the shape.
+### 2.C The consequence this paper proposes (P1)
 
-The empirical support for the last step, from outside this repository, is unusually direct.
-AbsenceBench (Fu et al., 2025) reports that models detect *omitted* content poorly even in modest
-contexts — Claude 3.7 Sonnet at 69.6% F1 at ~5K tokens — and gives the mechanical reason: transformer
-attention cannot easily attend to gaps, because absences correspond to no key. The finding
-generalizes past attention. **Nothing attends to a gap.** A gap is not a feature of the compressed
-representation — in a model, in a person's recollection of a document, or in a summary row — and is
-therefore unavailable to any procedure operating on that representation.
+If `CWC:C1@8475dc95` holds, the five patterns of §5 are one mechanism at five layers rather than five
+discoveries — which is what the practice found when it tried to fix them layer by layer and failed.
+This is stated as **P1** (§0) rather than as a finding, and it is this paper's own claim rather than
+the cited paper's: it is a proposition about *this repository's defect record*, which that paper does
+not hold. §2.9 runs the control it owes.
 
-### 2.4 Frame-completeness reads as completeness
+### 2.D What is new about the AI era
 
-The consequence is the signature this paper's apparatus is built against.
-
-> **An inventory built under an unstated selection criterion does not read as visibly partial. It
-> reads as plausibly total, because every item in it belongs.**
-
-The August 2026 arc that produced this revision supplied three instances of the shape, each a
-selection criterion that was defensible, applied by everyone including the operator, and never
-articulated:
-
-| the abstraction | included | excluded | cost |
-|---|---|---|---|
-| a pre-registration's pin manifest | artifacts that read like specifications | artifacts that run | a run executed under a valid freeze, using an instrument that could not retain its output |
-| an experiment's design | every stage up to where data lands | every stage after | 219 answers that nothing in the repository could score — a producer with no consumer, one stage downstream of the one that failed |
-| a forward-flag manifest | items flagged in files | items produced in conversation | seven paper-level findings invisible to a completeness check that reported complete |
-
-Each inventory read complete because every item in it belonged. This generalizes to the paper's own
-headline: 42% is an abstraction of the audit record, accurate at the framing it was formed at, and
-silent about the instrument stratum (§5.4) until someone asked what the denominator ranged over.
-
-### 2.5 Concealment without a concealer, and the spine derived (A4, P1)
-
-**This subsection contains the paper's one genuinely new claim, and it is a consequence rather than
-a construction.**
-
-The seat theorem permits exactly one inconsistent position: the **no-seat pose** — asserting content
-while denying a standpoint. In the framework's usual setting this is something an *agent* does, a
-move available to be caught and named, and Corollary 2a's remedy is correspondingly moral in form:
-concealment is the unique inconsistency, so declare the seat.
-
-Under §2.1–§2.3 the pose is produced **structurally, by compression, with nobody posing.** A bare
-value asserts that it is real by saying nothing about whether it is. The producer concealed nothing:
-it stated what it found, at the framing it found it. The consumer deceived no one: it read the
-artifact as artifacts are read. Neither party held a standpoint they declined to declare. The
-institution nevertheless emitted a contentful verdict presented as framing-free — which is exactly
-the inconsistency the framework forbids — as a byproduct of the working-set constraint.
-
-Two things follow, and they are why this paper exists rather than a memo saying "declare your
-seats."
-
-**The remedy cannot be an honesty norm.** Nobody was dishonest. A discipline addressed to
-concealment reaches the case where a party *has* a framing and hides it, and does not reach the case
-where the framing was never a mental object anyone held. What reaches that case is an **artifact
-discipline**: a rule about what a value must carry when it crosses a boundary, enforced at the
-boundary, independent of anyone's intentions. That is §2.6, and it is the whole of Part III.
-
-**And the failure spine is now derived rather than observed.** The repository's build discipline
-records the shape inductively:
-
-> **Every recurring defect is an absence that presents as a presence.** Something is missing — a
-> consumer, a canonical fact, an authored datum, a control — and a success-shaped token (the producer
-> ran; both copies parse; a plausible default; a passing gate; an empty grep) fills the hole so the
-> read site cannot tell it from the real thing.
-
-Hereafter: **absence/presence collapse**. The derivation:
-
-1. Parties must abstract (A1).
-2. Abstractions are framed, and do not carry their framing (A2).
-3. Holding a compression permits recognition, not enumeration; gaps are invisible to recognition
-   (A3).
-4. Therefore a consumer reading a producer's compression at a different framing receives a value
-   that is complete-within-frame, cannot detect what the frame excluded, and has no signal
-   distinguishing *measured* from *not looked at* (A4).
-
-**An absence presents as a presence when an abstraction is read at a framing other than the one it
-was formed at.** The producer's summary was accurate about what the producer looked at; the consumer
-reads it as accurate about what the consumer cares about; nothing in the artifact marks the
-difference, because the framing was never part of the value that crossed the boundary.
-
-The consequence for §5 is stated as **P1** rather than as a finding: if the derivation holds, the
-five patterns are one mechanism at five layers rather than five discoveries — which is what the
-practice found when it tried to fix them layer by layer and failed. §2.9 runs the control that
-claim owes.
-
-### 2.6 The design principle, and its extension
-
-The corresponding fix generalizes past any particular incident:
-
-> **No epistemically meaningful value should cross a system boundary without its status.** The
-> consumer must receive enough to distinguish *measured / generated / verified* from *absent /
-> not-run / not-found*.
-
-Concretely: wire-or-fail-loud; canonicity as a checked fact; return `unknown` rather than a plausible
-number; fail closed on absence; carry coverage to the read site.
-
-The extension, and the reason the older principle kept needing case-by-case restatement:
-
-> **No compression should cross a boundary without the framing it was formed at.** As-of dates, unit
-> statements, denominators, coverage fractions, and the manifest's grade column are not four
-> conventions. They are one mechanism: each re-attaches a dropped dimension of Π to a compressed
-> value at the site where someone will read it.
-
-*Prior art, inside the repository, stated so this paper does not claim it.*
-`deferential_realism_paper_v8.md` §8 already says **claims carry their scope** — "a witness earned on
-one corpus, one regime, one seat-count licenses a claim about that corpus, that regime, that
-seat-count" — and already identifies the classifier's honesty about absence and the build's honesty
-about absence as the same invariant. What §2 adds is not the rule but its *derivation from the seat
-law*, which is what makes it a consequence of the framework instead of a fourth good habit, and
-which is what lets §2.5 explain why the rule must be enforced on artifacts rather than urged on
-people.
-
-The practical form is that a summary is owed the same treatment as a measurement. "Tests pass"
-without a date is a compression over an expired interval. "No occurrences found" without a positive
-control is a compression over a search whose reach is unknown. "All addressed" over a review list is
-a compression whose selection rule is the reviewer's attention. Each is a value crossing a boundary
-with its framing stripped.
-
-### 2.7 What is new about the AI era
-
-None of §2.1–§2.6 requires a language model. Human institutions have run on framed compressions
-forever, and their standard remedies — personnel continuity, apprenticeship, the person who *was
-there* — are exactly what the configuration in §1.1 removes. Four things change, in the same
-direction.
+Neither `CWC:C1@8475dc95` nor the claims it follows from — `CWC:A1@e858a33d`, `CWC:A2@31548228`,
+`CWC:A3@fe7890db`, `CWC:A4@62d54b18` — requires a language model. Human institutions have run on
+framed compressions forever, and their standard remedies — personnel continuity, apprenticeship, the
+person who *was there* — are exactly what the configuration in §1.1 removes. Four things change, in
+the same direction.
 
 **The compression ratio collapses.** Generation is cheap and the corpus grows superlinearly, while
 the working set is fixed and, for the workforce, effectively much smaller than advertised: RULER
@@ -652,6 +469,12 @@ stated scope.**
 
 ### 2.8 The unmarked perturbation: what the witness calculus is doing
 
+> **[DECLARED TEMPORARY — A2-pre ruling, 2026-08-13.]** This subsection's canonical destination is
+> the practice paper (§2.8 → III). It stays here, at this number, until that paper lands and a
+> redirect table maps its sub-items to the practice paper's anchors. Until then **this is the
+> canonical copy**; after it lands, this becomes the superseded side and gains a forward pointer.
+> ISSUES OQ-287, second limb.
+
 `the_perturbation_principle.md` states the move under all of the program's instruments: *hold
 everything fixed but one dimension; vary that dimension; read off what stays and what moves.* It
 also states the relation between that move and the trifurcation: **a failure of Type X is what
@@ -682,17 +505,18 @@ The program's own cut by generative mechanism remains useful because it licenses
 | Type B (structure) | Architecture invariant violations | Machine-enforced invariants in the standing gate | two framings contradict inside one system |
 | Type C (ambiguity) | A verdict cited without its position; a count without its corpus | Carry the seat with the verdict (§11) | the framing is unstated |
 
-One ancestor deserves naming here because it is the nearest external relative. Gray failure (Huang
-et al., 2017) defines the dominant cloud failure mode as **differential observability**: the
-application suffers while the observer designed to notice reports health. Wu (2026) carries this
-into LLM agent runtimes and names the escalation *fail-plausible* — the system converts an error into
-fluent narrative delivered to the user; gray failure starves the detector of signal, fail-plausible
-feeds it a counterfeit one (§6.2). Differential observability is the special case in which the two
-framings are the application's and the detector's. **Differential framing is the general one**, which
-is why Wu's own conclusion after 22 postmortems is that the long-latency failures live in *seams*
-rather than in complex parts: a seam is where two framings meet without either being stated.
+The nearest external relative — gray failure's differential observability (Huang et al., 2017), and
+Wu's *fail-plausible* escalation of it — is set out at `concealment_without_a_concealer_v0_4.md`
+§12; a seam is where two framings meet without either being stated (§6.2).
 
 ### 2.9 The negative control on the unification
+
+> **[DECLARED TEMPORARY — A2-pre ruling, 2026-08-13.]** This subsection's canonical destination is
+> the practice paper (§2.9 → V). It stays here, at this number, until that paper lands and a
+> redirect table maps `§2.9(a,b,…)` to its anchors **at sub-item granularity** — the Wu letter of
+> 2026-08-11 cites `§2.9(b)` and has been sent, so section-level redirection is not sufficient.
+> Until then **this is the canonical copy**; after it lands, this becomes the superseded side and
+> gains a forward pointer. ISSUES OQ-287, second limb.
 
 `the_perturbation_principle.md` §7.1 imposes a condition this section owes and v0.5 did not pay: a
 unification claim is *itself* an invariance claim — invariant under which instrument you look at —

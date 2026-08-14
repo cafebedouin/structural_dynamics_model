@@ -36,6 +36,11 @@ normalized() { tr '\n' ' ' < "$1" | sed 's/  */ /g'; }
 pass() { printf '  \033[32mPASS\033[0m  %s\n' "$1"; }
 bad()  { printf '  \033[31mFAIL\033[0m  %s\n' "$1"; fail=1; }
 note() { printf '        %s\n' "$1"; }
+# VACUOUS is neither pass nor fail: the check ran and its population was empty, so it carries no
+# information. It must never print green - a gate that passes because its input is missing is the
+# defect this repository names Build Discipline 5, and a vacuous check rendered as PASS is that
+# defect wearing the instrument's own colours.
+vacuous() { printf '  \033[33mVACUOUS\033[0m %s\n' "$1"; }
 
 # The selftest arms need their OWN counter. They deliberately drive row1 to fire (that is what an
 # arm proving discrimination looks like), so `fail` is expected to be 1 when an arm SUCCEEDS.
@@ -77,10 +82,17 @@ row1() {
   done < "$V06"
 
   note "occurrences of the stale form: $total (inside a CLAIM-CORRECTION block: $inside, outside: $outside)"
-  if [ "$outside" -eq 0 ]; then
-    pass "no occurrence of the superseded formulation outside a correction block"
-  else
+  if [ "$outside" -gt 0 ]; then
     bad "$outside occurrence(s) of the superseded formulation asserted outside a correction block"
+  elif [ "$total" -eq 0 ]; then
+    # A2 vacated §2.2, and the correction note went with it - correctly, since the narrowing now
+    # lives upstream and v0.6 cites it. So this check now passes over an EMPTY population, which is
+    # absence satisfying the gate (Build Discipline 5). Report it as vacuous rather than green: it
+    # is no longer evidence of anything about v0.6, and the live guard has moved to the digest on
+    # CWC:A2, verified by row1's citation arm below.
+    vacuous "containment check has an empty population post-A2 (0 occurrences) - not evidence; live guard is CWC:A2@31548228"
+  else
+    pass "all $total occurrence(s) of the superseded formulation are inside a correction block"
   fi
 
   # --- positive: the replacement is present, read through the normalizer ---
@@ -109,10 +121,16 @@ row1() {
     bad "site 1/2: §0 ANALYTIC A2 row does NOT carry the narrowed claim"
   fi
 
-  if $GREP -q '^\*\*The framing is not entailed by the compressed content\.\*\*' "$V06"; then
-    pass "site 2/2: §2.2 body carries the narrowed claim"
+  # Site 2/2 was §2.2's body. A2 VACATED §2.2, so that site no longer exists and the check is
+  # retired rather than relaxed - the distinction being that the thing checked was deliberately
+  # removed, not that the check became inconvenient. Its replacement is the citation: the narrowing
+  # now lives upstream and v0.6 must POINT at it with a live pin.
+  if $GREP -q '^### 2\.2 ' "$V06"; then
+    bad "site 2/2: §2.2 still exists - A2 did not vacate it, and this check should not have been retired"
+  elif printf '%s' "$norm" | $GREP -q 'CWC:A2@31548228'; then
+    pass "site 2/2 retired with §2.2; replaced by a live pinned citation to CWC:A2@31548228"
   else
-    bad "site 2/2: §2.2 body does NOT carry the narrowed claim"
+    bad "site 2/2: §2.2 vacated but nothing cites CWC:A2 - the narrowing is now asserted nowhere"
   fi
 
   # A4's narrowing, landed in the same pass at the §0 table
@@ -124,7 +142,41 @@ row1() {
 }
 
 row2() { echo "row2: canonicity markers settled"; printf '  \033[33mNOT IMPLEMENTED\033[0m (lands with A5)\n'; return 3; }
-row3() { echo "row3: §2.8/§2.9 anchors + §2.9(b) sub-item resolve"; printf '  \033[33mNOT IMPLEMENTED\033[0m (lands with A2)\n'; return 3; }
+# --- row 3 -------------------------------------------------------------------------------------
+# Precondition (A2) has landed, so this is now implemented.
+# NEGATIVE: the vacated numbers are gone and not reused.
+# POSITIVE: §2.8/§2.9 kept their numbers AND their bodies, the sub-item the Wu letter cites is
+#   still addressable, and the declared-temporary markers are present with their canonical
+#   destination. A vacation that silently took the two subsections with it would satisfy the
+#   negative half alone.
+row3() {
+  echo "row3: §2.8/§2.9 survive the vacation at their numbers, with the §2.9(b) sub-item addressable"
+  local norm; norm="$(normalized "$V06")"
+
+  local reused; reused=$($GREP -c '^### 2\.[1-7] ' "$V06")
+  [ "$reused" -eq 0 ] && pass "vacated numbers 2.1-2.7 not reused as headings" \
+                      || bad "$reused vacated number(s) reused as headings"
+
+  $GREP -q '^### 2\.8 ' "$V06" && pass "§2.8 heading present at its number" || bad "§2.8 heading MISSING"
+  $GREP -q '^### 2\.9 ' "$V06" && pass "§2.9 heading present at its number" || bad "§2.9 heading MISSING"
+
+  # bodies intact, not just headings
+  local excl; excl=$(printf '%s' "$norm" | $GREP -o 'Type B structural contradictions\|Stochastic churn\|Loud destructive replacement' | $GREP -c .)
+  [ "$excl" -eq 3 ] && pass "§2.9(a)'s three exclusions intact ($excl/3)" || bad "§2.9(a) exclusions: $excl/3"
+  local tri; tri=$($GREP -c '^| Type [ABC] ' "$V06")
+  [ "$tri" -eq 3 ] && pass "§2.8's trifurcation table intact ($tri/3)" || bad "§2.8 trifurcation rows: $tri/3"
+
+  # the sub-item the already-sent Wu letter cites must remain addressable
+  printf '%s' "$norm" | $GREP -q '\*\*(b) A within-scope place the signature genuinely breaks' \
+    && pass "§2.9(b) sub-item still addressable (the Wu letter cites it and cannot be edited)" \
+    || bad "§2.9(b) sub-item NOT addressable - an already-sent external citation now dangles"
+
+  local marks; marks=$($GREP -c 'DECLARED TEMPORARY — A2-pre ruling' "$V06")
+  [ "$marks" -eq 2 ] && pass "both declared-temporary markers present ($marks/2)" || bad "declared-temporary markers: $marks/2"
+  printf '%s' "$norm" | $GREP -q 'at sub-item granularity' \
+    && pass "§2.9's marker names sub-item granularity for the redirect" \
+    || bad "§2.9's marker does not name sub-item granularity"
+}
 row4() { echo "row4: 33 refs re-pointed; 27 bare §2 refs individually accounted"; printf '  \033[33mNOT IMPLEMENTED\033[0m (lands with A3)\n'; return 3; }
 
 # --- selftest ----------------------------------------------------------------------------------
@@ -171,15 +223,30 @@ selftest() {
   #         The load-bearing question is narrower: on a file where the phrase exists ONLY in
   #         wrapped form, does raw grep disagree with normalized grep? If they agree, normalized()
   #         is inert and every row that leans on it is unwitnessed.
-  cp "$saved" "$tmp/e.md"
-  $GREP -v '^| A2 | Every abstraction is formed at a framing' "$tmp/e.md" > "$tmp/e2.md"
-  local raw_hit=0 norm_hit=0
-  $GREP -q 'additional authored content' "$tmp/e2.md" && raw_hit=1
-  normalized "$tmp/e2.md" | $GREP -q 'additional authored content' && norm_hit=1
-  if [ "$raw_hit" -eq 0 ] && [ "$norm_hit" -eq 1 ]; then
-    spass "arm E: normalizer is load-bearing (raw grep: absent, normalized: present)"
+  #         Revision: the arm originally used 'additional authored content', which straddled a
+  #         newline in §2.2. A2 vacated §2.2, leaving that phrase only in the §0 table row -
+  #         unwrapped - so the arm went red reporting "normalizer inert". It was right: its
+  #         substrate was gone. Rather than re-pin it to another sentence that a later step can
+  #         vacate the same way, the arm now DERIVES a straddling phrase from the file itself:
+  #         the tail of one line plus the head of the next. Self-maintaining, and it fails only
+  #         if the normalizer genuinely stops working.
+  local probe
+  probe="$(awk 'NF>=8 && prev_nf>=8 && $0 !~ /^[|>#-]/ && prev !~ /^[|>#-]/ {
+                  n=split(prev,a," "); tail=a[n-3]" "a[n-2]" "a[n-1]" "a[n];
+                  split($0,b," "); head=b[1]" "b[2]" "b[3];
+                  print tail" "head; exit }
+                { prev=$0; prev_nf=NF }' "$saved")"
+  if [ -z "$probe" ]; then
+    sbad "arm E: could not derive a line-straddling probe from the file - arm is inert, not passing"
   else
-    sbad "arm E: normalizer inert (raw=$raw_hit norm=$norm_hit) - rows leaning on it are unwitnessed"
+    local raw_hit=0 norm_hit=0
+    $GREP -qF "$probe" "$saved" && raw_hit=1
+    normalized "$saved" | $GREP -qF "$probe" && norm_hit=1
+    if [ "$raw_hit" -eq 0 ] && [ "$norm_hit" -eq 1 ]; then
+      spass "arm E: normalizer load-bearing on a derived straddling phrase (raw: absent, normalized: present)"
+    else
+      sbad "arm E: normalizer inert (raw=$raw_hit norm=$norm_hit) on probe '$probe'"
+    fi
   fi
 
   # arm F - FIRES when the operative phrase is removed at EVERY site, wrapped and unwrapped.
@@ -199,8 +266,8 @@ case "${1:-all}" in
   row3) row3; exit $? ;;
   row4) row4; exit $? ;;
   selftest) fail=0; selftest ;;
-  all) fail=0; row1; echo; selftest; echo
-       echo "rows 2-4 are declared and NOT IMPLEMENTED; they land with A2/A3/A5."; ;;
+  all) fail=0; row1; echo; row3; echo; selftest; echo
+       echo "row2 (A5) and row4 (A3) are declared and NOT IMPLEMENTED; they exit 3, never green."; ;;
   *) echo "usage: $0 [all|row1|row2|row3|row4|selftest]" >&2; exit 2 ;;
 esac
 

@@ -22,6 +22,44 @@
 # citation scheme exists to guard, committed by the guard. Witnessed: the first version of the
 # comparison harness reported a brand-new C1 row as "MOVED" for precisely this reason.
 #
+# --- DESIGN-RATIONALE-BEGIN: whole-row digest -------------------------------------------------
+# The digest covers the WHOLE row line - label, claim cell, and kill-condition cell - not the claim
+# cell alone. A consequence that will look like a bug to someone later: editing a row's KILL
+# CONDITION moves the pin and fires every citation, even though the quoted claim text is untouched.
+#
+# That is deliberate and it is the conservative direction. A citation says "I rely on this row as it
+# reads"; the Appendix exists to state which attacks would land, so a changed kill condition changes
+# what the citing document is entitled to assume, even when the sentence it quotes is identical. The
+# expensive failure runs the other way: digesting the claim cell alone would let a falsifier be
+# narrowed, widened, or emptied underneath thirteen citing sites with every one of them still green.
+#
+# DO NOT "fix" this by narrowing the digest to the claim cell. If the re-read burden is genuinely too
+# high, the correct change is a second, coarser pin (claim-cell digest) reported ALONGSIDE the row
+# digest, so a fire can be triaged as claim-moved vs kill-condition-moved - never a replacement for
+# it. Recorded here rather than in the tracker alone because the reasoning has to travel with the
+# instrument: whoever hits the false-looking fire will be reading this file, not ISSUES.md.
+# --- DESIGN-RATIONALE-END: whole-row digest ---------------------------------------------------
+#
+# --- DECLARED STOPPING POINT (v0.6 §7.6), 2026-08-13 ------------------------------------------
+# THE INSTRUMENT REGRESS STOPS HERE. Eight false absences were produced during OQ-287 Pass A by
+# measurement instruments whose own framing was not part of the query, and five of the eight were
+# committed inside instruments built to catch the earlier three - including two in this file's own
+# first draft (an absent label hashing to e3b0c442; a prose recipe implemented two incompatible
+# ways in one turn).
+#
+# The tempting next move is a checker for the harness that checks the checker. That is instance
+# nine, not the fix for eight. What actually terminated all eight was a person comparing a claimed
+# value against the artifact it described - which is §7.4.1's finding, re-witnessed prospectively
+# rather than assumed.
+#
+# So, per §7.6's two clauses: (1) the next pass costs more than being wrong about what it would
+# catch - the residual is arithmetic on 8-hex prefixes and line-wrapped string equality, both
+# cheap to re-derive by hand at the one moment anyone cares; (2) the open item is DECLARED, not
+# concealed, and here is its falsifier at the current tier: **if a digest defect reaches a citing
+# document undetected - a stale pin that reads green - this stopping point was called too early
+# and the next instrument is owed.** Until then, no instrument nine.
+# --- END DECLARED STOPPING POINT ---------------------------------------------------------------
+#
 # Usage:  ./claim_digest.sh <label> [file]      -> "<8 hex>"
 #         ./claim_digest.sh --all  [file]       -> "<label> <digest>" per line
 #         ./claim_digest.sh --selftest
