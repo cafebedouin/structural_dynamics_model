@@ -117,6 +117,38 @@ its kill condition renders under *Support* and *Owed* is empty.)
 
 ---
 
+**(4) FIVE false absences were produced by this pass's own instruments, and they are one finding.**
+Not a method note. Each is a measurement whose *own framing* was not part of the query, returning an
+inventory that read complete because every item in it belonged — §2.4's signature, committed five
+times inside the pass that de-forks the paper stating it.
+
+| # | the instrument | the framing it did not carry | what it reported | what was true |
+|---|---|---|---|---|
+| i | `grep -r '§2\.[89]' \| grep -v 'amnesiac_institution_v0_6.md'` — filtering the paper's self-references out of an external-reference sweep | that a *citing* line may name the file it cites | 2 external references | 3 — and the dropped one was `LETTER_2026-08-11_wu.md`, the only one that **cannot be edited** |
+| ii | a §2-body-scoped sweep for the un-narrowed `A4` | that a claim recurs outside the section that derives it | 1 site (§2.5 step 4) | 4 — `:228`, `:550`, `:2165`, `:2581`; **two of them survive the vacation**, and the §0 row is the paper's most-read surface |
+| iii | `grep 'additional authored content'` after landing A1 | that the phrase spans a line break at `:432–433` | absent | present |
+| iv | the sentinel-rationale comment written to *explain* check row 1 | that prose **about** a checked string is an occurrence **of** it | — | the comment turned its own check red |
+| v | selftest arm E, first draft: delete the wrapped copy of the operative phrase, expect a fire | that the §0 A2 row carries the same phrase **unwrapped** | the checker missed a removal | the removal was partial; the arm passed for the wrong reason and pinned nothing |
+
+Instances (i)–(iii) were caught by the operator or by re-running against the artifact directly.
+Instances (iv)–(v) were caught by `checks.sh` — **the instrument built in response to (i)–(iii),
+firing on defects committed while building it.** That is the finding's sharpest edge: the repair
+generated two fresh instances of the thing it repairs, in its own apparatus, within one turn.
+
+**Why this is evidence rather than hygiene.** It is a dated, five-instance, single-session witness
+for v0.6 §2.9(b)'s claim that the remedy is **not self-terminating** — *declaring Π produces a new
+artifact with a new Π*. §2.9(b) currently supports that claim with the nine §7.4 instances, which are
+retrospective. This is prospective and was produced under observation. And the catch mechanism
+matches §7.4.1 exactly: **not one of the five was caught by a gate reading its own output green.**
+(i)–(iii) were caught by a person comparing a claimed result against the artifact; (iv)–(v) by a
+control that compared a claimed absence against the file. Zero were caught by the passing check.
+
+**Carried forward:** this is the strongest available argument that §2.9 can be made **load-bearing**
+in the practice paper's IV (the recursion) rather than appended — which is Pass B's pre-registered
+acceptance condition. It is named as candidate material for section IV in `EXTRACTION_PROMPT.md`.
+
+---
+
 ## 4. Measurements taken this pass (for A3's positive half)
 
 Counted with `/usr/bin/grep` (pinned, per the Build Discipline count rule), on

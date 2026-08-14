@@ -1052,7 +1052,7 @@ re-derivation depends (§8.3).
 | E1 | Parties checking an artifact default to recognition and enumerate only when forced | Model evidence under tested conditions; four rulings in one institution (embedded case material) | Prediction 1 |
 | E2 | Silence scales inversely with reconstructability, and reconstructability is unobservable to the institution relying on it | Fogbank; the scurvy episode; argued in §6 | Prediction 2 |
 | E3 | Mode-3 blind cells are not discoverable from inside a representational system | The scurvy episode; one census against a foreign source | Prediction 5 |
-| E5 | A claim that has never been perturbed is indistinguishable from an invariant; apparent universality measures the range of positions sampled | A method for distinguishing local from global sections without varying the position |
+| E5 | A claim that has never been perturbed is indistinguishable from an invariant; apparent universality measures the range of positions sampled | Argued in §3.6; the scurvy episode (§7.2), where a century of gluing across an unvaried framing read as a fact about the world | No prediction; kill condition instead — a method for distinguishing local from global sections without varying the position |
 | E4 | A society cannot enumerate its lost capabilities; capability loss is measured only by the event that requires them | Historical collapse and knowledge-loss cases (§8.2) | A society maintaining an accurate register of what it can no longer do |
 
 **PROPOSED — design consequences.**
