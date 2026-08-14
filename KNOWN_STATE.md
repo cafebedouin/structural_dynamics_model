@@ -105,7 +105,33 @@ under-recovered rows to OQ-294. Two further traps recorded there: the sweep **re
 committed output** (census compounded 671 → 1421; a producer consuming its own artifact reports
 growth as discovery), and a regex literal containing an index made the checker **cite itself**.
 
-**Still not ruled:** R1b′, R2, R4.
+**R1b′ RULED 2026-08-14 — B1′, PEER MEMBER AT INDEX 7** (3 stays vacant; `CLAUDE.md:506` is a
+standing do-not-reuse instruction). The criterion is conjunctive and only the corrective half had
+been checked; the tell half is answered by `build_discipline.md`'s **own spine table**, which gives
+bound-probe and the diagnostic layer separate rows with **opposite-polarity tokens** — "a solution
+came back" (over-count, 432 vs 404) against "a clean/empty result" (under-read) — and tells visible
+statically (`:648`) vs only by running a known-positive (`:1007`).
+
+**TRIPWIRE — THE `P3 = 0` FIGURE IS INADMISSIBLE AND I CITED IT ANYWAY.** The frozen OQ-277 prereg
+states, four lines below the figure, that P3's entry is **`no members — uncalibrated`**, that
+per-pattern (iii′) agreement **is not reportable**, and (`:244` row 6) that reading a per-pattern
+(iii′) figure as a finding is a **pre-registered error**. **A frozen, gate-enforced artifact
+guarantees its TEXT is unaltered, never that your READING of it is apt** — the exact residual
+`claim_cite_check.py` declares it cannot close. The freeze's authority is what made the figure feel
+load-bearing. Struck.
+
+**R2's ground corrected to READ-SITE WEIGHT, not the 5:1 edit count** — 9 of 11 sites are in a
+detail doc read on demand; the 2 on the other side include the always-loaded `CLAUDE.md`, so the
+asymmetry runs in opposite directions on the two measures. Operator lean C2 (fabricated-default
+keeps 4); **R2 not formally ruled.**
+
+**OQ-294 MUST CONSUME THE CORRECTED LABEL SET** — produced at commit `fd73ec9e` or later,
+**never the `6e7df53f` copy it was minted against**, which is under-recovered. **Pin the PRODUCER,
+not the content:** the label set is a line-keyed census of tracked files, so it changes whenever
+any scanned file is edited — a content hash pinned in a scanned file (`ISSUES.md`, this file)
+invalidates itself as it is written. Verify by regenerating: `--sweep` then `git status` clean.
+
+**Still not ruled:** R2, R4.
 The citation repair is deliberately held until R2 — "append the slug in place" is invalidated if
 the ruling renumbers. **OQ-294 minted** (`splits_from OQ-278`) for the taxonomy
 self-reproducibility study; it consumes `LABEL_SET.tsv`, which is keyed on `mechanism_slug` so it

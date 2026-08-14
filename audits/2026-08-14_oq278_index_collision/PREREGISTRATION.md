@@ -119,9 +119,11 @@ it** — that is the granularity error the plan criticizes in the paper's §5.2.
 
 **Evidence standing at registration:**
 - 1 internal index cross-reference (corrected), vs 9 for `BD-P4`;
-- **zero measured coverage** in the frozen prereg (`P3 = 0`, `PREREGISTRATION.md:78`) **with no
-  account.** OQ-278 explains the *published* P3's zero via missing mechanism text; that
-  explanation does not transfer, because `BD-P3` has mechanism text, a fix and a diagnostic;
+- ~~**zero measured coverage** in the frozen prereg (`P3 = 0`, `PREREGISTRATION.md:78`) **with no
+  account.**~~ **STRUCK 2026-08-14 (AMENDMENT 2 §A2.1) — THIS BULLET WAS FALSE.** The figure has
+  an account, written four lines below it in the artifact cited: `no members — uncalibrated`.
+  Reading a per-pattern (iii′) figure as a finding is named a **pre-registered error** by that
+  same freeze (`:244` row 6). Struck from every consequent; not evidence either way;
 - its corrective (`:645`, query unbound + post-filter) is genuinely distinct from the
   positive-control discipline, so it is **not subsumed**;
 - but its honest description is a **Prolog-specific instrument defect** in that family — the
@@ -368,3 +370,130 @@ the dated OQ-33 exemplar, a tripwire diagnostic, `:901`'s axis position, and Pat
 | **R4** | falls out, waits |
 
 Steps 4 and 5 remain blocked. Nothing in this amendment is a repair.
+
+---
+
+# AMENDMENT 2 — 2026-08-14 (R1b′ ruled; the zero struck as inadmissible)
+
+## A2.1 — THE ZERO IS STRUCK, and my evidence bullet asserting it was FALSE
+
+The operator asked whether the power floor was cleared before the frozen prereg's `P3 = 0` does
+any work. **The answer is that the question never arises, and the figure is barred on stronger
+grounds than being underpowered.**
+
+**(a) The pass that the power floor governs never ran.** The power block belongs to the
+fork-residue row, which was retired with OQ-277's cross-coding (`ISSUES.md:11217`: *"the honest
+RQ2 result now that the cross-coding is retired"*). The `P3 = 0` I cited is not from that pass at
+all — it is **(iii′) unit coverage**.
+
+**(b) That figure is PRE-REGISTERED AS INADMISSIBLE, by name, four lines below itself.**
+`audits/2026-08-10_oq277_rq2_crosscoding/PREREGISTRATION.md:78–84`:
+
+> **(iii′) coverage: … P3 = 0.** Pre-registered before any number exists: **a pattern with zero
+> members contributes NOTHING to the row.** Not read as agreement, not counted in the
+> denominator, not reported as "no disagreement observed." **P3's row entry is `no members —
+> uncalibrated`.** … whole-row agreement is reportable, **per-pattern agreement is not**, and any
+> sentence reading a per-pattern (iii′) figure as a finding is a [pre-registered error]
+
+and `:244` row 6 lists it in the freeze's explicit table of pre-registered errors: *"(iii′) at
+n=10 with P3 uncalibrated — calibration data, not a verdict; per-pattern figures are a
+pre-registered error."*
+
+**(c) So my R1b evidence bullet — "zero measured coverage … WITH NO ACCOUNT" — was false.** It
+has an account, and the account is written in the artifact I cited: `no members — uncalibrated`.
+I read a per-pattern (iii′) figure as a finding, which that document names as an error in
+advance.
+
+**The shape of my mistake, recorded because it is a live instance of a declared residual.** I
+cited a *frozen, gate-enforced* artifact — and the freeze guarantees the text is unaltered, not
+that my reading of it is apt. `claim_cite_check.py` declares exactly this gap: *"THIS CHECKER
+VERIFIES THAT A PIN MATCHES ITS ROW. IT CANNOT VERIFY THAT THE ROW IS THE RIGHT ONE TO CITE AT
+THAT SITE … The mechanical relation is guarded; the semantic one is not."* The freeze's
+authority made the figure feel load-bearing; the same document four lines down forbade the
+reading.
+
+**The zero is struck from every consequent in R1b′.** It is not evidence for or against
+membership.
+
+## A2.2 — R1b′ RULED: B1′, PEER MEMBER
+
+The criterion is conjunctive — distinct tell **AND** distinct corrective — and the operator is
+right that only the corrective half had been verified. The tell half, run now.
+
+**The file answers it itself, in the spine table, which gives them SEPARATE ROWS with different
+holes, different tokens and different read sites** (`build_discipline.md:2599`, `:2602`):
+
+```
+| 3 | Bound-probe bypasses cut | the lock clause never dispatched | a solution came back → "it's in the class" | the `findall` result/count |
+| — | (diagnostic layer)      | the probe didn't actually look   | a clean/empty result → "nothing there"     | the analyst reading the result |
+```
+
+**The success-shaped tokens are of OPPOSITE POLARITY**, which is the decisive fact:
+
+| | bound-probe | positive-control discipline |
+|---|---|---|
+| token | **a solution came back** — an over-count (432 against a true 404) | **a clean/empty result** — an under-read |
+| failure direction | false POSITIVE membership | false NEGATIVE / unexamined absence |
+| tell is visible | **statically**, in the source: *"any `findall`/`forall` over a cut-ordered predicate with the selecting argument bound is suspect"* (`:648`) | **only dynamically**: *"a clean read is byte-identical to a read that didn't look"* (`:1007`) — you cannot tell from the output; you must run a known-positive |
+| read site | the `findall` result/count | the analyst reading the result |
+| corrective (already verified) | query unbound + post-filter (`:645`) | pair the probe with a case it must flag |
+
+A defect you can find by *reading the call site* and a defect you can find *only by running a
+control* are not the same tell at any altitude.
+
+**The one contrary datum, weighed rather than ignored.** `:1015` files the bound probe as one of
+"four instances, all the same shape" inside the positive-control section. But that section states
+its shape as the **spine** — *"absence and 'looked and found absence' collapse to the same token
+at the read site, exactly as in the five patterns."* The spine is shared by **every** member by
+construction; if co-membership in it decided the question, all six would collapse into it. It
+cannot discriminate, so it does not.
+
+**Ruling: distinct tell + distinct corrective ⇒ distinct member. R1b′ = B1′ — `bound-probe` is a
+PEER MEMBER.**
+
+**Inadmissible and not used:** the 1-vs-9 citation asymmetry (evidence about how heavily a member
+is *cited*, not whether it *is* one — and a lagging measure of the very ambiguity this OQ
+exists to fix); the struck zero (A2.1); generality (AMENDMENT 1 §A1.1).
+
+## A2.3 — INDEX = 7. Index 3 stays vacant in both documents.
+
+Operator, 2026-08-14. `CLAUDE.md:506` — *"Index deliberately left EMPTY; do not reuse or
+renumber"* — is a standing instruction on the always-loaded file, and the demote ruling that
+vacated 3 is a fortnight old. Refilling 3 with bound-probe would countermand it. **Bound-probe
+takes a fresh index 7; 3 stays vacant in both documents.**
+
+## A2.4 — R2's ground: READ-SITE WEIGHT, not the edit count
+
+Operator correction: **the 5:1 is an edit count, and edit counts are not the right weight.** Nine
+of the eleven sites are internal to `build_discipline.md`, a detail doc read on demand; the two
+on the other side include `CLAUDE.md`, which every instance reads on load.
+
+> Moving recap-as-witness is two edits but changes what every future instance reads first;
+> keeping fabricated-default at 4 is nine edits in one file, in one change, mechanically
+> checkable by the new checker.
+
+**The asymmetry runs in opposite directions on the two measures**, and only read-site weight is
+about what readers actually encounter. **Operator lean: C2 — `fabricated-default` keeps index 4**,
+on read-site weight. Recorded as a lean; **R2 is not formally ruled here.**
+
+Consequent set if C2 lands with R1b′ = B1′:
+
+```
+1 produced-but-not-consumed   2 one-canonical-thing-became-two   3 — VACANT (never reused)
+4 fabricated-default          5 absence-satisfies-the-gate       6 success-shaped-absorption
+7 bound-probe-bypasses-clause-order                              8 recap-as-witness-substitution
+```
+
+`recap-as-witness` moving to 8 is the two-edit side, and it is the side that touches the
+always-loaded file — which is exactly why the ground is read-site weight and not the count.
+
+## A2.5 — Status
+
+| ruling | state |
+|---|---|
+| **R1a** | **RULED — A1, peer member** |
+| **R1b′** | **RULED — B1′, peer member; index 7** |
+| **R2** | ground corrected to read-site weight; operator lean **C2**; **not formally ruled** |
+| **R4** | falls out of R1a + R1b′ — the paper gains two members and a vacant 3; applied at Step 5 |
+
+Steps 4 and 5 remain blocked on R2. Nothing here is a repair.

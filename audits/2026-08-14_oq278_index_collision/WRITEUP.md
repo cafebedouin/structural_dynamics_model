@@ -140,8 +140,15 @@ have.
 it and every row it already held became a candidate on the next run: the census compounded to
 **1421 rows against 671 real candidates**, and would have grown at every future run. A producer
 that consumes its own artifact reports **growth as discovery**. Fixed by an explicit
-`SELF_OUTPUT` skip; the sweep is now byte-identical across consecutive runs (md5
-`63e5d9e4…`), which is the witness.
+`SELF_OUTPUT` skip; the witness is that two consecutive `--sweep` runs with no intervening edit
+are byte-identical (a fixpoint), which is the property that failed before.
+
+**Corollary, learned by getting it wrong once here: pin the PRODUCER, never the artifact's
+content.** A first attempt pinned the label set's md5 inside `ISSUES.md` for OQ-294 — but the
+label set is a line-keyed census of tracked files, so it changes whenever any scanned file is
+edited, `ISSUES.md` included. **The hash invalidated itself as it was written**, and chasing it
+would have read as churn rather than as the corruption the pin exists to catch. OQ-294 now pins
+the producing commit (`fd73ec9e` or later) and instructs regeneration.
 
 ## 4. The adjudicated label set — every taxonomy-sense row read in context
 

@@ -11523,6 +11523,42 @@ under-recovered rows to OQ-294. Also caught: the sweep **read its own committed 
 1421 rows; a producer consuming its own artifact reports growth as discovery) and a regex
 literal containing an index made the checker **cite itself**.
 
+**R1b′ RULED 2026-08-14 — B1′, `bound-probe-bypasses-clause-order` is a PEER MEMBER, AT INDEX 7.**
+The criterion is conjunctive and only the corrective half had been checked; the tell half was run
+and **`build_discipline.md`'s own spine table answers it**, giving the two SEPARATE rows with
+opposite-polarity tokens: `| 3 | Bound-probe … | a solution came back → "it's in the class" | the
+findall result/count |` against `| — | (diagnostic layer) | a clean/empty result → "nothing there"
+| the analyst reading the result |`. An over-count against an under-read; a tell visible
+**statically** in the source (`:648`) against one visible **only by running a known-positive**
+(`:1007`). `:1015` files the bound probe under the positive-control section, but at the level of
+the **spine**, which every member shares by construction and therefore cannot discriminate.
+**Index 7, not 3** (operator): `CLAUDE.md:506` — *"Index deliberately left EMPTY; do not reuse or
+renumber"* — is a standing instruction on the always-loaded file, and refilling 3 would
+countermand a ruling a fortnight old. **3 stays vacant in both documents.**
+
+**THE `P3 = 0` EVIDENCE IS STRUCK — the bullet asserting it was FALSE.** It read "zero measured
+coverage … **with no account**." It has an account, written four lines below the figure in the
+artifact cited: **`no members — uncalibrated`** (`audits/2026-08-10_oq277_rq2_crosscoding/PREREGISTRATION.md:78–84`),
+which further states that *"per-pattern agreement is not [reportable]"* and that reading a
+per-pattern (iii′) figure as a finding is a **pre-registered error** — listed as such at `:244`
+row 6. The operator's power-floor question does not arise: that floor governs the **fork-residue
+pass, which never ran** (retired with the cross-coding). **The shape of the mistake is a live
+instance of a declared residual:** the artifact is md5-frozen and gate-enforced, and the freeze
+guarantees the *text* is unaltered, not that the *reading* is apt — exactly the gap
+`claim_cite_check.py` declares it cannot close ("the mechanical relation is guarded; the semantic
+one is not"). Also inadmissible and unused: the 1-vs-9 citation asymmetry (evidence about how
+heavily a member is cited, not whether it is one, and a lagging measure of this OQ's own
+ambiguity).
+
+**R2's ground CORRECTED — read-site weight, not the 5:1 edit count** (operator). Nine of the
+eleven sites are internal to `build_discipline.md`, read on demand; the two on the other side
+include `CLAUDE.md`, read by every instance on load. *"Moving recap-as-witness is two edits but
+changes what every future instance reads first; keeping fabricated-default at 4 is nine edits in
+one file, in one change, mechanically checkable by the new checker."* The asymmetry runs in
+**opposite directions on the two measures** and only read-site weight is about what readers
+encounter. **Operator lean: C2 — `fabricated-default` keeps 4. R2 NOT formally ruled.** Consequent
+set if C2 lands: `1, 2, —(vacant), 4 fabricated-default, 5, 6, 7 bound-probe, 8 recap-as-witness`.
+
 **CLOSE CONDITION — this entry does not close until all four hold.** Stated as a list because
 the successor has died in a hand-off once already (OQ-277's close note).
 
@@ -12868,7 +12904,21 @@ OQ-277's fork-residue row was.
 
 **WHAT IT CONSUMES, and this is why the artifact was shaped the way it was.**
 `audits/2026-08-14_oq278_index_collision/LABEL_SET.tsv` — the disambiguated label set, keyed on
-`mechanism_slug` with the index preserved only as `raw_text_as_found`. **That keying is what
+`mechanism_slug` with the index preserved only as `raw_text_as_found`.
+
+**CONSUME A COPY PRODUCED BY `python/pattern_citation_check.py` AT COMMIT `fd73ec9e` OR LATER.
+NOT the revision this entry was minted against (`6e7df53f`), which is UNDER-RECOVERED and must
+not be used.** The pin is on the **PRODUCER**, not on the artifact's content: the label set is a
+line-keyed census of tracked files, so it legitimately changes whenever any scanned file is
+edited — **including this entry.** A content hash pinned here would invalidate itself the moment
+it was written, and chasing it would read as churn rather than as the corruption it is meant to
+catch. Between the two commits the sweep's recovery regexes were fixed (`faith
+merge` never matched `faith-merge`; `old-vs-new diff` never matched `Old-vs-new OUTPUT diff`) and
+the sweep stopped reading its own committed output. **Under-recovery is silent — a miss presents
+as `unrecoverable`, which reads like a result** — so the `6e7df53f` copy is absence wearing a
+result's clothes, on the artifact whose entire job is to be the disambiguated record.
+Regenerate and verify before use: `python3 python/pattern_citation_check.py --sweep` must leave
+the file byte-identical, and gate row `vacated cites` must be GREEN. **That keying is what
 makes it survive OQ-278's ruling**: if the ruling renumbers, an index-keyed ground truth would
 express a numbering that no longer exists, and this entry would inherit it silently. Do not
 re-derive ground truth from raw index citations; consume the label set.
