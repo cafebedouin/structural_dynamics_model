@@ -1,7 +1,8 @@
 # A3 mapping rule — written BEFORE the re-pointing, so row 4 checks conformance, not non-absence
 
 **Executed:** 2026-08-14. **OQ:** OQ-287, step A3.
-**Status:** RULE ONLY. No reference has been re-pointed yet.
+**Status:** EXECUTED 2026-08-14. §§1–5 are the rule as written *before* the edit; §6 records what
+actually happened, including where the edit deviated from the rule.
 
 A check written after the edit it verifies is fitted to that edit. This file fixes what a
 re-pointed reference *should* say, so `checks.sh row4`'s positive half can assert **conformance to
@@ -122,3 +123,83 @@ Count: 3 `A3` + 3 `E1` + 1 `A1` + 7 `A2` + 2 §5.4 + 2 §5.1 + 3 `C1` + 1 `P1` +
    conformance check can catch.
 5. Bare `§2` refs: each of the 25 accounted for as notice / `2.A`–`2.D` / left-alone, and the
    left-alone set enumerated here rather than counted.
+
+
+---
+
+## 6. Executed 2026-08-14 — deviations from this rule, recorded rather than absorbed
+
+A3 landed. Row 4 is green. Two things came out differently from the projection above, and both are
+written here rather than fixed by moving a threshold — the rule was written first precisely so that
+a mismatch is information about the edit, not an inconvenience in the check.
+
+**(a) The pinned-count gap was a real defect, not a bad projection.** Row 4 wanted ≥34 pins and saw
+33. The missing pin was at `:1969`, which §4 classifies `A2` + §3.2 and which I first rendered as a
+§3.2 section reference alone — dropping the pin the rule required. Worse, the replacement had
+severed a sentence: the original ran *"…the weaker reading in §2.2's penultimate / paragraph, which
+is sufficient…"* across a line break, and my substitution consumed the first half and orphaned
+*"paragraph, which is sufficient for Parts II–IV and less interesting."* The bullet also still said
+*"§2 binds readers"* when §2 no longer holds the derivation. Rewritten whole; the count reached 34
+by conforming to the rule, never by relaxing it.
+
+**(b) Section-only references are 6, not the projected 5.** The extra one is at the §0 `A2` row's
+kill condition, which now carries **both** a pin and a `CWC` §3.2 pointer — the pin for the row, the
+pointer for the weak form that makes the P3 caveat survivable. That is a better citation than the
+projection, and it grew the declared-unpinnable class by one. The class is counted by
+`python3 python/claim_cite_check.py --list --unpinnable`, which reports `docs/` and apparatus
+populations separately; **cite that command, not this number.**
+
+**(c) Two of the three `E1` sites are VOCABULARY BORROWS, and are now written to say so.** `E1` is
+*empirical* — supported unevenly, and its owed Prediction 1 was attempted on 2026-08-13 and
+**withdrawn as a test of E1**. A reference re-pointed from v0.6's merged §2.3 inherits that discharge
+condition, which the original sentence never carried:
+
+| site | what it does | how it is written |
+|---|---|---|
+| `:1212` AbsenceBench | genuinely cites model evidence, and already scopes itself (*"the theory needs only the weaker, substrate-independent version"*) | plain `CWC:E1@884ea0b6` — apt as-is |
+| `:1389` the nine rescues | borrows the recognition/enumeration **distinction** to describe nine instances this paper witnessed; its warrant is those instances, not `E1`'s generalization | *"In the vocabulary of `CWC:E1@…` — borrowed for its distinction, not leaned on for its generalization, which that paper marks as unevenly supported"* |
+| `:1525` prove-before-you-replace | **definitional**: classifies one practice as recognition; asserts nothing about what parties typically do | *"(`CWC:E1@…`'s distinction; the classification here is definitional, not a claim about what parties typically do)"* |
+
+This is the aptness residual arriving at its first real test. Row 4 confirms the label is present and
+**cannot see any of the above** — the distinction between citing a claim and borrowing its vocabulary
+is exactly the semantic relation `claim_cite_check` is blind to. The guard is that it is written down.
+
+**(d) Row 4's own matcher had a one-sided framing.** Its window looked only *forward* from each
+anchor and reported two correctly re-pointed sites as unpinned, because a citation reads as naturally
+before its anchor as after (*"On `CWC:A3@…`'s logic that makes…"*). Widened to 220 before / 160 after.
+The first widening used a bidirectional `grep -o` glob that backtracked catastrophically over the
+250 KB single-line normalized text and hung past two minutes; the window is now extracted by index
+arithmetic in python. Same semantics, no pathological matcher.
+
+
+## 7. The bare-`§2` half, executed
+
+25 bare `§2` references existed post-A2. **16 re-pointed, 9 left alone**, per rule §2.2 row 3.
+
+Left alone — enumerated, not counted, because a count of 9 is satisfied by any nine:
+
+| site | why it stays |
+|---|---|
+| canonicity marker ×2 | A5 rewrites the marker whole |
+| construction note ×2 | a historical record of the v0.5→v0.6 build; rewriting it would falsify the record |
+| §13 "The chain in §2" | A4's step, and must land in the **narrowed** form |
+| Appendix D ×3 | a record of what past versions claimed |
+| **"…which §2 cites and this paper instantiates"** | **created by A3 itself.** The rule projected 8 left-alone; the executed count is 9, because re-pointing the "Three terms" paragraph produced a new, correct, in-class reference: §2 genuinely *is* the location that cites the derivation. Recorded rather than forced back to 8. |
+
+Row 4's arm 5 matches each of the nine against this list by content, so a stray bare `§2` fires by
+name even though the total would still read 9.
+
+**Final counts, and cite the commands rather than these figures** — they are true at 2026-08-14 and
+the instruments are the authority:
+
+| quantity | value | command |
+|---|---|---|
+| pinned `CWC:` citations in v0.6 | 47 | `checks.sh row4` |
+| live citations repo-wide, all resolving | — | `python3 python/claim_cite_check.py --check` |
+| section-only (unpinnable), `docs/` vs apparatus | 6 / — | `python3 python/claim_cite_check.py --list --unpinnable` |
+| `§2.[1-7]` survivors | 2 (the notice) | `checks.sh row4` |
+| bare `§2` survivors | 9 (enumerated above) | `checks.sh row4` |
+
+*(47 exceeds the projected 34 because the bare-`§2` pass added 13 more pins than the rule's
+arithmetic covered — rule §5 assertion 2 counted only the 23 sourced references. The threshold is a
+floor, and it held.)*

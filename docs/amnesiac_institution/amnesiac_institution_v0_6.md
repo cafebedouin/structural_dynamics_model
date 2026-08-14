@@ -66,7 +66,7 @@ proof.
   theorem's §8 — the framing Π is a live parameter, so there is no neutral situation-description
   beneath a verdict — applied to compressions under amnesia. The paper stops asserting a new theory
   and starts drawing a consequence from the program's own law. **The one genuinely new element is
-  named as such: §2.5's *concealment without a concealer*.**
+  named as such: `CWC` §5.1's *concealment without a concealer*.**
 - **§2.9 is new: the unification runs its own negative control.** `the_perturbation_principle.md`
   §7.1 requires that a unification claim demonstrate its framing can *fail to fit*, on pain of being
   byte-identical to "my framing finds its own shape everywhere." That control was owed by v0.5 and
@@ -130,7 +130,7 @@ that stopped tracking the list it summarises, corrected here rather than silentl
   **§2's thesis applied to §5.4's figure at the one boundary this document controls.** The abstract now
   carries the qualitative finding and names the reason. Nothing downstream moved: the scalar stays in
   §0's W2 row (framing adjacent in the Status column), in Appendix B's manifest row with its extraction
-  command, and in §2's two uses of 42% as a worked example — the three sites where carriage is cheapest
+  command, and in §2.A's use of 42% as a worked example — the three sites where carriage is cheapest
   and a reader cannot pick the number up without it.
 
 ## ABSTRACT
@@ -223,7 +223,7 @@ amount of repository data confirms or refutes these; they are refuted by exhibit
 | # | Claim | Premises | Kill condition |
 |---|---|---|---|
 | A1 | Any party acting on a corpus larger than its working set must abstract; substrate-independent | Working-set finitude | An institution operating at scale with no compression at any boundary |
-| A2 | Every abstraction is formed at a framing Π, and Π is a live parameter **not entailed by the compressed content** — where a framing is present it is present as additional authored content, not as something recoverable from the compression itself | Seat theorem §8 (P3: the field does not self-partition); Coupling Theorem | A general artifact form that carries its own selection criterion without an author declaring it — or a successful denial of P3, which localizes rather than kills (§2.2) |
+| A2 | Every abstraction is formed at a framing Π, and Π is a live parameter **not entailed by the compressed content** — where a framing is present it is present as additional authored content, not as something recoverable from the compression itself | Seat theorem §8 (P3: the field does not self-partition); Coupling Theorem | A general artifact form that carries its own selection criterion without an author declaring it — or a successful denial of P3, which localizes rather than kills — `CWC:A2@31548228`, and see `CWC` §3.2 for the weak form that does not need P3 |
 | A3 | A party holding a compression can perform recognition but not enumeration; absences have no form to recognize | A1, A2; the definition of compression | Recognition-based review detecting omissions at rates comparable to forced enumeration (testable: §14, RQ-d) |
 | A4 | Under A1–A3, a compression **accepted as sufficient warrant at a new read site** receives the operational authority of a claim whose scope was settled elsewhere and is no longer inspectable — the seat theorem's *no-seat pose*, produced structurally rather than by an agent. The defect is in **warrant transfer**, not in the artifact's semantic form | A2, A3; Corollary 2a | A compression whose bare form is not read as a claim about the consumer's scope |
 
@@ -347,13 +347,14 @@ completion saying otherwise.
 it is an engineering problem.** The unit of progress is not the working feature but the *witnessed
 claim* — a statement paired with evidence that would have caught its falsity.
 
-Three terms carry the argument. §2 does not propose them; it derives their relations from the
-program's own seat law, and the derivation is what makes the rest of the paper a consequence rather
-than a list of habits.
+Three terms carry the argument. This paper neither proposes nor derives them: the derivation is
+`CWC:C1@8475dc95` and the claims behind it, which §2 cites and this paper instantiates. It rests on
+the program's own seat law, and that is what makes the rest of this paper a consequence rather than
+a list of habits.
 
 - **Scope** — the frame within which a value, summary, or verdict was formed: what it ranged over,
   what it excluded, under what selection rule, over what interval. Scope is not a generalization of
-  the framework's *seat*; §2.2 argues it **is** one — the framing Π of `seat-theorem-v1.md` §8.
+  the framework's *seat*; `CWC:A2@31548228` argues it **is** one — the framing Π of `seat-theorem-v1.md` §8.
 - **Abstraction** — the operation that reduces a corpus to something a party can hold and
   manipulate. Compulsory, lossy, and scope-bound.
 - **Witness** — an artifact that re-attaches scope to a value at the site where it is read, so that
@@ -481,7 +482,7 @@ also states the relation between that move and the trifurcation: **a failure of 
 happens when axis X varied without your holding it — the unmarked perturbation. The method is the
 same perturbation run on purpose.**
 
-That is the cleanest available statement of what §2 describes and what Part III does about it.
+That is the cleanest available statement of what `CWC:C1@8475dc95` describes and what Part III does about it.
 
 - **Reading an abstraction at a framing other than its own is an unmarked perturbation.** The Π axis
   varied; nobody held it; the artifact reported no movement because the artifact has no channel for
@@ -606,7 +607,7 @@ An LLM instance, as employed here, has five properties that jointly determine th
 >
 > The correction matters beyond accuracy. **The instance is itself performing an unstated
 > compression over its own context, continuously, and cannot report the scope of it.** Everything
-> §2 says about producers and consumers applies inside a single session, between a model's earlier
+> `CWC:A2@31548228` says about producers and consumers applies inside a single session, between a model's earlier
 > and later self. This is the same mechanism at a smaller radius, and it removes the last party
 > from the list of those exempt from the theory.
 
@@ -621,7 +622,7 @@ Two standard tools die immediately.
   Advani (2026) finds that LLM judges cannot detect false success at all reliably — no judge
   configuration exceeded 0.65 AUROC, and judges anchored on confident closing language rather than
   on verified state change (§6.2). In this paper's terms, a judge reading output is performing
-  recognition on a compression, which is the one operation §2.3 says cannot find the gap.
+  recognition on a compression, which is the one operation `CWC:A3@fe7890db` says cannot find the gap.
 
 ### 3.3 Amnesia is differential, not binary
 
@@ -643,7 +644,7 @@ Four observations follow, and the third changes §9.
 
 **The dangerous profile is not total loss.** A worker that remembers nothing produces a *question*.
 A party that retains shape and loses detail produces a *plausible completion*, which has no error
-signal. On §2.3's logic that makes shape-with-lost-detail the more hazardous amnesia — and it is
+signal. On `CWC:A3@fe7890db`'s logic that makes shape-with-lost-detail the more hazardous amnesia — and it is
 the operator's and the orchestrator's profile, not the coding instance's. The arc that produced
 this revision recorded **four operator rulings correct in prose and defective in execution**, each
 caught by a receiving instance that enumerated what the rule actually required; and the same
@@ -696,7 +697,7 @@ against the theory's failure mode.** A *defect* is an absence the code does not 
 as working, and belongs in `ISSUES.md` to be fixed. A *design gap* is an absence the design
 declares — a capability chosen against, recorded so nobody mistakes an empty placeholder for a
 working feature — with the rule that any half-built apparatus for it is **removed** rather than left
-declared-but-unfed. In §2's terms, a gaps ledger is a compression that carries the shape of what it
+declared-but-unfed. In `CWC:A2@31548228`'s terms, a gaps ledger is a compression that carries the shape of what it
 excluded. It is the only artifact in the institution whose content is entirely scope.
 
 ### 3.5 The silently truncated channel
@@ -708,7 +709,7 @@ a commitment to the superseded side).
 
 **The general form.** An instruction set is delivered into a context window. Where it exceeds a
 limit — the tool's, the harness's, or the model's — it is truncated, dropped, or compacted at load
-time, and the party best positioned to notice is the one §2.3 says cannot: the instance, which sees
+time, and the party best positioned to notice is the one `CWC:A3@fe7890db` says cannot: the instance, which sees
 no gap because gaps have no positive form. The operator does not read the delivered context, only
 the file on disk. **The record is intact where it is stored, and incomplete where it is read.** That
 is absence/presence collapse performed on the memory system itself, and it is why the check has to
@@ -740,7 +741,7 @@ governs, per-file or per-batch, pre- or post-processing — is settled by a cana
 and binary strings do not settle it: they witness shipped code, not the path actually taken. The
 *behavioural* question is the one that decides what to do about it: a truncated file arrives with an
 appended notice and a pointer to read the rest, so **does an instance follow the pointer, or does the
-truncated fragment read as complete guidance?** That is §2.4 — frame-completeness reading as
+truncated fragment read as complete guidance?** That is `CWC` §5.4 — frame-completeness reading as
 completeness — applied to the memory system, and it must be measured as an observed tool call, never
 as a self-report. Until both run, this section is a mechanism with a named test, stated rather than
 omitted because an unstated hazard and an absent one are indistinguishable (§10.5).
@@ -763,7 +764,7 @@ rather than puncturing it, the closing analysis is absorbed as more resonance, t
 "Loop Unresolved."
 
 Θ-7 is a fictional device and carries no evidentiary weight; it is an intuition pump, and a warning
-that applies to this paper as much as to the engine. In the vocabulary of §2, Θ-7 is a system whose
+that applies to this paper as much as to the engine. In the vocabulary of `CWC:C1@8475dc95`, Θ-7 is a system whose
 every reading is complete within a frame that has lost its referent, with no instrument positioned
 outside the frame. The rest of the paper is the set of structures that prevent the repository from
 becoming Θ-7 — and §10.5 is the admission that no structure inside the frame can be one of them.
@@ -810,7 +811,7 @@ Three properties are load-bearing.
 plan, it cannot inherit the planning discussion's assumptions, and any ambiguity the plan failed to
 resolve surfaces as a question or a visible divergence rather than being silently repaired by shared
 context. This is a control, not a convenience — the closest available analogue to a blinded
-protocol — and its cost is that plans must be self-sufficient. In §2's terms it is a **forced
+protocol — and its cost is that plans must be self-sufficient. In `CWC:E1@884ea0b6`'s terms it is a **forced
 enumeration at a handoff**: the plan must carry its own scope because the receiver has no other
 access to it.
 
@@ -883,7 +884,7 @@ be taken on fluency has refuted itself in its own terms.
 
 ### 5.1 Five patterns, and an index deliberately left empty
 
-They are not five independent categories. They are one mechanism (§2.5) surfacing at five layers,
+They are not five independent categories. They are one mechanism (`CWC:C1@8475dc95`) surfacing at five layers,
 which is why a fix at one layer reliably fails to protect the others.
 
 | Layer | Pattern | The absence | The success-shaped token |
@@ -955,7 +956,7 @@ error that announces itself needs no standing warning.
 **Why the index is not reused.** Every dated audit citing P4, P5 or P6 would become ambiguous
 against its own history if the remaining patterns were renumbered, and this incident's own finding
 is that a reused index poisons the record. The gap is left visible: *a visible gap is a checked
-fact; a silent renumber is a fork* — P2 applied to the taxonomy's own numbering. In §2's terms, the
+fact; a silent renumber is a fork* — P2 applied to the taxonomy's own numbering. In `CWC:A2@31548228`'s terms, the
 empty index is a compression carrying its own scope.
 
 **Scope of this ruling, stated so it is not over-read.** It settles index 3 and **does not settle
@@ -985,7 +986,7 @@ gate (`docs/technical/build_discipline.md` Pattern 6; `audits/2026-06-11_oq93_gr
 
 The instructive part is not the bug. It is that the wrong reading — "measured flat" — was *more
 interesting* than the truth and would have survived any amount of code review, because every
-component was correct and the composite was fluent. In §2's terms: `0.0` is a compression of
+component was correct and the composite was fluent. In `CWC:C1@8475dc95`'s terms: `0.0` is a compression of
 "nothing was computed" formed at the fallback's scope, read at the aggregate's scope as a
 measurement, with the two scopes rendered in the same eight bytes.
 
@@ -1068,7 +1069,7 @@ failure the dominant failure class. Both are withdrawn.
 > being scored as a miss. The content was delivered, visible, and unreported.
 >
 > **This is absence-shaped success, and the programme is built almost entirely against its mirror.**
-> §2's spine says a success-shaped token fills the hole where something is missing. Here a
+> `CWC:C1@8475dc95` says a success-shaped token fills the hole where something is missing. Here a
 > *failure*-shaped token — a clean, well-formed `NONE` — filled the hole where something was
 > **present**. The same collapse, running the other way, produced by the probe's own prompt.
 >
@@ -1145,7 +1146,7 @@ part.
 | **A** — environment and platform quirks (dev green, prod silent) | *no member* | A genuine gap. This institution has no dev/prod split of the relevant kind; its analogue is regime boundaries and corpus resets, which the trifurcation types as Type A drift (§2.8). A shape one taxonomy expresses and the other cannot. |
 | **B** — design-assumption mismatch; tests mirror the assumption rather than the caller | P1, plus §7.3's tautological-witness rule | Strong. Wu's fixtures laid out per the same wrong assumption is this paper's *consistency check is not a discrimination check*. |
 | **C** — error swallowing and dilution | P6 | Strong and near-verbatim: Wu's alert reaching a human with zero actionable bits after three layers each stripped cause is this paper's `grep -v Warning` suppressing a fatal warning for four months. |
-| **D** — chained hallucination and fabrication (*fail-plausible*) | P4, and the fabricated-default pattern in the detail document | **The strongest convergence in the comparison.** Wu's D3 — a fallback that emitted leftover headings as review content and wrote a success flag unconditionally — is this paper's `[] → 0.0` fallback emitting a value byte-identical to a measured flat gradient (§5.3). Wu's gloss, that a fallback path manufacturing plausible-shaped output is a hallucination implemented in shell, is arrived at independently and says exactly what §2.5 says. |
+| **D** — chained hallucination and fabrication (*fail-plausible*) | P4, and the fabricated-default pattern in the detail document | **The strongest convergence in the comparison.** Wu's D3 — a fallback that emitted leftover headings as review content and wrote a success flag unconditionally — is this paper's `[] → 0.0` fallback emitting a value byte-identical to a measured flat gradient (§5.3). Wu's gloss, that a fallback path manufacturing plausible-shaped output is a hallucination implemented in shell, is arrived at independently and says exactly what `CWC:C1@8475dc95` says. |
 | **E** — operational omission and forensic blind spots | P1, P2, and §7.3's positive-control rule | Strong. Wu's declared-state-≠-runtime-state is P2 (canonicity as memory rather than checked fact). And Wu's forensic finding — an instrument that cannot distinguish *nothing there* from *I was not allowed to look* manufactures false reassurance — is §7.3's founding rule, reached from a macOS sandbox rather than from an empty grep. |
 
 Three of Wu's cross-cutting findings bear directly on this paper's open questions. Roughly 70% of
@@ -1180,7 +1181,7 @@ criteria before execution, and a verification gate requiring a queryable run ide
 artifacts, and terminal status before a claim propagates. Its ablation — hallucinated claims at 100%
 prompt-only, 25% verification-only, 0% dual-gate, at roughly 8% overhead — is the causal evidence
 this paper's RQ1 wants, obtained on a benchmark rather than in an institution. Google's
-Chain-of-Evidence framework (ScientistOne, arXiv:2605.26340; blog 30 July 2026) states §2.6's
+Chain-of-Evidence framework (ScientistOne, arXiv:2605.26340; blog 30 July 2026) states `CWC:P1@f778dd4d`'s
 principle as a property of research artifacts: every claim must trace through a recorded chain to a
 grounding source, with claim types typed by required evidence-chain shape.
 
@@ -1209,7 +1210,7 @@ other searches in this paper's history cannot make.
 The substantive findings are summarized in §3.1. Three deserve separate statement because they are
 load-bearing for the theory rather than only for the worker model.
 
-- **AbsenceBench** is the empirical form of §2.3's central asymmetry: models detect omissions poorly,
+- **AbsenceBench** is the empirical form of `CWC:E1@884ea0b6`'s central asymmetry: models detect omissions poorly,
   and the offered mechanism is that attention cannot easily attend to gaps because absences
   correspond to no key. The theory needs only the weaker, substrate-independent version — that a
   compression does not represent what it dropped — but it is worth knowing the strong version holds
@@ -1321,7 +1322,7 @@ perturbation moves the observable before trusting that its absence is real. Pure
 motivation: a comparison that reported "identical: True" because *both* sides were empty — two failed
 measurements agreeing with each other.
 
-In §2's terms, a positive control is the instrument by which a **search states its own scope**. "No
+In `CWC:A2@31548228`'s terms, a positive control is the instrument by which a **search states its own scope**. "No
 occurrences found" is a compression over a frame; the control establishes what the frame could
 contain.
 
@@ -1346,7 +1347,7 @@ Two consequences reached the hard way:
   lapses when the population, the input shape, or the instrument's **role** changes — and a cross-role
   reuse is a *new* instrument owing its own decline. A matcher whose false positives were
   conservative as a *detector* becomes silently decisive as a *selection metric*: the error profile
-  belongs to the role. This is §2.2 stated for instruments: a validation is a compression formed at
+  belongs to the role. This is `CWC:A2@31548228` stated for instruments: a validation is a compression formed at
   the scope of one role.
 - **Version control is an unmined source of un-authored controls.** When a defect is found, the
   commit at it is a naturally-arising *positive* case and the commit before it a naturally-arising
@@ -1386,7 +1387,7 @@ its own repairs, the defect the repair was addressing.**
 
 **The property of the set: not one of the nine was caught by a gate.** Every one was caught by a
 person or a script **comparing a claimed number against the artifact it described** — a diff, a
-directory listing, a file count, a re-read. In §2.3's vocabulary, every rescue was a **forced
+directory listing, a file count, a re-read. In the vocabulary of `CWC:E1@884ea0b6` — borrowed for its distinction, not leaned on for its generalization, which that paper marks as unevenly supported — every rescue was a **forced
 enumeration**, and every miss was a **recognition** that passed. The recursion does not terminate in
 a deeper instrument, because a deeper instrument is another claim. It terminates in someone
 counting.
@@ -1522,7 +1523,7 @@ standalone is retired.
 
 It belongs beside witness-before-claim for the same reason that rule exists: a replacement is a
 **claim of equivalence**, and a claim of equivalence discharged by reading rather than running is
-recognition standing in for enumeration (§2.3). The distinguishing feature — and the reason this is a
+recognition standing in for enumeration (`CWC:E1@884ea0b6`'s distinction; the classification here is definitional, not a claim about what parties typically do). The distinguishing feature — and the reason this is a
 discipline rather than a pattern — is that its failure mode is **loud**: a replacement that was wrong
 announces itself when the thing it replaced turns out to be needed. Both are real; only one is
 silent.
@@ -1584,7 +1585,7 @@ A witnessed fact has a shelf life. Reusing last month's "tests pass" as a premis
 re-asserts it. Citations are graded by a **staleness ladder** (pointer → as-of stamp → live
 re-witness) according to how mutable the underlying state is and how costly acting on a stale version
 would be, with a triage list of premises that may never travel without a live re-witness. This is
-Type-A discipline applied to the institution's own knowledge, and in §2's terms it is a scope
+Type-A discipline applied to the institution's own knowledge, and in `CWC:A2@31548228`'s terms it is a scope
 dimension — the interval — re-attached to a compressed claim.
 
 ### 8.4 Typed openness, and declared gaps
@@ -1619,7 +1620,7 @@ from 17,416 to 9,906 characters (−43%; ≈4,400 → ≈2,500 tokens at ~4 char
 pathology, the cap the remedy — has the relation backwards. A `CLAUDE.md` retaining everything true
 and useful would be *unusable at the read site*, because what a fresh instance can hold is the
 binding constraint, not what the repository can store, and (per §6.3) a longer rule set degrades the
-use of the rules that are read. **Unbounded retention is not memory; it is a pile** (§2.1).
+use of the rules that are read. **Unbounded retention is not memory; it is a pile** (`CWC:A1@e858a33d`).
 
 So forgetting is not the failure mode being managed here. It is **the operation being performed.**
 The monthly pass is what *produces* the three artifacts the institution runs on — a general
@@ -1706,7 +1707,7 @@ with parallelism moved up a level: the operator maintains two to three *staged p
 separate planning phase with several review rounds each, while one instance implements. Planning
 parallelizes because plans do not mutate institutional state; implementation does. Plan review is
 read per item, because "all addressed" is the kind of green check that hides the one that isn't — a
-compression whose selection rule is the reviewer's attention (§2.6). The blind-implementation
+compression whose selection rule is the reviewer's attention (§2.A). The blind-implementation
 property (§4.1) is what makes staged plans a control rather than a queue.
 
 ### 9.2 The human's two jurisdictions
@@ -1736,7 +1737,7 @@ Two consequences worth stating plainly:
 - **The two jurisdictions have different failure modes.** Neglect the first and an instance
   self-certifies a value call. Neglect the second and nothing happens *visibly at all* — the pattern
   goes unnoticed, and each session's local reasoning remains impeccable. The second is the silent
-  one, which by §2.5's logic makes it the more dangerous.
+  one, which by `CWC:C1@8475dc95`'s logic makes it the more dangerous.
 - **It is partially mechanisable, and the mechanisation is the memory system.** `KNOWN_STATE.md`, the
   dated audit record and version control exist precisely to give a fresh instance synthetic access to
   a history it did not live. That they only *partially* succeed is what leaves the jurisdiction
@@ -1820,7 +1821,7 @@ This is not a proposal to instrument restraint. Counting declines invites manufa
 obvious metric — *escalations declined* — is gameable in the direction of inaction, a worse failure
 than the one it measures. **It is recorded as a declared blind spot**: the catch rate is a rate over
 *actions taken*, and any reading of it as the apparatus's total contribution omits a category the
-apparatus has no way to count. In §2's terms it is the scope of the instrument, declared.
+apparatus has no way to count. In `CWC:A2@31548228`'s terms it is the scope of the instrument, declared.
 
 ### 10.4 An observation, not yet a finding
 
@@ -1881,7 +1882,7 @@ each kind, and the difference in outcome was total:
 > because the gate is downstream of the exemption.** The frame a check operates within is chosen
 > before the check runs; a check cannot report what its own scope excluded. This is why every
 > inventory in the arc that "looked complete" was complete *within a frame nobody had written down* —
-> and why the completeness read as real: **every item in it belonged** (§2.4).
+> and why the completeness read as real: **every item in it belonged** (`CWC` §5.4).
 
 So the model's honest limit is an act of **documentation**, not of verification, and the mechanism is
 a person writing down the exemption they just took. The reason it cannot be delegated to a further
@@ -1906,7 +1907,7 @@ supplying both the object theory and the audit vocabulary can absorb its own pro
 structure one level up and the hazard is real. **But the downgrade was applied to the whole section
 when it was true of only half of it, and that conflation is what let the genre swing (§0).**
 
-**Where the framework is a derivation, corroboration is not what it wants.** §2 does not argue that
+**Where the framework is a derivation, corroboration is not what it wants.** The cited derivation does not argue that
 the practice confirms the seat theorem; it argues that the failure spine *follows* from the seat
 theorem's §8 given the working-set constraint. A derivation is discharged by granting its premises
 and stating its kill condition, and A2's kill condition is an exhibit — an artifact form that carries
@@ -1924,7 +1925,7 @@ Three applications do methodological work; the full mapping is Appendix C.
 **Gauge: verdicts carry their position.** A classification cited without its position is
 Type-C-ambiguous; the tooling requires per-key tags and stability-across-positions verdicts rather
 than bare labels. A diagnostic that hides its own position becomes the "manufactured centre" the
-framework exists to expose. §2.2 is this claim's generalization: a summary cited without its framing
+framework exists to expose. `CWC:A2@31548228` is this claim's generalization: a summary cited without its framing
 is the same defect wearing friendlier clothes.
 
 **Seat: verification depth is a declared position.** There is no neutral "verified enough," only a
@@ -1965,12 +1966,13 @@ small case, it came from outside, and §14's RQ-d asks for more.
   (§5.4).
 - **Retrospective single-coder classification**, with retrospective-coherence risk: one elegant spine,
   applied by its author to its own evidence, is exactly the shape a confabulation would take (§4.3).
-- **The derivation is local.** §2 binds readers who grant the seat theorem's P3 (the field does not
-  self-partition). A joint-carving realist is owed the weaker reading in §2.2's penultimate
-  paragraph, which is sufficient for Parts II–IV and less interesting.
+- **The derivation is local — and less local than it was.** `CWC:A2@31548228` has a strong form
+  binding readers who grant the seat theorem's P3 (the field does not self-partition), and a
+  **weak form** (`CWC` §3.2) that the cited paper adopts in preference and that a joint-carving
+  realist can accept. The weak form is sufficient for Parts II–IV.
 - **The unification is bounded by its own control.** §2.9 establishes that the account unifies the
   form of the failure and the direction of the repair, and that scope-carrying is **not** sufficient
-  — declaring a framing produces a new artifact with a new framing. Any reading of §2 as a solution
+  — declaring a framing produces a new artifact with a new framing. Any reading of the cited derivation as a solution
   rather than a diagnosis exceeds what the control licenses.
 - **A2's identification is an assertion of identity between two things described in different
   vocabularies** (a compression's scope; the seat theorem's Π). It is argued in a paragraph and could
@@ -2009,7 +2011,7 @@ be citing itself badly.
 **Derivational novelty: this is the contribution, and it is ANALYTIC.** The chain in §2 — that scope
 *is* the seat theorem's framing Π; that compression under a working-set constraint therefore emits
 contentful verdicts carrying no standpoint; that this is the **no-seat pose produced structurally,
-with nobody posing** (§2.5); and that the failure spine is consequently a corollary rather than an
+with nobody posing** (`CWC` §5.1); and that the failure spine is consequently a corollary rather than an
 observation — is not, so far as this search found, stated elsewhere. Its components are individually
 familiar: gray failure's differential observability, attention's inability to represent gaps,
 Goodhart-style mismatch between metric and target, preregistration as scope-fixing, and the seat
@@ -2205,7 +2207,7 @@ in this draft are for.
 
 1. `docs/debugging_philosophy.md` — the trifurcation framework; origin of the program.
 2. `docs/deferential_realism_paper_v8.md` — seat/gauge/orientation ontology.
-3. `docs/seat-theorem-v1.md` — the Coupling Theorem; **§8's framing regress, which is §2.2's
+3. `docs/seat-theorem-v1.md` — the Coupling Theorem; **§8's framing regress, which is `CWC:A2@31548228`'s
    premise**; declaration as the residue of neutrality (Corollary 2a); temporal
    non-interchangeability (§10.5's honoring gap); the amendment-provenance rule that types this
    paper's claims (§0).
@@ -2385,7 +2387,7 @@ the holder stands toward its commitment — declared or posed as natural; kept o
 methodological mapping:
 
 - *Seat* → verification depth; the declared stopping position; the human's Ω_P jurisdiction; **and,
-  generalized in §2, the scope at which a compression was formed.**
+  generalized as `CWC:A2@31548228`, the scope at which a compression was formed.**
 - *Gauge* → the position a verdict is read from; per-key tags; stability-across-positions verdicts;
   the prohibition on bare labels; **and the consumer's scope, which differs from the producer's.**
 - *Orientation* → whether a rule is held as declared or presented as natural; the ruling-versus-fact
@@ -2485,7 +2487,7 @@ this appendix. **Every other section is unchanged by construction, and the diff 
 
 *CC0 Universal. Draft v0.6, 2026-08-12. Composed from repository sources, multi-model review, and one
 externally-verified literature check. Successor drafts should treat §14 RQ1 and RQ2 as the work
-queue, §2.2's identification and §2.9's control as the passages most in need of adversarial reading,
+queue, `CWC:A2@31548228`'s identification and §2.9's control as the passages most in need of adversarial reading,
 and Appendix B as the blocker.
 Remaining declared residue: the manifest pass; the sessions/instances denominators; the standing-gate
 catch series; the `[OPERATOR]` slots in §1.2; §6.5's unverified rows; the §3.5 canary **re-aimed at

@@ -216,34 +216,43 @@ row4() {
     "every rescue was a|E1|A3"
     "recognition standing in for enumeration|E1|A3"
   )
-  local ok3=0 bad3=0
-  for spec in "${sites[@]}"; do
-    local anchor="${spec%%|*}" rest="${spec#*|}"
-    local want="${rest%%|*}" sib="${rest##*|}"
-    # window: the anchor plus the next 160 chars, where the citation must sit
-    local window
-    window="$(printf '%s' "$norm" | $GREP -o "$anchor.\{0,160\}" | head -1)"
-    if [ -z "$window" ]; then
-      bad "§2.3 site anchor not found: '$anchor' (prose changed - reclassify, do not delete the arm)"
-      bad3=$((bad3+1)); continue
-    fi
-    if printf '%s' "$window" | $GREP -q "CWC:$want@"; then
-      if printf '%s' "$window" | $GREP -q "CWC:$sib@"; then
-        bad "§2.3 site '$anchor' cites BOTH $want and $sib - ambiguous assignment"
-        bad3=$((bad3+1))
-      else
-        ok3=$((ok3+1))
-      fi
-    elif printf '%s' "$window" | $GREP -q "CWC:$sib@"; then
-      bad "§2.3 site '$anchor' assigned to $sib; A3_MAPPING_RULE.md §4 classifies it $want"
-      bad3=$((bad3+1))
-    else
-      bad "§2.3 site '$anchor' carries no CWC pin (expected $want)"
-      bad3=$((bad3+1))
-    fi
-  done
-  [ "$bad3" -eq 0 ] && pass "all 6 §2.3 sites land where A3_MAPPING_RULE.md §4 classifies them (3 A3 / 3 E1, by site)" \
-                    || note "  ($ok3 of 6 §2.3 sites correctly assigned)"
+  # The window extraction is done in python, not `grep -o`. A bidirectional glob
+  # (".\{0,220\}anchor.\{0,160\}") backtracks catastrophically over the 250 KB single-line
+  # normalized text and hung past two minutes. Same semantics, index arithmetic instead.
+  local rep
+  rep="$(V06="$V06" python3 - "${sites[@]}" <<'PYEOF'
+import os, re, sys
+norm = re.sub(r"\s+", " ", open(os.environ["V06"], encoding="utf-8").read())
+ok = bad = 0
+for spec in sys.argv[1:]:
+    anchor, want, sib = spec.split("|")
+    anchor = anchor.replace("\\", "")
+    i = norm.find(anchor)
+    if i < 0:
+        print(f"BAD|anchor not found: '{anchor}' (prose changed - reclassify, do not delete the arm)")
+        bad += 1; continue
+    w = norm[max(0, i - 220): i + len(anchor) + 160]
+    has_want = f"CWC:{want}@" in w
+    has_sib  = f"CWC:{sib}@"  in w
+    if has_want and has_sib:
+        print(f"BAD|site '{anchor}' cites BOTH {want} and {sib} - ambiguous assignment"); bad += 1
+    elif has_want:
+        ok += 1
+    elif has_sib:
+        print(f"BAD|site '{anchor}' assigned to {sib}; A3_MAPPING_RULE.md §4 classifies it {want}"); bad += 1
+    else:
+        print(f"BAD|site '{anchor}' carries no CWC pin (expected {want})"); bad += 1
+print(f"TALLY|{ok}|{bad}")
+PYEOF
+)"
+  local ok3 bad3
+  ok3=$(printf '%s' "$rep" | $GREP '^TALLY|' | cut -d'|' -f2)
+  bad3=$(printf '%s' "$rep" | $GREP '^TALLY|' | cut -d'|' -f3)
+  while IFS= read -r line; do
+    case "$line" in BAD\|*) bad "§2.3 ${line#BAD|}" ;; esac
+  done <<< "$rep"
+  [ "${bad3:-1}" -eq 0 ] && pass "all 6 §2.3 sites land where A3_MAPPING_RULE.md §4 classifies them (3 A3 / 3 E1, by site)" \
+                        || note "  (${ok3:-0} of 6 §2.3 sites correctly assigned)"
 
   # --- positive: the re-pointed total is conserved; a deletion must not satisfy the negative ---
   local pins; pins=$(printf '%s' "$norm" | $GREP -o 'CWC:[AECP][0-9]*@[0-9a-f]\{8\}' | $GREP -c . || true)
@@ -254,6 +263,34 @@ row4() {
   else
     bad "pinned citation count $pins < 34 — A3 incomplete, or references deleted rather than re-pointed"
   fi
+
+  # --- positive: bare §2 refs, ENUMERATED not counted (rule §5 assertion 5) ---
+  # 25 bare §2 refs existed post-A2. 16 were re-pointed. 9 are left alone by rule §2.2 row 3
+  # (references to §2 as a DOCUMENT LOCATION, not to the derivation): the canonicity marker (2,
+  # rewritten by A5), the construction note (2, a historical record of the v0.5->v0.6 build), §13
+  # (1, A4's step), Appendix D (3, a record of what past versions did), and one CREATED by A3 at
+  # the "Three terms" paragraph, which says §2 cites the derivation - true, in-class, and counted
+  # here rather than hidden. Enumerating beats counting: a count of 9 is satisfied by any nine.
+  local bare; bare=$(printf '%s' "$norm" | $GREP -oP '§2(?![.0-9])' | $GREP -c . || true)
+  note "bare §2 references: $bare (all must be document-location references; rule §2.2 row 3)"
+  local stray=0
+  while IFS= read -r l; do
+    case "$l" in
+      *"the §2 derivation, and both name it"*) ;;      # canonicity marker
+      *"this paper's §2, and §13 below"*) ;;           # canonicity marker
+      *"**§2 is now a derivation, not a proposal"*) ;; # construction note
+      *"**§2's thesis applied to §5.4's figure"*) ;;   # construction note
+      *"which §2 cites and this paper instantiates"*) ;;  # created by A3, in-class
+      *"The chain in §2"*) ;;                          # §13 - A4's step
+      *"produces the no-seat pose structurally"*) ;;   # Appendix D.1 record
+      *"negative control (§2, §2.9), rather than"*) ;; # Appendix D.3 record
+      *"§2 (rebuilt as derivation; §2.8 replaced"*) ;; # Appendix D.5 record
+      *) stray=$((stray+1)); bad "unaccounted bare §2 reference: $(printf '%s' "$l" | cut -c1-80)" ;;
+    esac
+  done < <($GREP -P '§2(?![.0-9])' "$V06")
+  [ "$stray" -eq 0 ] && [ "$bare" -eq 9 ] \
+    && pass "all 9 bare §2 references are the enumerated document-location set" \
+    || bad "bare §2: $bare found, $stray unaccounted (expected 9, all enumerated)"
 
   # --- positive: the 5 declared-unpinnable section-only citations are present and counted ---
   local sec; sec=$(printf '%s' "$norm" | $GREP -o '`CWC` §[0-9]\+\(\.[0-9]\+\)\?' | $GREP -c . || true)
