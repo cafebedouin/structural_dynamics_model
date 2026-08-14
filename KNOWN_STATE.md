@@ -45,6 +45,49 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-14 — [tripwire] Pattern indices are NAMESPACED (`CM-P4`/`BD-P4`) until OQ-278 rules; a bare `Pattern 3`/`P4` is UNRESOLVED, and canonicity is now gate-checked
+**Files:** CLAUDE.md, docs/technical/build_discipline.md, python/doc_pattern_check.py, docs/technical/doc_pattern_check.md, scripts/gate.sh, ISSUES.md, audits/2026-08-14_oq278_index_collision/WRITEUP.md, audits/2026-08-14_oq278_index_collision/PREREGISTRATION.md, audits/2026-08-14_oq278_index_collision/sweep_pattern_citations.py
+**Tier:** tripwire
+
+**The silent mistake this prevents:** writing `Pattern 4` in a new document, or reading one in
+an old one, as if it named a single mechanism. `CLAUDE.md` and `docs/technical/build_discipline.md`
+publish the same numbered defect taxonomy and **disagree at indices 3 and 4** — `CM-P4` is
+*recap-as-witness*, `BD-P4` is *fabricated default*. Both documents read as a complete, coherent
+six. Write `CM-P4` / `BD-P4`; treat a bare index found in the record as UNRESOLVED, not
+interpreted. Freeze lifts when OQ-278's index-4 ruling lands.
+
+**Why nothing caught it for 151 commits — worth knowing before building any doc-vs-doc check.**
+The two lists were born divergent (`7af6b945`, 2026-05-29: CLAUDE=3, BD=2) and their **member
+COUNTS converged at `220739b8` (2026-05-30), the exact commit where their CONTENTS diverged**,
+matching at every append since. Any check comparing cardinalities reads green from that day
+forever. `python/doc_pattern_check.py` therefore compares **names per index**, never totals; gate
+row `doc patterns`. Collisions 3 and 4 are allowlisted **with their state** (`ruled_pending_R1b`
+vs `unruled`), so a *silent resolution* goes red as well as a new fork. Discrimination record:
+`--pairwise 220739b8` FIRES at the defect's own commit, `--pairwise 4f623017` DECLINES at its
+immediate parent — naturally arising, both sides.
+
+**A `DOTALL` footgun in that checker, recorded because it read GREEN while measuring nothing.**
+`CLAUDE.md`'s items 3 and 6 hard-wrap **inside** the bold run, so the closing `**` is on the next
+line. Without `re.DOTALL` those two extract to nothing and the check passes on four of six
+indices — the checker's own absence-satisfies-the-gate. If you touch `CM_BOLD_RE`, run `--list`
+and confirm all six resolve on both sides.
+
+**Corrections to OQ-278's own figures** (`audits/2026-08-14_oq278_index_collision/`,
+Fired: live): the dating rule is **VOID** — a date cannot tell you which document the author had
+open, since both lists were live simultaneously for every citation that exists; recovery is by
+**mechanism** (55 of 66). `Pattern N`/`PN` is **six-way** overloaded, not four — added `CWC:P3`
+(concealment claim rows) and decompose-manifest `candidate_pattern`, **both found as the sweep's
+own false positives**; two further populations are *pinned, not ambiguous* (the md5-frozen OQ-277
+prereg; OQ-278's own body). Wrong labels **1 → 4** (one is in CODE, `prolog/coercion_projection.pl:86`).
+**Stale pointers created by the 2026-08-11 vacating: 9, not 3** — nobody swept, which is
+`build_discipline.md:1392`/`:2558` firing on the taxonomy's own repair for the third time.
+
+**Not ruled:** R1a/R1b/R2/R4 are the operator's, branches pre-registered *before* the sweep ran.
+The citation repair is deliberately held until R2 — "append the slug in place" is invalidated if
+the ruling renumbers. **OQ-294 minted** (`splits_from OQ-278`) for the taxonomy
+self-reproducibility study; it consumes `LABEL_SET.tsv`, which is keyed on `mechanism_slug` so it
+survives a renumbering.
+
 ## 2026-08-14 — [tripwire] OQ-287 Pass A: the derivation left v0.6. §2.1–2.7 are VACATED and never reused; citations into concealment are DIGEST-PINNED and a digest fire means re-read, not bump
 **Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/concealment/concealment_without_a_concealer_v0_4.md, docs/concealment/README.md, docs/amnesiac_institution/README.md, python/claim_cite_check.py, audits/2026-08-13_oq287_defork/claim_digest.sh, audits/2026-08-13_oq287_defork/checks.sh, scripts/gate.sh, ISSUES.md
 **Tier:** tripwire

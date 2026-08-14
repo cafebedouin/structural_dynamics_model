@@ -11422,10 +11422,81 @@ from dates only if the divergence date is established. Until ruled, any document
 patterns" must name WHICH six, and any citing a bare `Pattern 3`/`Pattern 4` must be treated as
 unresolved.
 
-**Graduation step for the dating rule:** establish when the two lists diverged (git log on both
-files' pattern-heading blocks), then sweep `audits/`, `docs/`, `KNOWN_STATE.md` for bare
-`Pattern [34]` / `P[34]` references and bucket each by whether it predates or postdates the
-divergence. Not started; not blocking the fork-residue row, which measures something else.
+**~~Graduation step for the dating rule~~ — RETIRED 2026-08-14, the rule is VOID.** It read:
+*establish when the two lists diverged, then bucket each reference by whether it predates or
+postdates the divergence.* **That instruction cannot work, and unconditionally so: a date cannot
+tell you which document the author had open.** Both lists were live simultaneously from
+`220739b8` (2026-05-30) onward, so no date partitions the citations. Superseded by recovery on
+**mechanism**, which works for 55 of 66 taxonomy-sense references
+(`audits/2026-08-14_oq278_index_collision/`).
+
+---
+
+### EXECUTED 2026-08-14 — `audits/2026-08-14_oq278_index_collision/`. Fired: live.
+
+Three things landed; **none of them rules the index** — R1a/R1b/R2/R4 branches were
+pre-registered *before* the sweep ran (`PREREGISTRATION.md`) so the ruling is not made against an
+account written with a direction.
+
+**1. Canonicity is now a CHECKED FACT — `python/doc_pattern_check.py`, gate row `doc patterns`.**
+Compares index→name between the two documents; collisions 3 and 4 are allowlisted **with their
+state** (`ruled_pending_R1b` vs `unruled`), so a *silent resolution* goes red as well as a new
+fork. Doc: `docs/technical/doc_pattern_check.md`. **Why counting could never have caught this:**
+the member counts CONVERGED at `220739b8`, the exact commit where the contents diverged, and
+matched at every append after — so anything comparing cardinalities read green from 2026-05-30
+across all 151 commits that touched either file. Discrimination record (naturally arising, both
+sides, neither authored): `--pairwise 220739b8` FIRES at the defect's own commit, `--pairwise
+4f623017` DECLINES at its immediate parent.
+
+**2. INTERIM CITATION FREEZE, landed in `CLAUDE.md`'s Build Discipline pointer.** Every index is
+namespaced on sight — `CM-P3`/`BD-P3`, `CM-P4`/`BD-P4`; a bare `Pattern 3`/`Pattern 4`/`P3`/`P4`
+is treated as UNRESOLVED, not interpreted. This stops new ambiguous references being minted while
+the ruling is pending, has zero dependencies, and **dissolves the R5 prohibition-gate question** —
+a gate forbidding bare `Pattern N` is not buildable (see 3). The digest form (`BD-P4@<digest>`,
+the `claim_cite_check.py` idiom) is **deliberately deferred**: it pins *content*, so every
+digest-bearing citation minted in the interim would go red at the renumbering by construction.
+
+**3. THREE CORRECTIONS TO THIS ENTRY'S OWN FIGURES.**
+
+- **The namespace is SIX-way overloaded, not four.** Added: `CWC:P3` (concealment claim rows,
+  guarded by `claim_cite_check.py`) and `"candidate_pattern": "… (Pattern 3)"` (the DR engine's
+  own vocabulary in decompose manifests). **Both were found as the sweep's own false positives.**
+  Two further populations are **PINNED, not ambiguous** — everything under
+  `audits/2026-08-10_oq277_rq2_crosscoding/` (the md5-frozen prereg defines `P1`–`P6` verbatim)
+  and this entry's own body. That shrinks the genuinely-ambiguous population well below what
+  this entry assumed: **66 taxonomy-sense rows out of 666 raw candidates.**
+- **The wrong-label count is 4, not 1** — and three are new. Beyond `FINDINGS.md:23`:
+  `prolog/coercion_projection.pl:86` (**in CODE**), `docs/design/the_perturbation_move.md:116`,
+  and `python/omega_resolver.py:820,830` — the last cross-wired in the *opposite* direction,
+  naming `CLAUDE.md`'s section title while carrying `build_discipline.md`'s member.
+- **The 2026-08-11 vacating created NINE stale pointers, not three, and nobody swept.** Each
+  cites the demoted mechanism, so each now points at an index empty in one document and occupied
+  by an unrelated mechanism in the other. Enumerated at `WRITEUP.md` §4.6. This is
+  `build_discipline.md:1392`/`:2558` firing on the taxonomy's own repair — **the third time
+  resolving this collision has committed the defect the collision instantiates.**
+
+**One piece of evidence R1/R2 should weigh:** all three CROSS-WIRED citations attribute to
+`build_discipline.md` while carrying `CLAUDE.md`'s mechanism. **Authors treat the detail doc as
+canonical** — the predictable consequence of `CLAUDE.md:158` calling it "the full patterns."
+
+**Not repaired yet, deliberately.** The citation repair is held until R2: the repair form
+"append the slug in place" is invalidated if the ruling renumbers, and only the *inventory* is
+ruling-independent.
+
+**CLOSE CONDITION — this entry does not close until all four hold.** Stated as a list because
+the successor has died in a hand-off once already (OQ-277's close note).
+
+1. R1a, R1b, R2 ruled against `PREREGISTRATION.md`'s branches; R4 applied to
+   `amnesiac_institution_v0_6.md` §5.1/§5.2.
+2. Every site in the priced footprint updated **in one change** — `doc_pattern_check.py` goes red
+   if a ruling lands in one document only, which is the point.
+3. The 4 wrong labels, 9 stale pointers and 3 cross-wirings repaired per `WRITEUP.md` §4;
+   `README.md:170`'s cardinality claim corrected; the 1 unrecoverable marked `[AMBIGUOUS — OQ-278]`.
+4. **`OQ-294` is unblocked and named here as the successor.** It carries the taxonomy
+   self-reproducibility study (`splits_from OQ-278`), and it consumes
+   `audits/2026-08-14_oq278_index_collision/LABEL_SET.tsv` as its cleaned ground truth. **Do not
+   close this entry without checking that OQ-294 is still live** — the label set is only ground
+   truth for as long as something reads it.
 
 **Note on the fork-residue row's scope, given the above.** The row was designed against the *fork*
 reading — it asks which branch carries load. **A row built to measure "which branch" cannot answer
@@ -12717,6 +12788,69 @@ common in the probe corpus, an unknown share of the record's negatives are unsaf
 of the error is *toward under-reporting real presence* — the opposite of the direction every existing
 control is calibrated for. Recorded in the paper at `amnesiac_institution_v0_6.md` §5.4 as the fourth
 defect in the incidence instrument.
+
+---
+
+## OQ-294 — Does our own defect taxonomy reproduce against itself? (the symmetric half of the Wu question, split from OQ-278)
+
+**Ω-type:** Ω_E — inter-coder agreement on a fixed corpus is a measured quantity. The
+*disposition* of a low agreement rate (retire? re-specify? accept as irreducibly seat-indexed?)
+is Ω_C and is not part of this entry.
+
+**Status:** open
+**Priority:** 4
+**Deps:** blocked_on OQ-278, splits_from OQ-278
+**Origin:** Bundled into OQ-278 at OQ-277's close (2026-08-12) as *"does our own six-pattern
+taxonomy reproduce against itself?"* — the honest RQ2 result once the cross-coding was retired.
+**Split out 2026-08-14** (operator decision) with a typed `splits_from` edge, so the successor
+question is a queryable fact rather than a paragraph inside another entry. OQ-278's objection to
+splitting was to *un-addressed* decomposition; a typed edge is the opposite of that.
+
+**The question.** 177 audit directories carry pattern assignments made by LLM instances at the
+operator's direction. Re-code a sample blind and measure agreement against the existing
+assignments. It needs nobody's cooperation, no prereg-scale spend, and it is the symmetric half
+of what the Wu letter asked (`docs/comparing_incident_taxonomies.md` §3, §7): we asked whether
+*their* taxonomy reproduces; this asks whether *ours* does.
+
+**WHY THE DEP ON OQ-278 IS FORCED, and it is not bureaucratic sequencing.** The archaeology
+sweep is this study's **label-cleaning step**. Existing assignments are the ground truth being
+coded against, and until OQ-278's ruling lands, an unknown share of them are index-keyed
+references to a *collided* index — three distinct populations that look identical in the
+record:
+
+- correct under `CLAUDE.md`'s list,
+- correct under `build_discipline.md`'s list,
+- **wrong under both** (4 confirmed, `audits/2026-08-14_oq278_index_collision/WRITEUP.md` §4.4).
+
+Run the coding pass first and residual disagreement is an **inseparable mixture** of coder churn
+and referent ambiguity — the study's headline number would be uninterpretable in exactly the way
+OQ-277's fork-residue row was.
+
+**WHAT IT CONSUMES, and this is why the artifact was shaped the way it was.**
+`audits/2026-08-14_oq278_index_collision/LABEL_SET.tsv` — the disambiguated label set, keyed on
+`mechanism_slug` with the index preserved only as `raw_text_as_found`. **That keying is what
+makes it survive OQ-278's ruling**: if the ruling renumbers, an index-keyed ground truth would
+express a numbering that no longer exists, and this entry would inherit it silently. Do not
+re-derive ground truth from raw index citations; consume the label set.
+
+**Design constraints already known, recorded so a receiver does not have to rediscover them:**
+- **Generation is stochastic** — a re-coding is a NEW DRAW, not a re-measurement (Critical
+  Distinctions). k=3 unanimity and a per-pass churn report are owed, per the OQ-277 standard.
+- **`Pattern N` is six-way overloaded** (WRITEUP §2). A coder prompt that does not namespace
+  will collect `CWC:P3`, `diagnostic_summary.pl`'s conflict catalog, and essay enumerations. Use
+  the `CM-P<n>`/`BD-P<n>` form from the Step 0 freeze (`CLAUDE.md` → Build Discipline).
+- **Two populations are PINNED, not ambiguous, and must not be sampled as ordinary citations:**
+  everything under `audits/2026-08-10_oq277_rq2_crosscoding/` (the md5-frozen prereg defines
+  `P1`–`P6` verbatim) and OQ-278's own body.
+- **Which list the coder is shown is a ruling, not a default.** OQ-277 hit this and the operator
+  ruled: freeze the definitions VERBATIM in the prompt with file + commit hash, never by
+  reference. That ruling scoped OQ-277 only — this entry needs its own.
+
+**What resolution would change:** the first measurement of whether this repository's own defect
+taxonomy is reproducible, on the corpus it was built from. A low rate is not automatically a
+retirement argument (*Unwired ≠ worthless*, and a redraw occupying a new seat is the mechanism
+working, not identity decaying) — but it would bound how hard any incidence figure computed
+over pattern assignments, including OQ-276's `Fired:` catch rate, can be leaned on.
 
 ---
 

@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "96db0124f5c2690a1b911ce93e3cb9ee05f64f25",
+    "store_version": "62922f29f008485e3150bbb6a3edceeab9989516",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-14T13:05:38"
+    "generated_at": "2026-08-14T16:08:12"
   },
-  "issues_sha": "977702bce10a33bfd0cdf7520238563c825d0abe6afb70720fbe538d8d81e459",
-  "n_entries": 293,
+  "issues_sha": "4684c4afa22c1e4878e642dd80e99833e90bac44d9accde22f703e9555eca675",
+  "n_entries": 294,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 106,
+    "open": 107,
     "partial": 7
   },
   "active": [
@@ -1398,7 +1398,8 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-277"
+        "OQ-277",
+        "OQ-294"
       ]
     },
     {
@@ -1557,6 +1558,22 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-294",
+      "status": "open",
+      "priority": 4,
+      "summary": "Does our own defect taxonomy reproduce against itself? (the symmetric half of the Wu question, split from OQ-278)",
+      "deps": [
+        "blocked_on OQ-278",
+        "splits_from OQ-278"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-276",
+        "OQ-277",
+        "OQ-278"
+      ]
     }
   ],
   "archive": [

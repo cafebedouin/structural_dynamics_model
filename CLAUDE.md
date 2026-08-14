@@ -483,6 +483,18 @@ These defects recur across unrelated subsystems because the producing step is in
 reconciling step is boring; each looks complete at the moment it's introduced. Full patterns,
 instances, and diagnostics: `docs/technical/build_discipline.md`.
 
+**CITATION FREEZE — namespace every pattern index on sight (interim, OQ-278, 2026-08-14).**
+This list and `build_discipline.md`'s **disagree at indices 3 and 4** and have since
+`220739b8` (2026-05-30); index 3 was vacated here 2026-08-11 while `build_discipline.md`
+still publishes *bound-probe* there, and index 4 has **two live claimants** (here:
+*recap-as-witness*; there: *fabricated default*) with no ruling. So: **write `CM-P4` for this
+file's member and `BD-P4` for `build_discipline.md`'s** — never a bare `Pattern 4` / `P4`.
+**A bare `Pattern 3`/`Pattern 4`/`P3`/`P4` found in the record is UNRESOLVED, not interpreted**
+(`P1`–`P10` is also `prolog/diagnostic_summary.pl`'s conflict catalog, plus three more senses —
+of 146 raw `Pattern 3` hits only ~68 are this taxonomy, so a prohibition gate is not buildable).
+Agreement at the *other* indices is machine-checked: `python3 python/doc_pattern_check.py --check`
+(gate row `doc patterns`). Lifts when OQ-278's index-4 ruling lands.
+
 **1. Produced-but-not-consumed (the dangling wire).** Data is generated and written, and nothing
 reads it back into the thing that needs it (unread `*_sensitivity_results.json`;
 `kernel_grouping.json` not stamped into the `.pl` files). **Rule: a producer is not done until
