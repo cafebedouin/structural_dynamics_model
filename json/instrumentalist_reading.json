@@ -1,0 +1,325 @@
+{
+  "header": {
+    "constraint_id": "instrumentalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "80825da5-b2f8-4ae4-a06e-824149e94bbc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.47,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.44,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Instrumentalist Reading: Positional Disagreement Resolved Through Generative Falsifier Tooling",
+    "topic_domain": "epistemology/philosophy_of_technology/institutional_analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tooling_operators",
+      "well_resourced_research_labs",
+      "model_curation_teams"
+    ],
+    "victims": [
+      "unslacked_domain_experts",
+      "communities_without_generation_access",
+      "positions_outside_model_menu"
+    ],
+    "vindicated_propositions": [
+      "disagreement_tractability_via_generation",
+      "classification_bookkeeping_suffices_for_evidence"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "tooling_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate and maintain the generative pipeline that produces candidate falsifiers and alternative-position samples at scale. They decide what counts as a well-formed candidate, what gets classified into the evidence bookkeeping system, and what generation parameters (temperature, prompt scaffolding, filtering) shape the sample distribution. Their control over the tool is the mechanism by which 'positional disagreement becomes tractable' at all."
+    },
+    {
+      "name": "well_resourced_research_labs",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Have the compute budget, engineering time, and institutional cover to run the generate-classify-bookkeep loop repeatedly, iterate on prompts, and survive publicly being wrong about a generated falsifier. They convert cheap generation into publishable tractability claims and accumulate a track record of 'resolved' disagreements that were actually curated."
+    },
+    {
+      "name": "model_curation_teams",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Decide which alternative-position samples the model will readily generate versus resist or refuse (via RLHF, safety layers, or dataset composition). This shapes the menu of 'tractable' disagreements before any classification occurs — a position the model won't fluently generate is functionally excluded from the evidence base regardless of its substantive merit."
+    },
+    {
+      "name": "unslacked_domain_experts",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Possess genuine positional knowledge but lack the time, tooling access, or institutional buffer to run iterative generation loops, curate outputs, or absorb the reputational risk of a bad public falsifier claim. Their disagreement, however substantively grounded, does not enter the tractable-evidence pipeline because they cannot pay the generation-and-curation cost, not because their standpoint is discounted."
+    },
+    {
+      "name": "communities_without_generation_access",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Lack compute, connectivity, or institutional relationships with tooling operators entirely. Their positions can only enter the evidentiary record if a well-resourced actor chooses to generate on their behalf, making their epistemic standing wholly dependent on external slack they do not control."
+    },
+    {
+      "name": "positions_outside_model_menu",
+      "role": "excluded",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Substantive alternative positions that the model's training distribution or safety curation renders difficult or impossible to generate fluently. They are not represented by any human seat directly; they simply fail to appear as candidate falsifiers, so the bookkeeping system never registers a disagreement about them at all — the strongest form of exclusion, since it does not even register as a contested claim."
+    },
+    {
+      "name": "epistemic_standards_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Journals, funding panels, and disciplinary societies evaluating whether generation-and-classification pipelines constitute legitimate evidentiary method or merely relabel access-to-tooling as epistemic virtue. They can audit sample provenance and curation decisions but generally lack visibility into model-level suppression of unfavorable candidates."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a genuinely useful mechanism for converting previously untestable positional disagreements into structured, checkable candidate claims — generation at scale lets parties produce and screen falsifiers faster than manual adversarial argument could, and the classification/bookkeeping layer gives a shared ledger of what has been tried and rejected.",
+    "transfer_function": "Moves epistemic authority and the practical capacity to 'resolve' disputes from whoever holds the substantive positional knowledge to whoever holds generation slack (compute, engineering time, institutional risk-tolerance) and curation control over the model's output menu — from unslacked knowers to well-tooled operators.",
+    "absent_voices": "Domain experts without generation access, and — more radically — entire positions the model resists producing fluently, never enter the bookkeeping ledger at all; they would object that 'tractability' has been quietly redefined as 'generatable and curatable,' but they are structurally outside the room where candidates are classified.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the generative tooling and its classification/bookkeeping apparatus vanished, positional disputes would revert to slower, more symmetric adversarial argument and manual literature review; the current asymmetric advantage held by tooling operators and well-resourced labs would collapse, and disagreements currently treated as 'resolved via falsifier generation' would need re-litigation through methods that do not privilege generation slack.",
+    "founding_problem": "Positional disagreements (across standpoints, methodologies, or contested framings) were often treated as intractable because no cheap mechanism existed to generate and test candidate falsifiers or alternative-position samples at the scale needed to make progress observable.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Tooling operators and well-resourced labs attest the founding problem is being actively and successfully solved, citing throughput gains in generating and screening candidates. Independent epistemic-standards reviewers and unslacked domain experts outside the beneficiary set attest that the tractability gain is largely an artifact of who can afford to run and curate the loop, not a genuine resolution of the underlying disagreement — the problem has been reframed rather than solved, and no reviewer entirely outside the tooling-operator/lab nexus has corroborated the strong 'tractability' claim independently."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.47
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the instrumentalist reading of the kernel 'positional disagreement as evidence': disagreement between standpoints becomes tractable not because of any epistemic principle about whose position deserves weight, but simply because a cheap generative tool now exists that can mass-produce candidate falsifiers and alternative-position samples, which a classification/bookkeeping layer then sorts into a shared evidentiary ledger. On this reading, the operative resource is generation-and-curation slack, not standpoint, procedure, or convergence-under-argument. The beneficiary set is therefore whoever holds compute, engineering time, and survivable public-error tolerance to run the loop repeatedly — not whoever holds marginalized standpoint (the sibling standpoint_reading's beneficiary set) and not whoever participates in a fair deliberative procedure (the sibling proceduralist_reading's concern). This exposes a genuinely new extraction path invisible to the other three readings: curated menus (the model's willingness to generate certain positions fluently and not others) and model agreeableness (the model's tendency to produce classifiable, well-formed candidates for well-resourced prompters) become sites of epistemic gatekeeping that have no analogue in standpoint-theoretic or procedural accounts of the same disagreement.",
+    "logic_rationale": "Extractiveness is authored at a moderate-rising 0.58: the tooling genuinely accelerates falsifier discovery (real coordination value) but the same mechanism systematically channels epistemic credit toward whoever can afford to run and curate the pipeline, and that channeling compounds as tooling operators build reputational capital from repeated 'resolutions.' Suppression (0.47) is lower than extraction because there is no direct coercive barrier stopping unslacked experts from generating candidates themselves — the barrier is resource asymmetry and model curation, which is real but less totalizing than legal or physical suppression. Theater ratio rises to 0.40 because a growing share of 'resolution' activity is publication and citation of generated-falsifier results that substitute for, rather than settle, the underlying positional dispute — a Goodhart-style substitution of classification volume for genuine convergence.",
+    "directionality_logic": "Tooling operators and model curation teams sit near the full-beneficiary end: they set the generation parameters, control what the model will fluently produce, and capture the reputational and institutional credit for 'resolving' disagreements. Well-resourced labs are beneficiaries by proxy — they don't control the model but have the arbitrage-grade mobility to switch tools, afford compute, and survive being publicly wrong. Unslacked domain experts and access-poor communities are targets: the same instrumentalist logic that makes disagreement 'tractable' for the well-tooled makes their positional knowledge invisible for want of the resource, not for want of merit. The excluded non-agent seat (positions outside the model menu) captures the most severe case — a position that literally cannot be generated is never classified as a live disagreement at all, so it cannot even be counted among the losers of the ledger.",
+    "perspectival_gap": "From the tooling-operator seat, this looks like a rope: a genuine coordination breakthrough that makes previously intractable disputes checkable. From the unslacked-expert seat, the same structure looks like a tangled rope shading toward snare: a coordination story (falsifier generation is useful!) providing cover for a new resource-gated gatekeeping mechanism that reallocates epistemic authority toward whoever holds tooling slack. The engine should compute this divergence directly from the beneficiary/victim and exit-option declarations rather than from either seat's self-report.",
+    "mandatrophy_analysis": "The founding problem (converting intractable positional disagreement into checkable claims) remains genuinely live in some domains, which is why this is authored as contested rather than resolved mandatrophy — the tooling does real work. But the classification/bookkeeping apparatus has begun to do additional, unacknowledged work: converting 'who has slack to run the loop' into 'who counts as having produced evidence,' which is a different function than the one the tool was originally justified by. Treating this purely as coordination (rope) would erase the newly created extraction path; treating it purely as extraction (snare) would erase the genuine tractability gain the tool provides for well-resourced and under-resourced actors alike when access is actually shared. Tangled rope is the structurally honest classification precisely because both functions are simultaneously present and mutually dependent — the coordination function is what makes the extraction path effective, since only a tool that is genuinely useful for generating falsifiers can also be gatekept.",
+    "kernel_context": "This is the instrumentalist reading of the kernel positional_disagreement_as_evidence. Unlike the standpoint_reading (which locates evidentiary weight in marginalized epistemic position), the pragmatist_reading (which locates it in practical convergence through use), and the proceduralist_reading (which locates it in fair deliberative procedure), the instrumentalist_reading locates tractability entirely in the existence of a cheap generative tool and its classification/bookkeeping capacity. The kernel commitment — that positional disagreement CAN become tractable evidence — is realized here through model throughput and curation, not through any claim about whose standpoint is epistemically privileged or what procedure is fair. This produces a genuinely distinct beneficiary/victim structure: slack-holders versus non-slack-holders, cutting across standpoint-theoretic marginalization entirely, and exposes an extraction path (curated model menus, model agreeableness toward well-resourced prompters) that the other three readings do not model at all."
+  },
+  "omegas": [
+    {
+      "id": "tractability_vs_relabeling",
+      "question": "Does the generative-classification loop genuinely make previously intractable positional disagreement resolvable, or does it relabel 'resolvable by whoever has tooling slack' as 'tractable' while leaving the underlying disagreement as unresolved as before?",
+      "resolution_mechanism": "Compare disagreements 'resolved' via this pipeline against matched disagreements resolved through slower manual adversarial methods: track whether the generated-falsifier resolutions hold up under independent re-litigation by parties without tooling access, or whether they are quietly re-opened once slack-asymmetry is corrected for.",
+      "impact": "If resolutions hold under independent re-litigation, the instrumentalist mechanism is closer to genuine rope-like coordination gain; if they systematically fail to hold, the tangled_rope classification understates the extraction and a snare reading becomes more defensible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether generation-based tractability is genuine resolution or resource-gated relabeling."
+    },
+    {
+      "id": "model_menu_completeness",
+      "question": "How much of the space of substantively defensible alternative positions is the underlying generative model actually capable of producing fluently, versus suppressing through training distribution or safety curation?",
+      "resolution_mechanism": "Systematic red-teaming across ideologically and methodologically diverse prompts, audited by a body independent of the model's own curation team, measuring refusal rates and fluency degradation for positions outside the model's dominant training distribution.",
+      "impact": "A large uncovered region would mean the 'positions_outside_model_menu' victim class is substantial and the instrumentalist mechanism's evidentiary ledger is systematically incomplete in ways invisible to its own bookkeeping; a small uncovered region would narrow this concern considerably.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Extent of model-level suppression of non-dominant alternative positions."
+    },
+    {
+      "id": "kernel_framing_choice",
+      "question": "Is locating the kernel's realization in 'model classification and bookkeeping capacity' (this reading) the correct framing, or should the kernel instead be read as realized through the underlying epistemic principle the tool merely accelerates (closer to the pragmatist_reading)?",
+      "resolution_mechanism": "Examine cases where the tool is entirely absent but the same positional disagreement becomes tractable through slower manual methods: if tractability tracks tool-availability specifically (not just practical convergence generally), the instrumentalist framing is supported; if tractability tracks convergence-through-use regardless of tool presence, the pragmatist framing better explains the same cases.",
+      "impact": "If the pragmatist framing is more accurate, much of what this story attributes to tooling-specific extraction (curated menus, model agreeableness) would need to be re-attributed to a more general practical-convergence dynamic, weakening the case for a distinct instrumentalist constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the instrumentalist framing correctly isolates a tool-specific mechanism distinct from general pragmatist convergence."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "standpoint_reading",
+      "pragmatist_reading",
+      "proceduralist_reading"
+    ],
+    "dual_formulation_note": "This story is one of four sibling readings of the kernel positional_disagreement_as_evidence. All four readings share the same underlying kernel commitment (that positional disagreement can become tractable evidence) but locate the realization mechanism differently: standpoint_reading in marginalized epistemic position, pragmatist_reading in practical convergence through use, proceduralist_reading in fair deliberative procedure, and this instrumentalist_reading in cheap generative tooling plus classification/bookkeeping capacity. Each reading has a distinct beneficiary/victim structure and a distinct extraction path; this reading's extraction path (curated model menus, model agreeableness toward well-resourced prompters) has no analogue in the other three. Link all four via affects_constraints; do not merge their epsilon values."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "standpoint_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatist_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "proceduralist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "tractability_realized_through_generation_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "classification_bookkeeping_constitutes_evidence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "manual_adversarial_argument_baseline",
+    "drift_state": {
+      "moment": "post_cheap_generation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "tooling_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-14",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "cheap_confession_2026_20260814_151329"
+  }
+}
