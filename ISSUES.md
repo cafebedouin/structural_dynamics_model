@@ -12390,9 +12390,46 @@ actually deliverable.
 **Ω-type:** Ω_C — which document owns the derivation is an authorial ruling with no seat-free fact.
 The *existence* of the duplication is Ω_E and is settled below.
 
-**Status:** open — minted 2026-08-12.
+**Status:** mitigated — Pass A landed 2026-08-13/14; the derivation fork is CLOSED, two limbs remain.
 **Priority:** 2
-**Deps:** blocked_on_human oq287-paper-split-ruling
+**Deps:** blocked_on OQ-278
+
+**PASS A COMPLETE — what closed, and what did not.** `concealment_without_a_concealer_v0_4.md` is
+canonical for the derivation (operator ruling 2026-08-13); v0.6 §2.1–2.7 are vacated, the numbers
+deliberately left empty, and v0.6 now cites the derivation by claim label and content digest. Both
+canonicity markers carry the ruling, and canonicity is a **checked fact**: `docs/concealment/README.md`
+and `docs/amnesiac_institution/README.md` name their canonical file, and
+`python3 python/claim_cite_check.py --check` runs in `scripts/gate.sh`. Full record:
+`audits/2026-08-13_oq287_defork/WRITEUP.md` (`Fired: live`); commits `fb0cbb86` `e995f978` `b880c217`
+`974649e0` `2c3139a3` `4c2c7be0` `9e72119c` `7ecb56b3` `96db0124`.
+
+**THE TWO LIMBS ARE TRACKED DIFFERENTLY, BECAUSE ONE HAS NO OWNER.**
+
+**Limb 1 — the extraction (has an owner and a written prompt).** The practice paper, per the Subject
+ruling. Receiver's prompt owed at `audits/2026-08-13_oq287_defork/EXTRACTION_PROMPT.md`. Blocked on
+OQ-278's P4 index ruling before its section III is authored. Pre-registered acceptance condition,
+operator-stated: **the unmarked perturbation (§2.8) and the negative control (§2.9) must be
+LOAD-BEARING in III and V, not appended**; if they cannot be, revisit Subject BEFORE authoring.
+
+**Limb 2 — the apparatus redirect (NO OWNER; carries its own review date).** v0.6 §2.8/§2.9 keep
+their numbers and text and are marked **declared temporary** with the practice paper as canonical
+destination. The redirect table mapping `§2.9(a,b,…)` to practice-paper anchors is owed **at sub-item
+granularity**, because `audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md` cites
+**`§2.9(b)`** and **has already been sent to another author and cannot be edited**.
+
+> **This limb is contingent on Limb 1 and would otherwise be unreachable.** If the extraction is
+> deferred, nothing schedules the redirect, and the surface it guards is the one that cannot be
+> repaired after the fact. **REVIEW DATE: 2026-09-14** — on or after that date, if Limb 1 has not
+> landed, either (a) land a standalone redirect note in v0.6 §2.9 pointing at the declared-temporary
+> marker and this OQ, or (b) record here that the operator has accepted the exposure. Do not let it
+> ride on Limb 1's schedule a second month.
+
+**DECLARED RESIDUALS FROM PASS A — none is checkable** (detail: `WRITEUP.md` → *Declared residuals*):
+R1 `COVERAGE_DIFF.md`'s coverage calls are unverified and pre-`C1` — *the re-check verifies the
+anchors, not the coverage calls*; R2 `claim_cite_check` is blind to **aptness** (a pin can match its
+row and cite the wrong row); R3 finding 4's twelve-instance count is a **floor**, self-observed and
+undenominated; R4 the intermediate state is live; R5 section-only citations (`CWC` §5.1/§5.4/§9.1/
+§3.2) are unpinnable by construction, counted but never checked.
 
 **The fork, witnessed.** `concealment_without_a_concealer_v0_4.md` states in its own header that
 v0.1 *"was extracted from §2 of The Amnesiac Institution v0.6"*. But v0.6 §2 still carries the

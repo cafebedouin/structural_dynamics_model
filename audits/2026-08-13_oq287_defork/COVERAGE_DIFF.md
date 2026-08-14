@@ -9,6 +9,16 @@ paper modified by this pass — A0 is read-only).
 (`:284–318`), §5 (`:322–441`), §6 (`:445–493`), §9 (`:791–872`), §10 (`:875–903`), §12 (`:975–1032`),
 Appendix A (`:1036–1066`).
 
+> **FIGURES IN THIS FILE ARE AS-OF ITS EXECUTION DATE AND SEVERAL ARE NOW SUPERSEDED.** This is a
+> point-in-time record and is not updated; that is what makes it a record. For any live count,
+> run the instrument, never quote a number from here:
+> `checks.sh all` (structure of v0.6) · `python3 python/claim_cite_check.py --check` (citations)
+> · `--list --unpinnable` (the unpinnable class) · `A3_MAPPING_RULE.md` §§6–8 (executed counts).
+> **Known superseded here:** the 33/27 reference counts were measured *before* A2 vacated §2.1–2.7
+> and were reconciled to 23 sourced + 25 bare (`A3_MAPPING_RULE.md` §1); the unpinnable class is
+> two populations, not one figure. A bare number in a document read months later is this paper's
+> own thesis with a date attached.
+
 **Rule applied (from the plan):** anything in §2.1–2.7 not covered by concealment is **PRESERVED**
 in v0.6, not dropped. Every unit below carries either a concealment anchor or a preservation
 destination.
@@ -190,6 +200,11 @@ becomes load-bearing.
 ---
 
 ## 4. Measurements taken this pass (for A3's positive half)
+
+**AS-OF 2026-08-13, PRE-A2. Superseded — do not cite.** A2 vacated §2.1–2.7 on 2026-08-13 and
+10 of the 33 below went with it. The live population is **23 sourced + 25 bare**, reconciled
+exactly in `A3_MAPPING_RULE.md` §1. Kept unaltered because the reconciliation *depends* on this
+being the pre-A2 figure.
 
 Counted with `/usr/bin/grep` (pinned, per the Build Discipline count rule), on
 `docs/amnesiac_institution/amnesiac_institution_v0_6.md` at `73727587`:

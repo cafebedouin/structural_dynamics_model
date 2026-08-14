@@ -45,6 +45,52 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-14 — [tripwire] OQ-287 Pass A: the derivation left v0.6. §2.1–2.7 are VACATED and never reused; citations into concealment are DIGEST-PINNED and a digest fire means re-read, not bump
+**Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/concealment/concealment_without_a_concealer_v0_4.md, docs/concealment/README.md, docs/amnesiac_institution/README.md, python/claim_cite_check.py, audits/2026-08-13_oq287_defork/claim_digest.sh, audits/2026-08-13_oq287_defork/checks.sh, scripts/gate.sh, ISSUES.md
+**Tier:** tripwire
+
+**Four things a fresh agent would get silently wrong.**
+
+1. **`amnesiac_institution_v0_6.md` no longer carries the derivation.** §2.1–2.7 were vacated
+   2026-08-13; §2 is a one-sentence conclusion quoted from `CWC:C1@…` plus pinned citations, then
+   preserved repository material at **`2.A`–`2.D`**, then §2.8/§2.9 at their old numbers. **The
+   numbers 2.1–2.7 are deliberately empty and must never be reused** (P3's precedent: a visible gap
+   is a checked fact; a silent renumber is a fork). Editing v0.6 at all: it admits **pointer-only**
+   edits — forward pointers and redirect notes — and no content edits.
+
+2. **Citations carry a content digest over the WHOLE Appendix A row, kill condition included.**
+   `CWC:A2@31548228`. Editing a row's *kill condition* moves the pin and fires every citing site
+   even though the quoted claim is untouched — **that is the mechanism working, not a false alarm.**
+   Witnessed 2026-08-14: correcting `E1`'s Owed cell moved `884ea0b6 → 911a4db5` and fired six
+   sites; all six were re-read and one improved. Fifteen other digests recomputed identical, which
+   is the discrimination — a scheme that fires on everything is indistinguishable from one that
+   fires on nothing. **On a fire: RE-READ the site and decide, never bump the hex.** Recipe is a
+   script, never prose: `audits/2026-08-13_oq287_defork/claim_digest.sh` (a prose recipe was
+   implemented two incompatible ways in one turn and every digest was wrong).
+
+3. **`claim_cite_check` scans the WHOLE repo including untracked files, and is blind to aptness.**
+   Scope is `git ls-files --cached --others --exclude-standard`: tracked-only once shipped as a
+   silent hole where a new document's stale pin was invisible until committed. A pin inside a
+   `PIN-RECORD` sentinel is a *record* of a past state and is counted, not checked. **What it cannot
+   see: whether the cited row is the RIGHT one.** A citation aimed at `A2` where the argument needs
+   `A4` reads green forever. Section-only refs (`CWC` §5.1/§5.4/§9.1/§3.2) have no row and are
+   unpinnable by construction — counted via `--list --unpinnable`, never checked. **Do not "fix"
+   that by minting Appendix A rows for those sections**: that is the instrument reshaping the
+   substrate to fit itself.
+
+4. **§2.8/§2.9 are DECLARED TEMPORARY, and §2.9(b) is cited in correspondence already sent.**
+   `audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md` cites `§2.9(b)` and cannot be
+   edited, so the redirect owed when the practice paper lands is needed **at sub-item granularity**.
+   That limb has **no owner** and carries a review date of **2026-09-14** (ISSUES OQ-287, Limb 2).
+
+**Three residuals that are NOT checkable and will not announce themselves:** `COVERAGE_DIFF.md`'s
+coverage calls are unverified and pre-`C1` (*the re-check verifies the anchors, not the coverage
+calls*); aptness is unguarded (above); finding 4's twelve-instance count is a **floor**, self-observed
+with no denominator — never cite it as a rate or against §7.4's nine.
+
+Provenance and full record: `audits/2026-08-13_oq287_defork/WRITEUP.md` (`Fired: live`), ISSUES
+OQ-287. Commits `fb0cbb86` → `96db0124`.
+
 ## 2026-08-13 — [tripwire] KNOWN_STATE tripwires are now DELIVERED at edit time by a PreToolUse hook — the `Tier:` you author decides whether an editor ever sees your warning
 **Files:** `python/pretooluse_tripwires.py`, `python/known_state_status.py`, `.claude/settings.json`, `scripts/gate.sh`, `.gitignore`, `CLAUDE.md`
 **Tier:** tripwire

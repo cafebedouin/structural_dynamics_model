@@ -9,7 +9,13 @@
 > present one. The live pins are in `docs/`, and in this file's own "What changed" table below.
 <!-- PIN-RECORD-END -->
 
-**REVISION 2.** Still NOT APPLIED to `docs/amnesiac_institution/`. The upstream half *has* landed
+**REVISION 2 — SUPERSEDED. A2 landed at `974649e0` and A3/A4/A5 have since changed the text this
+draft proposes.** Every figure and pin below is as-of the draft, not as-of the paper; `C1` alone
+moved `d0922f3d → 8475dc95` and `E1` `884ea0b6 → 911a4db5`. The reference counts (33, 27) are
+pre-A2 and were reconciled to 23/25 in `A3_MAPPING_RULE.md` §1. For anything live, run the
+instrument.
+
+**Original header:** Still NOT APPLIED to `docs/amnesiac_institution/`. The upstream half *has* landed
 (see below), because it had to precede the citation.
 
 ## What changed since revision 1
