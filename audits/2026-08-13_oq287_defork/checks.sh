@@ -177,7 +177,90 @@ row3() {
     && pass "§2.9's marker names sub-item granularity for the redirect" \
     || bad "§2.9's marker does not name sub-item granularity"
 }
-row4() { echo "row4: 33 refs re-pointed; 27 bare §2 refs individually accounted"; printf '  \033[33mNOT IMPLEMENTED\033[0m (lands with A3)\n'; return 3; }
+# --- row 4 -------------------------------------------------------------------------------------
+# A3's check, WRITTEN BEFORE A3. It is expected to be RED until the re-pointing lands; that is the
+# point of writing it first, and a check fitted to the edit it verifies would not have this property.
+#
+# The population is 23, not the plan's 33: 10 of the 33 were cross-references INSIDE §2.1-2.7 and
+# left with them at A2. Reconciliation and the per-site targets are in A3_MAPPING_RULE.md.
+#
+# The §2.3 arm asserts ASSIGNMENT, not distribution. A 3/3 split with two sites swapped satisfies
+# any count-based or shape-based test while being wrong at both - which is the exact class of defect
+# this pass has been catching all day, so the arm must not be an instance of it. Each of the six
+# sites is pinned by a line-independent ANCHOR drawn from its own prose (never the `§2.3` token,
+# which the re-point removes), and the check is: the expected label appears near that anchor AND
+# the sibling label does not.
+row4() {
+  echo "row4: A3 conformance — 23 refs re-pointed per A3_MAPPING_RULE.md, §2.3 assignment pinned"
+  local norm; norm="$(normalized "$V06")"
+
+  # --- negative: only the notice's own self-mention may name a vacated number ---
+  local remaining; remaining=$(printf '%s' "$norm" | $GREP -o '§2\.[1-7]' | $GREP -c . || true)
+  local notice; notice=$(printf '%s' "$norm" | $GREP -o '§2\.1–§2\.7 are vacated' | $GREP -c . || true)
+  note "live §2.[1-7] occurrences: $remaining (the notice's own '§2.1–§2.7' accounts for 2)"
+  if [ "$notice" -lt 1 ]; then
+    bad "the vacation notice's own '§2.1–§2.7' self-mention is GONE - it must never be re-pointed"
+  elif [ "$remaining" -eq 2 ]; then
+    pass "only the notice's self-mention names a vacated number (2 occurrences, both there)"
+  else
+    bad "$remaining live §2.[1-7] occurrences; expected exactly 2 (the notice's self-mention)"
+  fi
+
+  # --- positive: per-site assignment for the six contested §2.3 refs ---
+  # anchor|expected|sibling   — anchor is prose that survives the re-point
+  local sites=(
+    "which is the one operation|A3|E1"
+    "makes shape-with-lost-detail the more hazardous amnesia|A3|E1"
+    "the party best positioned to notice is the one|A3|E1"
+    "AbsenceBench\*\* is the empirical form of|E1|A3"
+    "every rescue was a|E1|A3"
+    "recognition standing in for enumeration|E1|A3"
+  )
+  local ok3=0 bad3=0
+  for spec in "${sites[@]}"; do
+    local anchor="${spec%%|*}" rest="${spec#*|}"
+    local want="${rest%%|*}" sib="${rest##*|}"
+    # window: the anchor plus the next 160 chars, where the citation must sit
+    local window
+    window="$(printf '%s' "$norm" | $GREP -o "$anchor.\{0,160\}" | head -1)"
+    if [ -z "$window" ]; then
+      bad "§2.3 site anchor not found: '$anchor' (prose changed - reclassify, do not delete the arm)"
+      bad3=$((bad3+1)); continue
+    fi
+    if printf '%s' "$window" | $GREP -q "CWC:$want@"; then
+      if printf '%s' "$window" | $GREP -q "CWC:$sib@"; then
+        bad "§2.3 site '$anchor' cites BOTH $want and $sib - ambiguous assignment"
+        bad3=$((bad3+1))
+      else
+        ok3=$((ok3+1))
+      fi
+    elif printf '%s' "$window" | $GREP -q "CWC:$sib@"; then
+      bad "§2.3 site '$anchor' assigned to $sib; A3_MAPPING_RULE.md §4 classifies it $want"
+      bad3=$((bad3+1))
+    else
+      bad "§2.3 site '$anchor' carries no CWC pin (expected $want)"
+      bad3=$((bad3+1))
+    fi
+  done
+  [ "$bad3" -eq 0 ] && pass "all 6 §2.3 sites land where A3_MAPPING_RULE.md §4 classifies them (3 A3 / 3 E1, by site)" \
+                    || note "  ($ok3 of 6 §2.3 sites correctly assigned)"
+
+  # --- positive: the re-pointed total is conserved; a deletion must not satisfy the negative ---
+  local pins; pins=$(printf '%s' "$norm" | $GREP -o 'CWC:[AECP][0-9]*@[0-9a-f]\{8\}' | $GREP -c . || true)
+  note "pinned CWC citations in v0.6: $pins"
+  # 16 landed at A2; A3 adds 18 more (23 refs minus the 5 unpinnable section-only ones)
+  if [ "$pins" -ge 34 ]; then
+    pass "pinned citation count $pins >= 34 (16 from A2 + 18 from A3)"
+  else
+    bad "pinned citation count $pins < 34 — A3 incomplete, or references deleted rather than re-pointed"
+  fi
+
+  # --- positive: the 5 declared-unpinnable section-only citations are present and counted ---
+  local sec; sec=$(printf '%s' "$norm" | $GREP -o '`CWC` §[0-9]\+\(\.[0-9]\+\)\?' | $GREP -c . || true)
+  note "section-only (unpinnable) CWC references: $sec — declared class, A3_MAPPING_RULE.md §3"
+  [ "$sec" -ge 5 ] && pass "the 5 declared-unpinnable section references are present" \
+                   || bad "$sec section-only references; expected >= 5 per the mapping rule"
+}
 
 # --- selftest ----------------------------------------------------------------------------------
 # Two-sided, same-path: the control runs the SAME row1 function against mutated copies, not a
@@ -260,14 +343,33 @@ selftest() {
   fail=$sfail          # the harness's verdict is the ARMS' verdict, not the last arm's fire
 }
 
+# DISPATCH. `fail=0; rowN` — never `rowN; exit $?`.
+#
+# `exit $?` returns the row function's own status, which is the status of its LAST statement, not
+# the accumulated `fail`. row3 and row4 were dispatched that way when they were stubs returning 3,
+# and the form was left in place when they became real: row4 then printed six red FAIL lines and
+# exited 0. A check that reports red and exits green is the failure this whole pass is about, in
+# the harness that checks for it. Only the `NOT IMPLEMENTED` stubs may use `exit $?`, because for
+# them the return value IS the verdict.
 case "${1:-all}" in
   row1) fail=0; row1 ;;
   row2) row2; exit $? ;;
-  row3) row3; exit $? ;;
-  row4) row4; exit $? ;;
+  row3) fail=0; row3 ;;
+  row4) fail=0; row4 ;;
   selftest) fail=0; selftest ;;
-  all) fail=0; row1; echo; row3; echo; selftest; echo
-       echo "row2 (A5) and row4 (A3) are declared and NOT IMPLEMENTED; they exit 3, never green."; ;;
+  # `all` ACCUMULATES. Each row is run with a fresh `fail` and OR-ed into `agg`, because the rows
+  # share one `fail` variable and selftest ends by assigning `fail=$sfail` — so a naive
+  # `row1; row3; row4; selftest` reported row4's six red lines and exited 0, the last row's verdict
+  # silently overwriting every earlier one. That is Build Discipline 6 at an aggregation boundary,
+  # committed inside the aggregate that reports on it: the component results were all correct and
+  # the composite could not represent them.
+  all) agg=0
+       fail=0; row1;     agg=$(( agg | fail )); echo
+       fail=0; row3;     agg=$(( agg | fail )); echo
+       fail=0; row4;     agg=$(( agg | fail )); echo
+       fail=0; selftest; agg=$(( agg | fail )); echo
+       echo "row2 (A5) is declared and NOT IMPLEMENTED; it exits 3, never green."
+       fail=$agg ;;
   *) echo "usage: $0 [all|row1|row2|row3|row4|selftest]" >&2; exit 2 ;;
 esac
 

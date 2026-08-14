@@ -113,9 +113,9 @@ it is most likely to fire.
   reads green forever. Recorded in the checker's header. The partial mitigation is
   `COVERAGE_DIFF.md`'s mapping table — **re-checked against post-`C1` concealment on 2026-08-14**
   before A3 consumed it (`COVERAGE_DIFF.md` §5: every anchor still resolves; two rows now have a
-  better target in `C1`). The re-check verifies the anchors, **not the coverage calls themselves**:
-  a row marked COVERED in A0 that was wrong then is still wrong now, and nothing in this pass
-  would catch it.
+  better target in `C1`). Stated at full strength, and carried verbatim because a receiver
+  would otherwise read the dated re-check as validation of the whole table:
+  > The re-check verifies the anchors, not the coverage calls — a row marked COVERED in A0 that was wrong then is still wrong, and nothing in this pass would catch it.
 - **The intermediate state is live.** v0.6 is hollowed and declared-temporary at §2.8/§2.9; the
   practice paper does not exist yet. Tracked as OQ-287's two limbs.
 - **`C1` is byte-identical in both papers until A2's vacation propagates** — closed as of `974649e0`.

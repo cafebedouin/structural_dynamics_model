@@ -178,10 +178,14 @@ result), §5.4 (the surface signature), §9.1 (two rules), §10 (exclusions). No
 (A1–A5 + C1 / E1–E5 / P1–P5, with Appendix A declared authoritative). The `E5` short-cell defect was
 fixed at `e995f978`. Both are recorded here as *found by this diff*; neither is still live.
 
-**What the re-check does NOT establish.** It verifies the anchors resolve and the targets are still
-apt *as recorded*. It does not re-derive the coverage calls themselves — a row marked COVERED in A0
-that was wrong then is still wrong now, and nothing in this pass would catch it. That is the aptness
-residual declared in `claim_cite_check`'s header, and A3 is where it becomes load-bearing.
+**What the re-check does NOT establish — CARRY THIS SENTENCE VERBATIM into A6 and
+`EXTRACTION_PROMPT.md`; a receiver reading this file months from now will otherwise take a
+dated §5 re-check as validation of the whole table:**
+
+> The re-check verifies the anchors, not the coverage calls — a row marked COVERED in A0 that was wrong then is still wrong, and nothing in this pass would catch it.
+
+That is the aptness residual declared in `claim_cite_check`'s header, and A3 is where it
+becomes load-bearing.
 
 ---
 

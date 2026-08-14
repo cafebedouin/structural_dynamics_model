@@ -63,6 +63,35 @@ in the same change, and a future instrument that wants to close this residual sh
 rather than from the citation text.
 --- DECLARED-RESIDUAL-END -------------------------------------------------------------------
 
+--- UNPINNABLE-CLASS-BEGIN ------------------------------------------------------------------
+SECTION-ONLY CITATIONS ARE A DECLARED UNPINNABLE CLASS. TWO COUNTS, BOTH AT 2026-08-14, because
+they are different populations and collapsing them would be this document's own subject:
+
+    in docs/ (the papers — where a citation carries warrant):   0 now, 5 projected after A3
+    repo-wide (includes apparatus docs describing the class):  12
+
+The docs/ number is the one that matters; the repo-wide number is larger because THIS FILE and
+`A3_MAPPING_RULE.md` refer to those sections while explaining the class. Reproduce with
+`--list --unpinnable`, which prints both and enumerates every site — a stated number that the
+instrument does not produce is exactly the defect this scheme exists to prevent, so the header
+cites the command rather than freezing a figure.
+
+`CWC` §5.1 (the result), §5.4 (the surface signature), §9.1 (two rules) and §3.2 (the strong/weak
+form) carry no Appendix A row, so references to them resolve by section number and cannot be
+digested. They are written `` `CWC` §5.4 `` and this checker does not see them — it guards pins,
+and they have none.
+
+They are NOT fixed by minting Appendix A rows for those sections. Those are sections, not claims,
+and inventing claim rows so that my citations become checkable is the instrument reshaping the
+substrate to fit itself. (`C1` was a different case: a conclusion the paper already argued, which
+the vacation notice had to quote.)
+
+WHY THE COUNT IS HERE RATHER THAN NOWHERE: a silent population of unpinned references is how the
+guarded set quietly stops being the whole set. `--list --unpinnable` prints them. If that number
+grows without anyone deciding it should, the citation scheme is eroding at its edge while every
+gate stays green.
+--- UNPINNABLE-CLASS-END --------------------------------------------------------------------
+
 Usage:
     python3 python/claim_cite_check.py --check      # gate mode: exit 1 on any stale/bad pin
     python3 python/claim_cite_check.py --list       # every live citation and its status
@@ -83,6 +112,10 @@ CITE_RE = re.compile(r"CWC:([A-Z]+[0-9]+)@([0-9a-f]{8})")
 PIN_BEGIN = "PIN-RECORD-BEGIN"
 PIN_END = "PIN-RECORD-END"
 PIN_INLINE = "PIN-RECORD-INLINE"
+
+# Section-only references: `CWC` §5.4 etc. Unpinnable by construction (no Appendix A row), so they
+# are COUNTED and reported rather than checked. See UNPINNABLE-CLASS in the header.
+SECTION_RE = re.compile(r"`CWC`\s*§([0-9]+(?:\.[0-9]+)?)")
 
 SCAN_SUFFIXES = {".md", ".sh", ".py", ".pl", ".txt", ".json"}
 SKIP_DIRS = {".git", "node_modules", "__pycache__", ".claude"}
@@ -167,6 +200,29 @@ def iter_files(root=REPO):
         yield p
 
 
+def collect_unpinnable(root=REPO):
+    """Section-only `CWC` §N references — the declared unpinnable class. Counted, never checked."""
+    out = []
+    for path in iter_files(root):
+        try:
+            text = path.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+        in_record = False
+        for lineno, line in enumerate(text.split("\n"), 1):
+            if PIN_BEGIN in line:
+                in_record = True
+            if PIN_END in line:
+                in_record = False
+                continue
+            if in_record or PIN_INLINE in line:
+                continue
+            for m in SECTION_RE.finditer(line):
+                out.append({"file": str(path.relative_to(root)), "line": lineno,
+                            "section": m.group(1)})
+    return out
+
+
 def collect(root=REPO, cwc_path=CWC):
     """Return (live, records). live entries carry a `status`."""
     live, records = [], []
@@ -198,8 +254,12 @@ def run_check(root=REPO, cwc_path=CWC, quiet=False):
     live, records = collect(root, cwc_path)
     bad = [e for e in live if e["status"] != "OK"]
     if not quiet:
+        unpin = collect_unpinnable(root)
+        in_docs = [e for e in unpin if e["file"].startswith("docs/")]
         print(f"claim_cite_check: {len(live)} live citation(s), "
-              f"{len(records)} recorded (superseded, not checked)")
+              f"{len(records)} recorded (superseded, not checked), "
+              f"{len(in_docs)} section-only in docs/ + {len(unpin) - len(in_docs)} in apparatus "
+              f"(UNPINNABLE, declared class — counted, not checked)")
         for e in bad:
             extra = f" (actual {e['actual']})" if "actual" in e else ""
             print(f"  {e['status']}: {e['file']}:{e['line']} CWC:{e['label']}@{e['pin']}{extra}")
@@ -356,6 +416,15 @@ def main(argv):
     if "--selftest" in argv:
         return selftest()
     if "--list" in argv:
+        if "--unpinnable" in argv:
+            u = collect_unpinnable()
+            d = [e for e in u if e["file"].startswith("docs/")]
+            print(f"  section-only references: {len(d)} in docs/, {len(u) - len(d)} in apparatus, "
+                  f"{len(u)} total")
+            for e in sorted(u, key=lambda x: (x["file"], x["line"])):
+                where = "docs" if e["file"].startswith("docs/") else "meta"
+                print(f"  {'UNPINNABLE':10s} [{where}] {e['file']}:{e['line']}  `CWC` §{e['section']}")
+            return 0
         live, records = collect()
         for e in sorted(live, key=lambda x: (x["file"], x["line"])):
             print(f"  {e['status']:10s} {e['file']}:{e['line']}  CWC:{e['label']}@{e['pin']}")
