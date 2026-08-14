@@ -658,6 +658,42 @@ python3 python/cli.py <group> <name> [args] # run a tool (argv forwarded verbati
 wherever they physically sit (no file moves). `cli.py report ...` delegates to the reports package;
 `cli.py menu` delegates to `omega_resolver.py menu`. `cli selftest` is wired into `scripts/gate.sh`.
 
+### Pattern-index citations: NAMESPACE THEM (OQ-278 standing guard)
+
+**`CLAUDE.md` and `docs/technical/build_discipline.md` publish the same numbered defect taxonomy
+and disagree at indices 3 and 4.** `CM-P4` is *recap-as-witness*; `BD-P4` is *fabricated default*.
+Both documents read as a complete, coherent six, which is why it went unnoticed for 151 commits —
+the member COUNTS converged at `220739b8` (2026-05-30), the exact commit the CONTENTS diverged.
+
+**Write `CM-P3`/`BD-P3`, `CM-P4`/`BD-P4`. Never a bare `Pattern 4` or `P4`; a bare one found in
+the record is UNRESOLVED, not interpreted.** `P3`/`P4` is seven-way overloaded (the concealment
+paper's `CWC:P3`, `diagnostic_summary.pl`'s `P1`–`P10` conflict catalog, `Priority:` levels, essay
+enumerations, decompose-manifest `candidate_pattern`, a Prolog variable, and this taxonomy), so a
+prohibition gate is not buildable — the convention is the guard.
+
+```bash
+python3 python/doc_pattern_check.py --check          # gate: index->name agreement, per index
+python3 python/doc_pattern_check.py --list           # both extractions + the manifest
+python3 python/doc_pattern_check.py --pairwise REV   # manifest-free agreement at a git rev
+python3 python/pattern_citation_check.py --check     # gate: unswept consumers of a VACATED member
+python3 python/pattern_citation_check.py --sweep     # regenerate the OQ-278 label set
+```
+
+Both run in `scripts/gate.sh` (`doc patterns`, `vacated cites`). Three things that bite:
+
+- **Never store the pattern NAMES in either checker.** The manifests hold *locations* and
+  *states*; agreement is computed from the documents. An authored copy of the taxonomy inside the
+  checker that guards the taxonomy is the fork it exists to detect.
+- **Collisions 3 and 4 are allowlisted with their STATE** (`ruled_pending_R1b` vs `unruled`), so a
+  *silent resolution* goes red as well as a new fork. If a ruling lands, retire the allowlist
+  entry in the **same change**.
+- **`CLAUDE.md`'s items 3 and 6 hard-wrap inside the bold run**, so the extraction regex needs
+  `re.DOTALL`. Without it the check reads GREEN while measuring four of six indices. After any
+  edit to that list, run `--list` and confirm all six resolve on both sides.
+
+Full detail: `docs/technical/doc_pattern_check.md`; provenance
+`audits/2026-08-14_oq278_index_collision/`.
+
 ### Check cross-document claim citations (OQ-287 standing guard)
 
 ```bash

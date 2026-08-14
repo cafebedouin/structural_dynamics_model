@@ -4,23 +4,24 @@
 **OQ:** OQ-278
 **Verdict:** The dating rule at `ISSUES.md:11425` is **VOID and unconditionally so** — a date
 cannot tell you which document an author had open, because both lists were live simultaneously
-for every citation that exists. Recovery is by **mechanism**, not by date, and it works for 55
-of 66 taxonomy-sense references. Two findings extend the entry: the blast radius of the
-2026-08-11 vacating is **9 stale citations, not 3**, and `Pattern N`/`PN` is a **six-way**
-overloaded namespace, not four-way.
+for every citation that exists. Recovery is by **mechanism**, not by date. Two findings extend
+the entry: the blast radius of the 2026-08-11 vacating is **9 stale citations, not 3**, and
+`Pattern N`/`PN` is a **seven-way** overloaded namespace, not four-way.
 **Substrate:** no pipeline run; documents, git history, and `git ls-files` at HEAD `62922f29`.
 **Fired:** live — the dating-rule graduation step is retired, the wrong-label count goes 1 → 4,
 the stale-pointer count goes 3 → 9, and two namespaces were discovered by the sweep's own false
-positives.
+positives. **Fired a second time on 2026-08-14** when the gate mode built from §4.6 disagreed
+with §4.6 on 7 of 9 sites: the hand list was right and the sweep's own regexes were wrong (see
+§3(c)), so `LABEL_SET.tsv` had been shipping under-recovered rows.
 
 **Evidence map**
 
 | artifact | what it is |
 |---|---|
 | `PREREGISTRATION.md` | R1a/R1b/R2/R4 branch conditions, registered **before** this sweep ran. Also carries two corrections to the plan's evidence. |
-| `sweep_pattern_citations.py` | the re-runnable sweep. `--sweep` writes the label set; `--selftest` runs two known positives + one naturally-arising negative. |
-| `LABEL_SET.tsv` | 666 machine rows, one per candidate, `mechanism_slug`-keyed. **The artifact OQ-294 consumes.** |
-| §4 below | the hand-adjudicated table for the 66 taxonomy-sense rows — every one read in context, not accepted on report. |
+| `python/pattern_citation_check.py` | the re-runnable sweep, **moved to `python/` 2026-08-14** when the gate mode was added (a scanner here plus one in `python/` would be Pattern 2 on this audit's own subject). `--sweep` writes the label set; `--check` is the gate row `vacated cites`; `--selftest` runs two known positives + one naturally-arising negative. |
+| `LABEL_SET.tsv` | 750 machine rows, one per candidate, `mechanism_slug`-keyed; 49 are taxonomy citations. **The artifact OQ-294 consumes.** Regenerate with `--sweep`; byte-identical across runs. |
+| §4 below | the hand-adjudicated table — every taxonomy-sense row read in context, not accepted on report. It is the **reference** the machine sweep is checked against, and it won that check (§3(c)). |
 
 ---
 
@@ -69,22 +70,24 @@ now sits **between** Pattern 3 (`:601`) and Pattern 4 (`:686`). It was directly 
 when only two patterns existed; Pattern 3 was inserted above a summary sentence that does not
 count it.
 
-## 2. `Pattern N` / `PN` is a SIX-way overloaded namespace, not four-way
+## 2. `Pattern N` / `PN` is a SEVEN-way overloaded namespace, not four-way
 
-OQ-278 and the plan both name four senses. The sweep found six, and **two of them were
-discovered by the sweep's own false positives** — which is the honest way to report them:
+OQ-278 and the plan both name four senses. The sweep found seven, and **two of them were
+discovered by the sweep's own false positives** — which is the honest way to report them.
+Counts at the final run:
 
 | namespace | rows | how it was found |
 |---|---|---|
 | `oq277-frozen-prereg` | 339 | **not ambiguous**: a local defined namespace pinned verbatim by the md5-frozen prereg, precisely so the out-of-harness coder could not read it by reference |
-| `other-unclassified` | 126 | bare `P3`/`P4` with no taxonomy vocabulary anywhere near |
-| **`taxonomy-candidate`** | **66** | the actual citation population — §4 |
-| `analysis-enumeration` | 48 | essays, uke transform outputs, recon reports, protocols and analysis scripts numbering **their own** findings |
-| `oq278-subject` | 39 | OQ-278's own body and this audit — subject, not citation |
-| `decompose-manifest-candidate` | 17 | `"candidate_pattern": "Interpretive Capture (Pattern 3)"` — the DR engine's own vocabulary |
+| `other-unclassified` | 112 | bare `P3`/`P4` with no taxonomy vocabulary anywhere near |
+| `oq278-subject` | 99 | OQ-278's own body and this audit — subject, not citation |
+| `paper-publication` | 51 | the six paper versions PUBLISH the list; definitional restatements, not consumers |
+| **`taxonomy-candidate`** | **49** | the actual citation population — §4 |
+| `analysis-enumeration` | 49 | essays, uke transform outputs, recon reports, protocols and analysis scripts numbering **their own** findings |
+| `decompose-manifest-candidate` | 18 | `"candidate_pattern": "Interpretive Capture (Pattern 3)"` — the DR engine's own vocabulary |
 | `prolog-variable` | 15 | a Prolog variable literally named `P3` |
 | `prolog-conflict-catalog` | 9 | `diagnostic_summary.pl:374`'s independent `P1`–`P10` EXPECTED CONFLICT CATALOG |
-| **`cwc-claim-row`** | **7** | **found as a false positive:** `CWC:P3` is a *concealment paper claim row*, guarded by `python/claim_cite_check.py` |
+| **`cwc-claim-row`** | **9** | **found as a false positive:** `CWC:P3` is a *concealment paper claim row*, guarded by `python/claim_cite_check.py` |
 
 **The `CWC:P3` false positive is direct empirical support for Step 0's namespacing.** This
 sweep — written by someone who had just read `claim_cite_check.py`'s warning that *"Their `A2`s
@@ -93,7 +96,7 @@ proceeded to do exactly that, and was corrected only because the row was hand-re
 prohibition gate on bare `Pattern N` is not buildable at this false-positive rate; namespacing
 at write time is.
 
-## 3. Two probe defects, both caught by reading rather than by a control
+## 3. FOUR probe defects — two caught by reading, two caught by an instrument built from the reading
 
 Recorded because each has the shape this taxonomy is about.
 
@@ -115,7 +118,32 @@ reported `unrecoverable` with both candidates rather than resolved by rule prece
 This is why the sweep's controls run before it will write the label set at all: an uncontrolled
 census is a positional parse waiting to happen.
 
-## 4. The adjudicated label set — 66 taxonomy-sense rows, each read in context
+**(c) THE HAND LIST BEAT THE MACHINE, and that is how two more bugs were found.** When §4.6's
+nine stale citations were turned into the `--check` manifest, the checker disagreed on **7 of
+9** — it could only recover 2. The hand adjudication was right and the sweep's own regexes were
+wrong, in the dullest possible way:
+
+| regex | never matched | sites lost |
+|---|---|---|
+| `faith merge` | `faith-merge` | 3 |
+| `old-vs-new diff` | `Old-vs-new **output** diff` | 1 |
+| *(absent)* | `before/after byte-identical`, `pipeline identity`, `faithful … diff` | 3 |
+
+**Under-recovery is silent: a missed match presents as `unrecoverable`, which reads like a
+result rather than a miss.** `LABEL_SET.tsv` had been shipping under-recovered rows to OQ-294 —
+the artifact whose entire purpose is to be *cleaned* ground truth. This is the audit's own
+`Fired:` bit firing a second time, and it is the argument for the instrument the operator asked
+for: the hand pass and the machine pass disagreeing is what surfaced it, and neither alone would
+have.
+
+**(d) The sweep was reading its own output.** `LABEL_SET.tsv` is committed, so `git grep` finds
+it and every row it already held became a candidate on the next run: the census compounded to
+**1421 rows against 671 real candidates**, and would have grown at every future run. A producer
+that consumes its own artifact reports **growth as discovery**. Fixed by an explicit
+`SELF_OUTPUT` skip; the sweep is now byte-identical across consecutive runs (md5
+`63e5d9e4…`), which is the witness.
+
+## 4. The adjudicated label set — every taxonomy-sense row read in context
 
 `LABEL_SET.tsv` is the machine artifact. The rows below are the hand-ruled classification.
 **Keyed on mechanism; the index survives only as `raw_text_as_found`** — so this table is valid
@@ -211,10 +239,12 @@ immutable and cannot be repaired, so they are outside the label set by design �
 
 ## 5. Recovery rate
 
-**55 of 66** taxonomy-sense rows recovered to a mechanism by hand (§4.3–4.6 plus the
-definitional and meta rows); 1 unrecoverable in-file; 10 are `analysis-enumeration`-adjacent
-rows retained in the candidate set because their path rule is coarse. **Content recovery works.
-Date-based recovery does not exist.**
+Of the 49 taxonomy-sense rows the machine now classifies, **29 recover to a mechanism, 8 are
+`inferred`, 12 `unrecoverable`** — and the hand pass in §4 recovers more than the machine does,
+which is why §4 rather than the TSV is the reference for the ruling. **Content recovery works;
+date-based recovery does not exist.** The machine/hand gap is itself the finding of §3(c) and
+is now bounded rather than assumed: the `--check` row fails if the two disagree on the vacated
+slug.
 
 ## 6. What this changes for OQ-278
 

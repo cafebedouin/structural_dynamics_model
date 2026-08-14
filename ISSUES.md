@@ -11483,6 +11483,46 @@ canonical** — the predictable consequence of `CLAUDE.md:158` calling it "the f
 "append the slug in place" is invalidated if the ruling renumbers, and only the *inventory* is
 ruling-independent.
 
+**RULINGS 2026-08-14 (operator review).** **R1a = A1: `fabricated-default` is a PEER MEMBER**,
+on the file's own criterion at `build_discipline.md:769–772` (distinct tell, distinct
+corrective). R2 is therefore live and blocked on R1b′.
+
+**R1b VOIDED AND RE-REGISTERED (R1b′), and the reason is a defect in the registration itself.**
+Both original branches conditioned on a **generality** criterion — "a *language-specific*
+instance" / "distinct at the taxonomy's altitude" — that appears **nowhere in
+`build_discipline.md`**. Applying it at ruling time would be inventing the discriminator, the
+same granularity error this entry charges against the paper's §5.2. Two checks, run:
+(a) every `altitude`/`general` hit in that file is about *claim scope* or *where an instance
+sits*, never about membership; (b) **`Pattern 5` is ALREADY language-specific in its tells** —
+`Count == 0`, `Supp =< 0.05`, `forall(P,Q)` vacuous (`:735–737`) — so generality is demonstrably
+not a membership criterion in practice. R1b′ therefore runs on the stated criterion only, under
+which bound-probe's corrective was already recorded as *not subsumed*. A generality criterion
+remains available but must be **written into `build_discipline.md` as a membership rule and
+reconciled with Pattern 5** first — a change to the taxonomy's constitution, not a ruling within
+it. **R1b′ UNRULED.**
+
+**R2's ground corrected — the audit had overstated it.** The frozen prereg is **point-in-time,
+the same class as the 228 JSON payloads and `FINDINGS.md:23`**, and Step 4 already repairs that
+class *by the label set, not in place*; calling it "permanently unrepairable" inflated an
+ordinary member of a class we already handle. **R2's real ground is the priced cost asymmetry:
+11 live editable sites if `fabricated-default` moves off index 4 (9 of them internal
+cross-references in one file), against 2 if it stays — ~5:1.** Priced in `PREREGISTRATION.md`
+AMENDMENT 1 §A1.3. **R2 UNRULED**, blocked on R1b′.
+
+**SECOND INSTRUMENT — `python/pattern_citation_check.py`, gate row `vacated cites`.**
+`build_discipline.md:1392`/`:2558` have now fired **three times on this one taxonomy**, so this
+is an instrument rather than a fourth note (operator). It gates the **unswept consumers of the
+VACATED member**: declaration-based, since the 9 stale citations cannot be repaired until R2 —
+RED on a tenth, RED on a silent repair. The archaeology sweep was **moved** into `python/`
+rather than copied (a scanner in an audit dir plus one in `python/` is this entry's own defect).
+**It earned its keep on its first run** — it disagreed with the hand-adjudicated §4.6 list on
+**7 of 9** sites and the hand list was right: `faith merge` never matched `faith-merge`,
+`old-vs-new diff` never matched `Old-vs-new OUTPUT diff`. **Under-recovery is silent** (a miss
+presents as `unrecoverable`, which reads like a result), so `LABEL_SET.tsv` had been shipping
+under-recovered rows to OQ-294. Also caught: the sweep **read its own committed output** (671 →
+1421 rows; a producer consuming its own artifact reports growth as discovery) and a regex
+literal containing an index made the checker **cite itself**.
+
 **CLOSE CONDITION — this entry does not close until all four hold.** Stated as a list because
 the successor has died in a hand-off once already (OQ-277's close note).
 

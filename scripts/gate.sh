@@ -30,6 +30,11 @@ run "spec enums"     python3 python/spec_enum_check.py --check
 # index; collisions 3 and 4 are allowlisted with their state, so a silent resolution goes
 # red too. Selftest (6 controls) rides --check, so this is one row, not two.
 run "doc patterns"   python3 python/doc_pattern_check.py --check
+# Unswept consumers of a VACATED taxonomy member (OQ-278). build_discipline.md:1392/:2558
+# have fired three times on this one taxonomy, so this is an instrument rather than a fourth
+# note (operator, 2026-08-14). Declaration-based: the 9 stale citations cannot be repaired
+# until OQ-278's R2, so they are declared — red on a TENTH, red on a silent repair.
+run "vacated cites"  python3 python/pattern_citation_check.py --check
 run "claim cites"    python3 python/claim_cite_check.py --check
 run "claim cites st" python3 python/claim_cite_check.py --selftest
 run "known_state"    python3 python/known_state_status.py --check

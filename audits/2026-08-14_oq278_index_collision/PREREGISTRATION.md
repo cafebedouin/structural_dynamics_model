@@ -128,7 +128,8 @@ it** — that is the granularity error the plan criticizes in the paper's §5.2.
   spine table (`:2596`) lists its read site as "the `findall` result/count," which is the
   diagnostic layer's own read site.
 
-**Branches:**
+**Branches: — ⚠️ VOIDED 2026-08-14 by AMENDMENT 1 (operator). Superseded by R1b′ below; kept
+verbatim because a silently rewritten branch table is worse than a voided one.**
 
 | if | then |
 |---|---|
@@ -161,6 +162,15 @@ unrepairable** — the artifact would go on expressing the old numbering forever
 point-in-time record of what the out-of-harness coder was shown. That is stronger than churn and
 weaker than a bar, and the ruling should be made on the accurate version.
 
+> **⚠️ THIS CORRECTION WAS ITSELF AN OVERCORRECTION — operator, 2026-08-14.** "Permanently
+> unrepairable" reads as stronger than it is. The frozen prereg is **point-in-time, the same
+> class as the 228 JSON payloads and `FINDINGS.md:23`** — and Step 4 already rules that
+> point-in-time artifacts are repaired **by the label set, not in place**. That is the
+> mechanism, and `LABEL_SET.tsv` being mechanism-keyed is exactly what makes it work. So the
+> frozen site is an *ordinary* member of a class this audit already has a repair for, and
+> calling it unique inflated it into a ground it is not. **R2's real ground is the cost
+> asymmetry — priced in AMENDMENT 1 below.**
+
 | if | then |
 |---|---|
 | **C1** — the unrepairable frozen site outweighs `BD-P4`'s 9 in-document cross-references | index 4 = `recap-as-witness`; `fabricated-default` renumbers to the next free index. |
@@ -171,6 +181,9 @@ weaker than a bar, and the ruling should be made on the accurate version.
 only branch under which the frozen artifact, the 9 cross-references, and the ~100 historical
 citations are all simultaneously correct without a single edit — and OQ-278 already lists
 "give every index a namespace so a bare 'Pattern 4' cannot be written" as a candidate shape.
+
+*C1's condition text is superseded by the priced asymmetry in AMENDMENT 1; the three
+dispositions C1/C2/C3 stand unchanged.*
 
 ## R4 — does the paper extend?
 
@@ -228,3 +241,130 @@ wrong *today*, independent of any ruling.
 - **The slug pick** at `build_discipline.md:601` — the heading now carries **both** strings
   (`## Pattern 3 — Bound-probe bypasses clause-order (query-binding-bypasses-cut)`), so no pick
   is forced. If R1b demotes, it dissolves entirely.
+
+---
+
+# AMENDMENT 1 — 2026-08-14 (operator review of the ruling request)
+
+Appended, never rewritten: the original R1b branch table is marked VOID **in place** and kept
+verbatim above. A pre-registration that silently rewrites its own branches after seeing the
+evidence has spent the discipline it exists to protect.
+
+## A1.0 — The mechanical question, answered from the text
+
+> *Does the branch-condition text cite the zero, or only the expectation note?*
+
+**Neither: the branch conditions cite a DIFFERENT zero, and it is true.** B1 and B2 both
+condition on **"the zero coverage"** — the frozen prereg's *measured* `P3 = 0`
+(`audits/2026-08-10_oq277_rq2_crosscoding/PREREGISTRATION.md:78`), which is verified and
+unaffected by the correction. The false claim ("cited by index nowhere in its own defining
+document") came from the **plan**, and this pre-registration **corrected it before the branches
+were written** (§(ii), lines 74–86), stating: *"R1b must be argued on the corrected figure."*
+
+The corrected figure of **1** then appears inside B2's own consequent — *"`:1015`, its one
+cross-reference"* — so even the registered expectation argues **from** the 1, not from a zero.
+Its claim was that the single citation is *located inside* the positive-control section, which is
+an argument only available if one exists.
+
+**So the branch is not void on this ground, and the pre-registration discipline is intact.**
+
+## A1.1 — But the branch IS defective, on the operator's second ground — and worse than diagnosed
+
+The operator's charge: B2's condition imports a **generality criterion** ("its tell is a
+*language-specific instance*") that appears nowhere in `build_discipline.md`, so applying it
+would be inventing the discriminator at ruling time.
+
+**Correct — and it is not confined to B2. B1 carries the same criterion**, inverted: *"its tell
+is distinct at the taxonomy's altitude, not only at the instrument's."* Both branches are built
+on an unregistered discriminator, so the defect is the **whole R1b table**, not one row.
+
+**Two checks, run rather than assumed:**
+
+**(a) No membership-generality criterion exists in the file.** Every `altitude`/`general` hit is
+about *claim scope* (`:186` "control the claim at the altitude it's made") or *where an instance
+sits* (`:855` value/channel/aggregation altitudes) — never about whether a mechanism qualifies as
+a member. `:4` runs the other way: *"This is not general [software advice]."*
+
+**(b) A PUBLISHED MEMBER IS ALREADY LANGUAGE-SPECIFIC IN ITS TELLS — this is decisive.**
+`Pattern 5`'s canonical tells at `:735–737` are ``Count == 0``, ``Supp =< 0.05``, and
+``forall(P, Q)`` *"vacuously true when `P`'s table is empty"* — Prolog. `Pattern 6`'s three
+instances include `grep -v Warning` — shell.
+
+**So generality is demonstrably NOT a membership criterion in practice.** Registering it now
+would require justifying why it disqualifies bound-probe while leaving Pattern 5 — a much
+heavier lift than the original expectation implied, and one nobody has attempted.
+
+## A1.2 — R1b′ (re-registered)
+
+**Stated criterion only**, `:769–772` — *distinct tell + distinct corrective ⇒ distinct member*:
+
+| if | then |
+|---|---|
+| **B1′** — bound-probe has a distinct tell and a distinct corrective | **peer member**, index per R2 |
+| **B2′** — some published member's corrective subsumes it | **sub-instance**, no index |
+| **B3′** — it names a discipline, not a defect shape | **demote** |
+
+**Recorded, not registered as an expectation — the evidence for B1′ was already in the record
+before this amendment and stating a preference now would be the thing this amendment exists to
+prevent:** §R1b's own evidence list says its corrective *"is genuinely distinct from the
+positive-control discipline, so it is **not subsumed**."* Under the stated criterion, with
+generality removed and no ground left for B2′, **B1′ is the only branch with evidence behind
+it.** The operator's framing — *"either bound-probe is a peer member under the stated criterion,
+or you state and register the generality criterion first and re-derive"* — is therefore a real
+fork only if someone takes the second path.
+
+**The second path stays open and is specified**, so declining it is a choice rather than an
+oversight: a generality criterion must be **named, written into `build_discipline.md` as a
+membership rule, and reconciled with Pattern 5's Prolog tells** before it can bear on R1b. That
+is a change to the taxonomy's constitution, not a ruling within it.
+
+**Unchanged from the original registration, and it still binds:** *"one claimant is left, so it
+wins by default"* is explicitly NOT a branch condition. Sole occupancy is not membership
+evidence.
+
+## A1.3 — R2's ground, corrected and PRICED
+
+The frozen prereg is point-in-time (see the note at R2 above), so it is repaired by the label
+set like every other point-in-time artifact. **R2's real ground is the cost asymmetry**, priced
+at HEAD `6e7df53f`:
+
+| | **C1** — index 4 = `recap-as-witness` (fabricated-default moves) | **C2** — index 4 = `fabricated-default` (recap-as-witness moves) |
+|---|---|---|
+| `build_discipline.md` internal cross-refs | **9 break** (`:769,771,772,890,901,1102,1759,1902,2112`) | 0 |
+| `build_discipline.md` heading | 1 (`:686`) | 0 |
+| `build_discipline.md` spine table row | 1 (`:2599`) | 0 |
+| `CLAUDE.md` numbered entry | 0 | 1 |
+| paper — current version amended | 1 (`v0_6.md`) | 1 |
+| paper — 5 earlier versions | point-in-time, not edited | point-in-time, not edited |
+| frozen prereg | point-in-time, label-set repair | point-in-time, label-set repair |
+| **live editable sites** | **11** | **2** |
+
+**The asymmetry is ~5:1 against moving fabricated-default off index 4**, and it is concentrated
+in a single file, which makes it a one-change edit rather than a sweep. Against that, C1's only
+remaining argument is that `CLAUDE.md` is the always-loaded file and the paper published its
+list six times.
+
+**No expectation registered for R2.** It branches on R1b′, which is unruled, and the priced
+table is exactly the input a ruling should be made against — registering a preference beside the
+price would put a thumb on it.
+
+## A1.4 — R1a: RULED
+
+**Operator, 2026-08-14: A1 — `fabricated-default` is a PEER MEMBER.** It passes the file's own
+stated criterion at `:769–772` (distinct tell, distinct corrective), and the corrected evidence
+strengthens rather than disturbs the case: 9 internal cross-references (not 7), mechanism text,
+the dated OQ-33 exemplar, a tripwire diagnostic, `:901`'s axis position, and Pattern 6 composing
+*"the Pattern-4 treatment"* as a primitive — the inverse of subsumption.
+
+**Consequence:** R2 is live (two members need addresses) and blocked on R1b′.
+
+## A1.5 — Status after this amendment
+
+| ruling | state |
+|---|---|
+| **R1a** | **RULED — A1, peer member** |
+| **R1b′** | re-registered, **UNRULED** |
+| **R2** | live, ground corrected and priced, **UNRULED** — blocked on R1b′ |
+| **R4** | falls out, waits |
+
+Steps 4 and 5 remain blocked. Nothing in this amendment is a repair.

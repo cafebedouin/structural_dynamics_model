@@ -82,7 +82,30 @@ prereg; OQ-278's own body). Wrong labels **1 → 4** (one is in CODE, `prolog/co
 **Stale pointers created by the 2026-08-11 vacating: 9, not 3** — nobody swept, which is
 `build_discipline.md:1392`/`:2558` firing on the taxonomy's own repair for the third time.
 
-**Not ruled:** R1a/R1b/R2/R4 are the operator's, branches pre-registered *before* the sweep ran.
+**R1a RULED 2026-08-14 — A1, `fabricated-default` is a PEER MEMBER** (operator). **R1b VOIDED and
+RE-REGISTERED as R1b′ in the same review:** both its branches conditioned on a *generality*
+criterion ("language-specific instance" / "distinct at the taxonomy's altitude") that appears
+**nowhere in `build_discipline.md`** — and `Pattern 5` is **already language-specific in its
+tells** (`Count == 0`, `forall(P,Q)` vacuous — `:735–737`), so generality is demonstrably not a
+membership criterion. Applying it would have been inventing the discriminator at ruling time.
+R1b′ runs on the file's stated criterion only. R2's ground was also corrected: the frozen prereg
+is **point-in-time like every other**, repaired by the label set, not "permanently unrepairable" —
+its real ground is a priced ~5:1 cost asymmetry.
+
+**SECOND INSTRUMENT, `python/pattern_citation_check.py`, gate row `vacated cites`** — the
+archaeology sweep moved to `python/` (not copied) and given a gate mode, because
+`build_discipline.md:1392`/`:2558` have now fired **three times on this one taxonomy** and three
+instances wants an instrument, not a fourth note (operator). Declaration-based: the 9 stale
+citations can't be repaired until R2, so they're declared — RED on a tenth, RED on a silent
+repair. **It earned its keep on its first run:** it disagreed with the hand-adjudicated list on
+**7 of 9** sites, and the hand list was right — `faith merge` never matched `faith-merge`,
+`old-vs-new diff` never matched `Old-vs-new OUTPUT diff`. **Under-recovery is SILENT (it presents
+as `unrecoverable`, which reads like a result)**, so `LABEL_SET.tsv` had been shipping
+under-recovered rows to OQ-294. Two further traps recorded there: the sweep **read its own
+committed output** (census compounded 671 → 1421; a producer consuming its own artifact reports
+growth as discovery), and a regex literal containing an index made the checker **cite itself**.
+
+**Still not ruled:** R1b′, R2, R4.
 The citation repair is deliberately held until R2 — "append the slug in place" is invalidated if
 the ruling renumbers. **OQ-294 minted** (`splits_from OQ-278`) for the taxonomy
 self-reproducibility study; it consumes `LABEL_SET.tsv`, which is keyed on `mechanism_slug` so it

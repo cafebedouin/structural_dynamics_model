@@ -157,3 +157,65 @@ made against. Separate from `python/claim_cite_check.py` by that audit's pre-reg
 criterion (*distinct object AND no shared manifest ⇒ separate*): distinct object (index→name
 agreement across documents vs a citation pinned to a claim row), no shared manifest, no shared
 extraction.
+
+---
+
+# Sibling: `pattern_citation_check.py` — the vacated-consumer gate
+
+Gate row `vacated cites`. Same OQ (OQ-278), different object: `doc_pattern_check` guards the two
+**specifications** against each other; this guards the **citation record** against a member that
+was removed from it.
+
+## Why it is an instrument and not a note
+
+`build_discipline.md:1392` (*a correction landed in PROSE is not landed until every instrument
+encoding the same assumption is checked*) and `:2558` (*a correction is not done until the old
+value's consumers are swept*) have fired **three times on this one taxonomy**: the 2026-08-11
+vacating that lived only in the paper for a day; that same ruling leaving `CLAUDE.md` publishing
+the old six; and the nine stale citations the archaeology found. Operator, 2026-08-14: *three
+instances of one failure mode wants an instrument, not a fourth note.*
+
+## Declaration-based, not repair-based
+
+The nine stale citations **cannot be repaired yet** — the repair is OQ-278's Step 4, after R2,
+because "append the slug in place" is invalidated if the ruling renumbers. So they are
+**declared**, per file (never per line — line numbers drift under ordinary editing and a
+line-keyed manifest would go red on churn instead of on substance):
+
+| verdict | meaning |
+|---|---|
+| `UNSWEPT CONSUMER` | a **tenth** site cites the vacated member and is not in the manifest |
+| `DECLARED CONSUMER GONE` | a declared site stopped citing it — either the repair landed (retire the entry in the **same change**) or the detector stopped seeing it |
+| `COUNT CHANGED` | the per-file count moved |
+
+Green today. Same shape as `DECLARED_SPINE_LAG` above and
+`prolog/axis_boundary_allowlist.txt`.
+
+## It has already earned its keep, and the lesson generalizes
+
+Built from the hand-adjudicated list in the audit's `WRITEUP.md` §4.6, its **first run disagreed
+on 7 of 9 sites** — it could recover only 2. The hand list was right; the sweep's own regexes were
+wrong: `faith merge` never matched `faith-merge` (3 sites), `old-vs-new diff` never matched
+`Old-vs-new **output** diff` (1), and three phrasings were absent entirely.
+
+**Under-recovery is silent — a missed match presents as `unrecoverable`, which reads like a
+result rather than a miss** — so `LABEL_SET.tsv` had been shipping under-recovered rows to
+OQ-294, the artifact whose whole purpose is to be *cleaned* ground truth. Neither the hand pass
+nor the machine pass would have caught it alone; **the disagreement was the instrument.**
+
+## Two traps this file fell into, both worth knowing before touching it
+
+- **It read its own output.** `LABEL_SET.tsv` is committed, so `git grep` finds it and every row
+  it already held became a candidate on the next run — the census compounded to 1421 rows against
+  671 real candidates and would have grown at every run. **A producer that consumes its own
+  artifact reports growth as discovery.** Guarded by `SELF_OUTPUT`; the witness is that
+  consecutive `--sweep` runs are now byte-identical.
+- **A regex literal containing `Pattern-3` made the checker cite itself.** Exactly the shape
+  `claim_cite_check.py` documents (*"Documentation ABOUT a citation otherwise registers AS one —
+  the same shape, three times now"*). Keep index literals out of the mechanism patterns.
+
+## Performance
+
+`git ls-files` + read-everything took **32s** — too slow to gate. `git grep -lIE` prefilters in C
+and skips binaries itself, giving **~1s**. The `-I` flag also closes the decoded-binary hole
+independently of the NUL check, so that hazard is now guarded twice.

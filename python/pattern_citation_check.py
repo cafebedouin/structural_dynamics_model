@@ -1,9 +1,39 @@
 #!/usr/bin/env python3
-"""OQ-278 archaeology sweep — produce the DISAMBIGUATED LABEL SET for pattern-index citations.
+"""pattern_citation_check — sweep pattern-index citations; GATE the unswept consumers of a
+vacated taxonomy member.
 
-Re-runnable artifact for `audits/2026-08-14_oq278_index_collision/`.
+Two jobs, one classifier, one canonical location. Built as the OQ-278 archaeology sweep inside
+`audits/2026-08-14_oq278_index_collision/`, then MOVED here (2026-08-14) rather than copied,
+when the gate mode was added — a scanner in an audit dir plus a scanner in `python/` is
+Pattern 2 on this file's own subject.
 
-WHAT THIS PRODUCES, and why the shape matters more than the counts
+    --check     GATE MODE. The vacated-consumer instrument. See VACATED below.
+    --sweep     writes the audit's `LABEL_SET.tsv` (the artifact OQ-294 consumes)
+    --selftest  the sweep's controls alone
+
+WHY THE GATE MODE EXISTS — three strikes, so an instrument rather than a fourth note
+------------------------------------------------------------------------------------
+`build_discipline.md:1392` ("a correction landed in PROSE is not landed until every instrument
+encoding the same assumption is checked") and `:2558` ("a correction is not done until the old
+value's consumers are swept") have now fired THREE times on this one taxonomy: the 2026-08-11
+vacating that lived only in the paper for a day; the same ruling leaving `CLAUDE.md` publishing
+the old six; and the nine stale citations this sweep found. Operator, 2026-08-14: *three
+instances of one failure mode wants an instrument, not a fourth note.*
+
+This mode is that instrument, and it is DECLARATION-BASED, not repair-based — the nine stale
+citations cannot be repaired until OQ-278's R2, because "append the slug in place" is
+invalidated if the ruling renumbers. Green today; RED on a tenth; RED when one is silently
+repaired without retiring its manifest entry. Same shape as
+`doc_pattern_check.DECLARED_SPINE_LAG` and `prolog/axis_boundary_allowlist.txt`.
+
+**It has already earned its keep once.** Its first run DISAGREED with the hand adjudication in
+`WRITEUP.md` §4.6 on 7 of 9 sites — and the hand list was right: the disagreement was two
+hyphenation bugs in this file's own recovery regexes (`faith merge` never matched
+`faith-merge`; `old-vs-new diff` never matched `Old-vs-new OUTPUT diff`). Under-recovery is
+SILENT — it presents as `unrecoverable`, which reads like a result — so `LABEL_SET.tsv` had
+been shipping under-recovered rows to OQ-294. Fixed and regenerated.
+
+WHAT THE SWEEP PRODUCES, and why the shape matters more than the counts
 ------------------------------------------------------------------
 One row per candidate citation to build-discipline pattern index 3 or 4:
 
@@ -15,12 +45,18 @@ eventual ruling may RENUMBER, and anything index-keyed would become ground truth
 numbering that no longer exists. Keyed on mechanism, the label set stays valid under every branch
 of R1a/R1b/R2 and the ruling never has to touch it. OQ-294 consumes it as cleaned ground truth.
 
-THE NAMESPACE PROBLEM — `Pattern N` / `PN` is FOUR-WAY OVERLOADED
+THE NAMESPACE PROBLEM — `Pattern N` / `PN` is SEVEN-WAY OVERLOADED
 -----------------------------------------------------------------
-`P3`/`P4` also name: `prolog/diagnostic_summary.pl`'s independent EXPECTED CONFLICT CATALOG
-(P1-P10); `Priority:` levels; essay/protocol section headings; and a Prolog *variable* named
-`P3`. A prohibition gate on bare `Pattern N` would run >50% false positives, which is why Step 0
-of the plan namespaces citations (`CM-P4` / `BD-P4`) instead of forbidding them.
+OQ-278 named four senses; this sweep found seven, and TWO of them were found as its own false
+positives — `CWC:P3` (a concealment claim row, guarded by `python/claim_cite_check.py`) and
+decompose-manifest `candidate_pattern` (the DR engine's own vocabulary). The others:
+`prolog/diagnostic_summary.pl`'s independent EXPECTED CONFLICT CATALOG (P1-P10); `Priority:`
+levels; essay/protocol/analysis enumerations; a Prolog *variable* named `P3`; and the paper's
+own published table. A prohibition gate on bare `Pattern N` would run >50% false positives,
+which is why Step 0 namespaces citations (`CM-P4` / `BD-P4`) instead of forbidding them.
+
+Two further populations are PINNED, not ambiguous, and must never be counted as citations: the
+md5-frozen OQ-277 prereg (which defines `P1`-`P6` verbatim) and OQ-278's own body.
 
 So this sweep classifies NAMESPACE first, then recovers the mechanism only inside the taxonomy
 namespace.
@@ -41,8 +77,9 @@ cross-reference — and must DECLINE on a planted non-taxonomy `P3` in the Prolo
 shape. A one-sided control (plant-and-find) would show only that the probe CAN fire.
 
 Usage:
-    python3 sweep_pattern_citations.py --sweep       # write LABEL_SET.tsv + print the summary
-    python3 sweep_pattern_citations.py --selftest    # controls only
+    python3 python/pattern_citation_check.py --check     # gate mode (vacated consumers); default-less
+    python3 python/pattern_citation_check.py --sweep     # write LABEL_SET.tsv + print the summary
+    python3 python/pattern_citation_check.py --selftest  # the sweep's controls alone
 """
 
 import re
@@ -50,11 +87,53 @@ import subprocess
 import sys
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-REPO = HERE.parent.parent
+REPO = Path(__file__).resolve().parent.parent
+AUDIT = REPO / "audits/2026-08-14_oq278_index_collision"
+
+# --- the vacated-consumer manifest (the gate's actual subject) ---------------
+#
+# WHY THIS EXISTS. `build_discipline.md:1392` ("a correction landed in PROSE is not landed
+# until every instrument encoding the same assumption is checked") and `:2558` ("a correction
+# is not done until the old value's consumers are swept") have now fired THREE times on this
+# one taxonomy. Three instances of one failure mode wants an instrument, not a fourth note
+# (operator, 2026-08-14).
+#
+# The 2026-08-11 ruling DEMOTED AND VACATED `destructive-replace` from index 3. Nine live
+# citations still cite it as a member. They are NOT repaired here — the repair is Step 4,
+# after OQ-278's R2, because "append the slug in place" is invalidated if the ruling
+# renumbers. So they are DECLARED, exactly as `doc_pattern_check.DECLARED_SPINE_LAG` declares
+# the unrepaired spine table: green today, red on a TENTH, red when one is silently repaired.
+#
+# Counts are per FILE, not per line: line numbers drift under ordinary editing and a
+# line-keyed manifest would go red on churn instead of on substance.
+VACATED = {
+    "slug": "destructive-replace",
+    "declared": "2026-08-11",
+    "oq": "OQ-278",
+    "what": "demoted from a defect pattern to a witness rule; index 3 vacated, never reused",
+    "repair_blocked_on": "OQ-278 R2 (Step 4) — renumbering would invalidate an in-place slug",
+}
+DECLARED_STALE_CONSUMERS = {
+    "ISSUES.md": 1,
+    "KNOWN_STATE.md": 1,
+    "audits/2026-06-07_stakeholder_layer_migration/MIGRATION_PLAN.md": 1,
+    "audits/2026-06-11_oq109_phase_b/b3_open1_discharge.md": 1,
+    "audits/2026-06-12_oq106_retire/README.md": 1,
+    "audits/2026-06-18_oq104_citation_checker/FINDINGS.md": 1,
+    "docs/design/the_perturbation_move.md": 1,
+    "docs/the_perturbation_principle.md": 1,
+    "docs/design/design_gaps.md": 1,
+}
 
 # The two definitional documents are the SUBJECT, not citations. Excluded from the label set.
 DEFINITIONAL = {"CLAUDE.md", "docs/technical/build_discipline.md"}
+
+# THE SWEEP MUST NOT READ ITS OWN OUTPUT. `LABEL_SET.tsv` is committed, so `git grep` finds it
+# and every row it already contains becomes a new candidate on the next run — the row count
+# compounds silently (1421 on the run that caught this, against 671 real candidates) and every
+# published count is inflated by however many times the sweep has been run. A producer that
+# consumes its own artifact reports growth as discovery.
+SELF_OUTPUT = {"audits/2026-08-14_oq278_index_collision/LABEL_SET.tsv"}
 
 FORM_A = re.compile(r"Pattern[- ]([34])\b")
 FORM_B = re.compile(r"\bP([34])\b")
@@ -83,6 +162,12 @@ NS_RULES = [
     # docs/concealment/, guarded by python/claim_cite_check.py, which namespaces DELIBERATELY
     # for exactly this reason ("Their `A2`s are DIFFERENT CLAIMS"). Empirical support for
     # Step 0: an unnamespaced scanner reads another scheme's labels as citations.
+    # The paper PUBLISHES the taxonomy — its rows are definitional restatements, in the same
+    # class as the two definitional documents, not citations that consume it. Only the current
+    # version is ever amended (R4); the five earlier ones are point-in-time.
+    ("paper-publication",
+     lambda p: p.startswith("docs/amnesiac_institution/"),
+     lambda l: True),
     ("cwc-claim-row",
      lambda p: True,
      lambda l: "CWC:" in l),
@@ -130,8 +215,13 @@ MECHANISMS = [
         r"witness.{0,25}same turn", r"turn-end",
     ]),
     ("destructive-replace", [
-        r"destructive[- ]replace", r"faith merge", r"prove before you replace",
-        r"old-vs-new diff", r"the diff is proof", r"before you delet",
+        # HYPHENATION BUGS, found 2026-08-14 by the vacated-consumer check disagreeing with
+        # the hand adjudication in the audit's WRITEUP §4.6. `faith merge` never matched
+        # `faith-merge` (3 sites); `old-vs-new diff` never matched `Old-vs-new OUTPUT diff`.
+        # Under-recovery is silent — it reads as `unrecoverable`, which looks like a result.
+        r"destructive[- ]replace", r"faith[- ]merge", r"prove before you replace",
+        r"old-vs-new(\s+\w+)?\s+diff", r"the diff is proof", r"before you delet",
+        r"before/after byte-identical", r"faithful\s+\S+\s+diff", r"pipeline identity",
     ]),
     ("bound-probe", [
         r"bound[- ]probe", r"bypasses (the )?cut", r"clause[- ]order",
@@ -152,9 +242,15 @@ CONTEXT = 3  # lines either side pulled for the quoted_context / recovery window
 
 
 def tracked_files():
-    out = subprocess.run(["git", "ls-files"], cwd=REPO, capture_output=True,
-                         text=True, check=True).stdout
-    return [p for p in out.splitlines() if p and p not in DEFINITIONAL]
+    """Candidate files only. `git ls-files` + read-everything took 32s — too slow to gate.
+
+    `git grep -lI` does the prefilter in C and skips binaries itself (-I), which also closes
+    the decoded-noise hole independently of the NUL check below. ~0.5s.
+    """
+    out = subprocess.run(
+        ["git", "grep", "-lIE", r"Pattern[- ][34]|\bP[34]\b"],
+        cwd=REPO, capture_output=True, text=True).stdout
+    return [p for p in out.splitlines() if p and p not in DEFINITIONAL and p not in SELF_OUTPUT]
 
 
 _SPAN_CACHE = {}
@@ -320,7 +416,73 @@ def selftest():
     return failures, rows
 
 
+def stale_consumers(rows):
+    """file -> count of live citations that still cite the VACATED mechanism as a member.
+
+    A row counts only if it is a taxonomy citation (namespace `taxonomy-candidate`, so the
+    pinned/subject/foreign-namespace populations are already excluded) AND its recovered
+    mechanism is the vacated slug. Discussion OF the vacating lives in `oq278-subject` and in
+    the two definitional documents, none of which reach here — which is what keeps this from
+    firing on its own paper trail.
+    """
+    found = {}
+    for r in rows:
+        if r["namespace"] == "taxonomy-candidate" and r["mechanism_slug"] == VACATED["slug"]:
+            found[r["file"]] = found.get(r["file"], 0) + 1
+    return found
+
+
+def run_vacated_check(rows, declared=None):
+    """Return a list of error strings (empty = green)."""
+    declared = DECLARED_STALE_CONSUMERS if declared is None else declared
+    found = stale_consumers(rows)
+    errors = []
+    for path in sorted(set(found) | set(declared)):
+        f, d = found.get(path, 0), declared.get(path, 0)
+        if f == d:
+            continue
+        if d == 0:
+            errors.append(f"UNSWEPT CONSUMER: {path} cites the VACATED '{VACATED['slug']}' "
+                          f"({f}x) and is not in the manifest — a correction landed in prose "
+                          f"without sweeping its consumers ({VACATED['oq']})")
+        elif f == 0:
+            errors.append(f"DECLARED CONSUMER GONE: {path} no longer cites "
+                          f"'{VACATED['slug']}' — either the repair landed (retire the manifest "
+                          f"entry in the SAME change) or the detector stopped seeing it")
+        else:
+            errors.append(f"COUNT CHANGED: {path} cites '{VACATED['slug']}' {f}x, "
+                          f"manifest says {d}x")
+    return errors
+
+
 def main(argv):
+    if "--check" in argv:
+        # The sweep's own controls gate the gate: an uncontrolled census is a positional
+        # parse waiting to happen, and this row reports a COUNT.
+        failures, rows = selftest()
+        if failures:
+            for f in failures:
+                print(f"  {f}")
+            print("pattern_citation_check: RED (sweep controls)")
+            return 1
+        # Control that the manifest can go red at all: a phantom entry must be reported.
+        if not run_vacated_check(rows, declared={**DECLARED_STALE_CONSUMERS,
+                                                 "docs/NOT_A_REAL_FILE.md": 1}):
+            print("  selftest FAILED: phantom manifest entry did not turn the check red")
+            print("pattern_citation_check: RED (selftest)")
+            return 1
+        errors = run_vacated_check(rows)
+        if errors:
+            for e in errors:
+                print(f"  {e}")
+            print(f"pattern_citation_check: RED — {len(errors)} vacated-consumer problem(s)")
+            return 1
+        n = sum(DECLARED_STALE_CONSUMERS.values())
+        print(f"pattern_citation_check: GREEN — {n} declared unswept consumer(s) of the VACATED "
+              f"'{VACATED['slug']}' across {len(DECLARED_STALE_CONSUMERS)} files, repair blocked "
+              f"on {VACATED['repair_blocked_on']}; selftest 4/4")
+        return 0
+
     failures, rows = selftest()
     if "--selftest" in argv:
         for f in failures:
@@ -340,7 +502,7 @@ def main(argv):
               "positional parse waiting to happen")
         return 1
 
-    out = HERE / "LABEL_SET.tsv"
+    out = AUDIT / "LABEL_SET.tsv"
     cols = ["file", "line", "raw_text_as_found", "quoted_context",
             "namespace", "mechanism_slug", "confidence"]
     with out.open("w", encoding="utf-8") as fh:
