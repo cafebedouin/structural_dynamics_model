@@ -1,0 +1,250 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Law and Technology / Products Liability / First Amendment Doctrine",
+  "family_id": "algorithmic_authorless_harm_2026",
+  "topic_summary": "The essay argues that engineered harm has two distinct production paths — a 'technician' path where a person holds a theory of harm and documents it (tobacco), and an 'emergent' path where variation, a metric, and culling produce a hyper-optimized harmful artifact with no one holding the theory at any point (the fishing lure, and by extension recommender systems). It traces how courts confronted with the emergent path (Escola, Anderson v. TikTok, Moody v. NetChoice, RealPage) are forced onto one of two doctrinal slots — product/conduct attributable for liability, or expression attributable as protected speech — and warns that the same finding of firm-attribution that enables liability (curation is the platform's own act, not a third party's) simultaneously supplies a First Amendment shield, so that the vocabulary of accountability convert into a claim of immunity case by case.",
+  "extraction_summary": {
+    "entity_count": 9,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "Hideo Yoshida (lure designer; loop-runner without a theory of the mechanism)",
+      "Tobacco industry (technician-path exemplar; documented mechanism knowledge, 1998 settlement)",
+      "TikTok (defendant in Anderson v. TikTok; algorithmic curation held to be first-party expressive activity)",
+      "RealPage (defendant/plaintiff; rent-setting algorithm firm suing NY AG over algorithmic rent-setting ban)",
+      "Judge Yvonne Gonzalez Rogers (presiding over consolidated social media adolescent addiction MDL)",
+      "New York Attorney General (defendant in RealPage v. James; enforcer of algorithmic rent-setting ban)",
+      "U.S. Department of Justice (negotiated RealPage consent decree; 'diet and coupling' regulatory approach)",
+      "Justice Traynor / Escola v. Coca-Cola Bottling Co. (1944) (source of strict-liability grammar absent a culpable mind)",
+      "Nylah Anderson (decedent; served self-asphyxiation challenge content never searched for)"
+    ],
+    "key_tensions": [
+      "Attribution for liability (firm answers for system effects because it built/deployed/profits/can-change it) vs attribution for expression (system output is firm's protected speech) — same finding, opposite doctrinal payloads",
+      "Technician path (documented mechanism knowledge, e.g. tobacco) vs emergent path (variation + metric + culling with no one holding the theory) — converge on the same hyper-optimized artifact, diverge in what they leave for an investigator",
+      "Section 230's binary (third-party content vs platform's own conduct) forces emergent, unnarratable curation onto the 'own conduct' horn, which is simultaneously the products-liability sword and the First Amendment shield",
+      "Process regulation ('diet and coupling', content-agnostic) vs doctrine gravitating toward compelled-speech/viewpoint framing that reclassifies process rules as speech restrictions"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The persisting shared commitment is the doctrine of corporate attribution itself — the principle that an algorithmic system's operation and output can be legally imputed to the firm that built, trained, deployed, and profits from it. Every actor in the essay (products-liability plaintiffs, RealPage, the Third Circuit, the DOJ) invokes this same attribution principle; they disagree about what kind of act attribution makes the firm the author of.",
+    "authority_description": "Courts (interpreting Section 230, the First Amendment via Moody, products-liability doctrine via Escola's progeny, and antitrust/consumer-protection statutes) hold interpretive authority over what attribution to the firm legally constitutes, case by case, with no unifying appellate or legislative settlement yet fixing the answer.",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "algorithmic_attribution",
+    "readings": [
+      {
+        "reading_id": "products_liability_reading",
+        "commitment": "Attribution to the firm establishes loss-allocation responsibility: the firm answers for the system's effects because it controls production, the plaintiff cannot inspect the process, and the firm can spread or reduce the risk — Escola's grammar applied to software.",
+        "authority_grounding": "Strict-liability/design-defect doctrine (Escola v. Coca-Cola Bottling Co.; In re Social Media Adolescent Addiction MDL)",
+        "sibling_readings": [
+          "expressive_attribution_reading",
+          "conduct_regulation_reading",
+          "technician_intent_reading"
+        ],
+        "expected_structural_delta": "Users/victims of algorithmic curation enter the victim set; the firm bears liability exposure; the algorithm is treated as a product feature (design defect) or conduct, not speech."
+      },
+      {
+        "reading_id": "expressive_attribution_reading",
+        "commitment": "Attribution to the firm establishes that the system's output is the firm's own first-party speech: because the curation is not third-party content and not neutral conduit behavior, it is the platform's expressive act and is protected under the First Amendment.",
+        "authority_grounding": "First Amendment doctrine of editorial judgment as protected expression (Moody v. NetChoice; Anderson v. TikTok's extension)",
+        "sibling_readings": [
+          "products_liability_reading",
+          "conduct_regulation_reading",
+          "technician_intent_reading"
+        ],
+        "expected_structural_delta": "The firm is removed from the victim-facing liability set for that conduct and instead gains rights-holder status against the state; regulators/plaintiffs become the constrained party, not the firm."
+      },
+      {
+        "reading_id": "conduct_regulation_reading",
+        "commitment": "Attribution to the firm licenses process-level constraint on the loop itself — what it ingests and how tightly output couples to action — without requiring any characterization of the output as either speech or a product, and without requiring proof of intent.",
+        "authority_grounding": "Antitrust/consumer-protection process rules (DOJ–RealPage consent decree; NY algorithmic rent-setting ban; Zauderer-line compelled disclosure in NRF v. James)",
+        "sibling_readings": [
+          "products_liability_reading",
+          "expressive_attribution_reading",
+          "technician_intent_reading"
+        ],
+        "expected_structural_delta": "Neither firm-as-speaker nor firm-as-manufacturer is decided; instead specific inputs (data recency, locality) and couplings (auto-implementation, rejection-friction) are constrained directly, sidestepping the classification fight entirely."
+      },
+      {
+        "reading_id": "technician_intent_reading",
+        "commitment": "Attribution to the firm requires (or is strongest when grounded in) a demonstrable mental state — a person who held a theory of the harm mechanism and documented it — treating the memo as the necessary evidentiary anchor for responsibility, as in tobacco/Purdue-style cases.",
+        "authority_grounding": "Traditional fraud/deception doctrine requiring knowledge or mental state; the 'technician' evidentiary model the essay contrasts with emergence",
+        "sibling_readings": [
+          "products_liability_reading",
+          "expressive_attribution_reading",
+          "conduct_regulation_reading"
+        ],
+        "expected_structural_delta": "Absent a discoverable document trail, this reading forecloses liability entirely for the emergent-path cases the essay is centrally about — the fishing-lure structure produces no victim set under this reading because no culpable mind can be located."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "products_liability_reading",
+        "reading_b": "expressive_attribution_reading",
+        "basis": "One holds that firm-attribution of an algorithmic loop grounds liability for its effects; the other holds that the identical attribution grounds a constitutional right to broadcast that loop's output free of content-based restriction. A single framework cannot treat the same attributed act as both a loss-generating product defect subject to redesign mandates and as protected expression immune from content-based mandate — the essay's own 'sword/shield, same finding' observation is precisely this incompatibility, not a mere disagreement about desirability."
+      },
+      {
+        "reading_a": "expressive_attribution_reading",
+        "reading_b": "technician_intent_reading",
+        "basis": "The expressive reading locates the firm's authorship in the act of curation itself, independent of any mental state about mechanism (Anderson/Moody do not require the firm to have understood *why* the algorithm worked). The technician reading makes a documented theory of mechanism the anchor of responsibility. If curation is protected expression regardless of whether anyone understood the mechanism, then the absence of a memo cannot be doing the exculpatory work the technician reading assigns it — the two cannot both be the operative test for whether the firm answers for the outcome."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "algorithmic_attribution",
+      "human_readable": "Algorithmic Attribution Kernel (Liability vs. Expression vs. Process vs. Intent)",
+      "structural_delta": "Four incompatible legal readings of what it means to attribute an emergent, authorless algorithmic loop to the firm that runs it",
+      "primary_observable": "Which doctrinal vocabulary a given court/regulator applies to the same firm-run loop (design-defect verdict, First Amendment holding, process-constraint consent decree, mental-state finding)",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "firm_invoking_favorable_reading",
+      "victim": "party_disadvantaged_by_reading_selected",
+      "downstream_of": [],
+      "feeds_into": [
+        "section_230_binary_forcing"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Central contested kernel; every other structural observation in the essay is a consequence of which reading a court adopts"
+    },
+    {
+      "claim_id": "section_230_binary_forcing",
+      "human_readable": "Section 230's Binary Forces Emergent Curation Onto a Speaker-Shaped Slot",
+      "structural_delta": "Section 230 offers exactly two categories (third-party content vs. platform's own conduct); emergent, unnarratable algorithmic curation fits neither cleanly but must be forced onto one, and the 'own conduct' horn is pre-wired to carry First Amendment protection with it",
+      "primary_observable": "Doctrinal test applied (third-party-content immunity granted/denied) and whether the court's own-conduct finding is subsequently cited for First Amendment protection in a separate docket",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "platforms_able_to_select_favorable_docket",
+      "victim": "plaintiffs_and_regulators_facing_reclassification",
+      "downstream_of": [
+        "algorithmic_attribution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: this is the mechanism generating the expressive_attribution_reading vs products_liability_reading conflict already captured inside the kernel; retaining it separately would fail the §3 phantom-independence test (same observable — which doctrinal slot a court selects — as the kernel readings themselves)"
+    },
+    {
+      "claim_id": "revealed_preference_boundary",
+      "human_readable": "Revealed-Preference Boundary Condition (Fentanyl Non-Case)",
+      "structural_delta": "The diet-and-coupling regulatory framework requires an identifiable operator running a loop with constrainable inputs and a human decline-point; illicit drug markets with endogenous, exposure-driven preference lack this structure entirely, so the framework does not reach them",
+      "primary_observable": "Presence or absence of an operator-controlled loop with a constrainable interface (contrasted against survey data showing preference is endogenous to exposure, e.g. 27% vs 83% fentanyl-preference figures across cohorts)",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: explicitly a boundary/negative case the essay itself demotes ('I originally used as the opening case and have demoted'); functions as scope-limiting omega material rather than a generation-ready axis"
+    },
+    {
+      "claim_id": "diet_and_coupling_regulatory_design",
+      "human_readable": "Diet-and-Coupling as Process Regulation Independent of Mind-Reading",
+      "structural_delta": "A regulatory register that constrains loop inputs (data recency, locality) and input-to-action coupling (auto-implementation, rejection friction) without requiring proof of intent or classification of output as speech or product",
+      "primary_observable": "Specific consent-decree provisions (12-month data-age floor, exclusion of localized pricing data, auto-implementation restrictions) and their causal effect on the feedback loop",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "regulators_seeking_intent_independent_remedies",
+      "victim": null,
+      "downstream_of": [
+        "algorithmic_attribution"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: this is the operationalization of conduct_regulation_reading already present inside the kernel's reading set; would fail §3 Type A merge test (same structural delta, more granular description of an existing reading)"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "products_liability_reading",
+      "kernel_id": "algorithmic_attribution",
+      "reading_id": "products_liability_reading"
+    },
+    {
+      "claim_id": "expressive_attribution_reading",
+      "kernel_id": "algorithmic_attribution",
+      "reading_id": "expressive_attribution_reading"
+    },
+    {
+      "claim_id": "conduct_regulation_reading",
+      "kernel_id": "algorithmic_attribution",
+      "reading_id": "conduct_regulation_reading"
+    },
+    {
+      "claim_id": "technician_intent_reading",
+      "kernel_id": "algorithmic_attribution",
+      "reading_id": "technician_intent_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "section_230_binary_forcing",
+      "structural_delta": "Section 230's two-slot structure forces emergent curation onto the speaker-shaped horn",
+      "hypothesis": "snare",
+      "deferral_reason": "Fails §3 independence test against the kernel readings — same observable (which doctrinal slot a court selects) as the products_liability/expressive_attribution reading pair; folding it in separately would double-count the kernel's own mechanism"
+    },
+    {
+      "claim_id": "revealed_preference_boundary",
+      "structural_delta": "Illicit-drug markets lack the operator-controlled loop the framework requires, so process regulation cannot reach them",
+      "hypothesis": "mountain",
+      "deferral_reason": "Essay explicitly frames this as a demoted boundary case establishing scope limits, not a generation-ready constraint axis; better carried as omega"
+    },
+    {
+      "claim_id": "diet_and_coupling_regulatory_design",
+      "structural_delta": "Process regulation constraining loop inputs and coupling without requiring intent or output-classification",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Type A overlap with conduct_regulation_reading already inside the kernel's readings array — more granular description of the same commitment, not a structurally distinct axis"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_fentanyl_scope_limit",
+      "description": "The framework's applicability boundary: process regulation grips an optimization loop only when an identifiable operator holds it with a constrainable interface. Illicit drug markets exhibit endogenous, exposure-driven preference (27% vs. 83% fentanyl-preference across different cohorts) that revealed-preference reasoning cannot parse, and no operator-loop exists to constrain. This is a deliberate non-application, not a gap in the theory.",
+      "source": "Author's explicit demotion of the fentanyl case; §1.1 absence inventory"
+    },
+    {
+      "id": "omega_readings_collapse_risk",
+      "description": "If courts eventually harmonize the products-liability and expressive-attribution readings into a single doctrinal test (e.g., a functional test distinguishing content-moderation curation from design-choice curation, as gestured at in Moody's dicta about 'narrow class' of expressive curation), the kernel could resolve from four live readings to a stable two-tier doctrine. Current drift_status is 'partial' — the classification dispute is live and unresolved, not settled.",
+      "source": "commitment_system_recognition drift_status assessment; research context on Moody's narrowing signal"
+    },
+    {
+      "id": "omega_technician_reading_erosion",
+      "description": "The technician_intent_reading is explicitly the reading the essay argues against as a *necessary* condition while preserving it as a *sufficient* one (Purdue, tobacco). Its inclusion as a fourth kernel reading is justified because litigants and courts still invoke mental-state requirements even where emergent-path facts are present; but the essay's own argument, if adopted wholesale by courts, would suppress this reading's future viability as a sole gateway to liability.",
+      "source": "Essay's central thesis; F03 hasty-generalization concern about treating technician_intent_reading as equally live going forward"
+    },
+    {
+      "id": "omega_realpage_pending_adjudication",
+      "description": "RealPage v. James (S.D.N.Y.) is undecided at time of writing; the entire expressive_attribution_reading vs conduct_regulation_reading conflict in the rent-algorithm context is live and could resolve in either direction, materially changing which reading dominates that fact pattern.",
+      "source": "Extraction §1.1 claims — status: contested, not yet adjudicated"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 flagged on the technician_intent_reading: including it as a fully symmetric fourth reading risks overstating its current doctrinal vitality, since the essay's explicit argument is that this reading should NOT function as a necessary gateway. Retained as a reading because litigants and some courts (e.g., the California superior court's 'not a product' ruling context, and fraud/deception's traditional mental-state requirement) still invoke it as if it were necessary — it is a genuinely held, individually-holdable position in current practice, not a strawman — but omega_technician_reading_erosion bounds this uncertainty. No F34 concerns: the domain (products liability, First Amendment doctrine, Section 230, antitrust process regulation) is well-supported by the extraction's direct case citations (Escola, Anderson, Moody, RealPage litigation, NRF v. James) rather than requiring speculation beyond documented case law."
+  },
+  "_generation_run_id": "algorithmic_authorless_harm_2026_20260813_215102",
+  "_provenance": {
+    "scope_model": "claude-sonnet-5",
+    "scope_prompt_commit": "d179423dc12550308c604592b1d199a951739c4c",
+    "scope_schema_commit": "43ee9613b2ccba5f278157c4cbe534645e1f544e",
+    "persisted_at": "2026-08-13T21:51:02",
+    "axes_ceiling": null,
+    "topic": "# The Algorithm Takes the Stand\n\nAsked what his lure is supposed to be, the man who made it says he was thinking of a cluster of small fish, and then, in the same breath, tells you not to take that seriously. What matters is whether a bass strikes, and bass, Hideo Yoshida writes, react in ways that defy our imagination. He has been making the things for twenty years. The spiky plastic ball is now the most sought-after bait in American freshwater fishing, cleared off shelves, resold for many times retail. It resembles nothing that lives in the water. The designer does not claim to know why it works.\n\nThe disclaimer is easy to read as modesty. It isn't. It's an accurate report on how the object came to exist. Yoshida made variants; the market and the fish selected; two decades later the survivor is a shape no one would have derived from a theory of bass cognition, because no one held one. The confirmation is in the imitation — Rapala, Strike King, Yamamoto, and Berkley have all pushed out urchin-style baits, which is convergence by several firms on a form none of them can account for either.\n\nBe precise about what is missing here, because the imprecise version of this observation is about to become a legal defense. Yoshida is not absent. He ran the loop: he chose to make variants, chose which to keep, chose what counted as success. What is absent is narrower and stranger — no one authored the *particular feature* that makes the thing work, and no one holds a theory adequate to explain it. The loop is fully attributable to the person who ran it. Its output is explicable by nobody.\n\nThat distinction is the whole argument, and losing it in either direction wrecks the analysis. Collapse it one way and you get mysticism: the machine did it, nobody is responsible. Collapse it the other and you get the demand that someone produce a memo that was never written.\n\n---\n\nThe default account of engineered harm runs on the memo. Call its author the technician: someone with a theory of your nervous system and a product line to apply it to. He is not a paranoid invention. Tobacco is the cleanest case — the firm understood the mechanism, documented that it understood, and optimized around it, and the 1998 settlement was possible because those documents existed. The technician knew, wrote down what he knew, and the writing became the case.\n\nThe mistake is not looking for him. The mistake is treating the memo as a necessary condition rather than a sufficient one. A technician with a theory will produce a hyper-optimized artifact. So will variation, a metric, and culling, with no one holding the theory at any point. The two paths converge on the same object and diverge completely in what they leave behind for an investigator.\n\nI assumed this meant our legal machinery — fraud requiring knowledge, deception requiring a mental state — was blind to the second path. That was wrong, and the way it is wrong turned out to be the essay.\n\n---\n\nThe law has met this before, in a case about a bottle.\n\nIn *Escola v. Coca-Cola Bottling Co.* (1944), a waitress was injured when a bottle exploded and she could not show what the bottler had done wrong. Justice Traynor's concurrence argued that requiring proof of negligence in mass production was hopeless in a way that ought to be dispositive: the manufacturer controls the process, the plaintiff cannot see inside it, the manufacturer can spread or reduce the risk. That reasoning became strict products liability.\n\nWhat *Escola* supplies is not a solution to the algorithmic case — physical-product doctrine does not simply migrate to software, and whether a recommender is a product, a service, or expression is exactly what is being fought over. What it supplies is a grammar: where a firm operates a system, outsiders cannot inspect its operative process, and the firm can adjust the resulting risk, a culpable mind is not the only available gateway to responsibility.\n\nThat grammar is in active use. The consolidated federal social-media litigation before Judge Yvonne Gonzalez Rogers is captioned *In re Social Media Adolescent Addiction/Personal Injury Products Liability Litigation*; plaintiffs are running design-defect theory against recommender architecture. Whether it works is unresolved. But the gap I thought I had found is not a gap. It is a classification dispute, and it is live.\n\n---\n\nThe stranger thing happened on the way to that dispute.\n\nIn *Anderson v. TikTok* (3d Cir. 2024), a ten-year-old died after the For You feed served her videos of a self-asphyxiation challenge she had never searched for. The district court dismissed under Section 230. The Third Circuit reversed, holding — drawing on the Supreme Court's *Moody v. NetChoice* decision from earlier that year — that a platform's algorithmic curation is its own expressive activity, first-party speech rather than a third party's. Section 230 shields third-party content. So it does not shield this.\n\nNotice that the court was not being clever. It was cornered. Section 230 offers two slots: content provided by another, or the platform's own conduct. There is no third slot for emergent curation that no one at the company could narrate. Any process that is neither purely someone else's speech nor purely a human editor's judgment gets forced onto one horn. The court took the horn that let the case proceed.\n\nAnd that horn carries the First Amendment with it. Editorial selection has long been treated as protected expression; *Moody* extended the intuition to platform curation. So the doctrine already had a speaker-shaped slot waiting, and the algorithm was pushed into it. This is one finding with two faces. It is a sword in the products-liability docket — you cannot hide behind third-party content when the curation is yours. It is a shield in the regulatory docket — you cannot be told what to say. The firm picks which docket it is standing in.\n\nRealPage is standing in the second. New York enacted the first state ban on algorithmic rent-setting, prohibiting landlords from adjusting rents on the recommendation of software drawing on pooled landlord data — a pure process rule with no mental-state element anywhere in it. Days after settling with the Justice Department in November 2025, RealPage sued the New York Attorney General in the Southern District of New York, arguing the statute is a content-, viewpoint-, and speaker-based restriction on its right to offer advice. The Attorney General moved to dismiss. At this writing the court has not ruled and the statute is in force.\n\n---\n\nHere the essay has to state a position rather than a diagnosis, because the two attributions can be pulled apart and nothing yet requires them to travel together.\n\nAttribution for liability says: the firm answers for the system's effects because it built, trained, deployed, and profits from it, and can change it. Attribution for expression says: the system's output is the firm's protected speech. Products liability is the standing proof that the first does not entail the second — a manufacturer's product is attributable to it for loss allocation without anyone calling the product the manufacturer's speech. Antitrust and consumer protection can likewise reach conduct — data pooling, automatic implementation, coercive defaults, suppression of deviation — without reaching the communicative content of a recommendation.\n\nSo the danger is not that law will fail to find someone to hold responsible. It is that the vocabulary it reaches for to do so — authorship, editorial judgment, corporate expression — converts a basis for accountability into a claim of immunity, and that this conversion is happening case by case without anyone deciding it should.\n\n---\n\nThe objection I take most seriously is that all of this is a gift to the guilty.\n\n\"Nobody designed it; the system produced it\" is exactly the defense a culpable firm mounts. Purdue had documents. Meta had internal research it declined to publish. A framework redirecting attention from intent toward emergent process arrives pre-adapted for use as a laundering script, and will be used that way by people who have read none of it and will cite all of it.\n\nThree things hold against that. Intentionality is evidence of responsibility, not the only possible basis for it — which is what *Escola* established. Where documents exist they should be used without mercy; the technician is not a myth and he has not retired. And emergence is not a magic word: someone still chose the objective. There is no loop without a metric, and no metric without a human who set it. The machines have not stopped keeping notes. They keep enormous notes — experiment reports, evaluation dashboards, A/B results. They have stopped keeping them in prose.\n\n---\n\nWhich points at the constructive move, and at what it is missing.\n\nThe Justice Department's proposed consent decree with RealPage is instructive for what it declines to ask. It does not ask what RealPage knew, or what the model selected for. It constrains what the loop may ingest and how tightly its output is wired to action: training limited to backward-looking nonpublic data at least twelve months old, excluding price and geographically localized data; restrictions on features that auto-implement recommendations or discourage users from rejecting them.\n\nEach constraint does identifiable work. The data-age floor breaks the feedback loop in which a competitor's current behavior becomes a live coordination signal. Excluding localized pricing data stops the recommendation from functioning as a near-real-time substitute for talking to a competitor. The limits on auto-implementation restore a point at which a human can depart from the model, and the limits on discouraging rejection keep that point from decaying into a ceremonial click.\n\nCall the register diet and coupling: what the loop is allowed to eat, and how directly its output becomes action. It requires neither a mind to read nor an interior to interpret, which is why it fits the authorless case, and why it does not invite the reclassification — a pipeline with valves is harder to characterize as a speaker with a message than an output is.\n\nTwo caveats it would be dishonest to omit. The decree is a negotiated settlement, not an adjudicated model; it has survived no constitutional review, and the instrument that *has* survived is the weakest one available. In *National Retail Federation v. James* (S.D.N.Y., October 2025), Judge Rakoff upheld New York's requirement that sellers disclose when a price was set by an algorithm using the buyer's personal data, under the *Zauderer* line permitting compelled factual disclosure. You can be made to say an algorithm set the price. Whether you can be stopped from using one is what *RealPage v. James* will decide.\n\nAnd diet and coupling are necessary, not sufficient. A system fed clean, stale, aggregated data and optimized for the wrong thing still produces the harm. Human review of recommendations generated to maximize revenue per tenant will mostly ratify them. The objective function is the closest thing to intent that an authorless system contains, and it is the one part of the loop a person unambiguously chose. A regulatory scheme that never looks at it has left the lever alone.\n\n---\n\nThe boundary is fentanyl, which I originally used as the opening case and have demoted, because I was letting its vividness carry an argument it cannot bear.\n\nI previously wrote that fentanyl won on logistics rather than attractiveness, and that people buying test strips to detect and decline it was clean evidence. It is not clean. A 2017 survey of street opioid users in Baltimore, Boston, and Providence found 27 percent preferring fentanyl; among people entering buprenorphine treatment with fentanyl-positive toxicology, a slight majority preferred it; a New York injection cohort ran strongly the other way, with 83 percent toxicological exposure against 18 percent intentional use — but the same researchers noted rising tolerance, which pushes preference toward fentanyl over time. Preference is endogenous to exposure. Revealed-preference reasoning is calibrated to uncompelled choice among known options, and that is not this market.\n\nThe framework does not reach it, and the reason is precise rather than sweeping. Other instruments exist — criminal law, precursor control, harm reduction, claims against licensed distributors. What does not exist is the condition every instrument above depends on: an identifiable operator running a loop it wants to keep running, with inputs that can be constrained and an interface where a human might decline. Process regulation grips an optimization loop only when someone is holding it.\n\n---\n\nThe essay I set out to write claimed the machines that harm us have stopped keeping notes. They have stopped keeping the kind we know how to read. But I was wrong about what follows, because I assumed a court confronted with an absent author would fail to proceed. It does not fail. It locates agency in the firm that built, trained, deployed, and monetized the system — and in *Anderson* that location took the form of speech: the feed was TikTok's own expression, not a neutral conduit for someone else's.\n\nThe risk is not that the law will find no one to hold responsible. It is that the only vocabulary available for holding someone responsible is the vocabulary of expression, and that the conduct we wanted to regulate will therefore arrive in court wearing the Constitution."
+  }
+}

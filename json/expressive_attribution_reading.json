@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "expressive_attribution_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "8104d24e-6f27-491e-bcf4-b72bd6cc6842"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.6,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Firm-Speech Attribution Shield for Algorithmic Curation",
+    "topic_domain": "law_and_technology/first_amendment/products_liability",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "platform_shareholders"
+    ],
+    "victims": [
+      "algorithmically_injured_users",
+      "products_liability_plaintiffs",
+      "state_regulators"
+    ],
+    "vindicated_propositions": [
+      "editorial_discretion_doctrine",
+      "compelled_speech_prohibition"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "platform_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and deploy the ranking/recommendation system, litigate its classification as first-party expressive output, and control the doctrinal framing offered to courts. Directly captures the liability shield and the associated reduction in compliance and defense costs; also sets the terms on which the attribution claim is asserted case by case."
+    },
+    {
+      "name": "platform_shareholders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from reduced tort exposure and regulatory constraint on the firm's core product; can exit the investment relatively freely if the doctrine fails, but currently capture the valuation upside of insulated algorithmic curation."
+    },
+    {
+      "name": "algorithmically_injured_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Suffer concrete harm traceable to a specific algorithmic output (e.g., harmful recommendation, defective ranking) and seek redress through products liability or negligence theories. The expressive-attribution reading converts the platform's conduct into protected speech, foreclosing the liability theory that would otherwise apply; individual users have no practical way to litigate around the constitutional characterization."
+    },
+    {
+      "name": "products_liability_plaintiffs",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Plaintiffs' counsel and injured parties who would otherwise frame the algorithm as a product with a design defect. Under this reading, the same conduct is recharacterized as editorial judgment, which routes the claim out of products liability doctrine entirely and into a First Amendment analysis the plaintiff is structurally disadvantaged to win. They can still sue, but the theory that would work is foreclosed."
+    },
+    {
+      "name": "state_regulators",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attempt to impose safety, transparency, or algorithmic-accountability requirements on ranking systems. Under this reading, such requirements risk being struck down as compelled-speech violations or content-based restrictions on protected expression, constraining the regulatory toolkit available even where the underlying harm is analogous to a defective consumer product."
+    },
+    {
+      "name": "courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether a given algorithmic output is first-party expressive speech, third-party conduit content, or product conduct. Their doctrinal choice determines which of the sibling readings governs a given case; they do not benefit from or pay into the arrangement but their rulings allocate who does."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Support strong speech protections in principle but are largely absent from cases where the expressive-attribution reading is asserted defensively by a firm resisting liability for a discrete injury, rather than in classic government-censorship postures; their doctrinal voice is present in briefing but their interest in protecting individual speakers is not well matched to the firm's institutional posture."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides courts a workable doctrinal test for distinguishing a platform's own expressive judgments (which the First Amendment protects from compelled alteration) from third-party content the platform merely hosts or transmits — a genuine line-drawing problem in an information environment where firms curate at scale.",
+    "transfer_function": "Moves litigation risk and regulatory exposure away from the firm and onto injured users, products liability plaintiffs, and regulators, by recharacterizing algorithmic conduct as protected first-party expression rather than as a product or service subject to ordinary liability and oversight regimes.",
+    "absent_voices": "Individual users harmed by specific algorithmic outputs rarely appear as parties in the doctrinal cases that establish this reading; the doctrine is typically built in facial challenges brought by the platforms themselves against regulatory statutes, not in the individual injury suits it later forecloses.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If courts stopped treating algorithmic curation as the firm's own expressive speech, platforms would face products-liability and regulatory exposure comparable to other complex technical systems; compliance costs would rise, some ranking practices would be redesigned around liability risk, and regulators would regain tools currently foreclosed by the First Amendment characterization.",
+    "founding_problem": "Courts needed a doctrine to protect genuine editorial judgments (e.g., a newspaper's decision what to print) from government compulsion, at a moment when algorithmic curation began performing functions structurally similar to editorial selection at unprecedented scale.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Platforms and allied First Amendment scholars attest the editorial-judgment analogy is sound and the problem (protecting expressive judgment from compelled alteration) remains live. Products liability scholars, disability and consumer advocates, and several dissenting judicial opinions attest that the doctrine has drifted from protecting identifiable expressive choices toward shielding automated systems whose outputs no human reviews before publication — corroboration from outside the benefiting platforms exists but is contested, not unanimous."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.6
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A firm whose ranking or recommendation algorithm generates content is sued or regulated for a harm traceable to that output. The firm asserts that because the output is attributable to the firm itself — not passed through neutrally and not authored by a third party — the output is the firm's own expressive speech, protected against compelled alteration, liability theories premised on defect, and regulatory mandate under the First Amendment. This is one of four structurally distinct readings of the same underlying attribution fact pattern: the products_liability_reading treats the same algorithmic output as a defective product; the conduct_regulation_reading treats it as regulable business conduct incidental to speech; the technician_intent_reading asks whether any human's specific expressive intent attaches to the particular output. Each reading routes the same facts through a different doctrinal gate with a different victim set and a different beneficiary. This story authors only the expressive_attribution_reading: ε reflects how much this reading, on its own terms, extracts from the parties it is asserted against (injured users, plaintiffs, regulators) when courts adopt it — not a blended or averaged ε across the four readings, and not the ε of any reading's endorsed alternative.",
+    "logic_rationale": "Extractiveness (0.68 at interval end) reflects that adoption of this reading systematically forecloses two distinct redress channels (tort liability, regulatory mandate) for the same underlying harm, redirecting cost from the firm to injured parties and the public regulatory apparatus. Suppression (0.6) is substantial but not maximal: the doctrine operates through litigation and precedent rather than direct coercion, and alternative doctrinal readings remain live in other jurisdictions and circuits. Theater ratio (0.42) is elevated because a portion of the doctrine's operation is genuinely functional (protecting authentic editorial judgments, e.g. curated news homepages) while a growing share defends outputs no human reviewed before publication — the editorial framing performs coverage for conduct increasingly distant from the paradigm case (a newspaper editor's deliberate choice) that motivated the doctrine.",
+    "directionality_logic": "Platform operators are the structural beneficiary: they assert the doctrine defensively, capture the liability shield, and retain full control over algorithm design without corresponding tort or regulatory exposure — d sits near the beneficiary end. Injured users and products liability plaintiffs are full targets: the doctrine's operation directly forecloses the theory that would let them recover, and they are trapped or constrained in their capacity to route around the constitutional characterization. State regulators are targets in a different register — d reflects that the doctrine constrains their toolset (a form of institutional extraction of regulatory capacity) even though no direct financial transfer occurs.",
+    "mandatrophy_analysis": "The founding problem (protecting genuine editorial judgment from government compulsion) remains partially live — some curation retains the deliberative, reviewable character of classic editorial choice. But the doctrine's application has drifted toward outputs generated by systems no human reviews before publication, where the analogy to a newspaper editor's judgment is strained. Classifying this as tangled_rope rather than a clean rope or snare preserves the genuine coordination function (courts do need SOME way to distinguish protected expression from regulable conduct) while registering that the same structure now systematically transfers liability exposure away from the party best positioned to bear or price it.",
+    "kernel_context": "This constraint instantiates the expressive_attribution_reading of the algorithmic_attribution kernel: the claim that firm-attributed algorithmic output is the firm's own protected first-party speech. Three sibling readings of the same underlying attribution fact — products_liability_reading (the output is a defective product), conduct_regulation_reading (the output is regulable conduct incidental to expression), and technician_intent_reading (liability turns on whether a specific human's expressive intent attaches to the output) — are authored as separate constraint stories with their own ε, beneficiaries, and victims. This reading's distinctive structural move is removing the firm from the victim-facing liability set and repositioning it as a rights-holder against the state and against private plaintiffs; the sibling readings keep the firm inside a liability- or conduct-facing frame."
+  },
+  "omegas": [
+    {
+      "id": "editorial_judgment_vs_automated_output_boundary",
+      "question": "Does the expressive-attribution reading require an identifiable human expressive judgment behind a specific output, or does firm-level attribution alone suffice even when no human reviewed the particular output before publication?",
+      "resolution_mechanism": "Track how courts treat cases where discovery establishes no human reviewed the specific challenged output before it was served to a user; a doctrine that survives that fact pattern unmodified reveals attribution-alone is doing the work, not editorial judgment.",
+      "impact": "If human review is required and largely absent in contested cases, the expressive-attribution reading is being extended well past its founding rationale, supporting the tangled_rope classification's extraction finding. If courts require and find genuine human judgment, the reading is closer to a clean rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the doctrine's application tracks genuine editorial deliberation or firm attribution alone."
+    },
+    {
+      "id": "kernel_reading_selection_mechanism",
+      "question": "What determines which of the four sibling readings (expressive_attribution, products_liability, conduct_regulation, technician_intent) a given court adopts for structurally similar facts?",
+      "resolution_mechanism": "Comparative analysis of circuit splits and case outcomes controlling for the type of harm, type of algorithm, and posture (facial challenge to a statute vs. individual injury suit) to see whether reading selection tracks doctrinal principle or litigation posture and forum.",
+      "impact": "If reading selection tracks posture (facial challenges favor expressive_attribution; individual injury suits favor products_liability) rather than principled doctrinal distinction, the kernel is unsettled in a way that materially advantages whichever party controls case framing and forum selection — typically the firm.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "What drives court selection among the four sibling readings of algorithmic attribution."
+    },
+    {
+      "id": "regulatory_capacity_extraction_measurement",
+      "question": "How should the extraction of regulatory capacity from state_regulators be measured, given it is not a financial transfer but a foreclosure of policy tools?",
+      "resolution_mechanism": "Compare the scope of algorithmic accountability legislation enacted vs. struck down or chilled in jurisdictions where this reading is dominant, against jurisdictions or eras where it was not yet established.",
+      "impact": "A clear before/after gap in enacted-and-surviving regulation would support treating regulatory foreclosure as a substantial component of this reading's extractiveness, distinct from and additive to the tort-liability foreclosure component.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether foreclosed regulatory capacity should be weighted comparably to foreclosed tort liability in the extraction measure."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "editorial_judgment_paradigm",
+    "drift_state": {
+      "moment": "algorithmic_curation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "products_liability_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "conduct_regulation_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "technician_intent_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "algorithmic_curation_is_firm_expression",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "attribution_alone_establishes_expressive_intent",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "products_liability_reading",
+      "conduct_regulation_reading",
+      "technician_intent_reading"
+    ],
+    "dual_formulation_note": "This story is one of four linked readings of the algorithmic_attribution kernel, decomposed per the ε-invariance principle because the same underlying fact pattern (a firm's algorithm produces content attributed to the firm and causes contested harm) yields materially different ε, beneficiary sets, and victim sets depending on which doctrinal frame governs. expressive_attribution_reading (this file) removes the firm from the liability-facing set and installs it as a rights-holder; products_liability_reading keeps the firm inside an ordinary defect-liability frame; conduct_regulation_reading treats the algorithm as regulable business conduct with incidental expressive elements; technician_intent_reading conditions liability on locating a specific human's expressive intent behind the challenged output. Each is authored as its own file with its own claimed_type and metrics; this file's network edges point to all three siblings."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "gain_flow": "platform_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-13",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "algorithmic_authorless_harm_2026_20260813_215102"
+  }
+}
