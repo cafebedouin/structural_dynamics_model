@@ -14,17 +14,28 @@ repository's.*
 
 ---
 
-> **CANONICITY MARKER (added 2026-08-12; provisional pending an authorial ruling, ISSUES OQ-287).**
-> This paper and `docs/concealment/concealment_without_a_concealer_v0_4.md` currently **both** carry
-> the §2 derivation, and both name it as their contribution — that paper's v0.1 was extracted from
-> this paper's §2, and §13 below still claims it here. Two live documents, one contribution, no
-> queryable fact of canonicity: **Build Discipline Pattern 2, on the substrate of the papers that
-> document Pattern 2.** Recorded rather than silently resolved, since resolving it is editorial
-> surgery on a draft and *prove before you replace* (§7.7) applies. **Working disposition pending the
-> ruling:** the concealment paper is canonical for the **derivation** (it is narrower, has been
-> through six model reviews, and carries the historical cases that make it travel); this paper is
-> canonical for the **institution** — the case study, differential amnesia, the memory economy, the
-> organizational form, self-instrumentation. Cite accordingly until OQ-287 closes.
+> **CANONICITY — RULED 2026-08-13 (operator; ISSUES OQ-287). This supersedes the provisional marker
+> this file carried on 2026-08-12.**
+>
+> **`docs/concealment/concealment_without_a_concealer_v0_4.md` is canonical for the derivation.**
+> This paper's §2.1–2.7 were vacated on 2026-08-13; §2 now states the conclusion once, quotes it
+> from `CWC:C1@8475dc95`, and cites the claims behind it by label and content digest. The vacated
+> numbers are deliberately left empty and never reused — *a visible gap is a checked fact; a silent
+> renumber is a fork* (§5.2).
+>
+> **This paper is canonical for the institution** — the case study, differential amnesia (§3.3), the
+> five records (§3.4), the memory economy (§8), the organizational form (§9), self-instrumentation
+> (§10), Θ-7. **It states its contribution boundary once, at §13**, and §2.B points there rather
+> than restating it.
+>
+> **Two limbs of OQ-287 remain open, so it is `mitigated`, not `resolved`.** (1) The practice-paper
+> extraction. (2) The redirect for **§2.8 and §2.9**, which keep their numbers and their text and are
+> marked **declared temporary** with the practice paper as canonical destination — §2.9(b) is cited
+> in correspondence already sent, so the redirect is owed at sub-item granularity.
+>
+> *After correction, this document admits POINTER-ONLY edits — forward pointers and redirect notes —
+> and no content edits. The exception is declared rather than taken: a frozen document with no
+> pointer to its canonical side is the findability failure this whole pass closed.*
 
 ## Construction note: one exemption discharged, one debt paid
 
@@ -386,7 +397,7 @@ not restate its argument. That conclusion, stated there as `CWC:C1@8475dc95`:
 > framing other than the one it was formed at.
 
 It follows from `CWC:A1@e858a33d`, `CWC:A2@31548228`, `CWC:A3@fe7890db` and `CWC:A4@62d54b18`, with
-the operational asymmetry at `CWC:E1@884ea0b6`. Numbers 2.1–2.7 are not reused: *a visible gap is a
+the operational asymmetry at `CWC:E1@911a4db5`. Numbers 2.1–2.7 are not reused: *a visible gap is a
 checked fact; a silent renumber is a fork* (§5.2).
 
 *Why the vacation: two live documents carried this derivation and each named it as its own
@@ -811,7 +822,7 @@ Three properties are load-bearing.
 plan, it cannot inherit the planning discussion's assumptions, and any ambiguity the plan failed to
 resolve surfaces as a question or a visible divergence rather than being silently repaired by shared
 context. This is a control, not a convenience — the closest available analogue to a blinded
-protocol — and its cost is that plans must be self-sufficient. In `CWC:E1@884ea0b6`'s terms it is a **forced
+protocol — and its cost is that plans must be self-sufficient. In `CWC:E1@911a4db5`'s terms it is a **forced
 enumeration at a handoff**: the plan must carry its own scope because the receiver has no other
 access to it.
 
@@ -1210,7 +1221,7 @@ other searches in this paper's history cannot make.
 The substantive findings are summarized in §3.1. Three deserve separate statement because they are
 load-bearing for the theory rather than only for the worker model.
 
-- **AbsenceBench** is the empirical form of `CWC:E1@884ea0b6`'s central asymmetry: models detect omissions poorly,
+- **AbsenceBench** is the empirical form of `CWC:E1@911a4db5`'s central asymmetry: models detect omissions poorly,
   and the offered mechanism is that attention cannot easily attend to gaps because absences
   correspond to no key. The theory needs only the weaker, substrate-independent version — that a
   compression does not represent what it dropped — but it is worth knowing the strong version holds
@@ -1387,7 +1398,7 @@ its own repairs, the defect the repair was addressing.**
 
 **The property of the set: not one of the nine was caught by a gate.** Every one was caught by a
 person or a script **comparing a claimed number against the artifact it described** — a diff, a
-directory listing, a file count, a re-read. In the vocabulary of `CWC:E1@884ea0b6` — borrowed for its distinction, not leaned on for its generalization, which that paper marks as unevenly supported — every rescue was a **forced
+directory listing, a file count, a re-read. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
 enumeration**, and every miss was a **recognition** that passed. The recursion does not terminate in
 a deeper instrument, because a deeper instrument is another claim. It terminates in someone
 counting.
@@ -1523,7 +1534,7 @@ standalone is retired.
 
 It belongs beside witness-before-claim for the same reason that rule exists: a replacement is a
 **claim of equivalence**, and a claim of equivalence discharged by reading rather than running is
-recognition standing in for enumeration (`CWC:E1@884ea0b6`'s distinction; the classification here is definitional, not a claim about what parties typically do). The distinguishing feature — and the reason this is a
+recognition standing in for enumeration (`CWC:E1@911a4db5`'s distinction; the classification here is definitional, not a claim about what parties typically do). The distinguishing feature — and the reason this is a
 discipline rather than a pattern — is that its failure mode is **loud**: a replacement that was wrong
 announces itself when the thing it replaced turns out to be needed. Both are real; only one is
 silent.
@@ -2008,21 +2019,50 @@ and the build's honesty about absence as one invariant. *No value crosses a boun
 status* has at least two concurrent external formalizations (§6.2). A paper that claimed either would
 be citing itself badly.
 
-**Derivational novelty: this is the contribution, and it is ANALYTIC.** The chain in §2 — that scope
-*is* the seat theorem's framing Π; that compression under a working-set constraint therefore emits
-contentful verdicts carrying no standpoint; that this is the **no-seat pose produced structurally,
-with nobody posing** (`CWC` §5.1); and that the failure spine is consequently a corollary rather than an
-observation — is not, so far as this search found, stated elsewhere. Its components are individually
-familiar: gray failure's differential observability, attention's inability to represent gaps,
-Goodhart-style mismatch between metric and target, preregistration as scope-fixing, and the seat
-theorem itself. **The claim is the derivation and its one consequence.** It is discharged by premises
-and a kill condition (§0), it has run its own negative control (§2.9), and that control narrowed it:
-the account unifies the form of the failure and the direction of the repair, and does not establish
-that scope-carrying is sufficient.
+**Derivational novelty: reassigned, and this paper no longer claims it.** The chain — that scope
+*is* the seat theorem's framing Π (`CWC:A2@31548228`); that a compression accepted as sufficient
+warrant at a new read site thereby receives the operational authority of a claim whose scope was
+settled elsewhere and is no longer inspectable (`CWC:A4@62d54b18`); that this is the **no-seat pose
+produced structurally, with nobody posing** (`CWC` §5.1); and that the failure spine is consequently
+a corollary rather than an observation (`CWC:C1@8475dc95`) — is carried by
+`docs/concealment/concealment_without_a_concealer_v0_4.md`, **which is canonical for it.** Its
+components remain individually familiar: gray failure's differential observability, attention's
+inability to represent gaps, Goodhart-style mismatch between metric and target, preregistration as
+scope-fixing, and the seat theorem itself.
 
-What the derivation buys, practically, is the reason the remedy is an artifact discipline rather than
-an honesty norm — which is the difference between a rule people are urged to follow and a rule
+*Two corrections are folded into that sentence and are stated rather than absorbed.* The middle step
+used to read *"compression therefore emits contentful verdicts carrying no standpoint"* — the
+un-narrowed `A4`, which the cited paper calls the most contestable move in its own v0.1 and replaced
+with **warrant transfer**: the defect is in what a receiver is licensed to conclude, not in an
+artifact's semantic form. And until 2026-08-13 both papers carried this derivation and each named it
+as its own contribution — a fork with no queryable fact of canonicity, on the substrate of the paper
+that documents that failure mode (ISSUES OQ-287).
+
+**What this paper claims — the boundary, stated once, here.** §2.B points at this paragraph rather
+than restating it, so it has to be complete:
+
+| | whose |
+|---|---|
+| the derivation, and its conclusion | **the concealment paper's** (`CWC:A1@e858a33d`–`A4@62d54b18`, `C1@8475dc95`) |
+| the rule *claims carry their scope* | **`deferential_realism_paper_v8.md` §8's** — prior art, internal |
+| *no value crosses a boundary without its status* | at least two concurrent external formalizations (§6.2) |
+| **the institution**: the case study, differential amnesia, the memory economy, the organizational form, self-instrumentation, Θ-7 | **this paper's** |
+| **the measured rate** and the instrument defects found in measuring it (§5.4) | **this paper's** |
+| **the apparatus**, and the recursion observed in it (§7.4, §7.4.1) | **this paper's** |
+
+The derivation is discharged upstream by premises and a kill condition; what remains here is
+downstream of it, and is discharged by witness.
+
+What the derivation buys this paper, practically, is the reason the remedy is an artifact discipline
+rather than an honesty norm — the difference between a rule people are urged to follow and a rule
 enforced at a boundary regardless of intent.
+
+*The negative control that bounds the account is §2.9, which found that the unification holds for the
+form of the failure and the direction of the repair and does **not** establish that scope-carrying is
+sufficient. Note its status: §2.9 is **declared temporary** (§2.8/§2.9 markers, A2-pre ruling
+2026-08-13), with the practice paper as its canonical destination. When that extraction lands, this
+paragraph's grounding moves with it and the redirect table is what keeps this sentence true — which
+is OQ-287's second limb, not a detail.*
 
 **Institutional novelty: the strongest empirical claim, and the one nobody else is making.**
 

@@ -141,7 +141,52 @@ row1() {
   fi
 }
 
-row2() { echo "row2: canonicity markers settled"; printf '  \033[33mNOT IMPLEMENTED\033[0m (lands with A5)\n'; return 3; }
+# --- row 2 -------------------------------------------------------------------------------------
+# NEGATIVE: no provisional marker survives anywhere in docs/.
+# POSITIVE: the settled ruling is present in BOTH papers, the two directory READMEs exist and name
+#   their canonical file, and the ruling actually says which paper owns what — a marker that was
+#   merely DELETED satisfies the negative half exactly as well as one that was replaced.
+row2() {
+  echo "row2: canonicity settled in both papers, and canonicity is a checked fact"
+  local V06N CWCN
+  V06N="$(normalized "$V06")"
+  CWCN="$(normalized "$REPO/docs/concealment/concealment_without_a_concealer_v0_4.md")"
+
+  local prov; prov=$($GREP -rc 'provisional pending an authorial ruling' "$REPO/docs/" 2>/dev/null | $GREP -v ':0$' | $GREP -c . || true)
+  [ "$prov" -eq 0 ] && pass "no 'provisional pending an authorial ruling' marker survives in docs/" \
+                    || bad "$prov file(s) still carry the provisional marker"
+
+  printf '%s' "$V06N" | $GREP -q 'CANONICITY — RULED 2026-08-13' \
+    && pass "v0.6 carries the settled ruling" || bad "v0.6 does NOT carry the settled ruling"
+  printf '%s' "$CWCN" | $GREP -q 'CANONICITY — RULED 2026-08-13' \
+    && pass "concealment carries the settled ruling" || bad "concealment does NOT carry the settled ruling"
+
+  # the ruling must SAY the assignment, not merely exist
+  printf '%s' "$CWCN" | $GREP -q 'This paper is canonical for the derivation' \
+    && pass "concealment's marker names it canonical for the derivation" \
+    || bad "concealment's marker does not state the assignment"
+  printf '%s' "$V06N" | $GREP -q 'is canonical for the derivation' \
+    && pass "v0.6's marker cedes the derivation" || bad "v0.6's marker does not cede the derivation"
+  printf '%s' "$V06N" | $GREP -q 'canonical for the institution' \
+    && pass "v0.6's marker claims the institution" || bad "v0.6's marker does not claim the institution"
+
+  # both limbs declared open, so `mitigated` is legible from the paper alone
+  printf '%s' "$V06N" | $GREP -q 'mitigated' \
+    && pass "v0.6's marker records OQ-287 as mitigated with its open limbs" \
+    || bad "v0.6's marker does not record the open limbs"
+
+  # canonicity as a CHECKED FACT: the directory READMEs
+  local r
+  for r in docs/concealment docs/amnesiac_institution; do
+    if [ -f "$REPO/$r/README.md" ]; then
+      $GREP -q '^\*\*Canonical:' "$REPO/$r/README.md" \
+        && pass "$r/README.md names its canonical file" \
+        || bad "$r/README.md exists but does not name a canonical file"
+    else
+      bad "$r/README.md MISSING — canonicity is a memory, not a checked fact"
+    fi
+  done
+}
 # --- row 3 -------------------------------------------------------------------------------------
 # Precondition (A2) has landed, so this is now implemented.
 # NEGATIVE: the vacated numbers are gone and not reused.
@@ -195,16 +240,25 @@ row4() {
   local norm; norm="$(normalized "$V06")"
 
   # --- negative: only the notice's own self-mention may name a vacated number ---
-  local remaining; remaining=$(printf '%s' "$norm" | $GREP -o '§2\.[1-7]' | $GREP -c . || true)
-  local notice; notice=$(printf '%s' "$norm" | $GREP -o '§2\.1–§2\.7 are vacated' | $GREP -c . || true)
-  note "live §2.[1-7] occurrences: $remaining (the notice's own '§2.1–§2.7' accounts for 2)"
-  if [ "$notice" -lt 1 ]; then
-    bad "the vacation notice's own '§2.1–§2.7' self-mention is GONE - it must never be re-pointed"
-  elif [ "$remaining" -eq 2 ]; then
-    pass "only the notice's self-mention names a vacated number (2 occurrences, both there)"
-  else
-    bad "$remaining live §2.[1-7] occurrences; expected exactly 2 (the notice's self-mention)"
-  fi
+  # ENUMERATED, not counted. Two constructs may legitimately name a vacated number: the vacation
+  # notice ("§2.1–§2.7 are vacated") and the canonicity marker ("§2.1–2.7 were vacated on ..."),
+  # both of which are the visible gap doing its job. Anything else is a dangling reference. A count
+  # would have let A5's marker raise the total from 2 to 3 and been "fixed" by bumping the number.
+  local vac_stray=0 vac_total=0
+  while IFS= read -r l; do
+    vac_total=$((vac_total+1))
+    case "$l" in
+      *"§2.1–§2.7 are vacated"*) ;;                       # the vacation notice
+      *"§2.1–2.7 were vacated on 2026-08-13"*) ;;         # the canonicity marker (A5)
+      *) vac_stray=$((vac_stray+1)); bad "dangling §2.[1-7] reference: $(printf '%s' "$l" | cut -c1-80)" ;;
+    esac
+  done < <($GREP -P '§2\.[1-7]' "$V06")
+  note "lines naming a vacated number: $vac_total (all must be the notice or the canonicity marker)"
+  $GREP -qP '§2\.1–§2\.7 are vacated' "$V06" \
+    || bad "the vacation notice's own '§2.1–§2.7' self-mention is GONE - it must never be re-pointed"
+  [ "$vac_stray" -eq 0 ] \
+    && pass "every mention of a vacated number is the notice or the canonicity marker ($vac_total lines)" \
+    || bad "$vac_stray dangling §2.[1-7] reference(s)"
 
   # --- positive: per-site assignment for the six contested §2.3 refs ---
   # anchor|expected|sibling   — anchor is prose that survives the re-point
@@ -265,32 +319,35 @@ PYEOF
   fi
 
   # --- positive: bare §2 refs, ENUMERATED not counted (rule §5 assertion 5) ---
-  # 25 bare §2 refs existed post-A2. 16 were re-pointed. 9 are left alone by rule §2.2 row 3
+  # 25 bare §2 refs existed post-A2. 16 were re-pointed. 7 are left alone by rule §2.2 row 3
+  # (was 9, then 8 when A4 rewrote §13, then 7 when A5 replaced the two-reference canonicity
+  # marker with a one-reference one - the arm fired at each step rather than absorbing it)
   # (references to §2 as a DOCUMENT LOCATION, not to the derivation): the canonicity marker (2,
-  # rewritten by A5), the construction note (2, a historical record of the v0.5->v0.6 build), §13
-  # (1, A4's step), Appendix D (3, a record of what past versions did), and one CREATED by A3 at
+  # rewritten by A5), the construction note (2, a historical record of the v0.5->v0.6 build),
+  # Appendix D (3, a record of what past versions did), and one CREATED by A3 at
   # the "Three terms" paragraph, which says §2 cites the derivation - true, in-class, and counted
-  # here rather than hidden. Enumerating beats counting: a count of 9 is satisfied by any nine.
+  # here rather than hidden. Enumerating beats counting: a count of 7 is satisfied by any seven.
   local bare; bare=$(printf '%s' "$norm" | $GREP -oP '§2(?![.0-9])' | $GREP -c . || true)
   note "bare §2 references: $bare (all must be document-location references; rule §2.2 row 3)"
   local stray=0
   while IFS= read -r l; do
     case "$l" in
-      *"the §2 derivation, and both name it"*) ;;      # canonicity marker
-      *"this paper's §2, and §13 below"*) ;;           # canonicity marker
+      *"§2 now states the conclusion once"*) ;;        # canonicity marker (A5) - §2 as a location
       *"**§2 is now a derivation, not a proposal"*) ;; # construction note
       *"**§2's thesis applied to §5.4's figure"*) ;;   # construction note
       *"which §2 cites and this paper instantiates"*) ;;  # created by A3, in-class
-      *"The chain in §2"*) ;;                          # §13 - A4's step
+      # §13's "The chain in §2" was here until A4 rewrote that paragraph on 2026-08-14. The arm
+      # fired on the drop (9 -> 8) rather than absorbing it, which is the enumeration earning its
+      # keep: a count-based check would have read 8 as "one fewer stray" and said nothing.
       *"produces the no-seat pose structurally"*) ;;   # Appendix D.1 record
       *"negative control (§2, §2.9), rather than"*) ;; # Appendix D.3 record
       *"§2 (rebuilt as derivation; §2.8 replaced"*) ;; # Appendix D.5 record
       *) stray=$((stray+1)); bad "unaccounted bare §2 reference: $(printf '%s' "$l" | cut -c1-80)" ;;
     esac
   done < <($GREP -P '§2(?![.0-9])' "$V06")
-  [ "$stray" -eq 0 ] && [ "$bare" -eq 9 ] \
-    && pass "all 9 bare §2 references are the enumerated document-location set" \
-    || bad "bare §2: $bare found, $stray unaccounted (expected 9, all enumerated)"
+  [ "$stray" -eq 0 ] && [ "$bare" -eq 7 ] \
+    && pass "all 7 bare §2 references are the enumerated document-location set" \
+    || bad "bare §2: $bare found, $stray unaccounted (expected 7, all enumerated)"
 
   # --- positive: the 5 declared-unpinnable section-only citations are present and counted ---
   local sec; sec=$(printf '%s' "$norm" | $GREP -o '`CWC` §[0-9]\+\(\.[0-9]\+\)\?' | $GREP -c . || true)
@@ -390,7 +447,7 @@ selftest() {
 # them the return value IS the verdict.
 case "${1:-all}" in
   row1) fail=0; row1 ;;
-  row2) row2; exit $? ;;
+  row2) fail=0; row2 ;;
   row3) fail=0; row3 ;;
   row4) fail=0; row4 ;;
   selftest) fail=0; selftest ;;
@@ -402,10 +459,10 @@ case "${1:-all}" in
   # the composite could not represent them.
   all) agg=0
        fail=0; row1;     agg=$(( agg | fail )); echo
+       fail=0; row2;     agg=$(( agg | fail )); echo
        fail=0; row3;     agg=$(( agg | fail )); echo
        fail=0; row4;     agg=$(( agg | fail )); echo
        fail=0; selftest; agg=$(( agg | fail )); echo
-       echo "row2 (A5) is declared and NOT IMPLEMENTED; it exits 3, never green."
        fail=$agg ;;
   *) echo "usage: $0 [all|row1|row2|row3|row4|selftest]" >&2; exit 2 ;;
 esac

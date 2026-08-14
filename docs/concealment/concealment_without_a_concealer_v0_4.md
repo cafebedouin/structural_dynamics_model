@@ -14,13 +14,25 @@ amnesia, with nobody posing. Claim types are declared in Appendix A and govern
 how each claim may be discharged. Historical cases in §7–§8 were verified against public sources on
 2026-08-12; the companion paper is the source of the undated institutional examples.*
 
-> **CANONICITY MARKER (added 2026-08-12; provisional pending an authorial ruling, ISSUES OQ-287).**
-> The §2 derivation this paper develops **also** still sits in
-> `docs/amnesiac_institution/amnesiac_institution_v0_6.md` §2, whose §13 names it as *that* paper's
-> contribution. Two live documents, one contribution, no queryable fact of canonicity — Build
-> Discipline Pattern 2 on the paper substrate. **Working disposition pending the ruling:** this
-> paper is canonical for the **derivation**; v0.6 is canonical for the **institution** (case study,
-> differential amnesia, memory economy, organizational form). Cite accordingly until OQ-287 closes.
+> **CANONICITY — RULED 2026-08-13 (operator; ISSUES OQ-287). This supersedes the provisional
+> marker this file carried on 2026-08-12.**
+>
+> **This paper is canonical for the derivation.** `docs/amnesiac_institution/amnesiac_institution_v0_6.md`
+> no longer carries it: its §2.1–2.7 were vacated on 2026-08-13 and now cite this paper by claim
+> label and content digest (`CWC:A1@…`–`A4@…`, `C1@…`), with the vacated numbers deliberately left
+> empty. That paper is canonical for **the institution** — the case study, differential amnesia, the
+> memory economy, the organizational form, self-instrumentation — and states its own contribution
+> boundary once, at its §13.
+>
+> **Version ordering is acyclic and enforced.** This paper never cites v0.6 for the derivation.
+> Citations into this paper's Appendix A carry a digest over the whole row, checked by
+> `python3 python/claim_cite_check.py --check` in `scripts/gate.sh`; **editing a row — including its
+> kill condition — moves the digest and fires every citing site, which is the mechanism working, not
+> a false alarm.** Recipe: `audits/2026-08-13_oq287_defork/claim_digest.sh`.
+>
+> **Two limbs of OQ-287 remain open**, so it is `mitigated`, not `resolved`: the practice-paper
+> extraction, and the redirect for v0.6 §2.8/§2.9, which are marked declared-temporary with that
+> paper as their canonical destination.
 
 ---
 
@@ -1063,7 +1075,7 @@ re-derivation depends (§8.3).
 
 | # | Claim | Support | Owed |
 |---|---|---|---|
-| E1 | Parties checking an artifact default to recognition and enumerate only when forced | Model evidence under tested conditions; four rulings in one institution (embedded case material) | Prediction 1 |
+| E1 | Parties checking an artifact default to recognition and enumerate only when forced | Model evidence under tested conditions; four rulings in one institution (embedded case material) | **Prediction 1 as written did NOT discharge it**: run 2026-08-13 at 60 units, withdrawn as a test of E1 because scoring credited one authored omission while subjects named ~8 real gaps each, so the measure was selection rather than detection (§11; ISSUES OQ-293). A repaired Prediction 1 — recall over a frozen exhaustive gap inventory, shared denominator across arms — is owed and unrun |
 | E2 | Silence scales inversely with reconstructability, and reconstructability is unobservable to the institution relying on it | Fogbank; the scurvy episode; argued in §6 | Prediction 2 |
 | E3 | Mode-3 blind cells are not discoverable from inside a representational system | The scurvy episode; one census against a foreign source | Prediction 5 |
 | E5 | A claim that has never been perturbed is indistinguishable from an invariant; apparent universality measures the range of positions sampled | Argued in §3.6; the scurvy episode (§7.2), where a century of gluing across an unvaried framing read as a fact about the world | No prediction; kill condition instead — a method for distinguishing local from global sections without varying the position |

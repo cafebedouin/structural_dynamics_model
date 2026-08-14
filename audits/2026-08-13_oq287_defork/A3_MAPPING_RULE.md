@@ -156,7 +156,7 @@ condition, which the original sentence never carried:
 
 | site | what it does | how it is written |
 |---|---|---|
-| `:1212` AbsenceBench | genuinely cites model evidence, and already scopes itself (*"the theory needs only the weaker, substrate-independent version"*) | plain `CWC:E1@884ea0b6` — apt as-is |
+| `:1212` AbsenceBench | genuinely cites model evidence, and already scopes itself (*"the theory needs only the weaker, substrate-independent version"*) | plain `CWC:E1@911a4db5` — apt as-is |
 | `:1389` the nine rescues | borrows the recognition/enumeration **distinction** to describe nine instances this paper witnessed; its warrant is those instances, not `E1`'s generalization | *"In the vocabulary of `CWC:E1@…` — borrowed for its distinction, not leaned on for its generalization, which that paper marks as unevenly supported"* |
 | `:1525` prove-before-you-replace | **definitional**: classifies one practice as recognition; asserts nothing about what parties typically do | *"(`CWC:E1@…`'s distinction; the classification here is definitional, not a claim about what parties typically do)"* |
 
@@ -203,3 +203,29 @@ the instruments are the authority:
 *(47 exceeds the projected 34 because the bare-`§2` pass added 13 more pins than the rule's
 arithmetic covered — rule §5 assertion 2 counted only the 23 sourced references. The threshold is a
 floor, and it held.)*
+
+
+## 8. The first live digest fire, 2026-08-14 — and the re-read it forced
+
+A5 corrected `E1`'s **Owed** cell upstream: it read *"Prediction 1"* as though that prediction were
+pending, when Prediction 1 had been run on 2026-08-13 and **withdrawn as a test of E1** (§11; ISSUES
+OQ-293). Same claim text, changed row — the E5 shape a third time, in the document this pass made
+canonical.
+
+`E1`'s digest moved `884ea0b6 → 911a4db5` and `claim_cite_check` went red on **six sites**, five in
+v0.6 and one in this file. That is the whole design working: a row's meaning changed, and every
+document relying on it was made to look again.
+
+**The re-read, per site — a digest fire demands a re-read, not a bump:**
+
+| site | does it still hold? |
+|---|---|
+| v0.6 `:389` vacation notice, "the operational asymmetry at `E1`" | **yes** — cites the asymmetry, not E1's support level |
+| v0.6 `:814` "In `E1`'s terms… a forced enumeration" | **yes** — vocabulary borrow |
+| v0.6 `:1213` AbsenceBench as "the empirical form of `E1`'s central asymmetry" | **yes**, and it was already the most exposed: it cites E1 *as empirical*. The sentence's own hedge — *"the theory needs only the weaker, substrate-independent version"* — is what carries it |
+| v0.6 `:1390` the nine rescues | **yes, and improved.** Its caveat now names the specific fact rather than gesturing: *"whose one prediction was run and withdrawn as a test of it"* |
+| v0.6 `:1526` prove-before-you-replace | **yes** — definitional |
+| this file `:159` | **yes** — the classification table's own citation |
+
+All six survived and were re-pinned to `911a4db5`. **Nothing else moved**: the other fifteen digests
+were recomputed before and after and are unchanged, so this was an edit to one row, not a cascade.
