@@ -143,9 +143,45 @@ matches §7.4.1 exactly: **not one of the five was caught by a gate reading its 
 (i)–(iii) were caught by a person comparing a claimed result against the artifact; (iv)–(v) by a
 control that compared a claimed absence against the file. Zero were caught by the passing check.
 
+**THE COUNT IS A FLOOR, NOT A MEASUREMENT — stated because the alternative reading is the error
+this finding is about.** Twelve is what the instruments and I *noticed*, drawn from the same
+population the claim is about, by the same party the claim is about. There is no denominator: no
+one enumerated the total number of measurement acts in this pass, so no rate can be computed and
+none is offered. A thirteenth instance that nobody caught is exactly what the finding predicts and
+exactly what this method cannot see. Cite it as *"at least twelve, self-observed, undenominated"* —
+never as a rate, an incidence, or a comparison against the nine of §7.4.
+
 **Carried forward:** this is the strongest available argument that §2.9 can be made **load-bearing**
 in the practice paper's IV (the recursion) rather than appended — which is Pass B's pre-registered
 acceptance condition. It is named as candidate material for section IV in `EXTRACTION_PROMPT.md`.
+
+---
+
+## 5. Post-`C1` re-check of this table (2026-08-14, before A3 consumed it)
+
+This table is A0's point-in-time record and is **not** rewritten. It was built against concealment
+*before* `C1` existed, and A3 makes it the authority for ~11 semantic decisions, so it was re-checked
+against the current upstream rather than trusted.
+
+**Every section anchor it names still resolves to the same content:** §3.1 (A1), §3.2 (strong/weak
+form), §3.3 (A2 non-identifiability), §3.4 (A3), §3.5 (A4 warrant transfer), §3.6 (A5), §5.1 (the
+result), §5.4 (the surface signature), §9.1 (two rules), §10 (exclusions). No anchor rotted.
+
+**Two rows now have a better target than the one recorded:**
+
+| row | recorded anchor | post-`C1` |
+|---|---|---|
+| §2.5 `:545–551`, the 4-step derivation's conclusion | "§5.1 performs the same combination" | **`CWC:C1@8475dc95`** — the conclusion is now a labelled, digestible row rather than a section reference. A3 uses `C1`. |
+| §2.5 `:558–561`, P1 | (preserved in v0.6) | unchanged, but the *premise* it is conditional on is now cited as `C1` rather than as "the derivation above" |
+
+**One finding in §3 is now resolved:** finding (3)'s Preface arity defect was fixed at `974649e0`
+(A1–A5 + C1 / E1–E5 / P1–P5, with Appendix A declared authoritative). The `E5` short-cell defect was
+fixed at `e995f978`. Both are recorded here as *found by this diff*; neither is still live.
+
+**What the re-check does NOT establish.** It verifies the anchors resolve and the targets are still
+apt *as recorded*. It does not re-derive the coverage calls themselves — a row marked COVERED in A0
+that was wrong then is still wrong now, and nothing in this pass would catch it. That is the aptness
+residual declared in `claim_cite_check`'s header, and A3 is where it becomes load-bearing.
 
 ---
 

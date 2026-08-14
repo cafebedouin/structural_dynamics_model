@@ -6,7 +6,11 @@ carrying the same opt-in hazard (a NEW citation is unguarded until its digest la
 change) and a red-capable selftest.
 
 WHAT A CITATION LOOKS LIKE
+    <!-- PIN-RECORD-BEGIN: illustration, not a citation -->
     CWC:A2@31548228     CWC = Concealment Without a Concealer; A2 = Appendix A row; @ = digest.
+    <!-- PIN-RECORD-END -->
+  (The example is sentinel-wrapped because this file is inside the corpus it scans. Documentation
+  ABOUT a citation otherwise registers AS one — the same shape, three times now.)
 
   Namespaced deliberately. Two claim namespaces with the same shape and different arity exist:
   v0.6's own §0 table runs A1-A4 (and cross-references its own labels in the Premises column),
@@ -130,9 +134,21 @@ def iter_files(root=REPO):
     excluded. A naive rglob over this repository walks 85k files and takes minutes; that cost is
     what tempts a later maintainer to narrow the scope instead.
     """
+    # --cached AND --others: tracked files PLUS untracked-but-not-ignored ones.
+    #
+    # `ls-files` alone lists only TRACKED files, and that shipped as a silent hole: a brand-new
+    # document carrying a stale pin was invisible until someone committed it - which is precisely
+    # backwards, since a new citation is at its most fragile before review. Witnessed on this file:
+    # arm 9 (no-self-fire) passed while claim_cite_check.py was untracked and went red the moment
+    # it was committed, because its own docstring example became visible. The arm was right both
+    # times; the corpus was wrong once.
+    #
+    # --exclude-standard keeps .gitignore'd build output out, which is a DECLARED exclusion rather
+    # than an incidental one: ignored paths are not authored documents.
     try:
-        listed = subprocess.run(["git", "-C", str(root), "ls-files", "-z"],
-                                capture_output=True, text=True, check=True)
+        listed = subprocess.run(
+            ["git", "-C", str(root), "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+            capture_output=True, text=True, check=True)
         candidates = [root / f for f in listed.stdout.split("\0") if f]
     except (subprocess.CalledProcessError, FileNotFoundError):
         candidates = [p for p in root.rglob("*") if p.is_file()]
@@ -310,6 +326,20 @@ def selftest():
         rc = run_check(root, cwc, quiet=True)
         p("zero-citation corpus exits 2 (VACUOUS), not 0") if rc == 2 else \
             b(f"zero-citation corpus exited {rc} - absence satisfied the gate")
+
+    # 8b - an UNTRACKED file is scanned. The corpus once used `git ls-files` alone, so a new
+    #      document carrying a stale pin was invisible until committed - backwards, since a
+    #      citation is most fragile before review. This arm is the discrimination record for that
+    #      repair: it plants a stale pin in an untracked file and requires a fire.
+    with tempfile.TemporaryDirectory() as td:
+        root, cwc = _fixture_root(td)
+        subprocess.run(["git", "-C", str(root), "init", "-q"], capture_output=True)
+        (root / "x.md").write_text(f"live: CWC:A2@{digest_of('A2')}\n", encoding="utf-8")
+        subprocess.run(["git", "-C", str(root), "add", "x.md"], capture_output=True)
+        (root / "untracked.md").write_text(f"stale: {STALE_PIN}\n", encoding="utf-8")
+        rc = run_check(root, cwc, quiet=True)
+        p("fires on a stale pin in an UNTRACKED file") if rc == 1 else \
+            b(f"rc={rc}: untracked file invisible - a new citation is unguarded until committed")
 
     # 9 - the checker does not fire on ITSELF. Its fixtures live in the scanned corpus; without
     #     the sentinels above they read as live citations, which is how the first run went red.

@@ -24,7 +24,8 @@ at each landing.
 | A2 vacation | `974649e0` | `checks.sh row1 + row3`, exit 0 |
 | `claim_cite_check` | this commit | 9 controls; wired into `scripts/gate.sh` |
 
-**Still open:** A3 (re-point 33 refs), A4 (§13), A5 (canonicity markers + `CWC` Preface), A6
+**Still open:** A3 (re-point **23** refs — the plan's 33 was measured pre-A2; 10 of them lived
+inside the vacated subsections and left with them, see `A3_MAPPING_RULE.md` §1), A4 (§13), A5 (canonicity markers + `CWC` Preface), A6
 (record), Pass B (`EXTRACTION_PROMPT.md`).
 
 ## Evidence map
@@ -35,6 +36,7 @@ at each landing.
 | `A2_DRAFT_section2.md` | the reviewed §2 replacement, revisions 1→2. Its pins are **superseded** and wrapped in `PIN-RECORD` sentinels — a record of a past state, not a claim about a present one |
 | `checks.sh` | rows 1 and 3 of the verification table, executable, with 6 controls. Rows 2/4 declared and exit 3 |
 | `claim_digest.sh` | **the definition** of a claim digest. Carries the whole-row rationale and the declared stopping point |
+| `A3_MAPPING_RULE.md` | what a re-pointed reference must say, fixed BEFORE the re-pointing so row 4 checks conformance rather than non-absence |
 | `../../python/claim_cite_check.py` | the gate-wired checker. Carries the corpus-scope rationale and the aptness residual |
 
 ## Findings
@@ -58,7 +60,7 @@ its kill condition rendered under *Support*. Both repaired before any digest pin
 Preface now states that Appendix A is authoritative for the label set **and that this sentence has
 already been stale once**.
 
-**4. Twelve false absences were produced by this pass's own instruments — and the ones that matter
+**4. At least twelve false absences were produced by this pass's own instruments — and the ones that matter
 are the ones that told me something I had not predicted.**
 
 Each is a measurement whose *own framing* was not part of the query, returning an inventory that
@@ -75,6 +77,13 @@ instrument that discovers is:**
 Ten of twelve discovered. **And five of the ten were committed inside instruments built to catch
 the earlier ones** — the digest tool's first draft, the checker's fixtures, two arm revisions, the
 recipe. The repair generated fresh instances in its own apparatus, repeatedly, within one session.
+
+**The count is a FLOOR, not a measurement.** Twelve is what the instruments and I noticed, drawn
+from the same population the claim is about, by the same party the claim is about. No one enumerated
+the total number of measurement acts in this pass, so there is no denominator and no rate — and a
+thirteenth instance nobody caught is exactly what the finding predicts and exactly what this method
+cannot see. Cite as *"at least twelve, self-observed, undenominated"*; never as a rate, and never as
+a comparison against the nine of §7.4, which were counted differently.
 
 **Why this is evidence and not hygiene.** It is a dated, prospective, twelve-instance witness for
 v0.6 §2.9(b)'s claim that the remedy is **not self-terminating** — *declaring Π produces a new
@@ -101,9 +110,12 @@ it is most likely to fire.
 
 - **Aptness is unchecked.** `claim_cite_check` verifies that a pin matches its row, never that the
   row is the right one to cite at that site. A citation aimed at `A2` where the argument needs `A4`
-  reads green forever. Recorded in the checker's header; the partial mitigation is `COVERAGE_DIFF.md`'s
-  mapping table, which **nothing currently re-checks** and which was built against the pre-`C1`
-  label set.
+  reads green forever. Recorded in the checker's header. The partial mitigation is
+  `COVERAGE_DIFF.md`'s mapping table — **re-checked against post-`C1` concealment on 2026-08-14**
+  before A3 consumed it (`COVERAGE_DIFF.md` §5: every anchor still resolves; two rows now have a
+  better target in `C1`). The re-check verifies the anchors, **not the coverage calls themselves**:
+  a row marked COVERED in A0 that was wrong then is still wrong now, and nothing in this pass
+  would catch it.
 - **The intermediate state is live.** v0.6 is hollowed and declared-temporary at §2.8/§2.9; the
   practice paper does not exist yet. Tracked as OQ-287's two limbs.
 - **`C1` is byte-identical in both papers until A2's vacation propagates** — closed as of `974649e0`.
