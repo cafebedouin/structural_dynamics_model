@@ -160,7 +160,15 @@ because a dated re-check otherwise reads as validation of the whole table:
 
 > The re-check verifies the anchors, not the coverage calls — a row marked COVERED in A0 that was wrong then is still wrong, and nothing in this pass would catch it.
 
-**R2 — `claim_cite_check` is blind to aptness.** It verifies that a pin matches its row, never that
+**R2 — `claim_cite_check` is blind to aptness, and the blindness is ANTI-GUARDED.** A green gate
+over 60+ resolving citations reads as verification of the citation *set*; it verifies one relation
+and is silent on the one carrying the meaning, so a reader who trusts it checks **less** than one
+facing no instrument. A success-shaped token where aptness review would go — this pass's own
+signature, produced by this pass's own apparatus, on the surface it cannot see. Mitigation carried
+into `EXTRACTION_PROMPT.md` §8: every new citation owes a one-line note saying which claim it leans
+on and why that row rather than a sibling. Not machine-checkable; it makes aptness *reviewable*,
+which is §7.4.1's shape — not a better instrument, a second party comparing a claim against the
+artifact. It verifies that a pin matches its row, never that
 the row is the right one to cite at that site. A citation aimed at `A2` where the argument needs `A4`
 reads green forever and stays green through every future narrowing of either. Its first real test was
 the `§2.3` split (3 structural `A3` / 3 behavioural `E1`) and the discovery that two of the three `E1`

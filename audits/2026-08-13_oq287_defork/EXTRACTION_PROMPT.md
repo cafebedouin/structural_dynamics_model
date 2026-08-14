@@ -180,14 +180,36 @@ otherwise reads as validation of the whole table:
 
 > The re-check verifies the anchors, not the coverage calls — a row marked COVERED in A0 that was wrong then is still wrong, and nothing in this pass would catch it.
 
-**R2. Aptness is unguarded.** `claim_cite_check` verifies a pin matches its row, never that the row
-is the *right* one. A citation aimed at `A2` where the argument needs `A4` reads green forever. Its
-first real test was the `§2.3` split: v0.6 merged two claims concealment keeps apart — **`A3` is
+**R2. Aptness is not merely unguarded — it is ANTI-GUARDED, and this is a hazard, not a caveat.**
+
+`claim_cite_check` verifies that a pin matches its row. It cannot verify that the row is the **right**
+one to cite at that site. A citation aimed at `A2` where the argument needs `A4` reads green forever
+and stays green through every future narrowing of either row.
+
+**Here is why that is worse than having no instrument.** When you run the gate you will see something
+like *"claim_cite_check: 61 live citation(s)"* and a green tick. **That green reads as verification of
+the citation set, and it is not.** It verifies one relation — pin-matches-row — and is silent on the
+one that carries the meaning. A receiver who trusts it will check *less* than a receiver facing no
+instrument at all. That is a success-shaped token filling the hole where aptness review would go: this
+paper's own signature, produced by this paper's own apparatus, on the surface the apparatus cannot
+see. **Expect it, and do not let the green stand in for the reading.**
+
+Its first real test was the `§2.3` split: v0.6 merged two claims concealment keeps apart — **`A3` is
 about what a PROCEDURE can do (analytic); `E1` is about what PARTIES do (empirical)** — split 3/3 by
 site in `A3_MAPPING_RULE.md` §4. Two of the three `E1` sites turned out to be **vocabulary borrows,
 not assertions**, and say so in their own prose, because `E1` is unevenly supported and its owed
-Prediction 1 was run 2026-08-13 and **withdrawn as a test of it**. If you cite `E1`, decide which you
-are doing and write it into the sentence.
+Prediction 1 was run 2026-08-13 and **withdrawn as a test of it**. Every one of those calls was made
+by hand and none is machine-checkable.
+
+**REQUIRED PRACTICE, because the aptness check that does not exist is cheap to approximate.** For
+**every new citation** in the practice paper, write a one-line note recording *which claim it leans
+on, and why that row rather than a sibling* — the same discipline applied by hand to the six `§2.3`
+sites. Keep them together (a table in your audit dir, or footnotes in the draft).
+
+It will not be machine-checkable. It makes aptness **reviewable**, which is what `COVERAGE_DIFF.md`
+was supposed to do and now cannot, being pre-`C1` and unverified by its own statement. And it is the
+shape §7.4.1 keeps pointing at: **not a better instrument — a second party comparing a claim against
+the artifact.** A citation without such a note is unreviewed, whatever the gate says.
 
 **R3.** Finding 4's count is a floor (see §6.2 above).
 
@@ -218,7 +240,9 @@ Five refusals were recorded in the OQ-277 arc; none was caught by a sender re-re
 2. I–V drafted; the §5 deletion test **run on a scratch copy** and its result recorded.
 3. §4's redirect table authored at sub-item granularity, with reciprocal forward pointers in v0.6
    §2.8/§2.9 — **pointer-only edits, which is all v0.6 admits.**
-4. `claim_cite_check --check` green; every new citation digest-pinned in the same commit.
+4. `claim_cite_check --check` green; every new citation digest-pinned in the same commit; **and
+   every new citation carries its one-line aptness note (§8, R2) — the green tick does not discharge
+   this and will read as though it does.**
 5. `audits/<date>_<slug>/WRITEUP.md` with its `**Fired:**` bit.
 6. ISSUES OQ-287: Limb 1 and Limb 2 closed, or the residue named. `mitigated → resolved` only when
    **both** limbs are discharged.
