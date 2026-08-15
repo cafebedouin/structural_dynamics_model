@@ -110,20 +110,29 @@ This **undercuts v4 §6's fourth bullet**, which narrows the standpoint dropout 
 pipeline defaults ("reachable, not default") while still implying the dropout tracked that reading's
 content. It does not. It hits a different story each run.
 
-**(b) `false_natural_law` fires in 1 of 3 redraws — but the mountain claim fails in 4 of 4.**
-Measured, not inferred from thresholds:
+**(b) `false_natural_law` fires in 2 of 4 runs, and the mountain claim is adjudicated in only 3
+of 4.** Measured, not inferred from thresholds. **CORRECTED 2026-08-15** — this section first
+read "the mountain claim fails in 4 of 4," asserting a stable direction under a varying signature
+name. Pulling each detector's own evidence term shows that is wrong:
 
-| run | constraint_claim | signature |
-|---|---|---|
-| baseline | mountain | `false_natural_law` |
-| draw 01 | mountain | `false_ci_rope` |
-| draw 02 | mountain | `false_natural_law` (fires) |
-| draw 03 | mountain | `false_summit_mountain` |
+| run | ε | signature | trigger term | adjudicates the mountain claim? |
+|---|---|---|---|---|
+| baseline | 0.61 | `false_natural_law` | `explicit_mountain_claim` | yes |
+| draw 02 | 0.61 | `false_natural_law` | `explicit_mountain_claim` | yes |
+| draw 03 | 0.15 | `false_summit_mountain` | `fsm_evidence(2,0,open)` | yes (summit limb) |
+| draw 01 | 0.15 | `false_ci_rope` | **`low_extraction_profile`** | **no** |
 
-The *specific* signature is 2/4. The *direction* — an authored mountain claim that does not survive
-its own metrics — is **4/4**. So v4 §6's first bullet is not struck; it is over-specified. "Scored a
-false natural law" should become "the naturality claim failed every time, though the engine named
-the failure differently across redraws."
+Draw 01's detector fires because extraction is *low* — it reads the story as a coordination rope,
+and the naturality claim is not what is being tested there. So the honest count is: the mountain
+claim failed in **3 of 4**, on two different grounds, and the fourth run was not a test of it. The
+verdict family is fully determined by the ε mode (§3c), so these are four runs across two
+conditions, not four independent tests.
+
+The original "4 of 4" was the same over-reach this audit was convened to catch — a stable-sounding
+denominator assembled from runs that were not answering the same question — arriving one section
+earlier than the finding it was written to report. Corrected in place rather than appended: the
+table above is the evidence, `signature_detection:false_natural_law/2`, `false_summit_mountain/2`
+and `false_ci_rope/2` queried per draw against `evidence/codraw_0N/`.
 
 ## 4. What this means for the essay
 
@@ -131,7 +140,14 @@ the failure differently across redraws."
   the kernel. v4's existing hedge ("a suggestion with a named artifact channel, not a measurement")
   was correct and understated — the honest replacement is that it was tested and did not replicate.
 - **§6 bullet 4 needs widening** from a standpoint-specific dropout to a base rate.
-- **§6 bullet 1 needs narrowing** from a named signature to a stable direction.
+- **§6 bullet 1 does not survive** (revised 2026-08-15, per the §3b correction). It cannot be
+  rescued by narrowing to "a stable direction under varying signature names" — there is no stable
+  direction: one of the four runs does not adjudicate the naturality claim at all.
+
+**Superseded 2026-08-15:** `cheap-confession-v6.md` retires §6 entirely, so none of the three
+bullet-level repairs above are live edits any more. They are kept as the record of what the audit
+found, not as outstanding work. What survived into v6 is the plain-language falsifier set; what
+this audit killed is the twinning, which v6 no longer asserts.
 - **"Who this is for"** loses the empirical support v4 gave it. Whether it reverts toward v3 or
   keeps the reform-capture argument on other grounds is the author's call, not this audit's — the
   reform-capture *question* remains authored in the corpus regardless of the twinning.

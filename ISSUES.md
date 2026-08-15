@@ -1814,6 +1814,21 @@ remainder is the GENUINE missing-sibling backlog this OQ's content decision conc
 (singleton-sparsity artifact included, per the beta posture). Un-routed raw-match consumers
 remain at `cs_pattern_detection.pl:355` and `drl_composition.pl:122` (noted on OQ-262).
 
+**Evidence (2026-08-15) — the quarantine JSON is write-only and outlives its referent.**
+`prolog/cs_reading_relation_quarantine.json` is emitted by
+`validate_reading_relation_integrity` on a shortfall and is **never cleared when the edges
+resolve** (`no auto-write` on the clean path, by disposition). Witnessed: the 2026-08-14
+`cheap_confession_2026` run left 3 entries all targeting `standpoint_reading`; after
+`--close-gaps` generated that reading the integrity check reported `0 UNRESOLVED edge(s)`
+while the file sat byte-unchanged at its 15:21 mtime — a record asserting an unresolved
+condition that had resolved four hours earlier. A cold reader diffing repo state cannot tell
+a live backlog from a stale snapshot. Cheapest honest fixes: stamp the emitting run's
+manifest into the file so staleness is checkable, or write an empty array on a clean pass.
+Not fixed here — the file is a *reviewed disposition* surface (OQ-58 policy), so clearing
+semantics is a content decision, not a bug fix. Evidence:
+`audits/2026-08-14_cheap_confession_codraw_replication/` (codraw_03 reproduced the same
+artifact independently).
+
 **Cross-ref (2026-06-02):** the *network-layer* analog — dangling `affects_constraint/2` targets
 (1710/2548 edges, no referential-integrity guard), the 9 delimiter typos there, and the finding that
 such danglers resolve into a **bounded** structural-class space (not an open frontier) — is tracked in

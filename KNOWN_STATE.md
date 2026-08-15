@@ -45,6 +45,46 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-15 — [tripwire] c-orchestrator reconciles declared-vs-landed and can now exit non-zero; the kernel report block is axis-grouped
+**Files:** agent/c-orchestrator.py, python/enhanced_report.py, audits/2026-08-14_cheap_confession_codraw_replication/WRITEUP.md, ISSUES.md
+**Tier:** tripwire
+
+**The silent mistake this prevents (two, both restoring a success-shaped summary).**
+
+**(1) Do not drop the RECONCILIATION block from either generate path, and do not remove the
+`sys.exit(1)` at the end of `main()`.** Before 2026-08-15 `main()` fell off the end, so the
+process exited 0 no matter what happened — there was no failure channel out of the program.
+A run that lost a story printed a diagnosable cause (`FAIL <cid>: 'stakeholders' is a required
+property`; `FAIL <cid>: JSON_PARSE_ERROR`), then reported `Generated 6 stories` and exited 0.
+**The defect was never detection — it was reconciliation:** the error was announced and the
+summary reported success anyway. Both paths now compare the declared seed set against what
+LANDED, counted from json+pl **on disk** via the same predicate `--close-gaps` retries on —
+never from the backend's `succeeded` set, which is a claim about persistence sourced from
+something that is not persistence. A shortfall sets `status="partial"` (new StepResult value;
+no step aborts on it — partial work is kept). Discrimination record, naturally-arising, no
+authored fixture: `codraw_01` DECLINES 7/7, `codraw_02` FIRES on `menu_curation_capture`,
+`codraw_03` FIRES on `proceduralist_reading`.
+
+**(2) Do not un-group the `--- KERNEL: ---` block.** It renders two axes the architecture keeps
+separate: authored committer structure (readings, axiom conflicts, obstruction, terminals) and
+computed observer quantities (reading-robustness, H1-across-readings, pairwise Jaccard — all
+`dr_type`-derived). `cs_kernel_obstruction` is observer-blind BY CONSTRUCTION
+(`commitment_systems_sketch_v6.md` §8.1 / Theorem 7), so the two can disagree by design — two
+readings can be axiomatically contradictory and computationally identical (witnessed: J=1.000
+between the declared-contradictory pair). Rendered unmarked under one heading, this invited
+reading an observer statistic as a committer fact about reading distinctness, which is how a
+cross-axis claim reached a published essay draft. Groups are `[committer axis — authored]` and
+`[observer axis — computed dr_type; SINGLE DRAW, unreplicated]`.
+
+**Caveat on (2), recorded because it bears on whether to extend the approach:** across this whole
+arc the durable catches were **replication and operator rulings, twice each; annotation caught
+nothing.** The reader who made the cross-axis error had already quoted the `dr_type` provenance
+back before making it. Treat the labels as cheap and possibly-helpful, **not** as the fix — the
+fix for a claim that should not be load-bearing is re-running it. Provenance:
+`audits/2026-08-14_cheap_confession_codraw_replication/` (k=3 co-draw, `Fired: live`).
+
+---
+
 ## 2026-08-14 — [tripwire] Pattern indices are NAMESPACED (`CM-P4`/`BD-P4`) until OQ-278 rules; a bare `Pattern 3`/`P4` is UNRESOLVED, and canonicity is now gate-checked
 **Files:** CLAUDE.md, docs/technical/build_discipline.md, python/doc_pattern_check.py, docs/technical/doc_pattern_check.md, scripts/gate.sh, ISSUES.md, audits/2026-08-14_oq278_index_collision/WRITEUP.md, audits/2026-08-14_oq278_index_collision/PREREGISTRATION.md, audits/2026-08-14_oq278_index_collision/sweep_pattern_citations.py
 **Tier:** tripwire
