@@ -54,7 +54,14 @@ from agent.llm_call import ModelCallError
 @dataclass
 class StepResult:
     step: str           # research | decompose | generate | corpus_update | reports | ledger
-    status: str         # success | error | skipped
+    status: str         # success | partial | error | skipped
+                        # `partial` = the step ran and produced SOME of what it declared.
+                        # Introduced so a run that loses a story stops summarising as success
+                        # (the failure was never detection — both known dropouts printed a
+                        # diagnosable cause — it was RECONCILIATION: declared was never
+                        # compared against landed). Consumed by main()'s reconciliation
+                        # block, which exits non-zero. No step aborts on it: partial work
+                        # is kept, not discarded.
     data: Any = None    # step-specific payload
     error: str = ""
     tokens_in: int = 0
@@ -608,7 +615,32 @@ class DRAuditOrchestrator:
         self._progress("generate",
                        f"Generated {len(stories)} stories via the unified backend "
                        f"({token_acc['input_tokens']}→{token_acc['output_tokens']} tokens).")
-        return StepResult(step="generate", status="success", data=stories,
+
+        # RECONCILIATION. The run gates its INPUTS (which seeds to generate) and never asserted
+        # that they LANDED, so a dropout printed a diagnosable cause and the summary still said
+        # success (witnessed 2026-08-14, audits/2026-08-14_cheap_confession_codraw_replication:
+        # 2 of 3 co-draws each lost a story; both exited 0). Counted from the ARTIFACT via the
+        # same predicate --close-gaps retries on -- never from `succeeded`, which is a claim
+        # about persistence sourced from something that is not persistence.
+        status, err = "success", ""
+        try:
+            from agent.generate_kernel_corpus import story_gaps, _seed_set
+            declared = sorted(s["constraint_id"] for s in _seed_set([manifest])[0])
+            missing = story_gaps([manifest], self._json_dir, self._testsets_dir)
+            self._progress("generate",
+                           f"RECONCILIATION: {len(declared) - len(missing)}/{len(declared)} "
+                           f"declared stories landed (counted from json+pl on disk)")
+            if missing:
+                status = "partial"
+                err = (f"{len(missing)} of {len(declared)} declared stories did not land: "
+                       f"{', '.join(missing)}")
+                self._progress("generate", f"RECONCILIATION SHORTFALL: {err} — retry with "
+                                           f"--close-gaps --manifest-file <this run's manifest>")
+        except Exception as e:  # reconciliation must never mask the generation it audits
+            self._progress("generate", f"RECONCILIATION UNAVAILABLE ({type(e).__name__}: {e}) — "
+                                       f"declared-vs-landed NOT checked this run")
+
+        return StepResult(step="generate", status=status, data=stories, error=err,
                           tokens_in=token_acc["input_tokens"],
                           tokens_out=token_acc["output_tokens"],
                           duration_s=time.time() - t0)
@@ -783,8 +815,29 @@ class DRAuditOrchestrator:
                 self._progress("generate", f"Saved {claim_id}")
 
         self._progress("generate", f"Generated {len(generated_stories)}/{len(sequence)} stories")
+
+        # RECONCILIATION -- same contract as the unified backend above; the ratio printed on the
+        # line before is informational, this is the one that reaches the exit code.
+        status, err = "success", ""
+        try:
+            from agent.generate_kernel_corpus import story_gaps, _seed_set
+            declared = sorted(s["constraint_id"] for s in _seed_set([manifest])[0])
+            missing = story_gaps([manifest], self._json_dir, self._testsets_dir)
+            self._progress("generate",
+                           f"RECONCILIATION: {len(declared) - len(missing)}/{len(declared)} "
+                           f"declared stories landed (counted from json+pl on disk)")
+            if missing:
+                status = "partial"
+                err = (f"{len(missing)} of {len(declared)} declared stories did not land: "
+                       f"{', '.join(missing)}")
+                self._progress("generate", f"RECONCILIATION SHORTFALL: {err} — retry with "
+                                           f"--close-gaps --manifest-file <this run's manifest>")
+        except Exception as e:
+            self._progress("generate", f"RECONCILIATION UNAVAILABLE ({type(e).__name__}: {e}) — "
+                                       f"declared-vs-landed NOT checked this run")
+
         return StepResult(
-            step="generate", status="success", data=generated_stories,
+            step="generate", status=status, data=generated_stories, error=err,
             tokens_in=total_tin, tokens_out=total_tout,
             duration_s=time.time() - t0,
         )
@@ -1262,6 +1315,22 @@ def main():
             print("TENSIONS LEDGER (deterministic — operator synthesizes live)")
             print("=" * 60)
             print(f"  {s_.data}")
+
+    # RECONCILIATION EXIT. Until now main() fell off the end, so the process exited 0 no matter
+    # what happened -- there was no failure channel out of this program at all. A step that
+    # produced only some of what it declared reports `partial`; that reaches the exit code here
+    # so a caller, a wrapper, or a future co-draw harness can tell a whole run from a short one.
+    # Deliberately AFTER the summary and ledger: partial work is kept and still reported.
+    shortfall = [s for s in result.steps if s.status == "partial"]
+    if shortfall:
+        print("\n" + "=" * 60)
+        print("RECONCILIATION: DECLARED != LANDED")
+        print("=" * 60)
+        for s in shortfall:
+            print(f"  {s.step}: {s.error}")
+        print("\n  The run completed and kept what it produced, but did not produce")
+        print("  everything it declared. Exiting 1.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

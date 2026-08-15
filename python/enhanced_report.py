@@ -3349,7 +3349,14 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
     if kernel_entry is None:
         return ""
 
+    # Axis grouping (2026-08-14). This block interleaves two axes that the architecture keeps
+    # separate: authored committer structure (readings, axiom conflicts, obstruction, terminals)
+    # and computed observer quantities (dr_type-derived robustness, H1-across-readings, Jaccard).
+    # cs_kernel_obstruction is observer-blind BY CONSTRUCTION (sketch_v6 §8.1 / Theorem 7), so
+    # the two can disagree by design -- rendering them unmarked under one heading invited reading
+    # an observer statistic as a committer fact, which is how a cross-axis claim reached an essay.
     lines = [f"--- KERNEL: {kernel_entry['kernel_id']} ---"]
+    lines.append("  [committer axis — authored]")
     lines.append(
         f"  {kernel_entry['reading_count']} readings | "
         f"{kernel_entry['diverging_pair_count']} diverging pairs | "
@@ -3372,6 +3379,13 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
     # (fail-closed on a missing H1, not a defaulted verdict).
     rr = kernel_entry.get("reading_robustness")
     if isinstance(rr, dict):
+        # SINGLE-DRAW mark. A per-story figure is one draw of one thing; a cross-reading figure
+        # composes N independently generated stories, so its stability is the product of theirs
+        # and it is the shape most easily mistaken for a measurement. Witnessed 2026-08-14: the
+        # pairwise-Jaccard structure below did not survive k=3 same-input co-draws even though
+        # the per-pair agreement counts were stable
+        # (audits/2026-08-14_cheap_confession_codraw_replication).
+        lines.append("  [observer axis — computed dr_type; SINGLE DRAW, unreplicated]")
         # OQ-51 trichotomy: render the DISTRIBUTION (agree / diverge / undetermined)
         # that sums to total — NOT "X/total robust" (a percentage of total would treat
         # undetermined contexts as not-robust, conflating abstention with divergence).
