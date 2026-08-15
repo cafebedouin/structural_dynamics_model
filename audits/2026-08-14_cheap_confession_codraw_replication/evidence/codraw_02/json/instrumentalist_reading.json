@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "instrumentalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "d890ba3c-55be-4cd0-8510-92885951c4ef"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.47,
+    "resistance": 0.44,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Instrumentalist Reading of Positional Disagreement as Evidence (Generative Falsifier Pipeline)",
+    "topic_domain": "epistemology/philosophy_of_technology/institutional_analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "well_resourced_research_labs",
+      "model_providers",
+      "tooling_fluent_analysts"
+    ],
+    "victims": [
+      "unresourced_domain_experts",
+      "communities_without_tooling_access",
+      "positions_outside_curated_menus"
+    ],
+    "vindicated_propositions": [
+      "positional_disagreement_is_tractable_via_generation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "well_resourced_research_labs",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Have the compute budget, engineering staff, and time to run large batches of generated falsifiers and alternative-position samples, then curate and bookkeep the results into publishable claims. The tractability of the disagreement is realized through their possession of the generative loop, not through any special epistemic standing."
+    },
+    {
+      "name": "model_providers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "exit_options": "arbitrage",
+      "time_horizon": "generational",
+      "spatial_scope": "global",
+      "situation": "Build and tune the generative models whose classification and bookkeeping capacity IS the mechanism that turns disagreement into tractable evidence. Set default sampling temperature, refusal behavior, and agreeableness, which determines which alternative positions are even generatable as candidates. Collect usage revenue and reputational credit for 'solving' positional disagreement at scale."
+    },
+    {
+      "name": "tooling_fluent_analysts",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Know how to prompt, filter, and iterate the generative pipeline efficiently. Can produce a defensible-looking menu of falsifiers cheaply and move on to the next dispute, gaining career and argumentative advantage over those who must resolve disagreements the slow way."
+    },
+    {
+      "name": "unresourced_domain_experts",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold genuine domain knowledge but lack the compute time, subscription budget, or tooling fluency to run the generate-and-curate loop at the scale their well-resourced counterparts do. Their disagreements are treated as less tractable not because their position is weaker but because they cannot produce the register of candidate falsifiers the instrumentalist standard now expects as evidence."
+    },
+    {
+      "name": "communities_without_tooling_access",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Lack reliable internet, hardware, or institutional subscriptions needed to run generative tools at all. Their positional disagreements are effectively excluded from the new evidentiary standard by default, regardless of the substantive merit of their standpoint."
+    },
+    {
+      "name": "positions_outside_curated_menus",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Candidate viewpoints or falsifiers that the generative model systematically under-samples, refuses, or smooths away due to alignment tuning or agreeableness defaults. These positions never enter the curated menu that counts as 'the evidence,' regardless of whether they are true."
+    },
+    {
+      "name": "philosophers_of_science",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze whether the instrumentalist mechanism actually resolves positional disagreement or merely relocates the disagreement into a new layer — which candidates the model was willing to generate and which curator selected among them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, cheap procedure for generating and bookkeeping candidate falsifiers and alternative-position samples, letting disputing parties compare a common register of machine-produced alternatives rather than arguing past each other indefinitely.",
+    "transfer_function": "Moves epistemic authority from whoever holds the strongest argument or deepest domain standing to whoever can run the generate-curate loop fastest and most fluently — shifting credit and dispute-resolution power toward compute access, tooling literacy, and model-provider design choices, and away from unresourced but substantively engaged parties.",
+    "absent_voices": "Communities without tooling access and positions the model systematically under-generates (via alignment tuning, refusal behavior, or agreeableness defaults) never enter the curated menu that counts as evidence under this reading — they would object that their absence from the register is being read as absence of merit.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Well-resourced labs and tooling-fluent analysts would lose a fast, legible way to adjudicate disputes and would need to fall back on slower argumentative or empirical methods — a real rearrangement for them. Unresourced experts and excluded communities would arguably be no worse off, since the instrumentalist standard was never treating their standing as the relevant evidence anyway; some would say the world improves for them if it disappeared. Whether disappearance rearranges the world or restores it depends on whose position in the arrangement you ask from.",
+    "founding_problem": "Positional disagreement (rival standpoints, contested framings, competing priors) traditionally resisted tractable resolution because generating and comparing alternative positions at scale was expensive and slow, so disputes stalled on rhetorical stalemate or institutional fiat.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Model providers and well-resourced labs attest the founding problem is now substantially addressed, citing throughput gains in dispute resolution. Philosophers of science and several unresourced domain experts, corroborating from outside the beneficiary set, attest the founding problem persists in a relocated form: what changed is who can afford to generate the register, not whether positional disagreement is genuinely more tractable in principle."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the instrumentalist reading of the kernel commitment 'positional disagreement becomes evidence.' Under this reading, tractability is realized specifically because a cheap generative tool exists to produce candidate falsifiers and alternative-position samples at scale — the mechanism is the model's classification and bookkeeping capacity, not any epistemic principle about standpoint, procedure, or pragmatic cash-value. This decouples the instrumentalist claim from the standpoint reading (which locates evidentiary weight in marginalized positional knowledge), the pragmatist reading (which locates it in practical consequences of belief), and the proceduralist reading (which locates it in fair deliberative process). The instrumentalist reading's distinctive extraction path is new relative to all three siblings: whoever has slack — compute time, tooling fluency, survivable public error from a wrong generated sample — becomes the de facto beneficiary of tractability, and whoever lacks slack becomes a victim of the standard regardless of the substantive merit of their position or their standpoint-theoretic marginalization. ε is authored here for the instrumentalist arrangement as it stands, not for what standpoint or proceduralist advocates would replace it with.",
+    "key_agents": [
+      "well_resourced_research_labs: primary beneficiary (institutional/arbitrage) — runs the generate-curate loop at scale",
+      "model_providers: agenda-setter and beneficiary (institutional/arbitrage) — designs the classification/bookkeeping mechanism itself",
+      "tooling_fluent_analysts: secondary beneficiary (organized/mobile) — extracts career advantage from pipeline fluency",
+      "unresourced_domain_experts: primary target (moderate/constrained) — genuine standing, insufficient slack to generate the expected register",
+      "communities_without_tooling_access: primary target (powerless/trapped) — structurally excluded from the evidentiary standard by access alone",
+      "positions_outside_curated_menus: non-agent victim — viewpoints the model under-samples or refuses, never entering the register",
+      "philosophers_of_science: analytical observer — traces whether tractability is genuine or merely relocated"
+    ],
+    "logic_rationale": "Extractiveness is authored at a moderate-rising 0.58 by interval end: the coordination function (a shared register for comparing alternative positions) is real and non-trivial, but the standard's cost structure systematically favors slack-holders, and that asymmetry deepens as the pipeline becomes institutionally normalized as 'the' evidentiary procedure. Suppression is lower (0.42) because no one is coercively barred from disagreeing — the exclusion operates through access and curation rather than direct prohibition, which is exactly what makes this reading distinct from a snare. Theater ratio rises modestly (0.31) as bookkeeping and menu-curation activity increasingly substitutes for genuine adjudication of the underlying disagreement. Accessibility collapse is moderate (0.47): once the instrumentalist standard is adopted, unresourced parties do not lose the ability to disagree, but they lose the ability to have their disagreement counted as tractable evidence on the same terms.",
+    "directionality_logic": "Model providers and well-resourced labs sit near the full-beneficiary end: they set the terms of the mechanism (what gets generated, what counts as a candidate falsifier) and capture reputational and institutional credit for resolving disagreements at scale. Tooling-fluent analysts are secondary beneficiaries via mobility and skill arbitrage. Unresourced domain experts and access-poor communities sit near the full-target end: constrained or trapped exit options, no capacity to generate the expected register, and their disagreements are read as less tractable through no fault of their argument's substance. Positions outside the curated menu are a non-agent victim class — they never enter the evidentiary record at all, which is a structurally different harm than being outvoted within it.",
+    "mandatrophy_analysis": "The founding problem — positional disagreement resisting tractable adjudication — was genuinely live prior to cheap generative tooling. Whether it remains live in its original form, or has been replaced by a narrower problem (who can afford to run the loop), is exactly the contested status this story authors. Treating the instrumentalist mechanism as having 'solved' positional disagreement in general, rather than having solved it conditional on slack, would be the mandatrophic move — declaring the founding problem dead when it has only been relocated onto those without tooling access.",
+    "kernel_context": "This constraint instantiates the instrumentalist_reading of the kernel positional_disagreement_as_evidence. Sibling readings (standpoint_reading, pragmatist_reading, proceduralist_reading) locate the evidentiary mechanism in marginalized standpoint knowledge, practical consequences, and fair deliberative procedure respectively — none of them route tractability through a generative tool's classification and bookkeeping capacity. This reading is the only one of the four whose beneficiary/victim split tracks slack (compute, time, tooling fluency, survivable error) rather than standpoint marginalization, practical stakes, or procedural inclusion — which is why it exposes a wholly new extraction path (curated menus, model agreeableness defaults) invisible to the other three readings."
+  },
+  "omegas": [
+    {
+      "id": "instrumentalist_reading_identity",
+      "question": "Is the tractability this reading describes a genuine advance in resolving positional disagreement, or a relabeling of an old resource-asymmetry (who can afford to investigate) as a new epistemic one (who can afford to generate)?",
+      "resolution_mechanism": "Compare dispute-resolution outcomes for slack-rich vs. slack-poor parties before and after generative-tool adoption, controlling for the substantive merit of positions as judged by independent domain review.",
+      "impact": "If outcomes track slack rather than merit even after independent review, the instrumentalist mechanism is substantially extraction riding on a real but thin coordination function — consistent with the tangled_rope claim. If outcomes track merit once slack is controlled for, the coordination function dominates and the story is closer to a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether instrumentalist tractability tracks merit or resource slack."
+    },
+    {
+      "id": "sibling_reading_disagreement_location",
+      "question": "Where exactly does the instrumentalist reading's core premise (tractability via generative classification/bookkeeping capacity, no epistemic principle required) diverge structurally from the pragmatist reading's core premise (tractability via practical consequences of belief)?",
+      "resolution_mechanism": "Identify a disputed case where the two readings would recommend opposite resolutions — e.g., a candidate falsifier that is cheaply generatable but has no practical consequence either way — and determine which reading's recommendation the field actually follows.",
+      "impact": "If the field follows generatability regardless of practical stakes, the instrumentalist and pragmatist readings are genuinely distinct kernels rather than notational variants; if practical consequence always trails and explains generatability, the two readings may collapse into one.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Locating the structural disagreement between instrumentalist and pragmatist readings."
+    },
+    {
+      "id": "model_agreeableness_as_gatekeeping",
+      "question": "Does model-provider tuning for agreeableness and refusal-avoidance function as a novel, largely invisible gatekeeping mechanism over which positions can even become candidate falsifiers?",
+      "resolution_mechanism": "Audit generation refusal rates and sampling diversity for controversial vs. uncontroversial positional claims across model versions and providers.",
+      "impact": "If refusal/agreeableness tuning systematically under-samples specific classes of positions, the curated-menu extraction path is confirmed as structural rather than incidental, strengthening the case for tangled_rope over rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether model tuning constitutes a hidden gatekeeping layer over evidentiary menus."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "standpoint_reading",
+      "pragmatist_reading",
+      "proceduralist_reading"
+    ],
+    "dual_formulation_note": "This story is one of four constraints decomposing the natural-language kernel 'positional disagreement becomes tractable evidence' (positional_disagreement_as_evidence). The instrumentalist_reading is distinguished by locating the evidentiary mechanism in a generative tool's classification/bookkeeping capacity rather than in standpoint marginalization (standpoint_reading), practical consequence (pragmatist_reading), or fair deliberative procedure (proceduralist_reading). Each reading carries its own ε, beneficiary/victim structure, and claimed type; they are linked here rather than merged because the beneficiary sets and extraction paths differ substantially by reading — per the ε-invariance principle, this is four constraints, not one constraint viewed four ways."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "argumentative_stalemate_baseline",
+    "drift_state": {
+      "moment": "post_generative_tooling_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "standpoint_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "proceduralist_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "tractability_realized_through_generative_capacity_not_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "evidentiary_standing_tracks_slack_not_standpoint",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-14",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "cheap_confession_2026_20260814_151329"
+  }
+}

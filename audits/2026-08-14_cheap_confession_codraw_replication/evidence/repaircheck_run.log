@@ -1,0 +1,42 @@
+  OK commitment_cost_location_flat_control
+  OK temporal_identity_reading
+
+Kernel linkage stamp (repaircheck):
+    0 stamped with kernel_id
+    0 flat controls stamped with flat_control_of
+    0 standalone (contested=false, uid ensured)
+    3 already-correct (skipped)
+    0 UUID minted
+
+  NO-CS-STRUCTURE (1) — json lacks cs_structure; cannot stamp via generate_pl:
+    commitment_cost_location_flat_control
+
+Reading-relation referential integrity (repaircheck):
+    0 UNRESOLVED edge(s) -> quarantine (reviewed disposition, OQ-58; no auto-write)
+  Axiom contradictions: 2 pair(s) → commitment_cost_location_contradictions.pl
+[generate] Generated 4 stories via the unified backend (3503→25535 tokens).
+[corpus_update] Skipped — outputs in json/repaircheck/ (run-tagged). Promote to json/ before running corpus update.
+[reports] Skipped — run-tagged output. Promote json/repaircheck/ to json/ first.
+[ledger] Extracting tensions ledger (deterministic, no LLM)...
+[ledger] Ledger (0 blocks) saved to /home/scott/bin/structural_dynamics_model/outputs/tensions_ledger.md
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  research             skipped 
+  decompose            success  (15032→4549 tokens) [50.1s]
+  generate             success  (3503→25535 tokens) [381.8s]
+  corpus_update        skipped 
+  reports              skipped 
+  ledger               success  [1.2s]
+  commit               skipped 
+
+  Total tokens: 18535→30084
+  Total time:   433.7s
+
+============================================================
+TENSIONS LEDGER (deterministic — operator synthesizes live)
+============================================================
+  /home/scott/bin/structural_dynamics_model/outputs/tensions_ledger.md
+
+[exited with code 0]

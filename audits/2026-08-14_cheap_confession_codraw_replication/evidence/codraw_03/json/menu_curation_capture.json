@@ -1,0 +1,273 @@
+{
+  "header": {
+    "constraint_id": "menu_curation_capture",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "d27fa8bc-f186-4943-886e-1b6f73fdd148"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.58,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Self-Selected Kill-Condition Menu Capture",
+    "topic_domain": "epistemology/philosophy_of_technology/institutional_analysis",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "the_declarant_with_slack"
+    ],
+    "victims": [
+      "the_excluded_stakeholder_e_g_the_parent"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "the_declarant_with_slack",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "Has the tooling, time, and survivable public-error margin to generate a menu of candidate kill conditions from an LLM and then pick from that menu. Presents the selection as good-faith falsifiability discipline — a declared, checkable commitment. In practice selects the item on the menu least likely to actually fire, because generating and reviewing the menu is cheap while being publicly wrong is costly to reputation. Collects the credibility benefit of 'having declared a kill condition' without absorbing the exposure a real kill condition would carry."
+    },
+    {
+      "name": "the_excluded_stakeholder_e_g_the_parent",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Structurally positioned to see the arrangement's actual failure modes (the domain expertise of lived proximity — the parent, the frontline worker, the person the declaration is about) but has no access to the menu-generation step and no say in which candidate condition gets selected. Bears the cost when the arrangement's real defect goes untested because the declarant curated around it. Cannot generate a competing menu at the same cost and cannot force the declarant's choice onto the record."
+    },
+    {
+      "name": "llm_menu_generator",
+      "role": "observer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produces the candidate menu of falsifiers cheaply and near-instantly on request. Has no stake in which item is chosen and no mechanism to force adversarial selection; its agreeableness (tendency to generate plausible-sounding but non-threatening candidates when not explicitly pushed toward adversarial framing) is part of what makes the least-threatening choice easy to justify as 'a model-suggested condition,' not a self-serving pick."
+    },
+    {
+      "name": "adversarial_assigner",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "A third party (a genuine adversarial collaborator, a red-teamer, an assigned skeptic) who would pick a kill condition FOR the declarant rather than letting the declarant pick from a self-curated menu. Structurally absent from the ordinary declaration process — the comparison this constraint exists to make (self-selected vs. adversarially-assigned firing rates) can only happen when someone in this role is deliberately brought in, which rarely occurs by default."
+    },
+    {
+      "name": "downstream_audience",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Reads the declared kill condition as evidence of epistemic honesty and updates trust in the declarant's claim accordingly. Benefits from the appearance of falsifiability discipline without the tools to distinguish a self-curated menu pick from a genuinely adversarial one; their trust is the resource the curation captures."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Declaring a kill condition in advance genuinely solves a real problem: it lets others check, after the fact, whether a claim was actually falsifiable rather than infinitely elastic. When done adversarially it is real epistemic discipline.",
+    "transfer_function": "Moves credibility from the audience and the excluded stakeholder to the declarant: the declarant receives the reputational benefit of 'having a falsifiable, self-critical position' while the actual exposure that would justify that credit is minimized by curating the menu toward conditions unlikely to fire.",
+    "absent_voices": "The excluded stakeholder (e.g. the parent, the frontline observer, the person with the most at stake in the arrangement actually being tested) is not present at the menu-generation or selection step. The adversarial assigner who would supply a real kill condition is likewise absent unless deliberately invited in.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If self-curated menus disappeared and every declared kill condition had to be adversarially assigned or drawn from an unassisted, unreviewed self-generation step, the empirical firing rate of declared conditions would rise sharply, declarants would bear real reputational exposure more often, and the excluded stakeholders' structural knowledge would become load-bearing rather than decorative.",
+    "founding_problem": "The falling cost of generating candidate falsifiers (per the upstream omega_production_cost_asymmetry mountain) was supposed to solve the problem that declaring real, checkable kill conditions used to be too expensive and rare — cheap generation makes falsifiability discipline affordable at scale.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The declarant and downstream audience attest the practice solves the founding problem: menus make falsifiability affordable and visible. The excluded stakeholder and adversarial-collaboration methodologists (outside the benefiting parties) attest that the founding problem has mutated: cheap generation solved production cost but created a new, unaddressed selection-cost problem — curation is now the site of the original evasion, just moved one step downstream. No party inside the declarant's own practice independently audits which menu item was chosen or why."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Cheap LLM-assisted generation of candidate falsifiers was supposed to democratize falsifiability discipline — anyone can now produce a menu of kill conditions for a claim they hold. But generating the menu is only half the act; selecting from it is a second, discretionary move that the same person who benefits from appearing falsifiable also controls. The declarant systematically picks the least-threatening item, producing a documented commitment (a genuine artifact: 'here is my kill condition') that carries none of the exposure a real precommitment would. This is downstream of the omega_production_cost_asymmetry mountain: that upstream constraint is a genuine structural fact about inference cost collapsing; THIS constraint is what a self-interested agent does with the slack that collapse creates. The mountain is not itself extractive; the curation layered on top of it is.",
+    "key_agents": [
+      "the_declarant_with_slack: agenda_setter/beneficiary (moderate/arbitrage) — generates and curates the menu, collects the credibility benefit",
+      "the_excluded_stakeholder_e_g_the_parent: payer (powerless/trapped) — bears the cost of untested conditions, absent from the selection step",
+      "llm_menu_generator: non-agent observer — produces the menu without a stake in the pick",
+      "adversarial_assigner: excluded (moderate/constrained) — the role that would fix the problem if invited in, and structurally is not",
+      "downstream_audience: beneficiary (organized/constrained) — extends trust on the strength of the declared-but-uncurated-for-real-exposure condition"
+    ],
+    "logic_rationale": "Extractiveness (0.71) and theater ratio (0.62) both climb over the interval as the practice scales: early adopters of menu-based kill conditions were plausibly sincere (low theater), but as the pattern becomes recognized and rewarded, more declarants adopt it instrumentally — the ratio of performative declaration to genuinely exposed commitment rises. Suppression (0.58) is moderate: nothing legally or physically bars an adversarial assignment, but the social cost of inviting a real adversary (rather than a cooperative model) to assign your kill condition is real and rising. Accessibility collapse is only moderate (0.48) — the alternative (adversarial assignment, unassisted self-generation) remains cheaply available in principle, which is exactly why this is a snare of discretion rather than a mountain of necessity: the fix is available, just not incentive-compatible for the declarant. Resistance is low (0.35) because the victims (excluded stakeholders) rarely have visibility into the curation step at all — they cannot resist what they cannot see.",
+    "directionality_logic": "The declarant sits at the beneficiary end: they set the menu-generation prompt, review the candidates, and pick — full discretion, full credibility upside, minimal downside. The excluded stakeholder sits at the target end: trapped in the local arrangement the declaration is about, with no menu-generation access and no channel to insert a real kill condition. The downstream audience is a secondary beneficiary — they get the comfort of 'falsifiability was performed' without bearing the cost of checking whether it was performed adversarially.",
+    "perspectival_gap": "From the declarant's seat this looks like genuine epistemic virtue — a real commitment was made, checkable in principle. From the excluded stakeholder's seat, the same act is theater: the one condition that would have actually tested the arrangement's known weak point was never on the menu, because the declarant (consciously or not) never asked the LLM to generate it, or asked and discarded it. The engine should register this as a seat divergence rather than a factual dispute about whether a kill condition exists — it does exist; its selection is the extraction.",
+    "mandatrophy_analysis": "The founding problem (production cost of candidate falsifiers) is genuinely solved by the upstream mountain — that function has not atrophied, it has been fully achieved. What persists past its usefulness is the inference that DECLARING a self-curated condition is equivalent to being genuinely exposed. The mandate that has outlived its function is not 'generate falsifiers' but 'trust a self-selected menu pick as evidence of falsifiability' — that inference should have been retired once curation discretion became visible as a distinct move from generation."
+  },
+  "omegas": [
+    {
+      "id": "curation_vs_generation_separability",
+      "question": "Can the selection step be structurally separated from the declarant so that curation discretion is removed — e.g., by having a third party or a second, independent model instance pick from the menu blind to the declarant's preferences?",
+      "resolution_mechanism": "Run the comparison the primary observable specifies: empirical firing rates of self-selected menu picks vs. unassisted self-generated conditions vs. adversarially-assigned conditions, across a sample of declarants and domains.",
+      "impact": "If firing rates are statistically indistinguishable across the three sets, curation is not systematically capturing anything and this constraint dissolves toward a rope (cheap generation genuinely democratizing falsifiability). If self-selected menu picks fire at a substantially lower rate than adversarially-assigned ones, the snare reading is empirically corroborated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether curation discretion produces a measurable firing-rate gap versus adversarial assignment."
+    },
+    {
+      "id": "model_agreeableness_contribution",
+      "question": "How much of the least-threatening bias comes from the declarant's selection versus the LLM's own tendency to generate agreeable, non-threatening candidates in the first place — i.e., is the menu itself pre-curated by model sycophancy before the human ever chooses?",
+      "resolution_mechanism": "Compare menus generated under neutral prompting versus explicitly adversarial prompting ('generate the condition most likely to falsify this, even if uncomfortable') from the same model, same declarant, same claim.",
+      "impact": "If the model's default menu is already skewed toward non-threatening candidates, part of the extraction is upstream of the declarant's choice — implicating the tooling itself, not just the selector, and potentially requiring a separate constraint story for model-level agreeableness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether menu pre-curation by the model itself contributes to the capture independent of human selection."
+    },
+    {
+      "id": "kernel_reading_selection_basis",
+      "question": "This story adopts the instrumentalist reading of the positional_disagreement_as_evidence kernel — locating the extraction in slack-based access to curation tooling rather than in standpoint-based structural marginalization or procedural compliance. Is this the correct reading for THIS specific structural delta, or does the excluded stakeholder's exclusion better fit the standpoint reading?",
+      "resolution_mechanism": "Trace whether the excluded stakeholder's disadvantage tracks slack (time, tooling, survivable error — instrumentalist) or tracks a priori structural credibility asymmetry independent of tooling access (standpoint). Check whether providing the excluded stakeholder equal tooling access eliminates the gap (instrumentalist prediction) or leaves it intact (standpoint prediction).",
+      "impact": "If tooling access alone closes the gap, the instrumentalist reading (adopted here) is vindicated and this constraint is correctly typed as snare-via-slack. If the gap persists after equalizing tooling, the standpoint reading is the better fit and beneficiary/victim sets should be re-derived from structural credibility position rather than slack, which could shift stakeholders and possibly the classification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which kernel reading of positional_disagreement_as_evidence correctly explains this constraint's beneficiary/victim structure."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "omega_production_cost_asymmetry"
+    ],
+    "dual_formulation_note": "omega_production_cost_asymmetry (upstream, mountain) is the genuine structural fact that generating candidate falsifiers has become cheap via LLM assistance — a mountain because no party's enforcement determines whether inference costs have fallen, and no one collects rent from the cost curve itself. menu_curation_capture (this story) is the DOWNSTREAM discretionary act layered on top: given cheap generation, WHO SELECTS from the resulting menu and WHY is a separate structural question with its own beneficiary/victim structure, its own ε, and its own classification (snare). The two are linked because the upstream mountain is the precondition that makes the downstream capture possible — without cheap generation there would be no menu to curate — but the mountain itself has negligible extraction while the curation layered on it is substantially extractive. This is the ε-invariance decomposition: measuring 'the cost of generating falsifiers' gives a different, much lower ε than measuring 'who gets to pick from what was generated.'"
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "declaration_as_self_certifying_commitment",
+    "drift_state": {
+      "moment": "post_llm_generation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "standpoint_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatist_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "proceduralist_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "slack_determines_curation_capture_not_standpoint",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "cheap_production_does_not_imply_cheap_selection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "the_declarant_with_slack",
+  "fixing_cost": "cheap",
+  "uke_scope": {
+    "hypothesis": "snare",
+    "downstream_of": [
+      "omega_production_cost_asymmetry"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-14",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "cheap_confession_2026_20260814_151329"
+  }
+}
