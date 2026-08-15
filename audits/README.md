@@ -41,6 +41,16 @@ directory, tracked, with md5s — that is evidence, not a reference. Worked exam
 `audits/2026-08-10_oq277_rq2_crosscoding/` cites the paper as `arXiv:2606.14589v1` while
 freezing the two artifacts it codes under `packets/wu_source/` with `FETCH_MANIFEST.txt`.
 
+## Replicating a cross-story finding (runbook, 2026-08-15)
+
+If the finding you are auditing composes **more than one generated story** — a kernel's pairwise
+Jaccard, an H¹-across-readings, any "reading A relates to reading B like X" — its stability is the
+product of its components', not any one story's, and a single draw is an observation. Runbook:
+**`docs/technical/codraw_replication.md`** (pre-registration first, read-path controls before
+spend, k draws into run-tagged subdirs that never touch the live corpus). Worked example:
+`2026-08-14_cheap_confession_codraw_replication/`, where a structure held its per-pair counts
+across all four runs and still failed to replicate.
+
 ## Writeup format (adopted 2026-08-06; forward-only)
 
 Codifies the majority practice found by the 2026-08-06 index build: 57/168 directories already
