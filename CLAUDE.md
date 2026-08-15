@@ -499,7 +499,14 @@ Agreement at the *other* indices is machine-checked: `python3 python/doc_pattern
 reads it back into the thing that needs it (unread `*_sensitivity_results.json`;
 `kernel_grouping.json` not stamped into the `.pl` files). **Rule: a producer is not done until
 something consumes its output** — wire the consumer in the same change or add a check that fails
-loudly. **And consumed-once is not kept-fresh:** wire every new producer/consumer into
+loudly. **But an absent consumer is not evidence of an unfinished build — it is equally consistent
+with a deliberate severance, and this rule applied blind PRODUCES that defect** (witnessed
+2026-08-15: an instance correctly found `epsilon_bin` consumerless and proposed wiring it to the
+authoring prompt, which OQ-34 forbids generally and OQ-117 specifically). **When you cut a channel
+on purpose, the marker goes on the field, at the site**, so the dangling producer carries its own
+history; grepping KNOWN_STATE/closed OQs before wiring is the fallback for pre-rule severances, not
+the rule — it burdens someone who does not yet know there is anything to find. Detail:
+`build_discipline.md` → *The wire that was cut ON PURPOSE*. **And consumed-once is not kept-fresh:** wire every new producer/consumer into
 `python/run_pipeline.py` in dependency order and re-certify the whole transitive chain downstream
 (`pipeline_output.json` → `enrich` → `enriched_pipeline.json` → `enhanced_report.py`); a
 post-process the orchestrator never re-runs goes silently stale (the `w1_sheaf_join` artifact

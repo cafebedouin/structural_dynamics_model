@@ -2638,6 +2638,44 @@ undetermined at a human surface." Each looked clean from outside; each was caugh
 control. Provenance and the five instances: `docs/design/detector_calibration_omega_proposal.md`
 (Corrections log → *Named failure mode* / *Standing guard*).
 
+**The wire that was cut ON PURPOSE — mark it at severance, not at restoration (operator ruling,
+2026-08-15).** Pattern 1 says a producer is not done until something consumes its output. Applied
+blind, that rule **generates** the defect it exists to prevent: a later instance finds a producer
+with no consumer, correctly identifies a dangling wire, and proposes to solder it back — into a
+channel that was cut deliberately, for a reason recorded somewhere it will not look. This is a
+different class from the six absence-shaped patterns above. Those are rules that *fail to prevent*
+an error; this is a documented rule that *produces* one, which is why it earns its own clause
+rather than an instance line.
+
+**The rule: when you deliberately sever a channel, the marker goes on the field, at the site.** A
+comment at the producer naming what was cut, when, and the ruling that cut it. Then the dangling
+producer carries its own history and no future instance has to know there is anything to search
+for. Putting the burden at *restoration* instead — "grep KNOWN_STATE and closed OQs before wiring
+anything" — repeats the shape being fixed: it is an obligation on someone who does not yet know
+there is anything to find, and the instance that thinks to run the grep already suspects. Reachable
+but not default. **The grep is the fallback for wires cut before this rule existed, not the rule.**
+
+Witnessed 2026-08-15: `epsilon_bin` is emitted by SCOPE into every manifest and read by nothing. An
+instance verified the absence of consumers across the codebase, correctly invoked Pattern 1, and
+proposed feeding it to the authoring prompt — which OQ-34 forbids in general form
+(*measurement-independent decision rules the engine applies must not be author-visible; an author
+who sees an MI threshold satisfies it mechanically and the classification stops carrying
+information*) and OQ-117 forbids specifically (*default NOT re-wire; wiring would create the
+numeric instruction channel this OQ interrogates*), the channel having been scrubbed on purpose at
+`b6c4e113`. **Both rules were on file and neither reached the proposal.** The catch came from an
+operator ruling and, belatedly, a `PreToolUse` hook that fired only because the instance happened
+to edit a file OQ-117's KNOWN_STATE entry names — several turns after the wrong design had been
+argued for and approved.
+
+Corollary worth stating separately, because it is the reason the fallback is weak: **an absent
+consumer is not evidence of an unfinished build.** It is equally consistent with a finished
+severance. Pattern 1's diagnostic (count the consumers, find zero) cannot distinguish the two, and
+the sign that separates them lives in the commit history and the closed-OQ record — neither of
+which the diagnostic touches. See also *Unwired ≠ worthless*, which protects an unwired subsystem
+from **deletion**; this clause is its mirror, protecting a severed channel from **restoration**.
+The asymmetry in both directions is deliberate: be reluctant to mint, reluctant to delete, and
+reluctant to re-solder.
+
 ---
 
 ## An audit directory has one entry point and an evidence map (Patterns 1+2 on the prose substrate)
