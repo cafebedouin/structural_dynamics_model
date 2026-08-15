@@ -45,6 +45,42 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-15 — [correction-key] Two standing rules migrated out of closed OQs (OQ-34 MI-threshold visibility, OQ-54 axis-irreducibility); general rules are the ones the file-keyed channel cannot carry
+**Files:** prompts/constraint_story_generation_prompt_json.md, prompts/uke_scope_v2_json.md, agent/story_generator_base.py, agent/generate_kernel_corpus.py, agent/c-orchestrator.py, prolog/cs_kernel_registry.pl, python/enhanced_report.py, ISSUES.md
+**Tier:** correction-key
+
+**Rule 1 (from OQ-34, resolved).** Thresholds that are *definitional bounds* on the substrate may
+be author-visible; **measurement-independent decision rules the engine applies must NOT be** — an
+author who sees an MI threshold satisfies it mechanically and the classification stops carrying
+information. χ thresholds are MI by construction. Three-way rubric when editing any authoring
+prompt: D-both → keep; D-direction/MI-value → keep the direction, strip the number; MI-both →
+strip. This is the GENERAL form of the specific `epsilon_bin` prohibition at KNOWN_STATE
+2026-06-12 / OQ-117, and it was written first.
+
+**Rule 2 (from OQ-54, mitigated).** `cs_kernel_obstruction/4` is built **observer-blind** — it
+reads only `cs_reading_relation`, never χ or `live_index` — because Theorem 7 / detection
+independence makes the reading-axis obstruction gradient-orthogonal to the observer one. It
+**must not be reduced to** the observer obstruction. Consequence for report surfaces: a
+`dr_type`-derived statistic (pairwise Jaccard, H¹-across-readings) is **not** evidence about
+reading distinctness, and two readings can be axiomatically contradictory while computing
+identically.
+
+**Why these two and not the other 22.** A sweep of resolved OQs carrying imperative prohibitions
+found ~90% already named somewhere in KNOWN_STATE; these were the exceptions. They are the
+exceptions **because they are general** — a cross-cutting methodology rule has no natural
+`**Files:**` line, so the `PreToolUse` file-keyed channel has nothing to key on. The channel
+systematically under-covers exactly the rules with the widest scope. (Count caveat: the sweep's
+size moved 32→36→24 across three regex cuts, so treat "how many" as fuzzy and the ~90% coverage
+ratio as the robust part.)
+
+**Both rules were violated in one session (2026-08-14/15) by an instance that had not read them** —
+Rule 1 by proposing to wire `epsilon_bin` into the authoring prompt, Rule 2 by reading a pairwise
+Jaccard as a fact about reading relationships and carrying it into an essay draft. Rule 1 was
+caught only because the instance later happened to edit a file OQ-117's entry names; Rule 2 was
+caught by replication, not by any rule. **Delivery is edit-time; both decisions were
+proposal-time.** Surfacing design (a STANDING section on the resolver menu) is unbuilt — see the
+OQ minted for it.
+
 ## 2026-08-15 — [tripwire] c-orchestrator reconciles declared-vs-landed and can now exit non-zero; the kernel report block is axis-grouped
 **Files:** agent/c-orchestrator.py, python/enhanced_report.py, audits/2026-08-14_cheap_confession_codraw_replication/WRITEUP.md, ISSUES.md
 **Tier:** tripwire

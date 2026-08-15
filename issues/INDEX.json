@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "33797cf37fde4aa5d150cfa6b917e665d70a3236",
+    "store_version": "e6b019e88c8ac1357bab4b6bbcda72107167f285",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-15T01:22:40"
+    "generated_at": "2026-08-15T01:30:05"
   },
-  "issues_sha": "922238ce9a1b06114be2d6cce5e189d45b086e52a224d0ef04b84413eb788c53",
-  "n_entries": 294,
+  "issues_sha": "047bc91005b48752acdc5f550fb0de5e7493d177079f31984098ca54d96c9ebe",
+  "n_entries": 295,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 107,
+    "open": 108,
     "partial": 7
   },
   "active": [
@@ -1573,6 +1573,21 @@
         "OQ-276",
         "OQ-277",
         "OQ-278"
+      ]
+    },
+    {
+      "id": "OQ-295",
+      "status": "open",
+      "priority": 2,
+      "summary": "Standing prohibitions are archived by closure when closure is what makes them operative: surface them on the resolver menu",
+      "deps": [
+        "blocked_on_human oq295-surfacing-design"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-34",
+        "OQ-54",
+        "OQ-117"
       ]
     }
   ],

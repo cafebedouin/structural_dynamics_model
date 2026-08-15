@@ -12882,6 +12882,58 @@ defect in the incidence instrument.
 
 ---
 
+## OQ-295 — Standing prohibitions are archived by closure when closure is what makes them operative: surface them on the resolver menu
+
+**Ω-type:** Ω_C (design — where a rule with force but no open question lives) + a small Ω_E
+(does surfacing change instance behaviour, or is it another memory aid that underperforms?).
+
+**Status:** open
+**Priority:** 2
+**Deps:** blocked_on_human oq295-surfacing-design
+**Origin:** 2026-08-15, from the cheap_confession co-draw arc. An instance proposed wiring
+`epsilon_bin` into the authoring prompt — forbidden by a rule recorded twice, generally in
+OQ-34 and specifically in OQ-117 — and separately read a `dr_type`-derived Jaccard as a fact
+about reading distinctness, forbidden by OQ-54. All three OQs are closed. None reached the
+instance at proposal time.
+
+**The inversion.** `omega_resolver menu` indexes on **status**; what matters for a prohibition is
+**force**. A prohibition does not stop being operative when the question that produced it
+resolves — resolution is precisely what turns a deliberation into a rule. So closure currently
+buries the rule with the argument that produced it, when it should promote it.
+
+**Why the file-keyed channel does not cover this.** The `PreToolUse` hook delivers KNOWN_STATE
+entries naming the file you are about to edit. Two failures: (1) it fires at **edit** time, and a
+design proposal is argued and ruled on turns earlier — by the time the hook speaks, the wrong
+thing has been designed and approved; (2) a **general** rule has no natural `**Files:**` line, so
+the channel has nothing to key on. Witnessed: a sweep of resolved OQs carrying imperative
+prohibitions found ~90% already named in KNOWN_STATE, and the two that were not — OQ-34 and
+OQ-54 — were exactly the two violated, *because* they are the general ones. The channel
+systematically under-covers the widest-scope rules. (Migration of those two landed 2026-08-15,
+KNOWN_STATE; the migration half of this problem is therefore ~done and the **surfacing half is
+the whole remaining value**.)
+
+**Design constraint that makes this non-trivial (do not skip).** The candidate set is **fuzzy**:
+three regex cuts over ISSUES.md returned 32, 36, and 24 "standing prohibitions" depending on where
+the boundary fell. Any mechanical extraction inherits that instability, so a STANDING section
+built by regex would silently vary in membership run to run — the same absence-presenting-as-
+presence shape this repo keeps finding. An authored marker (a `**Standing:**` field set at close)
+is the crisp alternative and costs a line per closure.
+
+**Not a flat list.** Some of these rules are general (OQ-34) and some are instances of them
+(OQ-117). Rendering them undifferentiated recreates the search problem inside the STANDING
+section. General rules must be readable first, with instances subordinated to them.
+
+**What resolution would change.** An instance running `[NEXT]` would see the operative
+prohibitions without knowing to search for them. **Kill condition, stated because this repo's own
+evidence is against memory aids:** across the arc that produced this OQ, the durable catches were
+replication and operator rulings (twice each) while annotation caught nothing — the instance that
+made the cross-axis error had already quoted the `dr_type` provenance back before making it. If a
+STANDING section ships and the next comparable violation is still caught by a human or a re-run
+rather than by the section, retire it rather than expanding it.
+
+**Files:** `python/omega_resolver.py`, `docs/technical/omega_resolver.md`, `ISSUES.md`,
+`KNOWN_STATE.md`.
+
 ## OQ-294 — Does our own defect taxonomy reproduce against itself? (the symmetric half of the Wu question, split from OQ-278)
 
 **Ω-type:** Ω_E — inter-coder agreement on a fixed corpus is a measured quantity. The
