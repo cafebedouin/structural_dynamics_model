@@ -17,7 +17,9 @@
 :- begin_tests(oq113_dead_natural_law).
 
 % --- (a) POSITIVE CONTROL — the probe fires on a constructed false-slot profile.
-%   `false` lands in the HasAlternatives slot per the head arg order at :359
+%   `false` lands in the HasAlternatives slot per the head arg order at
+%   signature_detection.pl:378 (cite refreshed 2026-08-17, OQ-251 audit; the
+%   former :359 had drifted onto the section banner comment)
 %   (profile/7: Access, Suppression, Resistance, BeneficiaryCount,
 %   HasAlternatives, TemporalStability, CoordinationSuccess). If this FAILS the
 %   probe is dead and (b)/(c) below would be vacuously satisfied.

@@ -455,14 +455,46 @@ has_asymmetric_extraction(ConstraintID) :-
 %
 %   THE JUNE BASIS IS VOID, on two independent counts:
 %     (a) "MaxEnt shadow 0.990 mountain / entropy 0.031" — the engine that
-%         produced it certified maxwell natural_law via a claimed_natural/2
-%         source that OQ-70 DELIBERATELY REMOVED two days later (72ec2cdd,
-%         2026-06-05: no signature may read a single authored perspective as a
-%         story-level claim). At HEAD natural_law_signature does not fire for
-%         maxwell; it reads coupling_invariant_rope / rope. Single-variable
-%         isolation (same kernel_v1 corpus, era engine vs HEAD engine) confirms
-%         ENGINE regime, not corpus. The digits also never reproduced: measured
-%         in-era is 0.95 / entropy 0.1557 (0.95 is the saturation ceiling).
+%         produced it certified maxwell natural_law, and no longer does. At HEAD
+%         natural_law_signature does not fire for maxwell; it reads
+%         coupling_invariant_rope / rope. Single-variable isolation (same
+%         kernel_v1 corpus, era engine vs HEAD engine) confirms ENGINE regime,
+%         not corpus. The digits also never reproduced: measured in-era is 0.95 /
+%         entropy 0.1557 (0.95 is the saturation ceiling).
+%
+%         *** CORRECTION 2026-08-17 (OQ-251 audit; this paragraph previously
+%         attributed the un-certification to OQ-70 / 72ec2cdd, 2026-06-05, "via a
+%         claimed_natural/2 source that OQ-70 DELIBERATELY REMOVED"). THAT
+%         ATTRIBUTION WAS WRONG on three independent counts, each witnessed in
+%         audits/2026-08-17_oq251_natural_law_reachability/:
+%           1. MECHANISM. claimed_natural/2 was never on the natural_law path, in
+%              the era engine or at HEAD. Both producers of the natural_law atom
+%              (constraint_signature/2 :114-117, classify_by_signature/3 :323-324)
+%              gate on natural_law_signature/1 — the profile path. era-wide, the
+%              ONLY executable consumer of claimed_natural/2 is false_natural_law/2.
+%              The era dependency arrow in fact runs the other way: claimed_natural
+%              clause 3 CALLS natural_law_signature.
+%           2. CHRONOLOGY (the behavioral witness, three-point bisect over the same
+%              byte-identical kernel_v1 corpus): natural_law FIRES at f600599b
+%              (pre-both) AND at 8b5a34b8^ = a4297632 (post-72ec2cdd), and is
+%              ABSENT at 8b5a34b8. The binding commit is `8b5a34b8` (2026-06-11,
+%              OQ-43/OQ-44 fail-close: has_viable_alternatives/2 default
+%              false -> unknown), six days after OQ-70. The earlier era-vs-HEAD
+%              isolation SPANNED both commits and could not discriminate them —
+%              that span is the whole defect, and this bisect is its repair.
+%           3. maxwell's OWN DATA. maxwell authors an explicit story-level claim
+%              (kernel_v1/maxwell_demon_impossibility.pl:114,
+%              constraint_claim(..., mountain)), so claimed_natural/2 source 1
+%              fires for it regardless; removing source 2 was INERT for maxwell
+%              even on the claims side. At HEAD claimed_natural returns
+%              explicit_mountain_claim.
+%         The un-certification was a CHOSEN ruling with an accepted casualty
+%         (thermal_dissipation_constraint; ISSUES OQ-43/OQ-44, GAP-08), later
+%         re-ruled as documented builder-unreachability (OQ-113 fork (b),
+%         2026-06-18). At HEAD exactly ONE conjunct blocks maxwell —
+%         HasAlternatives == false — dead-by-range; every other conjunct passes on
+%         maxwell's authored fields. Reverting that single line at HEAD restores
+%         the certification end-to-end (30 kernel_v1 constraints certify). ***
 %     (b) "omegas authored empty" — FACTUALLY WRONG. maxwell authors 11
 %         omega_variable facts.
 %
@@ -487,6 +519,25 @@ has_asymmetric_extraction(ConstraintID) :-
 %   to natural_law certification DOES exist post-OQ-70 and maxwell still fails
 %   it, this narrative basis is called into question and gate 2 returns to the
 %   operator's seat.
+%
+%   KILL-CONDITION DISPOSITION 2026-08-17 (OQ-251 resolved): EVALUATED, DID NOT
+%   TRIP. No path exists — natural_law_signature/1 is unsatisfiable by
+%   construction (has_viable_alternatives/2's two clauses bind arg 2 to the head
+%   literals `true` and `unknown`; `false` is emitted by neither, so the
+%   `HasAlternatives == false` leg is dead on EVERY corpus, not merely
+%   unauthored). Since no path exists, the condition's antecedent is false and
+%   this narrative basis stands as ruled. Witness:
+%   audits/2026-08-17_oq251_natural_law_reachability/ (P5a pre-injection clean;
+%   P6(a) clause read + two-sided control; P6(b) corpus range [unknown], 0 false).
+%
+%   FOR THE OPERATOR (surfaced, NOT decided here — an OQ-252 instance): this
+%   ruling's own stated evidential basis was CORRECTED post-hoc by that audit
+%   (see the *** CORRECTION *** block above). The ruling's SUBSTANCE — the
+%   narrative/omega-aboutness discriminator — is untouched by the correction, and
+%   the kill condition did not trip. Whether a ruling whose recorded basis needed
+%   correcting warrants an explicit re-affirmation of
+%   non_agent_beneficiary(entropic_universe_hypothesis) is the operator's call.
+%   Executor's default recommendation: ruling stands.
 %
 %   Blast radius of this ruling: zero observable. maxwell classifies rope at HEAD
 %   either way, and all five live legs carry zero registered beneficiary values.

@@ -177,3 +177,84 @@ depends on them. `Licenses:` is the proposed back-reference. **Operator ruling: 
 added when a ruling is created or revisited from 2026-07-25 onward, never backfilled.** Corollary:
 absence on an older ruling means "predates the convention," never "licenses nothing." This ruling
 carries the first `Licenses:` line.
+
+---
+
+# CORRECTION — 2026-08-17 (appended; the original above is point-in-time and is NOT rewritten)
+
+**Source:** `audits/2026-08-17_oq251_natural_law_reachability/` (OQ-251 resolved). Every claim
+below carries a pasted witness in that directory's `audit_log.md`.
+
+**This document attributed maxwell's loss of `natural_law` certification to OQ-70 (`72ec2cdd`,
+2026-06-05). That attribution is wrong.** The binding commit is **`8b5a34b8` (2026-06-11,
+OQ-43/OQ-44 fail-close: `has_viable_alternatives/2` default `false` → `unknown`)**.
+
+## What was wrong, and how each was witnessed
+
+**1. The attributed cause (§"Why the engine changed", line 67).** A three-point behavioral bisect
+over the *byte-identical* kernel_v1 corpus (`git archive` scratch trees; maxwell's file md5
+`9178deb2…` at all points, including the live worktree):
+
+| Point | Commit | `has_viable_alternatives` | `constraint_signature(maxwell, S)` |
+|---|---|---|---|
+| 1 | `f600599b` (pre-both) | `false` | `[natural_law]` |
+| 2 | `8b5a34b8^` = `a4297632` (**post-`72ec2cdd`**) | `false` | `[natural_law]` |
+| 3 | `8b5a34b8` (post-fail-close) | `unknown` | `[coupling_invariant_rope]` |
+
+`natural_law` still fires *after* OQ-70 and stops at the fail-close. Point 1 is a REPRODUCTION of
+this document's own arm C, so the scratch-tree apparatus is validated against a known result.
+
+**2. The mechanism (line 68).** `claimed_natural/2` was never on the `natural_law` path — in the
+era engine or at HEAD. Both producers of the `natural_law` atom gate on `natural_law_signature/1`
+(the profile path); era-wide the **only** executable consumer of `claimed_natural/2` is
+`false_natural_law/2`. The era arrow in fact runs the other way: `claimed_natural` clause 3 *calls*
+`natural_law_signature`.
+
+**3. The `:155` cite (line 71).** `kernel_v1/maxwell_demon_impossibility.pl:155` is a **comment
+inside a plunit test** (`% Verify that as a Mountain, the classification is uniform across
+perspectives.`). The claim it was offered for — that maxwell carries an authored mountain
+perspective — **is true**; the facts are at `:128`, `:135`, `:142`. The cite is mis-targeted, not
+the claim.
+
+**4. "and no explicit story-level naturality claim" (line 71) — FALSE.**
+`maxwell_demon_impossibility.pl:114` is
+`narrative_ontology:constraint_claim(maxwell_demon_impossibility, mountain).` — exactly what
+`claimed_natural/2` clause 1 reads. At HEAD `claimed_natural(maxwell, X)` returns
+`explicit_mountain_claim`.
+
+**This last point independently kills the attribution even on its own terms:** because source 1
+fires for maxwell regardless, removing source 2 was **inert for maxwell** on the claims side too.
+The attribution fails on mechanism, on chronology, and on maxwell's own authored data.
+
+## What survives
+
+**The A-vs-C engine-regime isolation stands as far as it went.** Its finding — that the change is
+ENGINE regime and not corpus — is confirmed by the bisect (the corpus is byte-identical across all
+three points). What it could not do is *discriminate within* the engine window: the era-vs-HEAD
+span contains **126 commits**, including both candidates, so it could never separate `72ec2cdd`
+from `8b5a34b8`. Naming one of them was an inference the isolation did not license. **That span is
+the entire content of this correction** — the isolation was under-powered for the attribution it
+was made to carry, not wrong about what it measured.
+
+**The gate-2 ruling's SUBSTANCE is untouched.** The narrative/omega-aboutness discriminator, the
+host-testimony admission, and the standing method rule are all independent of which commit
+un-certified maxwell. The **kill condition was evaluated and did NOT trip**: no path to
+`natural_law` certification exists at HEAD — `natural_law_signature/1` is unsatisfiable *by
+construction* (`has_viable_alternatives/2`'s two clauses bind arg 2 to the head literals `true`
+and `unknown`; `false` is emitted by neither), so the condition's antecedent is false.
+
+**One item is routed to the operator, not decided here** (an OQ-252 instance): this ruling's
+recorded evidential basis needed post-hoc correction. Whether that warrants an explicit
+re-affirmation of `non_agent_beneficiary(entropic_universe_hypothesis)` is the operator's call.
+Recorded default recommendation: the ruling stands.
+
+## One thing this correction does NOT change, and one it sharpens
+
+Unchanged: "Retire (rejected)" (line 154) reasoned that gate 2 fails only *mechanically* "because
+OQ-70 narrowed the detector." Substitute `8b5a34b8` for OQ-70 and the argument is unaffected — the
+host did not change either way.
+
+Sharpened: the closing OQ-252 passage cites "OQ-70 at two days" as one of two premise-expiry
+instances. On this evidence the gate-2 premise expired at **six days, not two**, and to a different
+ruling. The *pattern* the passage names is if anything strengthened — the expiring premise was
+harder to see than the record supposed, because the isolation that looked like a witness was a span.

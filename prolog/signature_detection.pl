@@ -382,8 +382,10 @@ natural_law_signature(profile(AccessCollapse, Suppression, Resistance,
     % Fail-closed on the `unknown` absence sentinel (2026-06-09): an unauthored
     % metric arrives as `unknown` from get_metric_average/3; guard with number/1
     % so the comparisons below FAIL rather than throw type_error. LOAD-BEARING:
-    % reached pre-abstain via the natural_law clause (:112) and the FNL
-    % claimed_natural path and boltzmann_compliance.pl:580.
+    % reached pre-abstain via the natural_law clause (:117) and the FNL
+    % claimed_natural path and boltzmann_compliance.pl:607.
+    % (Cites refreshed 2026-08-17, OQ-251 audit; both re-verified at edit time —
+    % :112 and :580 had drifted and pointed at unrelated code.)
     number(AccessCollapse), number(Suppression), number(Resistance),
 
     % Metric conditions
