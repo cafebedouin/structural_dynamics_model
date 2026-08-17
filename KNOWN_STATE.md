@@ -190,6 +190,27 @@ anyway"). Answer: docs/technical/ YES — BOTH rules. CLAUDE.md: NEITHER.**
   governing stance does not carry it — distrusting a count does not tell you to compute its
   composition before it becomes a headline.
 
+**TRIPWIRE 6 — BD-P3 is now a GATE ROW (`bound selector`), and it found 5 live call sites the
+documentation had not.** `python/bound_selector_check.py` in `scripts/gate.sh`. Registry-driven
+(`CUT_ORDERED`, opt-in — an unregistered predicate is NOT checked and NOT reported safe);
+exemptions require a **reason string**, never a bare path, or the list decays into "sites someone
+silenced" (currently 0 exemptions — the 5 sites were REPAIRED, not silenced).
+**Discrimination record (naturally-arising pair, gate written BEFORE the fixes, deliberately):**
+RED with exactly 5 sites at **`dcde9591`**, GREEN at the repair commit. The sequencing was the
+point — fixing first would have shipped a row that had never gone red, i.e. indistinguishable from
+a matcher that silently misses (OQ-297's own argument).
+**The checker had the defect it was built to catch, on its first run:** it reported 16 "violations",
+of which 11 were the predicate's own clause HEADS (definitions, not calls) and its own docstring +
+fixtures (self-fire). An introduced instrument inherits the discipline; the count was fixed before
+it was believed. Both carve-outs are now selftest rows (11 fixtures: 4 violation shapes, 7 negative
+controls incl. clause-head and comment-line).
+**Repairs, all unbound + post-filter:** `diagnostic_summary.pl:424` (latent),
+`diagnostic_summary.pl:450` (**wrong query, ZERO output change** — its P6 pattern ANDs with
+`excess_extraction < 0.05` and every over-counted id carries excess 0.13–0.28, witnessed per-id on
+3 legs), `routing_sink.pl:120` (latent), `test_reading_totality.pl:139` (the bound form was the
+WEAKER assertion — `unknown` is the LAST clause, so binding it proved only that the fallback body
+is satisfiable), `python/fcr_ablation.py:75` (**NOT insulated → OQ-298**).
+
 **TRIPWIRE 3 — a dirty→clean transition in `git status` does NOT mean "stale index stat"; another
 instance may have just committed.** This audit made that mistake on itself and recorded "no
 concurrent writer" in its own log: `git status --porcelain` showed ` M KNOWN_STATE.md` etc., a

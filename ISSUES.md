@@ -13438,6 +13438,144 @@ the hook is needed, and this OQ becomes a build item.
 
 ---
 
+## OQ-298 — A reported `FCR detected: N (X%)` figure rode a bound-selector query: the label column is inflated on flash/haiku, and any recorded finding from a pre-2026-08-17 ablation run needs re-checking
+
+**Ω-type:** Ω_E (the inflation is measured; whether the recorded finding survives is a
+re-run, not a judgement).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-296
+**Origin:** OQ-251 close, 2026-08-17 — found by the `bound_selector_check` gate row on its
+first live sweep. Operator directed it be scoped to the CONSUMER, not the arithmetic.
+**Files:** `python/fcr_ablation.py` (fixed in the same change), `prolog/diagnostic_summary.pl`
+(fixed; no output change — see below), commit `7ca977c4` (the recorded finding).
+
+**The defect.** `python/fcr_ablation.py:75` set its per-row `FCR` label with a BOUND-selector
+query, `constraint_signature(C, false_ci_rope)`. That form skips the earlier lock clauses'
+cuts (BD-P3), so it admitted constraints the engine actually assigns **`false_natural_law`** —
+the one clause ahead of `false_ci_rope`. Measured at `dcde9591`, bound vs true cascade:
+
+| leg | bound | true | inflation |
+|---|---|---|---|
+| `testsets_flash` | 354 | 350 | **+4** |
+| `testsets_haiku` | 240 | 234 | **+6** |
+| `testsets_sonnet` | 400 | 395 | +5 |
+| `testsets_kimi` | 147 | 144 | +3 |
+| `testsets` | 86 | 85 | +1 |
+| `kernel_v1` | 273 | 273 | 0 |
+
+Every over-counted id is `false_natural_law` on every leg — the predicted shape, not a
+coincidence.
+
+**WHY THIS IS NOT AN OFF-BY-ONE (the disposition, per the operator).** The question is what
+CONSUMED the count, and the two consumers differ completely:
+
+- **`diagnostic_summary.pl:450` — insulated, zero output change.** Its P6
+  `fcr_zero_excess_coupling` pattern ANDs the FCR check with `excess_extraction < 0.05`. Every
+  over-counted id carries excess 0.13–0.28 (or none), so the second conjunct blocked all of
+  them on all three legs measured. The query was wrong and the output was right. Witnessed
+  per-id in `audits/2026-08-17_oq251_natural_law_reachability/audit_log.md`.
+- **`fcr_ablation.py` — NOT insulated.** `fcr_detected = sum(r["fcr"] for r in rows)` (`:213`)
+  is printed as **`**FCR detected**: N (X%)`** (`:282`). The inflation is fully expressed in a
+  reported percentage, on precisely the two legs (flash, haiku) whose comparison is the
+  script's headline.
+
+**What must be re-checked before anything cites it.** Commit `7ca977c4` records: *"Disabling
+the FCR override has an asymmetric effect — Flash loses ~9pp tangled_rope while Haiku only
+~2pp. The superselection gap (H¹=1 and H¹=2 empty) survives ablation in both corpora."* The
+tangled_rope asymmetry rides the TYPE columns, not the FCR label column, so it is **probably**
+unaffected — **but that is a hypothesis, not a finding, and it is exactly the shape this
+project forbids shipping** (`build_discipline.md` → *a gating count is not a finding without
+its composition*). Any `FCR detected` percentage in a pre-2026-08-17 report **is** wrong.
+Resolution = re-run the ablation post-fix and diff the two reports.
+
+**Evidence preserved, deliberately.** The call site is FIXED (leaving it broken means the next
+re-run reproduces the wrong number), but the pre-fix figures are frozen in the table above, in
+a comment at the call site, and in `dcde9591` — so the fix erases nothing needed to audit
+downstream. This is the operator's sequencing constraint honoured: loud fix, not a quiet one.
+
+**Cross-refs:** OQ-296 (the consumer surface), OQ-278 (why the rule did not route), BD-P3.
+
+---
+
+## OQ-299 — `build_discipline.md` headings are topic-first, so the rule you need is findable only if you already know it exists
+
+**Ω-type:** Ω_C (a documentation-architecture ruling: whether headings are restructured, and
+whether the situation→rule map is generated or hand-kept).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-278, blocked_on_human heading-restructure-ruling
+**Origin:** OQ-251 close, 2026-08-17 (operator proposal). Directly follows the witnessed
+re-discovery of BD-P3.
+**Files:** `docs/technical/build_discipline.md` (~60 headings), `python/doc_pattern_check.py`
+(the model for a generated-index row).
+
+**The problem.** ~60 rules, indexed by *what the rule is about*, not by *what you are about to
+do*. Retrieval therefore requires already knowing the rule exists — which is exactly the
+condition that fails. Witnessed: BD-P3 was written 2026-05-30 with the exact query form as its
+worked example, and an instance ran that query anyway.
+
+**Why NOT a hand-written situation→rule index (operator, rejecting the obvious fix):** a second
+artifact drifts from the first and needs its own staleness check — apparatus, by the standard
+that says don't answer an apparatus question with more apparatus.
+
+**The proposal instead: make the headings action-first so the map IS a grep.** *"Before running
+a query with a bound selector — …"* rather than *"Pattern 3 — Bound-probe bypasses
+clause-order."* Then a `doc_pattern_check`-style row regenerates the index from the headings,
+and the headings are the thing under version pressure rather than a derived file nobody updates.
+
+**Known constraint before anyone starts:** the pattern headings (`Pattern 1`…`Pattern 6`) are
+under the **OQ-278 citation freeze** and are cited by index across the record. A rename touches
+`pattern_citation_check` ground truth. So either restructure only the ~54 NON-pattern headings
+(safe now), or sequence the whole job behind OQ-278's P4 ruling. **That choice is the ruling
+this OQ wants.**
+
+**Falsifier:** if re-discoveries keep appearing after action-first headings land, documentation
+routing is dead for this corpus and the action-keyed delivery channel (OQ-297's declined hook,
+one level up) is justified on evidence rather than intuition.
+
+---
+
+## OQ-300 — CLAUDE.md may NAME a mechanism without teaching it or pointing at where it is taught (a dangling-reference class, not one instance)
+
+**Ω-type:** Ω_E (mechanically checkable), Ω_C at the repair policy.
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-278
+**Origin:** OQ-251 close, 2026-08-17 (operator proposal — "one gate row you didn't list, which
+implements a recommendation you already filed").
+**Files:** `CLAUDE.md`, `docs/technical/build_discipline.md`, a new
+`python/claude_reference_check.py` (unbuilt).
+
+**The class.** `CLAUDE.md` named "bound-probe" in exactly one place — inside the OQ-278
+CITATION FREEZE, identifying it as the mechanism occupying a colliding index — while never
+stating the rule or pointing at where it is taught. A reader of the always-loaded file could
+learn that the name is *ambiguous* but not what it *means*. **The index-3 vacancy will produce
+more of these as P4 resolves**, which is why this is filed as a class rather than repaired as
+an instance (the instance was repaired 2026-08-17 by promoting BD-P3 as a named unnumbered
+rule).
+
+**The check.** For every mechanism name `CLAUDE.md` mentions, assert it either (a) states its
+rule inline, or (b) carries a pointer to the file/section that teaches it. Grep-level; about as
+expensive as `bound_selector_check`.
+
+**THE DISCRIMINATION PAIR IS AVAILABLE — DO NOT SPEND IT** (per *when a defect is found, its
+before-commit is a free negative control*). The checker should FIRE at **`a8c09564`** (where
+"bound-probe" is named only inside the freeze) and DECLINE at **`17062781`** (where the named
+rule landed). That is a naturally-arising positive and negative, neither authored to be found —
+top of the discrimination ladder. Whoever builds this: run it at both SHAs and record the pair
+before adding any fixture.
+
+**Deliberately not built in the same pass that built `bound_selector_check`** — one gate row per
+witnessed defect; building a second on the strength of an argument rather than a firing is the
+apparatus-begets-apparatus move this repo warns about. It is filed with its control preserved so
+the next instance gets it free.
+
+---
+
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

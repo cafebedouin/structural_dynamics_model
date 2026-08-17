@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "a8c0956489c24d7c8e453116acf8ba2ec768ee3b",
+    "store_version": "dcde9591989f8dbee589d9f3bc2cc5fc026cd6e7",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-17T16:03:44"
+    "generated_at": "2026-08-17T16:28:11"
   },
-  "issues_sha": "c47742e8b6f47cf5dce1872597d8c2c7b32aafbd22fa5d829c1a3023ed4c53c8",
-  "n_entries": 297,
+  "issues_sha": "18bc621ebdab9b46dd7a35a6bba4d6a15394434f5ce686829a4e569d5bc20694",
+  "n_entries": 300,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 109,
+    "open": 112,
     "partial": 7
   },
   "active": [
@@ -1616,6 +1616,54 @@
       "mentioned_in": [
         "OQ-251",
         "OQ-276"
+      ]
+    },
+    {
+      "id": "OQ-298",
+      "status": "open",
+      "priority": 3,
+      "summary": "A reported `FCR detected: N (X%)` figure rode a bound-selector query: the label column is inflated on flash/haiku, and any recorded finding from a pre-2026-08-17 ablation run needs re-checking",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [
+        "OQ-278",
+        "OQ-296"
+      ],
+      "mentioned_in": [
+        "OQ-251",
+        "OQ-278",
+        "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-299",
+      "status": "open",
+      "priority": 4,
+      "summary": "`build_discipline.md` headings are topic-first, so the rule you need is findable only if you already know it exists",
+      "deps": [
+        "splits_from OQ-278",
+        "blocked_on_human heading-restructure-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-251",
+        "OQ-278",
+        "OQ-297"
+      ]
+    },
+    {
+      "id": "OQ-300",
+      "status": "open",
+      "priority": 3,
+      "summary": "CLAUDE.md may NAME a mechanism without teaching it or pointing at where it is taught (a dangling-reference class, not one instance)",
+      "deps": [
+        "splits_from OQ-278"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-251",
+        "OQ-278"
       ]
     }
   ],

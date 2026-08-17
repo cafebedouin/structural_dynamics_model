@@ -30,6 +30,14 @@ run "spec enums"     python3 python/spec_enum_check.py --check
 # index; collisions 3 and 4 are allowlisted with their state, so a silent resolution goes
 # red too. Selftest (6 controls) rides --check, so this is one row, not two.
 run "doc patterns"   python3 python/doc_pattern_check.py --check
+# BD-P3 made mechanical (2026-08-17). A bound SELECTOR on a cut-ordered dispatch predicate
+# skips earlier clauses' cuts and answers "satisfies that clause body", not "the engine
+# assigns it" — over-permissive, so a bound ZERO is safe and a bound NONZERO is an artifact.
+# This is a gate row rather than a documented rule because the rule WAS documented (BD-P3,
+# 2026-05-30, with this exact worked example) and inline-annotated at two sibling sites, and
+# still left 5 bound-selector call sites — one of them feeding a reported FCR percentage.
+# Discrimination record: RED (5 sites) at dcde9591, GREEN after the repairs in this change.
+run "bound selector" python3 python/bound_selector_check.py --check
 # Unswept consumers of a VACATED taxonomy member (OQ-278). build_discipline.md:1392/:2558
 # have fired three times on this one taxonomy, so this is an instrument rather than a fourth
 # note (operator, 2026-08-14). Declaration-based: the 9 stale citations cannot be repaired

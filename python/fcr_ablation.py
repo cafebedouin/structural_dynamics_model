@@ -72,7 +72,17 @@ OVERLAY_TEMPLATE = """\
      (   catch(
            (   grothendieck_cohomology:orbit_vector(C, [T1, T2, T3, T4]),
                grothendieck_cohomology:cohomological_obstruction(C, H0, H1),
-               (   signature_detection:constraint_signature(C, false_ci_rope)
+               %% Unbound + post-filter per the bound-selector rule (fixed 2026-08-17;
+               %% build_discipline.md -> Bound-probe bypasses clause-order). The former
+               %% form OVER-COUNTED the FCR column by admitting constraints the engine
+               %% assigns false_natural_law. Pre-fix vs post-fix, measured at
+               %% dcde9591: flash 354->350, haiku 240->234, kimi 147->144,
+               %% sonnet 400->395, testsets 86->85, kernel_v1 273->273.
+               %% ANY RECORDED FINDING FROM A PRE-2026-08-17 RUN OF THIS SCRIPT RODE
+               %% THE WRONG COLUMN on the flash/haiku legs — see OQ-298 before citing
+               %% commit 7ca977c4's asymmetry result.
+               (   once(signature_detection:constraint_signature(C, Sig0)),
+                   Sig0 == false_ci_rope
                ->  FCR = 1
                ;   FCR = 0
                ),

@@ -95,6 +95,21 @@ was committing between the two commands. **A dirty→clean transition is affirma
 writer, not of its absence.** Ruling, and the declined `.claude/settings.json` hook alternative
 (a hook that fails open is worse than the prose rule it replaces): **OQ-297**.
 
+**PRIOR-ART GREP, same pass as the finding** (operator ruling, 2026-08-17). Before a finding is
+written down, grep `docs/technical/build_discipline.md` for its predicate / atom / mechanism name,
+and **record the hit-or-no-hit in the finding itself** — one line, e.g. *"prior art: BD-P3
+(`build_discipline.md:601`, 2026-05-30) — this is a RE-DISCOVERY"* or *"prior art: none
+(grepped `has_viable_alternatives`, `intent_viable_alternative`)"*.
+
+**Why it is a step and not a habit:** the obvious falsifier for whether documentation is reaching
+instances — *count re-discoveries* — **has the same defect as the thing it measures.** It counts
+only the re-discoveries somebody noticed were re-discoveries; an undetected one is
+indistinguishable from a novel finding, so the metric drifts toward *"routing is fine"* exactly as
+routing gets worse. Making the grep a same-pass step converts detection from luck into a checklist
+item, and only then does the count mean anything. Witnessed: `TRIPWIRE 5` in KNOWN_STATE 2026-08-17
+was published as a discovery and was BD-P3, documented 2026-05-30 with the same worked example —
+caught by operator challenge, which is not a mechanism.
+
 **COMMIT `audit_log.md` FIRST** (same ruling) — before any code commit, then append as the audit
 proceeds. **Commit order is a primitive; a blob comparison after the fact is a reconstruction.**
 This bites on pre-edit reads: an audit that pastes a file's current text before correcting it *has*

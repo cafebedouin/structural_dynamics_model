@@ -136,7 +136,14 @@ test(seat_offdomain_has_no_reading) :-
 % (an id with NO authored metrics reaches the explicit `unknown` token — the
 % never-fail template the registry class asserts; signature_detection.pl:136)
 test(signature_unknown_fallback_reachable) :-
-    signature_detection:constraint_signature(tst_rt_unauthored, unknown).
+    % Unbound + post-filter per the bound-selector rule (2026-08-17;
+    % `build_discipline.md` -> *Bound-probe bypasses clause-order*). The former was the WEAKER
+    % assertion and could have passed spuriously — `unknown` is the LAST clause, so
+    % binding it jumps every earlier lock's cut and proves only "the fallback body is
+    % satisfiable", never "the engine actually lands here". This form proves the claim
+    % the test name makes.
+    once(signature_detection:constraint_signature(tst_rt_unauthored, Sig)),
+    Sig == unknown.
 
 :- end_tests(reading_totality).
 

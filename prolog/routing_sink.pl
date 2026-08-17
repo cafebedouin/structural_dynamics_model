@@ -117,7 +117,12 @@ engine_reading_at(C, Seat, Engine) :-
 % Detector (constraint-level, not seat-level): a socketed router input.
 % ---------------------------------------------------------------------------
 detector_state(C, nl_fired) :-
-    signature_detection:constraint_signature(C, natural_law), !.
+    % Unbound + post-filter per the bound-selector rule (2026-08-17;
+    % `build_discipline.md` -> *Bound-probe bypasses clause-order*): a bound selector skips the earlier
+    % lock clauses' cuts and answers "satisfies the clause body", not "the engine
+    % assigns it". Latent today (natural_law is 0-firing by construction, OQ-113), but
+    % this socket exists to be powered, and it would have been wrong the day it was.
+    once(signature_detection:constraint_signature(C, Sig)), Sig == natural_law, !.
 detector_state(_, nl_absent).
 
 % ---------------------------------------------------------------------------

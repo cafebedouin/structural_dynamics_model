@@ -421,7 +421,13 @@ expected_conflict_pattern(_, cohomology, descent_mismatch(_), DetType,
 expected_conflict_pattern(C, fingerprint_voids, extractive_voids(_), mountain,
     natural_law_incidental_beneficiaries,
     'True natural laws can have incidental beneficiaries') :-
-    catch(signature_detection:constraint_signature(C, natural_law), _, fail).
+    % Unbound + post-filter per the bound-selector rule (2026-08-17;
+    % `build_discipline.md` -> *Bound-probe bypasses clause-order*). The former form asked
+    % "satisfies the natural_law clause body", not "the engine assigns natural_law" —
+    % earlier lock clauses fail to UNIFY on the wrong atom so their cuts never fire.
+    % Latent here only because natural_law is 0-firing by construction (OQ-113/OQ-296).
+    catch(( once(signature_detection:constraint_signature(C, Sig)),
+            Sig == natural_law ), _, fail).
 
 % --- P5: constructed_non_compliance ---
 % Boltzmann non-compliance expected for constructed types with scope-driven coupling.
@@ -447,7 +453,14 @@ expected_conflict_pattern(C, boltzmann, non_compliant(_, _, DetType), DetType,
 expected_conflict_pattern(C, boltzmann, non_compliant(_, _, _), _,
     fcr_zero_excess_coupling,
     'FCR triggered by coupling structure, not extraction overhead') :-
-    catch(signature_detection:constraint_signature(C, false_ci_rope), _, fail),
+    % Unbound + post-filter per the bound-selector rule (2026-08-17).
+    % This one was LIVE, not latent — the
+    % bound form over-counted false_ci_rope on every leg measured (live testsets 86 vs
+    % 85; flash 354 vs 350; haiku 240 vs 234; kimi 147 vs 144; sonnet 400 vs 395), by
+    % admitting constraints the engine actually assigns false_natural_law (the only
+    % clause ahead of false_ci_rope). See OQ-296.
+    catch(( once(signature_detection:constraint_signature(C, Sig)),
+            Sig == false_ci_rope ), _, fail),
     catch(boltzmann_compliance:excess_extraction(C, Excess), _, fail),
     Excess < 0.05.
 
