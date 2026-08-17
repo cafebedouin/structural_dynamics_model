@@ -10,7 +10,10 @@ OQ-266 (one evidence line), OQ-296 (minted — the consumer surface)
 was evaluated and did **not** trip.
 **Substrate:** `no pipeline run` (all probes are in-session swipl or git reads). Corpora:
 `prolog/archives/datasets/kernel_v1` n=1106 (loader-reported and disk-counted), live default leg
-`prolog/testsets/` n=273. Engine at `5bc7b0db`; bisect points `f600599b`, `a4297632` (=`8b5a34b8^`),
+`prolog/testsets/` n=273. Engine at `5bc7b0db` → `f64384d3` (another instance committed mid-audit;
+the two are **byte-identical over `prolog/` and `python/`**, verified, so no probe is affected — see
+the CORRECTION block at the top of `audit_log.md`, which also records that this log's original
+"no concurrent writer" line was wrong). Bisect points `f600599b`, `a4297632` (=`8b5a34b8^`),
 `8b5a34b8`; counterfactual tree = HEAD + one line.
 **Fired:** live — the recorded cause of a shipped ruling's premise was wrong and is corrected in
 substrate (`prolog/narrative_ontology.pl`, `GATE2_REWITNESS.md`); OQ-251's own "two independent

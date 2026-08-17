@@ -121,6 +121,18 @@ and its kill condition did not trip. Whether that warrants an explicit re-affirm
 `non_agent_beneficiary(entropic_universe_hypothesis)` is the operator's call (OQ-252 instance).
 Default recommendation: **the ruling stands.** Surfaced at the site and in OQ-251/OQ-248.
 
+**TRIPWIRE 3 — a dirty→clean transition in `git status` does NOT mean "stale index stat"; another
+instance may have just committed.** This audit made that mistake on itself and recorded "no
+concurrent writer" in its own log: `git status --porcelain` showed ` M KNOWN_STATE.md` etc., a
+follow-up `git diff --stat` came back empty, and the empty diff was read as a stale stat. It was
+`f64384d3` (OQ-285 review round 2) landing at **03:12:00**, the same minute. Two live readings,
+one command run, the convenient one reported. **Separate them with `git rev-parse HEAD` / `git log`,
+not with a second content read** — content reads cannot distinguish "stat was stale" from "someone
+just committed it." No damage here (engine tree byte-identical across the two commits, verified;
+the only write-set overlap was `KNOWN_STATE.md`, edited after and anchored on the new content,
+committed clean, checker 0 problems), but the *inference* was exactly the kind this entry's
+TRIPWIRE 1 is about, made by the instance correcting it. Correction block: top of the audit log.
+
 Witness: `audits/2026-08-17_oq251_natural_law_reachability/` (WRITEUP.md, audit_log.md,
 PREREGISTRATION.md md5 `f7336ee7…` recorded above the first result line, two probe `.pl` files).
 

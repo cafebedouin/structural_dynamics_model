@@ -22,9 +22,46 @@ d15e6c4e discipline: Pattern 1 gets a severance clause — mark at the cut, not 
 **Sequencing check (plan constraint: one writer at a time).** OQ-285 was in flight when this
 plan was staged; it landed at `5bc7b0db`. At start of this audit `git status --porcelain`
 initially showed ` M KNOWN_STATE.md`, ` M docs/technical/build_discipline.md`, and ` M` on two
-files in `audits/2026-08-17_oq285_mode3_measurement_arm/` — all **stale index stat entries**;
-`git diff --stat` over those paths is empty, i.e. content is byte-identical to HEAD. No
-concurrent writer. Uncommitted engine-path residue at start (pre-existing, not this audit's):
+files in `audits/2026-08-17_oq285_mode3_measurement_arm/`; a follow-up `git diff --stat` over
+those paths came back empty, and I recorded here that these were **stale index stat entries** and
+that there was **no concurrent writer**.
+
+> ### CORRECTION (2026-08-17, written at close — this is a defect in THIS log, found by noticing
+> ### an unexplained commit in my own ancestry at commit time)
+>
+> **That inference was WRONG, and it is the exact shape this audit exists to correct.** The files
+> did not read clean because the index stat was stale. They read clean because **another instance
+> committed them between my two commands** — `f64384d3` ("OQ-285 review round 2"), timestamped
+> **03:12:00**, the same minute I ran the check. A clean read that is byte-identical to a read that
+> never looked: I had a two-state ambiguity (stale-stat vs just-committed), picked one, and did not
+> run the command that separates them (`git log` for new commits, which I only ran at commit time).
+>
+> **Blast radius: none, verified rather than assumed.**
+> ```
+> $ git diff --stat 5bc7b0db f64384d3 -- prolog/ python/
+> (empty)   # engine tree BYTE-IDENTICAL across the two commits
+> $ git show --name-only --format="" f64384d3
+> KNOWN_STATE.md
+> audits/2026-08-17_oq285_mode3_measurement_arm/{FINDINGS_INCIDENTAL.md,WRITEUP.md,
+>   arithmetic_selfcheck.py,arithmetic_selfcheck.txt,witness_item9_monitor_domain.txt}
+> docs/technical/build_discipline.md
+> ```
+> - **Every probe is unaffected.** All probes read `prolog/` and `python/` only, and that tree is
+>   identical between `5bc7b0db` and `f64384d3` — so it does not matter which was HEAD when the P5
+>   `git archive HEAD` counterfactual tree was cut. (The bisect points are pinned SHAs and were
+>   never at risk.)
+> - **One write-set overlap: `KNOWN_STATE.md`.** My edit landed at ~03:30, *after* `f64384d3`, and
+>   anchored on a header that commit had just written; it committed clean with no conflict and
+>   `known_state_status.py --check` reads 293 entries / 0 problems. No ISSUES.md, `audits/README.md`,
+>   or `audits/2026-08-17_oq251…/` overlap at all.
+>
+> **What I should have done:** treated a dirty→clean transition under a possible concurrent writer
+> as *unresolved* until a `git log`/`git rev-parse HEAD` re-read settled it, rather than reporting
+> the more convenient of two live readings as fact. Recorded here rather than quietly amended,
+> because a witness document that silently repairs its own bad witness is worth less than one that
+> shows where it failed.
+
+Uncommitted engine-path residue at start (pre-existing, not this audit's):
 
 ```
 $ git diff --stat
