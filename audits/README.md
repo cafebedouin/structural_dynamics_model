@@ -81,6 +81,26 @@ files keep reserved names, and WRITEUP.md links each one present:
   ordering. If the prereg is amended after a first run, log the new md5 at its position;
   that history is the honest record. Template:
   `audits/2026-08-09_oq151_dual_gauge/audit_log.md`.
+
+**HEAD STAMP PAIR — `audit_log.md` records `git rev-parse HEAD` at OPEN and again at CLOSE, and
+the writeup states the comparison** (operator ruling, 2026-08-17). One stamp detects nothing; two
+bracket the session and turn *"was there a concurrent writer?"* from an inference into a diff. If
+they differ, name the intervening commits and state the blast radius **on the audit's own
+read-set** — `git diff --stat <open> <close> -- <paths the probes touched>`; an empty diff over
+those paths is the clean result, and it is a different thing from never having looked. **This is
+DETECTION, not prevention** — prevention needs a lock file, which this workflow deliberately does
+not have. Motivating episode: `audits/2026-08-17_oq251_natural_law_reachability/`, where an
+executor read a dirty→clean `git status` transition as a stale index stat while another instance
+was committing between the two commands. **A dirty→clean transition is affirmative evidence OF a
+writer, not of its absence.** Ruling, and the declined `.claude/settings.json` hook alternative
+(a hook that fails open is worse than the prose rule it replaces): **OQ-297**.
+
+**COMMIT `audit_log.md` FIRST** (same ruling) — before any code commit, then append as the audit
+proceeds. **Commit order is a primitive; a blob comparison after the fact is a reconstruction.**
+This bites on pre-edit reads: an audit that pastes a file's current text before correcting it *has*
+witnessed that text, but if the log lands in a later commit than the edit, git cannot testify to
+the ordering and the witness must be rebuilt by diffing against the edit's parent. Committing the
+log first makes the ordering free.
 - `FINDINGS_<leg>.md` / `READOUT_<arm>.md` — per-leg or per-arm interim results in multi-phase
   audits; at close, WRITEUP.md is written (or promoted from the final findings file) and links
   them all.

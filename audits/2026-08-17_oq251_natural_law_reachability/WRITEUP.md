@@ -27,6 +27,9 @@ had to be re-run to license anything; three drifted code cites repaired.
 - `probe_p4_conjuncts.pl` — P4 per-conjunct attribution + P6(b) corpus range enumeration.
 - `probe_p456_head.pl` — P6(a) runtime `listing/1` + two-sided range control; P4b (FNL);
   P5a/P5b(i).
+- `probe_hva_constant.pl` — post-close: the seven-leg range census that showed
+  `has_viable_alternatives/2` is a constant function, and with it that `coordination_scaffold` is
+  dead. Witnesses the scope-widening at OQ-296 and the GAP-08 amendment.
 - Bisect + counterfactual scratch trees are **not** archived here (3 × ~800 MB `git archive`
   checkouts). They are exactly reproducible from the commit SHAs and the commands pasted in
   `audit_log.md` → Phase 1.5; the SHAs, the corpus md5s, and every query result are recorded there.
@@ -228,6 +231,34 @@ did not catch**, and both would have produced a wrong or unlicensed result if fo
 3. **Step 6's `resolve_corpus_dir/2` expectation was wrong for `f600599b`** (0 hits; it predates the
    2026-06-04 landing), and `corpus_constraint/1` does not exist there at all. Harmless — the design
    already specified an absolute path — but the plan asserted a substrate fact that was false.
+
+## The predicate is a CONSTANT FUNCTION, and `coordination_scaffold` is dead too
+
+*(Operator-raised at review, on noticing that 0-of-4,762 authorship makes the `true` branch suspect.
+The audit had the kernel_v1 datum — `[unknown]`, `COUNT_true=0` — and did not draw the inference.)*
+
+`has_viable_alternatives/2` returns `unknown` for **8,688 constraints across all seven legs**, with
+`count(true) = 0` and `count(false) = 0` everywhere. It is a constant function on every corpus that
+exists. Two different deaths: `false` is dead **by construction**; `true` is dead **by empty table**.
+`affects_constraint` is richly authored (9,523 facts), so clause 1's first conjunct succeeds
+abundantly and the predicate dies entirely on the second.
+
+**Consequence: `coordination_scaffold_signature/1` requires `HasAlternatives == true`
+(`signature_detection.pl:458`) and fires 0/276 live, 0/1106 kernel_v1.** Two named signatures in the
+cascade cannot fire, through one predicate. **This widens OQ-296's scope one level** — from
+consumers of the `natural_law` atom to consumers of the predicate and the profile slot, including
+`reading_registry.pl:115`, which registers it as `total_on_domain` so the OQ-137 totality gate
+passes **vacuously** on a constant.
+
+**Self-correction to this writeup's own numbers.** It said 0 firings "while 273/273 and 1106/1106
+constraints carry *some* signature," implying an otherwise-healthy signature layer. That mixed two
+query forms: a **bound** second argument bypasses earlier cuts and is over-permissive
+(`constraint_signature(C, ambiguous)` = 276 bound vs **0** through the cascade). Real distribution:
+kernel_v1 is **739/1106 `unknown` (67%)**; the live leg is 26/276 `unknown` with
+`constructed_high_extraction` 142 dominant. **The zeros survive and are strengthened** — a zero from
+an over-permissive query is conservative — but the denominator gloss was wrong, and the 67% is a
+larger fact about the signature layer than the `natural_law` zero. Census rule now filed in OQ-296:
+use `once/1` with the argument unbound.
 
 ## For the operator (E5 — surfaced, not decided)
 

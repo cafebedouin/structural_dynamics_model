@@ -467,6 +467,36 @@ or authored alternatives table exists, and the resulting un-certification of
 `thermal_dissipation_constraint` was accepted. See `signature_detection.pl`
 `has_viable_alternatives/2` header. Logged on OQ-43.
 
+> **CORRECTION 2026-08-17 (OQ-251 audit) — "the resulting un-certification … was accepted"
+> describes an event that did not occur, and the predicate is worse off than this entry says.**
+>
+> **(a) Nothing was traded away.** `has_viable_alternatives/2` clause 1 requires BOTH
+> `affects_constraint/2` AND `intent_viable_alternative/3`. The second has **0 facts on every
+> corpus** (this entry's own finding), so `HasAlternatives == false` was **never once satisfied by
+> data** — it was always the catch-all default. `thermal_dissipation_constraint` authors *neither*
+> field; `maxwell_demon_impossibility` authors 4 `affects_constraint` facts and dies on the empty
+> table. The fail-close therefore did not **cost** a certification, it **revealed** that none had
+> been earned. The FAIL-CLOSED disposition is unchanged and correct — Pattern 5 working — but
+> anyone citing this line as a cost-of-fail-closing is citing a non-event.
+>
+> **(b) BOTH branches are dead, not just `false`, so this is not a `natural_law` story.** Measured
+> across all seven legs (8,688 constraints — testsets 276, haiku 960, flash 960, kimi 1005, sonnet
+> 1001, kernel_v1 1106, original_v6 3380): range is the **singleton `[unknown]`** on every one,
+> `count(true) = 0` and `count(false) = 0` everywhere. `has_viable_alternatives/2` is a **constant
+> function**. Two different deaths: `false` is dead **by construction** (no clause can emit it),
+> `true` is dead **by empty table** (a clause can emit it; its input never exists). Note
+> `affects_constraint` is richly authored (9,523 facts across the legs) — clause 1's first conjunct
+> succeeds abundantly and the predicate dies entirely on the second.
+>
+> **(c) The consequence this entry does not draw: `coordination_scaffold` is dead too.**
+> `coordination_scaffold_signature/1` requires `HasAlternatives == true` (`signature_detection.pl:458`),
+> so it fires **0 times** on both legs measured (live 0/276, kernel_v1 0/1106) — by empty table, not
+> by construction. The `== true` consumers this residual's sibling text calls "unchanged … they never
+> fired on the empty table and still don't" are accurately described but under-labelled: *unchanged*
+> reads as reassurance when the fact is that a named signature in the cascade cannot fire at all.
+> Full consumer surface: **OQ-296**. Witness:
+> `audits/2026-08-17_oq251_natural_law_reachability/probe_hva_constant.pl` + `audit_log.md`.
+
 **Consumer retirement (OQ-106, operator ruling 2026-06-12):** `intent_engine`'s
 `structural_coercive_intent/4` top verdict — the only consumer that read five of these
 tables in bulk — was DELETED with its five config params (range-dead threshold, never

@@ -772,6 +772,117 @@ with ~20 consumers reading a constant zero and at least two of them (`container_
 
 ---
 
+## HEAD STAMP PAIR (convention adopted mid-audit, `audits/README.md` / OQ-297 — applied here retroactively)
+
+```
+HEAD at open   : 5bc7b0db   (recorded above, "Substrate at start")
+HEAD at close  : a9fc6949   (this audit's own 5 commits, on top of f64384d3)
+INTERVENING COMMIT NOT MINE: f64384d3  "OQ-285 review round 2"  @ 03:12:00
+```
+
+**They differ. Blast radius on THIS audit's read-set:**
+
+```
+$ git diff --stat 5bc7b0db f64384d3 -- prolog/ python/
+(empty)
+```
+
+Every probe in this audit read `prolog/` and `python/` only, and that tree is byte-identical across
+the intervening commit — so the stamps differing is *detected and dispositive*, not merely noted.
+Full detail and the correction to this log's original "no concurrent writer" claim: the CORRECTION
+block at the top of this file. Had this convention existed at open, that block would have been
+unnecessary.
+
+---
+
+## POST-CLOSE ADDENDUM 2 — is `has_viable_alternatives/2` a CONSTANT FUNCTION? (operator-raised at review)
+
+**The question.** P6(b) returned the singleton `[unknown]` on kernel_v1 with `COUNT_true=0`. If the
+`true` branch is dead too, the finding is not about the `natural_law` atom at all: every consumer of
+the **predicate** reads a constant, and OQ-296's scope was drawn one level too narrow.
+
+`probe_hva_constant.pl`, one process per leg:
+
+```
+leg                              n      range       true  unknown  false   affects_constraint  intent_viable_alt facts
+testsets                        276   [unknown]       0      276      0            252                   0
+testsets_haiku                  960   [unknown]       0      960      0           1810                   0
+testsets_flash                  960   [unknown]       0      960      0           1017                   0
+testsets_kimi                  1005   [unknown]       0     1005      0            819                   0
+testsets_sonnet                1001   [unknown]       0     1001      0           1301                   0
+archives/datasets/kernel_v1    1106   [unknown]       0     1106      0           1520                   0
+archives/datasets/original_v6  3380   [unknown]       0     3380      0           2804                   0
+                             ------                                              -----
+                               8688                                               9523
+VERDICT (all seven): CONSTANT (unknown) — both branches dead
+```
+
+**Answer: the singleton.** `has_viable_alternatives/2` is a constant function on every corpus that
+exists. Two different deaths: `false` is dead **by construction** (no clause can emit it); `true` is
+dead **by empty table** — clause 1 *can* emit it, but `intent_viable_alternative/3` has 0 facts
+everywhere. Note the asymmetry inside clause 1: `affects_constraint` is richly authored (9,523
+facts), so the FIRST conjunct succeeds abundantly and the predicate dies entirely on the second.
+
+**The consequence the audit had not drawn: `coordination_scaffold` is dead too.**
+
+```
+signature_detection.pl:458   HasAlternatives == true.  % KEY: This WAS a choice
+```
+
+`coordination_scaffold_signature/1` requires `== true`. Measured:
+
+```
+                                    live testsets/ (276)   kernel_v1 (1106)
+natural_law                                 0                    0
+coordination_scaffold                       0                    0
+coordination_scaffold_signature/1 direct    0                    0
+piton_signature                             0                    0     <- cause NOT investigated
+```
+
+So **two** named signatures in the cascade cannot fire, through one predicate.
+
+---
+
+## POST-CLOSE ADDENDUM 3 — SELF-CORRECTION: a bound-arg `constraint_signature/2` query is over-permissive
+
+Checking addendum 2 surfaced an error in **this audit's own** supporting numbers. I had written that
+`natural_law` fires 0 "while 273/273 and 1106/1106 constraints carry *some* signature," implying the
+signature layer is otherwise healthy. Two different query forms were mixed:
+
+```
+>>> constraint_signature(C, ambiguous)  BOUND second arg   = 276   (live leg)
+>>> ambiguous via once/1, UNBOUND second arg               =   0
+```
+
+A **bound** second argument skips earlier clauses on head unification and so bypasses their cuts —
+it is **over-permissive**. Real distribution through the cascade (`once/1`, unbound):
+
+```
+live testsets/ n=276                      kernel_v1 n=1106
+  constructed_high_extraction  142          unknown                     739   (67%)
+  false_ci_rope                 85          false_ci_rope               273
+  unknown                       26          coupling_invariant_rope      58
+  coupling_invariant_rope       15          ambiguous                    25
+  false_summit_mountain          4          false_summit_mountain        10
+  false_natural_law              3          constructed_high_extraction   1
+  constructed_low_extraction     1          natural_law / coord_scaffold / piton = 0
+  natural_law / coord_scaffold / piton = 0
+```
+
+**The zeros are unaffected — in fact strengthened.** `natural_law = 0` and `coordination_scaffold
+= 0` are *bound-arg* queries, and a zero from an over-permissive form is conservative: if even the
+permissive query cannot fire, the real cascade certainly cannot. What was wrong is the denominator
+gloss. **Two-thirds of kernel_v1 resolves to `unknown`** — a larger fact about the signature layer
+than the `natural_law` zero, and one my sentence would have hidden from the next reader.
+(Cross-check that the census is sane: `false_natural_law = 3` on the live leg matches the FNL
+discrimination record recorded earlier in this log.)
+
+**Standing tripwire, filed into OQ-296:** use `once/1` with the second argument UNBOUND for any
+`constraint_signature/2` census; read a bound-arg nonzero as an artifact until checked. Corrections
+landed at OQ-296, GAP-08, and the WRITEUP.
+
+---
+
 ## POST-CLOSE ADDENDUM (operator-raised at review; run 2026-08-17 after the first two commits)
 
 **Question:** at bisect points 1 and 2 `has_viable_alternatives` reads `false` — is that authored

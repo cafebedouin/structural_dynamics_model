@@ -138,6 +138,30 @@ casualty ledger as a cost-of-fail-closing is citing a non-event. Correction file
 consequence (repairable only by explicit authorship ⇒ "structure or declaration?" from the other
 side) routed to OQ-296 as an operator question.
 
+**TRIPWIRE 4 — `has_viable_alternatives/2` is a CONSTANT FUNCTION, so `coordination_scaffold` is
+dead too; this is not a `natural_law` story.** (Operator-raised at review; the audit had the datum
+and had not drawn the inference.) Range is the singleton `[unknown]` on **all seven legs — 8,688
+constraints** (testsets 276, haiku 960, flash 960, kimi 1005, sonnet 1001, kernel_v1 1106,
+original_v6 3380), `count(true)=0` and `count(false)=0` everywhere. **Two different deaths:** `false`
+by CONSTRUCTION (no clause emits it), `true` by EMPTY TABLE (`intent_viable_alternative/3` has 0
+facts anywhere — GAP-08). `affects_constraint` is richly authored (9,523 facts), so clause 1's first
+conjunct succeeds abundantly and the predicate dies wholly on the second. **Consequence:**
+`coordination_scaffold_signature/1` requires `HasAlternatives == true` (`signature_detection.pl:458`)
+and fires **0/276 live, 0/1106 kernel_v1** — a second named cascade signature that cannot fire.
+`reading_registry.pl:115` registers the predicate `total_on_domain`, so the OQ-137 totality gate
+passes VACUOUSLY on a constant. Scope widened at OQ-296; GAP-08 amended at its own site (its
+casualty language stated the claim independently and an OQ-43 correction does not reach it).
+
+**TRIPWIRE 5 — a BOUND second argument to `constraint_signature/2` is OVER-PERMISSIVE; use `once/1`
+UNBOUND for any census.** Binding the signature atom skips earlier clauses on head unification and
+so bypasses their cuts: `constraint_signature(C, ambiguous)` returns **276** on the live leg versus
+**0** through the real cascade. This audit made the mistake on itself — it reported `natural_law` 0
+"while 273/273 and 1106/1106 constraints carry *some* signature," implying a healthy signature layer.
+Real distribution: **kernel_v1 is 739/1106 `unknown` (67%)**; live is 26/276 `unknown` with
+`constructed_high_extraction` 142 dominant. **The zeros survive and are strengthened** — a zero from
+an over-permissive query is conservative — but a bound-arg NONZERO is an artifact until checked, and
+the denominator gloss hid a bigger fact than the finding it was supporting.
+
 **TRIPWIRE 3 — a dirty→clean transition in `git status` does NOT mean "stale index stat"; another
 instance may have just committed.** This audit made that mistake on itself and recorded "no
 concurrent writer" in its own log: `git status --porcelain` showed ` M KNOWN_STATE.md` etc., a

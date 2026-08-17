@@ -2697,6 +2697,29 @@ licensed were never re-checked:
 - **Two days.** OQ-70 (`72ec2cdd`, 2026-06-05) removed the `claimed_natural/2` source that the
   gate-2 pass for `non_agent_beneficiary(entropic_universe_hypothesis)` (2026-06-03) had rested on.
 
+**THE GENERAL CLAIM (raised to this altitude by the operator, 2026-08-17 — it is the portable
+result, and it is larger than the back-reference problem this entry was minted for).**
+
+**Basis-correction needs its own event type. No gate fires when a ruling's recorded basis is
+corrected but its conclusion survives.** Every existing mechanism keys on the *conclusion*: statuses
+flip when a verdict changes, kill conditions fire when an antecedent becomes true, `Licenses:` points
+at what a ruling releases so a *withdrawal* can be propagated. A ruling whose stated evidence turns
+out to be wrong while its holding stands moves **none** of them — the substrate is by construction
+silent, because nothing downstream changed. Yet the ruling is now a different object: its conclusion
+is unsupported-as-recorded even if it is true-as-it-happens, and the next reader inherits reasoning
+that has been falsified without any marker saying so.
+
+This subsumes the back-reference problem (a back-reference is one *mechanism*; basis-correction is
+the *event* it would need to carry) and it explains why the pattern keeps being found late rather
+than caught: there is no red light to notice, only a document that still reads correctly. Cf.
+`build_discipline.md` → *a check that CANNOT fail witnesses nothing* — the dual holds for rulings, a
+ruling that cannot be marked wrong-for-the-right-reason accumulates unmarked bad reasoning.
+
+**What resolution would change:** a declared event type (name, marker, and where it lands) for
+*"basis corrected, conclusion survives"*, distinct from amendment and withdrawal — plus the ruling
+on whether it obliges re-affirmation of dependents or only annotation. The three instances below
+are its evidence base.
+
 **THIRD INSTANCE + a correction to the second (2026-08-17, OQ-251 resolved).**
 
 *Correction to the "two days" bullet above:* the premise-expiring commit was **`8b5a34b8`
@@ -13205,9 +13228,66 @@ minted regardless of how OQ-251's hypotheses resolved.
 `prolog/abductive_helpers.pl`, `prolog/maxent_classifier.pl`, `prolog/cs_pattern_detection.pl`,
 `prolog/context_profile_mining.pl`, `prolog/domain_priors.pl`, `prolog/signature_detection.pl`.
 
+> **SCOPE WIDENED + SELF-CORRECTION 2026-08-17 (operator-raised at review, before this OQ had been
+> worked).** As first filed, this OQ was drawn **one level too narrow** — around the `natural_law`
+> ATOM. The right object is the **predicate** `has_viable_alternatives/2`, which is a **CONSTANT
+> FUNCTION on every corpus that exists**. Measured across all seven legs (8,688 constraints):
+>
+> | leg | n | range | true | unknown | false |
+> |---|---|---|---|---|---|
+> | `testsets` | 276 | `[unknown]` | 0 | 276 | 0 |
+> | `testsets_haiku` | 960 | `[unknown]` | 0 | 960 | 0 |
+> | `testsets_flash` | 960 | `[unknown]` | 0 | 960 | 0 |
+> | `testsets_kimi` | 1005 | `[unknown]` | 0 | 1005 | 0 |
+> | `testsets_sonnet` | 1001 | `[unknown]` | 0 | 1001 | 0 |
+> | `archives/datasets/kernel_v1` | 1106 | `[unknown]` | 0 | 1106 | 0 |
+> | `archives/datasets/original_v6` | 3380 | `[unknown]` | 0 | 3380 | 0 |
+>
+> **The `true` branch is as dead as the `false` branch — by a different mechanism.** `false` is dead
+> **by construction** (no clause can emit it); `true` is dead **by empty table**
+> (`intent_viable_alternative/3` has 0 facts everywhere, GAP-08). `affects_constraint` is richly
+> authored (9,523 facts across the legs), so clause 1's first conjunct succeeds abundantly and the
+> predicate dies entirely on the second.
+>
+> **Consequence this OQ must now carry: `coordination_scaffold` is dead too.**
+> `coordination_scaffold_signature/1` requires `HasAlternatives == true`
+> (`signature_detection.pl:458`) and fires **0/276 live, 0/1106 kernel_v1**. So **two** named
+> signatures in the cascade cannot fire, through one predicate. Add to the roster below every
+> consumer of the predicate and of the profile's HasAlternatives slot:
+> `signature_detection.pl:189` (the profile builder), `:407` (NL `== false`), `:458`
+> (coordination_scaffold `== true`), `:631` and `:647` (confidence terms keyed on
+> `HasAlternatives == true`), `dirac_classification.pl:359`, and
+> `reading_registry.pl:115` — which registers it as an `aggregatable_reading` with
+> `total_on_domain`, so the OQ-137 totality gate passes **vacuously** on a constant.
+> Witness: `audits/2026-08-17_oq251_natural_law_reachability/probe_hva_constant.pl`.
+>
+> **SELF-CORRECTION to this entry's own supporting sentence (below).** It said 0 firings "while
+> 273/273 and 1106/1106 constraints carry *some* signature," which implied the signature layer is
+> otherwise healthy. That reading is wrong, and it came from mixing two query forms. A **bound**
+> second argument bypasses earlier clauses' cuts and is therefore **over-permissive**:
+> `constraint_signature(C, ambiguous)` returns **276** bound vs **0** through the real cascade.
+> The real distribution (`once/1`, unbound) is:
+> - **live `testsets/` n=276:** constructed_high_extraction 142, false_ci_rope 85, unknown 26,
+>   coupling_invariant_rope 15, false_summit_mountain 4, false_natural_law 3,
+>   constructed_low_extraction 1 — `natural_law` 0, `coordination_scaffold` 0, `piton_signature` 0.
+> - **kernel_v1 n=1106:** **unknown 739 (67%)**, false_ci_rope 273, coupling_invariant_rope 58,
+>   ambiguous 25, false_summit_mountain 10, constructed_high_extraction 1 — `natural_law` 0,
+>   `coordination_scaffold` 0, `piton_signature` 0.
+>
+> The **zeros are unaffected and in fact strengthened**: they are bound-arg queries, and a zero from
+> an over-permissive form is conservative — if even the permissive query cannot fire, the cascade
+> certainly cannot. What was wrong was the denominator gloss. Two-thirds of kernel_v1 resolves to
+> `unknown`, which is a larger fact about the signature layer than the `natural_law` zero and should
+> not be discovered again by someone reading this entry's original sentence.
+> **Standing tripwire for anyone re-running these counts: a bound-arg `constraint_signature/2` query
+> is over-permissive — use `once/1` with the argument unbound for any census, and read a bound-arg
+> nonzero as an artifact until checked.** (`piton_signature` also fires 0 on both legs; cause NOT
+> investigated here — do not inherit a cause for it from this entry.)
+
 **The measurement.** `signature_detection:constraint_signature(_, natural_law)` fires **0** times
 on both live legs measured — `testsets/` n=273 and `archives/datasets/kernel_v1` n=1106 — while
-**273/273 and 1106/1106** constraints carry *some* signature. This is not corpus contingency:
+**273/273 and 1106/1106** constraints carry *some* signature *(← this clause is CORRECTED above;
+read the scope-widening block first)*. This is not corpus contingency:
 `natural_law_signature/1` is unsatisfiable **by construction** (OQ-113, re-witnessed at HEAD
 2026-08-17 — `has_viable_alternatives/2`'s two clauses bind arg 2 to the head literals `true` and
 `unknown`; `false` is emitted by neither). Full roster and per-site classification:
@@ -13277,6 +13357,57 @@ signal) is the capability that would make the question moot by supplying a non-a
 ANY corpus at HEAD, this OQ's premise is void and OQ-113's range finding has regressed — HALT and
 re-witness before touching any consumer. (`prolog/tests/test_oq113_dead_natural_law.pl` is the
 standing regression, 3/3 green at close.)
+
+---
+
+## OQ-297 — Pre-flight concurrent-writer detection: replace the prose sequencing instruction with a check that can fail
+
+**Ω-type:** Ω_C (apparatus design ruling — what the check is and where it lives), with an Ω_E limb
+(does it actually fire? owed a two-sided test before adoption).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-276, blocked_on_human apparatus-ruling
+**Origin:** OQ-251 audit, 2026-08-17 — the executing instance made the error itself and caught it
+only at commit time; operator declined the hook at close and directed it be minted here rather than
+folded into that close.
+**Files:** `.claude/settings.json` (versioned project apparatus), `audits/README.md` (the
+template half, APPROVED and landed separately), `CLAUDE.md` (the prose rule being replaced).
+
+**The defect.** The one-writer-at-a-time rule is carried by prose — *"do not start while another
+instance is writing … check with the operator if unclear."* **That is not a check.** It names no
+command, has no output, and cannot fail. Witnessed: the OQ-251 executor saw ` M KNOWN_STATE.md` in
+`git status`, saw an empty `git diff --stat` moments later, and concluded "stale index stat, no
+concurrent writer." Another instance had committed (`f64384d3`) between the two commands. **The
+inference ran backwards** (operator's diagnosis): a dirty→clean transition is *affirmative evidence
+OF a writer*, not of its absence. No damage that time — engine tree was byte-identical — but the
+reasoning was luck-dependent.
+
+**Ruled at mint (operator, 2026-08-17):**
+- **DECLINED for now: a `.claude/settings.json` SessionStart/PreToolUse hook.** Committed apparatus
+  deserves its own change with its own two-sided test, and **a hook that fails open is worse than
+  the prose instruction it replaces** — it converts *"I should check"* into *"the tool checked."*
+  That is this repo's own success-shaped-absorption pattern applied to its own tooling.
+- **APPROVED and landed separately: the audit-log HEAD stamp, as a PAIR.** Stamp `git rev-parse
+  HEAD` at open **and** at close, with the comparison forced in the writeup. One stamp detects
+  nothing; two bracket the session and turn "was there a concurrent writer" from an inference into
+  a diff. **Detection, not prevention** — prevention needs a lock file, which this workflow does not
+  want.
+- **Also approved, and free: commit `audit_log.md` FIRST**, before any code commit, then append as
+  the audit proceeds. Commit order is a primitive; a blob comparison after the fact is a
+  reconstruction. This independently closes the ordering gap the OQ-251 close had to patch by
+  diffing pasted text against `1b63ba09^`.
+
+**What resolution would change.** Whether the detection pair is enough, or the hook is worth
+building properly. If built, it owes the discipline it exists to serve: a **two-sided** test (fires
+when HEAD moved; declines when it did not), fail-**closed** semantics (unavailable git ⇒ loud, never
+silent pass), and a discrimination record — per this repo's own rule that a control must witness it
+is CALLED, not merely that it works.
+
+**Falsifier:** if the landed HEAD-stamp pair catches a real concurrent-writer episode before any
+write, the hook is unnecessary and this OQ closes `disposed`. If an episode slips past the pair —
+i.e. a session where HEAD moved and the close comparison did not surface it — that is the evidence
+the hook is needed, and this OQ becomes a build item.
 
 ---
 
